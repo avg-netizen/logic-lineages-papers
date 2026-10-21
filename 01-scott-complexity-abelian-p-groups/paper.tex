@@ -1,0 +1,1140 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{Scott complexity of countable abelian $p$-groups:\\classification in the reduced case and the realization spectrum}
+\author{}
+\date{21 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the exact Scott complexity of every countable reduced
+abelian $p$-group. Write its length as $\omega\gamma+n$, $n<\omega$.
+At a limit length the complexity is $\Pi_{2\gamma+1}$; otherwise the
+bounded terminal subgroup at $\omega\gamma$ determines one of four
+exact complexities. The distinction depends on its infinite cyclic
+multiplicities and on shorter finite summands, rather than on how many
+infinite Ulm invariants occur anywhere in the group. We construct reduced
+examples at every positive countable successor difference-of-$\Sigma$
+level. We also exclude exact pure $\Sigma$ complexity for every countable
+abelian $p$-group, including those with divisible summands. This answers
+Questions~5.1 and~5.2 of Alvir--Csima--MacLean in their stated versions.
+Their reduced-group back-and-forth theorem, Ulm classification, Zippin
+existence, and general Scott-complexity restrictions are credited inputs.
+The classification for individual nonreduced groups remains open here.
+\end{abstract}
+
+\section{The problem, its source, and a first example}
+A Scott sentence describes one countable structure up to isomorphism
+among countable models. Its complexity measures how hard that description
+must be in countable infinitary logic. Algebraic classification alone does
+not settle the optimal logical complexity: it supplies descriptions, but
+one must still show that simpler descriptions cannot work.
+
+Alvir, Csima and MacLean \cite{ACM} give upper bounds and extensive
+back-and-forth analysis for reduced abelian $p$-groups. Their
+Question~5.1 asks about optimality when at least two Ulm invariants are
+infinite. Their Question~5.2 asks which pure $\Sigma$ and difference
+complexities occur. Gonzalez, Rossegger and Turetsky \cite{GRT} later
+ask for explicit abelian $p$-groups displaying a gap between two Scott
+rank conventions and for the non-$\Pi$ spectrum. Their abstract
+existence argument is prior work, rather than a new conclusion here.
+
+The simplest useful example is
+\[
+ C_p\oplus C_{p^2}^{(\omega)}.
+\]
+It has exact $d\text{-}\Sigma_2$ complexity. The finite $C_p$ summand
+can be described existentially, but it can disappear in a suitable
+increasing union of copies of the group, obstructing a $\Pi_2$ Scott
+sentence. If the $C_p$ summand is absent, the complexity drops to
+$\Pi_2$. If both multiplicities are infinite, it rises to $\Pi_3$.
+The same three-way distinction reappears at any terminal
+$\omega$-block of the transfinite $p$-filtration, with a separate
+finite-terminal case. The classification below makes that assertion exact.
+
+The proof has three main steps. First we give the bounded descriptions.
+Next we construct quotients which change a terminal invariant while
+preserving specified back-and-forth comparisons. The same quotient must
+serve both comparisons in the highest-complexity case; separate
+competitors would not exclude a difference sentence. Finally we build
+explicit transfinite examples and handle the divisible part separately.
+
+\section{Conventions and the classification}
+Fix a prime $p$. Groups are countable abelian $p$-groups in the original
+language $\{+,-,0\}$. No filtration predicates are added to that language.
+Write $C_{p^j}$ for the cyclic group of order $p^j$ and
+$C_{p^\infty}$ for the Pr\"ufer group. The standard decomposition is
+$G=R\oplus D$, with $R$ reduced and $D$ divisible. Define
+\[
+ G_0=G,\qquad G_{\xi+1}=pG_\xi,\qquad
+ G_\lambda=\bigcap_{\xi<\lambda}G_\xi.
+\]
+\[
+ P_\xi(G)=G_\xi[p],\qquad
+ u_G(\xi)=\dim_{\mathbb F_p}P_\xi(G)/P_{\xi+1}(G).
+\]
+The reduced length $\lambda_R$ is the least index with $R_{\lambda_R}=0$.
+For $x\ne0$, its height is $\xi$ when $x\in G_\xi\setminus G_{\xi+1}$;
+elements in the divisible part and zero have height $\infty$.
+All ordinal products are ordinary ordinal products:
+$2\gamma=2\cdot\gamma$ and $\omega\gamma=\omega\cdot\gamma$.
+
+We use ordinary, not necessarily computable, infinitary
+$\Sigma_\alpha$ and $\Pi_\alpha$ formulas. At level zero they are
+quantifier-free; a $\Sigma_\alpha$ formula is a countable disjunction
+of existential formulas with $\Pi_\beta$ matrices, $\beta<\alpha$,
+and $\Pi_\alpha$ is the dual class. A $d\text{-}\Sigma_\alpha$
+sentence is a conjunction of a $\Sigma_\alpha$ and a $\Pi_\alpha$
+sentence. \emph{Exact} complexity refers to the usual Scott-complexity
+hierarchy; it does not deny that a structure has padded descriptions at
+higher levels. We use the general restrictions and Miller collapse
+from \cite[Theorems~1.6, 2.5 and 2.6]{AGHT}.
+
+For finite tuples, $(A,\bar a)\leq_0(B,\bar b)$ means atomic agreement.
+For $\alpha>0$, every $\beta<\alpha$ and finite right extension $\bar d$
+must have a left response $\bar c$ with
+$(B,\bar b\bar d)\leq_\beta(A,\bar a\bar c)$.
+Thus $\Pi_\alpha$ truth transfers from the left to the right,
+and $\Sigma_\alpha$ truth transfers from the right to the left.
+This direction will be used throughout.
+
+\begin{theorem}[Exact reduced-group classification]
+\label{thm:reduced-classification}
+Let $G\ne0$ be reduced, and write its length uniquely as
+$\lambda=\omega\gamma+n$, where $n<\omega$.
+If $n=0$, then $\gamma>0$ and $G$ has exact complexity
+$\Pi_{2\gamma+1}$.
+If $n>0$, put $H=G_{\omega\gamma}$ and write
+\[
+ H\cong\bigoplus_{j=1}^{n}C_{p^j}^{(m_j)},\qquad
+ m_j\in\mathbb N\cup\{\omega\},\quad m_n>0.
+\]
+The exact complexity is
+\begin{center}
+\normalfont
+\begin{tabular}{@{}p{0.62\linewidth}l@{}}
+\hline
+Condition on $H$ & Exact complexity\\
+\hline
+$H$ is finite & $d\text{-}\Sigma_{2\gamma+1}$\\[4pt]
+Exactly one $m_k=\omega$, and $m_j=0$ for every $j<k$
+ & $\Pi_{2\gamma+2}$\\[4pt]
+Exactly one $m_k=\omega$, and $m_j>0$ for some $j<k$
+ & $d\text{-}\Sigma_{2\gamma+2}$\\[4pt]
+At least two $m_j=\omega$ & $\Pi_{2\gamma+3}$\\
+\hline
+\end{tabular}
+\end{center}
+The trivial group has exact complexity $\Pi_1$.
+\end{theorem}
+
+
+The terminal multiplicities are those of the bounded group
+$G_{\omega\gamma}$, not the complete list of Ulm invariants of $G$.
+For example, finite summands above its unique infinite multiplicity are
+allowed in both middle rows. Their presence does not change which row
+applies.
+
+\section{The bounded base case}
+\begin{theorem}\label{thm:bounded-pgroup-classification}
+Let $G$ be a countably infinite Abelian $p$-group of bounded exponent,
+and write
+\[
+ G\cong\bigoplus_{j=1}^n C_{p^j}^{(m_j)},
+ \qquad m_j\in\mathbb N\cup\{\omega\}.
+\]
+Its Scott complexity is determined as follows.
+\begin{center}
+\begin{tabular}{p{0.67\linewidth}|l}
+Condition & Exact complexity\\ \hline
+At least two $m_j$ equal $\omega$ & $\Pi_3$\\
+Exactly one $m_k=\omega$, and some $m_j>0$ with $j<k$
+ & $d\text{-}\Sigma_2$\\
+Exactly one $m_k=\omega$, and all $m_j=0$ with $j<k$
+ & $\Pi_2$
+\end{tabular}
+\end{center}
+Thus no bounded-exponent countable Abelian $p$-group has an exact
+pure $\Sigma$ Scott complexity. The case of at least two infinite
+multiplicities is \cite[Theorem~4.2]{ACM}; the proof below supplies
+the remaining cases, including arbitrary finite summands above the
+unique infinite multiplicity.
+\end{theorem}
+
+\begin{proof}
+The decomposition is the standard bounded-exponent case of the Ulm
+classification. Suppose that the only infinite multiplicity is at $k$,
+and write
+\[
+ G=F_-\oplus C_{p^k}^{(\omega)}\oplus F_+,
+\]
+where $F_-$ has cyclic summands of orders below $p^k$, and $F_+$ has
+cyclic summands of orders above $p^k$. Both $F_-$ and $F_+$ are finite.
+Let $K=p^kF_+$, a fixed finite group.
+
+The condition $p^kG\cong K$ has a $d\text{-}\Sigma_1$ description.
+If $K$ has $M$ elements, an existential tuple of elements
+$p^ky_1,\ldots,p^ky_M$ can carry its complete finite group table,
+including all required inequalities. This is $\Sigma_1$.
+The bound $|p^kG|\le M$ is $\Pi_1$, expressed by
+\[
+ \forall y_0\cdots y_M\,
+ \bigvee_{0\le i<j\le M}p^ky_i=p^ky_j.
+\]
+Together these conditions fix all cyclic multiplicities above $k$.
+The condition that $p^{k-1}G$ is infinite is $\Pi_2$:
+\[
+ \bigwedge_{m\ge1}\exists y_1\cdots y_m
+ \bigwedge_{i<j}p^{k-1}y_i\ne p^{k-1}y_j.
+\]
+Together with finiteness of $p^kG$, it forces the multiplicity at
+$k$ to be $\omega$.
+
+For each $j<k$, the specified finite multiplicity $m_j$ is a finite
+Ulm invariant. The usual lower dimension condition is $\Sigma_2$,
+and the corresponding upper condition is $\Pi_2$: choose elements in
+$(p^{j-1}G)[p]$ and require their nonzero linear combinations to lie
+outside $p^jG$. A finite conjunction of these exact dimension
+conditions is $d\text{-}\Sigma_2$.
+Add the Abelian group axioms and the bound $p^nG=0$.
+These conditions determine the entire cyclic decomposition, and hence
+give a $d\text{-}\Sigma_2$ Scott sentence.
+
+If $F_-=0$, replace all the lower dimension conditions by
+\[
+ \forall x\left(px=0\ \longrightarrow\
+                 \exists y\,p^{k-1}y=x\right).
+\]
+This $\Pi_2$ sentence says that every socle element has height at least
+$k-1$, and so there are no cyclic summands shorter than $p^k$.
+The remaining conditions above are all $\Pi_2$ or of lower complexity.
+Thus $G$ has a $\Pi_2$ Scott sentence in this case. It is exact:
+an infinite group cannot have a universal Scott sentence because such
+a sentence passes to the trivial subgroup; a $d\text{-}\Sigma_1$
+sentence would pass to the finite subgroup generated by its finite
+existential witnesses.
+
+If $F_-\ne0$, no $\Sigma_2$ Scott sentence is possible. More
+generally, no infinite locally finite group has a $\Sigma_2$ Scott
+sentence. One true existential disjunct has finite witnesses and a
+$\Pi_1$ matrix. The witnesses generate a finite subgroup, and the
+matrix passes to that subgroup. The purported Scott sentence would
+therefore have a nonisomorphic finite countable model.
+
+To exclude $\Pi_2$ in the case $F_-\ne0$, choose cyclic generators
+$u_1,\ldots,u_t$ for $F_-$ with orders $p^{\ell_1},\ldots,p^{\ell_t}$,
+where $1\le\ell_j<k$, and generators $e_0,e_1,\ldots$ for the
+$C_{p^k}$ summands. Define an injective endomorphism by
+\[
+ f(u_j)=p^{k-\ell_j}e_{j-1},\qquad
+ f(e_i)=e_{i+t},\qquad f\upharpoonright F_+=\operatorname{id}.
+\]
+Orders are preserved and the specified summand images have disjoint
+supports. In its direct limit, the finite $F_+$ factor stays fixed.
+The remaining factor has exponent $p^k$, an infinite
+$p^{k-1}$-multiple subgroup, and every socle element has a
+$p^{k-1}$-root at a later stage: one application of $f$ moves the socle
+of each short summand into $p^{k-1}\langle e_{j-1}\rangle$.
+The cyclic decomposition therefore makes the limit
+\[
+ D\cong C_{p^k}^{(\omega)}\oplus F_+,
+\]
+which is nonisomorphic to $G$ because its lower multiplicities are all
+zero. A $\Pi_2$ sentence is preserved in an increasing union of
+substructures: every finite universal tuple occurs at a stage, whose
+finite existential witnesses and quantifier-free diagram remain in the
+union. Thus no $\Pi_2$ Scott sentence for $G$ exists. The
+$d\text{-}\Sigma_2$ upper bound is consequently exact.
+
+The only remaining infinite case has at least two infinite
+multiplicities, whose exact $\Pi_3$ complexity is the cited theorem of
+Alvir--Csima--MacLean. Finite nontrivial groups have exact
+$d\text{-}\Sigma_1$, and the trivial group has a $\Pi_1$ Scott sentence,
+so finite groups add no pure $\Sigma$ exception.
+\end{proof}
+
+
+\section{Changing tails while controlling comparisons}
+We use Ulm classification and the comparison theorem
+\cite[Theorem~4.4]{ACM} for reduced groups. Its odd and even cases
+include alternatives expressed by relative $\Sigma_1$ and $\Sigma_2$
+truth in the terminal subgroup. We check those alternatives explicitly;
+they are not discarded when a terminal socle is finite.
+
+A second input is Zippin's existence theorem, in the form stated by
+Calderoni and Thomas \cite[Theorem~4.2]{CT}: a countable sequence of
+nonzero countable direct sums of cyclic $p$-groups is the Ulm-factor
+sequence of a reduced group exactly when every nonfinal factor has
+unbounded exponent. Here the factors are
+$U_\xi(G)=G_{\omega\xi}/G_{\omega(\xi+1)}$.
+We use that published theorem rather than a proposed infinite reverse
+iteration of one-block constructions.
+
+\begin{lemma}[Transfinite prescribed-tail existence]
+\label{lem:prescribed-tail}
+Let $\gamma>0$ be countable, put $\delta=\omega\gamma$, and let $G$
+be a countable reduced Abelian $p$-group of length at least $\delta$.
+For every nonzero countable reduced $p$-group $T$ there is a countable
+reduced $p$-group $H(T)$ such that
+\[
+ u_{H(T)}(\xi)=u_G(\xi)\quad(\xi<\delta),
+ \qquad H(T)_\delta\cong T.
+\]
+Its length is $\delta+\lambda_T$.
+\end{lemma}
+
+\begin{proof}
+For each $\xi<\gamma$, $G_{\omega\xi}$ has length at least $\omega$.
+Its nonzero finite Ulm invariants have unbounded support: otherwise a
+finite-stage subgroup would be divisible, contradicting reducedness.
+Consequently every $U_\xi(G)$ with $\xi<\gamma$ is nonzero and has
+unbounded exponent, including the last one when $\gamma$ is a successor.
+
+Let $\tau(T)$ be the ordinal length of the nonzero Ulm-factor sequence
+of $T$. Concatenate the first $\gamma$ Ulm factors of $G$ with the entire Ulm
+factor sequence of $T$. This is a countable sequence indexed by
+$\gamma+\tau(T)$. Every nonfinal factor is unbounded: this has just
+been checked for the initial factors, and it holds for the nonfinal
+factors of the reduced group $T$. Zippin's theorem supplies a reduced
+group $H$ with this sequence. The Ulm factors of $H_\delta$ are exactly
+those of $T$, so Ulm's classification gives $H_\delta\cong T$.
+The initial multiplicities give the displayed lower Ulm identities.
+Finally $H_{\delta+\eta}=(H_\delta)_\eta$ and no earlier initial
+factor vanishes, giving length $\delta+\lambda_T$.
+\end{proof}
+
+\begin{lemma}[Quotient filtration below a limit]
+\label{lem:quotient-filtration}
+Let $\delta=\omega\gamma$ and $T\le G_\delta$. For the quotient
+map $q:G\to Q=G/T$, one has
+\[
+ Q_\alpha=q(G_\alpha)\quad(\alpha\le\delta).
+\]
+For every $\beta<\delta$, $q$ induces an isomorphism of the
+$\beta$-th Ulm quotients, so $u_Q(\beta)=u_G(\beta)$.
+\end{lemma}
+
+\begin{proof}
+The successor step follows from $p q(G_\alpha)=q(pG_\alpha)$.
+At a limit $\eta\le\delta$, the subgroup $T$ lies in every
+$G_\alpha$, $\alpha<\eta$, so
+$q^{-1}(q(G_\alpha))=G_\alpha$. Intersecting preimages proves
+the limit step, including $\eta=\delta$.
+
+For the Ulm quotient, $\beta+2<\delta$ whenever $\beta<\delta$;
+the case $\delta=0$ has no such $\beta$. Let $y\in P_\beta(Q)$
+and choose $x\in G_\beta$ with $q(x)=y$. Then
+$px\in T\subseteq G_{\beta+2}$, so there is $z\in G_{\beta+1}$
+with $pz=px$. Thus $x-z\in P_\beta(G)$ and
+$q(x-z)$ differs from $y$ by the element $q(z)\in P_{\beta+1}(Q)$.
+This gives surjectivity on Ulm quotients. If $x\in P_\beta(G)$ and
+$q(x)\in P_{\beta+1}(Q)$, then
+$x\in G_{\beta+1}+T=G_{\beta+1}$, proving injectivity.
+\end{proof}
+
+
+\begin{lemma}[Finite-product preservation]\label{lem:products}
+If $(A_i,\bar a_i)\leq_\alpha(B_i,\bar b_i)$ for $i=1,2$, then
+\[
+ (A_1\oplus A_2,(\bar a_1,\bar a_2))
+ \leq_\alpha
+ (B_1\oplus B_2,(\bar b_1,\bar b_2)).
+\]
+The paired notation denotes componentwise pairing of corresponding
+entries into tuples of product elements.
+\end{lemma}
+\begin{proof}
+Induct on $\alpha$. Equations between group terms in the product hold
+exactly when they hold in both coordinates, so atomic agreement is
+preserved. Given a right-hand finite extension and $\beta<\alpha$,
+split it into its coordinate tuples. Apply the two given comparisons
+to obtain coordinate responses. The induction hypothesis at $\beta$
+combines their reversed comparisons into the response in the product.
+This proves the assertion at successors and limits alike.
+\end{proof}
+
+\subsection{The obstruction at odd-form levels}
+The explicit groups $B_\omega,W_\omega$ used next are defined and proved
+to have the indicated filtrations in Section~\ref{sec:walker}.
+\begin{theorem}
+\label{thm:odd-obstruction}
+Let $\gamma>0$ be countable. If $G=R\oplus D$, with $R$ reduced and
+$D$ divisible, and $\lambda_R\ge\omega\gamma$, then $G$ has no
+$\Sigma_{2\gamma+1}$ Scott sentence. No countable Abelian
+$p$-group has exact pure $\Sigma_{2\gamma+1}$ complexity.
+\end{theorem}
+
+\begin{proof}
+Put $\delta=\omega\gamma$. Take the two reduced tails
+\[
+ T_0=\bigoplus_{n<\omega}C_{p^{n+1}}^{(\omega)},
+ \qquad T_1=B_\omega\oplus W_\omega,
+\]
+where $B_\omega,W_\omega$ are the presentations in Section~\ref{sec:walker}.
+Their lengths are respectively $\omega$ and $\omega+1$, and their
+socles at every finite height are infinite. Lemma~\ref{lem:prescribed-tail}
+gives $H_i=H(T_i)$ with the same Ulm invariants as $R$ below $\delta$
+and with distinct lengths $\delta+\omega$, $\delta+\omega+1$.
+
+Apply ACM, Theorem~4.4(1) \cite{ACM}, with left group $H_i$, right group $R$,
+index $\gamma$, and empty tuples. Condition (a) is the equality of
+lower invariants. Condition (b) holds because
+\[
+ \lambda_{H_i}\ge\delta+\omega
+ \ge\min\{\lambda_R,\delta+\omega\}.
+\]
+For condition (c), every $P_\xi(H_i)$ with $\xi<\delta+\omega$ is
+infinite. Below $\delta$ it contains the infinite socle of the tail;
+above $\delta$ use its finite-height socles. Conditions (d),(e) are
+vacuous for the empty tuple. Therefore
+\[
+ H_i\le_{2\gamma+1}R.
+\]
+Lemma~\ref{lem:products} works at
+every ordinal, so $H_i\oplus D\le_{2\gamma+1}R\oplus D$.
+Every $\Sigma_{2\gamma+1}$ sentence true of $G$ is true in both
+$H_i\oplus D$. Their reduced parts have different lengths, so at
+least one is nonisomorphic to $G$. This proves the first assertion.
+
+Suppose now that $\lambda_R<\omega\gamma$. If $\gamma=\beta+1$,
+then $G_{\omega\beta}$ stabilizes after finitely many $p$-steps.
+Such a terminal group has a $\Pi_3$ Scott sentence: finite-stage
+stabilization, its finite-height Ulm invariants, and the rank of its
+divisible part can all be specified at that level. Relativization to
+$G_{\omega\beta}$, a $\Pi_{2\beta}$ domain, gives a
+$\Pi_{2\beta+3}=\Pi_{2\gamma+1}$ sentence. The lower invariant
+conditions have complexity at most $\Pi_{2\beta+1}$, so they fit.
+The ambient Abelian $p$-group axioms are included.
+
+If $\gamma$ is a limit, choose $\beta<\gamma$ and $n<\omega$ with
+$\lambda_R=\omega\beta+n$. The same finite-stabilization argument
+gives a $\Pi_{2\beta+3}$ Scott sentence; now
+$2\beta+3<2\gamma$. Thus in both cases there is a
+$\Pi_{2\gamma+1}$ Scott sentence. If a
+$\Sigma_{2\gamma+1}$ Scott sentence also exists, Miller's theorem
+in AGHT, Theorem~2.5, gives a $d\text{-}\Sigma_\eta$ Scott sentence
+for some $\eta<2\gamma+1$ (in particular one at $2\gamma$).
+Hence pure $\Sigma_{2\gamma+1}$ cannot be exact.
+\end{proof}
+
+
+\subsection{Deleting a direct summand of a bounded tail}
+\begin{lemma}[Finite support absorption]
+\label{lem:absorption}
+Suppose $H=K\oplus T$ is bounded, $p^kT=0$, and a cyclic decomposition of
+$K$ contains infinitely many $C_{p^k}$ summands. Then
+$K\preceq_{\Sigma_1}H$, for ordinary infinitary formulas with parameters
+from $K$. Consequently $H\le_2K$.
+\end{lemma}
+
+\begin{proof}
+Existential truth passes from $K$ to $H$ by the subgroup inclusion.
+Conversely, fix finite parameters in $K$ and finite witnesses in $H$.
+Their $K$ coordinates and the parameters lie in a finite direct summand
+$K_0$ of $K$. Their $T$ coordinates generate a finite group $T_0$.
+Write $T_0$ as a finite sum of cyclic groups of orders $p^{\ell_i}$,
+where $\ell_i\le k$. Choose distinct $C_{p^k}$ coordinates of $K$
+outside the support of $K_0$, with generators $e_i$, and send the
+$i$-th cyclic generator of $T_0$ to $p^{k-\ell_i}e_i$.
+Together with the identity on $K_0$, this embeds $K_0\oplus T_0$ into
+$K$ and fixes the parameters. It preserves equations and inequations,
+so the witnesses can be moved into $K$. This applies to any true
+existential disjunct of an infinitary $\Sigma_1$ formula.
+
+Hence $(K,\bar b)\le_1(H,\bar b)$ for every finite tuple $\bar b$ in
+$K$. To verify $H\le_2K$, answer each such tuple by itself in $H$.
+The level-$1$ requirement is the displayed comparison, and the
+level-$0$ requirement follows as well.
+\end{proof}
+
+The exponent bound is essential: an order-$p^{k+1}$ cyclic group cannot
+be embedded into a fresh order-$p^k$ coordinate. Every finite higher
+summand is retained in the applications below.
+
+\begin{lemma}[Deleting a terminal direct summand]
+\label{lem:terminal-deletion}
+Put $\delta=\omega\gamma$, where $\gamma\ge0$, and suppose $G$ is reduced
+with nonzero bounded $H=G_\delta$. Write $H=K\oplus T$, assume $K$ has
+the same exponent as $H$, and put $Q=G/T$, with quotient map $q$.
+For $A=\langle\bar a\rangle$ finite, suppose $A\cap H\subseteq K$.
+Then
+\[
+ u_Q(\xi)=u_G(\xi)\quad(\xi<\delta),\qquad Q_\delta\cong K,\qquad
+ \lambda_Q=\lambda_G,
+\]
+and
+\begin{equation}\label{eq:odd-deletion}
+             (G,\bar a)\le_{2\gamma+1}(Q,q\bar a).
+\end{equation}
+If also $H\le_2K$, then
+\begin{equation}\label{eq:even-deletion}
+                         G\le_{2\gamma+2}Q.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Lemma~\ref{lem:quotient-filtration} applies to every $T\le G_\delta$:
+$Q_\xi=q(G_\xi)$ through $\delta$, and all lower Ulm quotients are
+unchanged. Thus $Q_\delta=H/T\cong K$. Equal exponents give equal
+lengths and ensure $Q$ is reduced.
+
+The pointed argument extends the finite retained-summand construction to arbitrary
+$K$. The map $q$ is injective on $A+K$: if $a+x\in T$, where $a\in A$
+and $x\in K$, then $a\in A\cap H\subseteq K$, so $a+x\in K\cap T=0$.
+An element of $A$ outside $H$ retains its height by taking inverse
+images of the quotient filtration through $\delta$. For an element
+of $A\cap H$, height inside $H$ equals height in its direct summand
+$K$; adding $\delta$ shows the full height is also unchanged.
+Zero retains height infinity.
+
+Apply ACM Theorem~4.4(1) to left $G$, right $Q$, and the inverse
+partial map induced by $q$. Lower invariants, lengths, generated
+subgroups, and heights meet clauses (a), (b), (d), and (e).
+For (c), lift witnesses of any relative $\Sigma_1$ formula from
+$Q_\delta=qK$ to $K$. Injectivity on $A+K$ preserves every positive
+and negative atomic formula, including equations involving parameters
+outside $H$. This is the required transfer from $(Q,q\bar a)$ to
+$(G,\bar a)$, proving \eqref{eq:odd-deletion}.
+
+For \eqref{eq:even-deletion}, apply ACM Theorem~4.4(2) with empty
+tuples. Lower invariants agree. In the next block, the invariants of
+$Q$ are bounded by those of $G$, since $K$ is a direct summand of $H$.
+Lengths agree below $\delta+\omega$. In clause (c), use $H\le_2K$:
+every $\Sigma_2$ sentence true in $K\cong Q_\delta$ holds in $H$.
+For empty tuples this is precisely the required relative clause.
+The subgroup and height clauses are vacuous.
+\end{proof}
+
+This is a sufficient algebraic criterion for the indicated pairs.
+It is not an elimination of ACM's exceptional clauses for all pairs
+and all distinguished tuples.
+
+\section{Proof of the reduced classification}
+\begin{proof}[Proof of Theorem~\ref{thm:reduced-classification}]
+Put $\delta=\omega\gamma$. By \cite[Proposition~2.2]{ACM}, membership in $G_\delta$ is $\Pi_{2\gamma}$-definable. Specifying the
+Ulm invariants below $\delta$ costs at most $\Pi_{2\gamma+1}$:
+at $\omega\eta+r<\delta$, a dimension-at-least-$m$ condition is
+$\Sigma_{2\eta+2}$, and an infinite dimension costs
+$\Pi_{2\eta+3}$, where $\eta<\gamma$.
+
+For finite nonzero $H$ and $\gamma>0$, require a
+complete group table on $|H|$ distinct points of $G_\delta$ by a
+$\Sigma_{2\gamma+1}$ formula, and bounds the size of $G_\delta$ by a
+$\Pi_{2\gamma+1}$ formula. Along with lower invariants and the ambient
+Abelian $p$-group axioms, this gives $d\text{-}\Sigma_{2\gamma+1}$.
+
+With exactly one infinite multiplicity, write
+\[
+                       H=F_-\oplus C_{p^k}^{(\omega)}\oplus F_+,
+\]
+where $F_-$ and $F_+$ are finite sums of shorter and longer cyclic
+groups. Theorem~\ref{thm:bounded-pgroup-classification} gives a $\Pi_2$ Scott sentence when $F_-=0$
+and a $d\text{-}\Sigma_2$ Scott sentence otherwise. Relativization to
+$G_\delta$ yields $\Pi_{2\gamma+2}$ and
+$d\text{-}\Sigma_{2\gamma+2}$ respectively. A relative existential
+block followed by a relative $\Pi_1$ matrix is
+$\Sigma_{2\gamma+2}$; the dual universal form is
+$\Pi_{2\gamma+2}$. The lower invariant conditions fit either bound.
+
+With at least two infinite terminal multiplicities, ACM
+Theorem~3.1(ii) gives $\Pi_{2\gamma+3}$. With length exactly $\delta$,
+Theorem~3.1(iii) gives $\Pi_{2\gamma+1}$. Each description forces the
+correct bounded tail, hence reducedness, and the complete Ulm
+sequence. Ulm classification gives countable categoricity.
+A nontrivial finite group ($\gamma=0$ and finite $H$) instead uses its
+finite table and cardinality bound directly, giving
+$d\text{-}\Sigma_1$ without adjoining higher-complexity ambient axioms.
+
+\medskip\noindent\emph{Lower bounds for infinite terminal subgroups.}
+
+The finite-$K$ instance of Lemma~\ref{lem:terminal-deletion} gives no
+$\Sigma_{2\gamma+2}$ Scott sentence for any reduced $G$ with infinite
+bounded $G_\delta$. It is the finite-$K$ case of
+\eqref{eq:odd-deletion}: choose a finite direct summand containing
+the parameters' intersection with $H$ and a maximal-order coordinate.
+This also excludes every lower class below $\Pi_{2\gamma+2}$.
+Thus the $\Pi_{2\gamma+2}$ row with $F_-=0$ is exact.
+
+If $F_-\ne0$, take $T=F_-$ and
+$K=C_{p^k}^{(\omega)}\oplus F_+$. The absorption lemma gives
+$H\le_2K$, and \eqref{eq:even-deletion} gives
+\[
+                            G\le_{2\gamma+2}G/F_-.
+\]
+A nonzero shorter terminal invariant has been removed, so the groups
+are nonisomorphic. Any $\Pi_{2\gamma+2}$ Scott sentence would transfer
+to this nonisomorphic quotient. The upper bound and the pointed quotient
+$\Sigma_{2\gamma+2}$ obstruction therefore give exact
+$d\text{-}\Sigma_{2\gamma+2}$.
+
+Suppose now that $m_i=m_k=\omega$ for $i<k$, and fix any finite
+$\bar a$ in $G$. In a cyclic decomposition of $H$, retain the finitely
+many $C_{p^i}$ coordinates supporting $A\cap H$, where
+$A=\langle\bar a\rangle$. Let $T$ be the sum of all the other
+$C_{p^i}$ coordinates, and let $K$ retain all remaining coordinates,
+including every coordinate of order different from $p^i$. Then
+\[
+ H=K\oplus T,\qquad A\cap H\subseteq K,\qquad
+ p^iT=0,\qquad C_{p^k}^{(\omega)}\text{ is a direct summand of }K.
+\]
+The exponent is unchanged. The two lemmas give, for $Q=G/T$,
+\[
+ (G,\bar a)\le_{2\gamma+1}(Q,q\bar a),\qquad
+ G\le_{2\gamma+2}Q.
+\]
+The invariant $u_Q(\delta+i-1)$ is finite whereas
+$u_G(\delta+i-1)=\omega$, so $Q\not\cong G$.
+
+If a $d\text{-}\Sigma_{2\gamma+2}$ Scott sentence were $S\wedge P$,
+choose $\bar a$ witnessing a true existential disjunct of its
+$\Sigma_{2\gamma+2}$ part $S$, with $\Pi_{2\gamma+1}$ matrix.
+The pointed comparison transfers this matrix to $(Q,q\bar a)$;
+the unpointed comparison transfers its $\Pi_{2\gamma+2}$ part $P$.
+This contradicts categoricity. Hence no such difference Scott
+sentence exists. The $\Pi_{2\gamma+3}$ upper bound is exact.
+An additional $\Sigma_{2\gamma+3}$ Scott sentence would, by Miller
+collapse (AGHT Theorem~2.5 \cite{AGHT}), yield a lower difference
+description and is also impossible.
+
+\medskip\noindent\emph{Finite tails and exact limit lengths.}
+
+Suppose $\gamma>0$ and $0<|G_\delta|<\omega$. Theorem~\ref{thm:odd-obstruction}
+excludes a $\Sigma_{2\gamma+1}$ Scott sentence because the reduced
+length is at least $\delta$. Put $Q=G/G_\delta$. The quotient lemma
+preserves the invariants below $\delta$ and gives length $\delta$.
+To verify the latter equality, if $Q_\xi=0$ for some $\xi<\delta$,
+then $G_\xi\subseteq G_\delta$. If $p^mG_\delta=0$, this would give
+$G_{\xi+m}=0$, where $\xi+m<\delta$, contradicting the length of $G$.
+ACM Theorem~4.4(1), with left $G$, right $Q$, and empty parameters,
+applies: the zero tail $Q_\delta$ embeds in $G_\delta$, so its
+$\Sigma_1$ theory transfers in the required direction for clause (c).
+Therefore
+\[
+                             G\le_{2\gamma+1}Q.
+\]
+Since $Q\not\cong G$, this excludes $\Pi_{2\gamma+1}$ and proves the
+finite-terminal difference row. For nontrivial finite groups,
+existential truth passes to a proper larger group and universal truth
+passes to the trivial subgroup. Thus neither $\Sigma_1$ nor $\Pi_1$
+is a Scott complexity, completing the $\gamma=0$ finite case.
+
+Finally suppose $\lambda_G=\delta=\omega\gamma$, where $\gamma>0$.
+Lemma~\ref{lem:prescribed-tail} supplies a reduced $B$ with the same
+invariants below $\delta$ and $B_\delta\cong C_p$. Its length is
+$\delta+1$, so it is nonisomorphic to $G$. We have
+\[
+               G\le_{2\gamma}B\qquad\hbox{and}\qquad B\le_{2\gamma}G.
+\]
+If $\gamma=\eta+1$, apply ACM Theorem~4.4(2) at index $\eta$ in
+both directions. The invariants agree below
+$\delta=\omega\eta+\omega$, and both lengths are at least $\delta$.
+Every socle below $\delta$ in each group is infinite: a finite
+socle in a reduced $p$-group makes the corresponding subgroup finite,
+forcing the full length below the next limit $\delta$.
+The finite-socle fact is stated just after ACM Theorem~4.4 and also
+has a short direct proof. If a group with finite socle had unbounded
+exponent, some nonzero socle element would have roots of arbitrarily
+large finite depth. Each $p$-root fiber has at most the finite size of
+the socle. K\"onig's lemma would therefore give an infinite compatible
+root chain, generating a Pr\"ufer subgroup and contradicting
+reducedness. Once the exponent is bounded by $p^m$, induction through
+the $p$-map, whose fibers are finite, proves that the group is finite.
+Thus the algebraic infinite-socle alternative in clause (c) applies
+on both sides. Empty parameters meet the remaining clauses.
+If $\gamma$ is a nonzero limit, $2\gamma=\gamma$ and ACM
+Theorem~4.4(3) applies directly.
+
+Consequently $G$ has no $d\text{-}\Sigma_{2\gamma}$ Scott sentence.
+The $\Pi_{2\gamma+1}$ upper bound and Miller collapse prove exactness
+for successor as well as limit $\gamma$. The trivial group is
+described by $\forall x\,(x=0)$ and has no quantifier-free Scott
+sentence. This proves every row of the classification.
+
+\end{proof}
+\section{Explicit successor realizations}\label{sec:walker}
+For a countable ordinal $\xi$, let $W_\xi$ be the Abelian group with a
+generator $e_s$ for each nonempty finite strictly decreasing sequence
+\[
+ s=(\xi,\xi_1,\ldots,\xi_n),\qquad
+ \xi>\xi_1>\cdots>\xi_n,
+\]
+including the one-term sequence $(\xi)$. Its defining relations are
+\[
+ pe_{(\xi)}=0,
+ \qquad pe_{s\mathbin{\smallfrown}\eta}=e_s
+ \quad(\eta<\operatorname{last}(s)).
+\]
+This is the usual decreasing-sequence presentation of a Walker group;
+the properties needed here follow directly from the presentation.
+
+\begin{lemma}\label{lem:walker-filtration}
+Every element of $W_\xi$ has a unique finite expression
+\[
+ \sum_s c_s e_s,\qquad 0\le c_s<p.
+\]
+Moreover, for every ordinal $\alpha$,
+\begin{equation}\label{eq:walker-filtration}
+ (W_\xi)_\alpha
+ =\left\langle e_s:\operatorname{last}(s)\ge\alpha\right\rangle.
+\end{equation}
+Consequently,
+\[
+ (W_\xi)_\xi=\langle e_{(\xi)}\rangle\cong C_p,
+ \qquad (W_\xi)_{\xi+1}=0.
+\]
+For every ordinal $\delta$,
+\[
+ (W_{\delta+1})_\delta\cong C_{p^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+A finite ancestor-closed set of sequences carries the finite
+presentation obtained by restricting the displayed relations to those
+sequences. Adding a new leaf $s$ to such a finite set adjoins a root of
+its parent with relation $pe_s=e_{s^-}$. The old finite group embeds in
+this extension: in
+\((H\oplus\mathbb Z)/\langle(-e_{s^-},p)\rangle\), the relation subgroup
+meets $H\oplus\{0\}$ only at zero. The new quotient has exactly $p$
+cosets over the old group. The root itself starts with a cyclic group
+of order $p$. Induction over the finite tree therefore gives a unique
+expression with all coefficients between $0$ and $p-1$.
+All finite ancestor-closed presentations embed in larger ones by the
+same argument, so the result holds in their directed union $W_\xi$.
+In particular, there are no further relations between digit-normal
+expressions. Each generator has finite $p$-power order, so the group is
+indeed a countable Abelian $p$-group.
+
+Let $S_\alpha$ be the set of nodes with last entry at least $\alpha$.
+It is ancestor-closed. An element belongs to $\langle S_\alpha\rangle$
+exactly when its digit-normal support is contained in $S_\alpha$.
+At a successor, the $p$-multiples of generators in $S_\alpha$ lie in
+$\langle S_{\alpha+1}\rangle$. Conversely, if
+$\operatorname{last}(s)\ge\alpha+1$, the child
+$s\mathbin{\smallfrown}\alpha$ exists, belongs to $S_\alpha$, and is
+a $p$-root of $e_s$. Thus
+\[
+ p\langle S_\alpha\rangle=\langle S_{\alpha+1}\rangle.
+\]
+At a limit $\lambda$, uniqueness of finite digit support gives
+\[
+ \bigcap_{\alpha<\lambda}\langle S_\alpha\rangle
+ =\langle S_\lambda\rangle.
+\]
+Transfinite induction proves \eqref{eq:walker-filtration}.
+At level $\xi$ only the root remains. At level $\delta$ in
+$W_{\delta+1}$, exactly the root and its child $(\delta+1,\delta)$
+remain; the latter has $p$-multiple equal to the former, giving a
+cyclic group of order $p^2$.
+\end{proof}
+
+Transfinite $p$-subgroups commute with direct sums:
+\begin{equation}\label{eq:p-filtration-direct-sums}
+ \left(\bigoplus_i G_i\right)_\alpha
+ =\bigoplus_i(G_i)_\alpha.
+\end{equation}
+The successor step is immediate. At a limit, an element has finite
+coordinate support, and it belongs to each previous subgroup exactly
+when each coordinate does. This proves the identity by induction.
+The corresponding Ulm invariants add.
+
+For $\delta=\omega\gamma$, define
+\begin{align}
+ B_\delta&=\bigoplus_{\xi<\delta}W_\xi^{(\omega)},
+ \label{eq:lower-reservoir}\\
+ A^{\rm odd}_{\gamma,r}
+ &=B_\delta\oplus W_\delta^r,
+ \label{eq:odd-group}\\
+ A^{\rm even}_{\gamma,r}
+ &=B_\delta\oplus W_\delta^r
+                 \oplus W_{\delta+1}^{(\omega)}.
+ \label{eq:even-group}
+\end{align}
+These are countable presentations for every countable $\gamma$.
+They need not be computable presentations when $\gamma$ is
+noncomputable; no effectivity of arbitrary countable ordinal input is
+asserted.
+
+Each copy of $W_\xi$ contributes one dimension to its $\xi$-th Ulm
+invariant. The infinitely many copies in \eqref{eq:lower-reservoir}
+therefore give
+\[
+ u_{B_\delta}(\xi)=\omega\quad(\xi<\delta),
+ \qquad (B_\delta)_\delta=0.
+\]
+Lemma~\ref{lem:walker-filtration} now gives the complete invariant
+lists needed for the two families:
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+Group & $\xi<\delta$ & $\xi=\delta$ & $\xi=\delta+1$ & later $\xi$\\
+\hline
+$A^{\rm odd}_{\gamma,r}$ & $\omega$ & $r$ & $0$ & $0$\\
+$A^{\rm even}_{\gamma,r}$ & $\omega$ & $r$ & $\omega$ & $0$
+\end{tabular}
+\end{center}
+Their lengths are $\delta+1$ and $\delta+2$, respectively, and
+\begin{equation}\label{eq:terminal-groups}
+ (A^{\rm odd}_{\gamma,r})_\delta\cong C_p^r,
+ \qquad
+ (A^{\rm even}_{\gamma,r})_\delta
+ \cong C_p^r\oplus C_{p^2}^{(\omega)}.
+\end{equation}
+Both are reduced because their transfinite $p$-filtrations reach zero.
+For different $r$, their $\delta$-th Ulm invariants differ.
+
+
+\begin{theorem}[The difference spectrum]\label{thm:difference-spectrum}
+Every positive countable successor $d\text{-}\Sigma_\alpha$ complexity
+occurs among countable reduced abelian $p$-groups. Among infinite such
+groups the attained difference levels are exactly the successors
+$\alpha\geq2$.
+\end{theorem}
+\begin{proof}
+For $\gamma>0$ the two groups in \eqref{eq:odd-group} and
+\eqref{eq:even-group} have terminal groups displayed in
+\eqref{eq:terminal-groups}. Theorem~\ref{thm:reduced-classification} gives
+exact complexities $d\text{-}\Sigma_{2\gamma+1}$ and
+$d\text{-}\Sigma_{2\gamma+2}$ respectively. At level two take
+$C_p^r\oplus C_{p^2}^{(\omega)}$, $r\geq1$; nontrivial finite groups
+give level one. Every successor ordinal is $2\gamma+1$ or $2\gamma+2$:
+write it as a limit (or zero) plus a positive finite remainder and use
+$2\lambda=\lambda$ for nonzero limit $\lambda$.
+The general nonzero-limit exclusion is the published theorem
+\cite[Theorems~1.6 and 2.6]{AGHT}, not a new restriction specific to
+$p$-groups.
+Finally, an infinite $p$-group cannot have a $d\text{-}\Sigma_1$ Scott
+sentence. A true existential disjunct of its $\Sigma_1$ part has finite
+witnesses. They generate a finite subgroup, to which the universal
+part passes. This would be a nonisomorphic countable model of the same
+sentence.
+\end{proof}
+
+In the rank conventions of \cite{GRT}, exact
+$d\text{-}\Sigma_{\beta+1}$ complexity gives
+$\operatorname{SR}_p=\beta<\operatorname{SR}=\beta+1$.
+The displayed families therefore give explicit rank-gap examples at
+every countable $\beta\geq1$. This supplies concrete examples for their
+Question~1; their prior abstract existence result remains credited.
+No uniform effective presentation from an arbitrary countable ordinal
+notation is being asserted.
+
+\section{Arbitrary divisible parts}
+\label{sec:infinite-divisible}
+
+The final even-form case can be treated without assuming that ACM's
+reduced-group statement automatically applies to a nonreduced group.
+We prove the sufficient fragment that is needed. Give each nonzero
+element of the divisible part height $\infty$, larger than every ordinal;
+as usual $h(0)=\infty$ as well. A group with infinitely many independent
+Pr\"ufer summands has $P_\xi$ infinite for every ordinal $\xi$.
+
+\begin{lemma}[Infinite-divisible-rank comparison]
+\label{lem:infinite-divisible-bf}
+Let $A,B$ be countable Abelian $p$-groups whose divisible ranks are
+both infinite. Let $g:\langle\bar b\rangle\to\langle\bar a\rangle$
+be the isomorphism induced by the indicated finite tuples.
+The following conditions are sufficient for the displayed comparisons.
+\begin{enumerate}
+\item For $\delta=\omega\gamma$,
+$(A,\bar a)\le_{2\gamma+1}(B,\bar b)$ provided the Ulm
+invariants agree below $\delta$ and, for $a=g(b)$, either
+\[
+ h_A(a)=h_B(b)<\delta,
+ \quad\text{or}\quad
+ h_B(b)\ge\delta,\qquad
+ h_A(a)\ge\min\{h_B(b),\delta+\omega\}.
+\]
+\item $(A,\bar a)\le_{2\gamma+2}(B,\bar b)$ provided the
+Ulm invariants agree below $\delta=\omega\gamma$,
+\[
+ u_B(\xi)\le u_A(\xi)
+ \quad(\delta\le\xi<\delta+\omega),
+\]
+and each $a=g(b)$ either has the same height as $b$ below
+$\delta+\omega$, or both heights are at least $\delta+\omega$.
+\item At a nonzero limit $\eta$, $(A,\bar a)\le_\eta(B,\bar b)$
+provided the Ulm invariants agree below $\omega\eta$ and heights
+are equal below $\omega\eta$ and simultaneously above that cut.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We verify the extension argument behind the infinite-socle cases of
+ACM, Theorem~4.4, rather than importing its reducedness hypothesis.
+The following algebraic ingredients apply to arbitrary Abelian
+$p$-groups. For a finite subgroup $S$, write $S_\xi=S\cap G_\xi$.
+
+If $S$ is finite and $x\notin S$ has $px\in S$, one may choose
+its representative modulo $S$ to be proper: its height is maximal
+in its finite coset. Among such representatives also maximize the
+height of its $p$-multiple. These two maxima exist because the coset
+is finite, even when the maximum is $\infty$. Then
+$h(x+s)=\min\{h(x),h(s)\}$ for every $s\in S$.
+If its height is $\xi$ and $h(px)>\xi+1$, a root $z$ of $px$
+can be chosen in $G_{\xi+1}$, and $x-z$ is a proper socle
+element at height $\xi$. The available dimension is measured by
+the elementary map
+\[
+ S_\xi^*/S_{\xi+1}\longrightarrow P_\xi/P_{\xi+1},
+ \qquad [s]\longmapsto[s-z],
+\]
+where $S_\xi^*=S\cap G_\xi\cap p^{-1}G_{\xi+2}$ and
+$z\in G_{\xi+1}$ satisfies $pz=ps$. It is injective and
+well-defined. A proper socle element can be chosen precisely when
+its image is not the entire Ulm quotient. Thus equality, or the
+appropriately directed inequality, of Ulm dimensions permits the
+usual extension at a specified ordinal height. This is the
+argument of ACM, Lemma~2.3; it requires no reducedness.
+
+Finally, at a height where only a lower bound is required, infinitely
+many socle elements permit avoidance of the finitely many forbidden
+choices caused by $S$. Here this is available at every height from
+the infinite divisible part. Roots of a divisible element can be
+chosen divisible. More generally, to obtain a root of height at
+least $\rho$, the only assertion needed is that the given element
+lies in $G_{\rho+1}$. No predecessor of an infinite or limit height
+is taken.
+
+Induct on the comparison index. At index zero, the given finite
+group isomorphism is the required atomic agreement. For an odd
+index $2\gamma+1$, first fix the entire finite right extension $B'$.
+Choose a positive integer $M$ above all $k$ for which an element
+of $B'$ has height $\delta+k$. Let $r$ be the number of cyclic
+one-element extensions needed and put $N=M+r+1$. Build $B'$ over
+$\langle\bar b\rangle$ one element at a time, using the proper
+representatives with the secondary maximum just specified.
+After $i$ extensions, maintain equality of heights below $\delta$;
+for a right element of finite block height $\delta+k$ require its
+image to have height at least $\delta+k$; and for a right element
+of height at least $\delta+\omega$ require its image to have height
+at least $\delta+N-i$. The original odd condition implies this
+finite-headroom invariant at $i=0$.
+
+Below $\delta$, a one-step height has a root of exactly the same
+height, and the secondary maximum prevents that root from lying
+in the preceding finite image. A height jump is handled by the
+Ulm-quotient dimension calculation above. In detail, in the one-step
+case put $\xi=h_B(x)$ and $y=g(px)$. A root $w$ of $y$ has
+height exactly $\xi$. If $w+g(s)$ had greater height for some
+$s$ in the preceding subgroup, then $x+s$ would still be a proper
+representative of height $\xi$. Moreover,
+$p(w+g(s))=g(p(x+s))$ would belong to $A_{\xi+2}$.
+Since $\xi+2<\delta$ and the old map preserves membership at
+that cut, $p(x+s)\in B_{\xi+2}$. Its height would therefore
+exceed $h_B(px)=\xi+1$, contrary to the secondary maximum.
+Thus $w$ is proper over the preceding image. This also rules out
+$w$ in the preceding image. In the jump case choose a root $w_1$
+of $y$ in $A_{\xi+1}$ and a proper $w_2\in P_\xi(A)$, using
+the unused Ulm-quotient dimension; $w=w_1+w_2$ is proper of height
+$\xi$. In either case the map extends on all sums by the
+proper-coset identity.
+
+For a finite block height
+$\delta+k$, the image of the $p$-multiple has height at least
+$\delta+k+1$, so a root of sufficient height exists; infinitely
+many socle elements of at least that height permit avoidance of the finite
+image. For a right height at least $\delta+\omega$, use a root
+of height at least $\delta+N-i-1$, again adding an unused socle
+element when necessary. The proper-coset identity proves the
+invariant for sums whose preceding summand has a different
+right height; when both heights are above $\delta$, only the
+indicated lower bound is needed. Thus the invariant holds on the
+entire new finite subgroup. At completion, all heights are equal
+when truncated at $\delta$.
+
+In particular, this step does not demand a root still above the
+limit $\delta+\omega$ of an element of height exactly that limit:
+only the explicitly finite headroom is spent.
+
+If $\gamma=\beta+1$, the reversed map now satisfies part (2) at
+index $2\beta+2=2\gamma$: all invariants below $\delta$ agree and
+heights are equal below that cut. If $\gamma$ is a limit, it
+satisfies part (3) at $2\gamma=\gamma$. For $\gamma=0$, it
+satisfies the atomic condition. The induction hypothesis therefore
+gives the response required by the definition of $\le_{2\gamma+1}$.
+
+At an even index $2\gamma+2$, first fix the entire finite right
+extension $B'$ and put
+\[
+ M=1+\max\bigl(\{k<\omega:
+       h_B(x)=\delta+k\text{ for some }x\in B'\}\cup\{0\}\bigr).
+\]
+Let $r$ be the number of one-element extensions needed and put
+$N=M+r+1$. During the $i$-th extension maintain equal heights
+below $\delta+M$, and send every element of right height at least
+$\delta+\omega$ to left height at least $\delta+N-i$.
+The initial map satisfies this invariant. Below $\delta+M$,
+root and jump extensions use equality of the lower invariants and
+$u_B\le u_A$ in the final block. The root/properness argument is
+the same as above. The Ulm-quotient calculation also applies at
+the greatest possible finite height $\delta+M-1$: source elements
+above that height are already at least $\delta+\omega$, because
+there are no right-hand heights in
+$[\delta+M,\delta+\omega)$ anywhere in $B'$.
+Before every extension $N-i\ge M+2$, and after all $r$ extensions
+$N-r=M+1$. Thus the old map preserves membership through
+$\xi+2\le\delta+M+1$, including at the boundary
+$\xi=\delta+M-1$. This is the exact membership preservation
+used in the preceding root/properness argument as well.
+Hence the partial map preserves the predicates needed
+for $S_\xi^*$ and $S_{\xi+1}$ at every height used in the calculation.
+Their dimensions agree in the two finite subgroups, and the stated
+Ulm inequality supplies the unused target class whenever one is
+needed in the source.
+
+For a right element of height
+at least $\delta+\omega$, its $p$-multiple's image has a root
+of height at least $\delta+N-i-1$; an unused socle element of at
+least that height avoids the preceding finite subgroup. Every right
+element of $B'$ has either a height below $\delta+M$ or a height
+at least $\delta+\omega$, by the definition of $M$.
+For a preceding summand of height below $\delta+M$, its height
+and that of its image agree and are below the new root's height;
+the sum has that same smaller height. For a preceding summand
+above the cut, both image heights meet the new headroom bound,
+so their sum does too. This proves the invariant on all sums;
+nonzero coefficients modulo $p$ do not change heights. At the end,
+the inverse map satisfies the odd
+height condition at $2\gamma+1$. Its lower invariants agree;
+its left-hand socles are all infinite. The odd induction step
+supplies the required comparison of the extended tuples.
+
+At a limit $\eta$, each fixed smaller successor index uses a cut
+strictly below $\omega\eta$. The assumed equality of invariants
+and truncated heights therefore supplies its sufficient conditions.
+Apply the induction hypothesis at a successor index above the
+requested smaller index to obtain the required finite response.
+This proves part (3) and completes the induction.
+
+The only uses of the infinite-socle assumption in these extensions
+are the explicitly available avoidance choices. In particular, the
+reduced-case inference from length to infinite socles is unnecessary,
+and no exceptional finite-socle alternative is invoked.
+\end{proof}
+
+\begin{theorem}[No exact pure-$\Sigma$ complexity for any countable Abelian $p$-group]
+\label{thm:no-pure-sigma}
+No countable Abelian $p$-group has exact pure
+$\Sigma_\alpha$ Scott complexity at any countable index.
+\end{theorem}
+
+\begin{proof}
+At index zero, every closed group-language term equals $0$, so
+all Abelian $p$-groups have the same quantifier-free sentences.
+Consequently none has a $\Sigma_0$ Scott sentence.
+Write $G=R\oplus D$. General nonzero-limit and low-index exclusions, and
+Theorem~\ref{thm:odd-obstruction}, leave only even-form
+indices $2\gamma+2$. Put $\delta=\omega\gamma$.
+
+If $\lambda_R\ge\delta+\omega$, the odd obstruction at
+$\gamma+1$ excludes a $\Sigma_{2\gamma+3}$ Scott sentence and
+therefore a $\Sigma_{2\gamma+2}$ one. If $\lambda_R<\delta$,
+the short-length upper bound is already $\Pi_{2\gamma+1}$.
+If $R_\delta$ is infinite of bounded exponent, choose for each
+finite reduced-coordinate tuple a finite retained summand as in
+Lemma~\ref{lem:terminal-deletion}. Its pointed odd comparison,
+combined with Lemma~\ref{lem:products}, transfers the matrix of any
+putative $\Sigma_{2\gamma+2}$ Scott sentence to a nonisomorphic quotient
+with the same divisible part.
+
+It remains that $\delta\le\lambda_R<\delta+\omega$ and
+$F=R_\delta$ is finite, possibly zero. Suppose first that $D$ has
+finite rank. The group $F\oplus D$ has a $\Pi_2$ Scott sentence.
+To see this, choose $n$ killing $F$ and impose stabilization
+$p^nH=p^{n+1}H$, a $\Pi_2$ sentence. For each $k\le n$, fix the
+finite dimension of $(p^kH)[p]$. Having dimension at least $r$ is
+$\Sigma_1$, witnessed by independent elements $p^kx_i$ with
+$p^{k+1}x_i=0$; exact finite dimension is $d\text{-}\Sigma_1$.
+These dimensions specify all finite Ulm invariants and the finite
+divisible rank. Along with the Abelian $p$-group axioms they are
+countably categorical. Relativizing this $\Pi_2$ sentence to the
+$\Pi_{2\gamma}$ domain $G_\delta$ gives a
+$\Pi_{2\gamma+2}$ Scott sentence after the lower Ulm list is
+included. If a $\Sigma_{2\gamma+2}$ Scott sentence exists too,
+Miller's theorem lowers it to $d\text{-}\Sigma_{2\gamma+1}$.
+Thus pure $\Sigma_{2\gamma+2}$ is not exact.
+
+Suppose instead that $D$ has infinite rank. Replace the finite
+terminal Ulm factor $F$ by $F\oplus C_p$, leaving every factor
+before $\gamma$ unchanged. If $F=0$, append the new final factor
+$C_p$. The earlier factors are unbounded because
+$\lambda_R\ge\delta$. For $\gamma>0$, Zippin's theorem supplies a reduced
+group $R'$ with this sequence; for $\gamma=0$ take $R'=F\oplus C_p$ directly. Put $G'=R'\oplus D$.
+The Ulm invariants of $G'$ and $G$ agree below $\delta$; in the
+block from $\delta$ to $\delta+\omega$, the former dominate the
+latter, with strict inequality at $\delta$. Both groups have
+infinite divisible rank. Lemma~\ref{lem:infinite-divisible-bf}(2),
+with left group $G'$ and right group $G$ and empty tuples, gives
+\[
+ G'\le_{2\gamma+2}G.
+\]
+Every $\Sigma_{2\gamma+2}$ sentence true of $G$ is therefore true
+of $G'$, whereas their Ulm invariants differ. Hence $G$ has no
+$\Sigma_{2\gamma+2}$ Scott sentence in this last case.
+All cases are exhausted.
+\end{proof}
+
+
+
+\section{Answers to the source questions and remaining work}
+Theorem~\ref{thm:reduced-classification} gives a negative answer to
+\cite[Question~5.1]{ACM}. Infinite Ulm invariants below the terminal
+block do not force the generic upper bound to be optimal. For a concrete
+example use
+\[
+ G=B_\omega\oplus W_\omega^{(\omega)}.
+\]
+Its finite-height Ulm invariants and its $\omega$th invariant are all
+$\omega$, and its length is $\omega+1$. Nevertheless its terminal group
+is $C_p^{(\omega)}$, so its exact complexity is $\Pi_4$, whereas the
+generic case-(ii) bound of \cite[Theorem~3.1]{ACM} is $\Pi_5$.
+More precisely, that generic bound is optimal exactly when at least two
+terminal cyclic multiplicities are infinite. At exact limit length
+the $\Pi_{2\gamma+1}$ bound is always optimal; for nonzero finite tails,
+the generic difference bound improves by one index.
+
+Theorem~\ref{thm:no-pure-sigma} and
+Theorem~\ref{thm:difference-spectrum} answer both realization alternatives
+of \cite[Question~5.2]{ACM}: the pure-$\Sigma$ spectrum is empty, and the
+difference spectrum consists of all positive countable successor levels.
+The impossibility of exact limit difference levels is the general
+published restriction, while the successor realizations already lie in
+the reduced subclass.
+
+The optimal complexity of each individual nonreduced group is not
+classified here. Nor do the special comparison lemmas eliminate all
+relative-sentence conditions from the general pointed back-and-forth
+analysis requested in \cite[Question~5.3]{ACM}. First-order Vaught's
+conjecture is not resolved by these Scott-sentence results.
+
+\paragraph{Preparation and status.}
+This manuscript was prepared with AI assistance from a research programme
+directed by the repository owner. The assembly combines the argument
+for successor realizations, its transfinite-existence repair, the
+divisible-rank argument, and the terminal classification into one
+canonical text. Published dependencies are credited at use. The
+unbounded assertions rest on the displayed hand proofs and those
+published inputs; no independent human audit, formal verification, or
+historical priority claim is asserted. No private notes, named project
+claims, or conventions outside this repository are required.
+
+\begin{thebibliography}{9}
+\bibitem{ACM} R.~Alvir, B.~F.~Csima and L.~MacLean,
+\emph{Scott Complexity of Reduced Abelian $p$-Groups},
+arXiv:2407.06940v1 (2024).
+\url{https://arxiv.org/abs/2407.06940v1}.
+\bibitem{AGHT} R.~Alvir, N.~Greenberg, M.~Harrison-Trainor and
+D.~Turetsky, \emph{Scott complexity of countable structures},
+Journal of Symbolic Logic 86(4) (2021), 1706--1720.
+\url{https://doi.org/10.1017/jsl.2021.4}.
+\bibitem{CT} F.~Calderoni and S.~Thomas,
+\emph{The bi-embeddability relation for countable abelian groups},
+Transactions of the American Mathematical Society 371(3) (2019),
+2237--2254. Zippin existence is used in the form of Theorem~4.2,
+printed p.~10 of the author manuscript.
+\url{https://sites.math.rutgers.edu/~sthomas/TFA.pdf}.
+\bibitem{GRT} D.~Gonzalez, D.~Rossegger and D.~Turetsky,
+\emph{Scott Analysis below the Vaught Ordinal},
+arXiv:2606.15205v2 (2026), Question~1 and the Scott-rank conventions.
+\url{https://arxiv.org/abs/2606.15205v2}.
+\end{thebibliography}
+\end{document}

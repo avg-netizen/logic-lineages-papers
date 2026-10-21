@@ -1,0 +1,295 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{Joint embedding for finite order forests:\\a decision theorem and a width classification}
+\author{}
+\date{21 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Given finitely many forbidden finite order forests, can one decide whether
+any two permitted forests have a permitted common extension? We answer
+this question effectively by passing to comparability graphs and applying
+Carter's decision theorem for hereditary graph classes with a forbidden
+induced four-vertex path. The transfer respects existence of embeddings,
+although a particular graph embedding need not preserve the order.
+We also prove an explicit classification: forests of width at most $m$
+have the joint embedding property exactly when $m\leq3$ (with width zero
+included if the empty forest is allowed). The negative cases have finite
+certificates, and the positive cases yield countable forests with the
+prescribed age. The general algorithm is an application of Carter's
+published preprint; the order-theoretic transfer and the width argument
+are given in full.
+\end{abstract}
+
+\section{The question and the role of the graph reduction}
+An order forest is a partially ordered set in which the predecessors of
+each element form a chain. A finite forest can have several minimal
+elements. An embedding preserves and reflects the order. In particular,
+it need not preserve a root, an immediate-predecessor relation, or a meet;
+none of these is part of the language.
+
+For a finite family $\mathcal U$ of finite order forests, put
+\[
+ \mathcal C(\mathcal U)=\{T:T\text{ is a finite order forest and no }
+ U\in\mathcal U\text{ embeds into }T\}.
+\]
+A class has the \emph{joint embedding property} (JEP) if any two members
+embed into a third member. Gonzalez, Rossegger and Turetsky ask which
+finite forbidden antichains have this property in Question~2 of
+\cite{GRT}. Here an antichain of forbidden structures is under the
+embedding relation; it need not consist of poset antichains.
+
+The question is algorithmic as well as structural. Failure of JEP can
+be witnessed by two finite forests, but searching for such a pair does
+not decide the positive case. The missing positive termination guarantee
+comes from Carter's graph theorem \cite{Carter}. The main task in using
+that theorem is to justify the translation of embeddings, rather than
+merely recognize a familiar graph class.
+
+As a first example, forbidding a two-element antichain leaves just chains.
+Two finite chains embed into a sufficiently long chain, so JEP holds.
+Forbidding a five-element antichain instead allows width four. We shall
+see that a balanced four-leaf binary tree and a four-leaf comb have no
+common extension of width four. Thus the obstruction is branching
+shape, even though the embeddings do not name branching operations.
+
+\section{Recovering the order from its comparability graph}
+Write $\Comp(T)$ for the simple graph on $T$ in which distinct vertices
+are adjacent exactly when they are comparable. Write $P_4$ for the
+four-vertex path and $C_4$ for the four-vertex cycle. Graph embeddings
+below are induced embeddings. For a graph family $\mathcal F$,
+$\Forb(\mathcal F)$ denotes the finite graphs avoiding every member of
+$\mathcal F$ as an induced subgraph.
+
+\begin{lemma}\label{lem:bridge}
+The comparability graphs of finite order forests are precisely
+$\Forb(P_4,C_4)$. Each such graph determines its order forest up to
+isomorphism. Moreover, for finite order forests $S,T$,
+\[
+ S\hookrightarrow T\quad\Longleftrightarrow\quad
+ \Comp(S)\hookrightarrow\Comp(T).
+\]
+\end{lemma}
+\begin{proof}
+Each connected component of a finite forest has a least element: the
+root beneath a vertex is unchanged along any edge of its comparability
+graph, and hence along a connected component. Its graph is obtained by
+adding a universal vertex to the disjoint union of the graphs above
+that root. Recursion excludes induced $P_4$ and $C_4$: each forbidden
+graph is connected and neither has a universal vertex.
+
+Conversely, a nonempty connected graph avoiding $P_4,C_4$ has a universal
+vertex. Choose $v$ with maximal size of its closed neighborhood $N[v]$.
+If $v$ is not universal, a shortest path to a nonneighbor has length
+two, since a longer shortest path would contain an induced $P_4$.
+Call the path $v,w,x$. Because $x\in N[w]\setminus N[v]$ and
+$|N[v]|\geq|N[w]|$, choose $u\in N[v]\setminus N[w]$. The four distinct
+vertices $u,v,w,x$ induce $P_4$ when $ux$ is absent and $C_4$ when it is
+present. Both are impossible. Remove a universal vertex, recursively
+represent the remaining components, and place the removed vertex below
+them. Represent a disconnected graph by a disjoint union.
+
+For uniqueness, all universal vertices in a connected representing
+forest form an initial chain. They are pairwise comparable. If $z\leq u$
+and $u$ is universal, then $z$ is comparable with every vertex: use
+transitivity above $u$, and linearity of the predecessors of $u$ below
+it. Thus $z$ is universal too. Every nonuniversal vertex lies above the
+whole universal chain. Deleting that chain leaves the uniquely specified
+graph components. Induction reconstructs their orders up to isomorphism.
+Permuting the names of the universal vertices does not change that
+isomorphism type.
+
+An order embedding gives an induced graph embedding. For the converse,
+give the image of a graph embedding the order induced from $T$. It is
+a forest whose comparability graph is isomorphic to $\Comp(S)$.
+Uniqueness gives an order isomorphism from $S$ to that image.
+\end{proof}
+
+The last argument asserts existence of an order embedding, not that
+the original graph map is an order embedding. For a two-element chain,
+the transposition is a graph automorphism but reverses the order.
+That distinction is harmless for JEP and essential for interpreting
+the reduction correctly. These graphs are commonly called trivially
+perfect graphs; the proof above supplies all properties needed here.
+
+\section{Deciding the forbidden-family question}
+We use the following published result in its stated form: Carter's
+Corollary~1.5 \cite{Carter} decides JEP for a hereditary class of finite
+graphs specified by a finite forbidden induced-subgraph family containing
+$P_4$. We use this graph corollary, not his distinct notions of maps
+between rooted trees.
+
+\begin{theorem}\label{thm:decision}
+There is an algorithm which, given any finite family $\mathcal U$ of
+finite order forests, decides whether $\mathcal C(\mathcal U)$ has JEP.
+More precisely, set
+\[
+ \mathcal F=\{P_4,C_4\}\cup\{\Comp(U):U\in\mathcal U\}.
+\]
+Then $\mathcal C(\mathcal U)$ has JEP if and only if $\Forb(\mathcal F)$
+has JEP.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:bridge} gives an effective correspondence on isomorphism
+types between all finite forests and $\Forb(P_4,C_4)$. It preserves and
+reflects existence of embeddings. In particular, $T$ avoids every $U$
+exactly when $\Comp(T)$ avoids every $\Comp(U)$. A common extension on
+either side corresponds to a common extension on the other side.
+This proves the equivalence. Compute the finite graph list and apply
+Carter's algorithm: the required forbidden graph $P_4$ is explicitly
+present.
+\end{proof}
+
+An input family need not already be an antichain: redundant forbidden
+members can be removed by finite embedding tests, without changing the
+class. The theorem supplies a total decision procedure, conditional only
+on the published graph algorithm. We do not claim a new implementation
+or a new complexity bound for that algorithm.
+
+\begin{proposition}[Finite certificates for negative instances]
+\label{prop:certificate}
+If $\mathcal C(\mathcal U)$ fails JEP, one can compute a pair $F,G$ in
+the class and a finite exhaustive certificate that they have no common
+extension in the class.
+\end{proposition}
+\begin{proof}
+Any common host can be replaced by its induced suborder on the union
+of the two embedding images. Heredity preserves membership in the
+class, and the resulting host has at most $|F|+|G|$ vertices. For a
+fixed pair it therefore suffices to enumerate all forests of size at
+most that bound and test their membership and all candidate embeddings.
+These are finite calculations on finite order relations.
+
+After a negative verdict from Theorem~\ref{thm:decision}, enumerate
+permitted pairs and perform this finite test for each. A bad pair must
+eventually appear. The pair together with the exhaustive host test is
+a certificate verifiable without executing Carter's decision algorithm.
+\end{proof}
+
+The bound is a bound on the size of a host for a fixed pair. It is not
+a uniform bound on the size of the first bad pair as a function of the
+forbidden family. Without Carter's theorem the same search would
+semidecide only failure of JEP.
+
+\section{A sharp classification by width}
+The width of a finite poset is the largest size of an antichain. For a
+finite forest it is the number of maximal elements, which we call leaves.
+Indeed, each element of an antichain extends to a leaf, and incomparable
+elements have disjoint upper cones: a common upper bound would have
+incomparable predecessors.
+
+\begin{theorem}\label{thm:width}
+For $m\geq1$, the class of finite order forests of width at most $m$
+has JEP if and only if $m\leq3$.
+\end{theorem}
+\begin{proof}
+First suppose $m\leq3$. A forest of width at most $m$ embeds as an
+induced suborder of a rooted binary tree with exactly $m$ leaves.
+Add a root below all components; replace any multifurcation by binary
+branching through inserted vertices; and, if necessary, attach extra
+leaves. These operations preserve the old order and need at most $m$
+leaves. Suppressing unary vertices now gives a full binary tree.
+For each of $m=1,2,3$ there is exactly one unordered full binary tree
+with $m$ leaves. A sufficiently long subdivision of each edge of this
+tree, together with a sufficiently long initial stem, therefore contains
+any prescribed pair of the original forests. Choose on each segment
+enough vertices for both individual embeddings; they need not have
+disjoint images. This common host still has width $m$.
+
+Let $m\geq4$. Compare a binary comb with $m$ leaves, whose root split
+is $1+(m-1)$, with a full binary tree whose root split is $2+(m-2)$.
+For a vertex $v$ let $L(v)$ be its set of descendant leaves. Distinct
+leaf clusters form a laminar family: two are nested or disjoint.
+
+Suppose a full binary $m$-leaf tree embeds into a host $H$ of width
+at most $m$. Its leaf images are incomparable; choose a host leaf above
+each one. There must be exactly $m$ host leaves, and each source-leaf
+image has only its chosen host leaf above it. For a source vertex $v$,
+the host leaves above its image are precisely the matched leaves in
+$L(v)$. To check the nontrivial inclusion, any host leaf is above the
+image of a unique source leaf $\ell$. If it is also above the image of
+$v$, foresthood makes those two images comparable. Order reflection
+then makes $v$ and $\ell$ comparable, so $v\leq\ell$.
+
+A full binary tree has $2m-1$ distinct nonempty clusters. This family
+is maximal laminar on the $m$ leaves. Indeed, a set compatible with
+both children of every binary split must either be contained in one
+child or contain that entire child; descending recursively shows that
+it is already a cluster. The host's cluster family contains the
+source's and is laminar, so the two families coincide. Thus a common
+host for the two chosen sources would identify their cluster families
+under a leaf bijection. In the comb all nonsingleton proper clusters
+are nested. The other source has two disjoint nonsingleton root-child
+clusters. This is impossible.
+\end{proof}
+
+If $A_k$ is the $k$-element poset antichain, then
+\[
+ \mathcal C(\{A_k\})\text{ has JEP}\quad\Longleftrightarrow\quad k\leq4
+ \qquad(k\geq2).
+\]
+For $m=4$ the two negative witnesses each have seven vertices: the
+balanced binary tree and the four-leaf comb. Their embeddings were not
+assumed to preserve roots or meets. Cluster preservation was derived
+from the saturated width bound. If empty forests are allowed, the
+width-zero class consists only of the empty forest and has JEP too.
+
+\section{Countable realizations and scope}
+The age of a countable forest is the class of isomorphism types of its
+finite induced suborders. The following standard age construction
+explains one use of JEP without imposing amalgamation or homogeneity.
+
+\begin{proposition}\label{prop:age}
+A nonempty hereditary class $\mathcal K$ of finite forests is the age
+of a finite or countable forest if and only if it has JEP. If it contains
+forests of unbounded size, the realizing forest is countably infinite.
+\end{proposition}
+\begin{proof}
+Any two finite suborders of one forest are contained in their finite
+union, proving necessity. Conversely enumerate the members of
+$\mathcal K$ up to isomorphism. Use JEP repeatedly to obtain a chain
+of members, with each enumerated member embedding into a later stage.
+Rename each successive host so that its chosen copy of the preceding
+stage is an actual induced suborder. The union is a forest: every
+finite violation of the order or predecessor-chain axioms would already
+occur at a finite stage. Every finite suborder of the union is contained
+in a stage, and hence belongs to $\mathcal K$ by heredity. Every member
+of $\mathcal K$ embeds into some stage. The union therefore has exactly
+the required age. Unbounded size forces the union to be infinite.
+\end{proof}
+
+Together with Theorem~\ref{thm:decision}, this decides which finite
+forbidden-family forest classes are ages. The empty class is treated
+separately: under the usual vacuous convention it has JEP, but is the
+age of no structure. Whether the empty forest is admitted as a structure
+is another convention that can be settled by a finite input check.
+
+The source motivation in \cite{GRT} concerns Scott analysis below the
+Vaught ordinal. The present paper answers its finite-forest Question~2
+by an effective criterion, and gives a direct structural answer for
+antichain obstructions. It does not establish a model-counting theorem
+for arbitrary complete first-order theories. Nor does the age
+construction alone assign a Scott rank to its union. Such conclusions
+require the additional hypotheses of the relevant results in
+\cite{GRT}.
+
+\paragraph{Preparation and status.}
+This manuscript was assembled with AI assistance from a research
+programme directed by the repository owner. Carter's general algorithm
+is credited as a published input; no independent implementation or
+formal verification of it is claimed. The transfer and width proofs
+above are the arguments offered for review. No historical priority
+claim is made for those deductions. The repository contains the full
+manuscript and its build instructions; it requires no private project
+notes or conventions.
+
+\begin{thebibliography}{9}
+\bibitem{Carter} D.~Carter, \emph{On the joint embedding property for
+cographs and trees}, arXiv:2409.06127v1 (2024), Corollary~1.5.
+\url{https://arxiv.org/abs/2409.06127v1}.
+\bibitem{GRT} D.~Gonzalez, D.~Rossegger and D.~Turetsky,
+\emph{Scott Analysis below the Vaught Ordinal}, arXiv:2606.15205v2
+(2026), Question~2.
+\url{https://arxiv.org/abs/2606.15205v2}.
+\end{thebibliography}
+\end{document}
