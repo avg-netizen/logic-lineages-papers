@@ -1,0 +1,197 @@
+{
+  "checked_at_utc": "2026-10-23T22:27:33.238683+00:00",
+  "status": "PASS",
+  "python_tests": 23,
+  "explicit_endpoint_fixtures": 10,
+  "lean_checked": true,
+  "lean_axiom_dependencies": {
+    "R1Calculator.principalSum_nf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_repr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_recursion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.intervalCheck_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PatternData.check_eq_true_iff_valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.validatePattern_isSome_iff_valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PatternData.Valid.weak_antisymm": [
+      "propext"
+    ],
+    "R1Calculator.PatternData.checkCovering_eq_true": [
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PatternData.checkInduced_eq_true": [
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.Covering.comp": [
+      "propext"
+    ],
+    "R1Calculator.Covering.comp_assoc": [
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.InducedEmbedding.comp": [
+      "propext"
+    ],
+    "R1Calculator.InducedEmbedding.map_weak_iff": [
+      "propext"
+    ],
+    "R1Calculator.coversCheck_eq_true": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.embedsCheck_eq_true": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.markedCoversCheck_eq_true": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.no_induced_discrete_two_chain_two": [
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_nf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "paper_checked": true,
+  "paper": {
+    "pages": 8,
+    "fonts": [
+      "CMBX10",
+      "CMBX12",
+      "CMEX10",
+      "CMMI10",
+      "CMMI6",
+      "CMMI8",
+      "CMR10",
+      "CMR12",
+      "CMR17",
+      "CMR6",
+      "CMR7",
+      "CMR8",
+      "CMSY10",
+      "CMSY8",
+      "CMTI10",
+      "CMTT10"
+    ],
+    "sha256": "fdbc59b28aff181cc4e7425bc19615b443d8ee18fd2655a96eda5d55def6e475"
+  },
+  "maximum_child_rss_kib_linux": 1703696,
+  "steps": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.418
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/generate_examples.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.046
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_lean.py",
+        "R1Calculator/Ordinal.lean",
+        "R1Calculator/Patterns.lean",
+        "R1Calculator/Examples.lean",
+        "R1Calculator.lean"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 9.471
+    },
+    {
+      "command": [
+        "python3",
+        "build_pdf.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.192
+    },
+    {
+      "command": [
+        "pdffonts",
+        "paper.pdf"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.022
+    },
+    {
+      "command": [
+        "pdfinfo",
+        "paper.pdf"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.013
+    }
+  ],
+  "source_sha256": {
+    "examples/endpoint-fixtures.json": "1676166cdb61f8c1703d28b22a1dce715e646224b2d6db129d6e7924a27a0b9b",
+    "lean/R1Calculator/Examples.lean": "69713be77ae65e6371173090c622a4cbf61128c933bd82984923275a93d6d7e0",
+    "lean/R1Calculator/Ordinal.lean": "bd19bd2f92f2a7b8677c342db732f10c10d57debbfc52730f9be1a021315546e",
+    "lean/R1Calculator/Patterns.lean": "ef8a16bcc633913dd533a1a2d058f15a522d0b5c2026e841371af53922ce5f21",
+    "lean/R1Calculator.lean": "34e34b4eae897fb1713450c4ee694515fb867465f2be5dc05eebc3120fd8c0e4",
+    "lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+    "lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+    "lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+    "paper.tex": "209703139a205ecb509942c4dc206e30e2eaea209f90a5705b8f128b661cae5b",
+    "preamble.tex": "b007e0cf6387683754886b17c73be7e14233e5e8b47b2453f7eaabc325f1cbfe",
+    "pyproject.toml": "6f4e9eea0c1acd0fa26a9dca74e5c83fbba5c912697b58ca6ee853db833d54b9",
+    "r1calc/__init__.py": "90c1d6307ce4241cb0487cb599964a8af30b51b2176014d2148682c6066c8ea8",
+    "r1calc/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "r1calc/_build.py": "088bb7b9bdac18324655651b6b48dc48edea793975170d07db0dd859acada854",
+    "r1calc/cli.py": "017da68e6fcc522f3f9082f82c1fdb4db877dd0e85b21c3585f4034147f1e835",
+    "r1calc/jsonio.py": "e1dfad49d00e324c1602f3b9aeee679f386b3d84a8ecd3f68c89d0b58459bf76",
+    "r1calc/ordinals.py": "6b841469bc92d1598d797a9d223671bfcfa235a2f409ad427de71b261176c51f",
+    "r1calc/parser.py": "4f7e22a82b484001dd6fd335e9ab9b75cb6d3e0fd34dae6bfdcf99fcdd42cf18",
+    "r1calc/patterns.py": "35d8cf590390720abd9c0ca15137157ddc656b508a57131a87d275f79879e141",
+    "scripts/check_lean.py": "586cd4154f3403a5a12faa7f6da4e76708a57188e39d5594e24d23aca46e8343",
+    "scripts/generate_examples.py": "14ca306bac908fd3ee8993cbd7f05475e50f9f10b96265ce20da2a3b434d00f8",
+    "scripts/verify.py": "bcc8a3f1e52019042b96e0d7b5231e1771ef33ce3492c391a0e67b3e12d86260",
+    "tests/test_io_cli.py": "3f3398e44a7bdf91b0c9c00c063eaf500fbd873af91c44fae1c3cda376ed64dd",
+    "tests/test_ordinals.py": "a868039cbd698635e6ba10ee518e45984b322f0b8aeffe8326a212f9035885a4",
+    "tests/test_patterns.py": "a86ecb570d003f842921b4b4d032d45a715e2746757e2e7d2da749d3d57b5bb4"
+  },
+  "scope": "Python execution tests; named Lean arithmetic/finite-pattern proofs; PDF assembly. Carlson semantic identification is cited externally. No Python refinement, new semantic theorem, independent mathematical review or priority claim."
+}

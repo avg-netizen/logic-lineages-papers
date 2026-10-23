@@ -1,0 +1,15 @@
+{
+  "schema": "r1calc.endpoint-fixtures.v1",
+  "cases": [
+    {"input": "0", "endpoint": "0"},
+    {"input": "7", "endpoint": "7"},
+    {"input": "w", "endpoint": "w+1"},
+    {"input": "w^2", "endpoint": "w^2+2"},
+    {"input": "w^w", "endpoint": "w^w+w+1"},
+    {"input": "w^(w+1)", "endpoint": "w^(w+1)+w+2"},
+    {"input": "w^(w*2)", "endpoint": "w^(w*2)+w*2+1"},
+    {"input": "w^w*2", "endpoint": "w^w*2+w+1"},
+    {"input": "w^3+w^2*4", "endpoint": "w^3+w^2*4+2"},
+    {"input": "w^(w^2)", "endpoint": "w^(w^2)+w^2+2"}
+  ]
+}

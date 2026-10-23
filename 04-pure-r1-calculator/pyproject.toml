@@ -1,0 +1,14 @@
+[build-system]
+requires = []
+build-backend = "r1calc._build"
+backend-path = ["."]
+
+[project]
+name = "pure-r1-calculator"
+version = "0.1.0"
+description = "Hereditary CNF endpoint arithmetic and finite respecting patterns"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+r1calc = "r1calc.cli:main"
