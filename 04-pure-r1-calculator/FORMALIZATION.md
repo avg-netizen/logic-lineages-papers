@@ -33,6 +33,7 @@ initial-segment Sigma-one equation.
 | [Norm](lean/R1Calculator/Norm.lean) | Expanded monomial-tree weight, triangular formula n(n+1)/2, general P/H output-size bounds, and normal omega-tower witnesses attaining equality at every natural size. |
 | [Patterns](lean/R1Calculator/Patterns.lean) | Boolean finite pattern validation, coverings versus induced embeddings, marker laws, composition and complete finite existence searches. |
 | [Examples](lean/R1Calculator/Examples.lean) | Explicit arithmetic fixtures and their actual semantic endpoint instances; additional finite-map examples. These supplement the general proofs. |
+| [StatementChecks](lean/R1Calculator/StatementChecks.lean) | Explicit unconditional signatures for the semantic endpoint, checker and greatest endpoint, plus the numeric size bound and sharpness. These checks are part of the public CI build. |
 
 The pure-R1 proof reconstructs the relevant part of Carlson's known result.
 It does not import the entire 3.1.3 project: selected formula and finite-diagram

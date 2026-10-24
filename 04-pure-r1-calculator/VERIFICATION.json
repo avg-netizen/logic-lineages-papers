@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-24T00:09:50.120774+00:00",
+  "checked_at_utc": "2026-10-24T01:13:21.894093+00:00",
   "status": "PASS",
   "python_tests": 23,
   "explicit_endpoint_fixtures": 10,
@@ -22,6 +22,7 @@
     "R1Calculator/Carlson.lean",
     "R1Calculator/Correctness.lean",
     "R1Calculator/Norm.lean",
+    "R1Calculator/StatementChecks.lean",
     "R1Calculator/Examples.lean",
     "R1Calculator.lean"
   ],
@@ -462,6 +463,31 @@
       "Quot.sound",
       "propext"
     ],
+    "R1Calculator.StatementChecks.semantic_endpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.StatementChecks.semantic_checker": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.StatementChecks.greatest_endpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.StatementChecks.explicit_norm_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.StatementChecks.explicit_sharpness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "R1Calculator.endpoint_nf": [
       "Classical.choice",
       "Quot.sound",
@@ -489,9 +515,9 @@
       "CMTI10",
       "CMTT10"
     ],
-    "sha256": "47c2a8d1d9d3b48d02aa137a9501a29bd8a6d699e834c513c32fe64ffed5fe69"
+    "sha256": "1dcbf8219a6c253f97e88b7c6ddebab4ba9998c98f56dcfa2acb2476266473c1"
   },
-  "maximum_child_rss_kib_linux": 1729960,
+  "maximum_child_rss_kib_linux": 1731196,
   "steps": [
     {
       "command": [
@@ -504,7 +530,7 @@
         "-v"
       ],
       "returncode": 0,
-      "elapsed_seconds": 1.394
+      "elapsed_seconds": 1.495
     },
     {
       "command": [
@@ -513,7 +539,7 @@
         "--check"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.045
+      "elapsed_seconds": 0.055
     },
     {
       "command": [
@@ -536,11 +562,12 @@
         "R1Calculator/Carlson.lean",
         "R1Calculator/Correctness.lean",
         "R1Calculator/Norm.lean",
+        "R1Calculator/StatementChecks.lean",
         "R1Calculator/Examples.lean",
         "R1Calculator.lean"
       ],
       "returncode": 0,
-      "elapsed_seconds": 41.25
+      "elapsed_seconds": 42.58
     },
     {
       "command": [
@@ -548,7 +575,7 @@
         "build_pdf.py"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.934
+      "elapsed_seconds": 0.893
     },
     {
       "command": [
@@ -556,7 +583,7 @@
         "paper.pdf"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.038
+      "elapsed_seconds": 0.031
     },
     {
       "command": [
@@ -564,7 +591,7 @@
         "paper.pdf"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.014
+      "elapsed_seconds": 0.017
     }
   ],
   "source_sha256": {
@@ -587,7 +614,8 @@
     "lean/R1Calculator/PrefixCut.lean": "013b67f7c84c5fd4dc4e045ce77841953d66f4cedda411d41ce48165dfff9455",
     "lean/R1Calculator/SemanticBasics.lean": "c89ac2139aadf1ccacb0e4d7c1b3d55802dde14cec2130ce738779d2aff5a4ed",
     "lean/R1Calculator/Semantics.lean": "3319a91a22524014743d008da36cb22a8d25dacfbf54a9a9d269836158f9f872",
-    "lean/R1Calculator.lean": "91581e594c89f503f703becc323c7cd2f9db39fb7a41080bb64f0931bb57c4e2",
+    "lean/R1Calculator/StatementChecks.lean": "a7fae7b92ecac6fbbb8c7aadfc46a22c245a73aeb632983eb4048c75ab6811de",
+    "lean/R1Calculator.lean": "cd58b88eab409db71d8554dfed2efcf9291f9cdbd0f14b2615ad068164d41649",
     "lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
     "lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
     "lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",

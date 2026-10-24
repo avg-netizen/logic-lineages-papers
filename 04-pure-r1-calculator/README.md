@@ -1,5 +1,7 @@
 # Pure R1 calculator
 
+[![Pure R1 Lean verification](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml/badge.svg?branch=main)](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml)
+
 A standalone calculator for Carlson's pure first-order resemblance below
 epsilon zero, with a finite-pattern library, an explanatory paper and checked
 Lean proofs.
@@ -9,6 +11,7 @@ Lean proofs.
 - [Lean proof coverage](FORMALIZATION.md) · [Lean project](lean/)
 - [Sources and mathematical dependencies](SOURCES.md)
 - [Verification record](VERIFICATION.md)
+- [Public CI compilation and artifacts](CI.md)
 
 For an ordinal `a`, the endpoint `H(a)` is the largest `b` with `a <=_1 b`
 in the standalone pure R1 structure. The implementation uses hereditary

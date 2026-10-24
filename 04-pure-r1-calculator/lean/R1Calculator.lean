@@ -2,6 +2,7 @@ import R1Calculator.Ordinal
 import R1Calculator.Patterns
 import R1Calculator.Correctness
 import R1Calculator.Norm
+import R1Calculator.StatementChecks
 import R1Calculator.Examples
 
 /- Standalone public entry point. Named coverage is recorded in FORMALIZATION.md.

@@ -1,5 +1,7 @@
 # Logic lineages papers
 
+[![Pure R1 Lean verification](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml/badge.svg?branch=main)](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml)
+
 Three full working manuscripts and a standalone calculator/formalization project from a research programme in mathematical logic. Their source questions were posed by the authors identified below. Each directory is independently buildable and has no dependency on private vault documents or project conventions.
 
 | Paper | Source problem | Main result |

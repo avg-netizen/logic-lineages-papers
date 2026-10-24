@@ -1,0 +1,154 @@
+name: Pure R1 Lean verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pure-r1-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Compile every proof and audit axioms
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
+        working-directory: 04-pure-r1-calculator
+    env:
+      LEAN_NUM_THREADS: '1'
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Elan
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 \
+            https://raw.githubusercontent.com/leanprover/elan/9605b24b08cf68b78dce0014b6fa01be1f8e2cee/elan-init.sh \
+            --output "$RUNNER_TEMP/pure-r1-elan-init.sh"
+          sh "$RUNNER_TEMP/pure-r1-elan-init.sh" -y --default-toolchain none --no-modify-path
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Install the pinned Lean toolchain
+        working-directory: 04-pure-r1-calculator/lean
+        run: |
+          set -euo pipefail
+          cat lean-toolchain
+          lean --version
+          lake --version
+          python3 --version
+
+      - name: Acquire the pinned standard-library dependencies
+        working-directory: 04-pure-r1-calculator/lean
+        run: |
+          set -euo pipefail
+          # Only Mathlib and its transitive dependencies may use upstream objects.
+          # The committed Lake manifest selects their exact source revisions.
+          lake exe cache get \
+            Mathlib.SetTheory.Ordinal.Notation \
+            Mathlib.SetTheory.Ordinal.Basic \
+            Mathlib.Data.Fin.Tuple.Basic \
+            Mathlib.Data.Finset.Sort \
+            Mathlib.Data.Finset.Lattice.Fold \
+            Mathlib.Data.Fin.Basic \
+            Mathlib.Data.List.FinRange \
+            Mathlib.Data.Fintype.Pi \
+            Mathlib.Tactic.Common
+          git diff --exit-code -- lake-manifest.json lakefile.toml lean-toolchain
+
+      - name: Confirm a fresh local proof build and record provenance
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+
+          compiled = list(Path("lean/.lake/build").rglob("*.olean"))
+          if compiled:
+              raise SystemExit(f"Unexpected cached calculator proof objects: {compiled}")
+          manifest = json.loads(Path("lean/lake-manifest.json").read_text())
+          packages = {p["name"]: p for p in manifest["packages"]}
+          revisions = {}
+          for name, package in packages.items():
+              path = Path("lean/.lake/packages") / name
+              actual = subprocess.check_output(["git", "-C", str(path), "rev-parse", "HEAD"], text=True).strip()
+              if actual != package["rev"]:
+                  raise SystemExit(f"Dependency revision mismatch: {name}: {actual}")
+              revisions[name] = actual
+          commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          if commit != os.environ["GITHUB_SHA"]:
+              raise SystemExit("Checkout does not match the workflow revision")
+          result = {
+              "commit": commit,
+              "repository": os.environ["GITHUB_REPOSITORY"],
+              "run_id": os.environ["GITHUB_RUN_ID"],
+              "run_attempt": os.environ["GITHUB_RUN_ATTEMPT"],
+              "run_url": f'{os.environ["GITHUB_SERVER_URL"]}/{os.environ["GITHUB_REPOSITORY"]}/actions/runs/{os.environ["GITHUB_RUN_ID"]}',
+              "lean_toolchain": Path("lean/lean-toolchain").read_text().strip(),
+              "lean_version": subprocess.check_output(["lean", "--version"], cwd="lean", text=True).strip(),
+              "dependency_revisions": revisions,
+              "cached_calculator_proof_objects_before_build": len(compiled),
+          }
+          output = Path("ci-results")
+          output.mkdir(exist_ok=True)
+          (output / "provenance.json").write_text(json.dumps(result, indent=2) + "\n")
+          print(json.dumps(result, indent=2))
+          PY
+
+      - name: Compile all calculator modules, audit axioms and run Python tests
+        run: |
+          set -euo pipefail
+          python3 scripts/verify.py --lean 2>&1 | tee ci-results/verification.log
+          cp VERIFICATION.json ci-results/VERIFICATION.json
+
+      - name: Publish verification summary
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          result = json.loads(Path("ci-results/VERIFICATION.json").read_text())
+          provenance = json.loads(Path("ci-results/provenance.json").read_text())
+          summary = (
+              "# Pure R1 verification passed\n\n"
+              f'Commit: `{provenance["commit"]}`\n\n'
+              f'- {len(result["lean_modules"])} local Lean modules compiled from source.\n'
+              f'- {len(result["lean_axiom_dependencies"])} principal axiom reports accepted.\n'
+              f'- {result["python_tests"]} Python tests passed.\n'
+              f'- {result["explicit_endpoint_fixtures"]} explicit arithmetic/semantic fixtures checked.\n'
+              "- No cached calculator proof objects or dependency on the Alexander thesis project.\n"
+              "- Only standard `propext`, `Classical.choice` and `Quot.sound` in the reported dependencies.\n\n"
+              "The endpoint characterization, greatest endpoint, Sigma-one checker equivalence, "
+              "and sharp norm theorem are required by the verifier. "
+              "Python is tested separately; this job does not claim a Python refinement proof "
+              "or rebuild the manuscript PDF.\n"
+          )
+          Path("ci-results/SUMMARY.md").write_text(summary)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as stream:
+              stream.write(summary)
+          print(summary)
+          PY
+
+      - name: Upload compile logs, source hashes and proof-check receipt
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: pure-r1-verification-${{ github.sha }}-${{ github.run_attempt }}
+          path: 04-pure-r1-calculator/ci-results/
+          if-no-files-found: warn
+          retention-days: 90

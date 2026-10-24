@@ -1,12 +1,12 @@
 # Verification record
 
-**PASS — 2026-10-24T00:09:50.120774+00:00.** The [machine-readable receipt](VERIFICATION.json)
+**PASS — 2026-10-24T01:13:21.894093+00:00.** The [machine-readable receipt](VERIFICATION.json)
 contains the actual commands, module order, source hashes and axiom reports.
 
-- **19 Lean modules** compiled serially in dependency order, including every
+- **20 Lean modules** compiled serially in dependency order, including every
   local source file, with no proof holes or added axioms. Only documented local,
   Lean and Mathlib imports are permitted by the verifier.
-- **91 distinct principal theorem reports** use only `propext`, `Classical.choice`
+- **96 distinct principal theorem reports** use only `propext`, `Classical.choice`
   and `Quot.sound` (individual results can use fewer). The reports include the
   semantic endpoint theorem, executable Sigma-one checker equivalence,
   greatest-endpoint theorem and the sharp size bound.
@@ -33,6 +33,10 @@ characterization, supplied semantic contract or assumed reflection constructor
 occurs in the final theorem. The expanded-tree bound and its equality witnesses
 for every natural size are also general kernel-checked theorems.
 
+The [public CI workflow](CI.md) rebuilds the Lean sources from a fresh checkout,
+checks explicit unconditional theorem signatures and publishes its own logs and
+receipt. Its Lean/Python run is separate from the local PDF check recorded here.
+
 Reproduce after installing the pinned public dependencies documented in
 [README.md](README.md):
 
@@ -43,7 +47,7 @@ python3 scripts/verify.py --lean --paper
 The helper uses one compiler at a time, a 2048 MiB managed-heap limit, a 16384 MiB
 virtual-address limit for mapped libraries/runtime arenas, and explicit CPU and
 wall-time bounds. The virtual-address cap is not an RSS allocation. The recorded
-maximum child RSS on Linux was 1689.4 MiB.
+maximum child RSS on Linux was 1690.6 MiB.
 No upstream library rebuild or dependency update was part of this run.
 
 The Python component also passed the previously recorded offline installation
