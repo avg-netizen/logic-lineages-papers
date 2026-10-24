@@ -20,10 +20,12 @@ normal forms with compressed natural coefficients. We explain why the
 recursion terminates, why repeated summands must be combined by ordinal
 rather than commutative arithmetic, and how its result determines finite
 traces of the global relation. We also give a sharp quadratic bound on
-expanded output-tree size. The Lean development checks arithmetic
-normal-form and denotation results and finite-pattern laws; the
-identification of the arithmetic operation with recursive
-$\Sigma_1$-elementarity uses Carlson's published theorem. The Python
+expanded output-tree size. The Lean development proves arithmetic normality and denotation,
+finite-pattern laws, the sharp size bound, and the identification of the
+computed endpoint with the independently constructed recursive
+$\Sigma_1$-elementarity relation. The semantic proof uses complete
+finite diagrams, exact weighted-forest capacity, constructive copies,
+and finite obstructions, without assuming Carlson's characterization. The Python
 implementation is separately tested against expanded reference
 calculations. Finite pattern enumeration supplies syntax and map tests,
 not an order-two ordinal assignment or a computation of a transfinite
@@ -58,8 +60,9 @@ is finite. The result decides the relation by
  \quad\Longleftrightarrow\quad
  \alpha\leq\beta\leq\lh(\alpha).
 \end{equation}
-The semantic justification is Carlson's arithmetic characterization,
-Theorem~2.5 of \cite{Carlson1999}. Wilken presents the endpoint recursion
+The semantic characterization is Carlson's Theorem~2.5 of
+\cite{Carlson1999}. Section~\ref{sec:semantic} explains the constructive
+argument formalized here for the calculator's range. Wilken presents the endpoint recursion
 in a convenient Cantor-normal-form formulation in Proposition~1.1 of
 \cite{Wilken2021}.
 
@@ -151,15 +154,16 @@ $\rho_i+P(d_i)$. Consequently \eqref{eq:precursion} gives
 The order of this sum is retained. Compression simply replaces a block
 of identical successive summands by finite right multiplication.
 Substituting \eqref{eq:expanded} into \eqref{eq:h} gives exactly the
-recursion in \cite[Proposition~1.1]{Wilken2021}. Carlson's theorem then
-identifies $H(a)$ with $\lh(a)$, giving \eqref{eq:interval}.
+recursion in \cite[Proposition~1.1]{Wilken2021}. The semantic proof in
+Section~\ref{sec:semantic} identifies $H(a)$ with $\lh(a)$, giving
+\eqref{eq:interval} and reconstructing the relevant part of Carlson's theorem.
 
 There are two correctness steps here. The first proves that a compressed
 algorithm denotes the displayed expanded ordinal sum. The second
 identifies that arithmetic sum with the recursively defined semantic
 relation. A successful program execution establishes neither theorem
-by itself. The formalization coverage is stated in
-Section~\ref{sec:lean}.
+by itself. Both steps have general Lean proofs in this package;
+Section~\ref{sec:lean} describes their exact statements and dependencies.
 
 \subsection{Worked examples}
 
@@ -250,8 +254,8 @@ the calculator can form the finite trace whose strict first relation is
  iR_1j\quad\Longleftrightarrow\quad
  i<j\ \hbox{ and }\ a_j\leq H(a_i).
 \]
-This is the restriction of the global pure relation, using Carlson's
-semantic theorem. It is not obtained by recomputing elementarity inside
+This is the restriction of the global pure relation, using the
+semantic characterization proved in Section~\ref{sec:semantic}. It is not obtained by recomputing elementarity inside
 the finite list itself. For instance the trace on
 $\{\omega,\omega+1\}$ retains a genuine edge of $\mathcal R_1$.
 Recomputing a recursive elementary-substructure relation on a finite
@@ -348,50 +352,208 @@ binary coefficient length, or a theorem comparing ordinal notations
 with minimum pattern size. Those require separate cost models and
 mathematical arguments.
 
-\section{Lean coverage and the semantic boundary}\label{sec:lean}
+\section{A finite-forest proof of the semantic endpoint}\label{sec:semantic}
 
-The Lean package pins its toolchain and Mathlib revision \cite{Mathlib}. Its arithmetic
-development uses Mathlib's \texttt{ONote} syntax and normal subtype
-\texttt{NONote}. Positive coefficients in that syntax are typed as
-positive natural numbers. Normal forms carry proof obligations rather
-than relying on unchecked tuple conventions.
+We now explain the mathematical bridge from the arithmetic computation to
+Carlson's recursively defined relation. This bridge is proved in Lean in
+this package. The proof follows the constructive route suggested in the
+concluding section of \cite{Carlson1999}, using weighted finite forests.
+It does not import a correctness assumption for the endpoint operation.
 
-The endpoint development separates three tasks: preserving normality,
-proving that compressed arithmetic has its intended ordinal denotation,
-and identifying that denotation with resemblance. Its normal-form and
-denotation results establish the first two tasks. In particular, the
-principal-summand specification expands repetitions only in the
-mathematical statement, and the endpoint-recursion theorem equates
-the computed ordinal representation with the sum in
-\eqref{eq:expanded}.
+Write $A(x,y)$ for the arithmetic candidate
+$x\leq y\leq H(x)$ when $x$ has a normal notation. In a bounded initial
+segment every actual ordinal has such a notation: the formalization proves
+this by well-founded induction using the zero, successor, and cofinal
+limit cases of Mathlib's fundamental sequences. Thus notation syntax does
+not silently replace quantification over actual ordinal elements.
 
-The finite-pattern development checks the relation conditions and the
-corresponding map laws in a finite model. It keeps a covering distinct
-from an induced embedding and makes marker preservation explicit.
-Concrete finite examples exercise those definitions. The accompanying
-coverage guide lists the actual public Lean declarations and their
-checked axiom dependencies.
+Several arithmetic laws prepare the argument. On normal inputs, $P$
+preserves ordinal addition and is strictly increasing. Both $P$ and $H$
+preserve every strict additive-principal bound. In addition,
+\[
+ y\leq P(e)\Longrightarrow H(y)\leq P(e),\qquad
+ x\leq y\leq H(x)\Longrightarrow H(y)\leq H(x).
+\]
+These are proved from the recursion, independently of elementarity. The
+second law makes the intervals of $A$ into a forest: intervals issued
+from comparable points either nest or separate. Finite restrictions are
+therefore finite ordered forests of exactly the kind used below.
 
-The Lean finite existence checker enumerates all functions between the
-two finite vertex types and filters them by the map predicate. Python
-uses increasing image lists instead. These are complete searches for
-the same specified maps, but no equality of running times or formal
-cross-language refinement is asserted.
+\subsection{Weights and exact finite capacity}
 
-Carlson's recursive $\Sigma_1$-elementarity characterization is cited
-as a published mathematical theorem. This package does not introduce
-it as a new Lean axiom or claim a formalization of its entire proof.
-Similarly, the proof of Theorem~\ref{thm:size} is given in this paper;
-its presence is not a claim that every argument here has been translated
-into Lean. Formalization coverage is attached to named declarations,
-not inferred from the existence of a \texttt{.lean} file.
+Regard a finite ordered forest as an empty forest or a first root with
+children forest $C$, followed by a remaining forest $R$. Define its
+weight by
+\[
+ w(\emptyset)=0,\qquad
+ w(\operatorname{cons}(C,R))=\omega^{w(C)}+w(R).
+\]
+The sum is taken in the displayed order and then normalized. For example,
+a leaf followed by a one-child tree has weight $1+\omega=\omega$.
+This absorption is compatible with finite realization: the extra leaf
+fits before the first infinite root.
 
-The Python and Lean implementations also remain different programs.
-Kernel checking the Lean definitions does not verify the Python
-interpreter or compiler. The Python test suite uses independent expanded
-recursions, noncommutative arithmetic examples, malformed-input tests,
-and finite map cases. Cross-implementation examples add evidence that
-the two implementations agree on their common representation.
+A greedy placement after a cut $\sigma$ puts the first root at
+$\sigma+\omega^{w(C)}$, places $C$ after that root, and begins $R$
+after the root's computed endpoint. It is an induced realization of the
+whole forest, including its negative relation facts. Its final extent is
+\begin{equation}\label{eq:capacity}
+ \sigma+P(w(F)).
+\end{equation}
+For a nonempty forest this is its greatest label. For an empty forest,
+``extent'' means the cut itself.
+
+\begin{lemma}\label{lem:capacity}
+Suppose an induced arithmetic realization of $F$ has every label strictly
+after $\sigma$ and at most $b$, where $\sigma\leq b$. Then
+$\sigma+P(w(F))\leq b$. The greedy placement attains equality.
+\end{lemma}
+
+\begin{proof}
+Induct on the forest. If its first root is $r$, the induction hypothesis
+on the children gives
+$r+P(w(C))\leq H(r)=r+P(\operatorname{last}(r))$.
+Strict monotonicity of $P$ yields
+$w(C)\leq\operatorname{last}(r)$. Since
+$\omega^{\operatorname{last}(r)}$ divides $r$, ordinal rounding gives
+$\sigma+\omega^{w(C)}\leq r$ whenever $\sigma<r$.
+The first greedy root and its endpoint therefore precede or equal the
+corresponding bounds in the given realization. Every point of the
+remaining forest is strictly beyond $H(r)$: its negative relation to
+$r$ is part of being an induced realization. Apply the induction
+hypothesis to that remaining forest with cut $H(r)$. Additivity of $P$
+combines the two bounds into \eqref{eq:capacity}. Empty children and an
+empty remainder contribute zero. The same recursion computes the greedy
+extent and proves that all its positive and negative atoms agree with
+the forest.
+\end{proof}
+
+\subsection{Copies inside the endpoint interval}
+
+Suppose $\alpha<\beta\leq H(\alpha)$, and let a finite configuration
+below $\beta$ be given. Its old points lie below $\alpha$; call its new
+points $Y$. Write the final principal block as
+$\alpha=\xi+\omega^e$, with $\xi<\alpha$.
+By finite-forest extraction, $Y$ has an induced forest description $F$.
+Every point of $Y$ is after $\xi$ and strictly below
+\[
+ H(\alpha)=\xi+P(\omega^e).
+\]
+Lemma~\ref{lem:capacity} and strict monotonicity of $P$ imply
+$w(F)<\omega^e$. Consequently $P(w(F))<\omega^e$ as well.
+
+Choose a cut $c<\alpha$ above $\xi$, all old points, and the endpoints
+$H(x)$ of the old points for which $A(x,\alpha)$ is false. There are
+only finitely many such requirements, and each is below $\alpha$.
+The greedy copy after $c$ ends at $c+P(w(F))<\alpha$, since both
+its remaining displacement and the remainder of $c$ lie in the final
+additive-principal block. It has exactly the induced diagram of $Y$.
+
+The choice of $c$ also pays every mixed old/new atom. If $A(x,\alpha)$
+holds, the copied new points remain in $x$'s endpoint interval. Otherwise
+they lie beyond $H(x)$. Equality and order are preserved by keeping the
+old points fixed and putting the new copy strictly above them. This gives
+one induced copy of the whole finite configuration below $\alpha$.
+The equal-endpoint case uses the identity map.
+
+\subsection{A finite obstruction beyond the endpoint}
+
+Every normal notation $e$ has a canonical finite forest of weight $e$:
+expand its coefficients into repeated roots and recurse into its
+exponents. Put that forest under one new root. Placed greedily after
+$\xi$, its root is $\alpha=\xi+\omega^e$, and all its labels are
+at most $H(\alpha)$. Include $\xi$ as an old fixed parameter.
+
+An induced copy of this finite diagram below $\alpha$ would send its
+root to some $r$ with $\xi<r<\alpha$. The children still have weight
+$e$, so the root-capacity step in Lemma~\ref{lem:capacity} gives
+$e\leq\operatorname{last}(r)$. Rounding then implies
+$\alpha=\xi+\omega^e\leq r$, a contradiction. At $\alpha=0$,
+a one-point diagram supplies the obstruction. Thus no point strictly
+beyond $H(\alpha)$ can satisfy the arithmetic finite-copy criterion.
+
+\subsection{Identification with recursive elementarity}
+
+The package proves Carlson's finite-set criterion
+\cite[Proposition~1.2]{Carlson1999} for the explicit single-relation
+language: existential Boolean-matrix truth reflects exactly when every
+finite configuration has an induced copy fixing its old parameters.
+Complete finite diagrams record negative atoms as well as positive ones.
+This proof includes empty domains and empty tuples.
+
+The copy construction and obstruction show that $A$ satisfies the
+$\Sigma_1$ initial-segment equation below every normal-notation bound.
+A separate upper-ordinal induction proves uniqueness of the recursively
+constructed relation satisfying that equation there. Hence $A$ agrees
+with the actual pure $\mathcal R_1$ relation on normal inputs.
+Downwardness and the obstruction at $H(\alpha)+1$ extend the result to
+every actual right ordinal:
+\[
+ \alpha\leq_1\beta
+ \quad\Longleftrightarrow\quad
+ \alpha\leq\beta\leq H(\alpha).
+\]
+In particular, $H(\alpha)$ is proved to be the greatest endpoint, rather
+than merely a correct answer among a finite selection of notations.
+The formal statement is restricted on the left to the calculator's
+hereditary normal forms below $\varepsilon_0$; the periodic extension
+beyond that range is outside this calculator.
+
+\section{Lean development and scope}\label{sec:lean}
+
+The Lean package pins its toolchain and Mathlib revision \cite{Mathlib}.
+Its arithmetic uses Mathlib's \texttt{ONote} syntax and normal subtype
+\texttt{NONote}. Positive coefficients are typed as positive natural
+numbers; normal inputs carry proof obligations. The recursive semantics
+uses the precise signature $(=,\leq,\leq_1)$ and Boolean matrices with
+arbitrary finite existential witness blocks, matching Carlson's stated
+meaning of $\Sigma_1$.
+
+The principal semantic declaration is
+\texttt{PureR1.endpoint\_semantic}. Given any normal input $a$ and
+any actual ordinal $\beta$, it proves
+\[
+ \operatorname{R1}(a.\operatorname{repr},\beta)
+ \quad\Longleftrightarrow\quad
+ a.\operatorname{repr}\leq\beta\leq H(a).\operatorname{repr}.
+\]
+The relation on the left is constructed by well-founded upper-ordinal
+recursion from formula truth. It is not defined as the endpoint interval.
+The declarations \texttt{endpoint\_isGreatest} and
+\texttt{intervalCheck\_iff\_sigma1} give the greatest-endpoint and
+executable-checker consequences. Their types contain no supplied
+characterization, reflection oracle, or semantic correctness premise.
+
+The semantic proof includes both directions of the finite-copy criterion,
+coverage of actual ordinal cuts by normal notations, full induced forest
+extraction and realization, the finite copying construction and endpoint
+obstruction, and recursive uniqueness. The norm development proves
+Theorem~\ref{thm:size}, its triangular formula, and matching tower
+witnesses for every natural input size. The finite-pattern development
+proves the stated checker and map laws, distinguishing coverings from
+induced embeddings and making marker preservation explicit.
+
+Selected formula, recursive-prefix, and finite-diagram constructions were
+adapted from an earlier Alexander thesis Lean development. Their
+single-relation versions are included and checked locally. The larger
+project is not a dependency; its simultaneous order-two relations are
+not substituted for the standalone relation used here.
+
+The proofs use Lean and Mathlib's standard foundations, with principal
+axiom reports limited to \texttt{propext}, \texttt{Classical.choice}
+and \texttt{Quot.sound}. No admitted proofs, added axioms or external
+Carlson characterization are used. The coverage guide lists the actual
+modules and declarations, and the verification record identifies their
+checked source hashes.
+
+Python and Lean remain different implementations. Python's parser,
+interpreter and execution are tested separately; there is no formal
+cross-language refinement proof. Lean's finite existence search enumerates
+finite functions, whereas Python enumerates increasing image lists.
+The finite enumeration table reports Python executions. Neither the
+checker laws nor the norm theorem asserts a running-time bound, a minimum
+order-two realization, or an extension to additive or simultaneous
+higher-order resemblance.
 
 \section{Using and reproducing the package}
 
@@ -414,11 +576,12 @@ with explicit time and memory limits; it does not update dependencies.
 Its locally borrowed cache is a development convenience, not a
 repository dependency.
 
-The test and build records identify what was actually run. A successful
-bounded test checks those instances. General claims above rest on the
-specified mathematical proofs or the named Lean theorems, according to
-their stated coverage. Resource refusal does not certify a negative
-mathematical answer.
+The complete local check is \texttt{scripts/verify.py --lean --paper}.
+It compiles all local Lean modules in dependency order, checks the stated
+axiom dependencies, runs the Python suite and explicit shared fixtures,
+and rebuilds the PDF. The records identify source hashes and actual
+commands. A resource refusal remains an incomplete computation rather
+than a negative mathematical answer.
 
 \section{Research role and directions for reuse}
 

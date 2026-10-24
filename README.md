@@ -7,13 +7,14 @@ Three full working manuscripts and a standalone calculator/formalization project
 | [Scott complexity of countable abelian p-groups](01-scott-complexity-abelian-p-groups/README.md) · [PDF](01-scott-complexity-abelian-p-groups/paper.pdf) | Alvir–Csima–MacLean (2024), Questions 5.1–5.2; Gonzalez–Rossegger–Turetsky (2026), Question 1 | Exact reduced-group classification; all successor difference levels; no exact pure Sigma level, including nonreduced groups. |
 | [Equality and universal comparison of positive exponential terms](02-exponential-comparison/README.md) · [PDF](02-exponential-comparison/paper.pdf) | Wilken–Weiermann (2012), effectiveness conjecture following Definition 2.8 | Depth-two universal comparison is undecidable; identity and one-variable comparison have decision procedures. |
 | [Joint embedding for finite order forests](03-joint-embedding-finite-forests/README.md) · [PDF](03-joint-embedding-finite-forests/paper.pdf) | Gonzalez–Rossegger–Turetsky (2026), Question 2 | Decision by reduction to Carter's graph theorem; explicit width classification and negative certificates. |
-| [Pure R1 ordinal and pattern calculator](04-pure-r1-calculator/README.md) · [Paper PDF](04-pure-r1-calculator/paper.pdf) | Carlson's pure first-order resemblance; Wilken's endpoint recursion | Standalone Python calculator/CLI, finite-pattern maps and enumeration, sharp expanded-tree output-size bound, and checked Lean arithmetic/finite-pattern proofs. |
+| [Pure R1 ordinal and pattern calculator](04-pure-r1-calculator/README.md) · [Paper PDF](04-pure-r1-calculator/paper.pdf) | Carlson's pure first-order resemblance; Wilken's endpoint recursion | Standalone Python calculator/CLI, finite-pattern maps and enumeration, sharp expanded-tree output-size bound, and checked Lean semantic endpoint, arithmetic, finite-pattern and sharp norm proofs. |
 
 The calculator project includes its own implementation, tests, explanatory paper,
 public Lake configuration and [formalization coverage](04-pure-r1-calculator/FORMALIZATION.md).
-Carlson's semantic characterization is cited externally; the Lean proofs verify
-the stated arithmetic and finite-pattern claims. Python execution is separately
-tested. See the project's verification record for the exact checks.
+The Lean development reconstructs Carlson's semantic endpoint characterization
+for normal left inputs and arbitrary actual right ordinals, together with the
+sharp expanded-tree size theorem. It uses standard Lean/Mathlib foundations;
+Python execution is separately tested. See the project's verification record.
 
 Each bundle contains the canonical `paper.tex`, its PDF, a local `preamble.tex`, `build_pdf.py`, a source/dependency guide and a verification record. Published mathematical theorems are cited normally; their proofs and copyrighted source PDFs are not bundled. The papers give their local arguments in full, with introductions and examples.
 

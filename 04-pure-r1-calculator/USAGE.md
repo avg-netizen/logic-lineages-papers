@@ -76,9 +76,8 @@ W(a) = sum c*(1+W(e)) over its CNF blocks (e,c).
 It charges repeated exponent subtrees once per coefficient unit. It is not
 binary input length, DAG size, execution time, pattern size or minimum
 realization size. The endpoint's sharp triangular output-size bound concerns
-this specific norm. Its proof in the paper is ordinary mathematics; the Lean
-modules establish the stated endpoint arithmetic and finite-pattern results,
-and do not claim a formal proof of this size bound.
+this specific norm. The paper gives its mathematical proof, and `Norm.lean`
+checks the general bound and matching tower witnesses at every natural size.
 Large compressed coefficients may have enormous expanded norms without being
 expanded by the implementation. Python memory, recursion and integer-printing
 limits still apply; no general running-time bound is claimed.
@@ -191,6 +190,7 @@ hereditary-word reference, and increasing-map search with an all-functions
 finite reference. They include malformed input and explicit incomplete-search
 cases. Finite tests are not proofs of the universal endpoint or semantic theorem.
 The accompanying Lean modules prove their stated arithmetic and finite-checker
-properties; they do not verify execution of this Python code or prove Carlson's
-external identification with recursive Sigma1-elementarity. See the paper and
+properties and prove Carlson's semantic endpoint characterization from the
+constructed recursive Sigma1 relation. They do not verify execution of this
+Python code. See the paper and
 source guide for the exact theorem coverage and published inputs.

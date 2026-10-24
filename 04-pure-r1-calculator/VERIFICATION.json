@@ -1,9 +1,30 @@
 {
-  "checked_at_utc": "2026-10-23T22:27:33.238683+00:00",
+  "checked_at_utc": "2026-10-24T00:09:50.120774+00:00",
   "status": "PASS",
   "python_tests": 23,
   "explicit_endpoint_fixtures": 10,
   "lean_checked": true,
+  "lean_modules": [
+    "R1Calculator/Ordinal.lean",
+    "R1Calculator/Patterns.lean",
+    "R1Calculator/Semantics.lean",
+    "R1Calculator/SemanticBasics.lean",
+    "R1Calculator/FiniteDiagrams.lean",
+    "R1Calculator/ArithmeticBounds.lean",
+    "R1Calculator/ArithmeticLaws.lean",
+    "R1Calculator/EndpointClosure.lean",
+    "R1Calculator/NotationCoverage.lean",
+    "R1Calculator/CarlsonSupport.lean",
+    "R1Calculator/ForestWeights.lean",
+    "R1Calculator/ForestCapacity.lean",
+    "R1Calculator/ForestExtraction.lean",
+    "R1Calculator/PrefixCut.lean",
+    "R1Calculator/Carlson.lean",
+    "R1Calculator/Correctness.lean",
+    "R1Calculator/Norm.lean",
+    "R1Calculator/Examples.lean",
+    "R1Calculator.lean"
+  ],
   "lean_axiom_dependencies": {
     "R1Calculator.principalSum_nf": [
       "Classical.choice",
@@ -76,6 +97,371 @@
       "Quot.sound",
       "propext"
     ],
+    "R1Calculator.PureR1.R1_unique_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_iff_global": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_isSuccLimit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_of_cofinal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_succ_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_trans": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_between": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_cross_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.tuple_reflection_of_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.matrix_realize_pattern": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.sigma1Elementary_iff_finiteReflection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_iff_finiteReflection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_repr_lt_omega_opow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_repr_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_add_right_repr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_add_repr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_strictMono_repr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_lt_principal_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principal_rounding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_lt_monomial_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_endpointClosed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_nested": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.exists_nf_repr_of_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.exists_nonote_repr_of_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.notation_tuple_coverage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.initialSegmentOrderIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.R1_cross_cut_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.arithmeticR1_note_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.arithmeticR1_add_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.arithmeticR1_trans": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.arithmeticR1_refl_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.lastPrincipal_prefix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.preservesPattern_extendBelow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.extendBelow_fixes_prefix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.label_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.weight_nf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.label_nf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.realizes_rel_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.weight_lt_of_below_translated_principalSum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.realizes_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.greedy_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.greedy_maximum_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.weight_lt_of_below_principalSum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.greedy_realizes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.greedy_extent_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.minimum_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.root_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.width_repr_eq_principalSum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.extract_sorted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.extract_finset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.extract_finset_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.arithmeticR1_finite_anchor_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.canonicalForest_weight_repr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.canonicalForest_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.canonicalBoundaryTree_weight_repr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.Forest.Realizes.transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.canonicalBoundaryTree_no_root_in_last_block": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.arithmetic_not_finiteReflection_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.forest_weight_lt_last_principal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.OrderedForest.arithmetic_finiteReflection_of_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.arithmeticR1_fixedpoint_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.endpoint_semantic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.intervalCheck_iff_R1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.intervalCheck_iff_sigma1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.PureR1.endpoint_isGreatest": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_principal_normal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_omegaTower_treeWeight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_omegaTower_treeWeight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_treeWeight_bound_sharp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.principalSum_treeWeight_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "R1Calculator.endpoint_treeWeight_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "R1Calculator.endpoint_nf": [
       "Classical.choice",
       "Quot.sound",
@@ -84,7 +470,7 @@
   },
   "paper_checked": true,
   "paper": {
-    "pages": 8,
+    "pages": 10,
     "fonts": [
       "CMBX10",
       "CMBX12",
@@ -103,9 +489,9 @@
       "CMTI10",
       "CMTT10"
     ],
-    "sha256": "fdbc59b28aff181cc4e7425bc19615b443d8ee18fd2655a96eda5d55def6e475"
+    "sha256": "47c2a8d1d9d3b48d02aa137a9501a29bd8a6d699e834c513c32fe64ffed5fe69"
   },
-  "maximum_child_rss_kib_linux": 1703696,
+  "maximum_child_rss_kib_linux": 1729960,
   "steps": [
     {
       "command": [
@@ -118,7 +504,7 @@
         "-v"
       ],
       "returncode": 0,
-      "elapsed_seconds": 1.418
+      "elapsed_seconds": 1.394
     },
     {
       "command": [
@@ -127,7 +513,7 @@
         "--check"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.046
+      "elapsed_seconds": 0.045
     },
     {
       "command": [
@@ -135,11 +521,26 @@
         "scripts/check_lean.py",
         "R1Calculator/Ordinal.lean",
         "R1Calculator/Patterns.lean",
+        "R1Calculator/Semantics.lean",
+        "R1Calculator/SemanticBasics.lean",
+        "R1Calculator/FiniteDiagrams.lean",
+        "R1Calculator/ArithmeticBounds.lean",
+        "R1Calculator/ArithmeticLaws.lean",
+        "R1Calculator/EndpointClosure.lean",
+        "R1Calculator/NotationCoverage.lean",
+        "R1Calculator/CarlsonSupport.lean",
+        "R1Calculator/ForestWeights.lean",
+        "R1Calculator/ForestCapacity.lean",
+        "R1Calculator/ForestExtraction.lean",
+        "R1Calculator/PrefixCut.lean",
+        "R1Calculator/Carlson.lean",
+        "R1Calculator/Correctness.lean",
+        "R1Calculator/Norm.lean",
         "R1Calculator/Examples.lean",
         "R1Calculator.lean"
       ],
       "returncode": 0,
-      "elapsed_seconds": 9.471
+      "elapsed_seconds": 41.25
     },
     {
       "command": [
@@ -147,7 +548,7 @@
         "build_pdf.py"
       ],
       "returncode": 0,
-      "elapsed_seconds": 1.192
+      "elapsed_seconds": 0.934
     },
     {
       "command": [
@@ -155,7 +556,7 @@
         "paper.pdf"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.022
+      "elapsed_seconds": 0.038
     },
     {
       "command": [
@@ -163,19 +564,34 @@
         "paper.pdf"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.013
+      "elapsed_seconds": 0.014
     }
   ],
   "source_sha256": {
     "examples/endpoint-fixtures.json": "1676166cdb61f8c1703d28b22a1dce715e646224b2d6db129d6e7924a27a0b9b",
-    "lean/R1Calculator/Examples.lean": "69713be77ae65e6371173090c622a4cbf61128c933bd82984923275a93d6d7e0",
-    "lean/R1Calculator/Ordinal.lean": "bd19bd2f92f2a7b8677c342db732f10c10d57debbfc52730f9be1a021315546e",
-    "lean/R1Calculator/Patterns.lean": "ef8a16bcc633913dd533a1a2d058f15a522d0b5c2026e841371af53922ce5f21",
-    "lean/R1Calculator.lean": "34e34b4eae897fb1713450c4ee694515fb867465f2be5dc05eebc3120fd8c0e4",
+    "lean/R1Calculator/ArithmeticBounds.lean": "4e616509dd144611081cd8a36aaafbef53ca6bb02718c956713ec0a9da85f07f",
+    "lean/R1Calculator/ArithmeticLaws.lean": "60cff5c7d491a654a59ed943c99c07b394f863e7adc349b6505368d6501c5b54",
+    "lean/R1Calculator/Carlson.lean": "13e7f993775e8b3670a3774be72cd96da0b513bcf34fb572f9a25dcfcffd48f3",
+    "lean/R1Calculator/CarlsonSupport.lean": "869997aaca7cfbecab7919083810e186ec11924a6a18c084e095b6bd0e12f7d3",
+    "lean/R1Calculator/Correctness.lean": "fc294bc0f6db87dff36bc970fa618c5ca858bd5db598ee4a84e49d481895f5a7",
+    "lean/R1Calculator/EndpointClosure.lean": "11e6feb87bb690648612f2d18bdb10bdb74b579756f1e377dc0eb037e734dee5",
+    "lean/R1Calculator/Examples.lean": "d89d5632745552d256004aebd9397215059db97ca10c145b84b23916f4de21f9",
+    "lean/R1Calculator/FiniteDiagrams.lean": "b4771091d7570c1ae2fbd2f6435a1e848e0473ab46b1346b24e7498f20eb2952",
+    "lean/R1Calculator/ForestCapacity.lean": "78b11e9ca6b60d5f1d8cd18c2c543a2c3087da6e051ea0a26c3b30bb2f4ae4a5",
+    "lean/R1Calculator/ForestExtraction.lean": "94ce5e0e796fb8cfce90bbdbd9ef6f16792c5623194a5651c58a85bb9762ecb7",
+    "lean/R1Calculator/ForestWeights.lean": "a8dc4478b02beacf43048e6e3d68970303ed57923af10c480f922bcfd1a9dc22",
+    "lean/R1Calculator/Norm.lean": "0e287e3ca998bce70951acc2f7f8f8e7522af8c1758fcd3f9f4a083cccefff23",
+    "lean/R1Calculator/NotationCoverage.lean": "8cacd5c63507bfd9097e2913dac99600538bd7b3382ee7514efd1977786d7f4d",
+    "lean/R1Calculator/Ordinal.lean": "f7b33a8d15701abc3df1d2b1b986535bc67b9d571f93e525dbfe2cc023f8ae1a",
+    "lean/R1Calculator/Patterns.lean": "71ef905b6f2f83c76782355f6d92df8ce28b4ba72ef2e7f51ae9fe1d05d2ba3b",
+    "lean/R1Calculator/PrefixCut.lean": "013b67f7c84c5fd4dc4e045ce77841953d66f4cedda411d41ce48165dfff9455",
+    "lean/R1Calculator/SemanticBasics.lean": "c89ac2139aadf1ccacb0e4d7c1b3d55802dde14cec2130ce738779d2aff5a4ed",
+    "lean/R1Calculator/Semantics.lean": "3319a91a22524014743d008da36cb22a8d25dacfbf54a9a9d269836158f9f872",
+    "lean/R1Calculator.lean": "91581e594c89f503f703becc323c7cd2f9db39fb7a41080bb64f0931bb57c4e2",
     "lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
     "lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
     "lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
-    "paper.tex": "209703139a205ecb509942c4dc206e30e2eaea209f90a5705b8f128b661cae5b",
+    "paper.tex": "59342ff6420e00f5d7ee260bd47508443dc8ecf5ccffb6582e61d133ad029b07",
     "preamble.tex": "b007e0cf6387683754886b17c73be7e14233e5e8b47b2453f7eaabc325f1cbfe",
     "pyproject.toml": "6f4e9eea0c1acd0fa26a9dca74e5c83fbba5c912697b58ca6ee853db833d54b9",
     "r1calc/__init__.py": "90c1d6307ce4241cb0487cb599964a8af30b51b2176014d2148682c6066c8ea8",
@@ -186,12 +602,12 @@
     "r1calc/ordinals.py": "6b841469bc92d1598d797a9d223671bfcfa235a2f409ad427de71b261176c51f",
     "r1calc/parser.py": "4f7e22a82b484001dd6fd335e9ab9b75cb6d3e0fd34dae6bfdcf99fcdd42cf18",
     "r1calc/patterns.py": "35d8cf590390720abd9c0ca15137157ddc656b508a57131a87d275f79879e141",
-    "scripts/check_lean.py": "586cd4154f3403a5a12faa7f6da4e76708a57188e39d5594e24d23aca46e8343",
-    "scripts/generate_examples.py": "14ca306bac908fd3ee8993cbd7f05475e50f9f10b96265ce20da2a3b434d00f8",
-    "scripts/verify.py": "bcc8a3f1e52019042b96e0d7b5231e1771ef33ce3492c391a0e67b3e12d86260",
+    "scripts/check_lean.py": "e6845713fe135c62d6c02e15b3d29f18e2c269d9d589ac5d2206e5d3526c03c1",
+    "scripts/generate_examples.py": "e5791b83456a90f75ab1508b875cd267e9317fe7389afbf9ac04ad827e740429",
+    "scripts/verify.py": "8482b37c35fd75cd6a61b1ad431df44bb330923cb4f927da8dbc5fe2337bb3cc",
     "tests/test_io_cli.py": "3f3398e44a7bdf91b0c9c00c063eaf500fbd873af91c44fae1c3cda376ed64dd",
     "tests/test_ordinals.py": "a868039cbd698635e6ba10ee518e45984b322f0b8aeffe8326a212f9035885a4",
     "tests/test_patterns.py": "a86ecb570d003f842921b4b4d032d45a715e2746757e2e7d2da749d3d57b5bb4"
   },
-  "scope": "Python execution tests; named Lean arithmetic/finite-pattern proofs; PDF assembly. Carlson semantic identification is cited externally. No Python refinement, new semantic theorem, independent mathematical review or priority claim."
+  "scope": "Python execution tests; Lean arithmetic, finite-pattern, standalone recursive Sigma1 semantics, finite-copy/obstruction proofs, full semantic endpoint rows for normal left inputs and arbitrary right ordinals, and sharp expanded-tree norm bounds; PDF assembly. No external Carlson correctness premise. Standard Lean/Mathlib foundations remain dependencies. No Python refinement, higher-order/additive relation evaluator, independent human review or priority claim."
 }

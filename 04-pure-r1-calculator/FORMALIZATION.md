@@ -1,41 +1,63 @@
 # Lean proof coverage
 
-The project pins Lean `v4.32.0-rc1` and Mathlib commit
-`360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56`. Its definitions are in namespace
-`R1Calculator`. The modules compile with no admitted proofs or custom axioms.
+The semantic endpoint characterization is proved here, from the constructed
+single-relation Sigma-one semantics. Its correctness is not supplied as an
+axiom, typeclass field, oracle or hypothesis.
 
-| Module | Kernel-checked content |
+The central declaration in [Correctness.lean](lean/R1Calculator/Correctness.lean)
+is `R1Calculator.PureR1.endpoint_semantic`:
+
+```lean
+(a : NONote) (β : Ordinal.{0}) :
+  PureR1.R1 a.repr β ↔ a.repr ≤ β ∧ β ≤ (endpointNF a).repr
+```
+
+Here `NONote` carries a normal hereditary Cantor notation. The right endpoint
+`β` is an arbitrary actual ordinal, not a notation-only or finite test input.
+`endpoint_isGreatest` proves that the returned endpoint is the greatest such
+ordinal. `intervalCheck_iff_R1` and `intervalCheck_iff_sigma1` connect the
+executable Lean checker to the actual recursively defined relation and its
+initial-segment Sigma-one equation.
+
+## Proof structure
+
+| Modules | Kernel-checked content |
 |---|---|
-| [Ordinal.lean](lean/R1Calculator/Ordinal.lean) | Structural `lastExponent`, compressed `principalSum`, executable `endpoint` and normal-input `endpointNF`; preservation of normality; ordered principal-summand expansion; equality of the compressed computation's genuine `Ordinal.repr` with the expanded endpoint recursion; the arithmetic interval checker and its ordinal-inequality specification. |
-| [Patterns.lean](lean/R1Calculator/Patterns.lean) | Raw Boolean finite tables and optional typed marker; executable validity checks equivalent to strict-upper, nesting, transitivity and respect laws; checked construction; reflexive-closure order laws; covering and induced-map checkers; identities, composition and marker preservation; complete finite existence searches and their correctness; explicit covering-without-induced-embedding and invalid-input examples. |
-| [Examples.lean](lean/R1Calculator/Examples.lean) | Executable endpoint, coefficient-order and finite-pattern examples. These supplement the general proofs; they are not their justification. |
+| [Semantics](lean/R1Calculator/Semantics.lean), [SemanticBasics](lean/R1Calculator/SemanticBasics.lean) | Boolean quantifier-free formulas over equality, order and one resemblance relation; arbitrary finite existential blocks; upper-ordinal well-founded construction of actual R1; global semantic equation; recursive uniqueness; transitivity, interval laws and basic exclusions. |
+| [FiniteDiagrams](lean/R1Calculator/FiniteDiagrams.lean) | Carlson's finite induced-copy criterion in both directions, including negative atoms, fixed parameters, duplicates and empty cases. It is instantiated with the actual constructed relation. |
+| [Ordinal](lean/R1Calculator/Ordinal.lean), [ArithmeticBounds](lean/R1Calculator/ArithmeticBounds.lean), [ArithmeticLaws](lean/R1Calculator/ArithmeticLaws.lean), [EndpointClosure](lean/R1Calculator/EndpointClosure.lean) | Normality and actual ordinal denotation of compressed arithmetic; P-additivity and strict monotonicity; translation and principal-block bounds; rounding and nested endpoint intervals. |
+| [NotationCoverage](lean/R1Calculator/NotationCoverage.lean) | Every actual ordinal below a normal notation has a normal notation; coherent order isomorphism onto the entire actual initial segment. No epsilon-zero range assumption is supplied. |
+| [ForestWeights](lean/R1Calculator/ForestWeights.lean), [ForestCapacity](lean/R1Calculator/ForestCapacity.lean), [ForestExtraction](lean/R1Calculator/ForestExtraction.lean) | Ordered forest weights; full induced greedy realizations; exact attained minimum extent; root capacity; extraction of every finite arithmetic interval forest; complete signed relation agreement. |
+| [CarlsonSupport](lean/R1Calculator/CarlsonSupport.lean), [PrefixCut](lean/R1Calculator/PrefixCut.lean), [Carlson](lean/R1Calculator/Carlson.lean) | Arithmetic candidate, all mixed parameter signs, actual finite copy construction inside the claimed interval and an explicit finite obstruction beyond it. These are concrete proved suppliers for correctness. |
+| [Correctness](lean/R1Calculator/Correctness.lean) | Candidate fixed-point equation below every notation bound; identification with the independently constructed actual R1 by recursive uniqueness; unrestricted right-ordinal endpoint rows; greatest endpoint and executable-checker equivalences. |
+| [Norm](lean/R1Calculator/Norm.lean) | Expanded monomial-tree weight, triangular formula n(n+1)/2, general P/H output-size bounds, and normal omega-tower witnesses attaining equality at every natural size. |
+| [Patterns](lean/R1Calculator/Patterns.lean) | Boolean finite pattern validation, coverings versus induced embeddings, marker laws, composition and complete finite existence searches. |
+| [Examples](lean/R1Calculator/Examples.lean) | Explicit arithmetic fixtures and their actual semantic endpoint instances; additional finite-map examples. These supplement the general proofs. |
 
-Principal arithmetic declarations include `lastExponent_nf`, `principalSum_nf`,
-`endpoint_nf`, `principalSummands_repr`, `principalSum_repr`,
-`endpoint_recursion`, `endpointNF_recursion`, `repr_le_endpoint` and
-`intervalCheck_correct`.
+The pure-R1 proof reconstructs the relevant part of Carlson's known result.
+It does not import the entire 3.1.3 project: selected formula and finite-diagram
+constructions were adapted and rechecked locally, as explained in [REUSE.md](REUSE.md).
 
-Principal finite-pattern declarations include
-`PatternData.check_eq_true_iff_valid`, `validatePattern_isSome_iff_valid`,
-`PatternData.checkCovering_eq_true`, `PatternData.checkInduced_eq_true`,
-`Covering.comp`, `InducedEmbedding.comp`, `preservesMarker_comp`,
-`coversCheck_eq_true`, `embedsCheck_eq_true` and
-`markedCoversCheck_eq_true`. Lean's finite existence search enumerates finite
-functions and filters them. Python enumerates increasing image lists; no
-cross-language refinement or efficiency equivalence is claimed.
+## Dependencies and exact scope
 
-The compiled modules print axiom dependencies for the principal results.
-They use only Lean/Mathlib's standard foundational declarations
-`propext`, `Classical.choice` and `Quot.sound`, with individual theorems often
-using fewer. There is no `sorryAx`, added semantic axiom or `native_decide`
-substitute for these general proofs. The exact build evidence is in
-[VERIFICATION.md](VERIFICATION.md).
+Lean is pinned to `v4.32.0-rc1`; Mathlib is pinned to
+`360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56`. Their ordinal foundations and existing
+arithmetic theorems are ordinary formal-library dependencies. Principal axiom
+reports contain only `propext`, `Classical.choice` and `Quot.sound`, often fewer.
+There are no admitted proofs, added axioms, `native_decide` proofs or external
+Carlson correctness premises. The [verification record](VERIFICATION.md) names
+the actual checked modules and hashes.
 
-Carlson's semantic theorem is outside this formalization. In particular,
-`intervalCheck` implements the arithmetic interval; interpreting it as recursive
-Sigma-one elementarity uses the cited mathematical characterization. The
-development does not construct the semantic proper-class structure or formally
-prove its characterization here. Nor does it prove a formal refinement of the
-Python parser/interpreter, the general pattern-count formulas, minimum ordinal
-realizations, the paper's expanded-tree norm theorem, a running-time bound, or
-an order-two ordinal assignment.
+Sigma-one means a finite existential block over an arbitrary Boolean
+quantifier-free matrix, exactly the fragment specified by Carlson. A separate
+translation from Mathlib's general first-order formula syntax is not included.
+The left inputs are the calculator's normal hereditary notations; the full
+periodic structure beyond epsilon zero, additive resemblance and simultaneous
+higher-order structures are outside this evaluator.
+
+Python is a separately tested implementation. No formal Python-to-Lean
+refinement, parser correctness, compiler correctness or running-time theorem is
+claimed. Lean's finite existence search enumerates finite functions; Python
+uses increasing image lists. Python's reported enumeration counts are finite
+execution results. The package does not formalize a general pattern-count
+formula, minimum ordinal realizations for order two or an order-two evaluator.

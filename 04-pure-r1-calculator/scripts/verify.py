@@ -21,6 +21,38 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 
+def lean_modules():
+    """All local modules in import order, rejecting missing imports and cycles."""
+    sources = {".".join(p.relative_to(ROOT / "lean").with_suffix("").parts): p
+               for p in (ROOT / "lean").rglob("*.lean") if ".lake" not in p.parts}
+    ordered, active, done = [], set(), set()
+
+    def visit(name):
+        if name in active:
+            raise RuntimeError(f"Cyclic local Lean imports at {name}")
+        if name in done:
+            return
+        if name not in sources:
+            raise RuntimeError(f"Missing local Lean import {name}")
+        active.add(name)
+        source = re.sub(r"/-.*?-/|--[^\n]*", "", sources[name].read_text(), flags=re.S)
+        for line in source.splitlines():
+            match = re.match(r"\s*import\s+(.+)", line)
+            if match:
+                for dependency in match.group(1).split():
+                    if dependency == "R1Calculator" or dependency.startswith("R1Calculator."):
+                        visit(dependency)
+                    elif dependency != "Mathlib" and not dependency.startswith(("Mathlib.", "Lean.")):
+                        raise RuntimeError(f"Undocumented external Lean dependency {dependency}")
+        active.remove(name)
+        done.add(name)
+        ordered.append(sources[name].relative_to(ROOT / "lean").as_posix())
+
+    for name in sorted(sources):
+        visit(name)
+    return ordered
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lean", action="store_true")
@@ -55,15 +87,16 @@ def main() -> int:
 
     allowed_axioms = {"propext", "Classical.choice", "Quot.sound"}
     axiom_checks = {}
+    modules = []
     if args.lean:
-        modules = ["R1Calculator/Ordinal.lean", "R1Calculator/Patterns.lean",
-                   "R1Calculator/Examples.lean", "R1Calculator.lean"]
+        modules = lean_modules()
         for relative in modules:
             source = (ROOT / "lean" / relative).read_text()
             without_comments = re.sub(r"/-.*?-/|--[^\n]*", "", source, flags=re.S)
-            if re.search(r"\b(?:sorry|admit|axiom)\b", without_comments):
+            if re.search(r"\b(?:sorry|admit|axiom|native_decide|ofReduceBool)\b", without_comments):
                 raise RuntimeError(f"Unproved declaration in {relative}")
-        output = run([sys.executable, "scripts/check_lean.py", *modules], timeout=390)
+        output = run([sys.executable, "scripts/check_lean.py", *modules],
+                     timeout=max(390, len(modules) * 95))
         for name, axioms in re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]", output):
             dependencies = {part.strip() for part in axioms.split(",") if part.strip()}
             if not dependencies <= allowed_axioms:
@@ -71,6 +104,13 @@ def main() -> int:
             axiom_checks[name] = sorted(dependencies)
         if len(axiom_checks) < 10:
             raise RuntimeError("Expected principal theorem axiom reports are missing")
+        required = {"R1Calculator.PureR1.endpoint_semantic",
+                    "R1Calculator.PureR1.intervalCheck_iff_sigma1",
+                    "R1Calculator.PureR1.endpoint_isGreatest",
+                    "R1Calculator.endpoint_treeWeight_bound",
+                    "R1Calculator.endpoint_treeWeight_bound_sharp"}
+        if not required <= axiom_checks.keys():
+            raise RuntimeError(f"Missing core theorem reports: {required - axiom_checks.keys()}")
 
     pdf = None
     if args.paper:
@@ -104,13 +144,17 @@ def main() -> int:
         "checked_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "status": "PASS", "python_tests": int(match.group(1)),
         "explicit_endpoint_fixtures": len(fixtures["cases"]),
-        "lean_checked": args.lean, "lean_axiom_dependencies": axiom_checks,
+        "lean_checked": args.lean, "lean_modules": modules,
+        "lean_axiom_dependencies": axiom_checks,
         "paper_checked": args.paper, "paper": pdf,
         "maximum_child_rss_kib_linux": resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss,
         "steps": steps, "source_sha256": source_hashes,
-        "scope": "Python execution tests; named Lean arithmetic/finite-pattern proofs; PDF assembly. "
-                 "Carlson semantic identification is cited externally. No Python refinement, "
-                 "new semantic theorem, independent mathematical review or priority claim."
+        "scope": "Python execution tests; Lean arithmetic, finite-pattern, standalone recursive "
+                 "Sigma1 semantics, finite-copy/obstruction proofs, full semantic endpoint rows "
+                 "for normal left inputs and arbitrary right ordinals, and sharp expanded-tree "
+                 "norm bounds; PDF assembly. No external Carlson correctness premise. "
+                 "Standard Lean/Mathlib foundations remain dependencies. No Python refinement, "
+                 "higher-order/additive relation evaluator, independent human review or priority claim."
     }
     (ROOT / "VERIFICATION.json").write_text(json.dumps(record, indent=2) + "\n")
     print("Verification PASS; wrote VERIFICATION.json")

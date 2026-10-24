@@ -22,6 +22,8 @@ def main() -> int:
     parser.add_argument("modules", nargs="+", help=".lean paths relative to lean/")
     parser.add_argument("--timeout", type=int, default=90)
     parser.add_argument("--memory-mib", type=int, default=2048)
+    parser.add_argument("--virtual-memory-mib", type=int, default=16384,
+                        help="address-space cap, including mapped modules and runtime arenas")
     args = parser.parse_args()
     project = Path(__file__).resolve().parents[1] / "lean"
     build = project / ".lake/build/lib/lean"
@@ -41,7 +43,8 @@ def main() -> int:
     def limits() -> None:
         # Lean maps compiled modules and reserves runtime arenas outside its
         # separately bounded managed heap. The virtual limit is not an RSS cap.
-        resource.setrlimit(resource.RLIMIT_AS, (8 * 1024**3, 8 * 1024**3))
+        address_cap = args.virtual_memory_mib * 1024**2
+        resource.setrlimit(resource.RLIMIT_AS, (address_cap, address_cap))
         resource.setrlimit(resource.RLIMIT_CPU, (args.timeout, args.timeout + 2))
 
     with open("/tmp/pure-r1-calculator-lean.lock", "a") as lock:

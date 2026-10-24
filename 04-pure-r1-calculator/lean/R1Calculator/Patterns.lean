@@ -12,7 +12,8 @@ Larger `k` describes finite nested-relation syntax only.
 
 These definitions do not define resemblance by elementarity inside a
 finite structure. Identifying arithmetic traces with the inherited global
-semantic R1 relation is a separate published mathematical input.
+semantic R1 relation uses the semantic characterization proved separately
+in this package's `Correctness.lean`.
 -/
 
 namespace R1Calculator

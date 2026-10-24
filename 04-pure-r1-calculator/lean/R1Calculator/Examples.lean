@@ -1,4 +1,4 @@
-import R1Calculator.Ordinal
+import R1Calculator.Correctness
 import R1Calculator.Patterns
 
 /- Generated from examples/endpoint-fixtures.json by scripts/generate_examples.py.
@@ -8,32 +8,92 @@ namespace R1Calculator.Examples
 theorem endpoint_fixture_0 :
     endpoint ONote.zero = ONote.zero := by decide
 
+theorem semantic_endpoint_fixture_0 :
+    PureR1.R1 (ONote.zero).repr (ONote.zero).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨ONote.zero, by decide⟩ : NONote)
+    (⟨ONote.zero, by decide⟩ : NONote)).mp (by decide)
+
 theorem endpoint_fixture_1 :
     endpoint (ONote.oadd ONote.zero 7 ONote.zero) = (ONote.oadd ONote.zero 7 ONote.zero) := by decide
+
+theorem semantic_endpoint_fixture_1 :
+    PureR1.R1 ((ONote.oadd ONote.zero 7 ONote.zero)).repr ((ONote.oadd ONote.zero 7 ONote.zero)).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd ONote.zero 7 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd ONote.zero 7 ONote.zero), by decide⟩ : NONote)).mp (by decide)
 
 theorem endpoint_fixture_2 :
     endpoint (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) = (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) := by decide
 
+theorem semantic_endpoint_fixture_2 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero)).repr ((ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)), by decide⟩ : NONote)).mp (by decide)
+
 theorem endpoint_fixture_3 :
     endpoint (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) = (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero)) := by decide
+
+theorem semantic_endpoint_fixture_3 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero)).repr ((ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero)), by decide⟩ : NONote)).mp (by decide)
 
 theorem endpoint_fixture_4 :
     endpoint (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 1 ONote.zero) = (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero))) := by decide
 
+theorem semantic_endpoint_fixture_4 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 1 ONote.zero)).repr ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 1 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero))), by decide⟩ : NONote)).mp (by decide)
+
 theorem endpoint_fixture_5 :
     endpoint (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) 1 ONote.zero) = (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero))) := by decide
+
+theorem semantic_endpoint_fixture_5 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) 1 ONote.zero)).repr ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero)))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) 1 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero))), by decide⟩ : NONote)).mp (by decide)
 
 theorem endpoint_fixture_6 :
     endpoint (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 ONote.zero) 1 ONote.zero) = (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 (ONote.oadd ONote.zero 1 ONote.zero))) := by decide
 
+theorem semantic_endpoint_fixture_6 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 ONote.zero) 1 ONote.zero)).repr ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 (ONote.oadd ONote.zero 1 ONote.zero)))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 ONote.zero) 1 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 2 (ONote.oadd ONote.zero 1 ONote.zero))), by decide⟩ : NONote)).mp (by decide)
+
 theorem endpoint_fixture_7 :
     endpoint (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 2 ONote.zero) = (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 2 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero))) := by decide
+
+theorem semantic_endpoint_fixture_7 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 2 ONote.zero)).repr ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 2 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero)))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 2 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 ONote.zero) 2 (ONote.oadd (ONote.oadd ONote.zero 1 ONote.zero) 1 (ONote.oadd ONote.zero 1 ONote.zero))), by decide⟩ : NONote)).mp (by decide)
 
 theorem endpoint_fixture_8 :
     endpoint (ONote.oadd (ONote.oadd ONote.zero 3 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 4 ONote.zero)) = (ONote.oadd (ONote.oadd ONote.zero 3 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 4 (ONote.oadd ONote.zero 2 ONote.zero))) := by decide
 
+theorem semantic_endpoint_fixture_8 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd ONote.zero 3 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 4 ONote.zero))).repr ((ONote.oadd (ONote.oadd ONote.zero 3 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 4 (ONote.oadd ONote.zero 2 ONote.zero)))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd ONote.zero 3 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 4 ONote.zero)), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd ONote.zero 3 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 4 (ONote.oadd ONote.zero 2 ONote.zero))), by decide⟩ : NONote)).mp (by decide)
+
 theorem endpoint_fixture_9 :
     endpoint (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) 1 ONote.zero) = (ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero))) := by decide
+
+theorem semantic_endpoint_fixture_9 :
+    PureR1.R1 ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) 1 ONote.zero)).repr ((ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero)))).repr := by
+  exact (PureR1.intervalCheck_iff_R1
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) 1 ONote.zero), by decide⟩ : NONote)
+    (⟨(ONote.oadd (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 ONote.zero) 1 (ONote.oadd (ONote.oadd ONote.zero 2 ONote.zero) 1 (ONote.oadd ONote.zero 2 ONote.zero))), by decide⟩ : NONote)).mp (by decide)
 
 example : coversCheck (discrete 2) (chain 2) = true := by decide
 example : embedsCheck (discrete 2) (chain 2) = false := by decide

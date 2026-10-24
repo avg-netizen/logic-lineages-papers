@@ -30,9 +30,6 @@ assert resembles(OMEGA, add(OMEGA, ONE))
 python3 -m unittest discover -s tests -v
 ```
 
-For the full recorded check, after setting up the documented dependencies, use
-`python3 scripts/verify.py --lean --paper`.
-
 The [usage guide](USAGE.md) gives the readable ordinal grammar, command-line
 examples, JSON format and finite-enumeration limits. No installation or private
 repository is needed to run from source.
@@ -45,10 +42,11 @@ lake update
 lake exe cache get
 ```
 
-Then return to this directory and compile the project in dependency order:
+Then return to this directory and run the complete verification, which compiles
+all local modules in dependency order:
 
 ```sh
-python3 scripts/check_lean.py R1Calculator/Ordinal.lean R1Calculator/Patterns.lean R1Calculator/Examples.lean R1Calculator.lean
+python3 scripts/verify.py --lean --paper
 ```
 
 The helper serializes compilers and sets explicit heap, virtual-address,
@@ -56,13 +54,16 @@ CPU and wall-time limits. It reads only installed dependencies and writes this
 project's ignored build directory. An existing public Mathlib cache can be used
 locally; the committed Lake configuration contains no machine-specific paths.
 
-The Lean development proves normal-form preservation, the endpoint's actual
-ordinal-denotation recursion, interval-check correctness, and finite-pattern
-checker and map laws. Carlson's theorem identifying that arithmetic interval
-with recursive Sigma-one elementarity is a cited mathematical input, not a new
-Lean axiom or a theorem re-proved here. Python is separately tested; the package
-does not claim a formal refinement proof from Python to Lean. The paper's sharp
-expanded-tree size bound is an ordinary mathematical proof.
+The Lean development proves that the computed endpoint is the greatest actual
+ordinal reachable by Carlson's recursively defined pure R1 relation. It includes
+the semantic recursion, finite induced-copy criterion, constructive copies and
+obstructions, and the arithmetic bridge. There is no external Carlson
+correctness assumption. The paper's sharp expanded-tree output-size theorem,
+including a witness at every size, is formalized too. [Selected constructions](REUSE.md)
+were adapted from the 3.1.3 Lean development without adding a dependency on it.
+
+The formalization uses standard Lean/Mathlib foundations. Python execution is
+separately tested; there is no formal Python-to-Lean refinement proof.
 
 The ordinal evaluator is for pure R1 below epsilon zero. The order-two pattern
 objects are finite syntax, with no order-two ordinal assignment. Neither pattern

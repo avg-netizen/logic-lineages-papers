@@ -18,7 +18,7 @@ def rendered() -> str:
     if fixture["schema"] != "r1calc.endpoint-fixtures.v1":
         raise ValueError("Unsupported fixture version")
     lines = [
-        "import R1Calculator.Ordinal", "import R1Calculator.Patterns", "",
+        "import R1Calculator.Correctness", "import R1Calculator.Patterns", "",
         "/- Generated from examples/endpoint-fixtures.json by scripts/generate_examples.py.",
         "Expected endpoints are explicit fixtures, not outputs of Python endpoint. -/",
         "namespace R1Calculator.Examples", "",
@@ -27,7 +27,12 @@ def rendered() -> str:
         source = lean_term(parse_ordinal(case["input"]))
         expected = lean_term(parse_ordinal(case["endpoint"]))
         lines += [f"theorem endpoint_fixture_{index} :",
-                  f"    endpoint {source} = {expected} := by decide", ""]
+                  f"    endpoint {source} = {expected} := by decide", "",
+                  f"theorem semantic_endpoint_fixture_{index} :",
+                  f"    PureR1.R1 ({source}).repr ({expected}).repr := by",
+                  "  exact (PureR1.intervalCheck_iff_R1",
+                  f"    (⟨{source}, by decide⟩ : NONote)",
+                  f"    (⟨{expected}, by decide⟩ : NONote)).mp (by decide)", ""]
     lines += [
         "example : coversCheck (discrete 2) (chain 2) = true := by decide",
         "example : embedsCheck (discrete 2) (chain 2) = false := by decide",

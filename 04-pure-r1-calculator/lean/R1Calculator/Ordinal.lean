@@ -9,10 +9,10 @@ epsilon zero. Coefficients remain compressed; multiplication by a natural is
 on the right. `principalSummands` expands coefficients only in the specification.
 
 The theorems below concern normality and genuine `Ordinal` denotation. They do
-not define or formalize recursive Sigma-one elementarity. Its identification
-with this arithmetic endpoint is the external theorem of Carlson, restated as
-the endpoint recursion in Wilken, *Pure Sigma2-Elementarity beyond the Core*,
-Proposition 1.1.
+not themselves define recursive Sigma-one elementarity. The semantic
+identification is proved in this package's `Correctness.lean`, reconstructing
+Carlson's characterization and the endpoint recursion displayed by Wilken,
+*Pure Sigma2-Elementarity beyond the Core*, Proposition 1.1.
 -/
 
 namespace R1Calculator
