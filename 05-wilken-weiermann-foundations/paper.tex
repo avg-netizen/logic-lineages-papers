@@ -1,0 +1,314 @@
+\documentclass[11pt,a4paper]{article}
+\input{preamble}
+\title{The Wilken--Weiermann Comparison Problem\\
+Foundations and a Guide to the Results}
+\author{}
+\date{28 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Wilken and Weiermann's analysis of G\"odel's T raises two different
+effectiveness questions: a syntactic termination ordering with specified
+stability and ordinal calibration, and semantic comparison of the ordinal
+expressions used by a particular assignment.  We explain the distinction
+and give a common foundation for a collection of proofs concerning both
+questions.  We prove an explicit maximal-predecessor algorithm, an exact
+single-path evaluator for the collapse, its terminal-count decomposition,
+and the forward arithmetic form of actual canonical assignments with ground
+free variables.  These results connect typed syntax to an arithmetic problem
+whose positive and negative boundaries are developed in the companion papers.
+We explain why complete counts, intermediate block counts and finite-state
+observers have different decision-theoretic roles.  The remaining exact-standard-
+control comparison problem with several independent ground inputs stays open.
+\end{abstract}
+
+\tableofcontents
+
+\section{What the problem asks}\label{sec:problem}
+
+A termination proof and an algorithm for comparing its measures answer
+different questions.  A reduction sequence can be known to terminate because
+some ordinal decreases, even when the proposed comparison of two expressions
+quantifies over infinitely many possible substitutions.  Conversely, a
+decidable ordering on syntax can prove termination without deciding the
+particular universally quantified numerical relation that motivated it.
+
+Wilken and Weiermann obtain an optimal derivation-length classification for
+the lambda formulation of G\"odel's T \cite{ww}.  Their Introduction
+anticipates syntactic termination orderings extending recursive path ordering,
+with Bachmann--Howard order type.  Their effectiveness conjecture following
+Definition~2.8 concerns comparison of their ordinal expressions and vectors
+under all admissible substitutions.  These are two mathematical contracts.
+The collection keeps them separate throughout.
+
+Three objects are especially easy to confuse.  A general assignment in
+\cite{ww} may attach a finite reduction history to an abstraction; the
+normalization argument constructs appropriate decreasing assignments along
+reductions.  The \emph{canonical assignment} fixes history length zero at
+every abstraction, so one literal input term determines one vector.  Finally,
+a \emph{syntactic ordering} is a relation defined on terms and stable under
+substitution and contexts.  A result about one object is a result about
+another only after an explicit interpretation theorem.
+
+The main unresolved domain considered here fixes the source grammar,
+the zero-history canonical assignment, and the numerical control
+$\Phi(t)=F_5(t+100)$ defined below.  All free variables have ground type;
+bound variables, recursors, output types and internal simple types are
+unrestricted.  Distinct ground names vary independently.  This domain is
+smaller than the unrestricted expression/substitution problem in the
+original effectiveness conjecture, but it is still not known to be decidable.
+
+\begin{problem}[Exact canonical comparison]\label{prob:main}
+Given two finite original T terms with only ground free variables, decide
+whether their canonical vectors satisfy universal weak comparison, or
+universal Wilken--Weiermann strict comparison, at the fixed control $\Phi$.
+\end{problem}
+
+An algorithm must halt on every input pair, including pairs for which there
+is no countervaluation anywhere.  It need not have an elementary or practical
+running time.  An enormous closed integer may therefore be computed as part
+of a mathematical reduction, but a finite numerical experiment with a smaller
+control is not an execution of that reduction on its genuine parameters.
+
+\input{foundations}
+
+\section{How the companion results fit together}\label{sec:companions}
+
+The collection divides the proofs according to their mathematical mechanism.
+The papers are supplied with their complete local arguments and build inputs;
+published background is cited conventionally.  The following statements are
+an orientation to those proofs, not substitutes for them.
+
+\subsection{A syntactic termination ordering}
+The type-confined ordering paper \cite{wwordering} constructs a decidable,
+well-founded pair on original T together with a separate finite ranked
+ground signature.  It is stable under well-typed contexts and substitutions,
+orients the original T rules, and restricts exactly to multiset recursive
+path ordering on the ranked ground subalgebra.  Its individual descending
+ranks are below Bachmann--Howard and their supremum has that calibration.
+
+The embedding of ranked nodes is part of the statement.  A ranked ternary
+node and three curried applications of a native case functional are different
+trees.  The theorem does not silently assert exact RPO on the latter encoding.
+Nor does it claim that arbitrary linear extensions of the partial ordering
+have its descending height, or that the relation is the canonical numerical
+comparison of Problem~\ref{prob:main}.
+
+\subsection{Identity and one shared input}
+In the residual grammar of Theorem~\ref{thm:forward-translation}, universal identity
+has a recursive normal form even with arbitrarily many independent inputs.
+The identity/one-variable paper \cite{wwunivariate} proves completeness by
+separating distinct open collapse tags on a suitable weighted ray.
+For one shared input it gives the stronger effective eventual-sign theorem:
+from $E(x),F(x)$ one obtains a threshold $T$ and one sign that holds for all
+$x\ge T$.  Closed evaluation handles the finite prefix.
+
+Universal identity is not existential equality.  Distinct functions may agree
+at particular inputs, and asking whether several such equalities have a
+simultaneous solution is not decided by the identity normal form.  Likewise,
+two sources each having one free name do not form a one-input pair when
+their names are distinct.  The new collapse-function results concern a
+different grammar from the positive exponential terms generated by
+$2^f g$; the earlier exponential comparison theorem does not by itself give
+the actual-source conclusions stated here.
+
+\subsection{Several inputs in recognized positive classes}
+The multivariate paper \cite{wwmultivariate} proves the required arithmetic
+hypotheses for the fixed $\Phi$ and then treats finite coefficients,
+polynomial heads, and several larger structural classes.  In particular,
+recursor-free actual sources are decidable without a bound on internal type
+level, and polynomial-head comparison covers actual sources whose maximum
+internal type level is at most two.  These are consequences of the generated-
+source bounds in Corollary~\ref{cor:source-classes}, not bounds merely on output type.
+
+Common-head layers, balanced heterogeneous layers and single-core rows share
+some machinery, but retain different hypotheses.  Their proofs keep every
+shared input correlation.  A lower-level core occurring in two arguments
+cannot be replaced by two independent witnesses, and several arbitrary core
+values cannot be treated as independently variable just because their
+individual functions are computable.
+
+\subsection{Actual-source arithmetic and negative boundaries}
+The source-expressivity paper \cite{wwexpressivity} defines an existential
+language whose additional operations are observations of \emph{supplied
+actual sources}, rather than freely chosen ordinal labels.  Its Boolean
+compiler turns an existential formula into one unconditional weak or strict
+canonical comparison, with the appropriate polarity.  Absolute observers
+also handle sources of functional output type.  Thus the remaining comparison
+problem and unsatisfiability in that actual-source language are computably
+equivalent.
+
+The same paper separates two negative boundaries.  At the unchanged control,
+functional free inputs already allow an undecidability reduction on actual
+sources.  At all-ground inputs a different theorem obtains hardness after
+an additive-one perturbation of the control, even with agreement on an
+arbitrary prescribed finite prefix.  The first changes the free-variable
+domain; the second changes the control.  Neither settles
+Problem~\ref{prob:main} by itself.
+
+\subsection{Exact counts and a moving partition coefficient}
+The counting paper \cite{wwcounts} proves the retained-prefix transfer
+between actual norm-controlled descent counts and restricted partitions.
+For genuine linked parameters
+\[
+ u=\Phi(v),\quad B=\Phi(u),\quad C=\Phi(u+1),\quad
+ d=B-u+3,\quad e=u-4,
+\]
+one block's parity is
+\[
+ \delta_4(v)=1+p_d(C-e)\pmod2,\qquad
+ \sum_{n\ge0}p_d(n)z^n=\prod_{i=1}^d(1-z^i)^{-1}.
+\]
+Both the cutoff $d$ and the selected coefficient move.  The complete
+Cartier observer retains every denominator factor, and its actual
+primitive-root residue tuple has an unbounded exact period.
+The theorem is about that tuple and the full state, not a lower bound
+for the selected scalar's complexity.
+
+The proof of the growing-budget transfer matters: a constant-budget partition
+identity is not automatically an identity for a descent whose successive
+budgets follow $\Phi$.  Similarly a count stopped at a first $\omega^\omega$
+entry is not the complete count $\tau_\lambda$ of
+Theorem~\ref{thm:complete-count}.  The latter still includes every subsequent block.
+
+\section{The infinite-search obstruction}\label{sec:search}
+
+Each supplied ground tuple can be evaluated by a terminating computation.
+Consequently a false universal comparison has a semidecision procedure:
+enumerate tuples and stop at the first countervaluation.  If there is none,
+this procedure has no reason to halt.
+
+\begin{proposition}[Countervaluation bounds]\label{prop:counter-bound}
+The fixed-control comparison problem is co-recursively-enumerable.  It is
+decidable if and only if there is a total computable function $b(Q)$ such
+that each false comparison $Q$ has a countervaluation whose every coordinate
+is at most $b(Q)$.
+\end{proposition}
+\begin{proof}
+Closed evaluation and enumeration prove the first claim.  Given the stated
+bound, search the finite positive box and decide $Q$.  Conversely, given a
+decider, return zero for a true query.  For a false query enumerate tuples
+until its promised countervaluation is found, and return the largest
+coordinate.  This search is entered only when its termination is known.
+With no free variables there is just one closed test.
+\end{proof}
+
+This elementary equivalence is useful precisely because it does not manufacture
+such a bound.  A bound on evaluation time \emph{at a given tuple} is not a bound
+on the location of the first countertuple.  Larger ordinal upper bounds and
+faster evaluators can leave the latter problem unchanged.
+
+The terminal decomposition gives another view of the obstruction.  On a tail
+where $\Phi$ has stabilized residue $r_m$ modulo a fixed $m$, proved with an
+effective threshold in \cite{wwmultivariate},
+\[
+ J_\lambda(t)\equiv \tau_\lambda(t)+r_m\pmod m.
+\]
+The enormous terminal value has not erased the small residue of the count.
+For example, eliminating an independent witness $y$ from
+$\tau_\lambda(t)=2y+1$ asks whether an odd count occurs at all.
+It is not answered by the rate at which that count grows.
+
+There is a genuinely necessary attainment problem for the complete count
+of a \emph{supplied actual unary source}.  Let
+$H:o\to o$ have vector $(c_H,a_H)$, put $\lambda=\omega\otimes a_H$,
+and $C_H=\norm(\lambda)+c_H+1$.  Its application satisfies
+\[
+ F_H(n):=\can{HX}_0-1=J_\lambda(C_H+n)-1,
+ \qquad x_0=n+1.
+\]
+For fixed progression and modulus data, choose an effective starting point
+$b\ge C_H$ above the residue threshold, with $b\equiv a\pmod p$.
+On that progression the query
+\[
+ \exists t\ge b:\quad t\equiv a\pmod p,\quad
+                 \tau_\lambda(t)\equiv r\pmod m
+\]
+becomes
+\[
+ \exists k,y\in\N:\quad F_H(b-C_H+pk)=my+s,
+ \qquad s=(r+r_m-1)\bmod m.
+\]
+The finitely many earlier genuine arguments are evaluated separately.
+The actual-source compiler in \cite{wwexpressivity} consumes the displayed
+formula.  Thus a full comparison decider would decide this attainment query.
+The independent witnesses $k,y$ explain why the one-shared-input theorem
+does not already decide it.
+
+Certified periodic tables are a stronger proposed supplier for a particular
+general elimination route: one needs a threshold, period, exact residues and
+certification of all negative occurrence claims on the declared head family.
+The necessary supplied-source attainment problem should not be identified
+with tables for every auxiliary ordinal head.  Nor has an extraction of the
+isolated $\delta_4$ block from every complete source observation been proved.
+These distinctions prevent a diagnostic intermediate question from being
+mistaken for an equivalent reformulation of the whole problem.
+
+\section{Two small arithmetic lessons}\label{sec:lessons}
+
+\subsection{An exact observer may already distinguish every numerator}
+Let $A(0)=1$ and $\deg A=D$ over a field.  On proper numerators the map
+\[
+ U\longmapsto([z^0]U/A,\ldots,[z^{D-1}]U/A)
+\]
+is invertible: its matrix is triangular with diagonal entries one.  Hence
+distinct numerators have different coefficient series.  In characteristic
+two their first differing coefficient has index below $D$ and is selected
+by a binary continuation of length at most $\lceil\log_2D\rceil$.
+This is the observability interpretation suggested by weighted-automaton
+theory \cite{kiefer}.
+
+It does not show that a particular source-admissible continuation distinguishes
+the states.  An all-continuations minimizer and a compression preserving only
+the one actual remaining word are different problems.  Nor may a rational
+Gram-matrix argument be imported unchanged over $\Ftwo$: the column
+$(1,1)^T$ has rank one, while its Gram matrix is zero.
+
+\subsection{A successful cancellation in a neighboring problem}
+For $N=2^k-1$ and $1\le t<N$, consider the finite set
+\[
+ \{(a,b)\in\{0,\ldots,N-1\}^2:
+       a+b\equiv t\pmod N,\ \wt(a)+\wt(b)<k\}.
+\]
+Swap $a,b$.  All off-diagonal objects cancel modulo two.  There is one
+diagonal solution because two is invertible modulo $N$, and multiplication
+by two cyclically rotates the binary word.  Its weight is $\wt(t)$.
+The set's parity is therefore $\mathbf1_{2\wt(t)<k}$.
+Only this elementary fact is used; a full proof of the Tu--Deng inequality
+is not assumed \cite{llx}.
+
+The restricted-partition problem has a different indexing set and different
+cancellation classes.  The displayed involution therefore supplies no parity
+formula for it.  The complete coefficient observer in \cite{wwcounts}
+retains its entire generating function; a cancellation law for the selected
+coefficient would require an additional argument on that actual indexing set.
+
+\section{What would settle the remaining comparison problem}
+
+The established positive fragments exclude several tempting descriptions of
+the open region.  It is not closed evaluation, universal identity, one shared
+ground input, arbitrary recursor-free syntax, or the internal-level-two
+fragment.  The remaining region combines several independent ground inputs
+with nonpolynomial collapse observations beyond the recognized classes.
+
+A positive completion needs a decision procedure for simultaneous existential
+actual-source observations, or another mechanism that certifies witness
+absence.  A negative completion needs an exact interpretation of a known
+undecidable problem using the unchanged control, permitted source syntax and
+shared valuations.  The source compiler already supplies the final conversion
+to one weak or strict comparison; another conjunction detector is not the
+missing theorem.
+
+An unbounded full-state period does not refute a simple scalar law.  An
+eventually periodic word is not automatically available effectively.  A
+decidable word theory with unary labels does not automatically interpret
+addition on its positions.  A source-construction theorem enlarges the
+represented arithmetic but does not decide that arithmetic's existential
+theory.  These are distinct logical obligations, each requiring a theorem.
+
+The purpose of the collection is to present the established mechanisms and
+their exact limits in ordinary mathematical form.  The full fixed-standard-
+control, all-ground comparison problem remains open.
+
+\input{references}
+\end{document}

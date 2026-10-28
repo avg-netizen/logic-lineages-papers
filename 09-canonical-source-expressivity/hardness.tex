@@ -1,0 +1,341 @@
+\section{Functional inputs at the unchanged control}\label{sec:functional-hardness}
+
+The standard control can already support an undecidable comparison problem
+when free functional variables are admitted.  This is a different domain
+from the all-ground question.  We give the reduction because the distinction
+identifies exactly where its additional arithmetic information enters.
+
+The published undecidable problem used here is solvability of a finite
+system of linear equations
+\[
+ \sum_i a_{ji}(X)p_i(X)-g_j(X)=0,
+ \qquad a_{ji},g_j\in\mathbb Z[X],\quad p_i\in\mathbb N[X].
+\]
+It is linear in the unknown polynomials, not a system of arbitrary
+Diophantine products of unknowns.  Narendran's theorem and Dong's discussion
+give this precise polynomial-semiring boundary \cite{narendran,dong}.
+Zero polynomials are allowed.  We use undecidability, without importing a
+stronger many-one completeness classification of that source problem.
+
+Put $\tau=o\to o$.  For actual sources $A,B:\tau$ define
+\begin{align*}
+ \mathsf P(A,B)&=(\lambda z:\tau.A)B,\qquad
+ \mathsf H(A)=R^o0(\lambda n:o.A),\\
+ \mathsf S(A,B)&=(\lambda z:(o\to\tau).A)(\lambda n:o.B).
+\end{align*}
+The original argument order is
+$R^\rho:o\to(o\to\rho\to\rho)\to\rho\to\rho$:
+its first argument $0:o$ is the recursion test, not its base value.
+Thus $R^\rho0(\lambda n:o.A)$ has type $\rho\to\rho$
+when $A:\rho\to\rho$, also at the higher type used below.
+The displayed bound names are unused and fresh.  Writing
+$a_i=\can A_i$, $b_i=\can B_i$, the literal canonical clauses give
+\begin{align*}
+ \can{\mathsf P(A,B)}_1&=8a_1+4b_1+8,\\
+ \can{\mathsf S(A,B)}_1&=8a_1+8b_1+16,\\
+ \can{\mathsf S(A,B)}_0
+   &=\psi\bigl(\omega\otimes(8a_1+8b_1+16)+9a_0+5b_0+13\bigr),\\
+ \can{\mathsf H(A)}_1&=2\omega\otimes a_1+3\omega.
+\end{align*}
+For example the unused $\tau$ binder has vector
+$(9a_0+8,2a_1+2,2)$, and its box with $B$ gives the first formula.
+For the second binder its scalar is again $9a_0+8$ and its first field
+$2a_1+2$; the ground lambda on $B$ has vector
+$(5b_0+4,2b_1+2)$, giving both $\mathsf S$ formulas.
+The recursor prime followed by its two displayed arguments gives
+the $\mathsf H$ formula.  These calculations use actual source syntax;
+they do not introduce an arbitrary ordinal-valued primitive.
+
+\begin{lemma}[Signed polynomial pairs]\label{lem:pair-compiler}
+Every signed linear expression $D$ in ordinal unknowns with coefficients
+in $\mathbb Z[\omega]$ has effectively constructed actual $A_D,B_D:\tau$
+whose first-coordinate difference is $2^kD$ for a finite $k$.
+All free functional variables have type $\tau$, and internal types have
+level at most two.  Differences are taken only in the signed Cantor-monomial
+group; each of the two source coordinates remains a positive ordinal.
+\end{lemma}
+\begin{proof}
+Let $C=\lambda u:o.u$, with $C_1=1$.  The first fields of
+$\mathsf P(C,C)$ and $\mathsf S(C,C)$ are 20 and 32.  Take sixteen pairs:
+eight copies of $(\mathsf S(C,C),\mathsf P(C,C))$ of difference 12,
+five of $(C,\mathsf P(C,C))$ of difference $-19$, and three of $(C,C)$.
+Combine them componentwise in a balanced $\mathsf S$ tree of height four.
+Constants cancel in every paired combination, so the resulting difference is
+\[
+ 8^4(8\cdot12-5\cdot19)=2^{12}.
+\]
+For a free $X:\tau$, the pair
+$(\mathsf P(X,C),\mathsf P(C,C))$ has difference $8(x_1-1)$.
+Three multiplications by eight followed by a paired $\mathsf S$ combination
+with the constant pair give $2^{15}x_1$.
+
+The pair operation $(A,B)\mapsto(\mathsf S(A,C),\mathsf S(B,C))$
+multiplies a difference by eight, and
+$(A,B)\mapsto(\mathsf S(A,A),\mathsf S(B,B))$ multiplies it by sixteen.
+Applying $\mathsf H$ to both entries multiplies a difference by $2\omega$;
+swapping entries negates it.  Repeated addition constructs every finite
+integer coefficient.  To add pairs with scale exponents $k_1,k_2$, choose
+$K\ge\max(k_1,k_2)+6$.  Every integer at least six is $3u+4v$ with
+$u,v\ge0$, so the two scale operations align both differences at $2^K$.
+A paired $\mathsf S$ then gives their sum with scale $2^{K+3}$.
+Induction on the finitely many signed monomials proves the assertion.
+The displayed source combinators introduce no internal level above two.
+\end{proof}
+
+The two scalar coordinates of an equation pair need not agree when their
+positive coordinates agree.  We therefore pay that alignment explicitly.
+
+\begin{lemma}[Alignment and a full-vector detector]\label{lem:functional-detector}
+The condition $\can A_1=\can B_1$ is equivalent to existence of two fresh
+positive ground inputs making the full canonical vectors of
+\[
+ A'=(\lambda t:o.A)z,\qquad B'=(\lambda t:o.B)w
+\]
+equal.  Full-vector equality of any actual pair of type $\tau$ can in turn
+be detected by ground sources $L,R$ satisfying $L_0\ge R_0$, with equality
+exactly at vector equality and otherwise gap at least two.
+\end{lemma}
+\begin{proof}
+The aligned first fields are $2a_1+2$ and $2b_1+2$, and their scalars are
+\[
+ \psi(\omega\otimes(2a_1+2)+5a_0+4+z_0),\qquad
+ \psi(\omega\otimes(2b_1+2)+5b_0+4+w_0).
+\]
+Equal vectors imply $a_1=b_1$.  If this equality holds, choose
+$z_0=5b_0+1$, $w_0=5a_0+1$.  Both tails and both vectors then agree.
+These choices are made after the original valuation, so are not circular.
+
+For the detector, now write $A,B$ for the pair being tested, and form
+\[
+ X=\mathsf S(A,A),\quad Y=\mathsf S(B,B),\quad
+ Z=\mathsf S(A,B),\quad W=\mathsf S(B,A).
+\]
+Make the actual shared ground payload
+$Q=W(Z(Y(X0)))$, and put $q=Q_0$.
+The unconditional finite-tail lower bound for $\psi$ gives
+\[
+ q\ge1+x_0+y_0+z_0+w_0\ge5.
+\]
+Set $g_X=XQ$, and similarly $g_Y,g_Z,g_W$, and finally set
+$L=e(g_X,g_Y)$, $R=e(g_Z,g_W)$.
+
+Suppose first $a_1>b_1$.  Then $x_1>z_1=w_1$.  The ordinals
+\[
+ \alpha=\omega\otimes z_1+z_0+q+2,
+ \qquad \beta=\omega\otimes x_1+x_0+q
+\]
+satisfy $\alpha<\beta$.  We must check a norm premise before comparing
+their collapses.  Bounded norms of actual assignments and the published
+natural-product norm inequality \cite[Propositions 2.2--2.3]{ww} give
+\[
+ \norm(\alpha)\le2\norm(z_1)+z_0+q+2
+ \le3z_0+q+2\le4q+2
+ \le2^{q+1}\le\Phi(\norm(\beta)).
+\]
+Controlled strictness therefore gives $\psi(\beta)>\psi(\alpha)$.
+Two consecutive fixed-limit tail-growth steps from \cite{wwfoundations}
+yield $g_{X,0}>4g_{Z,0}$.  The same calculation with $W$ gives
+$g_{X,0}>4g_{W,0}$.  If $b_1>a_1$, use $Y$ in place of $X$.
+
+If $a_1=b_1$ but $a_0\ne b_0$, the four $\mathsf S$ heads coincide.
+Their scalar tails are
+\[
+ 14a_0+13,\quad14b_0+13,\quad
+ 9a_0+5b_0+13,\quad9b_0+5a_0+13.
+\]
+The larger diagonal tail exceeds both cross tails by at least five.
+Strict increase gives at least a two-unit scalar gap, so two fixed-tail
+growth steps in the subsequent applications give again a diagonal $g$
+value greater than four times each cross value.
+
+In either unequal case,
+$3g_{X,0}+g_{Y,0}>3g_{Z,0}+g_{W,0}$: even when the larger diagonal
+is the one with coefficient one, its fourfold domination suffices.
+The final eraser is increasing and has gaps at least two.
+Equal input vectors give four equal $\mathsf S$ vectors, hence equality.
+This proves the claimed detector on every admissible valuation, not only
+on the specially chosen alignment witnesses.
+\end{proof}
+
+\begin{theorem}[Standard-control functional-input undecidability]
+\label{thm:functional-hardness}
+Full universal canonical weak comparison and strict comparison are
+undecidable already for ground output, free-variable levels at most one,
+and internal levels at most two.  The reduction at this level uses finitely
+many comparison queries.  A computable single-query reduction from the
+same polynomial-system unsatisfiability problem is available with internal
+level at most three.
+\end{theorem}
+\begin{proof}
+Let $\pi$ retain exactly the Cantor monomials with finite exponents.
+It maps ordinals below $\varepsilon_0$ to $\mathbb N[\omega]$.
+It preserves natural sum and multiplication: a natural sum of exponents
+is finite exactly when both exponents are finite.  It consequently extends
+to the signed Cantor-monomial group and respects multiplication by fixed
+$\mathbb Z[\omega]$ coefficients.
+
+For the level-two assertion, enumerate the finitely many possible sets of
+zero polynomial unknowns, substitute zero for those, and require the others
+to be positive ordinal first coordinates.  Compile the resulting equations
+by Lemma~\ref{lem:pair-compiler}, align them separately, and apply
+Lemma~\ref{lem:functional-detector}.  Aggregate the nonnegative ground
+detectors in identically shaped eraser trees.  Root equality is exactly
+simultaneous equation satisfaction.  Its absence is one universal strict
+comparison; the $KR\mle IL$ conversion in Theorem~\ref{thm:compiler}
+gives the same weak query.  An empty system receives a tautology.
+
+A polynomial solution lifts in the matching zero pattern: each remaining
+nonzero polynomial is an admissible positive first field, after choosing its
+zeroth field sufficiently large for its norm.  Conversely any positive-ordinal
+solution projects by $\pi$ to a polynomial solution of the original system.
+Some projected unknowns may become zero, which is permitted in that system.
+Thus an algorithm for either comparison would decide polynomial solvability
+using the finitely many patterns, contradicting the published theorem.
+
+For a single query choose instead a fixed positive ordinal $\Omega$ with
+$\pi(\Omega)=0$, and transform each original equation to
+\[
+ \sum_i a_i(\omega)x_i-g(\omega)
+                    -\left(\sum_i a_i(\omega)\right)\Omega=0.
+\]
+A polynomial solution $u_i$ lifts by $x_i=u_i\oplus\Omega>0$.
+Conversely projection of any positive-ordinal solution solves the original
+equations.  The transformation preserves simultaneous use of each unknown.
+
+We must realize the extra constant in actual source syntax.  Put
+$\sigma=\tau\to\tau$, $C_2=\lambda u:\tau.u$, and
+$\mathsf H_2(A)=R^\tau0(\lambda n:o.A)$.  The canonical clauses give
+$(C_2)_2=2$ and $(\mathsf H_2(A))_2=\omega+2\omega\otimes A_2$.
+The closed $H=\mathsf H_2(\mathsf H_2(C_2))$ has
+\[
+ H_2=10\omega^2+\omega,
+ \qquad\Omega=2^{10\omega^2+\omega}=\omega^{10\omega+1},
+ \qquad\pi(\Omega)=0.
+\]
+Apply this same actual $H$ to the two entries of the constant pair of
+Lemma~\ref{lem:pair-compiler}.  The box gives
+$\can{HA}_1=\Omega\otimes(H_1+A_1)$, so their difference is
+$2^{12}\Omega$.  Add this as a second closed seed to the pair compiler.
+Only fixed $\omega$ shifts and signed sums of that seed are needed.
+Compile the one transformed system and apply the same alignment and detector.
+The closed $R^\tau$ raises the internal level bound to three, while every
+free variable still has level at most one.  This is the promised single-query
+reduction.  No claim about all-ground free variables follows.
+\end{proof}
+
+\section{An additive-one change of control}\label{sec:control-hardness}
+
+Growth alone does not explain the positive standard-control results in
+\cite{wwmultivariate}.  Their modular hypotheses carry indispensable
+information.  The following construction changes the control while retaining
+its growth, any prescribed finite prefix, and even pointwise additive accuracy.
+
+Fix a primitive recursive bounded simulation predicate $H(e,t)$ for an
+effective enumeration of blank-input programs: it is one precisely when
+program $e$ has halted within $t$ steps.  For a fixed finite $b$, define
+\[
+ \epsilon_b(0)=0,\qquad
+ \epsilon_b(n)=
+ \begin{cases}0&0<n\le b,\\H(v_2(n),n)&n>b,\end{cases}
+ \qquad \Gamma_b(n)=\Phi(n)+\epsilon_b(n),
+\]
+where $v_2(n)$ is the exponent of two dividing $n>0$.
+The one function $\Gamma_b$ is fixed before a program index is supplied.
+
+\begin{lemma}[Control properties]\label{lem:perturbed-control}
+The function $\Gamma_b$ is primitive recursive, agrees with $\Phi$ on
+$[0,b]$, and satisfies
+\[
+ 0\le\Gamma_b(n)-\Phi(n)\le1,\quad
+ \Phi(n)\le\Gamma_b(n)<\Phi(n+1),\quad
+ \Gamma_b(n+1)>4\Gamma_b(n).
+\]
+It has the additive margin
+$\Gamma_b(v+a)\ge\Gamma_b(v)+2a$ for $a\ge1$, is eventually bounded
+by $F_6$, and $\Gamma_b(n)/\Phi(n)\to1$.
+\end{lemma}
+\begin{proof}
+Bounded simulation, valuation $v_2$, and each fixed $F_j$ are primitive
+recursive.  The prefix and additive estimates follow from the definition.
+If $u=\Phi(n)$, the control estimate in \cite{wwfoundations} gives
+$\Gamma_b(n+1)\ge2^{2^u}>4(u+1)\ge4\Gamma_b(n)$.
+It also gives $\Phi(n)+1<\Phi(n+1)$ and increments greater than two.
+Sum those increments for the additive margin.  For $n\ge101$,
+$F_5(n+101)\le F_5(F_5(n))\le F_6(n)$, since $F_5(n)\ge n+101$;
+this bounds $\Gamma_b(n)<F_5(n+101)$.  The bounded error and
+$\Phi(n)\to\infty$ give the ratio limit.
+\end{proof}
+
+These estimates supply the identity-majorization and additive margin of the
+collapse construction, as well as its eventual finite-hierarchy upper bound.
+Only the coefficient-one collapse will be used for hardness.  For a strictly
+increasing identity-majorizing control its exact formula is
+$\psi_{\Gamma_b}(\omega+n)=\Gamma_b(n+2)+1$, by the maximum-predecessor
+recurrence.  It is injective.  Its consecutive values exceed four times the
+preceding ones at the arguments used by the eraser.  Consequently the source
+addition, constants, collision detector and conjunction construction proved
+above work verbatim with this control.  We do not transfer a standard-control
+residue theorem to $\Gamma_b$.
+
+\begin{theorem}[Ground hardness within distance one]\label{thm:control-hardness}
+For every $b$, universal canonical weak comparison and strict comparison
+at the one fixed control $\Gamma_b$ are $\Pi^0_1$-complete already on
+ground-output sources having only ground free names and ground binders,
+using only the prime constants $0,S$, with internal levels at most one.
+Moreover $\Gamma_b(n)\bmod2$ is not eventually periodic.
+\end{theorem}
+\begin{proof}
+Every value of $F_j$ at a positive argument, and thus every value of
+$\Phi$, is a power of two divisible by two.  This follows by induction
+from its base and its positive number of iterations.
+For $n>b$ the value $\Gamma_b(n)$ is therefore odd exactly when
+$H(v_2(n),n)=1$.
+
+Fix the odd constant $C=2b+5$.  For a program index $e$ consider the
+existential conjunction over natural variables
+\[
+ z+4=2^e(2t+C),\qquad y=F_S(z),\qquad y=w+w+1.
+\]
+Here $F_S(z)=\Gamma_b(z+4)$, and $2^e$ is a fixed coefficient computed
+from the input index.  It is not a variable exponentiation operation.
+With $n=2^e(2t+C)$ one has $n\ge5$, $n>b$ and $v_2(n)=e$.
+The conjunction has a solution at $t$ exactly when $H(e,n)=1$.
+If $e$ halts, choose $t$ large enough that $n$ exceeds its halting time;
+then $z=n-4\ge0$ and $w=(\Gamma_b(n)-1)/2\ge0$ supply witnesses.
+Conversely any solution certifies the bounded halting test.  Thus the
+conjunction is satisfiable exactly when program $e$ halts.
+
+Flatten it using the proved addition, constant and actual $S$ graph gadgets,
+then use the collision detector and eraser aggregation.  Its unsatisfiability
+is one universal strict comparison and, by $KR\mle IL$, one weak comparison.
+All introduced binders are ground, and all leaves use only $0,S$ and ground
+variables.  The nonhalting reduction proves $\Pi^0_1$ hardness with the stated
+source restrictions.  The arithmetic DAG uses $O(e+\log(b+2))$ gates;
+this is a bound in the numerical index $e$, not its binary length.
+
+For membership, enumerate all finite tuples of positive raw ground values.
+Every value of a displayed source is computable: its closed heads are finite
+and the collapse reduces to fixed finite iteration of the primitive recursive
+control.  A failed universal comparison is therefore semidecidable.
+This proves completeness, without an oracle hidden in $\Gamma_b$.
+
+Finally suppose parity were periodic with period $p\ge1$ after $N$.
+For each $e$ effectively choose $n_e>\max(N,b)$ with $v_2(n_e)=e$.
+Every point
+\[
+ n_e+k p2^{e+1},\qquad k=0,1,2,\ldots,
+\]
+has the same residue modulo $p$ and the same valuation $e$.
+Periodicity would make the bounded tests $H(e,n_e+kp2^{e+1})$ constant.
+They are always zero if $e$ never halts and eventually one if it halts.
+Computing $\Gamma_b(n_e)\bmod2$ would thus decide halting.
+The alleged finite $N,p$ can be hardwired; they need not be found uniformly
+from $b$ for this contradiction.  No eventual parity period exists.
+\end{proof}
+
+The functional-input theorem leaves the control unchanged and changes the
+input domain.  The last theorem keeps ground inputs but changes the control.
+Neither is a negative answer for the remaining exact-standard-control,
+all-ground canonical comparison problem.  Together with the positive
+standard-control classes, they explain why a claimed solution must preserve
+both the source domain and the precise arithmetic function.

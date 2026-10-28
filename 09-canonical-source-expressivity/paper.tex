@@ -1,0 +1,301 @@
+\documentclass[11pt,a4paper]{article}
+\input{preamble}
+\title{Actual-Source Arithmetic and\\Undecidability Boundaries for Canonical Comparison}
+\author{}
+\date{28 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+We relate universal comparison of canonical Wilken--Weiermann assignments
+to existential arithmetic of actual typed sources.  A constant-size addition
+gadget, a superincreasing sorting construction and an asymmetric collision
+detector compile arbitrary finite Boolean formulas into one unconditional
+ground comparison, preserving shared witnesses.  Absolute observers also
+handle functional-output sources.  We construct original-budget source
+certificates through an entire grammar with arbitrary nested ground binders,
+and eliminate functional unit observations by finite systems of actual source
+equations.  Finally we prove two undecidability boundaries: functional free
+variables at the unchanged standard control, and ground-only inputs after
+an additive-one perturbation of that control.  The exact standard-control
+all-ground comparison problem is not classified by these results.
+\end{abstract}
+\tableofcontents
+
+\section{Source observations are an arithmetic language}
+
+The assignment is the literal zero-history assignment of original G\"odel T
+terms, with the recursor convention of Wilken--Weiermann \cite{ww}.
+The foundational companion \cite{wwfoundations} gives its full clauses,
+admissible substitutions, exact closed evaluator and generated-source
+forward-translation theorem.  Ordinal addition and multiplication in positive
+fields are natural; scalar fields are ordinary positive natural numbers.
+Initially the control is fixed to
+\[
+ F_0(t)=2^t,\quad F_{j+1}(t)=F_j^{t+1}(t),\quad\Phi(t)=F_5(t+100).
+\]
+A source equation below means equality of canonical scalar values, not beta
+equivalence of programs.  All bound names introduced by a construction are
+fresh, and all substitutions are capture avoiding.
+
+Every free ground coordinate ranges over $\NN$.  To work with usual natural
+arithmetic we encode $n\in\N$ by the raw source coordinate $n+1$.
+The literal source constant $0$ has assigned value one, so represents
+arithmetic zero.  Repeated free names always have the same valuation.
+
+\begin{definition}[Actual-source arithmetic]\label{def:source-language}
+Let $\Esrc$ be existential arithmetic over $\N$ with constants, addition,
+equality, order and finite Boolean combinations.  An extra function may be
+given by a supplied closed original unary source $H:o\to o$:
+\[
+ F_H(n)=\can{HX}_0-1,\qquad x_0=n+1.
+\]
+We also allow an observation leaf $\operatorname{Source}(A)=\can A_0-1$
+for any supplied ground-output original source with ground free names,
+using the same natural/raw encoding for those names.
+\end{definition}
+
+The source syntax is part of the finite input.  One does not adjoin every
+ordinal-indexed collapse merely because its notation is computable.  The
+functions in this language are total, but their simultaneous existential
+theory is not known to be decidable.
+
+\section{Literal arithmetic and collision gadgets}\label{sec:gadgets}
+
+Write $g(n)=\psi(\omega+n)=\Phi(n+2)+1$.  From the canonical clauses,
+for a fresh unused ground binder define
+\[
+ e(A,B)=(\lambda u:o.A)B,\qquad
+ \can{e(A,B)}_0=g(3\can A_0+\can B_0+2).
+\]
+This uses the full canonical assignment rather than evaluating the beta
+reduct.  The fixed-tail separation lemma of \cite{wwfoundations} makes
+$g$ injective and gives $g(n+1)>4g(n)$ for $n\ge6$.
+
+\begin{lemma}[Addition and small constants]\label{lem:addition}
+Natural addition $n_a+n_b=n_c$ is defined by the two source equations
+\[
+ e(b,0)=e(0,d),\qquad e(a,d)=e(c,0),
+\]
+with one fresh positive raw witness $d$.  Arithmetic one has a constant-size
+source-equation definition.  Every binary literal $k$ has an addition DAG
+of size $O(\log(k+1))$ once zero and one are available.
+\end{lemma}
+\begin{proof}
+Injectivity gives $d=3b-2\ge1$ and $a+b=c+1$.  The latter is exactly the
+natural addition equation after subtracting one from each raw coordinate.
+The witness is unique, and any true addition supplies it.
+
+Let $I=\lambda z:o.z$.  The prime and lambda clauses give
+$\can S=(1,1)$ and $\can I=(3,1)$.  The equation $Sv=I0$ forces raw
+$v=3$.  Adding $\operatorname{Add}(u,u,v)$ forces raw $u=2$, representing
+natural one.  Its addition witness is $d=4$.  Thus no giant closed value
+has to be evaluated to define one.  Repeated doubling and add-one gates
+give the usual binary construction of $k$.
+\end{proof}
+
+A supplied graph call $F_H(n_a)=n_b$ is simply the source equation $Ha=b$.
+A source leaf is flattened by $A=y$.  These equations retain the actual
+supplied source and every shared input occurring inside it.
+
+\begin{lemma}[Superincreasing pair coding]\label{lem:sort}
+Let $q(n)=F_S(n)=\Phi(n+4)$.  Then
+\[
+ q(a)+q(b)=q(c)+q(d)
+ \quad\Longleftrightarrow\quad\{a,b\}=\{c,d\}
+\]
+as multisets.  Consequently sorting two naturals has a primitive-positive
+definition using addition and the actual $S$ graph.
+\end{lemma}
+\begin{proof}
+The control bound gives $q(n+1)>2q(n)$.  Cancel equal indices across the
+two sides.  If a largest remaining index $M\ge1$ occurs, the other side
+has at most two values at most $q(M-1)$, too small to equal $q(M)$.
+If only index zero remains on one side, its positive contribution also
+cannot vanish.  This proves multiset equality; the converse is immediate.
+Impose
+\[
+ q(a)+q(b)=q(l)+q(h),\qquad l+\delta=h.
+\]
+Multiset equality and nonnegative $\delta$ force $l=\min(a,b)$,
+$h=\max(a,b)$ and $\delta=|a-b|$.  These values conversely satisfy the
+equations.  Flattening the sums and graph calls uses only the previous lemma.
+\end{proof}
+
+\begin{lemma}[Six-eraser collision detector]\label{lem:collision}
+For arbitrary actual ground sources $P,Q$, put
+\[
+ L=e(e(P,P),e(Q,Q)),\qquad R=e(e(P,Q),e(Q,P)).
+\]
+At every joint valuation $L_0\ge R_0$, with equality exactly when
+$P_0=Q_0$.  Otherwise $L_0-R_0\ge2$.
+\end{lemma}
+\begin{proof}
+For raw $p=P_0,q=Q_0$ set
+\[
+ A=g(4p+2),\ B=g(4q+2),\ C=g(3p+q+2),\ D=g(p+3q+2).
+\]
+Then $L_0=g(3A+B+2)$ and $R_0=g(3C+D+2)$, with all inner arguments
+at least six.  If $p>q$, then $A>4C$ and $C\ge D$, giving
+$3A+B>3C+D$.  If $q>p$, then $B>4D$ and $D\ge C$, giving the same
+strict conclusion.  For $p=q$ every inner value agrees.  The fourfold
+growth bound on the outer $g$ also gives the integer gap at least two.
+Thus the unequal weights three and one do not require a symmetric source adder.
+\end{proof}
+
+\begin{lemma}[Conjunction without cancellation]\label{lem:aggregate}
+A finite conjunction of actual ground-source equations can be transformed
+into ground sources $L,R$ with $L_0\ge R_0$ everywhere, equality precisely
+when every equation holds, and otherwise gap at least two.
+\end{lemma}
+\begin{proof}
+Apply the collision detector to each equation.  Combine all left outputs
+and all right outputs in identically shaped $e$-trees.  Strict increase
+in both arguments preserves nonnegativity, and equality survives exactly
+when it survives at every leaf.  One unequal leaf makes its ancestors
+strict; the growth bound gives the final gap.  A balanced tree adds only
+linear DAG overhead.  For an empty conjunction take $L=R=0$.
+\end{proof}
+
+\section{A full Boolean compiler}\label{sec:boolean}
+
+\begin{theorem}[One unconditional comparison]\label{thm:compiler}
+Every existential $\Esrc$ sentence has a computably constructed ground-output
+strict comparison, and one weak comparison, true precisely when the sentence
+is false.  All free variables of the resulting sources are ground.  Shared
+inputs and source leaves retain their valuations.  The added source DAG size
+is polynomial in the formula DAG, binary constants and supplied source DAGs.
+\end{theorem}
+\begin{proof}
+Flatten the arithmetic terms once, sharing each original DAG node.  The
+addition and supplied-source graph equations are conjoined outside the
+Boolean matrix.  They define total functions, so this operation preserves
+truth even under negation.
+
+For each Boolean node construct a natural bit $b$.  To test equality $a=c$,
+sort $a,c$ and obtain $\delta=|a-c|$; sort $\delta,1$ and let
+$v=\min(\delta,1)$; require $b+v=1$.  Thus $b=1$ exactly when the inputs
+are equal.  Weak order $a\le c$ is the equality test $\max(a,c)=c$.
+Strict order is the complement of the reverse weak-order bit.  Negation
+uses $b+c=1$, conjunction uses $b=\min(c,d)$, and disjunction uses
+$b=\max(c,d)$.  The preceding sorting lemma defines each operation by a
+constant number of equations.  Induction proves that every output is in
+$\{0,1\}$ and has exactly its intended truth value.
+
+Require the root bit to be one.  For each valuation of the original inputs,
+the flattened values, sorting witnesses, differences and bits are uniquely
+determined, and supply a solution exactly when the matrix is true.  Addition
+witnesses are positive by Lemma~\ref{lem:addition}.  This proves both directions
+without a disjunctive-normal-form expansion or an unbounded integer witness.
+Repeated source names have never been split into independent copies.
+
+Apply Lemma~\ref{lem:aggregate} to the resulting conjunction.  Since every
+existential witness is now a free ground coordinate, universal $R\mslt L$
+is exactly absence of a witness.  For the weak version put
+$K=\lambda z:o.0$, with $\can K=(5,1)$.  Literal application gives
+\[
+ \can{KR}_0\le\can{IL}_0
+ \quad\Longleftrightarrow\quad g(5+R_0)\le g(3+L_0)
+ \quad\Longleftrightarrow\quad L_0-R_0\ge2.
+\]
+Equality or a gap of two are the only alternatives.  The weak comparison
+therefore expresses the same unsatisfiability assertion.
+
+Every arithmetic or Boolean node adds constant gadget overhead, binary
+constants add logarithmic overhead, and the final detector/aggregation adds
+linear overhead.  Existing source DAGs remain shared.  This proves the
+polynomial DAG claim, not a polynomial expanded-tree or evaluation-time bound.
+\end{proof}
+
+\begin{corollary}[Ground weak/strict equivalence]\label{cor:ground-equivalence}
+On all actual ground-output sources with ground free variables, universal
+weak and strict comparison are polynomial-DAG many-one interreducible.
+\end{corollary}
+\begin{proof}
+For a weak query $A\mle B$, compile the existential counterexample
+$\operatorname{Source}(A)>\operatorname{Source}(B)$ into the strict version.
+For a strict query compile $\operatorname{Source}(A)\ge\operatorname{Source}(B)$
+into the weak version.  No recognition of a positive arithmetic fragment is
+needed, because the compiler accepts arbitrary supplied ground-source leaves.
+\end{proof}
+
+\section{Functional outputs and absolute observation}\label{sec:absolute}
+
+The generated-source invariant in \cite{wwfoundations} states that positive
+coordinates are independent of ground inputs.  Capture-free substitution
+of a closed ground term also commutes with a canonical assignment: this
+is structural induction, using the distinct-name partial substitution
+lemma of \cite[Lemma 2.20]{ww} at abstraction.  No reduction history is changed.
+
+\begin{lemma}[Absolute observer]\label{lem:absolute}
+Let $T:\rho$ have only ground free names $\mathbf z$.  Its entire raw scalar
+graph $v=\can{T(\mathbf z)}_0$ is existentially definable by actual ground-source
+observations, addition and constants, with all shared names preserved.
+\end{lemma}
+\begin{proof}
+Close the ground names to literal zero, obtaining $T^*$, and evaluate the
+closed scalar $C=\can{T^*}_0$.  Put $m=\lv(\rho)$ and $p=2(m+1)+1$.
+For a fresh unused ground $u$, the full vector size multiplier gives
+\[
+ \can{\lambda u:o.T}_0=p\can T_0+p-1.
+\]
+The positive profiles agree for $T$ and $T^*$.  With fresh positive ground
+inputs $x,y$, form the actual ground sources
+\[
+ G(\mathbf z,x)=(\lambda Y:\rho.0)((\lambda u:o.T)x),\qquad
+ G^*(y)=(\lambda Y:\rho.0)((\lambda u:o.T^*)y).
+\]
+The inner applications and outer erasers use matching fixed heads on the two
+sides.  Twice cancelling their injective fixed-tail collapses yields
+\[
+ G_0=G^*_0\quad\Longleftrightarrow\quad
+ p\can T_0+x_0=pC+y_0.
+\]
+Add $pv+x_0=pC+y_0$.  These two equations force $v=\can T_0$;
+conversely raw witnesses $x_0=pC+1$, $y_0=pv+1$ work.  All raw values are
+encoded by naturals plus one.  The anchor $C$ is effectively computed by the
+closed evaluator; that cost is charged, with no feasible-size claim.
+\end{proof}
+
+\begin{theorem}[Exact decision equivalence]\label{thm:decision-equivalence}
+Universal weak/strict canonical comparison on the full all-ground-free-variable
+domain, its ground-output restriction, and unsatisfiability in $\Esrc$ are
+computably equivalent.  Satisfiability uses answer complementation.
+\end{theorem}
+\begin{proof}
+For a general-output comparison first decide its closed positive-coordinate
+tests.  If they pass, a countervaluation is an existential inequality between
+the scalar observations defined by Lemma~\ref{lem:absolute}.  The Boolean
+compiler handles that sentence.  Conversely it reduces arbitrary source
+arithmetic unsatisfiability to ground-output comparison.  The ground-output
+domain is a special case of the general domain.  The closed-anchor evaluations
+in the general-output direction justify computability, not a uniform
+polynomial bound.
+\end{proof}
+
+The equivalence isolates a real open problem.  The formula compiler is complete;
+it does not decide whether its witnesses exist.  A faster closed evaluator,
+a graph for one more source head or an ordinal termination bound does not
+supply that missing negative-instance decision procedure.
+
+\input{source-realization}
+\input{hardness}
+
+\section{The remaining exact-control boundary}
+
+The all-ground standard-control comparison problem remains open.  The
+functional-input theorem changes the permitted free-variable vectors; the
+control-sensitivity theorem changes the numerical control.  The source
+realization theorem closes a complete constructor grammar, but not arbitrary
+active functional argument application.  Their distinct hypotheses are
+part of the results, not removable technical decorations.
+
+For a supplied actual unary source, the complete-count residue-attainment
+reduction in \cite{wwfoundations} uses Theorem~\ref{thm:compiler} and proves
+a necessary arithmetic subproblem.  It does not prove that every auxiliary
+ordinal head or every isolated intermediate partition coefficient has the
+same interpretation.  A full solution must either decide the existential
+actual-source systems themselves or interpret a known undecidable problem
+there while preserving the unchanged source and control contracts.
+
+\input{references}
+\end{document}

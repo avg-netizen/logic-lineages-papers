@@ -1,0 +1,671 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{Controlled Ordinal Descents, Restricted Partitions\\and Cartier Observers}
+\author{}
+\date{Working manuscript, October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An ordinal descent can terminate at every input while its accumulated
+step count retains difficult modular information. We give exact count
+identities for a norm-controlled descent below $\varepsilon _0$. For a
+polynomial block, congruent growing budgets give the same count modulo a
+fixed modulus as a constant-budget restricted-partition problem. Applied
+to a genuinely retained prefix in the Wilken--Weiermann assignment, the
+identity produces a restricted-partition coefficient whose part bound
+and selected index both vary along one prescribed fast-growing orbit.
+We construct its complete finite coefficient observer. Differential
+Cartier removes the higher poles, but on the actual linked inputs the
+tuple of residues at one family of primitive roots has exact period
+$2(\log _2 B-1)$. Thus a uniformly bounded cycle of the complete rational
+state cannot solve this family. The result does not determine the
+selected scalar coefficient, prove its nonperiodicity, or decide general
+canonical comparison. Complete counts, counts to a boundary, full states,
+and scalar observations are kept distinct throughout.
+\end{abstract}
+\tableofcontents
+
+\section{Why a termination proof leaves a counting problem}
+
+Wilken and Weiermann associate typed terms with ordinal vectors whose
+zeroth coordinate is a natural number obtained from a norm-controlled
+collapse \cite{ww}. An exact evaluation follows an ordinal descent. Its
+ordinal argument decreases, but its available norm increases rapidly.
+The number of replacements is part of the answer, rather than merely a
+bound on the time needed to compute it.
+
+This distinction matters for universal comparison. An algorithm that
+eventually evaluates each supplied input need not decide whether
+\emph{some} input has a specified residue. Nor does a large growth rate
+determine a small residue. The methods below make that distinction
+explicit by following one actual source boundary all the way to a
+restricted-partition coefficient.
+
+Our contribution has three levels. First, we prove an exact modular
+transfer theorem for polynomial blocks under congruent growing budgets.
+Second, we derive the correlated parameters of a block inside a
+nonpolynomial source descent. Third, we analyze a complete finite
+observer for its selected parity and prove an unbounded full-state
+period on those very parameters. The third result limits a particular
+compression strategy; it is not an impossibility theorem for all
+methods of observing the final bit.
+
+\section{Norm, control and the exact descent}
+
+All ordinals in this paper lie below $\varepsilon _0$ and are given by
+finite recursive Cantor normal forms. In displays of such forms,
+addition and multiplication by finite coefficients have their ordinary
+ordinal meaning. The norm is
+\[
+ \norm(0)=0,\qquad
+ \norm\!\left(\sum_{i<r}\omega^{\alpha_i}c_i\right)
+       =\sum_{i<r}c_i(1+\norm(\alpha_i)).
+\]
+Thus $\norm(n)=n$, $\norm(\omega^d)=d+1$ for finite $d$, and
+$\norm(\omega^\omega)=3$. Every norm ball is finite and effectively
+enumerable: its members are represented by finitely many rooted
+expression trees of bounded size, after which their Cantor forms can
+be compared effectively.
+
+Fix exactly
+\begin{equation}\label{eq:control}
+ F_0(n)=2^n,\qquad F_{j+1}(n)=F_j^{\,n+1}(n),\qquad
+ f(n)=\Phi(n)=F_5(n+100).
+\end{equation}
+Superscripts on functions denote iteration. In particular $f$ is
+computable, strictly increasing, and
+\begin{equation}\label{eq:growth}
+ f(n)\ge 2^{n+100},\qquad f(n+1)\ge 2^{f(n)+1}.
+\end{equation}
+The finite-level iteration induction proving these growth estimates is
+given in the foundations companion \cite{wwfoundations}; the modular
+properties are proved below. The underlying collapse is
+\[
+ \psi(\alpha)=
+ \max\bigl(\{0\}\cup
+  \{\psi(\beta)+1:\beta<\alpha,\ \norm(\beta)\le f(\norm(\alpha))\}\bigr).
+\]
+The maximum is finite. It supplies the controlled implication
+\begin{equation}\label{eq:controlled}
+ \beta<\alpha,\quad \norm(\beta)\le f(\norm(\alpha))
+       \quad\Longrightarrow\quad \psi(\beta)+1\le\psi(\alpha).
+\end{equation}
+Unrestricted monotonicity of $\psi$ is not asserted.
+
+For $\alpha>0$, let
+$M(\alpha,b)=\max\{\beta<\alpha:\norm(\beta)\le b\}$.
+For a nonzero limit $\lambda$, its norm-saturating predecessor satisfies
+\begin{equation}\label{eq:predecessor}
+ \norm(M(\lambda,b))=b,\qquad
+ \psi(\lambda+n)=\psi(M(\lambda,f(\norm(\lambda)+n)))+1.
+\end{equation}
+These identities, including the terminating Cantor-form algorithm for
+$M$, are proved in the foundations companion
+\cite{wwfoundations}. They are a specialization of the
+norm-controlled predecessor framework of \cite{bcw}. In particular,
+closed evaluation is an effective mathematical operation; no feasible
+running time is implied.
+
+\begin{definition}
+For a limit $\lambda>0$ and total initial norm $t\ge\norm(\lambda)$,
+start at $\alpha_0=\lambda+(t-\norm(\lambda))$. While $\alpha_i$ is
+infinite, discard its finite tail and set
+\[
+ \alpha_{i+1}=M(\headpart(\alpha_i),f(\norm(\alpha_i))).
+\]
+Write $\tau_\lambda(t)$ for the number of replacements and
+$Z_\lambda(t)$ for the terminal finite ordinal.
+Set $J_\lambda(t)=\psi(\lambda+t-\norm(\lambda))$.
+\end{definition}
+
+\begin{proposition}[Complete-count identity]\label{prop:complete}
+The descent terminates and
+\[
+ Z_\lambda(t)=f^{\,\tau_\lambda(t)}(t),\qquad
+ J_\lambda(t)=Z_\lambda(t)+\tau_\lambda(t).
+\]
+\end{proposition}
+\begin{proof}
+Every replacement strictly decreases the ordinal, so there cannot be
+infinitely many replacements. By norm saturation, its successive norms
+are exactly $t,f(t),f^2(t),\ldots$. At the finite endpoint, the ordinal
+itself equals its norm, proving the first identity. Each application of
+\eqref{eq:predecessor} adds one. Finally $\psi(n)=n$ for finite $n$,
+by induction in the defining maximum. Summing the contributions proves
+the second identity.
+\end{proof}
+
+This count stops at the \emph{first finite ordinal}. It does not add a
+further walk through the finite successors below $Z_\lambda(t)$.
+Likewise, a count stopped at a nonfinite boundary is generally not
+$\tau_\lambda$.
+
+\section{The modular information supplied by the control}
+
+We state the arithmetic input in a form that can be applied when a
+modulus itself depends on a source parameter.
+
+\begin{theorem}[Uniform residue envelopes]\label{thm:envelope}
+There is an effective function $m\mapsto r_m\in\{0,\ldots,m-1\}$ such
+that:
+\begin{enumerate}
+\item $f(x)\equiv r_m\pmod m$ for $x\ge m$;
+\item for $s\ge1$, $j\ge2$ and $m\le2^{2^s}$,
+      $F_j(s)\equiv r_m\pmod m$;
+\item if $B=f(u)$, then
+      $f(u+1)\equiv r_m\pmod m$ for every $m\le2^{2^B}$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+We recall the construction to make the envelopes precise. Put $r_1=0$.
+For $m>1$, write $m=2^a b$, $b$ odd, and set
+$q=\varphi(b)$ if $b>1$, otherwise $q=1$. Then $q<m$.
+Define $r_m$ by
+$r_m\equiv0\pmod {2^a}$ and
+$r_m\equiv2^{r_q}\pmod b$. This is a terminating recursion using
+Euler's theorem and the Chinese remainder theorem.
+
+Let $E_0(n)=n$, $E_{h+1}(n)=2^{E_h(n)}$.
+Induction on $m$ proves that $E_h(n)\equiv r_m\pmod m$ whenever
+$h,n\ge m$. The exponent is large enough for the $2$-part; its residue
+modulo $q$ is supplied by the induction hypothesis, since $h-1\ge q$.
+As $F_1(n)=E_{n+1}(n)$, every $F_j(n)$ with $j\ge1$ has residue
+$r_m$ for $n\ge m$: in a higher-level iterate every argument is at
+least $n$. This proves the first assertion.
+
+For the stronger bound, the final $F_1$ call in
+$F_2(s)=F_1^{s+1}(s)$ has argument at least
+$F_1(s)\ge2^{2^s}$ when $s\ge1$. Its tower seed and height are both
+at least $m$, proving the second assertion for $j=2$.
+The induction to higher $j$ uses its last lower-level call, whose
+argument is at least $s$.
+
+Finally put $n=u+100$. In
+$F_5(n+1)=F_4^{n+2}(n+1)$ the argument of the final $F_4$ is
+$v=F_4^{n+1}(n+1)>F_4^{n+1}(n)=B$. The second assertion at $v$
+therefore gives the third.
+\end{proof}
+
+The theorem does not say that an arbitrary computable sequence of
+moduli may be stabilized at an arbitrary input. Each use must pay the
+displayed bound. In particular, a lower bound on $f(x)$ by itself is
+not the first assertion's lower bound on its \emph{argument}.
+
+\section{Constant budgets and restricted partitions}
+
+For $d\ge1$, define
+\[
+ p_d(n)=\#\{(a_1,\ldots,a_d)\in\N^d:
+                         a_1+2a_2+\cdots+da_d=n\}.
+\]
+The independent choices of multiplicities give
+\begin{equation}\label{eq:partition-series}
+ \sum_{n\ge0}p_d(n)z^n=\prod_{i=1}^d(1-z^i)^{-1}.
+\end{equation}
+The relation to ordinals preserves every part, including the finite tail.
+
+\begin{lemma}[A fixed-budget count]\label{lem:fixed}
+Fix a nonnegative retained mass $c$ and take $S\ge c+d+1$.
+Start the suffix at $\omega^d$ with any finite tail of total norm
+(including $c$) at most $S$. At every replacement spend the constant
+suffix budget $S-c$ and stop when the suffix is finite. The number of
+replacements is $p_d(S-c)$. When $c=\norm(\pi)$ for a retained
+CNF prefix $\pi$ of least exponent at least $d$, this is precisely
+the corresponding segment starting at $\pi+\omega^d$ plus that tail.
+\end{lemma}
+\begin{proof}
+The ordinals of suffix norm exactly $S-c$ below $\omega^d$ are
+precisely
+\[
+ \omega^{d-1}a_d+\cdots+\omega a_2+a_1,\qquad
+             \sum_{i=1}^d i a_i=S-c.
+ \tag{*}
+\]
+Their number is $p_d(S-c)$. The first predecessor is the largest
+such ordinal. In any later state of (*), the nonfinite coefficients
+determine $a_1$ uniquely. Thus no second state of (*) has the same
+nonfinite part. Removing the finite tail and taking the largest
+predecessor of suffix norm $S-c$ selects exactly the next state of
+(*) in decreasing ordinal order. All states are visited, ending at
+the finite suffix $S-c$. There is one replacement into each state
+and none after the last, proving the count. For $d=1$ there is one
+state and one replacement.
+\end{proof}
+
+\begin{lemma}[A sufficient partition period]\label{lem:period}
+For every $d,m\ge1$, put $Q_d=d!m^{d-1}$. Then
+\[
+             p_d(n+Q_d)\equiv p_d(n)\pmod m\quad(n\ge0).
+\]
+\end{lemma}
+\begin{proof}
+For $d=1$, $p_1(n)=1$. For $d>1$, splitting by the number
+of parts of size $d$ gives
+$p_d(n)=\sum_{j=0}^{\lfloor n/d\rfloor}p_{d-1}(n-dj)$.
+Here $Q_d/d=mQ_{d-1}$. In the sum for $n+Q_d$, shifting the
+index by $mQ_{d-1}$ recovers the old sum. The additional
+$mQ_{d-1}$ summands form $m$ groups of $Q_{d-1}$ consecutive
+indices in the periodic sequence
+$j\mapsto p_{d-1}(n+Q_d-dj)\pmod m$.
+Its period divides $Q_{d-1}$ by induction, so the extra sum is zero
+modulo $m$.
+\end{proof}
+
+The period is deliberately a sufficient bound, not an optimal one.
+For $d=2$ the count is $\lfloor n/2\rfloor+1$, and $2m$
+is the period supplied by the lemma.
+
+\section{A transfer theorem for congruent growing budgets}
+
+For the numerical statement, a retained mass $c\ge0$ means that a
+suffix of norm $n$ has total norm $c+n$, and a total budget $b$ leaves
+suffix budget $b-c$. It need not be the norm of an ordinal prefix.
+If it is realized by an actual retained CNF prefix, the numerical
+process agrees with that source segment. A budget schedule may increase
+with the current total norm; it must always afford that norm.
+
+\begin{theorem}[Congruent-budget transfer]\label{thm:transfer}
+Consider deletion of one suffix block $\omega^d$, with retained
+numerical mass $c\ge0$ and initial total norm at least $c+d+1$,
+under budgets at least the current total norm. Suppose
+every budget used in this segment is congruent to one integer $S$
+modulo $Q_d=d!m^{d-1}$, where $S\ge c$. Then its complete segment
+count is congruent to $p_d(S-c)$ modulo $m$.
+\end{theorem}
+\begin{proof}
+Induct on $d$. A degree-one block takes one replacement, as does
+$p_1(S-c)$. For the induction step let $b$ be the first actual
+total budget. The suffix of its greatest predecessor is the greedy
+Cantor polynomial of norm $b-c$ and degree less than $d$.
+Write its coefficients as $a_{d-1},\ldots,a_1$, with the final
+finite coefficient included.
+
+Thereafter each of its nonfinite monomial units is deleted by a
+lower-degree block. For a degree-$i$ unit the retained prefix norm
+has the form
+\[
+ c_i=c+\sum_{j>i}(j+1)a_j+(i+1)a,\qquad 0\le a<a_i.
+ \tag{**}
+\]
+The order of those units is fixed by the Cantor order; growing
+budgets affect their lower suffixes and durations, not the number
+of these fixed higher monomial units. Since $Q_i\mid Q_d$, every
+budget in a child segment has the residue of $b$ modulo $Q_i$.
+Induction makes its count congruent to $p_i(b-c_i)$.
+These arguments are nonnegative: each $c_i$ consists of $c$ plus
+the norm of a prefix of the first suffix polynomial and is at most $b$.
+
+Consequently the whole count, including its initial replacement,
+has the same residue as the constant-$b$ process with exactly that
+initial polynomial and those prefixes (**). By
+Lemma~\ref{lem:fixed} this is $p_d(b-c)$.
+Since $b\equiv S\pmod {Q_d}$, Lemma~\ref{lem:period} gives
+$p_d(b-c)\equiv p_d(S-c)\pmod m$. If $b-c<S-c$,
+apply the period lemma in the reverse direction by adding the
+appropriate nonnegative multiple; no negative partition index is used.
+\end{proof}
+
+The proof covers the whole count, not just its leading contribution.
+It does not replace the increasing operational budgets by a constant
+control: the latter is only a device for computing one residue.
+
+\begin{proposition}[An actual $\omega^\omega$ block]\label{prop:omega-block}
+Let $\Omega=\omega^\omega$. At a real suffix state $\pi+\Omega+n$, with $\pi$ a retained CNF
+prefix (zero or of least exponent at least $\omega$), and total norm $u$,
+assume $c=\norm(\pi)$, $c+3\le u$, and
+$B=f(u)\ge\max(16,m)$. Put $C=f(u+1)$ and $d=B-c-1$.
+If $H_c(u)$ counts the complete deletion of this $\Omega$ copy,
+then
+\begin{equation}\label{eq:omega-block}
+ H_c(u)\equiv1+p_{B-c-1}(C-c)\pmod m.
+\end{equation}
+Its output norm is still exactly $f^{H_c(u)}(u)$.
+\end{proposition}
+\begin{proof}
+The first predecessor is $\pi+\omega^d$, of total norm $B$.
+Indeed the greatest exponent of norm at most $B-c-1$ is the
+finite exponent $d$ in this particular bound below $\omega$;
+this is the predecessor of $\omega^\omega$ under the suffix budget.
+All subsequent norms are at least $B$, and their budgets have
+residue $r_{Q_d}$ by Theorem~\ref{thm:envelope}, because
+\[
+ Q_d=d!m^{d-1}\le B^{2B}\le2^{2^B}.
+\]
+The last inequality holds for $B\ge16$; it follows from
+$2B\log_2 B\le2^B$, first at $16$ and then by the increasing
+ratio of the right side to the left side.
+The adjacent value $C=f(u+1)$ has the same residue modulo $Q_d$
+by the third part of Theorem~\ref{thm:envelope}.
+Apply Theorem~\ref{thm:transfer} to the remaining $\omega^d$ block
+with $S=C$, then include its preceding $\Omega$ replacement.
+Norm saturation proves the final assertion independently of the
+modular calculation.
+\end{proof}
+
+\section{The first moving-prefix boundary}
+
+Write $\Theta=\omega^{\omega+1}$. Suppose a genuine descent first
+reaches a state whose limit part is $\Theta$, at total norm $v$.
+The forthcoming calculation is conditional only on this actual
+entry; it does not posit independent entry values for a larger source.
+Put $u=f(v)$. The residue recursion gives $u\equiv1\pmod3$.
+
+\begin{lemma}[The retained prefix at first entry]\label{lem:entry}
+The predecessor of this $\Theta$ state is
+\[
+ \Omega q+1,\qquad q=(u-1)/3.
+\]
+The first $\Omega$ copy deleted in this polynomial has retained
+prefix norm $e=u-4$ and total input norm $u$.
+\end{lemma}
+\begin{proof}
+A copy of $\Omega$ has norm three. The maximal exponent below
+$\omega+1$ that can occur is $\omega$; the remaining budget
+is therefore spent on as many copies of $\Omega$ as possible and
+then a finite remainder. Since $u\equiv1\pmod3$, that remainder
+is one. Before deleting the last displayed $\Omega$ in the
+ordinary sum $\Omega(q-1)+(\Omega+1)$, the retained prefix is
+$\Omega(q-1)$ and has norm $3(q-1)=u-4$.
+\end{proof}
+
+With $B=f(u)$, $C=f(u+1)$, $e=u-4$ and $d=B-u+3$, the
+first block parity is consequently
+\begin{equation}\label{eq:delta}
+ \delta_4(v):=H_{u-4}(u)\bmod2
+       =1+p_d(C-e)\pmod2.
+\end{equation}
+The subscript records the norm four of its suffix $\Omega+1$.
+The initial $\Theta$ replacement lies outside $H_{u-4}(u)$;
+the displayed $1$ instead counts the $\Omega$ replacement.
+
+This quantity is inside a larger correlated computation. Before its
+remaining limit part has become exactly $\Omega$, the $\Theta$ segment
+deletes $q-1$ copies with prefix masses $3(q-1),3(q-2),\ldots,3$. Their inputs
+are successive points on the \emph{same} $f$ orbit. Observing the
+sum of all these counts does not automatically define the graph of
+the first summand. Thus \eqref{eq:delta} is a concrete benchmark for
+a proposed arithmetic method, not a proved necessary subproblem of
+every possible comparison procedure.
+
+\section{The complete binary coefficient observer}
+
+Work over $\Ftwo$ and set
+\[
+ A_d(z)=\prod_{i=1}^d(1+z^i),\qquad D=d(d+1)/2.
+\]
+For $b\in\{0,1\}$ let
+$\Lambda_b(\sum a_nz^n)=\sum a_{2n+b}z^n$.
+The state space of proper numerators is
+$V_d=\{U\in\Ftwo[z]:\deg U<D\}$.
+
+\begin{lemma}[Exact state update]\label{lem:matrix}
+For $U\in V_d$,
+\[
+ \Lambda_b(U/A_d)=\frac{\Lambda_b(UA_d)}{A_d}.
+\]
+The updated numerator is again in $V_d$. In the coefficient basis its
+matrix is
+$T_b[i,j]=[z^{2i+b-j}]A_d$, for $0\le i,j<D$.
+\end{lemma}
+\begin{proof}
+Since $A_d(z)^2=A_d(z^2)$ in characteristic two,
+$U/A_d=(UA_d)/A_d(z^2)$. Coefficient selection commutes with a
+factor in $z^2$, giving the identity. The numerator degree is at
+most $\lfloor(2D-1)/2\rfloor=D-1$. Applying selection to each
+monomial basis vector gives the matrix entries.
+\end{proof}
+
+\begin{theorem}[Complete selected coefficient]\label{thm:observer}
+If $n=\sum_{i<L}b_i2^i$, with bits read least significant first,
+then
+\[
+ p_d(n)\bmod2=e_0^{T}T_{b_{L-1}}\cdots T_{b_0}e_0.
+\]
+\end{theorem}
+\begin{proof}
+The initial numerator is one, represented by $e_0$. Successive
+selections with $b_0,b_1,\ldots$ discard these bits of the
+coefficient index. After all bits, the desired coefficient is the
+constant term. As $A_d(0)=1$, this is the constant numerator
+coordinate selected by $e_0^T$.
+\end{proof}
+
+This formula retains all factors and all cancellations. Boolean
+reachability in its transition graph would be a different observation:
+two paths contributing to one coefficient cancel in $\Ftwo$.
+
+\begin{lemma}[All-continuation observability]\label{lem:observable}
+For any field $K$, polynomial $A$ with $A(0)=1$ and $\deg A=D$,
+the first $D$ coefficients of $U/A$ determine every $U$ of degree
+less than $D$. For the binary observer above, distinct numerator
+states are distinguished by some continuation of length at most
+$\lceil\log_2 D\rceil$.
+\end{lemma}
+\begin{proof}
+Multiplication by $1/A=1+a_1z+\cdots$ sends the coefficient
+vector of $U$ to the first $D$ output coefficients by a lower
+triangular matrix with diagonal one. It is invertible. Equivalently,
+the first nonzero coefficient of a difference $U-V$ remains its
+first nonzero coefficient after division by $A$. Its index $k<D$
+has at most $\lceil\log_2D\rceil$ bits; those bits form a
+distinguishing continuation. Index zero permits the empty word.
+\end{proof}
+
+This is the linear observability viewpoint familiar from weighted
+automata \cite{kiefer}. It does not say that every distinguishing
+continuation is available from the genuine source parameters.
+A quotient preserving only the one prescribed source word remains a
+different question.
+
+\section{Differential Cartier and the surviving residues}
+
+It is useful to normalize the same selected coefficient as a differential.
+Over a perfect field $K$ of characteristic two, every rational function
+has a unique expression $a(z)^2+zb(z)^2$. Define
+$\mathcal C((a^2+zb^2)\,dz)=b\,dz$.
+This is the differential Cartier operator. Multiplication by a square
+pulls out its square root.
+
+\begin{lemma}[Local rule]\label{lem:local}
+For a fixed pole $\zeta$ and $b\in K$,
+\[
+ \mathcal C\!\left(\frac{b\,dz}{(z-\zeta)^{2j}}\right)=0,\qquad
+ \mathcal C\!\left(\frac{b\,dz}{(z-\zeta)^{2j+1}}\right)
+       =\frac{b^{1/2}\,dz}{(z-\zeta)^{j+1}}.
+\]
+The same definition gives
+$\mathcal C(\sum a_nz^n\,dz)=\sum a_{2n+1}^{1/2}z^n\,dz$.
+\end{lemma}
+\begin{proof}
+An even power of $h=z-\zeta$ is a square and contributes zero.
+For odd powers, write $h^{2k+1}=(h^k)^2(z-\zeta)$.
+The constant differential $\zeta\,dz$ has Cartier image zero,
+whereas $\mathcal C(z\,dz)=dz$. Pulling out the square proves
+the rule for all integer $k$, including negative $k$.
+The coefficient rule follows by the same even/odd decomposition.
+\end{proof}
+
+For $e\ge1$ and $2^\ell\ge e$,
+\begin{equation}\label{eq:selection}
+ [z^0\,dz]\,\mathcal C^\ell\!
+             \left(\frac{z^{e-1}}{A_d(z)}\,dz\right)
+                   =p_d(2^\ell-e)\pmod2.
+\end{equation}
+Indeed $\ell$ odd selections choose original exponent $2^\ell-1$,
+which in $z^{e-1}/A_d$ has coefficient $p_d(2^\ell-e)$.
+
+\begin{lemma}[Removal of every higher pole]\label{lem:poles}
+Put $\mu=\sum_{i=1}^d2^{\nu_2(i)}$ and
+$a=\lceil\log_2\mu\rceil$. After $a$ Cartier applications to
+a proper differential with denominator $A_d$, all surviving finite
+poles are simple. Its simple residues subsequently undergo inverse
+Frobenius at their fixed poles. No polynomial part is created.
+\end{lemma}
+\begin{proof}
+The multiplicity at a root of odd order $q$ is
+$\sum_{q\mid i,\ i\le d}2^{\nu_2(i)}\le\mu$.
+By Lemma~\ref{lem:local}, a term of order $k>1$ survives $a$
+applications only if $k-1$ is a positive multiple of $2^a$.
+This is impossible for $k\le\mu\le2^a$. A simple residue is
+replaced by its square root. The proper partial-fraction expansion
+has no polynomial part, and every term in its Cartier image is again
+proper, proving the final assertion.
+\end{proof}
+
+Here $\nu_2(i)$ denotes the exponent of two in the positive integer
+$i$. The simple-pole tail is indeed eventually periodic, rather than
+merely subject to a conditional period bound: all its finitely many
+poles and residues lie in one finite extension of $\Ftwo$, and
+inverse Frobenius is a permutation of that finite field. This
+establishes a finite cycle for every supplied cutoff, without giving
+a bound independent of the cutoff.
+
+For the linked values in \eqref{eq:delta}, $C=2^\ell$ with
+$\ell\ge B+1$ by \eqref{eq:growth}. Since
+$\mu\le d(1+\lfloor\log_2 d\rfloor)\le B(1+\log_2B)$,
+we have $a\le B$ for $B\ge16$. Thus the actual selected observation
+is beyond the higher-pole transient. This pays an actual parameter
+bound; it is not an unspecified promise that enough iterations occur.
+
+The complete state can nevertheless have a long simple-pole cycle.
+Pole count alone cannot prove that. For example, $dS/S$ for a
+squarefree polynomial $S$ has residue one at every simple pole and
+is Cartier-fixed, however many poles $S$ has.
+
+\section{An exact period on the actual linked inputs}
+
+Retain $u,B,C,e,d$ from \eqref{eq:delta}, and write
+\[
+ B=2^K,\qquad r=K-1,\qquad q=2^r+1=B/2+1,\qquad
+ m_0=u-2,\qquad \Delta=m_0(m_0+1)/2.
+\]
+The integer $q$ need not be prime. All primitive $q$-th roots
+in an algebraic closure of $\Ftwo$ will be used.
+
+\begin{lemma}[The actual residue formula]\label{lem:residue}
+The form $\omega_e=z^{e-1}A_d(z)^{-1}\,dz$ has a simple nonzero
+residue at each primitive $q$-th root $\zeta$, given by
+\[
+ b_\zeta=\frac{\zeta^e}{A_{d-q}(\zeta)}
+                 =\zeta^{e-\Delta}A_{m_0}(\zeta).
+\]
+\end{lemma}
+\begin{proof}
+The hierarchy bounds give $d/2<q\le d<2q$ and $m_0<q$.
+Thus only $1+z^q$ among the factors of $A_d$ vanishes at
+$\zeta$, and its derivative there is $\zeta^{-1}$.
+The product $\prod_{i=1}^{q-1}(1+\zeta^i)$ is one: it is
+the derivative at one of $X^q-1$, whose value is $q=1$ in
+characteristic two. It follows that the residue is the first
+displayed expression.
+
+Now $d-q=q-1-m_0$. The last $m_0$ terms in that complete
+product equal
+$\prod_{j=1}^{m_0}(1+\zeta^{-j})
+  =\zeta^{-\Delta}A_{m_0}(\zeta)$.
+Taking the complementary product proves the second expression.
+None of $1+\zeta^j$ for $1\le j\le m_0$ vanishes.
+\end{proof}
+
+\begin{lemma}[The bounds needed for the root count]\label{lem:bounds}
+For the actual linked inputs, $r\ge96$, $\Delta<r$, and
+\[
+ 0<\Delta-2e<q,\qquad
+ \varphi(q)>\frac{2^r}{r+1}>2^{2r/3}\Delta.
+\]
+\end{lemma}
+\begin{proof}
+For $s=u+100$, $F_5(s)\ge F_1(s)\ge2^{2^s}$, so
+$K\ge2^{u+100}$ and $r\ge2^{u+100}-1$.
+These inequalities imply $r\ge96$ and
+$\Delta=(u-2)(u-1)/2<r$.
+As $e=u-4=m_0-2$,
+$\Delta-2e=(m_0^2-3m_0+8)/2$ is positive and smaller
+than $q$ by the same growth bound.
+
+If an odd integer $q$ has $k$ distinct prime factors
+$p_1<\cdots<p_k$, then $p_i\ge i+2$, hence
+$q/\varphi(q)=\prod p_i/(p_i-1)\le k+1$.
+Here $3^k\le q=2^r+1$ implies $k\le r$, so
+$\varphi(q)\ge q/(r+1)>2^r/(r+1)$.
+Finally $2^{r/3}>r^3$ at $r=96$ and thereafter:
+the ratio of the exponential to $r^3$ increases for $r\ge96$.
+Since $\Delta<r$ and $r(r+1)<r^3$, this gives
+$2^r/(r+1)>2^{2r/3}\Delta$.
+\end{proof}
+
+\begin{theorem}[Exact actual residue-tuple period]\label{thm:actual-period}
+The tuple $(b_\zeta)_{\zeta\ {\rm primitive}\ q}$ has exact
+Frobenius period $2r$. Every eventual period of the complete
+rational differential Cartier orbit of $\omega_e$ is divisible
+by $2r=2(\log_2 B-1)$.
+\end{theorem}
+\begin{proof}
+The order of two modulo $q=2^r+1$ is $2r$.
+It divides $2r$ because $2^r\equiv-1\pmod q$.
+Any proper divisor of $2r$ is at most $r$, and for
+$s\le r$ the positive integer $2^s-1$ is smaller than $q$.
+Thus no smaller order is possible. The primitive roots and their
+residues belong to $\mathbb F_{2^{2r}}$, so the tuple period
+divides $2r$.
+
+Reciprocity gives
+$A_{m_0}(\zeta^{-1})=\zeta^{-\Delta}A_{m_0}(\zeta)$.
+If Frobenius power $r$ fixed the tuple,
+Lemma~\ref{lem:residue} would give
+$\zeta^{\Delta-2e}=1$ at a primitive root, contrary to
+$0<\Delta-2e<q$.
+
+Any other proper divisor $s$ of $2r$ is at most $2r/3$:
+the integer quotient $(2r)/s$ is then at least three.
+Fixedness at all primitive roots would make every such root a zero of
+\[
+ P_s(X)=A_{m_0}(X)^{2^s}
+       +X^{(\Delta-e)(2^s-1)}A_{m_0}(X).
+\]
+This polynomial has constant coefficient one and degree exactly
+$2^s\Delta$, since $e>0$ makes the second summand's degree
+strictly smaller. It cannot have all $\varphi(q)$ primitive roots
+as zeros, by Lemma~\ref{lem:bounds}. Thus no proper divisor is a
+tuple period.
+
+The chosen finite poles were already simple initially.
+By Lemma~\ref{lem:local}, the tuple in the $j$-th Cartier state is
+$(b_\zeta^{\,2^{-j}})_\zeta$ with poles fixed. If states at
+$j$ and $j+p$ agree, these tuples agree. Inverse Frobenius is
+bijective and its tuple orbit has period $2r$, so $2r\mid p$.
+This applies also after the higher-pole transient.
+\end{proof}
+
+The proof is a tuple argument. It does not assert that every individual
+residue has degree $2r$, and it does not calculate the selected
+constant coefficient. In particular, the growing tuple period does
+not prove that the sequence $v\mapsto\delta_4(v)$ is nonperiodic.
+
+\section{What has and has not been reduced}
+
+For each actual input, the observer is finite and complete. Its size
+grows with $d$, and its exact rational tail has no uniformly bounded
+state period. These facts explain why a proposed solution must do more
+than attach a finite automaton to each supplied cutoff.
+
+One possible improvement would preserve only the scalar observations
+allowed by the linked source inputs. The all-continuation
+Lemma~\ref{lem:observable} leaves that possibility open: it distinguishes
+states using arbitrary binary continuations, not just the prescribed
+source word. Another possibility would classify complete descent-count
+residues without first evaluating the isolated boundary bit. Neither
+possibility is supplied by the present arguments.
+
+There are therefore three distinct mathematical outcomes here:
+an exact congruence transferring a growing-budget count to a
+restricted partition; a complete finite observer for that coefficient;
+and an exact full-state period obstruction on genuine inputs.
+Their proofs do not settle the remaining fixed-control all-ground
+canonical comparison problem. The source-expressivity companion
+\cite{wwexpressivity} explains why complete-count attainment is an
+actual necessary arithmetic problem, while extracting one summand
+from the complete count requires an additional interpretation.
+
+\input{references}
+\end{document}

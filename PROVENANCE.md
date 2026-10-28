@@ -15,3 +15,24 @@ The assembly checks establish that the PDFs build in isolation, use embedded Com
 These are full working manuscripts for review. They do not settle first-order Vaught's conjecture, the complete original termination-ordering target, or every algebraic back-and-forth problem mentioned in the source literature. The source guides and conclusions state the exact remaining scope.
 
 This repository contains the three original logic-lineages papers and the standalone R1 calculator/formalization project. Alexander's dissertation Open Problem 3.2.1 and its paper remain in the separate [Alexander open-problems repository](https://github.com/avg-netizen/alexander-open-problems-results/tree/main/18-dissertation-problem-3-2-1).
+
+The six-manuscript Wilken–Weiermann comparison collection was prepared on
+28 October 2026 at the owner's request. A coordinating Codex author and two
+additional Codex author lanes consolidated the earlier working mathematics
+into a foundations paper and five thematic companions. Its new proofs are
+printed within the collection; its historical origin metadata are not external
+proof dependencies. Published assignment, path-order, arithmetic, undecidability
+and ordinal-analysis theorems are credited in the respective bibliographies.
+The scoped original-source bridge arguments are included in full.
+
+The collection has 88 pages and 112 numbered theorem/lemma/proposition/corollary
+statements. It includes a calibrated syntactic ordering, identity and one-input
+decisions, multivariate positive classes, actual-source interpretation and
+negative boundaries, and exact count/Cartier results. Its syntactic ordering
+uses a separate ranked first-order embedding, rather than claiming every
+native curried encoding has the same restriction. Functional-input hardness
+and perturbed-control ground hardness retain their different domains. The
+full unchanged-control, all-ground canonical comparison problem remains open.
+These are AI-assisted hand-proof manuscripts; their clean builds and
+collaborative reviews are not proof-assistant or independent human verification.
+See [the collection guide](COMPARISON-COLLECTION.md) and its verification record.

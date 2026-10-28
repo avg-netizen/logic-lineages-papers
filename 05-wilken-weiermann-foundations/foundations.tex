@@ -1,0 +1,464 @@
+\section{The calculus and the two comparison questions}\label{sec:calculus}
+
+The ground type is $o$.  Simple types are formed by $\sigma\to\tau$,
+with arrows associated to the right, and their levels are
+\[
+ \lv(o)=0,\qquad
+ \lv(\sigma\to\tau)=\max\{\lv(\sigma)+1,\lv(\tau)\}.
+\]
+Thus $o\to o$ has level one, whereas $(o\to o)\to o$ has level two.
+A type level measures the ability to take functions as arguments; it does
+not measure the number of arguments.  A curried type $o^k\to o$ has
+level one for every positive finite $k$.
+
+The original calculus has variables, application and abstraction, together
+with zero, successor, case functionals and recursors.  We use the types
+\[
+ 0:o,\quad S:o\to o,\quad D^\tau:o\to\tau\to\tau\to\tau,
+ \quad R^\tau:o\to(o\to\tau\to\tau)\to\tau\to\tau.
+\]
+In particular the order of the arguments to a recursor is fixed by
+\[
+ R^\tau0AB\longrightarrow B,\qquad
+ R^\tau(Sn)AB\longrightarrow A\,n\,(R^\tau nAB).
+\]
+The case rules are $D^\tau0AB\to A$ and $D^\tau(Sn)AB\to B$.
+Together with beta reduction these rules act inside arbitrary well-typed
+contexts.  Terms in this paper are literal terms: an input is not first
+beta-normalized, uncurried, or replaced by an extensionally equal program.
+
+A termination ordering is a relation that decreases on these reductions
+and is stable under contexts and substitutions.  Recursive path ordering
+provides the corresponding first-order example.  For ranked trees,
+$f(s_1,\ldots,s_k)>t$ follows either from a child dominating $t$, or from
+domination of all children of $t$ together with a decrease of root precedence
+or a strict multiset decrease between equal roots.  A strict multiset
+decrease replaces a nonempty collection by elements each smaller than a
+removed element.  Extending this mechanism to typed application and
+abstraction introduces both type and binding information.
+
+The separate ordinal-vector comparison studied below compares numerical
+assignments under \emph{all} permitted substitutions.  It is not the same
+definition as a recursive syntactic ordering.  Nor is the height of a
+termination ordering the largest ordinal written in an assignment.
+The Bachmann--Howard calibration concerns the descending height of the
+syntactic relation.  Its named ordinal notation systems and their comparison
+are supplied by the published ordinal analyses \cite{pohlers,simmons,simmonshelpful};
+the exact new ordering and its proof are given in \cite{wwordering}.
+
+\section{Ordinal expressions and the fixed numerical control}\label{sec:ordinals}
+
+Every ordinal below $\varepsilon_0$ has a finite recursive Cantor normal
+form.  Here $\varepsilon_0$ is the least fixed point of
+$\alpha\mapsto\omega^\alpha$.  We write $\oplus,\otimes$ for natural
+sum and product: collect the Cantor monomials for addition, and multiply
+monomials by naturally adding their exponents for multiplication.  These
+operations are commutative.  Ordinary ordinal addition is retained when
+a Cantor normal form or a finite tail is displayed.  For example
+$\omega\oplus1=\omega+1$ but $1+\omega=\omega$ for ordinary addition.
+
+\begin{definition}[Additive tree norm]\label{def:norm}
+For a Cantor normal form with decreasing exponents and positive coefficients,
+put
+\[
+ \norm(0)=0,\qquad
+ \norm\left(\sum_{i<r}\omega^{\alpha_i}c_i\right)
+       =\sum_{i<r}c_i(1+\norm(\alpha_i)).
+\]
+Thus $\norm(n)=n$, $\norm(\omega)=2$ and
+$\norm(\omega^{\omega+1})=4$.  Coefficients are charged with their full
+multiplicity, not their binary length.
+\end{definition}
+
+\begin{lemma}[Finite norm balls]\label{lem:finite-balls}
+Each norm ball is finite and can be effectively enumerated.  Cantor-normal-form
+comparison, natural sum and natural product are effective.  Moreover
+$\norm(\alpha\oplus\beta)=\norm(\alpha)+\norm(\beta)$.
+\end{lemma}
+\begin{proof}
+An ordinal of norm at most $b$ is represented by a finite rooted expression
+tree with at most $b$ charged monomial nodes, including repeated monomials.
+There are finitely many such finite trees.  Enumerate them, interpret them
+recursively, and retain their canonical Cantor forms.  Alternatively enumerate
+by norm recursively: every exponent in a nonzero term of norm at most $b$
+has norm at most $b-1$, so induction on $b$ gives a finite list.
+Comparison is lexicographic comparison of exponent/coefficient lists, using
+the same recursive algorithm on exponents.  The definitions of natural sum
+and product then give finite algorithms.  Collecting repeated monomials does
+not change the sum of their charged norms, proving additivity.
+\end{proof}
+
+Fix throughout
+\begin{equation}\label{eq:phi-definition}
+ F_0(t)=2^t,\qquad F_{j+1}(t)=F_j^{\,t+1}(t),\qquad
+ \Phi(t)=F_5(t+100),
+\end{equation}
+where the exponent denotes iteration.  Replacing the exponential base
+function by doubling would change every subsequent definition.
+
+\begin{lemma}[Elementary control properties]\label{lem:phi-growth}
+The fixed $\Phi$ is computable, strictly increasing, and greater than the
+identity.  On its whole domain,
+\[
+ \Phi(t+1)\ge 2^{\,2^{\Phi(t)}}.
+\]
+In particular $\Phi(t+1)>4\Phi(t)+4$.
+\end{lemma}
+\begin{proof}
+Induction on $j$ proves that each $F_j$ is computable, increasing, and
+strictly above the identity.  For $n\ge1$ the same induction gives
+$F_{j+1}(n)\ge F_j(n)$ and $F_1(n)\ge2^{2^n}$.  The $n+1$ evaluations
+inside $F_5(n+1)$ start from a strictly larger seed than those in $F_5(n)$.
+Since all values are integers,
+\[
+ F_5(n+1)=F_4(F_4^{n+1}(n+1))\ge F_4(F_5(n)+1)
+             \ge2^{2^{F_5(n)+1}}.
+\]
+Take $n=t+100$.  The stated weaker inequality follows.  Its final consequence
+holds because $\Phi(t)\ge4$ and $2^{2^a}>4a+4$ for $a\ge4$.
+\end{proof}
+
+\begin{definition}[Norm-controlled collapse]\label{def:collapse}
+For $\alpha<\varepsilon_0$ define, by ordinal recursion,
+\[
+ \psi(\alpha)=\max\bigl(\{0\}\cup
+ \{\psi(\beta)+1:\beta<\alpha,\ %
+                 \norm(\beta)\le\Phi(\norm(\alpha))\}\bigr).
+\]
+The set is finite by Lemma~\ref{lem:finite-balls}.
+\end{definition}
+
+\begin{lemma}[Controlled strictness and finite values]\label{lem:controlled-strictness}
+If $\beta<\alpha$ and
+$\norm(\beta)\le\Phi(\norm(\alpha))$, then
+$\psi(\beta)+1\le\psi(\alpha)$.  Also $\psi(n)=n$ for finite $n$.
+\end{lemma}
+\begin{proof}
+The first assertion is one term of the defining maximum.  For the second,
+induct on $n$.  Every predecessor of the finite ordinal $n$ is finite and
+has norm below $n\le\Phi(n)$.  The induction hypothesis makes the maximum
+equal to $n$.
+\end{proof}
+
+The further inequalities $\norm(\alpha)\le\psi(\alpha)$ and
+$k\le\psi(\alpha+k)$, as well as the natural-product norm bounds used
+in source assignments, are Proposition~2.3 and Proposition~2.2 of
+Wilken--Weiermann \cite{ww}.  Those are published background theorems,
+not assumptions about a new comparison algorithm.  Controlled strictness
+does not assert that $\psi$ is globally monotone in ordinal order.
+
+\section{A complete closed evaluator}\label{sec:evaluator}
+
+\begin{definition}[Maximum predecessor]\label{def:maximum}
+For $\alpha>0$ and $b\in\N$ let
+\[
+ M(\alpha,b)=\max\{\beta<\alpha:\norm(\beta)\le b\},\qquad
+ L(e,b)=M(\omega^e,b).
+\]
+The maximum exists because the set is finite and contains zero.
+\end{definition}
+
+\begin{theorem}[Effective maximum predecessor]\label{thm:maximum}
+The following simultaneous recursion computes $M$ and $L$ exactly.
+Write $\alpha=\omega^e c+r$ with $c>0$ and $r<\omega^e$, and put
+$w=1+\norm(e)$.
+\begin{enumerate}
+\item $M(\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.
+\item If $r>0$ and $cw\le b$, retain the leading block:
+ $M(\alpha,b)=\omega^e c+M(r,b-cw)$.
+\item Otherwise set $d=\min(c-1,\lfloor b/w\rfloor)$ when $r=0$,
+ and $d=\min(c,\lfloor b/w\rfloor)$ when $r>0$.  Then
+ $M(\alpha,b)=\omega^e d+L(e,b-dw)$, omitting a zero block.
+\item For $e,b>0$, let $a=M(e,b-1)$, $v=1+\norm(a)$ and
+ $(q,s)=\operatorname{divmod}(b,v)$.  Then
+ $L(e,b)=\omega^a q+L(a,s)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+If a nonzero tail can be decreased while retaining the entire leading block,
+every predecessor with a smaller leading block is inferior.  The remaining
+budget and tail bound give clause~2.  Otherwise the displayed $d$ is the
+largest affordable coefficient still strictly below the original bound.
+After choosing that coefficient the tail must lie below $\omega^e$, which
+is exactly the $L$ query in clause~3.
+
+For clause~4, any nonzero candidate below $\omega^e$ of norm at most $b$
+has leading exponent $a'<e$ with $\norm(a')\le b-1$.  The largest possible
+exponent is therefore $a=M(e,b-1)$.  Lexicographic Cantor comparison first
+maximizes that exponent, then its coefficient $q$, then the remaining tail.
+The last tail is bounded by $\omega^a$ and has budget $s$, proving the formula.
+
+For termination use the lexicographic pair (budget, phase), putting $M$
+above $L$ at equal budget.  Clause~2 lowers the budget since $cw>0$.
+Clause~3 may keep it but lowers the phase.  In clause~4, the $M$ call uses
+$b-1$, and $s<b$ because $v\le b$ and hence $q\ge1$.  Base cases terminate.
+This proves a finite algorithm and the asserted exactness, without an oracle
+for the maximum.
+\end{proof}
+
+\begin{lemma}[Saturation at a limit]\label{lem:saturation}
+For every nonzero limit $\lambda$ and $b\in\N$,
+$\norm(M(\lambda,b))=b$.  The maximum strictly increases with $b$.
+\end{lemma}
+\begin{proof}
+If $\eta=M(\lambda,b)$ left unused budget $d>0$, then $\eta+d<\lambda$
+would have norm $b$ and be larger.  This contradicts maximality.  For $b<c$,
+the ordinal $M(\lambda,b)+1$ is below the limit and has norm $b+1\le c$.
+It witnesses strict increase.
+\end{proof}
+
+\begin{theorem}[Single-predecessor recurrence]\label{thm:single-predecessor}
+For every nonzero limit $\lambda<\varepsilon_0$ and $n\in\N$,
+\[
+ \psi(\lambda+n)=
+ \psi\bigl(M(\lambda,\Phi(\norm(\lambda)+n))\bigr)+1.
+\]
+\end{theorem}
+\begin{proof}
+Induct on $n$.  Put $b=\Phi(\norm(\lambda)+n)$ and
+$\eta=M(\lambda,b)$.  This is an admitted predecessor and has norm $b$,
+so its contribution gives the lower inequality.  Any other admitted
+$\beta<\lambda$ satisfies $\beta\le\eta$.  For $\beta<\eta$ the norm
+premise $\norm(\beta)\le b=\norm(\eta)\le\Phi(\norm(\eta))$ and
+Lemma~\ref{lem:controlled-strictness} bound its contribution by $\psi(\eta)$.
+
+The remaining predecessors have the form $\lambda+j$, $j<n$.  Their budgets
+$b_j=\Phi(\norm(\lambda)+j)$ are strictly smaller than $b$.  By saturation
+$\eta_j=M(\lambda,b_j)<\eta$, with $\norm(\eta_j)=b_j<b$.
+Controlled strictness and the induction hypothesis give
+$\psi(\lambda+j)=\psi(\eta_j)+1\le\psi(\eta)$.  Every term in the
+original maximum is therefore at most $\psi(\eta)+1$.
+\end{proof}
+
+\begin{corollary}[Closed evaluation]\label{cor:closed-evaluation}
+Every supplied closed collapse value is computable.  At a nonfinite state
+$\alpha=\lambda+n$, replace $\alpha$ by
+$M(\lambda,\Phi(\norm(\alpha)))$ and increment a counter.  On reaching
+a finite state return that state plus the counter.
+\end{corollary}
+\begin{proof}
+Each replacement strictly decreases the ordinal.  Well-foundedness below
+$\varepsilon_0$ proves termination.  The recurrence proves preservation
+of the desired value, and Lemma~\ref{lem:controlled-strictness} evaluates the
+last finite state.  This is pointwise computability, not a uniform practical
+complexity bound and not a decision procedure for an infinite family of inputs.
+\end{proof}
+
+\begin{theorem}[Complete terminal decomposition]\label{thm:complete-count}
+Put $\nu=\norm(\lambda)$ and let $t\ge\nu$ be the total initial norm.
+Starting at $\lambda+(t-\nu)$, let $\tau_\lambda(t)$ be the number of
+nonfinite replacements and $Z_\lambda(t)$ the first finite state.  Then
+\[
+ J_\lambda(t):=\psi(\lambda+t-\nu)
+       =Z_\lambda(t)+\tau_\lambda(t),\qquad
+ Z_\lambda(t)=\Phi^{\tau_\lambda(t)}(t).
+\]
+The count is positive.  In particular $Z_\lambda(t)<J_\lambda(t)<2Z_\lambda(t)$.
+\end{theorem}
+\begin{proof}
+Saturation makes every new norm exactly $\Phi$ of the old norm, including
+the last replacement into a finite state.  Each replacement contributes
+one to the recurrence.  At the finite endpoint the value equals its norm.
+There is no subsequent count of its finite predecessors.
+Since each application of $\Phi$ increases its argument by at least one,
+$Z_\lambda(t)\ge t+\tau_\lambda(t)$.  A nonzero limit has $t\ge2$;
+therefore $0<\tau_\lambda(t)\le Z_\lambda(t)-2$ and the strict bounds follow.
+\end{proof}
+
+\begin{corollary}[Finite coefficient identity]\label{cor:finite-head}
+For finite $k,n$,
+\[
+ \psi(\omega k+n)=\Phi^k(2k+n)+k.
+\]
+\end{corollary}
+\begin{proof}
+The case $k=0$ is finite evaluation.  For $k>0$, with
+$b=\Phi(2k+n)\ge2k$, the maximum predecessor is
+$\omega(k-1)+b-2(k-1)$.  Apply the recurrence and induction on $k$.
+\end{proof}
+
+\begin{lemma}[Strict separation in one finite tail]\label{lem:tail-separation}
+For $h_\lambda(n)=\psi(\lambda+n)$ with a fixed nonzero limit $\lambda$,
+\[
+ h_\lambda(n+1)>2^{h_\lambda(n)}.
+\]
+In particular every such function is injective.
+\end{lemma}
+\begin{proof}
+Compare descents at total norms $t$ and $t+1$, using $t\ge\norm(\lambda)$.
+Maximum predecessors are monotone in their ordinal bound and norm budget;
+dropping a finite tail also preserves ordinal order.  Before the smaller
+descent reaches a finite state, induction on the simultaneous step number
+shows that the larger descent has not reached a finite state either.  Its
+count $L'$ is at least the smaller count $L\ge1$.
+Writing $Z=\Phi^L(t)$, monotonicity and Lemma~\ref{lem:phi-growth} give
+\[
+ \Phi^{L'}(t+1)\ge\Phi^L(t+1)\ge 2^{2^Z}.
+\]
+For the last inequality, apply the control inequality to the last iteration;
+its two input integers differ by at least one.  By the preceding theorem
+$h_\lambda(n)=Z+L<2Z\le2^Z$.  The larger value is at least its endpoint,
+which proves the strict inequality.
+\end{proof}
+
+The maximum-predecessor framework is classical \cite{bcw}.  The explicit
+recursion above fixes its exact specialization to this norm and collapse.
+The recurrence also holds for any computable strictly increasing control
+majorizing the identity.  The very strong tail inequality uses the particular
+control \eqref{eq:phi-definition}.
+
+\section{The canonical source assignment}\label{sec:assignment}
+
+For $A:\tau$ the canonical vector has indices $0,\ldots,\lv(\tau)$.
+Missing indices are padded by zero when vectors are compared.  The prime
+clauses are
+\[
+ \can0=(1),\quad \can S=(1,1),\quad
+ \can{D^\tau}=(1,\ldots,1),\quad
+ \can{R^\tau}=(2,1,\ldots,1,\omega),\quad \can X=\mathbf x.
+\]
+For vector levels $m>n$, compute $h=f\square g$ downward by
+\[
+ h_i=f_i\ (i>n),\qquad
+ h_i=2^{h_{i+1}}\otimes(f_i\oplus g_i)\ (1\le i\le n),\qquad
+ h_0=\psi(\omega\otimes h_1\oplus f_0\oplus g_0\oplus n).
+\]
+Application retains the coordinates through the result type's level.
+In the literal scalar tree we associate the tail as $f_0+(g_0+n)$ for
+$n>0$ and as $f_0+g_0$ for $n=0$.  This is relevant to syntactic partials.
+
+For abstraction over $X:\sigma$, put $n=\lv(\sigma)+1$ and let $h$
+have level $m$.  Each auxiliary partial $\partial_i^Xh_i$ is a vector
+of level $n$.  The canonical zero-history rule is
+\[
+ \can{\lambda X.G}=\delta^X\can G+\can G\{X:=\mathbf1\},
+\]
+where
+\[
+ (\delta^Xh)_0=2^n\left(\sum_{i=0}^m\sz^X(h_i)\right)(\partial_0^Xh_0)_0,
+\quad
+ (\delta^Xh)_j=\sum_{i=0}^m(\partial_i^Xh_i)_j\ (0<j\le n),
+\]
+and $(\delta^Xh)_j=h_j$ for $j>n$.
+The size is one at a whole $X$-free expression or variable leaf; an active
+sum or collapse adds the child sizes and one; $2^f\otimes g$ has size
+$2\sz^X(f)+\sz^X(g)+1$.
+
+At a whole $X$-free input $u$, $(\partial_i^Xu)_j=u+1$ if $i=j$ and
+is one otherwise.  At $x_i$ every output is one.  Active sums add the
+partial vectors and $\mathbf1$.  For $i>0$,
+\[
+ \partial_i^X(2^f\otimes g)=2\partial_{i+1}^Xf+\partial_i^Xg+\mathbf1.
+\]
+At an active scalar $\psi(\omega\otimes f+g)$, the zeroth output is
+$\psi(\omega\otimes f\{X:=\mathbf1\}+(\partial_0^Xg)_0)$, and output
+$j>0$ is $(\partial_1^Xf)_j+(\partial_0^Xg)_j$.
+The whole-free rule applies before any other rule, on the literal tree.
+These are the published clauses of \cite[Definitions 2.10, 2.18 and 3.1]{ww}.
+Their domain and norm-preservation theorems are imported from that paper.
+
+The closed graded classes $\mathcal B_i$ are defined simultaneously as follows:
+one belongs to every class; $\omega$ belongs to classes of positive index;
+each class is closed under natural sum; $2^f\otimes g\in\mathcal B_i$
+when $i\ge1$, $f\in\mathcal B_{i+1}$ and $g\in\mathcal B_i$;
+$\psi(\omega\otimes f+g)\in\mathcal B_0$ when
+$f\in\mathcal B_1$, $g\in\mathcal B_0$ and $\norm(f)\le F_2(g)$;
+and a member of $\mathcal B_0$ may also be used in any positive class.
+These are classes of closed expression trees; zero is not a leaf of the
+grammar, although zero padding is used outside a vector's actual length.
+Admissible substitutions replace each entire variable vector by a closed
+vector with $x_i\in\mathcal B_i$ and $\norm(x_i)\le x_0$ for every
+positive index.  A ground variable therefore ranges over all positive
+integers, independently of other names: every such integer is a finite sum
+of ones and there are no positive coordinates imposing a bound.
+Weak comparison is coordinatewise universal comparison.  Strict comparison
+is strict at coordinate zero and weak at every positive coordinate; it is
+not lexicographic.
+
+\begin{theorem}[Actual-source forward translation]\label{thm:forward-translation}
+For a literal original source with only ground free names, all positive
+canonical coordinates are closed and effectively evaluable.  Coordinate
+zero is effectively a finite expression in positive-natural inputs, constants,
+addition and fixed functions $h_\lambda(n)=\psi(\lambda+n)$, where each
+direct index is $\lambda=\omega\otimes c>0$ for a closed $c$.
+The translation preserves every shared input valuation, including arbitrary
+internal types, binders and recursors.
+\end{theorem}
+\begin{proof}
+Use simultaneous induction on source construction and the syntactic partial
+recursions.  The invariant for a generated positive coordinate is that its
+parse uses positive-index variables, positive constants, natural addition
+and the graded exponential/product constructor, but no ground-index variable.
+The prime clauses have this property.  The box computes positive fields
+using positive fields only and preserves it.
+
+For a positive input to a partial, the whole-free rule retains only that
+positive input at its diagonal output and constants elsewhere.  Thus it
+does not introduce a ground variable.  At an active variable the result is
+constant.  Sum and exponential clauses preserve the invariant recursively.
+For a scalar input, consider a positive output of its partial: the whole-free
+rule returns one, a tracked scalar variable returns one, and sums recurse.
+The collapse clause uses a positive-head partial and the positive output of
+the scalar-tail partial.  These are exactly the two induction hypotheses.
+Hence even partials of scalar expressions cannot introduce ground-index
+variables into their positive outputs.  The abstraction sums such outputs
+and substitutes ones for the bound vector in its retained part, so it
+preserves the invariant and removes all of that bound name's components.
+
+Positive fields of the final vector can therefore mention only positive
+components of free term variables.  There are none when every free variable
+is ground.  Closed evaluation follows from the ordinal algorithms already
+proved.  In particular the head of every final scalar collapse is closed.
+
+At coordinate zero the prime and box clauses produce only constants,
+ground inputs, addition and collapse nodes.  The scalar partial clause has
+the same form, and its size multiplier is a fixed syntactic integer, not a
+function of a valuation.  Expanding it as a finite multiplicity preserves
+the grammar.  Replace each closed-head collapse by $h_{\omega\otimes c}$.
+All replacements are compositional and use the original free names, proving
+the exact, valuation-preserving translation.
+
+This argument concerns generated assignments.  The ambient graded classes
+also allow promotion of certain whole-free scalar expressions to positive
+levels; the stronger invariant just proved is not asserted for all arbitrary
+members of those ambient classes.
+\end{proof}
+
+\begin{corollary}[Two natural positive classes]\label{cor:source-classes}
+In a recursor-free source every positive coordinate is finite.  If every
+internal type and subtype has level at most two, every direct scalar index
+is a polynomial limit below $\omega^\omega$.
+\end{corollary}
+\begin{proof}
+Only the recursor prime introduces $\omega$ into a generated positive field.
+All other positive constructors, including the positive partial cases in
+the preceding proof, preserve finiteness after the final closures.  This
+proves the first assertion for arbitrary internal type levels.
+For the second, coordinate two cannot contain an exponential constructor
+requiring coordinate three.  Its generated closed values are linear Cantor
+polynomials $a\omega+b$.  Coordinate one is built by sums and natural products
+using $2^{a\omega+b}=\omega^a2^b$, hence lies in $\N[\omega]$.
+Multiplication naturally by $\omega$ leaves a polynomial limit.  A bound
+only on the output type would not bound internal coordinates in this way.
+\end{proof}
+
+The converse image assertion is not part of the translation: not every
+abstract expression need have an original source realizing it.  Constructing
+such sources, retaining their finite box and input correlations, is one of
+the separate tasks addressed in \cite{wwexpressivity}.
+
+\subsection{A worked example}
+Let $I=\lambda z:o.z$ and $K=\lambda z:o.0$.  The partial and size rules
+give $\can I=(3,1)$ and $\can K=(5,1)$: in the first case the scalar
+partial is one, in the second it is $1+1$, and the size multiplier is two.
+Thus, for a raw ground input $x_0>0$,
+\[
+ \can{Sx}_0=\Phi(x_0+3)+1,\quad
+ \can{Ix}_0=\Phi(x_0+5)+1,\quad
+ \can{Kx}_0=\Phi(x_0+7)+1.
+\]
+These are assigned values, not program denotations.  Although $Ix\to x$,
+the canonical values differ.  Canonical assignments fix the zero-history
+choice at every lambda; the normalization theorem in \cite{ww} can use
+history-dependent assignments.  One cannot replace the input syntax by its
+normal form when deciding its canonical comparison.
