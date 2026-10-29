@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ModelsAlgebra.Forests.CertificateSearchEffectivityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.Forests.StatementChecks
+
+theorem fixed_certificateFiniteOperationsPrimitiveRecursive : Targets.CertificateFiniteOperationsPrimitiveRecursive :=
+  CertificateSearchEffectivityProof.certificateFiniteOperationsPrimitiveRecursive
+
+theorem fixed_certificateSearchPartialRecursive : Targets.CertificateSearchPartialRecursive :=
+  CertificateSearchEffectivityProof.certificateSearchPartialRecursive
+
+end LogicLineages.ModelsAlgebra.Forests.StatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.Forests

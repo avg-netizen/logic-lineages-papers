@@ -19,24 +19,24 @@ open Vendor.R1
 def rawNaturalSum : ONote → ONote → ONote
   | .zero, b => b
   | a, .zero => a
-  | a@(.oadd e c t), b@(.oadd f d u) =>
+  | (.oadd e c t), (.oadd f d u) =>
       match ONote.cmp e f with
-      | .lt => .oadd f d (rawNaturalSum a u)
+      | .lt => .oadd f d (rawNaturalSum (.oadd e c t) u)
       | .eq => .oadd e (c + d) (rawNaturalSum t u)
-      | .gt => .oadd e c (rawNaturalSum t b)
+      | .gt => .oadd e c (rawNaturalSum t (.oadd f d u))
 termination_by a b => sizeOf a + sizeOf b
-decreasing_by all_goals simp_wf; omega
+decreasing_by all_goals simp_wf; simp only [sizeOf, ONote._sizeOf_1]; omega
 
 theorem rawNaturalSum_coefficients : ∀ (a b q : ONote),
     cantorCoefficient (rawNaturalSum a b) q =
       cantorCoefficient a q + cantorCoefficient b q
-  | .zero, b, q => by simp [rawNaturalSum, cantorCoefficient]
-  | a, .zero, q => by simp [rawNaturalSum, cantorCoefficient]
-  | a@(.oadd e c t), b@(.oadd f d u), q => by
+  | .zero, b, q => by rw [rawNaturalSum]; simp [cantorCoefficient]
+  | a, .zero, q => by cases a <;> rw [rawNaturalSum] <;> simp [cantorCoefficient]
+  | (.oadd e c t), (.oadd f d u), q => by
       cases h : ONote.cmp e f with
       | lt =>
           simp only [rawNaturalSum, h, cantorCoefficient,
-            rawNaturalSum_coefficients a u q]
+            rawNaturalSum_coefficients (.oadd e c t) u q]
           omega
       | eq =>
           have hef : e = f := ONote.eq_of_cmp_eq h
@@ -46,19 +46,19 @@ theorem rawNaturalSum_coefficients : ∀ (a b q : ONote),
           split <;> omega
       | gt =>
           simp only [rawNaturalSum, h, cantorCoefficient,
-            rawNaturalSum_coefficients t b q]
+            rawNaturalSum_coefficients t (.oadd f d u) q]
           omega
 termination_by a b _ => sizeOf a + sizeOf b
-decreasing_by all_goals simp_wf; omega
+decreasing_by all_goals simp_wf; simp only [sizeOf, ONote._sizeOf_1]; omega
 
 theorem rawNaturalSum_norm : ∀ a b : ONote,
     treeWeight (rawNaturalSum a b) = treeWeight a + treeWeight b
-  | .zero, b => by simp [rawNaturalSum, treeWeight]
-  | a, .zero => by simp [rawNaturalSum, treeWeight]
-  | a@(.oadd e c t), b@(.oadd f d u) => by
+  | .zero, b => by rw [rawNaturalSum]; simp [treeWeight]
+  | a, .zero => by cases a <;> rw [rawNaturalSum] <;> simp [treeWeight]
+  | (.oadd e c t), (.oadd f d u) => by
       cases h : ONote.cmp e f with
       | lt =>
-          simp only [rawNaturalSum, h, treeWeight, rawNaturalSum_norm a u]
+          simp only [rawNaturalSum, h, treeWeight, rawNaturalSum_norm (.oadd e c t) u]
           omega
       | eq =>
           have hef : e = f := ONote.eq_of_cmp_eq h
@@ -67,28 +67,28 @@ theorem rawNaturalSum_norm : ∀ a b : ONote,
             PNat.add_coe, Nat.add_mul]
           omega
       | gt =>
-          simp only [rawNaturalSum, h, treeWeight, rawNaturalSum_norm t b]
+          simp only [rawNaturalSum, h, treeWeight, rawNaturalSum_norm t (.oadd f d u)]
           omega
 termination_by a b => sizeOf a + sizeOf b
-decreasing_by all_goals simp_wf; omega
+decreasing_by all_goals simp_wf; simp only [sizeOf, ONote._sizeOf_1]; omega
 
 theorem rawNaturalSum_below : ∀ (a b : ONote) (bound : Ordinal),
     ONote.NFBelow a bound → ONote.NFBelow b bound →
       ONote.NFBelow (rawNaturalSum a b) bound
   | .zero, b, _, _, hb => by simpa only [rawNaturalSum] using hb
-  | a, .zero, _, ha, _ => by simpa only [rawNaturalSum] using ha
-  | a@(.oadd e c t), b@(.oadd f d u), bound, ha, hb => by
+  | a, .zero, _, ha, _ => by cases a <;> simpa only [rawNaturalSum] using ha
+  | (.oadd e c t), (.oadd f d u), bound, ha, hb => by
       haveI : ONote.NF e := ha.fst
       haveI : ONote.NF f := hb.fst
       have hc := ONote.cmp_compares e f
       cases h : ONote.cmp e f with
       | lt =>
-          have hef : e.repr < f.repr := by simpa only [h, Ordering.Compares] using hc
-          have halow : ONote.NFBelow a f.repr :=
+          have hef : e.repr < f.repr := by simpa only [h, Ordering.Compares, ONote.lt_def] using hc
+          have halow : ONote.NFBelow (.oadd e c t) f.repr :=
             ONote.NF.below_of_lt hef ⟨⟨bound, ha⟩⟩
           simpa only [rawNaturalSum, h] using
             ONote.NFBelow.oadd (n := d) hb.fst
-              (rawNaturalSum_below a u f.repr halow hb.snd) hb.lt
+              (rawNaturalSum_below (.oadd e c t) u f.repr halow hb.snd) hb.lt
       | eq =>
           have hef : e = f := ONote.eq_of_cmp_eq h
           subst f
@@ -96,14 +96,14 @@ theorem rawNaturalSum_below : ∀ (a b : ONote) (bound : Ordinal),
             ONote.NFBelow.oadd (n := c + d) ha.fst
               (rawNaturalSum_below t u e.repr ha.snd hb.snd) ha.lt
       | gt =>
-          have hfe : f.repr < e.repr := by simpa only [h, Ordering.Compares] using hc
-          have hblow : ONote.NFBelow b e.repr :=
+          have hfe : f.repr < e.repr := by simpa only [h, Ordering.Compares, ONote.lt_def] using hc
+          have hblow : ONote.NFBelow (.oadd f d u) e.repr :=
             ONote.NF.below_of_lt hfe ⟨⟨bound, hb⟩⟩
           simpa only [rawNaturalSum, h] using
             ONote.NFBelow.oadd (n := c) ha.fst
-              (rawNaturalSum_below t b e.repr ha.snd hblow) ha.lt
+              (rawNaturalSum_below t (.oadd f d u) e.repr ha.snd hblow) ha.lt
 termination_by a b _ => sizeOf a + sizeOf b
-decreasing_by all_goals simp_wf; omega
+decreasing_by all_goals simp_wf; simp only [sizeOf, ONote._sizeOf_1]; omega
 
 theorem rawNaturalSum_normal (a b : ONote) (ha : ONote.NF a) (hb : ONote.NF b) :
     ONote.NF (rawNaturalSum a b) := by

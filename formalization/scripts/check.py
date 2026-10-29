@@ -32,6 +32,115 @@ def source_for(module: str) -> Path | None:
         path = ROOT / (module.replace(".", "/") + ".lean")
     return path if path.is_file() else None
 
+def resident_kib(pid: int, proc: Path = Path("/proc"), seen: set[int] | None = None) -> int:
+    """Measure a process tree without losing own RSS when task/children is absent.
+
+    Some procfs implementations expose status but not task/PID/children. Fall
+    back to PPid discovery there. An unreadable/malformed live status is an
+    observation failure, never an invented zero measurement.
+    """
+    seen = set() if seen is None else seen
+    if pid in seen:
+        return 0
+    seen.add(pid)
+    try:
+        status = (proc / str(pid) / "status").read_text()
+    except (FileNotFoundError, ProcessLookupError):
+        return 0
+    match = re.search(r"^VmRSS:\s+(\d+)\s+kB$", status, re.M)
+    if match is None:
+        if re.search(r"^State:\s+Z\b", status, re.M):
+            return 0
+        # During process setup/teardown some procfs implementations omit VmRSS
+        # while statm still reports the actual resident-page count.
+        try:
+            fields = (proc / str(pid) / "statm").read_text().split()
+            if len(fields) < 2 or not re.fullmatch(r"[0-9]+", fields[1]):
+                raise ValueError("invalid resident-page count")
+            page_bytes = os.sysconf("SC_PAGE_SIZE")
+            if page_bytes <= 0:
+                raise ValueError("invalid system page size")
+            own = int(fields[1]) * page_bytes // 1024
+        except (OSError, ValueError) as error:
+            raise RuntimeError(f"Unavailable RSS for live process {pid}: {error}") from error
+    else:
+        own = int(match.group(1))
+    try:
+        children = [int(c) for c in
+                    (proc / str(pid) / "task" / str(pid) / "children").read_text().split()]
+    except (FileNotFoundError, ProcessLookupError):
+        children = []
+        for child in proc.iterdir():
+            if not child.name.isdigit() or int(child.name) == pid:
+                continue
+            try:
+                child_status = (child / "status").read_text()
+            except (FileNotFoundError, ProcessLookupError):
+                continue
+            parent = re.search(r"^PPid:\s+(\d+)\s*$", child_status, re.M)
+            if parent is None:
+                raise RuntimeError(f"Missing PPid for process {child.name}")
+            if int(parent.group(1)) == pid:
+                children.append(int(child.name))
+    return own + sum(resident_kib(child, proc, seen) for child in children)
+
+
+def sample_resident_kib(process) -> int | None:
+    """An already-exited child needs no live-memory observation."""
+    try:
+        return resident_kib(process.pid)
+    except (OSError, ValueError, RuntimeError):
+        if process.poll() is not None:
+            return None
+        raise
+
+
+def stop_process_tree(process, proc: Path = Path("/proc"), memory_snapshot: dict | None = None) -> list[dict]:
+    """Best-effort diagnostics must never prevent terminating a stopped job."""
+    stopped = []
+    try:
+        if memory_snapshot is not None:
+            for name in ("status", "statm"):
+                try:
+                    memory_snapshot[name] = (proc / str(process.pid) / name).read_text()[:16000]
+                except (OSError, UnicodeError) as error:
+                    memory_snapshot[name] = str(error)
+        try:
+            for task in (proc / str(process.pid) / "task").glob("*"):
+                try:
+                    stat = (task / "stat").read_text().rpartition(")")[2].split()
+                    stopped.append({"tid": int(task.name), "state": stat[0],
+                        "cpu_seconds": (int(stat[11]) + int(stat[12])) / os.sysconf("SC_CLK_TCK"),
+                        "wait_channel": (task / "wchan").read_text().strip()})
+                except (OSError, ValueError, IndexError):
+                    pass
+        except (OSError, ValueError, IndexError):
+            pass
+    finally:
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        finally:
+            process.wait()
+    return stopped
+
+
+def discard_failed_outputs(target: Path) -> list[Path]:
+    """A failed compiler may emit objects; none may enter the incremental cache."""
+    removed = []
+    artifacts = [target, Path(str(target) + ".private"),
+                 Path(str(target) + ".server"), target.with_suffix(".ir"),
+                 target.with_suffix(".ilean")]
+    for artifact in artifacts:
+        try:
+            artifact.unlink()
+            removed.append(artifact)
+        except FileNotFoundError:
+            pass
+    return removed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("modules", nargs="+")
@@ -181,20 +290,19 @@ def main() -> int:
             cpu_seconds=0.0
             wait_channel='unknown'
             stopped_threads=[]
-            def resident_kib(pid):
-                try:
-                    text=Path(f'/proc/{pid}/status').read_text()
-                    match=re.search(r'VmRSS:\s+(\d+)',text)
-                    own=int(match.group(1)) if match else 0
-                    children=Path(f'/proc/{pid}/task/{pid}/children').read_text().split()
-                    return own+sum(resident_kib(int(c)) for c in children)
-                except (FileNotFoundError,ProcessLookupError):
-                    return 0
+            memory_observation_failure={}
             with log.open('w') as stream:
                 p=subprocess.Popen(command,cwd=ROOT,env=env,stdout=stream,stderr=subprocess.STDOUT,preexec_fn=limits,start_new_session=True)
                 reason=None
                 while p.poll() is None:
-                    peak_rss=max(peak_rss,resident_kib(p.pid))
+                    try:
+                        sampled_rss = sample_resident_kib(p)
+                        if sampled_rss is None:
+                            break
+                        peak_rss=max(peak_rss,sampled_rss)
+                    except (OSError, ValueError, RuntimeError) as error:
+                        reason=f'resident-memory observation failed: {error}'
+                        break
                     try:
                         stat=Path(f'/proc/{p.pid}/stat').read_text().rpartition(')')[2].split()
                         cpu_seconds=(int(stat[11])+int(stat[12]))/os.sysconf('SC_CLK_TCK')
@@ -210,23 +318,14 @@ def main() -> int:
                     # A waiting main thread does not distinguish I/O from a
                     # stalled worker pool. Preserve all worker states before
                     # terminating a bounded resource failure.
-                    for task in Path(f'/proc/{p.pid}/task').glob('*'):
-                        try:
-                            thread_stat=(task/'stat').read_text().rpartition(')')[2].split()
-                            stopped_threads.append({'tid':int(task.name),
-                                'state':thread_stat[0],
-                                'cpu_seconds':(int(thread_stat[11])+int(thread_stat[12]))/os.sysconf('SC_CLK_TCK'),
-                                'wait_channel':(task/'wchan').read_text().strip()})
-                        except (FileNotFoundError,ProcessLookupError):pass
-                    try:os.killpg(p.pid,signal.SIGKILL)
-                    except ProcessLookupError:pass
-                    p.wait()
+                    stopped_threads = stop_process_tree(p, memory_snapshot=memory_observation_failure)
                     status=124 if reason=='wall-time limit' else 77
                     stream.write('\nRESOURCE_STOP: '+reason+'\n')
                 else:
                     status=p.returncode
             output=log.read_text(errors='replace')
-            row={'module':module,'returncode':status,'seconds':round(time.monotonic()-started,3),'observed_cpu_seconds':cpu_seconds,'last_wait_channel':wait_channel,'stopped_threads':stopped_threads,'peak_process_tree_rss_kib':peak_rss,'source_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'log':str(log.relative_to(ROOT))}
+            discarded = discard_failed_outputs(target) if status else []
+            row={'module':module,'returncode':status,'seconds':round(time.monotonic()-started,3),'observed_cpu_seconds':cpu_seconds,'last_wait_channel':wait_channel,'stopped_threads':stopped_threads,'peak_process_tree_rss_kib':peak_rss,'memory_observation_failure':memory_observation_failure,'discarded_failed_outputs':[str(p.relative_to(ROOT)) for p in discarded],'source_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'log':str(log.relative_to(ROOT))}
             rows.append(row)
             receipt={'requested':requested,'heap_cap_mib':args.memory_mib,'rss_cap_mib':args.rss_mib,'wall_seconds':args.timeout,'cpu_seconds':args.cpu_seconds,'minimum_free_mib':args.min_free_mib,'core_only_profile':args.core_profile,'single_thread':args.threads==1,'threads':args.threads,'upstream_cache_only':True,'calculator_objects_borrowed':not args.fresh,'modules':rows}
             (reports/'latest.json').write_text(json.dumps(receipt,indent=2)+'\n')

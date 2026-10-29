@@ -29,7 +29,7 @@ theorem universal_properness_witness : Targets.UniversalPropernessWitness := by
           rw [hzero]
           simp only [Ultrafilter.mem_pure, Set.mem_singleton_iff]
         have hkernel : {x | h x = 0} ∈ p := by
-          simpa only [Ultrafilter.mem_map, Set.preimage_singleton_eq] using hmem
+          exact Ultrafilter.mem_map.mp hmem
         exact False.elim (hi hkernel)
       · exact hnonprincipal
     have hw := nonprincipal_coordinate_witness p hp h hfree

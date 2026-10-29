@@ -31,8 +31,9 @@ theorem existsUnique_finite_derivation_extension (D : Derivation ℤ F F) :
   · intro E hE
     let original : {_a : _root_.Differential K // DifferentialAlgebra F K} :=
       ⟨inferInstance, inferInstance⟩
-    let alternative : {_a : _root_.Differential K // DifferentialAlgebra F K} :=
-      ⟨⟨E⟩, ⟨hE⟩⟩
+    let alternative : {_a : _root_.Differential K // DifferentialAlgebra F K} := by
+      letI : _root_.Differential K := ⟨E⟩
+      exact ⟨inferInstance, ⟨hE⟩⟩
     letI : Unique {_a : _root_.Differential K // DifferentialAlgebra F K} :=
       _root_.Differential.uniqueDifferentialAlgebraFiniteDimensional
     have h := Subsingleton.elim alternative original

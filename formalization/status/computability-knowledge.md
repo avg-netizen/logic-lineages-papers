@@ -1,5 +1,124 @@
 # Computability and knowledge formalization
 
+## External continuation — 29 October 2026, 16:58 UTC
+
+The historical local author/Claude loop remains paused. The separately
+user-authorized external Codex continuation has advanced the checked source
+components below; it did not restart a paused local worker or claim a new
+Claude authorship process. Root owns shared integration and the sole bounded
+compiler queue; an independent auditor reviews/freezes targets and accepts
+exact gate/axiom results. The original paused narrative and raw-candidate
+provenance are retained below, **as historical state rather than current status**.
+
+All results below passed independent gates against their entire frozen targets.
+Their actual axiom closures are within `propext`, `Classical.choice`, `Quot.sound`.
+No private import, added axiom, `sorry`, `admit`, or `native_decide` is used.
+The fresh 94-gate checkpoint has been independently accepted. Later individual
+gate passes remain separate from that fixed checkpoint; neither is a whole-paper proof.
+
+### Accepted paper-02 reduction pipeline
+
+The literal syntax remains `1`, positive variables, addition, and
+`E(a,b)=2^a*b`. Source depth is unchanged: addition takes the maximum, while
+E adds one to the maximum of **both** operands. All simultaneous equations and
+comparisons share one valuation.
+
+| Source component | Checked scope | Proof/gate receipt(s), `formalization/build-reports/` |
+| --- | --- | --- |
+| Seven-equation multiplication lemma | All eight positive witnesses, numeric iff, literal seven source pairs and depth ≤ 1; raw saved candidate passed unchanged | `1793266596541430476-7.json` |
+| Circuit → equations, lines 198–210 | WF finite positive circuits; fresh/shared wires and 8 auxiliaries per multiplication; both extension directions; bound `n+9*length`; literal depth ≤ 1 equations | `1793267889765066639-6.json`; effectivity `1793269243914017424-6.json` |
+| Circuit → strict/weak comparisons, lines 212–231 | Finite shared valuations; U/V equality iff circuit solvability; non-solvability iff universal `V<U` and `V+1≤U`; depth ≤ 2 and finite bounds | `1793271047692392626-6.json`; effectivity `1793271288704598576-6.json` |
+| Polynomial → circuit, lines 191–198 | Actual `MvPolynomial Nat Int` interpretation of finite signed monomial-list codes, coverage of every finite-variable polynomial, exact positive/negative totals with seed ones; zero/negative/repeated terms and arity 0 | `1793274700919171962-7.json`; effectivity `1793274847307605786-7.json` |
+| Positive polynomial → comparisons | Composed fixed-input extension/global root and counterexample equivalences, depth and arity, both actual computable coded maps | `1793276960837928845-7.json`; effectivity `1793277075122657267-7.json` |
+| Nonnegative → positive variables, lines 185–190 | Literal Xi−1 expansion, actual polynomial substitution identity, ν↔ν+1 including arity 0, same WF/arity | `1793279801455200816-7.json`; effectivity `1793279214684539787-7.json` |
+| End-to-end nonnegative polynomial-code reduction | Fixed-assignment positive extensions plus global root↔strict/weak finite counterexample and nonroot↔universal comparison; faithful codes and both actual computable compositions | `1793283333334508689-7.json`; effectivity `1793283167146427759-7.json` |
+
+The output pair orientation is exactly strict `(V,U)` and weak `(V+1,U)`.
+Effectivity is actual Mathlib `Computable` on explicit codecs, not merely
+`Encodable`, definability, or a classical `Decidable` instance. Coverage of
+abstract polynomials is existential; it does not assert a computable operation
+extracting our code from an arbitrary quotient/extensional representation.
+
+### Exact co-c.e. certificate, lines 232–236
+
+`FiniteComparisonEnumeration` retains the existing expression/pair framing.
+Its decoder rejects malformed and out-of-bound terms. The numerical token-stack
+evaluator is proved equal to the literal source evaluation, at arbitrary finite
+expression depths. Enumeration of positive `Fin d` valuations is surjective,
+including `d=0`. The source predicates are defined by actual bounded terms and
+finite positive counterexample valuations, **not** by search success.
+
+The semantic gate proves those source predicates equivalent to existence of a
+successful enumerated check. The effectivity gate proves actual `Computable`
+evaluation and strict/weak checks and actual Mathlib `REPred` for both
+source-defined counterexample predicates. Thus the strict/weak relations on the
+well-formed finite-fragment domain have the asserted co-c.e. upper bound;
+no MRDP premise is used. Semantic receipt `1793285203476493867-6.json`;
+effectivity receipt `1793285411747227432-6.json`.
+
+### Existential Diophantine supplier bridge
+
+`DiophantinePolynomialBridge` proves genuine Mathlib `IsPoly` ↔ actual
+`MvPolynomial` evaluation correspondence. Mathlib `Dioph` allows an arbitrary
+auxiliary type β: the proof **derives** finite witness sufficiency from the
+polynomial's finite variable support rather than assuming β finite. It then
+proves finite WF-code representation with faithful first-n/last-m input/witness
+framing. Finally the actual pinned `Dioph.pow_dioph` yields a code representing
+the natural power graph `x^y=z`, including zero inputs. Exact six-clause gate:
+`1793286540914150999-6.json`.
+
+These are existential mathematical witnesses, **not computable witness extraction
+from `Poly`/`Dioph` proofs**. Mathlib's missing full RE→Dioph/DPRM/MRDP theorem
+has not been supplied or assumed. This supplier component does not complete
+Hilbert's tenth problem or paper-02 hardness.
+
+### Bounded-vector numeric preparation and pending queue
+
+The semantic `FiniteDepthEnvelope` gate is accepted, receipt
+`1793287420723574218-6.json`. For a literal term R, L is its actual node count,
+s0 is `1+sum` of its distinct variables, b is `(L+1)s0`, and g is `5b`, all
+represented by genuine addition-only source expressions. The gate proves
+positivity, affine depth 0, unchanged finite variable bounds, and
+`depth R≤2 → eval R≤2^(2^eval g)` at each shared positive valuation.
+
+The full envelope effectivity gate has now passed, receipt
+`1793292193390200071-6.json`, candidate
+`03704c06de3c87cb4f6455a7734a8372665efbefce2ed31cd12b6710501d963a`.
+It proves actual `Computable` encoded construction, exact existing-code
+correspondence, malformed-input rejection and valid same-arity output decoding.
+
+`FiniteDepthControl` has also passed its full fixed gate, receipt
+`1793292777168166471-6.json`, proof
+`848b4b53c39c5c548dca697af8d9c2b6b4370999672618590d3699ca2ad3c3b3`.
+It composes the exact affine envelope with the already checked literal
+`OrdinalComparison.Control.two_tower_le_fastControl` supplier, proving
+`eval R ≤ fastControl 2 (eval g)` with shared valuation and unchanged arity.
+The final 101-gate root aggregate passed, receipt
+`1793292997840831261-18.json`, audit 458, including this final composition.
+There are no pending compiler checks in this continuation lane at the deadline.
+The first Control attempt stopped in an uncompiled optional `ControlCore`
+dependency; the accepted proof uses established `Control` instead, without
+editing another lane's source or importing the failed dependency.
+
+Neither component establishes ψ admissibility, membership in the original
+Wilken–Weiermann C classes, the norm bridge, or bounded source-vector comparison.
+
+### Other papers and remaining whole-paper gaps
+
+The saved full `GorbowFormulaSubstitution` candidate and gate passed unchanged,
+receipt `1793266628221335736-6.json`. This is substitution semantics, not the
+Gorbow DCB/CK fixed-point, internal derivability/Löb, KT/FS, revision or consistency
+metatheory. Gorbow and Alexander knowing-machine theories remain distinct.
+Paper 14 still lacks the ordinary-program/runtime and complexity-hierarchy
+suppliers and reductions described in the historical handoff.
+
+Paper 02 still lacks full DPRM/MRDP, recursive normal-form/separation and
+one-variable decision suppliers, and the original admissible-substitution/
+C-vector/ordinal-norm bridge. The checked code reductions and co-c.e. upper
+bound do not by themselves establish the claimed complete classifications.
+
+## Historical paused checkpoint (preserved)
+
 Ownership: papers 02, 12 and 14. The Codex lane also leads the new, separately
 guarded read-only Claude author loop for these papers. Root owns the shared
 package, target register, compiler runner and integration.

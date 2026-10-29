@@ -11,11 +11,15 @@ theorem classOf_lt_of_large_strict (p : Ultrafilter ℝ) (f g : ℝ → ℝ)
     (h : {x | f x < g x} ∈ p) : classOf p f < classOf p g := by
   apply lt_of_le_not_ge
   · apply Filter.Germ.coe_le.mpr
-    exact Filter.mem_of_superset h (fun x hx => hx.le)
+    apply Filter.mem_of_superset h
+    intro x hx
+    change f x ≤ g x
+    exact le_of_lt (show f x < g x from hx)
   · intro hreverse
     have hr : {x | g x ≤ f x} ∈ p := Filter.Germ.coe_le.mp hreverse
     obtain ⟨x, hxlt, hxle⟩ := Filter.nonempty_of_mem (Filter.inter_mem h hr)
-    exact (not_le_of_gt hxlt) hxle
+    exact (not_le_of_gt (show f x < g x from hxlt))
+      (show g x ≤ f x from hxle)
 
 theorem class_excluded_of_persistent_discontinuity (p : Ultrafilter ℝ)
     (f : ℝ → ℝ)

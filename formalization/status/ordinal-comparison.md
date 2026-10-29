@@ -4,6 +4,65 @@ Owner: `formalize_ordinals`. Scope: papers 04–10. Root owns package configurat
 the global target register, build runner and acceptance gates. This file is the
 lane's local checkpoint; it does not resume mathematical frontier research.
 
+## Authorized external continuation — 2026-10-29 16:45 UTC
+
+The historical local-worker pause below remains in force for those workers.
+This section records the separately authorized external continuation; it does
+not restart the private/local automation. The central build steward alone ran
+Lean through `scripts/check.py`; root and the independent source auditor own
+freezes, acceptance ledgers and publication. Existing accepted semantics and
+calculator files were preserved.
+
+The initial representation, natural-arithmetic and finite-tail candidates now
+pass their exact gates after compiler-directed repairs. Additional source-domain
+proofs define the norm by actual-ordinal hereditary-CNF recursion and the maximum
+and unary collapse independently on actual ordinals, then prove their explicit
+notation correspondences. There is no hidden correctness premise or replacement
+of ordinary ordinal operations by natural arithmetic.
+
+| Newly checked scope | Central receipt in `build-reports/` |
+|---|---|
+| Epsilon-zero calibration; representation soundness and completeness | `1793266656163446923-6.json` |
+| Natural-sum coefficients, norm additivity and actual denotation | `1793268922711366793-6.json` |
+| Natural-product actual denotation and norm bound | `1793269134898389121-6.json` |
+| Notation finite tails and limit maximum saturation/strict growth | `1793269461891094579-6.json` |
+| Actual CNF exponent descent and positive finite coefficients | `1793271118285845628-6.json` |
+| Actual-CNF norm equation, below-epsilon-zero uniqueness, notation correspondence | `1793272663372089230-6.json` |
+| All actual-ordinal finite norm balls and exact finite semantic enumerator image | `1793274547086434704-7.json` |
+| Independently defined actual maximum: exact greatest specification, uniqueness, notation correspondence | `1793277026322837585-7.json` |
+| Full actual source `lem:saturation` (both conclusions) | `1793279023996396169-7.json` |
+| Actual unary collapse equation/uniqueness and full `lem:controlled-strictness` (including finite values) | `1793279852531567128-7.json` |
+| Full actual source `thm:single-predecessor` | `1793283089630614057-7.json` |
+| Actual nonfinite split, strict replacement descent, collapse and norm updates | `1793283720314443438-7.json` |
+| First finite replacement endpoint and full `thm:complete-count`, including both strict bounds | `1793284704328308516-6.json` |
+| Exact finite-head norm/maximum suppliers and full `cor:finite-head` | `1793285606947394818-6.json` |
+| Joint order/norm count-monotonicity suppliers and full `lem:tail-separation`, including injectivity | `1793286378781061472-6.json` |
+| Actual norm domination and finite-tail lower bound (cited Proposition 2.3 suppliers) | `1793286664881417460-6.json` |
+| Faithful raw ONote/natural pairing codec, both roundtrips, literal equations and explicit normalization primitive-recursion certificate | `1793287385581550202-6.json` |
+| Finite-table raw-code treeWeight algorithm: literal equations, exact source-norm agreement and genuine `Nat.Primrec` certificate | `1793292274234536879-6.json` |
+
+All listed gate axiom closures are subsets of `propext`, `Classical.choice`,
+`Quot.sound`. Root's acceptance records, exact frozen hashes and fresh aggregate
+receipts remain authoritative; a successful focused receipt is not a claim that
+an unobserved consolidated build or remote CI passed.
+
+**Encoded effectiveness remains open.** The actual ordinal evaluator is a
+well-founded mathematical construction with a proved literal first-finite
+trajectory and terminal identities. This is not a Mathlib `Computable`
+certificate on a faithful finite input encoding. Consequently the effectiveness
+part of `lem:finite-balls` and `cor:closed-evaluation` is not promoted from these
+results. The explicit raw `ONote`/natural-number pairing bijection now has both
+roundtrips checked, plus faithful explicit `Denumerable`/`Primcodable` structures
+(no global instances installed) and a separate `Nat.Primrec` normalization
+certificate. The finite-table numeric function `rawNormCode` additionally has
+a genuine `Nat.Primrec` proof and exact agreement with the full-multiplicity
+`Vendor.R1.treeWeight` on every raw input. These raw-code facts do not supply
+normal-form recognition, `NONote` encoding, comparison, finite norm-ball
+enumeration, or the encoded evaluator; those computation certificates remain
+pending. The optimized simultaneous
+maximum-predecessor recursion and the remaining source-assignment/comparator
+and papers 06–10 obligations also remain pending.
+
 ## Explicit user pause — 2026-10-29 06:17 UTC
 
 The user paused local formalization for an external agent to take over. **This

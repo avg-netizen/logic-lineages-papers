@@ -21,7 +21,7 @@ theorem adjoin_isDerivationClosed (D : Derivation ℚ F F) (s : Set F)
     IsDerivationClosed D (IntermediateField.adjoin ℚ s) := by
   let E := IntermediateField.adjoin ℚ s
   intro x hx
-  refine IntermediateField.adjoin_induction ?_ ?_ ?_ ?_ ?_ hx
+  refine IntermediateField.adjoin_induction ℚ (p := fun x _ => D x ∈ E) ?_ ?_ ?_ ?_ ?_ hx
   · intro y hy
     exact hs y hy
   · intro c
@@ -32,7 +32,9 @@ theorem adjoin_isDerivationClosed (D : Derivation ℚ F F) (s : Set F)
     exact E.add_mem hDy hDz
   · intro y hy hDy
     rw [D.leibniz_inv, smul_eq_mul]
-    exact E.mul_mem (E.neg_mem (E.pow_mem (E.inv_mem hy) 2)) hDy
+    have hinv2 : y⁻¹ ^ (2 : ℕ) ∈ E := by
+      simpa only [pow_two] using E.mul_mem (E.inv_mem hy) (E.inv_mem hy)
+    exact E.mul_mem (E.neg_mem hinv2) hDy
   · intro y z hy hz hDy hDz
     rw [D.leibniz, smul_eq_mul, smul_eq_mul]
     exact E.add_mem (E.mul_mem hy hDz) (E.mul_mem hz hDy)

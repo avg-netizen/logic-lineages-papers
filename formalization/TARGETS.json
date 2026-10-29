@@ -69,16 +69,27 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 305,
           "statement_latex": "[Quotient filtration below a limit]\n\\label{lem:quotient-filtration}\nLet $\\delta=\\omega\\gamma$ and $T\\le G_\\delta$. For the quotient\nmap $q:G\\to Q=G/T$, one has\n\\[\n Q_\\alpha=q(G_\\alpha)\\quad(\\alpha\\le\\delta).\n\\]\nFor every $\\beta<\\delta$, $q$ induces an isomorphism of the\n$\\beta$-th Ulm quotients, so $u_Q(\\beta)=u_G(\\beta)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.FullQuotientStatementChecks.fullQuotientFiltrationLemma",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/FullQuotientTargets.lean",
+            "sha256": "38cee006c0b7255512d84f2475364299622d1901dbc8d1f7250567e1b330b0c7",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.fullQuotientFiltrationLemma"
+          },
           "checked_components": [
             {
               "declaration": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks.quotientFiltrationBelowCut",
-              "scope": "Entire first displayed filtration-equality conclusion, generalized to arbitrary cuts. Ulm quotient isomorphism/rank conclusion remains uncompiled.",
+              "scope": "Historical first-conclusion component, generalized to arbitrary cuts. The full two-conclusion gate is now checked in receipt1793267996776944661-6.",
               "development_receipt": "build-reports/1793251592919663407-2.json"
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793267996776944661-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire two-conclusion lemma: filtration equality through omega*gamma; actual induced Ulm-layer map bijectivity and rank equality below cut. Generalized to all additive commutative groups; no source theorem supplier assumed."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:lem:products",
@@ -237,9 +248,19 @@
           "file": "02-exponential-comparison/paper.tex",
           "line": 146,
           "statement_latex": "[Seven-equation definition of multiplication]\n\\label{lem:seven-equations}\nFor positive $x,y,w$, put $a=x+y+1$ and $b=a+x$, treating these as\naffine term abbreviations. Then $w=xy$ if and only if the following\nseven source equations have a solution in positive integers\n$s,t,u,v,q,r,h,k$:\n\\begin{align*}\n \\E(a,u)+1&=u+\\E(s,1),&\n \\E(b,v)+1&=v+\\E(t,1),\\\\\n \\E(a,q)+y+1&=u+q+\\E(a,1),&\n \\E(b,r)+y+1&=v+r+\\E(b,1),\\\\\n s+a+h&=\\E(a,a),&\n t+b+k&=\\E(b,b),\\\\\n t&=s+w.&&\n\\end{align*}\nEvery side has $\\E$-nesting depth at most one.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.multiplication_gadget",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/MultiplicationGadget.lean",
+            "sha256": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget.Target"
+          },
+          "verification_receipt": "build-reports/1793266596541430476-7.json",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire numbered seven-equation lemma: positive-domain numerical iff with all eight positive witnesses, literal seven source-expression pairs and E-nesting depth at most one. Not the full paper or its effective reduction/MRDP classification."
         },
         {
           "id": "02-exponential-comparison:thm:bounded-bare-vectors",
@@ -526,9 +547,28 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 131,
           "statement_latex": "[Controlled strictness and finite values]\\label{lem:controlled-strictness}\nIf $\\beta<\\alpha$ and\n$\\norm(\\beta)\\le\\Phi(\\norm(\\alpha))$, then\n$\\psi(\\beta)+1\\le\\psi(\\alpha)$.  Also $\\psi(n)=n$ for finite $n$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_collapse_controlled_strictness",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualCollapseTargets.lean",
+            "sha256": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc",
+            "types": [
+              "LogicLineages.OrdinalComparison.Targets.ActualCollapseControlledStrictness",
+              "LogicLineages.OrdinalComparison.Targets.ActualCollapseFiniteValues"
+            ],
+            "parameter": "LogicLineages.OrdinalComparison.actualCollapse"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_collapse_finite_values",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_collapse_controlled_strictness"
+          ],
+          "verification_receipt": "build-reports/1793279852531567128-7.json",
+          "coverage_note": "Actual ordinal source defining maximum and uniqueness below epsilonZero; both controlled strictness and finite values. No global monotonicity, algorithm or effectiveness claim.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
         },
         {
           "id": "05-wilken-weiermann-foundations:thm:maximum",
@@ -548,9 +588,27 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 199,
           "statement_latex": "[Saturation at a limit]\\label{lem:saturation}\nFor every nonzero limit $\\lambda$ and $b\\in\\N$,\n$\\norm(M(\\lambda,b))=b$.  The maximum strictly increases with $b$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_limit_saturation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualLimitPredecessorTargets.lean",
+            "sha256": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8",
+            "types": [
+              "LogicLineages.OrdinalComparison.Targets.ActualLimitMaximumPredecessorSaturation",
+              "LogicLineages.OrdinalComparison.Targets.ActualLimitMaximumPredecessorStrictGrowth"
+            ]
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_limit_saturation",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_limit_strict_growth"
+          ],
+          "verification_receipt": "build-reports/1793279023996396169-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Both source conclusions on full actual ordinal domain below epsilonZero: exact saturation and strict budget growth. Actual norm and maximum correspondence proved; no encoded effectiveness claim."
         },
         {
           "id": "05-wilken-weiermann-foundations:thm:single-predecessor",
@@ -559,9 +617,20 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 210,
           "statement_latex": "[Single-predecessor recurrence]\\label{thm:single-predecessor}\nFor every nonzero limit $\\lambda<\\varepsilon_0$ and $n\\in\\N$,\n\\[\n \\psi(\\lambda+n)=\n \\psi\\bigl(M(\\lambda,\\Phi(\\norm(\\lambda)+n))\\bigr)+1.\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_single_predecessor_recurrence",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualSinglePredecessorTargets.lean",
+            "sha256": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualSinglePredecessorRecurrence"
+          },
+          "verification_receipt": "build-reports/1793283089630614057-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual-ordinal single-predecessor recurrence below epsilonZero at every nonzero limit and every finite tail including zero. Ordinary ordinal addition and independently constructed actual norm/maximum/collapse; no encoded algorithm or effectiveness claim."
         },
         {
           "id": "05-wilken-weiermann-foundations:cor:closed-evaluation",
@@ -581,9 +650,27 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 247,
           "statement_latex": "[Complete terminal decomposition]\\label{thm:complete-count}\nPut $\\nu=\\norm(\\lambda)$ and let $t\\ge\\nu$ be the total initial norm.\nStarting at $\\lambda+(t-\\nu)$, let $\\tau_\\lambda(t)$ be the number of\nnonfinite replacements and $Z_\\lambda(t)$ the first finite state.  Then\n\\[\n J_\\lambda(t):=\\psi(\\lambda+t-\\nu)\n       =Z_\\lambda(t)+\\tau_\\lambda(t),\\qquad\n Z_\\lambda(t)=\\Phi^{\\tau_\\lambda(t)}(t).\n\\]\nThe count is positive.  In particular $Z_\\lambda(t)<J_\\lambda(t)<2Z_\\lambda(t)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCompleteTerminalDecomposition",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualTerminalTargets.lean",
+            "sha256": "97993c72496c0de4a35059978d9e6070eee81c7b6e78fb8794fed6fba7ca3aa2",
+            "types": [
+              "LogicLineages.OrdinalComparison.Targets.ActualTerminalFirstFinite",
+              "LogicLineages.OrdinalComparison.Targets.ActualCompleteTerminalDecomposition"
+            ]
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTerminalFirstFinite",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCompleteTerminalDecomposition"
+          ],
+          "verification_receipt": "build-reports/1793284704328308516-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual source terminal decomposition with literal first finite endpoint/count, \u03c8=Z+\u03c4, Z=Phi^[\u03c4]t, positive count and strict Z<\u03c8<2Z under original nonzero-limit/t budget assumptions. Norm\u22652 is derived, not assumed. Encoded computability in closed-evaluation corollary remains separate."
         },
         {
           "id": "05-wilken-weiermann-foundations:cor:finite-head",
@@ -592,9 +679,20 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 268,
           "statement_latex": "[Finite coefficient identity]\\label{cor:finite-head}\nFor finite $k,n$,\n\\[\n \\psi(\\omega k+n)=\\Phi^k(2k+n)+k.\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualFiniteHeadCollapse",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualFiniteHeadTargets.lean",
+            "sha256": "682a0532c51866e3d9b4ead5841da3f3cf243bb2e3cf1da104272db01630ee1e",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualFiniteHeadCollapse"
+          },
+          "verification_receipt": "build-reports/1793285606947394818-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source actual \u03c8(\u03c9*k+n)=Phi^[k](2*k+n)+k for every natural k,n including zero, ordinary ordinal operations. Norm and sufficient-budget maximum suppliers proved separately; no added supplier premise or encoded-effectiveness claim."
         },
         {
           "id": "05-wilken-weiermann-foundations:lem:tail-separation",
@@ -603,9 +701,20 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 280,
           "statement_latex": "[Strict separation in one finite tail]\\label{lem:tail-separation}\nFor $h_\\lambda(n)=\\psi(\\lambda+n)$ with a fixed nonzero limit $\\lambda$,\n\\[\n h_\\lambda(n+1)>2^{h_\\lambda(n)}.\n\\]\nIn particular every such function is injective.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTailSeparation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualTailSeparationTargets.lean",
+            "sha256": "cb22045f61f16754ebe4b91bb03ddb491b2085dd3a478e1b084d5216a213c13e",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualTailSeparation"
+          },
+          "verification_receipt": "build-reports/1793286378781061472-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source actual limit-tail strict exponential gap at every natural tail and injectivity for every nonzero limit below epsilonZero. Five monotonicity/numerical suppliers separately checked; count comparison retains ordinal and norm premises. No global collapse monotonicity or encoded effectiveness claim."
         },
         {
           "id": "05-wilken-weiermann-foundations:thm:forward-translation",
@@ -655,7 +764,7 @@
           "status": "pending"
         },
         {
-          "description": "ID1 accessibility formalization and Bachmann–Howard stage-bound suppliers",
+          "description": "ID1 accessibility formalization and Bachmann\u2013Howard stage-bound suppliers",
           "status": "pending"
         }
       ],
@@ -1868,7 +1977,7 @@
     {
       "paper": "11-hyperreal-differentiation-domain",
       "owner": "main",
-      "status": "in-progress",
+      "status": "checked",
       "source_files": [
         "11-hyperreal-differentiation-domain/paper.tex",
         "11-hyperreal-differentiation-domain/preamble.tex"
@@ -1885,15 +1994,15 @@
         },
         {
           "description": "Hamel-basis coordinate dichotomy and support-length witness",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Actual derivative domain and ultrapower field consequences",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Existence of admissible near-zero additive idempotent ultrafilters (nonvacuity supplier cited by the source paper)",
-          "status": "pending"
+          "status": "checked"
         }
       ],
       "statements": [
@@ -1904,9 +2013,20 @@
           "file": "11-hyperreal-differentiation-domain/paper.tex",
           "line": 53,
           "statement_latex": "[Universal properness]\\label{thm:main}\nLet $p$ be an additive idempotent ultrafilter on all subsets of $\\R$\nsuch that $(0,\\epsilon)\\in p$ for every $\\epsilon>0$. There is a function\n$f:\\R\\to(0,1]$ with the following properties.\n\\begin{enumerate}\n\\item For every $\\eta>0$, $\\{x:f(x)<\\eta\\}\\in p$.\n\\item For every $g:\\R\\to\\R$ with $\\{x:g(x)=f(x)\\}\\in p$, there is a set\n      $S_g\\in p$ at every point of which $g$ is discontinuous.\n\\end{enumerate}\nConsequently $[f]_p$ is a positive infinitesimal outside $\\mathcal D_p$,\nand $\\mathcal D_p\\ne\\R^{\\R}/p$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.Ultrafilters.StatementChecks.fixed_universal_ultrapower_properness",
+          "frozen_comparator": {
+            "file": "LogicLineages/Ultrafilters/UltrapowerTargets.lean",
+            "sha256": "9c443a06b64e8a225c6e68980b0d7f0447c98a8d11d1ef784f9198f4f95e8341",
+            "type": "LogicLineages.Ultrafilters.Targets.UniversalUltrapowerProperness"
+          },
+          "verification_receipt": "build-reports/1793268560936460551-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire universal properness theorem including every-representative witness and actual ultrapower-domain consequence. Admissible existence, derivative well-definedness, field laws and order-convexity corollary are also checked in separate gates."
         },
         {
           "id": "11-hyperreal-differentiation-domain:prop:well-defined",
@@ -1915,9 +2035,20 @@
           "file": "11-hyperreal-differentiation-domain/paper.tex",
           "line": 115,
           "statement_latex": "\\label{prop:well-defined}\nIf $[f]_p=[g]_p$ and $D_f,D_g\\in p$, then $[f']_p=[g']_p$.\nMoreover, $\\mathcal D_p$ is a subfield of the ultrapower and\n$\\partial[f]_p=[f']_p$ is a derivation from it to the ultrapower.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.Ultrafilters.StatementChecks.fixed_domain_derivation",
+          "frozen_comparator": {
+            "file": "LogicLineages/Ultrafilters/DomainDerivationTargets.lean",
+            "sha256": "3ed1a3265406fdb008e6cd04cb6d4c349f227fd817677f621570088a3bc699ab",
+            "type": "LogicLineages.Ultrafilters.Targets.DomainDerivation"
+          },
+          "verification_receipt": "build-reports/1793271372816784204-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire proposition via first-assertion fixed_derivative_well_defined (receipt1793269430004702719-6) and actual domain subfield/ordinary derivation gate. All-real constants included; order-convexity corollary remains separate."
         },
         {
           "id": "11-hyperreal-differentiation-domain:lem:obstruction",
@@ -1939,7 +2070,7 @@
             "Classical.choice",
             "Quot.sound"
           ],
-          "coverage_note": "Entire every-representative discontinuity obstruction. The audited module also excludes large differentiability sets; the main witness construction is pending."
+          "coverage_note": "Entire every-representative discontinuity obstruction. The audited module also excludes large differentiability sets. The main witness and actual quotient properness are now checked separately."
         },
         {
           "id": "11-hyperreal-differentiation-domain:lem:push",
@@ -1983,7 +2114,7 @@
             "Classical.choice",
             "Quot.sound"
           ],
-          "coverage_note": "Entire actual rational-basis support-length lemma in the coordinate-zero branch. The main witness and quotient properness are still pending."
+          "coverage_note": "Entire actual rational-basis support-length lemma in the coordinate-zero branch. The main witness and actual quotient properness are now checked separately."
         },
         {
           "id": "11-hyperreal-differentiation-domain:corollary-6",
@@ -1992,11 +2123,22 @@
           "file": "11-hyperreal-differentiation-domain/paper.tex",
           "line": 273,
           "statement_latex": "For every admissible $p$, $\\mathcal D_p$ is a proper subfield containing\n$\\R$ and is not order convex in $\\R^{\\R}/p$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.Ultrafilters.StatementChecks.fixed_domain_corollary",
+          "frozen_comparator": {
+            "file": "LogicLineages/Ultrafilters/DomainCorollaryTargets.lean",
+            "sha256": "f242a6d809eb17d99a0ca724070ecac0c2e116618987178d573a2cb5db13272b",
+            "type": "LogicLineages.Ultrafilters.Targets.DomainCorollary"
+          },
+          "verification_receipt": "build-reports/1793272760175155094-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
         }
-      ]
+      ],
+      "coverage_note": "All six registered statements and listed mathematical supplier obligations checked individually, including unconditional admissible-ultrafilter existence. Not a line-by-line formalization of all prose. Latest root integration is verified separately."
     },
     {
       "paper": "12-common-knowledge-necessitation",
@@ -2017,7 +2159,7 @@
           "status": "pending"
         },
         {
-          "description": "Formal derivability conditions, diagonalization and Löb theorem",
+          "description": "Formal derivability conditions, diagonalization and L\u00f6b theorem",
           "status": "pending"
         },
         {
@@ -2097,7 +2239,7 @@
     {
       "paper": "13-reinforcement-learning-transformations",
       "owner": "main",
-      "status": "in-progress",
+      "status": "checked",
       "source_files": [
         "13-reinforcement-learning-transformations/paper.tex",
         "13-reinforcement-learning-transformations/preamble.tex"
@@ -2114,11 +2256,12 @@
         },
         {
           "description": "Actual rational policies, histories and limiting expected values",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Full positive construction, scripted separator and behavioral mixtures",
-          "status": "pending"
+          "status": "checked",
+          "coverage_note": "All three concrete supplier constructions checked. Full classification is tracked separately."
         }
       ],
       "statements": [
@@ -2129,9 +2272,20 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 53,
           "statement_latex": "[Classification]\\label{thm:classification}\nAssume the finite action alphabet has at least two elements. Under\nDefinition~\\ref{def:transformation}, a transformation between the four\nframeworks of Definition~\\ref{def:four} exists if and only if\n\\[\n \\text{the source agents are deterministic}\n \\quad\\text{or}\\quad\n \\text{the target agents are stochastic}.\n\\]\nFor a singleton action alphabet, no such transformation exists,\nincluding from a framework to itself.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_classification",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/ClassificationTargets.lean",
+            "sha256": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+            "type": "LogicLineages.RL.Policy.Targets.Classification"
+          },
+          "verification_receipt": "build-reports/1793284430421831483-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual four-framework classification including singleton: transformation iff distinct actions exist and source agents deterministic or target agents stochastic. Both original nontriviality clauses retained. Cross-environment lattice proposition remains separate."
         },
         {
           "id": "13-reinforcement-learning-transformations:lem:affine",
@@ -2140,9 +2294,21 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 158,
           "statement_latex": "\\label{lem:affine}\nFor every admissible target environment $\\mu$,\n\\[\n V(Q_t,\\mu)=A_\\mu+t(B_\\mu-A_\\mu),\n \\qquad A_\\mu=V(Q_0,\\mu),\\ B_\\mu=V(Q_1,\\mu).\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_affine_value",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/PolicyTargets.lean",
+            "sha256": "34a3294502f5166263fbc66c601093f3ceea1940265d542d45143a9717e3028b",
+            "type": "LogicLineages.RL.Policy.Targets.AffineValue"
+          },
+          "verification_receipt": "build-reports/1793276439508088598-6.json",
+          "semantic_foundations_receipt": "build-reports/1793276786574134652-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual-policy limiting-value affine lemma, backed by seven concrete source-semantics gates and finite trace/expectation mixture. Deterministic environment specialization checked. The full transformation classification is now checked separately."
         },
         {
           "id": "13-reinforcement-learning-transformations:prop:positive",
@@ -2151,9 +2317,20 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 191,
           "statement_latex": "\\label{prop:positive}\nIf source agents are deterministic or target agents are stochastic,\nthere is a transformation.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_positiveTransformation",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/PositiveTransformationTargets.lean",
+            "sha256": "509d14de656cea8d80bd34925af9fbc278cf219f9a4d4512bddf2a0112ef2993",
+            "type": "LogicLineages.RL.Policy.Targets.PositiveTransformation"
+          },
+          "verification_receipt": "build-reports/1793279726045089136-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire positive existence proposition for actual four frameworks and local two-action assumption, including both transformation nontriviality clauses. Negative, singleton and full classification cases are now checked separately."
         },
         {
           "id": "13-reinforcement-learning-transformations:lem:separator",
@@ -2162,9 +2339,20 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 234,
           "statement_latex": "[Two-value separator]\\label{lem:separator}\nSuppose deterministic policies $\\alpha,\\beta$ have different values\nin some admissible environment. There is an admissible deterministic\nenvironment $\\eta$ and an integer $C$ such that every deterministic\npolicy has value either $C$ or $C+1$ in $\\eta$, with $\\alpha$ and\n$\\beta$ taking different values.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_twoValueSeparator",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/SeparatorTargets.lean",
+            "sha256": "c58c9bc8deefc47faef68602ccfa16d900d72df19dc65083fedd5e6685cd00a0",
+            "type": "LogicLineages.RL.Policy.Targets.TwoValueSeparator"
+          },
+          "verification_receipt": "build-reports/1793283759280556470-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual-policy two-value separator: actual value distinction derives finite first divergence; script persists after deviations; unrestricted integer offset; admissibility against all deterministic and stochastic policies; exact two-value range for every deterministic policy and distinguished policies separated. Stochastic interval bounds proved separately; full classification remains separate."
         },
         {
           "id": "13-reinforcement-learning-transformations:lem:mixture",
@@ -2173,9 +2361,20 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 290,
           "statement_latex": "\\label{lem:mixture}\nThe policy $m$ satisfies\n\\[\n V(m,\\nu)=wV(p,\\nu)+(1-w)V(q,\\nu)\n\\]\nfor every admissible environment $\\nu$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_behavioralMixtureValue",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/MixtureTargets.lean",
+            "sha256": "9bc5488189db3404e7032764b23f549630711d0e8ea74837e1af732b804fb3e9",
+            "type": "LogicLineages.RL.Policy.Targets.BehavioralMixtureValue"
+          },
+          "verification_receipt": "build-reports/1793283447388969557-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual behavioral posterior mixture lemma for rational open-unit weights, all histories including zero-likelihood fallback, action-only likelihood and common percept factors; finite and limiting values and deterministic-environment specialization. No hidden seed or pointwise-average surrogate; classification separate."
         },
         {
           "id": "13-reinforcement-learning-transformations:prop:negative",
@@ -2184,9 +2383,20 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 317,
           "statement_latex": "\\label{prop:negative}\nThere is no transformation with stochastic source agents and\ndeterministic target agents, for either environment type.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_negativeTransformation",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/ClassificationTargets.lean",
+            "sha256": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+            "type": "LogicLineages.RL.Policy.Targets.NegativeTransformation"
+          },
+          "verification_receipt": "build-reports/1793284333873120566-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual stochastic-source/deterministic-target obstruction for either source/target environment kind; no distinct-action premise."
         },
         {
           "id": "13-reinforcement-learning-transformations:prop:noncomposition",
@@ -2217,11 +2427,23 @@
           "file": "13-reinforcement-learning-transformations/paper.tex",
           "line": 404,
           "statement_latex": "\\label{prop:cross}\nAssume source agents and environments are deterministic, with rewards\nin a fixed lattice $d^{-1}\\Z$, $d\\ge1$, and convergent total rewards.\nAssume the target has rational initial mixtures of any two admissible\nenvironments. There is no pair satisfying \\eqref{eq:cross} and the\nsecond nontriviality condition.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.Policy.StatementChecks.fixed_crossFromDeterministicRewards",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/CrossTargets.lean",
+            "sha256": "e5167b42ef549940f45e42ab4b47cf55053e3748bad3abc2b6d06bd4881364ed",
+            "type": "LogicLineages.RL.Policy.Targets.CrossFromDeterministicRewards"
+          },
+          "verification_receipt": "build-reports/1793285539025721274-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full cross-order obstruction with only second nontriviality: arbitrary deterministic per-pair signed lattice reward streams and actual convergent partial sums; target rational environment mixtures as source premise. Generic lattice-to-value bridge and actual posterior-mixture closure independently checked. ScaledDD is calibration, not a restricted substitute for general source."
         }
-      ]
+      ],
+      "coverage_note": "All eight registered mathematical statements and four listed supplier obligations checked individually, including singleton classification and the separate source-general cross-environment lattice proposition. Not a line-by-line formalization of prose or the imported original article. Aggregate integration is verified separately."
     },
     {
       "paper": "14-complexity-of-prediction-measures",
@@ -2387,9 +2609,20 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 90,
           "statement_latex": "\\label{lem:constants}\nAn element algebraic over $\\Q$ in a differential extension is a\nconstant. A nonconstant element is therefore transcendental over $\\Q$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.algebraicConstantsOfIntegerDerivation",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/RationalTargets.lean",
+            "sha256": "07ad42bbf979e7e571bf7c1f2f0f58e925c9ef7b4d67ac180b9bf734169c5e04",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.algebraicConstantsOfIntegerDerivation"
+          },
+          "verification_receipt": "build-reports/1793267920121505395-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full ordinary differential-field algebraic-constants lemma. Nonconstant implies transcendental is the exact logical contrapositive; rational linearity is derived, not supplied. Arbitrary algebraic extension of derivations is a distinct supplier."
         },
         {
           "id": "15-differential-field-constraint-decisions:thm:orderone",
@@ -2398,9 +2631,25 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 119,
           "statement_latex": "\\label{thm:orderone}\nOn these source-valid inputs:\n\\begin{enumerate}\n\\item if $r\\ne0$, then $\\Con_\\Q(p,q)$ holds exactly when\n      $\\rad(r)\\mid q$ in $\\Q[Y]$;\n\\item if $r=0$, then $\\Con_\\Q(p,q)$ fails for every nonzero $q$.\n\\end{enumerate}",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneCriterion",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneTargets.lean",
+            "sha256": "749286b15712a271503577d3d91a869ba504af5f339303e1826f89d28abfe1b7",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneCriterion"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneNonzeroSpecialization",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneZeroSpecialization",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneCriterion"
+          ],
+          "verification_receipt": "build-reports/1793292467179457239-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source two-case semantic order-one criterion on irreducible positive-Z-degree/nonzero-q inputs. Constrainedness is literal existence and universal designated-root differential isomorphism on actual jet fields at arbitrary Type u, not defined by divisibility/nonconstancy. Actual ULift witness/evaluation/jet transports checked. Effective decision/algorithm corollary remains pending."
         },
         {
           "id": "15-differential-field-constraint-decisions:lem:curve",
@@ -2409,9 +2658,20 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 130,
           "statement_latex": "\\label{lem:curve}\nAny two nonconstant solutions of $p(a,Da)=0$ generate differential\nfields isomorphic over $\\Q$ by a map sending one solution to the other.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_curveDesignatedRootIsomorphism",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/CurveIsomorphismTargets.lean",
+            "sha256": "3139b21b6f479e35c9e772a49cb3525fce3cfe570367cc3f8454e511b6b8dcd0",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.curveDesignatedRootIsomorphism"
+          },
+          "verification_receipt": "build-reports/1793285066583542082-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source designated-root isomorphism for two ordinary characteristic-zero differential fields and nonconstant roots of the same irreducible positive-Z-degree polynomial: actual Q-algebra equivalence of all-jet generated fields maps designated roots and commutes with constructed derivations everywhere. No assumed isomorphism or compatibility. Generic witness and full constraint decision remain separate."
         },
         {
           "id": "15-differential-field-constraint-decisions:lem:genericcurve",
@@ -2420,9 +2680,20 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 164,
           "statement_latex": "\\label{lem:genericcurve}\nIf $r\\ne0$, there exists a nonconstant solution avoiding every\nspecified nonzero $q(Y)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_genericCurveAvoidance",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/GenericCurveTargets.lean",
+            "sha256": "b0b78896c657fde983ef063a3c0a8e71ed803091a29cdfa48e8514630c804613",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.genericCurveAvoidance"
+          },
+          "verification_receipt": "build-reports/1793286243686949891-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source existence of nonconstant ordinary differential-field root avoiding each specified nonzero rational polynomial, with stronger one-field uniform transcendental witness checked. Only irreducibility, positive Z degree and p(Y,0)\u22600 assumed; actual small-universe field and derivation constructed. Full order-one constraint criterion remains separate."
         },
         {
           "id": "15-differential-field-constraint-decisions:cor:algorithmone",
@@ -2453,9 +2724,20 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 296,
           "statement_latex": "\\label{lem:weights}\nIf all $x_i$ are nonzero and $Dx_i=\\lambda_ix_i$, they are\nalgebraically independent over $K$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.splitting_field_spectral_independence",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/AlgebraicBaseTargets.lean",
+            "sha256": "a85bce9c7dff78eb870dc9ba784bab4c63ef41627abd41c32fba8492e444ab22",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.splittingFieldSpectralIndependence"
+          },
+          "verification_receipt": "build-reports/1793270985909994801-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source distinct-weight independence lemma with ordinary derivation and actual rational splitting field; K-linearity derived rather than assumed. Coordinate construction, rational descent and full spectral constraint criterion remain pending."
         },
         {
           "id": "15-differential-field-constraint-decisions:lem:genericjets",
