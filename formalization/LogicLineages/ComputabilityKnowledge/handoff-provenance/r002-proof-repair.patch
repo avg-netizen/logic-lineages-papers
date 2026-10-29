@@ -1,0 +1,11 @@
+--- proposed/RestrictedProductProof.lean
++++ accepted/RestrictedProductProof.lean
+@@ -101,7 +101,7 @@
+       ⟨S / A, S % A, Nat.div_add_mod S A, Nat.mod_lt S hA⟩
+     have h2S : 2 ^ S = (D + 1) ^ k * 2 ^ r := by
+       rw [← hdec, Nat.pow_add, Nat.pow_mul, hD]
+-    rw [pow_eq_geom] at h2S
++    rw [pow_eq_geom D k] at h2S
+     have f1 : (D * geom D k + 1) * 2 ^ r = D * (geom D k * 2 ^ r) + 2 ^ r := by
+       rw [Nat.add_mul, Nat.one_mul, Nat.mul_assoc]
+     have f2 : 2 ^ A * U = D * U + U := by

@@ -1,0 +1,329 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{The Domain of Hyperreal Differentiation\ Is Always Proper}
+\author{}
+\date{28 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Alexander and Dawson define differentiation on those elements of an
+ultrapower of the reals which have a representative differentiable on an
+ultrafilter-large set. For an additive idempotent ultrafilter concentrated
+immediately to the right of zero, the derivative is independent of the
+chosen differentiable representative. They ask whether its domain can be
+the whole ultrapower, and whether the answer depends on the ultrafilter.
+We prove in ZFC that the domain is proper for every such ultrafilter.
+More strongly, for each ultrafilter there is a bounded strictly positive
+function such that every equivalent representative is discontinuous on
+an ultrafilter-large set. A dichotomy for the rational coordinates of a
+Hamel basis supplies the construction. The resulting excluded element
+is a positive infinitesimal, so the differentiation domain is not an
+order-convex subfield. The witness may depend on the ultrafilter; no
+measurability or common-witness assertion is made.
+\end{abstract}
+\tableofcontents
+
+\section{A derivative of a hyperreal number}
+
+An ultrapower represents a number by a real-valued function. This makes
+it tempting to differentiate the function and regard the resulting class
+as the derivative of the number. The difficulty is that many functions
+represent the same number. Agreement on a large set need not imply
+agreement of derivatives, and an equivalence class may contain both
+well-behaved and badly behaved functions.
+
+Alexander and Dawson \cite{AD} identify an algebraic condition on the
+ultrafilter which resolves the first difficulty. If the ultrafilter is
+additively idempotent and concentrates near zero from the right, any two
+equivalent representatives whose derivatives exist on large sets have
+equivalent derivatives. Their Corollary~10 therefore defines a derivative
+on a distinguished domain $\mathcal D_p$. Immediately afterwards they ask
+whether every hyperreal has a representative of the required kind, and
+whether this depends on $p$.
+Admissible ultrafilters exist in ZFC, as recorded in their Lemma~7;
+the universal statement below is therefore nonvacuous.
+
+There are two different questions here. It is easy to take a good
+representative and alter it away from a large set so that it becomes
+badly behaved. That does not exclude its equivalence class from
+$\mathcal D_p$: the original good representative still exists. To prove
+properness one must construct a class for which \emph{every}
+representative fails. The proof below is designed around that quantifier.
+
+\begin{theorem}[Universal properness]\label{thm:main}
+Let $p$ be an additive idempotent ultrafilter on all subsets of $\R$
+such that $(0,\epsilon)\in p$ for every $\epsilon>0$. There is a function
+$f:\R\to(0,1]$ with the following properties.
+\begin{enumerate}
+\item For every $\eta>0$, $\{x:f(x)<\eta\}\in p$.
+\item For every $g:\R\to\R$ with $\{x:g(x)=f(x)\}\in p$, there is a set
+      $S_g\in p$ at every point of which $g$ is discontinuous.
+\end{enumerate}
+Consequently $[f]_p$ is a positive infinitesimal outside $\mathcal D_p$,
+and $\mathcal D_p\ne\R^{\R}/p$.
+\end{theorem}
+
+The first assertion places the excluded element very close to zero in
+the order of the ultrapower. The second is the essential obstruction:
+it survives all changes of representative. The proof uses finite
+intersections of large sets only. It never asks an ultrafilter to be
+closed under countably many intersections.
+
+\section{Ultrafilters, addition and the differentiation domain}
+
+An ultrafilter $p$ on a set $X$ is a family of subsets closed under
+supersets and finite intersections, excluding the empty set, and
+containing exactly one of $A$ and $X\setminus A$ for each $A\subseteq X$.
+Call its members \emph{$p$-large}. It is principal at $x$ if its members
+are exactly the sets containing $x$; otherwise it contains no finite set.
+
+For subsets of an additive group, put $A-x=\{y:x+y\in A\}$. Addition of
+ultrafilters on the underlying discrete group is defined by
+\[
+ A\in p+q \quad\Longleftrightarrow\quad
+ \{x:A-x\in q\}\in p.
+\]
+Thus idempotence $p+p=p$ says that whenever $A$ is large, a large set of
+translations has a large intersection pattern with $A$:
+\begin{equation}\label{eq:star}
+ A\in p\quad\Longrightarrow\quad
+ A^*:=A\cap\{x:A-x\in p\}\in p.
+\end{equation}
+Near-zero concentration implies that $p$ is nonprincipal: no single real
+belongs to every interval $(0,\epsilon)$.
+
+Two functions $f,g:\R\to\R$ represent the same element of
+$\R^{\R}/p$ exactly when $\{x:f(x)=g(x)\}\in p$. Addition,
+multiplication and order are defined pointwise modulo $p$. The usual
+ultraproduct argument gives an ordered field extending $\R$ through
+constant functions.
+
+Let $D_f$ be the set of points where $f$ has an ordinary finite two-sided
+derivative. The class $[f']_p$ exists when $D_f\in p$: extend the partial
+derivative arbitrarily outside $D_f$. The extension does not affect its
+class. The source domain is
+\begin{equation}\label{eq:domain}
+ \mathcal D_p=\{[f]_p:D_f\in p\}.
+\end{equation}
+Membership means that \emph{some} representative has this property.
+Merely having differentiability points arbitrarily close to zero is
+weaker than $D_f\in p$ and does not replace this definition.
+
+For context we give the argument behind the well-definedness result
+of \cite[Theorem~9]{AD}.
+
+\begin{proposition}\label{prop:well-defined}
+If $[f]_p=[g]_p$ and $D_f,D_g\in p$, then $[f']_p=[g']_p$.
+Moreover, $\mathcal D_p$ is a subfield of the ultrapower and
+$\partial[f]_p=[f']_p$ is a derivation from it to the ultrapower.
+\end{proposition}
+\begin{proof}
+Let $A=\{f=g\}\cap D_f\cap D_g$. By \eqref{eq:star}, $A^*\in p$.
+Fix $x\in A^*$. For every $\delta>0$, the set
+$(A-x)\cap(0,\delta)$ is large and hence nonempty. Along the arbitrarily
+small positive increments in this set, the difference quotients for
+$f$ and $g$ at $x$ are equal, since both $x$ and $x+h$ lie in $A$.
+Both ordinary derivatives exist, so their values agree. They therefore
+agree on $A^*$, proving the first assertion.
+
+Constants are in the domain. Intersecting differentiability sets and
+applying the ordinary sum and product rules proves closure under sums,
+negatives and products and proves the derivation laws. If $[f]_p\ne0$,
+then $\{f\ne0\}\in p$. Define $h(x)=1/f(x)$ where $f(x)\ne0$ and
+$h(x)=0$ otherwise. At every point of $D_f\cap\{f\ne0\}$, continuity
+of $f$ makes this the ordinary reciprocal in a neighborhood. Hence $h$
+is differentiable there, $[h]_p=[f]_p^{-1}$, and the domain is a field.
+\end{proof}
+
+The proposition explains why the properness question is meaningful.
+It supplies no reason that every equivalence class has a suitable
+representative. The next lemma isolates what will prevent one.
+
+\section{An obstruction which survives a change of representative}
+
+\begin{lemma}\label{lem:obstruction}
+Suppose $f:\R\to(0,1]$ has this property: whenever $T\in p$, $x\in T^*$
+and $\delta>0$, there exists
+\[
+ y\in (T-x)\cap(0,\delta)
+ \quad\text{such that}\quad f(x+y)<f(x)/2.
+\]
+Then every $g$ equivalent to $f$ is discontinuous at every point of a
+$p$-large set. In particular $[f]_p\notin\mathcal D_p$.
+\end{lemma}
+\begin{proof}
+Take $T=\{g=f\}\in p$. At each fixed $x\in T^*$, $g(x)=f(x)>0$.
+The hypothesis gives arbitrarily small positive $y$ with $x+y\in T$
+and $g(x+y)=f(x+y)<g(x)/2$. The fixed positive tolerance $g(x)/2$
+witnesses discontinuity at $x$. Since $T^*\in p$, the continuity set of
+$g$ is not large: otherwise its intersection with $T^*$ would be empty
+and large. Differentiability implies continuity, so its differentiability
+set cannot be large either. The argument applies to every representative.
+\end{proof}
+
+The use of idempotence is visible here. Ordinary equality modulo $p$
+only gives the set $T$. Idempotence provides points $x\in T$ at which
+the increments leading back into $T$ remain large. Near-zero
+concentration then turns those increments into a continuity test.
+
+\section{Rational coordinates and the two cases}
+
+Choose a Hamel basis $B$ for $\R$ as a vector space over $\Q$. For every
+$x\in\R$ there is a unique finite expression
+\[
+ x=\sum_{b\in B}h_b(x)b,\qquad h_b(x)\in\Q.
+\]
+Each coordinate $h_b:\R\to\Q$ is additive. Write
+\[
+ \supp(x)=\{b:h_b(x)\ne0\},\qquad \ell(x)=|\supp(x)|.
+\]
+The support is finite; $\ell(x)=0$ precisely when $x=0$. Disjoint
+supports give $\ell(x+y)=\ell(x)+\ell(y)$.
+
+For a function $h:X\to Y$, its pushforward ultrafilter is
+$h_*p=\{A\subseteq Y:h^{-1}(A)\in p\}$.
+
+\begin{lemma}\label{lem:push}
+If $h:\R\to\Q$ is additive, $h_*p$ is an additive idempotent
+ultrafilter on $\Q$. If it is principal, it is principal at zero.
+\end{lemma}
+\begin{proof}
+Put $q=h_*p$. For $A\subseteq\Q$, additivity gives
+\begin{align*}
+ A\in q+q
+ &\Longleftrightarrow
+ \{x:h^{-1}(A-h(x))\in p\}\in p\\
+ &\Longleftrightarrow
+ \{x:h^{-1}(A)-x\in p\}\in p\\
+ &\Longleftrightarrow h^{-1}(A)\in p+p=p
+ \Longleftrightarrow A\in q.
+\end{align*}
+The sum of principal ultrafilters at $r$ and $r$ is principal at $2r$.
+Idempotence therefore implies $r=2r$, hence $r=0$.
+\end{proof}
+
+It follows that precisely one of the following alternatives holds:
+some $h_{b*}p$ is nonprincipal; or every $h_{b*}p$ is principal at zero.
+The second alternative says $\ker h_b\in p$ for every $b\in B$. It does
+not say the intersection of all these kernels is large. That intersection
+is just $\{0\}$ and is not large.
+
+\subsection{A nonprincipal coordinate}
+
+Suppose $h=h_b$ has nonprincipal image $q=h_*p$. Enumerate
+$\Q=\{r_0,r_1,\ldots\}$ without repetitions, set
+$s(r_n)=2^{-n-1}$, and define $f(x)=s(h(x))$.
+The function is strictly positive and bounded by $1/2$. For every
+$\eta>0$, its upper level set is the inverse image of a finite subset
+of $\Q$. A nonprincipal ultrafilter excludes finite sets, so
+$\{f<\eta\}\in p$.
+
+Fix $T\in p$ and $x\in T^*$, and put $a=f(x)>0$. The set
+$F=\{r:s(r)\ge a/2\}$ is finite. Since $q$ is nonprincipal,
+\[
+ E_x=\{y:h(y)\notin F-h(x)\}\in p.
+\]
+For each $\delta>0$, choose
+$y\in E_x\cap(T-x)\cap(0,\delta)$. Additivity gives
+$h(x+y)\notin F$, hence $f(x+y)<a/2$. Lemma~\ref{lem:obstruction}
+applies.
+
+Freeness of the \emph{image} ultrafilter matters. The inverse image of a
+finite subset of $\Q$ may be infinite in $\R$; freeness of $p$ alone
+would not justify this step.
+
+\subsection{All coordinates vanish modulo the ultrafilter}
+
+Suppose now $\ker h_b\in p$ for every $b$. For a fixed real $x$, put
+\[
+ K_x=\bigcap_{b\in\supp(x)}\ker h_b.
+\]
+This is a finite intersection and belongs to $p$. For $y\in K_x$, the
+supports of $x$ and $y$ are disjoint.
+
+\begin{lemma}\label{lem:length}
+For every $k\in\N$, the set $S_k=\{x:\ell(x)=k\}$ is not in $p$.
+Consequently $\{x:\ell(x)>m\}\in p$ for every $m\in\N$.
+\end{lemma}
+\begin{proof}
+$S_0=\{0\}$ is not large. Suppose $k>0$ and $S_k\in p$. For every
+$x\in S_k$, the large set $K_x\cap S_k$ is contained in $S_{2k}-x$.
+Thus
+$S_k\subseteq\{x:S_{2k}-x\in p\}$, so the set on the right is large.
+Idempotence gives $S_{2k}\in p+p=p$, contradicting disjointness of
+$S_k$ and $S_{2k}$. This proves the first assertion. A finite union of
+sets excluded by an ultrafilter is excluded, yielding the second.
+\end{proof}
+
+Define $f(x)=2^{-\ell(x)}$. Lemma~\ref{lem:length} gives
+$\{f<\eta\}\in p$ for every $\eta>0$. Given $T\in p$ and $x\in T^*$,
+write $a=f(x)$. For every $\delta>0$, the set
+\[
+ (T-x)\cap(0,\delta)\cap K_x\cap\{y:\ell(y)\ge2\}
+\]
+is large. A member $y$ satisfies
+\[
+ f(x+y)=2^{-\ell(x)-\ell(y)}\le a/4<a/2.
+\]
+Again Lemma~\ref{lem:obstruction} applies. These two cases prove
+Theorem~\ref{thm:main}.
+
+\section{Consequences and the scope of the answer}
+
+\begin{corollary}
+For every admissible $p$, $\mathcal D_p$ is a proper subfield containing
+$\R$ and is not order convex in $\R^{\R}/p$.
+\end{corollary}
+\begin{proof}
+The subfield assertion is Proposition~\ref{prop:well-defined}. The main
+theorem gives $0<[f]_p<1$ with $[f]_p\notin\mathcal D_p$, whereas the
+endpoints $0,1$ are in the domain. This contradicts order convexity.
+\end{proof}
+
+Although $[f]_p$ is infinitesimal, it is not zero. Equality in the
+ultrapower means equality on a large set, and $f$ is nowhere zero.
+Consequently replacing $f$ by the zero function is unavailable. This
+distinction between infinitesimal proximity and equality is essential
+to the example.
+
+For comparison, the identity function represents a positive infinitesimal
+$\Omega=[x\mapsto x]_p$ which does belong to $\mathcal D_p$, with
+$\partial\Omega=1$. Thus infinitesimal size alone neither includes
+nor excludes an element from the differentiation domain.
+
+The answer to the source's proper-versus-full question is therefore
+independent of which admissible $p$ is chosen: it is always proper.
+The actual subfields $\mathcal D_p$ may still vary. Our quantifier order
+is
+\[
+ \forall p\ \exists f\ \forall g\sim_p f,
+\]
+with the additional hypotheses on $p$ stated in the main theorem.
+We do not obtain a single function working for all $p$, nor an
+identification of domains for different ultrafilters.
+
+The construction uses a Hamel basis and unrestricted functions. It does
+not produce Borel or measurable witnesses. Establishing properness with
+regular representatives, or determining which regularity classes always
+meet $\mathcal D_p$, would be a different question. The proof is also
+specific about its hypotheses: additive idempotence produces the sets
+$T^*$ and controls rational coordinate images; concentration near zero
+produces arbitrarily small increments. Neither is replaced here by
+freeness alone.
+
+\paragraph{Preparation.}
+This is an AI-assisted hand-proof manuscript prepared for mathematical
+review. All arguments used for the properness theorem are included.
+No proof-assistant certification or established historical priority is
+claimed.
+
+\begin{thebibliography}{9}
+\bibitem{AD} S.~A.~Alexander and B.~Dawson,
+\emph{Hyperreal differentiation with an idempotent ultrafilter},
+Journal of Logic and Analysis 16 (2024), paper 6.
+\href{https://doi.org/10.4115/jla.2024.16.6}{doi:10.4115/jla.2024.16.6}.
+Source version: \href{https://arxiv.org/abs/2411.14689v1}{arXiv:2411.14689v1},
+22 November 2024; especially Definitions~5--6, Theorem~9, Corollary~10
+and the question following it.
+\end{thebibliography}
+\end{document}

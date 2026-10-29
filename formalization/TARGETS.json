@@ -1,0 +1,2485 @@
+{
+  "created_at_utc": "2026-10-29T03:30:38.227581+00:00",
+  "scope": "All fifteen public-repository papers, including cited suppliers absent from the standard libraries. Existing calculator coverage is inherited rather than newly recompiled here.",
+  "acceptance": "Compile first; exact Codex-owned frozen comparator; no added theorem premises; axiom closure limited to propext, Classical.choice and Quot.sound; full dependency chains required.",
+  "paper_count": 15,
+  "numbered_statement_count": 178,
+  "papers": [
+    {
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "owner": "models-algebra",
+      "status": "in-progress",
+      "source_files": [
+        "01-scott-complexity-abelian-p-groups/paper.tex",
+        "01-scott-complexity-abelian-p-groups/preamble.tex"
+      ],
+      "numbered_statement_count": 12,
+      "dependency_obligations": [
+        {
+          "description": "Infinitary formula syntax and Scott-sentence semantics",
+          "status": "pending"
+        },
+        {
+          "description": "Transfinite p-filtration and back-and-forth relations",
+          "status": "pending"
+        },
+        {
+          "description": "Ulm/Zippin realization and the cited reduced-group comparison theorem",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "01-scott-complexity-abelian-p-groups:thm:reduced-classification",
+          "kind": "theorem",
+          "label": "thm:reduced-classification",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 100,
+          "statement_latex": "[Exact reduced-group classification]\n\\label{thm:reduced-classification}\nLet $G\\ne0$ be reduced, and write its length uniquely as\n$\\lambda=\\omega\\gamma+n$, where $n<\\omega$.\nIf $n=0$, then $\\gamma>0$ and $G$ has exact complexity\n$\\Pi_{2\\gamma+1}$.\nIf $n>0$, put $H=G_{\\omega\\gamma}$ and write\n\\[\n H\\cong\\bigoplus_{j=1}^{n}C_{p^j}^{(m_j)},\\qquad\n m_j\\in\\mathbb N\\cup\\{\\omega\\},\\quad m_n>0.\n\\]\nThe exact complexity is\n\\begin{center}\n\\normalfont\n\\begin{tabular}{@{}p{0.62\\linewidth}l@{}}\n\\hline\nCondition on $H$ & Exact complexity\\\\\n\\hline\n$H$ is finite & $d\\text{-}\\Sigma_{2\\gamma+1}$\\\\[4pt]\nExactly one $m_k=\\omega$, and $m_j=0$ for every $j<k$\n & $\\Pi_{2\\gamma+2}$\\\\[4pt]\nExactly one $m_k=\\omega$, and $m_j>0$ for some $j<k$\n & $d\\text{-}\\Sigma_{2\\gamma+2}$\\\\[4pt]\nAt least two $m_j=\\omega$ & $\\Pi_{2\\gamma+3}$\\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe trivial group has exact complexity $\\Pi_1$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:thm:bounded-pgroup-classification",
+          "kind": "theorem",
+          "label": "thm:bounded-pgroup-classification",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 138,
+          "statement_latex": "\\label{thm:bounded-pgroup-classification}\nLet $G$ be a countably infinite Abelian $p$-group of bounded exponent,\nand write\n\\[\n G\\cong\\bigoplus_{j=1}^n C_{p^j}^{(m_j)},\n \\qquad m_j\\in\\mathbb N\\cup\\{\\omega\\}.\n\\]\nIts Scott complexity is determined as follows.\n\\begin{center}\n\\begin{tabular}{p{0.67\\linewidth}|l}\nCondition & Exact complexity\\\\ \\hline\nAt least two $m_j$ equal $\\omega$ & $\\Pi_3$\\\\\nExactly one $m_k=\\omega$, and some $m_j>0$ with $j<k$\n & $d\\text{-}\\Sigma_2$\\\\\nExactly one $m_k=\\omega$, and all $m_j=0$ with $j<k$\n & $\\Pi_2$\n\\end{tabular}\n\\end{center}\nThus no bounded-exponent countable Abelian $p$-group has an exact\npure $\\Sigma$ Scott complexity. The case of at least two infinite\nmultiplicities is \\cite[Theorem~4.2]{ACM}; the proof below supplies\nthe remaining cases, including arbitrary finite summands above the\nunique infinite multiplicity.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:prescribed-tail",
+          "kind": "lemma",
+          "label": "lem:prescribed-tail",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 272,
+          "statement_latex": "[Transfinite prescribed-tail existence]\n\\label{lem:prescribed-tail}\nLet $\\gamma>0$ be countable, put $\\delta=\\omega\\gamma$, and let $G$\nbe a countable reduced Abelian $p$-group of length at least $\\delta$.\nFor every nonzero countable reduced $p$-group $T$ there is a countable\nreduced $p$-group $H(T)$ such that\n\\[\n u_{H(T)}(\\xi)=u_G(\\xi)\\quad(\\xi<\\delta),\n \\qquad H(T)_\\delta\\cong T.\n\\]\nIts length is $\\delta+\\lambda_T$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:quotient-filtration",
+          "kind": "lemma",
+          "label": "lem:quotient-filtration",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 305,
+          "statement_latex": "[Quotient filtration below a limit]\n\\label{lem:quotient-filtration}\nLet $\\delta=\\omega\\gamma$ and $T\\le G_\\delta$. For the quotient\nmap $q:G\\to Q=G/T$, one has\n\\[\n Q_\\alpha=q(G_\\alpha)\\quad(\\alpha\\le\\delta).\n\\]\nFor every $\\beta<\\delta$, $q$ induces an isomorphism of the\n$\\beta$-th Ulm quotients, so $u_Q(\\beta)=u_G(\\beta)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "declaration": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks.quotientFiltrationBelowCut",
+              "scope": "Entire first displayed filtration-equality conclusion, generalized to arbitrary cuts. Ulm quotient isomorphism/rank conclusion remains uncompiled.",
+              "development_receipt": "build-reports/1793251592919663407-2.json"
+            }
+          ]
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:products",
+          "kind": "lemma",
+          "label": "lem:products",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 335,
+          "statement_latex": "[Finite-product preservation]\\label{lem:products}\nIf $(A_i,\\bar a_i)\\leq_\\alpha(B_i,\\bar b_i)$ for $i=1,2$, then\n\\[\n (A_1\\oplus A_2,(\\bar a_1,\\bar a_2))\n \\leq_\\alpha\n (B_1\\oplus B_2,(\\bar b_1,\\bar b_2)).\n\\]\nThe paired notation denotes componentwise pairing of corresponding\nentries into tuples of product elements.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:thm:odd-obstruction",
+          "kind": "theorem",
+          "label": "thm:odd-obstruction",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 358,
+          "statement_latex": "\\label{thm:odd-obstruction}\nLet $\\gamma>0$ be countable. If $G=R\\oplus D$, with $R$ reduced and\n$D$ divisible, and $\\lambda_R\\ge\\omega\\gamma$, then $G$ has no\n$\\Sigma_{2\\gamma+1}$ Scott sentence. No countable Abelian\n$p$-group has exact pure $\\Sigma_{2\\gamma+1}$ complexity.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:absorption",
+          "kind": "lemma",
+          "label": "lem:absorption",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 421,
+          "statement_latex": "[Finite support absorption]\n\\label{lem:absorption}\nSuppose $H=K\\oplus T$ is bounded, $p^kT=0$, and a cyclic decomposition of\n$K$ contains infinitely many $C_{p^k}$ summands. Then\n$K\\preceq_{\\Sigma_1}H$, for ordinary infinitary formulas with parameters\nfrom $K$. Consequently $H\\le_2K$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:terminal-deletion",
+          "kind": "lemma",
+          "label": "lem:terminal-deletion",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 453,
+          "statement_latex": "[Deleting a terminal direct summand]\n\\label{lem:terminal-deletion}\nPut $\\delta=\\omega\\gamma$, where $\\gamma\\ge0$, and suppose $G$ is reduced\nwith nonzero bounded $H=G_\\delta$. Write $H=K\\oplus T$, assume $K$ has\nthe same exponent as $H$, and put $Q=G/T$, with quotient map $q$.\nFor $A=\\langle\\bar a\\rangle$ finite, suppose $A\\cap H\\subseteq K$.\nThen\n\\[\n u_Q(\\xi)=u_G(\\xi)\\quad(\\xi<\\delta),\\qquad Q_\\delta\\cong K,\\qquad\n \\lambda_Q=\\lambda_G,\n\\]\nand\n\\begin{equation}\\label{eq:odd-deletion}\n             (G,\\bar a)\\le_{2\\gamma+1}(Q,q\\bar a).\n\\end{equation}\nIf also $H\\le_2K$, then\n\\begin{equation}\\label{eq:even-deletion}\n                         G\\le_{2\\gamma+2}Q.\n\\end{equation}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:walker-filtration",
+          "kind": "lemma",
+          "label": "lem:walker-filtration",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 669,
+          "statement_latex": "\\label{lem:walker-filtration}\nEvery element of $W_\\xi$ has a unique finite expression\n\\[\n \\sum_s c_s e_s,\\qquad 0\\le c_s<p.\n\\]\nMoreover, for every ordinal $\\alpha$,\n\\begin{equation}\\label{eq:walker-filtration}\n (W_\\xi)_\\alpha\n =\\left\\langle e_s:\\operatorname{last}(s)\\ge\\alpha\\right\\rangle.\n\\end{equation}\nConsequently,\n\\[\n (W_\\xi)_\\xi=\\langle e_{(\\xi)}\\rangle\\cong C_p,\n \\qquad (W_\\xi)_{\\xi+1}=0.\n\\]\nFor every ordinal $\\delta$,\n\\[\n (W_{\\delta+1})_\\delta\\cong C_{p^2}.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:thm:difference-spectrum",
+          "kind": "theorem",
+          "label": "thm:difference-spectrum",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 785,
+          "statement_latex": "[The difference spectrum]\\label{thm:difference-spectrum}\nEvery positive countable successor $d\\text{-}\\Sigma_\\alpha$ complexity\noccurs among countable reduced abelian $p$-groups. Among infinite such\ngroups the attained difference levels are exactly the successors\n$\\alpha\\geq2$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:lem:infinite-divisible-bf",
+          "kind": "lemma",
+          "label": "lem:infinite-divisible-bf",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 830,
+          "statement_latex": "[Infinite-divisible-rank comparison]\n\\label{lem:infinite-divisible-bf}\nLet $A,B$ be countable Abelian $p$-groups whose divisible ranks are\nboth infinite. Let $g:\\langle\\bar b\\rangle\\to\\langle\\bar a\\rangle$\nbe the isomorphism induced by the indicated finite tuples.\nThe following conditions are sufficient for the displayed comparisons.\n\\begin{enumerate}\n\\item For $\\delta=\\omega\\gamma$,\n$(A,\\bar a)\\le_{2\\gamma+1}(B,\\bar b)$ provided the Ulm\ninvariants agree below $\\delta$ and, for $a=g(b)$, either\n\\[\n h_A(a)=h_B(b)<\\delta,\n \\quad\\text{or}\\quad\n h_B(b)\\ge\\delta,\\qquad\n h_A(a)\\ge\\min\\{h_B(b),\\delta+\\omega\\}.\n\\]\n\\item $(A,\\bar a)\\le_{2\\gamma+2}(B,\\bar b)$ provided the\nUlm invariants agree below $\\delta=\\omega\\gamma$,\n\\[\n u_B(\\xi)\\le u_A(\\xi)\n \\quad(\\delta\\le\\xi<\\delta+\\omega),\n\\]\nand each $a=g(b)$ either has the same height as $b$ below\n$\\delta+\\omega$, or both heights are at least $\\delta+\\omega$.\n\\item At a nonzero limit $\\eta$, $(A,\\bar a)\\le_\\eta(B,\\bar b)$\nprovided the Ulm invariants agree below $\\omega\\eta$ and heights\nare equal below $\\omega\\eta$ and simultaneously above that cut.\n\\end{enumerate}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "01-scott-complexity-abelian-p-groups:thm:no-pure-sigma",
+          "kind": "theorem",
+          "label": "thm:no-pure-sigma",
+          "file": "01-scott-complexity-abelian-p-groups/paper.tex",
+          "line": 1014,
+          "statement_latex": "[No exact pure-$\\Sigma$ complexity for any countable Abelian $p$-group]\n\\label{thm:no-pure-sigma}\nNo countable Abelian $p$-group has exact pure\n$\\Sigma_\\alpha$ Scott complexity at any countable index.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "02-exponential-comparison",
+      "owner": "claude-loop",
+      "status": "in-progress",
+      "source_files": [
+        "02-exponential-comparison/paper.tex",
+        "02-exponential-comparison/preamble.tex"
+      ],
+      "numbered_statement_count": 9,
+      "dependency_obligations": [
+        {
+          "description": "Literal positive-expression syntax and source-equation detector",
+          "status": "pending"
+        },
+        {
+          "description": "Explicit computable reductions with machine encodings",
+          "status": "pending"
+        },
+        {
+          "description": "Full MRDP undecidability supplier, not merely exponentiation being Diophantine",
+          "status": "pending"
+        },
+        {
+          "description": "Identity normal form, separation, eventual-sign algorithms",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "02-exponential-comparison:thm:finite-bare-hardness",
+          "kind": "theorem",
+          "label": "thm:finite-bare-hardness",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 84,
+          "statement_latex": "[Finite depth-two obstruction]\n\\label{thm:finite-bare-hardness}\nFor either $\\triangleleft\\in\\{<,\\le\\}$, consider pairs $(A,B)$ in the\nfinite fragment $\\mathcal F_d$, with $d$ allowed to vary, satisfying\n\\[\n \\forall\\chi\\text{ admissible in Definition~2.7 of \\cite{WW}},\\qquad\n \\operatorname{val}(A\\chi)\\mathrel{\\triangleleft}\n \\operatorname{val}(B\\chi)\n\\]\nis $\\Pi^0_1$-complete already when the terms use only $1$, independently\nnamed ground-type variables, $+$ and $\\E$, and have $\\E$-nesting depth\nat most two. Every value is a positive integer, and each output term\nbelongs to every $\\C_i$, $i\\ge1$. The same restricted completeness\nholds for comparison of their norms.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:lem:restricted-product",
+          "kind": "lemma",
+          "label": "lem:restricted-product",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 109,
+          "statement_latex": "\\label{lem:restricted-product}\nLet $a,y,s$ be positive integers and suppose\n$y<2^a-1$ and $s<a(2^a-1)$. Then $s=ay$ if and only if there exist\npositive integers $u,q$ such that\n\\begin{align}\n 2^a u+1&=u+2^s,\\label{eq:mersenne-first}\\\\\n 2^a q+y+1&=u+q+2^a.\\label{eq:mersenne-second}\n\\end{align}",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.restricted_product",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/RestrictedProduct.lean",
+            "sha256": "3b6aec50b063e33c05f7d4ecddfd8af123cab045a4eb7a40ce73e129e4831214",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.RestrictedProduct.Target"
+          },
+          "verification_receipt": "build-reports/1793247970233247267-2.json",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "coverage_note": "Exact positive-domain bounded-multiplication equivalence. This does not complete the undecidability reduction or the full paper."
+        },
+        {
+          "id": "02-exponential-comparison:lem:seven-equations",
+          "kind": "lemma",
+          "label": "lem:seven-equations",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 146,
+          "statement_latex": "[Seven-equation definition of multiplication]\n\\label{lem:seven-equations}\nFor positive $x,y,w$, put $a=x+y+1$ and $b=a+x$, treating these as\naffine term abbreviations. Then $w=xy$ if and only if the following\nseven source equations have a solution in positive integers\n$s,t,u,v,q,r,h,k$:\n\\begin{align*}\n \\E(a,u)+1&=u+\\E(s,1),&\n \\E(b,v)+1&=v+\\E(t,1),\\\\\n \\E(a,q)+y+1&=u+q+\\E(a,1),&\n \\E(b,r)+y+1&=v+r+\\E(b,1),\\\\\n s+a+h&=\\E(a,a),&\n t+b+k&=\\E(b,b),\\\\\n t&=s+w.&&\n\\end{align*}\nEvery side has $\\E$-nesting depth at most one.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:thm:bounded-bare-vectors",
+          "kind": "theorem",
+          "label": "thm:bounded-bare-vectors",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 248,
+          "statement_latex": "[Two-component bounded-vector obstruction]\n\\label{thm:bounded-bare-vectors}\nBoth strict and weak comparison in Definition~2.8 are undecidable even\non a computably constructed family of two-component $\\C$-vectors whose\nbounded norm is proved uniformly. The family gives $\\Pi^0_1$-hardness\nwhile retaining the finite depth-two terms as higher components.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:lem:normalization",
+          "kind": "lemma",
+          "label": "lem:normalization",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 340,
+          "statement_latex": "[Effective normalization]\\label{lem:normalization}\nEvery term in $\\mathcal F_d$ has an effectively computable normal form\n$\\operatorname{nf}(f)$ of the shape \\eqref{eq:normal-form}, with the same value\nat every positive integer tuple.  All operations terminate by finite\nsyntax recursion.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:lem:ray",
+          "kind": "lemma",
+          "label": "lem:ray",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 367,
+          "statement_latex": "[Finite-family ray separation]\\label{lem:ray}\nGiven a finite collection $\\mathcal S$ of normal forms, close it under\ntaking keys and add zero.  One can effectively choose positive integers\n$a_1,\\ldots,a_d$ such that, on the ray $x_i=a_it$ with integer $t>0$,\nthe following statements hold for all $F,G\\in\\mathcal S$.\n\\begin{enumerate}\n\\item If $F\\ne G$, their difference is eventually nonzero with a fixed\n      sign.\n\\item If $F,G$ are constant-free and distinct, then\n      $|F(\\mathbf a t)-G(\\mathbf a t)|\\ge t$ for all sufficiently large\n      $t$.\n\\end{enumerate}\nThe common thresholds and the eventual signs are computable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:thm:identity",
+          "kind": "theorem",
+          "label": "thm:identity",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 434,
+          "statement_latex": "[Decidable extensional equality]\\label{thm:identity}\nFor any finite number of independent positive ground variables and any\nfinite exponential nesting depths,\n\\[\n  (\\forall\\mathbf n>0)\\ f(\\mathbf n)=g(\\mathbf n)\n       \\quad\\Longleftrightarrow\\quad\n  \\operatorname{nf}(f)=\\operatorname{nf}(g).                 \\tag{N4}\n\\]\nConsequently extensional equality in $\\mathcal F_d$ is decidable,\nuniformly in $d$ and the two input terms.  If the normal forms differ,\na separating positive integer tuple can be computed.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:thm:unary",
+          "kind": "theorem",
+          "label": "thm:unary",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 456,
+          "statement_latex": "[One-variable universal comparison]\\label{thm:unary}\nLet $f,g\\in\\mathcal F_1$.  Both\n\\[\n                 (\\forall n>0)\\ f(n)<g(n),\\qquad\n                 (\\forall n>0)\\ f(n)\\le g(n)                \\tag{N5}\n\\]\nare decidable, uniformly at arbitrary finite exponential depth.\nA false instance has an effectively computable least positive\ncounterexample.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "02-exponential-comparison:cor:consumers",
+          "kind": "corollary",
+          "label": "cor:consumers",
+          "file": "02-exponential-comparison/paper.tex",
+          "line": 498,
+          "statement_latex": "[Further exact consumers]\\label{cor:consumers}\nThe same procedures decide equality of finite-valued ordinal vectors\nover any finite set of independent ground variables, and strict/weak\nvector comparison and bounded norm for finite-valued $\\mathcal O$-vectors\nwith one independent ground variable.  They also decide comparison\nafter any fixed affine one-parameter substitution with nonnegative\ninteger coefficients and positive coordinate values for finitely many\nground variables: explicitly,\n$x_i=a_i n+b_i$ with $a_i,b_i\\in\\mathbb N$ and $a_i+b_i>0$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "03-joint-embedding-finite-forests",
+      "owner": "models-algebra",
+      "status": "in-progress",
+      "source_files": [
+        "03-joint-embedding-finite-forests/paper.tex",
+        "03-joint-embedding-finite-forests/preamble.tex"
+      ],
+      "numbered_statement_count": 5,
+      "dependency_obligations": [
+        {
+          "description": "Finite forest embeddings and actual comparability-graph equivalence",
+          "status": "pending"
+        },
+        {
+          "description": "Carter finite-forbidden graph JEP decision theorem",
+          "status": "pending"
+        },
+        {
+          "description": "Constructive width classification and finite negative certificates",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "03-joint-embedding-finite-forests:lem:bridge",
+          "kind": "lemma",
+          "label": "lem:bridge",
+          "file": "03-joint-embedding-finite-forests/paper.tex",
+          "line": 64,
+          "statement_latex": "\\label{lem:bridge}\nThe comparability graphs of finite order forests are precisely\n$\\Forb(P_4,C_4)$. Each such graph determines its order forest up to\nisomorphism. Moreover, for finite order forests $S,T$,\n\\[\n S\\hookrightarrow T\\quad\\Longleftrightarrow\\quad\n \\Comp(S)\\hookrightarrow\\Comp(T).\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:thm:decision",
+          "kind": "theorem",
+          "label": "thm:decision",
+          "file": "03-joint-embedding-finite-forests/paper.tex",
+          "line": 122,
+          "statement_latex": "\\label{thm:decision}\nThere is an algorithm which, given any finite family $\\mathcal U$ of\nfinite order forests, decides whether $\\mathcal C(\\mathcal U)$ has JEP.\nMore precisely, set\n\\[\n \\mathcal F=\\{P_4,C_4\\}\\cup\\{\\Comp(U):U\\in\\mathcal U\\}.\n\\]\nThen $\\mathcal C(\\mathcal U)$ has JEP if and only if $\\Forb(\\mathcal F)$\nhas JEP.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:prop:certificate",
+          "kind": "proposition",
+          "label": "prop:certificate",
+          "file": "03-joint-embedding-finite-forests/paper.tex",
+          "line": 149,
+          "statement_latex": "[Finite certificates for negative instances]\n\\label{prop:certificate}\nIf $\\mathcal C(\\mathcal U)$ fails JEP, one can compute a pair $F,G$ in\nthe class and a finite exhaustive certificate that they have no common\nextension in the class.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:thm:width",
+          "kind": "theorem",
+          "label": "thm:width",
+          "file": "03-joint-embedding-finite-forests/paper.tex",
+          "line": 181,
+          "statement_latex": "\\label{thm:width}\nFor $m\\geq1$, the class of finite order forests of width at most $m$\nhas JEP if and only if $m\\leq3$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:prop:age",
+          "kind": "proposition",
+          "label": "prop:age",
+          "file": "03-joint-embedding-finite-forests/paper.tex",
+          "line": 242,
+          "statement_latex": "\\label{prop:age}\nA nonempty hereditary class $\\mathcal K$ of finite forests is the age\nof a finite or countable forest if and only if it has JEP. If it contains\nforests of unbounded size, the realizing forest is countably infinite.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "04-pure-r1-calculator",
+      "owner": "ordinal-comparison",
+      "status": "existing-calculator-package",
+      "source_files": [
+        "04-pure-r1-calculator/paper.tex",
+        "04-pure-r1-calculator/preamble.tex"
+      ],
+      "numbered_statement_count": 2,
+      "dependency_obligations": [
+        {
+          "description": "Reuse included actual R1 semantics and endpoint characterizations",
+          "status": "existing-calculator-package"
+        },
+        {
+          "description": "Expanded-tree norm theorem including sharpness and capacity",
+          "status": "existing-calculator-package"
+        },
+        {
+          "description": "Track Python implementation separately from Lean theorem claims",
+          "status": "existing-calculator-package"
+        }
+      ],
+      "statements": [
+        {
+          "id": "04-pure-r1-calculator:thm:size",
+          "kind": "theorem",
+          "label": "thm:size",
+          "file": "04-pure-r1-calculator/paper.tex",
+          "line": 300,
+          "statement_latex": "\\label{thm:size}\nFor every normal form $a$ below $\\varepsilon_0$,\n\\[\n \\wt(P(a))\\leq\\tri(\\wt(a)),\\qquad\n \\wt(H(a))\\leq\\tri(\\wt(a)).\n\\]\nThe second bound is attained for every natural input weight.",
+          "status": "existing-calculator-package",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "04-pure-r1-calculator:lem:capacity",
+          "kind": "lemma",
+          "label": "lem:capacity",
+          "file": "04-pure-r1-calculator/paper.tex",
+          "line": 406,
+          "statement_latex": "\\label{lem:capacity}\nSuppose an induced arithmetic realization of $F$ has every label strictly\nafter $\\sigma$ and at most $b$, where $\\sigma\\leq b$. Then\n$\\sigma+P(w(F))\\leq b$. The greedy placement attains equality.",
+          "status": "existing-calculator-package",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "05-wilken-weiermann-foundations",
+      "owner": "ordinal-comparison",
+      "status": "in-progress",
+      "source_files": [
+        "05-wilken-weiermann-foundations/paper.tex",
+        "05-wilken-weiermann-foundations/preamble.tex",
+        "05-wilken-weiermann-foundations/foundations.tex",
+        "05-wilken-weiermann-foundations/references.tex"
+      ],
+      "numbered_statement_count": 13,
+      "dependency_obligations": [
+        {
+          "description": "Complete typed source syntax and literal assignment translation",
+          "status": "pending"
+        },
+        {
+          "description": "Finite norm-ball enumeration, natural arithmetic and exact Phi",
+          "status": "pending"
+        },
+        {
+          "description": "Well-founded norm-controlled collapse and full closed evaluator",
+          "status": "pending"
+        },
+        {
+          "description": "Computability of comparison and countervaluation-bound equivalence",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "05-wilken-weiermann-foundations:prop:counter-bound",
+          "kind": "proposition",
+          "label": "prop:counter-bound",
+          "file": "05-wilken-weiermann-foundations/paper.tex",
+          "line": 181,
+          "statement_latex": "[Countervaluation bounds]\\label{prop:counter-bound}\nThe fixed-control comparison problem is co-recursively-enumerable.  It is\ndecidable if and only if there is a total computable function $b(Q)$ such\nthat each false comparison $Q$ has a countervaluation whose every coordinate\nis at most $b(Q)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:lem:finite-balls",
+          "kind": "lemma",
+          "label": "lem:finite-balls",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 73,
+          "statement_latex": "[Finite norm balls]\\label{lem:finite-balls}\nEach norm ball is finite and can be effectively enumerated.  Cantor-normal-form\ncomparison, natural sum and natural product are effective.  Moreover\n$\\norm(\\alpha\\oplus\\beta)=\\norm(\\alpha)+\\norm(\\beta)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "declaration": "LogicLineages.OrdinalComparison.CheckedNormBalls.all_normal_inputs_finite",
+              "scope": "Finiteness and exact finite enumeration on normal notations; actual-ordinal completeness and natural arithmetic obligations remain pending.",
+              "development_receipt": "build-reports/1793248381898355174-2.json"
+            }
+          ]
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:lem:phi-growth",
+          "kind": "lemma",
+          "label": "lem:phi-growth",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 99,
+          "statement_latex": "[Elementary control properties]\\label{lem:phi-growth}\nThe fixed $\\Phi$ is computable, strictly increasing, and greater than the\nidentity.  On its whole domain,\n\\[\n \\Phi(t+1)\\ge 2^{\\,2^{\\Phi(t)}}.\n\\]\nIn particular $\\Phi(t+1)>4\\Phi(t)+4$.",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.CheckedElementaryControl.entire_source_elementary_control_lemma",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ElementaryControlTargets.lean",
+            "sha256": "bd94b0ade60cc7242c5321012d445a1e003e669206a1c7e5a57e3e8e55ce33dd",
+            "type": "LogicLineages.OrdinalComparison.Targets.ElementaryControlProperties"
+          },
+          "verification_receipt": "build-reports/1793247538850699184-2.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source lemma, including actual encoded computability and final linear-gap consequence. This does not complete the foundations paper."
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:lem:controlled-strictness",
+          "kind": "lemma",
+          "label": "lem:controlled-strictness",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 131,
+          "statement_latex": "[Controlled strictness and finite values]\\label{lem:controlled-strictness}\nIf $\\beta<\\alpha$ and\n$\\norm(\\beta)\\le\\Phi(\\norm(\\alpha))$, then\n$\\psi(\\beta)+1\\le\\psi(\\alpha)$.  Also $\\psi(n)=n$ for finite $n$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:thm:maximum",
+          "kind": "theorem",
+          "label": "thm:maximum",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 161,
+          "statement_latex": "[Effective maximum predecessor]\\label{thm:maximum}\nThe following simultaneous recursion computes $M$ and $L$ exactly.\nWrite $\\alpha=\\omega^e c+r$ with $c>0$ and $r<\\omega^e$, and put\n$w=1+\\norm(e)$.\n\\begin{enumerate}\n\\item $M(\\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.\n\\item If $r>0$ and $cw\\le b$, retain the leading block:\n $M(\\alpha,b)=\\omega^e c+M(r,b-cw)$.\n\\item Otherwise set $d=\\min(c-1,\\lfloor b/w\\rfloor)$ when $r=0$,\n and $d=\\min(c,\\lfloor b/w\\rfloor)$ when $r>0$.  Then\n $M(\\alpha,b)=\\omega^e d+L(e,b-dw)$, omitting a zero block.\n\\item For $e,b>0$, let $a=M(e,b-1)$, $v=1+\\norm(a)$ and\n $(q,s)=\\operatorname{divmod}(b,v)$.  Then\n $L(e,b)=\\omega^a q+L(a,s)$.\n\\end{enumerate}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:lem:saturation",
+          "kind": "lemma",
+          "label": "lem:saturation",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 199,
+          "statement_latex": "[Saturation at a limit]\\label{lem:saturation}\nFor every nonzero limit $\\lambda$ and $b\\in\\N$,\n$\\norm(M(\\lambda,b))=b$.  The maximum strictly increases with $b$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:thm:single-predecessor",
+          "kind": "theorem",
+          "label": "thm:single-predecessor",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 210,
+          "statement_latex": "[Single-predecessor recurrence]\\label{thm:single-predecessor}\nFor every nonzero limit $\\lambda<\\varepsilon_0$ and $n\\in\\N$,\n\\[\n \\psi(\\lambda+n)=\n \\psi\\bigl(M(\\lambda,\\Phi(\\norm(\\lambda)+n))\\bigr)+1.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:cor:closed-evaluation",
+          "kind": "corollary",
+          "label": "cor:closed-evaluation",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 233,
+          "statement_latex": "[Closed evaluation]\\label{cor:closed-evaluation}\nEvery supplied closed collapse value is computable.  At a nonfinite state\n$\\alpha=\\lambda+n$, replace $\\alpha$ by\n$M(\\lambda,\\Phi(\\norm(\\alpha)))$ and increment a counter.  On reaching\na finite state return that state plus the counter.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:thm:complete-count",
+          "kind": "theorem",
+          "label": "thm:complete-count",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 247,
+          "statement_latex": "[Complete terminal decomposition]\\label{thm:complete-count}\nPut $\\nu=\\norm(\\lambda)$ and let $t\\ge\\nu$ be the total initial norm.\nStarting at $\\lambda+(t-\\nu)$, let $\\tau_\\lambda(t)$ be the number of\nnonfinite replacements and $Z_\\lambda(t)$ the first finite state.  Then\n\\[\n J_\\lambda(t):=\\psi(\\lambda+t-\\nu)\n       =Z_\\lambda(t)+\\tau_\\lambda(t),\\qquad\n Z_\\lambda(t)=\\Phi^{\\tau_\\lambda(t)}(t).\n\\]\nThe count is positive.  In particular $Z_\\lambda(t)<J_\\lambda(t)<2Z_\\lambda(t)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:cor:finite-head",
+          "kind": "corollary",
+          "label": "cor:finite-head",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 268,
+          "statement_latex": "[Finite coefficient identity]\\label{cor:finite-head}\nFor finite $k,n$,\n\\[\n \\psi(\\omega k+n)=\\Phi^k(2k+n)+k.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:lem:tail-separation",
+          "kind": "lemma",
+          "label": "lem:tail-separation",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 280,
+          "statement_latex": "[Strict separation in one finite tail]\\label{lem:tail-separation}\nFor $h_\\lambda(n)=\\psi(\\lambda+n)$ with a fixed nonzero limit $\\lambda$,\n\\[\n h_\\lambda(n+1)>2^{h_\\lambda(n)}.\n\\]\nIn particular every such function is injective.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:thm:forward-translation",
+          "kind": "theorem",
+          "label": "thm:forward-translation",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 378,
+          "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFor a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:cor:source-classes",
+          "kind": "corollary",
+          "label": "cor:source-classes",
+          "file": "05-wilken-weiermann-foundations/foundations.tex",
+          "line": 427,
+          "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nIn a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "06-godel-t-termination-ordering",
+      "owner": "ordinal-comparison",
+      "status": "in-progress",
+      "source_files": [
+        "06-godel-t-termination-ordering/paper.tex",
+        "06-godel-t-termination-ordering/preamble.tex",
+        "06-godel-t-termination-ordering/references.tex"
+      ],
+      "numbered_statement_count": 24,
+      "dependency_obligations": [
+        {
+          "description": "Actual typed terms, substitution and context stability",
+          "status": "pending"
+        },
+        {
+          "description": "Finite lattices and exact comparator",
+          "status": "pending"
+        },
+        {
+          "description": "Full StarHorpo/RPO strong-pair suppliers cited from Kop",
+          "status": "pending"
+        },
+        {
+          "description": "ID1 accessibility formalization and Bachmann–Howard stage-bound suppliers",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "06-godel-t-termination-ordering:lem:finiteclosure",
+          "kind": "lemma",
+          "label": "lem:finiteclosure",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 161,
+          "statement_latex": "[Finite closure]\\label{lem:finiteclosure}\nEvery type requested by a recursive comparison belongs to $K$, every source\nhead is a head of the original source, and every target observation and\nopening context belongs to the finite family just described.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:lattices",
+          "kind": "lemma",
+          "label": "lem:lattices",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 202,
+          "statement_latex": "[Effective complete lattices]\\label{lem:lattices}\nThe domains in \\ref{def:domains} are finite complete lattices, effectively\nenumerable from the inputs.  Weakening preserves their joins and meets.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:structural",
+          "kind": "lemma",
+          "label": "lem:structural",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 275,
+          "statement_latex": "[Structural interpretation]\\label{lem:structural}\nAt a natural coherent constructor family, interpretation and the original-spine\nhelper are monotone, commute with weakening and capture-avoiding substitution,\nand interpret simultaneous special application exactly.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:operator",
+          "kind": "lemma",
+          "label": "lem:operator",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 297,
+          "statement_latex": "[A finite monotone operator]\\label{lem:operator}\n$F$ preserves natural coherent families and is monotone.  Iteration from\nbottom reaches its least fixed point in finitely many steps.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:adequacy",
+          "kind": "lemma",
+          "label": "lem:adequacy",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 316,
+          "statement_latex": "[Adequacy]\\label{lem:adequacy}\nAt the fixed point, a weak or strict observation bit is true exactly when the\ncorresponding finite recursive comparison is derivable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:thm:decide",
+          "kind": "theorem",
+          "label": "thm:decide",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 349,
+          "statement_latex": "[Effective comparison]\\label{thm:decide}\nBoth recursive comparisons on ordinary bottom-free inputs are decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:fv",
+          "kind": "lemma",
+          "label": "lem:fv",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 368,
+          "statement_latex": "[Free-variable containment]\\label{lem:fv}\nEvery weak comparison $s\\succeq_*t$ satisfies $\\FV(t)\\subseteq\\FV(s)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:supportsub",
+          "kind": "lemma",
+          "label": "lem:supportsub",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 381,
+          "statement_latex": "[Exact support substitution]\\label{lem:supportsub}\nFor a finite type-preserving substitution $\\gamma$,\n\\[\n \\Ty(s\\gamma)=\\Ty(s)\\cup\\bigcup_{x\\in\\FV(s)}\\Ty(\\gamma(x)),\n\\]\nwhere absent entries mean the variable itself.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:thm:stable",
+          "kind": "theorem",
+          "label": "thm:stable",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 393,
+          "statement_latex": "[Stable effective pair]\\label{thm:stable}\nThe confined pair is decidable, compatible and transitive; its weak part is\nreflexive and its strict part is well-founded.  Both are stable under\nwell-typed substitution and every literal context.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:thm:rpo",
+          "kind": "theorem",
+          "label": "thm:rpo",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 409,
+          "statement_latex": "[Exact ranked restriction]\\label{thm:rpo}\nOn the first-order $\\mathcal F$-algebra, $\\succ_c$ is precisely multiset RPO\nfor the selected precedence.  Its weak part is RPO together with recursive\nmultiset equality.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:graft",
+          "kind": "lemma",
+          "label": "lem:graft",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 447,
+          "statement_latex": "[Template grafting]\\label{lem:graft}\nFor an ordinary template $A$ and $p\\succeq_*q$ of the same type,\n$A[x:=p]\\succeq_*A[x:=q]$, even if $p$ contains marked subterms.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:betacases",
+          "kind": "lemma",
+          "label": "lem:betacases",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 457,
+          "statement_latex": "[Beta and cases]\\label{lem:betacases}\nEvery original beta and case step decreases under $\\succ_c$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:context",
+          "kind": "lemma",
+          "label": "lem:context",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 475,
+          "statement_latex": "[Explicit application contexts]\\label{lem:context}\nIf ordinary $a\\succ_*b$, replacing $a$ by $b$ in any ordinary context gives\nanother strict comparison.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:recursor",
+          "kind": "lemma",
+          "label": "lem:recursor",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 500,
+          "statement_latex": "[Recursor orientation]\\label{lem:recursor}\nBoth original recursor rules decrease strictly under $\\succ_c$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:corollary-15",
+          "kind": "corollary",
+          "label": null,
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 522,
+          "statement_latex": "Every original T reduction, in every well-typed context and substitution\ninstance, strictly decreases under $\\succ_c$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:id1",
+          "kind": "lemma",
+          "label": "lem:id1",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 558,
+          "statement_latex": "[Arithmetic accessibility proof]\\label{lem:id1}\nFor this fixed $S$, $\\mathrm{ID}_1$ proves that every well-typed auxiliary\nterm is accessible under $R$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:simulation",
+          "kind": "lemma",
+          "label": "lem:simulation",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 625,
+          "statement_latex": "[Arithmetic simulation]\\label{lem:simulation}\nThere is a computable translation $\\operatorname{tr}$ such that\n$s\\succ_ct$ implies $\\operatorname{tr}(s)R\\operatorname{tr}(t)$ in the\nfixed universe $S=\\Ty(s)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:thm:upper",
+          "kind": "theorem",
+          "label": "thm:upper",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 661,
+          "statement_latex": "[Individual upper bound]\\label{thm:upper}\nEvery descending $\\succ_c$ rank is strictly below $\\BH$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:carrier",
+          "kind": "lemma",
+          "label": "lem:carrier",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 681,
+          "statement_latex": "[A native carrier]\\label{lem:carrier}\nLet $P:B\\to B$, $U:B$, and $K\\succeq_cP$ be closed.  With\n$W=R^B0(\\lambda n:o.K)U$, one has $W\\succ_cU$, and\n\\[\n W\\succ_cT\\quad\\Longrightarrow\\quad W\\succ_cPT.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:realclosure",
+          "kind": "lemma",
+          "label": "lem:realclosure",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 707,
+          "statement_latex": "[Realization closure]\\label{lem:realclosure}\nRealization is backward closed under $\\succ_c$, downward closed in the\nsemantic pointwise order, and closed under countable suprema realized by\none fixed term.  The typed lambda fundamental lemma holds.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:iterationedges",
+          "kind": "lemma",
+          "label": "lem:iterationedges",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 727,
+          "statement_latex": "[Iteration inequalities]\\label{lem:iterationedges}\n$W_i\\succ_cU$.  If $i\\succ_cj$ then\n$W_i\\succ_cW_j$ and $W_i\\succ_cPW_j$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:thm:iteration",
+          "kind": "theorem",
+          "label": "thm:iteration",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 739,
+          "statement_latex": "[Full-prefix ordinal iteration]\\label{thm:iteration}\nThere is an effective closed native term $\\It_A$ realizing\n\\[\n (\\alpha,f,x)\\longmapsto f^\\alpha(x),\\qquad\n f^0(x)=x,\\quad f^{\\beta+1}(x)=f(f^\\beta(x)),\\quad\n f^\\lambda(x)=\\sup_{\\xi<\\lambda}f^\\xi(x).\n\\]\nNo monotonicity of $f$ is required.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:lem:primitives",
+          "kind": "lemma",
+          "label": "lem:primitives",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 764,
+          "statement_latex": "[Zero, successor and a finite cap]\\label{lem:primitives}\nClosed native terms realize $0$, right successor and $\\omega$.\nFor every $P:B\\to B,U:B$, a closed term lies strictly above every $P^nU$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "06-godel-t-termination-ordering:thm:height",
+          "kind": "theorem",
+          "label": "thm:height",
+          "file": "06-godel-t-termination-ordering/paper.tex",
+          "line": 852,
+          "statement_latex": "[Exact descending height]\\label{thm:height}\nEvery individual $\\succ_c$ rank is below $\\BH$, and\n\\[\n \\sup_s(\\rk_{\\succ_c}(s)+1)=\\BH.\n\\]\nAn effective family of closed native terms of outer type $o\\to o$ already\nhas cofinal ranks.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "07-collapse-equality-and-one-variable",
+      "owner": "ordinal-comparison",
+      "status": "in-progress",
+      "source_files": [
+        "07-collapse-equality-and-one-variable/paper.tex",
+        "07-collapse-equality-and-one-variable/preamble.tex",
+        "07-collapse-equality-and-one-variable/references.tex"
+      ],
+      "numbered_statement_count": 21,
+      "dependency_obligations": [
+        {
+          "description": "Exact standard-control collapse semantics from foundations",
+          "status": "pending"
+        },
+        {
+          "description": "Identity normal form and eventual separation",
+          "status": "pending"
+        },
+        {
+          "description": "Computable common-band/root and least-counterexample bounds",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:sparse",
+          "kind": "lemma",
+          "label": "lem:sparse",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 120,
+          "statement_latex": "[Sparse peaks]\\label{lem:sparse}\nFor an infinite input of norm $t\\ge2$, write $Z=f^L(t)=f(s)$ as in (1.3).\nThen $0<L\\le s-1$, and\n\\[\n           Z<\\psi(\\alpha)=Z+L<2Z<f(s+1).             \\tag{1.6}\n\\]\nDistinct peaks $f(s)$ and $f(u)$ with $u<s$ satisfy $f(u)\\le f(s-1)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:roots",
+          "kind": "lemma",
+          "label": "lem:roots",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 158,
+          "statement_latex": "[Orbit cancellation at roots]\\label{lem:roots}\nCall a natural number an $f$-root if it is outside $\\operatorname{range}(f)$.\nIf infinite inputs $\\alpha,\\beta$ have root norms $t,u$ and equal peaks,\nthen $\\alpha=\\beta$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:thm:identity",
+          "kind": "theorem",
+          "label": "thm:identity",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 173,
+          "statement_latex": "[Identity normal form]\\label{thm:identity}\nFor $E,F\\in\\mathcal P_d$, the identity $E=F$ holds at every positive\nvaluation exactly when $\\NF(E)=\\NF(F)$. If the forms differ, one can\neffectively specify a positive countervaluation of the form\n\\[\n           x_i=w_i(f(k)+1),\\qquad w_i,k\\in\\NN.        \\tag{2.2}\n\\]\nConsequently universal equality in $\\mathcal P_d$ is decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:oneinput",
+          "kind": "lemma",
+          "label": "lem:oneinput",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 262,
+          "statement_latex": "[Common-band or root separation]\\label{lem:oneinput}\nFor any finite collection of normal forms in $\\mathcal P_1$, a computable\n$N$ has the following properties for every $x\\ge N$.\nEvery affine open atom input lies in $[x,f(x))$. Every nonlinear atom input\nis a root strictly greater than $f(x)$. Equal peaks of two tags force equal\nindices and equal argument values.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:thm:zeros",
+          "kind": "theorem",
+          "label": "thm:zeros",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 288,
+          "statement_latex": "[Effective finite zeros]\\label{thm:zeros}\nGiven $E,F\\in\\mathcal P_1$, one computes $N\\ge1$ such that either their\nnormal forms agree, or $E(x)\\ne F(x)$ for every $x\\ge N$. In the latter\ncase their equality set is the computable finite set obtained by exact\nevaluation at $1,\\ldots,N-1$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:cells",
+          "kind": "lemma",
+          "label": "lem:cells",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 306,
+          "statement_latex": "[Range cells and signed rows]\\label{lem:cells}\nThe following assertions have effective tail bounds.\nFor a nonlinear positive expression $E$, let $Z_i$ be its displayed open\ntag peaks, and $Y=\\max_i Z_i=f(s)$. Then\n\\[\n              Y<E<f(s+1),\\qquad E<h_\\omega(Y).        \\tag{3.1}\n\\]\nFor a value $V\\in\\operatorname{range}(f)$ on that tail,\n\\[\n V<E\\ \\Longleftrightarrow\\ (\\exists i\\ Z_i\\ge V),\\qquad\n V>E\\ \\Longleftrightarrow\\ (\\forall i\\ Z_i<V).       \\tag{3.2}\n\\]\nAfter cancellation of identical tags in a signed row, its eventual\npointwise sign is the coefficient sign of its greatest remaining peak,\nonce those peaks have been ordered. If no tags remain, the row is affine.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:prefix",
+          "kind": "lemma",
+          "label": "lem:prefix",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 356,
+          "statement_latex": "[Exact prefix splitting]\\label{lem:prefix}\nLet $\\kappa$ be a fixed Cantor prefix and let $\\eta$ be a nonzero limit\nwhose leading monomial is at most the least monomial of $\\kappa$;\nthe zero prefix is also allowed. In particular one may take\n$\\kappa=\\pi k$ and $\\operatorname{lead}(\\eta)\\le\\pi$.\nFor $b\\ge c=\\norm(\\kappa)$,\n\\[\n M(\\kappa+\\eta,b)=\\kappa+M(\\eta,b-c).                \\tag{4.2}\n\\]\nA descent above $\\kappa$ reaches a state $\\kappa+n$ with finite remainder\nbefore passing below $\\kappa$. During that segment the remainder's exact\nnorm control is\n\\[\n                   G_c(v)=f(c+v)-c\\ge f(v)>v.         \\tag{4.3}\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:counts",
+          "kind": "lemma",
+          "label": "lem:counts",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 384,
+          "statement_latex": "[Ordered controls and counts]\\label{lem:counts}\nFor increasing integer controls $g\\le h$, both strictly exceeding their\ninput, let $L_g,L_h$ be the respective norm-maximal descent counts.\nThen\n\\[\n \\alpha\\le\\beta,quad\\norm(\\alpha)\\le\\norm(\\beta)\n       \\quad\\Longrightarrow\\quad L_g(\\alpha)\\le L_h(\\beta). \\tag{4.4}\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:peakword",
+          "kind": "lemma",
+          "label": "lem:peakword",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 410,
+          "statement_latex": "[Exact peak word]\\label{lem:peakword}\nFor each fixed limit $\\lambda$, one computes a finite word $W_\\lambda$ of\nprincipal kernels such that the peak of $h_\\lambda(A)$ is exactly\n\\[\n             Z_{\\lambda,A}=W_\\lambda(\\norm(\\lambda)+A). \\tag{4.5}\n\\]\nThe omitted count is positive: $h_\\lambda(A)=Z_{\\lambda,A}+D_{\\lambda,A}$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:stage",
+          "kind": "lemma",
+          "label": "lem:stage",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 436,
+          "statement_latex": "[One-stage reserve consumer]\\label{lem:stage}\nLet $\\rho<\\pi m$ be a fixed nonzero limit, $m\\ge1$, and begin an ordinary\ndescent at $A=\\pi(k+m)+n$, of norm $X\\ge x\\ge\\norm(\\rho)$.\nAt its first cut $\\pi k+n'$ with finite remainder,\n\\[\n        n'>J_\\rho(x):=f^{D_\\rho(x)}(x)+D_\\rho(x),    \\tag{5.1}\n\\]\nwhere $D_\\rho(x)$ is the count from\n$\\rho+(x-\\norm(\\rho))$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:reserve",
+          "kind": "lemma",
+          "label": "lem:reserve",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 464,
+          "statement_latex": "[Effective profile reserve]\\label{lem:reserve}\nFrom a lower profile $P$ below $L>\\omega$ one computes a nonempty word\n\\[\n F=h_{\\rho_l}\\circ\\cdots\\circ h_{\\rho_1},\\quad\n F(z)>P(z)\\ (z\\ge z_0),\\quad\n R=\\sum_j(\\norm(\\rho_j)+1),\\quad\n H=\\max_j\\norm(\\operatorname{lead}(\\rho_j)),          \\tag{5.2}\n\\]\nwith every $\\rho_j<L$. If $\\pi\\ge\\omega$ is principal and at least every\ndisplayed leading monomial, a descent from $\\pi R+n$, $n\\ge z\\ge z_0$,\nhas terminal norm greater than $P(z)$. The same conclusion holds with any\nadditional permanent numerical mass $c$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:direct",
+          "kind": "lemma",
+          "label": "lem:direct",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 499,
+          "statement_latex": "[Direct kernel growth]\\label{lem:direct}\nFor fixed $L>\\omega$ principal and fixed lower profile $P$, one computes\n$T$ such that, for $t\\ge T$ and every genuine mass $0\\le c\\le t-\\norm(L)$,\n\\[\n                         \\KK Lc(t)>P(t).             \\tag{5.3}\n\\]\nAlso, $\\KK\\pi c(t)\\le h_\\pi(t)$ on its genuine domain.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:thm:adjacent",
+          "kind": "theorem",
+          "label": "thm:adjacent",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 523,
+          "statement_latex": "[Cross-mass strict-input separation]\\label{thm:adjacent}\nFor a fixed principal $L>\\omega$ and fixed lower profile $P$ with reserve\ndata (5.2), put\n\\[\n              T=\\max(4,R+5,z_0,\\norm L,H).            \\tag{6.1}\n\\]\nFor $t\\ge T$, $0\\le c\\le t+1-\\norm L$, and\n$0\\le e\\le t-\\norm L$,\n\\[\n       \\KK Lc(t+1)>P(\\KK Le(t)+\\EE Le(t)).            \\tag{6.2}\n\\]\nThere is no ordering requirement on $c,e$. More generally the same\nconclusion holds with any $u>t$ and any mass genuine at $u$ on the left.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:thm:limitmass",
+          "kind": "theorem",
+          "label": "thm:limitmass",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 599,
+          "statement_latex": "[Limit-exponent mass separation]\\label{thm:limitmass}\nLet $L=\\omega^\\beta$ with $\\beta$ a nonzero limit. For a fixed lower\nprofile $P$ and data (5.2), put\n\\[\n           T=\\max(4,R+4,z_0,\\norm L+1,H).            \\tag{6.5}\n\\]\nFor $t\\ge T$ and $0\\le c<e\\le t-\\norm L$,\n\\[\n                \\KK Lc(t)>P(\\KK Le(t)+\\EE Le(t)).    \\tag{6.6}\n\\]\nConsequently the lexicographically larger pair $(\\text{input},-\\text{mass})$\ngives domination against every fixed lower profile, on an effective\ngenuine tail. Equal pairs give equal values.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:successor",
+          "kind": "lemma",
+          "label": "lem:successor",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 658,
+          "statement_latex": "[Exact successor cut and count cocycle]\\label{lem:successor}\nLet $\\theta=\\omega^\\gamma\\ge\\omega$, $L=\\theta\\omega$, and\n$w=\\norm\\theta$. On the common genuine domain $t\\ge c+w+\\norm L$,\n\\begin{align}\n \\KK Lc(t)&=\\KK\\theta c(\\KK L{c+w}(t)),              \\label{eq:cut}\\\\\n \\EE Lc(t)&=\\EE L{c+w}(t)\n        +\\EE\\theta c(\\KK L{c+w}(t)).                \\label{eq:cocycle}\n\\end{align}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:lem:small",
+          "kind": "lemma",
+          "label": "lem:small",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 684,
+          "statement_latex": "[Small principal kernels]\\label{lem:small}\nOn their genuine domains,\n\\[\n \\KK\\omega c(t)=f(t),\\quad\\EE\\omega c(t)=1,\\qquad\n \\EE{\\omega^2}c(t)=f(t)/2-\\lceil c/2\\rceil+1.         \\tag{7.4}\n\\]\nThus $\\omega^2$ kernels at the same input have exactly the mass classes\n$\\lceil c/2\\rceil$, ordered in reverse. The control has even values.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:thm:mass",
+          "kind": "theorem",
+          "label": "thm:mass",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 702,
+          "statement_latex": "[Strict mass order above degree two]\\label{thm:mass}\nFor every fixed principal $L\\ge\\omega^3$, a computable $T_L$ satisfies\n\\[\n t\\ge T_L,quad0\\le c<e\\le t-\\norm L\n                 \\quad\\Longrightarrow\\quad\\KK Lc(t)>\\KK Le(t). \\tag{7.5}\n\\]\nFor a nonzero limit exponent take $T_L=\\max(7,\\norm L+1)$.\nFor $L=\\theta\\omega$, $\\theta\\ge\\omega^2$, $w=\\norm\\theta$, take\n\\[\n T_L=\\max(4,\\norm L,2w,\\max(8,w),S_\\theta),          \\tag{7.6}\n\\]\nwhere $S_\\theta=0$ at $\\theta=\\omega^2$ and otherwise $S_\\theta=T_\\theta$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:thm:sign",
+          "kind": "theorem",
+          "label": "thm:sign",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 763,
+          "statement_latex": "[Effective eventual signs]\\label{thm:sign}\nGiven two expressions in these sorts, one computes a sign\n$\\sigma\\in\\{-1,0,1\\}$ and $N\\ge1$ such that their difference has sign\n$\\sigma$ for every $x\\ge N$. In particular this holds for every pair in\n$\\mathcal P_1$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:cor:boolean",
+          "kind": "corollary",
+          "label": "cor:boolean",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 933,
+          "statement_latex": "[One-input quantified comparison]\\label{cor:boolean}\nFor any finite Boolean combination of equality, weak-order and strict-order\natoms between expressions of $\\mathcal P_1$, each of its existential and\nuniversal closures over $x\\in\\NN$ is decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:cor:sourceeq",
+          "kind": "corollary",
+          "label": "cor:sourceeq",
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 961,
+          "statement_latex": "[Ground-open source equality]\\label{cor:sourceeq}\nUniversal equality of literal canonical assignment vectors is decidable\nfor any original source pair whose free names all have ground type.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "07-collapse-equality-and-one-variable:corollary-21",
+          "kind": "corollary",
+          "label": null,
+          "file": "07-collapse-equality-and-one-variable/paper.tex",
+          "line": 988,
+          "statement_latex": "[Whole one-ground-name source comparison]\nEvery finite Boolean combination of these pointwise vector equality,\nweak-comparison and strict-comparison atoms is decidable under one\nexistential or universal quantifier over its shared positive ground\ncoordinate. Arbitrary original internal types and output levels are allowed.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "08-multivariate-collapse-comparison",
+      "owner": "ordinal-comparison",
+      "status": "in-progress",
+      "source_files": [
+        "08-multivariate-collapse-comparison/paper.tex",
+        "08-multivariate-collapse-comparison/preamble.tex",
+        "08-multivariate-collapse-comparison/references.tex"
+      ],
+      "numbered_statement_count": 18,
+      "dependency_obligations": [
+        {
+          "description": "Actual typed source inputs and canonical reconstruction",
+          "status": "pending"
+        },
+        {
+          "description": "Snyatkov first-order arithmetic decidability supplier",
+          "status": "pending"
+        },
+        {
+          "description": "Positive finite/polynomial/common-head and mixed-sign reductions",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "08-multivariate-collapse-comparison:lem:growth",
+          "kind": "lemma",
+          "label": "lem:growth",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 102,
+          "statement_latex": "[Growth]\\label{lem:growth}\nEach $F_j$ is recursive and strictly increasing, with $F_j(n)\\ge2^n$.\nFor $j\\ge0$,\n\\[\n F_{j+1}(n+1)\\ge2^{F_{j+1}(n)+1}.\n\\]\nConsequently $f(z+1)\\ge(A+2)f(z)$ whenever $z\\ge A\\ge0$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:residues",
+          "kind": "lemma",
+          "label": "lem:residues",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 120,
+          "statement_latex": "[Effective constant residues]\\label{lem:residues}\nFor every $m\\ge1$ one can compute $r_m\\in[0,m)$ such that\n\\[\n F_j(n)\\equiv r_m\\pmod m\\quad(j\\ge1,\\ n\\ge m).\n\\]\nIn particular $f(n)\\equiv r_m\\pmod m$ for $n\\ge\\max(0,m-100)$.\nFor $s\\ge1$, $j\\ge2$, this can be strengthened to\n\\begin{equation}\\label{eq:envelope}\n m\\le 2^{2^s}\\quad\\Longrightarrow\\quad F_j(s)\\equiv r_m\\pmod m.\n\\end{equation}\nIf $B=f(u)$ and $m\\le2^{2^B}$, then also $f(u+1)\\equiv r_m\\pmod m$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:snyatkov",
+          "kind": "theorem",
+          "label": "thm:snyatkov",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 156,
+          "statement_latex": "[Snyatkov's arithmetic supplier]\\label{thm:snyatkov}\nThe first-order theory $\\operatorname{Th}(\\N;0,1,+,<,f)$, with the exact\nfunction in \\eqref{eq:f}, is decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:finite-source",
+          "kind": "theorem",
+          "label": "thm:finite-source",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 202,
+          "statement_latex": "[Finite-coefficient source comparison]\\label{thm:finite-source}\nTake two original well-typed $T$ terms of the same type with ground free\nvariables. Compute their canonical assignments. Suppose that at every\nzeroth-coordinate collapse $\\psi(\\omega\\otimes c+g)$ its closed coefficient\n$c$ has finite ordinal value. Their universal weak, WW-strict, and equality\ncomparisons are decidable. Every recursor-free such term passes this test,\nwith no bound on its internal types.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+          "kind": "lemma",
+          "label": "lem:kernel-recursion",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 265,
+          "statement_latex": "[Exact block recursion]\\label{lem:kernel-recursion}\nOne has\n\\[\n E^1_c=1,\\quad X^1_c=f,\\qquad\n E^2_c(t)=f(t)/2-\\lceil c/2\\rceil+1.\n\\]\nDefine\n\\begin{equation}\\label{eq:V}\n V_j(t)=f^{\\,f(t)/2+j+1}(t).\n\\end{equation}\nThen $X^2_{c,j}=V_{j-\\lceil c/2\\rceil}$. For $d\\ge2$, on a computable tail,\n\\begin{align}\n X^d_{c,j}&=X^{d-1}_{c,j}\\circ X^d_{c+d},\\label{eq:Xrec}\\\\\n E^d_c&=E^{d-1}_c\\circ X^d_{c+d}+E^d_{c+d}.\\label{eq:Erec}\n\\end{align}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:uniform",
+          "kind": "lemma",
+          "label": "lem:uniform",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 314,
+          "statement_latex": "[Uniform kernel separation]\\label{lem:uniform}\nPut $C_d=1000d^2$, $T_3=16$, and for $d\\ge4$ put\n$T_d=\\max(T_{d-1},100C_{d-1}+100d)$. For $d\\ge3$, $c,e\\ge0$, signed\n$j,k$, and $R\\ge0$, suppose\n\\begin{equation}\\label{eq:region}\n t\\ge T_d,\\qquad\n f(t)\\ge C_d(c+e+|j|+|k|+R+1).\n\\end{equation}\nThen the depths are defined and at least $f(t)$, and\n\\begin{align*}\n X^d_{c,j}(t+1)&>f^R(X^d_{e,k}(t)),\\\\\n c<e\\quad&\\Longrightarrow\\quad\n X^d_{c,j}(t)>f^R(X^d_{e,k}(t)).\n\\end{align*}\nAt equal input and equal $c$, exact order is order of $j$. On a common\ncomputed tail, equality of two rank-$d$ values occurs exactly when input,\n$c$, and $j$ are identical.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:counter",
+          "kind": "lemma",
+          "label": "lem:counter",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 452,
+          "statement_latex": "[Counter expansion and collision]\\label{lem:counter}\nOn an effective tail,\n\\begin{equation}\\label{eq:counter-expand}\n E^r_c(t)=\\frac H2+1-\\lceil c/2\\rceil\n                  +\\sum_{h=3}^r E^h_{c+h}(A_h),\n \\qquad \\frac H2<E^r_c(t)<\\frac{3H}{4}.\n\\end{equation}\nSuppose counters of ranks $r\\ge s\\ge3$ have equal leaders. Then they\nhave the same prefix index $c$. If $r=s$ their whole values are equal;\nif $r>s$ the smaller-rank input is the corresponding $A_s$, and\n\\begin{equation}\\label{eq:collision}\n E^r_c(t)-E^s_c(A_s)=\\sum_{h=s+1}^r E^h_{c+h}(A_h).\n\\end{equation}\nEvery counter introduced on the right has rank strictly greater than $s$.\nFor distinct leaders, counter order agrees with leader order. Equal\nleaders are ordered by counter rank, with equality at equal rank.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:kernel-residues",
+          "kind": "lemma",
+          "label": "lem:kernel-residues",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 496,
+          "statement_latex": "[Effective residues of kernels and counters]\\label{lem:kernel-residues}\nFor each fixed $d,c,j,m$, both $X^d_{c,j}$ and $E^d_c$ have an effectively\ncomputable constant residue modulo $m$ on a computable tail. The $X$\nresidue is $r_m$. A valid counter residue is\n\\begin{equation}\\label{eq:E-residue}\n E^d_c(t)\\equiv\n p_d\\bigl((r_{Q_d}-c)\\bmod Q_d\\bigr)\\pmod m,\n \\qquad Q_d=d!m^{d-1},\n\\end{equation}\nwhere $p_d(n)$ counts partitions of $n$ into parts at most $d$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:guards",
+          "kind": "lemma",
+          "label": "lem:guards",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 548,
+          "statement_latex": "[Ordered maximum-variable guards]\\label{lem:guards}\nFor two words $A(x),B(y)$ and the guard $x\\ge y$, an effective common\ntail permits their three-way comparison to be rewritten as a finite Boolean\ncombination in which $x$ occurs only linearly and words are applied only\nto the remaining variable $y$. For two words at the \\emph{same} raw\nvariable the corresponding tail comparison is effectively decided.\nAll thresholds and newly generated words are computed before the tail is\nused.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:row",
+          "kind": "lemma",
+          "label": "lem:row",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 615,
+          "statement_latex": "[Ranked cancellation]\\label{lem:row}\nFor a finite collection of word-linear rows and a chosen maximal raw\nvariable $x$, one can compute a tail and finite guarded cases in which\neach row either has a known strict sign or is exactly linear in $x$.\nThe guards can themselves be made linear in $x$ by\nLemma~\\ref{lem:guards}. No correlation between word values is discarded.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:existential",
+          "kind": "theorem",
+          "label": "thm:existential",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 682,
+          "statement_latex": "[Closed existential word arithmetic]\\label{thm:existential}\nThe existential closure of every Boolean combination of word-linear row\ncomparisons and fixed-modulus congruences in the finite-degree language\nabove is decidable, on its explicit word domains.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:graphs",
+          "kind": "theorem",
+          "label": "thm:graphs",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 734,
+          "statement_latex": "[Polynomial collapse graphs]\\label{thm:graphs}\nFor each fixed nonzero polynomial limit $\\lambda<\\omega^\\omega$, the graph\n$y=h_\\lambda(n)$ is effectively expressible as a finite disjunction of\nword-linear equations in $n,y$, with explicit domains and exact finite\nexceptions. One finite degree bound suffices for each finite collection of\nsuch graphs. Arbitrary fixed nesting and addition of these functions admit\na total functional existential graph translation.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:leveltwo",
+          "kind": "theorem",
+          "label": "thm:leveltwo",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 769,
+          "statement_latex": "[Canonical source comparison through level two]\\label{thm:leveltwo}\nUniversal weak, WW-strict, and equality comparison is decidable for original\ncanonical $T$ assignments with ground free variables and maximum internal\ntype level at most two. The maximum includes every subterm and binder type,\nnot merely the result and free-variable types.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:endpoints",
+          "kind": "lemma",
+          "label": "lem:endpoints",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 807,
+          "statement_latex": "[Sparse endpoint comparison]\\label{lem:endpoints}\nFor a fixed nonzero limit $\\lambda$, $J_\\lambda$ is strictly increasing.\nIts distinct norm inputs have distinct terminal endpoints, ordered in the\nsame way. For any two distinct endpoints $Z<W$ one has\n\\begin{equation}\\label{eq:sparse}\n W\\ge2^{Z+1}.\n\\end{equation}\nEvery value with endpoint $Z$ lies strictly between $Z$ and $2Z$ and below\nthe next value of $f$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:common",
+          "kind": "theorem",
+          "label": "thm:common",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 845,
+          "statement_latex": "[Common-head layers]\\label{thm:common}\nFor $E,F\\in\\mathcal A_r$, each pointwise relation $E<F$, $E=F$, $E>F$\nhas an effectively constructed formula in $(\\N;0,1,+,<,f)$ with the same\nraw free variables and exactly the same truth at every positive valuation.\nHence arbitrary Boolean and quantified combinations of certified comparisons\nare decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:lem:head-window",
+          "kind": "lemma",
+          "label": "lem:head-window",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 906,
+          "statement_latex": "[Head order in a strict interval]\\label{lem:head-window}\nLet $\\lambda>\\mu$ be nonzero fixed limits. If\n$t\\ge\\max(N(\\lambda),N(\\mu)+2)$ and\n$N(\\mu)\\le u<f(t)$, then $J_\\lambda(t)>J_\\mu(u)$ and their endpoints\ndiffer. Consequently, if finitely many norm inputs $t_i$ have minimum\n$s\\ge\\max_iN(\\lambda_i)+2$ and $\\max_i t_i<f(s)$, their outputs are\nordered lexicographically by (ordinal head, norm input). Equality requires\nequality of both, and different output blocks have distinct sparse endpoints.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:balanced",
+          "kind": "theorem",
+          "label": "thm:balanced",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 961,
+          "statement_latex": "[Balanced comparison]\\label{thm:balanced}\nFor two expressions with one finite balanced certificate, their three-way\npointwise comparison has an effectively constructed base formula in\n$(\\N;0,1,+,<,f)$ with exactly the same free variables. Arbitrary Boolean\nand quantified combinations of such comparisons are decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "08-multivariate-collapse-comparison:thm:single-core",
+          "kind": "theorem",
+          "label": "thm:single-core",
+          "file": "08-multivariate-collapse-comparison/paper.tex",
+          "line": 1053,
+          "statement_latex": "[Arbitrary single-core rows]\\label{thm:single-core}\nFor the signed row\n\\begin{equation}\\label{eq:single-core}\n Q(\\vec x)=K+rE(\\vec x)+\n       \\sum_i q_i h_{\\lambda_i}(a_iE(\\vec x)+c_i),\n \\quad a_i\\ge1,\\ c_i\\ge0,\n\\end{equation}\nwith fixed integer $K,r,q_i$ and fixed nonzero limit heads, each sign\npredicate $Q<0$, $Q=0$, $Q>0$ has an effectively computable finite\nPresburger formula in the original raw variables. Thus universal comparison\nof these rows needs no arithmetic decision theorem about $f$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "09-canonical-source-expressivity",
+      "owner": "ordinal-comparison",
+      "status": "in-progress",
+      "source_files": [
+        "09-canonical-source-expressivity/paper.tex",
+        "09-canonical-source-expressivity/preamble.tex",
+        "09-canonical-source-expressivity/source-realization.tex",
+        "09-canonical-source-expressivity/hardness.tex",
+        "09-canonical-source-expressivity/references.tex"
+      ],
+      "numbered_statement_count": 21,
+      "dependency_obligations": [
+        {
+          "description": "Literal source constructors and shared original valuations",
+          "status": "pending"
+        },
+        {
+          "description": "Boolean and equality compiler with full norm checks",
+          "status": "pending"
+        },
+        {
+          "description": "Named functional sources and source-realization theorem",
+          "status": "pending"
+        },
+        {
+          "description": "Narendran/Dong nonnegative-polynomial-semiring undecidability supplier",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "09-canonical-source-expressivity:lem:addition",
+          "kind": "lemma",
+          "label": "lem:addition",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 74,
+          "statement_latex": "[Addition and small constants]\\label{lem:addition}\nNatural addition $n_a+n_b=n_c$ is defined by the two source equations\n\\[\n e(b,0)=e(0,d),\\qquad e(a,d)=e(c,0),\n\\]\nwith one fresh positive raw witness $d$.  Arithmetic one has a constant-size\nsource-equation definition.  Every binary literal $k$ has an addition DAG\nof size $O(\\log(k+1))$ once zero and one are available.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:sort",
+          "kind": "lemma",
+          "label": "lem:sort",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 100,
+          "statement_latex": "[Superincreasing pair coding]\\label{lem:sort}\nLet $q(n)=F_S(n)=\\Phi(n+4)$.  Then\n\\[\n q(a)+q(b)=q(c)+q(d)\n \\quad\\Longleftrightarrow\\quad\\{a,b\\}=\\{c,d\\}\n\\]\nas multisets.  Consequently sorting two naturals has a primitive-positive\ndefinition using addition and the actual $S$ graph.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:collision",
+          "kind": "lemma",
+          "label": "lem:collision",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 124,
+          "statement_latex": "[Six-eraser collision detector]\\label{lem:collision}\nFor arbitrary actual ground sources $P,Q$, put\n\\[\n L=e(e(P,P),e(Q,Q)),\\qquad R=e(e(P,Q),e(Q,P)).\n\\]\nAt every joint valuation $L_0\\ge R_0$, with equality exactly when\n$P_0=Q_0$.  Otherwise $L_0-R_0\\ge2$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:aggregate",
+          "kind": "lemma",
+          "label": "lem:aggregate",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 145,
+          "statement_latex": "[Conjunction without cancellation]\\label{lem:aggregate}\nA finite conjunction of actual ground-source equations can be transformed\ninto ground sources $L,R$ with $L_0\\ge R_0$ everywhere, equality precisely\nwhen every equation holds, and otherwise gap at least two.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:compiler",
+          "kind": "theorem",
+          "label": "thm:compiler",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 161,
+          "statement_latex": "[One unconditional comparison]\\label{thm:compiler}\nEvery existential $\\Esrc$ sentence has a computably constructed ground-output\nstrict comparison, and one weak comparison, true precisely when the sentence\nis false.  All free variables of the resulting sources are ground.  Shared\ninputs and source leaves retain their valuations.  The added source DAG size\nis polynomial in the formula DAG, binary constants and supplied source DAGs.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:cor:ground-equivalence",
+          "kind": "corollary",
+          "label": "cor:ground-equivalence",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 209,
+          "statement_latex": "[Ground weak/strict equivalence]\\label{cor:ground-equivalence}\nOn all actual ground-output sources with ground free variables, universal\nweak and strict comparison are polynomial-DAG many-one interreducible.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:absolute",
+          "kind": "lemma",
+          "label": "lem:absolute",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 229,
+          "statement_latex": "[Absolute observer]\\label{lem:absolute}\nLet $T:\\rho$ have only ground free names $\\mathbf z$.  Its entire raw scalar\ngraph $v=\\can{T(\\mathbf z)}_0$ is existentially definable by actual ground-source\nobservations, addition and constants, with all shared names preserved.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:decision-equivalence",
+          "kind": "theorem",
+          "label": "thm:decision-equivalence",
+          "file": "09-canonical-source-expressivity/paper.tex",
+          "line": 259,
+          "statement_latex": "[Exact decision equivalence]\\label{thm:decision-equivalence}\nUniversal weak/strict canonical comparison on the full all-ground-free-variable\ndomain, its ground-output restriction, and unsatisfiability in $\\Esrc$ are\ncomputably equivalent.  Satisfiability uses answer complementation.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:one-unit",
+          "kind": "lemma",
+          "label": "lem:one-unit",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 8,
+          "statement_latex": "[One-name scalar elimination]\\label{lem:one-unit}\nLet $A:\\tau$ be an actual source, $h=\\can A$, $m=\\lv(\\tau)$, and let\n$X:\\sigma$ be one of its free functional names.  Put\n\\[\n n=\\lv(\\sigma)+1,\\quad d=2^n\\sum_{i=0}^m\\sz^X(h_i),\\quad\n P=(\\partial^X_0h_0)_0,\\quad R=h_0\\{X:=\\mathbf1\\},\\quad L=\\lambda X.A.\n\\]\nThe graph of the desired scalar $R$ has a finite positive-coefficient linear\ndefinition using scalar observations of actual sources without free $X$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:unit-elimination",
+          "kind": "theorem",
+          "label": "thm:unit-elimination",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 48,
+          "statement_latex": "[Finite unit-observation elimination]\\label{thm:unit-elimination}\nFor an actual source $A$ and a finite set of all its free functional names,\nthe absolute scalar after their common unit observation is existentially\ndefinable in $\\Esrc$, retaining all original shared ground inputs.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:affine-head",
+          "kind": "lemma",
+          "label": "lem:affine-head",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 83,
+          "statement_latex": "[Affine heads and their finite surplus]\\label{lem:affine-head}\nEvery functional context has an additive first-field tree with leaves $F_1$\nand whole $F$-free positive expressions.  At a selected collapse with head\n$h$, its tail is $F$-active whenever $h$ is active.  At common units there is\na finite $\\delta(h)\\ge0$ such that\n\\[\n (\\partial^F_1h)_1=h^*+\\delta(h).\n\\]\nThe surplus is zero only at the bare leaf $F_1$; a nonfinite $h^*$ has\n$\\delta(h)\\ge1$.  The output-two head partial is finite.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:carriers",
+          "kind": "lemma",
+          "label": "lem:carriers",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 112,
+          "statement_latex": "[Actual unary carriers]\\label{lem:carriers}\nEach selected nonfinite head has an actual unary carrier with that exact\nunit first field.  Its ground captures can be closed to zero without changing\nthe field, and its actual scalar is retained.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:reserve",
+          "kind": "lemma",
+          "label": "lem:reserve",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 128,
+          "statement_latex": "[Multiset accounting and ground transport]\\label{lem:reserve}\nFor every annotated scalar $q$ there are an actual-carrier multiset\n$\\mathcal M(q)$ and a finite $c(q)\\ge0$ with\n\\[\n (\\partial^F_0q)_1=\\sum_{V\\in\\mathcal M(q)}V_1+c(q),\\qquad\n d(q)=c(q)-3|\\mathcal M(q)|.\n\\]\nOn the generated active sources, $d\\ge1$; it is at least four except\npossibly at the bare functional source $F$.  Ground units preserve the\nmultiset and $d$, and a ground scalar partial preserves the multiset and\ndoes not decrease $d$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:chain",
+          "kind": "lemma",
+          "label": "lem:chain",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 177,
+          "statement_latex": "[One final abstraction]\\label{lem:chain}\nFor actual unary sources $V_j$ free of a fresh $x$,\n\\[\n \\can{\\lambda x.V_1(\\cdots(V_mx)\\cdots)}_1\n       =\\sum_{j=1}^m(V_{j,1}+3)+1.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:ground-construction",
+          "kind": "theorem",
+          "label": "thm:ground-construction",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 192,
+          "statement_latex": "[Original-budget ground-binder construction]\\label{thm:ground-construction}\nLet $P:o$ be $F$-active in the complete grammar, $B=\\lambda F.P$, and\nlet $C:\\sigma_k$ be an actual $F$-free caller.  Write $b$ for the second\nfield of the original full box $\\can B\\square\\can C$.\nThen $b=B_2$ is finite, $b\\ge4$, and at $\\mathcal N=2^b$ one effectively\nconstructs an actual unit-open unary $K$ with\n\\[\n \\mathcal N(B_1+C_1)=K_1+\\Delta,\\qquad \\Delta\\in\\N,\\quad\\Delta>0.\n\\]\nNo child construction certificate or enlargement of the original scale is\nassumed.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:head-graph",
+          "kind": "theorem",
+          "label": "thm:head-graph",
+          "file": "09-canonical-source-expressivity/source-realization.tex",
+          "line": 234,
+          "statement_latex": "[Whole-head graph from a paid certificate]\\label{thm:head-graph}\nSuppose actual sources $B,C,K$ and a finite original box $b$ supply\n$a=2^b(B_1+C_1)=K_1+\\Delta$ at common functional units, where\n$\\Delta\\ge0$ is finite and $K:o\\to o$ is unit open.  Then the complete\ngenuine graph of\n\\[\n J_\\xi(t)=\\psi(\\xi+t-\\norm(\\xi)),\\quad\n \\xi=\\omega\\otimes a,\\quad t\\ge\\norm(\\xi),\n\\]\nis effectively existentially definable in actual-source arithmetic.  It\nretains the original scalar/input wires of $B,C$ and every finite-prefix input.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:pair-compiler",
+          "kind": "lemma",
+          "label": "lem:pair-compiler",
+          "file": "09-canonical-source-expressivity/hardness.tex",
+          "line": 49,
+          "statement_latex": "[Signed polynomial pairs]\\label{lem:pair-compiler}\nEvery signed linear expression $D$ in ordinal unknowns with coefficients\nin $\\mathbb Z[\\omega]$ has effectively constructed actual $A_D,B_D:\\tau$\nwhose first-coordinate difference is $2^kD$ for a finite $k$.\nAll free functional variables have type $\\tau$, and internal types have\nlevel at most two.  Differences are taken only in the signed Cantor-monomial\ngroup; each of the two source coordinates remains a positive ordinal.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:functional-detector",
+          "kind": "lemma",
+          "label": "lem:functional-detector",
+          "file": "09-canonical-source-expressivity/hardness.tex",
+          "line": 88,
+          "statement_latex": "[Alignment and a full-vector detector]\\label{lem:functional-detector}\nThe condition $\\can A_1=\\can B_1$ is equivalent to existence of two fresh\npositive ground inputs making the full canonical vectors of\n\\[\n A'=(\\lambda t:o.A)z,\\qquad B'=(\\lambda t:o.B)w\n\\]\nequal.  Full-vector equality of any actual pair of type $\\tau$ can in turn\nbe detected by ground sources $L,R$ satisfying $L_0\\ge R_0$, with equality\nexactly at vector equality and otherwise gap at least two.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:functional-hardness",
+          "kind": "theorem",
+          "label": "thm:functional-hardness",
+          "file": "09-canonical-source-expressivity/hardness.tex",
+          "line": 160,
+          "statement_latex": "[Standard-control functional-input undecidability]\n\\label{thm:functional-hardness}\nFull universal canonical weak comparison and strict comparison are\nundecidable already for ground output, free-variable levels at most one,\nand internal levels at most two.  The reduction at this level uses finitely\nmany comparison queries.  A computable single-query reduction from the\nsame polynomial-system unsatisfiability problem is available with internal\nlevel at most three.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:lem:perturbed-control",
+          "kind": "lemma",
+          "label": "lem:perturbed-control",
+          "file": "09-canonical-source-expressivity/hardness.tex",
+          "line": 245,
+          "statement_latex": "[Control properties]\\label{lem:perturbed-control}\nThe function $\\Gamma_b$ is primitive recursive, agrees with $\\Phi$ on\n$[0,b]$, and satisfies\n\\[\n 0\\le\\Gamma_b(n)-\\Phi(n)\\le1,\\quad\n \\Phi(n)\\le\\Gamma_b(n)<\\Phi(n+1),\\quad\n \\Gamma_b(n+1)>4\\Gamma_b(n).\n\\]\nIt has the additive margin\n$\\Gamma_b(v+a)\\ge\\Gamma_b(v)+2a$ for $a\\ge1$, is eventually bounded\nby $F_6$, and $\\Gamma_b(n)/\\Phi(n)\\to1$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "09-canonical-source-expressivity:thm:control-hardness",
+          "kind": "theorem",
+          "label": "thm:control-hardness",
+          "file": "09-canonical-source-expressivity/hardness.tex",
+          "line": 280,
+          "statement_latex": "[Ground hardness within distance one]\\label{thm:control-hardness}\nFor every $b$, universal canonical weak comparison and strict comparison\nat the one fixed control $\\Gamma_b$ are $\\Pi^0_1$-complete already on\nground-output sources having only ground free names and ground binders,\nusing only the prime constants $0,S$, with internal levels at most one.\nMoreover $\\Gamma_b(n)\\bmod2$ is not eventually periodic.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "10-collapse-descent-and-modular-counts",
+      "owner": "ordinal-comparison",
+      "status": "in-progress",
+      "source_files": [
+        "10-collapse-descent-and-modular-counts/paper.tex",
+        "10-collapse-descent-and-modular-counts/preamble.tex",
+        "10-collapse-descent-and-modular-counts/references.tex"
+      ],
+      "numbered_statement_count": 15,
+      "dependency_obligations": [
+        {
+          "description": "Controlled descent and complete count, not just fixed-budget toy counts",
+          "status": "pending"
+        },
+        {
+          "description": "Restricted-partition generating functions and sufficient periods",
+          "status": "pending"
+        },
+        {
+          "description": "Full Cartier observer and exact minimal period proof",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "10-collapse-descent-and-modular-counts:prop:complete",
+          "kind": "proposition",
+          "label": "prop:complete",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 121,
+          "statement_latex": "[Complete-count identity]\\label{prop:complete}\nThe descent terminates and\n\\[\n Z_\\lambda(t)=f^{\\,\\tau_\\lambda(t)}(t),\\qquad\n J_\\lambda(t)=Z_\\lambda(t)+\\tau_\\lambda(t).\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:thm:envelope",
+          "kind": "theorem",
+          "label": "thm:envelope",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 148,
+          "statement_latex": "[Uniform residue envelopes]\\label{thm:envelope}\nThere is an effective function $m\\mapsto r_m\\in\\{0,\\ldots,m-1\\}$ such\nthat:\n\\begin{enumerate}\n\\item $f(x)\\equiv r_m\\pmod m$ for $x\\ge m$;\n\\item for $s\\ge1$, $j\\ge2$ and $m\\le2^{2^s}$,\n      $F_j(s)\\equiv r_m\\pmod m$;\n\\item if $B=f(u)$, then\n      $f(u+1)\\equiv r_m\\pmod m$ for every $m\\le2^{2^B}$.\n\\end{enumerate}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:fixed",
+          "kind": "lemma",
+          "label": "lem:fixed",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 207,
+          "statement_latex": "[A fixed-budget count]\\label{lem:fixed}\nFix a nonnegative retained mass $c$ and take $S\\ge c+d+1$.\nStart the suffix at $\\omega^d$ with any finite tail of total norm\n(including $c$) at most $S$. At every replacement spend the constant\nsuffix budget $S-c$ and stop when the suffix is finite. The number of\nreplacements is $p_d(S-c)$. When $c=\\norm(\\pi)$ for a retained\nCNF prefix $\\pi$ of least exponent at least $d$, this is precisely\nthe corresponding segment starting at $\\pi+\\omega^d$ plus that tail.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:period",
+          "kind": "lemma",
+          "label": "lem:period",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 235,
+          "statement_latex": "[A sufficient partition period]\\label{lem:period}\nFor every $d,m\\ge1$, put $Q_d=d!m^{d-1}$. Then\n\\[\n             p_d(n+Q_d)\\equiv p_d(n)\\pmod m\\quad(n\\ge0).\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:thm:transfer",
+          "kind": "theorem",
+          "label": "thm:transfer",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 267,
+          "statement_latex": "[Congruent-budget transfer]\\label{thm:transfer}\nConsider deletion of one suffix block $\\omega^d$, with retained\nnumerical mass $c\\ge0$ and initial total norm at least $c+d+1$,\nunder budgets at least the current total norm. Suppose\nevery budget used in this segment is congruent to one integer $S$\nmodulo $Q_d=d!m^{d-1}$, where $S\\ge c$. Then its complete segment\ncount is congruent to $p_d(S-c)$ modulo $m$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:prop:omega-block",
+          "kind": "proposition",
+          "label": "prop:omega-block",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 312,
+          "statement_latex": "[An actual $\\omega^\\omega$ block]\\label{prop:omega-block}\nLet $\\Omega=\\omega^\\omega$. At a real suffix state $\\pi+\\Omega+n$, with $\\pi$ a retained CNF\nprefix (zero or of least exponent at least $\\omega$), and total norm $u$,\nassume $c=\\norm(\\pi)$, $c+3\\le u$, and\n$B=f(u)\\ge\\max(16,m)$. Put $C=f(u+1)$ and $d=B-c-1$.\nIf $H_c(u)$ counts the complete deletion of this $\\Omega$ copy,\nthen\n\\begin{equation}\\label{eq:omega-block}\n H_c(u)\\equiv1+p_{B-c-1}(C-c)\\pmod m.\n\\end{equation}\nIts output norm is still exactly $f^{H_c(u)}(u)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:entry",
+          "kind": "lemma",
+          "label": "lem:entry",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 353,
+          "statement_latex": "[The retained prefix at first entry]\\label{lem:entry}\nThe predecessor of this $\\Theta$ state is\n\\[\n \\Omega q+1,\\qquad q=(u-1)/3.\n\\]\nThe first $\\Omega$ copy deleted in this polynomial has retained\nprefix norm $e=u-4$ and total input norm $u$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:matrix",
+          "kind": "lemma",
+          "label": "lem:matrix",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 401,
+          "statement_latex": "[Exact state update]\\label{lem:matrix}\nFor $U\\in V_d$,\n\\[\n \\Lambda_b(U/A_d)=\\frac{\\Lambda_b(UA_d)}{A_d}.\n\\]\nThe updated numerator is again in $V_d$. In the coefficient basis its\nmatrix is\n$T_b[i,j]=[z^{2i+b-j}]A_d$, for $0\\le i,j<D$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:thm:observer",
+          "kind": "theorem",
+          "label": "thm:observer",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 418,
+          "statement_latex": "[Complete selected coefficient]\\label{thm:observer}\nIf $n=\\sum_{i<L}b_i2^i$, with bits read least significant first,\nthen\n\\[\n p_d(n)\\bmod2=e_0^{T}T_{b_{L-1}}\\cdots T_{b_0}e_0.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:observable",
+          "kind": "lemma",
+          "label": "lem:observable",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 437,
+          "statement_latex": "[All-continuation observability]\\label{lem:observable}\nFor any field $K$, polynomial $A$ with $A(0)=1$ and $\\deg A=D$,\nthe first $D$ coefficients of $U/A$ determine every $U$ of degree\nless than $D$. For the binary observer above, distinct numerator\nstates are distinguished by some continuation of length at most\n$\\lceil\\log_2 D\\rceil$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:local",
+          "kind": "lemma",
+          "label": "lem:local",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 469,
+          "statement_latex": "[Local rule]\\label{lem:local}\nFor a fixed pole $\\zeta$ and $b\\in K$,\n\\[\n \\mathcal C\\!\\left(\\frac{b\\,dz}{(z-\\zeta)^{2j}}\\right)=0,\\qquad\n \\mathcal C\\!\\left(\\frac{b\\,dz}{(z-\\zeta)^{2j+1}}\\right)\n       =\\frac{b^{1/2}\\,dz}{(z-\\zeta)^{j+1}}.\n\\]\nThe same definition gives\n$\\mathcal C(\\sum a_nz^n\\,dz)=\\sum a_{2n+1}^{1/2}z^n\\,dz$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:poles",
+          "kind": "lemma",
+          "label": "lem:poles",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 497,
+          "statement_latex": "[Removal of every higher pole]\\label{lem:poles}\nPut $\\mu=\\sum_{i=1}^d2^{\\nu_2(i)}$ and\n$a=\\lceil\\log_2\\mu\\rceil$. After $a$ Cartier applications to\na proper differential with denominator $A_d$, all surviving finite\npoles are simple. Its simple residues subsequently undergo inverse\nFrobenius at their fixed poles. No polynomial part is created.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:residue",
+          "kind": "lemma",
+          "label": "lem:residue",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 545,
+          "statement_latex": "[The actual residue formula]\\label{lem:residue}\nThe form $\\omega_e=z^{e-1}A_d(z)^{-1}\\,dz$ has a simple nonzero\nresidue at each primitive $q$-th root $\\zeta$, given by\n\\[\n b_\\zeta=\\frac{\\zeta^e}{A_{d-q}(\\zeta)}\n                 =\\zeta^{e-\\Delta}A_{m_0}(\\zeta).\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:lem:bounds",
+          "kind": "lemma",
+          "label": "lem:bounds",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 570,
+          "statement_latex": "[The bounds needed for the root count]\\label{lem:bounds}\nFor the actual linked inputs, $r\\ge96$, $\\Delta<r$, and\n\\[\n 0<\\Delta-2e<q,\\qquad\n \\varphi(q)>\\frac{2^r}{r+1}>2^{2r/3}\\Delta.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "10-collapse-descent-and-modular-counts:thm:actual-period",
+          "kind": "theorem",
+          "label": "thm:actual-period",
+          "file": "10-collapse-descent-and-modular-counts/paper.tex",
+          "line": 597,
+          "statement_latex": "[Exact actual residue-tuple period]\\label{thm:actual-period}\nThe tuple $(b_\\zeta)_{\\zeta\\ {\\rm primitive}\\ q}$ has exact\nFrobenius period $2r$. Every eventual period of the complete\nrational differential Cartier orbit of $\\omega_e$ is divisible\nby $2r=2(\\log_2 B-1)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "11-hyperreal-differentiation-domain",
+      "owner": "main",
+      "status": "in-progress",
+      "source_files": [
+        "11-hyperreal-differentiation-domain/paper.tex",
+        "11-hyperreal-differentiation-domain/preamble.tex"
+      ],
+      "numbered_statement_count": 6,
+      "dependency_obligations": [
+        {
+          "description": "Actual ultrafilter translation/idempotence and near-zero conditions",
+          "status": "checked"
+        },
+        {
+          "description": "Every-representative discontinuity obstruction",
+          "status": "checked"
+        },
+        {
+          "description": "Hamel-basis coordinate dichotomy and support-length witness",
+          "status": "pending"
+        },
+        {
+          "description": "Actual derivative domain and ultrapower field consequences",
+          "status": "pending"
+        },
+        {
+          "description": "Existence of admissible near-zero additive idempotent ultrafilters (nonvacuity supplier cited by the source paper)",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "11-hyperreal-differentiation-domain:thm:main",
+          "kind": "theorem",
+          "label": "thm:main",
+          "file": "11-hyperreal-differentiation-domain/paper.tex",
+          "line": 53,
+          "statement_latex": "[Universal properness]\\label{thm:main}\nLet $p$ be an additive idempotent ultrafilter on all subsets of $\\R$\nsuch that $(0,\\epsilon)\\in p$ for every $\\epsilon>0$. There is a function\n$f:\\R\\to(0,1]$ with the following properties.\n\\begin{enumerate}\n\\item For every $\\eta>0$, $\\{x:f(x)<\\eta\\}\\in p$.\n\\item For every $g:\\R\\to\\R$ with $\\{x:g(x)=f(x)\\}\\in p$, there is a set\n      $S_g\\in p$ at every point of which $g$ is discontinuous.\n\\end{enumerate}\nConsequently $[f]_p$ is a positive infinitesimal outside $\\mathcal D_p$,\nand $\\mathcal D_p\\ne\\R^{\\R}/p$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "11-hyperreal-differentiation-domain:prop:well-defined",
+          "kind": "proposition",
+          "label": "prop:well-defined",
+          "file": "11-hyperreal-differentiation-domain/paper.tex",
+          "line": 115,
+          "statement_latex": "\\label{prop:well-defined}\nIf $[f]_p=[g]_p$ and $D_f,D_g\\in p$, then $[f']_p=[g']_p$.\nMoreover, $\\mathcal D_p$ is a subfield of the ultrapower and\n$\\partial[f]_p=[f']_p$ is a derivation from it to the ultrapower.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "11-hyperreal-differentiation-domain:lem:obstruction",
+          "kind": "lemma",
+          "label": "lem:obstruction",
+          "file": "11-hyperreal-differentiation-domain/paper.tex",
+          "line": 144,
+          "statement_latex": "\\label{lem:obstruction}\nSuppose $f:\\R\\to(0,1]$ has this property: whenever $T\\in p$, $x\\in T^*$\nand $\\delta>0$, there exists\n\\[\n y\\in (T-x)\\cap(0,\\delta)\n \\quad\\text{such that}\\quad f(x+y)<f(x)/2.\n\\]\nThen every $g$ equivalent to $f$ is discontinuous at every point of a\n$p$-large set. In particular $[f]_p\\notin\\mathcal D_p$.",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.Ultrafilters.StatementChecks.fixed_persistent_discontinuity",
+          "frozen_comparator": {
+            "file": "LogicLineages/Ultrafilters/Targets.lean",
+            "sha256": "c370390ba1f97a52c34e212a93fe89a1352f16769ce90245a50be556e8c2de70",
+            "type": "LogicLineages.Ultrafilters.Targets.PersistentDiscontinuity"
+          },
+          "verification_receipt": "build-reports/1793248512746215813-2.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire every-representative discontinuity obstruction. The audited module also excludes large differentiability sets; the main witness construction is pending."
+        },
+        {
+          "id": "11-hyperreal-differentiation-domain:lem:push",
+          "kind": "lemma",
+          "label": "lem:push",
+          "file": "11-hyperreal-differentiation-domain/paper.tex",
+          "line": 186,
+          "statement_latex": "\\label{lem:push}\nIf $h:\\R\\to\\Q$ is additive, $h_*p$ is an additive idempotent\nultrafilter on $\\Q$. If it is principal, it is principal at zero.",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.Ultrafilters.StatementChecks.fixed_coordinate_image_dichotomy",
+          "frozen_comparator": {
+            "file": "LogicLineages/Ultrafilters/TranslationTargets.lean",
+            "sha256": "0f893ba03dcae7b351176228ed2fd7489d28d986c3018f59efb2ff4fddf7c248",
+            "type": "LogicLineages.Ultrafilters.Targets.CoordinateImageDichotomy"
+          },
+          "verification_receipt": "build-reports/1793248512746215813-2.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Actual additive-coordinate pushforward and principal-at-zero/finite-exclusion dichotomy."
+        },
+        {
+          "id": "11-hyperreal-differentiation-domain:lem:length",
+          "kind": "lemma",
+          "label": "lem:length",
+          "file": "11-hyperreal-differentiation-domain/paper.tex",
+          "line": 244,
+          "statement_latex": "\\label{lem:length}\nFor every $k\\in\\N$, the set $S_k=\\{x:\\ell(x)=k\\}$ is not in $p$.\nConsequently $\\{x:\\ell(x)>m\\}\\in p$ for every $m\\in\\N$.",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.Ultrafilters.StatementChecks.fixed_hamel_length_escapes",
+          "frozen_comparator": {
+            "file": "LogicLineages/Ultrafilters/HamelTargets.lean",
+            "sha256": "66249b803fdd14a27d408726667f7e7d3f92d7835def88a7af8098a88dc521ba",
+            "type": "LogicLineages.Ultrafilters.Targets.HamelLengthEscapes"
+          },
+          "verification_receipt": "build-reports/1793249317002870997-2.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire actual rational-basis support-length lemma in the coordinate-zero branch. The main witness and quotient properness are still pending."
+        },
+        {
+          "id": "11-hyperreal-differentiation-domain:corollary-6",
+          "kind": "corollary",
+          "label": null,
+          "file": "11-hyperreal-differentiation-domain/paper.tex",
+          "line": 273,
+          "statement_latex": "For every admissible $p$, $\\mathcal D_p$ is a proper subfield containing\n$\\R$ and is not order convex in $\\R^{\\R}/p$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "12-common-knowledge-necessitation",
+      "owner": "claude-loop",
+      "status": "in-progress",
+      "source_files": [
+        "12-common-knowledge-necessitation/paper.tex",
+        "12-common-knowledge-necessitation/preamble.tex"
+      ],
+      "numbered_statement_count": 6,
+      "dependency_obligations": [
+        {
+          "description": "Full arithmetic syntax, code substitution and Hilbert proofs",
+          "status": "pending"
+        },
+        {
+          "description": "Actual self-indexed DCB presentation and chosen CK fixed point",
+          "status": "pending"
+        },
+        {
+          "description": "Formal derivability conditions, diagonalization and Löb theorem",
+          "status": "pending"
+        },
+        {
+          "description": "KT/FS theorem rules and one-agent revision consistency",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "12-common-knowledge-necessitation:lem:three",
+          "kind": "lemma",
+          "label": "lem:three",
+          "file": "12-common-knowledge-necessitation/paper.tex",
+          "line": 154,
+          "statement_latex": "\\label{lem:three}\nFor fixed literal sentences $\\sigma,\\tau$:\n\\begin{enumerate}\n\\item if $D\\vdash\\sigma$, then $D\\vdash E_A(\\sigma)$;\n\\item $D\\vdash E_A(\\sigma\\to\\tau)\\to(E_A(\\sigma)\\to E_A(\\tau))$;\n\\item $D\\vdash\\Prv_D(\\code\\sigma)\\to E_A(\\sigma)$.\n\\end{enumerate}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "12-common-knowledge-necessitation:thm:collapse",
+          "kind": "theorem",
+          "label": "thm:collapse",
+          "file": "12-common-knowledge-necessitation/paper.tex",
+          "line": 181,
+          "statement_latex": "\\label{thm:collapse}\nFor every allowed selector $A$,\n\\[\n D\\vdash c_A\\leftrightarrow E_A(b).\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "12-common-knowledge-necessitation:corollary-3",
+          "kind": "corollary",
+          "label": null,
+          "file": "12-common-knowledge-necessitation/paper.tex",
+          "line": 211,
+          "statement_latex": "The same fixed point is $D$-equivalent to common belief of the\ncontradiction: $D\\vdash c_A\\leftrightarrow\\CK_A(\\code b)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "12-common-knowledge-necessitation:thm:selector",
+          "kind": "theorem",
+          "label": "thm:selector",
+          "file": "12-common-knowledge-necessitation/paper.tex",
+          "line": 224,
+          "statement_latex": "\\label{thm:selector}\nIn the original KT theory,\n\\[\n \\KT\\vdash\\theta_A\\leftrightarrow N_A,\n \\qquad\n \\KT\\vdash c_A\\leftrightarrow\\neg N_A.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "12-common-knowledge-necessitation:cor:finite",
+          "kind": "corollary",
+          "label": "cor:finite",
+          "file": "12-common-knowledge-necessitation/paper.tex",
+          "line": 258,
+          "statement_latex": "\\label{cor:finite}\nFor every fixed external $r\\in\\N$, $\\KT\\vdash E_\\top^r(\\theta)$,\nwhere $E_\\top^0(\\theta)=\\theta$ and\n$E_\\top^{r+1}(\\theta)=E_\\top(E_\\top^r(\\theta))$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "12-common-knowledge-necessitation:thm:consistency",
+          "kind": "theorem",
+          "label": "thm:consistency",
+          "file": "12-common-knowledge-necessitation/paper.tex",
+          "line": 288,
+          "statement_latex": "\\label{thm:consistency}\nThe source theories KT and $\\KT+\\mathsf{UBF}$ are consistent when\ntheir base is $\\mathsf{PA}(L)$ with its standard definitional syntax\napparatus. Here $\\mathsf{UBF}$ is the source untyped Barcan principle\nfor universally known closed-arithmetic-term instances.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "13-reinforcement-learning-transformations",
+      "owner": "main",
+      "status": "in-progress",
+      "source_files": [
+        "13-reinforcement-learning-transformations/paper.tex",
+        "13-reinforcement-learning-transformations/preamble.tex"
+      ],
+      "numbered_statement_count": 8,
+      "dependency_obligations": [
+        {
+          "description": "Exact same-environment ranking transformation definition",
+          "status": "checked"
+        },
+        {
+          "description": "Finite abstract composition counterexample",
+          "status": "checked"
+        },
+        {
+          "description": "Actual rational policies, histories and limiting expected values",
+          "status": "pending"
+        },
+        {
+          "description": "Full positive construction, scripted separator and behavioral mixtures",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "13-reinforcement-learning-transformations:thm:classification",
+          "kind": "theorem",
+          "label": "thm:classification",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 53,
+          "statement_latex": "[Classification]\\label{thm:classification}\nAssume the finite action alphabet has at least two elements. Under\nDefinition~\\ref{def:transformation}, a transformation between the four\nframeworks of Definition~\\ref{def:four} exists if and only if\n\\[\n \\text{the source agents are deterministic}\n \\quad\\text{or}\\quad\n \\text{the target agents are stochastic}.\n\\]\nFor a singleton action alphabet, no such transformation exists,\nincluding from a framework to itself.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:lem:affine",
+          "kind": "lemma",
+          "label": "lem:affine",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 158,
+          "statement_latex": "\\label{lem:affine}\nFor every admissible target environment $\\mu$,\n\\[\n V(Q_t,\\mu)=A_\\mu+t(B_\\mu-A_\\mu),\n \\qquad A_\\mu=V(Q_0,\\mu),\\ B_\\mu=V(Q_1,\\mu).\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:prop:positive",
+          "kind": "proposition",
+          "label": "prop:positive",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 191,
+          "statement_latex": "\\label{prop:positive}\nIf source agents are deterministic or target agents are stochastic,\nthere is a transformation.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:lem:separator",
+          "kind": "lemma",
+          "label": "lem:separator",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 234,
+          "statement_latex": "[Two-value separator]\\label{lem:separator}\nSuppose deterministic policies $\\alpha,\\beta$ have different values\nin some admissible environment. There is an admissible deterministic\nenvironment $\\eta$ and an integer $C$ such that every deterministic\npolicy has value either $C$ or $C+1$ in $\\eta$, with $\\alpha$ and\n$\\beta$ taking different values.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:lem:mixture",
+          "kind": "lemma",
+          "label": "lem:mixture",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 290,
+          "statement_latex": "\\label{lem:mixture}\nThe policy $m$ satisfies\n\\[\n V(m,\\nu)=wV(p,\\nu)+(1-w)V(q,\\nu)\n\\]\nfor every admissible environment $\\nu$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:prop:negative",
+          "kind": "proposition",
+          "label": "prop:negative",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 317,
+          "statement_latex": "\\label{prop:negative}\nThere is no transformation with stochastic source agents and\ndeterministic target agents, for either environment type.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:prop:noncomposition",
+          "kind": "proposition",
+          "label": "prop:noncomposition",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 366,
+          "statement_latex": "\\label{prop:noncomposition}\nThere are transformations $F\\to G$ and $G\\to H$ whose naturally\ncomposed maps fail both nontriviality conditions.",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.RL.StatementChecks.fixed_composition_counterexample",
+          "frozen_comparator": {
+            "file": "LogicLineages/RL/Targets.lean",
+            "sha256": "67f413a2947c9e40c483c1af6ede32449b396484d86617aefbc2c31ebe3f18b5",
+            "type": "LogicLineages.RL.Targets.NaturalCompositionFails"
+          },
+          "verification_receipt": "build-reports/1793248443025567130-2.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full actual finite-framework composition counterexample; no claim that existential transformability is nontransitive or that the four-policy-framework classification is complete."
+        },
+        {
+          "id": "13-reinforcement-learning-transformations:prop:cross",
+          "kind": "proposition",
+          "label": "prop:cross",
+          "file": "13-reinforcement-learning-transformations/paper.tex",
+          "line": 404,
+          "statement_latex": "\\label{prop:cross}\nAssume source agents and environments are deterministic, with rewards\nin a fixed lattice $d^{-1}\\Z$, $d\\ge1$, and convergent total rewards.\nAssume the target has rational initial mixtures of any two admissible\nenvironments. There is no pair satisfying \\eqref{eq:cross} and the\nsecond nontriviality condition.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "14-complexity-of-prediction-measures",
+      "owner": "claude-loop",
+      "status": "in-progress",
+      "source_files": [
+        "14-complexity-of-prediction-measures/paper.tex",
+        "14-complexity-of-prediction-measures/preamble.tex"
+      ],
+      "numbered_statement_count": 9,
+      "dependency_obligations": [
+        {
+          "description": "Exact interactive histories and ordinary program numbering",
+          "status": "pending"
+        },
+        {
+          "description": "Worst-case runtime and bounded-prefix machine-model bridge",
+          "status": "pending"
+        },
+        {
+          "description": "Arithmetical hierarchy, jumps and complete index-set reductions",
+          "status": "pending"
+        },
+        {
+          "description": "Robust actual-history predictor, canonical total-function list and diagonal",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "14-complexity-of-prediction-measures:thm:original",
+          "kind": "theorem",
+          "label": "thm:original",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 117,
+          "statement_latex": "\\label{thm:original}\nThere is a fixed coding-dependent $m_0$ such that:\n\\begin{enumerate}\n\\item for every fixed $m\\ge m_0$, the predicate\n      $H_{\\mathrm{PR}}(p)\\ge m$ is $\\Pi^0_3$-complete on total\n      predictor indices;\n\\item $H_{\\mathrm{PR}}(p)=\\infty$ is $\\Pi^0_3$-complete on the same\n      promise;\n\\item $H_{\\mathrm{PR}}$ and the strict comparison relation between\n      two such values have exact oracle degree $0'''$.\n\\end{enumerate}\nThe reductions witnessing hardness uniformly produce total predictors.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:thm:total",
+          "kind": "theorem",
+          "label": "thm:total",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 131,
+          "statement_latex": "\\label{thm:total}\nList all total computable functions without repetitions in order of\ntheir least program indices, and use \\eqref{eq:bounds}. For this\ncanonical list, every $H_g(p)$ is finite and $H_g$ has exact oracle\ndegree $0'''$ on total predictor indices. Every sufficiently high\nfixed threshold is $\\Pi^0_3$-complete on that promise.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:lem:membership",
+          "kind": "lemma",
+          "label": "lem:membership",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 147,
+          "statement_latex": "\\label{lem:membership}\nUniformly in an ordinary program index for a total computable $f$,\nmembership $e\\in E_f$ has a recursive-matrix $\\Sigma^0_2$ definition.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:lem:learning",
+          "kind": "lemma",
+          "label": "lem:learning",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 169,
+          "statement_latex": "\\label{lem:learning}\nThere is a recursive predicate $S$ such that, for total binary $p,e$,\n$p$ learns $e$ exactly when\n$\\exists c\\,\\forall d\\ S(p,e,c,d)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:prop:threshold",
+          "kind": "proposition",
+          "label": "prop:threshold",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 185,
+          "statement_latex": "\\label{prop:threshold}\nUniformly in total binary $p$ and an ordinary total bound program $f$,\n$T(p,f)$ has a recursive-matrix $\\Pi^0_3$ definition.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:lem:robust",
+          "kind": "lemma",
+          "label": "lem:robust",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 241,
+          "statement_latex": "[Robust baseline]\\label{lem:robust}\nIf $e$ is a total binary evader with $t_e(n)<b(n)$ eventually, then\n$B_b$ predicts $e(y_{<n})$ correctly at all but finitely many rounds,\nregardless of the sequence of actual past predictions $y$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:prop:hardness",
+          "kind": "proposition",
+          "label": "prop:hardness",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 317,
+          "statement_latex": "\\label{prop:hardness}\nFor any fixed ordinary total bound $b$ eventually exceeding each\n$t_{e_k}$, the predicate $T(p,b)$ is $\\Pi^0_3$-hard on total\npredictors. If $b=b_\\infty$, the same reduction makes membership in\n$B$ equivalent to infinite original measure, and equivalent to every\nfixed threshold $m\\ge m_0$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:lem:list",
+          "kind": "lemma",
+          "label": "lem:list",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 374,
+          "statement_latex": "\\label{lem:list}\nThe sequence $m\\mapsto a_m$ is computable in $0''$. Each entry is\nan ordinary total computable function, and every such function\noccurs exactly once. Oracle $0''$ uniformly supplies an ordinary\nprogram index for $f_m$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "14-complexity-of-prediction-measures:lem:finitevalues",
+          "kind": "lemma",
+          "label": "lem:finitevalues",
+          "file": "14-complexity-of-prediction-measures/paper.tex",
+          "line": 394,
+          "statement_latex": "\\label{lem:finitevalues}\nFor any listing of all total computable functions, every total\npredictor has a finite $H_g$ value.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    },
+    {
+      "paper": "15-differential-field-constraint-decisions",
+      "owner": "models-algebra",
+      "status": "in-progress",
+      "source_files": [
+        "15-differential-field-constraint-decisions/paper.tex",
+        "15-differential-field-constraint-decisions/preamble.tex"
+      ],
+      "numbered_statement_count": 9,
+      "dependency_obligations": [
+        {
+          "description": "Actual characteristic-zero differential fields and designated-root isomorphisms",
+          "status": "pending"
+        },
+        {
+          "description": "Minpoly separability and derivation-extension constructions",
+          "status": "pending"
+        },
+        {
+          "description": "First-order curve function field and all q decisions",
+          "status": "pending"
+        },
+        {
+          "description": "Spectral algebraic independence, resultants and rational polynomial algorithms",
+          "status": "pending"
+        }
+      ],
+      "statements": [
+        {
+          "id": "15-differential-field-constraint-decisions:lem:constants",
+          "kind": "lemma",
+          "label": "lem:constants",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 90,
+          "statement_latex": "\\label{lem:constants}\nAn element algebraic over $\\Q$ in a differential extension is a\nconstant. A nonconstant element is therefore transcendental over $\\Q$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:thm:orderone",
+          "kind": "theorem",
+          "label": "thm:orderone",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 119,
+          "statement_latex": "\\label{thm:orderone}\nOn these source-valid inputs:\n\\begin{enumerate}\n\\item if $r\\ne0$, then $\\Con_\\Q(p,q)$ holds exactly when\n      $\\rad(r)\\mid q$ in $\\Q[Y]$;\n\\item if $r=0$, then $\\Con_\\Q(p,q)$ fails for every nonzero $q$.\n\\end{enumerate}",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:lem:curve",
+          "kind": "lemma",
+          "label": "lem:curve",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 130,
+          "statement_latex": "\\label{lem:curve}\nAny two nonconstant solutions of $p(a,Da)=0$ generate differential\nfields isomorphic over $\\Q$ by a map sending one solution to the other.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:lem:genericcurve",
+          "kind": "lemma",
+          "label": "lem:genericcurve",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 164,
+          "statement_latex": "\\label{lem:genericcurve}\nIf $r\\ne0$, there exists a nonconstant solution avoiding every\nspecified nonzero $q(Y)$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:cor:algorithmone",
+          "kind": "corollary",
+          "label": "cor:algorithmone",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 213,
+          "statement_latex": "\\label{cor:algorithmone}\nThe constrained-pair predicate is decidable on this first-order slice.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:thm:spectral",
+          "kind": "theorem",
+          "label": "thm:spectral",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 263,
+          "statement_latex": "\\label{thm:spectral}\nUnder this spectral independence hypothesis,\n\\[\n \\Con_\\Q(p,q)\\quad\\Longleftrightarrow\\quad\n R_f\\mid q\\quad\\text{in }\\Q[Y_0,\\ldots,Y_{n-1}].\n\\]\nIn particular $(p,R_f)$ is a positive constrained pair.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:lem:weights",
+          "kind": "lemma",
+          "label": "lem:weights",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 296,
+          "statement_latex": "\\label{lem:weights}\nIf all $x_i$ are nonzero and $Dx_i=\\lambda_ix_i$, they are\nalgebraically independent over $K$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:lem:genericjets",
+          "kind": "lemma",
+          "label": "lem:genericjets",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 322,
+          "statement_latex": "\\label{lem:genericjets}\nIf $p(a)=0$ and $R_f(a)\\ne0$, its first $n$ jets are algebraically\nindependent over $\\Q$. Any two such solutions have the required\ndesignated-root differential isomorphism over $\\Q$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        },
+        {
+          "id": "15-differential-field-constraint-decisions:prop:cyclotomic",
+          "kind": "proposition",
+          "label": "prop:cyclotomic",
+          "file": "15-differential-field-constraint-decisions/paper.tex",
+          "line": 417,
+          "statement_latex": "\\label{prop:cyclotomic}\nFor every prime $\\ell$, the polynomial\n$f(T)=1+T+\\cdots+T^{\\ell-1}$ satisfies the spectral promise.\nConsequently the theorem supplies positive pairs and full decisions\nfor all nonzero $q$ at an unbounded set of differential orders.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null
+        }
+      ]
+    }
+  ]
+}

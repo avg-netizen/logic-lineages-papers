@@ -1,0 +1,317 @@
+{
+  "accepted_components": [
+    {
+      "id": "finite-order-forests.disjoint-upper-cones",
+      "declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.incomparableNoCommonUpper",
+      "type": "LogicLineages.ModelsAlgebra.Forests.Targets.incomparableNoCommonUpper",
+      "expanded_type": "\u2200 (\u03b1 : Type u) [PartialOrder \u03b1], IsOrderForest \u03b1 \u2192 \u2200 (x y : \u03b1), \u00ac x \u2264 y \u2192 \u00ac y \u2264 x \u2192 \u00ac \u2203 z, x \u2264 z \u2227 y \u2264 z",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/OrderTargets.lean",
+        "sha256": "34205fb5cd516be564685bfc7810fef5d1df6b2f24e1657012a9590b62d69a9c"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/OrderStatementChecks.lean",
+        "sha256": "93cfba3c67a7bfcaa5b12c8ff9bf167e4af5bdfd0f8419e364856fd8f8b0e4a3"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+          "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+        }
+      ],
+      "source_file": {
+        "path": "03-joint-embedding-finite-forests/paper.tex",
+        "sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef"
+      },
+      "source_correspondence": "unnumbered width paragraph before thm:width",
+      "scope": "actual PartialOrder/predecessor-chain forest fact; all full numbered paper targets remain pending",
+      "receipt": "formalization/build-reports/1793249096318899425-2.json",
+      "kernel_axioms": []
+    },
+    {
+      "id": "finite-order-forests.maximal-extension",
+      "declaration": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks.everyVertexBelowLeaf",
+      "type": "LogicLineages.ModelsAlgebra.Forests.Targets.everyVertexBelowLeaf",
+      "expanded_type": "\u2200 (\u03b1 : Type u) [PartialOrder \u03b1] [Fintype \u03b1] (x : \u03b1), \u2203 y, x \u2264 y \u2227 IsMax y",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthTargets.lean",
+        "sha256": "71b65650572717bd077c54a398101d88333def835ed5222f02e819990be2c188"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthStatementChecks.lean",
+        "sha256": "097c94997cd09de4e0cd2873d2d7e376f386ff8513c2f811b26fdfef56680b67"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+          "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthDefinitions.lean",
+          "sha256": "9e7a999989c9f12f3abd1589c0a8ca1698d1342ee1bb43467747ddb1dc3d23fa"
+        }
+      ],
+      "source_file": {
+        "path": "03-joint-embedding-finite-forests/paper.tex",
+        "sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef"
+      },
+      "source_correspondence": "unnumbered width paragraph before thm:width",
+      "scope": "actual finite PartialOrder maximal elements and antichain width; full JEP classification remains pending",
+      "receipt": "formalization/build-reports/1793249096318899425-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "finite-order-forests.width-is-leaf-count",
+      "declaration": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks.widthBoundIffLeafBound",
+      "type": "LogicLineages.ModelsAlgebra.Forests.Targets.widthBoundIffLeafBound",
+      "expanded_type": "\u2200 (\u03b1 : Type u) [PartialOrder \u03b1] [Fintype \u03b1], IsOrderForest \u03b1 \u2192 \u2200 m, WidthAtMost \u03b1 m \u2194 (leafFinset \u03b1).card \u2264 m",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthTargets.lean",
+        "sha256": "71b65650572717bd077c54a398101d88333def835ed5222f02e819990be2c188"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthStatementChecks.lean",
+        "sha256": "097c94997cd09de4e0cd2873d2d7e376f386ff8513c2f811b26fdfef56680b67"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+          "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthDefinitions.lean",
+          "sha256": "9e7a999989c9f12f3abd1589c0a8ca1698d1342ee1bb43467747ddb1dc3d23fa"
+        }
+      ],
+      "source_file": {
+        "path": "03-joint-embedding-finite-forests/paper.tex",
+        "sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef"
+      },
+      "source_correspondence": "unnumbered width paragraph before thm:width",
+      "scope": "actual finite PartialOrder maximal elements and antichain width; full JEP classification remains pending",
+      "receipt": "formalization/build-reports/1793249096318899425-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "abelian-p-groups.p-step-image",
+      "declaration": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.subgroupImageCommutesWithPStep",
+      "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.subgroupImageCommutesWithPStep",
+      "expanded_type": "\u2200 (G : Type u) (H : Type v) [AddCommGroup G] [AddCommGroup H] (p : \u2115) (f : G \u2192+ H) (S : AddSubgroup G), (pStep p S).map f = pStep p (S.map f)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationTargets.lean",
+        "sha256": "978ab02501d2213c776ba1b2be1cd2942be2d4f3bef9f2f63f44b24fcf6e9d29"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationStatementChecks.lean",
+        "sha256": "a0d48721afa5702c188fe79d6df97cd6c3901ccce172f91cb3ce3b2e34e9eddb"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        }
+      ],
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "source_correspondence": "lem:quotient-filtration successor/limit proof components",
+      "scope": "actual additive subgroup image and finite filtration/saturated-intersection facts; full transfinite/Ulm/Scott targets remain pending",
+      "receipt": "formalization/build-reports/1793249492913314109-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "abelian-p-groups.finite-filtration-image",
+      "declaration": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.finiteFiltrationImage",
+      "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.finiteFiltrationImage",
+      "expanded_type": "\u2200 (G : Type u) (H : Type v) [AddCommGroup G] [AddCommGroup H] (p : \u2115) (f : G \u2192+ H), Function.Surjective f \u2192 \u2200 n, (finiteFiltration p n : AddSubgroup G).map f = (finiteFiltration p n : AddSubgroup H)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationTargets.lean",
+        "sha256": "978ab02501d2213c776ba1b2be1cd2942be2d4f3bef9f2f63f44b24fcf6e9d29"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationStatementChecks.lean",
+        "sha256": "a0d48721afa5702c188fe79d6df97cd6c3901ccce172f91cb3ce3b2e34e9eddb"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        }
+      ],
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "source_correspondence": "lem:quotient-filtration successor/limit proof components",
+      "scope": "actual additive subgroup image and finite filtration/saturated-intersection facts; full transfinite/Ulm/Scott targets remain pending",
+      "receipt": "formalization/build-reports/1793249492913314109-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "abelian-p-groups.saturated-intersection-image",
+      "declaration": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.saturatedIntersectionImage",
+      "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.saturatedIntersectionImage",
+      "expanded_type": "\u2200 (G : Type u) (H : Type v) (\u03b9 : Sort w) [AddCommGroup G] [AddCommGroup H] (f : G \u2192+ H), Function.Surjective f \u2192 \u2200 S : \u03b9 \u2192 AddSubgroup G, (\u2200 i, f.ker \u2264 S i) \u2192 (iInf S).map f = \u2a05 i, (S i).map f",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationTargets.lean",
+        "sha256": "978ab02501d2213c776ba1b2be1cd2942be2d4f3bef9f2f63f44b24fcf6e9d29"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationStatementChecks.lean",
+        "sha256": "a0d48721afa5702c188fe79d6df97cd6c3901ccce172f91cb3ce3b2e34e9eddb"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        }
+      ],
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "source_correspondence": "lem:quotient-filtration successor/limit proof components",
+      "scope": "actual additive subgroup image and finite filtration/saturated-intersection facts; full transfinite/Ulm/Scott targets remain pending",
+      "receipt": "formalization/build-reports/1793249492913314109-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "abelian-p-groups.transfinite-filtration-antitone",
+      "declaration": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks.transfiniteFiltrationAntitone",
+      "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteFiltrationAntitone",
+      "expanded_type": "\u2200 (G : Type u) [AddCommGroup G] (p : \u2115), Antitone (fun \u03b1 : Ordinal.{w} => (transfiniteFiltration p \u03b1 : AddSubgroup G))",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteTargets.lean",
+        "sha256": "ddfffef549a7c5386fb3e028af174116f00fa0ee03d533bab18db9cb7876747d"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteStatementChecks.lean",
+        "sha256": "d3812ccc4e4dd0d359a13b4a40d7ef024446d1a08c0d4ccd36bb490ca08e2aac"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        }
+      ],
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "source_correspondence": "filtration conventions; lem:quotient-filtration first conclusion",
+      "scope": "actual ordinal-recursive filtration; arbitrary-surjection generalization of the first source conclusion; Ulm quotient/Scott conclusions remain pending",
+      "receipt": "formalization/build-reports/1793251592919663407-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "abelian-p-groups.transfinite-filtration-image-below-cut",
+      "declaration": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks.transfiniteFiltrationImageBelowCut",
+      "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteFiltrationImageBelowCut",
+      "expanded_type": "\u2200 (G : Type u) (H : Type v) [AddCommGroup G] [AddCommGroup H] (p : \u2115) (f : G \u2192+ H), Function.Surjective f \u2192 \u2200 \u03b4 : Ordinal.{w}, f.ker \u2264 transfiniteFiltration p \u03b4 \u2192 \u2200 \u03b1 \u2264 \u03b4, (transfiniteFiltration p \u03b1 : AddSubgroup G).map f = (transfiniteFiltration p \u03b1 : AddSubgroup H)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteTargets.lean",
+        "sha256": "ddfffef549a7c5386fb3e028af174116f00fa0ee03d533bab18db9cb7876747d"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteStatementChecks.lean",
+        "sha256": "d3812ccc4e4dd0d359a13b4a40d7ef024446d1a08c0d4ccd36bb490ca08e2aac"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        }
+      ],
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "source_correspondence": "filtration conventions; lem:quotient-filtration first conclusion",
+      "scope": "actual ordinal-recursive filtration; arbitrary-surjection generalization of the first source conclusion; Ulm quotient/Scott conclusions remain pending",
+      "receipt": "formalization/build-reports/1793251592919663407-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "abelian-p-groups.quotient-filtration-below-cut",
+      "declaration": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks.quotientFiltrationBelowCut",
+      "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.quotientFiltrationBelowCut",
+      "expanded_type": "\u2200 (G : Type u) [AddCommGroup G] (p : \u2115) (T : AddSubgroup G) (\u03b4 : Ordinal.{v}), T \u2264 transfiniteFiltration p \u03b4 \u2192 \u2200 \u03b1 \u2264 \u03b4, (transfiniteFiltration p \u03b1 : AddSubgroup (G \u29f8 T)) = (transfiniteFiltration p \u03b1 : AddSubgroup G).map (QuotientAddGroup.mk' T)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/QuotientFiltrationTargets.lean",
+        "sha256": "d321a5181548c86bb0e8fc171384daa5290706bd908150bea4f9817f85fdb5b5"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/QuotientStatementChecks.lean",
+        "sha256": "c1cd8d698e894c8487be84e05db687400e15652b0d7c1ff85b4b45e6c92e3303"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        }
+      ],
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "source_correspondence": "lem:quotient-filtration first displayed equation",
+      "scope": "literal quotient filtration equality, stronger arbitrary cut; full two-conclusion source lemma and Scott classification remain pending until Ulm isomorphism is also checked",
+      "receipt": "formalization/build-reports/1793251592919663407-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "full_numbered_paper_targets_complete": [],
+  "definitions": {
+    "IsOrderForest": "\u2200 \u2983x y z\u2984, x \u2264 z \u2192 y \u2264 z \u2192 x \u2264 y \u2228 y \u2264 x",
+    "WidthAtMost": "\u2200 s : Finset \u03b1, IsAntichain (\u00b7 \u2264 \u00b7) (s : Set \u03b1) \u2192 s.card \u2264 m",
+    "leafFinset": "Finset.univ.filter IsMax",
+    "pStep": "S.map (nsmulAddMonoidHom p)",
+    "finiteFiltration": "0 \u21a6 \u22a4; n+1 \u21a6 pStep p (finiteFiltration p n)",
+    "transfiniteFiltration": "Ordinal.limitRecOn: zero is top; successor is pStep; nonzero limit is iInf over every earlier ordinal"
+  },
+  "scope_note": "Nine exact components accepted. In paper01 this now includes the literal entire FIRST displayed conclusion of lem:quotient-filtration, generalized to arbitrary cuts. Its Ulm quotient/rank conclusion and every full numbered source target remain pending. Forest components do not close the full JEP theorem."
+}

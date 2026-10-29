@@ -1,0 +1,28 @@
+module
+
+/-! Accepted, incomplete coverage of the public papers.
+Only fixed statement gates with successful compiler and axiom receipts belong
+here. The full paper inventory and remaining dependencies are in TARGETS.json.
+-/
+
+public import LogicLineages.ComputabilityKnowledge.ExponentialGapGate
+public import LogicLineages.ComputabilityKnowledge.RestrictedProductGate
+public import LogicLineages.ComputabilityKnowledge.FoundationChecks
+public import LogicLineages.OrdinalComparison.ControlStatementChecks
+public import LogicLineages.OrdinalComparison.ElementaryControlStatementChecks
+public import LogicLineages.OrdinalComparison.NormBallStatementChecks
+public import LogicLineages.OrdinalComparison.StatementChecks
+public import LogicLineages.OrdinalComparison.PredecessorStatementChecks
+public import LogicLineages.OrdinalComparison.SourceStructuralStatementChecks
+public import LogicLineages.RL.StatementChecks
+public import LogicLineages.Ultrafilters.TranslationChecks
+public import LogicLineages.Ultrafilters.StatementChecks
+public import LogicLineages.Ultrafilters.HamelStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.OrderStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiltrationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks
+public meta import LogicLineages.Audit
+
+#audit_namespace LogicLineages

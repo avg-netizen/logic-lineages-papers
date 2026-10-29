@@ -1,0 +1,488 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{The Exact Computability of Two\\Adversarial Prediction Measures}
+\author{}
+\date{28 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the oracle complexity of Hibbard's original intelligence
+measure in the representation used by Alexander and Hibbard: total
+binary predictors are given by ordinary Turing-machine indices, and
+evaders are grouped by eventual strict worst-case runtime domination.
+The extended-natural-valued measure and its strict comparator have
+exact Turing degree $0'''$. Every sufficiently high fixed threshold,
+and the predicate of infinite measure, is $\Pi^0_3$-complete on the
+total-predictor promise. We then replace the primitive-recursive list
+by the canonical repetition-free list of all total computable functions,
+ordered by least program index. Every resulting measure value is finite,
+but the measure still has exact degree $0'''$. Thus this specified
+all-total-function variant does not require a stronger oracle than
+the original measure. A robust prediction lemma handles the feedback
+created by modified predictions; a uniform threshold formula prevents
+an unnecessary extra jump when the list itself is noncomputable.
+\end{abstract}
+\tableofcontents
+
+\section{Intelligence measures as represented mathematical functions}
+
+In adversarial sequence prediction, a predictor tries to match the
+next bit chosen by an evader. Each side sees the other side's previous
+outputs. Hibbard's measure assigns a predictor a level according to
+the runtime classes of evaders it eventually learns. Alexander and
+Hibbard \cite{AH} separate this underlying idea from the particular
+enumeration used to organize growth rates. After proving
+noncomputability, they ask for more precise degrees and conjecture
+that replacing primitive recursive functions by all total computable
+functions would require a strictly stronger oracle.
+
+These questions depend on representation. A predictor is a total
+function, but an input to an algorithm is a program index. A list
+of all total computable functions cannot have a computable total
+evaluator, although each function in it is individually computable.
+The measure can also take the extra value $\infty$. We make each of
+these choices explicit.
+
+Two main results follow. The original measure requires exactly the
+third Turing jump. A specified canonical all-total-function variant
+requires the same jump, even though its enumeration is noncomputable
+and it has no infinite values. The latter answers a precise instance
+of the proposed strict increase negatively; it does not classify
+every possible ordering of the total computable functions.
+
+\section{The game, the machines and the measures}
+
+Fix an acceptable numbering of ordinary Turing programs on finite
+binary strings, with an effective bounded simulation. A total binary
+program computes a map $\{0,1\}^{<\omega}\to\{0,1\}$. We use the
+standard input-tape convention in which a program can inspect its
+first $k$ input cells and stop without scanning the remaining input.
+There is no mandatory input-reading cost proportional to its length.
+
+Given a total predictor $p$ and total evader $e$, define their unique
+play by
+\[
+ y_n=p(x_0\ldots x_{n-1}),\qquad
+ x_n=e(y_0\ldots y_{n-1}).
+\]
+Both empty histories occur at round zero. The evader sees the
+\emph{predictions}, not its own previous evasions. The predictor
+\emph{learns} $e$ if $x_n=y_n$ for every sufficiently large $n$.
+For a total evader, let $t_e(n)$ be its maximum running time on all
+$2^n$ binary inputs of length $n$.
+
+For an ordinary total computable bound $f:\N\to\N$, put
+\[
+ E_f=\{e:e\text{ is total binary and }t_e(n)<f(n)
+                    \text{ for all sufficiently large }n\},
+\]
+and write $T(p,f)$ for the assertion that $p$ learns every $e\in E_f$.
+The strict inequality is part of the contract. A finite initial segment
+of exceptions is allowed.
+
+Let $g_1,g_2,\ldots$ be a listing of growth functions and define
+\begin{equation}\label{eq:bounds}
+ f_m(n)=\max_{1\le i\le m,\ 0\le j\le n}g_i(j),\qquad m\ge1.
+\end{equation}
+The bounds are pointwise nondecreasing in $m$. Define
+\[
+ H_g(p)=
+ \begin{cases}
+ 0,&\text{if }T(p,f_1)\text{ fails},\\
+ \max\{m:T(p,f_m)\},&\text{if this set is nonempty and bounded},\\
+ \infty,&\text{if every }T(p,f_m)\text{ holds}.
+ \end{cases}
+\]
+The initial-segment property makes these cases exhaustive.
+
+For the original measure, use the fixed effective primitive-recursive
+listing of \cite[Definition~7]{AH}. What is needed here is an effective
+total evaluator for that listing, its coverage of all primitive
+recursive functions, and hence coverage of $n\mapsto n+1$.
+Call its measure $H_{\mathrm{PR}}$.
+
+All oracle computations of a measure below have the promise that
+their input index is a total binary predictor. They must halt and
+return the right answer on that domain. A machine computing an
+extended-natural-valued measure outputs a natural number or a distinct
+symbol for $\infty$. Statements of exact degree use this representation.
+
+\subsection{The complexity statements}
+
+Write $0',0'',0'''$ for successive Turing jumps. We use the standard
+arithmetical-hierarchy fact that a recursive-matrix $\Pi^0_3$ predicate
+is decidable in $0'''$, and that complete such predicates compute
+$0'''$.
+
+\begin{theorem}\label{thm:original}
+There is a fixed coding-dependent $m_0$ such that:
+\begin{enumerate}
+\item for every fixed $m\ge m_0$, the predicate
+      $H_{\mathrm{PR}}(p)\ge m$ is $\Pi^0_3$-complete on total
+      predictor indices;
+\item $H_{\mathrm{PR}}(p)=\infty$ is $\Pi^0_3$-complete on the same
+      promise;
+\item $H_{\mathrm{PR}}$ and the strict comparison relation between
+      two such values have exact oracle degree $0'''$.
+\end{enumerate}
+The reductions witnessing hardness uniformly produce total predictors.
+\end{theorem}
+
+\begin{theorem}\label{thm:total}
+List all total computable functions without repetitions in order of
+their least program indices, and use \eqref{eq:bounds}. For this
+canonical list, every $H_g(p)$ is finite and $H_g$ has exact oracle
+degree $0'''$ on total predictor indices. Every sufficiently high
+fixed threshold is $\Pi^0_3$-complete on that promise.
+\end{theorem}
+
+The hardness statements for fixed thresholds in the second theorem
+are nonuniform in the list position: a fixed position has a fixed
+ordinary bound program which can be hardcoded. The theorem does not
+assert that these bound indices can be found computably from their
+positions.
+
+\section{A uniform \texorpdfstring{$\Pi^0_3$}{Pi-0-3} threshold formula}
+
+\begin{lemma}\label{lem:membership}
+Uniformly in an ordinary program index for a total computable $f$,
+membership $e\in E_f$ has a recursive-matrix $\Sigma^0_2$ definition.
+\end{lemma}
+\begin{proof}
+An existential witness consists of a cutoff $N$ and a common finite
+halting certificate for all inputs of length at most $N$. Check that
+these computations halt with binary outputs. For each longer input
+$x$ and each stage $s$, require: if the $f$ program on $|x|$ has
+halted by $s$ with value $v$, then the $e$ program on $x$ halts with
+a binary output in fewer than $v$ steps. This is a bounded decidable
+test. Since $f$ is total, the guard eventually activates at each input
+length. The universal tests therefore impose exactly eventual strict
+runtime domination and total binary output beyond the cutoff; the
+finite certificate covers all remaining inputs. Thus
+\[
+ e\in E_f\quad\Longleftrightarrow\quad
+ \exists a\,\forall b\ R(e,f,a,b)
+\]
+for a recursive predicate $R$, on the total-$f$ promise.
+\end{proof}
+
+\begin{lemma}\label{lem:learning}
+There is a recursive predicate $S$ such that, for total binary $p,e$,
+$p$ learns $e$ exactly when
+$\exists c\,\forall d\ S(p,e,c,d)$.
+\end{lemma}
+\begin{proof}
+Let $c$ be an error cutoff. The number $d$ may encode a finite play,
+halting times for all its computations, and a designated error round
+at least $c$. Reject exactly when this is a valid computation
+certificate for such an error. Validity is decidable by bounded
+simulation. Every actual error has a finite certificate, and every
+valid certificate describes an actual initial play by determinism.
+Totality ensures the actual play is infinite. Absence of all
+post-cutoff error certificates is therefore eventual learning.
+\end{proof}
+
+\begin{proposition}\label{prop:threshold}
+Uniformly in total binary $p$ and an ordinary total bound program $f$,
+$T(p,f)$ has a recursive-matrix $\Pi^0_3$ definition.
+\end{proposition}
+\begin{proof}
+Using the two preceding lemmas, write
+\begin{equation}\label{eq:pi3}
+ \forall e,a\ \exists b,c\ \forall d\
+ \bigl(\neg R(e,f,a,b)\ \lor\ S(p,e,c,d)\bigr).
+\end{equation}
+If $a$ does not certify membership in $E_f$, one counterexample $b$
+makes the disjunction true. If it does, a learning witness $c$ is
+required. Partial or nonbinary evaders cannot satisfy the membership
+antecedent, so their behavior in the learning formula is irrelevant.
+This proves equivalence and the claimed uniformity.
+\end{proof}
+
+The uniformity matters later. Computing an ordinary index for $f$
+with an oracle and then applying \eqref{eq:pi3} does not require
+three jumps \emph{relative} to that oracle. The formula already has
+a recursive matrix with the ordinary index as a parameter.
+
+For the primitive-recursive listing, the $f_m$ indices are computable
+uniformly in $m$. Thus all thresholds are uniformly $\Pi^0_3$.
+Moreover
+\[
+ H_{\mathrm{PR}}(p)=\infty\quad\Longleftrightarrow\quad
+ \forall m\ T(p,f_m)
+\]
+is still $\Pi^0_3$: the extra universal quantifier joins the first
+block. Oracle $0'''$ first decides this predicate. In the finite case
+it tests thresholds until the first failure and returns one less
+than that position. This proves the upper bound for the original
+measure and, by computing two values, for its comparator.
+
+\section{Prediction along the actual history}
+
+The lower bound will deliberately flip a good baseline's predictions.
+This changes the evader's future input. It is therefore insufficient
+to compare the new predictor with a good predictor's unmodified play.
+We need a bounded prediction rule whose correctness is independent
+of how the past predictions were chosen.
+
+Fix a total computable time budget $b$. Given actual paired histories
+$x_{<n}$ and $y_{<n}$, examine program indices $i\le n$. A candidate
+is eligible when:
+\begin{enumerate}
+\item at each earlier round $r<n$, if its computation on $y_{<r}$
+      halts in fewer than $b(r)$ steps, its output equals $x_r$;
+\item on $y_{<n}$ it halts in fewer than $b(n)$ steps with a binary
+      output.
+\end{enumerate}
+Choose the least eligible index and predict its output, or predict
+zero if none is eligible. Call this rule $B_b$. A timeout in an
+earlier test is ignored; it does not disqualify a candidate.
+
+\begin{lemma}[Robust baseline]\label{lem:robust}
+If $e$ is a total binary evader with $t_e(n)<b(n)$ eventually, then
+$B_b$ predicts $e(y_{<n})$ correctly at all but finitely many rounds,
+regardless of the sequence of actual past predictions $y$.
+\end{lemma}
+\begin{proof}
+Let $k$ be an index of $e$. Once $n$ is large enough, $k\le n$ and
+the current computation of $e$ is within budget. Every earlier
+bounded computation of $e$ agrees with the recorded $x_r$, since
+$x_r=e(y_{<r})$ in the actual play. Thus $e$ is eligible from then on,
+and the least eligible index is at most $k$.
+
+If a selected index $i<k$ gives a wrong output at round $n$, that
+bounded computation on the recorded input $y_{<n}$ permanently
+contradicts the earlier-round test at every later round. It can
+never be selected again. There are finitely many indices below $k$.
+After their possible first wrong selections, every selected output
+is correct. The proof never assumed that the actor actually used
+the baseline bit as its own prediction.
+\end{proof}
+
+To implement this rule in an ordinary predictor whose input is just
+$x_{<n}$, compute its own previous outputs on the strictly shorter
+prefixes $x_{<r}$, $r<n$. They reconstruct $y_{<n}$. Structural
+recursion on input length terminates. This may be computationally
+expensive, but it defines a total program, which is all the degree
+argument requires. It remains total if a decidable rule flips its
+current baseline output.
+
+\subsection{An infinite-level predictor for the original list}
+
+For the primitive-recursive hierarchy set
+\[
+ b_\infty(n)=f_{n+1}(n).
+\]
+It is an ordinary total computable function, since the list has an
+effective total evaluator. It need not itself be primitive recursive.
+For every fixed $m$, $b_\infty(n)\ge f_m(n)$ eventually. The predictor
+which recursively reconstructs its own history and always uses
+$B_{b_\infty}$ therefore learns every evader in every $E_{f_m}$.
+Denote this fixed total predictor by $q_\infty$; it satisfies
+\begin{equation}\label{eq:qinf}
+ H_{\mathrm{PR}}(q_\infty)=\infty.
+\end{equation}
+
+\section{Coding \texorpdfstring{$\Pi^0_3$}{Pi-0-3} information into finite and infinite errors}
+
+Choose a fixed list position $m_0$ containing the function $n\mapsto n+1$.
+Then $f_m(n)\ge n+1$ for every $m\ge m_0$. For each $k\in\N$, let
+$e_k$ ignore input bits and output 1 if input length is less than $k$,
+and 0 otherwise. It reads at most $k$ cells, so its runtime is bounded
+by a constant $c_k$, depending on $k$. Consequently
+\begin{equation}\label{eq:codeevader}
+ e_k\in E_{f_m}\quad\text{for every }k\text{ and }m\ge m_0.
+\end{equation}
+Its evasion stream is $1^k0^\omega$, whatever predictions it receives.
+No runtime bound uniform in $k$ is claimed.
+
+Let $B\subseteq\N$ be any $\Pi^0_3$ set. Use a recursive normal form
+\[
+ z\in B\quad\Longleftrightarrow\quad
+ \forall k\ \exists s\ \forall t\ R_0(z,k,s,t).
+\]
+Uniformly produce computably enumerable sets $W_{z,k}$ such that
+\begin{equation}\label{eq:finite}
+ z\in B\quad\Longleftrightarrow\quad
+ \forall k\ (W_{z,k}\text{ is finite}).
+\end{equation}
+Here is a direct construction. At stage $t$, take the least $s\le t$
+passing all tests $R_0(z,k,s,u)$ for $u\le t$, or use $t+1$ if none
+does. Enumerate a fresh number whenever this candidate changes. If
+there is a least true witness, all smaller candidates eventually fail
+and the least true witness stabilizes. If no true witness exists,
+the candidate eventually exceeds each fixed bound and changes
+infinitely often. This proves \eqref{eq:finite}.
+
+\begin{proposition}\label{prop:hardness}
+For any fixed ordinary total bound $b$ eventually exceeding each
+$t_{e_k}$, the predicate $T(p,b)$ is $\Pi^0_3$-hard on total
+predictors. If $b=b_\infty$, the same reduction makes membership in
+$B$ equivalent to infinite original measure, and equivalent to every
+fixed threshold $m\ge m_0$.
+\end{proposition}
+\begin{proof}
+Build $p_z$ as the robust $B_b$ rule using its own reconstructed
+prediction history, except for this flip: if $x_{<n}$ begins with a
+completed code $1^k0$, flip the baseline bit precisely when the
+stage-$n$ enumeration of $W_{z,k}$ adds a new element. The first zero
+determines at most one $k$. The code is permanent once completed.
+The program is total by structural recursion and is produced
+computably from $z$, with the fixed ordinary bound program hardcoded.
+
+If $z\in B$, every selected set $W_{z,k}$ is finite. On any play
+there are therefore finitely many flips; a stream of all ones never
+completes a code and has none. Against any $e\in E_b$, the robust
+baseline is eventually correct even with these modified predictions.
+Thus $T(p_z,b)$ holds.
+
+If $z\notin B$, choose $k$ with $W_{z,k}$ infinite. Against $e_k$,
+the stream completes precisely the code $1^k0$. The baseline is
+eventually correct by the budget assumption, but there are infinitely
+many subsequent flips. They give infinitely many genuine errors,
+so $T(p_z,b)$ fails.
+
+For $b=b_\infty$, a positive input is learned at every original
+level by the same robust argument, giving infinite measure. A
+negative input fails against $e_k\in E_{f_{m_0}}$, so its measure is
+less than $m_0$. This proves all the further equivalences.
+\end{proof}
+
+The threshold upper bounds and Proposition~\ref{prop:hardness} prove
+the first two parts of Theorem~\ref{thm:original}. Reading a fixed
+complete threshold from the value proves the lower bound
+$0'''\le_T H_{\mathrm{PR}}$.
+For the strict comparator, combine \eqref{eq:qinf} with the reduction:
+\[
+ H_{\mathrm{PR}}(p_z)<H_{\mathrm{PR}}(q_\infty)
+ \quad\Longleftrightarrow\quad z\notin B.
+\]
+An oracle for this relation decides a complete $\Pi^0_3$ set by
+complementing its answer. Together with the upper bounds this proves
+the remaining assertions. It does not require a predictor of every
+exact finite measure value.
+
+\section{The canonical list of all total computable functions}
+
+We now change the list, keeping the game, runtime convention, and
+formula for $H_g$ unchanged. Fix an acceptable numbering $\varphi_e$
+of partial functions $\N\rightharpoonup\N$. Scan indices in increasing
+order, retain an index when it is total and its function differs
+from every earlier retained function. Let $a_m$ be the $m$th
+retained index and $g_m=\varphi_{a_m}$.
+
+\begin{lemma}\label{lem:list}
+The sequence $m\mapsto a_m$ is computable in $0''$. Each entry is
+an ordinary total computable function, and every such function
+occurs exactly once. Oracle $0''$ uniformly supplies an ordinary
+program index for $f_m$.
+\end{lemma}
+\begin{proof}
+Totality is a $\Pi^0_2$ property decided by $0''$. For two promised
+total programs, search for an argument where their outputs differ.
+This ordinary search halts exactly when they differ, so equality
+is decidable with $0'$. Each finite comparison with previously
+retained entries is therefore available in $0''$.
+The scan keeps exactly the least index of each total function.
+There are infinitely many distinct total functions, so each
+requested position is reached. Given the finitely many ordinary
+indices $a_1,\ldots,a_m$, compile an ordinary program taking the
+finite maximum in \eqref{eq:bounds}. It is total. Only the choice
+of its index uses the oracle; its evaluation does not.
+\end{proof}
+
+\begin{lemma}\label{lem:finitevalues}
+For any listing of all total computable functions, every total
+predictor has a finite $H_g$ value.
+\end{lemma}
+\begin{proof}
+Given total $p$, recursively define $z_n=1-p(z_{<n})$.
+Let $e_p$ ignore its input bits and output $z_n$ on inputs of length
+$n$. This is a total binary evader, and along the actual play $p$
+is wrong at every round. Its worst-case runtime $t_{e_p}(n)$ is
+total computable: run it on the finitely many length-$n$ inputs
+and take the maximum halting time. The function $t_{e_p}+1$
+therefore appears as some $g_j$. For every $n$,
+$f_j(n)\ge t_{e_p}(n)+1$, so $e_p\in E_{f_j}$. This threshold
+fails, and monotonicity makes every later threshold fail too.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:total}]
+To compute $H_g(p)$, use $0''\le_T0'''$ to obtain each ordinary
+$f_m$ index from Lemma~\ref{lem:list}, and use the uniform formula
+of Proposition~\ref{prop:threshold} with oracle $0'''$ to decide
+$T(p,f_m)$. Search for the first failure. Lemma~\ref{lem:finitevalues}
+guarantees termination and gives the answer $m-1$. This proves
+$H_g\le_T0'''$.
+
+Choose the fixed list position $m_0$ of $n\mapsto n+1$.
+For every fixed $m\ge m_0$, all code evaders $e_k$ belong to
+$E_{f_m}$, by the same constant-runtime argument as
+\eqref{eq:codeevader}. Hardcode the ordinary program for this
+fixed $f_m$ into Proposition~\ref{prop:hardness}. It reduces an
+arbitrary $\Pi^0_3$ set to $T(p,f_m)$. The upper formula remains
+$\Pi^0_3$ for this fixed program, so the threshold is complete.
+Reading one such threshold from $H_g$ proves the lower degree
+bound. All these reductions output ordinary total predictors.
+\end{proof}
+
+The noncomputable enumeration therefore does not force an extra
+jump in the measure. Its oracle is used to select an ordinary
+bound program; the threshold problem for that program was already
+uniformly third-level. Confusing this composition with a third
+jump \emph{relative to} $0''$ would give an unnecessarily large
+upper bound.
+
+More generally, if a listing supplies ordinary total function
+indices computably in an oracle $E$, the same argument gives
+\[
+ H_g\le_T E\oplus0'''.
+\]
+This is an upper bound, not a claim that $H_g$ can recover $E$.
+The finite-value lemma still applies whenever the list covers
+all total computable functions.
+
+\section{What is classified, and what remains representation dependent}
+
+The two measures have equal oracle degree but different ranges.
+The original list admits the infinite-level predictor $q_\infty$;
+every value for the all-total-function list is finite. Degree alone
+does not erase this structural distinction.
+
+The original source conjecture attributes a possible oracle increase
+to the noneffective total-function list. The specified canonical
+listing above shows that this increase is not automatic: the
+measure remains third-jump computable and third-jump hard.
+An arbitrary noneffective reordering is not covered by its upper
+bound. Nor does a lower bound for a finite-valued measure by itself
+give the same lower bound for its two-input strict comparator;
+the original-measure comparator proof used an infinite-valued
+calibration predictor unavailable in the new list.
+
+The runtime convention is also substantive. The code evaders use
+a constant amount of work for each fixed $k$. A model imposing a
+mandatory full-input scan would need a different common bound
+before the hardness proof could be transferred. Totality promises
+and the ordinary program-index representation should likewise remain
+visible when quoting the result.
+
+Finally these are computability results for specified adversarial
+prediction measures. They do not claim that third-jump calculations
+can be implemented as practical intelligence tests, or settle the
+ordinal, hyperreal and other taxonomies considered in \cite{AH}.
+
+\paragraph{Preparation.}
+This AI-assisted hand-proof manuscript includes the adaptive-history
+lemma, quantifier calculations and lower-bound constructions. Standard
+arithmetical-hierarchy and jump facts are background inputs. No
+formal certification or established priority is claimed.
+
+\begin{thebibliography}{9}
+\bibitem{AH} S.~Alexander and B.~Hibbard,
+\emph{Measuring Intelligence and Growth Rate: Variations on Hibbard's
+Intelligence Measure},
+\href{https://arxiv.org/abs/2101.12047v1}{arXiv:2101.12047v1},
+25 January 2021. Especially Definitions~2--7, Propositions~8--9 and
+the complexity discussion following Proposition~9.
+\end{thebibliography}
+\end{document}

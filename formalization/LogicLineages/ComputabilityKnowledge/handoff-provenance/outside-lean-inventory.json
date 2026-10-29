@@ -1,0 +1,1194 @@
+{
+  "upstream_repository": "https://github.com/avg-netizen/alexander-open-problems-results",
+  "status": "Possible selective reuse only; none currently imported",
+  "hash_scope": "Observed local source hashes; verify against upstream checkout before reuse. No claim that upstream HEAD is identical.",
+  "entries": [
+    {
+      "entry_module": "Alexander313.Alexander.NativeSyntaxCoding",
+      "entry_sha256": "f6dba0e51e2d4c38bbe826f7f2de7a7e1cf68920cf8307744227350279e35329",
+      "local_closure_module_count": 1,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Alexander.NativeSyntaxCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeSyntaxCoding.lean",
+          "sha256": "f6dba0e51e2d4c38bbe826f7f2de7a7e1cf68920cf8307744227350279e35329",
+          "direct_local_imports": []
+        }
+      ]
+    },
+    {
+      "entry_module": "Alexander313.Alexander.FirstOrderCalculus",
+      "entry_sha256": "862989f4b27eeb08eec24f84ead3131158eb124535cba86fb1b59966fea2cf18",
+      "local_closure_module_count": 2,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Alexander.FirstOrderCalculus",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/FirstOrderCalculus.lean",
+          "sha256": "862989f4b27eeb08eec24f84ead3131158eb124535cba86fb1b59966fea2cf18",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeSyntaxCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeSyntaxCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeSyntaxCoding.lean",
+          "sha256": "f6dba0e51e2d4c38bbe826f7f2de7a7e1cf68920cf8307744227350279e35329",
+          "direct_local_imports": []
+        }
+      ]
+    },
+    {
+      "entry_module": "Alexander313.Alexander.ProofTreeCoding",
+      "entry_sha256": "2ba4bba5b78377a531ee896c999fee7f50901f52228948d1836df50cc35ccdc6",
+      "local_closure_module_count": 7,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Alexander.FirstOrderCalculus",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/FirstOrderCalculus.lean",
+          "sha256": "862989f4b27eeb08eec24f84ead3131158eb124535cba86fb1b59966fea2cf18",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeSyntaxCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeSyntaxCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeSyntaxCoding.lean",
+          "sha256": "f6dba0e51e2d4c38bbe826f7f2de7a7e1cf68920cf8307744227350279e35329",
+          "direct_local_imports": []
+        },
+        {
+          "module": "Alexander313.Alexander.ProofTreeCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/ProofTreeCoding.lean",
+          "sha256": "2ba4bba5b78377a531ee896c999fee7f50901f52228948d1836df50cc35ccdc6",
+          "direct_local_imports": [
+            "Alexander313.Alexander.FirstOrderCalculus",
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.Computability",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Computability.lean",
+          "sha256": "e22f7e8a3857a1f7d653303f7852e21a4b83b594852d465f5b0786895d1c1293",
+          "direct_local_imports": [
+            "Alexander313.Semantics",
+            "Alexander313.Encoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Encoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Encoding.lean",
+          "sha256": "7ed88167e73aab6ee773e6ab1f6f2712a500b573cce7b0e0bd650c445f92b573",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Semantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Semantics.lean",
+          "sha256": "047e851388c5d2f1996dde1b588a3dd4a6a9d9d1390f23426e8b57ffbdbcc80c",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Syntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Syntax.lean",
+          "sha256": "46b60370bee5bfca2b4498ffb2d2fc6d1463f0aa476a04e0a6d43feebb97a328",
+          "direct_local_imports": []
+        }
+      ]
+    },
+    {
+      "entry_module": "Alexander313.Alexander.NativeProofChecker",
+      "entry_sha256": "2911b069bfe1ff5a66197cbdbe622c533a6a8b231706c31b1a7fa442b911693d",
+      "local_closure_module_count": 29,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Alexander.BaseLogic",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/BaseLogic.lean",
+          "sha256": "84e659f87d32e7092d4c7603d177a383cd1876c59433cb2f3fc687b4b208d1b6",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.DeltaEncoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/DeltaEncoding.lean",
+          "sha256": "bd15ea4997e39cb740aaf5045fce974b433fed370d4eceb4a636f110bfe8e9be",
+          "direct_local_imports": [
+            "Alexander313.Alexander.WeakSemantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.FirstOrderCalculus",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/FirstOrderCalculus.lean",
+          "sha256": "862989f4b27eeb08eec24f84ead3131158eb124535cba86fb1b59966fea2cf18",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeSyntaxCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.LiteralCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/LiteralCoding.lean",
+          "sha256": "afd800a30da1b9c674234a4e249707998ff2223d7e0c4e6fa3218dbc67387cb4",
+          "direct_local_imports": [
+            "Alexander313.Effective.FormulaSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeClosedLabels",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeClosedLabels.lean",
+          "sha256": "4581733a0bd16c344a2347c41e2202106407d5092db7174eadf3303ca909e416",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeFormulaFormation",
+            "Alexander313.Alexander.FirstOrderCalculus"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeFormulaFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeFormulaFormation.lean",
+          "sha256": "4ac733b908127b01d1a7cc3efff513f26047f7335058cfb6da6c7e4e8330a8a9",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeTupleFormation"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeFormulaOperations",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeFormulaOperations.lean",
+          "sha256": "7d280bb04110d2e839a65bb12d8a8e3a16ce9b44816235829accb8e94144163e",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeTermOperations"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeFreeVariables",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeFreeVariables.lean",
+          "sha256": "0fd5f309f5e2ae169e499c3fdb552058de8fcc28aac0366d7ba4312fa4e9556f",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeFormulaOperations"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeProofChecker",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeProofChecker.lean",
+          "sha256": "2911b069bfe1ff5a66197cbdbe622c533a6a8b231706c31b1a7fa442b911693d",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeFreeVariables",
+            "Alexander313.Alexander.ProofTreeCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeRelationCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeRelationCoding.lean",
+          "sha256": "0482a53ba4c381a8f126b36d2b22f6396f615277c9a82bf14468e7cd16d0fc62",
+          "direct_local_imports": [
+            "Alexander313.Alexander.DeltaEncoding",
+            "Alexander313.Alexander.SourceLabelFormation"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeSyntaxCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeSyntaxCoding.lean",
+          "sha256": "f6dba0e51e2d4c38bbe826f7f2de7a7e1cf68920cf8307744227350279e35329",
+          "direct_local_imports": []
+        },
+        {
+          "module": "Alexander313.Alexander.NativeTermFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeTermFormation.lean",
+          "sha256": "c451ce67e2e07ed5a8eca13d43b66c148856551d999fd3394812cde1439163f1",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeRelationCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeTermOperations",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeTermOperations.lean",
+          "sha256": "9bebc78b95f920bd4c60d50fd3ea85ea4ac49600e5bea306ad933197a5d7bc07",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeClosedLabels"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.NativeTupleFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/NativeTupleFormation.lean",
+          "sha256": "d52fd23cb40bbbf52198064a4519fed1e0b3d4a5b7f4cd260b9e67646f19bae5",
+          "direct_local_imports": [
+            "Alexander313.Alexander.NativeTermFormation"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.ProofTreeCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/ProofTreeCoding.lean",
+          "sha256": "2ba4bba5b78377a531ee896c999fee7f50901f52228948d1836df50cc35ccdc6",
+          "direct_local_imports": [
+            "Alexander313.Alexander.FirstOrderCalculus",
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.SourceLabelFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/SourceLabelFormation.lean",
+          "sha256": "d5bb18d7aa3166f6ad30720c2deb3c03c49a9f79d5c7d7b0ba4efd7be09f53bc",
+          "direct_local_imports": [
+            "Alexander313.Alexander.LiteralCoding",
+            "Alexander313.Effective.TermOperations",
+            "Alexander313.Specification"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.WeakSemantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/WeakSemantics.lean",
+          "sha256": "32f6f380e3ae3b1c893bfa01f5e47539e8eee674a26e1506e01bbd4bec1ffbd1",
+          "direct_local_imports": [
+            "Alexander313.Alexander.BaseLogic",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.Template",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/Template.lean",
+          "sha256": "d55947eebeaba581d804cec2192772e90f8b40dacff69d5b0046c89782a3f536",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticCoding",
+            "Alexander313.Alexander.WeakSemantics"
+          ]
+        },
+        {
+          "module": "Alexander313.ArithmeticCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ArithmeticCoding.lean",
+          "sha256": "4f549577fb11609cc8e6fe6a03b4ce74d2eb6d324d40e7c1daef02b07b26c216",
+          "direct_local_imports": [
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.Computability",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Computability.lean",
+          "sha256": "e22f7e8a3857a1f7d653303f7852e21a4b83b594852d465f5b0786895d1c1293",
+          "direct_local_imports": [
+            "Alexander313.Semantics",
+            "Alexander313.Encoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.FormulaSyntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/FormulaSyntax.lean",
+          "sha256": "b51fda085fbcf611a89079ac9ed073c57df3ea8bcd91ff1bd6b450918460d46b",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermOperations",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermOperations.lean",
+          "sha256": "0dfbbc39df41bf571bb4623bad3c91423382b6b73f96766f37cd26a1a39ec674",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSubstitution",
+            "Alexander313.Arithmetic.Template"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermSubstitution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermSubstitution.lean",
+          "sha256": "6a746636632b602d5e2a3c010dda535202babca6dbb5dbe9f62e354478c5118f",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermSyntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermSyntax.lean",
+          "sha256": "db359721adb9b17bc9277b51e7f8c705366feff86b3778de791d0cbaa3b61802",
+          "direct_local_imports": [
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.Encoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Encoding.lean",
+          "sha256": "7ed88167e73aab6ee773e6ab1f6f2712a500b573cce7b0e0bd650c445f92b573",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.FreeVariables",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/FreeVariables.lean",
+          "sha256": "5da18a914a37c6cea79aab2e98050191e8775a3edcda5595f8c15a0a7c476eaf",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Semantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Semantics.lean",
+          "sha256": "047e851388c5d2f1996dde1b588a3dd4a6a9d9d1390f23426e8b57ffbdbcc80c",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Specification",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Specification.lean",
+          "sha256": "a849291e7f5928f104333e39c3ef5a62cec82a04e4033203f7fb9fc635f37fa8",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticCoding",
+            "Alexander313.Alexander.BaseLogic"
+          ]
+        },
+        {
+          "module": "Alexander313.Syntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Syntax.lean",
+          "sha256": "46b60370bee5bfca2b4498ffb2d2fc6d1463f0aa476a04e0a6d43feebb97a328",
+          "direct_local_imports": []
+        }
+      ]
+    },
+    {
+      "entry_module": "Alexander313.Arithmetic.UniversalExecution",
+      "entry_sha256": "da1b1083687624f5bdd5418597f4b1e59b250d8d0e3d8b6c98f5fa3118e8bb48",
+      "local_closure_module_count": 21,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Alexander.BaseLogic",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/BaseLogic.lean",
+          "sha256": "84e659f87d32e7092d4c7603d177a383cd1876c59433cb2f3fc687b4b208d1b6",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.WeakSemantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/WeakSemantics.lean",
+          "sha256": "32f6f380e3ae3b1c893bfa01f5e47539e8eee674a26e1506e01bbd4bec1ffbd1",
+          "direct_local_imports": [
+            "Alexander313.Alexander.BaseLogic",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.BetaExecution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/BetaExecution.lean",
+          "sha256": "9abea076999fcccaf79926b40e79f2d7fc89d538a5bfa86eb0af4c48ad569f2d",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.LocalExecution"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.BoundedTrace",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/BoundedTrace.lean",
+          "sha256": "ed68e7dc0ca9a545fe455240f002743a6b29fa04ab51feab375cea9435d376af",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.SequenceCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.ExpressionGraphs",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/ExpressionGraphs.lean",
+          "sha256": "ddf93557bfb982f7db233f70789433cbe28c1b03551a647256c993ce92fc4911",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.ProgramConstructors",
+            "Alexander313.Arithmetic.TraceSequence"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.LocalExecution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/LocalExecution.lean",
+          "sha256": "1ad266414518e258083658c0dfb0054ffddaa6af14dcdfdf92af0f45cc3abe0f",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.ExpressionGraphs"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.PositiveCertificates",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/PositiveCertificates.lean",
+          "sha256": "851485b48d2563c87491fba4613c793e7313ea6b32bf8bf0262c00e6332f7ac7",
+          "direct_local_imports": [
+            "Alexander313.ProofClosure",
+            "Alexander313.Arithmetic.Template"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.ProgramConstructors",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/ProgramConstructors.lean",
+          "sha256": "aebf04186eedb7225b22d313009dc0a6a93b07eac60e06d18816532dc201b25c",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.SequenceCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.SequenceCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/SequenceCoding.lean",
+          "sha256": "5c0b5abc8c362d415cc95523cd1db1e7adb6b84e662f40c4282c096cf22fbe55",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.PositiveCertificates"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.Template",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/Template.lean",
+          "sha256": "d55947eebeaba581d804cec2192772e90f8b40dacff69d5b0046c89782a3f536",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticCoding",
+            "Alexander313.Alexander.WeakSemantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.TraceSequence",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/TraceSequence.lean",
+          "sha256": "a6b2a7ea584a493b54f54e0dc27fd704d2ffbbae9c12648eb3d81f5dad797cb6",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.BoundedTrace"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.UniversalExecution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/UniversalExecution.lean",
+          "sha256": "da1b1083687624f5bdd5418597f4b1e59b250d8d0e3d8b6c98f5fa3118e8bb48",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.BetaExecution"
+          ]
+        },
+        {
+          "module": "Alexander313.ArithmeticCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ArithmeticCoding.lean",
+          "sha256": "4f549577fb11609cc8e6fe6a03b4ce74d2eb6d324d40e7c1daef02b07b26c216",
+          "direct_local_imports": [
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.Computability",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Computability.lean",
+          "sha256": "e22f7e8a3857a1f7d653303f7852e21a4b83b594852d465f5b0786895d1c1293",
+          "direct_local_imports": [
+            "Alexander313.Semantics",
+            "Alexander313.Encoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Encoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Encoding.lean",
+          "sha256": "7ed88167e73aab6ee773e6ab1f6f2712a500b573cce7b0e0bd650c445f92b573",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.FreeVariables",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/FreeVariables.lean",
+          "sha256": "5da18a914a37c6cea79aab2e98050191e8775a3edcda5595f8c15a0a7c476eaf",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.ProofClosure",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ProofClosure.lean",
+          "sha256": "72ec03caa404b14677075876aa978174a9456ceef66a21d021e49fa6793d5cd8",
+          "direct_local_imports": [
+            "Alexander313.Quantifiers"
+          ]
+        },
+        {
+          "module": "Alexander313.Quantifiers",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Quantifiers.lean",
+          "sha256": "40f3c486aa888dd9a0b7d5e49f95e3ec4bf8e26b88324aa123471350ce4b6632",
+          "direct_local_imports": [
+            "Alexander313.Specification",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Semantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Semantics.lean",
+          "sha256": "047e851388c5d2f1996dde1b588a3dd4a6a9d9d1390f23426e8b57ffbdbcc80c",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Specification",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Specification.lean",
+          "sha256": "a849291e7f5928f104333e39c3ef5a62cec82a04e4033203f7fb9fc635f37fa8",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticCoding",
+            "Alexander313.Alexander.BaseLogic"
+          ]
+        },
+        {
+          "module": "Alexander313.Syntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Syntax.lean",
+          "sha256": "46b60370bee5bfca2b4498ffb2d2fc6d1463f0aa476a04e0a6d43feebb97a328",
+          "direct_local_imports": []
+        }
+      ]
+    },
+    {
+      "entry_module": "Alexander313.Computability",
+      "entry_sha256": "e22f7e8a3857a1f7d653303f7852e21a4b83b594852d465f5b0786895d1c1293",
+      "local_closure_module_count": 4,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Computability",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Computability.lean",
+          "sha256": "e22f7e8a3857a1f7d653303f7852e21a4b83b594852d465f5b0786895d1c1293",
+          "direct_local_imports": [
+            "Alexander313.Semantics",
+            "Alexander313.Encoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Encoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Encoding.lean",
+          "sha256": "7ed88167e73aab6ee773e6ab1f6f2712a500b573cce7b0e0bd650c445f92b573",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Semantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Semantics.lean",
+          "sha256": "047e851388c5d2f1996dde1b588a3dd4a6a9d9d1390f23426e8b57ffbdbcc80c",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Syntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Syntax.lean",
+          "sha256": "46b60370bee5bfca2b4498ffb2d2fc6d1463f0aa476a04e0a6d43feebb97a328",
+          "direct_local_imports": []
+        }
+      ]
+    },
+    {
+      "entry_module": "Alexander313.SourceFixedPoint",
+      "entry_sha256": "93534ea17fcf1596e4ccefa7ad67fa9bc042919f1e66544b4388cfe433a67759",
+      "local_closure_module_count": 71,
+      "complete_local_import_closure": [
+        {
+          "module": "Alexander313.Alexander.AlphaClosure",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/AlphaClosure.lean",
+          "sha256": "4557acce99d0ef409759a2f220516cdcb21fa052acd3e5d26afa4527dceef26e",
+          "direct_local_imports": [
+            "Alexander313.Alexander.WeakSemantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.AlphaOpening",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/AlphaOpening.lean",
+          "sha256": "b3e2eb57f58ceb69bf901603fd45c856cfcf33ceeafd0f7ddfb5816673fb2959",
+          "direct_local_imports": [
+            "Alexander313.Alexander.AlphaClosure"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.AlphaSemantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/AlphaSemantics.lean",
+          "sha256": "a5ca1747dc6b6c14e37e61c45359d7df2141c73b0edae134f6c4bd31335c385c",
+          "direct_local_imports": [
+            "Alexander313.Alexander.VariableOpening",
+            "Alexander313.Alexander.RawAdmissibility"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.BaseLogic",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/BaseLogic.lean",
+          "sha256": "84e659f87d32e7092d4c7603d177a383cd1876c59433cb2f3fc687b4b208d1b6",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.FilteredModel",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/FilteredModel.lean",
+          "sha256": "bb3fa3a553eb77915cf4d1145d63eb8b6e89c1134dc8e6bba93575a1410ce687",
+          "direct_local_imports": [
+            "Alexander313.Alexander.BaseLogic",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.LiteralCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/LiteralCoding.lean",
+          "sha256": "afd800a30da1b9c674234a4e249707998ff2223d7e0c4e6fa3218dbc67387cb4",
+          "direct_local_imports": [
+            "Alexander313.Effective.FormulaSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.ModelTransport",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/ModelTransport.lean",
+          "sha256": "a07abf078d7fe078de074d3950974f8b17c66c2b663dd654ab492001f4fa1c7e",
+          "direct_local_imports": [
+            "Alexander313.Alexander.FilteredModel"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.RawAdmissibility",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/RawAdmissibility.lean",
+          "sha256": "8d8f57a61254e4c69014b20d7488d899d37907dfceea30e18559870c69f66fd6",
+          "direct_local_imports": [
+            "Alexander313.Alexander.AlphaOpening",
+            "Alexander313.Alexander.FilteredModel"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.SourceLabelFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/SourceLabelFormation.lean",
+          "sha256": "d5bb18d7aa3166f6ad30720c2deb3c03c49a9f79d5c7d7b0ba4efd7be09f53bc",
+          "direct_local_imports": [
+            "Alexander313.Alexander.LiteralCoding",
+            "Alexander313.Effective.TermOperations",
+            "Alexander313.Specification"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.VariableOpening",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/VariableOpening.lean",
+          "sha256": "45659f85b24128bd67f18828415c29279ef536c9dd842c30507d5a387781ae6a",
+          "direct_local_imports": [
+            "Alexander313.Alexander.AlphaOpening"
+          ]
+        },
+        {
+          "module": "Alexander313.Alexander.WeakSemantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Alexander/WeakSemantics.lean",
+          "sha256": "32f6f380e3ae3b1c893bfa01f5e47539e8eee674a26e1506e01bbd4bec1ffbd1",
+          "direct_local_imports": [
+            "Alexander313.Alexander.BaseLogic",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.BetaExecution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/BetaExecution.lean",
+          "sha256": "9abea076999fcccaf79926b40e79f2d7fc89d538a5bfa86eb0af4c48ad569f2d",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.LocalExecution"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.BoundedTrace",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/BoundedTrace.lean",
+          "sha256": "ed68e7dc0ca9a545fe455240f002743a6b29fa04ab51feab375cea9435d376af",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.SequenceCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.ExpressionGraphs",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/ExpressionGraphs.lean",
+          "sha256": "ddf93557bfb982f7db233f70789433cbe28c1b03551a647256c993ce92fc4911",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.ProgramConstructors",
+            "Alexander313.Arithmetic.TraceSequence"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.FiniteBounds",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/FiniteBounds.lean",
+          "sha256": "6569e90f1542cfc2657ddbd1b77f7b891536335d7822ed8d5f6e7cc1c7a310f1",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.UniversalExecution"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.LocalExecution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/LocalExecution.lean",
+          "sha256": "1ad266414518e258083658c0dfb0054ffddaa6af14dcdfdf92af0f45cc3abe0f",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.ExpressionGraphs"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.PositiveCertificates",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/PositiveCertificates.lean",
+          "sha256": "851485b48d2563c87491fba4613c793e7313ea6b32bf8bf0262c00e6332f7ac7",
+          "direct_local_imports": [
+            "Alexander313.ProofClosure",
+            "Alexander313.Arithmetic.Template"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.ProgramConstructors",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/ProgramConstructors.lean",
+          "sha256": "aebf04186eedb7225b22d313009dc0a6a93b07eac60e06d18816532dc201b25c",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.SequenceCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.SequenceCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/SequenceCoding.lean",
+          "sha256": "5c0b5abc8c362d415cc95523cd1db1e7adb6b84e662f40c4282c096cf22fbe55",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.PositiveCertificates"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.Template",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/Template.lean",
+          "sha256": "d55947eebeaba581d804cec2192772e90f8b40dacff69d5b0046c89782a3f536",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticCoding",
+            "Alexander313.Alexander.WeakSemantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.TraceSequence",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/TraceSequence.lean",
+          "sha256": "a6b2a7ea584a493b54f54e0dc27fd704d2ffbbae9c12648eb3d81f5dad797cb6",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.BoundedTrace"
+          ]
+        },
+        {
+          "module": "Alexander313.Arithmetic.UniversalExecution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Arithmetic/UniversalExecution.lean",
+          "sha256": "da1b1083687624f5bdd5418597f4b1e59b250d8d0e3d8b6c98f5fa3118e8bb48",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.BetaExecution"
+          ]
+        },
+        {
+          "module": "Alexander313.ArithmeticCoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ArithmeticCoding.lean",
+          "sha256": "4f549577fb11609cc8e6fe6a03b4ce74d2eb6d324d40e7c1daef02b07b26c216",
+          "direct_local_imports": [
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.ArithmeticInstances",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ArithmeticInstances.lean",
+          "sha256": "92cb00642b6e7e62edeeb8decd81e5d63e06e6c9828946f096271d201f9146b5",
+          "direct_local_imports": [
+            "Alexander313.Arithmetic.PositiveCertificates",
+            "Alexander313.Alexander.AlphaClosure",
+            "Alexander313.Alexander.VariableOpening"
+          ]
+        },
+        {
+          "module": "Alexander313.Background",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Background.lean",
+          "sha256": "caaa9b457f591781d4d0b64d9eb0d4ca0f4875aab3e97364760c9845cc2dbdc5",
+          "direct_local_imports": [
+            "Alexander313.Quantifiers",
+            "Alexander313.SuccessorSubstitution",
+            "Alexander313.Alexander.FilteredModel"
+          ]
+        },
+        {
+          "module": "Alexander313.CanonicalCoreAssembly",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/CanonicalCoreAssembly.lean",
+          "sha256": "488335a56978a2edb1b11524a21e0886043cf89dd395c94e24f6c23be2d7e7d9",
+          "direct_local_imports": [
+            "Alexander313.CommonCoreAssembly",
+            "Alexander313.Arithmetic.FiniteBounds"
+          ]
+        },
+        {
+          "module": "Alexander313.CommonCoreAssembly",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/CommonCoreAssembly.lean",
+          "sha256": "6039eab75f9bfd351a2c19c63d7f3a2ac724e79218cb893a5ba9bef9aea08bf6",
+          "direct_local_imports": [
+            "Alexander313.CoreInheritance",
+            "Alexander313.OriginalSchemas"
+          ]
+        },
+        {
+          "module": "Alexander313.Computability",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Computability.lean",
+          "sha256": "e22f7e8a3857a1f7d653303f7852e21a4b83b594852d465f5b0786895d1c1293",
+          "direct_local_imports": [
+            "Alexander313.Semantics",
+            "Alexander313.Encoding"
+          ]
+        },
+        {
+          "module": "Alexander313.ConsequencePrograms",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ConsequencePrograms.lean",
+          "sha256": "da65c1458cd2c55dec8f2361e79ec1e01c158391d4ed3c7c8f18c322b450af41",
+          "direct_local_imports": [
+            "Alexander313.Effective.ValidityImages",
+            "Alexander313.RecordedLogic"
+          ]
+        },
+        {
+          "module": "Alexander313.CoreInheritance",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/CoreInheritance.lean",
+          "sha256": "78dcbca96836f3760fa060087e265435db340548a07a9178527e15104a19c86b",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticInstances",
+            "Alexander313.SourceColumns",
+            "Alexander313.Thesis311"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.CanonicalFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/CanonicalFormation.lean",
+          "sha256": "9942baa03a159ba65b669e00329a7f325e864a892539f3d1eb1f8893b047b79e",
+          "direct_local_imports": [
+            "Alexander313.Effective.FormulaOperations",
+            "Alexander313.Arithmetic.UniversalExecution"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.CommonCorePrograms",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/CommonCorePrograms.lean",
+          "sha256": "008290b001789210c54c2e0976a076241266dc4ea1d07d2da53b154b833103fa",
+          "direct_local_imports": [
+            "Alexander313.Effective.ValidityImages",
+            "Alexander313.CommonCoreAssembly"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.FiniteAssignments",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/FiniteAssignments.lean",
+          "sha256": "21e5515dcbaa4b7e48a17b17fb3630822b99627d989b4e67c4cef8edd0e8dbd7",
+          "direct_local_imports": [
+            "Alexander313.Effective.LiteralFormation",
+            "Alexander313.Alexander.SourceLabelFormation"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.FormulaOperations",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/FormulaOperations.lean",
+          "sha256": "ca0861b95118c55aadcd05a3e6d671a0ca871afaa3e695b5b9c0019e14ac4202",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermOperations"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.FormulaSubstitution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/FormulaSubstitution.lean",
+          "sha256": "5ccfe59e99acafd2cce9399a153054139e543100a6b694bc325aa60772e6e723",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSubstitution",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.FormulaSyntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/FormulaSyntax.lean",
+          "sha256": "b51fda085fbcf611a89079ac9ed073c57df3ea8bcd91ff1bd6b450918460d46b",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.GeneratorPrograms",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/GeneratorPrograms.lean",
+          "sha256": "f933749a90733a5ecef8ed7b2984b8babe0a19894f5069d7e355c3f195d14b90",
+          "direct_local_imports": [
+            "Alexander313.Effective.SchemaGenerators",
+            "Alexander313.Effective.SubordinateGenerators"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.LiteralFormation",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/LiteralFormation.lean",
+          "sha256": "454ca065aac9552b05219bdaa71b20d1772714be13e788faebaf95420768fecd",
+          "direct_local_imports": [
+            "Alexander313.Effective.CanonicalFormation",
+            "Alexander313.Effective.FormulaSubstitution",
+            "Alexander313.Alexander.LiteralCoding"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.OwnerMap",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/OwnerMap.lean",
+          "sha256": "fa59c3a684dfa37b6cee64eb1824db1229bdad90d2626d213ff8c1c578dda200",
+          "direct_local_imports": [
+            "Alexander313.Effective.SyntaxFilter",
+            "Alexander313.Effective.FormulaSubstitution",
+            "Alexander313.Alexander.ModelTransport"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.SchemaGenerators",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/SchemaGenerators.lean",
+          "sha256": "0966e406059f4a808ba7e5200c6130a624f9aabf059b3210e2fa66ce21434cf7",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermReplacement",
+            "Alexander313.Alexander.SourceLabelFormation",
+            "Alexander313.Thesis311"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.SubordinateGenerators",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/SubordinateGenerators.lean",
+          "sha256": "201c08c78315bf92c35f694d7233432fa9ecfa6de7167c70ac00131a130285b3",
+          "direct_local_imports": [
+            "Alexander313.Effective.CanonicalFormation",
+            "Alexander313.Alexander.SourceLabelFormation",
+            "Alexander313.SourceColumns"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.SyntaxFilter",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/SyntaxFilter.lean",
+          "sha256": "d912d024770acc62bed1dafa3d215ea77cb59f49ba850f461a8524c2a8b45209",
+          "direct_local_imports": [
+            "Alexander313.Effective.FormulaSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermOperations",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermOperations.lean",
+          "sha256": "0dfbbc39df41bf571bb4623bad3c91423382b6b73f96766f37cd26a1a39ec674",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSubstitution",
+            "Alexander313.Arithmetic.Template"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermReplacement",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermReplacement.lean",
+          "sha256": "a78814d83520d3c57229d63eda4aaea1b33112b79834387714176e7ffb3e9bda",
+          "direct_local_imports": [
+            "Alexander313.Effective.LiteralFormation"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermSubstitution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermSubstitution.lean",
+          "sha256": "6a746636632b602d5e2a3c010dda535202babca6dbb5dbe9f62e354478c5118f",
+          "direct_local_imports": [
+            "Alexander313.Effective.TermSyntax"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.TermSyntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/TermSyntax.lean",
+          "sha256": "db359721adb9b17bc9277b51e7f8c705366feff86b3778de791d0cbaa3b61802",
+          "direct_local_imports": [
+            "Alexander313.Computability"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.UnaryColumns",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/UnaryColumns.lean",
+          "sha256": "a5a31cb62f8ca8cd2d4c4c9419874e2ecb15bd236b47a775f9a81c6e5be886a4",
+          "direct_local_imports": [
+            "Alexander313.Effective.FormulaSubstitution"
+          ]
+        },
+        {
+          "module": "Alexander313.Effective.ValidityImages",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Effective/ValidityImages.lean",
+          "sha256": "047a66406ae5cda7949aaaa3b1b1df4bde66c1de1bb2c702f502285115828b85",
+          "direct_local_imports": [
+            "Alexander313.Effective.GeneratorPrograms",
+            "Alexander313.Effective.FiniteAssignments"
+          ]
+        },
+        {
+          "module": "Alexander313.EffectiveIdeals",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/EffectiveIdeals.lean",
+          "sha256": "ba8f5fa9ea3c5a94d1ccdd35c51ef1f7541e81ad337f7a4bacbd8ed1c5aac1b3",
+          "direct_local_imports": [
+            "Alexander313.Computability",
+            "Alexander313.Hierarchy",
+            "Alexander313.Specification"
+          ]
+        },
+        {
+          "module": "Alexander313.Encoding",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Encoding.lean",
+          "sha256": "7ed88167e73aab6ee773e6ab1f6f2712a500b573cce7b0e0bd650c445f92b573",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.FreeVariables",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/FreeVariables.lean",
+          "sha256": "5da18a914a37c6cea79aab2e98050191e8775a3edcda5595f8c15a0a7c476eaf",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Hierarchy",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Hierarchy.lean",
+          "sha256": "8f6e8eec553bbb795acb7116d843fa247ec72298368a374efe63054ba2a23631",
+          "direct_local_imports": []
+        },
+        {
+          "module": "Alexander313.OriginalReduct",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/OriginalReduct.lean",
+          "sha256": "e7facfabefd13c0d8f477381aefcc2b94bddaaccc5135f7dbfb1389f17a13868",
+          "direct_local_imports": [
+            "Alexander313.Effective.OwnerMap",
+            "Alexander313.SourceModels"
+          ]
+        },
+        {
+          "module": "Alexander313.OriginalSchemas",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/OriginalSchemas.lean",
+          "sha256": "7b71da61ae183b2c383a8ce8af13ed66c52fcbdffb1bb2f88f8c4645819fbd78",
+          "direct_local_imports": [
+            "Alexander313.OriginalReduct",
+            "Alexander313.Thesis313"
+          ]
+        },
+        {
+          "module": "Alexander313.ProofClosure",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/ProofClosure.lean",
+          "sha256": "72ec03caa404b14677075876aa978174a9456ceef66a21d021e49fa6793d5cd8",
+          "direct_local_imports": [
+            "Alexander313.Quantifiers"
+          ]
+        },
+        {
+          "module": "Alexander313.Quantifiers",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Quantifiers.lean",
+          "sha256": "40f3c486aa888dd9a0b7d5e49f95e3ec4bf8e26b88324aa123471350ce4b6632",
+          "direct_local_imports": [
+            "Alexander313.Specification",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.RecordedErasure",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/RecordedErasure.lean",
+          "sha256": "493fe84876596548d0795d938cdfcfdd573cf4c36eeb541c8fabc6427758e72f",
+          "direct_local_imports": [
+            "Alexander313.Semantics"
+          ]
+        },
+        {
+          "module": "Alexander313.RecordedLogic",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/RecordedLogic.lean",
+          "sha256": "0849a82d0b7439fdc4d2ba5c36e8160252f19c6ea5e342103f194c620fa59990",
+          "direct_local_imports": [
+            "Alexander313.RecordedReconstruction",
+            "Alexander313.Alexander.ModelTransport",
+            "Alexander313.ProofClosure"
+          ]
+        },
+        {
+          "module": "Alexander313.RecordedReconstruction",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/RecordedReconstruction.lean",
+          "sha256": "d150fbd3c91fd30450946f6f9cea95029f8ba51131edb9f736e1a70161cbecb7",
+          "direct_local_imports": [
+            "Alexander313.RecordedErasure",
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Semantics",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Semantics.lean",
+          "sha256": "047e851388c5d2f1996dde1b588a3dd4a6a9d9d1390f23426e8b57ffbdbcc80c",
+          "direct_local_imports": [
+            "Alexander313.Syntax"
+          ]
+        },
+        {
+          "module": "Alexander313.SourceColumns",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/SourceColumns.lean",
+          "sha256": "3cca735ee125576d86e651c0f4d83ad3e964a0c7ad4114a5550be5d8b8c65582",
+          "direct_local_imports": [
+            "Alexander313.Specification",
+            "Alexander313.Effective.UnaryColumns"
+          ]
+        },
+        {
+          "module": "Alexander313.SourceFixedPoint",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/SourceFixedPoint.lean",
+          "sha256": "93534ea17fcf1596e4ccefa7ad67fa9bc042919f1e66544b4388cfe433a67759",
+          "direct_local_imports": [
+            "Alexander313.ConsequencePrograms",
+            "Alexander313.Effective.CommonCorePrograms",
+            "Alexander313.CanonicalCoreAssembly",
+            "Alexander313.EffectiveIdeals"
+          ]
+        },
+        {
+          "module": "Alexander313.SourceModels",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/SourceModels.lean",
+          "sha256": "85c050a802dde25a4e08cc15a6ecaedec26f47d7ca3589f192da062239213fd1",
+          "direct_local_imports": [
+            "Alexander313.Specification",
+            "Alexander313.ProofClosure",
+            "Alexander313.Alexander.AlphaSemantics"
+          ]
+        },
+        {
+          "module": "Alexander313.Specification",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Specification.lean",
+          "sha256": "a849291e7f5928f104333e39c3ef5a62cec82a04e4033203f7fb9fc635f37fa8",
+          "direct_local_imports": [
+            "Alexander313.ArithmeticCoding",
+            "Alexander313.Alexander.BaseLogic"
+          ]
+        },
+        {
+          "module": "Alexander313.StageSupport",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/StageSupport.lean",
+          "sha256": "3389dce84a3c0298f074cbd7d0c08843db0c23e065a6cc77a2f8286aa0b2398d",
+          "direct_local_imports": []
+        },
+        {
+          "module": "Alexander313.SuccessorSubstitution",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/SuccessorSubstitution.lean",
+          "sha256": "772a3945269c4031fc9b7194dcde45d6d67588b87215e035d4e5980a37a58b55",
+          "direct_local_imports": [
+            "Alexander313.FreeVariables"
+          ]
+        },
+        {
+          "module": "Alexander313.Syntax",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Syntax.lean",
+          "sha256": "46b60370bee5bfca2b4498ffb2d2fc6d1463f0aa476a04e0a6d43feebb97a328",
+          "direct_local_imports": []
+        },
+        {
+          "module": "Alexander313.Thesis311",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Thesis311.lean",
+          "sha256": "576cde22394e449a13c36ca3ae8a9f5535a1e0e2b641902cbbfec11c2ec3e2c0",
+          "direct_local_imports": [
+            "Alexander313.Specification",
+            "Alexander313.Alexander.FilteredModel",
+            "Alexander313.Background",
+            "Alexander313.ProofClosure",
+            "Alexander313.SourceColumns",
+            "Alexander313.SourceModels"
+          ]
+        },
+        {
+          "module": "Alexander313.Thesis312",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Thesis312.lean",
+          "sha256": "24eb8a6f169a9c596747aa34f93da0554d293a31611c9e4ea72095475b291a29",
+          "direct_local_imports": [
+            "Alexander313.Specification",
+            "Alexander313.StageSupport",
+            "Alexander313.Hierarchy"
+          ]
+        },
+        {
+          "module": "Alexander313.Thesis313",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/Thesis313.lean",
+          "sha256": "5590e6b66f7b40547d0b7d7554276daced45b34233af4e5c6bbdf34f8c1ad06e",
+          "direct_local_imports": [
+            "Alexander313.Thesis311",
+            "Alexander313.Thesis312",
+            "Alexander313.WholeIdeal"
+          ]
+        },
+        {
+          "module": "Alexander313.WholeIdeal",
+          "upstream_path": "alexander-dissertation-lean/Alexander313/WholeIdeal.lean",
+          "sha256": "74d40180582ab0774d2350151325f21b90521826e77ede45980469fc3b717385",
+          "direct_local_imports": [
+            "Alexander313.Semantics",
+            "Alexander313.Hierarchy"
+          ]
+        }
+      ]
+    }
+  ]
+}

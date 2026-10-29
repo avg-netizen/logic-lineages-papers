@@ -1,0 +1,474 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{Transformations Between Deterministic and Stochastic\\Reinforcement-Learning Frameworks}
+\author{}
+\date{28 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Alexander and Pedersen define a transformation of reinforcement-learning
+frameworks by preservation of pairwise agent rankings in each transformed
+environment, together with two existential nontriviality conditions. We
+classify transformations between their four standard deterministic and
+stochastic frameworks under that definition. With at least two actions,
+a transformation exists exactly when the source agents are deterministic
+or the target agents are stochastic. The environment type does not affect
+existence. Positive cases follow from a one-parameter policy family and
+a three-valued choice of source environments. Negative cases follow from
+a finite scripted environment separating deterministic policies and the
+convexity of values attainable by stochastic policies. We also exhibit
+finite abstract frameworks showing that the full transformation notion
+need not compose, and distinguish it from a stronger cross-environment
+condition. The maps in the classification may be noncomputable and
+noninjective; the theorem concerns the stated mathematical definition,
+not effective conversion of arbitrary learned policies.
+\end{abstract}
+\tableofcontents
+
+\section{What should a change of reinforcement-learning framework preserve?}
+
+A reinforcement-learning framework specifies agents, environments and
+the value obtained when an agent interacts with an environment.
+Different formalizations permit deterministic or randomized choices,
+different reward sets, and different conventions for who acts first.
+Whether such changes preserve an agent's relative ability is a natural
+foundational question.
+
+Alexander and Pedersen \cite{AP} propose an abstract definition based
+on rankings. An agent map converts source agents into target agents;
+an environment map converts target environments back into source
+environments. Two converted agents must have the same strict ordering
+in a target environment as their source versions have in its converted
+source environment. This definition compares agents \emph{within one
+environment}. It makes no demand about comparing one agent's scores
+across different environments.
+
+We give a complete classification for the four standard frameworks
+in version~5 of their paper. A previous counterexample note
+\cite{Counterexample} supplies one positive instance contradicting the
+claimed deterministic-to-stochastic obstruction. Here a single positive
+construction decides every positive case, and a separate obstruction
+decides every remaining case. Both arguments are included in full.
+
+\begin{theorem}[Classification]\label{thm:classification}
+Assume the finite action alphabet has at least two elements. Under
+Definition~\ref{def:transformation}, a transformation between the four
+frameworks of Definition~\ref{def:four} exists if and only if
+\[
+ \text{the source agents are deterministic}
+ \quad\text{or}\quad
+ \text{the target agents are stochastic}.
+\]
+For a singleton action alphabet, no such transformation exists,
+including from a framework to itself.
+\end{theorem}
+
+The singleton qualification comes from the definition's nontriviality
+requirement, not from a technical failure of the proof. With only one
+policy, no pair of image agents can have different values.
+
+\section{Frameworks, interactions and the exact transformation condition}
+
+An abstract framework is a triple $F=(A,E,V)$ with
+$V:A\times E\to\R$. Agents and environments need not have effective
+descriptions at this level.
+
+\begin{definition}\label{def:transformation}
+A transformation from $F=(A,E,V)$ to
+$\overline F=(\overline A,\overline E,\overline V)$ is a pair of maps
+$f:A\to\overline A$, $g:\overline E\to E$ such that
+\begin{equation}\label{eq:faithful}
+ \overline V(f(p),\mu)<\overline V(f(q),\mu)
+ \quad\Longleftrightarrow\quad
+ V(p,g(\mu))<V(q,g(\mu))
+\end{equation}
+for every $p,q,\mu$, and such that:
+\begin{enumerate}
+\item some two image agents have strictly different values in one
+      target environment;
+\item some image agent has strictly different values in two target
+      environments.
+\end{enumerate}
+\end{definition}
+
+Equation~\eqref{eq:faithful} also preserves ties: apply it in both
+orders and use the trichotomy of real order. It does not require $f$
+or $g$ to be injective, computable, continuous, or faithful to numerical
+values themselves. In particular the two nontriviality clauses are
+existential requirements on the image, not global information-preservation
+conditions.
+
+\subsection{The four standard frameworks}
+
+Fix finite disjoint alphabets $\mathcal A$ of actions and $\mathcal P$
+of percepts. Each is nonempty. A reward function
+$r:\mathcal P\to\Z$ has both 0 and 1 in its range. Choose percepts
+$z_0,z_1$ with those rewards. Interaction is percept-first:
+\[
+ z^{(1)},a^{(1)},z^{(2)},a^{(2)},\ldots.
+\]
+An agent history is a finite alternating sequence ending in a percept;
+an environment history is empty or ends in an action. A deterministic
+policy gives one action at every agent history. A stochastic policy
+gives a rational probability distribution on actions at every such
+history. Environments similarly give a percept or a rational distribution
+on percepts. A deterministic object is identified with its point-mass
+stochastic version when necessary.
+
+Policies are defined on all histories of the appropriate form,
+including histories which would have probability zero in a particular
+interaction. They have no effectiveness restriction.
+
+Let $V_n(p,\mu)$ be the expected sum of rewards in the first $n$
+percepts of the alternating process. An environment is \emph{admissible}
+when $V(p,\mu)=\lim_n V_n(p,\mu)$ exists as a finite real for every
+policy of either kind. There is no common normalization such as
+$|V|\le1$. This condition is stronger than existence of a value just
+against the policies occurring in the image of a proposed transformation.
+
+\begin{definition}\label{def:four}
+For $X,Y\in\{D,S\}$, write $F_{XY}$ for the framework with agent
+type $X$ and environment type $Y$, using all agents of that type and
+all admissible environments of that type. The first subscript always
+denotes agents. $D$ means deterministic and $S$ stochastic.
+\end{definition}
+
+These are the four frameworks in \cite[Definition~9]{AP}. The finite
+play convention is the alternating percept-first process stated there;
+values here are defined directly by that process.
+
+\section{The positive cases: one scalar of agent behavior is enough}
+
+Choose distinct actions $a_0,a_1$. For a source policy $p$, define
+\[
+ t(p)=p(a_0\mid\langle z_0\rangle).
+\]
+For a deterministic source, interpret this as 1 if its first response
+to $z_0$ is $a_0$, and 0 otherwise. Thus $t$ is binary in that case;
+for stochastic sources it is rational in $[0,1]$. Both endpoints are
+attained by constant-action policies.
+
+For each rational $t\in[0,1]$, define a target policy $Q_t$ which, at
+its first action, chooses $a_1$ with probability $t$ and $a_0$ with
+probability $1-t$, independently of the initial percept. At every later
+history it chooses $a_0$. This defines the policy on every history;
+no persistent hidden random seed is required. The endpoints $Q_0,Q_1$
+are deterministic.
+
+\begin{lemma}\label{lem:affine}
+For every admissible target environment $\mu$,
+\[
+ V(Q_t,\mu)=A_\mu+t(B_\mu-A_\mu),
+ \qquad A_\mu=V(Q_0,\mu),\ B_\mu=V(Q_1,\mu).
+\]
+\end{lemma}
+\begin{proof}
+For each finite horizon, the trace law of $Q_t$ is the mixture of the
+trace laws of $Q_0$ and $Q_1$ with weights $1-t,t$. The only varying
+policy choice is the first action; after it all three policies have
+the same prescribed continuation. Conditioning on the first percept
+does not alter those weights. The environment may depend on the whole
+history, but for a fixed trace its own probability factors are the
+same in all three comparisons. Finite summation gives the identity for
+$V_n$. Take the limit of this two-term linear combination. Both
+endpoint limits are finite by admissibility.
+\end{proof}
+
+Three simple source environments suffice to match the possible
+orderings in this affine family. Each emits $z_0$ initially and zero
+rewards forever after its second percept:
+\begin{itemize}
+\item $e_+$ gives reward 1 at the second percept exactly when the
+      first action was $a_0$;
+\item $e_-$ gives reward 1 exactly when that first action was not $a_0$;
+\item $e_0$ always gives reward zero.
+\end{itemize}
+Choose $z_1$ or $z_0$ to implement the reward. These rules specify the
+environments on off-path histories as well. Their values against any
+source policy are $t(p),1-t(p),0$, respectively. They are deterministic
+and admissible against every deterministic or stochastic policy.
+
+\begin{proposition}\label{prop:positive}
+If source agents are deterministic or target agents are stochastic,
+there is a transformation.
+\end{proposition}
+\begin{proof}
+Set $f(p)=Q_{t(p)}$. Its codomain has the required type: either only
+the deterministic endpoints are needed or all rational $Q_t$ are
+allowed. For any target environment put
+\[
+ g(\mu)=
+ \begin{cases}
+ e_+,&B_\mu>A_\mu,\\
+ e_-,&B_\mu<A_\mu,\\
+ e_0,&B_\mu=A_\mu.
+ \end{cases}
+\]
+Use the point-mass version if the source environment class is stochastic.
+The affine identity shows that every image pair is ordered by increasing
+$t$, decreasing $t$, or a constant value according to the same three
+cases. The source environments realize exactly these orderings, so
+\eqref{eq:faithful} holds for every pair, including ties, in every target
+environment.
+
+For the first nontriviality condition, take a target environment which
+emits $z_0$, then rewards the first action $a_1$, then gives zeros.
+It assigns values 0 and 1 to $Q_0,Q_1$, both of which occur in the
+image. For the second, compare the always-zero target environment
+with one which emits $z_0$, then $z_1$ independently of action, then
+zeros. Every image policy has values 0 and 1 in these two environments.
+All these environments are admissible in either environment type.
+\end{proof}
+
+The sign choice in $g$ is a set-theoretic comparison of two real values.
+It need not be computable from any description of $\mu$. This is
+allowed by the definition, and is central to the scope of the theorem.
+
+\section{A finite environment which separates deterministic policies}
+
+The negative argument needs more than two policies being syntactically
+different. They can differ only at histories inconsistent with their
+own previous actions and still have identical value in every environment.
+An actual value distinction avoids that problem.
+
+\begin{lemma}[Two-value separator]\label{lem:separator}
+Suppose deterministic policies $\alpha,\beta$ have different values
+in some admissible environment. There is an admissible deterministic
+environment $\eta$ and an integer $C$ such that every deterministic
+policy has value either $C$ or $C+1$ in $\eta$, with $\alpha$ and
+$\beta$ taking different values.
+\end{lemma}
+\begin{proof}
+There must be a finite prescribed percept sequence on which their
+recursively generated actions first differ. Otherwise their actions
+would agree along every prescribed percept sequence; induction on
+trace length would then give identical finite trace distributions in
+every environment, and consequently identical limiting values.
+
+Choose a sequence $y_1,\ldots,y_k$ with first action divergence at
+stage $k$. Let $b_1,\ldots,b_{k-1}$ be the common earlier actions and
+$b_k$ the action taken by $\alpha$ at stage $k$.
+Define $\eta$ to emit this entire percept script, independently of
+actions. At percept $k+1$ emit $z_1$ if and only if the recorded action
+sequence is exactly $b_1,\ldots,b_k$; otherwise emit $z_0$.
+Emit $z_0$ thereafter.
+
+Every deterministic policy receives the same script reward
+$C=\sum_{i=1}^k r(y_i)$ and then either 0 or 1. In particular $\alpha$
+receives $C+1$ and $\beta$ receives $C$. Every stochastic policy has
+value between these endpoints. All nonzero rewards occur at a fixed
+finite horizon, so admissibility holds against the full policy class.
+\end{proof}
+
+It matters that the script continues after an unexpected action.
+Aborting it on deviation could change the script reward for third
+policies and destroy the two-value conclusion. The offset $C$ also
+allows prescribed percepts to carry arbitrary integer rewards; no
+zero-reward copy of every observation is assumed.
+
+\section{Mixing policies without a hidden random seed}
+
+For stochastic source policies we need a policy whose value is the
+midpoint of two given values in \emph{every} admissible environment.
+Pointwise averaging of action distributions is generally insufficient:
+it can redraw the branch at each step instead of mixing entire plays.
+The correct behavioral policy updates the branch weights from the
+recorded action history.
+
+For an agent history $h$, let $L_p(h)$ be the product of the probabilities
+that $p$ assigns to the earlier actions recorded in $h$, each evaluated
+at its recorded preceding history. Do not multiply probabilities of
+percepts. Let $0<w<1$ be rational. Define
+\begin{equation}\label{eq:mixture}
+ m(a\mid h)=
+ \frac{wL_p(h)p(a\mid h)+(1-w)L_q(h)q(a\mid h)}
+      {wL_p(h)+(1-w)L_q(h)}
+\end{equation}
+when the denominator is positive; otherwise use the point mass at $a_0$.
+This is a rational distribution at every history.
+
+\begin{lemma}\label{lem:mixture}
+The policy $m$ satisfies
+\[
+ V(m,\nu)=wV(p,\nu)+(1-w)V(q,\nu)
+\]
+for every admissible environment $\nu$.
+\end{lemma}
+\begin{proof}
+Induction over recorded actions gives
+$L_m(h)=wL_p(h)+(1-w)L_q(h)$. For a positive denominator, multiplication
+by \eqref{eq:mixture} cancels that denominator and gives the identity
+at the next action. For a zero denominator both nonnegative summands
+vanish, as do all their action extensions; the arbitrary off-path
+choice cannot revive them. Extending a history by a percept leaves
+the action-only products unchanged.
+
+For each finite full trace in a fixed environment, its percept-likelihood
+product is a common factor multiplying these three action products.
+It may depend on the recorded actions; that does not matter because
+the trace is fixed in this comparison. Finite trace probabilities,
+and then finite reward expectations, satisfy the same mixture identity.
+Take limits of the two-term linear combination. Admissibility supplies
+the required finite limits for all three policies.
+\end{proof}
+
+\section{The negative cases and the complete table}
+
+\begin{proposition}\label{prop:negative}
+There is no transformation with stochastic source agents and
+deterministic target agents, for either environment type.
+\end{proposition}
+\begin{proof}
+Suppose $(f,g)$ were one. The first nontriviality condition supplies
+source policies $p,q$ whose deterministic images have different values
+in some target environment. Lemma~\ref{lem:separator} supplies a
+deterministic environment $\eta$ giving every deterministic target
+policy one of two values $C,C+1$, with $f(p),f(q)$ taking opposite
+values. Its point-mass version is also available in a stochastic
+target environment class.
+
+Faithfulness makes $V(p,g(\eta))$ and $V(q,g(\eta))$ distinct.
+Let $m$ be their midpoint policy from Lemma~\ref{lem:mixture}, with
+$w=1/2$. Its source value is strictly between them. Applying
+\eqref{eq:faithful} to the two comparisons forces $V(f(m),\eta)$
+strictly between $C$ and $C+1$. No deterministic target policy has
+such a value in $\eta$. This is a contradiction.
+\end{proof}
+
+The two propositions prove Theorem~\ref{thm:classification} when there
+are at least two actions. If there is one action, both policy classes
+have only one member, so the first nontriviality condition fails for
+every map. The full table is therefore, for at least two actions,
+\[
+\begin{array}{c|cccc}
+ \text{source}\backslash\text{target}&DD&DS&SD&SS\\\hline
+ DD&\text{yes}&\text{yes}&\text{yes}&\text{yes}\\
+ DS&\text{yes}&\text{yes}&\text{yes}&\text{yes}\\
+ SD&\text{no}&\text{no}&\text{yes}&\text{yes}\\
+ SS&\text{no}&\text{no}&\text{yes}&\text{yes}
+\end{array}
+\]
+The environment type disappears from the criterion. Under this
+definition there are two mutual-transformability classes, separated
+by agent randomization, and a one-way transformation from the
+deterministic class to the stochastic class. This concerns the
+specific four frameworks; it is not a general composition theorem.
+
+\section{Composition and a stronger comparison condition}
+
+\subsection{The existential nontriviality conditions need not survive}
+
+Faithfulness alone composes: substitute one pair of maps into the
+other in \eqref{eq:faithful}. The full definition has an additional
+issue: witnesses to nontriviality can fall outside the image of the
+composite agent map or outside the selected environments.
+
+\begin{proposition}\label{prop:noncomposition}
+There are transformations $F\to G$ and $G\to H$ whose naturally
+composed maps fail both nontriviality conditions.
+\end{proposition}
+\begin{proof}
+The following value matrices give an example,
+with agents as rows and environments as columns:
+\[
+ V=\begin{pmatrix}0&0\\1&0\end{pmatrix},\quad
+ W=\begin{pmatrix}0&0&0\\1&0&0\\2&1&2\end{pmatrix},\quad
+ Z=\begin{pmatrix}0&0\\0&0\\1&2\end{pmatrix}.
+\]
+From $V$ to $W$, map the two agents to rows 1 and 2, and map the
+three target columns to source columns 1,2,2. On the selected rows
+the entries agree exactly, so faithfulness holds. Column 1 separates
+the image rows; image row 2 varies between columns 1 and 2.
+From $W$ to $Z$, use the identity row map and select source columns
+2,3. Again entries agree exactly. Row 3 witnesses both nontriviality
+conditions. The composite selects the first two rows of $Z$, all
+of whose entries are zero, so neither condition holds.
+
+\end{proof}
+
+This example addresses composition of the given maps. It does not
+exclude the existence of a different transformation from $F$ to $H$.
+
+\subsection{Comparing scores across environments changes the problem}
+
+A stronger requirement would ask, for all $p,q,\mu,\nu$,
+\begin{equation}\label{eq:cross}
+ \overline V(f(p),\mu)<\overline V(f(q),\nu)
+ \quad\Longleftrightarrow\quad
+ V(p,g(\mu))<V(q,g(\nu)).
+\end{equation}
+Definition~\ref{def:transformation} is the special case $\mu=\nu$
+and does not imply this condition. The difference has mathematical
+consequences.
+
+\begin{proposition}\label{prop:cross}
+Assume source agents and environments are deterministic, with rewards
+in a fixed lattice $d^{-1}\Z$, $d\ge1$, and convergent total rewards.
+Assume the target has rational initial mixtures of any two admissible
+environments. There is no pair satisfying \eqref{eq:cross} and the
+second nontriviality condition.
+\end{proposition}
+\begin{proof}
+A convergent sequence of source partial reward sums in $d^{-1}\Z$
+is eventually constant. Every source value therefore lies in that
+lattice. By \eqref{eq:cross}, all target values attained by image
+agents have an order-preserving image in this lattice: equality is
+also preserved by applying strict comparison in both orders.
+
+The second nontriviality condition gives one image agent with values
+$a<b$ in two target environments. Rational initial mixtures produce
+values $a+t(b-a)$ for all rational $0<t<1$. These would map to
+arbitrarily many distinct lattice points between the fixed lattice
+images of $a$ and $b$, an impossibility.
+\end{proof}
+
+Initial mixtures can be realized behaviorally by the environment
+analogue of \eqref{eq:mixture}, using past percept likelihoods.
+For each policy, finite expectations are mixed and finite limits
+exist; hence these environments remain admissible. Finite rational
+reward alphabets have a common denominator and satisfy the same
+lattice premise. An unrestricted rational reward alphabet does not.
+
+The proposition explains why an argument based on ordering one
+agent across several environments cannot establish an impossibility
+under the weaker printed definition. It establishes an obstruction
+for a different contract. It does not classify every case under
+that stronger contract.
+
+\section{Interpretation and further questions}
+
+The positive maps retain a single first-action probability and may
+collapse almost all other behavior. That is enough because the target
+environment map need preserve only one environment's ordering at a
+time. The negative argument identifies a feature that this collapse
+cannot erase: a nontrivial stochastic source has intermediate policy
+values, whereas a scripted deterministic target environment can make
+all deterministic values binary up to a common offset.
+
+Consequently the classification is a result about the expressive
+strength of a ranking-preservation definition. It supplies no general
+method for compiling a trained policy into an equally capable policy
+in another implementation. Requiring computable maps, injectivity,
+preservation of actual rewards, a reward normalization, or
+cross-environment comparisons would each define a further problem.
+These changes should be stated separately before attempting another
+classification.
+
+\paragraph{Preparation.}
+This is an AI-assisted hand-proof manuscript. The complete four-framework
+argument is included, using the versioned source definition. No formal
+verification or established historical priority is claimed.
+
+\begin{thebibliography}{9}
+\bibitem{AP} S.~A.~Alexander and A.~P.~Pedersen,
+\emph{Representation and Invariance in Reinforcement Learning},
+\href{https://arxiv.org/abs/2112.07752v5}{arXiv:2112.07752v5},
+11 August 2026. Especially Definitions~2 and~6--9 and the concrete
+classification section.
+\bibitem{Counterexample} Logic Lineages project,
+\emph{A counterexample to the transformation classification as written},
+working note, 2026.
+\href{https://github.com/avg-netizen/alexander-open-problems-results/tree/main/05-rl-transformation-counterexample}{Public note and proof}.
+The present manuscript includes all arguments it needs from that note.
+\end{thebibliography}
+\end{document}

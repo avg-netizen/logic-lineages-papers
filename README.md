@@ -4,6 +4,11 @@
 
 Working manuscripts and a standalone calculator/formalization project from a research programme in mathematical logic. Their source questions were posed by the authors identified below. Each manuscript is independently buildable; the new comparison collection cites its included companions for shared proofs. No argument or build requires private vault documents or project conventions.
 
+An incomplete [Lean formalization programme](FORMALIZATION.md) covers all fifteen
+papers. Its target register and component statuses distinguish the existing
+checked calculator from the many full paper targets still pending. Every
+dependency absent from the standard libraries remains an explicit obligation.
+
 | Paper | Source problem | Main result |
 |---|---|---|
 | [Scott complexity of countable abelian p-groups](01-scott-complexity-abelian-p-groups/README.md) · [PDF](01-scott-complexity-abelian-p-groups/paper.pdf) | Alvir–Csima–MacLean (2024), Questions 5.1–5.2; Gonzalez–Rossegger–Turetsky (2026), Question 1 | Exact reduced-group classification; all successor difference levels; no exact pure Sigma level, including nonreduced groups. |
@@ -32,6 +37,19 @@ The Lean development reconstructs Carlson's semantic endpoint characterization
 for normal left inputs and arbitrary actual right ordinals, together with the
 sharp expanded-tree size theorem. It uses standard Lean/Mathlib foundations;
 Python execution is separately tested. See the project's verification record.
+
+Five further [papers on differentiation, knowledge and computation](DIFFERENTIATION-KNOWLEDGE-AND-COMPUTATION.md)
+give complete accounts of several separate source questions and restricted
+decision results. Each is independent of the other papers and includes every
+local proof it uses.
+
+| Manuscript | Main result |
+|---|---|
+| [The domain of hyperreal differentiation is always proper](11-hyperreal-differentiation-domain/README.md) · [PDF](11-hyperreal-differentiation-domain/paper.pdf) | Universal properness for admissible idempotent ultrafilters; an excluded positive infinitesimal and failure of order convexity. |
+| [A theorem which is not common knowledge](12-common-knowledge-necessitation/README.md) · [PDF](12-common-knowledge-necessitation/paper.pdf) | Negative answer to Gorbow's unrestricted KT common-knowledge necessitation question, selector classification and direct consistency. |
+| [Deterministic and stochastic RL transformations](13-reinforcement-learning-transformations/README.md) · [PDF](13-reinforcement-learning-transformations/paper.pdf) | Complete four-framework classification under the printed ranking-preservation contract, with full positive and negative proofs. |
+| [The exact computability of two prediction measures](14-complexity-of-prediction-measures/README.md) · [PDF](14-complexity-of-prediction-measures/paper.pdf) | Exact third-jump degree for the original Hibbard measure and a specified canonical all-total-function variant. |
+| [Explicit differential-field constraint decisions](15-differential-field-constraint-decisions/README.md) · [PDF](15-differential-field-constraint-decisions/paper.pdf) | First-order and independent-spectrum decisions over Q; the full predicate and historical novelty remain outside the claims. |
 
 Each bundle contains the canonical `paper.tex`, its PDF, a local `preamble.tex`, `build_pdf.py`, a source/dependency guide and a verification record. Published mathematical theorems are cited normally; their proofs and copyrighted source PDFs are not bundled. The papers give their local arguments in full, with introductions and examples.
 

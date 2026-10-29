@@ -1,0 +1,147 @@
+{
+  "status": "paused_by_explicit_user_request",
+  "paused_at_utc": "2026-10-29T06:22:37.367118+00:00",
+  "reason": "External agent takeover; no new author/compiler/proof work.",
+  "accepted_main_declarations": [
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_gap",
+      "source": "02-exponential-comparison/paper.tex:eq:finite-gap",
+      "scope": "Exact finite-system reduction lemma; not a numbered main theorem or whole-paper completion.",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.restricted_product",
+      "source": "02-exponential-comparison/paper.tex:lem:restricted-product",
+      "scope": "Complete local bounded-multiplication source lemma.",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "foundation_gate": "LogicLineages.ComputabilityKnowledge.FoundationChecks",
+  "all_full_papers_complete": false,
+  "candidate": {
+    "file": "MultiplicationGadgetProof.lean",
+    "sha256": "79c9f0059d64dc1b4049635a708875d7fc1d019492fe56b0efd83b52a02545e9",
+    "lines": 200,
+    "source_label": "02-exponential-comparison/paper.tex:lem:seven-equations",
+    "frozen_comparator_sha256": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e",
+    "target": "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget.Target",
+    "gate": "LogicLineages.ComputabilityKnowledge.MultiplicationGadgetGate",
+    "elaboration_status": "NOT_ATTEMPTED: first runner invocation deferred before Lean at671MiB available, required768MiB. No theorem diagnostics.",
+    "raw_source_unchanged": true
+  },
+  "accepted_local_source_hashes": [
+    {
+      "file": "PositiveExpression.lean",
+      "sha256": "4ad6156af313275071fae9fa1d4b0a3166fccf99c2cb38a6a46921113a6fc1ed"
+    },
+    {
+      "file": "Comparators/ExponentialGap.lean",
+      "sha256": "f50d88fcd80d9a494e24572ea16b29f5f80d2dd01d728f23bca1b3a5b1b6179e"
+    },
+    {
+      "file": "ExponentialGapProof.lean",
+      "sha256": "4a14cddb5f309d90332d5db821c059fdb459600269af1fa7b70d0fc0e521d916"
+    },
+    {
+      "file": "ExponentialGapGate.lean",
+      "sha256": "8b3ec7e837c605d263719dd190a924476abcdc150a28cab1af6601a3e17ddbc4"
+    },
+    {
+      "file": "Comparators/RestrictedProduct.lean",
+      "sha256": "3b6aec50b063e33c05f7d4ecddfd8af123cab045a4eb7a40ce73e129e4831214"
+    },
+    {
+      "file": "RestrictedProductProof.lean",
+      "sha256": "fc1638d3ba1408e74819e02e0ec0495daf88ebb153511795bc67db4df9774c80"
+    },
+    {
+      "file": "RestrictedProductGate.lean",
+      "sha256": "221aa65775f2de2c9b103fdcf21b46b067ca57c9146f1a701e3cc254186df4e4"
+    },
+    {
+      "file": "PositiveExpressionProperties.lean",
+      "sha256": "9701f4480ae2dc893dc9fd5de0c7ed2b7794426a63251b317c0c528f6f808c65"
+    },
+    {
+      "file": "PredictionGame.lean",
+      "sha256": "d485496e168d5e6bb3e50845202895e164a3c1923992005a5d3a16bc5c5b231d"
+    },
+    {
+      "file": "GorbowSyntax.lean",
+      "sha256": "705364787a36bc9c409806260a6c1db762d7d4e47f659b6d588ebab124fad7e5"
+    },
+    {
+      "file": "GorbowSubstitution.lean",
+      "sha256": "0a95ba2a3f3595c4665feb7a824ad077d5a724f3133503e81657be962c226899"
+    },
+    {
+      "file": "FoundationChecks.lean",
+      "sha256": "eb5b6ba59e4d85681d705e0e49d0e448a8a1becd9398001839d3f247a5af5e9f"
+    }
+  ],
+  "pending_local_source_hashes": [
+    {
+      "file": "Comparators/MultiplicationGadget.lean",
+      "sha256": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e"
+    },
+    {
+      "file": "MultiplicationGadgetProof.lean",
+      "sha256": "79c9f0059d64dc1b4049635a708875d7fc1d019492fe56b0efd83b52a02545e9"
+    },
+    {
+      "file": "MultiplicationGadgetGate.lean",
+      "sha256": "6dc60c4928ab5fedc9779879cee4f6760025195719ae36eff9644026f5cb6ac1"
+    },
+    {
+      "file": "GorbowFormulaSubstitution.lean",
+      "sha256": "d5ca4ab8478a9ed6818d5de25d0aae1b52763e7f98fb7fe49830ab54d1f46915"
+    },
+    {
+      "file": "GorbowFormulaSubstitutionGate.lean",
+      "sha256": "100340d11c4b13e3265a580b328acff5da76bfdd9cf50cb472e563d1ec4ea8c1"
+    }
+  ],
+  "reproduction_receipts": {
+    "r001-accepted-build.json": "1793245885071137192-2.json",
+    "r002-accepted-build.json": "1793247970233247267-2.json",
+    "foundations-accepted-build.json": "1793248486091914766-2.json",
+    "r003-comparator-build.json": "1793248471358273988-2.json",
+    "r003-pre-elaboration-deferral.json": "1793254222090917897-2.json"
+  },
+  "private_claude_logs_required": false,
+  "imported_313_modules": [],
+  "source_manuscripts": [
+    {
+      "file": "02-exponential-comparison/paper.tex",
+      "sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7"
+    },
+    {
+      "file": "02-exponential-comparison/SOURCES.md",
+      "sha256": "01d61f4964aad3c3a10aae7092de85455b8d850c58690f42dec8bbcbf46c8ed7"
+    },
+    {
+      "file": "12-common-knowledge-necessitation/paper.tex",
+      "sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc"
+    },
+    {
+      "file": "12-common-knowledge-necessitation/SOURCES.md",
+      "sha256": "236e6bbe16f6c81fb3293bd2dade8354b9c009d3390f6193268983a7b5acb4b2"
+    },
+    {
+      "file": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    },
+    {
+      "file": "14-complexity-of-prediction-measures/SOURCES.md",
+      "sha256": "4a459bf1a840c4126667e1a8198f9290187f7d57cd848f0c20233c0130619952"
+    }
+  ],
+  "r002_initial_raw_proof_sha256": "2e3f19f232b5ddd663b544bab7d0c0d106abf652d17db0a952fd495e8f839c33"
+}

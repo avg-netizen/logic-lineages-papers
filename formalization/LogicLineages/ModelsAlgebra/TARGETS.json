@@ -1,0 +1,666 @@
+{
+  "specification_author": "Codex",
+  "created_before_any_Claude_proof_round": true,
+  "accepted_new_coverage": [
+    "finite-order-forests.disjoint-upper-cones",
+    "finite-order-forests.maximal-extension",
+    "finite-order-forests.width-is-leaf-count",
+    "abelian-p-groups.p-step-image",
+    "abelian-p-groups.finite-filtration-image",
+    "abelian-p-groups.saturated-intersection-image",
+    "abelian-p-groups.transfinite-filtration-antitone",
+    "abelian-p-groups.transfinite-filtration-image-below-cut",
+    "abelian-p-groups.quotient-filtration-below-cut"
+  ],
+  "targets": [
+    {
+      "id": "differential-constraints.algebraic-constants",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "lem:constants",
+      "scope": "complete algebraic-constants clause, actual rational derivation and IsAlgebraic",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.algebraicConstants",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/Targets.lean",
+        "sha256": "eb71c44d009da683092d7996eb6fd70aaa7a21f24e6e624b09f20977e652853f",
+        "previous_legacy_sha256": "57e702041fde7b777ac9778c2e4c3be054a0f5879586ef360fa799d36d8619b2",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "e9a117962429d153ab2018137b097137c918758641781e5ea886d2c99be9ca15"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.algebraicConstants",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.StatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "specification_compilation": {
+        "status": "pass",
+        "receipt": "formalization/build-reports/1793246030144261846-2.json",
+        "module": "LogicLineages.ModelsAlgebra.Differential.Targets"
+      },
+      "candidate_attempt": {
+        "status": "resource_stop_no_theorem_diagnostic",
+        "receipt": "formalization/build-reports/1793246030144261846-2.json",
+        "reason": "90-second wall guard during Constants; no gate run"
+      },
+      "same_target_alternative": {
+        "candidate": "LogicLineages.ModelsAlgebra.Differential.MinpolyDegree.StatementChecks.algebraicConstants",
+        "candidate_module": "LogicLineages.ModelsAlgebra.Differential.MinpolyDegreeStatementChecks",
+        "status": "resource_stop_no_theorem_diagnostic",
+        "mathematical_change": "same target; minimal-degree proof of derivative nonvanishing replaces the general separability supplier",
+        "fixed_specification_unchanged": true,
+        "receipt": "formalization/build-reports/1793248193560190399-2.json"
+      },
+      "semantic_files": []
+    },
+    {
+      "id": "differential-constraints.nonconstant-transcendental",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "lem:constants",
+      "scope": "nonconstant-implies-transcendental clause",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.nonconstantTranscendental",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/Targets.lean",
+        "sha256": "eb71c44d009da683092d7996eb6fd70aaa7a21f24e6e624b09f20977e652853f",
+        "previous_legacy_sha256": "57e702041fde7b777ac9778c2e4c3be054a0f5879586ef360fa799d36d8619b2",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "e9a117962429d153ab2018137b097137c918758641781e5ea886d2c99be9ca15"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.nonconstantTranscendental",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.StatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "specification_compilation": {
+        "status": "pass",
+        "receipt": "formalization/build-reports/1793246030144261846-2.json",
+        "module": "LogicLineages.ModelsAlgebra.Differential.Targets"
+      },
+      "candidate_attempt": {
+        "status": "resource_stop_no_theorem_diagnostic",
+        "receipt": "formalization/build-reports/1793246030144261846-2.json",
+        "reason": "90-second wall guard during Constants; no gate run"
+      },
+      "same_target_alternative": {
+        "candidate": "LogicLineages.ModelsAlgebra.Differential.MinpolyDegree.StatementChecks.nonconstantTranscendental",
+        "candidate_module": "LogicLineages.ModelsAlgebra.Differential.MinpolyDegreeStatementChecks",
+        "status": "resource_stop_no_theorem_diagnostic",
+        "mathematical_change": "same target; minimal-degree proof of derivative nonvanishing replaces the general separability supplier",
+        "fixed_specification_unchanged": true,
+        "receipt": "formalization/build-reports/1793248193560190399-2.json"
+      },
+      "semantic_files": []
+    },
+    {
+      "id": "differential-constraints.constant-base-spectral-independence",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "lem:weights",
+      "scope": "constant-base form; full spectral criterion still needs its finite splitting-extension and coordinate suppliers",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralIndependence",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/SpectralTargets.lean",
+        "sha256": "c1ed92b3d7df0597dfb61947988a01ebab45745b63e5b8b047e92b3966e09601",
+        "previous_legacy_sha256": "d825caae18dcab056daddb8848f05282a8c8b865e05abced065b478c75335946",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "881c54a87afb3930986f36de59ca58508068dc0c067f1cf4378f342da7930484"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.spectralIndependence",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.SpectralStatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "semantic_files": []
+    },
+    {
+      "id": "differential-constraints.generated-field-closure",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "def:constraint; lem:curve",
+      "scope": "actual field adjoin of all differential jets; full constrained-pair criteria remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.jetFieldClosed",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/GeneratedFieldTargets.lean",
+        "sha256": "3d4f6ac1ce7e97d5a8e94372ce6316226dc2ed76674e1d88aa2af2231eefceb6",
+        "previous_legacy_sha256": "c8955475bf8d08ff62bc82f5e956de05cf7210cee0a972c6a88b85b571364edb",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "284c3a972c79b99e23ce3f08894bc3eb1cb761b214489f2f033f9718a497ab30"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.jetFieldClosed",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.GeneratedFieldStatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/GeneratedFieldDefinitions.lean",
+          "sha256": "42247bfa34c99813d9bc7a8ce682d7e95c77b47a0fe89c65890073ddf4313e00"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/PolynomialDefinitions.lean",
+          "sha256": "251fca2c12462394c499d3da61eeae43662aea34f1701b2c54d38695ab0d609f"
+        }
+      ]
+    },
+    {
+      "id": "differential-constraints.generated-field-minimality",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "def:constraint; lem:curve",
+      "scope": "actual field adjoin of all differential jets; full constrained-pair criteria remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.jetFieldMinimal",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/GeneratedFieldTargets.lean",
+        "sha256": "3d4f6ac1ce7e97d5a8e94372ce6316226dc2ed76674e1d88aa2af2231eefceb6",
+        "previous_legacy_sha256": "c8955475bf8d08ff62bc82f5e956de05cf7210cee0a972c6a88b85b571364edb",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "284c3a972c79b99e23ce3f08894bc3eb1cb761b214489f2f033f9718a497ab30"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.jetFieldMinimal",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.GeneratedFieldStatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/GeneratedFieldDefinitions.lean",
+          "sha256": "42247bfa34c99813d9bc7a8ce682d7e95c77b47a0fe89c65890073ddf4313e00"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/PolynomialDefinitions.lean",
+          "sha256": "251fca2c12462394c499d3da61eeae43662aea34f1701b2c54d38695ab0d609f"
+        }
+      ]
+    },
+    {
+      "id": "differential-constraints.generated-field-restriction",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "def:constraint; lem:curve",
+      "scope": "actual field adjoin of all differential jets; full constrained-pair criteria remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.jetFieldRestriction",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/GeneratedFieldTargets.lean",
+        "sha256": "3d4f6ac1ce7e97d5a8e94372ce6316226dc2ed76674e1d88aa2af2231eefceb6",
+        "previous_legacy_sha256": "c8955475bf8d08ff62bc82f5e956de05cf7210cee0a972c6a88b85b571364edb",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "284c3a972c79b99e23ce3f08894bc3eb1cb761b214489f2f033f9718a497ab30"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.jetFieldRestriction",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.GeneratedFieldStatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/GeneratedFieldDefinitions.lean",
+          "sha256": "42247bfa34c99813d9bc7a8ce682d7e95c77b47a0fe89c65890073ddf4313e00"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/PolynomialDefinitions.lean",
+          "sha256": "251fca2c12462394c499d3da61eeae43662aea34f1701b2c54d38695ab0d609f"
+        }
+      ]
+    },
+    {
+      "id": "differential-constraints.ordinary-derivation-algebraic-constants",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "lem:constants",
+      "scope": "ordinary integer derivation; rational linearity is constructed rather than assumed",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.algebraicConstantsOfIntegerDerivation",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/RationalTargets.lean",
+        "sha256": "07ad42bbf979e7e571bf7c1f2f0f58e925c9ef7b4d67ac180b9bf734169c5e04",
+        "previous_legacy_sha256": "4e4d666bc551f63d8d00bae818625cd340ab1d977f2dc1be098a8aa1ea65514e",
+        "header_migration_only": true,
+        "unchanged_nonheader_body_sha256": "1bf61c7e6addb3e3719e80b2fb958a8d2c802a2eadf9fdfc63f2e27346ff42fc"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.algebraicConstantsOfIntegerDerivation",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.RationalStatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Differential/Targets.lean",
+          "sha256": "eb71c44d009da683092d7996eb6fd70aaa7a21f24e6e624b09f20977e652853f"
+        }
+      ]
+    },
+    {
+      "id": "differential-constraints.finite-derivation-extension",
+      "paper": "15-differential-field-constraint-decisions",
+      "source_label": "paragraph after lem:constants; thm:spectral splitting-field step",
+      "scope": "unique constructed ordinary derivation on every finite-dimensional field extension; splitting-field application and full criteria remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.Differential.Targets.finiteDerivationExtension",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Differential/FiniteExtensionTargets.lean",
+        "sha256": "6485947cb63a32b4bee02038c333a34cf1c8bb08b15166b8e8f5e546faf8080a"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.finiteDerivationExtension",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Differential.FiniteExtensionStatementChecks",
+      "status": "pending_compilation",
+      "source_file": {
+        "path": "15-differential-field-constraint-decisions/paper.tex",
+        "sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813"
+      },
+      "semantic_files": []
+    },
+    {
+      "id": "finite-order-forests.disjoint-upper-cones",
+      "paper": "03-joint-embedding-finite-forests",
+      "source_label": "unnumbered width paragraph before thm:width",
+      "scope": "actual PartialOrder/predecessor-chain forest fact; all full numbered paper targets remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.Forests.Targets.incomparableNoCommonUpper",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/OrderTargets.lean",
+        "sha256": "34205fb5cd516be564685bfc7810fef5d1df6b2f24e1657012a9590b62d69a9c"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.incomparableNoCommonUpper",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Forests.OrderStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "03-joint-embedding-finite-forests/paper.tex",
+        "sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+          "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+        }
+      ],
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.incomparableNoCommonUpper",
+      "receipt": "formalization/build-reports/1793249096318899425-2.json",
+      "kernel_axioms": [],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "finite-order-forests.maximal-extension",
+      "paper": "03-joint-embedding-finite-forests",
+      "source_label": "unnumbered width paragraph before thm:width",
+      "scope": "actual finite PartialOrder maximal elements and antichain width; full JEP classification remains pending",
+      "specification": "LogicLineages.ModelsAlgebra.Forests.Targets.everyVertexBelowLeaf",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthTargets.lean",
+        "sha256": "71b65650572717bd077c54a398101d88333def835ed5222f02e819990be2c188"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks.everyVertexBelowLeaf",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "03-joint-embedding-finite-forests/paper.tex",
+        "sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+          "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthDefinitions.lean",
+          "sha256": "9e7a999989c9f12f3abd1589c0a8ca1698d1342ee1bb43467747ddb1dc3d23fa"
+        }
+      ],
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks.everyVertexBelowLeaf",
+      "receipt": "formalization/build-reports/1793249096318899425-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "finite-order-forests.width-is-leaf-count",
+      "paper": "03-joint-embedding-finite-forests",
+      "source_label": "unnumbered width paragraph before thm:width",
+      "scope": "actual finite PartialOrder maximal elements and antichain width; full JEP classification remains pending",
+      "specification": "LogicLineages.ModelsAlgebra.Forests.Targets.widthBoundIffLeafBound",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthTargets.lean",
+        "sha256": "71b65650572717bd077c54a398101d88333def835ed5222f02e819990be2c188"
+      },
+      "candidate": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks.widthBoundIffLeafBound",
+      "candidate_module": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "03-joint-embedding-finite-forests/paper.tex",
+        "sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+          "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/Forests/WidthDefinitions.lean",
+          "sha256": "9e7a999989c9f12f3abd1589c0a8ca1698d1342ee1bb43467747ddb1dc3d23fa"
+        }
+      ],
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.Forests.WidthStatementChecks.widthBoundIffLeafBound",
+      "receipt": "formalization/build-reports/1793249096318899425-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.p-step-image",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "lem:quotient-filtration successor/limit proof components",
+      "scope": "actual additive subgroup image and finite filtration/saturated-intersection facts; full transfinite/Ulm/Scott targets remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.subgroupImageCommutesWithPStep",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationTargets.lean",
+        "sha256": "978ab02501d2213c776ba1b2be1cd2942be2d4f3bef9f2f63f44b24fcf6e9d29"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.subgroupImageCommutesWithPStep",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.FiltrationStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.subgroupImageCommutesWithPStep",
+      "receipt": "formalization/build-reports/1793249492913314109-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.finite-filtration-image",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "lem:quotient-filtration successor/limit proof components",
+      "scope": "actual additive subgroup image and finite filtration/saturated-intersection facts; full transfinite/Ulm/Scott targets remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.finiteFiltrationImage",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationTargets.lean",
+        "sha256": "978ab02501d2213c776ba1b2be1cd2942be2d4f3bef9f2f63f44b24fcf6e9d29"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.finiteFiltrationImage",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.FiltrationStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.finiteFiltrationImage",
+      "receipt": "formalization/build-reports/1793249492913314109-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.saturated-intersection-image",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "lem:quotient-filtration successor/limit proof components",
+      "scope": "actual additive subgroup image and finite filtration/saturated-intersection facts; full transfinite/Ulm/Scott targets remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.saturatedIntersectionImage",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationTargets.lean",
+        "sha256": "978ab02501d2213c776ba1b2be1cd2942be2d4f3bef9f2f63f44b24fcf6e9d29"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.saturatedIntersectionImage",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.FiltrationStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.saturatedIntersectionImage",
+      "receipt": "formalization/build-reports/1793249492913314109-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.transfinite-filtration-antitone",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "filtration conventions; lem:quotient-filtration first conclusion",
+      "scope": "actual ordinal-recursive filtration; arbitrary-surjection generalization of the first source conclusion; Ulm quotient/Scott conclusions remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteFiltrationAntitone",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteTargets.lean",
+        "sha256": "ddfffef549a7c5386fb3e028af174116f00fa0ee03d533bab18db9cb7876747d"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks.transfiniteFiltrationAntitone",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks.transfiniteFiltrationAntitone",
+      "receipt": "formalization/build-reports/1793251592919663407-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.transfinite-filtration-image-below-cut",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "filtration conventions; lem:quotient-filtration first conclusion",
+      "scope": "actual ordinal-recursive filtration; arbitrary-surjection generalization of the first source conclusion; Ulm quotient/Scott conclusions remain pending",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteFiltrationImageBelowCut",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteTargets.lean",
+        "sha256": "ddfffef549a7c5386fb3e028af174116f00fa0ee03d533bab18db9cb7876747d"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks.transfiniteFiltrationImageBelowCut",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteStatementChecks.transfiniteFiltrationImageBelowCut",
+      "receipt": "formalization/build-reports/1793251592919663407-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.quotient-filtration-below-cut",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "lem:quotient-filtration first displayed equation",
+      "scope": "literal quotient filtration equality, stronger arbitrary cut; full two-conclusion source lemma and Scott classification remain pending until Ulm isomorphism is also checked",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.quotientFiltrationBelowCut",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/QuotientFiltrationTargets.lean",
+        "sha256": "d321a5181548c86bb0e8fc171384daa5290706bd908150bea4f9817f85fdb5b5"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks.quotientFiltrationBelowCut",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks",
+      "status": "passed_exact_statement_and_axiom_gate",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "accepted_candidate": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks.quotientFiltrationBelowCut",
+      "receipt": "formalization/build-reports/1793251592919663407-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "full_numbered_paper_target_complete": false
+    },
+    {
+      "id": "abelian-p-groups.local-actual-Ulm-map-bijective",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "lem:quotient-filtration Ulm quotient isomorphism proof",
+      "scope": "bijection of the actual induced ZMod-linear map under the local second-successor kernel condition; no bijection/linearity supplier input; global omega-cut instantiation and dimension equality still pending",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.localUlmMapBijective",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/UlmTargets.lean",
+        "sha256": "ece6f9de93cfafa5f2d72b8e8ede0ec47e2475f97534e77b54622355d3a1f520"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+          "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/UlmMapDefinitions.lean",
+          "sha256": "917a2ffd3549ac671148be138840d2b9be31d4689df0427f054e5822383423a6"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.UlmStatementChecks.localUlmMapBijective",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.UlmStatementChecks",
+      "status": "paused_pending_semantics_and_candidate_compilation",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "candidate_written_after_fixed_statement": true,
+      "last_attempt": {
+        "status": "memory_deferred_before_launch",
+        "receipt": "formalization/build-reports/1793252382168239810-2.json"
+      },
+      "last_native_attempt": {
+        "status": "memory_deferred_before_launch",
+        "receipt": "formalization/build-reports/1793253122086677454-2.json",
+        "compiler_launched": false
+      }
+    },
+    {
+      "id": "abelian-p-groups.full-source-quotient-filtration-lemma",
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_label": "lem:quotient-filtration, both conclusions",
+      "scope": "full actual filtration equality, bijectivity of the specific induced ZMod-linear Ulm map, and dimension/rank equality below omega*gamma; stronger all-abelian-groups domain; not the Scott classification",
+      "specification": "LogicLineages.ModelsAlgebra.PGroups.Targets.fullQuotientFiltrationLemma",
+      "spec_file": {
+        "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FullQuotientTargets.lean",
+        "sha256": "38cee006c0b7255512d84f2475364299622d1901dbc8d1f7250567e1b330b0c7"
+      },
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+          "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+          "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+          "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/UlmMapDefinitions.lean",
+          "sha256": "917a2ffd3549ac671148be138840d2b9be31d4689df0427f054e5822383423a6"
+        },
+        {
+          "path": "formalization/LogicLineages/ModelsAlgebra/PGroups/QuotientUlmDefinitions.lean",
+          "sha256": "86288deb5264057e983e5feb5a6cdd4dd0b6e02891faf7a25d73e7c179fac7bc"
+        }
+      ],
+      "candidate": "LogicLineages.ModelsAlgebra.PGroups.FullQuotientStatementChecks.fullQuotientFiltrationLemma",
+      "candidate_module": "LogicLineages.ModelsAlgebra.PGroups.FullQuotientStatementChecks",
+      "status": "paused_pending_semantics_and_candidate_compilation",
+      "source_file": {
+        "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+        "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+      },
+      "candidate_written_after_fixed_statement": true,
+      "last_native_attempt": {
+        "status": "memory_deferred_before_launch",
+        "receipt": "formalization/build-reports/1793253122086677454-2.json",
+        "compiler_launched": false
+      }
+    }
+  ],
+  "full_targets_still_pending": [
+    {
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "reason": "infinitary syntax and Scott semantics, Ulm/Zippin and source back-and-forth supplier proofs not yet constructed"
+    },
+    {
+      "paper": "03-joint-embedding-finite-forests",
+      "reason": "full graph/order correspondence, Carter decision proof, width classification and age construction not yet constructed"
+    },
+    {
+      "paper": "15-differential-field-constraint-decisions",
+      "reason": "actual constrained-pair predicate, generated fields, curve/spectral constructions and effective algorithms not yet assembled"
+    }
+  ],
+  "local_lane_state": "paused_by_user_external_takeover_2026-10-29",
+  "local_automatic_resume": false,
+  "local_live_compiler_or_author": false
+}

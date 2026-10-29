@@ -1,0 +1,111 @@
+name: Checked paper components
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-components-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Fresh accepted gates and axiom audits (partial coverage)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: formalization
+    env:
+      LEAN_NUM_THREADS: '1'
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install Elan
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 \
+            https://raw.githubusercontent.com/leanprover/elan/9605b24b08cf68b78dce0014b6fa01be1f8e2cee/elan-init.sh \
+            --output "$RUNNER_TEMP/paper-components-elan-init.sh"
+          sh "$RUNNER_TEMP/paper-components-elan-init.sh" -y --default-toolchain none --no-modify-path
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Acquire only pinned upstream objects
+        run: |
+          set -euo pipefail
+          lean --version
+          mapfile -t modules < <(python3 scripts/mathlib_imports.py)
+          lake exe cache get "${modules[@]}"
+          git diff --exit-code -- lake-manifest.json lakefile.toml lean-toolchain
+
+      - name: Confirm a fresh local source build
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+
+          local_objects = list(Path('.lake/build').rglob('*.olean'))
+          if local_objects:
+              raise SystemExit(f'Unexpected cached paper proof objects: {local_objects}')
+          dependencies = json.loads(Path('lake-manifest.json').read_text())['packages']
+          revisions = {}
+          for package in dependencies:
+              if package['type'] != 'git':
+                  continue
+              path = Path('.lake/packages') / package['name']
+              actual = subprocess.check_output(['git', '-C', str(path), 'rev-parse', 'HEAD'], text=True).strip()
+              if actual != package['rev']:
+                  raise SystemExit(f'Dependency mismatch: {package["name"]}: {actual}')
+              revisions[package['name']] = actual
+          commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+          if commit != os.environ['GITHUB_SHA']:
+              raise SystemExit('Checkout does not match the workflow revision')
+          output = Path('build-reports')
+          output.mkdir(exist_ok=True)
+          (output / 'ci-provenance.json').write_text(json.dumps({
+              'commit': commit,
+              'run_id': os.environ['GITHUB_RUN_ID'],
+              'toolchain': Path('lean-toolchain').read_text().strip(),
+              'dependencies': revisions,
+              'cached_local_proof_objects': 0,
+              'coverage': 'Only the accepted gates imported by LogicLineages.lean; most full paper targets remain pending.'
+          }, indent=2) + '\n')
+          PY
+          mapfile -t gates < <(python3 scripts/accepted_gates.py)
+          python3 scripts/check.py --fresh "${gates[@]}"
+
+      - name: Explain the checked scope
+        run: |
+          set -euo pipefail
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## Checked paper components passed
+
+          Every accepted component gate selected by the root was compiled
+          from fresh local sources, with exact statements and transitive axiom audits.
+          Only Mathlib and its pinned upstream dependencies used cached objects.
+
+          This is partial coverage. It does not certify all fifteen papers,
+          uncompiled candidates, Python refinement, or outstanding cited suppliers.
+          See `formalization/TARGETS.json` and the per-stream statuses.
+          EOF
+
+      - name: Preserve compiler receipts and source hashes
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: paper-components-${{ github.sha }}-${{ github.run_attempt }}
+          path: formalization/build-reports/
+          if-no-files-found: warn
+          retention-days: 90

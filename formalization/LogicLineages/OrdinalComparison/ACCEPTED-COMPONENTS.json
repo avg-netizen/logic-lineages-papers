@@ -1,0 +1,844 @@
+{
+  "accepted_components": [
+    {
+      "id": "ww-foundations.elementary-control",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedElementaryControl.entire_source_elementary_control_lemma",
+      "type": "Targets.ElementaryControlProperties",
+      "expanded_type": "Computable Phi ∧ StrictMono Phi ∧ ∀ n : Nat, n < Phi n ∧ 2 ^ (2 ^ Phi n) ≤ Phi (n + 1) ∧ 4 * Phi n + 4 < Phi (n + 1)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/ElementaryControlTargets.lean",
+        "sha256": "bd94b0ade60cc7242c5321012d445a1e003e669206a1c7e5a57e3e8e55ce33dd"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/ElementaryControlStatementChecks.lean",
+        "sha256": "63775f480e78c1bceeeb40c8708d503819403114ce8c980caa49fbcd157531ff"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Control.lean",
+          "sha256": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlComputability.lean",
+          "sha256": "227b602059b72c91744ed9859a0f27a62a3e08e0566cbae3830c627fb919cdce"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ElementaryControl.lean",
+          "sha256": "1124eafd88017c599fe4f1c349267d9270d190be6e2dc08ee52b7b6536fe2a30"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "lem:phi-growth, Elementary control properties, entire statement including final consequence",
+      "scope": "Full numbered source lemma on its entire natural-number domain; actual Mathlib encoded Computable, not mere executability.",
+      "source_part_type": "full_numbered_lemma",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793247538850699184-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.fixed-control-primitive-recursive",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedElementaryControl.exact_fixed_hierarchy_encoded_computability",
+      "type": "Targets.FixedControlPrimitiveRecursive",
+      "expanded_type": "(∀ j : Nat, Primrec (fastControl j)) ∧ Primrec Phi",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/ComputabilityTargets.lean",
+        "sha256": "55aed55d9cc6faef4ec369d770530e14bfe2efd9c19beab581cfe2a540d1cc2f"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/ElementaryControlStatementChecks.lean",
+        "sha256": "63775f480e78c1bceeeb40c8708d503819403114ce8c980caa49fbcd157531ff"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlComputability.lean",
+          "sha256": "227b602059b72c91744ed9859a0f27a62a3e08e0566cbae3830c627fb919cdce"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "proof of lem:phi-growth, induction on the fixed finite hierarchy level",
+      "scope": "Auxiliary strengthening: each fixed level and Phi are primitive recursive; no uniform primitive-recursive claim about the two-argument hierarchy.",
+      "source_part_type": "auxiliary_strengthening",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793247538850699184-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.finite-normal-norm-balls",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedNormBalls.all_normal_inputs_finite",
+      "type": "Targets.FiniteNormalNormBalls",
+      "expanded_type": "∀ b : Nat, Set.Finite {a : NONote | Vendor.R1.treeWeight a.1 ≤ b}",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/Targets.lean",
+        "sha256": "e3d2625728df7aa38f54c8639d98959ee15c097a1f88d08f4b8921b58516afbe"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/NormBallStatementChecks.lean",
+        "sha256": "68eac57b48207a99fb4df15ca35bbe20b8704fa8127745414d4ba3a52c2be025"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "lem:finite-balls, finiteness portion",
+      "scope": "All intrinsically normal hereditary notations; does not by itself certify natural sum/product or transfer the universal quantifier to every actual ordinal below epsilon zero.",
+      "source_part_type": "component",
+      "actual_ordinal_representation_bridge_pending": true,
+      "receipt": "formalization/build-reports/1793248381898355174-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.exact-normal-norm-enumerator",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedNormBalls.exact_executable_norm_ball_membership",
+      "type": "Targets.ExactNormalNormEnumerator notationNormBall",
+      "expanded_type": "∀ (b : Nat) (a : NONote), a ∈ notationNormBall b ↔ Vendor.R1.treeWeight a.1 ≤ b",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/Targets.lean",
+        "sha256": "e3d2625728df7aa38f54c8639d98959ee15c097a1f88d08f4b8921b58516afbe"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/NormBallStatementChecks.lean",
+        "sha256": "68eac57b48207a99fb4df15ca35bbe20b8704fa8127745414d4ba3a52c2be025"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "lem:finite-balls, explicit finite enumeration membership component",
+      "scope": "Constructive bounded-norm recursive Finset enumerator with exact membership. No separate Mathlib encoded-Computable theorem for the enumerator has been claimed.",
+      "source_part_type": "algorithm_component",
+      "actual_ordinal_representation_bridge_pending": true,
+      "receipt": "formalization/build-reports/1793248381898355174-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.actual-normal-collapse-equation",
+      "declaration": "LogicLineages.OrdinalComparison.Checked.actual_collapse_equation",
+      "type": "Targets.NormControlledCollapse collapse",
+      "expanded_type": "∀ a : NONote, (∀ b : NONote, b < a → N b ≤ Phi (N a) → collapse b + 1 ≤ collapse a) ∧ (∀ k : Nat, (∀ b : NONote, b < a → N b ≤ Phi (N a) → collapse b + 1 ≤ k) → collapse a ≤ k)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/CollapseTargets.lean",
+        "sha256": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/StatementChecks.lean",
+        "sha256": "62462e0d69603d0f9888f712894508eb82a73d215ce5c52b971eba8c53595765"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "def:collapse and controlled-strictness component of lem:controlled-strictness",
+      "scope": "Literal finite maximum on all normal predecessors within the original norm budget. Constructed by actual ordinal well-founded recursion; no correctness supplier premise.",
+      "source_part_type": "definition_component",
+      "actual_ordinal_representation_bridge_pending": true,
+      "receipt": "formalization/build-reports/1793249398256550687-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.unique-normal-collapse",
+      "declaration": "LogicLineages.OrdinalComparison.Checked.unique_actual_collapse",
+      "type": "Targets.UniqueNormControlledCollapse",
+      "expanded_type": "∃ c : NONote → Nat, Targets.NormControlledCollapse c ∧ ∀ d : NONote → Nat, Targets.NormControlledCollapse d → d = c",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/CollapseTargets.lean",
+        "sha256": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/StatementChecks.lean",
+        "sha256": "62462e0d69603d0f9888f712894508eb82a73d215ce5c52b971eba8c53595765"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "well-definedness of def:collapse",
+      "scope": "Unconditional existence and uniqueness on normal hereditary notations. The defining specification is independent of the implementation.",
+      "source_part_type": "definition_component",
+      "actual_ordinal_representation_bridge_pending": true,
+      "receipt": "formalization/build-reports/1793249398256550687-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.finite-collapse-values",
+      "declaration": "LogicLineages.OrdinalComparison.Checked.exact_finite_collapse_values",
+      "type": "∀ n : Nat, collapse (NONote.ofNat n) = n",
+      "expanded_type": "∀ n : Nat, collapse (NONote.ofNat n) = n",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/CollapseTargets.lean",
+        "sha256": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/StatementChecks.lean",
+        "sha256": "62462e0d69603d0f9888f712894508eb82a73d215ce5c52b971eba8c53595765"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Control.lean",
+          "sha256": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "lem:controlled-strictness, finite-value clause",
+      "scope": "Exact finite values for every natural input. Only the finite-value clause is complete here; the whole numbered source lemma also has actual-ordinal quantification in its controlled-strictness clause.",
+      "source_part_type": "component",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793249398256550687-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.normal-collapse-norm-lower-bound",
+      "declaration": "LogicLineages.OrdinalComparison.Checked.actual_collapse_dominates_norm",
+      "type": "∀ a : NONote, Vendor.R1.treeWeight a.1 ≤ collapse a",
+      "expanded_type": "∀ a : NONote, Vendor.R1.treeWeight a.1 ≤ collapse a",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/CollapseTargets.lean",
+        "sha256": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/StatementChecks.lean",
+        "sha256": "62462e0d69603d0f9888f712894508eb82a73d215ce5c52b971eba8c53595765"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Control.lean",
+          "sha256": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "unnumbered paragraph after lem:controlled-strictness, first inequality attributed to Wilken–Weiermann Proposition 2.3",
+      "scope": "Actual norm lower bound for the constructed fixed-control collapse on every normal notation; no quoted supplier assumed.",
+      "source_part_type": "component",
+      "actual_ordinal_representation_bridge_pending": true,
+      "receipt": "formalization/build-reports/1793249398256550687-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.greatest-normal-predecessor",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedPredecessor.greatest_among_all_normal_predecessors",
+      "type": "Targets.MaximumPredecessorCorrect maximumPredecessor",
+      "expanded_type": "∀ (a : NONote) (budget : Nat), 0 < a → IsGreatest {b : NONote | b < a ∧ N b ≤ budget} (maximumPredecessor a budget)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/PredecessorTargets.lean",
+        "sha256": "c0fc975080cd34cd6296a53fad842c237d223f35d650b1a2bce060dc19ce4733"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/PredecessorStatementChecks.lean",
+        "sha256": "b43eb86144a55d37637e23a0af28b23eceea9f00947ac15fcfcc7e320a8c6246"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/MaximumPredecessor.lean",
+          "sha256": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/MaximumPredecessor.lean",
+          "sha256": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "def:maximum, existence and greatest-predecessor semantics",
+      "scope": "Exhaustive executable reference maximum over the exact finite norm ball. Does not certify the four-clause simultaneous optimized recursion in thm:maximum.",
+      "source_part_type": "definition_component",
+      "actual_ordinal_representation_bridge_pending": true,
+      "receipt": "formalization/build-reports/1793249398256550687-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "ww-foundations.finite-maximum-predecessor",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedPredecessor.exact_finite_predecessor_formula",
+      "type": "Targets.FiniteMaximumPredecessor maximumPredecessor",
+      "expanded_type": "∀ n budget : Nat, maximumPredecessor (NONote.ofNat (n + 1)) budget = NONote.ofNat (min n budget)",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/PredecessorTargets.lean",
+        "sha256": "c0fc975080cd34cd6296a53fad842c237d223f35d650b1a2bce060dc19ce4733"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/PredecessorStatementChecks.lean",
+        "sha256": "b43eb86144a55d37637e23a0af28b23eceea9f00947ac15fcfcc7e320a8c6246"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/MaximumPredecessor.lean",
+          "sha256": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+          "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+          "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+          "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+          "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/NormBalls.lean",
+          "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+          "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/MaximumPredecessor.lean",
+          "sha256": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5"
+        }
+      ],
+      "source_file": {
+        "path": "05-wilken-weiermann-foundations/foundations.tex",
+        "sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7"
+      },
+      "source_correspondence": "finite-bound consequence of def:maximum; agrees with the finite subcase of thm:maximum",
+      "scope": "Exact finite formula, not the whole optimized maximum-predecessor theorem.",
+      "source_part_type": "derived_component",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793249398256550687-2.json",
+      "kernel_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "typed-source.ground-arity-level",
+      "declaration": "LogicLineages.OrdinalComparison.Source.CheckedStructural.literal_ground_arity_level",
+      "type": "Source.Targets.GroundArityLevel",
+      "expanded_type": "∀ k : Nat, (Ty.curriedGround (k + 1)).level = 1",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceTypeTargets.lean",
+        "sha256": "ccf101450b5e1fe7c29686c9be2ca4f247e3fd86e36186059c10c1f090e67484"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralStatementChecks.lean",
+        "sha256": "5524676e1dff839c50b09e4830acc0a87bd0b61fbd3941aa5b2ad6f4e4da99c9"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypesProofs.lean",
+          "sha256": "5145e367e91309d1cda59ee901cc9deddd811f09dc065a2c81a9f7e883442526"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypes.lean",
+          "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+        }
+      ],
+      "source_file": {
+        "path": "06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+      },
+      "source_correspondence": "Structural prerequisite of the literal typed source syntax; not a numbered manuscript statement",
+      "scope": "Exact typed de Bruijn kernel fact. Named-source correspondence, contextual/substitution stability of the termination comparator, ranked RPO and all ordering/height claims remain pending.",
+      "source_part_type": "formalization_prerequisite",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793250218115478637-2.json",
+      "core_only_profile": true,
+      "kernel_axioms": []
+    },
+    {
+      "id": "typed-source.subexpression-closure",
+      "declaration": "LogicLineages.OrdinalComparison.Source.CheckedStructural.literal_type_subexpression_closure",
+      "type": "Source.Targets.TypeSubexpressionClosure",
+      "expanded_type": "∀ σ τ : Ty, τ ∈ σ.subtypes → ∀ υ : Ty, υ ∈ τ.subtypes → υ ∈ σ.subtypes",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceTypeTargets.lean",
+        "sha256": "ccf101450b5e1fe7c29686c9be2ca4f247e3fd86e36186059c10c1f090e67484"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralStatementChecks.lean",
+        "sha256": "5524676e1dff839c50b09e4830acc0a87bd0b61fbd3941aa5b2ad6f4e4da99c9"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypesProofs.lean",
+          "sha256": "5145e367e91309d1cda59ee901cc9deddd811f09dc065a2c81a9f7e883442526"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypes.lean",
+          "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+        }
+      ],
+      "source_file": {
+        "path": "06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+      },
+      "source_correspondence": "Structural prerequisite of the literal typed source syntax; not a numbered manuscript statement",
+      "scope": "Exact typed de Bruijn kernel fact. Named-source correspondence, contextual/substitution stability of the termination comparator, ranked RPO and all ordering/height claims remain pending.",
+      "source_part_type": "formalization_prerequisite",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793250218115478637-2.json",
+      "core_only_profile": true,
+      "kernel_axioms": [
+        "propext"
+      ]
+    },
+    {
+      "id": "typed-source.renaming-identity",
+      "declaration": "LogicLineages.OrdinalComparison.Source.CheckedStructural.exact_renaming_identity",
+      "type": "Source.Targets.IdentityRenaming",
+      "expanded_type": "∀ (Symbol : Type) (arity : Symbol → Nat) (Γ : List Ty) (τ : Ty) (t : Term Symbol arity Γ τ), t.rename (fun v => v) = t",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralTargets.lean",
+        "sha256": "e86f252048344712e5bde4b1af2c9e0c32c74c0d7ed0238e7619cd1adfb23a90"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralStatementChecks.lean",
+        "sha256": "5524676e1dff839c50b09e4830acc0a87bd0b61fbd3941aa5b2ad6f4e4da99c9"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceStructural.lean",
+          "sha256": "d6359cfa37f65e598620dd47f9c1c1f37a5f462ef77f732f6971d16f2e2a66d6"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypes.lean",
+          "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTerms.lean",
+          "sha256": "964c1930d4d45bbf317dddc3146b50a1bc2116a23e76c6548fa2f33f685bb8d6"
+        }
+      ],
+      "source_file": {
+        "path": "06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+      },
+      "source_correspondence": "Structural prerequisite of the literal typed source syntax; not a numbered manuscript statement",
+      "scope": "Exact typed de Bruijn kernel fact. Named-source correspondence, contextual/substitution stability of the termination comparator, ranked RPO and all ordering/height claims remain pending.",
+      "source_part_type": "formalization_prerequisite",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793250218115478637-2.json",
+      "core_only_profile": true,
+      "kernel_axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "typed-source.renaming-composition",
+      "declaration": "LogicLineages.OrdinalComparison.Source.CheckedStructural.exact_renaming_composition",
+      "type": "Source.Targets.ComposedRenaming",
+      "expanded_type": "∀ (Symbol : Type) (arity : Symbol → Nat) (Γ Δ Ξ : List Ty) (τ : Ty) (t : Term Symbol arity Γ τ) (ρ : Renaming Γ Δ) (π : Renaming Δ Ξ), (t.rename ρ).rename π = t.rename (fun v => π (ρ v))",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralTargets.lean",
+        "sha256": "e86f252048344712e5bde4b1af2c9e0c32c74c0d7ed0238e7619cd1adfb23a90"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralStatementChecks.lean",
+        "sha256": "5524676e1dff839c50b09e4830acc0a87bd0b61fbd3941aa5b2ad6f4e4da99c9"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceStructural.lean",
+          "sha256": "d6359cfa37f65e598620dd47f9c1c1f37a5f462ef77f732f6971d16f2e2a66d6"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypes.lean",
+          "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTerms.lean",
+          "sha256": "964c1930d4d45bbf317dddc3146b50a1bc2116a23e76c6548fa2f33f685bb8d6"
+        }
+      ],
+      "source_file": {
+        "path": "06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+      },
+      "source_correspondence": "Structural prerequisite of the literal typed source syntax; not a numbered manuscript statement",
+      "scope": "Exact typed de Bruijn kernel fact. Named-source correspondence, contextual/substitution stability of the termination comparator, ranked RPO and all ordering/height claims remain pending.",
+      "source_part_type": "formalization_prerequisite",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793250218115478637-2.json",
+      "core_only_profile": true,
+      "kernel_axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "id": "typed-source.substitution-identity",
+      "declaration": "LogicLineages.OrdinalComparison.Source.CheckedStructural.exact_substitution_identity",
+      "type": "Source.Targets.IdentitySubstitution",
+      "expanded_type": "∀ (Symbol : Type) (arity : Symbol → Nat) (Γ : List Ty) (τ : Ty) (t : Term Symbol arity Γ τ), t.substitute (fun v => .var v) = t",
+      "specification_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralTargets.lean",
+        "sha256": "e86f252048344712e5bde4b1af2c9e0c32c74c0d7ed0238e7619cd1adfb23a90"
+      },
+      "candidate_file": {
+        "path": "formalization/LogicLineages/OrdinalComparison/SourceStructuralStatementChecks.lean",
+        "sha256": "5524676e1dff839c50b09e4830acc0a87bd0b61fbd3941aa5b2ad6f4e4da99c9"
+      },
+      "proof_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceStructural.lean",
+          "sha256": "d6359cfa37f65e598620dd47f9c1c1f37a5f462ef77f732f6971d16f2e2a66d6"
+        }
+      ],
+      "semantic_files": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTypes.lean",
+          "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceTerms.lean",
+          "sha256": "964c1930d4d45bbf317dddc3146b50a1bc2116a23e76c6548fa2f33f685bb8d6"
+        }
+      ],
+      "source_file": {
+        "path": "06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+      },
+      "source_correspondence": "Structural prerequisite of the literal typed source syntax; not a numbered manuscript statement",
+      "scope": "Exact typed de Bruijn kernel fact. Named-source correspondence, contextual/substitution stability of the termination comparator, ranked RPO and all ordering/height claims remain pending.",
+      "source_part_type": "formalization_prerequisite",
+      "actual_ordinal_representation_bridge_pending": false,
+      "receipt": "formalization/build-reports/1793250218115478637-2.json",
+      "core_only_profile": true,
+      "kernel_axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "full_numbered_paper_targets_complete": [
+    {
+      "paper": "05-wilken-weiermann-foundations",
+      "label": "lem:phi-growth",
+      "declaration": "LogicLineages.OrdinalComparison.CheckedElementaryControl.entire_source_elementary_control_lemma"
+    }
+  ],
+  "notation": {
+    "N a": "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight a.1",
+    "Phi": "LogicLineages.OrdinalComparison.Phi",
+    "collapse": "LogicLineages.OrdinalComparison.collapse",
+    "maximumPredecessor": "LogicLineages.OrdinalComparison.maximumPredecessor"
+  },
+  "toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "mathlib_revision": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+  "development_build": {
+    "command": "python3 scripts/check.py MODULE ...",
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed_in_development_environment": true,
+    "selected_norm_source_reuse_manifest": {
+      "path": "formalization/LogicLineages/OrdinalComparison/Vendor/R1/PROVENANCE.json",
+      "sha256": "a18fb09109a5ae9d5457be8991e90b2e6f2869693241c248179dfb80eeea91aa"
+    },
+    "core_profile_receipt": "formalization/build-reports/1793250218115478637-2.json"
+  },
+  "remaining_suppliers": [
+    "NormalRepresentationSound and NormalRepresentationComplete for every actual ordinal below epsilonZero",
+    "Actual natural sum and natural product semantics, norm identities/bounds and encoded effectiveness where required",
+    "Optimized maximum-predecessor recursion, saturation and single-predecessor evaluator/count theorems",
+    "Literal source translation and all other targets in papers 06–10, including cited proof-theory and arithmetic suppliers"
+  ],
+  "scope_note": "Only lem:phi-growth is a complete numbered manuscript statement. Normal-notation components remain distinct from full actual-ordinal claims and optimized algorithms. Typed-kernel structural facts are formalization prerequisites, not substitutes for source correspondence or the termination comparator. No pending target is used as an assumed proof supplier."
+}

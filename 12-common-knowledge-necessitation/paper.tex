@@ -1,0 +1,422 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\title{A Theorem Which Is Not Common Knowledge\\in an Untyped Theory of Knowledge}
+\author{}
+\date{28 October 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Gorbow's theory KT combines an arithmetized knowledge predicate,
+compositional truth, veracity and theorem-only necessitation. Common
+knowledge is represented by a self-referential fixed point. Gorbow asks
+whether the common-belief necessitation theorem for the subsystem DCB
+extends to KT. We give a negative answer for the published theory with
+base PA in the expanded language. There is a truth-free sentence
+$\theta$ such that KT proves $\theta$ and proves the negation of its
+common-knowledge assertion, although every fixed finite iteration of
+everyone-knows applied to $\theta$ is a KT theorem. More generally, for
+each permitted selector, a local-consistency fixed point is equivalent
+in DCB to everyone selected knowing a contradiction. In KT it is
+equivalent to the selected group being empty. We prove this classification
+and supply a direct one-agent revision argument for consistency of KT
+and KT with the untyped Barcan principle. All necessitation rules are
+used only on theorems.
+\end{abstract}
+\tableofcontents
+
+\section{The common-knowledge necessitation question}
+
+Ordinary necessitation says that once a sentence is a theorem, one may
+infer that an agent knows it. Common-knowledge necessitation would allow
+a further inference: every selected agent knows the sentence, knows
+that every selected agent knows it, and so on in the sense formalized
+by the common-knowledge predicate.
+
+In a typed modal system these principles often fit together naturally.
+Gorbow's setting \cite{Gorbow} is deliberately untyped. Knowledge and
+truth apply to codes of sentences in the full language, including
+sentences which themselves discuss knowledge and truth. Common knowledge
+is expressed by a diagonal fixed point inside arithmetic. These choices
+permit useful self-reference but make the passage from individual to
+common necessitation a substantive theorem, rather than a matter of
+notation.
+
+The common-belief subsystem DCB has a theorem-to-common-belief rule.
+In his concluding discussion, item~5(d), Gorbow asks how its results
+extend to the larger knowledge theory KT, including the corresponding
+common-knowledge rule. We show that the unrestricted extension fails.
+The counterexample is particularly sharp: the proposed common knowledge
+is not merely unproved; its negation is a theorem.
+
+The result concerns the published full-language rule. An arithmetic-only
+rule, a different fixed-point constructor, or an additional restriction
+on selectors would require a separate analysis.
+
+\section{The source theories and coding conventions}
+
+Work in Gorbow's expanded first-order language $L$. It contains the
+language of arithmetic, an agent predicate $\Ag$, a binary knowledge
+predicate $\Know(a,u)$, a unary knowledge predicate for all agents,
+a truth predicate $\Truth(u)$, and standard definitional syntax coding.
+The sublanguage $L_-$ consists of arithmetic, the source's universal
+coding relation and function $U,u$, and $\Ag$; it excludes both knowledge
+and truth. Its interpretations will remain fixed in the consistency
+construction.
+The base in our consistency theorem is exactly $\mathsf{PA}(L)$ with
+the source's definitional syntax apparatus. In particular induction is
+available for formulas in $L$. No arbitrary extra base theory is assumed.
+
+For a literal sentence $\sigma$, $\code\sigma$ abbreviates its numeral
+code. Codes, substitution functions and the numeral denoting a code
+must be distinguished: $\CK_A(\code\sigma)$ is a sentence and has its
+own code $\code{\CK_A(\code\sigma)}$.
+
+Put $D=\DCB$. Its relevant axioms, with the source sentencehood guards
+understood, are
+\begin{align}
+ &\exists a\,\Ag(a),\label{eq:nonempty}\\
+ &\Know(a,\code{\sigma\to\tau})\wedge\Know(a,\code\sigma)
+       \ \longrightarrow\ \Know(a,\code\tau)
+       \quad(\Ag(a)),\label{eq:distribution}\\
+ &\Prv_D(\code\sigma)\ \longrightarrow\ \Know(a,\code\sigma)
+       \quad(\Ag(a)).\label{eq:reflection}
+\end{align}
+These are instances of universally coded axioms, not restrictions of
+their domains to an externally chosen finite collection. The unary
+knowledge predicate is linked by the source bridge to
+$\forall a(\Ag(a)\to\Know(a,u))$.
+
+The index of $\Prv_D$ in \eqref{eq:reflection} is $D$ itself.
+It is not the provability predicate for KT. Gorbow constructs its
+recursive presentation by a syntactic fixed point. We use that
+presentation and the ordinary derivability conditions. In particular
+L\"ob's theorem applies to $D$: if
+\[
+ D\vdash\Prv_D(\code\delta)\to\delta,
+ \quad\text{then}\quad D\vdash\delta.
+\]
+This is the standard metatheorem for provability, not an extra
+knowledge axiom. Its application does not require a consistency
+assumption.
+
+The theory $\FS$ adds uniform compositional truth axioms for the fixed
+$L_-$ atoms, Boolean connectives and quantifiers. The atomic clauses
+apply to closed arithmetic term instances; the quantified clauses use
+closed $L$-term substitution. It also has the two theorem rules
+\[
+ \frac{\vdash\sigma}{\vdash\Truth(\code\sigma)},
+ \qquad
+ \frac{\vdash\Truth(\code\sigma)}{\vdash\sigma}.
+\]
+For example the Boolean clauses include
+$\Truth(\code{\neg\sigma})\leftrightarrow\neg\Truth(\code\sigma)$
+and
+$\Truth(\code{\sigma\wedge\tau})\leftrightarrow
+(\Truth(\code\sigma)\wedge\Truth(\code\tau))$.
+Their full coded versions, not just these literal instances, are part
+of $\FS$.
+
+Finally KT extends $D$ and $\FS$ by veracity and theorem-only knowledge
+necessitation:
+\begin{equation}\label{eq:veracity}
+ \Ag(a)\to(\Know(a,\code\sigma)\to\Truth(\code\sigma)),
+ \qquad
+ \frac{\vdash\sigma}{\vdash\forall a(\Ag(a)\to\Know(a,\code\sigma))}.
+\end{equation}
+No rule is licensed inside a derivation under temporary assumptions.
+The source's published figures give the full syntactic schemata;
+the displayed formulas isolate exactly the instances used below.
+
+\subsection{Selected agents and common knowledge}
+
+Let $A(x)$ be any permitted $L$-formula with $x$ its only free variable.
+For a literal sentence $\sigma$ define
+\[
+ E_A(\sigma)=\forall x\bigl(\Ag(x)\to
+                (A(x)\to\Know(x,\code\sigma))\bigr),
+ \qquad
+ N_A=\exists x(\Ag(x)\wedge A(x)).
+\]
+The formula $A$ may contain knowledge or truth; no external evaluation
+of it is assumed.
+
+We use Gorbow's chosen fixed-point formula $\CK_A$. Its defining
+equivalence, after numeral substitution, gives for each literal
+$\sigma$ the $D$ theorem
+\begin{equation}\label{eq:fixed}
+ \CK_A(\code\sigma)\ \leftrightarrow\
+ E_A(\sigma)\wedge E_A\bigl(\CK_A(\code\sigma)\bigr).
+\end{equation}
+The second conjunct therefore involves the code of the actual
+common-knowledge sentence. We do not replace it by an informal infinite
+conjunction or by a different predicate satisfying an external equation.
+
+\begin{lemma}\label{lem:three}
+For fixed literal sentences $\sigma,\tau$:
+\begin{enumerate}
+\item if $D\vdash\sigma$, then $D\vdash E_A(\sigma)$;
+\item $D\vdash E_A(\sigma\to\tau)\to(E_A(\sigma)\to E_A(\tau))$;
+\item $D\vdash\Prv_D(\code\sigma)\to E_A(\sigma)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+For the first assertion, a fixed actual proof of $\sigma$ has its
+provability certified by the arithmetic base. Apply
+\eqref{eq:reflection} and restrict to selected agents. The second
+assertion is pointwise \eqref{eq:distribution} followed by first-order
+logic. The third is \eqref{eq:reflection} with the same restriction.
+No distribution through a quantified knowledge claim is used.
+\end{proof}
+
+\section{The local-consistency fixed point collapses}
+
+Let $b$ be the arithmetic contradiction $0=S0$, and set
+\[
+ \theta_A=(E_A(b)\to b),\qquad c_A=\CK_A(\code{\theta_A}).
+\]
+The sentence $\theta_A$ says that if all selected agents know the
+contradiction, the contradiction holds. It has the form of a local
+consistency assertion for the selected knowledge predicates.
+
+\begin{theorem}\label{thm:collapse}
+For every allowed selector $A$,
+\[
+ D\vdash c_A\leftrightarrow E_A(b).
+\]
+\end{theorem}
+\begin{proof}
+Write $\delta=(c_A\to E_A(b))$. Reason in ordinary first-order
+deduction over $D$ under temporary assumptions
+$\Prv_D(\code\delta)$ and $c_A$. Lemma~\ref{lem:three}(3) yields
+$E_A(\delta)$, while \eqref{eq:fixed} gives
+$E_A(c_A)$ and $E_A(\theta_A)$. Two applications of
+Lemma~\ref{lem:three}(2) give, successively,
+\[
+ E_A(E_A(b)),\qquad E_A(b).
+\]
+The first uses $\delta=(c_A\to E_A(b))$; the second uses
+$\theta_A=(E_A(b)\to b)$. Discharging the assumptions proves
+$D\vdash\Prv_D(\code\delta)\to\delta$. L\"ob's theorem now gives
+$D\vdash\delta$, proving the forward implication. No necessitation
+rule has been applied to an assumption.
+
+For the converse, $D$ proves the two tautological implications
+$b\to\theta_A$ and $b\to c_A$. Lemma~\ref{lem:three}(1),(2) gives
+\[
+ E_A(b)\to E_A(\theta_A),\qquad E_A(b)\to E_A(c_A).
+\]
+Their conjunction and \eqref{eq:fixed} imply $E_A(b)\to c_A$.
+\end{proof}
+
+\begin{corollary}
+The same fixed point is $D$-equivalent to common belief of the
+contradiction: $D\vdash c_A\leftrightarrow\CK_A(\code b)$.
+\end{corollary}
+\begin{proof}
+The defining equation for $\CK_A(\code b)$ gives its implication to
+$E_A(b)$. Conversely the $D$ theorem $b\to\CK_A(\code b)$, placed
+under $E_A$, gives $E_A(b)\to E_A(\CK_A(\code b))$.
+Use the defining equation again, then Theorem~\ref{thm:collapse}.
+\end{proof}
+
+\section{Veracity gives the exact selector classification}
+
+\begin{theorem}\label{thm:selector}
+In the original KT theory,
+\[
+ \KT\vdash\theta_A\leftrightarrow N_A,
+ \qquad
+ \KT\vdash c_A\leftrightarrow\neg N_A.
+\]
+\end{theorem}
+\begin{proof}
+The atomic truth clause for the closed equality $b$ gives
+$\Truth(\code b)\leftrightarrow b$. Since PA proves $\neg b$,
+veracity proves
+$\forall x(\Ag(x)\to\neg\Know(x,\code b))$.
+First-order logic therefore gives
+$E_A(b)\leftrightarrow\neg N_A$. This is valid even when $A$
+contains knowledge or truth: no assumption about its extension is
+needed. With $\neg b$, the implication $E_A(b)\to b$ is equivalent
+to $\neg E_A(b)$, hence to $N_A$. The second equivalence follows from
+Theorem~\ref{thm:collapse}.
+\end{proof}
+
+Take $A(x)$ to be $x=x$, denoted $\top$. Nonemptiness of agents gives
+the explicit truth-free counterexample
+\begin{equation}\label{eq:counterexample}
+ \theta=\bigl(\forall x(\Ag(x)\to\Know(x,\code b))\to b\bigr),
+ \qquad
+ \KT\vdash\theta,\quad
+ \KT\vdash\neg\CK_\top(\code\theta).
+\end{equation}
+Thus adding unrestricted common-knowledge necessitation to KT makes
+it inconsistent. Once consistency of KT is established, the displayed
+negation also yields nonprovability of the common-knowledge assertion
+in KT itself.
+
+\begin{corollary}\label{cor:finite}
+For every fixed external $r\in\N$, $\KT\vdash E_\top^r(\theta)$,
+where $E_\top^0(\theta)=\theta$ and
+$E_\top^{r+1}(\theta)=E_\top(E_\top^r(\theta))$.
+\end{corollary}
+\begin{proof}
+Starting from \eqref{eq:counterexample}, apply theorem-only knowledge
+necessitation $r$ times. Each premise is an already established theorem.
+\end{proof}
+
+This is a separate theorem for every standard finite $r$. It does not
+assert a formula internally quantifying over iteration lengths. In
+particular it supplies no inference from all finite iterations to the
+chosen self-referential common-knowledge sentence. That missing
+inference is exactly what the example exposes.
+
+The empty-selector case is a useful check. If KT proves $\neg N_A$,
+it proves $c_A$ and $\neg\theta_A$. If the nonemptiness of the selected
+group is undecided, the two equivalences of Theorem~\ref{thm:selector},
+rather than an externally chosen case, are the result.
+
+\section{A direct consistency argument}
+
+Gorbow proves consistency by generalized revision semantics
+\cite[Theorem~15 and Corollary~16]{Gorbow}. We include a direct
+one-agent specialization, both to make the nonprovability conclusion
+available here and to explain why the preceding results coexist.
+The construction uses standard external satisfaction. It does not
+provide one standard structure satisfying every KT theorem.
+
+\begin{theorem}\label{thm:consistency}
+The source theories KT and $\KT+\mathsf{UBF}$ are consistent when
+their base is $\mathsf{PA}(L)$ with its standard definitional syntax
+apparatus. Here $\mathsf{UBF}$ is the source untyped Barcan principle
+for universally known closed-arithmetic-term instances.
+\end{theorem}
+\begin{proof}
+Fix an $L_-$ expansion $M$ of the standard natural numbers satisfying
+the defining arithmetic syntax axioms. Interpret $\Ag$ by $\{0\}$,
+and keep all functions, syntax devices and $L_-$ relations fixed.
+Every instance of full $L$-induction holds in every expansion of
+the standard natural numbers, whatever interpretations are later given
+to knowledge and truth.
+
+Let $P_0$ be the set of codes of literal $D$-theorems. This set exists
+without an initial consistency assumption. Define $M_n$ to have truth
+extension $P_n$, binary knowledge extension $\{(0,u):u\in P_n\}$,
+and unary all-agents knowledge extension $P_n$. Recursively set
+\[
+ P_{n+1}=\{\code\sigma:M_n\models\sigma\},
+\]
+where $\sigma$ ranges over actual $L$-sentences. At each standard
+finite stage,
+\begin{equation}\label{eq:revision}
+ M_{n+1}\models\Truth(\code\sigma)
+ \quad\Longleftrightarrow\quad M_n\models\sigma.
+\end{equation}
+The same equivalence holds for $\Know(0,\code\sigma)$ and for unary
+knowledge. Satisfaction on the right is external classical satisfaction.
+
+\emph{DCB holds at every stage.} At stage zero the theorem set is
+closed under modus ponens, so knowledge distribution holds. The
+provability predicate has its standard interpretation, so
+\eqref{eq:reflection} holds. Nonemptiness and the unary/binary bridge
+hold by construction; the arithmetic base holds as just explained.
+Thus $M_0\models D$. If $M_n\models D$, ordinary first-order
+soundness says every $D$-theorem is true in $M_n$, hence its code is
+in $P_{n+1}$. This gives \eqref{eq:reflection} at the next stage.
+Classical truth in $M_n$ is closed under modus ponens, giving
+distribution there too. Induction proves $M_n\models D$ for all $n$.
+The soundness step concerns the ordinary first-order axiom theory $D$;
+it does not insert KT's additional theorem rules into $D$.
+
+\emph{Truth composition holds at positive stages.} For $n\ge1$,
+membership in $P_n$ means truth in $M_{n-1}$. Classical satisfaction
+immediately gives all Boolean truth clauses in $M_n$, including for
+sentences containing knowledge or truth. The $L_-$ atomic clauses
+hold because their relations and closed arithmetic term values remain
+fixed. For quantifiers, the substitution lemma applies to the fixed
+function interpretations. Closed $L$-terms denote natural numbers,
+and every natural number has a numeral. Thus truth of all closed-term
+instances in $M_{n-1}$ is exactly universal satisfaction there; the
+existential clause is similar. This verifies the full coded quantified
+clauses, since the ambient arithmetic universe is standard. Veracity
+holds even at stage zero, because the single agent's knowledge extension
+equals the truth extension. It does not assert that $P_n$ is the set
+of sentences true in $M_n$.
+
+Call a sentence \emph{eventually valid} when it is true in all $M_n$
+beyond some standard finite stage depending on the sentence. Every
+$D$ axiom has threshold zero; every FS axiom has threshold at most
+one; veracity has threshold zero. Logical consequences of finitely
+many eventually valid sentences are eventually valid, by ordinary
+soundness in each sufficiently late structure.
+
+If $\sigma$ is eventually valid, \eqref{eq:revision} makes
+$\Truth(\code\sigma)$ eventually valid, and also gives eventual
+validity of $\forall a(\Ag(a)\to\Know(a,\code\sigma))$.
+Conversely eventual validity of $\Truth(\code\sigma)$ implies
+eventual validity of $\sigma$ by shifting the stage back one.
+All three theorem rules preserve eventual validity. Induction over
+an actual finite KT proof therefore makes its conclusion eventually
+valid. The arithmetic falsehood $b$ is false at every stage, so it
+cannot be a theorem.
+
+For the additional Barcan axiom, take $n\ge1$. If the sole agent
+knows every closed arithmetic term instance of $\varphi(v)$ at stage
+$n$, then $M_{n-1}$ satisfies all these instances. Numerals cover the
+standard universe, so $M_{n-1}\models\forall v\varphi(v)$.
+Equation~\eqref{eq:revision} says the agent knows that universal
+sentence at stage $n$. Thus the actual full-language UBF schema is
+eventually valid. The same proof induction establishes consistency
+of the extension separately.
+\end{proof}
+
+The proof uses no internally defined truth iteration, no common
+knowledge converse principle, and no assertion that finite revision
+stages stabilize globally. Its conclusion is external consistency,
+not an internal proof of $\Con(\KT)$.
+
+\section{What the negative answer establishes}
+
+Combining Theorem~\ref{thm:consistency} with
+\eqref{eq:counterexample} gives
+\[
+ \KT\nvdash\CK_\top(\code\theta),
+ \qquad
+ \KT+\mathsf{UBF}\nvdash\CK_\top(\code\theta).
+\]
+Both theories nevertheless prove $\theta$ and the negation of that
+common-knowledge sentence. This answers the unrestricted
+common-knowledge necessitation question in the specified source case.
+
+The selector theorem is slightly more informative than one
+counterexample: it identifies the exact role of nonemptiness. The
+DCB collapse also explains the obstruction structurally. A fixed point
+claiming common belief of local consistency allows provability in DCB
+to trigger L\"ob's theorem; it collapses to common belief of the
+contradiction. Adding veracity then turns that condition into emptiness
+of the selected group.
+
+Strengthening the base by arbitrary axioms preserves the displayed
+syntactic derivations, but the consistency proof does not automatically
+extend. Likewise, alternative restricted necessitation rules are not
+classified by this counterexample. These boundaries keep the result
+aligned with the full-language question actually answered.
+
+\paragraph{Preparation.}
+This AI-assisted hand-proof manuscript includes the local fixed-point,
+selector and consistency arguments. The source theories and L\"ob's
+metatheorem are credited mathematical inputs. No formal certification
+or established priority is claimed.
+
+\begin{thebibliography}{9}
+\bibitem{Gorbow} P.~Gorbow,
+\emph{A genuinely untyped explanation of common belief and knowledge},
+The Review of Symbolic Logic 18 (2025), no.~1, 160--185.
+\href{https://doi.org/10.1017/S175502032400025X}{doi:10.1017/S175502032400025X}.
+We use the published DCB/FS/KT axioms, common-belief fixed point,
+Theorem~2, Theorem~15, Corollary~16 and concluding discussion~5(d).
+\bibitem{Lob} M.~H.~L\"ob,
+\emph{Solution of a problem of Leon Henkin},
+Journal of Symbolic Logic 20 (1955), no.~2, 115--118.
+\end{thebibliography}
+\end{document}

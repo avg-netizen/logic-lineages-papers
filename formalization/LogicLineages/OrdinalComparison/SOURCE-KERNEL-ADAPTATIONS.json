@@ -1,0 +1,40 @@
+{
+  "changes": [
+    {
+      "path": "SourceTerms.lean",
+      "old_sha256": "be7a59672f8568c77a0e9b8ba26bc854de91788544cc93e315a91cdb032d02b2",
+      "new_sha256": "ed68be009c4116859b2dd1a77f7d7b3addae9813befb4b7fe5b6435f608b1110",
+      "change": "Alpha-renamed the reserved local Σ binder to Symbol; no definition, proposition, constructor or proof body changed otherwise.",
+      "current_sha256": "964c1930d4d45bbf317dddc3146b50a1bc2116a23e76c6548fa2f33f685bb8d6"
+    },
+    {
+      "path": "SourceStructuralTargets.lean",
+      "old_sha256": "9b2c23b2ba4307200ba2f82a8f555a0b392be9cff20a499d17e84e400f01c6dd",
+      "new_sha256": "e86f252048344712e5bde4b1af2c9e0c32c74c0d7ed0238e7619cd1adfb23a90",
+      "change": "Alpha-renamed the reserved local Σ binder to Symbol; no definition, proposition, constructor or proof body changed otherwise.",
+      "current_sha256": "e86f252048344712e5bde4b1af2c9e0c32c74c0d7ed0238e7619cd1adfb23a90"
+    },
+    {
+      "path": "SourceStructural.lean",
+      "old_sha256": "f638021f9c4a97a10ba7c97fa281dea1a0150c543d66be88e8a05b498073e34e",
+      "new_sha256": "00a2effb2da7ff42917bf4cc149e76ac1db236d742f8b7a76bdabe9e7bf108d9",
+      "change": "Alpha-renamed the reserved local Σ binder to Symbol; no definition, proposition, constructor or proof body changed otherwise.",
+      "current_sha256": "d6359cfa37f65e598620dd47f9c1c1f37a5f462ef77f732f6971d16f2e2a66d6"
+    },
+    {
+      "path": "SourceTypes.lean",
+      "old_sha256": "54458dbf0944753cd506474aa34812f449e27cc2f759c3e53b1d42e8758b1d99",
+      "new_sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1",
+      "change": "Removed a wholly unused Mathlib iteration import, replacing it with explicit core Init List and Nat lemmas. All declarations and proofs are byte-for-byte unchanged.",
+      "current_sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+    }
+  ],
+  "semantic_change": false,
+  "target_acceptance_before_adaptation": false,
+  "changes_are_stages": true,
+  "subsequent_elaboration_repairs": [
+    "Spelled Substitution.single explicitly at beta reduction; leading-dot resolution had inferred the wrong namespace.",
+    "Spelled polymorphic lift function equalities with explicit arguments to preserve their implicit type binder."
+  ],
+  "accepted_gate_receipt": "formalization/build-reports/1793250218115478637-2.json"
+}
