@@ -29,7 +29,7 @@ theorem derivative_eigenvectors_linearIndependent (D : Derivation K F F)
     (μ : ι → K) (hμ : Function.Injective μ) (v : ι → F)
     (hv : ∀ i, v i ≠ 0) (hD : ∀ i, D (v i) = μ i • v i) :
     LinearIndependent K v := by
-  apply D.toLinearMap.eigenvectors_linearIndependent' μ hμ v
+  apply Module.End.eigenvectors_linearIndependent' D.toLinearMap μ hμ v
   intro i
   exact ⟨Module.End.mem_eigenspace_iff.mpr (hD i), hv i⟩
 
@@ -42,7 +42,7 @@ theorem derivation_pow_eigenvalue (D : Derivation K F F) (x : F) (μ : K)
   | succ n ih =>
       rw [pow_succ, D.leibniz, ih, hx]
       simp only [Algebra.smul_def, Nat.cast_add, Nat.cast_one,
-        map_mul, map_add, map_natCast, map_one]
+        map_mul, map_add, map_natCast, map_one, Algebra.algebraMap_self_apply]
       ring
 
 /-- Products add differential weights. -/
@@ -55,7 +55,7 @@ theorem derivation_prod_eigenvalue [DecidableEq ι] (D : Derivation K F F)
   | @insert a s ha ih =>
       rw [Finset.prod_insert ha, D.leibniz, hx a (Finset.mem_insert_self a s)]
       rw [ih (fun i hi => hx i (Finset.mem_insert_of_mem hi)), Finset.sum_insert ha]
-      simp only [Algebra.smul_def, map_add]
+      simp only [Algebra.smul_def, map_add, Algebra.algebraMap_self_apply]
       ring
 
 /-- Evaluation of an exponent vector as a field monomial. -/
@@ -87,7 +87,10 @@ theorem algebraicIndependent_of_monomials_linearIndependent (x : ι → F)
   have hmap : (MvPolynomial.aeval x).toLinearMap =
       Finsupp.linearCombination K (differentialMonomial x) := by
     ext d
-    simp [differentialMonomial, MvPolynomial.monomial]
+    change (MvPolynomial.aeval x) (MvPolynomial.monomial d (1 : K)) =
+      (Finsupp.linearCombination K (differentialMonomial x)) (Finsupp.single d 1)
+    simp only [MvPolynomial.aeval_monomial, map_one, one_mul,
+      Finsupp.linearCombination_single, one_smul, differentialMonomial]
   change Function.Injective (MvPolynomial.aeval x)
   change Function.Injective (MvPolynomial.aeval x).toLinearMap
   rw [hmap]

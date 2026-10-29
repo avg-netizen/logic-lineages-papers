@@ -44,7 +44,8 @@ theorem jetEval_polynomialDerivation (D : Derivation ℚ F F) (a : F)
     (p : DifferentialPolynomial) :
     jetEval D a (polynomialDerivation p) = D (jetEval D a p) := by
   induction p using MvPolynomial.induction_on with
-  | C c => simp
+  | C c =>
+      rw [polynomialDerivation_C, map_zero, jetEval_C, D.map_algebraMap]
   | add p q hp hq => simp [map_add, hp, hq]
   | mul_X p n hp =>
       simp only [Derivation.leibniz, smul_eq_mul, map_add, map_mul,

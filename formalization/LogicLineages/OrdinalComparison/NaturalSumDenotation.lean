@@ -20,7 +20,7 @@ theorem actual_coefficient_eq_cast (a : ONote) (ha : ONote.NF a) (q : Ordinal) :
     Ordinal.CNF.coeff Ordinal.omega0 a.repr q = (coefficientAtOrdinal a q : Ordinal) := by
   classical
   induction a with
-  | zero => simp only [ONote.repr_zero, Ordinal.CNF.coeff_zero_apply, coefficientAtOrdinal,
+  | zero => simp only [ONote.repr, Ordinal.CNF.coeff_zero_apply, coefficientAtOrdinal,
       Nat.cast_zero]
   | oadd e c t ihe iht =>
       have hc : (c : Ordinal) ≠ 0 := by exact_mod_cast c.ne_zero
@@ -36,13 +36,13 @@ theorem rawNaturalSum_actual_coefficients : ∀ (a b : ONote) (q : Ordinal),
     coefficientAtOrdinal (rawNaturalSum a b) q =
       coefficientAtOrdinal a q + coefficientAtOrdinal b q
   | .zero, b, q => by simp only [rawNaturalSum, coefficientAtOrdinal, Nat.zero_add]
-  | a, .zero, q => by simp only [rawNaturalSum, coefficientAtOrdinal, Nat.add_zero]
-  | a@(.oadd e c t), b@(.oadd f d u), q => by
+  | a, .zero, q => by cases a <;> rw [rawNaturalSum] <;> simp [coefficientAtOrdinal]
+  | (.oadd e c t), (.oadd f d u), q => by
       classical
       cases h : ONote.cmp e f with
       | lt =>
           simp only [rawNaturalSum, h, coefficientAtOrdinal,
-            rawNaturalSum_actual_coefficients a u q]
+            rawNaturalSum_actual_coefficients (.oadd e c t) u q]
           omega
       | eq =>
           have hef : e = f := ONote.eq_of_cmp_eq h
@@ -52,10 +52,10 @@ theorem rawNaturalSum_actual_coefficients : ∀ (a b : ONote) (q : Ordinal),
           split <;> omega
       | gt =>
           simp only [rawNaturalSum, h, coefficientAtOrdinal,
-            rawNaturalSum_actual_coefficients t b q]
+            rawNaturalSum_actual_coefficients t (.oadd f d u) q]
           omega
 termination_by a b _ => sizeOf a + sizeOf b
-decreasing_by all_goals simp_wf; omega
+decreasing_by all_goals simp_wf; simp only [sizeOf, ONote._sizeOf_1]; omega
 
 theorem naturalSumOrdinalCoefficients : Targets.NaturalSumOrdinalCoefficients naturalSum := by
   intro a b q

@@ -1,5 +1,25 @@
 # Ultrafilter and reinforcement-learning formalization
 
+## External continuation checkpoint, 29 October 2026, 15:09 UTC
+
+Paper 11: all six registered statements and listed mathematical suppliers now
+pass their individual exact gates, including admissible-ultrafilter existence,
+the actual domain subfield, ordinary derivation and non-order-convexity.
+Paper 13: all eight registered statements and four listed supplier obligations
+are now individually checked, including the complete classification, singleton
+action exception and separate cross-environment lattice obstruction. The latter
+covers arbitrary signed lattice reward streams with convergent partial sums;
+the scaled concrete DD instance is only a calibration. This certifies registered
+mathematical scope, not every prose sentence or the imported original article.
+
+See [the external checkpoint](../EXTERNAL-CONTINUATION.md) for scope caveats,
+provenance and aggregate verification limits. No local paused worker was
+restarted. The following records describe the earlier local checkpoint and
+are preserved as history, not as the current external coverage status.
+
+## Historical local pause checkpoint
+
+
 **Paused by explicit user request on 29 October 2026.** No main-thread compiler
 or author remains live. All source edits are preserved; no new proof work or
 automatic restart is authorized. External continuation is documented in

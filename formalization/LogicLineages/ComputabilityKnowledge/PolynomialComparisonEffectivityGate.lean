@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PolynomialComparisonEffectivityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem polynomial_comparison_effectivity : Comparators.PolynomialComparisonEffectivity.Target :=
+  PolynomialComparisonEffectivityProof.polynomialComparisonEffectivity
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

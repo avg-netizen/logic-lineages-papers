@@ -14,6 +14,12 @@ papers are not considered formalized merely because their definitions or an
 intermediate lemma compile. Every full target remains pending until its actual
 statement and complete dependency chain are checked.
 
+## External continuation
+
+See [the external continuation checkpoint](EXTERNAL-CONTINUATION.md) for new
+accepted results, precise coverage and verification limits. Historical local
+pause records remain preserved; this is a separately authorized continuation.
+
 ## Acceptance rule
 
 1. Codex writes the exact mathematical semantics and comparison statement,

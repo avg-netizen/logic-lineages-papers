@@ -17,7 +17,7 @@ def rawFiniteTail : ONote → Nat → ONote
 theorem rawFiniteTail_repr (a : ONote) (ha : ONote.NF a) (n : Nat) :
     (rawFiniteTail a n).repr = a.repr + (n : Ordinal) := by
   induction a with
-  | zero => simp only [rawFiniteTail, ONote.repr_ofNat, ONote.repr_zero, zero_add]
+  | zero => simp only [rawFiniteTail, ONote.repr_ofNat, ONote.repr, zero_add]
   | oadd e c t ihe iht =>
       cases e with
       | zero =>
@@ -38,6 +38,7 @@ theorem rawFiniteTail_norm (a : ONote) (ha : ONote.NF a) (n : Nat) :
           have ht : t = 0 := ha.zero_of_zero rfl
           subst t
           simp only [rawFiniteTail, treeWeight, Nat.add_zero, Nat.mul_one]
+          rfl
       | oadd e' c' t' =>
           simp only [rawFiniteTail, treeWeight, iht ha.snd, Nat.add_assoc]
 

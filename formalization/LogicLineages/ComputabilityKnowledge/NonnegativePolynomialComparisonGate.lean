@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem nonnegative_polynomial_comparison : Comparators.NonnegativePolynomialComparison.Target :=
+  NonnegativePolynomialComparisonProof.nonnegativePolynomialComparison
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

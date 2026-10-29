@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CircuitComparisonEffectivityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem circuit_comparison_effectivity : Comparators.CircuitComparisonEffectivity.Target :=
+  CircuitComparisonEffectivityProof.circuitComparisonEffectivity
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

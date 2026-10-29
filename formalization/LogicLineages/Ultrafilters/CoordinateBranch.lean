@@ -42,7 +42,7 @@ theorem nonprincipal_coordinate_witness : Targets.NonprincipalCoordinateWitness 
       Ultrafilter.compl_mem_iff_notMem.mpr
         (hfree _ (rationalDecay_upper_finite η hη))
     have hlarge : {x : ℝ | ¬ η ≤ rationalDecay (h x)} ∈ p := by
-      simpa only [Ultrafilter.mem_map] using hc
+      exact Ultrafilter.mem_map.mp hc
     apply Filter.mem_of_superset hlarge
     intro x hx
     exact lt_of_not_ge hx
@@ -55,8 +55,7 @@ theorem nonprincipal_coordinate_witness : Targets.NonprincipalCoordinateWitness 
     have hc : ((fun r : ℚ => h x + r) ⁻¹' F)ᶜ ∈ Ultrafilter.map h p :=
       Ultrafilter.compl_mem_iff_notMem.mpr (hfree _ hshift)
     have havoid : {y : ℝ | h x + h y ∉ F} ∈ p := by
-      simpa only [Ultrafilter.mem_map, Set.preimage_compl, Set.preimage_preimage,
-        Function.comp_def, Set.mem_compl_iff, Set.mem_preimage] using hc
+      exact Ultrafilter.mem_map.mp hc
     obtain ⟨y, ⟨hyT, hyδ⟩, hyavoid⟩ := Filter.nonempty_of_mem
       (Filter.inter_mem (Filter.inter_mem hx.2 (hp.2 δ hδ)) havoid)
     refine ⟨y, hyT, hyδ, ?_⟩

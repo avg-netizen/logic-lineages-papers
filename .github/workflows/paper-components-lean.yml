@@ -17,7 +17,7 @@ jobs:
   verify:
     name: Fresh accepted gates and axiom audits (partial coverage)
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 90
     defaults:
       run:
         shell: bash
@@ -46,6 +46,9 @@ jobs:
           mapfile -t modules < <(python3 scripts/mathlib_imports.py)
           lake exe cache get "${modules[@]}"
           git diff --exit-code -- lake-manifest.json lakefile.toml lean-toolchain
+
+      - name: Test bounded resource monitoring
+        run: python3 -m unittest discover -s scripts -p test_resource_monitor.py
 
       - name: Confirm a fresh local source build
         run: |
@@ -84,7 +87,12 @@ jobs:
           }, indent=2) + '\n')
           PY
           mapfile -t gates < <(python3 scripts/accepted_gates.py)
-          python3 scripts/check.py --fresh "${gates[@]}"
+          # Explicit profiles measured during external continuation. Defaults remain
+          # conservative for other shared development hosts.
+          python3 scripts/check.py --fresh --memory-mib 2048 --rss-mib 1536 --min-free-mib 2048 "${gates[@]}"
+          # Check the actual root as well: listing its imports alone cannot catch
+          # root syntax errors or validate the combined namespace axiom audit.
+          python3 scripts/check.py --memory-mib 2560 --rss-mib 2048 --min-free-mib 3072 LogicLineages
 
       - name: Explain the checked scope
         run: |
@@ -94,6 +102,7 @@ jobs:
 
           Every accepted component gate selected by the root was compiled
           from fresh local sources, with exact statements and transitive axiom audits.
+          The aggregate root and its namespace axiom audit were then checked too.
           Only Mathlib and its pinned upstream dependencies used cached objects.
 
           This is partial coverage. It does not certify all fifteen papers,

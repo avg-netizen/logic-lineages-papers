@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PolynomialDomainShiftEffectivityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem polynomial_domain_shift_effectivity : Comparators.PolynomialDomainShiftEffectivity.Target :=
+  PolynomialDomainShiftEffectivityProof.polynomialDomainShiftEffectivity
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

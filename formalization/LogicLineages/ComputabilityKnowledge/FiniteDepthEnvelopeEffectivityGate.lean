@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeEffectivityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem finite_depth_envelope_effectivity : Comparators.FiniteDepthEnvelopeEffectivity.Target :=
+  FiniteDepthEnvelopeEffectivityProof.finiteDepthEnvelopeEffectivity
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -31,7 +31,7 @@ def pSocleMap (p : ℕ) (S : AddSubgroup G) (f : G →+ H) :
   map_add' := by
     intro x y
     apply Subtype.ext
-    exact map_add f x y
+    exact map_add f (x : G) (y : G)
 
 @[simp] theorem pSocleMap_coe (p : ℕ) (S : AddSubgroup G) (f : G →+ H)
     (x : pSocle p S) : (pSocleMap p S f x : H) = f (x : G) := rfl

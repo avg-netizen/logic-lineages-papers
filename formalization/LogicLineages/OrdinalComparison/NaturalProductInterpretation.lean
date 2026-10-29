@@ -50,7 +50,7 @@ theorem rawMonomialProduct_actual_coefficients (e : ONote) (he : ONote.NF e) (c 
           (fun q rest => Finsupp.single (ordinalNaturalSum e.repr q.1)
             (((c : Nat) : Ordinal) * q.2) + rest) 0
   | .zero, _ => by
-      simp only [rawMonomialProduct, ONote.repr_zero, Ordinal.CNF.coeff_zero_right,
+      simp only [rawMonomialProduct, ONote.repr, Ordinal.CNF.coeff_zero_right,
         Ordinal.CNF.zero_right, List.foldr_nil]
   | .oadd f d u, hb => by
       have hprincipal : ONote.NF (.oadd (rawNaturalSum e f) (c * d) .zero) :=
@@ -75,7 +75,7 @@ theorem rawNaturalProduct_actual_coefficients : ∀ a : ONote, ONote.NF a →
             (fun q rest => Finsupp.single (ordinalNaturalSum p.1 q.1) (p.2 * q.2) + rest)
             acc) 0
   | .zero, _, _, _ => by
-      simp only [rawNaturalProduct, ONote.repr_zero, Ordinal.CNF.coeff_zero_right,
+      simp only [rawNaturalProduct, ONote.repr, Ordinal.CNF.coeff_zero_right,
         Ordinal.CNF.zero_right, List.foldr_nil]
   | .oadd e c t, ha, b, hb => by
       have hm := rawMonomialProduct_normal e ha.fst c b hb
