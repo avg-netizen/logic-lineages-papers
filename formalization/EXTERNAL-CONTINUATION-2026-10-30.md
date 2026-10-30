@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 81 checked numbered statements, two inherited calculator
-results, and 95 pending statements.
+Current register: 83 checked numbered statements, two inherited calculator
+results, and 93 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -185,8 +185,11 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   Faithful numeric controlled-count, suffix-kernel and closed-word evaluation
   are now uniformly Computable, with actual terminating searches; full count
   is not claimed primitive recursive. Collected positive-form structural
-  validity and value preservation are checked. General sign/identity algorithms,
-  normalization completeness and finite-zero bounds remain separate obligations.
+  validity and value preservation are checked, with uniform coded normalization.
+  The full one-input lemma is now checked for finite genuine normal-form families,
+  including the computed syntax threshold, reachable affine/nonlinear bands and
+  equal-peak root/head/argument conclusions. General sign/identity algorithms,
+  semantic normalization completeness and finite-zero bounds remain separate.
 
 ### Held paper 05 abstraction convention
 
@@ -280,6 +283,30 @@ cost-aware universal machine numbering.
 - Paper 06 now has actual typed type-support/substitution and marked/retyped
   syntax/binding suppliers. The original-spine application and finite comparison
   construction are separate obligations, not correctness fields.
+
+### Source closures at the twelfth checkpoint
+
+The full paper 06 type-support substitution lemma is now checked for actual
+finite named type-preserving substitutions. Literal first-match lookup,
+shadowing, fresh capture-avoiding named recursion, missing-entry identity and
+erasure into the typed kernel are proved, not supplied as correspondence
+premises. Original-spine special application is separately checked and differs
+from repeated unary application as the source requires. Full finite comparison
+closure and stability remain pending.
+
+For paper 12, the explicit nonreflective FS/knowledge fragment has actual
+finite-rule threshold soundness and false-equality underivability from a
+constructed empty initial revision. This is not full KT/DCB consistency. The
+concrete registry-ground-diagram theory has genuine standard-model soundness
+and numeralwise derivability for its actual syntax programs, but is not asserted
+to be an adequate source Base with represented provability/Hilbert–Bernays.
+
+For paper 01, finite same-arity atomic diagrams, genuine prime-order subgroup
+extension, finite-coset profile normalization, and the exact successor-height
+root/filtration-preserving extension branch are checked. The socle correction
+map/kernel and exact-height proper-element criterion are actual quotient
+constructions. These are not a replacement for the remaining general
+height-extension/ACM argument.
 
 ## Local resource profiles
 
@@ -392,3 +419,13 @@ clean. See [checkpoint evidence](verification/external-checkpoint-614-2026-10-30
 The register remains 81 checked, two inherited and 95 pending. The new work
 consists of genuine computation, transfinite algebra, source-syntax and proof
 system suppliers, distinguished from still-unproved whole source statements.
+
+## Twelfth cumulative checkpoint
+
+The selected 657-gate root passed its 1,924-declaration axiom audit. All 2,340
+local source hashes were unchanged and the original baseline guard remained
+clean. See [checkpoint evidence](verification/external-checkpoint-657-2026-10-30.json).
+The register is now 83 checked, two inherited and 93 pending. The full paper 07
+one-input lemma and paper 06 named type-support substitution lemma are new
+numbered completions; the exact fragment/model and height-extension boundaries
+of other suppliers remain explicit.

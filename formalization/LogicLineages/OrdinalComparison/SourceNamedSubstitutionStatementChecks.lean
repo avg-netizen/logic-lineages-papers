@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceNamedSubstitutionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_constructedEnvironmentCalibration : LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionTargets.ConstructedEnvironmentCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionProof.constructedEnvironmentCalibration
+
+theorem fixed_namedSubstitutionErasureSupplier : LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionTargets.NamedSubstitutionErasureSupplier :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionProof.namedSubstitutionErasureSupplier
+
+theorem fixed_actualNamedSubstitutionErasure : LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionTargets.ActualNamedSubstitutionErasure :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionProof.actualNamedSubstitutionErasure
+
+theorem fixed_literalNamedSubstitutionEquations : LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionTargets.LiteralNamedSubstitutionEquations :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionProof.literalNamedSubstitutionEquations
+
+theorem fixed_identityNamedSubstitutionFootprint : LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionTargets.IdentityNamedSubstitutionFootprint :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSubstitutionProof.identityNamedSubstitutionFootprint
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

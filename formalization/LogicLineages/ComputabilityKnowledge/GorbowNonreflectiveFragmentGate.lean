@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowNonreflectiveFragmentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowNonreflectiveFragment : LogicLineages.ComputabilityKnowledge.Comparators.GorbowNonreflectiveFragment.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowNonreflectiveFragmentProof.gorbowNonreflectiveFragment
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

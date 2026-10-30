@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedCollectedThresholdProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedCollectedThresholdDataPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCollectedThresholdDataPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCollectedThresholdDataPrimitiveRecursive
+
+theorem fixed_encodedCollectedThresholdDataCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedThresholdDataCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedThresholdDataCorrect
+
+theorem fixed_encodedCollectedThresholdPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCollectedThresholdPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCollectedThresholdPrimitiveRecursive
+
+theorem fixed_encodedCollectedThresholdCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedThresholdCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedThresholdCorrect
+
+theorem fixed_encodedCollectedFamilyThresholdCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedFamilyThresholdCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedFamilyThresholdCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

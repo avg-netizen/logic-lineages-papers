@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceFiniteNamedSubstitutionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_finiteNamedEntryEquations : LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.FiniteNamedEntryEquations :=
+  LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionProof.finiteNamedEntryEquations
+
+theorem fixed_namedImageSupportMembership : LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.NamedImageSupportMembership :=
+  LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionProof.namedImageSupportMembership
+
+theorem fixed_actualNamedSupportSubstitution : LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.ActualNamedSupportSubstitution :=
+  LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionProof.actualNamedSupportSubstitution
+
+theorem fixed_fullFiniteNamedSupportSubstitution : LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.FullFiniteNamedSupportSubstitution :=
+  LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionProof.fullFiniteNamedSupportSubstitution
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

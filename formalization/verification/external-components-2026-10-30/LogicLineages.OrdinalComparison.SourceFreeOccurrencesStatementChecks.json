@@ -1,0 +1,216 @@
+{
+  "accepted_utc": "2026-10-30T11:59:19.857921+00:00",
+  "scope": "Ordered duplicate occurrence lists, actual typed substitutions and support unions; no named/marked comparison promotion.",
+  "source_correspondence": "Literal typed variable occurrences and exact substitution support.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.SourceFreeOccurrencesStatementChecks",
+  "frozen_at_utc": "2026-10-30T11:52:48.030646+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFreeOccurrencesDefinitions.lean",
+      "sha256": "f154a9f71878e254f2a2393c958df88a7d60139e95390a2264fb2094cac0acc0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFreeOccurrencesTargets.lean",
+      "sha256": "d20ee4d43770d446b147218d140829326b70a94e29d27f65523ae013943e97c2"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFreeOccurrencesStatementChecks.lean",
+      "sha256": "6ec6a4d1fc7abcc4a1286d6846f80808dcc41ea655200dace30a6bed171e77a2"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFreeOccurrencesProof.lean",
+      "sha256": "15d1cbd8af647060431e5232bc71759a29cc0adbd38cbb9d08820bb3aa10cd37"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.FreeOccurrenceRenaming",
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.OccurringVariableTypeSupport",
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.ImageTypeSupportMembership",
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.ExactTypeSupportSubstitution",
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.ExactFreeOccurrenceSubstitution"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793361502978731230-7.json",
+      "sha256": "59d78f389d88e74b534e08e0ba9d7e4710927d5cae0f2fe2adaf171a5ce46028",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "37639710d68d11a5a63cf904c3f3e3c8fb52a08fee24f40a09d7eff9c4f7fbc7",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_freeOccurrenceRenaming": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_imageTypeSupportMembership": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_exactFreeOccurrenceSubstitution": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_occurringVariableTypeSupport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_exactTypeSupportSubstitution": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.imageTypeSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.Ty.subtypes.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_8": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Substitution.lift.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.dropBound.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_8": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.Substitution.lift.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Ty.subtypes.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.renamePacked.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.dropBound.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.imageTypeSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.Ty.subtypes.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.imageTypeSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Renaming.weaken.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_8": []
+  },
+  "numbered_statement_promotion": false
+}

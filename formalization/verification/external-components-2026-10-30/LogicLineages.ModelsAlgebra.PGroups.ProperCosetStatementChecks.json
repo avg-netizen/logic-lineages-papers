@@ -1,0 +1,49 @@
+{
+  "accepted_utc": "2026-10-30T12:01:51.387051+00:00",
+  "scope": "Literal p-primary/coprime subgroup membership with actual all-ordinal coset maximality. No suitable root or height-preserving extension existence.",
+  "source_correspondence": "Actual proper-coset minimum membership algebra.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ProperCosetStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:00:24.927493+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProperCosetTargets.lean",
+      "sha256": "643f5e6bf45087e3a5feff622c50d5cea664a61cb4d0c6ac3159009af1940f3b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProperCosetStatementChecks.lean",
+      "sha256": "a2b474a8d5e6994afa4d19619d730b8278eb62b7d59a549231c7debc6f526823"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProperCoset.lean",
+      "sha256": "32c9ca23f594b0b82432b5ac0200a0babf2583b30a95083c2a29c45888a35691"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupProperCosetSumMembership"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793361686927528647-7.json",
+      "sha256": "722eb292cb8bf3833a4a1192fa04b1f9b1c4ecfc531c35c39327370b4eeb5597",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "23f44e7ff9afe039da0d29a22b8dc4d4b5f577dba30ad0536529e1e7864a3517",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_proper_coset_sum_membership": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

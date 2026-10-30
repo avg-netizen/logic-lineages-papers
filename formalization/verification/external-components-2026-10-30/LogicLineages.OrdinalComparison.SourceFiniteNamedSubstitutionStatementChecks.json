@@ -1,0 +1,380 @@
+{
+  "accepted_utc": "2026-10-30T12:26:03.849949+00:00",
+  "scope": "Actual first-match finite entries/identity defaults, independent capture-avoiding named output, actual type support union over free occurrences. Common finite context includes image free names. Whole numbered recommendation awaits final acceptance/source review.",
+  "source_correspondence": "Paper06 lem:supportsub literal finite type-preserving named substitutions.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.SourceFiniteNamedSubstitutionStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:22:15.502292+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionDefinitions.lean",
+      "sha256": "7abd27f9314d2a3259a8cd5e22460e966ea5162727fc34a47bbe5d184e8fd14a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionTargets.lean",
+      "sha256": "1cd2548187811794256e78ec150950f54640cf696cc5bd280d1a28eb51ec5172"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionStatementChecks.lean",
+      "sha256": "329dd8301ca4e8480fafb749e0628a24e8aac6c438597fd9a6460f37b3965da1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionProof.lean",
+      "sha256": "c3b5bef6c9ea5c70c5075b1d4e004062de55ca053e7b14e6493cb95e357b9bb9"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.FiniteNamedEntryEquations",
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.NamedImageSupportMembership",
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.ActualNamedSupportSubstitution",
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.FullFiniteNamedSupportSubstitution"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793363123087896026-7.json",
+      "sha256": "f35264d01637bba051eadddbbb3e04f7e919a8d81a0ad209db748afc1e10c346",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "cf58b95e14d1118d5ed92e58eb9309cfb6c508c640a92aafbb5a1f8242bde35c",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFiniteNamedSupportSubstitution": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_finiteNamedEntryEquations": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_namedImageSupportMembership": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualNamedSupportSubstitution": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.namedImageSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.imageTypeSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.Ty.subtypes.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_8": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.finiteEnvironment.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.finiteEnvironment.congr_simp": [],
+    "LogicLineages.OrdinalComparison.Source.Substitution.lift.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.dropBound.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_5": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSubstitution.extendNamedEnvironment.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.resolve.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_8": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.resolve.congr_simp": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.finiteEnvironment.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Substitution.lift.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namePacked.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Ty.subtypes.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.resolve.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_7": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.NamedTerm.var.congr_simp": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.finiteEnvironment.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.namedImageSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.renamePacked.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.dropBound.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_8": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.congr_simp": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.imageTypeSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.Ty.subtypes.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitution.namedImageSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Term.rename.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.imageTypeSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_8": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedDepth.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.erase.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_8": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedWeaken.congr_simp": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedWeakening.namedRename.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedSupport.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.typeSupport.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceNamedSyntax.namedOccurrences.eq_7": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceFreeOccurrences.freeOccurrences.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypeSupport.lambdaDepth.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Renaming.weaken.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.Term.substitute.eq_8": []
+  },
+  "numbered_statement_promotion": true
+}

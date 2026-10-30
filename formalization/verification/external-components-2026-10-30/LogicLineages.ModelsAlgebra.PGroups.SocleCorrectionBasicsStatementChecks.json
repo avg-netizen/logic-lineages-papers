@@ -1,0 +1,54 @@
+{
+  "accepted_utc": "2026-10-30T12:16:35.992721+00:00",
+  "scope": "Literal pStep/pSocle/quotient facts. No broader displayed properness criterion; later criterion must require exact alpha height.",
+  "source_correspondence": "Actual socle correction representative and Ulm quotient equality prerequisites.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SocleCorrectionBasicsStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:14:26.779619+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionBasicsTargets.lean",
+      "sha256": "d2e0ab5b1d785d3c02a55738d5e225970059f603ae95573d48f15353c5811a15"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionBasicsStatementChecks.lean",
+      "sha256": "d971e5ea20a953901181a3cd0d8a55cb0cba20db59b1e4f9a1a763fc798c3e82"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionBasics.lean",
+      "sha256": "c63c52f9ea73f4b8846b963c6cef61f9cad9c929820a2bd294faf0cbe31f8a5a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSocleCorrectionRepresentative",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSocleCorrectionEquality"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793362571441686120-6.json",
+      "sha256": "4648ee171c56e03401a629ccd1c5e301a2fe56fdfc1af153d1ff7c383a43e2f7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "20aa1c4c420366f0c23bdf129eb211dcba3f5797b08c254e9df460bbb298339c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_socle_correction_representative": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_socle_correction_equality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

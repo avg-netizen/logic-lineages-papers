@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceNamedWeakeningProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_concreteFreshName : LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningTargets.ConcreteFreshName :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningProof.concreteFreshName
+
+theorem fixed_namedRenamingIdentity : LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningTargets.NamedRenamingIdentity :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningProof.namedRenamingIdentity
+
+theorem fixed_namedRenamingErasure : LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningTargets.NamedRenamingErasure :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningProof.namedRenamingErasure
+
+theorem fixed_namedRenamingFootprint : LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningTargets.NamedRenamingFootprint :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningProof.namedRenamingFootprint
+
+theorem fixed_actualFreshWeakening : LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningTargets.ActualFreshWeakening :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedWeakeningProof.actualFreshWeakening
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

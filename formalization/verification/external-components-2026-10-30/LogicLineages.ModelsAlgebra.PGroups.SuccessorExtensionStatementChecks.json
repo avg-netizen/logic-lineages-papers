@@ -1,0 +1,60 @@
+{
+  "accepted_utc": "2026-10-30T12:10:45.845146+00:00",
+  "scope": "Generic actual-map membership calibration then existential injective extension with root/map obligations discharged; explicit cutoff and successor branch. No full ACM/limit-height theorem.",
+  "source_correspondence": "Actual successor-height branch of prime-order preserving extension.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SuccessorExtensionStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:08:10.906224+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorExtensionTargets.lean",
+      "sha256": "6905f444e3b18be4ec41761077d88c2f02f312efc7b935d84a426f068fb46f04"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorExtensionStatementChecks.lean",
+      "sha256": "483d51649e7749fc7eb4bc05075c1c72dc5490677508e27ced230b702e8b085d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorExtension.lean",
+      "sha256": "bd91a0887bb63ec7c5d7e8a15bf8389c1f123487d2808ea94d536e6d5f51c752"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSuccessorPreservingExtension"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793362213263195429-8.json",
+      "sha256": "33877dd6f3fd6bda0f12d77e714de7906222af7f69cd5c99ee9a1b1fcd8b0a67",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "b59f1dad6c57b93667a43b4eda2259ed8472ef2bde07d2aa6b61a9703a3df7ba",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_successor_preserving_extension": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.adjunctionHom.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.mappedAdjunctionHom.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.integerMultipleHom.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

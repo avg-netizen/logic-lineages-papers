@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceNamedSyntaxProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_namedResolution : LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxTargets.NamedResolution :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxProof.namedResolution
+
+theorem fixed_namedSupportCalibration : LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxTargets.NamedSupportCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxProof.namedSupportCalibration
+
+theorem fixed_namedOccurrenceTyping : LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxTargets.NamedOccurrenceTyping :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxProof.namedOccurrenceTyping
+
+theorem fixed_namedOccurrenceCalibration : LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxTargets.NamedOccurrenceCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxProof.namedOccurrenceCalibration
+
+theorem fixed_namedDepthCalibration : LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxTargets.NamedDepthCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedSyntaxProof.namedDepthCalibration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

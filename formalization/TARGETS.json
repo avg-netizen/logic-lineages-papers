@@ -1096,9 +1096,20 @@
           "file": "06-godel-t-termination-ordering/paper.tex",
           "line": 381,
           "statement_latex": "[Exact support substitution]\\label{lem:supportsub}\nFor a finite type-preserving substitution $\\gamma$,\n\\[\n \\Ty(s\\gamma)=\\Ty(s)\\cup\\bigcup_{x\\in\\FV(s)}\\Ty(\\gamma(x)),\n\\]\nwhere absent entries mean the variable itself.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFiniteNamedSupportSubstitution",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionTargets.lean",
+            "sha256": "1cd2548187811794256e78ec150950f54640cf696cc5bd280d1a28eb51ec5172",
+            "type": "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.FullFiniteNamedSupportSubstitution"
+          },
+          "verification_receipt": "build-reports/1793363123087896026-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole paper06 lem:supportsub381\u2013390 for actual finite type-preserving named substitutions. Literal finite named contexts with first-match shadowing, actual lookup typing and visible-slot resolution; independent capture-avoiding named AST recursion chooses concrete fresh target binders, masks bound names and weakens replacement images. Actual erasure/substitution commutation, type-support and free-occurrence correspondence separately proved. Finite entries have actual typed named images, first-hit semantics and exact absent-name identity; common finite context can include all source and replacement free names, so no image-FV subset restriction. Actual namedSupport is literal node/result/binder subtype closure, ranked ground nodes contribute only actual argument/result types. Final equation derives support union over actual free occurrences with no correctness/calibration premise. Does not promote comparison FV containment, finiteclosure, stability or marked comparison semantics."
         },
         {
           "id": "06-godel-t-termination-ordering:thm:stable",
@@ -1397,9 +1408,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 262,
           "statement_latex": "[Common-band or root separation]\\label{lem:oneinput}\nFor any finite collection of normal forms in $\\mathcal P_1$, a computable\n$N$ has the following properties for every $x\\ge N$.\nEvery affine open atom input lies in $[x,f(x))$. Every nonlinear atom input\nis a root strictly greater than $f(x)$. Equal peaks of two tags force equal\nindices and equal argument values.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCollectedOneInput",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/CollectedOneInputTargets.lean",
+            "sha256": "8f28ee96a051380113be1800c71e5fbdb0ade91a3a243f6849d58b21aefbc7c8",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualCollectedOneInput"
+          },
+          "verification_receipt": "build-reports/1793363059994230146-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole paper07 lem:oneinput261\u2013286 on finite genuine P1 collected recursive normal forms (Def nf136\u2013155). Literal finite dictionary trees with positive coefficients, actual canonical nonzero-limit heads below epsilon0, recursively valid open arguments; numeric key order is storage only. Uniform primitive-recursive finite-family threshold calibrated to literal structural threshold; all reachable affine inputs lie in shared [x,Phi x), nonlinear inputs are genuine ControlRoot above Phi x; equal actual peaks force equal actual head indices and evaluated argument values. All band/root/threshold/peak obligations derived from valid syntax, actual sparse/cancellation and finite-tail uniqueness; no comparison oracle or local induction hypothesis survives. Does not assert thm:zeros, identity completeness, multivariate separation or arbitrary finite-tail preprocessing."
         },
         {
           "id": "07-collapse-equality-and-one-variable:thm:zeros",

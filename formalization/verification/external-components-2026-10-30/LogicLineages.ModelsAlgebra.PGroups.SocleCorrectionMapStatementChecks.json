@@ -1,0 +1,64 @@
+{
+  "accepted_utc": "2026-10-30T12:22:36.776117+00:00",
+  "scope": "Literal correction class evaluation, actual additive hom and exact kernel. No rank/height oracle or broader non-surjectivity criterion.",
+  "source_correspondence": "Actual representative-independent socle correction map into genuine Ulm quotient.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SocleCorrectionMapStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:18:04.241487+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionDefinitions.lean",
+      "sha256": "5d4989b1e18e85fe5e59446bf4866deabe1168dc08e8dd6b3932af1afe37e934"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionMapTargets.lean",
+      "sha256": "31f736ce2319dc463f65f9543ef73df8d6bafa1f2b2a1a4d0a82232618e667f8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionMapStatementChecks.lean",
+      "sha256": "c8ef9261b280f6a616aaaab87fcb8064dd5674e6519925547da19e1133731929"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleCorrectionMap.lean",
+      "sha256": "f35715d2cf4a2849b7a1fab30af15b0d48657dad52d5d21046839f289916be63"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSocleCorrectionEvaluation",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSocleCorrectionHomKernel"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793362914812593619-7.json",
+      "sha256": "a63e7c273ca20ffe6227671bf4c62c9e90ed95d83b81b7f4fc353f08756312d5",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "88031af5f6f36273bf6d73c641df0dc4647ea5af9265b8c8948895c5280471fb",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_socle_correction_hom_kernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_socle_correction_evaluation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.socleCorrectionClass.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

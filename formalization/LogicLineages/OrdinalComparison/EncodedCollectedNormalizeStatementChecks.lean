@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedCollectedNormalizeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedCollectedOpenCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedOpenCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedOpenCorrect
+
+theorem fixed_encodedCollectedNormalizeComputable : LogicLineages.OrdinalComparison.Targets.EncodedCollectedNormalizeComputable :=
+  LogicLineages.OrdinalComparison.encodedCollectedNormalizeComputable
+
+theorem fixed_encodedCollectedNormalizeCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedNormalizeCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedNormalizeCorrect
+
+theorem fixed_encodedCollectedNormalizeSource : LogicLineages.OrdinalComparison.Targets.EncodedCollectedNormalizeSource :=
+  LogicLineages.OrdinalComparison.encodedCollectedNormalizeSource
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

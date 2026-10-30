@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowArithmeticDerivationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowArithmeticDerivation : LogicLineages.ComputabilityKnowledge.Comparators.GorbowArithmeticDerivation.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowArithmeticDerivationProof.gorbowArithmeticDerivation
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

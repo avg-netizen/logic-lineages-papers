@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceFreeOccurrencesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_freeOccurrenceRenaming : LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.FreeOccurrenceRenaming :=
+  LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesProof.freeOccurrenceRenaming
+
+theorem fixed_occurringVariableTypeSupport : LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.OccurringVariableTypeSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesProof.occurringVariableTypeSupport
+
+theorem fixed_imageTypeSupportMembership : LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.ImageTypeSupportMembership :=
+  LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesProof.imageTypeSupportMembership
+
+theorem fixed_exactTypeSupportSubstitution : LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.ExactTypeSupportSubstitution :=
+  LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesProof.exactTypeSupportSubstitution
+
+theorem fixed_exactFreeOccurrenceSubstitution : LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesTargets.ExactFreeOccurrenceSubstitution :=
+  LogicLineages.OrdinalComparison.Source.SourceFreeOccurrencesProof.exactFreeOccurrenceSubstitution
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

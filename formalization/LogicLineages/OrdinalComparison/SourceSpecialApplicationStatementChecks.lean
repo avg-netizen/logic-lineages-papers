@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceSpecialApplicationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_emptySpecialApplication : LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationTargets.EmptySpecialApplication :=
+  LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationProof.emptySpecialApplication
+
+theorem fixed_originalVariableBlocked : LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationTargets.OriginalVariableBlocked :=
+  LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationProof.originalVariableBlocked
+
+theorem fixed_originalLambdaConsumption : LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationTargets.OriginalLambdaConsumption :=
+  LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationProof.originalLambdaConsumption
+
+theorem fixed_functionalOneShotAppend : LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationTargets.FunctionalOneShotAppend :=
+  LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationProof.functionalOneShotAppend
+
+theorem fixed_originalSpineCounterexample : LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationTargets.OriginalSpineCounterexample :=
+  LogicLineages.OrdinalComparison.Source.SourceSpecialApplicationProof.originalSpineCounterexample
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

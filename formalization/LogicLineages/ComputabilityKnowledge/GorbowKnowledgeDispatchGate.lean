@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowKnowledgeDispatchProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowKnowledgeDispatch : LogicLineages.ComputabilityKnowledge.Comparators.GorbowKnowledgeDispatch.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowKnowledgeDispatchProof.gorbowKnowledgeDispatch
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

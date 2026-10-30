@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowSortedSelfApplicationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowSortedSelfApplication : LogicLineages.ComputabilityKnowledge.Comparators.GorbowSortedSelfApplication.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowSortedSelfApplicationProof.gorbowSortedSelfApplication
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge
