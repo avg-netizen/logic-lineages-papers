@@ -1,0 +1,38 @@
+{
+  "accepted_at_utc": "2026-10-29T22:05:02.919412+00:00",
+  "source_paper": "15-differential-field-constraint-decisions/paper.tex",
+  "source_target": "cor:algorithmone polynomial semantics supplier",
+  "numbered_statement_complete": false,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.DensePolynomialStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_densePolynomialCoverage",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_densePolynomialCoefficients",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_densePolynomialArithmeticCorrect"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793311129852977065-2.json",
+  "receipt_sha256": "af937b6639a8efe808783bbb53a7e3f7172bd3252ca0ccdc26a363fb40889e96",
+  "receipt_note": "All three exact semantic gates passed; later independent effectivity candidate failed on ambiguous Nat.rec motive. No effectivity acceptance in this record.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/DensePolynomialDefinitions.lean": "43ec5d4afe45a68573b2ed75a6934964e2a5786701e8422ae1a5284169fe03d5",
+    "LogicLineages/ModelsAlgebra/Differential/DensePolynomialTargets.lean": "51c36d9567e601055f40822459b5a2098185c3fdf497b9f1055f45a0a5598d2f",
+    "LogicLineages/ModelsAlgebra/Differential/DensePolynomial.lean": "61331b191c8bb6256dd479a228e69774cf8639421763f5e0e82a628197b61e40",
+    "LogicLineages/ModelsAlgebra/Differential/DensePolynomialStatementChecks.lean": "ffa402c54a46a0353ade434b1758ae5c1f72254c8db6aa6188b299ccbe6bd254"
+  },
+  "scope": "Every ordinary rational polynomial is represented; exact coefficients and ordinary addition, negation, scalar multiplication, multiplication, powers, derivative and zero-test semantics. Genuine effectivity is tracked separately.",
+  "effectivity": {
+    "gate": "LogicLineages.ModelsAlgebra.Differential.DensePolynomialEffectivityChecks",
+    "declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_densePolynomialArithmeticPrimitiveRecursive",
+    "receipt": "build-reports/1793311569504242202-2.json",
+    "receipt_sha256": "d314d74462eb7586d18f0087eac7836da08e610ff7d85ec6b23d52a7ad4b3bab",
+    "receipt_note": "Full seven-operation gate passed; later new derivative bridge failed only on eval/aeval alias coercions, repaired in a separate successful receipt.",
+    "files": {
+      "LogicLineages/ModelsAlgebra/Differential/DensePolynomialEffectivity.lean": "7d38908b459e7c62ad3f823ed61907ce083747b3f841d0066d97f2d0be6e3774",
+      "LogicLineages/ModelsAlgebra/Differential/DensePolynomialEffectivityChecks.lean": "f09300aec9d576bc3da191c1fcb04b01a85f5ef133eaf91577d0b468bc614427"
+    }
+  }
+}

@@ -1,5 +1,14 @@
 # Quotient-filtration dependency chain
 
+Current checkpoint, 30 October 2026: the entire two-conclusion quotient lemma
+below was completed by the external continuation, including the actual Ulm
+isomorphism and rank equality (`1793267996776944661-6`). The step statuses below
+describe its earlier construction history. The resumed local lane has also
+completed the original finite-product back-and-forth lemma; see
+`BackForth-ACCEPTED.json` and `status/models-algebra.md`. Infinitary/Scott
+semantics, the cited realization/comparison theorems and full classifications
+remain pending; neither completed lemma assumes them.
+
 The current source is paper 01, `lem:quotient-filtration`, not the final
 Scott-complexity classification. Its first conclusion concerns actual
 ordinal filtration stages; its second concerns actual Ulm quotients and

@@ -1,0 +1,40 @@
+module
+
+public import LogicLineages.ModelsAlgebra.Differential.SpectralConstraintDefinitions
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+public import Mathlib.Data.Nat.Prime.Infinite
+
+@[expose] public section
+
+/-! Direct original prop:cyclotomic targets from paper 15. The polynomial is
+calibrated to the literal source geometric sum. Actual root independence,
+full splitting-field factorization and unbounded differential orders are
+conclusions, not supplier premises. The semantic all-q family below does NOT
+claim an effective decision algorithm: that remaining original consequence
+must still be proved separately from rational coefficient code algorithms. -/
+namespace LogicLineages.ModelsAlgebra.Differential.Targets
+
+universe u
+
+def cyclotomicPrimeSpectralPromise : Prop :=
+  ∀ (ℓ : ℕ), ℓ.Prime →
+    let f := Polynomial.cyclotomic ℓ ℚ
+    f = ∑ k ∈ Finset.range ℓ, (Polynomial.X : Polynomial ℚ) ^ k ∧
+    f.Monic ∧ f.natDegree = ℓ - 1 ∧ 0 < f.natDegree ∧
+    ∃ root : Fin f.natDegree → f.SplittingField,
+      LinearIndependent ℚ root ∧
+      f.map (algebraMap ℚ f.SplittingField) =
+        ∏ i : Fin f.natDegree, (Polynomial.X - Polynomial.C (root i))
+
+def cyclotomicOrdersUnbounded : Prop :=
+  ∀ N : ℕ, ∃ ℓ : ℕ, ℓ.Prime ∧ N < (Polynomial.cyclotomic ℓ ℚ).natDegree
+
+def cyclotomicSemanticFamily : Prop :=
+  ∀ (ℓ : ℕ), ℓ.Prime →
+    let f := Polynomial.cyclotomic ℓ ℚ
+    ∃ R : MvPolynomial (Fin f.natDegree) ℚ,
+      R ≠ 0 ∧ ConstrainedLinear.{u} f R ∧
+      ∀ q : MvPolynomial (Fin f.natDegree) ℚ, q ≠ 0 →
+        (ConstrainedLinear.{u} f q ↔ R ∣ q)
+
+end LogicLineages.ModelsAlgebra.Differential.Targets

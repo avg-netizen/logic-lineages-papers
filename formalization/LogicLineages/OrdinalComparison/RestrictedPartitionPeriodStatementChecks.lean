@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.RestrictedPartitionPeriodProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_restrictedPartitionSufficientPeriod : Targets.RestrictedPartitionSufficientPeriod :=
+  restrictedPartitionSufficientPeriod
+theorem fixed_fullRestrictedPartitionSufficientPeriod : Targets.FullRestrictedPartitionSufficientPeriod :=
+  fullRestrictedPartitionSufficientPeriod
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

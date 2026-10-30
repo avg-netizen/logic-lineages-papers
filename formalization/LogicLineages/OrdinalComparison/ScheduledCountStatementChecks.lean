@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.ScheduledCountProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualScheduledCountRecursion : Targets.ActualScheduledCountRecursion := actualScheduledCountRecursion
+theorem fixed_actualScheduledStateLastStep : Targets.ActualScheduledStateLastStep := actualScheduledStateLastStep
+theorem fixed_actualScheduledFirstFinite : Targets.ActualScheduledFirstFinite := actualScheduledFirstFinite
+theorem fixed_actualScheduledConstantCount : Targets.ActualScheduledConstantCount := actualScheduledConstantCount
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

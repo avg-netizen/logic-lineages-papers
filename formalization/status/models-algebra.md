@@ -1,5 +1,216 @@
 # Model theory and algebra formalization
 
+**PAUSED for the user-requested scheduled cutoff.** All selected lane candidates
+have passed; no lane compiler or author is live. No automatic resume is
+authorized. The final handoff is
+[`models-algebra-handoff-2026-10-29.md`](models-algebra-handoff-2026-10-29.md).
+Do not resume older research or unfinished source programmes automatically.
+
+## Resumed local lane on 29 October 2026
+
+The user explicitly resumed two independent formalizers, a Codex-led Claude
+loop and main after external checkpoint `abb52d9`. This lane owns papers 01
+and 15; main now owns paper 03 and the Forests directory. The older native
+pause records below remain historical.
+
+**Paper 15 `cor:algorithmone` is now fully checked.** All six frozen gates
+passed in `build-reports/1793312355139431800-2.json`: full rational input
+coverage, exact specialization, arbitrary-universe constrainedness semantics,
+search totality, actual partial recursion, and a genuine Mathlib `Computable`
+Boolean realization. `Differential/OrderOneAlgorithm-ACCEPTED.json` pins its
+declarations, source/comparator hashes and supplier ledgers. This is one new
+numbered source statement; the additional generic-jets lemma is described below.
+
+The implementation uses the exact characteristic-zero equivalence
+`radical(r) ∣ q ↔ r ∣ derivative(r) * q`, then enumerates finite Euclidean
+quotient/remainder certificates. It verifies their literal equation and degree
+bound using proved coded arithmetic, derives certificate existence from the
+standard-library Euclidean theorem, and proves the search always terminates.
+It assumes no effective division/gcd oracle. This is an inefficient computable
+implementation of the source decision conclusion, without a runtime bound or
+a claim that the manuscript's particular gcd recipe has been implemented.
+
+All source hypotheses are unchanged. Finite input data represent every rational
+bivariate `p` and univariate `q`; correctness applies to the original irreducible,
+positive-Z-degree/nonzero-q slice, in every universe. The accepted closure uses
+only `propext`, `Classical.choice` and `Quot.sound`, and no private source.
+
+| Supplier | Exact successful receipt |
+| --- | --- |
+| Rational coefficient coverage/arithmetic/primitive recursion | `1793310930184292314-2.json` |
+| Dense polynomial coverage/coefficients/ordinary arithmetic | `1793311129852977065-2.json` |
+| All seven dense polynomial operations genuinely primitive recursive | `1793311569504242202-2.json` |
+| Exact derivative-divisibility and constrainedness bridge | `1793311726532791125-2.json` |
+| Euclidean certificate verification/existence/soundness/totality and actual effectivity | `1793312047613638127-2.json` |
+| Full source order-one decision | `1793312355139431800-2.json` |
+
+These are individual gate receipts. Two earlier batch receipts include a later
+unrelated candidate failure; the accepted ledgers identify gate-local successes
+precisely. Stronger primitive long-division drafts remain explicitly unaccepted
+and superseded in `Differential/drafts/PRIMITIVE-DIVISION-SUPERSEDED.json`.
+All five fixed source/target hash sets were rechecked unchanged at acceptance.
+
+**Paper 15 `lem:genericjets` is also now fully checked, in both conclusions.**
+`GenericJetsCompleteStatementChecks` passed in
+`build-reports/1793315738788197863-2.json`. Its fixed complete statement
+constructs the nonzero rational obstruction R_f as an existential conclusion,
+with exact coefficient image equal to the literal unnormalized L_i product.
+For every ordinary characteristic-zero solution in every universe, it proves
+algebraic independence of its first n jets when R_f is nonzero. It also
+constructs the actual designated-root differential isomorphism of all-jet
+fields between any two such solutions. No obstruction existence, coordinate
+nonvanishing, jet independence, field closure or isomorphism supplier is
+assumed. `Differential/GenericJets-ACCEPTED.json` pins the complete and
+parametric gates, frozen types, source hashes, receipts and dependency ledgers.
+
+The proof constructs an ordinary derivation on the actual algebraic closure
+of each solution field and embeds the actual rational polynomial's splitting
+field there. Algebraic constants yield scalar linearity; actual Lagrange
+coordinates and the invertible polynomial substitution yield jet independence,
+which is then restricted to Q and descended to the original field. The
+original monic equation proves closure of the finite-jet field and its equality
+with the all-jet field; the constructed algebra equivalence commutes with the
+restricted derivations on generators and hence on their entire fields.
+The complete checked transitive closure uses only the standard three axioms.
+
+| Direct spectral supplier | Exact successful receipt |
+| --- | --- |
+| Literal operator calculus, source calibration and raw eigenvalue equations | `1793313066669626519-2` |
+| Normalized Lagrange coordinates and both reconstruction/inverse identities | `1793313762145993835-2` |
+| Actual inverse polynomial substitutions and first-n-jet independence | `1793314136815804617-2` |
+| Finite recurrence field closure/equality and differential isomorphism | `1793314332904390375-2` |
+| Original monic-equation recurrence/isomorphism bridge | `1793314424546110074-2` |
+| Field-extension multivariate divisibility descent | `1793314506757329409-2` |
+| Literal hyperplane restriction kernel and missing-coordinate witness | `1793314608903639777-2` |
+| Actual generic rational-function differential model and generic jets | `1793314800654684020-2` |
+| Literal L_i/R_f evaluation, nonvanishing and product substitution | `1793315022496421350-2` |
+| Actual splitting-field Galois permutation and rational R_f descent | `1793315425780622276-2` |
+| Full generic-jets lemma with constructed rational obstruction | `1793315738788197863-2` |
+
+**Paper 15 `thm:spectral` is now fully checked as well.** Both exact gates
+pass in `build-reports/1793316582215125170-2.json`; the complete gate
+constructs nonzero rational R_f, proves the positive pair and proves the full
+constrainedness equivalence for **every** nonzero rational polynomial in the
+first n jets. The predicate is the original actual existence and universal
+designated-root differential isomorphism in arbitrary Type u. Divisibility
+and spectral coordinates are absent from that predicate's definition.
+`Differential/SpectralConstraint-ACCEPTED.json` pins all declarations, frozen
+semantics/types, source hashes, exact receipt and dependency ledgers.
+
+The positive branch constructs the actual generic solution. The negative
+branch derives a nonzero hyperplane restriction from nondivisibility,
+constructs an actual solution with a missing coordinate that avoids q while
+R_f vanishes, and separates it from the generic solution by a rational jet
+relation preserved under every designated-root differential isomorphism.
+Both witnesses are transported to every universe with checked ULift equations.
+The full closure uses only `propext`, `Classical.choice` and `Quot.sound`.
+The final repairs concerned canonical integer-algebra instances and explicit
+universe annotation; the frozen source semantics and mathematical statements
+are unchanged.
+
+This resumed lane has closed **four** original numbered source statements:
+`cor:algorithmone`, `lem:genericjets`, `thm:spectral` and `prop:cyclotomic`.
+The last proposition's entire source conjunction passed **first try** at
+`1793324961868888828-2`, including one uniformly computable decision in the
+prime index, input base and rational coefficient code. Its coefficient list
+consists explicitly of ones; roots and chosen coefficient suppliers are absent
+from the algorithm input. `CyclotomicComplete-ACCEPTED.json` pins the complete
+original type and all five component declarations. Together with the five
+previously checked statements, all **nine registered numbered statements of
+paper 15** now have supported full gates. Main owns deterministic register
+and aggregate integration. Earlier mathematical/semantic component receipts:
+literal geometric-sum coefficients/degree (`1793317965412163703-2`), source
+Eisenstein irreducibility (`1793318179518405525-2`), full actual independent
+splitting-root promise and unbounded orders (`1793318337041560079-2`), and
+positive pairs/all-q semantic family (`1793318379558173864-2`). The accepted
+ledger distinguishes its earlier components from the later whole proposition
+gate with actual uniform effective decisions. Two broad generic cyclotomic imports
+hit the unchanged RSS guard; the original source's direct Eisenstein proof
+avoided their Complex/Moebius closure. All accepted closures still use only
+the standard three axioms.
+
+The higher-order effective decision and resultant construction are now proved
+through their entire explicit implementation, rather than inferred from the
+semantic equivalence. `Differential/SpectralEffectivity-PLAN.json` records all
+nine completed steps: faithful bounded Kronecker
+substitution, the already checked univariate certificate division, larger-base
+product verification to exclude carry aliasing, and an actual coded Sylvester
+determinant for R_f. The finite-box encoding/decoding and actual calibration
+suppliers are now checked: `KroneckerIndex-ACCEPTED.json` pins five exact
+index/digit inverse and bound gates (`1793318719343114271-2`), and
+`KroneckerPolynomial-ACCEPTED.json` pins eleven actual polynomial gates
+(`1793319700758221562-2`, `1793319898994037883-2`). The latter include
+coefficient recovery, both decoder inverses, a box containing every polynomial,
+the actual quotient coordinate bound and faithful multiplication verification
+at twice the base. Those two receipts contain a later unrelated failed module;
+the ledger explicitly identifies their successful gates and axiom audits.
+These are direct algorithm dependencies, with no new numbered completion.
+The actual quotient-return search is now checked as well: all five fixed
+gates, including genuine total `Computable` certificate return, passed at
+`1793320832860882734-2` (`PolynomialQuotientSearch-ACCEPTED.json`).
+`BoxPolynomialCode-ACCEPTED.json` pins five semantic finite-rational-code
+gates at `1793320635955671425-2` and the uniform `Primrec` gate at
+`1793320832860882734-2`. Their arity, two bases and coefficient inputs are
+all algorithm arguments. Explicit typed staging and a separate recursion
+equality resolved elaboration diagnostics within the unchanged limits.
+**The full multivariate divisibility dependency is now checked.**
+`BoundedPolynomialDivisionStatementChecks` passed all five fixed gates at
+`1793321016406333052-2`: every rational multivariate input pair has common
+finite codes, the literal algorithm decides actual divisibility, its search
+is total on all codes and genuinely partial recursive, and an actual total
+Mathlib `Computable` Boolean realization is constructed. It obtains a
+univariate quotient, decodes it and verifies the product at twice the base.
+The proof handles zero divisors and all negative answers; no division oracle,
+extra source promise or runtime bound is assumed. Computing R_f by the source
+divided difference and resultant is also checked:
+`SpectralResultant-ACCEPTED.json` pins four exact gates, for the literal G_f
+degree and root calibration (`1793321907873290717-2`), and the actual Mathlib
+Sylvester determinant's equality with the raw R_f product and coordinate box
+(`1793322442218133098-2`). No resultant identity or rational coefficient
+construction is a new premise. **The complete original rational spectral
+algorithm now passes as well.** Its literal numerical determinant has checked
+sign, actual determinant equality and uniform `Primrec` proofs; all G_f,
+Sylvester-entry/matrix and obstruction-code constructors are checked, with
+full source image and uniform primitive recursion. The final semantic and
+total `Computable` realization passed **first try** at
+`1793324256478166567-2`. Input coverage, exact degree, all-code totality and
+genuine `Partrec` had passed `1793323886871444668-2`.
+`SpectralAlgorithm-ACCEPTED.json` pins all six fixed declarations, unchanged
+preproof source promise/actual `ConstrainedLinear` semantics and dependency
+ledgers. Roots are never algorithm input. The implementation makes no runtime
+claim or general promise-recognizer claim. The numbered cyclotomic proposition
+is also accepted through its separate complete source gate, with prime spectra,
+unbounded orders, positive pairs and actual uniform effective decisions.
+`BoundedPolynomialDivision-ACCEPTED.json` pins its exact scope and hashes.
+No new numbered completion follows from this dependency alone.
+Paper 01's full Scott
+classification chain remains separately pending. Main owns global register
+and aggregate refresh. No Git operation or older private research restarted.
+
+**Paper 01 `lem:products` is now fully checked.**
+`PGroups/BackForthStatementChecks` passed all four source/foundation gates at
+`1793326598180203036-2`: actual group-term evaluation in products, the source
+zero/positive asymmetric ordinal recursion, and the complete finite-product
+preservation lemma for paired finite tuples. The definitions use exactly the
+ordinary language `{+,-,0}` and actual well-founded ordinal recursion; no
+comparison oracle or preservation law is a premise. The theorem generalizes
+to all additive commutative groups. `PGroups/BackForth-ACCEPTED.json` pins its
+unchanged preproof source comparator, source manuscript, exact declarations
+and standard-three-axiom audit. Only two proof repairs were needed: reducing
+`if True` at rank zero, and the current ordinal induction case name.
+Infinitary formulas/Scott-sentence semantics and the remaining classification
+and realization theorems are still pending. Publication evidence is in the
+private scheduled-stop manifest; no source count depends on a partial gate.
+
+The small follow-up core suppliers also passed **first try**,
+`1793327364931818639-2`: actual additive-hom evaluation/atomic embedding
+preservation, ordinal reflexivity/transitivity, and actual additive-isomorphism
+invariance. `PGroups/BackForthCore-ACCEPTED.json` pins all five fixed targets and
+their unchanged preproof contract. These add no numbered source completion.
+No larger infinitary syntax programme was started during the scheduled
+winddown. The publication snapshot now validates 49 accepted gate modules
+and five new full original statements; main owns integration and publication.
+
 ## Authorized external continuation — 29 October 2026, 16:49 UTC
 
 This section supersedes the **historical** native-lane checkpoint preserved

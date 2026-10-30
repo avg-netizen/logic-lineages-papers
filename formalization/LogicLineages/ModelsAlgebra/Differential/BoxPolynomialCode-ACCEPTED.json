@@ -1,0 +1,42 @@
+{
+  "accepted_at_utc": "2026-10-30T00:39:46.032199+00:00",
+  "source_target": "paper15 higher effective decision finite rational box representation",
+  "numbered_statement_complete": false,
+  "effectivity_complete": true,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.BoxPolynomialCodeStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boxCodeDigitIndex",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boxCodeMonomial",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boxCodeRebase",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boxCodeBound",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boxCodeCoverage",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boxCodeOperationsPrimitiveRecursive"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793320635955671425-2.json",
+  "receipt_sha256": "bda150dabba701b1d62d504e0ffd5cc58a57ba06d241435346823ac108e58105",
+  "gate_local_acceptance": "Original semantic receipt: all5 semantic gates/axiom audit passed FIRST TRY; its later uniform-recursion failure is historical and not accepted. Uniform effectivity is separately accepted only at the later effectivity receipt below.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/BoxPolynomialCodeDefinitions.lean": "17d7d7faaf35fec6f6d96a8bcaaa714a35897b3af5c82cde2f4988bfdfffd2c8",
+    "LogicLineages/ModelsAlgebra/Differential/BoxPolynomialCodeTargets.lean": "7934e6d05ceea13e9d30b23851836a5cb59a6bc306f9c385acb89c2ef2228ba7",
+    "LogicLineages/ModelsAlgebra/Differential/BoxPolynomialCode.lean": "0bcc16888528f9028c5a90430cd12da0909752516955b7f722369a58040a1c81",
+    "LogicLineages/ModelsAlgebra/Differential/BoxPolynomialCodeStatementChecks.lean": "6b9eacb72d7ea89d907d338b376a18e61c6a3469e9721af9d3b8f039afa7e6e9",
+    "LogicLineages/ModelsAlgebra/Differential/BoxPolynomialCodeEffectivity.lean": "c06c4648578a4a1c2e1c6175e0b251c009cbd583d0ecb928e574364d7fcfcca8",
+    "LogicLineages/ModelsAlgebra/Differential/BoxPolynomialCodeEffectivityChecks.lean": "118757203af992e9aaa2c2ad9e112729da2155b8a5414726a749354115af8c09"
+  },
+  "scope": "Actual finite rational multivariate input coverage, literal digit-index/monomial/substitution-rebase calibration and decoded coordinate box, together with genuinely UNIFORM Primrec over all arity/base/finite coefficient-code parameters. Staged typed composition and independent recursion equality proofs discharged original200k elaboration diagnostics without any limit changes. These are finite-code supplier gates; full source effectiveness is certified separately in SpectralAlgorithm-ACCEPTED.json.",
+  "freeze": "BoxPolynomialCode-FREEZE.json",
+  "dependencies": [
+    "KroneckerPolynomial-ACCEPTED.json",
+    "DensePolynomial-ACCEPTED.json"
+  ],
+  "effectivity_gate": "LogicLineages.ModelsAlgebra.Differential.BoxPolynomialCodeEffectivityChecks",
+  "effectivity_receipt": "build-reports/1793320832860882734-2.json",
+  "effectivity_receipt_sha256": "584daec656d14be773ea6151ab342c7edcd124e035e18cfad05e89ed8bb6e951",
+  "effectivity_accepted_at_utc": "2026-10-30T00:41:21.027554+00:00",
+  "effectivity_gate_local_acceptance": "Effectivity exact gate and full axiom audit pass; later independent bounded division rewrite diagnostics not accepted here."
+}

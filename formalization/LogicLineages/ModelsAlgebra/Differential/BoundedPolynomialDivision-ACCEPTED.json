@@ -1,0 +1,35 @@
+{
+  "accepted_at_utc": "2026-10-30T00:44:12.864876+00:00",
+  "source_target": "paper15 rational spectral algorithm full multivariate divisibility dependency",
+  "numbered_statement_complete": false,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.BoundedPolynomialDivisionStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boundedDivisionInputCoverage",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boundedDivisionSearchCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boundedDivisionSearchTotal",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boundedDivisionSearchPartialRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_boundedDivisionComputableRealization"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793321016406333052-2.json",
+  "receipt_sha256": "401f616abeabbe03424d8ee80c9867e5822de59ac42c9e51cf6b7e0b8c177b61",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/BoundedPolynomialDivisionDefinitions.lean": "6052f1c10d42751dec716868ae5e6a3c0cefc39af78049fe82d6b337ca8fe325",
+    "LogicLineages/ModelsAlgebra/Differential/BoundedPolynomialDivisionTargets.lean": "a542cf5d87d304c267b2f8616e4f7a2219332be8452d7e1e6703b2280dbb2c28",
+    "LogicLineages/ModelsAlgebra/Differential/BoundedPolynomialDivision.lean": "5dc26558dec21abe8e1b8ab967cfcd1f8e477353fa2cb30012da742a3e1ceff0",
+    "LogicLineages/ModelsAlgebra/Differential/BoundedPolynomialDivisionEffectivity.lean": "cc03ecef244300edb6f4279aa76ce6cd6691b9ef7361f620cd92cac789c07c51",
+    "LogicLineages/ModelsAlgebra/Differential/BoundedPolynomialDivisionComplete.lean": "98f8a5a639c29fc3c2316af351d58bc357950cf5aca9bc4e2be5806583c94ca6",
+    "LogicLineages/ModelsAlgebra/Differential/BoundedPolynomialDivisionStatementChecks.lean": "3658488dd4d0fcd34405a4692115029db1c6f9db3107667ea55f1f61612a2105"
+  },
+  "scope": "Every rational multivariate p,q has common finite box input codes; literal univariate quotient search, bounded decoding and twice-base multiplication verification decide actual p|q for every valid input box. Search is all-code total and Partrec; actual total Mathlib Computable Bool realization constructed. Zero/nondivisible inputs included, no divisibility/quotient oracle or runtime bound. The full spectral algorithm, including actual rational obstruction computation, is certified separately in SpectralAlgorithm-ACCEPTED.json.",
+  "freeze": "BoundedPolynomialDivision-FREEZE.json",
+  "dependencies": [
+    "PolynomialQuotientSearch-ACCEPTED.json",
+    "BoxPolynomialCode-ACCEPTED.json",
+    "KroneckerPolynomial-ACCEPTED.json"
+  ]
+}

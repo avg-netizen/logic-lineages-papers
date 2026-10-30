@@ -1,0 +1,28 @@
+{
+  "accepted_at_utc": "2026-10-29T21:56:29.811758+00:00",
+  "source_paper": "15-differential-field-constraint-decisions/paper.tex",
+  "source_target": "cor:algorithmone supplier only",
+  "numbered_statement_complete": false,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.RationalCodeStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodeCoverage",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodeCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodePrimitiveRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodeRoundtrip"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793310930184292314-2.json",
+  "receipt_sha256": "54a044e3112c49da64b2dcc1e1392e5b1b1066395394e2d1f11b9e4e0ebdd8c4",
+  "receipt_note": "These four gates passed; later batch module DensePolynomialDefinitions failed only on missing noncomputable annotation. This is gate-local success, not whole-batch success.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/RationalCodeDefinitions.lean": "d955451c0b3c2cb2c6947b7fc935f3212d348591ec3e3d943b23d90c93c60780",
+    "LogicLineages/ModelsAlgebra/Differential/RationalCodeTargets.lean": "c3b5d4cb3dd99d0d9c3bb98bfdbe0bdcfac573530606cdeca9fcc49109467773",
+    "LogicLineages/ModelsAlgebra/Differential/RationalCode.lean": "64ae7a32e3f6066e82b52b49f13fb9beacd4771eaad583dadd159940764a80aa",
+    "LogicLineages/ModelsAlgebra/Differential/RationalCodeStatementChecks.lean": "d6bc60148728798872c191b6958787495661bf1eabc2d8dec5bfb601f77c028b"
+  },
+  "scope": "All rationals covered by explicit natural-triple coefficient data; exact field operations and zero/equality tests; genuine primitive-recursive operations and standard encode/decode roundtrip. No polynomial division or full first-order decision claim."
+}

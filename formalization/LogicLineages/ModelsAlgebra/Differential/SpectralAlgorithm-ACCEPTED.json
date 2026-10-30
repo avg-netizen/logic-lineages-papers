@@ -1,0 +1,50 @@
+{
+  "accepted_at_utc": "2026-10-30T01:39:22.972880+00:00",
+  "source_target": "paper15 complete original rational algorithm on the spectral promise",
+  "numbered_statement_complete": false,
+  "source_algorithm_complete": true,
+  "gates": [
+    "LogicLineages.ModelsAlgebra.Differential.SpectralAlgorithmInputStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.SpectralAlgorithmEffectivityChecks",
+    "LogicLineages.ModelsAlgebra.Differential.SpectralAlgorithmStatementChecks"
+  ],
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralAlgorithmInputCoverage",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralAlgorithmOrder",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralAlgorithmSearchTotal",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralAlgorithmSearchPartialRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralAlgorithmSearchCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralAlgorithmComputableRealization"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipts": {
+    "build-reports/1793323886871444668-2.json": "147cf8390ea37aad47541c027308f6c4cb75dd8d8512f7c84be2eef1fab18a44",
+    "build-reports/1793324256478166567-2.json": "1989cef6c515cedd3a900156d268ef807801aa1c3e837630f06abb21f9ace556"
+  },
+  "source_semantic_and_computable_proof_passed_first_try": true,
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmDefinitions.lean": "481b498e081e30ace7fcf887c0077303395a58d1aea9b86aa1ac2b0a15359512",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmTargets.lean": "fc12733026c3566c80c06e01678f302ec84c525ea11048a6be315bd9cb9e78ab",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmInputs.lean": "911cc97cbd6ba821e79cb89c7dac1f36f779bace17a08116a2772dcd4ee4d1da",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmInputStatementChecks.lean": "bc081e47e8645d5cb826f34b3de3ee75919e56deaf7a52cee34dc075c39a82e5",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmEffectivity.lean": "a9006e3a4ec8ebc06c3184fa3bfbf827ff5f3f75d609609f24a85cbd343c1cf6",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmEffectivityChecks.lean": "72504524c2f01c970117b42a5b8a3a54623ed1ddca521e0333f1117b7ac273cb",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithm.lean": "4e6f80f2a0e8a74191cce91ca05b1430f96d1fe4732881d71e0eb3a09a2a7bc7",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmComplete.lean": "5ed5f2e651b9953f48a98e0104acb7a3954500a8718e9fb8f08e9687c74f680c",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralAlgorithmStatementChecks.lean": "2bc80ab16e09ec336d5b685ceb8329e04503c3b21b53be1e8de4fdccacf4d729"
+  },
+  "freeze": "SpectralAlgorithm-FREEZE.json",
+  "scope": "Complete rational-code input coverage, actual computed degree, all-code totality and genuine Partrec; an actual total Mathlib Computable Bool realization decides literal arbitrary-universe ConstrainedLinear on exactly the original monic/positive-order/full rationally-independent splitting-spectrum/nonzero-lower-q promise. Only finite rational f/q codes and q base are program inputs. R_f is actually computed with proved finite Sylvester determinant; roots are only existential in mathematical promise. No effective root/R_f oracle or promise recognizer, private dependency, extra axiom or runtime claim. The complete numbered cyclotomic proposition is separately certified in CyclotomicComplete-ACCEPTED.json.",
+  "dependencies": [
+    "SpectralResultantCode-ACCEPTED.json",
+    "SpectralResultant-ACCEPTED.json",
+    "BoundedPolynomialDivision-ACCEPTED.json",
+    "SpectralConstraint-ACCEPTED.json",
+    "BoxPolynomialCode-ACCEPTED.json",
+    "PolynomialCertificateSearch-ACCEPTED.json"
+  ]
+}

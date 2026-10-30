@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.ControlSegmentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualControlledCountTraceDecomposition : Targets.ActualControlledCountTraceDecomposition :=
+  actualControlledCountTraceDecomposition
+theorem fixed_actualRetainedPrefixCountDecomposition : Targets.ActualRetainedPrefixCountDecomposition :=
+  actualRetainedPrefixCountDecomposition
+theorem fixed_actualConstantBudgetFiniteTailCount : Targets.ActualConstantBudgetFiniteTailCount :=
+  actualConstantBudgetFiniteTailCount
+theorem fixed_actualConstantBudgetPrefixCountDecomposition : Targets.ActualConstantBudgetPrefixCountDecomposition :=
+  actualConstantBudgetPrefixCountDecomposition
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

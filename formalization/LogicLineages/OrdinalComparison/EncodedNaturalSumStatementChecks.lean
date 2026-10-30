@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.EncodedNaturalSumProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedNaturalSumCorrect : Targets.EncodedNaturalSumCorrect := encodedNaturalSumCorrect
+theorem fixed_encodedNaturalSumPrimitiveRecursive : Targets.EncodedNaturalSumPrimitiveRecursive :=
+  encodedNaturalSumPrimitiveRecursive
+theorem fixed_encodedNaturalSumSourceCorrect : Targets.EncodedNaturalSumSourceCorrect := encodedNaturalSumSourceCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

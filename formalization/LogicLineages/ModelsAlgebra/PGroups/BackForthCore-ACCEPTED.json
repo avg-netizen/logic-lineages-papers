@@ -1,0 +1,33 @@
+{
+  "accepted_at_utc": "2026-10-30T02:33:36.788385+00:00",
+  "source_target": "paper01 elementary actual back-and-forth comparison suppliers",
+  "numbered_statement_complete": false,
+  "gate": "LogicLineages.ModelsAlgebra.PGroups.BackForthCoreStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthCoreStatementChecks.fixed_groupTermHomEvaluation",
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthCoreStatementChecks.fixed_groupEmbeddingAtomicAgreement",
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthCoreStatementChecks.fixed_groupBackForthReflexive",
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthCoreStatementChecks.fixed_groupBackForthTransitive",
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthCoreStatementChecks.fixed_groupBackForthIsomorphism"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793327364931818639-2.json",
+  "receipt_sha256": "c613451a91bba3a48c212c4aebd1721049c4ac9764fc08b12fa670b9b47c70bc",
+  "first_actual_proof_check_passed_unchanged": true,
+  "source_sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902",
+  "files": {
+    "LogicLineages/ModelsAlgebra/PGroups/BackForthDefinitions.lean": "2ec84e50e27d9eba581f6c3adf6f2e8bd08b1c29372e30e1155ba50430b1dc73",
+    "LogicLineages/ModelsAlgebra/PGroups/BackForthCoreTargets.lean": "8ee9fe56b2593e8eeff3b265d927b300a765cb4c20b3d432f133c18174a300e5",
+    "LogicLineages/ModelsAlgebra/PGroups/BackForthCore.lean": "173c597980d61a500eac7783246d9501f50d884fdb11febfe899a8e52c3c0eaa",
+    "LogicLineages/ModelsAlgebra/PGroups/BackForthCoreStatementChecks.lean": "94d07cbda5ad317fc51a19719c95d2baa8b68e6c87df1f0049dc8b0e0be9a777"
+  },
+  "freeze": "BackForthCore-FREEZE.json",
+  "scope": "Actual additive-hom evaluation of literal ordinary group terms, atomic preservation by actual injective additive homomorphisms, ordinal reflexivity/transitivity and actual additive-group isomorphism invariance of the already frozen source asymmetric relation. Hom/atomic gates use only propext; comparison closures use the standard three axioms. These are direct suppliers; no infinitary/Scott semantics or additional numbered original statement is claimed.",
+  "dependencies": [
+    "BackForth-ACCEPTED.json"
+  ]
+}

@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.ConstantCutFactsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualFiniteMonomialFacts : Targets.ActualFiniteMonomialFacts := actualFiniteMonomialFacts
+theorem fixed_polynomialRawNoteLeadingDecomposition : Targets.PolynomialRawNoteLeadingDecomposition :=
+  polynomialRawNoteLeadingDecomposition
+theorem fixed_restrictedPartitionPeriodDivisibility : Targets.RestrictedPartitionPeriodDivisibility :=
+  restrictedPartitionPeriodDivisibility
+theorem fixed_restrictedPartitionPeriodMultiple : Targets.RestrictedPartitionPeriodMultiple :=
+  restrictedPartitionPeriodMultiple
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

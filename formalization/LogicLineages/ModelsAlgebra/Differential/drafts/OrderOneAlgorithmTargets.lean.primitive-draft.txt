@@ -1,0 +1,35 @@
+module
+
+public import LogicLineages.ModelsAlgebra.Differential.OrderOneAlgorithmDefinitions
+public import LogicLineages.ModelsAlgebra.Differential.ConstrainedDefinitions
+
+@[expose] public section
+
+/-! Full source cor:algorithmone comparison on faithful finite rational input
+data. Genuine Primrec plus semantic correctness is required. An arbitrary
+classical Decidable instance or an assumed division oracle does not meet it.
+-/
+namespace LogicLineages.ModelsAlgebra.Differential.Targets
+
+universe u
+
+def orderOneAlgorithmInputCoverage : Prop :=
+  ∀ (p : BivariatePolynomial) (q : Polynomial ℚ),
+    ∃ (pc : OrderOneAlgorithm.Input) (qc : DensePolynomial.Code),
+      OrderOneAlgorithm.inputValue pc = p ∧ DensePolynomial.value qc = q
+
+def orderOneAlgorithmSpecialization : Prop :=
+  ∀ pc, (OrderOneAlgorithm.inputValue pc).eval 0 =
+    DensePolynomial.value (OrderOneAlgorithm.specialization pc)
+
+def orderOneAlgorithmCorrect : Prop :=
+  ∀ (pc : OrderOneAlgorithm.Input) (qc : DensePolynomial.Code),
+    Irreducible (OrderOneAlgorithm.inputValue pc) →
+    0 < (OrderOneAlgorithm.inputValue pc).natDegree →
+    DensePolynomial.value qc ≠ 0 →
+    (OrderOneAlgorithm.decide pc qc = true ↔
+      ConstrainedOrderOne.{u} (OrderOneAlgorithm.inputValue pc) (DensePolynomial.value qc))
+
+def orderOneAlgorithmPrimitiveRecursive : Prop := Primrec₂ OrderOneAlgorithm.decide
+
+end LogicLineages.ModelsAlgebra.Differential.Targets

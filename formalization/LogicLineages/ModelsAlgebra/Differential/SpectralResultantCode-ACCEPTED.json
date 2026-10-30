@@ -1,0 +1,57 @@
+{
+  "accepted_at_utc": "2026-10-30T01:29:56.565382+00:00",
+  "source_target": "paper15 actual rational G_f/Sylvester/resultant input-builder implementation",
+  "numbered_statement_complete": false,
+  "semantic_correctness_complete": true,
+  "effectivity_complete": true,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.SpectralResultantCodeEffectivityChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralResultantCodePrimitiveRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralOuterCodeArithmetic",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGeneratingCodeCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralSylvesterCodeCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralObstructionCodeCorrect"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793323710882889343-2.json",
+  "receipt_sha256": "219a4ed79f848c5f3a528cdd401a5312c57adea3e550b39323c8b6f9fbe1b44a",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantCodeDefinitions.lean": "d221daa514a9289b4839432b37990ab3c8c394eb4508a01c321780e0f0c24256",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantCodeTargets.lean": "8a9634efc42656f09a54bf0bc81e48d6cf62f4d6deb6c1120f303622005bea12",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantCodeEffectivity.lean": "bb4513633a4549fe3abefd42f395ea64db00b84d39462ab2edbf472321682150",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantCodeEffectivityChecks.lean": "fc2702ce3bd70bf14b774ba910157c1d13d14be12292b7b51bdbcded5e68e471",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralOuterCode.lean": "25a6bfcc4ff8614992ce451841e03ae625d0748251438e0817cd60e6564c5914",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralOuterCodeStatementChecks.lean": "48190261f60f3f2918b2f57483b3db38531e0da0f04f13f1d9c05bd2703e4173",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralGeneratingCode.lean": "99f60571755ab497fb5918da2ac4bc08170440b6a323037a2e5335f4bb791037",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralGeneratingCodeStatementChecks.lean": "bea898fa95abd1f1418cf4ab80ea12b9a5579304756a29210e94399403d1dee0",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralSylvesterCode.lean": "66a95ffd23692e0df7e4e7b89963451d75633608986b658e291b3e4b47d8e1f1",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralSylvesterCodeStatementChecks.lean": "4273f2fbf02abca0572e957249970b55f60d00820afb3ce784319f96a0b41db0",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantCode.lean": "6cbead8504289e2bfa4e7fb2344dd259ef3dae2c1a78254d18aa3280ff0aada0",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralObstructionCodeStatementChecks.lean": "f3a9600bd9df7cbf22f6f1ebd1649b8520a716f0e070bff10e61eff1436c7a60"
+  },
+  "freeze": "SpectralResultantCode-FREEZE.json",
+  "scope": "All source outer rational polynomial arithmetic, literal G_f code, actual Sylvester entries and row-major flattened matrix, and final bounded-Kronecker image of actual rational resultant are proved correct. All five actual code constructors are genuinely uniformly primitive recursive in n/B/coefficient codes. No roots, determinant/correctness oracle, private dependency or extra mathematical promise. The implementation is finite but no runtime bound is claimed.",
+  "gate_local_acceptance": "Uniform-effectivity fixed gate and complete audit passed FIRST TRY; later independent source-code semantic rewrite diagnostics not accepted.",
+  "dependencies": [
+    "NumericDeterminant-ACCEPTED.json",
+    "BoxPolynomialCode-ACCEPTED.json",
+    "DensePolynomial-ACCEPTED.json",
+    "SpectralResultant-ACCEPTED.json"
+  ],
+  "math_accepted_at_utc": "2026-10-30T01:39:22.971427+00:00",
+  "math_gates": [
+    "LogicLineages.ModelsAlgebra.Differential.SpectralOuterCodeStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.SpectralGeneratingCodeStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.SpectralSylvesterCodeStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.SpectralObstructionCodeStatementChecks"
+  ],
+  "math_receipts": {
+    "build-reports/1793322942971458350-2.json": "e0191be512e010675bb50dbc950a7f379bbf282d67641608826c97eda217b923",
+    "build-reports/1793323886871444668-2.json": "147cf8390ea37aad47541c027308f6c4cb75dd8d8512f7c84be2eef1fab18a44",
+    "build-reports/1793324256478166567-2.json": "1989cef6c515cedd3a900156d268ef807801aa1c3e837630f06abb21f9ace556"
+  }
+}

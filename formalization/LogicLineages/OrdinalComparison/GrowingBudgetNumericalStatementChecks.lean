@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.GrowingBudgetNumericalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualNumericalCongruentBudgetTransfer : Targets.ActualNumericalCongruentBudgetTransfer :=
+  actualNumericalCongruentBudgetTransfer
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.EncodedMaximumProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedMaximumPredecessorCorrect : Targets.EncodedMaximumPredecessorCorrect :=
+  encodedMaximumPredecessorCorrect
+theorem fixed_encodedMaximumPredecessorActualCorrect : Targets.EncodedMaximumPredecessorActualCorrect :=
+  encodedMaximumPredecessorActualCorrect
+theorem fixed_encodedMaximumPredecessorPrimitiveRecursive : Targets.EncodedMaximumPredecessorPrimitiveRecursive :=
+  encodedMaximumPredecessorPrimitiveRecursive
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

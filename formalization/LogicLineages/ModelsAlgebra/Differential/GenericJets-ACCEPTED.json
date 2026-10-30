@@ -1,0 +1,38 @@
+{
+  "accepted_at_utc": "2026-10-29T23:16:06.590205+00:00",
+  "source_target": "15-differential-field-constraint-decisions:lem:genericjets",
+  "numbered_statement_complete": true,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.GenericJetsCompleteStatementChecks",
+  "companion_gate": "LogicLineages.ModelsAlgebra.Differential.GenericJetsStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGenericJetsComplete",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGenericJets"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793315738788197863-2.json",
+  "receipt_sha256": "200e0d60a8c9fc829c94ef26ca7a572511e637df84118568c7bb53965afa5d6f",
+  "parametric_gate_receipt": "build-reports/1793315672889429531-2.json",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/GenericJetsTargets.lean": "a1521c401c7c36d4124159f263ae3693872d5d59a28369fa08f833a8300a92c3",
+    "LogicLineages/ModelsAlgebra/Differential/GenericJets.lean": "6c93c19df4ccb258986ef876d2c45a13fb5964198e3737b74de1791e73282ce2",
+    "LogicLineages/ModelsAlgebra/Differential/GenericJetsStatementChecks.lean": "178ca97cbdcdc940ebe6c379af6de5b60f87b666f3d18e748e528b4767430f30",
+    "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteTargets.lean": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+    "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteStatementChecks.lean": "c23b79dd09c414c4798f80d9e7d4f3355701c03070f982769ea139ea46a72e90"
+  },
+  "source_sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813",
+  "suppliers": [
+    "SpectralDescent-ACCEPTED.json",
+    "SpectralProduct-ACCEPTED.json",
+    "SpectralModel-ACCEPTED.json",
+    "SpectralChange-ACCEPTED.json",
+    "LagrangeCoordinate-ACCEPTED.json",
+    "LinearOperator-ACCEPTED.json",
+    "FiniteJet-ACCEPTED.json",
+    "MonicRecurrence-ACCEPTED.json"
+  ],
+  "scope": "FULL original generic-jets lemma, BOTH conclusions in arbitrary ordinary characteristic-zero differential fields/universes. The complete gate constructs the nonzero rational R_f as an existential conclusion calibrated to literal L_i product; it assumes no rational obstruction existence, coordinate nonvanishing, independence, field closure or designated-root isomorphism supplier. Actual algebraic-closure derivation extension, actual splitting-field embedding, algebraic constants/linearity, independence transport/descent and actual all-jet differential isomorphism are included in the transitive checked closure. The full spectral equivalence and effective algorithm are certified separately by SpectralConstraint-ACCEPTED.json and SpectralAlgorithm-ACCEPTED.json."
+}

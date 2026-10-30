@@ -1,7 +1,11 @@
+Local workers paused at the user-requested 10 p.m. America/Chicago cutoff (30 October 2026 03:00 UTC). No automatic local resume. Separately authorized external work and fresh-clone builds remain possible.
+
 # Formalizing the public papers
 
-Local workers are **paused by the user on 29 October 2026** for an external-agent
-takeover. Start with [the external handoff](EXTERNAL-HANDOFF.md). This is an
+Local workers were **explicitly resumed by the user on 29 October 2026** after
+the external continuation. Two independent Codex lanes, a Codex-led Claude loop
+and main continue from [the external checkpoint](EXTERNAL-CONTINUATION.md).
+Older pause records are historical. This is an
 incomplete formalization programme for all fifteen papers in this repository.
 The [target register](TARGETS.json) records 178 numbered
 theorem/lemma/proposition/corollary statements from the full TeX input closure,
@@ -47,9 +51,9 @@ legitimate bibliographic dependencies in the prose paper.
 | Stream | Papers | Owned modules |
 |---|---|---|
 | Ordinal/comparison lane | 04–10 | `LogicLineages/OrdinalComparison/` |
-| Model theory and algebra lane | 01, 03, 15 | `LogicLineages/ModelsAlgebra/` |
+| Model theory and algebra lane | 01, 15 | `LogicLineages/ModelsAlgebra/PGroups/`, `Differential/` |
 | Codex-led Claude loop | 02, 12, 14 | `LogicLineages/ComputabilityKnowledge/` |
-| Main integration | 11, 13, package and shared gates | `LogicLineages/Ultrafilters/`, `LogicLineages/RL/` |
+| Main research and integration | 03; completed 11/13; package and shared gates | `LogicLineages/ModelsAlgebra/Forests/`, `Ultrafilters/`, `RL/` |
 
 The [status directory](status/) contains each stream's concrete proof-to-paper
 map. This programme does not resume unrelated mathematical research.

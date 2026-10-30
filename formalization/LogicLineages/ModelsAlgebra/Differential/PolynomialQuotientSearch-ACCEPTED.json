@@ -1,0 +1,33 @@
+{
+  "accepted_at_utc": "2026-10-30T00:41:21.026776+00:00",
+  "source_target": "paper15 effective spectral algorithm actual rational polynomial quotient supplier",
+  "numbered_statement_complete": false,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.PolynomialQuotientSearchStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_polynomialQuotientAtIndexPrimitiveRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_polynomialQuotientSearchCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_polynomialQuotientSearchTotal",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_polynomialQuotientSearchPartialRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_polynomialQuotientComputableRealization"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793320832860882734-2.json",
+  "receipt_sha256": "584daec656d14be773ea6151ab342c7edcd124e035e18cfad05e89ed8bb6e951",
+  "gate_local_acceptance": "All5 fixed gates and axiom audit pass; later independent bounded multivariate proof had explicit-rewrite diagnostics and is not accepted here.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialQuotientSearchDefinitions.lean": "a8929167dfe0eac8f2a7071280c338b274d93d5158a4db6d02275f25ec5d313e",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialQuotientSearchTargets.lean": "6c2dc9feffff641d5e9aa3ea915a2f53e5f2195e9878c81fb9310f85e9f6bc08",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialQuotientSearch.lean": "aab4d750b60fe33b445c143966312ad3ebb373e2533651b7ccb792c0bf04ec01",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialQuotientSearchStatementChecks.lean": "fdabe9706c3e6be850bb53223f806892a0bb5e0606b752b116391181edb3226d"
+  },
+  "scope": "Literal finite Euclidean certificate returns both quotient and remainder; exact equation, proper remainder bound for nonzero denominators, remainder-zero iff divisibility; all-code total search, actual Partrec and total Computable certificate realization. Zero denominator explicit. No division oracle/runtime bound.",
+  "freeze": "PolynomialQuotientSearch-FREEZE.json",
+  "dependencies": [
+    "PolynomialCertificateSearch-ACCEPTED.json",
+    "DensePolynomial-ACCEPTED.json"
+  ]
+}

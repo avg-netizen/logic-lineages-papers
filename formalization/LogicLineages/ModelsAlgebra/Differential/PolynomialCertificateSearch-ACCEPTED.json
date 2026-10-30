@@ -1,0 +1,39 @@
+{
+  "accepted_at_utc": "2026-10-29T22:21:12.211988+00:00",
+  "source_paper": "15-differential-field-constraint-decisions/paper.tex",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_target": "cor:algorithmone suppliers",
+  "numbered_statement_complete": false,
+  "gates": [
+    "LogicLineages.ModelsAlgebra.Differential.PolynomialCertificateSearchStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.PolynomialCertificateSearchEffectivityChecks"
+  ],
+  "declarations": [
+    "fixed_polynomialCodeDegreeCorrect",
+    "fixed_polynomialCertificateVerifierCorrect",
+    "fixed_polynomialCertificateExists",
+    "fixed_polynomialSearchAnswerCorrect",
+    "fixed_polynomialSearchTotal",
+    "fixed_polynomialSearchFinitePrimitiveRecursive",
+    "fixed_polynomialSearchPartialRecursive"
+  ],
+  "receipts": [
+    {
+      "file": "build-reports/1793312047613638127-2.json",
+      "sha256": "2dcb512cc825641d6e7260a548d0a2503cc6423fa1f16cb3765c26ed0fec8a0b"
+    }
+  ],
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialCertificateSearchDefinitions.lean": "ab3a3db189b107453dafc87384f7b487bce1ac33e8fd4bbb6617128d33f4f2a4",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialCertificateSearchTargets.lean": "65b96d1a2ef843cb293a57fd64ae90dcc4255ac41a5e9aa42b161e849488042c",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialCertificateSearch.lean": "2c0fe8cf5953db73486f4e311457a816385f222604bae95362a7f12fc58cd892",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialCertificateSearchEffectivity.lean": "be0e1f3bbd176409a87f537bca565e2caa1195ccb0e0925e8241f971d196f81d",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialCertificateSearchStatementChecks.lean": "518716cc6d584efe6e9cbddab513d05d9e47309fddb0484e18436ad06679976d",
+    "LogicLineages/ModelsAlgebra/Differential/PolynomialCertificateSearchEffectivityChecks.lean": "e9e2300db2518a93f420125560e657bdbc77f1cbb6536101fe8205b7c399a22d"
+  },
+  "scope": "Exact ordinary-polynomial Euclidean certificates and standard-coded exhaustive enumeration, with actual totality, sound Boolean answers, primitive-recursive finite verification/indexing, and actual partial-recursive search. Algebraic existence is proved from standard-library Euclidean division plus proved all-Q-polynomial code coverage. No effective-division oracle."
+}

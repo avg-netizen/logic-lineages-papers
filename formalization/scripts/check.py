@@ -7,6 +7,7 @@ same-pinned development cache. That cache path is not a source dependency.
 """
 from __future__ import annotations
 import argparse
+from datetime import datetime, timezone
 import fcntl
 import hashlib
 import json
@@ -24,6 +25,48 @@ ROOT = Path(__file__).resolve().parents[1]
 CALCULATOR = ROOT.parent / "04-pure-r1-calculator/lean"
 BUILD = ROOT / ".lake/build/lib/lean"
 IMPORT = re.compile(r"^\s*(?:(?:public|private|meta)\s+)*import\s+(.+)$", re.M)
+
+
+def local_stop_reason(policy_path: Path | None = None, now: datetime | None = None) -> str | None:
+    """Enforce this host's user-requested cutoff, without constraining clones.
+
+    The optional control file is git-ignored. A malformed existing control
+    fails closed; absence means the public package has no local time limit.
+    """
+    policy_path = ROOT / '.local-run-policy.json' if policy_path is None else policy_path
+    try:
+        policy = json.loads(policy_path.read_text())
+    except FileNotFoundError:
+        return None
+    except (OSError, ValueError) as error:
+        return f'Local stop policy unreadable: {error}'
+    if not isinstance(policy, dict):
+        return 'Local stop policy is not an object'
+    if policy.get('paused') is True:
+        return 'Local formalization is paused by user instruction'
+    cutoff = policy.get('stop_at_utc')
+    if cutoff is None:
+        return None
+    try:
+        deadline = datetime.fromisoformat(cutoff.replace('Z', '+00:00'))
+        if deadline.tzinfo is None:
+            raise ValueError('deadline requires a timezone')
+    except (AttributeError, TypeError, ValueError) as error:
+        return f'Local stop deadline is malformed: {error}'
+    if (datetime.now(timezone.utc) if now is None else now) >= deadline:
+        return f'User-requested research cutoff reached ({deadline.isoformat()})'
+    return None
+
+
+def save_stop_receipt(requested: list[str], reason: str, rows: list[dict] | None = None) -> int:
+    reports = ROOT / 'build-reports'
+    reports.mkdir(exist_ok=True)
+    path = reports / (str(time.time_ns()) + '-' + str(os.getpid()) + '.json')
+    path.write_text(json.dumps({'requested': requested, 'outcome': 'scheduled-stop',
+                               'reason': reason, 'modules': rows or []}, indent=2) + '\n')
+    print('SCHEDULED_STOP: ' + reason, flush=True)
+    print('BUILD_RECEIPT ' + str(path.relative_to(ROOT)), flush=True)
+    return 78
 
 def source_for(module: str) -> Path | None:
     if module == "R1Calculator" or module.startswith("R1Calculator."):
@@ -156,6 +199,8 @@ def main() -> int:
     parser.add_argument("--fresh", action="store_true",
                         help="compile every local dependency, including calculator source")
     args = parser.parse_args()
+    if reason := local_stop_reason():
+        return save_stop_receipt(args.modules, reason)
     compiler = shutil.which("lean")
     if compiler is None:
         parser.error("Install the pinned Lean toolchain before compiling.")
@@ -255,6 +300,8 @@ def main() -> int:
             resource.setrlimit(resource.RLIMIT_AS,(16*1024**3,16*1024**3))
             resource.setrlimit(resource.RLIMIT_CPU,(args.cpu_seconds,args.cpu_seconds+2))
         for module in order:
+            if reason := local_stop_reason():
+                return save_stop_receipt(requested, reason, rows)
             path=source_for(module)
             target=BUILD/(module.replace('.', '/')+'.olean')
             borrowed=CALCULATOR/'.lake/build/lib/lean'/(module.replace('.','/')+'.olean')
@@ -295,6 +342,9 @@ def main() -> int:
                 p=subprocess.Popen(command,cwd=ROOT,env=env,stdout=stream,stderr=subprocess.STDOUT,preexec_fn=limits,start_new_session=True)
                 reason=None
                 while p.poll() is None:
+                    if deadline_reason := local_stop_reason():
+                        reason = 'scheduled-stop: ' + deadline_reason
+                        break
                     try:
                         sampled_rss = sample_resident_kib(p)
                         if sampled_rss is None:
@@ -328,6 +378,8 @@ def main() -> int:
             row={'module':module,'returncode':status,'seconds':round(time.monotonic()-started,3),'observed_cpu_seconds':cpu_seconds,'last_wait_channel':wait_channel,'stopped_threads':stopped_threads,'peak_process_tree_rss_kib':peak_rss,'memory_observation_failure':memory_observation_failure,'discarded_failed_outputs':[str(p.relative_to(ROOT)) for p in discarded],'source_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'log':str(log.relative_to(ROOT))}
             rows.append(row)
             receipt={'requested':requested,'heap_cap_mib':args.memory_mib,'rss_cap_mib':args.rss_mib,'wall_seconds':args.timeout,'cpu_seconds':args.cpu_seconds,'minimum_free_mib':args.min_free_mib,'core_only_profile':args.core_profile,'single_thread':args.threads==1,'threads':args.threads,'upstream_cache_only':True,'calculator_objects_borrowed':not args.fresh,'modules':rows}
+            if reason and reason.startswith('scheduled-stop:'):
+                receipt.update(outcome='scheduled-stop', reason=reason)
             (reports/'latest.json').write_text(json.dumps(receipt,indent=2)+'\n')
             receipt_path.write_text(json.dumps(receipt,indent=2)+'\n')
             if output:

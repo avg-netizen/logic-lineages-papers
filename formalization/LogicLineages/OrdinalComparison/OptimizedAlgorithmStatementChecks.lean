@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.OptimizedAlgorithmProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedOptimizedMaximumReference : Targets.EncodedOptimizedMaximumReference :=
+  encodedOptimizedMaximumReference
+theorem fixed_encodedOptimizedLowerPowerReference : Targets.EncodedOptimizedLowerPowerReference :=
+  encodedOptimizedLowerPowerReference
+theorem fixed_encodedOptimizedMaximumActualCorrect : Targets.EncodedOptimizedMaximumActualCorrect :=
+  encodedOptimizedMaximumActualCorrect
+theorem fixed_encodedOptimizedLowerPowerActualCorrect : Targets.EncodedOptimizedLowerPowerActualCorrect :=
+  encodedOptimizedLowerPowerActualCorrect
+theorem fixed_encodedOptimizedMaximumComputable : Targets.EncodedOptimizedMaximumComputable :=
+  encodedOptimizedMaximumComputable
+theorem fixed_encodedOptimizedLowerPowerComputable : Targets.EncodedOptimizedLowerPowerComputable :=
+  encodedOptimizedLowerPowerComputable
+theorem fixed_fullOptimizedMaximumAlgorithm : Targets.FullOptimizedMaximumAlgorithm :=
+  fullOptimizedMaximumAlgorithm
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

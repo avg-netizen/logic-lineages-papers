@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.GrowingBudgetCutProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualConstantBudgetCutCongruence : Targets.ActualConstantBudgetCutCongruence :=
+  actualConstantBudgetCutCongruence
+theorem fixed_actualGrowingBudgetCutTransfer : Targets.ActualGrowingBudgetCutTransfer := actualGrowingBudgetCutTransfer
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

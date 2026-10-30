@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.EncodedNaturalProductProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedMonomialProductCorrect : Targets.EncodedMonomialProductCorrect := encodedMonomialProductCorrect
+theorem fixed_encodedMonomialProductPrimitiveRecursive : Targets.EncodedMonomialProductPrimitiveRecursive :=
+  encodedMonomialProductPrimitiveRecursive
+theorem fixed_encodedNaturalProductCorrect : Targets.EncodedNaturalProductCorrect := encodedNaturalProductCorrect
+theorem fixed_encodedNaturalProductPrimitiveRecursive : Targets.EncodedNaturalProductPrimitiveRecursive :=
+  encodedNaturalProductPrimitiveRecursive
+theorem fixed_encodedNaturalProductSourceCorrect : Targets.EncodedNaturalProductSourceCorrect :=
+  encodedNaturalProductSourceCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

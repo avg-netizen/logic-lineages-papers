@@ -98,9 +98,39 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 335,
           "statement_latex": "[Finite-product preservation]\\label{lem:products}\nIf $(A_i,\\bar a_i)\\leq_\\alpha(B_i,\\bar b_i)$ for $i=1,2$, then\n\\[\n (A_1\\oplus A_2,(\\bar a_1,\\bar a_2))\n \\leq_\\alpha\n (B_1\\oplus B_2,(\\bar b_1,\\bar b_2)).\n\\]\nThe paired notation denotes componentwise pairing of corresponding\nentries into tuples of product elements.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.BackForthStatementChecks.fixed_groupFiniteProductPreservation",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean",
+            "sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteProductPreservation"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.PGroups.BackForthStatementChecks.fixed_groupFiniteProductPreservation"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean",
+              "sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+              "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteProductPreservation"
+            }
+          ],
+          "verification_receipt": "build-reports/1793326598180203036-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793326598180203036-2.json",
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.BackForthStatementChecks",
+              "receipt_sha256": "b8a0f018d11ea32414bbc75a262e82ebb1afe6bcbc4b1d0f234f1f5bd94c6e2a",
+              "log": "build-reports/1793326598180203036-2-LogicLineages-ModelsAlgebra-PGroups-BackForthStatementChecks.log",
+              "log_sha256": "c3ac01a9cbb88d80ac0214273eb1d66848747ce77e4f03f6f56ca7ab85239309"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:thm:odd-obstruction",
@@ -280,9 +310,36 @@
           "file": "02-exponential-comparison/paper.tex",
           "line": 340,
           "statement_latex": "[Effective normalization]\\label{lem:normalization}\nEvery term in $\\mathcal F_d$ has an effectively computable normal form\n$\\operatorname{nf}(f)$ of the shape \\eqref{eq:normal-form}, with the same value\nat every positive integer tuple.  All operations terminate by finite\nsyntax recursion.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_effective_normalization",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizerProgram.lean",
+            "sha256": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram.Target"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_effective_normalization"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizerProgram.lean",
+              "sha256": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+              "type": "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram.Target"
+            }
+          ],
+          "verification_receipt": "build-reports/1793323608078739707-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793323608078739707-2.json",
+              "gate_module": "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramGate"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "02-exponential-comparison:lem:ray",
@@ -383,9 +440,20 @@
           "file": "03-joint-embedding-finite-forests/paper.tex",
           "line": 149,
           "statement_latex": "[Finite certificates for negative instances]\n\\label{prop:certificate}\nIf $\\mathcal C(\\mathcal U)$ fails JEP, one can compute a pair $F,G$ in\nthe class and a finite exhaustive certificate that they have no common\nextension in the class.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fixed_fullNegativeCertificateSearch",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/CertificateFullTargets.lean",
+            "type": "LogicLineages.ModelsAlgebra.Forests.Targets.FullNegativeCertificateSearch",
+            "sha256": "75deb8636e2009a15fe1cfd093f4558ae3e7c0b2cff46c764df690e2ccdfb69d"
+          },
+          "verification_receipt": "build-reports/1793310861481589035-2.json",
+          "coverage_note": "Entire effective negative-certificate proposition on explicit finite forest-family codes: actual Partrec search, exact failure-of-JEP domain for the original order-embedding semantics, verified canonical exhaustive host list, valid permitted output pair, soundness/completeness, faithful codecs and invalid-input rejection. Fixed-pair host-size reduction and finite test computation are proved, not premises. No Carter positive decision theorem or first-obstruction bound is assumed or claimed.",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
         },
         {
           "id": "03-joint-embedding-finite-forests:thm:width",
@@ -507,16 +575,43 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 73,
           "statement_latex": "[Finite norm balls]\\label{lem:finite-balls}\nEach norm ball is finite and can be effectively enumerated.  Cantor-normal-form\ncomparison, natural sum and natural product are effective.  Moreover\n$\\norm(\\alpha\\oplus\\beta)=\\norm(\\alpha)+\\norm(\\beta)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedFiniteNormBalls",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/EncodedFiniteBallsTargets.lean",
+            "sha256": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedFiniteNormBalls"
+          },
           "checked_components": [
             {
               "declaration": "LogicLineages.OrdinalComparison.CheckedNormBalls.all_normal_inputs_finite",
               "scope": "Finiteness and exact finite enumeration on normal notations; actual-ordinal completeness and natural arithmetic obligations remain pending.",
               "development_receipt": "build-reports/1793248381898355174-2.json"
             }
-          ]
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedFiniteNormBalls"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/EncodedFiniteBallsTargets.lean",
+              "sha256": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedFiniteNormBalls"
+            }
+          ],
+          "verification_receipt": "build-reports/1793313695732833877-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793313695732833877-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.EncodedFiniteBallsStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "05-wilken-weiermann-foundations:lem:phi-growth",
@@ -577,9 +672,36 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 161,
           "statement_latex": "[Effective maximum predecessor]\\label{thm:maximum}\nThe following simultaneous recursion computes $M$ and $L$ exactly.\nWrite $\\alpha=\\omega^e c+r$ with $c>0$ and $r<\\omega^e$, and put\n$w=1+\\norm(e)$.\n\\begin{enumerate}\n\\item $M(\\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.\n\\item If $r>0$ and $cw\\le b$, retain the leading block:\n $M(\\alpha,b)=\\omega^e c+M(r,b-cw)$.\n\\item Otherwise set $d=\\min(c-1,\\lfloor b/w\\rfloor)$ when $r=0$,\n and $d=\\min(c,\\lfloor b/w\\rfloor)$ when $r>0$.  Then\n $M(\\alpha,b)=\\omega^e d+L(e,b-dw)$, omitting a zero block.\n\\item For $e,b>0$, let $a=M(e,b-1)$, $v=1+\\norm(a)$ and\n $(q,s)=\\operatorname{divmod}(b,v)$.  Then\n $L(e,b)=\\omega^a q+L(a,s)$.\n\\end{enumerate}",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullOptimizedMaximumAlgorithm",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/OptimizedAlgorithmTargets.lean",
+            "sha256": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullOptimizedMaximumAlgorithm"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullOptimizedMaximumAlgorithm"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/OptimizedAlgorithmTargets.lean",
+              "sha256": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullOptimizedMaximumAlgorithm"
+            }
+          ],
+          "verification_receipt": "build-reports/1793315377840158403-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793315377840158403-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.OptimizedAlgorithmStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "05-wilken-weiermann-foundations:lem:saturation",
@@ -639,9 +761,36 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 233,
           "statement_latex": "[Closed evaluation]\\label{cor:closed-evaluation}\nEvery supplied closed collapse value is computable.  At a nonfinite state\n$\\alpha=\\lambda+n$, replace $\\alpha$ by\n$M(\\lambda,\\Phi(\\norm(\\alpha)))$ and increment a counter.  On reaching\na finite state return that state plus the counter.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedClosedEvaluation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/EncodedCollapseTargets.lean",
+            "sha256": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedClosedEvaluation"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedClosedEvaluation"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/EncodedCollapseTargets.lean",
+              "sha256": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedClosedEvaluation"
+            }
+          ],
+          "verification_receipt": "build-reports/1793312501751007316-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793312501751007316-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.EncodedCollapseStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "05-wilken-weiermann-foundations:thm:complete-count",
@@ -1067,9 +1216,36 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 120,
           "statement_latex": "[Sparse peaks]\\label{lem:sparse}\nFor an infinite input of norm $t\\ge2$, write $Z=f^L(t)=f(s)$ as in (1.3).\nThen $0<L\\le s-1$, and\n\\[\n           Z<\\psi(\\alpha)=Z+L<2Z<f(s+1).             \\tag{1.6}\n\\]\nDistinct peaks $f(s)$ and $f(u)$ with $u<s$ satisfy $f(u)\\le f(s-1)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSparsePeaks",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+            "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualSparsePeaks"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSparsePeaks"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+              "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+              "type": "LogicLineages.OrdinalComparison.Targets.ActualSparsePeaks"
+            }
+          ],
+          "verification_receipt": "build-reports/1793315534494548274-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793315534494548274-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.PeakOrbitStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:roots",
@@ -1078,9 +1254,36 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 158,
           "statement_latex": "[Orbit cancellation at roots]\\label{lem:roots}\nCall a natural number an $f$-root if it is outside $\\operatorname{range}(f)$.\nIf infinite inputs $\\alpha,\\beta$ have root norms $t,u$ and equal peaks,\nthen $\\alpha=\\beta$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRootPeakInjectivity",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+            "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualRootPeakInjectivity"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRootPeakInjectivity"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+              "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+              "type": "LogicLineages.OrdinalComparison.Targets.ActualRootPeakInjectivity"
+            }
+          ],
+          "verification_receipt": "build-reports/1793315534494548274-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793315534494548274-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.PeakOrbitStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "07-collapse-equality-and-one-variable:thm:identity",
@@ -1133,9 +1336,36 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 356,
           "statement_latex": "[Exact prefix splitting]\\label{lem:prefix}\nLet $\\kappa$ be a fixed Cantor prefix and let $\\eta$ be a nonzero limit\nwhose leading monomial is at most the least monomial of $\\kappa$;\nthe zero prefix is also allowed. In particular one may take\n$\\kappa=\\pi k$ and $\\operatorname{lead}(\\eta)\\le\\pi$.\nFor $b\\ge c=\\norm(\\kappa)$,\n\\[\n M(\\kappa+\\eta,b)=\\kappa+M(\\eta,b-c).                \\tag{4.2}\n\\]\nA descent above $\\kappa$ reaches a state $\\kappa+n$ with finite remainder\nbefore passing below $\\kappa$. During that segment the remainder's exact\nnorm control is\n\\[\n                   G_c(v)=f(c+v)-c\\ge f(v)>v.         \\tag{4.3}\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCompatiblePrefixSplitting",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+            "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualCompatiblePrefixSplitting"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCompatiblePrefixSplitting"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+              "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualCompatiblePrefixSplitting"
+            }
+          ],
+          "verification_receipt": "build-reports/1793319734291867812-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793319734291867812-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.PrefixTraceSourceStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:counts",
@@ -1144,9 +1374,36 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 384,
           "statement_latex": "[Ordered controls and counts]\\label{lem:counts}\nFor increasing integer controls $g\\le h$, both strictly exceeding their\ninput, let $L_g,L_h$ be the respective norm-maximal descent counts.\nThen\n\\[\n \\alpha\\le\\beta,quad\\norm(\\alpha)\\le\\norm(\\beta)\n       \\quad\\Longrightarrow\\quad L_g(\\alpha)\\le L_h(\\beta). \\tag{4.4}\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOrderedControlsAndCounts",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ControlledCountTargets.lean",
+            "sha256": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualOrderedControlsAndCounts"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOrderedControlsAndCounts"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/ControlledCountTargets.lean",
+              "sha256": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualOrderedControlsAndCounts"
+            }
+          ],
+          "verification_receipt": "build-reports/1793315788852128190-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793315788852128190-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.ControlledCountStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:peakword",
@@ -1325,9 +1582,36 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 102,
           "statement_latex": "[Growth]\\label{lem:growth}\nEach $F_j$ is recursive and strictly increasing, with $F_j(n)\\ge2^n$.\nFor $j\\ge0$,\n\\[\n F_{j+1}(n+1)\\ge2^{F_{j+1}(n)+1}.\n\\]\nConsequently $f(z+1)\\ge(A+2)f(z)$ whenever $z\\ge A\\ge0$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlHierarchyGrowth",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+            "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlHierarchyGrowth"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlHierarchyGrowth"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+              "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlHierarchyGrowth"
+            }
+          ],
+          "verification_receipt": "build-reports/1793316081800671532-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793316081800671532-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.ControlHierarchyGrowthStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:residues",
@@ -1336,9 +1620,36 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 120,
           "statement_latex": "[Effective constant residues]\\label{lem:residues}\nFor every $m\\ge1$ one can compute $r_m\\in[0,m)$ such that\n\\[\n F_j(n)\\equiv r_m\\pmod m\\quad(j\\ge1,\\ n\\ge m).\n\\]\nIn particular $f(n)\\equiv r_m\\pmod m$ for $n\\ge\\max(0,m-100)$.\nFor $s\\ge1$, $j\\ge2$, this can be strengthened to\n\\begin{equation}\\label{eq:envelope}\n m\\le 2^{2^s}\\quad\\Longrightarrow\\quad F_j(s)\\equiv r_m\\pmod m.\n\\end{equation}\nIf $B=f(u)$ and $m\\le2^{2^B}$, then also $f(u+1)\\equiv r_m\\pmod m$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlConstantResidues",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+            "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlConstantResidues"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlConstantResidues"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+              "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlConstantResidues"
+            }
+          ],
+          "verification_receipt": "build-reports/1793316270707139494-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793316270707139494-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.ControlResidueStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:snyatkov",
@@ -1468,9 +1779,36 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 807,
           "statement_latex": "[Sparse endpoint comparison]\\label{lem:endpoints}\nFor a fixed nonzero limit $\\lambda$, $J_\\lambda$ is strictly increasing.\nIts distinct norm inputs have distinct terminal endpoints, ordered in the\nsame way. For any two distinct endpoints $Z<W$ one has\n\\begin{equation}\\label{eq:sparse}\n W\\ge2^{Z+1}.\n\\end{equation}\nEvery value with endpoint $Z$ lies strictly between $Z$ and $2Z$ and below\nthe next value of $f$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSparseEndpointComparison",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+            "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualSparseEndpointComparison"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSparseEndpointComparison"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+              "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualSparseEndpointComparison"
+            }
+          ],
+          "verification_receipt": "build-reports/1793320317094052515-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793320317094052515-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.HeadEndpointStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:common",
@@ -1490,9 +1828,36 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 906,
           "statement_latex": "[Head order in a strict interval]\\label{lem:head-window}\nLet $\\lambda>\\mu$ be nonzero fixed limits. If\n$t\\ge\\max(N(\\lambda),N(\\mu)+2)$ and\n$N(\\mu)\\le u<f(t)$, then $J_\\lambda(t)>J_\\mu(u)$ and their endpoints\ndiffer. Consequently, if finitely many norm inputs $t_i$ have minimum\n$s\\ge\\max_iN(\\lambda_i)+2$ and $\\max_i t_i<f(s)$, their outputs are\nordered lexicographically by (ordinal head, norm input). Equality requires\nequality of both, and different output blocks have distinct sparse endpoints.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualDifferentHeadWindow",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/HeadWindowTargets.lean",
+            "sha256": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualDifferentHeadWindow"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualDifferentHeadWindow"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/HeadWindowTargets.lean",
+              "sha256": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualDifferentHeadWindow"
+            }
+          ],
+          "verification_receipt": "build-reports/1793320989919115950-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793320989919115950-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.HeadWindowStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:balanced",
@@ -1814,9 +2179,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 121,
           "statement_latex": "[Complete-count identity]\\label{prop:complete}\nThe descent terminates and\n\\[\n Z_\\lambda(t)=f^{\\,\\tau_\\lambda(t)}(t),\\qquad\n J_\\lambda(t)=Z_\\lambda(t)+\\tau_\\lambda(t).\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualHeadCompleteCount",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+            "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualHeadCompleteCount"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualHeadCompleteCount"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+              "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualHeadCompleteCount"
+            }
+          ],
+          "verification_receipt": "build-reports/1793320317094052515-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793320317094052515-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.HeadCompleteCountStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:thm:envelope",
@@ -1825,9 +2217,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 148,
           "statement_latex": "[Uniform residue envelopes]\\label{thm:envelope}\nThere is an effective function $m\\mapsto r_m\\in\\{0,\\ldots,m-1\\}$ such\nthat:\n\\begin{enumerate}\n\\item $f(x)\\equiv r_m\\pmod m$ for $x\\ge m$;\n\\item for $s\\ge1$, $j\\ge2$ and $m\\le2^{2^s}$,\n      $F_j(s)\\equiv r_m\\pmod m$;\n\\item if $B=f(u)$, then\n      $f(u+1)\\equiv r_m\\pmod m$ for every $m\\le2^{2^B}$.\n\\end{enumerate}",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullUniformResidueEnvelopes",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+            "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullUniformResidueEnvelopes"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullUniformResidueEnvelopes"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+              "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullUniformResidueEnvelopes"
+            }
+          ],
+          "verification_receipt": "build-reports/1793316270707139494-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793316270707139494-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.ControlResidueStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:fixed",
@@ -1836,9 +2255,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 207,
           "statement_latex": "[A fixed-budget count]\\label{lem:fixed}\nFix a nonnegative retained mass $c$ and take $S\\ge c+d+1$.\nStart the suffix at $\\omega^d$ with any finite tail of total norm\n(including $c$) at most $S$. At every replacement spend the constant\nsuffix budget $S-c$ and stop when the suffix is finite. The number of\nreplacements is $p_d(S-c)$. When $c=\\norm(\\pi)$ for a retained\nCNF prefix $\\pi$ of least exponent at least $d$, this is precisely\nthe corresponding segment starting at $\\pi+\\omega^d$ plus that tail.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualFixedBudgetPartitionCount",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+            "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualFixedBudgetPartitionCount"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualFixedBudgetPartitionCount"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+              "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualFixedBudgetPartitionCount"
+            }
+          ],
+          "verification_receipt": "build-reports/1793319734291867812-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793319734291867812-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.PrefixTraceSourceStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:period",
@@ -1847,9 +2293,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 235,
           "statement_latex": "[A sufficient partition period]\\label{lem:period}\nFor every $d,m\\ge1$, put $Q_d=d!m^{d-1}$. Then\n\\[\n             p_d(n+Q_d)\\equiv p_d(n)\\pmod m\\quad(n\\ge0).\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullRestrictedPartitionSufficientPeriod",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/RestrictedPartitionTargets.lean",
+            "sha256": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullRestrictedPartitionSufficientPeriod"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullRestrictedPartitionSufficientPeriod"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/RestrictedPartitionTargets.lean",
+              "sha256": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullRestrictedPartitionSufficientPeriod"
+            }
+          ],
+          "verification_receipt": "build-reports/1793317037244397780-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793317037244397780-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.RestrictedPartitionPeriodStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:thm:transfer",
@@ -1858,9 +2331,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 267,
           "statement_latex": "[Congruent-budget transfer]\\label{thm:transfer}\nConsider deletion of one suffix block $\\omega^d$, with retained\nnumerical mass $c\\ge0$ and initial total norm at least $c+d+1$,\nunder budgets at least the current total norm. Suppose\nevery budget used in this segment is congruent to one integer $S$\nmodulo $Q_d=d!m^{d-1}$, where $S\\ge c$. Then its complete segment\ncount is congruent to $p_d(S-c)$ modulo $m$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCongruentBudgetTransfer",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/GrowingBudgetTransferTargets.lean",
+            "sha256": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualCongruentBudgetTransfer"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCongruentBudgetTransfer"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/GrowingBudgetTransferTargets.lean",
+              "sha256": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualCongruentBudgetTransfer"
+            }
+          ],
+          "verification_receipt": "build-reports/1793322729530751956-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793322729530751956-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.GrowingBudgetTransferStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:prop:omega-block",
@@ -1869,9 +2369,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 312,
           "statement_latex": "[An actual $\\omega^\\omega$ block]\\label{prop:omega-block}\nLet $\\Omega=\\omega^\\omega$. At a real suffix state $\\pi+\\Omega+n$, with $\\pi$ a retained CNF\nprefix (zero or of least exponent at least $\\omega$), and total norm $u$,\nassume $c=\\norm(\\pi)$, $c+3\\le u$, and\n$B=f(u)\\ge\\max(16,m)$. Put $C=f(u+1)$ and $d=B-c-1$.\nIf $H_c(u)$ counts the complete deletion of this $\\Omega$ copy,\nthen\n\\begin{equation}\\label{eq:omega-block}\n H_c(u)\\equiv1+p_{B-c-1}(C-c)\\pmod m.\n\\end{equation}\nIts output norm is still exactly $f^{H_c(u)}(u)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOmegaBlock",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/OmegaBlockTargets.lean",
+            "sha256": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualOmegaBlock"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOmegaBlock"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/OmegaBlockTargets.lean",
+              "sha256": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualOmegaBlock"
+            }
+          ],
+          "verification_receipt": "build-reports/1793324854148884682-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793324854148884682-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.OmegaBlockStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:entry",
@@ -1880,9 +2407,36 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 353,
           "statement_latex": "[The retained prefix at first entry]\\label{lem:entry}\nThe predecessor of this $\\Theta$ state is\n\\[\n \\Omega q+1,\\qquad q=(u-1)/3.\n\\]\nThe first $\\Omega$ copy deleted in this polynomial has retained\nprefix norm $e=u-4$ and total input norm $u$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualThetaEntry",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ThetaEntryTargets.lean",
+            "sha256": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualThetaEntry"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualThetaEntry"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/ThetaEntryTargets.lean",
+              "sha256": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+              "type": "LogicLineages.OrdinalComparison.Targets.FullActualThetaEntry"
+            }
+          ],
+          "verification_receipt": "build-reports/1793325538728784708-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793325538728784708-2.json",
+              "gate_module": "LogicLineages.OrdinalComparison.ThetaEntryStatementChecks"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:matrix",
@@ -2513,9 +3067,36 @@
           "file": "14-complexity-of-prediction-measures/paper.tex",
           "line": 169,
           "statement_latex": "\\label{lem:learning}\nThere is a recursive predicate $S$ such that, for total binary $p,e$,\n$p$ learns $e$ exactly when\n$\\exists c\\,\\forall d\\ S(p,e,c,d)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_learning",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/PredictionLearning.lean",
+            "sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.PredictionLearning.Target"
+          },
+          "verification_receipt": "build-reports/1793310756664606427-2.json",
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence.",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_learning"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/Comparators/PredictionLearning.lean",
+              "sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+              "type": "LogicLineages.ComputabilityKnowledge.Comparators.PredictionLearning.Target"
+            }
+          ],
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793310756664606427-2.json",
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionLearningGate"
+            }
+          ]
         },
         {
           "id": "14-complexity-of-prediction-measures:prop:threshold",
@@ -2702,9 +3283,69 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 213,
           "statement_latex": "\\label{cor:algorithmone}\nThe constrained-pair predicate is decidable on this first-order slice.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmComputableRealization",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+            "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmInputCoverage"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmInputCoverage",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSpecialization",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchCorrect",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchTotal",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchPartialRecursive",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmComputableRealization"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+              "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmInputCoverage"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+              "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSpecialization"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+              "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSearchCorrect"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+              "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSearchTotal"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+              "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSearchPartialRecursive"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+              "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmComputableRealization"
+            }
+          ],
+          "verification_receipt": "build-reports/1793312355139431800-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793312355139431800-2.json",
+              "gate_module": "LogicLineages.ModelsAlgebra.Differential.OrderOneAlgorithmStatementChecks",
+              "receipt_sha256": "617f513568c7937ae7eabcbd6cf3b01ef9076d8ca12e8e2e4f75096a7e03e840",
+              "log": "build-reports/1793312355139431800-2-LogicLineages-ModelsAlgebra-Differential-OrderOneAlgorithmStatementChecks.log",
+              "log_sha256": "521fc99faeee6f40ed9f9b25505746ae4fb6894fa6ecd7f2bf1b02b8b35601b5"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "15-differential-field-constraint-decisions:thm:spectral",
@@ -2713,9 +3354,39 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 263,
           "statement_latex": "\\label{thm:spectral}\nUnder this spectral independence hypothesis,\n\\[\n \\Con_\\Q(p,q)\\quad\\Longleftrightarrow\\quad\n R_f\\mid q\\quad\\text{in }\\Q[Y_0,\\ldots,Y_{n-1}].\n\\]\nIn particular $(p,R_f)$ is a positive constrained pair.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralConstraintComplete",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/SpectralConstraintTargets.lean",
+            "sha256": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralConstraintComplete"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralConstraintComplete"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/SpectralConstraintTargets.lean",
+              "sha256": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralConstraintComplete"
+            }
+          ],
+          "verification_receipt": "build-reports/1793316582215125170-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793316582215125170-2.json",
+              "gate_module": "LogicLineages.ModelsAlgebra.Differential.SpectralConstraintStatementChecks",
+              "receipt_sha256": "a2704ef895a2d0649845154a076def332ab60a8951ed20c161c42f05643a2ad6",
+              "log": "build-reports/1793316582215125170-2-LogicLineages-ModelsAlgebra-Differential-SpectralConstraintStatementChecks.log",
+              "log_sha256": "ce5a806e739e834b69ac64882a1421d639806e72a8826ccd870a3c4f1d2256fe"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "15-differential-field-constraint-decisions:lem:weights",
@@ -2746,9 +3417,39 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 322,
           "statement_latex": "\\label{lem:genericjets}\nIf $p(a)=0$ and $R_f(a)\\ne0$, its first $n$ jets are algebraically\nindependent over $\\Q$. Any two such solutions have the required\ndesignated-root differential isomorphism over $\\Q$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGenericJetsComplete",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteTargets.lean",
+            "sha256": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralGenericJetsComplete"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGenericJetsComplete"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteTargets.lean",
+              "sha256": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralGenericJetsComplete"
+            }
+          ],
+          "verification_receipt": "build-reports/1793315738788197863-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793315738788197863-2.json",
+              "gate_module": "LogicLineages.ModelsAlgebra.Differential.GenericJetsCompleteStatementChecks",
+              "receipt_sha256": "200e0d60a8c9fc829c94ef26ca7a572511e637df84118568c7bb53965afa5d6f",
+              "log": "build-reports/1793315738788197863-2-LogicLineages-ModelsAlgebra-Differential-GenericJetsCompleteStatementChecks.log",
+              "log_sha256": "3029d7538fd62aca23e72b965466b35b38f23d7f0a6bef571390edef6bb6c9da"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         },
         {
           "id": "15-differential-field-constraint-decisions:prop:cyclotomic",
@@ -2757,9 +3458,39 @@
           "file": "15-differential-field-constraint-decisions/paper.tex",
           "line": 417,
           "statement_latex": "\\label{prop:cyclotomic}\nFor every prime $\\ell$, the polynomial\n$f(T)=1+T+\\cdots+T^{\\ell-1}$ satisfies the spectral promise.\nConsequently the theorem supplies positive pairs and full decisions\nfor all nonzero $q$ at an unbounded set of differential orders.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicFullSource",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteTargets.lean",
+            "sha256": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+            "type": "LogicLineages.ModelsAlgebra.Differential.Targets.cyclotomicFullSource"
+          },
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicFullSource"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteTargets.lean",
+              "sha256": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+              "type": "LogicLineages.ModelsAlgebra.Differential.Targets.cyclotomicFullSource"
+            }
+          ],
+          "verification_receipt": "build-reports/1793324961868888828-2.json",
+          "verification_receipts": [
+            {
+              "file": "build-reports/1793324961868888828-2.json",
+              "gate_module": "LogicLineages.ModelsAlgebra.Differential.CyclotomicCompleteStatementChecks",
+              "receipt_sha256": "4f31f7d7cd9cc75bc93dcc5e3be2612042ef218b53b44a1a1e1ed7f80e81b584",
+              "log": "build-reports/1793324961868888828-2-LogicLineages-ModelsAlgebra-Differential-CyclotomicCompleteStatementChecks.log",
+              "log_sha256": "b2f346de4b6fcdb01806c90eeeeacf2868a1172dbb4641d0e2660f1cc8ceaab7"
+            }
+          ],
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "All listed exact source-type gates and dependencies checked; see the frozen comparators and scheduled checkpoint evidence."
         }
       ]
     }

@@ -1,0 +1,17 @@
+module
+
+public import LogicLineages.ModelsAlgebra.Differential.PolynomialCertificateSearchEffectivity
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.Differential.StatementChecks
+
+theorem fixed_polynomialSearchFinitePrimitiveRecursive : Targets.polynomialSearchFinitePrimitiveRecursive :=
+  PolynomialCertificateSearch.finite_primitive_recursive
+theorem fixed_polynomialSearchPartialRecursive : Targets.polynomialSearchPartialRecursive :=
+  PolynomialCertificateSearch.search_partial_recursive
+
+end LogicLineages.ModelsAlgebra.Differential.StatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.Differential

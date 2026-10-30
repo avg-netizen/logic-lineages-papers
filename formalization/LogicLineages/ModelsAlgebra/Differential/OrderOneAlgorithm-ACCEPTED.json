@@ -1,0 +1,45 @@
+{
+  "accepted_at_utc": "2026-10-29T22:21:12.211988+00:00",
+  "source_paper": "15-differential-field-constraint-decisions/paper.tex",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_statement_id": "15-differential-field-constraint-decisions:cor:algorithmone",
+  "numbered_statement_complete": true,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.OrderOneAlgorithmStatementChecks",
+  "accepted_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmComputableRealization",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmInputCoverage",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSpecialization",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchCorrect",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchTotal",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchPartialRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmComputableRealization"
+  ],
+  "frozen_comparator": {
+    "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+    "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+    "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmComputableRealization"
+  },
+  "receipts": [
+    {
+      "file": "build-reports/1793312355139431800-2.json",
+      "sha256": "617f513568c7937ae7eabcbd6cf3b01ef9076d8ca12e8e2e4f75096a7e03e840"
+    }
+  ],
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmDefinitions.lean": "36479256307f85975b6b0a32ae1506ce76e5db178f4af7482537e7ebb2d65722",
+    "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+    "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithm.lean": "39c3b976b51280afbdef34639c85292415c31241c17fa9b89d4d0433cb0eb62c",
+    "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmStatementChecks.lean": "2797056f7b6b6194cca7282172403bb179b08b5201c4c44dc8f849e285671882"
+  },
+  "supplier_ledgers": [
+    "RationalCode-ACCEPTED.json",
+    "DensePolynomial-ACCEPTED.json",
+    "OrderOneDivision-ACCEPTED.json",
+    "PolynomialCertificateSearch-ACCEPTED.json"
+  ],
+  "coverage_note": "Full source cor:algorithmone on faithful finite rational bivariate/univariate inputs: all polynomial input coverage, exact specialization, literal constrainedness on arbitrary Type u, search totality and genuine Mathlib Computable Boolean realization. Implementation uses verified finite Euclidean-certificate enumeration and the exact equivalent test r | derivative(r)*q. Does not claim primitive recursion, efficient runtime, implementation of the prose gcd recipe, or decisions outside the original first-order source-valid slice."
+}

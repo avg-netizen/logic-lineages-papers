@@ -1,0 +1,47 @@
+{
+  "accepted_at_utc": "2026-10-30T01:12:27.098369+00:00",
+  "source_target": "paper15 coded Sylvester determinant arithmetic supplier",
+  "numbered_statement_complete": false,
+  "semantic_correctness_complete": true,
+  "effectivity_complete": true,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.NumericDeterminantEffectivityChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_numericDeterminantPrimitiveRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_numericDeterminantPermutationWeight",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_numericDeterminantCorrect"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793322678801083525-2.json",
+  "receipt_sha256": "fecf992ee05cbdddbdb547466061042181e0b2bda318f5c942b4785dc7a300c7",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantDefinitions.lean": "7e5c95c7e0d5f66a422044ce2141b45fd0cd7b25ee0cdc990d7375377fc33fb6",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantTargets.lean": "263ceedb2529238e90fbad14dc3cbc52a677de7380fb572e42231ca67c7d64f5",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantEffectivity.lean": "a0053807fb41c83dd83fe825e3bb5172f890b01a96b3f8ad58dc0e017826cbce",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantEffectivityChecks.lean": "568185d27c470df3278d99f1ee1ee8515f8c94caa9b14cb83de182b97360c2b2",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantWeight.lean": "686f7bc0fb31b6933110abe25d7c1078bf5f611324369b4cf64ee1c6f2b400cc",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantWeightStatementChecks.lean": "95a6f99711ff5555294135dc189fa13dbbd39ea629485c24fc79b7fc71453705",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminant.lean": "7f51621b01eedb95813292753678a55b738046ded9fe6a8a917a531d6e509c85",
+    "LogicLineages/ModelsAlgebra/Differential/NumericDeterminantStatementChecks.lean": "658df0c3372e1d5b5b541175fbd18f53528f3566e80eaecbf843de81765ac625"
+  },
+  "gate_local_acceptance": "All three exact gates/audits pass in indicated receipts. Those batch receipts also contain later independent candidate failures, explicitly unaccepted; no failed module contributes acceptance.",
+  "freeze": "NumericDeterminant-FREEZE.json",
+  "scope": "Entire literal bounded numeric Leibniz determinant: actual permutation sign calibration, zero weights outside permutations, exact equality with Mathlib determinant for arbitrary coded rational-polynomial matrices, and genuinely UNIFORM Primrec in dimension and every input entry. No determinant oracle, extra premise, private dependency or runtime bound. Final source resultant input builder/decision composition remain separate.",
+  "dependencies": [
+    "DensePolynomial-ACCEPTED.json",
+    "RationalCode-ACCEPTED.json",
+    "KroneckerIndex-ACCEPTED.json"
+  ],
+  "accepted_math_at_utc": "2026-10-30T01:26:31.538807+00:00",
+  "math_gates": [
+    "LogicLineages.ModelsAlgebra.Differential.NumericDeterminantWeightStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.NumericDeterminantStatementChecks"
+  ],
+  "math_receipts": {
+    "build-reports/1793322942971458350-2.json": "e0191be512e010675bb50dbc950a7f379bbf282d67641608826c97eda217b923",
+    "build-reports/1793323450446778442-2.json": "9d08c502fa74d30355f8b4e06897213b2fdc59dd9a62357d72ca23c7e2fe3734"
+  }
+}

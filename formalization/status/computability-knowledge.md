@@ -1,5 +1,248 @@
 # Computability and knowledge formalization
 
+**Current state: paused after the completed affine-ray checkpoint.** All local
+proof work and the author loop in this lane have stopped for the user's
+scheduled wind-down before 30 October, 03:00 UTC. There is no live author or
+compiler in this lane, and an explicit user resume is required. The full
+source-normalization and learning statements remain accepted; full ray
+separation and identity remain pending. The repository-contained handoff is
+`LogicLineages/ComputabilityKnowledge/CONTINUATION-2026-10-29.md`.
+
+## Resumed local Claude and Codex loop
+
+The user explicitly resumed this workflow after external checkpoint `abb52d9`.
+R003's unchanged seven-equation proof is reconciled against its successful
+external gate and original source hashes. This did not repeat that compilation.
+Only the formalization author subject is released; older research subjects
+remain paused. Main owns global integration and the scheduled publication.
+
+R004's exact paper-14 learning target was independently written and compiled
+before authoring (`1793309278190641998-2.json`). It uses actual ordinary
+partial-recursive programs on finite binary histories, bounded error
+certificates, a genuinely computable matrix, and the source game's eventual
+agreement predicate. The target does not assume a simulation-correctness or
+computability supplier. Its SHA256 is
+`91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9`.
+
+The same authorized Claude session actually initialized at 21:33:21 UTC with
+the exact model, high effort and read-only tool set, then returned a complete
+immutable proposal at 21:48:02 UTC. Its unchanged 323-line candidate and complete
+exact gate passed on the first compile, receipt `1793310756664606427-2.json`.
+The accepted declaration is
+`LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_learning`.
+Its transitive axioms are only the standard three. All four target conjuncts
+passed, including the uniformly computable matrix and actual source-game
+eventual-agreement equivalence. This completes paper 14 `lem:learning`, while
+its runtime and complexity classifications remain pending. The code evaluator's
+stage parameter is a halting-certificate bound, not the source's separate
+input-tape runtime model. Exact public source/gate hashes are in
+`ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-29.json`.
+
+The author has exited and released the native compiler queue. Future read-only
+author rounds may overlap one still-serialized native compiler only under the
+separately reviewed high-headroom resource policy; R004 itself stayed serialized.
+
+R005's independent `Comparators/PredictionAntiProgram.lean` target passed
+before authoring, receipt `1793311202006191469-2.json`, frozen at
+`0bdc78a6736b380a5848f1dda1054743e8bc71ade11fd41c88918ae5ed6c137c`.
+It requires genuine partial-recursive program semantics and a uniformly
+computable ordinary-code compiler for the unchanged semantic anti-evader.
+This is a supplier of paper 14's finite-values argument; the source runtime
+and listing bridges remain separate. After a pre-execution tool interruption,
+one guarded recovery actually initialized the same authorized author at
+22:15:47 UTC. The reviewed read-only parallel mode was selected with 6,310 MiB
+observed headroom; native compilers keep their independent exclusive locks.
+R005's actual partial-recursive computation and uniform ordinary-code compiler
+now pass the entire fixed gate, receipt `1793312818579446472-2.json`, with
+only the standard three axioms. One compiler-directed dependent-membership
+transport repair was needed; no target or semantics changed. The declaration
+is `LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_anti_program`.
+The gate constructs output totality and exact agreement with the unchanged
+semantic anti-evader, so it supplies a genuinely computable evader with an
+error at every round against any total binary predictor. This remains a
+supplier: the source input-tape runtime, worst-case-time/listing bridges and
+full numbered `lem:finitevalues` are pending. All public hashes are in the
+resumed component ledger above. The author policy recorded 599 successful
+RSS measurements, peak 389,156 KiB, and no observation error.
+
+R006 starts the direct paper-02 normal-form algebra supplier from (N1)/(N2).
+`ExponentialNormalForm.lean` represents actual hereditary finite maps with
+nonnegative affine coefficient vectors and the source's syntactic constant
+coefficient. Its independent target compiled before authoring, receipt
+`1793313994076935370-2.json`, and is frozen at
+`b7408045d75d22f7a5bf0641fd05296c1a0e01e2934a404bb4e6ecf7607b0598`.
+Zero/constants, addition and constant-removal identities and normality
+preservation are the required conclusions. Height transport, exponential
+shift, full term normalization and effective coding are still separate work.
+The original managed invocation initialized at 22:58:31 UTC after a delayed
+tool return, with the exact authorized contract and read-only parallel mode
+at 6,358 MiB headroom. No second launch was used. Its entire fixed gate now
+passes, receipt `1793315309970947607-2.json`, after narrow height-zero unfolding
+and `support_update_subset` API repairs. No definition or target was changed.
+The accepted declaration is
+`LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_normal_form_algebra`;
+all transitive axioms are within the usual three foundations. This is the
+complete algebra supplier; N2's exponential constructor and full normalization
+and effectivity remain pending. R007's height-transport and actual N2-product
+constructor definitions/target also passed pre-author compilation separately,
+receipt `1793315474101618628-2.json`; its complete raw 193-line product proof now passes unchanged on the first
+compile, receipt `1793316105118934494-2.json`. The exact full gate is
+`LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_normal_form_product`
+and its actual axiom closure contains only the usual three foundations.
+The original R007 invocation actually initialized at 23:16:26 UTC with the
+exact same authorized session/model/high/read-only contract, in reviewed
+parallel mode with 6,508 MiB headroom. It returned successfully at 23:21:01 UTC, with no violation or resource
+observation error and peak 363,516 KiB. The mathematical source normalizer
+comparator also passed separately (`1793316067895456446-2.json`); its direct
+Codex proof now passes (`1793316434524387048-2.json`), and the complete standard
+namespace-axiom audit passes (`1793316867152226496-2.json`). The gate is
+`StatementChecks.exponential_normalization`: all literal source terms, all
+sufficient chosen heights and the exact actual depth, actual well-formed
+hereditary-map output and unchanged positive-valuation semantics. Only a
+reserved-name helper spelling needed repair; the semantic target never changed.
+Genuine finite-code effectivity remains required before promoting the source
+effective-normalization lemma.
+
+R008 now works on that code boundary. Its canonical numeric finite-map target
+compiled before authoring (`1793316434524387048-2.json`) and is frozen at
+`4a356a064208557086ee488427d9e14ef72d672f54699a7d292bb552277db7c5`.
+The target requires faithful canonical affine-vector/list-map codes, actual
+zero detection and sorted-key merging, plus genuine `Primrec` certificates
+for every executable operation. Hereditary-key refinement remains separate.
+The original guarded invocation actually initialized at 23:33:20 UTC with
+6,692 MiB headroom in reviewed read-only parallel mode. The same authorized
+author returned a complete 549-line proposal at 23:43:43 UTC, peak 391,352 KiB
+with no violation or resource-observation error. The first raw compile found
+only a missing `Mathlib.Data.List.GetD` import and a `Fin.val` inequality
+simplification; narrow repairs now pass the entire fixed gate, receipt
+`1793317788854413556-2.json`, with only the standard three axioms. All nine
+actual `Primrec` certificates, affine semantics and faithful canonical
+numeric-map representation are checked. The mathematical definitions and
+target remained unchanged.
+
+R009's complete hereditary-code target is now accepted, receipt
+`1793319502099710302-2.json`. It proves canonicalization identity on all raw
+inputs, faithful canonical structural codes and fixed points, coverage of every
+existing `Form`, exact zero/constants, and genuinely uniform `Primrec` over
+varying dimension, height and input. The full gate is
+`StatementChecks.exponential_hereditary_codec`, with only the standard three
+axioms. Its comparator had passed before authorship, receipt
+`1793317109595886824-2.json`, and remained unchanged.
+
+The proof is a direct Codex continuation. The original authorized Claude
+invocation initialized at 23:56:05 UTC, then reached its reported usage limit
+without returning a complete proposal. That failed attempt and error remain
+preserved; no successful Claude proposal or fabricated author file exists.
+Codex supplied and repaired the proof against the same frozen target. The
+mathematical checkpoint is complete, while the next Claude launch remains
+blocked until **30 October, 02:30 UTC** (29 October, 9:30 pm in Chicago).
+Independent Codex/native proof work continues.
+
+The complete code-operations target is also accepted, full gate
+`StatementChecks.exponential_normal_form_code_operations`, receipt
+`1793320408817599491-2.json`. Its unchanged independent target had passed
+before proof (`1793317788854413556-2.json`). Variables, addition, exact syntactic
+constant coefficient/removal and height transport have canonical outputs,
+exact correspondence to the existing structural maps, and all five genuine
+uniform `Primrec` certificates. Only the usual three foundations occur in the
+full axiom audit. These proofs are direct Codex work during the author hold.
+
+The complete executable N2 constructor is also accepted,
+`StatementChecks.exponential_normal_form_product_code`, receipt
+`1793320890218118742-2.json`; its exact comparator passed before proof,
+`1793320575243839806-2.json`. Every raw input pair produces a canonical code
+denoting the exact existing exponential-product map, and the construction is
+genuinely uniform `Primrec`. Only the usual three foundations occur. The
+literal prefix-code input compiler has now also passed its entire exact
+source gate, completing the full numbered lemma below.
+
+**Paper 02 `lem:normalization` is now complete.** Full gate
+`StatementChecks.exponential_effective_normalization` passed receipt
+`1793323608078739707-2.json`, all six frozen target groups and the complete
+standard-foundation axiom audit. The actual prefix compiler computes the exact
+source depth, produces a canonical well-formed hereditary normal form, and
+preserves value at every positive tuple. It rejects precisely the existing
+source decoder's malformed inputs. The compiler, depth computation and whole
+normalizer all have genuine uniform `Primrec` certificates. Every N1/N2,
+finite-map/canonical-key and code-operation supplier is proved in the public
+modules; no syntax-computability or map-correctness oracle is assumed. The
+independent full comparator passed before proof, receipt
+`1793321068362762041-2.json`. The final implementation certificate used local
+transparency control for already certified numeric program heads, with no
+change to any kernel/axiom/resource limit.
+
+This completes effective normalization. Ray separation, extensional identity,
+unary comparison decision and the remaining source hardness/vector bridges
+are still open formalization obligations. The next new Claude author remains
+held until the exact recorded 02:30 UTC reset; Codex work continues.
+
+## Ray-induction continuation and scheduled stop
+
+The exact affine calibration comparator passed before proof,
+`1793324372665298438-2.json`. Its actual dimension/base/weight/bounds,
+finite-sum slope alignment and affine evaluation suppliers passed first try
+`1793325292879862166-2.json`; all four uniform `Primrec` programs passed
+`1793325158768419951-2.json`. The entire affine target is now checked,
+`StatementChecks.affine_ray_calibration`, receipt
+`1793328305210622367-2.json`: exact slope injection, computed eventual
+comparison/equality, constant-free gap and all uniform programs. The direct
+Codex candidate passed the first proof compile, using the checked public
+Kronecker index supplier. This is the full affine source supplier, while the
+higher-height ray lemma remains pending.
+
+The sole managed R010 invocation returned after the latest safe author-start
+boundary and was refused before creating a process. There is no actual R010
+initialization, author proposal or author receipt. No late retry occurred;
+Codex independently completed the unchanged frozen target. The original
+refusal is preserved separately from the failed R009 quota attempt.
+
+The separate discrete N3 supplier is fully checked by
+`StatementChecks.ray_numerical_dominance`, receipt
+`1793325586062878820-2.json`, using only the standard three foundations.
+It proves quadratic domination by powers of two, the exact lower-contribution
+bound at the source threshold, and the integer leading-term sign and gap.
+This does not establish the map/key ordering or prove that an actual lower-key
+sum meets that bound; the full higher-height ray lemma remains pending.
+
+The actual finite signed lower-key sum also now satisfies the source N3 bound,
+`StatementChecks.ray_actual_finite_sum`, receipt
+`1793325835221188463-2.json`, with the standard three foundations. The exact
+absolute-affine-coefficient estimate and finite-sum inequality are proved;
+the leading sign/gap follows from the checked numerical supplier. This
+removes the need to assume a remainder bound in the future structural step.
+The full ray proof still owes the actual largest surviving key and its
+lower-height eventual separation.
+
+The actual hereditary-map subtraction bridge is also fully checked,
+`StatementChecks.ray_actual_map_difference`, receipt
+`1793326066840468629-2.json`, with the standard three foundations. Its proof
+passed first try: the literal difference of the original map evaluations is
+the finite signed affine/exponential sum over the actual union of supports.
+Unequal maps supply a differing coefficient; equal coefficients contribute
+zero. This links the existing representation to the checked N3 estimates
+without replacing the normal forms by a stipulated semantic representation.
+
+The stable greatest-key and surviving-support steps also pass their full
+frozen gates: `StatementChecks.ray_stable_greatest_key`
+(`1793326391690087746-2.json`) and
+`StatementChecks.ray_actual_surviving_difference`
+(`1793326501969916996-2.json`). Both proof candidates passed first try with
+only the standard three axioms. The first selects a unique stable greatest
+key by one positive-threshold evaluation from proved pairwise future gaps;
+the zero-greatest case has no other surviving key. The second discards exactly
+zero affine differences in the original maps, proves nonempty support for
+unequal maps, and derives well-formed/constant-free lower keys directly from
+the original `WellFormed` hypotheses. The remaining higher-height induction
+must derive its actual pairwise gaps and common calibrated coefficient family;
+none of these supplier gates completes `lem:ray` on its own.
+
+The user scheduled a hard stop at **30 October, 03:00 UTC** (29 October,
+10 pm Chicago). The author remains held until 02:30 UTC, and no new author
+may start after 02:40 UTC. The runner enforces the live stop and requires an
+explicit user resume after it. All 49 pure resource/deadline tests passed;
+this policy check launched neither an author nor a compiler. Main owns the
+final pause and public push.
+
 ## External continuation — 29 October 2026, 16:58 UTC
 
 The historical local author/Claude loop remains paused. The separately
@@ -112,7 +355,7 @@ metatheory. Gorbow and Alexander knowing-machine theories remain distinct.
 Paper 14 still lacks the ordinary-program/runtime and complexity-hierarchy
 suppliers and reductions described in the historical handoff.
 
-Paper 02 still lacks full DPRM/MRDP, recursive normal-form/separation and
+Paper 02 still lacks full DPRM/MRDP, the full ray-separation and
 one-variable decision suppliers, and the original admissible-substitution/
 C-vector/ordinal-norm bridge. The checked code reductions and co-c.e. upper
 bound do not by themselves establish the claimed complete classifications.

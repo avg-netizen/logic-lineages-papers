@@ -1,0 +1,95 @@
+{
+  "created_at_utc": "2026-10-29T23:38:55.579500+00:00",
+  "status": "COMPLETE: all nine implementation/proof steps checked; full source spectral algorithm and complete cyclotomic proposition accepted",
+  "source": "15-differential-field-constraint-decisions/paper.tex rational algorithm section and prop:cyclotomic effective consequence",
+  "accepted_basis": [
+    "OrderOneAlgorithm-ACCEPTED.json",
+    "PolynomialCertificateSearch-ACCEPTED.json",
+    "DensePolynomial-ACCEPTED.json",
+    "RationalCode-ACCEPTED.json",
+    "SpectralConstraint-ACCEPTED.json"
+  ],
+  "purpose": "Reuse genuinely proved univariate code arithmetic/certificate search to avoid a self-imposed multivariate Groebner or Gaussian implementation. This remains a direct dependency of the existing source decision claim.",
+  "steps": [
+    {
+      "step": 1,
+      "obligation": "Define finite-code bounded multivariate polynomials by base-B exponent digits in a dense univariate rational code, with variable count n and B>=2. Prove full multivariate polynomial input coverage, coordinate degree bound, exact Kronecker interpretation and decode/encode identities on the finite box."
+    },
+    {
+      "step": 2,
+      "obligation": "Prove actual multivariate coordinatewise degree bound: for nonzero p,q with q=p*h, each degreeOf i h <= degreeOf i q. This gives a uniform quotient box; no quotient-degree oracle."
+    },
+    {
+      "step": 3,
+      "obligation": "Extend the already total verified univariate quotient/remainder search to return the actual coefficient-code certificate rather than only its divisibility Bool. Prove actual Partrec, totality, equation/degree and Computable witness realization; no effective division oracle."
+    },
+    {
+      "step": 4,
+      "obligation": "For multivariate divisibility, choose B>=2 larger than every coordinate degree of p and q; apply univariate division to their literal Kronecker images, decode the quotient by base-B digits, then VERIFY p*decoded_quotient=q using a larger base C=2B. Prove the product lies in the C-box, so verification has no carry/alias error. Prove completeness from the genuine quotient box and unique univariate quotient; handle p=0 directly."
+    },
+    {
+      "step": 5,
+      "obligation": "Define literal rational G_f(T) from the source finite divided-difference sum. Prove (S-T)*G_operator(S,T)=f(S)-f(T) via actual finite geometric-sum identity, and hence its evaluation at a root is the raw omitted-factor polynomial/form."
+    },
+    {
+      "step": 6,
+      "obligation": "Prove the source resultant equals the actual rational R_f using map compatibility, monic root-product evaluation and the existing exact raw L_i product/descent. No assumed resultant/product identity."
+    },
+    {
+      "step": 7,
+      "obligation": "Compute the resultant after Kronecker substitution Y_i -> S^(C^i), using only dense ordinary rational polynomial code arithmetic for the finite Sylvester determinant (e.g. explicit finite Laplace recursion). Prove determinant code correctness and genuine Computable realization. A source-valid monic spectral input needs no promise recognizer."
+    },
+    {
+      "step": 8,
+      "obligation": "Prove the actual R_f coordinate degrees <= n from its product of n linear forms; use a safe C such as 2n+2. Decode the computed univariate resultant exactly back to the rational R_f. The larger bound is for faithful finite-box decoding, not a runtime theorem."
+    },
+    {
+      "step": 9,
+      "obligation": "Compose actual computable R_f construction with verified bounded multivariate divisibility, then the accepted full spectral constrainedness equivalence. Freeze the exact all-source-input promise-domain Computable decision target before proof. Only then promote spectral algorithm/cyclotomic effective consequences."
+    }
+  ],
+  "risks": [
+    "No blanket claim that arbitrary polynomial substitution is injective; every use needs its actual degree box.",
+    "The larger-base final verification is essential: ordinary base-B multiplication may alias carries.",
+    "Cyclotomic root independence or semantic constrainedness alone does not prove effective decisions.",
+    "Do not strengthen source hypotheses or introduce coefficient/division/resultant correctness as new oracle premises."
+  ],
+  "last_checked_at_utc": "2026-10-30T01:51:16.708081+00:00",
+  "completed_steps": {
+    "1": [
+      "KroneckerIndex-ACCEPTED.json",
+      "KroneckerPolynomial-ACCEPTED.json",
+      "BoxPolynomialCode-ACCEPTED.json"
+    ],
+    "2": [
+      "KroneckerPolynomial-ACCEPTED.json"
+    ],
+    "3": [
+      "PolynomialQuotientSearch-ACCEPTED.json"
+    ],
+    "4": [
+      "BoundedPolynomialDivision-ACCEPTED.json"
+    ],
+    "5": [
+      "SpectralResultant-ACCEPTED.json"
+    ],
+    "6": [
+      "SpectralResultant-ACCEPTED.json"
+    ],
+    "7": [
+      "NumericDeterminant-ACCEPTED.json",
+      "SpectralResultantCode-ACCEPTED.json"
+    ],
+    "8": [
+      "SpectralResultant-ACCEPTED.json",
+      "SpectralAlgorithm-ACCEPTED.json"
+    ],
+    "9": [
+      "SpectralAlgorithm-ACCEPTED.json",
+      "CyclotomicComplete-ACCEPTED.json"
+    ]
+  },
+  "current_unaccepted_semantics": null,
+  "implementation_note": "Remaining determinant implementation is planned as a finite Leibniz sum using bounded numeric function encodings and a zero weight for nonpermutations; exact determinant calibration and genuine code effectivity remain obligations. No change to source statement or acceptance boundary.",
+  "step8_checked_math": "Actual R_f coordinate box, exact coded resultant image and actual decoding/normalization are all included in the complete accepted algorithm."
+}

@@ -1,0 +1,23 @@
+{
+  "accepted_at_utc": "2026-10-29T23:19:13.289560+00:00",
+  "source_target": "paper15 designated-root isomorphism preserves finite jet relations",
+  "numbered_statement_complete": false,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.IsomorphismJetStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_designatedRootIsoPreservesJetRelations"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793315877772699220-2.json",
+  "receipt_sha256": "3fd1a01ef400f936bde066bac00f47a12eb99597b2fa10b9996f4a6beceef20d",
+  "receipt_scope_note": "This exact gate and axiom audit PASS; the same batch then failed only on a reserved identifier in a new uncompiled MissingSpectralModelDefinitions module. No whole-batch success claimed.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/IsomorphismJetTargets.lean": "5b5b0b357d488779dd1350d31d4a284cbbf6df4eacc7fd9b9f499e5e75106f9d",
+    "LogicLineages/ModelsAlgebra/Differential/IsomorphismJet.lean": "cfb8f12ca0b448e2a86b86540aed6a08731843c475221a0ea0e7544dd206b271",
+    "LogicLineages/ModelsAlgebra/Differential/IsomorphismJetStatementChecks.lean": "5a06c2bc05dce9f375d48d3cea3a883b957990e169fd4788986609fcd34a5579"
+  },
+  "scope": "Actual HasDesignatedRootIso implies agreement of every rational polynomial zero relation among any finite tuple of initial jets. Proved from root image and derivation compatibility by induction, with actual polynomial evaluation in generated fields; no relation-preservation oracle."
+}

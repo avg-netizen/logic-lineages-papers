@@ -1,0 +1,40 @@
+{
+  "accepted_at_utc": "2026-10-30T01:09:39.751894+00:00",
+  "source_target": "paper15 rational algorithm source divided difference and eq:resultant",
+  "numbered_statement_complete": false,
+  "effective_construction_complete": false,
+  "gates": [
+    "LogicLineages.ModelsAlgebra.Differential.SpectralGeneratingStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.SpectralResultantStatementChecks"
+  ],
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGeneratingDegree",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGeneratingRootCalibration",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralResultantCalibration",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralResultantBox"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipts": {
+    "build-reports/1793321907873290717-2.json": "1911cdbe7da833d411ff40f67633248cae63cba951c341fac554c8dc4b317367",
+    "build-reports/1793322442218133098-2.json": "e2e8c8530246b39a2632fffec0badc6e3fb39fee4cbef597bcff9f757edc6d68"
+  },
+  "gate_local_acceptance": "The two generating gates and their axiom audit passed in first receipt; two actual resultant/box gates and audit passed in second. Later unrelated candidate failures in those batch receipts are not accepted.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantDefinitions.lean": "9ad8fc830252133eaa201a35007d1c4a940ac2f2a8b4ea3c8d707dfc4be4d0ad",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantTargets.lean": "91ed9fbe316e8bb6dd7411926a9d2f5068bdf24cca5312d33b53ce12231725e6",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralGenerating.lean": "7872c39fc6b24ce2927903f0e38d82944e2c9a4a77c707e2b39bee453c4c1ad7",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralGeneratingStatementChecks.lean": "7c3c03283af5bc4068b00f4c3fde0f3ca41c5bb69efb115eddceb62a67befd22",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultant.lean": "1202b3e7e2eacd520463e5fc307878de75891b5db76a6e0699e6ec1ef0e539c1",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralResultantStatementChecks.lean": "267645582bd9c8d90fb19e0c4ea98d0415c42a570f6ee7bb50fba3cb0154d2a0"
+  },
+  "freeze": "SpectralResultant-FREEZE.json",
+  "scope": "Literal coefficientwise divided difference G_f has required T-degree and evaluates at every root to the actual raw L_i. Its actual Mathlib Sylvester resultant over Q maps exactly to the source raw product R_f in every full splitting field; actual coordinate degrees are at most n. This proves source eq:resultant and safe finite decoding box without any resultant correctness premise. Uniform effective determinant/obstruction construction is certified separately in NumericDeterminant-ACCEPTED.json and SpectralResultantCode-ACCEPTED.json; these mathematical gates alone make no effectivity claim.",
+  "dependencies": [
+    "KroneckerPolynomial-ACCEPTED.json",
+    "SpectralProduct-ACCEPTED.json"
+  ]
+}

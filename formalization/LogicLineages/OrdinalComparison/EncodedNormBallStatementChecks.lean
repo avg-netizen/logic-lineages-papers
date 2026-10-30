@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.EncodedNormBallProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_rawNormCodeBoundCorrect : Targets.RawNormCodeBoundCorrect := rawNormCodeBoundCorrect
+theorem fixed_encodedNormalNormBallCorrect : Targets.EncodedNormalNormBallCorrect := encodedNormalNormBallCorrect
+theorem fixed_encodedNormalNormBallDecodeCorrect : Targets.EncodedNormalNormBallDecodeCorrect :=
+  encodedNormalNormBallDecodeCorrect
+theorem fixed_encodedNormalNormBallPrimitiveRecursive : Targets.EncodedNormalNormBallPrimitiveRecursive :=
+  encodedNormalNormBallPrimitiveRecursive
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

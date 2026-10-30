@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.ControlResidueProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_fastControlResidueRange : Targets.FastControlResidueRange := fastControlResidueRange
+theorem fixed_fastControlResiduePrimitiveRecursive : Targets.FastControlResiduePrimitiveRecursive :=
+  fastControlResiduePrimitiveRecursive
+theorem fixed_fastControlConstantResidues : Targets.FastControlConstantResidues := fastControlConstantResidues
+theorem fixed_phiShiftedConstantResidues : Targets.PhiShiftedConstantResidues := phiShiftedConstantResidues
+theorem fixed_fastControlDoubleExponentResidueEnvelope : Targets.FastControlDoubleExponentResidueEnvelope :=
+  fastControlDoubleExponentResidueEnvelope
+theorem fixed_phiNextInputResidueEnvelope : Targets.PhiNextInputResidueEnvelope := phiNextInputResidueEnvelope
+theorem fixed_fullFastControlConstantResidues : Targets.FullFastControlConstantResidues :=
+  fullFastControlConstantResidues
+theorem fixed_fullUniformResidueEnvelopes : Targets.FullUniformResidueEnvelopes := fullUniformResidueEnvelopes
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

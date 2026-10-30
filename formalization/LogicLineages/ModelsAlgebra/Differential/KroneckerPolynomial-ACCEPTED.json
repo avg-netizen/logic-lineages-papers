@@ -1,0 +1,45 @@
+{
+  "accepted_at_utc": "2026-10-30T00:25:52.491551+00:00",
+  "source_target": "paper15 higher-order effective decision bounded polynomial arithmetic suppliers",
+  "numbered_statement_complete": false,
+  "gates": [
+    "LogicLineages.ModelsAlgebra.Differential.KroneckerPolynomialStatementChecks",
+    "LogicLineages.ModelsAlgebra.Differential.KroneckerPolynomialBoundsStatementChecks"
+  ],
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialMonomial",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialCoefficient",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialDegreeBound",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialInjective",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerDecodedBox",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialDecodeEncode",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialEncodeDecode",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialBoxExists",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialProductBox",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialQuotientBox",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_kroneckerPolynomialLargerBaseVerification"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipts": {
+    "build-reports/1793319700758221562-2.json": "9d887742c0f5f20c7929362395889832a16555315cd315e40a0da00542cf9693",
+    "build-reports/1793319898994037883-2.json": "3d0994191bfa6d5df466ecdd28a976178ac5ea191176d4b29415d26f374b3fcd"
+  },
+  "gate_local_acceptance": "First receipt has later bounds inference failure; its first7 fixed gates and axiom audit pass. Second receipt has later unrelated unfrozen quotient-target missing-import failure; all4 bounds gates and axiom audit pass. No failed module accepted.",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/KroneckerPolynomialDefinitions.lean": "3da3b7e3c7688d21e0c2402b3f9a3cb6cc75a7bf1437a9d94216d966b7c7fff1",
+    "LogicLineages/ModelsAlgebra/Differential/KroneckerPolynomialTargets.lean": "c7c2edcc1a57b176a49f7e43a4792b349444637a5edec87aee9f4aa3adbe61c0",
+    "LogicLineages/ModelsAlgebra/Differential/KroneckerPolynomial.lean": "ab39ae607c59f5949cbaa8b43348ae7f69b0e5b576fad67c9fc6c8dbfd028bf7",
+    "LogicLineages/ModelsAlgebra/Differential/KroneckerPolynomialStatementChecks.lean": "dbbff780ee33a8317ce9a46f6251c5c2b53c252a5b20dc4b1dd236d191d4ba78",
+    "LogicLineages/ModelsAlgebra/Differential/KroneckerPolynomialBounds.lean": "c077d8599264ff07f2c982f2276b7e1fa76574a53d71a14555abc6e82684a8d1",
+    "LogicLineages/ModelsAlgebra/Differential/KroneckerPolynomialBoundsStatementChecks.lean": "92778b0f8aa782308ae9faa9288721da017a0134569c19dac0d56664131a0a1d"
+  },
+  "freeze": "KroneckerPolynomial-FREEZE.json",
+  "scope": "Actual polynomial Kronecker homomorphism with literal finite decoder: exact monomials/coefficients, degree bound and box injection, both inverse identities, decoded box, every-polynomial box coverage, genuine product/quotient coordinate bounds and larger-base multiplication verification. No global unbounded substitution injection, quotient oracle or full effective/source conclusion.",
+  "dependencies": [
+    "KroneckerIndex-ACCEPTED.json"
+  ]
+}

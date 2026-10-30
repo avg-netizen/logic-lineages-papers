@@ -1,0 +1,347 @@
+{
+  "baseline_commit": "abb52d9",
+  "coverage": {
+    "checked_numbered_statements": 31,
+    "inherited_calculator_statements": 2,
+    "pending_numbered_statements": 145
+  },
+  "verification_kind": "Individual successful exact gates; receipt batches may have separate later failures, excluded from acceptance. No new full aggregate or remote CI claimed.",
+  "source_ledgers": [
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-29.json",
+      "sha256": "4814dddb35cf1ceaa150071ed2b7d656cfb723b1232e7b8795cf72fb88a732a6",
+      "snapshot": {
+        "components": [
+          {
+            "source_label": "14-complexity-of-prediction-measures:lem:learning",
+            "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_learning",
+            "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionLearningGate",
+            "source_scope": "Full paper14 lem:learning with actual ordinary partial-recursive codes, total-binary promise and simultaneous finite-history game; fixed recursive Boolean matrix, actual error certificate soundness/completeness, and genuine uniform Computable certificate. Runtime/hardness/oracle-degree claims excluded.",
+            "compiler_receipt": "build-reports/1793310756664606427-2.json",
+            "candidate_unchanged": true,
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "sources": [
+              {
+                "path": "LogicLineages/ComputabilityKnowledge/PredictionGame.lean",
+                "sha256": "d485496e168d5e6bb3e50845202895e164a3c1923992005a5d3a16bc5c5b231d"
+              },
+              {
+                "path": "LogicLineages/ComputabilityKnowledge/PredictionLearning.lean",
+                "sha256": "12ece2a37320ed42ceb460a9c087be1d4363d2f4b326f45b68a7717f86b41b35"
+              },
+              {
+                "path": "LogicLineages/ComputabilityKnowledge/Comparators/PredictionLearning.lean",
+                "sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9"
+              },
+              {
+                "path": "LogicLineages/ComputabilityKnowledge/PredictionLearningGate.lean",
+                "sha256": "9aa41b3491abc63a450316519b989e2b3ec8d41946e40c67a0e2ca29eedcb099"
+              },
+              {
+                "path": "LogicLineages/ComputabilityKnowledge/PredictionLearningProof.lean",
+                "sha256": "398735ee6adc180a7eeedf05eda3798ee7a8b44a1cc0d795ee6b324246f9076c"
+              }
+            ],
+            "proof_module_peak_rss_kib": 849720,
+            "gate_peak_rss_kib": 839048,
+            "accepted_at_utc": "2026-10-29T21:54:50.877696+00:00",
+            "fresh_aggregate_claim": false
+          }
+        ]
+      }
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/ACCEPTED-RESUMED.json",
+      "sha256": "2b7ebac3efd38f06d01b43bd2c597736888fa861d2f5f8dcaca573c7936c99c8",
+      "snapshot": {
+        "accepted_at_utc": "2026-10-29T21:57:33.577510+00:00",
+        "baseline_commit": "abb52d9",
+        "evidence_scope": "Three focused exact gates. Comparison/NF passed in1793310883686383425-2; the separately repaired encoded-ball gate passed in1793311019049845689-2. No fresh all-program aggregate claim.",
+        "numbered_statement_increment": 0,
+        "accepted_components": [
+          {
+            "component": "RawComparison",
+            "scope": "Source paper05 lem:finite-balls supplier, not the entire numbered statement",
+            "target_types": [
+              "LogicLineages.OrdinalComparison.Targets.RawComparisonCorrect",
+              "LogicLineages.OrdinalComparison.Targets.RawComparisonPrimitiveRecursive",
+              "LogicLineages.OrdinalComparison.Targets.RawComparisonOrdinalCorrect"
+            ],
+            "accepted_declarations": [
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawComparisonCorrect",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawComparisonPrimitiveRecursive",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawComparisonOrdinalCorrect"
+            ],
+            "gate_module": "LogicLineages.OrdinalComparison.RawComparisonStatementChecks",
+            "frozen_target_record": "LogicLineages/OrdinalComparison/RAW-COMPARISON-FREEZE.json",
+            "verification_receipt": "build-reports/1793310883686383425-2.json",
+            "verification_receipt_sha256": "34fc66702090b553cffd455a1e654b3a2459d0f757ddf4e4cf3257896ba64281",
+            "successful_gate_returncode": 0,
+            "gate_log": "build-reports/1793310883686383425-2-LogicLineages-OrdinalComparison-RawComparisonStatementChecks.log",
+            "gate_log_sha256": "04dbbb07802a84edde8cb1d13df25e7b92bf5d710d78d388a1c4132161ffa78c",
+            "axioms_by_declaration": {
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawComparisonCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawComparisonPrimitiveRecursive": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawComparisonOrdinalCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "peak_rss_kib": 902660,
+            "files": [
+              {
+                "path": "LogicLineages/OrdinalComparison/RawComparisonDefinitions.lean",
+                "sha256": "bf4b6af50b4a18e04d7d7a0317fa3884b058489e31040ab2ec63079528330bf3"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/RawComparisonTargets.lean",
+                "sha256": "d38bc89c227717bcf0f24de937412262b5ef8bbe35805b16e5951e24dde888fd"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/RawComparisonProof.lean",
+                "sha256": "ad5fd222dc0e860805c56cdefb7724fac569310816b371ffccd20f0c9406c454"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/RawComparisonStatementChecks.lean",
+                "sha256": "2f1caf165983ad84bec0a4fbe467e01716af94297c9df1bcde8addd41fa9eadd"
+              }
+            ]
+          },
+          {
+            "component": "RawNormal",
+            "scope": "Source paper05 lem:finite-balls supplier, not the entire numbered statement",
+            "target_types": [
+              "LogicLineages.OrdinalComparison.Targets.RawNormalDecodeCorrect",
+              "LogicLineages.OrdinalComparison.Targets.RawNormalCorrect",
+              "LogicLineages.OrdinalComparison.Targets.RawNormalPrimitiveRecursive"
+            ],
+            "accepted_declarations": [
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormalDecodeCorrect",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormalCorrect",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormalPrimitiveRecursive"
+            ],
+            "gate_module": "LogicLineages.OrdinalComparison.RawNormalStatementChecks",
+            "frozen_target_record": "LogicLineages/OrdinalComparison/RAWNORMAL-FREEZE.json",
+            "verification_receipt": "build-reports/1793310883686383425-2.json",
+            "verification_receipt_sha256": "34fc66702090b553cffd455a1e654b3a2459d0f757ddf4e4cf3257896ba64281",
+            "successful_gate_returncode": 0,
+            "gate_log": "build-reports/1793310883686383425-2-LogicLineages-OrdinalComparison-RawNormalStatementChecks.log",
+            "gate_log_sha256": "dcf3a9651bd27244a596c4ee8567870fb5f61d4d7afed10a8d957050dcf29994",
+            "axioms_by_declaration": {
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormalDecodeCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormalCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormalPrimitiveRecursive": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "peak_rss_kib": 902896,
+            "files": [
+              {
+                "path": "LogicLineages/OrdinalComparison/RawNormalDefinitions.lean",
+                "sha256": "01f4eeb959e7843e6839ce77f810f553283b7dc7571e2db187af030751b5e48b"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/RawNormalTargets.lean",
+                "sha256": "12cb8a42444e1aaa45a25afe65651dd510bf9c0f06c0153d27e0b6124bbd60f1"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/RawNormalProof.lean",
+                "sha256": "beee0a24b585d401abdc3c61e18c070df0bdb8446de2cbdeaf9d78cdb49f2ef3"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/RawNormalStatementChecks.lean",
+                "sha256": "65c1248237b855a05f5f77f2caf2c765919d8b9bc39eeb268c25687bca038fae"
+              }
+            ]
+          },
+          {
+            "component": "EncodedNormBall",
+            "scope": "Source paper05 lem:finite-balls complete effective-enumeration supplier; natural-arithmetic effectiveness remains separate",
+            "target_types": [
+              "LogicLineages.OrdinalComparison.Targets.RawNormCodeBoundCorrect",
+              "LogicLineages.OrdinalComparison.Targets.EncodedNormalNormBallCorrect",
+              "LogicLineages.OrdinalComparison.Targets.EncodedNormalNormBallDecodeCorrect",
+              "LogicLineages.OrdinalComparison.Targets.EncodedNormalNormBallPrimitiveRecursive"
+            ],
+            "accepted_declarations": [
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormCodeBoundCorrect",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedNormalNormBallCorrect",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedNormalNormBallDecodeCorrect",
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedNormalNormBallPrimitiveRecursive"
+            ],
+            "gate_module": "LogicLineages.OrdinalComparison.EncodedNormBallStatementChecks",
+            "frozen_target_record": "LogicLineages/OrdinalComparison/ENCODEDNORMBALL-FREEZE.json",
+            "verification_receipt": "build-reports/1793311019049845689-2.json",
+            "verification_receipt_sha256": "ffd345121bb37e0214b9463c308112857ae2a1a773eb85bfb8d327ef29dc32d9",
+            "successful_gate_returncode": 0,
+            "gate_log": "build-reports/1793311019049845689-2-LogicLineages-OrdinalComparison-EncodedNormBallStatementChecks.log",
+            "gate_log_sha256": "88a6f24fdf4c6b1163463353fb89d8ecf81bf7021d6c36b7ac745c6481c1cbb5",
+            "axioms_by_declaration": {
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_rawNormCodeBoundCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedNormalNormBallCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedNormalNormBallDecodeCorrect": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedNormalNormBallPrimitiveRecursive": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "peak_rss_kib": 905296,
+            "files": [
+              {
+                "path": "LogicLineages/OrdinalComparison/EncodedNormBallDefinitions.lean",
+                "sha256": "a955d2fcad4e86aaec3c4849c8f687aed9a66cfe0d83747b52b282163b9f7715"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/EncodedNormBallTargets.lean",
+                "sha256": "1b1277db42beec9b05d59298be34c0a29cebfa097822e6a109d956850c2a9ff8"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/EncodedNormBallProof.lean",
+                "sha256": "347de42c2e7663792d130b906a6f9147602d8810769e6bbfb7514700a457f904"
+              },
+              {
+                "path": "LogicLineages/OrdinalComparison/EncodedNormBallStatementChecks.lean",
+                "sha256": "acbbd9b58f41020e7ecb6593f2b3003cc8ea09f1251742c5ec589ce09e2b55fb"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "formalization/LogicLineages/ModelsAlgebra/Differential/RationalCode-ACCEPTED.json",
+      "sha256": "5bc90505143d70a3aa49a4b8272365b9208a50aef8a9d4058ec1242a755489b7",
+      "snapshot": {
+        "accepted_at_utc": "2026-10-29T21:56:29.811758+00:00",
+        "source_paper": "15-differential-field-constraint-decisions/paper.tex",
+        "source_target": "cor:algorithmone supplier only",
+        "numbered_statement_complete": false,
+        "gate": "LogicLineages.ModelsAlgebra.Differential.RationalCodeStatementChecks",
+        "declarations": [
+          "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodeCoverage",
+          "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodeCorrect",
+          "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodePrimitiveRecursive",
+          "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_rationalCodeRoundtrip"
+        ],
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "receipt": "build-reports/1793310930184292314-2.json",
+        "receipt_sha256": "54a044e3112c49da64b2dcc1e1392e5b1b1066395394e2d1f11b9e4e0ebdd8c4",
+        "receipt_note": "These four gates passed; later batch module DensePolynomialDefinitions failed only on missing noncomputable annotation. This is gate-local success, not whole-batch success.",
+        "files": {
+          "LogicLineages/ModelsAlgebra/Differential/RationalCodeDefinitions.lean": "d955451c0b3c2cb2c6947b7fc935f3212d348591ec3e3d943b23d90c93c60780",
+          "LogicLineages/ModelsAlgebra/Differential/RationalCodeTargets.lean": "c3b5d4cb3dd99d0d9c3bb98bfdbe0bdcfac573530606cdeca9fcc49109467773",
+          "LogicLineages/ModelsAlgebra/Differential/RationalCode.lean": "64ae7a32e3f6066e82b52b49f13fb9beacd4771eaad583dadd159940764a80aa",
+          "LogicLineages/ModelsAlgebra/Differential/RationalCodeStatementChecks.lean": "d6bc60148728798872c191b6958787495661bf1eabc2d8dec5bfb601f77c028b"
+        },
+        "scope": "All rationals covered by explicit natural-triple coefficient data; exact field operations and zero/equality tests; genuine primitive-recursive operations and standard encode/decode roundtrip. No polynomial division or full first-order decision claim."
+      }
+    },
+    {
+      "path": "formalization/LogicLineages/ModelsAlgebra/Forests/ACCEPTED-RESUMED.json",
+      "sha256": "47b5080ee9c418361037493470922db5132f09b571b6b0748ff70d93f83fe6fa",
+      "snapshot": {
+        "baseline_commit": "abb52d9",
+        "evidence_scope": "Focused source-type gates and transitive axiom checks after explicit local resume; no new aggregate or remote CI claim.",
+        "numbered_statement_increment": 1,
+        "accepted_components": [
+          {
+            "component": "full-negative-certificate",
+            "scope": "Full paper03 prop:certificate: all semantic and genuine algorithmic clauses; no Carter supplier assumed.",
+            "gate_module": "LogicLineages.ModelsAlgebra.Forests.CertificateFullChecks",
+            "verification_receipt": "build-reports/1793310861481589035-2.json",
+            "receipt_sha256": "638ee7fa5c7c6dd44b037eaa4aeff986a3bdb8777793eacbd5958dbb3119d8fd",
+            "successful_gate_returncode": 0,
+            "gate_log_sha256": "50f39ef1ab64d77afe330aa4482e8d2e7b99de3b508ad40bb2a7b1a04c497f28",
+            "gate_source_sha256": "fbebb214561fdfa84e44e5425d6dac71da2eb384bca663543f5a65e5842644b1",
+            "peak_process_tree_rss_kib": 844584,
+            "axiom_audit_output": [
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.StatementChecks.fixed_fullNegativeCertificateSearch: [propext,",
+              " Classical.choice,",
+              " Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.CertificateSearch.verify.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCodeProof.canonicalCode.eq_1: [propext, Classical.choice, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.toFamily.congr_simp: [propext, Classical.choice, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.embeddingTest.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.permittedTest.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapWords.eq_2: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapTest.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.CertificateSearch.makeCertificate.eq_1: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapWords.eq_1: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.allPairs.eq_1: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.hostCodes.eq_1: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.valid.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapWords.eq_def: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.negativePairTest.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.CertificateSearch.atIndex.eq_1: [propext, Classical.choice, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.CertificateSearch.HasJEP.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.CertificateSearch.familyValidTest.eq_1: [propext, Quot.sound]",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.allRelations.eq_1: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.Rel.eq_1: []",
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.FiniteCode.toForest.congr_simp: [propext, Classical.choice, Quot.sound]",
+              "AXIOM_AUDIT_PASS LogicLineages.ModelsAlgebra.Forests: 21 theorems"
+            ]
+          },
+          {
+            "component": "comparability-forbidden-graphs",
+            "scope": "P4/C4 exclusion direction only; full paper03 lem:bridge remains pending.",
+            "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphExclusionChecks",
+            "verification_receipt": "build-reports/1793310659443056183-2.json",
+            "receipt_sha256": "ec63f15aac6731f5d80efb71af0ab30225b63db332219d1b2efbec2322accd84",
+            "successful_gate_returncode": 0,
+            "gate_log_sha256": "f3928ec70aa9a7e9f1645d79bce7c06e2f45a1fcd3956d72f804b21310990830",
+            "gate_source_sha256": "5873b03f5b0b8330f0a813bf4a16d83d046e82726e43aabb4ba37b73dabf2076",
+            "peak_process_tree_rss_kib": 792940,
+            "axiom_audit_output": [
+              "AXIOMS LogicLineages.ModelsAlgebra.Forests.StatementChecks.fixed_comparabilityForbiddenGraphs: [propext, Quot.sound]",
+              "AXIOM_AUDIT_PASS LogicLineages.ModelsAlgebra.Forests: 1 theorems"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "root_sha256": "0cdde452b990ffc067588a8bedd4db36e3b02a932c3c1b049a11df7512645515",
+  "root_aggregate_status": "New imports selected; combined-root recheck not yet run after local resume.",
+  "recorded_utc": "2026-10-29T22:01:14.340332+00:00",
+  "source_ledger_note": "Embedded snapshots preserve this checkpoint when a lane later appends new accepted components; source proofs and frozen types have their own pinned hashes."
+}

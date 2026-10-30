@@ -1,8 +1,238 @@
 # Ordinal and comparison formalization
 
+Status: **paused** for the user's scheduled local-work stop on 29 October
+2026. The lane froze a clean checkpoint ahead of the 03:00 UTC hard cutoff.
+No compiler or author is live, and no automatic resume is authorized.
+
 Owner: `formalize_ordinals`. Scope: papers 04–10. Root owns package configuration,
 the global target register, build runner and acceptance gates. This file is the
 lane's local checkpoint; it does not resume mathematical frontier research.
+
+## Resumed local formalization after external continuation
+
+Latest checkpoint: **18 newly complete numbered source statements, 58 focused
+exact gate modules and 164 fixed declarations**, all pinned in the owned
+`ACCEPTED-RESUMED.json`. The full paper08 `lem:head-window` has passed
+`1793320989919115950-2`: actual least next limit, exact removal of the final
+omega block and all endpoint/count/value identities, correct common-norm head
+ordering, strict different-head window comparison, and finite-family
+lexicographic/equality/distinct-endpoint classification. Definitions and exact
+targets compiled before proof authorship and are pinned in
+`HEADWINDOW-FREEZE.json`. The first supplier check required only a missing
+finite-power import and explicit unfolding of the source input; the full
+window proof then passed its first check. All six declarations have only
+`propext`, `Classical.choice` and `Quot.sound`. This does not assert global
+monotonicity of the collapse in its ordinal argument.
+
+The paper10 growing-budget transfer is the next actual source target.
+`ControlSegmentStatementChecks` passed `1793321224085185755-2`: original count
+equals remaining count plus elapsed trace; an affordable retained-prefix
+segment has exact local/global count additivity; constant-budget counts ignore
+the finite tail and split additively across the retained prefix. The following
+`ConstantCutFactsStatementChecks` passed its four monomial/CNF decomposition
+and period-divisibility/multiple gates in `1793321442717405095-2`. That receipt
+later failed in the separate monomial-count proof; explicit distributivity
+repairs then passed its complete shifted-partition-sum gate in
+`1793321702809897875-2`. The stronger arbitrary finite-CNF cut-period gate has
+now also passed, `1793321939138507997-2`, using the original constant-budget
+whole count as its potential. It is not a newly defined rank. A final explicit
+omega-to-the-first-power rewrite repaired its only first-check diagnostic.
+The full growing-budget comparator compiled and froze before authorship in
+`1793322038171487045-2`. Its domain uses arbitrary time-indexed budget streams,
+preserving different spends at repeated equal norms. In
+`1793322245975246279-2` all four literal scheduled-count/first-finite/constant-
+count calibration gates passed FIRST TRY, as did both constant-count congruence
+and genuine arbitrary-schedule cut-transfer gates. The numerical initial-block
+theorem passed after two local-definition normalization repairs in
+`1793322571955607458-2`. Its actual-prefix/full conjunction passed
+`1793322729530751956-2`, after removing one unnecessary no-progress `dsimp`.
+**Entire paper10 `thm:transfer` is now accepted**, including arbitrary numerical
+retained mass and the literal retained-CNF-prefix first-finite source segment.
+Every finite-CNF period, count, termination and trajectory supplier is proved;
+no assumed invariant or norm-only controller restriction remains.
+
+Next source target: paper10 `prop:omega-block`. The exact norm-controller to
+indexed-budget stream calibration passed all three exact trace/count/norm-
+iteration gates FIRST TRY in `1793323045974974215-2`. That receipt also compiled
+the actual omega-block ordinal/maximum/period-bound suppliers and full source
+comparator before proof authorship, following an explicit universe annotation
+repair to the new target. `OMEGABLOCKSUPPLIER-FREEZE.json` and
+`OMEGABLOCK-FREEZE.json` pin these exact targets. The ordinal first-step/maximum,
+explicit factorial-period envelope, numerical residue/output-norm and real
+prefix/full candidates are now authored. First ordinal supplier check
+`1793323547398642835-2` found only a missing finite-power import, explicit CNF
+multiplication-by-one simplification and the positive argument to `Nat.div_self`;
+these proof-only repairs are queued. The period/numerical/prefix checks were
+not reached at that historical check. The final explicit PNat/zero-cast and
+period API repairs passed all four ordinal/period suppliers in
+`1793324730379649895-2`. After one local norm-iteration alias rewrite,
+**entire paper10 `prop:omega-block` passed** `1793324854148884682-2`, including
+the exact source-linked residue, literal whole-copy first-finite count,
+Phi-iterate output norm and actual retained-CNF-prefix trace; the full-prefix
+proof passed its first check. All dependencies have only the standard three
+axioms (the purely numerical period-envelope uses just two).
+
+The bounded next paper10 `lem:entry` is also fully accepted in
+`1793325538728784708-2`: a real Theta entry has the literal maximum
+Omega*q+1, exact retained prefix Omega*(q-1), prefix norm u-4/minimum
+exponent, and correct total/suffix norms. Its full witness passed FIRST TRY.
+The Phi residue-three supplier initially hit the fixed RSS guard when a closed
+canonical residue conversion tried to normalize a huge tower. The discarded
+route was replaced by a symbolic induction over positive hierarchy levels;
+the unchanged-resource exact gate passed `1793325317993038156-2` with only
+`propext` and `Quot.sound`. No giant control value was computed, and all
+current transfer/Omega/Theta candidates are now checked and pinned.
+
+Two small original observability suppliers also passed all six gates FIRST
+TRY: actual formal-quotient inverse/reconstruction and numerator uniqueness
+in `1793326078533160649-2`, then literal binary Lambda selectors/word action,
+exact Nat.bits ceiling-log bound, and a short distinguishing series
+continuation in `1793326468117618278-2`. These quantify every field/universe
+and handle zero cutoff/empty continuations correctly. **The original finite
+polynomial/matrix observer transition calibration remains pending**, so the
+full source `lem:observable` and its neighbouring matrix/observer results are
+not counted as complete. Definitions/targets were separately compiled and
+frozen before these proofs; no abstract observer correctness was assumed.
+
+The final bounded supplier, `PolynomialDigitStatementChecks`, passed all three
+gates in `1793326954359734969-2`: the literal finite polynomial Lambda_b has
+every source coefficient, embeds as the actual series selector, and preserves
+degree<D for the transition U→Lambda_b(U*A) when deg(A)≤D and deg(U)<D.
+An explicit theorem instantiation repaired the only embedding-simp diagnostic.
+The next exact missing bridge is characteristic-two quotient transport over
+F2, followed by the finite polynomial/matrix word observation calibration.
+All current owned proof candidates compile and are pinned. No larger bridge
+will be started before this scheduled stop; remaining time is for the saved
+checkpoint, deterministic publication evidence and final pause acknowledgement.
+
+The user scheduled a hard local-work stop at **03:00 UTC on 30 October 2026**
+(10pm on 29 October in Chicago), with a clean checkpoint by 02:58. No automatic
+resume is authorized afterward. The bounded suppliers above are complete;
+the lane is now paused. Root owns publication, and accepted artifacts
+are mirrored in the private deterministic publication snapshot. The
+larger original typed-language translation and comparison decision suppliers
+remain pending. No whole-paper completion or combined-root/CI claim follows
+from this focused checkpoint.
+
+The user explicitly resumed this lane on 29 October 2026, together with the
+other independent lane, the Codex-led Claude loop and main. The external
+checkpoint below is the starting mathematical state; older paused/uncompiled
+records remain historical. No unrelated research or Git publication resumed.
+
+The first new supplier is an encoded lexicographic comparison on the accepted
+raw hereditary-CNF codec. `RawComparisonDefinitions.lean` uses a finite table
+indexed by paired input codes. `RawComparisonTargets.lean` requires agreement
+with literal `ONote.cmp` on all raw inputs, comparison of the actual ordinal
+denotations on normal inputs, and genuine `Primrec₂`. The target compiled in
+`build-reports/1793309188919473299-2.json` before candidate authorship; exact
+definition/target hashes are in `RAW-COMPARISON-FREEZE.json`. The first proof
+check reached actual diagnostics in `1793310538754234009-2.json`: the primitive
+recursion proof needed the List import and correct `Primrec₂.natPair` name, and
+the zero-case decoder rewrite needed explicit simplification. Those proof-only
+repairs then passed all three exact gates in `1793310883686383425-2.json`;
+the fixed target and algorithm definition are unchanged. Literal all-raw
+comparison, full normal-ordinal comparison and genuine `Primrec₂` are checked.
+
+`RawNormalDefinitions.lean` and `RawNormalTargets.lean` separately prepare a
+numeric normal-form recognizer whose correctness is the original Mathlib
+`ONote.NF` on every raw input. Its target compiled in the same receipt and was
+hash-frozen before its separate correctness/primitive-recursion proof was
+authored. All three source/all-code correctness and `Nat.Primrec` gates passed
+on the first candidate check, in `1793310883686383425-2.json`. All six comparison
+and normality declarations have only the permitted three standard axioms.
+Exact successful gate/log/receipt and source hashes are recorded in
+`LogicLineages/OrdinalComparison/ACCEPTED-RESUMED.json`. These are source
+`lem:finite-balls` suppliers; the entire numbered lemma and encoded closed
+evaluator are not yet accepted.
+
+While the shared resource turn is held by the Claude author, the lane has also
+prepared `EncodedNormBallDefinitions/Targets.lean`: an explicit primitive-
+recursive raw-code bound and bounded-range filtering by the numerical norm
+and normality tests. The fixed targets demand exact membership on every raw
+notation/code. The target files now compile and their hashes were frozen before
+candidate proof authorship; the exact membership/bound/primitive-recursion proof
+and fixed gates reached actual diagnostics in the same invocation after the
+comparison/normality passes. Three missing explicit theorem instantiations in
+membership rewrites were repaired; all four gates then passed in
+`1793311019049845689-2.json`, with only the standard three axioms. The numerical
+bound, source and all-code exact membership, and genuine `Primrec` numerical
+list enumeration are now accepted in the same `ACCEPTED-RESUMED.json` ledger.
+The bound is a computability witness, not a claimed efficient implementation.
+The two later freeze files are `RAWNORMAL-FREEZE.json` and
+`ENCODEDNORMBALL-FREEZE.json`. Natural-sum/product effectiveness remains separate,
+so the entire numbered `lem:finite-balls` is still pending.
+
+The encoded exhaustive maximum predecessor now passes all three exact gates:
+filter the accepted finite normal norm ball by literal comparison, then fold
+its maximum. `Primrec₂`, equality to the exact notation-domain
+`maximumPredecessor`, and denotation equal to the independently defined actual
+ordinal maximum all passed in `1793311867596116473-2.json`. This does not prove
+the separate optimized simultaneous-recursion theorem.
+
+The same receipt accepts all four `RawSplit` gates: literal `ONote.split`
+agreement on every raw input, normality of the limit part, ordinary ordinal
+division/remainder calibration to `actualLimitPart`/`actualTailPart`, and
+`Nat.Primrec`. Both bundles' definitions and targets were compiled and frozen
+before proof authorship; only proof bodies received compiler-directed repairs.
+The owned acceptance ledger now has five complete gate modules and 17 exact
+fixed declarations, with only the permitted standard three axioms.
+
+`EncodedDescentStatementChecks` then passed all six exact numerical-step and
+iteration gates on its first proof check, `1793312268825744492-2.json`. Finite
+test/value calibration, finite absorption, source-normal nonfinite replacement,
+the exact original Phi/norm budget and actual ordinal step agreement are proved;
+step and bounded iteration have genuine primitive-recursion certificates.
+
+**The full source `cor:closed-evaluation` now passes**, in
+`1793312501751007316-2.json`, on the first evaluator candidate check. Its seven
+gates prove: coded trajectory through the exact source replacement count;
+least first-finite index and endpoint; the concrete program's `Partrec`
+certificate; totality on all raw codes (nonnormal syntax returns zero); genuine
+`Computable` total evaluation; and equality to the independently defined
+`actualCollapse` on every normal supplied input. The final conjunction retains
+the original finite/step calibration and literal procedure. The source's
+proved first-finite trajectory supplies a termination proof, not an assumed
+termination field. `Part.getOrElse` is only a total-value wrapper; its default
+branch is unreachable after the proved all-code totality.
+
+`ACCEPTED-RESUMED.json` now pins seven complete gate modules and 30 fixed
+declarations. Only `cor:closed-evaluation` is a newly complete numbered statement;
+the others are its discharged computational suppliers. Its full dependency
+chain uses only the standard three axioms. No optimized maximum algorithm,
+original-source translation, comparison decision procedure or remaining
+arithmetic-effectivity clause is claimed from this evaluator alone.
+
+**The entire source `lem:finite-balls` is now checked as well.** Encoded natural
+sum passed its three exact gates in `1793313100848228782-2.json`, after proof-only
+zero-case unfolding/coefficient simplification repairs. Encoded monomial and
+natural product passed five gates in `1793313524592757121-2.json`, after
+proof-only dependent-generalization and positive-coefficient annotation repairs.
+Both are genuine primitive-recursive numerical algorithms and agree with the
+literal source algorithms on every raw input; normality, independent actual
+natural-arithmetic denotation and the exact source norm equality/bound are
+retained.
+
+The final `EncodedFiniteBallsTargets.lean` was compiled and frozen before its
+separate proof. All three final gates passed on the first candidate check in
+`1793313695732833877-2.json`. They prove the exact actual-ordinal image of the
+numerical enumerator, natural-sum norm additivity on all actual ordinals below
+epsilon zero, and the full source conjunction with finiteness, faithful codec,
+effective enumeration, comparison and both natural arithmetic operations.
+There is no unproved effectiveness field or source-domain restriction beyond
+the manuscript's original below-epsilon-zero domain.
+
+The owned `ACCEPTED-RESUMED.json` ledger now pins ten complete gate modules and
+41 fixed declarations, with **two newly complete numbered statements**. Other
+components are suppliers, not additional numbered increments. Main owns the
+global target-register and aggregate refresh. All closures use only the three
+permitted standard axioms. The next paper05 target is the optimized simultaneous
+maximum/predecessor recursion; original-source translation, countervaluation
+bounds and downstream comparison papers remain separately pending.
+
+Compilation uses the measured external profile (2048 MiB heap, 1536 MiB RSS,
+2048 MiB minimum free) through the unchanged shared-lock runner. A first target
+attempt was refused by a busy lock before Lean launch; the next granted turn
+passed. Main coordinates future turns with Claude and the other lane.
 
 ## Authorized external continuation — 2026-10-29 16:45 UTC
 
@@ -411,3 +641,274 @@ proof/semantic SHA pins; put extensions in separate files. Finite-tail/saturatio
 and source-kernel structural candidates remain pending. Native slot reservations cover running invocations only;
 source repairs do not hold the shared compiler. No uncompiled candidate is an
 accepted paper theorem.
+
+### Optimized maximum recurrence checkpoint (29 October, resumed)
+
+All four actual-ordinal clauses of paper05 `thm:maximum`, including every source
+budget/phase decrease, now pass the independently frozen comparator. The base
+and decrease gates passed on their first proof check (`1793314211816770670-2`).
+The greedy lower-power gate passed at `1793314709538250948-2`; retain/drop and
+the full recurrence conjunction passed at `1793314910591692302-2` after two
+identifier/naming repairs. Each transitive axiom closure is within the standard
+three. These are partial suppliers, with **no additional numbered increment**:
+the literal optimized implementation and its correctness/computability proof
+are the next task. The owned acceptance ledger now pins thirteen successful
+gates / 47 fixed declarations; the two complete numbered additions remain
+closed evaluation and finite norm balls.
+
+### Full optimized maximum algorithm accepted
+
+**The entire source paper05 `thm:maximum` now passes.** The independently frozen
+`OptimizedAlgorithmTargets.lean` retains the full actual-ordinal recurrence and
+termination conjunction, a literal simultaneous M/L fuel interpreter, normality
+and actual-maximum correctness for every sufficient fuel, exact numerical
+reference agreement and genuine `Computable₂` for both public algorithms.
+The interpreter calls only its own strictly smaller-fuel branches and never the
+exhaustive maximum. Its fuel is proved sufficient from the source budget/phase
+rank, including the second greedy call's remainder bound derived from the first
+call's proved output norm. Extensional agreement with the independently checked
+exhaustive code algorithm transfers its computability certificate.
+
+The full fuel-induction gate passed at `1793315181749595936-2`; the final seven
+gates, including the whole source conjunction, passed at
+`1793315377840158403-2`. All proof closures use only the standard three axioms.
+Only compiler-directed notation/coercion/zero-constructor repairs were made;
+no frozen algorithm or target changed. Definition and target SHA pins are in
+`OPTIMIZEDALGORITHM-FREEZE.json`. The owned acceptance ledger now pins fifteen
+complete focused gates / 55 fixed declarations, with **three** complete numbered
+additions in this resumed lane. The next downstream work is paper07's actual
+sparse-peak bounds and orbit cancellation at root norms, feeding its identity
+and one-variable comparison arguments. Original typed-source translation and
+all other uncompleted source clauses remain pending.
+
+### First downstream paper07 source lemmas accepted
+
+`PeakOrbitTargets.lean` compiled and was frozen before its proof. All three
+fixed gates passed at `1793315534494548274-2`, after two proof-only projection
+and local-definition rewrites. This completes paper07 `lem:sparse` and
+`lem:roots` on their full source domains: the exact terminal count bound,
+peak/control identity and strict gap chain on infinite inputs of norm at least
+two; cancellation of literal control iterates from roots outside its actual
+range; and equality of actual source ordinals when their root-norm peaks agree.
+The last proof uses the independently defined actual collapse and controlled
+strictness, never unrestricted ordinal monotonicity of collapse.
+
+The acceptance ledger now pins sixteen successful focused gate modules /
+58 fixed declarations and **five** complete numbered additions. The next
+source dependency is paper07 `lem:counts`, extending the already checked
+fixed-Phi count monotonicity to the original ordered pair of controls. Its
+separate actual step, norm-saturation and count recursion must be proved;
+no control-comparison theorem is imported as an assumption.
+
+### Ordered arbitrary-control counts accepted
+
+The full paper07 `lem:counts` now passes. `ControlledStep` independently proves
+actual arbitrary-control ordinal descent, exact next-norm saturation, and joint
+step/norm monotonicity. All three gates passed on their first proof check at
+`1793315657007833143-2`. `ControlledCount` then defines the literal count by
+well-founded recursion using that proved descent. Its independently frozen
+comparator includes both count equations, correspondence with the original
+fixed-Phi evaluator, joint count monotonicity, and the source theorem for
+ordered increasing controls strictly exceeding their inputs.
+
+All five count gates passed at `1793315788852128190-2`, after adding one
+reflexivity closure for the definition's well-founded unfolding. Definitions
+and targets are unchanged from their compiled freezes. All closures use the
+standard three axioms. The ledger now pins eighteen complete focused gates /
+66 fixed declarations and **six** complete numbered additions. The count law
+is proved, not carried by an assumed controller class or termination field.
+
+### Actual modular-control arithmetic accepted
+
+The full paper08 `lem:growth` passes at `1793316081800671532-2`: each literal
+variable-seed hierarchy level is genuinely computable, strictly increasing,
+and dominates exponentiation; the precise successor-level exponential gap and
+the arbitrary source linear-factor Phi gap are proved. No runtime feasibility
+claim is made.
+
+The full paper08 `lem:residues` and paper10 `thm:envelope` now also pass, at
+`1793316270707139494-2`. The fixed witness `F₁(m) mod m` is primitive recursive
+and has the required range. Tower stabilization for every positive modulus and
+all sufficiently large seeds/heights is proved by modulus induction with the
+actual odd/two-power decomposition, Euler's theorem and CRT; its own gate
+passed at `1793316152200518394-2`. The source hierarchy lifting retains every
+threshold and both large-modulus envelopes, including the next-Phi-input bound.
+This uses no unproved modular supplier, CRT choice oracle or substituted control.
+
+All definitions/targets were compiled and hash-frozen before proof authoring in
+`CONTROLRESIDUE-FREEZE.json`. Actual compiler-directed repairs affected only
+induction parameters, local-definition unfolding and an unnecessary tactic after
+an already solved goal. All axiom closures remain within the standard three.
+The ledger now pins **21 successful focused gate modules / 76 fixed declarations**
+and **nine** complete numbered additions across papers05,07,08,10. The difficult
+restricted-partition count/transfer and source-language decision claims remain
+pending; constant control residues alone do not prove them.
+
+### Actual restricted-partition count suppliers checked
+
+`RestrictedPartitionDefinitions.lean` uses exactly the source nonnegative
+multiplicity vectors `a : Fin d → Nat` with weighted sum
+`sum_i (i+1)*a_i = n`, and defines `p_d(n)` as their actual cardinality.
+The frozen comparator requires their finiteness, coordinate bound, unit count,
+last-coordinate recurrence, and eventually the full source period. The first
+four gates now pass at `1793316801462795639-2`: the recurrence is obtained by
+an explicit dependent equivalence splitting and rejoining the last coordinate.
+It is not an assumed law or a substitute definition of the source count.
+
+Only proof-level import, syntax, universe and dependent-coercion repairs were
+needed. Standard-three-axiom closures passed. The source period remains pending
+while its finite-sum argument is authored. The ledger now has22 exact gate
+modules /80 fixed declarations, still **nine** complete numbered additions.
+
+### Full actual restricted-partition period accepted
+
+The entire source paper10 `lem:period` now passes at
+`1793317037244397780-2`. Its source count remains the actual multiplicity-vector
+cardinality. From the separately checked split/join recurrence, the proof
+obtains the one-step increment law, sums it over the source shift, and proves
+that `m` blocks of the lower-degree periodic sequence cancel modulo `m`.
+This gives exactly `d! * m^(d-1)` for every positive degree and modulus and
+every nonnegative input. No optimal-period claim is added.
+
+Only two finite-sum reordering/local-definition repairs were needed after the
+first candidate compile; the frozen definitions and targets are unchanged.
+Both final gates and their transitive standard-three-axiom closures pass.
+The ledger now pins23 focused exact gates /82 fixed declarations and **ten**
+complete numbered additions. Next: the source constant-budget ordinal-count /
+restricted-partition cardinality bridge, before any growing-budget transfer or
+selected-parity claim is made.
+
+### Exact constant-budget ordinal counts checked
+
+The frozen actual-source count/cardinality supplier passes at
+`1793317760528604588-2`: for every nonfinite ordinal below epsilon zero and
+every natural constant norm budget, the literal replacement count equals the
+number of **all** actual ordinals of that exact norm below its limit part.
+The proof recursively removes the true greatest eligible state from the exact
+finite state set, counting the finite endpoint once. Exact set membership and
+the equal-norm finite-tail order lemma separately pass at
+`1793317410603925359-2`. No ranking/enumeration law is assumed.
+
+These are partial paper10 `lem:fixed` suppliers. The actual polynomial-state /
+partition-vector bijection and the manuscript's retained-prefix segment clause
+remain pending. `PolynomialOrdinalDefinitions/Targets.lean` are drafted for
+the first bridge and await their compiled freeze before candidate proofs.
+The ledger now pins25 complete focused gates /85 fixed declarations; ten
+numbered additions remain complete. The source fixed-budget lemma has not
+been promoted prematurely.
+
+### Complete numerical fixed-budget partition bridge checked
+
+The literal decreasing-CNF polynomial map is now proved normal and exactly
+norm-correct on every natural multiplicity vector (`1793318018784728818-2`),
+injective, and complete for **every** actual ordinal below `omega^d`
+(`1793318139211580965-2`). The coefficient of the finite tail is retained as
+coordinate zero and contributes weight one. No generated/sample-domain
+restriction is introduced.
+
+The exact ordinal-state/partition-cardinality bijection passed both final gates
+on its first check (`1793318195910397634-2`). Combining it with the literal
+constant-budget count/cardinality theorem proves the entire numerical clause of
+paper10 `lem:fixed`, also on its first candidate check
+(`1793318250463706589-2`). It retains all original degree/mass/budget/affordable-
+tail hypotheses and actual ordinal descent. All dependencies and transitive
+standard-three-axiom gates pass.
+
+The extra source statement identifying this numerical process with a segment
+above a compatible retained CNF prefix is still pending. Accordingly the full
+numbered `lem:fixed` is not promoted. The next step is its literal CNF
+compatibility, norm-concatenation and maximum/prefix splitting chain. The ledger
+now pins29 exact gate modules /91 fixed declarations, still ten complete
+numbered additions.
+
+### Literal compatible-prefix norm and maximum splitting checked
+
+The actual CNF compatibility predicates now explicitly allow zero prefix and
+equal boundary exponents. Minimum-exponent/omega-power-divisibility calibration
+and the exact compensated control bounds passed on their first checks at
+`1793318587040274907-2`. Ordinary ordinal norm concatenation, proved first on
+literal normal notes and then all actual source ordinals, passed at
+`1793318880036174294-2` after one zero-constructor unfolding repair.
+
+Both actual maximum-prefix splitting gates passed on their first proof check
+at `1793319010489775703-2`, on the full literal source CNF domain. No ordinary
+addition is replaced by natural addition, and no compatibility premise is
+silently strengthened to strict boundary separation.
+
+The remaining step for full paper07 `lem:prefix` and paper10 `lem:fixed` is
+the relative first-finite-cut trace conjugacy. `PrefixTraceDefinitions/Targets`
+are drafted and await compiled freeze; they distinguish reaching `prefix+n`
+from reaching the global finite terminal state and require every preceding
+trace state to remain at least `prefix+omega`. No trace/count law is assumed.
+The ledger pins32 exact gate modules /97 fixed declarations; ten numbered
+additions remain complete until the full relative-cut clauses pass.
+
+### New trace comparator parsing correction (not accepted)
+
+The first `PrefixTraceBasic` check (`1793319232389894095-2`) rejected even the
+zero-iterate equation. It exposed a genuine binding bug in the **new,
+unaccepted** definition: `(actualControlledStep g^[k]) a` iterated the Nat
+control `g` before applying the ordinal step. The intended source definition
+is `((actualControlledStep g)^[k]) a`. That explicit parenthesization is now
+written; the original freeze and failure explanation are preserved in
+`PREFIXTRACE-SUPERSEDED-PARSING-FREEZE.json`. No trace declaration was accepted,
+and no existing accepted theorem depends on this new module. The corrected
+semantic definition/targets must compile and be frozen again before further
+proof repair. All previously pinned32 gate modules remain unchanged.
+
+The corrected ordinal-step iterate definition and unchanged source targets
+recompiled at `1793319439404636681-2` and were frozen again as revision2 before
+proof repair. The complete arbitrary-control first-finite trace invariant and
+pure limit-part prefix addition then passed at `1793319466131889479-2`.
+Current `PREFIXTRACE-FREEZE.json` identifies the superseded parsing record
+explicitly. The accepted definition has SHA
+`293d42e4a8dfe84f060c986d02ddd5af294301b9e9ee08bf8a85ab18f6675381`.
+All closures use only the standard three axioms. The ledger now pins33 exact
+gate modules /99 fixed declarations, still ten numbered source additions.
+General prefix-conjugacy and final source cut/retained-prefix proofs are now
+authored against that corrected frozen contract and await their first checks.
+
+### Full relative-cut and retained-prefix source lemmas accepted
+
+**Entire paper07 `lem:prefix` and paper10 `lem:fixed` now pass.** General actual
+prefix step/trace conjugacy and all four final source gates passed on their
+first candidate check at `1793319734291867812-2`, against corrected/refrozen
+ordinal-step semantics. Every intermediate trace equality holds through the
+literal first finite **remainder** count; every earlier whole state is at least
+`prefix+omega`; the cut endpoint is `prefix+n`. This keeps the source relative
+cut distinct from its global terminal count.
+
+The paper07 gate retains full actual CNF compatibility, maximum splitting,
+ordinary norm concatenation and the exact Phi residual control. The paper10
+gate includes the complete numerical partition count and its actual retained
+CNF prefix segment, all original affordable-budget/tail hypotheses, positive
+count and finite cut endpoint. Zero prefix and equal boundary exponents remain
+covered. No trace/termination/compatibility property is an assumed field.
+
+All transitive axiom closures are the standard three. The ledger now pins
+**35 exact gate modules /105 fixed declarations** and **twelve** complete
+numbered source additions. The old parsing freeze remains explicitly
+superseded evidence and is not an accepted dependency. The corrected current
+semantics and full source gates are the only accepted trace chain.
+
+### Sparse actual endpoints and complete-count source calibration checked
+
+Entire paper08 `lem:endpoints` and paper10 `prop:complete` passed all eight gates
+on their first candidate check at `1793320317094052515-2`. Actual head inputs
+are the original `lambda+(t-N(lambda))`, with domain, exact total norm and
+nonfiniteness proved. The complete-count gate explicitly reuses the already
+verified source foundation, identifies the original literal ordinal trace and
+count, proves first-finite termination and both endpoint/value identities.
+
+The endpoint gate proves fixed-head values and terminal endpoints strictly
+increase with their actual norm inputs, proves the exact exponential spacing
+of any two distinct infinite endpoints, and retains every sparse source value
+band below the next control value. Joint count order is used only with both
+required ordinal/norm inequalities; no unrestricted collapse monotonicity is
+introduced. All source domains and standard-three-axiom closures pass.
+
+The ledger now pins37 focused exact gates /113 fixed declarations and
+**fourteen** complete numbered additions. The next direct source target is
+paper08's strict interval comparison between different ordinal heads, using
+the newly checked retained-prefix and endpoint chains. Growing-budget residue
+transfer and the cited decision suppliers remain separate pending targets.

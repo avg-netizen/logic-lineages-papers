@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.GrowingBudgetPrefixProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualLocalRetainedPrefixControlTrace : Targets.ActualLocalRetainedPrefixControlTrace :=
+  actualLocalRetainedPrefixControlTrace
+theorem fixed_actualRetainedPrefixCongruentBudgetTransfer : Targets.ActualRetainedPrefixCongruentBudgetTransfer :=
+  actualRetainedPrefixCongruentBudgetTransfer
+theorem fixed_fullActualCongruentBudgetTransfer : Targets.FullActualCongruentBudgetTransfer :=
+  fullActualCongruentBudgetTransfer
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

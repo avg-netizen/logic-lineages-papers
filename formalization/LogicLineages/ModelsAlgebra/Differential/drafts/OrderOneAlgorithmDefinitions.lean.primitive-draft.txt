@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ModelsAlgebra.Differential.DenseDivisionDefinitions
+public import LogicLineages.ModelsAlgebra.Differential.CurveDefinitions
+
+@[expose] public section
+
+/-! Concrete input/output of the first-order decision. The input is a list of
+Z-coefficients, each a finite Y-polynomial, plus the finite lower-order q.
+The test uses r | r' q instead of a factorization oracle for radical(r).
+-/
+namespace LogicLineages.ModelsAlgebra.Differential.OrderOneAlgorithm
+
+abbrev Input := List DensePolynomial.Code
+
+noncomputable def inputValue : Input → BivariatePolynomial
+  | [] => 0
+  | a :: as => Polynomial.C (DensePolynomial.value a) + Polynomial.X * inputValue as
+
+def specialization (p : Input) : DensePolynomial.Code := p.getD 0 []
+
+def decide (p : Input) (q : DensePolynomial.Code) : Bool :=
+  let r := specialization p
+  !(DensePolynomial.isZero r) &&
+    DenseDivision.divides r (DensePolynomial.mul (DensePolynomial.derivative r) q)
+
+end LogicLineages.ModelsAlgebra.Differential.OrderOneAlgorithm

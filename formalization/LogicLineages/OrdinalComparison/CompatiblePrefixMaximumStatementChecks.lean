@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.CompatiblePrefixMaximumProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualDivisiblePrefixMaximum : Targets.ActualDivisiblePrefixMaximum := actualDivisiblePrefixMaximum
+theorem fixed_actualCompatiblePrefixMaximum : Targets.ActualCompatiblePrefixMaximum := actualCompatiblePrefixMaximum
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

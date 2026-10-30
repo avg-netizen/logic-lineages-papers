@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.ControlledCountProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualControlledCountRecursion : Targets.ActualControlledCountRecursion :=
+  actualControlledCountRecursion
+theorem fixed_actualControlledCountPhiAgreement : Targets.ActualControlledCountPhiAgreement :=
+  actualControlledCountPhiAgreement
+theorem fixed_actualControlledCountsJointMonotone : Targets.ActualControlledCountsJointMonotone :=
+  actualControlledCountsJointMonotone
+theorem fixed_actualOrderedControlsAndCounts : Targets.ActualOrderedControlsAndCounts :=
+  actualOrderedControlsAndCounts
+theorem fixed_fullActualOrderedControlsAndCounts : Targets.FullActualOrderedControlsAndCounts :=
+  fullActualOrderedControlsAndCounts
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

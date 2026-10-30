@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.RestrictedPartitionCountProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_restrictedPartitionCoordinateBound : Targets.RestrictedPartitionCoordinateBound :=
+  restrictedPartitionCoordinateBound
+theorem fixed_restrictedPartitionFinite : Targets.RestrictedPartitionFinite := restrictedPartitionFinite
+theorem fixed_restrictedPartitionUnitCount : Targets.RestrictedPartitionUnitCount := restrictedPartitionUnitCount
+theorem fixed_restrictedPartitionLastCoordinateRecurrence : Targets.RestrictedPartitionLastCoordinateRecurrence :=
+  restrictedPartitionLastCoordinateRecurrence
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.HeadEndpointProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualNonfiniteNormLowerBound : Targets.ActualNonfiniteNormLowerBound := actualNonfiniteNormLowerBound
+theorem fixed_actualFixedHeadValueEndpointOrder : Targets.ActualFixedHeadValueEndpointOrder :=
+  actualFixedHeadValueEndpointOrder
+theorem fixed_actualDistinctEndpointExponentialGap : Targets.ActualDistinctEndpointExponentialGap :=
+  actualDistinctEndpointExponentialGap
+theorem fixed_actualInfiniteValueEndpointBand : Targets.ActualInfiniteValueEndpointBand := actualInfiniteValueEndpointBand
+theorem fixed_fullActualSparseEndpointComparison : Targets.FullActualSparseEndpointComparison :=
+  fullActualSparseEndpointComparison
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

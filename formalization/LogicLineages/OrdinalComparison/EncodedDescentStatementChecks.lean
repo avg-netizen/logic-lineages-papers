@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.EncodedDescentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedFiniteCorrect : Targets.EncodedFiniteCorrect := encodedFiniteCorrect
+theorem fixed_encodedFiniteAlgorithmsPrimitiveRecursive : Targets.EncodedFiniteAlgorithmsPrimitiveRecursive :=
+  encodedFiniteAlgorithmsPrimitiveRecursive
+theorem fixed_encodedDescentStepCorrect : Targets.EncodedDescentStepCorrect := encodedDescentStepCorrect
+theorem fixed_encodedDescentStepFiniteFixed : Targets.EncodedDescentStepFiniteFixed := encodedDescentStepFiniteFixed
+theorem fixed_encodedDescentStepPrimitiveRecursive : Targets.EncodedDescentStepPrimitiveRecursive :=
+  encodedDescentStepPrimitiveRecursive
+theorem fixed_encodedStateAfterPrimitiveRecursive : Targets.EncodedStateAfterPrimitiveRecursive :=
+  encodedStateAfterPrimitiveRecursive
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.PrefixTraceSourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCompatiblePrefixFirstFiniteCut : Targets.ActualCompatiblePrefixFirstFiniteCut :=
+  actualCompatiblePrefixFirstFiniteCut
+theorem fixed_actualRetainedPrefixFixedBudgetCount : Targets.ActualRetainedPrefixFixedBudgetCount :=
+  actualRetainedPrefixFixedBudgetCount
+theorem fixed_fullActualCompatiblePrefixSplitting : Targets.FullActualCompatiblePrefixSplitting :=
+  fullActualCompatiblePrefixSplitting
+theorem fixed_fullActualFixedBudgetPartitionCount : Targets.FullActualFixedBudgetPartitionCount :=
+  fullActualFixedBudgetPartitionCount
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics
+public import LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramEffectivity
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramProof
+
+theorem effectiveNormalization : Comparators.ExponentialNormalizerProgram.Target :=
+  ⟨ExponentialNormalizerProgramSemantics.literalCompilation,
+    ExponentialNormalizerProgramSemantics.rowRepresentation,
+    ExponentialNormalizerProgramSemantics.exactDepth,
+    ExponentialNormalizerProgramSemantics.rawDomain,
+    ExponentialNormalizerProgramEffectivity.actualPrimitivePrograms,
+    ExponentialNormalizerProgramSemantics.fullEffectiveNormalization⟩
+
+end LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramProof

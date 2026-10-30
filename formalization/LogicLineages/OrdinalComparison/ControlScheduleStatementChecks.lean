@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.ControlScheduleProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualControlBudgetStreamTrace : Targets.ActualControlBudgetStreamTrace := actualControlBudgetStreamTrace
+theorem fixed_actualControlBudgetStreamCount : Targets.ActualControlBudgetStreamCount := actualControlBudgetStreamCount
+theorem fixed_actualControlledNormIteration : Targets.ActualControlledNormIteration := actualControlledNormIteration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

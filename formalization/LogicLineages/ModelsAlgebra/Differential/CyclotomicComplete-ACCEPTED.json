@@ -1,0 +1,38 @@
+{
+  "accepted_at_utc": "2026-10-30T01:51:16.706961+00:00",
+  "source_target": "15-differential-field-constraint-decisions:prop:cyclotomic",
+  "numbered_statement_complete": true,
+  "gate": "LogicLineages.ModelsAlgebra.Differential.CyclotomicCompleteStatementChecks",
+  "declarations": [
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicCoefficientCode",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicAlgorithmTotal",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicAlgorithmPartialRecursive",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicEffectiveFamily",
+    "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicFullSource"
+  ],
+  "complete_source_declaration": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicFullSource",
+  "complete_source_type": "LogicLineages.ModelsAlgebra.Differential.Targets.cyclotomicFullSource",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "receipt": "build-reports/1793324961868888828-2.json",
+  "receipt_sha256": "4f31f7d7cd9cc75bc93dcc5e3be2612042ef218b53b44a1a1e1ed7f80e81b584",
+  "first_actual_proof_check_passed_unchanged": true,
+  "source_sha256": "2018ce8204773cb5db59ce4fdddcaf1d454c2b7d08b7b9f289749888e096e813",
+  "files": {
+    "LogicLineages/ModelsAlgebra/Differential/CyclotomicAlgorithmDefinitions.lean": "2ec5d666b3375ac316d6d4e75d722c7dddacadabf874d56f58b3ce4ebc788f15",
+    "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteTargets.lean": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+    "LogicLineages/ModelsAlgebra/Differential/CyclotomicAlgorithm.lean": "a53101d63175c94d01a36dda59a78242057276220f9a7c32024227a433e35adc",
+    "LogicLineages/ModelsAlgebra/Differential/CyclotomicComplete.lean": "790958e870050f9f927bc9c8b9cbdca719b21506affcf5fe1401761cd48921e9",
+    "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteStatementChecks.lean": "9c4c5b7d6abd705d3b4762d4d76d16dcbe0c887bb0bd7b05f8cb265132f1df6f"
+  },
+  "freeze": "CyclotomicComplete-FREEZE.json",
+  "scope": "FULL original proposition including all actual prime irreducibility/independent splitting-spectrum conclusions, unbounded differential orders, nonzero positive constrained pairs and all-q semantic criterion, every rational lower-q input coverage, and ONE genuinely uniform total Mathlib Computable decision over ell/base/qcode. Explicit all-one coefficient generation is primitive recursive; source search is all-code total and Partrec. Actual arbitrary-universe ConstrainedLinear semantics, no roots or selected coefficients supplied to algorithm. No extra axiom/oracle/private dependency, runtime bound or general promise-recognizer claim.",
+  "dependencies": [
+    "CyclotomicFamily-ACCEPTED.json",
+    "SpectralAlgorithm-ACCEPTED.json",
+    "BoxPolynomialCode-ACCEPTED.json"
+  ]
+}
