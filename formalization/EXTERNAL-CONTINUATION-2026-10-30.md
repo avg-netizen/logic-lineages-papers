@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 76 checked numbered statements, two inherited calculator
-results, and 100 pending statements.
+Current register: 78 checked numbered statements, two inherited calculator
+results, and 98 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -175,6 +175,9 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   cuts, the executable positive-expression compiler and permanent numerical
   mass. The direct lower-profile/fixed-head upper-bound lemma is now checked,
   with an executable faithful-notation dominator/threshold construction.
+  The unchanged adjacent-level theorem and limit-exponent mass-separation
+  theorem are now checked, with executable thresholds and all genuine dynamic
+  domains. The general strict-mass theorem remains a separate induction.
   General sign/identity algorithms and unproved kernel-evaluation
   effectivity are not inferred from these results.
 
@@ -209,8 +212,34 @@ The adjacent-level work in paper 07 records a proof-prose typo at paper.tex line
 560: b=M(L,B-e) has norm B-e and total input B, not norm B. The numbered theorem
 at lines 523–536 is unchanged; the proof supplier uses the literal definition.
 Integer subtraction in the packed coefficient is retained via a proved
-nonnegative (B'+e)-(B+p), not truncated p-e. The adjacent theorem itself is not
-claimed complete by this note.
+nonnegative (B'+e)-(B+p), not truncated p-e. The unchanged adjacent theorem is now independently checked; the note
+documents the repaired proof bookkeeping, not a change to its statement.
+
+### Paper 08 signed-depth domain obstruction
+
+The actual degree-one suffix counter is identically one. Consequently a negative
+signed depth j has no eventual positive-depth domain when d=1. This obstruction
+is now kernel-checked in SignedKernelDomain. Paper 08's kernel-residue statement
+(lines 496–505) and earlier positive-tail wording (244–260) do not retain this
+exception. Its signed recursion (275–278) also calls the degree-one signed factor
+when d=2, so the same issue affects sufficiently negative shifts there.
+
+The unchanged full claims remain pending and the manuscript is untouched.
+The actual counter-only residue algorithm, primitive-recursive restricted
+partition evaluator, and explicitly labeled genuine-domain/corrected-regime
+suppliers are checked. They are not substituted for the broader printed claims.
+
+### Paper 12 global syntax coding boundary
+
+The accepted legacy term and formula codecs are individually injective but not
+cross-sort disjoint: term successor-zero and formula agent-zero both encode as
+[2,1]. Their separate-sort facts and explicitly untagged revision/registry results
+remain valid. They do not by themselves realize the source's one global quoting
+convention. A new sorted wrapper and separately calibrated tagged semantics are
+being developed without modifying those frozen legacy definitions. Variables
+must be decoded from the term-code subset, not silently treated as arbitrary
+natural indices; arbitrary-variable and precisely-free guards remain explicit.
+No source-global Base/DCB consistency or representability claim is promoted.
 
 ## Local resource profiles
 
@@ -294,3 +323,13 @@ The register is now 76 checked, two inherited and 100 pending. The full paper 14
 canonical-list lemma and paper 07 direct comparison lemma are new numbered
 completions. Every selected component's fixed-proof audit is explicitly checked
 against its frozen gate and actual raw log before export.
+
+## Ninth cumulative checkpoint
+
+The selected 519-gate root passed its 1,568-declaration axiom audit. All 1,844
+local source hashes were unchanged and the baseline guard remained clean. See
+[checkpoint evidence](verification/external-checkpoint-519-2026-10-30.json).
+The register is now 78 checked, two inherited and 98 pending. The unchanged
+adjacent-level and limit-exponent mass-separation theorems are the new numbered
+completions. Signed-depth and global-coding scope boundaries are documented
+explicitly rather than hidden by changed hypotheses.

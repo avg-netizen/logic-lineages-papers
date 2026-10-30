@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_restrictedPartitionZeroDegreeCount : LogicLineages.OrdinalComparison.Targets.RestrictedPartitionZeroDegreeCount :=
+  LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof.restrictedPartitionZeroDegreeCount
+
+theorem fixed_restrictedPartitionRowZeroConvention : LogicLineages.OrdinalComparison.Targets.RestrictedPartitionRowZeroConvention :=
+  LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof.restrictedPartitionRowZeroConvention
+
+theorem fixed_restrictedPartitionRowsCorrect : LogicLineages.OrdinalComparison.Targets.RestrictedPartitionRowsCorrect :=
+  LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof.restrictedPartitionRowsCorrect
+
+theorem fixed_restrictedPartitionEvaluatorExact : LogicLineages.OrdinalComparison.Targets.RestrictedPartitionEvaluatorExact :=
+  LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof.restrictedPartitionEvaluatorExact
+
+theorem fixed_primitiveRecursivePartitionSteps : LogicLineages.OrdinalComparison.Targets.PrimitiveRecursivePartitionSteps :=
+  LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof.primitiveRecursivePartitionSteps
+
+theorem fixed_primitiveRecursivePartitionEvaluator : LogicLineages.OrdinalComparison.Targets.PrimitiveRecursivePartitionEvaluator :=
+  LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationProof.primitiveRecursivePartitionEvaluator
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

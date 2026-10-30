@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_uniformReconstructionComputable : LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryTargets.UniformReconstructionComputable :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryProof.uniformReconstructionComputable
+
+theorem fixed_uniformSelfPolicyComputable : LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryTargets.UniformSelfPolicyComputable :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryProof.uniformSelfPolicyComputable
+
+theorem fixed_uniformSelfHistoryProgram : LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryTargets.UniformSelfHistoryProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryProof.uniformSelfHistoryProgram
+
+theorem fixed_uniformSelfHistoryPlay : LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryTargets.UniformSelfHistoryPlay :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformHistoryProof.uniformSelfHistoryPlay
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

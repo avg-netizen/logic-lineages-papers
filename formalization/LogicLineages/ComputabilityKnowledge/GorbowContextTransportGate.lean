@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowContextTransportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowContextTransport : LogicLineages.ComputabilityKnowledge.Comparators.GorbowContextTransport.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowContextTransportProof.gorbowContextTransport
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

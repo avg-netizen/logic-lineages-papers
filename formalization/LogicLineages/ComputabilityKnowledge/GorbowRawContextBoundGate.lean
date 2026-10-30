@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowRawContextBoundProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowRawContextBound : LogicLineages.ComputabilityKnowledge.Comparators.GorbowRawContextBound.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowRawContextBoundProof.gorbowRawContextBound
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

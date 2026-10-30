@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.KernelCounterCalibrationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_kernelPeriodPositive : LogicLineages.OrdinalComparison.Targets.KernelPeriodPositive :=
+  LogicLineages.OrdinalComparison.KernelCounterCalibrationProof.kernelPeriodPositive
+
+theorem fixed_kernelModularDifferenceCorrect : LogicLineages.OrdinalComparison.Targets.KernelModularDifferenceCorrect :=
+  LogicLineages.OrdinalComparison.KernelCounterCalibrationProof.kernelModularDifferenceCorrect
+
+theorem fixed_partitionInputCongruence : LogicLineages.OrdinalComparison.Targets.PartitionInputCongruence :=
+  LogicLineages.OrdinalComparison.KernelCounterCalibrationProof.partitionInputCongruence
+
+theorem fixed_actualFiniteKernelInput : LogicLineages.OrdinalComparison.Targets.ActualFiniteKernelInput :=
+  LogicLineages.OrdinalComparison.KernelCounterCalibrationProof.actualFiniteKernelInput
+
+theorem fixed_actualFiniteKernelSchedule : LogicLineages.OrdinalComparison.Targets.ActualFiniteKernelSchedule :=
+  LogicLineages.OrdinalComparison.KernelCounterCalibrationProof.actualFiniteKernelSchedule
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

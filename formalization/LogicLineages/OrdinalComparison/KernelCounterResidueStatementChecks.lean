@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.KernelCounterResidueProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualKernelCounterCongruence : LogicLineages.OrdinalComparison.Targets.ActualKernelCounterCongruence :=
+  LogicLineages.OrdinalComparison.KernelCounterResidueProof.actualKernelCounterCongruence
+
+theorem fixed_primitiveRecursiveKernelArithmetic : LogicLineages.OrdinalComparison.Targets.PrimitiveRecursiveKernelArithmetic :=
+  LogicLineages.OrdinalComparison.KernelCounterResidueProof.primitiveRecursiveKernelArithmetic
+
+theorem fixed_primitiveRecursiveKernelResidue : LogicLineages.OrdinalComparison.Targets.PrimitiveRecursiveKernelResidue :=
+  LogicLineages.OrdinalComparison.KernelCounterResidueProof.primitiveRecursiveKernelResidue
+
+theorem fixed_effectiveActualKernelCounterResidue : LogicLineages.OrdinalComparison.Targets.EffectiveActualKernelCounterResidue :=
+  LogicLineages.OrdinalComparison.KernelCounterResidueProof.effectiveActualKernelCounterResidue
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

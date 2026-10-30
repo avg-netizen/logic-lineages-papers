@@ -1,0 +1,36 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_candidateSpecification : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.CandidateSpecification :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.candidateSpecification
+
+theorem fixed_leastWitnessStabilization : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.LeastWitnessStabilization :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.leastWitnessStabilization
+
+theorem fixed_noWitnessEscape : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.NoWitnessEscape :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.noWitnessEscape
+
+theorem fixed_finiteChangesIffWitness : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.FiniteChangesIffWitness :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.finiteChangesIffWitness
+
+theorem fixed_finiteChangeComputable : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.FiniteChangeComputable :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.finiteChangeComputable
+
+theorem fixed_finiteChangeCharacteristicProgram : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.FiniteChangeCharacteristicProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.finiteChangeCharacteristicProgram
+
+theorem fixed_freshStageEnumeration : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.FreshStageEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.freshStageEnumeration
+
+theorem fixed_piThreeFiniteChangeReduction : LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeTargets.PiThreeFiniteChangeReduction :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteChangeProof.piThreeFiniteChangeReduction
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

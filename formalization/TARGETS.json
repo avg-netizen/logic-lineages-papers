@@ -1572,9 +1572,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 523,
           "statement_latex": "[Cross-mass strict-input separation]\\label{thm:adjacent}\nFor a fixed principal $L>\\omega$ and fixed lower profile $P$ with reserve\ndata (5.2), put\n\\[\n              T=\\max(4,R+5,z_0,\\norm L,H).            \\tag{6.1}\n\\]\nFor $t\\ge T$, $0\\le c\\le t+1-\\norm L$, and\n$0\\le e\\le t-\\norm L$,\n\\[\n       \\KK Lc(t+1)>P(\\KK Le(t)+\\EE Le(t)).            \\tag{6.2}\n\\]\nThere is no ordering requirement on $c,e$. More generally the same\nconclusion holds with any $u>t$ and any mass genuine at $u$ on the left.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCrossMassStrictInputSeparation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/AdjacentProfileTargets.lean",
+            "sha256": "5000258f88645583b6d037278ee827709d4d1204b71f9c370a2f0c2b73580a55",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualCrossMassStrictInputSeparation"
+          },
+          "verification_receipt": "build-reports/1793353535214411475-8.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole unchanged thm:adjacent523\u2013536 plus genuine omega affine base591\u2013597. Literal executable threshold, arbitrary genuine unordered retained masses, actual adjacent and all larger-input strict profile domination. Actual packed maximum, synchronized suffix/global budgets, cut/count and endpoint inequalities paid. Proof-only line560 norm-B typo explicitly calibrated as suffix B\u2212e/global B; no theorem assumption or conclusion changed."
         },
         {
           "id": "07-collapse-equality-and-one-variable:thm:limitmass",
@@ -1583,9 +1594,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 599,
           "statement_latex": "[Limit-exponent mass separation]\\label{thm:limitmass}\nLet $L=\\omega^\\beta$ with $\\beta$ a nonzero limit. For a fixed lower\nprofile $P$ and data (5.2), put\n\\[\n           T=\\max(4,R+4,z_0,\\norm L+1,H).            \\tag{6.5}\n\\]\nFor $t\\ge T$ and $0\\le c<e\\le t-\\norm L$,\n\\[\n                \\KK Lc(t)>P(\\KK Le(t)+\\EE Le(t)).    \\tag{6.6}\n\\]\nConsequently the lexicographically larger pair $(\\text{input},-\\text{mass})$\ngives domination against every fixed lower profile, on an effective\ngenuine tail. Equal pairs give equal values.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualLimitExponentMassSeparation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/LimitMassProfileTargets.lean",
+            "sha256": "8b800344a033a92105e5082b9d75753cd4ce11d58dd1e3b232f4148193e7b19a",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualLimitExponentMassSeparation"
+          },
+          "verification_receipt": "build-reports/1793354910103537724-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source thm:limitmass599\u2013655: literal effective threshold (6.5), actual same-input (6.6) for all genuine c<e, and effective lexicographic consequence including equal-pair equality. Actual pure first monomials, strict budget exponents, second maximum packing, synchronized reserve cut and permanent-mass profile consumption paid. Threshold is profile-dependent; no uniform-over-profiles claim."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:successor",

@@ -1,0 +1,59 @@
+{
+  "accepted_utc": "2026-10-30T09:55:10.654815+00:00",
+  "scope": "Literal actual Phi square/iterate gap proved without growth hypotheses; actual cut supplies count/domain constraints separately.",
+  "source_correspondence": "paper07 limitmass numeric637\u2013644.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.LimitMassNumericStatementChecks",
+  "frozen_at_utc": "2026-10-30T09:48:46.185409+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/LimitMassNumericTargets.lean",
+      "sha256": "f9598ac87e83558f36a0c55cb35fd5f1f2f2c7134ffc8ca6b22f4a72e868a9da"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LimitMassNumericStatementChecks.lean",
+      "sha256": "b0dbc83122f9ba2b914c3bbeb176fd0a95f427e0199fae0dfee0bbb1a468046d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LimitMassNumericProof.lean",
+      "sha256": "cf999e0885dbb64205dbaafaa3bb649ad64b88905baf6a94ea3f993308160fe4"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualPhiSquareGap",
+    "LogicLineages.OrdinalComparison.Targets.ActualLimitMassNumericalGap"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793354070068990533-7.json",
+      "sha256": "5a9fe516cca518282370ffde84426d4db1bbcc542371c58390534af556ef166a",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "919fa22034f0439420eca0f94c30372e488990bd0ec1d39e2bb54afddd5c1d83",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualPhiSquareGap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLimitMassNumericalGap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": []
+  },
+  "numbered_statement_promotion": false
+}

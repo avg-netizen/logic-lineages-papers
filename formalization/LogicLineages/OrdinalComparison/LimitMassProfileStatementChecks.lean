@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.LimitMassProfileProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualLimitMassProfileSeparation : LogicLineages.OrdinalComparison.Targets.ActualLimitMassProfileSeparation :=
+  LogicLineages.OrdinalComparison.actualLimitMassProfileSeparation
+
+theorem fixed_actualLimitLexicographicSeparation : LogicLineages.OrdinalComparison.Targets.ActualLimitLexicographicSeparation :=
+  LogicLineages.OrdinalComparison.actualLimitLexicographicSeparation
+
+theorem fixed_fullActualLimitExponentMassSeparation : LogicLineages.OrdinalComparison.Targets.FullActualLimitExponentMassSeparation :=
+  LogicLineages.OrdinalComparison.fullActualLimitExponentMassSeparation
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

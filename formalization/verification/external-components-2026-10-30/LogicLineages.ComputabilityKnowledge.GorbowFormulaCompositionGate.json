@@ -1,0 +1,459 @@
+{
+  "accepted_utc": "2026-10-30T10:05:46.644661+00:00",
+  "scope": "Literal capture-avoiding full-AST composition/support locality and named closed-instance equality/context invariance; source semantics only exact singleton name.",
+  "source_correspondence": "Actual paper12 named closed-instance prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowFormulaCompositionGate",
+  "frozen_at_utc": "2026-10-30T10:00:52.151356+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/GorbowFormulaComposition.lean",
+      "sha256": "792373b1553b294618a74456e136f210cc759b58b221eaf564c7ed658249e0fe"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/Comparators/GorbowFormulaComposition.lean",
+      "sha256": "f793fb3d450c4ede26d077d44496116fadf21d5363b69f7becb1351b116d087e"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/GorbowFormulaCompositionGate.lean",
+      "sha256": "cd40bc83e5ee60078121f868c2fccbcf445432558ee5a48afe985f5d6566ca71"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/GorbowFormulaCompositionProof.lean",
+      "sha256": "e453aaf39e0b8371064e027ecbdca0b8eec25a314f045706875714e309b235f7"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowFormulaComposition.Target"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793354575403893210-13.json",
+      "sha256": "b43e517f9f8cc6e524f048dc8c9b443721c43cda89ee567501bef48480c5375c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793354574214590507-8.json",
+      "sha256": "bb33083c65a5c41480465d176ea7ae32e8a5444adbb01617521ecb1d6c4c6f57",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "621a9d3d1487dd684c4b64555396008aed2f93c9dd4a5f6ad9aaab5572f4e6f4",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_gorbowFormulaComposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_10": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_7": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_7": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_12": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_7": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_7": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_10": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_9": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_8": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_10": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_9": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_11": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.decode.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_8": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_10": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_9": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitutionSupport.supportImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_12": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse._sparseCasesOn_3.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_7": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_12": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_11": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowNamedBinding.bindEx.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_14": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_12": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_5": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_9": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_13": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_7": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_5": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_8": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_7": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_6": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_5": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_11": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowNamedBinding.bindAll.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_11": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_12": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_8": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_9": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_8": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_11": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_8": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.parse.eq_8": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_9": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_5": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_12": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_10": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_9": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_8": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_10": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_12": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.liftSubstitute.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_10": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_8": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.formula.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_7": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_11": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaComposition.namedClosedDictionary.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution.substitute.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.height.eq_10": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.unbind.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.realize.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_12": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.renameTerm.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermShiftCode.shiftVar.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.realize.eq_9": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.encode.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowNamedBinding.selectDictionary.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.formulaSupport.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.decode.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowContextTransport.term.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Formula.uses.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode.encode.eq_11": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport.termSupport.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.height.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution.substituteFormula.eq_7": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermShiftCode.shiftTerm.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode.parse.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowNamedBinding.assignAt.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.GorbowNamedBinding.bindDictionary.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax.Term.uses.eq_3": []
+  },
+  "numbered_statement_promotion": false
+}

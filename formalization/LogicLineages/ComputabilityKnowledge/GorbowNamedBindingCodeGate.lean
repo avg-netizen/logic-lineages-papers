@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowNamedBindingCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowNamedBindingCode : LogicLineages.ComputabilityKnowledge.Comparators.GorbowNamedBindingCode.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowNamedBindingCodeProof.gorbowNamedBindingCode
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

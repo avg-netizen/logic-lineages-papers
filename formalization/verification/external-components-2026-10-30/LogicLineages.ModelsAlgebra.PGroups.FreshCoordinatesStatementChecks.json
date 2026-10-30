@@ -1,0 +1,66 @@
+{
+  "accepted_utc": "2026-10-30T09:41:23.669891+00:00",
+  "scope": "Literal actual Nat fresh-slot maps, injections/disjointness/fixed finite prefix including M0; no embedding or stage oracle.",
+  "source_correspondence": "Root-authorized bounded raw-language/concrete-stage prerequisites.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FreshCoordinatesStatementChecks",
+  "frozen_at_utc": "2026-10-30T09:38:00.766228+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCoordinatesDefinitions.lean",
+      "sha256": "aa5f93a6a58d52accaf97c3ea0680e35b0a5cde77c63d84369e2517c65429b92"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCoordinatesTargets.lean",
+      "sha256": "89fbec4d226849b0e05f02f0138bda925e7af15022dc24bf75881512d27498cf"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCoordinatesStatementChecks.lean",
+      "sha256": "7d317cfe968473fa27fb75a85159aedc57241c26a44584180039b6b3d83b4694"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCoordinates.lean",
+      "sha256": "079372668766eca43c319cb937653cb88468f335abe8ac13aec2a5e32d967b2f"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReserveEvenInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReserveOddInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReserveRangesDisjoint",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReserveEvenFixes"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793353252297299192-8.json",
+      "sha256": "6c572fade387bc562425e9818281e62aa48b8f6699ed9dd29ec23e495f549fe0",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "b0ba45c7e82f46950aef7230e5beff417210bdfdb765aa4cc153919724cc703c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reserve_odd_injective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reserve_even_fixes": [],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reserve_even_injective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reserve_ranges_disjoint": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveEven.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveOdd.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

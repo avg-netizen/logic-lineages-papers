@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowFormulaCompositionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowFormulaComposition : LogicLineages.ComputabilityKnowledge.Comparators.GorbowFormulaComposition.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowFormulaCompositionProof.gorbowFormulaComposition
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

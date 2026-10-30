@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.SignedKernelDomainProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_finiteDegreeCounterLowerBound : LogicLineages.OrdinalComparison.Targets.FiniteDegreeCounterLowerBound :=
+  LogicLineages.OrdinalComparison.SignedKernelDomainProof.finiteDegreeCounterLowerBound
+
+theorem fixed_degreeOneSignedDomain : LogicLineages.OrdinalComparison.Targets.DegreeOneSignedDomain :=
+  LogicLineages.OrdinalComparison.SignedKernelDomainProof.degreeOneSignedDomain
+
+theorem fixed_degreeOneNegativeDepthObstruction : LogicLineages.OrdinalComparison.Targets.DegreeOneNegativeDepthObstruction :=
+  LogicLineages.OrdinalComparison.SignedKernelDomainProof.degreeOneNegativeDepthObstruction
+
+theorem fixed_genuineSignedKernelResidueAndCoherence : LogicLineages.OrdinalComparison.Targets.GenuineSignedKernelResidueAndCoherence :=
+  LogicLineages.OrdinalComparison.SignedKernelDomainProof.genuineSignedKernelResidueAndCoherence
+
+theorem fixed_correctedSignedKernelResidues : LogicLineages.OrdinalComparison.Targets.CorrectedSignedKernelResidues :=
+  LogicLineages.OrdinalComparison.SignedKernelDomainProof.correctedSignedKernelResidues
+
+theorem fixed_fixedSignedKernelThresholdPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.FixedSignedKernelThresholdPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.SignedKernelDomainProof.fixedSignedKernelThresholdPrimitiveRecursive
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

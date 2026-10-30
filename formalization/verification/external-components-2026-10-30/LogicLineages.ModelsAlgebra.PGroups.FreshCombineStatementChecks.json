@@ -1,0 +1,78 @@
+{
+  "accepted_utc": "2026-10-30T09:44:10.215804+00:00",
+  "scope": "Actual odd/even Finsupp combination coordinates/injectivity/finite-support fixation. No stage/reflection/nonisomorphism oracle.",
+  "source_correspondence": "Concrete two-infinite reservoir embedding prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FreshCombineStatementChecks",
+  "frozen_at_utc": "2026-10-30T09:39:41.723939+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCombineDefinitions.lean",
+      "sha256": "2295998c31fc2233bc6e5134c262cc3b23547aa02adeb7ad4833e3c36f651bdc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCombineTargets.lean",
+      "sha256": "7da6b0a140f633c901ae723e3b9480b8137db3591ba636334118fb1826b5f3d2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCombineStatementChecks.lean",
+      "sha256": "4938660b5e99f37fe06e61ae1412f25aaaf07db770a1760ecc6072d52899560a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCombine.lean",
+      "sha256": "aba199dbfcb1f8d8c7d3c4f5bb1283970c9f136028d59fff6481b87e3f7d8b61"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFreshCombineOdd",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFreshCombineEven",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFreshCombineInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFreshCombineFixes"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793353406385682423-26.json",
+      "sha256": "421705c8def4fccf5c15b9a889f3b491a7b3160230cc8b2f08532f4bcaa480c4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1f33ae2d0a27684f78f665b0ac0b0c41b35b71cdbb34b40580b88077f5125e04",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_fresh_combine_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_fresh_combine_even": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_fresh_combine_fixes": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_fresh_combine_odd": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveEven.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.freshCombine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveOdd.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

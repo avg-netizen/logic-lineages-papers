@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.AdjacentProfileProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualAdjacentProfileSeparation : LogicLineages.OrdinalComparison.Targets.ActualAdjacentProfileSeparation :=
+  LogicLineages.OrdinalComparison.actualAdjacentProfileSeparation
+
+theorem fixed_actualCrossMassProfileSeparation : LogicLineages.OrdinalComparison.Targets.ActualCrossMassProfileSeparation :=
+  LogicLineages.OrdinalComparison.actualCrossMassProfileSeparation
+
+theorem fixed_actualOmegaAffineCrossMassSeparation : LogicLineages.OrdinalComparison.Targets.ActualOmegaAffineCrossMassSeparation :=
+  LogicLineages.OrdinalComparison.actualOmegaAffineCrossMassSeparation
+
+theorem fixed_fullActualCrossMassStrictInputSeparation : LogicLineages.OrdinalComparison.Targets.FullActualCrossMassStrictInputSeparation :=
+  LogicLineages.OrdinalComparison.fullActualCrossMassStrictInputSeparation
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

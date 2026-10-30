@@ -1,0 +1,84 @@
+{
+  "accepted_utc": "2026-10-30T10:06:33.904704+00:00",
+  "scope": "Actual cutoff subgroup chain/coverage and literal injective finite-tuple-fixing maps; arbitrary residual carried identically, no noniso claim.",
+  "source_correspondence": "Concrete bounded two-infinite stage construction prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReservoirChainStatementChecks",
+  "frozen_at_utc": "2026-10-30T09:57:20.428165+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirChainDefinitions.lean",
+      "sha256": "2b032e4983a20661ff54979e51e77559d779e3ce5666a3a919daa2dc9db87762"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirChainTargets.lean",
+      "sha256": "5db692ab7811d499cf2ca5b935c15dd90720fad67bbfb0443ddacec68515be0a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirChainStatementChecks.lean",
+      "sha256": "d0289543c0dcfdb9fabd44227205285411429774ce7b0902153a1305a2c04662"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirChain.lean",
+      "sha256": "b2e6e6f4933af23bec58ec050c058862653850868807aaf6cb61e916e124f636"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReservoirMonotone",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReservoirCover",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReservoirMapInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReservoirMapFixes",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupReservoirTupleFixing"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793354753301008119-7.json",
+      "sha256": "85e1ce8848671475a1d5253688f2b0cb190314228df563603d99b200911aedab",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "edd89e547540d473f2d905dca4afdb3dce59c66d5ba821a16d540ddc95c90664",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reservoir_tuple_fixing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reservoir_map_fixes": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reservoir_monotone": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reservoir_map_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_reservoir_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveEven.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.freshCombine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveOdd.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

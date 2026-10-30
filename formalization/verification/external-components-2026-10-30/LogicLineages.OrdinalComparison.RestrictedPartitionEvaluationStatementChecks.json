@@ -1,0 +1,106 @@
+{
+  "accepted_utc": "2026-10-30T09:33:03.704358+00:00",
+  "scope": "Executable independent finite-row DP, exact actual count and uniform Primrec, zero-degree/zero-step edge cases. No residue or asymptotic claim.",
+  "source_correspondence": "paper08 effective partition-count supplier using actual accepted weighted-vector cardinality.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationStatementChecks",
+  "frozen_at_utc": "2026-10-30T09:30:15.486791+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/RestrictedPartitionEvaluationDefinitions.lean",
+      "sha256": "bb3942302f9f65af3e9242de84fc89d675f0cf9d97df8f2aafde36972e0da11c"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RestrictedPartitionEvaluationTargets.lean",
+      "sha256": "79f68d890aa635e12cd3fcc3ed924d33fdade7064d93f1aae74400c63e5aec78"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RestrictedPartitionEvaluationStatementChecks.lean",
+      "sha256": "b55f4351a75406b80fe1a4cfd07b044745bfeaf5ce1ff3e3baf3f6df05dd64aa"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RestrictedPartitionEvaluationProof.lean",
+      "sha256": "8276a6de3c9721f9a76cc723d6c7e4d91e93a5ee258fa68a31591aa2259282a1"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.RestrictedPartitionZeroDegreeCount",
+    "LogicLineages.OrdinalComparison.Targets.RestrictedPartitionRowZeroConvention",
+    "LogicLineages.OrdinalComparison.Targets.RestrictedPartitionRowsCorrect",
+    "LogicLineages.OrdinalComparison.Targets.RestrictedPartitionEvaluatorExact",
+    "LogicLineages.OrdinalComparison.Targets.PrimitiveRecursivePartitionSteps",
+    "LogicLineages.OrdinalComparison.Targets.PrimitiveRecursivePartitionEvaluator"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793352724537799418-22.json",
+      "sha256": "6446eb9471a650b896e2e54af4260ffb28749123a106c6bc33b355a460bd69d4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "cf02057e5070f67b9b4c0b49d72464814496369f6712de99037cd50ebc994496",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_primitiveRecursivePartitionEvaluator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_restrictedPartitionEvaluatorExact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_restrictedPartitionZeroDegreeCount": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_primitiveRecursivePartitionSteps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_restrictedPartitionRowsCorrect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_restrictedPartitionRowZeroConvention": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionWeight.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionRows.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionCount.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionRowStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionRows.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionRowEntry.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.restrictedPartitionRows.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}
