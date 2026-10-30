@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.TranslatedPolynomialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualTranslatedPolynomialInjective : LogicLineages.OrdinalComparison.Targets.ActualTranslatedPolynomialInjective :=
+  LogicLineages.OrdinalComparison.actualTranslatedPolynomialInjective
+
+theorem fixed_actualTranslatedPolynomialVariable : LogicLineages.OrdinalComparison.Targets.ActualTranslatedPolynomialVariable :=
+  LogicLineages.OrdinalComparison.actualTranslatedPolynomialVariable
+
+theorem fixed_actualTranslatedPolynomialConstant : LogicLineages.OrdinalComparison.Targets.ActualTranslatedPolynomialConstant :=
+  LogicLineages.OrdinalComparison.actualTranslatedPolynomialConstant
+
+theorem fixed_actualTranslatedPolynomialSeries : LogicLineages.OrdinalComparison.Targets.ActualTranslatedPolynomialSeries :=
+  LogicLineages.OrdinalComparison.actualTranslatedPolynomialSeries
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

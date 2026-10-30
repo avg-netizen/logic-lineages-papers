@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierRationalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualRationalSquareRootDecomposition : LogicLineages.OrdinalComparison.Targets.ActualRationalSquareRootDecomposition :=
+  LogicLineages.OrdinalComparison.actualRationalSquareRootDecomposition
+
+theorem fixed_actualRationalSquareRootUniqueness : LogicLineages.OrdinalComparison.Targets.ActualRationalSquareRootUniqueness :=
+  LogicLineages.OrdinalComparison.actualRationalSquareRootUniqueness
+
+theorem fixed_actualDifferentialCartierCharacterization : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierCharacterization :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierCharacterization
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

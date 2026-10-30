@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierPolynomialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPolynomialSquareRootDigitCoefficient : LogicLineages.OrdinalComparison.Targets.ActualPolynomialSquareRootDigitCoefficient :=
+  LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigitCoefficient
+
+theorem fixed_actualPolynomialSquareRootDecomposition : LogicLineages.OrdinalComparison.Targets.ActualPolynomialSquareRootDecomposition :=
+  LogicLineages.OrdinalComparison.actualPolynomialSquareRootDecomposition
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.WWGroundAdmissibilityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem ww_ground_admissibility : LogicLineages.ComputabilityKnowledge.Comparators.WWGroundAdmissibility.Target :=
+  LogicLineages.ComputabilityKnowledge.WWGroundAdmissibilityProof.wwGroundAdmissibility
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierLaurentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualDifferentialCartierLaurentCoefficient : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierLaurentCoefficient :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierLaurentCoefficient
+
+theorem fixed_actualDifferentialCartierResidue : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierResidue :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierResidue
+
+theorem fixed_actualDifferentialCartierSimpleSupport : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierSimpleSupport :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierSimpleSupport
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

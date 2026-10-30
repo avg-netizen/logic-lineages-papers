@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.TranslatedRationalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualTranslatedRationalInjective : LogicLineages.OrdinalComparison.Targets.ActualTranslatedRationalInjective :=
+  LogicLineages.OrdinalComparison.actualTranslatedRationalInjective
+
+theorem fixed_actualTranslatedRationalPolynomial : LogicLineages.OrdinalComparison.Targets.ActualTranslatedRationalPolynomial :=
+  LogicLineages.OrdinalComparison.actualTranslatedRationalPolynomial
+
+theorem fixed_actualTranslatedRationalSimplePole : LogicLineages.OrdinalComparison.Targets.ActualTranslatedRationalSimplePole :=
+  LogicLineages.OrdinalComparison.actualTranslatedRationalSimplePole
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 65 checked numbered statements, two inherited calculator
-results, and 111 pending statements.
+Current register: 68 checked numbered statements, two inherited calculator
+results, and 108 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -52,19 +52,29 @@ suppliers for the consumer corollary.
 The full finite-forest width classification is checked: for positive m, the
 class of width-at-most-m forests has JEP exactly when m is at most three. This
 uses concrete common hosts and concrete incompatible witnesses; width zero is
-handled separately. The countable-age realization converse and Carter decision
-algorithm remain pending.
+handled separately. The full countable-age realization equivalence is now
+checked using the actual order language, finite-class coding, countable model
+construction and finite-local forest reconstruction. The Carter decision
+algorithm remains pending; deterministic finite tree-automaton evaluation and
+reachable-state emptiness are separate checked prerequisites.
 
 For the binary residue chain, the source's actual real-exponent bounds and full
 residue lemma are checked. The latter uses genuine shifted Laurent-series
 reconstruction, both displayed coefficient formulas, nonvanishing and the
-original parameter hypotheses. Frobenius and root-count suppliers are checked;
-the full residue-tuple/Cartier period transfer remains pending.
+original parameter hypotheses. The genuine rational Cartier construction,
+local Laurent coefficient rule and complete residue-tuple period transfer are
+now checked. For the original parameter inputs, every Cartier-state coincidence
+has displacement divisible by twice (log2 B minus one), hence the same constraint
+holds for every eventual period. Remaining pole-removal and finite-tail results
+are not included in this completion claim.
 
 The group lane now includes literal finite-image tables, finite Ulm quotient
 rank formulas, variable renaming, finite conjunction assembly and annihilation
 formulas. These are suppliers, not completed Scott categoricity or classification
-theorems.
+theorems. Further checked subcases give actual finite relative Scott descriptions
+and a relative Pi2 Scott sentence for countably infinite exponent-p groups, with
+genuine vector-space categoricity. The full bounded-exponent classification is
+still pending.
 
 ### Source scope still requiring clarification
 
@@ -113,3 +123,11 @@ local source hashes were unchanged across that check. See
 [checkpoint evidence](verification/external-checkpoint-297-2026-10-30.json).
 The register now includes ten full numbered statements added in this round,
 with remaining supplier work distinguished from completed source statements.
+
+## Third cumulative checkpoint
+
+The selected 328-gate root passed its 899-declaration axiom audit. All 1,157
+local source hashes were unchanged. See
+[checkpoint evidence](verification/external-checkpoint-328-2026-10-30.json).
+The register has 68 checked numbered statements, two inherited results and 108
+pending statements: thirteen numbered statements added since the main baseline.

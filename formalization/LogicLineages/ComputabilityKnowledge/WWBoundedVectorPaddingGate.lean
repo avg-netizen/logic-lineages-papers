@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.WWBoundedVectorPaddingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem ww_bounded_vector_padding : LogicLineages.ComputabilityKnowledge.Comparators.WWBoundedVectorPadding.Target :=
+  LogicLineages.ComputabilityKnowledge.WWBoundedVectorPaddingProof.wwBoundedVectorPadding
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

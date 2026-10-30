@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierOrbitProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualLinkedDifferentialInitialResidue : LogicLineages.OrdinalComparison.Targets.ActualLinkedDifferentialInitialResidue :=
+  LogicLineages.OrdinalComparison.actualLinkedDifferentialInitialResidue
+
+theorem fixed_actualDifferentialCartierIteratedResidue : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierIteratedResidue :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierIteratedResidue
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

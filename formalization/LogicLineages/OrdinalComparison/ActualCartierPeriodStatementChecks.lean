@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.ActualCartierPeriodProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCompleteCartierPeriodDivisibility : LogicLineages.OrdinalComparison.Targets.ActualCompleteCartierPeriodDivisibility :=
+  LogicLineages.OrdinalComparison.actualCompleteCartierPeriodDivisibility
+
+theorem fixed_fullActualSourceCartierPeriod : LogicLineages.OrdinalComparison.Targets.FullActualSourceCartierPeriod :=
+  LogicLineages.OrdinalComparison.fullActualSourceCartierPeriod
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

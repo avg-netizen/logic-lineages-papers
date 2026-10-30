@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.DifferenceScott
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.DifferenceScottStatementChecks
+
+theorem fixed_difference_sigma_two_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupDifferenceSigmaTwoRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.difference_sigma_two_realization
+
+theorem fixed_difference_sigma_two_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupDifferenceSigmaTwoComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.difference_sigma_two_complexity
+
+theorem fixed_locally_finite_no_difference_one_scott : LogicLineages.ModelsAlgebra.PGroups.Targets.groupLocallyFiniteNoDifferenceOneScott :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.locally_finite_no_difference_one_scott
+
+end LogicLineages.ModelsAlgebra.PGroups.DifferenceScottStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

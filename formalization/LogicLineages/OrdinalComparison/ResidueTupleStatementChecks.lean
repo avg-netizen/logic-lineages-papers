@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.ResidueTupleProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualLinkedPrimitiveRootExists : LogicLineages.OrdinalComparison.Targets.ActualLinkedPrimitiveRootExists :=
+  LogicLineages.OrdinalComparison.actualLinkedPrimitiveRootExists
+
+theorem fixed_actualResidueTupleIterate : LogicLineages.OrdinalComparison.Targets.ActualResidueTupleIterate :=
+  LogicLineages.OrdinalComparison.actualResidueTupleIterate
+
+theorem fixed_actualResidueTupleExactPeriod : LogicLineages.OrdinalComparison.Targets.ActualResidueTupleExactPeriod :=
+  LogicLineages.OrdinalComparison.actualResidueTupleExactPeriod
+
+theorem fixed_fullActualSourceResidueTuplePeriod : LogicLineages.OrdinalComparison.Targets.FullActualSourceResidueTuplePeriod :=
+  LogicLineages.OrdinalComparison.fullActualSourceResidueTuplePeriod
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

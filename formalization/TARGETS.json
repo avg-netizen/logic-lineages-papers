@@ -528,9 +528,26 @@
           "file": "03-joint-embedding-finite-forests/paper.tex",
           "line": 242,
           "statement_latex": "\\label{prop:age}\nA nonempty hereditary class $\\mathcal K$ of finite forests is the age\nof a finite or countable forest if and only if it has JEP. If it contains\nforests of unbounded size, the realizing forest is countably infinite.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullForestAgeRealization",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/AgeCompletionTargets.lean",
+            "sha256": "efced79d5db363008bf36dc1ea19732362aa6c43635bd0444c710c62d608baf2",
+            "type": "LogicLineages.ModelsAlgebra.Forests.Targets.FullForestAgeRealization",
+            "additional_types": [
+              "LogicLineages.ModelsAlgebra.Forests.Targets.UnboundedForestAgeRealization"
+            ]
+          },
+          "additional_accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Forests.StatementChecks.unboundedForestAgeRealization"
+          ],
+          "verification_receipt": "build-reports/1793338934340906493-11.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source prop:age: every nonempty hereditary class of actual finite order forests has actual finite/countable forest age realization iff ordinary JEP. Genuine language embedding/iso calibration, finite-code essential countability, proved Mathlib relational age existence, and actual finite-local partial-order/forest reconstruction paid. Unbounded sizes yield actual carrier equivalence with Nat. Empty finite forest allowed; empty class excluded. No amalgamation/homogeneity/Carter assumption."
         }
       ]
     },
@@ -2570,9 +2587,31 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 469,
           "statement_latex": "[Local rule]\\label{lem:local}\nFor a fixed pole $\\zeta$ and $b\\in K$,\n\\[\n \\mathcal C\\!\\left(\\frac{b\\,dz}{(z-\\zeta)^{2j}}\\right)=0,\\qquad\n \\mathcal C\\!\\left(\\frac{b\\,dz}{(z-\\zeta)^{2j+1}}\\right)\n       =\\frac{b^{1/2}\\,dz}{(z-\\zeta)^{j+1}}.\n\\]\nThe same definition gives\n$\\mathcal C(\\sum a_nz^n\\,dz)=\\sum a_{2n+1}^{1/2}z^n\\,dz$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierLaurentCoefficient",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/CartierLaurentTargets.lean",
+            "sha256": "01d61ce79f314909e0f94a09a25696166d467a5797096d7600d885a1c9ea4d73",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierLaurentCoefficient"
+          },
+          "additional_accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierLocalPowers"
+          ],
+          "additional_frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/CartierLocalTargets.lean",
+              "sha256": "6ca5ce6d15ece4e88442a563a5542fdded90b07848a4e0898fbb638b963d3eee",
+              "type": "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierLocalPowers",
+              "verification_receipt": "build-reports/1793339006357541774-6.json"
+            }
+          ],
+          "verification_receipt": "build-reports/1793339362728483331-15.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source lem:local in its defined rational-differential domain over any perfect char2 field: genuine RatFunc square decomposition/uniqueness fixes Cartier; actual shifted integer-power identities yield both displayed pole rules, and actual injective translated rational Laurent embedding proves all-integer odd-coefficient inverse-Frobenius rule. No residue transport assumption; no claim of an operator on unrelated arbitrary Hahn inputs."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:poles",
@@ -2636,9 +2675,20 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 597,
           "statement_latex": "[Exact actual residue-tuple period]\\label{thm:actual-period}\nThe tuple $(b_\\zeta)_{\\zeta\\ {\\rm primitive}\\ q}$ has exact\nFrobenius period $2r$. Every eventual period of the complete\nrational differential Cartier orbit of $\\omega_e$ is divisible\nby $2r=2(\\log_2 B-1)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSourceCartierPeriod",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ActualCartierPeriodTargets.lean",
+            "sha256": "49684087da467834f45e4a66e4295747ae8e6589ef649c146fd47cf8fcb80862",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualSourceCartierPeriod"
+          },
+          "verification_receipt": "build-reports/1793339763486558604-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source thm:actual-period for original u=Phi(v),v>=4: actual algebraic-closure primitive-root Laurent residue tuple has minimal Frobenius period 2r=2(log2 B-1); every complete rational Cartier state coincidence at j+p/j forces 2r|p, hence every eventual period. Actual primitive-root existence/root-count polynomial, rational Cartier decomposition, translated Laurent semantics and all-iterate residue transport are paid, not supplied premises. Includes p0; does not assert eventual-period existence."
         }
       ]
     },

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.WWOmegaFiniteCalibrationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem ww_omega_finite_calibration : LogicLineages.ComputabilityKnowledge.Comparators.WWOmegaFiniteCalibration.Target :=
+  LogicLineages.ComputabilityKnowledge.WWOmegaFiniteCalibrationProof.wwOmegaFiniteCalibration
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

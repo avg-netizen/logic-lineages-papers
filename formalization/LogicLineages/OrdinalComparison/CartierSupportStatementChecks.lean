@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualDifferentialCartierIteratedCoefficient : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierIteratedCoefficient :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierIteratedCoefficient
+
+theorem fixed_actualDifferentialCartierSupportContraction : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierSupportContraction :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierSupportContraction
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

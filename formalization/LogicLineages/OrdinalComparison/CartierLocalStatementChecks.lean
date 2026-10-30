@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierLocalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualDifferentialCartierSquarePullout : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierSquarePullout :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierSquarePullout
+
+theorem fixed_actualDifferentialCartierLocalPowers : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierLocalPowers :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierLocalPowers
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison
