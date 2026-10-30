@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem relativeRepresentativeDecision : LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets.RelativeRepresentativeDecision :=
+  LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionProof.relativeRepresentativeDecision
+
+theorem relativeRepresentativeCounting : LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets.RelativeRepresentativeCounting :=
+  LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionProof.relativeRepresentativeCounting
+
+theorem relativeCanonicalSelection : LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets.RelativeCanonicalSelection :=
+  LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionProof.relativeCanonicalSelection
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

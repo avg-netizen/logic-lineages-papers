@@ -1,0 +1,121 @@
+{
+  "accepted_utc": "2026-10-30T06:53:06.270742+00:00",
+  "scope": "Actual block shift times identity, socle-root equation, concrete no-root witness, derived max/sup exponent bound, countability/infinitude. No normal-form classification or limit theorem assumed.",
+  "source_correspondence": "paper01 actual finite short-block plus countable maximal-block plus finite upper-factor source normal form.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:49:45.804114+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FullShiftDefinitions.lean",
+      "sha256": "47afb60bb80edc7407888b87093dc18032c19d5a62e75df008a32142befe8601"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FullShiftTargets.lean",
+      "sha256": "98454f2fab03da6691d8b9c2d1a66492519dc91a0c777a7da99a4e96407da86f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FullShiftStatementChecks.lean",
+      "sha256": "211eedc1dc64ed1617c0efa441e231afd18c1f2709448134deead82365673429"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FullShift.lean",
+      "sha256": "938e7e0b02309ea75853052a1c73d18616329f2672204472dadcb2f40f865bed"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftSocleRoots",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShortNoRoot",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftExponent",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftCountable",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftInfinite"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793343154050256557-11.json",
+      "sha256": "cbf1102236e5aba3db5894e0dc57e553963fdb52d88bc4782a18b29a5c314e61",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "0a1d01bc9c8a30262e04ab8f902bbf5d008a3a46060210c48b4877b6cdc03a0b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks.fixed_full_shift_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks.fixed_full_short_no_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks.fixed_full_shift_countable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks.fixed_full_shift_infinite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks.fixed_full_shift_socle_roots": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.FullShiftStatementChecks.fixed_full_shift_exponent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteBlockInsert.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.fullShiftHom.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.blockShiftHom.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteBlockInsert.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.fullShortWitness.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.blockShiftHom.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.powerCyclicInclusion.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.blockShortWitness.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

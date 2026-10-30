@@ -1,0 +1,69 @@
+{
+  "accepted_utc": "2026-10-30T05:29:28.302995+00:00",
+  "scope": "Actual small-exponent residue nonfixedness given explicit primitive-root field witness; no source splitting-field existence or exact tuple period yet.",
+  "source_correspondence": "paper10 actual-period proof root-count obstruction",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.ResidueRootCountStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:27:30.024226+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueRootCountTargets.lean",
+      "sha256": "fd2df32ae1bec1773334310ebd6e4c8e9086dc1adbec11479cf9c494489161c5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueRootCountStatementChecks.lean",
+      "sha256": "28310b1294d60882aa166e8aa0e74c23873bd347087ed21ca76d99f97f084e53"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueRootCountProof.lean",
+      "sha256": "03b7cf1b7fbb28c01ba9628c0c59fbe3fab9cb806f64850c4ce6a19a20509895"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueSmallExponentNonfixed"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338156088853666-6.json",
+      "sha256": "944ae9dbc65f90e3802f996acaca73013e98677f8b6b39489c328fea19942096",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "fac5133ecbd675c5a0b6c7944994dd2093a5fe891b9c8894b7b4f6e000e94aea",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueSmallExponentNonfixed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualResidueFixednessPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualLinkedDegree.eq_1": [],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

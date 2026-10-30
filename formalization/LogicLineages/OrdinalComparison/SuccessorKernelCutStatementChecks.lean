@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.SuccessorKernelCutProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCompensatedControlComposition : LogicLineages.OrdinalComparison.Targets.ActualCompensatedControlComposition :=
+  LogicLineages.OrdinalComparison.actualCompensatedControlComposition
+
+theorem fixed_actualSuccessorKernelFirstStep : LogicLineages.OrdinalComparison.Targets.ActualSuccessorKernelFirstStep :=
+  LogicLineages.OrdinalComparison.actualSuccessorKernelFirstStep
+
+theorem fixed_actualSuccessorKernelCut : LogicLineages.OrdinalComparison.Targets.ActualSuccessorKernelCut :=
+  LogicLineages.OrdinalComparison.actualSuccessorKernelCut
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

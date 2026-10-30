@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionDefinitions
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets
+open PredictionCanonicalList PredictionRelativeSelection
+
+def RelativeRepresentativeDecision : Prop := ComputableIn selectionOracles representativeIndicator
+
+def RelativeRepresentativeCounting : Prop := ComputableIn selectionOracles representativeCount
+
+def RelativeCanonicalSelection : Prop := ComputableIn selectionOracles canonicalIndex
+
+end LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets

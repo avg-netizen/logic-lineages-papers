@@ -1,0 +1,91 @@
+{
+  "accepted_utc": "2026-10-30T04:13:56.602068+00:00",
+  "scope": "Exact existing FullComparabilityBridge with all four source components, no Carter/JEP/decision claim",
+  "source_correspondence": "Full source lem:bridge: finite order forest comparability graphs exactly induced P4/C4-free finite graphs; representation unique up to actual order isomorphism; existence of actual order embedding iff induced graph embedding. Empty finite carriers included, no root/meet constraints.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:12:45.589678+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeDefinitions.lean",
+      "sha256": "fdd1006f3e2a8b706662efdd960c54a7bd9cb413155ba22626816e42d9045d54"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeTargets.lean",
+      "sha256": "34c080e2b7dcc31949ccd0cb666235c477254ce1f47178af38a774e082e9db14"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionTargets.lean",
+      "sha256": "dcb98f5df86c8f5784ef23c3486fd86b7b80136840a83abe73d7555b60e100d5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionStatementChecks.lean",
+      "sha256": "30ebfd3bc99b1d6919e068b380acaf6dd0b552fa228baa1fd9b58b0d913a4925"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionProof.lean",
+      "sha256": "6687b0a79df60b95b0e5bbe56bb214e18adf2c46f9d710b1fbb98a04d2f07981"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.OrderEmbeddingGivesGraphEmbedding",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.GraphEmbeddingGivesOrderEmbedding",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.FullComparabilityEmbeddings",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CompleteComparabilityBridge"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793333606235628555-15.json",
+      "sha256": "81621dc390b91c4651bb19c6a40d9354144398592beeb81b5479252b4edcaf55",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "a98cff5c95510c3d2c0a54e5c46cbf049beefdac1aae491d255553099b8199bd",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullComparabilityEmbeddings": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.completeComparabilityBridge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphEmbeddingGivesOrderEmbedding": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderEmbeddingGivesGraphEmbedding": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": true
+}

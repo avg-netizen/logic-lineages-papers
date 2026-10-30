@@ -1,0 +1,541 @@
+{
+  "accepted_utc": "2026-10-30T05:53:44.354106+00:00",
+  "scope": "Literal bounded narrowing/inverse rename, actual old envelope/control and actual effective prefix code; no choice-extracted replacement.",
+  "source_correspondence": "paper02 shared depth-two finite envelope literal ground-name transport",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelopeGate",
+  "frozen_at_utc": "2026-10-30T05:51:39.262385+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/WWFiniteEnvelope.lean",
+      "sha256": "642e0c362567f89e3bb3d9a62f22809b0a5fca3eaa6b949d5003d5076cd485a4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/Comparators/WWFiniteEnvelope.lean",
+      "sha256": "ab69f1aa013167b3387c3ef2ac0c96404e6904ba76176dddfa730bd09a0a71a4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/WWFiniteEnvelopeGate.lean",
+      "sha256": "61eedd8a132a54e05fc95505af4cff3d0813e281133f22e2b01b0cd2df79dfae"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/WWFiniteEnvelopeProof.lean",
+      "sha256": "c72937c24e580fa6cb665cf6122df3b8a0b8cbc6673b133bb43238c1c11add9f"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWFiniteEnvelope.Target"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793339590141008036-7.json",
+      "sha256": "4268b57f781d7b1b83074ab4622805602a921f1e0a4c47d546874a0c83a66bb4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793339591314076001-12.json",
+      "sha256": "f18d4e5ff3cd028833853cda19b8588cd8e24c02cca1a58296b6084534934b00",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "cc2508aee62b2b27507cdd9d26741aea26251676ea3a0c3f30d2722d00802a82",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.ww_finite_envelope": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.processStep._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.Bounded.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.rename.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.variableRow.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.variableForm.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.processStep.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.removeConstant.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap.leftPair.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.eval.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.depth.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.compileAt.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope.narrow.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.rawVariables.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeExpr.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics.interpret.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.rename.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.expressionRow.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap.rightPair.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeExpr.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics.interpret.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.normalizeAt.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.normalizeAt.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.numericStep.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.expressionRow.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.nodeCount.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.normalizeAt.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics.interpret.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.nodeCount.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope.narrow.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.rename.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope.narrow.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope.narrow.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.evalPair.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.scale.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.rawVariables.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeExpr.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.decodePair.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.decodePair.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.normalizeAt.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.eval.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.tokenEnvelope.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.processCode.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.normalizeAt.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.rawVariables.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.syntaxStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.bTerm.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.syntaxStack.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.addCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.nodeCount.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.rawVariables.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.evalPair.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.scale.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.decodeExpr._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.eval.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeExpr.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.expressionRow.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.numericStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.exponentialRow.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.removeCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.enumTuple.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.Bounded.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.additionRow.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.Bounded.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.depth.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.normalizeCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope.narrow.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.distinctVariables.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.depth.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.processCode._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.expressionRow.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.syntaxStep.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.canonicalEntries.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.normalizeAt.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.s0.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.affineVariable.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeSystem.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_5": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.rename.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.eval.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.envelope.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.enumValues.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.variableForm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.processStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeSystem.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.expressionRow.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics.interpret.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope.narrow.congr_simp": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.addForm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct.scaleAffine.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.decodeExpr.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.oneRow.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.checkWeak.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.rawVariables.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tupleOf.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.nodeCount.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tupleValue.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.depth.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.nodeCount.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram.depthCode.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.variableSum.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.removeConstant.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitComparison.finiteVal.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.tokenize._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeExpr.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.removeCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.insertVariable.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.depth.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.rename.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.Bounded.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.addCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.addForm.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.scale.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.encodeSystem.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.CircuitComparison.encodeComparison.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope.variableList.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics.interpret.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression.Expr.eval.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction.Bounded.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration.checkStrict.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

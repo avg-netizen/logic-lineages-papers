@@ -1,0 +1,75 @@
+{
+  "accepted_utc": "2026-10-30T04:18:19.669664+00:00",
+  "scope": "Actual maximal leaf sets and bijection above ordinary order embedding derived from cardinal bound; exact cluster transport, no leaf/root/meet preservation assumption, no full width claim",
+  "source_correspondence": "Paper03 thm:width descendant leaf-cluster laminarity and saturated embedding transport",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.LeafClusterStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:17:04.096657+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterDefinitions.lean",
+      "sha256": "751c1b8adcb98ea6daa6edb86eae8477188dcb4b9205d4ae0795f9968f4c7025"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterTargets.lean",
+      "sha256": "23b5b4522bc15adfd0c0b18d53de62e974183d7099758537d59d9e9b91d99f4e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterStatementChecks.lean",
+      "sha256": "20932461af54d5b70d3dc88331e4b7663c718eb2e19c38bb90732faf6c93bce4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterProof.lean",
+      "sha256": "8169de34a240c258cbe57cdd344b8135e2fe4bb349c75b305d9c992664151a2e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.LeafClustersLaminar",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SaturatedLeafBijection",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SaturatedClusterTransport"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793333862348489999-5.json",
+      "sha256": "f6a1365bacaac44ff7a4e14a3d40617b1b14a1370b2730073d988d9324deaac3",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "f64e67b9c803bc138b30a71da2bb0b6691b6c9f64e50525d976aa7abeab0ea79",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.leafClustersLaminar": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.saturatedLeafBijection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.saturatedClusterTransport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

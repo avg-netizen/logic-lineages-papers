@@ -1,0 +1,164 @@
+{
+  "accepted_utc": "2026-10-30T06:07:23.919211+00:00",
+  "scope": "Actual total complement/product Boolean closure and executable equivalence via xor emptiness, unordered symmetry preserved; no SCC/topological/JEP theorem.",
+  "source_correspondence": "Carter deterministic total binary tree automata finite closure/equivalence prerequisite",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CarterClosureStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:57:26.902609+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterClosureDefinitions.lean",
+      "sha256": "654d642c4b3256bed3c5d086801a125263395ad2e7b5ea2d3437791262acc032"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterClosureTargets.lean",
+      "sha256": "cb8a58b3b7d16e9ac609a08f069bdae9a60a6be47cce1b0d0368c9e59d3c8f1b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterClosureStatementChecks.lean",
+      "sha256": "cc67a070cee8486ccbf2e21d1b7dd8df8d966a0d5814639253f723ed0f6931f2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterClosureProof.lean",
+      "sha256": "c60e50a39a028bc40b603e28fdcf2a5824bd5e12dff2c03d05b05d6c82d0ca37"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterProductRun",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterComplementLanguage",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterIntersectionLanguage",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterUnionLanguage",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterDifferenceLanguage",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterLanguageEquivalence",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterComplementSymmetric",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterProductSymmetric"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340237093076866-6.json",
+      "sha256": "12a5c1dfd49dd40ac694c3b4aaacd2a13b4e8943d99b44426e00b03725936623",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1feb1a62e38b2412bb60078b2aa54d7c04da7fed0cd0c2f83730599e5dc52b09",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterComplementLanguage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterIntersectionLanguage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterComplementSymmetric": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterProductRun": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterLanguageEquivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterDifferenceLanguage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterUnionLanguage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterProductSymmetric": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.accepts.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.productMachine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.unionMachine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.symmetricDifferenceMachine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.intersectionMachine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.languageEquivalent.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.languageEmpty.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_def": []
+  },
+  "numbered_statement_promotion": false
+}

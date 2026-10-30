@@ -1,0 +1,83 @@
+{
+  "accepted_utc": "2026-10-30T03:49:39.478577+00:00",
+  "scope": "Explicit reverse closed-neighborhood inclusion with finite-rank tie breaking; actual partial order/forest/adjacency and existing graph representation obligation. No uniqueness/reflection claim.",
+  "source_correspondence": null,
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CanonicalOrderStatementChecks",
+  "frozen_at_utc": "2026-10-30T03:47:54.861888+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderDefinitions.lean",
+      "sha256": "2c49f1e763b335c4c8be2305e7f97282df83b00ad2c3506099d55ee486951004"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderTargets.lean",
+      "sha256": "88aa4ff83580bb5cf7c8ff766f87c69fe6fae6577e5b0a7adf5c31a4a7029789"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderStatementChecks.lean",
+      "sha256": "ac81eedfdfb1f59d3ec29707860692a5c3784fc442ddf4267803aec5e1fa4749"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeTargets.lean",
+      "sha256": "34c080e2b7dcc31949ccd0cb666235c477254ce1f47178af38a774e082e9db14"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderProof.lean",
+      "sha256": "c6539ce0df9550ca8843049f98ecd3f705f6cb4f6a54ece26a7c6462fb18888a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalPartialOrderLaws",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalPredecessorsChain",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalAdjacencyComparability",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalGraphRepresentation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793332144090661891-19.json",
+      "sha256": "32a15f629b1f10a312c994284911710e10f97ddab1f039a103f1445323f21502",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "e90c587ac5f7a10eb62e02e1a740c9c0fac00c9050fbb03deacf815aa529aca1",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalPartialOrderLaws": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalPredecessorsChain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalGraphRepresentation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalAdjacencyComparability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

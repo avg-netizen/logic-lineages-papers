@@ -1,0 +1,64 @@
+{
+  "accepted_utc": "2026-10-30T06:09:46.365500+00:00",
+  "scope": "Two algebraic suppliers only; actual root multiplicity, all d including zero; no full poles promotion.",
+  "source_correspondence": "paper10 lem:poles: literal sum of characteristic-two binomial multiplicities and actual denominator root multiplicity bound.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.BinaryPoleBudgetStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:06:31.805931+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPoleBudgetDefinitions.lean",
+      "sha256": "66a6ee966d69e5194a538c61511dbb927c421b27d9603ed6adf4a0eccd4c30c1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPoleBudgetTargets.lean",
+      "sha256": "d49be641dc33f4a0e78285e13cb7a3321e1d64d54085b8d00e813cdb31d56bc9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPoleBudgetStatementChecks.lean",
+      "sha256": "9a24ada5c5421eea153aa806c38f0e437846fe0bce51ba1aaad19a3208165036"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPoleBudgetProof.lean",
+      "sha256": "b05acf17eaf048e97aae8558616c46940ebfa64d3b27d922b688e0f59c7d98b8"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualBinaryBinomialRootMultiplicity",
+    "LogicLineages.OrdinalComparison.Targets.ActualBinarySourceRootMultiplicity"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340568376651990-6.json",
+      "sha256": "6eae3f74a1db75e7bbd6060d884531020d311a4d6ea48cbe8739ca8de84c1319",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "0bbd189ce98076d6da381795d888a8c9f9dd430097a8b497d7b17ae3b39d1be3",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySourceRootMultiplicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryBinomialRootMultiplicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

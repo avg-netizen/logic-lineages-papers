@@ -1,0 +1,111 @@
+{
+  "accepted_utc": "2026-10-30T05:01:57.015419+00:00",
+  "scope": "Actual descendantleaf clusters/nonempty/reverse inclusion/equal closed neighborhoods, exact original order recovered via twinrank, finite rank bound and actual laminar leaf family. No thickening correctness assumed.",
+  "source_correspondence": "Paper03 positive-width faithful subdivision/order-recovery suppliers",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.LeafOrderStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:59:30.462814+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafOrderTargets.lean",
+      "sha256": "c7152b8595aa0790f7de83b275485cfa015e5b159c19b549b7f991b0e43a87f3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ClusterCompletenessDefinitions.lean",
+      "sha256": "c0b12b9775efeca69419fd6e7d74bec0e3739077617e1a0a92e2675a606c91e7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankDefinitions.lean",
+      "sha256": "f10311cea03af389e81fafebca5f736e36b6cc76db5b46fabef3fceccd88472a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafOrderStatementChecks.lean",
+      "sha256": "7ce37434c13e23706d6aceccde51b0f9840475e38cf2183e5279a472abb26414"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LeafOrderProof.lean",
+      "sha256": "9501152b039da8bab7f72d4de37aa732454cc6c66b366f1c99d668d426051f84"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.VertexLeafClusterNonempty",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.OrderReversesLeafClusterInclusion",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.LeafClusterEqualityIffNeighborhoodEquality",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.LeafClusterRankOrderRecovery",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankBelowCarrierCard",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ActualLeafClusterFamilyLaminar"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793336471479404683-6.json",
+      "sha256": "5bc2feecd9ab04748446a30d5a652c99470de35f9e60d1170c94903f9aaf1fef",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "7b246e109b2c63c3f59077b9f76d0d119016ad264d783fad4de2bd545e96b265",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderReversesLeafClusterInclusion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.vertexLeafClusterNonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.actualLeafClusterFamilyLaminar": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.leafClusterRankOrderRecovery": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.leafClusterEqualityIffNeighborhoodEquality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankBelowCarrierCard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,67 @@
+{
+  "accepted_utc": "2026-10-30T03:40:30.001409+00:00",
+  "scope": "Nested closed neighborhoods and nonempty connected finite forbidden-graph universal vertex; supplier only, no representation/uniqueness/embedding reflection completion",
+  "source_correspondence": "03-joint-embedding-finite-forests/paper.tex lem:bridge converse universal-vertex argument lines81-90",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphUniversalStatementChecks",
+  "frozen_at_utc": "2026-10-30T03:35:28.498903+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalDefinitions.lean",
+      "sha256": "cac85443efaeda66ef102711d1874b0578e3f29c3dc6714a72216f0c8b5d30fc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalTargets.lean",
+      "sha256": "1c9c53a416f24c0a4a380402404a7493a4b2b34cb52b740d235a8e3ea488b243"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalStatementChecks.lean",
+      "sha256": "d68e4da65f428e47db49184bbe04168f77e3a3e50e1fef80e862c683bd5f257a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalProof.lean",
+      "sha256": "f558335ab0318d4af1b9e30959c8971c3fa94e7b9f8136582ca78673b523e61a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.AdjacentClosedNeighborhoodsNested",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ConnectedForbiddenHasUniversalVertex"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793331587650948434-6.json",
+      "sha256": "de6c688856769e87a084ce2dc80113e2ea630eb6c3ecf58e60fd84b93f2a89af",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "20785aed3053dd3d812d2d54e60d0fa6a829fdbf1b19ab23e7e1c9547b75b87e",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.connectedForbiddenHasUniversalVertex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.adjacentClosedNeighborhoodsNested": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

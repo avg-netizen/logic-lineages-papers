@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.PrincipalBlocksProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPrincipalBlocksDenotation : LogicLineages.OrdinalComparison.Targets.ActualPrincipalBlocksDenotation :=
+  LogicLineages.OrdinalComparison.actualPrincipalBlocksDenotation
+
+theorem fixed_actualPrincipalBlocksNormalOrder : LogicLineages.OrdinalComparison.Targets.ActualPrincipalBlocksNormalOrder :=
+  LogicLineages.OrdinalComparison.actualPrincipalBlocksNormalOrder
+
+theorem fixed_actualPrincipalBlocksLimitDomain : LogicLineages.OrdinalComparison.Targets.ActualPrincipalBlocksLimitDomain :=
+  LogicLineages.OrdinalComparison.actualPrincipalBlocksLimitDomain
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

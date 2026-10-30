@@ -1,0 +1,74 @@
+{
+  "accepted_utc": "2026-10-30T03:50:52.634495+00:00",
+  "scope": "F2 polynomial Frobenius/actual bit-selector square-factor/actual quotient transport suppliers, not degree/matrix or full observer completion",
+  "source_correspondence": null,
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.BinaryQuotientStatementChecks",
+  "frozen_at_utc": "2026-10-30T03:39:26.673282+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryQuotientTargets.lean",
+      "sha256": "4c70e11e0e5b6589a5e56315215e4fd998bc4d4feb10e412717de5afd3b989c5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryQuotientStatementChecks.lean",
+      "sha256": "91d5e5ff0a757fc16a375d9be8a2835cebe09cd5083425e8eb05915e56c25e70"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.lean",
+      "sha256": "882043ca7c3c98726a9979155a76253bfeb10fc8ff0d88b60687a8e3163e76c9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.lean",
+      "sha256": "c79df401c29fc530da14dca8f67079606a607d630b45f0d709fe89e42bbd5297"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryQuotientProof.lean",
+      "sha256": "29bfa3dbb55d33d5423a17aaa29d1c5c8e128bcd3d079d4fdc0a3f64531ef52e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualBinaryPolynomialSquareCoefficient",
+    "LogicLineages.OrdinalComparison.Targets.ActualBinarySeriesSquareFactor",
+    "LogicLineages.OrdinalComparison.Targets.ActualBinaryQuotientTransport"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793332216928434811-11.json",
+      "sha256": "ae13128cf24651a3865315c46eef4beab2d2a2489ad3d6a5c772902ca7af9478",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "f13920fe6b72a56de7ad896a97f1c1f69747e5ab789795f3f2ccc452459b67ea",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySeriesSquareFactor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPolynomialSquareCoefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryQuotientTransport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

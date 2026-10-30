@@ -1,0 +1,69 @@
+{
+  "accepted_utc": "2026-10-30T05:23:12.029475+00:00",
+  "scope": "Full actual linked source residue, both formulas/nonzero/simple pole and original u=Phi(v), v>=4; promotion awaits checked dependency chain.",
+  "source_correspondence": "paper10 lem:residue lines546-571, actual local differential Laurent coefficients at primitive q-th roots",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.LinkedResidueLaurentStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:18:00.863961+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedResidueLaurentDefinitions.lean",
+      "sha256": "4d8c6733ead6467dcab8dc3fc0c49291d6edbdecc43fb4fe70982f8d0f2bc897"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.lean",
+      "sha256": "e1be09291162f8504851f3544cbe5702636fcf21d320f1ffb41159d0483a3450"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedResidueLaurentStatementChecks.lean",
+      "sha256": "708440d35ead9c3abd2ceae701ccbe7fd1fd98a002a3d4ab8d253bfe0d9566af"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedResidueLaurentProof.lean",
+      "sha256": "9571455f06e3648225cac84f3dbd28266d1b2414a91afd77943cdf546252cf95"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualLinkedResidueFormula",
+    "LogicLineages.OrdinalComparison.Targets.FullActualSourceResidue"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793337768746943997-6.json",
+      "sha256": "89b448ff06bd90bc6bb698d87d8b1b0d0841e6f44e0285c5df2854ca3559afc6",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "ca9d7f616d209152a40db0f15e5d40aaf130eea88d90b05d0d692cde066bace0",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSourceResidue": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLinkedResidueFormula": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualLinkedDegree.eq_1": [],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": true
+}

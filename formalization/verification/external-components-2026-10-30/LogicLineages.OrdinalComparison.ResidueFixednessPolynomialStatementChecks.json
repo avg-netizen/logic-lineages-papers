@@ -1,0 +1,79 @@
+{
+  "accepted_utc": "2026-10-30T05:28:06.775936+00:00",
+  "scope": "Literal F2 polynomial constant/degree with strict exponent calibration and actual residue-fixedness implies root; no root-count or tuple period claim.",
+  "source_correspondence": "paper10 actual period polynomial obstruction, source lines620-628",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.ResidueFixednessPolynomialStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:25:34.868271+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFixednessPolynomialDefinitions.lean",
+      "sha256": "fef9df20ea0fc60671e39be8ccd4eb198a6c4280cb060d05a8a1e700aedba198"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFixednessPolynomialTargets.lean",
+      "sha256": "1841e2a972c57f63a86705bb87999bdb833e1e4fc4a7f43daa5e3061146c0838"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFixednessPolynomialStatementChecks.lean",
+      "sha256": "b9a80520bd42045231321af7c5541fe2f30528c22181152a6fd8bd64698694cd"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFixednessPolynomialProof.lean",
+      "sha256": "6cc0406d560d0690bb3e5b9bb268f5f48ecb766a38013f602a6669155b3b1d76"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueFixednessPolynomialSize",
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueFixednessPolynomialRoot"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338060286411843-24.json",
+      "sha256": "4d8cb613a9380507aa568cf446b88239c939d0dc96ecb200cb578ab363fe0924",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "ea7449e6ee716bbc4ffbe2adb3ed339fb21ba0331c8ad5bd82e5bd5e7fb7a695",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueFixednessPolynomialRoot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueFixednessPolynomialSize": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualResidueFixednessPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualLinkedDegree.eq_1": [],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

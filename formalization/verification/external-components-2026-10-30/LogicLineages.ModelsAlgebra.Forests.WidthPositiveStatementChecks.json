@@ -1,0 +1,115 @@
+{
+  "accepted_utc": "2026-10-30T05:18:58.272050+00:00",
+  "scope": "Concrete template and actual common hosts, exact full source classification; whole numbered acceptance awaits dependency and candidate gates.",
+  "source_correspondence": "paper03 thm:width, finite order forests width at most m have JEP iff m<=3 for m>=1; empty width-zero convention",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.WidthPositiveStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:17:35.574709+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthPositiveTargets.lean",
+      "sha256": "73a2fc524e31e6ec1f38c6d8a5b29f403fe40fa0a42339454d73847458cece88"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthPositiveStatementChecks.lean",
+      "sha256": "23f16fec6192cbd3800876a2359fdd7ab9e82dffced7cd1437080154edf11946"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthPositiveProof.lean",
+      "sha256": "3fa73cda7b8be16bc22bee12b48096a63359bd628a7ac3e7b10464856849dbec"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SmallWidthTemplateCalibration",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.WidthZeroHasJEP",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.WidthAtMostThreeHasJEP",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.FullWidthJEPClassification"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793337522018693762-6.json",
+      "sha256": "6551226a637c4afd3f0b4c33f66a166037d4b3222572280864da673185225044",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "99a984f550645cf4f352c6a4c5da5b8bceb1d3a43c0d74c947325b3a9fa7bc03",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.widthAtMostThreeHasJEP": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.smallWidthTemplateCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.widthZeroHasJEP": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullWidthJEPClassification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.combSuffix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafCluster.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitRight.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitLeft.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitFamily.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": true
+}

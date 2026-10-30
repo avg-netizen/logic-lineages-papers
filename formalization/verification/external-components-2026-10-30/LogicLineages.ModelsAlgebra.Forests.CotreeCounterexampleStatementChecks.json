@@ -1,0 +1,93 @@
+{
+  "accepted_utc": "2026-10-30T06:14:55.202190+00:00",
+  "scope": "Root-authorized concrete counterexample only. Valid actual cotrees, exact leaves/LCA/graph semantics, induced graph inclusion, no injective label-preserving downward edge-disjoint path map even without ancestor reflection. Not final decidability theorem false, no manuscript repair.",
+  "source_correspondence": "Carter arXiv2409.06127v1 introduction path interpretation and section3.2 literal cotree transfer; independently documented concrete I3 into K1 disjoint-union P3 witness.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeCounterexampleStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:11:08.901509+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeCounterexampleDefinitions.lean",
+      "sha256": "c12bdc79c6f4c820530697951b09ad32e6bf7456cc99bcda1da9c8141743bfd2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeCounterexampleTargets.lean",
+      "sha256": "bb59569428399e3106795d3ca1932787b0088eb852434f1fd80f8cb87404ccb4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeCounterexampleStatementChecks.lean",
+      "sha256": "5eef831f8399f5e04529397ec7379073780a0ad4b1cba557aa87ce90f5d55ac9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeCounterexampleProof.lean",
+      "sha256": "37755b321d0f47c973ce9289e1854b343b3de4351d28e5c5602ad1f4a2d8cb30"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ConcreteCotreesValid",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ConcreteCotreeLeavesExact",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ConcreteCotreeGraphsExact",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ConcreteCotreePathObstruction",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.LiteralCotreeTransferCounterexample"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340870930680193-7.json",
+      "sha256": "dc722b25aaae58ce50c55685fbfe49568b4fe67a2a7682f3fe3a3b387339fcc0",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "3ca1851b42e5b3c87c9a05d60af5fb67814f9e38362abe79618eeb557b542b71",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.literalCotreeTransferCounterexample": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.concreteCotreesValid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.concreteCotreeLeavesExact": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.concreteCotreeGraphsExact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.concreteCotreePathObstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeCounterexample.pathEdges.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeCounterexample.sourceCotree.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeCounterexample.isolatedPathGraph.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeCounterexample.child.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeCounterexample.evaluatedGraph.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

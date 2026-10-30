@@ -1,0 +1,74 @@
+{
+  "accepted_utc": "2026-10-30T05:35:50.152554+00:00",
+  "scope": "Actual parity coefficient digits mapped by inverse Frobenius, square coefficient calibration and even/odd polynomial reconstruction; no rational operator claim.",
+  "source_correspondence": "paper10 differential Cartier definition polynomial prerequisite, source460-466",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.CartierPolynomialStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:32:39.852521+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierPolynomialDefinitions.lean",
+      "sha256": "e78697af32172a7e4d1e800fe7c00ff8e1f5f82c187970736ec4cc3aaf7b6aff"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierPolynomialTargets.lean",
+      "sha256": "259d305469befa763191880f82022cb7d11176a0f13b5997636822b794ee31a0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierPolynomialStatementChecks.lean",
+      "sha256": "621363b7bffe45787d11ba7d93ae95c072bb2386629961df710a22cd0332bb1c"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierPolynomialProof.lean",
+      "sha256": "f40d08d6bc0d3ae76a57c229d600c6aba46a5d2ae05a4a71934026dd73b1372d"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualPolynomialSquareRootDigitCoefficient",
+    "LogicLineages.OrdinalComparison.Targets.ActualPolynomialSquareRootDecomposition"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338507719925315-7.json",
+      "sha256": "1bcf62408c19ceb86c5d393b029ba30429471b752800966303657eac9d44e2bb",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "fb0b8477396273453cea712f468e306a978a4c18a79acb79c11039821bfe201f",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualPolynomialSquareRootDigitCoefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualPolynomialSquareRootDecomposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigit.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

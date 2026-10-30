@@ -1,0 +1,108 @@
+{
+  "accepted_utc": "2026-10-30T06:57:33.067581+00:00",
+  "scope": "Actual raw bounded observations, finite least eligible index, real wrong-selection permanent exclusion, eventual correctness under explicit true-code availability, uniform Primrec finite-input baseline. Evaln fuel is not source tape runtime; full lem:robust not promoted.",
+  "source_correspondence": "paper14 paper.tex227\u2013259 robust finite elimination on actual paired histories.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRobustStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:47:18.397460+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRobustDefinitions.lean",
+      "sha256": "1e14662278896c2e522c89164e1a59b2615fbc9486a855c0fdc89c43ae4ac13a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRobustTargets.lean",
+      "sha256": "87ef66623395fb312c5d68ca60c63f230b8087ba473634342079a7273a785828"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRobustStatementChecks.lean",
+      "sha256": "3f33a06f997d588f03d5773bef68b967f1810fe139e4ad7d2ee3acda597ca778"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRobustProof.lean",
+      "sha256": "506d412baf1cfbf66107ad31a082e4cf19823490fa74881f0ed4ada2283e494d"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.LeastEligibleSelection",
+    "LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.WrongSelectionExcluded",
+    "LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.TrueProgramEventuallyEligible",
+    "LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.RobustBoundedObservations",
+    "LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.PrimitiveRecursiveBaseline"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793343297131792532-6.json",
+      "sha256": "37bb1121174ae5e040cf8569b82faffa61339401d7e2dba11d1ccf3b61fec03b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "7e39286e9a13ffff93b7e4941bb659e09368aaf7f840c30ab800f490d1f77f1a",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.wrongSelectionExcluded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.trueProgramEventuallyEligible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.primitiveRecursiveBaseline": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.robustBoundedObservations": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.leastEligibleSelection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.baseline.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.indexedMove.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.historicalTest.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.advance.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.eligible.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionLearning.policy.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.historyPrefix.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionLearning.bitValue.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowSubstitutionCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem gorbow_substitution_code : LogicLineages.ComputabilityKnowledge.Comparators.GorbowSubstitutionCode.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowSubstitutionCodeProof.gorbowSubstitutionCode
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

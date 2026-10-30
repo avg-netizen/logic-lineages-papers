@@ -1,0 +1,65 @@
+{
+  "accepted_utc": "2026-10-30T05:30:45.900601+00:00",
+  "scope": "Literal order-embedding age/JEP necessity and infinite/Nat equivalence consequences; arbitrary hereditary JEP existence direction still pending.",
+  "source_correspondence": "paper03 prop:age necessity and unbounded countably-infinite realization clauses",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.AgeNecessaryStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:24:21.634466+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeDefinitions.lean",
+      "sha256": "03e111253b86c327ec96c726706ae38687bf65084bef041360144589b0ca0dcf"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeNecessaryTargets.lean",
+      "sha256": "c2134957385dfcb9dcbc036a73f989870742cbc3f3c83d27aba3e3ad2792e158"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeNecessaryStatementChecks.lean",
+      "sha256": "e1916db97b52850915448fabb0283e26a3da9df35cff983eed562c2a37285f9f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeNecessaryProof.lean",
+      "sha256": "22d5722773d9f7acfefa4709f9cdead3e2f311e6153d8bba57c7843523e45e11"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.RealizedForestAgeHasJEP",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.UnboundedForestAgeInfinite",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.UnboundedForestAgeCountablyInfinite"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338222509805657-7.json",
+      "sha256": "544a4f76a004c20e7e0a9de3adcea8a4374795e0fbe1edb8e996a52e15af0def",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "cc0959fc8d7e5c8f1114223c4fa075347a5adfd4f87de5504c935e2d95a35ecd",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.realizedForestAgeHasJEP": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.unboundedForestAgeInfinite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.unboundedForestAgeCountablyInfinite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

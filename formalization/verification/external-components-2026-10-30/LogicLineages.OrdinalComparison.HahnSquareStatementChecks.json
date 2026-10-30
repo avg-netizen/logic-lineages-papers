@@ -1,0 +1,55 @@
+{
+  "accepted_utc": "2026-10-30T05:46:39.068672+00:00",
+  "scope": "Actual characteristic2 HahnSeries Int square coefficients at all integer indices; no full series Cartier definition.",
+  "source_correspondence": "paper10 rational Laurent Cartier coefficient calibration prerequisites",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.HahnSquareStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:41:58.661093+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/HahnSquareTargets.lean",
+      "sha256": "77f301f6ca9fe8c7e6f1c59bfefe6ba2c72309b88c4255480cd7ab08117c8921"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/HahnSquareStatementChecks.lean",
+      "sha256": "7f03b1cd5a870033540f0220ca2eb546da12d28f741d053eddb3d05c8c417c7f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/HahnSquareProof.lean",
+      "sha256": "2143002308c4ebd514e48badcd8dc0dafb857ea17773ac82542e2933ccfa008e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualHahnSquareEvenCoefficient",
+    "LogicLineages.OrdinalComparison.Targets.ActualHahnSquareOddCoefficient"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793339166532444627-45.json",
+      "sha256": "6c51afd655a3d0d1e3da8d33f1a83830fabe171eb11d96109bb501eb333eaa0a",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "956201e12e24f70a25698b9032c2ae9646c0b377b15e474c0ce6d8f51c88603b",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualHahnSquareOddCoefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualHahnSquareEvenCoefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

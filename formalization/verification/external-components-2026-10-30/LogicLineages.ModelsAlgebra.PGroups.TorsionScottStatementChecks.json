@@ -1,0 +1,88 @@
+{
+  "accepted_utc": "2026-10-30T03:57:20.483879+00:00",
+  "scope": "Actual torsion implies local finiteness; actual prime-primary condition implies torsion; accepted localfinite obstruction applied without supplier premises. No full classification.",
+  "source_correspondence": "Paper01 locally-finite Sigma2 obstruction specialization to actual countably infinite abelian p-groups",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks",
+  "frozen_at_utc": "2026-10-30T03:56:01.670928+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+      "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TorsionScottTargets.lean",
+      "sha256": "bb21a2fb9173a024d23a8deeb78ce0fc11440b60512594fffdd3abc18ea2df2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TorsionScottStatementChecks.lean",
+      "sha256": "7ad0b0c936a4ac9f60abe71e21615313a4baa8babb0007ede73a697debf1056b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TorsionScott.lean",
+      "sha256": "ad07fcccd276d9b5e7bb46e2c2514bbbcb11b17db893b9dd13edef45d668ced3"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupTorsionLocallyFinite",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPPrimaryTorsion",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPPrimaryNoSigmaTwoScott"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793332616529310048-5.json",
+      "sha256": "05a6341884b4281891ce8ea8cd3142f5c391b54051ee3597efb1e54f6a4d4f54",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "81a014fd879a88cfeee877f69033c543dcdfa6115d618d95aa57567a70840c5d",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks.fixed_p_primary_torsion": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks.fixed_p_primary_no_sigma_two_scott": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks.fixed_torsion_locally_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

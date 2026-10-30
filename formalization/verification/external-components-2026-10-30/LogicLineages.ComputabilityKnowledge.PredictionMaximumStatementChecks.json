@@ -1,0 +1,109 @@
+{
+  "accepted_utc": "2026-10-30T07:20:06.146152+00:00",
+  "scope": "Actual uniform ordinary code compiler for finite family/argument-prefix maxima, exact partial semantics for every list and totalness for total inputs; canonical list selection remains noncomputable, no 0-double-jump or runtime assertion.",
+  "source_correspondence": "paper14 eq:bounds84\u201385 and ordinary evaluation clause of lem:list367\u2013390.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionMaximumStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:13:57.732075+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionMaximumDefinitions.lean",
+      "sha256": "165a4ce9a3427f92c7d4fb8c43abe46686bd481ca01f49114aa4290326b4a5ae"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionMaximumTargets.lean",
+      "sha256": "530cf8692c990c1005de6284031aed713189ec76e3a69f1ace630c063f17c2c6"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionMaximumStatementChecks.lean",
+      "sha256": "3c15475d724eff998eb08220888449557d49f6755fe81d83d5cd46408cca9dd7"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionMaximumProof.lean",
+      "sha256": "d9cebf6492cbbc84c01ca0b50bcde989a2c9fa05269a945ca634f776c489033e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.PrefixPartialRecursive",
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.FamilyPartialRecursive",
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.TotalMaximumSemantics",
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.UniformMaximumCompiler",
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.CanonicalOrdinaryBounds",
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.CanonicalBoundDominance"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793344764908619879-6.json",
+      "sha256": "430bca374fd097ecb42e021c5eecc03d14b56e66c52b16b65ac19477c6671b66",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "8483e17383b2103e6e2d1e2fc7bda58f0c5abf41415621fca0edd97278593904",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.totalMaximumSemantics": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.uniformMaximumCompiler": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.canonicalBoundDominance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.familyPartialRecursive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.prefixPartialRecursive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.canonicalOrdinaryBounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.familySteps.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.advance.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.prefixRun.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.familySteps.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.prefixRun.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.compileMaximum.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.evalValue.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.prefixRun.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionMaximum.familySteps.eq_2": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

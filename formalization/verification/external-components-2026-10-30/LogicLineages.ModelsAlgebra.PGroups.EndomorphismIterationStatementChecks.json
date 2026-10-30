@@ -1,0 +1,62 @@
+{
+  "accepted_utc": "2026-10-30T06:11:47.836316+00:00",
+  "scope": "Identity, composition and injectivity of actual transition maps only. No assumed direct-limit correctness, special endomorphism or classification.",
+  "source_correspondence": "paper01 sequential direct-limit prerequisite: literal powers of actual additive endomorphism.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.EndomorphismIterationStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:10:38.497323+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismIterationDefinitions.lean",
+      "sha256": "01973a29a019be887b54685c65fea53b9a1821237fa564b53a8b422893019868"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismIterationTargets.lean",
+      "sha256": "06a8fc40aced85a74cd39c02058fd988a24e8c77dc6bc14da7c22b5bf7a21591"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismIterationStatementChecks.lean",
+      "sha256": "5b19659bdd13e9d3bfddd32ffdd68cef57f41963cd216ad1cea84496ec543b31"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismIteration.lean",
+      "sha256": "d5135214bd096366017c74ac97f9ba420c9203f934f588d72dbdd88bd54aadb2"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIterationTransitionIdentity",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIterationTransitionComposition",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIterationTransitionInjective"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340691467708802-6.json",
+      "sha256": "73f7009fbc881386a089d1b0d6ca780f51a7dee999f13169a6543e7c64f73640",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "ac7bcbe5fc1450a7499a911fc1d6fe0fc0d449fe7c28d2343cf342e4913182a9",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismIterationStatementChecks.fixed_iteration_transition_identity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismIterationStatementChecks.fixed_iteration_transition_injective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismIterationStatementChecks.fixed_iteration_transition_composition": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,63 @@
+{
+  "accepted_utc": "2026-10-30T05:34:58.425657+00:00",
+  "scope": "Actual embedding/iso calibration and finite forest pullback from arbitrary relational structure; no age existence or global forest reconstruction assumed.",
+  "source_correspondence": "paper03 prop:age actual order language presentation prerequisite",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.AgeModelStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:32:12.171572+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeModelDefinitions.lean",
+      "sha256": "633d9fbf055f55c98779b339a0ddd7a485a26b2605fee85466363414f227742b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeModelTargets.lean",
+      "sha256": "11290fca2a76977f2cf6d978136b31b09b020b5b699313d971cb62776351ee41"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeModelStatementChecks.lean",
+      "sha256": "7355f99f1c1ed8bf6e8b6c9f40b5d284a2b15e6e00d5142c7b56a031f60e161f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeModelProof.lean",
+      "sha256": "6383173107d881311ba4688c552b1dfd791be46c8f052626293203c00d03e57e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.OrderModelEmbeddingCalibration",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.OrderModelIsoCalibration",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.RelationalFiniteForestPullback"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338463433411904-16.json",
+      "sha256": "824a442f20d658da5a1d2ab7b7ef59ee67929a6ed2fdf0ac389365d127198fd2",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "56eeade052f21b349a1f0b02335d4d99b3646b71ddda307fe5d720bce9fff80b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderModelEmbeddingCalibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.relationalFiniteForestPullback": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderModelIsoCalibration": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

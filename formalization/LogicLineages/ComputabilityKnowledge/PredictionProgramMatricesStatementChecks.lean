@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem primitiveRecursiveTotalMatrix : LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.PrimitiveRecursiveTotalMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesProof.primitiveRecursiveTotalMatrix
+
+theorem exactTotalityMatrix : LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.ExactTotalityMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesProof.exactTotalityMatrix
+
+theorem primitiveRecursiveEqualityMatrix : LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.PrimitiveRecursiveEqualityMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesProof.primitiveRecursiveEqualityMatrix
+
+theorem exactExtensionalEqualityMatrix : LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.ExactExtensionalEqualityMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesProof.exactExtensionalEqualityMatrix
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

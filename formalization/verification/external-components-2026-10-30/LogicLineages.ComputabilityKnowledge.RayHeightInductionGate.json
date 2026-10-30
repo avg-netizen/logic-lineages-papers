@@ -1,0 +1,293 @@
+{
+  "accepted_utc": "2026-10-30T04:12:53.775996+00:00",
+  "scope": "Actual source-family equality/stable order and oriented constant-free gap at explicit common threshold, only original canonical/WellFormed premises. Numeric evaluator/effective sign still separate.",
+  "source_correspondence": "Paper02 lem:ray simultaneous height induction",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.RayHeightInductionGate",
+  "frozen_at_utc": "2026-10-30T04:08:19.430524+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/RayHeightInduction.lean",
+      "sha256": "5d8ed59967eb88cea6954372c061dd95a91cc382b0f5a1594c9f5264d1327d2b"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/Comparators/RayHeightInduction.lean",
+      "sha256": "007993d238d06aca5aa9c05aced646b0b011a280029a0f4a00b85bfead594381"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/RayHeightInductionGate.lean",
+      "sha256": "cbacca4647bec542fb9f30967396ff48d694fa1eae54e9a031b8e86e3a38909c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/RayHeightInductionProof.lean",
+      "sha256": "6abb2bcd9e1961c64a259001674d4baec6fe7d58b3399e420b1919799b4a29a3"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayHeightInduction.Target"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793333557539634149-6.json",
+      "sha256": "6ad648712e90cde394b2b2355ebaafed518b8c4d35c2d6898cbd03a298276f94",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793333559454737755-10.json",
+      "sha256": "6b70129154273e19b113416e89fc2723d14a0e66d29cc8bd3785196203c7bfd5",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "3dbdc10da7e1626c705d22c8c46653749410fcb3cd9997179325cb908399762c",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_height_induction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RaySurvivingDifference.survivingKeys.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedRay.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedWeights.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayMapDifference.constantDifference.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayFiniteSum.coefficientMass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayMapDifference.slopeDifference.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.familyMass.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.collected.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayDominance.noise.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayHeightInduction.rayValue.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.weights.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayTuple.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayFiniteSum.lowerSum.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayUniformBounds.widthBound.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayCompare.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

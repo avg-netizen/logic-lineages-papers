@@ -1,0 +1,78 @@
+{
+  "accepted_utc": "2026-10-30T03:42:35.485039+00:00",
+  "scope": "Ordinary explicit countable normal-form syntax, actual semantics, QF padding and calibrated back-and-forth truth transfer; no Scott classification or unrestricted-syntax normalization claim",
+  "source_correspondence": "01-scott-complexity-abelian-p-groups/paper.tex Conventions81-98",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks",
+  "frozen_at_utc": "2026-10-30T03:38:53.605814+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDefinitions.lean",
+      "sha256": "b94822505afeee10653bec56e71b449e134bed3c8349a114ef3bc9e6d36c961d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryTargets.lean",
+      "sha256": "e22b5c2e0d496f1ea03fa166f911b92805cb11572d989d7d2fcc501dbf226f0f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryStatementChecks.lean",
+      "sha256": "419fc6ba7e28d385af253883110c4759df271d0747500bdd9319375c9a29e8ab"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/Infinitary.lean",
+      "sha256": "38c960dd00fc1a554d476c2614535bea76c4b24916e77eff8ea1ce244eded7f1"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupQFTruthAgreement",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaQFPadding",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiQFPadding",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfinitaryTruthTransfer"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793331723844390330-6.json",
+      "sha256": "66152ca9a746eaa75eaa90fcd8e6d99220bfa6c6338b09609170029bfc5dee5f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "9962f13df182c2953c8a7a2488d1339b3cde169a0cf461f319ef744c8651914c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_qf_truth_agreement": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_sigma_qf_padding": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_pi_qf_padding": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_truth_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

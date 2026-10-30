@@ -1,0 +1,70 @@
+{
+  "accepted_utc": "2026-10-30T04:48:56.540543+00:00",
+  "scope": "Explicit nonempty laminar subsets/singletons realize actual reverse-inclusion forest with exact node/leaf maps, incl empty base case; binary split data transported to actual HasBinaryLeafClusters. No full width claim.",
+  "source_correspondence": "Paper03 thm:width actual finite laminar leaf-family forest realization",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.LaminarForestStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:46:08.282343+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LaminarForestDefinitions.lean",
+      "sha256": "6c7cd94e48f7083acd6416f2be69bdc70d989536cb5838e5df47c5b9cf820cf5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LaminarForestTargets.lean",
+      "sha256": "9b309fbeca074e9c84d537b5e808bb7b3d2b2b0bf7f62f15d72e4a6485f78089"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LaminarForestStatementChecks.lean",
+      "sha256": "583ea1228c07b6b19597930fdbbc9e9c3762fb5b97d61b804b2b95517781de79"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/LaminarForestProof.lean",
+      "sha256": "2004cb4c2dfcbf1d560fae61d92daaf03c0753a4f5b028f94b1cdebc5d5c44ff"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.BinaryClusterRelabeling",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.LaminarFamilyForestRepresentation",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.BinaryFamilyForestRepresentation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793335723104094842-5.json",
+      "sha256": "db600efa23b82a2ac911d8d44a40f0427a54c98ddeb77ebc2a1620afea35a67d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "32253dc88a2af7cca1bcd747283d6327129915b53390f01b8769ff044a628f8e",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.binaryFamilyForestRepresentation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.binaryClusterRelabeling": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.laminarFamilyForestRepresentation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

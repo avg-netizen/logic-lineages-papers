@@ -1,0 +1,87 @@
+{
+  "accepted_utc": "2026-10-30T07:27:27.105646+00:00",
+  "scope": "Uniform Primrec totality/extensional-equality matrices with exact forall-exists semantics on actual raw partial Nat programs; no actual Turing jump/oracle decision theorem.",
+  "source_correspondence": "paper14 lem:list ordinary program predicate matrices.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:20:56.353180+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionProgramMatricesDefinitions.lean",
+      "sha256": "dae164dcb59494ff0731ea9aebf4f885d58fccd00d14577f238fd73eae0e7ccc"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionProgramMatricesTargets.lean",
+      "sha256": "d061db62710b2ceeca5dcb0d35c795552e09f184e21c8e2ff066e71ea674fe36"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionProgramMatricesStatementChecks.lean",
+      "sha256": "f66fe3f8e1aaaeb46585dcc98747a5da5675ced6049c5786b8cee2b1170cb827"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionProgramMatricesProof.lean",
+      "sha256": "bbf47f4c27f8ef77f297eecbc7f7800e60699eb35159fcf8fee06fee94ee9e31"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.PrimitiveRecursiveTotalMatrix",
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.ExactTotalityMatrix",
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.PrimitiveRecursiveEqualityMatrix",
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatricesTargets.ExactExtensionalEqualityMatrix"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793345186873271926-6.json",
+      "sha256": "ec7ef4b3c890841b1aaeba4666f59823bd288784302cf64b6bad4d59f80e9d01",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "5b275a3db347f25dd80e997a1566cf378a899293df782477510ba897d9de607f",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.exactExtensionalEqualityMatrix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.primitiveRecursiveEqualityMatrix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.exactTotalityMatrix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.primitiveRecursiveTotalMatrix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.advance.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatrices.totalMatrix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatrices.equalityMatrix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatrices.observedAgreement.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionProgramMatrices.observedAgreement.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

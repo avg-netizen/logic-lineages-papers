@@ -1,0 +1,94 @@
+{
+  "accepted_utc": "2026-10-30T05:37:10.400434+00:00",
+  "scope": "Actual AlgebraicClosure primitive-root existence, literal Frobenius iterates and exact minimalPeriod for actual Laurent residue tuple incl original Phi inputs; whole theorem awaits Cartier orbit transfer.",
+  "source_correspondence": "paper10 thm:actual-period first sentence, residue tuple only",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.ResidueTupleStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:31:20.479487+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueTupleDefinitions.lean",
+      "sha256": "2ba0a9af093d1b22b715c048d257ef4750e5b2aa97f0ef46c282404384e110f0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueTupleTargets.lean",
+      "sha256": "fb9500a5525cfb9931d7981edff01bb074e11556cf90004b2236f1d3fbd0f290"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueTupleStatementChecks.lean",
+      "sha256": "1c46f66ba5851b8a1f3f138a0384640c2bf0c6d0c66d68cb9fd8fc52f951f6fe"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueTupleProof.lean",
+      "sha256": "91988a82f072a119855436e587ffef5f9a5928b7c09951c802d16f907319624f"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualLinkedPrimitiveRootExists",
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueTupleIterate",
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueTupleExactPeriod",
+    "LogicLineages.OrdinalComparison.Targets.FullActualSourceResidueTuplePeriod"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338591415503015-6.json",
+      "sha256": "cab4f848ca53379adce205c7d249d103e3a9d0d000095e7440f3a1ee8e9d5bc8",
+      "profiles": {
+        "heap_cap_mib": 3072,
+        "rss_cap_mib": 2560,
+        "minimum_free_mib": 4096,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "4a8e33024adc70ed002605f7d9211df1a7425d990b259bd27ec15e36deb2a4d6",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueTupleExactPeriod": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLinkedPrimitiveRootExists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueTupleIterate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSourceResidueTuplePeriod": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualResidueFixednessPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualLinkedDegree.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualLinkedModulus.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

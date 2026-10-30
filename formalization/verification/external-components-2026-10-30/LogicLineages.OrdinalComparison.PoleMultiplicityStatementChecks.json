@@ -1,0 +1,69 @@
+{
+  "accepted_utc": "2026-10-30T06:02:08.968961+00:00",
+  "scope": "Actual monic-root division expansion and lower support under A nonzero, including multiplicity0; source A_d uniform mu bound separate.",
+  "source_correspondence": "paper10 lem:poles generic actual root-multiplicity Laurent calibration",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.PoleMultiplicityStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:56:28.678738+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/PoleMultiplicityDefinitions.lean",
+      "sha256": "35df022a90c727bfe6eff16da98011416028b30e5f35a5e272fd7725470aa709"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PoleMultiplicityTargets.lean",
+      "sha256": "2189b3bc77459376d9c58270ccc34347d5b00d9ac206c63bf6b8147e7e3f274a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PoleMultiplicityStatementChecks.lean",
+      "sha256": "d6a532d8515d9f002c8c174dde399381c14f60a4bbdddacede52067f77751744"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PoleMultiplicityProof.lean",
+      "sha256": "0a5c3594da006e106ac52183abb4cd89d7695b3a4a99398ec1a8f38d766733b3"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualMultiplicityPoleExpansion",
+    "LogicLineages.OrdinalComparison.Targets.ActualMultiplicityPoleLowerSupport"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340098468680249-6.json",
+      "sha256": "7ef5be5cc454135e35a23e8b3c0b92c2e8d948181c9f63950de5d3b01c45aba7",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "d3249116eb6084ec6a9ee629c8b5b8e27da65592f741022d5a4bbfed47ab27f9",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualMultiplicityPoleExpansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualMultiplicityPoleLowerSupport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualRootRemovedDenominator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

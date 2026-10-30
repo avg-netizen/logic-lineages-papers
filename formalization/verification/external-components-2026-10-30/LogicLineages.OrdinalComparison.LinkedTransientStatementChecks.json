@@ -1,0 +1,59 @@
+{
+  "accepted_utc": "2026-10-30T06:18:25.401741+00:00",
+  "scope": "Actual quadratic pole-budget bound and literal linked transient below observation exponent. Alternate bound proves required inequality, not printed sharper bound.",
+  "source_correspondence": "paper10 unnumbered selected-coefficient and linked transient calibrations following lem:poles.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.LinkedTransientStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:14:07.312146+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedTransientTargets.lean",
+      "sha256": "4bfb2f7384ee6f04b72b95cbeafa3b7abeef62f99a52e8b7014d1deadc4d6313"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedTransientStatementChecks.lean",
+      "sha256": "d6b09971bd886ef3e03ef2784bd23f04fdff83a48122d0126e306e9a1acc964a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedTransientProof.lean",
+      "sha256": "c00eedfad823ee9c66af82709c0b8aeb67398ecc22dc4bce6f909db2f9f89f95"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualBinaryPoleBudgetQuadratic",
+    "LogicLineages.OrdinalComparison.Targets.ActualLinkedPoleTransient"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793341078079595592-7.json",
+      "sha256": "3e691577d55fe3f4f5c4060e83c1521a403d0a6b605717fdef49d3a7b2cf05eb",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "dd2d656544700335a8ff24220b1ad1137b1c6bb7ac293a899271d66f5b5f2f2d",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLinkedPoleTransient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPoleBudgetQuadratic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

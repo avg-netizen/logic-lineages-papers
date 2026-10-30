@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.SuffixKernelMonotoneProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualSuffixCountInputMassMonotone : LogicLineages.OrdinalComparison.Targets.ActualSuffixCountInputMassMonotone :=
+  LogicLineages.OrdinalComparison.actualSuffixCountInputMassMonotone
+
+theorem fixed_actualSuffixKernelInputMassMonotone : LogicLineages.OrdinalComparison.Targets.ActualSuffixKernelInputMassMonotone :=
+  LogicLineages.OrdinalComparison.actualSuffixKernelInputMassMonotone
+
+theorem fixed_actualSuffixKernelStrictInput : LogicLineages.OrdinalComparison.Targets.ActualSuffixKernelStrictInput :=
+  LogicLineages.OrdinalComparison.actualSuffixKernelStrictInput
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

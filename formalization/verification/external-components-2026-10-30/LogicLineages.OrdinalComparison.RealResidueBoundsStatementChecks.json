@@ -1,0 +1,66 @@
+{
+  "accepted_utc": "2026-10-30T05:01:57.039447+00:00",
+  "scope": "Actual Real.rpow2r/3 and real quotient strict inequalities, original linked Phi parameters and integer side bounds, u\u22654 stronger source domain. No natural truncation substitute.",
+  "source_correspondence": "Paper10 lem:bounds entire literal linked root-count bounds",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.RealResidueBoundsStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:57:19.810783+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/RealResidueBoundsTargets.lean",
+      "sha256": "3c12909e8b5281f4e7f4ab44c3c1fd4f920ddc100a3bf1030799db2d5febbbe0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LinkedResidueDefinitions.lean",
+      "sha256": "e9a71747b908aca647a92a12140a4c4f619915a61bb96cdf3b7440c538a79508"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RealResidueBoundsStatementChecks.lean",
+      "sha256": "b25c61ade024cce7f24d4b4ebad51b157d2e4c0638d161dfb688ea581f610f97"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RealResidueBoundsProof.lean",
+      "sha256": "5be9a6dbe2dde0f701d5818dca0663e851bd45969ee8e6747738480b13d539b8"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualRealExponentialRootGap",
+    "LogicLineages.OrdinalComparison.Targets.FullActualLinkedResidueBounds"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793336480468782333-6.json",
+      "sha256": "b8da33c9e898931cbc7d477f84b482decd59dfee61951d04f00b119753d80f62",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "5b6a7627baf7586cd87840dbf451c93e2722d171d8931e17cadd2b419689a5f7",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRealExponentialRootGap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualLinkedResidueBounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualLinkedModulus.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": []
+  },
+  "numbered_statement_promotion": true
+}

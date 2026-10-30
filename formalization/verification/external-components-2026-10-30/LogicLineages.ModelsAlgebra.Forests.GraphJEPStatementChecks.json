@@ -1,0 +1,87 @@
+{
+  "accepted_utc": "2026-10-30T04:25:24.625942+00:00",
+  "scope": "Actual graph/forest forbidden-class and JEP equivalence only. No effective representation/Carter algorithm or full decision theorem claim.",
+  "source_correspondence": "Paper03 thm:decision semantic reduction to exact P4/C4/Comp(U) forbidden graph class",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphJEPStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:24:00.236914+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPDefinitions.lean",
+      "sha256": "964d94697b098425da28d47fdf2bd546403fc5ee12b5f55181519e9fbf67a605"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPTargets.lean",
+      "sha256": "b03bff9c677f50705edfca905900d102c462da78889cddadff7528e10f341a32"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPStatementChecks.lean",
+      "sha256": "316540e02f7bdc53065a71eaf5f0abe95ad5123aa858ea04ba25f6cc61628d18"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPProof.lean",
+      "sha256": "59ba11d350eea71d673b55d545e938262ebf52b1c96e5451fe202baa88b79d76"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.GraphAvoidanceIsoInvariant",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ComparabilityAvoidance",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ForbiddenGraphRepresented",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ForbiddenFamilyJEPEquivalence"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793334301619187911-5.json",
+      "sha256": "c5cea71e6cbcceb6d8a6cbde9ffcdd4654cfc78479f3b6a1419f689ae4dd3d7f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "fc842fdb98a453ee58c83451d7a62f76b663cd188bbe3775bb7eee7f74919b3c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphAvoidanceIsoInvariant": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.forbiddenGraphRepresented": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.forbiddenFamilyJEPEquivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.comparabilityAvoidance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

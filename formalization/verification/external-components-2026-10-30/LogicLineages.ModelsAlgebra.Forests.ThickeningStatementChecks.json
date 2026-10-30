@@ -1,0 +1,74 @@
+{
+  "accepted_utc": "2026-10-30T05:09:23.353039+00:00",
+  "scope": "Raw T\u00d7Finn relation actual partialorder/forest/maximality alln; n>0 actual finite forest with point equivalence and unchanged leafcard, incl emptytemplate. No correctness oracle.",
+  "source_correspondence": "Paper03 positive-width finite chain subdivision construction",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.ThickeningStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:06:39.836397+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ThickeningDefinitions.lean",
+      "sha256": "583a6b9e6565efdec6dbadfbe26c0b5de603f48cbb8aec441205cfcc20b40206"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ThickeningTargets.lean",
+      "sha256": "1f6d2aa019dc6bfa1ae72c14771f69b84fbfd05e09f190fe821475d8724bb2d9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ThickeningStatementChecks.lean",
+      "sha256": "a2b380eca2ea8fe5ef3b4a250486d013c881ba40cebee37708eae63607a17623"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ThickeningProof.lean",
+      "sha256": "e509afd975c1479a8adeee33095c5d7125e82b6218338c3174e4af6372e8d98a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ThickeningPartialOrderLaws",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ThickeningPredecessorsChain",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ThickeningMaximalPoints",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ActualFiniteThickening"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793336927458849671-15.json",
+      "sha256": "8f30576d1d8cb8ebe8bcc2e50c1488020fedc541d962ea865189819c51a16364",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "21186b46a7c20e3c66d9b844699fafecc3d5a4c334d1a1ec4e98c52004404dd0",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.thickeningPartialOrderLaws": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.actualFiniteThickening": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.thickeningMaximalPoints": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.thickeningPredecessorsChain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

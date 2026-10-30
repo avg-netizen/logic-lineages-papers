@@ -1,0 +1,121 @@
+{
+  "accepted_utc": "2026-10-30T07:50:56.996514+00:00",
+  "scope": "Explicit finite oracle syntax and genuine Part evaluation for arbitrary partial oracle, soundness/completeness to Nat.RecursiveIn singleton oracle, injective tagged code and uniform valid-code specialization. No universal-evaluator correctness field or jump computability claim.",
+  "source_correspondence": "paper14 actual oracle-computation foundation for later jump calibration.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.OracleProgramStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:41:26.428866+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleProgramDefinitions.lean",
+      "sha256": "a23548a0d646152a60bd84c40586cca35f083e6b99ceafd71fabadef999aba3b"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleProgramTargets.lean",
+      "sha256": "5da4804af6fb8197a19399218d7ec7aa1a714303e48cf736de21e45593e77406"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleProgramStatementChecks.lean",
+      "sha256": "abbe8042cd850b4d13c96d35ffe904511801b57c95e853d6f71af2650dbd846e"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleProgramProof.lean",
+      "sha256": "bda8eea5fb839d4fdeae80f2e2ee637305bf14f3e2fcf0f5d7710f8c277e07d1"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.OracleProgramTargets.InjectiveProgramEncoding",
+    "LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OracleEvaluationSound",
+    "LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OracleEvaluationComplete",
+    "LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OrdinaryBaseCalibration",
+    "LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OracleSpecializationSemantics",
+    "LogicLineages.ComputabilityKnowledge.OracleProgramTargets.UniformEncodedSpecialization"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793346631515800021-5.json",
+      "sha256": "f365b6ef997ab9f3e9937ea9dffd7735798df71e7ca5679b6a42ac843612628c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "81cf92a3bf01b5ab421712e764b3c4dc827ef62a48ab8b2a2b2a98910fbcfa23",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.uniformEncodedSpecialization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.oracleEvaluationComplete": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.oracleSpecializationSemantics": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.injectiveProgramEncoding": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.oracleEvaluationSound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.ordinaryBaseCalibration": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.specialize.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.tagged.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

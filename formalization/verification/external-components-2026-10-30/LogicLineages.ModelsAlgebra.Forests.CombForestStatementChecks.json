@@ -1,0 +1,80 @@
+{
+  "accepted_utc": "2026-10-30T04:51:59.722736+00:00",
+  "scope": "Literal singleton/suffix family k<m proves binarysplits and all nonsingleton clusters nested; actual forest witness has m leaves and property for every m>0 incl1. No full width claim.",
+  "source_correspondence": "Paper03 thm:width concrete rooted comb witness",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CombForestStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:50:11.103206+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CombForestDefinitions.lean",
+      "sha256": "cc30456948d26006c344ee75af4003dc1c1ad089acc2b83a63e70b394b7d0d4a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CombForestTargets.lean",
+      "sha256": "5b2c580ec779409b3a1003b24ca76e1eac4ff08f96957cd1e767cc1dfcceb330"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CombForestStatementChecks.lean",
+      "sha256": "65fed2df3877560d27d9b1fb611064ee97b8a116cd504d329045670708fb3a5e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CombForestProof.lean",
+      "sha256": "0bac3369f6c10962661ed6c503e4b007438ad2adf4272067ec9681fd8f37e206"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CombFamilyBinary",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CombNontrivialClustersNested",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ActualCombForest"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793335904238115303-5.json",
+      "sha256": "4a0e05858dc4de0b600e26c9e3398e9f46bfd05ff314e8abd04c122f08822da7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "9660ebfb9039d464aaac42abc1cd77ad47e8908d8352ed49e589fc6149a076ca",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.combNontrivialClustersNested": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.combFamilyBinary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.actualCombForest": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.combSuffix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

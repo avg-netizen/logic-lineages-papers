@@ -1,0 +1,81 @@
+{
+  "accepted_utc": "2026-10-30T04:09:36.303288+00:00",
+  "scope": "Literal twin classes and strict-predecessor ranks recover original forest order and finite rank bound; no whole uniqueness/reflection claim",
+  "source_correspondence": "Paper03 lem:bridge uniqueness, actual equal-neighborhood class order recovery",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.TwinRankStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:07:36.357546+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankDefinitions.lean",
+      "sha256": "f10311cea03af389e81fafebca5f736e36b6cc76db5b46fabef3fceccd88472a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankTargets.lean",
+      "sha256": "22b55b22e670e2d3a607a2eeca45b737a28ca523ea82fa109edc3e35b1e584ca"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankStatementChecks.lean",
+      "sha256": "bee5e3a99b0ef5de1108d589491cacd08e359107ac32986c157d2e155c7bb657"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankProof.lean",
+      "sha256": "0a27cc67f3c955b5fb215b713c9419ba6f0d9f727b98a75ad6df9f939422c8f4"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.OrderReversesNeighborhoodInclusion",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinClassChain",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankOrder",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankOrderRecovery",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankBound"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793333351394528013-10.json",
+      "sha256": "d8ef8a60568bdeb22cdd22ce01fe2a7fad0d6f51d075f907146b9b61c916c74e",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "c9744fbca909ef5ee51b7e353682aebbf3b74b10a48ffdf85e106688b2700434",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankOrder": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderReversesNeighborhoodInclusion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinClassChain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankBound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankOrderRecovery": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

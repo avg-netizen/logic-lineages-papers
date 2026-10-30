@@ -1,0 +1,95 @@
+{
+  "accepted_utc": "2026-10-30T03:53:35.422696+00:00",
+  "scope": "Actual injective hom low comparison/descent; finite witness subgroup; no Sigma2 relative Scott sentence among all countable additive commutative models including finite ones. Not whole bounded classification.",
+  "source_correspondence": "Paper01 lines216-221 locally-finite Sigma2 finite-subgroup argument",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks",
+  "frozen_at_utc": "2026-10-30T03:49:39.478883+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+      "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScottTargets.lean",
+      "sha256": "af717aab4c621c104dd3dbb9f5a6e8b8416cd4650436e90c130f5fa476f86c92"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScottStatementChecks.lean",
+      "sha256": "429fc56edac7c25898cd99893a05d10d4b8251d9f5725248b37679122c697222"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScott.lean",
+      "sha256": "c0bb5e873bfb0c86ba06c93bc126b2da86c7a691041e2bee122ce8a6393148d9"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEmbeddingLowBackForth",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEmbeddingLowPiDescent",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaTwoFiniteSubmodel",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLocallyFiniteNoSigmaTwoScott"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793332391440785761-6.json",
+      "sha256": "5376dc7f70eae24fec63c9d04447ce870aa7095c4e9e5c61dc133ab5de0a750f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "4a37ab1b873b6ade5b0bd6fe6c53c4a07c09143381b644814f549424e14e7f2f",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_embedding_low_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_sigma_two_finite_submodel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_embedding_low_pi_descent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_locally_finite_no_sigma_two_scott": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

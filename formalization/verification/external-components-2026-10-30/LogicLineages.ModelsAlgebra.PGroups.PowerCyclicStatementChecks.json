@@ -1,0 +1,82 @@
+{
+  "accepted_utc": "2026-10-30T06:37:50.433031+00:00",
+  "scope": "Actual integer lift, prime injection, image range, exact socle roots/nonzero witness and exponent annihilation, including ell0 and equal-depth edges. No classification or generic shift premises assumed.",
+  "source_correspondence": "paper01 general cyclic p-power inclusion/root arithmetic for finite-short-block source lower bounds.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:35:03.551937+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclicDefinitions.lean",
+      "sha256": "444bc7e63c95689b5a657ba6daadf4235951b5ad18d9eca717b759cd7949412d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclicTargets.lean",
+      "sha256": "13bcc963de4404b1a869f5166660b8c5da6e5e5880c9d737860c22fa1d89be99"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclicStatementChecks.lean",
+      "sha256": "df83f1922a21935d0946154640e04758549124c8c447f15d8fd64f8b19a48bd1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclic.lean",
+      "sha256": "0693f3eed90d711ce2e848ece3740d1ab2b8d2294594b3abffd8a39972dbc270"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPowerCyclicInclusionEvaluation",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPowerCyclicInclusionInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPowerCyclicInclusionRange",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPowerCyclicSocleRoots",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPowerCyclicSocleWitness",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPowerCyclicAnnihilation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793342253638333951-6.json",
+      "sha256": "d84b4396e15c9cb28d12865876df6bc687c3180b403b403ccb011df3f040d61e",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "5129073eaa085108bd103c022e6a5533e869a133a61e1dfd7975a63e2ded2f90",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks.fixed_power_cyclic_inclusion_evaluation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks.fixed_power_cyclic_socle_witness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks.fixed_power_cyclic_inclusion_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks.fixed_power_cyclic_annihilation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks.fixed_power_cyclic_inclusion_range": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PowerCyclicStatementChecks.fixed_power_cyclic_socle_roots": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

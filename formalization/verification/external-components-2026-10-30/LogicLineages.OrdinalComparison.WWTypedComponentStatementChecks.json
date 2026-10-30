@@ -1,0 +1,155 @@
+{
+  "accepted_utc": "2026-10-30T06:39:06.193910+00:00",
+  "scope": "Actual typed de Bruijn component interface, literal variable vector length/coordinates, hygienic renaming and X:=1 head closure after weakening. Named-source correspondence, canonical assignment/effectivity remain separate.",
+  "source_correspondence": "paper05 canonical assignment foundations.tex312ff and original WW variable-vector/binder conventions.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.WWTypedComponentStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:35:35.640665+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/WWTypedComponentDefinitions.lean",
+      "sha256": "03c13d99a9fde34527b854b21350fbdba7ad1499ffaec349afd784e6cb868480"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWTypedComponentTargets.lean",
+      "sha256": "8627ca19aa7bebb3dbba74ca5ae5dd24d65c6a21f28655c410a594bba1ee47ae"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWTypedComponentStatementChecks.lean",
+      "sha256": "f213f42e51d78e33f9f8794c43f81f50a74b462aab46798f44035be2e25803c6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWTypedComponentProof.lean",
+      "sha256": "e5c9981a432dfb11c9d0db021a0fecfa3f52234071a567b79bf8734263a6138f"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalVariableVector",
+    "LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalRenaming",
+    "LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalVectorRenaming",
+    "LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalHeadClosure"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793342329536818297-6.json",
+      "sha256": "b281c74e27136997579ab73a48df4e489a8f5ed6871d07e11032f1bf966959a7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "9e6f6ddf07e07cf2cf322719a4afd1c38cba33d583915ec5575730d3416293e8",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTypedOrdinalVariableVector": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTypedOrdinalVectorRenaming": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTypedOrdinalRenaming": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTypedOrdinalHeadClosure": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.ordinalVariableVector.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.normalNormBall.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualOrdinalNorm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.ordinalComponentRename.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.ordinalHeadClosure.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.ordinalHeadClosureComponent.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNode.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.endpoint.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.ordinalExpressionRename.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.ordinalHeadClosureComponent.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.intervalCheck.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.Renaming.weaken.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

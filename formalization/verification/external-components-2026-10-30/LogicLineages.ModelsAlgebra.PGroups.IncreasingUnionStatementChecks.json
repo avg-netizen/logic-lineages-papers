@@ -1,0 +1,88 @@
+{
+  "accepted_utc": "2026-10-30T04:11:00.599342+00:00",
+  "scope": "Actual monotone subgroup sequence with individual cover, finite-tuple stage containment, actual low-Sigma ascent and Pi2 truth preservation. No source direct-limit/classification claim.",
+  "source_correspondence": "Paper01 lines242-245 increasing-subgroup-union Pi2 preservation",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:08:00.606868+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+      "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnionTargets.lean",
+      "sha256": "53be82334bb4f2f92d4612b669d33e9b6eab585c7a2b3ddaf7c135833267c420"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnionStatementChecks.lean",
+      "sha256": "3d28939319912e264ebd509724edb5d0bc41dd492aa7b361d33be66200870834"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnion.lean",
+      "sha256": "38a4a6a4e0297c103e7047d838ed78ea2223ce156b0df4b25dbe84e8104af539"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEmbeddingLowSigmaAscent",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIncreasingTupleContainment",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIncreasingPiTwoPreservation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793333432916222098-12.json",
+      "sha256": "c4d01fc4dab8f01e9aa90ac2754188b543d163967ce96ab784a3b5e7dd1ac75f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "ac4bd777c5d63299d670795a1dd321522dffea34eb5977826173a5d68cc3ec70",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks.fixed_increasing_tuple_containment": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks.fixed_embedding_low_sigma_ascent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks.fixed_increasing_pi_two_preservation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

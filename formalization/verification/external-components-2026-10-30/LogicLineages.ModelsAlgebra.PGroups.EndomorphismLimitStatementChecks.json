@@ -1,0 +1,77 @@
+{
+  "accepted_utc": "2026-10-30T06:18:25.426342+00:00",
+  "scope": "Actual stage injectivity from injective f, transition compatibility, monotone subgroup ranges, cover and countability. No special f, nonisomorphic limit or classification assumed.",
+  "source_correspondence": "paper01 actual sequential direct-limit prerequisite, canonical quotient system of iterated additive endomorphism.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.EndomorphismLimitStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:16:29.240836+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismLimitDefinitions.lean",
+      "sha256": "fa55aed34206200142534a5b9ef41774754c43330f5b9573197f3c1f4df494ad"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismLimitTargets.lean",
+      "sha256": "f73fc8017aba6f3723ab2dc17fd2376217f01ce75595799a075b8f6ea3300c09"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismLimitStatementChecks.lean",
+      "sha256": "482c69895a11f0a98bb7317e2dc90bbc8109e5f1d344691a4438b52bc8716ad4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/EndomorphismLimit.lean",
+      "sha256": "78a961f0d2b14fd361fb29a42b04124b4228df9a0f71f3cc381633b7dc975f36"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLimitStageInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLimitStageCompatibility",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLimitRangesMonotone",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLimitRangeCover",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEndomorphismLimitCountable"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793341081741909894-15.json",
+      "sha256": "9916585dc6213a59c92dac40bb195fe10a8c7444839b93c605cbbc4636f9f9cd",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "32b9d896eac1e725670ee8bbe73aa1777979d8b6585fcb62e7436e87b4f9d33b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismLimitStatementChecks.fixed_limit_stage_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismLimitStatementChecks.fixed_limit_range_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismLimitStatementChecks.fixed_limit_stage_compatibility": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismLimitStatementChecks.fixed_endomorphism_limit_countable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.EndomorphismLimitStatementChecks.fixed_limit_ranges_monotone": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

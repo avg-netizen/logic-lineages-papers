@@ -1,0 +1,69 @@
+{
+  "accepted_utc": "2026-10-30T07:07:52.863676+00:00",
+  "scope": "Actual cyclic filtration bottom above length and full top socle below length; no quotient-rank/classification oracle.",
+  "source_correspondence": "paper01 genuine cyclic finite-filtration/socle algebra.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CyclicFiltrationStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:06:05.723221+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicFiltrationTargets.lean",
+      "sha256": "7426c53fbc44cf7b6233612b4ba9d6f6db4383767be8cd04679ba26fbeab38da"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicFiltrationStatementChecks.lean",
+      "sha256": "b72de09c8debd6cd110241b689acbd9a264fac84c3e36bc049ef62ffba8c53e3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicFiltration.lean",
+      "sha256": "51af69f107ff27015d061ec77e939d837d92c84b36be30c578e7a2195a45eaad"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicFiltrationBottom",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicFiltrationSocle"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793344048566170611-14.json",
+      "sha256": "292ff19db8a0f7f3bbe0bc5d9748667e2513871d308bfe8548793c96f16e1d5b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "6c7eb481b5ceb9c8a4aae2fb08842aee4ab85b03cfd53986601e687752a4367c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_filtration_bottom": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_filtration_socle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

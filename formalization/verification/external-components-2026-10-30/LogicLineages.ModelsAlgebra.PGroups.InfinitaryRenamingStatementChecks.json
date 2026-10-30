@@ -1,0 +1,131 @@
+{
+  "accepted_utc": "2026-10-30T05:08:43.295447+00:00",
+  "scope": "Explicit Fin free/bound block renaming, term/QF/full realization and exact hierarchy rank preservation; original syntax untouched, no conjunction/classification claim.",
+  "source_correspondence": "Paper01 ordinary infinitary formula capture-avoiding source assembly supplier",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.InfinitaryRenamingStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:05:55.210311+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingDefinitions.lean",
+      "sha256": "5e04f7c060ef862bcdc4fbf232e65c2cb9956c38f5deb957cb3e1f8fe4981249"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingTargets.lean",
+      "sha256": "66089c6de3823031c95c1050d2b176c8ed335a68096f30ebc90443b26f5141e2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingStatementChecks.lean",
+      "sha256": "ffa98c18ee5c3da61291e2a49c0fcb48923020b127ac19f873e40a15fa483407"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenaming.lean",
+      "sha256": "b8beecdb8768d4e5ed7940430e80f67e4f93baa82daafb6e7616d9e5f2a55490"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupTermRenamingEvaluation",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupQFRenamingRealization",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLiftRenamingAssignment",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfinitaryRenamingRealization",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfinitaryRenamingComplexity"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793336897476529438-7.json",
+      "sha256": "d99e97248f9d3b2973a6c2162904191f3d08862357af1f876980ed1b7b1a8d50",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "4587b8eaae93e222f09e7380d816b6abf68d1e012b71a667ec6a2749d892120b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryRenamingStatementChecks.fixed_qf_renaming_realization": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryRenamingStatementChecks.fixed_infinitary_renaming_complexity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryRenamingStatementChecks.fixed_infinitary_renaming_realization": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryRenamingStatementChecks.fixed_term_renaming_evaluation": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.InfinitaryRenamingStatementChecks.fixed_lift_renaming_assignment": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameFormula.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.liftRenaming.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameQF.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameQF.eq_3": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameFormula.eq_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameQF.eq_def": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameQF.eq_2": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameFormula.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameQF.eq_4": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.renameFormula.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

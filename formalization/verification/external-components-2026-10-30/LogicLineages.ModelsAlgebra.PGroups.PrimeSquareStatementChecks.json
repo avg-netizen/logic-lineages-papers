@@ -1,0 +1,71 @@
+{
+  "accepted_utc": "2026-10-30T06:20:32.927941+00:00",
+  "scope": "Literal integer-representative ZMod lift, evaluation, injectivity for prime p, actual p-image range, and actual roots for socle elements. No classification or special direct-limit conclusion.",
+  "source_correspondence": "paper01 concrete short-cycle to p-squared-cycle embedding supplier for a separately scoped source subfamily.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrimeSquareStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:18:02.459546+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimeSquareDefinitions.lean",
+      "sha256": "99398eb62a374078bd76d345424ab55c51a02786aaa4a3d0df1f61ddd247e279"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimeSquareTargets.lean",
+      "sha256": "02a4bf0547ad66833efad75b50bedcade2591c69ba9baa96a91bbd761661b89c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimeSquareStatementChecks.lean",
+      "sha256": "9b480fc742c07471eacd3f2ed5ab4b99ddcceabc0ad949b5aaebf3001c574a4b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimeSquare.lean",
+      "sha256": "a280cde9ece8ad968610ca117f26db2d605565d29df83b1f094883f3f1931791"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPrimeSquareInclusionEvaluation",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPrimeSquareInclusionInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPrimeSquareInclusionRange",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPrimeSquareSocleRoots"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793341208811879137-7.json",
+      "sha256": "5c7078d26dc6c71602919e69b49aeb190aad7d35e7eda952a92c7ae6443e16cd",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "3d8ba52086a97f3f4809e0a6a264b2118891b298ad0c6eb9d8d2e51de11ae1e9",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.PrimeSquareStatementChecks.fixed_prime_square_inclusion_range": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PrimeSquareStatementChecks.fixed_prime_square_socle_roots": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PrimeSquareStatementChecks.fixed_prime_square_inclusion_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.PrimeSquareStatementChecks.fixed_prime_square_inclusion_evaluation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

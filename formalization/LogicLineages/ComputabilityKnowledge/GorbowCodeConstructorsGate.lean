@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowCodeConstructorsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem gorbow_code_constructors : LogicLineages.ComputabilityKnowledge.Comparators.GorbowCodeConstructors.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowCodeConstructorsProof.gorbowCodeConstructors
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

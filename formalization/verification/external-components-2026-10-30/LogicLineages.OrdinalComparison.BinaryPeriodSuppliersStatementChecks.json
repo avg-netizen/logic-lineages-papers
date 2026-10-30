@@ -1,0 +1,59 @@
+{
+  "accepted_utc": "2026-10-30T04:40:44.535092+00:00",
+  "scope": "orderOf2 mod2^r+1 for r>0 no primality; actual F2 polynomial reciprocity in arbitrary coefficient field extension. No residue/Cartier/full period claim.",
+  "source_correspondence": "Paper10 thm:actual-period proof exact order and denominator reciprocity suppliers",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.BinaryPeriodSuppliersStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:38:45.985419+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPeriodSuppliersTargets.lean",
+      "sha256": "df20f603f238615224f18bf876b2722af4f815f8e78c4ff8bd66937843f20521"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.lean",
+      "sha256": "3dd979dd6ec9c061aa7f948a35b32e0b4946c635b7fb78b21451f4bdf3d54543"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPeriodSuppliersStatementChecks.lean",
+      "sha256": "fdb3fdea02fdfce3ad6a954ec61a9a750c7a5ad4ba2159c19cf1fdd0a56ea267"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryPeriodSuppliersProof.lean",
+      "sha256": "d7ce07230e56973c5b7cc971713532f0892d5b25169b6d6baf51852a47720474"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualFermatShapeTwoOrder",
+    "LogicLineages.OrdinalComparison.Targets.ActualBinarySourceReciprocity"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793335224828666120-5.json",
+      "sha256": "a0c0a64b34d6a420179cd427cdbcb600a26a7b8e98d55c79541f545c8bd6dabe",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "e2130633ec32038715fe143822ca82bc70986edb58269a806c53b8c5f6350b21",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySourceReciprocity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualFermatShapeTwoOrder": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

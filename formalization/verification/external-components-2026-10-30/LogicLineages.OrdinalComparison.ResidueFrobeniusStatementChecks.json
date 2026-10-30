@@ -1,0 +1,73 @@
+{
+  "accepted_utc": "2026-10-30T05:26:33.983176+00:00",
+  "scope": "Actual Laurent coefficient fixed by 2^(2r) and nonfixed by 2^r, arbitrary F2 extension primitive root; no full tuple or Cartier period.",
+  "source_correspondence": "paper10 thm:actual-period proof, actual residue upper Frobenius period and excluded midpoint",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.ResidueFrobeniusStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:23:12.072985+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFrobeniusTargets.lean",
+      "sha256": "f961744389828ae56a1003acb2df6e24c64273bc56f41b8b73c23050db4ecba9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFrobeniusStatementChecks.lean",
+      "sha256": "60cbe41330bc58534eb69891e6275b210eb1738894837d10de628b0733487e7b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ResidueFrobeniusProof.lean",
+      "sha256": "4c0f58b7c83eba7f8af4078309c222d07f9da0520f155821ff81c15687a03ff0"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueFrobeniusUpperPeriod",
+    "LogicLineages.OrdinalComparison.Targets.ActualResidueFrobeniusMidpointNonfixed"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793337965804035184-6.json",
+      "sha256": "b92d910a34597d9a39c37ab72b92c79db9b321647ace29e33ccb2912cb5cd7ab",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "6d37ed9b376862f6afe550f9d92f45898c467b5b21d1eed7ad22089ca8c7b8af",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueFrobeniusMidpointNonfixed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualResidueFrobeniusUpperPeriod": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualLinkedDegree.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualLinkedModulus.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

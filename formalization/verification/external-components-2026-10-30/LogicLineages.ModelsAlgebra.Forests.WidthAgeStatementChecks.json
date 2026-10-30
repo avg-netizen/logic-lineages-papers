@@ -1,0 +1,173 @@
+{
+  "accepted_utc": "2026-10-30T06:31:36.105222+00:00",
+  "scope": "Actual finite-width class and countable-age realization, including empty case; no Carter.",
+  "source_correspondence": "paper03 actual width-age application",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.WidthAgeStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:25:54.079230+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthAgeDefinitions.lean",
+      "sha256": "d948d35286422d32e4ca49b1899ff818230a37c95c312060216ec091ba3bca65"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthAgeTargets.lean",
+      "sha256": "9ad5f83cfe420731bf9172078ee535426f403e5881eaa0d09876381d49a571c0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthAgeStatementChecks.lean",
+      "sha256": "03fc60c30ff951511295502842d69be046b2e70905acba18e812f85034df052e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/WidthAgeProof.lean",
+      "sha256": "d87cb81603d1ef3967d9ee9823ef5e73e0c194686cb5631c18dc7e42b91ed39b"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.WidthClassHereditary",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.WidthClassNonempty",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.WidthClassUnbounded",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.RealizedWidthAgeWidth",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.WidthAgeClassification",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SmallWidthCountablyInfiniteAge"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793341849991992695-6.json",
+      "sha256": "4331d6cc681a5c1ba7ff1c0247d3668a214d6709e4d3dda98a24d80aebafd499",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1cae03245c990a893554e5d72ed197d1cb4d96bda623be648927ad721ae4751d",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.widthClassUnbounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.widthAgeClassification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.widthClassNonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.widthClassHereditary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.smallWidthCountablyInfiniteAge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.realizedWidthAgeWidth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.combSuffix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafCluster.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCodeProof.canonicalCode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.toFamily.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.embeddingTest.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.permittedTest.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapWords.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapTest.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitRight.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapWords.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.allPairs.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitLeft.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.hostCodes.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.valid.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.mapWords.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.negativePairTest.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.allRelations.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.splitFamily.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.Rel.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.FiniteCode.toForest.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

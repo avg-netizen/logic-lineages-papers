@@ -1,0 +1,83 @@
+{
+  "accepted_utc": "2026-10-30T05:18:00.815177+00:00",
+  "scope": "Literal equivalence transport and actual width\u2264m\u22643 source leaf embedding with every cluster in combfamily, inclm0 empty. No orderembedding assumed.",
+  "source_correspondence": "Paper03 positive-width actual forest leaf relabeling into small comb template",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.SmallLeafLabelStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:06:39.866520+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SmallLeafLabelTargets.lean",
+      "sha256": "10ba577fab451d9ec69854cdd8a85754a494d675219d06b793ae97b2aebc1058"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CombForestDefinitions.lean",
+      "sha256": "cc30456948d26006c344ee75af4003dc1c1ad089acc2b83a63e70b394b7d0d4a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SmallLeafLabelStatementChecks.lean",
+      "sha256": "c2e6c0e800f4f67336afaf9b6d7a1cd9f0e3ea3fc78a9688c9b71fb1c3fb76c9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SmallLeafLabelProof.lean",
+      "sha256": "46427482cff5e546f032153c65ebf49cc4af13fb7bd6196a0b25529c4d179631"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.LaminarLeafEquivRelabeling",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SmallForestLeafLabeling"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793337452364390671-7.json",
+      "sha256": "f9e09570a1874dd3bca17812fa75df6aba01fcacb68f8fccac34d2ff05cd94fd",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1bd6fd351acb1e6515aae2736ce7f0750eec6bbb958bc2edf3e45d6adc8f5c02",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.laminarLeafEquivRelabeling": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.smallForestLeafLabeling": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

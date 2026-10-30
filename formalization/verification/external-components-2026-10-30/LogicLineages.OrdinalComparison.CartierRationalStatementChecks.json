@@ -1,0 +1,80 @@
+{
+  "accepted_utc": "2026-10-30T05:41:05.297269+00:00",
+  "scope": "Actual RatFunc canonical square-root parity decomposition, uniqueness and Cartier characterization; no local pole/series rules yet.",
+  "source_correspondence": "paper10 rational differential Cartier definition460-466",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.CartierRationalStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:37:10.448254+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierRationalDefinitions.lean",
+      "sha256": "f135b6c4ba58e780bdbeeae81ea9953f067127b775a2808070ea7b48ec2dd77d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierRationalTargets.lean",
+      "sha256": "37baf5f3e05b6cd686d4153abdd15ef92962ccb9b5dcdfa628c4a24d469c4a7e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierRationalStatementChecks.lean",
+      "sha256": "e3cd7dc43a5ad64118f1a51c105fbd92a73d9bba50a8306fd96ef49bd0b9cf12"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierRationalProof.lean",
+      "sha256": "ab60b1ab32649360c70207b2eb42e7d030f70a43e46002a936c43c67110142ab"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualRationalSquareRootDecomposition",
+    "LogicLineages.OrdinalComparison.Targets.ActualRationalSquareRootUniqueness",
+    "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierCharacterization"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338829581529629-6.json",
+      "sha256": "cefe44ba16d1492d9136e92c5e821a0ceaace6cf60d73b10309983c7037f6f0d",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "596f5513ad8f9e34766cb21734370a7ca31386f60ca786afe3784262ca22dd80",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRationalSquareRootUniqueness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRationalSquareRootDecomposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierCharacterization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigit.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,89 @@
+{
+  "accepted_utc": "2026-10-30T04:54:12.833355+00:00",
+  "scope": "Actual m\u22654 root split2+(m\u22122) laminar family/forest with m leaves and two disjoint\u22652 clusters; simpler allowed multifurcating second witness than fullybinary source proof, same theorem domain. No fullwidth claim.",
+  "source_correspondence": "Paper03 thm:width negative-case second actual witness",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.SplitForestStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:51:15.295160+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SplitForestDefinitions.lean",
+      "sha256": "c179a2af7aa9f5bb1cea04b7d916a1e88c3663752f5dafb5151c198b6a6e4651"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SplitForestTargets.lean",
+      "sha256": "68e40f6ac89a769ab37d2c7105fa739377e7715380977573ee4dbc2d1bf26372"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SplitForestStatementChecks.lean",
+      "sha256": "51ad7b7fa3635278699391e703030b589148793fc890df89e24dbe1cedc2a21b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/SplitForestProof.lean",
+      "sha256": "5d23c0341fee8f960c4adac45ae25424934a5ed348b1832b55c9c3017d43ffab"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SplitFamilyLaminar",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ActualSplitForest"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793336025450709703-5.json",
+      "sha256": "d4d0c95bd18609ea107d4296766af84212a3534cc8120160e9b089a0d60c773b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "11951ea998c40e81a26e2c5836a8bc5e6900de156dbb2d05663f143b40f7402b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.actualSplitForest": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.splitFamilyLaminar": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.combSuffix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitRight.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitLeft.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.splitFamily.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

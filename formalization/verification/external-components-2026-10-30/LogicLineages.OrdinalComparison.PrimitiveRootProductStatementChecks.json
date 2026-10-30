@@ -1,0 +1,59 @@
+{
+  "accepted_utc": "2026-10-30T05:01:57.067210+00:00",
+  "scope": "Actual A_(q\u22121) product1 for oddq inclq1 and partial product nonzero for m<q, arbitrary F2 extension/IsPrimitiveRoot. No differential residue claim.",
+  "source_correspondence": "Paper10 lem:residue actual primitive-root polynomial products",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.PrimitiveRootProductStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:58:06.974386+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/PrimitiveRootProductTargets.lean",
+      "sha256": "9a2709a4183f42cb08f7561ac55dbbe7d32b03f0aae1cbf73d61897fe2f2b537"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.lean",
+      "sha256": "3dd979dd6ec9c061aa7f948a35b32e0b4946c635b7fb78b21451f4bdf3d54543"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PrimitiveRootProductStatementChecks.lean",
+      "sha256": "a621999d2948a734cfbb7db4dce5c54176c2e3821dc92e8d0084946026c39acd"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PrimitiveRootProductProof.lean",
+      "sha256": "092fb047696acf2b9aa826f40f320be4b0cc864a268822a7b6b38c87038da3d6"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualPrimitiveRootCompleteProduct",
+    "LogicLineages.OrdinalComparison.Targets.ActualPrimitiveRootPartialProductNonzero"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793336484126269167-14.json",
+      "sha256": "916db92ad8a7032a828bfa063323bb788745eb01a6b87c6fcd9e98a44e20c94d",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "11438e3aed04a78a0afc523cf0f26e3439f048789c2a46f63e8dbecb7c412dab",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualPrimitiveRootCompleteProduct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualPrimitiveRootPartialProductNonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

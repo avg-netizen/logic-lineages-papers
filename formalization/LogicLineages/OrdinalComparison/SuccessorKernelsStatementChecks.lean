@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.SuccessorKernelsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualSuccessorCountCocycle : LogicLineages.OrdinalComparison.Targets.ActualSuccessorCountCocycle :=
+  LogicLineages.OrdinalComparison.actualSuccessorCountCocycle
+
+theorem fixed_actualSuccessorKernelComposition : LogicLineages.OrdinalComparison.Targets.ActualSuccessorKernelComposition :=
+  LogicLineages.OrdinalComparison.actualSuccessorKernelComposition
+
+theorem fixed_fullActualSuccessorCutCocycle : LogicLineages.OrdinalComparison.Targets.FullActualSuccessorCutCocycle :=
+  LogicLineages.OrdinalComparison.fullActualSuccessorCutCocycle
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

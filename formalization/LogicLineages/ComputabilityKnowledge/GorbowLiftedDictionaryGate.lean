@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowLiftedDictionaryProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem gorbow_lifted_dictionary : LogicLineages.ComputabilityKnowledge.Comparators.GorbowLiftedDictionary.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowLiftedDictionaryProof.gorbowLiftedDictionary
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

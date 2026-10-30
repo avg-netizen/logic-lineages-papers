@@ -1,0 +1,120 @@
+{
+  "accepted_utc": "2026-10-30T05:53:16.018023+00:00",
+  "scope": "Actual finite reachability/saturation/executable Boolean emptiness plus recursive unordered invariance under symmetric transition; no topological embedding/SCC/JEP theorem.",
+  "source_correspondence": "Carter arXiv2409.06127v1 section2.2 deterministic total bottom-up binary tree automata, primary lines122-143",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CarterAutomataStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:50:52.107433+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterAutomataDefinitions.lean",
+      "sha256": "10d0e7ca4069996b1eb081547c6f4596b496b2e11603bbae003eec6f2edeaf34"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterAutomataTargets.lean",
+      "sha256": "0f251660d5c340edba84d66c7a2c38a640c5438b6394ab56421ec53caccfa6ea"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterAutomataStatementChecks.lean",
+      "sha256": "165730f4f09cdc776d3d996e214ce55c0444dca08d1b9b4d618cdd2ffe1321f5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterAutomataProof.lean",
+      "sha256": "921effa9085a343d9108d58148b46258ebfbc38b13221c40f07972177bb02127"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterReachableHeightExact",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterReachableSaturation",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterAllRunsReachable",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterLanguageEmptiness",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterUnorderedRunInvariant"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793339567062784327-6.json",
+      "sha256": "9777bce6393cb8e1e45d1cab104c966e68bb487fe7229986e997df84c90612ec",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "ea457fd5fe38a8c98efee147844add0462cd1a4c59b817e8199e8704c25b15b1",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterAllRunsReachable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterReachableSaturation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterUnorderedRunInvariant": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterLanguageEmptiness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterReachableHeightExact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.accepts.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.languageEmpty.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_def": []
+  },
+  "numbered_statement_promotion": false
+}

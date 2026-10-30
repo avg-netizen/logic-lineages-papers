@@ -1,0 +1,55 @@
+{
+  "accepted_utc": "2026-10-30T04:46:32.243476+00:00",
+  "scope": "Generic positive n prime-factor-count totient bound and strict2^r<(r+1)phi(2^r+1), r>0 no primality; other linked-input/exponential gap claims remain separate",
+  "source_correspondence": "Paper10 lem:bounds actual Euler-totient bound for composite Fermat-shaped modulus",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.TotientBoundStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:43:08.961184+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TotientBoundTargets.lean",
+      "sha256": "f04f0c7410bea08161ec2b3c1b57aeafaafd5c70ac02fd6082f49e186e7815d6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TotientBoundStatementChecks.lean",
+      "sha256": "23f687a3cd8226a31c7c245eb9b2b583a0bf3621ef88f58662eb9e6a87e891f6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TotientBoundProof.lean",
+      "sha256": "990497c3f5ee172b113b0d80459fca86ea8d4503d5d22e5efe9866bdd85f8b8b"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualTotientPrimeFactorBound",
+    "LogicLineages.OrdinalComparison.Targets.ActualFermatShapeTotientLowerBound"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793335541725565260-5.json",
+      "sha256": "f5abd09257ec7623c2e3bed37d6c205f050567de890a3c7cbb804b7336a3bac7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "e35b6f6720a254bfd161421d9f2efb42afef9aaeee92e5f7f376e82fb7b1032b",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTotientPrimeFactorBound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualFermatShapeTotientLowerBound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

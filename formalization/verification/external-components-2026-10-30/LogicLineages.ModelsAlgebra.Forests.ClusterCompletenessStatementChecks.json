@@ -1,0 +1,84 @@
+{
+  "accepted_utc": "2026-10-30T04:43:08.916667+00:00",
+  "scope": "Finite actual descendant-leaf family and explicit binary split property imply cluster completeness and saturated host cluster representation. Concrete witnesses must prove structural hypothesis. No full width claim.",
+  "source_correspondence": "Paper03 thm:width literal binary forest cluster completeness under saturated embedding",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.ClusterCompletenessStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:42:13.067005+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ClusterCompletenessDefinitions.lean",
+      "sha256": "c0b12b9775efeca69419fd6e7d74bec0e3739077617e1a0a92e2675a606c91e7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ClusterCompletenessTargets.lean",
+      "sha256": "e1ca02bbe3dec3c883ffb19353c4d94297e1b64e5247403348d889decd6be5cd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ClusterCompletenessStatementChecks.lean",
+      "sha256": "98e6bf0fd08580ae21be276551597a72189e0a77ca14b9f1b53f037120811c00"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ClusterCompletenessProof.lean",
+      "sha256": "1290c82654df89804b1d95a4489ab42bf61ba1bad270b7e5213009a53c3b7a68"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.FiniteLeafClusterSemantics",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.BinaryForestClusterComplete",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.SaturatedHostClusterComplete"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793335369671485326-11.json",
+      "sha256": "a2739da9736e52487f3ac00601b2c95a2be51ecfa8d8fb9040175219e2d16d84",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "68dc5ac7e024437e6b8c4572ff18e7bf544e989dd4382b6368e338c0c43d4e78",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.binaryForestClusterComplete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.finiteLeafClusterSemantics": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.saturatedHostClusterComplete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafCluster.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.finiteLeafCluster.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

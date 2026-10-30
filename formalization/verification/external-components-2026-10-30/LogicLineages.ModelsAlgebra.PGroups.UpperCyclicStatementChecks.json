@@ -1,0 +1,64 @@
+{
+  "accepted_utc": "2026-10-30T06:47:55.500464+00:00",
+  "scope": "Actual finite product, exponent annihilation, and shallow socle roots derived from genuine cyclic arithmetic, including empty product. No supplied root property/classification.",
+  "source_correspondence": "paper01 actual finite upper cyclic factor in source bounded p-group decomposition.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.UpperCyclicStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:45:47.134734+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UpperCyclicDefinitions.lean",
+      "sha256": "6136f6b604c3300c16205384282776ab2f7bba356d041c90a9c11e9bb4175dea"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UpperCyclicTargets.lean",
+      "sha256": "faf39deede4b63a2be42937d6431ff3e1e39ab8b2cc901edbc8b1ce09abfcd54"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UpperCyclicStatementChecks.lean",
+      "sha256": "e1dd1da52223fe5b0e2bf691f9c5f2a0ef46884d4597f2f95e34f78008b3af1c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UpperCyclic.lean",
+      "sha256": "b83cae27ad1cc3768b2ccf99026e2d14782a844388913fa81a01ac5dbbf01376"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupUpperCyclicFinite",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupUpperCyclicAnnihilation",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupUpperCyclicSocleRoots"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793342831204939778-12.json",
+      "sha256": "c3ab542979c5b8c613f9a223cbaab82075ba5b87673ed6b3334d1b083a7d5310",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "4f550b77b4fe88ce1feeb6d26c038293a6212a6b821f00153492c9ec1672f502",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.UpperCyclicStatementChecks.fixed_upper_cyclic_socle_roots": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.UpperCyclicStatementChecks.fixed_upper_cyclic_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.UpperCyclicStatementChecks.fixed_upper_cyclic_annihilation": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

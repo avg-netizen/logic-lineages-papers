@@ -1,0 +1,59 @@
+{
+  "accepted_utc": "2026-10-30T04:39:45.122276+00:00",
+  "scope": "Explicit nonempty finite clusters, full/singletons, pairwise laminarity and actual binary disjoint split imply maximality. Concrete forest witnesses must pay hypotheses; no full width claim.",
+  "source_correspondence": "Paper03 thm:width finite binary laminar cluster maximality supplier",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.BinaryClusterStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:38:46.009442+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/BinaryClusterDefinitions.lean",
+      "sha256": "56005639a4ae1a07e49e1dd154c4440c2bbb3468428b03ca9dfd817798d710a7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/BinaryClusterTargets.lean",
+      "sha256": "f5765ab512d971c6e38606c5a6fb7f71ad9d84caf6c2b39be16e252c5eb870fd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/BinaryClusterStatementChecks.lean",
+      "sha256": "3f2aaecfe7e8deb2118b7f0ab4c4704ebf5d8b57e3a46446077871005c65fb48"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/BinaryClusterProof.lean",
+      "sha256": "d02b11de38e3f60e39db59ac144ca162f1a61d50efb9f2d3b4cd6d2252edfe22"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.BinaryClusterUniverseNonempty",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.BinaryClusterFamilyMaximal"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793335168243888891-5.json",
+      "sha256": "473baff892facb33cd1a37b527adbb7dbebbf51ecfa035cc409d74e8bd1d802d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "e51b8ae7db5ea43f1f8a5ddae218ddc911039d1783d8c42ef5d9215cebe650eb",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.binaryClusterUniverseNonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.binaryClusterFamilyMaximal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

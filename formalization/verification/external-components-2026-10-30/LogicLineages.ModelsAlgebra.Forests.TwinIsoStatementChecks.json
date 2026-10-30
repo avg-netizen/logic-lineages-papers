@@ -1,0 +1,94 @@
+{
+  "accepted_utc": "2026-10-30T04:11:49.036601+00:00",
+  "scope": "Actual finite twin-rank surjectivity and graph-iso class transport construct order isomorphism; existing exact uniqueness obligation. Reverse embedding still separate.",
+  "source_correspondence": "Paper03 lem:bridge actual graph-isomorphism to order-isomorphism uniqueness",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.TwinIsoStatementChecks",
+  "frozen_at_utc": "2026-10-30T04:10:06.684264+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankDefinitions.lean",
+      "sha256": "f10311cea03af389e81fafebca5f736e36b6cc76db5b46fabef3fceccd88472a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeTargets.lean",
+      "sha256": "34c080e2b7dcc31949ccd0cb666235c477254ce1f47178af38a774e082e9db14"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinIsoTargets.lean",
+      "sha256": "a0083f35f551c648712047c05ec4254e8302df5c8ef8ea0552f9443083b5584d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinIsoStatementChecks.lean",
+      "sha256": "95c7e2819efe550e81e12e1dc25a89eb3611c93ed728eb4d58a8672fd3d6382a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/TwinIsoProof.lean",
+      "sha256": "6f04875caf2c629d57fa4e6d0fa095470b2480f100b28f7625cdaea6eb9aa33b"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankSurjective",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.GraphIsoNeighborhoodSubset",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.GraphIsoNeighborhoodEquality",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.GraphIsoTwinCard",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.RankMatchedOrderIso",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.TwinClassOrderUniqueness"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793333477085838482-11.json",
+      "sha256": "6e6b4c9c6f9591123d56f94e6b1a53c088f0f95f50ec8f60f327cedd1c2a54fa",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "f24a66c673e0c3c0e919cc30a2de332849e2351bfc8667b7c2b2576f21e19601",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphIsoTwinCard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.rankMatchedOrderIso": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphIsoNeighborhoodSubset": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankSurjective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinClassOrderUniqueness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphIsoNeighborhoodEquality": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

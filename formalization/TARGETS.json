@@ -1550,9 +1550,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 658,
           "statement_latex": "[Exact successor cut and count cocycle]\\label{lem:successor}\nLet $\\theta=\\omega^\\gamma\\ge\\omega$, $L=\\theta\\omega$, and\n$w=\\norm\\theta$. On the common genuine domain $t\\ge c+w+\\norm L$,\n\\begin{align}\n \\KK Lc(t)&=\\KK\\theta c(\\KK L{c+w}(t)),              \\label{eq:cut}\\\\\n \\EE Lc(t)&=\\EE L{c+w}(t)\n        +\\EE\\theta c(\\KK L{c+w}(t)).                \\label{eq:cocycle}\n\\end{align}",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSuccessorCutCocycle",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SuccessorKernelsTargets.lean",
+            "sha256": "9575662b72cc5b59f5809b06c16d03383d42ab55ba87f8230fb5cb5bd8f0b45a",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualSuccessorCutCocycle"
+          },
+          "verification_receipt": "build-reports/1793346300131883174-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole numbered lem:successor: actual principal theta=omega^gamma>=omega, L=theta*omega belowepsilon, literal norm w and source common genuine domain t>=c+w+norm L. Exact actual first-finite count cocycle and actual kernel composition; maximum/block separation, retained-block trace, endpoint and inner domain proved suppliers rather than premises. No general mass-order/sign algorithm or effectivity promotion."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:small",
@@ -1561,9 +1572,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 684,
           "statement_latex": "[Small principal kernels]\\label{lem:small}\nOn their genuine domains,\n\\[\n \\KK\\omega c(t)=f(t),\\quad\\EE\\omega c(t)=1,\\qquad\n \\EE{\\omega^2}c(t)=f(t)/2-\\lceil c/2\\rceil+1.         \\tag{7.4}\n\\]\nThus $\\omega^2$ kernels at the same input have exactly the mass classes\n$\\lceil c/2\\rceil$, ordered in reverse. The control has even values.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSmallPrincipalKernels",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SmallKernelsTargets.lean",
+            "sha256": "47f627d27ce8a6f9fb99b546a8847567d6809bbc3411f67e1fa32ed69c300d1d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualSmallPrincipalKernels"
+          },
+          "verification_receipt": "build-reports/1793344794574756818-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole numbered lem:small: actual retained-mass suffix kernels on genuine omega/omega-squared domains, exact omega count/kernel, exact omega-squared count with ceiling mass and proved even Phi, and exact same-input equality/reverse strict mass classes. Actual first-finite trace semantics and maximum/count suppliers paid; no computability or larger mass-order/sign theorem promoted."
         },
         {
           "id": "07-collapse-equality-and-one-variable:thm:mass",

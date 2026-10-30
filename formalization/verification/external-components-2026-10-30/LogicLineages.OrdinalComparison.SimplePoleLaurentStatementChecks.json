@@ -1,0 +1,70 @@
+{
+  "accepted_utc": "2026-10-30T05:17:35.521352+00:00",
+  "scope": "Generic actual HahnSeries reconstruction, coefficient minus one residue, and support below minus one; no full source residue promotion.",
+  "source_correspondence": "paper10 lem:residue: actual translated local Laurent expansion at a simple denominator root",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.SimplePoleLaurentStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:13:27.847263+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SimplePoleLaurentDefinitions.lean",
+      "sha256": "898eb815e957a7bb2d0d301bd19091b397ccc89b1629773c3fcba79c25abf173"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SimplePoleLaurentTargets.lean",
+      "sha256": "b9edce810fce232b560bc339b21c6d452bf44c4bfebbe96ae2c94eae7f62c214"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SimplePoleLaurentStatementChecks.lean",
+      "sha256": "c6a5770df19de0b3e5b346de3aa5fc28ac70fb1f82f9f15534d5b7e8196d6c69"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SimplePoleLaurentProof.lean",
+      "sha256": "d98b7d6928c575b6df3e113d0e583f4a8fd7d4e20fdd3856952b5309c032410a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualSimplePoleExpansionReconstruction",
+    "LogicLineages.OrdinalComparison.Targets.ActualSimplePoleExpansionResidue",
+    "LogicLineages.OrdinalComparison.Targets.ActualSimplePoleExpansionLowerSupport"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793337431331988944-6.json",
+      "sha256": "b5f513937cc245228cc7d90d5c71276a8bcf42ce80ef5942bdd6405f2cf22ad7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "0df92bc847f3a90e563d222010efc554ab33e004ff62fdddce9cb1db6bd50560",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSimplePoleExpansionResidue": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSimplePoleExpansionReconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSimplePoleExpansionLowerSupport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualShiftedPolynomial.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

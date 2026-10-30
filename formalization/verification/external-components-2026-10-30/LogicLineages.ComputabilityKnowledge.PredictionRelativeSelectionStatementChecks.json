@@ -1,0 +1,94 @@
+{
+  "accepted_utc": "2026-10-30T07:47:07.034759+00:00",
+  "scope": "Actual ComputableIn relative to exactly the totality/equality characteristic oracles, no selection oracle or identification with0-double-jump.",
+  "source_correspondence": "paper14 lem:list relative selection prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:29:35.637174+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRelativeSelectionDefinitions.lean",
+      "sha256": "11539dd54c3acd85631ee3499152188b3c597f7945333c8ec15c0a0a51a07dbe"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRelativeSelectionTargets.lean",
+      "sha256": "000a599fa010df305c25a1671b7152dcd6e8cbf424b7ca1b57df762f5e35aba9"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRelativeSelectionStatementChecks.lean",
+      "sha256": "81c1a73d74ee57201f16a20597b44b7244a425c4a21acd6bb0fd4e9172f42933"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRelativeSelectionProof.lean",
+      "sha256": "4283165b6e3f93da98c187050fbf43c6239b794f79b330a13ba3d5217dd32a50"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets.RelativeRepresentativeDecision",
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets.RelativeRepresentativeCounting",
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelectionTargets.RelativeCanonicalSelection"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793346381868784546-5.json",
+      "sha256": "0d54d28c9eca84185bab83c35e69fb9efd7374982ebedb2fd31a554b39460200",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "3515fe7704387f302c75993e14dcbea79a865db3ef9e0cb59a67a25397850abc",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativeRepresentativeDecision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativeCanonicalSelection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativeRepresentativeCounting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.advance.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelection.equalityIndicator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelection.representativeIndicator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionCanonicalList.Representative.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelection.totalIndicator.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRelativeSelection.representativeCount.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

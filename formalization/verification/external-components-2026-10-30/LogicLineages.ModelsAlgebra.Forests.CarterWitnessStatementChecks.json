@@ -1,0 +1,125 @@
+{
+  "accepted_utc": "2026-10-30T06:01:15.570545+00:00",
+  "scope": "Literal bounded tree enumeration/size/equal-run representative and executable accepted witness soundness/completeness; no topological embedding or JEP.",
+  "source_correspondence": "Carter finite deterministic tree-automata effective emptiness prerequisite",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CarterWitnessStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:55:53.486747+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterWitnessDefinitions.lean",
+      "sha256": "ded8e89dd99c453653e8cfc47594a612a933ea5e007710e85751b200acbdbaca"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterWitnessTargets.lean",
+      "sha256": "b395317e8512f237b2087edac14562b63137ecd59ec992fcf5d9549cc0aac82e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterWitnessStatementChecks.lean",
+      "sha256": "da5b86058a7db8f76b1525f17724199e4b93bad8193f310972fcba9c3ca80349"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CarterWitnessProof.lean",
+      "sha256": "8394830060cf38b8569feab8dd71c8cba33b2030dc23dea08ff67169da356b04"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterTreeEnumerationExact",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterTreeSizeBound",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterBoundedRunRepresentative",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterAcceptedWitnessSound",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CarterAcceptedWitnessComplete"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340008175052916-11.json",
+      "sha256": "4d2eed879ab28d3ed065d92a76584352c79fc016ea250763401ccf9b2fcb2ae9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "c1b74ccdec900f7c3cbeb7d37211797893583ec23701cd1f9d265a387ef21701",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterTreeEnumerationExact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterAcceptedWitnessComplete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterAcceptedWitnessSound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterBoundedRunRepresentative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.carterTreeSizeBound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.treesUpTo.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.accepts.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.vertexCount.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.treesUpTo.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.treesUpTo.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.run.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.vertexCount.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.vertexCount.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.reachable.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.languageEmpty.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CarterAutomata.height.eq_def": []
+  },
+  "numbered_statement_promotion": false
+}

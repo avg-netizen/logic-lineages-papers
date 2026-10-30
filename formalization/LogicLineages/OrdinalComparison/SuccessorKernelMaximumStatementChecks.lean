@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.SuccessorKernelMaximumProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualSuccessorPrincipalWeight : LogicLineages.OrdinalComparison.Targets.ActualSuccessorPrincipalWeight :=
+  LogicLineages.OrdinalComparison.actualSuccessorPrincipalWeight
+
+theorem fixed_actualSuccessorPrincipalMaximum : LogicLineages.OrdinalComparison.Targets.ActualSuccessorPrincipalMaximum :=
+  LogicLineages.OrdinalComparison.actualSuccessorPrincipalMaximum
+
+theorem fixed_actualSuccessorPrincipalMaximumShift : LogicLineages.OrdinalComparison.Targets.ActualSuccessorPrincipalMaximumShift :=
+  LogicLineages.OrdinalComparison.actualSuccessorPrincipalMaximumShift
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionMaximumProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem prefixPartialRecursive : LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.PrefixPartialRecursive :=
+  LogicLineages.ComputabilityKnowledge.PredictionMaximumProof.prefixPartialRecursive
+
+theorem familyPartialRecursive : LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.FamilyPartialRecursive :=
+  LogicLineages.ComputabilityKnowledge.PredictionMaximumProof.familyPartialRecursive
+
+theorem totalMaximumSemantics : LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.TotalMaximumSemantics :=
+  LogicLineages.ComputabilityKnowledge.PredictionMaximumProof.totalMaximumSemantics
+
+theorem uniformMaximumCompiler : LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.UniformMaximumCompiler :=
+  LogicLineages.ComputabilityKnowledge.PredictionMaximumProof.uniformMaximumCompiler
+
+theorem canonicalOrdinaryBounds : LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.CanonicalOrdinaryBounds :=
+  LogicLineages.ComputabilityKnowledge.PredictionMaximumProof.canonicalOrdinaryBounds
+
+theorem canonicalBoundDominance : LogicLineages.ComputabilityKnowledge.PredictionMaximumTargets.CanonicalBoundDominance :=
+  LogicLineages.ComputabilityKnowledge.PredictionMaximumProof.canonicalBoundDominance
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

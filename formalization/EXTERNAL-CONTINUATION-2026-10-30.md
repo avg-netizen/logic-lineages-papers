@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 69 checked numbered statements, two inherited calculator
-results, and 107 pending statements.
+Current register: 71 checked numbered statements, two inherited calculator
+results, and 105 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -114,7 +114,9 @@ is unchanged and the full decision theorem remains pending. The separate finite
 binary-tree automata evaluation, saturation, witness and language-equivalence
 suppliers do not rely on this disputed transfer.
 
-[Individual exact-gate evidence](verification/external-2026-10-30.json) records
+[Individual exact-gate evidence](verification/external-2026-10-30.json) links
+separate hash-verified component records, so each later checkpoint need not
+rewrite one growing combined evidence file. The records preserve
 reviewed source correspondence, frozen hashes, successful receipts and actual
 axiom closures. New proof authoring follows exact target compilation and freeze.
 Only `propext`, `Classical.choice` and `Quot.sound` are allowed. No missing theorem
@@ -127,7 +129,10 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   no-Pi2 Scott obstruction for the explicit source normal forms, including the
   finite upper factor. Arbitrary bounded-group decomposition and upper
   categoricity remain separate missing dependencies. Coordinate filtrations
-  and cyclic socles are being developed without assuming that decomposition.
+  and cyclic socles, genuine quotient/rank formulas and maximal cyclic splitting
+  are now checked. The splitting construction uses actual divisible-module
+  extension and a proved circle torsion-image characterization, not a retraction
+  hypothesis. It still does not supply arbitrary bounded-group decomposition.
 - Paper 03: actual forbidden-class nonemptiness/empty-carrier checks and the
   countably infinite width-one/two/three age realizations are checked. These
   do not fill the general decision-theorem gap.
@@ -137,16 +142,29 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   it does not assert the scalar observed bit stream has the same least period.
 - Paper 12: standard-N instantiation/induction, faithful full-language term and
   formula codecs, context-valid primitive-recursive syntax validation, and
-  free-support/selector calibration are checked. DCB, arithmetized provability,
+  free-support/selector calibration are checked. Literal capture-avoiding code
+  substitution, syntactic self-application, induction-instance code generation
+  and soundness of the explicitly specified arithmetic/logical core are checked
+  separately. Self-application is not a diagonal fixed-point theorem. The source's
+  additional universal-symbol apparatus is not silently inferred. DCB, arithmetized provability,
   fixed points and the six numbered source claims remain pending.
 - Paper 14: the literal finite-elimination baseline, self-history reconstruction
   and actual compiled-policy learning theorem are checked under explicit
   eventual bounded-observation availability. Evaluation fuel is not identified
   with the source's tape-runtime bound. The structural canonical list of least
   total-program representatives is checked, but its claimed double-jump
-  computability is not supplied by a noncomputable enumeration.
+  computability is not supplied by a noncomputable enumeration. Uniform actual
+  totality/extensional-equality Pi2 matrices and relative selection from their
+  exact characteristic oracles are checked, as is the ordinary finite-prefix
+  maximum compiler. Genuine coded oracle-program syntax/evaluation agrees with
+  the existing relative-recursion relation; a universal evaluator and actual
+  jump identification remain separately pending.
 - Paper 07: the genuine retained-mass suffix/kernel trace is calibrated against
-  the actual controlled count. Later kernel claims remain separately gated.
+  the actual controlled count. The full small-principal-kernel lemma and
+  successor cut/count cocycle are now checked, including exact mass rounding,
+  genuine dynamic input domains and actual retained-block trace composition.
+  Monotonicity and executable principal-block extraction are checked suppliers;
+  general word/sign/identity algorithms remain separately pending.
 
 ### Held paper 05 abstraction convention
 
@@ -222,3 +240,11 @@ local source hashes were unchanged, including the original baseline closure. See
 [checkpoint evidence](verification/external-checkpoint-382-2026-10-30.json).
 The numbered register remains 69 checked, two inherited and 107 pending; the new
 work in this checkpoint consists of explicitly distinguished source suppliers.
+
+## Sixth cumulative checkpoint
+
+The selected 408-gate root passed its 1,251-declaration axiom audit. All 1,451
+local source hashes were unchanged, with the original baseline guard clean. See
+[checkpoint evidence](verification/external-checkpoint-408-2026-10-30.json).
+The numbered register is now 71 checked, two inherited and 105 pending. The two
+new whole statements are paper 07's small-kernel and successor-cocycle lemmas.

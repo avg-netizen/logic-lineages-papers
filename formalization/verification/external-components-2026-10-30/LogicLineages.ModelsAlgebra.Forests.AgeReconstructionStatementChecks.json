@@ -1,0 +1,65 @@
+{
+  "accepted_utc": "2026-10-30T05:41:30.411016+00:00",
+  "scope": "Actual raw relation finite patches force order/forest; relational age supplies patches and countable actual forest realization up to iso; full source assembly pending.",
+  "source_correspondence": "paper03 prop:age finite-local order/forest reconstruction",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.AgeReconstructionStatementChecks",
+  "frozen_at_utc": "2026-10-30T05:35:50.199603+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeReconstructionDefinitions.lean",
+      "sha256": "0cc43e20a2924e9b370f0bbbbdab83db7806e6d8f6e74851cdda83b888cbbcad"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeReconstructionTargets.lean",
+      "sha256": "4217758d28ea468c52b66421a8c1f481e7075aa63dd0f74653e249884b6a3b32"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeReconstructionStatementChecks.lean",
+      "sha256": "cf642ee281fdf8c0e51f2edc7c85065775c35200c3290e66b6feaf331ab0332f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/AgeReconstructionProof.lean",
+      "sha256": "b01f62d9ee865e398ad2dbb4924bd729f67b792caad2bd27e009afc5c138b7bd"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.Forests.Targets.FinitePatchesForestOrder",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.ForestModelAgeFinitePatches",
+    "LogicLineages.ModelsAlgebra.Forests.Targets.CountableForestModelReconstruction"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793338857111647300-6.json",
+      "sha256": "25830ef0129c453ae7d8d78d6b5940a332dcf9f1d7869b0713d09e17f249837e",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "699e4990b3752fdb17b4ffcb785d020c600fd4f4c94e6fb284dde376e019b0b5",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.forestModelAgeFinitePatches": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.countableForestModelReconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.StatementChecks.finitePatchesForestOrder": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

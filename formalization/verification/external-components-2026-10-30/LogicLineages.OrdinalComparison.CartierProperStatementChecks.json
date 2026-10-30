@@ -1,0 +1,85 @@
+{
+  "accepted_utc": "2026-10-30T06:09:26.027018+00:00",
+  "scope": "Actual zero-inclusive WithBot canonical properness/intDegree equivalence and Cartier/all-iterate preservation; source initial properness separate.",
+  "source_correspondence": "paper10 lem:poles no-polynomial-part preservation supplier",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.CartierProperStatementChecks",
+  "frozen_at_utc": "2026-10-30T06:03:03.048847+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierProperDefinitions.lean",
+      "sha256": "708a70612605a7df681471df071fa849bd934b57de7b15b2287fb0696b111030"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierProperTargets.lean",
+      "sha256": "499052b54c60aa230599780643d244bc7876fe0eec6f384daf4a10f602664122"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierProperStatementChecks.lean",
+      "sha256": "27de3506343cb784339e87b527efde5330d06134bea61590b6d26a8d10f5386e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CartierProperProof.lean",
+      "sha256": "80e4d5cbd75b3f6a4d32514685628f40bf5dad4ac4dd41a75dae95b324365cdd"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualRationalProperDegree",
+    "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierProper",
+    "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierIterateProper"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793340524606088068-15.json",
+      "sha256": "d86d6f24357c46b0e4d14d51ee27c63ac881038ba3ea2b56e3d0ba320b6a5bd0",
+      "profiles": {
+        "heap_cap_mib": 2560,
+        "rss_cap_mib": 2048,
+        "minimum_free_mib": 3072,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "b9fbc0ed6132f6004c456f2d5132b24225a659a5b4336078de6a516d136f8cb4",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierProper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierIterateProper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRationalProperDegree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualRationalProper.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualPolynomialSquareRootDigit.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

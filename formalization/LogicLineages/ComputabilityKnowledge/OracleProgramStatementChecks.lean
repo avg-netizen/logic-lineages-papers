@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem injectiveProgramEncoding : LogicLineages.ComputabilityKnowledge.OracleProgramTargets.InjectiveProgramEncoding :=
+  LogicLineages.ComputabilityKnowledge.OracleProgramProof.injectiveProgramEncoding
+
+theorem oracleEvaluationSound : LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OracleEvaluationSound :=
+  LogicLineages.ComputabilityKnowledge.OracleProgramProof.oracleEvaluationSound
+
+theorem oracleEvaluationComplete : LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OracleEvaluationComplete :=
+  LogicLineages.ComputabilityKnowledge.OracleProgramProof.oracleEvaluationComplete
+
+theorem ordinaryBaseCalibration : LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OrdinaryBaseCalibration :=
+  LogicLineages.ComputabilityKnowledge.OracleProgramProof.ordinaryBaseCalibration
+
+theorem oracleSpecializationSemantics : LogicLineages.ComputabilityKnowledge.OracleProgramTargets.OracleSpecializationSemantics :=
+  LogicLineages.ComputabilityKnowledge.OracleProgramProof.oracleSpecializationSemantics
+
+theorem uniformEncodedSpecialization : LogicLineages.ComputabilityKnowledge.OracleProgramTargets.UniformEncodedSpecialization :=
+  LogicLineages.ComputabilityKnowledge.OracleProgramProof.uniformEncodedSpecialization
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge
