@@ -1,0 +1,72 @@
+{
+  "accepted_utc": "2026-10-30T08:21:20.522683+00:00",
+  "scope": "Explicit finite derivations, all prior mu runs, soundness/completeness/uniqueness for actual Part evaluation. No numeric verifier or universal computability claim.",
+  "source_correspondence": "paper14 actual total-oracle universal evaluator prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.OracleDerivationStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:03:59.450957+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleDerivationDefinitions.lean",
+      "sha256": "4bb393c9e27d870ce60c631e0a0a46517ffe8470ebf972f451deaba0a99b1618"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleDerivationTargets.lean",
+      "sha256": "2591318db1a6f644d8f94e39504a9e2056ee57a87e5653e6f09130aa40f3c347"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleDerivationStatementChecks.lean",
+      "sha256": "c92ca77534f25c3e5974293caeefdf2d14160fd643ef7adf0fbff125088c9464"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleDerivationProof.lean",
+      "sha256": "7eeb4e8f7f25d6bf577ea9f0ad5ffc3a66abc35bbee56c89db462f4f3b44e7a1"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.OracleDerivationTargets.FiniteDerivationSound",
+    "LogicLineages.ComputabilityKnowledge.OracleDerivationTargets.FiniteDerivationComplete",
+    "LogicLineages.ComputabilityKnowledge.OracleDerivationTargets.FiniteDerivationUnique"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793348459966742441-6.json",
+      "sha256": "8bec4d2d66e8edceccf53874f6694fe65c9b11eecef794cf088da282a09c30f4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "a64c09dfc26f5aa380496c71cf526513f083804ed6b257c92645f1e6896a6511",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.finiteDerivationSound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.finiteDerivationUnique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.finiteDerivationComplete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_5": []
+  },
+  "numbered_statement_promotion": false
+}

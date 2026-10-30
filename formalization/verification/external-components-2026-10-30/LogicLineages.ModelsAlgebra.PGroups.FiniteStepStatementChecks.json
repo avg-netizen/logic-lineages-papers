@@ -1,0 +1,49 @@
+{
+  "accepted_utc": "2026-10-30T08:45:04.407531+00:00",
+  "scope": "Finite actual pStep and finite actual Ulm quotient imply finite actual subgroup, all-natural p. No finite-extension oracle.",
+  "source_correspondence": "paper01 finite p-step/Ulm quotient algebra prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteStepStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:41:29.374360+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteStepTargets.lean",
+      "sha256": "cdfefee7fe1b92c89f3e6c1b15cb51edf633d2efa5f4f4651ccb3aaa697ceba8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteStepStatementChecks.lean",
+      "sha256": "e131226d83695b8686590cdcb67d63fdfb00ce20d48f578b279c2845e240a5b1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteStep.lean",
+      "sha256": "4dfcb8467754f2d18f302bdedac4f6ea4ea72394ad80e94ba1f9c1f00b72d4f5"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteStepFiniteUlm"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793349848538270507-16.json",
+      "sha256": "175969b7caee5038bb245621361b45464fadc2a353fb7031ae7cbe3481ec3721",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "9db62d743d784842cd64945cd9456654e760c745c49aa4cd181706e5e6e5beff",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_finite_step_finite_ulm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

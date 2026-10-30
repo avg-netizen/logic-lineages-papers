@@ -1,0 +1,96 @@
+{
+  "accepted_utc": "2026-10-30T08:31:45.735077+00:00",
+  "scope": "Literal DFinsupp maps, bounded exponent, actual socle coefficients injection/range and root composition; no final decomposition premise.",
+  "source_correspondence": "paper01 actual bounded p-group cyclic decomposition chain.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CyclicDirectSumStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:29:24.966191+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSumDefinitions.lean",
+      "sha256": "d90ff032c537f2feb011cc86fa5ca18e66515136b819ca06fdeb140bfc85218e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSumTargets.lean",
+      "sha256": "0a908552d6e0a80f22887b4d02acf38d6794dc51b958988e0310c815fd465427"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSumStatementChecks.lean",
+      "sha256": "3cdec345cdc50a2d830a801c486172bd1cea8d339fe85bf2e52405588f7bf36f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSum.lean",
+      "sha256": "7db83f22a2fd42230d0877534eb8e4081abc71f33b53027309fb08ded9e520db"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootSumSingle",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootSumExponent",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicSocleCoefficientsInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicSocleCoefficientsRange",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootSumSocleComposition"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793349081289981535-6.json",
+      "sha256": "3d9f5ec0fa82026afd46a0da6717450c9562c6405275e1e67e3f208bab8ff813",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "cf57839f3a6d75b6ce5f60f680789fbc36e43966943d14b6b7dfa9bf3e8ba852",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_sum_socle_composition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_sum_exponent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_socle_coefficients_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_sum_single": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_socle_coefficients_range": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicSocleCoordinate.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicSocleCoefficients.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicSocleCoordinate.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicRootHom.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

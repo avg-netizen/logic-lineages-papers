@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleDerivationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem finiteDerivationSound : LogicLineages.ComputabilityKnowledge.OracleDerivationTargets.FiniteDerivationSound :=
+  LogicLineages.ComputabilityKnowledge.OracleDerivationProof.finiteDerivationSound
+
+theorem finiteDerivationComplete : LogicLineages.ComputabilityKnowledge.OracleDerivationTargets.FiniteDerivationComplete :=
+  LogicLineages.ComputabilityKnowledge.OracleDerivationProof.finiteDerivationComplete
+
+theorem finiteDerivationUnique : LogicLineages.ComputabilityKnowledge.OracleDerivationTargets.FiniteDerivationUnique :=
+  LogicLineages.ComputabilityKnowledge.OracleDerivationProof.finiteDerivationUnique
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

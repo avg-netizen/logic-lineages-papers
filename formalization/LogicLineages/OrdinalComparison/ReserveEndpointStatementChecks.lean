@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.ReserveEndpointProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPhiEndpointAlongTrace : LogicLineages.OrdinalComparison.Targets.ActualPhiEndpointAlongTrace :=
+  LogicLineages.OrdinalComparison.actualPhiEndpointAlongTrace
+
+theorem fixed_actualCompensatedExitDominatesTerminal : LogicLineages.OrdinalComparison.Targets.ActualCompensatedExitDominatesTerminal :=
+  LogicLineages.OrdinalComparison.actualCompensatedExitDominatesTerminal
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,63 @@
+{
+  "accepted_utc": "2026-10-30T07:57:34.591931+00:00",
+  "scope": "Existence of actual quotient bases, actual socle representatives and p-power roots with literal quotient equality/annihilation. No independence/spanning/decomposition field.",
+  "source_correspondence": "paper01 actual adapted Ulm basis/root construction prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.UlmBasisLiftStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:52:24.413215+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmBasisLiftTargets.lean",
+      "sha256": "caa5da4e2de3738e448dcd5b7b5cd84ad8806e9cf986647a8d8142be92b6b281"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmBasisLiftStatementChecks.lean",
+      "sha256": "382e92ab2c4360fe4b1490b8a89beaae025c1fca85f57976c00806734284f6e9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmBasisLift.lean",
+      "sha256": "99e27c271d299a237042d6edf33b4117f53af65d8318e5194976642fdc4385bc"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupUlmBasisLiftExistence"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793346902646926000-5.json",
+      "sha256": "1f40ff2fea070ac46162d5f70f80bcfd2683e53fb89d91a324d61cc814a8d567",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "6b9f4d996b0dbffe5acbfbbbba652f1fb7d6c84b954ac1de42489dcc2679c4fe",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_ulm_basis_lift_existence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

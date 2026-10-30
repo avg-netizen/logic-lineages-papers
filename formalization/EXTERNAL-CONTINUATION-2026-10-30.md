@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 71 checked numbered statements, two inherited calculator
-results, and 105 pending statements.
+Current register: 74 checked numbered statements, two inherited calculator
+results, and 102 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -132,7 +132,12 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   and cyclic socles, genuine quotient/rank formulas and maximal cyclic splitting
   are now checked. The splitting construction uses actual divisible-module
   extension and a proved circle torsion-image characterization, not a retraction
-  hypothesis. It still does not supply arbitrary bounded-group decomposition.
+  hypothesis. The actual adapted socle bases and filtered cyclic root generation
+  now also prove bounded cyclic decomposition for Type0 groups from the literal
+  prime-power annihilation hypothesis alone. Genuine Cardinal-rank calibration
+  yields bounded Ulm categoricity and a relative Pi3 Scott upper bound for
+  countable bounded groups. The sharper Pi2/dSigma2 classification is still
+  separately pending.
 - Paper 03: actual forbidden-class nonemptiness/empty-carrier checks and the
   countably infinite width-one/two/three age realizations are checked. These
   do not fill the general decision-theorem gap.
@@ -146,7 +151,10 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   substitution, syntactic self-application, induction-instance code generation
   and soundness of the explicitly specified arithmetic/logical core are checked
   separately. Self-application is not a diagonal fixed-point theorem. The source's
-  additional universal-symbol apparatus is not silently inferred. DCB, arithmetized provability,
+  additional universal-symbol apparatus is not silently inferred. A genuine
+  primitive-recursive finite proof checker and numeric certificate calibration
+  are now checked for the explicitly stated core. Standard-N singleton revision
+  semantics is checked independently. DCB, arithmetized provability,
   fixed points and the six numbered source claims remain pending.
 - Paper 14: the literal finite-elimination baseline, self-history reconstruction
   and actual compiled-policy learning theorem are checked under explicit
@@ -163,8 +171,12 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   the actual controlled count. The full small-principal-kernel lemma and
   successor cut/count cocycle are now checked, including exact mass rounding,
   genuine dynamic input domains and actual retained-block trace composition.
-  Monotonicity and executable principal-block extraction are checked suppliers;
-  general word/sign/identity algorithms remain separately pending.
+  The full peak-word lemma is checked through executable principal-block/word
+  extraction and actual terminal/count calibration. The one-stage reserve lemma
+  and full profile-reserve lemma are also checked, including genuine first-finite
+  cuts, the executable positive-expression compiler and permanent numerical
+  mass. General sign/identity algorithms and unproved kernel-evaluation
+  effectivity are not inferred from these results.
 
 ### Held paper 05 abstraction convention
 
@@ -248,3 +260,13 @@ local source hashes were unchanged, with the original baseline guard clean. See
 [checkpoint evidence](verification/external-checkpoint-408-2026-10-30.json).
 The numbered register is now 71 checked, two inherited and 105 pending. The two
 new whole statements are paper 07's small-kernel and successor-cocycle lemmas.
+
+## Seventh cumulative checkpoint
+
+The selected 444-gate root passed its 1,432-declaration axiom audit. All 1,580
+local source hashes were unchanged and the baseline guard remained clean. See
+[checkpoint evidence](verification/external-checkpoint-444-2026-10-30.json).
+The register is now 74 checked, two inherited and 102 pending. Paper 07's full
+peak-word, one-stage reserve and profile-reserve lemmas are the new numbered
+completions; genuine bounded-group decomposition/categoricity is recorded as a
+substantial supplier rather than the still-unfinished sharp Scott classification.

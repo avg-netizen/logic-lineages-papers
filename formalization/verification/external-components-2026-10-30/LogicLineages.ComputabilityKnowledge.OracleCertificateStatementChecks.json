@@ -1,0 +1,192 @@
+{
+  "accepted_utc": "2026-10-30T08:39:44.287744+00:00",
+  "scope": "Literal numeric certificate packing/strict child bounds, Primrec step, genuine relative verifier and sound/complete finite derivations for total oracle. No universal evaluation or jump claim.",
+  "source_correspondence": "paper14 actual total-oracle universal evaluation certificate prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.OracleCertificateStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:18:01.269014+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleCertificateDefinitions.lean",
+      "sha256": "aa6ce4848366ea84f02807bd687b22fbcf52e1b5719a3a59dd9b903d136baf3b"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleCertificateTargets.lean",
+      "sha256": "874069a9e2bb0fc6f00097d18468b09c467dd2a6cfa297cecc6aab297d1bf3be"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleCertificateStatementChecks.lean",
+      "sha256": "a00f4edd115457e8e1beb497aa777691ec52936496fe85cbf116cac7db5bd5f9"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleCertificateProof.lean",
+      "sha256": "89ae1e633ec82db8d4729e979f81b01f16670a062095e7785bd0068e23501b00"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.CertificatePacking",
+    "LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.PrimitiveRecursiveCertificateStep",
+    "LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.RelativeCertificateVerifier",
+    "LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.NumericCertificateSound",
+    "LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.NumericCertificateComplete"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793349533927684978-6.json",
+      "sha256": "245736482d1d97db4dc1a47eef0547efb14222e83d521b599601c183237ac674",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "a15d9dc2c8bd720d7e4f7180b5e8e0115b65e944022a1f55ff502bcc86432d00",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.certificatePacking": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.primitiveRecursiveCertificateStep": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.numericCertificateSound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativeCertificateVerifier": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.numericCertificateComplete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.decodeFuel.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.decodeFuel.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursion.zeroSearch.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.certificateTable.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.packNode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.decodeFuel.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.nodeFuel.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.specialize.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_4": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.tagged.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.validationStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.childMatches.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.certificateTable.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_6": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.nodeCode.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_5": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursion.parameterRec.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.ruleCheck.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.certificateTable.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.nodeChildren.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.nodeInput.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.eval.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.decodeFuel.eq_3": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.validIndex.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.nodeData.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleProgram.encode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleCertificate.nodeOutput.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.OracleDecoder.encodedDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

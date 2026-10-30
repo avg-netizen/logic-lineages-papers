@@ -1,0 +1,68 @@
+{
+  "accepted_utc": "2026-10-30T08:11:02.449916+00:00",
+  "scope": "Arbitrary actual oracle sets, total composition/pairing/primitive recursion and actual partial zero-search. No assumed relative-recursion closure or search termination.",
+  "source_correspondence": "paper14 genuine relative evaluator closure prerequisites.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:05:55.437443+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleRelativeRecursionDefinitions.lean",
+      "sha256": "0723de1b525a26a71a12d6f30fdc70a5e19d797aabff32b8ca6510e46da08269"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleRelativeRecursionTargets.lean",
+      "sha256": "e062f3138c52bd015a07cbab1214966f50a81bb5f4adb9ee1b1af196221b8de8"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleRelativeRecursionStatementChecks.lean",
+      "sha256": "cf5438d4fee9f007ccd54587f8728d7542317c59f1c3174b5f114a7158265e9a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/OracleRelativeRecursionProof.lean",
+      "sha256": "002695903d2e0cd9eba887a420c46ebe690eb25d925fe6a4ba2fcbbe2d24ecc2"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativeComposition",
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativeNumericPairing",
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativePrimitiveRecursion",
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativePartialSearch"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793347818878695350-37.json",
+      "sha256": "520bc9c05cb744cbcd7ca2d0151e1564a62fb9865a744a467111efd6a0d01d36",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "248191ef018f44bea2e3729cdc5ca488b1d9896820d24c8b74e42e7a1ec20876",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativeNumericPairing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativePartialSearch": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativeComposition": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.relativePrimitiveRecursion": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.OracleRelativeRecursion.zeroSearch.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

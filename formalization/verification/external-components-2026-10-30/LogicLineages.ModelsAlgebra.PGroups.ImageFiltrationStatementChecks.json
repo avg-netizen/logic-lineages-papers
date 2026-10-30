@@ -1,0 +1,69 @@
+{
+  "accepted_utc": "2026-10-30T08:44:18.064995+00:00",
+  "scope": "Actual subtype inclusion maps internal filtration/socle to ambient shifted filtration/socle, all natural parameters. No Ulm quotient/rank oracle.",
+  "source_correspondence": "paper01 actual shifted p-power-image filtration prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ImageFiltrationStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:38:51.909374+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageFiltrationTargets.lean",
+      "sha256": "9c59c44b17501c92c15a0166b6898e1458f2e203aa681e2fb38dfef8660ff387"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageFiltrationStatementChecks.lean",
+      "sha256": "11865670b54e9ecdd48fca59184290efd2ff0259ae392b80d1084bd963cd0ede"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageFiltration.lean",
+      "sha256": "59f921b6bac30093deb137bddc2285f138ef6a1ae0b65bbb1eef086b94710b64"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupImageFiniteFiltration",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupImageFiniteSocle"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793349810346813000-7.json",
+      "sha256": "99b26ff7dcafee62adf74cc4afddedf5198bf1ac67189ceb2acd3a2055371221",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "edf8856ae660df7a0e36bc741110c34f7e59094b1fe237c7aaec6d3aa0035579",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_image_finite_filtration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_image_finite_socle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,67 @@
+{
+  "accepted_utc": "2026-10-30T08:16:52.703356+00:00",
+  "scope": "Actual root closure equals top from quotient bases/representatives and bounded exponent; generic socle kernel detection. No direct-sum or classification oracle.",
+  "source_correspondence": "paper01 actual cyclic-root generation prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.RootGenerationStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:11:29.354510+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RootGenerationTargets.lean",
+      "sha256": "691c43ec84e14a04abba5a6060e19288e8909b2546b6a6d43bddf8901dceff1d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RootGenerationStatementChecks.lean",
+      "sha256": "0cd0d29dab0e0be1f0121e55f5b147d57e33f6c763221d901a4e087195ab3bb3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RootGeneration.lean",
+      "sha256": "777f3c98d1682950615ede7af928c8e2b7027a85d659e06f2a81d3e9910507fc"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupUlmRootsGenerate",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupBoundedSocleDetectsInjectivity"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793348173606905314-7.json",
+      "sha256": "3135f03be0abc4576819f73bfc5e10616a92c29a66a62b931a67dae0139c0b60",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "7be7ebe606ddc5155ab9b4cc944552a8a6e56a9baa1f41a30249b535c54d18e0",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_ulm_roots_generate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_bounded_socle_detects_injectivity": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

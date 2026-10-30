@@ -1,0 +1,207 @@
+{
+  "accepted_utc": "2026-10-30T08:37:27.296213+00:00",
+  "scope": "Actual terminal endpoint invariant along literal trace and compensated finite-exit norm domination, no transport oracle.",
+  "source_correspondence": "paper07 lem:reserve prerequisites, paper.tex464\u2013495.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.ReserveEndpointStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:33:31.373844+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/ReserveEndpointTargets.lean",
+      "sha256": "ffb461371111fa6d7952e67e833b37e6771b99ee4af9ae794fbbddcf5cd07eba"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ReserveEndpointStatementChecks.lean",
+      "sha256": "2f61da12269fad7dd43b613c4684e9b3c4972846864e6511a086f16e1d5d1594"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ReserveEndpointProof.lean",
+      "sha256": "4d54d764e576a058082d26847212036abd8f4e195e27bd369361626abe78a099"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.ActualPhiEndpointAlongTrace",
+    "LogicLineages.OrdinalComparison.Targets.ActualCompensatedExitDominatesTerminal"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793349412987180752-16.json",
+      "sha256": "eded3cbc8f2a8c4d0c68ae85f6a87eb39159f3f0e86fe320a64c9455f8e13863",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "7887d3204d96caa06106833e06f0903c6d8e3f1220ffdd666232fc2d76a6cbe0",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualPhiEndpointAlongTrace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCompensatedExitDominatesTerminal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualControlledCount.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualScheduledCount.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualTerminalData.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.normalNormBall.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualOrdinalNorm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualCollapse.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNode.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.endpoint.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualBoundedPredecessors.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collapse.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualTailPart.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualMinExponentAtLeast.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.intervalCheck.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.predecessorSet.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.maximumPredecessor.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

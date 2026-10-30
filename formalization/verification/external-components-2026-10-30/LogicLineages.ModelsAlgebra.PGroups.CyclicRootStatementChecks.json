@@ -1,0 +1,76 @@
+{
+  "accepted_utc": "2026-10-30T08:16:52.675010+00:00",
+  "scope": "Literal ZMod lift evaluation/generator, prime-power actual order and injectivity; no splitting assumption.",
+  "source_correspondence": "paper01 actual cyclic-root maps prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CyclicRootStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:12:14.007270+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootDefinitions.lean",
+      "sha256": "2baa43f340f66040e8eb3fc6f7407a314a44d5a7fe690d614753289385ad61ac"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootTargets.lean",
+      "sha256": "e5504be9c62825b32bb52d44258fda9e905be5d19caefd65b610fe8050ed581d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootStatementChecks.lean",
+      "sha256": "3a569eaf0ef9254fa1df92ceeceebedee86fde08b148855269b770013a46e643"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRoot.lean",
+      "sha256": "d685d3a34920386766af8e2d8e8a111c99b45d99b00f81293ac67b591de9e074"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootEvaluation",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootGenerator",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootOrder",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupCyclicRootInjective"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793348156592066462-7.json",
+      "sha256": "f7263a0507208b5b392cd94a19b089bdb5326dc0b3e0cace1d0a56c0e2093453",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1fb9d718cba50a4222672fb7849a76d3810d169e8a4efcd70823af22b8ff6fce",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_order": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_evaluation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_generator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_cyclic_root_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicRootHom.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowLogicalAxiomCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowLogicalAxiomCode : LogicLineages.ComputabilityKnowledge.Comparators.GorbowLogicalAxiomCode.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowLogicalAxiomCodeProof.gorbowLogicalAxiomCode
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

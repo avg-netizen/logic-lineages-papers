@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleCertificateProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem certificatePacking : LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.CertificatePacking :=
+  LogicLineages.ComputabilityKnowledge.OracleCertificateProof.certificatePacking
+
+theorem primitiveRecursiveCertificateStep : LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.PrimitiveRecursiveCertificateStep :=
+  LogicLineages.ComputabilityKnowledge.OracleCertificateProof.primitiveRecursiveCertificateStep
+
+theorem relativeCertificateVerifier : LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.RelativeCertificateVerifier :=
+  LogicLineages.ComputabilityKnowledge.OracleCertificateProof.relativeCertificateVerifier
+
+theorem numericCertificateSound : LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.NumericCertificateSound :=
+  LogicLineages.ComputabilityKnowledge.OracleCertificateProof.numericCertificateSound
+
+theorem numericCertificateComplete : LogicLineages.ComputabilityKnowledge.OracleCertificateTargets.NumericCertificateComplete :=
+  LogicLineages.ComputabilityKnowledge.OracleCertificateProof.numericCertificateComplete
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

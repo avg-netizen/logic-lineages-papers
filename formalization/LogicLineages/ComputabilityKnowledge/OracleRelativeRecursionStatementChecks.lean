@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem relativeComposition : LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativeComposition :=
+  LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionProof.relativeComposition
+
+theorem relativeNumericPairing : LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativeNumericPairing :=
+  LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionProof.relativeNumericPairing
+
+theorem relativePrimitiveRecursion : LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativePrimitiveRecursion :=
+  LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionProof.relativePrimitiveRecursion
+
+theorem relativePartialSearch : LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionTargets.RelativePartialSearch :=
+  LogicLineages.ComputabilityKnowledge.OracleRelativeRecursionProof.relativePartialSearch
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleUniversalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem relativeCertificateTest : LogicLineages.ComputabilityKnowledge.OracleUniversalTargets.RelativeCertificateTest :=
+  LogicLineages.ComputabilityKnowledge.OracleUniversalProof.relativeCertificateTest
+
+theorem relativeUniversalEvaluation : LogicLineages.ComputabilityKnowledge.OracleUniversalTargets.RelativeUniversalEvaluation :=
+  LogicLineages.ComputabilityKnowledge.OracleUniversalProof.relativeUniversalEvaluation
+
+theorem encodedUniversalSemantics : LogicLineages.ComputabilityKnowledge.OracleUniversalTargets.EncodedUniversalSemantics :=
+  LogicLineages.ComputabilityKnowledge.OracleUniversalProof.encodedUniversalSemantics
+
+theorem malformedUniversalDivergence : LogicLineages.ComputabilityKnowledge.OracleUniversalTargets.MalformedUniversalDivergence :=
+  LogicLineages.ComputabilityKnowledge.OracleUniversalProof.malformedUniversalDivergence
+
+theorem decodedUniversalCalibration : LogicLineages.ComputabilityKnowledge.OracleUniversalTargets.DecodedUniversalCalibration :=
+  LogicLineages.ComputabilityKnowledge.OracleUniversalProof.decodedUniversalCalibration
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

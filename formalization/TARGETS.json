@@ -1484,9 +1484,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 410,
           "statement_latex": "[Exact peak word]\\label{lem:peakword}\nFor each fixed limit $\\lambda$, one computes a finite word $W_\\lambda$ of\nprincipal kernels such that the peak of $h_\\lambda(A)$ is exactly\n\\[\n             Z_{\\lambda,A}=W_\\lambda(\\norm(\\lambda)+A). \\tag{4.5}\n\\]\nThe omitted count is positive: $h_\\lambda(A)=Z_{\\lambda,A}+D_{\\lambda,A}$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualPrincipalPeakWord",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/PeakWordTargets.lean",
+            "sha256": "1230ec0042c3e864dee2f6fa11a7e8fb39266d8a1227777006ac011c2df15fa9",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualPrincipalPeakWord"
+          },
+          "verification_receipt": "build-reports/1793347756150904134-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole lem:peakword, paper.tex409\u2013425: executable extraction of coefficient-one principal blocks from genuine closed normal notation, exact right-to-left kernel word and literal prefix masses, actual word endpoint equals original terminal peak, exact omitted replacement count positive and actual collapse decomposition. Every dynamic kernel input proved genuine. Semantic word evaluation remains noncomputable; no claim of executable evaluation or arbitrary-ordinal coding."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:stage",
@@ -1495,9 +1506,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 436,
           "statement_latex": "[One-stage reserve consumer]\\label{lem:stage}\nLet $\\rho<\\pi m$ be a fixed nonzero limit, $m\\ge1$, and begin an ordinary\ndescent at $A=\\pi(k+m)+n$, of norm $X\\ge x\\ge\\norm(\\rho)$.\nAt its first cut $\\pi k+n'$ with finite remainder,\n\\[\n        n'>J_\\rho(x):=f^{D_\\rho(x)}(x)+D_\\rho(x),    \\tag{5.1}\n\\]\nwhere $D_\\rho(x)$ is the count from\n$\\rho+(x-\\norm(\\rho))$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOneStageReserve",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ReserveStageTargets.lean",
+            "sha256": "df71415501b37ae3a9af5d2dc0d773baa46de7eb550eff09b2e1e15c0ba9c63b",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualOneStageReserve"
+          },
+          "verification_receipt": "build-reports/1793348640054851121-8.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole lem:stage paper.tex436\u2013462: genuine principal pi and fixed nonzero-limit rho<pi*m, all k/n edge cases, actual initial norm bounds. Literal compensated remainder count yields actual retained-prefix trace and first finite remainder, strictly exceeding actual test iterate plus replacement count. Eligibility, exact norms and count lower bound paid; no c<=x assumption or global-count substitution."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:reserve",
@@ -1506,9 +1528,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 464,
           "statement_latex": "[Effective profile reserve]\\label{lem:reserve}\nFrom a lower profile $P$ below $L>\\omega$ one computes a nonempty word\n\\[\n F=h_{\\rho_l}\\circ\\cdots\\circ h_{\\rho_1},\\quad\n F(z)>P(z)\\ (z\\ge z_0),\\quad\n R=\\sum_j(\\norm(\\rho_j)+1),\\quad\n H=\\max_j\\norm(\\operatorname{lead}(\\rho_j)),          \\tag{5.2}\n\\]\nwith every $\\rho_j<L$. If $\\pi\\ge\\omega$ is principal and at least every\ndisplayed leading monomial, a descent from $\\pi R+n$, $n\\ge z\\ge z_0$,\nhas terminal norm greater than $P(z)$. The same conclusion holds with any\nadditional permanent numerical mass $c$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualEffectiveProfileReserve",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ProfileReserveTargets.lean",
+            "sha256": "cedda8055e116baa49e514990046e6b118b051afd156d18bf0655503ee9e33df",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualEffectiveProfileReserve"
+          },
+          "verification_receipt": "build-reports/1793349846346563963-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole lem:reserve paper.tex464\u2013495 for literal positive expressions (binary addition, faithful normal fixed-limit heads). Executable nonempty lower-head word and threshold, exact R/H source calibration, genuine principal leading bounds and all n>=z>=threshold. Actual ordinary terminal exceeds profile and every permanent numerical mass has actual compensated first-finite total exit exceeding it. No graph-sharing complexity or executable semantic evaluation claim."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:direct",

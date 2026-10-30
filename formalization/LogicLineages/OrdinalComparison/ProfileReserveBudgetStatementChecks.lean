@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.ProfileReserveBudgetProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualProfileLeadingMonomialCorrect : LogicLineages.OrdinalComparison.Targets.ActualProfileLeadingMonomial :=
+  LogicLineages.OrdinalComparison.actualProfileLeadingMonomialCorrect
+
+theorem fixed_actualProfileReserveEligibility : LogicLineages.OrdinalComparison.Targets.ActualProfileReserveEligibility :=
+  LogicLineages.OrdinalComparison.actualProfileReserveEligibility
+
+theorem fixed_actualProfileReserveBudgetCalibration : LogicLineages.OrdinalComparison.Targets.ActualProfileReserveBudgetCalibration :=
+  LogicLineages.OrdinalComparison.actualProfileReserveBudgetCalibration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

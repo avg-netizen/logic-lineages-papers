@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.PrincipalKernelWordProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPrincipalKernelWordPositions : LogicLineages.OrdinalComparison.Targets.ActualPrincipalKernelWordPositions :=
+  LogicLineages.OrdinalComparison.actualPrincipalKernelWordPositions
+
+theorem fixed_actualPrincipalKernelWordAppend : LogicLineages.OrdinalComparison.Targets.ActualPrincipalKernelWordAppend :=
+  LogicLineages.OrdinalComparison.actualPrincipalKernelWordAppend
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

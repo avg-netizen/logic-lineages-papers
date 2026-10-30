@@ -1,0 +1,73 @@
+{
+  "accepted_utc": "2026-10-30T08:06:42.994035+00:00",
+  "scope": "Actual joint independence and level-filtered spanning under bounded exponent, from actual quotient bases and literal representatives. No independence/spanning oracle or decomposition conclusion.",
+  "source_correspondence": "paper01 adapted actual Ulm socle basis prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.AdaptedSocleStatementChecks",
+  "frozen_at_utc": "2026-10-30T07:58:19.573572+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleTargets.lean",
+      "sha256": "0647bc3a1e76eeb201b689c8f0e6abde3725343d6e09db13faf9da9728a70013"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleStatementChecks.lean",
+      "sha256": "36ae6823d01488989d69e1a712680790f8b86a257fcaada726ed109d0960b53c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocle.lean",
+      "sha256": "570f9c6deac1dc8aec5587d4cbea385d08ea5d0340fe6d28d7826d29da7c5853"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupAdaptedSocleIndependent",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupAdaptedSocleFilteredSpan"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793347575100723306-5.json",
+      "sha256": "32b53a8ad6f8a376500cec46730959b229875371ae3bfd9cdab27443403019f9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "0e5a91e4babe3842e778aa9219f056b2d9cc8d86ed53a71121bc006a322c6a8c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_adapted_socle_independent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_adapted_socle_filtered_span": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

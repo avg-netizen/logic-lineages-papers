@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.PrincipalWordActionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPrincipalWordRunCorrect : LogicLineages.OrdinalComparison.Targets.ActualPrincipalWordRunCorrect :=
+  LogicLineages.OrdinalComparison.actualPrincipalWordRunCorrect
+
+theorem fixed_actualPrincipalWordInputsGenuine : LogicLineages.OrdinalComparison.Targets.ActualPrincipalWordInputsGenuine :=
+  LogicLineages.OrdinalComparison.actualPrincipalWordInputsGenuine
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowRevisionSemanticsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowRevisionSemantics : LogicLineages.ComputabilityKnowledge.Comparators.GorbowRevisionSemantics.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowRevisionSemanticsProof.gorbowRevisionSemantics
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

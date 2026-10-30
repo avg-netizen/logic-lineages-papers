@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleDecoderProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem oracleDecoderComplete : LogicLineages.ComputabilityKnowledge.OracleDecoderTargets.OracleDecoderComplete :=
+  LogicLineages.ComputabilityKnowledge.OracleDecoderProof.oracleDecoderComplete
+
+theorem oracleDecoderSound : LogicLineages.ComputabilityKnowledge.OracleDecoderTargets.OracleDecoderSound :=
+  LogicLineages.ComputabilityKnowledge.OracleDecoderProof.oracleDecoderSound
+
+theorem primitiveRecursiveValidity : LogicLineages.ComputabilityKnowledge.OracleDecoderTargets.PrimitiveRecursiveValidity :=
+  LogicLineages.ComputabilityKnowledge.OracleDecoderProof.primitiveRecursiveValidity
+
+theorem primitiveRecursiveEncodedDecoder : LogicLineages.ComputabilityKnowledge.OracleDecoderTargets.PrimitiveRecursiveEncodedDecoder :=
+  LogicLineages.ComputabilityKnowledge.OracleDecoderProof.primitiveRecursiveEncodedDecoder
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge
