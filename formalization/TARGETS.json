@@ -1550,9 +1550,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 499,
           "statement_latex": "[Direct kernel growth]\\label{lem:direct}\nFor fixed $L>\\omega$ principal and fixed lower profile $P$, one computes\n$T$ such that, for $t\\ge T$ and every genuine mass $0\\le c\\le t-\\norm(L)$,\n\\[\n                         \\KK Lc(t)>P(t).             \\tag{5.3}\n\\]\nAlso, $\\KK\\pi c(t)\\le h_\\pi(t)$ on its genuine domain.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualDirectKernelGrowth",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ProfileDirectTargets.lean",
+            "sha256": "249694701de3ce82b52e8ca7ba3875c5f8bc366e9805ca88074ddd5dbd57975d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualDirectKernelGrowth"
+          },
+          "verification_receipt": "build-reports/1793351247582957988-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole lem:direct paper.tex499\u2013519: faithful normal principal L>omega, literal positive lower-profile syntax, executable threshold, uniform strict lower growth over every genuine retained mass, and actual fixed-head upper bound. Paid executable dominator, packed eligibility, same-control exit comparison and actual first maximum. No arbitrary-ordinal computability or graph-sharing claim."
         },
         {
           "id": "07-collapse-equality-and-one-variable:thm:adjacent",
@@ -3368,9 +3379,20 @@
           "file": "14-complexity-of-prediction-measures/paper.tex",
           "line": 374,
           "statement_latex": "\\label{lem:list}\nThe sequence $m\\mapsto a_m$ is computable in $0''$. Each entry is\nan ordinary total computable function, and every such function\noccurs exactly once. Oracle $0''$ uniformly supplies an ordinary\nprogram index for $f_m$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.fullCanonicalList",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/PredictionSecondJumpTargets.lean",
+            "sha256": "9c5f83508aa7370d9dbda8a756ab4dc0ca79e54085a5e8f927100b1729e3f1f7",
+            "type": "LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.FullCanonicalList"
+          },
+          "verification_receipt": "build-reports/1793350737425114042-17.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole lem:list paper.tex365\u2013390: actual increasing least retained total ordinary-code representatives, unique code/function coverage, genuine twice-iterated halting jump computation and uniform indices for one fixed ordinary finite-prefix maximum compiler. Earlier-retained versus all-earlier scan equivalence separately paid by PredictionRetainedScan receipt1793350865566811801-7. Actual oracle-program semantics/completeness/specialization, numeric universal, ordinary halting calibration and Pi2 second-jump decisions proved, not semantic oracle fields. Canonical n corresponds source a_(n+1), first m prefix to f_m for m>=1; ordinary compiled evaluation needs no oracle. No tape-runtime/robustness claim."
         },
         {
           "id": "14-complexity-of-prediction-measures:lem:finitevalues",

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceSuccessorCodingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_successorProbeDenotation : LogicLineages.OrdinalComparison.Source.Targets.SuccessorProbeDenotation :=
+  LogicLineages.OrdinalComparison.Source.SourceSuccessorCodingProof.successorProbeDenotation
+
+theorem fixed_successorObservationCalibration : LogicLineages.OrdinalComparison.Source.Targets.SuccessorObservationCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceSuccessorCodingProof.successorObservationCalibration
+
+theorem fixed_successorObservationGrowth : LogicLineages.OrdinalComparison.Source.Targets.SuccessorObservationGrowth :=
+  LogicLineages.OrdinalComparison.Source.SourceSuccessorCodingProof.successorObservationGrowth
+
+theorem fixed_successorPairCoding : LogicLineages.OrdinalComparison.Source.Targets.SuccessorPairCoding :=
+  LogicLineages.OrdinalComparison.Source.SourceSuccessorCodingProof.successorPairCoding
+
+theorem fixed_successorSortedWitness : LogicLineages.OrdinalComparison.Source.Targets.SuccessorSortedWitness :=
+  LogicLineages.OrdinalComparison.Source.SourceSuccessorCodingProof.successorSortedWitness
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

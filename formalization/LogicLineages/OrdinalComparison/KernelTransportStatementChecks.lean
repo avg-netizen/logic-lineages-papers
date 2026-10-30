@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.KernelTransportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualControlledExitNormMonotone : LogicLineages.OrdinalComparison.Targets.ActualControlledExitNormMonotone :=
+  LogicLineages.OrdinalComparison.actualControlledExitNormMonotone
+
+theorem fixed_actualSuffixKernelFirstMaximum : LogicLineages.OrdinalComparison.Targets.ActualSuffixKernelFirstMaximum :=
+  LogicLineages.OrdinalComparison.actualSuffixKernelFirstMaximum
+
+theorem fixed_actualSuffixKernelBelowFixedHead : LogicLineages.OrdinalComparison.Targets.ActualSuffixKernelBelowFixedHead :=
+  LogicLineages.OrdinalComparison.actualSuffixKernelBelowFixedHead
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

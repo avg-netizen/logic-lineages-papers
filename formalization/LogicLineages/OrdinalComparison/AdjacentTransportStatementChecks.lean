@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.AdjacentTransportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualControlledEndpointAlongTrace : LogicLineages.OrdinalComparison.Targets.ActualControlledEndpointAlongTrace :=
+  LogicLineages.OrdinalComparison.actualControlledEndpointAlongTrace
+
+theorem fixed_actualWorstMassKernelMonotone : LogicLineages.OrdinalComparison.Targets.ActualWorstMassKernelMonotone :=
+  LogicLineages.OrdinalComparison.actualWorstMassKernelMonotone
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

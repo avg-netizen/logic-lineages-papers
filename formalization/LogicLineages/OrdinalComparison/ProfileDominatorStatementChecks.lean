@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.ProfileDominatorProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualProfileLeadingNoteCalibration : LogicLineages.OrdinalComparison.Targets.ActualProfileLeadingNoteCalibration :=
+  LogicLineages.OrdinalComparison.actualProfileLeadingNoteCalibration
+
+theorem fixed_actualProfilePrincipalDominator : LogicLineages.OrdinalComparison.Targets.ActualProfilePrincipalDominator :=
+  LogicLineages.OrdinalComparison.actualProfilePrincipalDominator
+
+theorem fixed_actualProfileDirectThresholdCalibration : LogicLineages.OrdinalComparison.Targets.ActualProfileDirectThresholdCalibration :=
+  LogicLineages.OrdinalComparison.actualProfileDirectThresholdCalibration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

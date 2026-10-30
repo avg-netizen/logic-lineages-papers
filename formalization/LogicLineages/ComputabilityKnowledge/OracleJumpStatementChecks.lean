@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleJumpProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem actualJumpCharacteristic : LogicLineages.ComputabilityKnowledge.OracleJumpTargets.ActualJumpCharacteristic :=
+  LogicLineages.ComputabilityKnowledge.OracleJumpProof.actualJumpCharacteristic
+
+theorem zeroOracleUniversalPartrec : LogicLineages.ComputabilityKnowledge.OracleJumpTargets.ZeroOracleUniversalPartrec :=
+  LogicLineages.ComputabilityKnowledge.OracleJumpProof.zeroOracleUniversalPartrec
+
+theorem ordinaryToFirstCalibration : LogicLineages.ComputabilityKnowledge.OracleJumpTargets.OrdinaryToFirstCalibration :=
+  LogicLineages.ComputabilityKnowledge.OracleJumpProof.ordinaryToFirstCalibration
+
+theorem firstToOrdinaryCalibration : LogicLineages.ComputabilityKnowledge.OracleJumpTargets.FirstToOrdinaryCalibration :=
+  LogicLineages.ComputabilityKnowledge.OracleJumpProof.firstToOrdinaryCalibration
+
+theorem firstJumpRelativeEquivalence : LogicLineages.ComputabilityKnowledge.OracleJumpTargets.FirstJumpRelativeEquivalence :=
+  LogicLineages.ComputabilityKnowledge.OracleJumpProof.firstJumpRelativeEquivalence
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

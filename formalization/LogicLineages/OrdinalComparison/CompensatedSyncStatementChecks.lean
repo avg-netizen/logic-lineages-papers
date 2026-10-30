@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.CompensatedSyncProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCompensatedBudgetPreservation : LogicLineages.OrdinalComparison.Targets.ActualCompensatedBudgetPreservation :=
+  LogicLineages.OrdinalComparison.actualCompensatedBudgetPreservation
+
+theorem fixed_actualCompensatedSynchronizedTraces : LogicLineages.OrdinalComparison.Targets.ActualCompensatedSynchronizedTraces :=
+  LogicLineages.OrdinalComparison.actualCompensatedSynchronizedTraces
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

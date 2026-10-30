@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OraclePiTwoProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem ordinaryWitnessCompiler : LogicLineages.ComputabilityKnowledge.OraclePiTwoTargets.OrdinaryWitnessCompiler :=
+  LogicLineages.ComputabilityKnowledge.OraclePiTwoProof.ordinaryWitnessCompiler
+
+theorem relativeCounterSearch : LogicLineages.ComputabilityKnowledge.OraclePiTwoTargets.RelativeCounterSearch :=
+  LogicLineages.ComputabilityKnowledge.OraclePiTwoProof.relativeCounterSearch
+
+theorem exactCounterSearchDomain : LogicLineages.ComputabilityKnowledge.OraclePiTwoTargets.ExactCounterSearchDomain :=
+  LogicLineages.ComputabilityKnowledge.OraclePiTwoProof.exactCounterSearchDomain
+
+theorem actualPiTwoSecondJumpDecision : LogicLineages.ComputabilityKnowledge.OraclePiTwoTargets.ActualPiTwoSecondJumpDecision :=
+  LogicLineages.ComputabilityKnowledge.OraclePiTwoProof.actualPiTwoSecondJumpDecision
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

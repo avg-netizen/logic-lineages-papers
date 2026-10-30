@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRetainedScanProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem earlierRetainedScanCalibration : LogicLineages.ComputabilityKnowledge.PredictionRetainedScanTargets.EarlierRetainedScanCalibration :=
+  LogicLineages.ComputabilityKnowledge.PredictionRetainedScanProof.earlierRetainedScanCalibration
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

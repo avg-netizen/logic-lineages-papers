@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 74 checked numbered statements, two inherited calculator
-results, and 102 pending statements.
+Current register: 76 checked numbered statements, two inherited calculator
+results, and 100 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -119,25 +119,24 @@ separate hash-verified component records, so each later checkpoint need not
 rewrite one growing combined evidence file. The records preserve
 reviewed source correspondence, frozen hashes, successful receipts and actual
 axiom closures. New proof authoring follows exact target compilation and freeze.
-Only `propext`, `Classical.choice` and `Quot.sound` are allowed. No missing theorem
+Every bound fixed theorem must occur in the actual hashed gate-log axiom map;
+a nonempty namespace count alone is insufficient. The exporter checks that map
+against the raw log and the frozen gate declarations. Only `propext`,
+`Classical.choice` and `Quot.sound` are allowed. No missing theorem
 is inserted as an axiom, oracle, correctness field or extra premise.
 
 ## Further checked suppliers and held source obligations
 
-- Paper 01: actual quotient direct limits, injective stages, countability,
-  Pi2 preservation and finite-short-block shift constructions now prove the
-  no-Pi2 Scott obstruction for the explicit source normal forms, including the
-  finite upper factor. Arbitrary bounded-group decomposition and upper
-  categoricity remain separate missing dependencies. Coordinate filtrations
-  and cyclic socles, genuine quotient/rank formulas and maximal cyclic splitting
-  are now checked. The splitting construction uses actual divisible-module
-  extension and a proved circle torsion-image characterization, not a retraction
-  hypothesis. The actual adapted socle bases and filtered cyclic root generation
-  now also prove bounded cyclic decomposition for Type0 groups from the literal
-  prime-power annihilation hypothesis alone. Genuine Cardinal-rank calibration
-  yields bounded Ulm categoricity and a relative Pi3 Scott upper bound for
-  countable bounded groups. The sharper Pi2/dSigma2 classification is still
-  separately pending.
+- Paper 01: genuine cyclic splitting, adapted socle bases and filtered cyclic
+  root generation prove bounded cyclic decomposition for Type0 groups from
+  literal prime-power annihilation alone. Actual quotient/Cardinal-rank
+  calibration yields bounded Ulm categoricity and a relative Pi3 Scott upper
+  bound. The source's one-infinite-invariant cases now have actual relative
+  Pi2/dSigma2 sentences and explicit sharp lower obstructions, including the
+  arbitrary-group normal-form transfer. No classifier, basis, spanning family
+  or retraction is assumed in these final existence statements. The two-infinite
+  lower case and unrestricted-language transfer remain separate obligations;
+  the whole bounded Scott classification is not marked complete.
 - Paper 03: actual forbidden-class nonemptiness/empty-carrier checks and the
   countably infinite width-one/two/three age realizations are checked. These
   do not fill the general decision-theorem gap.
@@ -156,17 +155,16 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   are now checked for the explicitly stated core. Standard-N singleton revision
   semantics is checked independently. DCB, arithmetized provability,
   fixed points and the six numbered source claims remain pending.
-- Paper 14: the literal finite-elimination baseline, self-history reconstruction
-  and actual compiled-policy learning theorem are checked under explicit
-  eventual bounded-observation availability. Evaluation fuel is not identified
-  with the source's tape-runtime bound. The structural canonical list of least
-  total-program representatives is checked, but its claimed double-jump
-  computability is not supplied by a noncomputable enumeration. Uniform actual
-  totality/extensional-equality Pi2 matrices and relative selection from their
-  exact characteristic oracles are checked, as is the ordinary finite-prefix
-  maximum compiler. Genuine coded oracle-program syntax/evaluation agrees with
-  the existing relative-recursion relation; a universal evaluator and actual
-  jump identification remain separately pending.
+- Paper 14: the actual finite-elimination baseline, self-history reconstruction
+  and compiled-policy learning theorem are checked under explicit eventual
+  bounded-observation availability. Evaluation fuel is not identified with the
+  source's tape runtime. The full canonical-list lemma is now checked: genuine
+  oracle-program evaluation and finite certificates yield a total-oracle
+  universal partial evaluator; actual halting-jump calibration and Pi2 decisions
+  in the second jump compose with least retained-code selection and the ordinary
+  maximum compiler. Exact earlier-retained scanning, distinct/exhaustive total
+  functions and relative indices of ordinary finite-prefix maximum programs are
+  all paid. No runtime-dependent prediction result follows automatically.
 - Paper 07: the genuine retained-mass suffix/kernel trace is calibrated against
   the actual controlled count. The full small-principal-kernel lemma and
   successor cut/count cocycle are now checked, including exact mass rounding,
@@ -175,7 +173,9 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   extraction and actual terminal/count calibration. The one-stage reserve lemma
   and full profile-reserve lemma are also checked, including genuine first-finite
   cuts, the executable positive-expression compiler and permanent numerical
-  mass. General sign/identity algorithms and unproved kernel-evaluation
+  mass. The direct lower-profile/fixed-head upper-bound lemma is now checked,
+  with an executable faithful-notation dominator/threshold construction.
+  General sign/identity algorithms and unproved kernel-evaluation
   effectivity are not inferred from these results.
 
 ### Held paper 05 abstraction convention
@@ -197,6 +197,20 @@ source representation convention or the necessary generated-source invariance
 proof. No manuscript was changed and no convenient normalization was silently
 selected. The checked typed-component, literal-partial, generated-grade/support,
 box and prime/application suppliers remain valid independently.
+
+### Additional source calibrations
+
+Paper 09's abstraction-free applicative fragment and the actual source S
+successor calibration now support the superincreasing pair-coding supplier.
+This does not supply the lambda/e/addition compiler or bypass the held
+abstraction convention.
+
+The adjacent-level work in paper 07 records a proof-prose typo at paper.tex line
+560: b=M(L,B-e) has norm B-e and total input B, not norm B. The numbered theorem
+at lines 523–536 is unchanged; the proof supplier uses the literal definition.
+Integer subtraction in the packed coefficient is retained via a proved
+nonnegative (B'+e)-(B+p), not truncated p-e. The adjacent theorem itself is not
+claimed complete by this note.
 
 ## Local resource profiles
 
@@ -270,3 +284,13 @@ The register is now 74 checked, two inherited and 102 pending. Paper 07's full
 peak-word, one-stage reserve and profile-reserve lemmas are the new numbered
 completions; genuine bounded-group decomposition/categoricity is recorded as a
 substantial supplier rather than the still-unfinished sharp Scott classification.
+
+## Eighth cumulative checkpoint
+
+The selected 478-gate root passed its 1,501-declaration axiom audit. All 1,696
+local source hashes were unchanged and the baseline guard remained clean. See
+[checkpoint evidence](verification/external-checkpoint-478-2026-10-30.json).
+The register is now 76 checked, two inherited and 100 pending. The full paper 14
+canonical-list lemma and paper 07 direct comparison lemma are new numbered
+completions. Every selected component's fixed-proof audit is explicitly checked
+against its frozen gate and actual raw log before export.

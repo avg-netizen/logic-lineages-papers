@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem secondJumpTotalityDecision : LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.SecondJumpTotalityDecision :=
+  LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof.secondJumpTotalityDecision
+
+theorem secondJumpEqualityDecision : LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.SecondJumpEqualityDecision :=
+  LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof.secondJumpEqualityDecision
+
+theorem secondJumpCanonicalSelection : LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.SecondJumpCanonicalSelection :=
+  LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof.secondJumpCanonicalSelection
+
+theorem secondJumpCanonicalPrefix : LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.SecondJumpCanonicalPrefix :=
+  LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof.secondJumpCanonicalPrefix
+
+theorem uniformSecondJumpMaximumIndices : LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.UniformSecondJumpMaximumIndices :=
+  LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof.uniformSecondJumpMaximumIndices
+
+theorem fullCanonicalList : LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.FullCanonicalList :=
+  LogicLineages.ComputabilityKnowledge.PredictionSecondJumpProof.fullCanonicalList
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

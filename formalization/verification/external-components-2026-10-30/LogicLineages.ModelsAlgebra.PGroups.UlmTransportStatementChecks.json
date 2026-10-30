@@ -1,0 +1,54 @@
+{
+  "accepted_utc": "2026-10-30T08:52:51.467164+00:00",
+  "scope": "Actual socle map equality and genuine quotient linear iso under actual injective hom, all natural p. No quotient/rank correctness field.",
+  "source_correspondence": "paper01 actual injective-hom Ulm transport prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.UlmTransportStatementChecks",
+  "frozen_at_utc": "2026-10-30T08:49:56.582685+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmTransportTargets.lean",
+      "sha256": "3b35ad4b95690366eb2ebce65e6c4de7dda74641f741af0a2a30fd1a7d87fe26"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmTransportStatementChecks.lean",
+      "sha256": "ff43407d00c8c1da68382df63e6c442f98b9d971a46c23798e8d9fe4d60b5daf"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmTransport.lean",
+      "sha256": "800f85f887db7fa4a0cddbf4c34c7971171f89d4e44d30b3f32d95791b79de4e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInjectiveSocleMap",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInjectiveUlmIsomorphism"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793350335701703767-15.json",
+      "sha256": "195e05256423123839fc1ff8d6c53eb34eb548dc3c9824cbf20f053fad24a12c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "c9d92531da88144f757024ac447f7a60283522beff19e7b93c5d5ba28b24aed5",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_injective_socle_map": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_injective_ulm_isomorphism": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

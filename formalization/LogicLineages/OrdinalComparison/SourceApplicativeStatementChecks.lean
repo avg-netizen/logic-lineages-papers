@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceApplicativeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_applicativeAssignmentEquations : LogicLineages.OrdinalComparison.Source.Targets.ApplicativeAssignmentEquations :=
+  LogicLineages.OrdinalComparison.Source.SourceApplicativeProof.applicativeAssignmentEquations
+
+theorem fixed_applicativeAssignmentDomain : LogicLineages.OrdinalComparison.Source.Targets.ApplicativeAssignmentDomain :=
+  LogicLineages.OrdinalComparison.Source.SourceApplicativeProof.applicativeAssignmentDomain
+
+theorem fixed_applicativeAssignmentGrade : LogicLineages.OrdinalComparison.Source.Targets.ApplicativeAssignmentGrade :=
+  LogicLineages.OrdinalComparison.Source.SourceApplicativeProof.applicativeAssignmentGrade
+
+theorem fixed_successorProbeAssignment : LogicLineages.OrdinalComparison.Source.Targets.SuccessorProbeAssignment :=
+  LogicLineages.OrdinalComparison.Source.SourceApplicativeProof.successorProbeAssignment
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

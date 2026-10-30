@@ -1,0 +1,69 @@
+{
+  "accepted_utc": "2026-10-30T09:23:07.118189+00:00",
+  "scope": "Actual bounded finite tail from finite genuine Ulm Cardinal ranks; actual infinite rank forces infinite filtration subgroup. No oracle or ACM claim.",
+  "source_correspondence": "paper01 actual finite-tail invariant bridge.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteTailStatementChecks",
+  "frozen_at_utc": "2026-10-30T09:20:57.087248+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteTailTargets.lean",
+      "sha256": "9a5dac03fb8723623d71b9bd3cf1412d65587366bccb82da6ab78785be38b85b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteTailStatementChecks.lean",
+      "sha256": "3adfb15106c4f4cfec5570cca353d66f238301c5a469f999c0fe1477d6a116dd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteTail.lean",
+      "sha256": "e98632ce6e2ae2736ebba4b528fbeb04e81bcf019d98aa19f0aa274adef32172"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteTailFromRanks",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfiniteUlmInfiniteFiltration"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793352172638813614-6.json",
+      "sha256": "3475608f55e1bc712bc8bec42d46af13bf5cce93cd60106938a67c246c64ff3c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1bf74e56955bf5811eeb561f4e295628434bf3f101ba0cdc388ae61320d7fad0",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_finite_tail_from_ranks": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_infinite_ulm_infinite_filtration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}
