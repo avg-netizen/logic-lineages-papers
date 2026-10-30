@@ -2620,9 +2620,20 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 497,
           "statement_latex": "[Removal of every higher pole]\\label{lem:poles}\nPut $\\mu=\\sum_{i=1}^d2^{\\nu_2(i)}$ and\n$a=\\lceil\\log_2\\mu\\rceil$. After $a$ Cartier applications to\na proper differential with denominator $A_d$, all surviving finite\npoles are simple. Its simple residues subsequently undergo inverse\nFrobenius at their fixed poles. No polynomial part is created.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualBinaryHigherPoleRemoval",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/BinaryPoleRemovalTargets.lean",
+            "sha256": "556388514d1e762c37293d56b2a46120457188114778c70b86b90f4ec800b390",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualBinaryHigherPoleRemoval"
+          },
+          "verification_receipt": "build-reports/1793340729175994586-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole numbered lem:poles: literal mapped source denominator, true proper numerator, literal sum mu and ceiling-log transient; actual rational Cartier iterates remain proper, all finite-coordinate Laurent coefficients below -1 vanish after transient, and subsequent residues follow inverse Frobenius. Initial support/root multiplicity and properness are proved suppliers, not premises. All d including zero. Does not promote the subsequent unnumbered eventual-periodicity argument."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:residue",

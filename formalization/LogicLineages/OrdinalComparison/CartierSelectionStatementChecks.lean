@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierSelectionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryRationalOriginSeries : LogicLineages.OrdinalComparison.Targets.ActualBinaryRationalOriginSeries :=
+  LogicLineages.OrdinalComparison.actualBinaryRationalOriginSeries
+
+theorem fixed_actualDifferentialSelectedCoefficient : LogicLineages.OrdinalComparison.Targets.ActualDifferentialSelectedCoefficient :=
+  LogicLineages.OrdinalComparison.actualDifferentialSelectedCoefficient
+
+theorem fixed_actualDifferentialSelectedParity : LogicLineages.OrdinalComparison.Targets.ActualDifferentialSelectedParity :=
+  LogicLineages.OrdinalComparison.actualDifferentialSelectedParity
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

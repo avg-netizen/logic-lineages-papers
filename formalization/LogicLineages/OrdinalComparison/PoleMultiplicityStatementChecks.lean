@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.PoleMultiplicityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualMultiplicityPoleExpansion : LogicLineages.OrdinalComparison.Targets.ActualMultiplicityPoleExpansion :=
+  LogicLineages.OrdinalComparison.actualMultiplicityPoleExpansionCorrect
+
+theorem fixed_actualMultiplicityPoleLowerSupport : LogicLineages.OrdinalComparison.Targets.ActualMultiplicityPoleLowerSupport :=
+  LogicLineages.OrdinalComparison.actualMultiplicityPoleLowerSupport
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

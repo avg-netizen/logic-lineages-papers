@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryPoleBudgetProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryBinomialRootMultiplicity : LogicLineages.OrdinalComparison.Targets.ActualBinaryBinomialRootMultiplicity :=
+  LogicLineages.OrdinalComparison.actualBinaryBinomialRootMultiplicity
+
+theorem fixed_actualBinarySourceRootMultiplicity : LogicLineages.OrdinalComparison.Targets.ActualBinarySourceRootMultiplicity :=
+  LogicLineages.OrdinalComparison.actualBinarySourceRootMultiplicity
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

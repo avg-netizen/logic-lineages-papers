@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 68 checked numbered statements, two inherited calculator
-results, and 108 pending statements.
+Current register: 69 checked numbered statements, two inherited calculator
+results, and 107 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -65,8 +65,12 @@ original parameter hypotheses. The genuine rational Cartier construction,
 local Laurent coefficient rule and complete residue-tuple period transfer are
 now checked. For the original parameter inputs, every Cartier-state coincidence
 has displacement divisible by twice (log2 B minus one), hence the same constraint
-holds for every eventual period. Remaining pole-removal and finite-tail results
-are not included in this completion claim.
+holds for every eventual period. The final numbered pole-removal lemma is also
+checked using actual denominator multiplicities, the literal transient bound,
+rational properness and genuine Laurent support contraction. All fifteen
+registered numbered statements in paper 10 are now checked. Further unnumbered
+selection, transient and finite binary Cartier-cycle calibrations are recorded
+as suppliers; this is not a claim that every prose assertion is formalized.
 
 The group lane now includes literal finite-image tables, finite Ulm quotient
 rank formulas, variable renaming, finite conjunction assembly and annihilation
@@ -85,7 +89,30 @@ exponential-polynomial fragment. The stated componentwise comparison proof does
 not yet supply this broader bridge. This is an unresolved source/proof scope
 gap, not a counterexample to the corollary. The full corollary remains pending
 and the manuscript is unchanged. The exact finite-fragment embedding into the
-original ordinal syntax is checked separately.
+original ordinal syntax is checked separately. The faithful original ordinal
+prefix codec and uniform bounded-vector construction are now checked as well;
+the missing general MRDP hardness supplier is not assumed.
+
+### Cotree transfer obstruction in the cited source
+
+The paper 03 decision route cites Carter, [arXiv:2409.06127v1](https://arxiv.org/html/2409.06127v1),
+section 3.2. Its displayed cotree-containment equivalence cannot be used unchanged
+under either of the two literal containment readings examined here. Two concrete
+Lean counterexamples now pin down the obstruction:
+
+- Under the downward edge-disjoint-path reading, I3 is an induced subgraph of
+  K1 disjoint-union P3, but its three-child cotree star cannot embed in the binary
+  target cotree. The proved obstruction does not even require ancestor reflection.
+- Under unrestricted edge contraction retaining the parent label, the cotree of
+  K1 disjoint-union K2 contracts to the cotree of I3, but the graph has no induced I3.
+
+The exact valid reduced cotrees, leaf/LCA interpretations, finite graph witnesses
+and embedding/contraction claims are checked in CotreeCounterexample and
+CotreeContraction. These refute those specific transfer formulations, not the
+final decidability theorem or every possible repaired convention. The manuscript
+is unchanged and the full decision theorem remains pending. The separate finite
+binary-tree automata evaluation, saturation, witness and language-equivalence
+suppliers do not rely on this disputed transfer.
 
 [Individual exact-gate evidence](verification/external-2026-10-30.json) records
 reviewed source correspondence, frozen hashes, successful receipts and actual
@@ -131,3 +158,11 @@ local source hashes were unchanged. See
 [checkpoint evidence](verification/external-checkpoint-328-2026-10-30.json).
 The register has 68 checked numbered statements, two inherited results and 108
 pending statements: thirteen numbered statements added since the main baseline.
+
+## Fourth cumulative checkpoint
+
+The selected 349-gate root passed its 958-declaration axiom audit. All 1,236
+local source hashes were unchanged. See
+[checkpoint evidence](verification/external-checkpoint-349-2026-10-30.json).
+The register has 69 checked numbered statements, two inherited results and 107
+pending statements. Fourteen numbered statements have been added this round.

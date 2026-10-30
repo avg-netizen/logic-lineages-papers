@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryCartierCycleProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryProperNumeratorFinite : LogicLineages.OrdinalComparison.Targets.ActualBinaryProperNumeratorFinite :=
+  LogicLineages.OrdinalComparison.actualBinaryProperNumeratorFinite
+
+theorem fixed_actualBinaryCartierNumeratorIteration : LogicLineages.OrdinalComparison.Targets.ActualBinaryCartierNumeratorIteration :=
+  LogicLineages.OrdinalComparison.actualBinaryCartierNumeratorIteration
+
+theorem fixed_actualBinaryCartierEventualCycle : LogicLineages.OrdinalComparison.Targets.ActualBinaryCartierEventualCycle :=
+  LogicLineages.OrdinalComparison.actualBinaryCartierEventualCycle
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

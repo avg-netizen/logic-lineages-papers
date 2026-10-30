@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.CartierProperProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualRationalProperDegree : LogicLineages.OrdinalComparison.Targets.ActualRationalProperDegree :=
+  LogicLineages.OrdinalComparison.actualRationalProperDegree
+
+theorem fixed_actualDifferentialCartierProper : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierProper :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierProper
+
+theorem fixed_actualDifferentialCartierIterateProper : LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierIterateProper :=
+  LogicLineages.OrdinalComparison.actualDifferentialCartierIterateProper
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

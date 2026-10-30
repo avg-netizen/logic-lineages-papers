@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.EndomorphismIteration
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.EndomorphismIterationStatementChecks
+
+theorem fixed_iteration_transition_identity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupIterationTransitionIdentity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.iteration_transition_identity
+
+theorem fixed_iteration_transition_composition : LogicLineages.ModelsAlgebra.PGroups.Targets.groupIterationTransitionComposition :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.iteration_transition_composition
+
+theorem fixed_iteration_transition_injective : LogicLineages.ModelsAlgebra.PGroups.Targets.groupIterationTransitionInjective :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.iteration_transition_injective
+
+end LogicLineages.ModelsAlgebra.PGroups.EndomorphismIterationStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups
