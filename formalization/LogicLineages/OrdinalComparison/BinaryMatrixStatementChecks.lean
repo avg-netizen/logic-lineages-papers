@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryMatrixProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryMatrixStep : LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixStep :=
+  LogicLineages.OrdinalComparison.actualBinaryMatrixStep
+
+theorem fixed_actualBinaryMatrixWordCalibration : LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixWordCalibration :=
+  LogicLineages.OrdinalComparison.actualBinaryMatrixWordCalibration
+
+theorem fixed_actualBinaryMatrixWordObservation : LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixWordObservation :=
+  LogicLineages.OrdinalComparison.actualBinaryMatrixWordObservation
+
+theorem fixed_actualBinaryMatrixBoundedContinuation : LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixBoundedContinuation :=
+  LogicLineages.OrdinalComparison.actualBinaryMatrixBoundedContinuation
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

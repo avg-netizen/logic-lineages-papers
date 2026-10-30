@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryQuotientProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryPolynomialSquareCoefficient : Targets.ActualBinaryPolynomialSquareCoefficient :=
+  LogicLineages.OrdinalComparison.actualBinaryPolynomialSquareCoefficient
+
+theorem fixed_actualBinarySeriesSquareFactor : Targets.ActualBinarySeriesSquareFactor :=
+  LogicLineages.OrdinalComparison.actualBinarySeriesSquareFactor
+
+theorem fixed_actualBinaryQuotientTransport : Targets.ActualBinaryQuotientTransport :=
+  LogicLineages.OrdinalComparison.actualBinaryQuotientTransport
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.ImageInfinitude
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks
+
+theorem fixed_multiple_term_evaluation : LogicLineages.ModelsAlgebra.PGroups.Targets.groupMultipleTermEvaluation :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multiple_term_evaluation
+
+theorem fixed_finite_conjunction_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteConjunctionRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finite_conjunction_realization
+
+theorem fixed_distinct_multiple_matrix_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupDistinctMultipleMatrixRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.distinct_multiple_matrix_realization
+
+theorem fixed_distinct_multiples_formula : LogicLineages.ModelsAlgebra.PGroups.Targets.groupDistinctMultiplesFormula :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.distinct_multiples_formula
+
+theorem fixed_infinite_multiple_image_formula : LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfiniteMultipleImageFormula :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.infinite_multiple_image_formula
+
+end LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

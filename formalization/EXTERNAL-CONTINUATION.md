@@ -1,3 +1,5 @@
+> Historical 29 October record. See [the current cumulative continuation](EXTERNAL-CONTINUATION-2026-10-30.md) for the later baseline and work.
+
 # External continuation, 29 October 2026
 
 This records a separately authorized external continuation from commit

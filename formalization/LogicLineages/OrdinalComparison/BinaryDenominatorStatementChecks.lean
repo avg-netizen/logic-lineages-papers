@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryDenominatorProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinarySourceDenominatorConstant : LogicLineages.OrdinalComparison.Targets.ActualBinarySourceDenominatorConstant :=
+  LogicLineages.OrdinalComparison.actualBinarySourceDenominatorConstant
+
+theorem fixed_actualBinarySourceDenominatorDegree : LogicLineages.OrdinalComparison.Targets.ActualBinarySourceDenominatorDegree :=
+  LogicLineages.OrdinalComparison.actualBinarySourceDenominatorDegree
+
+theorem fixed_actualBinarySourceDimensionPositive : LogicLineages.OrdinalComparison.Targets.ActualBinarySourceDimensionPositive :=
+  LogicLineages.OrdinalComparison.actualBinarySourceDimensionPositive
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

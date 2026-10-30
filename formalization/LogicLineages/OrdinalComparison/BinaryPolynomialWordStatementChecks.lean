@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryPolynomialWordProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryPolynomialWordQuotient : Targets.ActualBinaryPolynomialWordQuotient :=
+  LogicLineages.OrdinalComparison.actualBinaryPolynomialWordQuotient
+
+theorem fixed_actualBinaryPolynomialWordDegree : Targets.ActualBinaryPolynomialWordDegree :=
+  LogicLineages.OrdinalComparison.actualBinaryPolynomialWordDegree
+
+theorem fixed_actualBinaryPolynomialWordObservation : Targets.ActualBinaryPolynomialWordObservation :=
+  LogicLineages.OrdinalComparison.actualBinaryPolynomialWordObservation
+
+theorem fixed_actualBinaryPolynomialBoundedContinuation : Targets.ActualBinaryPolynomialBoundedContinuation :=
+  LogicLineages.OrdinalComparison.actualBinaryPolynomialBoundedContinuation
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

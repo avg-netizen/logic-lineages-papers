@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryPartitionSeriesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryPartitionSeriesBase : LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesBase :=
+  LogicLineages.OrdinalComparison.actualBinaryPartitionSeriesBase
+
+theorem fixed_actualBinaryPartitionSeriesFactor : LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesFactor :=
+  LogicLineages.OrdinalComparison.actualBinaryPartitionSeriesFactor
+
+theorem fixed_actualBinaryPartitionSeriesProduct : LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesProduct :=
+  LogicLineages.OrdinalComparison.actualBinaryPartitionSeriesProduct
+
+theorem fixed_actualBinaryPartitionSeriesQuotient : LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesQuotient :=
+  LogicLineages.OrdinalComparison.actualBinaryPartitionSeriesQuotient
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

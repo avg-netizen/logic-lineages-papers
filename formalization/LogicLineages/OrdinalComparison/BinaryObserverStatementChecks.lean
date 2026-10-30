@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryObserverProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryInitialVectorCalibration : LogicLineages.OrdinalComparison.Targets.ActualBinaryInitialVectorCalibration :=
+  LogicLineages.OrdinalComparison.actualBinaryInitialVectorCalibration
+
+theorem fixed_actualBinaryMatrixWordProduct : LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixWordProduct :=
+  LogicLineages.OrdinalComparison.actualBinaryMatrixWordProduct
+
+theorem fixed_actualSourceBinarySelectedCoefficient : LogicLineages.OrdinalComparison.Targets.ActualSourceBinarySelectedCoefficient :=
+  LogicLineages.OrdinalComparison.actualSourceBinarySelectedCoefficient
+
+theorem fixed_actualSourceBinarySelectedParity : LogicLineages.OrdinalComparison.Targets.ActualSourceBinarySelectedParity :=
+  LogicLineages.OrdinalComparison.actualSourceBinarySelectedParity
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

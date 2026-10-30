@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.Forests.StatementChecks
+
+theorem orderEmbeddingGivesGraphEmbedding : LogicLineages.ModelsAlgebra.Forests.Targets.OrderEmbeddingGivesGraphEmbedding :=
+  LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionProof.orderEmbeddingGivesGraphEmbedding
+
+theorem graphEmbeddingGivesOrderEmbedding : LogicLineages.ModelsAlgebra.Forests.Targets.GraphEmbeddingGivesOrderEmbedding :=
+  LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionProof.graphEmbeddingGivesOrderEmbedding
+
+theorem fullComparabilityEmbeddings : LogicLineages.ModelsAlgebra.Forests.Targets.FullComparabilityEmbeddings :=
+  LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionProof.fullComparabilityEmbeddings
+
+theorem completeComparabilityBridge : LogicLineages.ModelsAlgebra.Forests.Targets.CompleteComparabilityBridge :=
+  LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionProof.completeComparabilityBridge
+
+end LogicLineages.ModelsAlgebra.Forests.StatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.Forests

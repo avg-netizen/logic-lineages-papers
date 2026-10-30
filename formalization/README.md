@@ -2,6 +2,8 @@ Local workers paused at the user-requested 10 p.m. America/Chicago cutoff (30 Oc
 
 # Formalizing the public papers
 
+Current external work: [30 October cumulative continuation](EXTERNAL-CONTINUATION-2026-10-30.md). Earlier pause/checkpoint records below remain historical.
+
 Local workers were **explicitly resumed by the user on 29 October 2026** after
 the external continuation. Two independent Codex lanes, a Codex-led Claude loop
 and main continue from [the external checkpoint](EXTERNAL-CONTINUATION.md).

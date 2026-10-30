@@ -348,9 +348,20 @@
           "file": "02-exponential-comparison/paper.tex",
           "line": 367,
           "statement_latex": "[Finite-family ray separation]\\label{lem:ray}\nGiven a finite collection $\\mathcal S$ of normal forms, close it under\ntaking keys and add zero.  One can effectively choose positive integers\n$a_1,\\ldots,a_d$ such that, on the ray $x_i=a_it$ with integer $t>0$,\nthe following statements hold for all $F,G\\in\\mathcal S$.\n\\begin{enumerate}\n\\item If $F\\ne G$, their difference is eventually nonzero with a fixed\n      sign.\n\\item If $F,G$ are constant-free and distinct, then\n      $|F(\\mathbf a t)-G(\\mathbf a t)|\\ge t$ for all sufficiently large\n      $t$.\n\\end{enumerate}\nThe common thresholds and the eventual signs are computable.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_separation",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/RaySeparation.lean",
+            "sha256": "fd4cc78183293a36de5a1e6eed7fff46cbac1c001d9dbcdf9f8770c3b8856144",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.RaySeparation.Target"
+          },
+          "verification_receipt": "build-reports/1793334622053991788-10.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire original finite-family ray lemma: arbitrary heterogeneous canonical representations of source normal forms, original recursive-key closure and zeros, one positive ray, explicit common threshold and genuinely uniform primitive-recursive sign/weight/threshold programs, eventual fixed nonzero signs for structurally distinct forms, and \u2265t gap for distinct constant-free forms. Common-height equality uses proved injective literal original embeddings, not numerical equivalence. No gap/effectivity oracle or extra supplier assumption."
         },
         {
           "id": "02-exponential-comparison:thm:identity",
@@ -418,9 +429,20 @@
           "file": "03-joint-embedding-finite-forests/paper.tex",
           "line": 64,
           "statement_latex": "\\label{lem:bridge}\nThe comparability graphs of finite order forests are precisely\n$\\Forb(P_4,C_4)$. Each such graph determines its order forest up to\nisomorphism. Moreover, for finite order forests $S,T$,\n\\[\n S\\hookrightarrow T\\quad\\Longleftrightarrow\\quad\n \\Comp(S)\\hookrightarrow\\Comp(T).\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.completeComparabilityBridge",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionTargets.lean",
+            "sha256": "dcb98f5df86c8f5784ef23c3486fd86b7b80136840a83abe73d7555b60e100d5",
+            "type": "LogicLineages.ModelsAlgebra.Forests.Targets.CompleteComparabilityBridge"
+          },
+          "verification_receipt": "build-reports/1793333606235628555-15.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source lem:bridge: finite order forest comparability graphs exactly induced P4/C4-free finite graphs; representation unique up to actual order isomorphism; existence of actual order embedding iff induced graph embedding. Empty finite carriers included, no root/meet constraints."
         },
         {
           "id": "03-joint-embedding-finite-forests:thm:decision",
@@ -2445,9 +2467,20 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 401,
           "statement_latex": "[Exact state update]\\label{lem:matrix}\nFor $U\\in V_d$,\n\\[\n \\Lambda_b(U/A_d)=\\frac{\\Lambda_b(UA_d)}{A_d}.\n\\]\nThe updated numerator is again in $V_d$. In the coefficient basis its\nmatrix is\n$T_b[i,j]=[z^{2i+b-j}]A_d$, for $0\\le i,j<D$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinaryMatrix",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/BinarySourceTargets.lean",
+            "sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualSourceBinaryMatrix"
+          },
+          "verification_receipt": "build-reports/1793333908652394293-5.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "All source conclusions: exact A_d quotient update, proper-numerator degree preservation, actual guarded finite coefficient-basis matrix. All d including0."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:thm:observer",
@@ -2456,9 +2489,24 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 418,
           "statement_latex": "[Complete selected coefficient]\\label{thm:observer}\nIf $n=\\sum_{i<L}b_i2^i$, with bits read least significant first,\nthen\n\\[\n p_d(n)\\bmod2=e_0^{T}T_{b_{L-1}}\\cdots T_{b_0}e_0.\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedParity",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/BinaryObserverTargets.lean",
+            "sha256": "d293a5d5845304538c6e7a89e327a64b41d53753c93e4d569e1510c75f6e7a0c",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualSourceBinarySelectedParity"
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedCoefficient",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedParity"
+          ],
+          "verification_receipt": "build-reports/1793334492181831101-5.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full original p_d(n) mod2 selected coefficient identity, actual source multiplicity cardinality, all denominator factors/cancellations, actual reversed matrix product and literal e0. Any LSB bit encoding n including empty n0 and leading zeros; source d\u22651 retained. Field equality and explicit Nat.val=count%2 both checked."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:observable",
@@ -2467,9 +2515,20 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 437,
           "statement_latex": "[All-continuation observability]\\label{lem:observable}\nFor any field $K$, polynomial $A$ with $A(0)=1$ and $\\deg A=D$,\nthe first $D$ coefficients of $U/A$ determine every $U$ of degree\nless than $D$. For the binary observer above, distinct numerator\nstates are distinguished by some continuation of length at most\n$\\lceil\\log_2 D\\rceil$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinaryObservability",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/BinarySourceTargets.lean",
+            "sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+            "type": "LogicLineages.OrdinalComparison.Targets.ActualSourceBinaryObservability"
+          },
+          "verification_receipt": "build-reports/1793333908652394293-5.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Both clauses: all-field first-D formal quotient coefficient uniqueness, and literal A_d binary matrix continuation distinction with length\u2264ceil(log2 D). Empty word/index0 and zero-dimensional no-distinct-proper-state edge separately paid."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:local",

@@ -1,0 +1,3647 @@
+{
+  "baseline_commit": "11fdad77efca52e44b4aed533b1bf1b1e5beca81",
+  "scope": "Individually source-reviewed frozen exact gates, not a remote CI claim. New root integration verified separately.",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "numbered_counts": {
+    "pending": 116,
+    "checked": 60,
+    "existing-calculator-package": 2
+  },
+  "components": [
+    {
+      "accepted_utc": "2026-10-30T04:16:36.620296+00:00",
+      "scope": "All-d exact denominator constant/degree incl d0, positive dimension for d>0; no partition generating coefficients claimed",
+      "source_correspondence": "Paper10 literal A_d product and D=d(d+1)/2 before lem:matrix",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinaryDenominatorStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:14:33.615930+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.lean",
+          "sha256": "3dd979dd6ec9c061aa7f948a35b32e0b4946c635b7fb78b21451f4bdf3d54543"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryDenominatorTargets.lean",
+          "sha256": "668767d942067493eca5e27c78faef982b62bce21343c56b487806b12a7cd9c0"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryDenominatorStatementChecks.lean",
+          "sha256": "2e24e3056ab1bfaa84f6be46a18f0b28f3498614839766021c650b800421b66d"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryDenominatorProof.lean",
+          "sha256": "e47338e9c4e2ba65093b6fe835e692627d4df36bb781ba2e10d13f2a64edc829"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualBinarySourceDenominatorConstant",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinarySourceDenominatorDegree",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinarySourceDimensionPositive"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333762327594297-5.json",
+          "sha256": "05d8730bb696715fde4d52734eb0e7cd9be47995049e1514996f80bda2d383bd",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "0a81df44f122472df143da83e88a834e8cfe5d54c13ee050b23e1fbbbdec8446",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySourceDenominatorConstant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySourceDenominatorDegree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySourceDimensionPositive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:10:06.632133+00:00",
+      "scope": "Guarded finite matrix transition and LSB word observation/short distinction. Source A_d and restricted-partition generating function remain separate.",
+      "source_correspondence": "Paper10 lem:matrix/lem:observable literal finite matrix calibration",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinaryMatrixStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:08:00.579979+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryMatrixDefinitions.lean",
+          "sha256": "3e31e40a8502efd7fdd36b9bae57688e7873cda3644571a3788215bc6df40a43"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryMatrixTargets.lean",
+          "sha256": "2616408aee46228861d7865f65f70aed51109cbf6b97f1e1775a57c3b5ec7920"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryMatrixStatementChecks.lean",
+          "sha256": "8bb1e7c5cf45477c70fba7fd171fba31e339dad946bf8cf0541112105bf7cbc7"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryMatrixProof.lean",
+          "sha256": "0ae0936bc86eee4f32a0e51a4cb4b0b423de9ac5161b59d383dc595a64f8fefc"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixStep",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixWordCalibration",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixWordObservation",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixBoundedContinuation"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333381348215892-6.json",
+          "sha256": "f66ab1b87d03364e92c805a4c7b39e22c3e019da5370b47161a81be180a0785e",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "03507a8d6cf0b03ec752bbf8ed220f36821be7884e23581ce2c3cfecfd072978",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryMatrixBoundedContinuation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryMatrixWordObservation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryMatrixWordCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryMatrixStep": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_2": [],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_1": [],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_def": [],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:28:34.235065+00:00",
+      "scope": "Literal e0 and reversed noncommutative product, actual restricted partition count parity, all LSB representations including empty and leadingzero words, full source selected coefficient",
+      "source_correspondence": "Paper10 thm:observer displayed actual coefficient/parity identity",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinaryObserverStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:27:16.291832+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryObserverDefinitions.lean",
+          "sha256": "677b90add8522d699a21c59c7d0c34d7e654fe33fdc7dccf6efb8500aeb486c1"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryObserverTargets.lean",
+          "sha256": "d293a5d5845304538c6e7a89e327a64b41d53753c93e4d569e1510c75f6e7a0c"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryObserverStatementChecks.lean",
+          "sha256": "691fe196e7cffadae1623e5adcbcbaf19a74f3aaef7687445ac9f66772e88b56"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryObserverProof.lean",
+          "sha256": "679fbe9809e7bb158ec16c7313258ab763c7fd4299b44eecb9c43665e20f1e5b"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryInitialVectorCalibration",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryMatrixWordProduct",
+        "LogicLineages.OrdinalComparison.Targets.ActualSourceBinarySelectedCoefficient",
+        "LogicLineages.OrdinalComparison.Targets.ActualSourceBinarySelectedParity"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334492181831101-5.json",
+          "sha256": "fca2e2140b32e0d93cfa8ba7c61b557036b1d4573a6e3aa73f777d4713ccf8a9",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "7e44a19b16a98cd63c66673214e99d04823cefc15b11b5049020213f7cc9f77f",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryInitialVectorCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedCoefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedParity": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryMatrixWordProduct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_2": [],
+        "LogicLineages.OrdinalComparison.restrictedPartitionWeight.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualPolynomialSeriesQuotient.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.restrictedPartitionCount.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryCoefficientVector.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_1": [],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_def": [],
+        "LogicLineages.OrdinalComparison.actualBinaryPartitionSeries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.restrictedPartitionPeriod.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryInitialVector.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": true
+    },
+    {
+      "accepted_utc": "2026-10-30T04:25:57.317940+00:00",
+      "scope": "Actual cardinality coefficient series base/factor/product/quotient identities over F2 retaining all source factors; not full integer generating-series claim",
+      "source_correspondence": "Paper10 actual restricted partition count parity generating series for thm:observer",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinaryPartitionSeriesStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:24:00.268692+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPartitionSeriesDefinitions.lean",
+          "sha256": "605b930a1282323caa2609692b085e799a74b76ce25b6b64a7a61070c742159e"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPartitionSeriesTargets.lean",
+          "sha256": "5992ad6ca5b0a4197f2a2d5f7c6147ef55ca8a0712ee6e809ee969b37b057113"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPartitionSeriesStatementChecks.lean",
+          "sha256": "36c01b125c897853c4a6e0162ca9f43e3511919dc6dc7dcad3c896e07fee0bd6"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPartitionSeriesProof.lean",
+          "sha256": "c157e4e53fbf5f463ec104efd363027c5862f052e40b35623698280b1e8e187d"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesBase",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesFactor",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesProduct",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPartitionSeriesQuotient"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334345486713679-5.json",
+          "sha256": "aa845cf98ef6f603dc681345dd7ade87bf807eef48b44a5adda545692fd5b659",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "5d91b23e41c18902cd1740ea248de9addb089f17156bb012d2427e3bd4fc4d1b",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPartitionSeriesBase": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPartitionSeriesQuotient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPartitionSeriesProduct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPartitionSeriesFactor": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.restrictedPartitionWeight.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualPolynomialSeriesQuotient.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.restrictedPartitionCount.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPartitionSeries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.restrictedPartitionPeriod.eq_1": [
+          "propext"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:53:35.451633+00:00",
+      "scope": "Actual LSB polynomial word quotient and coefficient calibration, proper-degree closure including zero, bounded distinction. Matrix/source restricted-partition generating function still separate.",
+      "source_correspondence": "Paper10 lem:matrix and lem:observable; literal polynomial numerator updates and bounded continuation",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinaryPolynomialWordStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:52:24.143133+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPolynomialWordDefinitions.lean",
+          "sha256": "0708c723d41f3684f34f024b87ee0aaa7a94b5d8a4991890e4b2ab77a6b8a671"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPolynomialWordTargets.lean",
+          "sha256": "a0e57b2eeed9f7956968fa7adf068010cd3fa49073ee2043893c7a503e288178"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPolynomialWordStatementChecks.lean",
+          "sha256": "6c6d39ed2ab82fbbdad1bf5d32c7b95e5bbb4275f17333ef386f164856a74392"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryPolynomialWordProof.lean",
+          "sha256": "74aa0d90076faa9636bcb9aedd1327f25b022beaf71b50940b150cb9c04397c1"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPolynomialWordQuotient",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPolynomialWordDegree",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPolynomialWordObservation",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPolynomialBoundedContinuation"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793332393523291511-14.json",
+          "sha256": "e86b8ba5d46d745d2263afd41d0f14b78c761486bfb9a38e1406cdb777121762",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "244e83fd401d1fcc9cb2fed7a2d1f01db987083769ec8cf45f417b0e25d0da14",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPolynomialWordDegree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPolynomialBoundedContinuation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPolynomialWordObservation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPolynomialWordQuotient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_2": [],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_1": [],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_def": [],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:50:52.634495+00:00",
+      "scope": "F2 polynomial Frobenius/actual bit-selector square-factor/actual quotient transport suppliers, not degree/matrix or full observer completion",
+      "source_correspondence": null,
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinaryQuotientStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:39:26.673282+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryQuotientTargets.lean",
+          "sha256": "4c70e11e0e5b6589a5e56315215e4fd998bc4d4feb10e412717de5afd3b989c5"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryQuotientStatementChecks.lean",
+          "sha256": "91d5e5ff0a757fc16a375d9be8a2835cebe09cd5083425e8eb05915e56c25e70"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.lean",
+          "sha256": "882043ca7c3c98726a9979155a76253bfeb10fc8ff0d88b60687a8e3163e76c9"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.lean",
+          "sha256": "c79df401c29fc530da14dca8f67079606a607d630b45f0d709fe89e42bbd5297"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryQuotientProof.lean",
+          "sha256": "29bfa3dbb55d33d5423a17aaa29d1c5c8e128bcd3d079d4fdc0a3f64531ef52e"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryPolynomialSquareCoefficient",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinarySeriesSquareFactor",
+        "LogicLineages.OrdinalComparison.Targets.ActualBinaryQuotientTransport"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793332216928434811-11.json",
+          "sha256": "ae13128cf24651a3865315c46eef4beab2d2a2489ad3d6a5c772902ca7af9478",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "f13920fe6b72a56de7ad896a97f1c1f69747e5ab789795f3f2ccc452459b67ea",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinarySeriesSquareFactor": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryPolynomialSquareCoefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualBinaryQuotientTransport": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:18:45.655549+00:00",
+      "scope": "Exact original A_d/triangular dimension/guarded transition, zero-dimension certified vacuous distinctness. No partition source thm:observer claim.",
+      "source_correspondence": "Paper10 lem:matrix all conclusions and lem:observable all-field uniqueness plus actual binary source matrix continuation",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.OrdinalComparison.BinarySourceStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:17:58.391614+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/OrdinalComparison/BinarySourceTargets.lean",
+          "sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.lean",
+          "sha256": "3dd979dd6ec9c061aa7f948a35b32e0b4946c635b7fb78b21451f4bdf3d54543"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/SeriesObservabilityTargets.lean",
+          "sha256": "76ee09bb6c24b8ae047f1afdabe5648455ce2b09a992fc116a63ba9edabd0ca8"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinarySourceStatementChecks.lean",
+          "sha256": "8650819327ea623a2b5ce0e8a33b8a0cef18c4e9bbca3cad520a0fd5ae31dc19"
+        },
+        {
+          "path": "LogicLineages/OrdinalComparison/BinarySourceProof.lean",
+          "sha256": "5a4f34b92459d724f1647f1fc9a9fd7bbf7a1cadca5012595e11573661895bd4"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.Targets.ActualSourceZeroProperNumerator",
+        "LogicLineages.OrdinalComparison.Targets.ActualSourceBinaryMatrix",
+        "LogicLineages.OrdinalComparison.Targets.ActualSourceBinaryObservability"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333908652394293-5.json",
+          "sha256": "5353d529e0842af6afabc991b62252ad7e623ae6951412f1283c510d5d48f67d",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "f3643d93d27603ace2570d7f9b828b8408b6901ee053ea69b17906f545671ac7",
+      "axioms_by_declaration": {
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinaryObservability": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinaryMatrix": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceZeroProperNumerator": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_2": [],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySourceDenominator.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesDigit.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_1": [],
+        "LogicLineages.OrdinalComparison.actualBinaryWordValue.eq_def": [],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryMatrixWord.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinaryPolynomialWord.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.actualBinarySeriesWord.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": true
+    },
+    {
+      "accepted_utc": "2026-10-30T03:49:39.478577+00:00",
+      "scope": "Explicit reverse closed-neighborhood inclusion with finite-rank tie breaking; actual partial order/forest/adjacency and existing graph representation obligation. No uniqueness/reflection claim.",
+      "source_correspondence": null,
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.CanonicalOrderStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:47:54.861888+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderDefinitions.lean",
+          "sha256": "2c49f1e763b335c4c8be2305e7f97282df83b00ad2c3506099d55ee486951004"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderTargets.lean",
+          "sha256": "88aa4ff83580bb5cf7c8ff766f87c69fe6fae6577e5b0a7adf5c31a4a7029789"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderStatementChecks.lean",
+          "sha256": "ac81eedfdfb1f59d3ec29707860692a5c3784fc442ddf4267803aec5e1fa4749"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeTargets.lean",
+          "sha256": "34c080e2b7dcc31949ccd0cb666235c477254ce1f47178af38a774e082e9db14"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/CanonicalOrderProof.lean",
+          "sha256": "c6539ce0df9550ca8843049f98ecd3f705f6cb4f6a54ece26a7c6462fb18888a"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalPartialOrderLaws",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalPredecessorsChain",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalAdjacencyComparability",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.CanonicalGraphRepresentation"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793332144090661891-19.json",
+          "sha256": "32a15f629b1f10a312c994284911710e10f97ddab1f039a103f1445323f21502",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "e90c587ac5f7a10eb62e02e1a740c9c0fac00c9050fbb03deacf815aa529aca1",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalPartialOrderLaws": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalPredecessorsChain": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalGraphRepresentation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.canonicalAdjacencyComparability": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:13:56.602068+00:00",
+      "scope": "Exact existing FullComparabilityBridge with all four source components, no Carter/JEP/decision claim",
+      "source_correspondence": "Full source lem:bridge: finite order forest comparability graphs exactly induced P4/C4-free finite graphs; representation unique up to actual order isomorphism; existence of actual order embedding iff induced graph embedding. Empty finite carriers included, no root/meet constraints.",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphBridgeCompletionStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:12:45.589678+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeDefinitions.lean",
+          "sha256": "fdd1006f3e2a8b706662efdd960c54a7bd9cb413155ba22626816e42d9045d54"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeTargets.lean",
+          "sha256": "34c080e2b7dcc31949ccd0cb666235c477254ce1f47178af38a774e082e9db14"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionTargets.lean",
+          "sha256": "dcb98f5df86c8f5784ef23c3486fd86b7b80136840a83abe73d7555b60e100d5"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionStatementChecks.lean",
+          "sha256": "30ebfd3bc99b1d6919e068b380acaf6dd0b552fa228baa1fd9b58b0d913a4925"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionProof.lean",
+          "sha256": "6687b0a79df60b95b0e5bbe56bb214e18adf2c46f9d710b1fbb98a04d2f07981"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.OrderEmbeddingGivesGraphEmbedding",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.GraphEmbeddingGivesOrderEmbedding",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.FullComparabilityEmbeddings",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.CompleteComparabilityBridge"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333606235628555-15.json",
+          "sha256": "81621dc390b91c4651bb19c6a40d9354144398592beeb81b5479252b4edcaf55",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "a98cff5c95510c3d2c0a54e5c46cbf049beefdac1aae491d255553099b8199bd",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullComparabilityEmbeddings": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.completeComparabilityBridge": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphEmbeddingGivesOrderEmbedding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderEmbeddingGivesGraphEmbedding": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": true
+    },
+    {
+      "accepted_utc": "2026-10-30T04:25:24.625942+00:00",
+      "scope": "Actual graph/forest forbidden-class and JEP equivalence only. No effective representation/Carter algorithm or full decision theorem claim.",
+      "source_correspondence": "Paper03 thm:decision semantic reduction to exact P4/C4/Comp(U) forbidden graph class",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphJEPStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:24:00.236914+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPDefinitions.lean",
+          "sha256": "964d94697b098425da28d47fdf2bd546403fc5ee12b5f55181519e9fbf67a605"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPTargets.lean",
+          "sha256": "b03bff9c677f50705edfca905900d102c462da78889cddadff7528e10f341a32"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPStatementChecks.lean",
+          "sha256": "316540e02f7bdc53065a71eaf5f0abe95ad5123aa858ea04ba25f6cc61628d18"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPProof.lean",
+          "sha256": "59ba11d350eea71d673b55d545e938262ebf52b1c96e5451fe202baa88b79d76"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.GraphAvoidanceIsoInvariant",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.ComparabilityAvoidance",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.ForbiddenGraphRepresented",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.ForbiddenFamilyJEPEquivalence"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334301619187911-5.json",
+          "sha256": "c5cea71e6cbcceb6d8a6cbde9ffcdd4654cfc78479f3b6a1419f689ae4dd3d7f",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "fc842fdb98a453ee58c83451d7a62f76b663cd188bbe3775bb7eee7f74919b3c",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphAvoidanceIsoInvariant": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.forbiddenGraphRepresented": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.forbiddenFamilyJEPEquivalence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.comparabilityAvoidance": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:40:30.001409+00:00",
+      "scope": "Nested closed neighborhoods and nonempty connected finite forbidden-graph universal vertex; supplier only, no representation/uniqueness/embedding reflection completion",
+      "source_correspondence": "03-joint-embedding-finite-forests/paper.tex lem:bridge converse universal-vertex argument lines81-90",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.GraphUniversalStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:35:28.498903+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalDefinitions.lean",
+          "sha256": "cac85443efaeda66ef102711d1874b0578e3f29c3dc6714a72216f0c8b5d30fc"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalTargets.lean",
+          "sha256": "1c9c53a416f24c0a4a380402404a7493a4b2b34cb52b740d235a8e3ea488b243"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalStatementChecks.lean",
+          "sha256": "d68e4da65f428e47db49184bbe04168f77e3a3e50e1fef80e862c683bd5f257a"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphUniversalProof.lean",
+          "sha256": "f558335ab0318d4af1b9e30959c8971c3fa94e7b9f8136582ca78673b523e61a"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.AdjacentClosedNeighborhoodsNested",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.ConnectedForbiddenHasUniversalVertex"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793331587650948434-6.json",
+          "sha256": "de6c688856769e87a084ce2dc80113e2ea630eb6c3ecf58e60fd84b93f2a89af",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "20785aed3053dd3d812d2d54e60d0fa6a829fdbf1b19ab23e7e1c9547b75b87e",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.connectedForbiddenHasUniversalVertex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.adjacentClosedNeighborhoodsNested": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourCycle.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.fourPath.eq_1": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:26:26.252392+00:00",
+      "scope": "Literal difference pair without editing original Formula, exact Finite(range) and Nat.card bound/equality, all c,m incl0. No finite image isomorphism table/Scott claim.",
+      "source_correspondence": "Paper01 bounded image Pi1 and finite cardinality dSigma1 source formulas",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ImageCardinalityStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:25:05.956433+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinalityDefinitions.lean",
+          "sha256": "5971566bc73d10925c9b48c4a612a672c257cd6dcc5b56d4c7d0fcffd01fa6c1"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinalityTargets.lean",
+          "sha256": "c7e12bd26ee1f22c2e3d6404fb488cd0ef8f75d9a46ef58e41ba1f115c6a3521"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinalityStatementChecks.lean",
+          "sha256": "f05f093ff07e063d2fa9a662dcf5982eac252120aba2f61347754118e1d67dd8"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinality.lean",
+          "sha256": "d3e1249ddd4bd05d235d87c948bb5bf0335c64846448623eac9857481121ae5c"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupImageDistinctCardinality",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupImageBoundCardinality",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupBoundedMultipleImageFormula",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupExactMultipleImageCardFormula"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334372382077196-5.json",
+          "sha256": "ea38e2fd32d58804e3613ab2d4d7f335ff14e2f8886461bb8131842cea54f42e",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "2b44615dbcf6af4a785e6cb476a7ba073d5192d060b312444557a5c8858d2448",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.PGroups.ImageCardinalityStatementChecks.fixed_image_bound_cardinality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageCardinalityStatementChecks.fixed_exact_multiple_image_card_formula": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageCardinalityStatementChecks.fixed_bounded_multiple_image_formula": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageCardinalityStatementChecks.fixed_image_distinct_cardinality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_1": [],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_2": [],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_3": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_def": []
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:19:43.709938+00:00",
+      "scope": "Explicit repeated-addition terms, finite witness distinctness and ordinary countable Pi2 syntax exactly realizes actual image infinitude, all c,m incl0. No Scott categoricity claim.",
+      "source_correspondence": "Paper01 lines184-188 actual nsmul-image infinitude Pi2 formula",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:17:04.072996+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeDefinitions.lean",
+          "sha256": "a5742590e7125cb70bc1ee5fdc8daaba0b758732d70d09d7fa2f125c4b55089a"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeTargets.lean",
+          "sha256": "420180af86bcbb4ebfa3812898f49e5f4b1a342ae8da260059cf6fb884ce6f6d"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeStatementChecks.lean",
+          "sha256": "5a26edfe4df3ff4031fe515e921a046cc5ae79a8034208ccdfe81ad844fd6e1e"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitude.lean",
+          "sha256": "03ea9f26fe223a67b6f5f3c6763727c023c7660b8286ad5f40dc6511acbf58ab"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupMultipleTermEvaluation",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteConjunctionRealization",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupDistinctMultipleMatrixRealization",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupDistinctMultiplesFormula",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfiniteMultipleImageFormula"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333961804259415-6.json",
+          "sha256": "a2e6d7aedd9a81146ef94eeb7dd202ff4e0876aee7e6c6c09f31bebe91d1402b",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "e654a10ec9ca4c6afc66944059d0f0ba7e66b88ed531c7d20118ca9a63490396",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks.fixed_distinct_multiples_formula": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks.fixed_infinite_multiple_image_formula": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks.fixed_distinct_multiple_matrix_realization": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks.fixed_multiple_term_evaluation": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.ImageInfinitudeStatementChecks.fixed_finite_conjunction_realization": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_1": [],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_2": [],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_3": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_def": []
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:11:00.599342+00:00",
+      "scope": "Actual monotone subgroup sequence with individual cover, finite-tuple stage containment, actual low-Sigma ascent and Pi2 truth preservation. No source direct-limit/classification claim.",
+      "source_correspondence": "Paper01 lines242-245 increasing-subgroup-union Pi2 preservation",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:08:00.606868+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+          "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnionTargets.lean",
+          "sha256": "53be82334bb4f2f92d4612b669d33e9b6eab585c7a2b3ddaf7c135833267c420"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnionStatementChecks.lean",
+          "sha256": "3d28939319912e264ebd509724edb5d0bc41dd492aa7b361d33be66200870834"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnion.lean",
+          "sha256": "38a4a6a4e0297c103e7047d838ed78ea2223ce156b0df4b25dbe84e8104af539"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEmbeddingLowSigmaAscent",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIncreasingTupleContainment",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupIncreasingPiTwoPreservation"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333432916222098-12.json",
+          "sha256": "c4d01fc4dab8f01e9aa90ac2754188b543d163967ce96ab784a3b5e7dd1ac75f",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "ac4bd777c5d63299d670795a1dd321522dffea34eb5977826173a5d68cc3ec70",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks.fixed_increasing_tuple_containment": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks.fixed_embedding_low_sigma_ascent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.IncreasingUnionStatementChecks.fixed_increasing_pi_two_preservation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+          "propext"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:42:35.485039+00:00",
+      "scope": "Ordinary explicit countable normal-form syntax, actual semantics, QF padding and calibrated back-and-forth truth transfer; no Scott classification or unrestricted-syntax normalization claim",
+      "source_correspondence": "01-scott-complexity-abelian-p-groups/paper.tex Conventions81-98",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:38:53.605814+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDefinitions.lean",
+          "sha256": "b94822505afeee10653bec56e71b449e134bed3c8349a114ef3bc9e6d36c961d"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryTargets.lean",
+          "sha256": "e22b5c2e0d496f1ea03fa166f911b92805cb11572d989d7d2fcc501dbf226f0f"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryStatementChecks.lean",
+          "sha256": "419fc6ba7e28d385af253883110c4759df271d0747500bdd9319375c9a29e8ab"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/Infinitary.lean",
+          "sha256": "38c960dd00fc1a554d476c2614535bea76c4b24916e77eff8ea1ce244eded7f1"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupQFTruthAgreement",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaQFPadding",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiQFPadding",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupInfinitaryTruthTransfer"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793331723844390330-6.json",
+          "sha256": "66152ca9a746eaa75eaa90fcd8e6d99220bfa6c6338b09609170029bfc5dee5f",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "9962f13df182c2953c8a7a2488d1339b3cde169a0cf461f319ef744c8651914c",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_qf_truth_agreement": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_sigma_qf_padding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_pi_qf_padding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.InfinitaryStatementChecks.fixed_truth_transfer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:18:19.669664+00:00",
+      "scope": "Actual maximal leaf sets and bijection above ordinary order embedding derived from cardinal bound; exact cluster transport, no leaf/root/meet preservation assumption, no full width claim",
+      "source_correspondence": "Paper03 thm:width descendant leaf-cluster laminarity and saturated embedding transport",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.LeafClusterStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:17:04.096657+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterDefinitions.lean",
+          "sha256": "751c1b8adcb98ea6daa6edb86eae8477188dcb4b9205d4ae0795f9968f4c7025"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterTargets.lean",
+          "sha256": "23b5b4522bc15adfd0c0b18d53de62e974183d7099758537d59d9e9b91d99f4e"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterStatementChecks.lean",
+          "sha256": "20932461af54d5b70d3dc88331e4b7663c718eb2e19c38bb90732faf6c93bce4"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/LeafClusterProof.lean",
+          "sha256": "8169de34a240c258cbe57cdd344b8135e2fe4bb349c75b305d9c992664151a2e"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.LeafClustersLaminar",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.SaturatedLeafBijection",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.SaturatedClusterTransport"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333862348489999-5.json",
+          "sha256": "f6a1365bacaac44ff7a4e14a3d40617b1b14a1370b2730073d988d9324deaac3",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "f64e67b9c803bc138b30a71da2bb0b6691b6c9f64e50525d976aa7abeab0ea79",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.leafClustersLaminar": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.saturatedLeafBijection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.saturatedClusterTransport": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.mem_leafFinset._simp_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.leafFinset.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:53:35.422696+00:00",
+      "scope": "Actual injective hom low comparison/descent; finite witness subgroup; no Sigma2 relative Scott sentence among all countable additive commutative models including finite ones. Not whole bounded classification.",
+      "source_correspondence": "Paper01 lines216-221 locally-finite Sigma2 finite-subgroup argument",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:49:39.478883+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+          "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScottTargets.lean",
+          "sha256": "af717aab4c621c104dd3dbb9f5a6e8b8416cd4650436e90c130f5fa476f86c92"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScottStatementChecks.lean",
+          "sha256": "429fc56edac7c25898cd99893a05d10d4b8251d9f5725248b37679122c697222"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScott.lean",
+          "sha256": "c0bb5e873bfb0c86ba06c93bc126b2da86c7a691041e2bee122ce8a6393148d9"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEmbeddingLowBackForth",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupEmbeddingLowPiDescent",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaTwoFiniteSubmodel",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupLocallyFiniteNoSigmaTwoScott"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793332391440785761-6.json",
+          "sha256": "5376dc7f70eae24fec63c9d04447ce870aa7095c4e9e5c61dc133ab5de0a750f",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "4a37ab1b873b6ade5b0bd6fe6c53c4a07c09143381b644814f549424e14e7f2f",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_embedding_low_comparison": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_sigma_two_finite_submodel": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_embedding_low_pi_descent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.LocallyFiniteScottStatementChecks.fixed_locally_finite_no_sigma_two_scott": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+          "propext"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:22:07.365837+00:00",
+      "scope": "All raw-code affine/hereditary denotation equation with default0 lists, duplicate-key aggregation and uniform Primrec; final sign program still separate",
+      "source_correspondence": "Paper02 lem:ray actual uniform numeric hereditary evaluation supplier for effective signs",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.RayCodeEvaluationGate",
+      "frozen_at_utc": "2026-10-30T04:13:56.654894+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayCodeEvaluation.lean",
+          "sha256": "4901209d4fa75a96a1200c3679e1e276a66750bb8443954633f2a4ecbd7f5dae"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/Comparators/RayCodeEvaluation.lean",
+          "sha256": "db9dde3b91a73be4deae612ea98e7616c57dad92558b0de5a20e981aec224c52"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayCodeEvaluationGate.lean",
+          "sha256": "a593aef020b63f1dd3c77caebfffa6e023d3f78fc1252bf1663fb14cf1ef52cb"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayCodeEvaluationProof.lean",
+          "sha256": "3b6b3487018a8826a1cb5a56e4a52d600c0b63100b7f0160e9928812fd6716cf"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ComputabilityKnowledge.Comparators.RayCodeEvaluation.Target"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334107304440097-6.json",
+          "sha256": "cf3a81f6f82ce6e91f67c87d0c18f8019c8a22df7cdd515630ef9140ea169c87",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        },
+        {
+          "path": "build-reports/1793334109860486921-10.json",
+          "sha256": "ccb1e576bf89671287ca5acc1cba23118d438b218a6b48d3d73293c13c04a439",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "74128c6b40b568a8df9783eb2eed17fc2b3f9b0c235134641aa573e7e484b962",
+      "axioms_by_declaration": {
+        "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_code_evaluation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.familyMass.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation.evalCode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.weights.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation.evalCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation.evalCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:41:31.939231+00:00",
+      "scope": "Recursive literal coefficient collection and shared affine calibration supplier only; no full ray lemma or higher-height induction claim",
+      "source_correspondence": [
+        {
+          "path": "02-exponential-comparison/paper.tex",
+          "sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7"
+        }
+      ],
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.RayCoefficientCollectionGate",
+      "frozen_at_utc": "2026-10-30T03:34:56.263250+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayCoefficientCollection.lean",
+          "sha256": "3fcebff8399422ea8fe84fa45aecc12411fe16c4fea30ddc84562d45277761f7"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/Comparators/RayCoefficientCollection.lean",
+          "sha256": "8df43683652ef12e51987e40b250f7b1107d3e42f17a6a810d3ce9bbbc60dfc8"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayCoefficientCollectionGate.lean",
+          "sha256": "b58bf1cb5da6776efc9f9f2e9851e36e40c56180e5ea5bf36f975333df867210"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayCoefficientCollectionProof.lean",
+          "sha256": "51cb1d4e4dc5da9a043ff3e897694125afc2bf4ebab75ceda01117cdfd972820"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ComputabilityKnowledge.Comparators.RayCoefficientCollection.Target"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793331652003005019-6.json",
+          "sha256": "6d810081fadcef92509a191a7e7b347bd478be7f1ba30128369385abbdd62aab",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        },
+        {
+          "path": "build-reports/1793331655386574520-11.json",
+          "sha256": "7c505a81c616221c30f5161518601d948bd1b2eb0501c6edbc164d83bf0d07ec",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "998369d907ec677db93129191999664716f58167f0c9123c435299cf0fa11d2c",
+      "axioms_by_declaration": {
+        "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_coefficient_collection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedWeights.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.familyMass.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.collected.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.weights.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayCompare.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:26:52.794083+00:00",
+      "scope": "Heterogeneous original roots, actual decoded support closure and zeros incl empty, literal iterated injective height lifts preserving denotation/constant/WF/canonicality and uniform code programs. No extensional equality assumed.",
+      "source_correspondence": "Paper02 lem:ray finite family closed under original hereditary keys and zero, explicit shared height transport",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.RayFamilyClosureGate",
+      "frozen_at_utc": "2026-10-30T04:20:55.286039+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayFamilyClosure.lean",
+          "sha256": "28e202f95ad743b8f5791c9b01448e3f4211e6d8f8ea8ee76162aeb22843d2b6"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/Comparators/RayFamilyClosure.lean",
+          "sha256": "59c1fe3430d9825670a19b22f880d0a827daa13fdcc01fa7eebb971d8ba1beb7"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayFamilyClosureGate.lean",
+          "sha256": "4c7de13447e08f347b5467914a621b9359b4336e52253bf6ba8031a34706080d"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayFamilyClosureProof.lean",
+          "sha256": "9149aac610fcb385e5295f54160ea2d321c166ae82cc6dea32fd366248dae555"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ComputabilityKnowledge.Comparators.RayFamilyClosure.Target"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334391405377056-6.json",
+          "sha256": "ba35a437c34cbcd22ac7b06849494428404899cc0743ed649357c2d46aafbee3",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        },
+        {
+          "path": "build-reports/1793334393462243947-10.json",
+          "sha256": "49fa21cd0775d694719196d4888cf1411ed188da05d79c13e23f3a036f651cf5",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "7b716201d78ca86e6ed9131909edd7ebdcbda0874564f105eabe8bc4de75f880",
+      "axioms_by_declaration": {
+        "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_family_closure": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.variableForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.removeConstant.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.CommonHeightEqual.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.liftCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.maxHeight.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.descendants.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.raiseManyCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.addCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.descendants.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.removeCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.raiseManyCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.descendants.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.canonicalEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.raiseManyCode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.variableForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.closedFamily.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.addForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct.scaleAffine.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.removeConstant.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.removeCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.addCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.addForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:12:53.775996+00:00",
+      "scope": "Actual source-family equality/stable order and oriented constant-free gap at explicit common threshold, only original canonical/WellFormed premises. Numeric evaluator/effective sign still separate.",
+      "source_correspondence": "Paper02 lem:ray simultaneous height induction",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.RayHeightInductionGate",
+      "frozen_at_utc": "2026-10-30T04:08:19.430524+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayHeightInduction.lean",
+          "sha256": "5d8ed59967eb88cea6954372c061dd95a91cc382b0f5a1594c9f5264d1327d2b"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/Comparators/RayHeightInduction.lean",
+          "sha256": "007993d238d06aca5aa9c05aced646b0b011a280029a0f4a00b85bfead594381"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayHeightInductionGate.lean",
+          "sha256": "cbacca4647bec542fb9f30967396ff48d694fa1eae54e9a031b8e86e3a38909c"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayHeightInductionProof.lean",
+          "sha256": "6abb2bcd9e1961c64a259001674d4baec6fe7d58b3399e420b1919799b4a29a3"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ComputabilityKnowledge.Comparators.RayHeightInduction.Target"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333557539634149-6.json",
+          "sha256": "6ad648712e90cde394b2b2355ebaafed518b8c4d35c2d6898cbd03a298276f94",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        },
+        {
+          "path": "build-reports/1793333559454737755-10.json",
+          "sha256": "6b70129154273e19b113416e89fc2723d14a0e66d29cc8bd3785196203c7bfd5",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "3dbdc10da7e1626c705d22c8c46653749410fcb3cd9997179325cb908399762c",
+      "axioms_by_declaration": {
+        "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_height_induction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RaySurvivingDifference.survivingKeys.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedRay.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedWeights.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayMapDifference.constantDifference.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFiniteSum.coefficientMass.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayMapDifference.slopeDifference.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.familyMass.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.collected.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayDominance.noise.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayHeightInduction.rayValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.weights.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayTuple.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFiniteSum.lowerSum.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.widthBound.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_def": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayCompare.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:30:41.888544+00:00",
+      "scope": "Actual heterogeneous source family/keyclosure/zeros, positive shared ray/computed threshold/signs, all original decoded values/constant-free gaps and4genuine uniform Primrec programs. Structural equality uses proved original common-height embeddings.",
+      "source_correspondence": "Paper02 lem:ray full finite-family effective ray separation",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.RaySeparationGate",
+      "frozen_at_utc": "2026-10-30T04:27:16.317193+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RaySeparation.lean",
+          "sha256": "ca7622b381e22236befcd1c5368c1d20a57c2a94b5ee714ff039bf62b97654c0"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/Comparators/RaySeparation.lean",
+          "sha256": "fd4cc78183293a36de5a1e6eed7fff46cbac1c001d9dbcdf9f8770c3b8856144"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayFamilyClosure.lean",
+          "sha256": "28e202f95ad743b8f5791c9b01448e3f4211e6d8f8ea8ee76162aeb22843d2b6"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RaySeparationGate.lean",
+          "sha256": "0f4d8bddceb3f3ce29f068077a12299f660c2dbb4340d955a4c02dc65b561b4e"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RaySeparationProof.lean",
+          "sha256": "4900bcb43d47b6e1d3387d372233fcf9dd413432add01a49e69f7e0c0e50855a"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ComputabilityKnowledge.Comparators.RaySeparation.Target"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793334620479654394-6.json",
+          "sha256": "4261ea1a384c88fc7cef022b82a0f2d2b23193b62112c40582424843993c56fb",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        },
+        {
+          "path": "build-reports/1793334622053991788-10.json",
+          "sha256": "0307e8004bd6a26d662d4d45559fe023c3f3840ccb82127175867bda187ca58e",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "9500873182b2923ac0a8c1a807b993617bc676379a8940db747dde11d4113ec2",
+      "axioms_by_declaration": {
+        "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_separation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.variableForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.removeConstant.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.CommonHeightEqual.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.liftCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RaySurvivingDifference.survivingKeys.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.maxHeight.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedRay.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.descendants.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedWeights.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantCoefficient.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.raiseManyCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayMapDifference.constantDifference.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFiniteSum.coefficientMass.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayMapDifference.slopeDifference.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.addCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.familyMass.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.collected.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayDominance.noise.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation.evalCode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.descendants.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayHeightInduction.rayValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.weights.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.removeCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayTuple.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.raiseManyCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFiniteSum.lowerSum.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.descendants.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.canonicalEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.widthBound.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.raiseManyCode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer.variableForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RaySeparation.signCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayFamilyClosure.closedFamily.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.addForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct.scaleAffine.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.removeConstant.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_def": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation.evalCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.removeCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.value.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.raiseCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations.addCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayCompare.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.addForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation.evalCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": true
+    },
+    {
+      "accepted_utc": "2026-10-30T03:52:52.219728+00:00",
+      "scope": "Actual hereditary support width/coverage and common computable coefficient mass/threshold bounds; no pairwise gaps or full ray conclusion assumed/proved",
+      "source_correspondence": "Paper02 lem:ray N3 uniform finite coefficient-mass bounds and computable thresholds",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.RayUniformBoundsGate",
+      "frozen_at_utc": "2026-10-30T03:48:29.742802+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayUniformBounds.lean",
+          "sha256": "b61aec79550bc67d9f36eaa442317b10789bfa38026fb2e407cdeb7676180614"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/Comparators/RayUniformBounds.lean",
+          "sha256": "211001594f66ae958a22017ef881513cbced21331c1390cfa3f869bd9e0a29a5"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayUniformBoundsGate.lean",
+          "sha256": "a02a5e4bb0fabf68c807600d7110fd168c0134fb80ccdef66b9f007252e3f3db"
+        },
+        {
+          "path": "LogicLineages/ComputabilityKnowledge/RayUniformBoundsProof.lean",
+          "sha256": "c53960eff6e73b031cea5cfb25ac3634d2531f097b54f7373b93a7def1727b69"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ComputabilityKnowledge.Comparators.RayUniformBounds.Target"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793332343137173321-6.json",
+          "sha256": "335406d375b89482202a70fa63cdb8149001e036d4c2da7bf6b0b9922bd3c52f",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        },
+        {
+          "path": "build-reports/1793332345969663182-11.json",
+          "sha256": "7752547770000eac70a63c1a5521a41fa704b8a710346a9f72d9fee7b03e2f31",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "4080bff6fd4997673ab79089cd0c2aa923d98ccfc5d48f0443095a64a7cc2995",
+      "axioms_by_declaration": {
+        "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_uniform_bounds": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.MapCanonical.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.insertEntry.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_2": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.sharedWeights.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.canonicalize.eq_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.normalizeMap.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.coeffDecode.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.familyMass.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.collected.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseEntries.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.coeffEncode_canonical._simp_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.weights.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.rekeyEntries.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.mapDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.zeroCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.widthBound.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection.coefficients.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof.entriesDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.parseCoefficients.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec.CoeffCanonical.eq_1": [],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.constantCode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec.formDecode.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineRemoveConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.RayUniformBounds.HereditaryWidth.eq_def": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.constantForm.eq_2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineValue.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.AffineRayCalibration.rayCompare.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.affineConstant.eq_1": [
+          "propext"
+        ],
+        "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm.zeroForm.eq_2": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T03:57:20.483879+00:00",
+      "scope": "Actual torsion implies local finiteness; actual prime-primary condition implies torsion; accepted localfinite obstruction applied without supplier premises. No full classification.",
+      "source_correspondence": "Paper01 locally-finite Sigma2 obstruction specialization to actual countably infinite abelian p-groups",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks",
+      "frozen_at_utc": "2026-10-30T03:56:01.670928+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+          "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/TorsionScottTargets.lean",
+          "sha256": "bb21a2fb9173a024d23a8deeb78ce0fc11440b60512594fffdd3abc18ea2df2c"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/TorsionScottStatementChecks.lean",
+          "sha256": "7ad0b0c936a4ac9f60abe71e21615313a4baa8babb0007ede73a697debf1056b"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/PGroups/TorsionScott.lean",
+          "sha256": "ad07fcccd276d9b5e7bb46e2c2514bbbcb11b17db893b9dd13edef45d668ced3"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupTorsionLocallyFinite",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPPrimaryTorsion",
+        "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPPrimaryNoSigmaTwoScott"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793332616529310048-5.json",
+          "sha256": "05a6341884b4281891ce8ea8cd3142f5c391b54051ee3597efb1e54f6a4d4f54",
+          "profiles": {
+            "heap_cap_mib": 2560,
+            "rss_cap_mib": 2048,
+            "minimum_free_mib": 3072,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "81a014fd879a88cfeee877f69033c543dcdfa6115d618d95aa57567a70840c5d",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks.fixed_p_primary_torsion": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks.fixed_p_primary_no_sigma_two_scott": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.TorsionScottStatementChecks.fixed_torsion_locally_finite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+          "propext"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+          "propext"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:11:49.036601+00:00",
+      "scope": "Actual finite twin-rank surjectivity and graph-iso class transport construct order isomorphism; existing exact uniqueness obligation. Reverse embedding still separate.",
+      "source_correspondence": "Paper03 lem:bridge actual graph-isomorphism to order-isomorphism uniqueness",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.TwinIsoStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:10:06.684264+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankDefinitions.lean",
+          "sha256": "f10311cea03af389e81fafebca5f736e36b6cc76db5b46fabef3fceccd88472a"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeTargets.lean",
+          "sha256": "34c080e2b7dcc31949ccd0cb666235c477254ce1f47178af38a774e082e9db14"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinIsoTargets.lean",
+          "sha256": "a0083f35f551c648712047c05ec4254e8302df5c8ef8ea0552f9443083b5584d"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinIsoStatementChecks.lean",
+          "sha256": "95c7e2819efe550e81e12e1dc25a89eb3611c93ed728eb4d58a8672fd3d6382a"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinIsoProof.lean",
+          "sha256": "6f04875caf2c629d57fa4e6d0fa095470b2480f100b28f7625cdaea6eb9aa33b"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankSurjective",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.GraphIsoNeighborhoodSubset",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.GraphIsoNeighborhoodEquality",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.GraphIsoTwinCard",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.RankMatchedOrderIso",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.TwinClassOrderUniqueness"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333477085838482-11.json",
+          "sha256": "6e6b4c9c6f9591123d56f94e6b1a53c088f0f95f50ec8f60f327cedd1c2a54fa",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "f24a66c673e0c3c0e919cc30a2de332849e2351bfc8667b7c2b2576f21e19601",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphIsoTwinCard": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.rankMatchedOrderIso": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphIsoNeighborhoodSubset": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankSurjective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinClassOrderUniqueness": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.graphIsoNeighborhoodEquality": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinCard.eq_1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    },
+    {
+      "accepted_utc": "2026-10-30T04:09:36.303288+00:00",
+      "scope": "Literal twin classes and strict-predecessor ranks recover original forest order and finite rank bound; no whole uniqueness/reflection claim",
+      "source_correspondence": "Paper03 lem:bridge uniqueness, actual equal-neighborhood class order recovery",
+      "author_provenance": "external continuation",
+      "gate_module": "LogicLineages.ModelsAlgebra.Forests.TwinRankStatementChecks",
+      "frozen_at_utc": "2026-10-30T04:07:36.357546+00:00",
+      "candidate_absent_at_freeze": true,
+      "sources": [
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankDefinitions.lean",
+          "sha256": "f10311cea03af389e81fafebca5f736e36b6cc76db5b46fabef3fceccd88472a"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankTargets.lean",
+          "sha256": "22b55b22e670e2d3a607a2eeca45b737a28ca523ea82fa109edc3e35b1e584ca"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankStatementChecks.lean",
+          "sha256": "bee5e3a99b0ef5de1108d589491cacd08e359107ac32986c157d2e155c7bb657"
+        },
+        {
+          "path": "LogicLineages/ModelsAlgebra/Forests/TwinRankProof.lean",
+          "sha256": "0a27cc67f3c955b5fb215b713c9419ba6f0d9f727b98a75ad6df9f939422c8f4"
+        }
+      ],
+      "target_types": [
+        "LogicLineages.ModelsAlgebra.Forests.Targets.OrderReversesNeighborhoodInclusion",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.TwinClassChain",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankOrder",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankOrderRecovery",
+        "LogicLineages.ModelsAlgebra.Forests.Targets.TwinRankBound"
+      ],
+      "receipts": [
+        {
+          "path": "build-reports/1793333351394528013-10.json",
+          "sha256": "d8ef8a60568bdeb22cdd22ce01fe2a7fad0d6f51d075f907146b9b61c916c74e",
+          "profiles": {
+            "heap_cap_mib": 2048,
+            "rss_cap_mib": 1536,
+            "minimum_free_mib": 2048,
+            "cpu_seconds": 90,
+            "wall_seconds": 180,
+            "threads": 1
+          }
+        }
+      ],
+      "gate_log_sha256": "c9744fbca909ef5ee51b7e353682aebbf3b74b10a48ffdf85e106688b2700434",
+      "axioms_by_declaration": {
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankOrder": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.orderReversesNeighborhoodInclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinClassChain": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankBound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.StatementChecks.twinRankOrderRecovery": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ModelsAlgebra.Forests.GraphBridge.twinClass.eq_1": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "numbered_statement_promotion": false
+    }
+  ]
+}
