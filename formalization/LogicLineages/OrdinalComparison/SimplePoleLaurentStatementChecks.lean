@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.SimplePoleLaurentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualSimplePoleExpansionReconstruction : LogicLineages.OrdinalComparison.Targets.ActualSimplePoleExpansionReconstruction :=
+  LogicLineages.OrdinalComparison.actualSimplePoleExpansionReconstruction
+
+theorem fixed_actualSimplePoleExpansionResidue : LogicLineages.OrdinalComparison.Targets.ActualSimplePoleExpansionResidue :=
+  LogicLineages.OrdinalComparison.actualSimplePoleExpansionResidue
+
+theorem fixed_actualSimplePoleExpansionLowerSupport : LogicLineages.OrdinalComparison.Targets.ActualSimplePoleExpansionLowerSupport :=
+  LogicLineages.OrdinalComparison.actualSimplePoleExpansionLowerSupport
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

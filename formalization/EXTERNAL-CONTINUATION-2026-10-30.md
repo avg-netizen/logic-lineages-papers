@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 60 checked numbered statements, two inherited calculator
-results, and 116 pending statements.
+Current register: 65 checked numbered statements, two inherited calculator
+results, and 111 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -44,8 +44,38 @@ rank-calibrated truth transfer; actual locally finite Sigma2 finite models and
 p-primary torsion specialization; and Pi2 increasing-union preservation.
 Supplier gates do not each count as a numbered statement. Full effective finite-family ray separation is checked, including mixed-height
 recursive key/zero closure, an explicit common threshold and primitive-recursive
-signs. Extensional/unary decision results, Scott classifications, forest
-width/Carter decisions and the remaining residue-period work stay pending.
+signs. The extensional identity theorem and unary strict/weak comparison theorem
+are now checked with uniform primitive-recursive programs and positive
+counterexamples. Affine-parameter substitution and comparison are checked
+suppliers for the consumer corollary.
+
+The full finite-forest width classification is checked: for positive m, the
+class of width-at-most-m forests has JEP exactly when m is at most three. This
+uses concrete common hosts and concrete incompatible witnesses; width zero is
+handled separately. The countable-age realization converse and Carter decision
+algorithm remain pending.
+
+For the binary residue chain, the source's actual real-exponent bounds and full
+residue lemma are checked. The latter uses genuine shifted Laurent-series
+reconstruction, both displayed coefficient formulas, nonvanishing and the
+original parameter hypotheses. Frobenius and root-count suppliers are checked;
+the full residue-tuple/Cartier period transfer remains pending.
+
+The group lane now includes literal finite-image tables, finite Ulm quotient
+rank formulas, variable renaming, finite conjunction assembly and annihilation
+formulas. These are suppliers, not completed Scott categoricity or classification
+theorems.
+
+### Source scope still requiring clarification
+
+Paper 02's consumer corollary mentions finite-valued ordinal/O vectors. The
+original Weiermann-Wilken O grammar includes collapse terms whose values are
+finite; finite-valuedness alone therefore does not place a term in the pure
+exponential-polynomial fragment. The stated componentwise comparison proof does
+not yet supply this broader bridge. This is an unresolved source/proof scope
+gap, not a counterexample to the corollary. The full corollary remains pending
+and the manuscript is unchanged. The exact finite-fragment embedding into the
+original ordinal syntax is checked separately.
 
 [Individual exact-gate evidence](verification/external-2026-10-30.json) records
 reviewed source correspondence, frozen hashes, successful receipts and actual
@@ -75,3 +105,11 @@ The selected 252-gate root passed its 765-declaration axiom audit. All 881
 local source hashes were unchanged across that check. This extends the checked
 baseline with individually accepted new gates; it is not a single fresh-all
 invocation. See [checkpoint evidence](verification/external-checkpoint-252-2026-10-30.json).
+
+## Second cumulative checkpoint
+
+The selected 297-gate root passed its 867-declaration axiom audit. All 1,045
+local source hashes were unchanged across that check. See
+[checkpoint evidence](verification/external-checkpoint-297-2026-10-30.json).
+The register now includes ten full numbered statements added in this round,
+with remaining supplier work distinguished from completed source statements.

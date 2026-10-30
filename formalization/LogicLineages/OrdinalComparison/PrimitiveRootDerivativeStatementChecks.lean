@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.PrimitiveRootDerivativeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPrimitiveRootSourceDerivative : LogicLineages.OrdinalComparison.Targets.ActualPrimitiveRootSourceDerivative :=
+  LogicLineages.OrdinalComparison.actualPrimitiveRootSourceDerivative
+
+theorem fixed_actualPrimitiveRootSourceDerivativeNonzero : LogicLineages.OrdinalComparison.Targets.ActualPrimitiveRootSourceDerivativeNonzero :=
+  LogicLineages.OrdinalComparison.actualPrimitiveRootSourceDerivativeNonzero
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

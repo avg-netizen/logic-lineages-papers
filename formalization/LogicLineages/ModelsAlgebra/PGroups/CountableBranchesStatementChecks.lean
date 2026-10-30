@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.CountableBranches
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.CountableBranchesStatementChecks
+
+theorem fixed_countable_disj_ex_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupCountableDisjExRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.countable_disj_ex_realization
+
+theorem fixed_countable_conj_all_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupCountableConjAllRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.countable_conj_all_realization
+
+theorem fixed_countable_disj_ex_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupCountableDisjExComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.countable_disj_ex_complexity
+
+theorem fixed_countable_conj_all_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupCountableConjAllComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.countable_conj_all_complexity
+
+end LogicLineages.ModelsAlgebra.PGroups.CountableBranchesStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

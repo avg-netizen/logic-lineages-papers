@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.TotientBoundProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualTotientPrimeFactorBound : LogicLineages.OrdinalComparison.Targets.ActualTotientPrimeFactorBound :=
+  LogicLineages.OrdinalComparison.actualTotientPrimeFactorBound
+
+theorem fixed_actualFermatShapeTotientLowerBound : LogicLineages.OrdinalComparison.Targets.ActualFermatShapeTotientLowerBound :=
+  LogicLineages.OrdinalComparison.actualFermatShapeTotientLowerBound
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

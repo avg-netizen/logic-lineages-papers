@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.AffineParameterComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem affine_parameter_comparison : LogicLineages.ComputabilityKnowledge.Comparators.AffineParameterComparison.Target :=
+  LogicLineages.ComputabilityKnowledge.AffineParameterComparisonProof.affineParameterComparison
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.AffineParameterSubstitutionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem affine_parameter_substitution : LogicLineages.ComputabilityKnowledge.Comparators.AffineParameterSubstitution.Target :=
+  LogicLineages.ComputabilityKnowledge.AffineParameterSubstitutionProof.affineParameterSubstitution
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

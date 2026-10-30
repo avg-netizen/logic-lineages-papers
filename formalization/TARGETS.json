@@ -370,9 +370,20 @@
           "file": "02-exponential-comparison/paper.tex",
           "line": 434,
           "statement_latex": "[Decidable extensional equality]\\label{thm:identity}\nFor any finite number of independent positive ground variables and any\nfinite exponential nesting depths,\n\\[\n  (\\forall\\mathbf n>0)\\ f(\\mathbf n)=g(\\mathbf n)\n       \\quad\\Longleftrightarrow\\quad\n  \\operatorname{nf}(f)=\\operatorname{nf}(g).                 \\tag{N4}\n\\]\nConsequently extensional equality in $\\mathcal F_d$ is decidable,\nuniformly in $d$ and the two input terms.  If the normal forms differ,\na separating positive integer tuple can be computed.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_identity",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialIdentity.lean",
+            "sha256": "d1f83148e8ac4a6569141f2608ac7cd5435033ecfd1f3800ff42c89b4324ed76",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialIdentity.Target"
+          },
+          "verification_receipt": "build-reports/1793335505596595200-10.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full original N4 positive extensional equality iff actual max-depth normal forms equal, arbitrary finite arity/depth incl d0. Explicit uniform primitive-recursive raw-code decision, exact parser domain/reencoding and normalization-height coherence proved; nonidentity returns a computed positive separating tuple. No classical decidability or missing supplier assumed."
         },
         {
           "id": "02-exponential-comparison:thm:unary",
@@ -381,9 +392,20 @@
           "file": "02-exponential-comparison/paper.tex",
           "line": 456,
           "statement_latex": "[One-variable universal comparison]\\label{thm:unary}\nLet $f,g\\in\\mathcal F_1$.  Both\n\\[\n                 (\\forall n>0)\\ f(n)<g(n),\\qquad\n                 (\\forall n>0)\\ f(n)\\le g(n)                \\tag{N5}\n\\]\nare decidable, uniformly at arbitrary finite exponential depth.\nA false instance has an effectively computable least positive\ncounterexample.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.StatementChecks.unary_comparison",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/Comparators/UnaryComparison.lean",
+            "sha256": "e413aaee5570c6f1c7c94c48a7e39c5503ff41833b0dada4e13df243a43ca515",
+            "type": "LogicLineages.ComputabilityKnowledge.Comparators.UnaryComparison.Target"
+          },
+          "verification_receipt": "build-reports/1793335925497772853-10.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Entire original one-positive-variable universal strict and weak comparisons at arbitrary finite exponential depth, genuine uniform primitive-recursive raw-code decision with exact parser domain and effectively computed least positive counterexample on every false instance. Unary ray weight exactly1, actual eventual bound, and inclusive finite scan all proved; no asymptotic oracle."
         },
         {
           "id": "02-exponential-comparison:cor:consumers",
@@ -484,9 +506,20 @@
           "file": "03-joint-embedding-finite-forests/paper.tex",
           "line": 181,
           "statement_latex": "\\label{thm:width}\nFor $m\\geq1$, the class of finite order forests of width at most $m$\nhas JEP if and only if $m\\leq3$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullWidthJEPClassification",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/WidthPositiveTargets.lean",
+            "sha256": "73a2fc524e31e6ec1f38c6d8a5b29f403fe40fa0a42339454d73847458cece88",
+            "type": "LogicLineages.ModelsAlgebra.Forests.Targets.FullWidthJEPClassification"
+          },
+          "verification_receipt": "build-reports/1793337522018693762-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source thm:width: actual finite partial-order forests, antichain width and ordinary order embeddings; JEP iff m<=3 for m>=1. Positive concrete comb-template/thickening construction and all m>=4 actual cluster obstruction paid. Empty forests retained; width zero separately checked. Alternative simpler second negative witness may multifurcate, without weakening theorem. No Carter/decision claim."
         },
         {
           "id": "03-joint-embedding-finite-forests:prop:age",
@@ -2559,9 +2592,20 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 545,
           "statement_latex": "[The actual residue formula]\\label{lem:residue}\nThe form $\\omega_e=z^{e-1}A_d(z)^{-1}\\,dz$ has a simple nonzero\nresidue at each primitive $q$-th root $\\zeta$, given by\n\\[\n b_\\zeta=\\frac{\\zeta^e}{A_{d-q}(\\zeta)}\n                 =\\zeta^{e-\\Delta}A_{m_0}(\\zeta).\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSourceResidue",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.lean",
+            "sha256": "e1be09291162f8504851f3544cbe5702636fcf21d320f1ffb41159d0483a3450",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualSourceResidue"
+          },
+          "verification_receipt": "build-reports/1793337768746943997-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Full source lem:residue at every actual primitive q-th root in arbitrary F2 extension: actual shifted Laurent coefficient of X^(e-1)/A_d, both displayed formulas, nonzero and support vanishing below -1. Genuine reconstruction supplier certifies quotient semantics; translation has dX=dt. Original u=Phi(v),v>=4 applicability proves e>=1. Exponent e-Delta uses integer zpow, composite q allowed."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:lem:bounds",
@@ -2570,9 +2614,20 @@
           "file": "10-collapse-descent-and-modular-counts/paper.tex",
           "line": 570,
           "statement_latex": "[The bounds needed for the root count]\\label{lem:bounds}\nFor the actual linked inputs, $r\\ge96$, $\\Delta<r$, and\n\\[\n 0<\\Delta-2e<q,\\qquad\n \\varphi(q)>\\frac{2^r}{r+1}>2^{2r/3}\\Delta.\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualLinkedResidueBounds",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/RealResidueBoundsTargets.lean",
+            "sha256": "3c12909e8b5281f4e7f4ab44c3c1fd4f920ddc100a3bf1030799db2d5febbbe0",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualLinkedResidueBounds"
+          },
+          "verification_receipt": "build-reports/1793336480468782333-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "All original linked bounds with actual Phi budget, r\u226596, Delta<r,0<Delta\u22122e<q and strict phi(q)>2^r/(r+1)>2^(2r/3)Delta. Last expressions are genuine real quotient and Real.rpow, not natural truncations. Stronger allu\u22654 domain includes actualu=Phi(v); explicit2e<Delta paid by linked arithmetic. Composite q, no primality assumption."
         },
         {
           "id": "10-collapse-descent-and-modular-counts:thm:actual-period",

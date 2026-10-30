@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.PiConjunction
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.PiConjunctionStatementChecks
+
+theorem fixed_positive_complexity_monotone : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPositiveComplexityMonotone :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.positive_complexity_monotone
+
+theorem fixed_pi_one_normalization_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiOneNormalizationRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.pi_one_normalization_realization
+
+theorem fixed_pi_one_normalization_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiOneNormalizationComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.pi_one_normalization_complexity
+
+theorem fixed_pi_conjunction_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiConjunctionRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.pi_conjunction_realization
+
+theorem fixed_pi_conjunction_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiConjunctionComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.pi_conjunction_complexity
+
+end LogicLineages.ModelsAlgebra.PGroups.PiConjunctionStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

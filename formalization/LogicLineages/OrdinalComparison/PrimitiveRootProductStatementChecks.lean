@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.PrimitiveRootProductProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualPrimitiveRootCompleteProduct : LogicLineages.OrdinalComparison.Targets.ActualPrimitiveRootCompleteProduct :=
+  LogicLineages.OrdinalComparison.actualPrimitiveRootCompleteProduct
+
+theorem fixed_actualPrimitiveRootPartialProductNonzero : LogicLineages.OrdinalComparison.Targets.ActualPrimitiveRootPartialProductNonzero :=
+  LogicLineages.OrdinalComparison.actualPrimitiveRootPartialProductNonzero
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

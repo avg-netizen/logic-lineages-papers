@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.ResidueFixednessPolynomialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualResidueFixednessPolynomialSize : LogicLineages.OrdinalComparison.Targets.ActualResidueFixednessPolynomialSize :=
+  LogicLineages.OrdinalComparison.actualResidueFixednessPolynomialSize
+
+theorem fixed_actualResidueFixednessPolynomialRoot : LogicLineages.OrdinalComparison.Targets.ActualResidueFixednessPolynomialRoot :=
+  LogicLineages.OrdinalComparison.actualResidueFixednessPolynomialRoot
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

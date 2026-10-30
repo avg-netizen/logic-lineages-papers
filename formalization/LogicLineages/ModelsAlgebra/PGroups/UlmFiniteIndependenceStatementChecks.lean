@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.UlmFiniteIndependence
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.UlmFiniteIndependenceStatementChecks
+
+theorem fixed_finite_filtration_multiple_image : LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteFiltrationMultipleImage :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finite_filtration_multiple_image
+
+theorem fixed_ulm_finite_combination_kernel : LogicLineages.ModelsAlgebra.PGroups.Targets.groupUlmFiniteCombinationKernel :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.ulm_finite_combination_kernel
+
+theorem fixed_ulm_finite_independence : LogicLineages.ModelsAlgebra.PGroups.Targets.groupUlmFiniteIndependence :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.ulm_finite_independence
+
+end LogicLineages.ModelsAlgebra.PGroups.UlmFiniteIndependenceStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

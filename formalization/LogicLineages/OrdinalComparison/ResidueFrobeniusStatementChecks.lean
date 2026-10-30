@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.ResidueFrobeniusProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualResidueFrobeniusUpperPeriod : LogicLineages.OrdinalComparison.Targets.ActualResidueFrobeniusUpperPeriod :=
+  LogicLineages.OrdinalComparison.actualResidueFrobeniusUpperPeriod
+
+theorem fixed_actualResidueFrobeniusMidpointNonfixed : LogicLineages.OrdinalComparison.Targets.ActualResidueFrobeniusMidpointNonfixed :=
+  LogicLineages.OrdinalComparison.actualResidueFrobeniusMidpointNonfixed
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

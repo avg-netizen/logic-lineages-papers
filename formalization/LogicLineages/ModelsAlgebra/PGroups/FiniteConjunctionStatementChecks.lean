@@ -1,0 +1,33 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteConjunction
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteConjunctionStatementChecks
+
+theorem fixed_sigma_two_all_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaTwoAllRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.sigma_two_all_realization
+
+theorem fixed_pi_two_all_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiTwoAllRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.pi_two_all_realization
+
+theorem fixed_difference_two_all_realization : LogicLineages.ModelsAlgebra.PGroups.Targets.groupDifferenceTwoAllRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.difference_two_all_realization
+
+theorem fixed_sigma_two_all_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaTwoAllComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.sigma_two_all_complexity
+
+theorem fixed_pi_two_all_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiTwoAllComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.pi_two_all_complexity
+
+theorem fixed_difference_two_all_complexity : LogicLineages.ModelsAlgebra.PGroups.Targets.groupDifferenceTwoAllComplexity :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.difference_two_all_complexity
+
+theorem fixed_positive_difference_complexity_monotone : LogicLineages.ModelsAlgebra.PGroups.Targets.groupPositiveDifferenceComplexityMonotone :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.positive_difference_complexity_monotone
+
+end LogicLineages.ModelsAlgebra.PGroups.FiniteConjunctionStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem ww_ordinal_term_semantics : LogicLineages.ComputabilityKnowledge.Comparators.WWOrdinalTermSemantics.Target :=
+  LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof.wwOrdinalTermSemantics
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge
