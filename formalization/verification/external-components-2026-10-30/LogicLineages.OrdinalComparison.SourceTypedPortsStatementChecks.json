@@ -1,0 +1,94 @@
+{
+  "accepted_utc": "2026-10-30T12:46:59.812025+00:00",
+  "scope": "Literal typed variable/maps, actual injection filter, renaming lift and finite unused port. No comparison correctness or source decision claim.",
+  "source_correspondence": "Actual finite typed port enumeration and binding calibration.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.SourceTypedPortsStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:45:54.536870+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypedPortsDefinitions.lean",
+      "sha256": "63ecdc02eaf1ee06678b7216855e77d3e9826ff23c6fa3e53e1d90801bf5d191"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypedPortsTargets.lean",
+      "sha256": "e73bf012577d09fa7a2fb0a61af9c5203e8fca4bc420d8d833e00bc3bacaff0f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypedPortsStatementChecks.lean",
+      "sha256": "35b23ad0bcb2c2a2d7eb084c059813ee4d903ec05359b2c7bdf9681005e0ebc5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypedPortsProof.lean",
+      "sha256": "377985b042eba6c9502e763d53f3bd7668c85e6346b326f15092911989d2160e"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.TypedVariableEnumeration",
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.TypedVariableIndex",
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.TypedAssignmentEnumeration",
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.AssignmentRenamingCalibration",
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.AssignmentLift",
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.FreshPortAvailability"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793364398577620764-6.json",
+      "sha256": "41ef8642d3b0efd60eeaf6e61a19975c09a9fce07f98099845c4b272b7cf7052",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "47a3361e92c5b8a77eacb0036705d0a74f5b5f34cae959f57ef395a4fdd3f9e6",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_freshPortAvailability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_assignmentRenamingCalibration": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_typedVariableEnumeration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_typedVariableIndex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_assignmentLift": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_typedAssignmentEnumeration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.enumerateVariables.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.indices.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.variableIndex.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.shiftMap.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.shiftMap.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.variableIndex.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.allMaps.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.enumerateVariables.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.shiftMap.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.indices.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.enumerateVariables.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.indices.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.allMaps.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.injectiveMaps.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.allMaps.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.SourceTypedPorts.variableIndex.eq_2": []
+  },
+  "numbered_statement_promotion": false
+}

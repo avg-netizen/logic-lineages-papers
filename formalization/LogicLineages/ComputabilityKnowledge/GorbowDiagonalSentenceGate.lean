@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowDiagonalSentenceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowDiagonalSentence : LogicLineages.ComputabilityKnowledge.Comparators.GorbowDiagonalSentence.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowDiagonalSentenceProof.gorbowDiagonalSentence
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

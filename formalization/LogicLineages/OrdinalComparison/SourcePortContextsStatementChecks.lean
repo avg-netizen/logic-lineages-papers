@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourcePortContextsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_portContextEnumeration : LogicLineages.OrdinalComparison.Source.SourcePortContextsTargets.PortContextEnumeration :=
+  LogicLineages.OrdinalComparison.Source.SourcePortContextsProof.portContextEnumeration
+
+theorem fixed_validPortLength : LogicLineages.OrdinalComparison.Source.SourcePortContextsTargets.ValidPortLength :=
+  LogicLineages.OrdinalComparison.Source.SourcePortContextsProof.validPortLength
+
+theorem fixed_typedAssignmentInjective : LogicLineages.OrdinalComparison.Source.SourcePortContextsTargets.TypedAssignmentInjective :=
+  LogicLineages.OrdinalComparison.Source.SourcePortContextsProof.typedAssignmentInjective
+
+theorem fixed_externalPortAssignment : LogicLineages.OrdinalComparison.Source.SourcePortContextsTargets.ExternalPortAssignment :=
+  LogicLineages.OrdinalComparison.Source.SourcePortContextsProof.externalPortAssignment
+
+theorem fixed_freshPortExtension : LogicLineages.OrdinalComparison.Source.SourcePortContextsTargets.FreshPortExtension :=
+  LogicLineages.OrdinalComparison.Source.SourcePortContextsProof.freshPortExtension
+
+theorem fixed_literalTypeEnumeration : LogicLineages.OrdinalComparison.Source.SourcePortContextsTargets.LiteralTypeEnumeration :=
+  LogicLineages.OrdinalComparison.Source.SourcePortContextsProof.literalTypeEnumeration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

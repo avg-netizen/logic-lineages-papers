@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.CollectedClosureBoundsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_collectedCoefficientCodeBound : LogicLineages.OrdinalComparison.Targets.CollectedCoefficientCodeBound :=
+  LogicLineages.OrdinalComparison.collectedCoefficientCodeBound
+
+theorem fixed_collectedComponentCodeBounds : LogicLineages.OrdinalComparison.Targets.CollectedComponentCodeBounds :=
+  LogicLineages.OrdinalComparison.collectedComponentCodeBounds
+
+theorem fixed_collectedClosureBounds : LogicLineages.OrdinalComparison.Targets.CollectedClosureBounds :=
+  LogicLineages.OrdinalComparison.collectedClosureBounds
+
+theorem fixed_encodedCollectedZeroBoundPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCollectedZeroBoundPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCollectedZeroBoundPrimitiveRecursive
+
+theorem fixed_encodedCollectedZeroBoundCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedZeroBoundCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedZeroBoundCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

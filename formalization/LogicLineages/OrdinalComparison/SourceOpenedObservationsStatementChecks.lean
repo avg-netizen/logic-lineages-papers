@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceOpenedObservationsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_openedObservationMembership : LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsTargets.OpenedObservationMembership :=
+  LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsProof.openedObservationMembership
+
+theorem fixed_openedRootMembership : LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsTargets.OpenedRootMembership :=
+  LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsProof.openedRootMembership
+
+theorem fixed_openedPlainChildClosure : LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsTargets.OpenedPlainChildClosure :=
+  LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsProof.openedPlainChildClosure
+
+theorem fixed_openedLambdaClosure : LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsTargets.OpenedLambdaClosure :=
+  LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsProof.openedLambdaClosure
+
+theorem fixed_openedDepthBudget : LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsTargets.OpenedDepthBudget :=
+  LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsProof.openedDepthBudget
+
+theorem fixed_openedTypeSupport : LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsTargets.OpenedTypeSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceOpenedObservationsProof.openedTypeSupport
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

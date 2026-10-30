@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 83 checked numbered statements, two inherited calculator
-results, and 93 pending statements.
+Current register: 85 checked numbered statements, two inherited calculator
+results, and 91 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -188,8 +188,12 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   validity and value preservation are checked, with uniform coded normalization.
   The full one-input lemma is now checked for finite genuine normal-form families,
   including the computed syntax threshold, reachable affine/nonlinear bands and
-  equal-peak root/head/argument conclusions. General sign/identity algorithms,
-  semantic normalization completeness and finite-zero bounds remain separate.
+  equal-peak root/head/argument conclusions. The full original-expression finite
+  zeros theorem now computes a positive tail bound and exact finite equality
+  list (or normalized identity), with genuine finite-height separation. The
+  full range-cells lemma is also checked, including actual signed coefficient
+  orientation. General multivariate identity and eventual two-sort sign
+  algorithms are not inferred from these pointwise/finite-zero results.
 
 ### Held paper 05 abstraction convention
 
@@ -307,6 +311,28 @@ root/filtration-preserving extension branch are checked. The socle correction
 map/kernel and exact-height proper-element criterion are actual quotient
 constructions. These are not a replacement for the remaining general
 height-extension/ACM argument.
+
+### Additional closed chains at the thirteenth checkpoint
+
+A genuine closed diagonal fixed-point biconditional and a uniform
+primitive-recursive code construction are now proved in a fresh concrete
+registry-diagram theory, including original singleton-name calibration. This
+is more than syntactic self-application, but is not parameterized CKA,
+represented provability, Hilbert–Bernays adequacy or actual DCB. The annotated
+atomic FS compiler also has exact original-name domain/output and real
+primitive-recursive semantics; bare-code axiom recognition is not assumed.
+
+Actual socle correction maps, finite-cardinal-rank transport, proper-socle
+witnesses and both root branches now construct cutoff-preserving subgroup
+extensions. Genuine finite-D induction yields extension of the original map;
+with the stated original all-ordinal preservation hypothesis, the final map
+preserves every filtration stage. This remains a precise finite extension
+result with its terminal-intersection/rank hypotheses, not a global ACM
+back-and-forth or transfinite classification theorem.
+
+The source observation-family, typed fresh-port realization and coherent finite
+table-lattice closure are separately checked. They do not supply the missing
+recursive comparison call rules or instantiate all source D_sigma domains.
 
 ## Local resource profiles
 
@@ -429,3 +455,13 @@ The register is now 83 checked, two inherited and 93 pending. The full paper 07
 one-input lemma and paper 06 named type-support substitution lemma are new
 numbered completions; the exact fragment/model and height-extension boundaries
 of other suppliers remain explicit.
+
+## Thirteenth cumulative checkpoint
+
+The selected 701-gate root passed its 2,013-declaration axiom audit. All 2,497
+local source hashes were unchanged and the original baseline guard remained
+clean. See [checkpoint evidence](verification/external-checkpoint-701-2026-10-30.json).
+The register is now 85 checked, two inherited and 91 pending. The full original
+positive-expression finite-zero theorem and range-cells lemma are new numbered
+completions. Genuine closed diagonal construction and finite all-ordinal
+filtration-preserving extensions remain carefully scoped supplier results.

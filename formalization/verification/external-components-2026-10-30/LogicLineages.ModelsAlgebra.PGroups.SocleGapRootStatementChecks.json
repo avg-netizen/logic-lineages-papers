@@ -1,0 +1,54 @@
+{
+  "accepted_utc": "2026-10-30T12:45:19.289845+00:00",
+  "scope": "Literal source objects and derived conclusions; no comparison, correctness oracle, or whole-source promotion.",
+  "source_correspondence": "Reviewed bounded actual source supplier within approved chain.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SocleGapRootStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:42:24.799068+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleGapRootTargets.lean",
+      "sha256": "bd40fc70877fcbbeb1a76172e52cb0cfd57370ccba4e0282ad1d72af3e201327"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleGapRootStatementChecks.lean",
+      "sha256": "cc0ececb3b91521a1448c629a19b23cfce404e96cf23f5191638d134effcd663"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleGapRoot.lean",
+      "sha256": "9342515db2d16e84c43c46043376100687c34ac2e42a0c8b456b9b19c3f0671a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSocleGapSuitableRoot"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793364292918000325-7.json",
+      "sha256": "777133dda6b4a8841437bd767430e3c25abb984c17898c385d86d8db556e62c3",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "5418b180a7327d520620fd06c70bb0e600673c5ff5526b22971a6519057b2bb0",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_socle_gap_suitable_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.socleCorrectionClass.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceLocatedSubtermsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_locatedRootMembership : LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsTargets.LocatedRootMembership :=
+  LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsProof.locatedRootMembership
+
+theorem fixed_locatedChildClosure : LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsTargets.LocatedChildClosure :=
+  LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsProof.locatedChildClosure
+
+theorem fixed_locatedTypeSupport : LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsTargets.LocatedTypeSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsProof.locatedTypeSupport
+
+theorem fixed_locatedDepthBudget : LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsTargets.LocatedDepthBudget :=
+  LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsProof.locatedDepthBudget
+
+theorem fixed_locatedContextCalibration : LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsTargets.LocatedContextCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceLocatedSubtermsProof.locatedContextCalibration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

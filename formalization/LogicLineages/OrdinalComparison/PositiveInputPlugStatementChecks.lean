@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.PositiveInputPlugProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_positiveInputPlugSource : LogicLineages.OrdinalComparison.Targets.PositiveInputPlugSource :=
+  LogicLineages.OrdinalComparison.positiveInputPlugSource
+
+theorem fixed_encodedPositivePlugPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedPositivePlugPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedPositivePlugPrimitiveRecursive
+
+theorem fixed_encodedPositivePlugCorrect : LogicLineages.OrdinalComparison.Targets.EncodedPositivePlugCorrect :=
+  LogicLineages.OrdinalComparison.encodedPositivePlugCorrect
+
+theorem fixed_encodedPositiveEvaluationComputable : LogicLineages.OrdinalComparison.Targets.EncodedPositiveEvaluationComputable :=
+  LogicLineages.OrdinalComparison.encodedPositiveEvaluationComputable
+
+theorem fixed_encodedPositiveEvaluationCorrect : LogicLineages.OrdinalComparison.Targets.EncodedPositiveEvaluationCorrect :=
+  LogicLineages.OrdinalComparison.encodedPositiveEvaluationCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

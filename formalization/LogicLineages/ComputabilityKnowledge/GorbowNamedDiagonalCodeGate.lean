@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowNamedDiagonalCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowNamedDiagonalCode : LogicLineages.ComputabilityKnowledge.Comparators.GorbowNamedDiagonalCode.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowNamedDiagonalCodeProof.gorbowNamedDiagonalCode
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,49 @@
+{
+  "accepted_utc": "2026-10-30T12:43:49.364422+00:00",
+  "scope": "Literal source objects and derived conclusions; no comparison, correctness oracle, or whole-source promotion.",
+  "source_correspondence": "Reviewed bounded actual source supplier within approved chain.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.HigherPerturbationStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:42:24.769634+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/HigherPerturbationTargets.lean",
+      "sha256": "22292c816fb25739775dc396f957a0fa046d4f2a75d485a31d63bc290f0b4446"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/HigherPerturbationStatementChecks.lean",
+      "sha256": "21f7bcf24c083f596b24a5fb0d8cea1143c4f02dd6a9e8e91f58cc97b3c50ec9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/HigherPerturbation.lean",
+      "sha256": "9120d1e2edaa4f60e0baf916e560e30c481a658af30110fe67f895e57b254de8"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupHigherPerturbationProper"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793364180030753588-6.json",
+      "sha256": "dfb6de2b7cdb634cc129a8ec74c3c4086d6a5483bb6f98724eb9d8f90c5e4f7d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "9f9e8fb3b7d8508d57058281ba63e9b15d2ba1cebba0f0d9e369a7cb7ca16b33",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_higher_perturbation_proper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1430,9 +1430,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 288,
           "statement_latex": "[Effective finite zeros]\\label{thm:zeros}\nGiven $E,F\\in\\mathcal P_1$, one computes $N\\ge1$ such that either their\nnormal forms agree, or $E(x)\\ne F(x)$ for every $x\\ge N$. In the latter\ncase their equality set is the computable finite set obtained by exact\nevaluation at $1,\\ldots,N-1$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualPositiveFiniteZeros",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/PositiveFiniteZerosTargets.lean",
+            "sha256": "d0b6a962f7dd2ed2879e030e903e8154097e88cdc00813b0ee6064b1d309095d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualPositiveFiniteZeros"
+          },
+          "verification_receipt": "build-reports/1793364999046110046-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole paper07 thm:zeros lines288\u2013303 for genuine original one-variable positive fixed-limit expressions (definition60\u201370). Uniform Computable numeric modulus N\u22651 and exact duplicate-free finite equality enumeration on inputs1,...,N\u22121. Actual collected normalization preserves source values; equal normal forms imply equality everywhere, distinct forms imply inequality at every x\u2265N. Simultaneous actual finite-closure height induction discharges all child-IH/peak-distinctness premises using accepted oneinput and signed sparse estimates. Conservative syntax-only8M+1 budget is a proved effective bound, not a claimed minimal source threshold. Actual input-plug evaluator and independently Computable normalized codes pay effectivity; separately accepted PositiveNormalFlag makes structural case decision explicit. No semantic evaluator/equality/comparison oracle. Does not promote multivariate identity, eventual sign or arbitrary finite-tail preprocessing."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:cells",
@@ -1441,9 +1452,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 306,
           "statement_latex": "[Range cells and signed rows]\\label{lem:cells}\nThe following assertions have effective tail bounds.\nFor a nonlinear positive expression $E$, let $Z_i$ be its displayed open\ntag peaks, and $Y=\\max_i Z_i=f(s)$. Then\n\\[\n              Y<E<f(s+1),\\qquad E<h_\\omega(Y).        \\tag{3.1}\n\\]\nFor a value $V\\in\\operatorname{range}(f)$ on that tail,\n\\[\n V<E\\ \\Longleftrightarrow\\ (\\exists i\\ Z_i\\ge V),\\qquad\n V>E\\ \\Longleftrightarrow\\ (\\forall i\\ Z_i<V).       \\tag{3.2}\n\\]\nAfter cancellation of identical tags in a signed row, its eventual\npointwise sign is the coefficient sign of its greatest remaining peak,\nonce those peaks have been ordered. If no tags remain, the row is affine.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCollectedCells",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/CollectedCellsTargets.lean",
+            "sha256": "314cf58ab62d2c2367f5fa5206bbf13d6e6fa208332072e480e7db9082fd1889",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualCollectedCells"
+          },
+          "verification_receipt": "build-reports/1793365856061928098-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole paper07 lem:cells305\u2013330 in its one-variable positive collected-form scope. Actual nonlinear displayed maximum Y=Phi s satisfies Y<E<Phi(s+1) and E<h_omega(Y), with exact all-n omega formula and primitive-recursive calibrated threshold. Both actual range-cell iff tests for every V in range Phi and E\u2260V. Source signed rows are differences A\u2212B of positive forms (definition paragraph immediately following positive grammar); actual dictionary cancellation and finite closure supply computed common tail N, attained greatest remaining peak and coefficient-sign equality for every greatest entry. Empty tag row is literally affine. Genuine finite-height separation discharges all peak distinctness premises; no peak selector, ordering algorithm or correctness oracle assumed. Pointwise orientation only: does not identify a fixed eventual greatest tag or establish the later two-sort eventual-sign algorithm."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:prefix",

@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SignedCollectedDifferenceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_signedCollectedDifferenceValue : LogicLineages.OrdinalComparison.Targets.SignedCollectedDifferenceValue :=
+  LogicLineages.OrdinalComparison.signedCollectedDifferenceValue
+
+theorem fixed_signedCollectedDifferenceValid : LogicLineages.OrdinalComparison.Targets.SignedCollectedDifferenceValid :=
+  LogicLineages.OrdinalComparison.signedCollectedDifferenceValid
+
+theorem fixed_signedCollectedDifferenceEmpty : LogicLineages.OrdinalComparison.Targets.SignedCollectedDifferenceEmpty :=
+  LogicLineages.OrdinalComparison.signedCollectedDifferenceEmpty
+
+theorem fixed_signedCollectedNFRowValue : LogicLineages.OrdinalComparison.Targets.SignedCollectedNFRowValue :=
+  LogicLineages.OrdinalComparison.signedCollectedNFRowValue
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

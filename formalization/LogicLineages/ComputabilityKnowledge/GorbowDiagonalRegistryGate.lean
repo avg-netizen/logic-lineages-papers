@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowDiagonalRegistryProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowDiagonalRegistry : LogicLineages.ComputabilityKnowledge.Comparators.GorbowDiagonalRegistry.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowDiagonalRegistryProof.gorbowDiagonalRegistry
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,65 @@
+{
+  "accepted_utc": "2026-10-30T13:07:10.996678+00:00",
+  "scope": "Actual finite induction conclusion, extends original subgroup map and reflects every stage through cutoff; no global ACM/BF or induction correctness premise.",
+  "source_correspondence": "Finite-D below-limit cutoff-preserving p-group extension.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteBelowLimitExtensionStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:59:14.398164+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteBelowLimitExtensionTargets.lean",
+      "sha256": "b7ef3749ec05e9dff9c3d8b8c77854ae5c8114415568e577bd4db31fe3aef2d0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteBelowLimitExtensionStatementChecks.lean",
+      "sha256": "777df3811e87e15298f660004f43455d4f111743fffb402611f1283a526f949b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteBelowLimitExtension.lean",
+      "sha256": "eb41b234809896c5ee87d8eb0ebaf1603bf15f47ac985a9a3f40912e0871297c"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteBelowLimitExtension"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793365598830196688-7.json",
+      "sha256": "4a7e48c9c63f36e78005f27cbe6838dfc7afa301bfee81abc12fe18e74fd7b25",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "5e41039690d6f9073bc54c922b4123a31a236265ef990f80c704214e503ec05d",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_finite_below_limit_extension": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.adjunctionHom.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.mappedAdjunctionHom.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.integerMultipleHom.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.socleCorrectionClass.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

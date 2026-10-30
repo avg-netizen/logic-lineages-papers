@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceTypedPortsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_typedVariableEnumeration : LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.TypedVariableEnumeration :=
+  LogicLineages.OrdinalComparison.Source.SourceTypedPortsProof.typedVariableEnumeration
+
+theorem fixed_typedVariableIndex : LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.TypedVariableIndex :=
+  LogicLineages.OrdinalComparison.Source.SourceTypedPortsProof.typedVariableIndex
+
+theorem fixed_typedAssignmentEnumeration : LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.TypedAssignmentEnumeration :=
+  LogicLineages.OrdinalComparison.Source.SourceTypedPortsProof.typedAssignmentEnumeration
+
+theorem fixed_assignmentRenamingCalibration : LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.AssignmentRenamingCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceTypedPortsProof.assignmentRenamingCalibration
+
+theorem fixed_assignmentLift : LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.AssignmentLift :=
+  LogicLineages.OrdinalComparison.Source.SourceTypedPortsProof.assignmentLift
+
+theorem fixed_freshPortAvailability : LogicLineages.OrdinalComparison.Source.SourceTypedPortsTargets.FreshPortAvailability :=
+  LogicLineages.OrdinalComparison.Source.SourceTypedPortsProof.freshPortAvailability
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

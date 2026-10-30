@@ -1,0 +1,373 @@
+{
+  "accepted_utc": "2026-10-30T12:48:22.568175+00:00",
+  "scope": "Literal syntax code bounds, signed algebra, or actual input substitution and independent computability; no final separation oracle.",
+  "source_correspondence": "Paper07 approved bounded effective zeros prerequisites.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.CollectedClosureBoundsStatementChecks",
+  "frozen_at_utc": "2026-10-30T12:44:35.950666+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/CollectedClosureBoundsDefinitions.lean",
+      "sha256": "0daac201a9e2c329e6c7a167e5d89ea8ad6b57d42db7932f7dee0fa5a7a3dbd9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CollectedClosureBoundsTargets.lean",
+      "sha256": "b50902315834add04ffb33f709d1980ee25c837d8eab6e7a4aae876dc963690b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CollectedClosureBoundsStatementChecks.lean",
+      "sha256": "e7ffbb5ccdc6afcb87c65eecc90f4239e3c90a7eb73221b496e0ee34a0159261"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CollectedClosureBoundsProof.lean",
+      "sha256": "9fd07f633b0c5a839d019bde7e2db468ba86cda19d54127b3c21ffcf1c606676"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Targets.CollectedCoefficientCodeBound",
+    "LogicLineages.OrdinalComparison.Targets.CollectedComponentCodeBounds",
+    "LogicLineages.OrdinalComparison.Targets.CollectedClosureBounds",
+    "LogicLineages.OrdinalComparison.Targets.EncodedCollectedZeroBoundPrimitiveRecursive",
+    "LogicLineages.OrdinalComparison.Targets.EncodedCollectedZeroBoundCorrect"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793364476138293949-6.json",
+      "sha256": "7f2fee51537e7e2376447901852625bc916c41a635751d9f76b7b4f6f2249801",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "be8b0098617f075f58ed018422cfde9cd6c04ab4d0f6888f2944cd09f73d8de1",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_collectedCoefficientCodeBound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedCollectedZeroBoundPrimitiveRecursive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_collectedComponentCodeBounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedCollectedZeroBoundCorrect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_collectedClosureBounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.encodedCollectedThresholdStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedAffineThreshold.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedAtomThreshold.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.encodedCollectedThresholdTable.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormalTable.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawComparisonTable.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedOneInputThreshold.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNoteEncode.eq_2": [],
+    "LogicLineages.OrdinalComparison.rawComparisonTable.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.orderingCode.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedTagsEncode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_1": [],
+    "LogicLineages.OrdinalComparison.rawNormalTable.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_2": [],
+    "LogicLineages.OrdinalComparison.collectedDirectTags.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedCoefficientSum.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Phi.eq_1": [],
+    "LogicLineages.OrdinalComparison.normalNormBall.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormalTable.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedTagsEncode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_def": [],
+    "LogicLineages.OrdinalComparison.encodedCollectedThreshold.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualOrdinalNorm.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.actualCollapse.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedCoefficientSum.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNoteDecode.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_1": [],
+    "LogicLineages.OrdinalComparison.rawComparisonTable.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormTable.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedCoefficientSum.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.orderingCode.eq_1": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedAtomThreshold.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedPositiveEncode.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.encodedCollectedThresholdTable.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.triangular.eq_2": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.fastControl.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNoteEncode.eq_def": [],
+    "LogicLineages.OrdinalComparison.rawNormTable.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNoteEncode.eq_1": [],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedTagsOneInputThreshold.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNode.eq_1": [],
+    "LogicLineages.OrdinalComparison.collectedDirectTags.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedNonlinearThreshold.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.endpoint.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualBoundedPredecessors.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedOneInputThreshold.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNoteDecode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedTagsOneInputThreshold.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.orderingCode.eq_3": [],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collapse.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.omegaTower.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.actualTailPart.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormalStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawComparisonStep.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSummands.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedDirectTags.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawFiniteTail.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormBall.eq_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.encodedCollectedThresholdTable.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.rawNormTable.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.lastExponent.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.collectedTagsEncode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.treeWeight.eq_def": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.intervalCheck.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedPositiveEncode.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.predecessorSet.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.principalSum.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.maximumPredecessor.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.collectedTagsOneInputThreshold.eq_2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

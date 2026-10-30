@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceCoherentTablesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_coherentValidityTest : LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.CoherentValidityTest :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentTablesProof.coherentValidityTest
+
+theorem fixed_coherentFiniteEnumeration : LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.CoherentFiniteEnumeration :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentTablesProof.coherentFiniteEnumeration
+
+theorem fixed_coherentArbitraryClosure : LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.CoherentArbitraryClosure :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentTablesProof.coherentArbitraryClosure
+
+theorem fixed_actualCoherentSublattice : LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.ActualCoherentSublattice :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentTablesProof.actualCoherentSublattice
+
+theorem fixed_finiteCoherentCarrier : LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.FiniteCoherentCarrier :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentTablesProof.finiteCoherentCarrier
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

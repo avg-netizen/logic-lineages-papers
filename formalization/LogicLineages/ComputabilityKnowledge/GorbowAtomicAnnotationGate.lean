@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowAtomicAnnotationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowAtomicAnnotation : LogicLineages.ComputabilityKnowledge.Comparators.GorbowAtomicAnnotation.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowAtomicAnnotationProof.gorbowAtomicAnnotation
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

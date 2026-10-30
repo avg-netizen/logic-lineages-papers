@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.SparseSignedCollectedProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCollectedTagPeakIndexCalibration : LogicLineages.OrdinalComparison.Targets.ActualCollectedTagPeakIndexCalibration :=
+  LogicLineages.OrdinalComparison.actualCollectedTagPeakIndexCalibration
+
+theorem fixed_sparseSignedCollectedNonzero : LogicLineages.OrdinalComparison.Targets.SparseSignedCollectedNonzero :=
+  LogicLineages.OrdinalComparison.sparseSignedCollectedNonzero
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

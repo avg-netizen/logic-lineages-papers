@@ -1,0 +1,86 @@
+{
+  "accepted_utc": "2026-10-30T13:14:40.703706+00:00",
+  "scope": "Actual lower maps, literal finite test/enumeration, proved arbitrary closure and actual complete sublattice. No recursive source D_sigma instantiation or whole lattice lemma.",
+  "source_correspondence": "Generic finite coherent table lattice supplier for paper06.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.OrdinalComparison.SourceCoherentTablesStatementChecks",
+  "frozen_at_utc": "2026-10-30T13:11:05.871229+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceCoherentTablesDefinitions.lean",
+      "sha256": "53503bfdb1bccccb68bc6c380572e2175c41d1b14cb382ecc4c967c16bf062be"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceCoherentTablesTargets.lean",
+      "sha256": "46ec2486214d1a91897248b354bdb1d9323d08a1d117c4f0ee99ecd8838ddaba"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceCoherentTablesStatementChecks.lean",
+      "sha256": "d3e8cd569943e45fe64724e7e8b8219d09680dd2dbc1619dc61099698812980a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceCoherentTablesProof.lean",
+      "sha256": "551f471df0f330e88a37059df1bcfbbc505236c5affc739263a7ef092d456bf3"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.CoherentValidityTest",
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.CoherentFiniteEnumeration",
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.CoherentArbitraryClosure",
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.ActualCoherentSublattice",
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTablesTargets.FiniteCoherentCarrier"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793366053067524483-6.json",
+      "sha256": "75d9556e9fa9872c03fe15c3e75ac392e41ba6442f0cb4cb4f1f0e496f7bb0a6",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "47b4b444190ca5c28630e46dde611fe16045d324c19376242e3cfba95eeb7e1c",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_coherentFiniteEnumeration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_coherentValidityTest": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCoherentSublattice": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_finiteCoherentCarrier": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_coherentArbitraryClosure": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTables.validityTest.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTables.Diagram.inputMap.congr_simp": [],
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTables.finiteTables.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceCoherentTables.Diagram.outputMap.congr_simp": []
+  },
+  "numbered_statement_promotion": false
+}

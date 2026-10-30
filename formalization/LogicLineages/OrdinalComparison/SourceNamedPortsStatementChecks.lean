@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceNamedPortsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_spelledPortInjective : LogicLineages.OrdinalComparison.Source.SourceNamedPortsTargets.SpelledPortInjective :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedPortsProof.spelledPortInjective
+
+theorem fixed_spelledPortFresh : LogicLineages.OrdinalComparison.Source.SourceNamedPortsTargets.SpelledPortFresh :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedPortsProof.spelledPortFresh
+
+theorem fixed_realizedPortTypes : LogicLineages.OrdinalComparison.Source.SourceNamedPortsTargets.RealizedPortTypes :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedPortsProof.realizedPortTypes
+
+theorem fixed_realizedPortLookup : LogicLineages.OrdinalComparison.Source.SourceNamedPortsTargets.RealizedPortLookup :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedPortsProof.realizedPortLookup
+
+theorem fixed_realizedFreshExtension : LogicLineages.OrdinalComparison.Source.SourceNamedPortsTargets.RealizedFreshExtension :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedPortsProof.realizedFreshExtension
+
+theorem fixed_actualNamedPortWeakening : LogicLineages.OrdinalComparison.Source.SourceNamedPortsTargets.ActualNamedPortWeakening :=
+  LogicLineages.OrdinalComparison.Source.SourceNamedPortsProof.actualNamedPortWeakening
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison
