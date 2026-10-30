@@ -1,0 +1,3652 @@
+{
+  "recorded_utc": "2026-10-30T13:40:45.473614+00:00",
+  "inventory_scope": "Historical receipt identities/availability and exact frozen comparator-source validation, linked to current accepted-root and targeted-recompile evidence. This is not a new mathematical source review. Absent historical reports are not fabricated or relabeled as present.",
+  "paths_relative_to": "formalization unless manuscript_file states repository-relative paper path",
+  "targets_file": "formalization/TARGETS.json",
+  "targets_sha256": "2c93544ee77c1d59e55365abb34200d1298ed31923aa19ae99279c733d869c5b",
+  "root_file": "formalization/LogicLineages.lean",
+  "root_sha256": "929e4e452b0ac7030d65fea939fbc0f1eb2d57debe686a77329ca71792eafd4b",
+  "checked_statement_count": 85,
+  "comparator_count": 116,
+  "all_comparator_hashes_match": true,
+  "missing_receipt_reference_count": 81,
+  "statements": [
+    {
+      "id": "01-scott-complexity-abelian-p-groups:thm:bounded-pgroup-classification",
+      "status": "checked",
+      "manuscript_file": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "manuscript_line": 138,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/PGroups/RawBoundedClassificationTargets.lean",
+          "sha256": "9638007da52018d6859be1e9e6f3dac2e4ce65fb6879ebff847b84171053e130",
+          "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupRawBoundedClassification",
+          "current_source_available": true,
+          "current_sha256": "9638007da52018d6859be1e9e6f3dac2e4ce65fb6879ebff847b84171053e130",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793356314856872609-7.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793356314856872609-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_raw_bounded_classification"
+        }
+      ]
+    },
+    {
+      "id": "01-scott-complexity-abelian-p-groups:lem:quotient-filtration",
+      "status": "checked",
+      "manuscript_file": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "manuscript_line": 305,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/PGroups/FullQuotientTargets.lean",
+          "sha256": "38cee006c0b7255512d84f2475364299622d1901dbc8d1f7250567e1b330b0c7",
+          "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.fullQuotientFiltrationLemma",
+          "current_source_available": true,
+          "current_sha256": "38cee006c0b7255512d84f2475364299622d1901dbc8d1f7250567e1b330b0c7",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793267996776944661-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793267996776944661-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.PGroups.FullQuotientStatementChecks.fullQuotientFiltrationLemma"
+        }
+      ],
+      "checked_components_as_registered": [
+        {
+          "declaration": "LogicLineages.ModelsAlgebra.PGroups.QuotientStatementChecks.quotientFiltrationBelowCut",
+          "scope": "Historical first-conclusion component, generalized to arbitrary cuts. The full two-conclusion gate is now checked in receipt1793267996776944661-6.",
+          "development_receipt": "build-reports/1793251592919663407-2.json"
+        }
+      ]
+    },
+    {
+      "id": "01-scott-complexity-abelian-p-groups:lem:products",
+      "status": "checked",
+      "manuscript_file": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "manuscript_line": 335,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean",
+          "sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+          "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteProductPreservation",
+          "current_source_available": true,
+          "current_sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean",
+          "sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+          "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupFiniteProductPreservation",
+          "current_source_available": true,
+          "current_sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793326598180203036-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793326598180203036-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793326598180203036-2.json",
+            "gate_module": "LogicLineages.ModelsAlgebra.PGroups.BackForthStatementChecks",
+            "receipt_sha256": "b8a0f018d11ea32414bbc75a262e82ebb1afe6bcbc4b1d0f234f1f5bd94c6e2a",
+            "log": "build-reports/1793326598180203036-2-LogicLineages-ModelsAlgebra-PGroups-BackForthStatementChecks.log",
+            "log_sha256": "c3ac01a9cbb88d80ac0214273eb1d66848747ce77e4f03f6f56ca7ab85239309"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793326598180203036-2.json",
+          "original_log_available_in_current_workspace": false
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.PGroups.BackForthStatementChecks.fixed_groupFiniteProductPreservation"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.PGroups.BackForthStatementChecks.fixed_groupFiniteProductPreservation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01-scott-complexity-abelian-p-groups:lem:absorption",
+      "status": "checked",
+      "manuscript_file": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "manuscript_line": 421,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/PGroups/SourceAbsorptionTargets.lean",
+          "sha256": "16761a8224fb46e409a61bef29d83657501721166ee21b9d97961aa2af854716",
+          "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSourceFactorAbsorption",
+          "current_source_available": true,
+          "current_sha256": "16761a8224fb46e409a61bef29d83657501721166ee21b9d97961aa2af854716",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793357373536464194-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793357373536464194-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_source_factor_absorption"
+        }
+      ]
+    },
+    {
+      "id": "02-exponential-comparison:lem:restricted-product",
+      "status": "checked",
+      "manuscript_file": "02-exponential-comparison/paper.tex",
+      "manuscript_line": 109,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/RestrictedProduct.lean",
+          "sha256": "3b6aec50b063e33c05f7d4ecddfd8af123cab045a4eb7a40ce73e129e4831214",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.RestrictedProduct.Target",
+          "current_source_available": true,
+          "current_sha256": "3b6aec50b063e33c05f7d4ecddfd8af123cab045a4eb7a40ce73e129e4831214",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793247970233247267-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793247970233247267-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.restricted_product"
+        }
+      ]
+    },
+    {
+      "id": "02-exponential-comparison:lem:seven-equations",
+      "status": "checked",
+      "manuscript_file": "02-exponential-comparison/paper.tex",
+      "manuscript_line": 146,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/MultiplicationGadget.lean",
+          "sha256": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget.Target",
+          "current_source_available": true,
+          "current_sha256": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793266596541430476-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793266596541430476-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.multiplication_gadget"
+        }
+      ]
+    },
+    {
+      "id": "02-exponential-comparison:lem:normalization",
+      "status": "checked",
+      "manuscript_file": "02-exponential-comparison/paper.tex",
+      "manuscript_line": 340,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizerProgram.lean",
+          "sha256": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram.Target",
+          "current_source_available": true,
+          "current_sha256": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizerProgram.lean",
+          "sha256": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram.Target",
+          "current_source_available": true,
+          "current_sha256": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793323608078739707-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793323608078739707-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793323608078739707-2.json",
+            "gate_module": "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramGate"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793323608078739707-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_effective_normalization"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_effective_normalization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02-exponential-comparison:lem:ray",
+      "status": "checked",
+      "manuscript_file": "02-exponential-comparison/paper.tex",
+      "manuscript_line": 367,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/RaySeparation.lean",
+          "sha256": "fd4cc78183293a36de5a1e6eed7fff46cbac1c001d9dbcdf9f8770c3b8856144",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.RaySeparation.Target",
+          "current_source_available": true,
+          "current_sha256": "fd4cc78183293a36de5a1e6eed7fff46cbac1c001d9dbcdf9f8770c3b8856144",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793334622053991788-10.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793334622053991788-10.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.ray_separation"
+        }
+      ]
+    },
+    {
+      "id": "02-exponential-comparison:thm:identity",
+      "status": "checked",
+      "manuscript_file": "02-exponential-comparison/paper.tex",
+      "manuscript_line": 434,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialIdentity.lean",
+          "sha256": "d1f83148e8ac4a6569141f2608ac7cd5435033ecfd1f3800ff42c89b4324ed76",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialIdentity.Target",
+          "current_source_available": true,
+          "current_sha256": "d1f83148e8ac4a6569141f2608ac7cd5435033ecfd1f3800ff42c89b4324ed76",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793335505596595200-10.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793335505596595200-10.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.exponential_identity"
+        }
+      ]
+    },
+    {
+      "id": "02-exponential-comparison:thm:unary",
+      "status": "checked",
+      "manuscript_file": "02-exponential-comparison/paper.tex",
+      "manuscript_line": 456,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/UnaryComparison.lean",
+          "sha256": "e413aaee5570c6f1c7c94c48a7e39c5503ff41833b0dada4e13df243a43ca515",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.UnaryComparison.Target",
+          "current_source_available": true,
+          "current_sha256": "e413aaee5570c6f1c7c94c48a7e39c5503ff41833b0dada4e13df243a43ca515",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793335925497772853-10.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793335925497772853-10.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.unary_comparison"
+        }
+      ]
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:lem:bridge",
+      "status": "checked",
+      "manuscript_file": "03-joint-embedding-finite-forests/paper.tex",
+      "manuscript_line": 64,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionTargets.lean",
+          "sha256": "dcb98f5df86c8f5784ef23c3486fd86b7b80136840a83abe73d7555b60e100d5",
+          "type": "LogicLineages.ModelsAlgebra.Forests.Targets.CompleteComparabilityBridge",
+          "current_source_available": true,
+          "current_sha256": "dcb98f5df86c8f5784ef23c3486fd86b7b80136840a83abe73d7555b60e100d5",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793333606235628555-15.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793333606235628555-15.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.completeComparabilityBridge"
+        }
+      ]
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:prop:certificate",
+      "status": "checked",
+      "manuscript_file": "03-joint-embedding-finite-forests/paper.tex",
+      "manuscript_line": 149,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Forests/CertificateFullTargets.lean",
+          "type": "LogicLineages.ModelsAlgebra.Forests.Targets.FullNegativeCertificateSearch",
+          "sha256": "75deb8636e2009a15fe1cfd093f4558ae3e7c0b2cff46c764df690e2ccdfb69d",
+          "current_source_available": true,
+          "current_sha256": "75deb8636e2009a15fe1cfd093f4558ae3e7c0b2cff46c764df690e2ccdfb69d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793310861481589035-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793310861481589035-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fixed_fullNegativeCertificateSearch"
+        }
+      ]
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:thm:width",
+      "status": "checked",
+      "manuscript_file": "03-joint-embedding-finite-forests/paper.tex",
+      "manuscript_line": 181,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Forests/WidthPositiveTargets.lean",
+          "sha256": "73a2fc524e31e6ec1f38c6d8a5b29f403fe40fa0a42339454d73847458cece88",
+          "type": "LogicLineages.ModelsAlgebra.Forests.Targets.FullWidthJEPClassification",
+          "current_source_available": true,
+          "current_sha256": "73a2fc524e31e6ec1f38c6d8a5b29f403fe40fa0a42339454d73847458cece88",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793337522018693762-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793337522018693762-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullWidthJEPClassification"
+        }
+      ]
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:prop:age",
+      "status": "checked",
+      "manuscript_file": "03-joint-embedding-finite-forests/paper.tex",
+      "manuscript_line": 242,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Forests/AgeCompletionTargets.lean",
+          "sha256": "efced79d5db363008bf36dc1ea19732362aa6c43635bd0444c710c62d608baf2",
+          "type": "LogicLineages.ModelsAlgebra.Forests.Targets.FullForestAgeRealization",
+          "additional_types": [
+            "LogicLineages.ModelsAlgebra.Forests.Targets.UnboundedForestAgeRealization"
+          ],
+          "current_source_available": true,
+          "current_sha256": "efced79d5db363008bf36dc1ea19732362aa6c43635bd0444c710c62d608baf2",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793338934340906493-11.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793338934340906493-11.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullForestAgeRealization"
+        },
+        {
+          "register_field": "additional_accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.Forests.StatementChecks.unboundedForestAgeRealization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:finite-balls",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 73,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/EncodedFiniteBallsTargets.lean",
+          "sha256": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedFiniteNormBalls",
+          "current_source_available": true,
+          "current_sha256": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/EncodedFiniteBallsTargets.lean",
+          "sha256": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedFiniteNormBalls",
+          "current_source_available": true,
+          "current_sha256": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793313695732833877-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793313695732833877-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793313695732833877-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.EncodedFiniteBallsStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793313695732833877-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedFiniteNormBalls"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedFiniteNormBalls"
+          ]
+        }
+      ],
+      "checked_components_as_registered": [
+        {
+          "declaration": "LogicLineages.OrdinalComparison.CheckedNormBalls.all_normal_inputs_finite",
+          "scope": "Finiteness and exact finite enumeration on normal notations; actual-ordinal completeness and natural arithmetic obligations remain pending.",
+          "development_receipt": "build-reports/1793248381898355174-2.json"
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:phi-growth",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 99,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ElementaryControlTargets.lean",
+          "sha256": "bd94b0ade60cc7242c5321012d445a1e003e669206a1c7e5a57e3e8e55ce33dd",
+          "type": "LogicLineages.OrdinalComparison.Targets.ElementaryControlProperties",
+          "current_source_available": true,
+          "current_sha256": "bd94b0ade60cc7242c5321012d445a1e003e669206a1c7e5a57e3e8e55ce33dd",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793247538850699184-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793247538850699184-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.CheckedElementaryControl.entire_source_elementary_control_lemma"
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:controlled-strictness",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 131,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualCollapseTargets.lean",
+          "sha256": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc",
+          "types": [
+            "LogicLineages.OrdinalComparison.Targets.ActualCollapseControlledStrictness",
+            "LogicLineages.OrdinalComparison.Targets.ActualCollapseFiniteValues"
+          ],
+          "parameter": "LogicLineages.OrdinalComparison.actualCollapse",
+          "current_source_available": true,
+          "current_sha256": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793279852531567128-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793279852531567128-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_collapse_controlled_strictness"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_collapse_finite_values",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_collapse_controlled_strictness"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:maximum",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 161,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/OptimizedAlgorithmTargets.lean",
+          "sha256": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullOptimizedMaximumAlgorithm",
+          "current_source_available": true,
+          "current_sha256": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/OptimizedAlgorithmTargets.lean",
+          "sha256": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullOptimizedMaximumAlgorithm",
+          "current_source_available": true,
+          "current_sha256": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793315377840158403-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315377840158403-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793315377840158403-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.OptimizedAlgorithmStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315377840158403-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullOptimizedMaximumAlgorithm"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullOptimizedMaximumAlgorithm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:saturation",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 199,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualLimitPredecessorTargets.lean",
+          "sha256": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8",
+          "types": [
+            "LogicLineages.OrdinalComparison.Targets.ActualLimitMaximumPredecessorSaturation",
+            "LogicLineages.OrdinalComparison.Targets.ActualLimitMaximumPredecessorStrictGrowth"
+          ],
+          "current_source_available": true,
+          "current_sha256": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793279023996396169-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793279023996396169-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_limit_saturation"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_limit_saturation",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_limit_strict_growth"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:single-predecessor",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 210,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualSinglePredecessorTargets.lean",
+          "sha256": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualSinglePredecessorRecurrence",
+          "current_source_available": true,
+          "current_sha256": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793283089630614057-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793283089630614057-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actual_single_predecessor_recurrence"
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:cor:closed-evaluation",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 233,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/EncodedCollapseTargets.lean",
+          "sha256": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedClosedEvaluation",
+          "current_source_available": true,
+          "current_sha256": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/EncodedCollapseTargets.lean",
+          "sha256": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullEncodedClosedEvaluation",
+          "current_source_available": true,
+          "current_sha256": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793312501751007316-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793312501751007316-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793312501751007316-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.EncodedCollapseStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793312501751007316-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedClosedEvaluation"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullEncodedClosedEvaluation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:complete-count",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 247,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualTerminalTargets.lean",
+          "sha256": "97993c72496c0de4a35059978d9e6070eee81c7b6e78fb8794fed6fba7ca3aa2",
+          "types": [
+            "LogicLineages.OrdinalComparison.Targets.ActualTerminalFirstFinite",
+            "LogicLineages.OrdinalComparison.Targets.ActualCompleteTerminalDecomposition"
+          ],
+          "current_source_available": true,
+          "current_sha256": "97993c72496c0de4a35059978d9e6070eee81c7b6e78fb8794fed6fba7ca3aa2",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793284704328308516-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793284704328308516-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCompleteTerminalDecomposition"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTerminalFirstFinite",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCompleteTerminalDecomposition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:cor:finite-head",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 268,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualFiniteHeadTargets.lean",
+          "sha256": "682a0532c51866e3d9b4ead5841da3f3cf243bb2e3cf1da104272db01630ee1e",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualFiniteHeadCollapse",
+          "current_source_available": true,
+          "current_sha256": "682a0532c51866e3d9b4ead5841da3f3cf243bb2e3cf1da104272db01630ee1e",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793285606947394818-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793285606947394818-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualFiniteHeadCollapse"
+        }
+      ]
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:tail-separation",
+      "status": "checked",
+      "manuscript_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "manuscript_line": 280,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualTailSeparationTargets.lean",
+          "sha256": "cb22045f61f16754ebe4b91bb03ddb491b2085dd3a478e1b084d5216a213c13e",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualTailSeparation",
+          "current_source_available": true,
+          "current_sha256": "cb22045f61f16754ebe4b91bb03ddb491b2085dd3a478e1b084d5216a213c13e",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793286378781061472-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793286378781061472-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualTailSeparation"
+        }
+      ]
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:supportsub",
+      "status": "checked",
+      "manuscript_file": "06-godel-t-termination-ordering/paper.tex",
+      "manuscript_line": 381,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionTargets.lean",
+          "sha256": "1cd2548187811794256e78ec150950f54640cf696cc5bd280d1a28eb51ec5172",
+          "type": "LogicLineages.OrdinalComparison.Source.SourceFiniteNamedSubstitutionTargets.FullFiniteNamedSupportSubstitution",
+          "current_source_available": true,
+          "current_sha256": "1cd2548187811794256e78ec150950f54640cf696cc5bd280d1a28eb51ec5172",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793363123087896026-7.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793363123087896026-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFiniteNamedSupportSubstitution"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:sparse",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 120,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+          "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualSparsePeaks",
+          "current_source_available": true,
+          "current_sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+          "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualSparsePeaks",
+          "current_source_available": true,
+          "current_sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793315534494548274-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315534494548274-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793315534494548274-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.PeakOrbitStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315534494548274-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSparsePeaks"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSparsePeaks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:roots",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 158,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+          "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualRootPeakInjectivity",
+          "current_source_available": true,
+          "current_sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean",
+          "sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualRootPeakInjectivity",
+          "current_source_available": true,
+          "current_sha256": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793315534494548274-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315534494548274-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793315534494548274-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.PeakOrbitStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315534494548274-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRootPeakInjectivity"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRootPeakInjectivity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:oneinput",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 262,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/CollectedOneInputTargets.lean",
+          "sha256": "8f28ee96a051380113be1800c71e5fbdb0ade91a3a243f6849d58b21aefbc7c8",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCollectedOneInput",
+          "current_source_available": true,
+          "current_sha256": "8f28ee96a051380113be1800c71e5fbdb0ade91a3a243f6849d58b21aefbc7c8",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793363059994230146-7.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793363059994230146-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCollectedOneInput"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:zeros",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 288,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/PositiveFiniteZerosTargets.lean",
+          "sha256": "d0b6a962f7dd2ed2879e030e903e8154097e88cdc00813b0ee6064b1d309095d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualPositiveFiniteZeros",
+          "current_source_available": true,
+          "current_sha256": "d0b6a962f7dd2ed2879e030e903e8154097e88cdc00813b0ee6064b1d309095d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793364999046110046-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793364999046110046-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualPositiveFiniteZeros"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:cells",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 306,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/CollectedCellsTargets.lean",
+          "sha256": "314cf58ab62d2c2367f5fa5206bbf13d6e6fa208332072e480e7db9082fd1889",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCollectedCells",
+          "current_source_available": true,
+          "current_sha256": "314cf58ab62d2c2367f5fa5206bbf13d6e6fa208332072e480e7db9082fd1889",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793365856061928098-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793365856061928098-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCollectedCells"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:prefix",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 356,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+          "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCompatiblePrefixSplitting",
+          "current_source_available": true,
+          "current_sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+          "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCompatiblePrefixSplitting",
+          "current_source_available": true,
+          "current_sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793319734291867812-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793319734291867812-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793319734291867812-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.PrefixTraceSourceStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793319734291867812-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCompatiblePrefixSplitting"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCompatiblePrefixSplitting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:counts",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 384,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ControlledCountTargets.lean",
+          "sha256": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualOrderedControlsAndCounts",
+          "current_source_available": true,
+          "current_sha256": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/ControlledCountTargets.lean",
+          "sha256": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualOrderedControlsAndCounts",
+          "current_source_available": true,
+          "current_sha256": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793315788852128190-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315788852128190-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793315788852128190-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.ControlledCountStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315788852128190-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOrderedControlsAndCounts"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOrderedControlsAndCounts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:peakword",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 410,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/PeakWordTargets.lean",
+          "sha256": "1230ec0042c3e864dee2f6fa11a7e8fb39266d8a1227777006ac011c2df15fa9",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualPrincipalPeakWord",
+          "current_source_available": true,
+          "current_sha256": "1230ec0042c3e864dee2f6fa11a7e8fb39266d8a1227777006ac011c2df15fa9",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793347756150904134-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793347756150904134-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualPrincipalPeakWord"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:stage",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 436,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ReserveStageTargets.lean",
+          "sha256": "df71415501b37ae3a9af5d2dc0d773baa46de7eb550eff09b2e1e15c0ba9c63b",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualOneStageReserve",
+          "current_source_available": true,
+          "current_sha256": "df71415501b37ae3a9af5d2dc0d773baa46de7eb550eff09b2e1e15c0ba9c63b",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793348640054851121-8.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793348640054851121-8.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOneStageReserve"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:reserve",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 464,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ProfileReserveTargets.lean",
+          "sha256": "cedda8055e116baa49e514990046e6b118b051afd156d18bf0655503ee9e33df",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualEffectiveProfileReserve",
+          "current_source_available": true,
+          "current_sha256": "cedda8055e116baa49e514990046e6b118b051afd156d18bf0655503ee9e33df",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793349846346563963-7.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793349846346563963-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualEffectiveProfileReserve"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:direct",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 499,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ProfileDirectTargets.lean",
+          "sha256": "249694701de3ce82b52e8ca7ba3875c5f8bc366e9805ca88074ddd5dbd57975d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualDirectKernelGrowth",
+          "current_source_available": true,
+          "current_sha256": "249694701de3ce82b52e8ca7ba3875c5f8bc366e9805ca88074ddd5dbd57975d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793351247582957988-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793351247582957988-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualDirectKernelGrowth"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:adjacent",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 523,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/AdjacentProfileTargets.lean",
+          "sha256": "5000258f88645583b6d037278ee827709d4d1204b71f9c370a2f0c2b73580a55",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCrossMassStrictInputSeparation",
+          "current_source_available": true,
+          "current_sha256": "5000258f88645583b6d037278ee827709d4d1204b71f9c370a2f0c2b73580a55",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793353535214411475-8.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793353535214411475-8.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCrossMassStrictInputSeparation"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:limitmass",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 599,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/LimitMassProfileTargets.lean",
+          "sha256": "8b800344a033a92105e5082b9d75753cd4ce11d58dd1e3b232f4148193e7b19a",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualLimitExponentMassSeparation",
+          "current_source_available": true,
+          "current_sha256": "8b800344a033a92105e5082b9d75753cd4ce11d58dd1e3b232f4148193e7b19a",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793354910103537724-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793354910103537724-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualLimitExponentMassSeparation"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:successor",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 658,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/SuccessorKernelsTargets.lean",
+          "sha256": "9575662b72cc5b59f5809b06c16d03383d42ab55ba87f8230fb5cb5bd8f0b45a",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualSuccessorCutCocycle",
+          "current_source_available": true,
+          "current_sha256": "9575662b72cc5b59f5809b06c16d03383d42ab55ba87f8230fb5cb5bd8f0b45a",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793346300131883174-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793346300131883174-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSuccessorCutCocycle"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:small",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 684,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/SmallKernelsTargets.lean",
+          "sha256": "47f627d27ce8a6f9fb99b546a8847567d6809bbc3411f67e1fa32ed69c300d1d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualSmallPrincipalKernels",
+          "current_source_available": true,
+          "current_sha256": "47f627d27ce8a6f9fb99b546a8847567d6809bbc3411f67e1fa32ed69c300d1d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793344794574756818-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793344794574756818-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSmallPrincipalKernels"
+        }
+      ]
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:mass",
+      "status": "checked",
+      "manuscript_file": "07-collapse-equality-and-one-variable/paper.tex",
+      "manuscript_line": 702,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/StrictMassTargets.lean",
+          "sha256": "b38ccc005072fe351a5de005f41d4a3ccdf93820bba6a742f5a5bee35729ab0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualPrincipalStrictMass",
+          "current_source_available": true,
+          "current_sha256": "b38ccc005072fe351a5de005f41d4a3ccdf93820bba6a742f5a5bee35729ab0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793356946366425896-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793356946366425896-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualPrincipalStrictMass"
+        }
+      ]
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:growth",
+      "status": "checked",
+      "manuscript_file": "08-multivariate-collapse-comparison/paper.tex",
+      "manuscript_line": 102,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+          "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlHierarchyGrowth",
+          "current_source_available": true,
+          "current_sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+          "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlHierarchyGrowth",
+          "current_source_available": true,
+          "current_sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793316081800671532-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316081800671532-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793316081800671532-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.ControlHierarchyGrowthStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316081800671532-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlHierarchyGrowth"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlHierarchyGrowth"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:residues",
+      "status": "checked",
+      "manuscript_file": "08-multivariate-collapse-comparison/paper.tex",
+      "manuscript_line": 120,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+          "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlConstantResidues",
+          "current_source_available": true,
+          "current_sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+          "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullFastControlConstantResidues",
+          "current_source_available": true,
+          "current_sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793316270707139494-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316270707139494-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793316270707139494-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.ControlResidueStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316270707139494-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlConstantResidues"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullFastControlConstantResidues"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:endpoints",
+      "status": "checked",
+      "manuscript_file": "08-multivariate-collapse-comparison/paper.tex",
+      "manuscript_line": 807,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+          "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualSparseEndpointComparison",
+          "current_source_available": true,
+          "current_sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+          "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualSparseEndpointComparison",
+          "current_source_available": true,
+          "current_sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793320317094052515-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793320317094052515-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793320317094052515-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.HeadEndpointStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793320317094052515-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSparseEndpointComparison"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSparseEndpointComparison"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:head-window",
+      "status": "checked",
+      "manuscript_file": "08-multivariate-collapse-comparison/paper.tex",
+      "manuscript_line": 906,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/HeadWindowTargets.lean",
+          "sha256": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualDifferentHeadWindow",
+          "current_source_available": true,
+          "current_sha256": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/HeadWindowTargets.lean",
+          "sha256": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualDifferentHeadWindow",
+          "current_source_available": true,
+          "current_sha256": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793320989919115950-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793320989919115950-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793320989919115950-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.HeadWindowStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793320989919115950-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualDifferentHeadWindow"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualDifferentHeadWindow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:prop:complete",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 121,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+          "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualHeadCompleteCount",
+          "current_source_available": true,
+          "current_sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean",
+          "sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualHeadCompleteCount",
+          "current_source_available": true,
+          "current_sha256": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793320317094052515-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793320317094052515-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793320317094052515-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.HeadCompleteCountStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793320317094052515-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualHeadCompleteCount"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualHeadCompleteCount"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:envelope",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 148,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+          "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullUniformResidueEnvelopes",
+          "current_source_available": true,
+          "current_sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/ControlResidueTargets.lean",
+          "sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullUniformResidueEnvelopes",
+          "current_source_available": true,
+          "current_sha256": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793316270707139494-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316270707139494-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793316270707139494-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.ControlResidueStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316270707139494-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullUniformResidueEnvelopes"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullUniformResidueEnvelopes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:fixed",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 207,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+          "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualFixedBudgetPartitionCount",
+          "current_source_available": true,
+          "current_sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean",
+          "sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualFixedBudgetPartitionCount",
+          "current_source_available": true,
+          "current_sha256": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793319734291867812-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793319734291867812-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793319734291867812-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.PrefixTraceSourceStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793319734291867812-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualFixedBudgetPartitionCount"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualFixedBudgetPartitionCount"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:period",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 235,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/RestrictedPartitionTargets.lean",
+          "sha256": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullRestrictedPartitionSufficientPeriod",
+          "current_source_available": true,
+          "current_sha256": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/RestrictedPartitionTargets.lean",
+          "sha256": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullRestrictedPartitionSufficientPeriod",
+          "current_source_available": true,
+          "current_sha256": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793317037244397780-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793317037244397780-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793317037244397780-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.RestrictedPartitionPeriodStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793317037244397780-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullRestrictedPartitionSufficientPeriod"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullRestrictedPartitionSufficientPeriod"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:transfer",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 267,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/GrowingBudgetTransferTargets.lean",
+          "sha256": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCongruentBudgetTransfer",
+          "current_source_available": true,
+          "current_sha256": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/GrowingBudgetTransferTargets.lean",
+          "sha256": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualCongruentBudgetTransfer",
+          "current_source_available": true,
+          "current_sha256": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793322729530751956-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793322729530751956-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793322729530751956-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.GrowingBudgetTransferStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793322729530751956-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCongruentBudgetTransfer"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualCongruentBudgetTransfer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:prop:omega-block",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 312,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/OmegaBlockTargets.lean",
+          "sha256": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualOmegaBlock",
+          "current_source_available": true,
+          "current_sha256": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/OmegaBlockTargets.lean",
+          "sha256": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualOmegaBlock",
+          "current_source_available": true,
+          "current_sha256": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793324854148884682-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793324854148884682-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793324854148884682-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.OmegaBlockStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793324854148884682-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOmegaBlock"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualOmegaBlock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:entry",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 353,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ThetaEntryTargets.lean",
+          "sha256": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualThetaEntry",
+          "current_source_available": true,
+          "current_sha256": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/ThetaEntryTargets.lean",
+          "sha256": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualThetaEntry",
+          "current_source_available": true,
+          "current_sha256": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793325538728784708-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793325538728784708-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793325538728784708-2.json",
+            "gate_module": "LogicLineages.OrdinalComparison.ThetaEntryStatementChecks"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793325538728784708-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualThetaEntry"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualThetaEntry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:matrix",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 401,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/BinarySourceTargets.lean",
+          "sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualSourceBinaryMatrix",
+          "current_source_available": true,
+          "current_sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793333908652394293-5.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793333908652394293-5.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinaryMatrix"
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:observer",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 418,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/BinaryObserverTargets.lean",
+          "sha256": "d293a5d5845304538c6e7a89e327a64b41d53753c93e4d569e1510c75f6e7a0c",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualSourceBinarySelectedParity",
+          "current_source_available": true,
+          "current_sha256": "d293a5d5845304538c6e7a89e327a64b41d53753c93e4d569e1510c75f6e7a0c",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793334492181831101-5.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793334492181831101-5.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedParity"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedCoefficient",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinarySelectedParity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:observable",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 437,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/BinarySourceTargets.lean",
+          "sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualSourceBinaryObservability",
+          "current_source_available": true,
+          "current_sha256": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793333908652394293-5.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793333908652394293-5.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceBinaryObservability"
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:local",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 469,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/CartierLaurentTargets.lean",
+          "sha256": "01d61ce79f314909e0f94a09a25696166d467a5797096d7600d885a1c9ea4d73",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierLaurentCoefficient",
+          "current_source_available": true,
+          "current_sha256": "01d61ce79f314909e0f94a09a25696166d467a5797096d7600d885a1c9ea4d73",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "additional_frozen_comparators",
+          "file": "LogicLineages/OrdinalComparison/CartierLocalTargets.lean",
+          "sha256": "6ca5ce6d15ece4e88442a563a5542fdded90b07848a4e0898fbb638b963d3eee",
+          "type": "LogicLineages.OrdinalComparison.Targets.ActualDifferentialCartierLocalPowers",
+          "verification_receipt": "build-reports/1793339006357541774-6.json",
+          "current_source_available": true,
+          "current_sha256": "6ca5ce6d15ece4e88442a563a5542fdded90b07848a4e0898fbb638b963d3eee",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793339362728483331-15.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793339362728483331-15.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierLaurentCoefficient"
+        },
+        {
+          "register_field": "additional_accepted_declarations",
+          "value": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualDifferentialCartierLocalPowers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:poles",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 497,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/BinaryPoleRemovalTargets.lean",
+          "sha256": "556388514d1e762c37293d56b2a46120457188114778c70b86b90f4ec800b390",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualBinaryHigherPoleRemoval",
+          "current_source_available": true,
+          "current_sha256": "556388514d1e762c37293d56b2a46120457188114778c70b86b90f4ec800b390",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793340729175994586-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793340729175994586-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualBinaryHigherPoleRemoval"
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:residue",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 545,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.lean",
+          "sha256": "e1be09291162f8504851f3544cbe5702636fcf21d320f1ffb41159d0483a3450",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualSourceResidue",
+          "current_source_available": true,
+          "current_sha256": "e1be09291162f8504851f3544cbe5702636fcf21d320f1ffb41159d0483a3450",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793337768746943997-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793337768746943997-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSourceResidue"
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:bounds",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 570,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/RealResidueBoundsTargets.lean",
+          "sha256": "3c12909e8b5281f4e7f4ab44c3c1fd4f920ddc100a3bf1030799db2d5febbbe0",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualLinkedResidueBounds",
+          "current_source_available": true,
+          "current_sha256": "3c12909e8b5281f4e7f4ab44c3c1fd4f920ddc100a3bf1030799db2d5febbbe0",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793336480468782333-6.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793336480468782333-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualLinkedResidueBounds"
+        }
+      ]
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:actual-period",
+      "status": "checked",
+      "manuscript_file": "10-collapse-descent-and-modular-counts/paper.tex",
+      "manuscript_line": 597,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/OrdinalComparison/ActualCartierPeriodTargets.lean",
+          "sha256": "49684087da467834f45e4a66e4295747ae8e6589ef649c146fd47cf8fcb80862",
+          "type": "LogicLineages.OrdinalComparison.Targets.FullActualSourceCartierPeriod",
+          "current_source_available": true,
+          "current_sha256": "49684087da467834f45e4a66e4295747ae8e6589ef649c146fd47cf8fcb80862",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793339763486558604-7.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793339763486558604-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualSourceCartierPeriod"
+        }
+      ]
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:thm:main",
+      "status": "checked",
+      "manuscript_file": "11-hyperreal-differentiation-domain/paper.tex",
+      "manuscript_line": 53,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/Ultrafilters/UltrapowerTargets.lean",
+          "sha256": "9c443a06b64e8a225c6e68980b0d7f0447c98a8d11d1ef784f9198f4f95e8341",
+          "type": "LogicLineages.Ultrafilters.Targets.UniversalUltrapowerProperness",
+          "current_source_available": true,
+          "current_sha256": "9c443a06b64e8a225c6e68980b0d7f0447c98a8d11d1ef784f9198f4f95e8341",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793268560936460551-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793268560936460551-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.Ultrafilters.StatementChecks.fixed_universal_ultrapower_properness"
+        }
+      ]
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:prop:well-defined",
+      "status": "checked",
+      "manuscript_file": "11-hyperreal-differentiation-domain/paper.tex",
+      "manuscript_line": 115,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/Ultrafilters/DomainDerivationTargets.lean",
+          "sha256": "3ed1a3265406fdb008e6cd04cb6d4c349f227fd817677f621570088a3bc699ab",
+          "type": "LogicLineages.Ultrafilters.Targets.DomainDerivation",
+          "current_source_available": true,
+          "current_sha256": "3ed1a3265406fdb008e6cd04cb6d4c349f227fd817677f621570088a3bc699ab",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793271372816784204-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793271372816784204-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.Ultrafilters.StatementChecks.fixed_domain_derivation"
+        }
+      ]
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:lem:obstruction",
+      "status": "checked",
+      "manuscript_file": "11-hyperreal-differentiation-domain/paper.tex",
+      "manuscript_line": 144,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/Ultrafilters/Targets.lean",
+          "sha256": "c370390ba1f97a52c34e212a93fe89a1352f16769ce90245a50be556e8c2de70",
+          "type": "LogicLineages.Ultrafilters.Targets.PersistentDiscontinuity",
+          "current_source_available": true,
+          "current_sha256": "c370390ba1f97a52c34e212a93fe89a1352f16769ce90245a50be556e8c2de70",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793248512746215813-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793248512746215813-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.Ultrafilters.StatementChecks.fixed_persistent_discontinuity"
+        }
+      ]
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:lem:push",
+      "status": "checked",
+      "manuscript_file": "11-hyperreal-differentiation-domain/paper.tex",
+      "manuscript_line": 186,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/Ultrafilters/TranslationTargets.lean",
+          "sha256": "0f893ba03dcae7b351176228ed2fd7489d28d986c3018f59efb2ff4fddf7c248",
+          "type": "LogicLineages.Ultrafilters.Targets.CoordinateImageDichotomy",
+          "current_source_available": true,
+          "current_sha256": "0f893ba03dcae7b351176228ed2fd7489d28d986c3018f59efb2ff4fddf7c248",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793248512746215813-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793248512746215813-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.Ultrafilters.StatementChecks.fixed_coordinate_image_dichotomy"
+        }
+      ]
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:lem:length",
+      "status": "checked",
+      "manuscript_file": "11-hyperreal-differentiation-domain/paper.tex",
+      "manuscript_line": 244,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/Ultrafilters/HamelTargets.lean",
+          "sha256": "66249b803fdd14a27d408726667f7e7d3f92d7835def88a7af8098a88dc521ba",
+          "type": "LogicLineages.Ultrafilters.Targets.HamelLengthEscapes",
+          "current_source_available": true,
+          "current_sha256": "66249b803fdd14a27d408726667f7e7d3f92d7835def88a7af8098a88dc521ba",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793249317002870997-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793249317002870997-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.Ultrafilters.StatementChecks.fixed_hamel_length_escapes"
+        }
+      ]
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:corollary-6",
+      "status": "checked",
+      "manuscript_file": "11-hyperreal-differentiation-domain/paper.tex",
+      "manuscript_line": 273,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/Ultrafilters/DomainCorollaryTargets.lean",
+          "sha256": "f242a6d809eb17d99a0ca724070ecac0c2e116618987178d573a2cb5db13272b",
+          "type": "LogicLineages.Ultrafilters.Targets.DomainCorollary",
+          "current_source_available": true,
+          "current_sha256": "f242a6d809eb17d99a0ca724070ecac0c2e116618987178d573a2cb5db13272b",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793272760175155094-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793272760175155094-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.Ultrafilters.StatementChecks.fixed_domain_corollary"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:thm:classification",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 53,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/ClassificationTargets.lean",
+          "sha256": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+          "type": "LogicLineages.RL.Policy.Targets.Classification",
+          "current_source_available": true,
+          "current_sha256": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793284430421831483-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793284430421831483-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_classification"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:lem:affine",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 158,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/PolicyTargets.lean",
+          "sha256": "34a3294502f5166263fbc66c601093f3ceea1940265d542d45143a9717e3028b",
+          "type": "LogicLineages.RL.Policy.Targets.AffineValue",
+          "current_source_available": true,
+          "current_sha256": "34a3294502f5166263fbc66c601093f3ceea1940265d542d45143a9717e3028b",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793276439508088598-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793276439508088598-6.json"
+        },
+        {
+          "register_field": "semantic_foundations_receipt",
+          "original_reference": "build-reports/1793276786574134652-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793276786574134652-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_affine_value"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:positive",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 191,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/PositiveTransformationTargets.lean",
+          "sha256": "509d14de656cea8d80bd34925af9fbc278cf219f9a4d4512bddf2a0112ef2993",
+          "type": "LogicLineages.RL.Policy.Targets.PositiveTransformation",
+          "current_source_available": true,
+          "current_sha256": "509d14de656cea8d80bd34925af9fbc278cf219f9a4d4512bddf2a0112ef2993",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793279726045089136-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793279726045089136-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_positiveTransformation"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:lem:separator",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 234,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/SeparatorTargets.lean",
+          "sha256": "c58c9bc8deefc47faef68602ccfa16d900d72df19dc65083fedd5e6685cd00a0",
+          "type": "LogicLineages.RL.Policy.Targets.TwoValueSeparator",
+          "current_source_available": true,
+          "current_sha256": "c58c9bc8deefc47faef68602ccfa16d900d72df19dc65083fedd5e6685cd00a0",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793283759280556470-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793283759280556470-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_twoValueSeparator"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:lem:mixture",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 290,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/MixtureTargets.lean",
+          "sha256": "9bc5488189db3404e7032764b23f549630711d0e8ea74837e1af732b804fb3e9",
+          "type": "LogicLineages.RL.Policy.Targets.BehavioralMixtureValue",
+          "current_source_available": true,
+          "current_sha256": "9bc5488189db3404e7032764b23f549630711d0e8ea74837e1af732b804fb3e9",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793283447388969557-7.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793283447388969557-7.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_behavioralMixtureValue"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:negative",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 317,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/ClassificationTargets.lean",
+          "sha256": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+          "type": "LogicLineages.RL.Policy.Targets.NegativeTransformation",
+          "current_source_available": true,
+          "current_sha256": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793284333873120566-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793284333873120566-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_negativeTransformation"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:noncomposition",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 366,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/Targets.lean",
+          "sha256": "67f413a2947c9e40c483c1af6ede32449b396484d86617aefbc2c31ebe3f18b5",
+          "type": "LogicLineages.RL.Targets.NaturalCompositionFails",
+          "current_source_available": true,
+          "current_sha256": "67f413a2947c9e40c483c1af6ede32449b396484d86617aefbc2c31ebe3f18b5",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793248443025567130-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793248443025567130-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.StatementChecks.fixed_composition_counterexample"
+        }
+      ]
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:cross",
+      "status": "checked",
+      "manuscript_file": "13-reinforcement-learning-transformations/paper.tex",
+      "manuscript_line": 404,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/RL/CrossTargets.lean",
+          "sha256": "e5167b42ef549940f45e42ab4b47cf55053e3748bad3abc2b6d06bd4881364ed",
+          "type": "LogicLineages.RL.Policy.Targets.CrossFromDeterministicRewards",
+          "current_source_available": true,
+          "current_sha256": "e5167b42ef549940f45e42ab4b47cf55053e3748bad3abc2b6d06bd4881364ed",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793285539025721274-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793285539025721274-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.RL.Policy.StatementChecks.fixed_crossFromDeterministicRewards"
+        }
+      ]
+    },
+    {
+      "id": "14-complexity-of-prediction-measures:lem:learning",
+      "status": "checked",
+      "manuscript_file": "14-complexity-of-prediction-measures/paper.tex",
+      "manuscript_line": 169,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/PredictionLearning.lean",
+          "sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.PredictionLearning.Target",
+          "current_source_available": true,
+          "current_sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ComputabilityKnowledge/Comparators/PredictionLearning.lean",
+          "sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+          "type": "LogicLineages.ComputabilityKnowledge.Comparators.PredictionLearning.Target",
+          "current_source_available": true,
+          "current_sha256": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793310756664606427-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793310756664606427-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793310756664606427-2.json",
+            "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionLearningGate"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793310756664606427-2.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_learning"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ComputabilityKnowledge.StatementChecks.prediction_learning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14-complexity-of-prediction-measures:lem:list",
+      "status": "checked",
+      "manuscript_file": "14-complexity-of-prediction-measures/paper.tex",
+      "manuscript_line": 374,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ComputabilityKnowledge/PredictionSecondJumpTargets.lean",
+          "sha256": "9c5f83508aa7370d9dbda8a756ab4dc0ca79e54085a5e8f927100b1729e3f1f7",
+          "type": "LogicLineages.ComputabilityKnowledge.PredictionSecondJumpTargets.FullCanonicalList",
+          "current_source_available": true,
+          "current_sha256": "9c5f83508aa7370d9dbda8a756ab4dc0ca79e54085a5e8f927100b1729e3f1f7",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793350737425114042-17.json",
+          "available_in_current_workspace": true,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793350737425114042-17.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ComputabilityKnowledge.StatementChecks.fullCanonicalList"
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:constants",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 90,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/RationalTargets.lean",
+          "sha256": "07ad42bbf979e7e571bf7c1f2f0f58e925c9ef7b4d67ac180b9bf734169c5e04",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.algebraicConstantsOfIntegerDerivation",
+          "current_source_available": true,
+          "current_sha256": "07ad42bbf979e7e571bf7c1f2f0f58e925c9ef7b4d67ac180b9bf734169c5e04",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793267920121505395-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793267920121505395-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.algebraicConstantsOfIntegerDerivation"
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:thm:orderone",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 119,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneTargets.lean",
+          "sha256": "749286b15712a271503577d3d91a869ba504af5f339303e1826f89d28abfe1b7",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneCriterion",
+          "current_source_available": true,
+          "current_sha256": "749286b15712a271503577d3d91a869ba504af5f339303e1826f89d28abfe1b7",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793292467179457239-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793292467179457239-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneCriterion"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneNonzeroSpecialization",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneZeroSpecialization",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneCriterion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:curve",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 130,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/CurveIsomorphismTargets.lean",
+          "sha256": "3139b21b6f479e35c9e772a49cb3525fce3cfe570367cc3f8454e511b6b8dcd0",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.curveDesignatedRootIsomorphism",
+          "current_source_available": true,
+          "current_sha256": "3139b21b6f479e35c9e772a49cb3525fce3cfe570367cc3f8454e511b6b8dcd0",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793285066583542082-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793285066583542082-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_curveDesignatedRootIsomorphism"
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:genericcurve",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 164,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/GenericCurveTargets.lean",
+          "sha256": "b0b78896c657fde983ef063a3c0a8e71ed803091a29cdfa48e8514630c804613",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.genericCurveAvoidance",
+          "current_source_available": true,
+          "current_sha256": "b0b78896c657fde983ef063a3c0a8e71ed803091a29cdfa48e8514630c804613",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793286243686949891-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793286243686949891-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_genericCurveAvoidance"
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:cor:algorithmone",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 213,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmInputCoverage",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmInputCoverage",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSpecialization",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSearchCorrect",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSearchTotal",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmSearchPartialRecursive",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean",
+          "sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.orderOneAlgorithmComputableRealization",
+          "current_source_available": true,
+          "current_sha256": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793312355139431800-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793312355139431800-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793312355139431800-2.json",
+            "gate_module": "LogicLineages.ModelsAlgebra.Differential.OrderOneAlgorithmStatementChecks",
+            "receipt_sha256": "617f513568c7937ae7eabcbd6cf3b01ef9076d8ca12e8e2e4f75096a7e03e840",
+            "log": "build-reports/1793312355139431800-2-LogicLineages-ModelsAlgebra-Differential-OrderOneAlgorithmStatementChecks.log",
+            "log_sha256": "521fc99faeee6f40ed9f9b25505746ae4fb6894fa6ecd7f2bf1b02b8b35601b5"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793312355139431800-2.json",
+          "original_log_available_in_current_workspace": false
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmComputableRealization"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmInputCoverage",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSpecialization",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchCorrect",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchTotal",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmSearchPartialRecursive",
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_orderOneAlgorithmComputableRealization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:thm:spectral",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 263,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/SpectralConstraintTargets.lean",
+          "sha256": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralConstraintComplete",
+          "current_source_available": true,
+          "current_sha256": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/SpectralConstraintTargets.lean",
+          "sha256": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralConstraintComplete",
+          "current_source_available": true,
+          "current_sha256": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793316582215125170-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316582215125170-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793316582215125170-2.json",
+            "gate_module": "LogicLineages.ModelsAlgebra.Differential.SpectralConstraintStatementChecks",
+            "receipt_sha256": "a2704ef895a2d0649845154a076def332ab60a8951ed20c161c42f05643a2ad6",
+            "log": "build-reports/1793316582215125170-2-LogicLineages-ModelsAlgebra-Differential-SpectralConstraintStatementChecks.log",
+            "log_sha256": "ce5a806e739e834b69ac64882a1421d639806e72a8826ccd870a3c4f1d2256fe"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793316582215125170-2.json",
+          "original_log_available_in_current_workspace": false
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralConstraintComplete"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralConstraintComplete"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:weights",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 296,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/AlgebraicBaseTargets.lean",
+          "sha256": "a85bce9c7dff78eb870dc9ba784bab4c63ef41627abd41c32fba8492e444ab22",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.splittingFieldSpectralIndependence",
+          "current_source_available": true,
+          "current_sha256": "a85bce9c7dff78eb870dc9ba784bab4c63ef41627abd41c32fba8492e444ab22",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793270985909994801-6.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793270985909994801-6.json"
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.splitting_field_spectral_independence"
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:genericjets",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 322,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteTargets.lean",
+          "sha256": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralGenericJetsComplete",
+          "current_source_available": true,
+          "current_sha256": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteTargets.lean",
+          "sha256": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.spectralGenericJetsComplete",
+          "current_source_available": true,
+          "current_sha256": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793315738788197863-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315738788197863-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793315738788197863-2.json",
+            "gate_module": "LogicLineages.ModelsAlgebra.Differential.GenericJetsCompleteStatementChecks",
+            "receipt_sha256": "200e0d60a8c9fc829c94ef26ca7a572511e637df84118568c7bb53965afa5d6f",
+            "log": "build-reports/1793315738788197863-2-LogicLineages-ModelsAlgebra-Differential-GenericJetsCompleteStatementChecks.log",
+            "log_sha256": "3029d7538fd62aca23e72b965466b35b38f23d7f0a6bef571390edef6bb6c9da"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793315738788197863-2.json",
+          "original_log_available_in_current_workspace": false
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGenericJetsComplete"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_spectralGenericJetsComplete"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:prop:cyclotomic",
+      "status": "checked",
+      "manuscript_file": "15-differential-field-constraint-decisions/paper.tex",
+      "manuscript_line": 417,
+      "comparators": [
+        {
+          "register_field": "frozen_comparator",
+          "file": "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteTargets.lean",
+          "sha256": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.cyclotomicFullSource",
+          "current_source_available": true,
+          "current_sha256": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        },
+        {
+          "register_field": "frozen_comparators",
+          "file": "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteTargets.lean",
+          "sha256": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+          "type": "LogicLineages.ModelsAlgebra.Differential.Targets.cyclotomicFullSource",
+          "current_source_available": true,
+          "current_sha256": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6",
+          "current_hash_matches": true,
+          "in_final_root_import_closure": true
+        }
+      ],
+      "original_receipt_references": [
+        {
+          "register_field": "verification_receipt",
+          "original_reference": "build-reports/1793324961868888828-2.json",
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793324961868888828-2.json"
+        },
+        {
+          "register_field": "verification_receipts",
+          "original_reference": {
+            "file": "build-reports/1793324961868888828-2.json",
+            "gate_module": "LogicLineages.ModelsAlgebra.Differential.CyclotomicCompleteStatementChecks",
+            "receipt_sha256": "4f31f7d7cd9cc75bc93dcc5e3be2612042ef218b53b44a1a1e1ed7f80e81b584",
+            "log": "build-reports/1793324961868888828-2-LogicLineages-ModelsAlgebra-Differential-CyclotomicCompleteStatementChecks.log",
+            "log_sha256": "b2f346de4b6fcdb01806c90eeeeacf2868a1172dbb4641d0e2660f1cc8ceaab7"
+          },
+          "available_in_current_workspace": false,
+          "availability_note": "Availability check only; original historical receipt identity is preserved.",
+          "resolved_relative_path": "build-reports/1793324961868888828-2.json",
+          "original_log_available_in_current_workspace": false
+        }
+      ],
+      "explicit_accepted_declarations": [
+        {
+          "register_field": "accepted_declaration",
+          "value": "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicFullSource"
+        },
+        {
+          "register_field": "accepted_declarations",
+          "value": [
+            "LogicLineages.ModelsAlgebra.Differential.StatementChecks.fixed_cyclotomicFullSource"
+          ]
+        }
+      ]
+    }
+  ],
+  "missing_unique_receipt_paths": 51,
+  "unique_receipt_paths": 80,
+  "statements_with_missing_original_receipts": 55,
+  "current_validation": {
+    "recorded_utc": "2026-10-30T14:32:07.855647+00:00",
+    "root_artifact": "verification/external-checkpoint-705-2026-10-30.json",
+    "root_artifact_sha256": "def6b9138a9461fb924c557cb917665add94eb8ab150a7caf7c6fa9f481ae769",
+    "root_sha256": "929e4e452b0ac7030d65fea939fbc0f1eb2d57debe686a77329ca71792eafd4b",
+    "root_gate_count": 705,
+    "root_source_count": 2513,
+    "note": "The selected root and its full local import closure were validated at the exact current source hashes. See separate final targeted-recheck evidence for directly recompiled versus cached modules.",
+    "targeted_recheck_artifact": "verification/final-targeted-recheck-2026-10-30.json",
+    "targeted_recheck_artifact_sha256": "342d4f3044bd3f8dab35ff06210e4c750503865420c5be71b8aa0e01caa91d55"
+  }
+}

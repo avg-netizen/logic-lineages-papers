@@ -339,8 +339,10 @@ recursive comparison call rules or instantiate all source D_sigma domains.
 Ordinary focused checks retain the explicit 2048 MiB heap / 1536 MiB RSS /
 2048 MiB available-memory profile. Verified import-only RSS stops required
 separately recorded 2560/2048/3072 MiB exceptions for selected heavy closures.
-A combined-root stop just above 2048 MiB RSS led to the bounded aggregate-only
-3072 MiB heap / 2560 MiB RSS / 4096 MiB available-memory profile. CPU, wall,
+A combined-root stop just above 2048 MiB RSS led to the bounded aggregate
+3072 MiB heap / 2560 MiB RSS / 4096 MiB available-memory profile. Separately
+measured algebraic-closure imports in ResidueTuple and ActualCartierPeriod also
+received that narrowly scoped profile; it is not the default focused profile. CPU, wall,
 single-thread and memory-floor guards remain unchanged; failed outputs are
 invalidated and failed receipts retained. No mathematical failure was inferred
 from those resource stops.
@@ -465,3 +467,27 @@ The register is now 85 checked, two inherited and 91 pending. The full original
 positive-expression finite-zero theorem and range-cells lemma are new numbered
 completions. Genuine closed diagonal construction and finite all-ordinal
 filtration-preserving extensions remain carefully scoped supplier results.
+
+## Final accepted cutoff and verification
+
+See the [final handoff](HANDOFF-2026-10-30.md) for the current source scope and
+remaining obligations. The final selected root has 705 exact gates, 2,513 local
+source files with unchanged hashes, and 2,020 audited declarations using only
+the usual foundations. The register is 85 checked, two inherited and 91 pending.
+
+The final bounded verification pass directly recompiled all 1,736 distinct
+source modules in the 479 continuation acceptance records plus 189 additional
+baseline gates (1,925 total), then recompiled the whole selected root. Other
+unchanged dependencies remained cached; this is not a fresh-all closure claim.
+A preserved resource-only attempt selected too-low RSS for ResidueTuple; it
+passed unchanged at its already-authorized scoped profile. No source, target,
+CPU/wall/thread guard, toolchain or CI configuration was changed for the retry.
+
+- [Final root evidence](verification/external-checkpoint-705-2026-10-30.json)
+- [Complete targeted-recheck index](verification/final-targeted-recheck-2026-10-30.json)
+- [Current comparator/historical-receipt inventory](verification/final-register-validation-2026-10-30.json)
+
+Historical receipt paths missing from the fresh checkout remain historical
+identities; current evidence is linked separately rather than fabricating those
+files. Mathematical authoring is closed for this run. Publication and final
+handoff are completed for the requested 15:00 UTC / 10:00 UTC−05 cutoff.

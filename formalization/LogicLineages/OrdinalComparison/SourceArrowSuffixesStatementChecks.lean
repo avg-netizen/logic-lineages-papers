@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceArrowSuffixesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_exactArrowSuffixEnumeration : LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesTargets.ExactArrowSuffixEnumeration :=
+  LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesProof.exactArrowSuffixEnumeration
+
+theorem fixed_arrowSuffixSubtypes : LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesTargets.ArrowSuffixSubtypes :=
+  LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesProof.arrowSuffixSubtypes
+
+theorem fixed_arrowSuffixStrictSize : LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesTargets.ArrowSuffixStrictSize :=
+  LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesProof.arrowSuffixStrictSize
+
+theorem fixed_arrowSuffixNoDuplicates : LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesTargets.ArrowSuffixNoDuplicates :=
+  LogicLineages.OrdinalComparison.Source.SourceArrowSuffixesProof.arrowSuffixNoDuplicates
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

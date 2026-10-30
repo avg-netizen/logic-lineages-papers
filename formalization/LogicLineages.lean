@@ -703,6 +703,10 @@ public import LogicLineages.OrdinalComparison.SourceTypedPortsStatementChecks
 public import LogicLineages.OrdinalComparison.SparseSignedCollectedStatementChecks
 public import LogicLineages.OrdinalComparison.SparseSignedNumericalStatementChecks
 public import LogicLineages.OrdinalComparison.SparseSignedOrientationStatementChecks
+public import LogicLineages.OrdinalComparison.FiniteCoefficientCodingStatementChecks
+public import LogicLineages.OrdinalComparison.PositiveUnaryIdentityStatementChecks
+public import LogicLineages.OrdinalComparison.SourceArrowSuffixesStatementChecks
+public import LogicLineages.OrdinalComparison.SourceCoherentRestrictionStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

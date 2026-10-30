@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.FiniteCoefficientCodingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_finiteCoefficientCodingPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.FiniteCoefficientCodingPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.finiteCoefficientCodingPrimitiveRecursive
+
+theorem fixed_finiteCoefficientSlopeCalibration : LogicLineages.OrdinalComparison.Targets.FiniteCoefficientSlopeCalibration :=
+  LogicLineages.OrdinalComparison.finiteCoefficientSlopeCalibration
+
+theorem fixed_finiteCoefficientFamilySeparation : LogicLineages.OrdinalComparison.Targets.FiniteCoefficientFamilySeparation :=
+  LogicLineages.OrdinalComparison.finiteCoefficientFamilySeparation
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

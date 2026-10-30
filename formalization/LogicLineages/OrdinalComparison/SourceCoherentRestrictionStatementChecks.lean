@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceCoherentRestrictionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_restrictionCoherence : LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionTargets.RestrictionCoherence :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionProof.restrictionCoherence
+
+theorem fixed_rawRestrictionLattice : LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionTargets.RawRestrictionLattice :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionProof.rawRestrictionLattice
+
+theorem fixed_actualCoherentRestrictionHom : LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionTargets.ActualCoherentRestrictionHom :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionProof.actualCoherentRestrictionHom
+
+theorem fixed_finiteRestrictionMembership : LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionTargets.FiniteRestrictionMembership :=
+  LogicLineages.OrdinalComparison.Source.SourceCoherentRestrictionProof.finiteRestrictionMembership
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison
