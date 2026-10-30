@@ -120,6 +120,54 @@ axiom closures. New proof authoring follows exact target compilation and freeze.
 Only `propext`, `Classical.choice` and `Quot.sound` are allowed. No missing theorem
 is inserted as an axiom, oracle, correctness field or extra premise.
 
+## Further checked suppliers and held source obligations
+
+- Paper 01: actual quotient direct limits, injective stages, countability,
+  Pi2 preservation and finite-short-block shift constructions now prove the
+  no-Pi2 Scott obstruction for the explicit source normal forms, including the
+  finite upper factor. Arbitrary bounded-group decomposition and upper
+  categoricity remain separate missing dependencies. Coordinate filtrations
+  and cyclic socles are being developed without assuming that decomposition.
+- Paper 03: actual forbidden-class nonemptiness/empty-carrier checks and the
+  countably infinite width-one/two/three age realizations are checked. These
+  do not fill the general decision-theorem gap.
+- Paper 10: the actual binary finite-state Cartier cycle transfers through
+  injective coefficient extension to the original algebraic-closure-valued
+  source differential. This proves positive eventual complete-state cycles;
+  it does not assert the scalar observed bit stream has the same least period.
+- Paper 12: standard-N instantiation/induction, faithful full-language term and
+  formula codecs, context-valid primitive-recursive syntax validation, and
+  free-support/selector calibration are checked. DCB, arithmetized provability,
+  fixed points and the six numbered source claims remain pending.
+- Paper 14: the literal finite-elimination baseline, self-history reconstruction
+  and actual compiled-policy learning theorem are checked under explicit
+  eventual bounded-observation availability. Evaluation fuel is not identified
+  with the source's tape-runtime bound. The structural canonical list of least
+  total-program representatives is checked, but its claimed double-jump
+  computability is not supplied by a noncomputable enumeration.
+- Paper 07: the genuine retained-mass suffix/kernel trace is calibrated against
+  the actual controlled count. Later kernel claims remain separately gated.
+
+### Held paper 05 abstraction convention
+
+The source uses literal binary syntax for whole-free-first partials, while the
+finite sums in zero-history abstraction do not fix their binary association or
+an AST-level zero-elision convention. The original source is
+[Wilken-Weiermann, arXiv:1203.0115](https://arxiv.org/pdf/1203.0115),
+Definitions 2.1, 2.6, 2.18 and 3.1; local foundations.tex explicitly fixes the box
+tail association but not the abstraction sums. Ordinal-value equality alone
+cannot resolve this: a direct calculation from the recursive clauses gives
+size 3 for x+(1+1), but size 5 for (x+1)+1 when x is the active component.
+This observation is not presented as a separately kernel-checked counterexample,
+nor as a disproof of termination or an assertion that both parses arise from a
+specific canonical source input.
+
+The literal abstraction/canonical-assignment claim is held pending an explicit
+source representation convention or the necessary generated-source invariance
+proof. No manuscript was changed and no convenient normalization was silently
+selected. The checked typed-component, literal-partial, generated-grade/support,
+box and prime/application suppliers remain valid independently.
+
 ## Local resource profiles
 
 Ordinary focused checks retain the explicit 2048 MiB heap / 1536 MiB RSS /
@@ -166,3 +214,11 @@ local source hashes were unchanged. See
 [checkpoint evidence](verification/external-checkpoint-349-2026-10-30.json).
 The register has 69 checked numbered statements, two inherited results and 107
 pending statements. Fourteen numbered statements have been added this round.
+
+## Fifth cumulative checkpoint
+
+The selected 382-gate root passed its 1,176-declaration axiom audit. All 1,361
+local source hashes were unchanged, including the original baseline closure. See
+[checkpoint evidence](verification/external-checkpoint-382-2026-10-30.json).
+The numbered register remains 69 checked, two inherited and 107 pending; the new
+work in this checkpoint consists of explicitly distinguished source suppliers.

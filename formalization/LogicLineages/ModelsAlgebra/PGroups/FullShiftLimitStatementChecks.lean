@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.FullShiftLimit
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.FullShiftLimitStatementChecks
+
+theorem fixed_full_shift_limit_socle_roots : LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftLimitSocleRoots :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.full_shift_limit_socle_roots
+
+theorem fixed_full_shift_limit_not_isomorphic : LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftLimitNotIsomorphic :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.full_shift_limit_not_isomorphic
+
+theorem fixed_full_shift_no_pi_two_scott : LogicLineages.ModelsAlgebra.PGroups.Targets.groupFullShiftNoPiTwoScott :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.full_shift_no_pi_two_scott
+
+theorem fixed_source_finite_blocks_no_pi_two_scott : LogicLineages.ModelsAlgebra.PGroups.Targets.groupSourceFiniteBlocksNoPiTwoScott :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.source_finite_blocks_no_pi_two_scott
+
+end LogicLineages.ModelsAlgebra.PGroups.FullShiftLimitStatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups

@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem ordinaryNumberingCalibration : LogicLineages.ComputabilityKnowledge.PredictionCanonicalListTargets.OrdinaryNumberingCalibration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof.ordinaryNumberingCalibration
+
+theorem uniqueLeastRepresentative : LogicLineages.ComputabilityKnowledge.PredictionCanonicalListTargets.UniqueLeastRepresentative :=
+  LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof.uniqueLeastRepresentative
+
+theorem infinitelyManyRepresentatives : LogicLineages.ComputabilityKnowledge.PredictionCanonicalListTargets.InfinitelyManyRepresentatives :=
+  LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof.infinitelyManyRepresentatives
+
+theorem strictCanonicalEnumeration : LogicLineages.ComputabilityKnowledge.PredictionCanonicalListTargets.StrictCanonicalEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof.strictCanonicalEnumeration
+
+theorem exhaustiveCanonicalCodes : LogicLineages.ComputabilityKnowledge.PredictionCanonicalListTargets.ExhaustiveCanonicalCodes :=
+  LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof.exhaustiveCanonicalCodes
+
+theorem exhaustiveTotalComputableFunctions : LogicLineages.ComputabilityKnowledge.PredictionCanonicalListTargets.ExhaustiveTotalComputableFunctions :=
+  LogicLineages.ComputabilityKnowledge.PredictionCanonicalListProof.exhaustiveTotalComputableFunctions
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

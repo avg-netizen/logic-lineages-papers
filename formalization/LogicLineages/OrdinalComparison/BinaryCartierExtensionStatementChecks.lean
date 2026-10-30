@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.BinaryCartierExtensionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualBinaryRationalExtensionInjective : LogicLineages.OrdinalComparison.Targets.ActualBinaryRationalExtensionInjective :=
+  LogicLineages.OrdinalComparison.actualBinaryRationalExtensionInjective
+
+theorem fixed_actualBinaryRationalExtensionPolynomial : LogicLineages.OrdinalComparison.Targets.ActualBinaryRationalExtensionPolynomial :=
+  LogicLineages.OrdinalComparison.actualBinaryRationalExtensionPolynomial
+
+theorem fixed_actualBinaryRationalExtensionCartier : LogicLineages.OrdinalComparison.Targets.ActualBinaryRationalExtensionCartier :=
+  LogicLineages.OrdinalComparison.actualBinaryRationalExtensionCartier
+
+theorem fixed_actualBinaryRationalExtensionLinked : LogicLineages.OrdinalComparison.Targets.ActualBinaryRationalExtensionLinked :=
+  LogicLineages.OrdinalComparison.actualBinaryRationalExtensionLinked
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

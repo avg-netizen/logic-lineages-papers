@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowSyntaxValidationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem gorbow_syntax_validation : LogicLineages.ComputabilityKnowledge.Comparators.GorbowSyntaxValidation.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowSyntaxValidationProof.gorbowSyntaxValidation
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

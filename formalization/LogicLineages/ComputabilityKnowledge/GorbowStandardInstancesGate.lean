@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowStandardInstancesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem gorbow_standard_instances : LogicLineages.ComputabilityKnowledge.Comparators.GorbowStandardInstances.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowStandardInstancesProof.gorbowStandardInstances
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.LinkedCartierCycleProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualLinkedCartierInitialProper : LogicLineages.OrdinalComparison.Targets.ActualLinkedCartierInitialProper :=
+  LogicLineages.OrdinalComparison.actualLinkedCartierInitialProper
+
+theorem fixed_actualSourceCartierEventualCycle : LogicLineages.OrdinalComparison.Targets.ActualSourceCartierEventualCycle :=
+  LogicLineages.OrdinalComparison.actualSourceCartierEventualCycle
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.WWGeneratedSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualGeneratedComponentIndex : LogicLineages.OrdinalComparison.Source.Targets.ActualGeneratedComponentIndex :=
+  LogicLineages.OrdinalComparison.Source.actualGeneratedComponentIndex
+
+theorem fixed_actualGeneratedHeadFreeAbove : LogicLineages.OrdinalComparison.Source.Targets.ActualGeneratedHeadFreeAbove :=
+  LogicLineages.OrdinalComparison.Source.actualGeneratedHeadFreeAbove
+
+theorem fixed_actualGeneratedGroundPositiveClosed : LogicLineages.OrdinalComparison.Source.Targets.ActualGeneratedGroundPositiveClosed :=
+  LogicLineages.OrdinalComparison.Source.actualGeneratedGroundPositiveClosed
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

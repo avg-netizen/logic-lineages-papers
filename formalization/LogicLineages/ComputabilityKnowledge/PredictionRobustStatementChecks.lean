@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRobustProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem leastEligibleSelection : LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.LeastEligibleSelection :=
+  LogicLineages.ComputabilityKnowledge.PredictionRobustProof.leastEligibleSelection
+
+theorem wrongSelectionExcluded : LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.WrongSelectionExcluded :=
+  LogicLineages.ComputabilityKnowledge.PredictionRobustProof.wrongSelectionExcluded
+
+theorem trueProgramEventuallyEligible : LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.TrueProgramEventuallyEligible :=
+  LogicLineages.ComputabilityKnowledge.PredictionRobustProof.trueProgramEventuallyEligible
+
+theorem robustBoundedObservations : LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.RobustBoundedObservations :=
+  LogicLineages.ComputabilityKnowledge.PredictionRobustProof.robustBoundedObservations
+
+theorem primitiveRecursiveBaseline : LogicLineages.ComputabilityKnowledge.PredictionRobustTargets.PrimitiveRecursiveBaseline :=
+  LogicLineages.ComputabilityKnowledge.PredictionRobustProof.primitiveRecursiveBaseline
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

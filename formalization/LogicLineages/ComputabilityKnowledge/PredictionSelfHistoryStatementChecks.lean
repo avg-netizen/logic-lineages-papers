@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem reconstructionLengths : LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryTargets.ReconstructionLengths :=
+  LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryProof.reconstructionLengths
+
+theorem reconstructionAppend : LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryTargets.ReconstructionAppend :=
+  LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryProof.reconstructionAppend
+
+theorem actualHistoryCalibration : LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryTargets.ActualHistoryCalibration :=
+  LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryProof.actualHistoryCalibration
+
+theorem primitiveRecursiveSelfPolicy : LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryTargets.PrimitiveRecursiveSelfPolicy :=
+  LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryProof.primitiveRecursiveSelfPolicy
+
+theorem ordinarySelfPolicyProgram : LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryTargets.OrdinarySelfPolicyProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionSelfHistoryProof.ordinarySelfPolicyProgram
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

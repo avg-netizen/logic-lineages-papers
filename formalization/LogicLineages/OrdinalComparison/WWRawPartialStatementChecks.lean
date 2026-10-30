@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.WWRawPartialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualTypedHeadReplacementCalibration : LogicLineages.OrdinalComparison.Source.Targets.ActualTypedHeadReplacementCalibration :=
+  LogicLineages.OrdinalComparison.Source.actualTypedHeadReplacementCalibration
+
+theorem fixed_actualRawPartialErasureCalibration : LogicLineages.OrdinalComparison.Source.Targets.ActualRawPartialErasureCalibration :=
+  LogicLineages.OrdinalComparison.Source.actualRawPartialErasureCalibration
+
+theorem fixed_actualRawPartialHeadFreeRecovery : LogicLineages.OrdinalComparison.Source.Targets.ActualRawPartialHeadFreeRecovery :=
+  LogicLineages.OrdinalComparison.Source.actualRawPartialHeadFreeRecovery
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

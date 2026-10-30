@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem gorbow_formula_prefix_code : LogicLineages.ComputabilityKnowledge.Comparators.GorbowFormulaPrefixCode.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCodeProof.gorbowFormulaPrefixCode
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

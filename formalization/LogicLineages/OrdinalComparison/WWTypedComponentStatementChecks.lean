@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.WWTypedComponentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualTypedOrdinalVariableVector : LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalVariableVector :=
+  LogicLineages.OrdinalComparison.Source.actualTypedOrdinalVariableVector
+
+theorem fixed_actualTypedOrdinalRenaming : LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalRenaming :=
+  LogicLineages.OrdinalComparison.Source.actualTypedOrdinalRenaming
+
+theorem fixed_actualTypedOrdinalVectorRenaming : LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalVectorRenaming :=
+  LogicLineages.OrdinalComparison.Source.actualTypedOrdinalVectorRenaming
+
+theorem fixed_actualTypedOrdinalHeadClosure : LogicLineages.OrdinalComparison.Source.Targets.ActualTypedOrdinalHeadClosure :=
+  LogicLineages.OrdinalComparison.Source.actualTypedOrdinalHeadClosure
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

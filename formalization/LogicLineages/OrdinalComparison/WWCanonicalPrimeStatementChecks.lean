@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.WWCanonicalPrimeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCanonicalPrimeEquations : LogicLineages.OrdinalComparison.Source.Targets.ActualCanonicalPrimeEquations :=
+  LogicLineages.OrdinalComparison.Source.actualCanonicalPrimeEquations
+
+theorem fixed_actualCanonicalPrimeGeneratedGrade : LogicLineages.OrdinalComparison.Source.Targets.ActualCanonicalPrimeGeneratedGrade :=
+  LogicLineages.OrdinalComparison.Source.actualCanonicalPrimeGeneratedGrade
+
+theorem fixed_actualCanonicalTypedApplication : LogicLineages.OrdinalComparison.Source.Targets.ActualCanonicalTypedApplication :=
+  LogicLineages.OrdinalComparison.Source.actualCanonicalTypedApplication
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

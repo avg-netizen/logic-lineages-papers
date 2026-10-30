@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionBaselineGameProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem primitiveRecursiveBudgetRule : LogicLineages.ComputabilityKnowledge.PredictionBaselineGameTargets.PrimitiveRecursiveBudgetRule :=
+  LogicLineages.ComputabilityKnowledge.PredictionBaselineGameProof.primitiveRecursiveBudgetRule
+
+theorem baselineProgramRealization : LogicLineages.ComputabilityKnowledge.PredictionBaselineGameTargets.BaselineProgramRealization :=
+  LogicLineages.ComputabilityKnowledge.PredictionBaselineGameProof.baselineProgramRealization
+
+theorem actualBaselineLearning : LogicLineages.ComputabilityKnowledge.PredictionBaselineGameTargets.ActualBaselineLearning :=
+  LogicLineages.ComputabilityKnowledge.PredictionBaselineGameProof.actualBaselineLearning
+
+theorem ordinaryBaselineLearning : LogicLineages.ComputabilityKnowledge.PredictionBaselineGameTargets.OrdinaryBaselineLearning :=
+  LogicLineages.ComputabilityKnowledge.PredictionBaselineGameProof.ordinaryBaselineLearning
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge
