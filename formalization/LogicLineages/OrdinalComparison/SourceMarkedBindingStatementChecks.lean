@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceMarkedBindingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_markedRenamingIdentity : LogicLineages.OrdinalComparison.Source.SourceMarkedBindingTargets.MarkedRenamingIdentity :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedBindingProof.markedRenamingIdentity
+
+theorem fixed_markedSubstitutionIdentity : LogicLineages.OrdinalComparison.Source.SourceMarkedBindingTargets.MarkedSubstitutionIdentity :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedBindingProof.markedSubstitutionIdentity
+
+theorem fixed_embeddingRenaming : LogicLineages.OrdinalComparison.Source.SourceMarkedBindingTargets.EmbeddingRenaming :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedBindingProof.embeddingRenaming
+
+theorem fixed_embeddingSubstitution : LogicLineages.OrdinalComparison.Source.SourceMarkedBindingTargets.EmbeddingSubstitution :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedBindingProof.embeddingSubstitution
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

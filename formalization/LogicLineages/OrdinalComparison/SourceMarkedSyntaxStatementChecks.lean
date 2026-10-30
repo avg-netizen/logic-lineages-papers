@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceMarkedSyntaxProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_markSpineDomain : LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxTargets.MarkSpineDomain :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxProof.markSpineDomain
+
+theorem fixed_markSpineHeadPreserved : LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxTargets.MarkSpineHeadPreserved :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxProof.markSpineHeadPreserved
+
+theorem fixed_markSpineIdempotent : LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxTargets.MarkSpineIdempotent :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxProof.markSpineIdempotent
+
+theorem fixed_embeddingSpineCalibration : LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxTargets.EmbeddingSpineCalibration :=
+  LogicLineages.OrdinalComparison.Source.SourceMarkedSyntaxProof.embeddingSpineCalibration
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceSubstitutionSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualSubstitutionSupport : LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportTargets.ActualSubstitutionSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportProof.actualSubstitutionSupport
+
+theorem fixed_actualSubstitutionDepth : LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportTargets.ActualSubstitutionDepth :=
+  LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportProof.actualSubstitutionDepth
+
+theorem fixed_variableSubstitutionRenaming : LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportTargets.VariableSubstitutionRenaming :=
+  LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportProof.variableSubstitutionRenaming
+
+theorem fixed_typedBodyOpeningBudget : LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportTargets.TypedBodyOpeningBudget :=
+  LogicLineages.OrdinalComparison.Source.SourceSubstitutionSupportProof.typedBodyOpeningBudget
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

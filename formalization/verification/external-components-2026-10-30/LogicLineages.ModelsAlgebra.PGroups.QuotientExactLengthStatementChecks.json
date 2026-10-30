@@ -1,0 +1,63 @@
+{
+  "accepted_utc": "2026-10-30T11:20:48.938455+00:00",
+  "scope": "Actual bound/nonzero witness in retained K yields same zero stage/earlier nonzero in G and quotient. No length/reducedness oracle.",
+  "source_correspondence": "Actual quotient terminal exponent length preservation.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.QuotientExactLengthStatementChecks",
+  "frozen_at_utc": "2026-10-30T11:16:46.358035+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/QuotientExactLengthTargets.lean",
+      "sha256": "72b82d5be5bf0cf1cc90a31f54fa266e1cfa6c247a6aa517fa319af2a2c23847"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/QuotientExactLengthStatementChecks.lean",
+      "sha256": "b54666f973947553d693f19e0b9ab01dbab4b7bcae0fbf71b97f3c3c3c19baac"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/QuotientExactLength.lean",
+      "sha256": "9ffdfca01c2bc2523e4a4941949f13e43149842f32afd2ee1f7577027df4f534"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupQuotientExactLength"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793359225592259316-6.json",
+      "sha256": "c26aa820b6bc836e8accaa0804f903e55a84acfdba6ce2b4965370011b57ff16",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "d73a9b8c4028ad7eda642d54998ea99313e7e854fc7a26c03c40e71f200cedba",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_quotient_exact_length": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

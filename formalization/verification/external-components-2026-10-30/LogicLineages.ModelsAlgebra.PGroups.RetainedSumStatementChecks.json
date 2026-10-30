@@ -1,0 +1,55 @@
+{
+  "accepted_utc": "2026-10-30T11:00:36.574820+00:00",
+  "scope": "Literal actual subgroup maps, homomorphisms and filtration. No transfinite deletion/comparison theorem; quotient height only at stated cut domains.",
+  "source_correspondence": "Root-authorized actual internal-sum/quotient-filtration algebra prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.RetainedSumStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:56:57.414395+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RetainedSumTargets.lean",
+      "sha256": "68e1d2836bfa528032f94b564c0436de0ec29068af6c5627267877e60dcdfb40"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RetainedSumStatementChecks.lean",
+      "sha256": "949645fde8167af389508e51458f503c901ee74f8ba12011f9755ccc2672389b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RetainedSum.lean",
+      "sha256": "8e2f6e7fd53434b276e6ff08a5dad464dd23da19dbdc6a2f6a481c7d84aaf4f0"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupRetainedSumDisjoint",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupRetainedSumQuotientInjective"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793358013465395548-12.json",
+      "sha256": "be024829f4eeaece2b990622a30bb8606febeee3b139781189edb50ed0911c41",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "824b46b50f63c478713a0430e723535d09364b44ca102b81f7d58b8749c75762",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_retained_sum_quotient_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_retained_sum_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

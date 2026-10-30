@@ -1,0 +1,55 @@
+{
+  "accepted_utc": "2026-10-30T11:39:29.086842+00:00",
+  "scope": "Literal original GroupTerm eval lies closure and every actual closure element has term representative, including zero arity. No atomic-type oracle.",
+  "source_correspondence": "Actual finitely generated subgroup term representation prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TermClosureStatementChecks",
+  "frozen_at_utc": "2026-10-30T11:37:44.510318+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TermClosureTargets.lean",
+      "sha256": "f4da7fd362efb0b057c2983ca5e6bf30c76d75d7eb3cb0285faec14b7b805341"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TermClosureStatementChecks.lean",
+      "sha256": "93a840780a1b643b27f21f65c95cfb5a3fe9cf91f752518768d8cf7d986d4be3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TermClosure.lean",
+      "sha256": "a7a94361a405e7259164a7da5fd18d7682df5c72de17797524ff09330c63e554"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupTermClosureMembership",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupClosureTermRepresentation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793360323939892792-6.json",
+      "sha256": "cf5e1cd6f9ed1cd40086b98393f750f2d47bf6f79fe899cf8004bdc1fd3e3c8d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "a4463519aa546d5148dd0da97a4616c2658dee8a600e6a02e0b29f16ad3d4ffc",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_term_closure_membership": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_closure_term_representation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

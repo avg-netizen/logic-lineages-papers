@@ -1,0 +1,81 @@
+{
+  "accepted_utc": "2026-10-30T11:27:25.041115+00:00",
+  "scope": "Ambient QF with actual subgroup quantifier tuples, top/subgroup agreement. No ACM comparison or ambient quotient elementarity.",
+  "source_correspondence": "Actual subgroup-relativized infinitary syntax semantics.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.RelativizedStatementChecks",
+  "frozen_at_utc": "2026-10-30T11:24:40.927742+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RelativizedDefinitions.lean",
+      "sha256": "e094a18139de025af709a20b7518c008db3ac4aeec823eb9c9bc8fef26b068ac"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RelativizedTargets.lean",
+      "sha256": "8c7104a9a208a1f1727b4c65a1b858e764aa46926afd663e506059695bbb6f5e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RelativizedStatementChecks.lean",
+      "sha256": "c8552b22662b5f56a3b7cf3ea333874d32e39bae3ebc55ae74b921b0b6335c34"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/Relativized.lean",
+      "sha256": "0b7818eff8142fcfd2cf90ae08556d81ccd370d4382244f21198278ac5914f58"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupRelativizedTopAgreement",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupRelativizedSubgroupAgreement"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793359621458700580-7.json",
+      "sha256": "1ce39c37b1a2b211416255666abf4e2487004ffedb34b2d2d82a9db481aabfc8",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "2bdaf2dbd45848f4d16e95075aa2c28b4f16ccca5b0861e3e1cda8d62250c680",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_relativized_subgroup_agreement": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_relativized_top_agreement": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

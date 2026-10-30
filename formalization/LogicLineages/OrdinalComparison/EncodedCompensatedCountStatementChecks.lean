@@ -1,0 +1,33 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedCompensatedCountProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedCompensatedStatePrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedStatePrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCompensatedStatePrimitiveRecursive
+
+theorem fixed_encodedCompensatedTrajectoryCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedTrajectoryCorrect :=
+  LogicLineages.OrdinalComparison.encodedCompensatedTrajectoryCorrect
+
+theorem fixed_encodedCompensatedFirstFiniteCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedFirstFiniteCorrect :=
+  LogicLineages.OrdinalComparison.encodedCompensatedFirstFiniteCorrect
+
+theorem fixed_encodedCompensatedCountPartialRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedCountPartialRecursive :=
+  LogicLineages.OrdinalComparison.encodedCompensatedCountPartialRecursive
+
+theorem fixed_encodedCompensatedCountTotal : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedCountTotal :=
+  LogicLineages.OrdinalComparison.encodedCompensatedCountTotal
+
+theorem fixed_encodedCompensatedCountCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedCountCorrect :=
+  LogicLineages.OrdinalComparison.encodedCompensatedCountCorrect
+
+theorem fixed_encodedCompensatedCountComputable : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedCountComputable :=
+  LogicLineages.OrdinalComparison.encodedCompensatedCountComputable
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

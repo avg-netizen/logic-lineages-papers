@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.CollectedNormalizeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_collectedPositiveNormalizeValid : LogicLineages.OrdinalComparison.Targets.CollectedPositiveNormalizeValid :=
+  LogicLineages.OrdinalComparison.collectedPositiveNormalizeValid
+
+theorem fixed_collectedPositiveNormalizeSupport : LogicLineages.OrdinalComparison.Targets.CollectedPositiveNormalizeSupport :=
+  LogicLineages.OrdinalComparison.collectedPositiveNormalizeSupport
+
+theorem fixed_collectedPositiveNormalizeValue : LogicLineages.OrdinalComparison.Targets.CollectedPositiveNormalizeValue :=
+  LogicLineages.OrdinalComparison.collectedPositiveNormalizeValue
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

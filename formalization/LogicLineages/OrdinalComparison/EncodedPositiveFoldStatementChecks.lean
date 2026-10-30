@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedPositiveFoldProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedPositiveFoldPartialRecursive : LogicLineages.OrdinalComparison.Targets.EncodedPositiveFoldPartialRecursive :=
+  LogicLineages.OrdinalComparison.encodedPositiveFoldPartialRecursive
+
+theorem fixed_encodedPositiveFoldTableTotal : LogicLineages.OrdinalComparison.Targets.EncodedPositiveFoldTableTotal :=
+  LogicLineages.OrdinalComparison.encodedPositiveFoldTableTotal
+
+theorem fixed_encodedPositiveFoldCorrect : LogicLineages.OrdinalComparison.Targets.EncodedPositiveFoldCorrect :=
+  LogicLineages.OrdinalComparison.encodedPositiveFoldCorrect
+
+theorem fixed_encodedPositiveFoldTotal : LogicLineages.OrdinalComparison.Targets.EncodedPositiveFoldTotal :=
+  LogicLineages.OrdinalComparison.encodedPositiveFoldTotal
+
+theorem fixed_encodedPositiveFoldComputable : LogicLineages.OrdinalComparison.Targets.EncodedPositiveFoldComputable :=
+  LogicLineages.OrdinalComparison.encodedPositiveFoldComputable
+
+theorem fixed_encodedPositiveFoldSourceCorrect : LogicLineages.OrdinalComparison.Targets.EncodedPositiveFoldSourceCorrect :=
+  LogicLineages.OrdinalComparison.encodedPositiveFoldSourceCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,55 @@
+{
+  "accepted_utc": "2026-10-30T11:07:13.602416+00:00",
+  "scope": "Intrinsic filtration of actual G_delta maps to ambient G_(delta+beta), exact membership and map equality. No comparison/BF oracle.",
+  "source_correspondence": "Actual ordinal tail shift prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TransfiniteTailStatementChecks",
+  "frozen_at_utc": "2026-10-30T11:04:15.634524+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteTailTargets.lean",
+      "sha256": "75a996f480b6ba4f2b71a57202ddec458d3af9fc819818e85f94e55cbe8d5582"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteTailStatementChecks.lean",
+      "sha256": "23055b6660e424586f705045f1961bd0407d8c70b19afc98ae1791c6e29635b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteTail.lean",
+      "sha256": "d4034a88a2fb89ea0bed4827b72e26727f7591436e9ea6cc14a0c2e87786dd62"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupTransfiniteTailMembership",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupTransfiniteTailImage"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793358418784603099-6.json",
+      "sha256": "1bceb79e1d747bd9918eeff2cacc05bc40a6635e7f9ff622c83376d7f2df9d6c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "219f9832af8eb91cd20b09a0fe917c2b03aafc493e26459eec5e9e65c6b6f52b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_transfinite_tail_membership": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_transfinite_tail_image": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

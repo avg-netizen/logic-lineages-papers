@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedCollectedMergeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedCollectedInsertPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCollectedInsertPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCollectedInsertPrimitiveRecursive
+
+theorem fixed_encodedCollectedMergePrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCollectedMergePrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCollectedMergePrimitiveRecursive
+
+theorem fixed_encodedCollectedAddPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCollectedAddPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCollectedAddPrimitiveRecursive
+
+theorem fixed_encodedCollectedInsertCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedInsertCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedInsertCorrect
+
+theorem fixed_encodedCollectedMergeCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedMergeCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedMergeCorrect
+
+theorem fixed_encodedCollectedAddCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCollectedAddCorrect :=
+  LogicLineages.OrdinalComparison.encodedCollectedAddCorrect
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

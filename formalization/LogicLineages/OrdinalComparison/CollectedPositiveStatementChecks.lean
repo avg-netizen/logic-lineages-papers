@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.CollectedPositiveProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_collectedPositiveCodeInjective : LogicLineages.OrdinalComparison.Targets.CollectedPositiveCodeInjective :=
+  LogicLineages.OrdinalComparison.collectedPositiveCodeInjective
+
+theorem fixed_collectedPositiveTagIdentity : LogicLineages.OrdinalComparison.Targets.CollectedPositiveTagIdentity :=
+  LogicLineages.OrdinalComparison.collectedPositiveTagIdentity
+
+theorem fixed_collectedPositiveSupportExact : LogicLineages.OrdinalComparison.Targets.CollectedPositiveSupportExact :=
+  LogicLineages.OrdinalComparison.collectedPositiveSupportExact
+
+theorem fixed_collectedPositiveClosedValue : LogicLineages.OrdinalComparison.Targets.CollectedPositiveClosedValue :=
+  LogicLineages.OrdinalComparison.collectedPositiveClosedValue
+
+theorem fixed_collectedPositiveHeightZero : LogicLineages.OrdinalComparison.Targets.CollectedPositiveHeightZero :=
+  LogicLineages.OrdinalComparison.collectedPositiveHeightZero
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

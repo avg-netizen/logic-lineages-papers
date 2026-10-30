@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_uniformObservationPrimrec : LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeTargets.UniformObservationPrimrec :=
+  LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeProof.uniformObservationPrimrec
+
+theorem fixed_recursiveMatrixCompiler : LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeTargets.RecursiveMatrixCompiler :=
+  LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeProof.recursiveMatrixCompiler
+
+theorem fixed_universalObservationCalibration : LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeTargets.UniversalObservationCalibration :=
+  LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeProof.universalObservationCalibration
+
+theorem fixed_uniformCodedThirdJumpDecision : LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeTargets.UniformCodedThirdJumpDecision :=
+  LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeProof.uniformCodedThirdJumpDecision
+
+theorem fixed_actualRecursiveThirdJumpDecision : LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeTargets.ActualRecursiveThirdJumpDecision :=
+  LogicLineages.ComputabilityKnowledge.OracleRecursivePiThreeProof.actualRecursiveThirdJumpDecision
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

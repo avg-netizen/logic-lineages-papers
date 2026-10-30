@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowTheoryNumericCertificateProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowTheoryNumericCertificate : LogicLineages.ComputabilityKnowledge.Comparators.GorbowTheoryNumericCertificate.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowTheoryNumericCertificateProof.gorbowTheoryNumericCertificate
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

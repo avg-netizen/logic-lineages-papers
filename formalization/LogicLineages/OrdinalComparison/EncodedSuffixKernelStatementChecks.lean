@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedSuffixKernelProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedNatNoteCorrect : LogicLineages.OrdinalComparison.Targets.EncodedNatNoteCorrect :=
+  LogicLineages.OrdinalComparison.encodedNatNoteCorrect
+
+theorem fixed_encodedKernelBuildersPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedKernelBuildersPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedKernelBuildersPrimitiveRecursive
+
+theorem fixed_encodedKernelInitialCorrect : LogicLineages.OrdinalComparison.Targets.EncodedKernelInitialCorrect :=
+  LogicLineages.OrdinalComparison.encodedKernelInitialCorrect
+
+theorem fixed_encodedSuffixKernelCorrect : LogicLineages.OrdinalComparison.Targets.EncodedSuffixKernelCorrect :=
+  LogicLineages.OrdinalComparison.encodedSuffixKernelCorrect
+
+theorem fixed_encodedSuffixKernelComputable : LogicLineages.OrdinalComparison.Targets.EncodedSuffixKernelComputable :=
+  LogicLineages.OrdinalComparison.encodedSuffixKernelComputable
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -182,8 +182,11 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   executable predecessor/limit threshold recursion and genuine successor
   induction, including the omega-squared parity case. Same-input keys and
   successor-chain normalization are separately checked algorithmic suppliers.
-  General sign/identity algorithms and unproved kernel-evaluation
-  effectivity are not inferred from these results.
+  Faithful numeric controlled-count, suffix-kernel and closed-word evaluation
+  are now uniformly Computable, with actual terminating searches; full count
+  is not claimed primitive recursive. Collected positive-form structural
+  validity and value preservation are checked. General sign/identity algorithms,
+  normalization completeness and finite-zero bounds remain separate obligations.
 
 ### Held paper 05 abstraction convention
 
@@ -257,6 +260,26 @@ paper's tape-runtime classification. Raw TM2 code-evader step/trace equations
 and unread-suffix output calibration are also checked, but structural/block
 execution bounds are not silently equated with source tape steps or a
 cost-aware universal machine numbering.
+
+### Further explicit suppliers at the eleventh checkpoint
+
+- Actual transfinite tail-shift, coherent terminal quotient maps, all-ordinal
+  retained-element filtration reflection, exact zero-stage/length, reducedness,
+  quotient p-primary preservation and next-block Ulm inequalities are checked.
+  Relativized Sigma1 transfer is proved directly; the Sigma2 transfer retains
+  exactly the source's explicit back-and-forth premise. Finite local groups now
+  yield genuine same-arity quantifier-free atomic-type isolation. None of these
+  is a substitute for the still-unproved global ACM comparison implication.
+- Sorted atomic FS schema semantics is checked alongside the actual Boolean,
+  quantifier and UBF clauses. Literal closed-theory-axiom proof certificates,
+  finite-use soundness and the closed deduction theorem are checked. They do
+  not introduce an abstract represented provability predicate or prove DCB.
+- Genuine third-halting-jump decisions cover actual computable Pi3 matrices,
+  through explicit observation-matrix and relative-program construction. The
+  source runtime membership and full prediction degree theorem remain pending.
+- Paper 06 now has actual typed type-support/substitution and marked/retyped
+  syntax/binding suppliers. The original-spine application and finite comparison
+  construction are separate obligations, not correctness fields.
 
 ## Local resource profiles
 
@@ -360,3 +383,12 @@ The register is now 81 checked, two inherited and 95 pending. The full bounded
 p-group Scott classification, source absorption lemma and principal strict-mass
 theorem are new numbered completions. Sorted coding and prediction-runtime
 boundaries remain explicit in the separately checked suppliers.
+
+## Eleventh cumulative checkpoint
+
+The selected 614-gate root passed its 1,795-declaration axiom audit. All 2,186
+local source hashes were unchanged and the original baseline guard remained
+clean. See [checkpoint evidence](verification/external-checkpoint-614-2026-10-30.json).
+The register remains 81 checked, two inherited and 95 pending. The new work
+consists of genuine computation, transfinite algebra, source-syntax and proof
+system suppliers, distinguished from still-unproved whole source statements.

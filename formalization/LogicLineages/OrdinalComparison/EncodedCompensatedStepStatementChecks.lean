@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.EncodedCompensatedStepProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_encodedCompensatedStepFiniteFixed : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedStepFiniteFixed :=
+  LogicLineages.OrdinalComparison.encodedCompensatedStepFiniteFixed
+
+theorem fixed_encodedCompensatedStepCorrect : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedStepCorrect :=
+  LogicLineages.OrdinalComparison.encodedCompensatedStepCorrect
+
+theorem fixed_encodedCompensatedStepPrimitiveRecursive : LogicLineages.OrdinalComparison.Targets.EncodedCompensatedStepPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.encodedCompensatedStepPrimitiveRecursive
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

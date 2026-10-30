@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowSortedSimultaneousCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowSortedSimultaneousCode : LogicLineages.ComputabilityKnowledge.Comparators.GorbowSortedSimultaneousCode.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowSortedSimultaneousCodeProof.gorbowSortedSimultaneousCode
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.SourceTypeSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualResultSupport : LogicLineages.OrdinalComparison.Source.SourceTypeSupportTargets.ActualResultSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceTypeSupportProof.actualResultSupport
+
+theorem fixed_subtypeClosedSupport : LogicLineages.OrdinalComparison.Source.SourceTypeSupportTargets.SubtypeClosedSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceTypeSupportProof.subtypeClosedSupport
+
+theorem fixed_supportDepthRenaming : LogicLineages.OrdinalComparison.Source.SourceTypeSupportTargets.SupportDepthRenaming :=
+  LogicLineages.OrdinalComparison.Source.SourceTypeSupportProof.supportDepthRenaming
+
+theorem fixed_literalBinderSupport : LogicLineages.OrdinalComparison.Source.SourceTypeSupportTargets.LiteralBinderSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceTypeSupportProof.literalBinderSupport
+
+theorem fixed_literalRankedSupport : LogicLineages.OrdinalComparison.Source.SourceTypeSupportTargets.LiteralRankedSupport :=
+  LogicLineages.OrdinalComparison.Source.SourceTypeSupportProof.literalRankedSupport
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OraclePiThreeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_counterMatrixCalibration : LogicLineages.ComputabilityKnowledge.OraclePiThreeTargets.CounterMatrixCalibration :=
+  LogicLineages.ComputabilityKnowledge.OraclePiThreeProof.counterMatrixCalibration
+
+theorem fixed_relativePiThreeCounterSearch : LogicLineages.ComputabilityKnowledge.OraclePiThreeTargets.RelativePiThreeCounterSearch :=
+  LogicLineages.ComputabilityKnowledge.OraclePiThreeProof.relativePiThreeCounterSearch
+
+theorem fixed_exactPiThreeCounterDomain : LogicLineages.ComputabilityKnowledge.OraclePiThreeTargets.ExactPiThreeCounterDomain :=
+  LogicLineages.ComputabilityKnowledge.OraclePiThreeProof.exactPiThreeCounterDomain
+
+theorem fixed_actualPiThreeThirdJumpDecision : LogicLineages.ComputabilityKnowledge.OraclePiThreeTargets.ActualPiThreeThirdJumpDecision :=
+  LogicLineages.ComputabilityKnowledge.OraclePiThreeProof.actualPiThreeThirdJumpDecision
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge
