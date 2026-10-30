@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowArithmeticEvaluationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowArithmeticEvaluation : LogicLineages.ComputabilityKnowledge.Comparators.GorbowArithmeticEvaluation.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowArithmeticEvaluationProof.gorbowArithmeticEvaluation
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

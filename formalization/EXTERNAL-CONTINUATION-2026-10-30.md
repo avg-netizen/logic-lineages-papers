@@ -22,8 +22,8 @@ See [baseline evidence](verification/external-baseline-2026-10-30.json).
 
 ## Accepted new work
 
-Current register: 78 checked numbered statements, two inherited calculator
-results, and 98 pending statements.
+Current register: 81 checked numbered statements, two inherited calculator
+results, and 95 pending statements.
 
 
 The exact finite-forest/comparability-graph bridge is complete: induced P4/C4
@@ -127,16 +127,17 @@ is inserted as an axiom, oracle, correctness field or extra premise.
 
 ## Further checked suppliers and held source obligations
 
-- Paper 01: genuine cyclic splitting, adapted socle bases and filtered cyclic
-  root generation prove bounded cyclic decomposition for Type0 groups from
-  literal prime-power annihilation alone. Actual quotient/Cardinal-rank
-  calibration yields bounded Ulm categoricity and a relative Pi3 Scott upper
-  bound. The source's one-infinite-invariant cases now have actual relative
-  Pi2/dSigma2 sentences and explicit sharp lower obstructions, including the
-  arbitrary-group normal-form transfer. No classifier, basis, spanning family
-  or retraction is assumed in these final existence statements. The two-infinite
-  lower case and unrestricted-language transfer remain separate obligations;
-  the whole bounded Scott classification is not marked complete.
+- Paper 01: the full bounded countably infinite p-group Scott-classification
+  theorem is now checked in the unrestricted original group language, including
+  the exhaustive actual Ulm-pattern cases, exact upper bounds and explicit lower
+  exclusions. Bounded cyclic decomposition, quotient/Cardinal-rank calibration,
+  finite-parameter reservoir embeddings and stage reflection are genuinely
+  proved; no ACM classifier, Miller collapse, basis, spanning family or retraction
+  is inserted as a hypothesis. The source absorption lemma is also checked,
+  including actual Sigma1 parameter equivalence and the correctly oriented
+  back-and-forth relation. General transfinite classification, height-extension
+  and terminal-deletion claims remain pending; quotient algebra suppliers alone
+  are not reported as those results.
 - Paper 03: actual forbidden-class nonemptiness/empty-carrier checks and the
   countably infinite width-one/two/three age realizations are checked. These
   do not fill the general decision-theorem gap.
@@ -177,7 +178,10 @@ is inserted as an axiom, oracle, correctness field or extra premise.
   with an executable faithful-notation dominator/threshold construction.
   The unchanged adjacent-level theorem and limit-exponent mass-separation
   theorem are now checked, with executable thresholds and all genuine dynamic
-  domains. The general strict-mass theorem remains a separate induction.
+  domains. The full strict-mass theorem is now checked with the source's literal
+  executable predecessor/limit threshold recursion and genuine successor
+  induction, including the omega-squared parity case. Same-input keys and
+  successor-chain normalization are separately checked algorithmic suppliers.
   General sign/identity algorithms and unproved kernel-evaluation
   effectivity are not inferred from these results.
 
@@ -235,11 +239,24 @@ The accepted legacy term and formula codecs are individually injective but not
 cross-sort disjoint: term successor-zero and formula agent-zero both encode as
 [2,1]. Their separate-sort facts and explicitly untagged revision/registry results
 remain valid. They do not by themselves realize the source's one global quoting
-convention. A new sorted wrapper and separately calibrated tagged semantics are
-being developed without modifying those frozen legacy definitions. Variables
+convention. A new even-formula/odd-term wrapper, actual disjoint decoding, and separately
+calibrated tagged revision semantics are now checked without modifying those
+frozen legacy definitions. Actual guarded sorted Boolean and quantified FS/UBF
+clauses are checked using the new semantics; no transport of an arbitrary
+legacy truth interpretation is assumed. Variables
 must be decoded from the term-code subset, not silently treated as arbitrary
 natural indices; arbitrary-variable and precisely-free guards remain explicit.
 No source-global Base/DCB consistency or representability claim is promoted.
+
+### Prediction model boundary
+
+The finite-change and flip-policy construction now has an actual computable
+common evaluation-fuel budget, so its explicitly named evaln-model reduction no
+longer assumes availability as an external premise. This is not a proof of the
+paper's tape-runtime classification. Raw TM2 code-evader step/trace equations
+and unread-suffix output calibration are also checked, but structural/block
+execution bounds are not silently equated with source tape steps or a
+cost-aware universal machine numbering.
 
 ## Local resource profiles
 
@@ -333,3 +350,13 @@ The register is now 78 checked, two inherited and 98 pending. The unchanged
 adjacent-level and limit-exponent mass-separation theorems are the new numbered
 completions. Signed-depth and global-coding scope boundaries are documented
 explicitly rather than hidden by changed hypotheses.
+
+## Tenth cumulative checkpoint
+
+The selected 566-gate root passed its 1,626-declaration axiom audit. All 2,012
+local source hashes were unchanged and the baseline guard remained clean. See
+[checkpoint evidence](verification/external-checkpoint-566-2026-10-30.json).
+The register is now 81 checked, two inherited and 95 pending. The full bounded
+p-group Scott classification, source absorption lemma and principal strict-mass
+theorem are new numbered completions. Sorted coding and prediction-runtime
+boundaries remain explicit in the separately checked suppliers.

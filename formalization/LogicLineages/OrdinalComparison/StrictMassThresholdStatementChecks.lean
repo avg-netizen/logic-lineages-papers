@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.StrictMassThresholdProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualStrictMassLimitThreshold : LogicLineages.OrdinalComparison.Targets.ActualStrictMassLimitThreshold :=
+  LogicLineages.OrdinalComparison.actualStrictMassLimitThreshold
+
+theorem fixed_actualStrictMassSuccessorThreshold : LogicLineages.OrdinalComparison.Targets.ActualStrictMassSuccessorThreshold :=
+  LogicLineages.OrdinalComparison.actualStrictMassSuccessorThreshold
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

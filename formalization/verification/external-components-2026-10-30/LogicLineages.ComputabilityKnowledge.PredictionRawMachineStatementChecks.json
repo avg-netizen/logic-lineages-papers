@@ -1,0 +1,68 @@
+{
+  "accepted_utc": "2026-10-30T10:55:47.252329+00:00",
+  "scope": "Literal finite machine with actual zero/nonempty/empty/terminal one-step equations and unread input retained. No cleanup, primitive cost, source numbering/runtime simulation or full hardness claim.",
+  "source_correspondence": "Root-approved bounded raw TM2 code-evader supplier.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRawMachineStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:50:54.086098+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawMachineDefinitions.lean",
+      "sha256": "e824e0d1cade4772b00a2e264877bc4c6ad3e08a4cb10b391147b36875368e34"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawMachineTargets.lean",
+      "sha256": "7b47c38dcf83a37e73b1a59e7d9d8c8ed35a1135d62b923c9061b55425530b99"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawMachineStatementChecks.lean",
+      "sha256": "54a990c836528d8a1eca3f45aa71873d2705e2b008e561dc41d7d73341ea0d37"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawMachineProof.lean",
+      "sha256": "120e9d953b6064d064e7c727e174d3c2934d8f7bce0e397e38d64ce60b401e7d"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawZeroTransition",
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawNonemptyTransition",
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawEmptyTransition",
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawTerminalTransition"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793357569949528481-6.json",
+      "sha256": "a1ee860431b0771a7d388e078288746c879836c36d8f337e5903db4bb29bc669",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1f370bb04a39e60a74ca1619f72c0686052e6a62835dd35fe079fd00f2c8234f",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawTerminalTransition": [],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawEmptyTransition": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawNonemptyTransition": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawZeroTransition": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.evaderStmt.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.terminalCfg.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.runningCfg.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.machineStep.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

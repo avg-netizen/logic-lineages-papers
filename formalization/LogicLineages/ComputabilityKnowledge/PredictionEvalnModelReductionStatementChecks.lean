@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionEvalnModelReductionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_actualEvalnModelReduction : LogicLineages.ComputabilityKnowledge.PredictionEvalnModelReductionTargets.ActualEvalnModelReduction :=
+  LogicLineages.ComputabilityKnowledge.PredictionEvalnModelReductionProof.actualEvalnModelReduction
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

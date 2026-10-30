@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRawMachineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_rawZeroTransition : LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawZeroTransition :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawMachineProof.rawZeroTransition
+
+theorem fixed_rawNonemptyTransition : LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawNonemptyTransition :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawMachineProof.rawNonemptyTransition
+
+theorem fixed_rawEmptyTransition : LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawEmptyTransition :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawMachineProof.rawEmptyTransition
+
+theorem fixed_rawTerminalTransition : LogicLineages.ComputabilityKnowledge.PredictionRawMachineTargets.RawTerminalTransition :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawMachineProof.rawTerminalTransition
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

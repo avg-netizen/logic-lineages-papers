@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionFlipMaskProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_flipEventComputable : LogicLineages.ComputabilityKnowledge.PredictionFlipMaskTargets.FlipEventComputable :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipMaskProof.flipEventComputable
+
+theorem fixed_finiteActualFlipMask : LogicLineages.ComputabilityKnowledge.PredictionFlipMaskTargets.FiniteActualFlipMask :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipMaskProof.finiteActualFlipMask
+
+theorem fixed_infiniteCodeFlipMask : LogicLineages.ComputabilityKnowledge.PredictionFlipMaskTargets.InfiniteCodeFlipMask :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipMaskProof.infiniteCodeFlipMask
+
+theorem fixed_flipRuleComputable : LogicLineages.ComputabilityKnowledge.PredictionFlipMaskTargets.FlipRuleComputable :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipMaskProof.flipRuleComputable
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

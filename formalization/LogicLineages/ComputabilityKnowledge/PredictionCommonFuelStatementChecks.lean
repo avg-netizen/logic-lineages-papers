@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionCommonFuelProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_booleanHistoriesExact : LogicLineages.ComputabilityKnowledge.PredictionCommonFuelTargets.BooleanHistoriesExact :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonFuelProof.booleanHistoriesExact
+
+theorem fixed_booleanHistoriesPrimrec : LogicLineages.ComputabilityKnowledge.PredictionCommonFuelTargets.BooleanHistoriesPrimrec :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonFuelProof.booleanHistoriesPrimrec
+
+theorem fixed_commonFuelTestExact : LogicLineages.ComputabilityKnowledge.PredictionCommonFuelTargets.CommonFuelTestExact :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonFuelProof.commonFuelTestExact
+
+theorem fixed_commonFuelTestPrimrec : LogicLineages.ComputabilityKnowledge.PredictionCommonFuelTargets.CommonFuelTestPrimrec :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonFuelProof.commonFuelTestPrimrec
+
+theorem fixed_commonFuelEventuallySuccessful : LogicLineages.ComputabilityKnowledge.PredictionCommonFuelTargets.CommonFuelEventuallySuccessful :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonFuelProof.commonFuelEventuallySuccessful
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

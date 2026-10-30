@@ -1,0 +1,80 @@
+{
+  "accepted_utc": "2026-10-30T11:00:09.506950+00:00",
+  "scope": "Actual finite transition trace, unread suffix and output; structural pop upper bounds and block transitions are not tape runtime.",
+  "source_correspondence": "Root-authorized finite raw TM2 code-evader supplier.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRawTraceStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:57:32.255537+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawTraceDefinitions.lean",
+      "sha256": "f93151de1a83f24116d48938e616196b01418096cdfedfe2925a665e9ffae83e"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawTraceTargets.lean",
+      "sha256": "d9965ce6d92ca25217c1f5cd38d243eb9a73e0e2ad8ba51f7f7798123438a621"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawTraceStatementChecks.lean",
+      "sha256": "b9cb0b010b8086b355018deccf80fd0ddd0b6491f89aea9fea6366730b04f266"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionRawTraceProof.lean",
+      "sha256": "14b2f9524f2cf591ddfb62e50929c45ccd8b1d2cba51b9e0bcbf52c078be7d8a"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTraceTargets.RawBlockPopBound",
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTraceTargets.RawRunCorrect",
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTraceTargets.RawInitialOutput"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793357989878096039-6.json",
+      "sha256": "45b5a9cfb7725be5965fbc4602cdc18ac150eab1c72fc56ce31091638d534a8f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "531310487325372cb8d2ac41921bc5fe4d42a353480878a3d76c5697cb9ef451",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawBlockPopBound": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawRunCorrect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_rawInitialOutput": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.evaderStmt.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_4": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.advance.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.terminalCfg.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_7": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_3": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_6": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.runningCfg.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.predecessor.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawTrace.inputPopBound.eq_5": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRawMachine.machineStep.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,101 @@
+{
+  "accepted_utc": "2026-10-30T10:23:47.051146+00:00",
+  "scope": "Computable budget prefix/rule for arbitrary Computable budget; eventual baseline correctness on actual histories of any predictor under UniformAvailable. No tape runtime or modified-predictor assumption.",
+  "source_correspondence": "Root-authorized paper14 hardness mechanics, actual unchanged baseline.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:15:18.817804+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionComputableBudgetDefinitions.lean",
+      "sha256": "28c691132d85238eaaf3acaad3e83cf24402215858d5772ba3aacdf8aad93a45"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionComputableBudgetTargets.lean",
+      "sha256": "dfab32034da07dee7e0c837f3006a1f9ab5646d5e9ccf0b2850c5434c65599af"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionComputableBudgetStatementChecks.lean",
+      "sha256": "39af56bd7b52dd43879f504dfa85fe139f27240f3d6698f27aa64f3d68564968"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionComputableBudgetProof.lean",
+      "sha256": "444e6fd13af2817782ddd942ef35e98e3beb095b89a4c371a171c6a7369b0f19"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetTargets.ComputableBudgetPrefix",
+    "LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetTargets.ComputableBudgetRule",
+    "LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetTargets.ActualAnyPredictorBaselineCorrect"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793355791563249925-6.json",
+      "sha256": "0d5fa473e0cc7efa1b5d62860d0c9862250e206831ebddaadd12c0b1d77aef86",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "a4136067b723313c9392811199d4c3d27b6f350996b6ad41066d4048f4b090e5",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_computableBudgetPrefix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_actualAnyPredictorBaselineCorrect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_computableBudgetRule": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.baseline.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.indexedMove.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.historicalTest.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.advance.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_2": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionGame.histories.eq_def": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.eligible.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionLearning.policy.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionRobust.historyPrefix.eq_1": [],
+    "LogicLineages.ComputabilityKnowledge.PredictionBaselineGame.budgetRule.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionLearning.bitValue.eq_1": []
+  },
+  "numbered_statement_promotion": false
+}

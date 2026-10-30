@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowSortedQuantifierTruthProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_gorbowSortedQuantifierTruth : LogicLineages.ComputabilityKnowledge.Comparators.GorbowSortedQuantifierTruth.Target :=
+  LogicLineages.ComputabilityKnowledge.GorbowSortedQuantifierTruthProof.gorbowSortedQuantifierTruth
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

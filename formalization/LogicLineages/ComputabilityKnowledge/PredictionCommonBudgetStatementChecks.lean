@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_commonFuelSearchPartrec : LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetTargets.CommonFuelSearchPartrec :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetProof.commonFuelSearchPartrec
+
+theorem fixed_commonFuelSearchTotal : LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetTargets.CommonFuelSearchTotal :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetProof.commonFuelSearchTotal
+
+theorem fixed_computableSelectedFuel : LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetTargets.ComputableSelectedFuel :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetProof.computableSelectedFuel
+
+theorem fixed_actualCommonAvailableBudget : LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetTargets.ActualCommonAvailableBudget :=
+  LogicLineages.ComputabilityKnowledge.PredictionCommonBudgetProof.actualCommonAvailableBudget
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

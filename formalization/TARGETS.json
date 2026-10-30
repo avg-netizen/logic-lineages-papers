@@ -47,9 +47,20 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 138,
           "statement_latex": "\\label{thm:bounded-pgroup-classification}\nLet $G$ be a countably infinite Abelian $p$-group of bounded exponent,\nand write\n\\[\n G\\cong\\bigoplus_{j=1}^n C_{p^j}^{(m_j)},\n \\qquad m_j\\in\\mathbb N\\cup\\{\\omega\\}.\n\\]\nIts Scott complexity is determined as follows.\n\\begin{center}\n\\begin{tabular}{p{0.67\\linewidth}|l}\nCondition & Exact complexity\\\\ \\hline\nAt least two $m_j$ equal $\\omega$ & $\\Pi_3$\\\\\nExactly one $m_k=\\omega$, and some $m_j>0$ with $j<k$\n & $d\\text{-}\\Sigma_2$\\\\\nExactly one $m_k=\\omega$, and all $m_j=0$ with $j<k$\n & $\\Pi_2$\n\\end{tabular}\n\\end{center}\nThus no bounded-exponent countable Abelian $p$-group has an exact\npure $\\Sigma$ Scott complexity. The case of at least two infinite\nmultiplicities is \\cite[Theorem~4.2]{ACM}; the proof below supplies\nthe remaining cases, including arbitrary finite summands above the\nunique infinite multiplicity.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_raw_bounded_classification",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/RawBoundedClassificationTargets.lean",
+            "sha256": "9638007da52018d6859be1e9e6f3dac2e4ce65fb6879ebff847b84171053e130",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupRawBoundedClassification"
+          },
+          "verification_receipt": "build-reports/1793356314856872609-7.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole countably infinite bounded source theorem137\u2013162: exhaustive actual Ulm-rank patterns, unrestricted original zero/neg/add raw competitors guarded by actual group laws at unchanged positive levels. Cyclic length j corresponds to Ulm index j\u22121 via actual cyclic calibration and calibrated bounded decomposition, preserving all finite upper factors. Two-infinite case pays actual residual extraction/fresh tuple-fixing chain/nonisomorphism and direct Sigma3 reflection, yielding Pi3 existence/noSigma3/noDiff2 without ACM/Miller premise. One-infinite cases pay actual dSigma2/noSigma2/noPi2 or Pi2/noSigma2 and lower exclusions. No invariant correctness or decomposition oracle. Finite/trivial raw uppers/lowers separately accepted for the broader no-pure-Sigma consequence."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:lem:prescribed-tail",
@@ -150,9 +161,20 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 421,
           "statement_latex": "[Finite support absorption]\n\\label{lem:absorption}\nSuppose $H=K\\oplus T$ is bounded, $p^kT=0$, and a cyclic decomposition of\n$K$ contains infinitely many $C_{p^k}$ summands. Then\n$K\\preceq_{\\Sigma_1}H$, for ordinary infinitary formulas with parameters\nfrom $K$. Consequently $H\\le_2K$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_source_factor_absorption",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/SourceAbsorptionTargets.lean",
+            "sha256": "16761a8224fb46e409a61bef29d83657501721166ee21b9d97961aa2af854716",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSourceFactorAbsorption"
+          },
+          "verification_receipt": "build-reports/1793357373536464194-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source finite-support absorption422\u2013446 in countable bounded context: actual K reservoir-factor isomorphism and p^k-annihilated T imply literal Sigma1 equivalence with all finite K parameters under canonical inclusion into K\u00d7T, plus actual BackAndForth2(K\u00d7T,K) in correct direction. Actual bounded T embedding/fresh tuple maps and generic logical preservation proved, no elementarity/BF oracle. Same gate also proves source_bounded_absorption eliminating factor isomorphism via actual aleph0 Ulm rank and paid single-fiber extraction (cyclic length a+1). No transfinite terminal-deletion claim."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:lem:terminal-deletion",
@@ -1660,9 +1682,20 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 702,
           "statement_latex": "[Strict mass order above degree two]\\label{thm:mass}\nFor every fixed principal $L\\ge\\omega^3$, a computable $T_L$ satisfies\n\\[\n t\\ge T_L,quad0\\le c<e\\le t-\\norm L\n                 \\quad\\Longrightarrow\\quad\\KK Lc(t)>\\KK Le(t). \\tag{7.5}\n\\]\nFor a nonzero limit exponent take $T_L=\\max(7,\\norm L+1)$.\nFor $L=\\theta\\omega$, $\\theta\\ge\\omega^2$, $w=\\norm\\theta$, take\n\\[\n T_L=\\max(4,\\norm L,2w,\\max(8,w),S_\\theta),          \\tag{7.6}\n\\]\nwhere $S_\\theta=0$ at $\\theta=\\omega^2$ and otherwise $S_\\theta=T_\\theta$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_fullActualPrincipalStrictMass",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/StrictMassTargets.lean",
+            "sha256": "b38ccc005072fe351a5de005f41d4a3ccdf93820bba6a742f5a5bee35729ab0d",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualPrincipalStrictMass"
+          },
+          "verification_receipt": "build-reports/1793356946366425896-6.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole paper07 thm:mass702\u2013745 for faithful principal exponents at least3. Actual executable well-founded ONote threshold with exact displayed limit and successor recurrence (7.6), actual strict mass on all genuine domains. Final predecessor induction discharges child strictness and two-block budget, with actual equal-global residual cuts, repeated child word endpoints/order and omega2 parity base. No IH, comparator correctness or count oracle survives final target; no semantic kernel evaluation computability claimed."
         },
         {
           "id": "07-collapse-equality-and-one-variable:thm:sign",

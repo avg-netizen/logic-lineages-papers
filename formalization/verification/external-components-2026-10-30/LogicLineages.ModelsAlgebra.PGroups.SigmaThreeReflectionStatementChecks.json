@@ -1,0 +1,85 @@
+{
+  "accepted_utc": "2026-10-30T10:25:13.343632+00:00",
+  "scope": "Actual arbitrary-parameter Pi2 reflection, covered-chain Sigma3 reflection and noniso obstruction. Concrete source maps/noniso separately paid, no Miller or preservation oracle.",
+  "source_correspondence": "Root-authorized actual Sigma3 stage reflection for source exactness.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SigmaThreeReflectionStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:16:22.863043+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SigmaThreeReflectionTargets.lean",
+      "sha256": "11ff10d160c513b9752b1e349ee4297bd1780d2424309f8eaba453b4d24156df"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SigmaThreeReflectionStatementChecks.lean",
+      "sha256": "9532dae04b6e06762d20bf99459b5f718880f9bc28cae3fdc176ecb40ab6ca36"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SigmaThreeReflection.lean",
+      "sha256": "fe0708bc19b36379c98ea3a639f44943512d99b65ffff51b12d4ea3236ba4446"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupPiTwoParameterizedReflection",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupSigmaThreeStageReflection",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupChainNoSigmaThreeScott"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793355885224353799-6.json",
+      "sha256": "5253213c1fbbf3ef9aac80e9b6ec83a3e063562e1e37d09e5e8bf83755125634",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "ae8e63ba69c3ad4642810f08d4ec75485a78fd57c4e14b449fbcbfe95f702464",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_pi_two_parameterized_reflection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_sigma_three_stage_reflection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_chain_no_sigma_three_scott": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.comparisonStep.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

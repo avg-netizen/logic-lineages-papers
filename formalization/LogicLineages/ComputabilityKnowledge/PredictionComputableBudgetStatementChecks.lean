@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_computableBudgetPrefix : LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetTargets.ComputableBudgetPrefix :=
+  LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetProof.computableBudgetPrefix
+
+theorem fixed_computableBudgetRule : LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetTargets.ComputableBudgetRule :=
+  LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetProof.computableBudgetRule
+
+theorem fixed_actualAnyPredictorBaselineCorrect : LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetTargets.ActualAnyPredictorBaselineCorrect :=
+  LogicLineages.ComputabilityKnowledge.PredictionComputableBudgetProof.actualAnyPredictorBaselineCorrect
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

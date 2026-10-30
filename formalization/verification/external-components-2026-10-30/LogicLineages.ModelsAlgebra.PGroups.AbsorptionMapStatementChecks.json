@@ -1,0 +1,197 @@
+{
+  "accepted_utc": "2026-10-30T10:39:49.429642+00:00",
+  "scope": "Actual fresh-reservoir map and finite tuple fixing; final bounded tuple theorem chooses actual embedding, no embedding oracle.",
+  "source_correspondence": "Paper01 lem:absorption actual finite-support mechanism.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.AbsorptionMapStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:38:33.343407+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AbsorptionMapDefinitions.lean",
+      "sha256": "504e915218fd6c2434c25776f0dcccaf50834397ce0fc79123c7426b6010c040"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AbsorptionMapTargets.lean",
+      "sha256": "b9f2f5358d4d543c7de5cfc5a597bf95bb4e874b713c03af8b23971cc7c5756b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AbsorptionMapStatementChecks.lean",
+      "sha256": "4dbdb3d4c127914d2f29e832eec11cf2ddfac357a0495bb4201d6b0758001661"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AbsorptionMap.lean",
+      "sha256": "ceeb02da7d05f6716f3ba5dad812f3227728d467aa6602456e3ca4e81bdac704"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupAbsorptionMapInjective",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupAbsorptionMapFixes",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupBoundedAbsorptionTupleFixing"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793356771523823590-7.json",
+      "sha256": "254df6ec59850be9432afda59ca8b9a74c3effb293431ca0974adc6061fb3878",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "576f3094d90c9b5d30b79778053d99a4bab2ce441c9ba80bcdc8b5144e20ef79",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_absorption_map_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_bounded_absorption_tuple_fixing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_absorption_map_fixes": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveEven.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_def": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.freshCombine.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.ulmRootTerm.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicSocleCoordinate.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicSocleCoefficients.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.dual.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteSumTerm.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_2": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.reserveOdd.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.ulmCombinationTerm.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.ulmLowerMatrix.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleImage.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_2": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.ulmLowerFormula.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_def": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicSocleCoordinate.eq_1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteSumTerm.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.append.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.cyclicRootHom.congr_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.dual.eq_def": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteSumTerm.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_1": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.Realize.eq_3": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.multipleTerm.eq_1": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.dual.eq_2": [],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupBackAndForth.GroupTerm.eval.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.Formula.dual.eq_3": [],
+    "LogicLineages.ModelsAlgebra.PGroups.finiteFiltration.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.finiteAnd.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.QF.Realize.eq_4": [
+      "propext"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

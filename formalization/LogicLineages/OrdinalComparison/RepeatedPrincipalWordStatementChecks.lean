@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.RepeatedPrincipalWordProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualRepeatedPrincipalWordPositions : LogicLineages.OrdinalComparison.Targets.ActualRepeatedPrincipalWordPositions :=
+  LogicLineages.OrdinalComparison.actualRepeatedPrincipalWordPositions
+
+theorem fixed_actualRepeatedPrincipalWordRun : LogicLineages.OrdinalComparison.Targets.ActualRepeatedPrincipalWordRun :=
+  LogicLineages.OrdinalComparison.actualRepeatedPrincipalWordRun
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

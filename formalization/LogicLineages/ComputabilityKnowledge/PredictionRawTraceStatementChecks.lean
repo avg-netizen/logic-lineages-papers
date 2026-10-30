@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRawTraceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_rawBlockPopBound : LogicLineages.ComputabilityKnowledge.PredictionRawTraceTargets.RawBlockPopBound :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawTraceProof.rawBlockPopBound
+
+theorem fixed_rawRunCorrect : LogicLineages.ComputabilityKnowledge.PredictionRawTraceTargets.RawRunCorrect :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawTraceProof.rawRunCorrect
+
+theorem fixed_rawInitialOutput : LogicLineages.ComputabilityKnowledge.PredictionRawTraceTargets.RawInitialOutput :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawTraceProof.rawInitialOutput
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

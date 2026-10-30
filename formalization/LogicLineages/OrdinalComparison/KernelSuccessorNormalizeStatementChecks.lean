@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.KernelSuccessorNormalizeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualKernelSuccessorNormalizeStructure : LogicLineages.OrdinalComparison.Targets.ActualKernelSuccessorNormalizeStructure :=
+  LogicLineages.OrdinalComparison.actualKernelSuccessorNormalizeStructure
+
+theorem fixed_actualKernelSuccessorNormalizeAction : LogicLineages.OrdinalComparison.Targets.ActualKernelSuccessorNormalizeAction :=
+  LogicLineages.OrdinalComparison.actualKernelSuccessorNormalizeAction
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

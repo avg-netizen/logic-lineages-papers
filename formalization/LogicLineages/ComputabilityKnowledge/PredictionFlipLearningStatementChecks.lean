@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionFlipLearningProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_actualFlipPolicyCalibration : LogicLineages.ComputabilityKnowledge.PredictionFlipLearningTargets.ActualFlipPolicyCalibration :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipLearningProof.actualFlipPolicyCalibration
+
+theorem fixed_uniformFlipPolicyProgram : LogicLineages.ComputabilityKnowledge.PredictionFlipLearningTargets.UniformFlipPolicyProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipLearningProof.uniformFlipPolicyProgram
+
+theorem fixed_positiveFlipLearning : LogicLineages.ComputabilityKnowledge.PredictionFlipLearningTargets.PositiveFlipLearning :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipLearningProof.positiveFlipLearning
+
+theorem fixed_negativeFlipLearning : LogicLineages.ComputabilityKnowledge.PredictionFlipLearningTargets.NegativeFlipLearning :=
+  LogicLineages.ComputabilityKnowledge.PredictionFlipLearningProof.negativeFlipLearning
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

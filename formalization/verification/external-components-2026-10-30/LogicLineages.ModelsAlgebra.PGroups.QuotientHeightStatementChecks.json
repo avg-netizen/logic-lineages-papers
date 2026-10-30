@@ -1,0 +1,55 @@
+{
+  "accepted_utc": "2026-10-30T10:59:23.275855+00:00",
+  "scope": "Literal actual subgroup maps, homomorphisms and filtration. No transfinite deletion/comparison theorem; quotient height only at stated cut domains.",
+  "source_correspondence": "Root-authorized actual internal-sum/quotient-filtration algebra prerequisite.",
+  "author_provenance": "external continuation",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.QuotientHeightStatementChecks",
+  "frozen_at_utc": "2026-10-30T10:56:57.442777+00:00",
+  "candidate_absent_at_freeze": true,
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/QuotientHeightTargets.lean",
+      "sha256": "8a6299a66ffdc2b3e7a2c8ec38a8de6f3e3e4f2190f7bc7c345d38f8d54b7700"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/QuotientHeightStatementChecks.lean",
+      "sha256": "93c689e51aba7d63a814a8d134bc3dd04b4ba9f4e5ce08837607d53fe7d8e471"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/QuotientHeight.lean",
+      "sha256": "31e0957572a430e1874bb45a1e9086a29b94c8d7a9a5f675a9ba81969955b542"
+    }
+  ],
+  "target_types": [
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupQuotientMembershipReflection",
+    "LogicLineages.ModelsAlgebra.PGroups.Targets.groupQuotientSuccessorHeightReflection"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793357931368077494-12.json",
+      "sha256": "8dfe55f29804819ead9fe6d94fa1b5019c844a4df4900afca570fdbc91c5a737",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_sha256": "1ba27739689e064affe972d6cc4e3501f71fce070de12c7f6bb7ad391813629b",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_quotient_successor_height_reflection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.StatementChecks.fixed_quotient_membership_reflection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "numbered_statement_promotion": false
+}

@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+
+theorem fixed_completedCodeSpecification : LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderTargets.CompletedCodeSpecification :=
+  LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof.completedCodeSpecification
+
+theorem fixed_completedCodePermanent : LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderTargets.CompletedCodePermanent :=
+  LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof.completedCodePermanent
+
+theorem fixed_completedCodePrimitiveRecursive : LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderTargets.CompletedCodePrimitiveRecursive :=
+  LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof.completedCodePrimitiveRecursive
+
+theorem fixed_codeEvaderStream : LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderTargets.CodeEvaderStream :=
+  LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof.codeEvaderStream
+
+theorem fixed_uniformCodeEvaderProgram : LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderTargets.UniformCodeEvaderProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof.uniformCodeEvaderProgram
+
+theorem fixed_completedCodeActualStabilization : LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderTargets.CompletedCodeActualStabilization :=
+  LogicLineages.ComputabilityKnowledge.PredictionCodeEvaderProof.completedCodeActualStabilization
+
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

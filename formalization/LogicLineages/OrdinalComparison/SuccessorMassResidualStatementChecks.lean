@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.OrdinalComparison.SuccessorMassResidualProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualSuccessorMassResidualAlgebra : LogicLineages.OrdinalComparison.Targets.ActualSuccessorMassResidualAlgebra :=
+  LogicLineages.OrdinalComparison.actualSuccessorMassResidualAlgebra
+
+theorem fixed_actualSuccessorMassChildDomains : LogicLineages.OrdinalComparison.Targets.ActualSuccessorMassChildDomains :=
+  LogicLineages.OrdinalComparison.actualSuccessorMassChildDomains
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison

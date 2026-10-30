@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ModelsAlgebra.PGroups.SourceTwoInfinite
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+namespace LogicLineages.ModelsAlgebra.PGroups.StatementChecks
+
+theorem fixed_source_two_infinite_no_difference_scott : LogicLineages.ModelsAlgebra.PGroups.Targets.groupSourceTwoInfiniteNoDifferenceScott :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.source_two_infinite_no_difference_scott
+
+theorem fixed_raw_source_two_infinite_scott_bounds : LogicLineages.ModelsAlgebra.PGroups.Targets.groupRawSourceTwoInfiniteScottBounds :=
+  LogicLineages.ModelsAlgebra.PGroups.GroupInfinitary.raw_source_two_infinite_scott_bounds
+
+end LogicLineages.ModelsAlgebra.PGroups.StatementChecks
+
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups
