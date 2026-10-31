@@ -1,0 +1,23 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleJumpInclusionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.OracleJumpInclusionStatementChecks
+
+theorem fixed_liftedSecondMatrixPrimitiveRecursive :
+    OracleJumpInclusionTargets.LiftedSecondMatrixPrimitiveRecursive :=
+  OracleJumpInclusionProof.liftedSecondMatrixPrimitiveRecursive
+
+theorem fixed_actualSecondIndicatorCalibration :
+    OracleJumpInclusionTargets.ActualSecondIndicatorCalibration :=
+  OracleJumpInclusionProof.actualSecondIndicatorCalibration
+
+theorem fixed_actualSecondToThirdJumpInclusion :
+    OracleJumpInclusionTargets.ActualSecondToThirdJumpInclusion :=
+  OracleJumpInclusionProof.actualSecondToThirdJumpInclusion
+
+end LogicLineages.ComputabilityKnowledge.OracleJumpInclusionStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

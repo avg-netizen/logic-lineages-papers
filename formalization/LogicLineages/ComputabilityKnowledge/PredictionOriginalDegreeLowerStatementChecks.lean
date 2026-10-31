@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalDegreeLowerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalDegreeLowerStatementChecks
+open PredictionOriginalDegreeLowerTargets PredictionOriginalDegreeLowerProof
+theorem actualMeasureLower_exact : ActualMeasureLower := actualMeasureLower
+theorem actualComparatorLower_exact : ActualComparatorLower := actualComparatorLower
+end LogicLineages.ComputabilityKnowledge.PredictionOriginalDegreeLowerStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalDegreeLowerStatementChecks

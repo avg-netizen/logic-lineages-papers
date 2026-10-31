@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionEvenProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionEvenStatementChecks
+theorem evenComparison : Targets.terminalDeletionEven := terminal_deletion_even
+end LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionEvenStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionEvenStatementChecks

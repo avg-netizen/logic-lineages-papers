@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalComparatorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalComparatorStatementChecks
+open PredictionOriginalComparatorTargets PredictionOriginalComparatorProof
+theorem exactOutputComparison_exact : ExactOutputComparison := exactOutputComparison
+theorem actualComparatorUpper_exact : ActualComparatorUpper := actualComparatorUpper
+theorem fixedInfiniteComparatorReduction_exact : FixedInfiniteComparatorReduction := fixedInfiniteComparatorReduction
+end LogicLineages.ComputabilityKnowledge.PredictionOriginalComparatorStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalComparatorStatementChecks

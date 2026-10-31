@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalOneOddProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalOneOddStatementChecks
+theorem oddComparison : Targets.terminalOneOddComparison := terminal_one_odd_comparison
+end LogicLineages.ModelsAlgebra.PGroups.TerminalOneOddStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalOneOddStatementChecks

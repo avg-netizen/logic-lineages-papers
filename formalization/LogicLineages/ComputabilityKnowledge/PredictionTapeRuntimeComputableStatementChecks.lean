@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeComputableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeComputableStatementChecks
+open PredictionTapeRuntimeComputableTargets PredictionTapeRuntimeComputableProof
+theorem exactFiniteTest_exact : ExactFiniteTest := exactFiniteTest
+theorem effectiveRuntimeSearch_exact : EffectiveRuntimeSearch := effectiveRuntimeSearch
+theorem exactPartialRuntime_exact : ExactPartialRuntime := exactPartialRuntime
+theorem totalProgramComputableRuntime_exact : TotalProgramComputableRuntime := totalProgramComputableRuntime
+end LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeComputableStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeComputableStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalOneResponseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalOneResponseStatementChecks
+theorem finiteResponse : Targets.terminalOneResponse := terminal_one_response
+end LogicLineages.ModelsAlgebra.PGroups.TerminalOneResponseStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalOneResponseStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalFiniteLiftProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalFiniteLiftStatementChecks
+theorem finiteLift : Targets.terminalFiniteLift := terminal_finite_lift
+end LogicLineages.ModelsAlgebra.PGroups.TerminalFiniteLiftStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalFiniteLiftStatementChecks

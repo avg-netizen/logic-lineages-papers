@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionMeasureOrderProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionMeasureOrderStatementChecks
+open PredictionMeasureOrderTargets PredictionMeasureOrderProof
+theorem positiveThresholdOrder_exact : PositiveThresholdOrder := positiveThresholdOrder
+end LogicLineages.ComputabilityKnowledge.PredictionMeasureOrderStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionMeasureOrderStatementChecks

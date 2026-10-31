@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceUnaryChainProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceUnaryChain.StatementChecks
+theorem fullSourceUnaryChain : Targets.FullSourceUnaryChain := Proof.fullSourceUnaryChain
+end LogicLineages.OrdinalComparison.Source.SourceUnaryChain.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceUnaryChain

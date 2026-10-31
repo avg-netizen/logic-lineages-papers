@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ZeroTailDeletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ZeroTailDeletionStatementChecks
+theorem fullTailDeletion : Targets.zeroTailDeletion := zero_tail_deletion
+end LogicLineages.ModelsAlgebra.PGroups.ZeroTailDeletionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ZeroTailDeletionStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionCompleteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionCompleteStatementChecks
+theorem sourceLemma : Targets.terminalDeletionSourceLemma := terminal_deletion_source_lemma
+end LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionCompleteStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionCompleteStatementChecks

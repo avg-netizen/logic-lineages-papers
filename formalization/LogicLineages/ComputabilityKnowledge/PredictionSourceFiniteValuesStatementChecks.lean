@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionSourceFiniteValuesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionSourceFiniteValuesStatementChecks
+open PredictionSourceFiniteValuesTargets PredictionSourceFiniteValuesProof
+theorem wholeSourceFiniteValues_exact : WholeSourceFiniteValues := wholeSourceFiniteValues
+end LogicLineages.ComputabilityKnowledge.PredictionSourceFiniteValuesStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionSourceFiniteValuesStatementChecks

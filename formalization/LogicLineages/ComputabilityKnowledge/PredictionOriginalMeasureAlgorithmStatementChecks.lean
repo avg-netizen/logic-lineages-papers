@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureAlgorithmProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureAlgorithmStatementChecks
+open PredictionOriginalMeasureAlgorithmTargets PredictionOriginalMeasureAlgorithmProof
+theorem relativeAlgorithm_exact : RelativeAlgorithm := relativeAlgorithm
+theorem exactOracleMeasure_exact : ExactOracleMeasure := exactOracleMeasure
+end LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureAlgorithmStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureAlgorithmStatementChecks

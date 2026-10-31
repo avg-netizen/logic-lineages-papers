@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteSocleReducedProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleReducedStatementChecks
+theorem omegaStable : Targets.finiteSocleOmegaStable := finite_socle_omega_stable
+theorem reducedFinite : Targets.reducedFiniteSocleFinite := reduced_finite_socle_finite
+theorem infiniteBelowLimit : Targets.reducedLongLimitInfiniteSocles := reduced_long_limit_infinite_socles
+end LogicLineages.ModelsAlgebra.PGroups.FiniteSocleReducedStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleReducedStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceCollisionCompletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceCollisionCompletion.StatementChecks
+theorem fullSourceCollision : Targets.FullSourceCollision := Proof.fullSourceCollision
+end LogicLineages.OrdinalComparison.Source.SourceCollisionCompletion.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceCollisionCompletion

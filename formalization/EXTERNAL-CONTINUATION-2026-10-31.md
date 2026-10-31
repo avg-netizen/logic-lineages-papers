@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 15
+## Current verified snapshot: checkpoint 16
 
-**108 checked, 2 inherited, 79 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 989 selected imports and 3,143
+**115 checked, 2 inherited, 72 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,023 selected imports and 3,201
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -609,3 +609,46 @@ No CI or default runner configuration was changed.
 This snapshot does not include later collision/aggregation/chain results,
 actual third-jump completeness, or final prediction degree endpoints. Their
 subsequent acceptance is recorded only in later checkpoints.
+
+## Seven additional whole-source endpoints
+
+Checkpoint 16 completes paper 01's full `lem:terminal-deletion`, including
+actual quotient invariants, retained terminal group, exact length and
+reducedness, the retained-tuple odd comparison, and the original terminal
+back-and-forth hypothesis implying the even comparison. No finite-lifting
+or infinite-socle oracle remains as an extra hypothesis.
+
+Paper 09 adds the entire six-eraser collision lemma, conjunction aggregator
+and one-final-abstraction unary-chain lemma. These use actual full default
+assignments and shared source valuations, not hypothetical scalar/head
+interfaces. The later Boolean compiler's polynomial-DAG and general observer
+obligations remain separate.
+
+Paper 14 now has all nine registered source statements checked. The new
+endpoints are the complete original-measure classification, finite-value
+lemma for lists covering all computable functions, and complete canonical
+least-index-list classification. Actual third-jump complement normal forms
+and actual second-to-third inclusion discharge the degree dependencies;
+there is no completeness or oracle-decision premise. Promise-respecting
+upper/lower algorithms and the source infinity/finite encoding are explicit.
+The canonical list is not treated as uniformly computable, nor supplied an
+infinite-level predictor.
+
+The third-jump normal-form bundle uses a disclosed additive metadata
+normalization: its original human-readable freeze and intended exact gate
+were retained before the proof, independently checked using filesystem
+chronology and comparator records. The original freeze contained no inline
+UTC timestamp. Later machine-readable linkage is explicitly post-candidate;
+no earlier timestamp text or new pre-proof event is invented. Hash-linked
+original artifacts remain externally retained rather than publicly included.
+The intended gate text and final mathematical source hashes match exactly.
+
+The [sixteenth focused checkpoint](verification/repair-2026-10-31/checkpoint-16.json)
+selects 318 gates and audits 937 exact aliases over 1,855 unchanged local
+source hashes. Its scoped focused profile passed in 4.113 seconds at
+1,764,388 KiB peak RSS. The [actual selected root](verification/repair-2026-10-31/root-checkpoint16.json)
+passed with 1,023 imports, 3,201 namespace audits and all 3,761 local closure
+hashes unchanged, in 2.694 seconds at 2,705,180 KiB peak RSS under the
+root-only profile. Thirty-four selected records are included; later work is
+excluded from this snapshot. The register is now **115 checked, 2 inherited,
+72 pending**. No GitHub CI result is claimed.

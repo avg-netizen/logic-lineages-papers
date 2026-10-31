@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationStatementChecks
+theorem amalgamation : Targets.cutAmalgamation := cut_amalgamation
+end LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationStatementChecks

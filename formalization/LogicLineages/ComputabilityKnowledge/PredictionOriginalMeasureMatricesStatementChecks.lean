@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureMatricesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureMatricesStatementChecks
+open PredictionOriginalMeasureMatricesTargets PredictionOriginalMeasureMatricesProof
+theorem effectiveMatrices_exact : EffectiveMatrices := effectiveMatrices
+theorem exactInfinityPacking_exact : ExactInfinityPacking := exactInfinityPacking
+theorem actualOriginalDecisions_exact : ActualOriginalDecisions := actualOriginalDecisions
+end LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureMatricesStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalMeasureMatricesStatementChecks

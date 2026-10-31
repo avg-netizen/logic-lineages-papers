@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.AtomicGeneratedIsoProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.AtomicGeneratedIsoStatementChecks
+theorem atomicIso : Targets.atomicGeneratedIso := atomic_generated_iso
+end LogicLineages.ModelsAlgebra.PGroups.AtomicGeneratedIsoStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.AtomicGeneratedIsoStatementChecks

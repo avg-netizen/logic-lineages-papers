@@ -1,0 +1,35 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.OracleThirdJumpNormalFormProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.OracleThirdJumpNormalFormStatementChecks
+
+theorem fixed_finiteOracleAgreement : OracleThirdJumpNormalFormTargets.FiniteOracleAgreement :=
+  OracleThirdJumpNormalFormProof.finiteOracleAgreement
+
+theorem fixed_actualHaltingCertificate : OracleThirdJumpNormalFormTargets.ActualHaltingCertificate :=
+  OracleThirdJumpNormalFormProof.actualHaltingCertificate
+
+theorem fixed_explicitMatricesPrimitiveRecursive : OracleThirdJumpNormalFormTargets.ExplicitMatricesPrimitiveRecursive :=
+  OracleThirdJumpNormalFormProof.explicitMatricesPrimitiveRecursive
+
+theorem fixed_actualFirstJumpNormalForm : OracleThirdJumpNormalFormTargets.ActualFirstJumpNormalForm :=
+  OracleThirdJumpNormalFormProof.actualFirstJumpNormalForm
+
+theorem fixed_actualSecondJumpNormalForm : OracleThirdJumpNormalFormTargets.ActualSecondJumpNormalForm :=
+  OracleThirdJumpNormalFormProof.actualSecondJumpNormalForm
+
+theorem fixed_actualThirdJumpNormalForm : OracleThirdJumpNormalFormTargets.ActualThirdJumpNormalForm :=
+  OracleThirdJumpNormalFormProof.actualThirdJumpNormalForm
+
+theorem fixed_actualThirdJumpComplement : OracleThirdJumpNormalFormTargets.ActualThirdJumpComplement :=
+  OracleThirdJumpNormalFormProof.actualThirdJumpComplement
+
+theorem fixed_recursiveActualThirdJumpComplement : OracleThirdJumpNormalFormTargets.RecursiveActualThirdJumpComplement :=
+  OracleThirdJumpNormalFormProof.recursiveActualThirdJumpComplement
+
+end LogicLineages.ComputabilityKnowledge.OracleThirdJumpNormalFormStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge

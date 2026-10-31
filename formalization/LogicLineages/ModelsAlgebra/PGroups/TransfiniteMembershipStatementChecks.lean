@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteMembershipProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TransfiniteMembershipStatementChecks
+theorem qfConjunction : Targets.piAndQFExact := pi_and_qf_exact
+theorem blockMembership : Targets.omegaBlockMembershipDefinable := omega_block_membership_definable
+theorem finiteOffsetMembership : Targets.finiteOffsetMembershipDefinable := finite_offset_membership_definable
+end LogicLineages.ModelsAlgebra.PGroups.TransfiniteMembershipStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TransfiniteMembershipStatementChecks

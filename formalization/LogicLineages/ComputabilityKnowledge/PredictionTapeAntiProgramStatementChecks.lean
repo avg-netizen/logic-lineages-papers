@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeAntiProgramProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeAntiProgramStatementChecks
+open PredictionTapeAntiProgramTargets PredictionTapeAntiProgramProof
+theorem uniformRawAntiProgram_exact : UniformRawAntiProgram := uniformRawAntiProgram
+end LogicLineages.ComputabilityKnowledge.PredictionTapeAntiProgramStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeAntiProgramStatementChecks

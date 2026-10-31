@@ -1,0 +1,134 @@
+{
+  "accepted_utc": "2026-10-31T10:58:20.886554+00:00",
+  "scope": "Actual injective additive map on sum B+L glued along the high intersection, exact real transfinite cuts preserved. No amalgamation/extension oracle. Full terminal BF and even deletion separately pending.",
+  "source_correspondence": "Actual sum injective homomorphism and cut preservation from compatible old and deep maps, with compatibility premises explicit. Scoped amalgamation supplier only, not a whole source theorem. Outside checkpoint15.",
+  "source_commit": "356d436e9903f4bf8104c268860276ec8f2cddad",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationStatementChecks",
+  "frozen_at_utc": "2026-10-31T10:56:05.541890+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cut-amalgamation-freeze.json",
+  "freeze_sha256": "a9440c30101305154db8671c7aaa529ac1e0580bb22db380e1686c9a9e46ee78",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationDefinitions.lean",
+      "sha256": "0a799f63197f495a7618f0108a7af1652906d0c2aa24a5e88a8efba9be11b270"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationTargets.lean",
+      "sha256": "704a1b3dd04af6105430cdf68468f17f2806780b858880f6bffce3efbd336076"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationStatementChecks.lean",
+      "sha256": "db1de988971cff44325e4ebf4f202522d4a0b7c3c938dce9792405982ed87409"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationProof.lean",
+      "sha256": "dedf935f16bd133cfa6789b77432fb1901d4c9e1b2bab3d166549e120dcdda18"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationStatementChecks.amalgamation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793444114581136887-2.json",
+      "sha256": "31d0a316813804495ecaf97807c64da3bbdc7192e80fd862a845bb8aff9e7117",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793444276382911618-5.json",
+      "sha256": "ce9ab070922aadbf2d5982a5ebc05c3f745b2cc6542cebcdfb8ec62984c7eb96",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793444276382911618-5-LogicLineages-ModelsAlgebra-PGroups-CutAmalgamationStatementChecks.log",
+  "gate_log_sha256": "58b41a860ec0624415969ff5621f05a5b64e5ef3f10bab5ca8406cb8f1cc54e9",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.CutAmalgamationStatementChecks.amalgamation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationStatementChecks.lean",
+      "sha256": "db1de988971cff44325e4ebf4f202522d4a0b7c3c938dce9792405982ed87409"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationProof.lean",
+      "sha256": "dedf935f16bd133cfa6789b77432fb1901d4c9e1b2bab3d166549e120dcdda18"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationTargets.lean",
+      "sha256": "704a1b3dd04af6105430cdf68468f17f2806780b858880f6bffce3efbd336076"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CutAmalgamationDefinitions.lean",
+      "sha256": "0a799f63197f495a7618f0108a7af1652906d0c2aa24a5e88a8efba9be11b270"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteFiltration.lean",
+      "sha256": "5ef09a1845f1f65be132b0961b4de51f316dcdef7d310ec9e6b632d7e1c2b647"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+      "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteFiltration.lean",
+      "sha256": "0d011bfc65ac39420a37c205d6fcf66d79cb0df8b7a17f94685933ceca2c8143"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageIntersections.lean",
+      "sha256": "17b40f639b03ca584bbafed259a8f81ac472754f1b66e3e2d8fc458b6ce92acd"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.Basic",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Module.NatInt",
+    "Mathlib.SetTheory.Ordinal.Arithmetic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionCanonicalTapeBoundsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionCanonicalTapeBoundsStatementChecks
+open PredictionCanonicalTapeBoundsTargets PredictionCanonicalTapeBoundsProof
+theorem exactCanonicalCoverage_exact : ExactCanonicalCoverage := exactCanonicalCoverage
+theorem exactCanonicalBounds_exact : ExactCanonicalBounds := exactCanonicalBounds
+theorem actualSecondJumpBoundIndices_exact : ActualSecondJumpBoundIndices := actualSecondJumpBoundIndices
+end LogicLineages.ComputabilityKnowledge.PredictionCanonicalTapeBoundsStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionCanonicalTapeBoundsStatementChecks

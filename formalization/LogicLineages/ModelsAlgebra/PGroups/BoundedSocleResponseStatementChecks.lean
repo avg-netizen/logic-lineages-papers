@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedSocleResponseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.BoundedSocleResponseStatementChecks
+theorem oddResponse : Targets.boundedSocleOddResponse := bounded_socle_odd_response
+theorem gapResponse : Targets.boundedSocleGapResponse := bounded_socle_gap_response
+theorem evenResponse : Targets.boundedSocleEvenResponse := bounded_socle_even_response
+end LogicLineages.ModelsAlgebra.PGroups.BoundedSocleResponseStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.BoundedSocleResponseStatementChecks

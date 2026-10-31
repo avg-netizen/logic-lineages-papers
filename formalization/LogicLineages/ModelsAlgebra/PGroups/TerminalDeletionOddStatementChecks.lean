@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionOddProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionOddStatementChecks
+theorem algebraAndOdd : Targets.terminalDeletionOdd := terminal_deletion_odd
+end LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionOddStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalDeletionOddStatementChecks

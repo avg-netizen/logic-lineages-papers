@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionCanonicalHardnessProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionCanonicalHardnessStatementChecks
+open PredictionCanonicalHardnessTargets PredictionCanonicalHardnessProof
+theorem canonicalFixedThresholds_exact : CanonicalFixedThresholds := canonicalFixedThresholds
+theorem actualCanonicalMeasureLower_exact : ActualCanonicalMeasureLower := actualCanonicalMeasureLower
+end LogicLineages.ComputabilityKnowledge.PredictionCanonicalHardnessStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionCanonicalHardnessStatementChecks
