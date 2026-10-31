@@ -362,6 +362,14 @@ public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenS
 public import LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.RawTrivialExactStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedLengthStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks
+public import LogicLineages.OrdinalComparison.SourcePrimitiveLoweringStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks
+public import LogicLineages.OrdinalComparison.WWScopedSourceDAGStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4417,6 +4425,78 @@ theorem checked_TwoInfiniteTailSigma_unrestricted :
 theorem checked_TwoInfiniteTerminalPointed_actualQuotient :
     LogicLineages.ModelsAlgebra.PGroups.Targets.twoInfiniteTerminalPointed :=
   LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks.actualQuotient
+
+theorem checked_RawTrivialExact_trivial :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.rawTrivialExact :=
+  LogicLineages.ModelsAlgebra.PGroups.RawTrivialExactStatementChecks.trivial
+
+theorem checked_ReducedLength_leastStage :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countableReducedExactLength :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedLengthStatementChecks.leastStage
+
+theorem checked_ReducedLength_normalForm :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countableLengthNormalForm :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedLengthStatementChecks.normalForm
+
+theorem checked_ReducedLength_terminalBound :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.exactLengthTerminalBound :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedLengthStatementChecks.terminalBound
+
+theorem checked_ReducedLimitDifference_relative :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedLimitNoDifference :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks.relative
+
+theorem checked_ReducedLimitDifference_unrestricted :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedLimitNoRawDifference :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks.unrestricted
+
+theorem checked_ReducedPrueferReverse_pointedReverse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedPrueferReverse :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseStatementChecks.pointedReverse
+
+theorem checked_ReducedScottComplete_fullSource :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedScottFullSource :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks.fullSource
+
+theorem checked_SourcePrimitiveLowering_sharedInputs :
+    LogicLineages.OrdinalComparison.Source.PrimitiveLowering.Targets.SharedInputs :=
+  LogicLineages.OrdinalComparison.Source.PrimitiveLowering.StatementChecks.sharedInputs
+
+theorem checked_SourcePrimitiveLowering_sourceExact :
+    LogicLineages.OrdinalComparison.Source.PrimitiveLowering.Targets.SourceExact :=
+  LogicLineages.OrdinalComparison.Source.PrimitiveLowering.StatementChecks.sourceExact
+
+theorem checked_SourcePrimitiveLowering_primitiveRealization :
+    LogicLineages.OrdinalComparison.Source.PrimitiveLowering.Targets.PrimitiveRealization :=
+  LogicLineages.OrdinalComparison.Source.PrimitiveLowering.StatementChecks.primitiveRealization
+
+theorem checked_SourcePrimitiveLowering_graphExact :
+    LogicLineages.OrdinalComparison.Source.PrimitiveLowering.Targets.GraphExact :=
+  LogicLineages.OrdinalComparison.Source.PrimitiveLowering.StatementChecks.graphExact
+
+theorem checked_SourcePrimitiveLowering_fixedSize :
+    LogicLineages.OrdinalComparison.Source.PrimitiveLowering.Targets.FixedSize :=
+  LogicLineages.OrdinalComparison.Source.PrimitiveLowering.StatementChecks.fixedSize
+
+theorem checked_TerminalMultiplicity_actualMultiplicities :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalMultiplicityData :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks.actualMultiplicities
+
+theorem checked_WWScopedSourceDAG_renaming :
+    LogicLineages.OrdinalComparison.Source.ScopedDAG.Targets.Renaming :=
+  LogicLineages.OrdinalComparison.Source.ScopedDAG.StatementChecks.«renaming»
+
+theorem checked_WWScopedSourceDAG_application :
+    LogicLineages.OrdinalComparison.Source.ScopedDAG.Targets.Application :=
+  LogicLineages.OrdinalComparison.Source.ScopedDAG.StatementChecks.application
+
+theorem checked_WWScopedSourceDAG_eraser :
+    LogicLineages.OrdinalComparison.Source.ScopedDAG.Targets.Eraser :=
+  LogicLineages.OrdinalComparison.Source.ScopedDAG.StatementChecks.eraser
+
+theorem checked_WWScopedSourceDAG_aggregate :
+    LogicLineages.OrdinalComparison.Source.ScopedDAG.Targets.Aggregate :=
+  LogicLineages.OrdinalComparison.Source.ScopedDAG.StatementChecks.aggregate
 
 end LogicLineages.Repair20261031Checks
 

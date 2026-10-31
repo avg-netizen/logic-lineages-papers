@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseStatementChecks
+theorem pointedReverse : Targets.reducedPrueferReverse := reduced_pruefer_reverse
+end LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseStatementChecks

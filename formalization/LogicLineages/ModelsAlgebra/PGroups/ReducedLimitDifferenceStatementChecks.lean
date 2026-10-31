@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks
+theorem relative : Targets.reducedLimitNoDifference := reduced_limit_no_difference
+theorem unrestricted : Targets.reducedLimitNoRawDifference := reduced_limit_no_raw_difference
+end LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks

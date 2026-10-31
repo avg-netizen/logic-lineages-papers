@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks
+theorem fullSource : Targets.reducedScottFullSource := reduced_scott_full_source
+end LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks

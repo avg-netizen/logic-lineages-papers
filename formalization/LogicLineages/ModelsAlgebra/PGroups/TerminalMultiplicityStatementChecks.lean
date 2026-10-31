@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks
+theorem actualMultiplicities : Targets.terminalMultiplicityData := terminal_multiplicity_data
+end LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks

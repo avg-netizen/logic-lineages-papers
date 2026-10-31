@@ -1,0 +1,604 @@
+{
+  "accepted_utc": "2026-10-31T12:58:13.027415+00:00",
+  "scope": "Actual unrestricted raw trivial Pi1 Scott sentence and quantifier-free exclusion; no exactness oracle.",
+  "source_correspondence": "Actual exact unrestricted RawScott complexity of the trivial-group case, with literal raw language semantics. Scoped base-case endpoint, not the entire reduced-group classification. Outside checkpoint20.",
+  "source_commit": "8765526540bd6869649fcd5d7ff6dd0ce9200e7f",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.RawTrivialExactStatementChecks",
+  "frozen_at_utc": "2026-10-31T12:57:14.149864+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/raw-trivial-exact-freeze.json",
+  "freeze_sha256": "a6f59b0652f73ebce9816f969fb4268685f6a2ccc979970034708be8031e85a2",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactDefinitions.lean",
+      "sha256": "12d3acaeab56cd8ac73d4b89f45f786c80b3754c339737e86b2b0776c0cb690e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactTargets.lean",
+      "sha256": "af71e594d105f711a5fdfacc0be4322792463d539ff103c8e7614afceadef565"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactStatementChecks.lean",
+      "sha256": "e3f4eefa483a5a3b047420bae727a0ed07fec770f5ea9f05f0308834f5407e27"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactProof.lean",
+      "sha256": "1a844364c369c761ce00872c9162d028fc417a355eaa13db3780d18b9cb7ee29"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.RawTrivialExactStatementChecks.trivial"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793451336651841252-2.json",
+      "sha256": "5187a6e7ef6480c682b1bfc99c38535c8d09451c94ec85a9de1e62ce362d1aad",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793451459071620836-2.json",
+      "sha256": "95379db98a3ac9d903baac7622f5d4e115c32f6c26c6e434c8a1e8846d6acec5",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793451459071620836-2-LogicLineages-ModelsAlgebra-PGroups-RawTrivialExactStatementChecks.log",
+  "gate_log_sha256": "393f39677fa47f4b1fc116333d526969fc8a95f8345f3d7ef1e00a7d255d489d",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.RawTrivialExactStatementChecks.trivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactStatementChecks.lean",
+      "sha256": "e3f4eefa483a5a3b047420bae727a0ed07fec770f5ea9f05f0308834f5407e27"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactProof.lean",
+      "sha256": "1a844364c369c761ce00872c9162d028fc417a355eaa13db3780d18b9cb7ee29"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactTargets.lean",
+      "sha256": "af71e594d105f711a5fdfacc0be4322792463d539ff103c8e7614afceadef565"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawTrivialExactDefinitions.lean",
+      "sha256": "12d3acaeab56cd8ac73d4b89f45f786c80b3754c339737e86b2b0776c0cb690e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawScottDefinitions.lean",
+      "sha256": "c62d4038919effb413d90183ecd253a0258f8d77e1017e0b55bcec9c12ae4419"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawGuardDefinitions.lean",
+      "sha256": "1e2ba9ed2ea48b0adfa3b90668ea839ccfe36efb1be5e3490e98778e260212b7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawGroupAxiomsDefinitions.lean",
+      "sha256": "5c7237694f3342b24c6626049ffb9f8e6cf1d0d5bfcffccacb051bde4a609151"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawSemanticsDefinitions.lean",
+      "sha256": "7ae2b5588afd5332ba55d8f62de23ece67c64e899d906c7b7898a020fe354ed7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinalityDefinitions.lean",
+      "sha256": "5971566bc73d10925c9b48c4a612a672c257cd6dcc5b56d4c7d0fcffd01fa6c1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeDefinitions.lean",
+      "sha256": "a5742590e7125cb70bc1ee5fdc8daaba0b758732d70d09d7fa2f125c4b55089a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDefinitions.lean",
+      "sha256": "b94822505afeee10653bec56e71b449e134bed3c8349a114ef3bc9e6d36c961d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthDefinitions.lean",
+      "sha256": "2ec84e50e27d9eba581f6c3adf6f2e8bd08b1c29372e30e1155ba50430b1dc73"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PiConjunctionDefinitions.lean",
+      "sha256": "c93af6a9ef40a268c0bff96cfdb075aa956f7efb53b474188a0f832be88f7e1a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableBranchesDefinitions.lean",
+      "sha256": "654ffe780798c47c24689727cd3d707386e3fc10e44f516d6a25a4e64be3e5c7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DifferenceScottDefinitions.lean",
+      "sha256": "b4c4b2f7aeec880a642e8833b3216ece5725a48405833b9ab816cdd33d186cad"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ScottDefinitions.lean",
+      "sha256": "0000e69659986a7947992d803e76b7e9d990719f517382e96bad40739a43f18b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryWrapDefinitions.lean",
+      "sha256": "f56e41a0da753e7478e63ad98d6d11cd5283707d8ff9c1ccb88697f6cc5039d8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SigmaTwoConjunctionDefinitions.lean",
+      "sha256": "dae1683544b80f3692937a013c75a85425972b44abfffd7f1316d86c518c8d33"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingDefinitions.lean",
+      "sha256": "5e04f7c060ef862bcdc4fbf232e65c2cb9956c38f5deb957cb3e1f8fe4981249"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawUpperBounds.lean",
+      "sha256": "8585dce2628c4b57e786e014cc8621bfaa1655ed718170b24f6e1443b56ad48c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawUpperBoundsTargets.lean",
+      "sha256": "675b42dac3694be52bb16ce0d115558d25e757ed8235165e593863c5c8005745"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedScottTargets.lean",
+      "sha256": "dd390b2787bd8bf787acb01f9197af53a0c574c3d575026a1ec8f4be6b43e425"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedUlmTableTargets.lean",
+      "sha256": "cae93dea3034eacda396b23e5bdcf3fc58f1101147aac6c3e06fff1015889371"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedUlmTableDefinitions.lean",
+      "sha256": "2dd55e4294e442742071cef7994484580e7659b9ccca64f7668b6128954e27ab"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfiniteUlmDefinitions.lean",
+      "sha256": "600ead937431b55d4f314fbeb4115b83a47bc6beaa313c44221cd841c76c51e1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmLowerFormulaDefinitions.lean",
+      "sha256": "54ed1dc54af1a0fb530589e59ef6ff6c1172c867d0eff17311e5d205bfbff07e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+      "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDimensionDefinitions.lean",
+      "sha256": "341b0121f7f71df411cd40586706edfc4a87be3b0ca09f463c40a83f1246d3ee"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDualDefinitions.lean",
+      "sha256": "55acfd61ce9cfe0e78ff6390b78eba00fd24fcb2ca7b5db5f57d4235f72bdeaa"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteConjunctionDefinitions.lean",
+      "sha256": "e626d62f6d017d6cc59c775a5232e2d455f207aff45f1e30370862a4c30a2bbb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AnnihilationDefinitions.lean",
+      "sha256": "2f053c0144fe8f0e98127b88104d61dc3d68d8d8417bac0135bc0c599bad812e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawScott.lean",
+      "sha256": "5e57dd6bc780de7144963edb2d2596a0464fb1bd87b6483a31dacc47bc59db56"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawScottTargets.lean",
+      "sha256": "3c6956fc63b2b31f16af43089f36aa1d53198fc71d1c0267fd9ecce2177c0643"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawGuard.lean",
+      "sha256": "148d0925ade4c2934ebc74debc0dc61799ebf50e523e5e240cc2602ae473a539"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawGuardTargets.lean",
+      "sha256": "6b575313173d9654299ac63e50d92486ce189b33cfd519cabd9cb84d4401251f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawConjunction.lean",
+      "sha256": "b24ee86cd2913cd0386f1958917e151f78bcb3dda4a8dee8023e6f2d53e96442"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawConjunctionTargets.lean",
+      "sha256": "2f2ec0b4279f402e953b72a6d8c5c82504911ff900df25a299129ee405075d59"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawSemantics.lean",
+      "sha256": "cdd773a80e8112598b2f8001ebd66f917fdaf048f5609a7364f27ee16410372c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawSemanticsTargets.lean",
+      "sha256": "14081d60ca6d9bdfdd7f01fe66c39012d1481292aac1488c09eb779217336ff5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawGroupAxioms.lean",
+      "sha256": "fb98bb4c20246385ab4efe25f09d2fad89551f87d3bf934ab833201bfa67292d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawGroupAxiomsTargets.lean",
+      "sha256": "fb76c3b0c24ec27ba622f46f4c072e455384be2dfc40b3033fe37eaa4367b412"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PiConjunction.lean",
+      "sha256": "d3b3c5d27c7d1c87e21161b45121ee5592d16098fee89eb1ca325e753f8f29fa"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PiConjunctionTargets.lean",
+      "sha256": "fe8c2dfcac4df61ed54a2e61754c6721ced0f7127f7ef1410454c88ca497db37"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableBranches.lean",
+      "sha256": "b3eb1683a403f9d591950f77611f9a7e54576da76e4298fd2b74f1358b3dc331"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableBranchesTargets.lean",
+      "sha256": "5a23bb12d151392ef18913e295cdd2dd93c4afa7aaf2d100ec38e125f8b01c2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/Infinitary.lean",
+      "sha256": "38c960dd00fc1a554d476c2614535bea76c4b24916e77eff8ea1ce244eded7f1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryTargets.lean",
+      "sha256": "e22b5c2e0d496f1ea03fa166f911b92805cb11572d989d7d2fcc501dbf226f0f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForth.lean",
+      "sha256": "9458b1c8b6894e432ef1cafa49d1ec137f6ec79d86ab50e29ef3f4cca2f83e41"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean",
+      "sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteScott.lean",
+      "sha256": "df04fb2c70a2725875f4e359cd19a32d5451569a9c6633510406a4fb22ef0af2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteScottTargets.lean",
+      "sha256": "fda6e38a710ccdad3ff1e5d8350810868448486fbedaf5911e81875620057684"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteImageTableDefinitions.lean",
+      "sha256": "cf78b5453c6c119dc962ec8528de73b172febf74c8e12acd3a632fb09a2202bb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteImageTable.lean",
+      "sha256": "cc28a85518fb18bde0a232b5bd5ac6375cd16e83ea96afa7d46656ca2d47bd3e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteImageTableTargets.lean",
+      "sha256": "94caf03f3670fb29a92603734a118281e804e3b48b954d720c6274af4ecca13a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinality.lean",
+      "sha256": "d3e1249ddd4bd05d235d87c948bb5bf0335c64846448623eac9857481121ae5c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinalityTargets.lean",
+      "sha256": "c7e12bd26ee1f22c2e3d6404fb488cd0ef8f75d9a46ef58e41ba1f115c6a3521"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitude.lean",
+      "sha256": "03ea9f26fe223a67b6f5f3c6763727c023c7660b8286ad5f40dc6511acbf58ab"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeTargets.lean",
+      "sha256": "420180af86bcbb4ebfa3812898f49e5f4b1a342ae8da260059cf6fb884ce6f6d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TrivialScott.lean",
+      "sha256": "d92fd22f2e256e8ec34f244078b6c5ccd4098d1708aa822f8071ec0b9839255c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TrivialScottTargets.lean",
+      "sha256": "540b4dac67e6cd7cfc122e0395ce9cfe7801c172fc591fb1aa0279252a92290d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/Annihilation.lean",
+      "sha256": "1de9d1a0d4821148cef21c30b6c30c14316ade28fb7b8c43cb9ed25c3d0637c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AnnihilationTargets.lean",
+      "sha256": "b7294745fc7241540777a10864ccedeb909782c235b116b1dfeab33dd26b9575"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmFiniteIndependence.lean",
+      "sha256": "7f608542efe775cf55356b044d27a85c922d79bc67e24cc2d98d4bddc0db0aa3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmFiniteIndependenceTargets.lean",
+      "sha256": "95f064b42009277798559d5da5363310a74c8c0803bffd541fa38043d57efe68"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedScott.lean",
+      "sha256": "9af89fa5d3fc03a3abc518ae0ab9a67384ca9fbddbc628fa1e4e2aadc5138554"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedCategoricity.lean",
+      "sha256": "e967b016449d2c7170c4046420de6c160d60dd7f4f2512464a46f5bd14e69080"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedCategoricityTargets.lean",
+      "sha256": "f6523e757bc8b648348d0508f36da3e4a738b332e48d504a215bb58569c45f12"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicClassificationTargets.lean",
+      "sha256": "5a7985273728d513232e7179dc51ffdae442ec8c30f376945bcf642fff4f3cc9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDecompositionTargets.lean",
+      "sha256": "998ffae8ac9b6d2c700485367d108fc2d862d646429c44ca0498d246406a12c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSumTargets.lean",
+      "sha256": "0a908552d6e0a80f22887b4d02acf38d6794dc51b958988e0310c815fd465427"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSumDefinitions.lean",
+      "sha256": "d90ff032c537f2feb011cc86fa5ca18e66515136b819ca06fdeb140bfc85218e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicSocleCoordinatesDefinitions.lean",
+      "sha256": "2968305e8968072129473978539b5e930d2a5abb25cc4486d76cc1bb58d2054a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootDefinitions.lean",
+      "sha256": "2baa43f340f66040e8eb3fc6f7407a314a44d5a7fe690d614753289385ad61ac"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclic.lean",
+      "sha256": "0693f3eed90d711ce2e848ece3740d1ab2b8d2294594b3abffd8a39972dbc270"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclicTargets.lean",
+      "sha256": "13bcc963de4404b1a869f5166660b8c5da6e5e5880c9d737860c22fa1d89be99"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PowerCyclicDefinitions.lean",
+      "sha256": "444bc7e63c95689b5a657ba6daadf4235951b5ad18d9eca717b759cd7949412d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RootGenerationTargets.lean",
+      "sha256": "691c43ec84e14a04abba5a6060e19288e8909b2546b6a6d43bddf8901dceff1d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmBasisLiftTargets.lean",
+      "sha256": "caa5da4e2de3738e448dcd5b7b5cd84ad8806e9cf986647a8d8142be92b6b281"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicClassification.lean",
+      "sha256": "835c8db0bef4e35ddcc237e2213160fd9c8b49b50823656990bdaf8cede58a1f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDecomposition.lean",
+      "sha256": "26036e4c8a1cf9f71427a2a65a999c224d649c73f0ac9cf02bdde936c3c6c5d0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicDirectSum.lean",
+      "sha256": "7db83f22a2fd42230d0877534eb8e4081abc71f33b53027309fb08ded9e520db"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicSocleCoordinates.lean",
+      "sha256": "6ca52e3a22db10602682d9e85f03e63dde541f1914e524b8b025c91e5012c410"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicSocleCoordinatesTargets.lean",
+      "sha256": "08207f5b058f74a06bbf64fb7d55f498a9cdc400271bf4898f83960887bb7389"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRoot.lean",
+      "sha256": "d685d3a34920386766af8e2d8e8a111c99b45d99b00f81293ac67b591de9e074"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootTargets.lean",
+      "sha256": "e5504be9c62825b32bb52d44258fda9e905be5d19caefd65b610fe8050ed581d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RootGeneration.lean",
+      "sha256": "777f3c98d1682950615ede7af928c8e2b7027a85d659e06f2a81d3e9910507fc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocle.lean",
+      "sha256": "570f9c6deac1dc8aec5587d4cbea385d08ea5d0340fe6d28d7826d29da7c5853"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleTargets.lean",
+      "sha256": "0647bc3a1e76eeb201b689c8f0e6abde3725343d6e09db13faf9da9728a70013"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmBasisLift.lean",
+      "sha256": "99e27c271d299a237042d6edf33b4117f53af65d8318e5194976642fdc4385bc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BoundedUlmTable.lean",
+      "sha256": "2b7e92f7783fd0737b5cbb2ca81f45468fd9440b1dc081262bb8c15b6693a652"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfiniteUlm.lean",
+      "sha256": "b070320e9112736639cb49bb48ead02520d7b469a4f6afaae5ae5cca14ae9737"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfiniteUlmTargets.lean",
+      "sha256": "2eaeac1bc9c8a830916ac2b229bd6a8c63c9c1f9089ae6e08af65465d025afb7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDimension.lean",
+      "sha256": "4c7fc6db15d7dde7c43a4b58df031c8f11ec1d3b17ef776f907b6e13f629400f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDimensionTargets.lean",
+      "sha256": "e726cf0a108e812be915732b20faca81ea78906843728e873d3f56145272e131"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmLowerFormula.lean",
+      "sha256": "ab326ca44c48c4a5bcb746db2751dff68e5d8edc3db4ea7f1af69336f4cd880c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmLowerFormulaTargets.lean",
+      "sha256": "c5fa1ee936f7c0d7341dba4afc7be88439e1b40fb5a5287d46a45be9630a7925"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDual.lean",
+      "sha256": "e558c685151671d2e3df44486e7d6dedc2077209eb340a99988a189625ef6b74"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDualTargets.lean",
+      "sha256": "112e5361b944122074ff8d1a7255d3abf0b97821658dfc50871f8aa6a8a69fda"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteConjunction.lean",
+      "sha256": "20a8e676709f6e601f036beb39851a8fd058c754934c6bc09ddd14f29a91f97f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteConjunctionTargets.lean",
+      "sha256": "62ed54ea6f2a30ef3decf9695833d3c36878d62475c1074ada85dfecde604436"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SigmaTwoConjunction.lean",
+      "sha256": "fb4ad6faf94b7a6d38339bf80396a151de2b375c363541376cc308629736d418"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SigmaTwoConjunctionTargets.lean",
+      "sha256": "0834ccb8fa32ba9d6104854b6f134dec7f6e8d363b054a58ba7ee9360455f640"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenaming.lean",
+      "sha256": "b8beecdb8768d4e5ed7940430e80f67e4f93baa82daafb6e7616d9e5f2a55490"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingTargets.lean",
+      "sha256": "66089c6de3823031c95c1050d2b176c8ed335a68096f30ebc90443b26f5141e2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryWrap.lean",
+      "sha256": "293d6eb137188a96ef1045ac44d0e6bb1e9fc78e270bfb9602a9397b0ed1a0a1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryWrapTargets.lean",
+      "sha256": "60be2c2d7ebc70f7ff33afae841b030c6751f188aaadaa68075c1cf83990447f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawScottRestriction.lean",
+      "sha256": "e3fcac87c2462abb8c258c062bab3d198a325caab29558e0f7056a9b5d8b1ea2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/RawScottRestrictionTargets.lean",
+      "sha256": "17221413c736c21929876ef62c5b31260749863cd79624ee7cdedaf76e0083ee"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteScottLower.lean",
+      "sha256": "2ab51a3af8b9b97ce0a47cbe79bfe787562bab137ef2da242d414b99cc98b1f2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteScottLowerTargets.lean",
+      "sha256": "e7a15721e0c1c3814dd74f4801643f25941518f28454bb2ae5b0daf58e8a7dc3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScott.lean",
+      "sha256": "c0bb5e873bfb0c86ba06c93bc126b2da86c7a691041e2bee122ce8a6393148d9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/LocallyFiniteScottTargets.lean",
+      "sha256": "af717aab4c621c104dd3dbb9f5a6e8b8416cd4650436e90c130f5fa476f86c92"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthCore.lean",
+      "sha256": "173c597980d61a500eac7783246d9501f50d884fdb11febfe899a8e52c3c0eaa"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthCoreTargets.lean",
+      "sha256": "8ee9fe56b2593e8eeff3b265d927b300a765cb4c20b3d432f133c18174a300e5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnion.lean",
+      "sha256": "38a4a6a4e0297c103e7047d838ed78ea2223ce156b0df4b25dbe84e8104af539"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/IncreasingUnionTargets.lean",
+      "sha256": "53be82334bb4f2f92d4612b669d33e9b6eab585c7a2b3ddaf7c135833267c420"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.Group.Equiv.Defs",
+    "Mathlib.Algebra.Group.MinimalAxioms",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.Basic",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Lattice",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.GroupWithZero.Divisibility",
+    "Mathlib.Algebra.Module.NatInt",
+    "Mathlib.Algebra.Module.ZMod",
+    "Mathlib.Algebra.Order.GroupWithZero.Basic",
+    "Mathlib.Data.DFinsupp.BigOperators",
+    "Mathlib.Data.Fin.Basic",
+    "Mathlib.Data.Finsupp.Ext",
+    "Mathlib.Data.Finsupp.ToDFinsupp",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Nat.Prime.Basic",
+    "Mathlib.Data.Nat.Prime.Defs",
+    "Mathlib.Data.Set.Finite.Basic",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.GroupTheory.OrderOfElement",
+    "Mathlib.GroupTheory.QuotientGroup.Defs",
+    "Mathlib.LinearAlgebra.Basis.Basic",
+    "Mathlib.LinearAlgebra.Basis.Defs",
+    "Mathlib.LinearAlgebra.Basis.VectorSpace",
+    "Mathlib.LinearAlgebra.Dimension.Basic",
+    "Mathlib.LinearAlgebra.Dimension.Finite",
+    "Mathlib.LinearAlgebra.Dimension.StrongRankCondition",
+    "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
+    "Mathlib.LinearAlgebra.LinearIndependent.Basic",
+    "Mathlib.LinearAlgebra.LinearIndependent.Defs",
+    "Mathlib.LinearAlgebra.LinearIndependent.Lemmas",
+    "Mathlib.Logic.Encodable.Basic",
+    "Mathlib.Logic.Equiv.Set",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.SetTheory.Cardinal.ToNat",
+    "Mathlib.SetTheory.Ordinal.Arithmetic",
+    "Mathlib.SetTheory.Ordinal.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

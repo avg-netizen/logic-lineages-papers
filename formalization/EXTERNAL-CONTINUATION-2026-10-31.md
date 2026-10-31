@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 20
+## Current verified snapshot: checkpoint 21
 
-**119 checked, 2 inherited, 68 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,067 selected imports and 3,365
+**120 checked, 2 inherited, 67 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,075 selected imports and 3,402
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -773,3 +773,35 @@ wall-time and single-thread guards; no defaults or CI settings changed.
 Ten accepted records were fixed in the selection; later acceptances are
 excluded. The registry is **119 checked, 2 inherited, 68 pending**. No GitHub
 CI result is claimed.
+
+
+## Checkpoint 21 — full reduced Scott-complexity classification
+
+Paper 01 `thm:reduced-classification` is checked by
+`ReducedScottCompleteStatementChecks.fullSource`. The target includes the
+actual unique countable length, calibrated terminal cyclic multiplicities,
+exhaustive finite/one-infinite/two-infinite terminal patterns, every
+unrestricted raw Scott upper and lower endpoint, and the trivial-group
+corner. No classification or realization oracle is a premise.
+
+Concrete pointed quotient arguments and actual nonreduced Pruefer-product
+competitors supply an alternative proof of the required obstructions. This
+completion does not prove the separately registered prescribed-tail lemma
+or any general Miller collapse theorem. The new primitive-lowering and
+scoped-source-DAG gates remain frontend suppliers, not the full Boolean
+compiler.
+
+The scoped-DAG gate retains its disclosed lexical exception: the reserved
+identifier `renaming` was escaped as `«renaming»`. Its original freeze,
+saved original gate and amendment remain distinct; no mathematical target
+was changed. Integration uses the exact escaped declaration and leaves
+accepted source and helper files untouched.
+
+The [twenty-first focused checkpoint](verification/repair-2026-10-31/checkpoint-21.json)
+selects 370 gates and audits 1,038 aliases over 2,249 unchanged local source
+hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint21.json)
+passes with 1,075 imports, 3,402 audits and 3,987 unchanged closure hashes.
+The explicitly authorized profiles preserve CPU, wall-time and single-thread
+guards; no defaults or CI settings changed. Eight records were fixed before
+later acceptances. The registry is **120 checked, 2 inherited, 67 pending**.
+No GitHub CI result is claimed.

@@ -36,9 +36,13 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 100,
           "statement_latex": "[Exact reduced-group classification]\n\\label{thm:reduced-classification}\nLet $G\\ne0$ be reduced, and write its length uniquely as\n$\\lambda=\\omega\\gamma+n$, where $n<\\omega$.\nIf $n=0$, then $\\gamma>0$ and $G$ has exact complexity\n$\\Pi_{2\\gamma+1}$.\nIf $n>0$, put $H=G_{\\omega\\gamma}$ and write\n\\[\n H\\cong\\bigoplus_{j=1}^{n}C_{p^j}^{(m_j)},\\qquad\n m_j\\in\\mathbb N\\cup\\{\\omega\\},\\quad m_n>0.\n\\]\nThe exact complexity is\n\\begin{center}\n\\normalfont\n\\begin{tabular}{@{}p{0.62\\linewidth}l@{}}\n\\hline\nCondition on $H$ & Exact complexity\\\\\n\\hline\n$H$ is finite & $d\\text{-}\\Sigma_{2\\gamma+1}$\\\\[4pt]\nExactly one $m_k=\\omega$, and $m_j=0$ for every $j<k$\n & $\\Pi_{2\\gamma+2}$\\\\[4pt]\nExactly one $m_k=\\omega$, and $m_j>0$ for some $j<k$\n & $d\\text{-}\\Sigma_{2\\gamma+2}$\\\\[4pt]\nAt least two $m_j=\\omega$ & $\\Pi_{2\\gamma+3}$\\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe trivial group has exact complexity $\\Pi_1$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks.fullSource",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/ReducedScottCompleteTargets.lean",
+            "sha256": "7c18c09111a99b0f9c870f1b626991fc7d33d5a5cfded8513a489d2d362f15ce",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.reducedScottFullSource"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CountableReducedZeroStatementChecks",
@@ -224,8 +228,56 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/TwoInfiniteTerminalPointedStatementChecks.json",
               "scope": "Intrinsic two infinite actual Ulm levels in bounded tail: every finite tuple has actual quotient with finite changed global rank, nonisomorphism and pointed even comparison. All concrete splitting and retention discharged internally; not general Miller. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.RawTrivialExactStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RawTrivialExactStatementChecks.json",
+              "scope": "Actual unrestricted raw trivial Pi1 Scott sentence and quantifier-free exclusion; no exactness oracle. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReducedLengthStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ReducedLengthStatementChecks.json",
+              "scope": "Actual unique countable least zero filtration stage, unique omega quotient and finite remainder, and actual terminal exponent. Source length organization supplier, no classification premise. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReducedLimitDifferenceStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ReducedLimitDifferenceStatementChecks.json",
+              "scope": "Actual relative/raw lower difference obstruction at 2gamma for reduced groups of length at least omega gamma, via independently paid opposite literal Pruefer product comparisons. No prescribed reduced-tail or Miller theorem. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferReverseStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ReducedPrueferReverseStatementChecks.json",
+              "scope": "Independently constructed reverse pointed comparison from actual finite inclusion map; no symmetry assumption. Literal Pruefer product, reduced-only length-at-least-cut domain. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ReducedScottCompleteStatementChecks.json",
+              "scope": "Full original reduced classification: actual unique countable length and calibrated terminal multiplicities, exhaustive patterns, all unrestricted raw upper/lower row endpoints and trivial group. Actual nonreduced Pruefer countermodels replace prescribed-tail/Miller proof steps for reduced endpoints; no separate prescribed-tail or general Miller claim. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/TerminalMultiplicityStatementChecks.json",
+              "scope": "Actual bounded cyclic decomposition calibrated to real Ulm ranks, countable multiplicities and nonzero last factor from exact exponent. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
             }
-          ]
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementChecks.fullSource"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/PGroups/ReducedScottCompleteTargets.lean",
+              "sha256": "7c18c09111a99b0f9c870f1b626991fc7d33d5a5cfded8513a489d2d362f15ce",
+              "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.reducedScottFullSource"
+            }
+          ],
+          "verification_receipt": "build-reports/1793451722839804028-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/ReducedScottCompleteStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole paper01 thm:reduced-classification: actual unique countable length, calibrated terminal multiplicities and exhaustive finite/one-infinite/two-infinite patterns, all exact unrestricted raw upper and lower Scott complexity rows, and trivial-group case. No classification, realization, Scott sentence or comparison is an input. Proved nonreduced Pruefer countermodels discharge reduced-case endpoints; this does not separately establish prescribed-tail realization or general Miller theorems. Root exact full source review12:57:14 preceded strict freeze/candidate. Outside checkpoint20. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:thm:bounded-pgroup-classification",
@@ -4405,6 +4457,16 @@
               "gate_module": "LogicLineages.OrdinalComparison.SourceBooleanWireStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/SourceBooleanWireStatementChecks.json",
               "scope": "Concrete intrinsically acyclic shared Boolean DAG to finite Eq/Add/Sort arithmetic atoms, unique natural wire/auxiliary witnesses, exact root truth, linear9m overhead; input naturals already flattened externally. No actual-source lowering or whole thm:compiler polynomial source-DAG claim. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.SourcePrimitiveLoweringStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourcePrimitiveLoweringStatementChecks.json",
+              "scope": "Concrete Eq/Add/Sort/One over literal-zero/typed-variable ports to exactly10 actual shared source equations with9freshnaturalcoordinates, unique symbolic witnesses, actual scoped primitive-DAG forest at most80 vertices. No arbitrary supplied-source leaf lowering or fullcompiler polynomialsum bound. Natural Add witness d=3b. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWScopedSourceDAGStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWScopedSourceDAGStatementChecks.json",
+              "scope": "Auxiliary actual primitive scoped DAG renaming, application, eraser and aggregation denotation with exact node counts. No whole Boolean compiler or source-language reduction claim. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
             }
           ]
         },
