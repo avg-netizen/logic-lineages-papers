@@ -371,3 +371,38 @@ hashes unchanged, and the same expressly authorized current root-only profile.
 It took 2.536 seconds and peaked at 2,613,920 KiB RSS. Later universal-property
 and subtree-map work is outside this fixed snapshot. No whole source target
 was promoted in this checkpoint.
+
+## Further source-construction links
+
+Paper 01 now also has actual finite-presentation universal properties,
+faithful ancestor-subtree maps, coherent stage inclusions, and their concrete
+direct limit. Actual decreasing-ordinal nodes have all lower-height children,
+with a finite-or-countable ancestor-respecting enumeration; there is no
+finite-branching or natural-rank cutoff. Identification with the original
+ordinal presentation and its transfinite filtration remain unpaid here.
+
+Paper 14 adds an effective table-to-Partrec code family with exact partial
+output semantics, variable finite work alphabets, an exact embedding of the
+three-symbol evaders, and fixed-dimension finite transition serialization.
+The table-to-Partrec translation does not preserve a claimed source runtime.
+Raw binary input/output adapters and acceptable-numbering calibration remain
+separate. The source restricts the input alphabet, not the working alphabet.
+
+A paper 12 supplier now gives a finite arity-indexed primitive-recursive
+program AST with exact extensional correspondence to Mathlib's primitive
+recursive functions and the recursion equations. This is not an executable
+compiler from arbitrary extensional functions, nor a primitive-recursive
+universal evaluator. The literal source U/u defining-equation registry,
+arithmetic provability, Hilbert--Bernays conditions and the self-indexed
+knowledge theory still need their actual formal constructions. All six
+registered source statements of paper 12 remain pending.
+
+The [tenth focused checkpoint](verification/repair-2026-10-31/checkpoint-10.json)
+selects eleven additional suppliers: 185 gates, 555 exact aliases, and 912
+unchanged local closure hashes. Its [actual root verification](verification/repair-2026-10-31/root-checkpoint10.json)
+passed with 890 imports, 2,782 namespace audits and all 3,215 local closure
+hashes unchanged. The expressly authorized current root-only profile was
+unchanged; the run took 2.54 seconds at a peak of 2,616,912 KiB RSS. The
+register remains 100 checked, 2 inherited and 87 pending; no whole statement
+was promoted. Later source-presentation and limit-universal work is outside
+this fixed snapshot.

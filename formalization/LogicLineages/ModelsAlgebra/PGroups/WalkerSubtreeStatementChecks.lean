@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks
+
+theorem embedding : Targets.walkerFiniteSubtreeEmbedding := walker_finite_subtree_embedding
+
+end LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks

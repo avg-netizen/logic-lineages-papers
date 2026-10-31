@@ -1,0 +1,151 @@
+{
+  "accepted_utc": "2026-10-31T07:56:35.921844+00:00",
+  "scope": "Faithful maps of actual finite presented groups for all parent-preserving node injections, paper.tex 701\u2013704. Whole Walker lemma pending.",
+  "source_correspondence": "Actual parent-preserving embedding of finite ancestor-tree nodes induces a faithful homomorphism of the literal quotient groups. Finite subtree supplier only; full infinite Walker filtration/normal-form claims remain separate. Accepted after fixed checkpoint09 selection and excluded from it.",
+  "source_commit": "48146dc2134470844391dad3e7a9109e4d144925",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks",
+  "frozen_at_utc": "2026-10-31T07:56:02.053728+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/walker-subtree-freeze.json",
+  "freeze_sha256": "abc2d924bd47854be6dc108d1c324367d0cd662a064bfd201f16e9ebf763f74c",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeDefinitions.lean",
+      "sha256": "8cdb2912111329add828c16dd6f9c256047bd8c6b6c20d7a7d2ece0454d4231c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeTargets.lean",
+      "sha256": "45a6789122fc1c694109e57422d3f94f8a1daddff443e129a82d6700c4ae6d2e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeStatementChecks.lean",
+      "sha256": "36f627e262839152ff2102b0c068137dc6e2514a823e3d3d0941ea6fe725161f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeProof.lean",
+      "sha256": "c751e63a5e503d35c9f0166ce3df8ce108c1d688259eedd238b400ac89a91789"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks.embedding"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793433312730464415-14.json",
+      "sha256": "0c38a7ae827c7ec444c806583f595c4ff45bd9bf2376f7c91a942c548e38d0de",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793433371276212415-5.json",
+      "sha256": "48bbb3193e9f00eacb64a228a95df2c0e2cd3ab4dde0acae2bc5d3e6618a08f2",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793433371276212415-5-LogicLineages-ModelsAlgebra-PGroups-WalkerSubtreeStatementChecks.log",
+  "gate_log_sha256": "74ee06f0fa34991b7b8ea8c9b0148e119d88fc34cf896b5b0b0957e402253432",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks.embedding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeStatementChecks.lean",
+      "sha256": "36f627e262839152ff2102b0c068137dc6e2514a823e3d3d0941ea6fe725161f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeProof.lean",
+      "sha256": "c751e63a5e503d35c9f0166ce3df8ce108c1d688259eedd238b400ac89a91789"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeTargets.lean",
+      "sha256": "45a6789122fc1c694109e57422d3f94f8a1daddff443e129a82d6700c4ae6d2e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerSubtreeDefinitions.lean",
+      "sha256": "8cdb2912111329add828c16dd6f9c256047bd8c6b6c20d7a7d2ece0454d4231c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeDefinitions.lean",
+      "sha256": "bdc55a69bb6db3ca81760fca9f1025317ace4c8e1023cc9ac20bf205b8863ca4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionDefinitions.lean",
+      "sha256": "86627772d339f61b97476079dd10749c2df60f0307b5bdce63f92041bddbd8c3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerUniversalProof.lean",
+      "sha256": "722aed2030530acc238ec363d1d401c2b841f428b18ef8385c6bf5a67fe7f141"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerUniversalTargets.lean",
+      "sha256": "9a508b426b18416f3e5ac5c4e13625c8d16b1af778631c35754dac501f777db7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerUniversalDefinitions.lean",
+      "sha256": "eb4baae4dd8ba09d8f4195f53151900491512d5cfe692cf86c42d7f2320e76ae"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeProof.lean",
+      "sha256": "bafc06e8395d81c21deb61a45468688e552e63cb1f4bff3726120a252008326e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeTargets.lean",
+      "sha256": "58c686af804d4c754849d48575af5da997eab4ac73950ef38669d875be212296"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionProof.lean",
+      "sha256": "c001867759bb50e30403a8815041dd97d069ebb2ffbf6ee8c74aefa53ce0e43e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionTargets.lean",
+      "sha256": "45ed14f963c75947bd69d43d5c2108ed929fe5939aa02d4ace2818994e84fa2d"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.Group.PUnit",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.ZPowers.Basic",
+    "Mathlib.GroupTheory.QuotientGroup.Basic",
+    "Mathlib.Logic.Function.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

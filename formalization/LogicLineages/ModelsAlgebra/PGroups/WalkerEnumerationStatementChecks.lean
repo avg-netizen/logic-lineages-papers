@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerEnumerationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerEnumerationStatementChecks
+
+theorem enumeration : Targets.walkerOrdinalEnumeration := walker_ordinal_enumeration
+
+end LogicLineages.ModelsAlgebra.PGroups.WalkerEnumerationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerEnumerationStatementChecks

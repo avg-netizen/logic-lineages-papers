@@ -1,0 +1,142 @@
+{
+  "accepted_utc": "2026-10-31T08:04:58.354625+00:00",
+  "scope": "Variable finite work-alphabet tables with width>=3, actual Fin-width TM0 semantics, primitive-recursive bounded simulation; not universal numbering or predictor compilation.",
+  "source_correspondence": "Variable finite work-alphabet tables of width at least three, exact actual Fin-width TM0 operational semantics and genuinely primitive-recursive bounded simulation. Alphabet embedding, broad source calibration, universal numbering and predictor compilation remain separate. Post-checkpoint09 supplier.",
+  "source_commit": "1c68e2a58bcc0ebf24b6ed4450434ea0afac087e",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:02:07.295490+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-finite-alphabet-freeze.json",
+  "freeze_sha256": "f3787aeb67e0e4974e640796292772374932b47b5c5c57dd02e7dc459065474f",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetDefinitions.lean",
+      "sha256": "8178580b7e51832bf5ffee67c933e029f901bc771f8c1a3c938508ec721dade8"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetTargets.lean",
+      "sha256": "09da675457360a3246deb98137dc907ece64d4c51184dccea8348b3dfca9fe18"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetStatementChecks.lean",
+      "sha256": "26258a994367f78f5b010806b38727d3bc2762b19a28ff3134d34acf92beed6a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetProof.lean",
+      "sha256": "36f1727229e1a1c8e6398dde284f2fce238502d36dd302d7089fc4750fb54f8a"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.effectiveDecoding",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.effectiveBoundedSimulation",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.exactSingleStep",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.exactBoundedSimulation",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.exactInitialTape",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.literalInputSymbols"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793433698398397534-10.json",
+      "sha256": "379fc0ef874e7031930f1d4f9be791158be1fe07732b14cf391a8b0fdf643eda",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793433851779069820-5.json",
+      "sha256": "f60ef5363376c2d625e652e6fe0b036cd651a94a2856661073a6d791c4cd849c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793433851779069820-5-LogicLineages-ComputabilityKnowledge-PredictionFiniteAlphabetStatementChecks.log",
+  "gate_log_sha256": "506a1de32bac4b7d0acdd07147bbd7ce744debaee7297f7e845feadc380ddb6c",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.effectiveBoundedSimulation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.exactInitialTape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.exactBoundedSimulation": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.literalInputSymbols": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.effectiveDecoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabet.StatementChecks.exactSingleStep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetStatementChecks.lean",
+      "sha256": "26258a994367f78f5b010806b38727d3bc2762b19a28ff3134d34acf92beed6a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetProof.lean",
+      "sha256": "36f1727229e1a1c8e6398dde284f2fce238502d36dd302d7089fc4750fb54f8a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetTargets.lean",
+      "sha256": "09da675457360a3246deb98137dc907ece64d4c51184dccea8348b3dfca9fe18"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetDefinitions.lean",
+      "sha256": "8178580b7e51832bf5ffee67c933e029f901bc771f8c1a3c938508ec721dade8"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableDefinitions.lean",
+      "sha256": "be4cac105a6d0a406152af67dc9fb7d87d5976baa80b9dedf3c0891de0df9993"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "accepted_utc": "2026-10-31T08:11:40.020497+00:00",
+  "scope": "Explicit row-major finite transition data serialization, primitive recursive for fixed dimensions, exact numeric layout and TM0 steps. Not uniform varying-support enumeration or full acceptability.",
+  "source_correspondence": "Explicit finite row-major machine-table serialization with fixed-dimension primitive-recursive implementation and exact table layout/step semantics. This is a concrete serialization supplier, not general source numbering acceptability, uniform arbitrary-dimension effectiveness or predictor hardness. Post-checkpoint09.",
+  "source_commit": "1c68e2a58bcc0ebf24b6ed4450434ea0afac087e",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerializationStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:08:26.038533+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-finite-serialization-freeze.json",
+  "freeze_sha256": "1c07fe1f7cae757001c2e4f2e22390313113be8a83c675562397eb12c0deb7b7",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationDefinitions.lean",
+      "sha256": "8921a8f2f207e7cd6dbd5655d9d2c7b51f6c6b2e1e6d62b83772569c64a618ad"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationTargets.lean",
+      "sha256": "6d934636571d07dddd6178768fc3fab99910c6e0461aa63c838149c2a0a5b502"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationStatementChecks.lean",
+      "sha256": "d1032b5ce97016f6606b64afee9a8fb08e317dabf101c84f1a7becb2d66633aa"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationProof.lean",
+      "sha256": "945d7086db8777fdd012c46043b95de686afce10ce382e3e033d4544bf863078"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.effectiveFixedDimensionSerializer",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.exactNumericLayout",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.exactTransitionLookup",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.exactSerializedStep"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793434044637154676-5.json",
+      "sha256": "df6c5c848fc401436298efebb5f0216541fcede5c36604eeb27d8325418df997",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793434274225910467-5.json",
+      "sha256": "48b493df652c615aa6a740e10baf5b1f6ad2e61d1dbec68094e26100ac681b82",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793434274225910467-5-LogicLineages-ComputabilityKnowledge-PredictionFiniteSerializationStatementChecks.log",
+  "gate_log_sha256": "a654ceccfcbb79c1498c0f2feaa097d41c00a2c4cef9e16376efe8d724f6e8ce",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.exactNumericLayout": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.exactTransitionLookup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.effectiveFixedDimensionSerializer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerialization.StatementChecks.exactSerializedStep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationStatementChecks.lean",
+      "sha256": "d1032b5ce97016f6606b64afee9a8fb08e317dabf101c84f1a7becb2d66633aa"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationProof.lean",
+      "sha256": "945d7086db8777fdd012c46043b95de686afce10ce382e3e033d4544bf863078"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationTargets.lean",
+      "sha256": "6d934636571d07dddd6178768fc3fab99910c6e0461aa63c838149c2a0a5b502"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationDefinitions.lean",
+      "sha256": "8921a8f2f207e7cd6dbd5655d9d2c7b51f6c6b2e1e6d62b83772569c64a618ad"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetDefinitions.lean",
+      "sha256": "8178580b7e51832bf5ffee67c933e029f901bc771f8c1a3c938508ec721dade8"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableDefinitions.lean",
+      "sha256": "be4cac105a6d0a406152af67dc9fb7d87d5976baa80b9dedf3c0891de0df9993"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine",
+    "Mathlib.Logic.Equiv.Fin.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

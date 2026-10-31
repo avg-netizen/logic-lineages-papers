@@ -207,6 +207,36 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WalkerFiniteTreeStatementChecks.json",
               "scope": "Finite ancestor-tree presentation, unique digit sums and generator parent equations, paper.tex 694\u2013704. Explicit recursive literal quotients. Whole Walker lemma pending. Finite-stage supplier only: faithful compatible inclusions/direct-limit coherence, the actual infinite Walker presentation and transfinite filtration remain unproved by this component; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerEnumerationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerEnumerationStatementChecks.json",
+              "scope": "Full actual countable ordinal-node tree bijective finite-or-Nat ancestor-respecting enumeration; no truncation/finite branching/ordinal-rank bound. Group identification pending. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerLimitStatementChecks.json",
+              "scope": "Actual sequential direct limit of finite presented forests: faithful/compatible inclusions, finite digits, countability, global generators and parent equations. No decreasing-ordinal identification or full Walker claim. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerOrdinalNodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerOrdinalNodeStatementChecks.json",
+              "scope": "Actual source decreasing-ordinal node tree, ancestor-monotone natural coding for every countable \u03be.ToType, arbitrary smaller-ordinal children and strict parent-height relation. No finite branching/rank-Nat restriction; group identification still pending. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerStageStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerStageStatementChecks.json",
+              "scope": "Concrete coherent faithful stage inclusions preserving all named generators, prerequisite for source directed union701\u2013704. Whole Walker lemma pending. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerSubtreeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerSubtreeStatementChecks.json",
+              "scope": "Faithful maps of actual finite presented groups for all parent-preserving node injections, paper.tex 701\u2013704. Whole Walker lemma pending. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerUniversalStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerUniversalStatementChecks.json",
+              "scope": "Universal presentation property of finite ancestor-tree quotients, paper.tex 694\u2013704. Whole Walker lemma pending. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
             }
           ]
         },
@@ -4620,7 +4650,14 @@
       "dependency_obligations": [
         {
           "description": "Full arithmetic syntax, code substitution and Hilbert proofs",
-          "status": "pending"
+          "status": "pending",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRProgramStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowPRProgramStatementChecks.json",
+              "scope": "Finite arity-indexed primitive-recursive AST, exact extensional Primrec correspondence and recursion equations. Existence from Primrec evidence is not an executable compiler from arbitrary extensional functions. Uniform defining-equation registry, source Base, arithmetic provability, HB, Lob, chosen CK and all six paper12 statements remain unpaid. Finite arity-indexed primitive-recursive AST and extensional program existence only, supporting the definitional syntax apparatus in paper.tex61\u201367. Not an executable compiler from arbitrary functions, uniform defining-equation registry, arithmetic representability, Hilbert proofs, derivability conditions, Lob, or chosen CK. All six paper12 source statements and this dependency remain pending."
+            }
+          ]
         },
         {
           "description": "Actual self-indexed DCB presentation and chosen CK fixed point",
@@ -4978,6 +5015,21 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeTableStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PredictionTapeTableStatementChecks.json",
               "scope": "Primitive-recursive finite-table decoding and actual bounded tape simulation with exact TM0 operational correspondence. Not yet acceptable/universal numbering or predictor compiler. This finite-table decoder and bounded tape simulator does not supply an acceptable universal ordinary numbering or the full source recursive-matrix membership theorem; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionFiniteAlphabetStatementChecks.json",
+              "scope": "Variable finite work-alphabet tables with width>=3, actual Fin-width TM0 semantics, primitive-recursive bounded simulation; not universal numbering or predictor compilation. Actual finite-machine representation/operational supplier only. Extensional Partrec compilation does not preserve source runtime or give converse compilation/acceptable numbering; fixed-dimension serialization is not uniform varying-support enumeration. No full source membership or hardness claim; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteSerializationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionFiniteSerializationStatementChecks.json",
+              "scope": "Explicit row-major finite transition data serialization, primitive recursive for fixed dimensions, exact numeric layout and TM0 steps. Not uniform varying-support enumeration or full acceptability. Actual finite-machine representation/operational supplier only. Extensional Partrec compilation does not preserve source runtime or give converse compilation/acceptable numbering; fixed-dimension serialization is not uniform varying-support enumeration. No full source membership or hardness claim; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapePartrecStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapePartrecStatementChecks.json",
+              "scope": "Uniform actual Code.curry compiler realizes exact finite tape binary-output semantics, including total-binary correspondence. No runtime preservation, converse compiler or numbering acceptability. Actual finite-machine representation/operational supplier only. Extensional Partrec compilation does not preserve source runtime or give converse compilation/acceptable numbering; fixed-dimension serialization is not uniform varying-support enumeration. No full source membership or hardness claim; whole label remains pending."
             }
           ]
         },
@@ -5066,6 +5118,11 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeMachineStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PredictionTapeMachineStatementChecks.json",
               "scope": "Actual TM0 input tape code evader, output at terminal head, exact min(k,n)+2 runtime including write and halt. No universal numbering, general tape simulation or source hardness claim. Concrete length-code evader runtime/output supplier for paper.tex290\u2013297 only. It does not establish source acceptable-numbering membership, the robust predictor, uniform index-set reduction, or any hardness theorem; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionAlphabetEmbeddingStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionAlphabetEmbeddingStatementChecks.json",
+              "scope": "Exact effective inclusion of previous3symbol tables and k-evaders, preserving rawbinary input, output, and transition/halt fuel; no broader acceptability claim. Exact concrete code-evader input/output/runtime preservation only, not acceptable numbering, full predictor compilation or source hardness. Whole label remains pending."
             }
           ]
         },
