@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedFiniteSummandProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.BoundedFiniteSummandStatementChecks
+theorem finiteSummand : Targets.boundedFiniteSummand := bounded_finite_summand
+end LogicLineages.ModelsAlgebra.PGroups.BoundedFiniteSummandStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.BoundedFiniteSummandStatementChecks

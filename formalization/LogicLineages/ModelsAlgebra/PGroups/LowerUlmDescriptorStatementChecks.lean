@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.LowerUlmDescriptorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.LowerUlmDescriptorStatementChecks
+theorem lowerInvariants : Targets.lowerUlmDescriptor := lower_ulm_descriptor
+end LogicLineages.ModelsAlgebra.PGroups.LowerUlmDescriptorStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.LowerUlmDescriptorStatementChecks

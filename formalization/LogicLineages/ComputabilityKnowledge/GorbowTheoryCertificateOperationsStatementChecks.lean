@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks
+open GorbowTheoryCertificateOperationsTargets GorbowTheoryCertificateOperationsProof
+theorem successfulHistoryExtension_exact : SuccessfulHistoryExtension := successfulHistoryExtension
+theorem numericModusPonens_exact : NumericModusPonens := numericModusPonens
+theorem numericGeneralization_exact : NumericGeneralization := numericGeneralization
+theorem effectiveModusPonens_exact : EffectiveModusPonens := effectiveModusPonens
+theorem effectiveGeneralization_exact : EffectiveGeneralization := effectiveGeneralization
+end LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks

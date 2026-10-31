@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks
+theorem relativeDual : Targets.relativizedDualRealization := relativized_dual_realization
+theorem witnessGuard : Targets.blockMembershipGuard := block_membership_guard
+theorem lowRelativization : Targets.lowTransfiniteRelativization := low_transfinite_relativization
+end LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks

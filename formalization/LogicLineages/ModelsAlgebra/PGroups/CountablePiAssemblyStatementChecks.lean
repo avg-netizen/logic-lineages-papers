@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.CountablePiAssemblyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.CountablePiAssemblyStatementChecks
+theorem countableConjunction : Targets.countablePiAssembly := countable_pi_assembly
+end LogicLineages.ModelsAlgebra.PGroups.CountablePiAssemblyStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.CountablePiAssemblyStatementChecks

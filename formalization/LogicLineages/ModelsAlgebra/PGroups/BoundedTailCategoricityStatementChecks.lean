@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedTailCategoricityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.BoundedTailCategoricityStatementChecks
+theorem tailCategoricity : Targets.boundedTailCategoricity := bounded_tail_categoricity
+end LogicLineages.ModelsAlgebra.PGroups.BoundedTailCategoricityStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.BoundedTailCategoricityStatementChecks

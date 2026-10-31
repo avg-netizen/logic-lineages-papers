@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks
+theorem rankBounds : Targets.transfiniteUlmBoundsDefinable := transfinite_ulm_bounds_definable
+theorem exactRank : Targets.transfiniteUlmExactDefinable := transfinite_ulm_exact_definable
+theorem infiniteRank : Targets.transfiniteUlmInfiniteDefinable := transfinite_ulm_infinite_definable
+theorem countableBound : Targets.countableTransfiniteUlmBound := countable_transfinite_ulm_bound
+end LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks

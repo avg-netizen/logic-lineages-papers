@@ -318,6 +318,20 @@ public import LogicLineages.ComputabilityKnowledge.PredictionSourceFiniteValuesS
 public import LogicLineages.ComputabilityKnowledge.PredictionTapeAntiProgramStatementChecks
 public import LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeComputableStatementChecks
 public import LogicLineages.ComputabilityKnowledge.PredictionThirdJumpThresholdStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedFiniteSummandStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedTailCategoricityStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedTailScottStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.CountablePiAssemblyStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.LowerUlmDescriptorStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PiFiniteGuardStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrimaryZeroSyntaxStatementChecks
+public import LogicLineages.OrdinalComparison.SourceAbsoluteObserverStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ThreeRelativizationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks
+public import LogicLineages.OrdinalComparison.WWGroundClosingCodeStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ZeroCutScottStatementChecks
+public import LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4041,6 +4055,118 @@ theorem checked_PredictionThirdJumpThreshold_exactPackedFormula :
 theorem checked_PredictionThirdJumpThreshold_uniformThirdJumpThreshold :
     LogicLineages.ComputabilityKnowledge.PredictionThirdJumpThresholdTargets.UniformThirdJumpThreshold :=
   LogicLineages.ComputabilityKnowledge.PredictionThirdJumpThreshold.StatementChecks.uniformThirdJumpThreshold
+
+theorem checked_BoundedFiniteSummand_finiteSummand :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.boundedFiniteSummand :=
+  LogicLineages.ModelsAlgebra.PGroups.BoundedFiniteSummandStatementChecks.finiteSummand
+
+theorem checked_BoundedTailCategoricity_tailCategoricity :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.boundedTailCategoricity :=
+  LogicLineages.ModelsAlgebra.PGroups.BoundedTailCategoricityStatementChecks.tailCategoricity
+
+theorem checked_BoundedTailScott_scottUpper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.boundedTailScottUpper :=
+  LogicLineages.ModelsAlgebra.PGroups.BoundedTailScottStatementChecks.scottUpper
+
+theorem checked_CountablePiAssembly_countableConjunction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countablePiAssembly :=
+  LogicLineages.ModelsAlgebra.PGroups.CountablePiAssemblyStatementChecks.countableConjunction
+
+theorem checked_LowerUlmDescriptor_lowerInvariants :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.lowerUlmDescriptor :=
+  LogicLineages.ModelsAlgebra.PGroups.LowerUlmDescriptorStatementChecks.lowerInvariants
+
+theorem checked_PiFiniteGuard_finiteGuard :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.piFiniteGuardExact :=
+  LogicLineages.ModelsAlgebra.PGroups.PiFiniteGuardStatementChecks.finiteGuard
+
+theorem checked_PiFiniteGuard_successorPadding :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.piSuccessorPadding :=
+  LogicLineages.ModelsAlgebra.PGroups.PiFiniteGuardStatementChecks.successorPadding
+
+theorem checked_PrimaryZeroSyntax_primaryAxioms :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.primarySentenceExact :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimaryZeroSyntaxStatementChecks.primaryAxioms
+
+theorem checked_PrimaryZeroSyntax_zeroStage :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.zeroStageDescriptor :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimaryZeroSyntaxStatementChecks.zeroStage
+
+theorem checked_SourceAbsoluteObserver_fullAbsoluteObserver :
+    LogicLineages.OrdinalComparison.Source.AbsoluteObserver.Targets.FullAbsoluteObserver :=
+  LogicLineages.OrdinalComparison.Source.AbsoluteObserver.StatementChecks.fullAbsoluteObserver
+
+theorem checked_ThreeRelativization_levelThree :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.threeTransfiniteRelativization.{0} :=
+  LogicLineages.ModelsAlgebra.PGroups.ThreeRelativizationStatementChecks.levelThree
+
+theorem checked_TransfiniteRelativization_relativeDual :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.relativizedDualRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks.relativeDual
+
+theorem checked_TransfiniteRelativization_witnessGuard :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.blockMembershipGuard :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks.witnessGuard
+
+theorem checked_TransfiniteRelativization_lowRelativization :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.lowTransfiniteRelativization :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationStatementChecks.lowRelativization
+
+theorem checked_TransfiniteUlmSyntax_rankBounds :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteUlmBoundsDefinable :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks.rankBounds
+
+theorem checked_TransfiniteUlmSyntax_exactRank :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteUlmExactDefinable :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks.exactRank
+
+theorem checked_TransfiniteUlmSyntax_infiniteRank :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.transfiniteUlmInfiniteDefinable :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks.infiniteRank
+
+theorem checked_TransfiniteUlmSyntax_countableBound :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countableTransfiniteUlmBound :=
+  LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks.countableBound
+
+theorem checked_WWGroundClosingCode_primitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.GroundClosingCode.Targets.PrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.GroundClosingCode.StatementChecks.primitiveRecursive
+
+theorem checked_WWGroundClosingCode_rawExact :
+    LogicLineages.OrdinalComparison.Source.GroundClosingCode.Targets.RawExact :=
+  LogicLineages.OrdinalComparison.Source.GroundClosingCode.StatementChecks.rawExact
+
+theorem checked_WWGroundClosingCode_typedExact :
+    LogicLineages.OrdinalComparison.Source.GroundClosingCode.Targets.TypedExact :=
+  LogicLineages.OrdinalComparison.Source.GroundClosingCode.StatementChecks.typedExact
+
+theorem checked_WWGroundClosingCode_closedExact :
+    LogicLineages.OrdinalComparison.Source.GroundClosingCode.Targets.ClosedExact :=
+  LogicLineages.OrdinalComparison.Source.GroundClosingCode.StatementChecks.closedExact
+
+theorem checked_ZeroCutScott_scottUpper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.zeroCutScottUpper :=
+  LogicLineages.ModelsAlgebra.PGroups.ZeroCutScottStatementChecks.scottUpper
+
+theorem checked_GorbowTheoryCertificateOperations_successfulHistoryExtension_exact :
+    LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsTargets.SuccessfulHistoryExtension :=
+  LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks.successfulHistoryExtension_exact
+
+theorem checked_GorbowTheoryCertificateOperations_numericModusPonens_exact :
+    LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsTargets.NumericModusPonens :=
+  LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks.numericModusPonens_exact
+
+theorem checked_GorbowTheoryCertificateOperations_numericGeneralization_exact :
+    LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsTargets.NumericGeneralization :=
+  LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks.numericGeneralization_exact
+
+theorem checked_GorbowTheoryCertificateOperations_effectiveModusPonens_exact :
+    LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsTargets.EffectiveModusPonens :=
+  LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks.effectiveModusPonens_exact
+
+theorem checked_GorbowTheoryCertificateOperations_effectiveGeneralization_exact :
+    LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsTargets.EffectiveGeneralization :=
+  LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks.effectiveGeneralization_exact
 
 end LogicLineages.Repair20261031Checks
 

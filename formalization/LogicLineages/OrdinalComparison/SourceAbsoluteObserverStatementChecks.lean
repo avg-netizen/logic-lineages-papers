@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceAbsoluteObserverProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.AbsoluteObserver.StatementChecks
+theorem fullAbsoluteObserver : Targets.FullAbsoluteObserver := Proof.fullAbsoluteObserver
+end LogicLineages.OrdinalComparison.Source.AbsoluteObserver.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.AbsoluteObserver

@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 16
+## Current verified snapshot: checkpoint 17
 
-**115 checked, 2 inherited, 72 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,023 selected imports and 3,201
+**116 checked, 2 inherited, 71 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,037 selected imports and 3,230
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -652,3 +652,36 @@ hashes unchanged, in 2.694 seconds at 2,705,180 KiB peak RSS under the
 root-only profile. Thirty-four selected records are included; later work is
 excluded from this snapshot. The register is now **115 checked, 2 inherited,
 72 pending**. No GitHub CI result is claimed.
+
+
+## Checkpoint 17 — absolute observer and scoped Scott suppliers
+
+The complete paper 09 `lem:absolute` is now checked against the strengthened
+pre-proof comparator. It covers actual sources in all-ground contexts with
+arbitrary output and internal types, the literal-zero closed anchor, a uniform
+computable numeric evaluator on the unchanged open-source code/all-one tuple,
+and actual fresh ground observations with a shared arithmetic witness formula.
+No head-agreement, injectivity or evaluator-correctness premise is assumed.
+The final gate is `SourceAbsoluteObserverStatementChecks.fullAbsoluteObserver`
+(in its `Source.AbsoluteObserver` namespace).
+
+The other thirteen selected components remain scoped suppliers. In particular,
+actual unrestricted Scott upper bounds at zero cuts and bounded tails are not
+exact Scott-complexity classification. Actual bounded-tail categoricity,
+finite direct summands, transfinite relativization and Ulm descriptors supply
+mathematics rather than semantic formula leaves or classification oracles.
+The numeric ground-closing transformation is primitive recursive in the
+original codec. Source 12 certificate modus-ponens/generalization operations
+do not establish a source Base/DCB presentation or internal HB/Lob principles.
+
+The [seventeenth focused checkpoint](verification/repair-2026-10-31/checkpoint-17.json)
+selects 332 gates and audits 965 exact aliases over 1,993 unchanged local
+source hashes. The scoped focused profile passed in 4.111 seconds at
+1,770,468 KiB peak RSS. The [actual selected root](verification/repair-2026-10-31/root-checkpoint17.json)
+passed with 1,037 imports, 3,230 namespace audits and 3,823 unchanged local
+closure hashes, in 2.537 seconds at 2,711,016 KiB peak RSS. The explicitly
+authorized focused/root profiles preserve CPU, wall-time and single-thread
+guards; defaults and CI were not changed. Fourteen records were fixed in the
+snapshot; later acceptances, including the finite-terminal-deletion supplier,
+are excluded. The registry is **116 checked, 2 inherited, 71 pending**. No GitHub
+CI result is claimed, and private original third-jump metadata remains excluded.

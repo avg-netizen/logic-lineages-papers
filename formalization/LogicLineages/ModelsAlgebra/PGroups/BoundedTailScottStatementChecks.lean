@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedTailScottProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.BoundedTailScottStatementChecks
+theorem scottUpper : Targets.boundedTailScottUpper := bounded_tail_scott_upper
+end LogicLineages.ModelsAlgebra.PGroups.BoundedTailScottStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.BoundedTailScottStatementChecks
