@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks
+theorem finiteTailQuotient : Targets.finiteTerminalDeletion := finite_terminal_deletion
+end LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks

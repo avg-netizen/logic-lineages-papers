@@ -109,6 +109,41 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ZeroCutScottStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/ZeroCutScottStatementChecks.json",
               "scope": "Actual unrestricted Pi(2gamma+1) Scott upper bound at actual zero omega cut; not exactness. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper bounds are not exact Scott-complexity classification, lower bounds or prescribed-tail existence; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.BackForthIsomorphismStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/BackForthIsomorphismStatementChecks.json",
+              "scope": "Literal original group-language BF transported by actual additive isomorphisms; terminal product absorption bridge. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteTailScottStatementChecks.json",
+              "scope": "Actual unrestricted raw difference Scott at2gamma+1 for actual finite omega-tail, including gamma0. Upper only, no exactness. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteTerminalDeletionStatementChecks.json",
+              "scope": "Every actual finite tuple admits actual quotient with finite terminal subgroup, nonisomorphic to original infinite-tail group, and pointed BF2gamma+1. No retained summand/decomposition/minimal exponent oracle. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/InfiniteTerminalSigmaStatementChecks.json",
+              "scope": "Actual noSigma(2gamma+2) relative and unrestricted raw Scott obstruction for infinite actual bounded terminal subgroup; not whole exact classification. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/OneInfiniteTailStatementChecks.json",
+              "scope": "Actual intrinsic one-infinite tail pattern implies unrestricted raw Pi2gamma+2 (zero shorter ranks) or difference2gamma+2 (finite shorter ranks) upper. No supplied tail Scott/classification oracle. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SubgroupSumProductStatementChecks.json",
+              "scope": "Actual coherent additive product of disjoint subgroups summing to the literal terminal subgroup. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/TerminalAbsorptionStatementChecks.json",
+              "scope": "Actual terminal split with retained infinite Ulm rank and deleted-factor exponent pays comparison. Actual rank inequality pays nonisomorphism and raw Pi obstruction. Intrinsic split/rank construction remains separate. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
             }
           ]
         },
@@ -4360,9 +4395,43 @@
           "file": "09-canonical-source-expressivity/source-realization.tex",
           "line": 8,
           "statement_latex": "[One-name scalar elimination]\\label{lem:one-unit}\nLet $A:\\tau$ be an actual source, $h=\\can A$, $m=\\lv(\\tau)$, and let\n$X:\\sigma$ be one of its free functional names.  Put\n\\[\n n=\\lv(\\sigma)+1,\\quad d=2^n\\sum_{i=0}^m\\sz^X(h_i),\\quad\n P=(\\partial^X_0h_0)_0,\\quad R=h_0\\{X:=\\mathbf1\\},\\quad L=\\lambda X.A.\n\\]\nThe graph of the desired scalar $R$ has a finite positive-coefficient linear\ndefinition using scalar observations of actual sources without free $X$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.Source.OneUnit.StatementChecks.fullSourceOneUnit",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SourceOneUnitTargets.lean",
+            "sha256": "79c3802690249c1bc8b663d919bb02943eb9b15d9309141fdd6f5167c48030a3",
+            "type": "LogicLineages.OrdinalComparison.Source.OneUnit.Targets.FullSourceOneUnit"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.SourceOneUnitStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourceOneUnitStatementChecks.json",
+              "scope": "Whole actual-source one-name scalar elimination: genuine remaining admissible closed vectors, actual literal-copy partial/size identities and d-prime growth, positive linear graph and arbitrary selected typed name with original source assignment preserved. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSelectedBinderStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSelectedBinderStatementChecks.json",
+              "scope": "Occurrence-sensitive selected-name permutation, inverse and index laws, actual capture-free source rename roundtrip and all-policy assignment naturality, shared valuation transport; auxiliary supplier only, no whole numbered-label completion. Exact accepted source/algebraic or syntax supplier only. Actual unrestricted Scott upper/lower bounds and conditional split/rank absorption are not the whole exact Scott-complexity classification or intrinsic split construction; no additional whole-label completion inferred."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.OneUnit.StatementChecks.fullSourceOneUnit"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceOneUnitTargets.lean",
+              "sha256": "79c3802690249c1bc8b663d919bb02943eb9b15d9309141fdd6f5167c48030a3",
+              "type": "LogicLineages.OrdinalComparison.Source.OneUnit.Targets.FullSourceOneUnit"
+            }
+          ],
+          "verification_receipt": "build-reports/1793448897391605857-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/SourceOneUnitStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source-realization lem:one-unit: actual default source assignments, literal-copy partial AST size identities and strict multiplier growth, genuine shared remaining admissible closed vectors, positive linear scalar graph and arbitrary selected typed functional name with original unpermuted assignment retained. Only scalars are asserted finite; no collected-expression replacement or child-construction oracle. Root exact broad-domain review before freeze; all helpers directly compiled. Outside checkpoint17. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "09-canonical-source-expressivity:thm:unit-elimination",

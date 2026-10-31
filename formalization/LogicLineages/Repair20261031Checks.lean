@@ -332,6 +332,15 @@ public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementC
 public import LogicLineages.OrdinalComparison.WWGroundClosingCodeStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.ZeroCutScottStatementChecks
 public import LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.BackForthIsomorphismStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks
+public import LogicLineages.OrdinalComparison.SourceOneUnitStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks
+public import LogicLineages.OrdinalComparison.WWSelectedBinderStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4167,6 +4176,74 @@ theorem checked_GorbowTheoryCertificateOperations_effectiveModusPonens_exact :
 theorem checked_GorbowTheoryCertificateOperations_effectiveGeneralization_exact :
     LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsTargets.EffectiveGeneralization :=
   LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsStatementChecks.effectiveGeneralization_exact
+
+theorem checked_BackForthIsomorphism_transport :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.backForthIsomorphism.{0,0} :=
+  LogicLineages.ModelsAlgebra.PGroups.BackForthIsomorphismStatementChecks.transport
+
+theorem checked_FiniteTailScott_differenceUpper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteTailScottUpper :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks.differenceUpper
+
+theorem checked_FiniteTerminalDeletion_finiteTailQuotient :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteTerminalDeletion :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks.finiteTailQuotient
+
+theorem checked_InfiniteTerminalSigma_relativeObstruction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteTerminalNoSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks.relativeObstruction
+
+theorem checked_InfiniteTerminalSigma_rawObstruction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteTerminalNoRawSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks.rawObstruction
+
+theorem checked_OneInfiniteTail_piUpper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.oneInfiniteTailPiUpper :=
+  LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks.piUpper
+
+theorem checked_OneInfiniteTail_differenceUpper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.oneInfiniteTailDifferenceUpper :=
+  LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks.differenceUpper
+
+theorem checked_SourceOneUnit_fullSourceOneUnit :
+    LogicLineages.OrdinalComparison.Source.OneUnit.Targets.FullSourceOneUnit :=
+  LogicLineages.OrdinalComparison.Source.OneUnit.StatementChecks.fullSourceOneUnit
+
+theorem checked_SubgroupSumProduct_coherentProduct :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.subgroupSumProduct :=
+  LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks.coherentProduct
+
+theorem checked_TerminalAbsorption_comparison :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalAbsorptionComparison :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks.comparison
+
+theorem checked_TerminalAbsorption_rawPiObstruction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalAbsorptionNoPi :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks.rawPiObstruction
+
+theorem checked_WWSelectedBinder_inverses :
+    LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.Inverses :=
+  LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.inverses
+
+theorem checked_WWSelectedBinder_indices :
+    LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.Indices :=
+  LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.indices
+
+theorem checked_WWSelectedBinder_selected :
+    LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.Selected :=
+  LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.selected
+
+theorem checked_WWSelectedBinder_sourceRoundTrip :
+    LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.SourceRoundTrip :=
+  LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.sourceRoundTrip
+
+theorem checked_WWSelectedBinder_assignmentNaturality :
+    LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.AssignmentNaturality :=
+  LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.assignmentNaturality
+
+theorem checked_WWSelectedBinder_valuationNaturality :
+    LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.ValuationNaturality :=
+  LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.valuationNaturality
 
 end LogicLineages.Repair20261031Checks
 

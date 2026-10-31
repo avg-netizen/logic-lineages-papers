@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks
+theorem relativeObstruction : Targets.infiniteTerminalNoSigma := infinite_terminal_no_sigma
+theorem rawObstruction : Targets.infiniteTerminalNoRawSigma := infinite_terminal_no_raw_sigma
+end LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks

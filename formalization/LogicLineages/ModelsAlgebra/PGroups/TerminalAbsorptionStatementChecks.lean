@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks
+theorem comparison : Targets.terminalAbsorptionComparison := terminal_absorption_comparison
+theorem rawPiObstruction : Targets.terminalAbsorptionNoPi := terminal_absorption_no_pi
+end LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks
+theorem differenceUpper : Targets.finiteTailScottUpper := finite_tail_scott_upper
+end LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks

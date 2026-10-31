@@ -1,0 +1,115 @@
+{
+  "accepted_utc": "2026-10-31T12:11:36.269274+00:00",
+  "scope": "Actual coherent additive product of disjoint subgroups summing to the literal terminal subgroup.",
+  "source_correspondence": "Actual coherent additive equivalence between the subgroup sum and product under the stated disjointness hypotheses. Scoped algebraic supplier, not a decomposition oracle or whole source statement. Outside checkpoint17.",
+  "source_commit": "d543c7895a7b2606fbf303afb0f86314856f98e7",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks",
+  "frozen_at_utc": "2026-10-31T12:09:40.431532+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/subgroup-sum-product-freeze.json",
+  "freeze_sha256": "2bafab8e3dfdea22d53ea6cdb08a2b0f92555a13ca6e92523607b508c645c922",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductDefinitions.lean",
+      "sha256": "524842cb90fc6c13b1c8ac871411a6e03dc5a7bb072c087607b53eaad7fe59cd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductTargets.lean",
+      "sha256": "17392bdfcc58cbc7b5ce0c7df69a15ca30e59fc5c15a4891e870f24e7ffdc3dc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductStatementChecks.lean",
+      "sha256": "7c162f5bc50341249fd9203dbdb208946cd7f6806f933f7c97855057bc5e45dd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductProof.lean",
+      "sha256": "def5fb77b6b6ffa5931b4692fe34fac9fbe668202d10f2a57412aaaf91ce263c"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks.coherentProduct"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793448524611200290-5.json",
+      "sha256": "71e4a8029baab65b494e7a36e076dffd9f0d1626e8b5f8f766ef7c4275f66a08",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793448672626351394-5.json",
+      "sha256": "9c64270e054dbfdc52ce98f3450e3573a12d194a8a809791f03d3c5cc5256627",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793448672626351394-5-LogicLineages-ModelsAlgebra-PGroups-SubgroupSumProductStatementChecks.log",
+  "gate_log_sha256": "0a5108f7840a912a46bcd7d61a71feb45ca4a5dce40271f7329f5c957cdba0cb",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks.coherentProduct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductStatementChecks.lean",
+      "sha256": "7c162f5bc50341249fd9203dbdb208946cd7f6806f933f7c97855057bc5e45dd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductProof.lean",
+      "sha256": "def5fb77b6b6ffa5931b4692fe34fac9fbe668202d10f2a57412aaaf91ce263c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductTargets.lean",
+      "sha256": "17392bdfcc58cbc7b5ce0c7df69a15ca30e59fc5c15a4891e870f24e7ffdc3dc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductDefinitions.lean",
+      "sha256": "524842cb90fc6c13b1c8ac871411a6e03dc5a7bb072c087607b53eaad7fe59cd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Module.NatInt"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

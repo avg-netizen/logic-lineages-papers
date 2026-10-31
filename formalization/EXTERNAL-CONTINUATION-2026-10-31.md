@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 17
+## Current verified snapshot: checkpoint 18
 
-**116 checked, 2 inherited, 71 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,037 selected imports and 3,230
+**117 checked, 2 inherited, 70 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,046 selected imports and 3,251
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -685,3 +685,34 @@ guards; defaults and CI were not changed. Fourteen records were fixed in the
 snapshot; later acceptances, including the finite-terminal-deletion supplier,
 are excluded. The registry is **116 checked, 2 inherited, 71 pending**. No GitHub
 CI result is claimed, and private original third-jump metadata remains excluded.
+
+
+## Checkpoint 18 — one-name elimination and scoped terminal suppliers
+
+Paper 09 `lem:one-unit` is checked in its full actual-source form. The final
+`Source.OneUnit.StatementChecks.fullSourceOneUnit` gate includes the literal
+copy construction before partial/size analysis, the actual multiplier-growth
+identities, positive scalar linear equations, and elimination at any selected
+functional free name. Remaining admissible vectors are genuinely shared and
+the original unpermuted source assignment is retained. Only scalars, not all
+ordinal components, are claimed finite; no evaluator or head certificate is
+assumed.
+
+The other eight selected gates are suppliers only. Actual finite-tail and
+one-infinite-tail Scott upper bounds and infinite-terminal Sigma obstructions
+do not finish the entire exact classification. Terminal absorption proves its
+comparison and obstruction under the stated actual split/rank conditions;
+intrinsic split/rank construction remains separate. Original-language
+isomorphism transport, coherent subgroup products, finite terminal quotients
+and selected-name naturality retain their exact scopes.
+
+The [eighteenth focused checkpoint](verification/repair-2026-10-31/checkpoint-18.json)
+selects 341 gates and audits 982 aliases over 2,093 unchanged local source
+hashes. The authorized focused profile passed in 4.271 seconds at 1,779,628 KiB
+peak RSS. The [actual selected root](verification/repair-2026-10-31/root-checkpoint18.json)
+passed with 1,046 imports, 3,251 audits and 3,865 unchanged closure hashes,
+in 2.743 seconds at 2,723,736 KiB peak RSS. Both retain the existing CPU,
+wall-time and single-thread guards; no defaults or CI settings changed.
+Nine records were fixed before later acceptances, including the excluded
+ProductSubgroupSplit supplier. The registry is **117 checked, 2 inherited,
+70 pending**. No GitHub CI result is claimed.

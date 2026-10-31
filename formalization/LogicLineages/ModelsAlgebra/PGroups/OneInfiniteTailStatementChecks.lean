@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks
+theorem piUpper : Targets.oneInfiniteTailPiUpper := one_infinite_tail_pi_upper
+theorem differenceUpper : Targets.oneInfiniteTailDifferenceUpper := one_infinite_tail_difference_upper
+end LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks

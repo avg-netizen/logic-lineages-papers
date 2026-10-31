@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks
+theorem coherentProduct : Targets.subgroupSumProduct := subgroup_sum_product
+end LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks

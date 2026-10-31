@@ -1039,6 +1039,15 @@ public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteRelativizationState
 public import LogicLineages.ModelsAlgebra.PGroups.TransfiniteUlmSyntaxStatementChecks
 public import LogicLineages.OrdinalComparison.WWGroundClosingCodeStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.ZeroCutScottStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.BackForthIsomorphismStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTailScottStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTerminalDeletionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.InfiniteTerminalSigmaStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailStatementChecks
+public import LogicLineages.OrdinalComparison.SourceOneUnitStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks
+public import LogicLineages.OrdinalComparison.WWSelectedBinderStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
