@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferModelProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferModelStatementChecks
+theorem genuinePruefer : Targets.genuinePrueferModel := genuine_pruefer_model
+end LogicLineages.ModelsAlgebra.PGroups.PrueferModelStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferModelStatementChecks

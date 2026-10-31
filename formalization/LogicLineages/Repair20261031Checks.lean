@@ -246,6 +246,44 @@ public import LogicLineages.ComputabilityKnowledge.PredictionBinaryTableStatemen
 public import LogicLineages.ComputabilityKnowledge.PredictionNaturalOutputValidationStatementChecks
 public import LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixExecutionStatementChecks
 public import LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteOmegaBoundStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.HeadroomExtensionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.HighRootExtensionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionAttachExitStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluationStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalBoundsStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferModelStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferSocleStatementChecks
+public import LogicLineages.OrdinalComparison.SourceAdditionCompletionStatementChecks
+public import LogicLineages.OrdinalComparison.SourceSortCompletionStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceRenamingStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalHardnessStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionSourceRobustStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeFlipStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeGameStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeHardnessStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeLearningStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContractStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeObservationStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapePolicyCompilerStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClassStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompilerStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionValidatedTableStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionValidatingMachineStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrecStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -3277,6 +3315,426 @@ theorem checked_PredictionNumericPrefix_exactPrefixLookup :
 theorem checked_PredictionNumericPrefix_exactBodyStep :
     LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixTargets.ExactBodyStep :=
   LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactBodyStep
+
+theorem checked_BackForthStructural_atomic :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.backForthAtomic.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.atomic
+
+theorem checked_BackForthStructural_monotone :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.backForthMonotone.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.monotone
+
+theorem checked_BackForthStructural_successor :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.backForthSuccessor.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.successor
+
+theorem checked_DivisiblePart_maximalDivisible :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.actualDivisiblePart :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks.maximalDivisible
+
+theorem checked_DivisiblePart_infiniteCutSocles :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteDivisibleSocleAtCuts :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks.infiniteCutSocles
+
+theorem checked_FiniteEvenResponse_finiteEvenResponse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteEvenResponseExtension :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseStatementChecks.finiteEvenResponse
+
+theorem checked_FiniteGapHeadroom_finiteGapResponse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteGapResponseExtension :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomStatementChecks.finiteGapResponse
+
+theorem checked_FiniteHeadroom_finiteOddResponse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteOddResponseExtension :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomStatementChecks.finiteOddResponse
+
+theorem checked_FiniteOmegaBound_omegaBlock :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.omegaBlockFiltration.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteOmegaBoundStatementChecks.omegaBlock
+
+theorem checked_FiniteOmegaBound_finiteBound :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteOmegaBlockBound.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteOmegaBoundStatementChecks.finiteBound
+
+theorem checked_FiniteSocleResponse_oddResponse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteSocleOddResponse :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks.oddResponse
+
+theorem checked_FiniteSocleResponse_gapResponse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteSocleGapResponse :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks.gapResponse
+
+theorem checked_FiniteSocleResponse_evenResponse :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteSocleEvenResponse :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks.evenResponse
+
+theorem checked_HeadroomExtension_oneUnit :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.oneUnitHeadroomExtension.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.HeadroomExtensionStatementChecks.oneUnit
+
+theorem checked_HighRootExtension_highRoot :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.highRootExtension.{u,v} :=
+  LogicLineages.ModelsAlgebra.PGroups.HighRootExtensionStatementChecks.highRoot
+
+theorem checked_InfiniteDivisibleBF_finiteMapComparison :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteDivisibleRankBackForth :=
+  LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks.finiteMapComparison
+
+theorem checked_InfiniteDivisibleBF_sourceTupleComparison :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteDivisibleRankSource :=
+  LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks.sourceTupleComparison
+
+theorem checked_PPrimaryFiniteGeneration_finiteTupleExtension :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.pPrimaryFiniteTupleExtension.{u} :=
+  LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks.finiteTupleExtension
+
+theorem checked_PPrimaryFiniteGeneration_finiteTupleClosure :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.pPrimaryFiniteTupleClosure.{u} :=
+  LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks.finiteTupleClosure
+
+theorem checked_PredictionAttachExit_bridgeStep :
+    LogicLineages.ComputabilityKnowledge.PredictionAttachExit.Targets.BridgeStep :=
+  LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.bridgeStep
+
+theorem checked_PredictionAttachExit_rightPhase :
+    LogicLineages.ComputabilityKnowledge.PredictionAttachExit.Targets.RightPhase :=
+  LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.rightPhase
+
+theorem checked_PredictionAttachExit_fullComposition :
+    LogicLineages.ComputabilityKnowledge.PredictionAttachExit.Targets.FullComposition :=
+  LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.fullComposition
+
+theorem checked_PredictionFiniteAlphabetEvaluation_evaluationTransport :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.Targets.EvaluationTransport :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks.evaluationTransport
+
+theorem checked_PredictionFiniteAlphabetEvaluation_boundedEvaluation :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.Targets.BoundedEvaluation :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks.boundedEvaluation
+
+theorem checked_PredictionFiniteAlphabetEvaluation_headModulo :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.Targets.HeadModulo :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks.headModulo
+
+theorem checked_PredictionFiniteAlphabetEvaluation_binaryOutputEvaluation :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.Targets.BinaryOutputEvaluation :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks.binaryOutputEvaluation
+
+theorem checked_PredictionOriginalBounds_literalFiniteMaximum :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.LiteralFiniteMaximum :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.literalFiniteMaximum
+
+theorem checked_PredictionOriginalBounds_computableBounds :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.ComputableBounds :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.computableBounds
+
+theorem checked_PredictionOriginalBounds_fixedLevelPrimitiveRecursive :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.FixedLevelPrimitiveRecursive :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.fixedLevelPrimitiveRecursive
+
+theorem checked_PredictionOriginalBounds_monotoneLevels :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.MonotoneLevels :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.monotoneLevels
+
+theorem checked_PredictionOriginalBounds_monotoneInputs :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.MonotoneInputs :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.monotoneInputs
+
+theorem checked_PredictionOriginalBounds_diagonalDominance :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.DiagonalDominance :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.diagonalDominance
+
+theorem checked_PredictionOriginalBounds_successorTail :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.SuccessorTail :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.successorTail
+
+theorem checked_PredictionOriginalBounds_evaderLevelTail :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.EvaderLevelTail :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.evaderLevelTail
+
+theorem checked_PredictionOriginalBounds_evaderDiagonalTail :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.Targets.EvaderDiagonalTail :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks.evaderDiagonalTail
+
+theorem checked_PredictionTapeRuntime_runtimeThreshold :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.RuntimeThreshold :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.runtimeThreshold
+
+theorem checked_PredictionTapeRuntime_worstTimeThreshold :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.WorstTimeThreshold :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.worstTimeThreshold
+
+theorem checked_PredictionTapeRuntime_worstTimeDomain :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.WorstTimeDomain :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.worstTimeDomain
+
+theorem checked_PredictionTapeRuntime_strictBudgetCalibration :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.StrictBudgetCalibration :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.strictBudgetCalibration
+
+theorem checked_PredictionTapeRuntime_totalBinaryWorstExists :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.TotalBinaryWorstExists :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.totalBinaryWorstExists
+
+theorem checked_PredictionTapeRuntime_exactEvaderRuntime :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.ExactEvaderRuntime :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.exactEvaderRuntime
+
+theorem checked_PredictionTapeRuntime_exactEvaderWorstTime :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.ExactEvaderWorstTime :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.exactEvaderWorstTime
+
+theorem checked_PredictionTapeRuntime_eventualEvaderStrictBound :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.Targets.EventualEvaderStrictBound :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks.eventualEvaderStrictBound
+
+theorem checked_PrueferModel_genuinePruefer :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.genuinePrueferModel :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferModelStatementChecks.genuinePruefer
+
+theorem checked_PrueferSocle_independentPrueferSocles :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.independentPrueferInfiniteSocles :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferSocleStatementChecks.independentPrueferSocles
+
+theorem checked_SourceAdditionCompletion_fullSourceAddition :
+    LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.Targets.FullSourceAddition :=
+  LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.StatementChecks.fullSourceAddition
+
+theorem checked_SourceSortCompletion_fullSourceSort :
+    LogicLineages.OrdinalComparison.Source.SourceSortCompletion.Targets.FullSourceSort :=
+  LogicLineages.OrdinalComparison.Source.SourceSortCompletion.StatementChecks.fullSourceSort
+
+theorem checked_WWSourceRenaming_partialNaturality :
+    LogicLineages.OrdinalComparison.Source.SourceRenaming.Targets.PartialNaturality :=
+  LogicLineages.OrdinalComparison.Source.SourceRenaming.StatementChecks.partialNaturality
+
+theorem checked_WWSourceRenaming_assignmentNaturality :
+    LogicLineages.OrdinalComparison.Source.SourceRenaming.Targets.AssignmentNaturality :=
+  LogicLineages.OrdinalComparison.Source.SourceRenaming.StatementChecks.assignmentNaturality
+
+theorem checked_PredictionOriginalHardness_simultaneousOriginalReduction :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalHardnessTargets.SimultaneousOriginalReduction :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.simultaneousOriginalReduction
+
+theorem checked_PredictionOriginalHardness_wholeSourceHardness :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalHardnessTargets.WholeSourceHardness :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.wholeSourceHardness
+
+theorem checked_PredictionOriginalHardness_infiniteOriginalPredictor :
+    LogicLineages.ComputabilityKnowledge.PredictionOriginalHardnessTargets.InfiniteOriginalPredictor :=
+  LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.infiniteOriginalPredictor
+
+theorem checked_PredictionSourceRobust_sourceRobustBaseline :
+    LogicLineages.ComputabilityKnowledge.PredictionSourceRobustTargets.SourceRobustBaseline :=
+  LogicLineages.ComputabilityKnowledge.PredictionSourceRobust.StatementChecks.sourceRobustBaseline
+
+theorem checked_PredictionSourceThreshold_effectiveThresholdMatrix :
+    LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdTargets.EffectiveThresholdMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks.effectiveThresholdMatrix
+
+theorem checked_PredictionSourceThreshold_sourceThreshold :
+    LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdTargets.SourceThreshold :=
+  LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks.sourceThreshold
+
+theorem checked_PredictionTapeBaseline_leastEligibleSelection :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineTargets.LeastEligibleSelection :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeBaseline.StatementChecks.leastEligibleSelection
+
+theorem checked_PredictionTapeBaseline_wrongSelectionExcluded :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineTargets.WrongSelectionExcluded :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeBaseline.StatementChecks.wrongSelectionExcluded
+
+theorem checked_PredictionTapeBaseline_trueProgramEventuallyEligible :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineTargets.TrueProgramEventuallyEligible :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeBaseline.StatementChecks.trueProgramEventuallyEligible
+
+theorem checked_PredictionTapeBaseline_robustBoundedObservations :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineTargets.RobustBoundedObservations :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeBaseline.StatementChecks.robustBoundedObservations
+
+theorem checked_PredictionTapeBaseline_primitiveRecursiveBaseline :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineTargets.PrimitiveRecursiveBaseline :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeBaseline.StatementChecks.primitiveRecursiveBaseline
+
+theorem checked_PredictionTapeFlip_computableFlipRule :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeFlipTargets.ComputableFlipRule :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks.computableFlipRule
+
+theorem checked_PredictionTapeFlip_uniformTapeFlipProgram :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeFlipTargets.UniformTapeFlipProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks.uniformTapeFlipProgram
+
+theorem checked_PredictionTapeFlip_positiveTapeFlipLearning :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeFlipTargets.PositiveTapeFlipLearning :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks.positiveTapeFlipLearning
+
+theorem checked_PredictionTapeFlip_negativeTapeFlipLearning :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeFlipTargets.NegativeTapeFlipLearning :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks.negativeTapeFlipLearning
+
+theorem checked_PredictionTapeGame_computableBudgetRule :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeGameTargets.ComputableBudgetRule :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeGame.StatementChecks.computableBudgetRule
+
+theorem checked_PredictionTapeGame_actualAnyPredictorBaselineCorrect :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeGameTargets.ActualAnyPredictorBaselineCorrect :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeGame.StatementChecks.actualAnyPredictorBaselineCorrect
+
+theorem checked_PredictionTapeHardness_fixedBudgetHardness :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeHardnessTargets.FixedBudgetHardness :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeHardness.StatementChecks.fixedBudgetHardness
+
+theorem checked_PredictionTapeLearning_effectiveLearningMatrix :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeLearningTargets.EffectiveLearningMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeLearning.StatementChecks.effectiveLearningMatrix
+
+theorem checked_PredictionTapeLearning_sourceLearningMatrix :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeLearningTargets.SourceLearningMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeLearning.StatementChecks.sourceLearningMatrix
+
+theorem checked_PredictionTapeMeasureContract_thresholdAntitone :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContractTargets.ThresholdAntitone :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContract.StatementChecks.thresholdAntitone
+
+theorem checked_PredictionTapeMeasureContract_zeroCharacterization :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContractTargets.ZeroCharacterization :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContract.StatementChecks.zeroCharacterization
+
+theorem checked_PredictionTapeMeasureContract_finiteCharacterization :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContractTargets.FiniteCharacterization :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContract.StatementChecks.finiteCharacterization
+
+theorem checked_PredictionTapeMeasureContract_infiniteCharacterization :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContractTargets.InfiniteCharacterization :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContract.StatementChecks.infiniteCharacterization
+
+theorem checked_PredictionTapeMembershipMatrix_exactFiniteCertificate :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.ExactFiniteCertificate :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.exactFiniteCertificate
+
+theorem checked_PredictionTapeMembershipMatrix_totalFiniteCertificate :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.TotalFiniteCertificate :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.totalFiniteCertificate
+
+theorem checked_PredictionTapeMembershipMatrix_effectiveMembershipMatrix :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.EffectiveMembershipMatrix :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.effectiveMembershipMatrix
+
+theorem checked_PredictionTapeMembershipMatrix_sourceMembership :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.SourceMembership :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.sourceMembership
+
+theorem checked_PredictionTapeObservation_effectiveObservation :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeObservationTargets.EffectiveObservation :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeObservation.StatementChecks.effectiveObservation
+
+theorem checked_PredictionTapeObservation_soundObservation :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeObservationTargets.SoundObservation :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeObservation.StatementChecks.soundObservation
+
+theorem checked_PredictionTapeObservation_exactBinarySemantics :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeObservationTargets.ExactBinarySemantics :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeObservation.StatementChecks.exactBinarySemantics
+
+theorem checked_PredictionTapeObservation_observationUniqueOnTotal :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeObservationTargets.ObservationUniqueOnTotal :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeObservation.StatementChecks.observationUniqueOnTotal
+
+theorem checked_PredictionTapePolicyCompiler_effectivePolicyTransport :
+    LogicLineages.ComputabilityKnowledge.PredictionTapePolicyCompilerTargets.EffectivePolicyTransport :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapePolicyCompiler.StatementChecks.effectivePolicyTransport
+
+theorem checked_PredictionTapePolicyCompiler_uniformSelfHistoryTapeProgram :
+    LogicLineages.ComputabilityKnowledge.PredictionTapePolicyCompilerTargets.UniformSelfHistoryTapeProgram :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapePolicyCompiler.StatementChecks.uniformSelfHistoryTapeProgram
+
+theorem checked_PredictionTapeRuntimeClass_exactAvailabilityCalibration :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClassTargets.ExactAvailabilityCalibration :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClass.StatementChecks.exactAvailabilityCalibration
+
+theorem checked_PredictionTapeRuntimeClass_effectiveEvaderCodes :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClassTargets.EffectiveEvaderCodes :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClass.StatementChecks.effectiveEvaderCodes
+
+theorem checked_PredictionTapeRuntimeClass_exactEvaderPolicy :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClassTargets.ExactEvaderPolicy :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClass.StatementChecks.exactEvaderPolicy
+
+theorem checked_PredictionTapeRuntimeClass_exactEvaderMembership :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClassTargets.ExactEvaderMembership :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClass.StatementChecks.exactEvaderMembership
+
+theorem checked_PredictionUniformBinaryCompiler_physicalBinaryReadout :
+    LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompilerTargets.PhysicalBinaryReadout :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompiler.StatementChecks.physicalBinaryReadout
+
+theorem checked_PredictionUniformBinaryCompiler_effectiveFixedBodyCompiler :
+    LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompilerTargets.EffectiveFixedBodyCompiler :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompiler.StatementChecks.effectiveFixedBodyCompiler
+
+theorem checked_PredictionUniformBinaryCompiler_universalBinaryCompiler :
+    LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompilerTargets.UniversalBinaryCompiler :=
+  LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompiler.StatementChecks.universalBinaryCompiler
+
+theorem checked_PredictionValidatedBody_fullBodyComposition :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyTargets.FullBodyComposition :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks.fullBodyComposition
+
+theorem checked_PredictionValidatedBody_actualFiniteSupport :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyTargets.ActualFiniteSupport :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks.actualFiniteSupport
+
+theorem checked_PredictionValidatedBody_entrySupported :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyTargets.EntrySupported :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks.entrySupported
+
+theorem checked_PredictionValidatedBody_universalBinaryBody :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyTargets.UniversalBinaryBody :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks.universalBinaryBody
+
+theorem checked_PredictionValidatedTable_exactCodeDecoding :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedTableTargets.ExactCodeDecoding :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks.exactCodeDecoding
+
+theorem checked_PredictionValidatedTable_boundedNumericBody :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedTableTargets.BoundedNumericBody :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks.boundedNumericBody
+
+theorem checked_PredictionValidatedTable_fullNumericEvaluation :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedTableTargets.FullNumericEvaluation :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks.fullNumericEvaluation
+
+theorem checked_PredictionValidatedTable_exactPreparedInput :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedTableTargets.ExactPreparedInput :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks.exactPreparedInput
+
+theorem checked_PredictionValidatedTable_universalNumericBody :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatedTableTargets.UniversalNumericBody :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks.universalNumericBody
+
+theorem checked_PredictionValidatingMachine_exactValidatorEvaluation :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatingMachineTargets.ExactValidatorEvaluation :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatingMachine.StatementChecks.exactValidatorEvaluation
+
+theorem checked_PredictionValidatingMachine_sourceBinarySemantics :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatingMachineTargets.SourceBinarySemantics :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatingMachine.StatementChecks.sourceBinarySemantics
+
+theorem checked_PredictionValidatingMachine_loopDivergence :
+    LogicLineages.ComputabilityKnowledge.PredictionValidatingMachineTargets.LoopDivergence :=
+  LogicLineages.ComputabilityKnowledge.PredictionValidatingMachine.StatementChecks.loopDivergence
+
+theorem checked_PredictionVariableTapePartrec_effectiveBinaryObservation :
+    LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrecTargets.EffectiveBinaryObservation :=
+  LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrec.StatementChecks.effectiveBinaryObservation
+
+theorem checked_PredictionVariableTapePartrec_uniformBinaryCompiler :
+    LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrecTargets.UniformBinaryCompiler :=
+  LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrec.StatementChecks.uniformBinaryCompiler
+
+theorem checked_PredictionVariableTapePartrec_totalBinaryCorrespondence :
+    LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrecTargets.TotalBinaryCorrespondence :=
+  LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrec.StatementChecks.totalBinaryCorrespondence
 
 end LogicLineages.Repair20261031Checks
 

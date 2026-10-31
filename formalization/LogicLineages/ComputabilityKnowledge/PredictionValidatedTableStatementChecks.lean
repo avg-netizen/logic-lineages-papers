@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionValidatedTableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks
+theorem exactCodeDecoding : PredictionValidatedTableTargets.ExactCodeDecoding := PredictionValidatedTableProof.exactCodeDecoding
+theorem boundedNumericBody : PredictionValidatedTableTargets.BoundedNumericBody := PredictionValidatedTableProof.boundedNumericBody
+theorem fullNumericEvaluation : PredictionValidatedTableTargets.FullNumericEvaluation := PredictionValidatedTableProof.fullNumericEvaluation
+theorem exactPreparedInput : PredictionValidatedTableTargets.ExactPreparedInput := PredictionValidatedTableProof.exactPreparedInput
+theorem universalNumericBody : PredictionValidatedTableTargets.UniversalNumericBody := PredictionValidatedTableProof.universalNumericBody
+end LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionValidatedTable.StatementChecks

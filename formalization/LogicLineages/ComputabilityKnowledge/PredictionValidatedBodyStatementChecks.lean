@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks
+theorem fullBodyComposition : PredictionValidatedBodyTargets.FullBodyComposition := PredictionValidatedBodyProof.fullBodyComposition
+theorem actualFiniteSupport : PredictionValidatedBodyTargets.ActualFiniteSupport := PredictionValidatedBodyProof.actualFiniteSupport
+theorem entrySupported : PredictionValidatedBodyTargets.EntrySupported := PredictionValidatedBodyProof.entrySupported
+theorem universalBinaryBody : PredictionValidatedBodyTargets.UniversalBinaryBody := PredictionValidatedBodyProof.universalBinaryBody
+end LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionValidatedBody.StatementChecks

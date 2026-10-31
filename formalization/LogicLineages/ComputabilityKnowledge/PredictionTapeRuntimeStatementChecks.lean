@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks
+theorem runtimeThreshold : Targets.RuntimeThreshold := PredictionTapeRuntime.runtimeThreshold
+theorem worstTimeThreshold : Targets.WorstTimeThreshold := PredictionTapeRuntime.worstTimeThreshold
+theorem worstTimeDomain : Targets.WorstTimeDomain := PredictionTapeRuntime.worstTimeDomain
+theorem strictBudgetCalibration : Targets.StrictBudgetCalibration := PredictionTapeRuntime.strictBudgetCalibration
+theorem totalBinaryWorstExists : Targets.TotalBinaryWorstExists := PredictionTapeRuntime.totalBinaryWorstExists
+theorem exactEvaderRuntime : Targets.ExactEvaderRuntime := PredictionTapeRuntime.exactEvaderRuntime
+theorem exactEvaderWorstTime : Targets.ExactEvaderWorstTime := PredictionTapeRuntime.exactEvaderWorstTime
+theorem eventualEvaderStrictBound : Targets.EventualEvaderStrictBound := PredictionTapeRuntime.eventualEvaderStrictBound
+end LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeRuntime.StatementChecks

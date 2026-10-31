@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks
+theorem finiteMapComparison : Targets.infiniteDivisibleRankBackForth := infinite_divisible_rank_back_forth
+theorem sourceTupleComparison : Targets.infiniteDivisibleRankSource := infinite_divisible_rank_source
+end LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks

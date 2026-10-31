@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks
+theorem effectiveThresholdMatrix : PredictionSourceThresholdTargets.EffectiveThresholdMatrix := PredictionSourceThresholdProof.effectiveThresholdMatrix
+theorem sourceThreshold : PredictionSourceThresholdTargets.SourceThreshold := PredictionSourceThresholdProof.sourceThreshold
+end LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks

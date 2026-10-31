@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferSocleProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferSocleStatementChecks
+theorem independentPrueferSocles : Targets.independentPrueferInfiniteSocles := independent_pruefer_infinite_socles
+end LogicLineages.ModelsAlgebra.PGroups.PrueferSocleStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferSocleStatementChecks

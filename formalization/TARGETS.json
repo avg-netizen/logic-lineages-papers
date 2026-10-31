@@ -374,9 +374,104 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 830,
           "statement_latex": "[Infinite-divisible-rank comparison]\n\\label{lem:infinite-divisible-bf}\nLet $A,B$ be countable Abelian $p$-groups whose divisible ranks are\nboth infinite. Let $g:\\langle\\bar b\\rangle\\to\\langle\\bar a\\rangle$\nbe the isomorphism induced by the indicated finite tuples.\nThe following conditions are sufficient for the displayed comparisons.\n\\begin{enumerate}\n\\item For $\\delta=\\omega\\gamma$,\n$(A,\\bar a)\\le_{2\\gamma+1}(B,\\bar b)$ provided the Ulm\ninvariants agree below $\\delta$ and, for $a=g(b)$, either\n\\[\n h_A(a)=h_B(b)<\\delta,\n \\quad\\text{or}\\quad\n h_B(b)\\ge\\delta,\\qquad\n h_A(a)\\ge\\min\\{h_B(b),\\delta+\\omega\\}.\n\\]\n\\item $(A,\\bar a)\\le_{2\\gamma+2}(B,\\bar b)$ provided the\nUlm invariants agree below $\\delta=\\omega\\gamma$,\n\\[\n u_B(\\xi)\\le u_A(\\xi)\n \\quad(\\delta\\le\\xi<\\delta+\\omega),\n\\]\nand each $a=g(b)$ either has the same height as $b$ below\n$\\delta+\\omega$, or both heights are at least $\\delta+\\omega$.\n\\item At a nonzero limit $\\eta$, $(A,\\bar a)\\le_\\eta(B,\\bar b)$\nprovided the Ulm invariants agree below $\\omega\\eta$ and heights\nare equal below $\\omega\\eta$ and simultaneously above that cut.\n\\end{enumerate}",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks.sourceTupleComparison",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/InfiniteDivisibleBFTargets.lean",
+            "sha256": "7180fb740ed6176759c5ba27cf41b5c9b0f629f04091a9792e228da7720966cc",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteDivisibleRankSource"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/BackForthStructuralStatementChecks.json",
+              "scope": "Original literal comparison implies atomic agreement, is downward monotone, and has exact immediate-successor finite-response equivalence. No expanded language or abstract comparison field. Infinite-divisible comparison separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/DivisiblePartStatementChecks.json",
+              "scope": "Supremum of all literally divisible subgroups is divisible and maximal; infinite actual socle dimension implies infinite socles at every filtration cut. Identification with source Pr\u00fcfer multiplicity remains separate; no splitting/decomposition oracle. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteEvenResponseStatementChecks.json",
+              "scope": "Actual full finite extension exact below delta and reverse-forward through delta+omega from original exact omega-block map, actual directional lower Ulm ranks, and genuine Pruefer injection. Finite block/gap/headroom supplied internally. Pointed BF induction remains separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteGapHeadroomStatementChecks.json",
+              "scope": "Actual finite subgroup extension through lam+1 given literal D-intersection gap at lam, initial finite forward headroom, lower ranks below lam, and genuine Pruefer embedding. Finite block theorem discharges gap in source even response; full even/BF separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteHeadroomStatementChecks.json",
+              "scope": "Actual finite subgroup extension over zero/limit cut, initial finite headroom and lower Ulm inequalities, with literal genuine infinite Pruefer embedding into target. No high-cut intersection restriction or extension-system oracle. Pointed BF and even/limit induction separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteOmegaBoundStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteOmegaBoundStatementChecks.json",
+              "scope": "Cofinal actual filtration at delta+omega and eventual equality of finite subgroup intersections with finite block stages. No height-bound oracle. Full even response/comparison separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteSocleResponseStatementChecks.json",
+              "scope": "Actual odd, successor-gap and even finite extensions from concrete infinite actual cut socles, with all finite/cardinal/root/coset algebra proved. Final source theorem discharges cut socles from actual divisible-part rank; no assumed extension system. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.HeadroomExtensionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/HeadroomExtensionStatementChecks.json",
+              "scope": "Constructs actual prime adjunction preserving low cuts and forward cut membership after spending one successor level. Properness is actual coset membership, root and avoidance paid, no extension oracle. Full finite extension/comparison separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.HighRootExtensionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/HighRootExtensionStatementChecks.json",
+              "scope": "Actual infinite cut socle supplies root outside finite subgroup image and injective prime adjunction preserving all cuts up to delta. No p-primary needed locally. Not full pointed comparison; infinite divisible rank and finite-headroom induction remain separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/InfiniteDivisibleBFStatementChecks.json",
+              "scope": "All original odd/even/nonzero-limit literal group-language comparisons for countable actual p-primary groups with actual infinite divisible p-socle ranks; original tuple-generated subgroup iso. No extra independent-family, cut-socle, extension-system or comparison oracle. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PPrimaryFiniteGenerationStatementChecks.json",
+              "scope": "Actual p-primary annihilation for nonzero p implies finite tuple-generated subgroup and finite adjoining of a tuple to a finite subgroup, by actual finite cyclic groups. No local-finiteness oracle or PID import. BF composition separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrueferModelStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PrueferModelStatementChecks.json",
+              "scope": "Literal p-primary subgroup of rational quotient Q/Z is p-primary, divisible, and has a nonzero p-annihilated element. No abstract model/decomposition field. Infinite direct-sum bridge and BF separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrueferSocleStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PrueferSocleStatementChecks.json",
+              "scope": "Actual injective direct sum of infinitely many genuine Q/Z Pruefer models has divisible range in the actual maximal divisible subgroup, infinite socle there and at every ordinal cut. No abstract divisible rank or splitting assumption; full BF separate. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks.finiteMapComparison",
+            "LogicLineages.ModelsAlgebra.PGroups.InfiniteDivisibleBFStatementChecks.sourceTupleComparison"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/PGroups/InfiniteDivisibleBFTargets.lean",
+              "sha256": "7180fb740ed6176759c5ba27cf41b5c9b0f629f04091a9792e228da7720966cc",
+              "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteDivisibleRankBackForth"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/PGroups/InfiniteDivisibleBFTargets.lean",
+              "sha256": "7180fb740ed6176759c5ba27cf41b5c9b0f629f04091a9792e228da7720966cc",
+              "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.infiniteDivisibleRankSource"
+            }
+          ],
+          "verification_receipt": "build-reports/1793442278098955176-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/InfiniteDivisibleBFStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "All original odd/even/nonzero-limit literal group-language comparisons for countable actual p-primary groups with actual infinite divisible p-socle ranks; original tuple-generated subgroup iso. No extra independent-family, cut-socle, extension-system or comparison oracle. Independent exact source review approved revised rank-based target before freeze/candidate. Earlier unchanged Definitions direct evidence and pre-freeze family-only draft revision are disclosed in original freeze; no post-proof target replacement. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:thm:no-pure-sigma",
@@ -3878,9 +3973,43 @@
           "file": "09-canonical-source-expressivity/paper.tex",
           "line": 74,
           "statement_latex": "[Addition and small constants]\\label{lem:addition}\nNatural addition $n_a+n_b=n_c$ is defined by the two source equations\n\\[\n e(b,0)=e(0,d),\\qquad e(a,d)=e(c,0),\n\\]\nwith one fresh positive raw witness $d$.  Arithmetic one has a constant-size\nsource-equation definition.  Every binary literal $k$ has an addition DAG\nof size $O(\\log(k+1))$ once zero and one are available.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.StatementChecks.fullSourceAddition",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SourceAdditionCompletionTargets.lean",
+            "sha256": "baafd77bf90e6d7708774c2be341f9c5c07b91043a66573ccf374261a3055bae",
+            "type": "LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.Targets.FullSourceAddition"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.SourceAdditionCompletionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourceAdditionCompletionStatementChecks.json",
+              "scope": "Whole source addition and small constants: actual typed variable/zero erasers under full default assignment; unique fresh positive raw witness; actual S/I constant-one formula; executable shared binary addition DAG with logarithmic gate bound and actual source gate semantics. No arbitrary-source eraser assumed. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceRenamingStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceRenamingStatementChecks.json",
+              "scope": "Auxiliary exact actual partial and full original-T assignment naturality under capture-avoiding typed renaming, all structural policies, including merging old names. No numbered-label completion claim. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.StatementChecks.fullSourceAddition"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceAdditionCompletionTargets.lean",
+              "sha256": "baafd77bf90e6d7708774c2be341f9c5c07b91043a66573ccf374261a3055bae",
+              "type": "LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.Targets.FullSourceAddition"
+            }
+          ],
+          "verification_receipt": "build-reports/1793441355270582703-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/SourceAdditionCompletionStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source addition and small constants: actual typed variable/zero erasers under full default assignment; unique fresh positive raw witness; actual S/I constant-one formula; executable shared binary addition DAG with logarithmic gate bound and actual source gate semantics. No arbitrary-source eraser assumed. Arithmetic, Identity, One and DAG proof helpers are explicitly included with matching direct successful compiler rows. Final normal resource profile succeeds after proof factoring and symbolic finite-head comparison, no limit escalation. Independent whole-source review approved before candidate. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "09-canonical-source-expressivity:lem:sort",
@@ -3889,9 +4018,38 @@
           "file": "09-canonical-source-expressivity/paper.tex",
           "line": 100,
           "statement_latex": "[Superincreasing pair coding]\\label{lem:sort}\nLet $q(n)=F_S(n)=\\Phi(n+4)$.  Then\n\\[\n q(a)+q(b)=q(c)+q(d)\n \\quad\\Longleftrightarrow\\quad\\{a,b\\}=\\{c,d\\}\n\\]\nas multisets.  Consequently sorting two naturals has a primitive-positive\ndefinition using addition and the actual $S$ graph.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.Source.SourceSortCompletion.StatementChecks.fullSourceSort",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SourceSortCompletionTargets.lean",
+            "sha256": "c55867312be37b5b8c7f2f6e694cc98ba52f0c447a927648ab4c04237be2a83b",
+            "type": "LogicLineages.OrdinalComparison.Source.SourceSortCompletion.Targets.FullSourceSort"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.SourceSortCompletionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourceSortCompletionStatementChecks.json",
+              "scope": "Whole source superincreasing pair coding and explicit primitive-positive sorting via full default-policy OriginalTerm successor observations, shared natural-to-positive raw valuation, pair multiset equality, min/max/difference with ties and zero. No eraser correctness or decision claim. Exact accepted source/algebraic supplier; no additional whole-label completion is inferred."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.SourceSortCompletion.StatementChecks.fullSourceSort"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceSortCompletionTargets.lean",
+              "sha256": "c55867312be37b5b8c7f2f6e694cc98ba52f0c447a927648ab4c04237be2a83b",
+              "type": "LogicLineages.OrdinalComparison.Source.SourceSortCompletion.Targets.FullSourceSort"
+            }
+          ],
+          "verification_receipt": "build-reports/1793440025311910064-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/SourceSortCompletionStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source superincreasing pair coding and explicit primitive-positive sorting via full default-policy OriginalTerm successor observations, shared natural-to-positive raw valuation, pair multiset equality, min/max/difference with ties and zero. No eraser correctness or decision claim. Independent whole-source review approved before candidate. Definitions/Targets successful preflight and final frozen unconditional gate distinguished from earlier failed empty-namespace audit; no tautological premise proxy accepted. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "09-canonical-source-expressivity:lem:collision",
@@ -5193,9 +5351,13 @@
           "file": "14-complexity-of-prediction-measures/paper.tex",
           "line": 147,
           "statement_latex": "\\label{lem:membership}\nUniformly in an ordinary program index for a total computable $f$,\nmembership $e\\in E_f$ has a recursive-matrix $\\Sigma^0_2$ definition.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.sourceMembership",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/PredictionTapeMembershipMatrixTargets.lean",
+            "sha256": "125de0663847ef15d253b159c7af26ef926ab89b1a43a677c2c78eca58799a08",
+            "type": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.SourceMembership"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeTableStatementChecks",
@@ -5351,8 +5513,119 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionSentinelDecodeStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PredictionSentinelDecodeStatementChecks.json",
               "scope": "Total binary sentinel decoder with zero/one empty convention, exact inverse including empty histories and positive normalization; primitive-recursive conversion to existing Encodable List Bool input. No universal compiler/numbering/runtime claim. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionAttachExitStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionAttachExitStatementChecks.json",
+              "scope": "Generic actual sum-state transition composition: first-system terminal step takes exactly one explicit bridge into second system; exact partial evaluation composition preserves divergence with no termination/runtime premise. No machine-specific validator/compiler correctness. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionFiniteAlphabetEvaluationStatementChecks.json",
+              "scope": "Exact actual finite-alphabet raw bounded simulator versus full TM0 evaluation, including terminal-observation fuel charge and modulo-width binary output. No runtime translator, universal-body premise or complete source compiler claim. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeBaselineStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeBaselineStatementChecks.json",
+              "scope": "Actual tape observation finite least-eligible search, permanent wrong-selection exclusion, total-program eligibility, robust eventual correctness and PR algorithm. Availability is literal raw simulation at budget-1; worst-case runtime equivalence handled separately. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeGameStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeGameStatementChecks.json",
+              "scope": "Computable strict tape-budget rule and eventual actual-game correctness regardless of predictor outputs, under literal raw UniformAvailable. Worst-case runtime class equivalence separate. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeLearningStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeLearningStatementChecks.json",
+              "scope": "Actual uniform reverse compiler transports total policies and accepted game-learning certificates; explicit Primrec matrix and Sigma2 iff on total raw tape predictors/evaders, no runtime transport. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeMeasureContractStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeMeasureContractStatementChecks.json",
+              "scope": "Fresh explicit positive-level hypothesis around entire finite iff. Original unaccepted measure attempt retired and untouched. Actual WithTop Nat source height zero/finite/infinity contract; no computability assertion. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeMembershipMatrixStatementChecks.json",
+              "scope": "Fresh explicit total-bound-program premise around entire source membership iff. Original unaccepted membership attempt retired unchanged. Whole actual-tape Sigma2 matrix lemma, no evader evaln-clock substitution. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeObservationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeObservationStatementChecks.json",
+              "scope": "Effective strict-budget raw observations, actual evaluator soundness/completeness and total-binary uniqueness. budget-1 accounts for strict inequality and halt observation; no evaln budget identification. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeClassStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeRuntimeClassStatementChecks.json",
+              "scope": "Exact eventual strict attained worst-case runtime versus actual bounded raw availability on total binary programs; effective k-evader codes, exact policy and runtime membership. No evaln identification; final hardness and whole-label promotion separate. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeRuntimeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeRuntimeStatementChecks.json",
+              "scope": "Relational least successful actual raw-tape simulator fuel including halt observation; attained finite maximum exactly on all-halting length-n domain; strict budget calibration including zero/one/empty edges; existing TotalBinary existence; paid lifted evader min(k,n)+2 and eventual strict n+1. No default runtime on divergence or evaluator-clock substitution. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionUniformBinaryCompilerStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionUniformBinaryCompilerStatementChecks.json",
+              "scope": "Existence of genuine primitive-recursive numeric code map from ordinary Nat.Partrec indices, with exact binary input/physical output partial semantics including divergence and nonbinary rejection. Fixed universal body witness discharged, no runtime calibration/converse/acceptability claim. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionValidatedBodyStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionValidatedBodyStatementChecks.json",
+              "scope": "Real charged self-write bridge, full partial composition, actual finite support/explicit entry, existential fixed universal body with binary output iff ordinary indexed evaluator. Numeric serialization/uniform parameter assembly still separate. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionValidatedTableStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionValidatedTableStatementChecks.json",
+              "scope": "Exact numeric finite serialization, closed finite state bound, full partial evaluation, explicit prepared two-input entry, and existential universal binary numeric body. Uniform parameter assembly and source runtime calibration remain separate. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionValidatingMachineStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionValidatingMachineStatementChecks.json",
+              "scope": "Exact full validator evaluation, raw readout iff singleton natural0/1, and literal self-loop divergence. Fixed body assembly and complete universal numbering remain separate. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionVariableTapePartrecStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionVariableTapePartrecStatementChecks.json",
+              "scope": "Genuine primitive-recursive Code.curry map with exact partial binary semantics and total-binary domain correspondence for variable-alphabet numeric tables. No runtime preservation or automatic acceptable-numbering promotion. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
             }
-          ]
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.exactFiniteCertificate",
+            "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.totalFiniteCertificate",
+            "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.effectiveMembershipMatrix",
+            "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrix.StatementChecks.sourceMembership"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionTapeMembershipMatrixTargets.lean",
+              "sha256": "125de0663847ef15d253b159c7af26ef926ab89b1a43a677c2c78eca58799a08",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.ExactFiniteCertificate"
+            },
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionTapeMembershipMatrixTargets.lean",
+              "sha256": "125de0663847ef15d253b159c7af26ef926ab89b1a43a677c2c78eca58799a08",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.TotalFiniteCertificate"
+            },
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionTapeMembershipMatrixTargets.lean",
+              "sha256": "125de0663847ef15d253b159c7af26ef926ab89b1a43a677c2c78eca58799a08",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.EffectiveMembershipMatrix"
+            },
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionTapeMembershipMatrixTargets.lean",
+              "sha256": "125de0663847ef15d253b159c7af26ef926ab89b1a43a677c2c78eca58799a08",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionTapeMembershipMatrixTargets.SourceMembership"
+            }
+          ],
+          "verification_receipt": "build-reports/1793442113700864033-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/PredictionTapeMembershipMatrixStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Fresh explicit total-bound-program premise around entire source membership iff. Original unaccepted membership attempt retired unchanged. Whole actual-tape Sigma2 matrix lemma, no evader evaln-clock substitution. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "14-complexity-of-prediction-measures:lem:learning",
@@ -5399,9 +5672,44 @@
           "file": "14-complexity-of-prediction-measures/paper.tex",
           "line": 185,
           "statement_latex": "\\label{prop:threshold}\nUniformly in total binary $p$ and an ordinary total bound program $f$,\n$T(p,f)$ has a recursive-matrix $\\Pi^0_3$ definition.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks.sourceThreshold",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/PredictionSourceThresholdTargets.lean",
+            "sha256": "fd9c213896897ac5583f70dfe3819b531a22591b391ae47656c5334f142a2360",
+            "type": "LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdTargets.SourceThreshold"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionSourceThresholdStatementChecks.json",
+              "scope": "Whole source uniform recursive Pi3 formula for actual strict tape-runtime learning threshold, one fixed genuine reverse compiler and actual matrices; total predictor/ordinary bound promises only. Root exact source review approved unchanged target. No full jump-degree claim. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks.effectiveThresholdMatrix",
+            "LogicLineages.ComputabilityKnowledge.PredictionSourceThreshold.StatementChecks.sourceThreshold"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionSourceThresholdTargets.lean",
+              "sha256": "fd9c213896897ac5583f70dfe3819b531a22591b391ae47656c5334f142a2360",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdTargets.EffectiveThresholdMatrix"
+            },
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionSourceThresholdTargets.lean",
+              "sha256": "fd9c213896897ac5583f70dfe3819b531a22591b391ae47656c5334f142a2360",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionSourceThresholdTargets.SourceThreshold"
+            }
+          ],
+          "verification_receipt": "build-reports/1793442634308363546-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/PredictionSourceThresholdStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source uniform recursive Pi3 formula for actual strict tape-runtime learning threshold, one fixed genuine reverse compiler and actual matrices; total predictor/ordinary bound promises only. Root exact source review approved unchanged target. No full jump-degree claim. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "14-complexity-of-prediction-measures:lem:robust",
@@ -5410,9 +5718,38 @@
           "file": "14-complexity-of-prediction-measures/paper.tex",
           "line": 241,
           "statement_latex": "[Robust baseline]\\label{lem:robust}\nIf $e$ is a total binary evader with $t_e(n)<b(n)$ eventually, then\n$B_b$ predicts $e(y_{<n})$ correctly at all but finitely many rounds,\nregardless of the sequence of actual past predictions $y$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.PredictionSourceRobust.StatementChecks.sourceRobustBaseline",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/PredictionSourceRobustTargets.lean",
+            "sha256": "a51c6e1198d238fa716b9a0f15d895281d4d3d8f27c3b3413adb94e8a9ab05bb",
+            "type": "LogicLineages.ComputabilityKnowledge.PredictionSourceRobustTargets.SourceRobustBaseline"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionSourceRobustStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionSourceRobustStatementChecks.json",
+              "scope": "Whole robust baseline lemma: actual ordinary tape total-binary evader, strict eventual attained worst-case budget, arbitrary actual past predictions and coherent evasion responses. Root independent source review approved unchanged target before freeze. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ComputabilityKnowledge.PredictionSourceRobust.StatementChecks.sourceRobustBaseline"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ComputabilityKnowledge/PredictionSourceRobustTargets.lean",
+              "sha256": "a51c6e1198d238fa716b9a0f15d895281d4d3d8f27c3b3413adb94e8a9ab05bb",
+              "type": "LogicLineages.ComputabilityKnowledge.PredictionSourceRobustTargets.SourceRobustBaseline"
+            }
+          ],
+          "verification_receipt": "build-reports/1793441292017902187-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/PredictionSourceRobustStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole robust baseline lemma: actual ordinary tape total-binary evader, strict eventual attained worst-case budget, arbitrary actual past predictions and coherent evasion responses. Root independent source review approved unchanged target before freeze. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "14-complexity-of-prediction-measures:prop:hardness",
@@ -5421,9 +5758,13 @@
           "file": "14-complexity-of-prediction-measures/paper.tex",
           "line": 317,
           "statement_latex": "\\label{prop:hardness}\nFor any fixed ordinary total bound $b$ eventually exceeding each\n$t_{e_k}$, the predicate $T(p,b)$ is $\\Pi^0_3$-hard on total\npredictors. If $b=b_\\infty$, the same reduction makes membership in\n$B$ equivalent to infinite original measure, and equivalent to every\nfixed threshold $m\\ge m_0$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.wholeSourceHardness",
+          "frozen_comparator": {
+            "file": "LogicLineages/ComputabilityKnowledge/PredictionOriginalHardnessTargets.lean",
+            "sha256": "a9a5b47e6157ea62c6037effd66edb15ab90d82f4de4e3db5daae95fd946d8d4",
+            "type": "LogicLineages.ComputabilityKnowledge.PredictionOriginalHardnessTargets.WholeSourceHardness"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeStatementChecks",
@@ -5444,8 +5785,46 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionAlphabetEmbeddingStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PredictionAlphabetEmbeddingStatementChecks.json",
               "scope": "Exact effective inclusion of previous3symbol tables and k-evaders, preserving rawbinary input, output, and transition/halt fuel; no broader acceptability claim. Exact concrete code-evader input/output/runtime preservation only, not acceptable numbering, full predictor compilation or source hardness. Whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionOriginalBoundsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionOriginalBoundsStatementChecks.json",
+              "scope": "Literal zero-based first-m/inclusive-input finite maxima with f0 auxiliary; uniform total Computable evaluator, per-entry PR and PR coverage kept distinct. Actual computability/fixed-level PR, monotonicity, eventual diagonal domination and successor/evader tails. General theorem for source-stated properties, not a numerical identification of the cited AH listing or full measure theorem. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionOriginalHardnessStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionOriginalHardnessStatementChecks.json",
+              "scope": "First general fixed-budget clause plus SAME total computable predictor family for diagonal budget, actual extended-natural infinite height and every fixed m>=one m0 independent of recursive matrix. Source original listing hypotheses explicit. Root required strengthening before freeze; prior unfrozen comparator2142072404116 is historical only. No numerical AH index identity or full degree classification. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeFlipStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeFlipStatementChecks.json",
+              "scope": "Uniform real tape predictor family and finite/infinite error flip learning using actual strict tape budget baseline. Exact source worst-case runtime class equivalence and final reduction handled next. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeHardnessStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeHardnessStatementChecks.json",
+              "scope": "Exact fixed-budget normal-form reduction in explicit finite-table ordinary tape model. Total predictor family and computability are conclusions. Whole prop:hardness second same-family infinite/all-level specialization remains pending; root explicitly approved first-clause scope. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapePolicyCompilerStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapePolicyCompilerStatementChecks.json",
+              "scope": "Effective ordinary-code policy transport and uniform computable self-history predictor family realized as rawbinary tape programs. No predictor runtime bound, oracle premise or source hardness promotion. Scope is exactly this accepted comparator; component acceptance does not promote any other whole source statement. Retired wrong-precedence Measure/Membership attempts remain unaccepted; fresh explicit-parenthesis gates alone are registered. Source collision remains pending; OriginalHardness was separately whole-source reviewed and promoted in the disclosed pre-check boundary amendment."
             }
-          ]
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.simultaneousOriginalReduction",
+            "LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.wholeSourceHardness",
+            "LogicLineages.ComputabilityKnowledge.PredictionOriginalHardness.StatementChecks.infiniteOriginalPredictor"
+          ],
+          "verification_receipt": "build-reports/1793442698535941197-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/PredictionOriginalHardnessStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "First general fixed-budget clause plus SAME total computable predictor family for diagonal budget, actual extended-natural infinite height and every fixed m>=one m0 independent of recursive matrix. Source original listing hypotheses explicit. Root required strengthening before freeze; prior unfrozen comparator2142072404116 is historical only. No numerical AH index identity or full degree classification. Root independently re-read and authorized whole source proposition before any checkpoint15 compiler run: general fixed-budget clause plus SAME total computable predictor family for diagonal threshold, literal infinite height and every sufficiently high fixed level, with one m0 independent of recursive matrix. Literal source listing properties retained; no numerical AH index identity or full degree theorem claim."
         },
         {
           "id": "14-complexity-of-prediction-measures:lem:list",

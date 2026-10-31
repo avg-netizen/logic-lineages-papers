@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks
+theorem oddResponse : Targets.finiteSocleOddResponse := finite_socle_odd_response
+theorem gapResponse : Targets.finiteSocleGapResponse := finite_socle_gap_response
+theorem evenResponse : Targets.finiteSocleEvenResponse := finite_socle_even_response
+end LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleResponseStatementChecks

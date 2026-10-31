@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks
+theorem evaluationTransport : Targets.EvaluationTransport := PredictionFiniteAlphabetEvaluation.evaluationTransport
+theorem boundedEvaluation : Targets.BoundedEvaluation := PredictionFiniteAlphabetEvaluation.boundedEvaluation
+theorem headModulo : Targets.HeadModulo := PredictionFiniteAlphabetEvaluation.headModulo
+theorem binaryOutputEvaluation : Targets.BinaryOutputEvaluation := PredictionFiniteAlphabetEvaluation.binaryOutputEvaluation
+end LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetEvaluation.StatementChecks

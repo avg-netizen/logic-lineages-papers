@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeFlipProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks
+theorem computableFlipRule : PredictionTapeFlipTargets.ComputableFlipRule := PredictionTapeFlipProof.computableFlipRule
+theorem uniformTapeFlipProgram : PredictionTapeFlipTargets.UniformTapeFlipProgram := PredictionTapeFlipProof.uniformTapeFlipProgram
+theorem positiveTapeFlipLearning : PredictionTapeFlipTargets.PositiveTapeFlipLearning := PredictionTapeFlipProof.positiveTapeFlipLearning
+theorem negativeTapeFlipLearning : PredictionTapeFlipTargets.NegativeTapeFlipLearning := PredictionTapeFlipProof.negativeTapeFlipLearning
+end LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeFlip.StatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceAdditionCompletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.StatementChecks
+theorem fullSourceAddition : Targets.FullSourceAddition := Proof.fullSourceAddition
+end LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceAdditionCompletion

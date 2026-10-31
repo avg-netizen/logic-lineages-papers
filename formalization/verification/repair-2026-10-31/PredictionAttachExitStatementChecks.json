@@ -1,0 +1,119 @@
+{
+  "accepted_utc": "2026-10-31T09:32:36.981003+00:00",
+  "scope": "Generic actual sum-state transition composition: first-system terminal step takes exactly one explicit bridge into second system; exact partial evaluation composition preserves divergence with no termination/runtime premise. No machine-specific validator/compiler correctness.",
+  "source_correspondence": "Generic actual sum-state transition composition: first-system terminal step takes exactly one explicit bridge into second system; exact partial evaluation composition preserves divergence with no termination/runtime premise. No machine-specific validator/compiler correctness.",
+  "source_commit": "ba3b5851b3ab727e6dd239d67f166927f44cf50f",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionAttachExitStatementChecks",
+  "frozen_at_utc": "2026-10-31T09:31:23.664472+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExit-FREEZE.json",
+  "freeze_sha256": "83c13e668a8a281452651a9fc9ef9d3e9b9321c53ecddd095b9c5cfb2dde33b2",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitDefinitions.lean",
+      "sha256": "9764cfbe85860cdd02715905093e1141171c85e58c769f8267d7d415631b40df"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitTargets.lean",
+      "sha256": "ee9d1a234dc23a4e70565478a63b821c3122c48df6cd6b855e81b1d0ede51ccc"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitStatementChecks.lean",
+      "sha256": "7d54be0a2423e721c74c1f1e57d2a5bba51f3ad7c7aff146b9cce6fda52ca6ad"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitProof.lean",
+      "sha256": "d567d16e170db91e30a30d5dc5ca04401c27422ae73309c9e5434d7cb7debfc2"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.bridgeStep",
+    "LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.rightPhase",
+    "LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.fullComposition"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793439040063028387-5.json",
+      "sha256": "a78052c4b657b738f757c4b4a930638cbe01e89e1d4cba4f3589e55626c114fa",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793439134071091154-5.json",
+      "sha256": "fd56da4fffdbf8237d1da2c2cda2b560789970b6b71446ca7ca466e16c84faa4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793439134071091154-5-LogicLineages-ComputabilityKnowledge-PredictionAttachExitStatementChecks.log",
+  "gate_log_sha256": "3efe3b7d613362f2988137649df25af16b4fc0991aa33731d8f35d0d3de56819",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.fullComposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.bridgeStep": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionAttachExit.StatementChecks.rightPhase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitStatementChecks.lean",
+      "sha256": "7d54be0a2423e721c74c1f1e57d2a5bba51f3ad7c7aff146b9cce6fda52ca6ad"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitProof.lean",
+      "sha256": "d567d16e170db91e30a30d5dc5ca04401c27422ae73309c9e5434d7cb7debfc2"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitTargets.lean",
+      "sha256": "ee9d1a234dc23a4e70565478a63b821c3122c48df6cd6b855e81b1d0ede51ccc"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionAttachExitDefinitions.lean",
+      "sha256": "9764cfbe85860cdd02715905093e1141171c85e58c769f8267d7d415631b40df"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.StateTransition"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

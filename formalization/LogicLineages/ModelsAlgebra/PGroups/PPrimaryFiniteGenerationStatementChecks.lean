@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks
+theorem finiteTupleExtension : Targets.pPrimaryFiniteTupleExtension.{u} := p_primary_finite_tuple_extension
+theorem finiteTupleClosure : Targets.pPrimaryFiniteTupleClosure.{u} := p_primary_finite_tuple_closure
+end LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PPrimaryFiniteGenerationStatementChecks

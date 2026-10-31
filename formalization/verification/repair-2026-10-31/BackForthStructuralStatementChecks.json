@@ -1,0 +1,135 @@
+{
+  "accepted_utc": "2026-10-31T10:15:30.988790+00:00",
+  "scope": "Original literal comparison implies atomic agreement, is downward monotone, and has exact immediate-successor finite-response equivalence. No expanded language or abstract comparison field. Infinite-divisible comparison separate.",
+  "source_correspondence": "Original literal comparison implies atomic agreement, is downward monotone, and has exact immediate-successor finite-response equivalence. No expanded language or abstract comparison field. Infinite-divisible comparison separate.",
+  "source_commit": "356d436e9903f4bf8104c268860276ec8f2cddad",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks",
+  "frozen_at_utc": "2026-10-31T10:13:42.693104+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/back-forth-structural-freeze.json",
+  "freeze_sha256": "78c89d6d49d6540e41aa363bfceaf76548485f80ee48459b00df92ccc0346644",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralDefinitions.lean",
+      "sha256": "fa77cbca07bb08a9d4fc71270d5751715100e7ce89efd30ec1e3a8726cff489b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralTargets.lean",
+      "sha256": "9798a018f9a6a91d9f909e457c0feffa31dcf4d617871af0c5845e8ce0a58ee4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralStatementChecks.lean",
+      "sha256": "a6cfc353ed10be6e5132d9fb8e9dade009ebd77bfa06c828383f19615bacd987"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralProof.lean",
+      "sha256": "d483f0bd4035de0b13b372f968ec393c1e6fc22e02a67ae737fe2e831f449798"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.atomic",
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.monotone",
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.successor"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793441577773387551-2.json",
+      "sha256": "8860a3248628d3cb719d28c205e840e9911607fd44c2243ed7b69501638e8bce",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793441705551773298-2.json",
+      "sha256": "65e61d100358fe61a046aa07315817bb12d23350ffdce4a5fdbfaf740a51c535",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793441705551773298-2-LogicLineages-ModelsAlgebra-PGroups-BackForthStructuralStatementChecks.log",
+  "gate_log_sha256": "e27562ccb2c29e82fb222531bd624da1d01f94bcd82da263aea42eb4ee02c719",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.atomic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.BackForthStructuralStatementChecks.successor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralStatementChecks.lean",
+      "sha256": "a6cfc353ed10be6e5132d9fb8e9dade009ebd77bfa06c828383f19615bacd987"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralProof.lean",
+      "sha256": "d483f0bd4035de0b13b372f968ec393c1e6fc22e02a67ae737fe2e831f449798"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralTargets.lean",
+      "sha256": "9798a018f9a6a91d9f909e457c0feffa31dcf4d617871af0c5845e8ce0a58ee4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthStructuralDefinitions.lean",
+      "sha256": "fa77cbca07bb08a9d4fc71270d5751715100e7ce89efd30ec1e3a8726cff489b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthDefinitions.lean",
+      "sha256": "2ec84e50e27d9eba581f6c3adf6f2e8bd08b1c29372e30e1155ba50430b1dc73"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForth.lean",
+      "sha256": "9458b1c8b6894e432ef1cafa49d1ec137f6ec79d86ab50e29ef3f4cca2f83e41"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean",
+      "sha256": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Data.Fin.Basic",
+    "Mathlib.SetTheory.Ordinal.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomStatementChecks
+theorem finiteGapResponse : Targets.finiteGapResponseExtension := finite_gap_response_extension
+end LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteGapHeadroomStatementChecks

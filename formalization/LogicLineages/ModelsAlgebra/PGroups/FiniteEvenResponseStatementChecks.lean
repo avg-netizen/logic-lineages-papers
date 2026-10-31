@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseStatementChecks
+theorem finiteEvenResponse : Targets.finiteEvenResponseExtension := finite_even_response_extension
+end LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteEvenResponseStatementChecks

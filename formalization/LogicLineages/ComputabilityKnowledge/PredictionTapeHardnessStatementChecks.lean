@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeHardnessProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeHardness.StatementChecks
+theorem fixedBudgetHardness : PredictionTapeHardnessTargets.FixedBudgetHardness := PredictionTapeHardnessProof.fixedBudgetHardness
+end LogicLineages.ComputabilityKnowledge.PredictionTapeHardness.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeHardness.StatementChecks

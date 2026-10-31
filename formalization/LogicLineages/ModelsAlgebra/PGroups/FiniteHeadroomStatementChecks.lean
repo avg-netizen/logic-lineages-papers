@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomStatementChecks
+theorem finiteOddResponse : Targets.finiteOddResponseExtension := finite_odd_response_extension
+end LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteHeadroomStatementChecks

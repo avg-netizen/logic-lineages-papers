@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeLearningProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeLearning.StatementChecks
+theorem effectiveLearningMatrix : PredictionTapeLearningTargets.EffectiveLearningMatrix := PredictionTapeLearningProof.effectiveLearningMatrix
+theorem sourceLearningMatrix : PredictionTapeLearningTargets.SourceLearningMatrix := PredictionTapeLearningProof.sourceLearningMatrix
+end LogicLineages.ComputabilityKnowledge.PredictionTapeLearning.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeLearning.StatementChecks

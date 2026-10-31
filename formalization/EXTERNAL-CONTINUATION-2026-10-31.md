@@ -1,5 +1,12 @@
 # External continuation after the manuscript repairs
 
+## Current verified snapshot: checkpoint 15
+
+**108 checked, 2 inherited, 79 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 989 selected imports and 3,143
+namespace theorem audits. Historical sections below retain the limits and
+counts of their own checkpoints. No GitHub CI pass is claimed.
+
 This round starts from commit `65d795b9c192a80c611010db63f120a9ce038388`,
 which includes the previous accepted formalization checkpoint and the repairs
 to papers 03 and 05. Work is on the cumulative branch
@@ -560,3 +567,45 @@ previous root-only profile. These are local checks; defaults and CI remain
 unchanged. No whole statement was promoted: 101 checked, 2 inherited,
 86 pending. Later validator and attach-exit components are outside this
 fixed snapshot.
+
+## Seven further whole-source acceptances
+
+The fifteenth checkpoint completes seven numbered source statements:
+
+- Paper 01, `lem:infinite-divisible-bf`: the original group-language odd,
+  even and nonzero-limit tuple comparisons from actual infinite
+  divisible-part ranks, without extra family, cut-socle or extension-oracle
+  premises. Actual finite-response algebra and ordinal induction are paid.
+- Paper 09, `lem:addition` and `lem:sort`: full default-policy typed source
+  equations, unique fresh addition witnesses, the S/I definition of one,
+  logarithmic shared binary addition DAGs, actual S pair coding and an
+  explicit primitive-positive sorting graph, preserving shared inputs.
+- Paper 14, `lem:robust`, `lem:membership`, `prop:threshold` and
+  `prop:hardness`: the actual raw-tape robust rule for arbitrary prediction
+  histories; recursive membership and threshold matrices with strict
+  physical runtime; and both hardness clauses, with one and the same
+  total-predictor family for the diagonal threshold, literal infinite
+  measure and every sufficiently high fixed level. The original-list
+  hypotheses are exactly the source-stipulated effective evaluator,
+  per-entry primitive recursion and coverage properties.
+
+The source addition proof remained under normal resource bounds after
+factoring and symbolic finite-tail comparison avoided astronomical closed
+control evaluation. Historical stops remain disclosed. Two unaccepted
+measure/membership target drafts had unintended arrow/iff grouping; fresh
+explicitly parenthesized scopes were separately frozen and verified. Those
+drafts were not silently amended or counted as accepted.
+
+The [fifteenth focused checkpoint](verification/repair-2026-10-31/checkpoint-15.json)
+selects 284 gates and audits 869 exact aliases over 1,626 unchanged local
+source hashes. Its scoped focused profile passed in 3.806 seconds at
+1,735,264 KiB peak RSS. The [actual selected root](verification/repair-2026-10-31/root-checkpoint15.json)
+passed with 989 imports, 3,143 namespace audits and all 3,617 local closure
+hashes unchanged, in 2.539 seconds at 2,653,904 KiB peak RSS under the
+root-only profile. The pre-check registry amendment adding the seventh
+whole label is preserved; no proof/check boundary was changed mid-run.
+No CI or default runner configuration was changed.
+
+This snapshot does not include later collision/aggregation/chain results,
+actual third-jump completeness, or final prediction degree endpoints. Their
+subsequent acceptance is recorded only in later checkpoints.

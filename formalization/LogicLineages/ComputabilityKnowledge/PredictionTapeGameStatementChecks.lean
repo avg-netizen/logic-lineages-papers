@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeGameProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeGame.StatementChecks
+theorem computableBudgetRule : PredictionTapeGameTargets.ComputableBudgetRule := PredictionTapeGameProof.computableBudgetRule
+theorem actualAnyPredictorBaselineCorrect : PredictionTapeGameTargets.ActualAnyPredictorBaselineCorrect := PredictionTapeGameProof.actualAnyPredictorBaselineCorrect
+end LogicLineages.ComputabilityKnowledge.PredictionTapeGame.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeGame.StatementChecks

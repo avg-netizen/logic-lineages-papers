@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisiblePartProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks
+theorem maximalDivisible : Targets.actualDivisiblePart := actual_divisible_part
+theorem infiniteCutSocles : Targets.infiniteDivisibleSocleAtCuts := infinite_divisible_socle_at_cuts
+end LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisiblePartStatementChecks

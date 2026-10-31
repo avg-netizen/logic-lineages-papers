@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionOriginalBoundsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks
+theorem literalFiniteMaximum : Targets.LiteralFiniteMaximum := PredictionOriginalBounds.literalFiniteMaximum
+theorem computableBounds : Targets.ComputableBounds := PredictionOriginalBounds.computableBounds
+theorem fixedLevelPrimitiveRecursive : Targets.FixedLevelPrimitiveRecursive := PredictionOriginalBounds.fixedLevelPrimitiveRecursive
+theorem monotoneLevels : Targets.MonotoneLevels := PredictionOriginalBounds.monotoneLevels
+theorem monotoneInputs : Targets.MonotoneInputs := PredictionOriginalBounds.monotoneInputs
+theorem diagonalDominance : Targets.DiagonalDominance := PredictionOriginalBounds.diagonalDominance
+theorem successorTail : Targets.SuccessorTail := PredictionOriginalBounds.successorTail
+theorem evaderLevelTail : Targets.EvaderLevelTail := PredictionOriginalBounds.evaderLevelTail
+theorem evaderDiagonalTail : Targets.EvaderDiagonalTail := PredictionOriginalBounds.evaderDiagonalTail
+end LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionOriginalBounds.StatementChecks

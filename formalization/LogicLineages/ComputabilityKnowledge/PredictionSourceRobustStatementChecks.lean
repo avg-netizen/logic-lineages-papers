@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionSourceRobustProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionSourceRobust.StatementChecks
+theorem sourceRobustBaseline : PredictionSourceRobustTargets.SourceRobustBaseline := PredictionSourceRobustProof.sourceRobustBaseline
+end LogicLineages.ComputabilityKnowledge.PredictionSourceRobust.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionSourceRobust.StatementChecks
