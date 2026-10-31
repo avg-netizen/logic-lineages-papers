@@ -483,3 +483,41 @@ hashes unchanged. The current root-only profile was unchanged; the run took
 2.437 seconds and peaked at 2,636,104 KiB RSS. Fourteen scoped suppliers were
 added, with no whole-statement promotions. Later Ulm additivity, continuation
 interfaces and prefix-machine candidates are not part of this fixed snapshot.
+
+## Invariant tables and explicit raw machine behavior
+
+Further paper 01 suppliers prove actual direct-sum Ulm-layer additivity,
+the reservoir's cardinal rank table and the full odd/even source invariant
+tables. The constructed groups have the proved nature, exact first-zero
+lengths under positive multiplicity, and distinct-multiplicity nonisomorphism
+via actual Ulm invariance. This does not supply the Scott-complexity
+classification used by the source difference-spectrum theorem.
+
+Further machine suppliers provide explicit actual label payload codecs and
+primitive-recursive interfaces, a separately frozen machine with a pinned
+prefix initial state, exact singleton output layout and epilogue, and
+one-way raw-binary correctness for singleton-binary source results. They do
+not establish arbitrary partial-binary equivalence, acceptable numbering or
+a runtime-preserving general compiler. Earlier unaccepted attempts with an
+unvalidated initial state or mixed codec instances remain separate; failed
+definitional checks were not represented as semantic counterexamples.
+
+The knowledge lane proves a padded concrete PR registry whose internal
+headers do not collide with the existing named source headers, with actual
+AST witnesses for the specific paid source dispatchers. Padding alone does
+not establish a named alias theory, adequate Base, internal provability or
+full-language model correspondence. All six paper 12 statements remain
+pending, and the global register stays 101 checked, 2 inherited, 86 pending.
+
+The [thirteenth focused checkpoint](verification/repair-2026-10-31/checkpoint-13.json)
+selects 231 gates and audits 703 exact aliases over 1,296 unchanged local
+source hashes. Its original normal-profile invocation stopped at the RSS
+guard without a proof error. One explicitly authorized focused-only retry
+with 2,560 MiB heap, 2,048 MiB RSS and 3,072 MiB minimum-free limits passed
+in 3.248 seconds at 1,712,076 KiB peak RSS. The original stop and identical
+source snapshots are retained; no default runner limit changed.
+
+The [actual selected root](verification/repair-2026-10-31/root-checkpoint13.json)
+also passed: 936 imports, 3,041 namespace audits and all 3,399 local closure
+hashes unchanged, in 2.285 seconds at 2,645,020 KiB peak RSS under the
+previously authorized root-only profile. No GitHub CI result is claimed.

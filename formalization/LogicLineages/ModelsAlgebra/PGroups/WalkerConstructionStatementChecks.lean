@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerConstructionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerConstructionStatementChecks
+theorem natureLength : Targets.walkerConstructionNatureLength := walker_construction_nature_length
+theorem distinct : Targets.walkerConstructionDistinct := walker_construction_distinct
+end LogicLineages.ModelsAlgebra.PGroups.WalkerConstructionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerConstructionStatementChecks

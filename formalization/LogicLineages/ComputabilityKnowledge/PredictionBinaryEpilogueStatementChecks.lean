@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionBinaryEpilogueProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryEpilogue.StatementChecks
+theorem exactThreeFuel : PredictionBinaryEpilogueTargets.ExactThreeFuel := PredictionBinaryEpilogueProof.exactThreeFuel
+theorem noEarlyReturn : PredictionBinaryEpilogueTargets.NoEarlyReturn := PredictionBinaryEpilogueProof.noEarlyReturn
+theorem exactFinalOutput : PredictionBinaryEpilogueTargets.ExactFinalOutput := PredictionBinaryEpilogueProof.exactFinalOutput
+end LogicLineages.ComputabilityKnowledge.PredictionBinaryEpilogue.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryEpilogue.StatementChecks

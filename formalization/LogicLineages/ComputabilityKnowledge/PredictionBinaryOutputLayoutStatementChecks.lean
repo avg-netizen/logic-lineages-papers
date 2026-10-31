@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayoutProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks
+theorem exactHaltLayout : PredictionBinaryOutputLayoutTargets.ExactHaltLayout := PredictionBinaryOutputLayoutProof.exactHaltLayout
+theorem exactOutputCell : PredictionBinaryOutputLayoutTargets.ExactOutputCell := PredictionBinaryOutputLayoutProof.exactOutputCell
+theorem actualPostHalt : PredictionBinaryOutputLayoutTargets.ActualPostHalt := PredictionBinaryOutputLayoutProof.actualPostHalt
+end LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks

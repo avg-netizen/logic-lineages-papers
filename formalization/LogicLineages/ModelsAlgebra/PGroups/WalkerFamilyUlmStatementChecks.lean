@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerFamilyUlmProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFamilyUlmStatementChecks
+theorem invariantTable : Targets.walkerFamilyUlmTable := walker_family_ulm_table
+end LogicLineages.ModelsAlgebra.PGroups.WalkerFamilyUlmStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFamilyUlmStatementChecks

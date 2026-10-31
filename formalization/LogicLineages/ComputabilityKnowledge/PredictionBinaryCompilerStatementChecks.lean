@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionBinaryCompilerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryCompiler.StatementChecks
+theorem exactBinaryEvaluation : PredictionBinaryCompilerTargets.ExactBinaryEvaluation := PredictionBinaryCompilerProof.exactBinaryEvaluation
+theorem exactRawOutput : PredictionBinaryCompilerTargets.ExactRawOutput := PredictionBinaryCompilerProof.exactRawOutput
+theorem actualFiniteSupport : PredictionBinaryCompilerTargets.ActualFiniteSupport := PredictionBinaryCompilerProof.actualFiniteSupport
+end LogicLineages.ComputabilityKnowledge.PredictionBinaryCompiler.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryCompiler.StatementChecks

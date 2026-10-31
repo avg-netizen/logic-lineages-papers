@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionBinaryPrefixMachineProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryPrefixMachine.StatementChecks
+theorem exactFourTransitions : PredictionBinaryPrefixMachineTargets.ExactFourTransitions := PredictionBinaryPrefixMachineProof.exactFourTransitions
+theorem exactBodyStep : PredictionBinaryPrefixMachineTargets.ExactBodyStep := PredictionBinaryPrefixMachineProof.exactBodyStep
+theorem prefixTermination : PredictionBinaryPrefixMachineTargets.PrefixTermination := PredictionBinaryPrefixMachineProof.prefixTermination
+end LogicLineages.ComputabilityKnowledge.PredictionBinaryPrefixMachine.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryPrefixMachine.StatementChecks

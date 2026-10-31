@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionCompilerFinitePayloadCodecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionCompilerFinitePayloadCodec.StatementChecks
+theorem gammaRoundtrip : Targets.GammaRoundtrip := PredictionCompilerFinitePayloadCodec.gammaRoundtrip
+theorem stackRoundtrip : Targets.StackRoundtrip := PredictionCompilerFinitePayloadCodec.stackRoundtrip
+theorem gammaTableRoundtrip : Targets.GammaTableRoundtrip := PredictionCompilerFinitePayloadCodec.gammaTableRoundtrip
+theorem storeTableRoundtrip : Targets.StoreTableRoundtrip := PredictionCompilerFinitePayloadCodec.storeTableRoundtrip
+theorem actualPrimcodable : Targets.ActualPrimcodable := PredictionCompilerFinitePayloadCodec.actualPrimcodable
+end LogicLineages.ComputabilityKnowledge.PredictionCompilerFinitePayloadCodec.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionCompilerFinitePayloadCodec.StatementChecks

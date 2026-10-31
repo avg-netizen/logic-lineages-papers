@@ -1,0 +1,196 @@
+{
+  "accepted_utc": "2026-10-31T08:57:39.127777+00:00",
+  "scope": "Exact singleton output halt head/full-tape invariant, observed next cell and actual post-machine halt. No output inferred from termination alone.",
+  "source_correspondence": "Exact singleton output halt head/full-tape invariant, observed next cell and actual post-machine halt. No output inferred from termination alone.",
+  "source_commit": "ba3b5851b3ab727e6dd239d67f166927f44cf50f",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayoutStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:54:00.530258+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-binary-output-layout-freeze.json",
+  "freeze_sha256": "fbcf2416b29ba0e6ca9fdd1c266cb731ae4c7e2518ee1043540a81e5a7b38a4d",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutDefinitions.lean",
+      "sha256": "5c4b0dbb1b9a7df6b666ae5b0ba3e4774a35a6f64cfc806cbf120eb6e280954c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutTargets.lean",
+      "sha256": "f708dcef5f70cab043235b6048b24ecab66e0aefdf9e5980e445a699274ce24d"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutStatementChecks.lean",
+      "sha256": "e1102b06346fe7c98e187886ffd01e8f49af04b165b6afaab2cde0f54deef636"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutProof.lean",
+      "sha256": "518d69630c07bfd267182464ac42098ff78235469dacc2789be1f9b94cfc5b96"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks.exactHaltLayout",
+    "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks.exactOutputCell",
+    "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks.actualPostHalt"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793436739531836924-5.json",
+      "sha256": "c121360f37640663454d9f1e90933466a5f7c17e0235d8127cecc69db2499151",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793437029959985911-5.json",
+      "sha256": "9c30d4bb58b7cfe4e0bada3b8c6669289e5de259a297739ee147ceb717833993",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793437029959985911-5-LogicLineages-ComputabilityKnowledge-PredictionBinaryOutputLayoutStatementChecks.log",
+  "gate_log_sha256": "d8535093a7c0e50c81c090312921af971a27465c88d4eb84ac12236ed2515f4c",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks.exactOutputCell": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks.actualPostHalt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionBinaryOutputLayout.StatementChecks.exactHaltLayout": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutStatementChecks.lean",
+      "sha256": "e1102b06346fe7c98e187886ffd01e8f49af04b165b6afaab2cde0f54deef636"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutProof.lean",
+      "sha256": "518d69630c07bfd267182464ac42098ff78235469dacc2789be1f9b94cfc5b96"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutTargets.lean",
+      "sha256": "f708dcef5f70cab043235b6048b24ecab66e0aefdf9e5980e445a699274ce24d"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinaryOutputLayoutDefinitions.lean",
+      "sha256": "5c4b0dbb1b9a7df6b666ae5b0ba3e4774a35a6f64cfc806cbf120eb6e280954c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionBinarySentinelDefinitions.lean",
+      "sha256": "c01592a4d1f7a2dbcf0c2ee41604b18e555012764f0b84e078dd39aa2169222c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerFiniteExecutionDefinitions.lean",
+      "sha256": "ad47ce9e4d7863fee1cbdb33431a15114c1252c0f065a8d460b3e501dfbb2b8e"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerFiniteTableDefinitions.lean",
+      "sha256": "42f95a4f270302d9ac3e34bec4877b36606f1157a2d93393c28e1af87220510e"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityProof.lean",
+      "sha256": "f68c25e4414a4e9d7126fdaddcb3a65703f16da5f86ed742a6f06ef20a9e871f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityTargets.lean",
+      "sha256": "0e6802b6c98bb5fa46f13d7b67dd65c491f872281eb260e6651ae67025f6f5a7"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityDefinitions.lean",
+      "sha256": "71d0de8736c30397e46785aee84a74e93a1b687092662cf267ba9cb9fe12506c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerLabelEqualityDefinitions.lean",
+      "sha256": "11f7c507626f0fe126786f5b6545d6fc2ec6e419fca2097ef6a05cadf370e44a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerTapeSupportDefinitions.lean",
+      "sha256": "23eaab3bb1523708b6b0c5781b4cb58f1be2961e632d7b96811a76ccb8349ee4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerSupportDefinitions.lean",
+      "sha256": "381055fc0efa6186cbe59763e08dac1fdc047f9403c11e18ef39da5d1ae90bd4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerAlphabetEqualityDefinitions.lean",
+      "sha256": "acf7c5f2aeb7e464bbe8c3ba1e43ac8ea86aa32eea05651d2f5906a813cc9679"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerLabelEqualityProof.lean",
+      "sha256": "b4803cb19744f20621559a2f73cde35f2ace9b54ddc1dd26b3206b06bb459468"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerLabelEqualityTargets.lean",
+      "sha256": "2fefc07872275b9653779760df6589a1bc552bc79a92ade5322bd6fe8815d9fd"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerAlphabetEqualityProof.lean",
+      "sha256": "2a9e0f1601ce117dea9becc5d23deea9b8cf5bccab69669d2602a7f4a05f6ec4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerAlphabetEqualityTargets.lean",
+      "sha256": "3069f5ab9958def78f2dce29aa86cfafd5c9d06a000f6bf2f72b09b40e9717e1"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingDefinitions.lean",
+      "sha256": "10596494469c0860cf943197160c8deb9e4a0494e02a45f805d39c55c4c44c05"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteSerializationDefinitions.lean",
+      "sha256": "8921a8f2f207e7cd6dbd5655d9d2c7b51f6c6b2e1e6d62b83772569c64a618ad"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetDefinitions.lean",
+      "sha256": "8178580b7e51832bf5ffee67c933e029f901bc771f8c1a3c938508ec721dade8"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableDefinitions.lean",
+      "sha256": "be4cac105a6d0a406152af67dc9fb7d87d5976baa80b9dedf3c0891de0df9993"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine",
+    "Mathlib.Computability.TuringMachine.ToPartrec",
+    "Mathlib.Logic.Equiv.Fin.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}
