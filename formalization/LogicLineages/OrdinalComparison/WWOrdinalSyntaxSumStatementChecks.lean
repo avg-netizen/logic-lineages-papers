@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxSumProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxSumCorrect : Source.Targets.OrdinalSyntaxSumCorrect := Source.OrdinalSyntax.ordinalSyntaxSumCorrect
+theorem fixed_ordinalSyntaxRepeatCorrect : Source.Targets.OrdinalSyntaxRepeatCorrect := Source.OrdinalSyntax.ordinalSyntaxRepeatCorrect
+theorem fixed_ordinalSyntaxSumOperationsPrimitiveRecursive : Source.Targets.OrdinalSyntaxSumOperationsPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxSumOperationsPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

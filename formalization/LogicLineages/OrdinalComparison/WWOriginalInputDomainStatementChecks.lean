@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalInputDomainProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_originalInputCodecCorrect : Source.Targets.OriginalInputCodecCorrect := Source.OriginalInput.originalInputCodecCorrect
+theorem fixed_originalInputUniversalTupleEquivalence : Source.Targets.OriginalInputUniversalTupleEquivalence := Source.OriginalInput.originalInputUniversalTupleEquivalence
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

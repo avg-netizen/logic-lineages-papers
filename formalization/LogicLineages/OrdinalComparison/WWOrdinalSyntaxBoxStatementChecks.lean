@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxBoxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxBoxPositiveCorrect : Source.Targets.OrdinalSyntaxBoxPositiveCorrect := Source.OrdinalSyntax.ordinalSyntaxBoxPositiveCorrect
+theorem fixed_ordinalSyntaxApplicationCorrect : Source.Targets.OrdinalSyntaxApplicationCorrect := Source.OrdinalSyntax.ordinalSyntaxApplicationCorrect
+theorem fixed_ordinalSyntaxBoxOperationsPrimitiveRecursive : Source.Targets.OrdinalSyntaxBoxOperationsPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxBoxOperationsPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

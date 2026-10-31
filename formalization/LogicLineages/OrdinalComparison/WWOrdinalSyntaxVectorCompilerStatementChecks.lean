@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxVectorCompilerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxVectorCompilerCorrect : Source.Targets.OrdinalSyntaxVectorCompilerCorrect := Source.OrdinalSyntax.ordinalSyntaxVectorCompilerCorrect
+theorem fixed_ordinalSyntaxVectorCompilerPrimitiveRecursive : Source.Targets.OrdinalSyntaxVectorCompilerPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxVectorCompilerPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

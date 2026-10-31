@@ -188,16 +188,33 @@ The register for this checkpoint contains **189 statements: 99 checked,
 11 registered statements checked. Paper 05 has 17 of 18 checked; its
 counter-bound proposition remains pending.
 
-## Work in progress
+## Original-source countervaluation bounds
 
-The remaining paper 05 counter-bound obligation is the genuine numeric
-source frontend and assignment compiler effectivity certificate. Executable
-typed source functions and correct encoded-query evaluators alone do not
-supply that certificate. Finite positive boxes, counterexample search,
-primitive-recursive literal ordinal/scalar normalization and source-query
-commuting equalities are checked suppliers, not a claim that the whole
-counter-bound proposition is complete. No reduction-history or broader
-historical quantitative result is inferred from zero-history assignment.
+The eighth checkpoint completes paper 05's `prop:counter-bound` on the
+actual original-T input domain. A numeric source codec and context-sensitive
+typechecker, exact printed-default assignment compiler, refusing scalar and
+positive-vector extraction, and ordinal normalization all have genuine
+primitive-recursive certificates and semantic correspondence proofs.
+The final input predicate is defined independently using typed original
+terms and their actual default assignments, rather than compiler outputs.
+
+The checked proposition proves co-recursive-enumerability and the exact
+equivalence between decidability and a total computable countervaluation
+bound indexed by the original input code. It covers both weak and strict
+comparison, independent shared ground variables, unrestricted output/internal
+types, and the zero-arity closed test. Invalid numeric codes have an explicit
+vacuously true extension; no compiler-image assumption restricts real inputs.
+The printed default's right-associated optional box tail is preserved.
+
+This **does not prove decidability or construct a countervaluation bound**.
+The source's main open comparison problem remains open. It completes the
+formalization of the elementary conditional characterization, not a solution
+to that problem.
+
+The current register contains **189 statements: 100 checked, 2 inherited
+calculator-package results, and 87 pending**. All 11 registered statements
+of paper 03 and all 18 of paper 05 are checked. Remaining work continues on
+the other papers; known source-domain issues are not silently repaired.
 
 ## Verification environment
 
@@ -314,3 +331,15 @@ historical profile. No global runner, toolchain or CI configuration changed.
 These local observations establish a memory requirement for this selected
 root in this environment; they do not diagnose historical GitHub CI failures
 or claim a remote CI pass.
+
+## Eighth-checkpoint verification
+
+The [eighth focused checkpoint](verification/repair-2026-10-31/checkpoint-08.json)
+selects 168 accepted gates and audits 493 exact aliases, with all 832 local
+closure hashes unchanged. The actual updated root also passed with 873
+imports, 2,709 namespace theorem audits, and all 3,147 local closure hashes
+unchanged. Its separate [root evidence](verification/repair-2026-10-31/root-checkpoint08.json)
+records the same expressly authorized current root-only 4,096/4,096/6,144 MiB
+profile. The root run took 2.544 seconds and peaked at 2,614,328 KiB RSS.
+This includes the completed original-source counter-bound chain. It remains
+a local verification result, not a GitHub CI result or a cold upstream rebuild.

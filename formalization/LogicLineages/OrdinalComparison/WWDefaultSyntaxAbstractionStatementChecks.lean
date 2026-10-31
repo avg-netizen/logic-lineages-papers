@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWDefaultSyntaxAbstractionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_defaultPolicyAbstractionEquality : Source.Targets.DefaultPolicyAbstractionEquality := Source.OrdinalSyntax.defaultPolicyAbstractionEquality
+theorem fixed_defaultSyntaxPartialCorrect : Source.Targets.DefaultSyntaxPartialCorrect := Source.OrdinalSyntax.defaultSyntaxPartialCorrect
+theorem fixed_defaultSyntaxAbstractionCorrect : Source.Targets.DefaultSyntaxAbstractionCorrect := Source.OrdinalSyntax.defaultSyntaxAbstractionCorrect
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

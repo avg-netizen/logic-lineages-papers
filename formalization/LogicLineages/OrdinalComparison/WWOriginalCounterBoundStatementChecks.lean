@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalCounterBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_originalFrontendBoundEquivalence : Source.Targets.OriginalFrontendBoundEquivalence := Source.OriginalInput.originalFrontendBoundEquivalence
+theorem fixed_actualOriginalCounterBound : Source.Targets.ActualOriginalCounterBound := Source.OriginalInput.actualOriginalCounterBound
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxAbstractionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxPartialsCodeCorrect : Source.Targets.OrdinalSyntaxPartialsCodeCorrect := Source.OrdinalSyntax.ordinalSyntaxPartialsCodeCorrect
+theorem fixed_ordinalSyntaxAbstractionCorrect : Source.Targets.OrdinalSyntaxAbstractionCorrect := Source.OrdinalSyntax.ordinalSyntaxAbstractionCorrect
+theorem fixed_ordinalSyntaxAbstractionPrimitiveRecursive : Source.Targets.OrdinalSyntaxAbstractionPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxAbstractionPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

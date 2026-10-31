@@ -1423,7 +1423,9 @@
         },
         {
           "description": "Computability of comparison and countervaluation-bound equivalence",
-          "status": "pending"
+          "status": "checked",
+          "target": "prop:counter-bound",
+          "note": "Actual original numeric source-query frontend is primitive recursive and semantically calibrated; coRE and decidability iff original-input-indexed coordinate bound accepted. This does not decide the open universal comparison problem."
         },
         {
           "description": "Weak scalar replacement, graded-domain closure and bounded-norm preservation with the original multiplier; no assumption of the false strict WW Lemma 2.19 or Appendix A.5",
@@ -1448,9 +1450,13 @@
           "file": "05-wilken-weiermann-foundations/paper.tex",
           "line": 183,
           "statement_latex": "[Countervaluation bounds]\\label{prop:counter-bound}\nThe fixed-control comparison problem is co-recursively-enumerable.  It is\ndecidable if and only if there is a total computable function $b(Q)$ such\nthat each false comparison $Q$ has a countervaluation whose every coordinate\nis at most $b(Q)$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualOriginalCounterBound",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWOriginalCounterBoundTargets.lean",
+            "sha256": "6e15608ffd682c4afc9a12aa85e7ac756541e87c48f3957932b28631431c3694",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualOriginalCounterBound"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.SourceCounterBoundBoxStatementChecks",
@@ -1496,8 +1502,118 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWSourceSyntaxQueryStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWSourceSyntaxQueryStatementChecks.json",
               "scope": "Actual typed-source assignment/extraction into literal syntax query codes commutes exactly with genuine primitive-recursive numerical normalization to accepted source codes. Original typed-T input numeric codec and syntactic assignment compiler computability remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWDefaultPolicyStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWDefaultPolicyStatementChecks.json",
+              "scope": "Exact foundations.tex310\u2013325 policy: all-left ordinary sum/repeat sites and right-associated optional scalar box tail. Explicit partial/repeat/positive aggregation agreement with all-left suppliers; preserves fixed source policy rather than silently replacing it."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWDefaultSourceAssignmentStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWDefaultSourceAssignmentStatementChecks.json",
+              "scope": "Actual raw original-T default-policy assignment compiler; exact typed and arbitrary raw-input correspondence; genuine Primrec and Computable"
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWDefaultSyntaxAbstractionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWDefaultSyntaxAbstractionStatementChecks.json",
+              "scope": "Printed default partial/abstraction exactly agree with accepted all-left suppliers because only the optional box site differs. Actual numeric partial and abstraction compiler equality for every typed expression/vector, no additional success/output premises."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWDefaultSyntaxBoxStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWDefaultSyntaxBoxStatementChecks.json",
+              "scope": "Exact printed-default scalar box tail f+(g+n), retained unchanged positive recursion and result-level truncation. Genuine primitive-recursive application compiler, no replacement by all-left optional tail."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxAbstractionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxAbstractionStatementChecks.json",
+              "scope": "Exact all-left partial collection and abstraction including original size repeat multiplier, positive aggregation, actual missing-coordinate elision and retained context-erasing closure. Genuine primitive recursive compiler; printed-default agreement and original-T frontend separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxBoxStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxBoxStatementChecks.json",
+              "scope": "Exact numeric positive box recursion with outside-list-only zero padding, and all-left-policy application with exact result-level truncation. Not the printed-default scalar box tail; that adapter remains separate. Genuine primitive-recursive certificates."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxPartialStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxPartialStatementChecks.json",
+              "scope": "Explicit all-left admissible structural policy at all seven sites, not the printed default. Numeric partial equals actual typed partial including whole-free priority, active grade refusals, nested repeat2, full variable components and context-erasing closure. Genuine Primrec certificate; no original-T frontend claim."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxSumStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxSumStatementChecks.json",
+              "scope": "Exact numeric left-shape aggregation and source repeats for the explicit all-left admissible policy, retaining unchanged operands and zero repeat totalization. Genuine primitive recursion certificates; source assignment frontend remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxVectorCompilerStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxVectorCompilerStatementChecks.json",
+              "scope": "Genuinely refusing numeric vector compiler equals original compileVector followed by literal scalar/positive AST coding, with all coordinates retained in order. Genuine primitive recursion; original-T compiler/input endpoint separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalCounterBoundStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalCounterBoundStatementChecks.json",
+              "scope": "Whole original fixed-default canonical T comparison proposition: complement recursively enumerable and genuine decision iff total computable original-input-indexed coordinate countervaluation bound. Both weak and WW strict, independent shared positive ground names, unrestricted internal/output types and zero arity. No compiler/computability/termination premises; malformed true extension documented."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalInputDomainStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalInputDomainStatementChecks.json",
+              "scope": "Independent original typed-T query semantics: shared ground context, unrestricted internal/output types, exact default assignments and actual weak/WW-strict comparison. Malformed vacuous numerical extension explicit. Exact codec and positive-ground-valuation/finite-tuple equivalence including arity zero; original-input-indexed CoordinateBound independent of compiler."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalInputFrontendStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalInputFrontendStatementChecks.json",
+              "scope": "Genuine primitive-recursive original raw typed-T assignment and refusing scalar/positive syntax compiler, actual ordinal normalization, preserved original input arity, and point/universal correctness against independent source predicates. Malformed extension uses explicitly weak One\u2264One; no arbitrary selector computability premise."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceSyntaxCodeCheckStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceSyntaxCodeCheckStatementChecks.json",
+              "scope": "Exact raw and numerical checking iff actual typed OriginalTerm erasure; external context changed only at lambda; genuine Primrec numerical checker. No pretyped-only completeness or compiler oracle."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceSyntaxCodeEffectivityStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceSyntaxCodeEffectivityStatementChecks.json",
+              "scope": "Actual partial raw parser numerical output, exact canonical acceptance and genuine Primrec parser function. Malformed tags/payloads rejected; no decoder oracle."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceSyntaxCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceSyntaxCodeStatementChecks.json",
+              "scope": "Minimal raw variable/constant/application/abstraction syntax, typed erasure, exact partial parser/encoder and genuine primitive-recursive numeric constructors. External context, no duplicated annotations."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceSyntaxCodeTypesStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceSyntaxCodeTypesStatementChecks.json",
+              "scope": "Concrete pair+1 simple-type codec, total inverse, exact numeric type level and primitive-recursive constructors/level. No compiler or bound oracle."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793432432118141202-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWOriginalCounterBoundStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualOriginalCounterBound",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFrontendBoundEquivalence"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalCounterBoundTargets.lean",
+              "sha256": "6e15608ffd682c4afc9a12aa85e7ac756541e87c48f3957932b28631431c3694",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualOriginalCounterBound"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalCounterBoundTargets.lean",
+              "sha256": "6e15608ffd682c4afc9a12aa85e7ac756541e87c48f3957932b28631431c3694",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalFrontendBoundEquivalence"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793432432118141202-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/WWOriginalCounterBoundStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole original fixed-control countervaluation-bound proposition: actual original typed T input codes under the fixed declared default policy, both weak and strict comparison, unrestricted internal/bound/output types and shared independent ground variables. Genuine primitive-recursive raw source assignment and refusing compilation preserve the exact original input arity and point/universal semantics. The complement is recursively enumerable and original-source decidability is equivalent to a total computable coordinate bound indexed by the same original raw input, not compiled image representatives. Zero-arity closed tests and an explicit vacuously true malformed-input extension are included. No decidability or counterbound existence is asserted; the theorem proves their exact equivalence."
         },
         {
           "id": "05-wilken-weiermann-foundations:lem:finite-balls",

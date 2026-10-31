@@ -1,0 +1,3 @@
+module
+public import LogicLineages.OrdinalComparison.WWDefaultSourceAssignmentSemanticProof
+public import LogicLineages.OrdinalComparison.WWDefaultSourceAssignmentPrimitiveProof

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWDefaultPolicyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_defaultPolicyPartialEquality : Source.Targets.DefaultPolicyPartialEquality := Source.OrdinalSyntax.defaultPolicyPartialEquality
+theorem fixed_defaultPolicyRepeatEquality : Source.Targets.DefaultPolicyRepeatEquality := Source.OrdinalSyntax.defaultPolicyRepeatEquality
+theorem fixed_defaultPolicyPositiveAggregation : Source.Targets.DefaultPolicyPositiveAggregation := Source.OrdinalSyntax.defaultPolicyPositiveAggregation
+theorem fixed_defaultPolicyBoxTail : Source.Targets.DefaultPolicyBoxTail := Source.OrdinalSyntax.defaultPolicyBoxTail
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

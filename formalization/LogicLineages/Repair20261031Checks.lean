@@ -152,6 +152,22 @@ public import LogicLineages.OrdinalComparison.WWSourceSyntaxQueryStatementChecks
 public import LogicLineages.OrdinalComparison.WWSourceTupleEvaluationStatementChecks
 public import LogicLineages.ComputabilityKnowledge.SourceCounterBoundBoxStatementChecks
 public import LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearchStatementChecks
+public import LogicLineages.OrdinalComparison.WWDefaultPolicyStatementChecks
+public import LogicLineages.OrdinalComparison.WWDefaultSourceAssignmentStatementChecks
+public import LogicLineages.OrdinalComparison.WWDefaultSyntaxAbstractionStatementChecks
+public import LogicLineages.OrdinalComparison.WWDefaultSyntaxBoxStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxAbstractionStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxBoxStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxPartialStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxSumStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxVectorCompilerStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalCounterBoundStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalInputDomainStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalInputFrontendStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeCheckStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeEffectivityStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeTypesStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -1891,6 +1907,214 @@ theorem checked_SourceCounterBoundSearch_fixed_counterBoundPrefixComputable :
 theorem checked_SourceCounterBoundSearch_fixed_counterBoundPrefixCorrect :
     LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearch.Targets.PrefixCorrect :=
   LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundPrefixCorrect
+
+theorem checked_WWDefaultPolicy_fixed_defaultPolicyPartialEquality :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultPolicyPartialEquality :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultPolicyPartialEquality
+
+theorem checked_WWDefaultPolicy_fixed_defaultPolicyRepeatEquality :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultPolicyRepeatEquality :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultPolicyRepeatEquality
+
+theorem checked_WWDefaultPolicy_fixed_defaultPolicyPositiveAggregation :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultPolicyPositiveAggregation :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultPolicyPositiveAggregation
+
+theorem checked_WWDefaultPolicy_fixed_defaultPolicyBoxTail :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultPolicyBoxTail :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultPolicyBoxTail
+
+theorem checked_WWDefaultSourceAssignment_assignmentCorrect :
+    LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.Targets.AssignmentCorrect :=
+  LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.StatementChecks.assignmentCorrect
+
+theorem checked_WWDefaultSourceAssignment_assignmentChecked :
+    LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.Targets.AssignmentChecked :=
+  LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.StatementChecks.assignmentChecked
+
+theorem checked_WWDefaultSourceAssignment_assignmentSourceExact :
+    LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.Targets.AssignmentSourceExact :=
+  LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.StatementChecks.assignmentSourceExact
+
+theorem checked_WWDefaultSourceAssignment_assignmentPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.Targets.AssignmentPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.StatementChecks.assignmentPrimitiveRecursive
+
+theorem checked_WWDefaultSourceAssignment_assignmentComputable :
+    LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.Targets.AssignmentComputable :=
+  LogicLineages.OrdinalComparison.Source.DefaultSourceAssignment.StatementChecks.assignmentComputable
+
+theorem checked_WWDefaultSyntaxAbstraction_fixed_defaultPolicyAbstractionEquality :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultPolicyAbstractionEquality :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultPolicyAbstractionEquality
+
+theorem checked_WWDefaultSyntaxAbstraction_fixed_defaultSyntaxPartialCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultSyntaxPartialCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultSyntaxPartialCorrect
+
+theorem checked_WWDefaultSyntaxAbstraction_fixed_defaultSyntaxAbstractionCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultSyntaxAbstractionCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultSyntaxAbstractionCorrect
+
+theorem checked_WWDefaultSyntaxBox_fixed_defaultSyntaxBoxTailCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultSyntaxBoxTailCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultSyntaxBoxTailCorrect
+
+theorem checked_WWDefaultSyntaxBox_fixed_defaultSyntaxApplicationCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultSyntaxApplicationCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultSyntaxApplicationCorrect
+
+theorem checked_WWDefaultSyntaxBox_fixed_defaultSyntaxApplicationPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.DefaultSyntaxApplicationPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_defaultSyntaxApplicationPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxAbstraction_fixed_ordinalSyntaxPartialsCodeCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxPartialsCodeCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxPartialsCodeCorrect
+
+theorem checked_WWOrdinalSyntaxAbstraction_fixed_ordinalSyntaxAbstractionCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxAbstractionCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxAbstractionCorrect
+
+theorem checked_WWOrdinalSyntaxAbstraction_fixed_ordinalSyntaxAbstractionPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxAbstractionPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxAbstractionPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxBox_fixed_ordinalSyntaxBoxPositiveCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxBoxPositiveCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxBoxPositiveCorrect
+
+theorem checked_WWOrdinalSyntaxBox_fixed_ordinalSyntaxApplicationCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxApplicationCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxApplicationCorrect
+
+theorem checked_WWOrdinalSyntaxBox_fixed_ordinalSyntaxBoxOperationsPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxBoxOperationsPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxBoxOperationsPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxPartial_fixed_ordinalSyntaxPartialCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxPartialCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxPartialCorrect
+
+theorem checked_WWOrdinalSyntaxPartial_fixed_ordinalSyntaxPartialPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxPartialPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxPartialPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxSum_fixed_ordinalSyntaxSumCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxSumCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxSumCorrect
+
+theorem checked_WWOrdinalSyntaxSum_fixed_ordinalSyntaxRepeatCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxRepeatCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxRepeatCorrect
+
+theorem checked_WWOrdinalSyntaxSum_fixed_ordinalSyntaxSumOperationsPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxSumOperationsPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxSumOperationsPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxVectorCompiler_fixed_ordinalSyntaxVectorCompilerCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxVectorCompilerCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxVectorCompilerCorrect
+
+theorem checked_WWOrdinalSyntaxVectorCompiler_fixed_ordinalSyntaxVectorCompilerPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxVectorCompilerPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxVectorCompilerPrimitiveRecursive
+
+theorem checked_WWOriginalCounterBound_fixed_originalFrontendBoundEquivalence :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalFrontendBoundEquivalence :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFrontendBoundEquivalence
+
+theorem checked_WWOriginalCounterBound_fixed_actualOriginalCounterBound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualOriginalCounterBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualOriginalCounterBound
+
+theorem checked_WWOriginalInputDomain_fixed_originalInputCodecCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalInputCodecCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalInputCodecCorrect
+
+theorem checked_WWOriginalInputDomain_fixed_originalInputUniversalTupleEquivalence :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalInputUniversalTupleEquivalence :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalInputUniversalTupleEquivalence
+
+theorem checked_WWOriginalInputFrontend_fixed_originalInputFrontendPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalInputFrontendPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalInputFrontendPrimitiveRecursive
+
+theorem checked_WWOriginalInputFrontend_fixed_originalInputFrontendArity :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalInputFrontendArity :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalInputFrontendArity
+
+theorem checked_WWOriginalInputFrontend_fixed_originalInputFrontendPointCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalInputFrontendPointCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalInputFrontendPointCorrect
+
+theorem checked_WWOriginalInputFrontend_fixed_originalInputFrontendGoodCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalInputFrontendGoodCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalInputFrontendGoodCorrect
+
+theorem checked_WWSourceSyntaxCodeCheck_checkCodeExact :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.CheckCodeExact :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.checkCodeExact
+
+theorem checked_WWSourceSyntaxCodeCheck_checkParserExact :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.CheckParserExact :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.checkParserExact
+
+theorem checked_WWSourceSyntaxCodeCheck_typedRawExact :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypedRawExact :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typedRawExact
+
+theorem checked_WWSourceSyntaxCodeCheck_typedCheckExact :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypedCheckExact :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typedCheckExact
+
+theorem checked_WWSourceSyntaxCodeCheck_checkPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.CheckPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.checkPrimitiveRecursive
+
+theorem checked_WWSourceSyntaxCodeEffectivity_parserExact :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.ParserExact :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.parserExact
+
+theorem checked_WWSourceSyntaxCodeEffectivity_parserPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.ParserPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.parserPrimitiveRecursive
+
+theorem checked_WWSourceSyntaxCode_decodeEncode :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.DecodeEncode :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.decodeEncode
+
+theorem checked_WWSourceSyntaxCode_encodeDecode :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.EncodeDecode :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.encodeDecode
+
+theorem checked_WWSourceSyntaxCode_codeInjective :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.CodeInjective :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.codeInjective
+
+theorem checked_WWSourceSyntaxCode_constructorsPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.ConstructorsPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.constructorsPrimitiveRecursive
+
+theorem checked_WWSourceSyntaxCodeTypes_typeDecodeEncode :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypeDecodeEncode :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typeDecodeEncode
+
+theorem checked_WWSourceSyntaxCodeTypes_typeEncodeDecode :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypeEncodeDecode :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typeEncodeDecode
+
+theorem checked_WWSourceSyntaxCodeTypes_typeLevelExact :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypeLevelExact :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typeLevelExact
+
+theorem checked_WWSourceSyntaxCodeTypes_typeLevelPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypeLevelPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typeLevelPrimitiveRecursive
+
+theorem checked_WWSourceSyntaxCodeTypes_typeConstructorsPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypeConstructorsPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typeConstructorsPrimitiveRecursive
 
 end LogicLineages.Repair20261031Checks
 

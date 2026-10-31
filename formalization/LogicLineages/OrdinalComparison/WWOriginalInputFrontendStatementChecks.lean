@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalInputFrontendProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_originalInputFrontendPrimitiveRecursive : Source.Targets.OriginalInputFrontendPrimitiveRecursive := Source.OriginalInput.originalInputFrontendPrimitiveRecursive
+theorem fixed_originalInputFrontendArity : Source.Targets.OriginalInputFrontendArity := Source.OriginalInput.originalInputFrontendArity
+theorem fixed_originalInputFrontendPointCorrect : Source.Targets.OriginalInputFrontendPointCorrect := Source.OriginalInput.originalInputFrontendPointCorrect
+theorem fixed_originalInputFrontendGoodCorrect : Source.Targets.OriginalInputFrontendGoodCorrect := Source.OriginalInput.originalInputFrontendGoodCorrect
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks
