@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionStatementChecks
+theorem actualPointed : Targets.terminalPointedAbsorption := terminal_pointed_absorption
+end LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionStatementChecks

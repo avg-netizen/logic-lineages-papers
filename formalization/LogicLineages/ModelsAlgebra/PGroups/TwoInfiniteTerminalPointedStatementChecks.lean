@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks
+theorem actualQuotient : Targets.twoInfiniteTerminalPointed := two_infinite_terminal_pointed
+end LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks
+theorem relative : Targets.twoInfiniteTailNoSigma := two_infinite_tail_no_sigma
+theorem unrestricted : Targets.twoInfiniteTailNoRawSigma := two_infinite_tail_no_raw_sigma
+end LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks

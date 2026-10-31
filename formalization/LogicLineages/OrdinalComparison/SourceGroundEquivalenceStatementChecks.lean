@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGroundEquivalenceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.GroundEquivalence.StatementChecks
+theorem fullGroundEquivalence : Targets.FullGroundEquivalence := Proof.fullGroundEquivalence
+end LogicLineages.OrdinalComparison.Source.GroundEquivalence.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.GroundEquivalence

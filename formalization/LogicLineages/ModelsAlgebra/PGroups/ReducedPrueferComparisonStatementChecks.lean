@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferComparisonProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferComparisonStatementChecks
+theorem pointed : Targets.reducedPrueferComparison := reduced_pruefer_comparison
+end LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferComparisonStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferComparisonStatementChecks

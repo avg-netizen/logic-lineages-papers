@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 19
+## Current verified snapshot: checkpoint 20
 
-**118 checked, 2 inherited, 69 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,057 selected imports and 3,298
+**119 checked, 2 inherited, 68 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,067 selected imports and 3,365
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -745,3 +745,31 @@ Eleven accepted records were fixed in the snapshot, including TerminalTwoEven
 accepted immediately before selection; later records are excluded. The
 registry is **118 checked, 2 inherited, 69 pending**. No GitHub CI result is
 claimed.
+
+
+## Checkpoint 20 — primitive-DAG ground comparison equivalence
+
+Paper 09 `cor:ground-equivalence` is checked by
+`Source.GroundEquivalence.StatementChecks.fullGroundEquivalence`. Actual I/K
+application and magnification give both weak-to-strict and strict-to-weak
+comparison transformations under the full default assignment. Crucially,
+the outputs use the same primitive scoped source-DAG representation as the
+inputs, preserve sharing, and have exactly six additional nodes. The separate
+one-hole context graft is supplementary, not a replacement for that bound.
+
+The Boolean-wire gate supplies the arithmetic Eq/Add/Sort layer and its
+shared-wire witness accounting only; actual-source lowering and the full
+polynomial Boolean compiler remain pending. Actual Pruefer enlargement,
+reduced-group comparisons and concrete terminal Scott obstructions retain
+their scopes and do not promote the whole Scott classification or a general
+Miller collapse theorem.
+
+The [twentieth focused checkpoint](verification/repair-2026-10-31/checkpoint-20.json)
+selects 362 gates and audits 1,020 exact aliases over 2,207 unchanged local
+source hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint20.json)
+passes with 1,067 imports, 3,365 audits and 3,953 unchanged closure hashes.
+Both use the explicitly authorized checkpoint profiles with existing CPU,
+wall-time and single-thread guards; no defaults or CI settings changed.
+Ten accepted records were fixed in the selection; later acceptances are
+excluded. The registry is **119 checked, 2 inherited, 68 pending**. No GitHub
+CI result is claimed.

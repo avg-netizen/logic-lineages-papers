@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteStatementChecks
+theorem filtration : Targets.productTransfiniteFiltration := product_transfinite_filtration
+theorem rank : Targets.productTransfiniteUlmRank := product_transfinite_ulm_rank
+end LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteStatementChecks

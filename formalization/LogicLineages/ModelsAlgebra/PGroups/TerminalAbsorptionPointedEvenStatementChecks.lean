@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenStatementChecks
+theorem retainedEven : Targets.terminalAbsorptionPointedEven := terminal_absorption_pointed_even
+end LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenStatementChecks

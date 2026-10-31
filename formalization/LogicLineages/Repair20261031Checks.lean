@@ -352,6 +352,16 @@ public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerStatementC
 public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionStatementChecks
 public import LogicLineages.OrdinalComparison.WWUnaryCarrierStatementChecks
 public import LogicLineages.OrdinalComparison.WWUnitObservationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedOddSigmaStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferComparisonStatementChecks
+public import LogicLineages.OrdinalComparison.SourceBooleanWireStatementChecks
+public import LogicLineages.OrdinalComparison.SourceGroundEquivalenceStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4331,6 +4341,82 @@ theorem checked_WWUnitObservation_selectedTransport :
 theorem checked_WWUnitObservation_selectedValuation :
     LogicLineages.OrdinalComparison.Source.UnitObservation.Targets.SelectedValuation :=
   LogicLineages.OrdinalComparison.Source.UnitObservation.StatementChecks.selectedValuation
+
+theorem checked_ProductTransfinite_filtration :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.productTransfiniteFiltration :=
+  LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteStatementChecks.filtration
+
+theorem checked_ProductTransfinite_rank :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.productTransfiniteUlmRank :=
+  LogicLineages.ModelsAlgebra.PGroups.ProductTransfiniteStatementChecks.rank
+
+theorem checked_PrueferEnlargement_countableModel :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferModelCountable :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks.countableModel
+
+theorem checked_PrueferEnlargement_actualData :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferEnlargementData :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks.actualData
+
+theorem checked_PrueferEnlargement_noniso :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedPrueferEnlargementNoniso :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks.noniso
+
+theorem checked_ReducedOddSigma_relative :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedOddNoSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedOddSigmaStatementChecks.relative
+
+theorem checked_ReducedOddSigma_unrestricted :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedOddNoRawSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedOddSigmaStatementChecks.unrestricted
+
+theorem checked_ReducedPrueferComparison_pointed :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedPrueferComparison :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedPrueferComparisonStatementChecks.pointed
+
+theorem checked_SourceBooleanWire_nodeExact :
+    LogicLineages.OrdinalComparison.Source.BooleanWire.Targets.NodeExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.nodeExact
+
+theorem checked_SourceBooleanWire_wireExact :
+    LogicLineages.OrdinalComparison.Source.BooleanWire.Targets.WireExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.wireExact
+
+theorem checked_SourceBooleanWire_uniqueWitnesses :
+    LogicLineages.OrdinalComparison.Source.BooleanWire.Targets.UniqueWitnesses :=
+  LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.uniqueWitnesses
+
+theorem checked_SourceBooleanWire_rootCorrect :
+    LogicLineages.OrdinalComparison.Source.BooleanWire.Targets.RootCorrect :=
+  LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.rootCorrect
+
+theorem checked_SourceBooleanWire_linearOverhead :
+    LogicLineages.OrdinalComparison.Source.BooleanWire.Targets.LinearOverhead :=
+  LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.linearOverhead
+
+theorem checked_SourceGroundEquivalence_fullGroundEquivalence :
+    LogicLineages.OrdinalComparison.Source.GroundEquivalence.Targets.FullGroundEquivalence :=
+  LogicLineages.OrdinalComparison.Source.GroundEquivalence.StatementChecks.fullGroundEquivalence
+
+theorem checked_TerminalAbsorptionPointedEven_retainedEven :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalAbsorptionPointedEven :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionPointedEvenStatementChecks.retainedEven
+
+theorem checked_TerminalPointedAbsorption_actualPointed :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalPointedAbsorption :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalPointedAbsorptionStatementChecks.actualPointed
+
+theorem checked_TwoInfiniteTailSigma_relative :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.twoInfiniteTailNoSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks.relative
+
+theorem checked_TwoInfiniteTailSigma_unrestricted :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.twoInfiniteTailNoRawSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailSigmaStatementChecks.unrestricted
+
+theorem checked_TwoInfiniteTerminalPointed_actualQuotient :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.twoInfiniteTerminalPointed :=
+  LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalPointedStatementChecks.actualQuotient
 
 end LogicLineages.Repair20261031Checks
 

@@ -1,0 +1,203 @@
+{
+  "accepted_utc": "2026-10-31T12:46:14.373753+00:00",
+  "scope": "Concrete intrinsically acyclic shared Boolean DAG to finite Eq/Add/Sort arithmetic atoms, unique natural wire/auxiliary witnesses, exact root truth, linear9m overhead; input naturals already flattened externally. No actual-source lowering or whole thm:compiler polynomial source-DAG claim.",
+  "source_correspondence": "Concrete shared Boolean finite-wire Eq/Add/Sort lowering with native Boolean truth, exact unique witnesses and linear nine-times-node bound. Root and consumer reviewed strict scope before freeze. This is the finite-wire Boolean layer, not the full actual source-DAG compiler or a polynomial bound for arbitrary source elimination. Outside checkpoint19.",
+  "source_commit": "4974acac4d40bd8ba0f15c581638fcbade49547d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "09-canonical-source-expressivity/paper.tex",
+      "sha256": "246e22ec49d12d3df6660021f6cabe87e19119b5e3da0ef08a561a64ed477b8c"
+    }
+  ],
+  "gate_module": "LogicLineages.OrdinalComparison.SourceBooleanWireStatementChecks",
+  "frozen_at_utc": "2026-10-31T12:44:43.077930+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/source-boolean-wire-freeze.json",
+  "freeze_sha256": "7195bade6dffd6fc36fb9cd04cf79a536a7f01fba3fac64d4b83b317671c6c13",
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireDefinitions.lean",
+      "sha256": "3b24383d77c734ee4212b9d6173b6931503ed382bb521b13971d5fc1f4d89117"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireTargets.lean",
+      "sha256": "d80b85548c273d785c5ae0dfdc5c61ff0677c0c089060a780f256e34cb7ee606"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireStatementChecks.lean",
+      "sha256": "33cdab8534265c493e10db031a016ebe1b563c0eb574a9b21ce671e16e1e78fb"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireProof.lean",
+      "sha256": "dedbfe26723a9fde341425301be7050510ea0d8bacf7ad0ec05cc62d1f951f18"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.nodeExact",
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.wireExact",
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.uniqueWitnesses",
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.rootCorrect",
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.linearOverhead"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793450556991100834-5.json",
+      "sha256": "75a4bbe89086a6d3a069f29ad616d40f3ac0e0d896a7e169377bf289dd5e01c9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793450741210466199-2.json",
+      "sha256": "55850b29685e84ee7689e1f2a662aabb1646c844035e362ad37bcff88b7e5d7c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793450741210466199-2-LogicLineages-OrdinalComparison-SourceBooleanWireStatementChecks.log",
+  "gate_log_sha256": "2ad606fcc5b2252a790430a82a6cd861fed0a0709a6d968498779bd77e051ab2",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.linearOverhead": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.uniqueWitnesses": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.nodeExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.rootCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.StatementChecks.wireExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.newWireCount.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.evalNode.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Ref.value.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Ref.value.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.evalNode.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Atom.Holds.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.zeroAux.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.LocalHolds.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.evalNode.eq_3": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Atom.Holds.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.newWireCount.eq_def": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.constraints.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Ref.value.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Ref.value.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Ref.value.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.bit.eq_1": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.newWireCount.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Ref.value.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.evalNode.eq_5": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.canonicalAux.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.constraints.eq_4": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.atomCount.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.constraints.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.canonicalAux.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.canonicalAux.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.Atom.Holds.eq_2": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.atomCount.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.canonicalAux.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.constraints.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.constraints.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.constraints.eq_5": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.canonicalAux.eq_6": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.evalNode.eq_6": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.atomCount.eq_def": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.evalNode.eq_4": [],
+    "LogicLineages.OrdinalComparison.Source.BooleanWire.canonicalAux.eq_5": [
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireStatementChecks.lean",
+      "sha256": "33cdab8534265c493e10db031a016ebe1b563c0eb574a9b21ce671e16e1e78fb"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireProof.lean",
+      "sha256": "dedbfe26723a9fde341425301be7050510ea0d8bacf7ad0ec05cc62d1f951f18"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireTargets.lean",
+      "sha256": "d80b85548c273d785c5ae0dfdc5c61ff0677c0c089060a780f256e34cb7ee606"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceBooleanWireDefinitions.lean",
+      "sha256": "3b24383d77c734ee4212b9d6173b6931503ed382bb521b13971d5fc1f4d89117"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Tactic.FinCases"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

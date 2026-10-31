@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks
+theorem countableModel : Targets.prueferModelCountable := pruefer_model_countable
+theorem actualData : Targets.prueferEnlargementData := pruefer_enlargement_data
+theorem noniso : Targets.reducedPrueferEnlargementNoniso := reduced_pruefer_enlargement_noniso
+end LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferEnlargementStatementChecks
