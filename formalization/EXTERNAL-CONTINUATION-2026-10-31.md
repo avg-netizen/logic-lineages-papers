@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 21
+## Current verified snapshot: checkpoint 22
 
-**120 checked, 2 inherited, 67 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,075 selected imports and 3,402
+**122 checked, 2 inherited, 65 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,087 selected imports and 3,513
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -805,3 +805,35 @@ The explicitly authorized profiles preserve CPU, wall-time and single-thread
 guards; no defaults or CI settings changed. Eight records were fixed before
 later acceptances. The registry is **120 checked, 2 inherited, 67 pending**.
 No GitHub CI result is claimed.
+
+
+## Checkpoint 22 — full reduced difference spectrum and Boolean compiler
+
+Paper 01 `thm:difference-spectrum` is checked in both directions for actual
+countable ordinals and actual reduced primary groups: the attained difference
+indices are exactly successors, and the infinite-group spectrum consists
+exactly of successors at least two. Its negative limit argument uses the
+proved reduced classification and actual syntax, not a general AGHT theorem
+or an effective ordinal-presentation claim.
+
+Paper 09 `thm:compiler` is checked for the complete concrete A-normal input
+DAG, including all five Program constructors, arithmetic, native Boolean
+connectives, binary constants, arbitrary supplied original source DAGs and
+closed unary calls. The output uses the same primitive scoped source-DAG
+representation, preserves shared names, has explicit polynomial node and
+witness budgets, and gives both strict and weak unsatisfiability reductions.
+This is not a bound on expanded syntax trees or evaluation time.
+
+The corrected fresh BooleanGlobalFlatten contract alone is accepted; the old
+malformed targets, proof and gate remain unaccepted. The original correct
+definitions are reused. WalkerScott retains its individual scoped heavy-profile
+authorization, and the prior scoped-DAG lexical exception remains disclosed.
+
+The [twenty-second focused checkpoint](verification/repair-2026-10-31/checkpoint-22.json)
+selects 382 gates and audits 1,072 exact aliases over 2,307 unchanged local
+source hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint22.json)
+passes with 1,087 imports, 3,513 audits and 4,043 unchanged closure hashes.
+The explicitly authorized profiles retain CPU, wall-time and single-thread
+guards without changing defaults or CI settings. Twelve accepted records
+were fixed before later acceptances. The registry is **122 checked,
+2 inherited, 65 pending**. No GitHub CI result is claimed.

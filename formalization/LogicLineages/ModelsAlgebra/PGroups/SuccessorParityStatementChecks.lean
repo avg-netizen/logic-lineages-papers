@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.SuccessorParityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks
+theorem actualParity : Targets.countableSuccessorParity := countable_successor_parity
+end LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks

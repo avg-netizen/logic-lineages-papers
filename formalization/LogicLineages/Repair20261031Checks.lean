@@ -370,6 +370,18 @@ public import LogicLineages.ModelsAlgebra.PGroups.ReducedScottCompleteStatementC
 public import LogicLineages.OrdinalComparison.SourcePrimitiveLoweringStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.TerminalMultiplicityStatementChecks
 public import LogicLineages.OrdinalComparison.WWScopedSourceDAGStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DifferenceSpectrumCompleteStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.RawHierarchyStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexStatementChecks
+public import LogicLineages.OrdinalComparison.SourceBinaryPlanStatementChecks
+public import LogicLineages.OrdinalComparison.SourceBooleanCompilerStatementChecks
+public import LogicLineages.OrdinalComparison.SourceBooleanGlobalFlattenStatementChecks
+public import LogicLineages.OrdinalComparison.SourceBooleanPlanStatementChecks
+public import LogicLineages.OrdinalComparison.SourceExistentialPlanStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks
+public import LogicLineages.OrdinalComparison.WWAbsoluteProbeDAGStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerScottStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4497,6 +4509,142 @@ theorem checked_WWScopedSourceDAG_eraser :
 theorem checked_WWScopedSourceDAG_aggregate :
     LogicLineages.OrdinalComparison.Source.ScopedDAG.Targets.Aggregate :=
   LogicLineages.OrdinalComparison.Source.ScopedDAG.StatementChecks.aggregate
+
+theorem checked_DifferenceSpectrumComplete_fullSource :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.differenceSpectrumFullSource :=
+  LogicLineages.ModelsAlgebra.PGroups.DifferenceSpectrumCompleteStatementChecks.fullSource
+
+theorem checked_RawHierarchy_monotone :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.positiveComplexityMonotone :=
+  LogicLineages.ModelsAlgebra.PGroups.RawHierarchyStatementChecks.monotone
+
+theorem checked_RawHierarchy_normalize :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.rawPiNormalization :=
+  LogicLineages.ModelsAlgebra.PGroups.RawHierarchyStatementChecks.normalize
+
+theorem checked_RawHierarchy_wrappers :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.rawWrapperTruth :=
+  LogicLineages.ModelsAlgebra.PGroups.RawHierarchyStatementChecks.wrappers
+
+theorem checked_RawHierarchy_differenceLift :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.rawDifferencePiLift :=
+  LogicLineages.ModelsAlgebra.PGroups.RawHierarchyStatementChecks.differenceLift
+
+theorem checked_ReducedDifferenceIndex_noLimit :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedNoLimitDifferenceIndex :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexStatementChecks.noLimit
+
+theorem checked_ReducedDifferenceIndex_noZero :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.rawNoZeroDifferenceScott :=
+  LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexStatementChecks.noZero
+
+theorem checked_SourceBinaryPlan_renameCorrect :
+    LogicLineages.OrdinalComparison.Source.BinaryPlan.Targets.RenameCorrect :=
+  LogicLineages.OrdinalComparison.Source.BinaryPlan.StatementChecks.renameCorrect
+
+theorem checked_SourceBinaryPlan_renameSize :
+    LogicLineages.OrdinalComparison.Source.BinaryPlan.Targets.RenameSize :=
+  LogicLineages.OrdinalComparison.Source.BinaryPlan.StatementChecks.renameSize
+
+theorem checked_SourceBinaryPlan_binaryCorrect :
+    LogicLineages.OrdinalComparison.Source.BinaryPlan.Targets.BinaryCorrect :=
+  LogicLineages.OrdinalComparison.Source.BinaryPlan.StatementChecks.binaryCorrect
+
+theorem checked_SourceBinaryPlan_binarySize :
+    LogicLineages.OrdinalComparison.Source.BinaryPlan.Targets.BinarySize :=
+  LogicLineages.OrdinalComparison.Source.BinaryPlan.StatementChecks.binarySize
+
+theorem checked_SourceBinaryPlan_literalCorrect :
+    LogicLineages.OrdinalComparison.Source.BinaryPlan.Targets.LiteralCorrect :=
+  LogicLineages.OrdinalComparison.Source.BinaryPlan.StatementChecks.literalCorrect
+
+theorem checked_SourceBinaryPlan_literalSize :
+    LogicLineages.OrdinalComparison.Source.BinaryPlan.Targets.LiteralSize :=
+  LogicLineages.OrdinalComparison.Source.BinaryPlan.StatementChecks.literalSize
+
+theorem checked_SourceBooleanCompiler_fullSourceBooleanCompiler :
+    LogicLineages.OrdinalComparison.Source.BooleanCompiler.Targets.FullSourceBooleanCompiler :=
+  LogicLineages.OrdinalComparison.Source.BooleanCompiler.StatementChecks.fullSourceBooleanCompiler
+
+theorem checked_SourceBooleanGlobalFlatten_flattenExact :
+    LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.Targets.FlattenExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.StatementChecks.flattenExact
+
+theorem checked_SourceBooleanGlobalFlatten_sharedInputs :
+    LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.Targets.SharedInputs :=
+  LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.StatementChecks.sharedInputs
+
+theorem checked_SourceBooleanGlobalFlatten_globalExact :
+    LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.Targets.GlobalExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.StatementChecks.globalExact
+
+theorem checked_SourceBooleanGlobalFlatten_existentialExact :
+    LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.Targets.ExistentialExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.StatementChecks.existentialExact
+
+theorem checked_SourceBooleanGlobalFlatten_linearOverhead :
+    LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.Targets.LinearOverhead :=
+  LogicLineages.OrdinalComparison.Source.BooleanGlobalFlatten.StatementChecks.linearOverhead
+
+theorem checked_SourceBooleanPlan_gatesExact :
+    LogicLineages.OrdinalComparison.Source.BooleanPlan.Targets.GatesExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanPlan.StatementChecks.gatesExact
+
+theorem checked_SourceBooleanPlan_bindExact :
+    LogicLineages.OrdinalComparison.Source.BooleanPlan.Targets.BindExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanPlan.StatementChecks.bindExact
+
+theorem checked_SourceBooleanPlan_matrixExact :
+    LogicLineages.OrdinalComparison.Source.BooleanPlan.Targets.MatrixExact :=
+  LogicLineages.OrdinalComparison.Source.BooleanPlan.StatementChecks.matrixExact
+
+theorem checked_SourceBooleanPlan_linearOverhead :
+    LogicLineages.OrdinalComparison.Source.BooleanPlan.Targets.LinearOverhead :=
+  LogicLineages.OrdinalComparison.Source.BooleanPlan.StatementChecks.linearOverhead
+
+theorem checked_SourceExistentialPlan_compilation :
+    LogicLineages.OrdinalComparison.Source.ExistentialPlan.Targets.Compilation :=
+  LogicLineages.OrdinalComparison.Source.ExistentialPlan.StatementChecks.compilation
+
+theorem checked_SourceExistentialPlan_size :
+    LogicLineages.OrdinalComparison.Source.ExistentialPlan.Targets.Size :=
+  LogicLineages.OrdinalComparison.Source.ExistentialPlan.StatementChecks.size
+
+theorem checked_SourceExistentialPlan_comparison :
+    LogicLineages.OrdinalComparison.Source.ExistentialPlan.Targets.Comparison :=
+  LogicLineages.OrdinalComparison.Source.ExistentialPlan.StatementChecks.comparison
+
+theorem checked_SuccessorDifference_actualRealization :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.successorDifferenceRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceStatementChecks.actualRealization
+
+theorem checked_SuccessorParity_actualParity :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countableSuccessorParity :=
+  LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks.actualParity
+
+theorem checked_WWAbsoluteProbeDAG_substitution :
+    LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.Targets.Substitution :=
+  LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.StatementChecks.substitution
+
+theorem checked_WWAbsoluteProbeDAG_closing :
+    LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.Targets.Closing :=
+  LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.StatementChecks.closing
+
+theorem checked_WWAbsoluteProbeDAG_probe :
+    LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.Targets.Probe :=
+  LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.StatementChecks.probe
+
+theorem checked_WWAbsoluteProbeDAG_original :
+    LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.Targets.Original :=
+  LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.StatementChecks.original
+
+theorem checked_WWAbsoluteProbeDAG_closed :
+    LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.Targets.Closed :=
+  LogicLineages.OrdinalComparison.Source.AbsoluteProbeDAG.StatementChecks.closed
+
+theorem checked_WalkerScott_actualFamilies :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerScottEndpoints :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerScottStatementChecks.actualFamilies
 
 end LogicLineages.Repair20261031Checks
 

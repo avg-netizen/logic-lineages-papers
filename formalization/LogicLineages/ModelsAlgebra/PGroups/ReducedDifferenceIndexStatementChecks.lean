@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexStatementChecks
+theorem noLimit : Targets.reducedNoLimitDifferenceIndex := reduced_no_limit_difference_index
+theorem noZero : Targets.rawNoZeroDifferenceScott := raw_no_zero_difference_scott
+end LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedDifferenceIndexStatementChecks

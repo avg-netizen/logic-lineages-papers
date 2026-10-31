@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBooleanCompilerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.BooleanCompiler.StatementChecks
+theorem fullSourceBooleanCompiler : Targets.FullSourceBooleanCompiler := Proof.fullSourceBooleanCompiler
+end LogicLineages.OrdinalComparison.Source.BooleanCompiler.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.BooleanCompiler

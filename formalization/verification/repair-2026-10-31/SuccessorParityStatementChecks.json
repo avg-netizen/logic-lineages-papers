@@ -1,0 +1,113 @@
+{
+  "accepted_utc": "2026-10-31T13:12:50.159101+00:00",
+  "scope": "Every actual countable successor is 2gamma+1 or2gamma+2 with actual countable gamma. No effective ordinal notation algorithm claimed.",
+  "source_correspondence": "Actual ordinal successor parity and countability supplier. Exact fixed target only; no separate whole-source spectrum or classification claim. Outside checkpoint21.",
+  "source_commit": "8765526540bd6869649fcd5d7ff6dd0ce9200e7f",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks",
+  "frozen_at_utc": "2026-10-31T13:09:58.796821+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/successor-parity-freeze.json",
+  "freeze_sha256": "b3f0dffeb0085c550c536e6bd512bf95b56c5c191a050235a639aef14bddc361",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityDefinitions.lean",
+      "sha256": "88309baf574eb88bad3f32f18cd5a10205f58c1d8992007b563ae21ef98bf13d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityTargets.lean",
+      "sha256": "0bd9e63f99ce0c31a0069c0f855a2c96cfa13f572b090f93457d4aae47df38d2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityStatementChecks.lean",
+      "sha256": "d1ad78c88c89feb8a395824f28e396b5e59ec8a9e72cd40e6a18b1f7f1e4ee59"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityProof.lean",
+      "sha256": "0ce45604b0f8c111a4a150177f783a654a24b7bb06497538cd410f45fc148aef"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks.actualParity"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793452096834915805-9.json",
+      "sha256": "faec2b886e3fe5f6a21a2cc9a05cdcaa41fc36030baf688c631edcdf493c471b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793452348626579164-5.json",
+      "sha256": "33380e2c4b8dccc5421f1b5ab4c35ae0a8079e4ebb56d74ebfa6c9842c3dcff2",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793452348626579164-5-LogicLineages-ModelsAlgebra-PGroups-SuccessorParityStatementChecks.log",
+  "gate_log_sha256": "fae94ad565ab26414c90a54d659cc15415d44f6672ba3a023d2a3141aadfa06c",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks.actualParity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityStatementChecks.lean",
+      "sha256": "d1ad78c88c89feb8a395824f28e396b5e59ec8a9e72cd40e6a18b1f7f1e4ee59"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityProof.lean",
+      "sha256": "0ce45604b0f8c111a4a150177f783a654a24b7bb06497538cd410f45fc148aef"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityTargets.lean",
+      "sha256": "0bd9e63f99ce0c31a0069c0f855a2c96cfa13f572b090f93457d4aae47df38d2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SuccessorParityDefinitions.lean",
+      "sha256": "88309baf574eb88bad3f32f18cd5a10205f58c1d8992007b563ae21ef98bf13d"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.SetTheory.Ordinal.Arithmetic",
+    "Mathlib.SetTheory.Ordinal.Principal",
+    "Mathlib.Tactic.NormNum"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

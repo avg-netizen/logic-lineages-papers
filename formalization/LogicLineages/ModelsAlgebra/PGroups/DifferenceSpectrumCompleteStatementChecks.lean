@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DifferenceSpectrumCompleteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DifferenceSpectrumCompleteStatementChecks
+theorem fullSource : Targets.differenceSpectrumFullSource := difference_spectrum_full_source
+end LogicLineages.ModelsAlgebra.PGroups.DifferenceSpectrumCompleteStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DifferenceSpectrumCompleteStatementChecks

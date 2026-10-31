@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceStatementChecks
+theorem actualRealization : Targets.successorDifferenceRealization := successor_difference_realization
+end LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceStatementChecks
