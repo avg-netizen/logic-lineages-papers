@@ -9,6 +9,11 @@ public import LogicLineages.OrdinalComparison.WWPolicyGeneratedStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.RankedImageCoverCompletionStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithmStatementChecks
 public import LogicLineages.OrdinalComparison.WWPolicyValueStatementChecks
+public import LogicLineages.OrdinalComparison.WWAdmissibleSumStatementChecks
+public import LogicLineages.OrdinalComparison.WWAdmissiblePartialStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationGeneralStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.FiniteProfileStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -74,6 +79,48 @@ theorem pruningSomeExact : ModelsAlgebra.Forests.RankedPruneAlgorithm.Targets.So
 
 theorem policyFixedInputValue : OrdinalComparison.Source.Targets.ActualPolicyFixedInputValue :=
   OrdinalComparison.StatementChecks.fixed_actualPolicyFixedInputValue
+
+theorem actualAdmissibleSumSyntax : OrdinalComparison.Source.Targets.ActualAdmissibleSumSyntax :=
+  OrdinalComparison.StatementChecks.fixed_actualAdmissibleSumSyntax
+
+theorem actualAdmissibleSumValue : OrdinalComparison.Source.Targets.ActualAdmissibleSumValue :=
+  OrdinalComparison.StatementChecks.fixed_actualAdmissibleSumValue
+
+theorem actualAdmissiblePartialGenerated : OrdinalComparison.Source.Targets.ActualAdmissiblePartialGenerated :=
+  OrdinalComparison.StatementChecks.fixed_actualAdmissiblePartialGenerated
+
+theorem actualAdmissiblePartialValue : OrdinalComparison.Source.Targets.ActualAdmissiblePartialValue :=
+  OrdinalComparison.StatementChecks.fixed_actualAdmissiblePartialValue
+
+theorem forestForestRankedRepresentation : ModelsAlgebra.Forests.ForestParseRepresentation.Targets.ForestRankedRepresentation :=
+  ModelsAlgebra.Forests.ForestParseRepresentation.StatementChecks.forestRankedRepresentation
+
+theorem forestActualForbiddenLanguageImage : ModelsAlgebra.Forests.ForestParseRepresentation.Targets.ActualForbiddenLanguageImage :=
+  ModelsAlgebra.Forests.ForestParseRepresentation.StatementChecks.actualForbiddenLanguageImage
+
+theorem forestActualForbiddenIdealCover : ModelsAlgebra.Forests.ForestParseRepresentation.Targets.ActualForbiddenIdealCover :=
+  ModelsAlgebra.Forests.ForestParseRepresentation.StatementChecks.actualForbiddenIdealCover
+
+theorem generalGeneralForbiddenLanguageImage : ModelsAlgebra.Forests.ForestParseRepresentation.GeneralTargets.GeneralForbiddenLanguageImage :=
+  ModelsAlgebra.Forests.ForestParseRepresentation.GeneralStatementChecks.generalForbiddenLanguageImage
+
+theorem generalGeneralForbiddenIdealCover : ModelsAlgebra.Forests.ForestParseRepresentation.GeneralTargets.GeneralForbiddenIdealCover :=
+  ModelsAlgebra.Forests.ForestParseRepresentation.GeneralStatementChecks.generalForbiddenIdealCover
+
+theorem profileLeafExact : ModelsAlgebra.Forests.FiniteProfile.Targets.LeafExact :=
+  ModelsAlgebra.Forests.FiniteProfile.StatementChecks.leafExact
+
+theorem profileSplitEmbedding : ModelsAlgebra.Forests.FiniteProfile.Targets.SplitEmbedding :=
+  ModelsAlgebra.Forests.FiniteProfile.StatementChecks.splitEmbedding
+
+theorem profileRunExact : ModelsAlgebra.Forests.FiniteProfile.Targets.RunExact :=
+  ModelsAlgebra.Forests.FiniteProfile.StatementChecks.runExact
+
+theorem profileAcceptanceExact : ModelsAlgebra.Forests.FiniteProfile.Targets.AcceptanceExact :=
+  ModelsAlgebra.Forests.FiniteProfile.StatementChecks.acceptanceExact
+
+theorem profileAvoidanceDownward : ModelsAlgebra.Forests.FiniteProfile.Targets.AvoidanceDownward :=
+  ModelsAlgebra.Forests.FiniteProfile.StatementChecks.avoidanceDownward
 
 end LogicLineages.Repair20261031Checks
 

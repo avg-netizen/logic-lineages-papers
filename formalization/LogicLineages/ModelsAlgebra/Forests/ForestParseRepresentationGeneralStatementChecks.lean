@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationGeneralProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation.GeneralStatementChecks
+
+theorem generalForbiddenLanguageImage : GeneralTargets.GeneralForbiddenLanguageImage :=
+  GeneralProof.generalForbiddenLanguageImage
+
+theorem generalForbiddenIdealCover : GeneralTargets.GeneralForbiddenIdealCover :=
+  GeneralProof.generalForbiddenIdealCover
+
+end LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation.GeneralStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation

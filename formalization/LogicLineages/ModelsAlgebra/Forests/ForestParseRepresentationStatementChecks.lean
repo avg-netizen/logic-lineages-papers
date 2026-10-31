@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation.StatementChecks
+
+theorem forestRankedRepresentation : Targets.ForestRankedRepresentation := Proof.forestRankedRepresentation
+
+theorem actualForbiddenLanguageImage : Targets.ActualForbiddenLanguageImage := Proof.actualForbiddenLanguageImage
+
+theorem actualForbiddenIdealCover : Targets.ActualForbiddenIdealCover := Proof.actualForbiddenIdealCover
+
+end LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation

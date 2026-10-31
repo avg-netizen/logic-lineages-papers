@@ -652,7 +652,14 @@
           "status": "pending",
           "accepted_declaration": null,
           "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.FiniteProfileStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteProfileStatementChecks.json",
+              "scope": "Executable fixed-N Boolean mask/matrix finite induced-subgraph profile, exact transition/run/acceptance/downward semantics. Arbitrary input encoding and uniform finite-automaton packaging remain pending."
+            }
+          ]
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:image-cover",
@@ -661,27 +668,49 @@
           "file": "03-joint-embedding-finite-forests/decision.tex",
           "line": 102,
           "statement_latex": "\\label{lem:image-cover}\nPut $D_i=\\{\\varnothing\\}\\cup\\{\\E(t):t\\in I_i\\}$, on isomorphism types.\nEach $D_i$ is a hereditary graph class with JEP, their union is\n$\\mathcal K$, and\n\\[\n \\mathcal K\\text{ has JEP}\\quad\\Longleftrightarrow\\quad\n                     \\mathcal K=D_i\\text{ for some }i.        \\tag{2}\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation.GeneralStatementChecks.generalForbiddenIdealCover",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationGeneralTargets.lean",
+            "sha256": "b4c1306ecc76987cb85a15ee8a60875144b5eb2a2b79b15a7c3c501b6c2858ec",
+            "type": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentation.GeneralTargets.GeneralForbiddenIdealCover"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/FiniteIdealCoverStatementChecks.json",
-              "scope": "Abstract finite hereditary directed-cover criterion, under the genuine cover hypotheses. Actual ranked-parse graph-image hereditary/JEP/cover properties remain separate obligations."
+              "scope": "Abstract finite hereditary directed-cover criterion under the genuine cover hypotheses; actual graph-image properties are supplied by separately recorded components."
             },
             {
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedGraphImageStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/RankedGraphImageStatementChecks.json",
-              "scope": "Actual finite graph restriction, hereditary directed images, image-cover from a given language cover, and criterion under given graph cover. Fully composed image-language criterion remains separately pending."
+              "scope": "Actual finite graph restriction, hereditary directed images, image-cover from a given language cover, and criterion under given graph cover; composed and original-class applications are recorded separately."
             },
             {
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedImageCoverCompletionStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/RankedImageCoverCompletionStatementChecks.json",
-              "scope": "Composed coverage, hereditary directed graph images and JEP equality criterion from an actual finite term-ideal cover. Original forbidden graph class identification remains separately unregistered pending dependency verification."
+              "scope": "Composed coverage, hereditary directed graph images and JEP equality criterion from an actual finite term-ideal cover. Original forbidden-class identification is supplied by the separate representation components."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationStatementChecks.json",
+              "scope": "Actual finite-forest to ranked parse graph isomorphism and canonical P4/C4/Comp(U) forbidden language calibration/application."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationGeneralStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationGeneralStatementChecks.json",
+              "scope": "Full arbitrary finite forbidden graph family with explicit P4/C4 and nonempty-forbidden branch: actual representation image, hereditary directed cover and JEP equality criterion from given term ideal cover."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793418257253615687-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationGeneralStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired local image-cover lemma for arbitrary finite graph forbidden family containing P4,C4, in the explicit nonempty-forbidden and nonempty ideal-index branch. Actual forbidden-class graph image identification is proved through finite-forest representation, not assumed. Coverage, hereditary/JEP pieces and equality criterion follow from the genuine supplied term-ideal cover. Computing that ideal cover remains separate for the total decision theorem."
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:canonical-cotree",
@@ -1216,6 +1245,16 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWPolicyValueStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWPolicyValueStatementChecks.json",
               "scope": "L/R partial-output denotations coincide for the same fixed literal input. Does not assert whole-source policy invariance, arbitrary policies, original norm or complete finite-expansion proposition."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWAdmissibleSumStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWAdmissibleSumStatementChecks.json",
+              "scope": "Arbitrary ordered full binary sum-shape exact operand use/node count and fixed-list ordinal value. No computability of a structural policy function."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWAdmissiblePartialStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWAdmissiblePartialStatementChecks.json",
+              "scope": "Actual partial recursion under arbitrary structural site/arity policies: generated success/grade and same-input ordinal value independence. Full assignment expansion bounds and source norm remain separate."
             }
           ]
         },

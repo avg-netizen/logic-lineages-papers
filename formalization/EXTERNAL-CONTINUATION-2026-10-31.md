@@ -35,14 +35,14 @@ statements, not automatic certificates of new or changed statements.
   [Acceptance evidence](verification/repair-2026-10-31/WWLiteralSizeStatementChecks.json).
 - **Paper 03, finite ideal-cover criterion: checked supplier.** A finite
   hereditary directed cover has JEP exactly when one piece covers the class.
-  The actual ranked-parse graph-image hypotheses are still separate work;
-  this abstract result alone does not complete `lem:image-cover`.
+  This abstract result alone does not complete `lem:image-cover`; the actual
+  graph-image hypotheses are discharged by the later results below.
   [Acceptance evidence](verification/repair-2026-10-31/FiniteIdealCoverStatementChecks.json).
 - **Paper 03, actual graph-image ideal core: checked.** Actual graph
   restrictions, hereditary directed images, language-cover transfer and their
-  composed JEP criterion are proved. The original forbidden graph class still
-  needs its checked identification with these parse images, so
-  `lem:image-cover` remains pending.
+  composed JEP criterion are proved. These initial core components alone did
+  not identify the original forbidden class with the image; the later
+  representation results below discharge that gap.
   [Graph-image evidence](verification/repair-2026-10-31/RankedGraphImageStatementChecks.json)
   and [composition evidence](verification/repair-2026-10-31/RankedImageCoverCompletionStatementChecks.json).
 - **Paper 03, executable pruning: checked.** Boolean leaf selection computes
@@ -67,16 +67,40 @@ statements, not automatic certificates of new or changed statements.
   different input trees to later partials. Arbitrary admissible policies and
   the remaining finite-expansion assertions are still pending.
   [Evidence](verification/repair-2026-10-31/WWPolicyValueStatementChecks.json).
+- **Paper 03, `lem:image-cover`: checked in full.** Every finite order forest
+  has an actual ranked-parse graph representation. This identifies the
+  permitted graph class with its parse-language image, first for the original
+  forest input and then for every finite forbidden graph family with P4/C4
+  adjoined. In the source's nonempty branch, the theorem derives actual class
+  coverage, hereditary/JEP pieces and the equality criterion from the given
+  finite term-ideal cover. No representation theorem is left as a premise.
+  [Representation evidence](verification/repair-2026-10-31/ForestParseRepresentationStatementChecks.json)
+  and [general-family evidence](verification/repair-2026-10-31/ForestParseRepresentationGeneralStatementChecks.json).
+- **Paper 03, finite profile automaton: checked suppliers.** The executable
+  fixed-size Boolean graph-code transition and run exactly track induced
+  embeddings, acceptance and downward closure. Arbitrary finite input
+  calibration and uniform automaton packaging remain separate, so
+  `lem:parse-regular` is not yet checked in full.
+  [Evidence](verification/repair-2026-10-31/FiniteProfileStatementChecks.json).
+- **Paper 05, arbitrary structural associations: checked suppliers.** Ordered
+  full binary sums use every operand unchanged and once, have the exact
+  added-node count, and preserve the fixed-list ordinal value. The actual
+  partial recursion under any structural site/arity policy preserves generated
+  grades and has policy-independent values on the same input. These are not
+  claims that an arbitrary policy function is computable, nor original norm
+  admissibility results.
+  [Sum-shape evidence](verification/repair-2026-10-31/WWAdmissibleSumStatementChecks.json)
+  and [partial evidence](verification/repair-2026-10-31/WWAdmissiblePartialStatementChecks.json).
 
-After source reconciliation and this first whole-lemma acceptance, the register
-contains **189 statements: 86 checked, 2 inherited calculator-package results,
-and 101 pending**. The repair introduced eleven new numbered obligations.
+After source reconciliation and two whole-lemma acceptances, the register
+contains **189 statements: 87 checked, 2 inherited calculator-package results,
+and 100 pending**. The repair introduced eleven new numbered obligations.
 
 ## Work in progress
 
-The next targets are the finite-forest-to-parse representation and actual
-finite induced-subgraph-profile automaton for paper 03, and arbitrary binary
-sum-shape expansion/value bounds for paper 05. Whole decision and norm claims remain pending until their full
+The next targets are uniform finite-input calibration and reduced cotree
+semantics for paper 03, and arbitrary-policy assignments and explicit expansion
+bounds for paper 05. Whole decision and norm claims remain pending until their full
 formal dependency chains are proved. In particular, bibliographic references
 to effective ideal decomposition and Parikh's theorem are not Lean suppliers.
 
@@ -109,3 +133,11 @@ All 82 local closure source hashes match before and after compilation. The
 root selects 714 gates; this remains a focused check, not a new whole-root
 build. The register count remains 86 checked: the additional components are
 explicit suppliers and implementations, not additional whole source results.
+
+The [third focused checkpoint](verification/repair-2026-10-31/checkpoint-03.json)
+combines fourteen accepted gates with thirty-three exact-type aliases. All
+125 local closure source hashes match before and after compilation. The root
+selects 719 gates, without a new whole-root build. The general forbidden-family
+representation completes `lem:image-cover`, raising the current count to
+87 checked; the new finite-profile and arbitrary-policy partial components
+retain their explicitly limited supplier scope.
