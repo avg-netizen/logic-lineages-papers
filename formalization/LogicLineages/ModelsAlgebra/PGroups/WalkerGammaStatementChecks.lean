@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerGammaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerGammaStatementChecks
+theorem countableCut : Targets.walkerCountableGammaCut := walker_countable_gamma_cut
+theorem sourceConstruction : Targets.walkerGammaSourceConstruction := walker_gamma_source_construction
+end LogicLineages.ModelsAlgebra.PGroups.WalkerGammaStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerGammaStatementChecks

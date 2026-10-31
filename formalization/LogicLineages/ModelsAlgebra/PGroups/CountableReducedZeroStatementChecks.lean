@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.CountableReducedZeroProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.CountableReducedZeroStatementChecks
+theorem pSurjectiveDivisible : Targets.pPrimaryDivisibleFromPSurjective := p_primary_divisible_from_p_surjective
+theorem stabilizes : Targets.countablePFiltrationStabilizes := countable_p_filtration_stabilizes
+theorem zeroLimit : Targets.countableReducedZeroLimit := countable_reduced_zero_limit
+end LogicLineages.ModelsAlgebra.PGroups.CountableReducedZeroStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.CountableReducedZeroStatementChecks

@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowNamedNumeralCertificatesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.GorbowNamedNumeralCertificates.StatementChecks
+
+theorem namedFunctionCalculation : Targets.NamedFunctionCalculation := Proof.namedFunctionCalculation
+theorem namedFunctionRefutation : Targets.NamedFunctionRefutation := Proof.namedFunctionRefutation
+theorem namedRelationCalculation : Targets.NamedRelationCalculation := Proof.namedRelationCalculation
+theorem specificSourceCertificates : Targets.SpecificSourceCertificates := Proof.specificSourceCertificates
+
+end LogicLineages.ComputabilityKnowledge.GorbowNamedNumeralCertificates.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.GorbowNamedNumeralCertificates.StatementChecks

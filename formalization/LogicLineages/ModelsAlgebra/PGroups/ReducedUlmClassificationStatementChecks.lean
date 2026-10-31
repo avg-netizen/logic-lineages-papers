@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedUlmClassificationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedUlmClassificationStatementChecks
+theorem algebraicClassification : Targets.countableReducedUlmClassification := countable_reduced_ulm_classification
+theorem finiteMapExtension : Targets.countableReducedUlmFiniteExtension := countable_reduced_ulm_finite_extension
+end LogicLineages.ModelsAlgebra.PGroups.ReducedUlmClassificationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedUlmClassificationStatementChecks

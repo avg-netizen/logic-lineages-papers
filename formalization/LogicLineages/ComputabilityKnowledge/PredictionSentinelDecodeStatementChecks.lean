@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionSentinelDecodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionSentinelDecode.StatementChecks
+theorem zeroConvention : Targets.ZeroConvention := PredictionSentinelDecode.zeroConvention
+theorem roundtrip : Targets.Roundtrip := PredictionSentinelDecode.roundtrip
+theorem positiveInverse : Targets.PositiveInverse := PredictionSentinelDecode.positiveInverse
+theorem decodePrimitiveRecursive : Targets.DecodePrimitiveRecursive := PredictionSentinelDecode.decodePrimitiveRecursive
+theorem ordinaryInputCorrect : Targets.OrdinaryInputCorrect := PredictionSentinelDecode.ordinaryInputCorrect
+theorem ordinaryInputPrimitiveRecursive : Targets.OrdinaryInputPrimitiveRecursive := PredictionSentinelDecode.ordinaryInputPrimitiveRecursive
+end LogicLineages.ComputabilityKnowledge.PredictionSentinelDecode.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionSentinelDecode.StatementChecks

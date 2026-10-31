@@ -521,3 +521,42 @@ The [actual selected root](verification/repair-2026-10-31/root-checkpoint13.json
 also passed: 936 imports, 3,041 namespace audits and all 3,399 local closure
 hashes unchanged, in 2.285 seconds at 2,645,020 KiB peak RSS under the
 previously authorized root-only profile. No GitHub CI result is claimed.
+
+## Algebraic classification and named-theory correspondence
+
+The actual algebraic Ulm theorem is now checked: countable reduced
+p-primary groups are additively isomorphic exactly when their actual
+transfinite Ulm ranks agree, and finite height-preserving maps extend.
+Countable stabilization and zero-stage limits are constructed, not assumed;
+finite extensions and a coherent total isomorphism are proved. This is NOT
+the paper's Scott-complexity classification or its difference-spectrum
+theorem. The countability and infinitude bridges for the literal gamma-indexed
+Walker constructions are also checked. A proof-only import narrowing allowed
+the countable-isomorphism supplier to pass normal bounds after its preserved
+resource stop; conditional heavier permission was not used for that supplier.
+
+The knowledge lane now has literal named U/u calibration, a new finite
+named-alias theory with explicit model and actual named positive/negative
+numeral derivations, and literal diagonal fixed-point proofs in that new
+theory. None imports old total-diagram axioms or identifies full-language
+revision grounds. Internal uniform proof-checker closure, actual Base
+adequacy and Hilbert--Bernays/Löb obligations remain separate.
+
+The program lane proves a single fixed finite sequential universal-program
+existential with exact partial natural-output semantics after a genuine
+primitive-recursive sentinel conversion. No program is chosen separately
+for each index. Numeric prefix assembly/execution and the exact singleton
+output observer are checked; this checkpoint does not yet complete the
+validating machine or a uniform raw-binary index translation.
+
+The [fourteenth focused checkpoint](verification/repair-2026-10-31/checkpoint-14.json)
+selects 246 gates and audits 764 exact aliases over 1,427 unchanged local
+source hashes. The explicitly authorized focused-only 2,560/2,048/3,072 MiB
+profile passed in 3.613 seconds at 1,713,540 KiB peak RSS. The
+[actual selected root](verification/repair-2026-10-31/root-checkpoint14.json)
+passed with 951 imports, 3,070 namespace audits and all 3,459 local closure
+hashes unchanged, in 2.54 seconds at 2,645,360 KiB peak RSS under the
+previous root-only profile. These are local checks; defaults and CI remain
+unchanged. No whole statement was promoted: 101 checked, 2 inherited,
+86 pending. Later validator and attach-exit components are outside this
+fixed snapshot.

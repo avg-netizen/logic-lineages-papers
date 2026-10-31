@@ -38,7 +38,24 @@
           "statement_latex": "[Exact reduced-group classification]\n\\label{thm:reduced-classification}\nLet $G\\ne0$ be reduced, and write its length uniquely as\n$\\lambda=\\omega\\gamma+n$, where $n<\\omega$.\nIf $n=0$, then $\\gamma>0$ and $G$ has exact complexity\n$\\Pi_{2\\gamma+1}$.\nIf $n>0$, put $H=G_{\\omega\\gamma}$ and write\n\\[\n H\\cong\\bigoplus_{j=1}^{n}C_{p^j}^{(m_j)},\\qquad\n m_j\\in\\mathbb N\\cup\\{\\omega\\},\\quad m_n>0.\n\\]\nThe exact complexity is\n\\begin{center}\n\\normalfont\n\\begin{tabular}{@{}p{0.62\\linewidth}l@{}}\n\\hline\nCondition on $H$ & Exact complexity\\\\\n\\hline\n$H$ is finite & $d\\text{-}\\Sigma_{2\\gamma+1}$\\\\[4pt]\nExactly one $m_k=\\omega$, and $m_j=0$ for every $j<k$\n & $\\Pi_{2\\gamma+2}$\\\\[4pt]\nExactly one $m_k=\\omega$, and $m_j>0$ for some $j<k$\n & $d\\text{-}\\Sigma_{2\\gamma+2}$\\\\[4pt]\nAt least two $m_j=\\omega$ & $\\Pi_{2\\gamma+3}$\\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe trivial group has exact complexity $\\Pi_1$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CountableReducedZeroStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CountableReducedZeroStatementChecks.json",
+              "scope": "Actual p-primary p-surjectivity implies divisibility; actual countable filtration stabilization proved by distinct successor-drop witnesses; reducedness gives countable actual zero-stage limit cut. No countable stabilization oracle, classification or Scott-complexity premise. Genuine algebraic Ulm/zero-cut/stabilization supplier for actual countable reduced p-primary groups only. Full algebraic isomorphism iff actual Ulm ranks agree is proved in ReducedUlmClassification, not assumed. This does not prove the source Scott-complexity classification, Zippin existence, ACM comparison or any whole pending source label."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CountableUlmStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CountableUlmStatementChecks.json",
+              "scope": "Countable actual p-primary groups with common actual zero-stage limit cut and equal lower actual Ulm ranks admit constructed total additive equivalence, extending given finite all-stage-preserving map. Local finite extensions and cofinality proved; coherent union constructed. General reduced stabilization, Zippin existence, ACM relations and Scott classification remain separate. Genuine algebraic Ulm/zero-cut/stabilization supplier for actual countable reduced p-primary groups only. Full algebraic isomorphism iff actual Ulm ranks agree is proved in ReducedUlmClassification, not assumed. This does not prove the source Scott-complexity classification, Zippin existence, ACM comparison or any whole pending source label."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReducedUlmClassificationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ReducedUlmClassificationStatementChecks.json",
+              "scope": "Actual countable reduced p-primary groups are additively isomorphic iff every actual transfinite Ulm quotient cardinal rank agrees; finite all-stage height maps extend. Countable zero cuts and coherent total isomorphism construction paid; no cut/classification oracle premise. Not Scott-complexity classification, Zippin existence or ACM comparison. Genuine algebraic Ulm/zero-cut/stabilization supplier for actual countable reduced p-primary groups only. Full algebraic isomorphism iff actual Ulm ranks agree is proved in ReducedUlmClassification, not assumed. This does not prove the source Scott-complexity classification, Zippin existence, ACM comparison or any whole pending source label."
+            }
+          ]
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:thm:bounded-pgroup-classification",
@@ -342,6 +359,11 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerUlmStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WalkerUlmStatementChecks.json",
               "scope": "Actual terminal Walker Ulm rank1 and lower reservoir rank aleph0 below delta/zero later. Every countable delta, no invariant oracle or Scott complexity claim. Exact source direct-sum Ulm layers/cardinal ranks, reservoir and odd/even invariant-table or construction supplier for paper.tex729\u2013780. Positive multiplicity is retained where exact length requires it. These gates do not give computable arbitrary countable ordinal presentations, full classification or Scott-complexity/spectrum conclusions. Whole difference-spectrum theorem remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerGammaStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerGammaStatementChecks.json",
+              "scope": "Countability of actual omega*gamma cut and full source algebra construction specialized without extra cut premise; gamma-positive infinitude from actual infinite Ulm rank. No effective ordinal presentation or Scott complexity. Exact source direct-sum Ulm layers/cardinal ranks, reservoir and odd/even invariant-table or construction supplier for paper.tex729\u2013780. Positive multiplicity is retained where exact length requires it. These gates do not give computable arbitrary countable ordinal presentations, full classification or Scott-complexity/spectrum conclusions. Whole difference-spectrum theorem remains pending."
             }
           ]
         },
@@ -4800,6 +4822,26 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowSourceRegistryPaddingStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/GorbowSourceRegistryPaddingStatementChecks.json",
               "scope": "Exact padded AST nodes/offsets/high-arity low tags and named u-header disjointness; specific paid DiagonalRegistry function and SortedRegistry Boolean-relation Primrec AST witnesses. AST existence is extensional, not arbitrary-function executable extraction. Named alias theory/model/derivation correspondence, source Base adequacy/conservativity, HB/Lob and six source statements remain unpaid. No old/new full-language ground or total-diagram identification. Exact padded AST layout/header disjointness and extensional existence of programs for the specific named source function/relation only. This is not executable extraction of arbitrary Primrec functions, alias theory/model/derivation correspondence, named source Base adequacy, internal HB/Lob, chosen CK or full-L revision grounds. All six paper12 whole statements remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowNamedDefiningTheoryStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowNamedDefiningTheoryStatementChecks.json",
+              "scope": "Named universal alias equations appended only to new finite PR defining axioms; explicit overlay model, fixed additional-axiom checker, actual weakening preserving internal positive/negative numeral certificates, and specific paid source named-symbol calibration. NOT extension of old total ground diagrams or old/new full-L/revision-ground identity. Named numeral derivations, actual source Base adequacy/conservativity, internal HB/Lob and six source statements remain unpaid. Named symbols, numeral certificates and actual diagonal fixed-point derivations belong to the NEW finite PR-plus-alias theory with its explicit overlay model. This is not extension of the old total ground diagram or old/new full-language/revision-ground identification. Named source Base adequacy/conservativity, universal internal closure/provability HB/Lob and all six source statements remain separate and pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowNamedDiagonalDerivationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowNamedDiagonalDerivationStatementChecks.json",
+              "scope": "Specific calibrated PR program witnesses exist; each actual unary formula obtains a concrete delta numeral derivation and literal/original-name fixed point in the NEW named theory. Consistency uses its explicit new model. No old diagram axioms or old/new full-L identity; no universally quantified internal closure law, source Base equivalence/conservativity, HB/Lob or six-source completion. Named symbols, numeral certificates and actual diagonal fixed-point derivations belong to the NEW finite PR-plus-alias theory with its explicit overlay model. This is not extension of the old total ground diagram or old/new full-language/revision-ground identification. Named source Base adequacy/conservativity, universal internal closure/provability HB/Lob and all six source statements remain separate and pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowNamedNumeralCertificatesStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowNamedNumeralCertificatesStatementChecks.json",
+              "scope": "Actual existing-calculus numerical derivations for literal named U/u symbols in the NEW finite PR plus alias theory, calibrated to specific paid source programs. No old ground diagram axiom or whole-language identification. Actual source Base adequacy/conservativity, internal provability/HB/Lob and six source statements remain unpaid. Named symbols, numeral certificates and actual diagonal fixed-point derivations belong to the NEW finite PR-plus-alias theory with its explicit overlay model. This is not extension of the old total ground diagram or old/new full-language/revision-ground identification. Named source Base adequacy/conservativity, universal internal closure/provability HB/Lob and all six source statements remain separate and pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowNamedRegistryInterpretationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowNamedRegistryInterpretationStatementChecks.json",
+              "scope": "Shared explicit overlay preserves actual internal registry calls and calibrates literal named u/U headers, with specific source-dispatcher AST existence. No old total-diagram extension or old/new full-L/revision-ground identification; literal alias theory/model/derivation correspondence, source Base adequacy/conservativity, HB/Lob and six source statements remain unpaid. Named symbols, numeral certificates and actual diagonal fixed-point derivations belong to the NEW finite PR-plus-alias theory with its explicit overlay model. This is not extension of the old total ground diagram or old/new full-language/revision-ground identification. Named source Base adequacy/conservativity, universal internal closure/provability HB/Lob and all six source statements remain separate and pending."
             }
           ]
         },
@@ -5274,6 +5316,41 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionSequentialContinuationEffectivityStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PredictionSequentialContinuationEffectivityStatementChecks.json",
               "scope": "Primitive-recursive actual Cont' constructors, total decoder, exact list transports and one-layer cases under the proved continuation Primcodable instance. No full compiler or numbering claim. Exact accepted codec/explicit selected-instance label effectivity or actual binary prefix/output-layout/epilogue/wrapper supplier only. The wrapper proves correctness for singleton binary source outputs, not arbitrary source-output validation or partial-divergence equivalence. No acceptable numbering, uniform numeric compiler, runtime calibration or whole membership/hardness claim. Retired Sum-label Prefix and mixed-instance source-label attempts remain unaccepted; failed definitional checks are not semantic counterexamples. Whole source statements remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionBinaryParameterLayoutStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionBinaryParameterLayoutStatementChecks.json",
+              "scope": "Exact [sentinel(xs),e] source tape prefix including0/empty and genuine primitive-recursive numeric prefix word. No universal body premise discharged here; table assembly remains separate. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionBinaryTableStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionBinaryTableStatementChecks.json",
+              "scope": "Numeric finite-table decoding/source steps/raw initial/evaluation for singleton binary source outputs. Uniform Computable source-code map and arbitrary partial-output equivalence not claimed. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFixedUniversalStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionFixedUniversalStatementChecks.json",
+              "scope": "One fixed finite Mathlib sequential program existentially realizes the actual ordinary Nat.Partrec universal evaluator after sentinel-to-ListBool code conversion, for arbitrary partial and natural-valued outputs. No explicit chosen AST, varying compiler, source numbering, acceptability or machine runtime claim. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionNaturalOutputValidationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionNaturalOutputValidationStatementChecks.json",
+              "scope": "Exact singleton-n terminal tape and three-cell observation Some b iff n is0/1. Actual validating finite-state loop and universal body composition remain separate. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixExecutionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionNumericPrefixExecutionStatementChecks.json",
+              "scope": "Exactly2*word.length ordinary transitions, exact full evaluation under actual closed finite body-state support, primitive-recursive numerical parameter family. Universal body semantics must still be discharged. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionNumericPrefixStatementChecks.json",
+              "scope": "Genuine primitive-recursive total numeric assembly, exact padded-body/prefix lookup and source body steps under explicit row bound. Prefix execution and actual universal semantics are separate. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionSentinelDecodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionSentinelDecodeStatementChecks.json",
+              "scope": "Total binary sentinel decoder with zero/one empty convention, exact inverse including empty histories and positive normalization; primitive-recursive conversion to existing Encodable List Bool input. No universal compiler/numbering/runtime claim. Exact fixed-universal existential program, sentinel decoder, numeric prefix assembly/execution or static output-validation supplier only, as individually stated. The fixed universal preserves arbitrary partial natural outputs but gives no explicit chosen AST or varying compiler. Static observation is not an executing validator. Actual universal body/table composition, effective acceptable numbering and runtime calibration remain separate; whole membership/hardness stays pending. Retired Prefix and mixed-instance attempts remain unaccepted; failed definitional checks are not semantic counterexamples."
             }
           ]
         },

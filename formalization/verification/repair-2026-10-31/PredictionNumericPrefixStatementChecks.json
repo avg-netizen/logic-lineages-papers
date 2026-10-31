@@ -1,0 +1,134 @@
+{
+  "accepted_utc": "2026-10-31T09:20:47.753905+00:00",
+  "scope": "Genuine primitive-recursive total numeric assembly, exact padded-body/prefix lookup and source body steps under explicit row bound. Prefix execution and actual universal semantics are separate.",
+  "source_correspondence": "Genuine primitive-recursive total numeric assembly, exact padded-body/prefix lookup and source body steps under explicit row bound. Prefix execution and actual universal semantics are separate.",
+  "source_commit": "f3ccc8c78b0e7261ec1c2c1f12a6315c1284cec9",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixStatementChecks",
+  "frozen_at_utc": "2026-10-31T09:17:56.890857+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-numeric-prefix-freeze.json",
+  "freeze_sha256": "98eb3198fe10eb8eda78a7caa6c84c109932ab1d9e3aaac3ae64943f87dd7027",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixDefinitions.lean",
+      "sha256": "c1f69e333b28722e43fc97aa1581250a0aeebf57561133fa177840185c8dfe1f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixTargets.lean",
+      "sha256": "89142f721b852329c8767abf8459cb816d420cf34d72c30180cf482aa99558ec"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixStatementChecks.lean",
+      "sha256": "4a2fbd638ea889755c1b457b3b73c0ec599cd657f2ca3005a555121972f15688"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixProof.lean",
+      "sha256": "e404d44ae24685a9bc09dc7c095b588f3a8510eff4ae130d53499f3e624d1306"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.effectiveNumericAssembly",
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactBodyLookup",
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactPrefixLookup",
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactBodyStep"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793438182621453840-5.json",
+      "sha256": "4fbae59edea17993dee65468fea795e24b82c058372abf48c987129322d7d8b1",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793438426326841384-5.json",
+      "sha256": "3933e9ece56c1be0ead75ebda1a586d85450d4db9358974ac3dc3036a8469fab",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793438426326841384-5-LogicLineages-ComputabilityKnowledge-PredictionNumericPrefixStatementChecks.log",
+  "gate_log_sha256": "a85f6b2c9d479187c160f85150a7e667ad928b7a98b43910ff3d252916427e9b",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactPrefixLookup": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactBodyLookup": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.effectiveNumericAssembly": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks.exactBodyStep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixStatementChecks.lean",
+      "sha256": "4a2fbd638ea889755c1b457b3b73c0ec599cd657f2ca3005a555121972f15688"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixProof.lean",
+      "sha256": "e404d44ae24685a9bc09dc7c095b588f3a8510eff4ae130d53499f3e624d1306"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixTargets.lean",
+      "sha256": "89142f721b852329c8767abf8459cb816d420cf34d72c30180cf482aa99558ec"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionNumericPrefixDefinitions.lean",
+      "sha256": "c1f69e333b28722e43fc97aa1581250a0aeebf57561133fa177840185c8dfe1f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteAlphabetDefinitions.lean",
+      "sha256": "8178580b7e51832bf5ffee67c933e029f901bc771f8c1a3c938508ec721dade8"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableDefinitions.lean",
+      "sha256": "be4cac105a6d0a406152af67dc9fb7d87d5976baa80b9dedf3c0891de0df9993"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

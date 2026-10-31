@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionBinaryTableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryTable.StatementChecks
+theorem exactCodeDecoding : PredictionBinaryTableTargets.ExactCodeDecoding := PredictionBinaryTableProof.exactCodeDecoding
+theorem exactSourceStep : PredictionBinaryTableTargets.ExactSourceStep := PredictionBinaryTableProof.exactSourceStep
+theorem exactRawInitial : PredictionBinaryTableTargets.ExactRawInitial := PredictionBinaryTableProof.exactRawInitial
+theorem exactRawEvaluation : PredictionBinaryTableTargets.ExactRawEvaluation := PredictionBinaryTableProof.exactRawEvaluation
+end LogicLineages.ComputabilityKnowledge.PredictionBinaryTable.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionBinaryTable.StatementChecks

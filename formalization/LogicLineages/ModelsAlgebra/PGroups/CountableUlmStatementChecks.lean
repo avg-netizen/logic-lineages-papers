@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.CountableUlmProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.CountableUlmStatementChecks
+theorem classification : Targets.countableUlmAtZeroCut := countable_ulm_at_zero_cut
+theorem finiteMapExtension : Targets.countableUlmExtendsAtZeroCut := countable_ulm_extends_at_zero_cut
+end LogicLineages.ModelsAlgebra.PGroups.CountableUlmStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.CountableUlmStatementChecks

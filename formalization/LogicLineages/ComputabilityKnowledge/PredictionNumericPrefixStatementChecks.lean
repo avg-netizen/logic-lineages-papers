@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionNumericPrefixProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks
+theorem effectiveNumericAssembly : PredictionNumericPrefixTargets.EffectiveNumericAssembly := PredictionNumericPrefixProof.effectiveNumericAssembly
+theorem exactBodyLookup : PredictionNumericPrefixTargets.ExactBodyLookup := PredictionNumericPrefixProof.exactBodyLookup
+theorem exactPrefixLookup : PredictionNumericPrefixTargets.ExactPrefixLookup := PredictionNumericPrefixProof.exactPrefixLookup
+theorem exactBodyStep : PredictionNumericPrefixTargets.ExactBodyStep := PredictionNumericPrefixProof.exactBodyStep
+end LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionNumericPrefix.StatementChecks

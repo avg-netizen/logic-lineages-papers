@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionFixedUniversalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionFixedUniversal.StatementChecks
+theorem universalPartialRecursive : Targets.UniversalPartialRecursive := PredictionFixedUniversal.universalPartialRecursive
+theorem fixedVectorUniversal : Targets.FixedVectorUniversal := PredictionFixedUniversal.fixedVectorUniversal
+theorem fixedUniversal : Targets.FixedUniversal := PredictionFixedUniversal.fixedUniversal
+end LogicLineages.ComputabilityKnowledge.PredictionFixedUniversal.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionFixedUniversal.StatementChecks
