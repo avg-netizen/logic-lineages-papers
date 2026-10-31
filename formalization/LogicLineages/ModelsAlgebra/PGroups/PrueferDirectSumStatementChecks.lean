@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks
+theorem actualNature : Targets.prueferDirectSumNature := pruefer_direct_sum_nature
+theorem actualCoordinates : Targets.prueferDirectSumSocle := pruefer_direct_sum_socle
+end LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks
+theorem relative : Targets.divisibleProductOddNoSigma := divisible_product_odd_no_sigma
+theorem unrestricted : Targets.divisibleProductOddNoRawSigma := divisible_product_odd_no_raw_sigma
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks
+theorem injectivity : Targets.primarySocleInjectivity := primary_socle_injectivity
+theorem surjectivity : Targets.primaryDivisibleSocleSurjectivity := primary_divisible_socle_surjectivity
+end LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks

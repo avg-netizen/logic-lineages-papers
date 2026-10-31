@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 23
+## Current verified snapshot: checkpoint 24
 
-**123 checked, 2 inherited, 64 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,102 selected imports and 3,547
+**124 checked, 2 inherited, 63 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,107 selected imports and 3,553
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -866,3 +866,29 @@ guards without changing defaults or CI settings. Fifteen records were fixed
 before later acceptances, including the excluded PrimarySocleControl supplier.
 The registry is **123 checked, 2 inherited, 64 pending**. No GitHub CI result
 is claimed.
+
+
+## Checkpoint 24 — full perturbed-control bounds
+
+Paper 09 `lem:perturbed-control` is checked by
+`PerturbedControl.StatementChecks.fullPerturbedControl`. The literal
+construction includes the primitive-recursive two-adic valuation and prefix
+noise, prefix agreement, zero/one perturbation, interval and growth bounds,
+additive margin, the eventual F6 upper bound, and the actual real epsilon-N
+ratio limit. Quantifying over every fixed primitive-recursive Boolean H is
+a strengthening of the source's fixed primitive-recursive H assumption,
+not a halting-completeness or control-hardness claim.
+
+The four algebraic suppliers include the full long-reduced, arbitrary-divisible
+first odd-obstruction clause and actual socle/direct-sum structure. They do
+not complete its separate short-length pure-Sigma clause; the whole source
+odd-obstruction label remains pending.
+
+The [twenty-fourth focused checkpoint](verification/repair-2026-10-31/checkpoint-24.json)
+selects 402 gates and audits 1,113 aliases over 2,394 unchanged local source
+hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint24.json)
+passes with 1,107 imports, 3,553 audits and 4,130 unchanged closure hashes.
+Authorized checkpoint profiles preserve all CPU, wall-time and single-thread
+guards without changing defaults or CI settings. Five records were fixed
+before later acceptances. The registry is **124 checked, 2 inherited,
+63 pending**. No GitHub CI result is claimed.

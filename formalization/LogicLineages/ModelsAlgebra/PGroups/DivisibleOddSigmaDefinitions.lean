@@ -1,0 +1,4 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorDefinitions
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedOddSigmaDefinitions
+@[expose] public section

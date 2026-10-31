@@ -1104,6 +1104,11 @@ public import LogicLineages.OrdinalComparison.SourceDecisionEquivalenceStatement
 public import LogicLineages.OrdinalComparison.SourceGroundArithmeticCounterStatementChecks
 public import LogicLineages.OrdinalComparison.SourceObserverPlanStatementChecks
 public import LogicLineages.OrdinalComparison.WWGroundPositiveQuerySplitStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks
+public import LogicLineages.OrdinalComparison.SourcePerturbedControlStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

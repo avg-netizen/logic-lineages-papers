@@ -397,6 +397,11 @@ public import LogicLineages.OrdinalComparison.SourceDecisionEquivalenceStatement
 public import LogicLineages.OrdinalComparison.SourceGroundArithmeticCounterStatementChecks
 public import LogicLineages.OrdinalComparison.SourceObserverPlanStatementChecks
 public import LogicLineages.OrdinalComparison.WWGroundPositiveQuerySplitStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks
+public import LogicLineages.OrdinalComparison.SourcePerturbedControlStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4792,6 +4797,38 @@ theorem checked_WWGroundPositiveQuerySplit_positiveFlagExact :
 theorem checked_WWGroundPositiveQuerySplit_querySplit :
     LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.Targets.QuerySplit :=
   LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.StatementChecks.querySplit
+
+theorem checked_DivisibleOddSigma_relative :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleProductOddNoSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks.relative
+
+theorem checked_DivisibleOddSigma_unrestricted :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleProductOddNoRawSigma :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks.unrestricted
+
+theorem checked_PrimarySocleControl_injectivity :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.primarySocleInjectivity :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks.injectivity
+
+theorem checked_PrimarySocleControl_surjectivity :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.primaryDivisibleSocleSurjectivity :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks.surjectivity
+
+theorem checked_PrueferDirectSum_actualNature :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferDirectSumNature :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks.actualNature
+
+theorem checked_PrueferDirectSum_actualCoordinates :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferDirectSumSocle :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks.actualCoordinates
+
+theorem checked_PrueferSocleIso_actualSocle :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferSocleIso :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks.actualSocle
+
+theorem checked_SourcePerturbedControl_fullPerturbedControl :
+    LogicLineages.OrdinalComparison.PerturbedControl.Targets.FullPerturbedControl :=
+  LogicLineages.OrdinalComparison.PerturbedControl.StatementChecks.fullPerturbedControl
 
 end LogicLineages.Repair20261031Checks
 

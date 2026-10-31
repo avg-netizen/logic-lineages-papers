@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePerturbedControlProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.PerturbedControl.StatementChecks
+theorem fullPerturbedControl : Targets.FullPerturbedControl := Proof.fullPerturbedControl
+end LogicLineages.OrdinalComparison.PerturbedControl.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.PerturbedControl

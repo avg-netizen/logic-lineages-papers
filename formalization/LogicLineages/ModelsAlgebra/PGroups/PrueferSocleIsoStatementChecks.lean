@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks
+theorem actualSocle : Targets.prueferSocleIso := pruefer_socle_iso
+end LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks

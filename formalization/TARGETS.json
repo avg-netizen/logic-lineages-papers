@@ -442,6 +442,26 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PrueferFiniteSocleStatementChecks.json",
               "scope": "Actual finite p-socle of genuine rational-mod-integers Pruefer model and each finite power; no rank or decomposition oracle. Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.DivisibleOddSigmaStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/DivisibleOddSigmaStatementChecks.json",
+              "scope": "Full arbitrary-divisible-part first clause: reduced-long times divisible primary product has no relative or unrestricted raw odd Sigma Scott sentence. Short-length no-exact-pure-Sigma second clause remains separate. Corrected prefreeze names use actual GroupScottSentence and RawScottSentence(ofGroup). Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PrimarySocleControlStatementChecks.json",
+              "scope": "Actual primary hom injectivity from socle restriction; actual divisible-domain hom surjectivity from socle coverage. No decomposition oracle; short-tail Scott clauses separate. Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PrueferDirectSumStatementChecks.json",
+              "scope": "Literal finite-support Pruefer sum primary/divisible and exact actual socle coordinates; final decomposition instantiates proved model iso internally. Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PrueferSocleIsoStatementChecks.json",
+              "scope": "Actual additive ZMod p equivalence of the literal rational-mod-integer Pruefer p-socle. No decomposition oracle; short-tail Scott clauses separate. Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
             }
           ]
         },
@@ -5010,9 +5030,38 @@
           "file": "09-canonical-source-expressivity/hardness.tex",
           "line": 245,
           "statement_latex": "[Control properties]\\label{lem:perturbed-control}\nThe function $\\Gamma_b$ is primitive recursive, agrees with $\\Phi$ on\n$[0,b]$, and satisfies\n\\[\n 0\\le\\Gamma_b(n)-\\Phi(n)\\le1,\\quad\n \\Phi(n)\\le\\Gamma_b(n)<\\Phi(n+1),\\quad\n \\Gamma_b(n+1)>4\\Gamma_b(n).\n\\]\nIt has the additive margin\n$\\Gamma_b(v+a)\\ge\\Gamma_b(v)+2a$ for $a\\ge1$, is eventually bounded\nby $F_6$, and $\\Gamma_b(n)/\\Phi(n)\\to1$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.PerturbedControl.StatementChecks.fullPerturbedControl",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SourcePerturbedControlTargets.lean",
+            "sha256": "3bea357018edc569adba6fe4aa904518dc3b9c0d874d296dda30adda0600ae27",
+            "type": "LogicLineages.OrdinalComparison.PerturbedControl.Targets.FullPerturbedControl"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.SourcePerturbedControlStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourcePerturbedControlStatementChecks.json",
+              "scope": "Whole literal perturbed-control lemma for every primitive-recursive Boolean H, including actual two-adic valuation, prefix agreement, all growth/margin/F6 bounds and real epsilon-N ratio limit. No halting completeness or control-hardness claim. Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.PerturbedControl.StatementChecks.fullPerturbedControl"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/SourcePerturbedControlTargets.lean",
+              "sha256": "3bea357018edc569adba6fe4aa904518dc3b9c0d874d296dda30adda0600ae27",
+              "type": "LogicLineages.OrdinalComparison.PerturbedControl.Targets.FullPerturbedControl"
+            }
+          ],
+          "verification_receipt": "build-reports/1793454941988744987-2.json",
+          "acceptance_record": "verification/repair-2026-10-31/SourcePerturbedControlStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole lem:perturbed-control in the included hardness.tex: actual two-adic valuation and primitive recursion, prefix agreement, bounded perturbation, strict growth and additive margin, eventual F6 bound and genuine real epsilon-N ratio limit. Quantification over every primitive-recursive Boolean H strengthens the stated control properties; no halting completeness or perturbed-control hardness claim. Included manuscript verified against the same frozen Git source baseline by additive correspondence evidence, without changing original freeze. Outside checkpoint23. Whole exact source label independently reviewed and authorized by root. No other label promoted."
         },
         {
           "id": "09-canonical-source-expressivity:thm:control-hardness",

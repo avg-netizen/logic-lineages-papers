@@ -1,0 +1,155 @@
+{
+  "accepted_utc": "2026-10-31T13:51:12.652896+00:00",
+  "scope": "Actual additive ZMod p equivalence of the literal rational-mod-integer Pruefer p-socle. No decomposition oracle; short-tail Scott clauses separate.",
+  "source_correspondence": "Actual additive equivalence of ZMod p and the p-socle of the literal Pruefer model. Exact algebraic supplier only, no whole source classification. Outside checkpoint23.",
+  "source_commit": "fdbadccaaaf771af3b4a1881913b29f8fd812706",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks",
+  "frozen_at_utc": "2026-10-31T13:47:19.516665+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/pruefer-socle-iso-freeze.json",
+  "freeze_sha256": "b0b784aa348215d065e292c77ee0230b5044aee8f9021bd1a0ad7eb1cf78c9fa",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoDefinitions.lean",
+      "sha256": "859939e293718b040c501830337881efa751499cf9460372f893bd4496179311"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoTargets.lean",
+      "sha256": "d1970b2797dc9021311fcdfa91ddd91bb787365e9c7619f1f9bcfa96d1c38a41"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoStatementChecks.lean",
+      "sha256": "c718d25f2be80cba66e4c9330b32dabef5790b6925076f574f81662788ae394d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoProof.lean",
+      "sha256": "01e804660904d13d93ab9998194b106caf9526fb86b3115b2763c256d784c3d3"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks.actualSocle"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793454381383533502-5.json",
+      "sha256": "7e9360f7807907c1c3dc61875b0232d72d33d646186237209e226e460336b65d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793454643067118474-2.json",
+      "sha256": "21a6dca8d9919083af6dc3340ddf51b26cc8a31bbbf54f7797ff799456bd6490",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793454643067118474-2-LogicLineages-ModelsAlgebra-PGroups-PrueferSocleIsoStatementChecks.log",
+  "gate_log_sha256": "eea606d8398f409bbb4f30ca1e780b9d621d0526be3b022ce9b1410b01243a92",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks.actualSocle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoStatementChecks.lean",
+      "sha256": "c718d25f2be80cba66e4c9330b32dabef5790b6925076f574f81662788ae394d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoProof.lean",
+      "sha256": "01e804660904d13d93ab9998194b106caf9526fb86b3115b2763c256d784c3d3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoTargets.lean",
+      "sha256": "d1970b2797dc9021311fcdfa91ddd91bb787365e9c7619f1f9bcfa96d1c38a41"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoDefinitions.lean",
+      "sha256": "859939e293718b040c501830337881efa751499cf9460372f893bd4496179311"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferFiniteSocleDefinitions.lean",
+      "sha256": "a34ab62f1a30ae040b457f23581913f9129abd49d5774040fdb978163bb98971"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferModelDefinitions.lean",
+      "sha256": "fa5b407fc3755fca512c2c12e878debf44c9d35bffdf57dce74c34a89381d12d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+      "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRoot.lean",
+      "sha256": "d685d3a34920386766af8e2d8e8a111c99b45d99b00f81293ac67b591de9e074"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootTargets.lean",
+      "sha256": "e5504be9c62825b32bb52d44258fda9e905be5d19caefd65b610fe8050ed581d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootDefinitions.lean",
+      "sha256": "2baa43f340f66040e8eb3fc6f7407a314a44d5a7fe690d614753289385ad61ac"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Field.Rat",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Group.Subgroup.ZPowers.Basic",
+    "Mathlib.Algebra.Module.NatInt",
+    "Mathlib.Algebra.Module.ZMod",
+    "Mathlib.Data.Nat.Prime.Basic",
+    "Mathlib.Data.Nat.Prime.Defs",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.GroupTheory.OrderOfElement",
+    "Mathlib.GroupTheory.QuotientGroup.Defs",
+    "Mathlib.GroupTheory.Torsion",
+    "Mathlib.LinearAlgebra.Basis.Defs",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.Tactic.FieldSimp"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}
