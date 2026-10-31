@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationStatementChecks
+
+theorem filtration : Targets.walkerSourceFiltration := walker_source_filtration
+
+end LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationStatementChecks

@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.StatementChecks
+
+theorem universalSpecialization : Targets.UniversalSpecialization := Proof.universalSpecialization
+theorem axiomSpecialization : Targets.AxiomSpecialization := Proof.axiomSpecialization
+
+end LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.StatementChecks

@@ -185,6 +185,25 @@ public import LogicLineages.ComputabilityKnowledge.PredictionAlphabetEmbeddingSt
 public import LogicLineages.ComputabilityKnowledge.PredictionFiniteAlphabetStatementChecks
 public import LogicLineages.ComputabilityKnowledge.PredictionFiniteSerializationStatementChecks
 public import LogicLineages.ComputabilityKnowledge.PredictionTapePartrecStatementChecks
+public import LogicLineages.ComputabilityKnowledge.GorbowPRChildTagsStatementChecks
+public import LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquationsStatementChecks
+public import LogicLineages.ComputabilityKnowledge.GorbowPRRegistryStatementChecks
+public import LogicLineages.ComputabilityKnowledge.GorbowPRSubtreeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerCompleteStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerNormalStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerPresentedStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerSupportStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerTerminalStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEqualityStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -2380,6 +2399,242 @@ theorem checked_PredictionTapePartrec_uniformOperationalCompiler :
 theorem checked_PredictionTapePartrec_totalBinaryCorrespondence :
     LogicLineages.ComputabilityKnowledge.PredictionTapePartrecTargets.TotalBinaryCorrespondence :=
   LogicLineages.ComputabilityKnowledge.PredictionTapePartrec.StatementChecks.totalBinaryCorrespondence
+
+theorem checked_GorbowPRChildTags_compositionFunction :
+    LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.Targets.CompositionFunction :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.StatementChecks.compositionFunction
+
+theorem checked_GorbowPRChildTags_compositionArgument :
+    LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.Targets.CompositionArgument :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.StatementChecks.compositionArgument
+
+theorem checked_GorbowPRChildTags_recursionBase :
+    LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.Targets.RecursionBase :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.StatementChecks.recursionBase
+
+theorem checked_GorbowPRChildTags_recursionStep :
+    LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.Targets.RecursionStep :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRChildTags.StatementChecks.recursionStep
+
+theorem checked_GorbowPRDefiningEquations_headerCalibration :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.HeaderCalibration :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.headerCalibration
+
+theorem checked_GorbowPRDefiningEquations_termCalibration :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.TermCalibration :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.termCalibration
+
+theorem checked_GorbowPRDefiningEquations_nodeEquationsSound :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.NodeEquationsSound :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.nodeEquationsSound
+
+theorem checked_GorbowPRDefiningEquations_allAxiomsSound :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.AllAxiomsSound :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.allAxiomsSound
+
+theorem checked_GorbowPRDefiningEquations_checkExact :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.CheckExact :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.checkExact
+
+theorem checked_GorbowPRDefiningEquations_fixedCheckerPrimitive :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.FixedCheckerPrimitive :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.fixedCheckerPrimitive
+
+theorem checked_GorbowPRDefiningEquations_theorySoundness :
+    LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.Targets.TheorySoundness :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquations.StatementChecks.theorySoundness
+
+theorem checked_GorbowPRRegistry_exactNodes :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.ExactNodes :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.exactNodes
+
+theorem checked_GorbowPRRegistry_rootTag :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.RootTag :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.rootTag
+
+theorem checked_GorbowPRRegistry_taggedCoverage :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.TaggedCoverage :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.taggedCoverage
+
+theorem checked_GorbowPRRegistry_uniqueTags :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.UniqueTags :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.uniqueTags
+
+theorem checked_GorbowPRRegistry_exactDispatch :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.ExactDispatch :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.exactDispatch
+
+theorem checked_GorbowPRRegistry_invalidTag :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.InvalidTag :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.invalidTag
+
+theorem checked_GorbowPRRegistry_invalidArity :
+    LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.Targets.InvalidArity :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRRegistry.StatementChecks.invalidArity
+
+theorem checked_GorbowPRSubtree_nodeBlocks :
+    LogicLineages.ComputabilityKnowledge.GorbowPRSubtree.Targets.NodeBlocks :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRSubtree.StatementChecks.nodeBlocks
+
+theorem checked_GorbowPRSubtree_lookupTransport :
+    LogicLineages.ComputabilityKnowledge.GorbowPRSubtree.Targets.LookupTransport :=
+  LogicLineages.ComputabilityKnowledge.GorbowPRSubtree.StatementChecks.lookupTransport
+
+theorem checked_GorbowUniversalInstantiation_universalSpecialization :
+    LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.Targets.UniversalSpecialization :=
+  LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.StatementChecks.universalSpecialization
+
+theorem checked_GorbowUniversalInstantiation_axiomSpecialization :
+    LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.Targets.AxiomSpecialization :=
+  LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiation.StatementChecks.axiomSpecialization
+
+theorem checked_WalkerComplete_fullSourceLemma :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerFullSourceLemma :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerCompleteStatementChecks.fullSourceLemma
+
+theorem checked_WalkerFiltration_filtration :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceFiltration :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationStatementChecks.filtration
+
+theorem checked_WalkerGroupNature_countableSuccessor :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerCountableSuccessor :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks.countableSuccessor
+
+theorem checked_WalkerGroupNature_groupNature :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceGroupNature :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks.groupNature
+
+theorem checked_WalkerLimitUniversal_universal :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerLimitUniversal :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks.universal
+
+theorem checked_WalkerLimitUniversal_homExt :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerLimitHomExt :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks.homExt
+
+theorem checked_WalkerNormal_uniqueDigits :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceUniqueDigits :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerNormalStatementChecks.uniqueDigits
+
+theorem checked_WalkerPresented_relations :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerPresentedRelations :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerPresentedStatementChecks.relations
+
+theorem checked_WalkerPresented_universal :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerPresentedUniversal :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerPresentedStatementChecks.universal
+
+theorem checked_WalkerPresented_homExt :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerPresentedHomExt :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerPresentedStatementChecks.homExt
+
+theorem checked_WalkerRealization_realization :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationStatementChecks.realization
+
+theorem checked_WalkerSupport_heightSupport :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceHeightSupport :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerSupportStatementChecks.heightSupport
+
+theorem checked_WalkerTerminal_terminal :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceTerminal :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerTerminalStatementChecks.terminal
+
+theorem checked_WalkerTerminal_doubleTerminal :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerSourceDoubleTerminal :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerTerminalStatementChecks.doubleTerminal
+
+theorem checked_PredictionCompilerAlphabetEquality_completeWorkAlphabet :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEqualityTargets.CompleteWorkAlphabet :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEquality.StatementChecks.completeWorkAlphabet
+
+theorem checked_PredictionCompilerAlphabetEquality_exactWorkSymbolComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEqualityTargets.ExactWorkSymbolComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEquality.StatementChecks.exactWorkSymbolComparison
+
+theorem checked_PredictionCompilerAlphabetEquality_exactInputFunctionComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEqualityTargets.ExactInputFunctionComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEquality.StatementChecks.exactInputFunctionComparison
+
+theorem checked_PredictionCompilerLabelEquality_exactStoreComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityTargets.ExactStoreComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEquality.StatementChecks.exactStoreComparison
+
+theorem checked_PredictionCompilerLabelEquality_exactDoubleStoreComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityTargets.ExactDoubleStoreComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEquality.StatementChecks.exactDoubleStoreComparison
+
+theorem checked_PredictionCompilerLabelEquality_exactStackStatementComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityTargets.ExactStackStatementComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEquality.StatementChecks.exactStackStatementComparison
+
+theorem checked_PredictionCompilerLabelEquality_exactStackActionComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityTargets.ExactStackActionComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEquality.StatementChecks.exactStackActionComparison
+
+theorem checked_PredictionCompilerLabelEquality_exactTapeLabelComparison :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityTargets.ExactTapeLabelComparison :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEquality.StatementChecks.exactTapeLabelComparison
+
+theorem checked_PredictionCompilerSupport_exactLabelEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportTargets.ExactLabelEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerSupport.StatementChecks.exactLabelEnumeration
+
+theorem checked_PredictionCompilerSupport_exactBodyEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportTargets.ExactBodyEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerSupport.StatementChecks.exactBodyEnumeration
+
+theorem checked_PredictionCompilerSupport_exactContinuationEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportTargets.ExactContinuationEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerSupport.StatementChecks.exactContinuationEnumeration
+
+theorem checked_PredictionCompilerSupport_exactCompilerSupport :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportTargets.ExactCompilerSupport :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerSupport.StatementChecks.exactCompilerSupport
+
+theorem checked_PredictionCompilerSupport_actualCompilerClosure :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportTargets.ActualCompilerClosure :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerSupport.StatementChecks.actualCompilerClosure
+
+theorem checked_PredictionCompilerTapeSupport_exactStackStatementEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportTargets.ExactStackStatementEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupport.StatementChecks.exactStackStatementEnumeration
+
+theorem checked_PredictionCompilerTapeSupport_exactTapeLabelEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportTargets.ExactTapeLabelEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupport.StatementChecks.exactTapeLabelEnumeration
+
+theorem checked_PredictionCompilerTapeSupport_exactTapeStatementEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportTargets.ExactTapeStatementEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupport.StatementChecks.exactTapeStatementEnumeration
+
+theorem checked_PredictionCompilerTapeSupport_exactPostLabelEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportTargets.ExactPostLabelEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupport.StatementChecks.exactPostLabelEnumeration
+
+theorem checked_PredictionCompilerTapeSupport_actualTapeCompilerClosure :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportTargets.ActualTapeCompilerClosure :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupport.StatementChecks.actualTapeCompilerClosure
+
+theorem checked_PredictionCompilerTapeSupport_actualPostCompilerClosure :
+    LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportTargets.ActualPostCompilerClosure :=
+  LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupport.StatementChecks.actualPostCompilerClosure
+
+theorem checked_PredictionFiniteRenaming_effectiveNumericMaps :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingTargets.EffectiveNumericMaps :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.effectiveNumericMaps
+
+theorem checked_PredictionFiniteRenaming_inverseOnEnumeration :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingTargets.InverseOnEnumeration :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.inverseOnEnumeration
+
+theorem checked_PredictionFiniteRenaming_exactRenamedStep :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingTargets.ExactRenamedStep :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.exactRenamedStep
+
+theorem checked_PredictionFiniteRenaming_exactSupportedSimulation :
+    LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingTargets.ExactSupportedSimulation :=
+  LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.exactSupportedSimulation
 
 end LogicLineages.Repair20261031Checks
 

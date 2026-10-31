@@ -194,9 +194,13 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 669,
           "statement_latex": "\\label{lem:walker-filtration}\nEvery element of $W_\\xi$ has a unique finite expression\n\\[\n \\sum_s c_s e_s,\\qquad 0\\le c_s<p.\n\\]\nMoreover, for every ordinal $\\alpha$,\n\\begin{equation}\\label{eq:walker-filtration}\n (W_\\xi)_\\alpha\n =\\left\\langle e_s:\\operatorname{last}(s)\\ge\\alpha\\right\\rangle.\n\\end{equation}\nConsequently,\n\\[\n (W_\\xi)_\\xi=\\langle e_{(\\xi)}\\rangle\\cong C_p,\n \\qquad (W_\\xi)_{\\xi+1}=0.\n\\]\nFor every ordinal $\\delta$,\n\\[\n (W_{\\delta+1})_\\delta\\cong C_{p^2}.\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.WalkerCompleteStatementChecks.fullSourceLemma",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/WalkerCompleteTargets.lean",
+            "sha256": "3daf61b9b9f6338783dfad23e4516468121b97a8a35c14ea7c01ff111654a8b8",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.walkerFullSourceLemma"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerAdjunctionStatementChecks",
@@ -237,8 +241,61 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerUniversalStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WalkerUniversalStatementChecks.json",
               "scope": "Universal presentation property of finite ancestor-tree quotients, paper.tex 694\u2013704. Whole Walker lemma pending. Source countable decreasing-ordinal tree and actual finite/direct-limit group suppliers only; identification with the full source Walker presentation and complete transfinite filtration remain separate. Whole lemma remains pending; no finite-branching or ordinal-rank-to-Nat restriction is inferred."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerCompleteStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerCompleteStatementChecks.json",
+              "scope": "Entire original source lemma669\u2013728: unique finite digits, all ordinal filtration stages, explicit root subgroup/cyclic p/next zero, successor terminal cyclic p\u00b2. Also constructed countable reduced p-group property. Original free quotient, only prime/countable premises. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerFiltrationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerFiltrationStatementChecks.json",
+              "scope": "Full original source transfinite filtration equality at every ordinal \u03b1 via actual successor images and limit support intersections. Terminal cyclic conclusions remain pending. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerGroupNatureStatementChecks.json",
+              "scope": "Actual source groups countable, p-primary and reduced; countable ordinal successor bridge for exact final source quantifiers. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerLimitUniversalStatementChecks.json",
+              "scope": "Proved universal presentation property of actual sequential directlimit, for identifying source free presentation. No universal property assumed. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerNormalStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerNormalStatementChecks.json",
+              "scope": "Entire first source Walker conclusion: unique actual finite p-digit expression in original free-abelian quotient for every countable ordinal. Remaining filtration/terminal stages keep whole lemma pending. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerPresentedStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerPresentedStatementChecks.json",
+              "scope": "Literal source free-abelian quotient presentation: equations, proved universal property and generator hom extensionality. Actual original WalkerSourceGroup defined, identification/normal form/filtration pending. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerRealizationStatementChecks.json",
+              "scope": "Actual source free presentation identified by constructed generator-tracking additive equivalence with finite/sequential realized group, for every countable ordinal. Enumeration and equivalence existential, no suppliers assumed. Filtration/full Walker still pending. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerSupportStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerSupportStatementChecks.json",
+              "scope": "Actual height-generated subgroup iff digit support is above height cut; finite ancestor-closed code-cut presentations pay normalization, no support law assumed. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerTerminalStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerTerminalStatementChecks.json",
+              "scope": "All terminal clauses: original \u03be-stage cyclic p, next zero, and \u03b4-stage of original \u03b4+1 group cyclic p\u00b2, prime p and countable actual source indices. Scope of this individual supplier is preserved; the complete source lemma is registered only through the separately accepted WalkerComplete gate."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793435625413703654-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WalkerCompleteStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole original Walker-filtration lemma for the literal decreasing-ordinal-node free-abelian quotient presentation, with only prime p and countable ordinal hypotheses. Proved finite unique p-digit normal form, actual transfinite filtration equal to the height-generated subgroup at every ordinal, root stage generated by the root and isomorphic to C_p, next stage zero, and delta stage of W_(delta+1) isomorphic to C_(p^2). Countability, p-primary torsion and reducedness are also conclusions. Actual finite/sequential presentation realization and support arguments are proved, not supplied as hypotheses; no finite-branching/truncation/Nat-rank surrogate. Root independently source-reviewed paper01 lines669\u2013728 before exact gate acceptance."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:thm:difference-spectrum",
@@ -4656,6 +4713,31 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRProgramStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/GorbowPRProgramStatementChecks.json",
               "scope": "Finite arity-indexed primitive-recursive AST, exact extensional Primrec correspondence and recursion equations. Existence from Primrec evidence is not an executable compiler from arbitrary extensional functions. Uniform defining-equation registry, source Base, arithmetic provability, HB, Lob, chosen CK and all six paper12 statements remain unpaid. Finite arity-indexed primitive-recursive AST and extensional program existence only, supporting the definitional syntax apparatus in paper.tex61\u201367. Not an executable compiler from arbitrary functions, uniform defining-equation registry, arithmetic representability, Hilbert proofs, derivability conditions, Lob, or chosen CK. All six paper12 source statements and this dependency remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRChildTagsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowPRChildTagsStatementChecks.json",
+              "scope": "Four exact lookup equations at computed arithmetic preorder offsets. Literal quantified defining theory, source Base, arithmetic provability/HB/Lob and six source statements remain unpaid. Individual syntax/defining-equation/registry or admissible proof-rule supplier only. Not the complete actual source Base, arithmetic representability, Hilbert\u2013Bernays conditions, Lob, or chosen CK. All six paper12 source statements remain pending; extensional AST existence and fixed-registry effectivity are not an arbitrary-program executable compiler or uniform Primrec evaluator."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquationsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowPRDefiningEquationsStatementChecks.json",
+              "scope": "Literal zero/successor/projection/composition/recursion universal equations, one shared explicit decoded-header interpretation, exact raw-prefix axiom checker primitive recursive for each fixed finite registry, and PA plus generated equations standard-model soundness. No arbitrary-program uniform Primrec evaluator; selecting actual source syntax/checker programs, numeral proof certificates, Base, provability/HB/Lob and six source statements unpaid. Individual syntax/defining-equation/registry or admissible proof-rule supplier only. Not the complete actual source Base, arithmetic representability, Hilbert\u2013Bernays conditions, Lob, or chosen CK. All six paper12 source statements remain pending; extensional AST existence and fixed-registry effectivity are not an arbitrary-program executable compiler or uniform Primrec evaluator."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRRegistryStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowPRRegistryStatementChecks.json",
+              "scope": "Executable finite preorder AST occurrence registry, exact subprogram membership, unique positional tags and length-checked dispatch. No uniform arbitrary-program Primrec evaluator claim. Literal quantified defining equations, actual Base/provability/HB/Lob and all six source statements remain unpaid. Individual syntax/defining-equation/registry or admissible proof-rule supplier only. Not the complete actual source Base, arithmetic representability, Hilbert\u2013Bernays conditions, Lob, or chosen CK. All six paper12 source statements remain pending; extensional AST existence and fixed-registry effectivity are not an arbitrary-program executable compiler or uniform Primrec evaluator."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRSubtreeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowPRSubtreeStatementChecks.json",
+              "scope": "Every actual occurrence starts its complete contiguous subtree; transports concrete local numeric lookup to global registry lookup. No quantified defining theory, actual Base, provability/HB/Lob or six source statement completion. Individual syntax/defining-equation/registry or admissible proof-rule supplier only. Not the complete actual source Base, arithmetic representability, Hilbert\u2013Bernays conditions, Lob, or chosen CK. All six paper12 source statements remain pending; extensional AST existence and fixed-registry effectivity are not an arbitrary-program executable compiler or uniform Primrec evaluator."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowUniversalInstantiationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/GorbowUniversalInstantiationStatementChecks.json",
+              "scope": "Admissible universal-closure specialization by arbitrary closed terms and actual axiom instances in unchanged proof calculus. No added constructor, source Base, arithmetical representability, HB/Lob or six source statement completion. Individual syntax/defining-equation/registry or admissible proof-rule supplier only. Not the complete actual source Base, arithmetic representability, Hilbert\u2013Bernays conditions, Lob, or chosen CK. All six paper12 source statements remain pending; extensional AST existence and fixed-registry effectivity are not an arbitrary-program executable compiler or uniform Primrec evaluator."
             }
           ]
         },
@@ -5030,6 +5112,31 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapePartrecStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/PredictionTapePartrecStatementChecks.json",
               "scope": "Uniform actual Code.curry compiler realizes exact finite tape binary-output semantics, including total-binary correspondence. No runtime preservation, converse compiler or numbering acceptability. Actual finite-machine representation/operational supplier only. Extensional Partrec compilation does not preserve source runtime or give converse compilation/acceptable numbering; fixed-dimension serialization is not uniform varying-support enumeration. No full source membership or hardness claim; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionCompilerAlphabetEqualityStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionCompilerAlphabetEqualityStatementChecks.json",
+              "scope": "Explicit finite work alphabet enumeration and extensional finite-input comparison. No classical equality oracle or numeric compiler claim. Concrete compiler-support, finite renaming or equality supplier only. Not a complete raw-binary source compiler, acceptable numbering, general runtime-preserving translation, source recursive-matrix membership or hardness. Whole source statements remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionCompilerLabelEqualityStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionCompilerLabelEqualityStatementChecks.json",
+              "scope": "Executable finite-store/statement/label equality, proved extensionally correct. No Classical.decEq in algorithms; numeric coding and source rawbinary compiler remain separate. Concrete compiler-support, finite renaming or equality supplier only. Not a complete raw-binary source compiler, acceptable numbering, general runtime-preserving translation, source recursive-matrix membership or hardness. Whole source statements remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionCompilerSupportStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionCompilerSupportStatementChecks.json",
+              "scope": "Explicit recursive source-label lists exactly enumerate actual Mathlib compiler support and satisfy its proved closure. Encoded-natural stack convention only; not numeric coding/computability or rawbinary I/O correspondence. Concrete compiler-support, finite renaming or equality supplier only. Not a complete raw-binary source compiler, acceptable numbering, general runtime-preserving translation, source recursive-matrix membership or hardness. Whole source statements remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionCompilerTapeSupportStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionCompilerTapeSupportStatementChecks.json",
+              "scope": "Explicit syntax/product lists match actual Mathlib compiled supports and prove actual TM1/TM0 closure. Encoded-stack/natural I/O only; source rawbinary/numeric effectiveness still separate. Concrete compiler-support, finite renaming or equality supplier only. Not a complete raw-binary source compiler, acceptable numbering, general runtime-preserving translation, source recursive-matrix membership or hardness. Whole source statements remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionFiniteRenamingStatementChecks.json",
+              "scope": "Primitive-recursive numeric list maps, inverse on enumerated labels, exact TM0 renaming for supplied actual finite support/alphabet. Does not discover supports or complete source numbering. Concrete compiler-support, finite renaming or equality supplier only. Not a complete raw-binary source compiler, acceptable numbering, general runtime-preserving translation, source recursive-matrix membership or hardness. Whole source statements remain pending."
             }
           ]
         },

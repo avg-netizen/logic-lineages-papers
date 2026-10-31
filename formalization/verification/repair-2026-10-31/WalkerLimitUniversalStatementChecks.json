@@ -1,0 +1,184 @@
+{
+  "accepted_utc": "2026-10-31T08:14:48.418232+00:00",
+  "scope": "Proved universal presentation property of actual sequential directlimit, for identifying source free presentation. No universal property assumed.",
+  "source_correspondence": "Actual DirectLimit lift and universal homomorphism property for the proved finite-stage system, not a supplied realization oracle. Source quotient realization and full Walker filtration remain separate. Accepted after fixed checkpoint10 selection.",
+  "source_commit": "1c68e2a58bcc0ebf24b6ed4450434ea0afac087e",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:12:27.857551+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/walker-limit-universal-freeze.json",
+  "freeze_sha256": "d35541f4858ae988223e8c97b791da2eac4018bf10542c1da64801d114b62eff",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalDefinitions.lean",
+      "sha256": "dcb31278f6217eafa07492ad4073e3a157ddb84feeed621e5d9577aa0eb0e3a4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalTargets.lean",
+      "sha256": "84ae5746c2c88aa876cbd9bfff9be8a02913a51765e204d5616a683194715470"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalStatementChecks.lean",
+      "sha256": "22911c0694b3083971896f103432c10d757def093d3abf1f32c7fb1f260059b8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalProof.lean",
+      "sha256": "182abdaa0371048caffeebe5573d99f4a6c0c31708a3855c92449858bad326f9"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks.universal",
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks.homExt"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793434314314462367-5.json",
+      "sha256": "aca5deaf8549700b0bc0c78d8ea543e389bf512e1e7b33834657714b11878522",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793434454735957943-14.json",
+      "sha256": "4d5be3536bff5ea8c6cc7ee67c00751ecd0c64b1360ebb72c0c2a11c52fccaaa",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793434454735957943-14-LogicLineages-ModelsAlgebra-PGroups-WalkerLimitUniversalStatementChecks.log",
+  "gate_log_sha256": "d53e37593463e5959af8ae08455c2a5ccaa563c3ca67aebbc98e4af080ada623",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks.universal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerLimitUniversalStatementChecks.homExt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalStatementChecks.lean",
+      "sha256": "22911c0694b3083971896f103432c10d757def093d3abf1f32c7fb1f260059b8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalProof.lean",
+      "sha256": "182abdaa0371048caffeebe5573d99f4a6c0c31708a3855c92449858bad326f9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalTargets.lean",
+      "sha256": "84ae5746c2c88aa876cbd9bfff9be8a02913a51765e204d5616a683194715470"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitUniversalDefinitions.lean",
+      "sha256": "dcb31278f6217eafa07492ad4073e3a157ddb84feeed621e5d9577aa0eb0e3a4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitDefinitions.lean",
+      "sha256": "a5ffaadb7260086e6106694961ca6f11ecf8f22b2297d0119ed89122993d6541"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerStageProof.lean",
+      "sha256": "a697dbb2355165dab33bdc649d4ff269d8aa4f42ee83d703754a118f0f440606"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerStageTargets.lean",
+      "sha256": "e9525d03be8b7b366b708ba2f7872c422739afc0c328f4c82656e027c583c918"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerStageDefinitions.lean",
+      "sha256": "e677de004eb2a61d7dbd2af507f09d664ea089d10d3deae402d7f62551429069"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeDefinitions.lean",
+      "sha256": "bdc55a69bb6db3ca81760fca9f1025317ace4c8e1023cc9ac20bf205b8863ca4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionDefinitions.lean",
+      "sha256": "86627772d339f61b97476079dd10749c2df60f0307b5bdce63f92041bddbd8c3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionProof.lean",
+      "sha256": "c001867759bb50e30403a8815041dd97d069ebb2ffbf6ee8c74aefa53ce0e43e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionTargets.lean",
+      "sha256": "45ed14f963c75947bd69d43d5c2108ed929fe5939aa02d4ace2818994e84fa2d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitProof.lean",
+      "sha256": "d876a5c9cd330bbb1cfbcc73c18f4071c61ccdaf63bade079d41d954c9f0e90a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerLimitTargets.lean",
+      "sha256": "b3997c03af78fc5aded7e136bcff526078a4782ceafb4b9a3011e9d58de71435"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeProof.lean",
+      "sha256": "bafc06e8395d81c21deb61a45468688e552e63cb1f4bff3726120a252008326e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeTargets.lean",
+      "sha256": "58c686af804d4c754849d48575af5da997eab4ac73950ef38669d875be212296"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerUniversalProof.lean",
+      "sha256": "722aed2030530acc238ec363d1d401c2b841f428b18ef8385c6bf5a67fe7f141"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerUniversalTargets.lean",
+      "sha256": "9a508b426b18416f3e5ac5c4e13625c8d16b1af778631c35754dac501f777db7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerUniversalDefinitions.lean",
+      "sha256": "eb4baae4dd8ba09d8f4195f53151900491512d5cfe692cf86c42d7f2320e76ae"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.Colimit.DirectLimit",
+    "Mathlib.Algebra.Group.PUnit",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.ZPowers.Basic",
+    "Mathlib.Data.Countable.Defs",
+    "Mathlib.Data.Nat.Init",
+    "Mathlib.GroupTheory.QuotientGroup.Basic",
+    "Mathlib.Logic.Encodable.Pi"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

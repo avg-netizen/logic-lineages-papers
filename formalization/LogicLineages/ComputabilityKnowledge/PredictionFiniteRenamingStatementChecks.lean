@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks
+theorem effectiveNumericMaps : PredictionFiniteRenamingTargets.EffectiveNumericMaps := PredictionFiniteRenamingProof.effectiveNumericMaps
+theorem inverseOnEnumeration : PredictionFiniteRenamingTargets.InverseOnEnumeration := PredictionFiniteRenamingProof.inverseOnEnumeration
+theorem exactRenamedStep : PredictionFiniteRenamingTargets.ExactRenamedStep := PredictionFiniteRenamingProof.exactRenamedStep
+theorem exactSupportedSimulation : PredictionFiniteRenamingTargets.ExactSupportedSimulation := PredictionFiniteRenamingProof.exactSupportedSimulation
+end LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks

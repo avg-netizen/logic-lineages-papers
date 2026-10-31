@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationStatementChecks
+
+theorem realization : Targets.walkerSourceRealization := walker_source_realization
+
+end LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerRealizationStatementChecks

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks
+
+theorem countableSuccessor : Targets.walkerCountableSuccessor := walker_countable_successor
+theorem groupNature : Targets.walkerSourceGroupNature := walker_source_group_nature
+
+end LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerGroupNatureStatementChecks

@@ -1,0 +1,128 @@
+{
+  "accepted_utc": "2026-10-31T08:20:43.742647+00:00",
+  "scope": "Primitive-recursive numeric list maps, inverse on enumerated labels, exact TM0 renaming for supplied actual finite support/alphabet. Does not discover supports or complete source numbering.",
+  "source_correspondence": "Primitive-recursive numeric list maps, inverse on enumerated labels, and exact TM0 state/alphabet renaming for supplied actual finite support and alphabet. Does not discover those supports or complete source numbering/acceptability; explicit adapter supplier only. Post-checkpoint10.",
+  "source_commit": "0c37e823a6f1d60feb905182d78c5e45334e80a6",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenamingStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:19:11.072477+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-finite-renaming-freeze.json",
+  "freeze_sha256": "e4f5db207797fb40b21d8c74aa06ce5f89a0c5f5109531a6a5208e7614c25b16",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingDefinitions.lean",
+      "sha256": "10596494469c0860cf943197160c8deb9e4a0494e02a45f805d39c55c4c44c05"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingTargets.lean",
+      "sha256": "52dfe593df40985c1766745b537b19ca7e1c54a48770e0be54f126cf9c766249"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingStatementChecks.lean",
+      "sha256": "f69d68eb5b22be192c34657b214b343c35d97e360a22de0e8f0507092614eb6d"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingProof.lean",
+      "sha256": "5a1f1f82c6347edd68b435148098eb01eba6c95e9352b87085c31e76357407a5"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.effectiveNumericMaps",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.inverseOnEnumeration",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.exactRenamedStep",
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.exactSupportedSimulation"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793434660833157574-5.json",
+      "sha256": "dd13e23f849df10a59efa5ecaf424f649fadcaaf752fd22b3abb2533c2b2f1e7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793434807775114992-13.json",
+      "sha256": "7f40645e158e8ef14a680ec68361710eafd8a4adbac3a84e26263226159bf2d3",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793434807775114992-13-LogicLineages-ComputabilityKnowledge-PredictionFiniteRenamingStatementChecks.log",
+  "gate_log_sha256": "af08b997a1ee2ef7ff75b38f83e75a637e91a47933f31ba70bc0cf3c830fc191",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.inverseOnEnumeration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.exactRenamedStep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.exactSupportedSimulation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionFiniteRenaming.StatementChecks.effectiveNumericMaps": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingStatementChecks.lean",
+      "sha256": "f69d68eb5b22be192c34657b214b343c35d97e360a22de0e8f0507092614eb6d"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingProof.lean",
+      "sha256": "5a1f1f82c6347edd68b435148098eb01eba6c95e9352b87085c31e76357407a5"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingTargets.lean",
+      "sha256": "52dfe593df40985c1766745b537b19ca7e1c54a48770e0be54f126cf9c766249"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionFiniteRenamingDefinitions.lean",
+      "sha256": "10596494469c0860cf943197160c8deb9e4a0494e02a45f805d39c55c4c44c05"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}
