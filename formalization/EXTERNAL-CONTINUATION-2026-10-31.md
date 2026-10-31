@@ -209,9 +209,8 @@ required before acceptance. A comparator compile alone is not a proof.
 
 CI diagnosis and repair remain deferred. No remote CI pass is claimed.
 The new component sources and exact gates were directly compiled. Their
-unchanged upstream dependencies used official cached objects. This round has
-not yet rerun the entire historical root; the historical baseline evidence is
-preserved separately. Raw receipt identities, actual axiom logs, source hashes
+unchanged upstream dependencies used official cached objects. The complete selected root has now passed as recorded below; historical
+baseline evidence remains preserved separately. Raw receipt identities, actual axiom logs, source hashes
 and the limits of the closure snapshots are recorded in the component evidence.
 
 The first [focused checkpoint](verification/repair-2026-10-31/checkpoint-01.json)
@@ -289,3 +288,29 @@ with identical content trees. Manuscript hashes still identify the repaired
 source baseline exactly.
 
 No independent human review or priority claim is made.
+
+## Complete selected-root verification
+
+[Root verification evidence](verification/repair-2026-10-31/root-checkpoint07.json)
+records the exact selected root, prerequisite compiler rows and axiom audits.
+Raw receipt/log references identify hashed locally retained artifacts; those
+raw files are not included as public downloads in this checkpoint.
+
+After the seventh focused checkpoint, every one of the 3,076 local root
+prerequisites was revalidated at its current source hash, then the actual
+root module passed with all 857 selected imports and 2,631 audited namespace
+theorems. All 3,077 root-closure source hashes were identical before and
+after the root run. This verifies exactly the checkpoint-seven source tree;
+later unimported source-frontend work is outside this result.
+
+The first root attempts stopped at the 1,536 MiB and 2,048 MiB RSS guards
+during import loading, without a reported theorem failure. A separately
+authorized current root-only profile (4,096 MiB heap and RSS caps,
+6,144 MiB minimum available memory, unchanged CPU/wall/thread limits) passed
+in 2.389 seconds at a peak of 2,603,504 KiB RSS. Both earlier stops are
+preserved. This is a current verification profile, not a claim about the
+historical profile. No global runner, toolchain or CI configuration changed.
+
+These local observations establish a memory requirement for this selected
+root in this environment; they do not diagnose historical GitHub CI failures
+or claim a remote CI pass.
