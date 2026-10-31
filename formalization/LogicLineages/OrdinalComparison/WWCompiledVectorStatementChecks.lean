@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWCompiledVectorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_compiledVectorSound : Source.Targets.CompiledVectorSound := Source.ForwardTranslation.compiledVectorSound
+theorem fixed_generatedGroundVectorCompilationTotal : Source.Targets.GeneratedGroundVectorCompilationTotal := Source.ForwardTranslation.generatedGroundVectorCompilationTotal
+theorem fixed_actualSourceVectorCompilation : Source.Targets.ActualSourceVectorCompilation := Source.ForwardTranslation.actualSourceVectorCompilation
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

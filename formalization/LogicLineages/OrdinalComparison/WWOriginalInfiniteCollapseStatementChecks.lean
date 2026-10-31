@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalInfiniteCollapseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualInfiniteCollapseControlLower : Source.Targets.ActualInfiniteCollapseControlLower :=
+  Source.OriginalDomain.actualInfiniteCollapseControlLower
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

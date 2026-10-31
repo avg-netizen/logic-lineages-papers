@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceClassesFullProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_actualSourceClasses : Source.Targets.ActualSourceClasses := Source.SourceClasses.actualSourceClasses
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

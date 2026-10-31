@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceTupleEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_actualSourceTupleEvaluation : Source.Targets.ActualSourceTupleEvaluation := Source.ForwardTranslation.actualSourceTupleEvaluation
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

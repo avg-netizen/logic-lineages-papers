@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearchProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+theorem fixed_counterBoundComplementEnumerable : SourceCounterBoundSearch.Targets.ComplementEnumerable := SourceCounterBoundSearch.complementEnumerable
+theorem fixed_counterBoundDecisionIffBound : SourceCounterBoundSearch.Targets.DecisionIffBound := SourceCounterBoundSearch.decisionIffBound
+theorem fixed_counterBoundPrefixComputable : SourceCounterBoundSearch.Targets.PrefixComputable := SourceCounterBoundSearch.prefixComputable
+theorem fixed_counterBoundPrefixCorrect : SourceCounterBoundSearch.Targets.PrefixCorrect := SourceCounterBoundSearch.prefixCorrect
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.StatementChecks

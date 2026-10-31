@@ -1,0 +1,121 @@
+{
+  "accepted_utc": "2026-10-31T05:14:43.325702+00:00",
+  "scope": "Exact numerical double-exponent step and original F2 envelope; no whole box theorem.",
+  "source_correspondence": "Paper05 exact numerical double-exponent step and original F2 envelope. No whole box theorem.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "05-wilken-weiermann-foundations/source-syntax.tex",
+      "sha256": "aee8ef3a6e3b8884c384a37bbaab9588fe0c680230deeb798c20c1ae53b3c44c"
+    }
+  ],
+  "gate_module": "LogicLineages.OrdinalComparison.WWOriginalBoxControlStatementChecks",
+  "frozen_at_utc": "2026-10-31T05:12:57.078966+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "LogicLineages/OrdinalComparison/WWOriginalBoxControl-FREEZE.json",
+  "freeze_sha256": "6f35774b77d0b5e00f454471b3ec5278ef7a254009dd2255daaf3d70012ed8ed",
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOriginalBoxControlTargets.lean",
+      "sha256": "8d88c6eb731a0e30b8ea7b022e3e65ceb37039351e164558abf4fac9e2b3d079"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOriginalBoxControlStatementChecks.lean",
+      "sha256": "6f46dcc35e0cdcf7468ae547b80afc5d0f1289f59b02f6074298cf0ebd973b48"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOriginalBoxControlProof.lean",
+      "sha256": "7b31d80d4e08dfceba21fa598dcb1b89f35bb614e9a1b7ec1ef4613ce0975f87"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxNumericalStep",
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxControlEnvelope"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793423528505437168-10.json",
+      "sha256": "2842ee97b0ef28f2b02e2acd4620a05ced283c938d0c03bbfcf014501f0b589b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793423654920584606-10.json",
+      "sha256": "81fa4d31f694d3316a76cd565dc60fccf3379bad112b78654a88b02d86f6f69b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793423654920584606-10-LogicLineages-OrdinalComparison-WWOriginalBoxControlStatementChecks.log",
+  "gate_log_sha256": "33846d71356b8771c10a5b5cc204437884a0ba0e73c66794bba49cbf05757758",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxNumericalStep": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxControlEnvelope": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOriginalBoxControlStatementChecks.lean",
+      "sha256": "6f46dcc35e0cdcf7468ae547b80afc5d0f1289f59b02f6074298cf0ebd973b48"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOriginalBoxControlProof.lean",
+      "sha256": "7b31d80d4e08dfceba21fa598dcb1b89f35bb614e9a1b7ec1ef4613ce0975f87"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOriginalBoxControlTargets.lean",
+      "sha256": "8d88c6eb731a0e30b8ea7b022e3e65ceb37039351e164558abf4fac9e2b3d079"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+      "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Control.lean",
+      "sha256": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlTargets.lean",
+      "sha256": "2b5c663880aec5f55fe6f526bacf19ce131d3ae77e9485332b78dc5826d693c7"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Data.Nat.Basic",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Order.Monotone.Basic",
+    "Mathlib.Order.Monotone.Defs"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

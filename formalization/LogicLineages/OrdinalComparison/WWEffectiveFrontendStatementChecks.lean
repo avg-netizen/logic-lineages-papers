@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWEffectiveFrontendProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_effectiveFrontendCounterEnumerable : Source.Targets.EffectiveFrontendCounterEnumerable := Source.ForwardTranslation.effectiveFrontendCounterEnumerable
+theorem fixed_effectiveFrontendDecisionIffCoordinateBound : Source.Targets.EffectiveFrontendDecisionIffCoordinateBound := Source.ForwardTranslation.effectiveFrontendDecisionIffCoordinateBound
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

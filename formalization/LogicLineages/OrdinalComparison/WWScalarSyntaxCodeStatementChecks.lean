@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWScalarSyntaxCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_scalarSyntaxNormalizationCorrect : Source.Targets.ScalarSyntaxNormalizationCorrect := Source.ForwardTranslation.scalarSyntaxNormalizationCorrect
+theorem fixed_scalarSyntaxNormalizationPrimitiveRecursive : Source.Targets.ScalarSyntaxNormalizationPrimitiveRecursive := Source.ForwardTranslation.scalarSyntaxNormalizationPrimitiveRecursive
+theorem fixed_scalarSyntaxValueComputable : Source.Targets.ScalarSyntaxValueComputable := Source.ForwardTranslation.scalarSyntaxValueComputable
+theorem fixed_scalarSyntaxValueSourceCorrect : Source.Targets.ScalarSyntaxValueSourceCorrect := Source.ForwardTranslation.scalarSyntaxValueSourceCorrect
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

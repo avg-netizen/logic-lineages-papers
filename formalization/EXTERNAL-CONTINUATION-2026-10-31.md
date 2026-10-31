@@ -165,18 +165,39 @@ statements, not automatic certificates of new or changed statements.
   not a criticism of the manuscript. No general Presburger or JEP decision
   procedure follows from these supplier records.
 
-After source reconciliation and six whole-statement acceptances, the register
-contains **189 statements: 91 checked, 2 inherited calculator-package results,
-and 96 pending**. The repair introduced eleven new numbered obligations.
+## Seventh-checkpoint source completion
+
+The repaired paper 03 chain is now complete: exact effective Parikh
+transition formulas, actual Presburger decision and automaton inclusion,
+finite ranked-tree ideal decomposition, and the original finite-forest JEP
+Boolean decision all have fixed checked targets. The decision takes an
+actual finite coded forest family and is equivalent to its original order-JEP
+property, without an ideal-cover or decision oracle. Empty cases are included.
+These are total symbolic algorithms; no practical runtime claim is made.
+
+Paper 05 now also has the exact first-free and bounded-norm statements,
+actual zero-history source assignment, both forward-translation statements,
+and the source-class corollary. The latter restricts all internal types and
+subtypes, under the inherited ground-free-name context, not merely the result
+type. Policy-relative translation does not assert that arbitrary selectors
+are computable. Original delta and the abstraction with retained head closure
+remain distinct.
+
+The register for this checkpoint contains **189 statements: 99 checked,
+2 inherited calculator-package results, and 88 pending**. Paper 03 has all
+11 registered statements checked. Paper 05 has 17 of 18 checked; its
+counter-bound proposition remains pending.
 
 ## Work in progress
 
-The next targets are complete effective Parikh/source transition composition,
-Presburger automaton operations and genuine ranked-tree ideal decomposition
-for paper 03, and the original bounded-norm/assignment chain for paper 05.
-Whole decision and norm claims remain pending until their full
-formal dependency chains are proved. In particular, bibliographic references
-to effective ideal decomposition and Parikh's theorem are not Lean suppliers.
+The remaining paper 05 counter-bound obligation is the genuine numeric
+source frontend and assignment compiler effectivity certificate. Executable
+typed source functions and correct encoded-query evaluators alone do not
+supply that certificate. Finite positive boxes, counterexample search,
+primitive-recursive literal ordinal/scalar normalization and source-query
+commuting equalities are checked suppliers, not a claim that the whole
+counter-bound proposition is complete. No reduction-history or broader
+historical quantitative result is inferred from zero-history assignment.
 
 ## Verification environment
 
@@ -244,6 +265,13 @@ local source closure hashes match before and after compilation. The root
 selects 766 gates; the full historical closure is still being revalidated
 separately. Canonical-cotree and weak replacement raise the register to
 91 checked.
+
+The [seventh focused checkpoint](verification/repair-2026-10-31/checkpoint-07.json)
+selects 152 accepted gates and checks 441 exact-type aliases. All 762 local
+source closure hashes match before and after compilation. The root selects
+857 gates; this focused pass does not claim a fresh full-root compile.
+Eight whole-statement acceptances raise the register to 99 checked. Later
+source-frontend work is outside this fixed checkpoint snapshot.
 
 One States component has a disclosed late dedicated manifest: its exact
 definitions and targets were already hash-pinned by a successful comparator

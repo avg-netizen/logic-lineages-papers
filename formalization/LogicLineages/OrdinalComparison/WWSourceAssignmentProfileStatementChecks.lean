@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceAssignmentProfileProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualRecursorFreeAssignmentNoOmega : Source.Targets.ActualRecursorFreeAssignmentNoOmega :=
+  Source.SourceClasses.actualRecursorFreeAssignmentNoOmega
+
+theorem fixed_actualInternalLevelAssignmentHeight : Source.Targets.ActualInternalLevelAssignmentHeight :=
+  Source.SourceClasses.actualInternalLevelAssignmentHeight
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

@@ -1,0 +1,234 @@
+{
+  "accepted_utc": "2026-10-31T05:34:36.629174+00:00",
+  "scope": "Explicit finite transition tables, actual epsilon runs, executable cardinality-bounded closure and powerset determinization. No regularity oracle.",
+  "source_correspondence": "Paper03 explicit finite ranked epsilon-automata transition tables, actual runs, executable cardinality-bounded closure and powerset determinization. No regularity oracle; full finite ideal decomposition remains separate.",
+  "source_commit": "29b9ef2294372fdc713ca348e5bde246efaf810d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomataStatementChecks",
+  "frozen_at_utc": "2026-10-31T05:33:41.832584+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/ranked-ideal-automata-freeze.json",
+  "freeze_sha256": "3418963b0025b1dda76a12f7b4eb88d31bef7ad4b23c671edb320295ac722204",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataDefinitions.lean",
+      "sha256": "64d6262ed5fb109ce3fcfa56841a048bcee866d3984f9aa7980534e412db30a2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataTargets.lean",
+      "sha256": "f22da280d4e32b1b47430ce38055e22362617681beb8f8125c81622d676207c2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataStatementChecks.lean",
+      "sha256": "28f1cf3089f6b77c01e547fb526ab7032bc6ff780516ef7018bf055d0ab89a69"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataProof.lean",
+      "sha256": "4aa44fff66743e6f21a9861bdc9b76f46c5f6c8956ef54d47dbbbb7d7b79e947"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.closureExact",
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.evaluationExact",
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.runCalibration",
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.determinizationExact"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793424783407067595-5.json",
+      "sha256": "59271b9254efef4eb9f284fe03d11cb3b2dbc6ed100cedde7d4ea29b504347a8",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793424850214004339-5.json",
+      "sha256": "6c391f2c1010759f4fe915c2ff08436433cae203add9c6e291875bc0bd4b766d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793424850214004339-5-LogicLineages-ModelsAlgebra-Forests-RankedIdealAutomataStatementChecks.log",
+  "gate_log_sha256": "e3bb9afe1d14435013861fb47e270e8014bbf7c379f9e75e3dab2f21220ceb94",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.evaluationExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.determinizationExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.closureExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.runCalibration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.Accepts.eq_1": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.step.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.nodeSeeds.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataStatementChecks.lean",
+      "sha256": "28f1cf3089f6b77c01e547fb526ab7032bc6ff780516ef7018bf055d0ab89a69"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataProof.lean",
+      "sha256": "4aa44fff66743e6f21a9861bdc9b76f46c5f6c8956ef54d47dbbbb7d7b79e947"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataTargets.lean",
+      "sha256": "f22da280d4e32b1b47430ce38055e22362617681beb8f8125c81622d676207c2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealAutomataDefinitions.lean",
+      "sha256": "64d6262ed5fb109ce3fcfa56841a048bcee866d3984f9aa7980534e412db30a2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealMachineDefinitions.lean",
+      "sha256": "4cd5298f159b01cd4b3dab36afae367cbe09450913317aae70b6cfb7aeba50f8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealFiniteDefinitions.lean",
+      "sha256": "4f7368c4c18845adef01a2feda53355caad3bc93979b51f8d25ca1248f4a53c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealCompletionDefinitions.lean",
+      "sha256": "e3b96ceb3793e6444f1a339a6d074049472d6d4bda2bf04af3e3609af988ee49"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealContextDefinitions.lean",
+      "sha256": "444a75a2475739605344d081febcfe7eec1e40fb4bd59ec3f05926f8595e7d05"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileLanguageEmptyDefinitions.lean",
+      "sha256": "402d826d8dec1dfa452350f527d65418b60dcd7abe64c249ba83972a3ad0bbd4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularDefinitions.lean",
+      "sha256": "20c702f71e19ac1dd5e23f85c1453ba5144b3fbed511d189ba9f7e3f279bf82b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingDefinitions.lean",
+      "sha256": "3b51edc63e2aeaed258538d458c31b235cb412e4cb490be8edb8cc430276fab3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileDefinitions.lean",
+      "sha256": "e1ec826ef97f960ad102d3c3cabb0f184a3b58fe0c77cc0048a86a2bd8da14b6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationGeneralDefinitions.lean",
+      "sha256": "19daa1366d7ed8225da15f35840541eb4c869f181506b969c3d5b217b2eee7e0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationDefinitions.lean",
+      "sha256": "13de75479876f4e18c207a945a272f810442607233199a2cd967c71f7700d443"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPDefinitions.lean",
+      "sha256": "964d94697b098425da28d47fdf2bd546403fc5ee12b5f55181519e9fbf67a605"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeDefinitions.lean",
+      "sha256": "fdd1006f3e2a8b706662efdd960c54a7bd9cb413155ba22626816e42d9045d54"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/HostReductionDefinitions.lean",
+      "sha256": "09f7214995435cda13ae005a1f7a5104b72627452ead261582fd435f2c9df047"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+      "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CertificateSearchDefinitions.lean",
+      "sha256": "da67b22c1355ccf5044179145c37c0da4feaf47fd8a8f755b97de44867059706"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteCodeDefinitions.lean",
+      "sha256": "092e012281add950aa6d7109dd9900683e1d8bc087f425d72323e2850502106c"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "Mathlib.Computability.Partrec",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finite.Sum",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.Sublists",
+    "Mathlib.Order.Defs.PartialOrder",
+    "Mathlib.Order.Hom.Basic",
+    "Mathlib.Order.Preorder.Finite"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

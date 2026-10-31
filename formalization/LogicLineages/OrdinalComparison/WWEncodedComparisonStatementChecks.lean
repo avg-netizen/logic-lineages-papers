@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWEncodedComparisonProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_positiveComparisonPrimitiveRecursive : Source.Targets.PositiveComparisonPrimitiveRecursive := Source.ForwardTranslation.positiveComparisonPrimitiveRecursive
+theorem fixed_positiveComparisonSourceCorrect : Source.Targets.PositiveComparisonSourceCorrect := Source.ForwardTranslation.positiveComparisonSourceCorrect
+theorem fixed_encodedQueryAtComputable : Source.Targets.EncodedQueryAtComputable := Source.ForwardTranslation.encodedQueryAtComputable
+theorem fixed_encodedQueryAtSourceCorrect : Source.Targets.EncodedQueryAtSourceCorrect := Source.ForwardTranslation.encodedQueryAtSourceCorrect
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

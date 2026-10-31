@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceSyntaxQueryProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_sourceSyntaxQueryNormalization : Source.Targets.SourceSyntaxQueryNormalization := Source.ForwardTranslation.sourceSyntaxQueryNormalization
+theorem fixed_sourceSyntaxCodeNormalization : Source.Targets.SourceSyntaxCodeNormalization := Source.ForwardTranslation.sourceSyntaxCodeNormalization
+theorem fixed_aritySyntaxNormalizationPrimitiveRecursive : Source.Targets.AritySyntaxNormalizationPrimitiveRecursive := Source.ForwardTranslation.aritySyntaxNormalizationPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

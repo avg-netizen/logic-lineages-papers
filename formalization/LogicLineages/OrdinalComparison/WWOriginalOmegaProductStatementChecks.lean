@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalOmegaProductProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualOmegaNaturalProductInfinite : Source.Targets.ActualOmegaNaturalProductInfinite :=
+  Source.OriginalDomain.actualOmegaNaturalProductInfinite
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

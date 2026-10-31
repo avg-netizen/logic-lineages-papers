@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceComparisonProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_compiledQueryPointCorrect : Source.Targets.CompiledQueryPointCorrect := Source.ForwardTranslation.compiledQueryPointCorrect
+theorem fixed_actualSourceQueryCompilation : Source.Targets.ActualSourceQueryCompilation := Source.ForwardTranslation.actualSourceQueryCompilation
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

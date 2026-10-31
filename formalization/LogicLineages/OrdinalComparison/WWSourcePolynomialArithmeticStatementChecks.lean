@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourcePolynomialArithmeticProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_sourceNaturalSumPowerClosure : Targets.SourceNaturalSumPowerClosure := sourceNaturalSumPowerClosure
+theorem fixed_sourceNaturalProductPolynomialClosure : Targets.SourceNaturalProductPolynomialClosure := sourceNaturalProductPolynomialClosure
+theorem fixed_sourceBaseTwoLinearPolynomial : Targets.SourceBaseTwoLinearPolynomial := sourceBaseTwoLinearPolynomial
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

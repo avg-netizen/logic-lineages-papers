@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalBoundedDeltaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_originalBoundedVectorSupportBridge : Source.Targets.OriginalBoundedVectorSupportBridge :=
+  Source.OriginalDomain.originalBoundedVectorSupportBridge
+
+theorem fixed_originalDeltaPreservesBoundedNorm : Source.Targets.OriginalDeltaPreservesBoundedNorm :=
+  Source.OriginalDomain.originalDeltaPreservesBoundedNorm
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

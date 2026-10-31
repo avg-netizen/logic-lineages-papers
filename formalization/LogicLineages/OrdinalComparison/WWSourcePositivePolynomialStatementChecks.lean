@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourcePositivePolynomialProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_positiveHeightZeroLinearBound : Source.Targets.PositiveHeightZeroLinearBound := Source.SourceClasses.positiveHeightZeroLinearBound
+theorem fixed_positiveHeightOnePolynomialBound : Source.Targets.PositiveHeightOnePolynomialBound := Source.SourceClasses.positiveHeightOnePolynomialBound
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

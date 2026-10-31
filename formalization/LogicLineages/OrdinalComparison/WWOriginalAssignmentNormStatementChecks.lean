@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalAssignmentNormProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_originalSourceApplicationBounded : Source.Targets.OriginalSourceApplicationBounded :=
+  Source.OriginalDomain.originalSourceApplicationBounded
+
+theorem fixed_originalSourceAssignmentBounded : Source.Targets.OriginalSourceAssignmentBounded :=
+  Source.OriginalDomain.originalSourceAssignmentBounded
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

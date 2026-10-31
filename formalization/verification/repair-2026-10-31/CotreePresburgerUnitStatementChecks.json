@@ -1,0 +1,233 @@
+{
+  "accepted_utc": "2026-10-31T05:39:30.614767+00:00",
+  "scope": "Genuine finite elimination of one Nat quantifier over arbitrary Boolean unit/zero-coefficient affine order and positive-divisibility atoms. Explicit y>=0 guard and cutoff0; arbitrary Int prefix valuation. Not yet arbitrary-coefficient/full-syntax decision.",
+  "source_correspondence": "Paper03 genuine finite elimination of one Nat quantifier over arbitrary Boolean unit/zero-coefficient affine order and positive-divisibility atoms. Explicit nonnegative guard/cutoff zero and arbitrary Int prefix valuations. Independently source-reviewed finite construction, not arbitrary-coefficient/full-formula decision yet.",
+  "source_commit": "09164be23fc7229dfee069ba3aca297c9f0bb01d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnitStatementChecks",
+  "frozen_at_utc": "2026-10-31T05:36:53.442892+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cotree-presburger-unit-freeze.json",
+  "freeze_sha256": "3698eaab2d3380fa182883d797ad55f9366371b2c2cde6e50af10ee710fb1d12",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitDefinitions.lean",
+      "sha256": "d1110c12e9266f1ee9f4c11ecb383188905dadb36c941dc3c2f95fd87e182784"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitTargets.lean",
+      "sha256": "05dcb6f46a0fe5fe37f63d556db0dff741f7c03dc396a0fe26bc4ca5661620be"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitStatementChecks.lean",
+      "sha256": "0c3820462cbbe364101b016be43d336ed159a16ed6744db1300ac705d84f442d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitProof.lean",
+      "sha256": "b77b3d0f40c366b8bc13ffe53bcc71c52540368623cf94e41f0b3f61e0f448f6"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.periodPositive",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.instantiationExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.unitEliminationExact"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793424852610809205-14.json",
+      "sha256": "f599187a230049f8c0cb611cbd9562af3945a0f4e5e4b2d66132014160b9c125",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793425135463159820-14.json",
+      "sha256": "fa4b4e67cfc95edf0dbbbb414bdb82ded5601cbee4a657b927437ccb34f25584",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793425135463159820-14-LogicLineages-ModelsAlgebra-Forests-CotreePresburgerUnitStatementChecks.log",
+  "gate_log_sha256": "c7fb6a63f71176d09294f0293e62f2e2f89b4e0d54858ad3e292f3414ab7652a",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.periodPositive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.unitEliminationExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.instantiationExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.cutoffs.eq_3": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_5": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.guarded.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_6": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Sign.value.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_4": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.evalQF.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.instantiate.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Sign.value.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Proof.eval_guarded._simp_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.cutoffs.eq_2": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Atom.eval.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_3": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.subst.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_3": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_4": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.cutoffs._sparseCasesOn_1.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_6": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.eval.eq_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.eliminate.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.period.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_5": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.cutoffs.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Atom.eval.eq_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_5": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Sign.value.eq_3": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.disjoin.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.period.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.eval.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Proof.eval_disjoin._simp_1": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_6": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.subst.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.cutoffs.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_3": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.evalUnit.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.eval.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.map.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.UnitAtom.cutoffs._sparseCasesOn_2.else_eq": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms.eq_4": []
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitStatementChecks.lean",
+      "sha256": "0c3820462cbbe364101b016be43d336ed159a16ed6744db1300ac705d84f442d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitProof.lean",
+      "sha256": "b77b3d0f40c366b8bc13ffe53bcc71c52540368623cf94e41f0b3f61e0f448f6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitTargets.lean",
+      "sha256": "05dcb6f46a0fe5fe37f63d556db0dff741f7c03dc396a0fe26bc4ca5661620be"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitDefinitions.lean",
+      "sha256": "d1110c12e9266f1ee9f4c11ecb383188905dadb36c941dc3c2f95fd87e182784"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearStatementChecks.lean",
+      "sha256": "686e35b55fa9a91e189b305a7c7108087c8a4b52dc77c2132ac4ec1b0fa90bbb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearProof.lean",
+      "sha256": "466a0f66f5bffd6354b571df52bab225e8cbcdaa4171a1b76ecd9162e5fc6132"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearTargets.lean",
+      "sha256": "76720372ac54fe0b83ad793c68420ca08bdc7592e80e9b626fdc4d9ab212f30a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearDefinitions.lean",
+      "sha256": "ae52bb2a1221b88b4bc77b61a95a40e79a4d31ca8ae4682b55f76eadc4020f8d"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+    "Mathlib.Algebra.Ring.Divisibility.Basic",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.ModelTheory.Arithmetic.Presburger.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

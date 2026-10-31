@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecisionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecision.StatementChecks
+ theorem graphDecisionExact : Targets.GraphDecisionExact := Proof.graphDecisionExact
+end LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecision.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecision

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxHeadProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxHeadFreeCorrect : Source.Targets.OrdinalSyntaxHeadFreeCorrect := Source.OrdinalSyntax.ordinalSyntaxHeadFreeCorrect
+theorem fixed_ordinalSyntaxHeadClosureCorrect : Source.Targets.OrdinalSyntaxHeadClosureCorrect := Source.OrdinalSyntax.ordinalSyntaxHeadClosureCorrect
+theorem fixed_ordinalSyntaxPartialSizeCorrect : Source.Targets.OrdinalSyntaxPartialSizeCorrect := Source.OrdinalSyntax.ordinalSyntaxPartialSizeCorrect
+theorem fixed_ordinalSyntaxHeadOperationsPrimitiveRecursive : Source.Targets.OrdinalSyntaxHeadOperationsPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxHeadOperationsPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

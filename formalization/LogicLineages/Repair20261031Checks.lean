@@ -61,6 +61,97 @@ public import LogicLineages.OrdinalComparison.WWOriginalSupportStatementChecks
 public import LogicLineages.OrdinalComparison.WWOriginalValueClosureStatementChecks
 public import LogicLineages.OrdinalComparison.WWOriginalWeakPartialStatementChecks
 public import LogicLineages.OrdinalComparison.WWOriginalWeakReplacementStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreeGrammarReconstructStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikhStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomatonStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBooleanStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompilerStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVectorStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountsStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecisionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutableStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerFiniteDecisionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerGrammarStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinearStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalizeStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductiveStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjectionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullbackStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnitStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParikhProfileStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParikhTransitionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomataStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrderStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealComponentsStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructorsStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealContextStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverAssemblyStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealFiniteStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecisionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInputStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecisionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealMachineStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRankStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularClosureStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCodeStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumerationStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularProductStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularStateStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCodeStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCodeStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineStatementChecks
+public import LogicLineages.OrdinalComparison.WWClosedPositiveEvaluationStatementChecks
+public import LogicLineages.OrdinalComparison.WWCompiledVectorStatementChecks
+public import LogicLineages.OrdinalComparison.WWEffectiveFrontendStatementChecks
+public import LogicLineages.OrdinalComparison.WWEncodedBaseTwoStatementChecks
+public import LogicLineages.OrdinalComparison.WWEncodedClosedPositiveStatementChecks
+public import LogicLineages.OrdinalComparison.WWEncodedComparisonStatementChecks
+public import LogicLineages.OrdinalComparison.WWEncodedCounterBoundStatementChecks
+public import LogicLineages.OrdinalComparison.WWEncodedScalarStatementChecks
+public import LogicLineages.OrdinalComparison.WWFixedShiftStatementChecks
+public import LogicLineages.OrdinalComparison.WWGroundTupleStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxCodeStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxExtractionStatementChecks
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxHeadStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalAbstractionNormStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalAssignmentNormStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalAtomicAssignmentStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalBoundedDeltaStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalBoxBoundedStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalBoxControlStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalBoxPositiveStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalBoxStepStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalDescentNormStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalFirstFreeStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalGeneratedHeadStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalInfiniteCollapseStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalOmegaProductStatementChecks
+public import LogicLineages.OrdinalComparison.WWOriginalPartialNormStatementChecks
+public import LogicLineages.OrdinalComparison.WWQuerySyntaxCodeStatementChecks
+public import LogicLineages.OrdinalComparison.WWScalarPolicyWitnessStatementChecks
+public import LogicLineages.OrdinalComparison.WWScalarSyntaxCodeStatementChecks
+public import LogicLineages.OrdinalComparison.WWScalarTranslationStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceAssignmentProfileStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceClassesFullStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceCodedQueryStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceComparisonStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceFinitePositiveStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceForwardTranslationStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceMacroProfileStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourcePolynomialArithmeticStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourcePolynomialIndexStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourcePositivePolynomialStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceProfileStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceScalarHeadProfileStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceSyntaxQueryStatementChecks
+public import LogicLineages.OrdinalComparison.WWSourceTupleEvaluationStatementChecks
+public import LogicLineages.ComputabilityKnowledge.SourceCounterBoundBoxStatementChecks
+public import LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearchStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -720,6 +811,1086 @@ theorem checked_WWOriginalWeakPartial_fixed_originalPartialWeakAndValid :
 theorem checked_WWOriginalWeakReplacement_fixed_originalWeakReplacement :
     LogicLineages.OrdinalComparison.Source.Targets.OriginalWeakReplacement :=
   LogicLineages.OrdinalComparison.StatementChecks.fixed_originalWeakReplacement
+
+theorem checked_CotreeGrammarReconstruct_forestReconstruction :
+    LogicLineages.ModelsAlgebra.Forests.CotreeGrammarReconstruct.Targets.ForestReconstruction :=
+  LogicLineages.ModelsAlgebra.Forests.CotreeGrammarReconstruct.StatementChecks.forestReconstruction
+
+theorem checked_CotreeGrammarReconstruct_wordReconstruction :
+    LogicLineages.ModelsAlgebra.Forests.CotreeGrammarReconstruct.Targets.WordReconstruction :=
+  LogicLineages.ModelsAlgebra.Forests.CotreeGrammarReconstruct.StatementChecks.wordReconstruction
+
+theorem checked_CotreeMachineParikh_stateTransitionExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.Targets.StateTransitionExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.StatementChecks.stateTransitionExact
+
+theorem checked_CotreeMachineParikh_tableTransitionExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.Targets.TableTransitionExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.StatementChecks.tableTransitionExact
+
+theorem checked_CotreeMachineParikh_encodingRunExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.Targets.EncodingRunExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.StatementChecks.encodingRunExact
+
+theorem checked_CotreeMachineParikh_numberedTransitionExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.Targets.NumberedTransitionExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.StatementChecks.numberedTransitionExact
+
+theorem checked_CotreePresburgerAutomaton_nodeStepExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.Targets.NodeStepExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.StatementChecks.nodeStepExact
+
+theorem checked_CotreePresburgerAutomaton_runsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.Targets.RunsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.StatementChecks.runsExact
+
+theorem checked_CotreePresburgerAutomaton_runsDeterministic :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.Targets.RunsDeterministic :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.StatementChecks.runsDeterministic
+
+theorem checked_CotreePresburgerAutomaton_acceptanceExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.Targets.AcceptanceExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomaton.StatementChecks.acceptanceExact
+
+theorem checked_CotreePresburgerBoolean_sourceRunsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.Targets.SourceRunsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.StatementChecks.sourceRunsExact
+
+theorem checked_CotreePresburgerBoolean_sourceLanguageExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.Targets.SourceLanguageExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.StatementChecks.sourceLanguageExact
+
+theorem checked_CotreePresburgerBoolean_sourceComplete :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.Targets.SourceComplete :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.StatementChecks.sourceComplete
+
+theorem checked_CotreePresburgerBoolean_complementRunsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.Targets.ComplementRunsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.StatementChecks.complementRunsExact
+
+theorem checked_CotreePresburgerBoolean_complementLanguageExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.Targets.ComplementLanguageExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBoolean.StatementChecks.complementLanguageExact
+
+theorem checked_CotreePresburgerCompiler_compilationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.Targets.CompilationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.StatementChecks.compilationExact
+
+theorem checked_CotreePresburgerCompiler_formulaExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.Targets.FormulaExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.StatementChecks.formulaExact
+
+theorem checked_CotreePresburgerCompiler_evaluationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.Targets.EvaluationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.StatementChecks.evaluationExact
+
+theorem checked_CotreePresburgerCompiler_satisfiabilityExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.Targets.SatisfiabilityExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompiler.StatementChecks.satisfiabilityExact
+
+theorem checked_CotreePresburgerCountVector_countsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.Targets.CountsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.countsExact
+
+theorem checked_CotreePresburgerCountVector_lengthExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.Targets.LengthExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.lengthExact
+
+theorem checked_CotreePresburgerCountVector_membershipExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.Targets.MembershipExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.membershipExact
+
+theorem checked_CotreePresburgerCountVector_childrenExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.Targets.ChildrenExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.childrenExact
+
+theorem checked_CotreePresburgerCounts_wordCountsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCounts.Targets.WordCountsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCounts.StatementChecks.wordCountsExact
+
+theorem checked_CotreePresburgerCounts_formulaCountsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCounts.Targets.FormulaCountsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCounts.StatementChecks.formulaCountsExact
+
+theorem checked_CotreePresburgerDecision_quantifierEliminationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.Targets.QuantifierEliminationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.StatementChecks.quantifierEliminationExact
+
+theorem checked_CotreePresburgerDecision_evaluationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.Targets.EvaluationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.StatementChecks.evaluationExact
+
+theorem checked_CotreePresburgerDecision_closureExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.Targets.ClosureExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.StatementChecks.closureExact
+
+theorem checked_CotreePresburgerDecision_satisfiabilityExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.Targets.SatisfiabilityExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecision.StatementChecks.satisfiabilityExact
+
+theorem checked_CotreePresburgerExecutable_queryExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.QueryExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.queryExact
+
+theorem checked_CotreePresburgerExecutable_enabledExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.EnabledExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.enabledExact
+
+theorem checked_CotreePresburgerExecutable_reachableExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.ReachableExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.reachableExact
+
+theorem checked_CotreePresburgerExecutable_productiveExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.ProductiveExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.productiveExact
+
+theorem checked_CotreePresburgerExecutable_sourceEmptyExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.SourceEmptyExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.sourceEmptyExact
+
+theorem checked_CotreePresburgerExecutable_sourceInclusionExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.SourceInclusionExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.sourceInclusionExact
+
+theorem checked_CotreePresburgerFiniteDecision_encodedExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerFiniteDecision.Targets.EncodedExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerFiniteDecision.StatementChecks.encodedExact
+
+theorem checked_CotreePresburgerFiniteDecision_orderedExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerFiniteDecision.Targets.OrderedExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerFiniteDecision.StatementChecks.orderedExact
+
+theorem checked_CotreePresburgerGrammar_formulaGrammarExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerGrammar.Targets.FormulaGrammarExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerGrammar.StatementChecks.formulaGrammarExact
+
+theorem checked_CotreePresburgerLinear_termTranslationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinear.Targets.TermTranslationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinear.StatementChecks.termTranslationExact
+
+theorem checked_CotreePresburgerLinear_lastVariableSplitExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinear.Targets.LastVariableSplitExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinear.StatementChecks.lastVariableSplitExact
+
+theorem checked_CotreePresburgerLinear_substitutionExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinear.Targets.SubstitutionExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinear.StatementChecks.substitutionExact
+
+theorem checked_CotreePresburgerNormalize_coefficientModulusPositive :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.Targets.CoefficientModulusPositive :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.coefficientModulusPositive
+
+theorem checked_CotreePresburgerNormalize_adjustmentExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.Targets.AdjustmentExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.adjustmentExact
+
+theorem checked_CotreePresburgerNormalize_normalizationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.Targets.NormalizationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.normalizationExact
+
+theorem checked_CotreePresburgerNormalize_eliminationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.Targets.EliminationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.eliminationExact
+
+theorem checked_CotreePresburgerProduct_productRunsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.Targets.ProductRunsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.StatementChecks.productRunsExact
+
+theorem checked_CotreePresburgerProduct_productLanguageExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.Targets.ProductLanguageExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.StatementChecks.productLanguageExact
+
+theorem checked_CotreePresburgerProduct_productComplete :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.Targets.ProductComplete :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.StatementChecks.productComplete
+
+theorem checked_CotreePresburgerProduct_differenceLanguageExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.Targets.DifferenceLanguageExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.StatementChecks.differenceLanguageExact
+
+theorem checked_CotreePresburgerProduct_inclusionToEmpty :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.Targets.InclusionToEmpty :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.StatementChecks.inclusionToEmpty
+
+theorem checked_CotreePresburgerProduct_sourceInclusionToEmpty :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.Targets.SourceInclusionToEmpty :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProduct.StatementChecks.sourceInclusionToEmpty
+
+theorem checked_CotreePresburgerProductive_enabledListExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.Targets.EnabledListExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.StatementChecks.enabledListExact
+
+theorem checked_CotreePresburgerProductive_reachableHeightExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.Targets.ReachableHeightExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.StatementChecks.reachableHeightExact
+
+theorem checked_CotreePresburgerProductive_saturation :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.Targets.Saturation :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.StatementChecks.saturation
+
+theorem checked_CotreePresburgerProductive_runProductiveExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.Targets.RunProductiveExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.StatementChecks.runProductiveExact
+
+theorem checked_CotreePresburgerProductive_acceptingProductiveExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.Targets.AcceptingProductiveExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.StatementChecks.acceptingProductiveExact
+
+theorem checked_CotreePresburgerProductive_sourceDifferenceEmptyExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.Targets.SourceDifferenceEmptyExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductive.StatementChecks.sourceDifferenceEmptyExact
+
+theorem checked_CotreePresburgerProjection_projectedWordCounts :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjection.Targets.ProjectedWordCounts :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjection.StatementChecks.projectedWordCounts
+
+theorem checked_CotreePresburgerProjection_wordTotalCounts :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjection.Targets.WordTotalCounts :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjection.StatementChecks.wordTotalCounts
+
+theorem checked_CotreePresburgerProjection_allowedWordCounts :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjection.Targets.AllowedWordCounts :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjection.StatementChecks.allowedWordCounts
+
+theorem checked_CotreePresburgerPullback_wordCountsEqCount :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.Targets.WordCountsEqCount :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.StatementChecks.wordCountsEqCount
+
+theorem checked_CotreePresburgerPullback_pushWordCountsExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.Targets.PushWordCountsExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.StatementChecks.pushWordCountsExact
+
+theorem checked_CotreePresburgerPullback_pullFormulaExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.Targets.PullFormulaExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.StatementChecks.pullFormulaExact
+
+theorem checked_CotreePresburgerPullback_pullWordExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.Targets.PullWordExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullback.StatementChecks.pullWordExact
+
+theorem checked_CotreePresburgerUnit_periodPositive :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Targets.PeriodPositive :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.periodPositive
+
+theorem checked_CotreePresburgerUnit_instantiationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Targets.InstantiationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.instantiationExact
+
+theorem checked_CotreePresburgerUnit_unitEliminationExact :
+    LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Targets.UnitEliminationExact :=
+  LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.unitEliminationExact
+
+theorem checked_ForestParikhProfile_profileFormulaExact :
+    LogicLineages.ModelsAlgebra.Forests.ForestParikhProfile.Targets.ProfileFormulaExact :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParikhProfile.StatementChecks.profileFormulaExact
+
+theorem checked_ForestParikhTransition_stateSetTransport :
+    LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.StateSetTransport :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.stateSetTransport
+
+theorem checked_ForestParikhTransition_childCountTransport :
+    LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.ChildCountTransport :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.childCountTransport
+
+theorem checked_ForestParikhTransition_numberedParikhExact :
+    LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.NumberedParikhExact :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.numberedParikhExact
+
+theorem checked_ForestParikhTransition_semanticCompleteness :
+    LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.SemanticCompleteness :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.semanticCompleteness
+
+theorem checked_RankedIdealAutomata_closureExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.Targets.ClosureExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.closureExact
+
+theorem checked_RankedIdealAutomata_evaluationExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.Targets.EvaluationExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.evaluationExact
+
+theorem checked_RankedIdealAutomata_runCalibration :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.Targets.RunCalibration :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.runCalibration
+
+theorem checked_RankedIdealAutomata_determinizationExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.Targets.DeterminizationExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomata.StatementChecks.determinizationExact
+
+theorem checked_RankedIdealCodeOrder_stateOrderExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrder.Targets.StateOrderExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrder.StatementChecks.stateOrderExact
+
+theorem checked_RankedIdealCodeOrder_inclusionExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrder.Targets.InclusionExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrder.StatementChecks.inclusionExact
+
+theorem checked_RankedIdealCompletion_productiveExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.Targets.ProductiveExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.StatementChecks.productiveExact
+
+theorem checked_RankedIdealCompletion_runExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.Targets.RunExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.StatementChecks.runExact
+
+theorem checked_RankedIdealCompletion_acceptanceExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.Targets.AcceptanceExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.StatementChecks.acceptanceExact
+
+theorem checked_RankedIdealCompletion_runProductive :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.Targets.RunProductive :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletion.StatementChecks.runProductive
+
+theorem checked_RankedIdealComponents_reachLanguageInclusion :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.Targets.ReachLanguageInclusion :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.reachLanguageInclusion
+
+theorem checked_RankedIdealComponents_componentLanguageEquality :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.Targets.ComponentLanguageEquality :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.componentLanguageEquality
+
+theorem checked_RankedIdealComponents_stateLanguageDownward :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.Targets.StateLanguageDownward :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.stateLanguageDownward
+
+theorem checked_RankedIdealComponents_nonlinearIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.Targets.NonlinearIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.nonlinearIdeal
+
+theorem checked_RankedIdealConstructors_productIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructors.Targets.ProductIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructors.StatementChecks.productIdeal
+
+theorem checked_RankedIdealConstructors_linearPieceIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructors.Targets.LinearPieceIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructors.StatementChecks.linearPieceIdeal
+
+theorem checked_RankedIdealConstructors_contextSupport :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructors.Targets.ContextSupport :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructors.StatementChecks.contextSupport
+
+theorem checked_RankedIdealContext_embeddingReflexive :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.Targets.EmbeddingReflexive :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.StatementChecks.embeddingReflexive
+
+theorem checked_RankedIdealContext_embeddingTransitive :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.Targets.EmbeddingTransitive :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.StatementChecks.embeddingTransitive
+
+theorem checked_RankedIdealContext_plugMonotone :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.Targets.PlugMonotone :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.StatementChecks.plugMonotone
+
+theorem checked_RankedIdealContext_holeEmbeds :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.Targets.HoleEmbeds :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.StatementChecks.holeEmbeds
+
+theorem checked_RankedIdealContext_plugComposition :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.Targets.PlugComposition :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealContext.StatementChecks.plugComposition
+
+theorem checked_RankedIdealCoverAssembly_piecesIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverAssembly.Targets.PiecesIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverAssembly.StatementChecks.piecesIdeal
+
+theorem checked_RankedIdealCoverAssembly_piecesExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverAssembly.Targets.PiecesExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverAssembly.StatementChecks.piecesExact
+
+theorem checked_RankedIdealCover_nonlinearExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.Targets.NonlinearExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.StatementChecks.nonlinearExact
+
+theorem checked_RankedIdealCover_piecesCorrect :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.Targets.PiecesCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.StatementChecks.piecesCorrect
+
+theorem checked_RankedIdealCover_coverCorrect :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.Targets.CoverCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.StatementChecks.coverCorrect
+
+theorem checked_RankedIdealCover_emptyExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.Targets.EmptyExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealCover.StatementChecks.emptyExact
+
+theorem checked_RankedIdealFinite_successorsExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.Targets.SuccessorsExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.StatementChecks.successorsExact
+
+theorem checked_RankedIdealFinite_closureExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.Targets.ClosureExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.StatementChecks.closureExact
+
+theorem checked_RankedIdealFinite_evaluationExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.Targets.EvaluationExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.StatementChecks.evaluationExact
+
+theorem checked_RankedIdealFinite_acceptanceExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.Targets.AcceptanceExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealFinite.StatementChecks.acceptanceExact
+
+theorem checked_RankedIdealForestDecision_forestDecisionExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.Targets.ForestDecisionExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.StatementChecks.forestDecisionExact
+
+theorem checked_RankedIdealForestInput_encodedGraphExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.Targets.EncodedGraphExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.StatementChecks.encodedGraphExact
+
+theorem checked_RankedIdealForestInput_avoidanceExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.Targets.AvoidanceExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.StatementChecks.avoidanceExact
+
+theorem checked_RankedIdealForestInput_forestJEPExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.Targets.ForestJEPExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.StatementChecks.forestJEPExact
+
+theorem checked_RankedIdealGraphDecision_graphDecisionExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecision.Targets.GraphDecisionExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecision.StatementChecks.graphDecisionExact
+
+theorem checked_RankedIdealImageInclusion_imageInclusionExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion.Targets.ImageInclusionExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion.StatementChecks.imageInclusionExact
+
+theorem checked_RankedIdealMachine_runCalibration :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealMachine.Targets.RunCalibration :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealMachine.StatementChecks.runCalibration
+
+theorem checked_RankedIdealMachine_languageExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealMachine.Targets.LanguageExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealMachine.StatementChecks.languageExact
+
+theorem checked_RankedIdealRank_reachReflexive :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.Targets.ReachReflexive :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.StatementChecks.reachReflexive
+
+theorem checked_RankedIdealRank_reachTransitive :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.Targets.ReachTransitive :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.StatementChecks.reachTransitive
+
+theorem checked_RankedIdealRank_componentRank :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.Targets.ComponentRank :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.StatementChecks.componentRank
+
+theorem checked_RankedIdealRank_lowerRank :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.Targets.LowerRank :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.StatementChecks.lowerRank
+
+theorem checked_RankedIdealRank_predecessorCases :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.Targets.PredecessorCases :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.StatementChecks.predecessorCases
+
+theorem checked_RankedIdealRank_linearChildren :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.Targets.LinearChildren :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRank.StatementChecks.linearChildren
+
+theorem checked_RankedIdealRegularClosure_downwardStarExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularClosure.Targets.DownwardStarExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularClosure.StatementChecks.downwardStarExact
+
+theorem checked_RankedIdealRegularClosure_compiledLinearIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularClosure.Targets.CompiledLinearIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularClosure.StatementChecks.compiledLinearIdeal
+
+theorem checked_RankedIdealRegularCode_atomExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.AtomExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.atomExact
+
+theorem checked_RankedIdealRegularCode_atomIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.AtomIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.atomIdeal
+
+theorem checked_RankedIdealRegularCode_componentExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.ComponentExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.componentExact
+
+theorem checked_RankedIdealRegularCode_productExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.ProductExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.productExact
+
+theorem checked_RankedIdealRegularCode_linearExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.LinearExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.linearExact
+
+theorem checked_RankedIdealRegularCode_productIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.ProductIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.productIdeal
+
+theorem checked_RankedIdealRegularCode_linearIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.LinearIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.linearIdeal
+
+theorem checked_RankedIdealRegularCode_componentIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.Targets.ComponentIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCode.StatementChecks.componentIdeal
+
+theorem checked_RankedIdealRegularEnumeration_pairsComplete :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumeration.Targets.PairsComplete :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumeration.StatementChecks.pairsComplete
+
+theorem checked_RankedIdealRegularEnumeration_setsExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumeration.Targets.SetsExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumeration.StatementChecks.setsExact
+
+theorem checked_RankedIdealRegularEnumeration_functionsComplete :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumeration.Targets.FunctionsComplete :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumeration.StatementChecks.functionsComplete
+
+theorem checked_RankedIdealRegularProduct_productExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularProduct.Targets.ProductExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularProduct.StatementChecks.productExact
+
+theorem checked_RankedIdealRegularProduct_downwardProductExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularProduct.Targets.DownwardProductExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularProduct.StatementChecks.downwardProductExact
+
+theorem checked_RankedIdealRegularState_stateLanguageExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularState.Targets.StateLanguageExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularState.StatementChecks.stateLanguageExact
+
+theorem checked_RankedIdealRegularState_compiledNonlinearIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularState.Targets.CompiledNonlinearIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularState.StatementChecks.compiledNonlinearIdeal
+
+theorem checked_RankedIdealRegular_runCalibration :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegular.Targets.RunCalibration :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegular.StatementChecks.runCalibration
+
+theorem checked_RankedIdealRegular_starExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealRegular.Targets.StarExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealRegular.StatementChecks.starExact
+
+theorem checked_RankedIdealSourceCode_sourceCodeExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.Targets.SourceCodeExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.StatementChecks.sourceCodeExact
+
+theorem checked_RankedIdealSourceCode_sourceCoverIdeals :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.Targets.SourceCoverIdeals :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.StatementChecks.sourceCoverIdeals
+
+theorem checked_RankedIdealSourceCode_sourceCoverExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.Targets.SourceCoverExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.StatementChecks.sourceCoverExact
+
+theorem checked_RankedIdealSourceCode_sourceCoverEmpty :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.Targets.SourceCoverEmpty :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCode.StatementChecks.sourceCoverEmpty
+
+theorem checked_RankedIdealSpineCode_framesExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.Targets.FramesExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.StatementChecks.framesExact
+
+theorem checked_RankedIdealSpineCode_seedsIdeal :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.Targets.SeedsIdeal :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.StatementChecks.seedsIdeal
+
+theorem checked_RankedIdealSpineCode_seedsSound :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.Targets.SeedsSound :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.StatementChecks.seedsSound
+
+theorem checked_RankedIdealSpineCode_entriesCovered :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.Targets.EntriesCovered :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCode.StatementChecks.entriesCovered
+
+theorem checked_RankedIdealSpine_entrySound :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpine.Targets.EntrySound :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpine.StatementChecks.entrySound
+
+theorem checked_RankedIdealSpine_frameSound :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpine.Targets.FrameSound :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpine.StatementChecks.frameSound
+
+theorem checked_RankedIdealSpine_linearSpineExact :
+    LogicLineages.ModelsAlgebra.Forests.RankedIdealSpine.Targets.LinearSpineExact :=
+  LogicLineages.ModelsAlgebra.Forests.RankedIdealSpine.StatementChecks.linearSpineExact
+
+theorem checked_WWClosedPositiveEvaluation_fixed_closedPositiveEvaluationSound :
+    LogicLineages.OrdinalComparison.Source.Targets.ClosedPositiveEvaluationSound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_closedPositiveEvaluationSound
+
+theorem checked_WWClosedPositiveEvaluation_fixed_generatedClosedPositiveEvaluationTotal :
+    LogicLineages.OrdinalComparison.Source.Targets.GeneratedClosedPositiveEvaluationTotal :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_generatedClosedPositiveEvaluationTotal
+
+theorem checked_WWCompiledVector_fixed_compiledVectorSound :
+    LogicLineages.OrdinalComparison.Source.Targets.CompiledVectorSound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_compiledVectorSound
+
+theorem checked_WWCompiledVector_fixed_generatedGroundVectorCompilationTotal :
+    LogicLineages.OrdinalComparison.Source.Targets.GeneratedGroundVectorCompilationTotal :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_generatedGroundVectorCompilationTotal
+
+theorem checked_WWCompiledVector_fixed_actualSourceVectorCompilation :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualSourceVectorCompilation :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceVectorCompilation
+
+theorem checked_WWEffectiveFrontend_fixed_effectiveFrontendCounterEnumerable :
+    LogicLineages.OrdinalComparison.Source.Targets.EffectiveFrontendCounterEnumerable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_effectiveFrontendCounterEnumerable
+
+theorem checked_WWEffectiveFrontend_fixed_effectiveFrontendDecisionIffCoordinateBound :
+    LogicLineages.OrdinalComparison.Source.Targets.EffectiveFrontendDecisionIffCoordinateBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_effectiveFrontendDecisionIffCoordinateBound
+
+theorem checked_WWEncodedBaseTwo_fixed_rawSubtractOneCodeCorrect :
+    LogicLineages.OrdinalComparison.Targets.RawSubtractOneCodeCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_rawSubtractOneCodeCorrect
+
+theorem checked_WWEncodedBaseTwo_fixed_rawSubtractOneCodePrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Targets.RawSubtractOneCodePrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_rawSubtractOneCodePrimitiveRecursive
+
+theorem checked_WWEncodedBaseTwo_fixed_rawSplitPrimeCodeCorrect :
+    LogicLineages.OrdinalComparison.Targets.RawSplitPrimeCodeCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_rawSplitPrimeCodeCorrect
+
+theorem checked_WWEncodedBaseTwo_fixed_rawSplitPrimeCodePrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Targets.RawSplitPrimeCodePrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_rawSplitPrimeCodePrimitiveRecursive
+
+theorem checked_WWEncodedBaseTwo_fixed_encodedBaseTwoPowerCorrect :
+    LogicLineages.OrdinalComparison.Targets.EncodedBaseTwoPowerCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedBaseTwoPowerCorrect
+
+theorem checked_WWEncodedBaseTwo_fixed_encodedBaseTwoPowerPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Targets.EncodedBaseTwoPowerPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedBaseTwoPowerPrimitiveRecursive
+
+theorem checked_WWEncodedClosedPositive_fixed_encodedClosedPositiveCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedClosedPositiveCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedClosedPositiveCorrect
+
+theorem checked_WWEncodedClosedPositive_fixed_encodedClosedPositivePrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedClosedPositivePrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedClosedPositivePrimitiveRecursive
+
+theorem checked_WWEncodedClosedPositive_fixed_encodedClosedHeadCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedClosedHeadCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedClosedHeadCorrect
+
+theorem checked_WWEncodedClosedPositive_fixed_encodedClosedHeadPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedClosedHeadPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedClosedHeadPrimitiveRecursive
+
+theorem checked_WWEncodedComparison_fixed_positiveComparisonPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.PositiveComparisonPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_positiveComparisonPrimitiveRecursive
+
+theorem checked_WWEncodedComparison_fixed_positiveComparisonSourceCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.PositiveComparisonSourceCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_positiveComparisonSourceCorrect
+
+theorem checked_WWEncodedComparison_fixed_encodedQueryAtComputable :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedQueryAtComputable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedQueryAtComputable
+
+theorem checked_WWEncodedComparison_fixed_encodedQueryAtSourceCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedQueryAtSourceCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedQueryAtSourceCorrect
+
+theorem checked_WWEncodedCounterBound_fixed_encodedQueryCodecCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedQueryCodecCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedQueryCodecCorrect
+
+theorem checked_WWEncodedCounterBound_fixed_encodedQueryCounterEnumerable :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedQueryCounterEnumerable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedQueryCounterEnumerable
+
+theorem checked_WWEncodedCounterBound_fixed_encodedQueryDecisionIffCoordinateBound :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedQueryDecisionIffCoordinateBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedQueryDecisionIffCoordinateBound
+
+theorem checked_WWEncodedScalar_fixed_scalarCodeInstantiationPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarCodeInstantiationPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarCodeInstantiationPrimitiveRecursive
+
+theorem checked_WWEncodedScalar_fixed_scalarCodeInstantiationCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarCodeInstantiationCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarCodeInstantiationCorrect
+
+theorem checked_WWEncodedScalar_fixed_encodedScalarComputable :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedScalarComputable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedScalarComputable
+
+theorem checked_WWEncodedScalar_fixed_encodedScalarSourceCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.EncodedScalarSourceCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_encodedScalarSourceCorrect
+
+theorem checked_WWFixedShift_fixed_closedPositiveValuePositive :
+    LogicLineages.OrdinalComparison.Source.Targets.ClosedPositiveValuePositive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_closedPositiveValuePositive
+
+theorem checked_WWFixedShift_fixed_scalarFixedHeadAdmissible :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarFixedHeadAdmissible :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarFixedHeadAdmissible
+
+theorem checked_WWFixedShift_fixed_scalarFixedShiftComputable :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarFixedShiftComputable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarFixedShiftComputable
+
+theorem checked_WWGroundTuple_fixed_groundPositiveTupleComplete :
+    LogicLineages.OrdinalComparison.Source.Targets.GroundPositiveTupleComplete :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_groundPositiveTupleComplete
+
+theorem checked_WWGroundTuple_fixed_groundTuplePositive :
+    LogicLineages.OrdinalComparison.Source.Targets.GroundTuplePositive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_groundTuplePositive
+
+theorem checked_WWGroundTuple_fixed_emptyContextTupleUnique :
+    LogicLineages.OrdinalComparison.Source.Targets.EmptyContextTupleUnique :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_emptyContextTupleUnique
+
+theorem checked_WWOrdinalSyntaxCode_fixed_ordinalSyntaxFoldCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxFoldCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxFoldCorrect
+
+theorem checked_WWOrdinalSyntaxCode_fixed_ordinalSyntaxFoldPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxFoldPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxFoldPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxExtraction_fixed_ordinalSyntaxExtractionCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxExtractionCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxExtractionCorrect
+
+theorem checked_WWOrdinalSyntaxExtraction_fixed_ordinalSyntaxExtractionPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxExtractionPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxExtractionPrimitiveRecursive
+
+theorem checked_WWOrdinalSyntaxHead_fixed_ordinalSyntaxHeadFreeCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxHeadFreeCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxHeadFreeCorrect
+
+theorem checked_WWOrdinalSyntaxHead_fixed_ordinalSyntaxHeadClosureCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxHeadClosureCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxHeadClosureCorrect
+
+theorem checked_WWOrdinalSyntaxHead_fixed_ordinalSyntaxPartialSizeCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxPartialSizeCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxPartialSizeCorrect
+
+theorem checked_WWOrdinalSyntaxHead_fixed_ordinalSyntaxHeadOperationsPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.OrdinalSyntaxHeadOperationsPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxHeadOperationsPrimitiveRecursive
+
+theorem checked_WWOriginalAbstractionNorm_fixed_originalHeadClosureVectorBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalHeadClosureVectorBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalHeadClosureVectorBounded
+
+theorem checked_WWOriginalAbstractionNorm_fixed_originalSourceAbstractionBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalSourceAbstractionBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalSourceAbstractionBounded
+
+theorem checked_WWOriginalAssignmentNorm_fixed_originalSourceApplicationBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalSourceApplicationBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalSourceApplicationBounded
+
+theorem checked_WWOriginalAssignmentNorm_fixed_originalSourceAssignmentBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalSourceAssignmentBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalSourceAssignmentBounded
+
+theorem checked_WWOriginalAtomicAssignment_fixed_originalVariableAssignmentBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalVariableAssignmentBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalVariableAssignmentBounded
+
+theorem checked_WWOriginalAtomicAssignment_fixed_originalOneVectorBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalOneVectorBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalOneVectorBounded
+
+theorem checked_WWOriginalAtomicAssignment_fixed_originalRecursorAssignmentBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalRecursorAssignmentBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalRecursorAssignmentBounded
+
+theorem checked_WWOriginalBoundedDelta_fixed_originalBoundedVectorSupportBridge :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoundedVectorSupportBridge :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoundedVectorSupportBridge
+
+theorem checked_WWOriginalBoundedDelta_fixed_originalDeltaPreservesBoundedNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalDeltaPreservesBoundedNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalDeltaPreservesBoundedNorm
+
+theorem checked_WWOriginalBoxBounded_fixed_originalBoxTailGradeAndNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoxTailGradeAndNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxTailGradeAndNorm
+
+theorem checked_WWOriginalBoxBounded_fixed_originalSourceBoxBounded :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalSourceBoxBounded :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalSourceBoxBounded
+
+theorem checked_WWOriginalBoxControl_fixed_originalBoxNumericalStep :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoxNumericalStep :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxNumericalStep
+
+theorem checked_WWOriginalBoxControl_fixed_originalBoxControlEnvelope :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoxControlEnvelope :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxControlEnvelope
+
+theorem checked_WWOriginalBoxPositive_fixed_originalBoxPositiveGrade :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoxPositiveGrade :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxPositiveGrade
+
+theorem checked_WWOriginalBoxPositive_fixed_originalBoxPositiveNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoxPositiveNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxPositiveNorm
+
+theorem checked_WWOriginalBoxStep_fixed_actualNaturalProductUpperNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualNaturalProductUpperNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualNaturalProductUpperNorm
+
+theorem checked_WWOriginalBoxStep_fixed_originalBoxStepNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalBoxStepNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoxStepNorm
+
+theorem checked_WWOriginalDescentNorm_fixed_originalAddChildNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalAddChildNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalAddChildNorm
+
+theorem checked_WWOriginalDescentNorm_fixed_originalExpChildNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalExpChildNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalExpChildNorm
+
+theorem checked_WWOriginalDescentNorm_fixed_originalCollapseChildNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalCollapseChildNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalCollapseChildNorm
+
+theorem checked_WWOriginalFirstFree_fixed_originalFirstFreeEndpoint :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeEndpoint :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeEndpoint
+
+theorem checked_WWOriginalFirstFree_fixed_originalFirstFreeGrade :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeGrade :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeGrade
+
+theorem checked_WWOriginalFirstFree_fixed_originalFirstFreeBound :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeBound
+
+theorem checked_WWOriginalGeneratedHead_fixed_originalFreeAmbientHead :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalFreeAmbientHead :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFreeAmbientHead
+
+theorem checked_WWOriginalGeneratedHead_fixed_originalGeneratedAmbientHead :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalGeneratedAmbientHead :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalGeneratedAmbientHead
+
+theorem checked_WWOriginalInfiniteCollapse_fixed_actualInfiniteCollapseControlLower :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualInfiniteCollapseControlLower :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualInfiniteCollapseControlLower
+
+theorem checked_WWOriginalOmegaProduct_fixed_actualOmegaNaturalProductInfinite :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualOmegaNaturalProductInfinite :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualOmegaNaturalProductInfinite
+
+theorem checked_WWOriginalPartialNorm_fixed_originalPartialNormFromFreeBudget :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalPartialNormFromFreeBudget :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalPartialNormFromFreeBudget
+
+theorem checked_WWOriginalPartialNorm_fixed_originalVectorPartialNorm :
+    LogicLineages.OrdinalComparison.Source.Targets.OriginalVectorPartialNorm :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_originalVectorPartialNorm
+
+theorem checked_WWQuerySyntaxCode_fixed_vectorSyntaxNormalizationCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.VectorSyntaxNormalizationCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_vectorSyntaxNormalizationCorrect
+
+theorem checked_WWQuerySyntaxCode_fixed_querySyntaxNormalizationCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.QuerySyntaxNormalizationCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_querySyntaxNormalizationCorrect
+
+theorem checked_WWQuerySyntaxCode_fixed_querySyntaxNormalizationPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.QuerySyntaxNormalizationPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_querySyntaxNormalizationPrimitiveRecursive
+
+theorem checked_WWQuerySyntaxCode_fixed_syntaxQueryComputable :
+    LogicLineages.OrdinalComparison.Source.Targets.SyntaxQueryComputable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_syntaxQueryComputable
+
+theorem checked_WWScalarPolicyWitness_fixed_actualScalarWitnessPolynomialSound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualScalarWitnessPolynomialSound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualScalarWitnessPolynomialSound
+
+theorem checked_WWScalarPolicyWitness_fixed_actualClosedScalarPolicySeparation :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualClosedScalarPolicySeparation :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualClosedScalarPolicySeparation
+
+theorem checked_WWScalarSyntaxCode_fixed_scalarSyntaxNormalizationCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarSyntaxNormalizationCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarSyntaxNormalizationCorrect
+
+theorem checked_WWScalarSyntaxCode_fixed_scalarSyntaxNormalizationPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarSyntaxNormalizationPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarSyntaxNormalizationPrimitiveRecursive
+
+theorem checked_WWScalarSyntaxCode_fixed_scalarSyntaxValueComputable :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarSyntaxValueComputable :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarSyntaxValueComputable
+
+theorem checked_WWScalarSyntaxCode_fixed_scalarSyntaxValueSourceCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarSyntaxValueSourceCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarSyntaxValueSourceCorrect
+
+theorem checked_WWScalarTranslation_fixed_scalarTranslationSound :
+    LogicLineages.OrdinalComparison.Source.Targets.ScalarTranslationSound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_scalarTranslationSound
+
+theorem checked_WWScalarTranslation_fixed_generatedGroundScalarTranslationTotal :
+    LogicLineages.OrdinalComparison.Source.Targets.GeneratedGroundScalarTranslationTotal :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_generatedGroundScalarTranslationTotal
+
+theorem checked_WWSourceAssignmentProfile_fixed_actualRecursorFreeAssignmentNoOmega :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualRecursorFreeAssignmentNoOmega :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRecursorFreeAssignmentNoOmega
+
+theorem checked_WWSourceAssignmentProfile_fixed_actualInternalLevelAssignmentHeight :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualInternalLevelAssignmentHeight :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualInternalLevelAssignmentHeight
+
+theorem checked_WWSourceClassesFull_fixed_actualSourceClasses :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualSourceClasses :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceClasses
+
+theorem checked_WWSourceCodedQuery_fixed_actualSourceCodedQuery :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualSourceCodedQuery :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceCodedQuery
+
+theorem checked_WWSourceComparison_fixed_compiledQueryPointCorrect :
+    LogicLineages.OrdinalComparison.Source.Targets.CompiledQueryPointCorrect :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_compiledQueryPointCorrect
+
+theorem checked_WWSourceComparison_fixed_actualSourceQueryCompilation :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualSourceQueryCompilation :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceQueryCompilation
+
+theorem checked_WWSourceFinitePositive_fixed_finitePositiveValueSound :
+    LogicLineages.OrdinalComparison.Source.Targets.FinitePositiveValueSound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_finitePositiveValueSound
+
+theorem checked_WWSourceFinitePositive_fixed_generatedNoOmegaFinitePositive :
+    LogicLineages.OrdinalComparison.Source.Targets.GeneratedNoOmegaFinitePositive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_generatedNoOmegaFinitePositive
+
+theorem checked_WWSourceFinitePositive_fixed_actualRecursorFreePositiveFinite :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualRecursorFreePositiveFinite :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRecursorFreePositiveFinite
+
+theorem checked_WWSourceForwardTranslation_fixed_actualSourceForwardTranslation :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualSourceForwardTranslation :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceForwardTranslation
+
+theorem checked_WWSourceMacroProfile_fixed_sourceBoxNoOmega :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceBoxNoOmega :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceBoxNoOmega
+
+theorem checked_WWSourceMacroProfile_fixed_sourceBoxHeadHeight :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceBoxHeadHeight :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceBoxHeadHeight
+
+theorem checked_WWSourceMacroProfile_fixed_sourceAbstractionNoOmega :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceAbstractionNoOmega :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceAbstractionNoOmega
+
+theorem checked_WWSourceMacroProfile_fixed_sourceAbstractionHeadHeight :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceAbstractionHeadHeight :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceAbstractionHeadHeight
+
+theorem checked_WWSourcePolynomialArithmetic_fixed_sourceNaturalSumPowerClosure :
+    LogicLineages.OrdinalComparison.Targets.SourceNaturalSumPowerClosure :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceNaturalSumPowerClosure
+
+theorem checked_WWSourcePolynomialArithmetic_fixed_sourceNaturalProductPolynomialClosure :
+    LogicLineages.OrdinalComparison.Targets.SourceNaturalProductPolynomialClosure :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceNaturalProductPolynomialClosure
+
+theorem checked_WWSourcePolynomialArithmetic_fixed_sourceBaseTwoLinearPolynomial :
+    LogicLineages.OrdinalComparison.Targets.SourceBaseTwoLinearPolynomial :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceBaseTwoLinearPolynomial
+
+theorem checked_WWSourcePolynomialIndex_fixed_sourcePolynomialIndexLimit :
+    LogicLineages.OrdinalComparison.Targets.SourcePolynomialIndexLimit :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourcePolynomialIndexLimit
+
+theorem checked_WWSourcePositivePolynomial_fixed_positiveHeightZeroLinearBound :
+    LogicLineages.OrdinalComparison.Source.Targets.PositiveHeightZeroLinearBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_positiveHeightZeroLinearBound
+
+theorem checked_WWSourcePositivePolynomial_fixed_positiveHeightOnePolynomialBound :
+    LogicLineages.OrdinalComparison.Source.Targets.PositiveHeightOnePolynomialBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_positiveHeightOnePolynomialBound
+
+theorem checked_WWSourceProfile_fixed_sourceHeadClosureProfile :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceHeadClosureProfile :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceHeadClosureProfile
+
+theorem checked_WWSourceProfile_fixed_sourcePartialNoOmega :
+    LogicLineages.OrdinalComparison.Source.Targets.SourcePartialNoOmega :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourcePartialNoOmega
+
+theorem checked_WWSourceProfile_fixed_sourcePartialHeadHeight :
+    LogicLineages.OrdinalComparison.Source.Targets.SourcePartialHeadHeight :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourcePartialHeadHeight
+
+theorem checked_WWSourceScalarHeadProfile_fixed_extractedPositiveHeadProfile :
+    LogicLineages.OrdinalComparison.Source.Targets.ExtractedPositiveHeadProfile :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_extractedPositiveHeadProfile
+
+theorem checked_WWSourceScalarHeadProfile_fixed_compiledScalarHeadProfile :
+    LogicLineages.OrdinalComparison.Source.Targets.CompiledScalarHeadProfile :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_compiledScalarHeadProfile
+
+theorem checked_WWSourceScalarHeadProfile_fixed_actualLevelTwoSourceHeadProfile :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualLevelTwoSourceHeadProfile :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLevelTwoSourceHeadProfile
+
+theorem checked_WWSourceSyntaxQuery_fixed_sourceSyntaxQueryNormalization :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceSyntaxQueryNormalization :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceSyntaxQueryNormalization
+
+theorem checked_WWSourceSyntaxQuery_fixed_sourceSyntaxCodeNormalization :
+    LogicLineages.OrdinalComparison.Source.Targets.SourceSyntaxCodeNormalization :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_sourceSyntaxCodeNormalization
+
+theorem checked_WWSourceSyntaxQuery_fixed_aritySyntaxNormalizationPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.Targets.AritySyntaxNormalizationPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_aritySyntaxNormalizationPrimitiveRecursive
+
+theorem checked_WWSourceTupleEvaluation_fixed_actualSourceTupleEvaluation :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualSourceTupleEvaluation :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceTupleEvaluation
+
+theorem checked_SourceCounterBoundBox_fixed_counterBoundBoxMembership :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundBox.Targets.BoxMembership :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundBoxMembership
+
+theorem checked_SourceCounterBoundBox_fixed_counterBoundBoxComputable :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundBox.Targets.BoxComputable :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundBoxComputable
+
+theorem checked_SourceCounterBoundBox_fixed_counterBoundRadiusComputable :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundBox.Targets.RadiusComputable :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundRadiusComputable
+
+theorem checked_SourceCounterBoundBox_fixed_counterBoundRadiusCorrect :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundBox.Targets.RadiusCorrect :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundRadiusCorrect
+
+theorem checked_SourceCounterBoundBox_fixed_counterBoundBoxExhaustive :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundBox.Targets.Exhaustive :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundBoxExhaustive
+
+theorem checked_SourceCounterBoundSearch_fixed_counterBoundComplementEnumerable :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearch.Targets.ComplementEnumerable :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundComplementEnumerable
+
+theorem checked_SourceCounterBoundSearch_fixed_counterBoundDecisionIffBound :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearch.Targets.DecisionIffBound :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundDecisionIffBound
+
+theorem checked_SourceCounterBoundSearch_fixed_counterBoundPrefixComputable :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearch.Targets.PrefixComputable :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundPrefixComputable
+
+theorem checked_SourceCounterBoundSearch_fixed_counterBoundPrefixCorrect :
+    LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearch.Targets.PrefixCorrect :=
+  LogicLineages.ComputabilityKnowledge.StatementChecks.fixed_counterBoundPrefixCorrect
 
 end LogicLineages.Repair20261031Checks
 

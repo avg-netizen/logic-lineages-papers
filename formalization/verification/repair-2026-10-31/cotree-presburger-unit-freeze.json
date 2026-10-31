@@ -1,0 +1,30 @@
+{
+  "source_commit": "09164be23fc7229dfee069ba3aca297c9f0bb01d",
+  "source_file": "03-joint-embedding-finite-forests/decision.tex",
+  "source_sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5",
+  "source_label": "lem:presburger-inclusion \u2014 guarded unit-coefficient finite-cutpoint QE prerequisite",
+  "scope": "Genuine finite elimination of one Nat quantifier over arbitrary Boolean unit/zero-coefficient affine order and positive-divisibility atoms. Explicit y>=0 guard and cutoff0; arbitrary Int prefix valuation. Not yet arbitrary-coefficient/full-syntax decision.",
+  "status": "prerequisite comparator and independent exact source review passed before candidate",
+  "frozen_at_utc": "2026-10-31T05:36:53.442892+00:00",
+  "candidate_absent_at_freeze": true,
+  "candidate_path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitProof.lean",
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnitStatementChecks",
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.periodPositive",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.instantiationExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.StatementChecks.unitEliminationExact"
+  ],
+  "sha256": {
+    "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitDefinitions.lean": "d1110c12e9266f1ee9f4c11ecb383188905dadb36c941dc3c2f95fd87e182784",
+    "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitTargets.lean": "05dcb6f46a0fe5fe37f63d556db0dff741f7c03dc396a0fe26bc4ca5661620be",
+    "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitStatementChecks.lean": "0c3820462cbbe364101b016be43d336ed159a16ed6744db1300ac705d84f442d"
+  },
+  "comparator_receipt": "1793424852610809205-14",
+  "independent_source_review": "review_resumed_source_coverage exact literal Definitions/Targets PASS 2026-10-31T05:36:11Z; cutoff0/guard, all inequalities below negation, every positive modulus verified.",
+  "references": [
+    "https://www.cs.cmu.edu/~emc/spring06/home1_files/Cooper.pdf",
+    "https://www.proof.cit.tum.de/~nipkow/pubs/lpar05.pdf",
+    "https://isa-afp.org/entries/LinearQuantifierElim.html"
+  ],
+  "algorithm_provenance": "New conservative Nat-guarded all-cutpoints Cooper-style variant, not an imported theorem."
+}

@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWScalarPolicyWitnessProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualScalarWitnessPolynomialSound : Source.Targets.ActualScalarWitnessPolynomialSound :=
+  Source.LiteralPolicy.actualScalarWitnessPolynomialSound
+
+theorem fixed_actualClosedScalarPolicySeparation : Source.Targets.ActualClosedScalarPolicySeparation :=
+  Source.LiteralPolicy.actualClosedScalarPolicySeparation
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

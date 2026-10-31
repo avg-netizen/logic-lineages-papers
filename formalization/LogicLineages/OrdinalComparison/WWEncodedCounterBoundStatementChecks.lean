@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWEncodedCounterBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_encodedQueryCodecCorrect : Source.Targets.EncodedQueryCodecCorrect := Source.ForwardTranslation.encodedQueryCodecCorrect
+theorem fixed_encodedQueryCounterEnumerable : Source.Targets.EncodedQueryCounterEnumerable := Source.ForwardTranslation.encodedQueryCounterEnumerable
+theorem fixed_encodedQueryDecisionIffCoordinateBound : Source.Targets.EncodedQueryDecisionIffCoordinateBound := Source.ForwardTranslation.encodedQueryDecisionIffCoordinateBound
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

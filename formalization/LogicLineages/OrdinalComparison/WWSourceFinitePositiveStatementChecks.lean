@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceFinitePositiveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_finitePositiveValueSound : Source.Targets.FinitePositiveValueSound := Source.SourceClasses.finitePositiveValueSound
+theorem fixed_generatedNoOmegaFinitePositive : Source.Targets.GeneratedNoOmegaFinitePositive := Source.SourceClasses.generatedNoOmegaFinitePositive
+theorem fixed_actualRecursorFreePositiveFinite : Source.Targets.ActualRecursorFreePositiveFinite := Source.SourceClasses.actualRecursorFreePositiveFinite
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.SourceCounterBoundBoxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.StatementChecks
+theorem fixed_counterBoundBoxMembership : SourceCounterBoundBox.Targets.BoxMembership := SourceCounterBoundBox.boxMembership
+theorem fixed_counterBoundBoxComputable : SourceCounterBoundBox.Targets.BoxComputable := SourceCounterBoundBox.boxComputable
+theorem fixed_counterBoundRadiusComputable : SourceCounterBoundBox.Targets.RadiusComputable := SourceCounterBoundBox.radiusComputable
+theorem fixed_counterBoundRadiusCorrect : SourceCounterBoundBox.Targets.RadiusCorrect := SourceCounterBoundBox.radiusCorrect
+theorem fixed_counterBoundBoxExhaustive : SourceCounterBoundBox.Targets.Exhaustive := SourceCounterBoundBox.exhaustive
+end LogicLineages.ComputabilityKnowledge.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.StatementChecks

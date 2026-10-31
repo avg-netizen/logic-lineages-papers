@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxFoldCorrect : Source.Targets.OrdinalSyntaxFoldCorrect := Source.OrdinalSyntax.ordinalSyntaxFoldCorrect
+theorem fixed_ordinalSyntaxFoldPrimitiveRecursive : Source.Targets.OrdinalSyntaxFoldPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxFoldPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceCodedQueryProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_actualSourceCodedQuery : Source.Targets.ActualSourceCodedQuery := Source.ForwardTranslation.actualSourceCodedQuery
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

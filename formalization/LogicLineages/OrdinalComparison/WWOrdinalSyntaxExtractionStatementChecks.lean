@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.WWOrdinalSyntaxExtractionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_ordinalSyntaxExtractionCorrect : Source.Targets.OrdinalSyntaxExtractionCorrect := Source.OrdinalSyntax.ordinalSyntaxExtractionCorrect
+theorem fixed_ordinalSyntaxExtractionPrimitiveRecursive : Source.Targets.OrdinalSyntaxExtractionPrimitiveRecursive := Source.OrdinalSyntax.ordinalSyntaxExtractionPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

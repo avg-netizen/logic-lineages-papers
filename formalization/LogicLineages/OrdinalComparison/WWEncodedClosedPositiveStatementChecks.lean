@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWEncodedClosedPositiveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_encodedClosedPositiveCorrect : Source.Targets.EncodedClosedPositiveCorrect := Source.ForwardTranslation.encodedClosedPositiveCorrect
+theorem fixed_encodedClosedPositivePrimitiveRecursive : Source.Targets.EncodedClosedPositivePrimitiveRecursive := Source.ForwardTranslation.encodedClosedPositivePrimitiveRecursive
+theorem fixed_encodedClosedHeadCorrect : Source.Targets.EncodedClosedHeadCorrect := Source.ForwardTranslation.encodedClosedHeadCorrect
+theorem fixed_encodedClosedHeadPrimitiveRecursive : Source.Targets.EncodedClosedHeadPrimitiveRecursive := Source.ForwardTranslation.encodedClosedHeadPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

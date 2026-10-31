@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecisionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.StatementChecks
+ theorem forestDecisionExact : Targets.ForestDecisionExact := Proof.forestDecisionExact
+end LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision

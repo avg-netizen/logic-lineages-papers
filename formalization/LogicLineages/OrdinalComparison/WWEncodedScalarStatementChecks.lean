@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWEncodedScalarProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_scalarCodeInstantiationPrimitiveRecursive : Source.Targets.ScalarCodeInstantiationPrimitiveRecursive := Source.ForwardTranslation.scalarCodeInstantiationPrimitiveRecursive
+theorem fixed_scalarCodeInstantiationCorrect : Source.Targets.ScalarCodeInstantiationCorrect := Source.ForwardTranslation.scalarCodeInstantiationCorrect
+theorem fixed_encodedScalarComputable : Source.Targets.EncodedScalarComputable := Source.ForwardTranslation.encodedScalarComputable
+theorem fixed_encodedScalarSourceCorrect : Source.Targets.EncodedScalarSourceCorrect := Source.ForwardTranslation.encodedScalarSourceCorrect
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

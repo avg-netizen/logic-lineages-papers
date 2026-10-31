@@ -1,0 +1,569 @@
+{
+  "accepted_utc": "2026-10-31T07:07:18.809642+00:00",
+  "scope": "Primitive-recursive genuinely refusing positive and scalar literal AST extraction exactly equals original typed-source extractPositive and compileScalar. Full variable components retained in input, shared original context positions in scalar output. No value-based extraction or pre-normalized-head assumptions.",
+  "source_correspondence": "Primitive-recursive genuinely refusing positive/scalar literal AST extraction equals original typed-source extractPositive/compileScalar, retaining full variable components and shared context positions. No value-based extraction or pre-normalized-head oracle; actual source assignment frontend remains separate.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "05-wilken-weiermann-foundations/paper.tex",
+      "sha256": "cf68d0727bce4693eb51f1743aad4391bfdba54f2eb333ba0949e59b7bb20a60"
+    }
+  ],
+  "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxExtractionStatementChecks",
+  "frozen_at_utc": "2026-10-31T07:03:11.096373+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtraction-FREEZE.json",
+  "freeze_sha256": "61ecb4e2807c8248fed50ed7ad1ac1d1684539d54d510a3efc4e01aed85f41bf",
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionDefinitions.lean",
+      "sha256": "7ecec802dbbb07753e6c83ca08fac4b4633d616d3f5f2bc2ef710b83703923cf"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionTargets.lean",
+      "sha256": "bd89bcfb236d1177d4d15abf758a6de2bbb4fc61ddf17606c75a7ca356d700c4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionStatementChecks.lean",
+      "sha256": "8a6f25a09e51a0227f697af38c063e26237cac70979ef682df796fbe3f28f46f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionProof.lean",
+      "sha256": "13d59e7437de542ed7a9325c73becec22bc92b654e0edf6e1a578a4442797e5f"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxExtractionCorrect",
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxExtractionPrimitiveRecursive"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793430145799954188-5.json",
+      "sha256": "b9520f90428e06853d3dd0381f78518b06f514b697f24436840ef8adfac170b0",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793430405644034046-5.json",
+      "sha256": "cd2b2ddb71da50907456e20fa1201e5d6efa946ec853c7e5a1880fac95254d32",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793430405644034046-5-LogicLineages-OrdinalComparison-WWOrdinalSyntaxExtractionStatementChecks.log",
+  "gate_log_sha256": "26edcd2c27a431793c7da18596371fcab228f9e269afbf24d1e89dec683cffde",
+  "axioms_by_declaration": {
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxExtractionCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxExtractionPrimitiveRecursive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionStatementChecks.lean",
+      "sha256": "8a6f25a09e51a0227f697af38c063e26237cac70979ef682df796fbe3f28f46f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionProof.lean",
+      "sha256": "13d59e7437de542ed7a9325c73becec22bc92b654e0edf6e1a578a4442797e5f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionTargets.lean",
+      "sha256": "bd89bcfb236d1177d4d15abf758a6de2bbb4fc61ddf17606c75a7ca356d700c4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxExtractionDefinitions.lean",
+      "sha256": "7ecec802dbbb07753e6c83ca08fac4b4633d616d3f5f2bc2ef710b83703923cf"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxCodeDefinitions.lean",
+      "sha256": "995637c4a3b0355a9debf18f8b361fcc7b433fb30b87ddebd9046ff608ff6312"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWScalarSyntaxCodeDefinitions.lean",
+      "sha256": "a171c78e7e33f9f1599b829fd21b5a37ed489722c47c3c05d51d21a9d2ad5b04"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWEncodedClosedPositiveDefinitions.lean",
+      "sha256": "302b3fbb44e160cc84d623ad8cdc048781e5b88e8d91680458e121d9cd8da138"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWEncodedBaseTwoDefinitions.lean",
+      "sha256": "aadba31df1c9bd26b26ffc800a213cca7261cfc00f27def5e6e2f6aaed45a155"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNotationCodeDefinitions.lean",
+      "sha256": "559e75d651b068e1d8dec8655282aa73c43cbf5df2e2bc0bf012f1ea834856ec"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Definitions.lean",
+      "sha256": "d3a62bbfa4141166fbdf5f5bcc3f3e7e8ecad7c437a15ce5df9baff851a67867"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean",
+      "sha256": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean",
+      "sha256": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean",
+      "sha256": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+      "sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWClosedPositiveEvaluationDefinitions.lean",
+      "sha256": "545096b0b31f1ecfd34e33964513c723dd7ddf3c65c10106ea878c338e95faa5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWGeneratedSupportDefinitions.lean",
+      "sha256": "6a9652ddc0e117e550b59f14beadfe046d92c2bda8965088837e2536c643b92d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWGeneratedGradeDefinitions.lean",
+      "sha256": "525a719feb4e3868fe7c74805bcabe79cca33bdbb69f9bf20a1eaa76b635cfb3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWTypedPartialDefinitions.lean",
+      "sha256": "a6092672809cfa474e9f59fd6282f9e23dae41fb270bf7e5e27268856a32ded9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWTypedComponentDefinitions.lean",
+      "sha256": "03c13d99a9fde34527b854b21350fbdba7ad1499ffaec349afd784e6cb868480"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTerms.lean",
+      "sha256": "964c1930d4d45bbf317dddc3146b50a1bc2116a23e76c6548fa2f33f685bb8d6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypes.lean",
+      "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/WWOrdinalTermSemantics.lean",
+      "sha256": "35b4e79b509377fdf51eb2032a2ce91e720bcc08855120c9da8cb3012426119e"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PositiveExpression.lean",
+      "sha256": "4ad6156af313275071fae9fa1d4b0a3166fccf99c2cb38a6a46921113a6fc1ed"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/NaturalArithmeticDefinitions.lean",
+      "sha256": "7b6f18f049b37fcf600f78f9c53f7da162ddb45c10edf19a8a6fd33d20c44d5b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualCollapseDefinitions.lean",
+      "sha256": "4895d15c7b5a5bbda7bd8964c48c00fe2a02e8fb7f1608b04573a44384023fe8"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualMaximumPredecessorDefinitions.lean",
+      "sha256": "2605720b2243bb13e48f1c1602a767e9bc4122b70a730277529b1f3021db51e5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualNormBalls.lean",
+      "sha256": "6af56560536eb6868a3b2ff83ca03784689b4fd5ba2e897bfb493cfb35d85c93"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualNormBallTargets.lean",
+      "sha256": "ea9bb021f2028ec50b6965e9ce32ddccf20bc9c22a05a4c85827344ca5cf5847"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualOrdinalNormDefinitions.lean",
+      "sha256": "0503526e3c50818f22e9924cac19345912a4bdd63d130ad011f0f1225b82eb0b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CNFDescent.lean",
+      "sha256": "b8061d831972ef2b03eb4362c96db683b72fc099d98a38ec58bdd61a596ffd39"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualOrdinalNormTargets.lean",
+      "sha256": "d8684e1d8b1f343d0410a09f6a80d6ebfe7f8390ecd4fbcf99d07c37ab3a1297"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/OrdinalRepresentationTargets.lean",
+      "sha256": "5c68ae4e9e18881b1d5a553ac20fca35d3e23f8290a47da125c78711ebc1a647"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/OrdinalRepresentationComplete.lean",
+      "sha256": "4dc96c9070f35b1b28552947b379c9a07f3900529851bc7a2ec781211ed72374"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/OrdinalRepresentationSound.lean",
+      "sha256": "8e3ad60f345bc2b6f4630c5557b18da6f26d3c85d638ca81f5008307e8143840"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EpsilonZeroCalibration.lean",
+      "sha256": "1f30ebbce76d1761faf2121f60939c71164c6ecb74829bf9d8f36a5766a1eb4f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/NormBalls.lean",
+      "sha256": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Targets.lean",
+      "sha256": "e3d2625728df7aa38f54c8639d98959ee15c097a1f88d08f4b8921b58516afbe"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlTargets.lean",
+      "sha256": "2b5c663880aec5f55fe6f526bacf19ce131d3ae77e9485332b78dc5826d693c7"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualOrdinalNorm.lean",
+      "sha256": "7033245fd9abd85031358801fa5b63e8865b57be2d791546c8153c46cc39a555"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualNormRecursionTargets.lean",
+      "sha256": "1ca68f18a7d6e37f70144865c38ed49166400b913a89091b201cf59555cdc61e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/NaturalProduct.lean",
+      "sha256": "328756dfb0f45f0e2a6570e59ba892d3b70ec13ce289e7d397325a1c28cb7546"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/NaturalArithmeticTargets.lean",
+      "sha256": "64b0f641ba48ec4479a5c847cbc9e05c057fddca83e900c39b7325ec69379f2a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/NaturalSum.lean",
+      "sha256": "6760de8f8f8859900079f7a580ddfdd04a45e882fcd32d5a0aa84268fcb4dfa5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/NaturalSumTargets.lean",
+      "sha256": "160e0e497b363878203d55a328a8c30f3afaea846f3c9de761f75dfab9030338"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWEncodedScalarDefinitions.lean",
+      "sha256": "875b3a22eb961851a05d1914000bc79940a0f96951ad649e9a8f1529da15058c"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWScalarTranslationDefinitions.lean",
+      "sha256": "5ffadce74af7dc22b98e86321fe9bf02f2aca4530a008a438cc614d767ae3840"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedPositiveFoldDefinitions.lean",
+      "sha256": "c3d8adc781a1307b416509ae75eb4bd3f8df23f272dae679313602efb413fe80"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PositiveExprCodeDefinitions.lean",
+      "sha256": "98f8e096864750ddfb8d34da71ef69ff025bb6417b94e669c1a99b0deeebed0d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ProfileCompilerDefinitions.lean",
+      "sha256": "007b7724cfd94f5a805b71d048331c6e36b0126f5def85fcca8c8064f38c3c11"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ProfileHeadDefinitions.lean",
+      "sha256": "6811fd1d3fededec9b4c39c22e00ee62f5aab8a4142705ed5f6eaee4c04b1bff"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNormalProof.lean",
+      "sha256": "beee0a24b585d401abdc3c61e18c070df0bdb8446de2cbdeaf9d78cdb49f2ef3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNormalTargets.lean",
+      "sha256": "12cb8a42444e1aaa45a25afe65651dd510bf9c0f06c0153d27e0b6124bbd60f1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNormalDefinitions.lean",
+      "sha256": "01f4eeb959e7843e6839ce77f810f553283b7dc7571e2db187af030751b5e48b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawComparisonDefinitions.lean",
+      "sha256": "bf4b6af50b4a18e04d7d7a0317fa3884b058489e31040ab2ec63079528330bf3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawComparisonProof.lean",
+      "sha256": "ad5fd222dc0e860805c56cdefb7724fac569310816b371ffccd20f0c9406c454"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawComparisonTargets.lean",
+      "sha256": "d38bc89c227717bcf0f24de937412262b5ef8bbe35805b16e5951e24dde888fd"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNotationCode.lean",
+      "sha256": "ff0c8b35adf7361440961258dee243352ba3ec860a0da58b1f88fdea71619877"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNotationCodeTargets.lean",
+      "sha256": "d4f1a3a3507e09482a18da2bfd6474515bc8643fe090bc9770602de0ed112a16"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNotationComputabilityTargets.lean",
+      "sha256": "1563537e81f7c8944b9eb908961082aa0d53c996550b0b0edc34cadfb1f878e6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PositiveInputSupportDefinitions.lean",
+      "sha256": "4a43c3fabd9bc7b7c257d321e6cb53dae2e1416bef044a64f05b82c17b5257e5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedCollapseDefinitions.lean",
+      "sha256": "5802bf6232bdc481fe223709160192f9cb02a925bd27438490162ffd19c3ddb1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedDescentDefinitions.lean",
+      "sha256": "e2e3e02e3bff2b31563ec8f23401be2de357d15ec4a92480596e32b82d7f2f55"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedMaximumDefinitions.lean",
+      "sha256": "0f6b692aef9be3fae8f6d6ed8220bf4379fd97f5c445c88c738b4fbede30b800"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedNormBallDefinitions.lean",
+      "sha256": "a955d2fcad4e86aaec3c4849c8f687aed9a66cfe0d83747b52b282163b9f7715"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawNormCodeDefinitions.lean",
+      "sha256": "5a60f5862afc225fccd4057e5a6ba0a4c3ef15aaecd885ec22e631b55cd15079"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RawSplitDefinitions.lean",
+      "sha256": "7d012991cb8e3bedbfd41d12a6018596d5056fea9cf204155c16de378a51894d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FiniteTail.lean",
+      "sha256": "7c596451714034c06e8ab0b64ede8c718300f3ce8820a17ab3d31da0529dc660"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FiniteTailTargets.lean",
+      "sha256": "7069d9cc5055509a8d22659d7de464f5efec5ce8d79291ef037fe5b79c13a77c"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedFiniteTailDefinitions.lean",
+      "sha256": "dc74db7187eb7d2060c702c1392782c3f3d3383a694250d7b769a418cd4ba645"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedSuffixKernelDefinitions.lean",
+      "sha256": "db68ff958d3d36a95cd497eb52b067d5b798152d92fa84ef555e25678c638074"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedCompensatedCountDefinitions.lean",
+      "sha256": "aad6ee7e202b5a1d794f065b5447ce963c98a7693afe1fae3f400a16b08436de"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedCompensatedStepDefinitions.lean",
+      "sha256": "6c7ec6d1f01bb948b4114a1bc5f087defe8d8127e68efd9bedd296fa907d1a15"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SuffixKernelDefinitions.lean",
+      "sha256": "9a6545dbde4806d5ccd126542de3981f8641491ae561a4abbeed40a2ae1b0789"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PrefixTraceDefinitions.lean",
+      "sha256": "293d42e4a8dfe84f060c986d02ddd5af294301b9e9ee08bf8a85ab18f6675381"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CompatiblePrefixDefinitions.lean",
+      "sha256": "d1db4fb05615a76db32dafce537262eecbdd6217a8eddcf393cc11cb09dad13e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ConstantBudgetDefinitions.lean",
+      "sha256": "f50ffea9b6ff8631e54a5407a42553813a58fa1635b7bea4faa149ae2e9a0bf0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlledCountDefinitions.lean",
+      "sha256": "1d2a098c5cf1184b0a2dec8c55e154180bf05ddb3f3f94a48fcecd639f534789"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlledStepProof.lean",
+      "sha256": "0845018d942a4d0e8d31938fcf835ffb1fed0947e0b1f5b0d072cf8f428ed967"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlledStepTargets.lean",
+      "sha256": "9c0c81be9a84414fe790c1fa42a9ef88a0166aed04f12cbda4a4bc0de7ec9f21"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ControlledStepDefinitions.lean",
+      "sha256": "bcc2e310c2ef71067011ae046cff006ddbaaa649415d2bf2c1b261e05e6bffc3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualDescentDefinitions.lean",
+      "sha256": "6734139c90e73901f3f785600356d505c268c67ba8b753aa548448041643cd0a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualTailSeparation.lean",
+      "sha256": "3c0e41666709c92dcfc37ea1fa603c64cf3e6fba569eec6c90446f6262262b88"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualTailSeparationTargets.lean",
+      "sha256": "cb22045f61f16754ebe4b91bb03ddb491b2085dd3a478e1b084d5216a213c13e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualTerminalDefinitions.lean",
+      "sha256": "32f49d9316fe9c6fc5d594fb031fda43dc39edafae7116a48df13750f9a1bce4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualDescent.lean",
+      "sha256": "277a39558b157a3e89327fbff810befea80c0bae4b5fa174c30d39ec07687d42"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualDescentTargets.lean",
+      "sha256": "3392376ef56bd8150e4650f956f6ebf0223d6fe2c61d56672353164ca77deb24"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualSinglePredecessor.lean",
+      "sha256": "7fa8f1dcbff2243a3ca847dd015bcc803e06f469b80aee03af2b55af0c504a88"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualSinglePredecessorTargets.lean",
+      "sha256": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualCollapse.lean",
+      "sha256": "a03f5b0c11b528fab40124c85770a1c402a7fcafb2290f1d00cc6c03250554b4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualCollapseTargets.lean",
+      "sha256": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FiniteCollapse.lean",
+      "sha256": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/CollapseTargets.lean",
+      "sha256": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/Control.lean",
+      "sha256": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualLimitPredecessor.lean",
+      "sha256": "b8c957fe444d9bb4c2e9f01b55bce4ddc24ed4bfc7489a3e0a45dd39f4610178"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualLimitPredecessorTargets.lean",
+      "sha256": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualMaximumPredecessor.lean",
+      "sha256": "8c05f8b1a0517a426b4397c1a3bde34d37e32cb4781ea1d75c1119391b635f59"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualMaximumPredecessorTargets.lean",
+      "sha256": "67360a5bed345309757b9609b5707d6d9d357eed55b11c501391665fff940fc6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/MaximumPredecessor.lean",
+      "sha256": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/PredecessorTargets.lean",
+      "sha256": "c0fc975080cd34cd6296a53fad842c237d223f35d650b1a2bce060dc19ce4733"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LimitPredecessor.lean",
+      "sha256": "640229c932b276910eb7d9b88c6b4c39b79c6956daa2e7400ff9c9d3aee744d8"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LimitPredecessorTargets.lean",
+      "sha256": "c92fe54ce714136ce7a6c68260ad299c38159fcfed44d869a745b43a1da1fe20"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualTerminal.lean",
+      "sha256": "72b3f1f1d94d83fabe7fbdbcb8f198df8af7e752a1cac5cecdc86e39ce205711"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/ActualTerminalTargets.lean",
+      "sha256": "97993c72496c0de4a35059978d9e6070eee81c7b6e78fb8794fed6fba7ca3aa2"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/RestrictedPartitionDefinitions.lean",
+      "sha256": "b10525c9489c03ea423a9ce18004fb96fa178e01522bd42590ae498167b39cf1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedNaturalSumDefinitions.lean",
+      "sha256": "b1c4791855f7fcf12f1a39530810d5c3c0b49706128961382fefe643968f4d30"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/EncodedNaturalProductDefinitions.lean",
+      "sha256": "055f372a297d297f7f09e60f503950033796cf616e7f3040cf08d1c593c04f57"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypedPortsDefinitions.lean",
+      "sha256": "63ecdc02eaf1ee06678b7216855e77d3e9826ff23c6fa3e53e1d90801bf5d191"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceFreeOccurrencesDefinitions.lean",
+      "sha256": "f154a9f71878e254f2a2393c958df88a7d60139e95390a2264fb2094cac0acc0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/SourceTypeSupportDefinitions.lean",
+      "sha256": "45df57b9eb8fa1f2ff9c60957f074f14fbe8516c95bd2956b7b7f88216dfe47a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxCodeProof.lean",
+      "sha256": "b5fc60b60782c05888e101452cd9d95458b2faa5ddfd77c4a1f9d1b641d4b25a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWOrdinalSyntaxCodeTargets.lean",
+      "sha256": "f22d25d9b07f92bb957dfb5fec81255ee5cc92323ee37459b487fe60705d12a1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.List.Basic",
+    "Mathlib.Computability.Partrec",
+    "Mathlib.Computability.Primrec.Basic",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.List.GetD",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.Nat.Basic",
+    "Mathlib.Data.Nat.Factorial.Basic",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Order.Monotone.Basic",
+    "Mathlib.Order.Monotone.Defs",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.SetTheory.Cardinal.ToNat",
+    "Mathlib.SetTheory.Ordinal.CantorNormalForm",
+    "Mathlib.SetTheory.Ordinal.FixedPoint",
+    "Mathlib.SetTheory.Ordinal.Notation",
+    "Mathlib.SetTheory.Ordinal.Principal"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.WWSourceScalarHeadProfileProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_extractedPositiveHeadProfile : Source.Targets.ExtractedPositiveHeadProfile := Source.SourceClasses.extractedPositiveHeadProfile
+theorem fixed_compiledScalarHeadProfile : Source.Targets.CompiledScalarHeadProfile := Source.SourceClasses.compiledScalarHeadProfile
+theorem fixed_actualLevelTwoSourceHeadProfile : Source.Targets.ActualLevelTwoSourceHeadProfile := Source.SourceClasses.actualLevelTwoSourceHeadProfile
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

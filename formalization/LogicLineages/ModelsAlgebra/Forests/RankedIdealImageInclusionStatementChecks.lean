@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion.StatementChecks
+ theorem imageInclusionExact : Targets.ImageInclusionExact := Proof.imageInclusionExact
+end LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion

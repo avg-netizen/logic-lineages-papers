@@ -471,7 +471,9 @@
         },
         {
           "description": "Goubault-Larrecq\u2013Schmitz effective finite regular-ideal decomposition for the exact ordered ranked dive/couple relation",
-          "status": "pending"
+          "status": "checked",
+          "target": "thm:decision",
+          "note": "The exact effective finite regular ideal-decomposition obligation is paid by an actual explicit-list SCC-rank recursive compiler, not by assuming the cited theorem. Every output machine is a nonempty downward directed language and the cover is exact."
         },
         {
           "description": "Canonical reduced cotree uniqueness and completeness of all binary associations and permutations",
@@ -481,11 +483,21 @@
         },
         {
           "description": "Effective CFG Parikh conversion with exact subset-state multiplicities, and Presburger decision",
-          "status": "pending"
+          "status": "checked",
+          "targets": [
+            "lem:parikh-transition",
+            "lem:presburger-inclusion"
+          ],
+          "note": "Actual connected-flow reconstruction, literal formula compilation, genuine arithmetic decision and exact multiplicity semantics accepted."
         },
         {
           "description": "Deterministic Presburger cotree product/complement/productivity and graph-image inclusion; complete total forest JEP decision",
-          "status": "pending"
+          "status": "checked",
+          "targets": [
+            "lem:presburger-inclusion",
+            "thm:decision"
+          ],
+          "note": "Actual source-machine Boolean/productivity/inclusion algorithms and complete original finite order-forest JEP Bool accepted, with explicit exceptions."
         },
         {
           "description": "Constructive width classification and finite negative certificates",
@@ -527,9 +539,13 @@
           "file": "03-joint-embedding-finite-forests/decision.tex",
           "line": 259,
           "statement_latex": "\\label{thm:decision}\nThere is an algorithm which, given any finite family $\\mathcal U$ of\nfinite order forests, decides whether $\\mathcal C(\\mathcal U)$ has JEP.\nMore precisely, set\n\\[\n \\mathcal F=\\{P_4,C_4\\}\\cup\\{\\Comp(U):U\\in\\mathcal U\\}.\n\\]\nThen $\\mathcal C(\\mathcal U)$ has JEP if and only if $\\Forb(\\mathcal F)$\nhas JEP.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.StatementChecks.forestDecisionExact",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/RankedIdealForestDecisionTargets.lean",
+            "sha256": "37ec70735d2d253e4ca465e9adf30041b9211113ade73ab1071214b2777139ee",
+            "type": "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.Targets.ForestDecisionExact"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmptyStatementChecks",
@@ -540,8 +556,150 @@
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecisionStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/ProfileExceptionalDecisionStatementChecks.json",
               "scope": "Sound executable partial YES answer for an empty forbidden graph or empty parse language, returning none otherwise. No general JEP decision claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealAutomataStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealAutomataStatementChecks.json",
+              "scope": "Explicit finite transition tables, actual epsilon runs, executable cardinality-bounded closure and powerset determinization. No regularity oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealCompletionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealCompletionStatementChecks.json",
+              "scope": "Inductive finite-state productive-trimmed epsilon run semantics exactly actual original superterms for ordered Homeomorphic. Executable saturation is a separate subsequent supplier."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponentsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealComponentsStatementChecks.json",
+              "scope": "Actual productive epsilon reach gives language inclusion/equality. Actual binary production with all three states in same component yields nonempty downward directed state language. No cover oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealConstructorsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealConstructorsStatementChecks.json",
+              "scope": "Downward binary product and literal context-star of nonempty ideals; arbitrary side-language choices preserved. No decomposition/regularity oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealContextStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealContextStatementChecks.json",
+              "scope": "Actual ordered dive/couple reflexivity, transitivity, one-hole context monotonicity, embedding and composition. No ideal decomposition assumed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverAssemblyStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealCoverAssemblyStatementChecks.json",
+              "scope": "Actual finite list map of compiled linear pieces, ideal outputs and exact union under explicit LowerCorrect and absence of nonlinear transition. Global recursion must discharge LowerCorrect; not a cover oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealCoverStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealCoverStatementChecks.json",
+              "scope": "Actual explicit-list finite machine algorithm; rank-fuel recursion produces nonempty downward directed regular languages whose finite union is exactly the original language downward closure. No cover hypothesis, no choice enumeration, no assumed decomposition theorem."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealFiniteStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealFiniteStatementChecks.json",
+              "scope": "Finite successor tables and cardinality-bounded epsilon saturation; actual bottom-up evaluator accepts iff an original accepted superterm exists under ordered Homeomorphic."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecisionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealForestDecisionStatementChecks.json",
+              "scope": "Actual total Bool algorithm on explicit finite relation-list families, exact JEP for decoded validated finite order forests with plain order embeddings and unrestricted permitted finite hosts. Includes empty forbidden forests/classes. No cover/QE/representation/correctness oracle; not graph-only or term-JEP surrogate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInputStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealForestInputStatementChecks.json",
+              "scope": "Literal finite relation-list encoder, exact raw comparability matrix, forbidden-family graph avoidance and original finite-order-forest JEP equivalence. Empty inputs/carriers included, no choice in encoder; no decision Bool claimed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealGraphDecisionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealGraphDecisionStatementChecks.json",
+              "scope": "Actual total Bool JEP decision for arbitrary raw finite forbidden graphs with P4/C4 adjoined. Explicit empty-forbidden/empty-language cases, computed ideal cover and actual Presburger inclusion; no correctness or cover oracle. Original finite order-forest input adapter remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealMachineStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealMachineStatementChecks.json",
+              "scope": "Executable existing Machine transformer with finite powerset states, whose language is exactly the original language downward closure."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRankStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRankStatementChecks.json",
+              "scope": "Actual productive epsilon reachability, finite predecessor-card rank, strict decrease across components, and linear transition child classification. No ideal-cover premise or full decomposition claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularClosureStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRegularClosureStatementChecks.json",
+              "scope": "Executable downwardStar composes real starMachine and productive downward completion; exact linearPiece language and actual output ideal for ideal seed, with arbitrary side machines."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRegularCodeStatementChecks.json",
+              "scope": "Code carries explicit equality and complete literal state list. Actual atom/product/context-star/component compilers preserve finite presentation without choice. Eight exact language/ideal gates; no cover assumed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularEnumerationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRegularEnumerationStatementChecks.json",
+              "scope": "Literal list product, powerset and dependent-function enumeration completeness. No choice-based Finset.toList or equivFin."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularProductStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRegularProductStatementChecks.json",
+              "scope": "Executable finite root-constructor product and its genuine productive downward completion; exact languages, no regularity oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularStateStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRegularStateStatementChecks.json",
+              "scope": "Finite stateMachine recognizes actual completed state-language, supplying arbitrary side machines and nonlinear SCC ideal outputs with no regularity oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealRegularStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealRegularStatementChecks.json",
+              "scope": "Literal finite family of elementary contexts with arbitrary side machines; actual finite deterministic machine language exactly Star. No ideal or regularity oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealSourceCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealSourceCodeStatementChecks.json",
+              "scope": "Choice-free literal mask/matrix/powerset enumeration for sourceMachine; exact sourceCode language and actual finite sourceCover of nonempty regular ideals, preserving empty cases. No ordering, numbering, representation or cover premise."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealSpineCodeStatementChecks.json",
+              "scope": "Executable explicit-list frame and seed compilers, exact frame calibration and entry coverage. LowerCorrect is a modular recursion contract only; full rank-recursive cover must discharge it."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealSpineStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealSpineStatementChecks.json",
+              "scope": "Exact completed Run iff actual finite context-star of lower-rank ground entries. Includes pure epsilon lower entries; no cover or idealness premise."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793427532280719553-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/RankedIdealForestDecisionStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.StatementChecks.forestDecisionExact",
+            "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.StatementChecks.forestJEPExact"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/RankedIdealForestDecisionTargets.lean",
+              "sha256": "37ec70735d2d253e4ca465e9adf30041b9211113ade73ab1071214b2777139ee",
+              "type": "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestDecision.Targets.ForestDecisionExact"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/RankedIdealForestInputTargets.lean",
+              "sha256": "229e1bf25c935fb9114aef51b76f830c19bde5a9247a24029255c1f0494f599c",
+              "type": "LogicLineages.ModelsAlgebra.Forests.RankedIdealForestInput.Targets.ForestJEPExact"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793427532280719553-5.json",
+            "build-reports/1793427288616073385-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/RankedIdealForestDecisionStatementChecks.json",
+            "verification/repair-2026-10-31/RankedIdealForestInputStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole original finite order-forest decision theorem: actual total Bool on finite relation-list families, correct for the existing FamilyValid input domain; ordinary order embeddings and unrestricted permitted finite hosts. Literal comparability encoding preserves the precise original JEP, computed regular ideal decomposition has no cover premise, genuine Presburger inclusion decides the finite tests, and both empty-forbidden and empty-language cases are explicit. Existing finite-forest encoding completeness covers arbitrary finite forest inputs. No graph/tree-JEP surrogate or correctness oracle."
         },
         {
           "id": "03-joint-embedding-finite-forests:prop:certificate",
@@ -833,9 +991,13 @@
           "file": "03-joint-embedding-finite-forests/decision.tex",
           "line": 164,
           "statement_latex": "\\label{lem:parikh-transition}\nFor each $o\\in\\{U,J\\}$ and $q\\in Q$ one can compute a Presburger\npredicate $P_{o,q}$ on the counts of child state subsets such that, if\nan $o$ node has children $T_1,\\ldots,T_k$, then\n\\[\n q\\in S_M(T)\\quad\\Longleftrightarrow\\quad\n P_{o,q}\\bigl((c_B)_{B\\subseteq Q}\\bigr),\\qquad\n c_B=|\\{j:S_M(T_j)=B\\}|.                                   \\tag{4}\n\\]\nEqual child occurrences are counted with their full multiplicity.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.numberedParikhExact",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/ForestParikhTransitionTargets.lean",
+            "sha256": "2e7293ecdc88e86b9ec607ca35e151242c7c6802b88e47c813de66730404646c",
+            "type": "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.NumberedParikhExact"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
@@ -937,8 +1099,94 @@
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationStatesStatementChecks.json",
               "scope": "Equation (3), complete binary association/permutation node-state semantics, graph-image acceptance; no effective Parikh claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarReconstructStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarReconstructStatementChecks.json",
+              "scope": "Actual finite production forest with exact balance and positive predecessor ranks reconstructs a closed derivation preserving every production count; connected version yields some word with requested permutation/counts. Arbitrary Counts need separately proved production-copy forest cover."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikhStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeMachineParikhStatementChecks.json",
+              "scope": "Exact actual machine-state subset / concrete child cardinality formula transition. Effective syntax constructor on finite ordered states and literal Fin-indexed table input; explicitly supplied numbering transport. No noncomputable numbering in compiler or Presburger decision claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerAutomatonStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerAutomatonStatementChecks.json",
+              "scope": "Actual finite kind/subset states, computed horizontal formula and arity/alternation guards; inductive formula runs, uniqueness and exact reduced cotree graph-image acceptance. No inclusion/QE/emptiness decision assumed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerCountsStatementChecks.json",
+              "scope": "Executable wordOfCounts realizes every Nat count vector; constructed formula interpreted iff actual Mathlib grammar word has exactly that vector. No QE/decision."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerGrammarStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerGrammarStatementChecks.json",
+              "scope": "Constructed executable formula interpreted iff actual Mathlib grammar derives a permutation of the requested word. Uses proved production-count reconstruction and initial forest, no correctness oracle or QE."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProjectionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerProjectionStatementChecks.json",
+              "scope": "Finite projection counts actual child occurrences; total counts recover arity; zero forbidden counts equivalent to all occurrences allowed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParikhProfileStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParikhProfileStatementChecks.json",
+              "scope": "Actual raw forbidden-graph input family through executable finite-profile machine and computable serialized-code/Colex order to actual Presburger transition formula. No external ordering/numbering or choice-based compiler."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransitionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParikhTransitionStatementChecks.json",
+              "scope": "Source-facing exact S_M/c_B formula equivalence on original state variables; explicit computable numbering/powerset relabeling, exact state/count transport, and separately stated semantic encoding existence for arbitrary finite machines. No choice-based executable conversion or Presburger decision claim."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793422387922066687-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/ForestParikhTransitionStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.numberedParikhExact",
+            "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.StatementChecks.semanticCompleteness",
+            "LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.StatementChecks.tableTransitionExact",
+            "LogicLineages.ModelsAlgebra.Forests.ForestParikhProfile.StatementChecks.profileFormulaExact"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/ForestParikhTransitionTargets.lean",
+              "sha256": "2e7293ecdc88e86b9ec607ca35e151242c7c6802b88e47c813de66730404646c",
+              "type": "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.NumberedParikhExact"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/ForestParikhTransitionTargets.lean",
+              "sha256": "2e7293ecdc88e86b9ec607ca35e151242c7c6802b88e47c813de66730404646c",
+              "type": "LogicLineages.ModelsAlgebra.Forests.ForestParikhTransition.Targets.SemanticCompleteness"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/CotreeMachineParikhTargets.lean",
+              "sha256": "bce63df60dcc096dfa236ddb57e7c4ff2f8185898a6285cecd7bc56920e128fb",
+              "type": "LogicLineages.ModelsAlgebra.Forests.CotreeMachineParikh.Targets.TableTransitionExact"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/ForestParikhProfileTargets.lean",
+              "sha256": "06a7501fafebba9f3018defb84a90816a5bebaaf3c840bcb64b129a20f12cbda",
+              "type": "LogicLineages.ModelsAlgebra.Forests.ForestParikhProfile.Targets.ProfileFormulaExact"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793422387922066687-5.json",
+            "build-reports/1793422243100895678-14.json",
+            "build-reports/1793422513388971208-10.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/ForestParikhTransitionStatementChecks.json",
+            "verification/repair-2026-10-31/CotreeMachineParikhStatementChecks.json",
+            "verification/repair-2026-10-31/ForestParikhProfileStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source equation (4): actual finite CFG/skeleton/child-occurrence semantics, exact connected production-count reconstruction and literal first-order Presburger compiler. Arbitrary finite machines are handled by explicit supplied finite numbering and proved variable/count transport; abstract encoding existence is semantic only, not an executable choice conversion. Actual source profile compiler is included. No stronger arbitrary grammar algorithm is assumed."
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:presburger-inclusion",
@@ -947,10 +1195,126 @@
           "file": "03-joint-embedding-finite-forests/decision.tex",
           "line": 213,
           "statement_latex": "\\label{lem:presburger-inclusion}\nInclusion of languages recognized by these deterministic cotree\nautomata is decidable.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.sourceInclusionExact",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerExecutableTargets.lean",
+            "sha256": "9afd2ba9e170f629ee2a8982747a036cb5485a6376c6843d8ce43a8c1f626355",
+            "type": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.SourceInclusionExact"
+          },
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerBooleanStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerBooleanStatementChecks.json",
+              "scope": "Literal automaton record and inductive formula Runs; actual source compiler is complete deterministic on reduced cotrees; complement toggles acceptance and complements reduced-domain language. No decision procedure assumed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCompilerStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerCompilerStatementChecks.json",
+              "scope": "Literal actual Mathlib (0,1,+) BoundedFormula compilation including equality, implication and universal quantification; total object-level evaluation and satisfiability Bool with exact Nat semantics. Automaton integration remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVectorStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerCountVectorStatementChecks.json",
+              "scope": "Choice-free executable finite vector realization with exact canonical counts, length, support and actual Fin(n+2) children when total\u22652. No arithmetic decision."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerDecisionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerDecisionStatementChecks.json",
+              "scope": "Actual finite affine first-order syntax; structural QE, semantic closure of Nat coordinates, and total evaluation/satisfiability. Translation from original Mathlib syntax remains separately pending."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutableStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerExecutableStatementChecks.json",
+              "scope": "Literal finite Presburger productivity query; executable bounded finite iteration equals accepted semantic iteration; productive states exactly actual finite runs; source difference emptiness and inclusion decided by actual Bool. No input-language ideal decomposition claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerFiniteDecisionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerFiniteDecisionStatementChecks.json",
+              "scope": "Actual formula satisfiability via a supplied finite equivalence or executable ordered finite enumeration, with exact existential Nat valuation semantics; no automaton integration in this block."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerLinearStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerLinearStatementChecks.json",
+              "scope": "Actual Nat (0,1,+) term compilation to finite integer affine data, exact last-coordinate split and substitution. No QE/satisfiability/decision theorem."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalizeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerNormalizeStatementChecks.json",
+              "scope": "Positive common coefficient product, exact scaled atom/Boolean interpretation, retained M-divisibility guard, Nat existential equivalence and actual one-variable elimination. Full original formula decision remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerProductStatementChecks.json",
+              "scope": "Literal pair-state finite formula substitution/conjunction, inductive product runs, reduced-domain intersection/difference, exact inclusion iff constructed-difference language empty. No arithmetic decision oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerProductiveStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerProductiveStatementChecks.json",
+              "scope": "Real count-vector queries, exact finite child realization/height witnesses, cardinal-bound saturation, productive states iff actual inductive Runs, and source difference semantic emptiness. Iteration deliberately noncomputable: no arithmetic solver/inclusion decision claimed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerPullbackStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerPullbackStatementChecks.json",
+              "scope": "Actual generic finite-variable Presburger term substitution, exact raw/list-count semantics, canonical countP equality independent of concrete lawful BEq instances. No inclusion decision oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnitStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerUnitStatementChecks.json",
+              "scope": "Genuine finite elimination of one Nat quantifier over arbitrary Boolean unit/zero-coefficient affine order and positive-divisibility atoms. Explicit y>=0 guard and cutoff0; arbitrary Int prefix valuation. Not yet arbitrary-coefficient/full-syntax decision."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrderStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealCodeOrderStatementChecks.json",
+              "scope": "Computable state order from supplied complete list, and actual Bool inclusion of reduced-cotree representation languages of two explicit regular machines. No choice numbering or arithmetic oracle."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedIdealImageInclusionStatementChecks.json",
+              "scope": "Actual Bool test for inclusion of isomorphism-saturated finite graph images of arbitrary explicit regular machines. Includes empty graph images; not mere binary term language inclusion."
+            }
+          ],
+          "verification_receipt": "build-reports/1793426181404000187-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerExecutableStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.StatementChecks.sourceInclusionExact",
+            "LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrder.StatementChecks.inclusionExact",
+            "LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion.StatementChecks.imageInclusionExact"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerExecutableTargets.lean",
+              "sha256": "9afd2ba9e170f629ee2a8982747a036cb5485a6376c6843d8ce43a8c1f626355",
+              "type": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerExecutable.Targets.SourceInclusionExact"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/RankedIdealCodeOrderTargets.lean",
+              "sha256": "b559d9a7c7c439ca51b1c87f02c639c699ba5f54c94f88d227cc017116c4d53d",
+              "type": "LogicLineages.ModelsAlgebra.Forests.RankedIdealCodeOrder.Targets.InclusionExact"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/RankedIdealImageInclusionTargets.lean",
+              "sha256": "ea41fbbf984a13b5abd9c2dbe999161ee24243676f92ddd80f70450054c03a46",
+              "type": "LogicLineages.ModelsAlgebra.Forests.RankedIdealImageInclusion.Targets.ImageInclusionExact"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793426181404000187-5.json",
+            "build-reports/1793427154430039874-5.json",
+            "build-reports/1793427336635897134-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/CotreePresburgerExecutableStatementChecks.json",
+            "verification/repair-2026-10-31/RankedIdealCodeOrderStatementChecks.json",
+            "verification/repair-2026-10-31/RankedIdealImageInclusionStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole source lemma for 'these' deterministic source-machine cotree automata: actual Boolean complement/product, finite productivity with real count-vector witnesses, genuine first-order Presburger decision, and exact source inclusion Bool. The complete explicit Code.states list induces a computable order by idxOf, removing the external order premise; the companion gate gives exact reduced graph-representation language and graph-image inclusion including the common empty graph. This is not a claim about all arbitrary externally supplied automata or an assumed arithmetic oracle."
         }
       ],
       "historical_dependency_obligations": [
@@ -1042,7 +1406,12 @@
       "dependency_obligations": [
         {
           "description": "Complete typed source syntax, explicit admissible expansion policies and literal policy-relative zero-history assignment translation",
-          "status": "pending"
+          "status": "checked",
+          "targets": [
+            "thm:forward-translation",
+            "wwsc:thm:translation"
+          ],
+          "note": "Whole repaired actual-source translation for every admissible policy, arbitrary internal types/binders/recursors and ground free names: executable positive closed evaluation and shared-component scalar compilation preserve every shared valuation; fixed heads are genuine positive omega*c with actual computable shift functions. Construction is uniform in a supplied computable policy selector through the actual assignment plus proved-successful compiler; computability of an arbitrary mathematical selector is not asserted. No policy independence or full history-dependent termination claim."
         },
         {
           "description": "Finite norm-ball enumeration, natural arithmetic and exact Phi",
@@ -1058,7 +1427,13 @@
         },
         {
           "description": "Weak scalar replacement, graded-domain closure and bounded-norm preservation with the original multiplier; no assumption of the false strict WW Lemma 2.19 or Appendix A.5",
-          "status": "pending"
+          "status": "checked",
+          "targets": [
+            "wwsc:thm:weak",
+            "wwsc:lem:free",
+            "wwsc:thm:norm"
+          ],
+          "note": "Original weak replacement, actual first-free paths and exact original multiplier norm preservation are paid; the false strict historical assertions are not used."
         },
         {
           "description": "Exact generated-source policy-separation witness and default-parser correspondence; no policy-independence or full history-dependent termination claim",
@@ -1075,7 +1450,54 @@
           "statement_latex": "[Countervaluation bounds]\\label{prop:counter-bound}\nThe fixed-control comparison problem is co-recursively-enumerable.  It is\ndecidable if and only if there is a total computable function $b(Q)$ such\nthat each false comparison $Q$ has a countervaluation whose every coordinate\nis at most $b(Q)$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.SourceCounterBoundBoxStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourceCounterBoundBoxStatementChecks.json",
+              "scope": "Actual finite zero-based positive tuple boxes, exact bounded membership including empty tuple, genuine uniform radius-test computability and exhaustive all-tuples equivalence. Typed-source instantiation separate."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.SourceCounterBoundSearchStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/SourceCounterBoundSearchStatementChecks.json",
+              "scope": "Computable Boolean radius tests: complement RE and genuine computable decision iff total computable false-query radius bound. Actual typed-source test instantiation is separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWEffectiveFrontendStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWEffectiveFrontendStatementChecks.json",
+              "scope": "Explicit generic transfer for genuinely computable numeric frontends into actual encoded queries, keeping countervaluation bounds indexed by original frontend inputs rather than compiled image representatives. Original-T numeric codec effectivity remains unpaid."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWEncodedComparisonStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWEncodedComparisonStatementChecks.json",
+              "scope": "Genuine numerical zero-padded positive weak comparison and scalar strict/weak point test, actual normal ordinal and shared positive scalar semantics. Full source coding/search remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWEncodedCounterBoundStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWEncodedCounterBoundStatementChecks.json",
+              "scope": "Actual numeric scalar/vector point comparison domain: complement RE and genuine computable decidability iff total computable coordinate countervaluation bound, including zero arity. This broader numeric domain is not identified with original T source image."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWQuerySyntaxCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWQuerySyntaxCodeStatementChecks.json",
+              "scope": "Primitive-recursive normalization of literal scalar/positive vector-query AST codes to actual normalized query codes, with exact compiled source-vector correspondence and uniform computable evaluation. Original typed-T assignment frontend remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceCodedQueryStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceCodedQueryStatementChecks.json",
+              "scope": "Explicit executable original typed-source query-to-Nat code function succeeds and preserves independent positive shared valuations with exact context arity. No arbitrary-policy computability or identification of all numeric queries with source image."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceComparisonStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceComparisonStatementChecks.json",
+              "scope": "Executable actual typed-source query compiler with exact zero-padded strict/weak semantics and independent positive-valuation equivalence to exact-context-length positive tuples. Source syntax numeric encoding/computability and search equivalence remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceSyntaxQueryStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceSyntaxQueryStatementChecks.json",
+              "scope": "Actual typed-source assignment/extraction into literal syntax query codes commutes exactly with genuine primitive-recursive numerical normalization to accepted source codes. Original typed-T input numeric codec and syntactic assignment compiler computability remain separate."
+            }
+          ]
         },
         {
           "id": "05-wilken-weiermann-foundations:lem:finite-balls",
@@ -1381,9 +1803,13 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 412,
           "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFix an admissible expansion policy. For a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors. It is effective uniformly in a\nsupplied computable policy; it does not identify assignments made under\ndifferent policies.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceForwardTranslation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWSourceForwardTranslationTargets.lean",
+            "sha256": "10bdf1cf6240a61381e461cfccb59f47685d9ebdcbe472057b4e4814a29da5dc",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualSourceForwardTranslation"
+          },
           "source_history": [
             {
               "source_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
@@ -1404,8 +1830,92 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWAdmissibleAssignmentStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWAdmissibleAssignmentStatementChecks.json",
               "scope": "Actual original typed-source total assignment and generated syntax/ground positive closedness for every structural macro policy. No original norm admissibility or scalar translation/evaluation claim."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWClosedPositiveEvaluationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWClosedPositiveEvaluationStatementChecks.json",
+              "scope": "Executable closed positive ordinal normal-notation evaluation and refusing extraction: all-valuation sound, total on independently generated positive closed terms. No scalar translation yet."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWEncodedBaseTwoStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWEncodedBaseTwoStatementChecks.json",
+              "scope": "Literal raw left subtraction1 and omega quotient/remainder split; primitive-recursive exact base-two ordinal power equals accepted NONote.opow. Does not assume normalized fixed-head code generation effective."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWEncodedClosedPositiveStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWEncodedClosedPositiveStatementChecks.json",
+              "scope": "Primitive-recursive actual normal-note code generation from literal closed-positive source AST, including ordinal exponentiation, and exact fixed head code generation without pre-normalized head assumptions."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWEncodedScalarStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWEncodedScalarStatementChecks.json",
+              "scope": "Uniform numerical encoded scalar evaluation with shared positive tuple coordinates, using accepted actual collapse program. Source term coding, vector comparison and counter-bound equivalence remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWFixedShiftStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWFixedShiftStatementChecks.json",
+              "scope": "Positive genuine closed evaluator values; actual fixed omega*c head positive/below epsilon; genuine Computable n->actualCollapse(lambda+n) via accepted encoded collapse and finite-tail code. No oracle computability hypothesis."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWGroundTupleStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWGroundTupleStatementChecks.json",
+              "scope": "Every independent positive valuation over an all-ground typed context represented by an exactly context-length tuple, positivity and unique empty tuple. No comparison/search effectivity conclusion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxCodeStatementChecks.json",
+              "scope": "Exact numerical code fold for original ordinal expression AST, retaining full de Bruijn position and ordinal component. Generic primitive-recursive fold closure is a recursion supplier; actual source assignment frontend remains separately pending."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxExtractionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxExtractionStatementChecks.json",
+              "scope": "Primitive-recursive genuinely refusing positive and scalar literal AST extraction exactly equals original typed-source extractPositive and compileScalar. Full variable components retained in input, shared original context positions in scalar output. No value-based extraction or pre-normalized-head assumptions."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOrdinalSyntaxHeadStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOrdinalSyntaxHeadStatementChecks.json",
+              "scope": "Numeric full-component ordinal AST head-freeness, context-erasing head closure, and whole-free-first partial size exactly match original typed syntax and are primitive recursive. No semantic zero elimination; source assignment compiler remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWScalarPolicyWitnessStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWScalarPolicyWitnessStatementChecks.json",
+              "scope": "Exact printed scalar L/R formulas and strict R<L for literal original closed source witness; refusing five-atom symbolic evaluator separately sound, no beta normalization/numeric collapse evaluation."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceForwardTranslationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceForwardTranslationStatementChecks.json",
+              "scope": "Entire actual all-ground-source forward-translation composition: explicit normal-notation positive evaluation, executable shared-component scalar compiler, all shared natural valuations, positive input/output, fixed positive below-epsilon omega*c heads and genuinely Computable h_lambda. No selector computability. Root source review requested/pending at freeze."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceTupleEvaluationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceTupleEvaluationStatementChecks.json",
+              "scope": "Exact actual source scalar coordinate evaluation on original shared context positions via genuine uniform encoded scalar evaluator; source coding/vector queries/search equivalence remain separate."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793424777647115448-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWSourceForwardTranslationStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceForwardTranslation"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/WWSourceForwardTranslationTargets.lean",
+              "sha256": "10bdf1cf6240a61381e461cfccb59f47685d9ebdcbe472057b4e4814a29da5dc",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualSourceForwardTranslation"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793424777647115448-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/WWSourceForwardTranslationStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired actual-source translation for every admissible policy, arbitrary internal types/binders/recursors and ground free names: executable positive closed evaluation and shared-component scalar compilation preserve every shared valuation; fixed heads are genuine positive omega*c with actual computable shift functions. Construction is uniform in a supplied computable policy selector through the actual assignment plus proved-successful compiler; computability of an arbitrary mathematical selector is not asserted. No policy independence or full history-dependent termination claim."
         },
         {
           "id": "05-wilken-weiermann-foundations:cor:source-classes",
@@ -1414,9 +1924,13 @@
           "file": "05-wilken-weiermann-foundations/foundations.tex",
           "line": 463,
           "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nFor every fixed admissible policy, in a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceClasses",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWSourceClassesFullTargets.lean",
+            "sha256": "26b53cf70ec45fcdca11a2777637a544f492a303e18d2a5cbef1983a61775b4e",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualSourceClasses"
+          },
           "source_history": [
             {
               "source_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
@@ -1426,7 +1940,78 @@
               "status": "pending"
             }
           ],
-          "source_review_note": "The repaired manuscript explicitly quantifies over an admissible computable expansion policy. Previous and current whole targets remain pending; no old supplier proof is promoted to the revised statement."
+          "source_review_note": "The repaired manuscript explicitly quantifies over an admissible computable expansion policy. Previous and current whole targets remain pending; no old supplier proof is promoted to the revised statement.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceAssignmentProfileStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceAssignmentProfileStatementChecks.json",
+              "scope": "Actual all-policy source assignments: literal recursor freedom derives noOmega; exact all-internal-type/subtype support bound derives graded headHeight. Semantic finiteness/polynomial interpretation and contextual ground assumption remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceClassesFullStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceClassesFullStatementChecks.json",
+              "scope": "Actual recursor-free positive-coordinate finiteness and actual level-at-most-two internal-support direct scalar indices genuine polynomial limits, exact all-ground free context. Root source review pending at freeze."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceFinitePositiveStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceFinitePositiveStatementChecks.json",
+              "scope": "Exact ground-free-context recursor-free positive-coordinate finiteness, through an executable refusing finite evaluator; polynomial-index clause remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceMacroProfileStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceMacroProfileStatementChecks.json",
+              "scope": "Exact actual box and delta-plus-retained-closure macro preservation of literal Omega absence and graded headHeight; box height uses n<m<=L. Supplier only, no full source-classes claim."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourcePolynomialArithmeticStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourcePolynomialArithmeticStatementChecks.json",
+              "scope": "Actual natural sum/product polynomial closure and base-two exponent below omega-squared gives polynomial ordinal. No whole source-class promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourcePolynomialIndexStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourcePolynomialIndexStatementChecks.json",
+              "scope": "Natural multiplication of positive polynomial ordinal by omega is a genuine positive limit below omega-to-omega."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourcePositivePolynomialStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourcePositivePolynomialStatementChecks.json",
+              "scope": "Actual executable closed-positive evaluator at height zero below omega-squared and at height at most one below omega-to-omega."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceProfileStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceProfileStatementChecks.json",
+              "scope": "Independent literal Omega/graded-head-height profiles preserved by original head closure and actual all-policy partial recursion. Actual all-internal-type/subtype source support is independently specified for later composition; no class theorem yet."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWSourceScalarHeadProfileStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWSourceScalarHeadProfileStatementChecks.json",
+              "scope": "Exact all-internal-type/subtype level two restriction implies every direct compiled scalar shift head has exponential-head height at most one; polynomial semantic endpoint remains separate."
+            }
+          ],
+          "verification_receipt": "build-reports/1793427029156159121-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWSourceClassesFullStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceClasses"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/WWSourceClassesFullTargets.lean",
+              "sha256": "26b53cf70ec45fcdca11a2777637a544f492a303e18d2a5cbef1983a61775b4e",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualSourceClasses"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793427029156159121-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/WWSourceClassesFullStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired source-class corollary in the exact all-ground free context: literal recursor freedom gives finite positive coordinates, and the actual restriction of every internal type/subtype to level at most two gives genuine polynomial-limit direct scalar indices. The actual all-policy assignment/profile and closed-positive evaluation chain is proved; no ambient term-profile premise replaces the source restriction."
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:prop:finite",
@@ -1572,10 +2157,57 @@
           "file": "05-wilken-weiermann-foundations/source-syntax.tex",
           "line": 195,
           "statement_latex": "\\label{wwsc:lem:free}\nLet $h$ be bounded in norm. Fix an admissible substitution for its other\nnames and put $B=h_0\\{X:=\\WWscOne\\}$. Every first wholly $X$-free\nsubtree encountered at a positive grade in a partial recursion starting\nat any actual coordinate of $h$ satisfies\n\\[\n \\WWscNorm(t)\\le2^{n-1}B.\n\\]",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeBound",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWOriginalFirstFreeTargets.lean",
+            "sha256": "60643b241b74460264da37614a719863ef79d225d07fe836c7871381bb9dd154",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeBound"
+          },
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalFirstFreeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalFirstFreeStatementChecks.json",
+              "scope": "Independent whole-free-first actual recursion paths preserve grade and have free endpoints. Every positive first-free endpoint from a bounded original C^X vector has norm at most2^level(X)B, the exact2^(n-1) multiplier. No hidden norm/path budget premise."
+            }
+          ],
+          "verification_receipt": "build-reports/1793422331897038066-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWOriginalFirstFreeStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeBound",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeEndpoint",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalFirstFreeGrade"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalFirstFreeTargets.lean",
+              "sha256": "60643b241b74460264da37614a719863ef79d225d07fe836c7871381bb9dd154",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeBound"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalFirstFreeTargets.lean",
+              "sha256": "60643b241b74460264da37614a719863ef79d225d07fe836c7871381bb9dd154",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeEndpoint"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalFirstFreeTargets.lean",
+              "sha256": "60643b241b74460264da37614a719863ef79d225d07fe836c7871381bb9dd154",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalFirstFreeGrade"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793422331897038066-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/WWOriginalFirstFreeStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired first-free lemma: independent whole-free-first recursion paths preserve actual grades and have free endpoints; every positive first-free endpoint of the actual bounded C^X vector satisfies the exact original 2^(n-1) budget. No endpoint or descent bound is supplied as an assumption."
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:thm:norm",
@@ -1584,9 +2216,13 @@
           "file": "05-wilken-weiermann-foundations/source-syntax.tex",
           "line": 229,
           "statement_latex": "\\label{wwsc:thm:norm}\nOn vectors $h\\in C^X$, the operator $\\delta^X$ preserves bounded norm with its original\nmultiplier $S_X(h)=2^n\\sum_i\\WWscSize_X(h_i)$, for every admissible policy.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalDeltaPreservesBoundedNorm",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWOriginalBoundedDeltaTargets.lean",
+            "sha256": "15352cea9e0924b6202ba36f99883a91d3a2c56929d60206447932b8ccc2562b",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalDeltaPreservesBoundedNorm"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
@@ -1608,8 +2244,103 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWOriginalProductLowerStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWOriginalProductLowerStatementChecks.json",
               "scope": "Actual positive ordinal norm, positive natural-product lower norm and component norm bounds below epsilon zero. No exponential inverse-norm estimate or full delta norm bound."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalAbstractionNormStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalAbstractionNormStatementChecks.json",
+              "scope": "Actual head-one closure bounded transport and actual source abstraction delta-plus-retained-head C-valid/bounded norm. Does not include application/box or whole F1 assignment result."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalAssignmentNormStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalAssignmentNormStatementChecks.json",
+              "scope": "Every actual original-T zero-history assignment under every structural policy is total, original C-valid, supported bounded. Typed application restriction separately paid. No generated/norm/output premise on source term. Reduction history/decrease and effective scalar translation excluded; root source review requested and pending at freeze."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalAtomicAssignmentStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalAtomicAssignmentStatementChecks.json",
+              "scope": "Exact original C-validity and supported bounded norm for variable vector, common One vector and actual recursor assignment. Not box or whole F1."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalBoundedDeltaStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalBoundedDeltaStatementChecks.json",
+              "scope": "Original occurring-vector bounded norm, explicit support/context equivalence, and pure assembled actual delta preservation with unchanged original2^n sum(partialSize) multiplier for all structural policies. No endpoint/partial/scalar/arithmetic bound is assumed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalBoxBoundedStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalBoxBoundedStatementChecks.json",
+              "scope": "Exact optional scalar tail C-grade/norm and actual source box C-validity/supported boundedness, original Corollary 2.12 supplier. Root source review requested, pending at freeze. No C^X or whole F1 claim."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalBoxControlStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalBoxControlStatementChecks.json",
+              "scope": "Exact numerical double-exponent step and original F2 envelope; no whole box theorem."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalBoxPositiveStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalBoxPositiveStatementChecks.json",
+              "scope": "Original positive box C-grading and F2 norm bound from genuine input budgets; scalar box closure/boundedness separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalBoxStepStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalBoxStepStatementChecks.json",
+              "scope": "Actual natural product upper norm bound and genuine exponential/product/add box step under original admissible substitutions. Not full box/F1."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalDescentNormStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalDescentNormStatementChecks.json",
+              "scope": "Actual original-domain Add child costs1, Exp head cost2/tail1, scalar collapse both children cost1; no assumed descent inequality or full free-subtree/delta norm conclusion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalGeneratedHeadStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalGeneratedHeadStatementChecks.json",
+              "scope": "Original head-sensitive C^X from whole-free ambient C, and from independently generated grammar plus ambient C. No assignment assumption or weakened promotion condition."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalInfiniteCollapseStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalInfiniteCollapseStatementChecks.json",
+              "scope": "Original nonfinite collapse Phi lower bound from finite controlled predecessor; no global collapse monotonicity."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalOmegaProductStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalOmegaProductStatementChecks.json",
+              "scope": "Actual natural product omega*a is nonfinite for positive a below epsilon zero; independent ordinal order supplier, not norm inference."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalPartialNormStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalPartialNormStatementChecks.json",
+              "scope": "Explicit conditional free-endpoint-budget composition supplier plus global original bounded-vector partial norm estimate with unchanged2^nH. Global target pays all endpoint budgets from bounded source input and actual scalar root output; no full delta norm claim here."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793422946998537658-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWOriginalBoundedDeltaStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalDeltaPreservesBoundedNorm",
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalBoundedVectorSupportBridge"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalBoundedDeltaTargets.lean",
+              "sha256": "15352cea9e0924b6202ba36f99883a91d3a2c56929d60206447932b8ccc2562b",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalDeltaPreservesBoundedNorm"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/WWOriginalBoundedDeltaTargets.lean",
+              "sha256": "15352cea9e0924b6202ba36f99883a91d3a2c56929d60206447932b8ccc2562b",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalBoundedVectorSupportBridge"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793422946998537658-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/WWOriginalBoundedDeltaStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired bounded-norm delta theorem for all admissible structural policies on the original C^X occurring-support domain. Actual partial recursion bounds, first-free budgets, context/support transport and assembled delta preserve bounded norm with the unchanged original 2^n sum of literal partial sizes. No strict replacement or global collapse monotonicity assumption."
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:thm:translation",
@@ -1618,10 +2349,55 @@
           "file": "05-wilken-weiermann-foundations/source-syntax.tex",
           "line": 327,
           "statement_latex": "\\label{wwsc:thm:translation}\nFix an admissible policy. For a literal original source all of whose free\nterm names are ground, every positive final coordinate is closed and\neffectively evaluable. Its scalar coordinate translates effectively,\npreserving every shared valuation, to an expression in positive-natural\ninputs, positive constants, addition, and fixed functions\n\\[\n h_\\lambda(t)=\\psi(\\lambda+t),\\qquad\n \\lambda=\\omega\\otimes c>0\\quad(c\\text{ closed}).\n\\]\nArbitrary internal binders, types and recursors are allowed.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceForwardTranslation",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWSourceForwardTranslationTargets.lean",
+            "sha256": "10bdf1cf6240a61381e461cfccb59f47685d9ebdcbe472057b4e4814a29da5dc",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualSourceForwardTranslation"
+          },
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWCompiledVectorStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWCompiledVectorStatementChecks.json",
+              "scope": "Executable scalar and every positive field compilation, full source generated totality and shared-valuation semantics. Numerical query comparison/search and source syntax coding remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWScalarSyntaxCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWScalarSyntaxCodeStatementChecks.json",
+              "scope": "Exact primitive-recursive normalization of scalar syntax codes carrying literal positive AST heads, then genuine uniform Computable evaluation preserving shared positive source inputs. Original typed T assignment-code compiler remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWScalarTranslationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWScalarTranslationStatementChecks.json",
+              "scope": "Executable refusing scalar syntax compiler with shared original component identities and fixed closed ordinal heads: mathematical all-natural-valuation soundness, total on generated ground-context scalars. Full source composition, head positivity and explicit h_lambda computability separate."
+            }
+          ],
+          "verification_receipt": "build-reports/1793424777647115448-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWSourceForwardTranslationStatementChecks.json",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualSourceForwardTranslation"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/WWSourceForwardTranslationTargets.lean",
+              "sha256": "10bdf1cf6240a61381e461cfccb59f47685d9ebdcbe472057b4e4814a29da5dc",
+              "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualSourceForwardTranslation"
+            }
+          ],
+          "verification_receipts": [
+            "build-reports/1793424777647115448-5.json"
+          ],
+          "acceptance_records": [
+            "verification/repair-2026-10-31/WWSourceForwardTranslationStatementChecks.json"
+          ],
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired actual-source translation for every admissible policy, arbitrary internal types/binders/recursors and ground free names: executable positive closed evaluation and shared-component scalar compilation preserve every shared valuation; fixed heads are genuine positive omega*c with actual computable shift functions. Construction is uniform in a supplied computable policy selector through the actual assignment plus proved-successful compiler; computability of an arbitrary mathematical selector is not asserted. No policy independence or full history-dependent termination claim."
         }
       ],
       "historical_dependency_obligations": [

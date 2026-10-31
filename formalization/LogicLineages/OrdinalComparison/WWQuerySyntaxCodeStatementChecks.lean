@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.WWQuerySyntaxCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_vectorSyntaxNormalizationCorrect : Source.Targets.VectorSyntaxNormalizationCorrect := Source.ForwardTranslation.vectorSyntaxNormalizationCorrect
+theorem fixed_querySyntaxNormalizationCorrect : Source.Targets.QuerySyntaxNormalizationCorrect := Source.ForwardTranslation.querySyntaxNormalizationCorrect
+theorem fixed_querySyntaxNormalizationPrimitiveRecursive : Source.Targets.QuerySyntaxNormalizationPrimitiveRecursive := Source.ForwardTranslation.querySyntaxNormalizationPrimitiveRecursive
+theorem fixed_syntaxQueryComputable : Source.Targets.SyntaxQueryComputable := Source.ForwardTranslation.syntaxQueryComputable
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

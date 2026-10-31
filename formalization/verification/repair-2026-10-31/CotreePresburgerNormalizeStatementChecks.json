@@ -1,0 +1,173 @@
+{
+  "accepted_utc": "2026-10-31T05:47:04.963111+00:00",
+  "scope": "Positive common coefficient product, exact scaled atom/Boolean interpretation, retained M-divisibility guard, Nat existential equivalence and actual one-variable elimination. Full original formula decision remains separate.",
+  "source_correspondence": "Paper03 arbitrary-coefficient normalization and actual one-Nat quantifier elimination: positive common coefficient product, exact scaled atoms/Boolean semantics, retained M-divisibility guard and Nat existential equivalence. Full original-formula decision remains separate.",
+  "source_commit": "09164be23fc7229dfee069ba3aca297c9f0bb01d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalizeStatementChecks",
+  "frozen_at_utc": "2026-10-31T05:43:27.060260+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cotree-presburger-normalize-freeze.json",
+  "freeze_sha256": "ecddcaf9d9a67fbaacb51511c100c399ae4db5512f503191dfff37d27473e7ce",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeDefinitions.lean",
+      "sha256": "74d2e8942bc49d56463f14a75efa34bc592d825acff0c751e1b64e8742a9bc7a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeTargets.lean",
+      "sha256": "248e9105d6b4403677fcc5e89e452d7572798710ac931c29f2bc1a6d8c03645d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeStatementChecks.lean",
+      "sha256": "177d5da14cd3b0cee33f664706d043c9ad0ecab25cc88f9ff7bd0fd378eb5cc0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeProof.lean",
+      "sha256": "b09587d518c0423772781d5e6c91ec8c76e5fa9a5701f9f3dd96a51db0efbe86"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.coefficientModulusPositive",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.adjustmentExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.normalizationExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.eliminationExact"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793425254946220215-5.json",
+      "sha256": "96bbdf16b8c91167fe8e957cd50c8147e9edec48310e3663e794f9ac7af3aefd",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793425600333908807-5.json",
+      "sha256": "dc4a5044fdea5fffa6eb28dd5d86b81c8c7ee20b81b82d6350fc1b892e2a4bf4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793425600333908807-5-LogicLineages-ModelsAlgebra-Forests-CotreePresburgerNormalizeStatementChecks.log",
+  "gate_log_sha256": "9c9ae55fddbd9d92c774a9526938ec79cecc8f32df27df13aae3b1a23e1e6f58",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.eliminationExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.coefficientModulusPositive": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.normalizationExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.StatementChecks.adjustmentExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.eliminate.eq_1": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.adjustAtom.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.nonzeroSign.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.weight.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.adjustAtom.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.adjust.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerNormalize.normalize.eq_1": []
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeStatementChecks.lean",
+      "sha256": "177d5da14cd3b0cee33f664706d043c9ad0ecab25cc88f9ff7bd0fd378eb5cc0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeProof.lean",
+      "sha256": "b09587d518c0423772781d5e6c91ec8c76e5fa9a5701f9f3dd96a51db0efbe86"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeTargets.lean",
+      "sha256": "248e9105d6b4403677fcc5e89e452d7572798710ac931c29f2bc1a6d8c03645d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerNormalizeDefinitions.lean",
+      "sha256": "74d2e8942bc49d56463f14a75efa34bc592d825acff0c751e1b64e8742a9bc7a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitStatementChecks.lean",
+      "sha256": "0c3820462cbbe364101b016be43d336ed159a16ed6744db1300ac705d84f442d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitProof.lean",
+      "sha256": "b77b3d0f40c366b8bc13ffe53bcc71c52540368623cf94e41f0b3f61e0f448f6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitTargets.lean",
+      "sha256": "05dcb6f46a0fe5fe37f63d556db0dff741f7c03dc396a0fe26bc4ca5661620be"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerUnitDefinitions.lean",
+      "sha256": "d1110c12e9266f1ee9f4c11ecb383188905dadb36c941dc3c2f95fd87e182784"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearStatementChecks.lean",
+      "sha256": "686e35b55fa9a91e189b305a7c7108087c8a4b52dc77c2132ac4ec1b0fa90bbb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearProof.lean",
+      "sha256": "466a0f66f5bffd6354b571df52bab225e8cbcdaa4171a1b76ecd9162e5fc6132"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearTargets.lean",
+      "sha256": "76720372ac54fe0b83ad793c68420ca08bdc7592e80e9b626fdc4d9ab212f30a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerLinearDefinitions.lean",
+      "sha256": "ae52bb2a1221b88b4bc77b61a95a40e79a4d31ca8ae4682b55f76eadc4020f8d"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+    "Mathlib.Algebra.GroupWithZero.Divisibility",
+    "Mathlib.Algebra.Ring.Divisibility.Basic",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.ModelTheory.Arithmetic.Presburger.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

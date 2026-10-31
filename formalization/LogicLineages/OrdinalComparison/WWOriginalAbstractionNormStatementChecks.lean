@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalAbstractionNormProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_originalHeadClosureVectorBounded : Source.Targets.OriginalHeadClosureVectorBounded :=
+  Source.OriginalDomain.originalHeadClosureVectorBounded
+
+theorem fixed_originalSourceAbstractionBounded : Source.Targets.OriginalSourceAbstractionBounded :=
+  Source.OriginalDomain.originalSourceAbstractionBounded
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

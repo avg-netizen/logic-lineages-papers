@@ -1,0 +1,256 @@
+{
+  "accepted_utc": "2026-10-31T05:14:57.682783+00:00",
+  "scope": "Choice-free executable finite vector realization with exact canonical counts, length, support and actual Fin(n+2) children when total\u22652. No arithmetic decision.",
+  "source_correspondence": "Paper03 choice-free executable finite multiplicity-vector realization with exact canonical counts, length, support and actual Fin(n+2) children for total at least two. Productive-state supplier only; no arithmetic or inclusion decision claimed.",
+  "source_commit": "09164be23fc7229dfee069ba3aca297c9f0bb01d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVectorStatementChecks",
+  "frozen_at_utc": "2026-10-31T05:14:23.757340+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cotree-presburger-count-vector-freeze.json",
+  "freeze_sha256": "7fb75a35e1c757bb23f46b2ecf8dc3f92d9a0448f75d72e8568edb43d295b2e3",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorDefinitions.lean",
+      "sha256": "b9627b5823d0baf53078cafb702b8a8e07b2c9945401ca31677d9483a7e7469e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorTargets.lean",
+      "sha256": "712b4fec44494301cc809b96ba869b5c785dd12082b8f4250e979fdd0b3c155c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorStatementChecks.lean",
+      "sha256": "eb91082f273ffa6acec9c105c920ed12f67f32bd0ae752ce1f3df2093cc139ab"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorProof.lean",
+      "sha256": "4769dbec13bf4ef34c1c2eab5aa7ba8ec9a5b280e2c46f144ee97fb5e90f000f"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.countsExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.lengthExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.membershipExact",
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.childrenExact"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793423625446916854-5.json",
+      "sha256": "10ae9d8979b362da78fa7c408477f16a367946263177ffcc5e56a2f33e65f556",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793423676446713716-5.json",
+      "sha256": "eace1ae6f6ecb005be36d8786babecf446a71fec679a9aa57e8e75285ff27f56",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793423676446713716-5-LogicLineages-ModelsAlgebra-Forests-CotreePresburgerCountVectorStatementChecks.log",
+  "gate_log_sha256": "cb6f3ea72b96a2862a880b583eb796c4ee22cedd1b97636177bcdd443a463de0",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.childrenExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.membershipExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.countsExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.StatementChecks.lengthExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerCountVector.realizeCounts.eq_1": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorStatementChecks.lean",
+      "sha256": "eb91082f273ffa6acec9c105c920ed12f67f32bd0ae752ce1f3df2093cc139ab"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorProof.lean",
+      "sha256": "4769dbec13bf4ef34c1c2eab5aa7ba8ec9a5b280e2c46f144ee97fb5e90f000f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorTargets.lean",
+      "sha256": "712b4fec44494301cc809b96ba869b5c785dd12082b8f4250e979fdd0b3c155c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerCountVectorDefinitions.lean",
+      "sha256": "b9627b5823d0baf53078cafb702b8a8e07b2c9945401ca31677d9483a7e7469e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerPullbackStatementChecks.lean",
+      "sha256": "85fe8d914f6bf7184492b16ca58206002a7e355945ec3c5e5551d7cc6714f524"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerPullbackProof.lean",
+      "sha256": "7ccc24032e9474dcd09c5cb036835c3377ee358c7b6efa848732240f5683c0d2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerPullbackTargets.lean",
+      "sha256": "4ce2e352cbe2e3c01ae072a868ba1ce0efaddb8a061d62bfea86dd88318d1102"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerPullbackDefinitions.lean",
+      "sha256": "f06c46998392fdb872e5b7f39b7bc04c0b2d2cc00667f5559e0acacc9182bb3a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerProjectionStatementChecks.lean",
+      "sha256": "c3a48341b5e052798b8d3bb134bcf9d443fc410575841ee4dbc291c931980abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerProjectionProof.lean",
+      "sha256": "9092231e79bcf5f7645dbf4006703539a599dae77c9de70990303e8d37560845"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerProjectionTargets.lean",
+      "sha256": "3b441849d29ae52bfd7b72d673d181d777b590d07551c88554928b258cb90bc9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerTransitionStatementChecks.lean",
+      "sha256": "8331d154bf1e1420892866c8d134640ff49df53eda2dbae51428245a97ba6d89"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerTransitionProof.lean",
+      "sha256": "8854dfce19d8f55e40e5a3c20fab0e4441eee57361f1e3f17e01c6b089b09d5b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerTransitionTargets.lean",
+      "sha256": "c71b6924b1da08f351a15b2467e87b2f24e286731c15c08fb69e2b2e9544f57a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerTransitionDefinitions.lean",
+      "sha256": "dba01c8fa3afb9767de0aa4a7049cfa6e83642e4c7e38fb9f47fd57f6e1f74c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerStatementChecks.lean",
+      "sha256": "13ea3ff7fcb0115a512454569d46b38da6fe2fafe60096ed8812d76bf2e62302"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerProof.lean",
+      "sha256": "7cc85b8dddde586f28b05820c10ec823e10c077da7c320e83a06fff0f574842e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerTargets.lean",
+      "sha256": "bb592fa899c37675cf4bd7ea81f92bcc51ac06f48777a825c17ce226d1df3add"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreePresburgerDefinitions.lean",
+      "sha256": "c70fb7f99f7f094daee5491631397d74e40611b897aefadcca138668636e6d03"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRanksDefinitions.lean",
+      "sha256": "a3a654387d7468a3894a8c64916ab58a081659724c644529126379c7fcb14635"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarConnectedStatementChecks.lean",
+      "sha256": "95f687655d5c5052ae4c00af1dc511207f04b3720902e9fa2154d36a2ea335aa"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarConnectedProof.lean",
+      "sha256": "e342ed9f7a59d33644bfa937307d1b4475eb7c298c633331d6ccb0a7bfa91a07"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarConnectedTargets.lean",
+      "sha256": "98fd0855f96fc14116df9caba872f4f0acc31fd095c5187ae68da9fc313302b3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarConnectedDefinitions.lean",
+      "sha256": "e511ae06723432600e4522e712583db3fc2d7bfbc0efdb35848314c5c339f853"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowStatementChecks.lean",
+      "sha256": "c2b2d10b774dd35342bad12e1fc3c33a44855f670dc128aec1ee0f8053555aff"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowProof.lean",
+      "sha256": "246d30cf98c680b02f66a171601407963d00e6ef837ca5793827f488805b4ede"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowTargets.lean",
+      "sha256": "94ef886f66271d70b2393299b35167d79ef99da58a156226f0a62ed058f88d98"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowDefinitions.lean",
+      "sha256": "49154b6f29df1a6a4cf8269b197cf458f5fdd97009b8102b1019d5f0890ea13a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarStatementChecks.lean",
+      "sha256": "fbc9288ace97cfd7db0e187a0af65164c0dd04384d9725b55b2ac3c688825cfc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarProof.lean",
+      "sha256": "624df0329cc02f0d856681c2148d1ae320dea13d903c6cbba6cd45bab3d41433"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarTargets.lean",
+      "sha256": "d22b2c24e2e3efa2f63ce7fb30d77f8371a63592984285c6accc4c3e4d2d7254"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarDefinitions.lean",
+      "sha256": "e79d13d6f8ec88bf7f8516bd8ccc25784e34cb80a5773efe51f149b01d6e9ae1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+    "Mathlib.Combinatorics.Colex",
+    "Mathlib.Computability.ContextFreeGrammar",
+    "Mathlib.Data.Finset.Sort",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.Prod.Lex",
+    "Mathlib.Data.Sum.Order",
+    "Mathlib.ModelTheory.Arithmetic.Presburger.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

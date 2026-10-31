@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.WWEncodedBaseTwoProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+theorem fixed_rawSubtractOneCodeCorrect : Targets.RawSubtractOneCodeCorrect := rawSubtractOneCodeCorrect
+theorem fixed_rawSubtractOneCodePrimitiveRecursive : Targets.RawSubtractOneCodePrimitiveRecursive := rawSubtractOneCodePrimitiveRecursive
+theorem fixed_rawSplitPrimeCodeCorrect : Targets.RawSplitPrimeCodeCorrect := rawSplitPrimeCodeCorrect
+theorem fixed_rawSplitPrimeCodePrimitiveRecursive : Targets.RawSplitPrimeCodePrimitiveRecursive := rawSplitPrimeCodePrimitiveRecursive
+theorem fixed_encodedBaseTwoPowerCorrect : Targets.EncodedBaseTwoPowerCorrect := encodedBaseTwoPowerCorrect
+theorem fixed_encodedBaseTwoPowerPrimitiveRecursive : Targets.EncodedBaseTwoPowerPrimitiveRecursive := encodedBaseTwoPowerPrimitiveRecursive
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

@@ -1,0 +1,296 @@
+{
+  "accepted_utc": "2026-10-31T05:26:55.247755+00:00",
+  "scope": "Actual productive epsilon reach gives language inclusion/equality. Actual binary production with all three states in same component yields nonempty downward directed state language. No cover oracle.",
+  "source_correspondence": "Paper03 actual productive-epsilon component language inclusion/equality; genuine binary production with all three states in same component yields a nonempty downward directed state language. Nonlinear constructor supplier, no cover oracle or full decomposition claimed.",
+  "source_commit": "29b9ef2294372fdc713ca348e5bde246efaf810d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponentsStatementChecks",
+  "frozen_at_utc": "2026-10-31T05:26:20.872718+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/ranked-ideal-components-freeze.json",
+  "freeze_sha256": "3ee63c5f4399691b84c7168dc6c2fe8118fa20c0b298f6d88a161fc1040041b3",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsDefinitions.lean",
+      "sha256": "877e7ae53c187c98f3e8de0860dc6cd9670488c1ab892936ece4649b132eca7f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsTargets.lean",
+      "sha256": "2d7945351665e2ac6fcddf23a366e6b9d3abbb47aa477a67b048813c9c76ee80"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsStatementChecks.lean",
+      "sha256": "c72363fddfddd4f9b8227690d5705324405d150470ecf16e340584149e8dc173"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsProof.lean",
+      "sha256": "6c43dab870d0eb210fb1255083be8de78ad8fabccc0a680714945261779d3a5a"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.reachLanguageInclusion",
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.componentLanguageEquality",
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.stateLanguageDownward",
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.nonlinearIdeal"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793424342945094129-5.json",
+      "sha256": "7508889ac57c0ef4ff23be9be5b6516171ad6680d796ed58416f8db27baa57fa",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793424391651082385-5.json",
+      "sha256": "d66731a6cc16e4253759f469a39f0de200d19c94b2d0819bbacacdc9a750ccdd",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793424391651082385-5-LogicLineages-ModelsAlgebra-Forests-RankedIdealComponentsStatementChecks.log",
+  "gate_log_sha256": "533d381bdda5aa93b4c296530532f7f2cf5ca15a044a5017b757bdb424e759e8",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.nonlinearIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.reachLanguageInclusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.componentLanguageEquality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedIdealComponents.StatementChecks.stateLanguageDownward": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsStatementChecks.lean",
+      "sha256": "c72363fddfddd4f9b8227690d5705324405d150470ecf16e340584149e8dc173"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsProof.lean",
+      "sha256": "6c43dab870d0eb210fb1255083be8de78ad8fabccc0a680714945261779d3a5a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsTargets.lean",
+      "sha256": "2d7945351665e2ac6fcddf23a366e6b9d3abbb47aa477a67b048813c9c76ee80"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealComponentsDefinitions.lean",
+      "sha256": "877e7ae53c187c98f3e8de0860dc6cd9670488c1ab892936ece4649b132eca7f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealFiniteDefinitions.lean",
+      "sha256": "4f7368c4c18845adef01a2feda53355caad3bc93979b51f8d25ca1248f4a53c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealCompletionDefinitions.lean",
+      "sha256": "e3b96ceb3793e6444f1a339a6d074049472d6d4bda2bf04af3e3609af988ee49"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealContextDefinitions.lean",
+      "sha256": "444a75a2475739605344d081febcfe7eec1e40fb4bd59ec3f05926f8595e7d05"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileLanguageEmptyDefinitions.lean",
+      "sha256": "402d826d8dec1dfa452350f527d65418b60dcd7abe64c249ba83972a3ad0bbd4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularDefinitions.lean",
+      "sha256": "20c702f71e19ac1dd5e23f85c1453ba5144b3fbed511d189ba9f7e3f279bf82b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingDefinitions.lean",
+      "sha256": "3b51edc63e2aeaed258538d458c31b235cb412e4cb490be8edb8cc430276fab3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileDefinitions.lean",
+      "sha256": "e1ec826ef97f960ad102d3c3cabb0f184a3b58fe0c77cc0048a86a2bd8da14b6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationGeneralDefinitions.lean",
+      "sha256": "19daa1366d7ed8225da15f35840541eb4c869f181506b969c3d5b217b2eee7e0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationDefinitions.lean",
+      "sha256": "13de75479876f4e18c207a945a272f810442607233199a2cd967c71f7700d443"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphJEPDefinitions.lean",
+      "sha256": "964d94697b098425da28d47fdf2bd546403fc5ee12b5f55181519e9fbf67a605"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/GraphBridgeDefinitions.lean",
+      "sha256": "fdd1006f3e2a8b706662efdd960c54a7bd9cb413155ba22626816e42d9045d54"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/HostReductionDefinitions.lean",
+      "sha256": "09f7214995435cda13ae005a1f7a5104b72627452ead261582fd435f2c9df047"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/Definitions.lean",
+      "sha256": "89f4a1e9c7a03dd51c46e279921643778deb827afa7127775ab32d3fbeba3963"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CertificateSearchDefinitions.lean",
+      "sha256": "da67b22c1355ccf5044179145c37c0da4feaf47fd8a8f755b97de44867059706"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteCodeDefinitions.lean",
+      "sha256": "092e012281add950aa6d7109dd9900683e1d8bc087f425d72323e2850502106c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealFiniteStatementChecks.lean",
+      "sha256": "14a866ac62f7984ce847dc1dd0c5b1ac07a75bada433ba29693f2094e24d73f4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealFiniteProof.lean",
+      "sha256": "1bb570d17cfffddc62b3da1c0ed1ab59f11487bd11037988fcd0795d21c001c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealFiniteTargets.lean",
+      "sha256": "4b1bf53cfee66f1c9c4280d8e958bbfb3346c910c1465b9e2a501bc86626bc49"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealCompletionStatementChecks.lean",
+      "sha256": "6fbab52632caa5ec34e6fd0d90c3ee7b4dda51fd7b2c7cdc32d1659039476e09"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealCompletionProof.lean",
+      "sha256": "8c45c7fbfd1787011ac7c990e09650be69a7d5ceed5c1bb0a0a1f4afa552d265"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealCompletionTargets.lean",
+      "sha256": "644c515b9cfed47c2568f192e0c3fdaef8fef9a645bdd25e737d291123dd6949"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealContextStatementChecks.lean",
+      "sha256": "5f20924ed820a5590a9f2f8936e9020c48d5b8ff3c64e44058e43ae0a71f885d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealContextProof.lean",
+      "sha256": "138614002b8ea949cc4c1399e67049539041f6a1ecfde089b9bfec1515ea2f50"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedIdealContextTargets.lean",
+      "sha256": "9001ea7fdf73396989675fc685aa72edcf8c83568f8eded31d838cb116806f1a"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileLanguageEmptyStatementChecks.lean",
+      "sha256": "1a25fa4dca7c5d134bc66ad17719f6cce6daa2add49d796e05e5f3019dece18a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileLanguageEmptyProof.lean",
+      "sha256": "a471c3a253359a3ff395eb54e2b3f5ed24299a5d3983784a3e7b244a10d06e26"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileLanguageEmptyTargets.lean",
+      "sha256": "d6fb502ea85045dee5fde9819d98e5d52937063b1e3526e6996b4f3256eff641"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularProof.lean",
+      "sha256": "fc1e6ae7ddae2b08e317ec31a9956ef60e00fa7d1aa79eeef22f8b05f938cb68"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularTargets.lean",
+      "sha256": "9e07d15a56a0fd2e99d49b31ba65645932f8404e3d9b3c4f000d7b66b1306303"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingProof.lean",
+      "sha256": "7e7fce7ad90c7786d1c9be9c77c205d63a9c9052983d8b7273bfe26d26e5c4fd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingTargets.lean",
+      "sha256": "9f0b419a4b95c097da617098a1ecc89578cd56cbc152fe09622f350c90a26660"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileProof.lean",
+      "sha256": "89b07de480decdfc713643f35cad09c265624d8026e57cf1e999e82e7d925e1c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileTargets.lean",
+      "sha256": "0a87603e7db252d2b7b5c9d2dbefa1b7c210f76f6524ce16a08743c7e782ea35"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "Mathlib.Computability.Partrec",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finite.Sum",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.Sublists",
+    "Mathlib.Order.Defs.PartialOrder",
+    "Mathlib.Order.Hom.Basic",
+    "Mathlib.Order.Preorder.Finite"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

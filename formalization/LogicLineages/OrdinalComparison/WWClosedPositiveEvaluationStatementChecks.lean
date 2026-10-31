@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWClosedPositiveEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_closedPositiveEvaluationSound : Source.Targets.ClosedPositiveEvaluationSound :=
+  Source.ForwardTranslation.closedPositiveEvaluationSound
+
+theorem fixed_generatedClosedPositiveEvaluationTotal : Source.Targets.GeneratedClosedPositiveEvaluationTotal :=
+  Source.ForwardTranslation.generatedClosedPositiveEvaluationTotal
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks
