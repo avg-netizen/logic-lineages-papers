@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteDivisibleImageProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteDivisibleImageStatementChecks
+theorem actualImage : Targets.finiteDivisibleImage := finite_divisible_image
+end LogicLineages.ModelsAlgebra.PGroups.FiniteDivisibleImageStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteDivisibleImageStatementChecks

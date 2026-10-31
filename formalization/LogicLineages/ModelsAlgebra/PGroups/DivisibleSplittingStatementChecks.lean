@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingStatementChecks
+theorem retraction : Targets.divisibleSubgroupRetraction := divisible_subgroup_retraction
+theorem actualSplit : Targets.actualDivisibleSplitting := actual_divisible_splitting
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingStatementChecks

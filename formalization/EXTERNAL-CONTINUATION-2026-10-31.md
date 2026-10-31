@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 22
+## Current verified snapshot: checkpoint 23
 
-**122 checked, 2 inherited, 65 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,087 selected imports and 3,513
+**123 checked, 2 inherited, 64 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,102 selected imports and 3,547
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -837,3 +837,32 @@ The explicitly authorized profiles retain CPU, wall-time and single-thread
 guards without changing defaults or CI settings. Twelve accepted records
 were fixed before later acceptances. The registry is **122 checked,
 2 inherited, 65 pending**. No GitHub CI result is claimed.
+
+
+## Checkpoint 23 — full source decision equivalence
+
+Paper 09 `thm:decision-equivalence` is checked by
+`Source.DecisionEquivalence.StatementChecks.fullDecisionEquivalence`.
+Actual arbitrary-output queries over all-ground contexts reduce to ground
+weak and strict queries and to unsatisfiability of the complete A-normal
+E_source Program language; satisfiability is obtained by answer complement.
+Uniform effectivity is explicitly factored through certified Computable
+numericData on unchanged source codes and pure total finite typed syntax
+templates. No fixed numeric output-codec theorem, efficient general-output
+bound, or decision algorithm for the equivalent problems is asserted.
+
+The new algebraic components prove actual divisible retractions/splitting,
+finite separating characters and Pruefer images, characteristic divisible
+socles, nonisomorphism and pointed competitors. These support the long-reduced
+first odd-obstruction clause; the whole odd-obstruction label remains pending,
+including its separate short-length pure-Sigma obligation.
+
+The [twenty-third focused checkpoint](verification/repair-2026-10-31/checkpoint-23.json)
+selects 397 gates and audits 1,105 aliases over 2,370 unchanged local source
+hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint23.json)
+passes with 1,102 imports, 3,547 audits and 4,106 unchanged closure hashes.
+Authorized checkpoint profiles preserve CPU, wall-time and single-thread
+guards without changing defaults or CI settings. Fifteen records were fixed
+before later acceptances, including the excluded PrimarySocleControl supplier.
+The registry is **123 checked, 2 inherited, 64 pending**. No GitHub CI result
+is claimed.

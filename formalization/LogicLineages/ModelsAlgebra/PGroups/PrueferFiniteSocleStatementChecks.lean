@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks
+theorem modelSocle : Targets.prueferFiniteSocle := pruefer_finite_socle
+theorem finitePower : Targets.finitePrueferPowerSocle := finite_pruefer_power_socle
+end LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleExtensionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleExtensionStatementChecks
+theorem extension : Targets.divisibleHomExtension := divisible_hom_extension
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleExtensionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleExtensionStatementChecks

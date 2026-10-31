@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingStatementChecks
+theorem separation : Targets.primaryPrueferSeparation := primary_pruefer_separation
+theorem finiteEmbedding : Targets.finitePrueferEmbedding := finite_pruefer_embedding
+end LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingStatementChecks

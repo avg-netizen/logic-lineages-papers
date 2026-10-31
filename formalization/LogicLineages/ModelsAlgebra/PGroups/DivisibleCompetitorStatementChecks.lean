@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorStatementChecks
+theorem actualCompetitor : Targets.divisibleProductCompetitor := divisible_product_competitor
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorStatementChecks

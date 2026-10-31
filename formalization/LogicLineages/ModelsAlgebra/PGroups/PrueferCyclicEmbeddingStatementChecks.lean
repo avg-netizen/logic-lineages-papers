@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferCyclicEmbeddingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrueferCyclicEmbeddingStatementChecks
+theorem actualEmbedding : Targets.prueferCyclicEmbedding := pruefer_cyclic_embedding
+end LogicLineages.ModelsAlgebra.PGroups.PrueferCyclicEmbeddingStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrueferCyclicEmbeddingStatementChecks

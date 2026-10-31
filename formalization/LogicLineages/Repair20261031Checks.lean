@@ -382,6 +382,21 @@ public import LogicLineages.ModelsAlgebra.PGroups.SuccessorDifferenceStatementCh
 public import LogicLineages.ModelsAlgebra.PGroups.SuccessorParityStatementChecks
 public import LogicLineages.OrdinalComparison.WWAbsoluteProbeDAGStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.WalkerScottStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleExtensionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteDivisibleImageStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferCyclicEmbeddingStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks
+public import LogicLineages.OrdinalComparison.SourceAffinePlanStatementChecks
+public import LogicLineages.OrdinalComparison.SourceDecisionEquivalenceStatementChecks
+public import LogicLineages.OrdinalComparison.SourceGroundArithmeticCounterStatementChecks
+public import LogicLineages.OrdinalComparison.SourceObserverPlanStatementChecks
+public import LogicLineages.OrdinalComparison.WWGroundPositiveQuerySplitStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4645,6 +4660,138 @@ theorem checked_WWAbsoluteProbeDAG_closed :
 theorem checked_WalkerScott_actualFamilies :
     LogicLineages.ModelsAlgebra.PGroups.Targets.walkerScottEndpoints :=
   LogicLineages.ModelsAlgebra.PGroups.WalkerScottStatementChecks.actualFamilies
+
+theorem checked_DivisibleCharacteristic_characteristic :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisiblePartCharacteristic :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks.characteristic
+
+theorem checked_DivisibleCharacteristic_actualProduct :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reducedDivisibleProductPart :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks.actualProduct
+
+theorem checked_DivisibleCharacteristic_actualSocle :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleProductSocleInvariant :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks.actualSocle
+
+theorem checked_DivisibleCompetitor_actualCompetitor :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleProductCompetitor :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleCompetitorStatementChecks.actualCompetitor
+
+theorem checked_DivisibleExtension_extension :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleHomExtension :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleExtensionStatementChecks.extension
+
+theorem checked_DivisibleNoniso_infiniteFinite :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleInfiniteFiniteNoniso :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoStatementChecks.infiniteFinite
+
+theorem checked_DivisibleNoniso_finiteEnlargement :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleFinitePrueferNoniso :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoStatementChecks.finiteEnlargement
+
+theorem checked_DivisibleProductComparison_actualData :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleProductData :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonStatementChecks.actualData
+
+theorem checked_DivisibleProductComparison_actualComparison :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleProductComparison :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonStatementChecks.actualComparison
+
+theorem checked_DivisibleSplitting_retraction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisibleSubgroupRetraction :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingStatementChecks.retraction
+
+theorem checked_DivisibleSplitting_actualSplit :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.actualDivisibleSplitting :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisibleSplittingStatementChecks.actualSplit
+
+theorem checked_FiniteDivisibleImage_actualImage :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteDivisibleImage :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteDivisibleImageStatementChecks.actualImage
+
+theorem checked_FinitePrueferEmbedding_separation :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.primaryPrueferSeparation :=
+  LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingStatementChecks.separation
+
+theorem checked_FinitePrueferEmbedding_finiteEmbedding :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finitePrueferEmbedding :=
+  LogicLineages.ModelsAlgebra.PGroups.FinitePrueferEmbeddingStatementChecks.finiteEmbedding
+
+theorem checked_PrueferCyclicEmbedding_actualEmbedding :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferCyclicEmbedding :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferCyclicEmbeddingStatementChecks.actualEmbedding
+
+theorem checked_PrueferFiniteSocle_modelSocle :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.prueferFiniteSocle :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks.modelSocle
+
+theorem checked_PrueferFiniteSocle_finitePower :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finitePrueferPowerSocle :=
+  LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleStatementChecks.finitePower
+
+theorem checked_SourceAffinePlan_addBind :
+    LogicLineages.OrdinalComparison.Source.AffinePlan.Targets.AddBind :=
+  LogicLineages.OrdinalComparison.Source.AffinePlan.StatementChecks.addBind
+
+theorem checked_SourceAffinePlan_multiply :
+    LogicLineages.OrdinalComparison.Source.AffinePlan.Targets.Multiply :=
+  LogicLineages.OrdinalComparison.Source.AffinePlan.StatementChecks.multiply
+
+theorem checked_SourceAffinePlan_multiplySize :
+    LogicLineages.OrdinalComparison.Source.AffinePlan.Targets.MultiplySize :=
+  LogicLineages.OrdinalComparison.Source.AffinePlan.StatementChecks.multiplySize
+
+theorem checked_SourceAffinePlan_multiplyBind :
+    LogicLineages.OrdinalComparison.Source.AffinePlan.Targets.MultiplyBind :=
+  LogicLineages.OrdinalComparison.Source.AffinePlan.StatementChecks.multiplyBind
+
+theorem checked_SourceAffinePlan_affine :
+    LogicLineages.OrdinalComparison.Source.AffinePlan.Targets.Affine :=
+  LogicLineages.OrdinalComparison.Source.AffinePlan.StatementChecks.affine
+
+theorem checked_SourceDecisionEquivalence_fullDecisionEquivalence :
+    LogicLineages.OrdinalComparison.Source.DecisionEquivalence.Targets.FullDecisionEquivalence :=
+  LogicLineages.OrdinalComparison.Source.DecisionEquivalence.StatementChecks.fullDecisionEquivalence
+
+theorem checked_SourceGroundArithmeticCounter_pointwise :
+    LogicLineages.OrdinalComparison.Source.GroundArithmeticCounter.Targets.Pointwise :=
+  LogicLineages.OrdinalComparison.Source.GroundArithmeticCounter.StatementChecks.pointwise
+
+theorem checked_SourceGroundArithmeticCounter_unsatisfiable :
+    LogicLineages.OrdinalComparison.Source.GroundArithmeticCounter.Targets.Unsatisfiable :=
+  LogicLineages.OrdinalComparison.Source.GroundArithmeticCounter.StatementChecks.unsatisfiable
+
+theorem checked_SourceGroundArithmeticCounter_groundQuery :
+    LogicLineages.OrdinalComparison.Source.GroundArithmeticCounter.Targets.GroundQuery :=
+  LogicLineages.OrdinalComparison.Source.GroundArithmeticCounter.StatementChecks.groundQuery
+
+theorem checked_SourceObserverPlan_effectiveAnchor :
+    LogicLineages.OrdinalComparison.Source.ObserverPlan.Targets.EffectiveAnchor :=
+  LogicLineages.OrdinalComparison.Source.ObserverPlan.StatementChecks.effectiveAnchor
+
+theorem checked_SourceObserverPlan_formulaExact :
+    LogicLineages.OrdinalComparison.Source.ObserverPlan.Targets.FormulaExact :=
+  LogicLineages.OrdinalComparison.Source.ObserverPlan.StatementChecks.formulaExact
+
+theorem checked_SourceObserverPlan_observerExact :
+    LogicLineages.OrdinalComparison.Source.ObserverPlan.Targets.ObserverExact :=
+  LogicLineages.OrdinalComparison.Source.ObserverPlan.StatementChecks.observerExact
+
+theorem checked_WWGroundPositiveQuerySplit_flagPrimitiveRecursive :
+    LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.Targets.FlagPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.StatementChecks.flagPrimitiveRecursive
+
+theorem checked_WWGroundPositiveQuerySplit_actualScalar :
+    LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.Targets.ActualScalar :=
+  LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.StatementChecks.actualScalar
+
+theorem checked_WWGroundPositiveQuerySplit_positiveFlagExact :
+    LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.Targets.PositiveFlagExact :=
+  LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.StatementChecks.positiveFlagExact
+
+theorem checked_WWGroundPositiveQuerySplit_querySplit :
+    LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.Targets.QuerySplit :=
+  LogicLineages.OrdinalComparison.Source.GroundPositiveQuerySplit.StatementChecks.querySplit
 
 end LogicLineages.Repair20261031Checks
 

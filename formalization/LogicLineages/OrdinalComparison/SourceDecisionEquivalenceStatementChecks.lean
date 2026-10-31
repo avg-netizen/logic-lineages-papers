@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceDecisionEquivalenceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.DecisionEquivalence.StatementChecks
+theorem fullDecisionEquivalence : Targets.FullDecisionEquivalence := Proof.fullDecisionEquivalence
+end LogicLineages.OrdinalComparison.Source.DecisionEquivalence.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.DecisionEquivalence

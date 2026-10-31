@@ -1,0 +1,4 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicDefinitions
+public import LogicLineages.ModelsAlgebra.PGroups.PrueferFiniteSocleDefinitions
+@[expose] public section

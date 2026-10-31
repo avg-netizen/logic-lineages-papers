@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks
+theorem characteristic : Targets.divisiblePartCharacteristic := divisible_part_characteristic
+theorem actualProduct : Targets.reducedDivisibleProductPart := reduced_divisible_product_part
+theorem actualSocle : Targets.divisibleProductSocleInvariant := divisible_product_socle_invariant
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks

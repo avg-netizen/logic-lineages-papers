@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoStatementChecks
+theorem infiniteFinite : Targets.divisibleInfiniteFiniteNoniso := divisible_infinite_finite_noniso
+theorem finiteEnlargement : Targets.divisibleFinitePrueferNoniso := divisible_finite_pruefer_noniso
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleNonisoStatementChecks

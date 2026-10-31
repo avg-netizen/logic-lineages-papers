@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonStatementChecks
+theorem actualData : Targets.divisibleProductData := divisible_product_data
+theorem actualComparison : Targets.divisibleProductComparison := divisible_product_comparison
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleProductComparisonStatementChecks
