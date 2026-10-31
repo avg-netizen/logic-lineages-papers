@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks
+
+theorem uniqueDigits : Targets.walkerFiniteTreeUniqueDigits := walker_finite_tree_unique_digits
+theorem relations : Targets.walkerFiniteTreeRelations := walker_finite_tree_relations
+
+end LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks

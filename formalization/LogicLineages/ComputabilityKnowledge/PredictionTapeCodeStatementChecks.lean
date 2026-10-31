@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks
+theorem effectiveCodeFamily : PredictionTapeCodeTargets.EffectiveCodeFamily := PredictionTapeCodeProof.effectiveCodeFamily
+theorem exactCompiledStep : PredictionTapeCodeTargets.ExactCompiledStep := PredictionTapeCodeProof.exactCompiledStep
+theorem exactCodedRuntime : PredictionTapeCodeTargets.ExactCodedRuntime := PredictionTapeCodeProof.exactCodedRuntime
+theorem exactCodedOutput : PredictionTapeCodeTargets.ExactCodedOutput := PredictionTapeCodeProof.exactCodedOutput
+theorem uniformConstantTime : PredictionTapeCodeTargets.UniformConstantTime := PredictionTapeCodeProof.uniformConstantTime
+end LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks

@@ -196,7 +196,19 @@
           "statement_latex": "\\label{lem:walker-filtration}\nEvery element of $W_\\xi$ has a unique finite expression\n\\[\n \\sum_s c_s e_s,\\qquad 0\\le c_s<p.\n\\]\nMoreover, for every ordinal $\\alpha$,\n\\begin{equation}\\label{eq:walker-filtration}\n (W_\\xi)_\\alpha\n =\\left\\langle e_s:\\operatorname{last}(s)\\ge\\alpha\\right\\rangle.\n\\end{equation}\nConsequently,\n\\[\n (W_\\xi)_\\xi=\\langle e_{(\\xi)}\\rangle\\cong C_p,\n \\qquad (W_\\xi)_{\\xi+1}=0.\n\\]\nFor every ordinal $\\delta$,\n\\[\n (W_{\\delta+1})_\\delta\\cong C_{p^2}.\n\\]",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerAdjunctionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerAdjunctionStatementChecks.json",
+              "scope": "Literal one-leaf root-adjunction quotient and unique digits, paper.tex 694\u2013700. Necessary supplier only; full Walker lemma pending. Finite-stage supplier only: faithful compatible inclusions/direct-limit coherence, the actual infinite Walker presentation and transfinite filtration remain unproved by this component; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WalkerFiniteTreeStatementChecks.json",
+              "scope": "Finite ancestor-tree presentation, unique digit sums and generator parent equations, paper.tex 694\u2013704. Explicit recursive literal quotients. Whole Walker lemma pending. Finite-stage supplier only: faithful compatible inclusions/direct-limit coherence, the actual infinite Walker presentation and transfinite filtration remain unproved by this component; whole label remains pending."
+            }
+          ]
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:thm:difference-spectrum",
@@ -4960,7 +4972,14 @@
           "statement_latex": "\\label{lem:membership}\nUniformly in an ordinary program index for a total computable $f$,\nmembership $e\\in E_f$ has a recursive-matrix $\\Sigma^0_2$ definition.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeTableStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeTableStatementChecks.json",
+              "scope": "Primitive-recursive finite-table decoding and actual bounded tape simulation with exact TM0 operational correspondence. Not yet acceptable/universal numbering or predictor compiler. This finite-table decoder and bounded tape simulator does not supply an acceptable universal ordinary numbering or the full source recursive-matrix membership theorem; whole label remains pending."
+            }
+          ]
         },
         {
           "id": "14-complexity-of-prediction-measures:lem:learning",
@@ -5031,7 +5050,24 @@
           "statement_latex": "\\label{prop:hardness}\nFor any fixed ordinary total bound $b$ eventually exceeding each\n$t_{e_k}$, the predicate $T(p,b)$ is $\\Pi^0_3$-hard on total\npredictors. If $b=b_\\infty$, the same reduction makes membership in\n$B$ equivalent to infinite original measure, and equivalent to every\nfixed threshold $m\\ge m_0$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionRawRuntimeStatementChecks.json",
+              "scope": "Exact actual raw TM2 transitions, including final output/halt block. Not tape time, ordinary numbering, source membership or hardness. Concrete length-code evader runtime/output supplier for paper.tex290\u2013297 only. It does not establish source acceptable-numbering membership, the robust predictor, uniform index-set reduction, or any hardness theorem; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeCodeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeCodeStatementChecks.json",
+              "scope": "Primitive-recursive finite-table code family with exact compiled TM0 step, output and runtime. Not acceptable/universal numbering or general Partrec predictor compiler. Concrete length-code evader runtime/output supplier for paper.tex290\u2013297 only. It does not establish source acceptable-numbering membership, the robust predictor, uniform index-set reduction, or any hardness theorem; whole label remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeMachineStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/PredictionTapeMachineStatementChecks.json",
+              "scope": "Actual TM0 input tape code evader, output at terminal head, exact min(k,n)+2 runtime including write and halt. No universal numbering, general tape simulation or source hardness claim. Concrete length-code evader runtime/output supplier for paper.tex290\u2013297 only. It does not establish source acceptable-numbering membership, the robust predictor, uniform index-set reduction, or any hardness theorem; whole label remains pending."
+            }
+          ]
         },
         {
           "id": "14-complexity-of-prediction-measures:lem:list",

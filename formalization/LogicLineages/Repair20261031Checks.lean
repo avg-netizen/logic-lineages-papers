@@ -168,6 +168,12 @@ public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeCheckStatementCh
 public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeEffectivityStatementChecks
 public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeStatementChecks
 public import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeTypesStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerAdjunctionStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeCodeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeMachineStatementChecks
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeTableStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -2115,6 +2121,98 @@ theorem checked_WWSourceSyntaxCodeTypes_typeLevelPrimitiveRecursive :
 theorem checked_WWSourceSyntaxCodeTypes_typeConstructorsPrimitiveRecursive :
     LogicLineages.OrdinalComparison.Source.SyntaxCode.Targets.TypeConstructorsPrimitiveRecursive :=
   LogicLineages.OrdinalComparison.Source.SyntaxCode.StatementChecks.typeConstructorsPrimitiveRecursive
+
+theorem checked_WalkerAdjunction_uniqueDigits :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerAdjunctionUniqueDigits :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerAdjunctionStatementChecks.uniqueDigits
+
+theorem checked_WalkerAdjunction_faithful :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerAdjunctionFaithful :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerAdjunctionStatementChecks.faithful
+
+theorem checked_WalkerAdjunction_rootRelation :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerAdjunctionRootRelation :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerAdjunctionStatementChecks.rootRelation
+
+theorem checked_WalkerFiniteTree_uniqueDigits :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerFiniteTreeUniqueDigits :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks.uniqueDigits
+
+theorem checked_WalkerFiniteTree_relations :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.walkerFiniteTreeRelations :=
+  LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks.relations
+
+theorem checked_PredictionRawRuntime_terminalRunLengthUnique :
+    LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeTargets.TerminalRunLengthUnique :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawRuntime.StatementChecks.terminalRunLengthUnique
+
+theorem checked_PredictionRawRuntime_exactInputRuntime :
+    LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeTargets.ExactInputRuntime :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawRuntime.StatementChecks.exactInputRuntime
+
+theorem checked_PredictionRawRuntime_exactWorstCaseRuntime :
+    LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeTargets.ExactWorstCaseRuntime :=
+  LogicLineages.ComputabilityKnowledge.PredictionRawRuntime.StatementChecks.exactWorstCaseRuntime
+
+theorem checked_PredictionTapeCode_effectiveCodeFamily :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeCodeTargets.EffectiveCodeFamily :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks.effectiveCodeFamily
+
+theorem checked_PredictionTapeCode_exactCompiledStep :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeCodeTargets.ExactCompiledStep :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks.exactCompiledStep
+
+theorem checked_PredictionTapeCode_exactCodedRuntime :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeCodeTargets.ExactCodedRuntime :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks.exactCodedRuntime
+
+theorem checked_PredictionTapeCode_exactCodedOutput :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeCodeTargets.ExactCodedOutput :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks.exactCodedOutput
+
+theorem checked_PredictionTapeCode_uniformConstantTime :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeCodeTargets.UniformConstantTime :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeCode.StatementChecks.uniformConstantTime
+
+theorem checked_PredictionTapeMachine_exactTapeComputation :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMachineTargets.ExactTapeComputation :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.exactTapeComputation
+
+theorem checked_PredictionTapeMachine_uniqueTapeComputation :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMachineTargets.UniqueTapeComputation :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.uniqueTapeComputation
+
+theorem checked_PredictionTapeMachine_unreadSuffixPreserved :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMachineTargets.UnreadSuffixPreserved :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.unreadSuffixPreserved
+
+theorem checked_PredictionTapeMachine_constantTapeRuntime :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeMachineTargets.ConstantTapeRuntime :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.constantTapeRuntime
+
+theorem checked_PredictionTapeTable_effectiveDecoding :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeTableTargets.EffectiveDecoding :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.effectiveDecoding
+
+theorem checked_PredictionTapeTable_effectiveBoundedSimulation :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeTableTargets.EffectiveBoundedSimulation :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.effectiveBoundedSimulation
+
+theorem checked_PredictionTapeTable_exactSingleStep :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeTableTargets.ExactSingleStep :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactSingleStep
+
+theorem checked_PredictionTapeTable_exactBoundedSimulation :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeTableTargets.ExactBoundedSimulation :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactBoundedSimulation
+
+theorem checked_PredictionTapeTable_exactInitialTape :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeTableTargets.ExactInitialTape :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactInitialTape
+
+theorem checked_PredictionTapeTable_malformedCodeHalts :
+    LogicLineages.ComputabilityKnowledge.PredictionTapeTableTargets.MalformedCodeHalts :=
+  LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.malformedCodeHalts
 
 end LogicLineages.Repair20261031Checks
 

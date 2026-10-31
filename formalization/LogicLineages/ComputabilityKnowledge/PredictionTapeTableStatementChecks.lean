@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeTableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks
+theorem effectiveDecoding : PredictionTapeTableTargets.EffectiveDecoding := PredictionTapeTableProof.effectiveDecoding
+theorem effectiveBoundedSimulation : PredictionTapeTableTargets.EffectiveBoundedSimulation := PredictionTapeTableProof.effectiveBoundedSimulation
+theorem exactSingleStep : PredictionTapeTableTargets.ExactSingleStep := PredictionTapeTableProof.exactSingleStep
+theorem exactBoundedSimulation : PredictionTapeTableTargets.ExactBoundedSimulation := PredictionTapeTableProof.exactBoundedSimulation
+theorem exactInitialTape : PredictionTapeTableTargets.ExactInitialTape := PredictionTapeTableProof.exactInitialTape
+theorem malformedCodeHalts : PredictionTapeTableTargets.MalformedCodeHalts := PredictionTapeTableProof.malformedCodeHalts
+end LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks

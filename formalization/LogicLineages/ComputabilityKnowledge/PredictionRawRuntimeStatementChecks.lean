@@ -1,0 +1,23 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionRawRuntime.StatementChecks
+
+theorem terminalRunLengthUnique : PredictionRawRuntimeTargets.TerminalRunLengthUnique :=
+  PredictionRawRuntimeProof.terminalRunLengthUnique
+
+theorem exactInputRuntime : PredictionRawRuntimeTargets.ExactInputRuntime :=
+  PredictionRawRuntimeProof.exactInputRuntime
+
+theorem exactWorstCaseRuntime : PredictionRawRuntimeTargets.ExactWorstCaseRuntime :=
+  PredictionRawRuntimeProof.exactWorstCaseRuntime
+
+#print axioms terminalRunLengthUnique
+#print axioms exactInputRuntime
+#print axioms exactWorstCaseRuntime
+end LogicLineages.ComputabilityKnowledge.PredictionRawRuntime.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionRawRuntime.StatementChecks

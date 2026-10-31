@@ -1,0 +1,132 @@
+{
+  "accepted_utc": "2026-10-31T07:52:36.234543+00:00",
+  "scope": "Finite ancestor-tree presentation, unique digit sums and generator parent equations, paper.tex 694\u2013704. Explicit recursive literal quotients. Whole Walker lemma pending.",
+  "source_correspondence": "Finite ancestor-tree presentation by explicit recursive literal quotients, unique digit sums and generator-parent equations (paper.tex694\u2013704). Actual finite-stage supplier only; whole Walker filtration lemma/source normal form remains pending. Inherits disclosed audit-only gate amendment on WalkerAdjunction, with original mathematical freeze unchanged. Post-checkpoint08.",
+  "source_commit": "48146dc2134470844391dad3e7a9109e4d144925",
+  "source_commit_provenance": "Explicit export metadata, independently verified against Git source blob and current manuscript bytes; any supplied frozen manuscript hash is also checked. Original freeze preserved unchanged.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks",
+  "frozen_at_utc": "2026-10-31T07:48:05.484518+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/walker-finite-tree-freeze.json",
+  "freeze_sha256": "59787ead37748465980db7c109b8ef8f49bbc6b3261420f428842ccccc097d23",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeDefinitions.lean",
+      "sha256": "bdc55a69bb6db3ca81760fca9f1025317ace4c8e1023cc9ac20bf205b8863ca4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeTargets.lean",
+      "sha256": "58c686af804d4c754849d48575af5da997eab4ac73950ef38669d875be212296"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeStatementChecks.lean",
+      "sha256": "744b2d802f1e6837efd82cd6f4114e87e16f327dc4c8824712b980932c0d9c2e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeProof.lean",
+      "sha256": "bafc06e8395d81c21deb61a45468688e552e63cb1f4bff3726120a252008326e"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks.uniqueDigits",
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks.relations"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793432844705521194-5.json",
+      "sha256": "20e431607b33883a1f96b44e717cb3d43c4efdfb85d1d324717e8301590a25e0",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793433123910261428-5.json",
+      "sha256": "143678da1ac986df3342ff02c6ade73590a6f8465d5801dd2509ff480215561a",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793433123910261428-5-LogicLineages-ModelsAlgebra-PGroups-WalkerFiniteTreeStatementChecks.log",
+  "gate_log_sha256": "bc77befe58a9ab17ddc8f4d82db03760d5c0465b3bcf85bd19c660a57cace139",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks.relations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.WalkerFiniteTreeStatementChecks.uniqueDigits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeStatementChecks.lean",
+      "sha256": "744b2d802f1e6837efd82cd6f4114e87e16f327dc4c8824712b980932c0d9c2e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeProof.lean",
+      "sha256": "bafc06e8395d81c21deb61a45468688e552e63cb1f4bff3726120a252008326e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeTargets.lean",
+      "sha256": "58c686af804d4c754849d48575af5da997eab4ac73950ef38669d875be212296"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerFiniteTreeDefinitions.lean",
+      "sha256": "bdc55a69bb6db3ca81760fca9f1025317ace4c8e1023cc9ac20bf205b8863ca4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionDefinitions.lean",
+      "sha256": "86627772d339f61b97476079dd10749c2df60f0307b5bdce63f92041bddbd8c3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionProof.lean",
+      "sha256": "c001867759bb50e30403a8815041dd97d069ebb2ffbf6ee8c74aefa53ce0e43e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/WalkerAdjunctionTargets.lean",
+      "sha256": "45ed14f963c75947bd69d43d5c2108ed929fe5939aa02d4ace2818994e84fa2d"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.Group.PUnit",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.ZPowers.Basic",
+    "Mathlib.GroupTheory.QuotientGroup.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

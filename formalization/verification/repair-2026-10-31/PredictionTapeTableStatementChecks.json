@@ -1,0 +1,139 @@
+{
+  "accepted_utc": "2026-10-31T07:53:03.548134+00:00",
+  "scope": "Primitive-recursive finite-table decoding and actual bounded tape simulation with exact TM0 operational correspondence. Not yet acceptable/universal numbering or predictor compiler.",
+  "source_correspondence": "Primitive-recursive natural-code finite-table decoder and bounded tape simulator, exact actual TM0 step/initial-state correspondence and terminal-run equivalence with malformed handling. Not yet acceptable/universal numbering, full source machine calibration or predictor compiler. Post-checkpoint08 supplier.",
+  "source_commit": "48146dc2134470844391dad3e7a9109e4d144925",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeTableStatementChecks",
+  "frozen_at_utc": "2026-10-31T07:49:58.860069+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-tape-table-freeze.json",
+  "freeze_sha256": "1647083f9e9b6e270bff1ab7b6ecf78e9ac304a611f1b2730893f9293c83296f",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableDefinitions.lean",
+      "sha256": "be4cac105a6d0a406152af67dc9fb7d87d5976baa80b9dedf3c0891de0df9993"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableTargets.lean",
+      "sha256": "0c220243ea673eec476cf49a9aa6dbacc01d68b28a8a5606a980a3e99a375f9c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableStatementChecks.lean",
+      "sha256": "8eac252862738925f01552991aeaf93a9d8f182cdcdadea2ac3fb8f2d9fc8726"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableProof.lean",
+      "sha256": "e50289a7f8d89134851849c8e09f1916059294769f17dc31eea9800116df4c55"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.effectiveDecoding",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.effectiveBoundedSimulation",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactSingleStep",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactBoundedSimulation",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactInitialTape",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.malformedCodeHalts"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793432984659734372-5.json",
+      "sha256": "ef1bd590ad412f9eabbef099653e9a26de1f976aa831291e15109f9b94c29b1f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793433148351036235-5.json",
+      "sha256": "998f7aa9be90d84f547918bfc2bda087f88436cf5d67bb03e2e6e1a68f4d6c11",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793433148351036235-5-LogicLineages-ComputabilityKnowledge-PredictionTapeTableStatementChecks.log",
+  "gate_log_sha256": "045bc8cdbff8cc62823c553f4663eb6188299039994078530b240fc471f6a45e",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactSingleStep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactBoundedSimulation": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.exactInitialTape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.malformedCodeHalts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.effectiveBoundedSimulation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeTable.StatementChecks.effectiveDecoding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableStatementChecks.lean",
+      "sha256": "8eac252862738925f01552991aeaf93a9d8f182cdcdadea2ac3fb8f2d9fc8726"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableProof.lean",
+      "sha256": "e50289a7f8d89134851849c8e09f1916059294769f17dc31eea9800116df4c55"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableTargets.lean",
+      "sha256": "0c220243ea673eec476cf49a9aa6dbacc01d68b28a8a5606a980a3e99a375f9c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeTableDefinitions.lean",
+      "sha256": "be4cac105a6d0a406152af67dc9fb7d87d5976baa80b9dedf3c0891de0df9993"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

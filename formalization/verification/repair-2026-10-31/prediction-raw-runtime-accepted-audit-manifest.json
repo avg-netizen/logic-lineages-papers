@@ -1,0 +1,27 @@
+{
+  "frozen_at_utc": "2026-10-31T07:40:43.475682+00:00",
+  "candidate_absent_at_freeze": true,
+  "candidate_path": "LogicLineages/ComputabilityKnowledge/PredictionRawRuntimeProof.lean",
+  "comparator_receipt": "build-reports/1793432410524179039-5.json",
+  "source_file": "14-complexity-of-prediction-measures/paper.tex",
+  "source_sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7",
+  "source_label": "eq:codeevader bounded-prefix constant-runtime supplier",
+  "scope": "Exact actual raw TM2 transitions, including final output/halt block. Not tape time, ordinary numbering, source membership or hardness.",
+  "sha256": {
+    "LogicLineages/ComputabilityKnowledge/PredictionRawRuntimeDefinitions.lean": "a8aae8dfda85d2e416e622c99045962ac556e8a6ff205c0431274c88c7f5d9fc",
+    "LogicLineages/ComputabilityKnowledge/PredictionRawRuntimeTargets.lean": "1341da3bf01b90a722387a6dd83e90e8922b1efeefdb726ecdec8561bbba7242",
+    "LogicLineages/ComputabilityKnowledge/PredictionRawRuntimeStatementChecks.lean": "ba4567b00a10adda3af809058eacd39ca97a061c6fc4b0c4082671b99e2bc930"
+  },
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionRawRuntimeStatementChecks",
+  "source_commit": "48146dc2134470844391dad3e7a9109e4d144925",
+  "gate_audit_amendment": {
+    "approved_by": "Formalization integration lead",
+    "candidate_exists_at_amendment": true,
+    "original_freeze_path": "verification/repair-2026-10-31/prediction-raw-runtime-freeze.json",
+    "original_freeze_sha256": "ba1e89031fe91fa377d1a325ea9552e2fa6403679f5c79608c113ac2fc2df7c8",
+    "amendment_path": "verification/repair-2026-10-31/prediction-raw-runtime-audit-amendment.json",
+    "amendment_sha256": "991f4135ff58caf1a5d096f0ebb40c35e6547dd1fa5d17d1fd1adf60eb33ed21",
+    "change": "Add only Audit import and namespace audit command; removing those exact lines reconstructs original gate hash. All exact aliases, semantic sources, targets and candidate unchanged."
+  },
+  "protocol_note": "Frozen time and candidate_absent_at_freeze describe the preserved ORIGINAL pre-author mathematical freeze, not the later audit-only amendment. Candidate already existed at amendment; no fresh pre-author gate freeze is claimed. This effective verification manifest changes only the approved gate audit hash and adds independently checked metadata."
+}

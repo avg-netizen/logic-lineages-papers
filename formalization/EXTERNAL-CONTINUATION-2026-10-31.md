@@ -343,3 +343,31 @@ records the same expressly authorized current root-only 4,096/4,096/6,144 MiB
 profile. The root run took 2.544 seconds and peaked at 2,614,328 KiB RSS.
 This includes the completed original-source counter-bound chain. It remains
 a local verification result, not a GitHub CI result or a cold upstream rebuild.
+
+## Subsequent algebra and prediction suppliers
+
+The next checkpoint continues other pending source chains without promoting
+additional whole statements. For paper 01, the literal root-adjunction
+quotient has unique digit representatives, faithful original-group inclusion
+and its required root relation. Recursive finite rooted-tree quotients have
+the exact digit-sum normal form and all parent equations. The actual infinite
+Walker construction and transfinite filtration remain separate obligations.
+
+For paper 14, checked machine suppliers establish exact bounded-prefix
+runtimes on actual TM2 and TM0 machines, a primitive-recursive finite
+transition-table decoder and bounded simulator, and uniform numeric codes
+for the actual tape evaders with exact output/runtime correspondence. These
+results do not identify the table numbering with the source's acceptable
+numbering, prove a runtime-preserving compiler, or complete source hardness
+or membership statements. Those bridges remain explicit work in progress.
+
+The register remains 100 checked, 2 inherited and 87 pending.
+
+The [ninth focused checkpoint](verification/repair-2026-10-31/checkpoint-09.json)
+selects those six new suppliers, for 174 gates and 516 exact aliases. All
+868 focused closure hashes match before/after. Its [actual root check](verification/repair-2026-10-31/root-checkpoint09.json)
+also passed: 879 imports, 2,740 namespace audits, all 3,171 local closure
+hashes unchanged, and the same expressly authorized current root-only profile.
+It took 2.536 seconds and peaked at 2,613,920 KiB RSS. Later universal-property
+and subtree-map work is outside this fixed snapshot. No whole source target
+was promoted in this checkpoint.

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.PredictionTapeMachineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks
+
+theorem exactTapeComputation : PredictionTapeMachineTargets.ExactTapeComputation :=
+  PredictionTapeMachineProof.exactTapeComputation
+
+theorem uniqueTapeComputation : PredictionTapeMachineTargets.UniqueTapeComputation :=
+  PredictionTapeMachineProof.uniqueTapeComputation
+
+theorem unreadSuffixPreserved : PredictionTapeMachineTargets.UnreadSuffixPreserved :=
+  PredictionTapeMachineProof.unreadSuffixPreserved
+
+theorem constantTapeRuntime : PredictionTapeMachineTargets.ConstantTapeRuntime :=
+  PredictionTapeMachineProof.constantTapeRuntime
+
+#print axioms exactTapeComputation
+#print axioms uniqueTapeComputation
+#print axioms unreadSuffixPreserved
+#print axioms constantTapeRuntime
+end LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks

@@ -1,0 +1,132 @@
+{
+  "accepted_utc": "2026-10-31T07:45:56.915955+00:00",
+  "scope": "Actual TM0 input tape code evader, output at terminal head, exact min(k,n)+2 runtime including write and halt. No universal numbering, general tape simulation or source hardness claim.",
+  "source_correspondence": "Actual TM0 input-tape code evader with terminal-head output and exact min(k,n)+2 runtime including write/halt, plus suffix behavior. Not universal numbering, general simulation, full source membership or hardness. Original pre-author freeze retained byte-identically; supplemental manifest only supplies exact module and Git-checked baseline metadata. Post-checkpoint08.",
+  "source_commit": "48146dc2134470844391dad3e7a9109e4d144925",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionTapeMachineStatementChecks",
+  "frozen_at_utc": "2026-10-31T07:43:52.587242+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-tape-machine-verification-manifest.json",
+  "freeze_sha256": "f48f4f0111bf30390b18f51576687b2b26a0d3a027608855b0b08eb6d47a05e2",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineDefinitions.lean",
+      "sha256": "92c581db9d5ea44ae44632c9cb92b00d59931c37e37bf9a5cf8962bde1d3163d"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineTargets.lean",
+      "sha256": "0bfe2bebf183eba07916455a320841cf2d33d4656a09509aa560ef4ff1bd643b"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineStatementChecks.lean",
+      "sha256": "bd64b6e02669b38f8ea11862594a6bfac5e9e8b3c1ab7853bb9241531083cc6f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineProof.lean",
+      "sha256": "2cec5e23812355afe72c6390f2afcf4b9d1652d3fb0535d1fa4c715af07d7934"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.exactTapeComputation",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.uniqueTapeComputation",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.unreadSuffixPreserved",
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.constantTapeRuntime"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793432580262849141-5.json",
+      "sha256": "dcd5ab138302f6d9e6f6dd34a8206e0a4173b150331dba2ffabcea81f632102c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793432702188117744-5.json",
+      "sha256": "224670b45120cc3c3377487cd28d75c53065aa9635d966301288f4d55d9f7930",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793432702188117744-5-LogicLineages-ComputabilityKnowledge-PredictionTapeMachineStatementChecks.log",
+  "gate_log_sha256": "e970dd1eb9bb904da4ccf56e52688b8cc9ea8e54741ffcedbcd613d042b646f0",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.uniqueTapeComputation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.constantTapeRuntime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.exactTapeComputation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionTapeMachine.StatementChecks.unreadSuffixPreserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineStatementChecks.lean",
+      "sha256": "bd64b6e02669b38f8ea11862594a6bfac5e9e8b3c1ab7853bb9241531083cc6f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineProof.lean",
+      "sha256": "2cec5e23812355afe72c6390f2afcf4b9d1652d3fb0535d1fa4c715af07d7934"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineTargets.lean",
+      "sha256": "0bfe2bebf183eba07916455a320841cf2d33d4656a09509aa560ef4ff1bd643b"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionTapeMachineDefinitions.lean",
+      "sha256": "92c581db9d5ea44ae44632c9cb92b00d59931c37e37bf9a5cf8962bde1d3163d"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.TuringMachine.PostTuringMachine"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  },
+  "original_freeze_provenance": {
+    "path": "verification/repair-2026-10-31/prediction-tape-machine-freeze.json",
+    "sha256": "6995a053636d946a4ced311aa7faa418026b700200edb85a5b6662e2f75c5fe8",
+    "scope": "Metadata-only verification manifest supplies exact gate module and independently Git-checked baseline; original frozen hashes/time/candidate-absence unchanged."
+  }
+}
