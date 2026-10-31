@@ -1,0 +1,36 @@
+{
+  "checked_utc": "2026-10-31T03:28:52.019195+00:00",
+  "status": "exact lexical repair verified",
+  "initial_freeze": {
+    "path": "LogicLineages/OrdinalComparison/WWPolicyAssignment-FREEZE-attempt1.json",
+    "sha256": "bb4ff065ee2b4269765467cbc22b0553e87ab3bc028376aa73bffbaa64874e15",
+    "frozen_utc": "2026-10-31T03:24:54.395260+00:00"
+  },
+  "current_freeze": {
+    "path": "LogicLineages/OrdinalComparison/WWPolicyAssignment-FREEZE.json",
+    "sha256": "7a398366f624ce2d0bac01cee0a87bcf22ba54fc7138de323c574499e6c90a0a",
+    "frozen_utc": "2026-10-31T03:25:39.652013+00:00"
+  },
+  "repair": "Rename reserved identifiers repeat to literalRepeat and partial to policyPartial by whole-word substitution in Definitions and Targets, including comments. No other byte changes: inverse substitutions exactly reproduce both original hashes.",
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/WWPolicyAssignmentDefinitions.lean",
+      "attempt1_sha256": "1167f9cdcac78cd72d17c7fcbb9621cc0f7afd26fa29008815fde734306c6188",
+      "current_sha256": "2141a21b14a139ff7ca0c19a32ce9792544c03467842e1f1fe1de3b3e1824cc1",
+      "reverse_rename_reproduces_attempt1_hash": true
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/WWPolicyAssignmentTargets.lean",
+      "attempt1_sha256": "e36d1877e778451ec30746b54e899d246070230d40b5bb1b2dc8b60a4c8c8855",
+      "current_sha256": "82d6887a17660b884778758c65f7733365202aaa58794f00471a200d94e8156f",
+      "reverse_rename_reproduces_attempt1_hash": true
+    }
+  ],
+  "gate_unchanged_sha256": "c156ef6fd4720b187fe8e95e60bd9eb5e794a27cff1aa291c8f47a6013f065dd",
+  "initial_failed_parser_log": {
+    "path": "build-reports/1793417104956369583-2-LogicLineages-OrdinalComparison-WWPolicyAssignmentDefinitions.log",
+    "sha256": "78a4756d814f191decac8e265b39fb2b7636bfe8445f620c65c4ee947c68fb04"
+  },
+  "chronology_scope": "Both freeze records and the author report state that the candidate was absent when the relevant comparator snapshot was frozen. The current freeze identifies the successful prerequisite receipt. Hash reconstruction verifies the precise amendment, not independent proof of every historical file-absence assertion.",
+  "acceptance": "No candidate acceptance is implied by this comparator-repair audit."
+}

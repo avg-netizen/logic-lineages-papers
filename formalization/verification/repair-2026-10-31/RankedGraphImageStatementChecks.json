@@ -1,0 +1,144 @@
+{
+  "accepted_utc": "2026-10-31T03:32:18.690682+00:00",
+  "scope": "Actual finite graph isomorphism-saturated images of ranked term ideals, arbitrary graph restriction transfer, heredity/JEP and finite-cover equivalence. Given ideal cover is exact lemma context; no effective decomposition/Parikh/decision theorem asserted.",
+  "source_correspondence": "Paper03 decision.tex lem:image-cover: actual finite graph isomorphism-saturated images of ranked term ideals, pruning under arbitrary induced embeddings, hereditary directed images, and finite image cover criterion. The supplied ideal cover is part of the lemma context; this does not discharge its separate effective ideal-decomposition, Parikh or whole decision suppliers.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedGraphImageStatementChecks",
+  "frozen_at_utc": "2026-10-31T03:31:24.795181+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/ranked-graph-image-freeze.json",
+  "freeze_sha256": "3861976a153b1d9ec8a246c76c7d05d4798447aae61675b50754c0bf4f7efe86",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageTargets.lean",
+      "sha256": "baa8f3ae274fbab6a3abf5efd0cdcb07e06339774a31b3b489626cda45e73b36"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageStatementChecks.lean",
+      "sha256": "0822231cc4b7238e14b22f40375a5d33212c1c4aed0fe0e81282fff9b877666d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageProof.lean",
+      "sha256": "b577024355e0be627002cde8b7fef6e9da595f4ca5cb9fefbe86ccdfbf90be76"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.pruneGraphEmbedding",
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.idealImage",
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.imageCoverFromLanguage",
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.imageCover"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793417441630397985-17.json",
+      "sha256": "0ca24390732202e925ed56a35b99321d449fde767b611d2f2cdff9f9548d1bb9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793417498124025271-5.json",
+      "sha256": "466ed22a2bf7dfd0954d5194f7870838652dd945c682175a2b203a218139b9d4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793417498124025271-5-LogicLineages-ModelsAlgebra-Forests-RankedGraphImageStatementChecks.log",
+  "gate_log_sha256": "861e0431ba6080b7d7a9716e1ada1513799cb8324fc033a2cfae0884bb76c4c4",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.imageCover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.pruneGraphEmbedding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.idealImage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.StatementChecks.imageCoverFromLanguage": [
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageStatementChecks.lean",
+      "sha256": "0822231cc4b7238e14b22f40375a5d33212c1c4aed0fe0e81282fff9b877666d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageProof.lean",
+      "sha256": "b577024355e0be627002cde8b7fef6e9da595f4ca5cb9fefbe86ccdfbf90be76"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageTargets.lean",
+      "sha256": "baa8f3ae274fbab6a3abf5efd0cdcb07e06339774a31b3b489626cda45e73b36"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "Mathlib.Data.Finite.Sum",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Fintype.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in supplementary receipt(s); candidate and gate compiled in final receipt. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

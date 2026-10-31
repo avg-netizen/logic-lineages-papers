@@ -1,0 +1,125 @@
+{
+  "accepted_utc": "2026-10-31T03:36:59.768049+00:00",
+  "scope": "Literal Boolean-leaf deletion procedure, exact empty-result criterion, exact graph and homeomorphic correctness of every returned parse. No ideal-decomposition or regularity algorithm claimed.",
+  "source_correspondence": "Paper03 decision.tex lem:parse-pruning proof, executable Boolean leaf deletion: exact empty-result test and exact graph/homeomorphic correctness of every returned parse. A constructive algorithmic supplier for an already checked lemma, not a new whole numbered result or ideal-decomposition/regularity decision procedure.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithmStatementChecks",
+  "frozen_at_utc": "2026-10-31T03:34:17.211477+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/ranked-prune-algorithm-freeze.json",
+  "freeze_sha256": "c15421e43627f949f6d585a2df52da8ffdc821de9e3cadb61458437adef69c7d",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmDefinitions.lean",
+      "sha256": "92ae53a48200d53d295503798dc53200802a4472f21833796d8606f1e018ae3e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmTargets.lean",
+      "sha256": "a16a388b73749b255035e4e46b7dbbfcae585c621f7e24dcc01e8aa4bb1781f2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmStatementChecks.lean",
+      "sha256": "79d52cb74e06a5cae76ca44050ad801f5be2afa90af8123cb8817a9cd2bb0d2f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmProof.lean",
+      "sha256": "019b79b3ea9bc67da90ad65f98e8924497f9f459d8d0003eecd5539019813a3d"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.StatementChecks.noneExact",
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.StatementChecks.someExact"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793417627338410672-2.json",
+      "sha256": "aae8e3ccc7951315b54f4cfb32503662dc6ed744752b40e385b6950b2fad3280",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793417792829695671-2.json",
+      "sha256": "459936f4904e79c1825ce4ca9dedf8d4f5994df12aa212cbee99f214e63b37a9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793417792829695671-2-LogicLineages-ModelsAlgebra-Forests-RankedPruneAlgorithmStatementChecks.log",
+  "gate_log_sha256": "481dd119fe5eb273c64711db8b48d6169c0d50ab54d0bf18d6afc53a4352ff74",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.StatementChecks.noneExact": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.StatementChecks.someExact": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.prune.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.prune.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithm.prune.eq_1": []
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmStatementChecks.lean",
+      "sha256": "79d52cb74e06a5cae76ca44050ad801f5be2afa90af8123cb8817a9cd2bb0d2f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmProof.lean",
+      "sha256": "019b79b3ea9bc67da90ad65f98e8924497f9f459d8d0003eecd5539019813a3d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmTargets.lean",
+      "sha256": "a16a388b73749b255035e4e46b7dbbfcae585c621f7e24dcc01e8aa4bb1781f2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedPruneAlgorithmDefinitions.lean",
+      "sha256": "92ae53a48200d53d295503798dc53200802a4472f21833796d8606f1e018ae3e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in supplementary receipt(s); candidate and gate compiled in final receipt. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

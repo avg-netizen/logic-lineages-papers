@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.RankedImageCoverCompletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.CompletionStatementChecks
+
+theorem imageCoverFromIdeals : CompletionTargets.ImageCoverFromIdeals :=
+  CompletionProof.imageCoverFromIdeals
+
+end LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.CompletionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.RankedGraphImage

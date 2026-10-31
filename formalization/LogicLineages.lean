@@ -718,3 +718,9 @@ here. The full paper inventory and remaining dependencies are in TARGETS.json.
 public import LogicLineages.ModelsAlgebra.Forests.RankedParseStatementChecks
 public import LogicLineages.OrdinalComparison.WWLiteralSizeStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedGraphImageStatementChecks
+public import LogicLineages.OrdinalComparison.WWPolicyAssignmentStatementChecks
+public import LogicLineages.OrdinalComparison.WWPolicyGeneratedStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedImageCoverCompletionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithmStatementChecks
+public import LogicLineages.OrdinalComparison.WWPolicyValueStatementChecks

@@ -38,6 +38,35 @@ statements, not automatic certificates of new or changed statements.
   The actual ranked-parse graph-image hypotheses are still separate work;
   this abstract result alone does not complete `lem:image-cover`.
   [Acceptance evidence](verification/repair-2026-10-31/FiniteIdealCoverStatementChecks.json).
+- **Paper 03, actual graph-image ideal core: checked.** Actual graph
+  restrictions, hereditary directed images, language-cover transfer and their
+  composed JEP criterion are proved. The original forbidden graph class still
+  needs its checked identification with these parse images, so
+  `lem:image-cover` remains pending.
+  [Graph-image evidence](verification/repair-2026-10-31/RankedGraphImageStatementChecks.json)
+  and [composition evidence](verification/repair-2026-10-31/RankedImageCoverCompletionStatementChecks.json).
+- **Paper 03, executable pruning: checked.** Boolean leaf selection computes
+  the literal deletion/suppression result, with exact empty-result and
+  induced-image correctness.
+  [Evidence](verification/repair-2026-10-31/RankedPruneAlgorithmStatementChecks.json).
+- **Paper 05, actual source-policy separation: checked.** The closed typed
+  source in the repair has positive ordinal coordinates 204 and 184 under
+  the two specified policies. The left policy is calibrated against the
+  existing literal partial operation. No collapse evaluation was used.
+  [Evidence](verification/repair-2026-10-31/WWPolicyAssignmentStatementChecks.json).
+- **Paper 05, generated assignment: checked suppliers.** Under either L/R
+  policy, every original typed source has a syntax-directed assignment with
+  the proved generated grades; positive coordinates are closed when free
+  names are ground. This syntactic grading is not the original collapse-norm
+  admissibility condition, and it is not a full scalar translation theorem.
+  [Evidence](verification/repair-2026-10-31/WWPolicyGeneratedStatementChecks.json).
+- **Paper 05, fixed-input partial values: checked.** For the same literal
+  input tree, successful L partials have R partials with equal coordinate
+  denotations for every valuation. This is compatible with the 204/184
+  whole-source distinction, because policy-dependent assignments can supply
+  different input trees to later partials. Arbitrary admissible policies and
+  the remaining finite-expansion assertions are still pending.
+  [Evidence](verification/repair-2026-10-31/WWPolicyValueStatementChecks.json).
 
 After source reconciliation and this first whole-lemma acceptance, the register
 contains **189 statements: 86 checked, 2 inherited calculator-package results,
@@ -45,9 +74,9 @@ and 101 pending**. The repair introduced eleven new numbered obligations.
 
 ## Work in progress
 
-The first targets are actual ranked-parse induced embeddings and pruning for
-paper 03, and literal partial-size bounds and explicit source-policy semantics
-for paper 05. Whole decision and norm claims remain pending until their full
+The next targets are the finite-forest-to-parse representation and actual
+finite induced-subgraph-profile automaton for paper 03, and arbitrary binary
+sum-shape expansion/value bounds for paper 05. Whole decision and norm claims remain pending until their full
 formal dependency chains are proved. In particular, bibliographic references
 to effective ideal decomposition and Parikh's theorem are not Lean suppliers.
 
@@ -73,3 +102,10 @@ root now selects 708 gates, but only the focused aggregate was recompiled here.
 An initial aggregate audit could not discover lazily imported declarations;
 explicit aliases fixed audit visibility without changing any theorem or shared
 build helper. Its failed receipt is preserved in the checkpoint record.
+
+The [second focused checkpoint](verification/repair-2026-10-31/checkpoint-02.json)
+combines nine accepted gates and checks nineteen explicit exact-type aliases.
+All 82 local closure source hashes match before and after compilation. The
+root selects 714 gates; this remains a focused check, not a new whole-root
+build. The register count remains 86 checked: the additional components are
+explicit suppliers and implementations, not additional whole source results.

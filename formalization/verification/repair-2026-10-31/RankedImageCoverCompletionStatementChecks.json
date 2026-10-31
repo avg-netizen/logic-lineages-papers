@@ -1,0 +1,147 @@
+{
+  "accepted_utc": "2026-10-31T03:35:48.297222+00:00",
+  "scope": "Composed actual graph-image cover, hereditary/JEP pieces, and JEP iff equality, under the explicit finite ideal cover of the term language. No graph-cover correctness premise; original forbidden-class representation and effective ideal construction remain separate application obligations.",
+  "source_correspondence": "Paper03 decision.tex lem:image-cover: composed graph-image cover, hereditary directed image pieces and JEP iff one image piece equals the entire class, from the explicit finite ideal cover of the term language. Graph-cover correctness is derived rather than assumed. The original forbidden-class representation and effective ideal construction remain separate application obligations.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedImageCoverCompletionStatementChecks",
+  "frozen_at_utc": "2026-10-31T03:34:56.398627+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/ranked-image-cover-completion-freeze.json",
+  "freeze_sha256": "4d2d6a06ce92f7eb75eb58ee198d29b45480bfc92191a2230a4284a9e2e5485a",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedImageCoverCompletionTargets.lean",
+      "sha256": "8ac27890357ead465485881d258c2bb33b8901a7ab1d07ddde9a2f28a4b0aaa6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedImageCoverCompletionStatementChecks.lean",
+      "sha256": "6ed0561863bf51fa0ab9483385c629cd5249706803d04950154f9542abd7ca21"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedImageCoverCompletionProof.lean",
+      "sha256": "2e7aa1d2a760cbdcde45b7c8b7a8dd3aa1c2877ad3d4faaeb4dda0aa3a55bca7"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.CompletionStatementChecks.imageCoverFromIdeals"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793417441630397985-17.json",
+      "sha256": "0ca24390732202e925ed56a35b99321d449fde767b611d2f2cdff9f9548d1bb9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793417683748538553-2.json",
+      "sha256": "0bbf39895a275eaf7404fe0a82fcd55f82c29a6453b7886118a591088f104b63",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793417715523568105-5.json",
+      "sha256": "5bc25107810e75a269b18409e14b3ca4c61321f4246757f2ebafd7b6e4850a3d",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793417715523568105-5-LogicLineages-ModelsAlgebra-Forests-RankedImageCoverCompletionStatementChecks.log",
+  "gate_log_sha256": "a0569950b9da10e0a403fbf0c472ed3620862d28df229300338f3b843723e336",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.RankedGraphImage.CompletionStatementChecks.imageCoverFromIdeals": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedImageCoverCompletionStatementChecks.lean",
+      "sha256": "6ed0561863bf51fa0ab9483385c629cd5249706803d04950154f9542abd7ca21"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedImageCoverCompletionProof.lean",
+      "sha256": "2e7aa1d2a760cbdcde45b7c8b7a8dd3aa1c2877ad3d4faaeb4dda0aa3a55bca7"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedImageCoverCompletionTargets.lean",
+      "sha256": "8ac27890357ead465485881d258c2bb33b8901a7ab1d07ddde9a2f28a4b0aaa6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageProof.lean",
+      "sha256": "b577024355e0be627002cde8b7fef6e9da595f4ca5cb9fefbe86ccdfbf90be76"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageTargets.lean",
+      "sha256": "baa8f3ae274fbab6a3abf5efd0cdcb07e06339774a31b3b489626cda45e73b36"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "Mathlib.Data.Finite.Sum",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Fintype.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in supplementary receipt(s); candidate and gate compiled in final receipt. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

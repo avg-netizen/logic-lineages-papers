@@ -633,7 +633,14 @@
               "type": "LogicLineages.ModelsAlgebra.Forests.RankedParse.Targets.ExactPruning"
             }
           ],
-          "verification_receipt": "build-reports/1793417118514502259-2.json"
+          "verification_receipt": "build-reports/1793417118514502259-2.json",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedPruneAlgorithmStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedPruneAlgorithmStatementChecks.json",
+              "scope": "Executable Boolean leaf pruning: none exactly for empty selection and returned term has exact induced image. Implementation strengthening, not an additional numbered result."
+            }
+          ]
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:parse-regular",
@@ -663,6 +670,16 @@
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/FiniteIdealCoverStatementChecks.json",
               "scope": "Abstract finite hereditary directed-cover criterion, under the genuine cover hypotheses. Actual ranked-parse graph-image hereditary/JEP/cover properties remain separate obligations."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedGraphImageStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedGraphImageStatementChecks.json",
+              "scope": "Actual finite graph restriction, hereditary directed images, image-cover from a given language cover, and criterion under given graph cover. Fully composed image-language criterion remains separately pending."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedImageCoverCompletionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/RankedImageCoverCompletionStatementChecks.json",
+              "scope": "Composed coverage, hereditary directed graph images and JEP equality criterion from an actual finite term-ideal cover. Original forbidden graph class identification remains separately unregistered pending dependency verification."
             }
           ]
         },
@@ -1143,7 +1160,14 @@
               "status": "pending"
             }
           ],
-          "source_review_note": "The repaired manuscript explicitly quantifies over an admissible computable expansion policy. Previous and current whole targets remain pending; no old supplier proof is promoted to the revised statement."
+          "source_review_note": "The repaired manuscript explicitly quantifies over an admissible computable expansion policy. Previous and current whole targets remain pending; no old supplier proof is promoted to the revised statement.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWPolicyGeneratedStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWPolicyGeneratedStatementChecks.json",
+              "scope": "Total syntax-directed assignment for all actual original typed terms under L/R and ground-context positive-coordinate closedness. Generated syntax is not original norm-admissibility; scalar translation, evaluators and arbitrary computable policies remain pending."
+            }
+          ]
         },
         {
           "id": "05-wilken-weiermann-foundations:cor:source-classes",
@@ -1182,6 +1206,16 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWLiteralSizeStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWLiteralSizeStatementChecks.json",
               "scope": "Literal node/weighted-size/whole-free-first partial-size and multiplier bounds only. Policy-relative finite assignments, output expansion and association-value assertions remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWPolicyAssignmentStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWPolicyAssignmentStatementChecks.json",
+              "scope": "Actual L-policy calibration and closed typed-source positive ordinal-coordinate204/184 separation for L/R. No scalar separation, all-policy theorem or norm conclusion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWPolicyValueStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWPolicyValueStatementChecks.json",
+              "scope": "L/R partial-output denotations coincide for the same fixed literal input. Does not assert whole-source policy invariance, arbitrary policies, original norm or complete finite-expansion proposition."
             }
           ]
         },
