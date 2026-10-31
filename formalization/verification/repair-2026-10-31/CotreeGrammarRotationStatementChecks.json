@@ -1,0 +1,262 @@
+{
+  "accepted_utc": "2026-10-31T04:39:45.876014+00:00",
+  "scope": "Genuine indexed one- and two-hole context algebra; both on-path cyclic rotation and off-path two-hole reassignment; production count preservation and singleton open-hole transport; actual node factorization and path/sibling dichotomy. Not full reconstruction.",
+  "source_correspondence": "Paper03 genuine one/two-hole context composition, on/off-path count and cycle-hole rotation, occurrence factorization/dichotomy. Context-rotation suppliers, not complete reconstruction.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotationStatementChecks",
+  "frozen_at_utc": "2026-10-31T04:34:07.861434+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cotree-grammar-rotation-freeze.json",
+  "freeze_sha256": "2bd53513ba40a73b8a9a6c8ebc736d95b2b2a901b39c80d2244179ba26bcea8b",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationDefinitions.lean",
+      "sha256": "60c130925f6083a66508bc7224f701413a7da0528787a7777c1031d41cd1a2c4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationTargets.lean",
+      "sha256": "7a60e9c9471ed8fa74f185d005c48b0cd74abe9b54a2c1a3e4c179ab93b21e10"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationStatementChecks.lean",
+      "sha256": "c777b670136d08b11735c4a24f98bbaef066b374c2a5d97246790ee07fc5a90e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationProof.lean",
+      "sha256": "3c1afdc689b1920e48ca3dbb07d169fc86394fbbe5b46228a6bef5f48506ca6c"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.composePlug",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.composeCounts",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.contextHolesLaw",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.fillCounts",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.twoHolesLaw",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.onPathRotation",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.offPathRotation",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.occurrenceFactorization",
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.contextDichotomy"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793421263866092888-5.json",
+      "sha256": "5e0292e2ff50c542bfd8936a558ddd113fe4c67c938016def4bed2a0e65a01a0",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793421545677093806-5.json",
+      "sha256": "89adbae9068f093ebb98163405806ca4a7317eafbe5b9123ca19cc33ac552a3c",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793421545677093806-5-LogicLineages-ModelsAlgebra-Forests-CotreeGrammarRotationStatementChecks.log",
+  "gate_log_sha256": "bad0baa6e24b7b629f0a39f6e81da047092b72e71799fa318f29e2d99cd1c3f5",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.offPathRotation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.contextHolesLaw": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.contextDichotomy": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.composePlug": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.onPathRotation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.composeCounts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.fillCounts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.twoHolesLaw": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.StatementChecks.occurrenceFactorization": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.twoHoles.eq_def": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.twoHoles.eq_2": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.contextHoles.eq_1": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.contextHoles.eq_3": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.fill.eq_1": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.twoHoles.eq_3": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.contextHoles.eq_def": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.fill.eq_3": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.twoHoles.eq_1": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.twoHoles.eq_4": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.fill.eq_def": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.contextHoles.eq_2": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.fill.eq_2": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotation.fill.eq_4": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationStatementChecks.lean",
+      "sha256": "c777b670136d08b11735c4a24f98bbaef066b374c2a5d97246790ee07fc5a90e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationProof.lean",
+      "sha256": "3c1afdc689b1920e48ca3dbb07d169fc86394fbbe5b46228a6bef5f48506ca6c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationTargets.lean",
+      "sha256": "7a60e9c9471ed8fa74f185d005c48b0cd74abe9b54a2c1a3e4c179ab93b21e10"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarRotationDefinitions.lean",
+      "sha256": "60c130925f6083a66508bc7224f701413a7da0528787a7777c1031d41cd1a2c4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenDefinitions.lean",
+      "sha256": "6edee0b492ef7ce8ff8224eb9024587dcea8169a10089f2d6fe0164c333ec4c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowStatementChecks.lean",
+      "sha256": "c2b2d10b774dd35342bad12e1fc3c33a44855f670dc128aec1ee0f8053555aff"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowProof.lean",
+      "sha256": "246d30cf98c680b02f66a171601407963d00e6ef837ca5793827f488805b4ede"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowTargets.lean",
+      "sha256": "94ef886f66271d70b2393299b35167d79ef99da58a156226f0a62ed058f88d98"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowDefinitions.lean",
+      "sha256": "49154b6f29df1a6a4cf8269b197cf458f5fdd97009b8102b1019d5f0890ea13a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarStatementChecks.lean",
+      "sha256": "fbc9288ace97cfd7db0e187a0af65164c0dd04384d9725b55b2ac3c688825cfc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarProof.lean",
+      "sha256": "624df0329cc02f0d856681c2148d1ae320dea13d903c6cbba6cd45bab3d41433"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarTargets.lean",
+      "sha256": "d22b2c24e2e3efa2f63ce7fb30d77f8371a63592984285c6accc4c3e4d2d7254"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarDefinitions.lean",
+      "sha256": "e79d13d6f8ec88bf7f8516bd8ccc25784e34cb80a5773efe51f149b01d6e9ae1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenStatementChecks.lean",
+      "sha256": "a68ed85fa602524c6c9f27c4be6d74022672cc21c96e86fbd6298deed2ecc1b8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenProof.lean",
+      "sha256": "d34d92696bf09fa4edf5b774340f2f5d340030e8c6c90a419ac23dec836e36e6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenTargets.lean",
+      "sha256": "48eb45273c165b905a5c5572482d0efc4728c9a1e40eb4e4e06934fb5a0134d4"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+    "Mathlib.Computability.ContextFreeGrammar",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.Perm.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

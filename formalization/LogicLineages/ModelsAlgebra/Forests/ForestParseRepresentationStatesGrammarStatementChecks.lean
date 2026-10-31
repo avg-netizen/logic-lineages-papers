@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesGrammarProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesGrammar.StatementChecks
+
+theorem stateGrammarExact : Targets.StateGrammarExact := Proof.stateGrammarExact
+
+end LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesGrammar.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesGrammar

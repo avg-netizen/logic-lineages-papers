@@ -1,0 +1,184 @@
+{
+  "accepted_utc": "2026-10-31T04:44:49.352829+00:00",
+  "scope": "Every legal finite production-count multiset is exactly the counts of an explicitly constructed list of one-production open trees. No connected reconstruction assumed.",
+  "source_correspondence": "Paper03 actual production-copy forest: each legal finite production-count multiset is exactly realized by an explicit list of one-production open trees. Connected derivation reconstruction remains separate, not assumed.",
+  "source_commit": "09164be23fc7229dfee069ba3aca297c9f0bb01d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForestStatementChecks",
+  "frozen_at_utc": "2026-10-31T04:44:08.339029+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cotree-grammar-initial-forest-freeze.json",
+  "freeze_sha256": "356161180da96f3b14f65b9663d7dd15949ba432c6591b0f4878d3758f6d2f07",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestDefinitions.lean",
+      "sha256": "72abc8a5ff12cb04ea478e8f3a13ee1486a5f7db5131f2a9d1dfe313d1815377"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestTargets.lean",
+      "sha256": "21497ad4336f4a1e2ddd35783084b3d5a1188c090b85f02e155df6c45722d084"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestStatementChecks.lean",
+      "sha256": "5c29fe280cdb93a3eeb7529ba91b6b9b79699a38be8886597b6c82299799cf1f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestProof.lean",
+      "sha256": "e2b43765fbf5dd890cf931a31371c6d73a9d6b4e637703ed850abdddab5cf278"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForest.StatementChecks.initialForestExact"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793421796851294185-14.json",
+      "sha256": "372bc32e448993c6a47caeaa0b1fa7c4501f0ff33651b0747051f214c1b75c77",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793421862913410826-5.json",
+      "sha256": "f1d9e071aceddecef373bf9ec63e20299edb365750c94176c8f59b398fe02ed9",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793421862913410826-5-LogicLineages-ModelsAlgebra-Forests-CotreeGrammarInitialForestStatementChecks.log",
+  "gate_log_sha256": "bb509dc1c15460f2a9fee2091a3ab197675a08bd951511f1ee415515deea40e7",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForest.StatementChecks.initialForestExact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForest.initialForest.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestStatementChecks.lean",
+      "sha256": "5c29fe280cdb93a3eeb7529ba91b6b9b79699a38be8886597b6c82299799cf1f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestProof.lean",
+      "sha256": "e2b43765fbf5dd890cf931a31371c6d73a9d6b4e637703ed850abdddab5cf278"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestTargets.lean",
+      "sha256": "21497ad4336f4a1e2ddd35783084b3d5a1188c090b85f02e155df6c45722d084"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarInitialForestDefinitions.lean",
+      "sha256": "72abc8a5ff12cb04ea478e8f3a13ee1486a5f7db5131f2a9d1dfe313d1815377"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarForestStatementChecks.lean",
+      "sha256": "1503d02b6bb23ac31a99a4576aa85d04d723a4680765272896eb19bdc6f583ec"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarForestProof.lean",
+      "sha256": "7f3c9f859a6be3e3225a21f65e391e90817d02e3911dea2343d6f7f340e899df"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarForestTargets.lean",
+      "sha256": "ff0425604926f79a2413ed4e6c5fa992ddffcbacddd6ed9b646de670507a4409"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarForestDefinitions.lean",
+      "sha256": "bab890aa5b4405f10fa87001e268890651287943a68e3e7032b3ff33c22f3486"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenStatementChecks.lean",
+      "sha256": "a68ed85fa602524c6c9f27c4be6d74022672cc21c96e86fbd6298deed2ecc1b8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenProof.lean",
+      "sha256": "d34d92696bf09fa4edf5b774340f2f5d340030e8c6c90a419ac23dec836e36e6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenTargets.lean",
+      "sha256": "48eb45273c165b905a5c5572482d0efc4728c9a1e40eb4e4e06934fb5a0134d4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarOpenDefinitions.lean",
+      "sha256": "6edee0b492ef7ce8ff8224eb9024587dcea8169a10089f2d6fe0164c333ec4c6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowStatementChecks.lean",
+      "sha256": "c2b2d10b774dd35342bad12e1fc3c33a44855f670dc128aec1ee0f8053555aff"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowProof.lean",
+      "sha256": "246d30cf98c680b02f66a171601407963d00e6ef837ca5793827f488805b4ede"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowTargets.lean",
+      "sha256": "94ef886f66271d70b2393299b35167d79ef99da58a156226f0a62ed058f88d98"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowDefinitions.lean",
+      "sha256": "49154b6f29df1a6a4cf8269b197cf458f5fdd97009b8102b1019d5f0890ea13a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarStatementChecks.lean",
+      "sha256": "fbc9288ace97cfd7db0e187a0af65164c0dd04384d9725b55b2ac3c688825cfc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarProof.lean",
+      "sha256": "624df0329cc02f0d856681c2148d1ae320dea13d903c6cbba6cd45bab3d41433"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarTargets.lean",
+      "sha256": "d22b2c24e2e3efa2f63ce7fb30d77f8371a63592984285c6accc4c3e4d2d7254"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarDefinitions.lean",
+      "sha256": "e79d13d6f8ec88bf7f8516bd8ccc25784e34cb80a5773efe51f149b01d6e9ae1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+    "Mathlib.Computability.ContextFreeGrammar",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.Perm.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

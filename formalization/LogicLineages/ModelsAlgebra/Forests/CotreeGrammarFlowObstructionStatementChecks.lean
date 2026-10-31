@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstructionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstruction.StatementChecks
+
+theorem flowIsNotSufficient : Targets.FlowIsNotSufficient := Proof.flowIsNotSufficient
+
+end LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstruction.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstruction

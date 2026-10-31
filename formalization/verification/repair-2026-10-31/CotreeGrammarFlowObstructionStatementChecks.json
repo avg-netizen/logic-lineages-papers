@@ -1,0 +1,144 @@
+{
+  "accepted_utc": "2026-10-31T04:27:50.343061+00:00",
+  "scope": "Explicit three-state CFG whose disconnected circulation satisfies production balances but terminal word is not derivable. This guards against claiming necessity supplier sufficient.",
+  "source_correspondence": "Paper03 regression guard against mistaking necessary production-flow balances for sufficient derivability: explicit finite counterexample to that weak surrogate, not a manuscript flaw or an effective Parikh result. Ordinary kernel decide and dependent-constructor nonderivation only.",
+  "source_commit": "09164be23fc7229dfee069ba3aca297c9f0bb01d",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstructionStatementChecks",
+  "frozen_at_utc": "2026-10-31T04:25:11.222450+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/cotree-grammar-flow-obstruction-freeze.json",
+  "freeze_sha256": "580d192025792895dd71becc2a26505052eceadd66fe97e39840e70c3e2b60f5",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionDefinitions.lean",
+      "sha256": "3f26dbb77b4ba2e38b0cac9668b45c0787b18a22b7926c003a4434794a822421"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionTargets.lean",
+      "sha256": "6dc7709eb6e3c58d4be56127d8f39957da4ca12e14a71ce5b64d95047578979b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionStatementChecks.lean",
+      "sha256": "0e103279e9306719477f0ee11a0879c47cf8ed1439b62233a979ad4b99c06303"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionProof.lean",
+      "sha256": "b72feb06907eae8d3db11ea7b8464c1d0f5f2a4cae9ce21e16af684c51adc110"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstruction.StatementChecks.flowIsNotSufficient"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793420738189921388-5.json",
+      "sha256": "2ebfaa678f995b00c010ffabdf4544cd5bb03d825a0611796f65a4adc35b9010",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793420820691625698-5.json",
+      "sha256": "8aaf268ebb6cf7d1d216cd0d8b5625c33c4e7d9b8b19f7c5677a6020b39cf196",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793420820691625698-5-LogicLineages-ModelsAlgebra-Forests-CotreeGrammarFlowObstructionStatementChecks.log",
+  "gate_log_sha256": "6db5aa2a5040cd5f053eaeac8a7a6b939ff3c45c10a82d77739264b56ed329df",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstruction.StatementChecks.flowIsNotSufficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionStatementChecks.lean",
+      "sha256": "0e103279e9306719477f0ee11a0879c47cf8ed1439b62233a979ad4b99c06303"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionProof.lean",
+      "sha256": "b72feb06907eae8d3db11ea7b8464c1d0f5f2a4cae9ce21e16af684c51adc110"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionTargets.lean",
+      "sha256": "6dc7709eb6e3c58d4be56127d8f39957da4ca12e14a71ce5b64d95047578979b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowObstructionDefinitions.lean",
+      "sha256": "3f26dbb77b4ba2e38b0cac9668b45c0787b18a22b7926c003a4434794a822421"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowTargets.lean",
+      "sha256": "94ef886f66271d70b2393299b35167d79ef99da58a156226f0a62ed058f88d98"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarFlowDefinitions.lean",
+      "sha256": "49154b6f29df1a6a4cf8269b197cf458f5fdd97009b8102b1019d5f0890ea13a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarStatementChecks.lean",
+      "sha256": "fbc9288ace97cfd7db0e187a0af65164c0dd04384d9725b55b2ac3c688825cfc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarProof.lean",
+      "sha256": "624df0329cc02f0d856681c2148d1ae320dea13d903c6cbba6cd45bab3d41433"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarTargets.lean",
+      "sha256": "d22b2c24e2e3efa2f63ce7fb30d77f8371a63592984285c6accc4c3e4d2d7254"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/CotreeGrammarDefinitions.lean",
+      "sha256": "e79d13d6f8ec88bf7f8516bd8ccc25784e34cb80a5773efe51f149b01d6e9ae1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Computability.ContextFreeGrammar",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.Perm.Basic"
+  ],
+  "supplementary_receipt_failures": [
+    {
+      "receipt": "build-reports/1793420738189921388-5.json",
+      "module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCountsProof",
+      "returncode": 1
+    }
+  ],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

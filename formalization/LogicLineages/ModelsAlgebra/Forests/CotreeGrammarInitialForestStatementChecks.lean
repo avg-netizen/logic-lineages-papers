@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForestProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForest.StatementChecks
+
+theorem initialForestExact : Targets.InitialForestExact := Proof.initialForestExact
+
+end LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForest.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForest

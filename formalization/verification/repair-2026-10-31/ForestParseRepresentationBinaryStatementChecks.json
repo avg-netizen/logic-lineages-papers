@@ -1,0 +1,181 @@
+{
+  "accepted_utc": "2026-10-31T04:20:13.905939+00:00",
+  "scope": "Literal binary skeleton/grafting expansion with bijective occurrence labels; soundness, concrete normalization expansion, structural-isomorphism transport, and full graph-isomorphism iff expansion characterization for reduced cotrees.",
+  "source_correspondence": "Paper03 decision.tex, lem:canonical-cotree: literal binary skeleton/grafting expansions use bijective child occurrences; expansion soundness, concrete normalization expansion, structural-isomorphism transport and graph-isomorphism iff expansion for actual reduced cotrees. Together with separately checked reduced uniqueness and graph-preserving normalization, these discharge the source characterization subject to independent source review. No effective ideal decomposition or Parikh claim.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinaryStatementChecks",
+  "frozen_at_utc": "2026-10-31T04:14:13.621321+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/forest-parse-representation-binary-freeze.json",
+  "freeze_sha256": "f55a1d14c8880c6357f33b3e4fcc7be986ecb4246d1b58e77354e041d9736769",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryDefinitions.lean",
+      "sha256": "eda20118975872b0830bad2b36aeb7e4ab1ceb66903862eba76e66104ce50226"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryTargets.lean",
+      "sha256": "5a45f264ffd94124133d87c325449e0d1618d2940d75d33f0b576cc26bc9c1e1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryStatementChecks.lean",
+      "sha256": "58e55793296f4e270e1b3b14759170a5d3f67729198af9d21e01cff624ea6f63"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryProof.lean",
+      "sha256": "768c8f793617243e9ad336297eacd880716d015623a8d4be1a3e3e70d5fafabb"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.expansionSound",
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.normalizationExpansion",
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.expansionTransport",
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.binaryCharacterization"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793420023130360403-2.json",
+      "sha256": "e364d46f318a287110f55e950fb0866ca24a669964a51997cb1d409df199863e",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793420329251000203-5.json",
+      "sha256": "e2cbdd4dad36b005ebdfbb5d5e0541794277a5b8514cee3ee9d44491099ade1e",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793420329251000203-5-LogicLineages-ModelsAlgebra-Forests-ForestParseRepresentationBinaryStatementChecks.log",
+  "gate_log_sha256": "074c0a2f942b2aa0a6daf7049ac850a7c413167d972e991a9cffe52b59fe52c5",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.binaryCharacterization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.expansionSound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.normalizationExpansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.StatementChecks.expansionTransport": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.rename.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.graft.eq_def": [],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.graft.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.rename.eq_1": [],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.rename.eq_2": [],
+    "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinary.graft.eq_1": []
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryStatementChecks.lean",
+      "sha256": "58e55793296f4e270e1b3b14759170a5d3f67729198af9d21e01cff624ea6f63"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryProof.lean",
+      "sha256": "768c8f793617243e9ad336297eacd880716d015623a8d4be1a3e3e70d5fafabb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryTargets.lean",
+      "sha256": "5a45f264ffd94124133d87c325449e0d1618d2940d75d33f0b576cc26bc9c1e1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationBinaryDefinitions.lean",
+      "sha256": "eda20118975872b0830bad2b36aeb7e4ab1ceb66903862eba76e66104ce50226"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationFlattenDefinitions.lean",
+      "sha256": "080e649a82ab127926bf30e8d863b1d561cb80d00d3c4a5f5698174da7062b2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationCotreeDefinitions.lean",
+      "sha256": "969fbd89cb9feb6cab8261894fc861fec016c614330fc8bff802d62ddeddaa0f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationComponentsDefinitions.lean",
+      "sha256": "8695b7fc65d5e14cb304134ab6cbdd8e34b491fa8a145d91deb35bb21e9faa33"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationACDefinitions.lean",
+      "sha256": "253a6bfd2c744332838a35bc5b59fe45c959f3e191565e1dbe790e7806a38586"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationFlattenProof.lean",
+      "sha256": "f69ee79bfed2f767f2fa0938769f14ece81fe777dec5ddb88e9aba1515d6dcfd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationFlattenTargets.lean",
+      "sha256": "f561c93e53b375e4f5b56c3b02c5141ff62e5376ede09b5c1675e5bb8650d0f9"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationCotreeProof.lean",
+      "sha256": "f3b2aada05550216d6b9cc1c51f2485c197919a0619c2f86cdcf00fa70ad663d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationCotreeTargets.lean",
+      "sha256": "4d4fdbfc23f09c70cfee760ff6d68a23bae5140ce3422db52f24f5b870c687d0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationComponentsProof.lean",
+      "sha256": "5f5f7e4988a99e600ae8226eb9fb3724359fb3566f5f7c84a6fe329a9ccb96fd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ForestParseRepresentationComponentsTargets.lean",
+      "sha256": "0cf0197d8c9e0c2867b7e5ef49769f150b1e34ae8b32829642a07a3e2067d226"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected",
+    "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "Mathlib.Logic.Equiv.Basic",
+    "Mathlib.Logic.Equiv.Fin.Basic",
+    "Mathlib.Logic.Equiv.Prod",
+    "Mathlib.Logic.Equiv.Sum"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in supplementary receipt(s); candidate and gate compiled in final receipt. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

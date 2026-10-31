@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.Forests.CotreePresburgerTransitionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.Forests.CotreePresburgerTransition.StatementChecks
+
+theorem horizontalFormulaExact : Targets.HorizontalFormulaExact := Proof.horizontalFormulaExact
+
+end LogicLineages.ModelsAlgebra.Forests.CotreePresburgerTransition.StatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.Forests.CotreePresburgerTransition

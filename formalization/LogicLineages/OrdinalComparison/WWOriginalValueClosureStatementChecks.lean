@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.WWOriginalValueClosureProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_ordinalExpressionValueBelowEpsilonZero : Source.Targets.OrdinalExpressionValueBelowEpsilonZero :=
+  Source.OriginalDomain.ordinalExpressionValueBelowEpsilonZero
+
+theorem fixed_originalClosedValueBelowEpsilonZero : Source.Targets.OriginalClosedValueBelowEpsilonZero :=
+  Source.OriginalDomain.originalClosedValueBelowEpsilonZero
+
+theorem fixed_originalAdmissibleValueBelowEpsilonZero : Source.Targets.OriginalAdmissibleValueBelowEpsilonZero :=
+  Source.OriginalDomain.originalAdmissibleValueBelowEpsilonZero
+
+theorem fixed_originalExpressionValueBelowEpsilonZero : Source.Targets.OriginalExpressionValueBelowEpsilonZero :=
+  Source.OriginalDomain.originalExpressionValueBelowEpsilonZero
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

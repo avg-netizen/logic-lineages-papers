@@ -101,9 +101,8 @@ statements, not automatic certificates of new or changed statements.
 - **Paper 03, canonical-cotree ingredients: checked suppliers.** Actual
   graph isomorphisms respect association, swaps and congruence; root and
   complement connectivity distinguish union/join. Connected-fiber recovery
-  also gives actual component permutations and fiber isomorphisms. Full
-  reduced-cotree construction, uniqueness and binary characterization remain
-  pending.
+  also gives actual component permutations and fiber isomorphisms. The later
+  complete canonical-cotree result below composes these ingredients.
   [AC evidence](verification/repair-2026-10-31/ForestParseRepresentationACStatementChecks.json)
   and [component evidence](verification/repair-2026-10-31/ForestParseRepresentationComponentsStatementChecks.json).
 - **Paper 05, arbitrary-policy assignments and local expansion bounds:
@@ -135,8 +134,7 @@ statements, not automatic certificates of new or changed statements.
 - **Paper 03, reduced cotree uniqueness: checked supplier.** Actual reduced
   multiway cotrees have the required component semantics, and graph
   isomorphism recovers their recursive unordered structure with multiplicity.
-  Whole canonical-cotree coverage still needs the complete existence and
-  binary-expansion chain.
+  Concrete flattening and binary expansion complete the source chain below.
   [Evidence](verification/repair-2026-10-31/ForestParseRepresentationCotreeStatementChecks.json).
 - **Paper 05, finite-tail collapse facts: checked suppliers.** Actual
   finite-tail norm/increment monotonicity and natural finite-right sum
@@ -144,16 +142,39 @@ statements, not automatic certificates of new or changed statements.
   monotonicity and do not replace the original bounded-substitution domain.
   [Tail evidence](verification/repair-2026-10-31/WWFiniteTailMonotonicityStatementChecks.json)
   and [calibration evidence](verification/repair-2026-10-31/WWFiniteNaturalTailStatementChecks.json).
+- **Paper 03, `lem:canonical-cotree`: checked in full.** Concrete flattening
+  constructs a reduced cotree for every binary parse. Actual connected
+  components recover its unique unordered structure, and independent
+  occurrence-labelled binary skeletons characterize every graph-isomorphic
+  representation. The source-facing conjunction is checked at a fixed type.
+  [Whole-lemma evidence](verification/repair-2026-10-31/CanonicalCotreeCompletionStatementChecks.json).
+- **Paper 05, `wwsc:thm:weak`: checked in full.** The original closed B-vector
+  substitutions and norm-admissible C domains are defined faithfully and
+  proved nonvacuous. The exact occurring-support scalar inequality, validity
+  and head-freeness of every partial, and validity/head-freeness of the pure
+  assembled delta are all proved for every structural policy. The existing
+  source abstraction is separately related to delta plus retained head
+  closure, rather than silently identified with delta.
+  [Whole-theorem evidence](verification/repair-2026-10-31/WWOriginalWeakReplacementStatementChecks.json).
+- **Further checked suppliers in this checkpoint:** actual CFG skeleton and
+  occurrence-count semantics; precise production flows, support ranks,
+  open-context rotation/insertion and initial forests; executable Presburger
+  flow/rank formulas and finite count substitutions; and actual sum/product/
+  exponential norm estimates and original-domain positivity. A balance-only
+  counterexample guards against an insufficient proposed conversion, and is
+  not a criticism of the manuscript. No general Presburger or JEP decision
+  procedure follows from these supplier records.
 
-After source reconciliation and four whole-statement acceptances, the register
-contains **189 statements: 89 checked, 2 inherited calculator-package results,
-and 98 pending**. The repair introduced eleven new numbered obligations.
+After source reconciliation and six whole-statement acceptances, the register
+contains **189 statements: 91 checked, 2 inherited calculator-package results,
+and 96 pending**. The repair introduced eleven new numbered obligations.
 
 ## Work in progress
 
-The next targets are complete canonical cotree/binary expansion and actual
-CFG transition semantics for paper 03, and the original bounded B-vector
-substitution/C_i domain and weak scalar proof for paper 05. Whole decision and norm claims remain pending until their full
+The next targets are complete effective Parikh/source transition composition,
+Presburger automaton operations and genuine ranked-tree ideal decomposition
+for paper 03, and the original bounded-norm/assignment chain for paper 05.
+Whole decision and norm claims remain pending until their full
 formal dependency chains are proved. In particular, bibliographic references
 to effective ideal decomposition and Parikh's theorem are not Lean suppliers.
 
@@ -216,3 +237,27 @@ module header. No proof or fixed gate changed. A [static layout check](verificat
 records the exact move. Earlier focused component checks remain valid, but
 did not check this root layout. Whole-root revalidation is now planned in
 serialized batches. This does not diagnose the historical CI failures.
+
+The [sixth focused checkpoint](verification/repair-2026-10-31/checkpoint-06.json)
+selects sixty-one accepted gates and checks 171 exact-type aliases. All 312
+local source closure hashes match before and after compilation. The root
+selects 766 gates; the full historical closure is still being revalidated
+separately. Canonical-cotree and weak replacement raise the register to
+91 checked.
+
+One States component has a disclosed late dedicated manifest: its exact
+definitions and targets were already hash-pinned by a successful comparator
+receipt before the reported proof draft, but the dedicated manifest and gate
+hash were recorded later. The record keeps `candidate_absent_at_freeze=false`,
+the earlier comparator hashes and separate source review. Its actual fixed
+gate types and axiom closures are checked. This is not represented as a
+pristine pre-author gate freeze. An [additive receipt clarification](verification/repair-2026-10-31/WWAdmissibleExpansion-receipt-clarification.json)
+also distinguishes an earlier proof compilation from a later gate-only
+recompile, preserving the original published evidence unchanged.
+
+[Publication provenance](verification/publication-provenance-2026-10-31.json)
+maps local commit identifiers used in some frozen records to public commits
+with identical content trees. Manuscript hashes still identify the repaired
+source baseline exactly.
+
+No independent human review or priority claim is made.

@@ -461,7 +461,13 @@
         },
         {
           "description": "Ordered ranked U/J parse pruning, exact induced-subgraph profile regularity, and hereditary directed finite graph-image cover",
-          "status": "pending"
+          "status": "checked",
+          "targets": [
+            "lem:parse-pruning",
+            "lem:parse-regular",
+            "lem:image-cover"
+          ],
+          "note": "Exact repaired source chain accepted in this continuation."
         },
         {
           "description": "Goubault-Larrecq\u2013Schmitz effective finite regular-ideal decomposition for the exact ordered ranked dive/couple relation",
@@ -469,7 +475,9 @@
         },
         {
           "description": "Canonical reduced cotree uniqueness and completeness of all binary associations and permutations",
-          "status": "pending"
+          "status": "checked",
+          "target": "lem:canonical-cotree",
+          "note": "Actual normalization, structural uniqueness and all association/permutation representations accepted."
         },
         {
           "description": "Effective CFG Parikh conversion with exact subset-state multiplicities, and Presburger decision",
@@ -769,9 +777,13 @@
           "file": "03-joint-embedding-finite-forests/decision.tex",
           "line": 137,
           "statement_latex": "\\label{lem:canonical-cotree}\nEvery graph with a union/join representation has a unique reduced cotree\nup to isomorphism. All its binary representations are obtained by\nindependently representing each cotree child, then choosing a binary\nassociation and a permutation of the children at each operation node.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.CanonicalCotreeCompletion.StatementChecks.fullCanonicalCotree",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/CanonicalCotreeCompletionTargets.lean",
+            "sha256": "1abe36ef3bd1299ec9c0bf31c86df27ab26abbd305d83380bc157b2e318ab110",
+            "type": "LogicLineages.ModelsAlgebra.Forests.CanonicalCotreeCompletion.Targets.FullCanonicalCotree"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
@@ -788,8 +800,31 @@
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotreeStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationCotreeStatementChecks.json",
               "scope": "Actual alternating reduced multiway cotree components and recursive graph-isomorphism uniqueness preserving multiplicities. Existence/flattening and full binary association/permutation characterization remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CanonicalCotreeCompletionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CanonicalCotreeCompletionStatementChecks.json",
+              "scope": "Whole source existence, reduced unordered uniqueness and exact independent binary association/permutation characterization, composed from accepted actual semantic suppliers. No Parikh or decision claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationBinaryStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationBinaryStatementChecks.json",
+              "scope": "Literal binary skeleton/grafting expansion with bijective occurrence labels; soundness, concrete normalization expansion, structural-isomorphism transport, and full graph-isomorphism iff expansion characterization for reduced cotrees."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationFlattenStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationFlattenStatementChecks.json",
+              "scope": "Concrete recursive same-operation flatten/merge on actual binary syntax; graph preservation, reduced existence and canonical normalization by paid reduced uniqueness. Binary reconstruction/association/permutation completeness remains separate."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793421795067967370-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/CanonicalCotreeCompletionStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired lemma: every union/join-represented graph has an actual reduced unordered cotree, unique up to literal structural isomorphism, and all binary graph representations are precisely the independently associated/permuted child expansions. Actual normalization, components, uniqueness and occurrence-labelled skeleton characterization are proved. No Parikh or full decision claim."
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:parikh-transition",
@@ -801,7 +836,109 @@
           "status": "pending",
           "accepted_declaration": null,
           "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarConnectedStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarConnectedStatementChecks.json",
+              "scope": "Actual derivation yields exact production flow plus root reachability of all used nonterminals in positive-production support. No converse reconstruction or effective Parikh claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowObstructionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarFlowObstructionStatementChecks.json",
+              "scope": "Explicit three-state CFG whose disconnected circulation satisfies production balances but terminal word is not derivable. This guards against claiming necessity supplier sufficient."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarFlowStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarFlowStatementChecks.json",
+              "scope": "Actual derivation implies legal terminal support, exact child-subset multiplicities, and state flow balances. No converse, connectivity, Presburger formula syntax or decision algorithm claimed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarForestStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarForestStatementChecks.json",
+              "scope": "Exact aggregate production balance/terminals and genuine count-preserving zipper gluing to no-cross-hole forest. Not initial production-cover construction, cycle rotation or complete reconstruction."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInitialForestStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarInitialForestStatementChecks.json",
+              "scope": "Every legal finite production-count multiset is exactly the counts of an explicitly constructed list of one-production open trees. No connected reconstruction assumed."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarInsertionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarInsertionStatementChecks.json",
+              "scope": "Actual cycle insertion at node or specified positive binary production, exact count addition and hole multiset preservation. Not full reconstruction."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarNormalStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarNormalStatementChecks.json",
+              "scope": "Actual balanced no-cross-hole forest consists of one closed root tree and distinct non-root singleton-hole cycles. Not connectivity reconstruction yet."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarOccurrencesStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarOccurrencesStatementChecks.json",
+              "scope": "Exact binary shape reindexing from full type-word permutation to bijective child occurrence labels, no Parikh conversion"
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarOpenStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarOpenStatementChecks.json",
+              "scope": "Legal open derivation trees, holes/production invariants, actual closed derivation correspondence, zipper gluing and hole factorization. Not full connected-flow reconstruction."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarProductionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarProductionStatementChecks.json",
+              "scope": "Positive actual binary production factorization; exact subtree context dichotomy; fully justified rotation of a singleton-hole cycle to the selected production parent, preserving all production counts. Not full reconstruction."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRanksStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarRanksStatementChecks.json",
+              "scope": "Exact existence of natural predecessor ranks iff actual root reachability for used production states. No grammar reconstruction or full Parikh decision claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarRotationStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarRotationStatementChecks.json",
+              "scope": "Genuine indexed one- and two-hole context algebra; both on-path cyclic rotation and off-path two-hole reassignment; production count preservation and singleton open-hole transport; actual node factorization and path/sibling dichotomy. Not full reconstruction."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarShapeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarShapeStatementChecks.json",
+              "scope": "Actual Shape positional selected-state semantics and machine-run graft calibration; no effective Parikh or total decision claim"
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreeGrammarStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreeGrammarStatementChecks.json",
+              "scope": "Actual finite Mathlib CFG rules and derivations equivalent to selected-state binary skeleton words; full child-type occurrence counts correspond to list permutation. No effective Parikh/Presburger conversion, cotree uniqueness or whole numbered transition claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerConnectedStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerConnectedStatementChecks.json",
+              "scope": "Composes actual formula with exact support rank/reachability bridge. No derivation reconstruction or QE/decision claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerStatementChecks.json",
+              "scope": "Actual (0,1,+) first-order formula interpreted iff exact terminal counts, nonterminal balances and positive predecessor ranks. No derivation reconstruction or QE/decision claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.CotreePresburgerTransitionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/CotreePresburgerTransitionStatementChecks.json",
+              "scope": "Actual horizontal formula construction and exact logical/count semantics, pending source StateSet reconstruction and QE."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCountsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationCountsStatementChecks.json",
+              "scope": "Exact actual child-cardinality count vector and actual CFG Parikh image correspondence. Effective Presburger formula construction remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesGrammarStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationStatesGrammarStatementChecks.json",
+              "scope": "Exact actual grammar language/child-state-subset multiplicity correspondence, prior to effective Parikh conversion. No Presburger or algorithmic conversion claim."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatesStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationStatesStatementChecks.json",
+              "scope": "Equation (3), complete binary association/permutation node-state semantics, graph-image acceptance; no effective Parikh claim."
+            }
+          ]
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:presburger-inclusion",
@@ -1364,9 +1501,13 @@
           "file": "05-wilken-weiermann-foundations/source-syntax.tex",
           "line": 147,
           "statement_latex": "[Weak scalar replacement]\\label{wwsc:thm:weak}\nFor $h\\in C_0^X$,\n\\[\n h\\{X:=\\WWscOne\\}\\le(P_0h)_0.\n\\]\nEvery partial $P_i h$, $h\\in C_i^X$, is a valid $X$-free $C$-vector\nof level $n$. For a vector $h\\in C^X$, the assembled $\\delta^X h$ is\nlikewise valid and $X$-free.\nThese assertions hold for every admissible policy.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_originalWeakReplacement",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWOriginalWeakReplacementTargets.lean",
+            "sha256": "8532011fbe28f9c30b8886fd3190a480bdf5a315db59d2efd22b3377181c322e",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.OriginalWeakReplacement"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
@@ -1378,8 +1519,51 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWFiniteNaturalTailStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWFiniteNaturalTailStatementChecks.json",
               "scope": "Actual natural finite-right sum calibration and fixed-head collapse monotonicity. Original B-vector substitution/C_i weak scalar domain remains a separate obligation."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalDeltaStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalDeltaStatementChecks.json",
+              "scope": "Original high-grade X-freeness, assembled delta C-validity, source abstraction C-validity and exact delta/retained-head composition. Actual structural policies and no added output-validity premise. Occurring-support comparison bridge separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalDomainStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalDomainStatementChecks.json",
+              "scope": "Exact closed B_i and universally bounded closed B-vector substitution semantics; original ambient/head C_i domains; scalar finiteness, finite conversion, all-one substitutions, head extension, ambient inclusion and literal admission suppliers. Not full weak scalar/norm theorem. Occurring-support restriction/extension bridge remains separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalHeadClosureStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalHeadClosureStatementChecks.json",
+              "scope": "Actual admissible all-one head extension preserves values, transports universal collapse norm premise, and maps original head C_i to ambient C_i. Not full weak scalar or partial C-validity."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalSupportStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalSupportStatementChecks.json",
+              "scope": "Supported closed bounded B-vector substitutions for all names occurring in either compared expression; extension and arbitrary-predicate support/context equivalence; source-facing non-strict scalar partial inequality without new premises. Assembled delta/norm claims not included in adapter."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalValueClosureStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalValueClosureStatementChecks.json",
+              "scope": "All literal ordinal syntax preserves below-epsilon-zero values; actual original closed B-substitutions derive that bound without a new semantic premise. Not weak scalar/norm theorem."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalWeakPartialStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalWeakPartialStatementChecks.json",
+              "scope": "Actual all-policy partials on original C_i^X domain are total and ambient C-valid; scalar input after X:=One is at most scalar output under every original bounded B-vector substitution. No added epsilon/monotonicity/weakness assumptions. Assembled abstraction and occurring-support bridge remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalWeakReplacementStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalWeakReplacementStatementChecks.json",
+              "scope": "Whole repaired weak replacement: exact supported scalar inequality, actual original-domain partial C-validity and explicit head-freeness, pure assembled delta C-validity and explicit head-freeness, all structural policies. No bounded-norm/F1/translation conclusion."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793421440533582604-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWOriginalWeakReplacementStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired weak scalar theorem, all three clauses: the exact occurring-support scalar inequality, every original norm-admissible partial output an actual head-free C-vector, and pure assembled delta likewise valid and head-free, for every structural policy. Original closed bounded B-substitutions and support/context correspondence are proved, not replaced by arbitrary environments. No bounded-norm preservation or broader assignment/translation claim."
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:lem:free",
@@ -1403,7 +1587,29 @@
           "status": "pending",
           "accepted_declaration": null,
           "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalNormSumsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalNormSumsStatementChecks.json",
+              "scope": "Actual natural-sum norm additivity below epsilon zero; original admissible valuation shape/positive-repeat exact norm and ambient scalar value norm. Not product/exponential lower estimates or full norm theorem."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalPositivityStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalPositivityStatementChecks.json",
+              "scope": "Actual positivity of closed B_i and ambient C_i under actual admissible substitutions, scalar finite value at least one. No positivity field added to source substitution and no full norm conclusion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalPowerNormStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalPowerNormStatementChecks.json",
+              "scope": "Actual ordinal omega-left norm sandwich, exact base2 power norm under omega quotient/finite remainder, inverse and forward exponential norm inequalities below epsilon zero. Not full free-subtree or delta norm theorem."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWOriginalProductLowerStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWOriginalProductLowerStatementChecks.json",
+              "scope": "Actual positive ordinal norm, positive natural-product lower norm and component norm bounds below epsilon zero. No exponential inverse-norm estimate or full delta norm bound."
+            }
+          ]
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:thm:translation",
