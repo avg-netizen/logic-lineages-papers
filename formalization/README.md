@@ -2,17 +2,17 @@ Local workers paused at the user-requested 10 p.m. America/Chicago cutoff (30 Oc
 
 # Formalizing the public papers
 
-Current verified external run: [30 October handoff](HANDOFF-2026-10-30.md), with [cumulative continuation and evidence](EXTERNAL-CONTINUATION-2026-10-30.md). Earlier pause/checkpoint and lane-status records below remain historical snapshots.
+Current external continuation: [31 October repair-aware round](EXTERNAL-CONTINUATION-2026-10-31.md). Its accepted baseline is the [30 October handoff](HANDOFF-2026-10-30.md), with [cumulative evidence](EXTERNAL-CONTINUATION-2026-10-30.md). Earlier pause/checkpoint and lane-status records below remain historical snapshots.
 
 Local workers were **explicitly resumed by the user on 29 October 2026** after
 the external continuation. Two independent Codex lanes, a Codex-led Claude loop
 and main continue from [the external checkpoint](EXTERNAL-CONTINUATION.md).
 Older pause records are historical. This is an
 incomplete formalization programme for all fifteen papers in this repository.
-The [target register](TARGETS.json) records 178 numbered
+The [target register](TARGETS.json) records 189 numbered
 theorem/lemma/proposition/corollary statements from the full TeX input closure,
 plus algorithmic and cited-supplier obligations. The [source snapshot](MANUSCRIPT-SNAPSHOT.json)
-pins the 39 manuscript/build-source files read by that inventory. A count is
+pins the current manuscript/build-source files read by that inventory. A count is
 not a proof-coverage claim.
 
 The calculator's existing checked development is a baseline dependency. Other
@@ -144,8 +144,8 @@ bring a complete local import closure, attribution, source hashes and its
 actual statement/axiom checks.
 
 The largest missing bridges are visible in `TARGETS.json`: infinitary Scott
-theory and algebraic classification suppliers; Carter's graph decision
-theorem; full MRDP; typed path-order and ordinal-analysis suppliers;
+theory and algebraic classification suppliers; effective ranked-tree ideal decomposition and Parikh/Presburger decision
+suppliers; full MRDP; typed path-order and ordinal-analysis suppliers;
 Snyatkov's arithmetic theorem; source-realization/undecidability suppliers;
 Gorbow syntax, diagonalization and Löb; exact runtime/jump classifications;
 and the actual analytic/probabilistic/algebraic semantics of the new papers.

@@ -1,0 +1,109 @@
+{
+  "accepted_utc": "2026-10-31T03:28:30.512183+00:00",
+  "scope": "Abstract finite hereditary directed-cover criterion for a reflexive/transitive relation. This is a supplier for lem:image-cover, not the whole graph-image lemma or effective ideal decomposition/decision theorem.",
+  "source_correspondence": "Paper03 decision.tex lem:image-cover, abstract finite hereditary directed cover criterion only. The actual graph-image ideal specialization and effective decomposition remain separate obligations; no whole numbered promotion.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks",
+  "frozen_at_utc": "2026-10-31T03:26:49.316028+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/finite-ideal-cover-freeze.json",
+  "freeze_sha256": "a0a51fa71ef6e3d5880b572d1ccf9d34886d019e71d2747ea664ca5e2dbdb371",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverTargets.lean",
+      "sha256": "7f174916e67e7efcfed32b5c6ff042fb9bf3521124ed3872fd50788dddec299c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverStatementChecks.lean",
+      "sha256": "1e06277388e892f96535ec7418d481997a2f2562fb3d1b329d9a82c1f54fb913"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverProof.lean",
+      "sha256": "81d273932d02989a1e7481f2bf1c6706437bf2d12bcd55610c70c7de029c8ffd"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.FiniteIdealCover.StatementChecks.finiteCoverCriterion"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793417169989925437-2.json",
+      "sha256": "584f9ed5b211a118866945aba676ec18f06640f3d67b4768e5c1abd05f34f7e5",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793417229023932760-2.json",
+      "sha256": "053b642427a0527c7b9f405c7e96ee16de9e5325ae5814ee35ca61147fb05cde",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793417229023932760-2-LogicLineages-ModelsAlgebra-Forests-FiniteIdealCoverStatementChecks.log",
+  "gate_log_sha256": "0fd76e8ef2a30ab13d1e22d2770f45e6f661ecfca25face8d934bac559b49761",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.FiniteIdealCover.StatementChecks.finiteCoverCriterion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverStatementChecks.lean",
+      "sha256": "1e06277388e892f96535ec7418d481997a2f2562fb3d1b329d9a82c1f54fb913"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverProof.lean",
+      "sha256": "81d273932d02989a1e7481f2bf1c6706437bf2d12bcd55610c70c7de029c8ffd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverTargets.lean",
+      "sha256": "7f174916e67e7efcfed32b5c6ff042fb9bf3521124ed3872fd50788dddec299c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Fintype.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in supplementary receipt(s); candidate and gate compiled in final receipt. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

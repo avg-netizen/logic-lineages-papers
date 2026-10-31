@@ -1,0 +1,1023 @@
+{
+  "reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "baseline_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
+  "operation": "Source inventory and dependency reconciliation only; no Lean compiler, axiom audit rerun or new mathematical acceptance.",
+  "baseline_targets_sha256": "2c93544ee77c1d59e55365abb34200d1298ed31923aa19ae99279c733d869c5b",
+  "baseline_snapshot_sha256": "13e0af13989808390c74c3f98f11c0846eb05e110e5ff707edbdad1e3c30809f",
+  "numbered_statement_count_before": 178,
+  "numbered_statement_count_after": 189,
+  "status_counts": {
+    "pending": 102,
+    "checked": 85,
+    "existing-calculator-package": 2
+  },
+  "new_pending_statement_ids": [
+    "03-joint-embedding-finite-forests:lem:parse-pruning",
+    "03-joint-embedding-finite-forests:lem:parse-regular",
+    "03-joint-embedding-finite-forests:lem:image-cover",
+    "03-joint-embedding-finite-forests:lem:canonical-cotree",
+    "03-joint-embedding-finite-forests:lem:parikh-transition",
+    "03-joint-embedding-finite-forests:lem:presburger-inclusion",
+    "05-wilken-weiermann-foundations:wwsc:prop:finite",
+    "05-wilken-weiermann-foundations:wwsc:thm:weak",
+    "05-wilken-weiermann-foundations:wwsc:lem:free",
+    "05-wilken-weiermann-foundations:wwsc:thm:norm",
+    "05-wilken-weiermann-foundations:wwsc:thm:translation"
+  ],
+  "changed_existing_statement_bodies": [
+    {
+      "id": "05-wilken-weiermann-foundations:thm:forward-translation",
+      "previous": {
+        "file": "05-wilken-weiermann-foundations/foundations.tex",
+        "line": 378,
+        "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFor a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors.",
+        "status": "pending"
+      },
+      "current": {
+        "file": "05-wilken-weiermann-foundations/foundations.tex",
+        "line": 412,
+        "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFix an admissible expansion policy. For a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors. It is effective uniformly in a\nsupplied computable policy; it does not identify assignments made under\ndifferent policies.",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:cor:source-classes",
+      "previous": {
+        "file": "05-wilken-weiermann-foundations/foundations.tex",
+        "line": 427,
+        "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nIn a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
+        "status": "pending"
+      },
+      "current": {
+        "file": "05-wilken-weiermann-foundations/foundations.tex",
+        "line": 463,
+        "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nFor every fixed admissible policy, in a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
+        "status": "pending"
+      }
+    }
+  ],
+  "changed_checked_statement_ids": [],
+  "source_locator_changes": [
+    {
+      "id": "03-joint-embedding-finite-forests:lem:bridge",
+      "previous_file": "03-joint-embedding-finite-forests/paper.tex",
+      "previous_line": 64,
+      "current_file": "03-joint-embedding-finite-forests/paper.tex",
+      "current_line": 68
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:prop:certificate",
+      "previous_file": "03-joint-embedding-finite-forests/paper.tex",
+      "previous_line": 149,
+      "current_file": "03-joint-embedding-finite-forests/paper.tex",
+      "current_line": 121
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:thm:width",
+      "previous_file": "03-joint-embedding-finite-forests/paper.tex",
+      "previous_line": 181,
+      "current_file": "03-joint-embedding-finite-forests/paper.tex",
+      "current_line": 153
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:prop:age",
+      "previous_file": "03-joint-embedding-finite-forests/paper.tex",
+      "previous_line": 242,
+      "current_file": "03-joint-embedding-finite-forests/paper.tex",
+      "current_line": 214
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:thm:decision",
+      "previous_file": "03-joint-embedding-finite-forests/paper.tex",
+      "previous_line": 122,
+      "current_file": "03-joint-embedding-finite-forests/decision.tex",
+      "current_line": 259
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:prop:counter-bound",
+      "previous_file": "05-wilken-weiermann-foundations/paper.tex",
+      "previous_line": 181,
+      "current_file": "05-wilken-weiermann-foundations/paper.tex",
+      "current_line": 183
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:forward-translation",
+      "previous_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "previous_line": 378,
+      "current_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "current_line": 412
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:cor:source-classes",
+      "previous_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "previous_line": 427,
+      "current_file": "05-wilken-weiermann-foundations/foundations.tex",
+      "current_line": 463
+    }
+  ],
+  "source_inventory": [
+    {
+      "paper": "01-scott-complexity-abelian-p-groups",
+      "source_files": [
+        "01-scott-complexity-abelian-p-groups/paper.tex",
+        "01-scott-complexity-abelian-p-groups/preamble.tex"
+      ],
+      "numbered_statement_count": 12,
+      "labels": [
+        "thm:reduced-classification",
+        "thm:bounded-pgroup-classification",
+        "lem:prescribed-tail",
+        "lem:quotient-filtration",
+        "lem:products",
+        "thm:odd-obstruction",
+        "lem:absorption",
+        "lem:terminal-deletion",
+        "lem:walker-filtration",
+        "thm:difference-spectrum",
+        "lem:infinite-divisible-bf",
+        "thm:no-pure-sigma"
+      ]
+    },
+    {
+      "paper": "02-exponential-comparison",
+      "source_files": [
+        "02-exponential-comparison/paper.tex",
+        "02-exponential-comparison/preamble.tex"
+      ],
+      "numbered_statement_count": 9,
+      "labels": [
+        "thm:finite-bare-hardness",
+        "lem:restricted-product",
+        "lem:seven-equations",
+        "thm:bounded-bare-vectors",
+        "lem:normalization",
+        "lem:ray",
+        "thm:identity",
+        "thm:unary",
+        "cor:consumers"
+      ]
+    },
+    {
+      "paper": "03-joint-embedding-finite-forests",
+      "source_files": [
+        "03-joint-embedding-finite-forests/paper.tex",
+        "03-joint-embedding-finite-forests/preamble.tex",
+        "03-joint-embedding-finite-forests/decision.tex"
+      ],
+      "numbered_statement_count": 11,
+      "labels": [
+        "lem:bridge",
+        "prop:certificate",
+        "thm:width",
+        "prop:age",
+        "lem:parse-pruning",
+        "lem:parse-regular",
+        "lem:image-cover",
+        "lem:canonical-cotree",
+        "lem:parikh-transition",
+        "lem:presburger-inclusion",
+        "thm:decision"
+      ]
+    },
+    {
+      "paper": "04-pure-r1-calculator",
+      "source_files": [
+        "04-pure-r1-calculator/paper.tex",
+        "04-pure-r1-calculator/preamble.tex"
+      ],
+      "numbered_statement_count": 2,
+      "labels": [
+        "thm:size",
+        "lem:capacity"
+      ]
+    },
+    {
+      "paper": "05-wilken-weiermann-foundations",
+      "source_files": [
+        "05-wilken-weiermann-foundations/paper.tex",
+        "05-wilken-weiermann-foundations/preamble.tex",
+        "05-wilken-weiermann-foundations/foundations.tex",
+        "05-wilken-weiermann-foundations/source-syntax.tex",
+        "05-wilken-weiermann-foundations/references.tex"
+      ],
+      "numbered_statement_count": 18,
+      "labels": [
+        "prop:counter-bound",
+        "lem:finite-balls",
+        "lem:phi-growth",
+        "lem:controlled-strictness",
+        "thm:maximum",
+        "lem:saturation",
+        "thm:single-predecessor",
+        "cor:closed-evaluation",
+        "thm:complete-count",
+        "cor:finite-head",
+        "lem:tail-separation",
+        "thm:forward-translation",
+        "cor:source-classes",
+        "wwsc:prop:finite",
+        "wwsc:thm:weak",
+        "wwsc:lem:free",
+        "wwsc:thm:norm",
+        "wwsc:thm:translation"
+      ]
+    },
+    {
+      "paper": "06-godel-t-termination-ordering",
+      "source_files": [
+        "06-godel-t-termination-ordering/paper.tex",
+        "06-godel-t-termination-ordering/preamble.tex",
+        "06-godel-t-termination-ordering/references.tex"
+      ],
+      "numbered_statement_count": 24,
+      "labels": [
+        "lem:finiteclosure",
+        "lem:lattices",
+        "lem:structural",
+        "lem:operator",
+        "lem:adequacy",
+        "thm:decide",
+        "lem:fv",
+        "lem:supportsub",
+        "thm:stable",
+        "thm:rpo",
+        "lem:graft",
+        "lem:betacases",
+        "lem:context",
+        "lem:recursor",
+        null,
+        "lem:id1",
+        "lem:simulation",
+        "thm:upper",
+        "lem:carrier",
+        "lem:realclosure",
+        "lem:iterationedges",
+        "thm:iteration",
+        "lem:primitives",
+        "thm:height"
+      ]
+    },
+    {
+      "paper": "07-collapse-equality-and-one-variable",
+      "source_files": [
+        "07-collapse-equality-and-one-variable/paper.tex",
+        "07-collapse-equality-and-one-variable/preamble.tex",
+        "07-collapse-equality-and-one-variable/references.tex"
+      ],
+      "numbered_statement_count": 21,
+      "labels": [
+        "lem:sparse",
+        "lem:roots",
+        "thm:identity",
+        "lem:oneinput",
+        "thm:zeros",
+        "lem:cells",
+        "lem:prefix",
+        "lem:counts",
+        "lem:peakword",
+        "lem:stage",
+        "lem:reserve",
+        "lem:direct",
+        "thm:adjacent",
+        "thm:limitmass",
+        "lem:successor",
+        "lem:small",
+        "thm:mass",
+        "thm:sign",
+        "cor:boolean",
+        "cor:sourceeq",
+        null
+      ]
+    },
+    {
+      "paper": "08-multivariate-collapse-comparison",
+      "source_files": [
+        "08-multivariate-collapse-comparison/paper.tex",
+        "08-multivariate-collapse-comparison/preamble.tex",
+        "08-multivariate-collapse-comparison/references.tex"
+      ],
+      "numbered_statement_count": 18,
+      "labels": [
+        "lem:growth",
+        "lem:residues",
+        "thm:snyatkov",
+        "thm:finite-source",
+        "lem:kernel-recursion",
+        "lem:uniform",
+        "lem:counter",
+        "lem:kernel-residues",
+        "lem:guards",
+        "lem:row",
+        "thm:existential",
+        "thm:graphs",
+        "thm:leveltwo",
+        "lem:endpoints",
+        "thm:common",
+        "lem:head-window",
+        "thm:balanced",
+        "thm:single-core"
+      ]
+    },
+    {
+      "paper": "09-canonical-source-expressivity",
+      "source_files": [
+        "09-canonical-source-expressivity/paper.tex",
+        "09-canonical-source-expressivity/preamble.tex",
+        "09-canonical-source-expressivity/source-realization.tex",
+        "09-canonical-source-expressivity/hardness.tex",
+        "09-canonical-source-expressivity/references.tex"
+      ],
+      "numbered_statement_count": 21,
+      "labels": [
+        "lem:addition",
+        "lem:sort",
+        "lem:collision",
+        "lem:aggregate",
+        "thm:compiler",
+        "cor:ground-equivalence",
+        "lem:absolute",
+        "thm:decision-equivalence",
+        "lem:one-unit",
+        "thm:unit-elimination",
+        "lem:affine-head",
+        "lem:carriers",
+        "lem:reserve",
+        "lem:chain",
+        "thm:ground-construction",
+        "thm:head-graph",
+        "lem:pair-compiler",
+        "lem:functional-detector",
+        "thm:functional-hardness",
+        "lem:perturbed-control",
+        "thm:control-hardness"
+      ]
+    },
+    {
+      "paper": "10-collapse-descent-and-modular-counts",
+      "source_files": [
+        "10-collapse-descent-and-modular-counts/paper.tex",
+        "10-collapse-descent-and-modular-counts/preamble.tex",
+        "10-collapse-descent-and-modular-counts/references.tex"
+      ],
+      "numbered_statement_count": 15,
+      "labels": [
+        "prop:complete",
+        "thm:envelope",
+        "lem:fixed",
+        "lem:period",
+        "thm:transfer",
+        "prop:omega-block",
+        "lem:entry",
+        "lem:matrix",
+        "thm:observer",
+        "lem:observable",
+        "lem:local",
+        "lem:poles",
+        "lem:residue",
+        "lem:bounds",
+        "thm:actual-period"
+      ]
+    },
+    {
+      "paper": "11-hyperreal-differentiation-domain",
+      "source_files": [
+        "11-hyperreal-differentiation-domain/paper.tex",
+        "11-hyperreal-differentiation-domain/preamble.tex"
+      ],
+      "numbered_statement_count": 6,
+      "labels": [
+        "thm:main",
+        "prop:well-defined",
+        "lem:obstruction",
+        "lem:push",
+        "lem:length",
+        null
+      ]
+    },
+    {
+      "paper": "12-common-knowledge-necessitation",
+      "source_files": [
+        "12-common-knowledge-necessitation/paper.tex",
+        "12-common-knowledge-necessitation/preamble.tex"
+      ],
+      "numbered_statement_count": 6,
+      "labels": [
+        "lem:three",
+        "thm:collapse",
+        null,
+        "thm:selector",
+        "cor:finite",
+        "thm:consistency"
+      ]
+    },
+    {
+      "paper": "13-reinforcement-learning-transformations",
+      "source_files": [
+        "13-reinforcement-learning-transformations/paper.tex",
+        "13-reinforcement-learning-transformations/preamble.tex"
+      ],
+      "numbered_statement_count": 8,
+      "labels": [
+        "thm:classification",
+        "lem:affine",
+        "prop:positive",
+        "lem:separator",
+        "lem:mixture",
+        "prop:negative",
+        "prop:noncomposition",
+        "prop:cross"
+      ]
+    },
+    {
+      "paper": "14-complexity-of-prediction-measures",
+      "source_files": [
+        "14-complexity-of-prediction-measures/paper.tex",
+        "14-complexity-of-prediction-measures/preamble.tex"
+      ],
+      "numbered_statement_count": 9,
+      "labels": [
+        "thm:original",
+        "thm:total",
+        "lem:membership",
+        "lem:learning",
+        "prop:threshold",
+        "lem:robust",
+        "prop:hardness",
+        "lem:list",
+        "lem:finitevalues"
+      ]
+    },
+    {
+      "paper": "15-differential-field-constraint-decisions",
+      "source_files": [
+        "15-differential-field-constraint-decisions/paper.tex",
+        "15-differential-field-constraint-decisions/preamble.tex"
+      ],
+      "numbered_statement_count": 9,
+      "labels": [
+        "lem:constants",
+        "thm:orderone",
+        "lem:curve",
+        "lem:genericcurve",
+        "cor:algorithmone",
+        "thm:spectral",
+        "lem:weights",
+        "lem:genericjets",
+        "prop:cyclotomic"
+      ]
+    }
+  ],
+  "source_file_changes": [
+    {
+      "file": "03-joint-embedding-finite-forests/paper.tex",
+      "previous_sha256": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef",
+      "current_sha256": "ba03b3acbe890c55d7ddef1d6b208c77b1c5073033cc1ec8506914447773a311"
+    },
+    {
+      "file": "03-joint-embedding-finite-forests/decision.tex",
+      "previous_sha256": null,
+      "current_sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    },
+    {
+      "file": "05-wilken-weiermann-foundations/paper.tex",
+      "previous_sha256": "f92f9d9c9e223f4de50b986c1fa07eaeafd9a849daa1f6856c06321542c32e11",
+      "current_sha256": "cf68d0727bce4693eb51f1743aad4391bfdba54f2eb333ba0949e59b7bb20a60"
+    },
+    {
+      "file": "05-wilken-weiermann-foundations/foundations.tex",
+      "previous_sha256": "7d66a838dc3eec5cb9c6323ac1270d44894ad329f138c58ef7c73fa0542d1cc7",
+      "current_sha256": "85dba2f1ee8ced7c3b85262e69438877be9bdf1c22c73150a6d9bb98ffc2b3dd"
+    },
+    {
+      "file": "05-wilken-weiermann-foundations/source-syntax.tex",
+      "previous_sha256": null,
+      "current_sha256": "aee8ef3a6e3b8884c384a37bbaab9588fe0c680230deeb798c20c1ae53b3c44c"
+    }
+  ],
+  "preserved_acceptance_records": [
+    {
+      "id": "01-scott-complexity-abelian-p-groups:thm:bounded-pgroup-classification",
+      "status": "checked",
+      "evidence_sha256": "a41b0f997813f6dbba7dd29420abef78adeb7005cf664973d36b95269f897b8b"
+    },
+    {
+      "id": "01-scott-complexity-abelian-p-groups:lem:quotient-filtration",
+      "status": "checked",
+      "evidence_sha256": "d6b39d4a8d772c967ff6e0af8ec524f3e6940be1c1e02371874bfdadf46c3c35"
+    },
+    {
+      "id": "01-scott-complexity-abelian-p-groups:lem:products",
+      "status": "checked",
+      "evidence_sha256": "8e1740f4367b0820b40dbcab275b7e851f1fe8d40092f546f21f779cbc2724ab"
+    },
+    {
+      "id": "01-scott-complexity-abelian-p-groups:lem:absorption",
+      "status": "checked",
+      "evidence_sha256": "be4a0fd400ad12e8eeb444ddda99454f0f765a02db81217991a6daa55dd7ae78"
+    },
+    {
+      "id": "02-exponential-comparison:lem:restricted-product",
+      "status": "checked",
+      "evidence_sha256": "fc811724bad25d7232a368bc0c97b9ac03c1aa37f925b5108534554658cb2c8e"
+    },
+    {
+      "id": "02-exponential-comparison:lem:seven-equations",
+      "status": "checked",
+      "evidence_sha256": "23173605b7d0fb30ef79e068e6f380afe6407132a7d09cf381cd452e7a9ea1ed"
+    },
+    {
+      "id": "02-exponential-comparison:lem:normalization",
+      "status": "checked",
+      "evidence_sha256": "5888518767b0df8214cdcc96a580a2ad469a3490c53dddde6867fd2de2e7b142"
+    },
+    {
+      "id": "02-exponential-comparison:lem:ray",
+      "status": "checked",
+      "evidence_sha256": "0556606889daa9a968d3dbb5f1f17158fcb42c7e06abb9037d1bedf366c61133"
+    },
+    {
+      "id": "02-exponential-comparison:thm:identity",
+      "status": "checked",
+      "evidence_sha256": "4508bc33c6e4923731a6b61e4d4f508d04274cf2971900a6640bae3bd5001283"
+    },
+    {
+      "id": "02-exponential-comparison:thm:unary",
+      "status": "checked",
+      "evidence_sha256": "f58c55f49cb66a5ba621360a832740f98b6dbcd8757c88fb8420f75e595e5453"
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:lem:bridge",
+      "status": "checked",
+      "evidence_sha256": "d2f6eea9986579c197d617e611d64e9da2e2311bc84524a140b21d752e0d1f2c"
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:prop:certificate",
+      "status": "checked",
+      "evidence_sha256": "a4a4c6c1fbd6193b41ad5fe7fd3ae970bd4c11de5eec42e5a8ee815ecb3f695b"
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:thm:width",
+      "status": "checked",
+      "evidence_sha256": "0c5c276480da73b844fadbc534b677f397a747c802724ca56046443882822282"
+    },
+    {
+      "id": "03-joint-embedding-finite-forests:prop:age",
+      "status": "checked",
+      "evidence_sha256": "69b8a4b257840017e410da82744a1d67741d563d7c87c49bdcc521ac16879326"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:finite-balls",
+      "status": "checked",
+      "evidence_sha256": "27e749af87283ca8a6409c216939b92376ac1ac3965e289c2fe77541548ba0ee"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:phi-growth",
+      "status": "checked",
+      "evidence_sha256": "14d41c4ed4449080b9955eb6c0fabeaa13168b914b515f03df9d1311e0a46cd5"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:controlled-strictness",
+      "status": "checked",
+      "evidence_sha256": "4d51ba9ea7436ffd4e646aa4f74f2a04cce9eb0eb691abcafe8e09bc4b7213e4"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:maximum",
+      "status": "checked",
+      "evidence_sha256": "ca075927151c3a0f8b128f9d08a6ced732b11c865e9e873ed1eae4ed6b7adc66"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:saturation",
+      "status": "checked",
+      "evidence_sha256": "fa8f306e4d3473ab8372ffef905f593663da366191ae21c26b0caf70da73c819"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:single-predecessor",
+      "status": "checked",
+      "evidence_sha256": "c3c470a339c00488cd8e29fe48fbf7a000a13b4cb7cfe96e6132fc2e27234c4d"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:cor:closed-evaluation",
+      "status": "checked",
+      "evidence_sha256": "82ba8e95d1661ef7aef7a7abcc4c4cad096c218ca5953c48080bcb6389291b90"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:thm:complete-count",
+      "status": "checked",
+      "evidence_sha256": "48d52b54730e8e34751a8cd6e648cfaea6dda0df16667741f7f18c159002b8d7"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:cor:finite-head",
+      "status": "checked",
+      "evidence_sha256": "a5d70b04aa45e41a20686ebd94aa835faf938601322e592c45ba22f2ad6b634a"
+    },
+    {
+      "id": "05-wilken-weiermann-foundations:lem:tail-separation",
+      "status": "checked",
+      "evidence_sha256": "4ff594ac23837243de0ec1a8e627df7ac3c405ab6b9910e479e1edc254edcbaa"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:supportsub",
+      "status": "checked",
+      "evidence_sha256": "aa7e3850b887195863bcafe4757d99c15b1da50584283eafd56cfa7bd2951738"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:sparse",
+      "status": "checked",
+      "evidence_sha256": "2d398d1c91b524be277a283ce5d689da42d02f9da34e50738ce19276f6341be1"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:roots",
+      "status": "checked",
+      "evidence_sha256": "ba58aa3361f1eac89026bea0f2a21e85da4973fb4128c7a2c5021c198eabe82f"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:oneinput",
+      "status": "checked",
+      "evidence_sha256": "749f26966b6c705a835391cf363cb129eaf0e78dded74c6e10dd43d8aac27391"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:zeros",
+      "status": "checked",
+      "evidence_sha256": "0ecd504dd2b7c1a54b1ca9c7c8c3780fe39563269bf25ad67667aeb21b03cb5d"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:cells",
+      "status": "checked",
+      "evidence_sha256": "e5a077b38569da9cd09ec662624a1dab7f3ff8dc43fd8232403dbfad131b8841"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:prefix",
+      "status": "checked",
+      "evidence_sha256": "1445d8df8aa4142017bcfe3e5d3870a770531b4efa51fb573013a369c94e0fb1"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:counts",
+      "status": "checked",
+      "evidence_sha256": "b28fa3c6ca9316048fd9cc5be83360648e81245f88f5d09250a9febe7b600aff"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:peakword",
+      "status": "checked",
+      "evidence_sha256": "19c225d8e757093d4e068de5d6364bfc77c68536e05783537accb52e2b6cd83c"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:stage",
+      "status": "checked",
+      "evidence_sha256": "4a3ef558b58816bac11bd9b7419164d1361bc93bb050bd0b1451e209619c3a91"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:reserve",
+      "status": "checked",
+      "evidence_sha256": "817c002495d0eda34995c4b846a2e2c8a25b9fa4c79be0f10dc86adf357759b6"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:direct",
+      "status": "checked",
+      "evidence_sha256": "b5da9dff40b740452347e46d4735dd38586bd26751fdc4a1e6fd3f6fe2d2a2bc"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:adjacent",
+      "status": "checked",
+      "evidence_sha256": "59c78042a3fa4e278fa8b702d16729074e4d1427e1a3e1004525fe780154308a"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:limitmass",
+      "status": "checked",
+      "evidence_sha256": "7ec87192bb6827c029c0422dd89f3dac54d62e787086d37c203c80006a7e3c70"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:successor",
+      "status": "checked",
+      "evidence_sha256": "b67c5426c73ff61a6b485f8fc009ba151650d54580fd9f89cd7a817f8234008a"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:lem:small",
+      "status": "checked",
+      "evidence_sha256": "d674caaaae089fc651a3bfe27226047af622e138c66c46b955ffb0743a1df0ce"
+    },
+    {
+      "id": "07-collapse-equality-and-one-variable:thm:mass",
+      "status": "checked",
+      "evidence_sha256": "5f2c83f056b1c384c1dcd79329428b35210eea5add14d5e42a90c896281296b3"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:growth",
+      "status": "checked",
+      "evidence_sha256": "4268bd10aad7afd580ffa65d933ea08970843b060a8951215cbc02f02c55bc05"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:residues",
+      "status": "checked",
+      "evidence_sha256": "cf88900bcdc2aa3ec0d3ab7c2138807d25240bac226d412c466b640a2cef571f"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:endpoints",
+      "status": "checked",
+      "evidence_sha256": "52f5dedd62903aba7fac9bbb7582a669e9fa18da0da95d86dc84e0fd7fa93e38"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:head-window",
+      "status": "checked",
+      "evidence_sha256": "b8d5b56a9842174f852cb6424976268c1261beb18c3bc5296cb81bfd83314556"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:prop:complete",
+      "status": "checked",
+      "evidence_sha256": "91636dfa3bb9e898d3b96aca8dba373c3196372c972c0fb94d241e6cb58d0fc8"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:envelope",
+      "status": "checked",
+      "evidence_sha256": "e35d86185d89129c0f6ae70b3031f77f1794e025d04aaccec1dcc292cc8a4cb2"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:fixed",
+      "status": "checked",
+      "evidence_sha256": "91e0ee2f83b34d20bec647bda31a4ac83611321ce11050aca5613e4b15228ad6"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:period",
+      "status": "checked",
+      "evidence_sha256": "3eb8c1a1af5c83dcf2ae4a75591356e60e8f2e316ca274cf43e9fe4357fe8631"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:transfer",
+      "status": "checked",
+      "evidence_sha256": "cd9834e6f3c1b873f98019fc599c2c0e9eb3a678265d9686ccffb30eb64d73ef"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:prop:omega-block",
+      "status": "checked",
+      "evidence_sha256": "08b56481b00c5e6ff06ba92de91369c01f9802f9be580d72dd61225156371da1"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:entry",
+      "status": "checked",
+      "evidence_sha256": "358aabe8968633ea2f412a659cef733dc94713faf0dcf82d4a64cdb17e4e185c"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:matrix",
+      "status": "checked",
+      "evidence_sha256": "d2f340e7e6f660609e4ce49495fc9574f5de84a9fd759247b111c0ffa9bd5906"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:observer",
+      "status": "checked",
+      "evidence_sha256": "ab24a68d121fe334c9417a1201702c6e1dec679ee37a9c82b9bed8b95ae7ba02"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:observable",
+      "status": "checked",
+      "evidence_sha256": "d73d7079be01fab22503b65ff75a3342f51654caf0a4965fdacbc12ed4b23429"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:local",
+      "status": "checked",
+      "evidence_sha256": "5d9d37ddf04c237772f83c221555d0198eaefcc1f765cb4959009e3d0993417c"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:poles",
+      "status": "checked",
+      "evidence_sha256": "77539f322e71299630f09eccb99c4b41de94b5645780c386b59ec25c860eff89"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:residue",
+      "status": "checked",
+      "evidence_sha256": "7ed3b22f244d6d1251ef2cebe004706965ef863b485c48ba16ab3b5a203ac005"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:lem:bounds",
+      "status": "checked",
+      "evidence_sha256": "81f9ad7a0b38ed66b2e9f7856b307dc4be727c47a732184023db06aaf6c6b7b6"
+    },
+    {
+      "id": "10-collapse-descent-and-modular-counts:thm:actual-period",
+      "status": "checked",
+      "evidence_sha256": "8367a4eb91203152973e42ee09e1a94ef59013a64cd56dd750b9bb5ce02d5397"
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:thm:main",
+      "status": "checked",
+      "evidence_sha256": "9ea00d802df6c1ab6b07338d699e948a39b7b4a7b9f5e781a4fc6101332a5523"
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:prop:well-defined",
+      "status": "checked",
+      "evidence_sha256": "58a1218acbc9a0dfbafbcd20044a9c8b7047f582474d401d5783dfe815b2bec4"
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:lem:obstruction",
+      "status": "checked",
+      "evidence_sha256": "1a477f1409f13ef7c13be7c9c984be2fa1369744daf4ec3e9e148e7ddf31ead8"
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:lem:push",
+      "status": "checked",
+      "evidence_sha256": "15057331298edae3ab5d9d3f50b64118d39281966a996281cf1c67e605144c2e"
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:lem:length",
+      "status": "checked",
+      "evidence_sha256": "bf50351d15d7d6d0af0544f80feef48b04167e2547a35a789d7921bbd6c39cf3"
+    },
+    {
+      "id": "11-hyperreal-differentiation-domain:corollary-6",
+      "status": "checked",
+      "evidence_sha256": "093eebacc825597dc8c900d0f6c2402fca0f1492aebfab70d7c38a71cbfe43be"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:thm:classification",
+      "status": "checked",
+      "evidence_sha256": "cdbd2fdd3675f6480f916214326182618ba1e90a98fc09e835c15ced190f8074"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:lem:affine",
+      "status": "checked",
+      "evidence_sha256": "f6fc492af365f119684cc7ea2ed45baebc9dd8048cd04dbf7fbcfecea0189328"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:positive",
+      "status": "checked",
+      "evidence_sha256": "053903435d369c2568aa1b93db0b98948a5dbbd4bc23fa780cb9ea72d6d9da62"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:lem:separator",
+      "status": "checked",
+      "evidence_sha256": "28af31152ea1347b8672e8e3ed4c9c9477218d8869674be80a99914d6bf40edf"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:lem:mixture",
+      "status": "checked",
+      "evidence_sha256": "9bdafea7323dd096722f199a1dfdc61fa8d4af3984a401558571d59d143227d2"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:negative",
+      "status": "checked",
+      "evidence_sha256": "19edc9d21e27429f6e2fdca336033653e87fe478bc5125db3d14f846e44cc852"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:noncomposition",
+      "status": "checked",
+      "evidence_sha256": "d7def4a302e4e571f52030520f1ae6a9c1fa2d7a973fcb68b33a3b57934857fa"
+    },
+    {
+      "id": "13-reinforcement-learning-transformations:prop:cross",
+      "status": "checked",
+      "evidence_sha256": "882f89f76fc098be9fcadcf1264feda2e6eb5bafe01841dab87c2459cfdc05f7"
+    },
+    {
+      "id": "14-complexity-of-prediction-measures:lem:learning",
+      "status": "checked",
+      "evidence_sha256": "1467d0fac0bf4b871b96cfd0cc21a54526ee91e8e0cb3ac3e8068c5ac24eb560"
+    },
+    {
+      "id": "14-complexity-of-prediction-measures:lem:list",
+      "status": "checked",
+      "evidence_sha256": "2f2e75e19a14fc2be47e6c840e075d3ca285b0444376962f81334fc3363e714c"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:constants",
+      "status": "checked",
+      "evidence_sha256": "8bcc520fba0a3d1cd325a8ba6eacaf506351fae6b3b8c24d38af85a6ca002ae3"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:thm:orderone",
+      "status": "checked",
+      "evidence_sha256": "e309d60b15b2604a32da461a1d3a03286dc0eac137f786f63070f2bcc463f6d2"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:curve",
+      "status": "checked",
+      "evidence_sha256": "0659ff8cb1a73e0f55a4fe5ca2aac154c8b10dd48e5347f397b695324a655414"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:genericcurve",
+      "status": "checked",
+      "evidence_sha256": "7962e9e5a6ca80a95a5946f570515c0f46529dd8394444fea381c45378d2071f"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:cor:algorithmone",
+      "status": "checked",
+      "evidence_sha256": "9fdfdaa132584f07e3e1817c0c7057d6283ca3d15a41079decb527982d921b05"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:thm:spectral",
+      "status": "checked",
+      "evidence_sha256": "fef080601cd9a400cd7e2b4f81dc02516996273208b21de9c9fef4e51947f588"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:weights",
+      "status": "checked",
+      "evidence_sha256": "2b9cd8d2ade46f1b8628d9b051fdc117b906edab0283c17c1af77c5b8777450b"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:lem:genericjets",
+      "status": "checked",
+      "evidence_sha256": "5ee1084acae2e5e9566b56ec75f44eadea2d1f563a620137f3bb45ee0f80765d"
+    },
+    {
+      "id": "15-differential-field-constraint-decisions:prop:cyclotomic",
+      "status": "checked",
+      "evidence_sha256": "5fb8ecb95732a72e577ef497ef9a8ce0bea919f53fbf070b03117a028bbf57bd"
+    },
+    {
+      "id": "04-pure-r1-calculator:thm:size",
+      "status": "existing-calculator-package",
+      "evidence_sha256": "5cbc2fd3f7f7311e64ce3a4600b9be12d17508ebb33cdfa1c780cdf3615e360d"
+    },
+    {
+      "id": "04-pure-r1-calculator:lem:capacity",
+      "status": "existing-calculator-package",
+      "evidence_sha256": "aa6a419f0bed557eb2f01089638047e16856e6fc3c5370751858bc746271f905"
+    }
+  ],
+  "verified_frozen_comparator_hashes": {
+    "LogicLineages/ModelsAlgebra/PGroups/RawBoundedClassificationTargets.lean": "9638007da52018d6859be1e9e6f3dac2e4ce65fb6879ebff847b84171053e130",
+    "LogicLineages/ModelsAlgebra/PGroups/FullQuotientTargets.lean": "38cee006c0b7255512d84f2475364299622d1901dbc8d1f7250567e1b330b0c7",
+    "LogicLineages/ModelsAlgebra/PGroups/BackForthTargets.lean": "28925ce3ca334886fe5cde5c14ee13db3d558c3d33da973e91b99b85f28b7630",
+    "LogicLineages/ModelsAlgebra/PGroups/SourceAbsorptionTargets.lean": "16761a8224fb46e409a61bef29d83657501721166ee21b9d97961aa2af854716",
+    "LogicLineages/ComputabilityKnowledge/Comparators/RestrictedProduct.lean": "3b6aec50b063e33c05f7d4ecddfd8af123cab045a4eb7a40ce73e129e4831214",
+    "LogicLineages/ComputabilityKnowledge/Comparators/MultiplicationGadget.lean": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e",
+    "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizerProgram.lean": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+    "LogicLineages/ComputabilityKnowledge/Comparators/RaySeparation.lean": "fd4cc78183293a36de5a1e6eed7fff46cbac1c001d9dbcdf9f8770c3b8856144",
+    "LogicLineages/ComputabilityKnowledge/Comparators/ExponentialIdentity.lean": "d1f83148e8ac4a6569141f2608ac7cd5435033ecfd1f3800ff42c89b4324ed76",
+    "LogicLineages/ComputabilityKnowledge/Comparators/UnaryComparison.lean": "e413aaee5570c6f1c7c94c48a7e39c5503ff41833b0dada4e13df243a43ca515",
+    "LogicLineages/ModelsAlgebra/Forests/GraphBridgeCompletionTargets.lean": "dcb98f5df86c8f5784ef23c3486fd86b7b80136840a83abe73d7555b60e100d5",
+    "LogicLineages/ModelsAlgebra/Forests/CertificateFullTargets.lean": "75deb8636e2009a15fe1cfd093f4558ae3e7c0b2cff46c764df690e2ccdfb69d",
+    "LogicLineages/ModelsAlgebra/Forests/WidthPositiveTargets.lean": "73a2fc524e31e6ec1f38c6d8a5b29f403fe40fa0a42339454d73847458cece88",
+    "LogicLineages/ModelsAlgebra/Forests/AgeCompletionTargets.lean": "efced79d5db363008bf36dc1ea19732362aa6c43635bd0444c710c62d608baf2",
+    "LogicLineages/OrdinalComparison/EncodedFiniteBallsTargets.lean": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+    "LogicLineages/OrdinalComparison/ElementaryControlTargets.lean": "bd94b0ade60cc7242c5321012d445a1e003e669206a1c7e5a57e3e8e55ce33dd",
+    "LogicLineages/OrdinalComparison/ActualCollapseTargets.lean": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc",
+    "LogicLineages/OrdinalComparison/OptimizedAlgorithmTargets.lean": "fd40715ddea2c35a389e895da2486058d70bf342a231de11bf5f32bd31b7de86",
+    "LogicLineages/OrdinalComparison/ActualLimitPredecessorTargets.lean": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8",
+    "LogicLineages/OrdinalComparison/ActualSinglePredecessorTargets.lean": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf",
+    "LogicLineages/OrdinalComparison/EncodedCollapseTargets.lean": "25777ba9b090c8f8ef434aa9e0c2d8a6649ca16b49693eaad81740d36d84d765",
+    "LogicLineages/OrdinalComparison/ActualTerminalTargets.lean": "97993c72496c0de4a35059978d9e6070eee81c7b6e78fb8794fed6fba7ca3aa2",
+    "LogicLineages/OrdinalComparison/ActualFiniteHeadTargets.lean": "682a0532c51866e3d9b4ead5841da3f3cf243bb2e3cf1da104272db01630ee1e",
+    "LogicLineages/OrdinalComparison/ActualTailSeparationTargets.lean": "cb22045f61f16754ebe4b91bb03ddb491b2085dd3a478e1b084d5216a213c13e",
+    "LogicLineages/OrdinalComparison/SourceFiniteNamedSubstitutionTargets.lean": "1cd2548187811794256e78ec150950f54640cf696cc5bd280d1a28eb51ec5172",
+    "LogicLineages/OrdinalComparison/PeakOrbitTargets.lean": "e77cb27a7046e85cea6d5adcad39a4b4f7f170cfc40fe38d414206ff0805a8df",
+    "LogicLineages/OrdinalComparison/CollectedOneInputTargets.lean": "8f28ee96a051380113be1800c71e5fbdb0ade91a3a243f6849d58b21aefbc7c8",
+    "LogicLineages/OrdinalComparison/PositiveFiniteZerosTargets.lean": "d0b6a962f7dd2ed2879e030e903e8154097e88cdc00813b0ee6064b1d309095d",
+    "LogicLineages/OrdinalComparison/CollectedCellsTargets.lean": "314cf58ab62d2c2367f5fa5206bbf13d6e6fa208332072e480e7db9082fd1889",
+    "LogicLineages/OrdinalComparison/PrefixTraceTargets.lean": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+    "LogicLineages/OrdinalComparison/ControlledCountTargets.lean": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+    "LogicLineages/OrdinalComparison/PeakWordTargets.lean": "1230ec0042c3e864dee2f6fa11a7e8fb39266d8a1227777006ac011c2df15fa9",
+    "LogicLineages/OrdinalComparison/ReserveStageTargets.lean": "df71415501b37ae3a9af5d2dc0d773baa46de7eb550eff09b2e1e15c0ba9c63b",
+    "LogicLineages/OrdinalComparison/ProfileReserveTargets.lean": "cedda8055e116baa49e514990046e6b118b051afd156d18bf0655503ee9e33df",
+    "LogicLineages/OrdinalComparison/ProfileDirectTargets.lean": "249694701de3ce82b52e8ca7ba3875c5f8bc366e9805ca88074ddd5dbd57975d",
+    "LogicLineages/OrdinalComparison/AdjacentProfileTargets.lean": "5000258f88645583b6d037278ee827709d4d1204b71f9c370a2f0c2b73580a55",
+    "LogicLineages/OrdinalComparison/LimitMassProfileTargets.lean": "8b800344a033a92105e5082b9d75753cd4ce11d58dd1e3b232f4148193e7b19a",
+    "LogicLineages/OrdinalComparison/SuccessorKernelsTargets.lean": "9575662b72cc5b59f5809b06c16d03383d42ab55ba87f8230fb5cb5bd8f0b45a",
+    "LogicLineages/OrdinalComparison/SmallKernelsTargets.lean": "47f627d27ce8a6f9fb99b546a8847567d6809bbc3411f67e1fa32ed69c300d1d",
+    "LogicLineages/OrdinalComparison/StrictMassTargets.lean": "b38ccc005072fe351a5de005f41d4a3ccdf93820bba6a742f5a5bee35729ab0d",
+    "LogicLineages/OrdinalComparison/ControlResidueTargets.lean": "98cb51fab615bcc841ccd9c9767efe1b807498f861755b0a7f146ee0d2585d0d",
+    "LogicLineages/OrdinalComparison/HeadEndpointTargets.lean": "ce7bf3057d433757365e3a7206330322f88dca49a1c67e26c72d512d3d134254",
+    "LogicLineages/OrdinalComparison/HeadWindowTargets.lean": "18fb5d768be7e05740a41b476cb616e913dda12f3cb82b08619ce23ae6fbbe8b",
+    "LogicLineages/OrdinalComparison/RestrictedPartitionTargets.lean": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+    "LogicLineages/OrdinalComparison/GrowingBudgetTransferTargets.lean": "781d0bc3eb8004089774b5ba068c772e6249c14e6e028694f1587d2a1e2231c3",
+    "LogicLineages/OrdinalComparison/OmegaBlockTargets.lean": "e3eae97442929325ea706d5ab30c9fe120d21694dd2f86f5011677438702f08f",
+    "LogicLineages/OrdinalComparison/ThetaEntryTargets.lean": "86c88d4e51c2b5bfcc99a3e69ebad46e073eac9735ef8c57baac7f5d991a14b7",
+    "LogicLineages/OrdinalComparison/BinarySourceTargets.lean": "424494df60cc20313689dac07a36243adf0e0ece05d9716f45dd026be198b501",
+    "LogicLineages/OrdinalComparison/BinaryObserverTargets.lean": "d293a5d5845304538c6e7a89e327a64b41d53753c93e4d569e1510c75f6e7a0c",
+    "LogicLineages/OrdinalComparison/CartierLaurentTargets.lean": "01d61ce79f314909e0f94a09a25696166d467a5797096d7600d885a1c9ea4d73",
+    "LogicLineages/OrdinalComparison/BinaryPoleRemovalTargets.lean": "556388514d1e762c37293d56b2a46120457188114778c70b86b90f4ec800b390",
+    "LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.lean": "e1be09291162f8504851f3544cbe5702636fcf21d320f1ffb41159d0483a3450",
+    "LogicLineages/OrdinalComparison/RealResidueBoundsTargets.lean": "3c12909e8b5281f4e7f4ab44c3c1fd4f920ddc100a3bf1030799db2d5febbbe0",
+    "LogicLineages/OrdinalComparison/ActualCartierPeriodTargets.lean": "49684087da467834f45e4a66e4295747ae8e6589ef649c146fd47cf8fcb80862",
+    "LogicLineages/Ultrafilters/UltrapowerTargets.lean": "9c443a06b64e8a225c6e68980b0d7f0447c98a8d11d1ef784f9198f4f95e8341",
+    "LogicLineages/Ultrafilters/DomainDerivationTargets.lean": "3ed1a3265406fdb008e6cd04cb6d4c349f227fd817677f621570088a3bc699ab",
+    "LogicLineages/Ultrafilters/Targets.lean": "c370390ba1f97a52c34e212a93fe89a1352f16769ce90245a50be556e8c2de70",
+    "LogicLineages/Ultrafilters/TranslationTargets.lean": "0f893ba03dcae7b351176228ed2fd7489d28d986c3018f59efb2ff4fddf7c248",
+    "LogicLineages/Ultrafilters/HamelTargets.lean": "66249b803fdd14a27d408726667f7e7d3f92d7835def88a7af8098a88dc521ba",
+    "LogicLineages/Ultrafilters/DomainCorollaryTargets.lean": "f242a6d809eb17d99a0ca724070ecac0c2e116618987178d573a2cb5db13272b",
+    "LogicLineages/RL/ClassificationTargets.lean": "15abd4a1d992aa55a5586bdfa885e3872aa3171e93954ddd18f24aa53a52644a",
+    "LogicLineages/RL/PolicyTargets.lean": "34a3294502f5166263fbc66c601093f3ceea1940265d542d45143a9717e3028b",
+    "LogicLineages/RL/PositiveTransformationTargets.lean": "509d14de656cea8d80bd34925af9fbc278cf219f9a4d4512bddf2a0112ef2993",
+    "LogicLineages/RL/SeparatorTargets.lean": "c58c9bc8deefc47faef68602ccfa16d900d72df19dc65083fedd5e6685cd00a0",
+    "LogicLineages/RL/MixtureTargets.lean": "9bc5488189db3404e7032764b23f549630711d0e8ea74837e1af732b804fb3e9",
+    "LogicLineages/RL/Targets.lean": "67f413a2947c9e40c483c1af6ede32449b396484d86617aefbc2c31ebe3f18b5",
+    "LogicLineages/RL/CrossTargets.lean": "e5167b42ef549940f45e42ab4b47cf55053e3748bad3abc2b6d06bd4881364ed",
+    "LogicLineages/ComputabilityKnowledge/Comparators/PredictionLearning.lean": "91888edd11898a0f84438226bd711ded3ddb213b1578cf9d183adbb8821d26c9",
+    "LogicLineages/ComputabilityKnowledge/PredictionSecondJumpTargets.lean": "9c5f83508aa7370d9dbda8a756ab4dc0ca79e54085a5e8f927100b1729e3f1f7",
+    "LogicLineages/ModelsAlgebra/Differential/RationalTargets.lean": "07ad42bbf979e7e571bf7c1f2f0f58e925c9ef7b4d67ac180b9bf734169c5e04",
+    "LogicLineages/ModelsAlgebra/Differential/OrderOneTargets.lean": "749286b15712a271503577d3d91a869ba504af5f339303e1826f89d28abfe1b7",
+    "LogicLineages/ModelsAlgebra/Differential/CurveIsomorphismTargets.lean": "3139b21b6f479e35c9e772a49cb3525fce3cfe570367cc3f8454e511b6b8dcd0",
+    "LogicLineages/ModelsAlgebra/Differential/GenericCurveTargets.lean": "b0b78896c657fde983ef063a3c0a8e71ed803091a29cdfa48e8514630c804613",
+    "LogicLineages/ModelsAlgebra/Differential/OrderOneAlgorithmTargets.lean": "d9b6925b38357df640869339352e4ecd4a90b314ec739f6c2d4e081ea03ae9c3",
+    "LogicLineages/ModelsAlgebra/Differential/SpectralConstraintTargets.lean": "1467cbaa2f3896fd09dfeba86aa9cf08a084996278bcfbd77e6fbcacbfd8645e",
+    "LogicLineages/ModelsAlgebra/Differential/AlgebraicBaseTargets.lean": "a85bce9c7dff78eb870dc9ba784bab4c63ef41627abd41c32fba8492e444ab22",
+    "LogicLineages/ModelsAlgebra/Differential/GenericJetsCompleteTargets.lean": "75fbcc41ffa19b88297cb1fa4bb83dfae9b90dd2709b20ed2a924685c8e42dfa",
+    "LogicLineages/ModelsAlgebra/Differential/CyclotomicCompleteTargets.lean": "33076f2fb0373d2decedebcfdbcad0e54062d34035881428c699752eb75aaac6"
+  },
+  "checked_source_scope_review": {
+    "paper03": "All four previously checked statements are textually unchanged. Graph/order bridge, width classification, negative-certificate semidecision and age realization do not depend on Carter or the new total-decision proof. Their existing scopes and historical evidence are retained.",
+    "paper05": "All ten previously checked statements occur in the unchanged ordinal/control/evaluation part of foundations.tex before the assignment section. Their defining mathematics is unchanged. The two changed policy-relative assignment statements were already pending.",
+    "other_papers": "All other canonical TeX closure file hashes and numbered statement bodies match the historical snapshot; existing statuses retained.",
+    "limitations": "This reconciliation does not independently establish imported GLS/Parikh/Presburger theorems, any new source repair, or revised assignment suppliers in Lean. Historical local receipt availability remains as described in final-register-validation-2026-10-30.json."
+  },
+  "reconciled_targets_sha256": "5c7a37f3e064f6f7ee6bf5d9ed5126e9daa22debe67d73e1f544fbca4a7d53c5",
+  "reconciled_snapshot_sha256": "260f841c681e96fc3f05865798324756323c4511230da0a6891f0da5aad71714"
+}

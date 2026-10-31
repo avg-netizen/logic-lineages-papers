@@ -715,3 +715,6 @@ here. The full paper inventory and remaining dependencies are in TARGETS.json.
 -/
 
 #audit_namespace LogicLineages
+public import LogicLineages.ModelsAlgebra.Forests.RankedParseStatementChecks
+public import LogicLineages.OrdinalComparison.WWLiteralSizeStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks

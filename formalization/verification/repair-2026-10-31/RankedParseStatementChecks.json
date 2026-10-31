@@ -1,0 +1,109 @@
+{
+  "accepted_utc": "2026-10-31T03:26:17.873294+00:00",
+  "scope": "Exact leaf-occurrence graph semantics, ordered ranked homeomorphic embedding, induced embedding, and arbitrary nonempty leaf-subset pruning. No effective ideal, Parikh, or decision supplier is assumed.",
+  "source_correspondence": "Paper03 decision.tex, lem:parse-pruning, full ranked U/J binary parse homeomorphic induced embedding and exact nonempty leaf-subset restriction. Source correspondence separately reviewed; the theorem supplies no ideal-decomposition, Parikh or whole decision algorithm.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.RankedParseStatementChecks",
+  "frozen_at_utc": "2026-10-31T03:25:02.082281+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/ranked-parse-freeze.json",
+  "freeze_sha256": "6cbb83f921cf690ca10449afacc472df7b562add561e463a7df30d6be9a76684",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseStatementChecks.lean",
+      "sha256": "0ad02c0a286704577d46e49430baad29a57cb141a1b9c60fddb64450c9080e36"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.homeomorphicInduced",
+    "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.exactPruning"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793417070425786681-2.json",
+      "sha256": "3fd968bf6f89a9d13b5b84c070ada8e2b7bb6ac5b513878fdce45477aaa59011",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793417118514502259-2.json",
+      "sha256": "175c0ddd8cf4e4f4b932145a706a803661d1fe9b1a6653cefa1f583e0747ea92",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793417118514502259-2-LogicLineages-ModelsAlgebra-Forests-RankedParseStatementChecks.log",
+  "gate_log_sha256": "99aee8d7235ab7c62d67b41de04ca6ba807b261d1406759ac6fd82afe7aeb9c7",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.homeomorphicInduced": [],
+    "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.exactPruning": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseStatementChecks.lean",
+      "sha256": "0ad02c0a286704577d46e49430baad29a57cb141a1b9c60fddb64450c9080e36"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps"
+  ],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in the first listed receipt; candidate and gate compiled in the second. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

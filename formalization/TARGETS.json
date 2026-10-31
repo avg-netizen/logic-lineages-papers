@@ -3,7 +3,7 @@
   "scope": "All fifteen public-repository papers, including cited suppliers absent from the standard libraries. Existing calculator coverage is inherited rather than newly recompiled here.",
   "acceptance": "Compile first; exact Codex-owned frozen comparator; no added theorem premises; axiom closure limited to propext, Classical.choice and Quot.sound; full dependency chains required.",
   "paper_count": 15,
-  "numbered_statement_count": 178,
+  "numbered_statement_count": 189,
   "papers": [
     {
       "paper": "01-scott-complexity-abelian-p-groups",
@@ -448,21 +448,45 @@
       "status": "in-progress",
       "source_files": [
         "03-joint-embedding-finite-forests/paper.tex",
-        "03-joint-embedding-finite-forests/preamble.tex"
+        "03-joint-embedding-finite-forests/preamble.tex",
+        "03-joint-embedding-finite-forests/decision.tex"
       ],
-      "numbered_statement_count": 5,
+      "numbered_statement_count": 11,
       "dependency_obligations": [
         {
           "description": "Finite forest embeddings and actual comparability-graph equivalence",
+          "status": "checked",
+          "target": "lem:bridge",
+          "note": "Existing exact whole-statement acceptance retained; no new compilation in source reconciliation."
+        },
+        {
+          "description": "Ordered ranked U/J parse pruning, exact induced-subgraph profile regularity, and hereditary directed finite graph-image cover",
           "status": "pending"
         },
         {
-          "description": "Carter finite-forbidden graph JEP decision theorem",
+          "description": "Goubault-Larrecq\u2013Schmitz effective finite regular-ideal decomposition for the exact ordered ranked dive/couple relation",
+          "status": "pending"
+        },
+        {
+          "description": "Canonical reduced cotree uniqueness and completeness of all binary associations and permutations",
+          "status": "pending"
+        },
+        {
+          "description": "Effective CFG Parikh conversion with exact subset-state multiplicities, and Presburger decision",
+          "status": "pending"
+        },
+        {
+          "description": "Deterministic Presburger cotree product/complement/productivity and graph-image inclusion; complete total forest JEP decision",
           "status": "pending"
         },
         {
           "description": "Constructive width classification and finite negative certificates",
-          "status": "pending"
+          "status": "checked",
+          "targets": [
+            "thm:width",
+            "prop:certificate"
+          ],
+          "note": "Existing exact whole-statement acceptances retained independently of the total positive decision procedure."
         }
       ],
       "statements": [
@@ -471,7 +495,7 @@
           "kind": "lemma",
           "label": "lem:bridge",
           "file": "03-joint-embedding-finite-forests/paper.tex",
-          "line": 64,
+          "line": 68,
           "statement_latex": "\\label{lem:bridge}\nThe comparability graphs of finite order forests are precisely\n$\\Forb(P_4,C_4)$. Each such graph determines its order forest up to\nisomorphism. Moreover, for finite order forests $S,T$,\n\\[\n S\\hookrightarrow T\\quad\\Longleftrightarrow\\quad\n \\Comp(S)\\hookrightarrow\\Comp(T).\n\\]",
           "status": "checked",
           "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.completeComparabilityBridge",
@@ -492,8 +516,8 @@
           "id": "03-joint-embedding-finite-forests:thm:decision",
           "kind": "theorem",
           "label": "thm:decision",
-          "file": "03-joint-embedding-finite-forests/paper.tex",
-          "line": 122,
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 259,
           "statement_latex": "\\label{thm:decision}\nThere is an algorithm which, given any finite family $\\mathcal U$ of\nfinite order forests, decides whether $\\mathcal C(\\mathcal U)$ has JEP.\nMore precisely, set\n\\[\n \\mathcal F=\\{P_4,C_4\\}\\cup\\{\\Comp(U):U\\in\\mathcal U\\}.\n\\]\nThen $\\mathcal C(\\mathcal U)$ has JEP if and only if $\\Forb(\\mathcal F)$\nhas JEP.",
           "status": "pending",
           "accepted_declaration": null,
@@ -504,7 +528,7 @@
           "kind": "proposition",
           "label": "prop:certificate",
           "file": "03-joint-embedding-finite-forests/paper.tex",
-          "line": 149,
+          "line": 121,
           "statement_latex": "[Finite certificates for negative instances]\n\\label{prop:certificate}\nIf $\\mathcal C(\\mathcal U)$ fails JEP, one can compute a pair $F,G$ in\nthe class and a finite exhaustive certificate that they have no common\nextension in the class.",
           "status": "checked",
           "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fixed_fullNegativeCertificateSearch",
@@ -526,7 +550,7 @@
           "kind": "theorem",
           "label": "thm:width",
           "file": "03-joint-embedding-finite-forests/paper.tex",
-          "line": 181,
+          "line": 153,
           "statement_latex": "\\label{thm:width}\nFor $m\\geq1$, the class of finite order forests of width at most $m$\nhas JEP if and only if $m\\leq3$.",
           "status": "checked",
           "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullWidthJEPClassification",
@@ -548,7 +572,7 @@
           "kind": "proposition",
           "label": "prop:age",
           "file": "03-joint-embedding-finite-forests/paper.tex",
-          "line": 242,
+          "line": 214,
           "statement_latex": "\\label{prop:age}\nA nonempty hereditary class $\\mathcal K$ of finite forests is the age\nof a finite or countable forest if and only if it has JEP. If it contains\nforests of unbounded size, the realizing forest is countably infinite.",
           "status": "checked",
           "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.StatementChecks.fullForestAgeRealization",
@@ -570,8 +594,140 @@
             "Quot.sound"
           ],
           "coverage_note": "Full source prop:age: every nonempty hereditary class of actual finite order forests has actual finite/countable forest age realization iff ordinary JEP. Genuine language embedding/iso calibration, finite-code essential countability, proved Mathlib relational age existence, and actual finite-local partial-order/forest reconstruction paid. Unbounded sizes yield actual carrier equivalence with Nat. Empty finite forest allowed; empty class excluded. No amalgamation/homogeneity/Carter assumption."
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:lem:parse-pruning",
+          "kind": "lemma",
+          "label": "lem:parse-pruning",
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 44,
+          "statement_latex": "\\label{lem:parse-pruning}\nIf $s\\preceq t$, then $\\E(s)$ embeds as an induced subgraph of $\\E(t)$.\nFor every nonempty subset $B$ of the leaves of $t$, there is a term\n$t|B\\preceq t$ representing exactly $\\E(t)[B]$.",
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.homeomorphicInduced",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+            "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06",
+            "type": "LogicLineages.ModelsAlgebra.Forests.RankedParse.Targets.HomeomorphicInduced"
+          },
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.homeomorphicInduced",
+            "LogicLineages.ModelsAlgebra.Forests.RankedParse.StatementChecks.exactPruning"
+          ],
+          "acceptance_record": "verification/repair-2026-10-31/RankedParseStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Both assertions of the repaired whole lemma: the exact ranked dive/couple relation induces an embedding of evaluated graphs, and every nonempty set of leaf occurrences is exactly the image of a smaller parse. No Carter relation or assumed ideal decomposition. Source correspondence and exact gate/axiom verification recorded separately.",
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+              "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06",
+              "type": "LogicLineages.ModelsAlgebra.Forests.RankedParse.Targets.HomeomorphicInduced"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+              "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06",
+              "type": "LogicLineages.ModelsAlgebra.Forests.RankedParse.Targets.ExactPruning"
+            }
+          ],
+          "verification_receipt": "build-reports/1793417118514502259-2.json"
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:lem:parse-regular",
+          "kind": "lemma",
+          "label": "lem:parse-regular",
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 70,
+          "statement_latex": "\\label{lem:parse-regular}\nThe language $L=\\{t:\\E(t)\\in\\mathcal K\\}$ is effectively regular and\ndownward closed under $\\preceq$.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:lem:image-cover",
+          "kind": "lemma",
+          "label": "lem:image-cover",
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 102,
+          "statement_latex": "\\label{lem:image-cover}\nPut $D_i=\\{\\varnothing\\}\\cup\\{\\E(t):t\\in I_i\\}$, on isomorphism types.\nEach $D_i$ is a hereditary graph class with JEP, their union is\n$\\mathcal K$, and\n\\[\n \\mathcal K\\text{ has JEP}\\quad\\Longleftrightarrow\\quad\n                     \\mathcal K=D_i\\text{ for some }i.        \\tag{2}\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/FiniteIdealCoverStatementChecks.json",
+              "scope": "Abstract finite hereditary directed-cover criterion, under the genuine cover hypotheses. Actual ranked-parse graph-image hereditary/JEP/cover properties remain separate obligations."
+            }
+          ]
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:lem:canonical-cotree",
+          "kind": "lemma",
+          "label": "lem:canonical-cotree",
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 137,
+          "statement_latex": "\\label{lem:canonical-cotree}\nEvery graph with a union/join representation has a unique reduced cotree\nup to isomorphism. All its binary representations are obtained by\nindependently representing each cotree child, then choosing a binary\nassociation and a permutation of the children at each operation node.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:lem:parikh-transition",
+          "kind": "lemma",
+          "label": "lem:parikh-transition",
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 164,
+          "statement_latex": "\\label{lem:parikh-transition}\nFor each $o\\in\\{U,J\\}$ and $q\\in Q$ one can compute a Presburger\npredicate $P_{o,q}$ on the counts of child state subsets such that, if\nan $o$ node has children $T_1,\\ldots,T_k$, then\n\\[\n q\\in S_M(T)\\quad\\Longleftrightarrow\\quad\n P_{o,q}\\bigl((c_B)_{B\\subseteq Q}\\bigr),\\qquad\n c_B=|\\{j:S_M(T_j)=B\\}|.                                   \\tag{4}\n\\]\nEqual child occurrences are counted with their full multiplicity.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+        },
+        {
+          "id": "03-joint-embedding-finite-forests:lem:presburger-inclusion",
+          "kind": "lemma",
+          "label": "lem:presburger-inclusion",
+          "file": "03-joint-embedding-finite-forests/decision.tex",
+          "line": 213,
+          "statement_latex": "\\label{lem:presburger-inclusion}\nInclusion of languages recognized by these deterministic cotree\nautomata is decidable.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
         }
-      ]
+      ],
+      "historical_dependency_obligations": [
+        {
+          "source_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
+          "obligations": [
+            {
+              "description": "Finite forest embeddings and actual comparability-graph equivalence",
+              "status": "pending"
+            },
+            {
+              "description": "Carter finite-forbidden graph JEP decision theorem",
+              "status": "pending"
+            },
+            {
+              "description": "Constructive width classification and finite negative certificates",
+              "status": "pending"
+            }
+          ],
+          "note": "Historical source dependency list retained verbatim. Carter is not a premise of the repaired decision proof; existing Carter-related checked modules and counterexamples retain their original independent scope."
+        }
+      ],
+      "source_reconciliation": {
+        "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+        "receipt": "verification/source-reconciliation-2026-10-31.json",
+        "note": "Existing checked statement bodies and their mathematical domains are unchanged. Original frozen comparators, declaration names, receipts and axiom records are retained verbatim; source inventory updates are not new Lean verification."
+      }
     },
     {
       "paper": "04-pure-r1-calculator",
@@ -629,12 +785,13 @@
         "05-wilken-weiermann-foundations/paper.tex",
         "05-wilken-weiermann-foundations/preamble.tex",
         "05-wilken-weiermann-foundations/foundations.tex",
+        "05-wilken-weiermann-foundations/source-syntax.tex",
         "05-wilken-weiermann-foundations/references.tex"
       ],
-      "numbered_statement_count": 13,
+      "numbered_statement_count": 18,
       "dependency_obligations": [
         {
-          "description": "Complete typed source syntax and literal assignment translation",
+          "description": "Complete typed source syntax, explicit admissible expansion policies and literal policy-relative zero-history assignment translation",
           "status": "pending"
         },
         {
@@ -648,6 +805,14 @@
         {
           "description": "Computability of comparison and countervaluation-bound equivalence",
           "status": "pending"
+        },
+        {
+          "description": "Weak scalar replacement, graded-domain closure and bounded-norm preservation with the original multiplier; no assumption of the false strict WW Lemma 2.19 or Appendix A.5",
+          "status": "pending"
+        },
+        {
+          "description": "Exact generated-source policy-separation witness and default-parser correspondence; no policy-independence or full history-dependent termination claim",
+          "status": "pending"
         }
       ],
       "statements": [
@@ -656,7 +821,7 @@
           "kind": "proposition",
           "label": "prop:counter-bound",
           "file": "05-wilken-weiermann-foundations/paper.tex",
-          "line": 181,
+          "line": 183,
           "statement_latex": "[Countervaluation bounds]\\label{prop:counter-bound}\nThe fixed-control comparison problem is co-recursively-enumerable.  It is\ndecidable if and only if there is a total computable function $b(Q)$ such\nthat each false comparison $Q$ has a countervaluation whose every coordinate\nis at most $b(Q)$.",
           "status": "pending",
           "accepted_declaration": null,
@@ -964,24 +1129,139 @@
           "kind": "theorem",
           "label": "thm:forward-translation",
           "file": "05-wilken-weiermann-foundations/foundations.tex",
-          "line": 378,
-          "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFor a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors.",
+          "line": 412,
+          "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFix an admissible expansion policy. For a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors. It is effective uniformly in a\nsupplied computable policy; it does not identify assignments made under\ndifferent policies.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "source_history": [
+            {
+              "source_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
+              "file": "05-wilken-weiermann-foundations/foundations.tex",
+              "line": 378,
+              "statement_latex": "[Actual-source forward translation]\\label{thm:forward-translation}\nFor a literal original source with only ground free names, all positive\ncanonical coordinates are closed and effectively evaluable.  Coordinate\nzero is effectively a finite expression in positive-natural inputs, constants,\naddition and fixed functions $h_\\lambda(n)=\\psi(\\lambda+n)$, where each\ndirect index is $\\lambda=\\omega\\otimes c>0$ for a closed $c$.\nThe translation preserves every shared input valuation, including arbitrary\ninternal types, binders and recursors.",
+              "status": "pending"
+            }
+          ],
+          "source_review_note": "The repaired manuscript explicitly quantifies over an admissible computable expansion policy. Previous and current whole targets remain pending; no old supplier proof is promoted to the revised statement."
         },
         {
           "id": "05-wilken-weiermann-foundations:cor:source-classes",
           "kind": "corollary",
           "label": "cor:source-classes",
           "file": "05-wilken-weiermann-foundations/foundations.tex",
-          "line": 427,
-          "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nIn a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
+          "line": 463,
+          "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nFor every fixed admissible policy, in a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "source_history": [
+            {
+              "source_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
+              "file": "05-wilken-weiermann-foundations/foundations.tex",
+              "line": 427,
+              "statement_latex": "[Two natural positive classes]\\label{cor:source-classes}\nIn a recursor-free source every positive coordinate is finite.  If every\ninternal type and subtype has level at most two, every direct scalar index\nis a polynomial limit below $\\omega^\\omega$.",
+              "status": "pending"
+            }
+          ],
+          "source_review_note": "The repaired manuscript explicitly quantifies over an admissible computable expansion policy. Previous and current whole targets remain pending; no old supplier proof is promoted to the revised statement."
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:wwsc:prop:finite",
+          "kind": "proposition",
+          "label": "wwsc:prop:finite",
+          "file": "05-wilken-weiermann-foundations/source-syntax.tex",
+          "line": 92,
+          "statement_latex": "\\label{wwsc:prop:finite}\nFor a fixed policy, all literal partials and zero-history assignments\nare uniquely determined finite trees. Their expansions have computable\nbounds in the input trees and type levels. For a fixed input tree,\nchanging only the output associations of a partial does not change\nits ordinal value.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWLiteralSizeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWLiteralSizeStatementChecks.json",
+              "scope": "Literal node/weighted-size/whole-free-first partial-size and multiplier bounds only. Policy-relative finite assignments, output expansion and association-value assertions remain pending."
+            }
+          ]
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:wwsc:thm:weak",
+          "kind": "theorem",
+          "label": "wwsc:thm:weak",
+          "file": "05-wilken-weiermann-foundations/source-syntax.tex",
+          "line": 147,
+          "statement_latex": "[Weak scalar replacement]\\label{wwsc:thm:weak}\nFor $h\\in C_0^X$,\n\\[\n h\\{X:=\\WWscOne\\}\\le(P_0h)_0.\n\\]\nEvery partial $P_i h$, $h\\in C_i^X$, is a valid $X$-free $C$-vector\nof level $n$. For a vector $h\\in C^X$, the assembled $\\delta^X h$ is\nlikewise valid and $X$-free.\nThese assertions hold for every admissible policy.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:wwsc:lem:free",
+          "kind": "lemma",
+          "label": "wwsc:lem:free",
+          "file": "05-wilken-weiermann-foundations/source-syntax.tex",
+          "line": 195,
+          "statement_latex": "\\label{wwsc:lem:free}\nLet $h$ be bounded in norm. Fix an admissible substitution for its other\nnames and put $B=h_0\\{X:=\\WWscOne\\}$. Every first wholly $X$-free\nsubtree encountered at a positive grade in a partial recursion starting\nat any actual coordinate of $h$ satisfies\n\\[\n \\WWscNorm(t)\\le2^{n-1}B.\n\\]",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:wwsc:thm:norm",
+          "kind": "theorem",
+          "label": "wwsc:thm:norm",
+          "file": "05-wilken-weiermann-foundations/source-syntax.tex",
+          "line": 229,
+          "statement_latex": "\\label{wwsc:thm:norm}\nOn vectors $h\\in C^X$, the operator $\\delta^X$ preserves bounded norm with its original\nmultiplier $S_X(h)=2^n\\sum_i\\WWscSize_X(h_i)$, for every admissible policy.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+        },
+        {
+          "id": "05-wilken-weiermann-foundations:wwsc:thm:translation",
+          "kind": "theorem",
+          "label": "wwsc:thm:translation",
+          "file": "05-wilken-weiermann-foundations/source-syntax.tex",
+          "line": 327,
+          "statement_latex": "\\label{wwsc:thm:translation}\nFix an admissible policy. For a literal original source all of whose free\nterm names are ground, every positive final coordinate is closed and\neffectively evaluable. Its scalar coordinate translates effectively,\npreserving every shared valuation, to an expression in positive-natural\ninputs, positive constants, addition, and fixed functions\n\\[\n h_\\lambda(t)=\\psi(\\lambda+t),\\qquad\n \\lambda=\\omega\\otimes c>0\\quad(c\\text{ closed}).\n\\]\nArbitrary internal binders, types and recursors are allowed.",
+          "status": "pending",
+          "accepted_declaration": null,
+          "frozen_comparator": null,
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
         }
-      ]
+      ],
+      "historical_dependency_obligations": [
+        {
+          "source_commit": "b2aea2e6f96639c23d47f44361275f4ea4531925",
+          "obligations": [
+            {
+              "description": "Complete typed source syntax and literal assignment translation",
+              "status": "pending"
+            },
+            {
+              "description": "Finite norm-ball enumeration, natural arithmetic and exact Phi",
+              "status": "pending"
+            },
+            {
+              "description": "Well-founded norm-controlled collapse and full closed evaluator",
+              "status": "pending"
+            },
+            {
+              "description": "Computability of comparison and countervaluation-bound equivalence",
+              "status": "pending"
+            }
+          ]
+        }
+      ],
+      "source_reconciliation": {
+        "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+        "receipt": "verification/source-reconciliation-2026-10-31.json",
+        "note": "Existing checked statement bodies and their mathematical domains are unchanged. Original frozen comparators, declaration names, receipts and axiom records are retained verbatim; source inventory updates are not new Lean verification."
+      }
     },
     {
       "paper": "06-godel-t-termination-ordering",
@@ -3845,5 +4125,7 @@
         }
       ]
     }
-  ]
+  ],
+  "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388"
 }
