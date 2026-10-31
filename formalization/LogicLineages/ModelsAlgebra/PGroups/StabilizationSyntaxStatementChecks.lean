@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.StabilizationSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.StabilizationSyntaxStatementChecks
+theorem actualSentence : Targets.stabilizationSentenceExact := stabilization_sentence_exact
+end LogicLineages.ModelsAlgebra.PGroups.StabilizationSyntaxStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.StabilizationSyntaxStatementChecks

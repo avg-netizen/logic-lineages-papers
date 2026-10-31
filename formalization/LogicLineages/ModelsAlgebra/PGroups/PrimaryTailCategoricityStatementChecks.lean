@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityStatementChecks
+theorem actualDivisiblePart : Targets.divisiblePartInSubgroup := divisible_part_in_subgroup
+theorem actualCategoricity : Targets.primaryTailCategoricity := primary_tail_categoricity
+end LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityStatementChecks

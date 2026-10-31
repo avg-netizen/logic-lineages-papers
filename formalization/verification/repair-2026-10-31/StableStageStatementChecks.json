@@ -1,0 +1,246 @@
+{
+  "accepted_utc": "2026-10-31T14:03:37.568261+00:00",
+  "scope": "Actual primary stable consecutive filtration stage equals literal maximal divisible part; all later stages equal it and have zero Ulm rank.",
+  "source_correspondence": "Actual stable transfinite stage of a primary group equals the literal maximal divisible subgroup, all later stages coincide and later Ulm ranks vanish. Explicit stability premise retained; no whole classification claim. Outside checkpoint24.",
+  "source_commit": "2d7f1d0dc59f524dd0a098bf7869134a7dc1f8f8",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.StableStageStatementChecks",
+  "frozen_at_utc": "2026-10-31T14:02:44.043895+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/stable-stage-freeze.json",
+  "freeze_sha256": "7ef9edaeb9214d3755e5da398bb4f106d6b4196669f0cddb7878cbb7917d09ec",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageDefinitions.lean",
+      "sha256": "021657fdbee9a5d9f9dd07a91e2ec286f45c4a1eef630473252cd7e08b4b7b7f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageTargets.lean",
+      "sha256": "78e900c6214e8918f9d33bf1009e44164f6ccbcbffe6bb70b67c6b935b703b33"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageStatementChecks.lean",
+      "sha256": "1b6c01ea57931081dc5bf5ca1e5c5bc8ed54862370432bf3c19b65a637ddf197"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageProof.lean",
+      "sha256": "6d1d44e74bbea275c9fd8811ec56a00975108a49e5c268d9c186fba7a2e8a29c"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.StableStageStatementChecks.actualStage"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793455292522303838-2.json",
+      "sha256": "a1ad26bb80522bd32fdd0b060bd95baaaf4cab707b7fd6d50c3e26d51af63df7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793455390358626745-5.json",
+      "sha256": "3129b6973811e9d16d96f985157e412d75691437b14f98a27a95623703e703f6",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793455390358626745-5-LogicLineages-ModelsAlgebra-PGroups-StableStageStatementChecks.log",
+  "gate_log_sha256": "f2fac215d3dc666df488e3d25b0588e065fb8dd361cbf9514159cf386c453bb0",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.StableStageStatementChecks.actualStage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageStatementChecks.lean",
+      "sha256": "1b6c01ea57931081dc5bf5ca1e5c5bc8ed54862370432bf3c19b65a637ddf197"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageProof.lean",
+      "sha256": "6d1d44e74bbea275c9fd8811ec56a00975108a49e5c268d9c186fba7a2e8a29c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageTargets.lean",
+      "sha256": "78e900c6214e8918f9d33bf1009e44164f6ccbcbffe6bb70b67c6b935b703b33"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/StableStageDefinitions.lean",
+      "sha256": "021657fdbee9a5d9f9dd07a91e2ec286f45c4a1eef630473252cd7e08b4b7b7f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePartDefinitions.lean",
+      "sha256": "07b18d41ee72f4b1c0f778e791b99d4d5af92abb7d739b4fdecacf6c82ab3870"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+      "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+      "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePartProof.lean",
+      "sha256": "bb8d38974ebd0f4315bf8ec3dacd17c694bad79aaba37e98ecc0bc4be50f3e13"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePartTargets.lean",
+      "sha256": "4def101370f0c944160ff9874f4f7c533ce125225ec6729b8e6f26b69abfad6c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ZeroStageReduced.lean",
+      "sha256": "9991844bc6403cc8d8c394003fd705bb30794d6a45742579be244f8ada09247a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ZeroStageReducedTargets.lean",
+      "sha256": "38bf01852101cd96aa18df2ea56be1e6e299d0b50cea49a337144f52bfde7b74"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteFiltration.lean",
+      "sha256": "5ef09a1845f1f65be132b0961b4de51f316dcdef7d310ec9e6b632d7e1c2b647"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteFiltration.lean",
+      "sha256": "0d011bfc65ac39420a37c205d6fcf66d79cb0df8b7a17f94685933ceca2c8143"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageIntersections.lean",
+      "sha256": "17b40f639b03ca584bbafed259a8f81ac472754f1b66e3e2d8fc458b6ce92acd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroProof.lean",
+      "sha256": "576da656e2b66c304f927659746adeef0e8edc4551354b385b850f0ff3205fb4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroTargets.lean",
+      "sha256": "fa3072be1143d235f6f25c17cc9986f8a1468fa5bfa8860d4a47363e28211ac8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroDefinitions.lean",
+      "sha256": "493ec60e7673c879755caaf39753d4a1a3847d858de15553a6f0bccfb50b3581"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleUlmVanishing.lean",
+      "sha256": "01b3cff8543670a1f250ca0beb99312d0af16b2fcfc3d18f4d30b363216df85a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleUlmVanishingTargets.lean",
+      "sha256": "7dd8bbc0ea6aa20c1ed65b0335c2397d0d3028469e5751c587008d82a144c89f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleRootDefinitions.lean",
+      "sha256": "94f080c3bb1ed24d2a567546b3db0f49faf10dba999a1ce8d1c04f3aed21a9c8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeDefinitions.lean",
+      "sha256": "a5742590e7125cb70bc1ee5fdc8daaba0b758732d70d09d7fa2f125c4b55089a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDefinitions.lean",
+      "sha256": "b94822505afeee10653bec56e71b449e134bed3c8349a114ef3bc9e6d36c961d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthDefinitions.lean",
+      "sha256": "2ec84e50e27d9eba581f6c3adf6f2e8bd08b1c29372e30e1155ba50430b1dc73"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleRoot.lean",
+      "sha256": "5041a090e5a47b9e1c0c5f947868fd02ef31cb134af33bfa0a1096c814478035"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SocleRootTargets.lean",
+      "sha256": "41eb5b7ad38ea0bc1eefe6600727ddfd204cf2031a9805a7d44c6d637742ab07"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitude.lean",
+      "sha256": "03ea9f26fe223a67b6f5f3c6763727c023c7660b8286ad5f40dc6511acbf58ab"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageInfinitudeTargets.lean",
+      "sha256": "420180af86bcbb4ebfa3812898f49e5f4b1a342ae8da260059cf6fb884ce6f6d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmFiniteIndependence.lean",
+      "sha256": "7f608542efe775cf55356b044d27a85c922d79bc67e24cc2d98d4bddc0db0aa3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmFiniteIndependenceTargets.lean",
+      "sha256": "95f064b42009277798559d5da5363310a74c8c0803bffd541fa38043d57efe68"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteImageTableDefinitions.lean",
+      "sha256": "cf78b5453c6c119dc962ec8528de73b172febf74c8e12acd3a632fb09a2202bb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageCardinalityDefinitions.lean",
+      "sha256": "5971566bc73d10925c9b48c4a612a672c257cd6dcc5b56d4c7d0fcffd01fa6c1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Module.NatInt",
+    "Mathlib.Algebra.Module.Torsion.Field",
+    "Mathlib.Algebra.Module.ZMod",
+    "Mathlib.Data.Fin.Basic",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Nat.Factorization.Induction",
+    "Mathlib.Data.Nat.Prime.Defs",
+    "Mathlib.Data.Set.Finite.Basic",
+    "Mathlib.Data.ZMod.QuotientGroup",
+    "Mathlib.GroupTheory.QuotientGroup.Defs",
+    "Mathlib.LinearAlgebra.Basis.Defs",
+    "Mathlib.LinearAlgebra.Dimension.Basic",
+    "Mathlib.LinearAlgebra.Dimension.Finite",
+    "Mathlib.LinearAlgebra.LinearIndependent.Lemmas",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.SetTheory.Cardinal.Ordinal",
+    "Mathlib.SetTheory.Ordinal.Arithmetic",
+    "Mathlib.SetTheory.Ordinal.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrimaryUlmClassificationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrimaryUlmClassificationStatementChecks
+theorem actualClassification : Targets.countablePrimaryUlmClassification := countable_primary_ulm_classification
+end LogicLineages.ModelsAlgebra.PGroups.PrimaryUlmClassificationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrimaryUlmClassificationStatementChecks

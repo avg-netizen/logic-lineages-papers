@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.StableTailCategoricityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.StableTailCategoricityStatementChecks
+theorem actualCategoricity : Targets.stableTailCategoricity := stable_tail_categoricity
+end LogicLineages.ModelsAlgebra.PGroups.StableTailCategoricityStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.StableTailCategoricityStatementChecks

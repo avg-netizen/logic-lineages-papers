@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 24
+## Current verified snapshot: checkpoint 25
 
-**124 checked, 2 inherited, 63 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,107 selected imports and 3,553
+**125 checked, 2 inherited, 62 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,118 selected imports and 3,566
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -892,3 +892,29 @@ Authorized checkpoint profiles preserve all CPU, wall-time and single-thread
 guards without changing defaults or CI settings. Five records were fixed
 before later acceptances. The registry is **124 checked, 2 inherited,
 63 pending**. No GitHub CI result is claimed.
+
+
+## Checkpoint 25 — full functional alignment and detector
+
+Paper 09 `lem:functional-detector` is checked by
+`Source.FunctionalDetector.StatementChecks.fullFunctionalDetector`.
+The source fixes tau to the unary type o-to-o before this lemma; its actual
+unary-source target therefore covers the stated domain, not arbitrary output
+types. Every genuine original admissible valuation is allowed, including
+transfinite heads. Literal fresh-ground alignment, shared detector payloads,
+full-vector comparisons and norm-controlled collapse are proved without
+assignment, positivity, norm or global collapse-monotonicity premises.
+
+The other ten gates supply actual primary/divisible algebraic classification,
+socle and stabilization syntax, and finite-stable-tail Scott upper bounds.
+These do not by themselves promote the whole odd-obstruction statement or
+its remaining short-length exact-pure-Sigma exclusion.
+
+The [twenty-fifth focused checkpoint](verification/repair-2026-10-31/checkpoint-25.json)
+selects 413 gates and audits 1,133 aliases over 2,451 unchanged local source
+hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint25.json)
+passes with 1,118 imports, 3,566 audits and 4,187 unchanged closure hashes.
+Explicitly authorized profiles preserve CPU, wall-time and single-thread
+guards without changing defaults or CI settings. Eleven accepted records
+were fixed before later work. The registry is **125 checked, 2 inherited,
+62 pending**. No GitHub CI result is claimed.

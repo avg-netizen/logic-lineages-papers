@@ -1,0 +1,276 @@
+{
+  "accepted_utc": "2026-10-31T13:58:12.225436+00:00",
+  "scope": "Actual calibrated genuine Pruefer decomposition and iff algebraic classification from literal primary/divisibility alone; no input basis, decomposition or rank oracle. Scott syntax remains separate.",
+  "source_correspondence": "Genuine primary divisible-group decomposition into the literal Pruefer direct sum with multiplicity equal to actual canonical p-socle dimension, and exact algebraic isomorphism classification by that dimension. No Scott syntax/classification endpoint or rank oracle input. Outside checkpoint24.",
+  "source_commit": "a3055745235d6c266515331851c87373806f9d6c",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks",
+  "frozen_at_utc": "2026-10-31T13:55:42.829362+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/divisible-pruefer-freeze.json",
+  "freeze_sha256": "5dec6fd37376eb855321fe34aea52b45e5f09f797aac6da85c3c98939f281bf5",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferDefinitions.lean",
+      "sha256": "837771aba1224f8055537d8f83ad3c008698c7ff2e5dbfeb92ff49a2c8c3875c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferTargets.lean",
+      "sha256": "048f3d70a599c517a07746f345e489566868712c671e31fa1086cb1ff9d50482"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferStatementChecks.lean",
+      "sha256": "f45dc485344243eaef8f1c7dc7ee289506a61430ee4d3a3567d3d8495c744c44"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferProof.lean",
+      "sha256": "2cd309022f56338805f2af86dcb02116fbe774c483b6af1753a2e92f998d3b3e"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks.actualDecomposition",
+    "LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks.actualClassification"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793454876072814948-17.json",
+      "sha256": "dcc231288147dca954782928a0eb9ddae8f88d7683de737b727e547e675664c0",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793455064054432260-2.json",
+      "sha256": "c99f87f51af512fac7734e2cbbe2fe1af0cbf56ef83d6257dc694eea25bbe357",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793455064054432260-2-LogicLineages-ModelsAlgebra-PGroups-DivisiblePrueferStatementChecks.log",
+  "gate_log_sha256": "b0b2034da20c8c0e9b707bb91c55ff51b48583696a50877ae5fa6392a0747eb6",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks.actualDecomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks.actualClassification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferStatementChecks.lean",
+      "sha256": "f45dc485344243eaef8f1c7dc7ee289506a61430ee4d3a3567d3d8495c744c44"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferProof.lean",
+      "sha256": "2cd309022f56338805f2af86dcb02116fbe774c483b6af1753a2e92f998d3b3e"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferTargets.lean",
+      "sha256": "048f3d70a599c517a07746f345e489566868712c671e31fa1086cb1ff9d50482"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePrueferDefinitions.lean",
+      "sha256": "837771aba1224f8055537d8f83ad3c008698c7ff2e5dbfeb92ff49a2c8c3875c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferDirectSumDefinitions.lean",
+      "sha256": "a4bf4951c7ad3e3ba2d1b9dc6308f9f6ab0088802268d66b2ce0e8dc6b14f8b2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoDefinitions.lean",
+      "sha256": "859939e293718b040c501830337881efa751499cf9460372f893bd4496179311"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferFiniteSocleDefinitions.lean",
+      "sha256": "a34ab62f1a30ae040b457f23581913f9129abd49d5774040fdb978163bb98971"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferModelDefinitions.lean",
+      "sha256": "fa5b407fc3755fca512c2c12e878debf44c9d35bffdf57dce74c34a89381d12d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+      "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionDefinitions.lean",
+      "sha256": "b020dd31feede2459e3b77b6d5228c812499c91d2669612a10122caf6d10daae"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleSplittingDefinitions.lean",
+      "sha256": "daf5e65ee9bbc457308916c0669c03104e970f15950d7e2f72270a690df5905b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePartDefinitions.lean",
+      "sha256": "07b18d41ee72f4b1c0f778e791b99d4d5af92abb7d739b4fdecacf6c82ab3870"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+      "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReducedUlmClassificationDefinitions.lean",
+      "sha256": "2f33496b4b9d80890f44750676b45e79ae0ad630f16a72e4b060984fdd32e799"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableUlmDefinitions.lean",
+      "sha256": "86f2c5ac18f2e460691f43c0ef4509d1e13254f6feec2ba59113cbc64804c758"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroDefinitions.lean",
+      "sha256": "493ec60e7673c879755caaf39753d4a1a3847d858de15553a6f0bccfb50b3581"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferDirectSumProof.lean",
+      "sha256": "7f846cd81ebb28eeee67cd555109885a3fedc0a509e817c0d0a634117a76f715"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferDirectSumTargets.lean",
+      "sha256": "e01050405c639a986698f59f7a40cb30d6f31a67e3947e3791249651c26b159f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferModelProof.lean",
+      "sha256": "2a01c264f94a7402f3058eaedf1785cfcf0b6539a913b1006a1a6e378d189f39"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferModelTargets.lean",
+      "sha256": "de66ab79d180c977a3fd18a2e1bdf85f5f828e77958727f8a40f0213a0a81065"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroProof.lean",
+      "sha256": "576da656e2b66c304f927659746adeef0e8edc4551354b385b850f0ff3205fb4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroTargets.lean",
+      "sha256": "fa3072be1143d235f6f25c17cc9986f8a1468fa5bfa8860d4a47363e28211ac8"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteFiltration.lean",
+      "sha256": "5ef09a1845f1f65be132b0961b4de51f316dcdef7d310ec9e6b632d7e1c2b647"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteFiltration.lean",
+      "sha256": "0d011bfc65ac39420a37c205d6fcf66d79cb0df8b7a17f94685933ceca2c8143"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageIntersections.lean",
+      "sha256": "17b40f639b03ca584bbafed259a8f81ac472754f1b66e3e2d8fc458b6ce92acd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoProof.lean",
+      "sha256": "01e804660904d13d93ab9998194b106caf9526fb86b3115b2763c256d784c3d3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleIsoTargets.lean",
+      "sha256": "d1970b2797dc9021311fcdfa91ddd91bb787365e9c7619f1f9bcfa96d1c38a41"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRoot.lean",
+      "sha256": "d685d3a34920386766af8e2d8e8a111c99b45d99b00f81293ac67b591de9e074"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootTargets.lean",
+      "sha256": "e5504be9c62825b32bb52d44258fda9e905be5d19caefd65b610fe8050ed581d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CyclicRootDefinitions.lean",
+      "sha256": "2baa43f340f66040e8eb3fc6f7407a314a44d5a7fe690d614753289385ad61ac"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimarySocleControlProof.lean",
+      "sha256": "d760c55aa120f1eb3d20402ea98ef3043d6e20ab63d76680428c8dda70bf282c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimarySocleControlTargets.lean",
+      "sha256": "5d8c54681578b8c3161d353cb9349d9a55f4e90138b60d25c186d84dac12f330"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrimarySocleControlDefinitions.lean",
+      "sha256": "66b55b9293be9226ec7977f41ec747f68b48868a79b4eaf14dab9a6d2535275b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionProof.lean",
+      "sha256": "f3ae0394b4df28eac1e024fc2d2e326af3506948712fe3c5d122137ac5e421a1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionTargets.lean",
+      "sha256": "a9a50cb5345cc3cf5bead3cbd85358e6c97cf0ff5d0b19b71474edb7843e78a0"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.EuclideanDomain.Int",
+    "Mathlib.Algebra.Field.Rat",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Group.Subgroup.ZPowers.Basic",
+    "Mathlib.Algebra.Module.Injective",
+    "Mathlib.Algebra.Module.NatInt",
+    "Mathlib.Algebra.Module.ZMod",
+    "Mathlib.Data.Finsupp.Basic",
+    "Mathlib.Data.Nat.Factorization.Induction",
+    "Mathlib.Data.Nat.Prime.Basic",
+    "Mathlib.Data.Nat.Prime.Defs",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.Data.ZMod.QuotientGroup",
+    "Mathlib.GroupTheory.Divisible",
+    "Mathlib.GroupTheory.OrderOfElement",
+    "Mathlib.GroupTheory.QuotientGroup.Defs",
+    "Mathlib.GroupTheory.Torsion",
+    "Mathlib.LinearAlgebra.Basis.Defs",
+    "Mathlib.LinearAlgebra.Basis.VectorSpace",
+    "Mathlib.LinearAlgebra.Dimension.Basic",
+    "Mathlib.LinearAlgebra.Dimension.Free",
+    "Mathlib.Order.Ideal",
+    "Mathlib.RingTheory.PrincipalIdealDomain",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.SetTheory.Cardinal.Ordinal",
+    "Mathlib.SetTheory.Ordinal.Arithmetic",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.NormNum"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

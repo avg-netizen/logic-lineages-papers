@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceFunctionalDetectorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalDetector.StatementChecks
+theorem fullFunctionalDetector : Targets.FullFunctionalDetector := Proof.fullFunctionalDetector
+end LogicLineages.OrdinalComparison.Source.FunctionalDetector.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalDetector

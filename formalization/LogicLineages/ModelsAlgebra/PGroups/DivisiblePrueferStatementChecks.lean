@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks
+theorem actualDecomposition : Targets.divisiblePrueferDecomposition := divisible_pruefer_decomposition
+theorem actualClassification : Targets.divisiblePrimaryClassification := divisible_primary_classification
+end LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks

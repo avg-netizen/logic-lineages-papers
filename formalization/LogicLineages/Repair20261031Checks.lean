@@ -402,6 +402,17 @@ public import LogicLineages.ModelsAlgebra.PGroups.PrimarySocleControlStatementCh
 public import LogicLineages.ModelsAlgebra.PGroups.PrueferDirectSumStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.PrueferSocleIsoStatementChecks
 public import LogicLineages.OrdinalComparison.SourcePerturbedControlStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.PrimaryUlmClassificationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.SocleLowerSyntaxStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.SocleRankSyntaxStatementChecks
+public import LogicLineages.OrdinalComparison.SourceFunctionalDetectorStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.StabilizationSyntaxStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.StableScottStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.StableStageStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.StableTailCategoricityStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.StableTailScottStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4829,6 +4840,86 @@ theorem checked_PrueferSocleIso_actualSocle :
 theorem checked_SourcePerturbedControl_fullPerturbedControl :
     LogicLineages.OrdinalComparison.PerturbedControl.Targets.FullPerturbedControl :=
   LogicLineages.OrdinalComparison.PerturbedControl.StatementChecks.fullPerturbedControl
+
+theorem checked_DivisiblePruefer_actualDecomposition :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisiblePrueferDecomposition :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks.actualDecomposition
+
+theorem checked_DivisiblePruefer_actualClassification :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisiblePrimaryClassification :=
+  LogicLineages.ModelsAlgebra.PGroups.DivisiblePrueferStatementChecks.actualClassification
+
+theorem checked_PrimaryTailCategoricity_actualDivisiblePart :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.divisiblePartInSubgroup :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityStatementChecks.actualDivisiblePart
+
+theorem checked_PrimaryTailCategoricity_actualCategoricity :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.primaryTailCategoricity :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimaryTailCategoricityStatementChecks.actualCategoricity
+
+theorem checked_PrimaryUlmClassification_actualClassification :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countablePrimaryUlmClassification :=
+  LogicLineages.ModelsAlgebra.PGroups.PrimaryUlmClassificationStatementChecks.actualClassification
+
+theorem checked_SocleLowerSyntax_actualMatrix :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.socleLowerMatrixRealization :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleLowerSyntaxStatementChecks.actualMatrix
+
+theorem checked_SocleLowerSyntax_actualRoots :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.socleRootRepresentatives :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleLowerSyntaxStatementChecks.actualRoots
+
+theorem checked_SocleLowerSyntax_actualDimension :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.socleLowerDimension :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleLowerSyntaxStatementChecks.actualDimension
+
+theorem checked_SocleRankSyntax_upper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.socleUpperDimension :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleRankSyntaxStatementChecks.upper
+
+theorem checked_SocleRankSyntax_infinite :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.socleInfiniteDimension :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleRankSyntaxStatementChecks.infinite
+
+theorem checked_SocleRankSyntax_countableBound :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.countableSocleRankBound :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleRankSyntaxStatementChecks.countableBound
+
+theorem checked_SocleRankSyntax_actualEntry :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.socleRankEntryExact :=
+  LogicLineages.ModelsAlgebra.PGroups.SocleRankSyntaxStatementChecks.actualEntry
+
+theorem checked_SourceFunctionalDetector_fullFunctionalDetector :
+    LogicLineages.OrdinalComparison.Source.FunctionalDetector.Targets.FullFunctionalDetector :=
+  LogicLineages.OrdinalComparison.Source.FunctionalDetector.StatementChecks.fullFunctionalDetector
+
+theorem checked_StabilizationSyntax_actualSentence :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.stabilizationSentenceExact :=
+  LogicLineages.ModelsAlgebra.PGroups.StabilizationSyntaxStatementChecks.actualSentence
+
+theorem checked_StableScott_actualTable :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.stableGroupTableExact :=
+  LogicLineages.ModelsAlgebra.PGroups.StableScottStatementChecks.actualTable
+
+theorem checked_StableScott_relative :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.stablePiThreeScott :=
+  LogicLineages.ModelsAlgebra.PGroups.StableScottStatementChecks.relative
+
+theorem checked_StableScott_unrestricted :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.stableRawPiThreeScott :=
+  LogicLineages.ModelsAlgebra.PGroups.StableScottStatementChecks.unrestricted
+
+theorem checked_StableStage_actualStage :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.primaryStableStage :=
+  LogicLineages.ModelsAlgebra.PGroups.StableStageStatementChecks.actualStage
+
+theorem checked_StableTailCategoricity_actualCategoricity :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.stableTailCategoricity :=
+  LogicLineages.ModelsAlgebra.PGroups.StableTailCategoricityStatementChecks.actualCategoricity
+
+theorem checked_StableTailScott_actualUpper :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.stableTailScottUpper :=
+  LogicLineages.ModelsAlgebra.PGroups.StableTailScottStatementChecks.actualUpper
 
 end LogicLineages.Repair20261031Checks
 

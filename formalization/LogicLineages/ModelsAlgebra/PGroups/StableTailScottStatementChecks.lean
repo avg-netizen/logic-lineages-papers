@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.StableTailScottProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.StableTailScottStatementChecks
+theorem actualUpper : Targets.stableTailScottUpper := stable_tail_scott_upper
+end LogicLineages.ModelsAlgebra.PGroups.StableTailScottStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.StableTailScottStatementChecks
