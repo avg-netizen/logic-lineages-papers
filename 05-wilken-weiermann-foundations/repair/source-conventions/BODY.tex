@@ -1,0 +1,408 @@
+% Include-ready proof body. Uses the parent article's theorem environments
+% and bibliography key ww. Every helper macro and internal label is namespaced.
+\begingroup
+\newcommand{\WWscNat}{\mathbb N}
+\newcommand{\WWscLevel}{\operatorname{lv}}
+\newcommand{\WWscNorm}{\operatorname{N}}
+\newcommand{\WWscSize}{\operatorname{s}}
+\newcommand{\WWscAdd}{\operatorname{Add}}
+\newcommand{\WWscExp}{\operatorname{ExpProd}}
+\newcommand{\WWscPsi}{\operatorname{Psi}}
+\newcommand{\WWscRepeat}{\operatorname{Repeat}}
+\newcommand{\WWscOne}{\mathbf1}
+\newcommand{\WWscPartial}{\partial}
+\section{Literal source syntax, policies and norm preservation}\label{app:wwsc}
+
+
+An ordinal expression in \cite[Definition~2.1]{ww} is a literal tree. Its
+three binary constructors, with immediate subterms $f,g$, are
+\[
+ \WWscAdd(f,g),\qquad \WWscExp(f,g),\qquad \WWscPsi(f,g).
+\]
+Their interpretations are $f\oplus g$, $2^f\otimes g$ and
+$\psi(\omega\otimes f\oplus g)$, respectively. Here $\oplus,\otimes$
+are natural sum and product. The last two expressions are primitive
+constructors, rather than arbitrary multiplication trees. In this note,
+ordinary arithmetic on natural-number sizes is distinguished from these
+literal ordinal trees.
+
+For a tracked variable vector $X$, the size $\WWscSize_X(u)$ is one when the
+whole $u$ is $X$-free, or when $u$ is a component of $X$. Otherwise it is
+the sum of the child sizes plus one at Add and Psi, and twice the head
+size plus the tail size plus one at ExpProd. The partial operator also
+uses the whole-free case first. Thus
+\[
+ \WWscSize_X(x_0+(1+1))=3,\qquad
+ \WWscSize_X((x_0+1)+1)=5.
+\]
+The ordinal values of the two sums agree. This small example alone does
+not show that the distinction occurs in a generated source assignment;
+Section~\ref{wwsc:sec:witness} supplies such an assignment.
+
+The source specifies finite sums and natural-number multiples in
+Definitions~2.10 and2.18 without a full binary association convention.
+Its convention for left-associated lambda-term application concerns a
+different grammar. Also, actual graded coordinate trees are zero-free,
+whereas out-of-range vector components are written as zero. Footnote5
+to Definition~2.10 expressly explains that the box definition is designed
+to avoid zero occurrences in coordinate parse trees. A literal
+implementation must respect both facts.
+
+\section{Explicit finite parsing policies}
+
+\begin{definition}
+An admissible policy $\rho$ is a computable rule choosing an ordered full
+binary addition tree for each nonempty finite-sum macro site and its
+arity. Each operand is used once as an unchanged subtree. The choice is
+independent of operand names, values, internal syntax and free-variable
+status. A $k$-fold repeat, $k>0$, has exactly $k$ unchanged copies of
+its operand. Existing subtrees are never flattened, normalized or
+reassociated.
+\end{definition}
+
+The macro sites are finite numerals; positive-integer repeats; the
+three-operand active-sum partial; the three operands
+$\WWscRepeat_2(\WWscPartial_{i+1}f),\WWscPartial_i g,\WWscOne$ in an active exponential partial;
+the positive-coordinate abstraction sums; its scalar repeat; and the
+optional three-operand box tail. Repeat2 remains a single nested
+operand in the exponential clause. Binary clauses stay binary. The
+integer
+\[
+ S_X(h)=2^n\sum_{i=0}^m\WWscSize_X(h_i),
+ \qquad n=\WWscLevel(X)+1,
+\]
+is computed in natural-number arithmetic from the already fixed input
+trees, then used as a repeat count.
+
+Each vector records its actual level. An out-of-range lookup has an
+\emph{absent} role, interpreted as zero for comparison. A vector sum
+omits absent operands but retains every actual operand unchanged. The
+box's optional finite-level contribution is absent when its argument
+level is zero; it is a positive numeral otherwise. This is not a rule
+that simplifies actual Zero nodes or tests whether an expression has
+value zero. Every actual source coordinate remains zero-free. In
+particular the source program $0$ is assigned One.
+
+A useful default takes left combs for sum, repeat, numeral and positive
+aggregation macros, including the active-sum partial, while retaining
+the already explicit box tail $f_0+(g_0+n)$ for $n>0$ and $f_0+g_0$
+for $n=0$. This is a declared convention, not a claim that the source
+uniquely selected it.
+
+\begin{proposition}\label{wwsc:prop:finite}
+For a fixed policy, all literal partials and zero-history assignments
+are uniquely determined finite trees. Their expansions have computable
+bounds in the input trees and type levels. For a fixed input tree,
+changing only the output associations of a partial does not change
+its ordinal value.
+\end{proposition}
+\begin{proof}
+Structural recursion determines a partial. Each zero-history lambda
+then uses its body's fixed tree, its fixed sizes, and the finite
+repeats specified by the policy. Erasing only the newly supplied
+parentheses recovers the printed formulas exactly.
+
+For an explicit bound, let $|u|$ count tree nodes. Give a leaf weight
+one, Add/Psi weight $w(f)+w(g)+1$, and ExpProd weight
+$2w(f)+w(g)+1$. Induction gives
+\[
+ \WWscSize_X(u)\le w(u)\le2^{|u|}-1.
+\]
+Every coordinate of a partial has at most $E(|u|)=6\cdot3^{|u|}$ nodes.
+At a whole-free diagonal it has $|u|+2$ nodes. At active Add, ExpProd,
+scalar Psi and positive Psi outputs the respective bounds are
+\[
+ E(f)+E(g)+3,\quad 2E(f)+E(g)+4,\quad
+ |f|+E(g)+1,\quad E(f)+E(g)+1,
+\]
+where $E(f)$ abbreviates $E(|f|)$. These fit $E(1+|f|+|g|)$.
+Thus $S_X(h)\le2^n\sum_i(2^{|h_i|}-1)$. The scalar repeat has
+$S_X(h)(|(\WWscPartial_0h_0)_0|+1)-1$ nodes; a positive abstraction sum has
+at most $\sum_i E(|h_i|)+m$ nodes. The box is a finite downward
+recursion, with $|b_i|=|b_{i+1}|+|f_i|+|g_i|+2$ at $1\le i\le n$.
+These bounds do not evaluate $\psi$.
+
+For fixed input trees, structural induction on the partial clauses
+uses associativity of natural sum and the same finite multiplicities
+to prove output-value independence. An enclosing partial need not see
+identical input trees, so this does not prove source-policy independence.
+\end{proof}
+
+\section{The weak scalar lemma and the graded domain}
+
+The domain $C_i^X$ is as in \cite[Definition~2.9]{ww}. Actual coordinate
+trees are positive. Its scalar class has finite values; the natural norm
+of a finite value is that value. Write $P_i=\WWscPartial_i^X$ and $n=\WWscLevel(X)+1$.
+All expression inequalities below hold under every admissible substitution.
+
+\begin{remark}\label{wwsc:rem:error}
+Printed Lemma~2.19, page~22 of \cite{ww}, asserts
+$h\{X:=\WWscOne\}<(P_0h)_0$ for all $h\in C_0^X$.
+At $h=x_0$ both sides equal one. This is a false strict assertion in
+the actual PDF, not an extraction artifact. The appendix's strict
+estimate (A.5) also fails: for $\WWscLevel(X)=0$, $h=(x_0,1)$, $i=1$ and
+the free subterm $t=1$, it asserts $1<1$.
+\end{remark}
+
+\begin{theorem}[Weak scalar replacement]\label{wwsc:thm:weak}
+For $h\in C_0^X$,
+\[
+ h\{X:=\WWscOne\}\le(P_0h)_0.
+\]
+Every partial $P_i h$, $h\in C_i^X$, is a valid $X$-free $C$-vector
+of level $n$. For a vector $h\in C^X$, the assembled $\delta^X h$ is likewise valid and $X$-free.
+These assertions hold for every admissible policy.
+\end{theorem}
+\begin{proof}
+Induct simultaneously on the grammar and the partial recursion. A
+whole-free scalar has partial $h+1$, a tracked scalar variable has
+partial one, and an active sum has scalar partial $P(f)+P(g)+1$.
+At an active collapse the two heads after $X:=\WWscOne$ are identical,
+and the induction hypothesis compares the finite tails. For a fixed
+ordinal $a$ and finite $r$, the published inequality
+$\psi(a)+r\le\psi(a+r)$, Proposition~2.3(1), gives the needed weak
+finite-tail monotonicity. No global monotonicity of $\psi$ is used.
+
+For the new collapse's domain premise, the original premise and the
+weak induction hypothesis give
+\[
+ \WWscNorm(f\{X:=\WWscOne\})
+ \le F_2(g\{X:=\WWscOne\})\le F_2((P_0g)_0).
+\]
+Its head has the correct positive grade. Whole-free diagonal outputs
+are $h+1$, off-diagonal outputs and tracked-variable outputs are One.
+The other cases only sum correctly graded partial outputs, with the
+stated finite multiplicities. Positive collapse outputs add the head
+partial and the positive tail partial. Each output is $X$-free.
+Assembling the finite sums and the positive scalar repeat preserves
+the domain. A coordinate above $n$ is already $X$-free: there is no
+tracked component at its grade, and positive promotion of a scalar
+requires whole-$X$-freeness. It may be retained unchanged.
+\end{proof}
+
+\section{Bounded norm with the original multiplier}
+
+The additive norm satisfies the published inequalities
+\[
+ \WWscNorm(a\oplus b)=\WWscNorm(a)+\WWscNorm(b),\quad
+ \WWscNorm(a)+\WWscNorm(b)-1\le\WWscNorm(a\otimes b)\quad(a,b>0),
+ \qquad \WWscNorm(a)\le2\WWscNorm(2^a).
+\]
+Also $\WWscNorm(a)\le\psi(a)$ and $r\le\psi(a+r)$ for finite $r$.
+These are Propositions~2.2 and2.3 of \cite{ww}.
+
+\begin{lemma}\label{wwsc:lem:free}
+Let $h\in C^X$ be bounded in norm. Fix an admissible substitution for its other
+names and put $B=h_0\{X:=\WWscOne\}$. Every first wholly $X$-free
+subtree encountered at a positive grade in a partial recursion starting
+at any actual coordinate of $h$ satisfies
+\[
+ \WWscNorm(t)\le2^{n-1}B.
+\]
+\end{lemma}
+\begin{proof}
+Compute norms after $X:=\WWscOne$; the free $t$ is unchanged and every
+input coordinate then has norm at most $B$. Descending through an Add
+or an exponential tail does not increase norm. An exponential-head
+step costs at most two, since
+\[
+ \WWscNorm(f)\le2\WWscNorm(2^f)\le2\WWscNorm(2^f\otimes g),
+\]
+and increases grade by one. At grade $n$ a subtree is already wholly
+$X$-free and recursion stops. From a positive root there are at most
+$n-1$ such steps.
+
+A scalar path can enter a positive grade only through a collapse head.
+This costs no factor two: positivity and the cited bounds give
+\[
+ \WWscNorm(f)\le\WWscNorm(\omega\otimes f\oplus g)
+                  \le\psi(\omega\otimes f\oplus g),\qquad
+ g\le\psi(\omega\otimes f\oplus g).
+\]
+The head enters grade one, leaving at most $n-1$ active
+exponential-head steps. Scalar tails stay at grade zero. A promoted
+scalar at a positive grade is already whole-free, so cannot cause an
+additional active descent. This proves the bound.
+\end{proof}
+
+\begin{theorem}\label{wwsc:thm:norm}
+For $h\in C^X$ of bounded norm, $\delta^X h$ has bounded norm with the original
+multiplier $S_X(h)=2^n\sum_i\WWscSize_X(h_i)$, for every admissible policy.
+\end{theorem}
+\begin{proof}
+Continue at an arbitrary fixed substitution for the other names. Set
+$H=(P_0h_0)_0$, so $1\le B\le H$ by Theorem~\ref{wwsc:thm:weak}, and
+put $\nu=2^nH$. A free positive-grade subtree which can be copied into
+a positive diagonal output satisfies
+\[
+ \WWscNorm(t)+1\le2^{n-1}B+1\le2^nH=\nu.
+\]
+A free scalar subtree is not copied into a positive output; those
+outputs are One. This distinction pays the extra diagonal unit without
+the source's false strict estimate (A.5).
+
+Induct inside each partial to obtain, for $0<j\le n$,
+\[
+ \WWscNorm((P_i h_i)_j)\le\WWscSize_X(h_i)\nu.
+\]
+The whole-free and tracked-variable cases follow from the preceding
+paragraph. For Add the sum of the two bounds plus one is at most
+$(\WWscSize_X(f)+\WWscSize_X(g)+1)\nu$. For ExpProd there are two copies of the
+head bound, one tail bound and One, giving
+$(2\WWscSize_X(f)+\WWscSize_X(g)+1)\nu$. A positive collapse output only adds
+the head and tail bounds. Norm additivity makes all associations valid.
+Summing over $i$ gives
+\[
+ \WWscNorm((\delta^Xh)_j)\le\Bigl(\sum_i\WWscSize_X(h_i)\Bigr)2^nH
+                      =(\delta^Xh)_0.
+\]
+For $j>n$ the unchanged $h_j$ is $X$-free, so its norm is at most
+$B\le H\le(\delta^Xh)_0$. This holds at every substitution.
+\end{proof}
+
+\section{An actual closed source separates the policies}\label{wwsc:sec:witness}
+
+Let L and R agree at every macro except the active-sum partial, where
+they choose respectively $(a+b)+1$ and $a+(b+1)$. Repeats in both
+are left combs. Consider the literal source
+\[
+ A=\lambda z:o.\lambda x:o.((\lambda w:o.z)\,x)
+                  :o\to o\to o.
+\]
+It is closed and recursor-free; every internal type has level at most
+one. There is no beta normalization before assignment.
+
+The assignment of $\lambda w.z$ is $(f(z),1)$, with the literal tree
+\[
+ f(z)=((z+1)+(z+1))+z,\qquad\WWscSize_z(f)=9.
+\]
+The x-body scalar is $g=\WWscPsi(1,f(z)+x)$, whose x-size is five and
+whose abstraction multiplier is ten. Put
+\[
+ u=f+1,\quad T_L=(u+1)+1,\quad T_R=u+(1+1),\quad
+ K_\rho=\WWscPsi(1,T_\rho),\quad B_*=\WWscPsi(1,u).
+\]
+The x-abstraction has
+\[
+ h_0=\WWscRepeat_{10}(K_\rho)+B_*,\qquad
+ h_1=(1+1)+\operatorname{Sum3}_\rho(1,1,1).
+\]
+The latter is wholly z-free and has value five. Literal sizes and
+positive partial values are as follows:
+\[
+\begin{array}{c|rrrrrrr}
+ &f&u&T_\rho&K_\rho&\WWscRepeat_{10}(K_\rho)&B_*&h_0\\\hline
+ \WWscSize_z\text{ under L}&9&11&15&17&179&13&193\\
+ \WWscSize_z\text{ under R}&9&11&13&15&159&13&173
+\end{array}
+\]
+At every scalar expression in this table, output one of its z-partial
+has the corresponding size as its finite value. Whole-free scalar
+inputs give one, a tracked variable gives one, active sums add the
+two values and one, and each collapse adds the head partial's value
+two to its tail's value. Thus the positive output of $P_0h_0$ is
+193 or 173. Since $(P_1h_1)_1$ has value six, the outer abstraction gives
+\[
+ \boxed{\ [\![A]\!]_{1,L}=193+6+5=204,
+ \qquad [\![A]\!]_{1,R}=173+6+5=184.\ }
+\]
+These are distinct assigned ordinal values, not merely distinct trees.
+
+The scalar values also separate. Write $H(t)=\psi(\omega+t)$. Direct
+scalar partial calculation gives $P_0f=11$, $P_0u=14$, and
+$P_0T_L=20$, $P_0T_R=18$. The outer size multipliers are 388 and 348;
+the common retained value is $10H(8)+H(6)$. Consequently
+\begin{align*}
+ [\![A]\!]_{0,L}&=388(10H(20)+H(14)+10)+10H(8)+H(6),\\
+ [\![A]\!]_{0,R}&=348(10H(18)+H(14)+10)+10H(8)+H(6).
+\end{align*}
+The source's finite-tail inequality gives $H(20)>H(18)$, so the L
+scalar is strictly larger too. No numerical evaluation of the control
+or collapse is needed. The accompanying bounded AST control reconstructs
+the typed source and confirms the finite 204/184 coordinates exactly.
+
+\section{What the forward translation preserves}
+
+\begin{theorem}\label{wwsc:thm:translation}
+Fix an admissible policy. For a literal original source all of whose free
+term names are ground, every positive final coordinate is closed and
+effectively evaluable. Its scalar coordinate translates effectively,
+preserving every shared valuation, to an expression in positive-natural
+inputs, positive constants, addition, and fixed functions
+\[
+ h_\lambda(t)=\psi(\lambda+t),\qquad
+ \lambda=\omega\otimes c>0\quad(c\text{ closed}).
+\]
+Arbitrary internal binders, types and recursors are allowed.
+\end{theorem}
+\begin{proof}
+Induct simultaneously on source assignments and partial recursions.
+A generated positive field contains only positive-index components of
+variables, positive constants, Add and the graded ExpProd constructor.
+In particular it contains no component of index zero of any name.
+Primes and positive box fields preserve this stronger invariant.
+A positive whole-free partial copies only its positive input at the
+diagonal and returns constants elsewhere. Active-variable outputs are
+constant; Add and ExpProd partials preserve the invariant. A scalar
+partial's positive outputs are constants in the whole-free and variable
+cases, recurse at sums, and at a collapse add a positive-head partial
+and a positive output of its scalar-tail partial. These are exactly the
+simultaneous induction hypotheses. Abstraction sums these outputs and
+removes all components of its bound name, including in its retained part.
+
+The only positive-index variables that could remain are positive
+components of free source names. There are none when those names are
+ground. All final positive fields, including scalar-collapse heads,
+are therefore closed. Their positivity follows from the graded domain
+proved above. Scalar generated fields contain only ground components,
+constants, Add and Psi. Replace each closed-head Psi by the displayed
+$h_\lambda$ applied to its recursively translated tail. The syntactic
+size multipliers are fixed integers, expanded as finite additions; they
+do not introduce fresh independent inputs. This proves the exact
+shared-valuation statement.
+\end{proof}
+
+Only the recursor prime introduces $\omega$ into generated positive
+fields. Thus in a recursor-free source the final positive fields are
+finite. If all internal types and subtypes have level at most two,
+coordinate two is built by sums from $\omega$ and finite constants,
+so is $a\omega+b$. Coordinate one then lies in $\WWscNat[\omega]$, since
+$2^{a\omega+b}=\omega^a2^b$. Every direct scalar index is consequently
+below $\omega^\omega$. These assertions hold for each policy; the
+example above shows that they do not imply policy independence.
+
+\section{Limits of the repair and later uses of strictness}
+
+Theorem~\ref{wwsc:thm:weak} pays the domain use immediately following printed
+Lemma~2.19. Theorem~\ref{wwsc:thm:norm} replaces the false strict (A.5) in
+Appendix~A.2 and proves its required (A.6) and bounded-norm conclusion
+with the same constant. Its higher-coordinate use needs only
+$\WWscNorm(h_j)\le B\le H\le(\delta h)_0$.
+
+Appendix~A.7(2) also invokes the false strict link
+$F_2(\bar g)<F_2((P_0g)_0)$. In its active-collapse induction, let
+$Q=\psi(\omega\WWscSize_X(g)\alpha+\WWscSize_X(g)m)$ be the strict upper bound
+on $(P_0g)_0$ from the induction hypothesis. The repaired chain is
+\[
+ \WWscNorm(\bar f)\le F_2(\bar g)
+       \le F_2((P_0g)_0)<F_2(Q).
+\]
+The needed strict slack is supplied by that upper-bound induction
+hypothesis, not by the false lemma. This describes that local repair;
+it is not a fresh audit of every quantitative appendix estimate.
+
+The distinct beta supplier, Lemma~2.22, compares
+$h<(P_i h\square X)_i$. Its variable case is strict because of the
+box and the extra input. It does not assert the false strict scalar
+lemma without the box. The original termination proof uses
+history-dependent assignment derivations. It does not assert that
+fixed zero-history values decrease under all reductions.
+
+The results here establish exact, policy-relative domains, norms and
+the forward translation. They do not supply a full comparison decision
+procedure, reconstruct a unique historical policy, or assert that all
+extended annotated-recursion histories have the stronger generated
+invariant of Theorem~\ref{wwsc:thm:translation}.
+
+
+\endgroup

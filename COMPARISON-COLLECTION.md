@@ -38,6 +38,10 @@ finite algorithm proved in its own paper.
 - A stable syntactic termination ordering is different from comparing the
   particular canonical numerical assignment. A ranked ground node is different
   from a curried native case functional.
+- Exact source comparison uses the explicit binary expansion and padding
+  convention in the foundations. Its Appendix A proves domain and norm
+  preservation for every fixed admissible policy; values of whole source
+  assignments can differ between policies.
 - Universal identity is decided in several variables. Existential solution
   of simultaneous nonidentity equations is a different question.
 - One shared ground input is decided, even at arbitrary internal types.
@@ -67,4 +71,6 @@ isolated builds, references, links, embedded fonts and source hashes. Those
 checks concern reproducibility and document consistency. They are not a
 formal mathematical verification. The proofs received collaborative AI review;
 no independent human audit, established novelty or journal acceptance is
-claimed. No Lean formalization of these six manuscripts is supplied.
+claimed. The separate formalization register records checked components;
+these six complete manuscripts and the source repair are not claimed to be
+fully Lean verified.

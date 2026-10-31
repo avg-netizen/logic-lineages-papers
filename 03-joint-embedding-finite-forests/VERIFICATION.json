@@ -1,15 +1,16 @@
 {
-  "checked_utc": "2026-10-21",
-  "pages": 5,
-  "pdf_bytes": 57089,
+  "checked_utc": "2026-10-30T22:20:57.045458+00:00",
+  "pages": 9,
+  "pdf_bytes": 86605,
   "sha256": {
-    "paper.tex": "cf4d47f987298f571526a14eba30d470f530ed997e7297db5c191794f9f566ef",
+    "paper.tex": "ba03b3acbe890c55d7ddef1d6b208c77b1c5073033cc1ec8506914447773a311",
     "preamble.tex": "b007e0cf6387683754886b17c73be7e14233e5e8b47b2453f7eaabc325f1cbfe",
+    "decision.tex": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5",
     "build_pdf.py": "886d01f287064813f18eec11bd1055fce1dd176933bb85295d691156ea54fee2",
-    "paper.pdf": "3e66716238d79fbd1c10da865f858c3fb85ef5515ad23fc1b298d3f199aaad0f"
+    "paper.pdf": "153b2fed738c8af430789c4bdcfe164c20f81c96c3689c31a5edec710e1be08f"
   },
-  "build": "Tectonic 0.17.0, cached resources, untrusted mode",
-  "isolated_build": "PASS: only paper.tex, preamble.tex, build_pdf.py copied to a temporary directory outside the vault",
+  "build": "Tectonic, cached resources, untrusted mode",
+  "isolated_build": "PASS: only paper.tex, preamble.tex, decision.tex and build_pdf.py copied outside the vault",
   "embedded_fonts": [
     "CMR17",
     "CMR12",
@@ -20,15 +21,25 @@
     "CMBX12",
     "CMTI10",
     "CMR8",
+    "CMSS10",
+    "MSBM10",
     "CMMI8",
+    "CMEX10",
+    "CMSY8",
+    "CMMI6",
     "CMTT10"
   ],
   "all_fonts_embedded": "PASS",
-  "font_families": "Computer Modern; AMS symbols where used",
+  "font_families": "Computer Modern and AMS",
   "final_log_warnings": [],
-  "cross_references": "PASS: no missing or duplicate local labels; final build resolves citations",
-  "proof_environment_count": 5,
-  "proof_endings": "balanced native amsthm proof environments",
-  "visual_inspection": "Representative pages reviewed, including mathematical displays and proof text",
-  "scope": "Document/build checks only; no independent mathematical audit or formal verification"
+  "cross_references": "PASS: unique labels and resolved references/citations",
+  "proof_environment_count": 11,
+  "mathematical_review": "Complete Codex author/root review and separate integration check; same model, no independent human review",
+  "full_decision_algorithm": "Hand proof using cited effective standard inputs; not implemented or Lean verified",
+  "bounded_controls": [
+    "repair/cotree/RESTRICTION-CONTROLS.json",
+    "repair/cotree/AC-STATE-CONTROLS.json"
+  ],
+  "visual_inspection": "Rendered and visually inspected canonical PDF page5: cotree state semantics, CFG/Parikh correspondence, formulas and proof endings",
+  "scope": "Document checks plus explicitly scoped hand-review and bounded-control records; no new kernel claim"
 }

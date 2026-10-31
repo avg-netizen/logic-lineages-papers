@@ -1,0 +1,281 @@
+\section{Deciding the forbidden-family question}
+
+The comparability-graph correspondence reduces the question to a hereditary
+class of graphs. A graph can have many binary union/join representations,
+and those representations need not embed into a common tree even when their
+graphs have a common host. We therefore decompose a language of representations
+into directed pieces and compare their \emph{graph images}. This section
+gives the effective steps, including the passage between different binary
+representations of the same graph.
+
+We use two standard effective results. First, for a regular language of
+ranked trees, one can compute its homeomorphic downward closure as a finite
+union of regular ideals. The precise input is the construction of
+Goubault-Larrecq and Schmitz~\cite{GLS}, Section~5: Proposition~18 constructs
+simple tree regular expressions; Fact~19 and Lemma~20 give a terminating
+normalization; Theorem~23 identifies the resulting tree products as ideals.
+Second, the Parikh image of a context-free language has an effective
+Presburger description. One explicit construction is given by Esparza,
+Ganty, Kiefer and Luttenberger~\cite{Parikh}, Theorem~1.1 and Section~3.
+Presburger arithmetic is first-order arithmetic with addition and order on
+the natural numbers; its sentences are decidable. These inputs concern tree
+languages and finite grammars. The graph-containment and JEP transfers below
+are proved here.
+
+\subsection{Binary representations and ideals}
+Use the ranked alphabet $\{a:0,U:2,J:2\}$. Each occurrence of $a$ represents
+one vertex. The operations $U$ and $J$ represent disjoint union and join,
+respectively. Write $\E(t)$ for the graph represented by a term $t$.
+Children are ordered in a term, although graph evaluation forgets their
+order. The empty graph is treated separately.
+
+The ordered homeomorphic relation $\preceq$ on these terms has the following
+recursive definition. A source can embed into either child of a target;
+alternatively, equal root symbols can be coupled with childwise embeddings.
+Thus $a\preceq a$, and for $o\in\{U,J\}$ the coupling clause is
+\[
+ o(s_1,s_2)\preceq o(t_1,t_2)
+ \quad\hbox{if }s_1\preceq t_1\hbox{ and }s_2\preceq t_2.
+\]
+This is exactly the ranked relation in Example~7 of~\cite{GLS}.
+It preserves the root operation at each coupled node. An \emph{ideal}
+is a nonempty downward-closed directed set under the specified relation.
+
+\begin{lemma}\label{lem:parse-pruning}
+If $s\preceq t$, then $\E(s)$ embeds as an induced subgraph of $\E(t)$.
+For every nonempty subset $B$ of the leaves of $t$, there is a term
+$t|B\preceq t$ representing exactly $\E(t)[B]$.
+\end{lemma}
+\begin{proof}
+For the first assertion, diving includes a child graph as an induced
+subgraph of its parent. Coupling combines two child embeddings on disjoint
+vertex sets: the common operation puts no edges, or all edges, between
+those sets on both sides. Induction proves the assertion.
+
+For the second, delete leaves outside $B$ recursively. At a node discard
+empty child results; return the surviving child if there is only one,
+and retain the original binary operation if both survive. Suppressing a
+unary node keeps the surviving child's own operation. Restriction commutes
+with both graph operations, which proves the graph identity. The dive and
+coupling clauses prove $t|B\preceq t$ by induction. Adjacent equal
+operations need not be flattened: the result is a binary representation.
+\end{proof}
+
+Let $\mathcal F$ be a finite forbidden graph family containing $P_4,C_4$,
+and put $\mathcal K=\Forb(\mathcal F)$. Every nonempty member of
+$\mathcal K$ has a binary representation: the construction in
+Lemma~\ref{lem:bridge} recursively takes disjoint unions and adds a
+universal vertex by joining with $a$.
+
+\begin{lemma}\label{lem:parse-regular}
+The language $L=\{t:\E(t)\in\mathcal K\}$ is effectively regular and
+downward closed under $\preceq$.
+\end{lemma}
+\begin{proof}
+Choose $n\geq1$ at least as large as every forbidden graph. A state records
+the set of induced graph isomorphism types with at most $n$ vertices present
+in the represented graph, including the empty type. There are finitely many
+such types, and canonical representatives and isomorphism tests are finite
+computations. The leaf state is $\{\varnothing,K_1\}$. For either operation
+$o$, the transition on states $S,T$ is
+\[
+ \{o(G,H):G\in S,\ H\in T,\ |G|+|H|\leq n\},
+\]
+with graph types identified up to isomorphism. The empty graph is an
+identity for both operations. Every induced restriction of an operation
+splits into restrictions of its two arguments, so these transitions compute
+the stated profile exactly. Accept states containing no member of
+$\mathcal F$. This constructs the required finite automaton. Heredity
+and Lemma~\ref{lem:parse-pruning} give downward closure.
+\end{proof}
+
+Apply the effective ideal-decomposition theorem to obtain
+\[
+                     L=I_1\cup\cdots\cup I_r,                 \tag{1}
+\]
+where the $I_i$ are regular term ideals with effectively available automata.
+If a forbidden graph is empty, $\mathcal K$ is empty and has vacuous JEP.
+Otherwise it contains the empty graph. If $L$ is empty, $\mathcal K$
+contains only that graph and has JEP too. These cases are decidable;
+henceforth $r\geq1$.
+
+\begin{lemma}\label{lem:image-cover}
+Put $D_i=\{\varnothing\}\cup\{\E(t):t\in I_i\}$, on isomorphism types.
+Each $D_i$ is a hereditary graph class with JEP, their union is
+$\mathcal K$, and
+\[
+ \mathcal K\text{ has JEP}\quad\Longleftrightarrow\quad
+                     \mathcal K=D_i\text{ for some }i.        \tag{2}
+\]
+\end{lemma}
+\begin{proof}
+Containment and covering follow from (1) and the representation of every
+nonempty graph in $\mathcal K$. For heredity take a representation in
+$I_i$ and apply the pruning part of Lemma~\ref{lem:parse-pruning}; the
+result stays in $I_i$. For JEP take two representing terms in $I_i$,
+use its directedness, and evaluate a common term host. Empty graphs cause
+no difficulty.
+
+Equality with one $D_i$ implies JEP. Conversely, suppose $\mathcal K$
+has JEP but each $D_i$ is proper. Choose $G_i\in\mathcal K\setminus D_i$.
+Iterating JEP supplies one $H\in\mathcal K$ containing all the finitely
+many $G_i$. The cover puts $H$ in some $D_j$; heredity then puts $G_j$
+there, a contradiction.
+\end{proof}
+
+The remaining task is to decide the finitely many inclusions
+$\mathcal K\subseteq D_i$. Individual binary representations cannot be
+used for this test, since a graph may have another representation accepted
+by $I_i$. We now give the required exact test.
+
+\subsection{Recognizing graph images of regular term languages}
+A \emph{reduced cotree} has leaves $a$ and unordered internal nodes
+$U,J$ of arity at least two, with adjacent internal operations unequal.
+Flattening adjacent equal operations turns a binary representation into
+such a cotree without changing its graph.
+
+\begin{lemma}\label{lem:canonical-cotree}
+Every graph with a union/join representation has a unique reduced cotree
+up to isomorphism. All its binary representations are obtained by
+independently representing each cotree child, then choosing a binary
+association and a permutation of the children at each operation node.
+\end{lemma}
+\begin{proof}
+At a reduced $U$ root each child graph is connected: a child is a leaf or
+has a join root. Its children are therefore precisely the graph's connected
+components. At a $J$ root the graph is connected and its children are
+precisely the connected components of the complement. These decompositions
+recover the root operation and its child vertex sets from the graph.
+Induction recovers every child cotree; zero and one vertices are immediate.
+This proves uniqueness. Flattening any binary representation yields this
+cotree, and reversing each flattening uses precisely binary association
+and permutation within a single operation. This proves the last assertion.
+\end{proof}
+
+Let $M$ be a deterministic complete binary tree automaton with finite
+state set $Q$, leaf state $q_a$, transitions $\delta_U,\delta_J$, and
+accepting set $A_M$. For a reduced cotree $T$ define
+\[
+ S_M(T)=\{q\in Q:\text{some binary representation of }T
+                         \text{ has state }q\}.              \tag{3}
+\]
+Storing the full subset accounts for all possible representations.
+
+\begin{lemma}\label{lem:parikh-transition}
+For each $o\in\{U,J\}$ and $q\in Q$ one can compute a Presburger
+predicate $P_{o,q}$ on the counts of child state subsets such that, if
+an $o$ node has children $T_1,\ldots,T_k$, then
+\[
+ q\in S_M(T)\quad\Longleftrightarrow\quad
+ P_{o,q}\bigl((c_B)_{B\subseteq Q}\bigr),\qquad
+ c_B=|\{j:S_M(T_j)=B\}|.                                   \tag{4}
+\]
+Equal child occurrences are counted with their full multiplicity.
+\end{lemma}
+\begin{proof}
+Use nonterminals $N_q$ for $q\in Q$ and one terminal $b_B$ for every
+subset $B\subseteq Q$. For the operation $o$ form the finite grammar
+\[
+ N_{\delta_o(r,s)}\longrightarrow N_rN_s\quad(r,s\in Q),
+ \qquad N_q\longrightarrow b_B\quad(q\in B).
+\]
+Compute the Parikh predicate for start nonterminal $N_q$. A binary
+representation of the node consists of a binary $o$ skeleton, with each
+child represented at a chosen state belonging to its subset. Reading
+that skeleton gives a derivation with the stated terminal counts.
+
+Conversely a derivation with those counts supplies an $o$ skeleton and
+one selected state for each terminal occurrence. Match occurrences to
+the actual children of the same subset type. For each occurrence choose
+a child representation attaining its selected state, and assemble the
+representations in the skeleton's order. This is a representation of
+$T$ with root state $q$. Lemma~\ref{lem:canonical-cotree} ensures that
+these are exactly the allowed representations. The effective Parikh
+theorem therefore proves both the correspondence and effectivity.
+\end{proof}
+
+The resulting deterministic cotree automaton has states $(\ell,S)$,
+where $\ell\in\{a,U,J\}$ records the root kind and $S\subseteq Q$.
+Its leaf state is $(a,\{q_a\})$. At an $o$ node, transition to a
+specified subset $S$ is expressed by
+\[
+ \bigwedge_{q\in S}P_{o,q}(c)\ \land\
+ \bigwedge_{q\notin S}\neg P_{o,q}(c).                        \tag{5}
+\]
+Require at least two children and exclude children with operation $o$.
+The counts $c_B$ are sums of the counts for the permitted child root
+kinds with subset $B$. These are linear expressions, so the horizontal
+transitions remain Presburger formulas. Accept when $S\cap A_M$ is
+nonempty. Induction using (4) shows that this automaton accepts exactly
+the graphs represented by terms accepted by $M$, in their canonical
+cotree form.
+
+\begin{lemma}\label{lem:presburger-inclusion}
+Inclusion of languages recognized by these deterministic cotree
+automata is decidable.
+\end{lemma}
+\begin{proof}
+Work throughout on the domain of reduced cotrees. Complement changes
+the accepting set. For an intersection, use pairs of states; replace
+each component child-state count by the sum of pair-state counts
+projecting to it, and conjoin the transition formulas. Root kinds,
+arity and alternation agree in the product. These are finite
+Presburger constructions.
+
+For emptiness, start with the actual leaf states and compute a least
+fixed point of productive states. Given the current finite set $R$,
+add an internal state if its transition formula has a nonnegative
+count vector of total at least two, with count zero on every child
+type outside $R$. Presburger decision settles each such question.
+There are finitely many states, so the process terminates.
+
+Each newly added state has a finite cotree representative: take the
+required number of copies of representatives for its already productive
+child states. Conversely induction on cotree height puts every state
+of an actual finite cotree into the fixed point. Thus a language is
+nonempty exactly when an accepting state is productive. Apply this to
+the first language intersected with the complement of the second.
+\end{proof}
+
+\subsection{The resulting algorithm}
+For the automata of $L$ and each $I_i$, construct the cotree automata
+(3)--(5). They recognize $\mathcal K$ and $D_i$, respectively, with
+the common empty graph omitted. Lemma~\ref{lem:presburger-inclusion}
+decides $\mathcal K\subseteq D_i$. Since $D_i\subseteq\mathcal K$
+already, this tests equality. By (2), return yes if some equality
+holds and no otherwise. Every stage terminates, by the cited effective
+theorems or the explicit finite-state procedure just proved.
+
+For example, the independent graphs with at most four vertices have
+JEP. Their binary representations include a four-leaf balanced tree and
+a four-leaf comb, which cannot have a common binary host with at most
+four leaves under $\preceq$. Our algorithm decomposes the representation
+language instead of testing its JEP. In this finite example the maximal
+binary representations generate principal term ideals. Each such ideal
+has graph image exactly the independent graphs of sizes one through
+four, by pruning and leaf counts. Their graph images therefore give
+the correct affirmative verdict.
+
+\begin{theorem}\label{thm:decision}
+There is an algorithm which, given any finite family $\mathcal U$ of
+finite order forests, decides whether $\mathcal C(\mathcal U)$ has JEP.
+More precisely, set
+\[
+ \mathcal F=\{P_4,C_4\}\cup\{\Comp(U):U\in\mathcal U\}.
+\]
+Then $\mathcal C(\mathcal U)$ has JEP if and only if $\Forb(\mathcal F)$
+has JEP.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:bridge} gives an effective correspondence on isomorphism
+types between finite forests and $\Forb(P_4,C_4)$, preserving and
+reflecting existence of embeddings. Thus avoiding $\mathcal U$
+corresponds exactly to avoiding the displayed graph family, and common
+hosts correspond in both directions. Compute this finite graph list
+and run the terminating graph procedure established above.
+\end{proof}
+
+An input family need not be an antichain: remove redundant forbidden
+members by finite embedding tests. The algorithm supplies an effective
+criterion, with no claim that its large intermediate automata are
+practical or that the decision procedure has been implemented.

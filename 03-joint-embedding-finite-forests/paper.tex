@@ -2,22 +2,23 @@
 \input{preamble}
 \title{Joint embedding for finite order forests:\\a decision theorem and a width classification}
 \author{}
-\date{21 October 2026\\Working manuscript}
+\date{30 October 2026\\Working manuscript}
 \begin{document}
 \maketitle
 \begin{abstract}
 Given finitely many forbidden finite order forests, can one decide whether
 any two permitted forests have a permitted common extension? We answer
-this question effectively by passing to comparability graphs and applying
-Carter's decision theorem for hereditary graph classes with a forbidden
-induced four-vertex path. The transfer respects existence of embeddings,
+this question effectively by passing to comparability graphs, decomposing
+a regular language of binary union/join representations into tree ideals,
+and deciding inclusion between their graph images. The transfer respects existence of embeddings,
 although a particular graph embedding need not preserve the order.
 We also prove an explicit classification: forests of width at most $m$
 have the joint embedding property exactly when $m\leq3$ (with width zero
 included if the empty forest is allowed). The negative cases have finite
 certificates, and the positive cases yield countable forests with the
-prescribed age. The general algorithm is an application of Carter's
-published preprint; the order-theoretic transfer and the width argument
+prescribed age. The algorithm uses the effective ranked-tree ideal
+decomposition of Goubault-Larrecq and Schmitz and the effective Parikh
+theorem. The graph-image, inclusion, order-theoretic and width arguments
 are given in full.
 \end{abstract}
 
@@ -42,9 +43,12 @@ embedding relation; it need not consist of poset antichains.
 The question is algorithmic as well as structural. Failure of JEP can
 be witnessed by two finite forests, but searching for such a pair does
 not decide the positive case. The missing positive termination guarantee
-comes from Carter's graph theorem \cite{Carter}. The main task in using
-that theorem is to justify the translation of embeddings, rather than
-merely recognize a familiar graph class.
+comes from an effective finite ideal cover. Two issues require proof:
+translating order embeddings into graph embeddings, and recognizing all
+binary representations of a graph when testing the ideal cover. Related
+graph JEP decision questions were studied by Carter~\cite{Carter}; the
+algorithm proved here uses the independent tree-language inputs stated
+in Section~3.
 
 As a first example, forbidding a two-element antichain leaves just chains.
 Two finite chains embed into a sufficiently long chain, so JEP holds.
@@ -112,39 +116,7 @@ That distinction is harmless for JEP and essential for interpreting
 the reduction correctly. These graphs are commonly called trivially
 perfect graphs; the proof above supplies all properties needed here.
 
-\section{Deciding the forbidden-family question}
-We use the following published result in its stated form: Carter's
-Corollary~1.5 \cite{Carter} decides JEP for a hereditary class of finite
-graphs specified by a finite forbidden induced-subgraph family containing
-$P_4$. We use this graph corollary, not his distinct notions of maps
-between rooted trees.
-
-\begin{theorem}\label{thm:decision}
-There is an algorithm which, given any finite family $\mathcal U$ of
-finite order forests, decides whether $\mathcal C(\mathcal U)$ has JEP.
-More precisely, set
-\[
- \mathcal F=\{P_4,C_4\}\cup\{\Comp(U):U\in\mathcal U\}.
-\]
-Then $\mathcal C(\mathcal U)$ has JEP if and only if $\Forb(\mathcal F)$
-has JEP.
-\end{theorem}
-\begin{proof}
-Lemma~\ref{lem:bridge} gives an effective correspondence on isomorphism
-types between all finite forests and $\Forb(P_4,C_4)$. It preserves and
-reflects existence of embeddings. In particular, $T$ avoids every $U$
-exactly when $\Comp(T)$ avoids every $\Comp(U)$. A common extension on
-either side corresponds to a common extension on the other side.
-This proves the equivalence. Compute the finite graph list and apply
-Carter's algorithm: the required forbidden graph $P_4$ is explicitly
-present.
-\end{proof}
-
-An input family need not already be an antichain: redundant forbidden
-members can be removed by finite embedding tests, without changing the
-class. The theorem supplies a total decision procedure, conditional only
-on the published graph algorithm. We do not claim a new implementation
-or a new complexity bound for that algorithm.
+\input{decision}
 
 \begin{proposition}[Finite certificates for negative instances]
 \label{prop:certificate}
@@ -163,12 +135,12 @@ These are finite calculations on finite order relations.
 After a negative verdict from Theorem~\ref{thm:decision}, enumerate
 permitted pairs and perform this finite test for each. A bad pair must
 eventually appear. The pair together with the exhaustive host test is
-a certificate verifiable without executing Carter's decision algorithm.
+a certificate verifiable by finite host enumeration alone.
 \end{proof}
 
 The bound is a bound on the size of a host for a fixed pair. It is not
 a uniform bound on the size of the first bad pair as a function of the
-forbidden family. Without Carter's theorem the same search would
+forbidden family. Without the total decision procedure the same search would
 semidecide only failure of JEP.
 
 \section{A sharp classification by width}
@@ -275,18 +247,27 @@ require the additional hypotheses of the relevant results in
 
 \paragraph{Preparation and status.}
 This manuscript was assembled with AI assistance from a research
-programme directed by the repository owner. Carter's general algorithm
-is credited as a published input; no independent implementation or
-formal verification of it is claimed. The transfer and width proofs
-above are the arguments offered for review. No historical priority
+programme directed by the repository owner. The effective ideal-decomposition
+and Parikh theorems are credited as published inputs. The graph-image and
+inclusion lemmas, forest transfer and width proofs above are offered for
+review; no implementation or formal verification of the full decision
+algorithm is claimed. No historical priority
 claim is made for those deductions. The repository contains the full
 manuscript and its build instructions; it requires no private project
 notes or conventions.
 
 \begin{thebibliography}{9}
 \bibitem{Carter} D.~Carter, \emph{On the joint embedding property for
-cographs and trees}, arXiv:2409.06127v1 (2024), Corollary~1.5.
+cographs and trees}, arXiv:2409.06127v1 (2024).
 \url{https://arxiv.org/abs/2409.06127v1}.
+\bibitem{GLS} J.~Goubault-Larrecq and S.~Schmitz,
+\emph{Deciding Piecewise Testable Separability for Regular Tree Languages},
+ICALP 2016, LIPIcs~55, 97:1--97:15, Example~7 and Section~5.
+\url{https://doi.org/10.4230/LIPIcs.ICALP.2016.97}.
+\bibitem{Parikh} J.~Esparza, P.~Ganty, S.~Kiefer and M.~Luttenberger,
+\emph{Parikh's Theorem: A simple and direct automaton construction},
+arXiv:1006.3825v3 (2011), Theorem~1.1 and Section~3.
+\url{https://arxiv.org/abs/1006.3825v3}.
 \bibitem{GRT} D.~Gonzalez, D.~Rossegger and D.~Turetsky,
 \emph{Scott Analysis below the Vaught Ordinal}, arXiv:2606.15205v2
 (2026), Question~2.

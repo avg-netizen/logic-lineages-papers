@@ -309,6 +309,34 @@ control \eqref{eq:phi-definition}.
 
 \section{The canonical source assignment}\label{sec:assignment}
 
+The assignment is a function of literal ordinal expression trees. We fix
+the following expansion convention throughout the collection. Every finite
+sum and positive integer repeat is a left-associated binary sum, preserving
+each operand as an unchanged subtree. A singleton sum is its operand. A
+numeral $k>0$ is the corresponding repeat of one; an inner repeat remains
+nested when it is an operand of another sum. The sole different association
+is the explicitly parenthesized scalar box tail below. Exponential/product
+and collapse expressions are primitive binary constructors with children
+$f,g$, rather than arbitrary product expressions to be reparsed.
+
+An absent vector coordinate is a padding marker, interpreted as zero only
+for comparison. Vector addition omits an absent operand; it constructs a
+binary sum only when both operands are present. Likewise the optional
+finite-level contribution to the box is absent when its level is zero.
+This does not erase a literal zero from an input expression. Actual
+generated coordinates use the zero-free graded grammar below.
+
+These choices make the printed finite-sum formulas explicit. They are not
+claimed to be the uniquely intended historical bracketing in~\cite{ww}.
+More generally one may fix an ordered binary expansion at each macro site
+and arity, independently of the operands' names, values and internal trees,
+while preserving each operand. We call this an \emph{admissible policy}.
+Uniqueness of the zero-history assignment is relative to that policy.
+Appendix~\ref{app:source-syntax} proves the domain and norm assertions for
+every such policy and exhibits a closed term whose assigned values differ
+between two policies. Unspecified reassociation is therefore not an
+innocuous preprocessing step.
+
 For $A:\tau$ the canonical vector has indices $0,\ldots,\lv(\tau)$.
 Missing indices are padded by zero when vectors are compared.  The prime
 clauses are
@@ -355,7 +383,13 @@ $\psi(\omega\otimes f\{X:=\mathbf1\}+(\partial_0^Xg)_0)$, and output
 $j>0$ is $(\partial_1^Xf)_j+(\partial_0^Xg)_j$.
 The whole-free rule applies before any other rule, on the literal tree.
 These are the published clauses of \cite[Definitions 2.10, 2.18 and 3.1]{ww}.
-Their domain and norm-preservation theorems are imported from that paper.
+The domain and bounded-norm assertions for the syntactic partial and
+abstraction rules are proved in Appendix~\ref{app:source-syntax}. The box
+domain and norm estimates use the value-level rules of~\cite{ww} with
+the same primitive constructors. We do not assume a strict inequality
+$u\{X:=\mathbf1\}<(\partial_0^Xu)_0$: at $u=x_0$ both sides are one.
+The weak inequality suffices for domain closure, and the appendix proves
+the needed bounded-norm estimate directly with the printed multiplier.
 
 The closed graded classes $\mathcal B_i$ are defined simultaneously as follows:
 one belongs to every class; $\omega$ belongs to classes of positive index;
@@ -376,13 +410,15 @@ is strict at coordinate zero and weak at every positive coordinate; it is
 not lexicographic.
 
 \begin{theorem}[Actual-source forward translation]\label{thm:forward-translation}
-For a literal original source with only ground free names, all positive
+Fix an admissible expansion policy. For a literal original source with only ground free names, all positive
 canonical coordinates are closed and effectively evaluable.  Coordinate
 zero is effectively a finite expression in positive-natural inputs, constants,
 addition and fixed functions $h_\lambda(n)=\psi(\lambda+n)$, where each
 direct index is $\lambda=\omega\otimes c>0$ for a closed $c$.
 The translation preserves every shared input valuation, including arbitrary
-internal types, binders and recursors.
+internal types, binders and recursors. It is effective uniformly in a
+supplied computable policy; it does not identify assignments made under
+different policies.
 \end{theorem}
 \begin{proof}
 Use simultaneous induction on source construction and the syntactic partial
@@ -425,7 +461,7 @@ members of those ambient classes.
 \end{proof}
 
 \begin{corollary}[Two natural positive classes]\label{cor:source-classes}
-In a recursor-free source every positive coordinate is finite.  If every
+For every fixed admissible policy, in a recursor-free source every positive coordinate is finite.  If every
 internal type and subtype has level at most two, every direct scalar index
 is a polynomial limit below $\omega^\omega$.
 \end{corollary}

@@ -3,7 +3,7 @@
 \title{The Wilken--Weiermann Comparison Problem\\
 Foundations and a Guide to the Results}
 \author{}
-\date{28 October 2026\\Working manuscript}
+\date{30 October 2026\\Working manuscript}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -45,13 +45,15 @@ Three objects are especially easy to confuse.  A general assignment in
 \cite{ww} may attach a finite reduction history to an abstraction; the
 normalization argument constructs appropriate decreasing assignments along
 reductions.  The \emph{canonical assignment} fixes history length zero at
-every abstraction, so one literal input term determines one vector.  Finally,
+every abstraction. Once its binary macro-expansion convention is fixed,
+one literal input term determines one vector. Finally,
 a \emph{syntactic ordering} is a relation defined on terms and stable under
 substitution and contexts.  A result about one object is a result about
 another only after an explicit interpretation theorem.
 
 The main unresolved domain considered here fixes the source grammar,
-the zero-history canonical assignment, and the numerical control
+the zero-history canonical assignment with the explicit literal expansion
+convention of Section~\ref{sec:assignment}, and the numerical control
 $\Phi(t)=F_5(t+100)$ defined below.  All free variables have ground type;
 bound variables, recursors, output types and internal simple types are
 unrestricted.  Distinct ground names vary independently.  This domain is
@@ -309,6 +311,9 @@ theory.  These are distinct logical obligations, each requiring a theorem.
 The purpose of the collection is to present the established mechanisms and
 their exact limits in ordinary mathematical form.  The full fixed-standard-
 control, all-ground comparison problem remains open.
+
+\appendix
+\input{source-syntax}
 
 \input{references}
 \end{document}

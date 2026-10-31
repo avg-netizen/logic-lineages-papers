@@ -1,20 +1,23 @@
 # Collection verification
 
-Prepared 28 October 2026. All six manuscripts passed clean builds after
+The collection was prepared 28 October 2026; the foundations source repair
+was integrated and separately rebuilt on 30 October. All six manuscripts passed clean builds after
 copying the collection into a fresh temporary directory, without private
 research files. Each was built with its own `python3 build_pdf.py` using
 Tectonic's `--untrusted --keep-logs --only-cached` options. The delivered PDFs
-are the outputs of those isolated builds.
+were checked against those isolated builds. The current foundations PDF was
+rebuilt after its source repair; its six included inputs also pass in a fresh
+isolated directory. The five other manuscripts retain their 28 October checks.
 
 | Manuscript | Pages | Theorem / lemma / proposition / corollary statements |
 |---|---:|---:|
-| Foundations and guide | 13 | 13 |
+| Foundations and guide | 19 | 18 |
 | Gödel-T termination ordering | 14 | 24 |
 | Equality and one variable | 16 | 21 |
 | Multivariate comparison | 19 | 18 |
 | Actual-source expressivity | 15 | 21 |
 | Descent and modular counts | 11 | 15 |
-| Total | 88 | 112 |
+| Total | 94 | 117 |
 
 These are mechanical counts of numbered result environments, not a measure of
 significance or an imposed writing target. Definitions, problems and examples
@@ -39,6 +42,14 @@ Exact source/PDF SHA-256 digests, font tables, page counts and per-paper
 checks are in [COMPARISON-CHECKS.json](COMPARISON-CHECKS.json); repository
 file digests are in [SHA256SUMS](SHA256SUMS). Individual preparation records
 are included in the manuscript directories.
+
+The foundations now fixes every binary expansion and padding convention.
+Its Appendix A proves the weak scalar inequality, graded domain and original
+bounded-norm multiplier and exhibits the 204/184 closed-source distinction
+between two policies. Its translation is policy-relative; these additions do
+not assert a convention-independent original assignment or a new solution of
+the full comparison problem. The bounded witness control and full same-model
+review are included in that manuscript's repair directory.
 
 The proofs were checked collaboratively during consolidation, including the
 source-observer and ground-binder arguments, the functional-input reduction,

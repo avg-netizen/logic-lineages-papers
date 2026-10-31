@@ -1,0 +1,44 @@
+{
+  "source": "lambda z:o. lambda x:o. ((lambda w:o. z) x)",
+  "source_level": 1,
+  "policies": {
+    "left": {
+      "positive_coordinate": 204,
+      "trace": {
+        "w": {"input_sizes": [1], "factor": 2, "positive_partial_values": [[1]]},
+        "x": {"input_sizes": [5], "factor": 10, "positive_partial_values": [[5]]},
+        "z": {"input_sizes": [193, 1], "factor": 388, "positive_partial_values": [[193], [6]]}
+      },
+      "actual_level": 1,
+      "node_counts": [182553, 407],
+      "literal_tree_sha256": [
+        "6d691cc5537020c4aadb80faad9d58d662f5c4e74cbed07da38b46bcf0d760b3",
+        "86c3df405205a7e6aafa57fe784aa73a3430d7a9c2b76dded212b1aafc508a59"
+      ]
+    },
+    "right": {
+      "positive_coordinate": 184,
+      "trace": {
+        "w": {"input_sizes": [1], "factor": 2, "positive_partial_values": [[1]]},
+        "x": {"input_sizes": [5], "factor": 10, "positive_partial_values": [[5]]},
+        "z": {"input_sizes": [173, 1], "factor": 348, "positive_partial_values": [[173], [6]]}
+      },
+      "actual_level": 1,
+      "node_counts": [149833, 367],
+      "literal_tree_sha256": [
+        "fcbcacb51a5a1c9653b0f6f8c3d9f310f6d45219d0d699865ce30b068f632e4a",
+        "88846359d66d6f49ee8f12ad8acae6028109795136c227acbfbefa059510eb9d"
+      ]
+    }
+  },
+  "psi_evaluations": 0,
+  "claim": "named witness only",
+  "elapsed_seconds": 1.6200172202661633,
+  "peak_rss_kib": 19528,
+  "memavailable_start_kib": 6155708,
+  "script_sha256": "6d57b7c4cb8841d3ef34e2ded33ace64692bbbc989288e61d228ceb7c4d798e0",
+  "execution": {"exit_code": 0, "single_worker": true, "address_space_mib": 512,
+                "cpu_and_wall_limit_seconds": 60, "minimum_memavailable_mib": 1536,
+                "shared_nonblocking_mutex": "/tmp/logic-lineages-ii5-reverse-compute.lock"},
+  "record_note": "Exact observed output fields transcribed from the sole successful invocation; execution metadata appended. No second scientific run was needed."
+}

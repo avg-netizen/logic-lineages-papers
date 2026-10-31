@@ -14,6 +14,16 @@ strict finite-tail separation, and the actual-source forward translation.
 The calculus, norm, control, admissible substitutions and canonical abstraction
 rules are stated explicitly. Published background theorems are cited normally.
 
+The literal assignment now fixes every finite-sum and padding convention.
+Its forward translation and graded-domain results also hold separately for
+each admissible fixed policy. Appendix A gives the full domain and bounded-norm
+proofs, using a weak scalar inequality in place of the source's false strict
+one. It exhibits a closed recursor-free source with positive assigned
+coordinate 204 or 184 under two bracketing policies; the canonical comparison
+problem therefore includes its parsing convention. The included
+[source checks](repair/source-conventions/CONTROL.json) reconstruct this
+witness without evaluating the collapse.
+
 The five companions are included in this repository:
 
 - [Termination ordering](../06-godel-t-termination-ordering/README.md).
