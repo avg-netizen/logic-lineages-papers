@@ -78,9 +78,8 @@ statements, not automatic certificates of new or changed statements.
   and [general-family evidence](verification/repair-2026-10-31/ForestParseRepresentationGeneralStatementChecks.json).
 - **Paper 03, finite profile automaton: checked suppliers.** The executable
   fixed-size Boolean graph-code transition and run exactly track induced
-  embeddings, acceptance and downward closure. Arbitrary finite input
-  calibration and uniform automaton packaging remain separate, so
-  `lem:parse-regular` is not yet checked in full.
+  embeddings, acceptance and downward closure. The later uniform encoding and
+  source-language adapter below complete the full regularity lemma.
   [Evidence](verification/repair-2026-10-31/FiniteProfileStatementChecks.json).
 - **Paper 05, arbitrary structural associations: checked suppliers.** Ordered
   full binary sums use every operand unchanged and once, have the exact
@@ -91,16 +90,41 @@ statements, not automatic certificates of new or changed statements.
   admissibility results.
   [Sum-shape evidence](verification/repair-2026-10-31/WWAdmissibleSumStatementChecks.json)
   and [partial evidence](verification/repair-2026-10-31/WWAdmissiblePartialStatementChecks.json).
+- **Paper 03, `lem:parse-regular`: checked in full.** A finite-matrix input
+  algorithm constructs an actual finite ranked machine for arbitrary finite
+  forbidden graph families, with P4/C4 adjoined. Common-size encoding,
+  padding, empty forbidden graphs, semantic recognition and literal ranked
+  downward closure are all covered. Classical representation completeness
+  for abstract finite graphs is not used as a computational oracle.
+  [Encoding evidence](verification/repair-2026-10-31/ProfileAutomatonEncodingStatementChecks.json)
+  and [source-language evidence](verification/repair-2026-10-31/ProfileSourceRegularStatementChecks.json).
+- **Paper 03, canonical-cotree ingredients: checked suppliers.** Actual
+  graph isomorphisms respect association, swaps and congruence; root and
+  complement connectivity distinguish union/join. Connected-fiber recovery
+  also gives actual component permutations and fiber isomorphisms. Full
+  reduced-cotree construction, uniqueness and binary characterization remain
+  pending.
+  [AC evidence](verification/repair-2026-10-31/ForestParseRepresentationACStatementChecks.json)
+  and [component evidence](verification/repair-2026-10-31/ForestParseRepresentationComponentsStatementChecks.json).
+- **Paper 05, arbitrary-policy assignments and local expansion bounds:
+  checked suppliers.** All original typed sources have generated assignments
+  under every structural macro policy, with ground-context positive
+  closedness. Partial outputs satisfy `6*3^inputNodes`, positive repeats have
+  the exact node count, and positive box outputs satisfy the source recurrence.
+  The whole-source composed bound and full intended partial-domain coverage
+  remain separate from these local formulas.
+  [Assignment evidence](verification/repair-2026-10-31/WWAdmissibleAssignmentStatementChecks.json)
+  and [expansion evidence](verification/repair-2026-10-31/WWAdmissibleExpansionStatementChecks.json).
 
-After source reconciliation and two whole-lemma acceptances, the register
-contains **189 statements: 87 checked, 2 inherited calculator-package results,
-and 100 pending**. The repair introduced eleven new numbered obligations.
+After source reconciliation and three whole-lemma acceptances, the register
+contains **189 statements: 88 checked, 2 inherited calculator-package results,
+and 99 pending**. The repair introduced eleven new numbered obligations.
 
 ## Work in progress
 
-The next targets are uniform finite-input calibration and reduced cotree
-semantics for paper 03, and arbitrary-policy assignments and explicit expansion
-bounds for paper 05. Whole decision and norm claims remain pending until their full
+The next targets are actual machine emptiness and reduced cotree semantics for
+paper 03, and whole-source expansion bounds and partial-domain coverage for
+paper 05. Whole decision and norm claims remain pending until their full
 formal dependency chains are proved. In particular, bibliographic references
 to effective ideal decomposition and Parikh's theorem are not Lean suppliers.
 
@@ -141,3 +165,12 @@ selects 719 gates, without a new whole-root build. The general forbidden-family
 representation completes `lem:image-cover`, raising the current count to
 87 checked; the new finite-profile and arbitrary-policy partial components
 retain their explicitly limited supplier scope.
+
+The [fourth focused checkpoint](verification/repair-2026-10-31/checkpoint-04.json)
+combines twenty accepted gates with fifty-one exact-type aliases. All 148
+local closure source hashes match before and after compilation. The root
+selects 725 gates, without a new whole-root build. The full source regularity
+adapter raises the register to 88 checked. One expansion gate needed the
+same audit-visibility repair as the earlier aggregate: only an empty imported
+namespace audit was removed, with all fixed aliases and their actual audits
+retained. The prior freeze, failed receipt and exact amendment are preserved.

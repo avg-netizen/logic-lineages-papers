@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.WWAdmissibleAssignmentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualAdmissibleAbstractionGenerated : Source.Targets.ActualAdmissibleAbstractionGenerated :=
+  Source.AdmissibleAssignment.actualAdmissibleAbstractionGenerated
+
+theorem fixed_actualAdmissibleAssignmentGenerated : Source.Targets.ActualAdmissibleAssignmentGenerated :=
+  Source.AdmissibleAssignment.actualAdmissibleAssignmentGenerated
+
+theorem fixed_actualAdmissibleAssignmentPositiveClosed : Source.Targets.ActualAdmissibleAssignmentPositiveClosed :=
+  Source.AdmissibleAssignment.actualAdmissibleAssignmentPositiveClosed
+
+end LogicLineages.OrdinalComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.Source.AdmissibleAssignment
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

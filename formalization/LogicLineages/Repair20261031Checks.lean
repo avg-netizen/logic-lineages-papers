@@ -14,6 +14,12 @@ public import LogicLineages.OrdinalComparison.WWAdmissiblePartialStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationGeneralStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.FiniteProfileStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncodingStatementChecks
+public import LogicLineages.OrdinalComparison.WWAdmissibleAssignmentStatementChecks
+public import LogicLineages.OrdinalComparison.WWAdmissibleExpansionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationACStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegularStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponentsStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -121,6 +127,78 @@ theorem profileAcceptanceExact : ModelsAlgebra.Forests.FiniteProfile.Targets.Acc
 
 theorem profileAvoidanceDownward : ModelsAlgebra.Forests.FiniteProfile.Targets.AvoidanceDownward :=
   ModelsAlgebra.Forests.FiniteProfile.StatementChecks.avoidanceDownward
+
+theorem checked_ProfileAutomatonEncoding_familyBoundCorrect :
+    LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Targets.FamilyBoundCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.familyBoundCorrect
+
+theorem checked_ProfileAutomatonEncoding_encodingIso :
+    LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Targets.EncodingIso :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.encodingIso
+
+theorem checked_ProfileAutomatonEncoding_finiteGraphRepresentability :
+    LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Targets.FiniteGraphRepresentability :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.finiteGraphRepresentability
+
+theorem checked_ProfileAutomatonEncoding_machineCorrect :
+    LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Targets.MachineCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.machineCorrect
+
+theorem checked_ProfileAutomatonEncoding_rawAvoidanceDownward :
+    LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Targets.RawAvoidanceDownward :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.rawAvoidanceDownward
+
+theorem checked_ProfileAutomatonEncoding_arbitraryFiniteFamilyRegular :
+    LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Targets.ArbitraryFiniteFamilyRegular :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.arbitraryFiniteFamilyRegular
+
+theorem checked_WWAdmissibleAssignment_fixed_actualAdmissibleAbstractionGenerated :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleAbstractionGenerated :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleAbstractionGenerated
+
+theorem checked_WWAdmissibleAssignment_fixed_actualAdmissibleAssignmentGenerated :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleAssignmentGenerated :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleAssignmentGenerated
+
+theorem checked_WWAdmissibleAssignment_fixed_actualAdmissibleAssignmentPositiveClosed :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleAssignmentPositiveClosed :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleAssignmentPositiveClosed
+
+theorem checked_WWAdmissibleExpansion_fixed_actualAdmissiblePartialExpansion :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissiblePartialExpansion :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissiblePartialExpansion
+
+theorem checked_WWAdmissibleExpansion_fixed_actualAdmissibleRepeatExpansion :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleRepeatExpansion :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleRepeatExpansion
+
+theorem checked_WWAdmissibleExpansion_fixed_actualLiteralBoxExpansion :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualLiteralBoxExpansion :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLiteralBoxExpansion
+
+theorem checked_ForestParseRepresentationAC_graphAssociationSound :
+    LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationAC.Targets.GraphAssociationSound :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationAC.StatementChecks.graphAssociationSound
+
+theorem checked_ForestParseRepresentationAC_rootConnectivity :
+    LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationAC.Targets.RootConnectivity :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationAC.StatementChecks.rootConnectivity
+
+theorem checked_ProfileSourceRegular_sourceMachineCorrect :
+    LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.Targets.SourceMachineCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.StatementChecks.sourceMachineCorrect
+
+theorem checked_ProfileSourceRegular_generalForbiddenRegular :
+    LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.Targets.GeneralForbiddenRegular :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.StatementChecks.generalForbiddenRegular
+
+theorem checked_ForestParseRepresentationComponents_fiberReachability :
+    LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponents.Targets.FiberReachability :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponents.StatementChecks.fiberReachability
+
+theorem checked_ForestParseRepresentationComponents_fiberIsoRecovery :
+    LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponents.Targets.FiberIsoRecovery :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponents.StatementChecks.fiberIsoRecovery
 
 end LogicLineages.Repair20261031Checks
 

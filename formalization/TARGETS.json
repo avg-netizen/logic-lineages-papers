@@ -649,17 +649,55 @@
           "file": "03-joint-embedding-finite-forests/decision.tex",
           "line": 70,
           "statement_latex": "\\label{lem:parse-regular}\nThe language $L=\\{t:\\E(t)\\in\\mathcal K\\}$ is effectively regular and\ndownward closed under $\\preceq$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.StatementChecks.generalForbiddenRegular",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularTargets.lean",
+            "sha256": "9e07d15a56a0fd2e99d49b31ba65645932f8404e3d9b3c4f000d7b66b1306303",
+            "type": "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.Targets.GeneralForbiddenRegular"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.FiniteProfileStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/FiniteProfileStatementChecks.json",
-              "scope": "Executable fixed-N Boolean mask/matrix finite induced-subgraph profile, exact transition/run/acceptance/downward semantics. Arbitrary input encoding and uniform finite-automaton packaging remain pending."
+              "scope": "Executable fixed-N Boolean mask/matrix induced-profile transition, run, acceptance and downward semantics; uniform input encoding and source interface are recorded separately."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncodingStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ProfileAutomatonEncodingStatementChecks.json",
+              "scope": "Uniform raw finite graph family encoding, common-size padding and actual finite ranked machine with exact graph-isomorphism/acceptance/downward semantics; direct source adapter is recorded separately."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegularStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ProfileSourceRegularStatementChecks.json",
+              "scope": "Explicit finite-matrix source machine with P4/C4 adjoined and exact GeneralForbiddenLanguage recognition; arbitrary finite forbidden-family regularity and literal ranked downward closure."
             }
-          ]
+          ],
+          "accepted_declarations": [
+            "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.StatementChecks.sourceMachineCorrect",
+            "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.StatementChecks.generalForbiddenRegular"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularTargets.lean",
+              "sha256": "9e07d15a56a0fd2e99d49b31ba65645932f8404e3d9b3c4f000d7b66b1306303",
+              "type": "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.Targets.GeneralForbiddenRegular"
+            },
+            {
+              "file": "LogicLineages/ModelsAlgebra/Forests/ProfileSourceRegularTargets.lean",
+              "sha256": "9e07d15a56a0fd2e99d49b31ba65645932f8404e3d9b3c4f000d7b66b1306303",
+              "type": "LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegular.Targets.SourceMachineCorrect"
+            }
+          ],
+          "verification_receipt": "build-reports/1793419178249669203-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/ProfileSourceRegularStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired parse-regular lemma: explicit finite-matrix input algorithm, common finite graph-code bound and exact induced-profile transitions construct a finite ranked automaton for actual GeneralForbiddenLanguage with P4/C4 adjoined. Arbitrary finite graph representation and empty forbidden graph cases are covered. Literal ranked downward closure is proved. No ideal decomposition, Parikh or full JEP decision algorithm is assumed or claimed."
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:image-cover",
@@ -722,7 +760,19 @@
           "status": "pending",
           "accepted_declaration": null,
           "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationACStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationACStatementChecks.json",
+              "scope": "Actual graph-isomorphism soundness of ranked-parse association/swap/congruence and root connectivity/complement discrimination. Not full reduced-cotree uniqueness or graph-isomorphism completeness."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponentsStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationComponentsStatementChecks.json",
+              "scope": "Actual connected-fiber reachability and graph-isomorphism-induced component permutation/fiber isomorphisms under genuine connected-fiber hypotheses. Full reduced cotree uniqueness remains pending."
+            }
+          ]
         },
         {
           "id": "03-joint-embedding-finite-forests:lem:parikh-transition",
@@ -1195,6 +1245,11 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWPolicyGeneratedStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWPolicyGeneratedStatementChecks.json",
               "scope": "Total syntax-directed assignment for all actual original typed terms under L/R and ground-context positive-coordinate closedness. Generated syntax is not original norm-admissibility; scalar translation, evaluators and arbitrary computable policies remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWAdmissibleAssignmentStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWAdmissibleAssignmentStatementChecks.json",
+              "scope": "Actual original typed-source total assignment and generated syntax/ground positive closedness for every structural macro policy. No original norm admissibility or scalar translation/evaluation claim."
             }
           ]
         },
@@ -1255,6 +1310,11 @@
               "gate_module": "LogicLineages.OrdinalComparison.WWAdmissiblePartialStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWAdmissiblePartialStatementChecks.json",
               "scope": "Actual partial recursion under arbitrary structural site/arity policies: generated success/grade and same-input ordinal value independence. Full assignment expansion bounds and source norm remain separate."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWAdmissibleExpansionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWAdmissibleExpansionStatementChecks.json",
+              "scope": "All-policy partial-coordinate E(n)=6*3^n node bound, positive repeat exact node formula and positive box recurrence. Full composed original-source assignment bound remains separately pending."
             }
           ]
         },

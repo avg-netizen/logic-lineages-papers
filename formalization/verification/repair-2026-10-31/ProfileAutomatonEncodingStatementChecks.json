@@ -1,0 +1,175 @@
+{
+  "accepted_utc": "2026-10-31T03:53:24.798879+00:00",
+  "scope": "Explicit raw finite graph matrix input, common finite code padding with exact graph isomorphism, finite-state machine construction, exact avoidance correctness and downward closure, and semantic completeness for arbitrary actual finite graph families. No ideal decomposition/Parikh or JEP decision claimed.",
+  "source_correspondence": "Paper03 decision.tex, lem:parse-regular: explicit raw finite graph matrix input, common finite-code padding with graph isomorphism, finite-state machine, exact raw avoidance/downward closure, and semantic representability of arbitrary finite graph families. No ideal decomposition, Parikh or full JEP decision. Whole source-label acceptance requires separate semantic correspondence review, not this evidence verifier.",
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "manuscript_sources": [
+    {
+      "path": "03-joint-embedding-finite-forests/decision.tex",
+      "sha256": "76c47f76b48363ba3479a2ee5b8e7b2644084f97ad54aa1f35be01c62f78b1b5"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncodingStatementChecks",
+  "frozen_at_utc": "2026-10-31T03:45:47.372524+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/profile-automaton-encoding-freeze.json",
+  "freeze_sha256": "e12088e5a421fd7cde2bdfcf56dc40db7a4fb073f4e7977ea7ab623d5ad5a2f5",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingDefinitions.lean",
+      "sha256": "3b51edc63e2aeaed258538d458c31b235cb412e4cb490be8edb8cc430276fab3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingTargets.lean",
+      "sha256": "9f0b419a4b95c097da617098a1ecc89578cd56cbc152fe09622f350c90a26660"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingStatementChecks.lean",
+      "sha256": "93c7b5176e03eb221eb91d07e55f3613410724675d6af90e3f786d875714f538"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingProof.lean",
+      "sha256": "7e7fce7ad90c7786d1c9be9c77c205d63a9c9052983d8b7273bfe26d26e5c4fd"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.familyBoundCorrect",
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.encodingIso",
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.finiteGraphRepresentability",
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.machineCorrect",
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.rawAvoidanceDownward",
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.arbitraryFiniteFamilyRegular"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793418287149334942-2.json",
+      "sha256": "f6bef981fcaaeea3a0cb8be110bd99decd60e1cd694cd46579a5e4a11226d87b",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793418357440104522-5.json",
+      "sha256": "85e51bf57d06fc2ec968017ce6aa124dedda898d756d85aa317fb09ce34224ea",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793418357440104522-5-LogicLineages-ModelsAlgebra-Forests-ProfileAutomatonEncodingStatementChecks.log",
+  "gate_log_sha256": "de216667c87909dbb12015edbfca0484538aa702db310e1c0e332e45c14aae99",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.machineCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.familyBoundCorrect": [
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.finiteGraphRepresentability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.arbitraryFiniteFamilyRegular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.encodingIso": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.StatementChecks.rawAvoidanceDownward": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.Forests.ProfileAutomatonEncoding.Proof.encodeVertex.eq_1": [
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingStatementChecks.lean",
+      "sha256": "93c7b5176e03eb221eb91d07e55f3613410724675d6af90e3f786d875714f538"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingProof.lean",
+      "sha256": "7e7fce7ad90c7786d1c9be9c77c205d63a9c9052983d8b7273bfe26d26e5c4fd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingTargets.lean",
+      "sha256": "9f0b419a4b95c097da617098a1ecc89578cd56cbc152fe09622f350c90a26660"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/ProfileAutomatonEncodingDefinitions.lean",
+      "sha256": "3b51edc63e2aeaed258538d458c31b235cb412e4cb490be8edb8cc430276fab3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileDefinitions.lean",
+      "sha256": "e1ec826ef97f960ad102d3c3cabb0f184a3b58fe0c77cc0048a86a2bd8da14b6"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseDefinitions.lean",
+      "sha256": "8e6b33e18c4390d7ea2f952cdb03342ebd7cc31656f9f452881f65b5a68644c5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedGraphImageDefinitions.lean",
+      "sha256": "2324176aaac32fcf9788f1688099a0774ae218a180ad4a6d2dda5f0ad78ac016"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteIdealCoverDefinitions.lean",
+      "sha256": "e946fc796275ae53a128ad3db4ccd78d3fadf587fa3fd2627dcc852c0544eeb1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileProof.lean",
+      "sha256": "89b07de480decdfc713643f35cad09c265624d8026e57cf1e999e82e7d925e1c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/FiniteProfileTargets.lean",
+      "sha256": "0a87603e7db252d2b7b5c9d2dbefa1b7c210f76f6524ce16a08743c7e782ea35"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseProof.lean",
+      "sha256": "dc6404c42e1f5fdd6a2973e54472c8f14ca74a12d1722a38bb5e477eed9df1b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/Forests/RankedParseTargets.lean",
+      "sha256": "6edc858c3b04432b0ac1ce04e1d58ffa02500a27077cc136f7c5914f1ad7ba06"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Combinatorics.SimpleGraph.Maps",
+    "Mathlib.Data.Finite.Sum",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator sources compiled in supplementary receipt(s); candidate and gate compiled in final receipt. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}
