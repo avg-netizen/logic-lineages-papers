@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks
+theorem actualSplit : Targets.productSubgroupSplit := product_subgroup_split
+end LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks

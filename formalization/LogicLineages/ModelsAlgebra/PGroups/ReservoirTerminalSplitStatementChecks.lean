@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks
+theorem complementSplit : Targets.reservoirComplementSplit := reservoir_complement_split
+theorem ambientSplit : Targets.reservoirAmbientSplit := reservoir_ambient_split
+end LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks

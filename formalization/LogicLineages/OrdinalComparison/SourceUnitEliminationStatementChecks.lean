@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceUnitEliminationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitElimination.StatementChecks
+theorem fullSourceUnitElimination : Targets.FullSourceUnitElimination := Proof.fullSourceUnitElimination
+end LogicLineages.OrdinalComparison.Source.UnitElimination.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitElimination

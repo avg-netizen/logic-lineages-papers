@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerStatementChecks
+theorem differenceObstruction : Targets.twoInfiniteTailNoDifference := two_infinite_tail_no_difference
+end LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailLowerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailLowerStatementChecks
+theorem rawPiObstruction : Targets.oneInfiniteTailNoPi := one_infinite_tail_no_pi
+end LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailLowerStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailLowerStatementChecks

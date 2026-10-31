@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTailLowerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteTailLowerStatementChecks
+theorem piObstruction : Targets.finiteTailNoPi := finite_tail_no_pi
+end LogicLineages.ModelsAlgebra.PGroups.FiniteTailLowerStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteTailLowerStatementChecks

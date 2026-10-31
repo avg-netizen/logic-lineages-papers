@@ -1,9 +1,9 @@
 # External continuation after the manuscript repairs
 
-## Current verified snapshot: checkpoint 18
+## Current verified snapshot: checkpoint 19
 
-**117 checked, 2 inherited, 70 pending, out of 189 registered statements.**
-The combined Lean root passes locally with 1,046 selected imports and 3,251
+**118 checked, 2 inherited, 69 pending, out of 189 registered statements.**
+The combined Lean root passes locally with 1,057 selected imports and 3,298
 namespace theorem audits. Historical sections below retain the limits and
 counts of their own checkpoints. No GitHub CI pass is claimed.
 
@@ -716,3 +716,32 @@ wall-time and single-thread guards; no defaults or CI settings changed.
 Nine records were fixed before later acceptances, including the excluded
 ProductSubgroupSplit supplier. The registry is **117 checked, 2 inherited,
 70 pending**. No GitHub CI result is claimed.
+
+
+## Checkpoint 19 — complete finite common-unit elimination
+
+Paper 09 `thm:unit-elimination` is checked by the actual
+`Source.UnitElimination.StatementChecks.fullSourceUnitElimination` endpoint.
+Its finite symbolic source compiler terminates, its finite list of numeric
+anchors is realized by the genuine computable source evaluator, and its
+existential-conjunctive linear formula uses only actual all-ground source
+probes. All remaining original ground names retain one shared valuation.
+The conclusion is the original full default-assignment scalar graph, not a
+surrogate evaluator premise. No polynomial-DAG bound is claimed.
+
+The supplied-operator unary carrier remains a component of pending
+`lem:carriers`: it does not provide the annotation-to-operator bridge.
+The new intrinsic terminal splits, quotient comparisons and Scott lower
+bounds also retain their exact scopes; they do not promote the whole
+Scott-complexity classification.
+
+The [nineteenth focused checkpoint](verification/repair-2026-10-31/checkpoint-19.json)
+selects 352 gates and audits 1,001 exact aliases over 2,165 unchanged local
+source hashes. The [actual selected root](verification/repair-2026-10-31/root-checkpoint19.json)
+passes with 1,057 imports, 3,298 audits and 3,911 unchanged closure hashes.
+The authorized focused and root profiles retain existing CPU, wall-time and
+single-thread guards; no compiler defaults or CI settings were changed.
+Eleven accepted records were fixed in the snapshot, including TerminalTwoEven
+accepted immediately before selection; later records are excluded. The
+registry is **118 checked, 2 inherited, 69 pending**. No GitHub CI result is
+claimed.

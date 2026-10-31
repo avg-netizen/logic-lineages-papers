@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionRetainedProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionRetainedStatementChecks
+theorem pointedComparison : Targets.terminalAbsorptionRetained := terminal_absorption_retained
+end LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionRetainedStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionRetainedStatementChecks

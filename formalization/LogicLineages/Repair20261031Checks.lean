@@ -341,6 +341,17 @@ public import LogicLineages.OrdinalComparison.SourceOneUnitStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.SubgroupSumProductStatementChecks
 public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionStatementChecks
 public import LogicLineages.OrdinalComparison.WWSelectedBinderStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteTailLowerStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailLowerStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks
+public import LogicLineages.OrdinalComparison.SourceUnitEliminationStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionRetainedStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalTwoEvenStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerStatementChecks
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionStatementChecks
+public import LogicLineages.OrdinalComparison.WWUnaryCarrierStatementChecks
+public import LogicLineages.OrdinalComparison.WWUnitObservationStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -4244,6 +4255,82 @@ theorem checked_WWSelectedBinder_assignmentNaturality :
 theorem checked_WWSelectedBinder_valuationNaturality :
     LogicLineages.OrdinalComparison.Source.SelectedBinder.Targets.ValuationNaturality :=
   LogicLineages.OrdinalComparison.Source.SelectedBinder.StatementChecks.valuationNaturality
+
+theorem checked_FiniteTailLower_piObstruction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.finiteTailNoPi :=
+  LogicLineages.ModelsAlgebra.PGroups.FiniteTailLowerStatementChecks.piObstruction
+
+theorem checked_OneInfiniteTailLower_rawPiObstruction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.oneInfiniteTailNoPi :=
+  LogicLineages.ModelsAlgebra.PGroups.OneInfiniteTailLowerStatementChecks.rawPiObstruction
+
+theorem checked_ProductSubgroupSplit_actualSplit :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.productSubgroupSplit :=
+  LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks.actualSplit
+
+theorem checked_ReservoirTerminalSplit_complementSplit :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reservoirComplementSplit :=
+  LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks.complementSplit
+
+theorem checked_ReservoirTerminalSplit_ambientSplit :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.reservoirAmbientSplit :=
+  LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks.ambientSplit
+
+theorem checked_SourceUnitElimination_fullSourceUnitElimination :
+    LogicLineages.OrdinalComparison.Source.UnitElimination.Targets.FullSourceUnitElimination :=
+  LogicLineages.OrdinalComparison.Source.UnitElimination.StatementChecks.fullSourceUnitElimination
+
+theorem checked_TerminalAbsorptionRetained_pointedComparison :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalAbsorptionRetained :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalAbsorptionRetainedStatementChecks.pointedComparison
+
+theorem checked_TerminalTwoEven_pointedEven :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.terminalTwoEvenComparison :=
+  LogicLineages.ModelsAlgebra.PGroups.TerminalTwoEvenStatementChecks.pointedEven
+
+theorem checked_TwoInfiniteTailLower_differenceObstruction :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.twoInfiniteTailNoDifference :=
+  LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTailLowerStatementChecks.differenceObstruction
+
+theorem checked_TwoInfiniteTerminalDeletion_actualQuotient :
+    LogicLineages.ModelsAlgebra.PGroups.Targets.twoInfiniteTerminalDeletion :=
+  LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionStatementChecks.actualQuotient
+
+theorem checked_WWUnaryCarrier_freshRename :
+    LogicLineages.OrdinalComparison.Source.UnaryCarrier.Targets.FreshRename :=
+  LogicLineages.OrdinalComparison.Source.UnaryCarrier.StatementChecks.freshRename
+
+theorem checked_WWUnaryCarrier_saturation :
+    LogicLineages.OrdinalComparison.Source.UnaryCarrier.Targets.Saturation :=
+  LogicLineages.OrdinalComparison.Source.UnaryCarrier.StatementChecks.saturation
+
+theorem checked_WWUnaryCarrier_captureClosing :
+    LogicLineages.OrdinalComparison.Source.UnaryCarrier.Targets.CaptureClosing :=
+  LogicLineages.OrdinalComparison.Source.UnaryCarrier.StatementChecks.captureClosing
+
+theorem checked_WWUnaryCarrier_actualCarrier :
+    LogicLineages.OrdinalComparison.Source.UnaryCarrier.Targets.ActualCarrier :=
+  LogicLineages.OrdinalComparison.Source.UnaryCarrier.StatementChecks.actualCarrier
+
+theorem checked_WWUnitObservation_positiveValue :
+    LogicLineages.OrdinalComparison.Source.UnitObservation.Targets.PositiveValue :=
+  LogicLineages.OrdinalComparison.Source.UnitObservation.StatementChecks.positiveValue
+
+theorem checked_WWUnitObservation_groundValue :
+    LogicLineages.OrdinalComparison.Source.UnitObservation.Targets.GroundValue :=
+  LogicLineages.OrdinalComparison.Source.UnitObservation.StatementChecks.groundValue
+
+theorem checked_WWUnitObservation_functionalCoordinates :
+    LogicLineages.OrdinalComparison.Source.UnitObservation.Targets.FunctionalCoordinates :=
+  LogicLineages.OrdinalComparison.Source.UnitObservation.StatementChecks.functionalCoordinates
+
+theorem checked_WWUnitObservation_selectedTransport :
+    LogicLineages.OrdinalComparison.Source.UnitObservation.Targets.SelectedTransport :=
+  LogicLineages.OrdinalComparison.Source.UnitObservation.StatementChecks.selectedTransport
+
+theorem checked_WWUnitObservation_selectedValuation :
+    LogicLineages.OrdinalComparison.Source.UnitObservation.Targets.SelectedValuation :=
+  LogicLineages.OrdinalComparison.Source.UnitObservation.StatementChecks.selectedValuation
 
 end LogicLineages.Repair20261031Checks
 

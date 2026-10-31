@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TerminalTwoEvenProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TerminalTwoEvenStatementChecks
+theorem pointedEven : Targets.terminalTwoEvenComparison := terminal_two_even_comparison
+end LogicLineages.ModelsAlgebra.PGroups.TerminalTwoEvenStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TerminalTwoEvenStatementChecks

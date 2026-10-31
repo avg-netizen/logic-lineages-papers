@@ -1,0 +1,132 @@
+{
+  "accepted_utc": "2026-10-31T12:22:21.848823+00:00",
+  "scope": "Actual complementary reservoir prefix/tail subgroups and actual ambient pullback with annihilation and coordinate-retention criterion.",
+  "source_correspondence": "Actual finitely supported reservoir prefix/complement decomposition, ambient coordinate membership and annihilation properties. Concrete decomposition is proved, not supplied as an oracle. Scoped algebraic supplier, outside checkpoint18.",
+  "source_commit": "8765526540bd6869649fcd5d7ff6dd0ce9200e7f",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks",
+  "frozen_at_utc": "2026-10-31T12:21:30.731050+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/reservoir-terminal-split-freeze.json",
+  "freeze_sha256": "67ca0dc24bade3b2b360e3f7e8080ca4bb90984ff1dc2d2581e63f2e507e1411",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitDefinitions.lean",
+      "sha256": "3773c8a0bae6d8d70a1a465191a868424f7b4eeabe83a591d161019c083423d5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitTargets.lean",
+      "sha256": "74264ad3be8cd2ffd155f684e3cc74543e8d156310069a1cc34bad7797f7cc90"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitStatementChecks.lean",
+      "sha256": "99f2f540c433da086028ad9470e963a938d4fe99fd9fb0007c5546a5edf6d0d0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitProof.lean",
+      "sha256": "ab3f258ec8bbb4c4d52d0ca3f40de68f7bd0175cbbc6bf7e981c9206f064e854"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks.complementSplit",
+    "LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks.ambientSplit"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793449221094614695-2.json",
+      "sha256": "0a4ff1d0036966e6b9c5d2b48fe754888645454b248ba1db4cf09bfe3073a835",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793449311835240732-2.json",
+      "sha256": "56381189f3ff36e289bf303eb5f75ebacc14f5df11a84b4a7802d30ad6a7e2e4",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793449311835240732-2-LogicLineages-ModelsAlgebra-PGroups-ReservoirTerminalSplitStatementChecks.log",
+  "gate_log_sha256": "08465b638c43dd74d79750af053c3069c0bdb05a4ace9cd802caea7a2fac24ac",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks.complementSplit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.ReservoirTerminalSplitStatementChecks.ambientSplit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitStatementChecks.lean",
+      "sha256": "99f2f540c433da086028ad9470e963a938d4fe99fd9fb0007c5546a5edf6d0d0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitProof.lean",
+      "sha256": "ab3f258ec8bbb4c4d52d0ca3f40de68f7bd0175cbbc6bf7e981c9206f064e854"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitTargets.lean",
+      "sha256": "74264ad3be8cd2ffd155f684e3cc74543e8d156310069a1cc34bad7797f7cc90"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirTerminalSplitDefinitions.lean",
+      "sha256": "3773c8a0bae6d8d70a1a465191a868424f7b4eeabe83a591d161019c083423d5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReservoirChainDefinitions.lean",
+      "sha256": "2b032e4983a20661ff54979e51e77559d779e3ce5666a3a919daa2dc9db87762"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCombineDefinitions.lean",
+      "sha256": "2295998c31fc2233bc6e5134c262cc3b23547aa02adeb7ad4833e3c36f651bdc"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FreshCoordinatesDefinitions.lean",
+      "sha256": "aa5f93a6a58d52accaf97c3ea0680e35b0a5cde77c63d84369e2517c65429b92"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Group.Prod",
+    "Mathlib.Algebra.Group.Subgroup.Defs",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Submonoid.Operations",
+    "Mathlib.Data.Finsupp.Basic",
+    "Mathlib.Data.Nat.Basic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

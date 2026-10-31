@@ -1,0 +1,119 @@
+{
+  "accepted_utc": "2026-10-31T12:16:01.362633+00:00",
+  "scope": "Actual product coordinates yield ambient complementary subgroups and actual factor equivalences, with exact retained-coordinate membership.",
+  "source_correspondence": "Actual coordinate-image complementary subgroups and retained-coordinate criterion derived from the product presentation, with no supplied complement oracle. Scoped algebraic supplier only.",
+  "source_commit": "d543c7895a7b2606fbf303afb0f86314856f98e7",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks",
+  "frozen_at_utc": "2026-10-31T12:14:29.237800+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/product-subgroup-split-freeze.json",
+  "freeze_sha256": "af1f88d49a2784f7d49f8c0d857cb779ad664bdc60d49a33238930d770b77dee",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitDefinitions.lean",
+      "sha256": "05a3276ed326ebfd9258195294ac45ffa8c2d7505524ac66ec38fa18a0b581fb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitTargets.lean",
+      "sha256": "9979da3e258fd0b80b60660f960e311bf068112576f41128c625ce7580ebb266"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitStatementChecks.lean",
+      "sha256": "aa44ade17af207f4fdec3be406ab230b5b0c4b1fe96b88ed315b406d8e76ac9d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitProof.lean",
+      "sha256": "5455f55dfbea0e337c222ef580d6a527cc1df7ac846774f96144e8d1cc5e85af"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks.actualSplit"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793448828420960198-2.json",
+      "sha256": "64281670eb57582568515c71728c135d4478797ab494bd95ba9a26857d6c81a7",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793448928726475664-2.json",
+      "sha256": "afe3a517627b960972e113b820a365bd69a2fa6d39494f1bb0d96a4d31aab1a8",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793448928726475664-2-LogicLineages-ModelsAlgebra-PGroups-ProductSubgroupSplitStatementChecks.log",
+  "gate_log_sha256": "7707a55f140c7dfb86a191646c5daeff04b7f75e51ee819a182e18a400477f88",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.ProductSubgroupSplitStatementChecks.actualSplit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitStatementChecks.lean",
+      "sha256": "aa44ade17af207f4fdec3be406ab230b5b0c4b1fe96b88ed315b406d8e76ac9d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitProof.lean",
+      "sha256": "5455f55dfbea0e337c222ef580d6a527cc1df7ac846774f96144e8d1cc5e85af"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitTargets.lean",
+      "sha256": "9979da3e258fd0b80b60660f960e311bf068112576f41128c625ce7580ebb266"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ProductSubgroupSplitDefinitions.lean",
+      "sha256": "05a3276ed326ebfd9258195294ac45ffa8c2d7505524ac66ec38fa18a0b581fb"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SubgroupSumProductDefinitions.lean",
+      "sha256": "524842cb90fc6c13b1c8ac871411a6e03dc5a7bb072c087607b53eaad7fe59cd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Module.NatInt"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

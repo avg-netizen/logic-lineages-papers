@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionStatementChecks
+theorem actualQuotient : Targets.twoInfiniteTerminalDeletion := two_infinite_terminal_deletion
+end LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TwoInfiniteTerminalDeletionStatementChecks
