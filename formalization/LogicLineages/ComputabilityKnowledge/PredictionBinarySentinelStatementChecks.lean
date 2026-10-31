@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionBinarySentinelProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionBinarySentinel.StatementChecks
+theorem effectiveSentinel : PredictionBinarySentinelTargets.EffectiveSentinel := PredictionBinarySentinelProof.effectiveSentinel
+theorem exactNaturalEncoding : PredictionBinarySentinelTargets.ExactNaturalEncoding := PredictionBinarySentinelProof.exactNaturalEncoding
+theorem exactInputLayout : PredictionBinarySentinelTargets.ExactInputLayout := PredictionBinarySentinelProof.exactInputLayout
+theorem injectiveSentinel : PredictionBinarySentinelTargets.InjectiveSentinel := PredictionBinarySentinelProof.injectiveSentinel
+theorem exactBinarySlots : PredictionBinarySentinelTargets.ExactBinarySlots := PredictionBinarySentinelProof.exactBinarySlots
+end LogicLineages.ComputabilityKnowledge.PredictionBinarySentinel.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionBinarySentinel.StatementChecks

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionCompilerFiniteTableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionCompilerFiniteTable.StatementChecks
+open PredictionCompilerFiniteTableTargets PredictionCompilerFiniteTableProof
+theorem exactActionAssembly_check : ExactActionAssembly := exactActionAssembly
+theorem exactTableCode_check : ExactTableCode := exactTableCode
+theorem exactFiniteStep_check : ExactFiniteStep := exactFiniteStep
+theorem exactNumericStep_check : ExactNumericStep := exactNumericStep
+end LogicLineages.ComputabilityKnowledge.PredictionCompilerFiniteTable.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionCompilerFiniteTable.StatementChecks

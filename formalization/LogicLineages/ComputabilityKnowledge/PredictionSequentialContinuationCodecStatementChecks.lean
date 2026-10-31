@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.PredictionSequentialContinuationCodecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.PredictionSequentialContinuationCodec.StatementChecks
+theorem listRoundtrip : Targets.ListRoundtrip := PredictionSequentialContinuationCodec.listRoundtrip
+theorem roundtrip : Targets.Roundtrip := PredictionSequentialContinuationCodec.roundtrip
+theorem foldCorrect : Targets.FoldCorrect := PredictionSequentialContinuationCodec.foldCorrect
+theorem actualPrimcodable : Targets.ActualPrimcodable := PredictionSequentialContinuationCodec.actualPrimcodable
+theorem foldPrimitiveRecursive : Targets.FoldPrimitiveRecursive := PredictionSequentialContinuationCodec.foldPrimitiveRecursive
+end LogicLineages.ComputabilityKnowledge.PredictionSequentialContinuationCodec.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.PredictionSequentialContinuationCodec.StatementChecks

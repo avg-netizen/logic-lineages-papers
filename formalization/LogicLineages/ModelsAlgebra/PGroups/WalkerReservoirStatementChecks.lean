@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerReservoirProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerReservoirStatementChecks
+theorem lowerReservoir : Targets.walkerLowerReservoir := walker_lower_reservoir
+end LogicLineages.ModelsAlgebra.PGroups.WalkerReservoirStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerReservoirStatementChecks

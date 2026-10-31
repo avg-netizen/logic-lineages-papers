@@ -1,0 +1,139 @@
+{
+  "accepted_utc": "2026-10-31T08:40:52.435426+00:00",
+  "scope": "Actual arbitrary direct sum subgroup coordinate characterization and transfinite p-filtration identity, all additive commutative groups and ordinals; no classification or Scott complexity claim.",
+  "source_correspondence": "Actual arbitrary direct sum subgroup coordinate characterization and transfinite p-filtration identity, all additive commutative groups and ordinals; no classification or Scott complexity claim. The right-hand subgroup is the actual range of the direct sum map of subgroup inclusions, not a coordinatewise definition chosen to force the identity. Source registration review remains independent.",
+  "source_commit": "ba3b5851b3ab727e6dd239d67f166927f44cf50f",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.DirectSumFiltrationStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:38:23.794211+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/direct-sum-filtration-freeze.json",
+  "freeze_sha256": "b6623e3159b3885dfdd464192fd39bea8df00a7d82bfb32515609e6fa4915d84",
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationDefinitions.lean",
+      "sha256": "bc46ea4dc36a84b8e33ba98c2366bef03d5450f690fec6cf43dc24bde168898b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationTargets.lean",
+      "sha256": "38f2874087e872b433d420685154c7c35e66033a9175612ae7c0b1baafb6e1b2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationStatementChecks.lean",
+      "sha256": "610d76a6ed4529170c6a409be6ca84219fef85151a3c63eee88c8f5fc4c75306"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationProof.lean",
+      "sha256": "9778664009570ea2a37c57eaf22c281ee7f173a089f991e4f0731ddb6cc4cfd3"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.DirectSumFiltrationStatementChecks.coordinates",
+    "LogicLineages.ModelsAlgebra.PGroups.DirectSumFiltrationStatementChecks.filtration"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793435888590378880-5.json",
+      "sha256": "c6a1819cf28ba2bf5a974b5eaf3dc85e84b8790b2caaa5a6aa683fbdca39bf5f",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793436027804976776-5.json",
+      "sha256": "b92b7c6d4fc53eaabb4b2bf070de9a94af8b4202ae258655f00838fc3d9e9b36",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793436027804976776-5-LogicLineages-ModelsAlgebra-PGroups-DirectSumFiltrationStatementChecks.log",
+  "gate_log_sha256": "a44d5b144b19d1a20311cafd4e3b8d9543dabb886ff6b4e9e838e2c5b33598d3",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.DirectSumFiltrationStatementChecks.coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.DirectSumFiltrationStatementChecks.filtration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationStatementChecks.lean",
+      "sha256": "610d76a6ed4529170c6a409be6ca84219fef85151a3c63eee88c8f5fc4c75306"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationProof.lean",
+      "sha256": "9778664009570ea2a37c57eaf22c281ee7f173a089f991e4f0731ddb6cc4cfd3"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationTargets.lean",
+      "sha256": "38f2874087e872b433d420685154c7c35e66033a9175612ae7c0b1baafb6e1b2"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DirectSumFiltrationDefinitions.lean",
+      "sha256": "bc46ea4dc36a84b8e33ba98c2366bef03d5450f690fec6cf43dc24bde168898b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+      "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteFiltration.lean",
+      "sha256": "5ef09a1845f1f65be132b0961b4de51f316dcdef7d310ec9e6b632d7e1c2b647"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteFiltration.lean",
+      "sha256": "0d011bfc65ac39420a37c205d6fcf66d79cb0df8b7a17f94685933ceca2c8143"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageIntersections.lean",
+      "sha256": "17b40f639b03ca584bbafed259a8f81ac472754f1b66e3e2d8fc458b6ce92acd"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.DirectSum.Basic",
+    "Mathlib.Algebra.Group.Subgroup.Ker",
+    "Mathlib.Algebra.Group.Subgroup.Map",
+    "Mathlib.Algebra.Module.NatInt",
+    "Mathlib.SetTheory.Ordinal.Arithmetic"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}

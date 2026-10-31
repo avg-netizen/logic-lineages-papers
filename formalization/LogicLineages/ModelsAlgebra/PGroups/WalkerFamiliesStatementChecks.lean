@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.WalkerFamiliesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFamiliesStatementChecks
+theorem sourceFamilies : Targets.walkerSourceFamilies := walker_source_families
+end LogicLineages.ModelsAlgebra.PGroups.WalkerFamiliesStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.WalkerFamiliesStatementChecks

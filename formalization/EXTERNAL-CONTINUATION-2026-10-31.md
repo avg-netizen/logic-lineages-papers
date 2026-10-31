@@ -446,3 +446,40 @@ the run took 2.639 seconds and peaked at 2,633,696 KiB RSS. Only the complete
 Walker filtration lemma was promoted; all other new components retain their
 explicit supplier scope. Later call-congruence/compiler work is outside this
 fixed snapshot. No GitHub CI result is claimed.
+
+## Direct sums, numeral certificates and numeric code interfaces
+
+The next supplier checkpoint proves actual transfinite p-filtration
+commutation with arbitrary direct sums and constructs the source lower
+reservoir and odd/even terminal families. Countability, reduced p-primary
+properties where stated, terminal group equivalences and zero upper stages
+are checked. No effectiveness for arbitrary countable ordinals, exact length
+for all r, complete Ulm table or Scott complexity is inferred.
+
+Paper 12's generated finite PR theory now has actual positive AND negative
+Hilbert numeral certificates in the existing calculus. Negative certificates
+are proofs of negated wrong-output equalities, not merely external semantic
+non-derivability. These results still concern the generated PR theory, not
+the named source Base, its self-indexed knowledge theory or internal
+provability/Hilbert--Bernays/Löb properties. The old total ground-diagram
+theory and full-language revision grounds are not silently identified with
+a new finite defining theory.
+
+The machine lane adds actual sequential Code and continuation codecs and
+primitive-recursive interfaces, finite-table execution with both directions
+of encoded-stack output semantics, and a proved leading-one binary sentinel
+layout. Static layout is not a prefix-machine runtime or a complete
+raw-binary compiler. Uniform numeric-index compilation and the input/output
+transducers remain separate until their actual proofs are accepted.
+
+These are supplier acceptances only; the register remains 101 checked,
+2 inherited and 86 pending.
+
+The [twelfth focused checkpoint](verification/repair-2026-10-31/checkpoint-12.json)
+selects 218 gates and audits 659 exact aliases, with all 1,121 focused closure
+hashes unchanged. Its [actual selected-root check](verification/repair-2026-10-31/root-checkpoint12.json)
+passed with 923 imports, 2,974 namespace audits and all 3,347 local closure
+hashes unchanged. The current root-only profile was unchanged; the run took
+2.437 seconds and peaked at 2,636,104 KiB RSS. Fourteen scoped suppliers were
+added, with no whole-statement promotions. Later Ulm additivity, continuation
+interfaces and prefix-machine candidates are not part of this fixed snapshot.

@@ -1,0 +1,147 @@
+{
+  "accepted_utc": "2026-10-31T08:36:42.672015+00:00",
+  "scope": "Actual compiled TM1 statement/TM0 label equality via finite Boolean tests. Numeric coding and rawbinary translation remain separate.",
+  "source_correspondence": "Actual compiled TM1 statement/TM0 label equality via finite Boolean tests. Numeric coding and rawbinary translation remain separate.",
+  "source_commit": "0c37e823a6f1d60feb905182d78c5e45334e80a6",
+  "source_commit_provenance": "Original freeze; Git source blob independently hash-checked at export.",
+  "manuscript_sources": [
+    {
+      "path": "14-complexity-of-prediction-measures/paper.tex",
+      "sha256": "a53fbeb9e7172b3665f7e4fe0988252447110a1a11ec83fd19a0521fe1f454f7"
+    }
+  ],
+  "gate_module": "LogicLineages.ComputabilityKnowledge.PredictionCompilerPostEqualityStatementChecks",
+  "frozen_at_utc": "2026-10-31T08:28:22.992756+00:00",
+  "candidate_absent_at_freeze": true,
+  "freeze_path": "verification/repair-2026-10-31/prediction-compiler-post-equality-freeze.json",
+  "freeze_sha256": "fb3168765923cef25929faf62e312eeb19482a9468a026adde457f8a267ab83a",
+  "sources": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityDefinitions.lean",
+      "sha256": "71d0de8736c30397e46785aee84a74e93a1b687092662cf267ba9cb9fe12506c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityTargets.lean",
+      "sha256": "0e6802b6c98bb5fa46f13d7b67dd65c491f872281eb260e6651ae67025f6f5a7"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityStatementChecks.lean",
+      "sha256": "736752f96bc4e21f5c8e4d2f4842143c55e456eb0da18cc1a76d0d24cafaeb8f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityProof.lean",
+      "sha256": "f68c25e4414a4e9d7126fdaddcb3a65703f16da5f86ed742a6f06ef20a9e871f"
+    }
+  ],
+  "fixed_theorems": [
+    "LogicLineages.ComputabilityKnowledge.PredictionCompilerPostEquality.StatementChecks.exactTapeStatementEquality",
+    "LogicLineages.ComputabilityKnowledge.PredictionCompilerPostEquality.StatementChecks.exactPostLabelEquality"
+  ],
+  "receipts": [
+    {
+      "path": "build-reports/1793435273539879683-5.json",
+      "sha256": "11767db86a0fdc031bbdceca3bf3eb58d2431b11ecc0f138528fb25ab98d1241",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    },
+    {
+      "path": "build-reports/1793435745615363022-5.json",
+      "sha256": "a099eec07e7c612384ea486377ec9502dccfd43cb33a72312b57198fd4f09bd3",
+      "profiles": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "minimum_free_mib": 2048,
+        "cpu_seconds": 90,
+        "wall_seconds": 180,
+        "threads": 1
+      }
+    }
+  ],
+  "gate_log_path": "build-reports/1793435745615363022-5-LogicLineages-ComputabilityKnowledge-PredictionCompilerPostEqualityStatementChecks.log",
+  "gate_log_sha256": "eb13df45ff4c9c0d749fb88ad23e49be67da46f69e7c4ceae88d63dedb6642d1",
+  "axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.PredictionCompilerPostEquality.StatementChecks.exactPostLabelEquality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PredictionCompilerPostEquality.StatementChecks.exactTapeStatementEquality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityStatementChecks.lean",
+      "sha256": "736752f96bc4e21f5c8e4d2f4842143c55e456eb0da18cc1a76d0d24cafaeb8f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityProof.lean",
+      "sha256": "f68c25e4414a4e9d7126fdaddcb3a65703f16da5f86ed742a6f06ef20a9e871f"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityTargets.lean",
+      "sha256": "0e6802b6c98bb5fa46f13d7b67dd65c491f872281eb260e6651ae67025f6f5a7"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerPostEqualityDefinitions.lean",
+      "sha256": "71d0de8736c30397e46785aee84a74e93a1b687092662cf267ba9cb9fe12506c"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerLabelEqualityDefinitions.lean",
+      "sha256": "11f7c507626f0fe126786f5b6545d6fc2ec6e419fca2097ef6a05cadf370e44a"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerTapeSupportDefinitions.lean",
+      "sha256": "23eaab3bb1523708b6b0c5781b4cb58f1be2961e632d7b96811a76ccb8349ee4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerSupportDefinitions.lean",
+      "sha256": "381055fc0efa6186cbe59763e08dac1fdc047f9403c11e18ef39da5d1ae90bd4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerAlphabetEqualityDefinitions.lean",
+      "sha256": "acf7c5f2aeb7e464bbe8c3ba1e43ac8ea86aa32eea05651d2f5906a813cc9679"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerLabelEqualityProof.lean",
+      "sha256": "b4803cb19744f20621559a2f73cde35f2ace9b54ddc1dd26b3206b06bb459468"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerLabelEqualityTargets.lean",
+      "sha256": "2fefc07872275b9653779760df6589a1bc552bc79a92ade5322bd6fe8815d9fd"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerAlphabetEqualityProof.lean",
+      "sha256": "2a9e0f1601ce117dea9becc5d23deea9b8cf5bccab69669d2602a7f4a05f6ec4"
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/PredictionCompilerAlphabetEqualityTargets.lean",
+      "sha256": "3069f5ab9958def78f2dce29aa86cfafd5c9d06a000f6bf2f72b09b40e9717e1"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ],
+  "external_imports": [
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.TuringMachine.ToPartrec"
+  ],
+  "supplementary_receipt_failures": [],
+  "verification_scope": {
+    "new_component_sources_directly_compiled": true,
+    "full_local_closure_fresh_in_one_invocation": false,
+    "official_upstream_cached": true,
+    "remote_ci_checked": false,
+    "notes": "Comparator and candidate sources directly compiled in the supplied receipt set; final receipt directly recompiles the gate. A successful prefix of an otherwise failed supplementary invocation is used only for its successful matching source rows. Any such failure is listed. Cached local imports are not claimed as direct recompiles. Closure hashes are current source snapshot, not before/after build attestation."
+  }
+}
