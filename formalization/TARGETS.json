@@ -521,7 +521,19 @@
           "statement_latex": "\\label{thm:decision}\nThere is an algorithm which, given any finite family $\\mathcal U$ of\nfinite order forests, decides whether $\\mathcal C(\\mathcal U)$ has JEP.\nMore precisely, set\n\\[\n \\mathcal F=\\{P_4,C_4\\}\\cup\\{\\Comp(U):U\\in\\mathcal U\\}.\n\\]\nThen $\\mathcal C(\\mathcal U)$ has JEP if and only if $\\Forb(\\mathcal F)$\nhas JEP.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmptyStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ProfileLanguageEmptyStatementChecks.json",
+              "scope": "Executable saturation/emptiness for the actual constructed source machine, not the full JEP decision algorithm."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecisionStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ProfileExceptionalDecisionStatementChecks.json",
+              "scope": "Sound executable partial YES answer for an empty forbidden graph or empty parse language, returning none otherwise. No general JEP decision claim."
+            }
+          ]
         },
         {
           "id": "03-joint-embedding-finite-forests:prop:certificate",
@@ -771,6 +783,11 @@
               "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponentsStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationComponentsStatementChecks.json",
               "scope": "Actual connected-fiber reachability and graph-isomorphism-induced component permutation/fiber isomorphisms under genuine connected-fiber hypotheses. Full reduced cotree uniqueness remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotreeStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/ForestParseRepresentationCotreeStatementChecks.json",
+              "scope": "Actual alternating reduced multiway cotree components and recursive graph-isomorphism uniqueness preserving multiplicities. Existence/flattening and full binary association/permutation characterization remain separate."
             }
           ]
         },
@@ -1281,15 +1298,19 @@
           "file": "05-wilken-weiermann-foundations/source-syntax.tex",
           "line": 92,
           "statement_latex": "\\label{wwsc:prop:finite}\nFor a fixed policy, all literal partials and zero-history assignments\nare uniquely determined finite trees. Their expansions have computable\nbounds in the input trees and type levels. For a fixed input tree,\nchanging only the output associations of a partial does not change\nits ordinal value.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRepairedFiniteExpansion",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/WWLiteralPartialDomainTargets.lean",
+            "sha256": "069908e50b1fd8d79a60f767e289dfa0db7a4063ab5eea7ff18ee7cc19dfc20e",
+            "type": "LogicLineages.OrdinalComparison.Source.Targets.ActualRepairedFiniteExpansion"
+          },
           "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
           "checked_components": [
             {
               "gate_module": "LogicLineages.OrdinalComparison.WWLiteralSizeStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWLiteralSizeStatementChecks.json",
-              "scope": "Literal node/weighted-size/whole-free-first partial-size and multiplier bounds only. Policy-relative finite assignments, output expansion and association-value assertions remain pending."
+              "scope": "Literal node/weighted-size/whole-free-first partial-size and multiplier bounds only; assignment, output expansion and association-value assertions are supplied by later components."
             },
             {
               "gate_module": "LogicLineages.OrdinalComparison.WWPolicyAssignmentStatementChecks",
@@ -1314,9 +1335,27 @@
             {
               "gate_module": "LogicLineages.OrdinalComparison.WWAdmissibleExpansionStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/WWAdmissibleExpansionStatementChecks.json",
-              "scope": "All-policy partial-coordinate E(n)=6*3^n node bound, positive repeat exact node formula and positive box recurrence. Full composed original-source assignment bound remains separately pending."
+              "scope": "All-policy partial-coordinate E(n)=6*3^n node bound, positive repeat exact node formula and positive box recurrence; the composed original-source assignment bound is recorded separately."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWAdmissibleAssignmentBoundStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWAdmissibleAssignmentBoundStatementChecks.json",
+              "scope": "Policy-independent executable recursive source-node bound and unique bounded whole-source assignment, with actual aggregation/abstraction/box bounds."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWLiteralPartialDomainStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWLiteralPartialDomainStatementChecks.json",
+              "scope": "Independent literal syntactic domain with whole-free promotion, exact success equivalence and unique bounded partial outputs; composed whole repaired finite-expansion conjunction."
             }
-          ]
+          ],
+          "verification_receipt": "build-reports/1793419679864684555-5.json",
+          "acceptance_record": "verification/repair-2026-10-31/WWLiteralPartialDomainStatementChecks.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole repaired finite-expansion proposition: independent literal syntactic admission includes whole-free promotion and all actual recursion clauses; partials and original zero-history assignments have unique finite outputs with executable policy-independent node bounds, and partial values for the same fixed input are independent of structural policy. The result for all structural policies includes the source computable policies; it does not assert that arbitrary selectors are computable. No ordinal/collapse evaluation, original norm admissibility or full scalar translation claim is needed or made."
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:thm:weak",
@@ -1328,7 +1367,19 @@
           "status": "pending",
           "accepted_declaration": null,
           "frozen_comparator": null,
-          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt."
+          "source_review_note": "New numbered statement in the 30 October manuscript repair; no kernel verification is claimed by the source-repair receipt.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWFiniteTailMonotonicityStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWFiniteTailMonotonicityStatementChecks.json",
+              "scope": "Actual finite-tail collapse increment and monotonicity below epsilon zero, using proved norm calibration. No global collapse monotonicity or full original C_i weak scalar claim."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WWFiniteNaturalTailStatementChecks",
+              "acceptance_record": "verification/repair-2026-10-31/WWFiniteNaturalTailStatementChecks.json",
+              "scope": "Actual natural finite-right sum calibration and fixed-head collapse monotonicity. Original B-vector substitution/C_i weak scalar domain remains a separate obligation."
+            }
+          ]
         },
         {
           "id": "05-wilken-weiermann-foundations:wwsc:lem:free",

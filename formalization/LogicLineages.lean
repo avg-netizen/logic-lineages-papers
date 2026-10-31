@@ -707,14 +707,6 @@ public import LogicLineages.OrdinalComparison.FiniteCoefficientCodingStatementCh
 public import LogicLineages.OrdinalComparison.PositiveUnaryIdentityStatementChecks
 public import LogicLineages.OrdinalComparison.SourceArrowSuffixesStatementChecks
 public import LogicLineages.OrdinalComparison.SourceCoherentRestrictionStatementChecks
-public meta import LogicLineages.Audit
-
-/-! Accepted, incomplete coverage of the public papers.
-Only fixed statement gates with successful compiler and axiom receipts belong
-here. The full paper inventory and remaining dependencies are in TARGETS.json.
--/
-
-#audit_namespace LogicLineages
 public import LogicLineages.ModelsAlgebra.Forests.RankedParseStatementChecks
 public import LogicLineages.OrdinalComparison.WWLiteralSizeStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.FiniteIdealCoverStatementChecks
@@ -735,3 +727,18 @@ public import LogicLineages.OrdinalComparison.WWAdmissibleExpansionStatementChec
 public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationACStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegularStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponentsStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmptyStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecisionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotreeStatementChecks
+public import LogicLineages.OrdinalComparison.WWAdmissibleAssignmentBoundStatementChecks
+public import LogicLineages.OrdinalComparison.WWLiteralPartialDomainStatementChecks
+public import LogicLineages.OrdinalComparison.WWFiniteTailMonotonicityStatementChecks
+public import LogicLineages.OrdinalComparison.WWFiniteNaturalTailStatementChecks
+public meta import LogicLineages.Audit
+
+/-! Accepted, incomplete coverage of the public papers.
+Only fixed statement gates with successful compiler and axiom receipts belong
+here. The full paper inventory and remaining dependencies are in TARGETS.json.
+-/
+
+#audit_namespace LogicLineages

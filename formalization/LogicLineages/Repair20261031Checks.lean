@@ -20,6 +20,13 @@ public import LogicLineages.OrdinalComparison.WWAdmissibleExpansionStatementChec
 public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationACStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.ProfileSourceRegularStatementChecks
 public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponentsStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmptyStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecisionStatementChecks
+public import LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotreeStatementChecks
+public import LogicLineages.OrdinalComparison.WWAdmissibleAssignmentBoundStatementChecks
+public import LogicLineages.OrdinalComparison.WWLiteralPartialDomainStatementChecks
+public import LogicLineages.OrdinalComparison.WWFiniteTailMonotonicityStatementChecks
+public import LogicLineages.OrdinalComparison.WWFiniteNaturalTailStatementChecks
 public meta import LogicLineages.Audit
 
 /-! Focused aggregate for the repaired-source continuation. This does not
@@ -199,6 +206,94 @@ theorem checked_ForestParseRepresentationComponents_fiberReachability :
 theorem checked_ForestParseRepresentationComponents_fiberIsoRecovery :
     LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponents.Targets.FiberIsoRecovery :=
   LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationComponents.StatementChecks.fiberIsoRecovery
+
+theorem checked_ProfileLanguageEmpty_reachableHeightExact :
+    LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.Targets.ReachableHeightExact :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.StatementChecks.reachableHeightExact
+
+theorem checked_ProfileLanguageEmpty_reachableSaturation :
+    LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.Targets.ReachableSaturation :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.StatementChecks.reachableSaturation
+
+theorem checked_ProfileLanguageEmpty_machineEmptyCorrect :
+    LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.Targets.MachineEmptyCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.StatementChecks.machineEmptyCorrect
+
+theorem checked_ProfileLanguageEmpty_sourceEmptyCorrect :
+    LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.Targets.SourceEmptyCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileLanguageEmpty.StatementChecks.sourceEmptyCorrect
+
+theorem checked_ProfileExceptionalDecision_emptyInputCorrect :
+    LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.Targets.EmptyInputCorrect :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.StatementChecks.emptyInputCorrect
+
+theorem checked_ProfileExceptionalDecision_emptyForbiddenCase :
+    LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.Targets.EmptyForbiddenCase :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.StatementChecks.emptyForbiddenCase
+
+theorem checked_ProfileExceptionalDecision_emptyLanguageCase :
+    LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.Targets.EmptyLanguageCase :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.StatementChecks.emptyLanguageCase
+
+theorem checked_ProfileExceptionalDecision_exceptionSound :
+    LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.Targets.ExceptionSound :=
+  LogicLineages.ModelsAlgebra.Forests.ProfileExceptionalDecision.StatementChecks.exceptionSound
+
+theorem checked_ForestParseRepresentationCotree_reducedComponents :
+    LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotree.Targets.ReducedComponents :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotree.StatementChecks.reducedComponents
+
+theorem checked_ForestParseRepresentationCotree_reducedUniqueness :
+    LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotree.Targets.ReducedUniqueness :=
+  LogicLineages.ModelsAlgebra.Forests.ForestParseRepresentationCotree.StatementChecks.reducedUniqueness
+
+theorem checked_WWAdmissibleAssignmentBound_fixed_actualAdmissibleAggregationBound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleAggregationBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleAggregationBound
+
+theorem checked_WWAdmissibleAssignmentBound_fixed_actualAdmissibleAbstractionBound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleAbstractionBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleAbstractionBound
+
+theorem checked_WWAdmissibleAssignmentBound_fixed_actualAdmissibleBoxBound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleBoxBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleBoxBound
+
+theorem checked_WWAdmissibleAssignmentBound_fixed_actualAdmissibleSourceBound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleSourceBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleSourceBound
+
+theorem checked_WWAdmissibleAssignmentBound_fixed_actualAdmissibleUniqueBoundedAssignment :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualAdmissibleUniqueBoundedAssignment :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualAdmissibleUniqueBoundedAssignment
+
+theorem checked_WWLiteralPartialDomain_fixed_actualLiteralPartialDomain :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualLiteralPartialDomain :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLiteralPartialDomain
+
+theorem checked_WWLiteralPartialDomain_fixed_actualLiteralPartialUniqueBound :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualLiteralPartialUniqueBound :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualLiteralPartialUniqueBound
+
+theorem checked_WWLiteralPartialDomain_fixed_actualRepairedFiniteExpansion :
+    LogicLineages.OrdinalComparison.Source.Targets.ActualRepairedFiniteExpansion :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualRepairedFiniteExpansion
+
+theorem checked_WWFiniteTailMonotonicity_fixed_actualCollapseFiniteTailIncrement :
+    LogicLineages.OrdinalComparison.Targets.ActualCollapseFiniteTailIncrement :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCollapseFiniteTailIncrement
+
+theorem checked_WWFiniteTailMonotonicity_fixed_actualCollapseFiniteTailMonotone :
+    LogicLineages.OrdinalComparison.Targets.ActualCollapseFiniteTailMonotone :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCollapseFiniteTailMonotone
+
+theorem checked_WWFiniteNaturalTail_fixed_actualNaturalSumFiniteRight :
+    LogicLineages.OrdinalComparison.Targets.ActualNaturalSumFiniteRight :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualNaturalSumFiniteRight
+
+theorem checked_WWFiniteNaturalTail_fixed_actualCollapseNaturalFiniteTailMonotone :
+    LogicLineages.OrdinalComparison.Targets.ActualCollapseNaturalFiniteTailMonotone :=
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_actualCollapseNaturalFiniteTailMonotone
 
 end LogicLineages.Repair20261031Checks
 

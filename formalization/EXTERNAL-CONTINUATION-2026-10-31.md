@@ -30,8 +30,8 @@ statements, not automatic certificates of new or changed statements.
 - **Paper 05, literal size bounds: checked suppliers.** The whole-free-first
   partial size is bounded by literal weighted size, itself bounded by
   `2^nodes - 1`; the corresponding finite-list multiplier bound also passed.
-  This does **not** complete `wwsc:prop:finite`, whose assignment, output
-  expansion and association-value assertions remain pending.
+  These inequalities alone do not complete `wwsc:prop:finite`; the later
+  combined finite-expansion result below supplies the remaining assertions.
   [Acceptance evidence](verification/repair-2026-10-31/WWLiteralSizeStatementChecks.json).
 - **Paper 03, finite ideal-cover criterion: checked supplier.** A finite
   hereditary directed cover has JEP exactly when one piece covers the class.
@@ -64,8 +64,8 @@ statements, not automatic certificates of new or changed statements.
   input tree, successful L partials have R partials with equal coordinate
   denotations for every valuation. This is compatible with the 204/184
   whole-source distinction, because policy-dependent assignments can supply
-  different input trees to later partials. Arbitrary admissible policies and
-  the remaining finite-expansion assertions are still pending.
+  different input trees to later partials. Arbitrary-policy and composed
+  expansion coverage is recorded separately below.
   [Evidence](verification/repair-2026-10-31/WWPolicyValueStatementChecks.json).
 - **Paper 03, `lem:image-cover`: checked in full.** Every finite order forest
   has an actual ranked-parse graph representation. This identifies the
@@ -111,20 +111,49 @@ statements, not automatic certificates of new or changed statements.
   under every structural macro policy, with ground-context positive
   closedness. Partial outputs satisfy `6*3^inputNodes`, positive repeats have
   the exact node count, and positive box outputs satisfy the source recurrence.
-  The whole-source composed bound and full intended partial-domain coverage
-  remain separate from these local formulas.
+  The later combined theorem adds the whole-source bound and full intended
+  partial-domain coverage to these local formulas.
   [Assignment evidence](verification/repair-2026-10-31/WWAdmissibleAssignmentStatementChecks.json)
   and [expansion evidence](verification/repair-2026-10-31/WWAdmissibleExpansionStatementChecks.json).
+- **Paper 05, `wwsc:prop:finite`: checked in full.** An independently defined
+  literal syntactic domain includes whole-free promotion and all actual
+  partial recursion clauses. Partials and all original zero-history source
+  assignments have unique finite outputs, with proved executable numerical
+  bounds independent of policy. Partial values for the same literal input
+  are invariant under all structural policies. This stronger scope includes
+  computable policies without claiming that arbitrary selectors themselves
+  are computable. It does not claim original norm admissibility or scalar
+  translation/evaluation.
+  [Composed-bound evidence](verification/repair-2026-10-31/WWAdmissibleAssignmentBoundStatementChecks.json)
+  and [whole-proposition evidence](verification/repair-2026-10-31/WWLiteralPartialDomainStatementChecks.json).
+- **Paper 03, exact exceptional decisions: checked suppliers.** Symbolic
+  finite-state saturation decides emptiness of the actual source machine.
+  An empty forbidden graph or empty parse language gives a proved sound
+  partial YES answer for actual graph-class JEP; other cases return no answer.
+  [Emptiness evidence](verification/repair-2026-10-31/ProfileLanguageEmptyStatementChecks.json)
+  and [exception evidence](verification/repair-2026-10-31/ProfileExceptionalDecisionStatementChecks.json).
+- **Paper 03, reduced cotree uniqueness: checked supplier.** Actual reduced
+  multiway cotrees have the required component semantics, and graph
+  isomorphism recovers their recursive unordered structure with multiplicity.
+  Whole canonical-cotree coverage still needs the complete existence and
+  binary-expansion chain.
+  [Evidence](verification/repair-2026-10-31/ForestParseRepresentationCotreeStatementChecks.json).
+- **Paper 05, finite-tail collapse facts: checked suppliers.** Actual
+  finite-tail norm/increment monotonicity and natural finite-right sum
+  calibration support the weak scalar proof. These are not global collapse
+  monotonicity and do not replace the original bounded-substitution domain.
+  [Tail evidence](verification/repair-2026-10-31/WWFiniteTailMonotonicityStatementChecks.json)
+  and [calibration evidence](verification/repair-2026-10-31/WWFiniteNaturalTailStatementChecks.json).
 
-After source reconciliation and three whole-lemma acceptances, the register
-contains **189 statements: 88 checked, 2 inherited calculator-package results,
-and 99 pending**. The repair introduced eleven new numbered obligations.
+After source reconciliation and four whole-statement acceptances, the register
+contains **189 statements: 89 checked, 2 inherited calculator-package results,
+and 98 pending**. The repair introduced eleven new numbered obligations.
 
 ## Work in progress
 
-The next targets are actual machine emptiness and reduced cotree semantics for
-paper 03, and whole-source expansion bounds and partial-domain coverage for
-paper 05. Whole decision and norm claims remain pending until their full
+The next targets are complete canonical cotree/binary expansion and actual
+CFG transition semantics for paper 03, and the original bounded B-vector
+substitution/C_i domain and weak scalar proof for paper 05. Whole decision and norm claims remain pending until their full
 formal dependency chains are proved. In particular, bibliographic references
 to effective ideal decomposition and Parikh's theorem are not Lean suppliers.
 
@@ -174,3 +203,16 @@ adapter raises the register to 88 checked. One expansion gate needed the
 same audit-visibility repair as the earlier aggregate: only an empty imported
 namespace audit was removed, with all fixed aliases and their actual audits
 retained. The prior freeze, failed receipt and exact amendment are preserved.
+
+The [fifth focused checkpoint](verification/repair-2026-10-31/checkpoint-05.json)
+combines twenty-seven accepted gates and seventy-three exact-type aliases.
+All 180 local closure source hashes match before and after compilation. The
+root selects 732 gates; the whole-root build remains separate. The finite
+expansion proposition raises the register to 89 checked.
+
+This checkpoint also corrects an integration-layout error in the root module:
+the continuation imports are now before the global audit command, in the
+module header. No proof or fixed gate changed. A [static layout check](verification/repair-2026-10-31/root-header-layout-check.json)
+records the exact move. Earlier focused component checks remain valid, but
+did not check this root layout. Whole-root revalidation is now planned in
+serialized batches. This does not diagnose the historical CI failures.

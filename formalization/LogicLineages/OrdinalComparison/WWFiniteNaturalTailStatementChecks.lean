@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWFiniteNaturalTailProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualNaturalSumFiniteRight : Targets.ActualNaturalSumFiniteRight :=
+  actualNaturalSumFiniteRight
+
+theorem fixed_actualCollapseNaturalFiniteTailMonotone : Targets.ActualCollapseNaturalFiniteTailMonotone :=
+  actualCollapseNaturalFiniteTailMonotone
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

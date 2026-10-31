@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.WWAdmissibleAssignmentBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualAdmissibleAggregationBound : Source.Targets.ActualAdmissibleAggregationBound :=
+  Source.AdmissibleAssignmentBound.actualAdmissibleAggregationBound
+
+theorem fixed_actualAdmissibleAbstractionBound : Source.Targets.ActualAdmissibleAbstractionBound :=
+  Source.AdmissibleAssignmentBound.actualAdmissibleAbstractionBound
+
+theorem fixed_actualAdmissibleBoxBound : Source.Targets.ActualAdmissibleBoxBound :=
+  Source.AdmissibleAssignmentBound.actualAdmissibleBoxBound
+
+theorem fixed_actualAdmissibleSourceBound : Source.Targets.ActualAdmissibleSourceBound :=
+  Source.AdmissibleAssignmentBound.actualAdmissibleSourceBound
+
+theorem fixed_actualAdmissibleUniqueBoundedAssignment : Source.Targets.ActualAdmissibleUniqueBoundedAssignment :=
+  Source.AdmissibleAssignmentBound.actualAdmissibleUniqueBoundedAssignment
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks

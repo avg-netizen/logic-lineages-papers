@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.WWFiniteTailMonotonicityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.StatementChecks
+
+theorem fixed_actualCollapseFiniteTailIncrement : Targets.ActualCollapseFiniteTailIncrement :=
+  actualCollapseFiniteTailIncrement
+
+theorem fixed_actualCollapseFiniteTailMonotone : Targets.ActualCollapseFiniteTailMonotone :=
+  actualCollapseFiniteTailMonotone
+
+end LogicLineages.OrdinalComparison.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.StatementChecks
