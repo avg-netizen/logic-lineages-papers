@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrimaryDivisibleEmbeddingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrimaryDivisibleEmbeddingStatementChecks
+theorem actualEmbedding : Targets.countablePrimaryDivisibleEmbedding := countable_primary_divisible_embedding
+end LogicLineages.ModelsAlgebra.PGroups.PrimaryDivisibleEmbeddingStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrimaryDivisibleEmbeddingStatementChecks

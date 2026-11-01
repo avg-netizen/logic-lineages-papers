@@ -1,0 +1,154 @@
+{
+  "accepted_utc": "2026-10-31T23:37:04.455220+00:00",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.SoclePullbackStatementChecks",
+  "scope": "Literal pullback projection is surjective and its actual transfinite p-filtration agrees with the full preimage of the source filtration at EVERY stage through the cut. Only actual nonzero p, target divisibility, quotient surjectivity and below-cut socle-surjectivity are supplied.",
+  "source_label": "lem:prescribed-tail",
+  "numbered_statement_promotions": [],
+  "freeze_path": "verification/local-resume-2026-10-31/models/SoclePullback-FROZEN.json",
+  "freeze_sha256": "bc4f337fa4987ba4aeb7d605689775cf69138acac1dd8a069bb599f2af4d5b5f",
+  "candidate_absent_at_freeze": true,
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.SoclePullbackStatementChecks.actualFiltration"
+  ],
+  "fixed_types": [
+    "Targets.actualSoclePullbackFiltration"
+  ],
+  "receipts": [
+    {
+      "path": "verification/local-resume-2026-10-31/models/1793489781958007635-2.json",
+      "sha256": "3f2b6602406c845da197f5061c4632513cf3341edf75e138b971e132a79ca040"
+    }
+  ],
+  "gate_log_path": "verification/local-resume-2026-10-31/models/SoclePullback-AXIOMS.log",
+  "gate_log_sha256": "6c256c5d8aa9621c7240a7c22b9427cc3e63d99845bd406d090ac79cef1aadc8",
+  "gate_log_scope": "Actual complete successful gate stdout copied from check.py receipt log.",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.SoclePullbackStatementChecks.actualFiltration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackDefinitions.lean",
+      "sha256": "93d008a0b284dc91a7f69851945aff14f59b0d0c0f6a5c2f326f1cdc9d2b6d3f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackTargets.lean",
+      "sha256": "5533c9a77ed9367bd7f49864b54101f8caa274725bb1cea27227c64112d75454"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackProof.lean",
+      "sha256": "23d5d4f4e09ce4f3c0b46aee9d1975c4695a17c2365facbcb600adc531ab0811"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackStatementChecks.lean",
+      "sha256": "ecc04dc616f6c2419487259d5c80c754d584afaf7e162b29a326180762d673c0"
+    }
+  ],
+  "manuscript_sources": [
+    {
+      "path": "01-scott-complexity-abelian-p-groups/paper.tex",
+      "sha256": "a18eaaf18d85757bc459c591fb5ada85e948636da06eac786bf73402d33be902"
+    }
+  ],
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackStatementChecks.lean",
+      "sha256": "ecc04dc616f6c2419487259d5c80c754d584afaf7e162b29a326180762d673c0"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackProof.lean",
+      "sha256": "23d5d4f4e09ce4f3c0b46aee9d1975c4695a17c2365facbcb600adc531ab0811"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackTargets.lean",
+      "sha256": "5533c9a77ed9367bd7f49864b54101f8caa274725bb1cea27227c64112d75454"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/SoclePullbackDefinitions.lean",
+      "sha256": "93d008a0b284dc91a7f69851945aff14f59b0d0c0f6a5c2f326f1cdc9d2b6d3f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CofinalSocleMapTargets.lean",
+      "sha256": "f2a30cf7dece87c7f97be1becccbfe782191bc7e3d90eb46937f642bb9446b15"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/LocalSocleBFDefinitions.lean",
+      "sha256": "946303611f79663ef5bdd79da2c8755e7dad905fd88e9ff6db607b12197e5b4d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfiniteDivisibleBFDefinitions.lean",
+      "sha256": "b5011fe4c98e9d17ccf800f897921958fa063aaa96d7d7b4284d9af762a3588f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferSocleDefinitions.lean",
+      "sha256": "a912b9a66c8627cccf72fe39d4ed679f42ffb42b74f2eaf770d563df0debd86f"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/PrueferModelDefinitions.lean",
+      "sha256": "fa5b407fc3755fca512c2c12e878debf44c9d35bffdf57dce74c34a89381d12d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePartDefinitions.lean",
+      "sha256": "07b18d41ee72f4b1c0f778e791b99d4d5af92abb7d739b4fdecacf6c82ab3870"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+      "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+      "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthDefinitions.lean",
+      "sha256": "2ec84e50e27d9eba581f6c3adf6f2e8bd08b1c29372e30e1155ba50430b1dc73"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReducedUlmClassificationDefinitions.lean",
+      "sha256": "2f33496b4b9d80890f44750676b45e79ae0ad630f16a72e4b060984fdd32e799"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableUlmDefinitions.lean",
+      "sha256": "86f2c5ac18f2e460691f43c0ef4509d1e13254f6feec2ba59113cbc64804c758"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroDefinitions.lean",
+      "sha256": "493ec60e7673c879755caaf39753d4a1a3847d858de15553a6f0bccfb50b3581"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionDefinitions.lean",
+      "sha256": "b020dd31feede2459e3b77b6d5228c812499c91d2669612a10122caf6d10daae"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleSplittingDefinitions.lean",
+      "sha256": "daf5e65ee9bbc457308916c0669c03104e970f15950d7e2f72270a690df5905b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteFiltration.lean",
+      "sha256": "5ef09a1845f1f65be132b0961b4de51f316dcdef7d310ec9e6b632d7e1c2b647"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiniteFiltration.lean",
+      "sha256": "0d011bfc65ac39420a37c205d6fcf66d79cb0df8b7a17f94685933ceca2c8143"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ImageIntersections.lean",
+      "sha256": "17b40f639b03ca584bbafed259a8f81ac472754f1b66e3e2d8fc458b6ce92acd"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ]
+}

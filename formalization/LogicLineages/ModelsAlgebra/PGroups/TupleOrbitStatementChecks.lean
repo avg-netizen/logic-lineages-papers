@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TupleOrbitProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TupleOrbitStatementChecks
+theorem actualShortOrbits : Targets.shortStableTupleOrbitDefinable :=
+  short_stable_tuple_orbit_definable
+end LogicLineages.ModelsAlgebra.PGroups.TupleOrbitStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TupleOrbitStatementChecks

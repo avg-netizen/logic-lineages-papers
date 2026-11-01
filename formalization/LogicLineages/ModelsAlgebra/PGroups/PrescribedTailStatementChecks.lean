@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PrescribedTailProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PrescribedTailStatementChecks
+theorem fullPrescribedTail : Targets.transfinitePrescribedTailExistence := transfinite_prescribed_tail_existence
+end LogicLineages.ModelsAlgebra.PGroups.PrescribedTailStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PrescribedTailStatementChecks

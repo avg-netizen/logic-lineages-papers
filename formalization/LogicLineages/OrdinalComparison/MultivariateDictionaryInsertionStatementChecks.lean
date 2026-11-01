@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateDictionaryInsertionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateDictionary.StatementChecks
+
+theorem fixed_canonical_insertion : Targets.MultivariateDictionaryCanonicalInsertion := canonical_insertion
+theorem fixed_coefficients : Targets.MultivariateDictionaryCoefficients := coefficients
+
+end LogicLineages.OrdinalComparison.MultivariateDictionary.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateDictionary

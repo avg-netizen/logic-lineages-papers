@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateIdentitySourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateIdentitySource.StatementChecks
+
+theorem fixed_full_identity : Targets.FullActualMultivariateIdentity := full_identity
+
+end LogicLineages.OrdinalComparison.MultivariateIdentitySource.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateIdentitySource

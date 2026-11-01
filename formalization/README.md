@@ -1,3 +1,7 @@
+Current local checkpoint: **paused after the completed rounds, 1 November 2026 UTC**. The register has **134 checked, 2 inherited and 53 pending statements out of 189**. Read [the complete handoff](HANDOFF-2026-11-01.md); the older releases below are historical.
+
+Local formalization was explicitly resumed on31October2026 from5cff59d. See [AGENTS.md](AGENTS.md) for current allocation; the old cutoff below is historical.
+
 Local workers paused at the user-requested 10 p.m. America/Chicago cutoff (30 October 2026 03:00 UTC). No automatic local resume. Separately authorized external work and fresh-clone builds remain possible.
 
 # Formalizing the public papers

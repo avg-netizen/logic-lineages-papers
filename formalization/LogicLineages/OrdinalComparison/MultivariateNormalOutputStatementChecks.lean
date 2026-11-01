@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateNormalOutputProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateNormalValidity.StatementChecks
+
+theorem fixed_full_validity : Targets.FullMultivariateNormalFormValidity := full_validity
+
+end LogicLineages.OrdinalComparison.MultivariateNormalValidity.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateNormalValidity

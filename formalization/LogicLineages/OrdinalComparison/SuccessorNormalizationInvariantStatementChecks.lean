@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SuccessorNormalizationInvariantProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SuccessorNormalization.StatementChecks
+
+theorem fixed_trace_invariant : Targets.ActualSuccessorNormalizationTraceInvariant := trace_invariant
+
+end LogicLineages.OrdinalComparison.SuccessorNormalization.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.SuccessorNormalization

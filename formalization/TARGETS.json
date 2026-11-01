@@ -8,7 +8,7 @@
     {
       "paper": "01-scott-complexity-abelian-p-groups",
       "owner": "models-algebra",
-      "status": "in-progress",
+      "status": "checked",
       "source_files": [
         "01-scott-complexity-abelian-p-groups/paper.tex",
         "01-scott-complexity-abelian-p-groups/preamble.tex"
@@ -17,15 +17,16 @@
       "dependency_obligations": [
         {
           "description": "Infinitary formula syntax and Scott-sentence semantics",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Transfinite p-filtration and back-and-forth relations",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Ulm/Zippin realization and the cited reduced-group comparison theorem",
-          "status": "pending"
+          "status": "checked",
+          "coverage_note": "Actual algebraic Ulm classification and source prescribed-tail existence are proved directly; no general Zippin realization oracle."
         }
       ],
       "statements": [
@@ -308,9 +309,22 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 272,
           "statement_latex": "[Transfinite prescribed-tail existence]\n\\label{lem:prescribed-tail}\nLet $\\gamma>0$ be countable, put $\\delta=\\omega\\gamma$, and let $G$\nbe a countable reduced Abelian $p$-group of length at least $\\delta$.\nFor every nonzero countable reduced $p$-group $T$ there is a countable\nreduced $p$-group $H(T)$ such that\n\\[\n u_{H(T)}(\\xi)=u_G(\\xi)\\quad(\\xi<\\delta),\n \\qquad H(T)_\\delta\\cong T.\n\\]\nIts length is $\\delta+\\lambda_T$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.PrescribedTailStatementChecks.fullPrescribedTail",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/PrescribedTailTargets.lean",
+            "sha256": "e64f5679101dc40266d3f5862b052b0d95f5216133be45343ecf7eab483f7ac0",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.transfinitePrescribedTailExistence"
+          },
+          "acceptance_record": "verification/local-resume-2026-10-31/models/PrescribedTail-ACCEPTED.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.PrescribedTailStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/models/PrescribedTail-ACCEPTED.json",
+              "scope": "ENTIRE original lem:prescribed-tail: for every actual countable primary reduced G,T, positive countable gamma, nontrivial T and actual lengths, construct an actual countable primary reduced H, all actual Ulm ranks below omega*gamma equal to G, an actual isomorphism of H_(omega*gamma) with T, and exact length omega*gamma+length(T). Direct actual pullback construction; no Zippin, Fraisse, injective-hull or cofinal-map oracle."
+            }
+          ]
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:lem:quotient-filtration",
@@ -389,9 +403,13 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 358,
           "statement_latex": "\\label{thm:odd-obstruction}\nLet $\\gamma>0$ be countable. If $G=R\\oplus D$, with $R$ reduced and\n$D$ divisible, and $\\lambda_R\\ge\\omega\\gamma$, then $G$ has no\n$\\Sigma_{2\\gamma+1}$ Scott sentence. No countable Abelian\n$p$-group has exact pure $\\Sigma_{2\\gamma+1}$ complexity.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.OddObstructionCompleteStatementChecks.fullOddObstruction",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/OddObstructionCompleteTargets.lean",
+            "sha256": "37388243756626dc10d4fc3d2b26c6ec21b1465346f0337fef0dcf2acf1fe8a6",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.oddObstructionFullSource"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.DivisibleCharacteristicStatementChecks",
@@ -512,8 +530,22 @@
               "gate_module": "LogicLineages.ModelsAlgebra.PGroups.StableTailScottStatementChecks",
               "acceptance_record": "verification/repair-2026-10-31/StableTailScottStatementChecks.json",
               "scope": "Actual finite-stable omega-gamma tail raw Pi(2gamma+3) Scott upper for countable primary groups; no reducedness/boundedness/categoricity oracle. Scope exactly as independently accepted. Only separately reviewed final gates promote whole labels. Actual divisible splitting, finite characters/competitors and long-reduced odd-clause suppliers do not discharge the remaining short-length pure-Sigma clause. Source numeric-data plus executable-template factorization is not a decision algorithm, fixed output-codec theorem or general-output polynomial bound."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.ShortStableScottStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/models/ShortStableScott-ACCEPTED.json",
+              "portable_receipt": "verification/resume-2026-10-31/ShortStableScott-accepted-build.json",
+              "portable_gate_log": "verification/resume-2026-10-31/ShortStableScott-accepted-gate.log.txt",
+              "scope": "Actual unrestricted raw Pi_(2gamma+1) upper from any countable stable stage alpha<omega*gamma, and source corollary for actual reduced exact length ell times arbitrary divisible primary D. Component only: neither Miller collapse nor whole odd-obstruction nor other numbered label."
+            },
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.OddObstructionCompleteStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/models/OddObstructionComplete-ACCEPTED.json",
+              "scope": "WHOLE ORIGINAL paper01 thm:odd-obstruction, both clauses. Actual reduced exact length ell>=omega*gamma and arbitrary divisible D imply no raw Sigma_(2gamma+1) Scott for R times D. Every actual countable primary G with a raw Sigma_(2gamma+1) Scott sentence has a constructed actual raw dSigma_(2gamma) Scott sentence, for every countable gamma>0. The latter is a stronger explicit strictly-lower-description witness excluding exact pure odd Sigma, not a weakened definition of exactness. All splitting, exact length, finite-height homogeneity, literal orbit formula, closure/collapse/categoricity and raw guards are proved. General Miller and prescribed-tail existence are not assumed or claimed."
             }
-          ]
+          ],
+          "acceptance_record": "verification/local-resume-2026-10-31/models/OddObstructionComplete-ACCEPTED.json",
+          "source_correspondence_review": "Root compared the original numbered source statement with the frozen exact type and verified current source hashes, successful gate-local compilation and allowed axiom evidence. No new theorem premises or whole-label promotion inferred from component-only checks."
         },
         {
           "id": "01-scott-complexity-abelian-p-groups:lem:absorption",
@@ -965,11 +997,25 @@
           "file": "01-scott-complexity-abelian-p-groups/paper.tex",
           "line": 1014,
           "statement_latex": "[No exact pure-$\\Sigma$ complexity for any countable Abelian $p$-group]\n\\label{thm:no-pure-sigma}\nNo countable Abelian $p$-group has exact pure\n$\\Sigma_\\alpha$ Scott complexity at any countable index.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.ModelsAlgebra.PGroups.NoPureSigmaStatementChecks.fullNoPureSigma",
+          "frozen_comparator": {
+            "file": "LogicLineages/ModelsAlgebra/PGroups/NoPureSigmaTargets.lean",
+            "sha256": "2c2fc7c5d6fd4f70ba0e5840f209826c9721ae592b6468746bf01640e19481d6",
+            "type": "LogicLineages.ModelsAlgebra.PGroups.Targets.primaryAllSigmaLowering"
+          },
+          "acceptance_record": "verification/local-resume-2026-10-31/models/NoPureSigma-ACCEPTED.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ModelsAlgebra.PGroups.NoPureSigmaStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/models/NoPureSigma-ACCEPTED.json",
+              "scope": "WHOLE ORIGINAL paper01 thm:no-pure-sigma. Every actual countable Abelian p-group and EVERY countable ordinal alpha: any raw original-signature Sigma_alpha Scott sentence yields an actual Scott description at a STRICTLY LOWER ordinal beta<alpha, with literal Sigma_beta, Pi_beta or difference-Sigma_beta syntax and full raw categoricity. Zero/one are excluded, two lowers; nonzero limits lower; all odd/even successor forms and arbitrary divisible parts are paid. No general Miller theorem, prescribed-tail/Zippin existence or supplier oracle is assumed."
+            }
+          ]
         }
-      ]
+      ],
+      "dependency_scope_note": "All numbered source targets and the complete dependencies used by their formal proofs are checked. Cited theorems replaced by direct proofs are not claimed in their unrelated full generality."
     },
     {
       "paper": "02-exponential-comparison",
@@ -3321,7 +3367,14 @@
           "statement_latex": "[Finite closure]\\label{lem:finiteclosure}\nEvery type requested by a recursive comparison belongs to $K$, every source\nhead is a head of the original source, and every target observation and\nopening context belongs to the finite family just described.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.HeadClosureStatementChecks",
+              "acceptance_record": "verification/resume-2026-10-31/HeadClosureStatementChecks.json",
+              "scope": "Literal all-head preservation under renaming, marking, capture-avoiding substitution and original-spine simultaneous application on actual marked syntax; head component only of06lemfiniteclosure; whole numbered lemma remains pending."
+            }
+          ]
         },
         {
           "id": "06-godel-t-termination-ordering:lem:lattices",
@@ -3592,7 +3645,7 @@
     {
       "paper": "07-collapse-equality-and-one-variable",
       "owner": "ordinal-comparison",
-      "status": "in-progress",
+      "status": "checked",
       "source_files": [
         "07-collapse-equality-and-one-variable/paper.tex",
         "07-collapse-equality-and-one-variable/preamble.tex",
@@ -3602,15 +3655,15 @@
       "dependency_obligations": [
         {
           "description": "Exact standard-control collapse semantics from foundations",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Identity normal form and eventual separation",
-          "status": "pending"
+          "status": "checked"
         },
         {
           "description": "Computable common-band/root and least-counterexample bounds",
-          "status": "pending"
+          "status": "checked"
         }
       ],
       "statements": [
@@ -3697,9 +3750,27 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 173,
           "statement_latex": "[Identity normal form]\\label{thm:identity}\nFor $E,F\\in\\mathcal P_d$, the identity $E=F$ holds at every positive\nvaluation exactly when $\\NF(E)=\\NF(F)$. If the forms differ, one can\neffectively specify a positive countervaluation of the form\n\\[\n           x_i=w_i(f(k)+1),\\qquad w_i,k\\in\\NN.        \\tag{2.2}\n\\]\nConsequently universal equality in $\\mathcal P_d$ is decidable.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.MultivariateIdentitySource.StatementChecks.fixed_full_identity",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/MultivariateIdentitySourceTargets.lean",
+            "sha256": "e5736e38cd776ba451f889bd233f22f4ddd1f105df4e7f16dc531a2ee8f7107c",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualMultivariateIdentity"
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.MultivariatePositiveRayStatementChecks",
+              "acceptance_record": "LogicLineages/OrdinalComparison/ACCEPTED-2026-10-31.json",
+              "scope": "Exact literal finite-variable positive terms compiled to one positive input with shared valuations and certified primitive-recursive numeric compiler; weighted-ray supplier only, not full identity or recursive NF."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.MultivariateIdentitySourceStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+              "scope": "ENTIRE original paper07 thm:identity, literal P_d and actual standard-control collapse. Actual bottom-up finite coefficient-vector/original-head recursive NF with complete source grammar and value preservation; cap-independent structural equality; uniform all-code Computable NF OUTPUT and literal code-comparison decision; universal positive-valuation equality completeness; effectively computed strictly positive w,k with counter x_i=w_i*(Phi(k)+1). No semantic/NF/termination/compiler-success certificate or unproved supplier premise."
+            }
+          ],
+          "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit."
         },
         {
           "id": "07-collapse-equality-and-one-variable:lem:oneinput",
@@ -4048,9 +4119,22 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 763,
           "statement_latex": "[Effective eventual signs]\\label{thm:sign}\nGiven two expressions in these sorts, one computes a sign\n$\\sigma\\in\\{-1,0,1\\}$ and $N\\ge1$ such that their difference has sign\n$\\sigma$ for every $x\\ge N$. In particular this holds for every pair in\n$\\mathcal P_1$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.OneVariableSignSource.StatementChecks.fixed_full",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/OneVariableSignSourceTargets.lean",
+            "sha256": "9ca286ac39e8ca774522f84c08bacac567da11e6b232ca6622af0053959ee565",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualOneVariableEventualSigns"
+          },
+          "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.OneVariableSignSourceStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+              "scope": "ENTIRE original paper07 thm:sign: arbitrary actual valid P/R source pair, total genuine Computable numeric sign-and-positive-tail output, common genuine dynamic domains and exact three-way eventual order iff, actual whole comparison/certificate recursion paid by source-WF finite tree and bottom-up table. No supplied algorithm, certificate, carrier, recursion, comparison, termination or domain premise. Source signs\u22121,0,+1 are encoded by0,1,2."
+            }
+          ]
         },
         {
           "id": "07-collapse-equality-and-one-variable:cor:boolean",
@@ -4059,9 +4143,22 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 933,
           "statement_latex": "[One-input quantified comparison]\\label{cor:boolean}\nFor any finite Boolean combination of equality, weak-order and strict-order\natoms between expressions of $\\mathcal P_1$, each of its existential and\nuniversal closures over $x\\in\\NN$ is decidable.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.OneInputBoolean.StatementChecks.fixed_full",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/OneInputBooleanTargets.lean",
+            "sha256": "b8cb1030e043c7a70fb4982fc541691264f36f29cf29b4b60d2a6f48f55931fc",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualOneInputBooleanClosures"
+          },
+          "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.OneInputBooleanStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+              "scope": "ENTIRE original07 cor:boolean: arbitrary literal finite Boolean formula of P1 equality, weak and strict order atoms, one shared positive Nat input, uniform total Computable existential/universal decisions. Actual typed formula postfix compilation, exact original positive evaluation at every prefix input, computed common positive tail and finite prefix INCLUDING tail point. No auxiliary-kernel genuine-domain obligation imposed on small inputs."
+            }
+          ]
         },
         {
           "id": "07-collapse-equality-and-one-variable:cor:sourceeq",
@@ -4070,9 +4167,22 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 961,
           "statement_latex": "[Ground-open source equality]\\label{cor:sourceeq}\nUniversal equality of literal canonical assignment vectors is decidable\nfor any original source pair whose free names all have ground type.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.GroundSourceEquality.StatementChecks.fixed_full_equality",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/GroundSourceEqualityTargets.lean",
+            "sha256": "5283a68fd9ba0f1ca70cff3b4dae1126b346c1886297bca3328d568ac4be4d82",
+            "type": "LogicLineages.OrdinalComparison.GroundSourceEquality.Targets.FullOriginalGroundEquality"
+          },
+          "acceptance_record": "LogicLineages/OrdinalComparison/ACCEPTED-2026-10-31.json",
+          "source_correspondence_review": "Root compared the original numbered source statement with the frozen exact type and verified current source hashes, successful gate-local compilation and allowed axiom evidence. No new theorem premises or whole-label promotion inferred from component-only checks.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.GroundSourceEqualityStatementChecks",
+              "acceptance_record": "LogicLineages/OrdinalComparison/ACCEPTED-2026-10-31.json",
+              "scope": "ENTIRE original paper07 cor:sourceeq: universal literal default assignment vector equality for all original-T terms in shared ground contexts, arbitrary internal/output types, actual assignment/extraction/syntax normalization and padded ordinal semantics. Genuine uniform Computable decision with no supplied compilation premise."
+            }
+          ]
         },
         {
           "id": "07-collapse-equality-and-one-variable:corollary-21",
@@ -4081,11 +4191,25 @@
           "file": "07-collapse-equality-and-one-variable/paper.tex",
           "line": 988,
           "statement_latex": "[Whole one-ground-name source comparison]\nEvery finite Boolean combination of these pointwise vector equality,\nweak-comparison and strict-comparison atoms is decidable under one\nexistential or universal quantifier over its shared positive ground\ncoordinate. Arbitrary original internal types and output levels are allowed.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.OneNameSourceBoolean.StatementChecks.fixed_full",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/OneNameSourceBooleanTargets.lean",
+            "sha256": "e6ae55875105e1474462a07fa6f1d6b20d93289e1f2889b1822b449d50bfdb6b",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualOneNameSourceBooleanClosures"
+          },
+          "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.OneNameSourceBooleanStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+              "scope": "ENTIRE original07 corollary-21: finite Boolean formulas of ACTUAL typed original-T source terms in one SAME singleton ground context, arbitrary original internal/output types and levels, actual default-policy assignment and zero padding. Equality compares all coordinates; weak is coordinatewise; WW-strict is strict zero coordinate with every positive coordinate weak. Actual total computable raw-source instruction pipeline performs assignment, extraction, syntax normalization, exact closed-coordinate guards and faithful P1 scalar conversion, then both positive-ground-coordinate closures. No supplied assignment/compiler/guard/type-bound/scalar-interface premise."
+            }
+          ]
         }
-      ]
+      ],
+      "dependency_scope_note": "All numbered source targets and the complete dependencies used by their formal proofs are checked. Cited theorems replaced by direct proofs are not claimed in their unrelated full generality."
     },
     {
       "paper": "08-multivariate-collapse-comparison",
@@ -4219,7 +4343,13 @@
           "statement_latex": "[Exact block recursion]\\label{lem:kernel-recursion}\nOne has\n\\[\n E^1_c=1,\\quad X^1_c=f,\\qquad\n E^2_c(t)=f(t)/2-\\lceil c/2\\rceil+1.\n\\]\nDefine\n\\begin{equation}\\label{eq:V}\n V_j(t)=f^{\\,f(t)/2+j+1}(t).\n\\end{equation}\nThen $X^2_{c,j}=V_{j-\\lceil c/2\\rceil}$. For $d\\ge2$, on a computable tail,\n\\begin{align}\n X^d_{c,j}&=X^{d-1}_{c,j}\\circ X^d_{c+d},\\label{eq:Xrec}\\\\\n E^d_c&=E^{d-1}_c\\circ X^d_{c+d}+E^d_{c+d}.\\label{eq:Erec}\n\\end{align}",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "source_issue": {
+            "state": "source correction required before full promotion",
+            "record": "LogicLineages/OrdinalComparison/FINITE-KERNEL-RECURSION-SOURCE-CONTROL-2026-10-31.md",
+            "scope": "Printed unrestricted signed recurrence includes degree2 negative shifts outside the genuine child domain. The domain-correct regime d>=3 or j>=0 is checked; the degree2 j=-2 negative-clamp discrepancy has a checked counterexample. The original whole printed label remains pending.",
+            "formal_counterexample_gate": "LogicLineages.OrdinalComparison.FiniteKernelNegativeRecursionStatementChecks"
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:uniform",
@@ -4414,9 +4544,22 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 1053,
           "statement_latex": "[Arbitrary single-core rows]\\label{thm:single-core}\nFor the signed row\n\\begin{equation}\\label{eq:single-core}\n Q(\\vec x)=K+rE(\\vec x)+\n       \\sum_i q_i h_{\\lambda_i}(a_iE(\\vec x)+c_i),\n \\quad a_i\\ge1,\\ c_i\\ge0,\n\\end{equation}\nwith fixed integer $K,r,q_i$ and fixed nonzero limit heads, each sign\npredicate $Q<0$, $Q=0$, $Q>0$ has an effectively computable finite\nPresburger formula in the original raw variables. Thus universal comparison\nof these rows needs no arithmetic decision theorem about $f$.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.SingleCorePresburger.StatementChecks.fixed_full",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SingleCorePresburgerTargets.lean",
+            "sha256": "419439084693a6498a7cf0ed6849ff51c5f8ee4b86f318d9ee1d3eced2e36ae5",
+            "type": "LogicLineages.OrdinalComparison.Targets.FullActualSingleCorePresburger"
+          },
+          "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+          "source_correspondence_review": "Root compared the original numbered source with its frozen exact Lean type, retaining actual quantifiers, domains, effectiveness and used dependencies. Current pinned sources, successful gate-local compiler receipt and allowed axiom closure verified; no duplicate hand-proof audit.",
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.SingleCorePresburgerStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+              "scope": "ENTIRE original08 thm:single-core: arbitrary nested actual positive core, arbitrary signed integer row coefficients and fixed actual nonzero limit heads with positive affine multipliers/nonnegative offsets. Genuine total Computable numeric compiler emits the literal finite Presburger AST CODE; exact all-positive-valuation semantics and no fresh variable indices (actual source support only). Explicit total Computable universal sign-mask decision covers weak/strict/equality. Finite box preserves duplicate original-name occurrences via simultaneous point clauses/first lookup. Empty support and every finite prefix are paid. Formal-core sign reuses wholly checked07, WITHOUT actual-core range surjectivity/independence or Snyatkov/arithmetic-decision premise. Fixed nonnegative multiples inside the core use literal repeated-addition expansion (zero is constant0)."
+            }
+          ]
         }
       ]
     },
@@ -5924,7 +6067,51 @@
           "statement_latex": "\\label{lem:three}\nFor fixed literal sentences $\\sigma,\\tau$:\n\\begin{enumerate}\n\\item if $D\\vdash\\sigma$, then $D\\vdash E_A(\\sigma)$;\n\\item $D\\vdash E_A(\\sigma\\to\\tau)\\to(E_A(\\sigma)\\to E_A(\\tau))$;\n\\item $D\\vdash\\Prv_D(\\code\\sigma)\\to E_A(\\sigma)$.\n\\end{enumerate}",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowInternalProvabilityStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "Actual existing numeric Hilbert checker PR program, literal existential provability formula/substitution, actual PR-theory numeral derivations and exact standard numeric-domain semantics. Supplier for12lemthree1 only; sourceBase/DCB/HB2/HB3/Lob/chosenCK/wholelemma stillpending."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowSelectedDistributionStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "Actual universal coded K2 in concrete calibrated finite named PR syntax theory: real derived literal sentence guards and implication-code equation, exact Primrec axiom checker, ordinary all-selector Hilbert selected-agent closure, and complete concrete supplier. No source Base/self-indexed DCB/internal HB/Lob/chosen CK or full numbered lemma promotion."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowNamedInternalProvabilityStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "Actual collision-free checker AST inserted in calibrated named finite base, exact numeric registry occurrence9+nodespF.length, preserved source dispatcher/calibration, actual positive/negative Hilbert numeral certificates, literal existential substitution, genuine certification of every actual proof of each fixed Primrec external axiom theory, and exact named-overlay standard semantics. The checked external theory is not assumed equal to the named base; no source DCB/Base adequacy/HB/Lob/full numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedProvabilityStagesStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "First4actual bounded c.e.-axiom clauses: jointly Primrec axiom-index/fuel/raw checker; monotonicity; exact ordinary Code.eval axiom union; finite-stage capture of every typed finite Hilbert proof including open contexts/generalization. Full numeric parameter-uniform verifier and fixed universal PR AST still pending. No original numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedProvabilityStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "Actual c.e.-axiom ordinary-code/fuel uniform proof-verifier chain: genuinely joint Primrec axiom and numeric Hilbert checkers, exact increasing finite-stage axiom/proof union for all contexts, actual c.e.-theory numeric proof equivalence and ONE fixed finite arity5 PR AST calibrated on every(code,fuel,context,formula,certificate). No pointwise-only compiler assumption, source runtime identification, actual source DCB/Base/HB/Lob or whole numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowSelfIndexedPresentationStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "Actual total ordinary self-indexed finite literal axiom presentation, for every finite sentence list and unary literal formula template: exact own-code numeral instance, genuinely uniform raw/numeric axiom checkers, real Kleene ordinary code witness and exact equality of enumerated/finite-checker/intended theories. This is an alternative/general index supplier, NOT the chosen published Gorbow RDCB sentence construction; no original source DCB/Base/HB/Lob/numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedDCBStatementChecks",
+              "acceptance_record": "LogicLineages/ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json",
+              "portable_evidence": "verification/resume-2026-10-31/claude/PORTABLE-ACCEPTANCE.json",
+              "scope": "Actual published SENTENCE construction over concrete calibrated finite named arithmetic base: real finite S axiom index, fixed universal verifier and exact standard Pr_S calibration, actual named diagonal rho, D=S+rho, genuine S/D proof certification by closed deduction with Pr_D(sigma)=Pr_S(code(rho\u2192sigma)), all-selector reflection/distribution and all three source-shaped selected-agent clauses for one actual parameter choice. No alternative ordinary-program fixed point substitutes for rho. Original Base adequacy/conservativity, internal HB/Lob and source numbered identification remain separately pending; no automatic numbered promotion."
+            }
+          ]
         },
         {
           "id": "12-common-knowledge-necessitation:thm:collapse",

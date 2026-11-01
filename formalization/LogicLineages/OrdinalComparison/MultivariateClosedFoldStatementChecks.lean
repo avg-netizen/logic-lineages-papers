@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateClosedFoldProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateDirectNormalize.StatementChecks
+
+theorem fixed_closed_fold : Targets.MultivariateClosedFoldProgram := closed_fold
+
+end LogicLineages.OrdinalComparison.MultivariateDirectNormalize.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateDirectNormalize

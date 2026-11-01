@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateIdentityDecisionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateIdentityDecision.StatementChecks
+
+theorem fixed_decision : Targets.MultivariateIdentityDecision := decision
+
+end LogicLineages.OrdinalComparison.MultivariateIdentityDecision.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateIdentityDecision

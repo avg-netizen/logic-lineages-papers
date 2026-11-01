@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateCollectedIdentityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateCollected.StatementChecks
+
+theorem fixed_common_signature_identity : Targets.MultivariateCollectedCommonSignatureIdentity :=
+  common_signature_identity
+
+end LogicLineages.OrdinalComparison.MultivariateCollected.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateCollected

@@ -1,0 +1,52 @@
+{
+  "status": "accepted",
+  "accepted_utc": "2026-10-31T21:23:40.235125+00:00",
+  "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.HeadClosureStatementChecks",
+  "checks": [
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.StatementChecks.fixedRenamingHeadClosure",
+      "exact_type": "LogicLineages.OrdinalComparison.TerminationOrdering.Targets.RenamingHeadClosure",
+      "axioms": []
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.StatementChecks.fixedMarkingHeadClosure",
+      "exact_type": "LogicLineages.OrdinalComparison.TerminationOrdering.Targets.MarkingHeadClosure",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.StatementChecks.fixedSubstitutionHeadClosure",
+      "exact_type": "LogicLineages.OrdinalComparison.TerminationOrdering.Targets.SubstitutionHeadClosure",
+      "axioms": []
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.StatementChecks.fixedSimultaneousApplicationHeadClosure",
+      "exact_type": "LogicLineages.OrdinalComparison.TerminationOrdering.Targets.SimultaneousApplicationHeadClosure",
+      "axioms": [
+        "propext"
+      ]
+    }
+  ],
+  "freeze": "verification/resume-2026-10-31/main-head-closure-freeze.json",
+  "accepted_receipt": "verification/resume-2026-10-31/HeadClosure-accepted-build.json",
+  "accepted_gate_log": "verification/resume-2026-10-31/HeadClosure-accepted-gate.log.txt",
+  "source_scope": "Literal all-head preservation under renaming, marking, capture-avoiding substitution and original-spine simultaneous application on actual marked syntax; head component only of06lemfiniteclosure",
+  "numbered_statement_completed": false,
+  "remaining": "Actual recursive comparison, type and bounded observation/context closure not supplied by these four gates",
+  "first_failure": "Only four already-introduced mutual-recursion proof binders; proof syntax repaired, exact comparator and definitions unchanged",
+  "source_sha256": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/HeadClosureDefinitions.lean": "13bb407928df7445441589979d20ea167c04a4172eba8226aa9c216643e5313d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/HeadClosureTargets.lean": "f61bcbb80155827160e5eb54421221d7375296b1eb1856c698c15601db71aa42",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/HeadClosureProof.lean": "0f502d3f7263ec643c9530df4a4f72e429ce9bab6df515018590d14c9e522a2c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/HeadClosureStatementChecks.lean": "e04e2f596062f2df8433aae152a9dae28ca19f5fa85f2e0862a666bffadfceab"
+  },
+  "no_new_axiom_or_premise": true,
+  "resources": {
+    "core_profile": true,
+    "peak_rss_kib": 402912,
+    "cpu_cap_seconds": 90,
+    "wall_cap_seconds": 180,
+    "single_thread": true
+  }
+}

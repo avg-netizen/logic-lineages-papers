@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.PointedTableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.PointedTableStatementChecks
+theorem finiteTable : Targets.pointedFiniteTableCorrect := pointed_finite_table_correct
+theorem relativeFiniteTable : Targets.pointedFiniteTableRelativeCorrect := pointed_finite_table_relative_correct
+theorem finiteSocleOrbits : Targets.finiteSocleSigmaOneOrbits := finite_socle_sigma_one_orbits
+end LogicLineages.ModelsAlgebra.PGroups.PointedTableStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.PointedTableStatementChecks

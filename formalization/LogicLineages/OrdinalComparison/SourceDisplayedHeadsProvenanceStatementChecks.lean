@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.SourceDisplayedHeadsProvenanceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SourceDisplayedHeads.StatementChecks
+
+theorem fixed_root_provenance : Targets.CollectedRootRawSourceProvenance := root_provenance
+theorem fixed_signed_argument_drop : Targets.SignedRowRawSourceArgumentDrop := signed_argument_drop
+
+end LogicLineages.OrdinalComparison.SourceDisplayedHeads.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.SourceDisplayedHeads

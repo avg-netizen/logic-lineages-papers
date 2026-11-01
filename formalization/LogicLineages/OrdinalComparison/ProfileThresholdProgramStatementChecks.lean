@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.ProfileThresholdProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ProfileThresholdProgram.StatementChecks
+
+theorem fixed_budget_program : Targets.ProfileSyntaxBudgetProgram := budget_program
+theorem fixed_supplier_program : Targets.ActualProfileSupplierTailProgram := supplier_program
+
+end LogicLineages.OrdinalComparison.ProfileThresholdProgram.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.ProfileThresholdProgram

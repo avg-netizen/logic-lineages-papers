@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.CofinalSocleMapProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.CofinalSocleMapStatementChecks
+theorem actualSimultaneousMap : Targets.cofinalSocleSurjectiveHom := cofinal_socle_surjective_hom
+end LogicLineages.ModelsAlgebra.PGroups.CofinalSocleMapStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.CofinalSocleMapStatementChecks

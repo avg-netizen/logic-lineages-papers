@@ -1,0 +1,79 @@
+{
+  "actor": "codex-L2-formalization",
+  "paused": true,
+  "stopped_utc": "2026-11-01T03:39:03.432609+00:00",
+  "live_compiler": false,
+  "live_author": false,
+  "automatic_resume": false,
+  "accepted_ledger": {
+    "file": "LogicLineages/OrdinalComparison/ACCEPTED-2026-10-31.json",
+    "sha256": "400aa62e62765d5bfee6e37f98ccada74d77da26389b79f5e4bfa35665a21510",
+    "accepted_bundles": 89,
+    "fixed_declarations": 198
+  },
+  "promotion_report": {
+    "file": "verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json",
+    "sha256": "c34e91377339528eb4210441425aaf8990cbe6a2a15fdb94865477919e4392c4",
+    "numbered_source_labels_completed": 6
+  },
+  "source_pins": [
+    {
+      "file": "../07-collapse-equality-and-one-variable/paper.tex",
+      "sha256": "e12385713060fd2414f0338e045a4f9b8923682ccc28af66d787f5cd37288523"
+    },
+    {
+      "file": "../05-wilken-weiermann-foundations/foundations.tex",
+      "sha256": "85dba2f1ee8ced7c3b85262e69438877be9bdf1c22c73150a6d9bb98ffc2b3dd"
+    },
+    {
+      "file": "../05-wilken-weiermann-foundations/source-syntax.tex",
+      "sha256": "aee8ef3a6e3b8884c384a37bbaab9588fe0c680230deeb798c20c1ae53b3c44c"
+    },
+    {
+      "file": "../08-multivariate-collapse-comparison/paper.tex",
+      "sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25"
+    },
+    {
+      "file": "../09-canonical-source-expressivity/source-realization.tex",
+      "sha256": "0697513be6d0d8251c1792b4c723a58116e0524aad5751322e563da72e8c6ec8"
+    }
+  ],
+  "last_gate": {
+    "module": "LogicLineages.OrdinalComparison.HeadGraphShiftStatementChecks",
+    "receipt": "verification/local-resume-2026-10-31/ordinal/1793504283011237520-2.json",
+    "log": "verification/local-resume-2026-10-31/ordinal/1793504283011237520-2-LogicLineages-OrdinalComparison-HeadGraphShiftStatementChecks.log",
+    "returncode": 0,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "pending_source_defects": [
+    {
+      "file": "LogicLineages/OrdinalComparison/FINITE-KERNEL-RECURSION-SOURCE-CONTROL-2026-10-31.md",
+      "source": "08:lem:kernel-recursion",
+      "scope": "Printed unrestricted signed d2 recurrence has no genuine child for j<0; zero-clamped total extension is strictly false at j=-2 on EVERY t>=c+7. Corrected-domain recurrence and sharper counterexample checked separately; unchanged label not promoted."
+    },
+    {
+      "source": "08:lem:kernel-residues",
+      "scope": "Existing inherited signed d1 j<0 domain obstruction remains; corrected/genuine-domain suppliers already paid, printed unrestricted source not promoted."
+    }
+  ],
+  "unaccepted_drafts": [
+    {
+      "file": "LogicLineages/OrdinalComparison/SingleCorePresburgerCompilerDiagnostic.lean",
+      "sha256": "b1c746081bd80983f82207d644ab90ec12fa527c63e1093eb830fe6e36d9a5ae",
+      "scope": "Preserved diagnostic duplicate of part of the numeric compiler. OUTSIDE accepted import closure; NEVER import together with accepted SingleCorePresburgerProgramProof because of duplicate public names. Production whole single-core gate is complete, no pending mathematical supplier inferred from diagnostic."
+    }
+  ],
+  "next_exact_step": "Only after explicit resume: read exact original09 thm:head-graph; build the finite actual-source arithmetic Phi-gate/Delta-chain plus actual unary K source ray/unit-elimination and finite-prefix disjunction, retaining original B,C raw wires. HeadGraphShift is already checked and must be reused; this supplier alone is not the whole head-graph theorem. No such next comparator/proof files were started after the stop request.",
+  "handoff": "LogicLineages/OrdinalComparison/PAUSE-HANDOFF-2026-10-31.md",
+  "workspace": {
+    "id": "2cad96acbe764e3abd7e75947960d236",
+    "revision": 68,
+    "status": "open",
+    "title": "Paused: formalize ordinal and comparison papers 04\u201310",
+    "note": "Workspace task schema has no paused/waiting status. OPEN with explicit Paused title/body is used, not DOING, DONE or an invented status."
+  }
+}

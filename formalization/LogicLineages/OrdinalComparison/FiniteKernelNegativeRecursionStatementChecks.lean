@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.FiniteKernelNegativeRecursionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.FiniteKernelNegativeRecursion.StatementChecks
+
+theorem fixed_counterexample : Targets.ActualNegativeFiniteKernelRecursionCounterexample := counterexample
+#print axioms fixed_counterexample
+
+end LogicLineages.OrdinalComparison.FiniteKernelNegativeRecursion.StatementChecks

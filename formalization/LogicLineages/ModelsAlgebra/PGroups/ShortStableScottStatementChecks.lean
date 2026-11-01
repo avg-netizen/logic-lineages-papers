@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ShortStableScottProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ShortStableScottStatementChecks
+theorem stableUpper : Targets.shortStableScottUpper := short_stable_scott_upper
+theorem sourceShortReducedUpper : Targets.shortReducedProductScottUpper :=
+  short_reduced_product_scott_upper
+end LogicLineages.ModelsAlgebra.PGroups.ShortStableScottStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ShortStableScottStatementChecks

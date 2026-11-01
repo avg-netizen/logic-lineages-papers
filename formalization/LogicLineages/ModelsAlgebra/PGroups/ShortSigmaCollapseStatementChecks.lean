@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ShortSigmaCollapseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ShortSigmaCollapseStatementChecks
+theorem relativeLowering : Targets.shortStableSigmaScottLowering := short_stable_sigma_scott_lowering
+theorem unrestrictedLowering : Targets.shortStableRawSigmaScottLowering :=
+  short_stable_raw_sigma_scott_lowering
+end LogicLineages.ModelsAlgebra.PGroups.ShortSigmaCollapseStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ShortSigmaCollapseStatementChecks

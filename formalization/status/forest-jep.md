@@ -1,3 +1,12 @@
+## Current imported completion,31October2026
+
+All11registered paper03 statements are checked in the accepted external
+continuation at5cff59d, including the repaired totaldecision theorem.
+See TARGETS.json and EXTERNAL-CONTINUATION-2026-10-31.md for exact gates.
+The old pending next-actions below are historical and must not be repeated.
+Current main formalization owns paper06 and TerminationOrdering/ instead.
+This imports existing acceptance evidence; no new local kernel run is claimed.
+
 # Forest joint embedding formalization
 
 Local main-thread research is **paused** by user direction for the

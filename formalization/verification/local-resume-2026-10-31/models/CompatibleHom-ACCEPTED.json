@@ -1,0 +1,108 @@
+{
+  "accepted_utc": "2026-10-31T21:38:03.321525+00:00",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CompatibleHomStatementChecks",
+  "scope": "Actual simultaneous hom extension from compatible homs on two actual subgroups into a literally divisible abelian group; quotient factor and both restrictions constructed. Dependency for finite subgroup homogeneity, not a whole numbered paper label.",
+  "numbered_statement_promotions": [],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.CompatibleHomStatementChecks.simultaneousExtension"
+  ],
+  "freeze_path": "verification/local-resume-2026-10-31/models/CompatibleHom-FROZEN.json",
+  "freeze_sha256": "b608b09051c46047d87c3aa57aa6bb4453cd6f3c0a1327e9c33c829f3c493b1f",
+  "receipts": [
+    {
+      "path": "verification/local-resume-2026-10-31/models/1793482455946985865-2.json",
+      "sha256": "8350084cc2bec1a84262233c8ebde94278d52d3a2f5265d18e4beebfe6da46d4"
+    }
+  ],
+  "receipt_scope_note": "CompatibleHom gate passed; subsequent DivisibleHomogeneity candidate failed on a now-repaired extra extensionality tactic and is not included.",
+  "gate_log_path": "verification/local-resume-2026-10-31/models/CompatibleHom-AXIOMS.log",
+  "gate_log_sha256": "ed36c7ce351eccd101d0c6e3fbd25888b825b39f30a87d750f04ca6cef6c0439",
+  "gate_log_scope": "Actual successful compiler audit stdout excerpt, whitespace normalized.",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.CompatibleHomStatementChecks.simultaneousExtension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CompatibleHomTargets.lean",
+      "sha256": "6e31a4becf57afe1adfde944a29e67400462085e07729f78494658f041010505"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CompatibleHomProof.lean",
+      "sha256": "32c805d50b2d13db3bfe27616f41dbe258123b8cd21806f4d6e8f2e50dec741b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CompatibleHomStatementChecks.lean",
+      "sha256": "8744dfbf631962b1750e3e6cfa9c416f39af7253a610c03613b22dc634f0f36a"
+    }
+  ],
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CompatibleHomStatementChecks.lean",
+      "sha256": "8744dfbf631962b1750e3e6cfa9c416f39af7253a610c03613b22dc634f0f36a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CompatibleHomProof.lean",
+      "sha256": "32c805d50b2d13db3bfe27616f41dbe258123b8cd21806f4d6e8f2e50dec741b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CompatibleHomTargets.lean",
+      "sha256": "6e31a4becf57afe1adfde944a29e67400462085e07729f78494658f041010505"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionDefinitions.lean",
+      "sha256": "b020dd31feede2459e3b77b6d5228c812499c91d2669612a10122caf6d10daae"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleSplittingDefinitions.lean",
+      "sha256": "daf5e65ee9bbc457308916c0669c03104e970f15950d7e2f72270a690df5905b"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisiblePartDefinitions.lean",
+      "sha256": "07b18d41ee72f4b1c0f778e791b99d4d5af92abb7d739b4fdecacf6c82ab3870"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/AdaptedSocleDefinitions.lean",
+      "sha256": "a508f1246280b54c513b72cc8d03f899e2802e83a7ee87dd7e9fa7020a869a2c"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/UlmDefinitions.lean",
+      "sha256": "c64fd4d85e2af2271b32928e5ebc77d2a24e42269c658dd00a666131d4eef75a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/FiltrationDefinitions.lean",
+      "sha256": "28732bfe8298c8b8ff527c0162978bb191230f3f5cabde09344c617bf0f1078a"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/TransfiniteDefinitions.lean",
+      "sha256": "edab6dfc1488bebd1b19254457d5de104fa1faf09305a8c677d7eb507f0b3abd"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/ReducedUlmClassificationDefinitions.lean",
+      "sha256": "2f33496b4b9d80890f44750676b45e79ae0ad630f16a72e4b060984fdd32e799"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableUlmDefinitions.lean",
+      "sha256": "86f2c5ac18f2e460691f43c0ef4509d1e13254f6feec2ba59113cbc64804c758"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CountableReducedZeroDefinitions.lean",
+      "sha256": "493ec60e7673c879755caaf39753d4a1a3847d858de15553a6f0bccfb50b3581"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionProof.lean",
+      "sha256": "f3ae0394b4df28eac1e024fc2d2e326af3506948712fe3c5d122137ac5e421a1"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/DivisibleExtensionTargets.lean",
+      "sha256": "a9a50cb5345cc3cf5bead3cbd85358e6c97cf0ff5d0b19b71474edb7843e78a0"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ]
+}

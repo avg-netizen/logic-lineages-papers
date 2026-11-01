@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ComparisonExpansionEncodingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ComparisonExpansion.StatementChecks
+
+theorem fixed_source_injective : Targets.LiteralSourceEncodingInjective := source_injective
+
+end LogicLineages.OrdinalComparison.ComparisonExpansion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.ComparisonExpansion

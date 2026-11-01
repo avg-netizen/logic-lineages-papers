@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.InfiniteSocleOddProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.InfiniteSocleOddStatementChecks
+theorem productComparison : Targets.infiniteSocleOddProductComparison := infinite_socle_odd_product_comparison
+theorem pointedCompetitor : Targets.infiniteSocleOddProductCompetitor := infinite_socle_odd_product_competitor
+theorem noEvenRawSigma : Targets.infiniteSocleNoEvenRawSigma := infinite_socle_no_even_raw_sigma
+end LogicLineages.ModelsAlgebra.PGroups.InfiniteSocleOddStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.InfiniteSocleOddStatementChecks

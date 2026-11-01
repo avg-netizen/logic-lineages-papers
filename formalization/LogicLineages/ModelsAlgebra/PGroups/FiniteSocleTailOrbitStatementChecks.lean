@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailOrbitProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailOrbitStatementChecks
+theorem actualTailOrbits : Targets.finiteSocleTailTupleOrbits := finite_socle_tail_tuple_orbits
+end LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailOrbitStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailOrbitStatementChecks

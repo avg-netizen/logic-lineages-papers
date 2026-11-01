@@ -1,0 +1,106 @@
+{
+  "accepted_utc": "2026-10-31T22:20:14.799995+00:00",
+  "gate_module": "LogicLineages.ModelsAlgebra.PGroups.CloseAllStatementChecks",
+  "scope": "Literal same-rank existential/universal closing of every free variable of any positive-level Sigma/Pi normal form, with actual realization equivalences among all additive commutative groups. Existing renaming pays the zero-context arity adapter; not a new syntax or semantic leaf.",
+  "numbered_statement_promotions": [],
+  "fixed_theorems": [
+    "LogicLineages.ModelsAlgebra.PGroups.CloseAllStatementChecks.existential",
+    "LogicLineages.ModelsAlgebra.PGroups.CloseAllStatementChecks.universal"
+  ],
+  "freeze_path": "verification/local-resume-2026-10-31/models/CloseAll-FROZEN.json",
+  "freeze_sha256": "bef592c1a65a49dea8cdcc0185a1907f74b82d71154885c9acd6de848adae4dd",
+  "receipts": [
+    {
+      "path": "verification/local-resume-2026-10-31/models/1793484864536900351-2.json",
+      "sha256": "048f57bbe3edf6319c3cce12d8642785225351fd52720828d238b3ed8b82879c"
+    }
+  ],
+  "gate_log_path": "verification/local-resume-2026-10-31/models/CloseAll-AXIOMS.log",
+  "gate_log_sha256": "2ab03adea61b3fa8c545aa146ebaed6bc06cec216e977f7604d89c4d57d7bf99",
+  "gate_log_scope": "Actual successful compiler audit stdout excerpt, whitespace normalized.",
+  "axioms_by_declaration": {
+    "LogicLineages.ModelsAlgebra.PGroups.CloseAllStatementChecks.existential": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.ModelsAlgebra.PGroups.CloseAllStatementChecks.universal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "sources": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllDefinitions.lean",
+      "sha256": "7452565a744f2901378efb00c6fb10c02ca1b827f4b86d19dbbb77955763f427"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllTargets.lean",
+      "sha256": "8e762bfd3711ce81926e2b69e23df93a9f1b573b0dfccd8375bf9cfd408448d5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllProof.lean",
+      "sha256": "24f3ba7f116d932a3e6188eefc7e59b17b83918a516462b1d9b637a3187209b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllStatementChecks.lean",
+      "sha256": "6f8adce6f5f3ba70fdacc9e7a28740cc941be7c5790743a5a6fa426356837c84"
+    }
+  ],
+  "supplier_ledgers": [],
+  "local_source_closure_snapshot": [
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllStatementChecks.lean",
+      "sha256": "6f8adce6f5f3ba70fdacc9e7a28740cc941be7c5790743a5a6fa426356837c84"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllProof.lean",
+      "sha256": "24f3ba7f116d932a3e6188eefc7e59b17b83918a516462b1d9b637a3187209b4"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllTargets.lean",
+      "sha256": "8e762bfd3711ce81926e2b69e23df93a9f1b573b0dfccd8375bf9cfd408448d5"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/CloseAllDefinitions.lean",
+      "sha256": "7452565a744f2901378efb00c6fb10c02ca1b827f4b86d19dbbb77955763f427"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDualDefinitions.lean",
+      "sha256": "55acfd61ce9cfe0e78ff6390b78eba00fd24fcb2ca7b5db5f57d4235f72bdeaa"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDefinitions.lean",
+      "sha256": "b94822505afeee10653bec56e71b449e134bed3c8349a114ef3bc9e6d36c961d"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/BackForthDefinitions.lean",
+      "sha256": "2ec84e50e27d9eba581f6c3adf6f2e8bd08b1c29372e30e1155ba50430b1dc73"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingDefinitions.lean",
+      "sha256": "5e04f7c060ef862bcdc4fbf232e65c2cb9956c38f5deb957cb3e1f8fe4981249"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDual.lean",
+      "sha256": "e558c685151671d2e3df44486e7d6dedc2077209eb340a99988a189625ef6b74"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryDualTargets.lean",
+      "sha256": "112e5361b944122074ff8d1a7255d3abf0b97821658dfc50871f8aa6a8a69fda"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenaming.lean",
+      "sha256": "b8beecdb8768d4e5ed7940430e80f67e4f93baa82daafb6e7616d9e5f2a55490"
+    },
+    {
+      "path": "LogicLineages/ModelsAlgebra/PGroups/InfinitaryRenamingTargets.lean",
+      "sha256": "66089c6de3823031c95c1050d2b176c8ed335a68096f30ebc90443b26f5141e2"
+    },
+    {
+      "path": "LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    }
+  ]
+}

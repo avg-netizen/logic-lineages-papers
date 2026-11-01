@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.HigherSigmaConjunctionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.HigherSigmaConjunctionStatementChecks
+theorem allHigherRanks : Targets.higherSigmaConjunctionComplexity :=
+  higher_sigma_conjunction_complexity
+end LogicLineages.ModelsAlgebra.PGroups.HigherSigmaConjunctionStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.HigherSigmaConjunctionStatementChecks

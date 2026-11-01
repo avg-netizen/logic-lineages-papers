@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateNormalGrammarProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateNormalValidity.StatementChecks
+
+theorem fixed_grammar : Targets.MultivariateNormalStorageGrammar := grammar
+theorem fixed_coefficients : Targets.MultivariateCoefficientValidity := coefficient_validity
+
+end LogicLineages.OrdinalComparison.MultivariateNormalValidity.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateNormalValidity

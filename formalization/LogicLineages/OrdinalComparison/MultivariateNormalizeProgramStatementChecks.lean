@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateNormalizeProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateNormalizeCode.StatementChecks
+
+theorem fixed_normalization : Targets.MultivariateCollectedNormalizationProgram := normalization_program
+
+end LogicLineages.OrdinalComparison.MultivariateNormalizeCode.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateNormalizeCode

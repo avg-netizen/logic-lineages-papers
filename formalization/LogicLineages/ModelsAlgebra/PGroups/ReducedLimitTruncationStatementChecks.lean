@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ReducedLimitTruncationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ReducedLimitTruncationStatementChecks
+theorem actualTruncation : Targets.actualReducedLimitTruncation := actual_reduced_limit_truncation
+end LogicLineages.ModelsAlgebra.PGroups.ReducedLimitTruncationStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ReducedLimitTruncationStatementChecks

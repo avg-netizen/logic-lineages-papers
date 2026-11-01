@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailCollapseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailStatementChecks
+theorem actualTailOrbits : Targets.finiteSocleTailTupleOrbits := finite_socle_tail_tuple_orbits
+theorem relativeLowering : Targets.finiteSocleTailSigmaLowering := finite_socle_tail_sigma_lowering
+theorem unrestrictedLowering : Targets.finiteSocleTailRawSigmaLowering := finite_socle_tail_raw_sigma_lowering
+end LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleTailStatementChecks

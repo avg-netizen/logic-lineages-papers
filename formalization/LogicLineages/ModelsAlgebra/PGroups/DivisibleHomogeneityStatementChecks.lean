@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.DivisibleHomogeneityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleHomogeneityStatementChecks
+theorem socleAutomorphism : Targets.primaryDivisibleSocleDetectsAutomorphism :=
+  primary_divisible_socle_detects_automorphism
+theorem finiteHomogeneity : Targets.primaryDivisibleFiniteHomogeneity :=
+  primary_divisible_finite_homogeneity
+end LogicLineages.ModelsAlgebra.PGroups.DivisibleHomogeneityStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.DivisibleHomogeneityStatementChecks

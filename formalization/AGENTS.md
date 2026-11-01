@@ -1,3 +1,26 @@
+**Current local state — PAUSED after completed rounds, 1 November 2026 UTC.**
+Claude R005, all three lanes and main proof work have finished and stopped.
+No new author, proof round, quota-reset resume or compiler launch without a new
+user release. Git publication is authorized. Read [the complete handoff](HANDOFF-2026-11-01.md).
+The user-authorized current register is 134 checked, 2 inherited and 53 pending
+numbered statements. Older continuing releases below are historical.
+
+**Latest user instruction — finish the current round and pause (1 November 2026 UTC).**
+Current source rounds may finish only their compile, constructive repair and exact
+gates. No new author or proof round. Main consolidates the checked results and
+pushes the completed checkpoint. Older continuing releases below are historical.
+
+**Local formalization resumed explicitly on31October2026.**
+Start from `EXTERNAL-CONTINUATION-2026-10-31.md` and current `TARGETS.json`
+at merged base5cff59d:125checked,2inherited,62pending/189. Older status files
+and cutoff records below are historical, not instructions to repeat work.
+Current ownership: L1 ComputabilityKnowledge (pending02/12), L2 OrdinalComparison
+pending07/08/09, L3 PGroups remaining01, MAIN paper06 in the distinct
+`OrdinalComparison/TerminationOrdering/` directory plus shared integration.
+Three long-running Codex lanes, one overseeing the same-session Claude loop.
+Keep exact comparator-first/compile-first/axiom acceptance and all bounded
+serialized resource rules below. No unrelated research or automatic Git action.
+
 Local workers paused at the user-requested 10 p.m. America/Chicago cutoff (30 October 2026 03:00 UTC). No automatic local resume. Separately authorized external work and fresh-clone builds remain possible.
 
 # Formalizing the public papers

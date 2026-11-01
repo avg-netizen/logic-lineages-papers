@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.BoundedReducedProductProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.BoundedReducedProductStatementChecks
+theorem pointedCompetitor : Targets.boundedReducedProductCompetitor := bounded_reduced_product_competitor
+theorem noEvenRawSigma : Targets.boundedReducedProductNoEvenRawSigma := bounded_reduced_product_no_even_raw_sigma
+end LogicLineages.ModelsAlgebra.PGroups.BoundedReducedProductStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.BoundedReducedProductStatementChecks

@@ -1,12 +1,20 @@
-# Computability and knowledge formalization
+## 31 October–1 November 2026: paused after checked R005
 
-**Current state: paused after the completed affine-ray checkpoint.** All local
-proof work and the author loop in this lane have stopped for the user's
-scheduled wind-down before 30 October, 03:00 UTC. There is no live author or
-compiler in this lane, and an explicit user resume is required. The full
-source-normalization and learning statements remain accepted; full ray
-separation and identity remain pending. The repository-contained handoff is
-`LogicLineages/ComputabilityKnowledge/CONTINUATION-2026-10-29.md`.
+Authoritative source state is EXTERNAL-CONTINUATION-2026-10-31.md and TARGETS.json at base5cff59d. Paper14 is fully checked; all six paper12 statements and three paper02 statements remain pending. Older next-target notes below are historical.
+
+The actual internal arithmetic certificate interface is now checked in full at its separately frozen supplier type. Claude returned its complete proof, which compiled unchanged on the first attempt. All five exact obligations and six statement aliases passed the frozen gate; only propext, Classical.choice and Quot.sound occur. Receipts1793480944835417324-2 (pre-author target),1793481891438233790-2 (raw proof),1793482322315259455-2 (exact gate). See ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json.
+
+This gives the actual numeric checker PR program, literal existential provability formula/substitution, genuine Hilbert numeral certificates and exact standard semantics. It does not identify the selected finite PR theory with source Base or self-indexed DCB; no whole lem:three promotion follows.
+
+R002 actual universal-K2 selected-agent closure is now accepted after one compiler-directed repair. All five exact obligations and six statement aliases passed1793484610729669242-2, only the standard three axioms. Literal sentence guards and the implication-code equation are derived in the concrete named PR theory; selectors range over the full permitted language. This is a supplier for lem:three(2), not source self-indexed DCB or the entire numbered lemma. Raw first diagnostic receipt1793484315661972828-2 and the complete unchanged comparator remain preserved.
+
+R003's actual collision-free checker-in-named-base bridge is now accepted in full at its supplier type (1793486819610455981-2): exact retained checker tag, preserved source calibration, genuine positive/negative numeral derivations, literal existential proof certification and exact named-overlay standard semantics. Codex repaired finite-index elaboration only; all seven clauses/eight aliases passed with the standard three axioms. The external checked theory is not identified with the generated named base, so no source DCB or whole numbered lemma is claimed.
+
+Codex C001 also passed all four pre-frozen bounded c.e.-axiom stage clauses on the first compile, in the same receipt: a genuinely joint primitive-recursive axiom-index/fuel checker, monotonicity, exact ordinary-program axiom union and finite-stage capture of all actual typed finite proofs, including open contexts/generalization. R004 now has the entire genuinely uniform numeric proof verifier, exact c.e. proof acceptance and one fixed arity5 PR checker AST accepted at1793487977279650178-2. All seven clauses/eight aliases pass with only the standard three axioms; a Codex typed-helper decomposition solved the actual200kwhnf diagnostics without changing any target or limits. Its full target passed before any proof1793486474227247115-2. This is not the pointwise fixed-checker existence already paid by R001. Source DCB/Base identification, internal HB/Lob and all six whole paper12 statements still remain pending.
+
+Codex C002 additionally proves a genuine total ordinary-program self-indexed finite presentation for every finite base and literal unary template (1793488249432244161-2), with exact accepted axiom equality and no self-index oracle. It is an alternative/general supplier, not Gorbow's chosen construction. Source rereading fixes the next route: use the published diagonal sentence over S and Pr_D(sigma)=Pr_S(code(rho→sigma)). The new R005 target is being checked before proof; no source Base/HB equivalence or whole numbered completion is asserted. See GORBOW-DCB-SOURCE-CONTROL-2026-10-31.md.
+
+R005's actual published S+named-diagonal rho construction is now checked in full at its concrete supplier type, receipt1793504898001694693-2: actual finite S index, calibrated fixed verifier and exact Pr_S semantics, genuine S/D certificates by closed deduction, all-selector reflection/distribution and all three source-shaped selected-agent clauses for one actual parameter choice. Codex supplied only two closed-context n:=0 annotations; all nine obligations/tenaliases pass with standard axioms. Original Base identification/internal HB/Lob remain separate, so no whole original numbered source target was automatically promoted. The workflow is now PAUSED at the user's request; all owned processes are reaped and future author launches disabled. The portable [pause handoff](computability-knowledge-pause-2026-11-01.md) records seven accepted bundles/48aliases and the exact remaining obligations.
 
 ## Resumed local Claude and Codex loop
 

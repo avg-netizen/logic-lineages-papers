@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.PositiveSourceDataSourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.PositiveSourceDomain.StatementChecks
+
+theorem fixed_source_data_program : Targets.PositiveSourceDataProgram := data_program
+
+end LogicLineages.OrdinalComparison.PositiveSourceDomain.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.PositiveSourceDomain

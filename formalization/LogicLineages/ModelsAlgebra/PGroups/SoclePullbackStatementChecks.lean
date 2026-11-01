@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.SoclePullbackProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.SoclePullbackStatementChecks
+theorem actualFiltration : Targets.actualSoclePullbackFiltration := actual_socle_pullback_filtration
+end LogicLineages.ModelsAlgebra.PGroups.SoclePullbackStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.SoclePullbackStatementChecks

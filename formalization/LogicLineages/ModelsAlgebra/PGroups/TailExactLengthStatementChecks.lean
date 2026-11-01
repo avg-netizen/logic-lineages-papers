@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.TailExactLengthProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.TailExactLengthStatementChecks
+theorem exactLength : Targets.tailExactLengthTransport := tail_exact_length_transport
+end LogicLineages.ModelsAlgebra.PGroups.TailExactLengthStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.TailExactLengthStatementChecks

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.AffineProfileCertificateProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.AffineProfileCertificate.StatementChecks
+
+theorem fixed_affine_source : Targets.ActualAffineProfileSource := affine_source
+theorem fixed_certificate_program : Targets.ActualAffineProfileCertificateProgram := actual_program
+
+end LogicLineages.OrdinalComparison.AffineProfileCertificate.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.AffineProfileCertificate

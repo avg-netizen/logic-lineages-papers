@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.LimitSigmaScottProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.LimitSigmaScottStatementChecks
+theorem actualLowering : Targets.rawLimitSigmaScottLowering := raw_limit_sigma_scott_lowering
+end LogicLineages.ModelsAlgebra.PGroups.LimitSigmaScottStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.LimitSigmaScottStatementChecks

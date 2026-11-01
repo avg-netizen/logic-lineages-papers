@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.InitialUlmFactorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.InitialUlmFactorStatementChecks
+theorem initialFactors : Targets.initialUlmFactorAdmissibility := initial_ulm_factor_admissibility
+end LogicLineages.ModelsAlgebra.PGroups.InitialUlmFactorStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.InitialUlmFactorStatementChecks

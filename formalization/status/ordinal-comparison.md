@@ -1,3 +1,39 @@
+# Paused — 31 October resumed formalization
+
+**PAUSED at 2026-11-01T03:39:03.432609+00:00**, after the user-requested current round.
+No native compiler or author is live. No automatic next proof/comparator.
+
+Owned acceptance ledger: 89bundles /198exact fixed declarations, only standard
+three axioms. Full numbered source promotions: SIX (07identity/sign/sourceeq/
+Boolean/finalone-name and08single-core), awaiting sole root reconciliation.
+The final actual finite omega-block head-shift supplier passed1793504283011237520-2;
+it does not complete09head-graph. Source08 unrestricted signed-recursion domain
+error and its stricter numeric counterexample are saved explicitly.
+
+Read `LogicLineages/OrdinalComparison/PAUSE-HANDOFF-2026-10-31.md` and the
+parallel JSON acknowledgment. All source/file hashes were revalidated.
+Main owns root/TARGETS and Git publication. Other research stays paused.
+
+## Historical checkpoint journal
+
+## Active local continuation — 31 October 2026
+
+Public-paper formalization is active at merged `5cff59d`. This lane owns
+pending07/08/09; main exclusively owns `TerminationOrdering/` and06.
+Historical pauses and next actions below are superseded for this scope.
+
+Forty-eight accepted bundles and one hundred two exact fixed declarations are pinned in
+`OrdinalComparison/ACCEPTED-2026-10-31.json`. Entire07 `cor:sourceeq` and
+`thm:identity` have passed exact full source gates and standard-three-axiom
+closure. The identity theorem includes literal recursively collected NF data,
+all source grammar/values, uniform Computable NF OUTPUT, actual code comparison,
+universal completeness and a positive computed weighted-Phi countervaluation.
+The entire identity gate passed FIRST TRY unchanged in `1793488636509716301-2`.
+
+The two-sort evaluator/domains, same-principal RR rule, range/affine terminal rule, uniform profile thresholds/composition, exact successor word/count rewrite, and simultaneous-certificate leaves1/3 are checked. The finite reverse-weight measure core and the actual source finite norm-ball carrier/rank/budget are checked. Next: connect actual note-valued kernel transformations to the measure, then complete actual mixed/nonlinear call closure and mutual algorithm. Whole sign/order/Boolean/source-comparison claims remain pending;
+no promotion from identity or a pointwise peak orientation component.
+See the owned local continuation and acceptance/promotion records for evidence.
+
 # Ordinal and comparison formalization
 
 Status: **paused** for the user's scheduled local-work stop on 29 October
@@ -912,3 +948,39 @@ The ledger now pins37 focused exact gates /113 fixed declarations and
 paper08's strict interval comparison between different ordinal heads, using
 the newly checked retained-prefix and endpoint chains. Growing-budget residue
 transfer and the cited decision suppliers remain separate pending targets.
+
+31Oct active checkpoint: full actual displayed raw source-head supplier checked1793495285701848709-2; ledger53bundles102fixed. Whole07sign remains pending, next actual uniform peak-word compiler.
+
+Active31Oct continuation: ledger57bundles115fixed. Full actual peak-word program/source semantics and PP/RP measured recursive-call closure accepted1793495672277338225-2. Full07sign pending; actual RR strip/combined-successor call closure and simultaneous gap compiler remain.
+
+Active31Oct checkpoint: ledger60bundles130fixed. Actual RR strip/combined-normalization child decrease and fixed INITIAL computed carrier closure all checked1793495989919892102-2. Full07sign/certificate constructor still pending; no numbered promotion.
+
+Active checkpoint: ledger63bundles135fixed. Entire actual comparison child expansion/program/image/descent FIRST full PASS1793496578758919882-2. Full thm:sign pending numeric finite-tree termination/construction and simultaneous sign/profile-gap evaluation, no numbered promotion.
+
+Active checkpoint: ledger67bundles141fixed. ENTIRE actual all-code finite comparison-tree builder FIRST full gatePASS1793496837102847527-2; actual WF/least-depth Partrec/total Computable/layer semantics all paid. Full07sign remains pending simultaneous sign/profile-gap query evaluation, no numbered promotion.
+
+Active checkpoint: ledger69bundles147fixed. ENTIRE actual finite numeric profile-query builder full gatePASS1793497244754518181-2. Local simultaneous sign/gap node semantics and bottom-up evaluation remain the full07sign frontier.
+
+Active semantic checkpoint: ledger71bundles151fixed. Full actual PP local query-node program/correctness accepted1793497948412760127-2. RP/PR and RR node semantics plus actual bottom-up query evaluation remain pending; whole07sign not promoted.
+
+Active semantic checkpoint: ledger74bundles157fixed. ENTIRE actual RP/PR local quantitative node semantics full gatePASS1793498736388878104-2. RR local nodes, actual bottom-up evaluator and final source07sign assembly remain pending.
+
+Active semantic checkpoint: ledger77bundles160fixed. Entire actual same-outer RR local quantitative node FIRST full gatePASS1793499395648296892-2. Mixed RR, actual bottom-up evaluator and final07sign remain pending.
+
+31Oct resumed checkpoint: ENTIRE actual RR local query node accepted1793500086003471525-2 (2exactgatealiases/std3). Ledger78bundles162fixed. Full original07sign pending only actual bottom-up assembly; no numbered promotion from conditional local rule.
+
+31Oct full original07thm:sign CHECKED1793500394157383541-2,std3. Genuine total Computable sign+positive genuine-domain threshold, actual finite query tree and bottom-up table, no oracle premises. Assembly5gates and fullsource1gate passed. Ledger80bundles168fixed; promotion report pins exact source/freeze/evidence. Continuing07Boolean then08/09; no Git/global register mutation.
+
+31Oct ENTIRE cor:boolean CHECKED1793500747894003765-2,4gate/std3. Both closures uniformly Computable, actual positive source expression prefixes and proved tail. Ledger81/172; whole source one-name bridge next.
+
+31Oct ENTIRE07 final source corollary-21 CHECKED1793501171447937399-2,3exact/std3. All formerly pending07 numbered source obligations locally paid; root imports/register alone. Ledger82/175, next original08/09.
+
+31Oct08single-core actual support supplier accepted1793501524518131328-2,5gate/std3. Ledger83/180. Full Presburger output compiler notyetpaid; continuing actual finite valuation/row compiler chain.
+
+31Oct08 exact arbitrary-core finite tuple evaluation accepted1793501631985805612-2,3gate/std3. Ledger84/183. Full Presburger compiler pending, actual row/P1-pair next.
+
+31Oct08 formal-core signed row fully checked1793501856917654827-2,4gate/std3. Ledger85/187; next actual finite-box Presburger compiler, no08numbered promotionyet.
+
+31Oct ENTIRE08thm:single-core CHECKED1793503217184609784-2,4gate/std3. Actual Computable literal finite Presburger code, same source variables, all original positive valuations, arbitrary nested positive core and exact signed-row semantics; actual universal sign masks. Ledger86/191;6full numbered-source promotions in ownreport. Other08/09 pending.
+
+31Oct resumed continuation: finite-degree block recurrence genuine-domain supplier and literal negative signed-depth obstruction checked (1793503919501675652-2/1793504009362802814-2), six fixed aliases/std3. Source08 printed unrestricted signed d2 recurrence stays pending, not silently corrected. Ledger88/197, full local promotions remain6. Continue original08/09 source obligations.

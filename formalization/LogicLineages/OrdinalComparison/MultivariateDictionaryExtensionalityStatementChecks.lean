@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateDictionaryExtensionalityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateDictionary.StatementChecks
+
+theorem fixed_extensionality : Targets.MultivariateDictionaryCanonicalExtensionality := extensionality
+theorem fixed_structural_algebra : Targets.MultivariateCollectedStructuralAlgebra := structural_algebra
+
+end LogicLineages.OrdinalComparison.MultivariateDictionary.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateDictionary

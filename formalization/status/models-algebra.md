@@ -1,6 +1,89 @@
 # Model theory and algebra formalization
 
-**PAUSED for the user-requested scheduled cutoff.** All selected lane candidates
+## PAUSED after completed31October2026 round
+
+Paused explicitly by the user after the current round. All allocated original
+paper01 targets have whole checked gates; no compiler/author is live in
+this lane and no automatic resume is authorized. Root is adopting the
+no-pure-Sigma and prescribed-tail labels and owns both repository pushes.
+The exact final handoff is
+`verification/local-resume-2026-10-31/models/PAUSED-HANDOFF.md`;
+`PAUSED.json` records the quiescent checkpoint and immutable ledger hashes.
+
+Baseline is external checkpoint25 at5cff59d. Paper01 began with three pending whole
+labels: prescribed-tail, odd-obstruction, no-pure-sigma. Odd obstruction is
+now adopted by main; no-pure-Sigma has passed its whole-source gate. Reduced classification
+and difference spectrum are checked; papers03 and15 are wholly checked and
+are not reopened.
+
+The ENTIRE original prescribed-tail existence target passed its FIRST complete
+assembly check1793489943501561639-2, with all actual countable/primary/reduced,
+earlier Ulm-rank, designated-tail-isomorphism and exact-length clauses.
+`PrescribedTailStatementChecks.fullPrescribedTail` has the unchanged fixed
+`Targets.transfinitePrescribedTailExistence` type and the ordinary three axioms.
+The actual cofinal-socle map and actual pullback filtration are fully proved;
+no general Zippin realization, injective hull or dense-map oracle is supplied.
+All three original paper01 targets allocated to this lane now have whole
+source gates. Main owns their sole global register/source adoption. See
+`verification/local-resume-2026-10-31/models/PrescribedTail-ACCEPTED.json` and
+`PRESCRIBED-TAIL-SOURCE-CORRESPONDENCE.md` for complete pinned evidence.
+
+The exact `ShortStableScottStatementChecks` two-theorem gate passed with
+the ordinary three axioms in receipt1793481712038312834-2. It proves the actual
+short-stable-stage raw Pi_(2*gamma+1) upper and actual reduced/divisible
+product corollary. Acceptance/source pins are in
+`verification/local-resume-2026-10-31/models/ShortStableScott-ACCEPTED.json`.
+This is component-only, not Miller collapse or the entire odd obstruction.
+
+Literal nonzero-limit lowering and all-primary low-index0/1/2 exclusions
+passed their four exact gates in receipt1793482246172398471-2. Compatible
+homomorphism simultaneous extension passed first try in1793482455946985865-2;
+actual finite-subgroup homogeneity of divisible primary groups passed its
+full gate in1793482784027837403-2 after one redundant extensionality-tactic
+repair. All audited closures use only the ordinary three axioms. Exact
+preproof freezes, receipts, source pins and scoped acceptance records are
+saved beside the ShortStableScott ledger.
+
+Full countable finite-height homogeneity passed in1793483274122348630-2:
+every finite full-height subgroup isomorphism of an actual countable primary
+group extends to an actual automorphism, including arbitrary divisible part.
+The original-language Sigma_(2*gamma) tuple-orbit formula then passed its
+first full gate in1793484134038409847-2, using actual finite atomic isolation,
+finite term-height profiles, the stable divisible-tail case and that proved
+automorphism extension. No orbit predicate was inserted into syntax.
+
+Same-rank existential/universal closing and the actual short-length
+Sigma_(2*gamma+1) to d-Sigma_(2*gamma) Scott lowering are now checked.
+The complete original odd obstruction then passed all three exact gates,
+including both long-length no-Sigma and all-primary non-exactness clauses,
+in receipt1793485320936046318-2. Its source correspondence and whole-label
+promotion request are pinned in OddObstructionComplete-ACCEPTED.json;
+main alone integrates the global register.
+
+The infinite-divisible-socle even-index obstruction passed its three
+exact gates in1793486316733999436-2 using actual asymmetric odd comparison
+and finite-image nonisomorphic competitors, without prescribed-tail.
+FiniteSocleWindow and PointedTable then proved actual finite-window
+extension and literal Sigma1 tuple orbits for every finite-socle primary
+group. The full ambient finite-socle-tail orbit/lowering gate passed in
+1793487065018775500-2: positive gamma, actual omega*gamma tail, original
+Sigma_(2*gamma+1) orbit formulas and genuinely lower relative/raw
+d-Sigma_(2*gamma+1) Scott witnesses from any even-level Sigma input.
+
+The complete original no-pure-Sigma theorem then passed its two exact
+gates in1793487494573327695-2, with only the standard three axioms.
+`Targets.primaryAllSigmaLowering` gives a genuine strictly lower-index
+Sigma/Pi/difference Scott witness for every putative raw Sigma Scott
+sentence, for all countable ordinals and all actual countable primary
+groups. Its complete local closure and source correspondence are saved in
+`NoPureSigma-ACCEPTED.json` and `NO-PURE-SOURCE-CORRESPONDENCE.md`.
+Main alone performs global whole-label adoption. Prescribed-tail existence
+is now the only remaining allocated source label and is NOT assumed by
+this proof. All unrelated research stays paused.
+
+## Historical29October pause
+
+**PAUSED for the earlier user-requested scheduled cutoff.** All selected lane candidates
 have passed; no lane compiler or author is live. No automatic resume is
 authorized. The final handoff is
 [`models-algebra-handoff-2026-10-29.md`](models-algebra-handoff-2026-10-29.md).

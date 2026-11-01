@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.CompatibleHomProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.CompatibleHomStatementChecks
+theorem simultaneousExtension : Targets.compatibleDivisibleHomExtension :=
+  compatible_divisible_hom_extension
+end LogicLineages.ModelsAlgebra.PGroups.CompatibleHomStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.CompatibleHomStatementChecks

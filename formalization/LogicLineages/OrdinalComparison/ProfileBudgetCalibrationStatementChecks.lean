@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ProfileBudgetCalibrationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ProfileThresholdProgram.StatementChecks
+
+theorem fixed_calibration : Targets.ProfileSyntaxBudgetCalibration := calibration
+
+end LogicLineages.OrdinalComparison.ProfileThresholdProgram.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.ProfileThresholdProgram

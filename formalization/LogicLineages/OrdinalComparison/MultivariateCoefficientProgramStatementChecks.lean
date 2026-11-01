@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateCoefficientProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateNormalizeCode.StatementChecks
+
+theorem fixed_coefficients : Targets.MultivariateCoefficientPrograms := coefficients
+
+end LogicLineages.OrdinalComparison.MultivariateNormalizeCode.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateNormalizeCode

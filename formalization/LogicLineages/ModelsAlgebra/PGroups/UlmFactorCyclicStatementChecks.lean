@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.UlmFactorCyclicProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.UlmFactorCyclicStatementChecks
+theorem actualCyclicFactors : Targets.actualUlmFactorCyclicPresentation := actual_ulm_factor_cyclic_presentation
+theorem actualNontrivialFactors : Targets.reducedUlmFactorNontrivial := reduced_ulm_factor_nontrivial
+end LogicLineages.ModelsAlgebra.PGroups.UlmFactorCyclicStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.UlmFactorCyclicStatementChecks

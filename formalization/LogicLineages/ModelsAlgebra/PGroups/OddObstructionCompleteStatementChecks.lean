@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.OddObstructionCompleteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.OddObstructionCompleteStatementChecks
+theorem longReduced : Targets.oddLongSourceNoSigma := odd_long_source_no_sigma
+theorem everyPrimaryLowering : Targets.oddPrimarySigmaLowering := odd_primary_sigma_lowering
+theorem fullOddObstruction : Targets.oddObstructionFullSource := odd_obstruction_full_source
+end LogicLineages.ModelsAlgebra.PGroups.OddObstructionCompleteStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.OddObstructionCompleteStatementChecks

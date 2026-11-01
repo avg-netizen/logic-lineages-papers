@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.FiniteSocleWindowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleWindowStatementChecks
+theorem powerTorsionFinite : Targets.finiteSoclePowerTorsion := finite_socle_power_torsion
+theorem finiteStableStage : Targets.finiteSocleFiniteStable := finite_socle_finite_stable
+theorem embeddingWindow : Targets.finiteSocleEmbeddingWindow := finite_socle_embedding_window
+end LogicLineages.ModelsAlgebra.PGroups.FiniteSocleWindowStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.FiniteSocleWindowStatementChecks

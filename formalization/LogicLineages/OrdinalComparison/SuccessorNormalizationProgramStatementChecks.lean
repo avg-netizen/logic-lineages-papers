@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SuccessorNormalizationProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SuccessorNormalization.StatementChecks
+
+theorem fixed_primitive : Targets.SuccessorNormalizationProgramsPrimitiveRecursive := primitive
+
+end LogicLineages.OrdinalComparison.SuccessorNormalization.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.SuccessorNormalization

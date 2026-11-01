@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.MultivariateAdditionProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.MultivariateNormalizeCode.StatementChecks
+
+theorem fixed_addition : Targets.MultivariateCollectedAdditionProgram := addition
+
+end LogicLineages.OrdinalComparison.MultivariateNormalizeCode.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.MultivariateNormalizeCode

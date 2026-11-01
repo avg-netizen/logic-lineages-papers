@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ModelsAlgebra.PGroups.ZeroOmegaCyclicProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ModelsAlgebra.PGroups.ZeroOmegaCyclicStatementChecks
+theorem cyclicSumCalibration : Targets.zeroOmegaCyclicSumCalibration := zero_omega_cyclic_sum_calibration
+theorem actualDecomposition : Targets.countableZeroOmegaCyclicDecomposition := countable_zero_omega_cyclic_decomposition
+end LogicLineages.ModelsAlgebra.PGroups.ZeroOmegaCyclicStatementChecks
+#audit_namespace LogicLineages.ModelsAlgebra.PGroups.ZeroOmegaCyclicStatementChecks

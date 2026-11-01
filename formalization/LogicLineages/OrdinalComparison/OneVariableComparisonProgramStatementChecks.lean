@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.OneVariableComparisonProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.OneVariableComparison.StatementChecks
+
+theorem fixed_source_program : Targets.OneVariableComparisonSourceProgram := source_program
+
+end LogicLineages.OrdinalComparison.OneVariableComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.OneVariableComparison
