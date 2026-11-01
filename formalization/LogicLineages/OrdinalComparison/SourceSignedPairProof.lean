@@ -1,0 +1,3 @@
+module
+public import LogicLineages.OrdinalComparison.SourceSignedPairCompilerProof
+public import LogicLineages.OrdinalComparison.SourceSignedPairAdapterProof

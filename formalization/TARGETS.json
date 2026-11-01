@@ -5190,9 +5190,26 @@
           "file": "09-canonical-source-expressivity/hardness.tex",
           "line": 49,
           "statement_latex": "[Signed polynomial pairs]\\label{lem:pair-compiler}\nEvery signed linear expression $D$ in ordinal unknowns with coefficients\nin $\\mathbb Z[\\omega]$ has effectively constructed actual $A_D,B_D:\\tau$\nwhose first-coordinate difference is $2^kD$ for a finite $k$.\nAll free functional variables have type $\\tau$, and internal types have\nlevel at most two.  Differences are taken only in the signed Cantor-monomial\ngroup; each of the two source coordinates remains a positive ordinal.",
-          "status": "pending",
+          "status": "checked",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.SignedPair.StatementChecks.fixed_signed_pair_compiler",
+            "LogicLineages.OrdinalComparison.Source.SignedPair.StatementChecks.fixed_monomial_adapter"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceSignedPairTargets.lean",
+              "sha256": "c1b84495817264a7d433320a7dc3c6c7aaf6d0fdd8679cdf7f7a6d4628293f6b",
+              "type": "LogicLineages.OrdinalComparison.Source.SignedPair.Targets.SignedPairCompiler"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceSignedPairTargets.lean",
+              "sha256": "c1b84495817264a7d433320a7dc3c6c7aaf6d0fdd8679cdf7f7a6d4628293f6b",
+              "type": "LogicLineages.OrdinalComparison.Source.SignedPair.Targets.MonomialAdapter"
+            }
+          ],
+          "coverage_note": "Whole source signed polynomial-pair compiler: executable actual-source construction for every signed expression and unrestricted finite signed monomial list, genuine original admissible substitutions, positive ordinal coordinates, equality in the signed Cantor group and internal level at most two. Acceptance requires both listed declarations; root source-correspondence promotion at external checkpoint01."
         },
         {
           "id": "09-canonical-source-expressivity:lem:functional-detector",

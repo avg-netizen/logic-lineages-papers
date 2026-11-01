@@ -1,0 +1,78 @@
+{
+  "aliases": [
+    {
+      "declaration": "LogicLineages.OrdinalComparison.Source.SignedPair.StatementChecks.fixed_signed_pair_compiler",
+      "namespace": "LogicLineages.OrdinalComparison.Source.SignedPair",
+      "proof": "Proof.signedPairCompiler",
+      "target": "Targets.SignedPairCompiler"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.Source.SignedPair.StatementChecks.fixed_monomial_adapter",
+      "namespace": "LogicLineages.OrdinalComparison.Source.SignedPair",
+      "proof": "Proof.monomialAdapter",
+      "target": "Targets.MonomialAdapter"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "candidate_files": [
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairAlgebraProof.lean"
+    },
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairCombinatorProof.lean"
+    },
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairStructureProof.lean"
+    },
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairCompilerProof.lean"
+    },
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairAdapterProof.lean"
+    },
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairProof.lean"
+    }
+  ],
+  "comparator_receipt": "formalization/build-reports/1793509766467925732-7.json",
+  "frozen_files": [
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairDefinitions.lean",
+      "role": "definitions",
+      "sha256": "b2c18f2faa4931955300945cde3c5ebf0ec54db1865c6039747f13b6163a4321"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairTargets.lean",
+      "role": "target",
+      "sha256": "c1b84495817264a7d433320a7dc3c6c7aaf6d0fdd8679cdf7f7a6d4628293f6b"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSignedPairStatementChecks.lean",
+      "role": "gate",
+      "sha256": "84ffb5bfdefb6a1315c915200a251617cc9346cf7c817483120a6753a125747c"
+    }
+  ],
+  "observed_utc": "2026-11-01T05:09:38.698582+00:00",
+  "phase": "before-candidate-authoring",
+  "prior_failed_comparator_receipt": "formalization/build-reports/1793509161889118514-5.json",
+  "root_review_reference": "Root source approval 2026-11-01T05:00:24Z, renewed after lexical/input closedValue repairs 2026-11-01T05:09:27Z",
+  "schema": "author-freeze-v1",
+  "scope": "Whole original09 hardness.tex lem:pair-compiler and unrestricted signed monomial-list adapter. No functional-hardness theorem.",
+  "source": [
+    {
+      "label": "lem:pair-compiler",
+      "path": "09-canonical-source-expressivity/hardness.tex",
+      "sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f"
+    }
+  ]
+}

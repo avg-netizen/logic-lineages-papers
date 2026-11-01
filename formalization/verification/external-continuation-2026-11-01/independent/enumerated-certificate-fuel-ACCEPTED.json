@@ -1,0 +1,127 @@
+{
+  "accepted_scope": "Scoped external supplier only: identical raw numeric certificate fuel monotonicity and existing numeric modus-ponens constructor at maximum fuel, arbitrary formula contexts. No internal HB2, original Base adequacy or whole paper12 promotion.",
+  "additional_receipt_sha256": [],
+  "aliases": [
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.certificateFuelMonotonicity_exact",
+      "proof": "certificateFuelMonotonicity",
+      "target": "CertificateFuelMonotonicity"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.modusPonensMaxFuel_exact",
+      "proof": "modusPonensMaxFuel",
+      "target": "ModusPonensMaxFuel"
+    },
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.target_exact",
+      "proof": "\u27e8certificateFuelMonotonicity, modusPonensMaxFuel\u27e9",
+      "target": "Target"
+    }
+  ],
+  "baseline_commit": "c35d19c84b828b2dda388caaa8b394fd9ba2d8e5",
+  "baseline_reference": "formalization/verification/external-continuation-2026-11-01/independent/BASELINE.json",
+  "candidate_forbidden_construct_scan": "No sorry, admit, native_decide or axiom declaration in new proof source.",
+  "closure_sha256": "0454e7cf2539d9bcbd2ca8348b93f397d2f51206306c3bc19d13ddf92220b09a",
+  "comparator_receipt_sha256": "ec69453c76696eaa25ecfb5dbbc5cde1f60e37b4dc998253652927cb1451f8c3",
+  "direct_comparator_compilation": [
+    {
+      "module": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedProvabilityDefinitions",
+      "returncode": 0,
+      "source_sha256": "60d75746f142478fb57e6e936d33569651544d82a6afed381a8eeada59e94548"
+    },
+    {
+      "module": "LogicLineages.ComputabilityKnowledge.GorbowTheoryCertificateOperationsDefinitions",
+      "returncode": 0,
+      "source_sha256": "eac86d6a7595537cd11dd3a3876ce0b0e842243bff5a4e4c0680e3a9d26caa94"
+    },
+    {
+      "module": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuelTargets",
+      "returncode": 0,
+      "source_sha256": "25db89c73b90da15d754ec6a4ca3bcfbc25b4eb1683596142fb7678577e46444"
+    }
+  ],
+  "direct_compilation": [
+    {
+      "module": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuelProof",
+      "observed_cpu_seconds": 1.63,
+      "peak_process_tree_rss_kib": 1064004,
+      "returncode": 0,
+      "seconds": 1.691,
+      "source_sha256": "5b87989f53b18e0129a7b2aa8713437d05de8c3a7b4b206823c93976906b8cc5"
+    },
+    {
+      "module": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuelStatementChecks",
+      "observed_cpu_seconds": 1.26,
+      "peak_process_tree_rss_kib": 1068768,
+      "returncode": 0,
+      "seconds": 1.328,
+      "source_sha256": "dc40fe2aa751d98f3d18b5c3eb6ecc647527756bef3d5a91148555b8daf194d5"
+    }
+  ],
+  "errors": [],
+  "freeze_sha256": "e4bc7d3a2bd209c225bbfb73d94e4bae85b8ffbd47d60b0f695193dae210a766",
+  "gate": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuelStatementChecks",
+  "limitations": [
+    "Pre-authoring chronology relies on contemporaneously observed freeze record, not file modification times.",
+    "This tool does not perform source-statement semantic review or rerun Lean."
+  ],
+  "namespace_audits": [
+    {
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "theorems": 3
+    }
+  ],
+  "new_changed_sources": [
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelProof.lean",
+      "sha256": "5b87989f53b18e0129a7b2aa8713437d05de8c3a7b4b206823c93976906b8cc5"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelStatementChecks.lean",
+      "sha256": "dc40fe2aa751d98f3d18b5c3eb6ecc647527756bef3d5a91148555b8daf194d5"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelTargets.lean",
+      "sha256": "25db89c73b90da15d754ec6a4ca3bcfbc25b4eb1683596142fb7678577e46444"
+    }
+  ],
+  "observed_utc": "2026-11-01T05:13:58.831972+00:00",
+  "raw_freeze_sha256": "3d9f11296fbe3a44c5cfae336fcd3ab7cd8f627efaa56c3b6868fe219ab5ada1",
+  "raw_log_availability": "retained locally outside public repository; not a portable full raw archive",
+  "raw_log_sha256": "877f55995cabe4c58c7a54417a69f25a8ed3eba63190755ed16f88bc4bafa8cf",
+  "receipt_sha256": "145eeb105906cee29140efda3073600c77461736afc2c0f37e61c328ca125db9",
+  "resources": {
+    "cpu_seconds": 90,
+    "heap_cap_mib": 2048,
+    "minimum_free_mib": 2048,
+    "rss_cap_mib": 1536,
+    "threads": 1,
+    "wall_seconds": 180
+  },
+  "schema": "independent-acceptance-v1",
+  "source_contract_review": "Exact pre-frozen alias types and raw proof RHS match compiler-audited declarations; same certificate and existing MP constructor retained without additional premises.",
+  "source_snapshots": {
+    "after_sha256": "3c7158c7263641c5d148f3cc5243b37cd4ffa547a0f62fcd09ca952399ec388d",
+    "before_sha256": "47c41113c76df91472aa8f7124f00b29b6d80f438834d3e0010c11b169ee19ae",
+    "local_modules": 72,
+    "unchanged": true,
+    "upstream_imports": 6
+  },
+  "status": "verified-technical-evidence",
+  "whole_statement_promotion": "requires-root-semantic-review"
+}

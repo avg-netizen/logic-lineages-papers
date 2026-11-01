@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks
+
+theorem fixedLiteralEmbeddingTypeClosure : TypeClosureTargets.LiteralEmbeddingTypeClosure :=
+  TypeClosureProof.literalEmbeddingTypeClosure
+theorem fixedRenamingTypeClosure : TypeClosureTargets.RenamingTypeClosure :=
+  TypeClosureProof.renamingTypeClosure
+theorem fixedMarkingTypeClosure : TypeClosureTargets.MarkingTypeClosure :=
+  TypeClosureProof.markingTypeClosure
+theorem fixedSubstitutionTypeClosure : TypeClosureTargets.SubstitutionTypeClosure :=
+  TypeClosureProof.substitutionTypeClosure
+theorem fixedSimultaneousApplicationTypeClosure : TypeClosureTargets.SimultaneousApplicationTypeClosure :=
+  TypeClosureProof.simultaneousApplicationTypeClosure
+theorem fixedRetypingTypeClosure : TypeClosureTargets.RetypingTypeClosure :=
+  TypeClosureProof.retypingTypeClosure
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering

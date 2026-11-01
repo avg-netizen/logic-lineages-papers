@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquationsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.StatementChecks
+open Targets Proof
+
+theorem openAxiomSpecialization_exact : OpenAxiomSpecialization := openAxiomSpecialization
+theorem nodeEquationInstances_exact : NodeEquationInstances := nodeEquationInstances
+theorem compositionEquation_exact : CompositionEquation := compositionEquation
+theorem recursionZeroEquation_exact : RecursionZeroEquation := recursionZeroEquation
+theorem recursionSuccessorEquation_exact : RecursionSuccessorEquation := recursionSuccessorEquation
+theorem target_exact : Target := ⟨openAxiomSpecialization, nodeEquationInstances, compositionEquation, recursionZeroEquation, recursionSuccessorEquation⟩
+
+end LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.StatementChecks

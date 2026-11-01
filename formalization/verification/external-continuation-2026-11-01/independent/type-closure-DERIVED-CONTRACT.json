@@ -1,0 +1,88 @@
+{
+  "aliases": [
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedLiteralEmbeddingTypeClosure",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "TypeClosureProof.literalEmbeddingTypeClosure",
+      "target": "TypeClosureTargets.LiteralEmbeddingTypeClosure"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedRenamingTypeClosure",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "TypeClosureProof.renamingTypeClosure",
+      "target": "TypeClosureTargets.RenamingTypeClosure"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedMarkingTypeClosure",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "TypeClosureProof.markingTypeClosure",
+      "target": "TypeClosureTargets.MarkingTypeClosure"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedSubstitutionTypeClosure",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "TypeClosureProof.substitutionTypeClosure",
+      "target": "TypeClosureTargets.SubstitutionTypeClosure"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedSimultaneousApplicationTypeClosure",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "TypeClosureProof.simultaneousApplicationTypeClosure",
+      "target": "TypeClosureTargets.SimultaneousApplicationTypeClosure"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedRetypingTypeClosure",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "TypeClosureProof.retypingTypeClosure",
+      "target": "TypeClosureTargets.RetypingTypeClosure"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "candidate_files": [
+    {
+      "exists": false,
+      "observation_basis": "Original candidate_exists_at_freeze=false; main proof path is fixed by the original hash-pinned populated gate import.",
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureProof.lean"
+    }
+  ],
+  "comparator_receipt": "formalization/build-reports/1793509812272423724-7.json",
+  "derivation": "Prepared after compilation for independent verification. Exact aliases are recovered mechanically from the original preproof SHA256-pinned populated gate. Candidate absence/time are references to the original observation, not new preproof claims. Manuscript hash is established now against unchanged baseline Git content, not retroactively inserted into the old freeze.",
+  "frozen_files": [
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureDefinitions.lean",
+      "role": "definitions",
+      "sha256": "2ddba7019b502ffb3f930c5ac0067c95e4a40265910e4f4253e28e82878a0146"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureTargets.lean",
+      "role": "target",
+      "sha256": "241ff8001e37d0575a413b015e34898d967dd044a9ba1de86329171f43457bf4"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureStatementChecks.lean",
+      "role": "gate",
+      "sha256": "ce6434077fbc4e95b70fd40ab7e0c9624134b579f6b25e1c41ea872989ac3a5b"
+    }
+  ],
+  "observed_utc": "2026-11-01T05:18:05.556046+00:00",
+  "original_raw_freeze_sha256": "1373c7e5340063cac8ce02121ed9b90241e5d41e069ce60d27a5203912e76c96",
+  "phase": "derived-contract-not-new-freeze",
+  "portable_original_freeze_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosure-FREEZE.json",
+  "portable_original_freeze_sha256": "fb197cee4cbf973d7691819f27534c15ac4d39c9c4beb78263802b526fe08b5f",
+  "preproof_observation_utc": "2026-11-01T05:10:28.618007+00:00",
+  "root_equivalence_approval": "Root reviewer approved explicit derived supplement on 2026-11-01T05:17:34Z. Future freezes use author-freeze-v1 prospectively.",
+  "schema": "derived-equivalent-contract-v1",
+  "scope": "Actual marked-syntax type confinement component only; no whole numbered statement promotion.",
+  "source": [
+    {
+      "hash_basis": "Exact bytes identical to baseline Git commit c35d19c84b828b2dda388caaa8b394fd9ba2d8e5, verified at derived-supplement time.",
+      "label": "def:angle; lem:finiteclosure type-preservation component only",
+      "path": "06-godel-t-termination-ordering/paper.tex",
+      "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+    }
+  ]
+}

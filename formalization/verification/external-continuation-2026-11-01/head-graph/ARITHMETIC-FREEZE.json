@@ -1,0 +1,62 @@
+{
+  "aliases": [
+    {
+      "declaration": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic.StatementChecks.fixed_full_phi",
+      "namespace": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic",
+      "proof": "Proof.fullPhiGate",
+      "target": "Targets.FullPhiGate"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic.StatementChecks.fixed_phi_chain",
+      "namespace": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic",
+      "proof": "Proof.fixedPhiChain",
+      "target": "Targets.FixedPhiChain"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic.StatementChecks.fixed_unit_expansion",
+      "namespace": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic",
+      "proof": "Proof.unitTreeExpansion",
+      "target": "Targets.UnitTreeExpansion"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "candidate_files": [
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/ActualHeadGraphArithmeticProof.lean"
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/ActualHeadGraphArithmeticDefinitions.lean",
+      "role": "definitions",
+      "sha256": "cc14a0aafef74210ac4b6ed283a145c254fa61b3b602f9a29852ead7768e0d77"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/ActualHeadGraphArithmeticTargets.lean",
+      "role": "target",
+      "sha256": "295b74d2c401b9a7304d72a0cb1b8bc5f3a93cc5343dd3cdd56925c41652a3a5"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/ActualHeadGraphArithmeticStatementChecks.lean",
+      "role": "gate",
+      "sha256": "ae43a7f54132042e4bc3f9531f80ad106e4fe680c4c90fce7bfbf8b7430b7dc8"
+    }
+  ],
+  "observed_utc": "2026-11-01T05:10:44.066351+00:00",
+  "phase": "before-candidate-authoring",
+  "root_review_reference": "Parent collaboration message 2026-11-01T05:01:51Z: Root reviewed literal ArithmeticDefs/3targets, APPROVED scoped explicit finite actual source Formula fullPhi4prefix+tail/fixedPhiChain/UnitTreeExpansion shared positional wires.",
+  "schema": "author-freeze-v1",
+  "scope": "Original09 head-graph literal arithmetic suppliers only; not whole numbered target completion.",
+  "source": [
+    {
+      "label": "thm:head-graph; thm:unit-elimination",
+      "path": "09-canonical-source-expressivity/source-realization.tex",
+      "sha256": "0697513be6d0d8251c1792b4c723a58116e0524aad5751322e563da72e8c6ec8"
+    }
+  ]
+}

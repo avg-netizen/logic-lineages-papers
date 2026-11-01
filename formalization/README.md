@@ -1,3 +1,9 @@
+Current external round: **active through 1 November 2026, 17:00 UTC** (noon
+UTC−05:00), on `formalization/external-continuation-2026-11-01`. Its current register is
+135 checked, 2 inherited and 52 pending source statements. Follow
+[the current continuation report](EXTERNAL-CONTINUATION-2026-11-01.md). The local
+pause snapshot below is historical and has been superseded by this external release.
+
 Current local checkpoint: **paused after the completed rounds, 1 November 2026 UTC**. The register has **134 checked, 2 inherited and 53 pending statements out of 189**. Read [the complete handoff](HANDOFF-2026-11-01.md); the older releases below are historical.
 
 Local formalization was explicitly resumed on31October2026 from5cff59d. See [AGENTS.md](AGENTS.md) for current allocation; the old cutoff below is historical.

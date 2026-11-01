@@ -1,0 +1,73 @@
+{
+  "aliases": [
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.certificateFuelMonotonicity_exact",
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "proof": "certificateFuelMonotonicity",
+      "target": "CertificateFuelMonotonicity"
+    },
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.modusPonensMaxFuel_exact",
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "proof": "modusPonensMaxFuel",
+      "target": "ModusPonensMaxFuel"
+    },
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.target_exact",
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "proof": "\u27e8certificateFuelMonotonicity, modusPonensMaxFuel\u27e9",
+      "target": "Target"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "candidate_files": [
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelProof.lean"
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedProvabilityDefinitions.lean",
+      "role": "definitions",
+      "sha256": "60d75746f142478fb57e6e936d33569651544d82a6afed381a8eeada59e94548"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowTheoryCertificateOperationsDefinitions.lean",
+      "role": "definitions",
+      "sha256": "eac86d6a7595537cd11dd3a3876ce0b0e842243bff5a4e4c0680e3a9d26caa94"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelTargets.lean",
+      "role": "target",
+      "sha256": "25db89c73b90da15d754ec6a4ca3bcfbc25b4eb1683596142fb7678577e46444"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelStatementChecks.lean",
+      "role": "gate",
+      "sha256": "dc40fe2aa751d98f3d18b5c3eb6ecc647527756bef3d5a91148555b8daf194d5"
+    }
+  ],
+  "observed_utc": "2026-11-01T05:10:13.813035+00:00",
+  "phase": "before-candidate-authoring",
+  "portable_export": {
+    "change": "Role-only provenance redaction; not a new freeze observation. Original raw record retained locally outside public repository. All mathematical hashes, candidate absence and observation timestamp are unchanged.",
+    "changed_field": "root_review_reference",
+    "exported_utc": "2026-11-01T05:12:04.461610+00:00",
+    "original_raw_sha256": "3d9f11296fbe3a44c5cfae336fcd3ab7cd8f627efaa56c3b6868fe219ab5ada1"
+  },
+  "root_review_reference": "Root semantic review, 2026-11-01T05:02:54Z: fresh exact two clauses approved; unchanged raw certificate monotone fuel/existing mpCertificate max fuel.",
+  "schema": "author-freeze-v1",
+  "scope": "External actual bounded verifier same-certificate fuel monotonicity and existing numeric MP constructor at maximum fuel. No internal HB2, original Base adequacy, or whole paper12 promotion.",
+  "source": [
+    {
+      "label": "lem:three; external proof-certificate supplier for later internal derivability work only",
+      "path": "12-common-knowledge-necessitation/paper.tex",
+      "sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc"
+    }
+  ]
+}
