@@ -1,3 +1,14 @@
+**Current external release — 1 November 2026 UTC.**
+The user explicitly resumed formalization after the completed local rounds and
+asked for work until noon at UTC−05:00, **2026-11-01 17:00 UTC**. Start from
+`c35d19c84b828b2dda388caaa8b394fd9ba2d8e5` and the latest handoff below; the
+134 checked, 2 inherited, 53 pending register is the baseline. Historical pause
+instructions below do not prohibit this newly authorized round. Use one
+cumulative branch `formalization/external-continuation-2026-11-01` and publish
+verified work there. All source-correspondence, comparator-first, axiom and
+serialized resource rules remain unchanged. CI diagnosis/configuration changes
+remain deferred. Private research is not resumed.
+
 **Current local state — PAUSED after completed rounds, 1 November 2026 UTC.**
 Claude R005, all three lanes and main proof work have finished and stopped.
 No new author, proof round, quota-reset resume or compiler launch without a new
