@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessStatementChecks
+
+theorem fixedTrueCalibration : TypedObservationAccessTargets.TrueCalibration := TypedObservationAccessProof.trueCalibration
+theorem fixedRejectedFalse : TypedObservationAccessTargets.RejectedFalse := TypedObservationAccessProof.rejectedFalse
+theorem fixedTypedCoordinate : TypedObservationAccessTargets.TypedCoordinate := TypedObservationAccessProof.typedCoordinate
+theorem fixedReadMonotone : TypedObservationAccessTargets.ReadMonotone := TypedObservationAccessProof.readMonotone
+theorem fixedRestrictionAccess : TypedObservationAccessTargets.RestrictionAccess := TypedObservationAccessProof.restrictionAccess
+theorem fixedBottomFalse : TypedObservationAccessTargets.BottomFalse := TypedObservationAccessProof.bottomFalse
+
+#print axioms fixedTrueCalibration
+#print axioms fixedRejectedFalse
+#print axioms fixedTypedCoordinate
+#print axioms fixedReadMonotone
+#print axioms fixedRestrictionAccess
+#print axioms fixedBottomFalse
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessStatementChecks

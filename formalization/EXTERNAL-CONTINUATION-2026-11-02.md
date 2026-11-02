@@ -563,3 +563,9 @@ Nine exact interfaces preserve stable typed-port names under actual extension re
 Three exact interfaces assemble the actual original P, B, caller C, full box and original budget b with deterministic actual carrier records and paid reserve. B1 is the actual partial; the fixed original scale 2^b yields an actual flat-chain source K with the exact balanced head and strict positive gap. Raw numeric source-code computability remains pending, so this is semantic/data construction, not the whole effective ground-construction theorem.
 
 `ExternalCheckpoint20261102AS` verifies 243 permitted-axiom aliases across 55 components on an unchanged 860-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint46/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration. This November 2 checkpoint is newly reconstructed work, not a recovery of missing November 1 private bytes.
+
+## Cumulative checkpoint 47 — typed raw observation access
+
+Six exact interfaces implement total weak/strict coordinate access guarded by actual world validity, extension, type and literal Observation membership, without duplicate indices. True/reject/typed interfaces, Value monotonicity, projection under the necessary observation-extension premise and bottom false are proved. Semantic comparison relations, matching and operators remain separate.
+
+`ExternalCheckpoint20261102AT` verifies 249 permitted-axiom aliases across 56 components on an unchanged 865-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint47/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
