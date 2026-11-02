@@ -1521,6 +1521,9 @@ public import LogicLineages.ExternalCheckpoint20261102CI
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitSubstitutionStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CJ
 
+public import LogicLineages.OrdinalComparison.UnitGroundBlockCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CK
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
