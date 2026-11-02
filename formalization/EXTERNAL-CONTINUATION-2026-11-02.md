@@ -1,5 +1,12 @@
 # External continuation — 2 November 2026
 
+**Source-scope correction:** the whole `lem:context` promotion is provisional.
+The current kernel context theorem fixes the hole environment; the original
+all-context claim still needs actual equivariance and a fresh-binder bridge.
+[Read the correction](verification/external-continuation-2026-11-02/CONTEXT-SCOPE-CORRECTION.md).
+Published register totals below are stored bookkeeping, not a current complete
+whole-source certification. No revised whole total is claimed here.
+
 Current checkpoint07: published register **137 checked,2 inherited,50 pending /189**;
 twelve selected scoped components and51exact cumulative aliases, plus an accepted
 standalone four-alias ground-operator component. The carrier register update

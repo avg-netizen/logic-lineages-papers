@@ -1,3 +1,9 @@
+> SUPERSEDED COVERAGE RECOMMENDATION: the kernel theorem is valid, but whole
+> `lem:context` is provisional pending actual equivariance and a fresh-binder
+> context bridge. See [source-scope correction](../CONTEXT-SCOPE-CORRECTION.md).
+> The historical promotion recommendation below must not be used as current
+> whole-source acceptance.
+
 # Whole-source review: paper06 `lem:context`
 
 Source: `06-godel-t-termination-ordering/paper.tex`, lines475–486.
