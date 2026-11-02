@@ -917,3 +917,9 @@ Two exact interfaces prove the genuine omega natural-product finite-tail identit
 Four exact interfaces introduce the actual natural-value/source relation using original guarded bits and complete simultaneous application: two honest definitional projections, plus substantive downward closure and bottom relatedness proved by strict-type induction. Raw source syntax remains unrestricted. Evaluator or iteration-stage satisfaction, a fundamental theorem, soundness and whole adequacy remain unpaid.
 
 `ExternalCheckpoint20261102CX` verifies 489 permitted-axiom aliases across 114 components on an unchanged 1249-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint103/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 104 — logical relation world laws
+
+Four exact interfaces prove identity and composition for actual stable typed-port maps, future-world restriction of the genuine logical relation, and literal variable-value relatedness. They use actual source renaming and natural value restriction. Constructor-stage satisfaction, a fundamental theorem, soundness and whole adequacy remain unpaid.
+
+`ExternalCheckpoint20261102CY` verifies 493 permitted-axiom aliases across 115 components on an unchanged 1254-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint104/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

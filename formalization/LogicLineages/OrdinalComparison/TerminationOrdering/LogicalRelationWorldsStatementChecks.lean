@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsStatementChecks
+
+theorem fixedPortRenameIdentity : LogicalRelationWorldsTargets.PortRenameIdentity := LogicalRelationWorldsProof.portRenameIdentity
+
+theorem fixedPortRenameComposition : LogicalRelationWorldsTargets.PortRenameComposition := LogicalRelationWorldsProof.portRenameComposition
+
+theorem fixedRelatedWeakening : LogicalRelationWorldsTargets.RelatedWeakening := LogicalRelationWorldsProof.relatedWeakening
+
+theorem fixedLiteralVariableRelated : LogicalRelationWorldsTargets.LiteralVariableRelated := LogicalRelationWorldsProof.literalVariableRelated
+
+#print axioms fixedPortRenameIdentity
+#print axioms fixedPortRenameComposition
+#print axioms fixedRelatedWeakening
+#print axioms fixedLiteralVariableRelated
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsStatementChecks
