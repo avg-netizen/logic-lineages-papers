@@ -693,3 +693,9 @@ Uniform primitive-recursive original-budget computation is calibrated to the act
 Actual arbitrary-context typed environments of natural values satisfy restriction, binder-extension and reindexing laws. The literal identity environment transports actual variable values through genuine port extensions. This is an environment interface, not full term interpretation. No whole structural interpretation claim follows from this interface alone.
 
 `ExternalCheckpoint20261102BM` verifies 351 permitted-axiom aliases across 77 components on an unchanged 986-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint66/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending statements.
+
+## Cumulative checkpoint 65 — actual typed-prefix insertion
+
+Four exact interfaces calibrate uniform primitive-recursive source, ordinal-component and complete-vector maps to actual typed-prefix insertion. Arbitrary original/protected/inserted contexts and every internal binder type are retained. Full actual assignment naturality is proved, without conflating private functional variables. The final source-to-K effectivity theorem remains separate.
+
+`ExternalCheckpoint20261102BN` verifies 355 permitted-axiom aliases across 78 components on an unchanged 993-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint67/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.

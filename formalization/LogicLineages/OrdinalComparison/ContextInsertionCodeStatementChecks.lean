@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ContextInsertionCodeTargets
+public import LogicLineages.OrdinalComparison.ContextInsertionCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ContextInsertionCode.StatementChecks
+theorem exact_source_insertion : Targets.ExactSourceInsertion := Proof.exactSourceInsertion
+theorem exact_ordinal_vector : Targets.ExactOrdinalVector := Proof.exactOrdinalVector
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_inserted_assignment : Targets.ActualInsertedAssignment := Proof.actualInsertedAssignment
+end LogicLineages.OrdinalComparison.Source.ContextInsertionCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ContextInsertionCode

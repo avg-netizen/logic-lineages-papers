@@ -1452,6 +1452,9 @@ public import LogicLineages.OrdinalComparison.OriginalBudgetCodeStatementChecks
 public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BM
 
+public import LogicLineages.OrdinalComparison.ContextInsertionCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BN
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
