@@ -587,3 +587,9 @@ Six exact interfaces exhaustively enumerate occurrence permutations and cuts, pr
 Four exact interfaces prove primitive-recursive raw-source single-binder zero deletion and fresh tracked-name renaming at arbitrary binder depth, with exact typed substitution calibration. Malformed inputs are totalized. This is not an all-free-variable closure map or a whole raw original-source-to-K computation.
 
 `ExternalCheckpoint20261102AW` verifies 262 permitted-axiom aliases across 59 components on an unchanged 884-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint50/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 51 — literal ordinary observation views
+
+Six exact interfaces calibrate the literal ordinary root to the original packed embedding, retaining complete ordered arguments, their source types, plain children and observation/port/type provenance. Application has exactly two children, native constants have no base arguments, ranked symbols retain all arguments, and lambda/variable have no ordinary root. This is not spine normalization or rule adequacy.
+
+`ExternalCheckpoint20261102AX` verifies 268 permitted-axiom aliases across 60 components on an unchanged 889-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint51/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
