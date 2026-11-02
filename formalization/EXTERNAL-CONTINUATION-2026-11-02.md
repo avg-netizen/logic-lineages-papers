@@ -777,3 +777,9 @@ Two exact interfaces derive the actual finite constructor limit's four-rule weak
 Two exact interfaces prove positivity, successor-limit status and epsilon-zero closure of the actual omega natural-product head for every positive ordinal below epsilon-zero, without a polynomial restriction. Every ClosedPositive expression receives exact existing scalarHeadNote normal-form and encodedClosedHead calibration. No whole head-graph theorem or new primitive is claimed.
 
 `ExternalCheckpoint20261102CA` verifies 413 permitted-axiom aliases across 91 components on an unchanged 1080-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint80/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 81 — actual-limit semantic application
+
+One exact interface derives semantic applyWith equals the actual original-spine scanner for every confined original term and complete typed argument list at the actual finite fixed point, with original free variables initially unprotected. This does not establish syntax specialApply, substitution, arbitrary-family consistency or the whole structural lemma. The earlier generic-family structural qualification remains in force.
+
+`ExternalCheckpoint20261102CB` verifies 414 permitted-axiom aliases across 92 components on an unchanged 1085-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint81/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

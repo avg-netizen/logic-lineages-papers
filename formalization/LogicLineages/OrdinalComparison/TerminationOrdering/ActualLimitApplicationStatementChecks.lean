@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitApplicationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitApplicationStatementChecks
+
+theorem fixedFullApplication : ActualLimitApplicationTargets.FullApplication := ActualLimitApplicationProof.fullApplication
+
+#print axioms fixedFullApplication
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitApplicationStatementChecks
