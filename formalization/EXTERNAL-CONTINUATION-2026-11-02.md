@@ -935,3 +935,9 @@ The complete genuine paid-head graph is effectively defined by a raw Computable 
 Five exact interfaces prove actual typed witness representation through packed values, downward append and world-image transport, along with downward input transport and bottom-family soundness. Actual source witnesses and complete ordered inputs are retained. FamilySound is not assumed or established for the constructor operator or its limit; no fundamental theorem, full soundness or whole adequacy is claimed.
 
 `ExternalCheckpoint20261102DA` verifies 501 permitted-axiom aliases across 117 components on an unchanged 1267-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint106/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 107 — related occurrence matching
+
+Three exact interfaces derive original source Weak/Strict pairs and occurrence-preserving WeakMatch/StrictMultiset judgments from explicit actual Related entries and genuine same-world finite observation witnesses. All occurrences and duplicates are retained. No FamilySound oracle, full answer soundness, fundamental theorem or whole adequacy is claimed.
+
+`ExternalCheckpoint20261102DB` verifies 504 permitted-axiom aliases across 118 components on an unchanged 1272-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint107/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
