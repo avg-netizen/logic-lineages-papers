@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualOriginalApplicationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualOriginalApplicationStatementChecks
+
+theorem fixedSuccessConfinement : ActualOriginalApplicationTargets.SuccessConfinement := ActualOriginalApplicationProof.successConfinement
+
+theorem fixedSuccessInterpretation : ActualOriginalApplicationTargets.SuccessInterpretation := ActualOriginalApplicationProof.successInterpretation
+
+theorem fixedFailureBottom : ActualOriginalApplicationTargets.FailureBottom := ActualOriginalApplicationProof.failureBottom
+
+#print axioms fixedSuccessConfinement
+#print axioms fixedSuccessInterpretation
+#print axioms fixedFailureBottom
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualOriginalApplicationStatementChecks

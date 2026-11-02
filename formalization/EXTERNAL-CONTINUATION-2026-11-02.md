@@ -851,3 +851,9 @@ Three exact interfaces establish actual syntax append confinement, exact ordered
 Three exact interfaces establish the full tree and payload codec and exact typed-tree folds preserving all metadata, order and duplicates. Constructors and suitable folds are primitive recursive; actual anchor realization is Computable and calibrated to UnitElimination.realize. Raw source tree construction and the numeric whole head-graph formula remain separate obligations.
 
 `ExternalCheckpoint20261102CM` verifies 452 permitted-axiom aliases across 103 components on an unchanged 1173-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint92/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 93 — literal original application at the actual limit
+
+Three exact interfaces prove confinement of successful unchanged applyOriginalWith, identify successful-result interpretation with the actual-limit scanner with original source variables protected, and show actual failure yields the whole bottom value. Used-type range and argument conditions, complete ordered arguments and real append are retained. No generic-family whole structural lemma or adequacy theorem is claimed.
+
+`ExternalCheckpoint20261102CN` verifies 455 permitted-axiom aliases across 104 components on an unchanged 1181-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint93/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
