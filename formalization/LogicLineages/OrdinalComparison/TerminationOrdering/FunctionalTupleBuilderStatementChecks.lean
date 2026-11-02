@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderStatementChecks
+
+theorem fixedFullTableCalibration : FunctionalTupleBuilderTargets.FullTableCalibration := FunctionalTupleBuilderProof.fullTableCalibration
+theorem fixedNaturalTables : FunctionalTupleBuilderTargets.NaturalTables := FunctionalTupleBuilderProof.naturalTables
+theorem fixedBuilderMonotone : FunctionalTupleBuilderTargets.BuilderMonotone := FunctionalTupleBuilderProof.builderMonotone
+theorem fixedBuilderWeakening : FunctionalTupleBuilderTargets.BuilderWeakening := FunctionalTupleBuilderProof.builderWeakening
+theorem fixedActualValueRealization : FunctionalTupleBuilderTargets.ActualValueRealization := FunctionalTupleBuilderProof.actualValueRealization
+
+#print axioms fixedFullTableCalibration
+#print axioms fixedNaturalTables
+#print axioms fixedBuilderMonotone
+#print axioms fixedBuilderWeakening
+#print axioms fixedActualValueRealization
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderStatementChecks

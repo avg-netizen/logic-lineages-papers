@@ -527,3 +527,9 @@ Six exact interfaces convert the actual full suffix tuple to an ordered packed l
 Three exact interfaces construct actual carrier records by deterministic literal zero-application full-vector recursion, renaming, saturation and ground closure. Whole assignments, absence of free ground names and common-unit heads are proved, with ordered duplicate list calibration. Assigned operator data is an explicit premise; no choice or numeric classification/full effectivity is claimed.
 
 `ExternalCheckpoint20261102AM` verifies 214 permitted-axiom aliases across 49 components on an unchanged 830-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint40/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 41 — functional full-tuple value builder
+
+Five exact interfaces use actual coherent constructor-family future tables, the complete packed tuple and downward extras to construct an ordinary executable value. Full-tuple Good, monotonicity and projection laws are proved. Bits are independently supplied explicitly; calibration/realization interfaces are assembly only. No variable or marked-rule equations, source interpreter or whole structural/F-operator theorem is claimed.
+
+`ExternalCheckpoint20261102AN` verifies 219 permitted-axiom aliases across 50 components on an unchanged 835-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint41/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
