@@ -1,0 +1,11 @@
+# Original comparison derivations imply actual limit bits
+
+These are the completeness direction only of paper 06's adequacy statement. For every actual finite World P, a source marked term is in the unchanged portTypes P ++ I.context and satisfies exactly the existing Frame type/head projections. The target is the literal embed of the body of an actual ObservationAt I τ P, including its original finite membership, port identity and type witnesses. The environment is the genuine literal identity at that world. The output is the actual readBit of the actual computed constructor limit.
+
+WeakCompleteness retains the original RecursiveComparison.Weak derivation; StrictCompleteness retains original Strict. Neither relation is replaced with a bit relation, a restricted rule subset or a stronger source normality domain. No free-variable or wholeambient-head condition is added.
+
+The proof must jointly handle original Weak/Strict/WeakMatch/StrictMultiset/ReplacementMatch. Var uses actual typed variable identity. Abs uses genuine finite fresh openings and smaller-body derivation at the literal opened world. Fun uses actual ordered base arguments and target-permutation matching with occurrence multiplicity. Put uses the actual marked weak contribution. Strict uses the literal partial strictMark calibration. Select keeps selected base/extra membership, zero or one complete typed suffix application, and all separately retyped whole-state self arguments; literal specialApply success is paid by the actual-limit source bridge. Copy/Stat use every actual target child, original head comparison and true occurrence multiset witnesses. F-Abs uses the literal opened marked source with singleton fresh variable appended to all existing extras, not a supplied semantic identity. Source confinement of each recursive state must be derived, not added to rule premises.
+
+All target observation membership and fresh-port availability facts come from the already checked actual finite observation universe. Context transports in helpers must preserve the actual typed original syntax and literal observation identity.
+
+This component proves no bit-to-comparison soundness, no adequacy equivalence, no generic-family structural source identification and no whole decidability or complexity theorem. The previously published generic-family limitation remains.

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualComparisonCompletenessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualComparisonCompletenessStatementChecks
+
+theorem fixedWeakCompleteness : ActualComparisonCompletenessTargets.WeakCompleteness := ActualComparisonCompletenessProof.weakCompleteness
+
+theorem fixedStrictCompleteness : ActualComparisonCompletenessTargets.StrictCompleteness := ActualComparisonCompletenessProof.strictCompleteness
+
+#print axioms fixedWeakCompleteness
+#print axioms fixedStrictCompleteness
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualComparisonCompletenessStatementChecks
