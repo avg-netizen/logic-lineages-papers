@@ -412,3 +412,17 @@ module closure. These are alias counts, not numbered source-statement counts.
 Root import inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint26/PUBLIC-VALIDATION.json).
 TARGETS and the nine completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint27 — ground partial carrier transport
+
+Three exact interfaces cover every left/right prefix of actual ground partials,
+retaining the same actual Carrier objects and ordered duplicate list while finite
+remainder and reserve do not decrease. Original/permuted whole-source assignments
+and both selected-partial semantic identities are derived. The derivative v0 is
+not asserted to be a source assignment; lower reserve bounds remain separate.
+The immutable `ExternalCheckpoint20261102Z` verifies139 permitted-axiom theorem
+aliases across34 components on an unchanged740-local-module closure. These are
+alias counts, not numbered source-statement counts. Root import inventory only;
+no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint27/PUBLIC-VALIDATION.json).
+TARGETS and the nine completed-but-unregistered source results are unchanged.

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.GroundPartialCarrierTransportTargets
+public import LogicLineages.OrdinalComparison.GroundPartialCarrierTransportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.StatementChecks
+theorem adjacent_closure_calibration : Targets.AdjacentClosureCalibration := Proof.adjacentClosureCalibration
+theorem ground_partial_account : Targets.GroundPartialAccount := Proof.groundPartialAccount
+theorem actual_source_ground_partial : Targets.ActualSourceGroundPartial := Proof.actualSourceGroundPartial
+end LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport
