@@ -551,3 +551,9 @@ Six exact interfaces compute the least element of the actual natural carrier by 
 Three exact interfaces give whole-free-first deterministic classification/accounting and an unconditional ordinary source Expr producer. Its raw actual unary sources and whole assignment vectors match the exact Account, preserving ordered duplicates. Certification is proof-only and uses no choice. Raw numeric source coding/computability and full effectivity remain separate.
 
 `ExternalCheckpoint20261102AQ` verifies 231 permitted-axiom aliases across 53 components on an unchanged 850-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint44/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 45 — literal actual variable value
+
+Nine exact interfaces preserve stable typed-port names under actual extension renaming, including reordering, and prove valid-world name injectivity. The weak bit is exactly whole-observation equality with the literal extended variable; availability is true, strict bits are empty and every full-tuple result is bottom. The ordinary executable variableValue is Good and natural under weakening. This is the genuine variable branch, not a full source interpreter or F-operator.
+
+`ExternalCheckpoint20261102AR` verifies 240 permitted-axiom aliases across 54 components on an unchanged 855-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint45/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
