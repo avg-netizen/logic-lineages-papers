@@ -332,3 +332,15 @@ across27 components on an unchanged696-local-module closure. Root import invento
 only; no fresh full-root or CI pass. Ground scalar-partial and lower reserve
 bounds remain separate. See [validation](verification/external-continuation-2026-11-02/checkpoint20/PUBLIC-VALIDATION.json).
 TARGETS and the eight completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint21 — original application execution trace
+
+Four exact interfaces prove the operational configuration/next/terminal equation
+for genuine original Apply, not a surrogate. All execution frames and payloads,
+including eventual failures, actual substitution/append and every Select initial
+configuration are covered. The whole reachable request graph and finite-closure
+source theorem remain separate. The immutable `ExternalCheckpoint20261102T`
+verifies112 permitted-axiom aliases across28 components on an unchanged702-local
+module closure. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint21/PUBLIC-VALIDATION.json).
+TARGETS and the eight completed-but-unregistered source results are unchanged.

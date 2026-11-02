@@ -1310,6 +1310,9 @@ public import LogicLineages.ExternalCheckpoint20261102R
 public import LogicLineages.OrdinalComparison.GroundCarrierTransportStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102S
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102T
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
