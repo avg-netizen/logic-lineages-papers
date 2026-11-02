@@ -5980,9 +5980,75 @@
           "file": "09-canonical-source-expressivity/source-realization.tex",
           "line": 234,
           "statement_latex": "[Whole-head graph from a paid certificate]\\label{thm:head-graph}\nSuppose actual sources $B,C,K$ and a finite original box $b$ supply\n$a=2^b(B_1+C_1)=K_1+\\Delta$ at common functional units, where\n$\\Delta\\ge0$ is finite and $K:o\\to o$ is unit open.  Then the complete\ngenuine graph of\n\\[\n J_\\xi(t)=\\psi(\\xi+t-\\norm(\\xi)),\\quad\n \\xi=\\omega\\otimes a,\\quad t\\ge\\norm(\\xi),\n\\]\nis effectively existentially definable in actual-source arithmetic.  It\nretains the original scalar/input wires of $B,C$ and every finite-prefix input.",
-          "status": "pending",
+          "status": "checked",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.StatementChecks.exact_genuine_constants",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.StatementChecks.exact_formula_compilation",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.StatementChecks.effective_algorithms",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.StatementChecks.actual_effective_whole_graph",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.StatementChecks.exact_omega_finite_tail",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.StatementChecks.actual_paid_graph",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.StatementChecks.actual_scalar_finiteness",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.StatementChecks.effective_compiler",
+            "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.StatementChecks.actual_original_wire"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/ActualHeadGraphCodeTargets.lean",
+              "sha256": "3e9ceb17e2542fcdf4e6be7ebe327eb92dbfd3711cd8df8b8141226422e68099",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.ExactGenuineConstants"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/ActualHeadGraphCodeTargets.lean",
+              "sha256": "3e9ceb17e2542fcdf4e6be7ebe327eb92dbfd3711cd8df8b8141226422e68099",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.ExactFormulaCompilation"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/ActualHeadGraphCodeTargets.lean",
+              "sha256": "3e9ceb17e2542fcdf4e6be7ebe327eb92dbfd3711cd8df8b8141226422e68099",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.EffectiveAlgorithms"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/ActualHeadGraphCodeTargets.lean",
+              "sha256": "3e9ceb17e2542fcdf4e6be7ebe327eb92dbfd3711cd8df8b8141226422e68099",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.ActualEffectiveWholeGraph"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/PaidHeadTransportTargets.lean",
+              "sha256": "520f6d5fb51f2c1345a4c015563821abd8acf0b873624ebd4ea058fed8a03448",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.Targets.ExactOmegaFiniteTail"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/PaidHeadTransportTargets.lean",
+              "sha256": "520f6d5fb51f2c1345a4c015563821abd8acf0b873624ebd4ea058fed8a03448",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.Targets.ActualPaidGraph"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/OriginalHeadWireCodeTargets.lean",
+              "sha256": "e4773dc918d07d61867a82d00f6a0bedd86008a290c09d99e6af59479f908909",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.Targets.ActualScalarFiniteness"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/OriginalHeadWireCodeTargets.lean",
+              "sha256": "e4773dc918d07d61867a82d00f6a0bedd86008a290c09d99e6af59479f908909",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.Targets.EffectiveCompiler"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/OriginalHeadWireCodeTargets.lean",
+              "sha256": "e4773dc918d07d61867a82d00f6a0bedd86008a290c09d99e6af59479f908909",
+              "type": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.Targets.ActualOriginalWire"
+            }
+          ],
+          "verification_receipt": "verification/external-continuation-2026-11-02/checkpoint105/PUBLIC-VALIDATION.json",
+          "source_review": "verification/external-continuation-2026-11-02/tracked-source/HEAD-GRAPH-WHOLE-SOURCE-REVIEW.md",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole printed paid-certificate head-graph consumer: arbitrary actual B result type, actual C and unary K full assignments, original untruncated full-box coordinate-two finite b and exact 2^b paid equality, with no added b>=4 or positive-gap restriction. Actual unary-source raw Computable compiler includes all genuine finite-prefix and tail points; all-ordinal omega natural-product finite-tail identity transports it to the paid head. Original unclosed B/C scalar observations share the original input tuple and literal wire, with exact actual scalar finiteness and Computable formula assembly. The three final component gates and accepted dependency chain occur in cumulative496. Later certificate-construction domains, lifting, hardness and classification remain separate."
         },
         {
           "id": "09-canonical-source-expressivity:lem:pair-compiler",
