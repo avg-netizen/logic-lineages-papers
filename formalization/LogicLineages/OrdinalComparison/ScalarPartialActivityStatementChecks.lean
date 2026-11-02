@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ScalarPartialActivityTargets
+public import LogicLineages.OrdinalComparison.ScalarPartialActivityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ScalarPartialActivity.StatementChecks
+theorem exact_scalar_old_names : Targets.ExactScalarOldNames := Proof.exactScalarOldNames
+theorem actual_ground_source_transport : Targets.FullGroundSourceTransport := Proof.fullGroundSourceTransport
+theorem actual_tracked_partial_activity : Targets.ActualTrackedActivity := Proof.actualTrackedActivity
+end LogicLineages.OrdinalComparison.Source.ScalarPartialActivity.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ScalarPartialActivity

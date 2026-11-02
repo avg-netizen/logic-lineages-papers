@@ -1,7 +1,7 @@
 # External continuation — 2 November 2026
 
-Current checkpoint05: **137 checked,2 inherited,50 pending /189**; ten scoped
-components and46exact cumulative aliases. Earlier checkpoint counts below are
+Current checkpoint06: **137 checked,2 inherited,50 pending /189**; eleven scoped
+components and49exact cumulative aliases. Earlier checkpoint counts below are
 historical.
 
 ## Published component batch 01: recursive comparison interfaces
@@ -103,3 +103,18 @@ inventory is updated; no fresh full-root or CI pass is claimed. The register
 is137checked,2inherited,50pending. See
 [whole-source review](verification/external-continuation-2026-11-02/checkpoint05/WHOLE-STATEMENT-REVIEW.md)
 and [public validation](verification/external-continuation-2026-11-02/checkpoint05/PUBLIC-VALIDATION.json).
+
+## Cumulative checkpoint06 — scalar partial activity
+
+Three exact targets prove old typed-name membership preservation by successful
+index-zero scalar partial abstraction. For actual original terms under the
+binder, assignment existence, graded output and scalar-partial success are
+derived; arbitrary functional-result bodies remain allowed. Default tracked
+activity is equivalent to retaining the same old name. No occurrence
+multiplicity, reserve or carrier-annotation theorem is claimed.
+
+The immutable `ExternalCheckpoint20261102E` checks all49 cumulative aliases
+with permitted axioms on an unchanged573-module local closure. Root import
+inventory updated; no fresh full-root or CI pass. Numbered counts stay137/2/50.
+See [public source validation](verification/external-continuation-2026-11-02/checkpoint06/PUBLIC-VALIDATION.json).
+Raw internal compiler evidence remains local and excluded from publication.
