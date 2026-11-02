@@ -225,3 +225,15 @@ and [source review](verification/external-continuation-2026-11-02/checkpoint12/W
 Four source lemmas are now completed but unregistered: paper06 carrier,
 iterationedges and graft, and paper09 carriers. TARGETS remains unchanged;
 no revised register total or arbitrary marked-template claim is made.
+
+## Cumulative checkpoint13 — actual additive head-tree shape
+
+Four exact interfaces derive genuine scalar grade0 and positive-field grade1
+head-tree shape for actual full-grammar source assignments, retaining internal
+captures and lambdas. Ground closure and successful partial application transport
+these exact grades. No surplus, output-grade2, reserve or whole affine claim.
+The immutable `ExternalCheckpoint20261102L` verifies79 permitted-axiom aliases
+across19 components on an unchanged627-local-module closure. Root import inventory
+only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint13/PUBLIC-VALIDATION.json).
+TARGETS remains unchanged; this supplier changes no whole-source status.
