@@ -953,3 +953,9 @@ Two exact interfaces establish numerical dominance and genuine actual-head domin
 Two exact targets derive original Copy and Stat weak judgments from their actual stage-test contributions under explicit previous-stage FamilySound and actual InputRelated witnesses. That previous-stage invariant is not asserted for the final operator or its limit. Operator preservation, final soundness and whole adequacy remain separate.
 
 `ExternalCheckpoint20261102DD` verifies 508 permitted-axiom aliases across 120 components on an unchanged 1297-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint109/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 110 — collected common-head rows
+
+Three exact interfaces establish literal numeric equal-input collection, equality for arbitrary weighted functions, distinct nonzero support, provenance and mass. At the original printed threshold, the actual head's greatest surviving nonzero coefficient determines the large-row sign; an empty collected row leaves the constant. Preorder formulas, small branches, layered elimination and the full common-head decision procedure remain separate.
+
+`ExternalCheckpoint20261102DE` verifies 511 permitted-axiom aliases across 121 components on an unchanged 1304-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint110/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
