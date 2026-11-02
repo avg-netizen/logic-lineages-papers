@@ -1587,6 +1587,9 @@ public import LogicLineages.ExternalCheckpoint20261102DE
 public import LogicLineages.OrdinalComparison.TerminationOrdering.SelectStageSoundnessStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102DF
 
+public import LogicLineages.OrdinalComparison.CommonHeadSmallFoldStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102DG
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

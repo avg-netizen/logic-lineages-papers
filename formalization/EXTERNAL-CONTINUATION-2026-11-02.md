@@ -965,3 +965,9 @@ Three exact interfaces establish literal numeric equal-input collection, equalit
 One exact interface derives the original Select contribution from actual occurrence witnesses and complete self-tuples, under explicit previous-stage FamilySound and InputRelated premises. The zero-argument and complete-application branches are handled, with actual application success derived by excluding failure-bottom. This does not establish operator preservation or final-family soundness. Full constructor soundness, limit soundness and whole adequacy remain separate.
 
 `ExternalCheckpoint20261102DF` verifies 512 permitted-axiom aliases across 122 components on an unchanged 1308-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint111/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 112 — literal small-occurrence folding
+
+Three exact interfaces establish genuine closed Computable evaluation, literal one-occurrence small folding with exact row-value preservation and strict list-length decrease, and finite small-guard exhaustiveness at the current threshold. Recursive comparison formulas, layered elimination and the full common-head decision procedure remain separate.
+
+`ExternalCheckpoint20261102DG` verifies 515 permitted-axiom aliases across 123 components on an unchanged 1315-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint112/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
