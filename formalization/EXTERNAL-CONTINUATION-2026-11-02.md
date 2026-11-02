@@ -357,3 +357,15 @@ components on an unchanged708-local-module closure. Root import inventory only;
 no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint22/PUBLIC-VALIDATION.json).
 TARGETS and the eight completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint23 — guarded query graph
+
+Six exact interfaces establish truth-free actual guarded request-step frame and
+reachability preservation, fresh-name availability, actual FunStat premise
+coverage, and issued Select traces including failures. Explicit type/context
+budget projection and full source mapping remain separate; no whole finite-closure
+label is claimed. The immutable `ExternalCheckpoint20261102V` verifies121
+permitted-axiom aliases across30 components on an unchanged715-local-module
+closure. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint23/PUBLIC-VALIDATION.json).
+TARGETS and the eight completed-but-unregistered source results are unchanged.
