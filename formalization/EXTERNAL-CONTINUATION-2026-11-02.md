@@ -983,3 +983,9 @@ One exact interface derives the original FAbs contribution from a positive finit
 Three exact interfaces establish literal finite equality-mask guards, block-sign correctness and original input support, with the exact actual large-branch formula at the original printed threshold. Recursive small branches, layered elimination and the full common-head decision procedure remain separate.
 
 `ExternalCheckpoint20261102DI` verifies 519 permitted-axiom aliases across 125 components on an unchanged 1326-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint114/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 115 — actual constructor-family invariant
+
+Three exact interfaces establish genuine preservation of FamilySound by the actual constructor operator, including all four rule contributions and complete future tuples, and derive the invariant for every actual iterate and the actual finite limit. No final-family soundness premise is supplied. Arbitrary-syntax interpretation soundness, answer soundness and whole adequacy remain separate.
+
+`ExternalCheckpoint20261102DJ` verifies 522 permitted-axiom aliases across 126 components on an unchanged 1330-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint115/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
