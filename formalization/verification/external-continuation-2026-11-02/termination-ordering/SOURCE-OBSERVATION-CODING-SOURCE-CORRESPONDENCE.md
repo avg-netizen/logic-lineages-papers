@@ -1,0 +1,9 @@
+# Exact identity of finite source observations
+
+Prerequisite for paper06 def:domains and lem:lattices: weak/strict coordinates are subsets of actual finite observations, not independently chosen bits for duplicate positions of a list enumeration.
+
+The code retains every literal ordinary constructor, typed de Bruijn variable index, application domain type, lambda domain type, native result type, actual ranked symbol and ordered complete finite ranked argument list. The latter uses explicit argumentsNil/argumentsCons code constructors, allowing structural executable code equality without nested-datatype deriving or choice. Term injectivity is asserted only at the same original ambient context and result type. Observation code additionally retains the entire ordered external port context (slot identifiers and their types), result type, and actual ordinary body code. Thus equal codes imply equal original dependent Observation structures; neither context nor binder identity is quotiented away.
+
+Term and observation Boolean equalities are ordinary executable definitions using only the explicit DecidableEq Symbol instance, simple-type decidable equality and the finite code datatype. Their iff targets compare against literal equality of the existing source syntax/Observation, not a newly declared equivalence. Injectivity itself needs no decidability premise. The candidate will expose actual decidable equality functions by these proved Boolean tests, enabling later duplicate elimination of the finite observation list without classical choice in the algorithm.
+
+The four targets are coding injectivity and Boolean correctness for terms and observations. This is computational infrastructure, not a whole source numbered theorem, finite-domain construction, lattice, semantic compression or comparison decision theorem. Actual natural lower-type domains, monotone full-tuple tables and naturality remain separate pending work.

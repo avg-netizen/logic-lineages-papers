@@ -388,3 +388,15 @@ See [validation](verification/external-continuation-2026-11-02/checkpoint24/PUBL
 and [finite-closure source review](verification/external-continuation-2026-11-02/checkpoint24/FINITE-CLOSURE-SOURCE-REVIEW.md).
 TARGETS is unchanged; no revised numerical register total, decision adequacy or
 source-size bound is claimed.
+
+## Cumulative checkpoint25 — structural source observation coding
+
+Four exact interfaces establish actual structural syntax and full-observation
+encoding injectivity, plus executable equality with DecidableEq Symbol. The
+argument nil/cons datatype was repaired before the comparator freeze; no target
+was weakened after proof authoring. Numeric coding and finite semantic-domain
+claims remain separate. The immutable `ExternalCheckpoint20261102X` verifies129
+permitted-axiom aliases across32 components on an unchanged727-local-module
+closure. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint25/PUBLIC-VALIDATION.json).
+TARGETS and the nine completed-but-unregistered source results are unchanged.
