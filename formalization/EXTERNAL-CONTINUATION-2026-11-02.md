@@ -521,3 +521,9 @@ Seven exact interfaces append the entire packed typed list to old extras: exact 
 Six exact interfaces convert the actual full suffix tuple to an ordered packed list retaining every position and duplicate. Exact length, entries, membership, source-derived typed tags, pointwise domination and weakening-map identity are proved. TypeClosure is reused as the tag interface, not a new closure theorem. Constructor builders, operators and interpretation remain separate.
 
 `ExternalCheckpoint20261102AL` verifies 211 permitted-axiom aliases across 48 components on an unchanged 825-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint39/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 40 — deterministic actual carrier data
+
+Three exact interfaces construct actual carrier records by deterministic literal zero-application full-vector recursion, renaming, saturation and ground closure. Whole assignments, absence of free ground names and common-unit heads are proved, with ordered duplicate list calibration. Assigned operator data is an explicit premise; no choice or numeric classification/full effectivity is claimed.
+
+`ExternalCheckpoint20261102AM` verifies 214 permitted-axiom aliases across 49 components on an unchanged 830-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint40/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
