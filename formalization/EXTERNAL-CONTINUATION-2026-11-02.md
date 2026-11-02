@@ -539,3 +539,9 @@ Five exact interfaces use actual coherent constructor-family future tables, the 
 Three exact interfaces give total generated-positive extraction, exact NONote evaluation and finite classification/value for actual stored operator heads at every common-unit valuation. Primitive-recursive closed-positive code normalization, finite test and value are calibrated without inserting an extra omega. A raw original-source codec and full effectivity remain separate.
 
 `ExternalCheckpoint20261102AO` verifies 222 permitted-axiom aliases across 51 components on an unchanged 840-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint42/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 43 — executable actual-domain bottom
+
+Six exact interfaces compute the least element of the actual natural carrier by ordinary finite search, reusing mathematical existence. Leastness, uniqueness and enumeration interfaces are exact; weakening preserves the result, every future availability/weak/strict bit is false and every full-tuple result is bottom. Variables, source interpretation and operators remain separate.
+
+`ExternalCheckpoint20261102AP` verifies 228 permitted-axiom aliases across 52 components on an unchanged 845-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint43/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
