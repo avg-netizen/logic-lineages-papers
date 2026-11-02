@@ -1429,6 +1429,9 @@ public import LogicLineages.ExternalCheckpoint20261102BE
 public import LogicLineages.OrdinalComparison.CanonicalAnnotationBuilderCodeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BF
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BG
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestStatementChecks
+
+theorem fixedSelfTupleCalibration : MarkedSelectTestTargets.SelfTupleCalibration := MarkedSelectTestProof.selfTupleCalibration
+theorem fixedSelectCalibration : MarkedSelectTestTargets.SelectCalibration := MarkedSelectTestProof.selectCalibration
+theorem fixedSelectedMonotone : MarkedSelectTestTargets.SelectedMonotone := MarkedSelectTestProof.selectedMonotone
+theorem fixedTestMonotone : MarkedSelectTestTargets.TestMonotone := MarkedSelectTestProof.testMonotone
+theorem fixedCoordinatesMonotone : MarkedSelectTestTargets.CoordinatesMonotone := MarkedSelectTestProof.coordinatesMonotone
+theorem fixedCoordinatesWeakening : MarkedSelectTestTargets.CoordinatesWeakening := MarkedSelectTestProof.coordinatesWeakening
+
+#print axioms fixedSelfTupleCalibration
+#print axioms fixedSelectCalibration
+#print axioms fixedSelectedMonotone
+#print axioms fixedTestMonotone
+#print axioms fixedCoordinatesMonotone
+#print axioms fixedCoordinatesWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestStatementChecks

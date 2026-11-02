@@ -641,3 +641,9 @@ Five exact interfaces prove actual base-list generalized strict matching monoton
 Three exact interfaces give a uniform primitive-recursive algorithm from raw context, tracked index and original raw source to the actual whole assigned vector and canonical annotation. All unchanged grammar cases have unconditional valid scalar semantics and genuine raw checks. Canonical tracked-free stopping is used; no incorrect identity with the earlier Expr annotation builder is assumed. Numeric accounting and the final source-to-K compiler remain separate.
 
 `ExternalCheckpoint20261102BF` verifies 306 permitted-axiom aliases across 68 components on an unchanged 935-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint59/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 60 — marked Select contribution
+
+Six exact interfaces cover exhaustive packed selection from base or extras, the zero-type branch and all complete nonempty suffixes. Actual constructor-family self-tuples undergo one full application, not unary currying. Exact specifications, selected domination and full-table value/argument monotonicity and future projection are proved. Semantic application adequacy, FAbs and the complete marked operator remain separate.
+
+`ExternalCheckpoint20261102BG` verifies 312 permitted-axiom aliases across 69 components on an unchanged 940-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint60/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
