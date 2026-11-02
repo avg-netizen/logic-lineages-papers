@@ -1491,6 +1491,9 @@ public import LogicLineages.ExternalCheckpoint20261102BY
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitInterpretationStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BZ
 
+public import LogicLineages.OrdinalComparison.GeneralOmegaHeadLimitStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CA
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

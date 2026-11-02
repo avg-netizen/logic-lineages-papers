@@ -771,3 +771,9 @@ Three exact interfaces calibrate literal actual K^0 z and complete assignments t
 Two exact interfaces derive the actual finite constructor limit's four-rule weak bits, true availability, false strict bits and complete future-tuple equation in the same family. The genuine fixed-point identity discharges this equation at the actual limit, without an arbitrary-family consistency premise. The [earlier structural qualification](verification/external-continuation-2026-11-02/termination-ordering/STRUCTURAL-SEMANTICS-LIMITATION-20261102T1112Z.md) remains: arbitrary-family source application, whole structural interpretation and substitution are not established here.
 
 `ExternalCheckpoint20261102BZ` verifies 411 permitted-axiom aliases across 90 components on an unchanged 1075-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint79/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 80 — unrestricted omega head limits
+
+Two exact interfaces prove positivity, successor-limit status and epsilon-zero closure of the actual omega natural-product head for every positive ordinal below epsilon-zero, without a polynomial restriction. Every ClosedPositive expression receives exact existing scalarHeadNote normal-form and encodedClosedHead calibration. No whole head-graph theorem or new primitive is claimed.
+
+`ExternalCheckpoint20261102CA` verifies 413 permitted-axiom aliases across 91 components on an unchanged 1080-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint80/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

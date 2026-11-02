@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.GeneralOmegaHeadLimitTargets
+public import LogicLineages.OrdinalComparison.GeneralOmegaHeadLimitProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.GeneralOmegaHeadLimit.StatementChecks
+theorem general_positive_limit : Targets.GeneralPositiveLimit := Proof.generalPositiveLimit
+theorem actual_closed_head_calibration : Targets.ActualClosedHeadCalibration := Proof.actualClosedHeadCalibration
+end LogicLineages.OrdinalComparison.Source.GeneralOmegaHeadLimit.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.GeneralOmegaHeadLimit
