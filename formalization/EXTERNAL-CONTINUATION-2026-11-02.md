@@ -280,3 +280,17 @@ and [dependency/source review](verification/external-continuation-2026-11-02/che
 Seven source results are completed but unregistered: the prior six plus
 paper09 affine-head. TARGETS remains unchanged; no revised numerical register
 total, reserve or whole classification theorem is claimed.
+
+## Cumulative checkpoint17 — full comparison free-variable containment
+
+Five exact interfaces pay paper06 `lem:fv` for arbitrary marked Weak/Strict
+comparisons, literal base/extras membership, and ordinary calibration. Original
+Apply/Select and FAbs binder obligations are proved. No multiplicity or size
+bound is inferred. The immutable `ExternalCheckpoint20261102P` verifies98
+permitted-axiom aliases across24 components on an unchanged662-local-module
+closure. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint17/PUBLIC-VALIDATION.json)
+and [source review](verification/external-continuation-2026-11-02/checkpoint17/WHOLE-SOURCE-REVIEW.md).
+Eight source results are completed but unregistered: the prior seven plus
+paper06 fv. TARGETS remains unchanged pending explicit file authorization;
+no revised numerical register total is claimed.
