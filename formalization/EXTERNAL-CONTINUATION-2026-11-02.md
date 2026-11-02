@@ -875,3 +875,9 @@ Three exact interfaces calibrate every fuel level of the raw symbolic Option bui
 Four exact interfaces establish literal success confinement and strict-to-marked-weak observation-bit equality. Undefined marking gives false under the explicit VariablesStrictEmpty invariant, whose restriction and opening preservation is proved; actual literal identity values discharge it unconditionally. An unrestricted-environment draft was rejected and corrected before freezing. No arbitrary-family strict emptiness, whole structural lemma or adequacy theorem is claimed.
 
 `ExternalCheckpoint20261102CQ` verifies 466 permitted-axiom aliases across 107 components on an unchanged 1200-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint96/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 97 — literal arithmetic coding
+
+Four exact interfaces calibrate literal expression lifting, ordered conjunction/disjunction and complete observation payloads, successor/Phi and fixed finite Phi-chain syntax, with sixteen primitive-recursive numeric maps. No new graph or iteration primitive is introduced. Raw unit-tree expansion and original paid-head wiring remain separate; no whole head-graph theorem is claimed.
+
+`ExternalCheckpoint20261102CR` verifies 470 permitted-axiom aliases across 108 components on an unchanged 1207-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint97/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
