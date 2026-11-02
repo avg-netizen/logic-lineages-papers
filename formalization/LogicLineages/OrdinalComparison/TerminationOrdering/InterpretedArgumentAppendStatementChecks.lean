@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.InterpretedArgumentAppendProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.InterpretedArgumentAppendStatementChecks
+
+theorem fixedAppendConfinement : InterpretedArgumentAppendTargets.AppendConfinement := InterpretedArgumentAppendProof.appendConfinement
+
+theorem fixedOrderedPackedAppend : InterpretedArgumentAppendTargets.OrderedPackedAppend := InterpretedArgumentAppendProof.orderedPackedAppend
+
+theorem fixedDownclosureAppend : InterpretedArgumentAppendTargets.DownclosureAppend := InterpretedArgumentAppendProof.downclosureAppend
+
+#print axioms fixedAppendConfinement
+#print axioms fixedOrderedPackedAppend
+#print axioms fixedDownclosureAppend
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.InterpretedArgumentAppendStatementChecks

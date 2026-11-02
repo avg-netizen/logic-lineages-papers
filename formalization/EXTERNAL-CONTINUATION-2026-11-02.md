@@ -839,3 +839,9 @@ Two exact interfaces establish interpretation of genuine capture-avoiding compou
 Four exact interfaces calibrate ordered original and closed source probes and the complete ground-block payload, retaining actual context length, type factor and the unchanged anchor program. Symbolic constructors are primitive recursive, while the real anchor and realization algorithms are Computable with exact calibration and positivity. No oracle, tree compiler or whole effective head-graph theorem is claimed.
 
 `ExternalCheckpoint20261102CK` verifies 446 permitted-axiom aliases across 101 components on an unchanged 1162-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint90/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 91 — interpreted argument-list append
+
+Three exact interfaces establish actual syntax append confinement, exact ordered interpreted packed-list concatenation retaining every occurrence, and equality of sequential extra downclosure with downclosure of the concatenated list. No whole structural interpretation or Apply correctness theorem is claimed.
+
+`ExternalCheckpoint20261102CL` verifies 449 permitted-axiom aliases across 102 components on an unchanged 1167-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint91/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
