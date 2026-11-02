@@ -515,3 +515,9 @@ Three exact interfaces give a total ordinary deterministic builder on the unchan
 Seven exact interfaces append the entire packed typed list to old extras: exact downward closure, membership/least closure/empty and all-members laws, typed domination monotonicity and actual downward-image restriction commutation. The whole operator and all-tuple packing remain separate.
 
 `ExternalCheckpoint20261102AK` verifies 205 permitted-axiom aliases across 47 components on an unchanged 820-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint38/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 39 — full ordered tuple packing
+
+Six exact interfaces convert the actual full suffix tuple to an ordered packed list retaining every position and duplicate. Exact length, entries, membership, source-derived typed tags, pointwise domination and weakening-map identity are proved. TypeClosure is reused as the tag interface, not a new closure theorem. Constructor builders, operators and interpretation remain separate.
+
+`ExternalCheckpoint20261102AL` verifies 211 permitted-axiom aliases across 48 components on an unchanged 825-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint39/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

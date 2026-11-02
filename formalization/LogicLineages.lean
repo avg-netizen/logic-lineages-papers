@@ -1366,6 +1366,9 @@ public import LogicLineages.OrdinalComparison.SourceAnnotationBuilderStatementCh
 public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AK
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AL
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
