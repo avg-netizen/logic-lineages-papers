@@ -307,3 +307,15 @@ permitted-axiom aliases across25 components on an unchanged670-local-module
 closure. Root import inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint18/PUBLIC-VALIDATION.json).
 TARGETS and the eight completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint19 — finite query primitives
+
+Three exact interfaces cover the initial frame and every original Select input,
+self-tuple and suffix payload, including failed NONE attempts, plus successful
+endpoints. This does not cover every internal execution state or prove a whole
+reachable request graph or finite-closure theorem. The immutable
+`ExternalCheckpoint20261102R` verifies104 permitted-axiom aliases across26
+components on an unchanged689-local-module closure. Root import inventory only;
+no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint19/PUBLIC-VALIDATION.json).
+TARGETS and the eight completed-but-unregistered source results are unchanged.
