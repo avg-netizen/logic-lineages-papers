@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks
+
+theorem fixedExhaustiveEnumeration : RecursiveNaturalDomainsTargets.ExhaustiveEnumeration := RecursiveNaturalDomainsProof.exhaustiveEnumeration
+theorem fixedGroundRoundTrips : RecursiveNaturalDomainsTargets.GroundRoundTrips := RecursiveNaturalDomainsProof.groundRoundTrips
+theorem fixedGroundOrder : RecursiveNaturalDomainsTargets.GroundOrder := RecursiveNaturalDomainsProof.groundOrder
+theorem fixedWeakeningIdentity : RecursiveNaturalDomainsTargets.WeakeningIdentity := RecursiveNaturalDomainsProof.weakeningIdentity
+theorem fixedWeakeningComposition : RecursiveNaturalDomainsTargets.WeakeningComposition := RecursiveNaturalDomainsProof.weakeningComposition
+theorem fixedApplicationMonotone : RecursiveNaturalDomainsTargets.ApplicationMonotone := RecursiveNaturalDomainsProof.applicationMonotone
+theorem fixedApplicationNaturality : RecursiveNaturalDomainsTargets.ApplicationNaturality := RecursiveNaturalDomainsProof.applicationNaturality
+
+#print axioms fixedExhaustiveEnumeration
+#print axioms fixedGroundRoundTrips
+#print axioms fixedGroundOrder
+#print axioms fixedWeakeningIdentity
+#print axioms fixedWeakeningComposition
+#print axioms fixedApplicationMonotone
+#print axioms fixedApplicationNaturality
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks

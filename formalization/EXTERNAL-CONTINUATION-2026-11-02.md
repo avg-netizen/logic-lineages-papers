@@ -457,3 +457,9 @@ TARGETS and the nine completed-but-unregistered source results are unchanged.
 ### Checkpoint 29 source-review supplement: reserve
 
 After the exact 148-alias checkpoint passed, the full source-context clauses of paper 09 `lem:reserve` were reviewed and accepted: see [source-clause mapping](verification/external-continuation-2026-11-02/checkpoint29/RESERVE-SOURCE-REVIEW.md). Both independently derived source certificates are essential; no theorem for arbitrary ungraded annotated expressions is asserted. This is the tenth completed-but-unregistered source result. The stored public register remains 137 checked, 2 inherited, 50 pending; its update still awaits authorization. This supplement changes no Lean source, frozen target, aggregate, or compiler claim.
+
+## Cumulative checkpoint 30 — actual recursive natural domains
+
+Seven exact interfaces construct executable finite ordered carriers by actual strict-subtype recursion, with all generic lower-family hypotheses discharged. Ground-bit round trips and order, full-tuple application monotonicity/naturality, and weakening laws are proved. Complete suprema/infima and the whole lattice lemma remain separate.
+
+The immutable `ExternalCheckpoint20261102AC` verifies 155 permitted-axiom aliases across 37 components on an unchanged 762-local-module closure. Root import inventory is checked, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint30/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; ten completed source results await registration.
