@@ -1,7 +1,7 @@
 # External continuation — 2 November 2026
 
-Current checkpoint03: **136 checked,2 inherited,51 pending /189**; eight scoped
-components and40exact cumulative aliases. Earlier checkpoint counts below are
+Current checkpoint04: **136 checked,2 inherited,51 pending /189**; nine scoped
+components and44exact cumulative aliases. Earlier checkpoint counts below are
 historical.
 
 ## Published component batch 01: recursive comparison interfaces
@@ -74,3 +74,18 @@ and [public source validation](verification/external-continuation-2026-11-02/che
 The full original ordinary-context grammar, binder-local holes and named
 shadowing are retained. No strong-pair, substitution, transitivity or ordinal
 claim is promoted. Raw internal build artifacts are excluded from publication.
+
+## Cumulative checkpoint04 — actual assignment name support
+
+The four exact SourceAssignmentSupport targets establish actual assignment
+existence under every admitted fixed structural policy, no new free typed names
+in any coordinate, scalar source-occurrence reflection, and the default tracked
+activity characterization. The original opaque internal syntax and captures are
+retained. This is semantic name support, not a whole carrier/affine-head or
+effective translation theorem. No numbered target is newly promoted.
+
+The immutable `ExternalCheckpoint20261102C` verifies all44 cumulative aliases
+with permitted axioms on an unchanged561-module local closure. The root import
+inventory is updated without claiming a full-root or CI pass. See
+[public source validation](verification/external-continuation-2026-11-02/checkpoint04/PUBLIC-VALIDATION.json).
+Internal raw compiler evidence remains local and is excluded from publication.
