@@ -463,3 +463,11 @@ After the exact 148-alias checkpoint passed, the full source-context clauses of 
 Seven exact interfaces construct executable finite ordered carriers by actual strict-subtype recursion, with all generic lower-family hypotheses discharged. Ground-bit round trips and order, full-tuple application monotonicity/naturality, and weakening laws are proved. Complete suprema/infima and the whole lattice lemma remain separate.
 
 The immutable `ExternalCheckpoint20261102AC` verifies 155 permitted-axiom aliases across 37 components on an unchanged 762-local-module closure. Root import inventory is checked, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint30/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; ten completed source results await registration.
+
+## Cumulative checkpoint 31 — original second budget and natural layer bounds
+
+Three exact source-budget interfaces prove the finite scalar output-two count for all valuations, independent source floors and actual original full B/caller vectors: the untruncated box coordinate is literally B2 and the actual budget is at least four. No changed scale or K assumption is used; whole ground construction remains separate.
+
+Six exact layer interfaces prove arbitrary pointwise suprema/infima, preservation of full-tuple monotonicity/naturality, original-order universal bounds and restriction laws, including empty families. They assume mathematical bound suppliers only at proper subtypes; the actual recursive discharge and whole lattice lemma remain separate.
+
+`ExternalCheckpoint20261102AD` verifies 164 permitted-axiom aliases across 39 components on an unchanged 773-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint31/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; ten completed source results await registration.

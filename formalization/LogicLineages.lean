@@ -1340,6 +1340,10 @@ public import LogicLineages.ExternalCheckpoint20261102AB
 public import LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AC
 
+public import LogicLineages.OrdinalComparison.OriginalSecondBudgetStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AD
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
