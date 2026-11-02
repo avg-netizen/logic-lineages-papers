@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitContextSelectionCodeTargets
+public import LogicLineages.OrdinalComparison.UnitContextSelectionCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitContextSelectionCode.StatementChecks
+theorem exact_typed_selection : Targets.ExactTypedSelection := Proof.exactTypedSelection
+theorem exact_raw_split : Targets.ExactRawSplit := Proof.exactRawSplit
+theorem primitive_recursive_selection : Targets.PrimitiveRecursiveSelection := Proof.primitiveRecursiveSelection
+end LogicLineages.OrdinalComparison.Source.UnitContextSelectionCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitContextSelectionCode

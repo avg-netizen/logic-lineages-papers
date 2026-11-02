@@ -821,3 +821,9 @@ Three exact interfaces derive actual scanner protected-mask locality on supporte
 Four exact interfaces calibrate literal unused, first and second wrappers, complete-vector multipliers, exact Option compilation, head-free branch coefficients and constants. Seven algorithms are primitive recursive, and actual typed source inputs yield successful compilation with positive coefficients and strict active growth. Context selection, tree and fuel compilation and the whole effective head-graph theorem remain separate.
 
 `ExternalCheckpoint20261102CH` verifies 437 permitted-axiom aliases across 98 components on an unchanged 1142-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint87/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 88 — exact numeric unit-context selection
+
+Three exact interfaces calibrate the dependent typed UnitElimination.select payload, the raw first-functional ordered split and its failure exactly for all-ground contexts. Single deletion strictly decreases context length and selection is primitive recursive. No selection or decrease oracle is assumed; tree and fuel compilation remain separate.
+
+`ExternalCheckpoint20261102CI` verifies 440 permitted-axiom aliases across 99 components on an unchanged 1147-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint88/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

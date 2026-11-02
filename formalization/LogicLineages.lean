@@ -1515,6 +1515,9 @@ public import LogicLineages.ExternalCheckpoint20261102CG
 public import LogicLineages.OrdinalComparison.OneUnitCodeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CH
 
+public import LogicLineages.OrdinalComparison.UnitContextSelectionCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CI
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
