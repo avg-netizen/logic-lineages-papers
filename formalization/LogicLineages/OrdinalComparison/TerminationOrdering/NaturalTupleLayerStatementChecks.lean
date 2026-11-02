@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerStatementChecks
+
+theorem fixedSuffixCalibration : NaturalTupleLayerTargets.SuffixCalibration := NaturalTupleLayerProof.suffixCalibration
+theorem fixedExhaustiveEnumeration : NaturalTupleLayerTargets.ExhaustiveEnumeration := NaturalTupleLayerProof.exhaustiveEnumeration
+theorem fixedWeakeningIdentity : NaturalTupleLayerTargets.WeakeningIdentity := NaturalTupleLayerProof.weakeningIdentity
+theorem fixedWeakeningComposition : NaturalTupleLayerTargets.WeakeningComposition := NaturalTupleLayerProof.weakeningComposition
+theorem fixedNaturalPreservation : NaturalTupleLayerTargets.NaturalPreservation := NaturalTupleLayerProof.naturalPreservation
+theorem fixedWeakeningMonotone : NaturalTupleLayerTargets.WeakeningMonotone := NaturalTupleLayerProof.weakeningMonotone
+
+#print axioms fixedSuffixCalibration
+#print axioms fixedExhaustiveEnumeration
+#print axioms fixedWeakeningIdentity
+#print axioms fixedWeakeningComposition
+#print axioms fixedNaturalPreservation
+#print axioms fixedWeakeningMonotone
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerStatementChecks

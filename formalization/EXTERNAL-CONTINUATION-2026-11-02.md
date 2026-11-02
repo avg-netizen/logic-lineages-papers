@@ -426,3 +426,15 @@ alias counts, not numbered source-statement counts. Root import inventory only;
 no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint27/PUBLIC-VALIDATION.json).
 TARGETS and the nine completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint28 — generic natural tuple layer
+
+Six exact interfaces establish an executable full natural-tuple carrier over an
+explicit strict-lower family, with filtered enumeration, executable equality and
+order, restrictions, finite pointwise comparison and antisymmetry. No choice-based
+equality or actual recursive source Dτ family is claimed. The immutable
+`ExternalCheckpoint20261102AA` verifies145 permitted-axiom theorem aliases across35
+components on an unchanged748-local-module closure. These are aliases, not numbered
+source statements. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint28/PUBLIC-VALIDATION.json).
+TARGETS and the nine completed-but-unregistered source results are unchanged.
