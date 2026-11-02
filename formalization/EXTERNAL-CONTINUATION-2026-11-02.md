@@ -198,3 +198,17 @@ and [whole-source review](verification/external-continuation-2026-11-02/checkpoi
 Paper09 `lem:carriers` and paper06 `lem:carrier` are completed but unregistered;
 `TARGETS.json` remains unchanged pending explicit file authorization. No revised
 register total, reserve, or whole affine theorem is claimed.
+
+## Cumulative checkpoint11 — literal native iteration edges
+
+The complete original base/index/application triple now has checked confined
+strict proofs for the literal E/Q/K/W source terms, exact support, and genuine
+typed-renaming transport under fresh binders. The immutable
+`ExternalCheckpoint20261102J` verifies73 aliases across17 components on an
+unchanged615-local-module closure, with permitted axioms. Root import inventory
+only, not a fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint11/PUBLIC-VALIDATION.json)
+and [source review](verification/external-continuation-2026-11-02/checkpoint11/WHOLE-SOURCE-REVIEW.md).
+NativeIterationEdges joins both carrier lemmas as completed but unregistered.
+The register remains unchanged pending explicit authorization; no revised
+whole total or semantic ordinal realization is claimed.

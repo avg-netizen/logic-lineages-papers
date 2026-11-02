@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesStatementChecks
+
+theorem fixedBaseEdge : NativeIterationEdgesTargets.BaseEdge := NativeIterationEdgesProof.baseEdge
+theorem fixedIndexEdge : NativeIterationEdgesTargets.IndexEdge := NativeIterationEdgesProof.indexEdge
+theorem fixedApplicationEdge : NativeIterationEdgesTargets.ApplicationEdge := NativeIterationEdgesProof.applicationEdge
+
+#print axioms fixedBaseEdge
+#print axioms fixedIndexEdge
+#print axioms fixedApplicationEdge
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesStatementChecks
