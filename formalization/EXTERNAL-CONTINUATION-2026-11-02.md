@@ -827,3 +827,9 @@ Four exact interfaces calibrate literal unused, first and second wrappers, compl
 Three exact interfaces calibrate the dependent typed UnitElimination.select payload, the raw first-functional ordered split and its failure exactly for all-ground contexts. Single deletion strictly decreases context length and selection is primitive recursive. No selection or decrease oracle is assumed; tree and fuel compilation remain separate.
 
 `ExternalCheckpoint20261102CI` verifies 440 permitted-axiom aliases across 99 components on an unchanged 1147-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint88/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 89 — actual-limit semantic substitution
+
+Two exact interfaces establish interpretation of genuine capture-avoiding compound-syntax substitution and original scanner substitution at the actual computed finite constructor limit. Concrete pointwise used-type environment agreement and literal protected compatibility remain explicit; mutual recursion discharges child relations. This does not assert the generic-family whole structural lemma, arbitrary unused-type defaults or a syntax specialApply theorem.
+
+`ExternalCheckpoint20261102CJ` verifies 442 permitted-axiom aliases across 100 components on an unchanged 1155-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint89/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
