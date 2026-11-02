@@ -623,3 +623,9 @@ Seven exact interfaces establish full base-packing transport, source-base monoto
 Four exact interfaces provide primitive-recursive raw-source occurrence inspection through all binders, exact curried-ground arity characterization and original erased grammar activity calibration. These inspect the actual typed syntax; they do not establish equality of ambiguous annotation builders or whole source-to-K effectivity.
 
 `ExternalCheckpoint20261102BC` verifies 292 permitted-axiom aliases across 65 components on an unchanged 918-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint56/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 57 — marked Copy contribution
+
+Six exact interfaces implement the original native/ranked precedence and all-child retyping with the same actual constructor family. Genuine finite child-type guards and exact Copy specifications are proved, together with joint family/full-input monotonicity and future projection. This is one marked weak contribution, not complete marked strictness, availability or the fixed-point operator.
+
+`ExternalCheckpoint20261102BD` verifies 298 permitted-axiom aliases across 66 components on an unchanged 923-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint57/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
