@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.CanonicalAnnotationBuilderCodeTargets
+public import LogicLineages.OrdinalComparison.CanonicalAnnotationBuilderCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.CanonicalAnnotationBuilderCode.StatementChecks
+theorem primitive_recursive : Targets.PrimitiveRecursive := Proof.primitiveRecursive
+theorem raw_checked : Targets.RawChecked := Proof.rawChecked
+theorem actual_source_build : Targets.ActualSourceBuild := Proof.actualSourceBuild
+end LogicLineages.OrdinalComparison.Source.CanonicalAnnotationBuilderCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.CanonicalAnnotationBuilderCode
