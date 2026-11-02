@@ -266,3 +266,17 @@ and [source review](verification/external-continuation-2026-11-02/checkpoint15/W
 Six source results are completed but unregistered: paper06 carrier, iterationedges,
 graft, betacases and reductions, and paper09 carriers. TARGETS remains unchanged;
 no revised numerical register total is claimed.
+
+## Cumulative checkpoint16 — exact selected affine-head assembly
+
+The three final interfaces pay the previously missing selected-head/own-tail
+assembly, completing paper09 `lem:affine-head` with all original clauses. No
+head-shape or activity premise is introduced. The immutable
+`ExternalCheckpoint20261102O` verifies93 permitted-axiom aliases across23
+components on an unchanged654-local-module closure. Root import inventory only,
+not a fresh full-root or CI pass. See
+[validation](verification/external-continuation-2026-11-02/checkpoint16/PUBLIC-VALIDATION.json)
+and [dependency/source review](verification/external-continuation-2026-11-02/checkpoint16/WHOLE-SOURCE-REVIEW.md).
+Seven source results are completed but unregistered: the prior six plus
+paper09 affine-head. TARGETS remains unchanged; no revised numerical register
+total, reserve or whole classification theorem is claimed.

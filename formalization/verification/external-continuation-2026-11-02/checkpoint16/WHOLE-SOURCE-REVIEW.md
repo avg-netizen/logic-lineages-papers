@@ -1,0 +1,7 @@
+# Exact selected affine heads
+
+Paper09 `lem:affine-head`, source lines84–109, is paid for the actual full source grammar: every positive functional field has the additive head-tree structure, and every selected scalar head has its own tail-support and head-tree witnesses, actual partial1, common-unit finite-surplus equation for all valuations, finite output2, zero iff bare first-field, and positive surplus in the nonfinite case.
+
+Dependency/source map: TrackedSource supplies the original grammar and activity interface; SourceAssignmentSupport and ScalarPartialActivity establish actual assignments and typed-name transport; GroundOperatorDischarge and ActiveScalarAnnotation derive actual operator/head witnesses; AdditiveHeadTree proves actual grade0/1 shape; HeadFiniteSurplus proves partial1 and finite-surplus/count equations; SelectedAffineHead supplies exact old-selected iff own-tail coverage and derives head-tree and activity witnesses unconditionally from the source assignment. No selected-head shape or activity correctness premise is added.
+
+All three final targets are fixed by the prospective comparator, independently source/closure/axiom-checked and selected in cumulative93. The previous checkpoint correctly withheld whole affine-head completion until this selected-head assembly existed. That missing assembly is now paid. This seventh completed-but-unregistered source result awaits explicit TARGETS publication authorization; the stored register is unchanged. Reserve and whole classification remain separate.
