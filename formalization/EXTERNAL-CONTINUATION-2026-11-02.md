@@ -400,3 +400,15 @@ permitted-axiom aliases across32 components on an unchanged727-local-module
 closure. Root import inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint25/PUBLIC-VALIDATION.json).
 TARGETS and the nine completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint26 — finite observation bit products
+
+Seven exact interfaces establish distinct-observation/world bit products,
+executable finite enumeration, projection, and full supremum/infimum operations.
+They do not establish recursive natural function domains or the whole source
+lattice theorem. The immutable `ExternalCheckpoint20261102Y` verifies136
+permitted-axiom theorem aliases across33 components on an unchanged732-local
+module closure. These are alias counts, not numbered source-statement counts.
+Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint26/PUBLIC-VALIDATION.json).
+TARGETS and the nine completed-but-unregistered source results are unchanged.
