@@ -250,3 +250,19 @@ and [source review](verification/external-continuation-2026-11-02/checkpoint14/W
 Five source lemmas are completed but unregistered: paper06 carrier, iterationedges,
 graft and betacases, and paper09 carriers. TARGETS remains unchanged pending
 explicit file authorization; no revised numerical register total is claimed.
+
+## Cumulative checkpoint15 — original reductions and finite head surplus
+
+Five exact OriginalReduction interfaces complete source corollary15, including
+original root/context/substitution-instance clauses and actual beta substitution
+fusion, without a comparison-stability oracle. Three HeadFiniteSurplus interfaces
+prove actual partial1 existence, finite ordinal surplus/count equations and
+common-unit source observations; the whole selected-scalar affine-head assembly
+is not claimed. The immutable `ExternalCheckpoint20261102N` verifies90 aliases
+across22 components on an unchanged649-local-module closure with permitted axioms.
+Root import inventory only, not a fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint15/PUBLIC-VALIDATION.json)
+and [source review](verification/external-continuation-2026-11-02/checkpoint15/WHOLE-SOURCE-REVIEW.md).
+Six source results are completed but unregistered: paper06 carrier, iterationedges,
+graft, betacases and reductions, and paper09 carriers. TARGETS remains unchanged;
+no revised numerical register total is claimed.
