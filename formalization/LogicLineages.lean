@@ -1439,6 +1439,9 @@ public import LogicLineages.ExternalCheckpoint20261102BH
 public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BI
 
+public import LogicLineages.OrdinalComparison.NumericCarrierDataStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BJ
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

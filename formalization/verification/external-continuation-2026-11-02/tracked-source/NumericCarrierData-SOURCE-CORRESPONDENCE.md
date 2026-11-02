@@ -1,0 +1,9 @@
+# Numeric actual unary carrier data
+
+Paper09 source-realization.tex112–125 and effective construction192–226 require genuine source carriers with retained full scalar, not ordinal witnesses. This component transcribes the already proved DeterministicCarrierData.carrierData literally: insert one fresh functional slot after tracked slot0, keep all component coordinates, apply literal source zero exactly the stored arity times (retaining a unary result), and close only free ground captures by the actual context-sensitive canonical map. Internal binders and all free functional slots remain.
+
+The exact target quantifies every typed raw Operator, including semantically invalid stored vectors: the numeric map equals its ordinary data-level map without a Valid or assignment premise. Every intermediate saturation has functional result level1 and ground argument level0; its vector is the actual full default application, with zero assigned [one]. Output preserves source and every vector coordinate in the full operator codec; arity becomes0. Context duplication is explicit, using the actual first context entry on typed inputs. Malformed numeric payloads merely receive total outputs, with no validity assertion.
+
+All five numeric functions (fresh ordinal/vector map, source/vector saturation and complete carrier map) are primitive recursive. The separate actual-source target assumes only that the given stored operator is actually assigned, then derives the actual numeric output assignment, no free ground names and exact unit-head value for arbitrary original/output ground valuations. Existing source-builder validity later discharges this premise; no oracle or proof-to-data elimination appears.
+
+This is the numeric carrier supplier. Numeric accounting, final chain/context embedding and the complete raw original source-to-K compiler remain separate; no whole effective ground-construction promotion.

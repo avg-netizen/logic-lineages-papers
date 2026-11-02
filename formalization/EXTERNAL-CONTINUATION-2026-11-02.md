@@ -661,3 +661,9 @@ The actual FAbs contribution uses available finite fresh ports from the real obs
 Four exact interfaces assemble the actual constructor operator: all four original rule tests form the weak bits, availability is true and strict bits are false; full tuples append every argument and use the input constructor family M. Natural coherent output and genuine operator monotonicity are derived without an unpaid generic premise, and the refined operator is executable. Finite stabilization, the structural interpreter and adequacy remain separate.
 
 `ExternalCheckpoint20261102BI` verifies 327 permitted-axiom aliases across 72 components on an unchanged 956-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint62/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 63 — numeric actual carrier records
+
+Three exact interfaces calibrate five primitive-recursive numeric maps to the actual carrierData operator code for every typed raw operator, without assuming Valid. Actual assigned operators yield the complete output assignment, no free ground names and the exact common-unit head under all valuations. The entire vector and scalar are retained. The whole source-to-K effectivity theorem remains separate.
+
+`ExternalCheckpoint20261102BJ` verifies 330 permitted-axiom aliases across 73 components on an unchanged 963-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint63/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

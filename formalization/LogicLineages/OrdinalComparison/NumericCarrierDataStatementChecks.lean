@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.NumericCarrierDataTargets
+public import LogicLineages.OrdinalComparison.NumericCarrierDataProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.NumericCarrierData.StatementChecks
+theorem exact_carrier_code : Targets.ExactCarrierCode := Proof.exactCarrierCode
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_carrier_record : Targets.ActualCarrierRecord := Proof.actualCarrierRecord
+end LogicLineages.OrdinalComparison.Source.NumericCarrierData.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.NumericCarrierData
