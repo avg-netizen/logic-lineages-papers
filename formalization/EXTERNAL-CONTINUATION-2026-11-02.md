@@ -699,3 +699,9 @@ Actual arbitrary-context typed environments of natural values satisfy restrictio
 Four exact interfaces calibrate uniform primitive-recursive source, ordinal-component and complete-vector maps to actual typed-prefix insertion. Arbitrary original/protected/inserted contexts and every internal binder type are retained. Full actual assignment naturality is proved, without conflating private functional variables. The final source-to-K effectivity theorem remains separate.
 
 `ExternalCheckpoint20261102BN` verifies 355 permitted-axiom aliases across 78 components on an unchanged 993-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint67/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.
+
+## Cumulative checkpoint 68 — conditional lambda observation matching
+
+Conditional on an explicit evaluator for the fixed original lambda body, actual body-size decrease, genuine finite fresh-opening provenance, literal variable environment extension, weak/strict lambda matching and conditional monotonicity/projection are proved. The body evaluator remains an explicit supplier, not a completed interpreter. No full tuple table, complete interpretation or substitution theorem is claimed.
+
+`ExternalCheckpoint20261102BO` verifies 361 permitted-axiom aliases across 79 components on an unchanged 998-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint68/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.

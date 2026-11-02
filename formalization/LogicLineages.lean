@@ -1455,6 +1455,9 @@ public import LogicLineages.ExternalCheckpoint20261102BM
 public import LogicLineages.OrdinalComparison.ContextInsertionCodeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BN
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BO
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

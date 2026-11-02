@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingStatementChecks
+
+theorem fixedOriginalBodyDecrease : LambdaObservationMatchingTargets.OriginalBodyDecrease := LambdaObservationMatchingProof.originalBodyDecrease
+theorem fixedOpeningEnvironment : LambdaObservationMatchingTargets.OpeningEnvironment := LambdaObservationMatchingProof.openingEnvironmentCalibration
+theorem fixedGenuineFreshOpening : LambdaObservationMatchingTargets.GenuineFreshOpening := LambdaObservationMatchingProof.genuineFreshOpening
+theorem fixedLiteralMatch : LambdaObservationMatchingTargets.LiteralMatch := LambdaObservationMatchingProof.literalMatch
+theorem fixedBitsMonotone : LambdaObservationMatchingTargets.BitsMonotone := LambdaObservationMatchingProof.bitsMonotone
+theorem fixedBitsRestriction : LambdaObservationMatchingTargets.BitsRestriction := LambdaObservationMatchingProof.bitsRestriction
+
+#print axioms fixedOriginalBodyDecrease
+#print axioms fixedOpeningEnvironment
+#print axioms fixedGenuineFreshOpening
+#print axioms fixedLiteralMatch
+#print axioms fixedBitsMonotone
+#print axioms fixedBitsRestriction
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingStatementChecks
