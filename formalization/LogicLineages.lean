@@ -1282,6 +1282,9 @@ public import LogicLineages.ExternalCheckpoint20261102I
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102J
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102K
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

@@ -212,3 +212,16 @@ and [source review](verification/external-continuation-2026-11-02/checkpoint11/W
 NativeIterationEdges joins both carrier lemmas as completed but unregistered.
 The register remains unchanged pending explicit authorization; no revised
 whole total or semantic ordinal realization is claimed.
+
+## Cumulative checkpoint12 — ordinary-template grafting
+
+Both exact source grafting targets hold for ordinary templates with unrestricted
+possibly marked substituted terms and environment values. Genuine weak typed
+renaming pays the binder steps. The immutable `ExternalCheckpoint20261102K`
+verifies75 permitted-axiom aliases across18 components on an unchanged620-local
+module closure. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint12/PUBLIC-VALIDATION.json)
+and [source review](verification/external-continuation-2026-11-02/checkpoint12/WHOLE-SOURCE-REVIEW.md).
+Four source lemmas are now completed but unregistered: paper06 carrier,
+iterationedges and graft, and paper09 carriers. TARGETS remains unchanged;
+no revised register total or arbitrary marked-template claim is made.
