@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsStatementChecks
+
+theorem fixedBinderProtection : LambdaSpineActionsTargets.BinderProtection := LambdaSpineActionsProof.binderProtection
+theorem fixedBinderConsumption : LambdaSpineActionsTargets.BinderConsumption := LambdaSpineActionsProof.binderConsumption
+theorem fixedNaturalTables : LambdaSpineActionsTargets.NaturalTables := LambdaSpineActionsProof.naturalTables
+theorem fixedRawMonotone : LambdaSpineActionsTargets.RawMonotone := LambdaSpineActionsProof.rawMonotone
+theorem fixedRawRestriction : LambdaSpineActionsTargets.RawRestriction := LambdaSpineActionsProof.rawRestriction
+theorem fixedActualLambdaAction : LambdaSpineActionsTargets.ActualLambdaAction := LambdaSpineActionsProof.actualLambdaAction
+
+#print axioms fixedBinderProtection
+#print axioms fixedBinderConsumption
+#print axioms fixedNaturalTables
+#print axioms fixedRawMonotone
+#print axioms fixedRawRestriction
+#print axioms fixedActualLambdaAction
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsStatementChecks
