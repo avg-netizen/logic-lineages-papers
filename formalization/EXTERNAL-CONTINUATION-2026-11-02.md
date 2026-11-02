@@ -545,3 +545,9 @@ Three exact interfaces give total generated-positive extraction, exact NONote ev
 Six exact interfaces compute the least element of the actual natural carrier by ordinary finite search, reusing mathematical existence. Leastness, uniqueness and enumeration interfaces are exact; weakening preserves the result, every future availability/weak/strict bit is false and every full-tuple result is bottom. Variables, source interpretation and operators remain separate.
 
 `ExternalCheckpoint20261102AP` verifies 228 permitted-axiom aliases across 52 components on an unchanged 845-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint43/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 44 — deterministic source accounting data
+
+Three exact interfaces give whole-free-first deterministic classification/accounting and an unconditional ordinary source Expr producer. Its raw actual unary sources and whole assignment vectors match the exact Account, preserving ordered duplicates. Certification is proof-only and uses no choice. Raw numeric source coding/computability and full effectivity remain separate.
+
+`ExternalCheckpoint20261102AQ` verifies 231 permitted-axiom aliases across 53 components on an unchanged 850-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint44/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

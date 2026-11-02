@@ -1381,6 +1381,9 @@ public import LogicLineages.ExternalCheckpoint20261102AO
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AP
 
+public import LogicLineages.OrdinalComparison.DeterministicAccountDataStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AQ
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
