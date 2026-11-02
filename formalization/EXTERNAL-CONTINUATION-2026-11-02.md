@@ -617,3 +617,9 @@ Three exact interfaces provide uniform primitive-recursive numeric ground partia
 Seven exact interfaces establish full base-packing transport, source-base monotonicity and actual pair-reader invariance for Fun under the necessary target-observation extension premise. Actual ordinary bits and values are jointly monotone in the constructor family and source base values and commute with projection. Definitions of the original branch remain unchanged; full structural interpretation remains separate.
 
 `ExternalCheckpoint20261102BB` verifies 288 permitted-axiom aliases across 64 components on an unchanged 912-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint55/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 56 — raw source grammar inspection
+
+Four exact interfaces provide primitive-recursive raw-source occurrence inspection through all binders, exact curried-ground arity characterization and original erased grammar activity calibration. These inspect the actual typed syntax; they do not establish equality of ambiguous annotation builders or whole source-to-K effectivity.
+
+`ExternalCheckpoint20261102BC` verifies 292 permitted-axiom aliases across 65 components on an unchanged 918-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint56/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

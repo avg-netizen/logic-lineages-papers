@@ -1417,6 +1417,9 @@ public import LogicLineages.ExternalCheckpoint20261102BA
 public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BB
 
+public import LogicLineages.OrdinalComparison.TrackedSourceInspectionCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BC
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
