@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationStatementChecks
+
+theorem fixedEmptyIdentity : FullListValueApplicationTargets.EmptyIdentity := FullListValueApplicationProof.emptyIdentity
+theorem fixedNonemptyCalibration : FullListValueApplicationTargets.NonemptyCalibration := FullListValueApplicationProof.nonemptyCalibration
+theorem fixedTypeTransport : FullListValueApplicationTargets.TypeTransport := FullListValueApplicationProof.typeTransport
+theorem fixedJointMonotone : FullListValueApplicationTargets.JointMonotone := FullListValueApplicationProof.jointMonotone
+theorem fixedRestriction : FullListValueApplicationTargets.Restriction := FullListValueApplicationProof.restriction
+theorem fixedBottom : FullListValueApplicationTargets.Bottom := FullListValueApplicationProof.bottom
+
+#print axioms fixedEmptyIdentity
+#print axioms fixedNonemptyCalibration
+#print axioms fixedTypeTransport
+#print axioms fixedJointMonotone
+#print axioms fixedRestriction
+#print axioms fixedBottom
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationStatementChecks

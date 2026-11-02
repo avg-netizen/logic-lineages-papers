@@ -705,3 +705,9 @@ Four exact interfaces calibrate uniform primitive-recursive source, ordinal-comp
 Conditional on an explicit evaluator for the fixed original lambda body, actual body-size decrease, genuine finite fresh-opening provenance, literal variable environment extension, weak/strict lambda matching and conditional monotonicity/projection are proved. The body evaluator remains an explicit supplier, not a completed interpreter. No full tuple table, complete interpretation or substitution theorem is claimed.
 
 `ExternalCheckpoint20261102BO` verifies 361 permitted-axiom aliases across 79 components on an unchanged 998-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint68/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.
+
+## Cumulative checkpoint 68 — actual complete-list value application
+
+Actual complete-list value application has empty identity and one nonempty full-suffix table application with the literal type cast. Joint value/argument monotonicity, restriction and whole-bottom behavior follow from independently accepted actual domain facts. No unary currying or complete interpretation is claimed.
+
+`ExternalCheckpoint20261102BP` verifies 367 permitted-axiom aliases across 80 components on an unchanged 1003-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint69/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.
