@@ -1347,6 +1347,9 @@ public import LogicLineages.ExternalCheckpoint20261102AD
 public import LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AE
 
+public import LogicLineages.OrdinalComparison.HeterogeneousUnaryAssemblyStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AF
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

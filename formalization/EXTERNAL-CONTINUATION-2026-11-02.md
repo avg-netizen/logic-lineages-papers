@@ -477,3 +477,9 @@ Six exact layer interfaces prove arbitrary pointwise suprema/infima, preservatio
 Six exact interfaces discharge the recursive proper-subtype bound suppliers for the actual natural domains. Every set, including empty, has least upper and greatest lower bounds in the unchanged original order; computed weakening preserves them. The actual finite-signature enumeration remains executable. The complete source statement `lem:lattices` is reviewed in the [source-clause mapping](verification/external-continuation-2026-11-02/checkpoint32/NATURAL-LATTICES-SOURCE-REVIEW.md). Constructor-coherent families, operators, interpretation and adequacy remain separate.
 
 `ExternalCheckpoint20261102AE` verifies 170 permitted-axiom aliases across 40 components on an unchanged 778-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint32/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 33 — heterogeneous unary source assembly
+
+Three exact interfaces preserve a single shared base identically while embedding private typed prefixes of given actual source records. Complete paired source/vector assignments retain occurrence order and duplicates. The actual one-lambda chain has the exact common-unit head for every valuation, reusing the existing chain theorem. Original-source P extraction and uniform effectivity remain separate.
+
+`ExternalCheckpoint20261102AF` verifies 173 permitted-axiom aliases across 41 components on an unchanged 786-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint33/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
