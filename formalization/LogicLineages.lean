@@ -1399,6 +1399,9 @@ public import LogicLineages.ExternalCheckpoint20261102AU
 public import LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AV
 
+public import LogicLineages.OrdinalComparison.SourceCarrierMapCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AW
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

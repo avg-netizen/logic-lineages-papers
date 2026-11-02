@@ -581,3 +581,9 @@ Three exact interfaces prove a primitive-recursive raw ordinal-code pipeline for
 Six exact interfaces exhaustively enumerate occurrence permutations and cuts, preserving duplicates and testing actual packed values against literal observations. Strict witnesses remove a nonempty part; inserted occurrences may be empty or share a witness. Exact specification calibration and Boolean positivity are proved. No cancellation or derivation adequacy is claimed; the full interpreter remains separate.
 
 `ExternalCheckpoint20261102AV` verifies 258 permitted-axiom aliases across 58 components on an unchanged 875-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint49/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 50 — raw source carrier maps
+
+Four exact interfaces prove primitive-recursive raw-source single-binder zero deletion and fresh tracked-name renaming at arbitrary binder depth, with exact typed substitution calibration. Malformed inputs are totalized. This is not an all-free-variable closure map or a whole raw original-source-to-K computation.
+
+`ExternalCheckpoint20261102AW` verifies 262 permitted-axiom aliases across 59 components on an unchanged 884-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint50/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
