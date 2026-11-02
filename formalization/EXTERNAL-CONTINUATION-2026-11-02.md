@@ -797,3 +797,9 @@ Three exact interfaces calibrate actual unchanged original-syntax renaming, conf
 Provenance clarification: the earlier `SourceScalarMultivariateProof.head_limit` already covers every ClosedPositive actual head limit. Checkpoint80's GeneralOmegaHeadLimit proves the stronger unrestricted all-ordinal positive epsilon-zero limit theorem and code calibration; it is not the first ClosedPositive limit proof.
 
 `ExternalCheckpoint20261102CD` verifies 420 permitted-axiom aliases across 94 components on an unchanged 1118-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint83/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 84 — exact numeric selected-binder rotation
+
+Four exact interfaces calibrate arbitrary typed selected-slot rotation beneath a protected prefix and every internal binder. Uniform primitive-recursive source, ordinal and full-vector operations yield the actual original and permuted complete assignments and codes. There is no functional-only restriction. Context selection, OneUnit and tree compilation, and the whole effective head-graph theorem remain separate obligations.
+
+`ExternalCheckpoint20261102CE` verifies 424 permitted-axiom aliases across 95 components on an unchanged 1125-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint84/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

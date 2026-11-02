@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SelectedBinderCodeTargets
+public import LogicLineages.OrdinalComparison.SelectedBinderCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SelectedBinderCode.StatementChecks
+theorem exact_source_permutation : Targets.ExactSourcePermutation := Proof.exactSourcePermutation
+theorem exact_ordinal_vector_permutation : Targets.ExactOrdinalVectorPermutation := Proof.exactOrdinalVectorPermutation
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_permuted_assignment : Targets.ActualPermutedAssignment := Proof.actualPermutedAssignment
+end LogicLineages.OrdinalComparison.Source.SelectedBinderCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SelectedBinderCode
