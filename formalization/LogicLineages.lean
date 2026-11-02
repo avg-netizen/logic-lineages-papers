@@ -1356,6 +1356,9 @@ public import LogicLineages.ExternalCheckpoint20261102AG
 public import LogicLineages.OrdinalComparison.OriginalScaleFlatListStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AH
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AI
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
