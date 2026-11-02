@@ -783,3 +783,9 @@ Two exact interfaces prove positivity, successor-limit status and epsilon-zero c
 One exact interface derives semantic applyWith equals the actual original-spine scanner for every confined original term and complete typed argument list at the actual finite fixed point, with original free variables initially unprotected. This does not establish syntax specialApply, substitution, arbitrary-family consistency or the whole structural lemma. The earlier generic-family structural qualification remains in force.
 
 `ExternalCheckpoint20261102CB` verifies 414 permitted-axiom aliases across 92 components on an unchanged 1085-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint81/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 82 — actual arithmetic head-graph semantics
+
+Three exact interfaces establish the literal existing arithmetic finite-prefix and fixed-delta tail formula on the entire genuine domain. The actual K tree supplies the constants, t and y are shared, every finite point is retained and the threshold is local to the tail branch. The numeric formula compiler, original paid B/C wire composition and whole effective head-graph theorem remain separate obligations.
+
+`ExternalCheckpoint20261102CC` verifies 417 permitted-axiom aliases across 93 components on an unchanged 1111-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint82/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
