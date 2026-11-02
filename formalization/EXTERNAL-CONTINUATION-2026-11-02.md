@@ -1,5 +1,9 @@
 # External continuation — 2 November 2026
 
+Current checkpoint03: **136 checked,2 inherited,51 pending /189**; eight scoped
+components and40exact cumulative aliases. Earlier checkpoint counts below are
+historical.
+
 ## Published component batch 01: recursive comparison interfaces
 
 The numbered register remains **135 checked, 2 inherited, 52 pending / 189**.
@@ -55,3 +59,18 @@ contains exact aliases and source hashes. Detailed internal logs, receipts and
 setup archives remain local and are intentionally excluded from this reduced
 public publication. Their absence must not be mistaken for a publicly archived
 complete raw build record. No old missing checkpoint is claimed recovered.
+
+## Cumulative checkpoint03 — literal contexts
+
+All ten exact ordinary/named context and support interfaces are independently
+accepted. The new immutable `ExternalCheckpoint20261102B` cumulative aggregate
+checks all40selected aliases with permitted axioms on an unchanged553-module
+local closure. The root import inventory includes the new accepted gate and
+aggregate (4,675local modules); no fresh full-root or CI pass is claimed.
+
+**Paper06 `lem:context` is now checked**, giving136checked,2inherited and51pending.
+See the [whole-source review](verification/external-continuation-2026-11-02/checkpoint03/WHOLE-STATEMENT-REVIEW.md)
+and [public source validation](verification/external-continuation-2026-11-02/checkpoint03/PUBLIC-VALIDATION.json).
+The full original ordinary-context grammar, binder-local holes and named
+shadowing are retained. No strong-pair, substitution, transitivity or ordinal
+claim is promoted. Raw internal build artifacts are excluded from publication.

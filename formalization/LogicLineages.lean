@@ -1254,6 +1254,9 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveCompa
 public import LogicLineages.OrdinalComparison.TrackedSourceStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102B
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
