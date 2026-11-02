@@ -1334,6 +1334,9 @@ public import LogicLineages.ExternalCheckpoint20261102Z
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AA
 
+public import LogicLineages.OrdinalComparison.SourceReserveLowerBoundStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AB
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

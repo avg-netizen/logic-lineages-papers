@@ -438,3 +438,18 @@ components on an unchanged748-local-module closure. These are aliases, not numbe
 source statements. Root import inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint28/PUBLIC-VALIDATION.json).
 TARGETS and the nine completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint29 — actual source reserve lower bounds
+
+Three exact interfaces prove positive actual head values and sourceFloor bounds
+for every actual-source Account under injective tracked maps: inactive/bare1,
+active application4 and active lambda5. Full-vector repetition and genuine source
+induction are paid; original full vectors and nonempty account families are
+unconditional. Whole source reserve mapping review remains separate.
+The immutable `ExternalCheckpoint20261102AB` verifies148 permitted-axiom theorem
+aliases across36 components on an unchanged757-local-module closure. Initial
+helper evidence with a stale row was rejected, then replaced by a fresh unchanged
+helper recheck; no source, audit or resource cap was weakened. Root import
+inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint29/PUBLIC-VALIDATION.json).
+TARGETS and the nine completed-but-unregistered source results are unchanged.

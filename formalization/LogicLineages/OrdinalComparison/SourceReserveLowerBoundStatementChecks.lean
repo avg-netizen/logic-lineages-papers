@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceReserveLowerBoundTargets
+public import LogicLineages.OrdinalComparison.SourceReserveLowerBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.StatementChecks
+theorem positive_head_value : Targets.PositiveHeadValue := Proof.positiveHeadValue
+theorem renamed_source_lower_bound : Targets.RenamedSourceLowerBound := Proof.renamedSourceLowerBound
+theorem actual_source_lower_bound : Targets.ActualSourceLowerBound := Proof.actualSourceLowerBound
+end LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound
