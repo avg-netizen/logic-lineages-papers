@@ -747,3 +747,9 @@ The uniform primitive-recursive guarded raw original-body/caller compiler constr
 Actual Good lambda values and the concrete executable lambda action satisfy evaluation/scanning certificates conditional on one explicit smaller original-body action. Literal weak/strict matching, complete tuples consuming the first binder then scanning all remaining arguments, and the actual protection mask are retained. There is no bottom fallback; structural recursion must still discharge the smaller-body supplier. No unary currying or complete interpretation is claimed.
 
 `ExternalCheckpoint20261102BV` verifies 396 permitted-axiom aliases across 86 components on an unchanged 1041-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint75/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 65 — unit scalar extraction and evaluation
+
+Three exact interfaces establish refusing extraction/value calibration on typed ordinal expressions, primitive-recursive extraction and Computable actual collapse evaluation. Generated grade-zero totality and actual original source full assignments/complete ground-closed vectors yield the exact common-unit scalar. This is a fixed closed-scalar supplier, not a full ray or head-graph theorem; original B/C wires are not closed by this result.
+
+`ExternalCheckpoint20261102BW` verifies 399 permitted-axiom aliases across 87 components on an unchanged 1046-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint76/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

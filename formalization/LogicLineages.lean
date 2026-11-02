@@ -1479,6 +1479,9 @@ public import LogicLineages.ExternalCheckpoint20261102BU
 public import LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BV
 
+public import LogicLineages.OrdinalComparison.UnitScalarEvaluationCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BW
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
