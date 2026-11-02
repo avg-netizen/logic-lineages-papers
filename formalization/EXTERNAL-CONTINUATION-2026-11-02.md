@@ -845,3 +845,9 @@ Four exact interfaces calibrate ordered original and closed source probes and th
 Three exact interfaces establish actual syntax append confinement, exact ordered interpreted packed-list concatenation retaining every occurrence, and equality of sequential extra downclosure with downclosure of the concatenated list. No whole structural interpretation or Apply correctness theorem is claimed.
 
 `ExternalCheckpoint20261102CL` verifies 449 permitted-axiom aliases across 102 components on an unchanged 1167-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint91/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 92 — complete unit-elimination tree codec
+
+Three exact interfaces establish the full tree and payload codec and exact typed-tree folds preserving all metadata, order and duplicates. Constructors and suitable folds are primitive recursive; actual anchor realization is Computable and calibrated to UnitElimination.realize. Raw source tree construction and the numeric whole head-graph formula remain separate obligations.
+
+`ExternalCheckpoint20261102CM` verifies 452 permitted-axiom aliases across 103 components on an unchanged 1173-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint92/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

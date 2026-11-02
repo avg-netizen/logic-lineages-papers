@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitEliminationTreeCodeTargets
+public import LogicLineages.OrdinalComparison.UnitEliminationTreeCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitEliminationTreeCode.StatementChecks
+theorem exact_tree_fold : Targets.ExactTreeFold := Proof.exactTreeFold
+theorem effective_constructors_and_fold : Targets.EffectiveConstructorsAndFold := Proof.effectiveConstructorsAndFold
+theorem exact_anchor_realization : Targets.ExactAnchorRealization := Proof.exactAnchorRealization
+end LogicLineages.OrdinalComparison.Source.UnitEliminationTreeCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitEliminationTreeCode
