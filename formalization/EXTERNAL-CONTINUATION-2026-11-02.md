@@ -507,3 +507,11 @@ Eight exact interfaces use actual source-head/base-observation keys, full input 
 Three exact interfaces provide Type-level actual operator source and complete-vector data with exact erasure and validity certificates. Deterministic closing and ground-partial producers derive actual run success, output-zero and validity. An actual original-source builder, numeric computability and completed extraction remain separate.
 
 `ExternalCheckpoint20261102AJ` verifies 195 permitted-axiom aliases across 45 components on an unchanged 810-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint37/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 38 — source annotation builder and typed append
+
+Three exact interfaces give a total ordinary deterministic builder on the unchanged source Expr, returning the complete actual assignment and valid Type-level scalar data in every case, including the full lambda factor. Selected operator occurrences preserve order and duplicates with actual stored assignment/head certificates. Numeric computability, raw parsing and the whole effective ground construction remain separate.
+
+Seven exact interfaces append the entire packed typed list to old extras: exact downward closure, membership/least closure/empty and all-members laws, typed domination monotonicity and actual downward-image restriction commutation. The whole operator and all-tuple packing remain separate.
+
+`ExternalCheckpoint20261102AK` verifies 205 permitted-axiom aliases across 47 components on an unchanged 820-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint38/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

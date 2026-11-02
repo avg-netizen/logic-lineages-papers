@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendStatementChecks
+
+theorem fixedMembershipCalibration : TypedExtraAppendTargets.MembershipCalibration := TypedExtraAppendProof.membershipCalibration
+theorem fixedDownwardClosure : TypedExtraAppendTargets.DownwardClosure := TypedExtraAppendProof.downwardClosure
+theorem fixedEmptyIdentity : TypedExtraAppendTargets.EmptyIdentity := TypedExtraAppendProof.emptyIdentity
+theorem fixedSuppliedIncluded : TypedExtraAppendTargets.SuppliedIncluded := TypedExtraAppendProof.suppliedIncluded
+theorem fixedAppendMonotone : TypedExtraAppendTargets.AppendMonotone := TypedExtraAppendProof.appendMonotone
+theorem fixedLeastClosure : TypedExtraAppendTargets.LeastClosure := TypedExtraAppendProof.leastClosure
+theorem fixedRestrictionAppend : TypedExtraAppendTargets.RestrictionAppend := TypedExtraAppendProof.restrictionAppend
+
+#print axioms fixedMembershipCalibration
+#print axioms fixedDownwardClosure
+#print axioms fixedEmptyIdentity
+#print axioms fixedSuppliedIncluded
+#print axioms fixedAppendMonotone
+#print axioms fixedLeastClosure
+#print axioms fixedRestrictionAppend
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendStatementChecks
