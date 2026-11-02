@@ -1506,6 +1506,9 @@ public import LogicLineages.ExternalCheckpoint20261102CD
 public import LogicLineages.OrdinalComparison.SelectedBinderCodeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CE
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CF
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

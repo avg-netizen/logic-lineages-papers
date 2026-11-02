@@ -803,3 +803,9 @@ Provenance clarification: the earlier `SourceScalarMultivariateProof.head_limit`
 Four exact interfaces calibrate arbitrary typed selected-slot rotation beneath a protected prefix and every internal binder. Uniform primitive-recursive source, ordinal and full-vector operations yield the actual original and permuted complete assignments and codes. There is no functional-only restriction. Context selection, OneUnit and tree compilation, and the whole effective head-graph theorem remain separate obligations.
 
 `ExternalCheckpoint20261102CE` verifies 424 permitted-axiom aliases across 95 components on an unchanged 1125-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint84/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 85 — confined syntactic substitution
+
+Six exact interfaces derive genuine substituted-term and argument closure from range confinement at used types, together with lifted range confinement, initial and lifted protected-binder compatibility and literal binder identities. These are syntactic prerequisites, not a semantic substitution theorem; no ambient bottom-value totalization is used.
+
+`ExternalCheckpoint20261102CF` verifies 430 permitted-axiom aliases across 96 components on an unchanged 1130-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint85/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionStatementChecks
+
+theorem fixedSubstitutionClosure : ConfinedSubstitutionTargets.SubstitutionClosure := ConfinedSubstitutionProof.substitutionClosure
+theorem fixedArgumentClosure : ConfinedSubstitutionTargets.ArgumentClosure := ConfinedSubstitutionProof.argumentClosure
+theorem fixedLiftedRange : ConfinedSubstitutionTargets.LiftedRange := ConfinedSubstitutionProof.liftedRange
+theorem fixedInitiallyCompatible : ConfinedSubstitutionTargets.InitiallyCompatible := ConfinedSubstitutionProof.initiallyCompatible
+theorem fixedLiftedCompatibility : ConfinedSubstitutionTargets.LiftedCompatibility := ConfinedSubstitutionProof.liftedCompatibility
+theorem fixedLiteralLift : ConfinedSubstitutionTargets.LiteralLift := ConfinedSubstitutionProof.literalLift
+
+#print axioms fixedSubstitutionClosure
+#print axioms fixedArgumentClosure
+#print axioms fixedLiftedRange
+#print axioms fixedInitiallyCompatible
+#print axioms fixedLiftedCompatibility
+#print axioms fixedLiteralLift
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionStatementChecks
