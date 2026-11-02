@@ -453,3 +453,7 @@ helper recheck; no source, audit or resource cap was weakened. Root import
 inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint29/PUBLIC-VALIDATION.json).
 TARGETS and the nine completed-but-unregistered source results are unchanged.
+
+### Checkpoint 29 source-review supplement: reserve
+
+After the exact 148-alias checkpoint passed, the full source-context clauses of paper 09 `lem:reserve` were reviewed and accepted: see [source-clause mapping](verification/external-continuation-2026-11-02/checkpoint29/RESERVE-SOURCE-REVIEW.md). Both independently derived source certificates are essential; no theorem for arbitrary ungraded annotated expressions is asserted. This is the tenth completed-but-unregistered source result. The stored public register remains 137 checked, 2 inherited, 50 pending; its update still awaits authorization. This supplement changes no Lean source, frozen target, aggregate, or compiler claim.
