@@ -667,3 +667,15 @@ Four exact interfaces assemble the actual constructor operator: all four origina
 Three exact interfaces calibrate five primitive-recursive numeric maps to the actual carrierData operator code for every typed raw operator, without assuming Valid. Actual assigned operators yield the complete output assignment, no free ground names and the exact common-unit head under all valuations. The entire vector and scalar are retained. The whole source-to-K effectivity theorem remains separate.
 
 `ExternalCheckpoint20261102BJ` verifies 330 permitted-axiom aliases across 73 components on an unchanged 963-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint63/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 64 — actual constructor iteration
+
+Six exact interfaces establish ordinary executable bottom, actual constructor iteration and its cardinality-fuel limit. Genuine ascending-chain and finite pigeonhole arguments prove stabilization, actual fixed-point equality, leastness below every pre-fixed family and eventual constancy without an assumed monotonicity or stability premise. Together with the accepted actual constructor operator, this covers the source operator lemma (paper 06 lines 270–315): identity, coherence, monotonicity, finite stabilization and the least fixed point. Complexity bounds, the full structural interpreter and adequacy remain separate. This source completion is not registered in TARGETS.
+
+`ExternalCheckpoint20261102BK` verifies 336 permitted-axiom aliases across 74 components on an unchanged 968-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint64/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; twelve completed source results await registration.
+
+## Cumulative checkpoint 65 — numeric actual accounting
+
+Four exact interfaces establish primitive-recursive whole-free-first accounting, including literal Option failures on typed annotation trees. The canonical raw-source composition returns the actual whole assigned vector, ordered complete carrier source/vector records and constant, with the actual Account certificate proved. This does not assert equality with the older ambiguous expression builder or the final source-to-K effectivity theorem.
+
+`ExternalCheckpoint20261102BL` verifies 340 permitted-axiom aliases across 75 components on an unchanged 975-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint65/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; twelve completed source results await registration.

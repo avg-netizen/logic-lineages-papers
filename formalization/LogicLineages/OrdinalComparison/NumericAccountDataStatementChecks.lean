@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.NumericAccountDataTargets
+public import LogicLineages.OrdinalComparison.NumericAccountDataProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.NumericAccountData.StatementChecks
+theorem exact_scalar_surplus : Targets.ExactScalarSurplus := Proof.exactScalarSurplus
+theorem exact_numeric_accounting : Targets.ExactNumericAccounting := Proof.exactNumericAccounting
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_canonical_source : Targets.ActualCanonicalSource := Proof.actualCanonicalSource
+end LogicLineages.OrdinalComparison.Source.NumericAccountData.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.NumericAccountData

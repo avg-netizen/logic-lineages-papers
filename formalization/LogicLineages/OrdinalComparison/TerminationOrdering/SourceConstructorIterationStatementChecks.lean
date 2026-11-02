@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks
+
+theorem fixedBottomLeast : SourceConstructorIterationTargets.BottomLeast := SourceConstructorIterationProof.bottomLeast
+theorem fixedAscendingIteration : SourceConstructorIterationTargets.AscendingIteration := SourceConstructorIterationProof.ascendingIteration
+theorem fixedCardinalityStabilization : SourceConstructorIterationTargets.CardinalityStabilization := SourceConstructorIterationProof.cardinalityStabilization
+theorem fixedActualFixedPoint : SourceConstructorIterationTargets.ActualFixedPoint := SourceConstructorIterationProof.actualFixedPoint
+theorem fixedLeastPreFixedPoint : SourceConstructorIterationTargets.LeastPreFixedPoint := SourceConstructorIterationProof.leastPreFixedPoint
+theorem fixedEventualConstancy : SourceConstructorIterationTargets.EventualConstancy := SourceConstructorIterationProof.eventualConstancy
+
+#print axioms fixedBottomLeast
+#print axioms fixedAscendingIteration
+#print axioms fixedCardinalityStabilization
+#print axioms fixedActualFixedPoint
+#print axioms fixedLeastPreFixedPoint
+#print axioms fixedEventualConstancy
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks
