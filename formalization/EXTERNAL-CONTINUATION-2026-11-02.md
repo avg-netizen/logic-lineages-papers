@@ -893,3 +893,9 @@ Four exact interfaces prove genuine cons-port transport from stable names and wo
 Three exact interfaces expand every typed realized unit tree into literal arithmetic formula syntax, preserving actual source probes, full metadata, binders and shared ordered input lists. Raw expansion is primitive recursive; actual-source formula construction is computable with unconditional typed-source success and full assignment scalar semantics under a covering ordered input list. No whole head-graph numeric compiler or original paid-head wiring is claimed.
 
 `ExternalCheckpoint20261102CT` verifies 477 permitted-axiom aliases across 110 components on an unchanged 1219-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint99/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 100 — actual unary head-graph compiler
+
+Four exact interfaces derive genuine constants from the actual unary source, complete assignment, positive head and real scalar, and compile its full finite-prefix/tail literal arithmetic graph. Ray maps are primitive recursive; the whole raw unary-source compiler is computable on the genuine domain, for every delta and shared input/output valuation. Finite-prefix shifts use the actual collapse computation, not a primitive-recursive collapse assertion. Original paid B/C head identity and scalar-wire composition remain separate; no whole manuscript theorem is promoted.
+
+`ExternalCheckpoint20261102CU` verifies 481 permitted-axiom aliases across 111 components on an unchanged 1227-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint100/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

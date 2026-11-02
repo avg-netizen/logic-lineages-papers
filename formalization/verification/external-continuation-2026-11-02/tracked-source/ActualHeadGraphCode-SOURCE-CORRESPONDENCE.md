@@ -1,0 +1,9 @@
+# Effective complete unary-source shifted head graph
+
+Paper09 `source-realization.tex` lines247–282 closes only auxiliary ground names of the actual unary K, computes its unchanged positive field and its genuine scalar, and observes K^0 z through unit elimination. This component implements that exact construction on raw source codes with an actual unary-type check, actual complete assignment, positive-head extraction, genuine scalar evaluation and genuine realized unit-elimination tree. No constant or successful source observer is supplied as a premise.
+
+The numeric head is the existing normal code for omega natural-product the actual positive field. Norm and threshold are exactly N(beta), N(beta)+2delta and max(N(beta)+2delta,N(beta)+c+1). Only genuine finite-prefix points are selected. Their exact values are computed by the already proved upward identity J_xi(t)=J_beta(Phi^delta(t))+delta and the actual closed-collapse program. This is equivalent to direct closed evaluation on the genuine domain, not a new descent rule or an inverse of sparse Phi. The evaluator and whole compiler are Computable, not falsely primitive recursive.
+
+The tail is exactly the existing literal arithmetic syntax, with all range guards branch-local, the real scalar c retained, the finite Phi-chain expanded, and the actual source tree expanded to literal ground observation atoms. Every shared input/result expression is preserved, including repeated indices. The finite-prefix and tail formula code is calibrated to the accepted semantic complete graph for every actual unary source and every fixed finite delta. Malformed raw inputs carry no validity claim.
+
+The paid-certificate identity relating omega natural-product 2^b(B1+C1) to beta+omega delta, and insertion of the original unclosed B0/C0 scalar wire, remain separate final source clauses. This component does not promote the whole paid-certificate theorem by itself.
