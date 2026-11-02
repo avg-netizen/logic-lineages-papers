@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.CommonHeadLargeGuardsTargets
+public import LogicLineages.OrdinalComparison.CommonHeadLargeGuardsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CommonHeadLargeGuards.StatementChecks
+theorem exact_block_formula : Targets.ExactBlockFormula := Proof.exactBlockFormula
+theorem original_input_support : Targets.OriginalInputSupport := Proof.originalInputSupport
+theorem exact_actual_large_formula : Targets.ExactActualLargeFormula := Proof.exactActualLargeFormula
+end LogicLineages.OrdinalComparison.CommonHeadLargeGuards.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.CommonHeadLargeGuards

@@ -977,3 +977,9 @@ Three exact interfaces establish genuine closed Computable evaluation, literal o
 One exact interface derives the original FAbs contribution from a positive finite opening witness, under explicit previous-stage FamilySound and InputRelated premises. Typed cons-port variable relatedness and the downward appended extras are established for the literal original opening. This does not establish operator preservation or final-family soundness. Full constructor soundness, limit soundness and whole adequacy remain separate.
 
 `ExternalCheckpoint20261102DH` verifies 516 permitted-axiom aliases across 124 components on an unchanged 1319-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint113/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 114 — literal large-branch guards
+
+Three exact interfaces establish literal finite equality-mask guards, block-sign correctness and original input support, with the exact actual large-branch formula at the original printed threshold. Recursive small branches, layered elimination and the full common-head decision procedure remain separate.
+
+`ExternalCheckpoint20261102DI` verifies 519 permitted-axiom aliases across 125 components on an unchanged 1326-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint114/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
