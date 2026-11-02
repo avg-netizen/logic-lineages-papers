@@ -369,3 +369,22 @@ permitted-axiom aliases across30 components on an unchanged715-local-module
 closure. Root import inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint23/PUBLIC-VALIDATION.json).
 TARGETS and the eight completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint24 — preparation transport and finite-closure review
+
+Four exact preparation interfaces prove actual typed injective permutation and
+certificate/operator transport, every ground-prefix swap/lift/partial naturality,
+and original/prepared vector plus literal account/selected-partial identities.
+No lower reserve bound or scalar-partial remainder monotonicity is inferred.
+The immutable `ExternalCheckpoint20261102W` verifies125 aliases across31 components
+on an unchanged722-local-module closure with permitted axioms. Root import
+inventory only; no fresh full-root or CI pass.
+
+The separate full source mapping of the six already-verified guarded-graph aliases
+now pays paper06 `lem:finiteclosure`, including explicit type/context budget and
+failed Select payloads plus actual execution. The earlier scoped caution is
+preserved as history; this ninth source result is now completed but unregistered.
+See [validation](verification/external-continuation-2026-11-02/checkpoint24/PUBLIC-VALIDATION.json)
+and [finite-closure source review](verification/external-continuation-2026-11-02/checkpoint24/FINITE-CLOSURE-SOURCE-REVIEW.md).
+TARGETS is unchanged; no revised numerical register total, decision adequacy or
+source-size bound is claimed.
