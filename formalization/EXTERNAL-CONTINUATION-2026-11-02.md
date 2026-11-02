@@ -857,3 +857,9 @@ Three exact interfaces establish the full tree and payload codec and exact typed
 Three exact interfaces prove confinement of successful unchanged applyOriginalWith, identify successful-result interpretation with the actual-limit scanner with original source variables protected, and show actual failure yields the whole bottom value. Used-type range and argument conditions, complete ordered arguments and real append are retained. No generic-family whole structural lemma or adequacy theorem is claimed.
 
 `ExternalCheckpoint20261102CN` verifies 455 permitted-axiom aliases across 104 components on an unchanged 1181-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint93/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 94 — literal special application at the actual limit
+
+Four exact interfaces prove conditional scanner mask agreement, discharge it for literal same-world identity values, and derive unchanged specialApply full simultaneous success semantics and failure as the whole bottom value at the actual computed limit. No arbitrary-family whole structural lemma or adequacy theorem is claimed.
+
+`ExternalCheckpoint20261102CO` verifies 459 permitted-axiom aliases across 105 components on an unchanged 1186-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint94/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
