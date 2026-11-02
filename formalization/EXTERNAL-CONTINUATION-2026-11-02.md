@@ -869,3 +869,9 @@ Four exact interfaces prove conditional scanner mask agreement, discharge it for
 Three exact interfaces calibrate every fuel level of the raw symbolic Option builder, including failures. Symbolic compilation is primitive recursive; genuine anchor realization is Computable and yields unconditional actual typed-source semantics for all contexts and output types, with complete assignments and literal ground leaves. Numeric arithmetic-formula coding and original paid-head wire composition remain separate; no whole effective head-graph theorem is claimed.
 
 `ExternalCheckpoint20261102CP` verifies 462 permitted-axiom aliases across 106 components on an unchanged 1193-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint95/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 96 — calibrated literal strict marking
+
+Four exact interfaces establish literal success confinement and strict-to-marked-weak observation-bit equality. Undefined marking gives false under the explicit VariablesStrictEmpty invariant, whose restriction and opening preservation is proved; actual literal identity values discharge it unconditionally. An unrestricted-environment draft was rejected and corrected before freezing. No arbitrary-family strict emptiness, whole structural lemma or adequacy theorem is claimed.
+
+`ExternalCheckpoint20261102CQ` verifies 466 permitted-axiom aliases across 107 components on an unchanged 1200-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint96/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkStatementChecks
+
+theorem fixedMarkConfinement : ActualStrictMarkTargets.MarkConfinement := ActualStrictMarkProof.markConfinement
+
+theorem fixedMarkBitEquality : ActualStrictMarkTargets.MarkBitEquality := ActualStrictMarkProof.markBitEquality
+
+theorem fixedUndefinedMarkFalse : ActualStrictMarkTargets.UndefinedMarkFalse := ActualStrictMarkProof.undefinedMarkFalse
+
+theorem fixedIdentityUndefinedMarkFalse : ActualStrictMarkTargets.IdentityUndefinedMarkFalse := ActualStrictMarkProof.identityUndefinedMarkFalse
+
+#print axioms fixedIdentityUndefinedMarkFalse
+#print axioms fixedMarkConfinement
+#print axioms fixedMarkBitEquality
+#print axioms fixedUndefinedMarkFalse
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkStatementChecks
