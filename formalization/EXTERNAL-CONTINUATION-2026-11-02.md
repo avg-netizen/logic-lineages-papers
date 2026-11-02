@@ -501,3 +501,9 @@ Three exact interfaces use the original scale 2^b and retain literal ordered dup
 Eight exact interfaces use actual source-head/base-observation keys, full input maps and downward extras to establish the finite coherent monotone output family and its complete lattice in the unchanged original order. All generic bound obligations are discharged. The F-operator, interpretation and numbered whole lemmas remain separate.
 
 `ExternalCheckpoint20261102AI` verifies 192 permitted-axiom aliases across 44 components on an unchanged 804-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint36/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 37 — typed scalar annotation data
+
+Three exact interfaces provide Type-level actual operator source and complete-vector data with exact erasure and validity certificates. Deterministic closing and ground-partial producers derive actual run success, output-zero and validity. An actual original-source builder, numeric computability and completed extraction remain separate.
+
+`ExternalCheckpoint20261102AJ` verifies 195 permitted-axiom aliases across 45 components on an unchanged 810-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint37/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
