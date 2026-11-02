@@ -319,3 +319,16 @@ components on an unchanged689-local-module closure. Root import inventory only;
 no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint19/PUBLIC-VALIDATION.json).
 TARGETS and the eight completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint20 — exact ground carrier transport
+
+Four exact interfaces transport the same actual carrier-label objects, duplicate
+list and finite remainder through the actual GroundMap lift retaining the tracked
+symbol. Full-vector expression mapping and actual partial naturality derive the
+positive ground common-unit identity. All1 invariance specifically uses source
+zero interpreted as ordinal one, not arbitrary scalar numeric invariance.
+The immutable `ExternalCheckpoint20261102S` verifies108 permitted-axiom aliases
+across27 components on an unchanged696-local-module closure. Root import inventory
+only; no fresh full-root or CI pass. Ground scalar-partial and lower reserve
+bounds remain separate. See [validation](verification/external-continuation-2026-11-02/checkpoint20/PUBLIC-VALIDATION.json).
+TARGETS and the eight completed-but-unregistered source results are unchanged.
