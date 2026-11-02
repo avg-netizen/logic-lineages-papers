@@ -1,7 +1,9 @@
 # External continuation — 2 November 2026
 
-Current checkpoint06: **137 checked,2 inherited,50 pending /189**; eleven scoped
-components and49exact cumulative aliases. Earlier checkpoint counts below are
+Current checkpoint07: published register **137 checked,2 inherited,50 pending /189**;
+twelve selected scoped components and51exact cumulative aliases, plus an accepted
+standalone four-alias ground-operator component. The carrier register update
+awaits explicit file authorization. Earlier checkpoint counts below are
 historical.
 
 ## Published component batch 01: recursive comparison interfaces
@@ -118,3 +120,32 @@ with permitted axioms on an unchanged573-module local closure. Root import
 inventory updated; no fresh full-root or CI pass. Numbered counts stay137/2/50.
 See [public source validation](verification/external-continuation-2026-11-02/checkpoint06/PUBLIC-VALIDATION.json).
 Raw internal compiler evidence remains local and excluded from publication.
+
+## Cumulative checkpoint07 — literal closed carrier
+
+**The complete paper06 `lem:carrier` proof pair is independently accepted; its
+numbered register update is still pending publication authorization.** The literal closed carrier is strictly
+above its base and, under the exact original confined-weak K/P and strict
+carrier/T premises, strictly above the literal application P T. Actual support
+and binder-consumption obligations are proved. No ordinal realization or
+stability theorem is inferred.
+
+The immutable `ExternalCheckpoint20261102F` verifies all51 selected aliases
+with permitted axioms on an unchanged579-module local closure. Root inventory
+updated; no fresh full-root or CI pass. The published register remains137checked,2inherited,50pending.
+See [whole-source review](verification/external-continuation-2026-11-02/checkpoint07/WHOLE-STATEMENT-REVIEW.md)
+and [public validation](verification/external-continuation-2026-11-02/checkpoint07/PUBLIC-VALIDATION.json).
+
+## Standalone accepted ground-operator discharge
+
+Four exact aliases establish literal one-ground-binder zero discharge and exact
+entire optional assignments for every result type and bound name. Actual
+functional vectors retain scalar/all fields, and an explicit original actual
+operator witness transports. This does not construct an arbitrary-head witness,
+carrier annotation or whole carrier theorem. The standalone gate is accepted;
+it has not yet been added to a new cumulative aggregate or root selection.
+See [public validation](verification/external-continuation-2026-11-02/ground-operator-discharge/PUBLIC-VALIDATION.json).
+
+This proof-only publication deliberately omits the pending TARGETS register
+update and all internal build artifacts. It is not another representation of
+the omitted register; the existing remote register is unchanged.

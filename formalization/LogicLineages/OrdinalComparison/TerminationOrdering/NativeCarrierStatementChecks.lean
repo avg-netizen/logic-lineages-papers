@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierStatementChecks
+
+theorem fixedBaseStrict : NativeCarrierTargets.BaseStrict := NativeCarrierProof.baseStrict
+theorem fixedApplicationClosure : NativeCarrierTargets.ApplicationClosure := NativeCarrierProof.applicationClosure
+
+#print axioms fixedBaseStrict
+#print axioms fixedApplicationClosure
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierStatementChecks
