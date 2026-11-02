@@ -1250,6 +1250,10 @@ public import LogicLineages.OrdinalComparison.ActualHeadGraphArithmeticStatement
 public import LogicLineages.OrdinalComparison.SourceSignedPairStatementChecks
 public import LogicLineages.ExternalCheckpoint20261101
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks
+public import LogicLineages.OrdinalComparison.TrackedSourceStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
