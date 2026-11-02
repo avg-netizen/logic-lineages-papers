@@ -729,3 +729,9 @@ The concrete original variable action supplies actual value evaluation and full-
 Given actual carrier records and explicit reserve bounds b at least four and c at least three times the list length plus four, primitive-recursive guarded caller and full-vector maps construct the literal original 2^b duplicate list and actual K code. Complete assignments, strict positive gap and head balance under all old/new valuations are proved without scale reset or enlargement. Final canonical-P obligations and the whole ground effectivity theorem remain separate.
 
 `ExternalCheckpoint20261102BS` verifies 381 permitted-axiom aliases across 83 components on an unchanged 1022-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint72/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.
+
+## Cumulative checkpoint 68 — paired functional spine actions
+
+Concrete ordinary and marked functional branch actions satisfy paired evaluation/scanning monotonicity, naturality and empty-list certificates, conditional on explicit ordered child-action induction suppliers. Actual base and extra downsets, old extras plus all remaining tuple arguments, original source head and output membership are retained. No unary currying or complete interpretation is claimed.
+
+`ExternalCheckpoint20261102BT` verifies 387 permitted-axiom aliases across 84 components on an unchanged 1028-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint73/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.

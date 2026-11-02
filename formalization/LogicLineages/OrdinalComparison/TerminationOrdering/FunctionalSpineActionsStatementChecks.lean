@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsStatementChecks
+
+theorem fixedStateMonotone : FunctionalSpineActionsTargets.StateMonotone := FunctionalSpineActionsProof.stateMonotone
+theorem fixedStateRestriction : FunctionalSpineActionsTargets.StateRestriction := FunctionalSpineActionsProof.stateRestriction
+theorem fixedFullTupleScanEquation : FunctionalSpineActionsTargets.FullTupleScanEquation := FunctionalSpineActionsProof.fullTupleScanEquation
+theorem fixedEvaluationEquations : FunctionalSpineActionsTargets.EvaluationEquations := FunctionalSpineActionsProof.evaluationEquations
+theorem fixedActualOrdinaryAction : FunctionalSpineActionsTargets.ActualOrdinaryAction := FunctionalSpineActionsProof.actualOrdinaryAction
+theorem fixedActualMarkedAction : FunctionalSpineActionsTargets.ActualMarkedAction := FunctionalSpineActionsProof.actualMarkedAction
+
+#print axioms fixedStateMonotone
+#print axioms fixedStateRestriction
+#print axioms fixedFullTupleScanEquation
+#print axioms fixedEvaluationEquations
+#print axioms fixedActualOrdinaryAction
+#print axioms fixedActualMarkedAction
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsStatementChecks
