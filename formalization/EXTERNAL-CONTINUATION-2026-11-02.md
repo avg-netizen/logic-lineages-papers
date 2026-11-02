@@ -947,3 +947,9 @@ Three exact interfaces derive original source Weak/Strict pairs and occurrence-p
 Two exact interfaces establish numerical dominance and genuine actual-head dominance at the literal printed threshold. Actual head domains, bands and order are discharged, without threshold enlargement. Distinct input rows and a selected greatest nonzero coefficient remain explicit premises. Equal-input collection/cancellation, small branches, layered elimination and a complete common-head decision procedure remain separate.
 
 `ExternalCheckpoint20261102DC` verifies 506 permitted-axiom aliases across 119 components on an unchanged 1292-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint108/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 109 — Copy and Stat stage soundness
+
+Two exact targets derive original Copy and Stat weak judgments from their actual stage-test contributions under explicit previous-stage FamilySound and actual InputRelated witnesses. That previous-stage invariant is not asserted for the final operator or its limit. Operator preservation, final soundness and whole adequacy remain separate.
+
+`ExternalCheckpoint20261102DD` verifies 508 permitted-axiom aliases across 120 components on an unchanged 1297-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint109/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
