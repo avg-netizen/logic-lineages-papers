@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.OriginalBudgetCodeTargets
+public import LogicLineages.OrdinalComparison.OriginalBudgetCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.OriginalBudgetCode.StatementChecks
+theorem exact_counts : Targets.ExactCounts := Proof.exactCounts
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_original_box_budget : Targets.ActualOriginalBoxBudget := Proof.actualOriginalBoxBudget
+end LogicLineages.OrdinalComparison.Source.OriginalBudgetCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.OriginalBudgetCode

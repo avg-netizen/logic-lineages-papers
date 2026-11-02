@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentStatementChecks
+
+theorem fixedRestrictionIdentity : TypedValueEnvironmentTargets.RestrictionIdentity := TypedValueEnvironmentProof.restrictionIdentity
+theorem fixedRestrictionComposition : TypedValueEnvironmentTargets.RestrictionComposition := TypedValueEnvironmentProof.restrictionComposition
+theorem fixedRestrictionMonotone : TypedValueEnvironmentTargets.RestrictionMonotone := TypedValueEnvironmentProof.restrictionMonotone
+theorem fixedExtensionMonotone : TypedValueEnvironmentTargets.ExtensionMonotone := TypedValueEnvironmentProof.extensionMonotone
+theorem fixedExtensionRestriction : TypedValueEnvironmentTargets.ExtensionRestriction := TypedValueEnvironmentProof.extensionRestriction
+theorem fixedIdentityTransport : TypedValueEnvironmentTargets.IdentityTransport := TypedValueEnvironmentProof.identityTransport
+theorem fixedReindexRestriction : TypedValueEnvironmentTargets.ReindexRestriction := TypedValueEnvironmentProof.reindexRestriction
+theorem fixedReindexLift : TypedValueEnvironmentTargets.ReindexLift := TypedValueEnvironmentProof.reindexLift
+
+#print axioms fixedRestrictionIdentity
+#print axioms fixedRestrictionComposition
+#print axioms fixedRestrictionMonotone
+#print axioms fixedExtensionMonotone
+#print axioms fixedExtensionRestriction
+#print axioms fixedIdentityTransport
+#print axioms fixedReindexRestriction
+#print axioms fixedReindexLift
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentStatementChecks

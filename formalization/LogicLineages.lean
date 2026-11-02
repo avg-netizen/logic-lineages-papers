@@ -1448,6 +1448,10 @@ public import LogicLineages.ExternalCheckpoint20261102BK
 public import LogicLineages.OrdinalComparison.NumericAccountDataStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BL
 
+public import LogicLineages.OrdinalComparison.OriginalBudgetCodeStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BM
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
