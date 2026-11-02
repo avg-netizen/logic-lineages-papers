@@ -647,3 +647,11 @@ Three exact interfaces give a uniform primitive-recursive algorithm from raw con
 Six exact interfaces cover exhaustive packed selection from base or extras, the zero-type branch and all complete nonempty suffixes. Actual constructor-family self-tuples undergo one full application, not unary currying. Exact specifications, selected domination and full-table value/argument monotonicity and future projection are proved. Semantic application adequacy, FAbs and the complete marked operator remain separate.
 
 `ExternalCheckpoint20261102BG` verifies 312 permitted-axiom aliases across 69 components on an unchanged 940-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint60/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 61 — ground capture closing and FAbs contribution
+
+Uniform primitive-recursive closing uses the exact external context and arbitrary protected binder prefixes to replace only free ground variables. Functional names are preserved; source zero maps to ordinal one. Complete actual assignment/vector calibration and no-ground-frees are proved. The whole raw-source-to-K compiler remains separate.
+
+The actual FAbs contribution uses available finite fresh ports from the real observation budget, literal opened lambda body, new variableValue, full-input weakening and downward singleton append. All world/type/membership guards, exact specifications, actual family/input monotonicity and future projection are proved. Complete marked output, fixed-point operator and adequacy remain separate.
+
+`ExternalCheckpoint20261102BH` verifies 323 permitted-axiom aliases across 71 components on an unchanged 951-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint61/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
