@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.AccountSemanticDeterminacyTargets
+public import LogicLineages.OrdinalComparison.AccountSemanticDeterminacyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.StatementChecks
+theorem accounting_determinacy : Targets.AccountingDeterminacy := Proof.accountingDeterminacy
+theorem universal_soundness : Targets.UniversalSoundness := Proof.universalSoundness
+theorem actual_source_soundness : Targets.ActualSourceSoundness := Proof.actualSourceSoundness
+end LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy

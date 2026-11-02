@@ -344,3 +344,16 @@ verifies112 permitted-axiom aliases across28 components on an unchanged702-local
 module closure. Root import inventory only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint21/PUBLIC-VALIDATION.json).
 TARGETS and the eight completed-but-unregistered source results are unchanged.
+
+## Cumulative checkpoint22 — semantic account determinacy
+
+Three exact interfaces prove determinacy of ordered head values, finite remainder,
+length and reserve for literal Accounts, not uniqueness of carrier-label syntax.
+Universal Account soundness uses actual partial-run uniqueness; actual-source
+account existence and all-member semantics are derived, not assumed. No ground
+scalar-partial or lower reserve bound follows. The immutable
+`ExternalCheckpoint20261102U` verifies115 permitted-axiom aliases across29
+components on an unchanged708-local-module closure. Root import inventory only;
+no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint22/PUBLIC-VALIDATION.json).
+TARGETS and the eight completed-but-unregistered source results are unchanged.

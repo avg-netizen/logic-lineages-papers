@@ -1313,6 +1313,9 @@ public import LogicLineages.ExternalCheckpoint20261102S
 public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102T
 
+public import LogicLineages.OrdinalComparison.AccountSemanticDeterminacyStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102U
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
