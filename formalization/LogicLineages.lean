@@ -1375,6 +1375,9 @@ public import LogicLineages.ExternalCheckpoint20261102AM
 public import LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AN
 
+public import LogicLineages.OrdinalComparison.UnitHeadEvaluationStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AO
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
