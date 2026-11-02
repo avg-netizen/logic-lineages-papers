@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryLogicalRelationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryLogicalRelationStatementChecks
+
+theorem fixedOrdinaryRelated : OrdinaryLogicalRelationTargets.OrdinaryRelated := OrdinaryLogicalRelationProof.ordinaryRelated
+
+theorem fixedActualLimitOrdinaryRelated : OrdinaryLogicalRelationTargets.ActualLimitOrdinaryRelated := OrdinaryLogicalRelationProof.actualLimitOrdinaryRelated
+
+#print axioms fixedOrdinaryRelated
+#print axioms fixedActualLimitOrdinaryRelated
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryLogicalRelationStatementChecks

@@ -995,3 +995,9 @@ Three exact interfaces establish genuine preservation of FamilySound by the actu
 Three exact interfaces establish guard renaming, evaluation and support, ordered deletion and the skip guard, and actual one-occurrence folded-row transport back to the original indices. Recursive formula construction, layered elimination and the full common-head decision procedure remain separate.
 
 `ExternalCheckpoint20261102DK` verifies 525 permitted-axiom aliases across 127 components on an unchanged 1337-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint116/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 117 — final ordinary-branch relation
+
+Two exact interfaces establish the actual ordinary branch logical relation under explicit related-base and FamilySound premises, then specialize to the actual computed limit, discharging the family premise. Relatedness of base inputs remains explicit. This is not the arbitrary-syntax fundamental theorem or full answer soundness. Arbitrary-syntax fundamental soundness, answer soundness and whole adequacy remain separate.
+
+`ExternalCheckpoint20261102DL` verifies 527 permitted-axiom aliases across 128 components on an unchanged 1341-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint117/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending. This is the final proof checkpoint of this work session; no successor proof expansion is included. The [termination handoff](verification/external-continuation-2026-11-02/termination-ordering/TERMINATION-ORDERING-HANDOFF-20261102T1553Z.md) records the earlier prepublication status; this checkpoint includes and verifies its then-pending ordinary component.

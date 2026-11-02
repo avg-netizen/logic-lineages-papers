@@ -1602,6 +1602,9 @@ public import LogicLineages.ExternalCheckpoint20261102DJ
 public import LogicLineages.OrdinalComparison.CommonHeadGuardReindexStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102DK
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryLogicalRelationStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102DL
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
