@@ -294,3 +294,16 @@ and [source review](verification/external-continuation-2026-11-02/checkpoint17/W
 Eight source results are completed but unregistered: the prior seven plus
 paper06 fv. TARGETS remains unchanged pending explicit file authorization;
 no revised numerical register total is claimed.
+
+## Cumulative checkpoint18 — literal scalar carrier accounting
+
+Three exact interfaces account for actual original closed unary carrier labels,
+full assigned vectors and proved common-unit equality. The literal occurrence
+list preserves duplicates and selected nonfinite source origins. An actual
+partial0 run has scalar equal to the natural-sum carrier fold plus an ordinary
+finite remainder. No lower reserve bound, ground transport or whole reserve
+lemma is claimed. The immutable `ExternalCheckpoint20261102Q` verifies101
+permitted-axiom aliases across25 components on an unchanged670-local-module
+closure. Root import inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint18/PUBLIC-VALIDATION.json).
+TARGETS and the eight completed-but-unregistered source results are unchanged.
