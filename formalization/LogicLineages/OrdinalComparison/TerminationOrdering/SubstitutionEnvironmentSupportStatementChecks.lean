@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportStatementChecks
+
+theorem fixedMaskLocality : SubstitutionEnvironmentSupportTargets.MaskLocality := SubstitutionEnvironmentSupportProof.maskLocality
+theorem fixedAgreementRestriction : SubstitutionEnvironmentSupportTargets.AgreementRestriction := SubstitutionEnvironmentSupportProof.agreementRestriction
+theorem fixedAgreementLift : SubstitutionEnvironmentSupportTargets.AgreementLift := SubstitutionEnvironmentSupportProof.agreementLift
+
+#print axioms fixedMaskLocality
+#print axioms fixedAgreementRestriction
+#print axioms fixedAgreementLift
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportStatementChecks

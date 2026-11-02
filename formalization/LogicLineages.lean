@@ -1509,6 +1509,9 @@ public import LogicLineages.ExternalCheckpoint20261102CE
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CF
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CG
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

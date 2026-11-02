@@ -809,3 +809,9 @@ Four exact interfaces calibrate arbitrary typed selected-slot rotation beneath a
 Six exact interfaces derive genuine substituted-term and argument closure from range confinement at used types, together with lifted range confinement, initial and lifted protected-binder compatibility and literal binder identities. These are syntactic prerequisites, not a semantic substitution theorem; no ambient bottom-value totalization is used.
 
 `ExternalCheckpoint20261102CF` verifies 430 permitted-axiom aliases across 96 components on an unchanged 1130-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint85/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 86 — substitution environment support
+
+Three exact interfaces derive actual scanner protected-mask locality on supported terms and transport used-type semantic environment agreement through restriction and binder lifting. They introduce no ambient bottom totalization or additional binder-type membership premise. Full semantic substitution remains separate.
+
+`ExternalCheckpoint20261102CG` verifies 433 permitted-axiom aliases across 97 components on an unchanged 1135-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint86/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
