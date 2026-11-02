@@ -911,3 +911,9 @@ Two exact targets prove that original Weak and Strict derivations imply actual c
 Two exact interfaces prove the genuine omega natural-product finite-tail identity for every ordinal below epsilon-zero, including zero, and every finite tail, then transport the same numeric compiler to the actual unary-source paid-head graph using its complete assignment and printed paid equality. No polynomial restriction or hidden bound is imposed. Original B/C scalar-wire composition remains separate; no whole head-graph theorem is promoted.
 
 `ExternalCheckpoint20261102CW` verifies 485 permitted-axiom aliases across 113 components on an unchanged 1244-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint102/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 103 — actual value logical relation
+
+Four exact interfaces introduce the actual natural-value/source relation using original guarded bits and complete simultaneous application: two honest definitional projections, plus substantive downward closure and bottom relatedness proved by strict-type induction. Raw source syntax remains unrestricted. Evaluator or iteration-stage satisfaction, a fundamental theorem, soundness and whole adequacy remain unpaid.
+
+`ExternalCheckpoint20261102CX` verifies 489 permitted-axiom aliases across 114 components on an unchanged 1249-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint103/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
