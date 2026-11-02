@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportStatementChecks
+
+theorem fixedConsPortTransport : LiteralWorldTransportTargets.ConsPortTransport := LiteralWorldTransportProof.consPortTransport
+
+theorem fixedOpeningIdentity : LiteralWorldTransportTargets.OpeningIdentity := LiteralWorldTransportProof.openingIdentity
+
+theorem fixedSourceIdentityWeakening : LiteralWorldTransportTargets.SourceIdentityWeakening := LiteralWorldTransportProof.sourceIdentityWeakening
+
+theorem fixedSourceReadTransport : LiteralWorldTransportTargets.SourceReadTransport := LiteralWorldTransportProof.sourceReadTransport
+
+#print axioms fixedConsPortTransport
+#print axioms fixedOpeningIdentity
+#print axioms fixedSourceIdentityWeakening
+#print axioms fixedSourceReadTransport
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportStatementChecks
