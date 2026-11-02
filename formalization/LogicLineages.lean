@@ -1557,6 +1557,9 @@ public import LogicLineages.ExternalCheckpoint20261102CU
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualComparisonCompletenessStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CV
 
+public import LogicLineages.OrdinalComparison.PaidHeadTransportStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CW
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

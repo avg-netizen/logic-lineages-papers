@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.PaidHeadTransportTargets
+public import LogicLineages.OrdinalComparison.PaidHeadTransportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.StatementChecks
+theorem exact_omega_finite_tail : Targets.ExactOmegaFiniteTail := Proof.exactOmegaFiniteTail
+theorem actual_paid_graph : Targets.ActualPaidGraph := Proof.actualPaidGraph
+end LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport

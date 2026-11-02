@@ -905,3 +905,9 @@ Four exact interfaces derive genuine constants from the actual unary source, com
 Two exact targets prove that original Weak and Strict derivations imply actual computed-limit guarded bits at actual current-world typed observations and literal identity values. Genuine mutual induction covers all five original relation families, including matching, Select and fresh-binder rules. Only the existing confined-source domain is used, with no extra normality, free-variable or ambient restriction. This is the completeness direction only, not soundness, equivalence or whole adequacy; the generic-family structural qualification remains.
 
 `ExternalCheckpoint20261102CV` verifies 483 permitted-axiom aliases across 112 components on an unchanged 1238-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint101/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 102 — paid-head graph transport
+
+Two exact interfaces prove the genuine omega natural-product finite-tail identity for every ordinal below epsilon-zero, including zero, and every finite tail, then transport the same numeric compiler to the actual unary-source paid-head graph using its complete assignment and printed paid equality. No polynomial restriction or hidden bound is imposed. Original B/C scalar-wire composition remains separate; no whole head-graph theorem is promoted.
+
+`ExternalCheckpoint20261102CW` verifies 485 permitted-axiom aliases across 113 components on an unchanged 1244-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint102/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
