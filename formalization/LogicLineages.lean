@@ -1353,6 +1353,9 @@ public import LogicLineages.ExternalCheckpoint20261102AF
 public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AG
 
+public import LogicLineages.OrdinalComparison.OriginalScaleFlatListStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AH
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

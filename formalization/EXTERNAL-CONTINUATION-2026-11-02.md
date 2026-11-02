@@ -489,3 +489,9 @@ Three exact interfaces preserve a single shared base identically while embedding
 Eight exact interfaces establish actual packed typed downsets, unique typed fibers, executable enumeration and downward-image transport laws including identity and composition. No meet preservation or whole constructor-coherent family theorem is claimed.
 
 `ExternalCheckpoint20261102AG` verifies 181 permitted-axiom aliases across 42 components on an unchanged 791-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint34/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 35 — original-scale flat source list
+
+Three exact interfaces use the original scale 2^b and retain literal ordered duplicate carrier occurrences. Given actual carrier records and the reserve guard, original caller full assignment and saturation produce an actual one-chain K with the exact natural-product balanced head and positive gap for every ground valuation; epsilon bounds are derived. Original-source P extraction and uniform effective ground construction remain separate.
+
+`ExternalCheckpoint20261102AH` verifies 184 permitted-axiom aliases across 43 components on an unchanged 798-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint35/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
