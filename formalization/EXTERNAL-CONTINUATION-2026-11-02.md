@@ -1,7 +1,7 @@
 # External continuation — 2 November 2026
 
-Current checkpoint04: **136 checked,2 inherited,51 pending /189**; nine scoped
-components and44exact cumulative aliases. Earlier checkpoint counts below are
+Current checkpoint05: **137 checked,2 inherited,50 pending /189**; ten scoped
+components and46exact cumulative aliases. Earlier checkpoint counts below are
 historical.
 
 ## Published component batch 01: recursive comparison interfaces
@@ -89,3 +89,17 @@ with permitted axioms on an unchanged561-module local closure. The root import
 inventory is updated without claiming a full-root or CI pass. See
 [public source validation](verification/external-continuation-2026-11-02/checkpoint04/PUBLIC-VALIDATION.json).
 Internal raw compiler evidence remains local and is excluded from publication.
+
+## Cumulative checkpoint05 — original recursor orientations
+
+**Paper06 `lem:recursor` is now checked**: both original zero and successor
+rules strictly decrease under actual confined comparison, with full source
+type-support inclusion. Arbitrary original typed contexts and result types
+remain quantified. No beta/substitution/stability theorem is inferred.
+
+The immutable `ExternalCheckpoint20261102D` verifies all46 selected aliases
+with permitted axioms on an unchanged567-module local closure. The root import
+inventory is updated; no fresh full-root or CI pass is claimed. The register
+is137checked,2inherited,50pending. See
+[whole-source review](verification/external-continuation-2026-11-02/checkpoint05/WHOLE-STATEMENT-REVIEW.md)
+and [public validation](verification/external-continuation-2026-11-02/checkpoint05/PUBLIC-VALIDATION.json).

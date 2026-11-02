@@ -3537,9 +3537,32 @@
           "file": "06-godel-t-termination-ordering/paper.tex",
           "line": 500,
           "statement_latex": "[Recursor orientation]\\label{lem:recursor}\nBoth original recursor rules decrease strictly under $\\succ_c$.",
-          "status": "pending",
+          "status": "checked",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorStatementChecks.fixedZeroConfinedOrientation",
+            "LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorStatementChecks.fixedSuccessorConfinedOrientation"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NativeRecursorTargets.lean",
+              "sha256": "87c894debe6b15460511d01d39937f3356ad1183599dcde95e2773cd78452d84",
+              "type": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorTargets.ZeroConfinedOrientation"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NativeRecursorTargets.lean",
+              "sha256": "87c894debe6b15460511d01d39937f3356ad1183599dcde95e2773cd78452d84",
+              "type": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorTargets.SuccessorConfinedOrientation"
+            }
+          ],
+          "verification_receipt": "verification/external-continuation-2026-11-02/checkpoint05/PUBLIC-VALIDATION.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole original lem:recursor requires BOTH listed exact zero and successor ConfinedStrict orientations. Arbitrary original symbol signature, ambient typed context and result type; literal original recursor argument order and successor contractum, simultaneous Select/extra/Copy chains and actual full typeSupport inclusion are proved. No generic well-founded ordering, strictness oracle, closed-term restriction or added correctness premise. All two aliases and cumulative46 aggregate checked; no beta/substitution/stability or all-reductions corollary promotion. Internal compiler logs remain local; public summary pins actual sources and aliases."
         },
         {
           "id": "06-godel-t-termination-ordering:corollary-15",

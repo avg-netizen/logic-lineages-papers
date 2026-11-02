@@ -1260,6 +1260,9 @@ public import LogicLineages.ExternalCheckpoint20261102B
 public import LogicLineages.OrdinalComparison.SourceAssignmentSupportStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102C
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102D
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

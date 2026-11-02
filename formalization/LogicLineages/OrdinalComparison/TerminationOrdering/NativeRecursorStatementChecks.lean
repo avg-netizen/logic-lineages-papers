@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorStatementChecks
+
+theorem fixedZeroConfinedOrientation : NativeRecursorTargets.ZeroConfinedOrientation := NativeRecursorProof.zeroConfinedOrientation
+theorem fixedSuccessorConfinedOrientation : NativeRecursorTargets.SuccessorConfinedOrientation := NativeRecursorProof.successorConfinedOrientation
+
+#print axioms fixedZeroConfinedOrientation
+#print axioms fixedSuccessorConfinedOrientation
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorStatementChecks
