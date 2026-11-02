@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationStatementChecks
+
+theorem fixedPackedDownward : ConstructorInputLogicalRelationTargets.PackedDownward := ConstructorInputLogicalRelationProof.packedDownward
+
+theorem fixedInputAppend : ConstructorInputLogicalRelationTargets.InputAppend := ConstructorInputLogicalRelationProof.inputAppend
+
+theorem fixedInputWeakening : ConstructorInputLogicalRelationTargets.InputWeakening := ConstructorInputLogicalRelationProof.inputWeakening
+
+theorem fixedBottomFamilySound : ConstructorInputLogicalRelationTargets.BottomFamilySound := ConstructorInputLogicalRelationProof.bottomFamilySound
+
+theorem fixedFamilyDownward : ConstructorInputLogicalRelationTargets.FamilyDownward := ConstructorInputLogicalRelationProof.familyDownward
+
+#print axioms fixedPackedDownward
+#print axioms fixedInputAppend
+#print axioms fixedInputWeakening
+#print axioms fixedBottomFamilySound
+#print axioms fixedFamilyDownward
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationStatementChecks
