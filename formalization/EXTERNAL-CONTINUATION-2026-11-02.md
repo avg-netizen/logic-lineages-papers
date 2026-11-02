@@ -789,3 +789,11 @@ One exact interface derives semantic applyWith equals the actual original-spine 
 Three exact interfaces establish the literal existing arithmetic finite-prefix and fixed-delta tail formula on the entire genuine domain. The actual K tree supplies the constants, t and y are shared, every finite point is retained and the threshold is local to the tail branch. The numeric formula compiler, original paid B/C wire composition and whole effective head-graph theorem remain separate obligations.
 
 `ExternalCheckpoint20261102CC` verifies 417 permitted-axiom aliases across 93 components on an unchanged 1111-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint82/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 83 — literal structural renaming covariance
+
+Three exact interfaces calibrate actual unchanged original-syntax renaming, confinement, interpreter covariance through reindexed environments and scanner covariance through pullMask with the complete argument list. These laws hold for generic coherent M but do not assert general substitution or the whole structural lemma.
+
+Provenance clarification: the earlier `SourceScalarMultivariateProof.head_limit` already covers every ClosedPositive actual head limit. Checkpoint80's GeneralOmegaHeadLimit proves the stronger unrestricted all-ordinal positive epsilon-zero limit theorem and code calibration; it is not the first ClosedPositive limit proof.
+
+`ExternalCheckpoint20261102CD` verifies 420 permitted-axiom aliases across 94 components on an unchanged 1118-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint83/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

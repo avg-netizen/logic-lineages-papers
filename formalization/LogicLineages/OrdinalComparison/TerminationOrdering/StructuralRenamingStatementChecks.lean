@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingStatementChecks
+
+theorem fixedLiteralErasure : StructuralRenamingTargets.LiteralErasure := StructuralRenamingProof.literalErasure
+theorem fixedInterpretationCovariance : StructuralRenamingTargets.InterpretationCovariance := StructuralRenamingProof.interpretationCovariance
+theorem fixedScannerCovariance : StructuralRenamingTargets.ScannerCovariance := StructuralRenamingProof.scannerCovariance
+
+#print axioms fixedLiteralErasure
+#print axioms fixedInterpretationCovariance
+#print axioms fixedScannerCovariance
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingStatementChecks

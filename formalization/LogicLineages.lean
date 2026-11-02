@@ -1500,6 +1500,9 @@ public import LogicLineages.ExternalCheckpoint20261102CB
 public import LogicLineages.OrdinalComparison.ActualHeadGraphFormulaStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CC
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CD
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
