@@ -1575,6 +1575,9 @@ public import LogicLineages.ExternalCheckpoint20261102DA
 public import LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102DB
 
+public import LogicLineages.OrdinalComparison.CommonHeadLargeRowStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102DC
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

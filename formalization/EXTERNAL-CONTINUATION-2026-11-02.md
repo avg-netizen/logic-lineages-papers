@@ -941,3 +941,9 @@ Five exact interfaces prove actual typed witness representation through packed v
 Three exact interfaces derive original source Weak/Strict pairs and occurrence-preserving WeakMatch/StrictMultiset judgments from explicit actual Related entries and genuine same-world finite observation witnesses. All occurrences and duplicates are retained. No FamilySound oracle, full answer soundness, fundamental theorem or whole adequacy is claimed.
 
 `ExternalCheckpoint20261102DB` verifies 504 permitted-axiom aliases across 118 components on an unchanged 1272-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint107/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 108 — common-head large-row dominance
+
+Two exact interfaces establish numerical dominance and genuine actual-head dominance at the literal printed threshold. Actual head domains, bands and order are discharged, without threshold enlargement. Distinct input rows and a selected greatest nonzero coefficient remain explicit premises. Equal-input collection/cancellation, small branches, layered elimination and a complete common-head decision procedure remain separate.
+
+`ExternalCheckpoint20261102DC` verifies 506 permitted-axiom aliases across 119 components on an unchanged 1292-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint108/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
