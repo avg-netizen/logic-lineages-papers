@@ -605,3 +605,9 @@ Five exact interfaces encode literal scalar trees with complete raw operator sou
 Five exact interfaces prove source-head result-type membership, full base packing, literal Fun head/result/permutation matching, the actual ordinary availability/weak/strict bit equations, and complete full-tuple append-to-empty result construction. The resulting Value is executable; overall branch monotonicity/naturality and the full source interpreter remain separate.
 
 `ExternalCheckpoint20261102AZ` verifies 278 permitted-axiom aliases across 62 components on an unchanged 901-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint53/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 54 — numeric scalar annotation partials
+
+Three exact interfaces provide uniform primitive-recursive numeric ground partial evaluation with exact Option calibration for all typed trees, including failures. Validity separately yields actual default partial-run and output-zero calibration. No equality between ambiguous source builders or whole source-to-K effectivity is assumed.
+
+`ExternalCheckpoint20261102BA` verifies 281 permitted-axiom aliases across 63 components on an unchanged 907-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint54/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
