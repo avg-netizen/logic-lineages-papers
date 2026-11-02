@@ -765,3 +765,9 @@ An actual executable paired evaluator on confined marked syntax satisfies monoto
 Three exact interfaces calibrate literal actual K^0 z and complete assignments to the genuine unary ray J_beta(N_beta+c+1+n), retaining the same computed scalar and positive head under every shared ground valuation. The fixed ray is Computable, and the actual unit-elimination tree with all-ground source atoms has its exact equivalence. No generalized limit, omega-to-omega iteration or whole head-graph claim follows.
 
 `ExternalCheckpoint20261102BY` verifies 409 permitted-axiom aliases across 89 components on an unchanged 1071-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint78/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 79 — actual fixed-point interpretation equations
+
+Two exact interfaces derive the actual finite constructor limit's four-rule weak bits, true availability, false strict bits and complete future-tuple equation in the same family. The genuine fixed-point identity discharges this equation at the actual limit, without an arbitrary-family consistency premise. The [earlier structural qualification](verification/external-continuation-2026-11-02/termination-ordering/STRUCTURAL-SEMANTICS-LIMITATION-20261102T1112Z.md) remains: arbitrary-family source application, whole structural interpretation and substitution are not established here.
+
+`ExternalCheckpoint20261102BZ` verifies 411 permitted-axiom aliases across 90 components on an unchanged 1075-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint79/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.

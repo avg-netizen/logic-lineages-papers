@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitInterpretationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitInterpretationStatementChecks
+
+theorem fixedSourceBitEquations : ActualLimitInterpretationTargets.SourceBitEquations := ActualLimitInterpretationProof.sourceBitEquations
+theorem fixedFullTupleEquation : ActualLimitInterpretationTargets.FullTupleEquation := ActualLimitInterpretationProof.fullTupleEquation
+
+#print axioms fixedSourceBitEquations
+#print axioms fixedFullTupleEquation
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitInterpretationStatementChecks
