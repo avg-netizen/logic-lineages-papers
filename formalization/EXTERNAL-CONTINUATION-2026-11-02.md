@@ -184,3 +184,17 @@ updated, not a fresh full-root or CI pass. See
 and [source-gap resolution](verification/external-continuation-2026-11-02/checkpoint09/CONTEXT-BRIDGE-RESOLUTION.md).
 No denied register mutation, revised numerical total or new unrelated whole
 source theorem is claimed by this proof-only publication.
+
+## Cumulative checkpoint10 — actual selected-head carriers
+
+All three exact targets prove the source selected-head carrier clause, including
+actual operator extraction, literal unary carrier construction, full scalar
+preservation, no free ground names, and unit first coordinate for every valuation.
+The immutable `ExternalCheckpoint20261102I` verifies70 aliases across16 components
+on an unchanged609-local-module closure with permitted axioms. Root import
+inventory only; no fresh full-root or CI pass.
+See [validation](verification/external-continuation-2026-11-02/checkpoint10/PUBLIC-VALIDATION.json)
+and [whole-source review](verification/external-continuation-2026-11-02/checkpoint10/WHOLE-SOURCE-REVIEW.md).
+Paper09 `lem:carriers` and paper06 `lem:carrier` are completed but unregistered;
+`TARGETS.json` remains unchanged pending explicit file authorization. No revised
+register total, reserve, or whole affine theorem is claimed.
