@@ -237,3 +237,16 @@ across19 components on an unchanged627-local-module closure. Root import invento
 only; no fresh full-root or CI pass.
 See [validation](verification/external-continuation-2026-11-02/checkpoint13/PUBLIC-VALIDATION.json).
 TARGETS remains unchanged; this supplier changes no whole-source status.
+
+## Cumulative checkpoint14 — native beta and case edges
+
+The three exact targets pay full original beta/cases with actual substitution,
+arbitrary ordinary source syntax and context, and exact occurring type support.
+The immutable `ExternalCheckpoint20261102M` verifies82 permitted-axiom aliases
+across20 components on an unchanged633-local-module closure. Root import inventory
+only; no fresh full-root or CI pass. Contextual all-reductions assembly remains
+separate. See [validation](verification/external-continuation-2026-11-02/checkpoint14/PUBLIC-VALIDATION.json)
+and [source review](verification/external-continuation-2026-11-02/checkpoint14/WHOLE-SOURCE-REVIEW.md).
+Five source lemmas are completed but unregistered: paper06 carrier, iterationedges,
+graft and betacases, and paper09 carriers. TARGETS remains unchanged pending
+explicit file authorization; no revised numerical register total is claimed.

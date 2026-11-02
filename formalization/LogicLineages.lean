@@ -1288,6 +1288,9 @@ public import LogicLineages.ExternalCheckpoint20261102K
 public import LogicLineages.OrdinalComparison.AdditiveHeadTreeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102L
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102M
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

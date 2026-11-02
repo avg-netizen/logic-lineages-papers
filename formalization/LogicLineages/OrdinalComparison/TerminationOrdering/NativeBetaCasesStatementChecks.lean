@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesStatementChecks
+
+theorem fixedBetaConfinedOrientation : NativeBetaCasesTargets.BetaConfinedOrientation := NativeBetaCasesProof.betaConfinedOrientation
+theorem fixedCaseFirstConfinedOrientation : NativeBetaCasesTargets.CaseFirstConfinedOrientation := NativeBetaCasesProof.caseFirstConfinedOrientation
+theorem fixedCaseSecondConfinedOrientation : NativeBetaCasesTargets.CaseSecondConfinedOrientation := NativeBetaCasesProof.caseSecondConfinedOrientation
+
+#print axioms fixedBetaConfinedOrientation
+#print axioms fixedCaseFirstConfinedOrientation
+#print axioms fixedCaseSecondConfinedOrientation
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesStatementChecks
