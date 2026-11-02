@@ -569,3 +569,9 @@ Three exact interfaces assemble the actual original P, B, caller C, full box and
 Six exact interfaces implement total weak/strict coordinate access guarded by actual world validity, extension, type and literal Observation membership, without duplicate indices. True/reject/typed interfaces, Value monotonicity, projection under the necessary observation-extension premise and bottom false are proved. Semantic comparison relations, matching and operators remain separate.
 
 `ExternalCheckpoint20261102AT` verifies 249 permitted-axiom aliases across 56 components on an unchanged 865-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint47/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 48 — raw ordinal unit-head code
+
+Three exact interfaces prove a primitive-recursive raw ordinal-code pipeline for exact unit-head extraction, explicit refusal outside its domain and finite classification, with successful calibration on generated-positive fields. No whole raw original-source-to-K computation is claimed.
+
+`ExternalCheckpoint20261102AU` verifies 252 permitted-axiom aliases across 57 components on an unchanged 870-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint48/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
