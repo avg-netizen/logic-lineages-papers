@@ -1,0 +1,9 @@
+# Exact numeric expansion of actual unit-elimination trees
+
+Paper09 `source-realization.tex` lines48–65 eliminates functional source names by the literal free/active one-unit equations, ending at genuine all-ground source leaves. Lines253–289 use this finite construction inside existential source arithmetic. This component numerically transcribes the already accepted Arithmetic.unitFormula, not a new semantic graph primitive.
+
+Every raw tree metadata tuple is retained and decoded literally. The leaf uses both unchanged source programs, their exact common context length (original prefix length plus two; the closed probe is embedded back into that context), actual factor and actual evaluated anchor. Free and active cases delete precisely the selected input position, shift all remaining expression variables under the new witnesses, and use the exact full one-unit coefficients/constants. Ordered children, duplicate occurrences, ordered tuples and conjunction structure remain unchanged. Recursive measure is tree code, not changing expression arguments; no fixed-point oracle is supplied.
+
+Exact calibration covers every typed realized tree and all expression tuples/result expressions, without validity or success premises. The raw formula expansion is PR. Source compilation additionally uses the existing Computable actual-anchor realization and is therefore claimed Computable, not PR. Actual typed sources of every context/output type compile successfully; the covering tuple premise is only the original input-variable coverage for semantic evaluation, not a success oracle or source grammar restriction. Shared/repeated argument expressions are allowed. Empty contexts and unused arguments remain literal.
+
+Numeric whole-head finite-prefix/tail composition and the original paid B/C scalar wire remain separate. No whole head-graph promotion is claimed here.

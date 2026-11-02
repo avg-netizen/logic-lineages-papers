@@ -1548,6 +1548,9 @@ public import LogicLineages.ExternalCheckpoint20261102CR
 public import LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102CS
 
+public import LogicLineages.OrdinalComparison.UnitArithmeticFormulaCodeStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102CT
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
