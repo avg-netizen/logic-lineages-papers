@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitEliminationBuildCodeTargets
+public import LogicLineages.OrdinalComparison.UnitEliminationBuildCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitEliminationBuildCode.StatementChecks
+theorem exact_fuel_build : Targets.ExactFuelBuild := Proof.exactFuelBuild
+theorem primitive_recursive_symbolic_compiler : Targets.PrimitiveRecursiveSymbolicCompiler := Proof.primitiveRecursiveSymbolicCompiler
+theorem actual_uniform_source_compiler : Targets.ActualUniformSourceCompiler := Proof.actualUniformSourceCompiler
+end LogicLineages.OrdinalComparison.Source.UnitEliminationBuildCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitEliminationBuildCode

@@ -863,3 +863,9 @@ Three exact interfaces prove confinement of successful unchanged applyOriginalWi
 Four exact interfaces prove conditional scanner mask agreement, discharge it for literal same-world identity values, and derive unchanged specialApply full simultaneous success semantics and failure as the whole bottom value at the actual computed limit. No arbitrary-family whole structural lemma or adequacy theorem is claimed.
 
 `ExternalCheckpoint20261102CO` verifies 459 permitted-axiom aliases across 105 components on an unchanged 1186-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint94/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
+
+## Cumulative checkpoint 95 — actual numeric unit-elimination construction
+
+Three exact interfaces calibrate every fuel level of the raw symbolic Option builder, including failures. Symbolic compilation is primitive recursive; genuine anchor realization is Computable and yields unconditional actual typed-source semantics for all contexts and output types, with complete assignments and literal ground leaves. Numeric arithmetic-formula coding and original paid-head wire composition remain separate; no whole effective head-graph theorem is claimed.
+
+`ExternalCheckpoint20261102CP` verifies 462 permitted-axiom aliases across 106 components on an unchanged 1193-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint95/PUBLIC-VALIDATION.json). The register remains 150 checked, 2 inherited and 37 pending.
