@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingStatementChecks
+
+theorem fixedSplitCalibration : FiniteOccurrenceMatchingTargets.SplitCalibration := FiniteOccurrenceMatchingProof.splitCalibration
+theorem fixedOrderedCalibration : FiniteOccurrenceMatchingTargets.OrderedCalibration := FiniteOccurrenceMatchingProof.orderedCalibration
+theorem fixedWeakCalibration : FiniteOccurrenceMatchingTargets.WeakCalibration := FiniteOccurrenceMatchingProof.weakCalibration
+theorem fixedReplacementCalibration : FiniteOccurrenceMatchingTargets.ReplacementCalibration := FiniteOccurrenceMatchingProof.replacementCalibration
+theorem fixedStrictCalibration : FiniteOccurrenceMatchingTargets.StrictCalibration := FiniteOccurrenceMatchingProof.strictCalibration
+theorem fixedPositiveTests : FiniteOccurrenceMatchingTargets.PositiveTests := FiniteOccurrenceMatchingProof.positiveTests
+
+#print axioms fixedSplitCalibration
+#print axioms fixedOrderedCalibration
+#print axioms fixedWeakCalibration
+#print axioms fixedReplacementCalibration
+#print axioms fixedStrictCalibration
+#print axioms fixedPositiveTests
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingStatementChecks
