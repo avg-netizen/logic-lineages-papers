@@ -1350,6 +1350,9 @@ public import LogicLineages.ExternalCheckpoint20261102AE
 public import LogicLineages.OrdinalComparison.HeterogeneousUnaryAssemblyStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AF
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AG
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

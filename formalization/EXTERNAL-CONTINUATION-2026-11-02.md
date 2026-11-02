@@ -483,3 +483,9 @@ Six exact interfaces discharge the recursive proper-subtype bound suppliers for 
 Three exact interfaces preserve a single shared base identically while embedding private typed prefixes of given actual source records. Complete paired source/vector assignments retain occurrence order and duplicates. The actual one-lambda chain has the exact common-unit head for every valuation, reusing the existing chain theorem. Original-source P extraction and uniform effectivity remain separate.
 
 `ExternalCheckpoint20261102AF` verifies 173 permitted-axiom aliases across 41 components on an unchanged 786-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint33/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 34 — actual typed extra downsets
+
+Eight exact interfaces establish actual packed typed downsets, unique typed fibers, executable enumeration and downward-image transport laws including identity and composition. No meet preservation or whole constructor-coherent family theorem is claimed.
+
+`ExternalCheckpoint20261102AG` verifies 181 permitted-axiom aliases across 42 components on an unchanged 791-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint34/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

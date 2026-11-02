@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsStatementChecks
+
+theorem fixedPackedOrder : TypedExtraDownsetsTargets.PackedOrder := TypedExtraDownsetsProof.packedOrder
+theorem fixedFiberRepresentation : TypedExtraDownsetsTargets.FiberRepresentation := TypedExtraDownsetsProof.fiberRepresentation
+theorem fixedExhaustiveEnumeration : TypedExtraDownsetsTargets.ExhaustiveEnumeration := TypedExtraDownsetsProof.exhaustiveEnumeration
+theorem fixedDownwardImage : TypedExtraDownsetsTargets.DownwardImage := TypedExtraDownsetsProof.downwardImage
+theorem fixedImageIdentity : TypedExtraDownsetsTargets.ImageIdentity := TypedExtraDownsetsProof.imageIdentity
+theorem fixedImageComposition : TypedExtraDownsetsTargets.ImageComposition := TypedExtraDownsetsProof.imageComposition
+theorem fixedImageMonotone : TypedExtraDownsetsTargets.ImageMonotone := TypedExtraDownsetsProof.imageMonotone
+theorem fixedPackedImageCalibration : TypedExtraDownsetsTargets.PackedImageCalibration := TypedExtraDownsetsProof.packedImageCalibration
+
+#print axioms fixedPackedOrder
+#print axioms fixedFiberRepresentation
+#print axioms fixedExhaustiveEnumeration
+#print axioms fixedDownwardImage
+#print axioms fixedImageIdentity
+#print axioms fixedImageComposition
+#print axioms fixedImageMonotone
+#print axioms fixedPackedImageCalibration
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsStatementChecks
