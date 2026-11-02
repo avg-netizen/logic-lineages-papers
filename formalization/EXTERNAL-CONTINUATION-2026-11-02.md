@@ -7,10 +7,10 @@ all-context claim still needs actual equivariance and a fresh-binder bridge.
 Published register totals below are stored bookkeeping, not a current complete
 whole-source certification. No revised whole total is claimed here.
 
-Current checkpoint07: published register **137 checked,2 inherited,50 pending /189**;
-twelve selected scoped components and51exact cumulative aliases, plus an accepted
-standalone four-alias ground-operator component. The carrier register update
-awaits explicit file authorization. Earlier checkpoint counts below are
+Current checkpoint08: fourteen selected scoped components and58exact cumulative
+aliases. The unchanged published register stores137/2/50, but its context entry
+is provisional as explained above; no current whole-count certification is
+claimed. The carrier register update awaits explicit file authorization. Earlier checkpoint counts below are
 historical.
 
 ## Published component batch 01: recursive comparison interfaces
@@ -156,3 +156,19 @@ See [public validation](verification/external-continuation-2026-11-02/ground-ope
 This proof-only publication deliberately omits the pending TARGETS register
 update and all internal build artifacts. It is not another representation of
 the omitted register; the existing remote register is unchanged.
+
+## Cumulative checkpoint08 — actual active scalar annotations
+
+Three exact targets derive complete actual source vectors and active scalar
+annotations across the frozen grammar and all admitted structural policies.
+Actual operator and head-support witnesses are derived, not supplied as new
+correctness premises. Head-closure and successful ground-partial transports
+remain exact. No additive-head, reserve, surplus or carrier-bound claim follows.
+
+The immutable `ExternalCheckpoint20261102G` includes these three aliases and
+the previously standalone four ground-discharge aliases, totaling58. Its591
+local-module closure is unchanged and all exact aliases have permitted axioms.
+Root import inventory updated; no fresh full-root or CI pass.
+See [public validation](verification/external-continuation-2026-11-02/checkpoint08/PUBLIC-VALIDATION.json).
+The context scope correction and pending register-file authorization remain in
+force; this batch publishes neither the register nor a revised whole total.
