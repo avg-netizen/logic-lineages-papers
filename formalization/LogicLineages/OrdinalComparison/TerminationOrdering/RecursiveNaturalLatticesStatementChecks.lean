@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks
+
+theorem fixedCompleteDomains : RecursiveNaturalLatticesTargets.CompleteDomains := RecursiveNaturalLatticesProof.completeDomains
+theorem fixedSupremumExistence : RecursiveNaturalLatticesTargets.SupremumExistence := RecursiveNaturalLatticesProof.supremumExistence
+theorem fixedInfimumExistence : RecursiveNaturalLatticesTargets.InfimumExistence := RecursiveNaturalLatticesProof.infimumExistence
+theorem fixedWeakeningSuprema : RecursiveNaturalLatticesTargets.WeakeningSuprema := RecursiveNaturalLatticesProof.weakeningSuprema
+theorem fixedWeakeningInfima : RecursiveNaturalLatticesTargets.WeakeningInfima := RecursiveNaturalLatticesProof.weakeningInfima
+theorem fixedFiniteSignatureEffectivity : RecursiveNaturalLatticesTargets.FiniteSignatureEffectivity := RecursiveNaturalLatticesProof.finiteSignatureEffectivity
+
+#print axioms fixedCompleteDomains
+#print axioms fixedSupremumExistence
+#print axioms fixedInfimumExistence
+#print axioms fixedWeakeningSuprema
+#print axioms fixedWeakeningInfima
+#print axioms fixedFiniteSignatureEffectivity
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks

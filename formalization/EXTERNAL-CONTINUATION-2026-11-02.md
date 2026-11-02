@@ -471,3 +471,9 @@ Three exact source-budget interfaces prove the finite scalar output-two count fo
 Six exact layer interfaces prove arbitrary pointwise suprema/infima, preservation of full-tuple monotonicity/naturality, original-order universal bounds and restriction laws, including empty families. They assume mathematical bound suppliers only at proper subtypes; the actual recursive discharge and whole lattice lemma remain separate.
 
 `ExternalCheckpoint20261102AD` verifies 164 permitted-axiom aliases across 39 components on an unchanged 773-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint31/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; ten completed source results await registration.
+
+## Cumulative checkpoint 32 — actual natural complete lattices
+
+Six exact interfaces discharge the recursive proper-subtype bound suppliers for the actual natural domains. Every set, including empty, has least upper and greatest lower bounds in the unchanged original order; computed weakening preserves them. The actual finite-signature enumeration remains executable. The complete source statement `lem:lattices` is reviewed in the [source-clause mapping](verification/external-continuation-2026-11-02/checkpoint32/NATURAL-LATTICES-SOURCE-REVIEW.md). Constructor-coherent families, operators, interpretation and adequacy remain separate.
+
+`ExternalCheckpoint20261102AE` verifies 170 permitted-axiom aliases across 40 components on an unchanged 778-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint32/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
