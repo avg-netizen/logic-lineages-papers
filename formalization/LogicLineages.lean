@@ -1273,6 +1273,9 @@ public import LogicLineages.OrdinalComparison.GroundOperatorDischargeStatementCh
 public import LogicLineages.OrdinalComparison.ActiveScalarAnnotationStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102G
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102H
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

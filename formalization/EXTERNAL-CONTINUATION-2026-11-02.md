@@ -1,16 +1,14 @@
 # External continuation — 2 November 2026
 
-**Source-scope correction:** the whole `lem:context` promotion is provisional.
-The current kernel context theorem fixes the hole environment; the original
-all-context claim still needs actual equivariance and a fresh-binder bridge.
-[Read the correction](verification/external-continuation-2026-11-02/CONTEXT-SCOPE-CORRECTION.md).
-Published register totals below are stored bookkeeping, not a current complete
-whole-source certification. No revised whole total is claimed here.
+**Context scope gap resolved in checkpoint09:** nine exact renaming and context
+transport aliases now discharge the missing fresh-binder bridge. The earlier
+premature whole-label recommendation and its correction are preserved.
+[Read the resolution](verification/external-continuation-2026-11-02/checkpoint09/CONTEXT-BRIDGE-RESOLUTION.md).
 
-Current checkpoint08: fourteen selected scoped components and58exact cumulative
-aliases. The unchanged published register stores137/2/50, but its context entry
-is provisional as explained above; no current whole-count certification is
-claimed. The carrier register update awaits explicit file authorization. Earlier checkpoint counts below are
+Current checkpoint09: fifteen selected scoped components and67exact cumulative
+aliases. The unchanged register stores137/2/50; the context companion proof is
+now supplied, while its register linkage and the separately accepted carrier
+entry await explicit file authorization. No revised whole total is claimed. Earlier checkpoint counts below are
 historical.
 
 ## Published component batch 01: recursive comparison interfaces
@@ -172,3 +170,17 @@ Root import inventory updated; no fresh full-root or CI pass.
 See [public validation](verification/external-continuation-2026-11-02/checkpoint08/PUBLIC-VALIDATION.json).
 The context scope correction and pending register-file authorization remain in
 force; this batch publishes neither the register nor a revised whole total.
+
+## Cumulative checkpoint09 — genuine global context transport
+
+The nine exact renaming/operation/relation/context interfaces now pay the
+previously identified fresh-binder source gap. Actual source relations and
+simultaneous Apply are retained, and the final context targets quantify any
+typed transport from the original environment to the hole environment.
+The immutable `ExternalCheckpoint20261102H` verifies all67 selected aliases
+with permitted axioms on an unchanged598-module local closure. Root inventory
+updated, not a fresh full-root or CI pass. See
+[public validation](verification/external-continuation-2026-11-02/checkpoint09/PUBLIC-VALIDATION.json)
+and [source-gap resolution](verification/external-continuation-2026-11-02/checkpoint09/CONTEXT-BRIDGE-RESOLUTION.md).
+No denied register mutation, revised numerical total or new unrelated whole
+source theorem is claimed by this proof-only publication.

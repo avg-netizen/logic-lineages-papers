@@ -1,3 +1,8 @@
+> CURRENT RESOLUTION: checkpoint09 independently proves the missing equivariance
+> and fresh-binder context bridge. See [resolution](../checkpoint09/CONTEXT-BRIDGE-RESOLUTION.md).
+> The earlier recommendation and correction below remain historical; current
+> full source coverage requires the new nine-alias companion package.
+
 > SUPERSEDED COVERAGE RECOMMENDATION: the kernel theorem is valid, but whole
 > `lem:context` is provisional pending actual equivariance and a fresh-binder
 > context bridge. See [source-scope correction](../CONTEXT-SCOPE-CORRECTION.md).

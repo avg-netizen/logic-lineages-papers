@@ -1,0 +1,11 @@
+# Renaming and global context transport
+
+This supplier closes an explicit gap in applying paper06 `lem:context` (475–486) to an originally closed comparison under new fresh binders. The accepted LiteralContexts targets are correct binder-local closure: their input comparison lives at the hole scope Δ. They do not alone transport a comparison at empty context into Δ. No accepted source file is rewritten; the prior whole-label interpretation must remain qualified until this missing transport is proved.
+
+`renamePacked` is exactly the existing syntactic marked renaming and preserves the packed type. Five targets prove covariance of the actual mutually inductive Weak, Strict, WeakMatch, StrictMultiset and ReplacementMatch, including complete base/extra lists, output annotations, occurrence permutations and original Select/FAbs. No covariance hypothesis is added to a target conclusion.
+
+The two operation targets retain the real simultaneous `applyOriginalWith`, not an iterated semantic application. Their square-of-environments premise means that the renamed input variable obtains the renamed value; it is an ordinary explicit substitution compatibility condition, to be discharged by identity environments in Select and by lifted/extended environments during syntax induction. Renamings need not be injective. Original lambda/variable/functional spine behavior stays literal.
+
+The final two targets combine proved renaming with existing binder-local closure. Ξ is the original comparison scope and Δ the hole scope; ρ is any typed renaming. Taking Ξ=[] and the unique empty variable map transports a closed comparison to arbitrary binder depth. Taking canonical weakening maps handles fresh binders above open comparisons. All ordinary contexts include application on either side, lambdas and every ranked-argument position. TypeSupport is literal and invariant under renaming, not enlarged with an ambient context.
+
+This component supplies a missing source-correspondence dependency for full context closure; it is not a new numbered theorem, stability, arbitrary substitution monotonicity or well-foundedness. NativeRecursor used only applications at unchanged Γ, and NativeCarrier proved its unused binder by direct syntactic substitution, so neither depends on the gap.

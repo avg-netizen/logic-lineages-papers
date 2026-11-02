@@ -1,3 +1,8 @@
+> RESOLVED by the nine exact renaming/context-transport aliases in checkpoint09.
+> See [the explicit resolution](checkpoint09/CONTEXT-BRIDGE-RESOLUTION.md).
+> The historical finding below remains a record of the earlier premature
+> whole-label recommendation; it is not silently erased.
+
 # Source-scope correction: ordinary context closure
 
 The existing LiteralContexts kernel theorems remain valid at their stated
