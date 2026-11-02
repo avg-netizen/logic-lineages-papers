@@ -611,3 +611,9 @@ Five exact interfaces prove source-head result-type membership, full base packin
 Three exact interfaces provide uniform primitive-recursive numeric ground partial evaluation with exact Option calibration for all typed trees, including failures. Validity separately yields actual default partial-run and output-zero calibration. No equality between ambiguous source builders or whole source-to-K effectivity is assumed.
 
 `ExternalCheckpoint20261102BA` verifies 281 permitted-axiom aliases across 63 components on an unchanged 907-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint54/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 55 — ordinary functional naturality
+
+Seven exact interfaces establish full base-packing transport, source-base monotonicity and actual pair-reader invariance for Fun under the necessary target-observation extension premise. Actual ordinary bits and values are jointly monotone in the constructor family and source base values and commute with projection. Definitions of the original branch remain unchanged; full structural interpretation remains separate.
+
+`ExternalCheckpoint20261102BB` verifies 288 permitted-axiom aliases across 64 components on an unchanged 912-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint55/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.

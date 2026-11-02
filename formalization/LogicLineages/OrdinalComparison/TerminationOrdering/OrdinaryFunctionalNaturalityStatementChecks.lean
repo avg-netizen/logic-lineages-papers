@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityStatementChecks
+
+theorem fixedBasePackingTransport : OrdinaryFunctionalNaturalityTargets.BasePackingTransport := OrdinaryFunctionalNaturalityProof.basePackingTransport
+theorem fixedFunMonotone : OrdinaryFunctionalNaturalityTargets.FunMonotone := OrdinaryFunctionalNaturalityProof.funMonotone
+theorem fixedFunWeakening : OrdinaryFunctionalNaturalityTargets.FunWeakening := OrdinaryFunctionalNaturalityProof.funWeakening
+theorem fixedBitsMonotone : OrdinaryFunctionalNaturalityTargets.BitsMonotone := OrdinaryFunctionalNaturalityProof.bitsMonotone
+theorem fixedBitsWeakening : OrdinaryFunctionalNaturalityTargets.BitsWeakening := OrdinaryFunctionalNaturalityProof.bitsWeakening
+theorem fixedValueMonotone : OrdinaryFunctionalNaturalityTargets.ValueMonotone := OrdinaryFunctionalNaturalityProof.valueMonotone
+theorem fixedValueWeakening : OrdinaryFunctionalNaturalityTargets.ValueWeakening := OrdinaryFunctionalNaturalityProof.valueWeakening
+
+#print axioms fixedBasePackingTransport
+#print axioms fixedFunMonotone
+#print axioms fixedFunWeakening
+#print axioms fixedBitsMonotone
+#print axioms fixedBitsWeakening
+#print axioms fixedValueMonotone
+#print axioms fixedValueWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityStatementChecks
