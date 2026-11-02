@@ -989,3 +989,9 @@ Three exact interfaces establish literal finite equality-mask guards, block-sign
 Three exact interfaces establish genuine preservation of FamilySound by the actual constructor operator, including all four rule contributions and complete future tuples, and derive the invariant for every actual iterate and the actual finite limit. No final-family soundness premise is supplied. Arbitrary-syntax interpretation soundness, answer soundness and whole adequacy remain separate.
 
 `ExternalCheckpoint20261102DJ` verifies 522 permitted-axiom aliases across 126 components on an unchanged 1330-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint115/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.
+
+## Cumulative checkpoint 116 — original-index guard transport
+
+Three exact interfaces establish guard renaming, evaluation and support, ordered deletion and the skip guard, and actual one-occurrence folded-row transport back to the original indices. Recursive formula construction, layered elimination and the full common-head decision procedure remain separate.
+
+`ExternalCheckpoint20261102DK` verifies 525 permitted-axiom aliases across 127 components on an unchanged 1337-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint116/PUBLIC-VALIDATION.json). The register remains 151 checked, 2 inherited and 36 pending.

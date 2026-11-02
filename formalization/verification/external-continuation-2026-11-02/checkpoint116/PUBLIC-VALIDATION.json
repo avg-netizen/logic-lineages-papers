@@ -1,0 +1,2659 @@
+{
+  "schema": "public-mathematical-validation-summary-v1",
+  "scope": "Exact guard renaming, evaluation and support under ordered deletion, with actual guarded one-occurrence folding transported to original indices.",
+  "register_status": "151 checked, 2 inherited, 36 pending statements unchanged; 525 is the cumulative theorem-alias count.",
+  "components": 127,
+  "cumulative_aliases": 525,
+  "validation": "Prospective exact comparator frozen before all three candidates. Final three-alias gate, current successful direct candidate rows, unchanged dependency closure and permitted axioms independently checked. Failed rows remain failures. Exact focused cumulative 525-alias audit passes.",
+  "source_hashes": {
+    "formalization/LogicLineages/OrdinalComparison/CommonHeadGuardReindexDefinitions.lean": "e3ee4ad47f6e1d75aa637258fc4e9782b7a7a20964772b9c21c4b826eac44eff",
+    "formalization/LogicLineages/OrdinalComparison/CommonHeadGuardReindexTargets.lean": "38974b75e2f8ce70315443d9235061cd9ccbf4e71563c1623ace9b49b06df5c9",
+    "formalization/LogicLineages/OrdinalComparison/CommonHeadGuardReindexStatementChecks.lean": "65625694ff3d3d76b4e054f0ce26d85422feb9ed2e7dc3536ddc695a16e08c9c",
+    "formalization/verification/external-continuation-2026-11-02/tracked-source/CommonHeadGuardReindex-SOURCE-CORRESPONDENCE.md": "2065a8d3752b9e368f6abdfe5813d273d0770c0580cae0865fbba945beeeddc7",
+    "formalization/LogicLineages/OrdinalComparison/CommonHeadGuardReindexSyntaxProof.lean": "7fd6baa75981ca75607118c15fb8835eca45a2f0b925d3318a73b7f53ec1c2c9",
+    "formalization/LogicLineages/OrdinalComparison/CommonHeadGuardReindexRowProof.lean": "bfbc1733f47473b9a54cff82dca3d52083040cd1f36f1a55f01d5671b2e7fc2a",
+    "formalization/LogicLineages/OrdinalComparison/CommonHeadGuardReindexProof.lean": "0fe5ff01c172e3d90dd5e16c2760d56d5513f18f3dd547a68f5a25d74589632c",
+    "formalization/LogicLineages/ExternalCheckpoint20261102DK.lean": "f3ff4e39035eaf674f019207a2b04df189c30efe88ff95004861945fee78d49a",
+    "formalization/LogicLineages.lean": "3d0aee4e7df61a1329d9cc43fe76e649422a962eca6effd24b724b95da2041c0"
+  },
+  "exact_aliases": [
+    {
+      "name": "fixed_01_certificateFuelMonotonicity_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.Targets.CertificateFuelMonotonicity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_01_certificateFuelMonotonicity_exact"
+    },
+    {
+      "name": "fixed_02_modusPonensMaxFuel_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.Targets.ModusPonensMaxFuel",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_02_modusPonensMaxFuel_exact"
+    },
+    {
+      "name": "fixed_03_target_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.Targets.Target",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_03_target_exact"
+    },
+    {
+      "name": "fixed_04_openAxiomSpecialization_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.Targets.OpenAxiomSpecialization",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_04_openAxiomSpecialization_exact"
+    },
+    {
+      "name": "fixed_05_nodeEquationInstances_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.Targets.NodeEquationInstances",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_05_nodeEquationInstances_exact"
+    },
+    {
+      "name": "fixed_06_compositionEquation_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.Targets.CompositionEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_06_compositionEquation_exact"
+    },
+    {
+      "name": "fixed_07_recursionZeroEquation_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.Targets.RecursionZeroEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_07_recursionZeroEquation_exact"
+    },
+    {
+      "name": "fixed_08_recursionSuccessorEquation_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.Targets.RecursionSuccessorEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_08_recursionSuccessorEquation_exact"
+    },
+    {
+      "name": "fixed_09_target_exact",
+      "target": "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquations.Targets.Target",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_09_target_exact"
+    },
+    {
+      "name": "fixed_10_fixedLiteralEmbeddingTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets.LiteralEmbeddingTypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_10_fixedLiteralEmbeddingTypeClosure"
+    },
+    {
+      "name": "fixed_11_fixedRenamingTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets.RenamingTypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_11_fixedRenamingTypeClosure"
+    },
+    {
+      "name": "fixed_12_fixedMarkingTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets.MarkingTypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_12_fixedMarkingTypeClosure"
+    },
+    {
+      "name": "fixed_13_fixedSubstitutionTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets.SubstitutionTypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_13_fixedSubstitutionTypeClosure"
+    },
+    {
+      "name": "fixed_14_fixedSimultaneousApplicationTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets.SimultaneousApplicationTypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_14_fixedSimultaneousApplicationTypeClosure"
+    },
+    {
+      "name": "fixed_15_fixedRetypingTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets.RetypingTypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_15_fixedRetypingTypeClosure"
+    },
+    {
+      "name": "fixed_16_fixed_full_phi",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic.Targets.FullPhiGate",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_16_fixed_full_phi"
+    },
+    {
+      "name": "fixed_17_fixed_phi_chain",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic.Targets.FixedPhiChain",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_17_fixed_phi_chain"
+    },
+    {
+      "name": "fixed_18_fixed_unit_expansion",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.Arithmetic.Targets.UnitTreeExpansion",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_18_fixed_unit_expansion"
+    },
+    {
+      "name": "fixed_19_fixed_signed_pair_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.SignedPair.Targets.SignedPairCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_19_fixed_signed_pair_compiler"
+    },
+    {
+      "name": "fixed_20_fixed_monomial_adapter",
+      "target": "LogicLineages.OrdinalComparison.Source.SignedPair.Targets.MonomialAdapter",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_20_fixed_monomial_adapter"
+    },
+    {
+      "name": "fixed_21_fixedWeakTypeSoundness",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets.WeakTypeSoundness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_21_fixedWeakTypeSoundness"
+    },
+    {
+      "name": "fixed_22_fixedStrictTypeSoundness",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets.StrictTypeSoundness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_22_fixedStrictTypeSoundness"
+    },
+    {
+      "name": "fixed_23_fixedMarkedStrictEmpty",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets.MarkedStrictEmpty",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_23_fixedMarkedStrictEmpty"
+    },
+    {
+      "name": "fixed_24_fixedStrictMarkHelperAgreement",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets.StrictMarkHelperAgreement",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_24_fixedStrictMarkHelperAgreement"
+    },
+    {
+      "name": "fixed_25_fixedStrictWeakInclusion",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets.StrictWeakInclusion",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_25_fixedStrictWeakInclusion"
+    },
+    {
+      "name": "fixed_26_fixedLiteralOrdinaryReflexivity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets.LiteralOrdinaryReflexivity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_26_fixedLiteralOrdinaryReflexivity"
+    },
+    {
+      "name": "fixed_27_literal_source_grammar",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSource.Targets.ExactGrammar",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_27_literal_source_grammar"
+    },
+    {
+      "name": "fixed_28_literal_source_occurrences",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSource.Targets.ExactOccurrences",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_28_literal_source_occurrences"
+    },
+    {
+      "name": "fixed_29_actual_tracked_activity",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSource.Targets.ExactActivity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_29_actual_tracked_activity"
+    },
+    {
+      "name": "fixed_30_actual_default_assignment",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSource.Targets.ActualAssignment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_30_actual_default_assignment"
+    },
+    {
+      "name": "fixed_31_fixedStrictMultisetFromStrictMatch",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.StrictMultisetFromStrictMatch",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_31_fixedStrictMultisetFromStrictMatch"
+    },
+    {
+      "name": "fixed_32_fixedActualZeroArgumentSelect",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.ActualZeroArgumentSelect",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_32_fixedActualZeroArgumentSelect"
+    },
+    {
+      "name": "fixed_33_fixedOrdinaryHeadStrictCongruence",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.OrdinaryHeadStrictCongruence",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_33_fixedOrdinaryHeadStrictCongruence"
+    },
+    {
+      "name": "fixed_34_fixedLambdaStrictCongruence",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.LambdaStrictCongruence",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_34_fixedLambdaStrictCongruence"
+    },
+    {
+      "name": "fixed_35_fixedLiteralContextStrictClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.LiteralContextStrictClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_35_fixedLiteralContextStrictClosure"
+    },
+    {
+      "name": "fixed_36_fixedLiteralContextSupportMonotonicity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.LiteralContextSupportMonotonicity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_36_fixedLiteralContextSupportMonotonicity"
+    },
+    {
+      "name": "fixed_37_fixedLiteralConfinedContextClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.LiteralConfinedContextClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_37_fixedLiteralConfinedContextClosure"
+    },
+    {
+      "name": "fixed_38_fixedNamedContextErasure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.NamedContextErasure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_38_fixedNamedContextErasure"
+    },
+    {
+      "name": "fixed_39_fixedFullNamedContextStrictClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.FullNamedContextStrictClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_39_fixedFullNamedContextStrictClosure"
+    },
+    {
+      "name": "fixed_40_fixedFullNamedConfinedContextClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralContextsTargets.FullNamedConfinedContextClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_40_fixedFullNamedConfinedContextClosure"
+    },
+    {
+      "name": "fixed_41_exact_head_closure_names",
+      "target": "LogicLineages.OrdinalComparison.Source.AssignmentSupport.Targets.ExactHeadClosureNames",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_41_exact_head_closure_names"
+    },
+    {
+      "name": "fixed_42_actual_partial_no_new_names",
+      "target": "LogicLineages.OrdinalComparison.Source.AssignmentSupport.Targets.ActualPartialSupport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_42_actual_partial_no_new_names"
+    },
+    {
+      "name": "fixed_43_full_actual_assignment_names",
+      "target": "LogicLineages.OrdinalComparison.Source.AssignmentSupport.Targets.FullActualAssignmentSupport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_43_full_actual_assignment_names"
+    },
+    {
+      "name": "fixed_44_actual_tracked_inactive",
+      "target": "LogicLineages.OrdinalComparison.Source.AssignmentSupport.Targets.ActualTrackedInactive",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_44_actual_tracked_inactive"
+    },
+    {
+      "name": "fixed_45_fixedZeroConfinedOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorTargets.ZeroConfinedOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_45_fixedZeroConfinedOrientation"
+    },
+    {
+      "name": "fixed_46_fixedSuccessorConfinedOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeRecursorTargets.SuccessorConfinedOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_46_fixedSuccessorConfinedOrientation"
+    },
+    {
+      "name": "fixed_47_exact_scalar_old_names",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarPartialActivity.Targets.ExactScalarOldNames",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_47_exact_scalar_old_names"
+    },
+    {
+      "name": "fixed_48_actual_ground_source_transport",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarPartialActivity.Targets.FullGroundSourceTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_48_actual_ground_source_transport"
+    },
+    {
+      "name": "fixed_49_actual_tracked_partial_activity",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarPartialActivity.Targets.ActualTrackedActivity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_49_actual_tracked_partial_activity"
+    },
+    {
+      "name": "fixed_50_fixedBaseStrict",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierTargets.BaseStrict",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_50_fixedBaseStrict"
+    },
+    {
+      "name": "fixed_51_fixedApplicationClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierTargets.ApplicationClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_51_fixedApplicationClosure"
+    },
+    {
+      "name": "fixed_52_exact_head_closure",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge.Targets.ExactHeadClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_52_exact_head_closure"
+    },
+    {
+      "name": "fixed_53_whole_assignment",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge.Targets.WholeAssignment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_53_whole_assignment"
+    },
+    {
+      "name": "fixed_54_actual_functional_discharge",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge.Targets.ActualFunctionalDischarge",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_54_actual_functional_discharge"
+    },
+    {
+      "name": "fixed_55_operator_witness_transport",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge.Targets.OperatorWitnessTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_55_operator_witness_transport"
+    },
+    {
+      "name": "fixed_56_head_closure_transport",
+      "target": "LogicLineages.OrdinalComparison.Source.ActiveScalarAnnotation.Targets.HeadClosureTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_56_head_closure_transport"
+    },
+    {
+      "name": "fixed_57_ground_partial_transport",
+      "target": "LogicLineages.OrdinalComparison.Source.ActiveScalarAnnotation.Targets.GroundPartialTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_57_ground_partial_transport"
+    },
+    {
+      "name": "fixed_58_actual_source_annotation",
+      "target": "LogicLineages.OrdinalComparison.Source.ActiveScalarAnnotation.Targets.ActualSourceAnnotation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_58_actual_source_annotation"
+    },
+    {
+      "name": "fixed_59_fixedSubstitutionCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.SubstitutionCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_59_fixedSubstitutionCovariance"
+    },
+    {
+      "name": "fixed_60_fixedOriginalApplyCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.OriginalApplyCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_60_fixedOriginalApplyCovariance"
+    },
+    {
+      "name": "fixed_61_fixedWeakCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.WeakCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_61_fixedWeakCovariance"
+    },
+    {
+      "name": "fixed_62_fixedStrictCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.StrictCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_62_fixedStrictCovariance"
+    },
+    {
+      "name": "fixed_63_fixedWeakMatchCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.WeakMatchCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_63_fixedWeakMatchCovariance"
+    },
+    {
+      "name": "fixed_64_fixedStrictMultisetCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.StrictMultisetCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_64_fixedStrictMultisetCovariance"
+    },
+    {
+      "name": "fixed_65_fixedReplacementMatchCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.ReplacementMatchCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_65_fixedReplacementMatchCovariance"
+    },
+    {
+      "name": "fixed_66_fixedRenamedContextStrictClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.RenamedContextStrictClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_66_fixedRenamedContextStrictClosure"
+    },
+    {
+      "name": "fixed_67_fixedRenamedConfinedContextClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RenamingEquivarianceTargets.RenamedConfinedContextClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_67_fixedRenamedConfinedContextClosure"
+    },
+    {
+      "name": "fixed_68_selected_activity",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedHeadCarrier.Targets.SelectedActivity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_68_selected_activity"
+    },
+    {
+      "name": "fixed_69_operator_extraction",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedHeadCarrier.Targets.OperatorExtraction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_69_operator_extraction"
+    },
+    {
+      "name": "fixed_70_actual_selected_carriers",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedHeadCarrier.Targets.ActualSelectedCarriers",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_70_actual_selected_carriers"
+    },
+    {
+      "name": "fixed_71_fixedBaseEdge",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesTargets.BaseEdge",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_71_fixedBaseEdge"
+    },
+    {
+      "name": "fixed_72_fixedIndexEdge",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesTargets.IndexEdge",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_72_fixedIndexEdge"
+    },
+    {
+      "name": "fixed_73_fixedApplicationEdge",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesTargets.ApplicationEdge",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_73_fixedApplicationEdge"
+    },
+    {
+      "name": "fixed_74_fixedEnvironmentGrafting",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingTargets.EnvironmentGrafting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_74_fixedEnvironmentGrafting"
+    },
+    {
+      "name": "fixed_75_fixedDistinguishedVariableGrafting",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingTargets.DistinguishedVariableGrafting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_75_fixedDistinguishedVariableGrafting"
+    },
+    {
+      "name": "fixed_76_head_closure_head",
+      "target": "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.Targets.HeadClosureHead",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_76_head_closure_head"
+    },
+    {
+      "name": "fixed_77_head_closure_scalar",
+      "target": "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.Targets.HeadClosureScalar",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_77_head_closure_scalar"
+    },
+    {
+      "name": "fixed_78_ground_partial_trees",
+      "target": "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.Targets.GroundPartialTrees",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_78_ground_partial_trees"
+    },
+    {
+      "name": "fixed_79_actual_source_trees",
+      "target": "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.Targets.ActualSourceTrees",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_79_actual_source_trees"
+    },
+    {
+      "name": "fixed_80_fixedBetaConfinedOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesTargets.BetaConfinedOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_80_fixedBetaConfinedOrientation"
+    },
+    {
+      "name": "fixed_81_fixedCaseFirstConfinedOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesTargets.CaseFirstConfinedOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_81_fixedCaseFirstConfinedOrientation"
+    },
+    {
+      "name": "fixed_82_fixedCaseSecondConfinedOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesTargets.CaseSecondConfinedOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_82_fixedCaseSecondConfinedOrientation"
+    },
+    {
+      "name": "fixed_83_exact_head_partial",
+      "target": "LogicLineages.OrdinalComparison.Source.HeadFiniteSurplus.Targets.ExactHeadPartial",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_83_exact_head_partial"
+    },
+    {
+      "name": "fixed_84_surplus_bounds",
+      "target": "LogicLineages.OrdinalComparison.Source.HeadFiniteSurplus.Targets.SurplusBounds",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_84_surplus_bounds"
+    },
+    {
+      "name": "fixed_85_actual_source_surplus",
+      "target": "LogicLineages.OrdinalComparison.Source.HeadFiniteSurplus.Targets.ActualSourceSurplus",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_85_actual_source_surplus"
+    },
+    {
+      "name": "fixed_86_fixedRootOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionTargets.RootOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_86_fixedRootOrientation"
+    },
+    {
+      "name": "fixed_87_fixedContextualOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionTargets.ContextualOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_87_fixedContextualOrientation"
+    },
+    {
+      "name": "fixed_88_fixedRootSubstitutionClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionTargets.RootSubstitutionClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_88_fixedRootSubstitutionClosure"
+    },
+    {
+      "name": "fixed_89_fixedContextualSubstitutionClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionTargets.ContextualSubstitutionClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_89_fixedContextualSubstitutionClosure"
+    },
+    {
+      "name": "fixed_90_fixedSubstitutedContextualOrientation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionTargets.SubstitutedContextualOrientation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_90_fixedSubstitutedContextualOrientation"
+    },
+    {
+      "name": "fixed_91_exact_selection_coverage",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAffineHead.Targets.ExactSelectionCoverage",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_91_exact_selection_coverage"
+    },
+    {
+      "name": "fixed_92_selected_tree_support",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAffineHead.Targets.SelectedTreeSupport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_92_selected_tree_support"
+    },
+    {
+      "name": "fixed_93_complete_source_affine_heads",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAffineHead.Targets.CompleteSourceAffineHeads",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_93_complete_source_affine_heads"
+    },
+    {
+      "name": "fixed_94_fixedOrdinaryOccurrenceCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesTargets.OrdinaryOccurrenceCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_94_fixedOrdinaryOccurrenceCalibration"
+    },
+    {
+      "name": "fixed_95_fixedSupportCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesTargets.SupportCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_95_fixedSupportCalibration"
+    },
+    {
+      "name": "fixed_96_fixedOriginalApplyProvenance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesTargets.OriginalApplyProvenance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_96_fixedOriginalApplyProvenance"
+    },
+    {
+      "name": "fixed_97_fixedWeakFreeVariableContainment",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesTargets.WeakFreeVariableContainment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_97_fixedWeakFreeVariableContainment"
+    },
+    {
+      "name": "fixed_98_fixedStrictFreeVariableContainment",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesTargets.StrictFreeVariableContainment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_98_fixedStrictFreeVariableContainment"
+    },
+    {
+      "name": "fixed_99_accounting_origin",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarCarrierAccounting.Targets.AccountingOrigin",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_99_accounting_origin"
+    },
+    {
+      "name": "fixed_100_exact_accounting",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarCarrierAccounting.Targets.ExactAccounting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_100_exact_accounting"
+    },
+    {
+      "name": "fixed_101_actual_source_accounting",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarCarrierAccounting.Targets.ActualSourceAccounting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_101_actual_source_accounting"
+    },
+    {
+      "name": "fixed_102_fixedLiteralHeadCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesTargets.LiteralHeadCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_102_fixedLiteralHeadCalibration"
+    },
+    {
+      "name": "fixed_103_fixedInitialFrame",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesTargets.InitialFrame",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_103_fixedInitialFrame"
+    },
+    {
+      "name": "fixed_104_fixedEverySelectAttemptClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesTargets.EverySelectAttemptClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_104_fixedEverySelectAttemptClosure"
+    },
+    {
+      "name": "fixed_105_exact_unit_value",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.Targets.ExactUnitValue",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_105_exact_unit_value"
+    },
+    {
+      "name": "fixed_106_tracked_invariants",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.Targets.TrackedInvariants",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_106_tracked_invariants"
+    },
+    {
+      "name": "fixed_107_exact_account_transport",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.Targets.ExactAccountTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_107_exact_account_transport"
+    },
+    {
+      "name": "fixed_108_actual_source_ground_transport",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.Targets.ActualSourceGroundTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_108_actual_source_ground_transport"
+    },
+    {
+      "name": "fixed_109_fixedExactExecutionEquation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceTargets.ExactExecutionEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_109_fixedExactExecutionEquation"
+    },
+    {
+      "name": "fixed_110_fixedRecursiveStepFrame",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceTargets.RecursiveStepFrame",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_110_fixedRecursiveStepFrame"
+    },
+    {
+      "name": "fixed_111_fixedEveryExecutionPayload",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceTargets.EveryExecutionPayload",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_111_fixedEveryExecutionPayload"
+    },
+    {
+      "name": "fixed_112_fixedEverySelectExecution",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceTargets.EverySelectExecution",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_112_fixedEverySelectExecution"
+    },
+    {
+      "name": "fixed_113_accounting_determinacy",
+      "target": "LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.Targets.AccountingDeterminacy",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_113_accounting_determinacy"
+    },
+    {
+      "name": "fixed_114_universal_soundness",
+      "target": "LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.Targets.UniversalSoundness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_114_universal_soundness"
+    },
+    {
+      "name": "fixed_115_actual_source_soundness",
+      "target": "LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.Targets.ActualSourceSoundness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_115_actual_source_soundness"
+    },
+    {
+      "name": "fixed_116_fixedStepPreservesFrame",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphTargets.StepPreservesFrame",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_116_fixedStepPreservesFrame"
+    },
+    {
+      "name": "fixed_117_fixedReachableFrame",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphTargets.ReachableFrame",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_117_fixedReachableFrame"
+    },
+    {
+      "name": "fixed_118_fixedFreshOpeningAvailability",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphTargets.FreshOpeningAvailability",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_118_fixedFreshOpeningAvailability"
+    },
+    {
+      "name": "fixed_119_fixedFunPremisesCovered",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphTargets.FunPremisesCovered",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_119_fixedFunPremisesCovered"
+    },
+    {
+      "name": "fixed_120_fixedStatPremisesCovered",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphTargets.StatPremisesCovered",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_120_fixedStatPremisesCovered"
+    },
+    {
+      "name": "fixed_121_fixedIssuedSelectExecutionsBounded",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphTargets.IssuedSelectExecutionsBounded",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_121_fixedIssuedSelectExecutionsBounded"
+    },
+    {
+      "name": "fixed_122_certificate_renaming",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.Targets.CertificateRenaming",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_122_certificate_renaming"
+    },
+    {
+      "name": "fixed_123_selected_certificates",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.Targets.SelectedCertificates",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_123_selected_certificates"
+    },
+    {
+      "name": "fixed_124_ground_prefix_step",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.Targets.GroundPrefixStep",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_124_ground_prefix_step"
+    },
+    {
+      "name": "fixed_125_actual_prepared_accounting",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.Targets.ActualPreparedAccounting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_125_actual_prepared_accounting"
+    },
+    {
+      "name": "fixed_126_fixedTermCodeInjective",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingTargets.TermCodeInjective",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_126_fixedTermCodeInjective"
+    },
+    {
+      "name": "fixed_127_fixedObservationCodeInjective",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingTargets.ObservationCodeInjective",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_127_fixedObservationCodeInjective"
+    },
+    {
+      "name": "fixed_128_fixedTermEqualCorrect",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingTargets.TermEqualCorrect",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_128_fixedTermEqualCorrect"
+    },
+    {
+      "name": "fixed_129_fixedObservationEqualCorrect",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingTargets.ObservationEqualCorrect",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_129_fixedObservationEqualCorrect"
+    },
+    {
+      "name": "fixed_130_fixedWorldCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.WorldCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_130_fixedWorldCalibration"
+    },
+    {
+      "name": "fixed_131_fixedObservationCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.ObservationCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_131_fixedObservationCalibration"
+    },
+    {
+      "name": "fixed_132_fixedExhaustiveEnumeration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.ExhaustiveEnumeration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_132_fixedExhaustiveEnumeration"
+    },
+    {
+      "name": "fixed_133_fixedWeakeningIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.WeakeningIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_133_fixedWeakeningIdentity"
+    },
+    {
+      "name": "fixed_134_fixedWeakeningComposition",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.WeakeningComposition",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_134_fixedWeakeningComposition"
+    },
+    {
+      "name": "fixed_135_fixedWeakeningSuprema",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.WeakeningSuprema",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_135_fixedWeakeningSuprema"
+    },
+    {
+      "name": "fixed_136_fixedWeakeningInfima",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsTargets.WeakeningInfima",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_136_fixedWeakeningInfima"
+    },
+    {
+      "name": "fixed_137_adjacent_closure_calibration",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.Targets.AdjacentClosureCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_137_adjacent_closure_calibration"
+    },
+    {
+      "name": "fixed_138_ground_partial_account",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.Targets.GroundPartialAccount",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_138_ground_partial_account"
+    },
+    {
+      "name": "fixed_139_actual_source_ground_partial",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.Targets.ActualSourceGroundPartial",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_139_actual_source_ground_partial"
+    },
+    {
+      "name": "fixed_140_fixedSuffixCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerTargets.SuffixCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_140_fixedSuffixCalibration"
+    },
+    {
+      "name": "fixed_141_fixedExhaustiveEnumeration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerTargets.ExhaustiveEnumeration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_141_fixedExhaustiveEnumeration"
+    },
+    {
+      "name": "fixed_142_fixedWeakeningIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerTargets.WeakeningIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_142_fixedWeakeningIdentity"
+    },
+    {
+      "name": "fixed_143_fixedWeakeningComposition",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerTargets.WeakeningComposition",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_143_fixedWeakeningComposition"
+    },
+    {
+      "name": "fixed_144_fixedNaturalPreservation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerTargets.NaturalPreservation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_144_fixedNaturalPreservation"
+    },
+    {
+      "name": "fixed_145_fixedWeakeningMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalTupleLayerTargets.WeakeningMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_145_fixedWeakeningMonotone"
+    },
+    {
+      "name": "fixed_146_positive_head_value",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.Targets.PositiveHeadValue",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_146_positive_head_value"
+    },
+    {
+      "name": "fixed_147_renamed_source_lower_bound",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.Targets.RenamedSourceLowerBound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_147_renamed_source_lower_bound"
+    },
+    {
+      "name": "fixed_148_actual_source_lower_bound",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.Targets.ActualSourceLowerBound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_148_actual_source_lower_bound"
+    },
+    {
+      "name": "fixed_149_fixedExhaustiveEnumeration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.ExhaustiveEnumeration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_149_fixedExhaustiveEnumeration"
+    },
+    {
+      "name": "fixed_150_fixedGroundRoundTrips",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.GroundRoundTrips",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_150_fixedGroundRoundTrips"
+    },
+    {
+      "name": "fixed_151_fixedGroundOrder",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.GroundOrder",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_151_fixedGroundOrder"
+    },
+    {
+      "name": "fixed_152_fixedWeakeningIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.WeakeningIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_152_fixedWeakeningIdentity"
+    },
+    {
+      "name": "fixed_153_fixedWeakeningComposition",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.WeakeningComposition",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_153_fixedWeakeningComposition"
+    },
+    {
+      "name": "fixed_154_fixedApplicationMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.ApplicationMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_154_fixedApplicationMonotone"
+    },
+    {
+      "name": "fixed_155_fixedApplicationNaturality",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsTargets.ApplicationNaturality",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_155_fixedApplicationNaturality"
+    },
+    {
+      "name": "fixed_156_exact_scalar_second",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalSecondBudget.Targets.ExactScalarSecond",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_156_exact_scalar_second"
+    },
+    {
+      "name": "fixed_157_actual_source_second",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalSecondBudget.Targets.ActualSourceSecond",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_157_actual_source_second"
+    },
+    {
+      "name": "fixed_158_original_full_box_budget",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalSecondBudget.Targets.OriginalFullBoxBudget",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_158_original_full_box_budget"
+    },
+    {
+      "name": "fixed_159_fixedSupNatural",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsTargets.SupNatural",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_159_fixedSupNatural"
+    },
+    {
+      "name": "fixed_160_fixedInfNatural",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsTargets.InfNatural",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_160_fixedInfNatural"
+    },
+    {
+      "name": "fixed_161_fixedSupUniversal",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsTargets.SupUniversal",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_161_fixedSupUniversal"
+    },
+    {
+      "name": "fixed_162_fixedInfUniversal",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsTargets.InfUniversal",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_162_fixedInfUniversal"
+    },
+    {
+      "name": "fixed_163_fixedSupRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsTargets.SupRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_163_fixedSupRestriction"
+    },
+    {
+      "name": "fixed_164_fixedInfRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NaturalLayerBoundsTargets.InfRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_164_fixedInfRestriction"
+    },
+    {
+      "name": "fixed_165_fixedCompleteDomains",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesTargets.CompleteDomains",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_165_fixedCompleteDomains"
+    },
+    {
+      "name": "fixed_166_fixedSupremumExistence",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesTargets.SupremumExistence",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_166_fixedSupremumExistence"
+    },
+    {
+      "name": "fixed_167_fixedInfimumExistence",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesTargets.InfimumExistence",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_167_fixedInfimumExistence"
+    },
+    {
+      "name": "fixed_168_fixedWeakeningSuprema",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesTargets.WeakeningSuprema",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_168_fixedWeakeningSuprema"
+    },
+    {
+      "name": "fixed_169_fixedWeakeningInfima",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesTargets.WeakeningInfima",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_169_fixedWeakeningInfima"
+    },
+    {
+      "name": "fixed_170_fixedFiniteSignatureEffectivity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesTargets.FiniteSignatureEffectivity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_170_fixedFiniteSignatureEffectivity"
+    },
+    {
+      "name": "fixed_171_shared_base_embeddings",
+      "target": "LogicLineages.OrdinalComparison.Source.HeterogeneousUnaryAssembly.Targets.SharedBaseEmbeddings",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_171_shared_base_embeddings"
+    },
+    {
+      "name": "fixed_172_exact_merged_assignments",
+      "target": "LogicLineages.OrdinalComparison.Source.HeterogeneousUnaryAssembly.Targets.ExactMergedAssignments",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_172_exact_merged_assignments"
+    },
+    {
+      "name": "fixed_173_actual_merged_chain",
+      "target": "LogicLineages.OrdinalComparison.Source.HeterogeneousUnaryAssembly.Targets.ActualMergedChain",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_173_actual_merged_chain"
+    },
+    {
+      "name": "fixed_174_fixedPackedOrder",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.PackedOrder",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_174_fixedPackedOrder"
+    },
+    {
+      "name": "fixed_175_fixedFiberRepresentation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.FiberRepresentation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_175_fixedFiberRepresentation"
+    },
+    {
+      "name": "fixed_176_fixedExhaustiveEnumeration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.ExhaustiveEnumeration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_176_fixedExhaustiveEnumeration"
+    },
+    {
+      "name": "fixed_177_fixedDownwardImage",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.DownwardImage",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_177_fixedDownwardImage"
+    },
+    {
+      "name": "fixed_178_fixedImageIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.ImageIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_178_fixedImageIdentity"
+    },
+    {
+      "name": "fixed_179_fixedImageComposition",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.ImageComposition",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_179_fixedImageComposition"
+    },
+    {
+      "name": "fixed_180_fixedImageMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.ImageMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_180_fixedImageMonotone"
+    },
+    {
+      "name": "fixed_181_fixedPackedImageCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraDownsetsTargets.PackedImageCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_181_fixedPackedImageCalibration"
+    },
+    {
+      "name": "fixed_182_literal_replication",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleFlatList.Targets.LiteralReplication",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_182_literal_replication"
+    },
+    {
+      "name": "fixed_183_exact_positive_gap",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleFlatList.Targets.ExactPositiveGap",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_183_exact_positive_gap"
+    },
+    {
+      "name": "fixed_184_actual_original_scale_chain",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleFlatList.Targets.ActualOriginalScaleChain",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_184_actual_original_scale_chain"
+    },
+    {
+      "name": "fixed_185_fixedHeadBaseTypes",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.HeadBaseTypes",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_185_fixedHeadBaseTypes"
+    },
+    {
+      "name": "fixed_186_fixedInputRestrictionCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.InputRestrictionCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_186_fixedInputRestrictionCalibration"
+    },
+    {
+      "name": "fixed_187_fixedExhaustiveEnumeration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.ExhaustiveEnumeration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_187_fixedExhaustiveEnumeration"
+    },
+    {
+      "name": "fixed_188_fixedSupCoherent",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.SupCoherent",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_188_fixedSupCoherent"
+    },
+    {
+      "name": "fixed_189_fixedInfCoherent",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.InfCoherent",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_189_fixedInfCoherent"
+    },
+    {
+      "name": "fixed_190_fixedSupUniversal",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.SupUniversal",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_190_fixedSupUniversal"
+    },
+    {
+      "name": "fixed_191_fixedInfUniversal",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.InfUniversal",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_191_fixedInfUniversal"
+    },
+    {
+      "name": "fixed_192_fixedCompleteConstructors",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeTargets.CompleteConstructors",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_192_fixedCompleteConstructors"
+    },
+    {
+      "name": "fixed_193_exact_certificates",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarAnnotationData.Targets.ExactCertificates",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_193_exact_certificates"
+    },
+    {
+      "name": "fixed_194_exact_ground_closure",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarAnnotationData.Targets.ExactGroundClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_194_exact_ground_closure"
+    },
+    {
+      "name": "fixed_195_exact_ground_partial",
+      "target": "LogicLineages.OrdinalComparison.Source.ScalarAnnotationData.Targets.ExactGroundPartial",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_195_exact_ground_partial"
+    },
+    {
+      "name": "fixed_196_exact_repeat",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationBuilder.Targets.ExactRepeat",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_196_exact_repeat"
+    },
+    {
+      "name": "fixed_197_actual_source_data",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationBuilder.Targets.ActualSourceData",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_197_actual_source_data"
+    },
+    {
+      "name": "fixed_198_exact_selected_operators",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationBuilder.Targets.ExactSelectedOperators",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_198_exact_selected_operators"
+    },
+    {
+      "name": "fixed_199_fixedMembershipCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.MembershipCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_199_fixedMembershipCalibration"
+    },
+    {
+      "name": "fixed_200_fixedDownwardClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.DownwardClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_200_fixedDownwardClosure"
+    },
+    {
+      "name": "fixed_201_fixedEmptyIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.EmptyIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_201_fixedEmptyIdentity"
+    },
+    {
+      "name": "fixed_202_fixedSuppliedIncluded",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.SuppliedIncluded",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_202_fixedSuppliedIncluded"
+    },
+    {
+      "name": "fixed_203_fixedAppendMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.AppendMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_203_fixedAppendMonotone"
+    },
+    {
+      "name": "fixed_204_fixedLeastClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.LeastClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_204_fixedLeastClosure"
+    },
+    {
+      "name": "fixed_205_fixedRestrictionAppend",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedExtraAppendTargets.RestrictionAppend",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_205_fixedRestrictionAppend"
+    },
+    {
+      "name": "fixed_206_fixedTypeClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingTargets.TypeClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_206_fixedTypeClosure"
+    },
+    {
+      "name": "fixed_207_fixedExactLength",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingTargets.ExactLength",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_207_fixedExactLength"
+    },
+    {
+      "name": "fixed_208_fixedExactEntry",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingTargets.ExactEntry",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_208_fixedExactEntry"
+    },
+    {
+      "name": "fixed_209_fixedMembership",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingTargets.Membership",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_209_fixedMembership"
+    },
+    {
+      "name": "fixed_210_fixedPointwiseDomination",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingTargets.PointwiseDomination",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_210_fixedPointwiseDomination"
+    },
+    {
+      "name": "fixed_211_fixedWeakeningMap",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullTuplePackingTargets.WeakeningMap",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_211_fixedWeakeningMap"
+    },
+    {
+      "name": "fixed_212_exact_saturation",
+      "target": "LogicLineages.OrdinalComparison.Source.DeterministicCarrierData.Targets.ExactSaturation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_212_exact_saturation"
+    },
+    {
+      "name": "fixed_213_exact_carrier_data",
+      "target": "LogicLineages.OrdinalComparison.Source.DeterministicCarrierData.Targets.ExactCarrierData",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_213_exact_carrier_data"
+    },
+    {
+      "name": "fixed_214_exact_carrier_list",
+      "target": "LogicLineages.OrdinalComparison.Source.DeterministicCarrierData.Targets.ExactCarrierList",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_214_exact_carrier_list"
+    },
+    {
+      "name": "fixed_215_fixedFullTableCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderTargets.FullTableCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_215_fixedFullTableCalibration"
+    },
+    {
+      "name": "fixed_216_fixedNaturalTables",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderTargets.NaturalTables",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_216_fixedNaturalTables"
+    },
+    {
+      "name": "fixed_217_fixedBuilderMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderTargets.BuilderMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_217_fixedBuilderMonotone"
+    },
+    {
+      "name": "fixed_218_fixedBuilderWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderTargets.BuilderWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_218_fixedBuilderWeakening"
+    },
+    {
+      "name": "fixed_219_fixedActualValueRealization",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalTupleBuilderTargets.ActualValueRealization",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_219_fixedActualValueRealization"
+    },
+    {
+      "name": "fixed_220_generated_positive_evaluation",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitHeadEvaluation.Targets.GeneratedPositiveEvaluation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_220_generated_positive_evaluation"
+    },
+    {
+      "name": "fixed_221_actual_operator_classification",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitHeadEvaluation.Targets.ActualOperatorClassification",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_221_actual_operator_classification"
+    },
+    {
+      "name": "fixed_222_exact_numeric_bridge",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitHeadEvaluation.Targets.ExactNumericBridge",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_222_exact_numeric_bridge"
+    },
+    {
+      "name": "fixed_223_fixedEnumerated",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomTargets.Enumerated",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_223_fixedEnumerated"
+    },
+    {
+      "name": "fixed_224_fixedLeast",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomTargets.Least",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_224_fixedLeast"
+    },
+    {
+      "name": "fixed_225_fixedUniqueLeast",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomTargets.UniqueLeast",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_225_fixedUniqueLeast"
+    },
+    {
+      "name": "fixed_226_fixedWeakeningBottom",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomTargets.WeakeningBottom",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_226_fixedWeakeningBottom"
+    },
+    {
+      "name": "fixed_227_fixedAllBitsFalse",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomTargets.AllBitsFalse",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_227_fixedAllBitsFalse"
+    },
+    {
+      "name": "fixed_228_fixedAllTablesBottom",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomTargets.AllTablesBottom",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_228_fixedAllTablesBottom"
+    },
+    {
+      "name": "fixed_229_exact_data_accounting",
+      "target": "LogicLineages.OrdinalComparison.Source.DeterministicAccountData.Targets.ExactDataAccounting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_229_exact_data_accounting"
+    },
+    {
+      "name": "fixed_230_exact_record_certification",
+      "target": "LogicLineages.OrdinalComparison.Source.DeterministicAccountData.Targets.ExactRecordCertification",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_230_exact_record_certification"
+    },
+    {
+      "name": "fixed_231_actual_source_account",
+      "target": "LogicLineages.OrdinalComparison.Source.DeterministicAccountData.Targets.ActualSourceAccount",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_231_actual_source_account"
+    },
+    {
+      "name": "fixed_232_fixedNameInjective",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.NameInjective",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_232_fixedNameInjective"
+    },
+    {
+      "name": "fixed_233_fixedNameExtension",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.NameExtension",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_233_fixedNameExtension"
+    },
+    {
+      "name": "fixed_234_fixedLiteralWeakBits",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.LiteralWeakBits",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_234_fixedLiteralWeakBits"
+    },
+    {
+      "name": "fixed_235_fixedAvailabilityAndStrict",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.AvailabilityAndStrict",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_235_fixedAvailabilityAndStrict"
+    },
+    {
+      "name": "fixed_236_fixedUndefinedTables",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.UndefinedTables",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_236_fixedUndefinedTables"
+    },
+    {
+      "name": "fixed_237_fixedNaturalVariable",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.NaturalVariable",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_237_fixedNaturalVariable"
+    },
+    {
+      "name": "fixed_238_fixedVariableWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.VariableWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_238_fixedVariableWeakening"
+    },
+    {
+      "name": "fixed_239_fixedActualValue",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.ActualValue",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_239_fixedActualValue"
+    },
+    {
+      "name": "fixed_240_fixedLiteralVariableEquality",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueTargets.LiteralVariableEquality",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_240_fixedLiteralVariableEquality"
+    },
+    {
+      "name": "fixed_241_exact_packaging",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalGroundDataConstruction.Targets.ExactPackaging",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_241_exact_packaging"
+    },
+    {
+      "name": "fixed_242_actual_paid_account",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalGroundDataConstruction.Targets.ActualPaidAccount",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_242_actual_paid_account"
+    },
+    {
+      "name": "fixed_243_actual_original_ground_construction",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalGroundDataConstruction.Targets.ActualOriginalGroundConstruction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_243_actual_original_ground_construction"
+    },
+    {
+      "name": "fixed_244_fixedTrueCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessTargets.TrueCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_244_fixedTrueCalibration"
+    },
+    {
+      "name": "fixed_245_fixedRejectedFalse",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessTargets.RejectedFalse",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_245_fixedRejectedFalse"
+    },
+    {
+      "name": "fixed_246_fixedTypedCoordinate",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessTargets.TypedCoordinate",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_246_fixedTypedCoordinate"
+    },
+    {
+      "name": "fixed_247_fixedReadMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessTargets.ReadMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_247_fixedReadMonotone"
+    },
+    {
+      "name": "fixed_248_fixedRestrictionAccess",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessTargets.RestrictionAccess",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_248_fixedRestrictionAccess"
+    },
+    {
+      "name": "fixed_249_fixedBottomFalse",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedObservationAccessTargets.BottomFalse",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_249_fixedBottomFalse"
+    },
+    {
+      "name": "fixed_250_exact_raw_unit_extraction",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitHeadCode.Targets.ExactRawUnitExtraction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_250_exact_raw_unit_extraction"
+    },
+    {
+      "name": "fixed_251_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitHeadCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_251_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_252_actual_positive_classification",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitHeadCode.Targets.ActualPositiveClassification",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_252_actual_positive_classification"
+    },
+    {
+      "name": "fixed_253_fixedSplitCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingTargets.SplitCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_253_fixedSplitCalibration"
+    },
+    {
+      "name": "fixed_254_fixedOrderedCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingTargets.OrderedCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_254_fixedOrderedCalibration"
+    },
+    {
+      "name": "fixed_255_fixedWeakCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingTargets.WeakCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_255_fixedWeakCalibration"
+    },
+    {
+      "name": "fixed_256_fixedReplacementCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingTargets.ReplacementCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_256_fixedReplacementCalibration"
+    },
+    {
+      "name": "fixed_257_fixedStrictCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingTargets.StrictCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_257_fixedStrictCalibration"
+    },
+    {
+      "name": "fixed_258_fixedPositiveTests",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOccurrenceMatchingTargets.PositiveTests",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_258_fixedPositiveTests"
+    },
+    {
+      "name": "fixed_259_raw_exact",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceCarrierMapCode.Targets.RawExact",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_259_raw_exact"
+    },
+    {
+      "name": "fixed_260_typed_exact",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceCarrierMapCode.Targets.TypedExact",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_260_typed_exact"
+    },
+    {
+      "name": "fixed_261_concrete_exact",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceCarrierMapCode.Targets.ConcreteExact",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_261_concrete_exact"
+    },
+    {
+      "name": "fixed_262_primitive_recursive",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceCarrierMapCode.Targets.PrimitiveRecursive",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_262_primitive_recursive"
+    },
+    {
+      "name": "fixed_263_fixedRootCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewTargets.RootCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_263_fixedRootCalibration"
+    },
+    {
+      "name": "fixed_264_fixedArgumentCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewTargets.ArgumentCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_264_fixedArgumentCalibration"
+    },
+    {
+      "name": "fixed_265_fixedArgumentTypeCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewTargets.ArgumentTypeCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_265_fixedArgumentTypeCalibration"
+    },
+    {
+      "name": "fixed_266_fixedPlainChildrenCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewTargets.PlainChildrenCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_266_fixedPlainChildrenCalibration"
+    },
+    {
+      "name": "fixed_267_fixedChildProvenance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewTargets.ChildProvenance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_267_fixedChildProvenance"
+    },
+    {
+      "name": "fixed_268_fixedDeclaredArgumentTypes",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewTargets.DeclaredArgumentTypes",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_268_fixedDeclaredArgumentTypes"
+    },
+    {
+      "name": "fixed_269_exact_operator_codec",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationCode.Targets.ExactOperatorCodec",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_269_exact_operator_codec"
+    },
+    {
+      "name": "fixed_270_exact_erasure",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationCode.Targets.ExactErasure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_270_exact_erasure"
+    },
+    {
+      "name": "fixed_271_exact_repeat",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationCode.Targets.ExactRepeat",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_271_exact_repeat"
+    },
+    {
+      "name": "fixed_272_exact_closing",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationCode.Targets.ExactClosing",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_272_exact_closing"
+    },
+    {
+      "name": "fixed_273_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_273_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_274_fixedSourceHeadResultTypes",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueTargets.SourceHeadResultTypes",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_274_fixedSourceHeadResultTypes"
+    },
+    {
+      "name": "fixed_275_fixedBasePackingCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueTargets.BasePackingCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_275_fixedBasePackingCalibration"
+    },
+    {
+      "name": "fixed_276_fixedFunCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueTargets.FunCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_276_fixedFunCalibration"
+    },
+    {
+      "name": "fixed_277_fixedOrdinaryBitEquations",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueTargets.OrdinaryBitEquations",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_277_fixedOrdinaryBitEquations"
+    },
+    {
+      "name": "fixed_278_fixedFullTupleEquation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueTargets.FullTupleEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_278_fixedFullTupleEquation"
+    },
+    {
+      "name": "fixed_279_exact_partial_code",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationPartialCode.Targets.ExactPartialCode",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_279_exact_partial_code"
+    },
+    {
+      "name": "fixed_280_primitive_recursive",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationPartialCode.Targets.PrimitiveRecursive",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_280_primitive_recursive"
+    },
+    {
+      "name": "fixed_281_valid_actual_partial",
+      "target": "LogicLineages.OrdinalComparison.Source.SourceAnnotationPartialCode.Targets.ValidActualPartial",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_281_valid_actual_partial"
+    },
+    {
+      "name": "fixed_282_fixedBasePackingTransport",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.BasePackingTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_282_fixedBasePackingTransport"
+    },
+    {
+      "name": "fixed_283_fixedFunMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.FunMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_283_fixedFunMonotone"
+    },
+    {
+      "name": "fixed_284_fixedFunWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.FunWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_284_fixedFunWeakening"
+    },
+    {
+      "name": "fixed_285_fixedBitsMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.BitsMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_285_fixedBitsMonotone"
+    },
+    {
+      "name": "fixed_286_fixedBitsWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.BitsWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_286_fixedBitsWeakening"
+    },
+    {
+      "name": "fixed_287_fixedValueMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.ValueMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_287_fixedValueMonotone"
+    },
+    {
+      "name": "fixed_288_fixedValueWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalNaturalityTargets.ValueWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_288_fixedValueWeakening"
+    },
+    {
+      "name": "fixed_289_exact_free_occurrence",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode.Targets.ExactFreeOccurrence",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_289_exact_free_occurrence"
+    },
+    {
+      "name": "fixed_290_exact_arity",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode.Targets.ExactArity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_290_exact_arity"
+    },
+    {
+      "name": "fixed_291_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_291_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_292_actual_grammar_inspection",
+      "target": "LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode.Targets.ActualGrammarInspection",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_292_actual_grammar_inspection"
+    },
+    {
+      "name": "fixed_293_fixedGenuineChildGuards",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestTargets.GenuineChildGuards",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_293_fixedGenuineChildGuards"
+    },
+    {
+      "name": "fixed_294_fixedAllChildrenCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestTargets.AllChildrenCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_294_fixedAllChildrenCalibration"
+    },
+    {
+      "name": "fixed_295_fixedCopyCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestTargets.CopyCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_295_fixedCopyCalibration"
+    },
+    {
+      "name": "fixed_296_fixedTestMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestTargets.TestMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_296_fixedTestMonotone"
+    },
+    {
+      "name": "fixed_297_fixedCoordinatesMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestTargets.CoordinatesMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_297_fixedCoordinatesMonotone"
+    },
+    {
+      "name": "fixed_298_fixedCoordinatesWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestTargets.CoordinatesWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_298_fixedCoordinatesWeakening"
+    },
+    {
+      "name": "fixed_299_fixedStrictSourceMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestTargets.StrictSourceMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_299_fixedStrictSourceMonotone"
+    },
+    {
+      "name": "fixed_300_fixedStatCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestTargets.StatCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_300_fixedStatCalibration"
+    },
+    {
+      "name": "fixed_301_fixedTestMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestTargets.TestMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_301_fixedTestMonotone"
+    },
+    {
+      "name": "fixed_302_fixedCoordinatesMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestTargets.CoordinatesMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_302_fixedCoordinatesMonotone"
+    },
+    {
+      "name": "fixed_303_fixedCoordinatesWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestTargets.CoordinatesWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_303_fixedCoordinatesWeakening"
+    },
+    {
+      "name": "fixed_304_primitive_recursive",
+      "target": "LogicLineages.OrdinalComparison.Source.CanonicalAnnotationBuilderCode.Targets.PrimitiveRecursive",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_304_primitive_recursive"
+    },
+    {
+      "name": "fixed_305_raw_checked",
+      "target": "LogicLineages.OrdinalComparison.Source.CanonicalAnnotationBuilderCode.Targets.RawChecked",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_305_raw_checked"
+    },
+    {
+      "name": "fixed_306_actual_source_build",
+      "target": "LogicLineages.OrdinalComparison.Source.CanonicalAnnotationBuilderCode.Targets.ActualSourceBuild",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_306_actual_source_build"
+    },
+    {
+      "name": "fixed_307_fixedSelfTupleCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestTargets.SelfTupleCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_307_fixedSelfTupleCalibration"
+    },
+    {
+      "name": "fixed_308_fixedSelectCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestTargets.SelectCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_308_fixedSelectCalibration"
+    },
+    {
+      "name": "fixed_309_fixedSelectedMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestTargets.SelectedMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_309_fixedSelectedMonotone"
+    },
+    {
+      "name": "fixed_310_fixedTestMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestTargets.TestMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_310_fixedTestMonotone"
+    },
+    {
+      "name": "fixed_311_fixedCoordinatesMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestTargets.CoordinatesMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_311_fixedCoordinatesMonotone"
+    },
+    {
+      "name": "fixed_312_fixedCoordinatesWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSelectTestTargets.CoordinatesWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_312_fixedCoordinatesWeakening"
+    },
+    {
+      "name": "fixed_313_exact_protected_source",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode.Targets.ExactProtectedSource",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_313_exact_protected_source"
+    },
+    {
+      "name": "fixed_314_exact_ordinal_vector",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode.Targets.ExactOrdinalVector",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_314_exact_ordinal_vector"
+    },
+    {
+      "name": "fixed_315_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_315_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_316_actual_closing_assignment",
+      "target": "LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode.Targets.ActualClosingAssignment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_316_actual_closing_assignment"
+    },
+    {
+      "name": "fixed_317_fixedFreshAvailability",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.FreshAvailability",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_317_fixedFreshAvailability"
+    },
+    {
+      "name": "fixed_318_fixedGenuineOpeningGuards",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.GenuineOpeningGuards",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_318_fixedGenuineOpeningGuards"
+    },
+    {
+      "name": "fixed_319_fixedLambdaCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.LambdaCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_319_fixedLambdaCalibration"
+    },
+    {
+      "name": "fixed_320_fixedLiteralLambdaEquation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.LiteralLambdaEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_320_fixedLiteralLambdaEquation"
+    },
+    {
+      "name": "fixed_321_fixedTestMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.TestMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_321_fixedTestMonotone"
+    },
+    {
+      "name": "fixed_322_fixedCoordinatesMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.CoordinatesMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_322_fixedCoordinatesMonotone"
+    },
+    {
+      "name": "fixed_323_fixedCoordinatesWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestTargets.CoordinatesWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_323_fixedCoordinatesWeakening"
+    },
+    {
+      "name": "fixed_324_fixedSourceBitEquations",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorTargets.SourceBitEquations",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_324_fixedSourceBitEquations"
+    },
+    {
+      "name": "fixed_325_fixedFullTupleEquation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorTargets.FullTupleEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_325_fixedFullTupleEquation"
+    },
+    {
+      "name": "fixed_326_fixedNaturalCoherentOutput",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorTargets.NaturalCoherentOutput",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_326_fixedNaturalCoherentOutput"
+    },
+    {
+      "name": "fixed_327_fixedOperatorMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorTargets.OperatorMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_327_fixedOperatorMonotone"
+    },
+    {
+      "name": "fixed_328_exact_carrier_code",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericCarrierData.Targets.ExactCarrierCode",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_328_exact_carrier_code"
+    },
+    {
+      "name": "fixed_329_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericCarrierData.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_329_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_330_actual_carrier_record",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericCarrierData.Targets.ActualCarrierRecord",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_330_actual_carrier_record"
+    },
+    {
+      "name": "fixed_331_fixedBottomLeast",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationTargets.BottomLeast",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_331_fixedBottomLeast"
+    },
+    {
+      "name": "fixed_332_fixedAscendingIteration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationTargets.AscendingIteration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_332_fixedAscendingIteration"
+    },
+    {
+      "name": "fixed_333_fixedCardinalityStabilization",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationTargets.CardinalityStabilization",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_333_fixedCardinalityStabilization"
+    },
+    {
+      "name": "fixed_334_fixedActualFixedPoint",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationTargets.ActualFixedPoint",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_334_fixedActualFixedPoint"
+    },
+    {
+      "name": "fixed_335_fixedLeastPreFixedPoint",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationTargets.LeastPreFixedPoint",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_335_fixedLeastPreFixedPoint"
+    },
+    {
+      "name": "fixed_336_fixedEventualConstancy",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationTargets.EventualConstancy",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_336_fixedEventualConstancy"
+    },
+    {
+      "name": "fixed_337_exact_scalar_surplus",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericAccountData.Targets.ExactScalarSurplus",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_337_exact_scalar_surplus"
+    },
+    {
+      "name": "fixed_338_exact_numeric_accounting",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericAccountData.Targets.ExactNumericAccounting",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_338_exact_numeric_accounting"
+    },
+    {
+      "name": "fixed_339_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericAccountData.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_339_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_340_actual_canonical_source",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericAccountData.Targets.ActualCanonicalSource",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_340_actual_canonical_source"
+    },
+    {
+      "name": "fixed_341_exact_counts",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalBudgetCode.Targets.ExactCounts",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_341_exact_counts"
+    },
+    {
+      "name": "fixed_342_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalBudgetCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_342_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_343_actual_original_box_budget",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalBudgetCode.Targets.ActualOriginalBoxBudget",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_343_actual_original_box_budget"
+    },
+    {
+      "name": "fixed_344_fixedRestrictionIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.RestrictionIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_344_fixedRestrictionIdentity"
+    },
+    {
+      "name": "fixed_345_fixedRestrictionComposition",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.RestrictionComposition",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_345_fixedRestrictionComposition"
+    },
+    {
+      "name": "fixed_346_fixedRestrictionMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.RestrictionMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_346_fixedRestrictionMonotone"
+    },
+    {
+      "name": "fixed_347_fixedExtensionMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.ExtensionMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_347_fixedExtensionMonotone"
+    },
+    {
+      "name": "fixed_348_fixedExtensionRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.ExtensionRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_348_fixedExtensionRestriction"
+    },
+    {
+      "name": "fixed_349_fixedIdentityTransport",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.IdentityTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_349_fixedIdentityTransport"
+    },
+    {
+      "name": "fixed_350_fixedReindexRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.ReindexRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_350_fixedReindexRestriction"
+    },
+    {
+      "name": "fixed_351_fixedReindexLift",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TypedValueEnvironmentTargets.ReindexLift",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_351_fixedReindexLift"
+    },
+    {
+      "name": "fixed_352_exact_source_insertion",
+      "target": "LogicLineages.OrdinalComparison.Source.ContextInsertionCode.Targets.ExactSourceInsertion",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_352_exact_source_insertion"
+    },
+    {
+      "name": "fixed_353_exact_ordinal_vector",
+      "target": "LogicLineages.OrdinalComparison.Source.ContextInsertionCode.Targets.ExactOrdinalVector",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_353_exact_ordinal_vector"
+    },
+    {
+      "name": "fixed_354_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.ContextInsertionCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_354_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_355_actual_inserted_assignment",
+      "target": "LogicLineages.OrdinalComparison.Source.ContextInsertionCode.Targets.ActualInsertedAssignment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_355_actual_inserted_assignment"
+    },
+    {
+      "name": "fixed_356_fixedOriginalBodyDecrease",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingTargets.OriginalBodyDecrease",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_356_fixedOriginalBodyDecrease"
+    },
+    {
+      "name": "fixed_357_fixedOpeningEnvironment",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingTargets.OpeningEnvironment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_357_fixedOpeningEnvironment"
+    },
+    {
+      "name": "fixed_358_fixedGenuineFreshOpening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingTargets.GenuineFreshOpening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_358_fixedGenuineFreshOpening"
+    },
+    {
+      "name": "fixed_359_fixedLiteralMatch",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingTargets.LiteralMatch",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_359_fixedLiteralMatch"
+    },
+    {
+      "name": "fixed_360_fixedBitsMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingTargets.BitsMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_360_fixedBitsMonotone"
+    },
+    {
+      "name": "fixed_361_fixedBitsRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaObservationMatchingTargets.BitsRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_361_fixedBitsRestriction"
+    },
+    {
+      "name": "fixed_362_fixedEmptyIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationTargets.EmptyIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_362_fixedEmptyIdentity"
+    },
+    {
+      "name": "fixed_363_fixedNonemptyCalibration",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationTargets.NonemptyCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_363_fixedNonemptyCalibration"
+    },
+    {
+      "name": "fixed_364_fixedTypeTransport",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationTargets.TypeTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_364_fixedTypeTransport"
+    },
+    {
+      "name": "fixed_365_fixedJointMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationTargets.JointMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_365_fixedJointMonotone"
+    },
+    {
+      "name": "fixed_366_fixedRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationTargets.Restriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_366_fixedRestriction"
+    },
+    {
+      "name": "fixed_367_fixedBottom",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationTargets.Bottom",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_367_fixedBottom"
+    },
+    {
+      "name": "fixed_368_exact_merged_payloads",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericUnaryChain.Targets.ExactMergedPayloads",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_368_exact_merged_payloads"
+    },
+    {
+      "name": "fixed_369_exact_single_lambda",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericUnaryChain.Targets.ExactSingleLambda",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_369_exact_single_lambda"
+    },
+    {
+      "name": "fixed_370_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericUnaryChain.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_370_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_371_actual_compiled_chain",
+      "target": "LogicLineages.OrdinalComparison.Source.NumericUnaryChain.Targets.ActualCompiledChain",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_371_actual_compiled_chain"
+    },
+    {
+      "name": "fixed_372_fixedVariableEquations",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsTargets.VariableEquations",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_372_fixedVariableEquations"
+    },
+    {
+      "name": "fixed_373_fixedVariableEvaluationMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsTargets.VariableEvaluationMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_373_fixedVariableEvaluationMonotone"
+    },
+    {
+      "name": "fixed_374_fixedVariableEvaluationNatural",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsTargets.VariableEvaluationNatural",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_374_fixedVariableEvaluationNatural"
+    },
+    {
+      "name": "fixed_375_fixedVariableScanMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsTargets.VariableScanMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_375_fixedVariableScanMonotone"
+    },
+    {
+      "name": "fixed_376_fixedVariableScanNatural",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsTargets.VariableScanNatural",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_376_fixedVariableScanNatural"
+    },
+    {
+      "name": "fixed_377_fixedActualVariableAction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsTargets.ActualVariableAction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_377_fixedActualVariableAction"
+    },
+    {
+      "name": "fixed_378_exact_caller_code",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode.Targets.ExactCallerCode",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_378_exact_caller_code"
+    },
+    {
+      "name": "fixed_379_exact_paid_list",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode.Targets.ExactPaidList",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_379_exact_paid_list"
+    },
+    {
+      "name": "fixed_380_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_380_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_381_actual_scaled_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode.Targets.ActualScaledCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_381_actual_scaled_compiler"
+    },
+    {
+      "name": "fixed_382_fixedStateMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsTargets.StateMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_382_fixedStateMonotone"
+    },
+    {
+      "name": "fixed_383_fixedStateRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsTargets.StateRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_383_fixedStateRestriction"
+    },
+    {
+      "name": "fixed_384_fixedFullTupleScanEquation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsTargets.FullTupleScanEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_384_fixedFullTupleScanEquation"
+    },
+    {
+      "name": "fixed_385_fixedEvaluationEquations",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsTargets.EvaluationEquations",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_385_fixedEvaluationEquations"
+    },
+    {
+      "name": "fixed_386_fixedActualOrdinaryAction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsTargets.ActualOrdinaryAction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_386_fixedActualOrdinaryAction"
+    },
+    {
+      "name": "fixed_387_fixedActualMarkedAction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FunctionalSpineActionsTargets.ActualMarkedAction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_387_fixedActualMarkedAction"
+    },
+    {
+      "name": "fixed_388_exact_record_packaging",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalGroundCompilerCode.Targets.ExactRecordPackaging",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_388_exact_record_packaging"
+    },
+    {
+      "name": "fixed_389_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalGroundCompilerCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_389_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_390_actual_original_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.OriginalGroundCompilerCode.Targets.ActualOriginalCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_390_actual_original_compiler"
+    },
+    {
+      "name": "fixed_391_fixedBinderProtection",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsTargets.BinderProtection",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_391_fixedBinderProtection"
+    },
+    {
+      "name": "fixed_392_fixedBinderConsumption",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsTargets.BinderConsumption",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_392_fixedBinderConsumption"
+    },
+    {
+      "name": "fixed_393_fixedNaturalTables",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsTargets.NaturalTables",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_393_fixedNaturalTables"
+    },
+    {
+      "name": "fixed_394_fixedRawMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsTargets.RawMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_394_fixedRawMonotone"
+    },
+    {
+      "name": "fixed_395_fixedRawRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsTargets.RawRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_395_fixedRawRestriction"
+    },
+    {
+      "name": "fixed_396_fixedActualLambdaAction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LambdaSpineActionsTargets.ActualLambdaAction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_396_fixedActualLambdaAction"
+    },
+    {
+      "name": "fixed_397_exact_refusing_extraction",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitScalarEvaluationCode.Targets.ExactRefusingExtraction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_397_exact_refusing_extraction"
+    },
+    {
+      "name": "fixed_398_effective_generated_scalar",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitScalarEvaluationCode.Targets.EffectiveGeneratedScalar",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_398_effective_generated_scalar"
+    },
+    {
+      "name": "fixed_399_actual_closed_source_scalar",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitScalarEvaluationCode.Targets.ActualClosedSourceScalar",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_399_actual_closed_source_scalar"
+    },
+    {
+      "name": "fixed_400_fixedFrameConfinement",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.FrameConfinement",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_400_fixedFrameConfinement"
+    },
+    {
+      "name": "fixed_401_fixedSourceEquations",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.SourceEquations",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_401_fixedSourceEquations"
+    },
+    {
+      "name": "fixed_402_fixedInterpretationMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.InterpretationMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_402_fixedInterpretationMonotone"
+    },
+    {
+      "name": "fixed_403_fixedInterpretationNatural",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.InterpretationNatural",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_403_fixedInterpretationNatural"
+    },
+    {
+      "name": "fixed_404_fixedScannerMonotone",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.ScannerMonotone",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_404_fixedScannerMonotone"
+    },
+    {
+      "name": "fixed_405_fixedScannerNatural",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.ScannerNatural",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_405_fixedScannerNatural"
+    },
+    {
+      "name": "fixed_406_fixedEmptyScanner",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedStructuralInterpretationTargets.EmptyScanner",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_406_fixedEmptyScanner"
+    },
+    {
+      "name": "fixed_407_genuine_ray_and_computability",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualUnaryRay.Targets.GenuineRayAndComputability",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_407_genuine_ray_and_computability"
+    },
+    {
+      "name": "fixed_408_actual_source_ray",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualUnaryRay.Targets.ActualSourceRay",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_408_actual_source_ray"
+    },
+    {
+      "name": "fixed_409_actual_ray_observation",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualUnaryRay.Targets.ActualRayObservation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_409_actual_ray_observation"
+    },
+    {
+      "name": "fixed_410_fixedSourceBitEquations",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitInterpretationTargets.SourceBitEquations",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_410_fixedSourceBitEquations"
+    },
+    {
+      "name": "fixed_411_fixedFullTupleEquation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitInterpretationTargets.FullTupleEquation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_411_fixedFullTupleEquation"
+    },
+    {
+      "name": "fixed_412_general_positive_limit",
+      "target": "LogicLineages.OrdinalComparison.Source.GeneralOmegaHeadLimit.Targets.GeneralPositiveLimit",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_412_general_positive_limit"
+    },
+    {
+      "name": "fixed_413_actual_closed_head_calibration",
+      "target": "LogicLineages.OrdinalComparison.Source.GeneralOmegaHeadLimit.Targets.ActualClosedHeadCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_413_actual_closed_head_calibration"
+    },
+    {
+      "name": "fixed_414_fixedFullApplication",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitApplicationTargets.FullApplication",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_414_fixedFullApplication"
+    },
+    {
+      "name": "fixed_415_exact_finite_prefix",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.FormulaConstruction.Targets.ExactFinitePrefix",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_415_exact_finite_prefix"
+    },
+    {
+      "name": "fixed_416_exact_tail_from_ray",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.FormulaConstruction.Targets.ExactTailFromRay",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_416_exact_tail_from_ray"
+    },
+    {
+      "name": "fixed_417_actual_whole_genuine_graph",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.FormulaConstruction.Targets.ActualWholeGenuineGraph",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_417_actual_whole_genuine_graph"
+    },
+    {
+      "name": "fixed_418_fixedLiteralErasure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingTargets.LiteralErasure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_418_fixedLiteralErasure"
+    },
+    {
+      "name": "fixed_419_fixedInterpretationCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingTargets.InterpretationCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_419_fixedInterpretationCovariance"
+    },
+    {
+      "name": "fixed_420_fixedScannerCovariance",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.StructuralRenamingTargets.ScannerCovariance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_420_fixedScannerCovariance"
+    },
+    {
+      "name": "fixed_421_exact_source_permutation",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedBinderCode.Targets.ExactSourcePermutation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_421_exact_source_permutation"
+    },
+    {
+      "name": "fixed_422_exact_ordinal_vector_permutation",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedBinderCode.Targets.ExactOrdinalVectorPermutation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_422_exact_ordinal_vector_permutation"
+    },
+    {
+      "name": "fixed_423_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedBinderCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_423_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_424_actual_permuted_assignment",
+      "target": "LogicLineages.OrdinalComparison.Source.SelectedBinderCode.Targets.ActualPermutedAssignment",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_424_actual_permuted_assignment"
+    },
+    {
+      "name": "fixed_425_fixedSubstitutionClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionTargets.SubstitutionClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_425_fixedSubstitutionClosure"
+    },
+    {
+      "name": "fixed_426_fixedArgumentClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionTargets.ArgumentClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_426_fixedArgumentClosure"
+    },
+    {
+      "name": "fixed_427_fixedLiftedRange",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionTargets.LiftedRange",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_427_fixedLiftedRange"
+    },
+    {
+      "name": "fixed_428_fixedInitiallyCompatible",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionTargets.InitiallyCompatible",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_428_fixedInitiallyCompatible"
+    },
+    {
+      "name": "fixed_429_fixedLiftedCompatibility",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionTargets.LiftedCompatibility",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_429_fixedLiftedCompatibility"
+    },
+    {
+      "name": "fixed_430_fixedLiteralLift",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedSubstitutionTargets.LiteralLift",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_430_fixedLiteralLift"
+    },
+    {
+      "name": "fixed_431_fixedMaskLocality",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportTargets.MaskLocality",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_431_fixedMaskLocality"
+    },
+    {
+      "name": "fixed_432_fixedAgreementRestriction",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportTargets.AgreementRestriction",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_432_fixedAgreementRestriction"
+    },
+    {
+      "name": "fixed_433_fixedAgreementLift",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SubstitutionEnvironmentSupportTargets.AgreementLift",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_433_fixedAgreementLift"
+    },
+    {
+      "name": "fixed_434_exact_literal_syntax",
+      "target": "LogicLineages.OrdinalComparison.Source.OneUnitCode.Targets.ExactLiteralSyntax",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_434_exact_literal_syntax"
+    },
+    {
+      "name": "fixed_435_exact_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.OneUnitCode.Targets.ExactCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_435_exact_compiler"
+    },
+    {
+      "name": "fixed_436_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.OneUnitCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_436_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_437_actual_compiler_totality",
+      "target": "LogicLineages.OrdinalComparison.Source.OneUnitCode.Targets.ActualCompilerTotality",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_437_actual_compiler_totality"
+    },
+    {
+      "name": "fixed_438_exact_typed_selection",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitContextSelectionCode.Targets.ExactTypedSelection",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_438_exact_typed_selection"
+    },
+    {
+      "name": "fixed_439_exact_raw_split",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitContextSelectionCode.Targets.ExactRawSplit",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_439_exact_raw_split"
+    },
+    {
+      "name": "fixed_440_primitive_recursive_selection",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitContextSelectionCode.Targets.PrimitiveRecursiveSelection",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_440_primitive_recursive_selection"
+    },
+    {
+      "name": "fixed_441_fixedInterpretationSubstitution",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitSubstitutionTargets.InterpretationSubstitution",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_441_fixedInterpretationSubstitution"
+    },
+    {
+      "name": "fixed_442_fixedScannerSubstitution",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitSubstitutionTargets.ScannerSubstitution",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_442_fixedScannerSubstitution"
+    },
+    {
+      "name": "fixed_443_exact_probe_codes",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitGroundBlockCode.Targets.ExactProbeCodes",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_443_exact_probe_codes"
+    },
+    {
+      "name": "fixed_444_exact_ground_block",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitGroundBlockCode.Targets.ExactGroundBlock",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_444_exact_ground_block"
+    },
+    {
+      "name": "fixed_445_effective_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitGroundBlockCode.Targets.EffectiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_445_effective_algorithms"
+    },
+    {
+      "name": "fixed_446_actual_anchor_calibration",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitGroundBlockCode.Targets.ActualAnchorCalibration",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_446_actual_anchor_calibration"
+    },
+    {
+      "name": "fixed_447_fixedAppendConfinement",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.InterpretedArgumentAppendTargets.AppendConfinement",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_447_fixedAppendConfinement"
+    },
+    {
+      "name": "fixed_448_fixedOrderedPackedAppend",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.InterpretedArgumentAppendTargets.OrderedPackedAppend",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_448_fixedOrderedPackedAppend"
+    },
+    {
+      "name": "fixed_449_fixedDownclosureAppend",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.InterpretedArgumentAppendTargets.DownclosureAppend",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_449_fixedDownclosureAppend"
+    },
+    {
+      "name": "fixed_450_exact_tree_fold",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitEliminationTreeCode.Targets.ExactTreeFold",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_450_exact_tree_fold"
+    },
+    {
+      "name": "fixed_451_effective_constructors_and_fold",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitEliminationTreeCode.Targets.EffectiveConstructorsAndFold",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_451_effective_constructors_and_fold"
+    },
+    {
+      "name": "fixed_452_exact_anchor_realization",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitEliminationTreeCode.Targets.ExactAnchorRealization",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_452_exact_anchor_realization"
+    },
+    {
+      "name": "fixed_453_fixedSuccessConfinement",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualOriginalApplicationTargets.SuccessConfinement",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_453_fixedSuccessConfinement"
+    },
+    {
+      "name": "fixed_454_fixedSuccessInterpretation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualOriginalApplicationTargets.SuccessInterpretation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_454_fixedSuccessInterpretation"
+    },
+    {
+      "name": "fixed_455_fixedFailureBottom",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualOriginalApplicationTargets.FailureBottom",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_455_fixedFailureBottom"
+    },
+    {
+      "name": "fixed_456_fixedScannerMaskAgreement",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueTargets.ScannerMaskAgreement",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_456_fixedScannerMaskAgreement"
+    },
+    {
+      "name": "fixed_457_fixedLiteralIdentityMasks",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueTargets.LiteralIdentityMasks",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_457_fixedLiteralIdentityMasks"
+    },
+    {
+      "name": "fixed_458_fixedSpecialSuccess",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueTargets.SpecialSuccess",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_458_fixedSpecialSuccess"
+    },
+    {
+      "name": "fixed_459_fixedSpecialFailure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueTargets.SpecialFailure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_459_fixedSpecialFailure"
+    },
+    {
+      "name": "fixed_460_exact_fuel_build",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitEliminationBuildCode.Targets.ExactFuelBuild",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_460_exact_fuel_build"
+    },
+    {
+      "name": "fixed_461_primitive_recursive_symbolic_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitEliminationBuildCode.Targets.PrimitiveRecursiveSymbolicCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_461_primitive_recursive_symbolic_compiler"
+    },
+    {
+      "name": "fixed_462_actual_uniform_source_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.UnitEliminationBuildCode.Targets.ActualUniformSourceCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_462_actual_uniform_source_compiler"
+    },
+    {
+      "name": "fixed_463_fixedMarkConfinement",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkTargets.MarkConfinement",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_463_fixedMarkConfinement"
+    },
+    {
+      "name": "fixed_464_fixedMarkBitEquality",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkTargets.MarkBitEquality",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_464_fixedMarkBitEquality"
+    },
+    {
+      "name": "fixed_465_fixedUndefinedMarkFalse",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkTargets.UndefinedMarkFalse",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_465_fixedUndefinedMarkFalse"
+    },
+    {
+      "name": "fixed_466_fixedIdentityUndefinedMarkFalse",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualStrictMarkTargets.IdentityUndefinedMarkFalse",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_466_fixedIdentityUndefinedMarkFalse"
+    },
+    {
+      "name": "fixed_467_exact_expression_lift",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode.Targets.ExactExpressionLift",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_467_exact_expression_lift"
+    },
+    {
+      "name": "fixed_468_exact_formula_constructors",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode.Targets.ExactFormulaConstructors",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_468_exact_formula_constructors"
+    },
+    {
+      "name": "fixed_469_exact_fixed_control",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode.Targets.ExactFixedControl",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_469_exact_fixed_control"
+    },
+    {
+      "name": "fixed_470_primitive_recursive_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode.Targets.PrimitiveRecursiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_470_primitive_recursive_algorithms"
+    },
+    {
+      "name": "fixed_471_fixedConsPortTransport",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportTargets.ConsPortTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_471_fixedConsPortTransport"
+    },
+    {
+      "name": "fixed_472_fixedOpeningIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportTargets.OpeningIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_472_fixedOpeningIdentity"
+    },
+    {
+      "name": "fixed_473_fixedSourceIdentityWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportTargets.SourceIdentityWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_473_fixedSourceIdentityWeakening"
+    },
+    {
+      "name": "fixed_474_fixedSourceReadTransport",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LiteralWorldTransportTargets.SourceReadTransport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_474_fixedSourceReadTransport"
+    },
+    {
+      "name": "fixed_475_exact_tree_expansion",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.UnitArithmeticFormulaCode.Targets.ExactTreeExpansion",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_475_exact_tree_expansion"
+    },
+    {
+      "name": "fixed_476_effective_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.UnitArithmeticFormulaCode.Targets.EffectiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_476_effective_algorithms"
+    },
+    {
+      "name": "fixed_477_actual_source_formula",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.UnitArithmeticFormulaCode.Targets.ActualSourceFormula",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_477_actual_source_formula"
+    },
+    {
+      "name": "fixed_478_exact_genuine_constants",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.ExactGenuineConstants",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_478_exact_genuine_constants"
+    },
+    {
+      "name": "fixed_479_exact_formula_compilation",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.ExactFormulaCompilation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_479_exact_formula_compilation"
+    },
+    {
+      "name": "fixed_480_effective_algorithms",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.EffectiveAlgorithms",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_480_effective_algorithms"
+    },
+    {
+      "name": "fixed_481_actual_effective_whole_graph",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.GraphCode.Targets.ActualEffectiveWholeGraph",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_481_actual_effective_whole_graph"
+    },
+    {
+      "name": "fixed_482_fixedWeakCompleteness",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualComparisonCompletenessTargets.WeakCompleteness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_482_fixedWeakCompleteness"
+    },
+    {
+      "name": "fixed_483_fixedStrictCompleteness",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualComparisonCompletenessTargets.StrictCompleteness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_483_fixedStrictCompleteness"
+    },
+    {
+      "name": "fixed_484_exact_omega_finite_tail",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.Targets.ExactOmegaFiniteTail",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_484_exact_omega_finite_tail"
+    },
+    {
+      "name": "fixed_485_actual_paid_graph",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.PaidHeadTransport.Targets.ActualPaidGraph",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_485_actual_paid_graph"
+    },
+    {
+      "name": "fixed_486_fixedBitClause",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationTargets.BitClause",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_486_fixedBitClause"
+    },
+    {
+      "name": "fixed_487_fixedFullTupleClause",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationTargets.FullTupleClause",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_487_fixedFullTupleClause"
+    },
+    {
+      "name": "fixed_488_fixedDownwardClosure",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationTargets.DownwardClosure",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_488_fixedDownwardClosure"
+    },
+    {
+      "name": "fixed_489_fixedBottomRelated",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationTargets.BottomRelated",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_489_fixedBottomRelated"
+    },
+    {
+      "name": "fixed_490_fixedPortRenameIdentity",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsTargets.PortRenameIdentity",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_490_fixedPortRenameIdentity"
+    },
+    {
+      "name": "fixed_491_fixedPortRenameComposition",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsTargets.PortRenameComposition",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_491_fixedPortRenameComposition"
+    },
+    {
+      "name": "fixed_492_fixedRelatedWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsTargets.RelatedWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_492_fixedRelatedWeakening"
+    },
+    {
+      "name": "fixed_493_fixedLiteralVariableRelated",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.LogicalRelationWorldsTargets.LiteralVariableRelated",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_493_fixedLiteralVariableRelated"
+    },
+    {
+      "name": "fixed_494_actual_scalar_finiteness",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.Targets.ActualScalarFiniteness",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_494_actual_scalar_finiteness"
+    },
+    {
+      "name": "fixed_495_effective_compiler",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.Targets.EffectiveCompiler",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_495_effective_compiler"
+    },
+    {
+      "name": "fixed_496_actual_original_wire",
+      "target": "LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.Targets.ActualOriginalWire",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_496_actual_original_wire"
+    },
+    {
+      "name": "fixed_497_fixedPackedDownward",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationTargets.PackedDownward",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_497_fixedPackedDownward"
+    },
+    {
+      "name": "fixed_498_fixedInputAppend",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationTargets.InputAppend",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_498_fixedInputAppend"
+    },
+    {
+      "name": "fixed_499_fixedInputWeakening",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationTargets.InputWeakening",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_499_fixedInputWeakening"
+    },
+    {
+      "name": "fixed_500_fixedBottomFamilySound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationTargets.BottomFamilySound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_500_fixedBottomFamilySound"
+    },
+    {
+      "name": "fixed_501_fixedFamilyDownward",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ConstructorInputLogicalRelationTargets.FamilyDownward",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_501_fixedFamilyDownward"
+    },
+    {
+      "name": "fixed_502_fixedPairSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingTargets.PairSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_502_fixedPairSound"
+    },
+    {
+      "name": "fixed_503_fixedWeakSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingTargets.WeakSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_503_fixedWeakSound"
+    },
+    {
+      "name": "fixed_504_fixedStrictSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingTargets.StrictSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_504_fixedStrictSound"
+    },
+    {
+      "name": "fixed_505_numerical_dominance",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadLargeRow.Targets.NumericalDominance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_505_numerical_dominance"
+    },
+    {
+      "name": "fixed_506_actual_head_dominance",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadLargeRow.Targets.ActualHeadDominance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_506_actual_head_dominance"
+    },
+    {
+      "name": "fixed_507_fixedCopySound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CopyStatStageSoundnessTargets.CopySound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_507_fixedCopySound"
+    },
+    {
+      "name": "fixed_508_fixedStatSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.CopyStatStageSoundnessTargets.StatSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_508_fixedStatSound"
+    },
+    {
+      "name": "fixed_509_exact_weighted_collection",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadCollectedRow.Targets.ExactWeightedCollection",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_509_exact_weighted_collection"
+    },
+    {
+      "name": "fixed_510_literal_collected_support",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadCollectedRow.Targets.LiteralCollectedSupport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_510_literal_collected_support"
+    },
+    {
+      "name": "fixed_511_actual_collected_dominance",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadCollectedRow.Targets.ActualCollectedDominance",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_511_actual_collected_dominance"
+    },
+    {
+      "name": "fixed_512_fixedSelectSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.SelectStageSoundnessTargets.SelectSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_512_fixedSelectSound"
+    },
+    {
+      "name": "fixed_513_closed_evaluation",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadSmallFold.Targets.ClosedEvaluation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_513_closed_evaluation"
+    },
+    {
+      "name": "fixed_514_exact_occurrence_fold",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadSmallFold.Targets.ExactOccurrenceFold",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_514_exact_occurrence_fold"
+    },
+    {
+      "name": "fixed_515_exhaustive_small_branch",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadSmallFold.Targets.ExhaustiveSmallBranch",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_515_exhaustive_small_branch"
+    },
+    {
+      "name": "fixed_516_fixedFAbsSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.FAbsStageSoundnessTargets.FAbsSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_516_fixedFAbsSound"
+    },
+    {
+      "name": "fixed_517_exact_block_formula",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadLargeGuards.Targets.ExactBlockFormula",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_517_exact_block_formula"
+    },
+    {
+      "name": "fixed_518_original_input_support",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadLargeGuards.Targets.OriginalInputSupport",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_518_original_input_support"
+    },
+    {
+      "name": "fixed_519_exact_actual_large_formula",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadLargeGuards.Targets.ExactActualLargeFormula",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_519_exact_actual_large_formula"
+    },
+    {
+      "name": "fixed_520_fixedOperatorPreservation",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualConstructorFamilySoundnessTargets.OperatorPreservation",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_520_fixedOperatorPreservation"
+    },
+    {
+      "name": "fixed_521_fixedActualIteratesSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualConstructorFamilySoundnessTargets.ActualIteratesSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_521_fixedActualIteratesSound"
+    },
+    {
+      "name": "fixed_522_fixedActualLimitSound",
+      "target": "LogicLineages.OrdinalComparison.TerminationOrdering.ActualConstructorFamilySoundnessTargets.ActualLimitSound",
+      "proof": "LogicLineages.ExternalCheckpoint20261102DJ.fixed_522_fixedActualLimitSound"
+    },
+    {
+      "name": "fixed_523_exact_renaming",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadGuardReindex.Targets.ExactRenaming",
+      "proof": "LogicLineages.OrdinalComparison.CommonHeadGuardReindex.StatementChecks.exact_renaming"
+    },
+    {
+      "name": "fixed_524_exact_deletion",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadGuardReindex.Targets.ExactDeletion",
+      "proof": "LogicLineages.OrdinalComparison.CommonHeadGuardReindex.StatementChecks.exact_deletion"
+    },
+    {
+      "name": "fixed_525_exact_guarded_fold",
+      "target": "LogicLineages.OrdinalComparison.CommonHeadGuardReindex.Targets.ExactGuardedFold",
+      "proof": "LogicLineages.OrdinalComparison.CommonHeadGuardReindex.StatementChecks.exact_guarded_fold"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "aggregate_local_modules": 1337,
+  "root_import_inventory_modules": 5381,
+  "limitations": [
+    "Ordered deletion and the skip guard preserve literal original indices and the actual folded row.",
+    "Recursive formula construction, layered elimination and the full common-head decision procedure remain separate.",
+    "No fresh full-root or CI pass.",
+    "Raw internal build evidence is excluded."
+  ]
+}
