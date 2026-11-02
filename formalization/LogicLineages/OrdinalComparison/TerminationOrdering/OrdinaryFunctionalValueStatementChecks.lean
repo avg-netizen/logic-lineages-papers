@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueStatementChecks
+
+theorem fixedSourceHeadResultTypes : OrdinaryFunctionalValueTargets.SourceHeadResultTypes := OrdinaryFunctionalValueProof.sourceHeadResultTypes
+theorem fixedBasePackingCalibration : OrdinaryFunctionalValueTargets.BasePackingCalibration := OrdinaryFunctionalValueProof.basePackingCalibration
+theorem fixedFunCalibration : OrdinaryFunctionalValueTargets.FunCalibration := OrdinaryFunctionalValueProof.funCalibration
+theorem fixedOrdinaryBitEquations : OrdinaryFunctionalValueTargets.OrdinaryBitEquations := OrdinaryFunctionalValueProof.ordinaryBitEquations
+theorem fixedFullTupleEquation : OrdinaryFunctionalValueTargets.FullTupleEquation := OrdinaryFunctionalValueProof.fullTupleEquation
+
+#print axioms fixedSourceHeadResultTypes
+#print axioms fixedBasePackingCalibration
+#print axioms fixedFunCalibration
+#print axioms fixedOrdinaryBitEquations
+#print axioms fixedFullTupleEquation
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueStatementChecks

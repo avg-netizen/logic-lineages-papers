@@ -1408,6 +1408,9 @@ public import LogicLineages.ExternalCheckpoint20261102AX
 public import LogicLineages.OrdinalComparison.SourceAnnotationCodeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102AY
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryFunctionalValueStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102AZ
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
