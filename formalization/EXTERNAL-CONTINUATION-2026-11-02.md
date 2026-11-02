@@ -593,3 +593,9 @@ Four exact interfaces prove primitive-recursive raw-source single-binder zero de
 Six exact interfaces calibrate the literal ordinary root to the original packed embedding, retaining complete ordered arguments, their source types, plain children and observation/port/type provenance. Application has exactly two children, native constants have no base arguments, ranked symbols retain all arguments, and lambda/variable have no ordinary root. This is not spine normalization or rule adequacy.
 
 `ExternalCheckpoint20261102AX` verifies 268 permitted-axiom aliases across 60 components on an unchanged 889-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint51/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 52 — raw scalar annotation code
+
+Five exact interfaces encode literal scalar trees with complete raw operator source and whole-vector payloads. Typed erasure, repetition and single-head source/whole-vector ground closing are exactly calibrated to primitive-recursive numeric maps. Numeric partial evaluation, the original source builder and the full source-to-K pipeline remain separate.
+
+`ExternalCheckpoint20261102AY` verifies 273 permitted-axiom aliases across 61 components on an unchanged 896-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint52/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
