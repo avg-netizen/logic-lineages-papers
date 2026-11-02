@@ -723,3 +723,9 @@ Uniform primitive-recursive maps implement the exact heterogeneous private/share
 The concrete original variable action supplies actual value evaluation and full-list scanning with paired monotonicity/naturality certificates. Empty lists return the assigned value regardless of protection; protected nonempty spines return whole bottom, while unprotected spines perform one complete-list table application. No unary currying or complete interpretation is claimed.
 
 `ExternalCheckpoint20261102BR` verifies 377 permitted-axiom aliases across 82 components on an unchanged 1015-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint71/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.
+
+## Cumulative checkpoint 65 — guarded original-scale source compiler
+
+Given actual carrier records and explicit reserve bounds b at least four and c at least three times the list length plus four, primitive-recursive guarded caller and full-vector maps construct the literal original 2^b duplicate list and actual K code. Complete assignments, strict positive gap and head balance under all old/new valuations are proved without scale reset or enlargement. Final canonical-P obligations and the whole ground effectivity theorem remain separate.
+
+`ExternalCheckpoint20261102BS` verifies 381 permitted-axiom aliases across 83 components on an unchanged 1022-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint72/PUBLIC-VALIDATION.json). The register remains 149 checked, 2 inherited and 38 pending.

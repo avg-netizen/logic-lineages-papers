@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.OriginalScaleCompilerCodeTargets
+public import LogicLineages.OrdinalComparison.OriginalScaleCompilerCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode.StatementChecks
+theorem exact_caller_code : Targets.ExactCallerCode := Proof.exactCallerCode
+theorem exact_paid_list : Targets.ExactPaidList := Proof.exactPaidList
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_scaled_compiler : Targets.ActualScaledCompiler := Proof.actualScaledCompiler
+end LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.OriginalScaleCompilerCode
