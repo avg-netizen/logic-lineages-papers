@@ -1,0 +1,247 @@
+{
+  "actual_sha256": "ce6e79dd19ea03c0bc17f9d565c3bac20cd2884561e3b431e5b293c1fbb2b5b3",
+  "archive_hashes": [
+    "a414c221418a140dab8a75f4ae849477ae534b4bb5dadc84cf66c46aa273e79d  lean-setup-20261102/sources/mathlib-360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56.tar.gz",
+    "483df8bf23a4a21b46fb4350f73811ebf8718f13269167b79b338c9496af418a  lean-setup-20261102/sources/plausible-f3f26cc72646205ca167117487c008ee1dafe816.tar.gz",
+    "1a86db89a695849ce06590284e6b89c5f2353e3972e60b89b9fb4127e0cfff31  lean-setup-20261102/sources/LeanSearchClient-c5d5b8fe6e5158def25cd28eb94e4141ad97c843.tar.gz",
+    "c0e884a5c9315dd23efed5468df3c1e8865b7335552cb57dfc36259037ef8401  lean-setup-20261102/sources/importGraph-41f407a8e85b0fdc00910633a8f14754139b63f4.tar.gz",
+    "937e0eb7a8ba0cdffb4a3f79c55a8e2e26e5f2ae3bd73a2c3a801a37c619f09c  lean-setup-20261102/sources/proofwidgets-e6518a674e62de322b8f79eebeda7bcae2a36bc3.tar.gz",
+    "cabf0e0690744256eccbc2355c979d0dab697e9c57af5f98811af7ebe636076b  lean-setup-20261102/sources/aesop-b5b9e2bb45ce91e4bc44eaa738c3a8910404ab82.tar.gz",
+    "57ee17c4daef836181a35aca185d9ae68971067c160dc032be8895c5f68bbb9c  lean-setup-20261102/sources/Qq-7a62bd13860cd39ac98da16ffc8c24d601353f69.tar.gz",
+    "7c42f85d288d66a066eacb7f0b7fd23ddb3941f0497bd1cd5ff5839b765def0e  lean-setup-20261102/sources/batteries-954dbc9873f3b4534dc9896604593406d0383520.tar.gz",
+    "325c13ab9c497b04b8d34ea579664e6ef9f0174670f462d431a70731a1a7f8ee  lean-setup-20261102/sources/Cli-406ebb8c8e2f7e852a1b47764b42494022ce652c.tar.gz"
+  ],
+  "baseline": "df8b48e3c69469fbf8bc1becdedbd30e3f980d83",
+  "bootstrap_rows": [
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Cli.olean",
+        "formalization/.lake/packages/mathlib/Cache/Cli.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Cli.log",
+      "peak_rss_kib": 469904,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.30396922099998847
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Lean.olean",
+        "formalization/.lake/packages/mathlib/Cache/Lean.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Lean.log",
+      "peak_rss_kib": 538856,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.3031069080002453
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Batteries/Tactic/OpenPrivate.olean",
+        "formalization/.lake/packages/batteries/Batteries/Tactic/OpenPrivate.lean"
+      ],
+      "log": "external-setup/bootstrap-Batteries-Tactic-OpenPrivate.log",
+      "peak_rss_kib": 457736,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.7055542479997712
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/IO.olean",
+        "formalization/.lake/packages/mathlib/Cache/IO.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-IO.log",
+      "peak_rss_kib": 856116,
+      "reason": null,
+      "returncode": 0,
+      "wall": 1.3098852509997414
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Hashing.olean",
+        "formalization/.lake/packages/mathlib/Cache/Hashing.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Hashing.log",
+      "peak_rss_kib": 820984,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.6054391699999542
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Infra.olean",
+        "formalization/.lake/packages/mathlib/Cache/Infra.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Infra.log",
+      "peak_rss_kib": 482712,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.3037941379998301
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Requests.olean",
+        "formalization/.lake/packages/mathlib/Cache/Requests.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Requests.log",
+      "peak_rss_kib": 874264,
+      "reason": null,
+      "returncode": 0,
+      "wall": 2.0142455820000578
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Marker.olean",
+        "formalization/.lake/packages/mathlib/Cache/Marker.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Marker.log",
+      "peak_rss_kib": 798512,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.4042917390002003
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Query.olean",
+        "formalization/.lake/packages/mathlib/Cache/Query.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Query.log",
+      "peak_rss_kib": 810228,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.5055985049998526
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Warning.olean",
+        "formalization/.lake/packages/mathlib/Cache/Warning.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Warning.log",
+      "peak_rss_kib": 810600,
+      "reason": null,
+      "returncode": 0,
+      "wall": 0.5049720040001375
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "-o",
+        "external-setup/cache-bootstrap/Cache/Main.olean",
+        "formalization/.lake/packages/mathlib/Cache/Main.lean"
+      ],
+      "log": "external-setup/bootstrap-Cache-Main.log",
+      "peak_rss_kib": 829732,
+      "reason": null,
+      "returncode": 0,
+      "wall": 1.3095896419999917
+    },
+    {
+      "command": [
+        "lean",
+        "-M2048",
+        "-j1",
+        "--run",
+        "formalization/.lake/packages/mathlib/Cache/Main.lean",
+        "--repo=leanprover-community/mathlib4",
+        "--cache-from=master,legacy",
+        "get",
+        "Mathlib.Algebra.BigOperators.Fin",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic",
+        "Mathlib.Computability.Partrec",
+        "Mathlib.Computability.PartrecCode",
+        "Mathlib.Computability.Primrec",
+        "Mathlib.Computability.Primrec.Basic",
+        "Mathlib.Computability.Primrec.List",
+        "Mathlib.Data.Fin.VecNotation",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.Finsupp.Basic",
+        "Mathlib.Data.Finsupp.SMul",
+        "Mathlib.Data.Fintype.Fin",
+        "Mathlib.Data.List.GetD",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.List.Permutation",
+        "Mathlib.Data.Multiset.Basic",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Data.Nat.Factorial.Basic",
+        "Mathlib.Data.Nat.Pairing",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Order.Monotone.Basic",
+        "Mathlib.Order.Monotone.Defs",
+        "Mathlib.SetTheory.Cardinal.Finite",
+        "Mathlib.SetTheory.Cardinal.ToNat",
+        "Mathlib.SetTheory.Ordinal.CantorNormalForm",
+        "Mathlib.SetTheory.Ordinal.FixedPoint",
+        "Mathlib.SetTheory.Ordinal.Notation",
+        "Mathlib.SetTheory.Ordinal.Principal",
+        "Mathlib.Tactic.Abel",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.IntervalCases",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "log": "external-setup/cache-download-1793588776488059925.log",
+      "peak_rss_kib": 874608,
+      "reason": null,
+      "returncode": 0,
+      "wall": 17.763730843999838
+    }
+  ],
+  "manifest_sha256": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+  "observed_utc": "2026-11-02T03:08:51.204711+00:00",
+  "official_archive_url": "https://github.com/leanprover/lean4/releases/download/v4.32.0-rc1/lean-4.32.0-rc1-linux.tar.zst",
+  "official_digest": "sha256:ce6e79dd19ea03c0bc17f9d565c3bac20cd2884561e3b431e5b293c1fbb2b5b3",
+  "portable_export": {
+    "change": "Machine-local path redaction only; not a new freeze, run, or acceptance.",
+    "original_raw_sha256": "4a9a3a634336b204df590c0a6eefe4ee51a254cf556b759170e3b974fb3521f0"
+  },
+  "proof_acceptance": false,
+  "schema": "fresh-toolchain-setup-v1",
+  "toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "upstream_library_rebuild": false
+}
