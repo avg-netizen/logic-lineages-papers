@@ -629,3 +629,9 @@ Four exact interfaces provide primitive-recursive raw-source occurrence inspecti
 Six exact interfaces implement the original native/ranked precedence and all-child retyping with the same actual constructor family. Genuine finite child-type guards and exact Copy specifications are proved, together with joint family/full-input monotonicity and future projection. This is one marked weak contribution, not complete marked strictness, availability or the fixed-point operator.
 
 `ExternalCheckpoint20261102BD` verifies 298 permitted-axiom aliases across 66 components on an unchanged 923-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint57/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
+
+## Cumulative checkpoint 58 — marked Stat contribution
+
+Five exact interfaces prove actual base-list generalized strict matching monotonicity through occurrence-preserving permutations and splits, retaining nonempty removed witnesses. The same-state child calls retain extras. Exact head-equivalence/strict/child specifications and joint constructor-family/full-input monotonicity and projection are paid. Select, FAbs and the complete marked operator remain separate.
+
+`ExternalCheckpoint20261102BE` verifies 303 permitted-axiom aliases across 67 components on an unchanged 928-local-module closure. Root import inventory only, not a fresh full-root or CI pass. See [validation](verification/external-continuation-2026-11-02/checkpoint58/PUBLIC-VALIDATION.json). The stored register remains 137 checked, 2 inherited, 50 pending; eleven completed source results await registration.
