@@ -1,0 +1,9 @@
+# Numeric heterogeneous merge and literal unary chain
+
+Paper09 source-realization.tex177–190 uses one final lambda over a literal list of actual unary operators, with charged natural sum plus base1. The effective construction192–226 requires source-level copying and a common context, not arithmetic surrogate heads. This component transcribes the accepted HeterogeneousUnaryAssembly and SourceUnaryChain constructors exactly.
+
+Raw records retain each occurrence's private context type-code list, literal unary source and WHOLE vector. contextCode concatenates private prefixes while preserving a single shared suffix Γ. mergeData inserts the remaining private suffix below the head occurrence's own prefix, then shifts later records by that head prefix. It keeps order and duplicate occurrences, and does not identify private functional variables. ExactMergedPayloads calibrates context, total private length and every paired source/vector payload against the existing typed merge.
+
+bodyCode freshly weakens each input across the new ground binder and nests actual applications onto that binder. chainCode adds exactly one final ground lambda, including the empty-list identity case. ExactSingleLambda is literal code equality for arbitrary typed unary source lists, including operators with internal binders. The numeric context/merge/chain/full compiler maps are primitive recursive. compileCode obtains every final vector coordinate from the actual assignment compiler; malformed raw inputs may fail.
+
+ActualCompiledChain starts from given actual heterogeneous operators and proves literal compiled source/context/full-vector equality, actual assignment and the exact charged head sum for every common-unit ground valuation. It does not equate private scalar observations or extract operators from P. Final original-source extraction/replication and unchanged original-budget composition remain separate; no whole effective construction promotion yet.

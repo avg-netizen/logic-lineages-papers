@@ -1461,6 +1461,9 @@ public import LogicLineages.ExternalCheckpoint20261102BO
 public import LogicLineages.OrdinalComparison.TerminationOrdering.FullListValueApplicationStatementChecks
 public import LogicLineages.ExternalCheckpoint20261102BP
 
+public import LogicLineages.OrdinalComparison.NumericUnaryChainStatementChecks
+public import LogicLineages.ExternalCheckpoint20261102BQ
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
