@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.OriginalGroundCompilerCodeTargets
+public import LogicLineages.OrdinalComparison.OriginalGroundCompilerCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.OriginalGroundCompilerCode.StatementChecks
+theorem exact_record_packaging : Targets.ExactRecordPackaging := Proof.exactRecordPackaging
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_original_compiler : Targets.ActualOriginalCompiler := Proof.actualOriginalCompiler
+end LogicLineages.OrdinalComparison.Source.OriginalGroundCompilerCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.OriginalGroundCompilerCode

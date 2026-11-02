@@ -1,0 +1,27 @@
+# Original-budget ground-binder construction: whole-source review
+
+This review maps paper 09 `thm:ground-construction` (source-realization.tex192–226) to `OriginalGroundCompilerCode`. It is separate from frozen comparators and contains no machine-local verification records. Acceptance and registration remain the integrator/root's decisions.
+
+## Original domain and guards
+
+`ActualOriginalCompiler` quantifies every unchanged complete `TrackedSource.Expr` of ground result, with the printed tracked-activity hypothesis, and every actual caller in the old context. There is no supplied annotation, assignment success, reserve, child certificate, budget bound, or K. The caller's old context makes it free of the distinguished new tracked name while retaining all other shared names. The grammar includes arbitrary opaque tracked-free blocks whose **external** type has level at most one; their internal types and binders are unrestricted. Active applications retain the printed ground-argument restriction. Source construction never weakens that grammar to make a bound true.
+
+The raw algorithm checks that the body has ground type in the exact extended context and that its tracked free occurrence is present. The existing exact raw inspection proves both guards for every admitted source, including occurrences below every binder. Caller compilation checks its actual type against the tracked type and its positive curried-ground arity. The actual source checker and assignment compiler supply its complete vector. Lean's parameter `curriedGround(k+1)` denotes positive arity k+1 and is saturated by k zero applications; this is exactly the paper's positive-arity sigma_k saturated by k-1, reindexed rather than changed.
+
+## Clause-by-clause construction
+
+- **Actual original body and abstraction:** canonical raw annotation/account building produces the body's entire assigned vector and an ordered literal carrier record list. The theorem retains the actual full assignment of B=lambdaF.P, not a replacement observer or reset scalar. Canonical stopping is allowed; no false identity with the earlier ambiguous Expr-indexed builder is used.
+- **Reserve paid from the source:** actual source lower bounds apply to every Account. The canonical computed list is certified by the actual Account relation, so its finite c satisfies c>=3*length+4. Proof-only labels match the computed records in order; no existential proof is eliminated to choose runtime data.
+- **Original budget:** `OriginalBudgetCode` computes b from the original body's actual assigned scalar and proves it is the finite value of B's second field at every remaining valuation. The full untruncated original box coordinate two is literally that field, and b>=4 is derived. There is no enlarged or separately chosen budget.
+- **Original first field:** universal Account soundness and actual abstraction-field calibration identify B1 with the computed carrier natural sum plus ordinary finite c. This applies to the canonical account, not only a previously chosen witness.
+- **Actual carriers:** every computed record retains literal source and whole assignment, including scalar. Its two fresh/private functional slots remain distinct. Shared old names remain shared; heterogeneous merging uses the proved injective typed context embeddings, not equality of arbitrary private observations.
+- **Original caller:** the actual caller is saturated by the correct number of literal zero applications, retaining its complete assigned vector and first field. Its scalar is never reset and its old source captures are not silently closed.
+- **Literal scale and K:** precisely 2^b copies of each carrier occurrence, followed by 2^b copies of the actual saturated caller, enter the numeric heterogeneous merge. Order and duplicates remain. The result is the code of the existing one-final-lambda source constructor and its entire actual assigned vector in the explicit merged context, including the empty-list constructor semantics used by the general supplier.
+- **Positive finite gap:** the algorithm returns exactly 2^b*(c-3*length-3)-1. The already derived bounds justify natural subtraction and strict positivity. No gap premise is supplied.
+- **Original identity:** for every old ground valuation and every output-context ground valuation at common functional units, the theorem proves the original natural-product equation 2^b*(B1+C1)=K1+gap. Original B and C fields and the actual K assignment occur in the statement itself.
+
+## Effectivity and boundary
+
+`PrimitiveRecursiveAlgorithms` proves the **whole** guarded map primitive recursive on raw context/type/body/caller codes, not merely that its individual typed definitions are ordinary functions. The map constructs literal record lists, contexts, source code, whole vector, b and gap. Finite classification uses the proved closed-positive syntax evaluator; there is no ordinal oracle, assumed variable-iteration primitive, choice-based extraction, or missing supplier argument. Exponential replication may be enormous; no feasible complexity bound is asserted. Malformed inputs may fail and are not claimed valid.
+
+No unpaid clause of `thm:ground-construction` is identified in this mapping, subject to the final independent source/closure/axiom validation. The later whole-head graph consumer, finite-prefix graph formula compilation, functional/control hardness and external undecidability suppliers remain separate. This review does not promote those results or weaken paper 08's source-control restrictions.
