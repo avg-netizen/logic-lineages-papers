@@ -1,0 +1,47 @@
+module
+public import LogicLineages.ExternalCheckpoint20261103A
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectionStatementChecks
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ExternalCheckpoint20261103B
+
+theorem fixed_001_fixedActualRenaming : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualRenaming :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_001_fixedActualRenaming
+
+theorem fixed_002_fixedActualArgumentRenaming : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualArgumentRenaming :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_002_fixedActualArgumentRenaming
+
+theorem fixed_003_fixedActualSubstitution : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualSubstitution :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_003_fixedActualSubstitution
+
+theorem fixed_004_fixedActualArgumentSubstitution : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualArgumentSubstitution :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_004_fixedActualArgumentSubstitution
+
+theorem fixed_005_fixedActualFiniteMark : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualFiniteMark :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_005_fixedActualFiniteMark
+
+theorem fixed_006_fixedActualBeta : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualBeta :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_006_fixedActualBeta
+
+theorem fixed_007_fixedActualOpenedNumbered : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualOpenedNumbered :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_007_fixedActualOpenedNumbered
+
+theorem fixed_008_fixedActualSelfArguments : LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets.ActualSelfArguments :=
+  LogicLineages.ExternalCheckpoint20261103A.fixed_008_fixedActualSelfArguments
+
+theorem fixed_009_actual_key_identity : LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.Targets.ActualKeyIdentity :=
+  LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.StatementChecks.actual_key_identity
+
+theorem fixed_010_literal_collected_support : LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.Targets.LiteralCollectedSupport :=
+  LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.StatementChecks.literal_collected_support
+
+theorem fixed_011_exact_collected_value : LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.Targets.ExactCollectedValue :=
+  LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.StatementChecks.exact_collected_value
+
+theorem fixed_012_original_threshold_budget : LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.Targets.OriginalThresholdBudget :=
+  LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.StatementChecks.original_threshold_budget
+
+end LogicLineages.ExternalCheckpoint20261103B
+
+#audit_namespace LogicLineages.ExternalCheckpoint20261103B

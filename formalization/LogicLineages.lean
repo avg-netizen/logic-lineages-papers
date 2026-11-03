@@ -1688,6 +1688,9 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulAppl
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103A
 
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectionStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103B
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
