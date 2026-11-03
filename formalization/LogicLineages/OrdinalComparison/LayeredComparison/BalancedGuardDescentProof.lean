@@ -1,0 +1,4 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescentSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescentCodeProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescentProgramsProof

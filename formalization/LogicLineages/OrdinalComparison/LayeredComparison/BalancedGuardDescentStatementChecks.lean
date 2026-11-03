@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescentTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescentProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescent.StatementChecks
+theorem exact_guard_translation : Targets.ExactGuardTranslation := Proof.exactGuardTranslation
+theorem actual_source_descent : Targets.ActualSourceDescent := Proof.actualSourceDescent
+theorem exact_postfix_substitution : Targets.ExactPostfixSubstitution := Proof.exactPostfixSubstitution
+theorem exact_actual_calls_and_descent : Targets.ExactActualCallsAndDescent :=
+  Proof.exactActualCallsAndDescent
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescent.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescent
