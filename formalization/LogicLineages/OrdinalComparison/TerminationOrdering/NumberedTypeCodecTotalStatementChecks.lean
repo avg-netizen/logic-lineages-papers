@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypeCodecTotalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypeCodecTotalStatementChecks
+theorem fixedActualTypeParserTotal : NumberedTypeCodecTotalTargets.ActualTypeParserTotal := NumberedTypeCodecTotalProof.typeParserTotal
+#print axioms fixedActualTypeParserTotal
+theorem fixedActualTypeDecoderTotal : NumberedTypeCodecTotalTargets.ActualTypeDecoderTotal := NumberedTypeCodecTotalProof.typeDecoderTotal
+#print axioms fixedActualTypeDecoderTotal
+theorem fixedActualTypeCodeBijection : NumberedTypeCodecTotalTargets.ActualTypeCodeBijection := NumberedTypeCodecTotalProof.typeCodeBijection
+#print axioms fixedActualTypeCodeBijection
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypeCodecTotalStatementChecks
