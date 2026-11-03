@@ -1,0 +1,7 @@
+# Complete numbered application in the fixed window
+
+Source: paper06 arithmetic simulation proof, lines 638–645. A finite numbered functional source consumes each supplied auxiliary argument by creating one abstraction and beta-contracting it, appending that argument and spending one label. This component reconstructs the actual restricted path, rather than inferring it backwards from raw erasure.
+
+The three targets prove the actual WindowStep opened beta rule; preservation of the exact path count while applying a complete auxiliary argument list on the function side; and the full numbered tuple path with exactly twice the supplied list length genuine steps, initial label n+length, final label n, and the literal original extras concatenated with every supplied argument in order. The empty case is a zero-step primary reflexivity. No positive application-argument lift is used.
+
+The already accepted openedBetaBody, tuple associativity and tuple right-unit equalities are reused as exact syntax identities. This does not assert currying of original special application or cover its protected original variable/lambda spine. Actual original-spine restricted certificates and complete comparison simulation coverage remain pending. If the initial path state is confined, accepted WindowTraces all-boundary preservation applies. No whole source statement is promoted. Root reviewed the exact three targets before candidate authoring.

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowApplicationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowApplicationStatementChecks
+
+theorem fixedActualOpenNumberedBeta : NumberedWindowApplicationTargets.ActualOpenNumberedBeta := NumberedWindowApplicationProof.openNumberedBeta
+theorem fixedActualCompleteFunctionContext : NumberedWindowApplicationTargets.ActualCompleteFunctionContext := NumberedWindowApplicationProof.completeFunctionContext
+theorem fixedActualNumberedWholeTuple : NumberedWindowApplicationTargets.ActualNumberedWholeTuple := NumberedWindowApplicationProof.numberedWholeTuple
+#print axioms fixedActualOpenNumberedBeta
+#print axioms fixedActualCompleteFunctionContext
+#print axioms fixedActualNumberedWholeTuple
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowApplicationStatementChecks
