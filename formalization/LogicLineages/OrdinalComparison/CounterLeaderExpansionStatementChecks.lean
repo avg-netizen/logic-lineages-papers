@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterLeaderExpansionTargets
+public import LogicLineages.OrdinalComparison.CounterLeaderExpansionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterLeaderExpansion.StatementChecks
+theorem exact_entry_domains : Targets.ExactEntryDomains := Proof.exactEntryDomains
+theorem exact_counter_leader_identity : Targets.ExactCounterLeaderIdentity := Proof.exactCounterLeaderIdentity
+end LogicLineages.OrdinalComparison.CounterLeaderExpansion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterLeaderExpansion
