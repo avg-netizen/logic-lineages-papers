@@ -1805,6 +1805,9 @@ public import LogicLineages.ExternalCheckpoint20261103AM
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkCertificateStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AN
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetCertificateStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AO
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
