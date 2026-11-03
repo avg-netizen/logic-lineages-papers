@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineCodeTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineCode.StatementChecks
+theorem exact_literal_operations : Targets.ExactLiteralOperations := Proof.exactLiteralOperations
+theorem exact_finite_combination : Targets.ExactFiniteCombination := Proof.exactFiniteCombination
+theorem exact_actual_lower_and_inputs : Targets.ExactActualLowerAndInputs := Proof.exactActualLowerAndInputs
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineCode
