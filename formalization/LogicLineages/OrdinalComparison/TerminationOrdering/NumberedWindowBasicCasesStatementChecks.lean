@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowBasicCasesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowBasicCasesStatementChecks
+theorem fixedActualVariable : NumberedWindowBasicCasesTargets.ActualVariable := NumberedWindowBasicCasesProof.varCase
+#print axioms fixedActualVariable
+theorem fixedActualAbstraction : NumberedWindowBasicCasesTargets.ActualAbstraction := NumberedWindowBasicCasesProof.absCase
+#print axioms fixedActualAbstraction
+theorem fixedActualFunction : NumberedWindowBasicCasesTargets.ActualFunction := NumberedWindowBasicCasesProof.funCase
+#print axioms fixedActualFunction
+theorem fixedActualPut : NumberedWindowBasicCasesTargets.ActualPut := NumberedWindowBasicCasesProof.putCase
+#print axioms fixedActualPut
+theorem fixedActualStatus : NumberedWindowBasicCasesTargets.ActualStatus := NumberedWindowBasicCasesProof.statCase
+#print axioms fixedActualStatus
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowBasicCasesStatementChecks
