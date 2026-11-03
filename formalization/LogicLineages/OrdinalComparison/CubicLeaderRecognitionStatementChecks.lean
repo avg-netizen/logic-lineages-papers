@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CubicLeaderRecognitionTargets
+public import LogicLineages.OrdinalComparison.CubicLeaderRecognitionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CubicLeaderRecognition.StatementChecks
+theorem actual_cubic_pair_recognition : Targets.ActualCubicPairRecognition := Proof.actualCubicPairRecognition
+theorem actual_leader_recognition : Targets.ActualLeaderRecognition := Proof.actualLeaderRecognition
+end LogicLineages.OrdinalComparison.CubicLeaderRecognition.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CubicLeaderRecognition
