@@ -1925,6 +1925,9 @@ public import LogicLineages.ExternalCheckpoint20261103CA
 public import LogicLineages.OrdinalComparison.WholeScheduledCountStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103CB
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadSignaturePrimrecStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103CC
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
