@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompilerTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompilerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompiler.StatementChecks
+theorem exact_typed_code_calibration : Targets.ExactTypedCodeCalibration := Proof.exactTypedCodeCalibration
+theorem original_support_containment : Targets.OriginalSupportContainment := Proof.originalSupportContainment
+theorem actual_sign_semantics : Targets.ActualSignSemantics := Proof.actualSignSemantics
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompiler.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompiler

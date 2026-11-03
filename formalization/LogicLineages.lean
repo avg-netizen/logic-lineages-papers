@@ -1784,6 +1784,9 @@ public import LogicLineages.ExternalCheckpoint20261103AF
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AG
 
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompilerStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AH
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
