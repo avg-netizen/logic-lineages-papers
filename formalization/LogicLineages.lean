@@ -1724,6 +1724,9 @@ public import LogicLineages.ExternalCheckpoint20261103L
 public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103M
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowListCasesStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103N
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
