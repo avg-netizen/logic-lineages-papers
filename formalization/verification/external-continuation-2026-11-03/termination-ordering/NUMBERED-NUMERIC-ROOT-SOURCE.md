@@ -1,0 +1,7 @@
+# Uniform numeric certificates for actual root rules
+
+The uniform selector covers precisely seven root rules: Put(label), Abs, beta, bottom, Select(full type-list code and occurrence index), Copy(literal head code), and Mul(literal multiset certificate code). Its decoder uses the accepted actual partial decoders; the dedicated roundtrip target must derive completeness from their real inverses, not assumed encoding surjectivity. Unit-payload direct tags require zero and unsupported tags fail.
+
+The typed checker composes the accepted exact checkers. The root relation is instantiated with the explicit finite Boolean precedence table interpreted by tableAbove f g iff table f g=true, with no transitivity or well-foundedness assumption. The numeric wrapper validates only initial source universe membership, decodes the actual typed target and selector, and runs the typed checker. Exact numeric endpoint codes are required by its equivalence target. Target universe is derived under explicit SubtypeClosed using the actual root erasure and step preservation theorem.
+
+Four targets cover literal selector roundtrip, exact typed selector existence iff RootInstance, exact numeric certificate existence with source confinement/codes, and actual step soundness with both endpoints confined. Root coverage is complete but recursive context-path traversal is not present. This is not a full WindowStep certificate checker, arithmetic representation or accessibility theorem, and does not modify the local ordering/transitivity obstruction.
