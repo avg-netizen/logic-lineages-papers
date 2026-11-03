@@ -6,6 +6,14 @@ This continuation starts from merged main commit `60f5dd4955aa974068e0a81da3edf0
 
 The finite ordinary transitivity obstruction recorded in the merged source is retained. No source rules are silently strengthened or repaired, and no stable-pair theorem is inferred.
 
+## Paper08 source-convention issue: displayed degree-two count
+
+The literal whole-current-suffix reading of paper08 lines239–242 is incompatible with its displayed `lem:kernel-recursion` degree-two count formula. At retained mass1, for **every original input t≥4**, the independently defined whole-state process with the original time-indexed budget `Phi^[i+1](t)−1` has count strictly greater than `Phi(t)/2`. There is no eventual input tail on which that displayed equality holds under this interpretation. The unchanged companion paper07 limit-part count equals `Phi(t)/2` on the same inputs. Both processes terminate by proved ordinal descent; this is a symbolic all-input result, not a finite computation.
+
+The exact comparison is checked by `KernelQuadraticSourceComparisonStatementChecks`; see its [source correspondence](layered-comparison/KernelQuadraticSourceComparison-SOURCE-CORRESPONDENCE.md). The earlier finite-kernel source-control record and counter suppliers concern the companion limit-part convention. Their degree-two validity statements must be read with that qualification, not as literal whole-state correspondence. This issue is separate from the previously recorded negative signed-child domain obstruction.
+
+Neither manuscript is changed. No intended wording or unique repair is inferred, and no rank-at-least-three counter theorem is refuted by this diagnostic. `lem:kernel-recursion` and `lem:counter` remain pending; the statement register and all proof statuses are unchanged.
+
 ## New checked components
 
 - **NumberedUniverseBinding: eight fixed targets.** Actual auxiliary term/argument renaming and capture-avoiding substitution confinement, successful finite marking, beta substitution, subtype-derived opening, and complete self-argument construction. Used-type substitution range and explicit subtype/membership premises remain visible. This is not full chosen-trace confinement, a quotient construction, arithmetic simulation, or stable-pair completion. See [source correspondence](termination-ordering/NUMBERED-UNIVERSE-BINDING-SOURCE.md).
