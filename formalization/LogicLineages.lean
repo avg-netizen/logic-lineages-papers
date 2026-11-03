@@ -1838,6 +1838,9 @@ public import LogicLineages.ExternalCheckpoint20261103AX
 public import LogicLineages.OrdinalComparison.CounterLeaderExpansionStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AY
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRootDecompositionStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AZ
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
