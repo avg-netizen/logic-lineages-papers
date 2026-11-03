@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuelProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks
+open Targets Proof
+
+theorem certificateFuelMonotonicity_exact : CertificateFuelMonotonicity := certificateFuelMonotonicity
+theorem modusPonensMaxFuel_exact : ModusPonensMaxFuel := modusPonensMaxFuel
+theorem target_exact : Target := ⟨certificateFuelMonotonicity, modusPonensMaxFuel⟩
+
+end LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks

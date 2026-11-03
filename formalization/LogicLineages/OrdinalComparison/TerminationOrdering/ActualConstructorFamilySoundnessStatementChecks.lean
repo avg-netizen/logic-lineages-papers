@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualConstructorFamilySoundnessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualConstructorFamilySoundnessStatementChecks
+
+theorem fixedOperatorPreservation : ActualConstructorFamilySoundnessTargets.OperatorPreservation := ActualConstructorFamilySoundnessProof.operatorPreservation
+
+theorem fixedActualIteratesSound : ActualConstructorFamilySoundnessTargets.ActualIteratesSound := ActualConstructorFamilySoundnessProof.actualIteratesSound
+
+theorem fixedActualLimitSound : ActualConstructorFamilySoundnessTargets.ActualLimitSound := ActualConstructorFamilySoundnessProof.actualLimitSound
+
+#print axioms fixedOperatorPreservation
+#print axioms fixedActualIteratesSound
+#print axioms fixedActualLimitSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualConstructorFamilySoundnessStatementChecks

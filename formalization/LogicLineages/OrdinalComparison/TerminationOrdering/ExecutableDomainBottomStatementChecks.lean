@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomStatementChecks
+
+theorem fixedEnumerated : ExecutableDomainBottomTargets.Enumerated := ExecutableDomainBottomProof.enumerated
+theorem fixedLeast : ExecutableDomainBottomTargets.Least := ExecutableDomainBottomProof.least
+theorem fixedUniqueLeast : ExecutableDomainBottomTargets.UniqueLeast := ExecutableDomainBottomProof.uniqueLeast
+theorem fixedWeakeningBottom : ExecutableDomainBottomTargets.WeakeningBottom := ExecutableDomainBottomProof.weakeningBottom
+theorem fixedAllBitsFalse : ExecutableDomainBottomTargets.AllBitsFalse := ExecutableDomainBottomProof.allBitsFalse
+theorem fixedAllTablesBottom : ExecutableDomainBottomTargets.AllTablesBottom := ExecutableDomainBottomProof.allTablesBottom
+
+#print axioms fixedEnumerated
+#print axioms fixedLeast
+#print axioms fixedUniqueLeast
+#print axioms fixedWeakeningBottom
+#print axioms fixedAllBitsFalse
+#print axioms fixedAllTablesBottom
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ExecutableDomainBottomStatementChecks

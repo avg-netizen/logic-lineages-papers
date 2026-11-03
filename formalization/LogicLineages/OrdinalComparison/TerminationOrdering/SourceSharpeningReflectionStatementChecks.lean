@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionStatementChecks
+theorem fixedUnmarkedIdentity : SourceSharpeningReflectionTargets.UnmarkedIdentity := SourceSharpeningReflectionProof.unmarkedIdentity
+theorem fixedMarkabilityReflection : SourceSharpeningReflectionTargets.MarkabilityReflection := SourceSharpeningReflectionProof.markabilityReflection
+#print axioms fixedUnmarkedIdentity
+#print axioms fixedMarkabilityReflection
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionStatementChecks

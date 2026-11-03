@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesStatementChecks
+
+theorem fixedLiteralHeadCalibration : FiniteQueryPrimitivesTargets.LiteralHeadCalibration := FiniteQueryPrimitivesProof.literalHeadCalibration
+theorem fixedInitialFrame : FiniteQueryPrimitivesTargets.InitialFrame := FiniteQueryPrimitivesProof.initialFrame
+theorem fixedEverySelectAttemptClosure : FiniteQueryPrimitivesTargets.EverySelectAttemptClosure := FiniteQueryPrimitivesProof.everySelectAttemptClosure
+
+#print axioms fixedLiteralHeadCalibration
+#print axioms fixedInitialFrame
+#print axioms fixedEverySelectAttemptClosure
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesStatementChecks

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.CopyStatStageSoundnessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.CopyStatStageSoundnessStatementChecks
+
+theorem fixedCopySound : CopyStatStageSoundnessTargets.CopySound := CopyStatStageSoundnessProof.copySound
+
+theorem fixedStatSound : CopyStatStageSoundnessTargets.StatSound := CopyStatStageSoundnessProof.statSound
+
+#print axioms fixedCopySound
+#print axioms fixedStatSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.CopyStatStageSoundnessStatementChecks

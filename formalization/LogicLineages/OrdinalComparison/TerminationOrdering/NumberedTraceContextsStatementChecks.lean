@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks
+theorem fixedActualTypedPresentation : NumberedTraceContextsTargets.ActualTypedPresentation := NumberedTraceContextsProof.typedPresentation
+theorem fixedActualLambdaContext : NumberedTraceContextsTargets.ActualLambdaContext := NumberedTraceContextsProof.lambdaContext
+theorem fixedActualFunctionContext : NumberedTraceContextsTargets.ActualFunctionContext := NumberedTraceContextsProof.functionContext
+theorem fixedActualTupleCons : NumberedTraceContextsTargets.ActualTupleCons := NumberedTraceContextsProof.tupleCons
+theorem fixedActualOrdinaryContext : NumberedTraceContextsTargets.ActualOrdinaryContext := NumberedTraceContextsProof.ordinaryContext
+theorem fixedActualNumberedBaseContext : NumberedTraceContextsTargets.ActualNumberedBaseContext := NumberedTraceContextsProof.numberedBaseContext
+theorem fixedActualNumberedExtrasContext : NumberedTraceContextsTargets.ActualNumberedExtrasContext := NumberedTraceContextsProof.numberedExtrasContext
+#print axioms fixedActualTypedPresentation
+#print axioms fixedActualLambdaContext
+#print axioms fixedActualFunctionContext
+#print axioms fixedActualTupleCons
+#print axioms fixedActualOrdinaryContext
+#print axioms fixedActualNumberedBaseContext
+#print axioms fixedActualNumberedExtrasContext
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TrackedSourceInspectionCodeTargets
+public import LogicLineages.OrdinalComparison.TrackedSourceInspectionCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode.StatementChecks
+theorem exact_free_occurrence : Targets.ExactFreeOccurrence := Proof.exactFreeOccurrence
+theorem exact_arity : Targets.ExactArity := Proof.exactArity
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_grammar_inspection : Targets.ActualGrammarInspection := Proof.actualGrammarInspection
+end LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.TrackedSourceInspectionCode

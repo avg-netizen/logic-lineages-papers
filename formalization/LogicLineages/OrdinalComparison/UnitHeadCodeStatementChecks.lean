@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitHeadCodeTargets
+public import LogicLineages.OrdinalComparison.UnitHeadCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitHeadCode.StatementChecks
+theorem exact_raw_unit_extraction : Targets.ExactRawUnitExtraction := Proof.exactRawUnitExtraction
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_positive_classification : Targets.ActualPositiveClassification := Proof.actualPositiveClassification
+end LogicLineages.OrdinalComparison.Source.UnitHeadCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitHeadCode

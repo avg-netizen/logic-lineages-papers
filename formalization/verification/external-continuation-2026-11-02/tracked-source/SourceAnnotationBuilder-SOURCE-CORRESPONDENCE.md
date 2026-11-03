@@ -1,0 +1,9 @@
+# Constructive actual-source annotation builder
+
+Paper09 `source-realization.tex`, unchanged complete grammar69–81, actual ground-binder construction93–109 and retained annotated scalar copies/ground transforms128–175. This component is an ordinary structural data algorithm, not yet a numeric-code computability theorem or effective carrier-accounting compiler.
+
+`build` recursively consumes every TrackedSource.Expr and returns Option(full actual vector, raw operator-data tree). Opaque F-free blocks use the actual assignment and remain whole free stops; their arbitrary internal types/lambdas/recursors/captured ground names are unchanged. Application stores the literal operator source together with its whole child vector. Ground lambda uses the actual abstraction, deterministic groundPartial on data, exact FULL-vector factor 2*sum_i partialSize(u_i), the literal copied data tree and retained closeTree. There is no Classical.choose, existential-witness extraction or semantic head oracle in these definitions.
+
+The main target derives producer success, exact original assignment, scalar erasure equality, and Valid data UNCONDITIONALLY for every unchanged grammar member. Thus Valid is discharged here rather than assumed as an extra source-domain restriction. Repeat zero is only a syntax totalization; actual lambda factors are positive and this is proved from the actual full vector.
+
+The deterministic selected-operator list stops at actual whole F-free pieces, descends scalar sums/tails only, and preserves duplicate occurrences/order. Its emitted head list equals an independently defined raw scalar traversal, and every record contains an actual source/full assignment and the proved additive head tree. This does not yet test finite/nonfinite head values or build carriers; numeric evaluation, source codecs and uniform computability remain separate obligations.

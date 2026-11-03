@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.CommonHeadLargeRowTargets
+public import LogicLineages.OrdinalComparison.CommonHeadLargeRowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CommonHeadLargeRow.StatementChecks
+theorem numerical_dominance : Targets.NumericalDominance := Proof.numericalDominance
+theorem actual_head_dominance : Targets.ActualHeadDominance := Proof.actualHeadDominance
+end LogicLineages.OrdinalComparison.CommonHeadLargeRow.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.CommonHeadLargeRow

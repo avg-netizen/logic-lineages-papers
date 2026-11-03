@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgramProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgram.StatementChecks
+theorem finite_call_equation:Targets.ExactFiniteCallEquation:=Proof.finiteCallEquation
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgram.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgram.StatementChecks

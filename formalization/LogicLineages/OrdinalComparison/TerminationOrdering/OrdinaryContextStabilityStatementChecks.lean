@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityStatementChecks
+theorem fixedWeakContextClosure : OrdinaryContextStabilityTargets.WeakContextClosure := OrdinaryContextStabilityProof.weakContextClosure
+theorem fixedBothConfinedContextClosure : OrdinaryContextStabilityTargets.BothConfinedContextClosure := OrdinaryContextStabilityProof.bothConfinedContextClosure
+#print axioms fixedWeakContextClosure
+#print axioms fixedBothConfinedContextClosure
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityStatementChecks

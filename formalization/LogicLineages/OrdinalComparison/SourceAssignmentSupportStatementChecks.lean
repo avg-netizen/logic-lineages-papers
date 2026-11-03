@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceAssignmentSupportTargets
+public import LogicLineages.OrdinalComparison.SourceAssignmentSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.AssignmentSupport.StatementChecks
+theorem exact_head_closure_names : Targets.ExactHeadClosureNames := Proof.exactHeadClosureNames
+theorem actual_partial_no_new_names : Targets.ActualPartialSupport := Proof.actualPartialSupport
+theorem full_actual_assignment_names : Targets.FullActualAssignmentSupport := Proof.fullActualAssignmentSupport
+theorem actual_tracked_inactive : Targets.ActualTrackedInactive := Proof.actualTrackedInactive
+end LogicLineages.OrdinalComparison.Source.AssignmentSupport.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.AssignmentSupport

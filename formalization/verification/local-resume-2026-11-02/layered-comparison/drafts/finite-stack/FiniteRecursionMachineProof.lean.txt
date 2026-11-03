@@ -1,0 +1,75 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.Proof
+
+private theorem computable_list_cases {X Y Z:Type} [Primcodable X] [Primcodable Y] [Primcodable Z]
+    {xs:X→List Y} {nilCase:X→Z} {consCase:X→Y×List Y→Z}
+    (hx:Computable xs) (hn:Computable nilCase) (hc:Computable₂ consCase) :
+    Computable (fun x=>List.casesOn (xs x) (nilCase x) (fun y ys=>consCase x (y,ys))) := by
+  have hh:Computable₂ (fun x y=>consCase x (y,(xs x).tail)):=
+    hc.comp Computable.fst (Computable.snd.pair (Primrec.list_tail.to_comp.comp (hx.comp Computable.fst)))
+  apply (Computable.option_casesOn (Primrec.list_head?.to_comp.comp hx) hn hh).of_eq
+  intro x
+  cases xs x <;> rfl
+
+private def finish {A B:Type} (value:B):Stack A B→B⊕Stack A B
+  | []=>.inl value
+  | (a,done,pending)::rest=>.inr ((a,value::done,pending)::rest)
+
+private theorem finish_computable (A B:Type) [Primcodable A] [Primcodable B] :
+    Computable₂ (finish (A:=A) (B:=B)) := by
+  let D:=(B×Stack A B)×(Frame A B×Stack A B)
+  have ha:Computable (fun p:D=>p.2.1.1):=Computable.fst.comp (Computable.fst.comp Computable.snd)
+  have hd:Computable (fun p:D=>p.2.1.2.1):=Computable.fst.comp (Computable.snd.comp (Computable.fst.comp Computable.snd))
+  have hp:Computable (fun p:D=>p.2.1.2.2):=Computable.snd.comp (Computable.snd.comp (Computable.fst.comp Computable.snd))
+  have hv:Computable (fun p:D=>p.1.1):=Computable.fst.comp Computable.fst
+  have hr:Computable (fun p:D=>p.2.2):=Computable.snd.comp Computable.snd
+  have hframe:=ha.pair ((Primrec.list_cons.to_comp.comp hv hd).pair hp)
+  have hcons:=Computable.sumInr.comp (Primrec.list_cons.to_comp.comp hframe hr)
+  apply (computable_list_cases (xs:=fun p:B×Stack A B=>p.2) Computable.snd
+    (Computable.sumInl.comp Computable.fst) hcons).of_eq
+  intro p
+  cases p.2 <;> rfl
+
+theorem step_computable (A B:Type) [Primcodable A] [Primcodable B] [Inhabited B]
+    (children:A→List A) (assemble:A→List B→B) (hc:Computable children) (ha:Computable₂ assemble) :
+    Computable (step children assemble) := by
+  let D:=Stack A B×(Frame A B×Stack A B)
+  let E:=D×(A×List A)
+  have hA:Computable (fun p:D=>p.2.1.1):=Computable.fst.comp (Computable.fst.comp Computable.snd)
+  have hDone:Computable (fun p:D=>p.2.1.2.1):=Computable.fst.comp (Computable.snd.comp (Computable.fst.comp Computable.snd))
+  have hPending:Computable (fun p:D=>p.2.1.2.2):=Computable.snd.comp (Computable.snd.comp (Computable.fst.comp Computable.snd))
+  have hRest:Computable (fun p:D=>p.2.2):=Computable.snd.comp Computable.snd
+  have hValue:Computable (fun p:D=>assemble p.2.1.1 p.2.1.2.1.reverse):=
+    ha.comp hA (Primrec.list_reverse.to_comp.comp hDone)
+  have hReturn:Computable (fun p:D=>finish (assemble p.2.1.1 p.2.1.2.1.reverse) p.2.2):=
+    (finish_computable A B).comp hValue hRest
+  have hb:Computable (fun p:E=>p.2.1):=Computable.fst.comp Computable.snd
+  have hp:Computable (fun p:E=>p.2.2):=Computable.snd.comp Computable.snd
+  have hChild:=hb.pair ((Computable.const ([]:List B)).pair (hc.comp hb))
+  have hParent:Computable (fun p:E=>(p.1.2.1.1,p.1.2.1.2.1,p.2.2)):=
+    (hA.comp Computable.fst).pair ((hDone.comp Computable.fst).pair hp)
+  have hCall:Computable (fun p:E=>Sum.inr
+      ((p.2.1,[],children p.2.1)::(p.1.2.1.1,p.1.2.1.2.1,p.2.2)::p.1.2.2)):=
+    Computable.sumInr.comp (Primrec.list_cons.to_comp.comp hChild
+      (Primrec.list_cons.to_comp.comp hParent (hRest.comp Computable.fst)))
+  have hNonempty:=computable_list_cases hPending hReturn hCall
+  apply (computable_list_cases (xs:=fun s:Stack A B=>s) Computable.id
+    (Computable.const (Sum.inl (default:B))) hNonempty).of_eq
+  intro stack
+  cases stack with
+  | nil=>rfl
+  | cons a rest=>
+    rcases a with ⟨a,done,pending⟩
+    cases pending <;> cases rest <;> rfl
+
+theorem stackProgram : Targets.StackProgram := by
+  intro A B _ _ _ children assemble hc ha
+  have hs:Partrec (fun s:Stack A B=>Part.some (step children assemble s)):=
+    (step_computable A B children assemble hc ha).partrec
+  have hi:Computable (fun a:A=>[(a,[],children a)]):=
+    Primrec.list_cons.to_comp.comp
+      (Computable.id.pair ((Computable.const ([]:List B)).pair hc)) (Computable.const [])
+  exact (Partrec.fix hs).comp hi
+end LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.Proof

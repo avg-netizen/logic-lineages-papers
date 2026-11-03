@@ -1,0 +1,2336 @@
+{
+  "checkpoint": "Local sole-independent source06 continuation, 2 November 2026",
+  "baseline": "032b39e / external checkpoint117",
+  "accepted": [
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsStatementChecks.fixedWeakening",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsStatementChecks.fixedExtension",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsStatementChecks.fixedFreshOpening"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsTargets.Weakening",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsTargets.Extension",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsTargets.FreshOpening"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RelatedEnvironments-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793653938428056484-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793653938428056484-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelatedEnvironmentsStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelatedEnvironmentsDefinitions.lean",
+          "sha256": "016598845474dc3250db102b4408e80d208eeb5ae23f0d22a4a0cbd5d2ec21c0"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelatedEnvironmentsProof.lean",
+          "sha256": "f99e68685b92ff8af7c038699d607393c126ebeae92325026269f0e8c0a8fd69"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelatedEnvironmentsStatementChecks.lean",
+          "sha256": "2cf9902c25406152f0f8491e9ddd1fadbb336980f105113805a94e39206ea5ea"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelatedEnvironmentsTargets.lean",
+          "sha256": "6e243a7d495d557581bf1231b1289fe594119373fa07a9b30fd4c203a4176a1d"
+        }
+      ],
+      "source_scope": "Source06 lem:adequacy lambda/fundamental prerequisite: actual pointwise relational environments under future weakening, explicit binder extension, actual finite fresh-port opening/liftSubstitution. No equality-to-interpreted-substitution, callback IH, full fundamental or numbered-source completion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedLiteralMask",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedOldNameLift",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedClosingOldName",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedRaisedSourceClosing",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedRaisedSourceApplication",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedOriginalVariableBlocked",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks.fixedLiteralBinderStep"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.LiteralMask",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.OldNameLift",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.ClosingOldName",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.RaisedSourceClosing",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.RaisedSourceApplication",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.OriginalVariableBlocked",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixTargets.LiteralBinderStep"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/ProtectedPrefix-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793654115147041934-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793654115147041934-2-LogicLineages-OrdinalComparison-TerminationOrdering-ProtectedPrefixStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedPrefixDefinitions.lean",
+          "sha256": "53c1bc31dfa45270a151c11792e5db34282ea69e825835d179e7738eb61dbe27"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedPrefixProof.lean",
+          "sha256": "4a74bd85d1f9200d219ae5d6cc46a3b1281179340294e6b7f9ec2f8839ee1454"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedPrefixStatementChecks.lean",
+          "sha256": "9311a9df1c7d65012455d339de3892e243669c484ba0f5713170dd6525a2ae19"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedPrefixTargets.lean",
+          "sha256": "8a0bd039e780860da61448bc28da64cb528eb5bf734db2ac8c4b2c20a7406293"
+        }
+      ],
+      "source_scope": "Actual source06 protected-prefix syntax frame: old-free lift/closing/whole simultaneous application, blocked original bound variables, literal binder-consumption step and exact prefix mask. This preserves original binder provenance BEFORE substitution; no mask irrelevance, unary currying, scanner IH or fundamental theorem is assumed/promoted.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks.fixedConsumedBinderEnvironment",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks.fixedEmptyTuple",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks.fixedLiteralPrefixEquation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks.fixedInitialOriginalEquation"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyTargets.ConsumedBinderEnvironment",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyTargets.EmptyTuple",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyTargets.LiteralPrefixEquation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyTargets.InitialOriginalEquation"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/ProtectedApply-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793654555461476599-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793654555461476599-2-LogicLineages-OrdinalComparison-TerminationOrdering-ProtectedApplyStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedApplyBindingProof.lean",
+          "sha256": "8f8b969f4eda3b7cd673c6518781c2c78546afeede422bba1607633b06337f0c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedApplyDefinitions.lean",
+          "sha256": "c6b015730ad6c7dc04fb93f058f9acc532bcf513ed87472b0451358174fbacae"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedApplyProof.lean",
+          "sha256": "8bdf8b53a457ed86115755564152f43d596aa04030dc7cb393d493dd6054b2ae"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedApplyStatementChecks.lean",
+          "sha256": "ea91afbde4fb8b2440286eb8bf2c2cfbbfcd0414bbe230553271e28ecbf4b253"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ProtectedApplyTargets.lean",
+          "sha256": "e47115d686d65654fc678d8ee9b39199faaff8fc37f0cb428f8c29989bda8e94"
+        }
+      ],
+      "source_scope": "Explicit protection-aware syntax scanner and its EXACT literal original-prefix/original-source application correspondence. No arbitrary-mask irrelevance and no lambda/fundamental or adequacy conclusion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks.fixedActualJointFundamental",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks.fixedActualIdentityBitSoundness",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks.fixedActualIdentityAdequacy"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxTargets.ActualJointFundamental",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxTargets.ActualIdentityBitSoundness",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxTargets.ActualIdentityAdequacy"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RelationalSyntax-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxDefinitions.lean",
+          "sha256": "a6068e964b65550f461732220a10534241c8e7f6d0f3e6b0872c68640fdf94f5"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxFunctionalProof.lean",
+          "sha256": "60bb949299c87f702d72473cf2d8499fb3581f9888fcd2fcc51d478dda5ae85d"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxInductionProof.lean",
+          "sha256": "4f7f474ed07e3c473d364e32dde5822b938a7b6173853829fd7dffb20f1c68ea"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxLambdaBitsProof.lean",
+          "sha256": "8e5b4000fd6fbd24d6fee8a45fcc379519127058265e8977f320846c13091044"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxLambdaProof.lean",
+          "sha256": "a9773724115b641a0f292617deded63461cb8023a6151b77ba09d3f0fc3d4ce6"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxProof.lean",
+          "sha256": "e121f8954ccd774978f5637afeb807e4438775691259ac23b64974c76a44617e"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxStatementChecks.lean",
+          "sha256": "61d6b0c6a3bb8c1ada0c21c3efdcef258bf350dd7495b8a3f1ab1ed4021bc582"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxSupportProof.lean",
+          "sha256": "ee8fc9dd239e1712c524949b620ad76184bb243638adcf805ae88826e6d58b0c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxTargets.lean",
+          "sha256": "592a1b61c6c3c13f33fbff402561171ce9f9e71cb323d0be1a091adffc536cd9"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxVariableProof.lean",
+          "sha256": "475e8294c74c4add46741382f9cb92aeec5989e22109119d6792c1137326c3c3"
+        }
+      ],
+      "source_scope": "FULL actual-limit JOINT MarkedTerm/Arguments evaluator+protected scanner fundamental theorem, with every lambda body callback/scanner IH discharged by real mutual syntax induction; actual literal identity bit truth iff ORIGINAL Weak/Strict for every confined source/current-world typed observation. No supplied fundamental/IH, relational-equality substitution, arbitrary-mask irrelevance, unary currying or generic append oracle premise. Explicit source confinement/world/observation guards retained. Original arbitrary-family structural/effective full decision/strong-pair/well-foundedness/height targets are not inferred.",
+      "numbered_statements_completed": [],
+      "whole_source_candidate": "06-godel-t-termination-ordering:lem:adequacy",
+      "proof_module_rows": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxSupportProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655067333727421-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655067333727421-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxSupportProof.log",
+          "returncode": 0,
+          "source_sha256": "ee8fc9dd239e1712c524949b620ad76184bb243638adcf805ae88826e6d58b0c"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxLambdaBitsProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655103355542436-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655103355542436-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxLambdaBitsProof.log",
+          "returncode": 0,
+          "source_sha256": "8e5b4000fd6fbd24d6fee8a45fcc379519127058265e8977f320846c13091044"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxLambdaProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655344440093780-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655344440093780-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxLambdaProof.log",
+          "returncode": 0,
+          "source_sha256": "a9773724115b641a0f292617deded63461cb8023a6151b77ba09d3f0fc3d4ce6"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxVariableProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655457406130642-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655457406130642-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxVariableProof.log",
+          "returncode": 0,
+          "source_sha256": "475e8294c74c4add46741382f9cb92aeec5989e22109119d6792c1137326c3c3"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxFunctionalProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655542583101576-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655542583101576-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxFunctionalProof.log",
+          "returncode": 0,
+          "source_sha256": "60bb949299c87f702d72473cf2d8499fb3581f9888fcd2fcc51d478dda5ae85d"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxInductionProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxInductionProof.log",
+          "returncode": 0,
+          "source_sha256": "4f7f474ed07e3c473d364e32dde5822b938a7b6173853829fd7dffb20f1c68ea"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxProof.log",
+          "returncode": 0,
+          "source_sha256": "e121f8954ccd774978f5637afeb807e4438775691259ac23b64974c76a44617e"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2.json",
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxStatementChecks.log",
+          "returncode": 0,
+          "source_sha256": "61d6b0c6a3bb8c1ada0c21c3efdcef258bf350dd7495b8a3f1ab1ed4021bc582"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks.fixedRootReadAdequacy",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks.fixedWrongTypeRejection",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks.fixedOriginalComparisonsDecidable"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionTargets.RootReadAdequacy",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionTargets.WrongTypeRejection",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionTargets.OriginalComparisonsDecidable"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OriginalInputDecision-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793656096794509606-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793656096794509606-2-LogicLineages-OrdinalComparison-TerminationOrdering-OriginalInputDecisionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionDefinitions.lean",
+          "sha256": "747eb4b4ebd560e96f12ed5547e72ef8ebc1ae72d64bfcb164baf060fcf3af9d"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionTargets.lean",
+          "sha256": "50e5986609820107964ce857ceaadc6373606ee6426dc6d20f60978082be4a6c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionProof.lean",
+          "sha256": "ebed504b15dcfd79b165a7582e436a51de38f33ef7d30e4d69f57c31c3dc8c5e"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionStatementChecks.lean",
+          "sha256": "4896ad9e29925b36c166d9c2b7fc57bf4010cf500317e52fff5a2b8ab5182eef"
+        }
+      ],
+      "source_scope": "FULL source06 thm:decide: actual literal cardinality-fuel constructor limit evaluated on ordinary source at actual empty world; guarded original target-root read correct for both Weak and Strict including mismatched types; constructive deciders branch ONLY on these actual Booleans. Generic supplied equality and precedence deciders; no classical proposition decider, solver/existence oracle or numeric uniform Computable claim.",
+      "numbered_statements_completed": [
+        "06-godel-t-termination-ordering:thm:decide"
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks.fixedLiteralEmbedding",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks.fixedLiteralArgumentList",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks.fixedGroundSuffix",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks.fixedExactSelectExecution"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeTargets.LiteralEmbedding",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeTargets.LiteralArgumentList",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeTargets.GroundSuffix",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeTargets.ExactSelectExecution"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RankedTree-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793656371035166302-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793656371035166302-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedTreeStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeDefinitions.lean",
+          "sha256": "1bbaaea2764560b30209b57d2bf118cd705f9edcea665c109726607e8e7c296f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeTargets.lean",
+          "sha256": "46afaa6a3eaf16fd1b63ad2f940bb82eb9a651bfa3bf3edbd5b4bab1319124e5"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeProof.lean",
+          "sha256": "c60be35060ecf8034720cea11127d24adfcc284d46ade1a88fc50bec6cb21844"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeStatementChecks.lean",
+          "sha256": "7f6eb3898bfccba2a43ad0b97239ce089a36d623a7d354fe1e8baccfa3893fae"
+        }
+      ],
+      "source_scope": "Literal first-order ranked-tree syntax\u2192original ordinary and marked syntax; exact argument-list enumeration; every actual Select from a bare ranked root uses EMPTY supplied tuple and returns a literal original child. Component ONLY of source06 thm:rpo; no full independent RPO equivalence, strong pair, or source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingStatementChecks.fixedEqualityEmbedding",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingStatementChecks.fixedJointStrictEmbedding"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingTargets.EqualityEmbedding",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingTargets.JointStrictEmbedding"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RankedPathOrder-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793656658297596701-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793656658297596701-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedPathEmbeddingStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderDefinitions.lean",
+          "sha256": "e941e6211d9927587763f3e5ab15613b7e252a87cd4ab6831856b72d4014a072"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderTargets.lean",
+          "sha256": "5deb14de7b9cb9eb28d5ca51077ea207aed607aa8704287fbb40acb7069d1a02"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathEmbeddingTargets.lean",
+          "sha256": "abd2c50a679c19d74045fff0446bdaf97e056c3b2ed61960692322587a89a1ea"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathEqualityProof.lean",
+          "sha256": "7551838f1beb431fea78717aae219179ca6263675086d29c05effa1f648b2d63"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathEmbeddingProof.lean",
+          "sha256": "f3ef67f526d4d1f233101f3e38e9df06f5176a08a83cfebd59de2887ac93e044"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathEmbeddingStatementChecks.lean",
+          "sha256": "d71125e762110ea92e067d1fdcac272bab51ca5c7a14c0d08d05861789a754f8"
+        }
+      ],
+      "source_scope": "Independent standard multiset RPO and recursive multiset equality imply ORIGINAL Weak/Strict, with actual list matching/multiset/replacement clauses translated. Retained part uses true recursive equality. DIRECTION COMPONENT ONLY of original source06 thm:rpo; reverse and full confinement equivalence remain pending.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEqualityProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793656610847701654-2.json",
+          "returncode": 0,
+          "note": "Only this exact module row is accepted from an invocation whose later embedding module failed."
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationStatementChecks.fixedReplacementMonotone",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationStatementChecks.fixedWeakMatchingNormalization",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationStatementChecks.fixedGeneralizedMultisetNormalization"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationTargets.ReplacementMonotone",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationTargets.WeakMatchingNormalization",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedMultisetNormalizationTargets.GeneralizedMultisetNormalization"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RankedMultisetNormalization-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793656865808036736-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793656865808036736-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedMultisetNormalizationStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedMultisetNormalizationTargets.lean",
+          "sha256": "f7d01d6754d21d955943ae8d263c4808c863ad457fee52397fec54b3bbcd0251"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedMultisetNormalizationProof.lean",
+          "sha256": "4b1c375e08a7b994d86353723ad0ae0f1a3743268c610b818f391987b5525b45"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedMultisetNormalizationStatementChecks.lean",
+          "sha256": "943818c3b40fdab28ac9dca6e265eb5e14f2cf751cf0cdcb9e48dad4a3f28210"
+        }
+      ],
+      "source_scope": "Actual finite proof that RPO weak matched lists normalize to recursive equal match OR standard strict multiset, and generalized retained-Weak replacement normalizes to retained-EQUAL standard multiset. Nonempty deletion and all replacement witnesses preserved. Supplier only of source06 thm:rpo; no original\u2192RPO endpoint or whole promotion yet.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks.fixedGroundArgumentInjectivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks.fixedEmbeddingInjectivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks.fixedOrdinaryRootEquality",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks.fixedMarkedRootEquality"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionTargets.GroundArgumentInjectivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionTargets.EmbeddingInjectivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionTargets.OrdinaryRootEquality",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionTargets.MarkedRootEquality"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RankedTreeInversion-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657038284977285-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793657038284977285-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedTreeInversionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeInversionTargets.lean",
+          "sha256": "a62af363dc3655bcc08d612cdad57c085b9559fec84df8cb378d203e0a3e4925"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeInversionProof.lean",
+          "sha256": "da27fff06f5f0ae888bab200dad6b20428bb12e19f36082e38a39227eceee23b"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedTreeInversionStatementChecks.lean",
+          "sha256": "7099bf1d5222e5d328a6f7dac34ce4864c34ee788fde214f16697d7d5052aa7e"
+        }
+      ],
+      "source_scope": "Literal ground argument/packed ranked-tree encoding injectivity and ACTUAL ordinary/marked source-root inversion. Exact empty extras, ground output and ranked head extracted. Component only of source06 thm:rpo, not actual original\u2192RPO joint reflection.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionStatementChecks.fixedActualJointReflection"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionTargets.ActualJointReflection"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RankedReflection-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657522496716675-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793657522496716675-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedReflectionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionDefinitions.lean",
+          "sha256": "a72de5f7a69802419525f6ebd76a01993044eb1f53f1c95017431af4204c3bc7"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionTargets.lean",
+          "sha256": "0995f1b7c607c5f7eb953e92bd48d8f080336c83072de24165553b2715db61cb"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionSupportProof.lean",
+          "sha256": "3c04b43585a95547e2d448083e63cd5536edfb69a6364978cc415515a2ff5181"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionOrdinaryProof.lean",
+          "sha256": "cca106d3724199bd8bf41dadeecaabd6eabd9904978cf7f547c524f10780770f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionMarkedProof.lean",
+          "sha256": "9faeb279994769e5dd3eb0e91b86e17711ed85dfb2164e8bed054b07ea7c33a5"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionStrictProof.lean",
+          "sha256": "452ecaf35dcf1358fd3742b537d837cd5ae10a8ccd6ab176afa01e18c54cf243"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionProof.lean",
+          "sha256": "226461a1567d7912b952e80d8ae932422904a3e0c35d8cd095d4f3dedf86c64e"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedReflectionStatementChecks.lean",
+          "sha256": "9d6dfaa66882efcb646da1d3b72ea13b7984bec40a4d6201af52e4d22e1295bf"
+        }
+      ],
+      "source_scope": "FULL simultaneous actual ORIGINAL derivation reflection to independent standard RPO on literal ranked endpoints, all5inductive relations. No supplied smaller callback/graph. Component of source06 thm:rpo until whole endpoint/confinement gate.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionSupportProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657254884862269-2.json",
+          "returncode": 0,
+          "source_sha256": "3c04b43585a95547e2d448083e63cd5536edfb69a6364978cc415515a2ff5181"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionOrdinaryProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657313665625286-2.json",
+          "returncode": 0,
+          "source_sha256": "cca106d3724199bd8bf41dadeecaabd6eabd9904978cf7f547c524f10780770f"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionMarkedProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657361402420138-2.json",
+          "returncode": 0,
+          "source_sha256": "9faeb279994769e5dd3eb0e91b86e17711ed85dfb2164e8bed054b07ea7c33a5"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionStrictProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657403757550151-2.json",
+          "returncode": 0,
+          "source_sha256": "452ecaf35dcf1358fd3742b537d837cd5ae10a8ccd6ab176afa01e18c54cf243"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657522496716675-2.json",
+          "returncode": 0,
+          "source_sha256": "226461a1567d7912b952e80d8ae932422904a3e0c35d8cd095d4f3dedf86c64e"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks.fixedOriginalRankedRestriction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks.fixedConfinedRankedRestriction"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderTargets.OriginalRankedRestriction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderTargets.ConfinedRankedRestriction"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/RankedPathOrder-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657634467916634-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793657634467916634-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedPathOrderStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderDefinitions.lean",
+          "sha256": "e941e6211d9927587763f3e5ab15613b7e252a87cd4ab6831856b72d4014a072"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderTargets.lean",
+          "sha256": "5deb14de7b9cb9eb28d5ca51077ea207aed607aa8704287fbb40acb7069d1a02"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderProof.lean",
+          "sha256": "0c131207ff32f91f0d7b6eb8e75bc36b3439afc9f0b9ad119cb7410c08d2b1be"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderStatementChecks.lean",
+          "sha256": "efcd558c8066e9f26f35079e54b728d53e24429c3161cd391bc030ebb63b892a"
+        }
+      ],
+      "source_scope": "WHOLE original source06 thm:rpo BOTH iff: actual original and literal confined weak/strict vs independently defined standard multiset RPO/recursive multiset equality. Actual ranked syntax/substitution-free Select closure, Eq-retained normalization, genuine5-way original reflection and reverse derivations, exact{ground}support all paid. No strong-pair/well-foundedness/BH promotion.",
+      "numbered_statements_completed": [
+        "06-godel-t-termination-ordering:thm:rpo"
+      ],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657634467916634-2.json",
+          "returncode": 0,
+          "source_sha256": "0c131207ff32f91f0d7b6eb8e75bc36b3439afc9f0b9ad119cb7410c08d2b1be"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionStatementChecks.fixedPostSubstitution",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionStatementChecks.fixedSourceSubstitution",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionStatementChecks.fixedStrictMarkSubstitution"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionTargets.PostSubstitution",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionTargets.SourceSubstitution",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionTargets.StrictMarkSubstitution"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SuccessfulApplicationSubstitution-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657929647920645-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793657929647920645-2-LogicLineages-OrdinalComparison-TerminationOrdering-SuccessfulApplicationSubstitutionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SuccessfulApplicationSubstitutionTargets.lean",
+          "sha256": "eed3fde384f2218b771197d4e38f600d89a74ac4abed803a2f798b8026228f71"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SuccessfulApplicationPostProof.lean",
+          "sha256": "8f8f3f704f9f5a823f6b0a1f1b68221ca90d658a509170abafd0dbd5a316b4c4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SuccessfulApplicationSourceProof.lean",
+          "sha256": "be4d1e8f3daba560dbd72013daa633c99ff33ef4b9373270037578ed5cefbb5d"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SuccessfulApplicationSubstitutionStatementChecks.lean",
+          "sha256": "3266ab25fa05d6d7b87fea0ee169860b77e15320cb1b9c7b92f8018da7cb8c4d"
+        }
+      ],
+      "source_scope": "Actual SUCCESS-only original-spine source/post substitution and positive strictMark transport; arbitrary marked substitution images. No failure reflection, arbitrary Option-result equality, masks or unary currying. Component only toward source06 stable-pair substitution; no whole stable/structural promotion.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationPostProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657912317939839-2.json",
+          "returncode": 0,
+          "source_sha256": "8f8f3f704f9f5a823f6b0a1f1b68221ca90d658a509170abafd0dbd5a316b4c4"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySubstitutionStabilityStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySubstitutionStabilityStatementChecks.fixedSuccessfulOriginalApply",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySubstitutionStabilityStatementChecks.fixedActualJointStability"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySubstitutionStabilityTargets.SuccessfulOriginalApply",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySubstitutionStabilityTargets.ActualJointStability"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinarySubstitutionStability-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793658183501553299-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793658183501553299-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinarySubstitutionStabilityStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySubstitutionStabilityDefinitions.lean",
+          "sha256": "efe8ee71cb096600743f1f938011a7d4bb07f2737a73690bdc50c084aa2c2130"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySubstitutionStabilityTargets.lean",
+          "sha256": "00daa427cc39d3d334806269e86896106ed8955b56d5b4f9cca9e3f32b97f2c3"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySubstitutionStabilitySupportProof.lean",
+          "sha256": "e0c36023a7145edd9b5086559315ff0aa2cb72ec0a9f75b146dcf75481c20ac5"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySubstitutionStabilityProof.lean",
+          "sha256": "ef0af7dffd4cf939787c1e3917ec61f04f78a18cd93acaa95fe3e5ee90c4007b"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySubstitutionStabilityStatementChecks.lean",
+          "sha256": "e9e448e343d7a43a59bff13ec0b5d9331c9b0c13aac92016fd6e9dd6b081a174"
+        }
+      ],
+      "source_scope": "FULL actual5 ORIGINAL relation ordinary-substitution stability incl all marked/retyped intermediates, exact positive original application and real joint derivation induction. Var ordinary-image reflexivity, actual Select, literal lifted-map FAbs all paid. Source06 thm:stable SUBSTITUTION COMPONENT ONLY; no transitivity/strong-pair/well-foundedness or whole numbered promotion.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySubstitutionStabilitySupportProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793658158880376081-2.json",
+          "returncode": 0,
+          "source_sha256": "e0c36023a7145edd9b5086559315ff0aa2cb72ec0a9f75b146dcf75481c20ac5",
+          "note": "This exact support row passed; later proof row in that invocation failed. Only successful row accepted."
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionStatementChecks.fixedActualSupportPreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionStatementChecks.fixedConfinedSubstitutionStability",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionStatementChecks.fixedEffectiveConfinedDeciders",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionStatementChecks.fixedConfinedWeakReflexivity"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionTargets.ActualSupportPreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionTargets.ConfinedSubstitutionStability",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionTargets.EffectiveConfinedDeciders",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ConfinedOrdinarySubstitutionTargets.ConfinedWeakReflexivity"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/ConfinedOrdinarySubstitution-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793658340775626729-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793658340775626729-2-LogicLineages-OrdinalComparison-TerminationOrdering-ConfinedOrdinarySubstitutionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ConfinedOrdinarySubstitutionDefinitions.lean",
+          "sha256": "d311066a965092648c67754ba44819d24f7b4fa0218354f8410e5b240fcb4a0e"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ConfinedOrdinarySubstitutionTargets.lean",
+          "sha256": "e9a6285722f9d66bfc7f12a09932180f22675be1d6716e75ff1ccc19cf2813a9"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ConfinedOrdinarySubstitutionProof.lean",
+          "sha256": "dd69b901595c89cf968dcb43dd3e44fbe481bea404ea26442d8593f1684a5f8a"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ConfinedOrdinarySubstitutionStatementChecks.lean",
+          "sha256": "fa788aacd059dd6df5429e0974b849092030a9643d7f81bcd3681c34440c466d"
+        }
+      ],
+      "source_scope": "Actual free-occurrence inclusion+EXACT substitution support pay BOTH ordinary confined substitution laws; actual constructive confined deciders from original finite root algorithm and finite support test; literal confined weak reflexivity. Source06 stable-pair components only, not transitivity/compatibility/well-foundedness or whole theorem.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityStatementChecks.fixedWeakContextClosure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityStatementChecks.fixedBothConfinedContextClosure"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityTargets.WeakContextClosure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryContextStabilityTargets.BothConfinedContextClosure"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinaryContextStability-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793658512020362951-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793658512020362951-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryContextStabilityStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryContextStabilityTargets.lean",
+          "sha256": "d778a0ab8069e24b06cb229008500f26655509bd34e80e5e280f3beb2d1af828"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryContextStabilityProof.lean",
+          "sha256": "0845e97dfc105ad3f7b1269cd3213d0423812163e936f519d9f6a8781cb735c0"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryContextStabilityStatementChecks.lean",
+          "sha256": "b182780673381837955dec580a5806a50b5fd44f852dfd49fe91423c9108ce97"
+        }
+      ],
+      "source_scope": "Actual ordinary weak literal-context closure and BOTH literal confined contextual laws (strict supplier reused), all native app/lambda/ranked contexts. Source06 stable-pair context components; no transitivity/compatibility/WF or whole numbered promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks.fixedReflexivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks.fixedRetagging",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks.fixedStrictMarkPreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks.fixedRelatedSubstitution"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningTargets.Reflexivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningTargets.Retagging",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningTargets.StrictMarkPreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningTargets.RelatedSubstitution"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceSharpening-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659220946797317-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793659220946797317-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceSharpeningStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningDefinitions.lean",
+          "sha256": "244f59b1a7495233adcc2d828a4d18be9e135dc8f47f35dbeea9a6e9910013ef"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningTargets.lean",
+          "sha256": "87c88efcbe5e0aacb1af0d657cf08195622604ed240eb0f4608e2f6219b0eeb7"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningReflexivityProof.lean",
+          "sha256": "bcacc2e0053a7f47068bd96a3cd0029443ee9144fb2eebc90defab52d43507ae"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningMarkProof.lean",
+          "sha256": "bf9e24eba354714155789a08b145d1e6f01fdc1abff57c8582ea64ac1ee429ca"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningRenameProof.lean",
+          "sha256": "c7c5587e935a508b301e0180ad9fcb67b538a5b138d3c2304e0048f90231d7e9"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningSubstitutionProof.lean",
+          "sha256": "ab693f690b3c009fae44c00cfe50d6bc313363be2563f2682747e017488537d7"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningStatementChecks.lean",
+          "sha256": "71033b10372ae1894a4bdcfbe7f218384c97a290996730732fed6354dd11866d"
+        }
+      ],
+      "source_scope": "Literal bottomfree/no-meta typed Kop2012 proofLemma5.25 sharpening auxiliary syntax relation, reflexivity/retagging/positive strictMark/pointwise-related substitution all PAID by actual mutual induction. NO original comparison replacement, extension elimination, transitivity of comparison, strong pair or numbered-source promotion.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflexivityProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793658882253358422-2.json",
+          "returncode": 0,
+          "source_sha256": "bcacc2e0053a7f47068bd96a3cd0029443ee9144fb2eebc90defab52d43507ae"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningMarkProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793658919319670917-2.json",
+          "returncode": 0,
+          "source_sha256": "bf9e24eba354714155789a08b145d1e6f01fdc1abff57c8582ea64ac1ee429ca"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningRenameProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659085722593564-2.json",
+          "returncode": 0,
+          "source_sha256": "c7c5587e935a508b301e0180ad9fcb67b538a5b138d3c2304e0048f90231d7e9"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionStatementChecks.fixedTransitivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionStatementChecks.fixedAdditionalExtras"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionTargets.Transitivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionTargets.AdditionalExtras"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceSharpeningComposition-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659696876061495-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793659696876061495-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceSharpeningCompositionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningCompositionTargets.lean",
+          "sha256": "9534d9494d4f31cb0e8acc1a7293ea21a4e621ce551fae617248a15640cb4bd4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningCompositionSupportProof.lean",
+          "sha256": "eda4890ba7d298c1ccddd33fa85f0f5d8c16191c064c6d390299118261dff094"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningInversionProof.lean",
+          "sha256": "456ebc95c7f398c89726089f093bfffaa313e3ecd71d09c683dd819c1a1c8480"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningCompositionProof.lean",
+          "sha256": "47015eb7460674690569f7b005b04ff0a7ec8d0f8313ec85abfd6c115b5481c7"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningCompositionStatementChecks.lean",
+          "sha256": "947e8c17825fb47677f16c0533d3e849bd448f940af698e8dce8dc83cdbacfba"
+        }
+      ],
+      "source_scope": "Actual auxiliary Sharp composition by genuine right-target syntax induction; source-extra/whole-source alternatives paid, safe packed inversion before dependent type elimination; actual additional-extra weakening. NOT transitivity of ORIGINAL Weak/Strict and no extension-elimination/strong-pair or numbered promotion.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionSupportProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659469431058318-2.json",
+          "returncode": 0,
+          "source_sha256": "eda4890ba7d298c1ccddd33fa85f0f5d8c16191c064c6d390299118261dff094"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningInversionProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659675341129764-2.json",
+          "returncode": 0,
+          "source_sha256": "456ebc95c7f398c89726089f093bfffaa313e3ecd71d09c683dd819c1a1c8480"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationStatementChecks.fixedFullOriginalApplication"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationTargets.FullOriginalApplication"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceSharpeningApplication-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659952751273486-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793659952751273486-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceSharpeningApplicationStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningApplicationDefinitions.lean",
+          "sha256": "721e4fe70fe72c1f1298d4fe83afca9468f3a5eddbf3a35efc0ff2fa213e7a44"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningApplicationTargets.lean",
+          "sha256": "3122c53e996485bdcd2a093743d5977d3834cdc793f4ef312d6d08ebe0cc695e"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningApplicationSupportProof.lean",
+          "sha256": "bc49bb909630c7ba429b700af7b11c30998be957f26d85b0abd384065ca8e11a"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningApplicationProof.lean",
+          "sha256": "caa7041152a48574edaa226dd920691350ad7d076f01bfc91cb8677b5edf56ac"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningApplicationStatementChecks.lean",
+          "sha256": "36ebe44958584ad346f1d446cb2d8f567284ed27fb899ad138462c24d26ac377"
+        }
+      ],
+      "source_scope": "FULL literal actual original-spine Option application transport under real Sharp original sources/environments/FULL tuple: blocking, binder consumption, all functional/marked full appends paid. No generic semantic append, mask irrelevance or unary curry premise. Aux syntax supplier only of source06 strong-pair route; no original transitivity/extension-elimination/whole numbered promotion.",
+      "numbered_statements_completed": [],
+      "module_local_successes": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationSupportProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793659865907669923-2.json",
+          "returncode": 0,
+          "source_sha256": "bc49bb909630c7ba429b700af7b11c30998be957f26d85b0abd384065ca8e11a"
+        }
+      ]
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEmbeddingStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEmbeddingStatementChecks.fixedOriginalEmbedding",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEmbeddingStatementChecks.fixedOrdinaryEmbedding"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedComparisonTargets.OriginalEmbedding",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedComparisonTargets.OrdinaryEmbedding"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceExtendedComparison-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793660373180121411-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793660373180121411-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceExtendedEmbeddingStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedComparisonDefinitions.lean",
+          "sha256": "f505c98cf863d1b734d4926256c803a6ecbfed66d0e2b0b2359340ba8b5f5b6c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceUnmarkedDefinitions.lean",
+          "sha256": "202eca7cd7fb7ca9008ca6268f79b01edcf4e927213147fe23ccceb835806ece"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedComparisonTargets.lean",
+          "sha256": "924996ba027737fb1f9d6807dd5e19db1fd146a709786ef3aa16a23427ac18b4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedEmbeddingProof.lean",
+          "sha256": "00940854a657989985a165b524f0f0346f09923256390a2ec5a4e6468d9c83b9"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceUnmarkedProof.lean",
+          "sha256": "2edf95affa27a9532411784aad4ad3780a7142c699617b2df6b7294c7031fa77"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedEmbeddingStatementChecks.lean",
+          "sha256": "f72873910846c9cff91f5f177fcd1433c6e5901786309d831b86a53cb27c6bbf"
+        }
+      ],
+      "source_scope": "Actual5 ORIGINAL derivations embed into explicit typed auxiliary extension; ordinary kernel input embedding is genuinely Unmarked. DropMore/Reorder finite macros transparently specified. COMPONENT ONLY: BOTH ordinary endpoint conservativity targets still unpaid; no original transitivity/strong pair or numbered promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionStatementChecks.fixedUnmarkedIdentity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionStatementChecks.fixedMarkabilityReflection"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionTargets.UnmarkedIdentity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionTargets.MarkabilityReflection"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceSharpeningReflection-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793660510347733670-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793660510347733670-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceSharpeningReflectionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningReflectionTargets.lean",
+          "sha256": "dfeff1574755b22ed5351239a704a92b53bccb5e0f17a914c135569b20317f7c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningReflectionProof.lean",
+          "sha256": "c2abae6386e080224b3d074e2fb2bc2c5ec78b1d3d5e7f3c9fb60f5452834a60"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceSharpeningReflectionStatementChecks.lean",
+          "sha256": "2674b3823adadb183a951a5f739a9762ca7d8b5049755cde58409323fc51aa18"
+        }
+      ],
+      "source_scope": "Actual auxiliary Sharp identity on an unmarked right endpoint; reflection of actual strictMark success with Sharp marked outputs. Syntax induction and safe literal inversion, no original Weak/ext conservativity or transitivity assumed. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEliminationStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEliminationStatementChecks.fixedActualJointElimination",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEliminationStatementChecks.fixedWeakUnmarkedConservativity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEliminationStatementChecks.fixedStrictUnmarkedConservativity"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEliminationTargets.ActualJointElimination",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedComparisonTargets.WeakUnmarkedConservativity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedComparisonTargets.StrictUnmarkedConservativity"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceExtendedElimination-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793661575327557995-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793661575327557995-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceExtendedEliminationStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedEliminationDefinitions.lean",
+          "sha256": "3bc8ab99fa2f526a04b35ab801c6ef370dbfe5c1ed7c50ef54e6fd72340e61b4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedEliminationTargets.lean",
+          "sha256": "55d639f09d975d794ce61704c4a98cf015935e1a230a93e6c27ea404ec757e54"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedPrefixProof.lean",
+          "sha256": "3a520d82daa0d4b208acaa22de39963eb97fe7289abf90c86e36e52baf9b7fa1"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedRefinementProof.lean",
+          "sha256": "12424cad990cfbbd67a4801b468ef992139b4dfec51e42f8036d9cdaa5758fd6"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedListProof.lean",
+          "sha256": "691bb06b39ffaa2f5760fad4f4c5d63aa807f71260c3e4f4af9229d78f732a57"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedInversionProof.lean",
+          "sha256": "e966f87492ef166ac48a1cbfe6f7c6e0092c232eec0a335cb079e8f29e8df9b8"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedOrdinaryCasesProof.lean",
+          "sha256": "10162a74c98ec864a210d77639f4eda45b5319e1fd7f77b7af5466f36cb20eeb"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMarkedCasesProof.lean",
+          "sha256": "79b5ded5b84a5f14d0d95d5cb90f72ce05264f981e3eb1f8d36fd0de2db0d216"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMacroCasesProof.lean",
+          "sha256": "7758404751d5d4a688de03877f0cdd80f716fd52d70447bf3d9ece21458ca01f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedSelectionCasesProof.lean",
+          "sha256": "da487e92df766a79313c55a01a943a4d13e31060734af4c9f1b837888fb66455"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedAbstractionCasesProof.lean",
+          "sha256": "1cd831458400ef9ba83d8a32c5257252bf7c7398f02bc0c749eef8415e529657"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedEliminationProof.lean",
+          "sha256": "4a5b7020bb1f8dd71565f0e545412b67f8ae06e110f314914007412f87c59670"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedEliminationStatementChecks.lean",
+          "sha256": "c7f7bf8e3345a68e3ab5c2e1497324bd2653ace1fa1d13c0bdcc17223c589f43"
+        }
+      ],
+      "source_scope": "FULL genuine joint five-way auxiliary derivation elimination under actual Sharp source refinement and actual Unmarked target, including finite DropMore/Reorder, prefix copies and full-tuple prefix Select. All conditional case callbacks discharged by actual generated mutual recursor. Both weak/strict frozen ordinary-endpoint conservativity statements paid. Original relations unchanged; component only, NOT transitivity/compatibility/well-foundedness/full stable pair.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionStatementChecks.fixedActualReflexivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionStatementChecks.fixedActualJointCovariance"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionTargets.ActualReflexivity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionTargets.ActualJointCovariance"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceExtendedSubstitution-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793661756632566755-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793661756632566755-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceExtendedSubstitutionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedSubstitutionDefinitions.lean",
+          "sha256": "4cc908cd6a34acc4709d4c615e8561fd9d79d9a74902a58e930505cc99af932c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedSubstitutionTargets.lean",
+          "sha256": "1aaccea700d6541cf1378f59045294ae90ebe8c41c90b9aa7b2988b9f3d7dd74"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedSubstitutionSupportProof.lean",
+          "sha256": "e4ba559d39c3b6a339cf76a376da51649d900fba13a82a687a576f3cd7fa5f8c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedSubstitutionProof.lean",
+          "sha256": "f0ed10ec1d8a2f7c4d72849f13990863ee1746252326a96f11e4fe3eba2b2492"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedSubstitutionStatementChecks.lean",
+          "sha256": "c75b66438163e2bc207f5fb3c223a6e94ca9018b068a476ecbae8c11df1324e1"
+        }
+      ],
+      "source_scope": "Actual auxiliary reflexivity on arbitrary marked terms and entire real five-way covariance under ANY typed marked substitution. Real derivation induction handles full tuple success, binder opening, prefix copies, finite drop/reorder and all new marked rules. No related-distinct-environment monotonicity/transitivity or full stable pair promoted. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedRelatedSubstitutionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedRelatedSubstitutionStatementChecks.fixedActualJointRelatedCovariance"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedRelatedSubstitutionTargets.ActualJointRelatedCovariance"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceExtendedRelatedSubstitution-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793661910127956904-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793661910127956904-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceExtendedRelatedSubstitutionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedRelatedSubstitutionDefinitions.lean",
+          "sha256": "eb437c90d502d591e48962854d01234d2c82c4811e93081ee73dc20572b0e039"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedRelatedSubstitutionTargets.lean",
+          "sha256": "dab50cbb4d32d344b3c78e41277896466cd3d983749c48cdd33a6519aedc2c9f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedRelatedSubstitutionSupportProof.lean",
+          "sha256": "f149e82fc63d2819d657c266842b65c0d1cfe8e2d81f611999a68a49327e5850"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedRelatedSubstitutionProof.lean",
+          "sha256": "fdb769244ca3fa0c0679fa11d6b21ac54d466fa8c085d737af05ac22185b67ca"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedRelatedSubstitutionStatementChecks.lean",
+          "sha256": "c6cf2ed06d64ecceacc419795bf87b2eac5fbf384cbd8ca35e6e7939d602d56f"
+        }
+      ],
+      "source_scope": "ENTIRE actual five-way auxiliary covariance under TWO pointwise actually Weak-related marked typed environments. Source lemma5.27 bottomfree/no-meta typed analogue. Actual arbitrary renaming/lift, full successful Select, finite macro and real mutual derivation induction paid. No application-currying, transitivity or full stable-pair assumption. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingStatementChecks.fixedActualMarkAlignment",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingStatementChecks.fixedActualLeftUnmark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingStatementChecks.fixedActualMarking"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingTargets.ActualMarkAlignment",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingTargets.ActualLeftUnmark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingTargets.ActualMarking"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceExtendedMarking-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793662217193993753-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793662217193993753-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceExtendedMarkingStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMarkingDefinitions.lean",
+          "sha256": "b3b35ea810c43eae9b012dea3e25ddb82dc314e82dc6969b5b0be1b1079b70bd"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMarkingTargets.lean",
+          "sha256": "5d74a01fa3e34088f7de1a01d5ade3c3dab95f4b9ac94b5f8a169dab7ef2ad9d"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMarkingSupportProof.lean",
+          "sha256": "8a922e942d6b1e520f26240a9060975059973415635ab968a4ece28da6d17f18"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMarkingProof.lean",
+          "sha256": "e8496cfa7a308198adccc91f739c02a204f7e10102deedd787bc2d15de5b44e8"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedMarkingStatementChecks.lean",
+          "sha256": "0cd7988521c40d71444bf4a8d2cb0494b6648e1704750c6e8ae90c4a9c64209a"
+        }
+      ],
+      "source_scope": "Full actual top marking preserves auxiliary Weak; total marking exactly agrees with real partial strictMark (both success/failure), literal lambda spine retained. Real left unmarking proved via generic packed source-lambda inversion. Source5.28 typed analogue, no comparison transitivity or stable pair supplied. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedTargetDroppingStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedTargetDroppingStatementChecks.fixedActualTargetDropping"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedTargetDroppingTargets.ActualTargetDropping"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/SourceExtendedTargetDropping-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793662501483363331-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793662501483363331-2-LogicLineages-OrdinalComparison-TerminationOrdering-SourceExtendedTargetDroppingStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedTargetDroppingDefinitions.lean",
+          "sha256": "6c4fbf151a7954115c6c14de9a2ab097a138170f0e6a68a85b95baa5e770e968"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedTargetDroppingTargets.lean",
+          "sha256": "ecf4c049f442b1548ba01a7abd72a5286f948828ac77eabd8741b23b6f93cb98"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedTargetDroppingSupportProof.lean",
+          "sha256": "712cc2c9397709fb0959211e6cb3ba22b4fec5fa348c3412cf62fd681e63f9b6"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedTargetDroppingProof.lean",
+          "sha256": "555bc5f2700d71c3a733509ab6e7b2cc96f5f45c7a59e32e8c8b6fbc51268579"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceExtendedTargetDroppingStatementChecks.lean",
+          "sha256": "1833f8b5137d98b24007892cd712af907b860ab5537479853a865ad10f0cc6f3"
+        }
+      ],
+      "source_scope": "ENTIRE actual auxiliary target-final-extra-block dropping, source5.30 typed analogue. Real derivation induction covers every source clause; genuine typed argument-prefix split and actual weak matching extraction pay In case, no assumed transitivity. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.PrefixSourceCompositionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.PrefixSourceCompositionStatementChecks.fixedActualGuardedSourceComposition"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.PrefixSourceCompositionTargets.ActualGuardedSourceComposition"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/PrefixSourceComposition-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793663022592078470-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793663022592078470-2-LogicLineages-OrdinalComparison-TerminationOrdering-PrefixSourceCompositionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixSourceCompositionDefinitions.lean",
+          "sha256": "ae9fd3f459ec4854d42aa071779e1cffe080232c1d6e971d4d2b61aa359fe57a"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixSourceCompositionTargets.lean",
+          "sha256": "b01de2be3c2391ad9065b2c54b497aa6aac2a7ae5ec7b43596d90fcd993788ce"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixSourceCompositionSupportProof.lean",
+          "sha256": "3513dce8f68431e0c220629a88b35d3a85d9f041e225b9c1ca3a7d697e99db7c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixSourceCompositionProof.lean",
+          "sha256": "ff5f24070421dc6683ff54d69c6b64e5f75c17bf82c0b05a14b3453a57b491a7"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixSourceCompositionStatementChecks.lean",
+          "sha256": "3d08788354349a45b34aa1c44bef56b02177c2ab5a951d05a226476204d0f6dd"
+        }
+      ],
+      "source_scope": "ACTUAL full original-spine source-substitution converse modulo actual Sharp for literal variable/prefix-copy composed images and full prefix-copy tuple. Real syntax induction retains consumed original binder provenance; success reflection is an explicit disjunction with a paid Sharp escape, never claimed as false unconditional substitution reflection/currying. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.PrefixTupleCompositionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.PrefixTupleCompositionStatementChecks.fixedActualNonemptyPrefixTupleComposition"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.PrefixTupleCompositionTargets.ActualNonemptyPrefixTupleComposition"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/PrefixTupleComposition-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793663312558134828-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793663312558134828-2-LogicLineages-OrdinalComparison-TerminationOrdering-PrefixTupleCompositionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixTupleCompositionTargets.lean",
+          "sha256": "f766ec7a07d7163135edf2a51dfd2905bc5675090c1d76692776936f6aa47981"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixTupleCompositionSupportProof.lean",
+          "sha256": "23dfdd084dd7a6372c1e1047296fdeba8a86a0a014911314af23c2da56c5354b"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixTupleCompositionProof.lean",
+          "sha256": "8093c1bb694618093e25b54c7aa376a97890585d23841bc56dab81a9682cad6b"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/PrefixTupleCompositionStatementChecks.lean",
+          "sha256": "7750d25e622b12df442b0baeb20b34fc0fe815eb93735d8701f0cdb7ac0b6770"
+        }
+      ],
+      "source_scope": "ACTUAL composition of TWO whole prefix-copy tuples, second tuple EXPLICITLY nonempty, empty first allowed; simultaneous full-original success OR paid actual Sharp escape. Every binder case and literal typed append associativity proved; no unconditional currying/application reflection or source5.29/full stable promotion. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ComposedPrefixSelectionStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComposedPrefixSelectionStatementChecks.fixedActualComposedPrefixSelection"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComposedPrefixSelectionTargets.ActualComposedPrefixSelection"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/ComposedPrefixSelection-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793663381704858071-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793663381704858071-2-LogicLineages-OrdinalComparison-TerminationOrdering-ComposedPrefixSelectionStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ComposedPrefixSelectionTargets.lean",
+          "sha256": "c6e5af50d12d9e450d4b24d0a566a04f053a656118dbb5de534f2c64d6d2df3f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ComposedPrefixSelectionProof.lean",
+          "sha256": "5801ab3ea3c8f876860d63845b5ed68355b13d2820c2ca6624c6ae237ba44a46"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/ComposedPrefixSelectionStatementChecks.lean",
+          "sha256": "2fc0f33713eb7d2d8cdb7e61da87e37eae0ae27a42c27141db414577d4bb2088"
+        }
+      ],
+      "source_scope": "GENUINE ORIGINAL comparison consumer for two consecutive ACTUAL prefix-copy whole tuple applications (second NONEMPTY, first may be empty), selected literal source argument and Unmarked final endpoint. Both full-simultaneous-success/Sharp escape branches eliminated without any comparison-transitivity premise. Component only, not full source5.29 monotonicity or thm:stable.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleStatementChecks.fixedActualExtendedSteps",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleStatementChecks.fixedActualOriginalFailure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleStatementChecks.fixedActualBroadTargetRefutation"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleTargets.ActualExtendedSteps",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleTargets.ActualOriginalFailure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.MarkedSourceTransitivityCounterexampleTargets.ActualBroadTargetRefutation"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/MarkedSourceTransitivityCounterexample-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793665307930623465-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793665307930623465-2-LogicLineages-OrdinalComparison-TerminationOrdering-MarkedSourceTransitivityCounterexampleStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceFinalTransitivityTargets.lean",
+          "sha256": "673d0a309f26665c2fcaf5f443435a45011a6ee02dbfc8c7997995b9443eceee"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/SourceFinalTransitivitySupportProof.lean",
+          "sha256": "0c9aaa892f4b50d22c8a9f3a21893c8fa8623dcfd351a593092d348a1f8987d4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/MarkedSourceTransitivityCounterexampleDefinitions.lean",
+          "sha256": "4ec6ae35f03675d72f99a668e9374593793ec9dbf6d126a265b3974dc581affa"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/MarkedSourceTransitivityCounterexampleTargets.lean",
+          "sha256": "3af432e044b34f8c83d3d3f484487f8bf9d6c9b0e239043399111710f21d8ced"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/MarkedSourceCounterexampleInversionProof.lean",
+          "sha256": "43167148cbe09ab5e02a969d15ed814933f97989a7f61e72e2a279d2f462500b"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/MarkedSourceTransitivityCounterexampleProof.lean",
+          "sha256": "cd10479bf9d178fd767d022ec4235b479b1338af834451abfb27406a78d76fff"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/MarkedSourceTransitivityCounterexampleStatementChecks.lean",
+          "sha256": "d35ec99ad42ece2473ad7c410a2ae59da47ad693f0e7c04f1816725aeba02adc"
+        }
+      ],
+      "source_scope": "DIAGNOSTIC: actual finite ranked counterexample REFUTES our overbroad arbitrary-marked-source auxiliary final-transitivity target. Exact original nonderivability uses complete original-rule inversion and singleton strict-multiset reduction. Does NOT refute original three-ordinary-embedding transitivity or a published theorem; no source definitions changed and no numbered source completion.",
+      "diagnostic_only": true,
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalDerivationBudgetStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalDerivationBudgetStatementChecks.fixedActualFiveWayEquivalence"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalDerivationBudgetTargets.ActualFiveWayEquivalence"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OriginalDerivationBudget-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793666026777164618-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793666026777164618-2-LogicLineages-OrdinalComparison-TerminationOrdering-OriginalDerivationBudgetStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetDefinitions.lean",
+          "sha256": "31a9a0cca827513a28f1dd1e5bf5e7a8a76eeee4840ecfbbf6785362d5bd63e2"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetTargets.lean",
+          "sha256": "3475665ebf3d2c273b4f468206bdf5908603348df8b5c79b137198d48536d36d"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetSupportProof.lean",
+          "sha256": "2a77d43abd5eb0a0a5f2139bc522329deb111bc6866e54ef77584a4c77932cf1"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetErasureProof.lean",
+          "sha256": "70dcb6dc410e8cf9a8cf229e4412e1e37876fd1937fa2cf8493cbbfb1479a1bf"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetCompletenessProof.lean",
+          "sha256": "63a30fe5a2059d6e9551ac0eb29178b6016ea95b0f1b1c2c97e5d046e1ceb5a6"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetProof.lean",
+          "sha256": "a2dc30f1bbe122ccdfed51e1a69a976f6bd04bf4bdf9e001d729a9b1e2c1c198"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalDerivationBudgetStatementChecks.lean",
+          "sha256": "5e3b62da26ab1f3b50728fdf8f93edf3a3674f9a3b36057bbd8ee9cfeb9604b8"
+        }
+      ],
+      "source_scope": "EXACT entire five-way equivalence of ORIGINAL comparison derivations with finite inference-budget presentation. Up erases; genuine finite uniform bound for all Copy/Stat side premises constructed, no infinite choice or extra relation rule. Proof-only indexing for nested induction: NOT numeric encoding/computability/ID1/transitivity/termination or full source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingStatementChecks.fixedActualPositiveUnmarkBound",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingStatementChecks.fixedActualSameBudgetStrictWeak"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingTargets.ActualPositiveUnmarkBound",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingTargets.ActualSameBudgetStrictWeak"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OriginalBudgetUnmarking-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793666634806485041-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793666634806485041-2-LogicLineages-OrdinalComparison-TerminationOrdering-OriginalBudgetUnmarkingStatementChecks.log",
+      "gate_returncode": 0,
+      "invocation_note": "This exact gate PASSED; a LATER separate target-normality module failed on an erased binder name. Only successful gate row is accepted.",
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalBudgetUnmarkingTargets.lean",
+          "sha256": "d9ec43a46172925a27433b53e04c77db17db177d020705514af8a2658b3b78e3"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalBudgetUnmarkingSupportProof.lean",
+          "sha256": "11d64c0e953614d4700e50510412c51fbc44b63e5d533f2e9184d26ee1c1a500"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalBudgetUnmarkingProof.lean",
+          "sha256": "4953f0c35bc42a35f8ebe73eba9daeab581d5261532f3fac04e577c52214fd21"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalBudgetUnmarkingStatementChecks.lean",
+          "sha256": "b68553a7c0e5738e4ed9c8d67970db0224ca61b035cf00b3e722d75476669ef4"
+        }
+      ],
+      "source_scope": "Quantitative ACTUAL original positive unmarking costs at most ONE inference level, independently of lambda-spine length; original Strict implies Weak at the SAME budget already containing the mark inference. Actual syntax/budget induction, no transitivity premise. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalTargetUnmarkedStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalTargetUnmarkedStatementChecks.fixedActualFiveWayTargetNormality"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalTargetUnmarkedTargets.ActualFiveWayTargetNormality"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OriginalTargetUnmarked-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793666751227539805-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793666751227539805-2-LogicLineages-OrdinalComparison-TerminationOrdering-OriginalTargetUnmarkedStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalTargetUnmarkedTargets.lean",
+          "sha256": "cc464fdc29b28f774affc247e58df95067daa84773ce52fa0e241affde757a13"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalTargetUnmarkedProof.lean",
+          "sha256": "c8a5c00c6e900ff7ab7cf3f05b80b07f79798c9eaa7244514d715f88beb4a8b6"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalTargetUnmarkedStatementChecks.lean",
+          "sha256": "5c2a23c70f202ae64ca937eb55555626e0a7ce604c116cee2c84d8fe71791cd5"
+        }
+      ],
+      "source_scope": "INTRINSIC whole target Unmarked for ALL five ORIGINAL relations, any precedence and arbitrary raw sources. Actual mutual induction pays every target child/argument/permutation/replacement. NO normality premise, no auxiliary In, no transitivity. This enforces the true middle-domain restriction of original composition; component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageStatementChecks.fixedActualHeadReconstruction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageStatementChecks.fixedActualUnmarkedCoverage",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageStatementChecks.fixedActualWeakTargetSourceWitness"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageTargets.ActualHeadReconstruction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageTargets.ActualUnmarkedCoverage",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinarySyntaxCoverageTargets.ActualWeakTargetSourceWitness"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinarySyntaxCoverage-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793667147141416646-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793667147141416646-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinarySyntaxCoverageStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySyntaxCoverageDefinitions.lean",
+          "sha256": "e528b0194dc48afd2a8e96a73f88e078370aa8cc887ed4940cb578709d77dd73"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySyntaxCoverageTargets.lean",
+          "sha256": "3c2f95657d6e0a8a9194edd375e1a0dc6476301cd6dfc75dc2a01f1c7eddb0cf"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySyntaxCoverageProof.lean",
+          "sha256": "a0829bad00fd715386cc6875e8bac7e91b0c46dbbcb14c0bea153be878a7d91d"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinarySyntaxCoverageStatementChecks.lean",
+          "sha256": "c558b77f8f20e327fbe3e83d90f3f0264e17e44037fded7237fb022099e4bbb2"
+        }
+      ],
+      "source_scope": "Exact native/ranked original head reconstruction and wholly Unmarked syntax iff literal original Term embedding. Every ORIGINAL Weak target consequently has an actual original source-Term witness, with no normality premise, rewriting, numeric effectivity or transitivity assumption. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualOrdinarySteps",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualOrdinaryFailure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualWeakTransitivityRefutation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualWeakStrictRefutation"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualOrdinarySteps",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualOrdinaryFailure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualWeakTransitivityRefutation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualWeakStrictRefutation"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinaryBetaTransitivityDiagnostic-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793669543703102170-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793669543703102170-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryBetaTransitivityDiagnosticStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticDefinitions.lean",
+          "sha256": "6cf846d58a5b7d5cbf68de9021a9552fa2ed7b43d0cf3d0b8f5c9411431774fb"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticTargets.lean",
+          "sha256": "ed30f5e0b40095259f9af862d5cef6512d8d45d5a71402f24c00686733adae80"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticStepsProof.lean",
+          "sha256": "47b237c3346599195618d23e53c28e20136cdd2c5ab1614bd424cbed93986e19"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticObstructionsProof.lean",
+          "sha256": "fb55b73d18bc0fdacee6d0981470765d6c5c9695291ee7c1380117d6849351fb"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticProof.lean",
+          "sha256": "ec2ab89e737f9ddf245e86e5f5047f2f52c14d82306f0e3350ea44133bf4eed2"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticStatementChecks.lean",
+          "sha256": "b38758401bf665105765f7de3391474e614cc34107cb3cf66bd64cab6745d938"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalBudgetFunctionalInversionProof.lean",
+          "sha256": "800ec530120341046d432fdc1af137e776ef5c23eedc2cb811aea3eadc56604e"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalCompositionFramesProof.lean",
+          "sha256": "5e87f72a5f24cd7c6c8585c1a58e506a00e282905b19855a12f38d4635b6af80"
+        }
+      ],
+      "source_scope": "DIAGNOSTIC IN THE ACTUAL ORIGINAL TERM DOMAIN: P=(lambda x.F(x,Z)) K(H), T=F(K(H),Z), U=F(H,H), ranked Z<H<K<F of arities0,0,1,2. ORIGINAL P Weak T and T Strict U, but NO ORIGINAL P Weak U. Genuine four-state induction over exact original derivation budgets rules out every finite derivation, not bounded search. REFUTES exact frozen ordinary weak transitivity and Weak-then-Strict compatibility targets for IMMUTABLE local rules. No claim that Kop published theorem is false without separately paid full source-convention correspondence; no source definition edits or numbered completion.",
+      "diagnostic_only": true,
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualConfinedWitness",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualStrictChain",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualStrictWeakRefutation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualRawEndpointRefutation"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualConfinedWitness",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualStrictChain",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualStrictWeakRefutation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualRawEndpointRefutation"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinaryBetaDiagnosticConsequences-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793670058887479841-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793670058887479841-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryBetaDiagnosticConsequencesStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaDiagnosticConsequencesTargets.lean",
+          "sha256": "a5e95b49837fcdf71c7f91028d75ac6314447166b728100a69e9963e8bf92a23"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaDiagnosticConsequencesProof.lean",
+          "sha256": "86a761c75a6258d4db3d6bcc2570e5757b19424699a9981c49fb11d8edc5c2d4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaDiagnosticConsequencesStatementChecks.lean",
+          "sha256": "d12eef878dd5e2ae9c7f5900bf288ac15148e2b9329caab591775a8b76fc853d"
+        }
+      ],
+      "source_scope": "DIAGNOSTIC consequences for SAME exact checked original-Term beta witness: actual type-support confined weak/strict positive steps and failed weak composite, BOTH positive strict steps and failed strict composite, remaining Strict-then-Weak compatibility refutation and old raw-endpoint original transitivity refutation. Exact first Strict step recovered from actual proof-budget constructor inversion, support tests checked in kernel. No alternative relation, source definition edit or numbered completion; separate finite-signature/published-source convention correspondence not inferred.",
+      "diagnostic_only": true,
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticStatementChecks.fixedActualFinitePrecedence",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticStatementChecks.fixedActualFiniteOrdinarySteps",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticStatementChecks.fixedActualFiniteOrdinaryFailure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticStatementChecks.fixedActualFiniteConfinedWitness"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticTargets.ActualFinitePrecedence",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticTargets.ActualFiniteOrdinarySteps",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticTargets.ActualFiniteOrdinaryFailure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteOrdinaryBetaDiagnosticTargets.ActualFiniteConfinedWitness"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/FiniteOrdinaryBetaDiagnostic-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793670457781141944-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793670457781141944-2-LogicLineages-OrdinalComparison-TerminationOrdering-FiniteOrdinaryBetaDiagnosticStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticDefinitions.lean",
+          "sha256": "871390706eef5bb0be8a435568f2ca1a2319946e1093558bcf24bded17c58c34"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticTargets.lean",
+          "sha256": "248345205192c99539d836174a88b108422de5e5598dd5ca58931fef15caf07c"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticStepsProof.lean",
+          "sha256": "ced3fccb83435b46f83e2dbd77d460234c3a242987ff9c1047d1139cfdf2aa39"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticObstructionsProof.lean",
+          "sha256": "fe04deac43a8b860c38b79c912dad9e61475c222c00ab28e2bcf9f8b4a77056a"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticProof.lean",
+          "sha256": "b3321ca253808646f62352b5a635eece2b2b0edd906ca068f8d90c4543339e82"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticPropertiesProof.lean",
+          "sha256": "dc3f421fa815de0f927d202c483de2eb6f2195b8029dbb7a54590c285a05af77"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/FiniteOrdinaryBetaDiagnosticStatementChecks.lean",
+          "sha256": "7e623b89e5431f185447be6ac4ad6d9b136a42b6ed8b26a0a36eea67a12d8796"
+        }
+      ],
+      "source_scope": "DIAGNOSTIC with ACTUAL Fin4 ranked signature, no infinite-symbol qualification: strict-total/transitive/WF concrete precedence, ORIGINAL ordinary P Weak T and T Strict U, NO P Weak U, and actual source type-support confined witness. Full positive and four-state exact budget negative proof INSTANTIATED ON Fin4 and all proof modules/gate PASSED FIRST TRY after comparator preflight/freeze. No Nat-to-finite oracle, source edit, alternative relation or numbered completion. Published-Kop/source-convention correspondence remains separate.",
+      "diagnostic_only": true,
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks.fixedActualCanonicalNumbering",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks.fixedActualBudgetLowering",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks.fixedActualOrdinaryTranslation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks.fixedActualRenaming",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks.fixedActualRelatedSubstitution"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxTargets.ActualCanonicalNumbering",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxTargets.ActualBudgetLowering",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxTargets.ActualOrdinaryTranslation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxTargets.ActualRenaming",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxTargets.ActualRelatedSubstitution"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedRewriteSyntax-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793671847945263054-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793671847945263054-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRewriteSyntaxStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "axiom_detail": "Canonical numbering/budget lowering/renaming/related substitution AXIOM-FREE; ordinary translation propext only.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteSyntaxDefinitions.lean",
+          "sha256": "84487f00c4762b4e897b7135bb9d98ec15c39b9f846355ef7c955cd9d0a210c4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteSyntaxTargets.lean",
+          "sha256": "85192a31632c4c4e601b091cf123c137e8f3748619fb1970c9b1d3c734bf9683"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteSyntaxProof.lean",
+          "sha256": "c73332888c23e700904afa264e6a5295e726ea2f7241a2108e4b09b8785f3e58"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteSyntaxStatementChecks.lean",
+          "sha256": "b6ff62cf78678e6f7a2044c6b9d617abc2e082b58e0f300c119a894b87c4407f"
+        }
+      ],
+      "source_scope": "ACTUAL syntax/binding supplier for source06 ORIGINAL\u2192numbered arithmetic simulation: ordinary omega/finite retagged typed heads with literal base and extras, distinct auxiliary application and bottom. Canonical source translation, true label-budget weakening, actual renaming and two-related-substitution including binders. NO comparison transitivity, normalization, SN, computability field or ID1 assumed. Numbered reduction/path, finite-S confinement, numeric effectivity and full source simulation still pending; zero numbered completions.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkStatementChecks.fixedActualRawPositiveMark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkStatementChecks.fixedActualOrdinaryPositiveMark"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkTargets.ActualRawPositiveMark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkTargets.ActualOrdinaryPositiveMark"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedPositiveMark-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793672804427627882-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793672804427627882-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedPositiveMarkStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteReductionDefinitions.lean",
+          "sha256": "9bc140fb4cc06f91daf400e083f76d7f5f3036746b5e3e819806c39f2458ee2f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPositiveMarkTargets.lean",
+          "sha256": "bbcc498fad67cb575daf51f295d07512d47ce8508004e81328c17806e2d51a36"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPositiveMarkProof.lean",
+          "sha256": "b2af3af9e0aa1acf88240ac5b01e489765c0b847361db3e05667c417621595a4"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPositiveMarkStatementChecks.lean",
+          "sha256": "1efc380eed2d52e0fe8a72deb7005e6d0298c254d4be9301b998dd533abd1f78"
+        }
+      ],
+      "source_scope": "ACTUAL partial original positive mark, arbitrary initial lambda spine, represented at n+1 maps by ONE real raw all-Mul numbered auxiliary step to representation at n. Actual ordinary source translation specialization also paid. Explicit raw auxiliary rule syntax: finite marks, select/copy/mul/abs, typed head-argument and lambda closure, ONLY function-side auxiliary app, beta, proper bottom. NO comparison transitivity, SN, ID1 or solver field. Equivalence quotient/finite-S confinement/effectivity/full original angle+comparison simulation remain unpaid; component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualBindingRetraction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualWeakeningCancellation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualOpenNumberedBeta",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualNumberedWholeTuple"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualBindingRetraction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualWeakeningCancellation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualOpenNumberedBeta",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualNumberedWholeTuple"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedRewriteApplication-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793673638543191218-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793673638543191218-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRewriteApplicationStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "axiom_detail": "Retraction/cancellation AXIOM-FREE; opened beta and whole tuple onlypropext.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationDefinitions.lean",
+          "sha256": "471feb178305cd5182ae903e855ecf4222f22a5af9e6af7cb3d0acb6d15bb984"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationTargets.lean",
+          "sha256": "8f83018f745e1f7f9fc63b9da84960d0a7337a9f2e33e6d28d7c63ce04911e03"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationBindingProof.lean",
+          "sha256": "225e46d4bc6c0eb7c222256c69f9749f6a512560f7bc7ff91539a4b691eba052"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationPathProof.lean",
+          "sha256": "4095c263d57d88ba1cf8ec69b667b0f45f6f033bb866092fc18e41f931067be3"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationStatementChecks.lean",
+          "sha256": "3f7ba24a18a87c766b4f76811508a383d37ec40fdbdb24f4a97889be349d2c93"
+        }
+      ],
+      "source_scope": "ACTUAL auxiliary retraction/weakening cancellation/opened-numbered beta and WHOLE ordered tuple path: finite head initial label n+length, final n, literal appended typed extras, incl empty tuple. Only genuine AUX applications are curried; NO original special-angle reassociation, semantic related-value equality or source comparison transitivity assumed. Core path and dependent typed append identities paid; equivalence quotient/finite-S/effectivity/SN/ID1/full original-angle or comparison simulation still pending. Component only.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleStatementChecks.fixedActualGeneralOriginalAngle",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleStatementChecks.fixedActualSpecialApplication",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleStatementChecks.fixedActualOrdinaryAngleTranslation"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleTargets.ActualGeneralOriginalAngle",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleTargets.ActualSpecialApplication",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalAngleTargets.ActualOrdinaryAngleTranslation"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedOriginalAngle-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793675175597449563-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793675175597449563-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalAngleStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalAngleDefinitions.lean",
+          "sha256": "2a1045c94416a481df681a3237d4a5df1b8bf298e6922ddbab9c01605a608fe7"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalAngleTargets.lean",
+          "sha256": "cf634b253d5be1c58cf0a793aeee73d6e80f1eb3048f7e0c434b7381643c5c1f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalAngleSupportProof.lean",
+          "sha256": "a2259863a04bb2eb84dbcf002ebb08425bbb8a146db94fbb2e8c9918ef3184a8"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalAngleFunctionalProof.lean",
+          "sha256": "0394969fb1a2507fcc7d9fbbf7912220cf9018916040ec04c527afd6201f3fd3"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalAngleProof.lean",
+          "sha256": "b1c1c4751cf4b25d93dd23beb6000694a9f2aed8033c572a5801611e9be20260"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalAngleStatementChecks.lean",
+          "sha256": "5e2387ddb156d90ce9f527992b32a1c4603699bb69f9cfb9a79b0a6b3007bdc1"
+        }
+      ],
+      "source_scope": "FULL original helper one-way angle path simulation with arbitrary source env: Q is any actual Aux representation of substitute ORIGINAL q env, complete tuple budget n+length, variable blocking inspected BEFORE substituted head. Actual specialApply and literal original source translation corollaries. NO original unary currying, arbitrary-family append, related-value equality, comparison transitivity or SN/ID1 supplied. Raw path supplier; quotient/S/effectivity/full comparison simulation pending. COMPLETE exact3gate passed. Original source inspection precedes environment substitution, true beta composition and whole ordered tuple paid. NO numbered source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualUnmarkedRepresentation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualUnmarkedArguments",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualFiniteMark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualPrimitiveMark"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualUnmarkedRepresentation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualUnmarkedArguments",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualFiniteMark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualPrimitiveMark"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedRepresentationRigidity-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793676449430842519-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793676449430842519-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRepresentationRigidityStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "axiom_detail": "Unmarked uniqueness clauses use propext+Quot.sound; exact finiteMark and PrimitiveMark onlypropext.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRepresentationRigidityTargets.lean",
+          "sha256": "087238e81c998c211ae7de1cc3058929a180c0d03ccf816fe34932143dfe102f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRepresentationRigidityProof.lean",
+          "sha256": "4e6ccc835f2c981cfed1271c1f84a61889120276ce2bdfb5e1dc28c9589f3f45"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRepresentationRigidityStatementChecks.lean",
+          "sha256": "05a874c72a988c32ae36776319bcba7558d6236d771db3f5c3790faa6420f133"
+        }
+      ],
+      "source_scope": "Exact unmarked-source/argument representation uniqueness, literal finiteMark equation and primitive-mark witness. Arbitrary marked-source representations remain distinct. No transitivity/quotient/termination/ID1 oracle. Complete actual4gate. Generic packed inversions pay head-result dependent typing. Component only; no numbered source completion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceStatementChecks.fixedActualPrimaryTypePreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceStatementChecks.fixedActualPrimarySizePreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceStatementChecks.fixedActualTraceZero",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceStatementChecks.fixedActualTraceTypePreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceStatementChecks.fixedActualRawPathTrace"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceTargets.ActualPrimaryTypePreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceTargets.ActualPrimarySizePreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceTargets.ActualTraceZero",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceTargets.ActualTraceTypePreservation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryEquivalenceTargets.ActualRawPathTrace"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedPrimaryEquivalence-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793676754377940805-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793676754377940805-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedPrimaryEquivalenceStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "axiom_detail": "Primary type preservation axiom-free; primary size propext+Quot.sound; zero trace standard3; trace type and raw-path embedding propext only.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPrimaryEquivalenceDefinitions.lean",
+          "sha256": "de83b3654dee5eee9b73afa035fb1660fce2e787709c47c13cfe23b587448f50"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPrimaryEquivalenceTargets.lean",
+          "sha256": "a95fcbac4230f6ff52ef41020f29c601544efc35e4493ea2fefacb3b0f6ab5e5"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPrimaryEquivalenceProof.lean",
+          "sha256": "fa6a2567ce1de40c8d2e99b140e61cfb247a103176247cef7543237fac4e11eb"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPrimaryEquivalenceStatementChecks.lean",
+          "sha256": "963f60469609109a411f61db07075a23e72c039b91f0ca4053eac1c264d87c23"
+        }
+      ],
+      "source_scope": "Primary congruence generated only by equivalent heads/typed base permutations; labels/results/ordered extras retained. Counted Trace distinguishes zero primary motion from genuine raw steps. Type and size preservation, exact zero trace characterization, type-preserving trace and raw-path embedding. Unconfined syntax presentation; NO finite-S class finiteness/canonical code/operational quotient/termination/ID1 or source comparison transitivity claimed. Complete actual5gate; no numbered source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualTypedPresentation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualLambdaContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualFunctionContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualTupleCons",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualOrdinaryContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualNumberedBaseContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualNumberedExtrasContext"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualTypedPresentation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualLambdaContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualFunctionContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualTupleCons",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualOrdinaryContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualNumberedBaseContext",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualNumberedExtrasContext"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedTraceContexts-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793676945919610198-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793676945919610198-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedTraceContextsStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "axiom_detail": "All7fixed aliases onlypropext. FIRST entire proof+exact gate passed unchanged.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsDefinitions.lean",
+          "sha256": "25c71e1bdd8daffd22200b54385efc24f5af1db707dd0925e4e92f39179fc8f9"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsTargets.lean",
+          "sha256": "a395283b2e48595260454955c90324e743c48c76b9f3c5800088abf42600bd90"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsProof.lean",
+          "sha256": "4a7cbb59f3120ed806e0a189f5984f0b3988cfe01a46b8105794aeff8f82aeca"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsStatementChecks.lean",
+          "sha256": "5daf9758bedd65221f6357223c47b0da81551bd190a5b8a4b4a3a10673fd6b67"
+        }
+      ],
+      "source_scope": "Typed trace presentation is EXACTLY equivalent to fixed packed counted trace. Actual lambda, AUX FUNCTION-only, whole ordered tuple and ordinary/numbered argument contexts preserve exact raw step count. No positive app-argument lift or source transitivity supplied; finiteS/quotient/effectivity/full original derivation simulation/ID1 remain unpaid. Complete actual7gate; no numbered source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualArgumentsToList",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualListToArguments",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualPermutationTransport",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualSplitTransport",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualListBudgetLowering",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualPointwiseTupleTrace"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualArgumentsToList",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualListToArguments",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualPermutationTransport",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualSplitTransport",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualListBudgetLowering",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualPointwiseTupleTrace"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedOccurrenceTransport-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOccurrenceTransportStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext"
+      ],
+      "axiom_detail": "First5fixed aliases AXIOM-FREE; pointwise tuple trace onlypropext.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportDefinitions.lean",
+          "sha256": "a9553590b118a3569274caa3eca7f5bfaa69de27337b06c68539b7403ecd6bb6"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportTargets.lean",
+          "sha256": "b6061eff8920a374d128190377edd31522ed4056fc02d0789b9374cbffba75eb"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportProof.lean",
+          "sha256": "a1034cee61ba74b5ee9d50f12c601bbd1b8a6a017f3e7c7e4001fdbb579e5642"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportStatementChecks.lean",
+          "sha256": "199a5fd2b276ad5a5ec73eb6f5337c2746087e9924e1e9121daec9e054d2df4d"
+        }
+      ],
+      "source_scope": "Literal packed/list representation of actual source occurrences; exact typed-vector reconstruction, permutation/split transport WITHOUT replacing marked representations, genuine budget lowering and whole actual pointwise-trace vector reconstruction. No solver, source transitivity, fixedS/quotient/effectivity/ID1 or full derivation simulation assumed. Complete actual6gate; no numbered source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualWeakSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualStrictInitialMark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualStrictSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualMatchSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualMultisetSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualReplacementSimulation"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualWeakSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualStrictInitialMark",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualStrictSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualMatchSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualMultisetSimulation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualReplacementSimulation"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedDerivationSimulation-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "axiom_detail": "ALL6fixed aliases onlypropext+Quot.sound. ACTUAL five-way original recursor discharges all explicit constructor IHs, not an assumed algebra/certificate field.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationDefinitions.lean",
+          "sha256": "9663a4ebd998c7881324a2c2ddb7458a3dffe7d5eac01cd864745059a95e5df8"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationTargets.lean",
+          "sha256": "e4cdddf6b63ad82de69d47538305ec374e09a6577add603af498690d7e86115f"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationCertificatesDefinitions.lean",
+          "sha256": "9a14ac0d36175589970747c212a0f18cabb57809e78327d775b3cb10363b4286"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationListCasesProof.lean",
+          "sha256": "961ee1a3ce47d270b6d3578b423897fd18f3d7132208ecffc756a1908438d93b"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationWeakBasicCasesProof.lean",
+          "sha256": "b5e7269fbd61963e5519930c4eb68699a7bfbfd1f0689ba8c9287d50f5f9583a"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationFunctionalSupportProof.lean",
+          "sha256": "e395951ba04b7fe081cbe86170ff93bc43ca6a33276aecc4aa4758cd0e35e375"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationFunctionalCasesProof.lean",
+          "sha256": "0c89abcdf82bff88fa0305c65a692224a491e2ebb0ce78e7ca8a50c51c1f6162"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationProof.lean",
+          "sha256": "72f8ab015333e34bb3c455b3dc3730a4b8be4a75068217c6a7797871d2829bc2"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationStatementChecks.lean",
+          "sha256": "e6685b3025e77571bf754d9a0044482dbc47de888eba37225d3e5bb47bc7d26b"
+        }
+      ],
+      "dependency_receipts": [
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationDefinitions",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationDefinitions.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationTargets.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationCertificatesDefinitions",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677638500565138-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793677638500565138-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationCertificatesDefinitions.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationListCasesProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677783983883423-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793677783983883423-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationListCasesProof.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationWeakBasicCasesProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677910836381425-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793677910836381425-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationWeakBasicCasesProof.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationFunctionalSupportProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678046951687061-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793678046951687061-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationFunctionalSupportProof.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationFunctionalCasesProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678196927973550-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793678196927973550-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationFunctionalCasesProof.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationProof",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationProof.log"
+        },
+        {
+          "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks",
+          "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2.json",
+          "returncode": 0,
+          "log": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationStatementChecks.log"
+        }
+      ],
+      "source_scope": "ENTIRE five actual ORIGINAL recursive relations one-way to raw counted auxiliary traces. Genuine finite common budgets; strict mark initial witness and strictly positive trace; literal occurrences in PrimitiveMultiset and replacement lists. NO source transitivity/stability assumption. COMPONENT of paper lem:simulation only: fixedS/confined operational quotient/least-code representatives/computable translation/ID1 remain unpaid. Complete actual6gate; whole RAW derivation induction paid, finiteS/quotient/coding/ID1 still unpaid; ZERO numbered source promotion.",
+      "numbered_statements_completed": []
+    },
+    {
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualHeadWindow",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualRepresentationConfinement",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualArgumentConfinement",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualUnmarkedHeadWindow",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualUnmarkedUniverse"
+      ],
+      "target_types": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualHeadWindow",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualRepresentationConfinement",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualArgumentConfinement",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualUnmarkedHeadWindow",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualUnmarkedUniverse"
+      ],
+      "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedFiniteUniverse-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678953516399199-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793678953516399199-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteUniverseStatementChecks.log",
+      "gate_returncode": 0,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "axiom_detail": "Source<=>Aux term/argument confinement AXIOM-FREE; unmarked head/universe onlypropext; complete executable head-window propext+Quot.sound. Entire5gate FIRST TRY.",
+      "files": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseDefinitions.lean",
+          "sha256": "acf3df15c1b3c21bec718e0b5c338faccb53304bd5a67a7c485b1ddada8553e3"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseTargets.lean",
+          "sha256": "3b48801b8b133f9fdf715b56fd146a44fc171f6c5ab066880482a16178ebcf90"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseProof.lean",
+          "sha256": "101e03acc662970259c53d4ec94dad57e0e6bc5abbe6aaa24b101d8a48db0489"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseStatementChecks.lean",
+          "sha256": "106140c518f109b736e19ff34637c3f9537ea61550490008014769abe466c7b4"
+        }
+      ],
+      "source_scope": "Actual executable finite head window from explicit finite symbol and type LISTS; complete for subtype-closed S, original head result/base type guards including native annotations. Source<=>Aux occurrence confinement under real representation and DERIVED unmarked-source head-window/universe membership. No output-only native finiteness assumption, added comparison premise, full confined trace, canonical quotient, source computability or ID1 claim. Complete actual5gate, no numbered source promotion.",
+      "numbered_statements_completed": []
+    }
+  ],
+  "source_pins": [
+    {
+      "file": "../06-godel-t-termination-ordering/paper.tex",
+      "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "label": "lem:adequacy",
+      "lines": "316\u2013347"
+    }
+  ],
+  "pending": [
+    "Arbitrary-family structural source statement retains its existing qualification",
+    "Exact current ordinary transitivity/Weak-Strict target REFUTED by checked diagnostic; source-faithfulness/repair decision required",
+    "Other well-foundedness/ID1/ordinal realization/complexity source targets still pending"
+  ]
+}

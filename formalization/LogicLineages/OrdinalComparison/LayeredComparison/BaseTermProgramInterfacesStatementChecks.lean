@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BaseTermProgramInterfacesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BaseTermPrograms.InterfacesStatementChecks
+theorem actual_numerical_interfaces:Targets.NumericalInterfaces:=Program.numericalInterfaces
+theorem actual_value_and_support_programs:Targets.ActualComputation:=Program.actualComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.BaseTermPrograms.InterfacesStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BaseTermPrograms.InterfacesStatementChecks

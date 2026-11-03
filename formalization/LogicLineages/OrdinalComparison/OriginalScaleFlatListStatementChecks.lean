@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.OriginalScaleFlatListTargets
+public import LogicLineages.OrdinalComparison.OriginalScaleFlatListProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.OriginalScaleFlatList.StatementChecks
+theorem literal_replication : Targets.LiteralReplication := Proof.literalReplication
+theorem exact_positive_gap : Targets.ExactPositiveGap := Proof.exactPositiveGap
+theorem actual_original_scale_chain : Targets.ActualOriginalScaleChain := Proof.actualOriginalScaleChain
+end LogicLineages.OrdinalComparison.Source.OriginalScaleFlatList.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.OriginalScaleFlatList

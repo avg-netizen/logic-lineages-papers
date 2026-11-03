@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ActiveScalarAnnotationTargets
+public import LogicLineages.OrdinalComparison.ActiveScalarAnnotationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ActiveScalarAnnotation.StatementChecks
+theorem head_closure_transport : Targets.HeadClosureTransport := Proof.headClosureTransport
+theorem ground_partial_transport : Targets.GroundPartialTransport := Proof.groundPartialTransport
+theorem actual_source_annotation : Targets.ActualSourceAnnotation := Proof.actualSourceAnnotation
+end LogicLineages.OrdinalComparison.Source.ActiveScalarAnnotation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ActiveScalarAnnotation

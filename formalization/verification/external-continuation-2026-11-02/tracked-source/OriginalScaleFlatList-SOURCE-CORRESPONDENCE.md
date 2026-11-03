@@ -1,0 +1,9 @@
+# Original-scale flat actual source list
+
+Paper09 `source-realization.tex`, `thm:ground-construction`, lines213–226. This scoped component consumes GIVEN actual heterogeneous unary source records (private prefixes plus shared base Γ) and the literal finite constant c satisfying c≥3*length+4. It does not claim to extract those records effectively from original P or to establish the entire theorem.
+
+The scale is exactly N=2^b at the given b≥4, with no enlargement. `paidList` is literally N copies of EVERY list occurrence followed by N caller copies, preserving duplicates/order. The caller is not an ordinal surrogate: the main target takes arbitrary actual original C:curriedGround(k+1), derives its whole assignment and the actual unary saturation by k literal zero arguments, and proves saturation preserves its first field at every ordinal valuation. The saturated source enters the shared base with empty private prefix.
+
+The one final actual chain is the accepted chain constructor on the actual context-merged flat list; its full assignment (including scalar) is retained. Its head is balanced against the natural product by N of the original head sum plus finite c and original actual caller head. The gap is exactly N*(c−3*length−3)−1, natural subtraction justified by the reserve guard, and is strictly positive. Epsilon-zero bounds required by canonical natural-product scaling are DERIVED from actual source assignments, not additional target premises. Natural sum/product and ordinary finite ordinal tails are kept distinct.
+
+The original B-head identity and original b provenance are supplied by prior accounting/second-budget results in a later assembly; the present input guard is explicit and does not pretend to be original-P extraction. Uniform effective carrier extraction and a numeric source generator remain unpaid. No existential witness choice is reported as an effective compiler.

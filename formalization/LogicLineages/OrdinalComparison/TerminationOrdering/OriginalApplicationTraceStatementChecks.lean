@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks
+
+theorem fixedExactExecutionEquation : OriginalApplicationTraceTargets.ExactExecutionEquation := OriginalApplicationTraceProof.exactExecutionEquation
+theorem fixedRecursiveStepFrame : OriginalApplicationTraceTargets.RecursiveStepFrame := OriginalApplicationTraceProof.recursiveStepFrame
+theorem fixedEveryExecutionPayload : OriginalApplicationTraceTargets.EveryExecutionPayload := OriginalApplicationTraceProof.everyExecutionPayload
+theorem fixedEverySelectExecution : OriginalApplicationTraceTargets.EverySelectExecution := OriginalApplicationTraceProof.everySelectExecution
+
+#print axioms fixedExactExecutionEquation
+#print axioms fixedRecursiveStepFrame
+#print axioms fixedEveryExecutionPayload
+#print axioms fixedEverySelectExecution
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks

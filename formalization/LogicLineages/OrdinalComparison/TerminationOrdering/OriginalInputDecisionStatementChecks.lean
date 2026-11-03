@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks
+
+theorem fixedRootReadAdequacy : OriginalInputDecisionTargets.RootReadAdequacy :=
+  OriginalInputDecisionProof.rootReadAdequacy
+theorem fixedWrongTypeRejection : OriginalInputDecisionTargets.WrongTypeRejection :=
+  OriginalInputDecisionProof.wrongTypeRejection
+def fixedOriginalComparisonsDecidable : OriginalInputDecisionTargets.OriginalComparisonsDecidable :=
+  OriginalInputDecisionProof.originalComparisonsDecidable
+
+#print axioms fixedRootReadAdequacy
+#print axioms fixedWrongTypeRejection
+#print axioms fixedOriginalComparisonsDecidable
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks

@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks
+
+theorem fixedRootOrientation : OriginalReductionTargets.RootOrientation := OriginalReductionProof.rootOrientation
+theorem fixedContextualOrientation : OriginalReductionTargets.ContextualOrientation := OriginalReductionProof.contextualOrientation
+theorem fixedRootSubstitutionClosure : OriginalReductionTargets.RootSubstitutionClosure := OriginalReductionProof.rootSubstitutionClosure
+theorem fixedContextualSubstitutionClosure : OriginalReductionTargets.ContextualSubstitutionClosure := OriginalReductionProof.contextualSubstitutionClosure
+theorem fixedSubstitutedContextualOrientation : OriginalReductionTargets.SubstitutedContextualOrientation := OriginalReductionProof.substitutedContextualOrientation
+
+#print axioms fixedRootOrientation
+#print axioms fixedContextualOrientation
+#print axioms fixedRootSubstitutionClosure
+#print axioms fixedContextualSubstitutionClosure
+#print axioms fixedSubstitutedContextualOrientation
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks

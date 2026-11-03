@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationStatementChecks
+
+theorem fixedBitClause : ActualValueLogicalRelationTargets.BitClause := ActualValueLogicalRelationProof.bitClause
+
+theorem fixedFullTupleClause : ActualValueLogicalRelationTargets.FullTupleClause := ActualValueLogicalRelationProof.fullTupleClause
+
+theorem fixedDownwardClosure : ActualValueLogicalRelationTargets.DownwardClosure := ActualValueLogicalRelationProof.downwardClosure
+
+theorem fixedBottomRelated : ActualValueLogicalRelationTargets.BottomRelated := ActualValueLogicalRelationProof.bottomRelated
+
+#print axioms fixedBitClause
+#print axioms fixedFullTupleClause
+#print axioms fixedDownwardClosure
+#print axioms fixedBottomRelated
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualValueLogicalRelationStatementChecks

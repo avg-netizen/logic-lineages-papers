@@ -1,0 +1,93 @@
+{
+  "aliases": [
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks.fixedWeakTypeSoundness",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "RecursiveComparisonProof.weakTypeSoundness",
+      "target": "RecursiveComparisonTargets.WeakTypeSoundness"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks.fixedStrictTypeSoundness",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "RecursiveComparisonProof.strictTypeSoundness",
+      "target": "RecursiveComparisonTargets.StrictTypeSoundness"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks.fixedMarkedStrictEmpty",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "RecursiveComparisonProof.markedStrictEmpty",
+      "target": "RecursiveComparisonTargets.MarkedStrictEmpty"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks.fixedStrictMarkHelperAgreement",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "RecursiveComparisonProof.strictMarkHelperAgreement",
+      "target": "RecursiveComparisonTargets.StrictMarkHelperAgreement"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks.fixedStrictWeakInclusion",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "RecursiveComparisonProof.strictWeakInclusion",
+      "target": "RecursiveComparisonTargets.StrictWeakInclusion"
+    },
+    {
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks.fixedLiteralOrdinaryReflexivity",
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "proof": "RecursiveComparisonProof.literalOrdinaryReflexivity",
+      "target": "RecursiveComparisonTargets.LiteralOrdinaryReflexivity"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "candidate_files": [
+    {
+      "exists": false,
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonProof.lean"
+    }
+  ],
+  "capture_script_sha256": "c387b9f0c3781ed7f647817cc2ead0303f07ba21bbebd7465a54771b540ea8ff",
+  "comparator_receipt": "formalization/build-reports/1793588885819608504-7.json",
+  "comparator_receipt_sha256": "6daf7dec17f22d8321ad02398ce9bbe1279d72b98d1c93e61093d1289998de92",
+  "frozen_files": [
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonDefinitions.lean",
+      "role": "definitions",
+      "sha256": "13d0f2dfeef57c8a69d4073c420358c619347b88200dbf0e94111c4e56f111dc"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonTargets.lean",
+      "role": "target",
+      "sha256": "ed9ea71a82ee710dcb56b7c9117672b4107639cdb5c76c90f0fb4236a5a4cbcb"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonStatementChecks.lean",
+      "role": "gate",
+      "sha256": "36db933ebcc4396fa812b14e84a9e0f8f963874d37752abe926206df4363bc3f"
+    },
+    {
+      "path": "formalization/verification/external-continuation-2026-11-02/termination-ordering/RECURSIVE-COMPARISON-SOURCE-CORRESPONDENCE.md",
+      "role": "correspondence",
+      "sha256": "3880858c4439165755fde6a2b71ec44b44900303a678747edc245303b96c7a2c"
+    }
+  ],
+  "observed_utc": "2026-11-02T03:08:56.385593+00:00",
+  "phase": "before-candidate-authoring",
+  "portable_export": {
+    "change": "Machine-local path redaction only; not a new freeze, run, or acceptance.",
+    "original_raw_sha256": "450cb847883be719c4bdd719d0bcf6641267207e978fb9253b5c654f8fe885ba"
+  },
+  "root_review_reference": "Root source review approved actual five mutually inductive relations and six exact interfaces at 2026-11-02 03:07 UTC, before candidate authorship; no whole-numbered promotion.",
+  "schema": "author-freeze-v2",
+  "scope": "First reconstructed small paper06 component: literal finite recursive relations with original full Select and fresh FAbs, exact occurrence matching, six source-semantic interfaces. No historical proof acceptance reused.",
+  "source": [
+    {
+      "label": "Recursive comparison definition: Var/Abs/Fun/Put/Select/F-Abs/Copy/Stat, strict marking and generalized multiset",
+      "path": "06-godel-t-termination-ordering/paper.tex",
+      "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+    }
+  ],
+  "spec_sha256": "08a3bff77663392a96c3aaeec65c824a11b566fe7060983599ff05f7940ce5e4"
+}

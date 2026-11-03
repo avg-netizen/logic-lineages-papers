@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkStatementChecks
+theorem fixedActualRawPositiveMark : NumberedPositiveMarkTargets.ActualRawPositiveMark := NumberedPositiveMarkProof.rawPositiveMark
+theorem fixedActualOrdinaryPositiveMark : NumberedPositiveMarkTargets.ActualOrdinaryPositiveMark := NumberedPositiveMarkProof.ordinaryPositiveMark
+#print axioms fixedActualRawPositiveMark
+#print axioms fixedActualOrdinaryPositiveMark
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPositiveMarkStatementChecks

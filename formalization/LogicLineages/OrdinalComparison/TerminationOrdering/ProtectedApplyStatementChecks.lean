@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks
+
+theorem fixedConsumedBinderEnvironment : ProtectedApplyTargets.ConsumedBinderEnvironment := ProtectedApplyBindingProof.consumedBinderEnvironment
+theorem fixedEmptyTuple : ProtectedApplyTargets.EmptyTuple := ProtectedApplyBindingProof.emptyTuple
+theorem fixedLiteralPrefixEquation : ProtectedApplyTargets.LiteralPrefixEquation := ProtectedApplyProof.literalPrefixEquation
+theorem fixedInitialOriginalEquation : ProtectedApplyTargets.InitialOriginalEquation := ProtectedApplyProof.initialOriginalEquation
+#print axioms fixedConsumedBinderEnvironment
+#print axioms fixedEmptyTuple
+#print axioms fixedLiteralPrefixEquation
+#print axioms fixedInitialOriginalEquation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedApplyStatementChecks

@@ -1,0 +1,148 @@
+{
+  "accepted_scope": "Scoped actual marked-syntax type confinement under renaming, marking, substitution, one-shot original simultaneous application and retyping, with literal embedding equivalence to ordinary typeSupport. No whole source finite-closure or other numbered-statement promotion.",
+  "additional_receipt_sha256": [],
+  "aliases": [
+    {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedLiteralEmbeddingTypeClosure",
+      "proof": "TypeClosureProof.literalEmbeddingTypeClosure",
+      "target": "TypeClosureTargets.LiteralEmbeddingTypeClosure"
+    },
+    {
+      "axioms": [],
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedRenamingTypeClosure",
+      "proof": "TypeClosureProof.renamingTypeClosure",
+      "target": "TypeClosureTargets.RenamingTypeClosure"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedMarkingTypeClosure",
+      "proof": "TypeClosureProof.markingTypeClosure",
+      "target": "TypeClosureTargets.MarkingTypeClosure"
+    },
+    {
+      "axioms": [],
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedSubstitutionTypeClosure",
+      "proof": "TypeClosureProof.substitutionTypeClosure",
+      "target": "TypeClosureTargets.SubstitutionTypeClosure"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedSimultaneousApplicationTypeClosure",
+      "proof": "TypeClosureProof.simultaneousApplicationTypeClosure",
+      "target": "TypeClosureTargets.SimultaneousApplicationTypeClosure"
+    },
+    {
+      "axioms": [],
+      "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks.fixedRetypingTypeClosure",
+      "proof": "TypeClosureProof.retypingTypeClosure",
+      "target": "TypeClosureTargets.RetypingTypeClosure"
+    }
+  ],
+  "baseline_commit": "c35d19c84b828b2dda388caaa8b394fd9ba2d8e5",
+  "baseline_reference": "formalization/verification/external-continuation-2026-11-01/independent/BASELINE.json",
+  "candidate_forbidden_construct_scan": "No sorry, admit, native_decide or axiom declaration in new component sources.",
+  "closure_sha256": "7903394cd34e85097031f904ab608b9abaf0e8b26f2fbddcb5b34881d7fac581",
+  "comparator_receipt_sha256": "e8b3df3076623e6494941173a3a66a824d748b0b65dd1d1ea23f2d6a8d6174c5",
+  "derived_contract_path": "formalization/verification/external-continuation-2026-11-01/independent/type-closure-DERIVED-CONTRACT.json",
+  "direct_comparator_compilation": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureDefinitions",
+      "returncode": 0,
+      "source_sha256": "2ddba7019b502ffb3f930c5ac0067c95e4a40265910e4f4253e28e82878a0146"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureTargets",
+      "returncode": 0,
+      "source_sha256": "241ff8001e37d0575a413b015e34898d967dd044a9ba1de86329171f43457bf4"
+    }
+  ],
+  "direct_compilation": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureProof",
+      "observed_cpu_seconds": 3.14,
+      "peak_process_tree_rss_kib": 995424,
+      "returncode": 0,
+      "seconds": 3.207,
+      "source_sha256": "7577bb163618ccd2fa1e00e019141e377ab0a56b8f94bba15cd60439130c530a"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks",
+      "observed_cpu_seconds": 1.16,
+      "peak_process_tree_rss_kib": 969616,
+      "returncode": 0,
+      "seconds": 1.223,
+      "source_sha256": "ce6434077fbc4e95b70fd40ab7e0c9624134b579f6b25e1c41ea872989ac3a5b"
+    }
+  ],
+  "errors": [],
+  "freeze_sha256": "9b9409246ca9d57dac38321eb694c0888c9032cd9bfc122f6c3d5b8afb000654",
+  "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.TypeClosureStatementChecks",
+  "limitations": [
+    "Pre-authoring chronology relies on contemporaneously observed freeze record, not file modification times.",
+    "This tool does not perform source-statement semantic review or rerun Lean."
+  ],
+  "namespace_audits": [
+    {
+      "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering",
+      "theorems": 14
+    }
+  ],
+  "new_changed_sources": [
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureDefinitions.lean",
+      "sha256": "2ddba7019b502ffb3f930c5ac0067c95e4a40265910e4f4253e28e82878a0146"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureProof.lean",
+      "sha256": "7577bb163618ccd2fa1e00e019141e377ab0a56b8f94bba15cd60439130c530a"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureStatementChecks.lean",
+      "sha256": "ce6434077fbc4e95b70fd40ab7e0c9624134b579f6b25e1c41ea872989ac3a5b"
+    },
+    {
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TypeClosureTargets.lean",
+      "sha256": "241ff8001e37d0575a413b015e34898d967dd044a9ba1de86329171f43457bf4"
+    }
+  ],
+  "observed_utc": "2026-11-01T05:18:15.105126+00:00",
+  "preserved_failed_history": [
+    {
+      "receipt_identifier": "1793510033143594608-7",
+      "receipt_sha256": "454b087b07ff274280269825e1f0c9445ae947f3c6849b6d7587d551e3914ecb",
+      "status": "earlier candidate diagnostic repaired without frozen-source changes; raw receipt and log retained locally"
+    }
+  ],
+  "raw_freeze_sha256": "1373c7e5340063cac8ce02121ed9b90241e5d41e069ce60d27a5203912e76c96",
+  "raw_log_availability": "retained locally outside public repository; not a portable full raw archive",
+  "raw_log_sha256": "f639f40c27488becb39ed864cdca814bc479a9c4fe9ccc914bf9f33ef525c9a4",
+  "receipt_sha256": "107d4c17d97679f6b3db4a69de2e548ac9540b1f4439012c579e6dd662b2cfd5",
+  "resources": {
+    "cpu_seconds": 90,
+    "heap_cap_mib": 2048,
+    "minimum_free_mib": 2048,
+    "rss_cap_mib": 1536,
+    "threads": 1,
+    "wall_seconds": 180
+  },
+  "schema": "independent-acceptance-v1",
+  "source_contract_review": "Six exact aliases recovered from original preproof hash-pinned populated gate and matched to actual compiler-audited declarations. Root-approved explicit derived supplement records equivalent historical freeze format without retroactive manuscript/alias fields or new candidate-absence claims.",
+  "source_snapshots": {
+    "after_sha256": "2fbbb77d5e24f664ebf9133cca000d2d62b1616e588aaea19136818de76cb33e",
+    "before_sha256": "e6173125b76b3c2fea0fbea5d37cf9e734aa3b4272ead3187bf08565db996c7b",
+    "local_modules": 16,
+    "unchanged": true,
+    "upstream_imports": 7
+  },
+  "status": "verified-technical-evidence",
+  "whole_statement_promotion": "requires-root-semantic-review"
+}

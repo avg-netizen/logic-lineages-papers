@@ -1,0 +1,82 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursionMachineProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.Proof
+
+noncomputable def callCost {A:Type} (children:A→List A) (μ:A→Nat)
+    (hd:∀a,∀b∈children a,μ b<μ a):A→Nat:=
+  (measure μ).wf.fix (fun a rec=>1+(children a).length+
+    ((children a).attach.map (fun b=>rec b.val (hd a b.val b.property))).sum)
+
+private theorem callCost_eq {A:Type} (children:A→List A) (μ:A→Nat)
+    (hd:∀a,∀b∈children a,μ b<μ a) (a:A):
+    callCost children μ hd a=1+(children a).length+((children a).map (callCost children μ hd)).sum:=by
+  rw [callCost,WellFounded.fix_eq]
+  congr 1
+  exact congrArg List.sum (by simp only [←List.map_map,List.attach_map_subtype_val])
+
+private def potential {A B:Type} (cost:A→Nat) (stack:Stack A B):Nat:=
+  (stack.map (fun frame=>1+(frame.2.2.map cost).sum+frame.2.2.length)).sum
+
+private def resume {A B:Type} (assemble:A→List B→B) (f:A→B):B→Stack A B→B
+  | value,[]=>value
+  | value,(a,done,pending)::rest=>
+      resume assemble f (assemble a (done.reverse++value::pending.map f)) rest
+
+private def expected {A B:Type} [Inhabited B] (assemble:A→List B→B) (f:A→B):Stack A B→B
+  | []=>default
+  | (a,done,pending)::rest=>resume assemble f (assemble a (done.reverse++pending.map f)) rest
+
+private theorem execute {A B:Type} [Inhabited B]
+    (children:A→List A) (assemble:A→List B→B) (f:A→B) (μ:A→Nat)
+    (hd:∀a,∀b∈children a,μ b<μ a)
+    (hf:∀a,f a=assemble a ((children a).map f)) (stack:Stack A B):
+    expected assemble f stack∈PFun.fix (fun s=>Part.some (step children assemble s)) stack:=by
+  let cost:=callCost children μ hd
+  refine (measure (potential (B:=B) cost)).wf.induction stack ?_
+  intro stack ih
+  cases stack with
+  | nil=>exact PFun.mem_fix_iff.mpr (Or.inl (by rfl))
+  | cons frame rest=>
+    rcases frame with ⟨a,done,pending⟩
+    cases pending with
+    | nil=>
+      cases rest with
+      | nil=>exact PFun.mem_fix_iff.mpr (Or.inl (by rfl))
+      | cons parent tail=>
+        rcases parent with ⟨p,prior,left⟩
+        let value:=assemble a done.reverse
+        let next:Stack A B:=(p,value::prior,left)::tail
+        have hp:potential cost next<potential cost ((a,done,[])::(p,prior,left)::tail):=by
+          simp only [potential,next,List.map_cons,List.map_nil,List.sum_cons,List.sum_nil,List.length_nil]
+          omega
+        have hv:expected assemble f next=expected assemble f ((a,done,[])::(p,prior,left)::tail):=by
+          simp only [expected,resume,next,value,List.map_nil,List.reverse_cons,List.nil_append,List.append_assoc]
+        apply PFun.mem_fix_iff.mpr
+        right
+        refine ⟨next,by rfl,?_⟩
+        have hh:=ih next hp
+        simpa only [hv] using hh
+    | cons b pending=>
+      let next:Stack A B:=(b,[],children b)::(a,done,pending)::rest
+      have hc:=callCost_eq children μ hd b
+      change cost b=1+(children b).length+((children b).map cost).sum at hc
+      have hp:potential cost next<potential cost ((a,done,b::pending)::rest):=by
+        simp only [potential,next,List.map_cons,List.sum_cons,List.length_cons]
+        omega
+      have hv:expected assemble f next=expected assemble f ((a,done,b::pending)::rest):=by
+        simp only [next,expected,resume,List.reverse_nil,List.nil_append,←hf b,List.map_cons]
+      apply PFun.mem_fix_iff.mpr
+      right
+      refine ⟨next,by rfl,?_⟩
+      have hh:=ih next hp
+      simpa only [hv] using hh
+
+theorem decreasingFiniteCalls : Targets.DecreasingFiniteCalls := by
+  intro A B _ _ _ children assemble hc ha f μ hd hf
+  have hm:∀a,f a∈program children assemble a:=by
+    intro a
+    have hh:=execute children assemble f μ hd hf [(a,[],children a)]
+    simpa only [program,expected,resume,List.reverse_nil,List.nil_append,←hf a] using hh
+  exact ⟨hm,(stackProgram A B children assemble hc ha).of_eq_tot hm⟩
+end LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.Proof

@@ -1,0 +1,99 @@
+{
+  "status": "whole-source candidate for sole main adoption",
+  "numbered_statements": [
+    {
+      "id": "06-godel-t-termination-ordering:lem:adequacy",
+      "accepted_declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks.fixedActualIdentityAdequacy"
+      ],
+      "supporting_declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks.fixedActualJointFundamental",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks.fixedActualIdentityBitSoundness"
+      ],
+      "frozen_comparators": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RelationalSyntaxTargets.lean",
+          "sha256": "592a1b61c6c3c13f33fbff402561171ce9f9e71cb323d0be1a091adffc536cd9",
+          "type": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxTargets.ActualIdentityAdequacy"
+        }
+      ],
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793655627607391386-2-LogicLineages-OrdinalComparison-TerminationOrdering-RelationalSyntaxStatementChecks.log",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks",
+      "source": {
+        "file": "../06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+        "label": "lem:adequacy",
+        "lines": "316\u2013347"
+      },
+      "correspondence": "verification/local-resume-2026-11-02/termination-ordering/RELATIONAL-SYNTAX-SOURCE-CORRESPONDENCE.md",
+      "qualifications": "Actual computed fixed point, ConfinedTerm, World, ObservationAt. Arbitrary-family source statement and executable decision remain separate."
+    },
+    {
+      "id": "06-godel-t-termination-ordering:thm:decide",
+      "accepted_declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks.fixedRootReadAdequacy",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks.fixedWrongTypeRejection",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks.fixedOriginalComparisonsDecidable"
+      ],
+      "frozen_comparators": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionTargets.lean",
+          "sha256": "50e5986609820107964ce857ceaadc6373606ee6426dc6d20f60978082be4a6c",
+          "type": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionTargets.RootReadAdequacy"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionTargets.lean",
+          "sha256": "50e5986609820107964ce857ceaadc6373606ee6426dc6d20f60978082be4a6c",
+          "type": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionTargets.WrongTypeRejection"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalInputDecisionTargets.lean",
+          "sha256": "50e5986609820107964ce857ceaadc6373606ee6426dc6d20f60978082be4a6c",
+          "type": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionTargets.OriginalComparisonsDecidable"
+        }
+      ],
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793656096794509606-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793656096794509606-2-LogicLineages-OrdinalComparison-TerminationOrdering-OriginalInputDecisionStatementChecks.log",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalInputDecisionStatementChecks",
+      "source": {
+        "file": "../06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+        "label": "thm:decide",
+        "lines": "349\u2013358"
+      },
+      "correspondence": "verification/local-resume-2026-11-02/termination-ordering/ORIGINAL-INPUT-DECISION-SOURCE-CORRESPONDENCE.md",
+      "qualifications": "Ordinary bottom-free original syntax, generic executable DecidableEq and DecidableRel input parameters. Actual finite lattice operator and cardinality fuel; no classical proposition decision. This claims original mathematical decidability, not a new uniform numeric Computable codec or resource bound."
+    },
+    {
+      "id": "06-godel-t-termination-ordering:thm:rpo",
+      "accepted_declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks.fixedOriginalRankedRestriction",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks.fixedConfinedRankedRestriction"
+      ],
+      "frozen_comparators": [
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderTargets.lean",
+          "sha256": "5deb14de7b9cb9eb28d5ca51077ea207aed607aa8704287fbb40acb7069d1a02",
+          "type": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderTargets.OriginalRankedRestriction"
+        },
+        {
+          "file": "LogicLineages/OrdinalComparison/TerminationOrdering/RankedPathOrderTargets.lean",
+          "sha256": "5deb14de7b9cb9eb28d5ca51077ea207aed607aa8704287fbb40acb7069d1a02",
+          "type": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderTargets.ConfinedRankedRestriction"
+        }
+      ],
+      "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793657634467916634-2.json",
+      "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793657634467916634-2-LogicLineages-OrdinalComparison-TerminationOrdering-RankedPathOrderStatementChecks.log",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks",
+      "source": {
+        "file": "../06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+        "label": "thm:rpo",
+        "lines": "413\u2013439"
+      },
+      "correspondence": "verification/local-resume-2026-11-02/termination-ordering/RANKED-RPO-SOURCE-CORRESPONDENCE.md",
+      "qualifications": "Literal ranked ground trees with actual ground variables in arbitrary typed contexts. Standard independent RPO, equality-retained multiset extension and BOTH original/confinement iff. Stronger generic precedence quantifier; no strong-pair, well-foundedness or ordinal conclusion."
+    }
+  ]
+}

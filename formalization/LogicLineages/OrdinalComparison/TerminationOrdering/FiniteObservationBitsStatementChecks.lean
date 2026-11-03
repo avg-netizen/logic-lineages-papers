@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsStatementChecks
+
+theorem fixedWorldCalibration : FiniteObservationBitsTargets.WorldCalibration := FiniteObservationBitsProof.worldCalibration
+theorem fixedObservationCalibration : FiniteObservationBitsTargets.ObservationCalibration := FiniteObservationBitsProof.observationCalibration
+theorem fixedExhaustiveEnumeration : FiniteObservationBitsTargets.ExhaustiveEnumeration := FiniteObservationBitsProof.exhaustiveEnumeration
+theorem fixedWeakeningIdentity : FiniteObservationBitsTargets.WeakeningIdentity := FiniteObservationBitsProof.weakeningIdentity
+theorem fixedWeakeningComposition : FiniteObservationBitsTargets.WeakeningComposition := FiniteObservationBitsProof.weakeningComposition
+theorem fixedWeakeningSuprema : FiniteObservationBitsTargets.WeakeningSuprema := FiniteObservationBitsProof.weakeningSuprema
+theorem fixedWeakeningInfima : FiniteObservationBitsTargets.WeakeningInfima := FiniteObservationBitsProof.weakeningInfima
+
+#print axioms fixedWorldCalibration
+#print axioms fixedObservationCalibration
+#print axioms fixedExhaustiveEnumeration
+#print axioms fixedWeakeningIdentity
+#print axioms fixedWeakeningComposition
+#print axioms fixedWeakeningSuprema
+#print axioms fixedWeakeningInfima
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FiniteObservationBitsStatementChecks

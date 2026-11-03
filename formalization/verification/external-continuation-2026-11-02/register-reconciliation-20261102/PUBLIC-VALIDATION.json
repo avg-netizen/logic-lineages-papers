@@ -1,0 +1,224 @@
+{
+  "before": {
+    "checked": 137,
+    "existing-calculator-package": 2,
+    "pending": 50
+  },
+  "after": {
+    "checked": 149,
+    "pending": 38,
+    "existing-calculator-package": 2
+  },
+  "promotions": [
+    {
+      "id": "06-godel-t-termination-ordering:lem:carrier",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierStatementChecks.fixedBaseStrict",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeCarrierStatementChecks.fixedApplicationClosure"
+      ],
+      "target_count": 2,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint07/WHOLE-STATEMENT-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:iterationedges",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesStatementChecks.fixedBaseEdge",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesStatementChecks.fixedIndexEdge",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeIterationEdgesStatementChecks.fixedApplicationEdge"
+      ],
+      "target_count": 3,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint11/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:graft",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingStatementChecks.fixedEnvironmentGrafting",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingStatementChecks.fixedDistinguishedVariableGrafting"
+      ],
+      "target_count": 2,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint12/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:betacases",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesStatementChecks.fixedBetaConfinedOrientation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesStatementChecks.fixedCaseFirstConfinedOrientation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NativeBetaCasesStatementChecks.fixedCaseSecondConfinedOrientation"
+      ],
+      "target_count": 3,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint14/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:corollary-15",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks.fixedRootOrientation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks.fixedContextualOrientation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks.fixedRootSubstitutionClosure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks.fixedContextualSubstitutionClosure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalReductionStatementChecks.fixedSubstitutedContextualOrientation"
+      ],
+      "target_count": 5,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint15/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:fv",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesStatementChecks.fixedOrdinaryOccurrenceCalibration",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesStatementChecks.fixedSupportCalibration",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesStatementChecks.fixedOriginalApplyProvenance",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesStatementChecks.fixedWeakFreeVariableContainment",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ComparisonFreeVariablesStatementChecks.fixedStrictFreeVariableContainment"
+      ],
+      "target_count": 5,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint17/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:finiteclosure",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesStatementChecks.fixedLiteralHeadCalibration",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesStatementChecks.fixedInitialFrame",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.FiniteQueryPrimitivesStatementChecks.fixedEverySelectAttemptClosure",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks.fixedExactExecutionEquation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks.fixedRecursiveStepFrame",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks.fixedEveryExecutionPayload",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.OriginalApplicationTraceStatementChecks.fixedEverySelectExecution",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks.fixedStepPreservesFrame",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks.fixedReachableFrame",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks.fixedFreshOpeningAvailability",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks.fixedFunPremisesCovered",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks.fixedStatPremisesCovered",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks.fixedIssuedSelectExecutionsBounded"
+      ],
+      "target_count": 13,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint24/FINITE-CLOSURE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:lattices",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedExhaustiveEnumeration",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedGroundRoundTrips",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedGroundOrder",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedWeakeningIdentity",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedWeakeningComposition",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedApplicationMonotone",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalDomainsStatementChecks.fixedApplicationNaturality",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks.fixedCompleteDomains",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks.fixedSupremumExistence",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks.fixedInfimumExistence",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks.fixedWeakeningSuprema",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks.fixedWeakeningInfima",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveNaturalLatticesStatementChecks.fixedFiniteSignatureEffectivity"
+      ],
+      "target_count": 13,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint32/NATURAL-LATTICES-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:operator",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks.fixedSourceBitEquations",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks.fixedFullTupleEquation",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks.fixedNaturalCoherentOutput",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks.fixedOperatorMonotone",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks.fixedBottomLeast",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks.fixedAscendingIteration",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks.fixedCardinalityStabilization",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks.fixedActualFixedPoint",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks.fixedLeastPreFixedPoint",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorIterationStatementChecks.fixedEventualConstancy"
+      ],
+      "target_count": 10,
+      "source_review": "verification/external-continuation-2026-11-02/termination-ordering/OPERATOR-WHOLE-SOURCE-REVIEW-20261102T0928Z.md"
+    },
+    {
+      "id": "09-canonical-source-expressivity:lem:carriers",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.Source.SelectedHeadCarrier.StatementChecks.selected_activity",
+        "LogicLineages.OrdinalComparison.Source.SelectedHeadCarrier.StatementChecks.operator_extraction",
+        "LogicLineages.OrdinalComparison.Source.SelectedHeadCarrier.StatementChecks.actual_selected_carriers"
+      ],
+      "target_count": 3,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint10/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "09-canonical-source-expressivity:lem:affine-head",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.StatementChecks.head_closure_head",
+        "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.StatementChecks.head_closure_scalar",
+        "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.StatementChecks.ground_partial_trees",
+        "LogicLineages.OrdinalComparison.Source.AdditiveHeadTree.StatementChecks.actual_source_trees",
+        "LogicLineages.OrdinalComparison.Source.HeadFiniteSurplus.StatementChecks.exact_head_partial",
+        "LogicLineages.OrdinalComparison.Source.HeadFiniteSurplus.StatementChecks.surplus_bounds",
+        "LogicLineages.OrdinalComparison.Source.HeadFiniteSurplus.StatementChecks.actual_source_surplus",
+        "LogicLineages.OrdinalComparison.Source.SelectedAffineHead.StatementChecks.exact_selection_coverage",
+        "LogicLineages.OrdinalComparison.Source.SelectedAffineHead.StatementChecks.selected_tree_support",
+        "LogicLineages.OrdinalComparison.Source.SelectedAffineHead.StatementChecks.complete_source_affine_heads"
+      ],
+      "target_count": 10,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint16/WHOLE-SOURCE-REVIEW.md"
+    },
+    {
+      "id": "09-canonical-source-expressivity:lem:reserve",
+      "before": "pending",
+      "after": "checked",
+      "declarations": [
+        "LogicLineages.OrdinalComparison.Source.ScalarCarrierAccounting.StatementChecks.accounting_origin",
+        "LogicLineages.OrdinalComparison.Source.ScalarCarrierAccounting.StatementChecks.exact_accounting",
+        "LogicLineages.OrdinalComparison.Source.ScalarCarrierAccounting.StatementChecks.actual_source_accounting",
+        "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.StatementChecks.exact_unit_value",
+        "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.StatementChecks.tracked_invariants",
+        "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.StatementChecks.exact_account_transport",
+        "LogicLineages.OrdinalComparison.Source.GroundCarrierTransport.StatementChecks.actual_source_ground_transport",
+        "LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.StatementChecks.accounting_determinacy",
+        "LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.StatementChecks.universal_soundness",
+        "LogicLineages.OrdinalComparison.Source.AccountSemanticDeterminacy.StatementChecks.actual_source_soundness",
+        "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.StatementChecks.certificate_renaming",
+        "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.StatementChecks.selected_certificates",
+        "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.StatementChecks.ground_prefix_step",
+        "LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.StatementChecks.actual_prepared_accounting",
+        "LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.StatementChecks.adjacent_closure_calibration",
+        "LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.StatementChecks.ground_partial_account",
+        "LogicLineages.OrdinalComparison.Source.GroundPartialCarrierTransport.StatementChecks.actual_source_ground_partial",
+        "LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.StatementChecks.positive_head_value",
+        "LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.StatementChecks.renamed_source_lower_bound",
+        "LogicLineages.OrdinalComparison.Source.SourceReserveLowerBound.StatementChecks.actual_source_lower_bound"
+      ],
+      "target_count": 20,
+      "source_review": "verification/external-continuation-2026-11-02/checkpoint29/RESERVE-SOURCE-REVIEW.md"
+    }
+  ],
+  "companion_only": [
+    "06-godel-t-termination-ordering:lem:context"
+  ],
+  "schema": "public-register-reconciliation-v1",
+  "source_checkpoint": "checkpoint65/PUBLIC-VALIDATION.json",
+  "source_commit": "0f914d17c5aedd56af50a55dae227c3738a54f8b",
+  "register_sha256": "44561be1cd82fff51a9b82c64348625dbe0ab1e7aad03c40ba9282afd65f4769",
+  "validation": "Twelve previously pending source statements promoted only after exact source-clause review, prospective comparator and full dependency checks, and inclusion in the independently verified 340-alias aggregate. All other status rows and every original statement identity, text, source file and line are unchanged. Existing context status retained with the actual typed-renaming companion explicitly linked.",
+  "limitations": [
+    "No fresh full-root or CI pass.",
+    "No structural interpretation, adequacy, overall decidability, stability, ordinal realization or final source-to-K effectivity promotion.",
+    "Historical pending-register notices are preserved as history and superseded by this reconciliation. Raw build logs remain excluded."
+  ]
+}

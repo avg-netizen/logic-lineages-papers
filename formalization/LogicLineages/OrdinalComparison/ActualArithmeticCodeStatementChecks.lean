@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ActualArithmeticCodeTargets
+public import LogicLineages.OrdinalComparison.ActualArithmeticCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode.StatementChecks
+theorem exact_expression_lift : Targets.ExactExpressionLift := Proof.exactExpressionLift
+theorem exact_formula_constructors : Targets.ExactFormulaConstructors := Proof.exactFormulaConstructors
+theorem exact_fixed_control : Targets.ExactFixedControl := Proof.exactFixedControl
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+end LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.ArithmeticCode

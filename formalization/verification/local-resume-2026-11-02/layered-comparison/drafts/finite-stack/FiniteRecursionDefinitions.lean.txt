@@ -1,0 +1,24 @@
+module
+public import Mathlib.Computability.Partrec
+public import Mathlib.Computability.Primrec.List
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion
+abbrev Frame (A B:Type):=A×List B×List A
+abbrev Stack (A B:Type):=List (Frame A B)
+/-- Actual deterministic evaluation stack. It calls every listed child and
+assembles their returned values in their original order. -/
+def step {A B:Type} [Inhabited B] (children:A→List A) (assemble:A→List B→B) :
+    Stack A B→B⊕Stack A B
+  | [] => .inl default
+  | (a,done,[])::rest =>
+      let value:=assemble a done.reverse
+      match rest with
+      | [] => .inl value
+      | (parent,prior,pending)::tail => .inr ((parent,value::prior,pending)::tail)
+  | (a,done,b::pending)::rest =>
+      .inr ((b,[],children b)::(a,done,pending)::rest)
+
+def program {A B:Type} [Inhabited B] (children:A→List A) (assemble:A→List B→B)
+    (a:A) : Part B :=
+  PFun.fix (fun stack=>Part.some (step children assemble stack)) [(a,[],children a)]
+end LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion

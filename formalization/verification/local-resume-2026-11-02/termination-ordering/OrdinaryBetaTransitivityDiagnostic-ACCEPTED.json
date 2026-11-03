@@ -1,0 +1,71 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualOrdinarySteps",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualOrdinaryFailure",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualWeakTransitivityRefutation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticStatementChecks.fixedActualWeakStrictRefutation"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualOrdinarySteps",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualOrdinaryFailure",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualWeakTransitivityRefutation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaTransitivityDiagnosticTargets.ActualWeakStrictRefutation"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinaryBetaTransitivityDiagnostic-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793669543703102170-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793669543703102170-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryBetaTransitivityDiagnosticStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticDefinitions.lean",
+        "sha256": "6cf846d58a5b7d5cbf68de9021a9552fa2ed7b43d0cf3d0b8f5c9411431774fb"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticTargets.lean",
+        "sha256": "ed30f5e0b40095259f9af862d5cef6512d8d45d5a71402f24c00686733adae80"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticStepsProof.lean",
+        "sha256": "47b237c3346599195618d23e53c28e20136cdd2c5ab1614bd424cbed93986e19"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticObstructionsProof.lean",
+        "sha256": "fb55b73d18bc0fdacee6d0981470765d6c5c9695291ee7c1380117d6849351fb"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticProof.lean",
+        "sha256": "ec2ab89e737f9ddf245e86e5f5047f2f52c14d82306f0e3350ea44133bf4eed2"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaTransitivityDiagnosticStatementChecks.lean",
+        "sha256": "b38758401bf665105765f7de3391474e614cc34107cb3cf66bd64cab6745d938"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalBudgetFunctionalInversionProof.lean",
+        "sha256": "800ec530120341046d432fdc1af137e776ef5c23eedc2cb811aea3eadc56604e"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OriginalCompositionFramesProof.lean",
+        "sha256": "5e87f72a5f24cd7c6c8585c1a58e506a00e282905b19855a12f38d4635b6af80"
+      }
+    ],
+    "source_scope": "DIAGNOSTIC IN THE ACTUAL ORIGINAL TERM DOMAIN: P=(lambda x.F(x,Z)) K(H), T=F(K(H),Z), U=F(H,H), ranked Z<H<K<F of arities0,0,1,2. ORIGINAL P Weak T and T Strict U, but NO ORIGINAL P Weak U. Genuine four-state induction over exact original derivation budgets rules out every finite derivation, not bounded search. REFUTES exact frozen ordinary weak transitivity and Weak-then-Strict compatibility targets for IMMUTABLE local rules. No claim that Kop published theorem is false without separately paid full source-convention correspondence; no source definition edits or numbered completion.",
+    "diagnostic_only": true,
+    "numbered_statements_completed": []
+  },
+  "source_pins": [
+    {
+      "file": "../06-godel-t-termination-ordering/paper.tex",
+      "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "label": "lem:adequacy",
+      "lines": "316\u2013347"
+    }
+  ],
+  "meaning": "Actual exact local counterexample, not whole source promotion"
+}

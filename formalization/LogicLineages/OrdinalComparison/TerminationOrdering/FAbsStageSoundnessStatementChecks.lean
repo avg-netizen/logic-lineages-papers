@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.FAbsStageSoundnessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.FAbsStageSoundnessStatementChecks
+
+theorem fixedFAbsSound : FAbsStageSoundnessTargets.FAbsSound := FAbsStageSoundnessProof.fAbsSound
+#print axioms fixedFAbsSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.FAbsStageSoundnessStatementChecks

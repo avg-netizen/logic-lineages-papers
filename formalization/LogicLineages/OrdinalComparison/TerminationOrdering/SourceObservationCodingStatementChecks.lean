@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingStatementChecks
+
+theorem fixedTermCodeInjective : SourceObservationCodingTargets.TermCodeInjective := SourceObservationCodingProof.termCodeInjective
+theorem fixedObservationCodeInjective : SourceObservationCodingTargets.ObservationCodeInjective := SourceObservationCodingProof.observationCodeInjective
+theorem fixedTermEqualCorrect : SourceObservationCodingTargets.TermEqualCorrect := SourceObservationCodingProof.termEqualCorrect
+theorem fixedObservationEqualCorrect : SourceObservationCodingTargets.ObservationEqualCorrect := SourceObservationCodingProof.observationEqualCorrect
+
+#print axioms fixedTermCodeInjective
+#print axioms fixedObservationCodeInjective
+#print axioms fixedTermEqualCorrect
+#print axioms fixedObservationEqualCorrect
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceObservationCodingStatementChecks

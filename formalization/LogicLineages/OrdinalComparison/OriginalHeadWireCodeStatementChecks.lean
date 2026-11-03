@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.OriginalHeadWireCodeTargets
+public import LogicLineages.OrdinalComparison.OriginalHeadWireCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.StatementChecks
+theorem actual_scalar_finiteness : Targets.ActualScalarFiniteness := Proof.actualScalarFiniteness
+theorem effective_compiler : Targets.EffectiveCompiler := Proof.effectiveCompiler
+theorem actual_original_wire : Targets.ActualOriginalWire := Proof.actualOriginalWire
+end LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.OriginalHeadWireCode

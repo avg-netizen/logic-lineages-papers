@@ -1,0 +1,7 @@
+# Exact large common-head row dominance
+
+Paper08 `paper.tex` lines855–874 sets C=sum|a_i| and L=max(4,2C,4|K|+4). This component retains exactly that threshold. It proves the sign of a row of actual common-head values is the sign of the coefficient at its greatest distinct genuine input, provided that coefficient is nonzero. Other coefficients may be zero. The head is any actual nonzero limit below epsilon zero; there is no polynomial restriction or arbitrary independent model of its values.
+
+The numerical supplier uses the actual control Phi and bands Phi(s)<v<2Phi(s), with distinct predecessor indices s. The actual-source theorem derives those bands, the input-to-index lower bound, distinctness and order from the existing complete head trace and sparse endpoint theorems. It supplies no endpoint/monotonicity/gap oracle. In particular the proof may not replace L by the older larger numerical bound 2C+|K|.
+
+The row in this target already has distinct inputs. It does not assert that an uncollected row's largest canceled occurrence controls its sign. Literal equal-input collection, coefficient mass bounds, surviving-maximum selection, finite-small branches, preorder formula generation, nested layers and the Snyatkov decision supplier remain separate. The unrestricted signed degree-two recursion obstruction is neither used nor altered. No whole common-head or balanced decision theorem is promoted here.

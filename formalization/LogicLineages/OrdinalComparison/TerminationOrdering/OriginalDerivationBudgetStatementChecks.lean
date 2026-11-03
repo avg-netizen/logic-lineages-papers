@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalDerivationBudgetProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalDerivationBudgetStatementChecks
+theorem fixedActualFiveWayEquivalence : OriginalDerivationBudgetTargets.ActualFiveWayEquivalence := OriginalDerivationBudgetProof.actualFiveWayEquivalence
+#print axioms fixedActualFiveWayEquivalence
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalDerivationBudgetStatementChecks

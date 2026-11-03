@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SelectedAffineHeadTargets
+public import LogicLineages.OrdinalComparison.SelectedAffineHeadProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SelectedAffineHead.StatementChecks
+theorem exact_selection_coverage : Targets.ExactSelectionCoverage := Proof.exactSelectionCoverage
+theorem selected_tree_support : Targets.SelectedTreeSupport := Proof.selectedTreeSupport
+theorem complete_source_affine_heads : Targets.CompleteSourceAffineHeads := Proof.completeSourceAffineHeads
+end LogicLineages.OrdinalComparison.Source.SelectedAffineHead.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SelectedAffineHead

@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestStatementChecks
+
+theorem fixedGenuineChildGuards : MarkedCopyTestTargets.GenuineChildGuards := MarkedCopyTestProof.genuineChildGuards
+theorem fixedAllChildrenCalibration : MarkedCopyTestTargets.AllChildrenCalibration := MarkedCopyTestProof.allChildrenCalibration
+theorem fixedCopyCalibration : MarkedCopyTestTargets.CopyCalibration := MarkedCopyTestProof.copyCalibration
+theorem fixedTestMonotone : MarkedCopyTestTargets.TestMonotone := MarkedCopyTestProof.testMonotone
+theorem fixedCoordinatesMonotone : MarkedCopyTestTargets.CoordinatesMonotone := MarkedCopyTestProof.coordinatesMonotone
+theorem fixedCoordinatesWeakening : MarkedCopyTestTargets.CoordinatesWeakening := MarkedCopyTestProof.coordinatesWeakening
+
+#print axioms fixedGenuineChildGuards
+#print axioms fixedAllChildrenCalibration
+#print axioms fixedCopyCalibration
+#print axioms fixedTestMonotone
+#print axioms fixedCoordinatesMonotone
+#print axioms fixedCoordinatesWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.MarkedCopyTestStatementChecks

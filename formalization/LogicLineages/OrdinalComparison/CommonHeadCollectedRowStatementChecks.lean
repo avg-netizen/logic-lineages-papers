@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.CommonHeadCollectedRowTargets
+public import LogicLineages.OrdinalComparison.CommonHeadCollectedRowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CommonHeadCollectedRow.StatementChecks
+theorem exact_weighted_collection : Targets.ExactWeightedCollection := Proof.exactWeightedCollection
+theorem literal_collected_support : Targets.LiteralCollectedSupport := Proof.literalCollectedSupport
+theorem actual_collected_dominance : Targets.ActualCollectedDominance := Proof.actualCollectedDominance
+end LogicLineages.OrdinalComparison.CommonHeadCollectedRow.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.CommonHeadCollectedRow

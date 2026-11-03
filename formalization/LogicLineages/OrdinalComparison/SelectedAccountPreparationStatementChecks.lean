@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SelectedAccountPreparationTargets
+public import LogicLineages.OrdinalComparison.SelectedAccountPreparationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.StatementChecks
+theorem certificate_renaming : Targets.CertificateRenaming := Proof.certificateRenaming
+theorem selected_certificates : Targets.SelectedCertificates := Proof.selectedCertificates
+theorem ground_prefix_step : Targets.GroundPrefixStep := Proof.groundPrefixStep
+theorem actual_prepared_accounting : Targets.ActualPreparedAccounting := Proof.actualPreparedAccounting
+end LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SelectedAccountPreparation

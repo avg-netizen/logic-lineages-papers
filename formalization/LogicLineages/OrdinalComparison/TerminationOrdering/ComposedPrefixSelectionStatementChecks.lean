@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ComposedPrefixSelectionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ComposedPrefixSelectionStatementChecks
+theorem fixedActualComposedPrefixSelection : ComposedPrefixSelectionTargets.ActualComposedPrefixSelection := ComposedPrefixSelectionProof.actualComposedPrefixSelection
+#print axioms fixedActualComposedPrefixSelection
+end LogicLineages.OrdinalComparison.TerminationOrdering.ComposedPrefixSelectionStatementChecks

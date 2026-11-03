@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks
+
+theorem fixedSourceBitEquations : SourceConstructorOperatorTargets.SourceBitEquations := SourceConstructorOperatorProof.sourceBitEquations
+theorem fixedFullTupleEquation : SourceConstructorOperatorTargets.FullTupleEquation := SourceConstructorOperatorProof.fullTupleEquation
+theorem fixedNaturalCoherentOutput : SourceConstructorOperatorTargets.NaturalCoherentOutput := SourceConstructorOperatorProof.naturalCoherentOutput
+theorem fixedOperatorMonotone : SourceConstructorOperatorTargets.OperatorMonotone := SourceConstructorOperatorProof.operatorMonotone
+
+#print axioms fixedSourceBitEquations
+#print axioms fixedFullTupleEquation
+#print axioms fixedNaturalCoherentOutput
+#print axioms fixedOperatorMonotone
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceConstructorOperatorStatementChecks

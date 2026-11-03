@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ActualHeadGraphFormulaTargets
+public import LogicLineages.OrdinalComparison.ActualHeadGraphFormulaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.FormulaConstruction.StatementChecks
+theorem exact_finite_prefix : Targets.ExactFinitePrefix := Proof.exactFinitePrefix
+theorem exact_tail_from_ray : Targets.ExactTailFromRay := Proof.exactTailFromRay
+theorem actual_whole_genuine_graph : Targets.ActualWholeGenuineGraph := Proof.actualWholeGenuineGraph
+end LogicLineages.OrdinalComparison.Source.ActualHeadGraph.FormulaConstruction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.FormulaConstruction

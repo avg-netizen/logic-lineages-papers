@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntaxSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.SupportStatementChecks
+theorem actual_source_support_stability:Targets.ActualRawSupportStability:=Proof.supportStability
+theorem actual_source_support_domination:Targets.ActualRawSupportDomination:=Proof.supportDomination
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.SupportStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.SupportStatementChecks

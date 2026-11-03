@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitScalarEvaluationCodeTargets
+public import LogicLineages.OrdinalComparison.UnitScalarEvaluationCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitScalarEvaluationCode.StatementChecks
+theorem exact_refusing_extraction : Targets.ExactRefusingExtraction := Proof.exactRefusingExtraction
+theorem effective_generated_scalar : Targets.EffectiveGeneratedScalar := Proof.effectiveGeneratedScalar
+theorem actual_closed_source_scalar : Targets.ActualClosedSourceScalar := Proof.actualClosedSourceScalar
+end LogicLineages.OrdinalComparison.Source.UnitScalarEvaluationCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitScalarEvaluationCode

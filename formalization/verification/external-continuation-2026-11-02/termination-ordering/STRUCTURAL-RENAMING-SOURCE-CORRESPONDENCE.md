@@ -1,0 +1,7 @@
+# Actual original-syntax renaming covariance
+
+This component concerns the already constructed actual paired evaluator and scanner, not an arbitrary supplied action. Rename the unchanged original MarkedTerm by the existing capture-avoiding typed renameTerm. Confinement follows from the existing type/head renaming closure, so the renamed subtype contains exactly that syntax, with no normalization or bottom fallback.
+
+Interpretation covariance compares evaluation of the renamed syntax under the target environment with evaluation of the original syntax under actual renaming precomposition. Scanner covariance additionally pulls the protected-variable mask back along the same typed renaming. It keeps the full ordered argument tuple and literal source/result type equality unchanged. In particular, lifted renaming must preserve protected binder status and actual binder environment extension; lambda observation matching and full original-spine tables both remain in the comparison.
+
+Unlike same-family marked application consistency, this change-of-bound-variable calculation is intended for every actual natural coherent constructor family. Its proof must recurse on actual original syntax/argument lists and discharge the variable, functional and lambda cases; a generic environment algebra theorem is not enough. LiteralErasure is a definitional fidelity interface. No capture-avoiding general substitution, special-application correctness, adequacy or whole structural lemma is claimed. The separately recorded generic-family full-application limitation is unchanged.

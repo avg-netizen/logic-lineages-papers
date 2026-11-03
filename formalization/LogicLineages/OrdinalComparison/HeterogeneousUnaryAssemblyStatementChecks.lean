@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.HeterogeneousUnaryAssemblyTargets
+public import LogicLineages.OrdinalComparison.HeterogeneousUnaryAssemblyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.HeterogeneousUnaryAssembly.StatementChecks
+theorem shared_base_embeddings : Targets.SharedBaseEmbeddings := Proof.sharedBaseEmbeddings
+theorem exact_merged_assignments : Targets.ExactMergedAssignments := Proof.exactMergedAssignments
+theorem actual_merged_chain : Targets.ActualMergedChain := Proof.actualMergedChain
+end LogicLineages.OrdinalComparison.Source.HeterogeneousUnaryAssembly.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.HeterogeneousUnaryAssembly

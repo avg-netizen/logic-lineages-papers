@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedKeyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.KeyStatementChecks
+theorem actual_heterogeneous_key_window:KeyTargets.ActualKeyWindow:=KeyProof.actualKeyWindow
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.KeyStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.KeyStatementChecks

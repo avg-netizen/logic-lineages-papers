@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.DeterministicAccountDataTargets
+public import LogicLineages.OrdinalComparison.DeterministicAccountDataProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.DeterministicAccountData.StatementChecks
+theorem exact_data_accounting : Targets.ExactDataAccounting := Proof.exactDataAccounting
+theorem exact_record_certification : Targets.ExactRecordCertification := Proof.exactRecordCertification
+theorem actual_source_account : Targets.ActualSourceAccount := Proof.actualSourceAccount
+end LogicLineages.OrdinalComparison.Source.DeterministicAccountData.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.DeterministicAccountData

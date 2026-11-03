@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks
+theorem fixedLiteralEmbedding : RankedTreeTargets.LiteralEmbedding := RankedTreeProof.literalEmbedding
+theorem fixedLiteralArgumentList : RankedTreeTargets.LiteralArgumentList := RankedTreeProof.literalArgumentList
+theorem fixedGroundSuffix : RankedTreeTargets.GroundSuffix := RankedTreeProof.groundSuffix
+theorem fixedExactSelectExecution : RankedTreeTargets.ExactSelectExecution := RankedTreeProof.exactSelectExecution
+#print axioms fixedLiteralEmbedding
+#print axioms fixedLiteralArgumentList
+#print axioms fixedGroundSuffix
+#print axioms fixedExactSelectExecution
+end LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeStatementChecks

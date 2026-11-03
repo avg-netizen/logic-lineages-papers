@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithms.StatementChecks
+theorem actual_signed_arithmetic : Targets.SignedArithmetic := Proof.signedArithmetic
+end LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithms.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithms.StatementChecks

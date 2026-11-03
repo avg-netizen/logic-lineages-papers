@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.HeterogeneousHeadProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.HeterogeneousHead.StatementChecks
+theorem actual_endpoint_band:Targets.ActualHeadBand:=Proof.actualBand
+theorem actual_input_expansive:Targets.ActualInputExpansiveness:=Proof.inputExpansive
+end LogicLineages.OrdinalComparison.LayeredComparison.HeterogeneousHead.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.HeterogeneousHead.StatementChecks

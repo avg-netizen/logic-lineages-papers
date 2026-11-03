@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.GroundCaptureClosingCodeTargets
+public import LogicLineages.OrdinalComparison.GroundCaptureClosingCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode.StatementChecks
+theorem exact_protected_source : Targets.ExactProtectedSource := Proof.exactProtectedSource
+theorem exact_ordinal_vector : Targets.ExactOrdinalVector := Proof.exactOrdinalVector
+theorem primitive_recursive_algorithms : Targets.PrimitiveRecursiveAlgorithms := Proof.primitiveRecursiveAlgorithms
+theorem actual_closing_assignment : Targets.ActualClosingAssignment := Proof.actualClosingAssignment
+end LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.GroundCaptureClosingCode

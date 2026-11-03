@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeStatementChecks
+
+theorem fixedHeadBaseTypes : CoherentConstructorLatticeTargets.HeadBaseTypes := CoherentConstructorLatticeProof.headBaseTypes
+theorem fixedInputRestrictionCalibration : CoherentConstructorLatticeTargets.InputRestrictionCalibration := CoherentConstructorLatticeProof.inputRestrictionCalibration
+theorem fixedExhaustiveEnumeration : CoherentConstructorLatticeTargets.ExhaustiveEnumeration := CoherentConstructorLatticeProof.exhaustiveEnumeration
+theorem fixedSupCoherent : CoherentConstructorLatticeTargets.SupCoherent := CoherentConstructorLatticeProof.supCoherent
+theorem fixedInfCoherent : CoherentConstructorLatticeTargets.InfCoherent := CoherentConstructorLatticeProof.infCoherent
+theorem fixedSupUniversal : CoherentConstructorLatticeTargets.SupUniversal := CoherentConstructorLatticeProof.supUniversal
+theorem fixedInfUniversal : CoherentConstructorLatticeTargets.InfUniversal := CoherentConstructorLatticeProof.infUniversal
+theorem fixedCompleteConstructors : CoherentConstructorLatticeTargets.CompleteConstructors := CoherentConstructorLatticeProof.completeConstructors
+
+#print axioms fixedHeadBaseTypes
+#print axioms fixedInputRestrictionCalibration
+#print axioms fixedExhaustiveEnumeration
+#print axioms fixedSupCoherent
+#print axioms fixedInfCoherent
+#print axioms fixedSupUniversal
+#print axioms fixedInfUniversal
+#print axioms fixedCompleteConstructors
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.CoherentConstructorLatticeStatementChecks

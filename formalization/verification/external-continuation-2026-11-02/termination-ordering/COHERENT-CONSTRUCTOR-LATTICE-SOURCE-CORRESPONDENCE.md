@@ -1,0 +1,13 @@
+# Actual coherent constructor-family lattice
+
+Source paper06 lines217–229, the constructor coherence equation and finite complete lattice assertion following lem:lattices. This is not the later operator theorem.
+
+HeadIndex contains exactly literal heads occurring in the actual original source embedding; duplicate occurrences are removed using executable structural equality of the existing Head datatype. The head data is unchanged. HeadBaseTypes must prove every actual fixed base type belongs to the input support K. Native constants retain their literal zero ranked arguments even when functional; application heads retain exactly their declared two argument types. No curried surrogate is inserted.
+
+Inputs at f,P are the FULL ordered base tuple of actual Value domains at headArguments f, paired with the already accepted actual typed extra downsets. inputFamily's finite data and identity/composition/monotonicity are directly assembled from the accepted actual Value restrictions and extrasFamily; these are structural interfaces, not a new interpretation theorem. InputRestrictionCalibration exposes exactly tuplewise weakening and the entire extra downward image, including the membership witness and lower-value comparison. No meet preservation of downward image is assumed.
+
+Raw constructor families contain a table for every actual source head, every output type in K and every actual finite world. Good is precisely monotonicity on the full tuple/downset input order and the ORIGINAL coherence equation: output weakening equals evaluation at the extended world on the weakened full base tuple and downward-image extras. Good does not assume a source comparison result, fixed-point equation, or closure conclusion.
+
+The ordinary executable finite filter enumerates these actual tables. Mathematical supRaw/infRaw use the ACTUAL independently constructed recursive output domain bounds at every coordinate; no generic lower-family completeness hypothesis remains. Targets require arbitrary pointwise suprema/infima to be Good and IsLUB/IsGLB in the unchanged raw order, including empty families. CompleteConstructors requires a CompleteLattice structure on the actual filtered carrier with the original pointwise order unchanged.
+
+Eight scoped targets, with head/type closure and coherent lattice closure as substantive content; enumeration and restriction interfaces explicitly reuse their accepted finite suppliers. No whole numbered operator, structural interpretation, fixed-point least solution, semantic extras compression, adequacy, or effective comparison theorem is promoted from this component.

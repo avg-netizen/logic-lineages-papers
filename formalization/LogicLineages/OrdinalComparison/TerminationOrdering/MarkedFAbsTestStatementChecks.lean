@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestStatementChecks
+
+theorem fixedFreshAvailability : MarkedFAbsTestTargets.FreshAvailability := MarkedFAbsTestProof.freshAvailability
+theorem fixedGenuineOpeningGuards : MarkedFAbsTestTargets.GenuineOpeningGuards := MarkedFAbsTestProof.genuineOpeningGuards
+theorem fixedLambdaCalibration : MarkedFAbsTestTargets.LambdaCalibration := MarkedFAbsTestProof.lambdaCalibration
+theorem fixedLiteralLambdaEquation : MarkedFAbsTestTargets.LiteralLambdaEquation := MarkedFAbsTestProof.literalLambdaEquation
+theorem fixedTestMonotone : MarkedFAbsTestTargets.TestMonotone := MarkedFAbsTestProof.testMonotone
+theorem fixedCoordinatesMonotone : MarkedFAbsTestTargets.CoordinatesMonotone := MarkedFAbsTestProof.coordinatesMonotone
+theorem fixedCoordinatesWeakening : MarkedFAbsTestTargets.CoordinatesWeakening := MarkedFAbsTestProof.coordinatesWeakening
+
+#print axioms fixedFreshAvailability
+#print axioms fixedGenuineOpeningGuards
+#print axioms fixedLambdaCalibration
+#print axioms fixedLiteralLambdaEquation
+#print axioms fixedTestMonotone
+#print axioms fixedCoordinatesMonotone
+#print axioms fixedCoordinatesWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.MarkedFAbsTestStatementChecks

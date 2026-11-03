@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewStatementChecks
+
+theorem fixedRootCalibration : OrdinaryObservationViewTargets.RootCalibration := OrdinaryObservationViewProof.rootCalibration
+theorem fixedArgumentCalibration : OrdinaryObservationViewTargets.ArgumentCalibration := OrdinaryObservationViewProof.argumentCalibration
+theorem fixedArgumentTypeCalibration : OrdinaryObservationViewTargets.ArgumentTypeCalibration := OrdinaryObservationViewProof.argumentTypeCalibration
+theorem fixedPlainChildrenCalibration : OrdinaryObservationViewTargets.PlainChildrenCalibration := OrdinaryObservationViewProof.plainChildrenCalibration
+theorem fixedChildProvenance : OrdinaryObservationViewTargets.ChildProvenance := OrdinaryObservationViewProof.childProvenance
+theorem fixedDeclaredArgumentTypes : OrdinaryObservationViewTargets.DeclaredArgumentTypes := OrdinaryObservationViewProof.declaredArgumentTypes
+
+#print axioms fixedRootCalibration
+#print axioms fixedArgumentCalibration
+#print axioms fixedArgumentTypeCalibration
+#print axioms fixedPlainChildrenCalibration
+#print axioms fixedChildProvenance
+#print axioms fixedDeclaredArgumentTypes
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryObservationViewStatementChecks

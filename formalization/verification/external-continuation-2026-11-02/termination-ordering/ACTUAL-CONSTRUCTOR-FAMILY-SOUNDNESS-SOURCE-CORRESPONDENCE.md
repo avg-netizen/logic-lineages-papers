@@ -1,0 +1,7 @@
+# Actual constructor operator, iterates and finite limit: family soundness
+
+The operator target is the existing executable source-specific four-rule operator, not a supplied generic monotone function. Its preservation theorem must derive every future-world bit implication from the actual Copy, Stat, Select and FAbs contributions under the previous-stage invariant. Strict bits are genuinely empty for this operator. Its entire nonempty tuple table calls the previous constructor family at the result type with every argument appended to the actual downward extras.
+
+The logical-relation application clause is discharged against the actual literal marked source application with identity substitution. The full original base and extras are retained, and exact typed argument representations are appended in order. World restriction and literal syntax weakening are derived from the existing input-representation theorem. No append law is assumed of an arbitrary family.
+
+The actual iterate theorem is natural-number induction from the actual bottom constructor family. The limit is exactly the existing cardinality-bounded executable iterate, so the final FamilySound hypothesis is independently discharged rather than assumed. This establishes the constructor-family invariant only: arbitrary compound syntax satisfaction, the structural fundamental lemma, and computed-answer soundness still require proofs. The earlier arbitrary-family structural source limitation remains explicit. No whole adequacy or decidability promotion follows from these three targets alone.

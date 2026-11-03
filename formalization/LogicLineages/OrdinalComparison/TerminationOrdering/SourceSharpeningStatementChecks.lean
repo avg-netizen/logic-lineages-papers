@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningSubstitutionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks
+theorem fixedReflexivity : SourceSharpeningTargets.Reflexivity := SourceSharpeningReflexivityProof.reflexivity
+theorem fixedRetagging : SourceSharpeningTargets.Retagging := SourceSharpeningReflexivityProof.retagging
+theorem fixedStrictMarkPreservation : SourceSharpeningTargets.StrictMarkPreservation := SourceSharpeningMarkProof.strictMarkPreservation
+theorem fixedRelatedSubstitution : SourceSharpeningTargets.RelatedSubstitution := SourceSharpeningSubstitutionProof.relatedSubstitution
+#print axioms fixedReflexivity
+#print axioms fixedRetagging
+#print axioms fixedStrictMarkPreservation
+#print axioms fixedRelatedSubstitution
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks

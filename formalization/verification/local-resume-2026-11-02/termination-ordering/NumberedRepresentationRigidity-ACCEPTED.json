@@ -1,0 +1,42 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualUnmarkedRepresentation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualUnmarkedArguments",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualFiniteMark",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityStatementChecks.fixedActualPrimitiveMark"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualUnmarkedRepresentation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualUnmarkedArguments",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualFiniteMark",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentationRigidityTargets.ActualPrimitiveMark"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedRepresentationRigidity-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793676449430842519-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793676449430842519-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRepresentationRigidityStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "axiom_detail": "Unmarked uniqueness clauses use propext+Quot.sound; exact finiteMark and PrimitiveMark onlypropext.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRepresentationRigidityTargets.lean",
+        "sha256": "087238e81c998c211ae7de1cc3058929a180c0d03ccf816fe34932143dfe102f"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRepresentationRigidityProof.lean",
+        "sha256": "4e6ccc835f2c981cfed1271c1f84a61889120276ce2bdfb5e1dc28c9589f3f45"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRepresentationRigidityStatementChecks.lean",
+        "sha256": "05a874c72a988c32ae36776319bcba7558d6236d771db3f5c3790faa6420f133"
+      }
+    ],
+    "source_scope": "Exact unmarked-source/argument representation uniqueness, literal finiteMark equation and primitive-mark witness. Arbitrary marked-source representations remain distinct. No transitivity/quotient/termination/ID1 oracle. Complete actual4gate. Generic packed inversions pay head-result dependent typing. Component only; no numbered source completion.",
+    "numbered_statements_completed": []
+  }
+}

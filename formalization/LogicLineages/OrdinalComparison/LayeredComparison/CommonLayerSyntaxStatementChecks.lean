@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerSyntax.StatementChecks
+theorem literal_base_roundtrip:Targets.BaseSyntaxRoundtrip:=Proof.baseRoundtrip
+theorem literal_common_roundtrip:Targets.CommonSyntaxRoundtrip:=Proof.commonRoundtrip
+theorem actual_source_calibration:Targets.ActualSourceCalibration:=Proof.sourceCalibration
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerSyntax.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerSyntax.StatementChecks

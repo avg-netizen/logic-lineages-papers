@@ -1,0 +1,110 @@
+{
+  "bindings": {
+    "formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+    "formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+    "formalization/scripts/check.py": "3e32971953161ae1e9378e71ccbe1b1c2bf2ba5f51d7ec8302c69218933ca770"
+  },
+  "closure_sha256": "31279b45235529253433f18c36d76d15104fdc4684b0bd48f677a8873c8eedc6",
+  "files": [
+    {
+      "imports": [
+        "Lean.Util.CollectAxioms",
+        "Lean.Elab.Command"
+      ],
+      "module": "LogicLineages.Audit",
+      "path": "formalization/LogicLineages/Audit.lean",
+      "sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.SourceMarkedSyntaxDefinitions"
+      ],
+      "module": "LogicLineages.OrdinalComparison.SourceMarkedBindingDefinitions",
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceMarkedBindingDefinitions.lean",
+      "sha256": "a4fd513bd0f45aef01db7eb3020acc38b8628a28f9aed62ff75c1d5739236412"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.SourceTerms"
+      ],
+      "module": "LogicLineages.OrdinalComparison.SourceMarkedSyntaxDefinitions",
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceMarkedSyntaxDefinitions.lean",
+      "sha256": "f7d524caa3c944cfc028d8c803a23baa574e0aeaad005f3526d39d56270cf9f9"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.SourceMarkedBindingDefinitions"
+      ],
+      "module": "LogicLineages.OrdinalComparison.SourceSpecialApplicationDefinitions",
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceSpecialApplicationDefinitions.lean",
+      "sha256": "9d697b850fccf76a8c978f3617942bac8f7f57c7547e26b9d5e7f5c6e5326731"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.SourceTypes"
+      ],
+      "module": "LogicLineages.OrdinalComparison.SourceTerms",
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceTerms.lean",
+      "sha256": "964c1930d4d45bbf317dddc3146b50a1bc2116a23e76c6548fa2f33f685bb8d6"
+    },
+    {
+      "imports": [
+        "Init.Data.List.Lemmas",
+        "Init.Data.Nat.Lemmas"
+      ],
+      "module": "LogicLineages.OrdinalComparison.SourceTypes",
+      "path": "formalization/LogicLineages/OrdinalComparison/SourceTypes.lean",
+      "sha256": "803a2a0fd75e6387433e225b0a1e0087f458869fa0849893594ba55e716a3de1"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.SourceSpecialApplicationDefinitions",
+        "Mathlib.Data.List.Perm.Basic"
+      ],
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonDefinitions",
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonDefinitions.lean",
+      "sha256": "13d0f2dfeef57c8a69d4073c420358c619347b88200dbf0e94111c4e56f111dc"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets"
+      ],
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonProof",
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonProof.lean",
+      "sha256": "65b2ee9dda247fedb3882173ac0d6853d07e708cc0d24f8f074fd789f5b5f9df"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonProof",
+        "LogicLineages.Audit"
+      ],
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks",
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonStatementChecks.lean",
+      "sha256": "36db933ebcc4396fa812b14e84a9e0f8f963874d37752abe926206df4363bc3f"
+    },
+    {
+      "imports": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonDefinitions"
+      ],
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonTargets",
+      "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/RecursiveComparisonTargets.lean",
+      "sha256": "ed9ea71a82ee710dcb56b7c9117672b4107639cdb5c76c90f0fb4236a5a4cbcb"
+    }
+  ],
+  "portable_export": {
+    "change": "Machine-local path redaction only; not a new freeze, run, or acceptance.",
+    "original_raw_sha256": "c113ac3e16aee3c13b4b0e541bd17fc10a16070fe8648faed10be7e25d86d3b6"
+  },
+  "requested": [
+    "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonProof",
+    "LogicLineages.OrdinalComparison.TerminationOrdering.RecursiveComparisonStatementChecks"
+  ],
+  "schema": "closure-snapshot-v1",
+  "upstream_imports": [
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Data.List.Perm.Basic"
+  ]
+}

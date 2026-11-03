@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitSubstitutionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitSubstitutionStatementChecks
+
+theorem fixedInterpretationSubstitution : ActualLimitSubstitutionTargets.InterpretationSubstitution := ActualLimitSubstitutionProof.interpretationSubstitution
+theorem fixedScannerSubstitution : ActualLimitSubstitutionTargets.ScannerSubstitution := ActualLimitSubstitutionProof.scannerSubstitution
+
+#print axioms fixedInterpretationSubstitution
+#print axioms fixedScannerSubstitution
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.ActualLimitSubstitutionStatementChecks

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitHeadEvaluationTargets
+public import LogicLineages.OrdinalComparison.UnitHeadEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.UnitHeadEvaluation.StatementChecks
+theorem generated_positive_evaluation : Targets.GeneratedPositiveEvaluation := Proof.generatedPositiveEvaluation
+theorem actual_operator_classification : Targets.ActualOperatorClassification := Proof.actualOperatorClassification
+theorem exact_numeric_bridge : Targets.ExactNumericBridge := Proof.exactNumericBridge
+end LogicLineages.OrdinalComparison.Source.UnitHeadEvaluation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.UnitHeadEvaluation

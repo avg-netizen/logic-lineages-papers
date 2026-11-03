@@ -1,0 +1,43 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualConfinedWitness",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualStrictChain",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualStrictWeakRefutation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesStatementChecks.fixedActualRawEndpointRefutation"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualConfinedWitness",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualStrictChain",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualStrictWeakRefutation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryBetaDiagnosticConsequencesTargets.ActualRawEndpointRefutation"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/OrdinaryBetaDiagnosticConsequences-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793670058887479841-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793670058887479841-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryBetaDiagnosticConsequencesStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaDiagnosticConsequencesTargets.lean",
+        "sha256": "a5e95b49837fcdf71c7f91028d75ac6314447166b728100a69e9963e8bf92a23"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaDiagnosticConsequencesProof.lean",
+        "sha256": "86a761c75a6258d4db3d6bcc2570e5757b19424699a9981c49fb11d8edc5c2d4"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryBetaDiagnosticConsequencesStatementChecks.lean",
+        "sha256": "d12eef878dd5e2ae9c7f5900bf288ac15148e2b9329caab591775a8b76fc853d"
+      }
+    ],
+    "source_scope": "DIAGNOSTIC consequences for SAME exact checked original-Term beta witness: actual type-support confined weak/strict positive steps and failed weak composite, BOTH positive strict steps and failed strict composite, remaining Strict-then-Weak compatibility refutation and old raw-endpoint original transitivity refutation. Exact first Strict step recovered from actual proof-budget constructor inversion, support tests checked in kernel. No alternative relation, source definition edit or numbered completion; separate finite-signature/published-source convention correspondence not inferred.",
+    "diagnostic_only": true,
+    "numbered_statements_completed": []
+  }
+}

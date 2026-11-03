@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsStatementChecks
+
+theorem fixedVariableEquations : OriginalSpineActionsTargets.VariableEquations := OriginalSpineActionsProof.variableEquations
+theorem fixedVariableEvaluationMonotone : OriginalSpineActionsTargets.VariableEvaluationMonotone := OriginalSpineActionsProof.variableEvaluationMonotone
+theorem fixedVariableEvaluationNatural : OriginalSpineActionsTargets.VariableEvaluationNatural := OriginalSpineActionsProof.variableEvaluationNatural
+theorem fixedVariableScanMonotone : OriginalSpineActionsTargets.VariableScanMonotone := OriginalSpineActionsProof.variableScanMonotone
+theorem fixedVariableScanNatural : OriginalSpineActionsTargets.VariableScanNatural := OriginalSpineActionsProof.variableScanNatural
+theorem fixedActualVariableAction : OriginalSpineActionsTargets.ActualVariableAction := OriginalSpineActionsProof.actualVariableAction
+
+#print axioms fixedVariableEquations
+#print axioms fixedVariableEvaluationMonotone
+#print axioms fixedVariableEvaluationNatural
+#print axioms fixedVariableScanMonotone
+#print axioms fixedVariableScanNatural
+#print axioms fixedActualVariableAction
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalSpineActionsStatementChecks

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluationCalibrationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluation.CalibrationStatementChecks
+theorem actual_original_value_and_support:Targets.ActualSourceCalibration:=Proof.actualSourceCalibration
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluation.CalibrationStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluation.CalibrationStatementChecks

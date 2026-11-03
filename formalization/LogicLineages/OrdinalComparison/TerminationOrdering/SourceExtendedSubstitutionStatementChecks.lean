@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionStatementChecks
+theorem fixedActualReflexivity : SourceExtendedSubstitutionTargets.ActualReflexivity := by
+  intro Symbol arity above Gamma tau q
+  exact SourceExtendedSubstitutionSupportProof.reflexiveTerm above q
+theorem fixedActualJointCovariance : SourceExtendedSubstitutionTargets.ActualJointCovariance := SourceExtendedSubstitutionProof.actualJointCovariance
+#print axioms fixedActualReflexivity
+#print axioms fixedActualJointCovariance
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedSubstitutionStatementChecks

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparisonTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerInterfacesProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgramProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraphProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.Proof
+
+theorem allCodeEffectivity:Targets.AllCodeEffectivity:=
+  (FiniteGraph.Proof.exactDecreasingGraph CommonLayerProgram.Input CommonLayerProgram.Code
+    CommonLayerProgram.children CommonLayerProgram.assemble CommonLayerProgram.measure
+    CommonLayerProgram.Program.children_computable CommonLayerProgram.Program.assemble_computable
+    CommonLayerProgram.Program.numericInterfaces.2.2 CommonLayerProgram.recursiveCode
+    CommonLayerProgram.Proof.finiteCallEquation.1 CommonLayerProgram.Proof.finiteCallEquation.2).2
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.Proof

@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks
+theorem fixedOriginalRankedRestriction : RankedPathOrderTargets.OriginalRankedRestriction := RankedPathOrderProof.originalRankedRestriction
+theorem fixedConfinedRankedRestriction : RankedPathOrderTargets.ConfinedRankedRestriction := RankedPathOrderProof.confinedRankedRestriction
+#print axioms fixedOriginalRankedRestriction
+#print axioms fixedConfinedRankedRestriction
+end LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathOrderStatementChecks

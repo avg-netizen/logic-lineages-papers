@@ -1,0 +1,7 @@
+# Exact omega-product finite tail and paid-head graph transport
+
+Paper09 `source-realization.tex` lines234–264 explicitly assumes a paid certificate a=2^b(B1+C1)=K1+delta. Its head is the actual natural product omega tensor a, while the upward shift theorem concerns ordinary beta+omega delta. The first target proves these agree for every actual ordinal a<epsilon0 and finite delta, including zero a/delta, without a polynomial restriction. It uses existing actual finite-tail natural-sum and signed-CNF omega-shift suppliers; ordinary and natural arithmetic are not conflated by definition.
+
+The second target derives the complete assigned vector of every actual unary K and transports the existing uniform numeric graph compiler along the explicit paid-certificate equality. Common functional units and arbitrary remaining ground valuation are the genuine source semantics. The head field is proved ground-independent from the actual source invariant, not assumed. The certificate premise is intentional and is the printed theorem's premise; no source-construction or successful-code oracle is supplied. The numeric compiler is unchanged and does not inspect proofs or ordinal values.
+
+This covers the paid head identity and complete genuine graph at a supplied arithmetic input expression. Original B/C scalar-wire composition and its uniform literal formula compiler remain separate; no whole-paper promotion yet.

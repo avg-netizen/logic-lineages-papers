@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestStatementChecks
+
+theorem fixedStrictSourceMonotone : MarkedStatTestTargets.StrictSourceMonotone := MarkedStatTestProof.strictSourceMonotone
+theorem fixedStatCalibration : MarkedStatTestTargets.StatCalibration := MarkedStatTestProof.statCalibration
+theorem fixedTestMonotone : MarkedStatTestTargets.TestMonotone := MarkedStatTestProof.testMonotone
+theorem fixedCoordinatesMonotone : MarkedStatTestTargets.CoordinatesMonotone := MarkedStatTestProof.coordinatesMonotone
+theorem fixedCoordinatesWeakening : MarkedStatTestTargets.CoordinatesWeakening := MarkedStatTestProof.coordinatesWeakening
+
+#print axioms fixedStrictSourceMonotone
+#print axioms fixedStatCalibration
+#print axioms fixedTestMonotone
+#print axioms fixedCoordinatesMonotone
+#print axioms fixedCoordinatesWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.MarkedStatTestStatementChecks

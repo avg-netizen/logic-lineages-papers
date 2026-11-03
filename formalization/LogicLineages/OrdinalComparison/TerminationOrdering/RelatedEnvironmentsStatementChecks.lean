@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsStatementChecks
+
+theorem fixedWeakening : RelatedEnvironmentsTargets.Weakening := RelatedEnvironmentsProof.weakening
+theorem fixedExtension : RelatedEnvironmentsTargets.Extension := RelatedEnvironmentsProof.extension
+theorem fixedFreshOpening : RelatedEnvironmentsTargets.FreshOpening := RelatedEnvironmentsProof.freshOpening
+#print axioms fixedWeakening
+#print axioms fixedExtension
+#print axioms fixedFreshOpening
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.RelatedEnvironmentsStatementChecks

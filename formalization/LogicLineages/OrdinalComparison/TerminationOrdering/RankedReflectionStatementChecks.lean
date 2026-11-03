@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionStatementChecks
+theorem fixedActualJointReflection : RankedReflectionTargets.ActualJointReflection := RankedReflectionProof.actualJointReflection
+#print axioms fixedActualJointReflection
+end LogicLineages.OrdinalComparison.TerminationOrdering.RankedReflectionStatementChecks

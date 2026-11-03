@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.StatementChecks
+theorem actual_partial_program : Targets.StackProgram := Proof.stackProgram
+theorem decreasing_finite_calls : Targets.DecreasingFiniteCalls := Proof.decreasingFiniteCalls
+end LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.StatementChecks

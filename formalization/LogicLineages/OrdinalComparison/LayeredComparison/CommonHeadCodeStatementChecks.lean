@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCode.StatementChecks
+theorem exact_large_code : Targets.LargeCodeExact:=Proof.largeCodeExact
+theorem exact_guard_code : Targets.GuardCodeExact:=Proof.guardCodeExact
+theorem actual_recursive_equation : Targets.RecursiveCodeEquation:=Proof.recursiveCodeEquation
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCode.StatementChecks

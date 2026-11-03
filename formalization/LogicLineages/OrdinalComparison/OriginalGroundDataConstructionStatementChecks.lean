@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.OriginalGroundDataConstructionTargets
+public import LogicLineages.OrdinalComparison.OriginalGroundDataConstructionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.OriginalGroundDataConstruction.StatementChecks
+theorem exact_packaging : Targets.ExactPackaging := Proof.exactPackaging
+theorem actual_paid_account : Targets.ActualPaidAccount := Proof.actualPaidAccount
+theorem actual_original_ground_construction : Targets.ActualOriginalGroundConstruction := Proof.actualOriginalGroundConstruction
+end LogicLineages.OrdinalComparison.Source.OriginalGroundDataConstruction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.OriginalGroundDataConstruction

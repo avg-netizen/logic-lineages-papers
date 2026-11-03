@@ -1,0 +1,7 @@
+# Actual finite limit: source bits and same-family complete tuple law
+
+This is a derived bridge for the actual executable limit of the actual source constructor operator. It introduces no new model and assumes no same-family append law. The already proved actualFixedPoint supplies F(limit)=limit, so the accepted source operator equations transfer by equality to that specific family.
+
+SourceBitEquations retains availability true, the exact Select/Copy/Stat/FAbs weak-bit disjunction with the complete input restricted to the observation future world, and strict bits false. FullTupleEquation retains every complete nonempty suffix and all supplied arguments: the actual limit value's table returns the same limit's result-type constructor at the weakened complete old state with the entire packed tuple appended to old extras. All type tags are the real source type membership tags.
+
+These targets are source-equation corollaries of the previously accepted actual fixed-point and operator theorems, not a new stabilization theorem. They pay the precise same-family tuple dependency identified in STRUCTURAL-SEMANTICS-LIMITATION-20261102T1112Z.md at the actual solution, without strengthening arbitrary coherent families. No arbitrary-family special-application law, source substitution correspondence, whole structural lemma, adequacy or decision claim follows automatically. Those literal syntax correspondences remain to be proved independently.

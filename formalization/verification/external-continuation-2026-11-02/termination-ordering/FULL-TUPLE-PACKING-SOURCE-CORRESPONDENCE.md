@@ -1,0 +1,5 @@
+# Full tuple packing — scoped exact source supplier
+
+Source paper06 lines256–260 requires appending the entire supplied tuple, and lines307–314 require weakening every argument before appending. This module retains every argument in original order via List.ofFn, including duplicates, with literal same-type packed values. Argument and residual result tags derive membership in the actual input type set K from the existing literal source type-support closure and actual arrow-suffix subtype theorem; they are not additional hypotheses.
+
+Six targets: actual argument/result type closure (a tag interface reusing existing structural proofs), exact list length, each indexed entry, membership iff an actual tuple position, pointwise tuple order implies actual typed domination, and exact mapped-list weakening equality. The nonempty suffix is the original complete suffix, not unary currying. Type-tag proof fields are definitional well-typedness witnesses, not new closure axioms. No constructor value builder, interpretation, F-operator or numbered whole statement is claimed here.

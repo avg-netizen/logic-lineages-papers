@@ -1,0 +1,27 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:52:36: error: Application type mismatch: The argument
+  substitute_variables t
+has type
+  substitute Term.var t = t
+but is expected to have type
+  substitute (fun i => substitute (fun i => Fin.cases ?m.29 ?m.30 i) (Term.var i.succ)) t = ?m.34
+in the application
+  Eq.trans (substitute_composition (fun i => Term.var i.succ) (fun i => Fin.cases ?m.29 ?m.30 i) t)
+    (substitute_variables t)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:267:18: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:275:18: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:428:6: warning: '(simp only [List.ofFn_succ, List.ofFn_zero]; rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:429:6: warning: 'simp [nodes]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:428:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean:429:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`

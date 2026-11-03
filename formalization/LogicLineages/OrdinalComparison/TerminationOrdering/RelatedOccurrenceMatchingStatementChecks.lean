@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingStatementChecks
+
+theorem fixedPairSound : RelatedOccurrenceMatchingTargets.PairSound := RelatedOccurrenceMatchingProof.pairSound
+
+theorem fixedWeakSound : RelatedOccurrenceMatchingTargets.WeakSound := RelatedOccurrenceMatchingProof.weakSound
+
+theorem fixedStrictSound : RelatedOccurrenceMatchingTargets.StrictSound := RelatedOccurrenceMatchingProof.strictSound
+
+#print axioms fixedPairSound
+#print axioms fixedWeakSound
+#print axioms fixedStrictSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.RelatedOccurrenceMatchingStatementChecks

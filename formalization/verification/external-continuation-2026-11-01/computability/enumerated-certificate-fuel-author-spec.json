@@ -1,0 +1,59 @@
+{
+  "aliases": [
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.certificateFuelMonotonicity_exact",
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "proof": "certificateFuelMonotonicity",
+      "target": "CertificateFuelMonotonicity"
+    },
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.modusPonensMaxFuel_exact",
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "proof": "modusPonensMaxFuel",
+      "target": "ModusPonensMaxFuel"
+    },
+    {
+      "declaration": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks.target_exact",
+      "namespace": "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedCertificateFuel.StatementChecks",
+      "proof": "\u27e8certificateFuelMonotonicity, modusPonensMaxFuel\u27e9",
+      "target": "Target"
+    }
+  ],
+  "candidate_files": [
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelProof.lean"
+    }
+  ],
+  "frozen_files": [
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedProvabilityDefinitions.lean",
+      "role": "definitions"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowTheoryCertificateOperationsDefinitions.lean",
+      "role": "definitions"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelTargets.lean",
+      "role": "target"
+    },
+    {
+      "path": "formalization/LogicLineages/ComputabilityKnowledge/GorbowEnumeratedCertificateFuelStatementChecks.lean",
+      "role": "gate"
+    }
+  ],
+  "portable_export": {
+    "change": "Role-only provenance redaction; not a new freeze observation. Original raw record retained locally outside public repository. All mathematical hashes, candidate absence and observation timestamp are unchanged.",
+    "changed_field": "root_review_reference",
+    "exported_utc": "2026-11-01T05:12:04.462202+00:00",
+    "original_raw_sha256": "df8890462aaeb79fd0a6f128eac2d7c3d9631e34be133bf35f5224849582e952"
+  },
+  "root_review_reference": "Root semantic review, 2026-11-01T05:02:54Z: fresh exact two clauses approved; unchanged raw certificate monotone fuel/existing mpCertificate max fuel.",
+  "scope": "External actual bounded verifier same-certificate fuel monotonicity and existing numeric MP constructor at maximum fuel. No internal HB2, original Base adequacy, or whole paper12 promotion.",
+  "source": [
+    {
+      "label": "lem:three; external proof-certificate supplier for later internal derivability work only",
+      "path": "12-common-knowledge-necessitation/paper.tex"
+    }
+  ]
+}

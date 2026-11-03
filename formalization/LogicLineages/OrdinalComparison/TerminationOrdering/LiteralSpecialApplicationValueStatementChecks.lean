@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueStatementChecks
+
+theorem fixedScannerMaskAgreement : LiteralSpecialApplicationValueTargets.ScannerMaskAgreement := LiteralSpecialApplicationValueProof.scannerMaskAgreement
+
+theorem fixedLiteralIdentityMasks : LiteralSpecialApplicationValueTargets.LiteralIdentityMasks := LiteralSpecialApplicationValueProof.literalIdentityMasks
+
+theorem fixedSpecialSuccess : LiteralSpecialApplicationValueTargets.SpecialSuccess := LiteralSpecialApplicationValueProof.specialSuccess
+
+theorem fixedSpecialFailure : LiteralSpecialApplicationValueTargets.SpecialFailure := LiteralSpecialApplicationValueProof.specialFailure
+
+#print axioms fixedScannerMaskAgreement
+#print axioms fixedLiteralIdentityMasks
+#print axioms fixedSpecialSuccess
+#print axioms fixedSpecialFailure
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.LiteralSpecialApplicationValueStatementChecks

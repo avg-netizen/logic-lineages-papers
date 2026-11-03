@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingStatementChecks
+theorem fixedActualPositiveUnmarkBound : OriginalBudgetUnmarkingTargets.ActualPositiveUnmarkBound := OriginalBudgetUnmarkingProof.positiveUnmarkBound
+theorem fixedActualSameBudgetStrictWeak : OriginalBudgetUnmarkingTargets.ActualSameBudgetStrictWeak := OriginalBudgetUnmarkingProof.sameBudgetStrictWeak
+#print axioms fixedActualPositiveUnmarkBound
+#print axioms fixedActualSameBudgetStrictWeak
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalBudgetUnmarkingStatementChecks

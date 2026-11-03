@@ -1,3 +1,50 @@
+**Current local state — PAUSED after completed rounds, 3 November 2026 UTC.**
+Claude R014, both independent lanes and main proof work are stopped; all owned
+author/compiler processes are reaped and successor launches are disabled.
+Only user-authorized Git publication remains. Read [the final handoff](HANDOFF-2026-11-03.md).
+The register has154checked,2inherited,33pending/189. Source06's local stable
+claim has a checked finite transitivity obstruction; source correspondence and
+repair remain pending. Old release/cutoff instructions below are historical.
+Publication stays on the current cumulative branch; no main merge or CI change.
+
+**Latest user instruction — finish current rounds, PAUSE, then publish.**
+Only the already active rounds may finish their constructive compiler repairs
+and exact gates. No successor Claude author, new proof subject, reset resume
+or unrelated research. Main consolidates and pushes the existing cumulative
+public branch and private main once everyone is quiescent; no public-main merge.
+This is winding down, not yet a claim that all processes have stopped.
+
+**Latest local user release — second independent lane now active.**
+L1 continues ComputabilityKnowledge with the same Claude review/repair loop;
+L2 continues TerminationOrdering; L3 independently owns NEW LayeredComparison
+files for paper08 common-head formula construction and later balanced layers.
+Main coordinates resources/source adoption/integration. Earlier two-lane/sole
+independent limits below are historical. All three share ONE bounded compiler,
+and immutable source/comparator/axiom safeguards remain. No CI/main merge,
+automatic publication, new model/session/agent or unrelated research release.
+
+**Latest local user release — two Codex lanes, 2 November 2026.**
+Resume public-paper formalization on the current cumulative branch032b39e.
+L1 owns ComputabilityKnowledge and the existing Claude review/repair loop;
+L2 is the ONLY independent Codex lane and owns TerminationOrdering toward the
+genuine lambda/fundamental/soundness/adequacy gaps. L3 remains paused; main
+coordinates resources, source adoption and integration. Earlier pause/cutoff
+and three-lane ownership records below are historical. No automatic Git action,
+main merge, CI change, new model/session or unrelated research release.
+Retain every exact-comparator, compile-first, constructive-repair, standard-axiom
+and bounded serialized resource rule below.
+
+**Current external release — 1 November 2026 UTC.**
+The user explicitly resumed formalization after the completed local rounds and
+asked for work until noon at UTC−05:00, **2026-11-01 17:00 UTC**. Start from
+`c35d19c84b828b2dda388caaa8b394fd9ba2d8e5` and the latest handoff below; the
+134 checked, 2 inherited, 53 pending register is the baseline. Historical pause
+instructions below do not prohibit this newly authorized round. Use one
+cumulative branch `formalization/external-continuation-2026-11-01` and publish
+verified work there. All source-correspondence, comparator-first, axiom and
+serialized resource rules remain unchanged. CI diagnosis/configuration changes
+remain deferred. Private research is not resumed.
+
 **Current local state — PAUSED after completed rounds, 1 November 2026 UTC.**
 Claude R005, all three lanes and main proof work have finished and stopped.
 No new author, proof round, quota-reset resume or compiler launch without a new

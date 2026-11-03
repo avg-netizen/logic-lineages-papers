@@ -1,20 +1,21 @@
 # Formalization checkpoint
 
-Local work is **paused after the completed rounds, 1 November 2026 UTC**.
+Local work is **paused after completed rounds, 3 November 2026 UTC**.
 
-Registered statements: **134 checked**, **2 inherited calculator results**,
-and **53 pending**, out of **189** numbered source statements. Supporting
-components do not count as whole-statement completions.
+The local cumulative branch registers **154 checked, 2 inherited and 33 pending
+numbered source statements out of189**. Supporting components and diagnostic
+counterexamples are not extra whole-source completions.
 
-Every numbered target in the abelian p-group and identity/one-variable papers
-is now checked. The new accepted gates passed together in a local checkpoint
-with 1,558 theorem axiom reports, using only the standard foundations. The
-full fresh-root build is delegated to the existing GitHub Actions workflow;
-a local fresh aggregate pass is not claimed.
+The new local checkpoint passed all80selected component imports together and a
+1,672-theorem axiom audit, using only the standard foundations. It used current
+checked objects; no fresh full-root rebuild or remote CI pass is claimed.
 
-Read [the current handoff](formalization/HANDOFF-2026-11-01.md),
+**Known source issue:** a finite checked counterexample refutes transitivity
+for the local source06 relation. Read the paper's [mathematical status](06-godel-t-termination-ordering/STATUS.md).
+No error in Kop's published theorem or unique repaired convention is established.
+
+Read [the final handoff](formalization/HANDOFF-2026-11-03.md),
 [the exact register](formalization/TARGETS.json) and
-[the integration evidence](formalization/verification/resume-2026-10-31/FINAL-INTEGRATION.json).
-The handoff records the remaining source obligations and a signed-recursion
-source defect that remains pending. Older checkpoints and stream-status
-history are preserved for provenance, not instructions to resume work.
+[the integration evidence](formalization/verification/local-pause-2026-11-03/INTEGRATION.json).
+Publication is on `formalization/external-continuation-2026-11-01`; public main
+is not merged by this checkpoint. Earlier paused snapshots are historical.

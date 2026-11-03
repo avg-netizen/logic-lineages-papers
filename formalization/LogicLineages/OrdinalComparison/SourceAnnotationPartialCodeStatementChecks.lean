@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceAnnotationPartialCodeTargets
+public import LogicLineages.OrdinalComparison.SourceAnnotationPartialCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceAnnotationPartialCode.StatementChecks
+theorem exact_partial_code : Targets.ExactPartialCode := Proof.exactPartialCode
+theorem primitive_recursive : Targets.PrimitiveRecursive := Proof.primitiveRecursive
+theorem valid_actual_partial : Targets.ValidActualPartial := Proof.validActualPartial
+end LogicLineages.OrdinalComparison.Source.SourceAnnotationPartialCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceAnnotationPartialCode

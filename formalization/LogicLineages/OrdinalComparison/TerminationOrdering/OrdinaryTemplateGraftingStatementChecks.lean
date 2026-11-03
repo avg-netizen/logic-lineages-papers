@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingStatementChecks
+
+theorem fixedEnvironmentGrafting : OrdinaryTemplateGraftingTargets.EnvironmentGrafting := OrdinaryTemplateGraftingProof.environmentGrafting
+theorem fixedDistinguishedVariableGrafting : OrdinaryTemplateGraftingTargets.DistinguishedVariableGrafting := OrdinaryTemplateGraftingProof.distinguishedVariableGrafting
+
+#print axioms fixedEnvironmentGrafting
+#print axioms fixedDistinguishedVariableGrafting
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryTemplateGraftingStatementChecks

@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks
+theorem fixedGroundArgumentInjectivity : RankedTreeInversionTargets.GroundArgumentInjectivity := RankedTreeInversionProof.groundArgumentInjectivity
+theorem fixedEmbeddingInjectivity : RankedTreeInversionTargets.EmbeddingInjectivity := RankedTreeInversionProof.embeddingInjectivity
+theorem fixedOrdinaryRootEquality : RankedTreeInversionTargets.OrdinaryRootEquality := RankedTreeInversionProof.ordinaryRootEquality
+theorem fixedMarkedRootEquality : RankedTreeInversionTargets.MarkedRootEquality := RankedTreeInversionProof.markedRootEquality
+#print axioms fixedGroundArgumentInjectivity
+#print axioms fixedEmbeddingInjectivity
+#print axioms fixedOrdinaryRootEquality
+#print axioms fixedMarkedRootEquality
+end LogicLineages.OrdinalComparison.TerminationOrdering.RankedTreeInversionStatementChecks

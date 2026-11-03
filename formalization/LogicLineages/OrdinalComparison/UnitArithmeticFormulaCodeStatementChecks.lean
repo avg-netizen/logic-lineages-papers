@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.UnitArithmeticFormulaCodeTargets
+public import LogicLineages.OrdinalComparison.UnitArithmeticFormulaCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.UnitArithmeticFormulaCode.StatementChecks
+theorem exact_tree_expansion : Targets.ExactTreeExpansion := Proof.exactTreeExpansion
+theorem effective_algorithms : Targets.EffectiveAlgorithms := Proof.effectiveAlgorithms
+theorem actual_source_formula : Targets.ActualSourceFormula := Proof.actualSourceFormula
+end LogicLineages.OrdinalComparison.Source.ActualHeadGraph.UnitArithmeticFormulaCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ActualHeadGraph.UnitArithmeticFormulaCode

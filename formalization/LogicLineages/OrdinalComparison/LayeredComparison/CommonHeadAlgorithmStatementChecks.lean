@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCodeInterfacesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadAlgorithm.StatementChecks
+theorem actual_numerical_interfaces : CommonHeadCode.Targets.CodeInterfaces:=CommonHeadCode.Program.codeInterfaces
+theorem actual_all_code_algorithm : CommonHeadCompiler.Targets.AllCodeEffectivity:=CommonHeadCode.Program.allCodeEffectivity
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadAlgorithm.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadAlgorithm.StatementChecks

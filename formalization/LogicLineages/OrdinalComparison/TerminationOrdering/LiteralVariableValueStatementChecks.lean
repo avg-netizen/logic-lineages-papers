@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueStatementChecks
+
+theorem fixedNameInjective : LiteralVariableValueTargets.NameInjective := LiteralVariableValueProof.nameInjective
+theorem fixedNameExtension : LiteralVariableValueTargets.NameExtension := LiteralVariableValueProof.nameExtension
+theorem fixedLiteralWeakBits : LiteralVariableValueTargets.LiteralWeakBits := LiteralVariableValueProof.literalWeakBits
+theorem fixedAvailabilityAndStrict : LiteralVariableValueTargets.AvailabilityAndStrict := LiteralVariableValueProof.availabilityAndStrict
+theorem fixedUndefinedTables : LiteralVariableValueTargets.UndefinedTables := LiteralVariableValueProof.undefinedTables
+theorem fixedNaturalVariable : LiteralVariableValueTargets.NaturalVariable := LiteralVariableValueProof.naturalVariable
+theorem fixedVariableWeakening : LiteralVariableValueTargets.VariableWeakening := LiteralVariableValueProof.variableWeakening
+theorem fixedActualValue : LiteralVariableValueTargets.ActualValue := LiteralVariableValueProof.actualValue
+
+theorem fixedLiteralVariableEquality : LiteralVariableValueTargets.LiteralVariableEquality := LiteralVariableValueProof.literalVariableEquality
+
+#print axioms fixedLiteralVariableEquality
+#print axioms fixedNameInjective
+#print axioms fixedNameExtension
+#print axioms fixedLiteralWeakBits
+#print axioms fixedAvailabilityAndStrict
+#print axioms fixedUndefinedTables
+#print axioms fixedNaturalVariable
+#print axioms fixedVariableWeakening
+#print axioms fixedActualValue
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.LiteralVariableValueStatementChecks

@@ -1,0 +1,9 @@
+# Original-scale raw caller and paid-list compiler
+
+Paper09 source-realization.tex192–226 requires the original actual caller, literal unary saturation, exactly N=2^b copies of each multiset occurrence and caller, one final abstraction, and gap N(d-3)-1. This component transcribes the accepted OriginalScaleFlatList construction into the existing numeric heterogeneous chain compiler.
+
+callerCode checks the actual raw caller type against supplied σ and checks its positive curried-ground arity. It computes the actual complete assignment, then performs exactly arity-minus-one literal zero applications, preserving every vector coordinate and the caller's source. ExactCallerCode calibrates every actual typed caller; no reset of its scalar is allowed. The empty private prefix retains shared Γ names.
+
+paidCode retains all occurrence order and duplicates, replicating the whole source/vector/context records exactly 2^b times and appending exactly 2^b copies of the saturated caller. ExactPaidList calibrates the original literal list and finite gap, including natural subtraction. All guard, replication, gap and complete scale-chain maps are uniformly primitive recursive. Invalid raw callers may fail the existing check/arity/assignment operations.
+
+ActualScaledCompiler explicitly has the existing given-record supplier premises b>=4 and c>=3len+4, deriving actual caller saturation, literal final K code and full assignment, strict positive finite gap and original natural-product balance for every old/new common-unit ground valuation. These premises are NOT asserted for arbitrary input records: the final canonical original-P/account/budget assembly must discharge them, using already accepted source lower-bound suppliers. No changed scale, synthetic head, private-name identification or final whole original-source effectiveness promotion is claimed here.

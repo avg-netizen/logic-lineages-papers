@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SelectStageSoundnessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SelectStageSoundnessStatementChecks
+
+theorem fixedSelectSound : SelectStageSoundnessTargets.SelectSound := SelectStageSoundnessProof.selectSound
+#print axioms fixedSelectSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SelectStageSoundnessStatementChecks

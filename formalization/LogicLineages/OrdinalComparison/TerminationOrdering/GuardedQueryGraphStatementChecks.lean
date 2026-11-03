@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks
+
+theorem fixedStepPreservesFrame : GuardedQueryGraphTargets.StepPreservesFrame := GuardedQueryGraphProof.stepPreservesFrame
+theorem fixedReachableFrame : GuardedQueryGraphTargets.ReachableFrame := GuardedQueryGraphProof.reachableFrame
+theorem fixedFreshOpeningAvailability : GuardedQueryGraphTargets.FreshOpeningAvailability := GuardedQueryGraphProof.freshOpeningAvailability
+theorem fixedFunPremisesCovered : GuardedQueryGraphTargets.FunPremisesCovered := GuardedQueryGraphProof.funPremisesCovered
+theorem fixedStatPremisesCovered : GuardedQueryGraphTargets.StatPremisesCovered := GuardedQueryGraphProof.statPremisesCovered
+theorem fixedIssuedSelectExecutionsBounded : GuardedQueryGraphTargets.IssuedSelectExecutionsBounded := GuardedQueryGraphProof.issuedSelectExecutionsBounded
+
+#print axioms fixedStepPreservesFrame
+#print axioms fixedReachableFrame
+#print axioms fixedFreshOpeningAvailability
+#print axioms fixedFunPremisesCovered
+#print axioms fixedStatPremisesCovered
+#print axioms fixedIssuedSelectExecutionsBounded
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.GuardedQueryGraphStatementChecks

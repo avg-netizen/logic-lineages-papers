@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.GroundOperatorDischargeTargets
+public import LogicLineages.OrdinalComparison.GroundOperatorDischargeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge.StatementChecks
+theorem exact_head_closure : Targets.ExactHeadClosure := Proof.exactHeadClosure
+theorem whole_assignment : Targets.WholeAssignment := Proof.wholeAssignment
+theorem actual_functional_discharge : Targets.ActualFunctionalDischarge := Proof.actualFunctionalDischarge
+theorem operator_witness_transport : Targets.OperatorWitnessTransport := Proof.operatorWitnessTransport
+end LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.GroundOperatorDischarge

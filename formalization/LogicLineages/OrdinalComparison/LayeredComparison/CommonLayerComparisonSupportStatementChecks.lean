@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparisonSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.SupportStatementChecks
+theorem original_raw_support:Targets.OriginalRawSupport:=Proof.originalSupport
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.SupportStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.SupportStatementChecks
