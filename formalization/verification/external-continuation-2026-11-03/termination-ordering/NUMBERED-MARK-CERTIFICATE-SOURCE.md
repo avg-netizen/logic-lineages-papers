@@ -1,0 +1,7 @@
+# Primitive-mark certificate for the actual multiset rule
+
+PrimitiveMultiset uses PrimitiveMark, which is literally successful finiteMark at some natural label. The new executable checker calls that existing operation, preserving the actual typed source and label, and compares the resulting packed numeric code. It does not redefine marking. Initial lambdas propagate marking recursively; an ordinary head becomes the numbered head at the requested label with unchanged base and empty extras. Variables, applications, bottom and already-numbered heads fail exactly as in the accepted definition.
+
+Four targets expose exact packed existential-label equivalence to PrimitiveMark, the literal lambda propagation equation, exact numeric certificate existence with source universe validation, and soundness preserving the specific accepted label. Target confinement is derived using the accepted finiteMark preservation theorem, and one genuine WindowStep follows from the accepted finiteMark step theorem. Neither requires SubtypeClosed or a precedence assumption, since marking introduces no new head/type and its step is Put beneath zero or more lambda contexts.
+
+This is a prerequisite for occurrence-preserving PrimitiveMultiset certificates, not a complete Mul checker, a general WindowStep decision, quotient-edge arithmetic representation, or a well-foundedness theorem. The original local comparison and transitivity obstruction are unchanged.
