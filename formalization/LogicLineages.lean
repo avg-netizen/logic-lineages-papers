@@ -1910,6 +1910,9 @@ public import LogicLineages.ExternalCheckpoint20261103BV
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeParserTableStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103BW
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodePresentationStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103BX
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
