@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestNumericBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestNumericBoundStatementChecks
+
+theorem fixedActualCodeWeightBound : NumberedRequestNumericBoundTargets.ActualCodeWeightBound :=
+  NumberedRequestNumericBoundProof.codeWeightBound
+#print axioms fixedActualCodeWeightBound
+
+theorem fixedActualCodeFuelPrimitive : NumberedRequestNumericBoundTargets.ActualCodeFuelPrimitive :=
+  NumberedRequestNumericBoundProof.codeFuelPrimitive
+#print axioms fixedActualCodeFuelPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestNumericBoundStatementChecks

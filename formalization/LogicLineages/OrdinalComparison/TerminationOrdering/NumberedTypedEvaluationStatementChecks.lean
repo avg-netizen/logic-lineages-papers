@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationStatementChecks
+
+theorem fixedAnyFuelSound : NumberedTypedEvaluationTargets.AnyFuelSound :=
+  NumberedTypedEvaluationProof.anyFuelSound
+#print axioms fixedAnyFuelSound
+
+theorem fixedSufficientFuelExact : NumberedTypedEvaluationTargets.SufficientFuelExact :=
+  NumberedTypedEvaluationProof.sufficientFuelExact
+#print axioms fixedSufficientFuelExact
+
+theorem fixedActualTermEvaluation : NumberedTypedEvaluationTargets.ActualTermEvaluation :=
+  NumberedTypedEvaluationProof.termEvaluation
+#print axioms fixedActualTermEvaluation
+
+theorem fixedActualArgumentsEvaluation : NumberedTypedEvaluationTargets.ActualArgumentsEvaluation :=
+  NumberedTypedEvaluationProof.argumentsEvaluation
+#print axioms fixedActualArgumentsEvaluation
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationStatementChecks

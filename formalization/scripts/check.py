@@ -27,6 +27,15 @@ BUILD = ROOT / ".lake/build/lib/lean"
 IMPORT = re.compile(r"^\s*(?:(?:public|private|meta)\s+)*import\s+(.+)$", re.M)
 
 
+def shared_lock_directory() -> Path:
+    """Use the same existing absolute lock directory as the calculator runner."""
+    directory = Path(os.environ.get("LEAN_CHECK_LOCK_DIR", "/tmp"))
+    if not directory.is_absolute() or not directory.is_dir():
+        raise ValueError("LEAN_CHECK_LOCK_DIR must name an existing absolute directory: "
+                         + str(directory))
+    return directory
+
+
 def local_stop_reason(policy_path: Path | None = None, now: datetime | None = None) -> str | None:
     """Enforce this host's user-requested cutoff, without constraining clones.
 
@@ -201,6 +210,10 @@ def main() -> int:
     args = parser.parse_args()
     if reason := local_stop_reason():
         return save_stop_receipt(args.modules, reason)
+    try:
+        lock_directory = shared_lock_directory()
+    except (OSError, ValueError) as error:
+        parser.error(str(error))
     compiler = shutil.which("lean")
     if compiler is None:
         parser.error("Install the pinned Lean toolchain before compiling.")
@@ -282,8 +295,8 @@ def main() -> int:
         args.min_free_mib = 1024
     locks=[]
     try:
-        for name in ["/tmp/logic-lineages-papers-lean.lock", "/tmp/pure-r1-calculator-lean.lock"]:
-            lock=open(name,"a")
+        for name in ["logic-lineages-papers-lean.lock", "pure-r1-calculator-lean.lock"]:
+            lock=open(lock_directory / name,"a")
             try:
                 fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
             except BlockingIOError:

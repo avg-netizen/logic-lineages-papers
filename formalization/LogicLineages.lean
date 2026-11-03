@@ -1940,6 +1940,11 @@ public import LogicLineages.ExternalCheckpoint20261103CF
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestWeightStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103CG
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestNumericBoundStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericTypedValidationStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103TypedValidation
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
