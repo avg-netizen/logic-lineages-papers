@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedRawCompilerTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedRawCompilerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRawCompiler.StatementChecks
+theorem exact_finite_call_equation : Targets.ExactFiniteCallEquation := Proof.exactFiniteCallEquation
+theorem numerical_interfaces : Targets.NumericalInterfaces := Proof.numericalInterfaces
+theorem all_code_computation : Targets.AllCodeComputation := Proof.allCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedRawCompiler.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRawCompiler
