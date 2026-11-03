@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.GuardCodeRuntimeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.GuardCodeRuntime.StatementChecks
+theorem exact_literal_encoding : Targets.ExactLiteralEncoding:=Proof.literalEncoding
+theorem complete_source_row_code : Targets.CompleteRowCode:=Proof.completeRowCode
+end LogicLineages.OrdinalComparison.LayeredComparison.GuardCodeRuntime.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.GuardCodeRuntime.StatementChecks

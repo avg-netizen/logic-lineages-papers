@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.PrefixSourceCompositionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.PrefixSourceCompositionStatementChecks
+theorem fixedActualGuardedSourceComposition : PrefixSourceCompositionTargets.ActualGuardedSourceComposition := PrefixSourceCompositionProof.guardedSourceComposition
+#print axioms fixedActualGuardedSourceComposition
+end LogicLineages.OrdinalComparison.TerminationOrdering.PrefixSourceCompositionStatementChecks

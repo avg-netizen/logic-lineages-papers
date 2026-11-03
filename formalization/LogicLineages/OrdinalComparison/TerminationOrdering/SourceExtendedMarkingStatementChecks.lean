@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingStatementChecks
+theorem fixedActualMarkAlignment : SourceExtendedMarkingTargets.ActualMarkAlignment := SourceExtendedMarkingSupportProof.alignment
+theorem fixedActualLeftUnmark : SourceExtendedMarkingTargets.ActualLeftUnmark := SourceExtendedMarkingProof.actualLeftUnmark
+theorem fixedActualMarking : SourceExtendedMarkingTargets.ActualMarking := SourceExtendedMarkingProof.marking
+#print axioms fixedActualMarkAlignment
+#print axioms fixedActualLeftUnmark
+#print axioms fixedActualMarking
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedMarkingStatementChecks

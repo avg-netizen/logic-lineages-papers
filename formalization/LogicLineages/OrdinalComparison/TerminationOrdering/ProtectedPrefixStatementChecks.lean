@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks
+
+theorem fixedLiteralMask : ProtectedPrefixTargets.LiteralMask := ProtectedPrefixProof.literalMask
+theorem fixedOldNameLift : ProtectedPrefixTargets.OldNameLift := ProtectedPrefixProof.oldNameLift
+theorem fixedClosingOldName : ProtectedPrefixTargets.ClosingOldName := ProtectedPrefixProof.closingOldName
+theorem fixedRaisedSourceClosing : ProtectedPrefixTargets.RaisedSourceClosing := ProtectedPrefixProof.raisedSourceClosing
+theorem fixedRaisedSourceApplication : ProtectedPrefixTargets.RaisedSourceApplication := ProtectedPrefixProof.raisedSourceApplication
+theorem fixedOriginalVariableBlocked : ProtectedPrefixTargets.OriginalVariableBlocked := ProtectedPrefixProof.originalVariableBlocked
+theorem fixedLiteralBinderStep : ProtectedPrefixTargets.LiteralBinderStep := ProtectedPrefixProof.literalBinderStep
+#print axioms fixedLiteralMask
+#print axioms fixedOldNameLift
+#print axioms fixedClosingOldName
+#print axioms fixedRaisedSourceClosing
+#print axioms fixedRaisedSourceApplication
+#print axioms fixedOriginalVariableBlocked
+#print axioms fixedLiteralBinderStep
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ProtectedPrefixStatementChecks

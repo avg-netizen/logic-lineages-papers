@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingStatementChecks
+theorem fixedEqualityEmbedding : RankedPathEmbeddingTargets.EqualityEmbedding := RankedPathEqualityProof.equalityEmbedding
+theorem fixedJointStrictEmbedding : RankedPathEmbeddingTargets.JointStrictEmbedding := RankedPathEmbeddingProof.jointStrictEmbedding
+#print axioms fixedEqualityEmbedding
+#print axioms fixedJointStrictEmbedding
+end LogicLineages.OrdinalComparison.TerminationOrdering.RankedPathEmbeddingStatementChecks

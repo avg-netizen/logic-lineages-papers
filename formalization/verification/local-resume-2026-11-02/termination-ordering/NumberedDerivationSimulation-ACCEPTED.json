@@ -1,0 +1,126 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualWeakSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualStrictInitialMark",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualStrictSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualMatchSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualMultisetSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks.fixedActualReplacementSimulation"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualWeakSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualStrictInitialMark",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualStrictSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualMatchSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualMultisetSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets.ActualReplacementSimulation"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedDerivationSimulation-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "axiom_detail": "ALL6fixed aliases onlypropext+Quot.sound. ACTUAL five-way original recursor discharges all explicit constructor IHs, not an assumed algebra/certificate field.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationDefinitions.lean",
+        "sha256": "9663a4ebd998c7881324a2c2ddb7458a3dffe7d5eac01cd864745059a95e5df8"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationTargets.lean",
+        "sha256": "e4cdddf6b63ad82de69d47538305ec374e09a6577add603af498690d7e86115f"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationCertificatesDefinitions.lean",
+        "sha256": "9a14ac0d36175589970747c212a0f18cabb57809e78327d775b3cb10363b4286"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationListCasesProof.lean",
+        "sha256": "961ee1a3ce47d270b6d3578b423897fd18f3d7132208ecffc756a1908438d93b"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationWeakBasicCasesProof.lean",
+        "sha256": "b5e7269fbd61963e5519930c4eb68699a7bfbfd1f0689ba8c9287d50f5f9583a"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationFunctionalSupportProof.lean",
+        "sha256": "e395951ba04b7fe081cbe86170ff93bc43ca6a33276aecc4aa4758cd0e35e375"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationFunctionalCasesProof.lean",
+        "sha256": "0c89abcdf82bff88fa0305c65a692224a491e2ebb0ce78e7ca8a50c51c1f6162"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationProof.lean",
+        "sha256": "72f8ab015333e34bb3c455b3dc3730a4b8be4a75068217c6a7797871d2829bc2"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDerivationSimulationStatementChecks.lean",
+        "sha256": "e6685b3025e77571bf754d9a0044482dbc47de888eba37225d3e5bb47bc7d26b"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationDefinitions",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationTargets",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationCertificatesDefinitions",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677638500565138-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793677638500565138-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationCertificatesDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationListCasesProof",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677783983883423-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793677783983883423-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationListCasesProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationWeakBasicCasesProof",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677910836381425-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793677910836381425-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationWeakBasicCasesProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationFunctionalSupportProof",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678046951687061-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793678046951687061-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationFunctionalSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationFunctionalCasesProof",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678196927973550-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793678196927973550-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationFunctionalCasesProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationProof",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDerivationSimulationStatementChecks",
+        "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-02/termination-ordering/1793678265299285067-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDerivationSimulationStatementChecks.log"
+      }
+    ],
+    "source_scope": "ENTIRE five actual ORIGINAL recursive relations one-way to raw counted auxiliary traces. Genuine finite common budgets; strict mark initial witness and strictly positive trace; literal occurrences in PrimitiveMultiset and replacement lists. NO source transitivity/stability assumption. COMPONENT of paper lem:simulation only: fixedS/confined operational quotient/least-code representatives/computable translation/ID1 remain unpaid. Complete actual6gate; whole RAW derivation induction paid, finiteS/quotient/coding/ID1 still unpaid; ZERO numbered source promotion.",
+    "numbered_statements_completed": []
+  }
+}

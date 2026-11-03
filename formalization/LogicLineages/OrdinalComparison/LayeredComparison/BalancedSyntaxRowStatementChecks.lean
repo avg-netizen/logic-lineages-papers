@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntaxRowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.RowStatementChecks
+theorem actual_source_comparison_row:Targets.ActualComparisonRow:=Proof.actualComparisonRow
+theorem actual_source_head_validity:Targets.ActualHeadValidity:=Proof.actualHeadValidity
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.RowStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.RowStatementChecks

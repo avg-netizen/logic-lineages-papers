@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionStatementChecks
+theorem fixedTransitivity : SourceSharpeningCompositionTargets.Transitivity := SourceSharpeningCompositionProof.transitivity
+theorem fixedAdditionalExtras : SourceSharpeningCompositionTargets.AdditionalExtras := SourceSharpeningCompositionProof.additionalExtras
+#print axioms fixedTransitivity
+#print axioms fixedAdditionalExtras
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningCompositionStatementChecks

@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BaseTermProgramsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BaseTermPrograms.StatementChecks
+theorem actual_finite_call_equation:Targets.FiniteCallEquation:=Proof.finiteCallEquation
+theorem actual_support_stability:Targets.SupportStability:=Proof.supportStability
+theorem actual_support_domination:Targets.SupportDomination:=Proof.supportDomination
+end LogicLineages.OrdinalComparison.LayeredComparison.BaseTermPrograms.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BaseTermPrograms.StatementChecks

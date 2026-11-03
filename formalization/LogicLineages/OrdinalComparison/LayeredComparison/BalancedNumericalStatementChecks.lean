@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedNumericalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedNumerical.StatementChecks
+theorem exact_original_window:Targets.ExactWindowArithmetic:=Proof.exactWindow
+theorem selected_survivor_remainder:Targets.SurvivingRemainderDominance:=Proof.survivingDominance
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedNumerical.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedNumerical.StatementChecks

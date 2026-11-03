@@ -1,0 +1,761 @@
+{
+  "scope": "ComputabilityKnowledge2Nov resumed formalization suppliers",
+  "baseline": "032b39e3bc399cfb9414b15a4f1d57af67be7e86",
+  "checkpoints": [
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R006",
+      "accepted_utc": "2026-11-02T22:02:37.237038+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherenceStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.fullInternalCoherence",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.fullInternalCoherence",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.openTermCongruence",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.conditionalTermCongruence",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.registryCoherence",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.namedRegistryCoherence",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.StatementChecks.concreteDuplicate"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceTargets.lean",
+        "sha256": "bde3aedf533f16bb917caa387e693e29f27d00dec40dc03b1767ee5cf5fb9c0a",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherence.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793653881214454648-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793656840762472399-2.json",
+          "role": "unchanged first raw Claude proof compile; actual sole shift-instantiation diagnostic"
+        },
+        {
+          "file": "build-reports/1793656917688862119-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherenceStatementChecks",
+          "role": "Codex one local elaboration repair; exact six aliases and actual namespace axiom audit"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": true,
+      "proof_repair_count": 1,
+      "repair_scope": "Only stage shiftInst through explicit unfold, substitution composition and identity substitution instead of underconstrained Eq.trans elaboration; no mathematical/source/target/gate/resource change.",
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 905100,
+      "scope": "Actual Hilbert derivations of open and conditional term congruence and all-program same-AST registry coherence at arbitrary variable-containing arguments, including genuine object-language induction for recursive programs; actual named-base lift and literal two-copy registry for every arity. This does not prove arbitrary extensional PR-program equality, original Base adequacy/conservativity, internal HB2/HB3/Lob, or any whole original source12 statement.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceDefinitions.lean",
+          "sha256": "fa8fe854fd7d16a855d548f4ca549b8287f2f43accaf409742e95f90a18721c1"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceTargets.lean",
+          "sha256": "bde3aedf533f16bb917caa387e693e29f27d00dec40dc03b1767ee5cf5fb9c0a"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceProof.lean",
+          "sha256": "e2bb17f5b5bd3ea4dfbca6e4501c0e8d4452720a67ce5a72245ea05bf8f1bf31"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalCoherenceStatementChecks.lean",
+          "sha256": "23004893e0b47a86844a3598f726cbdb37eb0ee18ebf96df5c4529afe5bc4c49"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 immutable whole candidate; Codex compile-first sole local equality elaboration repair and fixed exact statement/axiom gate",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793653881214454648-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793656840762472399-2.json",
+          "role": "unchanged first raw Claude proof compile; actual sole shift-instantiation diagnostic"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793656917688862119-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherenceStatementChecks",
+          "role": "Codex one local elaboration repair; exact six aliases and actual namespace axiom audit"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R007",
+      "accepted_utc": "2026-11-02T23:21:50.802113+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReductionStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReduction.StatementChecks.fullReduction",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReduction.StatementChecks.fullReduction",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReduction.StatementChecks.actualDiagonal",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReduction.StatementChecks.localLobReduction",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReduction.StatementChecks.globalLobReduction"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionTargets.lean",
+        "sha256": "3af1bdebab2880151a8b66b0bebb83fd21ad648dc783f73aed03d770c8542c06",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReduction.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793657072657788159-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793661592281593538-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "build-reports/1793661626258474267-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReductionStatementChecks",
+          "role": "Frozen four-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": false,
+      "proof_repair_count": 0,
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 918816,
+      "scope": "Actual literal named arithmetic diagonal inside every Actual published D, plus genuine Hilbert Lob-rule reduction from exactly three explicitly displayed internal HB2/HB3 derivations, using already-proved actual D-proof certification rather than an HB1 assumption. Global HB2/HB3-to-Lob conditional wrapper. Actual internal HB2/HB3 derivability and original Base adequacy remain unpaid; no unconditional source Lob or whole original source12 statement is claimed.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionDefinitions.lean",
+          "sha256": "3670775f43a0ba469c436190412d4080bcdc43029b0c6827c124e782cfdf20f2"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionTargets.lean",
+          "sha256": "3af1bdebab2880151a8b66b0bebb83fd21ad648dc783f73aed03d770c8542c06"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionProof.lean",
+          "sha256": "b8a9570c9d9c47d0c36562d1a9ba24e635ab9b98679315832bebb2e836fda526"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionStatementChecks.lean",
+          "sha256": "f44bd5e615a8d30343c0c8211cae3973f6b0ed875cab907cb8bfa39d468f6d7e"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate accepted UNCHANGED by Codex compile-first frozen statement/axiom gate",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793657072657788159-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793661592281593538-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793661626258474267-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedLobReductionStatementChecks",
+          "role": "Frozen four-alias source type and namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R008",
+      "accepted_utc": "2026-11-02T23:55:41.739620+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmeticStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.StatementChecks.fullInternalArithmetic",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.StatementChecks.fullInternalArithmetic",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.StatementChecks.actualEvaluation",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.StatementChecks.internalAddition",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.StatementChecks.internalMultiplication",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.StatementChecks.internalPairing"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalArithmeticTargets.lean",
+        "sha256": "133b3643086eec472d0851800fb14178d85eb2898c11e7d0b2c74c8c41009102",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmetic.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793661780354848288-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793663662820089723-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "build-reports/1793663704887564565-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmeticStatementChecks",
+          "role": "Frozen five-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": false,
+      "proof_repair_count": 0,
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 882744,
+      "scope": "Fixed literal canonical PR addition/multiplication/source-pairing ASTs: exact external evaluations and genuine Hilbert derivations of arithmetic-term correctness at ANY concrete registry occurrence, arbitrary variable-containing arguments and every context. Recursive correctness uses actual object-language induction; no extensional evaluation premise becomes an internal proof. Actual proof-checker invariants/internal HB2/HB3/original Base identification and whole source12 remain unpaid.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalArithmeticDefinitions.lean",
+          "sha256": "3f85f3c46180360b6282bf9b31804e020640daf50235858c5ea9b85e965cdd1f"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalArithmeticTargets.lean",
+          "sha256": "133b3643086eec472d0851800fb14178d85eb2898c11e7d0b2c74c8c41009102"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalArithmeticProof.lean",
+          "sha256": "01bb9bd51d377b8551b61d7a4e196330cdf98f2287e06d91552cb37b75161a7a"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalArithmeticStatementChecks.lean",
+          "sha256": "bbb67b89f2231eeda10c62c7474aaccd1a0ef5567b7f8b6c7aebeaf848b5dfaf"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate accepted UNCHANGED by Codex compile-first frozen statement/axiom gate",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793661780354848288-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793663662820089723-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793663704887564565-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalArithmeticStatementChecks",
+          "role": "Frozen five-alias source type and namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R009",
+      "accepted_utc": "2026-11-03T00:09:08.747741+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompilerStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.StatementChecks.fullCompiler",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.StatementChecks.fullCompiler",
+        "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.StatementChecks.actualEvaluation",
+        "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.StatementChecks.internalCompiler",
+        "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.StatementChecks.headerCoverage",
+        "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.StatementChecks.internalHeaders"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticTermCompilerTargets.lean",
+        "sha256": "3c99ba44b1cf6718a10a3306c6a2c944018dee660b21673fa3249a2d19929a98",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompiler.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793663865145236214-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793664471471102525-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "build-reports/1793664509177201566-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompilerStatementChecks",
+          "role": "Frozen five-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": false,
+      "proof_repair_count": 0,
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 885988,
+      "scope": "Literal structural compilation of every arithmetic template in existing Term syntax to a fixed PR Program, with exact evaluations and actual Hilbert substituted-term correctness at every concrete registry occurrence. Arbitrary full-language substitution arguments, including universalFunction terms, are allowed. Exact actual source arithmetic header coverage/internal correctness for all arities/tags. UniversalFunction TEMPLATE nodes remain outside the explicit domain. Actual internal checker preservation/HB2/HB3/original Base identification and whole source12 remain unpaid.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticTermCompilerDefinitions.lean",
+          "sha256": "62c81936413998e0afdc9fb67c1538effc6f565e8b37211aff657cfc601a5554"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticTermCompilerTargets.lean",
+          "sha256": "3c99ba44b1cf6718a10a3306c6a2c944018dee660b21673fa3249a2d19929a98"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticTermCompilerProof.lean",
+          "sha256": "ef0c5435f7a0e1f7f5593d8a3ce9fa2e25d7d44b7d04e40b6d8a87569ef1dc97"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticTermCompilerStatementChecks.lean",
+          "sha256": "6711f831f91caa1c75b64ccf11bdd8d3a0ea1f5099ca69d655d210bda33dd214"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate accepted UNCHANGED by Codex compile-first frozen statement/axiom gate",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793663865145236214-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793664471471102525-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793664509177201566-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticTermCompilerStatementChecks",
+          "role": "Frozen five-alias source type and namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R010",
+      "accepted_utc": "2026-11-03T00:46:13.135342+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitutionStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.fullSubstitution",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.fullSubstitution",
+        "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.instantiationNaturality",
+        "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.logicalInstances",
+        "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.arithmeticInstances",
+        "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.derivationSubstitution",
+        "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.StatementChecks.closedLifting"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowDerivationSubstitutionTargets.lean",
+        "sha256": "f52859793d3164dc1ecb7b170272ed5ec8e56d33104c8b56cfb484e75093aa88",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitution.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793664912579591107-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793666555182455351-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "build-reports/1793666714181261388-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitutionStatementChecks",
+          "role": "Frozen six-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": false,
+      "proof_repair_count": 0,
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 881360,
+      "scope": "Actual instantiation naturality and literal preservation of EVERY existing logical/arithmetic instance under arbitrary full-language term substitution, including PA induction; genuine transport of EVERY existing Hilbert derivation under arbitrary simultaneous substitution with same closed theory and binder generalization; actual closed-proof lifting to every free context. This is proof construction, not formula syntax or semantic preservation alone. Actual checker invariants/internal HB2/HB3/original Base identification and whole source12 remain unpaid.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowDerivationSubstitutionDefinitions.lean",
+          "sha256": "b9f8987023b499277b01fa463d24a8cfabf640b2e39275174dc0192e8d12d826"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowDerivationSubstitutionTargets.lean",
+          "sha256": "f52859793d3164dc1ecb7b170272ed5ec8e56d33104c8b56cfb484e75093aa88"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowDerivationSubstitutionProof.lean",
+          "sha256": "4ab340903b53799b1eae4690cb3da4b59c41a71bb76549aeff9cd963b26c8426"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowDerivationSubstitutionStatementChecks.lean",
+          "sha256": "f9a1174a4a7202a98c1eb4d190d1305bb6476fc2cc96eab8f559173c8d2fa2c0"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate accepted UNCHANGED by Codex compile-first frozen statement/axiom gate",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793664912579591107-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793666555182455351-2.json",
+          "role": "UNCHANGED first raw author candidate full proof PASS"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793666714181261388-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitutionStatementChecks",
+          "role": "Frozen six-alias source type and namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R011",
+      "accepted_utc": "2026-11-03T01:36:53.956173+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControlStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.StatementChecks.fullControl",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.StatementChecks.fullControl",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.StatementChecks.actualEvaluation",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.StatementChecks.internalZeroTest",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.StatementChecks.internalBooleanRange",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.StatementChecks.internalConditional"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalControlTargets.lean",
+        "sha256": "c0e122713f124797c6774ea73b59054ce650e272b285153e55bacc9ea5b52083",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793666934936996292-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793669562708179735-2.json",
+          "role": "Unchanged first raw candidate: actual missingctx proof-parameter annotation diagnostic preserved"
+        },
+        {
+          "file": "build-reports/1793669738218929068-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControlStatementChecks",
+          "role": "Codex single local context annotation; frozen five-alias type and actual namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "namespace_audited_theorems": 6,
+      "proof_changed_after_author": true,
+      "proof_repair_count": 1,
+      "repair_scope": "Only add n:=ctx to negative-zero-one proof parameter of negTransport; no mathematical/source/target/gate/resource change.",
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 921080,
+      "scope": "Actual literal PR zeroTest/control ASTs with separate standard evaluations and genuine Hilbert all-input symbolic correctness: zeroTest(x)=1 iff x=0, Boolean0/1 output range for every symbolic input, and BOTH zero/nonzero conditional branch laws for arbitrary symbolic control/output terms at ANY actual registry occurrence/context. Actual PA object induction and accepted closed-proof lifting used; no Bool-control/numeral restriction, evaluator-to-proof or added assumption. Internal full checker/HB2/HB3/original Base identification and whole source12 remain unpaid.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalControlDefinitions.lean",
+          "sha256": "6bc2dc4f245685ec630ec38b996c59142bfea0dae4c3aa7d55d0dadc168b9746"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalControlTargets.lean",
+          "sha256": "c0e122713f124797c6774ea73b59054ce650e272b285153e55bacc9ea5b52083"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalControlProof.lean",
+          "sha256": "145a32cdbe571e71ef1b445bda4dab9ee5960e345d715d72c23c531151de2de6"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPRInternalControlStatementChecks.lean",
+          "sha256": "1ea87212bebde2884e399a0b94cc33360085c9e5d5d304dd4b26e26cc1666813"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate; Codex compile-first one context annotation repair, exact frozen statement/axiom acceptance",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793666934936996292-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793669562708179735-2.json",
+          "role": "Unchanged first raw candidate: actual missingctx proof-parameter annotation diagnostic preserved"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793669738218929068-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPRInternalControlStatementChecks",
+          "role": "Codex single local context annotation; frozen five-alias type and actual namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R012",
+      "accepted_utc": "2026-11-03T02:27:27.848512+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalizationStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.fullNormalization",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.fullNormalization",
+        "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.actualEvaluation",
+        "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.internalEqualsOne",
+        "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.internalNormalizedRange",
+        "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.internalSameASTAcceptance",
+        "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.StatementChecks.publishedBooleanVerifier"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowVerifierNormalizationTargets.lean",
+        "sha256": "7bacc33d97346515fdfb18fd4d6084d3f3640e9ac7201847e17dcd81b3d62f1f",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793670208700052876-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793672609604461987-2.json",
+          "role": "Unchanged raw candidate actual logical-vs-arithmetic succInjective constructor diagnostic"
+        },
+        {
+          "file": "build-reports/1793672775824659802-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalizationStatementChecks",
+          "role": "Codex one constructor correction; frozen six-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": true,
+      "proof_repair_count": 1,
+      "repair_scope": "Only use existing arithmetic constructor rather than nonexistent logical succInjective instance in succIff; no target/source/gate/resource or mathematical statement change.",
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 929308,
+      "scope": "Canonical equals-one/normalize(q) PR ASTs with actual internal recognizer correctness, all-input normalized Booleanrange and acceptance equivalence to ANY SAME-AST q occurrence in one registry, without an assumed range for q or external equality-to-proof inference. From EVERY Actual published-D parameter choice constructs a NEW code cNew for S with normalized universal verifier and derives its uniform all-symbolic-input Booleanrange INSIDE that actual D. Old c is not reused. Actual internal MP/quotation/HB2/HB3/original Base identification and whole source12 remain unpaid.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowVerifierNormalizationDefinitions.lean",
+          "sha256": "f6cb40dab84020417492aa4e777fe816a28585e6761801bb07b26b9b0c445ec7"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowVerifierNormalizationTargets.lean",
+          "sha256": "7bacc33d97346515fdfb18fd4d6084d3f3640e9ac7201847e17dcd81b3d62f1f"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowVerifierNormalizationProof.lean",
+          "sha256": "89a7eb364c3425f42b0bc639e6d261fa33b7fad7647ff0715224fee197b494dc"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowVerifierNormalizationStatementChecks.lean",
+          "sha256": "50884aaf23cdc0e18b2b3bb4efb1f6ef380e96e01fa4b3d4b45788a54579994f"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate; Codex compile-first one existing-constructor correction, frozen source/type/axiom acceptance",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793670208700052876-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793672609604461987-2.json",
+          "role": "Unchanged raw candidate actual logical-vs-arithmetic succInjective constructor diagnostic"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793672775824659802-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalizationStatementChecks",
+          "role": "Codex one constructor correction; frozen six-alias source type and namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R013",
+      "accepted_utc": "2026-11-03T03:21:42.583154+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedModelStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.fullPublishedModel",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.fullPublishedModel",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.guardCalibration",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.implicationCalibration",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.sProvabilityCalibration",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.dProvabilityCalibration",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.theoremSetModel",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.StatementChecks.consistency"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedModelTargets.lean",
+        "sha256": "12417fe2da3892ac590134c82be2e6d1a0ae199457179fd36837f1ae12bcbe68",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowPublishedModel.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793673486227000173-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793675550249390374-2.json",
+          "role": "Unchanged raw candidate: final rhoTrue hits existing200k WHNF; earlier substantive calibration/Smodel/reflection helpers elaborate"
+        },
+        {
+          "file": "build-reports/1793675741211575096-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedModelStatementChecks",
+          "role": "Codex split generic instantiation/biconditional semantic helpers; exact seven-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": true,
+      "proof_repair_count": 1,
+      "repair_scope": "Stage final rho instantiation and biconditional soundness in two independently typed generic semantic helpers to avoid expanding the diagonal code during elaboration. Existing200k/resource/source/target/gate/math unchanged.",
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 919604,
+      "scope": "Actual named-overlay guard/implication calibration and exact standard PrS-at-term/PrD calibration, then a concrete singleton-agent standard-N theorem-set interpretation for EVERY Actual published D. S axioms proved true using purely syntactic D theorem-code MP closure; paid S diagonal plus exact PrS/closed deduction proves literal rho true noncircularly; every D axiom true and actual D consistency follow. Fresh real named-overlay ground, no old/new full-language identity or assumed D/rho soundness. Stage-zero FS, full KT/FS, internal HB2/HB3 and original Base/source12 whole statements remain unpaid.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedModelDefinitions.lean",
+          "sha256": "afdd1c9f1417736cf81e54308eba09cb6d0145af1938acf5ae91052657ae602d"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedModelTargets.lean",
+          "sha256": "12417fe2da3892ac590134c82be2e6d1a0ae199457179fd36837f1ae12bcbe68"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedModelProof.lean",
+          "sha256": "81ded5be825495e5c2c2e6910ba96b228f3c765a7f37a5242630680439a2b167"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedModelStatementChecks.lean",
+          "sha256": "f0a0e287eeadd65d6cf012436252d4d8c68a3f944ef72b0c2555a1b74f759d61"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 complete immutable candidate; Codex compile-first bounded elaboration staging repair and exact frozen source/type/axiom acceptance",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793673486227000173-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793675550249390374-2.json",
+          "role": "Unchanged raw candidate: final rhoTrue hits existing200k WHNF; earlier substantive calibration/Smodel/reflection helpers elaborate"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793675741211575096-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedModelStatementChecks",
+          "role": "Codex split generic instantiation/biconditional semantic helpers; exact seven-alias source type and namespace axiom closure"
+        }
+      ]
+    },
+    {
+      "checkpoint": "FORMALIZATION-2026-10-31-R014",
+      "accepted_utc": "2026-11-03T04:22:01.596495+00:00",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevisionStatementChecks",
+      "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.StatementChecks.fullRevision",
+      "accepted_declarations": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.StatementChecks.fullRevision",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.StatementChecks.extensionModel",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.StatementChecks.stageAxioms",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.StatementChecks.stageTheorems",
+        "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.StatementChecks.theoremCodePersistence"
+      ],
+      "frozen_comparator": {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedRevisionTargets.lean",
+        "sha256": "e5c73f6f3a883c9b7ee6966befbe463493c3b1d56482ac8cbc1b3f9e4acf3cab",
+        "type": "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevision.Targets.Target"
+      },
+      "verification_receipts": [
+        {
+          "file": "build-reports/1793676298221844091-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "build-reports/1793679449748534282-2.json",
+          "role": "UNCHANGED first raw author candidate complete proof PASS"
+        },
+        {
+          "file": "build-reports/1793679596356151612-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevisionStatementChecks",
+          "role": "Frozen five-alias source type and namespace axiom closure"
+        }
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "proof_changed_after_author": false,
+      "proof_repair_count": 0,
+      "compiler_profile": {
+        "heap_mib": 2048,
+        "rss_mib": 1536,
+        "minimum_free_mib": 2048,
+        "threads": 1
+      },
+      "gate_peak_rss_kib": 917080,
+      "scope": "On the REAL actual named published-D arithmetic ground, a genuine extension-model theorem from explicit D-theorem-code inclusion and literal MP closure, then UNCONDITIONAL all-stage truth of EVERY D axiom/theorem and persistence P0 subset Pn for every n, by noncircular joint induction. Successor code inclusion uses PRIOR-stage D soundness; actual positive revision MP closure supplies successor D modelhood. No global revision monotonicity/Pn subset P(n+1), assumed model/invariant, old/new ground identity, full FS/KT/Base/HB or whole source12 statement claimed.",
+      "whole_statement_promotions": [],
+      "source_files": [
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedRevisionDefinitions.lean",
+          "sha256": "6e7da7439b313231ae3a1724399ef86832f0ab300f1845664e078f6589411e75"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedRevisionTargets.lean",
+          "sha256": "e5c73f6f3a883c9b7ee6966befbe463493c3b1d56482ac8cbc1b3f9e4acf3cab"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedRevisionProof.lean",
+          "sha256": "73f6aec2134abbac27b9f2a67ceff16091914df992bf15b37b46e0ef76a98d6f"
+        },
+        {
+          "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedRevisionStatementChecks.lean",
+          "sha256": "ccfd19df65b970084c95aa1e0924503af5849b3838a058a8456f801b18d635e5"
+        }
+      ],
+      "author_provenance": "Claude Opus5.5 whole immutable candidate accepted UNCHANGED by Codex compile-first frozen source/type/axiom gate",
+      "portable_verification_receipts": [
+        {
+          "file": "verification/local-2026-11-02/computability/1793676298221844091-2.json",
+          "role": "Codex exact comparator before any proof"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793679449748534282-2.json",
+          "role": "UNCHANGED first raw author candidate complete proof PASS"
+        },
+        {
+          "file": "verification/local-2026-11-02/computability/1793679596356151612-2.json",
+          "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedRevisionStatementChecks",
+          "role": "Frozen five-alias source type and namespace axiom closure"
+        }
+      ]
+    }
+  ]
+}

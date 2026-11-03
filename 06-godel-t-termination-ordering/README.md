@@ -1,5 +1,7 @@
 # A type-confined termination ordering for Gödel's T
 
+**Status:** a checked finite counterexample obstructs the local stable-pair/transitivity claim. Read [the mathematical status](STATUS.md) before relying on the ordering or height conclusions.
+
 Read [paper.pdf](paper.pdf). The canonical source is [paper.tex](paper.tex).
 
 The paper constructs a decidable syntactic ordering, proves stability under

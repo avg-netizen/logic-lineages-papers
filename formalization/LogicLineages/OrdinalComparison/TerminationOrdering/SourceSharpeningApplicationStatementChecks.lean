@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationStatementChecks
+theorem fixedFullOriginalApplication : SourceSharpeningApplicationTargets.FullOriginalApplication := SourceSharpeningApplicationProof.fullOriginalApplication
+#print axioms fixedFullOriginalApplication
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningApplicationStatementChecks

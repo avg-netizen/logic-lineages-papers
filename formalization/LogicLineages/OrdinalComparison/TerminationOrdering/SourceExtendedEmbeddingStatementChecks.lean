@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEmbeddingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceUnmarkedProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEmbeddingStatementChecks
+theorem fixedOriginalEmbedding : SourceExtendedComparisonTargets.OriginalEmbedding := SourceExtendedEmbeddingProof.originalEmbedding
+theorem fixedOrdinaryEmbedding : SourceExtendedComparisonTargets.OrdinaryEmbedding := SourceUnmarkedProof.ordinaryEmbedding
+#print axioms fixedOriginalEmbedding
+#print axioms fixedOrdinaryEmbedding
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedEmbeddingStatementChecks

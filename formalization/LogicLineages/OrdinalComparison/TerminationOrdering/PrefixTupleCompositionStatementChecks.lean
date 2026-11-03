@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.PrefixTupleCompositionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.PrefixTupleCompositionStatementChecks
+theorem fixedActualNonemptyPrefixTupleComposition : PrefixTupleCompositionTargets.ActualNonemptyPrefixTupleComposition := PrefixTupleCompositionProof.actualNonemptyPrefixTupleComposition
+#print axioms fixedActualNonemptyPrefixTupleComposition
+end LogicLineages.OrdinalComparison.TerminationOrdering.PrefixTupleCompositionStatementChecks

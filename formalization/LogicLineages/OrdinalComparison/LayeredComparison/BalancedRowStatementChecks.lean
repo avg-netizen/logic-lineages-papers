@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedRowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.StatementChecks
+theorem entire_basis_bounds:Targets.ActualBasisBounds:=Proof.basisBounds
+theorem outside_remainder_bound:Targets.ActualRemainderBound:=Proof.remainderBound
+theorem original_large_window:Targets.ActualLargeWindow:=Proof.largeWindow
+theorem entire_small_basis:Targets.ActualSmallBasisBound:=Proof.smallBasisBound
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.StatementChecks

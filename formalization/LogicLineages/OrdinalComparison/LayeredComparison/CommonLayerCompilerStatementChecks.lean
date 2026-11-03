@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerCompilerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerCompiler.StatementChecks
+theorem all_code_effectivity:CommonLayerComparison.Targets.AllCodeEffectivity:=
+  CommonLayerComparison.Proof.allCodeEffectivity
+theorem source_code_support:Targets.SourceCodeSupport:=Proof.sourceCodeSupport
+theorem literal_outputs:Targets.LiteralOutputs:=Proof.literalOutputs
+theorem complete_original_layer_compiler:Targets.CompleteLayerCompiler:=Proof.completeCompiler
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerCompiler.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerCompiler.StatementChecks

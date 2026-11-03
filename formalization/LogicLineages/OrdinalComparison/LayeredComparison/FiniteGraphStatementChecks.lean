@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraphProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraph.StatementChecks
+theorem actual_uniform_graph : Targets.UniformGraph:=Proof.uniformGraph
+theorem actual_decreasing_graph : Targets.ExactDecreasingGraph:=Proof.exactDecreasingGraph
+end LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraph.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraph.StatementChecks

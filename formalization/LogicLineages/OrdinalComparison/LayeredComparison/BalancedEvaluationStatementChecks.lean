@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluation.StatementChecks
+theorem actual_finite_call_equation:Targets.FiniteCallEquation:=Proof.finiteCallEquation
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedEvaluation.StatementChecks

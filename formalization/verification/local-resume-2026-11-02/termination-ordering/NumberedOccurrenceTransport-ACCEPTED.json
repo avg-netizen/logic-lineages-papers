@@ -1,0 +1,49 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualArgumentsToList",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualListToArguments",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualPermutationTransport",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualSplitTransport",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualListBudgetLowering",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportStatementChecks.fixedActualPointwiseTupleTrace"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualArgumentsToList",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualListToArguments",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualPermutationTransport",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualSplitTransport",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualListBudgetLowering",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOccurrenceTransportTargets.ActualPointwiseTupleTrace"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedOccurrenceTransport-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793677401194560458-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOccurrenceTransportStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext"
+    ],
+    "axiom_detail": "First5fixed aliases AXIOM-FREE; pointwise tuple trace onlypropext.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportDefinitions.lean",
+        "sha256": "a9553590b118a3569274caa3eca7f5bfaa69de27337b06c68539b7403ecd6bb6"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportTargets.lean",
+        "sha256": "b6061eff8920a374d128190377edd31522ed4056fc02d0789b9374cbffba75eb"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportProof.lean",
+        "sha256": "a1034cee61ba74b5ee9d50f12c601bbd1b8a6a017f3e7c7e4001fdbb579e5642"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOccurrenceTransportStatementChecks.lean",
+        "sha256": "199a5fd2b276ad5a5ec73eb6f5337c2746087e9924e1e9121daec9e054d2df4d"
+      }
+    ],
+    "source_scope": "Literal packed/list representation of actual source occurrences; exact typed-vector reconstruction, permutation/split transport WITHOUT replacing marked representations, genuine budget lowering and whole actual pointwise-trace vector reconstruction. No solver, source transitivity, fixedS/quotient/effectivity/ID1 or full derivation simulation assumed. Complete actual6gate; no numbered source promotion.",
+    "numbered_statements_completed": []
+  }
+}

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparisonSemanticProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.SemanticStatementChecks
+theorem all_actual_coded_comparisons:Targets.ExactCodedComparison:=Proof.codedComparison
+theorem original_source_comparison:Targets.ActualSourceComparison:=Proof.actualComparison
+end LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.SemanticStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparison.SemanticStatementChecks

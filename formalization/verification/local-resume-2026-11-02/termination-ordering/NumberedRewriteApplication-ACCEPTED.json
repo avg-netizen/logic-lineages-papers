@@ -1,0 +1,49 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualBindingRetraction",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualWeakeningCancellation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualOpenNumberedBeta",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationStatementChecks.fixedActualNumberedWholeTuple"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualBindingRetraction",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualWeakeningCancellation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualOpenNumberedBeta",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationTargets.ActualNumberedWholeTuple"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedRewriteApplication-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793673638543191218-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793673638543191218-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRewriteApplicationStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext"
+    ],
+    "axiom_detail": "Retraction/cancellation AXIOM-FREE; opened beta and whole tuple onlypropext.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationDefinitions.lean",
+        "sha256": "471feb178305cd5182ae903e855ecf4222f22a5af9e6af7cb3d0acb6d15bb984"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationTargets.lean",
+        "sha256": "8f83018f745e1f7f9fc63b9da84960d0a7337a9f2e33e6d28d7c63ce04911e03"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationBindingProof.lean",
+        "sha256": "225e46d4bc6c0eb7c222256c69f9749f6a512560f7bc7ff91539a4b691eba052"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationPathProof.lean",
+        "sha256": "4095c263d57d88ba1cf8ec69b667b0f45f6f033bb866092fc18e41f931067be3"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteApplicationStatementChecks.lean",
+        "sha256": "3f7ba24a18a87c766b4f76811508a383d37ec40fdbdb24f4a97889be349d2c93"
+      }
+    ],
+    "source_scope": "ACTUAL auxiliary retraction/weakening cancellation/opened-numbered beta and WHOLE ordered tuple path: finite head initial label n+length, final n, literal appended typed extras, incl empty tuple. Only genuine AUX applications are curried; NO original special-angle reassociation, semantic related-value equality or source comparison transitivity assumed. Core path and dependent typed append identities paid; equivalence quotient/finite-S/effectivity/SN/ID1/full original-angle or comparison simulation still pending. Component only.",
+    "numbered_statements_completed": []
+  }
+}

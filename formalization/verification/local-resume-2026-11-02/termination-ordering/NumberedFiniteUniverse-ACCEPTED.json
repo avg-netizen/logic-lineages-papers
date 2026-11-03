@@ -1,0 +1,48 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualHeadWindow",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualRepresentationConfinement",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualArgumentConfinement",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualUnmarkedHeadWindow",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseStatementChecks.fixedActualUnmarkedUniverse"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualHeadWindow",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualRepresentationConfinement",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualArgumentConfinement",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualUnmarkedHeadWindow",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseTargets.ActualUnmarkedUniverse"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedFiniteUniverse-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793678953516399199-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793678953516399199-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteUniverseStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "axiom_detail": "Source<=>Aux term/argument confinement AXIOM-FREE; unmarked head/universe onlypropext; complete executable head-window propext+Quot.sound. Entire5gate FIRST TRY.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseDefinitions.lean",
+        "sha256": "acf3df15c1b3c21bec718e0b5c338faccb53304bd5a67a7c485b1ddada8553e3"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseTargets.lean",
+        "sha256": "3b48801b8b133f9fdf715b56fd146a44fc171f6c5ab066880482a16178ebcf90"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseProof.lean",
+        "sha256": "101e03acc662970259c53d4ec94dad57e0e6bc5abbe6aaa24b101d8a48db0489"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteUniverseStatementChecks.lean",
+        "sha256": "106140c518f109b736e19ff34637c3f9537ea61550490008014769abe466c7b4"
+      }
+    ],
+    "source_scope": "Actual executable finite head window from explicit finite symbol and type LISTS; complete for subtype-closed S, original head result/base type guards including native annotations. Source<=>Aux occurrence confinement under real representation and DERIVED unmarked-source head-window/universe membership. No output-only native finiteness assumption, added comparison premise, full confined trace, canonical quotient, source computability or ID1 claim. Complete actual5gate, no numbered source promotion.",
+    "numbered_statements_completed": []
+  }
+}

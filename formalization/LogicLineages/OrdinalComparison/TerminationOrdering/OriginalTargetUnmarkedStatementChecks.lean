@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OriginalTargetUnmarkedProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OriginalTargetUnmarkedStatementChecks
+theorem fixedActualFiveWayTargetNormality : OriginalTargetUnmarkedTargets.ActualFiveWayTargetNormality := OriginalTargetUnmarkedProof.actualFiveWayTargetNormality
+#print axioms fixedActualFiveWayTargetNormality
+end LogicLineages.OrdinalComparison.TerminationOrdering.OriginalTargetUnmarkedStatementChecks

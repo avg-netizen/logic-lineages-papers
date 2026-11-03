@@ -1,0 +1,51 @@
+{
+  "accepted": {
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualTypedPresentation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualLambdaContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualFunctionContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualTupleCons",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualOrdinaryContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualNumberedBaseContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsStatementChecks.fixedActualNumberedExtrasContext"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualTypedPresentation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualLambdaContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualFunctionContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualTupleCons",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualOrdinaryContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualNumberedBaseContext",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceContextsTargets.ActualNumberedExtrasContext"
+    ],
+    "freeze": "verification/local-resume-2026-11-02/termination-ordering/NumberedTraceContexts-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-02/termination-ordering/1793676945919610198-2.json",
+    "gate_log": "verification/local-resume-2026-11-02/termination-ordering/1793676945919610198-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedTraceContextsStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext"
+    ],
+    "axiom_detail": "All7fixed aliases onlypropext. FIRST entire proof+exact gate passed unchanged.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsDefinitions.lean",
+        "sha256": "25c71e1bdd8daffd22200b54385efc24f5af1db707dd0925e4e92f39179fc8f9"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsTargets.lean",
+        "sha256": "a395283b2e48595260454955c90324e743c48c76b9f3c5800088abf42600bd90"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsProof.lean",
+        "sha256": "4a7cbb59f3120ed806e0a189f5984f0b3988cfe01a46b8105794aeff8f82aeca"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTraceContextsStatementChecks.lean",
+        "sha256": "5daf9758bedd65221f6357223c47b0da81551bd190a5b8a4b4a3a10673fd6b67"
+      }
+    ],
+    "source_scope": "Typed trace presentation is EXACTLY equivalent to fixed packed counted trace. Actual lambda, AUX FUNCTION-only, whole ordered tuple and ordinary/numbered argument contexts preserve exact raw step count. No positive app-argument lift or source transitivity supplied; finiteS/quotient/effectivity/full original derivation simulation/ID1 remain unpaid. Complete actual7gate; no numbered source promotion.",
+    "numbered_statements_completed": []
+  }
+}

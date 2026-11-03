@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks
+theorem fixedActualCanonicalNumbering : NumberedRewriteSyntaxTargets.ActualCanonicalNumbering := NumberedRewriteSyntaxProof.canonicalNumbering
+theorem fixedActualBudgetLowering : NumberedRewriteSyntaxTargets.ActualBudgetLowering := NumberedRewriteSyntaxProof.budgetLowering
+theorem fixedActualOrdinaryTranslation : NumberedRewriteSyntaxTargets.ActualOrdinaryTranslation := NumberedRewriteSyntaxProof.ordinaryTranslation
+theorem fixedActualRenaming : NumberedRewriteSyntaxTargets.ActualRenaming := NumberedRewriteSyntaxProof.renamingCorrespondence
+theorem fixedActualRelatedSubstitution : NumberedRewriteSyntaxTargets.ActualRelatedSubstitution := NumberedRewriteSyntaxProof.relatedSubstitution
+#print axioms fixedActualCanonicalNumbering
+#print axioms fixedActualBudgetLowering
+#print axioms fixedActualOrdinaryTranslation
+#print axioms fixedActualRenaming
+#print axioms fixedActualRelatedSubstitution
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteSyntaxStatementChecks

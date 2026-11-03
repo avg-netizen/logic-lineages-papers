@@ -1,3 +1,5 @@
+Current local checkpoint: **PAUSED**,3November2026UTC. **154 checked,2 inherited,33 pending/189**. Read [the final handoff](HANDOFF-2026-11-03.md), including the checked local transitivity source issue. Earlier releases below are historical.
+
 Current external round: **active through 1 November 2026, 17:00 UTC** (noon
 UTC−05:00), on `formalization/external-continuation-2026-11-01`. Its current register is
 135 checked, 2 inherited and 52 pending source statements. Follow

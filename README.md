@@ -1,5 +1,7 @@
 # Logic lineages papers
 
+**Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
+
 [![Pure R1 Lean verification](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml/badge.svg?branch=main)](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml)
 
 Working manuscripts and a standalone calculator/formalization project from a research programme in mathematical logic. Their source questions were posed by the authors identified below. Each manuscript is independently buildable; the new comparison collection cites its included companions for shared proofs. No argument or build requires private vault documents or project conventions.

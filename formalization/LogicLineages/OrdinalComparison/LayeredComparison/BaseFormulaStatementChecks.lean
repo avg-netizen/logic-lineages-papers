@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BaseFormulaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BaseFormula.StatementChecks
+theorem literal_base_code:Targets.LiteralBaseFormulaCode:=Proof.literalBaseFormulaCode
+end LogicLineages.OrdinalComparison.LayeredComparison.BaseFormula.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BaseFormula.StatementChecks

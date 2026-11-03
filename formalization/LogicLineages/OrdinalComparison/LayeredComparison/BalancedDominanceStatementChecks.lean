@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedDominanceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.DominanceStatementChecks
+theorem actual_heterogeneous_surviving_sign:DominanceTargets.ActualSurvivingDominance:=DominanceProof.actualDominance
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.DominanceStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.DominanceStatementChecks

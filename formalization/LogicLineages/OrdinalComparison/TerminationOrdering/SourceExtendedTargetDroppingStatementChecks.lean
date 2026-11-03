@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedTargetDroppingProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedTargetDroppingStatementChecks
+theorem fixedActualTargetDropping : SourceExtendedTargetDroppingTargets.ActualTargetDropping := SourceExtendedTargetDroppingProof.targetDropping
+#print axioms fixedActualTargetDropping
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceExtendedTargetDroppingStatementChecks

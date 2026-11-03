@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursionDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.Targets
+/-- A real stack interpreter is partial recursive when its two finite
+numeric interfaces are computable. No recursion oracle is an input. -/
+def StackProgram : Prop := ∀ (A B:Type) [Primcodable A] [Primcodable B] [Inhabited B]
+  (children:A→List A) (assemble:A→List B→B),
+  Computable children→Computable₂ assemble→Partrec (program children assemble)
+/-- Finite recursive calls decreasing a supplied NATURAL measure give a
+computable result. The theorem must prove real stack termination and exact
+returned value; a well-founded-recursion field is not assumed. -/
+def DecreasingFiniteCalls : Prop := ∀ (A B:Type) [Primcodable A] [Primcodable B] [Inhabited B]
+  (children:A→List A) (assemble:A→List B→B),
+  Computable children→Computable₂ assemble→
+  ∀ (f:A→B) (μ:A→Nat),
+  (∀a,∀b∈children a,μ b<μ a)→
+  (∀a,f a=assemble a ((children a).map f))→
+  (∀a,f a∈program children assemble a)∧Computable f
+end LogicLineages.OrdinalComparison.LayeredComparison.FiniteRecursion.Targets

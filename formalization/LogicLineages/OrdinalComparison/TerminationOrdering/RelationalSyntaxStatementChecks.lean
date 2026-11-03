@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks
+
+theorem fixedActualJointFundamental : RelationalSyntaxTargets.ActualJointFundamental := RelationalSyntaxProof.actualJointFundamental
+theorem fixedActualIdentityBitSoundness : RelationalSyntaxTargets.ActualIdentityBitSoundness := RelationalSyntaxProof.actualIdentityBitSoundness
+theorem fixedActualIdentityAdequacy : RelationalSyntaxTargets.ActualIdentityAdequacy := RelationalSyntaxProof.actualIdentityAdequacy
+#print axioms fixedActualJointFundamental
+#print axioms fixedActualIdentityBitSoundness
+#print axioms fixedActualIdentityAdequacy
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.RelationalSyntaxStatementChecks
