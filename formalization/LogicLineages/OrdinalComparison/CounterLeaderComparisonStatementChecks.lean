@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterLeaderComparisonTargets
+public import LogicLineages.OrdinalComparison.CounterLeaderComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterLeaderComparison.StatementChecks
+theorem actual_counter_strict_order : Targets.ActualCounterStrictOrder := Proof.actualCounterStrictOrder
+theorem actual_counter_equality : Targets.ActualCounterEquality := Proof.actualCounterEquality
+end LogicLineages.OrdinalComparison.CounterLeaderComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterLeaderComparison
