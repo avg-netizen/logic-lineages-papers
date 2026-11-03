@@ -1790,6 +1790,9 @@ public import LogicLineages.ExternalCheckpoint20261103AH
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericDecodingStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AI
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericCarrierStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AJ
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
