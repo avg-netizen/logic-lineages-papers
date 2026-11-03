@@ -1697,6 +1697,9 @@ public import LogicLineages.ExternalCheckpoint20261103C
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowReductionStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103D
 
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineSyntaxStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103E
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
