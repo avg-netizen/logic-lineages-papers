@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowTracesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowTracesStatementChecks
+
+theorem fixedActualTypedPresentation : NumberedWindowTracesTargets.ActualTypedPresentation := NumberedWindowTracesProof.typedPresentation
+theorem fixedActualLambdaContext : NumberedWindowTracesTargets.ActualLambdaContext := NumberedWindowTracesProof.lambdaContext
+theorem fixedActualFunctionContext : NumberedWindowTracesTargets.ActualFunctionContext := NumberedWindowTracesProof.functionContext
+theorem fixedActualTupleCons : NumberedWindowTracesTargets.ActualTupleCons := NumberedWindowTracesProof.tupleCons
+theorem fixedActualOrdinaryContext : NumberedWindowTracesTargets.ActualOrdinaryContext := NumberedWindowTracesProof.ordinaryContext
+theorem fixedActualNumberedBaseContext : NumberedWindowTracesTargets.ActualNumberedBaseContext := NumberedWindowTracesProof.numberedBaseContext
+theorem fixedActualNumberedExtrasContext : NumberedWindowTracesTargets.ActualNumberedExtrasContext := NumberedWindowTracesProof.numberedExtrasContext
+theorem fixedActualPackedErasure : NumberedWindowTracesTargets.ActualPackedErasure := NumberedWindowTracesProof.packedErasure
+theorem fixedActualTupleErasure : NumberedWindowTracesTargets.ActualTupleErasure := NumberedWindowTracesProof.tupleErasure
+theorem fixedActualAllBoundaries : NumberedWindowTracesTargets.ActualAllBoundaries := NumberedWindowTracesProof.allBoundaries
+theorem fixedActualAllTupleBoundaries : NumberedWindowTracesTargets.ActualAllTupleBoundaries := NumberedWindowTracesProof.allTupleBoundaries
+#print axioms fixedActualTypedPresentation
+#print axioms fixedActualLambdaContext
+#print axioms fixedActualFunctionContext
+#print axioms fixedActualTupleCons
+#print axioms fixedActualOrdinaryContext
+#print axioms fixedActualNumberedBaseContext
+#print axioms fixedActualNumberedExtrasContext
+#print axioms fixedActualPackedErasure
+#print axioms fixedActualTupleErasure
+#print axioms fixedActualAllBoundaries
+#print axioms fixedActualAllTupleBoundaries
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowTracesStatementChecks
