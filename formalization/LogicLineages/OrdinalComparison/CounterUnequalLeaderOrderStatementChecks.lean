@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterUnequalLeaderOrderTargets
+public import LogicLineages.OrdinalComparison.CounterUnequalLeaderOrderProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterUnequalLeaderOrder.StatementChecks
+theorem actual_leader_gap : Targets.ActualLeaderGap := Proof.actualLeaderGap
+theorem actual_unequal_leader_order : Targets.ActualUnequalLeaderOrder := Proof.actualUnequalLeaderOrder
+end LogicLineages.OrdinalComparison.CounterUnequalLeaderOrder.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterUnequalLeaderOrder

@@ -1871,6 +1871,9 @@ public import LogicLineages.ExternalCheckpoint20261103BI
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathCertificatesStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103BJ
 
+public import LogicLineages.OrdinalComparison.CounterUnequalLeaderOrderStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103BK
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
