@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectedDominanceTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectedDominanceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.CollectedDominance.StatementChecks
+theorem actual_collected_dichotomy : Targets.ActualCollectedDichotomy := Proof.actualCollectedDichotomy
+theorem every_greatest_survivor_sign : Targets.EveryGreatestSurvivorSign := Proof.everyGreatestSurvivorSign
+theorem actual_source_dichotomy : Targets.ActualSourceDichotomy := Proof.actualSourceDichotomy
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.CollectedDominance.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.CollectedDominance
