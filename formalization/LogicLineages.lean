@@ -1832,6 +1832,9 @@ public import LogicLineages.ExternalCheckpoint20261103AV
 public import LogicLineages.OrdinalComparison.QuadraticSeparationStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AW
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AX
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
