@@ -1,0 +1,7 @@
+# Literal numeric coding of typed multiset certificates
+
+The natural list code preserves order and multiplicity by zero/one-plus-pair recursion. Its concrete parser uses value+1 fuel. Roundtrip must prove this fuel sufficient from the actual pairing bounds; successful parsing must recover the exact input number. Packed lists map the already accepted literal packed numeric code and use its actual typed partial decoder at the given signature and context. No alternative term is substituted for a typing failure.
+
+The multiset certificate code nests four numeric fields: kept, removed, inserted and the ordered witness list. Each witness retains its actual removed-occurrence index and natural marking label via Nat.pair. The decoder reconstructs exactly those fields. Six targets prove natural-list, packed-list and entire-certificate roundtrips and successful-decode numeric equality. No new aggregate validation filter is used to manufacture these equalities; they must be derived from the parser, accepted packed decoder soundness and pairing inverses.
+
+Decoding certifies only literal typed data. It does not validate permutations, removed nonemptiness, index bounds, finiteMark success, source/target universe membership or a Mul step. Those checks remain in the accepted typed checker and a future numeric wrapper. This is not arithmetic representability, an assumed encoding surjectivity theorem, a full rule decision or quotient accessibility.
