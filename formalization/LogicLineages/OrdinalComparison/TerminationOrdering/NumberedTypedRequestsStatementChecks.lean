@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedRequestsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedRequestsStatementChecks
+theorem fixedActualTermExpansion : NumberedTypedRequestsTargets.ActualTermExpansion := NumberedTypedRequestsProof.termExpansion
+#print axioms fixedActualTermExpansion
+theorem fixedActualArgumentsExpansion : NumberedTypedRequestsTargets.ActualArgumentsExpansion := NumberedTypedRequestsProof.argumentsExpansion
+#print axioms fixedActualArgumentsExpansion
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedRequestsStatementChecks

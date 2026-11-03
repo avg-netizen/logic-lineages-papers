@@ -1934,6 +1934,9 @@ public import LogicLineages.ExternalCheckpoint20261103CD
 public import LogicLineages.OrdinalComparison.KernelQuadraticSourceComparisonStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103CE
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedRequestsStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103CF
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
