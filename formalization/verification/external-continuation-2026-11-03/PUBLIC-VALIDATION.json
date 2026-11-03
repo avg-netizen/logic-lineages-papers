@@ -1,50 +1,89 @@
 {
-  "schema": "public-focused-validation-v2",
+  "schema": "public-focused-validation-v3",
   "baseline_commit": "60f5dd4955aa974068e0a81da3edf03206dfb8ad",
   "continuation_totals": {
-    "fixed_aliases": 314,
-    "components": 88
+    "fixed_aliases": 329,
+    "components": 94
   },
   "previous_checkpoint": {
-    "commit": "d170bf08842c34c48deddfcadd4c4a0b8a11de4f",
+    "commit": "3ed9b4727f6747c0b7f7d18501dae9fe2d664fcc",
     "evidence": {
-      "schema": "public-focused-validation-v1",
+      "schema": "public-focused-validation-v2",
       "baseline_commit": "60f5dd4955aa974068e0a81da3edf03206dfb8ad",
-      "aggregate": "LogicLineages.ExternalCheckpoint20261103CG",
-      "new_components": 85,
-      "new_fixed_aliases": 305,
-      "new_count_scope": "November 3 continuation only; inherited published evidence is separate.",
-      "aggregate_source_sha256": "8624e355d1b6863b567c511a1e2b34664301b2d12884b829cbe408cfc0e9b7da",
-      "dependency_closure_sha256": "126792f869321df036325728ae5fa69c644b7a9eca240f72ab500ceac42f1051",
-      "axiom_policy": [
-        "propext",
-        "Classical.choice",
-        "Quot.sound"
-      ],
-      "limits_mib": {
-        "lean_heap": 2048,
-        "rss": 1536,
-        "free_memory_floor": 2048
+      "continuation_totals": {
+        "fixed_aliases": 314,
+        "components": 88
       },
-      "threads": 1,
+      "previous_checkpoint": {
+        "commit": "d170bf08842c34c48deddfcadd4c4a0b8a11de4f",
+        "evidence": {
+          "schema": "public-focused-validation-v1",
+          "baseline_commit": "60f5dd4955aa974068e0a81da3edf03206dfb8ad",
+          "aggregate": "LogicLineages.ExternalCheckpoint20261103CG",
+          "new_components": 85,
+          "new_fixed_aliases": 305,
+          "new_count_scope": "November 3 continuation only; inherited published evidence is separate.",
+          "aggregate_source_sha256": "8624e355d1b6863b567c511a1e2b34664301b2d12884b829cbe408cfc0e9b7da",
+          "dependency_closure_sha256": "126792f869321df036325728ae5fa69c644b7a9eca240f72ab500ceac42f1051",
+          "axiom_policy": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "limits_mib": {
+            "lean_heap": 2048,
+            "rss": 1536,
+            "free_memory_floor": 2048
+          },
+          "threads": 1,
+          "register": {
+            "checked": 154,
+            "inherited": 2,
+            "pending": 33
+          },
+          "verification": "Focused aggregate and its pinned dependency closure passed. Root source inventory only; no full-root, clean-room or CI claim.",
+          "source_backup": "Source snapshot excluding raw build logs, private receipts and binaries; not a Git-history bundle."
+        },
+        "status": "Inherited; prior aggregate was not rerun in the latest round."
+      },
+      "latest_checkpoint": {
+        "baseline_commit": "d170bf08842c34c48deddfcadd4c4a0b8a11de4f",
+        "aggregate": "LogicLineages.ExternalCheckpoint20261103TypedValidation",
+        "new_components": 3,
+        "new_fixed_aliases": 9,
+        "aggregate_source_sha256": "3828d9b08f1d5fd65110f8e9cd36a947b492fc6745c84924d75f639bc5cd1124",
+        "dependency_closure_sha256": "8e276b30d60a681fcde26aab1af8eaa502afa80679124906bc31dfdbb42e3bc7",
+        "local_dependency_modules": 404,
+        "axiom_policy": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "limits_mib": {
+          "lean_heap": 2048,
+          "rss": 1536,
+          "free_memory_floor": 2048
+        },
+        "threads": 1,
+        "evidence": "termination-ordering/TYPED-VALIDATION-ACCEPTED.json",
+        "verification": "Focused source closure and exact aliases checked locally. Earlier cumulative aggregate is inherited; no full-root, clean-room, or CI result is claimed."
+      },
       "register": {
         "checked": 154,
         "inherited": 2,
         "pending": 33
-      },
-      "verification": "Focused aggregate and its pinned dependency closure passed. Root source inventory only; no full-root, clean-room or CI claim.",
-      "source_backup": "Source snapshot excluding raw build logs, private receipts and binaries; not a Git-history bundle."
+      }
     },
-    "status": "Inherited; prior aggregate was not rerun in the latest round."
+    "status": "Inherited; earlier cumulative aggregates were not rerun in the latest round."
   },
   "latest_checkpoint": {
-    "baseline_commit": "d170bf08842c34c48deddfcadd4c4a0b8a11de4f",
-    "aggregate": "LogicLineages.ExternalCheckpoint20261103TypedValidation",
-    "new_components": 3,
-    "new_fixed_aliases": 9,
-    "aggregate_source_sha256": "3828d9b08f1d5fd65110f8e9cd36a947b492fc6745c84924d75f639bc5cd1124",
-    "dependency_closure_sha256": "8e276b30d60a681fcde26aab1af8eaa502afa80679124906bc31dfdbb42e3bc7",
-    "local_dependency_modules": 404,
+    "baseline_commit": "3ed9b4727f6747c0b7f7d18501dae9fe2d664fcc",
+    "aggregate": "LogicLineages.ExternalCheckpoint20261103TypedPrimrec",
+    "new_components": 6,
+    "new_fixed_aliases": 15,
+    "aggregate_source_sha256": "eb0f7dd6c96aa1f30a829e5cb4f8bc23fe2bcff9d73a683c4957eea02db75d1b",
+    "dependency_closure_sha256": "3a25df10bb3be82ea8aad3f12e267942452cf84d4bec1f217dbf3868bb174c0b",
+    "local_dependency_modules": 424,
     "axiom_policy": [
       "Classical.choice",
       "Quot.sound",
@@ -56,8 +95,8 @@
       "free_memory_floor": 2048
     },
     "threads": 1,
-    "evidence": "termination-ordering/TYPED-VALIDATION-ACCEPTED.json",
-    "verification": "Focused source closure and exact aliases checked locally. Earlier cumulative aggregate is inherited; no full-root, clean-room, or CI result is claimed."
+    "evidence": "termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+    "verification": "Focused source closure and exact aliases checked locally. Earlier cumulative aggregates are inherited; no full-root, clean-room, or CI result is claimed."
   },
   "register": {
     "checked": 154,

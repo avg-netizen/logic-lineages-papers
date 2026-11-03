@@ -1,0 +1,410 @@
+{
+  "schema": "focused-fixed-target-acceptance-v1",
+  "accepted_at_utc": "2026-11-03T21:39:22.190500+00:00",
+  "baseline_commit": "3ed9b4727f6747c0b7f7d18501dae9fe2d664fcc",
+  "branch": "formalization/external-continuation-2026-11-03",
+  "scope": "Fifteen additional supporting targets establishing primitive recursion for actual typed validation and packed codecs; no numbered source-statement promotion.",
+  "components": [
+    {
+      "name": "NumberedCodeView",
+      "fixed_targets": [
+        "ActualViewRoundTrip",
+        "ActualViewPrimitive"
+      ],
+      "fixed_target_count": 2
+    },
+    {
+      "name": "NumberedRequestExpansionPrimrec",
+      "fixed_targets": [
+        "ActualRequestExpansionPrimitive"
+      ],
+      "fixed_target_count": 1
+    },
+    {
+      "name": "NumberedTypedEvaluationPrimrec",
+      "fixed_targets": [
+        "ActualIterationCalibration",
+        "ActualEvaluatorPrimitive"
+      ],
+      "fixed_target_count": 2
+    },
+    {
+      "name": "NumberedTypedValidityPrimrec",
+      "fixed_targets": [
+        "ActualTermSuccessPrimitive",
+        "ActualArgumentsSuccessPrimitive",
+        "ActualNumericTermSuccessPrimitive",
+        "ActualNumericArgumentsSuccessPrimitive",
+        "ActualNumericPackedSuccessPrimitive"
+      ],
+      "fixed_target_count": 5
+    },
+    {
+      "name": "NumberedPackedPresentation",
+      "fixed_targets": [
+        "ActualPackedEncodingCalibration",
+        "ActualPackedDecodeNormalization",
+        "ActualPackedPresentationPrimitive"
+      ],
+      "fixed_target_count": 3
+    },
+    {
+      "name": "NumberedPackedCodecPrimrec",
+      "fixed_targets": [
+        "ActualPackedEncoderPrimitive",
+        "ActualPackedDecoderPrimitive"
+      ],
+      "fixed_target_count": 2
+    }
+  ],
+  "focused_aggregate": "LogicLineages.ExternalCheckpoint20261103TypedPrimrec",
+  "fixed_aliases": 15,
+  "new_components": 6,
+  "continuation_totals": {
+    "fixed_aliases": 329,
+    "components": 94,
+    "earlier_fixed_aliases": 314,
+    "earlier_components": 88,
+    "earlier_evidence": "Inherited from baseline commit; prior cumulative aggregates were not rerun."
+  },
+  "prospective_freeze": {
+    "path": "TYPED-PRIMREC-FREEZE.json",
+    "sha256": "f7574d513905b41228333d7af4bac93c481615c537d50bb6668e9cfe86eb7b3e",
+    "all_frozen_hashes_match": true,
+    "candidate_proofs_authored_after_comparator_pass": true
+  },
+  "comparator_checks": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewTargets",
+      "source_sha256": "9d05fd425dc38c27809f4b78d3675f239aa944f0c2fd040cde6ebf42e820d860",
+      "returncode": 0,
+      "seconds": 1.017,
+      "peak_process_tree_rss_kib": 1091232,
+      "receipt_sha256": "fd1f1af5d8f75dfdd5cbed18d3af7ca86df632d2f010c952cce6421bd6e5fce9",
+      "compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_summaries": [],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecTargets",
+      "source_sha256": "eaedc3726c1cfaa71d221b3fb0eb26228e85a0e8f2d857f343b49b20bc404c1e",
+      "returncode": 0,
+      "seconds": 0.868,
+      "peak_process_tree_rss_kib": 1097684,
+      "receipt_sha256": "75e8bda68bd2d21bc5f38d5c405dc94e7086da4cd3ce3c03d31d4de38de68109",
+      "compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_summaries": [],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecTargets",
+      "source_sha256": "c61de3aa71cf9f9663bc6b69c327640ad5e801ae021bc5e0ced9d4a1922b45ba",
+      "returncode": 0,
+      "seconds": 0.915,
+      "peak_process_tree_rss_kib": 1092720,
+      "receipt_sha256": "75e8bda68bd2d21bc5f38d5c405dc94e7086da4cd3ce3c03d31d4de38de68109",
+      "compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_summaries": [],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedValidityPrimrecTargets",
+      "source_sha256": "ab9da40aa365ce15da025187a5008b9b1fb8c6112aded84157c372f36bfb5bdc",
+      "returncode": 0,
+      "seconds": 0.866,
+      "peak_process_tree_rss_kib": 1096900,
+      "receipt_sha256": "fd1f1af5d8f75dfdd5cbed18d3af7ca86df632d2f010c952cce6421bd6e5fce9",
+      "compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_summaries": [],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedPresentationTargets",
+      "source_sha256": "254c067f0fee12e02f7892d285fba2ad6a3013db4f8b2fb1a420a9b5ba95ec68",
+      "returncode": 0,
+      "seconds": 1.018,
+      "peak_process_tree_rss_kib": 1098460,
+      "receipt_sha256": "fd1f1af5d8f75dfdd5cbed18d3af7ca86df632d2f010c952cce6421bd6e5fce9",
+      "compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_summaries": [],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecTargets",
+      "source_sha256": "337545f38a1ce7f0fc89c1257ceb6ff691e9b3e0dd702eae99af4eb8f4877c22",
+      "returncode": 0,
+      "seconds": 0.915,
+      "peak_process_tree_rss_kib": 1100140,
+      "receipt_sha256": "f7b6e5f0a8cb2635736312acd6d400f3635aec4f2a2e986d092f8533040f00ec",
+      "compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audit_summaries": [],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    }
+  ],
+  "accepted_checks": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewStatementChecks",
+      "source_sha256": "7a5b6ecd06fb4b7098acaf267a9a1642ead75a8141743d89798d45433c46cdb5",
+      "returncode": 0,
+      "seconds": 1.017,
+      "peak_process_tree_rss_kib": 1110368,
+      "receipt_sha256": "2e16879155d957fa865c7a8bb1e73e103376e05877dabc62afffda623bef1de5",
+      "compiler_log_sha256": "10b16930a2e1f2336faa3243b5bbc054d0f7dba8ed94f7ac05243d0b5d1ba098",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewStatementChecks: 2 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecStatementChecks",
+      "source_sha256": "b2eb89b29f16cdbfa469f1ed54ab078fa57f75eee46bc641d1c620b97a4dcf18",
+      "returncode": 0,
+      "seconds": 1.121,
+      "peak_process_tree_rss_kib": 1110680,
+      "receipt_sha256": "d4e88d386dd95856a7063b2fb224c79995fad9cc815c48afeadb698894d81de8",
+      "compiler_log_sha256": "42df50ac3c884365b0b5a52091878fc1101b6af4a16d6fb5c8b2d5647683a1cc",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecStatementChecks: 1 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecStatementChecks",
+      "source_sha256": "2d94b7ad6e54329b49e77259476fbdebe7ff7699c9d4c1cbcf291ad7c0c75f9f",
+      "returncode": 0,
+      "seconds": 1.122,
+      "peak_process_tree_rss_kib": 1112280,
+      "receipt_sha256": "d8386384fc859e2d1969b330983c640a03bd5434707f5e02a8c3ee207b99d774",
+      "compiler_log_sha256": "5a071bbf4940cd942ec3b21eb0fa104b82a5b9ac16c28820ba3a95a329100c25",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecStatementChecks: 2 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedValidityPrimrecStatementChecks",
+      "source_sha256": "0d2bcb0bdb0d79ebffa92273534fb732e60c1318e1fcd1f535d31196c2c2255b",
+      "returncode": 0,
+      "seconds": 1.271,
+      "peak_process_tree_rss_kib": 1112624,
+      "receipt_sha256": "f7b6e5f0a8cb2635736312acd6d400f3635aec4f2a2e986d092f8533040f00ec",
+      "compiler_log_sha256": "50ef37b872ebdb647fe5e95fdbd2c3c64e376eb71a4aa1223032e9078d7cda1c",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedValidityPrimrecStatementChecks: 5 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedPresentationStatementChecks",
+      "source_sha256": "e9e5ff5fc89bf4472949eccdf64fe23bce2c3fbb452a45ab43cc4bb72712d5f3",
+      "returncode": 0,
+      "seconds": 1.17,
+      "peak_process_tree_rss_kib": 1112476,
+      "receipt_sha256": "f7b6e5f0a8cb2635736312acd6d400f3635aec4f2a2e986d092f8533040f00ec",
+      "compiler_log_sha256": "7648df4765054191f48e2bbf9300a88ecbb1ed5e3821b436928c5457a5731c7e",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedPresentationStatementChecks: 3 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecStatementChecks",
+      "source_sha256": "52f29a82b77784cae6acfea5d12f2dddca4f4161c3aef8ad1ca96ef627658c3a",
+      "returncode": 0,
+      "seconds": 1.271,
+      "peak_process_tree_rss_kib": 1112640,
+      "receipt_sha256": "eaa44e839ca7df8dd6b79eb2a2a124443009cc615cde84ecf303578f488f40ce",
+      "compiler_log_sha256": "13b374beded53d072baf3db0f1dc0900cca9f28ee39d7287629b99ce3aa8a471",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecStatementChecks: 2 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    },
+    {
+      "module": "LogicLineages.ExternalCheckpoint20261103TypedPrimrec",
+      "source_sha256": "eb0f7dd6c96aa1f30a829e5cb4f8bc23fe2bcff9d73a683c4957eea02db75d1b",
+      "returncode": 0,
+      "seconds": 1.374,
+      "peak_process_tree_rss_kib": 1111964,
+      "receipt_sha256": "eaa44e839ca7df8dd6b79eb2a2a124443009cc615cde84ecf303578f488f40ce",
+      "compiler_log_sha256": "555918b72eb65e96d1d6ac538f8ecfa89351c652bb80794549fa93ca9c70ccfa",
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.ExternalCheckpoint20261103TypedPrimrec: 15 theorems"
+      ],
+      "scope": "Successful check of this module at its current source hash; other attempts are not accepted evidence."
+    }
+  ],
+  "sources": {
+    "LogicLineages/ExternalCheckpoint20261103TypedPrimrec.lean": "eb0f7dd6c96aa1f30a829e5cb4f8bc23fe2bcff9d73a683c4957eea02db75d1b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCodeViewDefinitions.lean": "ce60536dc66672ac132ceec8a2f8eb2ed4742202c13aec485a15b1ba25cefaa1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCodeViewProof.lean": "b033d23c08d92df5271f15d2126b0ef86818ee21a4b1e6aada63642ec2b60e39",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCodeViewStatementChecks.lean": "7a5b6ecd06fb4b7098acaf267a9a1642ead75a8141743d89798d45433c46cdb5",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCodeViewTargets.lean": "9d05fd425dc38c27809f4b78d3675f239aa944f0c2fd040cde6ebf42e820d860",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedCodecPrimrecProof.lean": "be83640bbf95c9dec29002984f3e66f02f10132aeede231e84476562b13ee796",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedCodecPrimrecStatementChecks.lean": "52f29a82b77784cae6acfea5d12f2dddca4f4161c3aef8ad1ca96ef627658c3a",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedCodecPrimrecTargets.lean": "337545f38a1ce7f0fc89c1257ceb6ff691e9b3e0dd702eae99af4eb8f4877c22",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedPresentationDefinitions.lean": "2b9dd41c24b02c84eecd2d802390706ad94cc6dd39bb5a9c356c21ab1065d266",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedPresentationProof.lean": "17499addb4eb35d811ce2e69ca7184c36df62d6f8cd49a8911ac7e72d15a59c4",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedPresentationStatementChecks.lean": "e9e5ff5fc89bf4472949eccdf64fe23bce2c3fbb452a45ab43cc4bb72712d5f3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedPresentationTargets.lean": "254c067f0fee12e02f7892d285fba2ad6a3013db4f8b2fb1a420a9b5ba95ec68",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRequestExpansionPrimrecProof.lean": "6842236eb06629baa04c1533469f1a73fed75af90194b99e093beb7157a1ef06",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRequestExpansionPrimrecStatementChecks.lean": "b2eb89b29f16cdbfa469f1ed54ab078fa57f75eee46bc641d1c620b97a4dcf18",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRequestExpansionPrimrecSupportProof.lean": "49e1514c048954aa93184bc6824785fafe0155b70f584aadcf441fa2afe44578",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRequestExpansionPrimrecTargets.lean": "eaedc3726c1cfaa71d221b3fb0eb26228e85a0e8f2d857f343b49b20bc404c1e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRequestPresentationDefinitions.lean": "3da2e6a6e9225cd00912bd9825a86e3c86a09e23374a925be8d603dd96ca0540",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedEvaluationPrimrecDefinitions.lean": "833c94abc4903bc6740ad0e8ef5b6aa938b06437b29f25bd3efd495be183a5b2",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedEvaluationPrimrecProof.lean": "b5b301bc9d5e7f2a77cab0b2a65aa487683a0329eea0fb9daf0e76456d0d3412",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedEvaluationPrimrecStatementChecks.lean": "2d94b7ad6e54329b49e77259476fbdebe7ff7699c9d4c1cbcf291ad7c0c75f9f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedEvaluationPrimrecTargets.lean": "c61de3aa71cf9f9663bc6b69c327640ad5e801ae021bc5e0ced9d4a1922b45ba",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedValidityPrimrecProof.lean": "13168842175da1e54615758479ca85f0562c2deb7313503d052aa2d4964b3c58",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedValidityPrimrecStatementChecks.lean": "0d2bcb0bdb0d79ebffa92273534fb732e60c1318e1fcd1f535d31196c2c2255b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedValidityPrimrecTargets.lean": "ab9da40aa365ce15da025187a5008b9b1fb8c6112aded84157c372f36bfb5bdc"
+  },
+  "axiom_policy": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "actual_aggregate_axioms": {
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_315_actualViewRoundTrip": [],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_316_actualViewPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_317_actualRequestExpansionPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_318_actualIterationCalibration": [
+      "propext"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_319_actualEvaluatorPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_320_actualTermSuccessPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_321_actualArgumentsSuccessPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_322_actualNumericTermSuccessPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_323_actualNumericArgumentsSuccessPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_324_actualNumericPackedSuccessPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_325_actualPackedEncodingCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_326_actualPackedDecodeNormalization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_327_actualPackedPresentationPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_328_actualPackedEncoderPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261103TypedPrimrec.fixed_329_actualPackedDecoderPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "toolchain": {
+    "lean": "leanprover/lean4:v4.32.0-rc1",
+    "lean_commit": "b4812ae53eea93439ad5dce5a5c26591c31cb697",
+    "mathlib_commit": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+    "upstream": "Official precompiled cache for pinned source revisions; no upstream proof rebuild."
+  },
+  "limits": {
+    "lean_heap_mib": 2048,
+    "process_tree_rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds_per_module": 180,
+    "threads": 1
+  },
+  "local_dependency_closure": {
+    "module_count": 424,
+    "sha256": "3a25df10bb3be82ea8aad3f12e267942452cf84d4bec1f217dbf3868bb174c0b",
+    "hash_format": "UTF-8 sorted repository-relative source path, TAB, source SHA-256, LF for every local module in the focused aggregate closure.",
+    "external_imports": [
+      "Init.Data.List.Lemmas",
+      "Init.Data.Nat.Lemmas",
+      "Lean.Elab.Command",
+      "Lean.Util.CollectAxioms",
+      "Mathlib.Computability.Primrec.List",
+      "Mathlib.Data.Finset.Card",
+      "Mathlib.Data.Finset.Lattice.Fold",
+      "Mathlib.Data.Finset.Max",
+      "Mathlib.Data.Finset.Union",
+      "Mathlib.Data.Fintype.Card",
+      "Mathlib.Data.Fintype.Fin",
+      "Mathlib.Data.Fintype.Order",
+      "Mathlib.Data.Fintype.Pi",
+      "Mathlib.Data.Fintype.Powerset",
+      "Mathlib.Data.Fintype.Prod",
+      "Mathlib.Data.Fintype.Sigma",
+      "Mathlib.Data.List.FinRange",
+      "Mathlib.Data.List.Nodup",
+      "Mathlib.Data.List.Perm.Basic",
+      "Mathlib.Data.List.Permutation",
+      "Mathlib.Data.Nat.Pairing"
+    ],
+    "all_current_local_objects_checked": true
+  },
+  "root_source_inventory": {
+    "sha256": "4b22b0ba92bc549bbba362e48cb70c9b1d7e70d4aaefe9c3852afe7d4b73bd2f",
+    "direct_import_count": 1748,
+    "new_gates_and_aggregate_selected": true,
+    "all_direct_local_imports_present": true,
+    "full_root_compiled": false
+  },
+  "runner_portability": {
+    "status": "Unchanged from baseline commit; earlier 30-test result is inherited and was not rerun.",
+    "source_sha256": {
+      "formalization/scripts/check.py": "9eecb0236964bb6ede2ae0819a37eccfc476c0df366e267e38ba16fe4208d59d",
+      "04-pure-r1-calculator/scripts/check_lean.py": "d794390c512710869ea87fdf1f1ecf5d14431c928d53fa94f69a911b02df8f52",
+      "formalization/scripts/test_shared_locks.py": "9155625be32145c67179fb2b0b4c293a6ab8ba1d89ba5b7ab5475cb1c24ec9ff"
+    }
+  },
+  "register": {
+    "checked": 154,
+    "inherited": 2,
+    "pending": 33,
+    "total": 189,
+    "source_sha256": "fb91f6b17f234ded80d8c590c028d7d9322ef3a89d4bfb0bd81818c7b2f11839"
+  },
+  "remaining_scope": [
+    "Primitive-recursive finite-universe filtering and primary-class operations",
+    "Full step-certificate checker effectivity",
+    "Arithmetic representation, ID1 accessibility and whole source06 results"
+  ],
+  "verification_limits": "Focused source closure and exact aliases checked locally. Earlier cumulative aggregates are inherited; no full-root, clean-room, or CI result is claimed."
+}

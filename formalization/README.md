@@ -1,12 +1,15 @@
 Latest checked external continuation, **3 November 2026**: the existing
-`formalization/external-continuation-2026-11-03` branch now includes a bounded
-typed-request evaluator, its literal numeric fuel bound, and exact numeric
-term/argument/packed validation. The nine new fixed targets passed their focused
-aggregate and axiom audit, bringing this continuation to **314 fixed targets in
-88 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
-and [typed-validation evidence](verification/external-continuation-2026-11-03/termination-ordering/TYPED-VALIDATION-ACCEPTED.json).
+`formalization/external-continuation-2026-11-03` branch now proves primitive
+recursiveness of actual request expansion, bounded typed evaluation, and
+term/argument/packed decoder success. The original packed typed syntax has a
+genuine primitive-codable presentation, and its existing encoder and decoder
+are primitive recursive. The fifteen new fixed targets passed their focused
+aggregate and axiom audit, bringing this continuation to **329 fixed targets in
+94 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
+and [typed-codec effectivity evidence](verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json).
 The source-statement register remains **154 checked, 2 inherited, 33 pending/189**;
-full validator primitive recursiveness and arithmetic accessibility remain open.
+finite-universe and primary-class effectivity, full step-checker effectivity,
+arithmetic representation and accessibility remain open.
 The local pause records and older releases below are historical.
 
 Previous local checkpoint: **PAUSED**,3November2026UTC. **154 checked,2 inherited,33 pending/189**. Read [the final handoff](HANDOFF-2026-11-03.md), including the checked local transitivity source issue.
