@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestWeightProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestWeightStatementChecks
+theorem fixedSuccessfulExpansionDecrease : NumberedRequestWeightTargets.SuccessfulExpansionDecrease := NumberedRequestWeightProof.expansionDecrease
+#print axioms fixedSuccessfulExpansionDecrease
+theorem fixedWorklistReplacementDecrease : NumberedRequestWeightTargets.WorklistReplacementDecrease := NumberedRequestWeightProof.replacementDecrease
+#print axioms fixedWorklistReplacementDecrease
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestWeightStatementChecks

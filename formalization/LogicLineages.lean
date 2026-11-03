@@ -1937,6 +1937,9 @@ public import LogicLineages.ExternalCheckpoint20261103CE
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedRequestsStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103CF
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestWeightStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103CG
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
