@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsCodeTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsCode.StatementChecks
+theorem exact_heads_and_keys : Targets.ExactHeadsAndKeys := Proof.exactHeadsAndKeys
+theorem exact_finite_guard_code : Targets.ExactFiniteGuardCode := Proof.exactFiniteGuardCode
+theorem exact_large_guard_code : Targets.ExactLargeGuardCode := Proof.exactLargeGuardCode
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsCode
