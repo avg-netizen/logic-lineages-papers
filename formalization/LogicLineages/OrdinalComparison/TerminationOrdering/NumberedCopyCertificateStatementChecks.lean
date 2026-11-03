@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyCertificateProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyCertificateStatementChecks
+theorem fixedActualTypedCopyCheck : NumberedCopyCertificateTargets.ActualTypedCopyCheck := NumberedCopyCertificateProof.typedCopyCheck
+#print axioms fixedActualTypedCopyCheck
+theorem fixedActualNumericCopyCertificate : NumberedCopyCertificateTargets.ActualNumericCopyCertificate := NumberedCopyCertificateProof.numericCopyCertificate
+#print axioms fixedActualNumericCopyCertificate
+theorem fixedActualNumericCopySound : NumberedCopyCertificateTargets.ActualNumericCopySound := NumberedCopyCertificateProof.numericCopySound
+#print axioms fixedActualNumericCopySound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyCertificateStatementChecks

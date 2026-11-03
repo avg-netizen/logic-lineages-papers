@@ -1,0 +1,7 @@
+# Exact Copy-only numeric certificate checking
+
+The precedence is an explicit finite Boolean table, interpreted by tableAbove f g iff table f g=true. No transitivity, strictness or well-foundedness is assumed or inferred. The typed checker recognizes exactly the original guarded WindowStep.copy constructor: numbered successor label, same requested output as the target head result, actual headAbove, target HeadInWindow, and literal ordinary target with the complete original selfArguments list. CopyInstance copies only this constructor and has no other rules.
+
+The numeric checker decodes an actual in-universe source and a literal head-code witness, runs the typed Copy checker, and checks the literal packed target number. The three targets give exact typed recognition, existential numeric certificate equivalence exactly to the Copy constructor with source confinement, and soundness to genuine WindowStep with target confinement derived under SubtypeClosed S. Certificate completeness uses the actual head numeric round trip, not assumed head encoding surjectivity. No target confinement premise is added to CopyInstance or the checker.
+
+This is not completeness for all WindowStep rules, a quotient-edge checker or an arithmetic formula/representability theorem. It supplies only a concrete executable certificate for one original guarded rule. The original ordering/transitivity obstruction and all accepted semantics are unchanged.
