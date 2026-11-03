@@ -1685,6 +1685,9 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeni
 public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningReflectionStatementChecks
 public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSharpeningStatementChecks
 public import LogicLineages.OrdinalComparison.TerminationOrdering.SuccessfulApplicationSubstitutionStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103A
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

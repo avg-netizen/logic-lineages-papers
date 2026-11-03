@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingStatementChecks
+
+theorem fixedActualRenaming : NumberedUniverseBindingTargets.ActualRenaming := NumberedUniverseBindingProof.actualRenaming
+theorem fixedActualArgumentRenaming : NumberedUniverseBindingTargets.ActualArgumentRenaming := NumberedUniverseBindingProof.actualArgumentRenaming
+theorem fixedActualSubstitution : NumberedUniverseBindingTargets.ActualSubstitution := NumberedUniverseBindingProof.actualSubstitution
+theorem fixedActualArgumentSubstitution : NumberedUniverseBindingTargets.ActualArgumentSubstitution := NumberedUniverseBindingProof.actualArgumentSubstitution
+theorem fixedActualFiniteMark : NumberedUniverseBindingTargets.ActualFiniteMark := NumberedUniverseBindingProof.actualFiniteMark
+theorem fixedActualBeta : NumberedUniverseBindingTargets.ActualBeta := NumberedUniverseBindingProof.actualBeta
+theorem fixedActualOpenedNumbered : NumberedUniverseBindingTargets.ActualOpenedNumbered := NumberedUniverseBindingProof.actualOpenedNumbered
+theorem fixedActualSelfArguments : NumberedUniverseBindingTargets.ActualSelfArguments := NumberedUniverseBindingProof.actualSelfArguments
+#print axioms fixedActualRenaming
+#print axioms fixedActualArgumentRenaming
+#print axioms fixedActualSubstitution
+#print axioms fixedActualArgumentSubstitution
+#print axioms fixedActualFiniteMark
+#print axioms fixedActualBeta
+#print axioms fixedActualOpenedNumbered
+#print axioms fixedActualSelfArguments
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingStatementChecks
