@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxFormulaTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxFormulaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxFormula.StatementChecks
+theorem exact_finite_box_formula : Targets.ExactFiniteBoxFormula := Proof.exactFiniteBoxFormula
+theorem original_support_and_literal_code : Targets.OriginalSupportAndLiteralCode :=
+  Proof.originalSupportAndLiteralCode
+theorem actual_source_code_calibration : Targets.ActualSourceCodeCalibration :=
+  Proof.actualSourceCodeCalibration
+theorem all_code_computation : Targets.AllCodeComputation := Proof.allCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxFormula.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxFormula
