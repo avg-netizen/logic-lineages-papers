@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuards.StatementChecks
+theorem exact_head_aware_blocks : Targets.ExactHeadAwareBlocks := Proof.exactHeadAwareBlocks
+theorem literal_source_labels : Targets.LiteralSourceLabels := Proof.literalSourceLabels
+theorem original_source_support : Targets.OriginalSourceSupport := Proof.originalSourceSupport
+theorem exact_actual_source_large_formula : Targets.ExactActualSourceLargeFormula :=
+  Proof.exactActualSourceLargeFormula
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuards.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuards
