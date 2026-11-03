@@ -1,23 +1,25 @@
 Latest checked external continuation, **3 November 2026**: the existing
-`formalization/external-continuation-2026-11-03` branch now proves that the
-original finite primary-class candidate lists are primitive recursive. It also
-proves strict simulation in exactly the source type window `Ty(s)`. The
-original syntax bounds, head enumeration, structural decoder and ordered
-constructor enumeration remain in use. Sixteen new fixed targets passed their
-focused aggregate and axiom audit, bringing this continuation to **361 fixed
-targets in 107 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
-and [class-candidate and source-window evidence](verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json).
+`formalization/external-continuation-2026-11-03` branch now proves primitive
+recursion of the original exchange test, primary-class membership test,
+least-code representative and canonical-carrier test. The computations are
+joint in both windows and their packed or numeric inputs at each fixed finite
+signature, arity and binder context. Exact list-saturation and bounded-search
+calibrations retain the existing algorithms on arbitrary windows and inputs.
+Thirteen new fixed targets passed their focused aggregate and axiom audit,
+bringing this continuation to **374 fixed targets in 111 components**. See the
+[current status](verification/external-continuation-2026-11-03/STATUS.md) and
+[primary-class effectivity evidence](verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json).
 
 The source-statement register remains **154 checked, 2 inherited, 33 pending/189**.
 These totals count complete numbered source statements; the component count
-records supporting results and source diagnostics. The register's missing
-November 3 component links are now reconciled: all 107 components have explicit
-source destinations, with remaining dependencies recorded on the affected
-pending entries. See [the reconciliation record](verification/external-continuation-2026-11-03/REGISTER-RECONCILIATION.json).
-Effective primary-equivalence saturation, least representatives, the canonical
-carrier, full step checking, arithmetic representation and internal ID1
-accessibility remain open. The local pause records and older releases below
-are historical.
+records supporting results and source diagnostics. All 111 continuation
+components have explicit source destinations. The latest
+[dependency progress record](verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PROGRESS.json)
+closes the recorded exchange/primary-class/least-representative computation
+dependency and updates the outstanding obligations. The original-source
+numeric codec and translation, full numeric certificate checking, arithmetic
+representation and internal ID1 accessibility remain open. The local pause
+records and older releases below are historical.
 
 Previous local checkpoint: **PAUSED**,3November2026UTC. **154 checked,2 inherited,33 pending/189**. Read [the final handoff](HANDOFF-2026-11-03.md), including the checked local transitivity source issue.
 
