@@ -1,14 +1,14 @@
 Latest checked external continuation, **3 November 2026**: the existing
 `formalization/external-continuation-2026-11-03` branch now proves primitive
-recursiveness of actual request expansion, bounded typed evaluation, and
-term/argument/packed decoder success. The original packed typed syntax has a
-genuine primitive-codable presentation, and its existing encoder and decoder
-are primitive recursive. The fifteen new fixed targets passed their focused
-aggregate and axiom audit, bringing this continuation to **329 fixed targets in
-94 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
-and [typed-codec effectivity evidence](verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json).
+recursiveness of the original finite-universe tests, raw numeric carrier test,
+and filtered typed decoder. Both window lists and the binder context remain
+inputs to the Boolean carrier test; the dependent decoder retains its fixed
+context and original packed presentation. The sixteen new fixed targets passed
+their focused aggregate and axiom audit, bringing this continuation to
+**345 fixed targets in 100 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
+and [finite-universe effectivity evidence](verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json).
 The source-statement register remains **154 checked, 2 inherited, 33 pending/189**;
-finite-universe and primary-class effectivity, full step-checker effectivity,
+primary-class and canonical-carrier effectivity, full step-checker effectivity,
 arithmetic representation and accessibility remain open.
 The local pause records and older releases below are historical.
 

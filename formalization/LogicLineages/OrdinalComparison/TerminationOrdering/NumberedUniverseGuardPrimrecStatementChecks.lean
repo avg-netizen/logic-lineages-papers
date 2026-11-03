@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseGuardPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseGuardPrimrecStatementChecks
+
+theorem fixedActualGuardPrimitive : NumberedUniverseGuardPrimrecTargets.ActualGuardPrimitive :=
+  NumberedUniverseGuardPrimrecProof.guardPrimitive
+#print axioms fixedActualGuardPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseGuardPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseGuardPrimrecStatementChecks

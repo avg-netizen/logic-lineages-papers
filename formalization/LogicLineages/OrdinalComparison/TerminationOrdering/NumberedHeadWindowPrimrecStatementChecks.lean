@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadWindowPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadWindowPrimrecStatementChecks
+
+theorem fixedActualHeadWindowPrimitive : NumberedHeadWindowPrimrecTargets.ActualHeadWindowPrimitive :=
+  NumberedHeadWindowPrimrecProof.headWindowPrimitive
+#print axioms fixedActualHeadWindowPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadWindowPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadWindowPrimrecStatementChecks
