@@ -1919,6 +1919,9 @@ public import LogicLineages.ExternalCheckpoint20261103BY
 public import LogicLineages.OrdinalComparison.KernelReachableInputConventionStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103BZ
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableDecoderPrimrecStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103CA
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
