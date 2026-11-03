@@ -1,0 +1,7 @@
+# Literal numeric path/certificate coding and actual step wrapper
+
+The path codec preserves every allowed position and argument index via literal tagged pairs and the accepted ordered natural-list parser. The whole certificate is a literal triple of path code, hole replacement number and root selector number. Four codec targets require concrete roundtrips and successful-decode numeric equality without any new aggregate validation filter. Invalid position tags or malformed path encodings fail.
+
+The all-natural wrapper decodes and validates an actual in-universe source, decodes an actual typed target at the same context, checks their types agree, decodes the concrete step certificate, and invokes the accepted typed step checker. Its exact existential-certificate target characterizes the original guarded WindowStep with source confinement and literal endpoint codes under the explicit Boolean precedence interpretation. Target confinement is derived in a separate target requiring SubtypeClosed S. No target-universe check replaces that proof.
+
+This is sound and existentially complete numeric certificate checking, not a decision procedure for whether some certificate exists. All signature, context, finite-window and table parameters remain explicit. It does not prove formal arithmetic representability, quotient accessibility, unrestricted transitivity or a whole source theorem, and changes no accepted rules.
