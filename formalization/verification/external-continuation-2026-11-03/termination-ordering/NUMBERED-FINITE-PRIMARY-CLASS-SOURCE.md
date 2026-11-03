@@ -1,0 +1,7 @@
+# Exact executable finite guarded primary classes
+
+The actual finite vertices are the prior typed candidate list, deduplicated and with the actual initial packed term inserted. The executable reach step retains existing vertices and adds only candidates joined by the already checked literal one-exchange Boolean test. Iteration begins with the initial term and uses the actual candidate finset cardinality as fuel. No equivalence query, saturation oracle or noncomputable selection occurs in the definitions.
+
+The four targets state unconditional vertex containment and cardinality saturation, then exact primary-class membership and Boolean equivalence testing for a genuine initial term in the universe and a subtype-closed finite type window. DecidableEq Symbol is explicit. Every intermediate endpoint's coverage must be derived: the original single-exchange chain prefix gives WindowPrimary from the initial term, so the earlier candidate coverage theorem applies with the initial universe proof. No extra intermediate confinement premise is supplied. Soundness is by actual iteration and edge soundness; completeness uses the exact chain presentation and saturation. The cardinal growth proof cannot assume chain completeness.
+
+This pays exact finite computability of the guarded primary class. It does not provide a numerical code, least-code representative, arithmetic quotient reduction, accessibility or ordinal bound. The unrestricted original comparison relation and its checked transitivity obstruction are unchanged.

@@ -1772,6 +1772,9 @@ public import LogicLineages.ExternalCheckpoint20261103AB
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeNeighborhoodStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AC
 
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFinitePrimaryClassStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AD
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
