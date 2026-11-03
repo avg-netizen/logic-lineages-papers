@@ -1799,6 +1799,9 @@ public import LogicLineages.ExternalCheckpoint20261103AK
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyCertificateStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103AL
 
+public import LogicLineages.OrdinalComparison.FixedSeedControlResidueStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103AM
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
