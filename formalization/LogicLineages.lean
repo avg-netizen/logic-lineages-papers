@@ -1901,6 +1901,9 @@ public import LogicLineages.ExternalCheckpoint20261103BS
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadCodecPrimrecStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103BT
 
+public import LogicLineages.OrdinalComparison.KernelConventionDiagnosticStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103BU
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
