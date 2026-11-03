@@ -1865,6 +1865,9 @@ public import LogicLineages.ExternalCheckpoint20261103BG
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericQuotientEdgeStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103BH
 
+public import LogicLineages.OrdinalComparison.CounterLeaderCollisionStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103BI
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.

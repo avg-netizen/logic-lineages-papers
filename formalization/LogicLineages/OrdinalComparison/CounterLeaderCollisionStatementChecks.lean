@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterLeaderCollisionTargets
+public import LogicLineages.OrdinalComparison.CounterLeaderCollisionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterLeaderCollision.StatementChecks
+theorem exact_chain_splitting : Targets.ExactChainSplitting := Proof.exactChainSplitting
+theorem actual_cross_rank_collision : Targets.ActualCrossRankCollision := Proof.actualCrossRankCollision
+end LogicLineages.OrdinalComparison.CounterLeaderCollision.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterLeaderCollision
