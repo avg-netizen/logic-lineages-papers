@@ -1,0 +1,7 @@
+# Total partial numeric decoding prerequisite
+
+The decoder parses the exact accepted tagged Nat.pair encoding using Nat.unpair and ordinary fuel recursion. Fuel is the input natural plus one. It checks finite ranked-symbol indices against n, retains all type/head/list annotations, then invokes the already accepted typed structural decoder at the actual context. No natural is presumed to encode valid syntax, and failure returns none without a replacement term.
+
+Public decoders verify that re-encoding the parsed result equals the input. Therefore the two successful-decode soundness targets are intentionally validation interfaces. The substantial completeness obligations are the four round trips, which must show the actual parsers recover every type, type list, full structural code and typed packed term with the concrete chosen fuel. Fuel adequacy must follow from actual Nat.pair bounds, not an assumed encoding surjectivity or a larger unproved runtime bound.
+
+All definitions are executable and none use unbounded search, choice or a typing oracle. This is a numerical syntax codec only: no universe membership, rule certificate, arithmetic formula/representability, quotient accessibility or well-foundedness is asserted. Future arithmetic quotient claims still require concrete numeric certificate checking and a formal representability chain; an arbitrary Lean predicate is not an arithmetic formula.

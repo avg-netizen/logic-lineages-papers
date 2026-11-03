@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.KernelConcreteCountConventionTargets
+public import LogicLineages.OrdinalComparison.KernelConcreteCountConventionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelConcreteCountConvention.StatementChecks
+theorem exact_companion_count : Targets.ExactCompanionCount := Proof.exactCompanionCount
+theorem exact_whole_count_discrepancy : Targets.ExactWholeCountDiscrepancy := Proof.exactWholeCountDiscrepancy
+end LogicLineages.OrdinalComparison.KernelConcreteCountConvention.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelConcreteCountConvention

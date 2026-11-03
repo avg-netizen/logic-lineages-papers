@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.FixedSeedControlResidueTargets
+public import LogicLineages.OrdinalComparison.FixedSeedControlResidueProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.FixedSeedControlResidue.StatementChecks
+theorem literal_recursion_and_growth : Targets.LiteralRecursionAndGrowth :=
+  Proof.literalRecursionAndGrowth
+theorem uniform_primitive_recursive_data : Targets.UniformPrimitiveRecursiveData :=
+  Proof.uniformPrimitiveRecursiveData
+theorem eventual_residue_and_period_one : Targets.EventualResidueAndPeriodOne :=
+  Proof.eventualResidueAndPeriodOne
+end LogicLineages.OrdinalComparison.FixedSeedControlResidue.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.FixedSeedControlResidue

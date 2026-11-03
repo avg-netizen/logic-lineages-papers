@@ -1,0 +1,52 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteUniverseProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets
+open Source Source.SourceMarkedSyntax NumberedRewriteSyntax NumberedRewriteReduction NumberedFiniteUniverse
+
+def Good {Symbol : Type} {arity : Symbol → Nat} (K : Ty → Prop) (H : Head Symbol → Prop)
+    {Gamma : List Ty} {tau : Ty} (q : AuxTerm Symbol arity Gamma tau) : Prop := auxTypesAllowed K q ∧ auxHeadsAllowed H q
+
+def GoodArguments {Symbol : Type} {arity : Symbol → Nat} (K : Ty → Prop) (H : Head Symbol → Prop)
+    {Gamma types : List Ty} (args : AuxArguments Symbol arity Gamma types) : Prop := auxArgumentTypesAllowed K args ∧ auxArgumentsAllowed H args
+
+def GoodSubstitution {Symbol : Type} {arity : Symbol → Nat} (K : Ty → Prop) (H : Head Symbol → Prop)
+    {Gamma Delta : List Ty} (rho : NumberedRewriteSyntax.Substitution Symbol arity Gamma Delta) : Prop :=
+  ∀ {tau : Ty} (v : Variable Gamma tau),K tau → Good K H (rho v)
+
+def ActualRenaming : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (Gamma Delta : List Ty) (tau : Ty) (q : AuxTerm Symbol arity Gamma tau) (rho : Renaming Gamma Delta),
+    Good K H q → Good K H (NumberedRewriteSyntax.rename q rho)
+
+def ActualArgumentRenaming : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (Gamma Delta types : List Ty) (args : AuxArguments Symbol arity Gamma types) (rho : Renaming Gamma Delta),
+    GoodArguments K H args → GoodArguments K H (NumberedRewriteSyntax.renameArguments args rho)
+
+def ActualSubstitution : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (Gamma Delta : List Ty) (tau : Ty) (q : AuxTerm Symbol arity Gamma tau) (rho : NumberedRewriteSyntax.Substitution Symbol arity Gamma Delta),
+    Good K H q → GoodSubstitution K H rho → Good K H (NumberedRewriteSyntax.substitute q rho)
+
+def ActualArgumentSubstitution : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (Gamma Delta types : List Ty) (args : AuxArguments Symbol arity Gamma types) (rho : NumberedRewriteSyntax.Substitution Symbol arity Gamma Delta),
+    GoodArguments K H args → GoodSubstitution K H rho → GoodArguments K H (NumberedRewriteSyntax.substituteArguments args rho)
+
+def ActualFiniteMark : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (n : Nat) (Gamma : List Ty) (tau : Ty) (q r : AuxTerm Symbol arity Gamma tau),finiteMark n q=some r → Good K H q → Good K H r
+
+def ActualBeta : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (Gamma : List Ty) (sigma tau : Ty) (body : AuxTerm Symbol arity (sigma::Gamma) tau) (a : AuxTerm Symbol arity Gamma sigma),
+    Good K H body → Good K H a → Good K H (NumberedRewriteSyntax.substitute body (singleSubstitution a))
+
+def ActualOpenedNumbered : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop),SubtypeClosed K →
+    ∀ (n k : Nat) (Gamma : List Ty) (f : Head Symbol) (sigma tau : Ty)
+    (base : AuxArguments Symbol arity Gamma (headArguments arity f)) (types : List Ty) (extras : AuxArguments Symbol arity Gamma types),
+    Good K H (.numbered k f (.arrow sigma tau) base types extras) → Good K H (openNumbered n f sigma tau base types extras)
+
+def ActualSelfArguments : Prop := ∀ (Symbol : Type) (arity : Symbol → Nat) (K : Ty → Prop) (H : Head Symbol → Prop)
+    (n : Nat) (Gamma : List Ty) (f : Head Symbol) (base : AuxArguments Symbol arity Gamma (headArguments arity f))
+    (extraTypes : List Ty) (extras : AuxArguments Symbol arity Gamma extraTypes) (types : List Ty),
+    H f → GoodArguments K H base → GoodArguments K H extras → (∀ tau∈types,K tau) →
+      GoodArguments K H (NumberedRewriteReduction.selfArguments n f base extraTypes extras types)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingTargets

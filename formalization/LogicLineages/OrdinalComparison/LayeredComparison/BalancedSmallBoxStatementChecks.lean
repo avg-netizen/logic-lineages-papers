@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedSmallBoxTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedSmallBoxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSmallBox.StatementChecks
+theorem actual_source_support_stability : Targets.ActualSourceSupportStability :=
+  Proof.actualSourceSupportStability
+theorem actual_small_input_bounds : Targets.ActualSmallInputBounds := Proof.actualSmallInputBounds
+theorem exact_finite_box : Targets.ExactFiniteBox := Proof.exactFiniteBox
+theorem exact_small_branch_representative : Targets.ExactSmallBranchRepresentative :=
+  Proof.exactSmallBranchRepresentative
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedSmallBox.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSmallBox

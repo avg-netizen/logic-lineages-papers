@@ -1,0 +1,3 @@
+module
+public import LogicLineages.OrdinalComparison.QuadraticSeparationIterationProof
+public import LogicLineages.OrdinalComparison.QuadraticSeparationGrowthProof

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsStatementChecks
+theorem fixedActualEdgeCalibration : NumberedQuotientPathsTargets.ActualEdgeCalibration := NumberedQuotientPathsProof.edgeCalibration
+#print axioms fixedActualEdgeCalibration
+theorem fixedActualCountedForward : NumberedQuotientPathsTargets.ActualCountedForward := NumberedQuotientPathsProof.countedForward
+#print axioms fixedActualCountedForward
+theorem fixedActualCountedBackward : NumberedQuotientPathsTargets.ActualCountedBackward := NumberedQuotientPathsProof.countedBackward
+#print axioms fixedActualCountedBackward
+theorem fixedActualPositiveClosure : NumberedQuotientPathsTargets.ActualPositiveClosure := NumberedQuotientPathsProof.positiveClosure
+#print axioms fixedActualPositiveClosure
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsStatementChecks

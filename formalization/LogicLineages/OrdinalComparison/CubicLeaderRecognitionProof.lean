@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.CubicLeaderRecognitionRepeatedProof
+public import LogicLineages.OrdinalComparison.CubicLeaderRecognitionMassProof
+public import LogicLineages.OrdinalComparison.CubicLeaderRecognitionInputProof
+public import LogicLineages.OrdinalComparison.CubicLeaderRecognitionRecognitionProof

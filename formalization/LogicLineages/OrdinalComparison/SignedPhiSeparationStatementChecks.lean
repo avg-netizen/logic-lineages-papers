@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.SignedPhiSeparationTargets
+public import LogicLineages.OrdinalComparison.SignedPhiSeparationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SignedPhiSeparation.StatementChecks
+theorem exact_source_shift_and_arguments : Targets.ExactSourceShiftAndArguments :=
+  Proof.exactSourceShiftAndArguments
+theorem exact_evaluation_and_cancellation : Targets.ExactEvaluationAndCancellation :=
+  Proof.exactEvaluationAndCancellation
+theorem actual_signed_phi_separation : Targets.ActualSignedPhiSeparation :=
+  Proof.actualSignedPhiSeparation
+theorem uniform_primitive_recursive_data : Targets.UniformPrimitiveRecursiveData :=
+  Proof.uniformPrimitiveRecursiveData
+end LogicLineages.OrdinalComparison.SignedPhiSeparation.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.SignedPhiSeparation

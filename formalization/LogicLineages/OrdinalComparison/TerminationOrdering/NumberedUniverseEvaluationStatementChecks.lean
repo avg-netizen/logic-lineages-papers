@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseEvaluationStatementChecks
+
+theorem fixedAnyFuelSound : NumberedUniverseEvaluationTargets.AnyFuelSound :=
+  NumberedUniverseEvaluationProof.anyFuelSound
+#print axioms fixedAnyFuelSound
+
+theorem fixedSufficientFuelExact : NumberedUniverseEvaluationTargets.SufficientFuelExact :=
+  NumberedUniverseEvaluationProof.sufficientFuelExact
+#print axioms fixedSufficientFuelExact
+
+theorem fixedActualIterationCalibration : NumberedUniverseEvaluationTargets.ActualIterationCalibration :=
+  NumberedUniverseEvaluationProof.iterationCalibration
+#print axioms fixedActualIterationCalibration
+
+theorem fixedActualEvaluatorPrimitive : NumberedUniverseEvaluationTargets.ActualEvaluatorPrimitive :=
+  NumberedUniverseEvaluationProof.evaluatorPrimitive
+#print axioms fixedActualEvaluatorPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseEvaluationStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseEvaluationStatementChecks

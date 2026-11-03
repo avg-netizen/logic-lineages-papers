@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.KernelConventionDiagnosticTargets
+public import LogicLineages.OrdinalComparison.KernelConventionDiagnosticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelConventionDiagnostic.StatementChecks
+theorem exact_successor_tail_discrepancy : Targets.ExactSuccessorTailDiscrepancy := Proof.exactSuccessorTailDiscrepancy
+theorem actual_compensated_discrepancy : Targets.ActualCompensatedDiscrepancy := Proof.actualCompensatedDiscrepancy
+end LogicLineages.OrdinalComparison.KernelConventionDiagnostic.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelConventionDiagnostic

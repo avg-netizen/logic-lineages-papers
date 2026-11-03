@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectCertificateProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectCertificateStatementChecks
+theorem fixedActualDirectRuleCheck : NumberedDirectCertificateTargets.ActualDirectRuleCheck := NumberedDirectCertificateProof.directRuleCheck
+#print axioms fixedActualDirectRuleCheck
+theorem fixedActualDirectRuleSound : NumberedDirectCertificateTargets.ActualDirectRuleSound := NumberedDirectCertificateProof.directRuleSound
+#print axioms fixedActualDirectRuleSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectCertificateStatementChecks

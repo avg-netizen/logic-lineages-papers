@@ -1,0 +1,77 @@
+{
+  "schema": "source-register-dependency-progress-v1",
+  "recorded_at_utc": "2026-11-03T23:23:17.902179+00:00",
+  "baseline_commit": "dd8cfbb541578b69679619219f9c96bf2b0b9721",
+  "before_sha256": "7e7579d923909860a96b0ed3276389dc85de52ebf889bb727ad75f79951ef0cb",
+  "after_sha256": "ad9da9a78c26e135d196b60d535f2d3d86f0de4d70b64e73dd1d36e9e9436340",
+  "source_status_changes": 0,
+  "registered_statement_changes": 0,
+  "existing_acceptance_declarations_comparators_and_source_issues_preserved": true,
+  "counts": {
+    "checked": 154,
+    "inherited": 2,
+    "pending": 33,
+    "total": 189
+  },
+  "distinct_continuation_components_linked": 111,
+  "new_components": 4,
+  "new_fixed_targets": 13,
+  "new_primary_links": 4,
+  "new_reuse_links": 3,
+  "affected_statement_ids": [
+    "06-godel-t-termination-ordering:lem:id1",
+    "06-godel-t-termination-ordering:lem:simulation"
+  ],
+  "closed_dependency": {
+    "statement_id": "06-godel-t-termination-ordering:lem:simulation",
+    "previous_description": "Computability of actual representativeCode: complete the original exchange/primary-class reachability and least-code computation beyond the now-covered finite candidate overapproximation.",
+    "scope": "Original exchange/primary-class/least-representative computation at each fixed finite signature, arity and binder context, jointly in both windows and packed inputs.",
+    "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json"
+  },
+  "components": [
+    {
+      "component": "NumberedExchangeGuardsPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeGuardsPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": []
+    },
+    {
+      "component": "NumberedExchangePrimrec",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangePrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedPrimaryClassPrimrec",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryClassPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedRepresentativePrimrec",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentativePrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    }
+  ],
+  "remaining_scope": [
+    "Original-source numeric coding and the actual translation using one shared source window",
+    "Full numeric certificate-checker effectivity and arithmetic representation",
+    "Internal ID1 accessibility, ordinal suppliers and whole-source statements"
+  ],
+  "historical_reconciliation": "verification/external-continuation-2026-11-03/REGISTER-RECONCILIATION.json"
+}

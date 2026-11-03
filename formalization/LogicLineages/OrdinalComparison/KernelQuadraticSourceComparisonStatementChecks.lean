@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.KernelQuadraticSourceComparisonTargets
+public import LogicLineages.OrdinalComparison.KernelQuadraticSourceComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelQuadraticSourceComparison.StatementChecks
+theorem exact_uniform_comparison : Targets.ExactUniformComparison := Proof.exactUniformComparison
+theorem no_literal_equality_tail : Targets.NoLiteralEqualityTail := Proof.noLiteralEqualityTail
+end LogicLineages.OrdinalComparison.KernelQuadraticSourceComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelQuadraticSourceComparison

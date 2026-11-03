@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowListCasesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowListCasesStatementChecks
+theorem fixedActualMatchNil : NumberedWindowListCasesTargets.ActualMatchNil := NumberedWindowListCasesProof.matchNil
+#print axioms fixedActualMatchNil
+theorem fixedActualMatchCons : NumberedWindowListCasesTargets.ActualMatchCons := NumberedWindowListCasesProof.matchCons
+#print axioms fixedActualMatchCons
+theorem fixedActualStrictMark : NumberedWindowListCasesTargets.ActualStrictMark := NumberedWindowListCasesProof.strictMarkCase
+#print axioms fixedActualStrictMark
+theorem fixedActualReplacementNil : NumberedWindowListCasesTargets.ActualReplacementNil := NumberedWindowListCasesProof.replacementNil
+#print axioms fixedActualReplacementNil
+theorem fixedActualReplacementCons : NumberedWindowListCasesTargets.ActualReplacementCons := NumberedWindowListCasesProof.replacementCons
+#print axioms fixedActualReplacementCons
+theorem fixedActualMultisetReplace : NumberedWindowListCasesTargets.ActualMultisetReplace := NumberedWindowListCasesProof.multisetReplace
+#print axioms fixedActualMultisetReplace
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowListCasesStatementChecks

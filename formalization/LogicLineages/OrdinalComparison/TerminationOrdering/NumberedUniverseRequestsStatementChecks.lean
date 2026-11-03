@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseRequestsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseRequestsStatementChecks
+
+theorem fixedActualTermExpansion : NumberedUniverseRequestsTargets.ActualTermExpansion :=
+  NumberedUniverseRequestsProof.termExpansion
+#print axioms fixedActualTermExpansion
+
+theorem fixedActualArgumentsExpansion : NumberedUniverseRequestsTargets.ActualArgumentsExpansion :=
+  NumberedUniverseRequestsProof.argumentsExpansion
+#print axioms fixedActualArgumentsExpansion
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseRequestsStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseRequestsStatementChecks

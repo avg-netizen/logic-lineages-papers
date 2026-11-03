@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericTypedValidationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericTypedValidationStatementChecks
+
+theorem fixedActualNumericTermValidation : NumberedNumericTypedValidationTargets.ActualNumericTermValidation :=
+  NumberedNumericTypedValidationProof.termValidation
+#print axioms fixedActualNumericTermValidation
+
+theorem fixedActualNumericArgumentsValidation : NumberedNumericTypedValidationTargets.ActualNumericArgumentsValidation :=
+  NumberedNumericTypedValidationProof.argumentsValidation
+#print axioms fixedActualNumericArgumentsValidation
+
+theorem fixedActualNumericPackedValidation : NumberedNumericTypedValidationTargets.ActualNumericPackedValidation :=
+  NumberedNumericTypedValidationProof.packedValidation
+#print axioms fixedActualNumericPackedValidation
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericTypedValidationStatementChecks

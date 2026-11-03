@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.QuadraticSeparationTargets
+public meta import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.QuadraticSeparationProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.QuadraticSeparation.StatementChecks
+
+theorem uniform_quadratic_separation : Targets.UniformQuadraticSeparation := Proof.uniformQuadraticSeparation
+#print axioms uniform_quadratic_separation
+
+theorem exact_same_input_order : Targets.ExactSameInputOrder := Proof.exactSameInputOrder
+#print axioms exact_same_input_order
+
+end LogicLineages.OrdinalComparison.QuadraticSeparation.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.QuadraticSeparation

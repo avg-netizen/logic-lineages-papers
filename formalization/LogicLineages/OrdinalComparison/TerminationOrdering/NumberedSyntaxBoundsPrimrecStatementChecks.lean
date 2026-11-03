@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSyntaxBoundsPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSyntaxBoundsPrimrecStatementChecks
+
+theorem fixedActualTermBoundsCalibration : NumberedSyntaxBoundsPrimrecTargets.ActualTermBoundsCalibration :=
+  NumberedSyntaxBoundsPrimrecProof.termBoundsCalibration
+#print axioms fixedActualTermBoundsCalibration
+
+theorem fixedActualArgumentsBoundsCalibration : NumberedSyntaxBoundsPrimrecTargets.ActualArgumentsBoundsCalibration :=
+  NumberedSyntaxBoundsPrimrecProof.argumentsBoundsCalibration
+#print axioms fixedActualArgumentsBoundsCalibration
+
+theorem fixedActualCodeBoundsPrimitive : NumberedSyntaxBoundsPrimrecTargets.ActualCodeBoundsPrimitive :=
+  NumberedSyntaxBoundsPrimrecProof.codeBoundsPrimitive
+#print axioms fixedActualCodeBoundsPrimitive
+
+theorem fixedActualPackedBoundsPrimitive : NumberedSyntaxBoundsPrimrecTargets.ActualPackedBoundsPrimitive :=
+  NumberedSyntaxBoundsPrimrecProof.packedBoundsPrimitive
+#print axioms fixedActualPackedBoundsPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSyntaxBoundsPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSyntaxBoundsPrimrecStatementChecks

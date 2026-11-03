@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectionTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.StatementChecks
+theorem actual_key_identity : Targets.ActualKeyIdentity := Proof.actualKeyIdentity
+theorem literal_collected_support : Targets.LiteralCollectedSupport := Proof.literalCollectedSupport
+theorem exact_collected_value : Targets.ExactCollectedValue := Proof.exactCollectedValue
+theorem original_threshold_budget : Targets.OriginalThresholdBudget := Proof.originalThresholdBudget
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedRow.Collection

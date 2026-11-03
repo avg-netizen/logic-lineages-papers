@@ -1,4 +1,27 @@
-Current local checkpoint: **PAUSED**,3November2026UTC. **154 checked,2 inherited,33 pending/189**. Read [the final handoff](HANDOFF-2026-11-03.md), including the checked local transitivity source issue. Earlier releases below are historical.
+Latest checked external continuation, **3 November 2026**: the existing
+`formalization/external-continuation-2026-11-03` branch now proves primitive
+recursion of the original exchange test, primary-class membership test,
+least-code representative and canonical-carrier test. The computations are
+joint in both windows and their packed or numeric inputs at each fixed finite
+signature, arity and binder context. Exact list-saturation and bounded-search
+calibrations retain the existing algorithms on arbitrary windows and inputs.
+Thirteen new fixed targets passed their focused aggregate and axiom audit,
+bringing this continuation to **374 fixed targets in 111 components**. See the
+[current status](verification/external-continuation-2026-11-03/STATUS.md) and
+[primary-class effectivity evidence](verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json).
+
+The source-statement register remains **154 checked, 2 inherited, 33 pending/189**.
+These totals count complete numbered source statements; the component count
+records supporting results and source diagnostics. All 111 continuation
+components have explicit source destinations. The latest
+[dependency progress record](verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PROGRESS.json)
+closes the recorded exchange/primary-class/least-representative computation
+dependency and updates the outstanding obligations. The original-source
+numeric codec and translation, full numeric certificate checking, arithmetic
+representation and internal ID1 accessibility remain open. The local pause
+records and older releases below are historical.
+
+Previous local checkpoint: **PAUSED**,3November2026UTC. **154 checked,2 inherited,33 pending/189**. Read [the final handoff](HANDOFF-2026-11-03.md), including the checked local transitivity source issue.
 
 Current external round: **active through 1 November 2026, 17:00 UTC** (noon
 UTC−05:00), on `formalization/external-continuation-2026-11-01`. Its current register is
@@ -100,6 +123,13 @@ included local dependency closure, including calculator source, when resources
 permit. Fresh source compilation is distinct from borrowing those objects.
 
 All workers share a nonblocking lock with the existing calculator helper.
+Both helpers use `/tmp` for their shared lock files by default. In a sandbox
+without that directory, set `LEAN_CHECK_LOCK_DIR` to one existing absolute
+directory shared by every paper and calculator compiler invocation. Relative,
+missing, and non-directory paths are rejected before compilation. Keep the
+same directory throughout an active compiler session; the two lock filenames
+and all resource limits remain unchanged.
+
 The default compiler has one thread, a 1,536 MiB managed-heap allowance,
 an independently monitored 1,024 MiB process-tree resident-memory cap,
 90-second CPU and 180-second wall bounds, and a system-free-memory guard. Increasing the

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineSyntaxTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.Affine.StatementChecks
+theorem literal_affine_closure : Targets.LiteralAffineClosure := Proof.literalAffineClosure
+theorem exact_affine_support : Targets.ExactAffineSupport := Proof.exactAffineSupport
+theorem actual_lower_and_inputs : Targets.ActualLowerAndInputs := Proof.actualLowerAndInputs
+theorem actual_canceled_descent : Targets.ActualCanceledDescent := Proof.actualCanceledDescent
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.Affine.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSyntax.Affine

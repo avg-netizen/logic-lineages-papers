@@ -1,0 +1,44 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestNumericBoundStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericTypedValidationStatementChecks
+public meta import LogicLineages.Audit
+
+/-! Nine additional fixed targets after the 305-target checkpoint at d170bf0.
+This focused aggregate checks the new typed-validation components; it does not
+restate the earlier cumulative aggregate or certify the full public root. -/
+
+@[expose] public section
+namespace LogicLineages.ExternalCheckpoint20261103TypedValidation
+open OrdinalComparison.TerminationOrdering
+
+theorem fixed_306_anyFuelSound : NumberedTypedEvaluationTargets.AnyFuelSound :=
+  NumberedTypedEvaluationStatementChecks.fixedAnyFuelSound
+
+theorem fixed_307_sufficientFuelExact : NumberedTypedEvaluationTargets.SufficientFuelExact :=
+  NumberedTypedEvaluationStatementChecks.fixedSufficientFuelExact
+
+theorem fixed_308_actualTermEvaluation : NumberedTypedEvaluationTargets.ActualTermEvaluation :=
+  NumberedTypedEvaluationStatementChecks.fixedActualTermEvaluation
+
+theorem fixed_309_actualArgumentsEvaluation : NumberedTypedEvaluationTargets.ActualArgumentsEvaluation :=
+  NumberedTypedEvaluationStatementChecks.fixedActualArgumentsEvaluation
+
+theorem fixed_310_actualCodeWeightBound : NumberedRequestNumericBoundTargets.ActualCodeWeightBound :=
+  NumberedRequestNumericBoundStatementChecks.fixedActualCodeWeightBound
+
+theorem fixed_311_actualCodeFuelPrimitive : NumberedRequestNumericBoundTargets.ActualCodeFuelPrimitive :=
+  NumberedRequestNumericBoundStatementChecks.fixedActualCodeFuelPrimitive
+
+theorem fixed_312_actualNumericTermValidation : NumberedNumericTypedValidationTargets.ActualNumericTermValidation :=
+  NumberedNumericTypedValidationStatementChecks.fixedActualNumericTermValidation
+
+theorem fixed_313_actualNumericArgumentsValidation : NumberedNumericTypedValidationTargets.ActualNumericArgumentsValidation :=
+  NumberedNumericTypedValidationStatementChecks.fixedActualNumericArgumentsValidation
+
+theorem fixed_314_actualNumericPackedValidation : NumberedNumericTypedValidationTargets.ActualNumericPackedValidation :=
+  NumberedNumericTypedValidationStatementChecks.fixedActualNumericPackedValidation
+
+end LogicLineages.ExternalCheckpoint20261103TypedValidation
+
+#audit_namespace LogicLineages.ExternalCheckpoint20261103TypedValidation

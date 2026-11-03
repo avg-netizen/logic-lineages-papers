@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniversePrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniversePrimrecStatementChecks
+
+theorem fixedActualTermUniverseSuccessPrimitive : NumberedUniversePrimrecTargets.ActualTermUniverseSuccessPrimitive :=
+  NumberedUniversePrimrecProof.termUniverseSuccessPrimitive
+#print axioms fixedActualTermUniverseSuccessPrimitive
+
+theorem fixedActualArgumentsUniverseSuccessPrimitive : NumberedUniversePrimrecTargets.ActualArgumentsUniverseSuccessPrimitive :=
+  NumberedUniversePrimrecProof.argumentsUniverseSuccessPrimitive
+#print axioms fixedActualArgumentsUniverseSuccessPrimitive
+
+theorem fixedActualRawCarrierPrimitive : NumberedUniversePrimrecTargets.ActualRawCarrierPrimitive :=
+  NumberedUniversePrimrecProof.rawCarrierPrimitive
+#print axioms fixedActualRawCarrierPrimitive
+
+theorem fixedActualPackedUniversePrimitive : NumberedUniversePrimrecTargets.ActualPackedUniversePrimitive :=
+  NumberedUniversePrimrecProof.packedUniversePrimitive
+#print axioms fixedActualPackedUniversePrimitive
+
+theorem fixedActualUniverseDecoderPrimitive : NumberedUniversePrimrecTargets.ActualUniverseDecoderPrimitive :=
+  NumberedUniversePrimrecProof.universeDecoderPrimitive
+#print axioms fixedActualUniverseDecoderPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniversePrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniversePrimrecStatementChecks

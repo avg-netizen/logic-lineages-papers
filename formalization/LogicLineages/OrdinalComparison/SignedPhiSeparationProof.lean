@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.SignedPhiSeparationDomainProof
+public import LogicLineages.OrdinalComparison.SignedPhiSeparationEvaluationProof
+public import LogicLineages.OrdinalComparison.SignedPhiSeparationGrowthProof
+public import LogicLineages.OrdinalComparison.SignedPhiSeparationProgramsProof

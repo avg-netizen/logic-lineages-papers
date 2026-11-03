@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.KernelReachableInputConventionTargets
+public import LogicLineages.OrdinalComparison.KernelReachableInputConventionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelReachableInputConvention.StatementChecks
+theorem exact_common_first_step : Targets.ExactCommonFirstStep := Proof.exactCommonFirstStep
+theorem exact_different_second_steps : Targets.ExactDifferentSecondSteps := Proof.exactDifferentSecondSteps
+end LogicLineages.OrdinalComparison.KernelReachableInputConvention.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelReachableInputConvention

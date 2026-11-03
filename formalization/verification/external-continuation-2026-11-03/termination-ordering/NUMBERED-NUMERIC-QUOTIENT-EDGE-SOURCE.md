@@ -1,0 +1,7 @@
+# Numeric certificates for the actual representative quotient edge
+
+A certificate is a literal triple of concrete source packed number, concrete target packed number and actual numeric step certificate. The checker decodes the source with universe validation and the target with the actual typed decoder, validates the accepted numeric step certificate, and compares their actual computed representative codes with the requested edge endpoints. No canonical endpoint witness or quotient edge proof is supplied by the caller.
+
+The first target proves numeric certificate existence exactly equivalent to the already-defined QuotientEdge at the explicit Boolean table relation. The equality must align the concrete decoded endpoints with the step witnesses using literal packed-code injectivity. It does not require SubtypeClosed because the existing edge definition itself only requires initial universe membership. The second target uses explicit SubtypeClosed to derive target confinement and both actual canonical-carrier tests from accepted edge certificates.
+
+This is finite executable certificate checking and existential completeness. It is not a bounded decision for existence, an implemented certificate enumeration or semidecision theorem, formal arithmetic representability, or quotient well-foundedness/accessibility. The exact original guarded relation and representative construction remain unchanged, as does the original comparison/transitivity obstruction.

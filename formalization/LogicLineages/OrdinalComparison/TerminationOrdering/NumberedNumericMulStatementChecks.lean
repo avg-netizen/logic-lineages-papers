@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericMulProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericMulStatementChecks
+theorem fixedActualNumericMulCertificates : NumberedNumericMulTargets.ActualNumericMulCertificates := NumberedNumericMulProof.numericMulCertificates
+#print axioms fixedActualNumericMulCertificates
+theorem fixedActualNumericMulSound : NumberedNumericMulTargets.ActualNumericMulSound := NumberedNumericMulProof.numericMulSound
+#print axioms fixedActualNumericMulSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericMulStatementChecks

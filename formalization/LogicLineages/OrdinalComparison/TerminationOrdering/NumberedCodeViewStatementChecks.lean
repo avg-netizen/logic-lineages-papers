@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewStatementChecks
+
+theorem fixedActualViewRoundTrip : NumberedCodeViewTargets.ActualViewRoundTrip :=
+  NumberedCodeViewProof.viewRoundTrip
+#print axioms fixedActualViewRoundTrip
+
+theorem fixedActualViewPrimitive : NumberedCodeViewTargets.ActualViewPrimitive :=
+  NumberedCodeViewProof.viewPrimitive
+#print axioms fixedActualViewPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewStatementChecks

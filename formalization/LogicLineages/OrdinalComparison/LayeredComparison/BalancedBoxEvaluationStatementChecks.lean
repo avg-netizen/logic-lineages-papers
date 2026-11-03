@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluation.StatementChecks
+theorem all_code_computation : Targets.AllCodeComputation := Proof.allCodeComputation
+theorem actual_source_calibration : Targets.ActualSourceCalibration := Proof.actualSourceCalibration
+theorem exact_box_evaluation : Targets.ExactBoxEvaluation := Proof.exactBoxEvaluation
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluation

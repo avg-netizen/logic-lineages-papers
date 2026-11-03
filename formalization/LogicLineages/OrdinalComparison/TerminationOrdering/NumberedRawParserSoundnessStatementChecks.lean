@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRawParserSoundnessProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRawParserSoundnessStatementChecks
+theorem fixedActualRawTypeSound : NumberedRawParserSoundnessTargets.ActualRawTypeSound := NumberedRawParserSoundnessProof.rawTypeSound
+#print axioms fixedActualRawTypeSound
+theorem fixedActualRawTypeListSound : NumberedRawParserSoundnessTargets.ActualRawTypeListSound := NumberedRawParserSoundnessProof.rawTypeListSound
+#print axioms fixedActualRawTypeListSound
+theorem fixedActualRawHeadSound : NumberedRawParserSoundnessTargets.ActualRawHeadSound := NumberedRawParserSoundnessProof.rawHeadSound
+#print axioms fixedActualRawHeadSound
+theorem fixedActualRawCodeSound : NumberedRawParserSoundnessTargets.ActualRawCodeSound := NumberedRawParserSoundnessProof.rawCodeSound
+#print axioms fixedActualRawCodeSound
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRawParserSoundnessStatementChecks

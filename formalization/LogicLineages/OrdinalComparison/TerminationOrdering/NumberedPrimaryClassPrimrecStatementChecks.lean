@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryClassPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryClassPrimrecStatementChecks
+
+theorem fixedActualReachableListCalibration : NumberedPrimaryClassPrimrecTargets.ActualReachableListCalibration :=
+  NumberedPrimaryClassPrimrecProof.reachableListCalibration
+#print axioms fixedActualReachableListCalibration
+
+theorem fixedActualPrimaryListCalibration : NumberedPrimaryClassPrimrecTargets.ActualPrimaryListCalibration :=
+  NumberedPrimaryClassPrimrecProof.primaryListCalibration
+#print axioms fixedActualPrimaryListCalibration
+
+theorem fixedActualPrimaryListPrimitive : NumberedPrimaryClassPrimrecTargets.ActualPrimaryListPrimitive :=
+  NumberedPrimaryClassPrimrecProof.primaryListPrimitive
+#print axioms fixedActualPrimaryListPrimitive
+
+theorem fixedActualPrimaryTestPrimitive : NumberedPrimaryClassPrimrecTargets.ActualPrimaryTestPrimitive :=
+  NumberedPrimaryClassPrimrecProof.primaryTestPrimitive
+#print axioms fixedActualPrimaryTestPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryClassPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryClassPrimrecStatementChecks

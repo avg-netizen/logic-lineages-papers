@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsStatementChecks
+theorem fixedActualTermContextStep : NumberedStepContextsTargets.ActualTermContextStep := NumberedStepContextsProof.termContextStep
+#print axioms fixedActualTermContextStep
+theorem fixedActualArgumentContextStep : NumberedStepContextsTargets.ActualArgumentContextStep := NumberedStepContextsProof.argumentContextStep
+#print axioms fixedActualArgumentContextStep
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsStatementChecks

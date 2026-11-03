@@ -1,0 +1,11 @@
+# Actual cubic and leader recognition
+
+Source08 paper.tex lines 484–489 begin equal-leader recognition by cancelling Phi and recognizing the outer cubic prefix indices and inputs. This component proves precisely that first stage for actual CounterLeaderExpansion leaders, not full higher-rank cancellation or a collision formula.
+
+The cubic modulus is max(16,max(c,e)+4), proved equal to the existing encodedPrincipalKernelMassModulus at the faithful exponent-three code. The actual kernel-pair equality is equivalent to equality of mass and input under that exact modulus. Both equal-input mass separation and unequal-input comparison are conclusions, not premises. The leader corollary uses masses c+3/e+3 and additionally preserves each side's complete original expansion tail c+2r+1. These visible maxima ensure all intermediate actual entries are genuine; no totalized out-of-domain leader is silently promoted to source meaning.
+
+Although source08 cites its uniform theorem, accepted source07 principal mass/input suppliers support this fixed cubic statement independently. Their broad proof modules import the previously RSS-stopped LinkedResidueProof and cannot be cold-retried. Candidate-only isolation therefore reproduces the exact existing ActualRepeatedWordWeakOrder, ActualRepeatedWordStrictInput, ActualRepeatedWordStrictMass, and ActualSuccessorKernelStrictMassStep contracts with unchanged hypotheses; the needed quadratic mass classes follow from the already checked narrow quadraticCount supplier. The successor step is instantiated at exponent two and S=0, so no child strictness oracle remains.
+
+For input separation, specialize the accepted actual adjacent packing/cut to E=input, using its original profile/domain hypotheses. The cut supplies Z+D<n; actual finite-tail norm and expansive controlled norm iteration give n≤the actual endpoint. This avoids the general profile-reserve consumer and its historical 400000-heartbeat wrapper. Existing endpoint transport, maximum predecessor and worst-mass monotonicity finish the genuine input inequality. No accepted file/cap changes, substituted oracle, or semantic weakening are permitted.
+
+Whole lem:uniform, higher-rank original-input recognition, exact collision sums, rank ordering and whole lem:counter remain separate. This is not a quantified arithmetic decision result.

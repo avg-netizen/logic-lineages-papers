@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowFunctionalCasesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowFunctionalCasesStatementChecks
+theorem fixedActualFunctionalAbstraction : NumberedWindowFunctionalCasesTargets.ActualFunctionalAbstraction := NumberedWindowFunctionalCasesProof.fAbsCase
+#print axioms fixedActualFunctionalAbstraction
+theorem fixedActualCopy : NumberedWindowFunctionalCasesTargets.ActualCopy := NumberedWindowFunctionalCasesProof.copyCase
+#print axioms fixedActualCopy
+theorem fixedActualSelect : NumberedWindowFunctionalCasesTargets.ActualSelect := NumberedWindowFunctionalCasesProof.selectCase
+#print axioms fixedActualSelect
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowFunctionalCasesStatementChecks

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedSourceAdapterTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedSourceAdapterProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSourceAdapter.StatementChecks
+theorem exact_original_metadata : Targets.ExactOriginalMetadata := Proof.exactOriginalMetadata
+theorem exact_literal_source_labels : Targets.ExactLiteralSourceLabels := Proof.exactLiteralSourceLabels
+theorem exact_assembled_source_code : Targets.ExactAssembledSourceCode := Proof.exactAssembledSourceCode
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedSourceAdapter.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedSourceAdapter

@@ -17,6 +17,15 @@ import subprocess
 import sys
 
 
+def shared_lock_directory() -> Path:
+    """Use the same existing absolute lock directory as the paper runner."""
+    directory = Path(os.environ.get("LEAN_CHECK_LOCK_DIR", "/tmp"))
+    if not directory.is_absolute() or not directory.is_dir():
+        raise ValueError("LEAN_CHECK_LOCK_DIR must name an existing absolute directory: "
+                         + str(directory))
+    return directory
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("modules", nargs="+", help=".lean paths relative to lean/")
@@ -25,6 +34,10 @@ def main() -> int:
     parser.add_argument("--virtual-memory-mib", type=int, default=16384,
                         help="address-space cap, including mapped modules and runtime arenas")
     args = parser.parse_args()
+    try:
+        lock_directory = shared_lock_directory()
+    except (OSError, ValueError) as error:
+        parser.error(str(error))
     project = Path(__file__).resolve().parents[1] / "lean"
     build = project / ".lake/build/lib/lean"
     build.mkdir(parents=True, exist_ok=True)
@@ -47,7 +60,7 @@ def main() -> int:
         resource.setrlimit(resource.RLIMIT_AS, (address_cap, address_cap))
         resource.setrlimit(resource.RLIMIT_CPU, (args.timeout, args.timeout + 2))
 
-    with open("/tmp/pure-r1-calculator-lean.lock", "a") as lock:
+    with open(lock_directory / "pure-r1-calculator-lean.lock", "a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         for name in args.modules:
             source = (project / name).resolve()

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterFixedShiftComparisonTargets
+public import LogicLineages.OrdinalComparison.CounterFixedShiftComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterFixedShiftComparison.StatementChecks
+theorem actual_quantitative_counter_gap : Targets.ActualQuantitativeCounterGap := Proof.actualQuantitativeCounterGap
+theorem actual_fixed_shift_comparison : Targets.ActualFixedShiftComparison := Proof.actualFixedShiftComparison
+end LogicLineages.OrdinalComparison.CounterFixedShiftComparison.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterFixedShiftComparison

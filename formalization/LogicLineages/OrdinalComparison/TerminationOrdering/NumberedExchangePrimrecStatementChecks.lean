@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangePrimrecProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangePrimrecStatementChecks
+
+theorem fixedActualPackedCalibration : NumberedExchangePrimrecTargets.ActualPackedCalibration :=
+  NumberedExchangePrimrecProof.packedCalibration
+#print axioms fixedActualPackedCalibration
+
+theorem fixedActualCodeExchangePrimitive : NumberedExchangePrimrecTargets.ActualCodeExchangePrimitive :=
+  NumberedExchangePrimrecProof.codeExchangePrimitive
+#print axioms fixedActualCodeExchangePrimitive
+
+theorem fixedActualExchangeTestPrimitive : NumberedExchangePrimrecTargets.ActualExchangeTestPrimitive :=
+  NumberedExchangePrimrecProof.exchangeTestPrimitive
+#print axioms fixedActualExchangeTestPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangePrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangePrimrecStatementChecks

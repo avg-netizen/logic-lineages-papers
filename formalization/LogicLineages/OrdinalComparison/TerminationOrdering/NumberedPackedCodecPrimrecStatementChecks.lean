@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecStatementChecks
+
+theorem fixedActualPackedEncoderPrimitive : NumberedPackedCodecPrimrecTargets.ActualPackedEncoderPrimitive :=
+  NumberedPackedCodecPrimrecProof.packedEncoderPrimitive
+#print axioms fixedActualPackedEncoderPrimitive
+
+theorem fixedActualPackedDecoderPrimitive : NumberedPackedCodecPrimrecTargets.ActualPackedDecoderPrimitive :=
+  NumberedPackedCodecPrimrecProof.packedDecoderPrimitive
+#print axioms fixedActualPackedDecoderPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecStatementChecks

@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeGuardsPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeGuardsPrimrecStatementChecks
+
+theorem fixedActualHeadEquivalencePrimitive : NumberedExchangeGuardsPrimrecTargets.ActualHeadEquivalencePrimitive :=
+  NumberedExchangeGuardsPrimrecProof.headEquivalencePrimitive
+#print axioms fixedActualHeadEquivalencePrimitive
+
+theorem fixedActualPermutationPrimitive : NumberedExchangeGuardsPrimrecTargets.ActualPermutationPrimitive :=
+  NumberedExchangeGuardsPrimrecProof.argumentPermutationPrimitive
+#print axioms fixedActualPermutationPrimitive
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeGuardsPrimrecStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeGuardsPrimrecStatementChecks

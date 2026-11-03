@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecStatementChecks
+
+theorem fixedActualIterationCalibration : NumberedTypedEvaluationPrimrecTargets.ActualIterationCalibration :=
+  NumberedTypedEvaluationPrimrecProof.iterationCalibration
+#print axioms fixedActualIterationCalibration
+
+theorem fixedActualEvaluatorPrimitive : NumberedTypedEvaluationPrimrecTargets.ActualEvaluatorPrimitive :=
+  NumberedTypedEvaluationPrimrecProof.evaluatorPrimitive
+#print axioms fixedActualEvaluatorPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecStatementChecks

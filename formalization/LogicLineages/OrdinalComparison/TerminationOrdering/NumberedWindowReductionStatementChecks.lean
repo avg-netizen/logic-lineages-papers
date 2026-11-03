@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowReductionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowReductionStatementChecks
+
+theorem fixedActualStepErasure : NumberedWindowReductionTargets.ActualStepErasure := NumberedWindowReductionProof.actualStepErasure
+theorem fixedActualArgumentErasure : NumberedWindowReductionTargets.ActualArgumentErasure := NumberedWindowReductionProof.actualArgumentErasure
+theorem fixedActualStepConfinement : NumberedWindowReductionTargets.ActualStepConfinement := NumberedWindowReductionProof.actualStepConfinement
+theorem fixedActualArgumentConfinement : NumberedWindowReductionTargets.ActualArgumentConfinement := NumberedWindowReductionProof.actualArgumentConfinement
+#print axioms fixedActualStepErasure
+#print axioms fixedActualArgumentErasure
+#print axioms fixedActualStepConfinement
+#print axioms fixedActualArgumentConfinement
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowReductionStatementChecks

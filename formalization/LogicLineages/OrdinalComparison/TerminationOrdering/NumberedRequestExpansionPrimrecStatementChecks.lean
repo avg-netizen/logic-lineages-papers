@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecStatementChecks
+
+theorem fixedActualRequestExpansionPrimitive :
+    NumberedRequestExpansionPrimrecTargets.ActualRequestExpansionPrimitive :=
+  NumberedRequestExpansionPrimrecProof.expansionPrimitive
+#print axioms fixedActualRequestExpansionPrimitive
+
+#print axioms NumberedRequestPresentation.requestToPrimitive
+#print axioms NumberedRequestPresentation.requestFromPrimitive
+#print axioms NumberedRequestPresentation.termRequestPrimitive
+#print axioms NumberedRequestPresentation.argumentsRequestPrimitive
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecStatementChecks

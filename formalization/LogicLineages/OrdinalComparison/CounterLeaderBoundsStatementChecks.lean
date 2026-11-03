@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterLeaderBoundsTargets
+public import LogicLineages.OrdinalComparison.CounterLeaderBoundsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterLeaderBounds.StatementChecks
+theorem actual_residual_bounds : Targets.ActualResidualBounds := Proof.actualResidualBounds
+theorem strict_actual_leader_bounds : Targets.StrictActualLeaderBounds := Proof.strictActualLeaderBounds
+end LogicLineages.OrdinalComparison.CounterLeaderBounds.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterLeaderBounds

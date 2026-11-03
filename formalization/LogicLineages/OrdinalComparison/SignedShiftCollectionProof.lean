@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.SignedShiftCollectionDomainProof
+public import LogicLineages.OrdinalComparison.SignedShiftCollectionAlgebraProof
+public import LogicLineages.OrdinalComparison.SignedShiftCollectionGreatestProof
+public import LogicLineages.OrdinalComparison.SignedShiftCollectionProgramsProof

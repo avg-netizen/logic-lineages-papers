@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedConfinedSourceSimulationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedConfinedSourceSimulationStatementChecks
+
+theorem fixedActualSourceWindow : NumberedConfinedSourceSimulationTargets.ActualSourceWindow :=
+  NumberedConfinedSourceSimulationProof.sourceWindow
+#print axioms fixedActualSourceWindow
+
+theorem fixedActualStrictWindowTrace : NumberedConfinedSourceSimulationTargets.ActualStrictWindowTrace :=
+  NumberedConfinedSourceSimulationProof.strictWindowTrace
+#print axioms fixedActualStrictWindowTrace
+
+theorem fixedActualStrictQuotientPath : NumberedConfinedSourceSimulationTargets.ActualStrictQuotientPath :=
+  NumberedConfinedSourceSimulationProof.strictQuotientPath
+#print axioms fixedActualStrictQuotientPath
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedConfinedSourceSimulationStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedConfinedSourceSimulationStatementChecks

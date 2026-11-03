@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SameRankLeaderRecognitionTargets
+public import LogicLineages.OrdinalComparison.SameRankLeaderRecognitionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SameRankLeaderRecognition.StatementChecks
+theorem actual_fixed_rank_strict_inputs : Targets.ActualFixedRankStrictInputs := Proof.actualFixedRankStrictInputs
+theorem actual_same_rank_recognition : Targets.ActualSameRankRecognition := Proof.actualSameRankRecognition
+end LogicLineages.OrdinalComparison.SameRankLeaderRecognition.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.SameRankLeaderRecognition

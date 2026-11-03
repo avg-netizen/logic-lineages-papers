@@ -1,0 +1,7 @@
+# Exact degree-two source-formula comparison under explicit conventions
+
+Paper08 lines239–242 says to replace the current nonfinite suffix by the greatest smaller suffix using the time-indexed budget Phi iterates minus retained mass. Taken literally as whole-current-state predecessor, this is the independently defined WholeScheduledCount, not the companion paper07 limit-part process.
+
+Paper08 lem:kernel-recursion lines264–270 displays E²_c(t)=Phi(t)/2-ceil(c/2)+1. At retained mass1 the expression is exactly Phi(t)/2. The new targets compare this exact displayed value under the two independently fixed conventions for EVERY original input t≥4. The unchanged companion count equals it; the whole-state scheduled count is strictly larger. A second target gives a witness t≥max(T,4) for every proposed cutoff T and rules out any eventual equality under the literal whole-state interpretation.
+
+This follows from the already checked generic complete-count proofs, not finite testing, approximate values or evaluation of a huge constant. All schedules remain indexed by original elapsed step, not state norm. The comparison does not determine intended meaning, change either manuscript, establish a proposed repair, or refute the separate rank-at-least-three lem:counter. No numbered register promotion is requested. It documents an exact incompatibility between the literal process and the displayed degree-two formula, while the companion convention satisfies that formula.

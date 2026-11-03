@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentativePrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentativePrimrecStatementChecks
+
+theorem fixedActualRepresentativeBound : NumberedRepresentativePrimrecTargets.ActualRepresentativeBound :=
+  NumberedRepresentativePrimrecProof.representativeBound
+#print axioms fixedActualRepresentativeBound
+
+theorem fixedActualBoundedRepresentativeCalibration :
+    NumberedRepresentativePrimrecTargets.ActualBoundedRepresentativeCalibration :=
+  NumberedRepresentativePrimrecProof.boundedRepresentativeCalibration
+#print axioms fixedActualBoundedRepresentativeCalibration
+
+theorem fixedActualRepresentativePrimitive : NumberedRepresentativePrimrecTargets.ActualRepresentativePrimitive :=
+  NumberedRepresentativePrimrecProof.representativePrimitive
+#print axioms fixedActualRepresentativePrimitive
+
+theorem fixedActualCanonicalCarrierPrimitive : NumberedRepresentativePrimrecTargets.ActualCanonicalCarrierPrimitive :=
+  NumberedRepresentativePrimrecProof.canonicalCarrierPrimitive
+#print axioms fixedActualCanonicalCarrierPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentativePrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRepresentativePrimrecStatementChecks
