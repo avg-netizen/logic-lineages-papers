@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryExchangeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryExchangeStatementChecks
+theorem fixedActualExchangeErasure : NumberedPrimaryExchangeTargets.ActualExchangeErasure := NumberedPrimaryExchangeProof.exchangeErasure
+#print axioms fixedActualExchangeErasure
+theorem fixedActualExchangeSymmetry : NumberedPrimaryExchangeTargets.ActualExchangeSymmetry := NumberedPrimaryExchangeProof.exchangeSymmetry
+#print axioms fixedActualExchangeSymmetry
+theorem fixedActualPrimaryClosure : NumberedPrimaryExchangeTargets.ActualPrimaryClosure := NumberedPrimaryExchangeProof.primaryClosure
+#print axioms fixedActualPrimaryClosure
+theorem fixedActualArgumentClosure : NumberedPrimaryExchangeTargets.ActualArgumentClosure := NumberedPrimaryExchangeProof.argumentClosure
+#print axioms fixedActualArgumentClosure
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryExchangeStatementChecks
