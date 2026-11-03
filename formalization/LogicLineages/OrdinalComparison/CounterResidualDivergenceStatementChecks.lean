@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.CounterResidualDivergenceTargets
+public import LogicLineages.OrdinalComparison.CounterResidualDivergenceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterResidualDivergence.StatementChecks
+theorem actual_finite_degree_lower_count : Targets.ActualFiniteDegreeLowerCount := Proof.actualFiniteDegreeLowerCount
+theorem actual_aligned_residual_divergence : Targets.ActualAlignedResidualDivergence := Proof.actualAlignedResidualDivergence
+end LogicLineages.OrdinalComparison.CounterResidualDivergence.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.CounterResidualDivergence
