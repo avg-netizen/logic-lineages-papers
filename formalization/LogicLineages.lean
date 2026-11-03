@@ -1895,6 +1895,9 @@ public import LogicLineages.ExternalCheckpoint20261103BQ
 public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypeCodecPrimrecStatementChecks
 public import LogicLineages.ExternalCheckpoint20261103BR
 
+public import LogicLineages.OrdinalComparison.CounterSourceTheoremStatementChecks
+public import LogicLineages.ExternalCheckpoint20261103BS
+
 public meta import LogicLineages.Audit
 
 /-! Accepted, incomplete coverage of the public papers.
