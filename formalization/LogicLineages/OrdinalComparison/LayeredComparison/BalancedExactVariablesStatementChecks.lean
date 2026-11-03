@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariablesTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariablesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariables.StatementChecks
+theorem truth_and_exact_variables : Targets.TruthAndExactVariables := Proof.truthAndExactVariables
+theorem actual_sign_semantics : Targets.ActualSignSemantics := Proof.actualSignSemantics
+theorem exact_typed_code_calibration : Targets.ExactTypedCodeCalibration := Proof.exactTypedCodeCalibration
+theorem all_code_computation : Targets.AllCodeComputation := Proof.allCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariables.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariables
