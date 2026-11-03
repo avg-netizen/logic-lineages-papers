@@ -1,16 +1,23 @@
 Latest checked external continuation, **3 November 2026**: the existing
-`formalization/external-continuation-2026-11-03` branch now proves primitive
-recursiveness of the original finite-universe tests, raw numeric carrier test,
-and filtered typed decoder. Both window lists and the binder context remain
-inputs to the Boolean carrier test; the dependent decoder retains its fixed
-context and original packed presentation. The sixteen new fixed targets passed
-their focused aggregate and axiom audit, bringing this continuation to
-**345 fixed targets in 100 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
-and [finite-universe effectivity evidence](verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json).
-The source-statement register remains **154 checked, 2 inherited, 33 pending/189**;
-primary-class and canonical-carrier effectivity, full step-checker effectivity,
-arithmetic representation and accessibility remain open.
-The local pause records and older releases below are historical.
+`formalization/external-continuation-2026-11-03` branch now proves that the
+original finite primary-class candidate lists are primitive recursive. It also
+proves strict simulation in exactly the source type window `Ty(s)`. The
+original syntax bounds, head enumeration, structural decoder and ordered
+constructor enumeration remain in use. Sixteen new fixed targets passed their
+focused aggregate and axiom audit, bringing this continuation to **361 fixed
+targets in 107 components**. See the [current status](verification/external-continuation-2026-11-03/STATUS.md)
+and [class-candidate and source-window evidence](verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json).
+
+The source-statement register remains **154 checked, 2 inherited, 33 pending/189**.
+These totals count complete numbered source statements; the component count
+records supporting results and source diagnostics. The register's missing
+November 3 component links are now reconciled: all 107 components have explicit
+source destinations, with remaining dependencies recorded on the affected
+pending entries. See [the reconciliation record](verification/external-continuation-2026-11-03/REGISTER-RECONCILIATION.json).
+Effective primary-equivalence saturation, least representatives, the canonical
+carrier, full step checking, arithmetic representation and internal ID1
+accessibility remain open. The local pause records and older releases below
+are historical.
 
 Previous local checkpoint: **PAUSED**,3November2026UTC. **154 checked,2 inherited,33 pending/189**. Read [the final handoff](HANDOFF-2026-11-03.md), including the checked local transitivity source issue.
 

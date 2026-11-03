@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedClassCandidatesPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedClassCandidatesPrimrecStatementChecks
+
+theorem fixedActualClassCodesPrimitive : NumberedClassCandidatesPrimrecTargets.ActualClassCodesPrimitive :=
+  NumberedClassCandidatesPrimrecProof.classCodesPrimitive
+#print axioms fixedActualClassCodesPrimitive
+
+theorem fixedActualClassCandidatesPrimitive : NumberedClassCandidatesPrimrecTargets.ActualClassCandidatesPrimitive :=
+  NumberedClassCandidatesPrimrecProof.classCandidatesPrimitive
+#print axioms fixedActualClassCandidatesPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedClassCandidatesPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedClassCandidatesPrimrecStatementChecks

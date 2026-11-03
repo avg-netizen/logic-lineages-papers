@@ -12,7 +12,40 @@ The literal whole-current-suffix reading of paper08 lines239–242 is incompatib
 
 The exact comparison is checked by `KernelQuadraticSourceComparisonStatementChecks`; see its [source correspondence](layered-comparison/KernelQuadraticSourceComparison-SOURCE-CORRESPONDENCE.md). The earlier finite-kernel source-control record and counter suppliers concern the companion limit-part convention. Their degree-two validity statements must be read with that qualification, not as literal whole-state correspondence. This issue is separate from the previously recorded negative signed-child domain obstruction.
 
-Neither manuscript is changed. No intended wording or unique repair is inferred, and no rank-at-least-three counter theorem is refuted by this diagnostic. `lem:kernel-recursion` and `lem:counter` remain pending; the statement register and all proof statuses are unchanged.
+Neither manuscript is changed. No intended wording or unique repair is inferred, and no rank-at-least-three counter theorem is refuted by this diagnostic. `lem:kernel-recursion` and `lem:counter` remain pending. Their proof statuses are unchanged; the register now links the supporting results and records the convention discrepancy explicitly.
+
+## Source-statement progress and component progress
+
+The **154 checked, 2 inherited, 33 pending** totals count the 189 numbered
+source statements. The **361 fixed targets in 107 components** count the
+November 3 supporting development and its source diagnostics. A component
+can discharge a necessary dependency without completing a numbered theorem;
+these counts do not define a percentage of the remaining mathematical work.
+
+At the preceding 100-component checkpoint, none of the November 3 gate modules
+was linked from `TARGETS.json`. The register's whole-statement statuses were
+correct, but its component-progress metadata was incomplete. The current
+[reconciliation](REGISTER-RECONCILIATION.json) links all 107 distinct component
+gates to their relevant pending source statements, records the evidence and
+scope of each link, and states the outstanding dependencies. It preserves
+every source statement, acceptance declaration, comparator and proof status.
+The manuscript inventory is unchanged.
+
+For paper06, the current chain reaches the following boundary:
+
+| Source goal | Checked supporting results | Remaining obligations |
+| --- | --- | --- |
+| `lem:simulation` | Restricted simulation, actual quotient paths, and the positive path in exactly `Ty(s)`; typed codecs, universe tests and original finite candidate enumeration are primitive recursive. | Effective primary-class saturation and least representatives; a computable numeric source translation; arithmetic presentation of the actual quotient/path relation. |
+| `lem:id1` | Finite-class and quotient semantics, exact numeric step/path certificates, effective typed carrier tests and candidate enumeration. | The remaining checker and canonical-carrier effectivity, actual arithmetic formulas, positive accessibility/multiset operators, and an internal ID1 accessibility derivation. |
+| `thm:upper` and `thm:height` | Supporting dependencies of the simulation/accessibility route. | Complete simulation and accessibility, rank transfer and the cited Bachmann–Howard bound; the height result also requires the remaining realization, iteration, native primitive and cofinality construction. |
+
+The 33 pending statements are distributed across papers02 (3),06 (9),08 (13),
+09 (2), and12 (6). This continuation's 74 numbered-auxiliary components concern
+paper06; its 33 layered-comparison components concern paper08. Some pending
+items also have recorded source obstructions. In particular, the local
+stable-pair claim and the displayed paper08 kernel conventions cannot be
+promoted by accumulating supporting lemmas. Their existing issue records and
+immutable source meanings remain visible.
 
 ## New checked components
 
@@ -216,11 +249,25 @@ Neither manuscript is changed. No intended wording or unique repair is inferred,
 
 - **NumberedUniversePrimrec: five fixed targets.** Original term/argument universe-success predicates and the original raw numeric carrier test are primitive recursive with both windows and contexts supplied as inputs. For each fixed context, the original packed universe test and `decodeUniverse` are primitive recursive jointly in both windows and their packed or numeric input. The filtered decoder returns the actual dependent packed typed syntax. Primary-class operations, canonical carrier testing, full step-checker effectivity, arithmetic representation and accessibility remain separate. See [source correspondence](termination-ordering/NUMBERED-UNIVERSE-PRIMREC-SOURCE.md).
 
+- **NumberedCodeAssemblyPrimrec: one fixed target.** The original `unview` constructor assembly is primitive recursive for every finite signature. All eight structural constructors retain their original fields and numeric encoding. See [source correspondence](termination-ordering/NUMBERED-CODE-ASSEMBLY-PRIMREC-SOURCE.md).
+
+- **NumberedEnumerationOperationsPrimrec: two fixed targets.** The original bounded type-list enumeration and actual `sourceHeads` list are primitive recursive. List order, duplicates and the original finite head-window filtering remain exact; no subtype-closure premise is added. See [source correspondence](termination-ordering/NUMBERED-ENUMERATION-OPERATIONS-PRIMREC-SOURCE.md).
+
+- **NumberedCodeEnumerationPrimrec: one fixed target.** The original bounded structural-code enumeration is primitive recursive jointly in its complete parameter tuple and variable/fuel bounds. The actual prior and binder-opened recursive lists, ordered constructor groups and extra-type list bounds are preserved. See [source correspondence](termination-ordering/NUMBERED-CODE-ENUMERATION-PRIMREC-SOURCE.md).
+
+- **NumberedSyntaxBoundsPrimrec: four fixed targets.** A structural traversal calibrates exactly to the original term/argument size and maximum numbered label, including the original zero contribution of argument-list constructors. The structural and packed bound maps are primitive recursive. See [source correspondence](termination-ordering/NUMBERED-SYNTAX-BOUNDS-PRIMREC-SOURCE.md).
+
+- **NumberedPackedStructurePrimrec: three fixed targets.** The original packed structural encoder is primitive recursive; the original numeric decoder on the paired type/code number equals the original structural packed decoder; that structural decoder is primitive recursive in the existing dependent packed presentation. See [source correspondence](termination-ordering/NUMBERED-PACKED-STRUCTURE-PRIMREC-SOURCE.md).
+
+- **NumberedClassCandidatesPrimrec: two fixed targets.** The actual `classCodes` and `classCandidates` lists are primitive recursive jointly in both windows and the packed input. The original size, label, context and fuel bounds, root type and dependent decoder remain unchanged on arbitrary inputs. This proves effectivity of the finite candidate overapproximation; saturated primary classes, least representatives and canonical-carrier testing remain separate. See [source correspondence](termination-ordering/NUMBERED-CLASS-CANDIDATES-PRIMREC-SOURCE.md).
+
+- **NumberedConfinedSourceSimulation: three fixed targets.** The original confined strict comparison derives endpoint confinement, a positive restricted trace with all boundaries confined, and a positive path between the actual least-code quotient representatives in exactly the source-only window `Ty(s)`. Numerical computability, arithmetic presentation and internal ID1 accessibility remain separate. See [source correspondence](termination-ordering/NUMBERED-CONFINED-SOURCE-SIMULATION-SOURCE.md).
+
 ## Verification and preservation
 
-The cumulative selection contains **345 fixed aliases in 100 components**, independently bound to prospectively frozen statements. These counts include only this November 3 continuation; broader namespace audit reports and inherited aliases are not added to them. The preceding 329-target checkpoint at `9fe37f7fd9e75a4dcdc9ca3512d577d634158a9f` remains inherited evidence. The latest round adds sixteen targets in six components, checked together by `LogicLineages.ExternalCheckpoint20261103UniversePrimrec`. Its sixteen aliases have actual transitive axiom audits with only the permitted foundations. See the [prospective freeze](termination-ordering/UNIVERSE-PRIMREC-FREEZE.json) and [acceptance record](termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json). The earlier [typed-codec acceptance](termination-ordering/TYPED-PRIMREC-ACCEPTED.json) and [typed-validation acceptance](termination-ordering/TYPED-VALIDATION-ACCEPTED.json) are retained.
+The cumulative selection contains **361 fixed aliases in 107 components**, independently bound to prospectively frozen statements. These counts include only this November 3 continuation; broader namespace audit reports and inherited aliases are not added to them. The preceding 345-target checkpoint at `da07feaaf9d0c31fc0ef9f70f83c9a950c0b0e3e` remains inherited evidence. The latest round adds sixteen targets in seven components, checked together by `LogicLineages.ExternalCheckpoint20261103ClassCandidates`. Its sixteen aliases have actual transitive axiom audits with only the permitted foundations. See the [prospective freeze](termination-ordering/CLASS-CANDIDATES-FREEZE.json) and [acceptance record](termination-ordering/CLASS-CANDIDATES-ACCEPTED.json). Earlier finite-universe, typed-codec and typed-validation acceptance records retain their original historical hashes and scope.
 
-The latest checks used the pinned toolchain, official upstream cache and current checked local objects, with one thread, a 2048 MiB Lean heap limit, a 1536 MiB RSS limit, and a 2048 MiB free-memory floor. All six prospective target modules passed before their candidate proofs were authored, and every frozen semantics/comparator hash remains unchanged. Each new exact gate and the focused aggregate passed after constructive elaboration and simplification repairs within the existing limits. Adding their imports to the root is followed by a source inventory, not a full root compilation. Earlier cumulative aggregates were not rerun; no full-root, clean-room, or CI pass is claimed.
+The latest checks used the pinned toolchain, official upstream cache and current checked local objects, with one thread, a 2048 MiB Lean heap limit, a 1536 MiB RSS limit, and a 2048 MiB free-memory floor. All seven prospective target modules passed before their candidate proofs were authored, and every frozen semantics/comparator hash remains unchanged. Each new exact gate and the focused aggregate passed after constructive elaboration and simplification repairs within the existing limits. Adding their imports to the root is followed by a source inventory, not a full root compilation. Earlier cumulative aggregates were not rerun; no full-root, clean-room, or CI pass is claimed. The register's changed hash records metadata reconciliation; all 189 source statuses and source statement texts are unchanged.
 
 The earlier `3ed9b47` checkpoint added the same validated `LEAN_CHECK_LOCK_DIR` to both public compiler helpers because this sandbox lacked `/tmp`, retaining the original default and lock filenames. Relative, missing and non-directory settings fail before compilation. Its 30 passing Python regressions, including real cross-project subprocess contention and release, remain inherited evidence; the runner and tests are unchanged in this round. Serialization, source scanning, stop policy and resource limits are retained.
 

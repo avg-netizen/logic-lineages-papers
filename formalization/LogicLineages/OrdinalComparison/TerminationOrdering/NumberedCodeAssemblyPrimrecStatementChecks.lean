@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeAssemblyPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeAssemblyPrimrecStatementChecks
+
+theorem fixedActualUnviewPrimitive : NumberedCodeAssemblyPrimrecTargets.ActualUnviewPrimitive :=
+  NumberedCodeAssemblyPrimrecProof.unviewPrimitive
+#print axioms fixedActualUnviewPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeAssemblyPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeAssemblyPrimrecStatementChecks

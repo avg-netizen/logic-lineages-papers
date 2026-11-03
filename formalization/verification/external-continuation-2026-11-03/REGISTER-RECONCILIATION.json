@@ -1,0 +1,1200 @@
+{
+  "schema": "source-register-component-reconciliation-v1",
+  "recorded_at_utc": "2026-11-03T22:34:36.664778+00:00",
+  "baseline_commit": "da07feaaf9d0c31fc0ef9f70f83c9a950c0b0e3e",
+  "register": "formalization/TARGETS.json",
+  "before_sha256": "fb91f6b17f234ded80d8c590c028d7d9322ef3a89d4bfb0bd81818c7b2f11839",
+  "after_sha256": "7e7579d923909860a96b0ed3276389dc85de52ebf889bb727ad75f79951ef0cb",
+  "scope": "Metadata-only linkage of accepted November 3 supporting components and source diagnostics to pending source statements; no numbered source-statement promotion.",
+  "counts": {
+    "checked": 154,
+    "inherited": 2,
+    "pending": 33,
+    "total": 189
+  },
+  "raw_inherited_status": "existing-calculator-package",
+  "source_status_changes": 0,
+  "registered_statement_changes": 0,
+  "accepted_declaration_or_comparator_changes": 0,
+  "existing_checked_components_and_source_issue_fields_preserved": true,
+  "distinct_continuation_components_linked": 107,
+  "fixed_targets_in_linked_components": 361,
+  "baseline_components_previously_unlinked": 100,
+  "new_components": 7,
+  "primary_links": 107,
+  "selected_reuse_links": 13,
+  "total_added_checked_component_entries": 120,
+  "affected_pending_statements": 7,
+  "statement_updates": [
+    {
+      "statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "added_component_entries": 62,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    },
+    {
+      "statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "added_component_entries": 24,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    },
+    {
+      "statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "added_component_entries": 11,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    },
+    {
+      "statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "added_component_entries": 5,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    },
+    {
+      "statement_id": "08-multivariate-collapse-comparison:lem:uniform",
+      "added_component_entries": 1,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    },
+    {
+      "statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "added_component_entries": 14,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    },
+    {
+      "statement_id": "08-multivariate-collapse-comparison:thm:snyatkov",
+      "added_component_entries": 3,
+      "updated_fields": [
+        "checked_components",
+        "coverage_note",
+        "remaining_dependencies"
+      ]
+    }
+  ],
+  "added_source_diagnostics": [
+    {
+      "statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "id": "whole-current-suffix-quadratic-count",
+      "formal_counterexample_gate": "LogicLineages.OrdinalComparison.KernelQuadraticSourceComparisonStatementChecks"
+    }
+  ],
+  "components": [
+    {
+      "component": "NumberedUniverseBinding",
+      "fixed_target_count": 8,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseBindingStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-BINDING-SOURCE.md"
+    },
+    {
+      "component": "BalancedCollection",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedCollection-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedUniverseOperations",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseOperationsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-OPERATIONS-SOURCE.md"
+    },
+    {
+      "component": "NumberedWindowReduction",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowReductionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:id1"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-REDUCTION-SOURCE.md"
+    },
+    {
+      "component": "BalancedAffineSyntax",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineSyntaxStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedAffineSyntax-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedWindowEquivalence",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowEquivalenceStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:id1"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-EQUIVALENCE-SOURCE.md"
+    },
+    {
+      "component": "BalancedAffineCode",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedAffineCodeStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedAffineCode-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedWindowTraces",
+      "fixed_target_count": 11,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowTracesStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-TRACES-SOURCE.md"
+    },
+    {
+      "component": "BalancedCollectedDominance",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedCollectedDominanceStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedCollectedDominance-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedWindowApplication",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowApplicationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-APPLICATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedWindowAngle",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowAngleStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-ANGLE-SOURCE.md"
+    },
+    {
+      "component": "NumberedWindowOccurrence",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowOccurrenceStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-OCCURRENCE-SOURCE.md"
+    },
+    {
+      "component": "BalancedLargeGuards",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedLargeGuards-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedWindowListCases",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowListCasesStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-LIST-CASES-SOURCE.md"
+    },
+    {
+      "component": "NumberedWindowBasicCases",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowBasicCasesStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-BASIC-CASES-SOURCE.md"
+    },
+    {
+      "component": "BalancedLargeGuardsCode",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedLargeGuardsCodeStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedLargeGuardsCode-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedWindowFunctionalCases",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowFunctionalCasesStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-FUNCTIONAL-CASES-SOURCE.md"
+    },
+    {
+      "component": "NumberedWindowSimulation",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowSimulationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-WINDOW-SIMULATION-SOURCE.md"
+    },
+    {
+      "component": "BalancedSourceAdapter",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedSourceAdapterStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedSourceAdapter-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedOrdinaryWindow",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOrdinaryWindowStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-ORDINARY-WINDOW-SOURCE.md"
+    },
+    {
+      "component": "NumberedAuxiliaryCoding",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryCodingStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-AUXILIARY-CODING-SOURCE.md"
+    },
+    {
+      "component": "BalancedSmallBox",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedSmallBoxStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedSmallBox-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedAuxiliaryEnumeration",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryEnumerationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-AUXILIARY-ENUMERATION-SOURCE.md"
+    },
+    {
+      "component": "BalancedBoxEvaluation",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedBoxEvaluation-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedAuxiliaryDecoding",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryDecodingStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-AUXILIARY-DECODING-SOURCE.md"
+    },
+    {
+      "component": "BalancedBoxFormula",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxFormulaStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedBoxFormula-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedPrimaryExchange",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryExchangeStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-PRIMARY-EXCHANGE-SOURCE.md"
+    },
+    {
+      "component": "BalancedGuardDescent",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedGuardDescentStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedGuardDescent-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedExchangeNeighborhood",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedExchangeNeighborhoodStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-EXCHANGE-NEIGHBORHOOD-SOURCE.md"
+    },
+    {
+      "component": "NumberedFinitePrimaryClass",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFinitePrimaryClassStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-FINITE-PRIMARY-CLASS-SOURCE.md"
+    },
+    {
+      "component": "BalancedRawCompiler",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedRawCompilerStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedRawCompiler-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedLeastCodeRepresentative",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedLeastCodeRepresentativeStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-LEAST-CODE-REPRESENTATIVE-SOURCE.md"
+    },
+    {
+      "component": "NumberedQuotientPaths",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:id1"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-QUOTIENT-PATHS-SOURCE.md"
+    },
+    {
+      "component": "BalancedTypedCompiler",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompilerStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "partial_source_clause",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedTypedCompiler-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedNumericDecoding",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericDecodingStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-DECODING-SOURCE.md"
+    },
+    {
+      "component": "NumberedNumericCarrier",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericCarrierStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-CARRIER-SOURCE.md"
+    },
+    {
+      "component": "BalancedExactVariables",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariablesStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:balanced",
+      "role": "partial_source_clause",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/BalancedExactVariables-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedCopyCertificate",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-COPY-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "FixedSeedControlResidue",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.FixedSeedControlResidueStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:snyatkov",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/FixedSeedControlResidue-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedMarkCertificate",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-MARK-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "NumberedMultisetCertificate",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-MULTISET-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "SignedShiftCollection",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.SignedShiftCollectionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:snyatkov",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/SignedShiftCollection-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedMulCertificate",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-MUL-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "NumberedMultisetNumeric",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-MULTISET-NUMERIC-SOURCE.md"
+    },
+    {
+      "component": "NumberedNumericMul",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericMulStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-MUL-SOURCE.md"
+    },
+    {
+      "component": "SignedPhiSeparation",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.SignedPhiSeparationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:thm:snyatkov",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/SignedPhiSeparation-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedDirectCertificate",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-DIRECT-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "NumberedSelectCertificate",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelectCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-SELECT-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "QuadraticSeparation",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.QuadraticSeparationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:uniform",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/QuadraticSeparation-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedStepContexts",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-STEP-CONTEXTS-SOURCE.md"
+    },
+    {
+      "component": "CounterLeaderExpansion",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterLeaderExpansionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterLeaderExpansion-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedRootDecomposition",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRootDecompositionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-ROOT-DECOMPOSITION-SOURCE.md"
+    },
+    {
+      "component": "CounterLeaderBounds",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterLeaderBoundsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterLeaderBounds-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedNumericRoot",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-ROOT-SOURCE.md"
+    },
+    {
+      "component": "NumberedTypedFocus",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedFocusStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPED-FOCUS-SOURCE.md"
+    },
+    {
+      "component": "CubicLeaderRecognition",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CubicLeaderRecognitionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CubicLeaderRecognition-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedStepCertificate",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCertificateStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-STEP-CERTIFICATE-SOURCE.md"
+    },
+    {
+      "component": "SameRankLeaderRecognition",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.SameRankLeaderRecognitionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/SameRankLeaderRecognition-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedNumericStep",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-STEP-SOURCE.md"
+    },
+    {
+      "component": "NumberedNumericQuotientEdge",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericQuotientEdgeStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-QUOTIENT-EDGE-SOURCE.md"
+    },
+    {
+      "component": "CounterLeaderCollision",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterLeaderCollisionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterLeaderCollision-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedQuotientPathCertificates",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathCertificatesStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-QUOTIENT-PATH-CERTIFICATES-SOURCE.md"
+    },
+    {
+      "component": "CounterUnequalLeaderOrder",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterUnequalLeaderOrderStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterUnequalLeaderOrder-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedListCodecPrimrec",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedListCodecPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-LIST-CODEC-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "CounterLeaderComparison",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterLeaderComparisonStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterLeaderComparison-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedStepCodecPrimrec",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCodecPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-STEP-CODEC-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "CounterResidualDivergence",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterResidualDivergenceStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterResidualDivergence-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedTypeCodecTotal",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypeCodecTotalStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPE-CODEC-TOTAL-SOURCE.md"
+    },
+    {
+      "component": "CounterFixedShiftComparison",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterFixedShiftComparisonStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterFixedShiftComparison-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedTypeCodecPrimrec",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypeCodecPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPE-CODEC-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "CounterSourceTheorem",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.CounterSourceTheoremStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:counter",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/CounterSourceTheorem-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedHeadCodecPrimrec",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadCodecPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-HEAD-CODEC-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "KernelConventionDiagnostic",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.KernelConventionDiagnosticStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "role": "source_issue_evidence",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/KernelConventionDiagnostic-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedRawParserSoundness",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRawParserSoundnessStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-RAW-PARSER-SOUNDNESS-SOURCE.md"
+    },
+    {
+      "component": "NumberedCodeParserTable",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeParserTableStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CODE-PARSER-TABLE-SOURCE.md"
+    },
+    {
+      "component": "NumberedCodePresentation",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodePresentationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CODE-PRESENTATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedCodeCodecPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeCodecPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CODE-CODEC-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "KernelReachableInputConvention",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.KernelReachableInputConventionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "role": "source_issue_evidence",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/KernelReachableInputConvention-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedVariableDecoderPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableDecoderPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-VARIABLE-DECODER-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "WholeScheduledCount",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.WholeScheduledCountStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "role": "source_issue_supplier",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/WholeScheduledCount-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedHeadSignaturePrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadSignaturePrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-HEAD-SIGNATURE-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "KernelConcreteCountConvention",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.KernelConcreteCountConventionStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "role": "source_issue_evidence",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/KernelConcreteCountConvention-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "KernelQuadraticSourceComparison",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.KernelQuadraticSourceComparisonStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "role": "source_issue_evidence",
+      "reused_by": [
+        "08-multivariate-collapse-comparison:lem:counter"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/KernelQuadraticSourceComparison-SOURCE-CORRESPONDENCE.md"
+    },
+    {
+      "component": "NumberedTypedRequests",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedRequestsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPED-REQUESTS-SOURCE.md"
+    },
+    {
+      "component": "NumberedRequestWeight",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestWeightStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-REQUEST-WEIGHT-SOURCE.md"
+    },
+    {
+      "component": "NumberedTypedEvaluation",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-VALIDATION-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPED-EVALUATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedRequestNumericBound",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestNumericBoundStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-VALIDATION-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-REQUEST-NUMERIC-BOUND-SOURCE.md"
+    },
+    {
+      "component": "NumberedNumericTypedValidation",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericTypedValidationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-VALIDATION-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-NUMERIC-TYPED-VALIDATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedCodeView",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeViewStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CODE-VIEW-SOURCE.md"
+    },
+    {
+      "component": "NumberedRequestExpansionPrimrec",
+      "fixed_target_count": 1,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRequestExpansionPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-REQUEST-EXPANSION-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedTypedEvaluationPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedEvaluationPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPED-EVALUATION-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedTypedValidityPrimrec",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedValidityPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-TYPED-VALIDITY-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedPackedPresentation",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedPresentationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-PACKED-PRESENTATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedPackedCodecPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedCodecPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/TYPED-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-PACKED-CODEC-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedHeadWindowPrimrec",
+      "fixed_target_count": 1,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHeadWindowPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-HEAD-WINDOW-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedUniverseGuardPrimrec",
+      "fixed_target_count": 1,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseGuardPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-GUARD-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedUniverseRequests",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseRequestsStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-REQUESTS-SOURCE.md"
+    },
+    {
+      "component": "NumberedUniverseEvaluation",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseEvaluationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-EVALUATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedUniverseNumericValidation",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniverseNumericValidationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-NUMERIC-VALIDATION-SOURCE.md"
+    },
+    {
+      "component": "NumberedUniversePrimrec",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniversePrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/UNIVERSE-PRIMREC-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-UNIVERSE-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedCodeAssemblyPrimrec",
+      "fixed_target_count": 1,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeAssemblyPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CODE-ASSEMBLY-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedEnumerationOperationsPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedEnumerationOperationsPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-ENUMERATION-OPERATIONS-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedCodeEnumerationPrimrec",
+      "fixed_target_count": 1,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCodeEnumerationPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CODE-ENUMERATION-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedSyntaxBoundsPrimrec",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSyntaxBoundsPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-SYNTAX-BOUNDS-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedPackedStructurePrimrec",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPackedStructurePrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-PACKED-STRUCTURE-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedClassCandidatesPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedClassCandidatesPrimrecStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "role": "supporting_dependency",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CLASS-CANDIDATES-PRIMREC-SOURCE.md"
+    },
+    {
+      "component": "NumberedConfinedSourceSimulation",
+      "fixed_target_count": 3,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedConfinedSourceSimulationStatementChecks",
+      "acceptance_record": "verification/external-continuation-2026-11-03/termination-ordering/CLASS-CANDIDATES-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "role": "partial_source_clause",
+      "reused_by": [],
+      "source_correspondence": "verification/external-continuation-2026-11-03/termination-ordering/NUMBERED-CONFINED-SOURCE-SIMULATION-SOURCE.md"
+    }
+  ],
+  "evidence_policy": "The first 100 components retain their inherited published evidence. The seven new components passed their fixed gates and focused aggregate before linkage; their acceptance record is written with the reconciled register hash in the same checkpoint. No full-root, clean-room or CI rerun is claimed.",
+  "interpretation": "Component and fixed-target totals measure checked supporting results and diagnostics, not a percentage of completed source statements or remaining mathematical work."
+}
