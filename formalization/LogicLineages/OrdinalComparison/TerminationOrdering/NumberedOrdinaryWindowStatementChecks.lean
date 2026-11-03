@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOrdinaryWindowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOrdinaryWindowStatementChecks
+theorem fixedActualSourceWindow : NumberedOrdinaryWindowTargets.ActualSourceWindow := NumberedOrdinaryWindowProof.sourceWindow
+#print axioms fixedActualSourceWindow
+theorem fixedActualWeakOrdinaryPath : NumberedOrdinaryWindowTargets.ActualWeakOrdinaryPath := NumberedOrdinaryWindowProof.weakOrdinaryPath
+#print axioms fixedActualWeakOrdinaryPath
+theorem fixedActualStrictOrdinaryPath : NumberedOrdinaryWindowTargets.ActualStrictOrdinaryPath := NumberedOrdinaryWindowProof.strictOrdinaryPath
+#print axioms fixedActualStrictOrdinaryPath
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOrdinaryWindowStatementChecks
