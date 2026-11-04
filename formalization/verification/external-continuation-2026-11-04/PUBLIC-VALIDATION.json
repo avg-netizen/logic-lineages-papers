@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 85,
-    "components": 27
+    "fixed_aliases": 87,
+    "components": 28
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104AA",
-    "source_sha256": "8c94702cf3ff3dab7cf1eb8c4a2095d7957574c0b4e1fb7f6feb0f93524bb7f6",
-    "closure_sha256": "7134c8cbffb5a358b579775f7d44fae8146205b83f2c2d363449ec64375754e7",
+    "module": "LogicLineages.ExternalCheckpoint20261104AB",
+    "source_sha256": "097a9139cdb27a1e25103201316432e962775ed049b68a739e9ba06f61e6e391",
+    "closure_sha256": "4f167edcc4b62338ea963accf75cd3374402e62c419f89647faf4e29ed88f178",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -435,6 +435,16 @@
         "name": "fixed_085_exact_compiled_bounds",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactCompiledBounds",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_compiled_bounds"
+      },
+      {
+        "name": "fixed_086_fixedActualPositiveRelabelTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsTargets.ActualPositiveRelabelTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsStatementChecks.fixedActualPositiveRelabelTruth"
+      },
+      {
+        "name": "fixed_087_fixedActualPositiveTagTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsTargets.ActualPositiveTagTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsStatementChecks.fixedActualPositiveTagTruth"
       }
     ],
     "allowed_axioms": [
@@ -1295,6 +1305,34 @@
           "sha256": "8aed695bd9202dc1debc1177207ec00373916752c52ccb2fb551ba1434b9ab4b"
         }
       ]
+    },
+    {
+      "name": "PositiveArithmeticTransforms",
+      "scope": "Actual binder-aware positive-syntax relabeling and even/odd predicate argument tagging with exact standard-N semantic calibration.",
+      "freeze_sha256": "ad95aaafbcf0820df55c761fa33b205c222b40457525b64e50c4f677c507bda4",
+      "closure_sha256": "16dfe274dfa3e39cd5972bf801fc90fd8c31fa374b2704d3fe27ba97854eba59",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsDefinitions.lean",
+          "sha256": "281333e733ec5722d22ecf208c2c0bf7e41a461258b7dde73f2449c6de4f82fc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsTargets.lean",
+          "sha256": "9b630b20d097e0bddb7d7289103cef07324239a6ded2c3434548e4cf1b7e9b95"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsStatementChecks.lean",
+          "sha256": "4c58b81fd74cf3b0a4ba03c8fe013271a5d3fec2124d521c8ec7572486642a38"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/POSITIVE-ARITHMETIC-TRANSFORMS-SOURCE.md",
+          "sha256": "a2b0a3907a8992f357874cfb46ea2053a81675d189f7b2d46f684515967f335e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsProof.lean",
+          "sha256": "b36de64f4053935d24dd2b70dcbfd12cfa11ce2382c9cb103b06349563f016d5"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1327,6 +1365,7 @@
     "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim.",
     "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim.",
     "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim.",
-    "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim."
+    "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim.",
+    "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim."
   ]
 }
