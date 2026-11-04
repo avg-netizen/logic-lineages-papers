@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaCodedReductionTargets
+public import LogicLineages.OrdinalComparison.SourceGammaCodedReductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaCodedReduction.StatementChecks
+theorem canonical_query_adequacy : Targets.CanonicalQueryAdequacy := Proof.canonicalQueryAdequacy
+theorem exact_nonhalting : Targets.ExactNonhalting := Proof.exactNonhalting
+theorem primitive_many_one_reduction : Targets.PrimitiveManyOneReduction := Proof.primitiveManyOneReduction
+end LogicLineages.OrdinalComparison.Source.SourceGammaCodedReduction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaCodedReduction

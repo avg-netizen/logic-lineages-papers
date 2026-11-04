@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.RankedPrecedenceCertificateProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.RankedPrecedenceChains
+end LogicLineages.OrdinalComparison.TerminationOrdering.RankedPrecedenceChains

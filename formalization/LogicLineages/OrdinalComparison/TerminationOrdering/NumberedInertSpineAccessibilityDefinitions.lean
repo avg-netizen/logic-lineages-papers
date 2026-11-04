@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInertSpineProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInverseApplicationAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInertSpineAccessibility
+-- Actual trace counts and actual quotient successors are retained.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInertSpineAccessibility

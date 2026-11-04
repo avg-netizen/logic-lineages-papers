@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBetaApplicationEdgeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBetaApplicationEdgeStatementChecks
+theorem fixedActualBetaApplicationEdge : NumberedBetaApplicationEdgeTargets.ActualBetaApplicationEdge := NumberedBetaApplicationEdgeProof.actualBetaApplicationEdge
+#print axioms fixedActualBetaApplicationEdge
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBetaApplicationEdgeStatementChecks

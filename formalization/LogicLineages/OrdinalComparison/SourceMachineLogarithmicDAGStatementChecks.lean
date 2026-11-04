@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineLogarithmicDAGTargets
+public import LogicLineages.OrdinalComparison.SourceMachineLogarithmicDAGProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineLogarithmicDAG.StatementChecks
+theorem bits_bound : Targets.BitsBound := Proof.bitsBound
+theorem compiled_bounds : Targets.CompiledBounds := Proof.compiledBounds
+end LogicLineages.OrdinalComparison.Source.SourceMachineLogarithmicDAG.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceMachineLogarithmicDAG

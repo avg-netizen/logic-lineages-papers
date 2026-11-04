@@ -1,0 +1,30 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.SelectedVerifierTargets
+public import LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.BoundedRangeTargets
+public import LogicLineages.ComputabilityKnowledge.GorbowArithmeticCompositionCertificatesTargets
+
+@[expose] public section
+/-! The full unpaid ordinary-arithmetic numeral-certificate endpoint.
+The recursion step may reuse ACTUAL subprogram proofs. The final endpoint
+discharges them by structural induction over the entire original PR AST.
+No beta uniqueness/trace supplier, semantic validity-to-proof rule, U/u or
+internal HB assumption is introduced. This still is not universal HB. -/
+namespace LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.PrimitiveRecursion.Targets
+open GorbowSyntax GorbowPRProgram GorbowTheoryProof
+
+def RecursionStep : Prop :=
+  ∀ (T : Sentence → Prop) n (f : Program n) (g : Program (n+2)),
+    (∀ inputs : List.Vector Nat n, Nonempty (Derivation T
+      (GorbowOrdinaryArithmeticGraphs.closedGraph f inputs (evaluate f inputs)))) →
+    (∀ inputs : List.Vector Nat (n+2), Nonempty (Derivation T
+      (GorbowOrdinaryArithmeticGraphs.closedGraph g inputs (evaluate g inputs)))) →
+    ∀ inputs : List.Vector Nat (n+1), Nonempty (Derivation T
+      (GorbowOrdinaryArithmeticGraphs.closedGraph (.recursion f g) inputs
+        (evaluate (.recursion f g) inputs)))
+
+def AllPrimitiveCertificates : Prop := SelectedVerifierTargets.GuardedRecursionCertificates
+
+def Target : Prop := RecursionStep ∧ AllPrimitiveCertificates
+
+end LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.PrimitiveRecursion.Targets

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperStatementChecks
+theorem actual_coefficient_collision_bound : ActiveHyperTargets.ActualCoefficientCollisionBound := ActiveHyperProof.actualCoefficientCollisionBound
+theorem actual_guard_bound : ActiveHyperTargets.ActualGuardBound := ActiveHyperProof.actualGuardBound
+theorem actual_finite_elimination : ActiveHyperTargets.ActualFiniteElimination := ActiveHyperProof.actualFiniteElimination
+theorem exact_support_reduction : ActiveHyperTargets.ExactSupportReduction := ActiveHyperProof.exactSupportReduction
+theorem actual_bound_program : ActiveHyperTargets.ActualBoundProgram := ActiveHyperProof.actualBoundProgram
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperStatementChecks

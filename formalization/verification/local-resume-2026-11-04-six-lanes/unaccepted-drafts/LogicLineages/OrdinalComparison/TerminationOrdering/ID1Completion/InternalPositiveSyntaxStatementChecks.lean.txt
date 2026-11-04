@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositivePredicateSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxStatementChecks
+theorem weakening_exact : InternalPositiveSyntaxPreflight.weakeningComparator :=
+  InternalPositiveSyntaxMapProof.actualWeakeningQuantifierSyntax
+theorem instantiate_exact : InternalPositiveSyntaxPreflight.instantiateComparator :=
+  InternalPositiveSyntaxMapProof.actualInstantiateLiftSyntax
+theorem identity_exact : InternalPositiveSyntaxPreflight.identityComparator :=
+  InternalPositivePredicateSyntaxProof.actualPredicateIdentitySyntax
+theorem body_exact : InternalPositiveSyntaxPreflight.bodyComparator :=
+  InternalPositivePredicateSyntaxProof.actualParameterBodySyntax
+#print axioms weakening_exact
+#print axioms instantiate_exact
+#print axioms identity_exact
+#print axioms body_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxStatementChecks

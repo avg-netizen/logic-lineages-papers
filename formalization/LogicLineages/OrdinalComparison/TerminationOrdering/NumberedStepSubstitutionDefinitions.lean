@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedArgumentSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSubstitution
+-- Existing WindowStep/WindowArgumentStep; substitution may collapse to equality.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSubstitution

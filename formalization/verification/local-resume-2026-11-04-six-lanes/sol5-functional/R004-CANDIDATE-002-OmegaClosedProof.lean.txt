@@ -1,0 +1,98 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSourceProof
+public import LogicLineages.OrdinalComparison.WWClosedPositiveEvaluationProof
+public import LogicLineages.OrdinalComparison.SourceFiniteExponentProjectionAlgebraProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.OmegaSeed.Proof
+open OriginalDomain ForwardTranslation
+open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+
+private def codeStep (t : ClosedPositive) : ClosedPositive := .emul .omega (.add .one (.add t t))
+private def exponentCode : ClosedPositive := codeStep (codeStep (.add .one .one))
+private def omegaCode : ClosedPositive := .emul exponentCode .one
+private def eNote : ONote := .oadd 1 10 1
+private def hNote : ONote := .oadd (ONote.ofNat 2) 10 ONote.omega
+private def oNote : ONote := .oadd eNote 1 .zero
+
+private def originalClosed (t : ClosedExpression) : OrdinalExpression [] :=
+  substitute (fun e : Empty => nomatch e) t
+
+private theorem evaluate_closed (t : ClosedExpression) (c : ClosedPositive)
+    (hc : extractPositive (originalClosed t) = some c) : c.evaluate.1.repr = closedValue t := by
+  have he := ForwardTranslation.closedPositiveEvaluationSound [] (originalClosed t) c hc
+    (fun _ => 1)
+  unfold originalClosed at he
+  rw [LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof.structuralSubstitution] at he
+  have hv : (fun e : Empty => denote (fun _ : OrdinalComponent [] => (1 : Ordinal))
+      ((fun e : Empty => nomatch e) e)) = (fun e : Empty => nomatch e) := by
+    funext e
+    exact Empty.elim e
+  rw [hv] at he
+  exact he
+
+private theorem exponent_note : exponent = hNote.repr := by
+  have he := evaluate_closed exponentExpression exponentCode (by rfl)
+  have hc : exponentCode.evaluate.1 = hNote := by decide
+  rw [hc] at he
+  exact he.symm
+
+private theorem omega_note : omega = oNote.repr := by
+  have he := evaluate_closed omegaExpression omegaCode (by rfl)
+  have hc : omegaCode.evaluate.1 = oNote := by decide
+  rw [hc] at he
+  exact he.symm
+
+private theorem exponent_explicit :
+    exponent = ordinalNaturalSum (ordinalNaturalProduct 10 (Ordinal.omega0^2)) Ordinal.omega0 := by
+  let ten : NONote := ⟨ONote.ofNat 10, by infer_instance⟩
+  let w2 : NONote := ⟨.oadd (ONote.ofNat 2) 1 .zero, by decide⟩
+  let w : NONote := ⟨ONote.omega, by decide⟩
+  have hs := naturalSumDenotation (naturalProduct ten w2) w
+  rw [naturalProductDenotation] at hs
+  have hc : (naturalSum (naturalProduct ten w2) w).1 = hNote := by decide
+  rw [hc] at hs
+  rw [exponent_note]
+  simpa [ten,w2,w,ONote.omega,ONote.repr,Ordinal.opow_natCast,pow_two] using hs
+
+private theorem e_explicit :
+    eNote.repr = ordinalNaturalSum (ordinalNaturalProduct 10 Ordinal.omega0) 1 := by
+  let ten : NONote := ⟨ONote.ofNat 10, by infer_instance⟩
+  let w : NONote := ⟨ONote.omega, by decide⟩
+  let one : NONote := ⟨1, ONote.nf_one⟩
+  have hs := naturalSumDenotation (naturalProduct ten w) one
+  rw [naturalProductDenotation] at hs
+  have hc : (naturalSum (naturalProduct ten w) one).1 = eNote := by decide
+  rw [hc] at hs
+  simpa [ten,w,one,ONote.omega,ONote.repr] using hs
+
+private theorem e_infinite : Ordinal.omega0 ≤ eNote.repr := by
+  have hten : (0 : Ordinal) < 10 := by exact_mod_cast (by decide : (0 : Nat)<10)
+  have h := (Ordinal.le_mul_left Ordinal.omega0 hten).trans
+    (show Ordinal.omega0*10 ≤ Ordinal.omega0*10+1 from le_self_add)
+  simpa [eNote,ONote.repr] using h
+
+private theorem principal_cnf (e : Ordinal) :
+    SignedPair.signedCNF (Ordinal.omega0^e) = Finsupp.single e 1 := by
+  have hc : Ordinal.CNF.coeff Ordinal.omega0 (Ordinal.omega0^e) = Finsupp.single e 1 := by
+    simpa using Ordinal.CNF.coeff_opow_mul_add (e:=e) (x:=1) (y:=0)
+      Ordinal.one_lt_omega0 (by simp) (by simpa using Ordinal.natCast_lt_omega0 1)
+      (Ordinal.opow_pos e Ordinal.omega0_pos)
+  ext f
+  rw [SignedPair.Proof.cnf_apply,hc]
+  by_cases he : e=f
+  · subst f
+    simp
+  · simp [Finsupp.single_apply,he,Ne.symm he]
+
+theorem exactClosedSeed : Targets.ExactClosedSeed := by
+  refine ⟨exponent_explicit, ?_, omega_graded, omega_positive, ?_⟩
+  · rw [omega_note]
+    change Ordinal.omega0^eNote.repr = _
+    rw [e_explicit]
+  · rw [omega_note]
+    change SourceFiniteExponentProjection.finitePart
+      (SignedPair.signedCNF (Ordinal.omega0^eNote.repr)) = 0
+    rw [principal_cnf]
+    exact SourceFiniteExponentProjection.Proof.exactCoefficients.2 _ _ e_infinite
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.OmegaSeed.Proof

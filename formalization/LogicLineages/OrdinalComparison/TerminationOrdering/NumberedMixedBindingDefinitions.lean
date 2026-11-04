@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingCompositionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMixedBinding
+-- Exact mixed naturality of existing auxiliary renaming and substitution.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMixedBinding

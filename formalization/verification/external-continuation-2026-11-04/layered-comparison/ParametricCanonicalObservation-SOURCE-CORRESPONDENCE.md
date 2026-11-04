@@ -1,0 +1,9 @@
+# Canonical observation under an independently characterized collapse
+
+Paper09 paper.tex lines 26–43 uses the literal zero-history assignment with natural ordinal operations and positive raw ground values. Paper05 foundations.tex lines 122–129 defines the norm-bounded maximum collapse; lines 312–334 fix the syntax-tree expansion policy and lines 340–369 specify the actual source assignment. This component holds that exact default assignment fixed and independently supplies the collapse c.
+
+The only hypothesis on c is ParametricActualCollapse.Equation G c, the actual maximum-predecessor characterization below epsilon zero. No relation is assumed outside epsilon zero. denoteUsing interprets the same ordinal expression constructors and differs from denoteWith G only in the collapse function. OmegaFreeTransport requires finite input values and omega-free syntax; every encountered collapse argument is a finite pair omega*a+b below epsilon zero, so accepted uniqueness applies. No global monotonicity, majorization, computability or arbitrary-ordinal extension is presumed.
+
+ActualAssignmentTransport uses the proved AllGround/Fragment successful assignment and omega-free invariant for every actual output coordinate. ScalarEquivalence identifies successful finite raw observations for that assignment; the natural environment is not shifted, and positive raw valuations are included as a special case. Zero natural inputs are permitted for this transport theorem alone.
+
+This is typed-source observation correspondence, not equality of numerical decision-language totalizations. Existing OriginalInput.CodedGood uses fixed Phi, a different tuple format and vacuous malformed-query behavior. The independently coded Gamma languages reject malformed codes; this distinction is retained. No whole-source theorem, register promotion, encoding translation or export is included.

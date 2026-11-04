@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepRenamingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepRenamingStatementChecks
+theorem fixedActualStepRenaming : NumberedStepRenamingTargets.ActualStepRenaming := NumberedStepRenamingProof.actualStepRenaming
+#print axioms fixedActualStepRenaming
+theorem fixedActualArgumentStepRenaming : NumberedStepRenamingTargets.ActualArgumentStepRenaming := NumberedStepRenamingProof.actualArgumentStepRenaming
+#print axioms fixedActualArgumentStepRenaming
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepRenamingStatementChecks

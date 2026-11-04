@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedLambdaRootProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedLambdaRootStatementChecks
+theorem fixedActualLambdaStepCases : NumberedLambdaRootTargets.ActualLambdaStepCases := NumberedLambdaRootProof.actualLambdaStepCases
+#print axioms fixedActualLambdaStepCases
+theorem fixedActualBetaApplicationStepCases : NumberedLambdaRootTargets.ActualBetaApplicationStepCases := NumberedLambdaRootProof.actualBetaApplicationStepCases
+#print axioms fixedActualBetaApplicationStepCases
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedLambdaRootStatementChecks

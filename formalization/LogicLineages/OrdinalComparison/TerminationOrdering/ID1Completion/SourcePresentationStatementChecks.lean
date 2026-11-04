@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationStatementChecks
+theorem presentation_exact : SourcePresentationPreflight.existenceComparator :=
+  SourcePresentationSupportProof.actualSourcePresentationExists
+theorem operator_exact : SourcePresentationPreflight.operatorComparator :=
+  SourcePresentationProof.actualClosedSourceOperator
+theorem formula_exact : SourcePresentationPreflight.formulaComparator :=
+  SourcePresentationProof.actualAllTermsFormulaTruth
+theorem soundness_exact : SourcePresentationPreflight.soundnessComparator :=
+  SourcePresentationProof.actualInternalSourceSoundness
+#print axioms presentation_exact
+#print axioms operator_exact
+#print axioms formula_exact
+#print axioms soundness_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationStatementChecks

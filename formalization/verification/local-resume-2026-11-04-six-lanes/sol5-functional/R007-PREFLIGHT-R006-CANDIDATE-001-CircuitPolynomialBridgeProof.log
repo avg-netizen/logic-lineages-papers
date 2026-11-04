@@ -1,0 +1,204 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:40:6: error: Tactic `assumption` failed
+
+case add
+n : ℕ
+x : Fin n → ZPolynomial
+a b : SignedPair.Expression n
+ha : (expressionPolynomial x a).toFinsupp = polynomialMeaning (fun i => (x i).toFinsupp) a
+hb : (expressionPolynomial x b).toFinsupp = polynomialMeaning (fun i => (x i).toFinsupp) b
+⊢ polynomialMeaning (fun i => (x i).toFinsupp) a + polynomialMeaning (fun i => (x i).toFinsupp) b =
+    polynomialMeaning (fun i => (x i).toFinsupp) a + polynomialMeaning (fun i => (x i).toFinsupp) b
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:42:6: error: Tactic `assumption` failed
+
+case neg
+n : ℕ
+x : Fin n → ZPolynomial
+a : SignedPair.Expression n
+ha : (expressionPolynomial x a).toFinsupp = polynomialMeaning (fun i => (x i).toFinsupp) a
+⊢ -polynomialMeaning (fun i => (x i).toFinsupp) a = -polynomialMeaning (fun i => (x i).toFinsupp) a
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:44:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:47:59: error: unsolved goals
+p : NPolynomial
+k : ℕ
+⊢ (map (Nat.castRingHom ℤ) p).toFinsupp k = ↑(p.toFinsupp k)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:49:34: warning: This simp argument is unused:
+  Polynomial.coeff_map
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵i̵g̵n̵e̵d̵,̵s̵i̵g̵n̵e̵d̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵s̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵c̵o̵e̵f̵f̵_̵m̵a̵p̵,̵F̵i̵n̵s̵u̵p̵p̵.̵m̵a̵p̵R̵a̵n̵g̵e̵_̵a̵p̵p̵l̵y̵]̵[̲s̲i̲g̲n̲e̲d̲,̲ ̲s̲i̲g̲n̲e̲d̲C̲o̲e̲f̲f̲i̲c̲i̲e̲n̲t̲s̲,̲ ̲F̲i̲n̲s̲u̲p̲p̲.̲m̲a̲p̲R̲a̲n̲g̲e̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:54:58: error: unsolved goals
+n : ℕ
+p : Fin n → NPolynomial
+d : SignedPair.Expression n
+⊢ polynomialMeaning (fun i => signedCoefficients (p i).toFinsupp) d = 0 ↔
+    polynomialMeaning (fun i => signedCoefficients (p i).toFinsupp) d = 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:93:37: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≤ -1
+where
+ a := Int.ofNat k
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:94:59: error(lean.unknownIdentifier): Unknown constant `Int.natAbs_ofNat`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:92:12: error: unsolved goals
+case ofNat.none
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : ¬Int.ofNat k < 0
+⊢ C ↑(Int.ofNat k).natAbs * X ^ p = X ^ p * C (Int.ofNat k)
+
+case ofNat.some
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : ¬Int.ofNat k < 0
+val✝ : Fin n
+⊢ C ↑(Int.ofNat k).natAbs * X ^ p * x val✝ = X ^ p * x val✝ * C (Int.ofNat k)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:97:14: error: unsolved goals
+case negSucc.none
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : Int.negSucc k < 0
+hc : Int.negSucc k = -↑(k + 1)
+⊢ expressionPolynomial x
+      (if -↑(1 + k) < 0 then
+        (SignedPair.repeatExpression (SignedPair.Expression.shift^[p] SignedPair.Expression.unit)
+            (-↑(1 + k)).natAbs).neg
+      else
+        SignedPair.repeatExpression (SignedPair.Expression.shift^[p] SignedPair.Expression.unit) (-↑(1 + k)).natAbs) =
+    -(C ↑(1 + k) * X ^ p)
+
+case negSucc.some
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : Int.negSucc k < 0
+hc : Int.negSucc k = -↑(k + 1)
+val✝ : Fin n
+⊢ expressionPolynomial x
+      (if -↑(1 + k) < 0 then
+        (SignedPair.repeatExpression (SignedPair.Expression.shift^[p] (SignedPair.Expression.var val✝))
+            (-↑(1 + k)).natAbs).neg
+      else
+        SignedPair.repeatExpression (SignedPair.Expression.shift^[p] (SignedPair.Expression.var val✝))
+          (-↑(1 + k)).natAbs) =
+    -(C ↑(1 + k) * X ^ p * x val✝)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:100:47: warning: This simp argument is unused:
+  hk
+
+Hint: Omit it from the simp argument list.
+  simp only [SignedPair.monomialExpression,h̵k̵,̵ ̲if_true, ̲expressionPolynomial,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵Int.natAbs_negSucc,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲repeat_polynomial, ̲shifted_polynomial, ̲hc, ̲Polynomial.C_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:100:50: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [SignedPair.monomialExpression, ̲hk,i̵f̵_̵t̵r̵u̵ ̲e,̵e̵xpressionPolynomial,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵Int.natAbs_negSucc,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲repeat_polynomial, ̲shifted_polynomial, ̲hc, ̲Polynomial.C_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:100:58: warning: This simp argument is unused:
+  expressionPolynomial
+
+Hint: Omit it from the simp argument list.
+  simp only [̵S̵i̵g̵n̵e̵d̵P̵a̵i̵r̵.̵m̵o̵n̵o̵m̵i̵a̵l̵E̵x̵p̵r̵e̵s̵s̵i̵o̵n̵,̵h̵k̵,̵i̵f̵_̵t̵r̵u̵e̵,̵e̵x̵p̵r̵e̵s̵s̵i̵o̵n̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵I̵n̵t̵.̵n̵a̵t̵A̵b̵s̵_̵n̵e̵g̵S̵u̵c̵c̵,̵r̵e̵p̵e̵a̵t̵_̵p̵o̵l̵y̵n̵o̵m̵i̵a̵l̵,̵s̵h̵i̵f̵t̵e̵d̵_̵p̵o̵l̵y̵n̵o̵m̵i̵a̵l̵,̵h̵c̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵C̵_̵n̵e̵g̵]̵[̲S̲i̲g̲n̲e̲d̲P̲a̲i̲r̲.̲m̲o̲n̲o̲m̲i̲a̲l̲E̲x̲p̲r̲e̲s̲s̲i̲o̲n̲,̲ ̲h̲k̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲I̲n̲t̲.̲n̲a̲t̲A̲b̲s̲_̲n̲e̲g̲S̲u̲c̲c̲,̲ ̲r̲e̲p̲e̲a̲t̲_̲p̲o̲l̲y̲n̲o̲m̲i̲a̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲h̲i̲f̲t̲e̲d̲_̲p̲o̲l̲y̲n̲o̲m̲i̲a̲l̲,̲ ̲h̲c̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲C̲_̲n̲e̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:101:8: warning: This simp argument is unused:
+  Int.natAbs_negSucc
+
+Hint: Omit it from the simp argument list.
+  simp only [SignedPair.monomialExpression, ̲hk, ̲if_true, ̲expressionPolynomial,
+          I̵n̵t̵.̵n̵a̵t̵A̵b̵s̵_̵n̵e̵g̵S̵u̵c̵c̵,̵repeat_polynomial, ̲shifted_polynomial, ̲hc, ̲Polynomial.C_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:101:27: warning: This simp argument is unused:
+  repeat_polynomial
+
+Hint: Omit it from the simp argument list.
+  simp only [SignedPair.monomialExpression, ̲hk, ̲if_true, ̲expressionPolynomial,
+          Int.natAbs_negSucc,r̵e̵p̵e̵a̵t̵_̵p̵o̵l̵y̵n̵o̵m̵i̵a̵l̵,̵ ̲shifted_polynomial, ̲hc, ̲Polynomial.C_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:101:45: warning: This simp argument is unused:
+  shifted_polynomial
+
+Hint: Omit it from the simp argument list.
+  simp only [SignedPair.monomialExpression, ̲hk, ̲if_true, ̲expressionPolynomial,
+          Int.natAbs_negSucc, ̲repeat_polynomial,s̵ ̲hi̵f̵t̵e̵d̵_̵p̵o̵l̵y̵n̵o̵m̵i̵a̵l̵,̵h̵c, ̲Polynomial.C_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:102:29: warning: This simp argument is unused:
+  expressionPolynomial
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵e̵x̵p̵r̵e̵s̵s̵i̵o̵n̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:112:6: error: Tactic `assumption` failed
+
+case cons
+n : ℕ
+x : Fin n → ZPolynomial
+m : SignedPair.Monomial n
+ms : List (SignedPair.Monomial n)
+ih :
+  expressionPolynomial x (SignedPair.fromMonomials ms) =
+    (List.map
+        (fun m =>
+          C m.coefficient * X ^ m.power *
+            match m.unknown with
+            | none => 1
+            | some i => x i)
+        ms).sum
+⊢ (C m.coefficient * X ^ m.power *
+        match m.unknown with
+        | none => 1
+        | some i => x i) +
+      expressionPolynomial x
+        (List.foldr (fun m a => (SignedPair.monomialExpression m).add a) SignedPair.zeroExpression ms) =
+    (C m.coefficient * X ^ m.power *
+        match m.unknown with
+        | none => 1
+        | some i => x i) +
+      (List.map
+          (fun m =>
+            C m.coefficient * X ^ m.power *
+              match m.unknown with
+              | none => 1
+              | some i => x i)
+          ms).sum

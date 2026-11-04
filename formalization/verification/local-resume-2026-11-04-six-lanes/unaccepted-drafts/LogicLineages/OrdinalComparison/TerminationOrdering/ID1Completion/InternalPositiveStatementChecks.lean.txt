@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveStatementChecks
+theorem monotonicity_exact : InternalPositivePreflight.monotonicityComparator :=
+  InternalPositiveProof.actualInternalPositiveMonotonicity
+theorem unfolding_exact : InternalPositivePreflight.unfoldingComparator :=
+  InternalPositiveProof.actualInternalReverseUnfolding
+theorem source_exact : InternalPositivePreflight.sourceComparator :=
+  InternalPositiveProof.actualSourceInternalReverseUnfolding
+#print axioms monotonicity_exact
+#print axioms unfolding_exact
+#print axioms source_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveStatementChecks

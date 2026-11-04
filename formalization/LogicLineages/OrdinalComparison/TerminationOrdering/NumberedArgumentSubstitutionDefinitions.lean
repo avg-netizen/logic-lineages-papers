@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSubstitutionCompositionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedArgumentSubstitution
+-- Actual applyArguments and numbered selfArguments, without unary simplification.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedArgumentSubstitution

@@ -1,0 +1,34 @@
+--- a/08-multivariate-collapse-comparison/paper.tex
++++ b/08-multivariate-collapse-comparison/paper.tex
+@@ -236,9 +236,9 @@
+ \section{Exact finite-degree prefix kernels}
+ The next class requires counters as well as terminal norms. A dominant
+ approximation would lose cancellations needed for multivariate comparison.
+-For integer $d\ge1$, retained norm $c\ge0$, and sufficiently large $t$, start
+-with suffix $\omega^d$, where $t\ge c+d+1$. At step $i\ge1$ use total
+-norm $f^i(t)$. If the nonfinite suffix is $\eta+n$, with nonzero limit
++For integer $d\ge1$, retained numerical norm $c\ge0$, and initial control
++input $t$ with $c\le f(t)$, start with suffix $\omega^d$.
++At step $i\ge1$ use total norm $f^i(t)$. If the nonfinite suffix is $\eta+n$, with nonzero limit
+ part $\eta$ and finite $n$, replace it by $M(\eta,f^i(t)-c)$: the greatest
+ suffix below its \emph{limit part} of norm at most $f^i(t)-c$.
+ This is the limit-part convention of the one-variable companion; taking
+@@ -252,6 +252,18 @@
+ The exact maximal-predecessor theorem in \cite{wwfoundations} supplies the
+ finite algorithm and full-budget saturation. The numerical definition makes
+ sense even for $c$ not realized by any actual ordinal prefix.
++It also permits $c>t$: the initial $t$ records the control input, rather
++than the norm $c+N(\omega^d)$ of the unpadded principal and numerical mass.
++The first replacement has suffix norm $f(t)-c$ by limit-part saturation,
++so its total norm is exactly $f(t)$; subsequent total norms are $f^i(t)$.
++Writing $Q=M(\omega^d,f(t)-c)$, the complete count is one plus the
++compensated controlled count starting at $Q$.
++
++When $t\ge c+d+1$, the numerical process agrees, from its first replacement
++through the first finite exit, with the companion's norm-padded startup
++$\omega^d+(t-c-N(\omega^d))$. This stronger condition is required for
++companion correspondence and the genuine-prefix interpretation; it is not
++imposed on the broader numerical process.
+ 
+ For a genuine prefix $\mu$ whose least CNF exponent is at least $d$, and
+ $c=N(\mu)$, splitting the controlled history gives

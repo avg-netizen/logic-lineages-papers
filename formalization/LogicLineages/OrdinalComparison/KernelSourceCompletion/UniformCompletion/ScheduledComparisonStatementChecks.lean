@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledWordTargetChecks
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+theorem scheduled_joint_order : Targets.ScheduledJointOrder := Proof.scheduledJointOrder
+theorem control_budget_shift_order : Targets.ControlBudgetShiftOrder := Proof.controlBudgetShiftOrder
+theorem source_input_mass_order : Targets.SourceInputMassOrder := Proof.sourceInputMassOrder
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion

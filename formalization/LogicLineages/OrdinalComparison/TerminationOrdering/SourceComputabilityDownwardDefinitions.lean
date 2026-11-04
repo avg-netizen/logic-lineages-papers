@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityLeastProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownward
+-- Actual semantic computability and encoded positive quotient relation are unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownward

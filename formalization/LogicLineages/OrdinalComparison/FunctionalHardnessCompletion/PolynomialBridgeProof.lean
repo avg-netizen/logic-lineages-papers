@@ -1,0 +1,74 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.PatternProof
+public import LogicLineages.OrdinalComparison.SourceFiniteExponentProjectionProof
+public import LogicLineages.OrdinalComparison.SourcePolynomialFamilyLiftProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Proof
+open SourcePolynomialRealization SourceFiniteExponentProjection OriginalDomain
+
+private noncomputable def polynomialEmbedding : PolynomialGroup →+ SignedPair.CantorGroup :=
+  Finsupp.mapDomain.addMonoidHom (fun n : Nat => (n : Ordinal))
+
+private theorem embedding_shift (p : PolynomialGroup) :
+    SignedPair.omegaShift (polynomialEmbedding p) = polynomialEmbedding (polynomialShift p) := by
+  change Finsupp.mapDomain (fun e : Ordinal => e+1)
+    (Finsupp.mapDomain (fun n : Nat => (n : Ordinal)) p) =
+    Finsupp.mapDomain (fun n : Nat => (n : Ordinal)) (Finsupp.mapDomain Nat.succ p)
+  rw [← Finsupp.mapDomain_comp, ← Finsupp.mapDomain_comp]
+  congr 1
+
+private theorem meaning_lift {n : Nat} (x : Fin n → Ordinal) (p : Fin n → PolynomialGroup)
+    (hp : ∀ i, SignedPair.signedCNF (x i) = polynomialEmbedding (p i))
+    (d : SignedPair.Expression n) :
+    SignedPair.meaning x d = polynomialEmbedding (polynomialMeaning p d) := by
+  induction d with
+  | unit =>
+      simpa [SignedPair.meaning, polynomialMeaning, polynomialEmbedding,
+        Finsupp.mapDomain.addMonoidHom] using SignedPair.Proof.cnf_nat 1
+  | var i => exact hp i
+  | add a b iha ihb =>
+      simp only [SignedPair.meaning, polynomialMeaning, iha, ihb, map_add]
+  | neg a ih => simp only [SignedPair.meaning, polynomialMeaning, ih, map_neg]
+  | shift a ih =>
+      simp only [SignedPair.meaning, polynomialMeaning, ih, embedding_shift]
+
+private noncomputable def projectedPolynomial (a : Ordinal) : NonnegativePolynomial :=
+  (finitePart (SignedPair.signedCNF a)).mapRange Int.toNat (by rfl)
+
+private theorem projected_coefficients (a : Ordinal) :
+    signedCoefficients (projectedPolynomial a) = finitePart (SignedPair.signedCNF a) := by
+  ext n
+  simp [signedCoefficients, projectedPolynomial, finitePart, SignedPair.signedCNF]
+
+theorem polynomial_to_actual {n : Nat} (s : System n) (p : Fin n → NonnegativePolynomial)
+    (hp : ∀ i, p i ≠ 0) (hs : PolynomialSolves s p) :
+    ∃ ρ : AdmissibleSubstitution (SignedPair.Context n), OrdinalSolves s ρ := by
+  obtain ⟨ρ, hρ⟩ := SourcePolynomialFamilyLift.Proof.signedInputCalibration n p hp
+  refine ⟨ρ, ?_⟩
+  intro d hd
+  rw [meaning_lift (SignedPair.inputs ρ) (fun i => signedCoefficients (p i))
+    (fun i => (hρ i).1) d, hs d hd, map_zero]
+
+private theorem actual_to_polynomial {n : Nat} (s : System n)
+    (ρ : AdmissibleSubstitution (SignedPair.Context n)) (hs : OrdinalSolves s ρ) :
+    PolynomialSolves s (fun i => projectedPolynomial (SignedPair.inputs ρ i)) := by
+  intro d hd
+  have he : (fun i => signedCoefficients (projectedPolynomial (SignedPair.inputs ρ i))) =
+      (fun i => finitePart (SignedPair.signedCNF (SignedPair.inputs ρ i))) :=
+    funext fun i => projected_coefficients _
+  rw [he, ← SourceFiniteExponentProjection.Proof.expressionTransport,
+    hs d hd]
+  exact SourceFiniteExponentProjection.Proof.signedOperations.1
+
+theorem simultaneousActualPatterns : Targets.SimultaneousActualPatterns := by
+  intro n s
+  constructor
+  · intro h
+    obtain ⟨z, hz, p, hp, hs⟩ := (simultaneousPolynomialPatterns n s).mp h
+    obtain ⟨ρ, hρ⟩ := polynomial_to_actual (restrictSystem z s) p hp hs
+    exact ⟨z, hz, ρ, hρ⟩
+  · rintro ⟨z, hz, ρ, hρ⟩
+    refine ⟨zeroExtend z (fun i => projectedPolynomial (SignedPair.inputs ρ i)), ?_⟩
+    exact (restrictSystem_solves z s _).mp (actual_to_polynomial _ ρ hρ)
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Proof

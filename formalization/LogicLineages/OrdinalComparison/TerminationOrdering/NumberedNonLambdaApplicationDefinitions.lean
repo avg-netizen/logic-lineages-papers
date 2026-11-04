@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryShapesProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaApplication
+-- Non-lambda application root steps and one actual quotient edge only.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaApplication

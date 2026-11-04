@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSchemasProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticLeastSchemas
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticLeastSchemas

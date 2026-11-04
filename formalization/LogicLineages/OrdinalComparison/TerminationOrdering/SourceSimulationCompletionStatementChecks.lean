@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSimulationCompletionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSimulationCompletionStatementChecks
+open SourceSimulationCompletionTargets
+
+theorem fixedFixedUniverseTranslationPrimitive : FixedUniverseTranslationPrimitive :=
+  SourceSimulationCompletionProof.fixedUniverseTranslationPrimitive
+theorem fixedNumericTranslationPrimitive : NumericTranslationPrimitive :=
+  SourceSimulationCompletionProof.numericTranslationPrimitive
+theorem fixedNumericTranslationCalibration : NumericTranslationCalibration :=
+  SourceSimulationCompletionProof.numericTranslationCalibration
+theorem fixedFixedUniverseSimulation : FixedUniverseSimulation :=
+  SourceSimulationCompletionProof.fixedUniverseSimulation
+theorem fixedArithmeticSimulation : ArithmeticSimulation :=
+  SourceSimulationCompletionProof.arithmeticSimulation
+
+#print axioms fixedFixedUniverseTranslationPrimitive
+#print axioms fixedNumericTranslationPrimitive
+#print axioms fixedNumericTranslationCalibration
+#print axioms fixedFixedUniverseSimulation
+#print axioms fixedArithmeticSimulation
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceSimulationCompletionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSimulationCompletionStatementChecks

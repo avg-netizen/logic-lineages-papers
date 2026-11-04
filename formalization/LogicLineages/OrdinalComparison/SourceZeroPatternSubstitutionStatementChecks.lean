@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceZeroPatternSubstitutionTargets
+public import LogicLineages.OrdinalComparison.SourceZeroPatternSubstitutionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceZeroPatternSubstitution.StatementChecks
+theorem exact_indices : Targets.ExactIndices := Proof.exactIndices
+theorem ordinal_meaning_transport : Targets.OrdinalMeaningTransport := Proof.ordinalMeaningTransport
+theorem polynomial_meaning_transport : Targets.PolynomialMeaningTransport := Proof.polynomialMeaningTransport
+end LogicLineages.OrdinalComparison.Source.SourceZeroPatternSubstitution.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceZeroPatternSubstitution

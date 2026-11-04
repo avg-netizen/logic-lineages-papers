@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricRestrictedSourceEvaluatorDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricRestrictedSourcePrimitive
+-- Use the unchanged checked Option evaluator.
+end LogicLineages.OrdinalComparison.Source.ParametricRestrictedSourcePrimitive

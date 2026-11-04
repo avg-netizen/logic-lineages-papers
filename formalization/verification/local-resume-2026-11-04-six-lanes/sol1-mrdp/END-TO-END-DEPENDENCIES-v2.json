@@ -1,0 +1,58 @@
+{
+  "final_exact_targets": [
+    "UniversalEvaluatorDiophantine",
+    "REPolynomialReduction",
+    "EncodedPolynomialUndecidable"
+  ],
+  "dependency_plan": [
+    {
+      "stage": "ordinary partial-code graph clauses",
+      "status": "target preflight passed; first candidate exact gate requested",
+      "content": "Actual Nat.pair/unpair; genuine partial pair/comp; all recursion-free Code graphs and finite polynomial-code representations."
+    },
+    {
+      "stage": "binomial graph",
+      "status": "unstarted",
+      "content": "Extract choose(n,k) as a base-2^(n+1) digit of (1+2^(n+1))^n, using already paid pow/div/mod and actual Nat.ofDigits/choose APIs."
+    },
+    {
+      "stage": "masking and sparse-cipher arithmetic",
+      "status": "unstarted",
+      "content": "Use pinned Mathlib Lucas theorem for bit-subset parity; represent sparse vectors in base2^(4q) with no overflow, then parallel elementary polynomial constraints."
+    },
+    {
+      "stage": "bounded universal closure",
+      "status": "unpaid",
+      "content": "Uniform variable bound, normalize finite polynomial codes to elementary constraints and existential sparse-cipher arithmetic; fixed finite conjunction is insufficient."
+    },
+    {
+      "stage": "actual ordinary primitive recursion",
+      "status": "unpaid",
+      "content": "Encode finite output traces with all intermediate graph atoms; bounded universal closure pays Code.prec and natural primitive-recursive graph induction."
+    },
+    {
+      "stage": "uniform original evaluator and RE representation",
+      "status": "unpaid",
+      "content": "Apply genuine primitive-recursive graph theorem to the ORIGINAL encoded evaln approximation and evaln_complete, existentially quantify k, preserve actual code encodings and output Option behavior."
+    },
+    {
+      "stage": "effective H10 specialization",
+      "status": "unpaid",
+      "content": "Choose ONE static universal polynomial, compute substitution of code/input parameters on actual polynomial codes, derive computable RE reductions and contradiction to original Mathlib halting_problem."
+    }
+  ],
+  "restrictions": [
+    "No cited MRDP theorem treated as imported proof",
+    "No arbitrary graph-proof to computable-code extraction",
+    "No oracle/class-field representation assumption",
+    "No power-graph re-proof",
+    "No full-source promotion from recursion-free clauses"
+  ],
+  "refined_universal_step": "After true variable bounded-universal closure proves graphs for ALL actual Code constructors, apply already checked Mathlib eval_part + exists_code to one fixed ordinary universal-evaluator code. Its graph supplies the jointly encoded universal graph via genuine Nat pairing, without extracting a code from arbitrary Dioph proofs or assuming uniform construction from separate per-code existentials.",
+  "current_progress": {
+    "ordinary_code_first_six": "root adopted",
+    "binomial_graph_five": "exact gate pass1793826019518367039-2; root review pending",
+    "masking_AND_four": "unchanged target preflight passed; repaired first candidate exact gate queued",
+    "bounded_universal_and_full_MRDP": "unpaid"
+  }
+}

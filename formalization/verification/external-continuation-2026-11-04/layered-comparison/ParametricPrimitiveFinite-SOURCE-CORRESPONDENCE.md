@@ -1,0 +1,9 @@
+# Finite primitive leaves and actual renaming
+
+This is a supporting obligation for paper09's literal arithmetic gadgets and conjunction aggregation (lem:aggregate), not a whole source theorem. The syntax is exactly the accepted PrimitiveLowering.Expr.term: port, successor applied to port, atomic eraser, and identity applied to zero. No arbitrary source is asserted to have a finite value.
+
+Every full ordinal component is interpreted as rho(c)+1. Exact raw values are respectively port.value+1, G(port.value+4)+1, G(3*a.value+b.value+8)+1, and G(6)+1. Existence includes the unchanged default-policy full assignment; uniqueness is an iff for all proposed natural raw values. Generic calibration assumes StrictMono G and n <= G n for every natural n. Actual Gamma specialization must discharge these hypotheses using accepted control results.
+
+The full-component renaming target requires the explicit equality nu(ordinalComponentRename r c)=rho(c) for every original component. It concerns actual OriginalTerm.rename and successful finite Scalar observations, in both directions. It imposes no growth hypothesis on G: substitution/assignment naturality are purely semantic. The separate DAG target uses actual ScopedDAG.renameInput and the existing ground-input convention, with functional natural components zero (raw ordinal one). It requires all ground inputs to agree through r, and does not silently generalize that convention to arbitrary functional valuations.
+
+These targets do not prove a Plan.compile finite-leaf invariant, halting-forest finiteness, unrestricted source finiteness, a universal/weak comparison, numeric encoding, complexity, or hardness. No manuscript, accepted supplier, or existing source semantics changes. Current suppliers include independently accepted private components; publication status is separate from proof acceptance. All four targets are proposed for exact review before comparator/freeze and candidate authoring.

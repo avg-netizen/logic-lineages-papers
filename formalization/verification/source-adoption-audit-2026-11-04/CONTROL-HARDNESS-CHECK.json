@@ -1,0 +1,51 @@
+{
+  "schema": "source-adoption-focused-check-v1",
+  "outcome": "PASS",
+  "recorded_at_utc": "2026-11-04T19:36:33.172646+00:00",
+  "source_statement": "09-canonical-source-expressivity:thm:control-hardness",
+  "module": "LogicLineages.OrdinalComparison.SourceControlHardnessBundleStatementChecks",
+  "native_receipt": "build-reports/1793820056340219633-3.json",
+  "native_receipt_sha256": "ae90265cd41bcfe1a77bab658d817d49773d6c16d46197ef167c9b0bfad1f505",
+  "portable_native_receipt": "CONTROL-HARDNESS-NATIVE-RECEIPT.json",
+  "gate_log": "CONTROL-HARDNESS-AXIOMS.txt",
+  "gate_log_sha256": "66a70c407e2f50ffc0adf88a77730f3b4e89c2fdcb790ee25ffbb59f17b29abd",
+  "source_sha256": {
+    "LogicLineages/OrdinalComparison/SourceControlHardnessBundleDefinitions.lean": "cda1915c0f89ca54115e80ff052ede2492a0d690719f78aca797527afcf92abe",
+    "LogicLineages/OrdinalComparison/SourceControlHardnessBundleTargets.lean": "d7e9f89642de25a6ef229d31e1d14f6c8967fb959206e6531f4f5b9601866238",
+    "LogicLineages/OrdinalComparison/SourceControlHardnessBundleProof.lean": "d7601fc2acc76216cc19615b8388240accab00ae61004d82aefee3f7f1343ea5",
+    "LogicLineages/OrdinalComparison/SourceControlHardnessBundleStatementChecks.lean": "20599796e2dcf00d33e8b79a4fa74ce5147ca8e25a06069590bfa496dd6ad729"
+  },
+  "axiom_reports": {
+    "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.canonical_observation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.explicit_enumeration_clock": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.fixed_control_hardness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "resource_profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "single_thread": true,
+    "upstream_cache_only": true
+  },
+  "newly_compiled_local_modules": 488,
+  "accepted_unchanged_cached_dependencies": true,
+  "elapsed_seconds": 791.689,
+  "policy_restored_exactly": true,
+  "full_root_or_ci": false,
+  "new_axioms_or_premises": false,
+  "scope": "Existing exact restricted fixed-b chosen-model control-hardness bundle, with independent language and canonical-observation source match. No unrestricted-language identity, runtime or full-root claim."
+}

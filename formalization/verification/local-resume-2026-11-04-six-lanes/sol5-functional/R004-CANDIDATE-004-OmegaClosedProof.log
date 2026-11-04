@@ -1,0 +1,59 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:35:47: error: unsolved goals
+he : (↑exponentCode.evaluate).repr = closedValue exponentExpression
+⊢ rawNaturalProduct (ONote.oadd 0 (Nat.succPNat 1) 0 ^ ONote.oadd 1 1 0)
+      (rawNaturalSum 1
+        (rawNaturalSum
+          (rawNaturalProduct (ONote.oadd 0 (Nat.succPNat 1) 0 ^ ONote.oadd 1 1 0)
+            (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))
+          (rawNaturalProduct (ONote.oadd 0 (Nat.succPNat 1) 0 ^ ONote.oadd 1 1 0)
+            (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1)))))) =
+    (ONote.oadd 0 (Nat.succPNat 1) 0).oadd 10 (ONote.oadd 1 1 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:46:44: error: unsolved goals
+he : (↑omegaCode.evaluate).repr = closedValue omegaExpression
+⊢ rawNaturalProduct
+      (ONote.oadd 0 (Nat.succPNat 1) 0 ^
+        rawNaturalProduct (ONote.oadd 0 (Nat.succPNat 1) 0 ^ ONote.oadd 1 1 0)
+          (rawNaturalSum 1
+            (rawNaturalSum
+              (rawNaturalProduct (ONote.oadd 0 (Nat.succPNat 1) 0 ^ ONote.oadd 1 1 0)
+                (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))
+              (rawNaturalProduct (ONote.oadd 0 (Nat.succPNat 1) 0 ^ ONote.oadd 1 1 0)
+                (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1)))))))
+      1 =
+    (ONote.oadd 1 10 1).oadd 1 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:62:64: error: unsolved goals
+ten : NONote := ⟨↑10, ⋯⟩
+w2 : NONote := ⟨(↑2).oadd 1 ONote.zero, ⋯⟩
+w : NONote := ⟨ONote.omega, ⋯⟩
+hs :
+  (↑(naturalSum (naturalProduct ten w2) w)).repr =
+    ordinalNaturalSum (ordinalNaturalProduct (↑ten).repr (↑w2).repr) (↑w).repr
+⊢ rawNaturalSum
+      (rawNaturalSum (rawNaturalSum ((rawNaturalSum 0 (ONote.oadd 0 (Nat.succPNat 1) 0)).oadd (Nat.succPNat 9) 0) 0) 0)
+      (ONote.oadd 1 1 0) =
+    (ONote.oadd 0 (Nat.succPNat 1) 0).oadd 10 (ONote.oadd 1 1 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:81:65: error: unsolved goals
+ten : NONote := ⟨↑10, ⋯⟩
+w : NONote := ⟨ONote.omega, ⋯⟩
+one : NONote := ⟨1, ONote.nf_one⟩
+hs :
+  (↑(naturalSum (naturalProduct ten w) one)).repr =
+    ordinalNaturalSum (ordinalNaturalProduct (↑ten).repr (↑w).repr) (↑one).repr
+⊢ rawNaturalSum (rawNaturalSum (rawNaturalSum ((rawNaturalSum 0 1).oadd (Nat.succPNat 9) 0) 0) 0) 1 = ONote.oadd 1 10 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:97:42: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:105:10: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵h̵e̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲e̲,̲ ̲N̲e̲.̲s̲y̲m̲m̲ he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:105:31: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [Finsupp.single_apply,h̵e̵,̵ ̲Ne.symm he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

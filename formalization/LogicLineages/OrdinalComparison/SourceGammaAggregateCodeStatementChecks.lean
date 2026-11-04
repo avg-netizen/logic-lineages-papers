@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaAggregateCodeTargets
+public import LogicLineages.OrdinalComparison.SourceGammaAggregateCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaAggregateCode.StatementChecks
+theorem exact_literal_codes : Targets.ExactLiteralCodes := Proof.exactLiteralCodes
+theorem exact_aggregate_code : Targets.ExactAggregateCode := Proof.exactAggregateCode
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceGammaAggregateCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaAggregateCode

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricRestrictedSourcePrimitiveTargets
+public import LogicLineages.OrdinalComparison.ParametricRestrictedSourceEvaluatorTargets
+public import LogicLineages.OrdinalComparison.ParametricFiniteCoefficientTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceControlPrimitiveEvaluation
+-- Separate addendum; historical source-control bundle remains unchanged.
+end LogicLineages.OrdinalComparison.Source.SourceControlPrimitiveEvaluation

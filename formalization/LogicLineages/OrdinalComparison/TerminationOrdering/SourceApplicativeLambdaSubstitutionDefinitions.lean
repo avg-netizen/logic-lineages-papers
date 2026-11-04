@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaEnvironmentProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceConditionalLambdaProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityLeastProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceApplicativeLambdaSubstitution
+-- Existing literal applicative fragment and actual substitution, unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceApplicativeLambdaSubstitution

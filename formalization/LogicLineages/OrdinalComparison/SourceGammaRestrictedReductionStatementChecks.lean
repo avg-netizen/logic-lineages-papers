@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaRestrictedReductionTargets
+public import LogicLineages.OrdinalComparison.SourceGammaRestrictedReductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaRestrictedReduction.StatementChecks
+theorem exact_syntax_class : Targets.ExactSyntaxClass := Proof.exactSyntaxClass
+theorem generated_range : Targets.GeneratedRange := Proof.generatedRange
+theorem restricted_many_one_reduction : Targets.RestrictedManyOneReduction := Proof.restrictedManyOneReduction
+end LogicLineages.OrdinalComparison.Source.SourceGammaRestrictedReduction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaRestrictedReduction

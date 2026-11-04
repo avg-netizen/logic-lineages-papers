@@ -1,0 +1,74 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaPairProof.lean:13:43: error: unsolved goals
+Γ : List Ty
+hv : OrdinalVector Γ 2
+av : OrdinalVector Γ 1
+⊢ hv ⟨2, ⋯⟩ = hv 2 ∧ hv ⟨1, ⋯⟩ = hv 1 ∧ av ⟨1, ⋯⟩ = av 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaPairProof.lean:24:4: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  application OrdinalSyntax.defaultPolicy ?hv ?av 1
+in the target expression
+  expressionValue ρ (application OrdinalSyntax.defaultPolicy hv av 1) =
+    ordinalNaturalProduct omega (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ a))
+
+Γ : List Ty
+ρ : AdmissibleSubstitution Γ
+hv : OrdinalVector Γ 2
+hh : assignment OrdinalSyntax.defaultPolicy source = some hv
+a : OriginalTerm Γ unary
+av : OrdinalVector Γ 1
+ha : assignment OrdinalSyntax.defaultPolicy a = some av
+left✝ : expressionValue ρ (av 0) = ↑(value0 ρ a)
+ha1 : expressionValue ρ (av 1) = value1 ρ a
+⊢ expressionValue ρ (application OrdinalSyntax.defaultPolicy hv av 1) =
+    ordinalNaturalProduct omega (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ a))
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    hv
+  has type
+    OrdinalVector Γ 2
+  but is expected to have type
+    OrdinalVector Γ (unary.arrow unary).level
+  in the application
+    application OrdinalSyntax.defaultPolicy hv
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaPairProof.lean:58:4: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  signedCNF
+    (ordinalNaturalProduct (Ordinal.omega0 ^ (↑e).repr)
+      (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.1)))
+in the target expression
+  signedCNF
+        (ordinalNaturalProduct (Ordinal.omega0 ^ (↑e).repr)
+          (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.1))) -
+      signedCNF
+        (ordinalNaturalProduct (Ordinal.omega0 ^ (↑e).repr)
+          (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.2))) =
+    2 ^ 12 • signedCNF (Ordinal.omega0 ^ (↑e).repr)
+
+Γ : List Ty
+ρ : AdmissibleSubstitution Γ
+hv : OrdinalVector Γ higherUnary.level
+hh : assignment OrdinalSyntax.defaultPolicy source = some hv
+right✝ : ∀ (j : Fin (higherUnary.level + 1)), GeneratedOrdinalGrade Γ (↑j) (hv j)
+e : NONote
+he : omega = Ordinal.omega0 ^ (↑e).repr
+hcommon : expressionValue ρ (hv 1) < epsilonZero
+hfirst : ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.1) < epsilonZero
+hsecond : ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.2) < epsilonZero
+⊢ signedCNF
+        (ordinalNaturalProduct (Ordinal.omega0 ^ (↑e).repr)
+          (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.1))) -
+      signedCNF
+        (ordinalNaturalProduct (Ordinal.omega0 ^ (↑e).repr)
+          (ordinalNaturalSum (expressionValue ρ (hv 1)) (value1 ρ unitPair.2))) =
+    2 ^ 12 • signedCNF (Ordinal.omega0 ^ (↑e).repr)
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    e
+  has type
+    NONote
+  but is expected to have type
+    { o // o.NF }
+  in the application
+    ↑e

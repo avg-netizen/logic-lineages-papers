@@ -1,0 +1,51 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean:24:24: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(?m * ?n)
+in the target expression
+  X * (X ^ n - C ↑(2 ^ n)) + (X - 2) * C ↑(2 ^ n) = X ^ n * X - C ↑(2 ^ (n + 1))
+
+n : ℕ
+ih : (X - 2) * signed (atTwoPower n) = X ^ n - C ↑(2 ^ n)
+hc : signed (atTwoPower (n + 1)) = X * signed (atTwoPower n) + C ↑(2 ^ n)
+⊢ X * (X ^ n - C ↑(2 ^ n)) + (X - 2) * C ↑(2 ^ n) = X ^ n * X - C ↑(2 ^ (n + 1))
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean:42:17: error: unsolved goals
+case monomial
+n c : ℕ
+hq : atTwoQuotient ((monomial n) c) = C c * atTwoPower n
+⊢ C ↑c * X ^ n - C ↑c * C ↑(2 ^ n) = C ↑c * X ^ n - C ↑c * C (2 ^ n)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean:80:10: error: 'change' tactic failed, pattern
+  C ↑c * X ^ n * (X ^ n - 1) = C ↑c * (X ^ 2) ^ n - (monomial n) ↑c
+is not definitionally equal to target
+  C ↑c * X ^ n * (X ^ n - 1) = map (Nat.castRingHom ℤ) (C c * (X ^ 2) ^ n) - (monomial n) ((Nat.castRingHom ℤ) c)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean:78:28: warning: This simp argument is unused:
+  Polynomial.map_comp
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵i̵g̵n̵e̵d̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵c̵o̵m̵p̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵m̵o̵n̵o̵m̵i̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵p̵o̵w̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵X̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵o̵n̵o̵m̵i̵a̵l̵_̵c̵o̵m̵p̵]̵[̲s̲i̲g̲n̲e̲d̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲m̲o̲n̲o̲m̲i̲a̲l̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲p̲o̲w̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲X̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲o̲n̲o̲m̲i̲a̲l̲_̲c̲o̲m̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean:79:12: warning: This simp argument is unused:
+  Polynomial.map_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵i̵g̵n̵e̵d̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵c̵o̵m̵p̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵m̵o̵n̵o̵m̵i̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵p̵o̵w̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵X̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵o̵n̵o̵m̵i̵a̵l̵_̵c̵o̵m̵p̵]̵[̲s̲i̲g̲n̲e̲d̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲c̲o̲m̲p̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲m̲o̲n̲o̲m̲i̲a̲l̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲X̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲o̲n̲o̲m̲i̲a̲l̲_̲c̲o̲m̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean:79:31: warning: This simp argument is unused:
+  Polynomial.map_X
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵i̵g̵n̵e̵d̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵c̵o̵m̵p̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵m̵o̵n̵o̵m̵i̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵p̵o̵w̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵a̵p̵_̵X̵,̵P̵o̵l̵y̵n̵o̵m̵i̵a̵l̵.̵m̵o̵n̵o̵m̵i̵a̵l̵_̵c̵o̵m̵p̵]̵[̲s̲i̲g̲n̲e̲d̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲c̲o̲m̲p̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲m̲o̲n̲o̲m̲i̲a̲l̲,̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲a̲p̲_̲p̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲P̲o̲l̲y̲n̲o̲m̲i̲a̲l̲.̲m̲o̲n̲o̲m̲i̲a̲l̲_̲c̲o̲m̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,39 @@
+{
+  "status": "supporting-component-adopted",
+  "reviewer": "codex-main",
+  "reviewed_at_utc": "2026-11-04T21:21:49.010478+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks",
+  "source_pins": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BinomialTargets.lean": "1bc41d09a82325fbe7067c472df2fa090f8540de8f8b0ee7f692f8abe35ebf3d",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BinomialProof.lean": "9c26f25349016372cbe9fd0ad583795e73a0969c471be1d83d04ad14ff348852",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BinomialStatementChecks.lean": "fd8abad7a7637286148c9f51c92d2e9e76d969ad9ebe761bfb87e44a25a39d48"
+  },
+  "axiom_reports": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks.fixedBinomialDigitReconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks.fixedNaturalDigitExtraction": [
+      "propext"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks.fixedBinomialDigitExtraction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks.fixedBinomialDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks.fixedBinomialPolynomialRepresentation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "verification_receipt": "build-reports/1793826019518367039-2.json",
+  "scope": "Full natural binomial graph via actual digit reconstruction/extraction, including zero and k>n, plus actual polynomial-Code representation. Full MRDP, variable bounded-universal closure and H10 undecidability remain pending.",
+  "whole_source_promotions": 0
+}

@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryLambdaBodyProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedLambdaRootProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBetaApplicationEdge
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBetaApplicationEdge

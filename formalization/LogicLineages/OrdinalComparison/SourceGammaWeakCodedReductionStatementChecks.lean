@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaWeakCodedReductionTargets
+public import LogicLineages.OrdinalComparison.SourceGammaWeakCodedReductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaWeakCodedReduction.StatementChecks
+theorem canonical_adequacy : Targets.CanonicalAdequacy := Proof.canonicalAdequacy
+theorem exact_generated_query : Targets.ExactGeneratedQuery := Proof.exactGeneratedQuery
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+theorem fixed_nonhalting_reduction : Targets.FixedNonhaltingReduction := Proof.fixedNonhaltingReduction
+end LogicLineages.OrdinalComparison.Source.SourceGammaWeakCodedReduction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaWeakCodedReduction

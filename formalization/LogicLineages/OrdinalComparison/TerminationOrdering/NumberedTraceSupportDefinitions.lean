@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceRenamingProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceSupport
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceSupport

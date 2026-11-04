@@ -1,0 +1,96 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientCalibrationProof
+open Source NumberedUniformPackedDecoding ContextUniformQuotient
+
+theorem edgeCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y certificate : Nat) :
+    edgeTest n arity symbols S Gamma table x y certificate =
+      NumberedNumericQuotientEdge.numericEdgeTest n arity symbols S Gamma table x y certificate := by
+  unfold edgeTest NumberedNumericQuotientEdge.numericEdgeTest
+  dsimp only
+  rw [NumberedUniformPackedDecodingProof.rawUniverseCalibration,
+    NumberedUniformPackedDecodingProof.rawPackedCalibration]
+  cases hq : NumberedNumericCarrier.decodeUniverse n arity symbols S Gamma (Nat.unpair certificate).1 with
+  | none => rfl
+  | some q =>
+    cases hr : NumberedNumericDecoding.decodePackedNumber n arity Gamma
+        (Nat.unpair (Nat.unpair certificate).2).1 with
+    | none => rfl
+    | some r =>
+      dsimp only [Option.map]
+      rw [ContextUniformPrimaryCalibrationProof.actualRawRepresentativeCalibration n arity symbols S Gamma q,
+        ContextUniformPrimaryCalibrationProof.actualRawRepresentativeCalibration n arity symbols S Gamma r]
+
+theorem pathCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y : Nat) (entries : List NumberedQuotientPathCertificates.EdgeEntry) :
+    pathTest n arity symbols S Gamma table x y entries =
+      NumberedQuotientPathCertificates.pathTest n arity symbols S Gamma table x y entries := by
+  induction entries generalizing x with
+  | nil => rfl
+  | cons entry entries ih =>
+    rcases entry with ⟨z,c⟩
+    simp only [pathTest,NumberedQuotientPathCertificates.pathTest,edgeCalibration,ih]
+
+theorem positiveCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y certificate : Nat) :
+    positiveTest n arity symbols S Gamma table x y certificate =
+      NumberedQuotientPathCertificates.positivePathTest n arity symbols S Gamma table x y certificate := by
+  unfold positiveTest NumberedQuotientPathCertificates.positivePathTest
+  cases hd : NumberedQuotientPathCertificates.decodePathCertificate certificate with
+  | none => rfl
+  | some entries =>
+    cases entries with
+    | nil => rfl
+    | cons entry entries => exact pathCalibration n arity symbols S Gamma table x y (entry::entries)
+
+theorem dominationCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (removed inserted : List Nat)
+    (entries : List QuotientDominationCertificates.Entry) :
+    dominationTest n arity symbols S Gamma table removed inserted entries =
+      QuotientDominationCertificates.test n arity symbols S Gamma table removed inserted entries := by
+  induction inserted generalizing entries with
+  | nil => cases entries <;> rfl
+  | cons y ys ih =>
+    cases entries with
+    | nil => rfl
+    | cons entry entries =>
+      rcases entry with ⟨index,c⟩
+      simp only [dominationTest,QuotientDominationCertificates.test]
+      cases h : removed[index]? with
+      | none => rfl
+      | some z =>
+        dsimp only
+        rw [positiveCalibration,ih]
+
+theorem directCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (source target : List Nat) (c : QuotientDirectCertificates.Certificate) :
+    directTest n arity symbols S Gamma table source target c =
+      QuotientDirectCertificates.directTest n arity symbols S Gamma table source target c := by
+  unfold directTest QuotientDirectCertificates.directTest
+  rw [dominationCalibration]
+
+theorem numericDirectCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y certificate : Nat) :
+    numericDirectTest n arity symbols S Gamma table x y certificate =
+      QuotientDirectCertificates.numericTest n arity symbols S Gamma table x y certificate := by
+  unfold numericDirectTest QuotientDirectCertificates.numericTest
+  cases hs : Encodable.decode (α := List Nat) x with
+  | none => rfl
+  | some source =>
+    cases ht : Encodable.decode (α := List Nat) y with
+    | none => rfl
+    | some target =>
+      cases hc : Encodable.decode (α := QuotientDirectCertificates.Certificate) certificate with
+      | none => rfl
+      | some c => exact directCalibration n arity symbols S Gamma table source target c
+
+theorem actualJointCertificateCalibration : ContextUniformQuotientTargets.ActualJointCertificateCalibration := by
+  intro n arity symbols S Gamma table x y certificate
+  exact ⟨edgeCalibration n arity symbols S Gamma table x y certificate,
+    positiveCalibration n arity symbols S Gamma table x y certificate,
+    numericDirectCalibration n arity symbols S Gamma table x y certificate⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientCalibrationProof

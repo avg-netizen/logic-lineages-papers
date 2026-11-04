@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetAccessibilityTransferProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceDirectAccessibility
+-- Uses the existing literal quotient relation, context decoder, and encodedDirect.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceDirectAccessibility

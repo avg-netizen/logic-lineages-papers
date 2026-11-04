@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceWeakeningLeastProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundWeakening
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundWeakening

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachinePlanFragmentTargets
+public import LogicLineages.OrdinalComparison.SourceMachinePlanFragmentProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachinePlanFragment.StatementChecks
+theorem rename_preservation : Targets.RenamePreservation := Proof.renamePreservation
+theorem constructor_preservation : Targets.ConstructorPreservation := Proof.constructorPreservation
+theorem compiler_preservation : Targets.CompilerPreservation := Proof.compilerPreservation
+theorem actual_aggregate_fragment : Targets.ActualAggregateFragment := Proof.actualAggregateFragment
+end LogicLineages.OrdinalComparison.Source.SourceMachinePlanFragment.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceMachinePlanFragment

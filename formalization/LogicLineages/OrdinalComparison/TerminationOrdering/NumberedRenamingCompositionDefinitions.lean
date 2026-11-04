@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingComposition
+-- Literal existing auxiliary renaming; no substitution or reduction definition.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingComposition

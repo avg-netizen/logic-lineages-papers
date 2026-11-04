@@ -1,0 +1,112 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientDirectFoldDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientPathPrimitiveProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientDirectPrimitiveProof
+open Source ContextUniformQuotient ContextUniformQuotientDirectFold
+open QuotientDominationCertificates (Entry)
+open QuotientDirectCertificates (Certificate)
+
+attribute [local irreducible] Primrec
+
+theorem witnessPrimitive (n : Nat) (arity : Fin n → Nat) :
+    Primrec (fun p : Context n × Nat × Entry => witness n arity p.1 p.2.1 p.2.2) := by
+  let Input := Context n × Nat × Entry
+  have hl : Primrec (fun p : Input => p.1.2[p.2.2.1]?) :=
+    Primrec.list_getElem?.comp (Primrec.snd.comp Primrec.fst)
+      (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))
+  have hp : Primrec (fun p : Input × Nat => p.1.1.1) :=
+    Primrec.fst.comp (Primrec.fst.comp Primrec.fst)
+  have hy : Primrec (fun p : Input × Nat => p.1.2.1) :=
+    Primrec.fst.comp (Primrec.snd.comp Primrec.fst)
+  have hc : Primrec (fun p : Input × Nat => p.1.2.2.2) :=
+    Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))
+  have hb := (ContextUniformQuotientPathPrimitiveProof.actualJointPositivePrimitive n arity).comp
+    (hp.pair (Primrec.snd.pair (hy.pair hc)))
+  exact (NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive hl hb.to₂).of_eq (by intro p; rfl)
+
+theorem stepPrimitive (n : Nat) (arity : Fin n → Nat) :
+    Primrec (fun p : Context n × (List Nat × Bool) × Entry => step n arity p.1 p.2.1 p.2.2) := by
+  let Input := Context n × (List Nat × Bool) × Entry
+  have ht : Primrec (fun p : Input => p.2.1.1.tail) :=
+    Primrec.list_tail.comp (Primrec.fst.comp (Primrec.fst.comp Primrec.snd))
+  have hh : Primrec (fun p : Input => p.2.1.1.head?) :=
+    Primrec.list_head?.comp (Primrec.fst.comp (Primrec.fst.comp Primrec.snd))
+  have hw : Primrec (fun p : Input × Nat => witness n arity p.1.1 p.2 p.1.2.2) := (witnessPrimitive n arity).comp
+    ((Primrec.fst.comp Primrec.fst).pair
+      (Primrec.snd.pair (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))))
+  have hb := NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive hh hw.to₂
+  exact (ht.pair (Primrec.and.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.snd)) hb)).of_eq
+    (by intro p; rfl)
+
+theorem foldCalibration (n : Nat) (arity : Fin n → Nat) (ctx : Context n)
+    (inserted : List Nat) (entries : List Entry) (ok : Bool) :
+    finish (entries.foldl (step n arity ctx) (inserted,ok)) =
+      (ok && dominationTest n arity ctx.1.1.1.1 ctx.1.1.1.2 ctx.1.1.2 ctx.1.2 ctx.2 inserted entries) := by
+  induction entries generalizing inserted ok with
+  | nil => cases inserted <;> cases ok <;> rfl
+  | cons entry entries ih =>
+    rcases entry with ⟨index,c⟩
+    cases inserted with
+    | nil => simpa [List.foldl_cons,step,finish,dominationTest] using ih [] false
+    | cons y ys =>
+      simp only [List.foldl_cons,step,List.tail_cons,List.head?_cons,Option.any_some]
+      rw [ih]
+      cases h : ctx.2[index]? with
+      | none => simp [witness,h,dominationTest]
+      | some z => simp [witness,h,dominationTest,Bool.and_assoc]
+
+theorem dominationPrimitive (n : Nat) (arity : Fin n → Nat) :
+    Primrec (fun p : Parameters n × List Nat × List Nat × List Entry =>
+      dominationTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2) := by
+  let Input := Parameters n × List Nat × List Nat × List Entry
+  have hc : Primrec (fun p : Input => (p.1,p.2.1)) := Primrec.fst.pair (Primrec.fst.comp Primrec.snd)
+  have hs := (stepPrimitive n arity).comp ((hc.comp Primrec.fst).pair Primrec.snd)
+  have hf : Primrec (fun p : Input => p.2.2.2.foldl (step n arity (p.1,p.2.1)) (p.2.2.1,true)) :=
+    Primrec.list_foldl (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+      ((Primrec.fst.comp (Primrec.snd.comp Primrec.snd)).pair (Primrec.const true)) hs.to₂
+  have hend : Primrec finish :=
+    Primrec.and.comp (Primrec.eq.comp Primrec.fst (Primrec.const [])).decide Primrec.snd
+  exact (hend.comp hf).of_eq (by
+    intro p
+    simpa only [Bool.true_and] using foldCalibration n arity (p.1,p.2.1) p.2.2.1 p.2.2.2 true)
+
+theorem directPrimitive (n : Nat) (arity : Fin n → Nat) :
+    Primrec (fun p : Parameters n × List Nat × List Nat × Certificate =>
+      directTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2) := by
+  let Input := Parameters n × List Nat × List Nat × Certificate
+  have hc : Primrec (fun p : Input => p.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  have hk := Primrec.fst.comp (Primrec.fst.comp hc)
+  have hr := Primrec.fst.comp (Primrec.snd.comp (Primrec.fst.comp hc))
+  have hi := Primrec.snd.comp (Primrec.snd.comp (Primrec.fst.comp hc))
+  have he := Primrec.snd.comp hc
+  have hp := NumberedExchangeGuardsPrimrecProof.permutationPrimitive Nat
+  have hsource := hp.comp ((Primrec.fst.comp Primrec.snd).pair (Primrec.list_append.comp hk hr))
+  have htarget := hp.comp ((Primrec.fst.comp (Primrec.snd.comp Primrec.snd)).pair (Primrec.list_append.comp hk hi))
+  have hn := (Primrec.eq.comp hr (Primrec.const [])).not.decide
+  have hd := (dominationPrimitive n arity).comp (Primrec.fst.pair (hr.pair (hi.pair he)))
+  exact (Primrec.and.comp (Primrec.and.comp hsource (Primrec.and.comp htarget hn)) hd).of_eq (by
+    intro p
+    simp only [directTest,Bool.decide_and])
+
+theorem actualJointDirectPrimitive : ContextUniformQuotientTargets.ActualJointDirectPrimitive := by
+  intro n arity
+  let Input := Parameters n × Nat × Nat × Nat
+  have hs : Primrec (fun p : Input => Encodable.decode (α := List Nat) p.2.1) :=
+    Primrec.decode.comp (Primrec.fst.comp Primrec.snd)
+  have ht : Primrec (fun p : Input => Encodable.decode (α := List Nat) p.2.2.1) :=
+    Primrec.decode.comp (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))
+  have hc : Primrec (fun p : Input => Encodable.decode (α := Certificate) p.2.2.2) :=
+    Primrec.decode.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have hb : Primrec (fun p : ((Input × List Nat) × List Nat) × Certificate => p.1.1.1) :=
+    Primrec.fst.comp (Primrec.fst.comp Primrec.fst)
+  have hd := (directPrimitive n arity).comp
+    ((Primrec.fst.comp hb).pair ((Primrec.snd.comp (Primrec.fst.comp Primrec.fst)).pair
+      ((Primrec.snd.comp Primrec.fst).pair Primrec.snd)))
+  have hcertificate := NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive
+    (hc.comp (Primrec.fst.comp Primrec.fst)) hd.to₂
+  have htarget := NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive
+    (ht.comp Primrec.fst) hcertificate.to₂
+  exact (NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive hs htarget.to₂).of_eq (by intro p; rfl)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientDirectPrimitiveProof

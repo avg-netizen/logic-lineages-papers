@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceWeakeningLeastProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceWeakeningLeastStatementChecks
+theorem fixedActualScalarLeastWeakening : SourceWeakeningLeastTargets.ActualScalarLeastWeakening := SourceWeakeningLeastProof.actualScalarLeastWeakening
+#print axioms fixedActualScalarLeastWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceWeakeningLeastStatementChecks

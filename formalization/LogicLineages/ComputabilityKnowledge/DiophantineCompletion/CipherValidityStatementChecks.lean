@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityStatementChecks
+open CipherTargets
+
+theorem fixedCipherValidityCharacterization : CipherValidityCharacterization :=
+  CipherValidityProof.cipherValidityCharacterization
+
+#print axioms fixedCipherValidityCharacterization
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityStatementChecks

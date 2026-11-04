@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SystemAssemblyProof
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SystemBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SystemStatementChecks
+theorem valuation_preserving_system : SystemSourceTargets.ValuationPreservingSystem :=
+  SystemProof.valuationPreservingSystem
+theorem system_equality : SystemSourceTargets.SystemEquality := SystemProof.systemEquality
+theorem strict_query_complements : SystemSourceTargets.QueryComplements := SystemProof.queryComplements
+theorem weak_query_complements : SystemSourceTargets.WeakQueryComplements := SystemProof.weakQueryComplements
+theorem level_two_bounds : SystemSourceTargets.LevelTwoBounds := SystemProof.levelTwoBounds
+theorem polynomial_query_reduction : SystemSourceTargets.PolynomialQueryReduction :=
+  SystemProof.polynomialQueryReduction
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SystemStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion

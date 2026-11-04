@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceControlHardnessBundleTargets
+public import LogicLineages.OrdinalComparison.SourceControlHardnessBundleProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks
+theorem explicit_enumeration_clock : Targets.ExplicitEnumerationClock := Proof.explicitEnumerationClock
+theorem fixed_control_hardness : Targets.FixedControlHardness := Proof.fixedControlHardness
+theorem canonical_observation : Targets.CanonicalObservation := Proof.canonicalObservation
+end LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle

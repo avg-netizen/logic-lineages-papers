@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaPathsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownwardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceNeutralExpansion
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceNeutralExpansion

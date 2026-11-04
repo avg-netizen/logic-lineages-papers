@@ -1,0 +1,90 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTermProof
+open FirstOrder Language
+
+theorem termSubstRelabel {L : Language} {α β γ : Type} (t : L.Term α) (f : α → β)
+    (s : β → L.Term γ) : (t.relabel f).subst s = t.subst (s ∘ f) := by
+  induction t with
+  | var a => rfl
+  | func g ts ih => simp [Term.relabel,Term.subst,ih]
+
+theorem termRelabelSubst {L : Language} {α β γ : Type} (t : L.Term α)
+    (s : α → L.Term β) (f : β → γ) :
+    (t.subst s).relabel f = t.subst (fun a => (s a).relabel f) := by
+  induction t with
+  | var a => rfl
+  | func g ts ih => simp [Term.relabel,Term.subst,ih]
+
+theorem termSubstCompose {L : Language} {α β γ : Type} (t : L.Term α)
+    (s : α → L.Term β) (r : β → L.Term γ) :
+    (t.subst s).subst r = t.subst (fun a => (s a).subst r) := by
+  induction t with
+  | var a => rfl
+  | func g ts ih => simp [Term.subst,ih]
+
+theorem termSubstVariables {L : Language} {α : Type} (t : L.Term α) :
+    t.subst Term.var = t := by
+  induction t with
+  | var a => rfl
+  | func g ts ih => simp [Term.subst,ih]
+
+theorem termRelabelAsSubst {L : Language} {α β : Type} (t : L.Term α) (f : α → β) :
+    t.relabel f = t.subst (Term.var ∘ f) := by
+  induction t with
+  | var a => rfl
+  | func g ts ih => simp [Term.relabel,Term.subst,ih]
+
+theorem onTermSubst {L L' : Language} {α β : Type} (g : L →ᴸ L') (t : L.Term α)
+    (s : α → L.Term β) :
+    g.onTerm (t.subst s) = (g.onTerm t).subst (fun a => g.onTerm (s a)) := by
+  induction t with
+  | var a => rfl
+  | func f ts ih => simp [LHom.onTerm,Term.subst,ih]
+
+theorem onTermRelabel {L L' : Language} {α β : Type} (g : L →ᴸ L') (t : L.Term α)
+    (f : α → β) : g.onTerm (t.relabel f) = (g.onTerm t).relabel f := by
+  induction t with
+  | var a => rfl
+  | func h ts ih => simp [LHom.onTerm,Term.relabel,ih]
+
+theorem boundedSubstVariables {L : Language} {α : Type} {n : Nat}
+    (phi : L.BoundedFormula α n) : phi.subst Term.var = phi := by
+  unfold BoundedFormula.subst
+  have ht (k : Nat) : (fun t : L.Term (α ⊕ Fin k) =>
+      t.subst (Sum.elim (Term.relabel Sum.inl ∘ Term.var) (Term.var ∘ Sum.inr))) = id := by
+    funext t
+    have hv : Sum.elim (Term.relabel Sum.inl ∘ (Term.var : α → L.Term α))
+        (Term.var ∘ Sum.inr : Fin k → L.Term (α ⊕ Fin k)) = Term.var := by
+      funext x
+      cases x <;> rfl
+    simp only [hv,termSubstVariables,id_eq]
+  have hft : (fun (k : Nat) (t : L.Term (α ⊕ Fin k)) =>
+      t.subst (Sum.elim (Term.relabel Sum.inl ∘ Term.var) (Term.var ∘ Sum.inr))) =
+      (fun k => (id : L.Term (α ⊕ Fin k) → L.Term (α ⊕ Fin k))) := by
+    funext k
+    exact ht k
+  rw [hft,BoundedFormula.mapTermRel_id_id_id]
+
+theorem boundedSubstCompose {L : Language} {α β γ : Type} {n : Nat}
+    (phi : L.BoundedFormula α n) (s : α → L.Term β) (r : β → L.Term γ) :
+    (phi.subst s).subst r = phi.subst (fun a => (s a).subst r) := by
+  unfold BoundedFormula.subst
+  rw [BoundedFormula.mapTermRel_mapTermRel]
+  simp only [Function.id_comp]
+  apply congrArg (fun (ft : ∀ k, L.Term (α ⊕ Fin k) → L.Term (γ ⊕ Fin k)) =>
+    phi.mapTermRel ft (fun _ => id) (fun _ => id))
+  funext k t
+  rw [Function.comp_apply,termSubstCompose]
+  apply congrArg (fun f => t.subst f)
+  funext x
+  cases x with
+  | inl a =>
+    simp only [Sum.elim_inl,Function.comp_apply,termSubstRelabel,termRelabelSubst]
+    apply congrArg (fun f => (s a).subst f)
+    funext b
+    rfl
+  | inr i => rfl
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTermProof

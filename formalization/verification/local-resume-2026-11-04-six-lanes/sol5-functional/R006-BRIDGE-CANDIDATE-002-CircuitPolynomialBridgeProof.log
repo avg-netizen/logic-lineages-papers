@@ -1,0 +1,84 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:46:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:103:61: error: typeclass instance problem is stuck
+  Semigroup ?m.140
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Semigroup` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:103:55: error: Type mismatch
+  mul_assoc ?m.142 ?m.143 ?m.144
+has type
+  ?m.142 * ?m.143 * ?m.144 = ?m.142 * (?m.143 * ?m.144)
+but is expected to have type
+  C ↑(Int.ofNat k).natAbs * (X ^ p * x val✝) = C (Int.ofNat k) * X ^ p * x val✝
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  instMul ↦ 29
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:104:14: error: unsolved goals
+case negSucc.none
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : Int.negSucc k < 0
+hc : Int.negSucc k = -↑(k + 1)
+⊢ -(C ↑(-↑(1 + k)).natAbs * X ^ p) = -(X ^ p * C ↑(1 + k))
+
+case negSucc.some
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : Int.negSucc k < 0
+hc : Int.negSucc k = -↑(k + 1)
+val✝ : Fin n
+⊢ -(C ↑(-↑(1 + k)).natAbs * X ^ p * x val✝) = -(X ^ p * x val✝ * C ↑(1 + k))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:120:17: error: unsolved goals
+case cons
+n : ℕ
+x : Fin n → ZPolynomial
+m : SignedPair.Monomial n
+ms : List (SignedPair.Monomial n)
+ih :
+  expressionPolynomial x (SignedPair.fromMonomials ms) =
+    (List.map
+        (fun m =>
+          C m.coefficient * X ^ m.power *
+            match m.unknown with
+            | none => 1
+            | some i => x i)
+        ms).sum
+⊢ (C m.coefficient * X ^ m.power *
+        match m.unknown with
+        | none => 1
+        | some i => x i) +
+      (List.map
+          (fun m =>
+            C m.coefficient * X ^ m.power *
+              match m.unknown with
+              | none => 1
+              | some i => x i)
+          ms).sum =
+    (C m.coefficient * X ^ m.power *
+        match m.unknown with
+        | none => 1
+        | some i => x i) +
+      (List.map
+          (fun m =>
+            C m.coefficient * X ^ m.power *
+              match m.unknown with
+              | none => 1
+              | some i => x i)
+          ms).sum

@@ -1,0 +1,58 @@
+{
+  "pinned_source_findings": [
+    {
+      "path": "Mathlib/NumberTheory/Dioph.lean",
+      "paid": [
+        "Dioph.reindex_dioph",
+        "Dioph.DiophList.forall for a fixed finite list",
+        "Dioph.ex_dioph/ex1_dioph",
+        "Dioph arithmetic/order/div/mod graph closure",
+        "Dioph.pow_dioph"
+      ],
+      "unavailable": [
+        "uniform variable-length bounded universal closure",
+        "Nat.Partrec.Code.prec graph closure",
+        "Nat.Partrec.Code.rfind graph closure",
+        "REPred\u2192Dioph representation"
+      ]
+    },
+    {
+      "path": "Mathlib/NumberTheory/PellMatiyasevic.lean",
+      "paid": "eq_pow_of_pell supplies the power graph, already bridged into actual polynomial codes locally",
+      "not_full_MRDP": true
+    },
+    {
+      "path": "Mathlib/Computability/PartrecCode.lean",
+      "paid": [
+        "actual ordinary Code datatype and eval semantics",
+        "primrec_evaln",
+        "evaln_complete",
+        "exists_code",
+        "ordinary code encoding and s-m-n"
+      ],
+      "note": "A primitive-recursive evaluator approximation is not automatically Diophantine; its trace representation is the central missing bridge."
+    },
+    {
+      "path": "LogicLineages/ComputabilityKnowledge/DiophantinePolynomialBridgeProof.lean",
+      "paid": [
+        "finite-witness extraction from arbitrary auxiliary types",
+        "actual polynomial code coverage",
+        "Dioph iff actual finite polynomial-code representation",
+        "power graph representation"
+      ],
+      "not_computable_extraction_from_Prop": true
+    }
+  ],
+  "round1_genuine_new_clauses": [
+    "Nat.pair/unpair Dioph graphs respecting the actual square-max pairing encoding",
+    "Partial-function graph closure under actual pairing and composition, preserving nontermination",
+    "All actual recursion-free ordinary-code graph instances and their polynomial-code representation"
+  ],
+  "end_to_end_unpaid_targets": [
+    "UniversalEvaluatorDiophantine",
+    "REPolynomialReduction",
+    "EncodedPolynomialUndecidable"
+  ],
+  "S5_coordination": "S5 confirmed natural-valued existing PolynomialCircuit.Code/WF/eval0 convention and owns the constant/square-system adaptation to Narendran linear polynomial systems.",
+  "no_full_source_promotion": "Recursion-free representation is a proper supplier fragment, not MRDP/H10 undecidability or source02/source09 completeness."
+}

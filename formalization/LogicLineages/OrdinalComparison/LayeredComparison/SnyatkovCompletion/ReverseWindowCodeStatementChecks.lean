@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowCodeStatementChecks
+theorem literal_code_calibration : ReverseWindowTargets.LiteralCodeCalibration := ReverseWindowCodeProof.literalCodeCalibration
+theorem actual_code_computation : ReverseWindowTargets.ActualCodeComputation := ReverseWindowCodeProof.actualCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowCodeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowCodeStatementChecks

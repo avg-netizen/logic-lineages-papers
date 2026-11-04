@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceControlPrimitiveEvaluationTargets
+public import LogicLineages.OrdinalComparison.SourceControlPrimitiveEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceControlPrimitiveEvaluation.StatementChecks
+theorem fixed_primitive_evaluation : Targets.FixedPrimitiveEvaluation := Proof.fixedPrimitiveEvaluation
+theorem typed_exact_evaluation : Targets.TypedExactEvaluation := Proof.typedExactEvaluation
+theorem exact_finite_iteration : Targets.ExactFiniteIteration := Proof.exactFiniteIteration
+end LogicLineages.OrdinalComparison.Source.SourceControlPrimitiveEvaluation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceControlPrimitiveEvaluation

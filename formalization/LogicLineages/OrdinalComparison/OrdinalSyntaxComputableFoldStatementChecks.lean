@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.OrdinalSyntaxComputableFoldTargets
+public import LogicLineages.OrdinalComparison.OrdinalSyntaxComputableFoldProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.OrdinalSyntaxComputableFold.StatementChecks
+theorem exact_raw_recursion : Targets.ExactRawRecursion := Proof.exactRawRecursion
+theorem indexed_computable : Targets.IndexedComputable := Proof.indexedComputable
+end LogicLineages.OrdinalComparison.Source.OrdinalSyntaxComputableFold.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.OrdinalSyntaxComputableFold

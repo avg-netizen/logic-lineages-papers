@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSolvabilityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededCompiler.StatementChecks
+
+theorem exact_seeded_compiler : Targets.ExactSeededCompiler := Proof.exactSeededCompiler
+theorem exact_seed_substitution : Targets.ExactSeedSubstitution := Proof.exactSeedSubstitution
+theorem exact_seeded_satisfiability : Targets.ExactSeededSatisfiability := Proof.exactSeededSatisfiability
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededCompiler.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededCompiler

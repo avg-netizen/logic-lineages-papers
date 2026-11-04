@@ -1,0 +1,46 @@
+{
+  "status": "supporting-component-adopted",
+  "reviewer": "codex-main",
+  "reviewed_at_utc": "2026-11-04T22:00:26.817738+00:00",
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranStatementChecks",
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantDefinitions.lean": "673cf373649feb339eb9ffcac09cfaea7e753f21e71af89826861d1f1b5b23df",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantAuxProof.lean": "642d9652780ecd4b6256bfa93b78252d609be5359322455069e7d292d4ce90c8",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranConstantProof.lean": "5f955377db99ca3688ebf89fcd7530885498e2d222970caf61a4c719d6ae893b",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranSimultaneousProof.lean": "9bb55d63082b62bb12ca6f21f385f2809972c04ea28d05d844d83be7998f18ae",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranStatementChecks.lean": "9423a5dd31f211acde0b77e44f7eb7ed5834c45c37a08a825c769b96594da087"
+  },
+  "axiom_reports": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.nonnegative_quotient_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.exact_constant_gadget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.exact_square_gadget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.exact_simultaneous_constants": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "new_source_obligations": [
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.exact_constant_gadget",
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.exact_simultaneous_constants"
+  ],
+  "duplicate_previous_obligations": [
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.nonnegative_quotient_identity",
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks.exact_square_gadget"
+  ],
+  "verification_receipt": "build-reports/1793829493576307740-2.json",
+  "scope": "Univariate constant forcing over genuine N[X] with all zero polynomials allowed; same seven shared witnesses; arbitrary simultaneous family constant iff one global constant gadget and nonnegative slack sum. Explicit nonnegative polynomial witnesses and real two-point constancy converse, no degree bound. No assumed undecidability, H10/MRDP supplier, coded circuit reduction, numeric computability, Omega query reduction, or whole functional-hardness theorem.",
+  "whole_source_promotions": 0
+}

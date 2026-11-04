@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaLiteralWeakAggregateTargets
+public import LogicLineages.OrdinalComparison.SourceGammaLiteralWeakAggregateProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaLiteralWeakAggregate.StatementChecks
+theorem numeric_gap : Targets.NumericGap := Proof.numericGap
+theorem finite_forest_weak : Targets.FiniteForestWeak := Proof.finiteForestWeak
+theorem universal_nonhalting : Targets.UniversalNonhalting := Proof.universalNonhalting
+end LogicLineages.OrdinalComparison.Source.SourceGammaLiteralWeakAggregate.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaLiteralWeakAggregate

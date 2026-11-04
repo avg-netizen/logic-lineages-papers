@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableRoot
+-- Literal typed variables, actual primary equivalence and WindowStep unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableRoot

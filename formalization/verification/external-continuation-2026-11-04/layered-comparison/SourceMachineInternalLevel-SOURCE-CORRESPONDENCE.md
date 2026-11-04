@@ -1,0 +1,9 @@
+# Exact internal type level one for the actual aggregate
+
+Paper09 hardness.tex lines 281–286 states internal levels at most one for the restricted ground hardness construction. The shared type-level convention is printed in paper06 paper.tex lines 53–54: level(o)=0 and level(sigma->tau)=max(level(sigma)+1,level(tau)). Paper08 paper.tex lines 769–773 explicitly clarifies that maximum internal type level includes every subterm and binder type, not only output/free-variable types.
+
+The target uses the existing SourceClasses.InternalLevelBound 1, defined through SourceTypeSupport.typeSupport. That support recursively contains each node result type and all its type subexpressions, and therefore includes every binder domain via its lambda arrow type. No replacement metric, output-only check, or special aggregate definition is introduced.
+
+StructuralLevel requires both AllGround Gamma and the already checked literal Fragment predicate. AllGround is essential: Fragment alone admits variables of arbitrary types. The proof must establish the variable's actual type from context membership, preserve AllGround under the permitted ground binders, propagate arrow/result level bounds through applications, and include all type subexpressions. Case/recursor constructors are rejected by Fragment; prime 0/S levels are exactly zero/one.
+
+ActualAggregateLevel uses independently proved all-ground compiled context and actual aggregate Fragment membership, for every b,e and both original output sources. It does not weaken the context hypothesis or alter any source. This pays the exact internal-level restriction only, not encoding/effectivity, weak comparison, computability of evaluation, Pi01 membership/completeness, or whole theorem promotion. Manuscripts, register, accepted files and packages remain unchanged; no export. Candidates absent pending review/freeze.

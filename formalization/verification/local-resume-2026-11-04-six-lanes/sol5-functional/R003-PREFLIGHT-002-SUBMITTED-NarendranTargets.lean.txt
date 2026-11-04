@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.Targets
+open Polynomial
+
+def NonnegativeQuotientIdentity : Prop := ∀ p : NPolynomial,
+  (X-1)*signed (differenceQuotient p) = signed p-C ((p.eval (1 : Nat) : Nat) : Int)
+
+def ExactSquareGadget : Prop := ∀ u v : Nat,
+  (∃ w : Fin 4 → NPolynomial, SquareGadget u v w) ↔ 2*v+u=u^2
+
+def ExactConstantGadget : Prop := ∀ v : NPolynomial,
+  (∃ w : Fin 7 → NPolynomial, ConstantGadget v w) ↔
+    ∃ k : Nat, v=C (2^k-1)
+
+def ExactSimultaneousConstants : Prop := ∀ (n : Nat) (z : Fin n → NPolynomial),
+  SimultaneousConstantGadget z ↔ ∀ i, ∃ k : Nat, z i=C k
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.Targets

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceEndpointCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceEndpointCalibrationPreflight
+def operatorComparator : Prop := SourceEndpointCalibrationTargets.ActualClosedSourceOperator
+def formulaComparator : Prop := SourceEndpointCalibrationTargets.ActualAllTermsFormulaTruth
+def soundnessComparator : Prop := SourceEndpointCalibrationTargets.ActualInternalSourceSoundness
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceEndpointCalibrationPreflight

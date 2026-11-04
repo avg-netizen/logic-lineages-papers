@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ElementaryStatementChecks
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.DepthBoundsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+theorem uniform_depth_and_output_bounds : Targets.UniformDepthAndOutputBounds :=
+  Proof.uniformDepthAndOutputBounds
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion

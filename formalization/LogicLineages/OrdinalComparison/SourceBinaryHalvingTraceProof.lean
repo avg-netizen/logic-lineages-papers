@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBinaryHalvingTraceReconstructionProof
+public import LogicLineages.OrdinalComparison.SourceBinaryHalvingTraceProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.Proof
+end LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.Proof

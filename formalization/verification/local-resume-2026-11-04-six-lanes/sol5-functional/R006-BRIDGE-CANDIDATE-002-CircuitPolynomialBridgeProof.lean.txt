@@ -1,0 +1,125 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitLinearTargets
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranDefinitions
+public import Mathlib.Algebra.Polynomial.Coeff
+public import Mathlib.Data.Finsupp.SMul
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitLinear.Proof
+open Polynomial Narendran SourcePolynomialRealization SourceFiniteExponentProjection
+
+/-- The standard integer polynomial interpretation of the fixed linear syntax.
+Only multiplication by the fixed indeterminate is used in the shift clause. -/
+noncomputable def expressionPolynomial {n : Nat} (x : Fin n → ZPolynomial) :
+    SignedPair.Expression n → ZPolynomial
+  | .unit => 1
+  | .var i => x i
+  | .add a b => expressionPolynomial x a+expressionPolynomial x b
+  | .neg a => -expressionPolynomial x a
+  | .shift a => X*expressionPolynomial x a
+
+theorem X_mul_toFinsupp (p : ZPolynomial) :
+    (X*p).toFinsupp = polynomialShift p.toFinsupp := by
+  ext k
+  cases k with
+  | zero =>
+      have hz : 0 ∉ Set.range Nat.succ := by rintro ⟨n,hn⟩; omega
+      change (X*p).coeff 0 = Finsupp.mapDomain Nat.succ p.toFinsupp 0
+      rw [Finsupp.mapDomain_notin_range p.toFinsupp 0 hz,Polynomial.coeff_X_mul_zero]
+  | succ k =>
+      change (X*p).coeff (k+1) = Finsupp.mapDomain Nat.succ p.toFinsupp (k+1)
+      rw [Polynomial.coeff_X_mul,Finsupp.mapDomain_apply Nat.succ_injective p.toFinsupp k]
+      rfl
+
+theorem expression_toFinsupp {n : Nat} (x : Fin n → ZPolynomial)
+    (d : SignedPair.Expression n) :
+    (expressionPolynomial x d).toFinsupp=polynomialMeaning (fun i => (x i).toFinsupp) d := by
+  induction d with
+  | unit => rfl
+  | var i => rfl
+  | add a b ha hb =>
+      simp only [expressionPolynomial,polynomialMeaning,Polynomial.toFinsupp_add,ha,hb]
+      rfl
+  | neg a ha =>
+      simp only [expressionPolynomial,polynomialMeaning,Polynomial.toFinsupp_neg,ha]
+      rfl
+  | shift a ha =>
+      simpa only [expressionPolynomial,polynomialMeaning,X_mul_toFinsupp,ha]
+
+theorem signed_toFinsupp (p : NPolynomial) :
+    (signed p).toFinsupp=signedCoefficients p.toFinsupp := by
+  ext k
+  change (signed p).coeff k = (p.coeff k : Int)
+  simp only [signed,Polynomial.coeff_map,Nat.coe_castRingHom]
+
+theorem expression_zero_iff {n : Nat} (p : Fin n → NPolynomial)
+    (d : SignedPair.Expression n) :
+    polynomialMeaning (fun i => signedCoefficients (p i).toFinsupp) d=0 ↔
+      expressionPolynomial (fun i => signed (p i)) d=0 := by
+  rw [←Polynomial.toFinsupp_eq_zero,expression_toFinsupp]
+  simp only [signed_toFinsupp]
+  rfl
+
+theorem system_zero_iff {n : Nat} (p : Fin n → NPolynomial) (s : System n) :
+    PolynomialSolves s (fun i => (p i).toFinsupp) ↔
+      ∀ d ∈ s, expressionPolynomial (fun i => signed (p i)) d=0 := by
+  constructor <;> intro h d hd
+  · exact (expression_zero_iff p d).mp (h d hd)
+  · exact (expression_zero_iff p d).mpr (h d hd)
+
+private theorem repeat_polynomial {n : Nat} (x : Fin n → ZPolynomial)
+    (d : SignedPair.Expression n) (k : Nat) :
+    expressionPolynomial x (SignedPair.repeatExpression d k)=
+      C (k : Int)*expressionPolynomial x d := by
+  induction k with
+  | zero => simp [SignedPair.repeatExpression,SignedPair.zeroExpression,expressionPolynomial]
+  | succ k ih =>
+      simp only [SignedPair.repeatExpression,expressionPolynomial,ih,Nat.cast_add,
+        Nat.cast_one,Polynomial.C_add,Polynomial.C_1,add_mul,one_mul]
+      exact add_comm _ _
+
+private theorem shifted_polynomial {n : Nat} (x : Fin n → ZPolynomial)
+    (d : SignedPair.Expression n) (k : Nat) :
+    expressionPolynomial x ((SignedPair.Expression.shift^[k]) d)=
+      X^k*expressionPolynomial x d := by
+  induction k with
+  | zero => simp
+  | succ k ih =>
+      rw [Function.iterate_succ_apply',expressionPolynomial,ih,pow_succ']
+      exact (mul_assoc _ _ _).symm
+
+private theorem monomial_polynomial {n : Nat} (x : Fin n → ZPolynomial)
+    (m : SignedPair.Monomial n) :
+    expressionPolynomial x (SignedPair.monomialExpression m)=
+      C m.coefficient*X^m.power*(match m.unknown with | none => 1 | some i => x i) := by
+  rcases m with ⟨c,p,u⟩
+  cases c with
+  | ofNat k =>
+      have hk : ¬(Int.ofNat k<0) := by
+        change ¬((k : Int)<0)
+        exact not_lt_of_ge (Int.natCast_nonneg k)
+      unfold SignedPair.monomialExpression
+      dsimp only
+      rw [if_neg hk,repeat_polynomial,shifted_polynomial]
+      cases u <;> simp only [expressionPolynomial] <;> exact mul_assoc _ _ _
+  | negSucc k =>
+      have hk : Int.negSucc k<0 := by omega
+      have hc : Int.negSucc k = -((k+1 : Nat) : Int) := by omega
+      unfold SignedPair.monomialExpression
+      dsimp only
+      rw [if_pos hk,expressionPolynomial,repeat_polynomial,shifted_polynomial]
+      cases u <;> simp only [expressionPolynomial]
+      all_goals rw [hc,Polynomial.C_neg]; ring
+
+theorem fromMonomials_polynomial {n : Nat} (x : Fin n → ZPolynomial)
+    (ms : List (SignedPair.Monomial n)) :
+    expressionPolynomial x (SignedPair.fromMonomials ms)=
+      (ms.map fun m => C m.coefficient*X^m.power*
+        (match m.unknown with | none => 1 | some i => x i)).sum := by
+  induction ms with
+  | nil => simp [SignedPair.fromMonomials,SignedPair.zeroExpression,expressionPolynomial]
+  | cons m ms ih =>
+      change expressionPolynomial x ((SignedPair.monomialExpression m).add
+        (SignedPair.fromMonomials ms)) = _
+      rw [expressionPolynomial,monomial_polynomial,ih,List.map_cons,List.sum_cons]
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitLinear.Proof

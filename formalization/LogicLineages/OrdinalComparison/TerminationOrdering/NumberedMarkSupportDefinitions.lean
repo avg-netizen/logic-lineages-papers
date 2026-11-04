@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimarySupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkSupport
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkSupport

@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowStatementChecks
+theorem actual_minus_witness : ReverseWindowTargets.ActualMinusWitness := ReverseWindowProof.actualMinusWitness
+theorem actual_finite_elimination : ReverseWindowTargets.ActualFiniteElimination := ReverseWindowProof.actualFiniteElimination
+theorem exact_support_reduction : ReverseWindowTargets.ExactSupportReduction := ReverseWindowProof.exactSupportReduction
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ReverseWindowStatementChecks

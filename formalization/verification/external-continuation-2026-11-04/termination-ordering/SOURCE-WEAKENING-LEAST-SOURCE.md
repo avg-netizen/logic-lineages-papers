@@ -1,0 +1,9 @@
+# Scalar least-set weakening at confined representatives
+
+Source: 06-godel-t-termination-ordering/paper.tex, fresh-variable discussion, lines 590–597. This is a standard-N scalar accessibility transport prerequisite, not computability weakening or an ID1 derivation.
+
+The single iff target fixes a successful decode of one Context (symbols, finite type window, precedence table), explicit SubtypeClosed, Gamma, and an arbitrary added context type sigma. Two separate positive arithmetic bodies must be calibrated to the actual encodedScalar and encodedR in Gamma and sigma::Gamma respectively. The original packed term q must be confined. The compared numbers are its original representative and the representative of its literal weakening; they are not asserted equal.
+
+Proof correspondence: actualRenaming supplies weakened confinement. canonicalCarrierTestCorrect supplies encoded scalar carrier membership at each representative using the shared successful Context decode. preservedCarrierAccessibility, with encodedScalarPreservation and the separately supplied calibrations, identifies each least-set membership with carrier and reverse encodedR accessibility. relationCalibration relates each encoded relation to its actual positive quotient path relation. The two explicit accepted WeakeningAccessibility inductions then give the iff. Relation orientation is Acc (fun successor source => PositivePath H source successor).
+
+No sigma-in-window premise is needed for an unused context entry. This is not a total numeric representative map or a statement on malformed Context codes: the successful decode is explicit. Different numeric representative codes and distinct calibrated bodies are allowed. It establishes no arrow computability stability, because that quantifies over additional arguments outside the weakening image; no all-term accessibility, original-order transitivity, ID1 derivation or register promotion is claimed. No proof before review and freeze.

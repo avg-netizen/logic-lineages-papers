@@ -1,0 +1,24 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticStatementChecks
+open CipherTargets
+
+theorem fixedSparseNumberBound : SparseNumberBound := CipherArithmeticProof.sparseNumberBound
+theorem fixedSparseAllDigitExtraction : SparseAllDigitExtraction := CipherArithmeticProof.sparseAllDigitExtraction
+theorem fixedSparseDigitExtraction : SparseDigitExtraction := CipherArithmeticProof.sparseDigitExtraction
+theorem fixedCipherDigitExtraction : CipherDigitExtraction := CipherArithmeticProof.cipherDigitExtraction
+theorem fixedCipherInjectivity : CipherInjectivity := CipherArithmeticProof.cipherInjectivity
+theorem fixedCipherAddition : CipherAddition := CipherArithmeticProof.cipherAddition
+
+#print axioms fixedSparseNumberBound
+#print axioms fixedSparseAllDigitExtraction
+#print axioms fixedSparseDigitExtraction
+#print axioms fixedCipherDigitExtraction
+#print axioms fixedCipherInjectivity
+#print axioms fixedCipherAddition
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticStatementChecks

@@ -1,0 +1,9 @@
+# Exact numeric primitive forest builders
+
+This is the bounded local encoding step toward paper09 hardness.tex lines 308–314, not a full source compiler. Numeric ports use zero for literal source zero and i+1 for the actual variable at de Bruijn index i. Source codes instead use the already fixed radix-eight SyntaxCode codec; the two representations are never identified.
+
+ExactPorts calibrates actual port encoding, arbitrary ground-prefix shift k, and all nine actual auxiliary names. A nonzero old port gains nine in a gate block; auxiliary index i has port number i+1. ExactExpressions calibrates all four unchanged Expr.term and actual Expr.graph.term encodings. Atomic eraserCode invokes the accepted source eraser algorithm, whose ContextInsertionCode.sourceCode 0 1 performs the additional fresh binder weakening with proper lifting under inner lambdas. This is distinct from the nine-wire outer block insertion.
+
+ExactForests calibrates only eq/add/one builders to the exact ordered list of codes from existing PrimitiveLowering.forest. The ten equations, unused-wire order, and existing local one witness coordinates are preserved; no sort semantic/code compiler claim is included. unusedPairs uses range9/filter in ascending order, matching the actual finRange9/filter list after index calibration. The one gate keeps its exact identity-zero source code, not an evaluated natural constant.
+
+UniformPrimitiveRecursive proves nine all-code maps via existing PR arithmetic, pair/list constructors and accepted eraser code. Typedness is guaranteed only by the explicit typed calibration inputs; arbitrary port numbers, context lengths or malformed source codes are not declared valid. No numeric Plan.compile, binary/scaling compiler, b,e reduction, runtime, code bit-size, expanded-tree or DAG overhead bound is asserted. Existing source semantics, manuscripts, register and packages are unchanged. Candidates absent pending exact review/freeze; no export.

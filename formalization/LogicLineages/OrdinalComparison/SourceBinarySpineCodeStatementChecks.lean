@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBinarySpineCodeTargets
+public import LogicLineages.OrdinalComparison.SourceBinarySpineCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceBinarySpineCode.StatementChecks
+theorem exact_bit_transport : Targets.ExactBitTransport := Proof.exactBitTransport
+theorem exact_literal_transport : Targets.ExactLiteralTransport := Proof.exactLiteralTransport
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceBinarySpineCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceBinarySpineCode

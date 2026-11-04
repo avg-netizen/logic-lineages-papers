@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOperationSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSupportSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSupport
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSupport

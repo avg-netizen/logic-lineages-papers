@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepWeakeningProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepWeakeningStatementChecks
+theorem fixedActualStepWeakening : NumberedStepWeakeningTargets.ActualStepWeakening := NumberedStepWeakeningProof.actualStepWeakening
+#print axioms fixedActualStepWeakening
+theorem fixedActualArgumentStepWeakening : NumberedStepWeakeningTargets.ActualArgumentStepWeakening := NumberedStepWeakeningProof.actualArgumentStepWeakening
+#print axioms fixedActualArgumentStepWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepWeakeningStatementChecks

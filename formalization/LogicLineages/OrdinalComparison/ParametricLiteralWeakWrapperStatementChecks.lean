@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricLiteralWeakWrapperTargets
+public import LogicLineages.OrdinalComparison.ParametricLiteralWeakWrapperProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricLiteralWeakWrapper.StatementChecks
+theorem exact_assignment : Targets.ExactAssignment := Proof.exactAssignment
+theorem finite_coefficient_calibration : Targets.FiniteCoefficientCalibration := Proof.finiteCoefficientCalibration
+theorem control_value_calibration : Targets.ControlValueCalibration := Proof.controlValueCalibration
+end LogicLineages.OrdinalComparison.Source.ParametricLiteralWeakWrapper.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricLiteralWeakWrapper

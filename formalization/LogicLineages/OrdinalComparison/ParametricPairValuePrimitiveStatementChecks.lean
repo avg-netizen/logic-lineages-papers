@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricPairValuePrimitiveTargets
+public import LogicLineages.OrdinalComparison.ParametricPairValuePrimitiveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricPairValuePrimitive.StatementChecks
+theorem exact_calibration : Targets.ExactCalibration := Proof.exactCalibration
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+theorem fixed_gamma_primitive : Targets.FixedGammaPrimitive := Proof.fixedGammaPrimitive
+end LogicLineages.OrdinalComparison.Source.ParametricPairValuePrimitive.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricPairValuePrimitive

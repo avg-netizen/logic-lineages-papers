@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSupportStatementChecks
+theorem fixedActualStepSupport : NumberedStepSupportTargets.ActualStepSupport := NumberedStepSupportProof.actualStepSupport
+#print axioms fixedActualStepSupport
+theorem fixedActualArgumentStepSupport : NumberedStepSupportTargets.ActualArgumentStepSupport := NumberedStepSupportProof.actualArgumentStepSupport
+#print axioms fixedActualArgumentStepSupport
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSupportStatementChecks

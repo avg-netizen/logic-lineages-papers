@@ -1,0 +1,33 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:67:34: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp_all only [List.mem_cons, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false, child, Prod.mk.injEq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:134:66: error(lean.unknownIdentifier): Unknown constant `Primrec.natPair.comp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:136:66: error(lean.unknownIdentifier): Unknown constant `Primrec.natPair.comp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:140:66: error(lean.unknownIdentifier): Unknown constant `Primrec.natPair.comp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:163:2: error: Type mismatch: After simplification, term
+  Computable.comp joint_computable (Computable.pair (Computable.const false) Computable.id)
+ has type
+  @Computable (ℕ × ℕ × ℕ) ℕ Primcodable.prod (Primcodable.ofDenumerable ℕ) fun a =>
+    WindowCode.termSubstitute (id a).2.1 (id a).2.2 (id a).1
+but is expected to have type
+  @Computable (ℕ × ℕ × ℕ) ℕ Primcodable.prod (Primcodable.ofDenumerable ℕ) fun p =>
+    WindowCode.termSubstitute p.2.1 p.2.2 p.1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:168:2: error: Type mismatch: After simplification, term
+  Computable.comp joint_computable (Computable.pair (Computable.const true) Computable.id)
+ has type
+  @Computable (ℕ × ℕ × ℕ) ℕ Primcodable.prod (Primcodable.ofDenumerable ℕ) fun a =>
+    WindowCode.matrixSubstitute (id a).2.1 (id a).2.2 (id a).1
+but is expected to have type
+  @Computable (ℕ × ℕ × ℕ) ℕ Primcodable.prod (Primcodable.ofDenumerable ℕ) fun p =>
+    WindowCode.matrixSubstitute p.2.1 p.2.2 p.1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:173:66: error(lean.unknownIdentifier): Unknown constant `Primrec.natPair`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowCodeComputationProof.lean:209:2: error: Type mismatch
+  Primrec.list_foldr Primrec.id (Primrec.const 1) ?m.22
+has type
+  Primrec fun a => List.foldr (fun b s => ?m.13 a (b, s)) 1 (id a)
+but is expected to have type
+  Primrec WindowCode.any

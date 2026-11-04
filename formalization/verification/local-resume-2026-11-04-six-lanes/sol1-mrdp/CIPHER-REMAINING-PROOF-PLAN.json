@@ -1,0 +1,29 @@
+{
+  "status": "Proposed proof plan; none of the remaining endpoints is accepted from this record.",
+  "current": "First six genuine sparse arithmetic/digit/injectivity/add targets candidate-authored after successful freeze03 preflight.",
+  "remaining_arithmetic_plan": [
+    {
+      "target": "Cipher validity / full radix equality",
+      "method": "Use kernel Nat.and_div_two_pow/and_mod_two_pow and testBit_div_two_pow/testBit_mod_two_pow to compare all base2^(4q) digits; derive both mask support and bounded source digits."
+    },
+    {
+      "target": "Product mask",
+      "method": "Expand the finite product into dense degree coefficients. Bound every coefficient by n\u00b2*(2^q-1)\u00b2 <2^(4q), using n+1<q, so no carries. Pure powers2^(i+1)+2^(j+1)=2^(k+2) force i=j=k; core digit/AND identities isolate those diagonal coefficients."
+    },
+    {
+      "target": "All-ones equations forward",
+      "method": "Actual sparse all-ones square has diagonal coefficient1 and off-diagonal coefficient2; distinct unordered pairs of powers of two give distinct off-diagonal positions. Geometric dense all-ones masks pick the two parts."
+    },
+    {
+      "target": "All-ones uniqueness converse",
+      "method": "Primary source proves sorted support recurrence from square+AND equations. Potential Lean simplification: use bounded dense0/1 digit polynomials, characteristic2 square coefficients, and the linear relation r\u00b2+u1=u+r^p to force the same doubling support. This alternative has not yet been proved."
+    }
+  ],
+  "additional_genuine_unpaid_suppliers": [
+    "Index cipher for vector0,1,...,n-1 (source CodeNat), not yet specified/proved",
+    "Constant-vector and code-validity Dioph graphs after actual all-ones graph",
+    "Exact finite polynomial-code-to-elementary-constraint normalization preserving all free inputs",
+    "Full variable-bound closure assembly choosing q for actual finite witness families"
+  ],
+  "full_MRDP_route": "After variable closure, prove all original Code.prec/rfind graph cases; use eval_part+exists_code for one static universal ordinary code and one actual universal polynomial; compute explicit polynomial-code parameter specialization for H10/RE reductions."
+}

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricRestrictedSourceEvaluatorTargets
+public import LogicLineages.OrdinalComparison.ParametricRestrictedSourceEvaluatorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricRestrictedSourceEvaluator.StatementChecks
+theorem uniform_computable : Targets.UniformComputable := Proof.uniformComputable
+theorem typed_calibration : Targets.TypedCalibration := Proof.typedCalibration
+theorem fixed_gamma_computable : Targets.FixedGammaComputable := Proof.fixedGammaComputable
+theorem generated_aggregate : Targets.GeneratedAggregate := Proof.generatedAggregate
+end LogicLineages.OrdinalComparison.Source.ParametricRestrictedSourceEvaluator.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricRestrictedSourceEvaluator

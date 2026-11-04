@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationPaths
+-- Existing quotient paths, representatives, and literal application are unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationPaths

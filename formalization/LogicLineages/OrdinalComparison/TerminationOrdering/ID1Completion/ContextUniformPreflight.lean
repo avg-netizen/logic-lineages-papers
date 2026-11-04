@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPreflight
+def presentationComparator : Prop := ContextUniformTargets.ActualContextUniformPresentationExists
+def wholeSourceComparator : Prop := ContextUniformTargets.ActualContextUniformInternalAccessibility
+def fibersComparator : Prop := ContextUniformTargets.ActualOriginalContextFibers
+def disjointComparator : Prop := ContextUniformTargets.ActualNoCrossContextEdges
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPreflight

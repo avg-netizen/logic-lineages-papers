@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranSquareProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.StatementChecks
+theorem nonnegative_quotient_identity : Targets.NonnegativeQuotientIdentity :=
+  Proof.nonnegativeQuotientIdentity
+theorem exact_square_gadget : Targets.ExactSquareGadget := Proof.exactSquareGadget
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran

@@ -1,0 +1,131 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranConstantAuxProof
+public import Mathlib.Tactic.Linarith
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.Proof
+open Polynomial
+
+@[simp] theorem signed_comp (p q : NPolynomial) :
+    signed (p.comp q) = (signed p).comp (signed q) := by
+  simp [signed,Polynomial.map_comp]
+
+theorem real_signed_eval (p : NPolynomial) (x : Real) :
+    (signed p).eval₂ (Int.castRingHom Real) x = p.eval₂ (Nat.castRingHom Real) x := by
+  induction p using Polynomial.induction_on' with
+  | add p q hp hq => simp only [signed_add,Polynomial.eval₂_add,hp,hq]
+  | monomial n c => simp [signed]
+
+theorem geometric_eval_two (n : Nat) : (geometric n).eval (2 : Nat) = 2^n-1 := by
+  induction n with
+  | zero => simp [geometric]
+  | succ n ih =>
+      have hg : geometric (n+1) = geometric n+(X : NPolynomial)^n := by
+        simp only [geometric,Finset.sum_range_succ]
+      rw [hg,Polynomial.eval_add,Polynomial.eval_pow,Polynomial.eval_X,ih,pow_succ]
+      have hp : 0 < (2 : Nat)^n := pow_pos (by decide) _
+      omega
+
+theorem exactConstantGadget : Targets.ExactConstantGadget := by
+  intro v
+  constructor
+  · rintro ⟨w,h1,h2,h3,h4,h5⟩
+    have hz1 : (w 3).eval (1 : Nat) = 1 := by
+      have he := congrArg (fun p : ZPolynomial => p.eval 1) h1
+      simp only [Polynomial.eval_mul,Polynomial.eval_sub,Polynomial.eval_X,
+        Polynomial.eval_one,sub_self,zero_mul,signed_eval_one] at he
+      omega
+    have hz2 : (w 4).eval (1 : Nat) = 1 := by
+      have he := congrArg (fun p : ZPolynomial => p.eval 1) h2
+      simp only [Polynomial.eval_mul,Polynomial.eval_sub,Polynomial.eval_pow,
+        Polynomial.eval_X,Polynomial.eval_one,one_pow,sub_self,zero_mul,signed_eval_one] at he
+      omega
+    obtain ⟨k,hk⟩ := eval_one_eq_one_monomial (w 3) hz1
+    obtain ⟨l,hl⟩ := eval_one_eq_one_monomial (w 4) hz2
+    have h1' : (X-1)*signed (w 0) = (X : ZPolynomial)^k-1 := by
+      simpa only [hk,signed_X_pow] using h1
+    have h2' : (X^2-1)*signed (w 1) = (X : ZPolynomial)^l-1 := by
+      simpa only [hl,signed_X_pow] using h2
+    have hu := power_first_moment k (w 0) h1'
+    have huv : (w 1).eval (1 : Nat) = (w 0).eval (1 : Nat) := by
+      have he := congrArg (fun p : ZPolynomial => p.eval 1) h3
+      simp only [Polynomial.eval_mul,Polynomial.eval_sub,Polynomial.eval_X,
+        Polynomial.eval_one,sub_self,zero_mul,signed_eval_one] at he
+      omega
+    have hd : 2*(w 1).eval (1 : Nat) = l := by
+      have he := congrArg (fun p : ZPolynomial => p.derivative.eval 1) h2'
+      have he' : (2 : Int)*(((w 1).eval (1 : Nat) : Nat) : Int) = (l : Int) := by
+        simpa [Polynomial.derivative_mul,Polynomial.derivative_X_pow] using he
+      exact_mod_cast he'
+    have hlk : l = 2*k := by omega
+    let r : Real := Real.sqrt 2
+    have hrpos : 0 < r := Real.sqrt_pos.mpr (by norm_num)
+    have hrlt : r < 2 := (Real.sqrt_lt' (by norm_num : (0 : Real)<2)).mpr (by norm_num)
+    have hrsq : r^2 = (2 : Real) := Real.sq_sqrt (by norm_num)
+    have hu2 : (w 0).eval₂ (Nat.castRingHom Real) 2+1 = (2 : Real)^k := by
+      have he := congrArg (fun p : ZPolynomial => p.eval₂ (Int.castRingHom Real) 2) h1'
+      simp only [Polynomial.eval₂_mul,Polynomial.eval₂_sub,Polynomial.eval₂_pow,
+        Polynomial.eval₂_X,Polynomial.eval₂_one,Polynomial.eval₂_ofNat,real_signed_eval] at he
+      norm_num at he
+      simp only [Polynomial.eval₂_at_ofNat,Nat.coe_castRingHom]
+      linarith
+    have hvr : (w 1).eval₂ (Nat.castRingHom Real) r+1 = (2 : Real)^k := by
+      have he := congrArg (fun p : ZPolynomial => p.eval₂ (Int.castRingHom Real) r) h2'
+      simp only [Polynomial.eval₂_mul,Polynomial.eval₂_sub,Polynomial.eval₂_pow,
+        Polynomial.eval₂_X,Polynomial.eval₂_one,real_signed_eval] at he
+      rw [hlk,pow_mul,hrsq] at he
+      linarith
+    have hv2 : v.eval₂ (Nat.castRingHom Real) 2 = (w 0).eval₂ (Nat.castRingHom Real) 2 := by
+      have he := congrArg (fun p : ZPolynomial => p.eval₂ (Int.castRingHom Real) 2) h4
+      simp only [Polynomial.eval₂_mul,Polynomial.eval₂_sub,Polynomial.eval₂_pow,
+        Polynomial.eval₂_X,Polynomial.eval₂_one,Polynomial.eval₂_ofNat,real_signed_eval] at he
+      norm_num at he
+      simp only [Polynomial.eval₂_at_ofNat,Nat.coe_castRingHom]
+      linarith
+    have hvroot : v.eval₂ (Nat.castRingHom Real) r = (w 1).eval₂ (Nat.castRingHom Real) r := by
+      have he := congrArg (fun p : ZPolynomial => p.eval₂ (Int.castRingHom Real) r) h5
+      simp only [Polynomial.eval₂_mul,Polynomial.eval₂_sub,Polynomial.eval₂_pow,
+        Polynomial.eval₂_X,Polynomial.eval₂_ofNat,real_signed_eval] at he
+      rw [hrsq] at he
+      linarith
+    have hsame : v.eval₂ (Nat.castRingHom Real) r = v.eval₂ (Nat.castRingHom Real) 2 := by
+      linarith
+    have hc := two_point_constant v r 2 hrpos hrlt hsame
+    have hcoeff : (v.coeff 0 : Real)+1 = (2 : Real)^k := by
+      rw [hc] at hv2
+      simp only [Polynomial.eval₂_C,Nat.coe_castRingHom] at hv2
+      linarith
+    have hnat : v.coeff 0+1 = (2 : Nat)^k := by exact_mod_cast hcoeff
+    have hpred : v.coeff 0 = 2^k-1 := by omega
+    exact ⟨k,by simpa only [hpred] using hc⟩
+  · rintro ⟨k,rfl⟩
+    let g := geometric k
+    let u2 := g.comp (X^2)
+    let u3 := doubleDifference g
+    let y1 := atTwoQuotient g
+    let y2 := y1.comp (X^2)
+    have h1 : (X-1)*signed g = signed ((X : NPolynomial)^k)-1 := by
+      simpa only [g,signed_X_pow] using geometric_mul k
+    have h2 : (X^2-1)*signed u2 = signed ((X : NPolynomial)^(2*k))-1 := by
+      have he := congrArg (fun p : ZPolynomial => p.comp (X^2)) h1
+      simpa only [u2,Polynomial.mul_comp,Polynomial.sub_comp,Polynomial.X_comp,
+        Polynomial.one_comp,Polynomial.X_pow_comp,signed_comp,signed_X_pow,←pow_mul] using he
+    have h3 : (X-1)*signed u3 = signed u2-signed g := doubleDifference_identity g
+    have h4 : (X-2)*signed y1 = signed g-signed (C (2^k-1)) := by
+      change (X-2)*signed (atTwoQuotient (geometric k)) =
+        signed (geometric k)-signed (C (2^k-1))
+      simpa only [geometric_eval_two,signed_C] using atTwoQuotient_identity (geometric k)
+    have h5 : (X^2-2)*signed y2 = signed u2-signed (C (2^k-1)) := by
+      have he := congrArg (fun p : ZPolynomial => p.comp (X^2)) h4
+      simpa only [y2,u2,Polynomial.mul_comp,Polynomial.sub_comp,Polynomial.X_comp,
+        Polynomial.ofNat_comp,Polynomial.C_comp,signed_comp,signed_X_pow,signed_C,Nat.cast_ofNat] using he
+    let w : Fin 7 → NPolynomial := Fin.cases g (Fin.cases u2 (Fin.cases u3
+      (Fin.cases (X^k) (Fin.cases (X^(2*k)) (Fin.cases y1 (fun _ => y2))))))
+    refine ⟨w, ?_⟩
+    change (X-1)*signed g=signed ((X : NPolynomial)^k)-1 ∧
+      (X^2-1)*signed u2=signed ((X : NPolynomial)^(2*k))-1 ∧
+      (X-1)*signed u3=signed u2-signed g ∧
+      (X-2)*signed y1=signed g-signed (C (2^k-1)) ∧
+      (X^2-2)*signed y2=signed u2-signed (C (2^k-1))
+    exact ⟨h1,h2,h3,h4,h5⟩
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.Proof

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystem.StatementChecks
+
+theorem exact_valuation_preservation : Targets.ExactValuationPreservation := Proof.valuationPreservingSystem
+theorem exact_system_equality : Targets.ExactSystemEquality := Proof.exactSystemEquality
+theorem exact_single_query_semantics : Targets.ExactSingleQuerySemantics := Proof.exactSingleQuerySemantics
+theorem exact_level_three_bounds : Targets.ExactLevelThreeBounds := Proof.exactLevelThreeBounds
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystem.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystem

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowStatementChecks
+theorem exact_substitution : WindowTargets.ExactSubstitution := WindowProof.exactSubstitution
+theorem actual_argument_window : WindowTargets.ActualArgumentWindow := WindowProof.actualArgumentWindow
+theorem actual_finite_elimination : WindowTargets.ActualFiniteElimination := WindowProof.actualFiniteElimination
+theorem exact_window_support : WindowTargets.ExactWindowSupport := WindowProof.exactWindowSupport
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowStatementChecks

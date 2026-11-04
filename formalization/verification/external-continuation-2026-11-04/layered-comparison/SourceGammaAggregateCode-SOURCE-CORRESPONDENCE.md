@@ -1,0 +1,9 @@
+# Numeric literal eraser/detector/aggregate constructors
+
+This supports the effective source-construction obligation in paper09 hardness.tex lines 308–314 and paper.tex lines 146–156. It uses the existing SyntaxCode radix-eight actual-source encoding, not a new encoding, a choice of an equivalent term, or externally executed Lean/Python as proof of computability.
+
+The numerical eraser constructs application of a ground lambda to the second argument. Its body is ContextInsertionCode.sourceCode 0 1 a, whose accepted calibration is exact capture-free weakening of the original first argument, including lifting beneath nested binders. Ground type code is zero, lambda tag six, application tag five. Detector codes follow the literal six-eraser formulas. aggregateCode is the exact right fold of corresponding left/right erasers with empty pair (1,1), the existing source zero code.
+
+ExactLiteralCodes and ExactAggregateCode calibrate to SyntaxCode.encodeTerm of unchanged original source terms, including arbitrary supplied original leaves and repeated variable names. UniformPrimitiveRecursive proves all five numerical algorithms primitive recursive on all raw natural inputs/lists. Malformed codes follow the accepted insertion algorithm's explicit behavior; no claim is made that an arbitrary malformed input becomes a well-typed source or satisfies any semantic interpretation.
+
+The construction is syntactic and control-independent despite its intended Gamma use. This does not prove numeric Plan.compile/binary/scaling construction, b,e-to-output reduction, compiler validity, effective hardness, polynomial bit-size or runtime, nor any bound relating expanded-tree source codes to the separately accepted shared-DAG metrics. Output numbers can be extremely large. No source semantics, manuscript, register or accepted file changes; candidates absent pending exact review/freeze; no export authorized.

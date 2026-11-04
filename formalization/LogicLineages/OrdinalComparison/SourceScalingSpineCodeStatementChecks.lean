@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceScalingSpineCodeTargets
+public import LogicLineages.OrdinalComparison.SourceScalingSpineCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceScalingSpineCode.StatementChecks
+theorem exact_numeric_recursion : Targets.ExactNumericRecursion := Proof.exactNumericRecursion
+theorem exact_scaling : Targets.ExactScaling := Proof.exactScaling
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceScalingSpineCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceScalingSpineCode

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockTargetChecks
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+theorem broad_unsigned_block_cut : Targets.BroadUnsignedBlockCut := Proof.broadUnsignedBlockCut
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricCanonicalObservationTargets
+public import LogicLineages.OrdinalComparison.ParametricCanonicalObservationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricCanonicalObservation.StatementChecks
+theorem omega_free_transport : Targets.OmegaFreeTransport := Proof.omegaFreeTransport
+theorem actual_assignment_transport : Targets.ActualAssignmentTransport := Proof.actualAssignmentTransport
+theorem scalar_equivalence : Targets.ScalarEquivalence := Proof.scalarEquivalence
+end LogicLineages.OrdinalComparison.Source.ParametricCanonicalObservation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricCanonicalObservation

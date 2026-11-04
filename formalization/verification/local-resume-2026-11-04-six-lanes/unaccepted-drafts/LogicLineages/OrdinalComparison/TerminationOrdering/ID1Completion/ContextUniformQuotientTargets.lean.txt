@@ -1,0 +1,40 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientTargets
+open Source ContextUniformQuotient
+
+def ActualJointCertificateCalibration : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y certificate : Nat),
+  edgeTest n arity symbols S Gamma table x y certificate =
+    NumberedNumericQuotientEdge.numericEdgeTest n arity symbols S Gamma table x y certificate ∧
+  positiveTest n arity symbols S Gamma table x y certificate =
+    NumberedQuotientPathCertificates.positivePathTest n arity symbols S Gamma table x y certificate ∧
+  numericDirectTest n arity symbols S Gamma table x y certificate =
+    QuotientDirectCertificates.numericTest n arity symbols S Gamma table x y certificate
+
+def ActualJointEdgePrimitive : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat),
+  Primrec (fun p : Parameters n × Nat × Nat × Nat =>
+    edgeTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2)
+
+def ActualJointPositivePrimitive : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat),
+  Primrec (fun p : Parameters n × Nat × Nat × Nat =>
+    positiveTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2)
+
+def ActualJointDirectPrimitive : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat),
+  Primrec (fun p : Parameters n × Nat × Nat × Nat =>
+    numericDirectTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2)
+
+def ActualWholeContextCheckersPrimitive : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat),
+  Primrec (ContextUniform.scalarValue n arity) ∧
+  Primrec (ContextUniform.listValue n arity) ∧
+  Primrec (ContextUniform.positiveValue n arity) ∧
+  Primrec (ContextUniform.directValue n arity)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientTargets

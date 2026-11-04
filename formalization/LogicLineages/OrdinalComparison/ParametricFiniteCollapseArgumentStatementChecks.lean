@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricFiniteCollapseArgumentTargets
+public import LogicLineages.OrdinalComparison.ParametricFiniteCollapseArgumentProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricFiniteCollapseArgument.StatementChecks
+theorem mixed_arithmetic : Targets.MixedArithmetic := Proof.mixedArithmetic
+theorem exact_argument : Targets.ExactArgument := Proof.exactArgument
+theorem denotation_calibration : Targets.DenotationCalibration := Proof.denotationCalibration
+end LogicLineages.OrdinalComparison.Source.ParametricFiniteCollapseArgument.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricFiniteCollapseArgument

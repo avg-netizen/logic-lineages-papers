@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricPairCollapseComputableTargets
+public import LogicLineages.OrdinalComparison.ParametricPairCollapseComputableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricPairCollapseComputable.StatementChecks
+theorem exact_search : Targets.ExactSearch := Proof.exactSearch
+theorem uniform_partial_recursive : Targets.UniformPartialRecursive := Proof.uniformPartialRecursive
+theorem uniform_computable : Targets.UniformComputable := Proof.uniformComputable
+theorem fixed_gamma_computable : Targets.FixedGammaComputable := Proof.fixedGammaComputable
+end LogicLineages.OrdinalComparison.Source.ParametricPairCollapseComputable.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricPairCollapseComputable
