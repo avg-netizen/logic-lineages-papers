@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 77,
-    "components": 25
+    "fixed_aliases": 81,
+    "components": 26
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104Y",
-    "source_sha256": "5dcfdc46589c1b1235b75ae7d504bd70aeaffd99e6f1b383c641681c40c5ee73",
-    "closure_sha256": "fd05d147f198a2dea08bcf091265e3dce2b3e0ee711d294120ae3ee5190342d2",
+    "module": "LogicLineages.ExternalCheckpoint20261104Z",
+    "source_sha256": "6aef6834f298e1eeaf9704d9e212222b28857271b8b63f60bdcce66bb36c1914",
+    "closure_sha256": "455d96d0daa02a9e0c7292f007d4ee4226b1b27fab9b1567789ff19249351944",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -395,6 +395,26 @@
         "name": "fixed_077_actual_gamma_compilation",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ActualGammaCompilation",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.actual_gamma_compilation"
+      },
+      {
+        "name": "fixed_078_fixedActualArithmeticEmbeddingTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualArithmeticEmbeddingTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualArithmeticEmbeddingTruth"
+      },
+      {
+        "name": "fixed_079_fixedActualPositiveMonotonicity",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualPositiveMonotonicity",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualPositiveMonotonicity"
+      },
+      {
+        "name": "fixed_080_fixedActualAccessibilityOperatorTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualAccessibilityOperatorTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualAccessibilityOperatorTruth"
+      },
+      {
+        "name": "fixed_081_fixedActualSourcePositiveOperators",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualSourcePositiveOperators",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualSourcePositiveOperators"
       }
     ],
     "allowed_axioms": [
@@ -1187,6 +1207,38 @@
           "sha256": "94312dcc18a975fd742cf776089eb109e51718d527ee3e634e68775022b9a0c9"
         }
       ]
+    },
+    {
+      "name": "PositiveArithmeticOperators",
+      "scope": "Actual unary-predicate arithmetic extension, syntactic positive operator bodies, standard-N calibration and monotonicity for actual R/direct-DM carrier operators.",
+      "freeze_sha256": "73103e37c91081dc0c5818de70ed8c2c8fb8146b42ff3b7dae714d82ef147397",
+      "closure_sha256": "6a80f912b3c5e4f8eaf7aab5e63b273a99e6da79ab3d774a035d808bf93cc37a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsDefinitions.lean",
+          "sha256": "b60f62cc768be1558ebfdd732b8350736bfab6b9e9f89abd07fe96d6fb7840a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsTargets.lean",
+          "sha256": "66971ca720fb81bc7510f4d97c6d18f8b46c0892edeb647b1697619fc80fa8dc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsStatementChecks.lean",
+          "sha256": "d2fc0361fb27fdfd01ce5747df25bb33c8e97f95219f4914dc593b53cc529eec"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/POSITIVE-ARITHMETIC-OPERATORS-SOURCE.md",
+          "sha256": "fdedbd105230d1959ec76d21616d56cd9316a6a149d95dc31c9c4451be13b0d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsSupportProof.lean",
+          "sha256": "088f3ca3cd0045e9b9427d43a39a02ec5659f2ea2a2771a427c614c3bdf1eaf0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsProof.lean",
+          "sha256": "96755c36626df3c42451e7e0d2264f2541c1acf02219e8a87ca0a79ef2af9d2d"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1217,6 +1269,7 @@
     "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim.",
     "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim.",
     "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim.",
-    "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim."
+    "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim.",
+    "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim."
   ]
 }

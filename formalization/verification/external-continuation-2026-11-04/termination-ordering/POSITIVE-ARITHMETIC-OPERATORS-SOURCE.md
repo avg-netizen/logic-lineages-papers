@@ -1,0 +1,7 @@
+# Actual positive arithmetic operator syntax, not ID1 derivability
+
+Paper06 lines564–571 describes two separate unnested positive arithmetic operators with typedness included: every R successor is in I; every direct DM(R) successor is in J. This component adds exactly one unary relation symbol to the accepted ordinary arithmetic language and embeds its actual formulas. A syntactic positive grammar permits arbitrary predicate-free arithmetic guards, conjunction, universal quantification, and positive predicate atoms. It compiles into the actual extended first-order language, not a semantic oracle atom.
+
+The two source operator bodies are separate uses of the same unary predicate slot. Their current-object carrier guards are the accepted encoded scalar/list carrier formulas. Their successor edges are exactly source-to-target positive R and direct replacement DM, preserving direction x→y. Malformed context/list behavior comes from the accepted formulas. No transitive closure is substituted for direct DM.
+
+Targets prove arithmetic embedding truth, semantic monotonicity of this syntactic grammar, exact accessibility body semantics and existence of the two actual positive source bodies. All semantics are standard Nat. No least fixed point, closure/leastness axiom, derivation calculus, internal ID1 theorem, disjoint-tag combination, C_tau, accessibility or well-foundedness is established.

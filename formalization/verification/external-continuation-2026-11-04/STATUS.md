@@ -151,3 +151,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104X`, 74 ex
 Three exact suppliers establish the reviewed existential plan for supported equality, addition and one primitives, retaining the original ground-input and functional-unit convention. No comparison, binary encoding, complexity or aggregation claim. See [source correspondence](layered-comparison/ParametricExistentialPlan-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Y`, 77 exact aliases.
+
+## PositiveArithmeticOperators
+
+Four exact suppliers establish unary-extension embedding truth, monotonicity of the syntactic Positive grammar, and carrier-conjoined universal-successor operator semantics for the separate scalar/R and list/direct-DM instances. Source-to-successor orientation and predicate-free guards are retained. No fixed-point, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/POSITIVE-ARITHMETIC-OPERATORS-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Z`, 81 exact aliases.
