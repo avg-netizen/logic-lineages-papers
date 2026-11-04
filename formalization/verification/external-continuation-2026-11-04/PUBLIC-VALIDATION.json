@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 94,
-    "components": 30
+    "fixed_aliases": 97,
+    "components": 31
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104AD",
-    "source_sha256": "7a524c2093373bc92e683ce47d2aa083a4fbf67cc49714ae87ed506cce9d0a31",
-    "closure_sha256": "680cf9171faf49ee79377d8eb785cec0466be5fa9c65d08c3196a1bd15559f17",
+    "module": "LogicLineages.ExternalCheckpoint20261104AE",
+    "source_sha256": "af51a21ef285e6a4d72ed36ec98b414cb873d749fd9293857261c9191e7d938c",
+    "closure_sha256": "9dc10868683d305df16cac9cddb1d3a4521a079fea00690a9a32d5c1c915c8eb",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -480,6 +480,21 @@
         "name": "fixed_094_fixedActualTaggedSourceOperators",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTaggedSourceOperators",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTaggedSourceOperators"
+      },
+      {
+        "name": "fixed_095_fixedActualSemanticLeastUnfolding",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualSemanticLeastUnfolding",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualSemanticLeastUnfolding"
+      },
+      {
+        "name": "fixed_096_fixedActualSemanticLeastness",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualSemanticLeastness",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualSemanticLeastness"
+      },
+      {
+        "name": "fixed_097_fixedActualTaggedLeastSlices",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualTaggedLeastSlices",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualTaggedLeastSlices"
       }
     ],
     "allowed_axioms": [
@@ -1436,6 +1451,38 @@
           "sha256": "f76724ea239f3e42c8addcb79f3da470d0aa5716b388d45fbc80fd6bc3af0dcd"
         }
       ]
+    },
+    {
+      "name": "PositiveArithmeticLeastSet",
+      "scope": "Metatheoretic standard-N powerset least fixed sets for actual positive syntax, unfolding/leastness and exact disjoint-tag slice equality.",
+      "freeze_sha256": "56ea1bf998b3173f2adbcc915ae674f28e374070914941f14f692dfd59885282",
+      "closure_sha256": "5efb729e527dc7e84f172a33a61cb59beda1271375a2810cf12cfd036adb7f85",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetDefinitions.lean",
+          "sha256": "2dff545f24da93a06ae5a1689f69232c4328628c48e494086f216485788bc622"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetTargets.lean",
+          "sha256": "86c648592b6180828d35feef16bcf9e4a6883ae4f2bc9be7abe9cd0c7780e8a1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetStatementChecks.lean",
+          "sha256": "1d937a000e587187fee3d62c5724e3eb239d52a787f07a276dc1dceba0ce61a8"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/POSITIVE-ARITHMETIC-LEAST-SET-SOURCE.md",
+          "sha256": "a6621534f87d3ce80c05a12f11d64b9df7f018ddc6a4be5b08ab7b0221407d2f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetSupportProof.lean",
+          "sha256": "4db11ca5151bc2f80bb311b5e999d89c8d011b42ad318f7897b54661c7f7e1c2"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetProof.lean",
+          "sha256": "19f615588286609bd50ab521edf6ccf50cb5a8c10df9ff70417e5f6c911d3e77"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1471,6 +1518,7 @@
     "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim.",
     "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim.",
     "Scaling-plan CPS semantics and exact fresh-coordinate size only; no conjunction or raw encoding claim.",
-    "Tagged positive-operator branch isolation only; no cross-sort edge, fixed-point, ID1 or well-foundedness claim."
+    "Tagged positive-operator branch isolation only; no cross-sort edge, fixed-point, ID1 or well-foundedness claim.",
+    "Standard-natural powerset least-fixed-point metatheory only; no all-typed membership, internal ID1, R-well-foundedness or transfinite bound claim."
   ]
 }

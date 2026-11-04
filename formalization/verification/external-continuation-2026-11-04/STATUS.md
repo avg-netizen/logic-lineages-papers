@@ -181,3 +181,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AC`, 90 e
 Four exact suppliers establish the unique even/odd partition, positive branch isolation, monotonicity and instantiated scalar/R and list/direct-DM semantics. No cross-sort edge, fixed-point, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/TAGGED-ARITHMETIC-OPERATORS-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AD`, 94 exact aliases.
+
+## PositiveArithmeticLeastSet
+
+Three exact suppliers establish metatheoretic standard-natural powerset least-fixed-point unfolding and leastness, together with exact tagged-slice equality. No all-typed membership, internal ID1 derivation, R-well-foundedness or transfinite bound claim. See [source correspondence](termination-ordering/POSITIVE-ARITHMETIC-LEAST-SET-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AE`, 97 exact aliases.
