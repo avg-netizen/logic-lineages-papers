@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 71,
-    "components": 23
+    "fixed_aliases": 74,
+    "components": 24
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104W",
-    "source_sha256": "1581773f7751bfdf5e7a2d6c5e747434fe8647b594ae0354a454aa7ca165ff2d",
-    "closure_sha256": "5c0ac3601da38695a0d836ebdd6bb6ea3e5a0b2cb030d4b8d2de031d55b0c498",
+    "module": "LogicLineages.ExternalCheckpoint20261104X",
+    "source_sha256": "50aa47d57b8c43aead22036b14326555e126743242bc2f917618bca190510adc",
+    "closure_sha256": "4d11cdea7f65e888bf78165dcef5109d1f1a9f69fa6ffdd306cc1d78f9d247c3",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -365,6 +365,21 @@
         "name": "fixed_071_exact_size",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ExactSize",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.exact_size"
+      },
+      {
+        "name": "fixed_072_fixedActualApplicationValuePrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualApplicationValuePrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualApplicationValuePrimitive"
+      },
+      {
+        "name": "fixed_073_fixedActualPartialApplicationFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualPartialApplicationFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualPartialApplicationFormula"
+      },
+      {
+        "name": "fixed_074_fixedActualApplicationFormulaCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualApplicationFormulaCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualApplicationFormulaCalibration"
       }
     ],
     "allowed_axioms": [
@@ -1089,6 +1104,38 @@
           "sha256": "04d8aab7471177dab137331fff426b0a51171ab7f21f042368e756e22453f7f9"
         }
       ]
+    },
+    {
+      "name": "OrdinaryArithmeticApplication",
+      "scope": "PR success graph checker and actual ordinary arithmetic graph of partial canonical application, with explicit code and typed-syntax calibration.",
+      "freeze_sha256": "13cb645f1b855ccee6377ecb8fc4edda22ab953ca21069b48539a982121bfdb6",
+      "closure_sha256": "4614fa4e67c26e86843a9538c319bfb0f052fc873d4b0114e30017a1b122d215",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationDefinitions.lean",
+          "sha256": "70c57dc9d3522b44ee8b6eacebf79b33b100c28658dc48fbc7b42afbce463317"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationTargets.lean",
+          "sha256": "453dc9e0624f341d12a50438ffca731ee836e945a181837d8f9c1fcc5fcee9be"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationStatementChecks.lean",
+          "sha256": "108bcd8737df22aaf2fa90477c97108220c5795780df1b40b63cc1a289253558"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-APPLICATION-SOURCE.md",
+          "sha256": "1c35d91fc1fae4096f94f75f51ec66f3c6912c928c1fa7eff390a50f09fa79ce"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationSupportProof.lean",
+          "sha256": "3fbe1e429fb6c84dd71141a47250ae12b1fdf2c08c1dd389cb365c912be4b4f7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationProof.lean",
+          "sha256": "b46f3818d8cebb964569a86c6f2d1b6d955305261ff2aaf109e2f4bbc2c61725"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1117,6 +1164,7 @@
     "Exact I0 and constant-one gadget only; no binary or nested gadget transfer claim.",
     "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim.",
     "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim.",
-    "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim."
+    "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim.",
+    "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim."
   ]
 }

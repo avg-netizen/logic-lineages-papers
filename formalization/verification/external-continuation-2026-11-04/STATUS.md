@@ -139,3 +139,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104V`, 67 ex
 Four exact suppliers establish the reviewed equality, addition and one lowering for the existing syntax under Gamma semantics, preserving the shared prefix and exact local size. No global compiler, encoding or aggregation claim. See [source correspondence](layered-comparison/ParametricPrimitiveLowering-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104W`, 71 exact aliases.
+
+## OrdinaryArithmeticApplication
+
+Three exact suppliers establish the six-input primitive-recursive success checker and ordinary arithmetic partial application graph with all-code and concrete-code semantics. None has no successful output, without a sentinel. Typed-source calibration retains explicit typedness and subtype assumptions. No C_tau, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-APPLICATION-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104X`, 74 exact aliases.
