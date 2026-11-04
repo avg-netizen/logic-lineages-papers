@@ -85,3 +85,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104M`, 42 ex
 Three exact suppliers establish scalar/list carrier primitive recursion, ordinary-arithmetic encoded formulas and concrete represented-carrier calibration under subtype closure. Failed Context/list codes are rejected and empty lists remain vacuous. No type-specific C_tau, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-CARRIER-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104N`, 45 exact aliases.
+
+## NumberedTypedCarrier
+
+Two exact suppliers prove attained representative type/confinement and typed canonical-carrier calibration under explicit subtype closure. This is syntax typedness only, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation. See [source correspondence](termination-ordering/NUMBERED-TYPED-CARRIER-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104O`, 47 exact aliases.
