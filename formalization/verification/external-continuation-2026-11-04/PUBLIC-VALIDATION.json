@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 63,
-    "components": 20
+    "fixed_aliases": 65,
+    "components": 21
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104T",
-    "source_sha256": "adb35c0373948f35a33ea464784ce10dba89a91bada721a2e7662fc8d4667de0",
-    "closure_sha256": "f5f70647faaae9ebe6587cc447f46818b3b7064193d36b9a02e32f67651f3ac6",
+    "module": "LogicLineages.ExternalCheckpoint20261104U",
+    "source_sha256": "830642b3aac7da61869e279f432434f3984ef7ef43600f694fe4945dd662e0b9",
+    "closure_sha256": "b12e10f5811192b8076934ed5dd5e79582aa81476bedbb8c4453b1f1b5e61f0e",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -325,6 +325,16 @@
         "name": "fixed_063_actual_gamma_one",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.Targets.ActualGammaOne",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.StatementChecks.actual_gamma_one"
+      },
+      {
+        "name": "fixed_064_fixedActualCanonicalApplicationSound",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationTargets.ActualCanonicalApplicationSound",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationStatementChecks.fixedActualCanonicalApplicationSound"
+      },
+      {
+        "name": "fixed_065_fixedActualCanonicalApplicationCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationTargets.ActualCanonicalApplicationCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationStatementChecks.fixedActualCanonicalApplicationCalibration"
       }
     ],
     "allowed_axioms": [
@@ -953,6 +963,38 @@
           "sha256": "0d466ffcc9af1dc547567f30b36e2fec5eb728e88373fb37c219f38917b14f37"
         }
       ]
+    },
+    {
+      "name": "NumberedNumericApplication",
+      "scope": "Actual numeric canonical application with decode/type/canonicality checks, typed soundness and calibration on arbitrary confined typed syntax.",
+      "freeze_sha256": "da3d2bb2f7b3d831e5d89ae77e8f7a0f3bcbafb17cf0732349886020b7191331",
+      "closure_sha256": "e6bb63fdcda41b8dba590441b21151f54f4581e5adaa1432e1e877c08b787063",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationDefinitions.lean",
+          "sha256": "c5478de1ae1d3d55c9a24cc6a7d2d3ea580c1fc62f08a32d917197545e1a0364"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationTargets.lean",
+          "sha256": "516f64e0a5df5dff24e57e49d834485a141a36d9f513f47507ecdd6e94aeeb97"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationStatementChecks.lean",
+          "sha256": "7d224d6fde37cfbdc4f3bb6db44d55de2ec32a83f8a57c4dbe555700d9e7025c"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-NUMERIC-APPLICATION-SOURCE.md",
+          "sha256": "c5e00994afa15c398b436420bf8622063e5976810da7da3550a22c97b60b5009"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationSupportProof.lean",
+          "sha256": "6f5bd6e94f03ca7d8e812b197f16f233c76d1ded6234ed86af19d4e93362a6d7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationProof.lean",
+          "sha256": "2d3b128b5455031714f6cddbc25a0004ee0f1e7bb939ebcad79e4acd728590e3"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -978,6 +1020,7 @@
     "Typed-carrier formulas express syntax typedness under actual type and Context decoding; concrete calibration retains subtype closure. No C_tau, I, ID1 or well-foundedness claim.",
     "Literal atomic eraser and addition only; no constant-one, nested gadget or complexity inference.",
     "Literal typed application confinement and representative-code congruence only; actual primary appArgument does not add a positive reduction step. No numeric, primitive-recursive or ID1 claim.",
-    "Exact I0 and constant-one gadget only; no binary or nested gadget transfer claim."
+    "Exact I0 and constant-one gadget only; no binary or nested gadget transfer claim.",
+    "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim."
   ]
 }

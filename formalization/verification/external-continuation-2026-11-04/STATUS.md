@@ -121,3 +121,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104S`, 60 ex
 Three exact suppliers retain the unchanged identity and S assignment, establish the exact natural witnesses u = 1, v = 2 and d = 3, and discharge the generic hypotheses for actual gamma. This covers the literal I0 and constant-one gadget only, with no binary or nested gadget transfer. See [source correspondence](layered-comparison/ParametricSourceOne-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104T`, 63 exact aliases.
+
+## NumberedNumericApplication
+
+Two exact suppliers establish typed soundness and output-carrier membership for the partial canonical numeric application, plus calibration on arbitrary confined typed inputs. Actual decode, type and canonicality guards and explicit subtype closure are preserved. No primitive-recursive, arithmetic or ID1 claim. See [source correspondence](termination-ordering/NUMBERED-NUMERIC-APPLICATION-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104U`, 65 exact aliases.
