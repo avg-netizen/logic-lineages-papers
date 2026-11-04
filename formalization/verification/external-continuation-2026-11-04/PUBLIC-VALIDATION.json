@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 8,
-    "components": 2
+    "fixed_aliases": 11,
+    "components": 3
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104B",
-    "source_sha256": "03105e645f546ce3dd152025a8d16b1f977f4f834b389241bbaa1eea2618ce34",
-    "closure_sha256": "daf7c06dfba814a94dd908c59b7dfad5f5308a3344899de23ea88e30a273990b",
+    "module": "LogicLineages.ExternalCheckpoint20261104C",
+    "source_sha256": "290f46b98457e20155f18a4132b846b6da10aaf2282c2ec52f5332ad467ee507",
+    "closure_sha256": "2baec1269211efaaa14723b76725f134a6fc756353d584a9ede2f1c75fb80a32",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -50,6 +50,21 @@
         "name": "fixed_008_non_eventual_periodicity",
         "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.NonEventualPeriodicity",
         "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.non_eventual_periodicity"
+      },
+      {
+        "name": "fixed_009_fixedActualOccurrenceSoundness",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualOccurrenceSoundness",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualOccurrenceSoundness"
+      },
+      {
+        "name": "fixed_010_fixedActualWitnessCompletion",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualWitnessCompletion",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualWitnessCompletion"
+      },
+      {
+        "name": "fixed_011_fixedActualDominationCertificates",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualDominationCertificates",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualDominationCertificates"
       }
     ],
     "allowed_axioms": [
@@ -126,6 +141,34 @@
           "sha256": "dfbab99ed58973ff6d48ef23d758691bef48fc791fe02d0d5ab1b5eeb6a4dbb6"
         }
       ]
+    },
+    {
+      "name": "QuotientDominationCertificates",
+      "scope": "Actual positive quotient-path certificate checking per inserted occurrence, exact index witnesses/count, completion and domination equivalence only.",
+      "freeze_sha256": "d260ef056245c731b76c0feeced4b3d87f8d7fea447ae871723425cc5fa65b34",
+      "closure_sha256": "eaba8ae71a1e9682dff3dc8dc760697b1bdf6e3e0a847f8120af3fa188a6d29d",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesDefinitions.lean",
+          "sha256": "c984443dbb43d31b96cf61d93d45b565f7a4cc194d3c576480eeb914d3a09a8f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesTargets.lean",
+          "sha256": "de97fcd0d577fb44145f142e37b1fc6eb9cf87c244f50d32de8a938035457f88"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesStatementChecks.lean",
+          "sha256": "ce2184f9af9791135c5b8805eaa303bf0a54434a591773333e55b3cdb9989ccc"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DOMINATION-CERTIFICATES-SOURCE.md",
+          "sha256": "20c10a05571d58e15abf13875a43fa57a5478169eca84208ccbcda0b1761a58f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesProof.lean",
+          "sha256": "36a0cbd8af25606a0ec183f52d0184a759a91fe12f907b306668ae7c1b9f01ef"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -133,6 +176,7 @@
     "Generic direct replacement; library calibration requires the explicit matching Preorder.",
     "No well-foundedness, ID1 accessibility, arithmetic or whole-source promotion.",
     "TARGETS registry and source manuscripts unchanged.",
-    "SourceControlNonperiodicity uses explicit Code/evaln stages, not identified tape steps or a whole source hardness theorem."
+    "SourceControlNonperiodicity uses explicit Code/evaln stages, not identified tape steps or a whole source hardness theorem.",
+    "Quotient domination uses existential checked positive-path certificates, not an unbounded relation decision or full direct multiset/well-foundedness result."
   ]
 }

@@ -13,3 +13,9 @@ No manuscript or TARGETS registry changes.
 Four fixed suppliers establish effective bounded Code/evaln simulation, exact control parity, cofinal valuation fibers and non-eventual parity periodicity. The explicit evaluation-stage convention is retained; no tape-step correspondence or whole source hardness claim. See [source correspondence](layered-comparison/SourceControlNonperiodicity-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104B`, 8 exact aliases.
+
+## QuotientDominationCertificates
+
+Three exact suppliers establish per-inserted-occurrence positive quotient-path certificate soundness, witness completion and domination equivalence. Exact counts, occurrence indices, empty insertion and witness reuse are retained. No unbounded relation decision, whole direct multiset or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DOMINATION-CERTIFICATES-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104C`, 11 exact aliases.

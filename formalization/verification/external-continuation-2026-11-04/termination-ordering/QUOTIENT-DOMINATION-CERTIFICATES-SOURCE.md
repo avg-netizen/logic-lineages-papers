@@ -1,0 +1,7 @@
+# Actual positive quotient-path evidence for each inserted occurrence
+
+This is the domination premise of paper06 direct multiset replacement DM(R), lines564–567 and598–603, under the explicitly qualified DirectMultisetPresentation convention. R is exactly the accepted PositivePath of the actual guarded QuotientEdge, with one shared symbol/type window and precedence table and fixed signature arity/ambient context. It is not the local ordinary comparison relation and no ordering property is assumed.
+
+Every inserted occurrence is paired with one removed-list index and the actual numeric positivePathTest certificate for that endpoint pair. The checker rejects out-of-range indices, missing/extra entries and failed positive paths. Reusing the same removed occurrence is permitted. Empty insertion succeeds exactly with an empty witness list, including when removed is empty; nonempty removal is a separate whole-DM requirement and is not smuggled into domination.
+
+Targets prove equal witness count and exact index-witness soundness, completion of any genuine index witness list using accepted positive-path certificate completeness, and existential certificate equivalence to domination. No decidability of unbounded R, whole DM checker, new arithmetic representation, internal ID1 or well-foundedness result is claimed. Numeric encoding of this list and formal Primrec composition are separate successors.
