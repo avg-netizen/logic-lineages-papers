@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 26,
-    "components": 8
+    "fixed_aliases": 30,
+    "components": 9
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104H",
-    "source_sha256": "974039277a279588f586e392b9cd9692eec2a29dca43c3d94d0b3b632b9e18ea",
-    "closure_sha256": "55fc6ae9db5211e227696606b2c13ae5061f53ecfe7b3189ae43db9400d7ad25",
+    "module": "LogicLineages.ExternalCheckpoint20261104I",
+    "source_sha256": "31dc0297ed96cc0d8df367f1a4552546f27ac74636c2d5ac3a8175159604651c",
+    "closure_sha256": "8bc1d7c1bd266c66f6c030e2af1a7b5199aec6a26d98cb33f3f7c36c01d4f2fc",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -140,6 +140,26 @@
         "name": "fixed_026_non_eventual_periodicity",
         "target": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.Targets.NonEventualPeriodicity",
         "supplier": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks.non_eventual_periodicity"
+      },
+      {
+        "name": "fixed_027_fixedEncodedCheckerPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.EncodedCheckerPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedEncodedCheckerPrimitive"
+      },
+      {
+        "name": "fixed_028_fixedActualCheckerCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.ActualCheckerCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedActualCheckerCalibration"
+      },
+      {
+        "name": "fixed_029_fixedEncodedDirectFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.EncodedDirectFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedEncodedDirectFormula"
+      },
+      {
+        "name": "fixed_030_fixedUniformDirectFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.UniformDirectFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedUniformDirectFormula"
       }
     ],
     "allowed_axioms": [
@@ -404,6 +424,34 @@
           "sha256": "a24b31ba7de4078751a060fbfc057b43787496eda2a047c3d59c7d236f3ef553"
         }
       ]
+    },
+    {
+      "name": "OrdinaryArithmeticDirect",
+      "scope": "Exact ordinary arithmetic graph/formula for direct multiset replacement over actual R, with literal context/list decoder semantics and fixed n/arity/Gamma.",
+      "freeze_sha256": "40a5403dab73bffbfec70ec89f31e71d98a76cedbb2f6841197f286a5ad87bab",
+      "closure_sha256": "37fa6616ec1e49d3ec57d9b4df7c8f92cd2754a7c97c57ee99c6cf3d42ea49ee",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectDefinitions.lean",
+          "sha256": "ccb480ba8df6ebf6473f6b1bb09d44afc7561b0e897fbd51e0ffdd0167429b9f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectTargets.lean",
+          "sha256": "4c713414f04fc8aadb88642ac73fe2788ccbeffcf120bcf756e833a4fdd37ed0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectStatementChecks.lean",
+          "sha256": "1cf0c926e45ccc4b869fcf7f6523c87978b9f27ae34e419b27bafb92ec6bcb09"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-DIRECT-SOURCE.md",
+          "sha256": "4e8a9f36562f10e4cef8002b9d8b0a95190f97a6bb546cfa9811777aa27cc70d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectProof.lean",
+          "sha256": "5aaa94bde29f287fba640f2d6090ed5ee1c1769d49a5d4c0b5b8202f828c3a8d"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -417,6 +465,7 @@
     "Direct quotient certificates are existential witnesses with explicit decoded endpoints, not a primitive-recursive checker, arithmetic representation or well-foundedness result.",
     "Blank-halting reduction preserves the fixed actual table encoding and terminal bridge; no timing equality, parity or full source hardness claim.",
     "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim.",
-    "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim."
+    "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim.",
+    "Ordinary-arithmetic direct replacement is standard-natural-number representation with explicit context/list decoding and fixed signature/arity/context, not a carrier, ID1 or well-foundedness theorem."
   ]
 }
