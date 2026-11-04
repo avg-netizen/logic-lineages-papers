@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 97,
-    "components": 31
+    "fixed_aliases": 101,
+    "components": 32
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104AE",
-    "source_sha256": "af51a21ef285e6a4d72ed36ec98b414cb873d749fd9293857261c9191e7d938c",
-    "closure_sha256": "9dc10868683d305df16cac9cddb1d3a4521a079fea00690a9a32d5c1c915c8eb",
+    "module": "LogicLineages.ExternalCheckpoint20261104AF",
+    "source_sha256": "8b28b372d76bf6a8050b737981d43e559513d34f912bd7829a6b9e15ba725e42",
+    "closure_sha256": "6222cb6ea5bf48d31957d66f1f39e654afaa58cac6d9d06989a7c708561e2b73",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -495,6 +495,26 @@
         "name": "fixed_097_fixedActualTaggedLeastSlices",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualTaggedLeastSlices",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualTaggedLeastSlices"
+      },
+      {
+        "name": "fixed_098_supported_syntax",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.SupportedSyntax",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.supported_syntax"
+      },
+      {
+        "name": "fixed_099_exact_conjunction",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.ExactConjunction",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.exact_conjunction"
+      },
+      {
+        "name": "fixed_100_exact_compiled_halting",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.ExactCompiledHalting",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.exact_compiled_halting"
+      },
+      {
+        "name": "fixed_101_exact_compiled_bounds",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.ExactCompiledBounds",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.exact_compiled_bounds"
       }
     ],
     "allowed_axioms": [
@@ -1483,6 +1503,46 @@
           "sha256": "19f615588286609bd50ab521edf6ccf50cb5a8c10df9ff70417e5f6c911d3e77"
         }
       ]
+    },
+    {
+      "name": "SourceMachineConjunctionPlan",
+      "scope": "Literal original three-equation shared Gamma Plan and compiled forest/actual blank Halts with exact DAG metrics; no numeric encoding/universal comparison.",
+      "freeze_sha256": "56a282b62a40d388b348beea07e50bb3b525baaf7479903e45d726df376f79a3",
+      "closure_sha256": "47050948e1f7902393c59f8c6c61caf3f256acd699df74cc07a86fccb11310bc",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanDefinitions.lean",
+          "sha256": "eb9fcb5f3b0e0379c8781c00fa4197ae17aa1441fb4cee2000397162e7a4e58e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanTargets.lean",
+          "sha256": "372981dc5d72bcca033c9c0d9d651b7f7588520ae87682a04fcf90c700e4d332"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanStatementChecks.lean",
+          "sha256": "a14f39d516f7b1180f4e1b97f8c17c3d5313b43c7276a9fcda1ed2ba5b046103"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceMachineConjunctionPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "9a5bc78e89810b2c1a5f171f0bd915a8151eaf1c1c5d4fd7f0f244ea6f8f7e76"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanLeafProof.lean",
+          "sha256": "9977f9aa30457a40e4136ce8d59e0db5d0b09382d8a6327ad8558f3cde66cacf"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanSemanticProof.lean",
+          "sha256": "3026641a496da07d5548f83f795499d9ea693280617c8feececaf540c79f86dc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanSizeProof.lean",
+          "sha256": "f52d5afd14de315279bec7aa2d4359d8ba5d699e2f78ff10c5b3e7996dac2409"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanProof.lean",
+          "sha256": "287e3578f342db094edb3489c7fa09ceccf0edf031efe9624a6ba960d63178d5"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1519,6 +1579,7 @@
     "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim.",
     "Scaling-plan CPS semantics and exact fresh-coordinate size only; no conjunction or raw encoding claim.",
     "Tagged positive-operator branch isolation only; no cross-sort edge, fixed-point, ID1 or well-foundedness claim.",
-    "Standard-natural powerset least-fixed-point metatheory only; no all-typed membership, internal ID1, R-well-foundedness or transfinite bound claim."
+    "Standard-natural powerset least-fixed-point metatheory only; no all-typed membership, internal ID1, R-well-foundedness or transfinite bound claim.",
+    "Literal source-equation conjunction under actual Gamma and DAG metrics only; no raw encoding or full hardness claim."
   ]
 }

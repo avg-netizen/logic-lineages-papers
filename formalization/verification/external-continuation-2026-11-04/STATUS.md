@@ -187,3 +187,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AD`, 94 e
 Three exact suppliers establish metatheoretic standard-natural powerset least-fixed-point unfolding and leastness, together with exact tagged-slice equality. No all-typed membership, internal ID1 derivation, R-well-foundedness or transfinite bound claim. See [source correspondence](termination-ordering/POSITIVE-ARITHMETIC-LEAST-SET-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AE`, 97 exact aliases.
+
+## SourceMachineConjunctionPlan
+
+Four exact suppliers establish the reviewed shared source-machine conjunction using literal source equations and actual Gamma, with the stated DAG metrics. No raw encoding or full hardness claim. See [source correspondence](layered-comparison/SourceMachineConjunctionPlan-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AF`, 101 exact aliases.
