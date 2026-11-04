@@ -1,0 +1,566 @@
+{
+  "schema": "focused-fixed-target-acceptance-v2",
+  "status": "PASS",
+  "accepted_at_utc": "2026-11-04T03:45:06.918642+00:00",
+  "baseline_commit": "3c53370408aa36e44650a4846d6a398e19f91389",
+  "branch": "formalization/cumulative-continuation-2026-11-03",
+  "new_components": 6,
+  "new_fixed_targets": 19,
+  "component_targets": {
+    "NumberedMultisetPresentation": [
+      "ActualPackedListEncoderPrimitive",
+      "ActualPackedListDecoderPrimitive",
+      "ActualCertificateEncoderPrimitive",
+      "ActualCertificateDecoderPrimitive"
+    ],
+    "NumberedFiniteMarkPrimrec": [
+      "ActualFiniteMarkCodeCalibration",
+      "ActualFiniteMarkCodePrimitive",
+      "ActualMarkTargetPrimitive"
+    ],
+    "NumberedMultisetTestsPrimrec": [
+      "ActualReplacementTestPrimitive",
+      "ActualMultisetTestPrimitive"
+    ],
+    "NumberedCopyOperation": [
+      "ActualHeadAbovePrimitive",
+      "ActualAllCopyCodePrimitive",
+      "ActualCopyCodeCalibration",
+      "ActualPackedCopyPrimitive",
+      "ActualNumericCopyCertificatePrimitive"
+    ],
+    "NumberedMulPrimrec": [
+      "ActualMulCodeCalibration",
+      "ActualMulCodePrimitive",
+      "ActualMulCertificatePrimitive",
+      "ActualNumericMulPrimitive"
+    ],
+    "NumberedNumericRootPrimrec": [
+      "ActualNumericRootPrimitive"
+    ]
+  },
+  "new_lean_files": 28,
+  "source_hashes": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyOperationDefinitions.lean": "7297bd8a3e926882a0597af76b1b56331adbcaa1492da0a6cbf20f69a9cc3260",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyOperationProof.lean": "99231d56ddc3cfb6c6a915ccfc20248ffbe40c05fad98783129680398ea6844b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyOperationStatementChecks.lean": "1bc1acdb3ea322b7e3d8478dde744ea028649b440c867989a8f5c6d507a67ec5",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyOperationSupportProof.lean": "1f9e157cff9f48d2641398a035174aa4512e36d5616319187310a019d208c62b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyOperationTargets.lean": "7213aad4e5ce2cb312a912503c940047d43d190ea2b52b1d982d228aca7e6c4b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteMarkPrimrecDefinitions.lean": "34db76c92eb9c1558c6b6a27b80f41caa453d200a724c3a527f039550fe83f51",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteMarkPrimrecProof.lean": "135e18fe8f1cf8ea19a23de1eccf3904aa99c99e9094aa2345b2fbab7e9bdd18",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteMarkPrimrecStatementChecks.lean": "a7c18f56526fe55199fea9525c312348f1f9761b6c298cb48205b09a3f9f9e94",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFiniteMarkPrimrecTargets.lean": "fa3df21b4d58073dc2e2d2c341b5d4c066500c1013a0c110eae1194b8bfc4a03",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulPrimrecDefinitions.lean": "0f7ab9c1ed2a7f515fc3b200772ea7072db0403a50ee9623847a0e66c76577f5",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulPrimrecProof.lean": "379d4340aa57c80a1bf6e13f114f43050041632ad500b0a7300ee866a37bd800",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulPrimrecStatementChecks.lean": "e8a9c3c3802c1ace8f8b33a6520747c900f0a3fb8b0b6f3ac55362ef6e048302",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulPrimrecSupportProof.lean": "df24b8533742b6bd4ca519ba31b37fce5191fc974cc8b4c75ea9707452ed0cfd",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulPrimrecTargets.lean": "a008b86e51983b2e7858d04e6383f6511210ee240754f5c41ed4176ee24a0a72",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetPresentationDefinitions.lean": "baf1bae0eef2ab80cce21a65134b1f494ce5dc38de76a0a2d6bebceb8e458645",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetPresentationProof.lean": "321e89c96d32eb9d522c2fb94bea408101294e4ed379af94bc66edb78d099401",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetPresentationStatementChecks.lean": "a0261874cd8aa51a7caad16122ebcf5c00b1ab72ea07a1a67831d10fffa69efd",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetPresentationTargets.lean": "2ebbcd7b571b36ff5b535f7b684e182a0eff7dbf78f403c7a7ab5641f312b11f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetTestsPrimrecProof.lean": "005139ea74ce17b782670af2c2df6980f9487077cfb7edc6a591d5cd5461947f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetTestsPrimrecStatementChecks.lean": "0503c24702cf21071ea2be94aec6062e095344a40fde6ad53728d08d6a3c537b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetTestsPrimrecTargets.lean": "f33d92c4b81f3e7d9bc5f6842dae62d9dcdb6296e7c5c24c6dc135ff45e33404",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootLeavesPrimrecProof.lean": "0b6b62ba946ef6256605311966ec8d76b95a2804374cf09b1dcbc1b247c13d25",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootPrimrecDefinitions.lean": "c2f0233a30d6b16246905b9059b015f3df5551e01e972f20ac2f49131db5bbf4",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootPrimrecProof.lean": "f05f4673a61c2e3c1f08820da74168b1b42eedcd4427163bb1c999d0b8bc1023",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootPrimrecStatementChecks.lean": "63ad6c6ced4d018ddf20eb65a8ad8ba28b941e84490fae1145f6cf36ee2a701b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootPrimrecSupportProof.lean": "5155a4f774067a90a118b85b876ab89054339d60ef72319d49d5df701f274c69",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootPrimrecTargets.lean": "49c88b72fc1d37ced4270bebb333f9b3407886d5506e85c673f146b02acb0786",
+    "LogicLineages/CumulativeCheckpoint20261103RootEffectivity.lean": "263cbf54dee7b313b395002c47e3424d03d659031356423a2ebcb97a4df5f905"
+  },
+  "freeze": {
+    "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/ROOT-EFFECTIVITY-FREEZE.json",
+    "sha256": "12c6a80526c3430411994163a9947327c03f410f44970f1b64fe796726176403",
+    "all_specs_unchanged": true
+  },
+  "comparators": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationTargets",
+      "source_sha256": "2ebbcd7b571b36ff5b535f7b684e182a0eff7dbf78f403c7a7ab5641f312b11f",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793762961516781473-2.json",
+        "sha256": "55120f5997b47b229b0c0187e7b0078ea892aa5e67fe4a9387b5ba51134787e7"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793762961516781473-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetPresentationTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationTargets",
+      "source_sha256": "7213aad4e5ce2cb312a912503c940047d43d190ea2b52b1d982d228aca7e6c4b",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793762996776332835-2.json",
+        "sha256": "1eb0fdd9982da6ce61877ec26f6afc1748d691f945cafc8b5c8b0ed86431b6ab"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793762996776332835-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedCopyOperationTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecTargets",
+      "source_sha256": "49c88b72fc1d37ced4270bebb333f9b3407886d5506e85c673f146b02acb0786",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763066531524994-2.json",
+        "sha256": "0318aa2a285640eaae53cfd01619038a50f0c890133eb61d99ad0d75b26e7e66"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763066531524994-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootPrimrecTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecTargets",
+      "source_sha256": "fa3df21b4d58073dc2e2d2c341b5d4c066500c1013a0c110eae1194b8bfc4a03",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763176589684697-2.json",
+        "sha256": "18d5b31789dfe8e5075c44df05de18be7374a7de714cf81c789fd66ed0f01c48"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763176589684697-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteMarkPrimrecTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecTargets",
+      "source_sha256": "f33d92c4b81f3e7d9bc5f6842dae62d9dcdb6296e7c5c24c6dc135ff45e33404",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763176589684697-2.json",
+        "sha256": "18d5b31789dfe8e5075c44df05de18be7374a7de714cf81c789fd66ed0f01c48"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763176589684697-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetTestsPrimrecTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecTargets",
+      "source_sha256": "a008b86e51983b2e7858d04e6383f6511210ee240754f5c41ed4176ee24a0a72",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763176589684697-2.json",
+        "sha256": "18d5b31789dfe8e5075c44df05de18be7374a7de714cf81c789fd66ed0f01c48"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763176589684697-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMulPrimrecTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    }
+  ],
+  "fixed_gates": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks",
+      "source_sha256": "a0261874cd8aa51a7caad16122ebcf5c00b1ab72ea07a1a67831d10fffa69efd",
+      "returncode": 0,
+      "seconds": 1.221,
+      "peak_process_tree_rss_kib": 1113208,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763232362975322-2.json",
+        "sha256": "c2a94f2d8d6d774202ee7b42f157d95194d0f835c3f719af152ea5ec7007a998"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763232362975322-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetPresentationStatementChecks.log",
+        "sha256": "7624452a045210ebd33ae31d57a2c5a4028848e2315778fa6c6ce03fb78674cd"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks: 4 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks.fixedActualCertificateEncoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks.fixedActualCertificateDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks.fixedActualPackedListDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks.fixedActualPackedListEncoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks",
+      "source_sha256": "a7c18f56526fe55199fea9525c312348f1f9761b6c298cb48205b09a3f9f9e94",
+      "returncode": 0,
+      "seconds": 1.532,
+      "peak_process_tree_rss_kib": 1122520,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763542807589444-2.json",
+        "sha256": "a6631ac6d9178ab51a376f6d2d22a214eeb266b9d861b185f12dcef9def6f4a0"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763542807589444-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteMarkPrimrecStatementChecks.log",
+        "sha256": "28363161c03b6f57581f28a4e4fb7b20b5e3e7f45c68db371357365562e24b4a"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks: 3 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks.fixedActualFiniteMarkCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks.fixedActualFiniteMarkCodeCalibration": [
+          "propext"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks.fixedActualMarkTargetPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks",
+      "source_sha256": "0503c24702cf21071ea2be94aec6062e095344a40fde6ad53728d08d6a3c537b",
+      "returncode": 0,
+      "seconds": 1.431,
+      "peak_process_tree_rss_kib": 1122308,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763753551102786-2.json",
+        "sha256": "bd0946e9e1113d744dcf9b8954531d655c1f70d1f29783e7fd55c305c2898423"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763753551102786-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetTestsPrimrecStatementChecks.log",
+        "sha256": "cf7f4f364ebb4a4f506100c64615372f4ce243194f45ecb5f13b65bb11c0b707"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks: 2 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks.fixedActualMultisetTestPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks.fixedActualReplacementTestPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks",
+      "source_sha256": "1bc1acdb3ea322b7e3d8478dde744ea028649b440c867989a8f5c6d507a67ec5",
+      "returncode": 0,
+      "seconds": 1.172,
+      "peak_process_tree_rss_kib": 1127560,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763675934940428-2.json",
+        "sha256": "032f0e9fb404fab88bc87267a08b3f899bfeea92a0ea4b6260d05872cc0dda70"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763675934940428-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedCopyOperationStatementChecks.log",
+        "sha256": "d55dd3eca1f6c0343b1c92b0cf1dd65a8f4a81b1aebf5f8ce1adffecde023359"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks: 5 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks.fixedActualHeadAbovePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks.fixedActualAllCopyCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks.fixedActualCopyCodeCalibration": [
+          "propext"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks.fixedActualNumericCopyCertificatePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks.fixedActualPackedCopyPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks",
+      "source_sha256": "e8a9c3c3802c1ace8f8b33a6520747c900f0a3fb8b0b6f3ac55362ef6e048302",
+      "returncode": 0,
+      "seconds": 1.225,
+      "peak_process_tree_rss_kib": 1127560,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763753551102786-2.json",
+        "sha256": "bd0946e9e1113d744dcf9b8954531d655c1f70d1f29783e7fd55c305c2898423"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763753551102786-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMulPrimrecStatementChecks.log",
+        "sha256": "4241e83cde2d90f046499d2e5fd8512856987a9331a842627313927bef25b9f6"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks: 4 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks.fixedActualMulCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks.fixedActualMulCodeCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks.fixedActualMulCertificatePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks.fixedActualNumericMulPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecStatementChecks",
+      "source_sha256": "63ad6c6ced4d018ddf20eb65a8ad8ba28b941e84490fae1145f6cf36ee2a701b",
+      "returncode": 0,
+      "seconds": 1.271,
+      "peak_process_tree_rss_kib": 1130224,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763753551102786-2.json",
+        "sha256": "bd0946e9e1113d744dcf9b8954531d655c1f70d1f29783e7fd55c305c2898423"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763753551102786-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootPrimrecStatementChecks.log",
+        "sha256": "b5e2bca9e838b3805086645982a8e7b5a3597c2cdcb4d455d7b59c17281402ce"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecStatementChecks: 1 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecStatementChecks.fixedActualNumericRootPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "focused_aggregate": {
+    "module": "LogicLineages.CumulativeCheckpoint20261103RootEffectivity",
+    "source_sha256": "263cbf54dee7b313b395002c47e3424d03d659031356423a2ebcb97a4df5f905",
+    "returncode": 0,
+    "seconds": 1.273,
+    "peak_process_tree_rss_kib": 1130448,
+    "receipt": {
+      "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763816644691711-2.json",
+      "sha256": "a45d296992ea147d6287bffa8bbddb2944541f406721b1bfa9726d95e4e7ed8c"
+    },
+    "compiler_log": {
+      "path": "verification/cumulative-continuation-2026-11-03/termination-ordering/receipts/1793763816644691711-2-LogicLineages-CumulativeCheckpoint20261103RootEffectivity.log",
+      "sha256": "5617c8c68b33331bed98f7d72d2f60585d3a81821593d523e23d7c77a3567247"
+    },
+    "audit_summaries": [
+      "AXIOM_AUDIT_PASS LogicLineages.CumulativeCheckpoint20261103RootEffectivity: 19 theorems"
+    ],
+    "actual_axioms": {
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_14_ActualNumericCopyCertificatePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_16_ActualMulCodePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_13_ActualPackedCopyPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_04_ActualCertificateDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_18_ActualNumericMulPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_15_ActualMulCodeCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_08_ActualReplacementTestPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_06_ActualFiniteMarkCodePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_12_ActualCopyCodeCalibration": [
+        "propext"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_05_ActualFiniteMarkCodeCalibration": [
+        "propext"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_19_ActualNumericRootPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_10_ActualHeadAbovePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_11_ActualAllCopyCodePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_17_ActualMulCertificatePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_01_ActualPackedListEncoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_09_ActualMultisetTestPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_07_ActualMarkTargetPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_03_ActualCertificateEncoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103RootEffectivity.fixed_02_ActualPackedListDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_actual_axioms_allowed": true,
+  "frozen_original_semantics_unchanged": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMarkCertificateDefinitions.lean": "5b9e96c5fb6f546ff58fd7415ae9908649642c95c25108f02ab69a8939b979e1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetCertificateDefinitions.lean": "9461cd65ab4d4ed4781233de35adc4e94aab3fa4265247427d528167d728bfe9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetNumericDefinitions.lean": "5d563687c19c8942abfb17c960a3c7dc5bafb4d6894c1165bd49cf3246ee8e78",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyCertificateDefinitions.lean": "28c5fec1890c20aebcaeb447a557662afc56797536436b1cc99d19818138aee3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulCertificateDefinitions.lean": "a2c052c9ab002bb54d4862c532c1c1a3f70a62da77b7a899c298ed184d00fc85",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericMulDefinitions.lean": "07543ec92877bda96684f6afb15d3c407cf141def6a85a10ba01d262f202d098",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootDefinitions.lean": "04f46b448338c223b85cd40deb050d47312d3dc3e67fcca84563401258553a7a",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectCertificateDefinitions.lean": "bdb91d55d3063efb1ff4a23961ce58fd84081b2400b5c0ed8f28f009e9d730a3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelectCertificateDefinitions.lean": "c205ca95e2ad24dcb042902f4b7fdb45cb57e18baaf02d072d4c720f606b3086"
+  },
+  "manuscript": {
+    "path": "06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+  },
+  "closure": {
+    "record": "verification/cumulative-continuation-2026-11-03/termination-ordering/SOURCE-CLOSURE.json",
+    "sha256": "0e427629bf0fbb413520113d531f7800124af9aa7951625b14baaf268b170d1d",
+    "local_modules": 534,
+    "source_fingerprint_sha256": "8ac2d8a68146a1dcc2fc7941e89e8ca45279728f6275296f4d262b94a2d549f5",
+    "all_current_local_sources_have_current_compiled_objects": true,
+    "forbidden_source_shortcuts_found": false
+  },
+  "source_register": {
+    "checked": 154,
+    "inherited": 2,
+    "pending": 33,
+    "total": 189,
+    "status_changes": 0,
+    "sha256": "bfaaccd830d84ba132b0cf4c793867d4d0bafb822525adf7130d05405926ecd0",
+    "progress_record": "verification/cumulative-continuation-2026-11-03/termination-ordering/SOURCE-REGISTER-PROGRESS.json",
+    "progress_record_sha256": "80a7c99f8f2d244a346416f89ebf8fd7953f036af928f04030a869e7106ebc1d"
+  },
+  "inherited_baselines": [
+    {
+      "record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json",
+      "sha256": "fecfb38fde548b87fe70fdf038c6ba01bb0be1d9b3ea0a6977d1b7c9a7d72d35",
+      "ledger_components": 111,
+      "ledger_fixed_targets": 374,
+      "scope": "Inherited merged evidence; not counted as new targets or as a fresh full rerun in this checkpoint."
+    },
+    {
+      "record": "verification/local-publication-2026-11-04/INTEGRATION.json",
+      "sha256": "46659b8db1d622ac6070fcdd321781b9646a65d94a0b63e37abc56788e995d58",
+      "ledger_components": 20,
+      "ledger_fixed_targets": 106,
+      "scope": "Inherited merged evidence; not counted as new targets or as a fresh full rerun in this checkpoint."
+    }
+  ],
+  "runner": {
+    "threads": 1,
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds_per_module": 90,
+    "wall_seconds_per_module": 180,
+    "unchanged_pins": {
+      "formalization/scripts/check.py": "9eecb0236964bb6ede2ae0819a37eccfc476c0df366e267e38ba16fe4208d59d",
+      "formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "04-pure-r1-calculator/scripts/check_lean.py": "d794390c512710869ea87fdf1f1ecf5d14431c928d53fa94f69a911b02df8f52"
+    },
+    "upstream_cache_only": true
+  },
+  "root_import_inventory": {
+    "new_gates_and_aggregate_present": true,
+    "all_imports_resolve_to_local_sources": true,
+    "full_root_recompiled": false,
+    "root_source_sha256": "4401456f77b89552113dc3c67c1152fb85fd9c65c0724e793a6f339b57b9ed91"
+  },
+  "scope": "Fresh bounded compiler/exact-type/actual-axiom checks for all new modules and the focused aggregate. Existing dependencies reused or rebuilt as required. Failed development attempts are not accepted evidence. No full-root or CI run is claimed.",
+  "remaining_scope": [
+    "Typed focus/replacement and selector/decoding effectivity uniform in changing binder contexts; preserve the unguarded selectorTest used by stepTest",
+    "Numeric step, quotient-edge and positive-path certificate effectivity",
+    "Exact arithmetic presentation of original H and positive closure R",
+    "Source-required varying-parameter interfaces and whole simulation assembly",
+    "Internal ID1 accessibility and ordinal suppliers"
+  ]
+}

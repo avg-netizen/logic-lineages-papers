@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks
+
+theorem fixedActualSelectorCalibration : NumberedUniformSelectorTargets.ActualSelectorCalibration :=
+  NumberedUniformSelectorProof.selectorCalibration
+theorem fixedActualSelectorPrimitive : NumberedUniformSelectorTargets.ActualSelectorPrimitive :=
+  NumberedUniformSelectorProof.selectorPrimitive
+
+#print axioms fixedActualSelectorCalibration
+#print axioms fixedActualSelectorPrimitive
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks

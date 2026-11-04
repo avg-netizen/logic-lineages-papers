@@ -1,0 +1,717 @@
+{
+  "schema": "focused-fixed-target-acceptance-v2",
+  "status": "PASS",
+  "accepted_at_utc": "2026-11-04T04:25:57.403133+00:00",
+  "baseline_commit": "9dc34731f0438de2c726d93ca7a4eca7313490a2",
+  "branch": "formalization/cumulative-continuation-2026-11-03",
+  "new_components": 7,
+  "new_fixed_targets": 27,
+  "cumulative_branch_components": 13,
+  "cumulative_branch_fixed_targets": 46,
+  "component_targets": {
+    "NumberedUniformPackedDecoding": [
+      "ActualRawStructuralCalibration",
+      "ActualRawStructuralDecoderPrimitive",
+      "ActualRawPackedCalibration",
+      "ActualRawPackedDecoderPrimitive",
+      "ActualRawUniverseCalibration",
+      "ActualRawUniverseDecoderPrimitive"
+    ],
+    "NumberedUniformMultiset": [
+      "ActualCertificateDecoderCalibration",
+      "ActualUniformCertificateDecoderPrimitive",
+      "ActualMultisetCalibration",
+      "ActualRawMultisetPrimitive"
+    ],
+    "NumberedUniformMul": [
+      "ActualRawMulCalibration",
+      "ActualRawMulPrimitive",
+      "ActualMulTestCalibration",
+      "ActualMulTestPrimitive"
+    ],
+    "NumberedUniformSelector": [
+      "ActualSelectorCalibration",
+      "ActualSelectorPrimitive"
+    ],
+    "NumberedFocusCode": [
+      "ActualFocusCalibration",
+      "ActualReplacementCalibration",
+      "ActualReplacementFailure",
+      "ActualFocusPrimitive",
+      "ActualReplacementPrimitive"
+    ],
+    "NumberedNumericStepPrimrec": [
+      "ActualStepCalibration",
+      "ActualNumericStepPrimitive"
+    ],
+    "NumberedQuotientCertificatesPrimrec": [
+      "ActualNumericEdgePrimitive",
+      "ActualPathCertificateDecoderPrimitive",
+      "ActualPathTestPrimitive",
+      "ActualPositivePathTestPrimitive"
+    ]
+  },
+  "new_lean_files": 37,
+  "source_hashes": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodeCalibrationProof.lean": "276d34f22b296d19afef689b7d296b68e2ca759f3616e4d0d887965a59e58d73",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodeDefinitions.lean": "e3666e765f641299d10435d5a8864c951116d1b8c479c60042e4bb83d9bab7c1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodePrimrecProof.lean": "89bfedb49dce4628bfa647f418ea6c272cb3a305f570fbc21e4858596483db0a",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodePrimrecSupportProof.lean": "52f9c00335c291f686bd35072b945b25f6186f6ef7d1d34812d3bd7fdc7aef69",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodeProof.lean": "430952acc1e22e74c828b414ac55bf9d3ca9df10e8e5d27023b5c468b11cadc9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodeStatementChecks.lean": "9e2f26766b4977f558389ad54af0a48810e2aa92c47806762aeca232e0d213e4",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodeSupportProof.lean": "44bcf147d1828bcb7d3d9c3c338de1c1ec4bbf0fe14dcf884d5d78c913c6bc6a",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedFocusCodeTargets.lean": "98568ccae5d0ee214cadc5057dc1556a83370d556ba96e23ce2d15ef70c2b8a6",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepCodePrimrecProof.lean": "675e30b32869cc3ca02e21939fe5cfeed45e3907d869284ea4de1906e567a76d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepPrimrecDefinitions.lean": "8f5234a5e591b2372edaedd1c1b7d787812fa4741a6ab2b7da78696bc2e1d56f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepPrimrecProof.lean": "95ea2fe712eedaa03d28eb2dadd7df1bb3bdbb173bc638089e87bc19f9a2052e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepPrimrecStatementChecks.lean": "500674fed6c7df0a50323d41de23681c3026f12680dcdc45bac72a6cb40c7adc",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepPrimrecSupportProof.lean": "83ab71608889af9777872504cb2ee0f44ab34c6a3c5eaf64d56e50ff46a5bc49",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepPrimrecTargets.lean": "c4e52eac003128715920b27a4f8975035c669018ece3188f3074bffb43f85753",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientCertificatesPrimrecProof.lean": "d0c4729390c56abbb7e7d37d252116f3fc44c09371e532fde35ed067e8a756c7",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientCertificatesPrimrecStatementChecks.lean": "2fe62da750bc2332e6a369bc374463775710ce775be424a3d82fe8717cc92182",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientCertificatesPrimrecTargets.lean": "c204b85125536509d6df58463610542cdea693e4007b70f3ed28edb6ac9cc50e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathPrimrecSupportProof.lean": "b3c515ab3dcd931d0539bdecb3addcaafc47a400f6d23af4a3e90f11faf03150",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMulDefinitions.lean": "2460b91fc89e3ee6c81853aa7ff8f13f280e842a7dca375a1f49449e1b00d06d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMulProof.lean": "17ff6d13baf4756ca318cb40d1339154f23eef3c73a724ebc35c297e9cee2e46",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMulStatementChecks.lean": "2f28b54645077453ae8b4432d54027c7e6cdb864b1d969cb2d3bbcd74a549e58",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMulTargets.lean": "728123e3daec45a88fccb884a438e679563920f53d895aa668987ddb422ed3f2",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMultisetDefinitions.lean": "78ebfc03e6b95209c26d71fa8b7d15db76b0263bff50361f364b2c19b632bc8c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMultisetProof.lean": "b4b9ab9d1cc198e2c30a0578544b07a75c795fd0bfe160f166e055c2ccc53663",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMultisetStatementChecks.lean": "7194efbfdba1a1c7102736f7536b599b53a848ad5756e394af23015e778047ac",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMultisetSupportProof.lean": "81d6980986457686628ad3f1060f22d2c12a41589b362efbfd22894ee0fa1141",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformMultisetTargets.lean": "592b788bae5e47ddc6a2d17f3df343b559eb28d12b45196ebc7558720a8e4724",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformPackedDecodingDefinitions.lean": "973ec562477e3b356f78e853968e56a439a7554792cc4e0b959b2f05ee12490f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformPackedDecodingProof.lean": "970b8df65e4781a8555bc3facf4a94b252be41265c1df9e6eda85139a0c1f9e9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformPackedDecodingStatementChecks.lean": "d1ceb5af281cb6cc454b2165cb1e49cf3777a0c39ff52a3f353f93b77ee6bc5e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformPackedDecodingTargets.lean": "57f15e4e0a93afcca40f33a21af8a5260bba87c948453e84de79e70116169038",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformSelectorDefinitions.lean": "528254c03119dd2dbfa618d82190313d72ce720676639fc254ba0222cd2d20aa",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformSelectorProof.lean": "5b174b927b18bbae9481703c2e22fa6f1b6e7b93e6710ccb13c40c6b7f1ad5d1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformSelectorStatementChecks.lean": "3f3a4eb8f4da2d3f6bd3bcbccec4d530a0cb7cc481e23de7dec279cf5b02b950",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformSelectorSupportProof.lean": "e687b0c0e0557470cfac314e29a61c6211dcf0e247112cb1ca7a6962d487b5aa",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniformSelectorTargets.lean": "aa9bdb529baca3312a1a0e832bac1a09932b66c690f90af098df438bf437fc29",
+    "LogicLineages/CumulativeCheckpoint20261103ContextualEffectivity.lean": "c40e16ac9802db51da5554527f9237a07f25daa204a483c1a6b8879bc71150ef"
+  },
+  "freeze": {
+    "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-FREEZE.json",
+    "sha256": "048231601a3f80c4f3f16524ca6cc0329720a21846bdb2e2a6410f9b332778f5",
+    "all_specs_unchanged": true
+  },
+  "comparators": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingTargets",
+      "source_sha256": "57f15e4e0a93afcca40f33a21af8a5260bba87c948453e84de79e70116169038",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765067427339000-2.json",
+        "sha256": "553841d48feea6eeb4d9f7353908380ed879236a005f22c24f996e04ea072a43"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765067427339000-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformPackedDecodingTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetTargets",
+      "source_sha256": "592b788bae5e47ddc6a2d17f3df343b559eb28d12b45196ebc7558720a8e4724",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765185672810400-2.json",
+        "sha256": "8905b8321582befe10ae58a91a4e078ca761c7036c68278c6c1e1ae1d3c245e2"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765185672810400-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMultisetTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulTargets",
+      "source_sha256": "728123e3daec45a88fccb884a438e679563920f53d895aa668987ddb422ed3f2",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765185672810400-2.json",
+        "sha256": "8905b8321582befe10ae58a91a4e078ca761c7036c68278c6c1e1ae1d3c245e2"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765185672810400-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMulTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorTargets",
+      "source_sha256": "aa9bdb529baca3312a1a0e832bac1a09932b66c690f90af098df438bf437fc29",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765226605962395-2.json",
+        "sha256": "44b33474691e4407594f11fb35632062455b7bd60e866ecba50d985363d4e195"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765226605962395-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformSelectorTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecTargets",
+      "source_sha256": "c204b85125536509d6df58463610542cdea693e4007b70f3ed28edb6ac9cc50e",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765296321944441-2.json",
+        "sha256": "4b33628c9bf262c85d2e6e75f0e8e851d16dc3b9f4b05e6592a8ce03e7751377"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765296321944441-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientCertificatesPrimrecTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeTargets",
+      "source_sha256": "98568ccae5d0ee214cadc5057dc1556a83370d556ba96e23ce2d15ef70c2b8a6",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765383641745160-2.json",
+        "sha256": "25eb9cd2d49f0e97a96a578326205a1ac8cf376419da609a7afacf57377430db"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765383641745160-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecTargets",
+      "source_sha256": "c4e52eac003128715920b27a4f8975035c669018ece3188f3074bffb43f85753",
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765383641745160-2.json",
+        "sha256": "25eb9cd2d49f0e97a96a578326205a1ac8cf376419da609a7afacf57377430db"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765383641745160-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepPrimrecTargets.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "returncode": 0
+    }
+  ],
+  "fixed_gates": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks",
+      "source_sha256": "d1ceb5af281cb6cc454b2165cb1e49cf3777a0c39ff52a3f353f93b77ee6bc5e",
+      "returncode": 0,
+      "seconds": 1.168,
+      "peak_process_tree_rss_kib": 1114980,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765226605962395-2.json",
+        "sha256": "44b33474691e4407594f11fb35632062455b7bd60e866ecba50d985363d4e195"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765226605962395-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformPackedDecodingStatementChecks.log",
+        "sha256": "74da8548c1f13e860603df6485bce509962b152f70d5ac1f99913c31680aa833"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks: 6 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks.fixedActualRawPackedDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks.fixedActualRawUniverseDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks.fixedActualRawStructuralDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks.fixedActualRawUniverseCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks.fixedActualRawPackedCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks.fixedActualRawStructuralCalibration": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks",
+      "source_sha256": "7194efbfdba1a1c7102736f7536b599b53a848ad5756e394af23015e778047ac",
+      "returncode": 0,
+      "seconds": 1.169,
+      "peak_process_tree_rss_kib": 1126552,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765623026141099-2.json",
+        "sha256": "9400a7eeb82231716d5c0382633431d810512117b4870fdc0d3a5000260fe5d2"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765623026141099-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMultisetStatementChecks.log",
+        "sha256": "cf6a99866fcb749c3dc758347781effc77275846e55b2f299728aa91ae52739c"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks: 4 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks.fixedActualRawMultisetPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks.fixedActualCertificateDecoderCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks.fixedActualMultisetCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks.fixedActualUniformCertificateDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks",
+      "source_sha256": "2f28b54645077453ae8b4432d54027c7e6cdb864b1d969cb2d3bbcd74a549e58",
+      "returncode": 0,
+      "seconds": 1.169,
+      "peak_process_tree_rss_kib": 1127236,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765714941088462-2.json",
+        "sha256": "1458c0de3ffc9c6cd9d78690c74499bfba2a52652735b7ac16b3f1650099b726"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765714941088462-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMulStatementChecks.log",
+        "sha256": "b505dc04a07bdc7bdf7eecbad1ad28166abf39ad51af195e8e3cb57ece1ee43d"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks: 4 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks.fixedActualMulTestPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks.fixedActualMulTestCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks.fixedActualRawMulPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks.fixedActualRawMulCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks",
+      "source_sha256": "3f3a4eb8f4da2d3f6bd3bcbccec4d530a0cb7cc481e23de7dec279cf5b02b950",
+      "returncode": 0,
+      "seconds": 1.377,
+      "peak_process_tree_rss_kib": 1131360,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765941168401920-2.json",
+        "sha256": "b0797231b1f49ad6928338b2ebcb5c3f021e5e08dea37b93baf96ca7da727933"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793765941168401920-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformSelectorStatementChecks.log",
+        "sha256": "b407ce591a6e61b93874b8adbec2be9e6262f3a2acf79bc59579869c338293db"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks: 2 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks.fixedActualSelectorPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks.fixedActualSelectorCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks",
+      "source_sha256": "9e2f26766b4977f558389ad54af0a48810e2aa92c47806762aeca232e0d213e4",
+      "returncode": 0,
+      "seconds": 1.386,
+      "peak_process_tree_rss_kib": 1138812,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766170254874768-2.json",
+        "sha256": "bf7515309283388113144e38fe1360b7ef38543aa2ed718605ded85fc883814b"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766170254874768-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeStatementChecks.log",
+        "sha256": "98180459f4fc220acce4d2325dc3ec2c7ed0f4c89d13edec1e919bb79fc1d46d"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks: 5 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks.fixedActualReplacementPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks.fixedActualReplacementCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks.fixedActualFocusPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks.fixedActualReplacementFailure": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks.fixedActualFocusCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks",
+      "source_sha256": "500674fed6c7df0a50323d41de23681c3026f12680dcdc45bac72a6cb40c7adc",
+      "returncode": 0,
+      "seconds": 1.119,
+      "peak_process_tree_rss_kib": 1138828,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766289335029936-2.json",
+        "sha256": "67b25351ce4877c4677537da4a14eadb3d30572cfabec9445c80b4c7d3258b12"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766289335029936-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepPrimrecStatementChecks.log",
+        "sha256": "8292fe55dc36fd88bc7d4db41ea7158fdaeb65a54c5c37ee43860617951b175a"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks: 2 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks.fixedActualStepCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks.fixedActualNumericStepPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks",
+      "source_sha256": "2fe62da750bc2332e6a369bc374463775710ce775be424a3d82fe8717cc92182",
+      "returncode": 0,
+      "seconds": 1.322,
+      "peak_process_tree_rss_kib": 1141564,
+      "receipt": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766330837671009-2.json",
+        "sha256": "ad039dccabc9222a91eb7b9bf2ac15962d0f1512d85a47f919610facfa7cfc29"
+      },
+      "compiler_log": {
+        "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766330837671009-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientCertificatesPrimrecStatementChecks.log",
+        "sha256": "30e0fc35355726c2218e8e323e7d4ceb38f8f589e655dd30a33c12c5f57d7ea2"
+      },
+      "audit_summaries": [
+        "AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks: 4 theorems"
+      ],
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks.fixedActualPositivePathTestPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks.fixedActualNumericEdgePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks.fixedActualPathCertificateDecoderPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks.fixedActualPathTestPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "focused_aggregate": {
+    "module": "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity",
+    "source_sha256": "c40e16ac9802db51da5554527f9237a07f25daa204a483c1a6b8879bc71150ef",
+    "returncode": 0,
+    "seconds": 1.221,
+    "peak_process_tree_rss_kib": 1143888,
+    "receipt": {
+      "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766343842985846-2.json",
+      "sha256": "3f37c8f8e86899a01aa50d6f43453df70b5b00c82da87f5b31c8db9247a925d5"
+    },
+    "compiler_log": {
+      "path": "verification/cumulative-continuation-2026-11-03/contextual-checking/receipts/1793766343842985846-2-LogicLineages-CumulativeCheckpoint20261103ContextualEffectivity.log",
+      "sha256": "c2d3c0d75fd455c5f8927215047645b3cf8a6ac93a84bedbd97812c97a5c6fc3"
+    },
+    "audit_summaries": [
+      "AXIOM_AUDIT_PASS LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity: 27 theorems"
+    ],
+    "actual_axioms": {
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_40_ActualReplacementPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_29_ActualRawMultisetPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_30_ActualRawMulCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_44_ActualPathCertificateDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_27_ActualUniformCertificateDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_46_ActualPositivePathTestPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_36_ActualFocusCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_31_ActualRawMulPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_34_ActualSelectorCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_43_ActualNumericEdgePrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_20_ActualRawStructuralCalibration": [
+        "propext",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_24_ActualRawUniverseCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_22_ActualRawPackedCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_35_ActualSelectorPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_21_ActualRawStructuralDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_41_ActualStepCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_37_ActualReplacementCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_32_ActualMulTestCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_45_ActualPathTestPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_23_ActualRawPackedDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_33_ActualMulTestPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_39_ActualFocusPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_26_ActualCertificateDecoderCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_42_ActualNumericStepPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_25_ActualRawUniverseDecoderPrimitive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_38_ActualReplacementFailure": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "LogicLineages.CumulativeCheckpoint20261103ContextualEffectivity.fixed_28_ActualMultisetCalibration": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_actual_axioms_allowed": true,
+  "frozen_original_semantics_unchanged": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMarkCertificateDefinitions.lean": "5b9e96c5fb6f546ff58fd7415ae9908649642c95c25108f02ab69a8939b979e1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetCertificateDefinitions.lean": "9461cd65ab4d4ed4781233de35adc4e94aab3fa4265247427d528167d728bfe9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetNumericDefinitions.lean": "5d563687c19c8942abfb17c960a3c7dc5bafb4d6894c1165bd49cf3246ee8e78",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedCopyCertificateDefinitions.lean": "28c5fec1890c20aebcaeb447a557662afc56797536436b1cc99d19818138aee3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMulCertificateDefinitions.lean": "a2c052c9ab002bb54d4862c532c1c1a3f70a62da77b7a899c298ed184d00fc85",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericMulDefinitions.lean": "07543ec92877bda96684f6afb15d3c407cf141def6a85a10ba01d262f202d098",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericRootDefinitions.lean": "04f46b448338c223b85cd40deb050d47312d3dc3e67fcca84563401258553a7a",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectCertificateDefinitions.lean": "bdb91d55d3063efb1ff4a23961ce58fd84081b2400b5c0ed8f28f009e9d730a3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelectCertificateDefinitions.lean": "c205ca95e2ad24dcb042902f4b7fdb45cb57e18baaf02d072d4c720f606b3086",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedFocusDefinitions.lean": "eb1c8f16482adaf433d6798e856750de152fad0a16aa12494cfc6b888657f388",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedStepContextsDefinitions.lean": "3c573ef80f1f9c3bf3241f3f72913cb3bd29828f58b790102fc39bbd73899b1d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedStepCertificateDefinitions.lean": "9b835450150f6f99d32eec355142cb38ed54c0b2575a3bead3de3f7f402ce713",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericStepDefinitions.lean": "8daecd423db590c0b35658f20cd6f5776ed68f0a1f36edbfcf5d3c8423b80c2d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericQuotientEdgeDefinitions.lean": "41c563bdbc38a2c8e6b3b48bb113f5bfee107440576accd7e1ef8d9bd8f17903",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathCertificatesDefinitions.lean": "2032fb589398a33851864bf930ea9830737d62d37f0876cf7531ff7465b2a8ea"
+  },
+  "manuscript": {
+    "path": "06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+  },
+  "closure": {
+    "record": "verification/cumulative-continuation-2026-11-03/contextual-checking/SOURCE-CLOSURE.json",
+    "sha256": "8b5c9543301fed42ded34f533d102f229e759f5e9efb48dd6972fc4c13e5f7bc",
+    "local_modules": 599,
+    "source_fingerprint_sha256": "3a4349e5d2d9767b0d6df8d8eb7a7cd7dae244a74a17210b4979a1aea907809b",
+    "all_current_local_sources_have_current_compiled_objects": true,
+    "forbidden_source_shortcuts_found": false
+  },
+  "source_register": {
+    "checked": 154,
+    "inherited": 2,
+    "pending": 33,
+    "total": 189,
+    "status_changes": 0,
+    "sha256": "c908e7781874f1993445a78fbfe7db50779c29bb31f664df406e9624c797b950",
+    "progress_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/SOURCE-REGISTER-PROGRESS.json",
+    "progress_record_sha256": "94aa6a26b4ca29b863d15399ed70bb2f083698bc557ae269bbf73527e0f3aba8"
+  },
+  "inherited_baselines": [
+    {
+      "record": "verification/external-continuation-2026-11-03/termination-ordering/PRIMARY-CLASS-PRIMREC-ACCEPTED.json",
+      "sha256": "fecfb38fde548b87fe70fdf038c6ba01bb0be1d9b3ea0a6977d1b7c9a7d72d35",
+      "ledger_components": 111,
+      "ledger_fixed_targets": 374,
+      "scope": "Inherited published evidence; not counted as new targets or as a fresh full rerun in this checkpoint."
+    },
+    {
+      "record": "verification/local-publication-2026-11-04/INTEGRATION.json",
+      "sha256": "46659b8db1d622ac6070fcdd321781b9646a65d94a0b63e37abc56788e995d58",
+      "ledger_components": 20,
+      "ledger_fixed_targets": 106,
+      "scope": "Inherited published evidence; not counted as new targets or as a fresh full rerun in this checkpoint."
+    },
+    {
+      "record": "verification/cumulative-continuation-2026-11-03/termination-ordering/ROOT-EFFECTIVITY-ACCEPTED.json",
+      "sha256": "3b2127fb82c92459c0c6dcd96570ece7638733a80cc5065bd0cb9285f008c918",
+      "ledger_components": 6,
+      "ledger_fixed_targets": 19,
+      "scope": "Inherited published evidence; not counted as new targets or as a fresh full rerun in this checkpoint."
+    }
+  ],
+  "runner": {
+    "threads": 1,
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds_per_module": 90,
+    "wall_seconds_per_module": 180,
+    "unchanged_pins": {
+      "formalization/scripts/check.py": "9eecb0236964bb6ede2ae0819a37eccfc476c0df366e267e38ba16fe4208d59d",
+      "formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "04-pure-r1-calculator/scripts/check_lean.py": "d794390c512710869ea87fdf1f1ecf5d14431c928d53fa94f69a911b02df8f52"
+    },
+    "upstream_cache_only": true
+  },
+  "root_import_inventory": {
+    "new_gates_and_aggregate_present": true,
+    "all_imports_resolve_to_local_sources": true,
+    "full_root_recompiled": false,
+    "root_source_sha256": "db4fbf6e00bfe5aab19f325b05fa038bd514b09662a8cfbb2ccf7e0679ed2fd0"
+  },
+  "scope": "Fresh bounded compiler/exact-type/actual-axiom checks for all new modules and the focused aggregate. Existing dependencies reused or rebuilt as required. Failed development attempts are not accepted evidence. No full-root or CI run is claimed.",
+  "remaining_scope": [
+    "Faithful arithmetic formulas for actual typedness, H, R and direct multiset replacement",
+    "Source-required varying-parameter interfaces and whole simulation assembly",
+    "Internal ID1 accessibility, norm extraction and ordinal suppliers"
+  ]
+}

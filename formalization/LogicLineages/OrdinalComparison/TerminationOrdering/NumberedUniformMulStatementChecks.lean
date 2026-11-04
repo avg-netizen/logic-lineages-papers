@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks
+
+theorem fixedActualRawMulCalibration : NumberedUniformMulTargets.ActualRawMulCalibration :=
+  NumberedUniformMulProof.rawMulCalibration
+#print axioms fixedActualRawMulCalibration
+
+theorem fixedActualRawMulPrimitive : NumberedUniformMulTargets.ActualRawMulPrimitive :=
+  NumberedUniformMulProof.rawMulPrimitive
+#print axioms fixedActualRawMulPrimitive
+
+theorem fixedActualMulTestCalibration : NumberedUniformMulTargets.ActualMulTestCalibration :=
+  NumberedUniformMulProof.mulTestCalibration
+#print axioms fixedActualMulTestCalibration
+
+theorem fixedActualMulTestPrimitive : NumberedUniformMulTargets.ActualMulTestPrimitive :=
+  NumberedUniformMulProof.mulTestPrimitive
+#print axioms fixedActualMulTestPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks

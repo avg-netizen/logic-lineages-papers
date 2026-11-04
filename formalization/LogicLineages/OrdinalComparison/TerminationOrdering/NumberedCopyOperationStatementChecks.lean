@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks
+
+theorem fixedActualHeadAbovePrimitive : NumberedCopyOperationTargets.ActualHeadAbovePrimitive :=
+  NumberedCopyOperationProof.headAbovePrimitive
+#print axioms fixedActualHeadAbovePrimitive
+
+theorem fixedActualAllCopyCodePrimitive : NumberedCopyOperationTargets.ActualAllCopyCodePrimitive :=
+  NumberedCopyOperationProof.allCopyCodePrimitive
+#print axioms fixedActualAllCopyCodePrimitive
+
+theorem fixedActualCopyCodeCalibration : NumberedCopyOperationTargets.ActualCopyCodeCalibration :=
+  NumberedCopyOperationProof.copyCodeCalibration
+#print axioms fixedActualCopyCodeCalibration
+
+theorem fixedActualPackedCopyPrimitive : NumberedCopyOperationTargets.ActualPackedCopyPrimitive :=
+  NumberedCopyOperationProof.packedCopyPrimitive
+#print axioms fixedActualPackedCopyPrimitive
+
+theorem fixedActualNumericCopyCertificatePrimitive :
+    NumberedCopyOperationTargets.ActualNumericCopyCertificatePrimitive :=
+  NumberedCopyOperationProof.numericCopyCertificatePrimitive
+#print axioms fixedActualNumericCopyCertificatePrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationStatementChecks

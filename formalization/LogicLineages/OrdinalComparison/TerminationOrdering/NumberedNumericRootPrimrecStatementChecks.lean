@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecStatementChecks
+
+theorem fixedActualNumericRootPrimitive : NumberedNumericRootPrimrecTargets.ActualNumericRootPrimitive :=
+  NumberedNumericRootPrimrecProof.numericRootPrimitive
+#print axioms fixedActualNumericRootPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecStatementChecks

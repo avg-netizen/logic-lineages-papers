@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks
+
+theorem fixedActualStepCalibration : NumberedNumericStepPrimrecTargets.ActualStepCalibration :=
+  NumberedNumericStepPrimrecProof.stepCalibration
+theorem fixedActualNumericStepPrimitive : NumberedNumericStepPrimrecTargets.ActualNumericStepPrimitive :=
+  NumberedNumericStepPrimrecProof.numericStepPrimitive
+
+#print axioms fixedActualStepCalibration
+#print axioms fixedActualNumericStepPrimitive
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks

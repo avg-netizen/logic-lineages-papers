@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks
+
+theorem fixedActualCertificateDecoderCalibration :
+    NumberedUniformMultisetTargets.ActualCertificateDecoderCalibration :=
+  NumberedUniformMultisetProof.certificateDecoderCalibration
+#print axioms fixedActualCertificateDecoderCalibration
+
+theorem fixedActualUniformCertificateDecoderPrimitive :
+    NumberedUniformMultisetTargets.ActualUniformCertificateDecoderPrimitive :=
+  NumberedUniformMultisetProof.certificateDecoderPrimitive
+#print axioms fixedActualUniformCertificateDecoderPrimitive
+
+theorem fixedActualMultisetCalibration : NumberedUniformMultisetTargets.ActualMultisetCalibration :=
+  NumberedUniformMultisetProof.multisetCalibration
+#print axioms fixedActualMultisetCalibration
+
+theorem fixedActualRawMultisetPrimitive : NumberedUniformMultisetTargets.ActualRawMultisetPrimitive :=
+  NumberedUniformMultisetProof.rawMultisetPrimitive
+#print axioms fixedActualRawMultisetPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks

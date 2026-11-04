@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodePrimrecProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeProof
+
+theorem focusCalibration : NumberedFocusCodeTargets.ActualFocusCalibration :=
+  NumberedFocusCodeCalibrationProof.focusCalibration
+
+theorem replacementCalibration : NumberedFocusCodeTargets.ActualReplacementCalibration :=
+  NumberedFocusCodeCalibrationProof.replacementCalibration
+
+theorem replacementFailure : NumberedFocusCodeTargets.ActualReplacementFailure :=
+  NumberedFocusCodeCalibrationProof.replacementFailure
+
+theorem focusPrimitive : NumberedFocusCodeTargets.ActualFocusPrimitive :=
+  NumberedFocusCodePrimrecProof.focusPrimitive
+
+theorem replacementPrimitive : NumberedFocusCodeTargets.ActualReplacementPrimitive :=
+  NumberedFocusCodePrimrecProof.replacementPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeProof
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeProof

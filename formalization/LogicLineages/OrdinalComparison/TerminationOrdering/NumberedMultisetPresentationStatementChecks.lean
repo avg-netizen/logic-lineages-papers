@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks
+
+theorem fixedActualPackedListEncoderPrimitive :
+    NumberedMultisetPresentationTargets.ActualPackedListEncoderPrimitive :=
+  NumberedMultisetPresentationProof.packedListEncoderPrimitive
+#print axioms fixedActualPackedListEncoderPrimitive
+theorem fixedActualPackedListDecoderPrimitive :
+    NumberedMultisetPresentationTargets.ActualPackedListDecoderPrimitive :=
+  NumberedMultisetPresentationProof.packedListDecoderPrimitive
+#print axioms fixedActualPackedListDecoderPrimitive
+theorem fixedActualCertificateEncoderPrimitive :
+    NumberedMultisetPresentationTargets.ActualCertificateEncoderPrimitive :=
+  NumberedMultisetPresentationProof.certificateEncoderPrimitive
+#print axioms fixedActualCertificateEncoderPrimitive
+theorem fixedActualCertificateDecoderPrimitive :
+    NumberedMultisetPresentationTargets.ActualCertificateDecoderPrimitive :=
+  NumberedMultisetPresentationProof.decodeCertificatePrimitive
+#print axioms fixedActualCertificateDecoderPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationStatementChecks
