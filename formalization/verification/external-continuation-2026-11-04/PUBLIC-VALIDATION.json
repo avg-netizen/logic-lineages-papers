@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 36,
-    "components": 11
+    "fixed_aliases": 40,
+    "components": 12
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104K",
-    "source_sha256": "6010e3fcb8b4adb7f309d8d6687bc5debfdc3c2d71b5de23644352d14547910c",
-    "closure_sha256": "e5f06e88e6febc6c3863b358269d6b7d309fe2d3017e617c5ff070e57e0f26d7",
+    "module": "LogicLineages.ExternalCheckpoint20261104L",
+    "source_sha256": "6f606a3b2ee43e35de2902ba0001b02e5bfae89291697cc1f80f2379e352e2e9",
+    "closure_sha256": "d11b9723ea6715cbb89592cec88d1dfb2c2df5f3962aba7b7e6fac44aedd0e7d",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -190,6 +190,26 @@
         "name": "fixed_036_fixedActualDirectCarrierPreservation",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualDirectCarrierPreservation",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualDirectCarrierPreservation"
+      },
+      {
+        "name": "fixed_037_exact_recursion",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.ExactRecursion",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.exact_recursion"
+      },
+      {
+        "name": "fixed_038_unique_below_epsilon_zero",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.UniqueBelowEpsilonZero",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.unique_below_epsilon_zero"
+      },
+      {
+        "name": "fixed_039_exact_phi_specialization",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.ExactPhiSpecialization",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.exact_phi_specialization"
+      },
+      {
+        "name": "fixed_040_finite_values",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.FiniteValues",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.finite_values"
       }
     ],
     "allowed_axioms": [
@@ -542,6 +562,38 @@
           "sha256": "ad80a38d7ab373048f7416fd90a5eac4487704eb5b752550e75e9858477f5ca0"
         }
       ]
+    },
+    {
+      "name": "ParametricActualCollapse",
+      "scope": "Separate generic-control actual ordinal maximum recursion, uniqueness, Phi calibration and majorized finite values; no source gadget or coefficient-one claim.",
+      "freeze_sha256": "13032852e1b1fb30db163bfbe92c418acdef9a42fd047484757aedaad24ac0b5",
+      "closure_sha256": "7a09bfe393417db92fb266fce81b60cd3079d68366a57613dbec19d5b31c5cc8",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseDefinitions.lean",
+          "sha256": "c2b45e48861d4ed1a33fc8959ee4a430a900b90be92fad4e37b37a81871d3556"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseTargets.lean",
+          "sha256": "8d82e1ef26638dd68811ad7e678c235a5bad94f78990a6bf868738e2a13410c5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseStatementChecks.lean",
+          "sha256": "ed7237fdff687a1fd4d96aa4b9dc9f3d1d4ad81271de51f6709fc1815162c518"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricActualCollapse-SOURCE-CORRESPONDENCE.md",
+          "sha256": "8584749a207e391e42ebb61546ecff7bcc7e8105395ce4cdbc2276e893c0b207"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseRecursionProof.lean",
+          "sha256": "0b0ebe957e9d8e45b4aef9301b52241e839b434b777a6db6da21577059dc2f33"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseProof.lean",
+          "sha256": "3435d6dd421b0163631ec28e6731ed7101f1edb1d2c406aefead33fea991f3a3"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -558,6 +610,7 @@
     "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim.",
     "Ordinary-arithmetic direct replacement is standard-natural-number representation with explicit context/list decoding and fixed signature/arity/context, not a carrier, ID1 or well-foundedness theorem.",
     "The machine-halting conjunction concerns the original arithmetic equations only, not source-language gadgets, complexity bounds or the whole hardness theorem.",
-    "Canonical carrier calibration and preservation keep explicit subtype closure; no accessibility, ID1 or well-foundedness claim."
+    "Canonical carrier calibration and preservation keep explicit subtype closure; no accessibility, ID1 or well-foundedness claim.",
+    "Parametric collapse retains arbitrary G and the explicit identity-majorization hypothesis for finite values; no G computability or source-gadget claim."
   ]
 }

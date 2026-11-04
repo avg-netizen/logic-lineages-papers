@@ -67,3 +67,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104J`, 33 ex
 Three exact suppliers calibrate actual canonical representative lists and positive-relation endpoints, and preserve the target carrier under direct replacement. Every target retains explicit subtype closure; guards are unchanged. No accessibility, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DIRECT-CARRIER-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104K`, 36 exact aliases.
+
+## ParametricActualCollapse
+
+Four exact suppliers give arbitrary-G defining recursion and uniqueness on the genuine domain, agreement with the accepted Phi specialization, and finite values under explicit identity majorization. The original actualCollapse is unchanged. No hidden hypothesis, G computability or source-gadget claim. See [source correspondence](layered-comparison/ParametricActualCollapse-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104L`, 40 exact aliases.
