@@ -55,3 +55,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104H`, 26 ex
 Four exact suppliers give ordinary first-order arithmetic representation over standard natural numbers of Direct(actual positive quotient relation). The genuine Program4 compiler and certificate graph retain explicit Context and endpoint-list codes, jointly varying windows/table, and fixed signature size/arity/context. No typed carrier, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-DIRECT-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104I`, 30 exact aliases.
+
+## SourceMachineHaltingConjunction
+
+Three exact suppliers establish primitive-recursive coefficients/arguments with literal bounds and valuation, the fixed-time equations iff actual H with explicit witnesses, and existential conjunction iff blank halting. No additional premise, source-language gadgets, complexity or whole hardness claim. See [source correspondence](layered-comparison/SourceMachineHaltingConjunction-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104J`, 33 exact aliases.

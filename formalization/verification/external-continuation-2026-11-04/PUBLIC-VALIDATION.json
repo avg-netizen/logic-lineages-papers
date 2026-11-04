@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 30,
-    "components": 9
+    "fixed_aliases": 33,
+    "components": 10
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104I",
-    "source_sha256": "31dc0297ed96cc0d8df367f1a4552546f27ac74636c2d5ac3a8175159604651c",
-    "closure_sha256": "8bc1d7c1bd266c66f6c030e2af1a7b5199aec6a26d98cb33f3f7c36c01d4f2fc",
+    "module": "LogicLineages.ExternalCheckpoint20261104J",
+    "source_sha256": "f64374f7f8ceb5eb551429a6453d4e7dcfde638c59480c4d4084fc6c234b10b2",
+    "closure_sha256": "ab8d953122d0edfa341f9c7e432cf00f5efdbea2936c8ca6901ba6507b864d6c",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -160,6 +160,21 @@
         "name": "fixed_030_fixedUniformDirectFormula",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.UniformDirectFormula",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedUniformDirectFormula"
+      },
+      {
+        "name": "fixed_031_effective_arguments",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.EffectiveArguments",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.effective_arguments"
+      },
+      {
+        "name": "fixed_032_exact_fixed_witness",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.ExactFixedWitness",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.exact_fixed_witness"
+      },
+      {
+        "name": "fixed_033_exact_halting_reduction",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.ExactHaltingReduction",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.exact_halting_reduction"
       }
     ],
     "allowed_axioms": [
@@ -452,6 +467,38 @@
           "sha256": "5aaa94bde29f287fba640f2d6090ed5ee1c1769d49a5d4c0b5b8202f828c3a8d"
         }
       ]
+    },
+    {
+      "name": "SourceMachineHaltingConjunction",
+      "scope": "Literal natural arithmetic conjunction iff actual blank halting, exact witnesses and PR coefficients; no source gadgets/complexity/whole hardness.",
+      "freeze_sha256": "353e4a5b7832308d585d538777b930e860be3598c954b55d586fadf3c701cc35",
+      "closure_sha256": "7fbd1966639dac416947fc1a899e40aba4186fae35304850b5fb0e6b5e6d3b6a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionDefinitions.lean",
+          "sha256": "2d414d047f218078ae32474a996c586bc12893ffa16d61253b69e86c533469e3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionTargets.lean",
+          "sha256": "ca38615b94996e8c8d548855e9d9c70fd88963506c10645155d6ae3b4a53b3c7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionStatementChecks.lean",
+          "sha256": "fc0214d5e2ee9ef4d8f5baea6cf80dbe39f98820ad5f308ce18ae730f065fcd6"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceMachineHaltingConjunction-SOURCE-CORRESPONDENCE.md",
+          "sha256": "842c3ecf4b6167d621c69914eac60e30ef5dfd2d2e9c99797d900b13cfb4bb0e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionArgumentsProof.lean",
+          "sha256": "1576506ebfdc8951b2c6ba7db2e95f879a65354951d784a2ddd2c175a4281a01"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionProof.lean",
+          "sha256": "d87cda13cc06abfae686a96198896bc344a26b83a0ef44a8224ee85ff5b54b18"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -466,6 +513,7 @@
     "Blank-halting reduction preserves the fixed actual table encoding and terminal bridge; no timing equality, parity or full source hardness claim.",
     "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim.",
     "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim.",
-    "Ordinary-arithmetic direct replacement is standard-natural-number representation with explicit context/list decoding and fixed signature/arity/context, not a carrier, ID1 or well-foundedness theorem."
+    "Ordinary-arithmetic direct replacement is standard-natural-number representation with explicit context/list decoding and fixed signature/arity/context, not a carrier, ID1 or well-foundedness theorem.",
+    "The machine-halting conjunction concerns the original arithmetic equations only, not source-language gadgets, complexity bounds or the whole hardness theorem."
   ]
 }
