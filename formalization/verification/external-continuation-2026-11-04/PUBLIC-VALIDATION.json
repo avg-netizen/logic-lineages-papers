@@ -1,0 +1,77 @@
+{
+  "schema": "public-focused-validation-20261104-v1",
+  "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
+  "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
+  "today_totals": {
+    "fixed_aliases": 4,
+    "components": 1
+  },
+  "aggregate": {
+    "module": "LogicLineages.ExternalCheckpoint20261104A",
+    "source_sha256": "64fb95c3a0bb37277d30ec36c594e1dffc9780917893cbd68c52a4a3bcb1fe41",
+    "closure_sha256": "9340b7ffb72d537b48d95006d4ea33b364d5e5377e4249c0803ab348a7c76693",
+    "exact_aliases": [
+      {
+        "name": "fixed_001_fixedPermutationInvariance",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.PermutationInvariance",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedPermutationInvariance"
+      },
+      {
+        "name": "fixed_002_fixedOccurrenceWitnesses",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.OccurrenceWitnesses",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedOccurrenceWitnesses"
+      },
+      {
+        "name": "fixed_003_fixedMultisetCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.MultisetCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedMultisetCalibration"
+      },
+      {
+        "name": "fixed_004_fixedOrderedLibraryCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.OrderedLibraryCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedOrderedLibraryCalibration"
+      }
+    ],
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "components": [
+    {
+      "name": "DirectMultisetPresentation",
+      "scope": "Generic direct multiset replacement with exact occurrence/permutation witnesses, multiset quotient calibration, and conditional matching-Preorder library correspondence only.",
+      "freeze_sha256": "8427be8ca7c1db50b7f9b444b7de334c93e370b432d17e376302031c25dc06cf",
+      "closure_sha256": "b3204c7919a80561509ebcd054bf307a2965214bc9ef6f3e99e6e3474cbf926a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationDefinitions.lean",
+          "sha256": "12ea758119914b478e8b542395673e7460cff8973a4a4acc4dd1c464a787c1b1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationTargets.lean",
+          "sha256": "bf7f7491bd19565d40e70aa84bbc34fb3d779b02f688114a56934b1146f5e3e7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationStatementChecks.lean",
+          "sha256": "137afd7d67978cb71219117f9d37699711ecbe2960d89186e898c7a8ab54e85f"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/DIRECT-MULTISET-PRESENTATION-SOURCE.md",
+          "sha256": "5192b801f929c023b52597f91b4961839e23a9718784693e858384a7e6b93ee6"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationProof.lean",
+          "sha256": "cc5c894d18c6018e38de328e9b017dc250f493885b4d8fa7a0eabaa5913514a2"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Pinned warm-cache focused checks, not a full-root or CI build.",
+    "Generic direct replacement; library calibration requires the explicit matching Preorder.",
+    "No well-foundedness, ID1 accessibility, arithmetic or whole-source promotion.",
+    "TARGETS registry and source manuscripts unchanged."
+  ]
+}

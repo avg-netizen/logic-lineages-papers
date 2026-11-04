@@ -2034,3 +2034,6 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithm
 public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks
 public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks
 public import LogicLineages.LocalCheckpoint20261104Second
+
+-- Nov4 external continuation: focused exact suppliers, no source promotion.
+public import LogicLineages.ExternalCheckpoint20261104A
