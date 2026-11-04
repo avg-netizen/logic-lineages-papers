@@ -31,3 +31,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104D`, 14 ex
 Three exact suppliers establish direct replacement certificate soundness and existential completeness for the actual positive quotient relation, plus a numeric wrapper with explicit decoded endpoint lists. Exact permutations, nonempty removal and occurrence semantics are retained. No primitive-recursion, arithmetic or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DIRECT-CERTIFICATES-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104E`, 17 exact aliases.
+
+## SourceBlankHaltingReduction
+
+Four exact suppliers establish zero normalization, a validated terminal bridge, an effective fixed-table blank reduction and blank-halting undecidability. No extra hypothesis, timing equality, parity or full source hardness claim. See [source correspondence](layered-comparison/SourceBlankHaltingReduction-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104F`, 21 exact aliases.
