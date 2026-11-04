@@ -1,0 +1,11 @@
+# Finite ground-lambda tower, explicit computable image tower
+
+Source paper06 lines582–597,620–622: restricted lambda/substitution induction. GroundLambdaFragment k q requires exactly k leading lambdas, every domain literally ground, followed by the actual variable/bottom/application fragment. No lambda inside an application and no ordinary/numbered constructors in the source fragment are admitted. At k=0 this is the accepted applicative fragment. Substitution images remain arbitrary under explicit assumptions.
+
+The target retains one successful Context decode, SubtypeClosed, original source confinement and guarded GoodSubstitution. A supplied family scalar j is independently calibrated at groundContext j Delta for every j<=k. For each such level every actual variable image renamed by groundRenaming j Delta is explicitly computable in that level's own least-set interpretation. This finite invariant is not inferred from level0 and makes no higher-type C weakening claim.
+
+Proof plan: induction on k. Zero is the accepted applicative substitution theorem after literal rename-identity rewriting. A successor must be a ground lambda. For body Acc, apply the induction hypothesis at ground::Delta with lift theta and shifted family scalar(j+1); fresh-variable images under prefix renaming are actual variables, while there images use the explicit next-level image premise. GroundContext j (ground::Delta) equals GroundContext (j+1) Delta; the necessary typed transports and prefix-renaming composition must be proved literally, not silently identifying contexts/codes.
+
+For an arbitrary confined computable outer ground argument a, use extend theta a and the unshifted first k levels. Existing image premises pay there, and accepted GroundTowerComputability pays the renamed here image at every level. The induction hypothesis gives every actual beta-instance C, using ExtendedBetaIdentity. The shifted body's C gives literal body quotient Acc through exact relation calibration, so ConditionalLambda completes the successor case.
+
+Two scoped candidate files are allowed so context/renaming transport helpers can be checked independently before the main proof. No theorem about arbitrary outer domains, general nested lambda syntax, all-term computability, higher-type weakening, ID1 derivation or global WF. No proof before exact review/freeze; no export.
