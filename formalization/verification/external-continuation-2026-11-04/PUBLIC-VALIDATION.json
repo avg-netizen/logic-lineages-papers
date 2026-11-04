@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 54,
-    "components": 17
+    "fixed_aliases": 58,
+    "components": 18
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104Q",
-    "source_sha256": "7b13a6e3a7d5d59674401b1d1922c0727c925717ac55391b72d3299365d5b7c4",
-    "closure_sha256": "d36d75fe675652bfcc0d22291d48f122c0272d46bdbc3cdd246cc10d152422bd",
+    "module": "LogicLineages.ExternalCheckpoint20261104R",
+    "source_sha256": "bca174b733535b32e1f648982151becdf8bfc5181b00de242c8b8e6e80a8a4e4",
+    "closure_sha256": "d9ec19ebc38a97f17f7d2cc8e9b0341fc98553da045587f5f8817adfc6ce4682",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -280,6 +280,26 @@
         "name": "fixed_054_fixedActualTypedArithmeticFormula",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualTypedArithmeticFormula",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualTypedArithmeticFormula"
+      },
+      {
+        "name": "fixed_055_atomic_assignment_value",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.AtomicAssignmentValue",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.atomic_assignment_value"
+      },
+      {
+        "name": "fixed_056_weighted_equality",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.WeightedEquality",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.weighted_equality"
+      },
+      {
+        "name": "fixed_057_exact_addition",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.ExactAddition",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.exact_addition"
+      },
+      {
+        "name": "fixed_058_actual_gamma_addition",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.ActualGammaAddition",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.actual_gamma_addition"
       }
     ],
     "allowed_axioms": [
@@ -820,6 +840,38 @@
           "sha256": "1bd5eb5b6f5164f924140c9d15537f6f78cbbe5ffa2a94a7864bf72d67a556a8"
         }
       ]
+    },
+    {
+      "name": "ParametricSourceAddition",
+      "scope": "Actual atomic unused-binder assignment/value and exact two-equation addition at generic/Gamma control; no one/nested collision claim.",
+      "freeze_sha256": "a6d4fd84872040279dcb7e0cb35aac55daa1922cf8ee75c7c63cd5d3811c237b",
+      "closure_sha256": "590a81ca289c6b16f50f72a725602618897ee5338dea23c9c44ad5642d632231",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionDefinitions.lean",
+          "sha256": "6ff3766356d92ab04e8f102dbb4a670c4a48922a8f86f46ee49adf12bcb40810"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionTargets.lean",
+          "sha256": "e09a88efc77cb737d9c60037c9a3cc91a08aa0b668269070d99df3d14e6aec5a"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionStatementChecks.lean",
+          "sha256": "cf3cb8b0347e8411831160658201c8999a07bba79a1131cfe93bbcc8355d93b8"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricSourceAddition-SOURCE-CORRESPONDENCE.md",
+          "sha256": "cde4c0718fa4b8eaefc0810ee734179caaa9671bff6b039374f530b1f0de09be"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionAtomicProof.lean",
+          "sha256": "87e707f8b53389de92f84eb93c5cae2128cea1759f25152f46d777568735e10f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionProof.lean",
+          "sha256": "e691c9e84c1ec1307a89e8553bcf8daac458d39c3d3f6417f9a2ba4908f64f77"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -842,6 +894,7 @@
     "Represented carrier formulas preserve failed-context/list rejection, empty-list vacuity and explicit subtype closure; no type-specific C_tau, ID1 or well-foundedness claim.",
     "Typed canonical carrier calibration is syntactic typedness under subtype closure, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation.",
     "Parametric source successor retains the literal source S and actual full assignment with shared positive-raw valuations; no other gadget transfer or full theorem claim.",
-    "Typed-carrier formulas express syntax typedness under actual type and Context decoding; concrete calibration retains subtype closure. No C_tau, I, ID1 or well-foundedness claim."
+    "Typed-carrier formulas express syntax typedness under actual type and Context decoding; concrete calibration retains subtype closure. No C_tau, I, ID1 or well-foundedness claim.",
+    "Literal atomic eraser and addition only; no constant-one, nested gadget or complexity inference."
   ]
 }

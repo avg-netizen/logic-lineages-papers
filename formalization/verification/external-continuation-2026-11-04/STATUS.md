@@ -103,3 +103,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104P`, 51 ex
 Three exact suppliers establish the actual typed checker and numeric wrapper as primitive recursive and provide ordinary arithmetic decoded and concrete type-carrier formulas. Actual type and Context decoding are preserved; concrete calibration requires subtype closure. This is syntax typedness only, not C_tau, I or ID1. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-TYPED-CARRIER-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Q`, 54 exact aliases.
+
+## ParametricSourceAddition
+
+Four exact suppliers establish the literal atomic assignment, value and equality and the two-source-equation addition gadget with unique d = 3*n_b. Actual gamma discharges the generic hypotheses. No constant-one, nested gadget or complexity claim. See [source correspondence](layered-comparison/ParametricSourceAddition-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104R`, 58 exact aliases.
