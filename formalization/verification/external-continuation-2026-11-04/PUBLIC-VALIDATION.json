@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 11,
-    "components": 3
+    "fixed_aliases": 14,
+    "components": 4
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104C",
-    "source_sha256": "290f46b98457e20155f18a4132b846b6da10aaf2282c2ec52f5332ad467ee507",
-    "closure_sha256": "2baec1269211efaaa14723b76725f134a6fc756353d584a9ede2f1c75fb80a32",
+    "module": "LogicLineages.ExternalCheckpoint20261104D",
+    "source_sha256": "29730c3c697d89fe7c29a4a6ff165386d9322b9e994d1c565d140d99eb7f5ffe",
+    "closure_sha256": "d79dfcb75b3b6262f360ae85900dc87be5cc2dd85489fa6f55668bb459dda376",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -65,6 +65,21 @@
         "name": "fixed_011_fixedActualDominationCertificates",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualDominationCertificates",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualDominationCertificates"
+      },
+      {
+        "name": "fixed_012_effective_enumeration",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.EffectiveEnumeration",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.effective_enumeration"
+      },
+      {
+        "name": "fixed_013_exact_transition_clock",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.ExactTransitionClock",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.exact_transition_clock"
+      },
+      {
+        "name": "fixed_014_monotone_halting",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.MonotoneHalting",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.monotone_halting"
       }
     ],
     "allowed_axioms": [
@@ -169,6 +184,34 @@
           "sha256": "36a0cbd8af25606a0ec183f52d0184a759a91fe12f907b306668ae7c1b9f01ef"
         }
       ]
+    },
+    {
+      "name": "SourceBlankMachineSimulation",
+      "scope": "Actual finite-table blank TM0 bounded halting: PR enumeration/test, exact transition clock, monotonicity and actual termination equivalence only.",
+      "freeze_sha256": "66b420bc87e08e2f4dda0d9805eac3fa8e157310b106ad0daba1efa43154ca77",
+      "closure_sha256": "d31972449f3fa5b6d3f848045e4c918c3c2260f40abbe5d90b90f7bf1f88512b",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationDefinitions.lean",
+          "sha256": "09f14e257004ef297d5720f944b52bae42494ca6ecf3d2750118c90c2bec4cab"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationTargets.lean",
+          "sha256": "a192997f457397944db0f267e64033620893aa470f9b65f98358f5cc7502cd15"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationStatementChecks.lean",
+          "sha256": "8adce74dd1a1a5a9818916b776e26ae4667c88d1bfa755a54eb8a811ee068d1a"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceBlankMachineSimulation-SOURCE-CORRESPONDENCE.md",
+          "sha256": "61bb41611c72dca129ef93a7b5d1399443f15c1d87bd98cc0db297892567d9f8"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationProof.lean",
+          "sha256": "6749587e04b79c698c631eaed9daf7115d29f4606b1e248163058dcfd706a403"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -177,6 +220,7 @@
     "No well-foundedness, ID1 accessibility, arithmetic or whole-source promotion.",
     "TARGETS registry and source manuscripts unchanged.",
     "SourceControlNonperiodicity uses explicit Code/evaln stages, not identified tape steps or a whole source hardness theorem.",
-    "Quotient domination uses existential checked positive-path certificates, not an unbounded relation decision or full direct multiset/well-foundedness result."
+    "Quotient domination uses existential checked positive-path certificates, not an unbounded relation decision or full direct multiset/well-foundedness result.",
+    "Blank-machine simulation establishes the actual transition clock, primitive recursion and termination calibration only; no undecidability or parity claim."
   ]
 }

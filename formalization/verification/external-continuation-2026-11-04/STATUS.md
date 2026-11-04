@@ -19,3 +19,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104B`, 8 exa
 Three exact suppliers establish per-inserted-occurrence positive quotient-path certificate soundness, witness completion and domination equivalence. Exact counts, occurrence indices, empty insertion and witness reuse are retained. No unbounded relation decision, whole direct multiset or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DOMINATION-CERTIFICATES-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104C`, 11 exact aliases.
+
+## SourceBlankMachineSimulation
+
+Three exact suppliers establish the actual blank-machine transition clock, primitive-recursive simulation and termination calibration. No undecidability or parity claim. See [source correspondence](layered-comparison/SourceBlankMachineSimulation-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104D`, 14 exact aliases.
