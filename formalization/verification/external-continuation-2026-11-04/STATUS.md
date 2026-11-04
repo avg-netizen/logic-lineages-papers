@@ -109,3 +109,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Q`, 54 ex
 Four exact suppliers establish the literal atomic assignment, value and equality and the two-source-equation addition gadget with unique d = 3*n_b. Actual gamma discharges the generic hypotheses. No constant-one, nested gadget or complexity claim. See [source correspondence](layered-comparison/ParametricSourceAddition-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104R`, 58 exact aliases.
+
+## NumberedQuotientApplication
+
+Two exact suppliers establish literal application confinement under subtype closure and representative-code congruence for four confined terms of matching types. The proof uses actual primary appArgument without introducing a positive application-argument step. No numeric, primitive-recursive or ID1 claim. See [source correspondence](termination-ordering/NUMBERED-QUOTIENT-APPLICATION-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104S`, 60 exact aliases.

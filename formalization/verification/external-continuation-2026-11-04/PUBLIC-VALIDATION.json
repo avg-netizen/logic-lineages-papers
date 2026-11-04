@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 58,
-    "components": 18
+    "fixed_aliases": 60,
+    "components": 19
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104R",
-    "source_sha256": "bca174b733535b32e1f648982151becdf8bfc5181b00de242c8b8e6e80a8a4e4",
-    "closure_sha256": "d9ec19ebc38a97f17f7d2cc8e9b0341fc98553da045587f5f8817adfc6ce4682",
+    "module": "LogicLineages.ExternalCheckpoint20261104S",
+    "source_sha256": "c61c03091f6c2dfe86189ac3719beaa7a6e668d1bc252fca66950d3b45f8bcc7",
+    "closure_sha256": "2d124cfe2bf8b8ca012f9df26013a9c8012d5e7fa63ba2c75d21eb32aacc2306",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -300,6 +300,16 @@
         "name": "fixed_058_actual_gamma_addition",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.ActualGammaAddition",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.actual_gamma_addition"
+      },
+      {
+        "name": "fixed_059_fixedActualApplicationConfinement",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationTargets.ActualApplicationConfinement",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationStatementChecks.fixedActualApplicationConfinement"
+      },
+      {
+        "name": "fixed_060_fixedActualRepresentativeApplicationCongruence",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationTargets.ActualRepresentativeApplicationCongruence",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationStatementChecks.fixedActualRepresentativeApplicationCongruence"
       }
     ],
     "allowed_axioms": [
@@ -872,6 +882,34 @@
           "sha256": "e691c9e84c1ec1307a89e8553bcf8daac458d39c3d3f6417f9a2ba4908f64f77"
         }
       ]
+    },
+    {
+      "name": "NumberedQuotientApplication",
+      "scope": "Literal auxiliary application confinement and well-defined representative application on typed guarded primary classes.",
+      "freeze_sha256": "a0dce50c06569b8a3d406bb863aa7e3e6d7f18c0bbb38862fe3c12eb0105d189",
+      "closure_sha256": "1645be4c1f5853cbbefbbe05a3d5570555d946d83173aa60f825847a1c613dc3",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationDefinitions.lean",
+          "sha256": "5b22057ad8270bd039eb7e532eaad38cd998a18e90c473b3b6e5bb691950339c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationTargets.lean",
+          "sha256": "d16193c3fb6cca9c3831ea7d62c9805af5ad6274b7c133f20253a58a501359d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationStatementChecks.lean",
+          "sha256": "d20954ffe53c7cbe6e75752d0ddb6d92ba50aaa526afd8911fd86457552f178a"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-QUOTIENT-APPLICATION-SOURCE.md",
+          "sha256": "bc584c7d2dda2165d1b459c35f19e544440a0172e8ec4b7a51ac307eae23e3d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationProof.lean",
+          "sha256": "fe6dc59a7b6fcc853f1768d456ab13b614173c888499e01f6c5b1ebc408870fd"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -895,6 +933,7 @@
     "Typed canonical carrier calibration is syntactic typedness under subtype closure, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation.",
     "Parametric source successor retains the literal source S and actual full assignment with shared positive-raw valuations; no other gadget transfer or full theorem claim.",
     "Typed-carrier formulas express syntax typedness under actual type and Context decoding; concrete calibration retains subtype closure. No C_tau, I, ID1 or well-foundedness claim.",
-    "Literal atomic eraser and addition only; no constant-one, nested gadget or complexity inference."
+    "Literal atomic eraser and addition only; no constant-one, nested gadget or complexity inference.",
+    "Literal typed application confinement and representative-code congruence only; actual primary appArgument does not add a positive reduction step. No numeric, primitive-recursive or ID1 claim."
   ]
 }
