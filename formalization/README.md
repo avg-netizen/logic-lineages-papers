@@ -1,19 +1,29 @@
-Latest cumulative checkpoint: **the complete original numeric root checker is
-primitive recursive**, including Copy and Mul. The new branch
-`formalization/cumulative-continuation-2026-11-03` starts from merged main
-`3c53370`, retaining the intervening local publication. It adds **19 fixed
-targets in six supporting components**; all exact gates and the focused
-aggregate pass with only the permitted axioms. See the
-[cumulative status and scope](verification/cumulative-continuation-2026-11-03/STATUS.md)
-and [accepted evidence](verification/cumulative-continuation-2026-11-03/termination-ordering/ROOT-EFFECTIVITY-ACCEPTED.json).
+Latest cumulative checkpoint: **the complete original contextual numeric step
+checker is primitive recursive jointly in its binder context**. The original
+quotient-edge and positive-path certificate tests are primitive recursive at
+each fixed ambient context, retaining the actual representative computation.
+On `formalization/cumulative-continuation-2026-11-03`, this continuation from
+`9dc3473` adds **27 fixed targets in 7 supporting components**, bringing the
+branch checkpoint to **46 fixed targets in 13 components**. All exact gates and
+the focused aggregate passed with only the permitted axioms. See the
+[contextual status and precise parameter scope](verification/cumulative-continuation-2026-11-03/contextual-checking/STATUS.md),
+[accepted evidence](verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json),
+and [prior root-checker checkpoint](verification/cumulative-continuation-2026-11-03/STATUS.md).
 
-The source register remains **154 checked, 2 inherited, 33 pending/189**.
-Its component links and dependency summaries now include the new root result
-and accurately reflect the intervening original-source codec and shared-window
-translation work. Contextual checking at varying binder contexts, arithmetic
-representation, whole-source assembly and internal ID1 accessibility remain
-open. The dated local and external paragraphs below describe their historical
-checkpoints.
+Exact calibrations preserve the original decoders, unguarded selector at
+`focus.holeGamma`, focus/plug operations, outer step guards, quotient
+representatives and ordered path certificates. `positivePathTest` rejects an
+empty path even when its endpoints coincide. The source register remains
+**154 checked, 2 inherited, 33 pending/189**, with **seven new primary links and
+seven reuse links** recorded in the
+[dependency progress](verification/cumulative-continuation-2026-11-03/contextual-checking/SOURCE-REGISTER-PROGRESS.json).
+The [frozen specifications](verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-FREEZE.json)
+and [verified source closure](verification/cumulative-continuation-2026-11-03/contextual-checking/SOURCE-CLOSURE.json)
+preserve the accepted scope. Genuine arithmetic graph formulas, source-required
+parameter interfaces, whole-source assembly and internal ID1 accessibility
+remain separate obligations; the
+[next arithmetic bridge](verification/cumulative-continuation-2026-11-03/contextual-checking/NEXT-ARITHMETIC-BRIDGE.md)
+states that boundary. The dated paragraphs below retain their historical scope.
 
 Previous local state: **PAUSED after completed R021 and both independent lanes**,
 4 November 2026. The final author/review/check cycle passed. This restart adds

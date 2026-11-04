@@ -1,0 +1,182 @@
+{
+  "schema": "source-register-dependency-progress-v2",
+  "recorded_at_utc": "2026-11-04T04:25:42.924100+00:00",
+  "baseline_commit": "9dc34731f0438de2c726d93ca7a4eca7313490a2",
+  "branch": "formalization/cumulative-continuation-2026-11-03",
+  "before_sha256": "bfaaccd830d84ba132b0cf4c793867d4d0bafb822525adf7130d05405926ecd0",
+  "after_sha256": "c908e7781874f1993445a78fbfe7db50779c29bb31f664df406e9624c797b950",
+  "source_status_changes": 0,
+  "registered_statement_changes": 0,
+  "existing_acceptance_declarations_comparators_and_source_issues_preserved": true,
+  "counts": {
+    "checked": 154,
+    "inherited": 2,
+    "pending": 33,
+    "total": 189
+  },
+  "new_components": 7,
+  "new_fixed_targets": 27,
+  "cumulative_branch_components": 13,
+  "cumulative_branch_fixed_targets": 46,
+  "new_primary_links": 7,
+  "new_reuse_links": 7,
+  "components": [
+    {
+      "component": "NumberedUniformPackedDecoding",
+      "fixed_target_count": 6,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedUniformMultiset",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedUniformMul",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedUniformSelector",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedFocusCode",
+      "fixed_target_count": 5,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedNumericStepPrimrec",
+      "fixed_target_count": 2,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    },
+    {
+      "component": "NumberedQuotientCertificatesPrimrec",
+      "fixed_target_count": 4,
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecStatementChecks",
+      "acceptance_record": "verification/cumulative-continuation-2026-11-03/contextual-checking/CONTEXTUAL-EFFECTIVITY-ACCEPTED.json",
+      "primary_statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "reused_by": [
+        "06-godel-t-termination-ordering:lem:simulation"
+      ]
+    }
+  ],
+  "closed_dependency_slices": [
+    "Exact original focus/plug computation",
+    "Decoder, multiset and selector effectivity joint in changing binder contexts",
+    "Original numericStepTest primitive recursion joint in Gamma/windows/table/data",
+    "Original numericEdgeTest/pathTest/positivePathTest primitive recursion at fixed ambient context"
+  ],
+  "changes": [
+    {
+      "statement_id": "06-godel-t-termination-ordering:lem:id1",
+      "before": {
+        "coverage_note": "Supporting components fix the actual finite typed auxiliary syntax, guarded reduction, finite primary classes, least-code representatives and exact numeric certificates for H and R. The existing literal codecs, typed validity, universe tests, exchange/primary-class computations and representative/carrier tests are primitive recursive. The intervening local checkpoint proves actual weakening, capture-avoiding substitution/beta, direct operations and Select. This cumulative checkpoint adds the original lambda-descending finite marking, indexed multiset tests, Copy, Mul and the complete unchanged numericRootTest, retaining all malformed-input rejection cases. These computations are joint in the listed windows, table and data inputs at each fixed finite signature, arity and binder context. Contextual checking at varying holeGamma, arithmetic formulas for the actual relations, internal ID1 accessibility and the separate Bachmann-Howard norm-extraction supplier remain pending. The whole source label remains pending.",
+        "remaining_dependencies": [
+          {
+            "description": "Faithful first-order arithmetic formulas for the actual typedness, quotient edge H, positive closure R and direct multiset replacement relations in the same finite window, with every parameter required by the source claim exposed. Actual numeric step checking is now primitive recursive jointly in Gamma, windows, table and data, and original numeric quotient-edge/positive-path checking is primitive recursive at each fixed signature/arity/ambient context. External primitive recursiveness is not itself an internal ID1 formula or derivation.",
+            "status": "pending"
+          },
+          {
+            "description": "The specified positive arithmetic accessibility and multiset operators, combined by disjoint numerical tags into an actual allowed ID1 inductive definition; finite type-recursive computability clauses must be actual first-order formulas.",
+            "status": "pending"
+          },
+          {
+            "description": "An internal ID1 derivation of the non-lambda/inverse-application/lambda clauses, multiset accessibility closure, numbered-constructor lexicographic induction, and structural computable-substitution conclusion for every original well-typed auxiliary term, under the actual source assumptions.",
+            "status": "pending"
+          }
+        ]
+      },
+      "after": {
+        "coverage_note": "Supporting components fix the actual typed auxiliary syntax, guarded reduction, finite primary classes, least-code representatives and exact numerical certificates for H and R. Literal codecs, validity, universe, exchange/class and representative computations are checked. The original full root checker is primitive recursive. This checkpoint additionally supplies exact raw decoding, Mul and selector computations uniform in the binder context, original focus/plug computation, and the complete unchanged numericStepTest primitive recursive jointly in Gamma, windows, table and natural inputs. Original numeric quotient-edge and positive-path certificate tests are primitive recursive at each fixed ambient context using the actual representative tests. No source definitions or guards change. Explicit arithmetic formulas, an internal ID1 accessibility derivation and the separate Bachmann-Howard norm-extraction supplier remain pending; the whole source label remains pending.",
+        "remaining_dependencies": [
+          {
+            "description": "Faithful first-order arithmetic formulas for the actual typedness, quotient edge H, positive closure R and direct multiset replacement relations in the same finite window, with every parameter required by the source claim exposed. Actual numeric step checking is now primitive recursive jointly in Gamma, windows, table and data, and original numeric quotient-edge/positive-path checking is primitive recursive at each fixed signature/arity/ambient context. External primitive recursiveness is not itself an internal ID1 formula or derivation.",
+            "status": "pending"
+          },
+          {
+            "description": "The specified positive arithmetic accessibility and multiset operators, combined by disjoint numerical tags into an actual allowed ID1 inductive definition; finite type-recursive computability clauses must be actual first-order formulas.",
+            "status": "pending"
+          },
+          {
+            "description": "An internal ID1 derivation of the non-lambda/inverse-application/lambda clauses, multiset accessibility closure, numbered-constructor lexicographic induction, and structural computable-substitution conclusion for every original well-typed auxiliary term, under the actual source assumptions.",
+            "status": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "statement_id": "06-godel-t-termination-ordering:lem:simulation",
+      "before": {
+        "coverage_note": "Supporting components establish finite-window derivation simulation, confinement of every represented boundary, finite primary classes, least-code quotient semantics and exact numeric step/edge/positive-path certificate characterizations. The confined-source adapter supplies positive quotient simulation in S = literalTypes s. The intervening local checkpoint also establishes the actual original Source.Term codec and primitive presentation, exact literalTypes computation, and the computable original structural translation using one source window for BOTH endpoint representatives. This cumulative checkpoint establishes the original full numericRootTest effectivity, including Copy, Mul and actual lambda-descending marking with complete indexed multiset witnesses. These are joint computations in the stated inputs at each fixed finite signature, arity and binder context. Required varying-parameter interfaces, contextual and step/edge/positive-path checker effectivity, arithmetic H/R and exact whole-source assembly remain pending. No stable-pair theorem, internal ID1 accessibility or ordinal bound is inferred.",
+        "remaining_dependencies": [
+          {
+            "description": "Expose every additional signature/arity/context parameter varied by the whole source claim in a genuinely uniform effective interface. The actual original-source codec, primitive presentation, exact literalTypes computation and structural translation composed with representativeCode are already checked at each fixed finite signature, arity and context. Both endpoints use one explicit S = Ty(s); no target-window substitution is permitted.",
+            "status": "pending"
+          },
+          {
+            "description": "An exact arithmetic representation of the unchanged quotient edge H and positive closure R, with every source-required parameter exposed. Actual focus/replacement, context-uniform decoded selector evaluation and original numericStepTest effectivity are now checked; the original numeric edge and positive-path certificates are primitive recursive at each fixed signature/arity/ambient context. Deciding path absence is not required. External effectivity and existing semantic certificate equivalences must still be connected to genuine arithmetic formulas.",
+            "status": "pending"
+          },
+          {
+            "description": "One exact whole-source simulation interface assembling those computational/arithmetic suppliers with the checked S = Ty(s) positive quotient simulation, without added semantic, closure or effectivity premises.",
+            "status": "pending"
+          }
+        ]
+      },
+      "after": {
+        "coverage_note": "Supporting components establish finite-window derivation simulation, confinement at represented boundaries, finite primary classes, least-code quotient semantics and exact numeric step/edge/positive-path characterizations. The actual original-source codec, primitive presentation, exact literalTypes and computable structural translation use one S = literalTypes s for both endpoint representatives at each fixed signature/arity/context. The entire original numeric root checker is checked. This checkpoint closes contextual certificate effectivity: exact raw focus/plug and context-uniform decoder/selector/Mul interfaces yield primitive recursion of the original numericStepTest with Gamma as an input. The original numeric quotient-edge and positive-path checkers are also primitive recursive at each fixed ambient context, retaining actual representative comparison and positive-length semantics. Explicit arithmetic H/R, source-required varying-parameter interfaces and whole-source assembly remain pending. No stable pair, internal ID1 accessibility or ordinal bound is inferred.",
+        "remaining_dependencies": [
+          {
+            "description": "Expose every additional signature/arity/context parameter varied by the whole source claim in a genuinely uniform effective interface. The actual original-source codec, primitive presentation, exact literalTypes computation and structural translation composed with representativeCode are already checked at each fixed finite signature, arity and context. Both endpoints use one explicit S = Ty(s); no target-window substitution is permitted.",
+            "status": "pending"
+          },
+          {
+            "description": "An exact arithmetic representation of the unchanged quotient edge H and positive closure R, with every source-required parameter exposed. Actual focus/replacement, context-uniform decoded selector evaluation and original numericStepTest effectivity are now checked; the original numeric edge and positive-path certificates are primitive recursive at each fixed signature/arity/ambient context. Deciding path absence is not required. External effectivity and existing semantic certificate equivalences must still be connected to genuine arithmetic formulas.",
+            "status": "pending"
+          },
+          {
+            "description": "One exact whole-source simulation interface assembling those computational/arithmetic suppliers with the checked S = Ty(s) positive quotient simulation, without added semantic, closure or effectivity premises.",
+            "status": "pending"
+          }
+        ]
+      }
+    }
+  ],
+  "remaining_scope": [
+    "Faithful arithmetic formulas for actual typedness, H, R and direct multiset replacement",
+    "Source-required varying-parameter interfaces and whole simulation assembly",
+    "Internal ID1 accessibility, norm extraction and ordinal suppliers"
+  ]
+}
