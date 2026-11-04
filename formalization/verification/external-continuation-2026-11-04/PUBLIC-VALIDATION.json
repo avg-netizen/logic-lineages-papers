@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 4,
-    "components": 1
+    "fixed_aliases": 8,
+    "components": 2
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104A",
-    "source_sha256": "64fb95c3a0bb37277d30ec36c594e1dffc9780917893cbd68c52a4a3bcb1fe41",
-    "closure_sha256": "9340b7ffb72d537b48d95006d4ea33b364d5e5377e4249c0803ab348a7c76693",
+    "module": "LogicLineages.ExternalCheckpoint20261104B",
+    "source_sha256": "03105e645f546ce3dd152025a8d16b1f977f4f834b389241bbaa1eea2618ce34",
+    "closure_sha256": "daf7c06dfba814a94dd908c59b7dfad5f5308a3344899de23ea88e30a273990b",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -30,6 +30,26 @@
         "name": "fixed_004_fixedOrderedLibraryCalibration",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.OrderedLibraryCalibration",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedOrderedLibraryCalibration"
+      },
+      {
+        "name": "fixed_005_effective_bounded_simulation",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.EffectiveBoundedSimulation",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.effective_bounded_simulation"
+      },
+      {
+        "name": "fixed_006_exact_control_parity",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.ExactControlParity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.exact_control_parity"
+      },
+      {
+        "name": "fixed_007_exact_valuation_fibers",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.ExactValuationFibers",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.exact_valuation_fibers"
+      },
+      {
+        "name": "fixed_008_non_eventual_periodicity",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.NonEventualPeriodicity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.non_eventual_periodicity"
       }
     ],
     "allowed_axioms": [
@@ -66,12 +86,53 @@
           "sha256": "cc5c894d18c6018e38de328e9b017dc250f493885b4d8fa7a0eabaa5913514a2"
         }
       ]
+    },
+    {
+      "name": "SourceControlNonperiodicity",
+      "scope": "Fixed explicit Code/evaln-stage Gamma parity nonperiodicity; no tape-step identification, whole source hardness or reduction claim.",
+      "freeze_sha256": "2d4729214b5297447585676d85bc3243f7f46e6e443f4053c4a0f59adc9470a8",
+      "closure_sha256": "fce24734dbbda7f63f147b291de876a46e064c80a149816d0cef0ab11c63a5b3",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityDefinitions.lean",
+          "sha256": "05cd52f005c560a0fffbc68dc5136eba541eece6daf089e7be3e0ad1ed662141"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityTargets.lean",
+          "sha256": "f97d146323cc961fe4e699b1ea2d01d2a676b8bff7d63c5f1e86547fa088e609"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityStatementChecks.lean",
+          "sha256": "3010af26e6ad7690f283db904195fc11fee36173635e9dc0b828be65846ff6a5"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceControlNonperiodicity-SOURCE-CORRESPONDENCE.md",
+          "sha256": "56994e799c726d8c86c15b752ed7afe99badaae5d9f019bb111fac0f66e44839"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicitySimulationProof.lean",
+          "sha256": "ef5f80cf3d67baf73412d7d50b6e0fda523622de60db44753af51301376931d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityFibersProof.lean",
+          "sha256": "4d6f054c21d7a8beff26c1db854c47bf43897c1770eb02c1b3e18a0f796291eb"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityParityProof.lean",
+          "sha256": "bf039e7cc54ecb28ce0c9cd48abb99d33b677aea847bcab97a4f539011f56e7c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityProof.lean",
+          "sha256": "dfbab99ed58973ff6d48ef23d758691bef48fc791fe02d0d5ab1b5eeb6a4dbb6"
+        }
+      ]
     }
   ],
   "limitations": [
     "Pinned warm-cache focused checks, not a full-root or CI build.",
     "Generic direct replacement; library calibration requires the explicit matching Preorder.",
     "No well-foundedness, ID1 accessibility, arithmetic or whole-source promotion.",
-    "TARGETS registry and source manuscripts unchanged."
+    "TARGETS registry and source manuscripts unchanged.",
+    "SourceControlNonperiodicity uses explicit Code/evaln stages, not identified tape steps or a whole source hardness theorem."
   ]
 }
