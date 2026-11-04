@@ -1,0 +1,59 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotient
+open Source NumberedUniformPackedDecoding NumberedQuotientPathCertificates
+
+abbrev Parameters (n : Nat) := (ContextUniformPrimary.Window n × List Ty) × (Fin n → Fin n → Bool)
+
+/-- The ORIGINAL three-number edge certificate, decoded with the joint
+ambient context and the exactly calibrated raw canonical representative. -/
+def edgeTest (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y certificate : Nat) : Bool :=
+  let source := (Nat.unpair certificate).1
+  let target := (Nat.unpair (Nat.unpair certificate).2).1
+  let step := (Nat.unpair (Nat.unpair certificate).2).2
+  match rawUniverseDecode n arity symbols S Gamma source,rawPackedDecode n arity Gamma target with
+  | some q,some r => NumberedNumericStep.numericStepTest n arity symbols S Gamma table source target step &&
+      decide (ContextUniformPrimary.representative arity symbols S Gamma q=x ∧
+        ContextUniformPrimary.representative arity symbols S Gamma r=y)
+  | _,_ => false
+
+def pathTest (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) : Nat → Nat → List EdgeEntry → Bool
+  | x,y,[] => decide (x=y)
+  | x,y,(z,certificate)::rest => edgeTest n arity symbols S Gamma table x z certificate &&
+      pathTest n arity symbols S Gamma table z y rest
+
+def positiveTest (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (x y certificate : Nat) : Bool :=
+  match decodePathCertificate certificate with
+  | none => false
+  | some [] => false
+  | some (entry::rest) => pathTest n arity symbols S Gamma table x y (entry::rest)
+
+def dominationTest (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (removed : List Nat) :
+    List Nat → List QuotientDominationCertificates.Entry → Bool
+  | [],[] => true
+  | y::ys,(index,certificate)::entries =>
+      match removed[index]? with
+      | none => false
+      | some z => positiveTest n arity symbols S Gamma table z y certificate &&
+          dominationTest n arity symbols S Gamma table removed ys entries
+  | _,_ => false
+
+def directTest (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (source target : List Nat)
+    (c : QuotientDirectCertificates.Certificate) : Bool :=
+  decide (source.Perm (c.1.1 ++ c.1.2.1) ∧ target.Perm (c.1.1 ++ c.1.2.2) ∧ c.1.2.1 ≠ []) &&
+    dominationTest n arity symbols S Gamma table c.1.2.1 c.1.2.2 c.2
+
+def numericDirectTest (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (source target certificate : Nat) : Bool :=
+  (Encodable.decode (α := List Nat) source).any (fun ss =>
+    (Encodable.decode (α := List Nat) target).any (fun ts =>
+      (Encodable.decode (α := QuotientDirectCertificates.Certificate) certificate).any
+        (directTest n arity symbols S Gamma table ss ts)))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotient

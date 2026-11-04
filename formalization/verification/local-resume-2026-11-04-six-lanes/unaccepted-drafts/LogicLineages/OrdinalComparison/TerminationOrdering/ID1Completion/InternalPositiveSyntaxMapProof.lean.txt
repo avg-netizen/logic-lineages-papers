@@ -1,0 +1,130 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTermProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxMapProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticPredicateSubstitution
+open SourceComputabilityFormulaSupportProof InternalCalculus InternalPositiveTermProof
+
+theorem termFreeAfterAux {L : Language} {α β γ : Type} {m n : Nat}
+    (t : L.Term (α ⊕ Fin n)) (g : α → β ⊕ Fin m) (f : β → γ) :
+    (t.relabel (BoundedFormula.relabelAux g n)).relabel (Sum.map f id) =
+      t.relabel (BoundedFormula.relabelAux ((Sum.map f id) ∘ g) n) := by
+  rw [Term.relabel_relabel]
+  apply congrArg (fun h => t.relabel h)
+  funext x
+  cases x with
+  | inl a => cases hg : g a <;> simp [BoundedFormula.relabelAux,Function.comp_def,hg]
+  | inr i => simp [BoundedFormula.relabelAux,Function.comp_def]
+
+theorem termAuxAfterFree {L : Language} {α β γ : Type} {m n : Nat}
+    (t : L.Term (α ⊕ Fin n)) (f : α → β) (g : β → γ ⊕ Fin m) :
+    (t.relabel (Sum.map f id)).relabel (BoundedFormula.relabelAux g n) =
+      t.relabel (BoundedFormula.relabelAux (g ∘ f) n) := by
+  rw [Term.relabel_relabel]
+  apply congrArg (fun h => t.relabel h)
+  funext x
+  cases x <;> rfl
+
+theorem freeMapAfterRelabel {L : Language} {α β γ : Type} {m n : Nat}
+    (f : β → γ) (g : α → β ⊕ Fin m) (phi : L.BoundedFormula α n) :
+    (phi.relabel g).mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id) =
+      phi.relabel ((Sum.map f id) ∘ g) := by
+  induction phi with
+  | falsum => rfl
+  | equal t u => simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,termFreeAfterAux]
+  | rel R ts => simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,Function.comp_def,termFreeAfterAux,id_eq]
+  | imp p q ihp ihq => simp only [BoundedFormula.relabel_imp,BoundedFormula.mapTermRel,ihp,ihq]
+  | all p ih =>
+    rw [BoundedFormula.relabel_all,BoundedFormula.relabel_all]
+    exact congrArg BoundedFormula.all ih
+
+theorem relabelAfterFreeMap {L : Language} {α β γ : Type} {m n : Nat}
+    (f : α → β) (g : β → γ ⊕ Fin m) (phi : L.BoundedFormula α n) :
+    (phi.mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id)).relabel g =
+      phi.relabel (g ∘ f) := by
+  induction phi with
+  | falsum => rfl
+  | equal t u => simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,termAuxAfterFree]
+  | rel R ts => simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,Function.comp_def,termAuxAfterFree,id_eq]
+  | imp p q ihp ihq => simp only [BoundedFormula.relabel_imp,BoundedFormula.mapTermRel,ihp,ihq]
+  | all p ih =>
+    change (p.mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id)).all.relabel g = _
+    rw [BoundedFormula.relabel_all,BoundedFormula.relabel_all]
+    exact congrArg BoundedFormula.all ih
+
+theorem formulaRelabelAsMap {L : Language} {α β : Type} (phi : L.Formula α) (f : α → β) :
+    phi.relabel f =
+      phi.mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id) := by
+  have h := freeMapAfterRelabel f (Sum.inl : α → α ⊕ Fin 0) phi
+  have hg : (Sum.map f (id : Fin 0 → Fin 0)) ∘ (Sum.inl : α → α ⊕ Fin 0) = Sum.inl ∘ f := by
+    funext a
+    rfl
+  rw [hg] at h
+  simpa only [BoundedFormula.relabel_sumInl,BoundedFormula.castLE_rfl,FirstOrder.Language.Formula.relabel] using h.symm
+
+theorem freeMapComposition {L : Language} {α β γ : Type} {n : Nat}
+    (phi : L.BoundedFormula α n) (f : α → β) (g : β → γ) :
+    (phi.mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id)).mapTermRel
+        (fun _ t => t.relabel (Sum.map g id)) (fun _ => id) (fun _ => id) =
+      phi.mapTermRel (fun _ t => t.relabel (Sum.map (g ∘ f) id)) (fun _ => id) (fun _ => id) := by
+  rw [BoundedFormula.mapTermRel_mapTermRel]
+  simp only [Function.id_comp]
+  apply congrArg (fun (ft : ∀ k, L.Term (α ⊕ Fin k) → L.Term (γ ⊕ Fin k)) =>
+    phi.mapTermRel ft (fun _ => id) (fun _ => id))
+  funext k t
+  rw [Function.comp_apply,Term.relabel_relabel]
+  apply congrArg (fun h => t.relabel h)
+  funext x
+  cases x <;> rfl
+
+theorem formulaRelabelComposition {L : Language} {α β γ : Type}
+    (phi : L.Formula α) (f : α → β) (g : β → γ) :
+    (phi.relabel f).relabel g = phi.relabel (g ∘ f) := by
+  rw [formulaRelabelAsMap,formulaRelabelAsMap,formulaRelabelAsMap]
+  exact freeMapComposition phi f g
+
+theorem formulaRelabelAsSubst {L : Language} {α β : Type} (phi : L.Formula α) (f : α → β) :
+    phi.relabel f = phi.subst (Term.var ∘ f) := by
+  rw [formulaRelabelAsMap]
+  unfold BoundedFormula.subst
+  apply congrArg (fun (ft : ∀ k, L.Term (α ⊕ Fin k) → L.Term (β ⊕ Fin k)) =>
+    phi.mapTermRel ft (fun _ => id) (fun _ => id))
+  funext k t
+  rw [termRelabelAsSubst]
+  apply congrArg (fun h => t.subst h)
+  funext x
+  cases x <;> rfl
+
+theorem allOneRelabel {α β : Type} (phi : language.Formula (α ⊕ Fin 1)) (f : α → β) :
+    (allOne phi).relabel f = allOne (phi.relabel (Sum.map f id)) := by
+  calc
+    (allOne phi).relabel f = (BoundedFormula.relabel (Sum.map f id) phi).all := by
+      rw [formulaRelabelAsMap]
+      exact congrArg BoundedFormula.all (freeMapAfterRelabel f (id : α ⊕ Fin 1 → α ⊕ Fin 1) phi)
+    _ = allOne (phi.relabel (Sum.map f id)) := by
+      unfold allOne
+      rw [formulaRelabelAsMap]
+      exact (congrArg BoundedFormula.all
+        (relabelAfterFreeMap (Sum.map f id) (id : β ⊕ Fin 1 → β ⊕ Fin 1) phi)).symm
+
+theorem actualWeakeningQuantifierSyntax : InternalPositiveTargets.ActualWeakeningQuantifierSyntax := by
+  intro α phi
+  exact allOneRelabel phi Sum.inl
+
+theorem actualInstantiateLiftSyntax : InternalPositiveTargets.ActualInstantiateLiftSyntax := by
+  intro α phi
+  rw [instantiate,liftPredicateFormula,formulaRelabelAsSubst,boundedSubstCompose]
+  have hv : (fun a : α ⊕ Fin 1 =>
+      ((Term.var ∘ Sum.map (Sum.inl : α → α ⊕ Fin 1) id) a).subst
+        (Sum.elim Term.var (fun _ : Fin 1 => (.var (.inr 0) : language.Term (α ⊕ Fin 1))))) = Term.var := by
+    funext a
+    cases a with
+    | inl a => rfl
+    | inr i =>
+      have hi : i = 0 := Subsingleton.elim _ _
+      cases hi
+      rfl
+  rw [hv,boundedSubstVariables]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxMapProof

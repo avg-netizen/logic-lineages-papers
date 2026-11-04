@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusStatementChecks
+open InternalCalculusPreflight InternalCalculusProof
+theorem invariant_exact : invariantComparator := actualInternalInvariantInduction
+theorem natural_exact : naturalComparator := actualInternalNaturalInduction
+theorem instance_exact : instanceComparator := actualInternalInvariantInstance
+theorem soundness_exact : soundnessComparator := actualInternalCalculusSoundness
+theorem standard_model_exact : standardModelComparator := InternalCalculusSupportProof.actualStandardLeastModel
+#print axioms invariant_exact
+#print axioms natural_exact
+#print axioms instance_exact
+#print axioms soundness_exact
+#print axioms standard_model_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusStatementChecks

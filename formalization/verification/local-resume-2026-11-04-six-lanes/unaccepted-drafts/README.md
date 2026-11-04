@@ -1,0 +1,1 @@
+These byte-preserved specifications and unfinished proof candidates are UNACCEPTED. They are archived as text and excluded from the accepted Lean root. Passing helper modules do not establish an unfinished full gate. Original paths and hashes are in ../DRAFT-MANIFEST.json. Local originals remain intact for a future explicitly authorized resume.

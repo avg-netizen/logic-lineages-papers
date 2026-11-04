@@ -1,0 +1,130 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntaxMapProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositivePredicateSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticSchemas PositiveArithmeticTransforms
+open PositiveArithmeticPredicateSubstitution SourceComputabilityFormulaSupportProof InternalCalculus
+open InternalPositiveTermProof InternalPositiveSyntaxMapProof
+
+theorem homBoundedRelabel {L L' : Language} {α β : Type} {m n : Nat}
+    (g : L →ᴸ L') (f : α → β ⊕ Fin m) (phi : L.BoundedFormula α n) :
+    g.onBoundedFormula (phi.relabel f) = (g.onBoundedFormula phi).relabel f := by
+  induction phi with
+  | falsum => rfl
+  | equal t u =>
+    simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,LHom.onBoundedFormula,Term.bdEqual,onTermRelabel,id_eq]
+  | rel R ts =>
+    simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,LHom.onBoundedFormula,
+      Relations.boundedFormula,Function.comp_def,onTermRelabel,id_eq]
+  | imp p q ihp ihq => simp only [BoundedFormula.relabel_imp,LHom.onBoundedFormula,ihp,ihq]
+  | all p ih =>
+    simp only [BoundedFormula.relabel_all,LHom.onBoundedFormula]
+    exact congrArg BoundedFormula.all ih
+
+theorem homFormulaRelabel {L L' : Language} {α β : Type}
+    (g : L →ᴸ L') (f : α → β) (phi : L.Formula α) :
+    g.onFormula (phi.relabel f) = (g.onFormula phi).relabel f :=
+  homBoundedRelabel g (Sum.inl ∘ f) phi
+
+theorem formulaConjRelabel {α β : Type} (p q : language.Formula α) (f : α → β) :
+    (p ⊓ q).relabel f = (p.relabel f) ⊓ (q.relabel f) := rfl
+
+theorem formulaImpRelabel {α β : Type} (p q : language.Formula α) (f : α → β) :
+    (p.imp q).relabel f = (p.relabel f).imp (q.relabel f) := rfl
+
+theorem predicateRelabel {α β : Type} (t : OrdinaryArithmetic.Term α) (f : α → β) :
+    (Positive.predicate (t.relabel f)).formula = (Positive.predicate t).formula.relabel f := by
+  rw [formulaRelabelAsMap]
+  simp only [Positive.formula,Relations.formula₁,Relations.formula,Relations.boundedFormula,
+    BoundedFormula.mapTermRel,Matrix.cons_val_fin_one,onTermRelabel,Term.relabel_relabel,
+    Function.comp_def,Sum.map_inl,id_eq]
+
+theorem predicateObjectRelabel {α β : Type} (f : α → β) :
+    (predicateAtObject (α := α)).relabel (Sum.map f id) = predicateAtObject (α := β) :=
+  (predicateRelabel (.var (.inr 0)) (Sum.map f id)).symm
+
+theorem positiveFormulaRelabel {α : Type} (p : Positive α) :
+    ∀ (β : Type) (f : α → β),
+    (PositiveArithmeticTransforms.relabel f p).formula = p.formula.relabel f := by
+  induction p with
+  | arithmetic phi =>
+    intro β f
+    exact homFormulaRelabel arithmeticEmbedding f phi
+  | predicate t =>
+    intro β f
+    exact predicateRelabel t f
+  | conj p q ihp ihq =>
+    intro β f
+    change (PositiveArithmeticTransforms.relabel f p).formula ⊓ (PositiveArithmeticTransforms.relabel f q).formula =
+      (p.formula ⊓ q.formula).relabel f
+    rw [formulaConjRelabel,ihp,ihq]
+  | guarded guard p ih =>
+    intro β f
+    change (arithmeticEmbedding.onFormula (guard.relabel f)).imp
+        (PositiveArithmeticTransforms.relabel f p).formula =
+      ((arithmeticEmbedding.onFormula guard).imp p.formula).relabel f
+    rw [formulaImpRelabel,homFormulaRelabel,ih]
+  | all p ih =>
+    intro β f
+    change allOne (PositiveArithmeticTransforms.relabel (Sum.map f id) p).formula =
+      (allOne p.formula).relabel f
+    rw [ih,allOneRelabel]
+
+theorem positiveRelabelComposition {α : Type} (p : Positive α) :
+    ∀ (β γ : Type) (f : α → β) (g : β → γ),
+    PositiveArithmeticTransforms.relabel g (PositiveArithmeticTransforms.relabel f p) =
+      PositiveArithmeticTransforms.relabel (g ∘ f) p := by
+  induction p with
+  | arithmetic phi =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,formulaRelabelComposition]
+  | predicate t =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,Term.relabel_relabel]
+  | conj p q ihp ihq =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,ihp,ihq]
+  | guarded guard p ih =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,formulaRelabelComposition,ih]
+  | all p ih =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel]
+    rw [ih]
+    have he : (Sum.map g (id : Fin 1 → Fin 1)) ∘ Sum.map f id = Sum.map (g ∘ f) id := by
+      funext x
+      cases x <;> rfl
+    rw [he]
+
+theorem actualParameterBodySyntax : InternalPositiveTargets.ActualParameterBodySyntax := by
+  intro body α
+  unfold liftPredicateFormula bodyWithParameters
+  rw [← positiveFormulaRelabel]
+  rw [positiveRelabelComposition]
+  have he : (Sum.map (Sum.inl : α → α ⊕ Fin 1) (id : Fin 1 → Fin 1)) ∘
+      (Sum.inr : Fin 1 → α ⊕ Fin 1) = (Sum.inr : Fin 1 → (α ⊕ Fin 1) ⊕ Fin 1) := by
+    funext i
+    rfl
+  rw [he]
+
+theorem actualPredicateIdentitySyntax : InternalPositiveTargets.ActualPredicateIdentitySyntax := by
+  intro α p
+  induction p with
+  | arithmetic phi => rfl
+  | predicate t =>
+    simp only [substitutePredicate,predicateAtObject,Positive.formula,Relations.formula₁,
+      Relations.formula,Relations.boundedFormula,BoundedFormula.subst,BoundedFormula.mapTermRel,
+      Matrix.cons_val_fin_one,LHom.onTerm,Term.relabel,Term.subst,Function.comp_def,
+      Sum.elim_inl,Sum.elim_inr,id_eq]
+  | conj p q ihp ihq =>
+    change substitutePredicate p predicateAtObject ⊓ substitutePredicate q predicateAtObject = p.formula ⊓ q.formula
+    rw [ihp,ihq]
+  | guarded guard p ih =>
+    change (arithmeticEmbedding.onFormula guard).imp (substitutePredicate p predicateAtObject) =
+      (arithmeticEmbedding.onFormula guard).imp p.formula
+    rw [ih]
+  | all p ih =>
+    change allOne (substitutePredicate p (liftPredicateFormula predicateAtObject)) = allOne p.formula
+    rw [liftPredicateFormula,predicateObjectRelabel,ih]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositivePredicateSyntaxProof

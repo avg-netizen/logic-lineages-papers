@@ -1,0 +1,40 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowDefinitions.lean:6:4: error: fail to show termination for
+  LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.Term.substitute
+with errors
+failed to infer structural recursion:
+Not considering parameter i of LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.Term.substitute:
+  it is unchanged in the recursive calls
+Cannot use parameter replacement:
+  failed to eliminate recursive application
+    substitute i a replacement
+Cannot use parameter #3:
+  failed to eliminate recursive application
+    substitute i a replacement
+
+
+Could not find a decreasing measure.
+The basic measures relate at each recursive call as follows:
+(<, ≤, =: relation proved, ? all proofs failed, _: no proof attempted)
+             #1 x2
+1) 9:22-48    ?  ?
+2) 9:51-77    _  _
+3) 10:32-58   _  _
+4) 10:61-87   _  _
+5) 11:34-60   _  _
+6) 12:30-56   _  _
+7) 13:20-46   _  _
+8) 14:24-50   _  _
+9) 15:34-60   _  _
+10) 16:38-64  _  _
+
+#1: replacement
+
+Please use `termination_by` to specify a decreasing measure.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/WindowDefinitions.lean:58:5: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.conjunction` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `CommonHeadLargeGuards.conjunction`
+  [apply] `Std.Do.SPred.conjunction`
+  [apply] `BaseFormula.Formula.conjunction`
+  [apply] `Matrix.conjunction`
+  [apply] `SourceFormula.conjunction`

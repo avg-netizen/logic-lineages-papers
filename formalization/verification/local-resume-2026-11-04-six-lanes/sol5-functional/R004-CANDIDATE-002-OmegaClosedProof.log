@@ -1,0 +1,75 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:35:50: error: Tactic `decide` failed for proposition
+  ↑exponentCode.evaluate = hNote
+because its `Decidable` instance
+  instDecidableEqONote (↑exponentCode.evaluate) hNote
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqNat`, `instDecidableEqONote`, `Nat.decEq`, and `instDecidableEqONote.decEq`, reduction got stuck at the `Decidable` instance
+  instDecidableEqONote.decEq (↑exponentCode.evaluate) hNote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:41:47: error: Tactic `decide` failed for proposition
+  ↑omegaCode.evaluate = oNote
+because its `Decidable` instance
+  instDecidableEqONote (↑omegaCode.evaluate) oNote
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqNat`, `instDecidableEqONote`, `Nat.decEq`, and `instDecidableEqONote.decEq`, reduction got stuck at the `Decidable` instance
+  instDecidableEqONote.decEq (↑omegaCode.evaluate) oNote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:52:67: error: Tactic `decide` failed for proposition
+  ↑(naturalSum (naturalProduct ⟨↑10, ⋯⟩ ⟨(↑2).oadd 1 ONote.zero, ⋯⟩) ⟨ONote.omega, ⋯⟩) = hNote
+because its `Decidable` instance
+  instDecidableEqONote (↑(naturalSum (naturalProduct ⟨↑10, ⋯⟩ ⟨(↑2).oadd 1 ONote.zero, ⋯⟩) ⟨ONote.omega, ⋯⟩)) hNote
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instance `instDecidableEqONote`, reduction got stuck at the `Decidable` instance
+  instDecidableEqONote.decEq (↑(naturalSum (naturalProduct ⟨↑10, ⋯⟩ ⟨(↑2).oadd 1 ONote.zero, ⋯⟩) ⟨ONote.omega, ⋯⟩))
+    hNote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:55:2: error: Type mismatch: After simplification, term
+  hs
+ has type
+  hNote.repr = ordinalNaturalSum (ordinalNaturalProduct 10 (Ordinal.omega0 ^ 2)) Ordinal.omega0
+but is expected to have type
+  hNote.repr = ordinalNaturalSum (ordinalNaturalProduct 10 (Ordinal.omega0 * Ordinal.omega0)) Ordinal.omega0
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Ordinal.CNF.eval ↦ 12
+  Finsupp.onFinsetSupport ↦ 4
+  Ordinal.CNF.coeff ↦ 8
+  Ordinal.CNF ↦ 20
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:64:68: error: Tactic `decide` failed for proposition
+  ↑(naturalSum (naturalProduct ⟨↑10, ⋯⟩ ⟨ONote.omega, ⋯⟩) ⟨1, ONote.nf_one⟩) = eNote
+because its `Decidable` instance
+  instDecidableEqONote (↑(naturalSum (naturalProduct ⟨↑10, ⋯⟩ ⟨ONote.omega, ⋯⟩) ⟨1, ONote.nf_one⟩)) eNote
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instance `instDecidableEqONote`, reduction got stuck at the `Decidable` instance
+  instDecidableEqONote.decEq (↑(naturalSum (naturalProduct ⟨↑10, ⋯⟩ ⟨ONote.omega, ⋯⟩) ⟨1, ONote.nf_one⟩)) eNote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:78:42: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:83:2: error: unsolved goals
+case pos
+e : Ordinal.{0}
+hc : Ordinal.CNF.coeff Ordinal.omega0 (Ordinal.omega0 ^ e) = Finsupp.single e 1
+⊢ finiteValue 1 = 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:85:10: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵h̵e̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲e̲,̲ ̲N̲e̲.̲s̲y̲m̲m̲ he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:85:31: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [Finsupp.single_apply,h̵e̵,̵ ̲Ne.symm he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:90:4: error: 'change' tactic failed, pattern
+  Ordinal.omega0 ^ eNote.repr = ?m.14
+is not definitionally equal to target
+  oNote.repr = Ordinal.omega0 ^ ordinalNaturalSum (ordinalNaturalProduct 10 Ordinal.omega0) 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:93:4: error: 'change' tactic failed, pattern
+  SourceFiniteExponentProjection.finitePart (SignedPair.signedCNF (Ordinal.omega0 ^ eNote.repr)) = 0
+is not definitionally equal to target
+  SourceFiniteExponentProjection.finitePart (SignedPair.signedCNF oNote.repr) = 0

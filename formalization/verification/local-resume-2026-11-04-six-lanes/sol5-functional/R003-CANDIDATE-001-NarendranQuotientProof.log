@@ -1,0 +1,20 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranQuotientProof.lean:19:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranQuotientProof.lean:52:50: error(lean.unknownIdentifier): Unknown constant `Nat.castRingHom_apply`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranQuotientProof.lean:49:17: error: unsolved goals
+case monomial
+n c : ℕ
+⊢ -C ↑c + C ↑c * X ^ n = -C ↑c + X ^ n * C ((Nat.castRingHom ℤ) c)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/NarendranQuotientProof.lean:60:4: error: Type mismatch: After simplification, term
+  hp
+ has type
+  @Eq ℕ (sum p fun e a => a) 1
+but is expected to have type
+  @Eq ℕ (Finsupp.sum p.toFinsupp fun x c => c) 1

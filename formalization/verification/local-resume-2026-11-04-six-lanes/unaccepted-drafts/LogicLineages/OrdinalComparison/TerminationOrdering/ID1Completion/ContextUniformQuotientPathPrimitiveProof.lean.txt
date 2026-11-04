@@ -1,0 +1,76 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientEdgePrimitiveProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientPathPrimitiveProof
+open Source NumberedQuotientPathCertificates ContextUniformQuotient
+
+attribute [local irreducible] Primrec
+
+theorem pathFoldCalibration (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (entries : List EdgeEntry) (x y : Nat) (valid : Bool) :
+    NumberedQuotientPathPrimrecSupportProof.finish y (entries.foldl (fun state entry =>
+      (entry.1,state.2 && edgeTest n arity symbols S Gamma table state.1 entry.1 entry.2)) (x,valid)) =
+    (valid && ContextUniformQuotient.pathTest n arity symbols S Gamma table x y entries) := by
+  induction entries generalizing x valid with
+  | nil => rfl
+  | cons entry entries ih =>
+    rcases entry with ⟨z,c⟩
+    simp only [List.foldl_cons,ContextUniformQuotient.pathTest]
+    rw [ih]
+    exact Bool.and_assoc _ _ _
+
+theorem pathPrimitive (n : Nat) (arity : Fin n → Nat) :
+    Primrec (fun p : Parameters n × Nat × Nat × List EdgeEntry =>
+      ContextUniformQuotient.pathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2
+        p.2.1 p.2.2.1 p.2.2.2) := by
+  let Input := Parameters n × Nat × Nat × List EdgeEntry
+  let foldStep := fun (params : Parameters n) (state : Nat × Bool) (entry : EdgeEntry) =>
+    (entry.1,state.2 && edgeTest n arity params.1.1.1 params.1.1.2 params.1.2 params.2 state.1 entry.1 entry.2)
+  have he : Primrec (fun p : Input × ((Nat × Bool) × EdgeEntry) =>
+      edgeTest n arity p.1.1.1.1.1 p.1.1.1.1.2 p.1.1.1.2 p.1.1.2 p.2.1.1 p.2.2.1 p.2.2.2) :=
+    (ContextUniformQuotientEdgePrimitiveProof.actualJointEdgePrimitive n arity).comp
+      ((Primrec.fst.comp Primrec.fst).pair
+        ((Primrec.fst.comp (Primrec.fst.comp Primrec.snd)).pair
+          ((Primrec.fst.comp (Primrec.snd.comp Primrec.snd)).pair
+            (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))))
+  have hs : Primrec (fun p : Input × ((Nat × Bool) × EdgeEntry) => foldStep p.1.1 p.2.1 p.2.2) :=
+    (Primrec.fst.comp (Primrec.snd.comp Primrec.snd)).pair
+      (Primrec.and.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.snd)) he)
+  have hf : Primrec (fun p : Input =>
+      p.2.2.2.foldl (foldStep p.1) (p.2.1,true)) :=
+    Primrec.list_foldl (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+      ((Primrec.fst.comp Primrec.snd).pair (Primrec.const true)) hs.to₂
+  have hfinish : Primrec (fun p : Input =>
+      (p.2.2.2.foldl (foldStep p.1) (p.2.1,true)).2 &&
+        decide ((p.2.2.2.foldl (foldStep p.1) (p.2.1,true)).1=p.2.2.1)) :=
+    Primrec.and.comp (Primrec.snd.comp hf)
+      (Primrec.eq.comp (Primrec.fst.comp hf) (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))).decide
+  exact hfinish.of_eq (by
+    intro p
+    simpa only [foldStep,NumberedQuotientPathPrimrecSupportProof.finish,Bool.true_and] using pathFoldCalibration n arity p.1.1.1.1 p.1.1.1.2
+      p.1.1.2 p.1.2 p.2.2.2 p.2.1 p.2.2.1 true)
+
+theorem actualJointPositivePrimitive : ContextUniformQuotientTargets.ActualJointPositivePrimitive := by
+  intro n arity
+  let Input := Parameters n × Nat × Nat × Nat
+  have hp : Primrec (fun p : Input × List EdgeEntry =>
+      ContextUniformQuotient.pathTest n arity p.1.1.1.1.1 p.1.1.1.1.2 p.1.1.1.2 p.1.1.2
+        p.1.2.1 p.1.2.2.1 p.2) :=
+    (pathPrimitive n arity).comp ((Primrec.fst.comp Primrec.fst).pair
+      ((Primrec.fst.comp (Primrec.snd.comp Primrec.fst)).pair
+        ((Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))).pair Primrec.snd)))
+  have hb : Primrec (fun p : Input × List EdgeEntry =>
+      decide (p.2 ≠ []) && ContextUniformQuotient.pathTest n arity
+        p.1.1.1.1.1 p.1.1.1.1.2 p.1.1.1.2 p.1.1.2 p.1.2.1 p.1.2.2.1 p.2) :=
+    Primrec.and.comp (Primrec.eq.comp Primrec.snd (Primrec.const [])).not.decide hp
+  have hd : Primrec (fun p : Input => decodePathCertificate p.2.2.2) :=
+    NumberedQuotientPathPrimrecSupportProof.pathCertificateDecoderPrimitive.comp
+      (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have h := NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive hd hb.to₂
+  apply h.of_eq
+  intro p
+  cases hc : decodePathCertificate p.2.2.2 with
+  | none => simp only [positiveTest,hc,Option.any_none]
+  | some entries => cases entries <;> simp [positiveTest,hc]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientPathPrimitiveProof

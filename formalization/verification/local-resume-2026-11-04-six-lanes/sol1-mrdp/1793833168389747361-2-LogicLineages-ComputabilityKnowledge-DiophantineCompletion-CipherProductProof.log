@@ -1,0 +1,50 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherProductProof.lean:136:97: error: unsolved goals
+n q : ℕ
+b c : ℕ → ℕ
+G : ℕ → ℕ → ℕ → ℕ := fun i j k => (if 2 ^ (i + 1) + 2 ^ (j + 1) = k then b i * c j else 0) * base q ^ k
+ht : ∀ i < n, ∀ j < n, b i * c j * base q ^ (2 ^ (i + 1) + 2 ^ (j + 1)) = ∑ k ∈ Finset.range (degreeCount n), G i j k
+⊢ ∑ x ∈ Finset.range (degreeCount n),
+      ∑ x_1 ∈ Finset.range n,
+        ∑ i ∈ Finset.range n, (if 2 ^ (x_1 + 1) + 2 ^ (i + 1) = x then b x_1 * c i else 0) * base q ^ x =
+    ∑ k ∈ Finset.range (degreeCount n), ∑ i ∈ Finset.range n, ∑ j ∈ Finset.range n, G i j k
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherProductProof.lean:211:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  sparseSum (degreeCount n) (base q) id (coefficient n b c) / base q ^ id (2 ^ (i + 2)) % base q
+in the target expression
+  sparseSum (degreeCount n) (base q) id (coefficient n b c) / base q ^ 2 ^ (i + 2) % base q = b i * c i
+
+n q : ℕ
+b c : ℕ → ℕ
+hq : n + 1 < q
+hb : Bounded n q b
+hc : Bounded n q c
+hr : 2 ≤ base q
+hm : ∀ (i j : ℕ), i < j → j < n → 2 ^ (i + 2) < 2 ^ (j + 2)
+hprod : ∀ i < n, b i * c i < base q
+hM : (base q - 1) * shiftedOnes n q = shiftedEncode n q fun x => base q - 1
+hmask : ∀ i < n, base q - 1 < base q
+i : ℕ
+hi : i < n
+hdeg : 2 ^ (i + 2) < degreeCount n
+⊢ sparseSum (degreeCount n) (base q) id (coefficient n b c) / base q ^ 2 ^ (i + 2) % base q = b i * c i
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherProductProof.lean:259:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a i
+in the target expression
+  (fun i => a i) i * base q ^ 2 ^ (i + 2) = (fun i => b i * c i) i * base q ^ 2 ^ (i + 2)
+
+case mpr
+n q : ℕ
+a b c : ℕ → ℕ
+hq : n + 1 < q
+ha : Bounded n q a
+hb : Bounded n q b
+hc : Bounded n q c
+hr : 2 ≤ base q
+hOne : Bounded n q fun x => 1
+hBC : encode n q b * encode n q c &&& (base q - 1) * shiftedOnes n q = shiftedEncode n q fun i => b i * c i
+hA : encode n q a * ones n q &&& (base q - 1) * shiftedOnes n q = shiftedEncode n q fun i => a i
+hprod : ∀ i < n, b i * c i < base q
+hcap : 2 ^ q ≤ base q
+h : ∀ i < n, a i = b i * c i
+i : ℕ
+hi : i ∈ Finset.range n
+⊢ (fun i => a i) i * base q ^ 2 ^ (i + 2) = (fun i => b i * c i) i * base q ^ 2 ^ (i + 2)

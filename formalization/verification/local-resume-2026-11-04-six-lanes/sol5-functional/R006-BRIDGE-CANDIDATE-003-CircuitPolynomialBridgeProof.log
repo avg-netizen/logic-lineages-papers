@@ -1,0 +1,32 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:46:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitPolynomialBridgeProof.lean:96:12: error: unsolved goals
+case ofNat.none
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : ¬Int.ofNat k < 0
+hab : (Int.ofNat k).natAbs = k
+⊢ C ↑k * X ^ p = X ^ p * C (Int.ofNat k)
+
+case ofNat.some
+n : ℕ
+x : Fin n → ZPolynomial
+p k : ℕ
+hk : ¬Int.ofNat k < 0
+hab : (Int.ofNat k).natAbs = k
+val✝ : Fin n
+⊢ C ↑k * X ^ p * x val✝ = X ^ p * x val✝ * C (Int.ofNat k)

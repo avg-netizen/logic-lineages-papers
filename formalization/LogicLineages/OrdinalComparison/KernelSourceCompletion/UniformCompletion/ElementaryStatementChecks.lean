@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.CalibrationStatementChecks
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ElementaryProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+theorem exact_signed_order : Targets.ExactSignedOrder := Proof.exactSignedOrder
+theorem uniform_tail_programs : Targets.UniformTailPrograms := Proof.uniformTailPrograms
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion

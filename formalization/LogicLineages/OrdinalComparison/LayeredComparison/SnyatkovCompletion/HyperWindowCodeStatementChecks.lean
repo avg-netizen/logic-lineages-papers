@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowCodeStatementChecks
+theorem literal_calibration : HyperWindowCodeTargets.LiteralCalibration := HyperWindowCodeProof.literalCalibration
+theorem actual_code_computation : HyperWindowCodeTargets.ActualCodeComputation := HyperWindowCodeProof.actualCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowCodeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowCodeStatementChecks

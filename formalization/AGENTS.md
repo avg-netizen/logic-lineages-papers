@@ -1,3 +1,12 @@
+Current user instruction: **ALL SIX LANES PAUSED; push the preserved checkpoint.**
+Read [the final handoff](HANDOFF-2026-11-04-SIX-LANES-PAUSED.md). No new proof, repair, target, compiler, quota-reset restart or successor round is authorized. Explicit user release is required. The register is 161 checked, 2 inherited, 26 pending/189. Earlier releases and retry permissions below are historical.
+
+Current user release: [Sol supervises Claude plus five independent Sol6.1/xhigh lanes](RESUME-2026-11-04-SIX-LANES.md).
+The formalization programme is resumed from the audited source register.
+Main grants one bounded compiler slot; all six lanes have separate ownership.
+Completed historical pauses below do not block this explicit release. Unrelated
+research stays paused; no automatic publication, dependency or CI changes.
+
 Latest source-completion audit: [all 33 former pending statements](audits/PENDING-STATEMENTS-2026-11-04.md).
 Read this audit and current `TARGETS.json` before selecting any future work.
 The audit adopts paper09 control hardness after its focused gate; earlier

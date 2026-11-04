@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositivePreflight
+def weakeningComparator : Prop := InternalPositiveTargets.ActualWeakeningQuantifierSyntax
+def instantiateComparator : Prop := InternalPositiveTargets.ActualInstantiateLiftSyntax
+def identityComparator : Prop := InternalPositiveTargets.ActualPredicateIdentitySyntax
+def bodyComparator : Prop := InternalPositiveTargets.ActualParameterBodySyntax
+def monotonicityComparator : Prop := InternalPositiveTargets.ActualInternalPositiveMonotonicity
+def unfoldingComparator : Prop := InternalPositiveTargets.ActualInternalReverseUnfolding
+def sourceComparator : Prop := InternalPositiveTargets.ActualSourceInternalReverseUnfolding
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositivePreflight

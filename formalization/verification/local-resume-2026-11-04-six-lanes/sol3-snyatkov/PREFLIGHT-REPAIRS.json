@@ -1,0 +1,21 @@
+{
+  "status": "awaiting_repaired_preflight",
+  "candidate_theorem_authorship_started": false,
+  "failures": [
+    {
+      "receipt": "diagnostics/1793822098044467735-2.json",
+      "diagnosis": "SourceFormula.existsNat constructor field used reserved keyword variable",
+      "repair": "rename field to name; no semantic or statement change"
+    },
+    {
+      "receipt": "diagnostics/1793822494116744529-2.json",
+      "passed_modules": [
+        "ContractDefinitions",
+        "ContractTargets"
+      ],
+      "diagnosis": "Term dot notation chose replacement instead of source receiver; finiteWindow conjunction lacked expected type",
+      "repair": "receiver-first Term/Matrix substitute signatures; explicit Matrix.conjunction; intended structural semantics unchanged"
+    }
+  ],
+  "fixed_scope": "full arbitrary quantified source decision remains unproved; current candidate target is concrete multivariable close-argument finite substitution semantics/support and its literal numeric compiler"
+}

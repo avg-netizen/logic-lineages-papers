@@ -1,0 +1,102 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitLinearTargets
+public import Mathlib.Data.List.Enum
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitLinear.Proof
+open LogicLineages.ComputabilityKnowledge.CircuitReduction
+
+private abbrev RowsBound (b : Nat) (rs : List Row) : Prop := WellFormedCode (b,rs)
+
+private theorem append_bound {b : Nat} {rs ss : List Row}
+    (hr : RowsBound b rs) (hs : RowsBound b ss) : RowsBound b (rs++ss) := by
+  intro row hrow
+  rcases List.mem_append.mp hrow with h | h
+  · exact hr row h
+  · exact hs row h
+
+private theorem valid_get (n : Nat) (gs : List Gate) (hv : ValidFrom n gs)
+    (i : Nat) (hi : i<gs.length) : gs[i].ValidAt (n+i) := by
+  induction gs generalizing n i with
+  | nil => simp at hi
+  | cons g gs ih =>
+      obtain ⟨hg,hgs⟩ := hv
+      cases i with
+      | zero => simpa using hg
+      | succ i =>
+          have h := ih (n+1) hgs i (by simpa using hi)
+          simpa only [List.getElem_cons_succ,Nat.add_assoc,Nat.add_comm 1 i] using h
+
+private theorem square_rows_bound (u v aux b : Nat)
+    (hu : u<b) (hv : v<b) (ha : aux+4≤b) : RowsBound b (squareRows u v aux) := by
+  simp [RowsBound,WellFormedCode,squareRows,wireMonomial,constant] <;> omega
+
+private theorem constant_rows_bound (s aux b : Nat)
+    (hs : s≤b) (ha : aux+9≤b) : RowsBound b (constantRows s aux) := by
+  simp [RowsBound,WellFormedCode,constantRows,wireMonomial,constant] <;> omega
+
+private theorem input_rows_bound (n g b : Nat) (hb : n+g+n≤b) :
+    RowsBound b (inputRows n g) := by
+  simp [RowsBound,WellFormedCode,inputRows,wireMonomial,constant] <;> omega
+
+private theorem gate_rows_bound (n g i : Nat) (gate : Gate) (hi : i<g)
+    (hv : gate.ValidAt (n+i)) : RowsBound (unknownCount n g) (gateRows n g i gate) := by
+  have hn : n+i<unknownCount n g := by
+    simp only [unknownCount,constantAux,scalarCount]
+    omega
+  cases gate with
+  | constant k =>
+      simpa [RowsBound,WellFormedCode,gateRows,wireMonomial,constant] using hn
+  | add x y =>
+      obtain ⟨hx,hy⟩ := hv
+      simp [RowsBound,WellFormedCode,gateRows,wireMonomial,constant]
+      all_goals omega
+  | mul x y =>
+      obtain ⟨hx,hy⟩ := hv
+      have hxb : x<unknownCount n g := by omega
+      have hyb : y<unknownCount n g := by omega
+      have hsb : (n+g)+n+4*i+3<unknownCount n g := by
+        simp only [unknownCount,constantAux,scalarCount]
+        omega
+      have hab : polynomialAux n g+12*i+12≤unknownCount n g := by
+        simp only [unknownCount,constantAux,polynomialAux,scalarCount]
+        omega
+      change RowsBound (unknownCount n g)
+        ([[wireMonomial 1 0 ((n+g)+n+4*i),wireMonomial (-1) 0 x,wireMonomial (-1) 0 y],
+          [wireMonomial 1 0 ((n+g)+n+4*i+3),wireMonomial (-1) 0 ((n+g)+n+4*i+1),
+           wireMonomial (-1) 0 ((n+g)+n+4*i+2),wireMonomial (-1) 0 (n+i)]] ++
+         squareRows x ((n+g)+n+4*i+1) (polynomialAux n g+12*i) ++
+         squareRows y ((n+g)+n+4*i+2) (polynomialAux n g+12*i+4) ++
+         squareRows ((n+g)+n+4*i) ((n+g)+n+4*i+3) (polynomialAux n g+12*i+8))
+      apply append_bound
+      · simp [RowsBound,WellFormedCode,wireMonomial,constant] <;> omega
+      · apply append_bound
+        · exact square_rows_bound _ _ _ _ hxb (by omega) (by omega)
+        · exact append_bound (square_rows_bound _ _ _ _ hyb (by omega) (by omega))
+            (square_rows_bound _ _ _ _ (by omega) hsb (by omega))
+
+/-- Every reference in the literal system refers to the one declared shared
+unknown block, including all otherwise-unused reserve slots and all outputs. -/
+theorem circuit_system_wellFormed (c : Circuit) (hc : c.WellFormed) :
+    WellFormedCode (encodeCircuitSystem c) := by
+  obtain ⟨hvalid,hleft,hright⟩ := hc
+  have hgates : RowsBound (unknownCount c.inputCount c.gates.length)
+      (c.gates.zipIdx.flatMap fun gi => gateRows c.inputCount c.gates.length gi.2 gi.1) := by
+    have hv : ∀ gi ∈ c.gates.zipIdx, gi.1.ValidAt (c.inputCount+gi.2) :=
+      List.forall_mem_zipIdx'.mpr (fun i hi => valid_get c.inputCount c.gates hvalid i hi)
+    intro row hrow
+    obtain ⟨gi,hgi,hrow⟩ := List.mem_flatMap.mp hrow
+    exact gate_rows_bound _ _ _ _ (List.snd_lt_of_mem_zipIdx hgi) (hv gi hgi) row hrow
+  have hsize : c.inputCount+c.gates.length+c.inputCount ≤
+      unknownCount c.inputCount c.gates.length := by
+    simp only [unknownCount,constantAux,scalarCount]
+    omega
+  change RowsBound _ (inputRows _ _ ++ (_ ++ (_ ++ _)))
+  apply append_bound (input_rows_bound _ _ _ hsize)
+  apply append_bound hgates
+  apply append_bound
+  · simp [RowsBound,WellFormedCode,wireMonomial]
+    all_goals omega
+  · exact constant_rows_bound _ _ _ (by
+        simp only [unknownCount,constantAux,scalarCount]; omega) (by simp [unknownCount])
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitLinear.Proof

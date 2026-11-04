@@ -1,0 +1,24 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks
+open BinomialTargets
+
+theorem fixedBinomialDigitReconstruction : BinomialDigitReconstruction :=
+  BinomialProof.binomialDigitReconstruction
+theorem fixedNaturalDigitExtraction : NaturalDigitExtraction := BinomialProof.naturalDigitExtraction
+theorem fixedBinomialDigitExtraction : BinomialDigitExtraction := BinomialProof.binomialDigitExtraction
+theorem fixedBinomialDiophantine : BinomialDiophantine := BinomialProof.binomialDiophantine
+theorem fixedBinomialPolynomialRepresentation : BinomialPolynomialRepresentation :=
+  BinomialProof.binomialPolynomialRepresentation
+
+#print axioms fixedBinomialDigitReconstruction
+#print axioms fixedNaturalDigitExtraction
+#print axioms fixedBinomialDigitExtraction
+#print axioms fixedBinomialDiophantine
+#print axioms fixedBinomialPolynomialRepresentation
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialStatementChecks

@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntax
+open FirstOrder Language PositiveArithmeticOperators
+
+/-- Rename only free variables, preserving every literal bound index. This
+clean map is compared syntactically with Mathlib's zero-extra-binder relabel;
+it is not an additional proof rule or alternative formula semantics. -/
+def renameBounded {α β : Type} (f : α → β) {n : Nat}
+    (phi : language.BoundedFormula α n) : language.BoundedFormula β n :=
+  phi.mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveSyntax

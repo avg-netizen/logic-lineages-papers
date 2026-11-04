@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositive
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticSchemas
+open PositiveArithmeticPredicateSubstitution SourceComputabilityFormulaSupportProof InternalCalculus
+
+def monotonicityFormula {α : Type} (p : Positive α) (theta eta : Formula (α ⊕ Fin 1)) : Formula α :=
+  (allOne (theta.imp eta)).imp ((substitutePredicate p theta).imp (substitutePredicate p eta))
+
+def reverseUnfoldingFormula (body : Positive (Fin 1)) (α : Type) : Formula α :=
+  allOne ((predicateAtObject (α := α)).imp (bodyWithParameters body α).formula)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositive

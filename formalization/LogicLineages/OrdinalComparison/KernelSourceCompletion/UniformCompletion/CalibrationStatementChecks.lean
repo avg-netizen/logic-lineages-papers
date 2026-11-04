@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.TargetChecks
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.CalibrationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+theorem first_budget_calibration : Targets.FirstBudgetCalibration := Proof.firstBudgetCalibration
+theorem signed_agreement_on_genuine_domain : Targets.SignedAgreementOnGenuineDomain :=
+  Proof.signedAgreementOnGenuineDomain
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion

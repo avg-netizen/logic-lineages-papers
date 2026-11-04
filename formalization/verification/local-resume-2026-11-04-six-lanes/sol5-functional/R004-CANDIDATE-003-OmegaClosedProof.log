@@ -1,0 +1,87 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:38:4: error: Tactic `rfl` failed: The left-hand side
+  rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+    (rawNaturalSum 1
+      (rawNaturalSum
+        (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+          (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))
+        (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+          (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))))
+is not definitionally equal to the right-hand side
+  (↑2).oadd 10 (ONote.oadd 1 1 0)
+
+he : (↑exponentCode.evaluate).repr = closedValue exponentExpression
+⊢ rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+      (rawNaturalSum 1
+        (rawNaturalSum
+          (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+            (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))
+          (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+            (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1)))))) =
+    (↑2).oadd 10 (ONote.oadd 1 1 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:47:4: error: Tactic `rfl` failed: The left-hand side
+  rawNaturalProduct
+    (↑2 ^
+      rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+        (rawNaturalSum 1
+          (rawNaturalSum
+            (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+              (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))
+            (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+              (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1)))))))
+    1
+is not definitionally equal to the right-hand side
+  (ONote.oadd 1 10 1).oadd 1 ONote.zero
+
+he : (↑omegaCode.evaluate).repr = closedValue omegaExpression
+⊢ rawNaturalProduct
+      (↑2 ^
+        rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+          (rawNaturalSum 1
+            (rawNaturalSum
+              (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+                (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1))))
+              (rawNaturalProduct (↑2 ^ ONote.oadd 1 1 ONote.zero)
+                (rawNaturalSum 1 (rawNaturalSum (rawNaturalSum 1 1) (rawNaturalSum 1 1)))))))
+      1 =
+    (ONote.oadd 1 10 1).oadd 1 ONote.zero
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:60:4: error: Tactic `rfl` failed: The left-hand side
+  rawNaturalSum (rawNaturalProduct (↑10) ((↑2).oadd 1 ONote.zero)) (ONote.oadd 1 1 0)
+is not definitionally equal to the right-hand side
+  (↑2).oadd 10 (ONote.oadd 1 1 0)
+
+ten : NONote := ⟨↑10, ⋯⟩
+w2 : NONote := ⟨(↑2).oadd 1 ONote.zero, ⋯⟩
+w : NONote := ⟨ONote.omega, ⋯⟩
+hs :
+  (↑(naturalSum (naturalProduct ten w2) w)).repr =
+    ordinalNaturalSum (ordinalNaturalProduct (↑ten).repr (↑w2).repr) (↑w).repr
+⊢ rawNaturalSum (rawNaturalProduct (↑10) ((↑2).oadd 1 ONote.zero)) (ONote.oadd 1 1 0) = (↑2).oadd 10 (ONote.oadd 1 1 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:79:4: error: Tactic `rfl` failed: The left-hand side
+  rawNaturalSum (rawNaturalProduct (↑10) (ONote.oadd 1 1 0)) 1
+is not definitionally equal to the right-hand side
+  ONote.oadd 1 10 1
+
+ten : NONote := ⟨↑10, ⋯⟩
+w : NONote := ⟨ONote.omega, ⋯⟩
+one : NONote := ⟨1, ONote.nf_one⟩
+hs :
+  (↑(naturalSum (naturalProduct ten w) one)).repr =
+    ordinalNaturalSum (ordinalNaturalProduct (↑ten).repr (↑w).repr) (↑one).repr
+⊢ rawNaturalSum (rawNaturalProduct (↑10) (ONote.oadd 1 1 0)) 1 = ONote.oadd 1 10 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:93:42: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:101:10: warning: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵h̵e̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲e̲,̲ ̲N̲e̲.̲s̲y̲m̲m̲ he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaClosedProof.lean:101:31: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [Finsupp.single_apply,h̵e̵,̵ ̲Ne.symm he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

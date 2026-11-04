@@ -1,0 +1,127 @@
+{
+  "status": "whole-source-adopted-under-explicit-correction",
+  "reviewed_at_utc": "2026-11-04T20:27:24.390412+00:00",
+  "reviewer": "codex-main",
+  "source_statements": [
+    "08-multivariate-collapse-comparison:lem:kernel-recursion",
+    "08-multivariate-collapse-comparison:lem:counter",
+    "08-multivariate-collapse-comparison:lem:kernel-residues"
+  ],
+  "source_file": "08-multivariate-collapse-comparison/paper.tex",
+  "original_source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+  "corrected_source_sha256": "7463df840be926a243439d6a2ba969d58665c7a2a66345444eb8296505332c9a",
+  "original_source_archive": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/paper08-before-source-repair.tex",
+  "patch": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/paper08-corrected-source.PROPOSED.patch",
+  "patch_sha256": "63bcf9d5786b0a1575f32c6cd1c45969fc34df8ce58f296c8fe8a1de7a4b0879",
+  "source_correction_explicit": true,
+  "original_contracts_proved": false,
+  "historical_original_entries": [
+    {
+      "id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
+      "statement_latex": "[Exact block recursion]\\label{lem:kernel-recursion}\nOne has\n\\[\n E^1_c=1,\\quad X^1_c=f,\\qquad\n E^2_c(t)=f(t)/2-\\lceil c/2\\rceil+1.\n\\]\nDefine\n\\begin{equation}\\label{eq:V}\n V_j(t)=f^{\\,f(t)/2+j+1}(t).\n\\end{equation}\nThen $X^2_{c,j}=V_{j-\\lceil c/2\\rceil}$. For $d\\ge2$, on a computable tail,\n\\begin{align}\n X^d_{c,j}&=X^{d-1}_{c,j}\\circ X^d_{c+d},\\label{eq:Xrec}\\\\\n E^d_c&=E^{d-1}_c\\circ X^d_{c+d}+E^d_{c+d}.\\label{eq:Erec}\n\\end{align}",
+      "source_issue": {
+        "state": "Printed quadratic count incompatible with literal whole-state descent; unrestricted negative degree-two child domain obstructed",
+        "scope": "Whole-state scheduled count exceeds the displayed quadratic value for every t>=4 at retained mass1. Independently, degree-one depth is1+j, so negative j cannot acquire a positive-depth tail. Zero-clamping negative depth has a checked numerical recurrence counterexample.",
+        "evidence": [
+          "LogicLineages/OrdinalComparison/KernelQuadraticSourceComparisonStatementChecks.lean",
+          "LogicLineages/OrdinalComparison/FiniteKernelNegativeRecursionStatementChecks.lean",
+          "LogicLineages/OrdinalComparison/SignedKernelDomainStatementChecks.lean"
+        ]
+      },
+      "completion_audit": {
+        "date": "2026-11-04",
+        "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+        "classification": "completed-under-explicit-corrected-source",
+        "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+        "remaining_obligation": "None for the corrected source statement; old false/undefined wording is preserved as historical negative evidence.",
+        "next_completion_step": "Reuse accepted corrected-source package and exact process bridge; do not redo counter constituents.",
+        "upstream_blockers": [],
+        "resolved_source_sha256": "7463df840be926a243439d6a2ba969d58665c7a2a66345444eb8296505332c9a",
+        "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json"
+      }
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:counter",
+      "statement_latex": "[Counter expansion and collision]\\label{lem:counter}\nOn an effective tail,\n\\begin{equation}\\label{eq:counter-expand}\n E^r_c(t)=\\frac H2+1-\\lceil c/2\\rceil\n                  +\\sum_{h=3}^r E^h_{c+h}(A_h),\n \\qquad \\frac H2<E^r_c(t)<\\frac{3H}{4}.\n\\end{equation}\nSuppose counters of ranks $r\\ge s\\ge3$ have equal leaders. Then they\nhave the same prefix index $c$. If $r=s$ their whole values are equal;\nif $r>s$ the smaller-rank input is the corresponding $A_s$, and\n\\begin{equation}\\label{eq:collision}\n E^r_c(t)-E^s_c(A_s)=\\sum_{h=s+1}^r E^h_{c+h}(A_h).\n\\end{equation}\nEvery counter introduced on the right has rank strictly greater than $s$.\nFor distinct leaders, counter order agrees with leader order. Equal\nleaders are ordered by counter rank, with equality at equal rank.",
+      "source_issue": {
+        "state": "Complete companion-convention theorem available; printed-process correspondence pending",
+        "scope": "WholeCounterLemma is checked for all ranks>=3 under paper07's limit-part process. The degree-two whole-state discrepancy does not itself refute the rank>=3 printed counter theorem.",
+        "evidence": "verification/external-continuation-2026-11-03/layered-comparison/CounterSourceTheorem-SOURCE-CORRESPONDENCE.md"
+      },
+      "completion_audit": {
+        "date": "2026-11-04",
+        "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+        "classification": "completed-under-explicit-corrected-source",
+        "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+        "remaining_obligation": "None for the corrected source statement; old false/undefined wording is preserved as historical negative evidence.",
+        "next_completion_step": "Reuse accepted corrected-source package and exact process bridge; do not redo counter constituents.",
+        "upstream_blockers": [],
+        "resolved_source_sha256": "7463df840be926a243439d6a2ba969d58665c7a2a66345444eb8296505332c9a",
+        "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json"
+      }
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:kernel-residues",
+      "statement_latex": "[Effective residues of kernels and counters]\\label{lem:kernel-residues}\nFor each fixed $d,c,j,m$, both $X^d_{c,j}$ and $E^d_c$ have an effectively\ncomputable constant residue modulo $m$ on a computable tail. The $X$\nresidue is $r_m$. A valid counter residue is\n\\begin{equation}\\label{eq:E-residue}\n E^d_c(t)\\equiv\n p_d\\bigl((r_{Q_d}-c)\\bmod Q_d\\bigr)\\pmod m,\n \\qquad Q_d=d!m^{d-1},\n\\end{equation}\nwhere $p_d(n)$ counts partitions of $n$ into parts at most $d$.",
+      "source_issue": {
+        "state": "Overbroad signed domain and unresolved counter convention",
+        "scope": "Corrected signed residue gate covers d>=2 or d=1,j>=0. The printed unrestricted signed scope includes d=1,j<0 with no eventual positive-depth domain; counter congruence uses the companion descent convention.",
+        "evidence": [
+          "LogicLineages/OrdinalComparison/SignedKernelDomainTargets.lean",
+          "LogicLineages/OrdinalComparison/KernelCounterResidueTargets.lean"
+        ]
+      },
+      "completion_audit": {
+        "date": "2026-11-04",
+        "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+        "classification": "completed-under-explicit-corrected-source",
+        "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+        "remaining_obligation": "None for the corrected source statement; old false/undefined wording is preserved as historical negative evidence.",
+        "next_completion_step": "Reuse accepted corrected-source package and exact process bridge; do not redo counter constituents.",
+        "upstream_blockers": [],
+        "resolved_source_sha256": "7463df840be926a243439d6a2ba969d58665c7a2a66345444eb8296505332c9a",
+        "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json"
+      }
+    }
+  ],
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/KernelSourceCompletion/AssemblyProof.lean": "9c32394b8467d688476e95a9bc8be125ae53534b1e467f9b45a913dc01739229",
+    "LogicLineages/OrdinalComparison/KernelSourceCompletion/Definitions.lean": "45bcd53bc84fd7793931a8b9380a6291089413a246b0ba7c49151ef892d73079",
+    "LogicLineages/OrdinalComparison/KernelSourceCompletion/ProcessBridgeProof.lean": "d7a601cfce128b51209f70e46c1c6ff4e396df44454daf361b8fcf647f16fbc1",
+    "LogicLineages/OrdinalComparison/KernelSourceCompletion/StatementChecks.lean": "369112b8c5828a75d09e3f5fb73d8d01e460b71e882a8cb57d041d0946b919fa",
+    "LogicLineages/OrdinalComparison/KernelSourceCompletion/TargetChecks.lean": "7e924a1cfad07a69a368ad878208f1082dd5f58b66fdde685c7d4866a00b55b6",
+    "LogicLineages/OrdinalComparison/KernelSourceCompletion/Targets.lean": "10e9ecbd71e269c7fe29bb38ef898c43da18cddb33e7e7720b027bd914783ef7"
+  },
+  "native_receipt": "build-reports/1793823795063127429-2.json",
+  "native_receipt_sha256": "4ae8780c20f379463e9682f1ad16320d9d7453dba3f0f3f7d71f547bdf9abef5",
+  "axiom_reports": {
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.StatementChecks.corrected_counter_source": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.StatementChecks.corrected_kernel_residues": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.StatementChecks.corrected_kernel_recursion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.StatementChecks.signed_domain_contract": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.StatementChecks.source_process_bridge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_match": "SOURCE-CORRESPONDENCE.md",
+  "scope": "Independent original schedule/principal-start first-finite bridge, exact unsigned/signed recursion on genuine domain, full all-rank>=3 counter expansion/collision/order and effective tail programs, both actual displayed partition residues and computed residues. All three original negative boundaries preserved.",
+  "full_root_or_ci": false
+}

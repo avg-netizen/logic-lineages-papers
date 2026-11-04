@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationPreflight
+def existenceComparator : Prop := SourcePresentationTargets.ActualSourcePresentationExists
+def wholeSourceComparator : Prop := SourcePresentationTargets.ActualSourceInternalAccessibility
+def operatorComparator : Prop := SourcePresentationTargets.ActualClosedSourceOperator
+def formulaComparator : Prop := SourcePresentationTargets.ActualAllTermsFormulaTruth
+def soundnessComparator : Prop := SourcePresentationTargets.ActualInternalSourceSoundness
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationPreflight

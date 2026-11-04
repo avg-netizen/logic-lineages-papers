@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranSimultaneousProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks
+theorem nonnegative_quotient_identity : Targets.NonnegativeQuotientIdentity := Proof.nonnegativeQuotientIdentity
+theorem exact_square_gadget : Targets.ExactSquareGadget := Proof.exactSquareGadget
+theorem exact_constant_gadget : Targets.ExactConstantGadget := Proof.exactConstantGadget
+theorem exact_simultaneous_constants : Targets.ExactSimultaneousConstants := Proof.exactSimultaneousConstants
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran.FullStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.Narendran

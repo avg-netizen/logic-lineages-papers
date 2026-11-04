@@ -1,0 +1,75 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedTargets
+public import LogicLineages.OrdinalComparison.SourceSignedPairProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.OmegaSeed.Proof
+open OriginalDomain FunctionalDetector AdmissibleAssignment
+open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+
+private def identityVector (Γ : List Ty) : OrdinalVector Γ 2 := fun j =>
+  if j.val=0 then .add (repeated OrdinalSyntax.defaultPolicy .scalarRepeat 8 .one) .one
+  else if j.val=1 then .add (.add .one .one) .one else .add .one .one
+
+private theorem identity_assignment (Γ : List Ty) :
+    assignment OrdinalSyntax.defaultPolicy (@higherIdentity Γ) = some (identityVector Γ) := by
+  apply congrArg some
+  funext j
+  fin_cases j <;>
+    simp [higherIdentity, assignment, abstraction, collect, identityVector, Ty.level,
+      unary, higherUnary, AdmissiblePartial.run, ordinalPartialSize, ordinalHeadFree,
+      ordinalHeadOccurs, ordinalHeadComponentOccurs, ordinalHeadClosure,
+      ordinalHeadClosureComponent, substitute, repeated, OrdinalSyntax.defaultPolicy,
+      OrdinalSyntax.defaultShape, OrdinalSyntax.leftShape, AdmissibleSum.expand]
+  all_goals first | rfl | exact ⟨rfl,rfl⟩
+
+private def higherVector {Γ} (av : OrdinalVector Γ 2) : OrdinalVector Γ 2 :=
+  application (σ:=.arrow .ground higherUnary) (τ:=higherUnary) OrdinalSyntax.defaultPolicy
+    (application (σ:=.ground) (τ:=.arrow (.arrow .ground higherUnary) higherUnary)
+      OrdinalSyntax.defaultPolicy
+      (fun i => if i.val=0 then numeral OrdinalSyntax.defaultPolicy 2
+        else if i.val=3 then .omega else .one) (fun _ => .one))
+    (AbsoluteObserver.Proof.unusedVector av)
+
+private theorem higher_assignment {Γ} (a : OriginalTerm Γ higherUnary) (av : OrdinalVector Γ 2)
+    (ha : assignment OrdinalSyntax.defaultPolicy a = some av) :
+    assignment OrdinalSyntax.defaultPolicy (higherLift a) = some (higherVector av) :=
+  AbsoluteObserver.Proof.app_assignment _ _ _ _
+    (AbsoluteObserver.Proof.app_assignment _ _ _ _ rfl rfl)
+    (AbsoluteObserver.Proof.unused_assignment a av ha)
+
+private theorem higher_head_expression {Γ} (av : OrdinalVector Γ 2) :
+    higherVector av 2 = .emul .omega (.add .one (.add (av 2) (av 2))) := by
+  simp [higherVector, application, box, ordinalBoxPositive, ordinalVectorAt,
+    AbsoluteObserver.Proof.unusedVector, AbsoluteObserver.Proof.freePart,
+    unary, higherUnary, Ty.level, OrdinalSyntax.defaultPolicy,
+    OrdinalSyntax.defaultShape, OrdinalSyntax.leftShape, AdmissibleSum.expand]
+  rfl
+
+theorem source_second {Γ : List Ty} (ρ : AdmissibleSubstitution Γ) :
+    secondValue ρ source = exponent := by
+  have ha := higher_assignment (higherLift higherIdentity)
+    (higherVector (identityVector Γ)) (higher_assignment higherIdentity _ (identity_assignment Γ))
+  unfold secondValue source
+  rw [ha]
+  change expressionValue ρ (higherVector (higherVector (identityVector Γ)) 2) = exponent
+  simp [higher_head_expression, identityVector, exponent, exponentExpression, topStep,
+    expressionValue, closedValue, denote]
+
+theorem source_bound (Γ : List Ty) : SourceClasses.InternalLevelBound 3 (@source Γ) := by
+  simp [SourceClasses.InternalLevelBound, SourceTypeSupport.typeSupport, source,
+    higherLift, higherIdentity, Term.rename, Ty.subtypes, Ty.level, unary, higherUnary]
+
+theorem actualHigherSource : Targets.ActualHigherSource := by
+  intro Γ ρ
+  exact ⟨source_second ρ, source_bound Γ⟩
+
+theorem omega_graded : ClosedGrade 1 omegaExpression := by
+  have step_grade (i : Nat) (hi : 0 < i) (t : ClosedExpression) (ht : ClosedGrade i t) :
+      ClosedGrade i (topStep t) :=
+    .emul hi (.omega (i+1) (by omega)) (.add (.one i) (.add ht ht))
+  exact .emul (by omega)
+    (step_grade 2 (by omega) _ (step_grade 2 (by omega) _ (.add (.one 2) (.one 2)))) (.one 1)
+
+theorem omega_positive : 0 < omega := originalClosedGradePositive _ _ omega_graded
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.OmegaSeed.Proof

@@ -1,0 +1,180 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledWordTargets
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockProof
+public import LogicLineages.OrdinalComparison.RepeatedPrincipalWordProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Proof
+
+private theorem word_power_norm (d : Nat) :
+    actualOrdinalNorm (Ordinal.omega0 ^ (d : Ordinal)) = d+1 := by
+  simpa only [Nat.cast_one,mul_one,Nat.mul_one] using (actualFiniteMonomialFacts d 1).2.1
+
+private theorem word_next_power (n : Nat) :
+    Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal) * Ordinal.omega0 =
+      Ordinal.omega0 ^ ((n+2 : Nat) : Ordinal) := by
+  rw [← Ordinal.opow_add_one]
+  congr 1
+
+private theorem nat_note_weight (n : Nat) :
+    1+Vendor.R1.treeWeight (ONote.ofNat (n+1)) = n+2 := by
+  simp [ONote.ofNat,Vendor.R1.treeWeight] <;> omega
+
+private theorem run_append_first (xs ys : List (ONote × Nat)) (t : Nat) :
+    (actualPrincipalWordRun (xs++ys) t).1 =
+      (actualPrincipalWordRun ys (actualPrincipalWordRun xs t).1).1 := by
+  induction xs generalizing t with
+  | nil => rfl
+  | cons p xs ih =>
+    rcases p with ⟨e,c⟩
+    simpa only [List.cons_append,actualPrincipalWordRun] using
+      ih (actualSuffixKernel (Ordinal.omega0 ^ e.repr) c t)
+
+private theorem run_append_second (xs ys : List (ONote × Nat)) (t : Nat) :
+    (actualPrincipalWordRun (xs++ys) t).2 = (actualPrincipalWordRun xs t).2+
+      (actualPrincipalWordRun ys (actualPrincipalWordRun xs t).1).2 := by
+  induction xs generalizing t with
+  | nil => simp only [List.nil_append,actualPrincipalWordRun,Nat.zero_add]
+  | cons p xs ih =>
+    rcases p with ⟨e,c⟩
+    have hh := congrArg (fun z => actualSuffixKernelCount (Ordinal.omega0 ^ e.repr) c t+z)
+      (ih (actualSuffixKernel (Ordinal.omega0 ^ e.repr) c t))
+    simpa only [List.cons_append,actualPrincipalWordRun,Nat.add_assoc] using hh
+
+private theorem word_budget (n q c rho t : Nat) (hrho : rho < n+2)
+    (hB : Phi t = c+q*(n+2)+rho) :
+    let A := c+q*(n+2)
+    let S := sourceValue (n+1) A t
+    let word := principalKernelWord (List.replicate q (ONote.ofNat (n+1))) c
+    sourceValue (n+2) c t = (actualPrincipalWordRun word S).1 ∧
+    sourceCount (n+2) c t = sourceCount (n+1) A t+(actualPrincipalWordRun word S).2 := by
+  induction q generalizing c with
+  | zero =>
+    have hB0 : Phi t = c+rho := by simpa only [Nat.zero_mul,Nat.add_zero] using hB
+    have hc : c ≤ Phi t := by omega
+    have hp : (0 : Ordinal) < ((n+1 : Nat) : Ordinal) := by
+      exact_mod_cast (by omega : 0 < n+1)
+    have he : Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal) * Ordinal.omega0 < epsilonZero := by
+      rw [word_next_power n]
+      exact finiteOmegaPowerBelowEpsilonZero (n+2)
+    have hm := actualSuccessorPrincipalMaximum ((n+1 : Nat) : Ordinal) hp he rho
+    dsimp only at hm
+    have hw : actualOrdinalNorm (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) = n+2 := by
+      simpa only [Nat.add_assoc] using word_power_norm (n+1)
+    rw [word_next_power n,hw] at hm
+    have hdiv : rho/(n+2) = 0 := Nat.div_eq_of_lt hrho
+    have hmod : rho%(n+2) = rho := Nat.mod_eq_of_lt hrho
+    simp only [hdiv,hmod,Nat.cast_zero,mul_zero,zero_add] at hm
+    have hbudget : Phi t-c = rho := by omega
+    have hQ : firstSuffix (n+2) c t = firstSuffix (n+1) c t := by
+      unfold firstSuffix
+      rw [hbudget]
+      exact hm
+    have ho := firstBudgetCalibration (n+2) c t (by omega) hc
+    have hi := firstBudgetCalibration (n+1) c t (by omega) hc
+    have hcount : sourceCount (n+2) c t = sourceCount (n+1) c t := by
+      rw [ho.2.2.2.2.1,hi.2.2.2.2.1,hQ]
+    have hvalue : sourceValue (n+2) c t = sourceValue (n+1) c t := by
+      unfold sourceValue
+      rw [hcount]
+    simpa only [Nat.zero_mul,Nat.add_zero,List.replicate_zero,principalKernelWord,
+      actualPrincipalWordRun] using And.intro hvalue hcount
+  | succ q ih =>
+    have hB' : Phi t = (c+n+2)+q*(n+2)+rho := by
+      simp only [Nat.add_mul,Nat.one_mul] at hB
+      omega
+    have hb : c+n+2 ≤ Phi t := by omega
+    have hIH := ih (c+n+2) hB'
+    have hA : (c+n+2)+q*(n+2) = c+(q+1)*(n+2) := by
+      rw [Nat.add_mul,Nat.one_mul]
+      omega
+    dsimp only at hIH
+    rw [hA] at hIH
+    let e := ONote.ofNat (n+1)
+    let A := c+(q+1)*(n+2)
+    let S := sourceValue (n+1) A t
+    let pre := principalKernelWord (List.replicate q e) (c+n+2)
+    let word := principalKernelWord (List.replicate (q+1) e) c
+    have hIV : sourceValue (n+2) (c+n+2) t = (actualPrincipalWordRun pre S).1 := hIH.1
+    have hIC : sourceCount (n+2) (c+n+2) t =
+        sourceCount (n+1) A t+(actualPrincipalWordRun pre S).2 := hIH.2
+    have hword : word = pre++[(e,c)] := by
+      dsimp only [word,pre,e]
+      simp only [List.replicate_succ,principalKernelWord,nat_note_weight,Nat.add_assoc]
+    have hfirst : (actualPrincipalWordRun word S).1 =
+        actualSuffixKernel (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+          (actualPrincipalWordRun pre S).1 := by
+      rw [hword,run_append_first]
+      simp only [e,actualPrincipalWordRun,ONote.repr_ofNat]
+    have hsecond : (actualPrincipalWordRun word S).2 = (actualPrincipalWordRun pre S).2+
+        actualSuffixKernelCount (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+          (actualPrincipalWordRun pre S).1 := by
+      rw [hword,run_append_second]
+      simp only [e,actualPrincipalWordRun,Nat.add_zero,ONote.repr_ofNat]
+    have hcut := broadUnsignedBlockCut.2 n c t hb
+    dsimp only at hcut
+    constructor
+    · calc
+        sourceValue (n+2) c t =
+            actualSuffixKernel (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+              (sourceValue (n+2) (c+n+2) t) := hcut.2.2.2.2.2.2
+        _ = actualSuffixKernel (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+              (actualPrincipalWordRun pre S).1 := congrArg _ hIV
+        _ = (actualPrincipalWordRun word S).1 := hfirst.symm
+    · calc
+        sourceCount (n+2) c t =
+            actualSuffixKernelCount (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+              (sourceValue (n+2) (c+n+2) t)+sourceCount (n+2) (c+n+2) t := hcut.2.2.2.2.2.1
+        _ = actualSuffixKernelCount (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+              (actualPrincipalWordRun pre S).1+
+              (sourceCount (n+1) A t+(actualPrincipalWordRun pre S).2) := by rw [hIV,hIC]
+        _ = sourceCount (n+1) A t+
+              ((actualPrincipalWordRun pre S).2+
+                actualSuffixKernelCount (Ordinal.omega0 ^ ((n+1 : Nat) : Ordinal)) c
+                  (actualPrincipalWordRun pre S).1) := by omega
+        _ = sourceCount (n+1) A t+(actualPrincipalWordRun word S).2 := by rw [hsecond]
+
+theorem actualBroadChildWord : Targets.ActualBroadChildWord := by
+  intro n c t hc
+  dsimp only
+  let d := n+2
+  let B := Phi t
+  let q := (B-c)/d
+  let rho := (B-c)%d
+  let A := c+q*d
+  let S := sourceValue (n+1) A t
+  let word := principalKernelWord (List.replicate q (ONote.ofNat (n+1))) c
+  have hd : 0 < d := by omega
+  have hdiv : q*d+rho = B-c := by
+    simpa only [q,rho,Nat.mul_comm,Nat.add_comm] using Nat.mod_add_div (B-c) d
+  have hB : Phi t = c+q*(n+2)+rho := by omega
+  have hA : A ≤ B := by omega
+  have hr : rho < d := Nat.mod_lt _ hd
+  have hrem : B-A = rho := by omega
+  have hcal := firstBudgetCalibration (n+1) A t (by omega) hA
+  have hEp : 1 ≤ sourceCount (n+1) A t := by have hh := hcal.2.2.2.2.1; omega
+  have hBS : B ≤ S := by
+    change (Phi^[1]) t ≤ (Phi^[sourceCount (n+1) A t]) t
+    exact iterate_index_mono (fun x => (self_lt_Phi x).le) t hEp
+  have hvalue := word_budget n q c rho t hr hB
+  let eta : NONote := ⟨ONote.ofNat (n+1),ONote.nf_ofNat (n+1)⟩
+  have heta : 0 < eta.1.repr := by
+    simp only [eta,ONote.repr_ofNat]
+    exact_mod_cast (by omega : 0 < n+1)
+  have hw : actualOrdinalNorm (Ordinal.omega0 ^ eta.1.repr) = d := by
+    simpa only [eta,ONote.repr_ofNat,d,Nat.add_assoc] using word_power_norm (n+1)
+  have hAS : A ≤ S := hA.trans hBS
+  have ht : c+q*actualOrdinalNorm (Ordinal.omega0 ^ eta.1.repr)+(S-A) = S := by
+    rw [hw]
+    change A+(S-A) = S
+    exact Nat.add_sub_of_le hAS
+  have hrun := actualRepeatedPrincipalWordRun eta heta q c (S-A)
+  have hgood := hrun.2
+  rw [ht] at hgood
+  refine ⟨hA,hrem,?_,hBS,?_,hgood,hvalue.1,hvalue.2⟩
+  · rw [hrem]
+    exact hr
+  · intro hz
+    simpa only [word,hz,List.replicate_zero,principalKernelWord,actualPrincipalWordRun]
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Proof

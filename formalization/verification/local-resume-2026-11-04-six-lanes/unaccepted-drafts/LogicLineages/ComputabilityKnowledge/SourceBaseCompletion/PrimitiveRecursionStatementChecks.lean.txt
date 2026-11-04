@@ -1,0 +1,17 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.PrimitiveRecursionTargets
+public import LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.PrimitiveRecursionProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.PrimitiveRecursion.StatementChecks
+
+theorem recursionStep : Targets.RecursionStep := Proof.recursionStep
+theorem allPrimitiveCertificates : Targets.AllPrimitiveCertificates := Proof.allPrimitiveCertificates
+theorem primitiveRecursion : Targets.Target := Proof.fullTarget
+
+#print axioms recursionStep
+#print axioms allPrimitiveCertificates
+#print axioms primitiveRecursion
+
+end LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.PrimitiveRecursion.StatementChecks

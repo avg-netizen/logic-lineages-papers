@@ -1,0 +1,35 @@
+{
+  "status": "exact-gate-pass-awaiting-root-adoption",
+  "scope": "Actual variable-length cipher product-mask identity and parallel multiplication equivalence, all n/q/b/c/a including empty vectors; original n+1<q and digit<2^q scope retained.",
+  "receipt": "build-reports/1793833506617686069-2.json",
+  "receipt_sha256": "fa07f1bbfd4a27da4d8b9ab094d36ba757384482251230c3720e21d1929562a4",
+  "logs": {
+    "build-reports/1793833506617686069-2-LogicLineages-ComputabilityKnowledge-DiophantineCompletion-CipherProductProof.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-reports/1793833506617686069-2-LogicLineages-ComputabilityKnowledge-DiophantineCompletion-CipherProductStatementChecks.log": "7ea6ce9e578994a0dfaddc616bd644d3036f1555b547a011be61d93eff2d3397"
+  },
+  "source_pins": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherDefinitions.lean": "5e1583c7b28f23dc1d8e73d7fc6ea24cb924ca7ed0c53a8d76fcc1ca16f82307",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherTargets.lean": "69c9d69faceed6c63f793418f6a99df7f43c5e53ffaf40357df6fcd22e71175a",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherProductProof.lean": "27b256a1c397c1c4f31f35012f82e67baa20ec2dbdf773d23dbfc12e2e2a938a",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherProductStatementChecks.lean": "28db52d0e3a2af1bf305d6ae967eaed016f39e11be433783d378dae116817344"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "exact_alias_count": 2,
+  "exact_aliases": [
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks.fixedCipherProductMask",
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks.fixedCipherMultiplication"
+  ],
+  "frozen_target": "CIPHER-FROZEN-03.json",
+  "prior_failure": "build-reports/1793833168389747361-2.json",
+  "proof_only_repair": "CIPHER-PRODUCT-REPAIR-01.json",
+  "proof_content": "Finite dense product expansion; actual coefficient bound<2^(4q); pure-power diagonal uniqueness; actual all-digit extraction and Nat AND mask; no product-digit<2^q premise.",
+  "native_process": "session85514 fully reaped exit0",
+  "compiler_slot": "released",
+  "current_round_complete": true,
+  "no_successor_authorized": true,
+  "recorded_at_utc": "2026-11-04T23:06:20.792124+00:00"
+}

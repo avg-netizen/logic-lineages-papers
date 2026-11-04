@@ -1,0 +1,102 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositivePredicateSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticSchemas PositiveArithmeticPredicateSubstitution
+open SourceComputabilityFormulaSupportProof InternalCalculus InternalPositive
+open InternalPositiveSyntaxMapProof InternalPositivePredicateSyntaxProof
+
+def addHypothesis {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)} {phi : Formula α}
+    (psi : Formula α) (d : Derivation body Gamma phi) : Derivation body (psi::Gamma) phi :=
+  Derivation.weakening (fun _ hp => List.mem_cons.mpr (Or.inr hp)) d
+
+def closedInto {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)} {phi : Formula α}
+    (d : Derivation body [] phi) : Derivation body Gamma phi :=
+  Derivation.weakening (by intro p hp; cases hp) d
+
+/-- Construct an actual finite proof by recursion on the positive grammar.
+The sole hypothesis is the first-order pointwise implication. -/
+def monotonicityTree (body : Positive (Fin 1)) {α : Type} (p : Positive α) :
+    ∀ theta eta : Formula (α ⊕ Fin 1),
+    Derivation body [allOne (theta.imp eta)]
+      ((substitutePredicate p theta).imp (substitutePredicate p eta)) := by
+  induction p with
+  | arithmetic phi =>
+    intro theta eta
+    exact Derivation.implicationIntroduction (Derivation.hypothesis (by simp))
+  | predicate t =>
+    intro theta eta
+    exact Derivation.universalElimination (arithmeticEmbedding.onTerm t) (Derivation.hypothesis (by simp))
+  | conj p q ihp ihq =>
+    intro theta eta
+    apply Derivation.implicationIntroduction
+    apply Derivation.conjunctionIntroduction
+    · exact Derivation.implicationElimination (addHypothesis _ (ihp theta eta))
+        (Derivation.conjunctionLeft (Derivation.hypothesis (by simp)))
+    · exact Derivation.implicationElimination (addHypothesis _ (ihq theta eta))
+        (Derivation.conjunctionRight (Derivation.hypothesis (by simp)))
+  | guarded guard p ih =>
+    intro theta eta
+    apply Derivation.implicationIntroduction
+    apply Derivation.implicationIntroduction
+    exact Derivation.implicationElimination (addHypothesis _ (addHypothesis _ (ih theta eta)))
+      (Derivation.implicationElimination (Derivation.hypothesis (by simp)) (Derivation.hypothesis (by simp)))
+  | all p ih =>
+    intro theta eta
+    let H := allOne (theta.imp eta)
+    let rtheta := substitutePredicate p (liftPredicateFormula theta)
+    let reta := substitutePredicate p (liftPredicateFormula eta)
+    let Gamma1 := [allOne rtheta,H]
+    let Gamma2 := Gamma1.map weaken
+    have hh : weaken H = allOne ((liftPredicateFormula theta).imp (liftPredicateFormula eta)) := by
+      simpa only [H,liftPredicateFormula,formulaImpRelabel] using
+        actualWeakeningQuantifierSyntax _ (theta.imp eta)
+    have hm : Derivation body Gamma2 (rtheta.imp reta) :=
+      Derivation.weakening (by
+        intro q hq
+        simp only [List.mem_singleton] at hq
+        subst q
+        rw [← hh]
+        simp [Gamma2,Gamma1]) (ih (liftPredicateFormula theta) (liftPredicateFormula eta))
+    have hs : Derivation body Gamma2 (weaken (allOne rtheta)) := Derivation.hypothesis (by simp [Gamma2,Gamma1])
+    rw [actualWeakeningQuantifierSyntax _ rtheta] at hs
+    have ha := Derivation.universalElimination (.var (.inr 0)) hs
+    rw [actualInstantiateLiftSyntax _ rtheta] at ha
+    have hb := Derivation.implicationElimination hm ha
+    exact Derivation.implicationIntroduction
+      (Derivation.universalIntroduction (Gamma := Gamma1) hb)
+
+theorem actualInternalPositiveMonotonicity : InternalPositiveTargets.ActualInternalPositiveMonotonicity := by
+  intro body α p theta eta
+  exact ⟨Derivation.implicationIntroduction (monotonicityTree body p theta eta)⟩
+
+theorem actualInternalReverseUnfolding : InternalPositiveTargets.ActualInternalReverseUnfolding := by
+  intro body α Gamma
+  let p := bodyWithParameters body α
+  let theta := p.formula
+  let replacement := replacedBody body theta
+  have hm : Derivation body [] (monotonicityFormula p (liftPredicateFormula theta)
+      (predicateAtObject (α := α ⊕ Fin 1))) :=
+    Derivation.implicationIntroduction
+      (monotonicityTree body p (liftPredicateFormula theta) (predicateAtObject (α := α ⊕ Fin 1)))
+  have hc : Derivation body [replacement]
+      (allOne ((liftPredicateFormula theta).imp (predicateAtObject (α := α ⊕ Fin 1)))) := by
+    have he : liftPredicateFormula theta = (bodyWithParameters body (α ⊕ Fin 1)).formula :=
+      actualParameterBodySyntax body α
+    rw [he]
+    exact Derivation.inductiveClosure
+  have hstep : Derivation body [replacement] theta := by
+    have h := Derivation.implicationElimination
+      (Derivation.implicationElimination (closedInto (Gamma := [replacement]) hm) hc)
+      (Derivation.hypothesis (by simp [replacement,replacedBody,p]))
+    rw [actualPredicateIdentitySyntax (α ⊕ Fin 1) p] at h
+    exact h
+  obtain ⟨h⟩ := InternalCalculusProof.actualInternalInvariantInduction body α [] theta ⟨hstep⟩
+  exact ⟨closedInto (Gamma := Gamma) h⟩
+
+theorem actualSourceInternalReverseUnfolding : InternalPositiveTargets.ActualSourceInternalReverseUnfolding := by
+  intro data context
+  exact actualInternalReverseUnfolding (SourcePresentation.sourceBody data context) Empty []
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveProof

@@ -2,7 +2,9 @@
 
 Audit baseline: `3f69eb87d7c37b5721cd7014a24b04834b3dcd07`; 154 checked, 2 inherited and 33 pending of 189.
 
-Current register: **155 checked, 2 inherited and 32 pending out of 189**.
+At audit completion, before the six-lane resumption: **155 checked, 2 inherited and 32 pending out of 189**. Current totals are authoritative in [TARGETS.json](../TARGETS.json).
+
+Correction from the resumed source inspection: PA(L), including full-language induction, is already intrinsic to `GorbowTheoryProof.Derivation`. The finite S list contains additional defining axioms. Earlier wording overstated that distinction; the remaining paper12 bridge concerns the exact named U/u syntax apparatus and source coding/self-indexed provability. This correction alone promotes no statement.
 
 This is a source-contract audit. Each row distinguishes the printed whole statement from the strongest relevant accepted interfaces. Existing compiler acceptance is historical unless a fresh gate is explicitly recorded. Conditional or restricted results are not silently promoted. Evidence paths and SHA-256 pins are in the adjacent JSON.
 
@@ -353,11 +355,11 @@ Fresh verification: [exact gate and transitive axiom reports](../../formalizatio
 
 Disposition: **Assembly or source contract gap**.
 
-Existing coverage: GorbowPublishedDCB already proves ALL THREE selected-agent clauses together for one actual published-shape S+rho construction, with actual proof certification and all selectors.
+Existing coverage: GorbowPublishedDCB already proves all three selected-agent clauses together for one actual S+rho construction. Derivation.arithmetic supplies PA(L), including full-language induction, independently of the finite additional defining-axiom list.
 
-Remaining obligation: Its S uses a concrete finite PR defining theory. The manuscript specifies the source arithmetic Base/PA(L) apparatus. A source-Base proof translation/extension with correct self-indexed provability and coding is missing. Internal HB/Lob is NOT a premise of this lemma and must not be added as a prerequisite merely because later collapse needs it.
+Remaining obligation: Expose the exact named U/u syntax-apparatus representation and coding/self-indexed proof correspondence required by the source. The finite S list contains additional defining axioms; it does not omit PA(L). No extra internal HB/Lob or general conservative-extension theorem is a prerequisite of this lemma.
 
-Next completion step: Prove the exact source-Base/coding/proof translation for CompleteThree, then adopt; do not re-prove the selected-agent logic or wait for full HB2/HB3.
+Next completion step: Package intrinsic PA(L), all declared named function/relation numeral representation and actual source coding/Pr_D calibration in one same-parameter source bridge, then reuse CompleteThree.
 
 Source: [12-common-knowledge-necessitation/paper.tex](../../12-common-knowledge-necessitation/paper.tex) (`lem:three`). Evidence: [GorbowPublishedDCBTargets.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBTargets.lean), [GorbowPublishedDCBDefinitions.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBDefinitions.lean), [GorbowNamedDefiningTheoryDefinitions.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean).
 
@@ -413,11 +415,11 @@ Source: [12-common-knowledge-necessitation/paper.tex](../../12-common-knowledge-
 
 Disposition: **Assembly or source contract gap**.
 
-Existing coverage: GorbowPublishedKT proves both theories consistent for one actual concrete S+rho parameter choice, using real Hilbert blocks, exactly three closed theorem rules, full FS/UBF and one simultaneous revision construction.
+Existing coverage: GorbowPublishedKT proves both theories consistent in one actual S+rho construction using real Hilbert blocks, three closed theorem rules and full FS/UBF revision machinery. Its proof calculus already contains PA(L) and full-language induction; the finite list records additional defining axioms only.
 
-Remaining obligation: The constructed D's finite named defining theory is not the manuscript's exact PA(L)+source syntax Base. Consistency of a weaker/different theory does not imply consistency after adding all source axioms. Need source PA(L)/definitional axioms valid in the same ground, proof-system inclusion/translation, and source predicate/coding correspondence.
+Remaining obligation: Verify the exact source U/u definitional syntax-apparatus representation in the SAME revision ground and its source predicate/coding correspondence. No addition of missing PA(L) axioms is needed: those rules are already intrinsic. Internal HB2/HB3/Lob is not a prerequisite of this revision consistency argument.
 
-Next completion step: Extend/calibrate the revision proof directly to the exact source Base. HB2/HB3/Lob is NOT needed for this consistency argument; do not make that later collapse machinery a prerequisite.
+Next completion step: Expose intrinsic full PA availability and revision validity together with exact all-declared-header positive/negative representation and same-Actual source coding calibration, then reuse the existing full KT pair proof.
 
 Source: [12-common-knowledge-necessitation/paper.tex](../../12-common-knowledge-necessitation/paper.tex) (`thm:consistency`). Evidence: [GorbowPublishedKTTargets.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTTargets.lean), [GorbowPublishedKTDefinitions.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean), [GorbowPublishedDCBDefinitions.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBDefinitions.lean), [GorbowNamedDefiningTheoryDefinitions.lean](../../formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean).
 

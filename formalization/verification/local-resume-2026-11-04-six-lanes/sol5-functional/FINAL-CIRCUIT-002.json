@@ -1,0 +1,67 @@
+{
+  "requested": [
+    "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitPolynomialBridgeProof",
+    "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitWellFormedProof",
+    "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitRowsProof"
+  ],
+  "heap_cap_mib": 2048,
+  "rss_cap_mib": 1536,
+  "wall_seconds": 180,
+  "cpu_seconds": 90,
+  "minimum_free_mib": 2048,
+  "core_only_profile": false,
+  "single_thread": true,
+  "threads": 1,
+  "upstream_cache_only": true,
+  "calculator_objects_borrowed": true,
+  "modules": [
+    {
+      "module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitPolynomialBridgeProof",
+      "returncode": 0,
+      "seconds": 2.297,
+      "observed_cpu_seconds": 2.23,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1042712,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "ade86cbdbab0c4555c681b4e53079979de1d08d9fe6ab14182c339dd7afa6646",
+      "log": "build-reports/1793833549997682468-2-LogicLineages-OrdinalComparison-FunctionalHardnessCompletion-CircuitPolynomialBridgeProof.log"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitWellFormedProof",
+      "returncode": 77,
+      "seconds": 12.511,
+      "observed_cpu_seconds": 12.38,
+      "last_wait_channel": "futex_do_wait",
+      "stopped_threads": [
+        {
+          "tid": 12,
+          "state": "S",
+          "cpu_seconds": 0.06,
+          "wait_channel": "futex_do_wait"
+        },
+        {
+          "tid": 13,
+          "state": "S",
+          "cpu_seconds": 0.0,
+          "wait_channel": "do_epoll_wait"
+        },
+        {
+          "tid": 14,
+          "state": "R",
+          "cpu_seconds": 12.32,
+          "wait_channel": "0"
+        }
+      ],
+      "peak_process_tree_rss_kib": 1575276,
+      "memory_observation_failure": {
+        "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t12\nNgid:\t0\nPid:\t12\nPPid:\t2\nTracerPid:\t0\nUid:\t1002\t1002\t1002\t1002\nGid:\t1003\t1003\t1003\t1003\nFDSize:\t64\nGroups:\t1003 65534 \nNStgid:\t12\nNSpid:\t12\nNSpgid:\t12\nNSsid:\t12\nKthread:\t0\nVmPeak:\t 5327336 kB\nVmSize:\t 5302752 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1575292 kB\nVmRSS:\t 1575292 kB\nRssAnon:\t  744668 kB\nRssFile:\t  830624 kB\nRssShmem:\t       0 kB\nVmData:\t 5011956 kB\nVmStk:\t     136 kB\nVmExe:\t       4 kB\nVmLib:\t  102176 kB\nVmPTE:\t   43748 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/55410\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tf\nCpus_allowed_list:\t0-3\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t211\nnonvoluntary_ctxt_switches:\t18\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n",
+        "statm": "1325688 393827 207656 1 0 1253023 0\n"
+      },
+      "discarded_failed_outputs": [],
+      "source_sha256": "885a8480c2a041df6996dc941209a07dd7e298d718fcceb8e047f6aff6f5b381",
+      "log": "build-reports/1793833549997682468-2-LogicLineages-OrdinalComparison-FunctionalHardnessCompletion-CircuitWellFormedProof.log"
+    }
+  ]
+}

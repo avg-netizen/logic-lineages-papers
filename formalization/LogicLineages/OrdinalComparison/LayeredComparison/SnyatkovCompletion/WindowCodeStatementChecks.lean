@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowCodeComputationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowCodeStatementChecks
+theorem literal_calibration : WindowCodeTargets.LiteralCalibration := WindowCodeProof.literalCalibration
+theorem actual_code_computation : WindowCodeTargets.ActualCodeComputation := WindowCodeProof.actualCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowCodeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowCodeStatementChecks

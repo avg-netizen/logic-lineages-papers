@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryPreflight
+def classesComparator : Prop := ContextUniformPrimaryTargets.ActualRawClassCodesCalibration
+def primaryListComparator : Prop := ContextUniformPrimaryTargets.ActualRawPrimaryListCalibration
+def primaryTestComparator : Prop := ContextUniformPrimaryTargets.ActualRawPrimaryTestCalibration
+def representativeComparator : Prop := ContextUniformPrimaryTargets.ActualRawRepresentativeCalibration
+def primaryPrimitiveComparator : Prop := ContextUniformPrimaryTargets.ActualRawPrimaryPrimitive
+def representativePrimitiveComparator : Prop := ContextUniformPrimaryTargets.ActualRawRepresentativePrimitive
+def canonicalPrimitiveComparator : Prop := ContextUniformPrimaryTargets.ActualUniformCanonicalPrimitive
+def canonicalCalibrationComparator : Prop := ContextUniformPrimaryTargets.ActualUniformCanonicalCalibration
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryPreflight

@@ -1234,20 +1234,24 @@
         "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructureStatementChecks"
       ],
       "category": "assembly_or_source_contract",
-      "existing_coverage": "GorbowPublishedDCB already proves ALL THREE selected-agent clauses together for one actual published-shape S+rho construction, with actual proof certification and all selectors.",
-      "remaining_obligation": "Its S uses a concrete finite PR defining theory. The manuscript specifies the source arithmetic Base/PA(L) apparatus. A source-Base proof translation/extension with correct self-indexed provability and coding is missing. Internal HB/Lob is NOT a premise of this lemma and must not be added as a prerequisite merely because later collapse needs it.",
-      "next_completion_step": "Prove the exact source-Base/coding/proof translation for CompleteThree, then adopt; do not re-prove the selected-agent logic or wait for full HB2/HB3.",
+      "existing_coverage": "GorbowPublishedDCB already proves all three selected-agent clauses together for one actual S+rho construction. Derivation.arithmetic supplies PA(L), including full-language induction, independently of the finite additional defining-axiom list.",
+      "remaining_obligation": "Expose the exact named U/u syntax-apparatus representation and coding/self-indexed proof correspondence required by the source. The finite S list contains additional defining axioms; it does not omit PA(L). No extra internal HB/Lob or general conservative-extension theorem is a prerequisite of this lemma.",
+      "next_completion_step": "Package intrinsic PA(L), all declared named function/relation numeral representation and actual source coding/Pr_D calibration in one same-parameter source bridge, then reuse CompleteThree.",
       "evidence": [
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBTargets.lean",
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBDefinitions.lean",
-        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean"
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowTheoryProof.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPACore.lean"
       ],
       "upstream_blockers": [],
       "short_id": "12:lem:three",
       "evidence_sha256": {
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBTargets.lean": "cd1485628349557abd98250363cade73ae6c7ff2be691f0e9085e5d5df78f881",
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBDefinitions.lean": "e22d2ab1f9606700e575e554bb02f4cfa5f313a7d7025d36918d68213b4881cb",
-        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean": "bce5dacd37f29c7703c9b07e349b6bcd9dcd227ef0faf4f28fb66f4ce1ced2af"
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean": "bce5dacd37f29c7703c9b07e349b6bcd9dcd227ef0faf4f28fb66f4ce1ced2af",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowTheoryProof.lean": "fa4e0a6407678351b0911b6cb4c13a25e84aa8529c9b81137af101dce94ecff6",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPACore.lean": "f58f41d9b71c736fed7860ec1ab79d6eccc6a9a6e13961c3f3d2a4e860493b04"
       },
       "status_at_baseline": "pending",
       "accepted_declaration_at_baseline": null,
@@ -1398,14 +1402,16 @@
         "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructureStatementChecks"
       ],
       "category": "assembly_or_source_contract",
-      "existing_coverage": "GorbowPublishedKT proves both theories consistent for one actual concrete S+rho parameter choice, using real Hilbert blocks, exactly three closed theorem rules, full FS/UBF and one simultaneous revision construction.",
-      "remaining_obligation": "The constructed D's finite named defining theory is not the manuscript's exact PA(L)+source syntax Base. Consistency of a weaker/different theory does not imply consistency after adding all source axioms. Need source PA(L)/definitional axioms valid in the same ground, proof-system inclusion/translation, and source predicate/coding correspondence.",
-      "next_completion_step": "Extend/calibrate the revision proof directly to the exact source Base. HB2/HB3/Lob is NOT needed for this consistency argument; do not make that later collapse machinery a prerequisite.",
+      "existing_coverage": "GorbowPublishedKT proves both theories consistent in one actual S+rho construction using real Hilbert blocks, three closed theorem rules and full FS/UBF revision machinery. Its proof calculus already contains PA(L) and full-language induction; the finite list records additional defining axioms only.",
+      "remaining_obligation": "Verify the exact source U/u definitional syntax-apparatus representation in the SAME revision ground and its source predicate/coding correspondence. No addition of missing PA(L) axioms is needed: those rules are already intrinsic. Internal HB2/HB3/Lob is not a prerequisite of this revision consistency argument.",
+      "next_completion_step": "Expose intrinsic full PA availability and revision validity together with exact all-declared-header positive/negative representation and same-Actual source coding calibration, then reuse the existing full KT pair proof.",
       "evidence": [
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTTargets.lean",
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean",
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBDefinitions.lean",
-        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean"
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowTheoryProof.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPACore.lean"
       ],
       "upstream_blockers": [],
       "short_id": "12:thm:consistency",
@@ -1413,12 +1419,24 @@
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTTargets.lean": "07237d5ef35627000d17df2351a9fc5fe9d7a2dfa95cefc97816f6847a5d1549",
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean": "8ebade5659a1a0bf4aee12b0994602bf68e2d893c45d1952dff1a8558f852729",
         "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedDCBDefinitions.lean": "e22d2ab1f9606700e575e554bb02f4cfa5f313a7d7025d36918d68213b4881cb",
-        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean": "bce5dacd37f29c7703c9b07e349b6bcd9dcd227ef0faf4f28fb66f4ce1ced2af"
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowNamedDefiningTheoryDefinitions.lean": "bce5dacd37f29c7703c9b07e349b6bcd9dcd227ef0faf4f28fb66f4ce1ced2af",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowTheoryProof.lean": "fa4e0a6407678351b0911b6cb4c13a25e84aa8529c9b81137af101dce94ecff6",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPACore.lean": "f58f41d9b71c736fed7860ec1ab79d6eccc6a9a6e13961c3f3d2a4e860493b04"
       },
       "status_at_baseline": "pending",
       "accepted_declaration_at_baseline": null,
       "frozen_comparator_at_baseline": null,
       "current_register_status": "pending"
     }
-  ]
+  ],
+  "corrections": [
+    {
+      "recorded_utc": "2026-11-04T19:58:53.605617+00:00",
+      "source": "resumed Sol-supervised source inspection; root independently verified GorbowTheoryProof.Derivation.arithmetic and GorbowPACore.ArithmeticInstance.induction",
+      "correction": "Prior audit wording overstated finite defining theory versus PA(L). The calculus already includes full PA(L) induction. Exact named source U/u syntax apparatus/coding correspondence is the remaining bridge, not adding PA again.",
+      "source_status_changed_by_correction": false
+    }
+  ],
+  "historical_snapshot_before_six_lane_release": true,
+  "current_status_authority": "formalization/TARGETS.json"
 }

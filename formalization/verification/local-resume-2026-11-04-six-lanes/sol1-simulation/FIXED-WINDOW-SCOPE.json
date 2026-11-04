@@ -1,0 +1,27 @@
+{
+  "status": "target-frozen-awaiting-preflight",
+  "purpose": "Upper-bound chain consumer: fixed root window must be retained when descendant support shrinks.",
+  "targets": [
+    "AnyFixedUniverseSimulation",
+    "OriginalRootWindowSimulation",
+    "OriginalRootWindowChainSimulation"
+  ],
+  "translation": "The already accepted SourceSimulationCompletion.tr S. No new translation, relation, or source semantics.",
+  "root_window": "sourceWindow root = literalTypes root, fixed for every step.",
+  "legitimate_domain_data": [
+    "SubtypeClosed S for arbitrary-universe theorem",
+    "source typeSupport contained in S",
+    "later-source typeSupport contained in original-root typeSupport for root-window wrappers"
+  ],
+  "source_relation": "Unchanged LiteralContexts.ConfinedStrict",
+  "positive_chain": "Relation.TransGen of the unchanged confined source relation, mapped to unchanged PositivePath of QuotientEdge in one S.",
+  "mathematics_reused": [
+    "TypeClosureProof.literalEmbeddingTypeClosure",
+    "NumberedFiniteUniverseProof.unmarkedUniverse",
+    "NumberedWindowSimulationProof.strictSimulation",
+    "NumberedQuotientPathsProof.countedForward",
+    "NumberedQuotientPathsProof.positiveClosure",
+    "SourceTypeSupportProof.subtypeClosedSupport"
+  ],
+  "prior_source_adoption": "All four accepted SourceSimulationCompletion files remain pinned and unchanged."
+}

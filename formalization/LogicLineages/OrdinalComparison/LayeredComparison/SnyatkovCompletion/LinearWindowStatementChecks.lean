@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearWindowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearWindowStatementChecks
+theorem actual_nonlinear_linear_bound : LinearWindowTargets.ActualNonlinearLinearBound := LinearWindowProof.actualNonlinearLinearBound
+theorem actual_guard_bound : LinearWindowTargets.ActualGuardBound := LinearWindowProof.actualGuardBound
+theorem actual_finite_elimination : LinearWindowTargets.ActualFiniteElimination := LinearWindowProof.actualFiniteElimination
+theorem exact_support_reduction : LinearWindowTargets.ExactSupportReduction := LinearWindowProof.exactSupportReduction
+theorem actual_bound_program : LinearWindowTargets.ActualBoundProgram := LinearWindowProof.actualBoundProgram
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearWindowStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearWindowStatementChecks

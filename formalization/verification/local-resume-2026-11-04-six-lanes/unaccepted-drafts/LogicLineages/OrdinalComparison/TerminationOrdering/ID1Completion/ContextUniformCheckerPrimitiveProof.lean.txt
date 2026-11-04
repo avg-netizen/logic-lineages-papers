@@ -1,0 +1,118 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformObjectDecoderProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientDirectPrimitiveProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformCheckerPrimitiveProof
+open Source ContextUniformObjectDecoderProof ContextUniformQuotient
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+attribute [local irreducible] Primrec
+
+theorem scalarPrimitive (n : Nat) (arity : Fin n → Nat) : Primrec (ContextUniform.scalarValue n arity) := by
+  let f := fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+    ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2
+  have hf : Primrec f := (ContextUniformPrimaryPrimitiveProof.actualUniformCanonicalPrimitive n arity).comp
+    ((Primrec.fst.comp Primrec.fst).pair ((Primrec.fst.comp Primrec.snd).pair (Primrec.snd.comp Primrec.snd)))
+  have he : f = fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+      NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2 := by
+    funext p
+    exact ContextUniformPrimaryCalibrationProof.actualUniformCanonicalCalibration n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2
+  have h := decodedUnaryPrimitive n f hf
+  rw [he] at h
+  apply h.of_eq
+  intro v
+  cases hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) (v.get 0) <;>
+    cases ho : Encodable.decode (α := ContextUniform.Object) (v.get 1) <;>
+    simp [ContextUniform.scalarValue,OrdinaryArithmeticCarrier.scalarValue,hc,ho,List.Vector.get_ofFn]
+
+theorem listBodyPrimitive (n : Nat) (arity : Fin n → Nat) :
+    Primrec (fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+      (Encodable.decode (α := List Nat) p.2.2).any (fun values =>
+        values.all (ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1))) := by
+  let Input := OrdinaryArithmeticQuotient.Context n × ContextUniform.Object
+  have hd : Primrec (fun p : Input => Encodable.decode (α := List Nat) p.2.2) :=
+    Primrec.decode.comp (Primrec.snd.comp Primrec.snd)
+  have hbase : Primrec (fun p : (Input × List Nat) × Nat => p.1.1) := Primrec.fst.comp Primrec.fst
+  have hp := (ContextUniformPrimaryPrimitiveProof.actualUniformCanonicalPrimitive n arity).comp
+    ((Primrec.fst.comp (Primrec.fst.comp hbase)).pair
+      ((Primrec.fst.comp (Primrec.snd.comp hbase)).pair Primrec.snd))
+  have hall := OrdinaryArithmeticCarrierSupportProof.listAllPrimitive Primrec.snd hp.to₂
+  exact (NumberedQuotientPathPrimrecSupportProof.optionAnyPrimitive hd hall.to₂).of_eq (by intro p; rfl)
+
+theorem listPrimitive (n : Nat) (arity : Fin n → Nat) : Primrec (ContextUniform.listValue n arity) := by
+  let f := fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+    (Encodable.decode (α := List Nat) p.2.2).any (fun values =>
+      values.all (ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1))
+  have he : f = fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+      (Encodable.decode (α := List Nat) p.2.2).any
+        (QuotientDirectCarrier.listCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1) := by
+    funext p
+    have hcanon : ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1 =
+        NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1 := by
+      funext value
+      exact ContextUniformPrimaryCalibrationProof.actualUniformCanonicalCalibration n arity
+        p.1.1.1 p.1.1.2 p.2.1 value
+    simp only [f,hcanon,QuotientDirectCarrier.listCarrierTest]
+  have h := decodedUnaryPrimitive n f (listBodyPrimitive n arity)
+  rw [he] at h
+  apply h.of_eq
+  intro v
+  cases hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) (v.get 0) <;>
+    cases ho : Encodable.decode (α := ContextUniform.Object) (v.get 1) <;>
+    simp [ContextUniform.listValue,OrdinaryArithmeticCarrier.listValue,hc,ho,List.Vector.get_ofFn]
+
+theorem positivePrimitive (n : Nat) (arity : Fin n → Nat) : Primrec (ContextUniform.positiveValue n arity) := by
+  let f := fun p : Parameters n × Nat × Nat × Nat => positiveTest n arity
+    p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+  have he : f = fun p : Parameters n × Nat × Nat × Nat =>
+      NumberedQuotientPathCertificates.positivePathTest n arity
+        p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2 := by
+    funext p
+    exact ContextUniformQuotientCalibrationProof.positiveCalibration n arity
+      p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+  have h := decodedBinaryPrimitive n f (ContextUniformQuotientPathPrimitiveProof.actualJointPositivePrimitive n arity)
+  rw [he] at h
+  apply h.of_eq
+  intro v
+  cases hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) (v.get 0) <;>
+    cases hs : Encodable.decode (α := ContextUniform.Object) (v.get 1) <;>
+      cases ht : Encodable.decode (α := ContextUniform.Object) (v.get 2)
+  all_goals simp only [ContextUniform.positiveValue,OrdinaryArithmeticQuotient.positiveValue,hc,hs,ht,
+    Option.any_none,Option.any_some,List.Vector.get_ofFn]
+  all_goals split_ifs <;> simp_all
+
+theorem directPrimitive (n : Nat) (arity : Fin n → Nat) : Primrec (ContextUniform.directValue n arity) := by
+  let f := fun p : Parameters n × Nat × Nat × Nat => numericDirectTest n arity
+    p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+  have he : f = fun p : Parameters n × Nat × Nat × Nat =>
+      QuotientDirectCertificates.numericTest n arity
+        p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2 := by
+    funext p
+    exact ContextUniformQuotientCalibrationProof.numericDirectCalibration n arity
+      p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+  have h := decodedBinaryPrimitive n f (ContextUniformQuotientDirectPrimitiveProof.actualJointDirectPrimitive n arity)
+  rw [he] at h
+  apply h.of_eq
+  intro v
+  cases hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) (v.get 0) <;>
+    cases hs : Encodable.decode (α := ContextUniform.Object) (v.get 1) <;>
+      cases ht : Encodable.decode (α := ContextUniform.Object) (v.get 2)
+  all_goals simp only [ContextUniform.directValue,OrdinaryArithmeticDirect.directValue,hc,hs,ht,
+    Option.any_none,Option.any_some,List.Vector.get_ofFn]
+  all_goals split_ifs <;> simp_all
+
+theorem actualWholeContextCheckersPrimitive : ContextUniformQuotientTargets.ActualWholeContextCheckersPrimitive := by
+  intro n arity
+  exact ⟨scalarPrimitive n arity,listPrimitive n arity,positivePrimitive n arity,directPrimitive n arity⟩
+
+theorem actualContextUniformPresentationExists : ContextUniformTargets.ActualContextUniformPresentationExists := by
+  intro n arity
+  obtain ⟨hs,hm,hp,hd⟩ := actualWholeContextCheckersPrimitive n arity
+  obtain ⟨ps,hps⟩ := Proof.allPrimitiveFunctions 2 (ContextUniform.scalarValue n arity) hs
+  obtain ⟨pm,hpm⟩ := Proof.allPrimitiveFunctions 2 (ContextUniform.listValue n arity) hm
+  obtain ⟨pp,hpp⟩ := Proof.allPrimitiveFunctions 4 (ContextUniform.positiveValue n arity) hp
+  obtain ⟨pd,hpd⟩ := Proof.allPrimitiveFunctions 4 (ContextUniform.directValue n arity) hd
+  exact ⟨⟨ps,pm,pp,pd⟩,hps,hpm,hpp,hpd⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformCheckerPrimitiveProof

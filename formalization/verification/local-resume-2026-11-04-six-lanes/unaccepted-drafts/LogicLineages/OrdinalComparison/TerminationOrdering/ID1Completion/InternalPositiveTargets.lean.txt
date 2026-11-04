@@ -1,0 +1,43 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTargets
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticSchemas
+open PositiveArithmeticPredicateSubstitution SourceComputabilityFormulaSupportProof
+open ID1Completion.InternalCalculus ID1Completion.InternalPositive
+
+/-- Literal syntax equalities, not standard-natural satisfaction equivalences. -/
+def ActualWeakeningQuantifierSyntax : Prop :=
+  ∀ (α : Type) (phi : Formula (α ⊕ Fin 1)),
+  weaken (allOne phi) = allOne (liftPredicateFormula phi)
+
+def ActualInstantiateLiftSyntax : Prop :=
+  ∀ (α : Type) (phi : Formula (α ⊕ Fin 1)),
+  instantiate (liftPredicateFormula phi) (.var (.inr 0) : Term (α ⊕ Fin 1)) = phi
+
+def ActualPredicateIdentitySyntax : Prop :=
+  ∀ (α : Type) (p : Positive α), substitutePredicate p (predicateAtObject (α := α)) = p.formula
+
+def ActualParameterBodySyntax : Prop :=
+  ∀ (body : Positive (Fin 1)) (α : Type),
+  liftPredicateFormula (bodyWithParameters body α).formula =
+    (bodyWithParameters body (α ⊕ Fin 1)).formula
+
+/-- A real finite proof tree of the logical positive-monotonicity theorem,
+with the pointwise premise inside the formula rather than an external oracle. -/
+def ActualInternalPositiveMonotonicity : Prop :=
+  ∀ (body : Positive (Fin 1)) (α : Type) (p : Positive α) (theta eta : Formula (α ⊕ Fin 1)),
+  Nonempty (Derivation body [] (monotonicityFormula p theta eta))
+
+/-- The reverse fixed-point inclusion is DERIVED, using only the frozen
+logical/closure/leastness rules of the accepted calculus. -/
+def ActualInternalReverseUnfolding : Prop :=
+  ∀ (body : Positive (Fin 1)) (α : Type) (Gamma : List (Formula α)),
+  Nonempty (Derivation body Gamma (reverseUnfoldingFormula body α))
+
+def ActualSourceInternalReverseUnfolding : Prop :=
+  ∀ (data : SourcePresentation.Data) (context : Nat),
+  Nonempty (Derivation (SourcePresentation.sourceBody data context) []
+    (reverseUnfoldingFormula (SourcePresentation.sourceBody data context) Empty))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveTargets

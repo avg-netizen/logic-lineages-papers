@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientCertificateStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformCheckerPrimitiveProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientStatementChecks
+theorem checkers_exact : ContextUniformQuotientPreflight.checkersComparator :=
+  ContextUniformCheckerPrimitiveProof.actualWholeContextCheckersPrimitive
+theorem presentation_exact : ContextUniformQuotientPreflight.presentationComparator :=
+  ContextUniformCheckerPrimitiveProof.actualContextUniformPresentationExists
+#print axioms checkers_exact
+#print axioms presentation_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformQuotientStatementChecks

@@ -1,0 +1,29 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/OmegaPairProof.lean:87:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  signedCNF ↑?n
+in the target expression
+  Finsupp.mapDomain (ordinalNaturalSum (↑e).repr) (signedCNF 1) = Finsupp.single (↑e).repr 1
+
+Γ : List Ty
+ρ : AdmissibleSubstitution Γ
+hv : OrdinalVector Γ higherUnary.level
+hh : assignment OrdinalSyntax.defaultPolicy source = some hv
+right✝ : ∀ (j : Fin (higherUnary.level + 1)), GeneratedOrdinalGrade Γ (↑j) (hv j)
+e : NONote
+he : omega = Ordinal.omega0 ^ (↑e).repr
+hscale :
+  ∀ (a : OriginalTerm Γ unary),
+    signedCNF (value1 ρ (Term.app source a)) =
+      (seedShift (↑e).repr) (signedCNF (expressionValue ρ (hv 1)) + signedCNF (value1 ρ a))
+hz : ordinalNaturalSum (↑e).repr 0 = (↑e).repr
+⊢ Finsupp.mapDomain (ordinalNaturalSum (↑e).repr) (signedCNF 1) = Finsupp.single (↑e).repr 1
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    e
+  has type
+    NONote
+  but is expected to have type
+    { o // o.NF }
+  in the application
+    ↑e

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperCodeStatementChecks
+theorem literal_code_calibration : ActiveHyperTargets.LiteralCodeCalibration := ActiveHyperCodeProof.literalCodeCalibration
+theorem actual_code_computation : ActiveHyperTargets.ActualCodeComputation := ActiveHyperCodeProof.actualCodeComputation
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperCodeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ActiveHyperCodeStatementChecks

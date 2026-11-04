@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowStatementChecks
+theorem actual_collision_alternatives : HyperWindowTargets.ActualCollisionAlternatives := HyperWindowProof.actualCollisionAlternatives
+theorem actual_two_variable_elimination : HyperWindowTargets.ActualTwoVariableElimination := HyperWindowProof.actualTwoVariableElimination
+theorem exact_support_reduction : HyperWindowTargets.ExactSupportReduction := HyperWindowProof.exactSupportReduction
+theorem actual_bound_programs : HyperWindowTargets.ActualBoundPrograms := HyperWindowProof.actualBoundPrograms
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperWindowStatementChecks

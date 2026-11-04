@@ -1,0 +1,63 @@
+{
+  "source_statement": "06-godel-t-termination-ordering:lem:simulation",
+  "source_path": "../06-godel-t-termination-ordering/paper.tex",
+  "source_lines": [
+    625,
+    659
+  ],
+  "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+  "whole_statement_candidate": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSimulationCompletionStatementChecks.fixedArithmeticSimulation",
+  "frozen_type": "LogicLineages.OrdinalComparison.TerminationOrdering.SourceSimulationCompletionTargets.ArithmeticSimulation",
+  "correspondence": [
+    {
+      "source": "There is a computable translation tr",
+      "formal": "One existential translation family is chosen before precedence and endpoints. Joint Primrec in (S, actual typed source), and Computable for each fixed S. Its value is exactly the unchanged representativeCode of packedTranslation."
+    },
+    {
+      "source": "s succ_c t",
+      "formal": "LiteralContexts.ConfinedStrict above s t: unchanged original RecursiveComparison.Strict on source embeddings, conjoined with exact typeSupport containment."
+    },
+    {
+      "source": "fixed universe S=Ty(s)",
+      "formal": "S := NumberedConfinedSourceSimulation.sourceWindow s = Source.SourcePortContexts.literalTypes s. The same S is supplied to both translation calls and to QuotientEdge. SubtypeClosed and both actual auxiliary InUniverse statements are proved."
+    },
+    {
+      "source": "tr(s) R tr(t)",
+      "formal": "NumberedQuotientPaths.PositivePath of the unchanged QuotientEdge. This is the nonempty inductive transitive closure; no reflexive path, equivalence-only motion, or arbitrary source-pair function replaces it."
+    }
+  ],
+  "effectivity_scope": {
+    "fixed": [
+      "finite signature n",
+      "arity : Fin n \u2192 Nat",
+      "ambient typed context Gamma"
+    ],
+    "varying": [
+      "type window S",
+      "typed source (or its original numeric code)"
+    ],
+    "precedence": "arbitrary above, not consulted by translation"
+  },
+  "separate_numeric_interface": {
+    "function": "SourceSimulationCompletion.numericTr",
+    "primitive_target": "NumericTranslationPrimitive",
+    "calibration_target": "NumericTranslationCalibration",
+    "malformed_input": "none via the already faithful decodePackedSourceNumber",
+    "core_source_theorem_extra_premises": []
+  },
+  "dependencies_reused": [
+    "NumberedOriginalStructuralTranslationProof.windowTranslationPrimitive",
+    "NumberedOriginalStructuralTranslationProof.computedConfinedSimulation",
+    "NumberedConfinedSourceSimulationProof.sourceWindow",
+    "NumberedOriginalSourcePresentationSupportProof.packedRoundTrip"
+  ],
+  "not_claimed": [
+    "joint effectivity in encoded n/arity/Gamma",
+    "ID1 accessibility",
+    "ordinal norm extraction",
+    "any-fixed-S containing a smaller source window (separate strengthening planned)"
+  ],
+  "proof_authorship": "independent Sol S1; no subagent or external author",
+  "status": "candidate-exact-gate-pass-awaiting-root-source-adoption",
+  "recorded_at_utc": "2026-11-04T19:51:08.664909+00:00"
+}

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledComparisonStatementChecks
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadWordProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+theorem actual_broad_child_word : Targets.ActualBroadChildWord := Proof.actualBroadChildWord
+theorem scheduled_word_suppliers : Targets.ScheduledWordSuppliers :=
+  ⟨Proof.scheduledJointOrder,Proof.controlBudgetShiftOrder,Proof.sourceInputMassOrder,Proof.actualBroadChildWord⟩
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion

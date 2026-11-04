@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformFiberProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryCalibrationStatementChecks
+theorem fibers_exact : ContextUniformPreflight.fibersComparator :=
+  ContextUniformFiberProof.actualOriginalContextFibers
+theorem disjoint_exact : ContextUniformPreflight.disjointComparator :=
+  ContextUniformFiberProof.actualNoCrossContextEdges
+theorem classes_exact : ContextUniformPrimaryPreflight.classesComparator :=
+  ContextUniformPrimaryCalibrationProof.actualRawClassCodesCalibration
+theorem primary_list_exact : ContextUniformPrimaryPreflight.primaryListComparator :=
+  ContextUniformPrimaryCalibrationProof.actualRawPrimaryListCalibration
+theorem primary_test_exact : ContextUniformPrimaryPreflight.primaryTestComparator :=
+  ContextUniformPrimaryCalibrationProof.actualRawPrimaryTestCalibration
+theorem representative_exact : ContextUniformPrimaryPreflight.representativeComparator :=
+  ContextUniformPrimaryCalibrationProof.actualRawRepresentativeCalibration
+theorem canonical_exact : ContextUniformPrimaryPreflight.canonicalCalibrationComparator :=
+  ContextUniformPrimaryCalibrationProof.actualUniformCanonicalCalibration
+#print axioms fibers_exact
+#print axioms disjoint_exact
+#print axioms classes_exact
+#print axioms primary_list_exact
+#print axioms primary_test_exact
+#print axioms representative_exact
+#print axioms canonical_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ContextUniformPrimaryCalibrationStatementChecks

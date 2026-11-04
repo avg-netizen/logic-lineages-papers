@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks
+open CipherTargets
+
+theorem fixedCipherProductMask : CipherProductMask := CipherProductProof.cipherProductMask
+theorem fixedCipherMultiplication : CipherMultiplication := CipherProductProof.cipherMultiplication
+
+#print axioms fixedCipherProductMask
+#print axioms fixedCipherMultiplication
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks

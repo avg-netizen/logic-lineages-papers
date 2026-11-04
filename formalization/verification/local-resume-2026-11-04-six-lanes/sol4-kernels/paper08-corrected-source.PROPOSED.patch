@@ -1,0 +1,70 @@
+--- a/08-multivariate-collapse-comparison/paper.tex
++++ b/08-multivariate-collapse-comparison/paper.tex
+@@ -237,9 +237,13 @@
+ The next class requires counters as well as terminal norms. A dominant
+ approximation would lose cancellations needed for multivariate comparison.
+ For integer $d\ge1$, retained norm $c\ge0$, and sufficiently large $t$, start
+-with suffix $\omega^d$. At step $i\ge1$ use total norm $f^i(t)$ and replace
+-the nonfinite suffix by the greatest smaller suffix of norm at most
+-$f^i(t)-c$. Stop as soon as it is finite. Let $E^d_c(t)$ be the number of
++with suffix $\omega^d$, where $t\ge c+d+1$. At step $i\ge1$ use total
++norm $f^i(t)$. If the nonfinite suffix is $\eta+n$, with nonzero limit
++part $\eta$ and finite $n$, replace it by $M(\eta,f^i(t)-c)$: the greatest
++suffix below its \emph{limit part} of norm at most $f^i(t)-c$.
++This is the limit-part convention of the one-variable companion; taking
++the predecessor below the whole current suffix defines a different process.
++Stop as soon as the suffix is finite. Let $E^d_c(t)$ be the number of
+ steps and
+ \[
+  X^d_c(t)=f^{E^d_c(t)}(t).
+@@ -256,8 +260,10 @@
+        \qquad t\ge c+d+1.
+ \end{equation}
+ The output of $X$ is still the \emph{total} norm, so the prefix mass is not
+-subtracted again. For fixed signed $j$, put
++subtracted again. An admissible signed pair $(d,j)$ has $d\ge2$ and
++$j\in\mathbb Z$, or $d=1$ and $j\ge0$. For each such fixed pair, put
+ $X^d_{c,j}(t)=f^{E^d_c(t)+j}(t)$ on a tail where the exponent is positive.
++For $d=1$, the depth is $1+j$, so a negative $j$ has no positive-depth tail.
+ These are coherent depths: $f(X^d_{c,j})=X^d_{c,j+1}$. A negative $j$ is a
+ fixed number of already available predecessors under $f$; it is not a new
+ variable-iteration graph.
+@@ -272,7 +278,11 @@
+ \begin{equation}\label{eq:V}
+  V_j(t)=f^{\,f(t)/2+j+1}(t).
+ \end{equation}
+-Then $X^2_{c,j}=V_{j-\lceil c/2\rceil}$. For $d\ge2$, on a computable tail,
++Then $X^2_{c,j}=V_{j-\lceil c/2\rceil}$ for every fixed signed $j$ on
++its positive-depth tail. For $d\ge2$, the unsigned identity
++$X^d_c=X^{d-1}_c\circ X^d_{c+d}$ and the count identity
++\eqref{eq:Erec} hold on a computable tail. The signed identity
++\eqref{eq:Xrec} holds when $d\ge3$ or $j\ge0$:
+ \begin{align}
+  X^d_{c,j}&=X^{d-1}_{c,j}\circ X^d_{c+d},\label{eq:Xrec}\\
+  E^d_c&=E^{d-1}_c\circ X^d_{c+d}+E^d_{c+d}.\label{eq:Erec}
+@@ -294,8 +304,10 @@
+ $c+d(k-1)$, for $k=q,q-1,\ldots,1$. Their $X$ maps compose and their $E$
+ counts add. Replacing $c$ by $c+d$ preserves the initial remainder and
+ initial entry but stops one block earlier. This proves both recurrences,
+-including the coherent final depth $j$. It is also a rank-recursive exact
+-evaluator for every displayed kernel and counter.
++including the coherent final depth $j$ whenever its degree-$(d-1)$
++child is admissible. For $d=2$ and negative $j$, the child has no positive
++depth; the exact quadratic $V$ formula applies instead. This is also a
++rank-recursive exact evaluator for every displayed kernel and counter.
+ \end{proof}
+ 
+ \begin{example}[The first counter that must be retained]
+@@ -494,8 +506,10 @@
+ \end{proof}
+ 
+ \begin{lemma}[Effective residues of kernels and counters]\label{lem:kernel-residues}
+-For each fixed $d,c,j,m$, both $X^d_{c,j}$ and $E^d_c$ have an effectively
+-computable constant residue modulo $m$ on a computable tail. The $X$
++For each fixed $d\ge1$, $c\ge0$ and $m\ge1$, the counter $E^d_c$
++has an effectively computable constant residue modulo $m$ on a computable
++tail. For every admissible signed pair $(d,j)$, the same holds for
++$X^d_{c,j}$ on its positive-depth tail. The $X$
+ residue is $r_m$. A valid counter residue is
+ \begin{equation}\label{eq:E-residue}
+  E^d_c(t)\equiv

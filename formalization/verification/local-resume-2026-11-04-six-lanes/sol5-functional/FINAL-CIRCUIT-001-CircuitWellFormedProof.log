@@ -1,0 +1,134 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:31:71: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  a ≥ 0
+  a - c ≥ 1
+  a - d ≥ 1
+  a - e ≥ 4
+where
+ a := ↑b
+ c := ↑u
+ d := ↑v
+ e := ↑aux
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:35:73: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  a ≥ 0
+  a - c ≥ 0
+  a - d ≥ 9
+where
+ a := ↑b
+ c := ↑s
+ d := ↑aux
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:39:70: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  d - f ≥ 1
+  c ≥ 0
+  c - 2*d - e ≥ 0
+  c - h ≤ 0
+where
+ c := ↑b✝
+ d := ↑n
+ e := ↑g
+ f := ↑a✝⁵
+ h := ↑i
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:48:6: error: Type mismatch: After simplification, term
+  hn
+ has type
+  n + i < unknownCount n g
+but is expected to have type
+  ∀ (a : ℤ) (a_1 : ℕ) (b : Option ℕ),
+    a = 1 ∧ a_1 = 0 ∧ b = some (n + i) ∨ a = -1 + -↑k ∧ a_1 = 0 ∧ b = none →
+      ∀ (i : ℕ), b = some i → i < unknownCount n g
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:52:16: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  k ≥ 0
+  j ≥ 0
+  h ≥ 0
+  f ≥ 0
+  e ≥ 0
+  e - k ≤ 0
+  d ≥ 0
+  d - e + f ≤ -1
+  d + f - h ≥ 1
+  d + f - j ≥ 1
+  c ≥ 0
+  c - d ≥ 1
+where
+ c := ↑g
+ d := ↑i✝
+ e := ↑(unknownCount n g)
+ f := ↑n
+ h := ↑x
+ j := ↑y
+ k := ↑i
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:71:66: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - e ≥ 1
+  c - f ≥ 1
+  b ≥ 0
+  b - c + d ≤ -1
+  b + d - e ≥ 1
+  b + d - f ≥ 1
+  12*b - c + h ≤ -12
+  a ≥ 0
+  a - b ≥ 1
+  a + 4*b - c + 2*d ≤ -4
+where
+ a := ↑g
+ b := ↑i
+ c := ↑(unknownCount n g)
+ d := ↑n
+ e := ↑x
+ f := ↑y
+ h := ↑(polynomialAux n g)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:72:8: error: Tactic `apply` failed: could not unify the conclusion of `@append_bound`
+  RowsBound ?b (?rs ++ ?ss)
+with the goal
+  RowsBound (unknownCount n g) (squareRows (n + g + n + 4 * i) (n + g + n + 4 * i + 3) (polynomialAux n g + 12 * i + 8))
+
+Note: The full type of `@append_bound` is
+  ∀ {b : ℕ} {rs ss : List Row}, RowsBound b rs → RowsBound b ss → RowsBound b (rs ++ ss)
+
+case mul.hs
+n g i : ℕ
+hi : i < g
+hn : n + i < unknownCount n g
+x y : ℕ
+hx : x < n + i
+hy : y < n + i
+hxb : x < unknownCount n g
+hyb : y < unknownCount n g
+hsb : n + g + n + 4 * i + 3 < unknownCount n g
+hab : polynomialAux n g + 12 * i + 12 ≤ unknownCount n g
+⊢ RowsBound (unknownCount n g) (squareRows (n + g + n + 4 * i) (n + g + n + 4 * i + 3) (polynomialAux n g + 12 * i + 8))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:51:59: warning: This simp argument is unused:
+  constant
+
+Hint: Omit it from the simp argument list.
+  simp [̵R̵o̵w̵s̵B̵o̵u̵n̵d̵,̵W̵e̵l̵l̵F̵o̵r̵m̵e̵d̵C̵o̵d̵e̵,̵g̵a̵t̵e̵R̵o̵w̵s̵,̵w̵i̵r̵e̵M̵o̵n̵o̵m̵i̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵]̵[̲R̲o̲w̲s̲B̲o̲u̲n̲d̲,̲ ̲W̲e̲l̲l̲F̲o̲r̲m̲e̲d̲C̲o̲d̲e̲,̲ ̲g̲a̲t̲e̲R̲o̲w̲s̲,̲ ̲w̲i̲r̲e̲M̲o̲n̲o̲m̲i̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:71:52: warning: This simp argument is unused:
+  constant
+
+Hint: Omit it from the simp argument list.
+  simp [̵R̵o̵w̵s̵B̵o̵u̵n̵d̵,̵W̵e̵l̵l̵F̵o̵r̵m̵e̵d̵C̵o̵d̵e̵,̵w̵i̵r̵e̵M̵o̵n̵o̵m̵i̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵]̵[̲R̲o̲w̲s̲B̲o̲u̲n̲d̲,̲ ̲W̲e̲l̲l̲F̲o̲r̲m̲e̲d̲C̲o̲d̲e̲,̲ ̲w̲i̲r̲e̲M̲o̲n̲o̲m̲i̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitWellFormedProof.lean:93:2: error: 'change' tactic failed, pattern
+  RowsBound ?m.114 (inputRows ?m.115 ?m.116 ++ (?m.118 ++ (?m.120 ++ ?m.122)))
+is not definitionally equal to target
+  WellFormedCode (encodeCircuitSystem c)
