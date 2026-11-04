@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 24,
-    "components": 7
+    "fixed_aliases": 26,
+    "components": 8
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104G",
-    "source_sha256": "dab94656a9a53db31e03b8672e1333f275feaf1a73e19cfae0a8bdae21ebbf4f",
-    "closure_sha256": "55de15c198a8419c5fd4ee351e36a63c9fbe763c9c18b2b98031a8791f1b6ea2",
+    "module": "LogicLineages.ExternalCheckpoint20261104H",
+    "source_sha256": "974039277a279588f586e392b9cd9692eec2a29dca43c3d94d0b3b632b9e18ea",
+    "closure_sha256": "55fc6ae9db5211e227696606b2c13ae5061f53ecfe7b3189ae43db9400d7ad25",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -130,6 +130,16 @@
         "name": "fixed_024_fixedActualNumericDirectPrimitive",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualNumericDirectPrimitive",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualNumericDirectPrimitive"
+      },
+      {
+        "name": "fixed_025_exact_control_parity",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.Targets.ExactControlParity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks.exact_control_parity"
+      },
+      {
+        "name": "fixed_026_non_eventual_periodicity",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.Targets.NonEventualPeriodicity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks.non_eventual_periodicity"
       }
     ],
     "allowed_axioms": [
@@ -362,6 +372,38 @@
           "sha256": "c5dab5afba1d08f45af99027aa883a5677a616400a4a0b0e5b6ae8aba314a8cd"
         }
       ]
+    },
+    {
+      "name": "SourceMachineControlNonperiodicity",
+      "scope": "Actual transition-clock Gamma primitive recursion, exact parity and non-eventual-periodicity; explicit enumeration choice, no full hardness.",
+      "freeze_sha256": "bf06d288c578fb7c1d8cdcb617bf556c5a129d4ac5066eba8cab18b080f15a2f",
+      "closure_sha256": "cffa7e76b8fdd655dcced3aa323e2432e81a527473bf14441b84855e6d2d2ea5",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityDefinitions.lean",
+          "sha256": "6b7b6129961d33d6d5df2a055635444bce1de436e7907db4074812ac50d4954a"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityTargets.lean",
+          "sha256": "6eb44de8c709675028a83669502e8e947303945976781f150f66ec9cdc1334f0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityStatementChecks.lean",
+          "sha256": "5632c947e6f42cad768baaab6ee310aef2dafcb25f2d90955b1b084500fc2ec1"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceMachineControlNonperiodicity-SOURCE-CORRESPONDENCE.md",
+          "sha256": "0920508f12c1709d5db842f300976108a8cac4e4db9cd3f4c2c1fd592aefa5c5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityParityProof.lean",
+          "sha256": "4827c07aaa3d2e61ed7af56bf6c9483ec99db5ac55e51da3d5239f19360fb015"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityProof.lean",
+          "sha256": "a24b31ba7de4078751a060fbfc057b43787496eda2a047c3d59c7d236f3ef553"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -374,6 +416,7 @@
     "Blank-machine simulation establishes the actual transition clock, primitive recursion and termination calibration only; no undecidability or parity claim.",
     "Direct quotient certificates are existential witnesses with explicit decoded endpoints, not a primitive-recursive checker, arithmetic representation or well-foundedness result.",
     "Blank-halting reduction preserves the fixed actual table encoding and terminal bridge; no timing equality, parity or full source hardness claim.",
-    "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim."
+    "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim.",
+    "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim."
   ]
 }

@@ -43,3 +43,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104F`, 21 ex
 Three exact actual checkers are primitive recursive under fixed signature size, arity and context, with jointly varying windows and precedence table. Finite-state fold calibration and literal decoder behavior are preserved. No identification of distinct Context encodings, arithmetic representation or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DIRECT-PRIMREC-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104G`, 24 exact aliases.
+
+## SourceMachineControlNonperiodicity
+
+Two exact suppliers establish primitive-recursive machine-clock control with exact parity and no eventual parity period for every parameter b. The actual table enumeration and transition clock are explicit. No additional premise, identification with a different clock or full source hardness claim. See [source correspondence](layered-comparison/SourceMachineControlNonperiodicity-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104H`, 26 exact aliases.

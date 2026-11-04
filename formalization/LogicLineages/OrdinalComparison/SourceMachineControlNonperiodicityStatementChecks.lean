@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicityTargets
+public import LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks
+theorem exact_control_parity : Targets.ExactControlParity := Proof.exactControlParity
+theorem non_eventual_periodicity : Targets.NonEventualPeriodicity := Proof.nonEventualPeriodicity
+end LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity
