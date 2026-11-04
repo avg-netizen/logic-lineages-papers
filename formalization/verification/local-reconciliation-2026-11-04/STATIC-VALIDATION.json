@@ -1,0 +1,75 @@
+{
+  "schema": "local-source-reconciliation-2026-11-04-v1",
+  "outcome": "PASS",
+  "archive": "20261104-125736-logic-papers-unpublished-reconciliation-20261104.zip",
+  "archive_sha256": "07e9349cc4b20d31d79f2290fe249084c784f8d9deb7537d4901c7c9423db208",
+  "archive_base_commit": "f1fb833597e3706024fc60c021bc72a4bfed953f",
+  "fetched_main": "43a6dceb5804318d72baad25b64212c21db87c32",
+  "archive_entries": 794,
+  "manifest_hashes_verified": 793,
+  "checkpoint_source_hashes_verified": 811,
+  "base_file_overwrites": 0,
+  "fetched_tracked_files_modified_or_deleted": 0,
+  "accepted_source_files_recovered": 781,
+  "accepted_components_new": 139,
+  "accepted_aliases_new": 367,
+  "accepted_components_cumulative": 171,
+  "accepted_aliases_cumulative": 468,
+  "acceptance_evidence": "external CHECKPOINT-AG-VALIDATION.json; source integrity and manifest consistency verified locally, compiler results not independently replayed",
+  "aggregate_alias_targets_and_suppliers_match_manifest": true,
+  "aggregate_closure_local_modules": 1953,
+  "aggregate_closure_upstream_imports": 76,
+  "local_closure_fingerprint_algorithm": "SHA256 of sorted compact JSON mapping module names to source SHA256",
+  "local_closure_fingerprint": "06806221e20668925c7c81f9ed59a31d70caef3916c3b715bc3aad707c62e5d9",
+  "external_closure_fingerprint": "9d4f50a22c2e723aadf108ad07618b0f71d8575810b801eab45cafa7c9ae1167",
+  "external_closure_fingerprint_recomputed": false,
+  "missing_upstream_olean_cache": [],
+  "import_cycles_or_forbidden_placeholders": 0,
+  "unreviewed_draft_files": 11,
+  "draft_only_paths": [
+    "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionDefinitions.lean",
+    "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionProof.lean",
+    "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionStatementChecks.lean",
+    "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerDefinitions.lean",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerProof.lean",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerStatementChecks.lean",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerSupportProof.lean",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerTargets.lean",
+    "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceZeroPatternSubstitution-SOURCE-CORRESPONDENCE.md",
+    "formalization/verification/external-continuation-2026-11-04/termination-ordering/SOURCE-GROUND-LAMBDA-TOWER-SOURCE.md"
+  ],
+  "pending_independent_reviews": [
+    "GroundLambdaTower1",
+    "ZeroPatternSubstitution3"
+  ],
+  "draft_source_checks": {
+    "LogicLineages.OrdinalComparison.SourceZeroPatternSubstitutionStatementChecks": {
+      "local_modules": 373,
+      "upstream_imports": 36,
+      "status": "source import closure present; independent review and local compiler replay pending"
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundLambdaTowerStatementChecks": {
+      "local_modules": 862,
+      "upstream_imports": 28,
+      "status": "source import closure present; independent review and local compiler replay pending"
+    }
+  },
+  "drafts_absent_from_accepted_aggregate_and_repository_root": true,
+  "root_imports_and_numbered_register_unchanged": true,
+  "local_compiler_replay": "NOT RUN; recovery did not release the existing compiler pause",
+  "full_root_and_ci": "NOT RUN",
+  "research_policy_paused": true,
+  "upstream_downloads": false,
+  "limitations": [
+    "Focused AG aggregate only:171 accepted components and468 exact aliases. No full-root or CI verification claim.",
+    "All prior AF101 files, root imports and theorem register preserved byte-for-byte. This additive checkpoint does not promote manuscript statement status.",
+    "Paper09 strict/weak results concern the independently defined fixed-b coded restricted languages, with malformed-code behavior specified; not all-code identity with the literal paper language.",
+    "Chosen machine enumeration and clock, canonical observation policy, parity and generated-query restrictions remain explicit.",
+    "Fixed-b primitive recursive source evaluation is proved with input-dependent finite iteration. No joint-b primitive recursion or input-independent iteration bound is asserted.",
+    "Logarithmic size is the stated pre-aggregation Result.nodes metric, not final tree, natural-code length, or runtime.",
+    "Termination results retain each explicit subtype, context decode, calibration, confinement and image-computability premise. No global term computability, ID1 derivation or unrestricted rewrite well-foundedness claim.",
+    "Required clean supplemental candidate batches were independently checked per component; no raw receipts or logs are included.",
+    "Backup source bytes are locally readback-verified and upload-confirmed. Remote Space byte readback is not attempted under the existing restriction."
+  ]
+}
