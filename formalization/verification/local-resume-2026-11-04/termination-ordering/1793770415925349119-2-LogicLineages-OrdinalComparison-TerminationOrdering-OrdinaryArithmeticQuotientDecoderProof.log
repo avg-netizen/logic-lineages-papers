@@ -1,0 +1,99 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:20:40: error: Application type mismatch: The argument
+  e
+has type
+  Encodable α
+but is expected to have type
+  Encodable β
+in the application
+  @Encodable.ofEquiv α β e
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:36:12: error: Type mismatch: After simplification, term
+  Eq.symm h
+ has type
+  b = false
+but is expected to have type
+  Encodable.encode b = 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:39:14: error: Type mismatch: After simplification, term
+  Eq.symm h
+ has type
+  b = true
+but is expected to have type
+  Encodable.encode b = 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:40:16: error: `simp` made no progress
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:54:2: error: No goals to be solved
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:56:8: warning: declaration uses `sorry`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:73:13: error: unsolved goals
+case h.succ.none
+α : Type
+e : Encodable α
+h : Canonical α e
+l : List α
+k : ℕ
+ih : ∀ m < k + 1, ∀ (a : List α), Encodable.decode m = some a → Encodable.encode a = m
+hx : Encodable.decode (Nat.unpair k).1 = none
+hl : none <*> Encodable.decode (Nat.unpair k).2 = some l
+⊢ Encodable.encode l = k + 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:76:15: error: unsolved goals
+case h.succ.some.none
+α : Type
+e : Encodable α
+h : Canonical α e
+l : List α
+k : ℕ
+ih : ∀ m < k + 1, ∀ (a : List α), Encodable.decode m = some a → Encodable.encode a = m
+x : α
+hx : Encodable.decode (Nat.unpair k).1 = some x
+hy : Encodable.decode (Nat.unpair k).2 = none
+hl : (some fun x2 => x :: x2) <*> none = some l
+⊢ Encodable.encode l = k + 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:94:8: warning: declaration uses `sorry`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:94:56: warning: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:96:2: warning: 'apply canonicalEquiv' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:97:2: warning: 'exact canonicalSubtype _ (canonicalList e h) (fun l : List α => l.length = n)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:97:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:99:8: warning: declaration uses `sorry`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:100:5: warning: Variable name `hd` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:102:2: warning: 'apply canonicalEquiv' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:103:2: warning: 'apply canonicalSubtype' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:104:2: warning: 'exact canonicalFinArrow _ (canonicalSigma _ d (canonicalFin n) hd) n' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:103:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:104:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:158:2: error: Tactic `rfl` failed: The left-hand side
+  (Encodable.decode (Nat.unpair k).1).bind fun b =>
+    Option.map (fun table => ((k, b).2, table)) (Encodable.decode (Nat.unpair (k, b).1).2)
+is not definitionally equal to the right-hand side
+  Encodable.decode k
+
+n : ℕ
+windowP : Primrec Encodable.decode
+hleft : Primrec fun a => Encodable.decode (Nat.unpair a).1
+hright : Primrec fun a => Encodable.decode (Nat.unpair a).2
+hbody : Primrec fun p => (p.1.2, p.2)
+hmap : Primrec fun p => Option.map (fun table => (p.2, table)) (Encodable.decode (Nat.unpair p.1).2)
+k : ℕ
+⊢ ((Encodable.decode (Nat.unpair k).1).bind fun b =>
+      Option.map (fun table => ((k, b).2, table)) (Encodable.decode (Nat.unpair (k, b).1).2)) =
+    Encodable.decode k

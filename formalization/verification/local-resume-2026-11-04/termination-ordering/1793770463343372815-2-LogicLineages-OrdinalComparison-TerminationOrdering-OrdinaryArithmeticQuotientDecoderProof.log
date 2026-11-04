@@ -1,0 +1,30 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:46:16: error: `simp` made no progress
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:78:26: error(lean.unknownIdentifier): Unknown constant `Option.seq`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:78:13: error: unsolved goals
+case h.succ.none
+α : Type
+e : Encodable α
+h : Canonical α e
+l : List α
+k : ℕ
+ih : ∀ m < k + 1, ∀ (a : List α), Encodable.decode m = some a → Encodable.encode a = m
+hx : Encodable.decode (Nat.unpair k).1 = none
+hl : none <*> Encodable.decode (Nat.unpair k).2 = some l
+⊢ Encodable.encode l = k + 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:81:32: error(lean.unknownIdentifier): Unknown constant `Option.seq`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:81:15: error: unsolved goals
+case h.succ.some.none
+α : Type
+e : Encodable α
+h : Canonical α e
+l : List α
+k : ℕ
+ih : ∀ m < k + 1, ∀ (a : List α), Encodable.decode m = some a → Encodable.encode a = m
+x : α
+hx : Encodable.decode (Nat.unpair k).1 = some x
+hy : Encodable.decode (Nat.unpair k).2 = none
+hl : (some fun x2 => x :: x2) <*> none = some l
+⊢ Encodable.encode l = k + 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean:163:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

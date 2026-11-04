@@ -1,0 +1,78 @@
+{
+  "accepted": {
+    "round": "R012-ordinary-arithmetic-recursion",
+    "restart_round": 3,
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks.exactInitialGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks.exactStepGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks.exactActualRecursionGraph"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionTargets.InitialGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionTargets.StepGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionTargets.ActualRecursionGraph"
+    ],
+    "freeze": "verification/local-resume-2026-11-04/termination-ordering/R012-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769385997232087-2.json",
+    "gate_log": "verification/local-resume-2026-11-04/termination-ordering/1793769385997232087-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticRecursionStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionDefinitions.lean",
+        "sha256": "c9abee4af24a44d98263edc1327803a4a409de54e23e2f0d50a0b6f3b6a0baed"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean",
+        "sha256": "529841e1e3e12608ba1d12b7fba86009f0bb85d9e618ffdce252ffd5243b5233"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionStatementChecks.lean",
+        "sha256": "53e4a36187e33bb51a9fa047b43c53c697595791a75d2afe04bd3a49ea22bdee"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionTargets.lean",
+        "sha256": "ebf48bfc6101395b0f16fcacbf4fa6b0ca86e6190367802d83117eb74de9a844"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769239558801407-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769239558801407-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticRecursionDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769239558801407-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769239558801407-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticRecursionTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769385997232087-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769385997232087-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticRecursionProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769385997232087-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769385997232087-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticRecursionStatementChecks.log"
+      }
+    ],
+    "source_pins": [
+      {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean",
+        "sha256": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b"
+      }
+    ],
+    "source_scope": "Ordinary arithmetic primitive-recursion graph from the actual base and adjacent-step Program graph hypotheses. Explicit two-component beta sequence, actual j/previous/unchanged parameters argument order, arbitrary recursion counter includingzero; finite list witness and induction prove both directions. Complete recursion clause only; full structural induction/compiler, arithmetic H/R applications, internalID1/norm suppliers still unclaimed. No semantic program/checker/path atoms or oracle premise.",
+    "numbered_statements_completed": []
+  }
+}

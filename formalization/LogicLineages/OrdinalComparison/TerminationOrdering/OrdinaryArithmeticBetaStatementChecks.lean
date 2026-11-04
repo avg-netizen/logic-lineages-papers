@@ -1,0 +1,22 @@
+module
+
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks
+
+open OrdinaryArithmeticBetaTargets
+
+theorem exactBetaTermTruth : BetaTermTruth := OrdinaryArithmeticBetaProof.betaTermTruth
+theorem exactActualBetaTruth : ActualBetaTruth := OrdinaryArithmeticBetaProof.actualBetaTruth
+theorem exactFiniteSequenceWitness : FiniteSequenceWitness :=
+  OrdinaryArithmeticBetaProof.finiteSequenceWitness
+
+#print axioms exactBetaTermTruth
+#print axioms exactActualBetaTruth
+#print axioms exactFiniteSequenceWitness
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks

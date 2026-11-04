@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-11-04T05:02:35.116466+00:00",
+  "authority": "Explicit user: stop the codex lane after five rounds",
+  "scope": "Only independent Codex L2 in the 4 November local restart",
+  "baseline_commit": "c6ab991f023225d6e016a071435c07c3e357babe",
+  "stop_after_new_completed_rounds": 5,
+  "historical_rounds_excluded": "L2 R001-R009 completed before this restart",
+  "round_definition": "A coherent accepted/checkpointed research/formalization round; compiler retries and constituent helper checks are not extra rounds.",
+  "on_ceiling": "Complete current fifth checkpoint repairs/checks/handoff, reap all owned work, disable successors and pause. No sixth round.",
+  "supervised_L1_Claude_continues": true,
+  "shared_compiler_policy_must_not_be_paused_by_L2": true,
+  "requires_explicit_user_release_after_stop": true,
+  "administrative_direction_not_mathematical_source_pin": true,
+  "latest_user_steering": "Explicit user: pause the independent lane after the current round, if it is not already",
+  "pause_after_current_round": true,
+  "current_round_ceiling": "R014",
+  "latest_steering_utc": "2026-11-04T05:35:46.286943+00:00",
+  "observed_completed_restart_rounds": 4
+}

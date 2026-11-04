@@ -1,0 +1,126 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:24:14: error(lean.invalidField): Invalid field notation: Type of
+  Fin.cons ?m.28 ?m.30 i
+is not known; cannot resolve field `realize`
+
+Hint: Consider replacing the field projection `.realize` with a call to the function `Term.realize`.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:24:26: error: Application type mismatch: The argument
+  ts
+has type
+  Fin n → OrdinaryArithmetic.Term α
+but is expected to have type
+  (i : Fin n) → ?m.27 i.succ
+in the application
+  Fin.cons ?m.28 ts
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:55:60: error(lean.unknownIdentifier): Unknown identifier `realize_cons`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:59:4: error: Type mismatch
+  h ![j, Term.realize v a % ((j + 1) * Term.realize v b + 1), Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1)]
+    ⟨⟨hj, rfl⟩, rfl⟩
+has type
+  Formula.Realize g
+    (Fin.cons
+      (![j, Term.realize v a % ((j + 1) * Term.realize v b + 1),
+          Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1)]
+        2)
+      fun i =>
+      Term.realize
+        (Sum.elim v
+          ![j, Term.realize v a % ((j + 1) * Term.realize v b + 1),
+            Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1)])
+        (Fin.cons (var (Sum.inr 0)) (Fin.cons (var (Sum.inr 1)) fun i => Term.relabel Sum.inl (params i)) i))
+but is expected to have type
+  Formula.Realize g
+    (Fin.cons (Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1))
+      (Fin.cons j (Fin.cons (Term.realize v a % ((j + 1) * Term.realize v b + 1)) fun i => Term.realize v (params i))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:63:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  xs 1
+in the target expression
+  Formula.Realize g
+    (Fin.cons (xs 2) fun i =>
+      Term.realize (Sum.elim v xs)
+        (Fin.cons (var (Sum.inr 0)) (Fin.cons (var (Sum.inr 1)) fun i => Term.relabel Sum.inl (params i)) i))
+
+case mpr
+n : ℕ
+α : Type
+g : OrdinaryArithmetic.Formula (Fin (n + 3))
+a b t : OrdinaryArithmetic.Term α
+params : Fin n → OrdinaryArithmetic.Term α
+v : α → ℕ
+h :
+  ∀ j < Term.realize v t,
+    Formula.Realize g
+      (Fin.cons (Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1))
+        (Fin.cons j
+          (Fin.cons (Term.realize v a % ((j + 1) * Term.realize v b + 1)) fun i => Term.realize v (params i))))
+xs : Fin 3 → ℕ
+hn : Term.realize v a % ((xs 0 + 1 + 1) * Term.realize v b + 1) = xs 2
+hj : xs 0 < Term.realize v t
+hp : Term.realize v a % ((xs 0 + 1) * Term.realize v b + 1) = xs 1
+⊢ Formula.Realize g
+    (Fin.cons (xs 2) fun i =>
+      Term.realize (Sum.elim v xs)
+        (Fin.cons (var (Sum.inr 0)) (Fin.cons (var (Sum.inr 1)) fun i => Term.relabel Sum.inl (params i)) i))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:101:12: error(lean.unknownIdentifier): Unknown constant `List.Vector.ofFn_cons`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:111:6: error: Type mismatch: After simplification, term
+  hcode
+ has type
+  a % ((j + 1) * b + 1) = (run 0 :: List.ofFn fun i => run (↑i + 1))[j]
+but is expected to have type
+  a % ((j + 1) * b + 1) = run j
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:113:6: error: Tactic `assumption` failed
+
+case mpr.refine_1
+n : ℕ
+f : Program n
+g : Program (n + 2)
+F : OrdinaryArithmetic.Formula (Fin (n + 1))
+G : OrdinaryArithmetic.Formula (Fin (n + 3))
+hf : ∀ (v : Fin (n + 1) → ℕ), Formula.Realize F v ↔ evaluate f (List.Vector.ofFn fun i => v i.succ) = v 0
+hg : ∀ (v : Fin (n + 3) → ℕ), Formula.Realize G v ↔ evaluate g (List.Vector.ofFn fun i => v i.succ) = v 0
+v : Fin (n + 2) → ℕ
+params : List.Vector ℕ n := List.Vector.ofFn fun i => v i.succ.succ
+run : ℕ → ℕ := fun j => Nat.rec (evaluate f params) (fun k previous => evaluate g (k ::ᵥ previous ::ᵥ params)) j
+run_zero : run 0 = evaluate f params
+run_succ : ∀ (j : ℕ), run (j + 1) = evaluate g (j ::ᵥ run j ::ᵥ params)
+veq : (List.Vector.ofFn fun i => v i.succ) = v 1 ::ᵥ params
+evaleq : evaluate (f.recursion g) (List.Vector.ofFn fun i => v i.succ) = run (v 1)
+h : run (v 1) = v 0
+l : List ℕ := List.ofFn fun i => run ↑i
+a b : ℕ
+hab : ∀ (i : Fin l.length), Formula.Realize betaGraph ![a, b, ↑i, l[i] ]
+entry_eq : ∀ j ≤ v 1, a % ((j + 1) * b + 1) = run j
+⊢ evaluate f (List.Vector.ofFn fun i => v i.succ.succ) = a % (b + 1)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:115:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a % ((j + 1) * b + 1)
+in the target expression
+  evaluate g
+      (List.Vector.ofFn fun i =>
+        Fin.cons j (Fin.cons (![a, b] 0 % ((j + 1) * ![a, b] 1 + 1)) fun i => v i.succ.succ) i) =
+    ![a, b] 0 % ((j + 1 + 1) * ![a, b] 1 + 1)
+
+case mpr.refine_2
+n : ℕ
+f : Program n
+g : Program (n + 2)
+F : OrdinaryArithmetic.Formula (Fin (n + 1))
+G : OrdinaryArithmetic.Formula (Fin (n + 3))
+hf : ∀ (v : Fin (n + 1) → ℕ), Formula.Realize F v ↔ evaluate f (List.Vector.ofFn fun i => v i.succ) = v 0
+hg : ∀ (v : Fin (n + 3) → ℕ), Formula.Realize G v ↔ evaluate g (List.Vector.ofFn fun i => v i.succ) = v 0
+v : Fin (n + 2) → ℕ
+params : List.Vector ℕ n := List.Vector.ofFn fun i => v i.succ.succ
+run : ℕ → ℕ := fun j => Nat.rec (evaluate f params) (fun k previous => evaluate g (k ::ᵥ previous ::ᵥ params)) j
+run_zero : run 0 = evaluate f params
+run_succ : ∀ (j : ℕ), run (j + 1) = evaluate g (j ::ᵥ run j ::ᵥ params)
+veq : (List.Vector.ofFn fun i => v i.succ) = v 1 ::ᵥ params
+evaleq : evaluate (f.recursion g) (List.Vector.ofFn fun i => v i.succ) = run (v 1)
+h : run (v 1) = v 0
+l : List ℕ := List.ofFn fun i => run ↑i
+a b : ℕ
+hab : ∀ (i : Fin l.length), Formula.Realize betaGraph ![a, b, ↑i, l[i] ]
+entry_eq : ∀ j ≤ v 1, a % ((j + 1) * b + 1) = run j
+j : ℕ
+hj : j < v 1
+⊢ evaluate g
+      (List.Vector.ofFn fun i =>
+        Fin.cons j (Fin.cons (![a, b] 0 % ((j + 1) * ![a, b] 1 + 1)) fun i => v i.succ.succ) i) =
+    ![a, b] 0 % ((j + 1 + 1) * ![a, b] 1 + 1)

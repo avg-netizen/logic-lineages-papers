@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks
+
+open OrdinaryArithmeticCompositionTargets
+
+theorem exactExistsFiniteTruth : ExistsFiniteTruth := OrdinaryArithmeticCompositionProof.existsFiniteTruth
+theorem exactForallFiniteTruth : ForallFiniteTruth := OrdinaryArithmeticCompositionProof.forallFiniteTruth
+theorem exactApplyGraphTruth : ApplyGraphTruth := OrdinaryArithmeticCompositionProof.applyGraphTruth
+theorem exactFiniteConjunctionTruth : FiniteConjunctionTruth := OrdinaryArithmeticCompositionProof.finiteConjunctionTruth
+theorem exactLessTruth : LessTruth := OrdinaryArithmeticCompositionProof.lessTruth
+theorem exactActualCompositionGraph : ActualCompositionGraph := OrdinaryArithmeticCompositionProof.actualCompositionGraph
+
+#print axioms exactExistsFiniteTruth
+#print axioms exactForallFiniteTruth
+#print axioms exactApplyGraphTruth
+#print axioms exactFiniteConjunctionTruth
+#print axioms exactLessTruth
+#print axioms exactActualCompositionGraph
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks

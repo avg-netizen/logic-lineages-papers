@@ -1,0 +1,23 @@
+module
+
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks
+
+open OrdinaryArithmeticProgramTargets
+
+theorem exactProgramGraphTruth : ProgramGraphTruth := OrdinaryArithmeticProgramProof.programGraphTruth
+theorem exactVectorProgramGraphTruth : VectorProgramGraphTruth := OrdinaryArithmeticProgramProof.vectorProgramGraphTruth
+theorem exactAppliedProgramGraphTruth : AppliedProgramGraphTruth := OrdinaryArithmeticProgramProof.appliedProgramGraphTruth
+theorem exactAllPrimitiveGraphs : AllPrimitiveGraphs := OrdinaryArithmeticProgramProof.allPrimitiveGraphs
+
+#print axioms exactProgramGraphTruth
+#print axioms exactVectorProgramGraphTruth
+#print axioms exactAppliedProgramGraphTruth
+#print axioms exactAllPrimitiveGraphs
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks

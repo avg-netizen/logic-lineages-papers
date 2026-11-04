@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-04T05:37:59.968277+00:00",
+  "ledger": {
+    "file": "verification/local-resume-2026-11-04/termination-ordering/ACCEPTED.json",
+    "sha256": "49a0457de93a598fecdb3ca1cba771c08c90047a2dfcacecb825816276d5055a"
+  },
+  "checks": [
+    {
+      "round": "R010-ordinary-arithmetic-beta",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks",
+      "returncode": 0,
+      "axiom_audit": "PASS",
+      "current_frozen_and_accepted_hashes": "PASS"
+    },
+    {
+      "round": "R011-ordinary-arithmetic-composition",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks",
+      "returncode": 0,
+      "axiom_audit": "PASS",
+      "current_frozen_and_accepted_hashes": "PASS"
+    },
+    {
+      "round": "R012-ordinary-arithmetic-recursion",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks",
+      "returncode": 0,
+      "axiom_audit": "PASS",
+      "current_frozen_and_accepted_hashes": "PASS"
+    },
+    {
+      "round": "R013-full-ordinary-arithmetic-program-compiler",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks",
+      "returncode": 0,
+      "axiom_audit": "PASS",
+      "current_frozen_and_accepted_hashes": "PASS"
+    },
+    {
+      "round": "R014-actual-encoded-H-positiveR-arithmetic",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks",
+      "returncode": 0,
+      "axiom_audit": "PASS",
+      "current_frozen_and_accepted_hashes": "PASS"
+    }
+  ],
+  "owned_lean_files": 22,
+  "fixed_aliases": 21,
+  "no_new_unaccepted_lean_files": true,
+  "no_compiler_invoked_by_validation": true
+}

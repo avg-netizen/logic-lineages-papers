@@ -1,0 +1,84 @@
+{
+  "accepted": {
+    "round": "R011-ordinary-arithmetic-composition",
+    "restart_round": 2,
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks.exactExistsFiniteTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks.exactForallFiniteTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks.exactApplyGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks.exactFiniteConjunctionTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks.exactLessTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks.exactActualCompositionGraph"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets.ExistsFiniteTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets.ForallFiniteTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets.ApplyGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets.FiniteConjunctionTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets.LessTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets.ActualCompositionGraph"
+    ],
+    "freeze": "verification/local-resume-2026-11-04/termination-ordering/R011-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769145009715517-2.json",
+    "gate_log": "verification/local-resume-2026-11-04/termination-ordering/1793769145009715517-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticCompositionStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionDefinitions.lean",
+        "sha256": "ac8b3de14d71d22e84ef06d8abfbac0009af515b58715a92868413b36e98cee2"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean",
+        "sha256": "beb4859dc405e76f8b92a4ed9b82ce87e23bcbc1b1142d911ce46131b446c435"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionStatementChecks.lean",
+        "sha256": "59b180dbd6d0586d4e4fd21fb67daf7b0bce59033ac4d9bd6df1e501ae932232"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionTargets.lean",
+        "sha256": "7c01786c0ea5ac0aa6c6435f7df6dd9932f51d64ff09971770a82393ace30b7d"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768988781674679-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793768988781674679-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticCompositionDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768988781674679-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793768988781674679-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticCompositionTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769145009715517-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769145009715517-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticCompositionProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionStatementChecks",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769145009715517-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769145009715517-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticCompositionStatementChecks.log"
+      }
+    ],
+    "source_pins": [
+      {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean",
+        "sha256": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b"
+      }
+    ],
+    "source_scope": "Ordinary arithmetic finite existential/universal binding with preserved free environment, arbitrary-term capture-avoiding graph substitution, finite conjunction and arithmetic strict order; actual Program.composition graph from displayed child graph hypotheses. Complete composition compiler component, conditional child correctness only; full structural compiler/recursion/standard-N H/R/internalID1 source claims remain unpaid. No new symbols or oracle predicate.",
+    "numbered_statements_completed": []
+  }
+}

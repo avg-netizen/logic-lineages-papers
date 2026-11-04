@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks
+
+open OrdinaryArithmeticRecursionTargets
+
+theorem exactInitialGraphTruth : InitialGraphTruth := OrdinaryArithmeticRecursionProof.initialGraphTruth
+theorem exactStepGraphTruth : StepGraphTruth := OrdinaryArithmeticRecursionProof.stepGraphTruth
+theorem exactActualRecursionGraph : ActualRecursionGraph := OrdinaryArithmeticRecursionProof.actualRecursionGraph
+
+#print axioms exactInitialGraphTruth
+#print axioms exactStepGraphTruth
+#print axioms exactActualRecursionGraph
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionStatementChecks

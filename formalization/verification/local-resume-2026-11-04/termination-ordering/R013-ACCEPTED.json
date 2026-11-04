@@ -1,0 +1,84 @@
+{
+  "accepted": {
+    "round": "R013-full-ordinary-arithmetic-program-compiler",
+    "restart_round": 4,
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks.exactProgramGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks.exactVectorProgramGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks.exactAppliedProgramGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks.exactAllPrimitiveGraphs"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramTargets.ProgramGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramTargets.VectorProgramGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramTargets.AppliedProgramGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramTargets.AllPrimitiveGraphs"
+    ],
+    "freeze": "verification/local-resume-2026-11-04/termination-ordering/R013-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769515315803064-2.json",
+    "gate_log": "verification/local-resume-2026-11-04/termination-ordering/1793769515315803064-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticProgramStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticProgramDefinitions.lean",
+        "sha256": "36516f0e1398bfb36ae2ef43b11c70f8185ce07b881f2a7dd0b9481693f65b79"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticProgramProof.lean",
+        "sha256": "b787f83e8452a3b0ed2f0f93d52b4afb38186720f2b47bb1c5ad0baedf83bfab"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticProgramStatementChecks.lean",
+        "sha256": "66ae1ac72da0df579867e1d345e59d0b27f5510c895157f06223e16631e570ef"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticProgramTargets.lean",
+        "sha256": "3edd8d0fccdc4d6289d9904dda152ed116e2ccc7cb4187c2ea055eacae1abefb"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769463197927948-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769463197927948-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticProgramDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769463197927948-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769463197927948-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticProgramTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769515315803064-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769515315803064-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticProgramProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramStatementChecks",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769515315803064-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769515315803064-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticProgramStatementChecks.log"
+      }
+    ],
+    "source_pins": [
+      {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean",
+        "sha256": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b"
+      },
+      {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.lean",
+        "sha256": "ded708ca4eac2f8e3013962327cb92cf5769a5dcb3d4d949d6c4e4da0ac9da9a"
+      }
+    ],
+    "source_scope": "FULL structural compiler for every actual GorbowPRProgram.Program into Mathlib ordinary FO arithmetic using0/successor/add/mul/equality only. Standard-N exact graph correctness, vector and arbitrary-term applications, every fixed-arity Primrec function has an arithmetic graph. Both conditional composition/recursion hypotheses discharged by real Program induction. No program/checker/path semantic atoms. Does not assert internal ID1 derivability, norm extraction, quantifier complexity, or any whole source06 promotion. Source H/positiveR application remains next final round.",
+    "numbered_statements_completed": []
+  }
+}

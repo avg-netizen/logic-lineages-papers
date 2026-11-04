@@ -1,3 +1,73 @@
+## PAUSED after complete R026 — 4 November 2026
+
+The user-requested final round is complete: unchanged FIRST proof and all five
+exact aliases PASS1793775454942005499-2, axiom closure only propext. This restart
+accepted five bundles /31exact aliases /zero whole-source promotions; all20leaf
+source pins are current. All owned author/native jobs are reaped and current
+STATE/author/shared-native controls are paused, with no R027 or automatic quota
+resume. Root owns publication-only integration and the requested GitHub push.
+See `ComputabilityKnowledge/PAUSED-HANDOFF-2026-11-04-AFTER-R026.md` and portable
+`verification/local-resume-2026-11-04/computability/FINAL-CHECKPOINT-AFTER-R026.json`.
+Historical active notes below do not authorize further work.
+
+## R025 internal beta certificates checked — 4 November 2026
+
+All five exact aliases/axiom audit (seven declarations including two generated
+equations) pass1793774400994774819-2 after local finite-index/context repair.
+Actual arithmetic beta entry proofs, concrete-code value existence and every
+supplied finite sequence are checked. Internal GUARDED UNIVERSAL trace and
+full recursive totality/uniqueness/Base/HB/CBE remain pending. Restart totals:
+four bundles, 26 exact aliases, zero whole-source promotions. The sole same-
+session supervised loop continues; independent lanes are paused.
+
+## R024 internal composition certificates accepted FIRST — 4 November 2026
+
+Unchanged 489-line proof and all five exact aliases/axiom audit PASS
+1793773176841155010-2, standard three axioms. The ACTUAL arithmetic graph now
+has genuine Hilbert numeral proofs for EVERY recursion-free Program, with
+exact finite witness/conjunction/composition rules and no remaining correctness
+premise in the final gate. Primitive recursion, internal totality/uniqueness
+and Base/HB/CBE are still pending. Restart totals3bundles/21fixed aliases,
+0whole-source promotions. Supervised same-session loop continues; native
+independent lanes are paused. See portable R024 acceptance in the new ledger.
+
+## R023 checked actual ordinary arithmetic graph bridge — 4 November 2026
+
+All eight exact aliases/axiom audit pass1793771156526268190-2 after a local
+empty-environment interface repair. The actual ordinary graph compiler now
+lands in Gorbow’s pure arithmetic syntax with correct nested binding and
+standard semantics; initial zero/successor/projection graphs have genuine
+Hilbert numeral proofs. General INTERNAL recursive graph correctness and
+Base/HB/CBE remain open. Two new local bundles/16fixed aliases accepted this
+restart, no whole-source promotions. Supervised Claude/review loop continues;
+independent L2 completed five rounds and paused.
+
+## R022 accepted unchanged FIRST — 4 November 2026
+
+The source-preserving uniform CK installation and all literal closed-instance
+Hilbert fixed-point equations are now checked: eight exact aliases, receipt
+1793770339902951221-2, only the standard three axioms. Claude’s 266-line module
+needed no repair. This gives ONE retained-parameter CK Formula1 with a genuine
+Program2 registry witness and a final actual S/rho/D parameter choice; it does
+not assert internal quantified CBE, original Base/HB or any whole source12
+promotion. The supervised loop continues; L2 stops after its five-round limit.
+See `ComputabilityKnowledge/ACCEPTED-RESUMED-2026-11-04.json` and portable
+`verification/local-resume-2026-11-04/computability/R022-ACCEPTANCE.json`.
+
+## Active again — 4 November 2026, after fetch c6ab991
+
+The user resumed the same supervised Claude lane and one independent arithmetic
+lane. Historical R021 pause receipts below remain preserved. The new R022
+UniformCommonKnowledge comparator passed before proof (1793768853299328235-2).
+The original Claude session actually initialized at 05:20:01 UTC with the same
+Opus5.5/high/Read-Glob-Grep contract, and source reads are verified. R022 is
+currently authoring; no candidate acceptance or original-source promotion is
+claimed. The target installs the actual retained-parameter substitution
+program and derives closed Hilbert fixed-point equations for one CK Formula1.
+Internally quantified CBE, source Base/HB and full source12 theorems remain
+pending. Quota exhaustion permits repair of an already returned candidate,
+then waiting for the actual reset; no independent fallback is authorized.
+
 ## 31 October–1 November 2026: paused after checked R005
 
 ## PAUSED after complete R021 — 4 November 2026
