@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 42,
-    "components": 13
+    "fixed_aliases": 45,
+    "components": 14
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104M",
-    "source_sha256": "3f640a9f52b319569841832ccc159c673ea84fb87c4e241858e6fb3d8c41c1fd",
-    "closure_sha256": "62eb733dee711e61ad91388317fd0a3cf5b48892be514077c7f47971bcf871b4",
+    "module": "LogicLineages.ExternalCheckpoint20261104N",
+    "source_sha256": "03129c3d823bd254c70b1be9af0e1bb845e6419d6d15c8c70d0ccd947a322611",
+    "closure_sha256": "feed36096515c21e4ae43fb78df1dfa8a998433468d6f3f37d0920bdf74cb401",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -220,6 +220,21 @@
         "name": "fixed_042_actual_gamma_coefficient_one",
         "target": "LogicLineages.OrdinalComparison.ParametricCoefficientOne.Targets.ActualGammaCoefficientOne",
         "supplier": "LogicLineages.OrdinalComparison.ParametricCoefficientOne.StatementChecks.actual_gamma_coefficient_one"
+      },
+      {
+        "name": "fixed_043_fixedActualCarrierCheckersPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierTargets.ActualCarrierCheckersPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierStatementChecks.fixedActualCarrierCheckersPrimitive"
+      },
+      {
+        "name": "fixed_044_fixedEncodedCarrierFormulas",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierTargets.EncodedCarrierFormulas",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierStatementChecks.fixedEncodedCarrierFormulas"
+      },
+      {
+        "name": "fixed_045_fixedActualTypedCarrierFormulas",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierTargets.ActualTypedCarrierFormulas",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierStatementChecks.fixedActualTypedCarrierFormulas"
       }
     ],
     "allowed_axioms": [
@@ -636,6 +651,38 @@
           "sha256": "918c2f23f09f0e8dc73c57dfd22548560921446e0c61fdc12739d573bfa3283d"
         }
       ]
+    },
+    {
+      "name": "OrdinaryArithmeticCarrier",
+      "scope": "Actual scalar/list canonical carrier PR and ordinary arithmetic guards with exact Context/list decoding and explicit subtype-closed semantic calibration.",
+      "freeze_sha256": "59208f5656760ea62b270b60f1c629a1cf14aa4b7bd695eb39da4bffa06bd6a8",
+      "closure_sha256": "0ce8ff50f168ba2dd9baed59955d318f9f4eb76c1101dc142d66be7c6cee6189",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierDefinitions.lean",
+          "sha256": "4c361e09cad2c674522c7958e5c65960e9bae2ca57b53e625ddc852bb81d130e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierTargets.lean",
+          "sha256": "3ade6239f45b4dd1096b66fb738cbaa8aaae99773bc0dfd1f3abf040ad5d79a9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierStatementChecks.lean",
+          "sha256": "89d31a036b5ccc0f296109f014c62271d984f0cebfdaf57906e478892fe18361"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-CARRIER-SOURCE.md",
+          "sha256": "61715359c591872cc591947858239b97c8d38f762177dad395ac4e491b063de3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierSupportProof.lean",
+          "sha256": "357633c0cdb3dbe75489c233152b4ab13eb380d9ce00fbf93bc9b5a46d4bfd62"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierProof.lean",
+          "sha256": "27a55b7efd5e07b2afe22e2b0cbdb562613fafe07f1c4ba90299feef69cf3b26"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -654,6 +701,7 @@
     "The machine-halting conjunction concerns the original arithmetic equations only, not source-language gadgets, complexity bounds or the whole hardness theorem.",
     "Canonical carrier calibration and preservation keep explicit subtype closure; no accessibility, ID1 or well-foundedness claim.",
     "Parametric collapse retains arbitrary G and the explicit identity-majorization hypothesis for finite values; no G computability or source-gadget claim.",
-    "Coefficient-one collapse retains strict monotonicity and identity-majorization hypotheses for generic G; no higher-head or source-gadget identification."
+    "Coefficient-one collapse retains strict monotonicity and identity-majorization hypotheses for generic G; no higher-head or source-gadget identification.",
+    "Represented carrier formulas preserve failed-context/list rejection, empty-list vacuity and explicit subtype closure; no type-specific C_tau, ID1 or well-foundedness claim."
   ]
 }

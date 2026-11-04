@@ -79,3 +79,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104L`, 40 ex
 Two exact suppliers establish the actual coefficient-one collapse formula for every n under strict monotonicity and identity majorization, and discharge these hypotheses for the actual gamma specialization. No higher-head, source-gadget or computability claim. See [source correspondence](layered-comparison/ParametricCoefficientOne-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104M`, 42 exact aliases.
+
+## OrdinaryArithmeticCarrier
+
+Three exact suppliers establish scalar/list carrier primitive recursion, ordinary-arithmetic encoded formulas and concrete represented-carrier calibration under subtype closure. Failed Context/list codes are rejected and empty lists remain vacuous. No type-specific C_tau, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-CARRIER-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104N`, 45 exact aliases.
