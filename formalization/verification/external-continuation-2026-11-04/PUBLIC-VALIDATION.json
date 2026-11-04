@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 14,
-    "components": 4
+    "fixed_aliases": 17,
+    "components": 5
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104D",
-    "source_sha256": "29730c3c697d89fe7c29a4a6ff165386d9322b9e994d1c565d140d99eb7f5ffe",
-    "closure_sha256": "d79dfcb75b3b6262f360ae85900dc87be5cc2dd85489fa6f55668bb459dda376",
+    "module": "LogicLineages.ExternalCheckpoint20261104E",
+    "source_sha256": "5f13ea77b21cf12d82dffc9542bc61aada282d40bf8e2d3012f826a436ad43fa",
+    "closure_sha256": "b4aa82d7615a7db22e2d9e9fa6d93f520014a2b37b54b73ab9db8c4a47d39eb3",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -80,6 +80,21 @@
         "name": "fixed_014_monotone_halting",
         "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.MonotoneHalting",
         "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.monotone_halting"
+      },
+      {
+        "name": "fixed_015_fixedActualDirectCertificateSoundness",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesTargets.ActualDirectCertificateSoundness",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesStatementChecks.fixedActualDirectCertificateSoundness"
+      },
+      {
+        "name": "fixed_016_fixedActualDirectCertificates",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesTargets.ActualDirectCertificates",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesStatementChecks.fixedActualDirectCertificates"
+      },
+      {
+        "name": "fixed_017_fixedActualNumericDirectCertificates",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesTargets.ActualNumericDirectCertificates",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesStatementChecks.fixedActualNumericDirectCertificates"
       }
     ],
     "allowed_axioms": [
@@ -212,6 +227,34 @@
           "sha256": "6749587e04b79c698c631eaed9daf7115d29f4606b1e248163058dcfd706a403"
         }
       ]
+    },
+    {
+      "name": "QuotientDirectCertificates",
+      "scope": "Whole direct multiset replacement certificates over actual positive quotient paths, exact permutations/nonempty removal/occurrences and numeric decode wrapper equivalence only.",
+      "freeze_sha256": "41f5bbef1c2e7e81651f006c905aeed6e9a2a3b2d6db9ce8661dc124022b935f",
+      "closure_sha256": "bfe66294ff03e3fce00160ad3a8ef6dd06be5573df83a08ed49a19cc37ec0a29",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesDefinitions.lean",
+          "sha256": "991bc17dff1aa05ab5dd9d9d8b3be850f74ef3df8d7dfcc35d637de87de29cb9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesTargets.lean",
+          "sha256": "811e780a1e3ba82e3dd30aa93cc000a43cf89144629601269f985ac5f7404a75"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesStatementChecks.lean",
+          "sha256": "6687145c845022a3ecb91dcbca5f575ef526ca67aeb090438b7b834f8d1b8815"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DIRECT-CERTIFICATES-SOURCE.md",
+          "sha256": "162b072bf3b3f6dfdc2e7736f5e422d99b969e8da198a6c7a972d2cb3839d3ef"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesProof.lean",
+          "sha256": "655ae0a8d0d39b51b4eb891decc4c797308ab6052a6db95d8ca3cb0f7f534403"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -221,6 +264,7 @@
     "TARGETS registry and source manuscripts unchanged.",
     "SourceControlNonperiodicity uses explicit Code/evaln stages, not identified tape steps or a whole source hardness theorem.",
     "Quotient domination uses existential checked positive-path certificates, not an unbounded relation decision or full direct multiset/well-foundedness result.",
-    "Blank-machine simulation establishes the actual transition clock, primitive recursion and termination calibration only; no undecidability or parity claim."
+    "Blank-machine simulation establishes the actual transition clock, primitive recursion and termination calibration only; no undecidability or parity claim.",
+    "Direct quotient certificates are existential witnesses with explicit decoded endpoints, not a primitive-recursive checker, arithmetic representation or well-foundedness result."
   ]
 }

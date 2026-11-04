@@ -25,3 +25,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104C`, 11 ex
 Three exact suppliers establish the actual blank-machine transition clock, primitive-recursive simulation and termination calibration. No undecidability or parity claim. See [source correspondence](layered-comparison/SourceBlankMachineSimulation-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104D`, 14 exact aliases.
+
+## QuotientDirectCertificates
+
+Three exact suppliers establish direct replacement certificate soundness and existential completeness for the actual positive quotient relation, plus a numeric wrapper with explicit decoded endpoint lists. Exact permutations, nonempty removal and occurrence semantics are retained. No primitive-recursion, arithmetic or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DIRECT-CERTIFICATES-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104E`, 17 exact aliases.
