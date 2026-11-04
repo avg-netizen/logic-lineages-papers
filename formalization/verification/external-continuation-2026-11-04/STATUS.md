@@ -133,3 +133,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104U`, 65 ex
 Two exact suppliers establish all-input first-order companion calibration and primitive recursiveness of the actual canonicalApplication for fixed n, arity and Gamma, jointly in windows, types and codes. All failure cases are retained; calibration requires no subtype-closure premise. No arithmetic or ID1 claim. See [source correspondence](termination-ordering/NUMBERED-NUMERIC-APPLICATION-PRIMREC-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104V`, 67 exact aliases.
+
+## ParametricPrimitiveLowering
+
+Four exact suppliers establish the reviewed equality, addition and one lowering for the existing syntax under Gamma semantics, preserving the shared prefix and exact local size. No global compiler, encoding or aggregation claim. See [source correspondence](layered-comparison/ParametricPrimitiveLowering-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104W`, 71 exact aliases.

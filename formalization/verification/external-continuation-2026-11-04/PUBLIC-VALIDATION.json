@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 67,
-    "components": 22
+    "fixed_aliases": 71,
+    "components": 23
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104V",
-    "source_sha256": "0c2aa4cf5c5d85329969407e77cbffa9fdb987fee46d36f7db850549d9c1724d",
-    "closure_sha256": "92b784e60acafea5dd20a0fb626c62ebaa4afe1f7d75c76986b076d9c74704f6",
+    "module": "LogicLineages.ExternalCheckpoint20261104W",
+    "source_sha256": "1581773f7751bfdf5e7a2d6c5e747434fe8647b594ae0354a454aa7ca165ff2d",
+    "closure_sha256": "5c0ac3601da38695a0d836ebdd6bb6ea3e5a0b2cb030d4b8d2de031d55b0c498",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -345,6 +345,26 @@
         "name": "fixed_067_fixedActualCanonicalApplicationPrimitive",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecTargets.ActualCanonicalApplicationPrimitive",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecStatementChecks.fixedActualCanonicalApplicationPrimitive"
+      },
+      {
+        "name": "fixed_068_shared_inputs_and_syntax",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.SharedInputsAndSyntax",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.shared_inputs_and_syntax"
+      },
+      {
+        "name": "fixed_069_exact_supported_lowering",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ExactSupportedLowering",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.exact_supported_lowering"
+      },
+      {
+        "name": "fixed_070_actual_gamma_lowering",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ActualGammaLowering",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.actual_gamma_lowering"
+      },
+      {
+        "name": "fixed_071_exact_size",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ExactSize",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.exact_size"
       }
     ],
     "allowed_axioms": [
@@ -1037,6 +1057,38 @@
           "sha256": "584c1599f176b37fe39d3c15342f96fae33738b12334a8547d9a45e3c0c9013d"
         }
       ]
+    },
+    {
+      "name": "ParametricPrimitiveLowering",
+      "scope": "Existing literal eq/add/one lowering under generic actual-ordinal control and actual Gamma, exact shared prefix and size; no sort/global binary/aggregation.",
+      "freeze_sha256": "c22065f87b3bfe19f85c2dcc1ca88b780e4e1b7163d00041091afb831a285c53",
+      "closure_sha256": "d1eb5bcb0899813454be7fd7d477cfea2a9f4e8954594226fcf01f008fb563a9",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringDefinitions.lean",
+          "sha256": "c81ee6e2dc76ec1bd105ea31d37c89db8f2bd37f500e90807ce71f5a9060842e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringTargets.lean",
+          "sha256": "1bf37ae75d88a2bb6d206504b4c7279423b796e5f40b62a1dd9f956aca0c38ea"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringStatementChecks.lean",
+          "sha256": "727e128d9d933d62a66bfbed2cf3f1a65607f332b8d4ad89c7e3eda1d74ea10e"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricPrimitiveLowering-SOURCE-CORRESPONDENCE.md",
+          "sha256": "ef6b0d6d41e2bd219ff21abe67f27833ebef4e2dc12abdc3995c5242969e634b"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringSemanticProof.lean",
+          "sha256": "7cf6c2d8a75083853c398cd66d77bbcca58f66ef169d5a5c8e895bc557a21741"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringProof.lean",
+          "sha256": "04d8aab7471177dab137331fff426b0a51171ab7f21f042368e756e22453f7f9"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1064,6 +1116,7 @@
     "Literal typed application confinement and representative-code congruence only; actual primary appArgument does not add a positive reduction step. No numeric, primitive-recursive or ID1 claim.",
     "Exact I0 and constant-one gadget only; no binary or nested gadget transfer claim.",
     "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim.",
-    "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim."
+    "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim.",
+    "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim."
   ]
 }

@@ -1,0 +1,9 @@
+# Parameterized literal primitive lowering: eq/add/one only
+
+Paper09 paper.tex lines64–94 gives the literal eraser addition and I0/S constant-one equations; hardness.tex lines294–314 calls for their use under the chosen Gamma and shared arithmetic DAG flattening. This component transports only the existing fixed-size primitive syntax to the separately defined actual-ordinal generic-control denotation.
+
+The existing PrimitiveLowering.lower, forest, Expr.graph, Block, shift, fresh and extend are used unchanged. Supported excludes sort explicitly. For every full original component valuation and every nine-slot auxiliary vector, the literal ten equations hold exactly when the arithmetic gate holds and the vector is the existing explicit canonicalWitness. Its supported branches are zero, [3*b,0,...], and [2,3*a,0,...]; the fixed-Phi sort branch is never asserted. Natural valuations mean positive raw coordinates via rho+1. All old typed components, including non-ground components, are retained behind the fresh prefix. Actual assignment is unchanged; equation semantics uses denoteWith G, not a silent identification of G with Phi.
+
+Generic hypotheses are StrictMono G and n <= G n. Both are already proved for the actual finite-table-clock Gamma_b. Exact source-graph unfolding and the ten-equation/eighty-vertex bound are syntax-only accepted suppliers and can be reused without transferring fixed-Phi semantic claims.
+
+This proves a local shared-context lowering bridge, not a global binary constant/compiler theorem. Whole-plan existential flattening, disjoint blocks across multiple gates, numeric encodings/primitive-recursive generation and bit-length bounds remain separate. No sort, nested collision, eraser aggregation, strict/weak comparison or whole hardness theorem is claimed. No accepted source, manuscript or registry is changed.
