@@ -73,3 +73,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104K`, 36 ex
 Four exact suppliers give arbitrary-G defining recursion and uniqueness on the genuine domain, agreement with the accepted Phi specialization, and finite values under explicit identity majorization. The original actualCollapse is unchanged. No hidden hypothesis, G computability or source-gadget claim. See [source correspondence](layered-comparison/ParametricActualCollapse-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104L`, 40 exact aliases.
+
+## ParametricCoefficientOne
+
+Two exact suppliers establish the actual coefficient-one collapse formula for every n under strict monotonicity and identity majorization, and discharge these hypotheses for the actual gamma specialization. No higher-head, source-gadget or computability claim. See [source correspondence](layered-comparison/ParametricCoefficientOne-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104M`, 42 exact aliases.

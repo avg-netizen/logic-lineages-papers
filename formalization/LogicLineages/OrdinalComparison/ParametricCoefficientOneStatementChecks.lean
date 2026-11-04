@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricCoefficientOneTargets
+public import LogicLineages.OrdinalComparison.ParametricCoefficientOneProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ParametricCoefficientOne.StatementChecks
+theorem generic_coefficient_one : Targets.GenericCoefficientOne := Proof.genericCoefficientOne
+theorem actual_gamma_coefficient_one : Targets.ActualGammaCoefficientOne := Proof.actualGammaCoefficientOne
+end LogicLineages.OrdinalComparison.ParametricCoefficientOne.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.ParametricCoefficientOne
