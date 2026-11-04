@@ -1,3 +1,9 @@
+Latest source-completion audit: [all 33 former pending statements](audits/PENDING-STATEMENTS-2026-11-04.md).
+Read this audit and current `TARGETS.json` before selecting any future work.
+The audit adopts paper09 control hardness after its focused gate; earlier
+counts and prospective component gaps below are historical. Research and
+author lanes remain paused; the audit compiler window has closed.
+
 Current local state: **PAUSED after completed R026 and all independent work**,
 4 November 2026. This restart accepted **10 supporting components / 52 exact
 declarations in 42 Lean files**. The focused integration and actual axiom checks

@@ -3,6 +3,7 @@ module
 
 
 public import LogicLineages.ComputabilityKnowledge.ExponentialGapGate
+public import LogicLineages.OrdinalComparison.SourceControlHardnessBundleStatementChecks
 public import LogicLineages.ComputabilityKnowledge.RestrictedProductGate
 public import LogicLineages.ComputabilityKnowledge.FoundationChecks
 public import LogicLineages.OrdinalComparison.ControlStatementChecks

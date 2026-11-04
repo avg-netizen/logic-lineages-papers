@@ -1054,7 +1054,16 @@
           "statement_latex": "[Finite depth-two obstruction]\n\\label{thm:finite-bare-hardness}\nFor either $\\triangleleft\\in\\{<,\\le\\}$, consider pairs $(A,B)$ in the\nfinite fragment $\\mathcal F_d$, with $d$ allowed to vary, satisfying\n\\[\n \\forall\\chi\\text{ admissible in Definition~2.7 of \\cite{WW}},\\qquad\n \\operatorname{val}(A\\chi)\\mathrel{\\triangleleft}\n \\operatorname{val}(B\\chi)\n\\]\nis $\\Pi^0_1$-complete already when the terms use only $1$, independently\nnamed ground-type variables, $+$ and $\\E$, and have $\\E$-nesting depth\nat most two. Every value is a positive integer, and each output term\nbelongs to every $\\C_i$, $i\\ge1$. The same restricted completeness\nholds for comparison of their norms.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+            "remaining_obligation": "The full RE-to-Diophantine/MRDP hardness supplier is absent. The Diophantine power-graph bridge does not supply it. Depth/domain/norm conclusions must be assembled with that supplier.",
+            "next_completion_step": "Freeze the exact encoded MRDP-to-comparison completeness endpoint; its missing mathematical input is full MRDP, rather than another reduction gadget.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "02-exponential-comparison:lem:restricted-product",
@@ -1107,7 +1116,18 @@
           "statement_latex": "[Two-component bounded-vector obstruction]\n\\label{thm:bounded-bare-vectors}\nBoth strict and weak comparison in Definition~2.8 are undecidable even\non a computably constructed family of two-component $\\C$-vectors whose\nbounded norm is proved uniformly. The family gives $\\Pi^0_1$-hardness\nwhile retaining the finite depth-two terms as higher components.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+            "remaining_obligation": "Undecidability still depends on finite-bare-hardness/MRDP; the padding theorem itself is not the remaining foundational gap.",
+            "next_completion_step": "Reuse the complete padding/code gates when the preceding hardness endpoint is available.",
+            "upstream_blockers": [
+              "02:thm:finite-bare-hardness"
+            ]
+          }
         },
         {
           "id": "02-exponential-comparison:lem:normalization",
@@ -1222,7 +1242,21 @@
           "statement_latex": "[Further exact consumers]\\label{cor:consumers}\nThe same procedures decide equality of finite-valued ordinal vectors\nover any finite set of independent ground variables, and strict/weak\nvector comparison and bounded norm for finite-valued $\\mathcal O$-vectors\nwith one independent ground variable.  They also decide comparison\nafter any fixed affine one-parameter substitution with nonnegative\ninteger coefficients and positive coordinate values for finitely many\nground variables: explicitly,\n$x_i=a_i n+b_i$ with $a_i,b_i\\in\\mathbb N$ and $a_i+b_i>0$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "assembly_or_source_contract",
+            "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+            "remaining_obligation": "The printed finite-valued ordinal/O-vector domain includes collapse terms. Finite-valuedness does not imply membership in the pure exponential-polynomial fragment covered by the scalar procedures. No accepted reduction/decision theorem covers that broader domain. This is an unresolved source/proof scope gap, not a proved counterexample and not merely componentwise vector bookkeeping.",
+            "next_completion_step": "Resolve the exact intended domain first. Keeping the printed broad scope requires a genuine collapse-language decision bridge; narrowing it to the proved exponential fragment would be an explicit manuscript correction. Reuse the already complete affine clause.",
+            "upstream_blockers": []
+          },
+          "source_issue": {
+            "state": "Unresolved printed-domain/proof-scope gap; no counterexample claimed",
+            "scope": "Finite-valued original ordinal/O syntax includes collapse terms. The checked exponential-polynomial scalar procedures and affine clause do not cover that broader vector claim.",
+            "evidence": "EXTERNAL-CONTINUATION-2026-10-30.md"
+          }
         }
       ]
     },
@@ -3576,7 +3610,21 @@
           "statement_latex": "[Structural interpretation]\\label{lem:structural}\nAt a natural coherent constructor family, interpretation and the original-spine\nhelper are monotone, commute with weakening and capture-avoiding substitution,\nand interpret simultaneous special application exactly.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "assembly_or_source_contract",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "The printed lemma quantifies over a natural coherent constructor family. The same-family cross-type full-tuple law needed for source application is proved at the actual fixed point, not for an arbitrary such family. No concrete counterexample has been established.",
+            "next_completion_step": "Resolve the generic-family contract explicitly, then assemble substitution and literal special-application correspondence at that same scope.",
+            "upstream_blockers": []
+          },
+          "source_issue": {
+            "state": "Generic coherent-family correspondence unproved; no concrete counterexample claimed",
+            "scope": "The complete-tuple same-family equation is available at the actual constructor fixed point, whereas the printed lemma quantifies over a natural coherent family.",
+            "evidence": "verification/external-continuation-2026-11-02/termination-ordering/STRUCTURAL-SEMANTICS-LIMITATION-20261102T1112Z.md"
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:lem:operator",
@@ -3832,6 +3880,15 @@
             "scope": "Actual Fin4 strict-total/transitive/well-founded precedence and source-confined ordinary terms P Weak T, T Strict U, and not P Weak U. This refutes weak transitivity/Weak-then-Strict compatibility for the local rules under the finite guards. Additional Nat-encoded same-shape mixed/strict consequences have separate evidence. No error in Kop published theorem or unique repaired convention is inferred.",
             "repair_boundary": "verification/local-resume-2026-11-02/termination-ordering/STRICT-MARK-REPAIR-BOUNDARY.md",
             "preserved_theorems": "Earlier exact local adequacy, decision and ranked-RPO targets retain their established frozen meanings; no theorem is retargeted to a changed relation."
+          },
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "source_repair_or_convention",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "A checked source-confined finite-signature counterexample refutes transitivity/compatibility of the immutable local relation. Its disagreement with Kop's published theorem must be resolved; the published theorem is not thereby refuted.",
+            "next_completion_step": "Identify the precise source rule/correspondence repair before attempting the unchanged stable-pair conclusion. Preserve existing relation pins and negative evidence.",
+            "upstream_blockers": []
           }
         },
         {
@@ -4589,7 +4646,16 @@
               "description": "An internal ID1 derivation of the non-lambda/inverse-application/lambda clauses, multiset accessibility closure, numbered-constructor lexicographic induction, and structural computable-substitution conclusion for every original well-typed auxiliary term, under the actual source assumptions.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "These are not an internal ID1 derivation. General computable substitution/constructor computability and the actual induction derivations remain missing; restricted ground-lambda drafts do not cover all typed terms.",
+            "next_completion_step": "Specify the actual ID1 proof judgment and prove the full all-term accessibility endpoint, with internal invariants and induction rules explicit.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:lem:simulation",
@@ -4872,7 +4938,16 @@
               "description": "One exact whole-source simulation interface assembling those computational/arithmetic suppliers with the checked S = Ty(s) positive quotient simulation, without added semantic, closure or effectivity premises.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "assembly_or_source_contract",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "Source adoption needs ONE explicit fixed-universe translation map tr_S and its positive-path theorem. The strongest existing named endpoint exposes a pair map with a source-anchored S; its component definitions already factor both endpoints through windowTranslation S. Signature/arity/ambient context are fixed parameters of effectivity, not jointly varying encoded inputs.",
+            "next_completion_step": "Assemble and check the source-shaped fixed-S map from ActualWindowTranslationPrimitive and ActualComputedConfinedSimulation. State the parameter scope explicitly; do not require ID1 or ordinal analysis as extra premises of this lemma.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:thm:upper",
@@ -4883,7 +4958,19 @@
           "statement_latex": "[Individual upper bound]\\label{thm:upper}\nEvery descending $\\succ_c$ rank is strictly below $\\BH$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "The genuine ID1 accessibility proof and Pohlers-style inductive-norm/ordinal stage-bound extraction below Bachmann-Howard are not supplied.",
+            "next_completion_step": "After the ID1 endpoint, formalize the exact cited norm-extraction theorem and apply it to the source-anchored simulation.",
+            "upstream_blockers": [
+              "06:lem:id1",
+              "06:lem:simulation"
+            ]
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:lem:carrier",
@@ -4929,7 +5016,18 @@
           "statement_latex": "[Realization closure]\\label{lem:realclosure}\nRealization is backward closed under $\\succ_c$, downward closed in the\nsemantic pointwise order, and closed under countable suprema realized by\none fixed term.  The typed lambda fundamental lemma holds.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "A typed ordinal realization relation with backward/order/countable-supremum closure and the lambda fundamental lemma is not proved. Full ranks also depend on well-foundedness of the intended source relation.",
+            "next_completion_step": "Establish the exact relation and well-foundedness scope before the ordinal realization fundamental theorem.",
+            "upstream_blockers": [
+              "06:thm:stable"
+            ]
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:lem:iterationedges",
@@ -4981,7 +5079,18 @@
           "statement_latex": "[Full-prefix ordinal iteration]\\label{thm:iteration}\nThere is an effective closed native term $\\It_A$ realizing\n\\[\n (\\alpha,f,x)\\longmapsto f^\\alpha(x),\\qquad\n f^0(x)=x,\\quad f^{\\beta+1}(x)=f(f^\\beta(x)),\\quad\n f^\\lambda(x)=\\sup_{\\xi<\\lambda}f^\\xi(x).\n\\]\nNo monotonicity of $f$ is required.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "The full-prefix transfinite orbit realization proof, including limits for nonmonotone functions, is absent; reduction edges alone do not prove it.",
+            "next_completion_step": "Use the existing edges in one realization theorem once realclosure is available; preserve the entire-prefix limit clause.",
+            "upstream_blockers": [
+              "06:lem:realclosure"
+            ]
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:lem:primitives",
@@ -4992,7 +5101,18 @@
           "statement_latex": "[Zero, successor and a finite cap]\\label{lem:primitives}\nClosed native terms realize $0$, right successor and $\\omega$.\nFor every $P:B\\to B,U:B$, a closed term lies strictly above every $P^nU$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "Zero/successor/omega ordinal realization and the all-iterate cap conclusion have not been assembled at the manuscript's realization contract.",
+            "next_completion_step": "Assemble the native primitive realizers with the rank/realization infrastructure; avoid reproving carrier edges.",
+            "upstream_blockers": [
+              "06:lem:realclosure"
+            ]
+          }
         },
         {
           "id": "06-godel-t-termination-ordering:thm:height",
@@ -5003,7 +5123,20 @@
           "statement_latex": "[Exact descending height]\\label{thm:height}\nEvery individual $\\succ_c$ rank is below $\\BH$, and\n\\[\n \\sup_s(\\rk_{\\succ_c}(s)+1)=\\BH.\n\\]\nAn effective family of closed native terms of outer type $o\\to o$ already\nhas cofinal ranks.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+            "remaining_obligation": "Both the individual upper bound and full lower realization/calibration are incomplete. The Simmons/helpfulness/cofinal-collapse calibration to BH is an additional mathematical supplier, not supplied by finite kernel or arithmetic checker proofs.",
+            "next_completion_step": "Finish the shared realization and ID1/ordinal suppliers, then compile the exact finite extractor family and cofinality argument.",
+            "upstream_blockers": [
+              "06:thm:upper",
+              "06:thm:iteration",
+              "06:lem:primitives"
+            ]
+          }
         }
       ]
     },
@@ -5739,7 +5872,16 @@
               "description": "An explicit total effective decision procedure on the actual first-order sentence coding with a correctness theorem for the original arithmetic semantics and the source proof dependencies discharged.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "Full multivariable quantifier elimination/normal forms and arbitrary quantified BASE decision remain unproved. Unary DNF does not cover multiple variables or alternating quantifiers.",
+            "next_completion_step": "Formalize the published multi-variable elimination endpoint; reuse the paid control hypotheses and unary subcase.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:finite-source",
@@ -5750,7 +5892,18 @@
           "statement_latex": "[Finite-coefficient source comparison]\\label{thm:finite-source}\nTake two original well-typed $T$ terms of the same type with ground free\nvariables. Compute their canonical assignments. Suppose that at every\nzeroth-coordinate collapse $\\psi(\\omega\\otimes c+g)$ its closed coefficient\n$c$ has finite ordinal value. Their universal weak, WW-strict, and equality\ncomparisons are decidable. Every recursor-free such term passes this test,\nwith no bound on its internal types.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
+            "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
+            "upstream_blockers": [
+              "08:thm:snyatkov"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
@@ -5763,42 +5916,12 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "source_issue": {
-            "state": "source correction required before full promotion",
-            "record": "LogicLineages/OrdinalComparison/FINITE-KERNEL-RECURSION-SOURCE-CONTROL-2026-10-31.md",
-            "scope": "Printed unrestricted signed recurrence includes degree2 negative shifts outside the genuine child domain. The domain-correct regime d>=3 or j>=0 is checked; the degree2 j=-2 negative-clamp discrepancy has a checked counterexample. The original whole printed label remains pending.",
-            "formal_counterexample_gate": "LogicLineages.OrdinalComparison.FiniteKernelNegativeRecursionStatementChecks",
-            "additional_diagnostics": [
-              {
-                "id": "whole-current-suffix-quadratic-count",
-                "state": "Checked discrepancy for the literal whole-current-suffix interpretation; source correspondence remains unresolved",
-                "scope": "At degree two and retained mass one, for every original input t >= 4, the literal whole-current-suffix process with the original time-indexed budget schedule has count strictly greater than f(t)/2, while the companion paper07 limit-part count equals f(t)/2. Thus the literal whole-state interpretation has no eventual equality with the displayed quadratic formula.",
-                "formal_counterexample_gate": "LogicLineages.OrdinalComparison.KernelQuadraticSourceComparisonStatementChecks",
-                "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
-                "source_correspondence": "verification/external-continuation-2026-11-03/layered-comparison/KernelQuadraticSourceComparison-SOURCE-CORRESPONDENCE.md",
-                "supporting_components": [
-                  {
-                    "gate_module": "LogicLineages.OrdinalComparison.KernelConventionDiagnosticStatementChecks",
-                    "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
-                    "scope": "Source-issue evidence for 08-multivariate-collapse-comparison:lem:kernel-recursion: An exact same-state, same-budget calculation distinguishes the whole-current-suffix and companion limit-part transition conventions. This is a transition-level diagnostic, not a reachability result or a refutation of the paper theorem. No source manuscript or register status is changed. Component evidence only; the whole registered source statement remains pending."
-                  },
-                  {
-                    "gate_module": "LogicLineages.OrdinalComparison.KernelReachableInputConventionStatementChecks",
-                    "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
-                    "scope": "Source-issue evidence for 08-multivariate-collapse-comparison:lem:kernel-recursion: For the concrete degree-two, mass-one, input-four initial state, both conventions reach the same first state omega*q+1, with q greater than one, then have different second transitions at the same actual budget. The parameterized proof specializes to that exact input without a new premise. This establishes a reachable transition discrepancy, not a full-count difference or theorem refutation. The earlier resource-blocked closed-wrapper candidate is not accepted evidence. Component evidence only; the whole registered source statement remains pending."
-                  },
-                  {
-                    "gate_module": "LogicLineages.OrdinalComparison.WholeScheduledCountStatementChecks",
-                    "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
-                    "scope": "Source-issue supplier for 08-multivariate-collapse-comparison:lem:kernel-recursion: The literal whole-state process has exact time-indexed recursion for arbitrary budget streams, first-finite termination from actual ordinal descent, and a count lower bound q when the initial state is at least omega*q and every scheduled budget is at least 2q. Budgets are consumed in order rather than recomputed from changed state norms. This supplier does not assert a concrete count comparison, theorem refutation, or primitive-recursive count. Component evidence only; the whole registered source statement remains pending."
-                  },
-                  {
-                    "gate_module": "LogicLineages.OrdinalComparison.KernelConcreteCountConventionStatementChecks",
-                    "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
-                    "scope": "Source-issue evidence for 08-multivariate-collapse-comparison:lem:kernel-recursion: For degree two, mass one, and input four, the companion limit-part count is exactly q+1 while the literal whole-state count using the original time-indexed schedule is at least q+2, hence strictly larger. The schedule is retained after the transitions diverge. This concrete count discrepancy does not establish a rank-at-least-three theorem refutation or the intended meaning of the manuscript. Component evidence only; the whole registered source statement remains pending."
-                  }
-                ],
-                "scope_limit": "No rank-at-least-three counter theorem is refuted here; authorial intent, a unique correction, and permission to change either manuscript or accepted semantics are not inferred."
-              }
+            "state": "Printed quadratic count incompatible with literal whole-state descent; unrestricted negative degree-two child domain obstructed",
+            "scope": "Whole-state scheduled count exceeds the displayed quadratic value for every t>=4 at retained mass1. Independently, degree-one depth is1+j, so negative j cannot acquire a positive-depth tail. Zero-clamping negative depth has a checked numerical recurrence counterexample.",
+            "evidence": [
+              "LogicLineages/OrdinalComparison/KernelQuadraticSourceComparisonStatementChecks.lean",
+              "LogicLineages/OrdinalComparison/FiniteKernelNegativeRecursionStatementChecks.lean",
+              "LogicLineages/OrdinalComparison/SignedKernelDomainStatementChecks.lean"
             ]
           },
           "checked_components": [
@@ -5842,7 +5965,16 @@
               "description": "Prove the complete original-source startup, degree-two value/count and recursive block identities on the stated computable tails under an explicitly resolved source semantics; preserve the historical counterexamples and accepted frozen targets.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "source_repair_or_convention",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "Two independent source defects remain: paper08's literal whole-state predecessor process disagrees with its printed quadratic count on every sufficiently large input; and d=2 with negative j calls a degree-one child whose depth never becomes positive. Clamping negative iteration to zero also has a proved numerical counterexample.",
+            "next_completion_step": "Choose and state the descent convention and repair the signed child-domain clause explicitly before source adoption.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:uniform",
@@ -5871,7 +6003,18 @@
               "description": "The full d >= 3 induction with the printed C_d/T_d and regional hypotheses: defined depths at least f(t), both separation inequalities, exact equal-input signed-index order, and effective common-tail uniqueness.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's uniform region/constants is not proved. It must use a resolved kernel convention and valid signed domains.",
+            "next_completion_step": "Freeze the entire rank>=3 separation statement under the resolved convention and discharge the growing-mass induction.",
+            "upstream_blockers": [
+              "08:lem:kernel-recursion"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:counter",
@@ -5950,7 +6093,21 @@
               "description": "After a source-faithful resolution, prove or transport every printed expansion, half/three-quarter bound, collision, leader/rank order and effective-tail clause to the actual accepted source kernel, with an exact whole-label gate and all used suppliers.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "source_repair_or_convention",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "That complete theorem uses the paper07 limit-part convention. Its source correspondence to paper08's printed process is unresolved. The degree-two discrepancy does NOT itself refute this rank>=3 lemma.",
+            "next_completion_step": "Resolve the printed-process convention, then reuse the complete counter theorem if it is the intended one; do not re-author its constituent bounds/collision lemmas.",
+            "upstream_blockers": []
+          },
+          "source_issue": {
+            "state": "Complete companion-convention theorem available; printed-process correspondence pending",
+            "scope": "WholeCounterLemma is checked for all ranks>=3 under paper07's limit-part process. The degree-two whole-state discrepancy does not itself refute the rank>=3 printed counter theorem.",
+            "evidence": "verification/external-continuation-2026-11-03/layered-comparison/CounterSourceTheorem-SOURCE-CORRESPONDENCE.md"
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:kernel-residues",
@@ -5961,7 +6118,26 @@
           "statement_latex": "[Effective residues of kernels and counters]\\label{lem:kernel-residues}\nFor each fixed $d,c,j,m$, both $X^d_{c,j}$ and $E^d_c$ have an effectively\ncomputable constant residue modulo $m$ on a computable tail. The $X$\nresidue is $r_m$. A valid counter residue is\n\\begin{equation}\\label{eq:E-residue}\n E^d_c(t)\\equiv\n p_d\\bigl((r_{Q_d}-c)\\bmod Q_d\\bigr)\\pmod m,\n \\qquad Q_d=d!m^{d-1},\n\\end{equation}\nwhere $p_d(n)$ counts partitions of $n$ into parts at most $d$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "source_repair_or_convention",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The printed all-signed-index scope includes degree one with negative j, where no positive-depth tail exists. Counter congruence also inherits the descent-convention discrepancy.",
+            "next_completion_step": "State the valid domain d>=2 or d=1,j>=0 and the selected convention; then assemble the existing residue gates.",
+            "upstream_blockers": [
+              "08:lem:kernel-recursion"
+            ]
+          },
+          "source_issue": {
+            "state": "Overbroad signed domain and unresolved counter convention",
+            "scope": "Corrected signed residue gate covers d>=2 or d=1,j>=0. The printed unrestricted signed scope includes d=1,j<0 with no eventual positive-depth domain; counter congruence uses the companion descent convention.",
+            "evidence": [
+              "LogicLineages/OrdinalComparison/SignedKernelDomainTargets.lean",
+              "LogicLineages/OrdinalComparison/KernelCounterResidueTargets.lean"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:guards",
@@ -5972,7 +6148,19 @@
           "statement_latex": "[Ordered maximum-variable guards]\\label{lem:guards}\nFor two words $A(x),B(y)$ and the guard $x\\ge y$, an effective common\ntail permits their three-way comparison to be rewritten as a finite Boolean\ncombination in which $x$ occurs only linearly and words are applied only\nto the remaining variable $y$. For two words at the \\emph{same} raw\nvariable the corresponding tail comparison is effectively decided.\nAll thresholds and newly generated words are computed before the tail is\nused.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "No complete effectual comparison compiler for arbitrary composed words with ordered raw-variable guards, all signed domains and a verified decreasing recursion measure is present.",
+            "next_completion_step": "Prove the whole ordered-word guard compiler, using the source's two-part termination measure and exact shared-variable semantics.",
+            "upstream_blockers": [
+              "08:lem:uniform",
+              "08:lem:counter"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:row",
@@ -5983,7 +6171,19 @@
           "statement_latex": "[Ranked cancellation]\\label{lem:row}\nFor a finite collection of word-linear rows and a chosen maximal raw\nvariable $x$, one can compute a tail and finite guarded cases in which\neach row either has a known strict sign or is exactly linear in $x$.\nThe guards can themselves be made linear in $x$ by\nLemma~\\ref{lem:guards}. No correlation between word values is discarded.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "Arbitrary word-linear ranked cancellation, all generated guards and the well-founded top-level rank measure remain unproved. The common-head/balanced compilers do not establish this word-language lemma.",
+            "next_completion_step": "Build the exact ranked row transformation after the word-guard compiler, preserving current-occurrence growth provenance.",
+            "upstream_blockers": [
+              "08:lem:guards",
+              "08:lem:counter"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:existential",
@@ -5994,7 +6194,20 @@
           "statement_latex": "[Closed existential word arithmetic]\\label{thm:existential}\nThe existential closure of every Boolean combination of word-linear row\ncomparisons and fixed-modulus congruences in the finite-degree language\nabove is decidable, on its explicit word domains.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The complete closed existential decision on the printed finite-degree word language has no accepted end-to-end algorithm. It needs word guards, ranked cancellation, residue transport, finite exceptions and Presburger elimination with derived values retained as correlated terms.",
+            "next_completion_step": "Prove the closed-sentence procedure with decreasing raw-variable count; this does not require free-parameter or arbitrary alternating-quantifier elimination for the word language.",
+            "upstream_blockers": [
+              "08:lem:guards",
+              "08:lem:row",
+              "08:lem:kernel-residues"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:graphs",
@@ -6005,7 +6218,18 @@
           "statement_latex": "[Polynomial collapse graphs]\\label{thm:graphs}\nFor each fixed nonzero polynomial limit $\\lambda<\\omega^\\omega$, the graph\n$y=h_\\lambda(n)$ is effectively expressible as a finite disjunction of\nword-linear equations in $n,y$, with explicit domains and exact finite\nexceptions. One finite degree bound suffices for each finite collection of\nsuch graphs. Arbitrary fixed nesting and addition of these functions admit\na total functional existential graph translation.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The total polynomial-head graph compiler, finite exceptions, nesting/addition flattening and full functional graph correctness have not been assembled at this word-language contract.",
+            "next_completion_step": "Construct the graph translation after the convention/domain repair; keep original shared variables and quantified node equations.",
+            "upstream_blockers": [
+              "08:lem:kernel-recursion"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:leveltwo",
@@ -6016,7 +6240,19 @@
           "statement_latex": "[Canonical source comparison through level two]\\label{thm:leveltwo}\nUniversal weak, WW-strict, and equality comparison is decidable for original\ncanonical $T$ assignments with ground free variables and maximum internal\ntype level at most two. The maximum includes every subterm and binder type,\nnot merely the result and free-variable types.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The internal-level-two polynomial-head classification/consumer and complete counterexample-to-word-graph decision chain remain unassembled; the word decision and graph suppliers are also incomplete.",
+            "next_completion_step": "Complete the source polynomial-head classifier and compose graph translation with the closed existential solver.",
+            "upstream_blockers": [
+              "08:thm:graphs",
+              "08:thm:existential"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:endpoints",
@@ -6065,7 +6301,18 @@
           "statement_latex": "[Common-head layers]\\label{thm:common}\nFor $E,F\\in\\mathcal A_r$, each pointwise relation $E<F$, $E=F$, $E>F$\nhas an effectively constructed formula in $(\\N;0,1,+,<,f)$ with the same\nraw free variables and exactly the same truth at every positive valuation.\nHence arbitrary Boolean and quantified combinations of certified comparisons\nare decidable.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "The theorem ALSO asserts decision of arbitrary Boolean/quantified combinations, which still needs full Snyatkov. The literal same-free-variable clause should get an exact support-equality wrapper; current common-head gate guarantees containment and shared identities.",
+            "next_completion_step": "Reuse the complete compiler, add an exact-variable padding wrapper if needed, and compose with the single shared BASE decision supplier.",
+            "upstream_blockers": [
+              "08:thm:snyatkov"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:head-window",
@@ -6197,7 +6444,18 @@
               "description": "Effective translation and correctness for arbitrary Boolean and quantified combinations of certified comparisons, preserving bound-variable behavior, shared raw variables and the original positive domains, followed by the whole-source decision assembly.",
               "status": "pending"
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "remaining_obligation": "Only the theorem's Boolean/quantified decision conclusion still requires the full Snyatkov supplier, plus an end-to-end source gate joining that solver to the compiler. Do not rebuild balanced collection, guards or finite boxes.",
+            "next_completion_step": "Adopt the whole theorem after the BASE solver, using BalancedExactVariables as the completed translation endpoint.",
+            "upstream_blockers": [
+              "08:thm:snyatkov"
+            ]
+          }
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:single-core",
@@ -7252,7 +7510,16 @@
           "statement_latex": "[Standard-control functional-input undecidability]\n\\label{thm:functional-hardness}\nFull universal canonical weak comparison and strict comparison are\nundecidable already for ground output, free-variable levels at most one,\nand internal levels at most two.  The reduction at this level uses finitely\nmany comparison queries.  A computable single-query reduction from the\nsame polynomial-system unsatisfiability problem is available with internal\nlevel at most three.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+            "remaining_obligation": "The exact Narendran/Dong linear-system-over-N[X] undecidability supplier, effective system/zero-pattern reductions, and level-three single-query Omega-seed branch are not completed. A positive lift of nonzero polynomials does not handle all zero patterns or prove undecidability.",
+            "next_completion_step": "Freeze the polynomial-system problem and its undecidability endpoint; independently review zero-pattern substitution, then close system-level and level-three reductions.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "09-canonical-source-expressivity:lem:perturbed-control",
@@ -7301,9 +7568,52 @@
           "file": "09-canonical-source-expressivity/hardness.tex",
           "line": 280,
           "statement_latex": "[Ground hardness within distance one]\\label{thm:control-hardness}\nFor every $b$, universal canonical weak comparison and strict comparison\nat the one fixed control $\\Gamma_b$ are $\\Pi^0_1$-complete already on\nground-output sources having only ground free names and ground binders,\nusing only the prime constants $0,S$, with internal levels at most one.\nMoreover $\\Gamma_b(n)\\bmod2$ is not eventually periodic.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.fixed_control_hardness",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/SourceControlHardnessBundleTargets.lean",
+            "sha256": "d7e9f89642de25a6ef229d31e1d14f6c8967fb959206e6531f4f5b9601866238",
+            "type": "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.Targets.FixedControlHardness"
+          },
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "adopted_existing_proofs",
+            "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+            "remaining_obligation": "None within the numbered statement's explicitly chosen-model restricted scope.",
+            "next_completion_step": "No repeated proof work; retain the exact source qualification and focused acceptance evidence.",
+            "upstream_blockers": []
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.explicit_enumeration_clock",
+            "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.fixed_control_hardness",
+            "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.StatementChecks.canonical_observation"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceControlHardnessBundleTargets.lean",
+              "sha256": "d7e9f89642de25a6ef229d31e1d14f6c8967fb959206e6531f4f5b9601866238",
+              "type": "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.Targets.ExplicitEnumerationClock"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceControlHardnessBundleTargets.lean",
+              "sha256": "d7e9f89642de25a6ef229d31e1d14f6c8967fb959206e6531f4f5b9601866238",
+              "type": "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.Targets.FixedControlHardness"
+            },
+            {
+              "file": "LogicLineages/OrdinalComparison/SourceControlHardnessBundleTargets.lean",
+              "sha256": "d7e9f89642de25a6ef229d31e1d14f6c8967fb959206e6531f4f5b9601866238",
+              "type": "LogicLineages.OrdinalComparison.Source.SourceControlHardnessBundle.Targets.CanonicalObservation"
+            }
+          ],
+          "verification_receipt": "build-reports/1793820056340219633-3.json",
+          "acceptance_record": "verification/source-adoption-audit-2026-11-04/CONTROL-HARDNESS-CHECK.json",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "coverage_note": "Whole numbered control-hardness statement adopted after exact source-contract audit and fresh focused gate replay. For the source's explicit effective blank-program enumeration/transition clock and every fixed b: strict and weak comparison of independent restricted well-formed query languages are co-RE complete; Gamma parity is not eventually periodic. Exact ground-output/all-ground-free/ground-binder/0-S/internal-level<=1 syntax and all positive raw valuations are retained. CanonicalObservation transports the unchanged literal default assignment through the actual maximum-recursion collapse characterization. The source leaves its effective blank enumeration unspecified; the proved explicit table-clock model is the chosen formal instance. Malformed-query differences from the older Phi-coded language do not weaken this well-formed restricted statement. No unrestricted comparison-language identity, joint-b primitive-recursion, final-code size or runtime result is promoted. No manuscript or existing comparator/proof bytes changed."
         }
       ]
     },
@@ -8175,7 +8485,16 @@
               "portable_evidence": "verification/local-publication-2026-11-04-second/METADATA-CHECK.json",
               "scope": "Genuine actual universally quantified PA(L) Hilbert proofs of predecessor existence, addition left zero/left successor and right cancellation over ANY additional closed theory, using actual induction/equality/logic without extra arithmetic axioms or a standard-validity-to-proof inference. Internal finite-range/guarded universal beta trace, general recursive graph totality/uniqueness, source-Base correspondence/internal HB/CBE and whole source12 remain pending. Supporting component only; the whole registered source statement remains pending."
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "assembly_or_source_contract",
+            "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+            "remaining_obligation": "Its S uses a concrete finite PR defining theory. The manuscript specifies the source arithmetic Base/PA(L) apparatus. A source-Base proof translation/extension with correct self-indexed provability and coding is missing. Internal HB/Lob is NOT a premise of this lemma and must not be added as a prerequisite merely because later collapse needs it.",
+            "next_completion_step": "Prove the exact source-Base/coding/proof translation for CompleteThree, then adopt; do not re-prove the selected-agent logic or wait for full HB2/HB3.",
+            "upstream_blockers": []
+          }
         },
         {
           "id": "12-common-knowledge-necessitation:thm:collapse",
@@ -8186,7 +8505,18 @@
           "statement_latex": "\\label{thm:collapse}\nFor every allowed selector $A$,\n\\[\n D\\vdash c_A\\leftrightarrow E_A(b).\n\\]",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+            "remaining_obligation": "Actual internal HB2/HB3 for the chosen source provability predicate, source Base/coding and chosen-CK identification, and the full selected collapse derivation remain missing. The conditional Lob theorem explicitly assumes HB instances.",
+            "next_completion_step": "Discharge internal HB for the actual predicate and identify the chosen CK, then assemble the collapse without imported proof-oracle premises.",
+            "upstream_blockers": [
+              "12:lem:three"
+            ]
+          }
         },
         {
           "id": "12-common-knowledge-necessitation:corollary-3",
@@ -8210,7 +8540,18 @@
               "portable_evidence": "verification/local-publication-2026-11-04-second/METADATA-CHECK.json",
               "scope": "ONE retained-parameter CK_A Formula1 with actual arity-two substitution-program installation in a source-calibrated finite registry before constructing S/rho/D, exact literal AST instance rewriting, genuine internal numeral code equations and actual Hilbert proofs of ALL closed sentence fixed-point instances. Final existential witness discharges every program/lookup/calibration premise. Internally quantified object-language CBE, original Base representability/internal HB2/HB3/Lob and whole numbered source12 theorems remain separate; no per-sentence unrelated closed diagonal family. Supporting component only; the whole registered source statement remains pending."
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+            "remaining_obligation": "The original D-equivalence to CK_A(b) requires source-chosen CK/Base correspondence and thm:collapse. A fixed-point supplier alone is not this equivalence.",
+            "next_completion_step": "Assemble this short logical consumer once the actual collapse/source CK contract is available.",
+            "upstream_blockers": [
+              "12:thm:collapse"
+            ]
+          }
         },
         {
           "id": "12-common-knowledge-necessitation:thm:selector",
@@ -8221,7 +8562,18 @@
           "statement_latex": "\\label{thm:selector}\nIn the original KT theory,\n\\[\n \\KT\\vdash\\theta_A\\leftrightarrow N_A,\n \\qquad\n \\KT\\vdash c_A\\leftrightarrow\\neg N_A.\n\\]",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+            "remaining_obligation": "The source-KT selector classification still depends on the source collapse theorem and Base/CK correspondence, with full-language selectors retained.",
+            "next_completion_step": "Compose actual veracity/atomic contradiction truth with the source collapse and prove both selector equivalences.",
+            "upstream_blockers": [
+              "12:thm:collapse"
+            ]
+          }
         },
         {
           "id": "12-common-knowledge-necessitation:cor:finite",
@@ -8232,7 +8584,18 @@
           "statement_latex": "\\label{cor:finite}\nFor every fixed external $r\\in\\N$, $\\KT\\vdash E_\\top^r(\\theta)$,\nwhere $E_\\top^0(\\theta)=\\theta$ and\n$E_\\top^{r+1}(\\theta)=E_\\top(E_\\top^r(\\theta))$.",
           "status": "pending",
           "accepted_declaration": null,
-          "frozen_comparator": null
+          "frozen_comparator": null,
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "missing_foundation_or_downstream",
+            "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+            "remaining_obligation": "The source counterexample theta theorem is not yet established through the collapse/selector chain. No new internally quantified iteration theorem is needed: r is an external fixed natural number.",
+            "next_completion_step": "After the source theta theorem, induct externally using the existing closed rule; avoid general recursive-graph or internally quantified iteration work for this corollary.",
+            "upstream_blockers": [
+              "12:thm:selector"
+            ]
+          }
         },
         {
           "id": "12-common-knowledge-necessitation:thm:consistency",
@@ -8294,7 +8657,16 @@
               "portable_evidence": "verification/local-publication-2026-11-04-second/METADATA-CHECK.json",
               "scope": "Genuine actual universally quantified PA(L) Hilbert proofs of predecessor existence, addition left zero/left successor and right cancellation over ANY additional closed theory, using actual induction/equality/logic without extra arithmetic axioms or a standard-validity-to-proof inference. Internal finite-range/guarded universal beta trace, general recursive graph totality/uniqueness, source-Base correspondence/internal HB/CBE and whole source12 remain pending. Supporting component only; the whole registered source statement remains pending."
             }
-          ]
+          ],
+          "completion_audit": {
+            "date": "2026-11-04",
+            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "classification": "assembly_or_source_contract",
+            "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+            "remaining_obligation": "The constructed D's finite named defining theory is not the manuscript's exact PA(L)+source syntax Base. Consistency of a weaker/different theory does not imply consistency after adding all source axioms. Need source PA(L)/definitional axioms valid in the same ground, proof-system inclusion/translation, and source predicate/coding correspondence.",
+            "next_completion_step": "Extend/calibrate the revision proof directly to the exact source Base. HB2/HB3/Lob is NOT needed for this consistency argument; do not make that later collapse machinery a prerequisite.",
+            "upstream_blockers": []
+          }
         }
       ]
     },
@@ -9572,5 +9944,6 @@
     }
   ],
   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
-  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388"
+  "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+  "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00"
 }
