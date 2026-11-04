@@ -115,3 +115,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104R`, 58 ex
 Two exact suppliers establish literal application confinement under subtype closure and representative-code congruence for four confined terms of matching types. The proof uses actual primary appArgument without introducing a positive application-argument step. No numeric, primitive-recursive or ID1 claim. See [source correspondence](termination-ordering/NUMBERED-QUOTIENT-APPLICATION-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104S`, 60 exact aliases.
+
+## ParametricSourceOne
+
+Three exact suppliers retain the unchanged identity and S assignment, establish the exact natural witnesses u = 1, v = 2 and d = 3, and discharge the generic hypotheses for actual gamma. This covers the literal I0 and constant-one gadget only, with no binary or nested gadget transfer. See [source correspondence](layered-comparison/ParametricSourceOne-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104T`, 63 exact aliases.
