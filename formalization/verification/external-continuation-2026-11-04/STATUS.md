@@ -97,3 +97,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104O`, 47 ex
 Four exact suppliers establish off-domain behavior, Phi agreement, literal Term substitution, and the unchanged full default S assignment with generic and actual-gamma graphs. All positive-raw valuations are shared. No other gadget transfer or full theorem claim. See [source correspondence](layered-comparison/ParametricSourceSuccessor-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104P`, 51 exact aliases.
+
+## OrdinaryArithmeticTypedCarrier
+
+Three exact suppliers establish the actual typed checker and numeric wrapper as primitive recursive and provide ordinary arithmetic decoded and concrete type-carrier formulas. Actual type and Context decoding are preserved; concrete calibration requires subtype closure. This is syntax typedness only, not C_tau, I or ID1. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-TYPED-CARRIER-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Q`, 54 exact aliases.

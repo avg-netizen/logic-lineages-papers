@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 51,
-    "components": 16
+    "fixed_aliases": 54,
+    "components": 17
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104P",
-    "source_sha256": "352258e94be8e0c4762a5ac9335febda142e97d3051920568590b4ec08b6156f",
-    "closure_sha256": "6967366cc01bf6d50c9893913aa346a9b2cb0e1d4b3926dd09f41ce727afbf28",
+    "module": "LogicLineages.ExternalCheckpoint20261104Q",
+    "source_sha256": "7b13a6e3a7d5d59674401b1d1922c0727c925717ac55391b72d3299365d5b7c4",
+    "closure_sha256": "d36d75fe675652bfcc0d22291d48f122c0272d46bdbc3cdd246cc10d152422bd",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -265,6 +265,21 @@
         "name": "fixed_051_actual_gamma_graph",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.ActualGammaGraph",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.actual_gamma_graph"
+      },
+      {
+        "name": "fixed_052_fixedActualTypedCheckerPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualTypedCheckerPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualTypedCheckerPrimitive"
+      },
+      {
+        "name": "fixed_053_fixedActualEncodedTypedPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualEncodedTypedPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualEncodedTypedPrimitive"
+      },
+      {
+        "name": "fixed_054_fixedActualTypedArithmeticFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualTypedArithmeticFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualTypedArithmeticFormula"
       }
     ],
     "allowed_axioms": [
@@ -773,6 +788,38 @@
           "sha256": "06da797efa4029769d9c4bae95b6b0a2fb0e3c24dfdae4614d3947a38ce9c92d"
         }
       ]
+    },
+    {
+      "name": "OrdinaryArithmeticTypedCarrier",
+      "scope": "Actual type-indexed syntax carrier PR, exact numeric wrapper PR, and ordinary arithmetic formula with decoded and concrete semantics.",
+      "freeze_sha256": "135b8364fccd2872fc2aedae1a9f5eec78355e070225290485ea9f8f54edb050",
+      "closure_sha256": "ebfb441797a6e7d015003cb1bd62cdadd143396b768a1eeb6f1accd323c2c415",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierDefinitions.lean",
+          "sha256": "b996f001d370932a3c9d5b6a2ca0aca7c4e42fbd34028444140a70f89516c4a6"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierTargets.lean",
+          "sha256": "7a9df12db76394f6a0db43668e97369e46d5f77cd120f6c76b0303227640d7fc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierStatementChecks.lean",
+          "sha256": "7b8e487e80bab6b2d6f6b560f3f541515c0cfa9fd56dc8fa291cd39aa9664a93"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-TYPED-CARRIER-SOURCE.md",
+          "sha256": "1985b65eb56e6b22f9b46035eb6f07bdafad6b2f6709ca1cb66b34988857410d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierSupportProof.lean",
+          "sha256": "9f7f4f1827c517e5a735ee64ec5f5e8ad7b35b3a0fe0372a78badd4fe102a17c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierProof.lean",
+          "sha256": "1bd5eb5b6f5164f924140c9d15537f6f78cbbe5ffa2a94a7864bf72d67a556a8"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -794,6 +841,7 @@
     "Coefficient-one collapse retains strict monotonicity and identity-majorization hypotheses for generic G; no higher-head or source-gadget identification.",
     "Represented carrier formulas preserve failed-context/list rejection, empty-list vacuity and explicit subtype closure; no type-specific C_tau, ID1 or well-foundedness claim.",
     "Typed canonical carrier calibration is syntactic typedness under subtype closure, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation.",
-    "Parametric source successor retains the literal source S and actual full assignment with shared positive-raw valuations; no other gadget transfer or full theorem claim."
+    "Parametric source successor retains the literal source S and actual full assignment with shared positive-raw valuations; no other gadget transfer or full theorem claim.",
+    "Typed-carrier formulas express syntax typedness under actual type and Context decoding; concrete calibration retains subtype closure. No C_tau, I, ID1 or well-foundedness claim."
   ]
 }
