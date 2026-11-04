@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 81,
-    "components": 26
+    "fixed_aliases": 85,
+    "components": 27
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104Z",
-    "source_sha256": "6aef6834f298e1eeaf9704d9e212222b28857271b8b63f60bdcce66bb36c1914",
-    "closure_sha256": "455d96d0daa02a9e0c7292f007d4ee4226b1b27fab9b1567789ff19249351944",
+    "module": "LogicLineages.ExternalCheckpoint20261104AA",
+    "source_sha256": "8c94702cf3ff3dab7cf1eb8c4a2095d7957574c0b4e1fb7f6feb0f93524bb7f6",
+    "closure_sha256": "7134c8cbffb5a358b579775f7d44fae8146205b83f2c2d363449ec64375754e7",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -415,6 +415,26 @@
         "name": "fixed_081_fixedActualSourcePositiveOperators",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualSourcePositiveOperators",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualSourcePositiveOperators"
+      },
+      {
+        "name": "fixed_082_exact_renaming",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactRenaming",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_renaming"
+      },
+      {
+        "name": "fixed_083_exact_binary_plan",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactBinaryPlan",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_binary_plan"
+      },
+      {
+        "name": "fixed_084_actual_gamma_literal_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ActualGammaLiteralCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.actual_gamma_literal_compilation"
+      },
+      {
+        "name": "fixed_085_exact_compiled_bounds",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactCompiledBounds",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_compiled_bounds"
       }
     ],
     "allowed_axioms": [
@@ -1239,6 +1259,42 @@
           "sha256": "96755c36626df3c42451e7e0d2264f2541c1acf02219e8a87ca0a79ef2af9d2d"
         }
       ]
+    },
+    {
+      "name": "ParametricBinaryPlan",
+      "scope": "Existing CPS binaryPlan/constantPlan actual Gamma semantic transport with exact shared source-forest/context bounds; no raw code/runtime/scaling/comparison.",
+      "freeze_sha256": "7a6a550a119c0a4e9cd10a84cf116b052032ab7fc5580b840780c9f586675bc8",
+      "closure_sha256": "de12cf6b2f4a3b7f67585a0247fee5fbd1aa5c371f5219e3e2c054c86f1880b8",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanDefinitions.lean",
+          "sha256": "b041d7c8d865f7462fc8c8c3919066513eb3cfb947ad28397ddac2a7b2f9a1a3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanTargets.lean",
+          "sha256": "3cec87675de1d1662f0017626839e919b43ad61df34333956a13e9325c6641dd"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanStatementChecks.lean",
+          "sha256": "74b97c344a4d63a344288845b2d74d1ee78b9e06300c79886704e68ec11bf6d9"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricBinaryPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "3b104905955a763aa50b7b8cf8766a8ac949da6902816f5c04a2724410f349f3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanRenamingProof.lean",
+          "sha256": "9279dcbf8a571b567f8a0f61b5bb779929537e3068744c9ee649acf030b9a1e4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanSemanticProof.lean",
+          "sha256": "95b349708b97cd1b75141cbff20c41849e48bfeefdac80cfeca36302eb08aa1d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanProof.lean",
+          "sha256": "8aed695bd9202dc1debc1177207ec00373916752c52ccb2fb551ba1434b9ab4b"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1270,6 +1326,7 @@
     "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim.",
     "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim.",
     "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim.",
-    "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim."
+    "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim.",
+    "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim."
   ]
 }

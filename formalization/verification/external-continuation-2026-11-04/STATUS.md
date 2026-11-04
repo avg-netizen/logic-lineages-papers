@@ -157,3 +157,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Y`, 77 ex
 Four exact suppliers establish unary-extension embedding truth, monotonicity of the syntactic Positive grammar, and carrier-conjoined universal-successor operator semantics for the separate scalar/R and list/direct-DM instances. Source-to-successor orientation and predicate-free guards are retained. No fixed-point, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/POSITIVE-ARITHMETIC-OPERATORS-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Z`, 81 exact aliases.
+
+## ParametricBinaryPlan
+
+Four exact suppliers establish the reviewed binary plan using the literal DAG, local-one allocation and exact forest metrics. No raw encoding, encoded-runtime or variable-scaling claim. See [source correspondence](layered-comparison/ParametricBinaryPlan-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AA`, 85 exact aliases.
