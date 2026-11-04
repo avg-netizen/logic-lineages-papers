@@ -37,3 +37,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104E`, 17 ex
 Four exact suppliers establish zero normalization, a validated terminal bridge, an effective fixed-table blank reduction and blank-halting undecidability. No extra hypothesis, timing equality, parity or full source hardness claim. See [source correspondence](layered-comparison/SourceBlankHaltingReduction-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104F`, 21 exact aliases.
+
+## QuotientDirectPrimrec
+
+Three exact actual checkers are primitive recursive under fixed signature size, arity and context, with jointly varying windows and precedence table. Finite-state fold calibration and literal decoder behavior are preserved. No identification of distinct Context encodings, arithmetic representation or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DIRECT-PRIMREC-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104G`, 24 exact aliases.

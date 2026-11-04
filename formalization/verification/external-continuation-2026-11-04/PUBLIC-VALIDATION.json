@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 21,
-    "components": 6
+    "fixed_aliases": 24,
+    "components": 7
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104F",
-    "source_sha256": "95af03c697675496329dd5c0e6ea4a559144ea5f7f69bdd2b0bff7d9e1c30070",
-    "closure_sha256": "a1efa9fdbae71f5fea9d7b535782039cd2e2b392958ef6f221c539618d76f457",
+    "module": "LogicLineages.ExternalCheckpoint20261104G",
+    "source_sha256": "dab94656a9a53db31e03b8672e1333f275feaf1a73e19cfae0a8bdae21ebbf4f",
+    "closure_sha256": "55de15c198a8419c5fd4ee351e36a63c9fbe763c9c18b2b98031a8791f1b6ea2",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -115,6 +115,21 @@
         "name": "fixed_021_blank_halting_undecidable",
         "target": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Targets.BlankHaltingUndecidable",
         "supplier": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks.blank_halting_undecidable"
+      },
+      {
+        "name": "fixed_022_fixedActualDominationPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualDominationPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualDominationPrimitive"
+      },
+      {
+        "name": "fixed_023_fixedActualDirectPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualDirectPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualDirectPrimitive"
+      },
+      {
+        "name": "fixed_024_fixedActualNumericDirectPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualNumericDirectPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualNumericDirectPrimitive"
       }
     ],
     "allowed_axioms": [
@@ -315,6 +330,38 @@
           "sha256": "cca0034a01055ba112100f2740fd2ccaaff4cdbebfc15d951a8e8486e2072b84"
         }
       ]
+    },
+    {
+      "name": "QuotientDirectPrimrec",
+      "scope": "Formal Primrec for three actual domination/direct/numeric direct certificate checkers with shared varying windows/table and fixed n/arity/Gamma.",
+      "freeze_sha256": "9b51fa9ce09747b00dfd94e91a4fba253731d0748f99d0d9d7059f0fa9815ebc",
+      "closure_sha256": "752bfa2ac43df620990c2a33c76a802bab1db8a94d473eaf11c16f24281c95a5",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecDefinitions.lean",
+          "sha256": "d09e3af3abbf261b2bfeebc54a8287f27b365648e36b55e3f281543a3d2a88fc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecTargets.lean",
+          "sha256": "74240a64bef5104ebae62ca760aef98e76df57bd0aedb183f36cb4721ef55fa1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecStatementChecks.lean",
+          "sha256": "878eb0c06089b023bd9722a66db6b1cdc40d29d72ce348e33b0418e6aa1ef67d"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DIRECT-PRIMREC-SOURCE.md",
+          "sha256": "883778432dbfd9c7a43fcb62f27e25f52e4e575abf4022b36b22d67232d194f7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecSupportProof.lean",
+          "sha256": "03d6511639f3d650ca1612f127aadd52b9e11ca2038e2ca5ced2065e11bf5d1a"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecProof.lean",
+          "sha256": "c5dab5afba1d08f45af99027aa883a5677a616400a4a0b0e5b6ae8aba314a8cd"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -326,6 +373,7 @@
     "Quotient domination uses existential checked positive-path certificates, not an unbounded relation decision or full direct multiset/well-foundedness result.",
     "Blank-machine simulation establishes the actual transition clock, primitive recursion and termination calibration only; no undecidability or parity claim.",
     "Direct quotient certificates are existential witnesses with explicit decoded endpoints, not a primitive-recursive checker, arithmetic representation or well-foundedness result.",
-    "Blank-halting reduction preserves the fixed actual table encoding and terminal bridge; no timing equality, parity or full source hardness claim."
+    "Blank-halting reduction preserves the fixed actual table encoding and terminal bridge; no timing equality, parity or full source hardness claim.",
+    "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim."
   ]
 }
