@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceBottomSpineComputabilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityLeast
+-- Uses the accepted semantic C_tau recursion and actual scalar operator unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityLeast

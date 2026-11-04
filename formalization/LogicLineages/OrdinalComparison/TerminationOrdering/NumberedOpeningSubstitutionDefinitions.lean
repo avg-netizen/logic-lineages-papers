@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMixedBindingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteApplicationBindingProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOpeningSubstitution
+-- Actual weakening/openNumbered syntax, with existing substitution unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOpeningSubstitution

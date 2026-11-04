@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticLeastSchemasProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticLeastSchemasStatementChecks
+theorem fixedActualSourceLeastSchemas : SourceArithmeticLeastSchemasTargets.ActualSourceLeastSchemas := SourceArithmeticLeastSchemasProof.actualSourceLeastSchemas
+#print axioms fixedActualSourceLeastSchemas
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticLeastSchemasStatementChecks

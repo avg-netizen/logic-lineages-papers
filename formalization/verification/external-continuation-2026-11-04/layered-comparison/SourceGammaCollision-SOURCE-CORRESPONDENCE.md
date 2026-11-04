@@ -1,0 +1,9 @@
+# Actual Gamma six-eraser detector with explicit finite observations
+
+Paper09 paper.tex lines123–144 gives the literal six-eraser detector; hardness.tex lines308–314 uses it with the chosen perturbed control. This component retains exactly SourceCollisionCompletion.detectorLeft/detectorRight, their typed fresh erasers and default full assignments. The source theorem here is conditional on explicit successful finite raw Scalar observations of both input sources under one joint ordinal valuation. It does not assert unconditional finite denotation of every source under arbitrary control.
+
+g_b is defined as the actual coefficient-one collapseWith Gamma_b at omega+n. Calibration g_b(n)=Gamma_b(n+2)+1 is proved, not a silent function identification. Positivity, strict monotonicity and fourfold successive growth are discharged for this actual function. The +1 and bounded perturbation require a stronger Phi gap than 4Phi+4 alone: use the accepted double-tower lower bound and elementary power inequalities to absorb both constants. No new growth oracle is assumed.
+
+The numerical expressions are literally g(3g(3p+p+2)+g(3q+q+2)+2) and g(3g(3p+q+2)+g(3q+p+2)+2). The numerical theorem includes zero raw values as a strengthening. Actual source application only uses the explicitly supplied finite observations and iterates the proved arbitrary-source eraser closure for each intermediate. It obtains successful finite assignments for both detectors, order, equality exactly when the original values agree, and gap at least two otherwise. Every alternative finite observation agrees by assignment/value uniqueness.
+
+This is not an unconditional whole lem:collision promotion. General source finiteness, conjunction aggregation, strict/weak universal comparisons, effective raw coding and the full hardness theorem remain separate. Accepted files, AF101 package and manuscripts stay unchanged. No export is authorized by this draft.

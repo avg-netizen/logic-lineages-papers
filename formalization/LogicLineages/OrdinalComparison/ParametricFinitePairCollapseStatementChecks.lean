@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricFinitePairCollapseTargets
+public import LogicLineages.OrdinalComparison.ParametricFinitePairCollapseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricFinitePairCollapse.StatementChecks
+theorem exact_representation : Targets.ExactRepresentation := Proof.exactRepresentation
+theorem exact_predecessors : Targets.ExactPredecessors := Proof.exactPredecessors
+theorem exact_maximum : Targets.ExactMaximum := Proof.exactMaximum
+end LogicLineages.OrdinalComparison.Source.ParametricFinitePairCollapse.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricFinitePairCollapse

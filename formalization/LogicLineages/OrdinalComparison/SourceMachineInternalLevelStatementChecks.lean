@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineInternalLevelTargets
+public import LogicLineages.OrdinalComparison.SourceMachineInternalLevelProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineInternalLevel.StatementChecks
+theorem structural_level : Targets.StructuralLevel := Proof.structuralLevel
+theorem actual_aggregate_level : Targets.ActualAggregateLevel := Proof.actualAggregateLevel
+end LogicLineages.OrdinalComparison.Source.SourceMachineInternalLevel.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceMachineInternalLevel

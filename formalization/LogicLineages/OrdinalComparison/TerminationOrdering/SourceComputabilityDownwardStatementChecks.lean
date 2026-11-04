@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownwardProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownwardStatementChecks
+theorem fixedActualComputabilityDownward : SourceComputabilityDownwardTargets.ActualComputabilityDownward := SourceComputabilityDownwardProof.actualComputabilityDownward
+#print axioms fixedActualComputabilityDownward
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownwardStatementChecks

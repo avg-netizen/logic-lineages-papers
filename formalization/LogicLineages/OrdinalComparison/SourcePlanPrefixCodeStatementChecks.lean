@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePlanPrefixCodeTargets
+public import LogicLineages.OrdinalComparison.SourcePlanPrefixCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourcePlanPrefixCode.StatementChecks
+theorem actual_embedding : Targets.ActualEmbedding := Proof.actualEmbedding
+theorem exact_prefix_calibration : Targets.ExactPrefixCalibration := Proof.exactPrefixCalibration
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourcePlanPrefixCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourcePlanPrefixCode

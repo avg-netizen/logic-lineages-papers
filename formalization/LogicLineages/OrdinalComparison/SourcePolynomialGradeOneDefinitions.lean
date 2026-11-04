@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePolynomialRealizationDefinitions
+public import LogicLineages.OrdinalComparison.WWUnitObservationDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialGradeOne
+-- Actual OriginalDomain closed syntax and ClosedGrade are unchanged.
+end LogicLineages.OrdinalComparison.Source.SourcePolynomialGradeOne

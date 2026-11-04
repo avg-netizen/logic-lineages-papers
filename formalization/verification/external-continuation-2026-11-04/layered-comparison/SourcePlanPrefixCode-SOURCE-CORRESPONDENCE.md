@@ -1,0 +1,9 @@
+# Exact compiler embedding and numeric prefix shifts
+
+This is the binder-index bridge for paper09's shared fresh-wire flattening (hardness.tex lines 308–314), not a complete numeric compiler. It retains unchanged ExistentialPlan.compile and Plan.witnesses. ActualEmbedding proves the final context length and every original typed variable index exactly: length Gamma plus witnesses, and original index plus witnesses. A gate contributes nine fresh grounds, an existential binder contributes one, and equation leaves preserve the tail embedding. No truth or control hypothesis is used.
+
+ExactPrefixCalibration applies to any actual typed renaming whose index action is explicitly the uniform prefix shift k. It calibrates the existing ContextInsertionCode.sourceCode 0 k on every original source, including nested binders and arbitrary internal source syntax/types. SourceCode increments its internal cutoff beneath lambdas, preserving locally bound names while shifting only the original free coordinates. This is not blindly adding k to all variable occurrences. The list target preserves exact pair/list order and both source codes under the same shift.
+
+This does not encode a general arbitrary renaming. A renaming with no verified uniform prefix-index equation is outside the target; arbitrary effective index-table construction remains separate. The all-code PR pair/list algorithms use accepted ContextInsertionCode and list maps. Malformed-code behavior is inherited, with no typedness claim for arbitrary inputs.
+
+No numeric Plan code, binary/scaling construction calibration, b,e reduction, runtime/code-size, source semantic or whole-hardness conclusion is asserted. All accepted/frozen files, manuscripts, register and packages remain unchanged. Candidates absent pending exact review/freeze; no export authorized.

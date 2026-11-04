@@ -1,0 +1,11 @@
+# Conditional semantic lambda computability
+
+Draft for exact review; no proof/export. Paper 06 lines 590–597, lambda computability reasoning, with the body accessibility obligation explicit rather than silently inferred.
+
+Premises are successful context decode, subtype-closed type window, actual scalar calibration in Gamma, confinement of the entire lambda, literal reverse-positive-quotient Acc of the body representative in sigma::Gamma, and computability of every beta instance at a confined computable argument in Gamma. Conclusion is actual semantic C_(sigma→tau) of the lambda representative. There is no claim of a decoded context or scalar calibration in sigma::Gamma: body Acc uses the literal quotient relation in that context.
+
+Proposed proof is induction on the explicit body Acc, generalized over confined representatives. For any computable argument, typedness supplies a confined representative at sigma and actual canonical application supplies the required partial output. Neutral expansion applies to the application, not the lambda. An arbitrary encodedR successor splits into first H edge and equality or positive residual.
+
+Accepted BetaApplicationEdge covers all four first edges. Outer bottom is computable. For beta witnesses body'/a', primary argument equivalence yields equal representative and transfers argument computability; use the universal premise at a', then same-environment PrimarySubstitution transports body to body'. Both beta terms are confined by actualBeta, so representativeEquality gives the exact output code transport. The lambda-to-bottom function step gives a bottom-headed application, already computable. For a body H successor next, body Acc supplies induction; accepted BetaInstanceDownward transfers the universal instance premise, explicitly preserving the equality-collapse alternative. Lambda confinement reconstructs from original arrow/domain membership and next confinement. Application calibration then gives computability of app(lam next)a. Every residual positive path is handled by accepted ComputabilityDownward.
+
+No Acc-only computability shortcut, no positive-count preservation through substitution, no argument reduction, no original-order transitivity, no all-term computability, global WF or internal ID1 theorem. All prior accepted files remain unchanged.

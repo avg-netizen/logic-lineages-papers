@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineQueryCodeTargets
+public import LogicLineages.OrdinalComparison.SourceMachineQueryCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineQueryCode.StatementChecks
+theorem exact_packaging : Targets.ExactPackaging := Proof.exactPackaging
+theorem generated_source_validity : Targets.GeneratedSourceValidity := Proof.generatedSourceValidity
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceMachineQueryCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceMachineQueryCode

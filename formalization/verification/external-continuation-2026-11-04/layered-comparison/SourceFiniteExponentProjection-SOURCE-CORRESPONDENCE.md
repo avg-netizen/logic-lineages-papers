@@ -1,0 +1,9 @@
+# Finite-exponent projection for standard-control functional hardness
+
+Paper09 hardness.tex lines 169–177 projects Cantor monomials to the finite-exponent polynomial part and extends this operation to the signed Cantor group. Lines 188–193 use projection of an ordinal solution to obtain a polynomial solution. This component pays only the exact signed-linear expression projection, not the whole reduction.
+
+The domain is the existing SignedPair.CantorGroup = Ordinal →₀ Int. finitePart is comapDomain along the injective natural-number embedding into Ordinal, with result Nat →₀ Int. Its coefficient at n is exactly the old coefficient at ordinal n. Every singleton at exponent at least omega is killed, not redirected to exponent zero. No ordinal-toNat collapse is used.
+
+The operation preserves zero, addition, negation and integer scalar multiplication. ExactShift identifies projection of the existing omegaShift (mapDomain of ordinal e+1) with mapDomain Nat.succ. The proof must handle coefficient zero and the fact that a transfinite exponent cannot become finite on adding one. ExpressionTransport is for the actual existing SignedPair.Expression syntax (unit, variable, add, neg, shift) and its meaning, with the unit projecting to single 0 1.
+
+Int coefficients describe signed group differences, not negative ordinals. This suffices for multiplication by fixed integer-polynomial coefficients represented by finite sums of shifts; it is not a theorem about arbitrary products of unknown ordinals. Nonnegative polynomial realizability, lifting to admissible positive first fields, zero-pattern compilation, the level-three closed seed, effectivity of projection on arbitrary ordinals, the published polynomial-solvability undecidability theorem and full functional-hardness remain separate. No source/register/export changes.

@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineQueryCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.SourceMachineQueryCodeProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineQueryCode.Proof
+end LogicLineages.OrdinalComparison.Source.SourceMachineQueryCode.Proof

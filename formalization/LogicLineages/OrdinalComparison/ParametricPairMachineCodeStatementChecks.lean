@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricPairMachineCodeTargets
+public import LogicLineages.OrdinalComparison.ParametricPairMachineCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricPairMachineCode.StatementChecks
+theorem exact_calibration : Targets.ExactCalibration := Proof.exactCalibration
+theorem kernel_primitive_recursive : Targets.KernelPrimitiveRecursive := Proof.kernelPrimitiveRecursive
+theorem indexed_primitive_recursive : Targets.IndexedPrimitiveRecursive := Proof.indexedPrimitiveRecursive
+theorem indexed_computable : Targets.IndexedComputable := Proof.indexedComputable
+end LogicLineages.OrdinalComparison.Source.ParametricPairMachineCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricPairMachineCode

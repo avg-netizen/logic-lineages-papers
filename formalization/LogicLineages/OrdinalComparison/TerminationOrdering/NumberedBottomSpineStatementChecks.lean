@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomSpineProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomSpineStatementChecks
+theorem fixedActualPrimarySpineInvariant : NumberedBottomSpineTargets.ActualPrimarySpineInvariant := NumberedBottomSpineProof.actualPrimarySpineInvariant
+#print axioms fixedActualPrimarySpineInvariant
+theorem fixedActualStepSpineDecrease : NumberedBottomSpineTargets.ActualStepSpineDecrease := NumberedBottomSpineProof.actualStepSpineDecrease
+#print axioms fixedActualStepSpineDecrease
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomSpineStatementChecks

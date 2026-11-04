@@ -1,0 +1,9 @@
+# Numeric precedence certificate under the actual Context codec
+
+Source: paper06 lines79–82, finite strict ranked precedence. For each fixed n, numericRankTest consumes arbitrary natural Context and rank-certificate codes. It uses the already frozen OrdinaryArithmeticQuotient.Context decoder, then decodeRank, then the unchanged literal rankCertificateTest. Either failed decode returns false. It neither alters the Context decoder nor adds a guard to any accepted rewrite checker.
+
+Encoding distinction is explicit: rankEncoding is Encodable.finPi on Fin n, not Primcodable.finArrow. The Context's existing table codec also retains its original finite-function encoding. To prove the literal rank decoder PR, use the accepted canonicalFinPi/canonicalFin and finiteCanonicalDecoder argument; do not silently replace it by Primrec.decode for a different encoding. The literal table×rank checker has finite domain for fixed n, so Primrec.dom_finite proves its PR; accepted contextDecoderPrimitive and option-case composition then prove all-code Primrec₂ numericRankTest. This is not uniform recursion in n and assumes no arbitrary finite-output decoder computable.
+
+Targets: exact success iff both decoded witnesses and literal RankCertificate; all-code per-n Primrec₂; existence of some accepted numeric certificate iff successful Context decode and actual StrictTotalTable of its unchanged table. The existential reverse direction uses exact rankEncoding encode/decode roundtrip and accepted finite-table completeness. Decode failure rejection is included in the first iff and implemented directly, with n=0 retained.
+
+No subtype closure or symbol-window validity is asserted. No arithmetic formula graph, rewrite/quotient well-foundedness, original transitivity, ID1 derivation or register promotion. Candidate absent until review/freeze.

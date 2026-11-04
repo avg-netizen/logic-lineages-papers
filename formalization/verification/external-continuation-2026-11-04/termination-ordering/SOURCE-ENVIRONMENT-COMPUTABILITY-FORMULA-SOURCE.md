@@ -1,0 +1,9 @@
+# Finite heterogeneous computable-environment formula
+
+Source: paper06 lines576–580 (finite typed computability formulas) and lines620–622 (structural induction under a computable substitution). This component expresses the finite premise, not preservation under substitution.
+
+For fixed ordered type list Gamma, environmentFormula has free variables Fin1 + Fin Gamma.length. The left singleton is the target Context code; right coordinate i has type Gamma.get i, with index0 the head/newest variable position and subsequent indices following the literal tail. It is a conjunction of reindexed actual fixed-type formulas. Empty Gamma is the literal true formula and its pointwise universal property is vacuous. Repeated types remain distinct value coordinates; no permutation, sorting or deduplication occurs.
+
+Target1 calibrates actual assembly for an arbitrary formula family. Target2 supplies the actual C_tau family for a separately fixed target term context Delta, retains its fixed-type calibration, and identifies environment truth with C_(Gamma.get i) of every numeric coordinate in that same target Context interpretation P. Gamma and Delta are deliberately distinct.
+
+This is finite first-order syntax with one free coordinate per environment value, not an encoded-list decoder or semantic satisfaction predicate. No map from actual variables to these coordinates is silently assumed. Instantiating it at an actual typed substitution needs a separately proved index/variable correspondence and explicit GoodSubstitution/literal confinement: C at a representative number alone does not recover confinement of an arbitrary source term. No semantic substitution preservation, lambda/numbered constructor theorem, ID1 derivability, all-term C, WF or register promotion. Proof absent until review/freeze.

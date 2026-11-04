@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePolynomialFamilyLiftTargets
+public import LogicLineages.OrdinalComparison.SourcePolynomialFamilyLiftProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialFamilyLift.StatementChecks
+theorem simultaneous_extension : Targets.SimultaneousExtension := Proof.simultaneousExtension
+theorem signed_input_calibration : Targets.SignedInputCalibration := Proof.signedInputCalibration
+end LogicLineages.OrdinalComparison.Source.SourcePolynomialFamilyLift.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialFamilyLift

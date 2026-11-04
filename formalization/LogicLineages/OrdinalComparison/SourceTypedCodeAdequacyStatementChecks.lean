@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceTypedCodeAdequacyTargets
+public import LogicLineages.OrdinalComparison.SourceTypedCodeAdequacyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceTypedCodeAdequacy.StatementChecks
+theorem fixed_context_type_uniqueness : Targets.FixedContextTypeUniqueness := Proof.fixedContextTypeUniqueness
+theorem typed_code_injective : Targets.TypedCodeInjective := Proof.typedCodeInjective
+theorem generic_control_transport : Targets.GenericControlTransport := Proof.genericControlTransport
+end LogicLineages.OrdinalComparison.Source.SourceTypedCodeAdequacy.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceTypedCodeAdequacy

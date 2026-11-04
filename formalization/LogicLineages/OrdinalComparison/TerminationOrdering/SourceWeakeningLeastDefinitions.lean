@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWeakeningAccessibilityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceBottomSpineComputabilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceWeakeningLeast
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceWeakeningLeast

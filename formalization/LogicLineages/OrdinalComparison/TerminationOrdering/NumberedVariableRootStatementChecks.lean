@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableRootProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableRootStatementChecks
+theorem fixedActualVariablePrimaryRigid : NumberedVariableRootTargets.ActualVariablePrimaryRigid := NumberedVariableRootProof.actualVariablePrimaryRigid
+#print axioms fixedActualVariablePrimaryRigid
+theorem fixedActualVariableStepBottom : NumberedVariableRootTargets.ActualVariableStepBottom := NumberedVariableRootProof.actualVariableStepBottom
+#print axioms fixedActualVariableStepBottom
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedVariableRootStatementChecks

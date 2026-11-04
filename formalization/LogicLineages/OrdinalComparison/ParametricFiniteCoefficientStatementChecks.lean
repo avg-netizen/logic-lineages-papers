@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricFiniteCoefficientTargets
+public import LogicLineages.OrdinalComparison.ParametricFiniteCoefficientProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricFiniteCoefficient.StatementChecks
+theorem finite_boundary : Targets.FiniteBoundary := Proof.finiteBoundary
+theorem exact_maximizer : Targets.ExactMaximizer := Proof.exactMaximizer
+theorem exact_finite_coefficient : Targets.ExactFiniteCoefficient := Proof.exactFiniteCoefficient
+end LogicLineages.OrdinalComparison.Source.ParametricFiniteCoefficient.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricFiniteCoefficient

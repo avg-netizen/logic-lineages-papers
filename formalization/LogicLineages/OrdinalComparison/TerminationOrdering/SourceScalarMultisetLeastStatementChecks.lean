@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceScalarMultisetLeastProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceScalarMultisetLeastStatementChecks
+theorem fixedActualScalarMembersToMultiset : SourceScalarMultisetLeastTargets.ActualScalarMembersToMultiset := SourceScalarMultisetLeastProof.actualScalarMembersToMultiset
+#print axioms fixedActualScalarMembersToMultiset
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceScalarMultisetLeastStatementChecks

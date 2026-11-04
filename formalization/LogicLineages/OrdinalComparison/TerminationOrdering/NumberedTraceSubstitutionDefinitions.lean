@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSubstitutionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWindowTracesProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceSubstitution
+-- Actual counted traces, allowing substitution to collapse positive steps.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceSubstitution

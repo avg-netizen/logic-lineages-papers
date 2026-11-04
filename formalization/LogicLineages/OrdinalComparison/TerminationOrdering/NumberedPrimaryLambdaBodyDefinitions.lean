@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryShapesProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryLambdaBody
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryLambdaBody

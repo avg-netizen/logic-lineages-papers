@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationPathsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInverseApplicationAccessibility
+-- The fixed-window positive quotient relation and application are unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInverseApplicationAccessibility

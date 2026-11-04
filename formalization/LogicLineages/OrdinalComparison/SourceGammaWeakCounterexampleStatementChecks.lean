@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaWeakCounterexampleTargets
+public import LogicLineages.OrdinalComparison.SourceGammaWeakCounterexampleProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaWeakCounterexample.StatementChecks
+theorem explicit_failures : Targets.ExplicitFailures := Proof.explicitFailures
+theorem fixed_computable : Targets.FixedComputable := Proof.fixedComputable
+theorem exact_counterexample : Targets.ExactCounterexample := Proof.exactCounterexample
+end LogicLineages.OrdinalComparison.Source.SourceGammaWeakCounterexample.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaWeakCounterexample

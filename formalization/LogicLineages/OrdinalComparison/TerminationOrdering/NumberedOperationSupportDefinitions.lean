@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSupportPullbackProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRewriteReductionDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOperationSupport
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOperationSupport

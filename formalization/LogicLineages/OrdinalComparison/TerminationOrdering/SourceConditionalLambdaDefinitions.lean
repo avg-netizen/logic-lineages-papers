@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBetaApplicationEdgeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceNeutralExpansionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceBetaInstanceDownwardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceConditionalLambda
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceConditionalLambda

@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomSpineAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceBottomSpineComputability
+-- Reuses the actual semantic computability recursion and fixed decoded context.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceBottomSpineComputability

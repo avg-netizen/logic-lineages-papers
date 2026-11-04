@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaApplicationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaPaths
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaPaths

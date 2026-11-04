@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBinaryHalvingTraceTargets
+public import LogicLineages.OrdinalComparison.SourceBinaryHalvingTraceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.StatementChecks
+theorem exact_terminal_trace : Targets.ExactTerminalTrace := Proof.exactTerminalTrace
+theorem exact_reconstruction : Targets.ExactReconstruction := Proof.exactReconstruction
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace

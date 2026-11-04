@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePolynomialRealizationTargets
+public import LogicLineages.OrdinalComparison.SourcePolynomialRealizationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialRealization.StatementChecks
+theorem exact_embedding : Targets.ExactEmbedding := Proof.exactEmbedding
+theorem actual_realization : Targets.ActualRealization := Proof.actualRealization
+end LogicLineages.OrdinalComparison.Source.SourcePolynomialRealization.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialRealization

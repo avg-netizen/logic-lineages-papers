@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientWeakeningProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceRenamingProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWeakeningAccessibility
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedWeakeningAccessibility

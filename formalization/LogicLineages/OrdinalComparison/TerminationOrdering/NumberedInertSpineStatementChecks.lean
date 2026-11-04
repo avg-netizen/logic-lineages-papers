@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInertSpineProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInertSpineStatementChecks
+theorem fixedActualPrimaryInertInvariant : NumberedInertSpineTargets.ActualPrimaryInertInvariant := NumberedInertSpineProof.actualPrimaryInertInvariant
+#print axioms fixedActualPrimaryInertInvariant
+theorem fixedActualStepInertDecrease : NumberedInertSpineTargets.ActualStepInertDecrease := NumberedInertSpineProof.actualStepInertDecrease
+#print axioms fixedActualStepInertDecrease
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInertSpineStatementChecks

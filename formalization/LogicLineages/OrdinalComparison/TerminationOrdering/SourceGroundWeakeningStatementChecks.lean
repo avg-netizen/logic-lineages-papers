@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundWeakeningProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundWeakeningStatementChecks
+theorem fixedActualGroundComputabilityWeakening : SourceGroundWeakeningTargets.ActualGroundComputabilityWeakening := SourceGroundWeakeningProof.actualGroundComputabilityWeakening
+#print axioms fixedActualGroundComputabilityWeakening
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundWeakeningStatementChecks

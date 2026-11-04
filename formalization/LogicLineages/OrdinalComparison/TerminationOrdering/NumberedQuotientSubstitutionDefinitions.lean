@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceSubstitutionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientSubstitution
+-- Actual representatives of supplied confined endpoints, no global numeric map.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientSubstitution

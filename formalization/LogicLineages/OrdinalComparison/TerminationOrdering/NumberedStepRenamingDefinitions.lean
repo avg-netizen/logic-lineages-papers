@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryWeakeningProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepRenaming
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepRenaming

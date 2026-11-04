@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOpeningSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSubstitutionComposition
+-- Existing typed substitution and single/lifted environments, unchanged.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSubstitutionComposition

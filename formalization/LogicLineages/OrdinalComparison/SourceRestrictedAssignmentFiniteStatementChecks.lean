@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceRestrictedAssignmentFiniteTargets
+public import LogicLineages.OrdinalComparison.SourceRestrictedAssignmentFiniteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceRestrictedAssignmentFinite.StatementChecks
+theorem finite_denotation : Targets.FiniteDenotation := Proof.finiteDenotation
+theorem actual_assignment : Targets.ActualAssignment := Proof.actualAssignment
+theorem finite_scalar : Targets.FiniteScalar := Proof.finiteScalar
+end LogicLineages.OrdinalComparison.Source.SourceRestrictedAssignmentFinite.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceRestrictedAssignmentFinite

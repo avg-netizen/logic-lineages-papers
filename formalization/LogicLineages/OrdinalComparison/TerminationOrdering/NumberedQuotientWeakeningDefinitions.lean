@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTraceWeakeningProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientWeakening
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientWeakening

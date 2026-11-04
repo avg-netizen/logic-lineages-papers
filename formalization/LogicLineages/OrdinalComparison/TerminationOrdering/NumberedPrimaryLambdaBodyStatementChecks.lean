@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryLambdaBodyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryLambdaBodyStatementChecks
+theorem fixedActualPrimaryLambdaBody : NumberedPrimaryLambdaBodyTargets.ActualPrimaryLambdaBody := NumberedPrimaryLambdaBodyProof.actualPrimaryLambdaBody
+#print axioms fixedActualPrimaryLambdaBody
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryLambdaBodyStatementChecks

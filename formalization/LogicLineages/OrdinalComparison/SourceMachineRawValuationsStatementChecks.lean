@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineRawValuationsTargets
+public import LogicLineages.OrdinalComparison.SourceMachineRawValuationsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineRawValuations.StatementChecks
+theorem ground_contexts : Targets.GroundContexts := Proof.groundContexts
+theorem positive_coordinate_equivalence : Targets.PositiveCoordinateEquivalence := Proof.positiveCoordinateEquivalence
+theorem raw_strict_nonhalting : Targets.RawStrictNonhalting := Proof.rawStrictNonhalting
+end LogicLineages.OrdinalComparison.Source.SourceMachineRawValuations.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceMachineRawValuations

@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSupportPullback
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSupportPullback

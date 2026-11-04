@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePlanInsertionCodeTargets
+public import LogicLineages.OrdinalComparison.SourcePlanInsertionCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourcePlanInsertionCode.StatementChecks
+theorem exact_protected_recursion : Targets.ExactProtectedRecursion := Proof.exactProtectedRecursion
+theorem exact_supported_insertion : Targets.ExactSupportedInsertion := Proof.exactSupportedInsertion
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourcePlanInsertionCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourcePlanInsertionCode

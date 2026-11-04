@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricOmegaFreePrimitiveTargets
+public import LogicLineages.OrdinalComparison.ParametricOmegaFreePrimitiveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricOmegaFreePrimitive.StatementChecks
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+theorem fixed_gamma_primitive : Targets.FixedGammaPrimitive := Proof.fixedGammaPrimitive
+end LogicLineages.OrdinalComparison.Source.ParametricOmegaFreePrimitive.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricOmegaFreePrimitive

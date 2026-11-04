@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricOmegaFreeEvaluatorTargets
+public import LogicLineages.OrdinalComparison.ParametricOmegaFreeEvaluatorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricOmegaFreeEvaluator.StatementChecks
+theorem uniform_computable : Targets.UniformComputable := Proof.uniformComputable
+theorem omega_free_calibration : Targets.OmegaFreeCalibration := Proof.omegaFreeCalibration
+theorem typed_component_calibration : Targets.TypedComponentCalibration := Proof.typedComponentCalibration
+end LogicLineages.OrdinalComparison.Source.ParametricOmegaFreeEvaluator.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricOmegaFreeEvaluator

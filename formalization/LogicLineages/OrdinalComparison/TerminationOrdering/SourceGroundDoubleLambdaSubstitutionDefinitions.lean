@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceApplicativeLambdaSubstitutionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundWeakeningProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundDoubleLambdaSubstitution
+-- Literal two-lambda fragment with outer ground binder; no new syntax or semantic predicate.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceGroundDoubleLambdaSubstitution

@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetAccessibleSubtypeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetAccessibilityTransfer
+-- This interface reuses the literal accepted subtype and Direct relation without changing either.
+end LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetAccessibilityTransfer

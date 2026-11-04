@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricSourceEraserTargets
+public import LogicLineages.OrdinalComparison.ParametricSourceEraserProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricSourceEraser.StatementChecks
+theorem full_assignment_closure : Targets.FullAssignmentClosure := Proof.fullAssignmentClosure
+theorem generic_finite_closure : Targets.GenericFiniteClosure := Proof.genericFiniteClosure
+theorem natural_observation_closure : Targets.NaturalObservationClosure := Proof.naturalObservationClosure
+theorem actual_gamma_closure : Targets.ActualGammaClosure := Proof.actualGammaClosure
+end LogicLineages.OrdinalComparison.Source.ParametricSourceEraser.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricSourceEraser

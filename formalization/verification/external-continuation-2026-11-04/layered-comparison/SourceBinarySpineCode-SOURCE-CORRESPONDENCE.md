@@ -1,0 +1,9 @@
+# Numeric binary CPS spine transport
+
+This is a constructor-calibration supplier for paper09 hardness.tex lines 294–314, using the unchanged SourceAdditionCompletion.binaryDAG and BinaryPlan.binaryPlan. It does not promote the whole source reduction.
+
+ExactBitTransport covers arbitrary natural bit lists and base values, with zero selecting double/zero and nonzero selecting doubleOne/one. The bit list is outer-to-inner, so dagOfBits is a right fold. The numeric state left fold carries total fresh-prefix count, current output port, and continuation. A double inserts one binder, chooses port 1, and prepends add(1,1,shift1 oldOut) to insertion0 1 of the continuation. A doubleOne inserts three binders, chooses port 3, and prepends add(3,3,2), one(1), add(2,1,shift3 oldOut) to insertion0 3 of the continuation. The local one allocation is preserved exactly, not shared or optimized. Output begins with the accumulated existential tags, followed by the terminal equality-to-zero or one gate and the accumulated continuation.
+
+The calibration holds for every actual output port and arbitrary Supported continuation, without satisfaction assumptions. Numeric insertion protects all existential coordinates already inside that continuation; source payload insertion also protects term lambdas. ExactLiteralTransport explicitly reverses the accepted inner-to-outer halving trace and uses its exact reconstruction to identify the existing binaryDAG k, not a merely value-equivalent tree.
+
+UniformPrimitiveRecursive covers raw advance, raw bit-list build and literal build using standard Primcodable lists/products, finite folds, list reversal, primitive insertion and the accepted trace. No malformed typedness, complete (b,e)-to-spine map, scalar Nat wrapper, source code size or runtime claim is included. Existing source/frozen bytes remain unchanged; verification-only, no export.

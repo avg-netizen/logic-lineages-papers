@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimarySubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkSubstitution
+-- Reuses literal finiteMark, PrimitiveMark, PrimitiveMultiset and substitutePacked.
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMarkSubstitution

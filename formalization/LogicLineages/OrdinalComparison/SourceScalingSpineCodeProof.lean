@@ -1,0 +1,6 @@
+module
+public import LogicLineages.OrdinalComparison.SourceScalingSpineCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.SourceScalingSpineCodeProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceScalingSpineCode.Proof
+end LogicLineages.OrdinalComparison.Source.SourceScalingSpineCode.Proof

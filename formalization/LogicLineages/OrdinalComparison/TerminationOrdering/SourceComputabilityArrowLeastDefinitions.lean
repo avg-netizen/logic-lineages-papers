@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedInverseApplicationAccessibilityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityArrowLeast
+-- No new computability clause or scalar operator is introduced.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityArrowLeast

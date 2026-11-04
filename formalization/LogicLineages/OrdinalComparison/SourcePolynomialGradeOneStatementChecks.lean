@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.SourcePolynomialGradeOneTargets
+public import LogicLineages.OrdinalComparison.SourcePolynomialGradeOneProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialGradeOne.StatementChecks
+theorem actual_graded_realization : Targets.ActualGradedRealization := Proof.actualGradedRealization
+end LogicLineages.OrdinalComparison.Source.SourcePolynomialGradeOne.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourcePolynomialGradeOne

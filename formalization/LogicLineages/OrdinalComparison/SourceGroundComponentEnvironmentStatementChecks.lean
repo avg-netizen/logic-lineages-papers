@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGroundComponentEnvironmentTargets
+public import LogicLineages.OrdinalComparison.SourceGroundComponentEnvironmentProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGroundComponentEnvironment.StatementChecks
+theorem exact_layout : Targets.ExactLayout := Proof.exactLayout
+theorem typed_lookup : Targets.TypedLookup := Proof.typedLookup
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceGroundComponentEnvironment.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGroundComponentEnvironment

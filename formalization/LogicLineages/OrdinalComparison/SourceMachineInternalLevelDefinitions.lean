@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachinePlanFragmentDefinitions
+public import LogicLineages.OrdinalComparison.SourceMachineRawValuationsDefinitions
+public import LogicLineages.OrdinalComparison.WWSourceClassesDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineInternalLevel
+/- Uses the existing literal typeSupport-based InternalLevelBound without replacement. -/
+end LogicLineages.OrdinalComparison.Source.SourceMachineInternalLevel

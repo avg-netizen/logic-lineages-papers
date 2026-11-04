@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBlankHaltingUniversalityTargets
+public import LogicLineages.OrdinalComparison.SourceBlankHaltingUniversalityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceBlankHaltingUniversality.StatementChecks
+theorem exact_specialization : Targets.ExactSpecialization := Proof.exactSpecialization
+theorem uniform_translator : Targets.UniformTranslator := Proof.uniformTranslator
+theorem re_universality : Targets.REUniversality := Proof.reUniversality
+end LogicLineages.OrdinalComparison.Source.SourceBlankHaltingUniversality.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceBlankHaltingUniversality

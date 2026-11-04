@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricPrimitiveFiniteTargets
+public import LogicLineages.OrdinalComparison.ParametricPrimitiveFiniteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricPrimitiveFinite.StatementChecks
+theorem exact_expression_calibration : Targets.ExactExpressionCalibration := Proof.exactExpressionCalibration
+theorem full_component_renaming : Targets.FullComponentRenaming := Proof.fullComponentRenaming
+theorem ground_input_dag_renaming : Targets.GroundInputDAGRenaming := Proof.groundInputDAGRenaming
+theorem actual_gamma_expressions : Targets.ActualGammaExpressions := Proof.actualGammaExpressions
+end LogicLineages.OrdinalComparison.Source.ParametricPrimitiveFinite.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricPrimitiveFinite

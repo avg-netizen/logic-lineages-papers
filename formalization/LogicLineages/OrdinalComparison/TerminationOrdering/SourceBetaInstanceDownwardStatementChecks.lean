@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceBetaInstanceDownwardProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceBetaInstanceDownwardStatementChecks
+theorem fixedActualBetaInstanceDownward : SourceBetaInstanceDownwardTargets.ActualBetaInstanceDownward := SourceBetaInstanceDownwardProof.actualBetaInstanceDownward
+#print axioms fixedActualBetaInstanceDownward
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceBetaInstanceDownwardStatementChecks

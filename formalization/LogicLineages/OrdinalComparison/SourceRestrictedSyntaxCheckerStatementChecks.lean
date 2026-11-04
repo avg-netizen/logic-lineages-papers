@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceRestrictedSyntaxCheckerTargets
+public import LogicLineages.OrdinalComparison.SourceRestrictedSyntaxCheckerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceRestrictedSyntaxChecker.StatementChecks
+theorem fragment_calibration : Targets.FragmentCalibration := Proof.fragmentCalibration
+theorem malformed_cases : Targets.MalformedCases := Proof.malformedCases
+theorem exact_syntax_class : Targets.ExactSyntaxClass := Proof.exactSyntaxClass
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+end LogicLineages.OrdinalComparison.Source.SourceRestrictedSyntaxChecker.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceRestrictedSyntaxChecker

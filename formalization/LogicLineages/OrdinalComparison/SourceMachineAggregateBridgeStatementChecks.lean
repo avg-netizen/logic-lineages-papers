@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineAggregateBridgeTargets
+public import LogicLineages.OrdinalComparison.SourceMachineAggregateBridgeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceMachineAggregateBridge.StatementChecks
+theorem pointwise_aggregate : Targets.PointwiseAggregate := Proof.pointwiseAggregate
+theorem existential_equality : Targets.ExistentialEquality := Proof.existentialEquality
+theorem universal_strict_nonhalting : Targets.UniversalStrictNonhalting := Proof.universalStrictNonhalting
+end LogicLineages.OrdinalComparison.Source.SourceMachineAggregateBridge.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceMachineAggregateBridge

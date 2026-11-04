@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceDirectAccessibilityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceArithmeticAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceMultisetLeastMembership
+-- Reuses the actual positive bodies and decoded source relations without new guards.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceMultisetLeastMembership

@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientSubstitutionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityDownwardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceBetaInstanceDownward
+-- Actual beta instances and body quotient paths, with zero collapse retained.
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceBetaInstanceDownward

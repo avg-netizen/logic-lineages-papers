@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceLiteralWeakWrapperCodeTargets
+public import LogicLineages.OrdinalComparison.SourceLiteralWeakWrapperCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceLiteralWeakWrapperCode.StatementChecks
+theorem exact_encoding : Targets.ExactEncoding := Proof.exactEncoding
+theorem uniform_primitive_recursive : Targets.UniformPrimitiveRecursive := Proof.uniformPrimitiveRecursive
+theorem fragment_preservation : Targets.FragmentPreservation := Proof.fragmentPreservation
+theorem internal_level_preservation : Targets.InternalLevelPreservation := Proof.internalLevelPreservation
+end LogicLineages.OrdinalComparison.Source.SourceLiteralWeakWrapperCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceLiteralWeakWrapperCode

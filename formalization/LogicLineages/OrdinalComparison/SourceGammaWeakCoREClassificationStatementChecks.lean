@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceGammaWeakCoREClassificationTargets
+public import LogicLineages.OrdinalComparison.SourceGammaWeakCoREClassificationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.SourceGammaWeakCoREClassification.StatementChecks
+theorem re_complement : Targets.REComplement := Proof.reComplement
+theorem universal_co_re : Targets.UniversalCoRE := Proof.universalCoRE
+theorem reverse_primitive_reduction : Targets.ReversePrimitiveReduction := Proof.reversePrimitiveReduction
+theorem exact_many_one_equivalence : Targets.ExactManyOneEquivalence := Proof.exactManyOneEquivalence
+end LogicLineages.OrdinalComparison.Source.SourceGammaWeakCoREClassification.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.SourceGammaWeakCoREClassification

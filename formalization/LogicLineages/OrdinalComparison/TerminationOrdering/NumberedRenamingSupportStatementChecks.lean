@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingSupportStatementChecks
+theorem fixedActualLiftRange : NumberedRenamingSupportTargets.ActualLiftRange := NumberedRenamingSupportProof.actualLiftRange
+#print axioms fixedActualLiftRange
+theorem fixedActualTermSupportImage : NumberedRenamingSupportTargets.ActualTermSupportImage := NumberedRenamingSupportProof.actualTermSupportImage
+#print axioms fixedActualTermSupportImage
+theorem fixedActualArgumentSupportImage : NumberedRenamingSupportTargets.ActualArgumentSupportImage := NumberedRenamingSupportProof.actualArgumentSupportImage
+#print axioms fixedActualArgumentSupportImage
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRenamingSupportStatementChecks
