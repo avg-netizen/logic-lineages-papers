@@ -61,3 +61,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104I`, 30 ex
 Three exact suppliers establish primitive-recursive coefficients/arguments with literal bounds and valuation, the fixed-time equations iff actual H with explicit witnesses, and existential conjunction iff blank halting. No additional premise, source-language gadgets, complexity or whole hardness claim. See [source correspondence](layered-comparison/SourceMachineHaltingConjunction-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104J`, 33 exact aliases.
+
+## QuotientDirectCarrier
+
+Three exact suppliers calibrate actual canonical representative lists and positive-relation endpoints, and preserve the target carrier under direct replacement. Every target retains explicit subtype closure; guards are unchanged. No accessibility, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/QUOTIENT-DIRECT-CARRIER-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104K`, 36 exact aliases.

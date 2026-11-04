@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks
+theorem fixedActualListCarrier : QuotientDirectCarrierTargets.ActualListCarrier := QuotientDirectCarrierProof.listCarrier
+#print axioms fixedActualListCarrier
+theorem fixedActualPositivePathCarrier : QuotientDirectCarrierTargets.ActualPositivePathCarrier := QuotientDirectCarrierProof.positivePathCarrier
+#print axioms fixedActualPositivePathCarrier
+theorem fixedActualDirectCarrierPreservation : QuotientDirectCarrierTargets.ActualDirectCarrierPreservation := QuotientDirectCarrierProof.directCarrierPreservation
+#print axioms fixedActualDirectCarrierPreservation
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks

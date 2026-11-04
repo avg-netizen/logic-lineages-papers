@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 33,
-    "components": 10
+    "fixed_aliases": 36,
+    "components": 11
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104J",
-    "source_sha256": "f64374f7f8ceb5eb551429a6453d4e7dcfde638c59480c4d4084fc6c234b10b2",
-    "closure_sha256": "ab8d953122d0edfa341f9c7e432cf00f5efdbea2936c8ca6901ba6507b864d6c",
+    "module": "LogicLineages.ExternalCheckpoint20261104K",
+    "source_sha256": "6010e3fcb8b4adb7f309d8d6687bc5debfdc3c2d71b5de23644352d14547910c",
+    "closure_sha256": "e5f06e88e6febc6c3863b358269d6b7d309fe2d3017e617c5ff070e57e0f26d7",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -175,6 +175,21 @@
         "name": "fixed_033_exact_halting_reduction",
         "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.ExactHaltingReduction",
         "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.exact_halting_reduction"
+      },
+      {
+        "name": "fixed_034_fixedActualListCarrier",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualListCarrier",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualListCarrier"
+      },
+      {
+        "name": "fixed_035_fixedActualPositivePathCarrier",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualPositivePathCarrier",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualPositivePathCarrier"
+      },
+      {
+        "name": "fixed_036_fixedActualDirectCarrierPreservation",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualDirectCarrierPreservation",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualDirectCarrierPreservation"
       }
     ],
     "allowed_axioms": [
@@ -499,6 +514,34 @@
           "sha256": "d87cda13cc06abfae686a96198896bc344a26b83a0ef44a8224ee85ff5b54b18"
         }
       ]
+    },
+    {
+      "name": "QuotientDirectCarrier",
+      "scope": "Actual canonical carrier list calibration, positive R endpoint carrier and direct replacement carrier preservation under explicit subtype closure.",
+      "freeze_sha256": "e5c98bd6824961c1df8463efb5926250284cc93e36a4c2960a250bcc3c289dd5",
+      "closure_sha256": "504aef0b3e6cbe678a794141785912ced927c77d619ac7dee6a6b230d45e3274",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierDefinitions.lean",
+          "sha256": "fa24265549de001641c9f74c5ba0e0a9ddc3a91968233082f51aaf2a4a31ca16"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierTargets.lean",
+          "sha256": "20b42320d24f55c955e73d28a4ce65b6503062e0d0be935960ad8d41eb51cb05"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierStatementChecks.lean",
+          "sha256": "856278e9155500f2bff35b5745c6d63c5537aac14a77958536bc0087eb7d6cc0"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DIRECT-CARRIER-SOURCE.md",
+          "sha256": "8f2c198b1979ef34bb6339a5658c901480c15854363fcdee2bb422a1e1ea5285"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierProof.lean",
+          "sha256": "ad80a38d7ab373048f7416fd90a5eac4487704eb5b752550e75e9858477f5ca0"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -514,6 +557,7 @@
     "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim.",
     "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim.",
     "Ordinary-arithmetic direct replacement is standard-natural-number representation with explicit context/list decoding and fixed signature/arity/context, not a carrier, ID1 or well-foundedness theorem.",
-    "The machine-halting conjunction concerns the original arithmetic equations only, not source-language gadgets, complexity bounds or the whole hardness theorem."
+    "The machine-halting conjunction concerns the original arithmetic equations only, not source-language gadgets, complexity bounds or the whole hardness theorem.",
+    "Canonical carrier calibration and preservation keep explicit subtype closure; no accessibility, ID1 or well-foundedness claim."
   ]
 }
