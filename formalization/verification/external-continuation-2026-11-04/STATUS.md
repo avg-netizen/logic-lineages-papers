@@ -145,3 +145,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104W`, 71 ex
 Three exact suppliers establish the six-input primitive-recursive success checker and ordinary arithmetic partial application graph with all-code and concrete-code semantics. None has no successful output, without a sentinel. Typed-source calibration retains explicit typedness and subtype assumptions. No C_tau, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/ORDINARY-ARITHMETIC-APPLICATION-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104X`, 74 exact aliases.
+
+## ParametricExistentialPlan
+
+Three exact suppliers establish the reviewed existential plan for supported equality, addition and one primitives, retaining the original ground-input and functional-unit convention. No comparison, binary encoding, complexity or aggregation claim. See [source correspondence](layered-comparison/ParametricExistentialPlan-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104Y`, 77 exact aliases.

@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 74,
-    "components": 24
+    "fixed_aliases": 77,
+    "components": 25
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104X",
-    "source_sha256": "50aa47d57b8c43aead22036b14326555e126743242bc2f917618bca190510adc",
-    "closure_sha256": "4d11cdea7f65e888bf78165dcef5109d1f1a9f69fa6ffdd306cc1d78f9d247c3",
+    "module": "LogicLineages.ExternalCheckpoint20261104Y",
+    "source_sha256": "5dcfdc46589c1b1235b75ae7d504bd70aeaffd99e6f1b383c641681c40c5ee73",
+    "closure_sha256": "fd05d147f198a2dea08bcf091265e3dce2b3e0ee711d294120ae3ee5190342d2",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -380,6 +380,21 @@
         "name": "fixed_074_fixedActualApplicationFormulaCalibration",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualApplicationFormulaCalibration",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualApplicationFormulaCalibration"
+      },
+      {
+        "name": "fixed_075_exact_equation_renaming",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ExactEquationRenaming",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.exact_equation_renaming"
+      },
+      {
+        "name": "fixed_076_exact_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ExactCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.exact_compilation"
+      },
+      {
+        "name": "fixed_077_actual_gamma_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ActualGammaCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.actual_gamma_compilation"
       }
     ],
     "allowed_axioms": [
@@ -1136,6 +1151,42 @@
           "sha256": "b46f3818d8cebb964569a86c6f2d1b6d955305261ff2aaf109e2f4bbc2c61725"
         }
       ]
+    },
+    {
+      "name": "ParametricExistentialPlan",
+      "scope": "Unchanged Plan.compile generic/Gamma semantics for eq/add/one and arbitrary source equation leaves under original input convention, no comparison/complexity.",
+      "freeze_sha256": "45f5298ab2f157b418f16b6330a4771a7081b2fef4b8888a5aca8b500b296bec",
+      "closure_sha256": "f887139ede4aa08c62895050864936eb5b3868721648741ea4c7abb8c41960cc",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanDefinitions.lean",
+          "sha256": "4f5fcb48fc0a980fb0b51c9d8ce02b40219a57dd4749b0f60585227615a60047"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanTargets.lean",
+          "sha256": "e99189556d4e223ab4d5f858f6ceeb45f65859e2c43a12fd0d357a69d15d2c24"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanStatementChecks.lean",
+          "sha256": "aa7ac73247bbfb15626a5e602e9461ce58fc9104641a4f5c4f14eb23cd748177"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricExistentialPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "b543b094df3969b239bade20c82d7fbaabf5acbad164023e198dda2019d8c590"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanRenamingProof.lean",
+          "sha256": "a0f02812fd2a3a8a189a4eca5090ba49050d725a5b890b4ebc232473a889fac6"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanCompilationProof.lean",
+          "sha256": "856e010d07d14f2c91ca1cf10d2b03a978b5442c04cb02297243b3bbe1fd1d8b"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanProof.lean",
+          "sha256": "94312dcc18a975fd742cf776089eb109e51718d527ee3e634e68775022b9a0c9"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1165,6 +1216,7 @@
     "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim.",
     "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim.",
     "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim.",
-    "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim."
+    "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim.",
+    "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim."
   ]
 }
