@@ -1,0 +1,124 @@
+{
+  "accepted": {
+    "round": "R008-remaining-direct-operations",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualArgumentAppendPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualTypedArgumentAppend",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualRawOpeningPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualTypedOpeningCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualAllAbstractionCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualAbstractionCodeCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedPutPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedAbstractionPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedBottomPrimitive"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualArgumentAppendPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualTypedArgumentAppend",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualRawOpeningPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualTypedOpeningCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualAllAbstractionCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualAbstractionCodeCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualPackedPutPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualPackedAbstractionPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets.ActualPackedBottomPrimitive"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/DirectOperations-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "All9 fixed aliases full namespace audit passed: typed append propext only, allothers standard3.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectOperationsDefinitions.lean",
+        "sha256": "a8bd001a1c16e92a35baa8b6a77aab089f5a0c7b881495ac106b1d5380b654b6"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectOperationsTargets.lean",
+        "sha256": "0b4f8ba7e66ea11fefe39269dbdb53a0e4ea459f3106167052247e7e1437b3b0"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectOperationsSupportProof.lean",
+        "sha256": "6e911c1b6a1e7a880ff18f16b79e8539727c87a7162df0b0e1d433ea71acf588"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedArgumentAppendPrimrecProof.lean",
+        "sha256": "b6e462e35ceb37ff4caa467571ebf1ad927575f76542f046b9be1e557420ecbe"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOpeningPrimrecProof.lean",
+        "sha256": "45956c3a04f99aac4c90edbf159d835cef3a9aa720dbf06e055fb5b7c6d804a7"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectCodePrimrecProof.lean",
+        "sha256": "781129230e97dd0baf32b4d98586991da2c60ef4da38d6c9681bfaa5c6a89bc4"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectOperationsProof.lean",
+        "sha256": "9872a5eb3dd72fe657727a5d6792f48e6caa8a3f84733cd4bb234ecf540bb5b6"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedDirectOperationsStatementChecks.lean",
+        "sha256": "f353567d37e22f5a0b43b9f51a38bb64b58a017e4cb5600dfe1b85c81529c0a6"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754961115821229-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754961115821229-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754961115821229-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754961115821229-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755173475421981-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755173475421981-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedArgumentAppendPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755307008851397-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755307008851397-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedArgumentAppendPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOpeningPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755345848597719-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755345848597719-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOpeningPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectCodePrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755439184431131-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755439184431131-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectCodePrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual unchanged directTarget Put/Abstraction/Bottom effectivity, using genuine ALL-code argument append and raw opening/abstraction programs calibrated to exact actual typed appendArguments/openNumbered. Joint finite label/source Put input, actual binders/base/extras/finite label/type fields retained. Actual beta already paid in R007. No Select/Copy/Mul, whole root/step/quotient checker, arithmetic presentation or source theorem is assumed/completed. COMPLETE9gate. Real decreasing tail-code append program, exact capture-aware opening and fresh-argument append; genuine numeric Put/Abs/Bottom and exact typed decoder reconstruction. Local irreducibility of existing Primrec predicate avoids unnecessary encoding expansion without changing its definition, targets or limits. Together with R007, all4 actual directTarget constructors are paid, but selector/root/step/quotient certificate assembly remains pending.",
+    "numbered_statements_completed": []
+  }
+}

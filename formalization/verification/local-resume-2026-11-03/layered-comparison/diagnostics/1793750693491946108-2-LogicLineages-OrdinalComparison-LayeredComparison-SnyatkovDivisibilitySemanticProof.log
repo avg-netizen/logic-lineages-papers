@@ -1,0 +1,110 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:23:13: error: Tactic `unfold` failed to unfold `SnyatkovHyperCollision.translatedValue` in
+  p.2.1 - 100 ≤ SnyatkovHyperCollision.shiftedInput n p.2.2.1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:28:6: error(lean.unknownIdentifier): Unknown constant `Nat.mod_eq_zero`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:27:40: error: unsolved goals
+m : ℕ
+z : ℤ
+⊢ z.natAbs % m = 0 ↔ ↑m ∣ z
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:62:29: warning: Possibly looping simp theorem: `smallAtom.eq_1`
+
+Note: Possibly caused by: `eq_comm` and `Bool.true_eq`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:62:6: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:85:6: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:103:6: error: unsolved goals
+case neg
+i : ℕ
+p : Parameters
+hm : 0 < p.2.1
+ν : ℕ → ℕ
+hs : BaseFormula.Formula.eval ν (smallFormula i p) ↔ ν i < cutoff p ∧ predicate p (ν i) = true
+h :
+  predicate p (ν i) = true ↔ ν i < cutoff p ∧ (smallBits p).getD (ν i) false = true ∨ cutoff p ≤ ν i ∧ tailBit p = true
+hb : ¬tailBit p = true
+hn : ¬ν i < cutoff p
+ht : predicate p (ν i) = tailBit p
+⊢ ¬BaseFormula.Formula.eval ν BaseFormula.Formula.falsity
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:99:21: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [hb, ↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵,̵ ̵BaseFormula.Formula.eval, and_false, or_false, eq_self, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:99:33: warning: This simp argument is unused:
+  BaseFormula.Formula.eval
+
+Hint: Omit it from the simp argument list.
+  simp only [hb, ↓reduceIte, B̵a̵s̵e̵F̵o̵r̵m̵u̵l̵a̵.̵F̵o̵r̵m̵u̵l̵a̵.̵e̵v̵a̵l̵,̵ ̵and_false, or_false, eq_self, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:99:59: warning: This simp argument is unused:
+  and_false
+
+Hint: Omit it from the simp argument list.
+  simp only [hb, ↓reduceIte, BaseFormula.Formula.eval, a̵n̵d̵_̵f̵a̵l̵s̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵or_false, eq_self, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:100:8: warning: This simp argument is unused:
+  or_false
+
+Hint: Omit it from the simp argument list.
+  simp only [hb, ↓reduceIte, BaseFormula.Formula.eval, and_false, o̵r̵_̵f̵a̵l̵s̵e̵,̵ ̵eq_self, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:123:17: error: unsolved goals
+case cons.false
+i : ℕ
+p : Parameters
+n : ℕ
+xs : List ℕ
+ih :
+  List.foldr (fun n rest => smallAtomCode i p n ++ rest ++ [(7, 0, 0)]) [(0, 0, 0)] xs =
+    (List.foldr (fun n rest => (smallAtom i p n).disjunction rest) BaseFormula.Formula.falsity xs).encode
+h : predicate p n = false
+⊢ List.foldr
+      (fun n rest => (if predicate p n = true then [(2, 4 * i + 1, 4 * n)] else [(0, 0, 0)]) ++ (rest ++ [(7, 0, 0)]))
+      [(0, 0, 0)] xs =
+    CommonHeadCompiler.encode
+      (List.foldr
+          (fun n rest =>
+            (if predicate p n = true then BaseFormula.Formula.equal (BaseTerm.variable i) (BaseTerm.numeral n)
+                else BaseFormula.Formula.falsity).disjunction
+              rest)
+          BaseFormula.Formula.falsity xs).guardView
+
+case cons.true
+i : ℕ
+p : Parameters
+n : ℕ
+xs : List ℕ
+ih :
+  List.foldr (fun n rest => smallAtomCode i p n ++ rest ++ [(7, 0, 0)]) [(0, 0, 0)] xs =
+    (List.foldr (fun n rest => (smallAtom i p n).disjunction rest) BaseFormula.Formula.falsity xs).encode
+h : predicate p n = true
+⊢ List.foldr
+      (fun n rest => (if predicate p n = true then [(2, 4 * i + 1, 4 * n)] else [(0, 0, 0)]) ++ (rest ++ [(7, 0, 0)]))
+      [(0, 0, 0)] xs =
+    CommonHeadCompiler.encode
+      (List.foldr
+          (fun n rest =>
+            (if predicate p n = true then BaseFormula.Formula.equal (BaseTerm.variable i) (BaseTerm.numeral n)
+                else BaseFormula.Formula.falsity).disjunction
+              rest)
+          BaseFormula.Formula.falsity xs).guardView
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilitySemanticProof.lean:126:83: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [List.foldr_cons, smallAtomCode, smallAtom, h, BaseFormula.Formula.encode,
+          BaseFormula.Formula.guardView, CommonHeadCompiler.encode, BaseTerm.encode,̵ ̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

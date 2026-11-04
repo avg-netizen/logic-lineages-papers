@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollisionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollision.StatementChecks
+theorem actual_coefficient_elimination : Targets.ActualCoefficientElimination := Proof.actualCoefficientElimination
+theorem finite_window_and_domains : Targets.FiniteWindowAndDomains := Proof.finiteWindowAndDomains
+theorem actual_primitive_recursion : Targets.ActualPrimitiveRecursion := Proof.actualPrimitiveRecursion
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollision.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollision.StatementChecks

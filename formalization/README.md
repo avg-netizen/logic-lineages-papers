@@ -1,3 +1,18 @@
+Current local state: **PAUSED after completed R021 and both independent lanes**,
+4 November 2026. The final author/review/check cycle passed. This restart adds
+20 supporting components/106 checked declarations; the whole-source register
+remains154checked+2inherited+33pending/189. Read [the final handoff](HANDOFF-2026-11-04.md)
+and [publication integration evidence](verification/local-publication-2026-11-04/INTEGRATION.json).
+All workers and author/compiler guards remain paused. The latest user authorized
+publication of this papers checkpoint, not a research restart or main-branch merge.
+Older active/wind-down paragraphs below are historical.
+
+Local formalization **resumed by the user on 3 November 2026**, after fetching
+and fast-forwarding to GitHub main `98f5f56`. Three Codex lanes are active,
+one managing the same Claude session with compile-first constructive repairs.
+Read [the current allocation](RESUME-2026-11-03-LOCAL.md). Historical pause
+records below remain evidence of their completed checkpoints.
+
 Latest checked external continuation, **3 November 2026**: the existing
 `formalization/external-continuation-2026-11-03` branch now proves primitive
 recursion of the original exchange test, primary-class membership test,

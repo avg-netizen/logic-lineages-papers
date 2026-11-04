@@ -1,0 +1,3 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibilitySemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibilityProgramsProof

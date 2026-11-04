@@ -1,0 +1,64 @@
+{
+  "checkpoint": "FORMALIZATION-2026-10-31-R018",
+  "accepted_utc": "2026-11-04T01:30:10.506037+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedKTStatementChecks",
+  "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.fullActualKT",
+  "accepted_declarations": [
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.fullActualKT",
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.axiomSoundness",
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.uniformProofSoundness",
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.eventualTheorems",
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.consistency",
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.concretePair"
+  ],
+  "frozen_comparator": {
+    "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedKTTargets.lean",
+    "sha256": "07237d5ef35627000d17df2351a9fc5fe9d7a2dfa95cefc97816f6847a5d1549",
+    "type": "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.Targets.Target"
+  },
+  "verification_receipts": [
+    {
+      "file": "verification/local-resume-2026-11-03/computability/1793753568381725751-2.json",
+      "role": "Corrected exact Codex comparator before author; falseEquality uses its actual Syntax namespace"
+    },
+    {
+      "file": "verification/local-resume-2026-11-03/computability/1793755633639414650-2.json",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPublishedKTStatementChecks",
+      "role": "UNCHANGED FIRST raw proof PASS, six fixed aliases/actual namespace audit"
+    }
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "proof_changed_after_author": false,
+  "compiler_profile": {
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1
+  },
+  "gate_peak_rss_kib": 925424,
+  "scope": "Genuine finite actual-KT and KT+UBF proofs: unchanged ordinary Hilbert Derivation plus actual open MP/generalization and exactly THREE CLOSED theorem-only truth-intro/truth-elim/knowledge-nec rules, explicit actualD/literalFS/veracity/optionalUBF axioms, uniform computed finite-proof thresholds over every open valuation, actual eventual theorem truth, no literal arithmetic falsehood and one simultaneous existing Actual parameter choice proving BOTH theories consistent. Original Base correspondence/conservativity and actual internal HB2/HB3/Lob/whole numbered source12 are separate pending obligations.",
+  "whole_statement_promotions": [],
+  "source_files": [
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean",
+      "sha256": "8ebade5659a1a0bf4aee12b0994602bf68e2d893c45d1952dff1a8558f852729"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedKTTargets.lean",
+      "sha256": "07237d5ef35627000d17df2351a9fc5fe9d7a2dfa95cefc97816f6847a5d1549"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedKTProof.lean",
+      "sha256": "98196fcc7c9d8a9fdafe5c5f6138a47b7b3ea94d008ee6b920c50e780fa4b004"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPublishedKTStatementChecks.lean",
+      "sha256": "f6b23af0ccbd3b05420975b6f8c79cb16b0f6bdd6dcfb4e654bea064ba87c4b6"
+    }
+  ],
+  "author_provenance": "Same-session immutable Claude Opus5.5/high/read-only candidate; UNCHANGED FIRST compile and exact source/type/axiom gate."
+}

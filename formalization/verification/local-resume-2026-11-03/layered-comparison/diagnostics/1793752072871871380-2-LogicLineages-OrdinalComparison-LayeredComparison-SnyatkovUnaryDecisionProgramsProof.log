@@ -1,0 +1,26 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionProgramsProof.lean:20:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.52 = ?m.53
+in the target expression
+  ∀ (b : ℕ), decide (∀ a ∈ p, atomValue a b = true) = clauseValue p b
+
+hp : PrimrecRel fun a n => atomValue a n = true
+p : List Atom
+⊢ ∀ (b : ℕ), decide (∀ a ∈ p, atomValue a b = true) = clauseValue p b
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionProgramsProof.lean:28:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.52 = ?m.53
+in the target expression
+  ∀ (b : ℕ), decide (∃ a ∈ p, clauseValue a b = true) = matrixValue p b
+
+hp : PrimrecRel fun C n => clauseValue C n = true
+p : List Clause
+⊢ ∀ (b : ℕ), decide (∃ a ∈ p, clauseValue a b = true) = matrixValue p b
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionProgramsProof.lean:87:58: error: unsolved goals
+hp : PrimrecRel fun n M => (decide (matrixDomain M ≤ n) && matrixValue M n) = true
+M : Matrix
+⊢ (∃ a ∈ List.range (matrixThreshold M), (decide (matrixDomain (id M) ≤ a) && matrixValue (id M) a) = true) ↔
+    ∃ x ∈ List.range (matrixThreshold M), (decide (matrixDomain M ≤ x) && matrixValue M x) = true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionProgramsProof.lean:100:61: error: unsolved goals
+hp : PrimrecRel fun n M => (!decide (matrixDomain M ≤ n) || matrixValue M n) = true
+M : Matrix
+⊢ (∀ a ∈ List.range (matrixThreshold M), (!decide (matrixDomain (id M) ≤ a) || matrixValue (id M) a) = true) ↔
+    ∀ x ∈ List.range (matrixThreshold M), (!decide (matrixDomain M ≤ x) || matrixValue M x) = true

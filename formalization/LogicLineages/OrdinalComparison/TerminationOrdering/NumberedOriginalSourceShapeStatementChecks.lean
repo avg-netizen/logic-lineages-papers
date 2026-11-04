@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks
+theorem fixedActualTermShape : NumberedOriginalSourceShapeTargets.ActualTermShape := NumberedOriginalSourceShapeProof.termShape
+theorem fixedActualArgumentsShape : NumberedOriginalSourceShapeTargets.ActualArgumentsShape := NumberedOriginalSourceShapeProof.argumentsShape
+theorem fixedActualCodeShapePrimitive : NumberedOriginalSourceShapeTargets.ActualCodeShapePrimitive := NumberedOriginalSourceShapeProof.codeShapePrimitive
+#print axioms fixedActualTermShape
+#print axioms fixedActualArgumentsShape
+#print axioms fixedActualCodeShapePrimitive
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks

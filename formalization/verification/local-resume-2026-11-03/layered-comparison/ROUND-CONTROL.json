@@ -1,0 +1,65 @@
+{
+  "restart_utc": "2026-11-03T23:45:00+00:00",
+  "instruction": "After five coherent restart-relative rounds, L3 pauses; L2 continues as sole independent lane. Retries are not rounds.",
+  "completed_rounds": 5,
+  "active_round": null,
+  "active_subject": null,
+  "stop_after_round": 5,
+  "rounds": [
+    {
+      "round": 1,
+      "subject": "SnyatkovInverse",
+      "status": "accepted",
+      "completed_utc": "2026-11-03T23:54:54.700564+00:00",
+      "accepted_ledger": "SnyatkovInverse-ACCEPTED.json",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverseStatementChecks",
+      "fixed_declarations": 4,
+      "receipt": "1793750072269795411-2"
+    },
+    {
+      "round": 2,
+      "subject": "SnyatkovHyperCollision",
+      "status": "accepted",
+      "completed_utc": "2026-11-03T23:59:15.781134+00:00",
+      "accepted_ledger": "SnyatkovHyperCollision-ACCEPTED.json",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollisionStatementChecks",
+      "fixed_declarations": 3,
+      "receipt": "1793750307872128854-2"
+    },
+    {
+      "round": 3,
+      "subject": "SnyatkovDivisibility",
+      "status": "accepted",
+      "completed_utc": "2026-11-04T00:12:52.826373+00:00",
+      "accepted_ledger": "SnyatkovDivisibility-ACCEPTED.json",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibilityStatementChecks",
+      "fixed_declarations": 4,
+      "receipt": "1793751143001598003-2"
+    },
+    {
+      "round": 4,
+      "subject": "SnyatkovUnarySign",
+      "status": "accepted",
+      "completed_utc": "2026-11-04T00:23:48.400355+00:00",
+      "accepted_ledger": "SnyatkovUnarySign-ACCEPTED.json",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySignStatementChecks",
+      "fixed_declarations": 2,
+      "receipt": "1793751804861545809-2"
+    },
+    {
+      "round": 5,
+      "subject": "SnyatkovUnaryDecision",
+      "status": "accepted",
+      "completed_utc": "2026-11-04T00:33:55.298579+00:00",
+      "accepted_ledger": "SnyatkovUnaryDecision-ACCEPTED.json",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecisionStatementChecks",
+      "fixed_declarations": 4,
+      "receipt": "1793752386527126004-2"
+    }
+  ],
+  "paused": true,
+  "sixth_round_authorized": false,
+  "paused_utc": "2026-11-04T00:33:55.298579+00:00",
+  "live_compiler": false,
+  "live_author": false
+}

@@ -1,0 +1,397 @@
+{
+  "validated_at_utc": "2026-11-04T01:44:16.064537+00:00",
+  "method": "Metadata-only verification of existing successful gate-local receipts, actual printed axiom sets, exact frozen source/spec/proof/gate hashes. No compilation or mathematical re-audit.",
+  "ledger": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/ACCEPTED.json",
+    "sha256": "ca4b58c6686ad63dc8e55d279ab25161de6a494eb9bcc188efa92b80cb09734f"
+  },
+  "rounds": 9,
+  "fixed_aliases": 58,
+  "owned_source_files": 56,
+  "source_pins": [
+    {
+      "file": "../06-godel-t-termination-ordering/paper.tex",
+      "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "label": "lem:simulation",
+      "scope": "Original-source numeric coding supplier for the published computable translation clause; whole lemma requires full numeric effectivity and same source-only window at both endpoints."
+    }
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "gates": [
+    {
+      "round": "R001-original-source-codec",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 6,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionRoundTrip": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionSound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualArgumentProjectionRoundTrip": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionImage": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualNumericRoundTrip": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualNumericSound": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourceCodec-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecStatementChecks.log"
+    },
+    {
+      "round": "R002-original-source-shape",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 3,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualTermShape": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualArgumentsShape": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualCodeShapePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourceShape-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceShapeStatementChecks.log"
+    },
+    {
+      "round": "R003-original-source-presentation",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 8,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedRoundTrip": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedSound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedValidity": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedValidity": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedValidityPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedValidityPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedPresentation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedPresentation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourcePresentation-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationStatementChecks.log"
+    },
+    {
+      "round": "R004-original-source-window",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 5,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualTypeSubexpressionsPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualLiteralWindowCalibration": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualAllRequestsPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualFixedSourceWindowPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualPackedSourceWindowPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourceWindow-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752865634826162-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793752865634826162-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceWindowStatementChecks.log"
+    },
+    {
+      "round": "R005-original-structural-translation",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 7,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualOriginalTranslationPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualWindowTranslationPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualSharedWindowPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualNumericTranslationPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualNumericCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualComputedConfinedSimulation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualGenuineComputedSimulation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalStructuralTranslation-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalStructuralTranslationStatementChecks.log"
+    },
+    {
+      "round": "R006-auxiliary-code-weakening",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 4,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualCodeShiftPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualTypedShiftCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualArgumentShiftCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualPackedWeakeningPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/AuxiliaryShift-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftStatementChecks.log"
+    },
+    {
+      "round": "R007-auxiliary-substitution-beta",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 7,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualCodeSubstitutionPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualTypedSubstitutionCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualArgumentSubstitutionCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualSingleEnvironmentCalibration": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualAllBetaCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualBetaCodeCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualPackedBetaPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/AuxiliarySubstitution-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionStatementChecks.log"
+    },
+    {
+      "round": "R008-remaining-direct-operations",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 9,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualArgumentAppendPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualTypedArgumentAppend": [
+          "propext"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualRawOpeningPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualTypedOpeningCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualAllAbstractionCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualAbstractionCodeCalibration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedPutPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedAbstractionPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedBottomPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/DirectOperations-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793755512453902625-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedDirectOperationsStatementChecks.log"
+    },
+    {
+      "round": "R009-self-application-select",
+      "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks",
+      "gate_returncode": 0,
+      "aliases": 9,
+      "actual_axioms": {
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualArrowsPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelfEntriesPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelfCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualTypedSelfArgumentsCalibration": [
+          "propext"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualApplicationPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualTypedApplicationCalibration": [],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualAllSelectCodePrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelectCodeCalibration": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualPackedSelectPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "freeze": "verification/local-resume-2026-11-03/termination-ordering/SelfApplication-FREEZE.json",
+      "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2.json",
+      "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationStatementChecks.log"
+    }
+  ],
+  "result": "PASS"
+}

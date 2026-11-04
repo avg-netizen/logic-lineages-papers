@@ -1,0 +1,124 @@
+{
+  "accepted": {
+    "round": "R009-self-application-select",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualArrowsPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelfEntriesPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelfCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualTypedSelfArgumentsCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualApplicationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualTypedApplicationCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualAllSelectCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelectCodeCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualPackedSelectPrimitive"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualArrowsPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualSelfEntriesPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualSelfCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualTypedSelfArgumentsCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualApplicationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualTypedApplicationCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualAllSelectCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualSelectCodeCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets.ActualPackedSelectPrimitive"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/SelfApplication-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "All9 fixed aliases full namespace audit passed. Typed application calibration no axioms, typed self-copy calibration propext only, Select calibration propext+Quot.sound; numerical programs standard3.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelfApplicationDefinitions.lean",
+        "sha256": "cd97ffb560b4824109a2256b450a48a2ceeb31f7f57f0f688288fc29e5cce8eb"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelfApplicationTargets.lean",
+        "sha256": "c9487bf543d35dbb7290e3bf58aeacdc30988c833d253d5690068c61690aabe3"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelfApplicationSupportProof.lean",
+        "sha256": "d01f89009c4a45c5fc508a78bc82aa9a02fbd2b788a2dce3ae5af3d5fbac5f5d"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelfApplicationPrimrecProof.lean",
+        "sha256": "33a25e63d31fed9690d8eba51e96d14f1e99187ee2a53f0fe901f7c4fde44654"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelectionLeafPrimrecProof.lean",
+        "sha256": "19c39322c756784a730399f5bb089868523132eabdd899a4bbbbcdf56fb747c9"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelectCodePrimrecProof.lean",
+        "sha256": "41b1017a00627ca2b25249392ced521f3b0a141211a0f3933308b321e29b5257"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelfApplicationProof.lean",
+        "sha256": "91cfbb171dc9975b544068a0cdcb8437657fedc3da710271ea8001a8ae4be028"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedSelfApplicationStatementChecks.lean",
+        "sha256": "286f98588ecbfcfc251923191963b0ebd8b7a273752889266fb06017ff037b76"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755798810621483-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755798810621483-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755798810621483-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755798810621483-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793755918125032480-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793755918125032480-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756120572256735-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793756120572256735-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelectionLeafPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756169831558425-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793756169831558425-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelectionLeafPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelectCodePrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756335304567615-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793756335304567615-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelectCodePrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793756434325704032-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedSelfApplicationStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual numbered selfArguments and auxiliary applyArguments/code primitive programs and exact typed calibrations; all-code Select computation/calibration and genuine joint types/index/packed-source selectTarget effectivity. Retains actual positive label, occurrence index, repeated arguments and arrow-type guard, original head/base/extras and retyped result copies. Reuses existing accepted strict argumentEntries primitive extraction and typed calibration. No source semantic currying, new comparison, Copy/Mul/root/step/quotient or source theorem claim. COMPLETE9gate. Full two-clause actual selfArguments calibration, actual auxiliary applyArguments and Select; all source repeated arguments, positive finite label, selected occurrence and dependent arrow guard retained. Actual literal numeric programs and original typed decoder reconstruction, no source semantic currying assumption. User paused this independent lane immediately after this round: no R010 started.",
+    "numbered_statements_completed": []
+  }
+}

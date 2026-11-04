@@ -1,0 +1,72 @@
+{
+  "accepted": {
+    "round": "R002-original-source-shape",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualTermShape",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualArgumentsShape",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualCodeShapePrimitive"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeTargets.ActualTermShape",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeTargets.ActualArgumentsShape",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeTargets.ActualCodeShapePrimitive"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourceShape-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceShapeStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "Typed term/argument calibration propext+Quot.sound; genuine Code mask Primrec standard3.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceShapeDefinitions.lean",
+        "sha256": "11966fa0ae6c462404e4405634b8e15cd67f1bc6b4fb851360d1d3d3242057e5"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceShapeTargets.lean",
+        "sha256": "bf86db69a001744bacb65fa4baba2880f2d99e50afac60465086417c4d14f175"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceShapeProof.lean",
+        "sha256": "efb33d4618ba858cea4ac4c5f4c8f5066055f9d412f3669c04f9b96b357076a8"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceShapeStatementChecks.lean",
+        "sha256": "10ce4aba524434e2819c010890acfb1609f0aab82313b9bfeda85f230d49d9e2"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751181277870431-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793751181277870431-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceShapeDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751181277870431-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793751181277870431-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceShapeTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceShapeProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793751835528284216-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceShapeStatementChecks.log"
+      }
+    ],
+    "source_scope": "Exact actual typed projection-success calibration with original-only Code structural mask and genuine primitive recursiveness of that mask on ALL structural Codes. Typed decoder remains responsible for context/index/arity/type validity; mask alone is NOT a raw parser. No source-carrier/Primcodable/window/sharedS effectivity assumed or whole-source promotion. COMPLETE3gate. Uses actual accepted Code encoder/children/decreasing measure and concrete Bool fold, no effectivity oracle.",
+    "numbered_statements_completed": []
+  }
+}
