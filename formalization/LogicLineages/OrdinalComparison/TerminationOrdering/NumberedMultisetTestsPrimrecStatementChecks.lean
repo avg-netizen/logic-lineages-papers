@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks
+
+theorem fixedActualReplacementTestPrimitive :
+    NumberedMultisetTestsPrimrecTargets.ActualReplacementTestPrimitive :=
+  NumberedMultisetTestsPrimrecProof.replacementTestPrimitive
+#print axioms fixedActualReplacementTestPrimitive
+
+theorem fixedActualMultisetTestPrimitive :
+    NumberedMultisetTestsPrimrecTargets.ActualMultisetTestPrimitive :=
+  NumberedMultisetTestsPrimrecProof.multisetTestPrimitive
+#print axioms fixedActualMultisetTestPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetTestsPrimrecStatementChecks

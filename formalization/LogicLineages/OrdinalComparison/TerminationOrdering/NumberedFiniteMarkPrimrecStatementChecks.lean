@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks
+
+theorem fixedActualFiniteMarkCodeCalibration :
+    NumberedFiniteMarkPrimrecTargets.ActualFiniteMarkCodeCalibration :=
+  NumberedFiniteMarkPrimrecProof.finiteMarkCodeCalibration
+#print axioms fixedActualFiniteMarkCodeCalibration
+
+theorem fixedActualFiniteMarkCodePrimitive :
+    NumberedFiniteMarkPrimrecTargets.ActualFiniteMarkCodePrimitive :=
+  NumberedFiniteMarkPrimrecProof.finiteMarkCodePrimitive
+#print axioms fixedActualFiniteMarkCodePrimitive
+
+theorem fixedActualMarkTargetPrimitive :
+    NumberedFiniteMarkPrimrecTargets.ActualMarkTargetPrimitive :=
+  NumberedFiniteMarkPrimrecProof.markTargetPrimitive
+#print axioms fixedActualMarkTargetPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecStatementChecks

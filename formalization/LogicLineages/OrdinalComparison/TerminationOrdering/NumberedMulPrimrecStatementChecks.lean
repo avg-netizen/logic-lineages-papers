@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks
+
+theorem fixedActualMulCodeCalibration : NumberedMulPrimrecTargets.ActualMulCodeCalibration :=
+  NumberedMulPrimrecProof.mulCodeCalibration
+#print axioms fixedActualMulCodeCalibration
+
+theorem fixedActualMulCodePrimitive : NumberedMulPrimrecTargets.ActualMulCodePrimitive :=
+  NumberedMulPrimrecProof.mulCodePrimitive
+#print axioms fixedActualMulCodePrimitive
+
+theorem fixedActualMulCertificatePrimitive : NumberedMulPrimrecTargets.ActualMulCertificatePrimitive :=
+  NumberedMulPrimrecProof.mulCertificatePrimitive
+#print axioms fixedActualMulCertificatePrimitive
+
+theorem fixedActualNumericMulPrimitive : NumberedMulPrimrecTargets.ActualNumericMulPrimitive :=
+  NumberedMulPrimrecProof.numericMulPrimitive
+#print axioms fixedActualNumericMulPrimitive
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecStatementChecks

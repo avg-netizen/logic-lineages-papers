@@ -1,4 +1,21 @@
-Current local state: **PAUSED after completed R021 and both independent lanes**,
+Latest cumulative checkpoint: **the complete original numeric root checker is
+primitive recursive**, including Copy and Mul. The new branch
+`formalization/cumulative-continuation-2026-11-03` starts from merged main
+`3c53370`, retaining the intervening local publication. It adds **19 fixed
+targets in six supporting components**; all exact gates and the focused
+aggregate pass with only the permitted axioms. See the
+[cumulative status and scope](verification/cumulative-continuation-2026-11-03/STATUS.md)
+and [accepted evidence](verification/cumulative-continuation-2026-11-03/termination-ordering/ROOT-EFFECTIVITY-ACCEPTED.json).
+
+The source register remains **154 checked, 2 inherited, 33 pending/189**.
+Its component links and dependency summaries now include the new root result
+and accurately reflect the intervening original-source codec and shared-window
+translation work. Contextual checking at varying binder contexts, arithmetic
+representation, whole-source assembly and internal ID1 accessibility remain
+open. The dated local and external paragraphs below describe their historical
+checkpoints.
+
+Previous local state: **PAUSED after completed R021 and both independent lanes**,
 4 November 2026. The final author/review/check cycle passed. This restart adds
 20 supporting components/106 checked declarations; the whole-source register
 remains154checked+2inherited+33pending/189. Read [the final handoff](HANDOFF-2026-11-04.md)
