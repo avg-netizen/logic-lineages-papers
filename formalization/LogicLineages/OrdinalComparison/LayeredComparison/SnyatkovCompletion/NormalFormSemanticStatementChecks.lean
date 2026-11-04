@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks
+
+theorem exact_original_domain_cutoffs : NormalFormTargets.ExactOriginalDomainCutoffs :=
+  NormalFormSemanticProof.exactOriginalDomainCutoffs
+theorem actual_signed_row_decomposition : NormalFormTargets.ActualSignedRowDecomposition :=
+  NormalFormSemanticProof.actualSignedRowDecomposition
+theorem exact_original_row_domains : NormalFormTargets.ExactOriginalRowDomains :=
+  NormalFormSemanticProof.exactOriginalRowDomains
+theorem actual_atom_compilation : NormalFormTargets.ActualAtomCompilation :=
+  NormalFormSemanticProof.actualAtomCompilation
+theorem actual_boolean_compilation : NormalFormTargets.ActualBooleanCompilation :=
+  NormalFormSemanticProof.actualBooleanCompilation
+theorem exact_variable_membership : NormalFormTargets.ExactVariableMembership :=
+  NormalFormSemanticProof.exactVariableMembership
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks

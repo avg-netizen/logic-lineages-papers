@@ -2102,3 +2102,7 @@ public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherV
 public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks
 public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledWordStatementChecks
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedStatementChecks
+
+-- Exact normal-form semantics and numeric compiler, cumulative 4 November checkpoint.
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks

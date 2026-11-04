@@ -1,3 +1,24 @@
+## Current cumulative checkpoint — 4 November 2026
+
+The Snyatkov normal-form row, domain and numeric-compiler package now has
+**eight checked exact supporting targets in two gates**. The focused aggregate
+`LogicLineages.ExternalCheckpoint20261104NormalForm` passed, and all 110 local
+modules in its import closure have successful compiler receipts matching their
+current source hashes. Every target passed its actual standard-axiom audit.
+The frozen definitions and comparison types are unchanged.
+
+The numbered source register remains **161 checked, 2 inherited, 26 pending
+out of 189**. Full source existential normalization and arbitrary first-order
+BASE decision remain pending. No full public-root or remote-CI pass is claimed.
+
+Read the [checkpoint](verification/cumulative-continuation-2026-11-04/normal-form/STATUS.md),
+[source correspondence](verification/cumulative-continuation-2026-11-04/normal-form/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](verification/cumulative-continuation-2026-11-04/normal-form/ACCEPTANCE.json).
+The cumulative branch is `formalization/cumulative-continuation-2026-11-04`,
+based on merged main `ba2dec0`. Earlier dated states below are historical.
+
+---
+
 Current local state: **PAUSED after completed R026 and all independent work**,
 4 November 2026. This restart accepted **10 supporting components / 52 exact
 declarations in 42 Lean files**. The focused integration and actual axiom checks
