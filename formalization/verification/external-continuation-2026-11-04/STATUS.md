@@ -169,3 +169,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AA`, 85 e
 Two exact suppliers establish binder-aware syntax relabeling and predicate-argument tagging by 2x and 2x+1 with exact standard-natural truth calibration. Arithmetic guards remain unchanged. No combined operator, fixed-point or ID1 claim. See [source correspondence](termination-ordering/POSITIVE-ARITHMETIC-TRANSFORMS-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AB`, 87 exact aliases.
+
+## ParametricScalingPlan
+
+Three exact suppliers establish the reviewed scaling plan with continuation-passing semantics and exact fresh-coordinate and all-coordinate size accounting. No conjunction or raw encoding claim. See [source correspondence](layered-comparison/ParametricScalingPlan-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AC`, 90 exact aliases.

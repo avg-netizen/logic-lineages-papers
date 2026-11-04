@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 87,
-    "components": 28
+    "fixed_aliases": 90,
+    "components": 29
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104AB",
-    "source_sha256": "097a9139cdb27a1e25103201316432e962775ed049b68a739e9ba06f61e6e391",
-    "closure_sha256": "4f167edcc4b62338ea963accf75cd3374402e62c419f89647faf4e29ed88f178",
+    "module": "LogicLineages.ExternalCheckpoint20261104AC",
+    "source_sha256": "3a694b3c13c263701781248d9fa0d0b333ce61738d5d9db75fda1a3a2f3999a6",
+    "closure_sha256": "9d0affb0174c1baf5aace68147cc6caab41cd419e153b413584ac3972711b2c8",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -445,6 +445,21 @@
         "name": "fixed_087_fixedActualPositiveTagTruth",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsTargets.ActualPositiveTagTruth",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsStatementChecks.fixedActualPositiveTagTruth"
+      },
+      {
+        "name": "fixed_088_exact_scaling_plan",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ExactScalingPlan",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.exact_scaling_plan"
+      },
+      {
+        "name": "fixed_089_actual_gamma_scaling_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ActualGammaScalingCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.actual_gamma_scaling_compilation"
+      },
+      {
+        "name": "fixed_090_exact_overhead",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ExactOverhead",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.exact_overhead"
       }
     ],
     "allowed_axioms": [
@@ -1333,6 +1348,42 @@
           "sha256": "b36de64f4053935d24dd2b70dcbfd12cfa11ce2382c9cb103b06349563f016d5"
         }
       ]
+    },
+    {
+      "name": "ParametricScalingPlan",
+      "scope": "CPS e-fold shared variable doubling Plan, exact Gamma compiled semantics and all-coordinate overhead; no full conjunction/raw encoding/runtime.",
+      "freeze_sha256": "bc8c415347cd8fc007f69c2bfe8b9c709888da0f2ca7e1540c2c6870b50f66d3",
+      "closure_sha256": "cb7482cae5ce5d43c36946a4e1dc9b28af4ebf818595f00a689fcbc3304bb258",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanDefinitions.lean",
+          "sha256": "c021ee47a3c43605d5959c58c936a3d1e01d08fef7ac7d307915982e73f6a5a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanTargets.lean",
+          "sha256": "933756e809ef60384cef76094a8880c27291db89c933defa769bf99cdb3b79a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanStatementChecks.lean",
+          "sha256": "f6a5a9c30f64537a03e76c4f21a0f0ee937b6213f9775dc01e68df799ea49a67"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricScalingPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "4d1da9d7d2ca3320c620cee4df6e6c5b0ec406eb00822eab18586cad15c5834e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanSemanticProof.lean",
+          "sha256": "e8082b499869c4c595418b54360088ee0b664ef37b6362be1dadc94cbe7eea61"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanSizeProof.lean",
+          "sha256": "8a46d8624f516d2dd3ef085216b2683f8a8e51e5076e5791bd643b03236b0a01"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanProof.lean",
+          "sha256": "7aebdfa88dbcebcfbfb726a486a4c237ad779005c47661412173d8690af767bd"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1366,6 +1417,7 @@
     "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim.",
     "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim.",
     "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim.",
-    "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim."
+    "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim.",
+    "Scaling-plan CPS semantics and exact fresh-coordinate size only; no conjunction or raw encoding claim."
   ]
 }
