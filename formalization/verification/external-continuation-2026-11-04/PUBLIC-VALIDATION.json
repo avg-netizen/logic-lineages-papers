@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 90,
-    "components": 29
+    "fixed_aliases": 94,
+    "components": 30
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104AC",
-    "source_sha256": "3a694b3c13c263701781248d9fa0d0b333ce61738d5d9db75fda1a3a2f3999a6",
-    "closure_sha256": "9d0affb0174c1baf5aace68147cc6caab41cd419e153b413584ac3972711b2c8",
+    "module": "LogicLineages.ExternalCheckpoint20261104AD",
+    "source_sha256": "7a524c2093373bc92e683ce47d2aa083a4fbf67cc49714ae87ed506cce9d0a31",
+    "closure_sha256": "680cf9171faf49ee79377d8eb785cec0466be5fa9c65d08c3196a1bd15559f17",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -460,6 +460,26 @@
         "name": "fixed_090_exact_overhead",
         "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ExactOverhead",
         "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.exact_overhead"
+      },
+      {
+        "name": "fixed_091_fixedActualTagPartition",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTagPartition",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTagPartition"
+      },
+      {
+        "name": "fixed_092_fixedActualTaggedBranchIsolation",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTaggedBranchIsolation",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTaggedBranchIsolation"
+      },
+      {
+        "name": "fixed_093_fixedActualCombinedMonotonicity",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualCombinedMonotonicity",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualCombinedMonotonicity"
+      },
+      {
+        "name": "fixed_094_fixedActualTaggedSourceOperators",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTaggedSourceOperators",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTaggedSourceOperators"
       }
     ],
     "allowed_axioms": [
@@ -1384,6 +1404,38 @@
           "sha256": "7aebdfa88dbcebcfbfb726a486a4c237ad779005c47661412173d8690af767bd"
         }
       ]
+    },
+    {
+      "name": "TaggedArithmeticOperators",
+      "scope": "Literal positive even/odd combination, unique tag partition, branch isolation, monotonicity and exact actual source operator semantics.",
+      "freeze_sha256": "2a83169d4d0c811eeda1e9ccfc5d6c405a9e33a70b4016cbb904433e2baad58d",
+      "closure_sha256": "69f6b4ad59ad91f20eb4da9621f7b13394983cee52b7c0b7e7d922eafe31936a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsDefinitions.lean",
+          "sha256": "25ae36a9ac0b02fb41fed631d037df73f99bc34623d17ef5a5c545dcc67de8a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsTargets.lean",
+          "sha256": "442d21c42a9af1efe0fd694649a4b596c0243da46c04a19cebb1b6c42991dd98"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsStatementChecks.lean",
+          "sha256": "f184caa7cb21c08ce2ba76b9fdc0d3e5a2a6bf636a0ff9f2232f933f833fed53"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/TAGGED-ARITHMETIC-OPERATORS-SOURCE.md",
+          "sha256": "893e21d7957de70ec5981fe991826d8884a4596b301716ea57921bcb8da7f852"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsSupportProof.lean",
+          "sha256": "3f60907360773a90a613b9b7c40efce4116473a541242309c7a3d196929eb17c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsProof.lean",
+          "sha256": "f76724ea239f3e42c8addcb79f3da470d0aa5716b388d45fbc80fd6bc3af0dcd"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1418,6 +1470,7 @@
     "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim.",
     "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim.",
     "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim.",
-    "Scaling-plan CPS semantics and exact fresh-coordinate size only; no conjunction or raw encoding claim."
+    "Scaling-plan CPS semantics and exact fresh-coordinate size only; no conjunction or raw encoding claim.",
+    "Tagged positive-operator branch isolation only; no cross-sort edge, fixed-point, ID1 or well-foundedness claim."
   ]
 }

@@ -175,3 +175,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AB`, 87 e
 Three exact suppliers establish the reviewed scaling plan with continuation-passing semantics and exact fresh-coordinate and all-coordinate size accounting. No conjunction or raw encoding claim. See [source correspondence](layered-comparison/ParametricScalingPlan-SOURCE-CORRESPONDENCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AC`, 90 exact aliases.
+
+## TaggedArithmeticOperators
+
+Four exact suppliers establish the unique even/odd partition, positive branch isolation, monotonicity and instantiated scalar/R and list/direct-DM semantics. No cross-sort edge, fixed-point, ID1 or well-foundedness claim. See [source correspondence](termination-ordering/TAGGED-ARITHMETIC-OPERATORS-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104AD`, 94 exact aliases.
