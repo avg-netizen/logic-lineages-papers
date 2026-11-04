@@ -91,3 +91,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104N`, 45 ex
 Two exact suppliers prove attained representative type/confinement and typed canonical-carrier calibration under explicit subtype closure. This is syntax typedness only, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation. See [source correspondence](termination-ordering/NUMBERED-TYPED-CARRIER-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104O`, 47 exact aliases.
+
+## ParametricSourceSuccessor
+
+Four exact suppliers establish off-domain behavior, Phi agreement, literal Term substitution, and the unchanged full default S assignment with generic and actual-gamma graphs. All positive-raw valuations are shared. No other gadget transfer or full theorem claim. See [source correspondence](layered-comparison/ParametricSourceSuccessor-SOURCE-CORRESPONDENCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104P`, 51 exact aliases.

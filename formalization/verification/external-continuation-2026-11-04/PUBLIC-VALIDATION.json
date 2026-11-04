@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 47,
-    "components": 15
+    "fixed_aliases": 51,
+    "components": 16
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104O",
-    "source_sha256": "02e607be0fb68842fe2fcc9e39162ca709e655dfc7a8aa324cd87fdb8989ebb9",
-    "closure_sha256": "c7d085c2c688a6b98ffd1b5121948dd3e0855d0cd8c585d5770bf85261e0c139",
+    "module": "LogicLineages.ExternalCheckpoint20261104P",
+    "source_sha256": "352258e94be8e0c4762a5ac9335febda142e97d3051920568590b4ec08b6156f",
+    "closure_sha256": "6967366cc01bf6d50c9893913aa346a9b2cb0e1d4b3926dd09f41ce727afbf28",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -245,6 +245,26 @@
         "name": "fixed_047_fixedActualTypedCanonicalCarrier",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedCarrierTargets.ActualTypedCanonicalCarrier",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedCarrierStatementChecks.fixedActualTypedCanonicalCarrier"
+      },
+      {
+        "name": "fixed_048_phi_calibration",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.PhiCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.phi_calibration"
+      },
+      {
+        "name": "fixed_049_exact_substitution",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.ExactSubstitution",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.exact_substitution"
+      },
+      {
+        "name": "fixed_050_generic_source_graph",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.GenericSourceGraph",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.generic_source_graph"
+      },
+      {
+        "name": "fixed_051_actual_gamma_graph",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.ActualGammaGraph",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.actual_gamma_graph"
       }
     ],
     "allowed_axioms": [
@@ -721,6 +741,38 @@
           "sha256": "7b851f86f76ad9cd78e22078ac09e4ac1c53149f2d9fcaedc9c032fb137e682e"
         }
       ]
+    },
+    {
+      "name": "ParametricSourceSuccessor",
+      "scope": "Separate existing-term denotation with Phi/substitution calibration and actual full-assignment S graph at generic/actual Gamma control; no other gadget transfer.",
+      "freeze_sha256": "a3f4cc4ad815268582d783d4207b19971fce45c414969e24a6ca14510ac8fa53",
+      "closure_sha256": "c56c6b73050a0df48ea4463decf072b0d358b80e1214020287eb6bf98f081958",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorDefinitions.lean",
+          "sha256": "190acec250ba2ce533175922ad777b2d491c96c40d485040402dd1538b68c288"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorTargets.lean",
+          "sha256": "012525c868db63c220b1fc2cd9f7f6ddcd4a25fac13d1b6c61868e2ae292a65e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorStatementChecks.lean",
+          "sha256": "4e4863e998eea4e330470e631f61f93d6f8444715a12b4db3122484632c1a57f"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricSourceSuccessor-SOURCE-CORRESPONDENCE.md",
+          "sha256": "a299e7deef7631a671acf3f304e26de7673dfed92a4a2ea21aa76de2d3ef0c18"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorDenotationProof.lean",
+          "sha256": "2b0bb95eabfd53d2f04d574846665056c20e9fa6dedb4bcbae9bb1af8cc248f9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorProof.lean",
+          "sha256": "06da797efa4029769d9c4bae95b6b0a2fb0e3c24dfdae4614d3947a38ce9c92d"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -741,6 +793,7 @@
     "Parametric collapse retains arbitrary G and the explicit identity-majorization hypothesis for finite values; no G computability or source-gadget claim.",
     "Coefficient-one collapse retains strict monotonicity and identity-majorization hypotheses for generic G; no higher-head or source-gadget identification.",
     "Represented carrier formulas preserve failed-context/list rejection, empty-list vacuity and explicit subtype closure; no type-specific C_tau, ID1 or well-foundedness claim.",
-    "Typed canonical carrier calibration is syntactic typedness under subtype closure, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation."
+    "Typed canonical carrier calibration is syntactic typedness under subtype closure, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation.",
+    "Parametric source successor retains the literal source S and actual full assignment with shared positive-raw valuations; no other gadget transfer or full theorem claim."
   ]
 }
