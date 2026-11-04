@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySignProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySign.StatementChecks
+theorem original_domain_and_tail_sign : Targets.OriginalDomainAndTailSign := Proof.originalDomainAndTailSign
+theorem actual_primitive_recursion : Targets.ActualPrimitiveRecursion := Proof.actualPrimitiveRecursion
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySign.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySign.StatementChecks

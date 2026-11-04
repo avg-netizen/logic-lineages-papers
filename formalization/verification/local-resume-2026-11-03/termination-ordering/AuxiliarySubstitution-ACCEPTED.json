@@ -1,0 +1,120 @@
+{
+  "accepted": {
+    "round": "R007-auxiliary-substitution-beta",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualCodeSubstitutionPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualTypedSubstitutionCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualArgumentSubstitutionCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualSingleEnvironmentCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualAllBetaCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualBetaCodeCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualPackedBetaPrimitive"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualCodeSubstitutionPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualTypedSubstitutionCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualArgumentSubstitutionCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualSingleEnvironmentCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualAllBetaCodePrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualBetaCodeCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets.ActualPackedBetaPrimitive"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/AuxiliarySubstitution-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "Entire7alias namespace transitive closure audit passes. Single-environment calibration propext+Quot.sound; others standard3.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliarySubstitutionDefinitions.lean",
+        "sha256": "c4a744ad01d44d0aa23e27fd9a86a126cea937d40461d0268e75bc3abe8f387b"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliarySubstitutionTargets.lean",
+        "sha256": "6d709352d2157971b253f95c9a4a2c1d95aaf96e76816fedc45d8c7e082e48b9"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliarySubstitutionSupportProof.lean",
+        "sha256": "b91534c49209e7d3908779b5c661844000902e7ee8d539541271cb8cd909c333"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliarySubstitutionPrimrecProof.lean",
+        "sha256": "b8d936802e65e36535537db9eb9a0c5fd7b25ac4a808f3d625b04bf5a9e6c295"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryBetaSupportProof.lean",
+        "sha256": "5d935b4dcfa5a4bf6b93a4c3b7b39193ef44d642096d907fc95cdbf56b0c2c2f"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryBetaPrimrecProof.lean",
+        "sha256": "02e5cf2af59b12ca6e32e9f9ab731f58960213b2b9c637d6e1267679420de1e2"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliarySubstitutionProof.lean",
+        "sha256": "1054bc03ee583be37c5c6adbf45d679b07e5903a7cfe7abff18ec80102be4faa"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliarySubstitutionStatementChecks.lean",
+        "sha256": "3ed850cce74916221db12e68dd36fc1a2c31fb62e900422eae81abbdc0c660c4"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754027128097620-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754027128097620-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754027128097620-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754027128097620-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754195218629038-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754195218629038-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754454899724081-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754454899724081-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryBetaSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754629957407432-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754629957407432-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryBetaSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryBetaPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryBetaPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793754805820424826-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliarySubstitutionStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual capture-avoiding auxiliary substitution via literal finite code environments. ALL-environment/Code primitive algorithm; unconditional actual typed term+argument substitution calibration; exact actual singleSubstitution finite environment; ALL-free-count/Code beta program and calibration to unchanged directTarget.beta; genuine packed typed directTarget.beta primitive computation. No rho computability field, substitution semantic oracle, assumed alpha/variable condition, original functional-app surrogate, new reduction or transitivity repair. Numeric root/step/quotient assembly remains separate. COMPLETE7gate. Real decreasing finite-child substitution with dynamic binder-lifted environments; genuine typed mutual induction and actual lambda-constructor reflection; actual raw beta programme and old typed directTarget.beta reconstructed through existing numeric decoder. Typed primitive combinator staging solves200kWHNF without raising limits or changing targets. No source semantic unary-currying law assumed. Other root/step/quotient certificate computations remain unpaid.",
+    "numbered_statements_completed": []
+  }
+}

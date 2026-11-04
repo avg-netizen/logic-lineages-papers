@@ -1,0 +1,3 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecisionSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecisionProgramsProof

@@ -1,3 +1,63 @@
+Current local state: **PAUSED after completed R021 and both independent lanes**,
+4 November 2026. The final author/review/check cycle passed. This restart adds
+20 supporting components/106 checked declarations; the whole-source register
+remains154checked+2inherited+33pending/189. Read [the final handoff](HANDOFF-2026-11-04.md)
+and [publication integration evidence](verification/local-publication-2026-11-04/INTEGRATION.json).
+All workers and author/compiler guards remain paused. The latest user authorized
+publication of this papers checkpoint, not a research restart or main-branch merge.
+Older active/wind-down paragraphs below are historical.
+
+**Latest user stop — finish R021, then pause ALL local formalization.**
+Only the already active supervised Claude R021 may finish its compiler-first
+constructive repairs, exact checks, feedback and handoff. No R022/successor
+comparator or independent work. L2 is paused afterR009 and L3 afterfive rounds.
+L1 owns author admission and safe wind-down: preserve the live R021, disable
+successor admission now, then after its final gates and all jobs reaped pause
+both the author and shared compiler policy. Do not claim all stopped early.
+A quota wait retains this exact R021 ceiling; no successor after reset.
+No automatic resume or Git publication is authorized.
+
+**Latest Claude usage-limit rule — repair, then wait.**
+If Claude exhausts usage, L1 may finish repair/checks/feedback for an already
+returned candidate, then must wait for the exact reset and resume the SAME
+Claude session/pending round. During the wait there are no independent Codex
+proof, research, target or comparator rounds and no alternate author/model.
+With no returned candidate, preserve state and wait directly. L2/L3 stay paused.
+
+**Latest user allocation — only the supervised Claude lane continues.**
+L2 must stop after its actually current R009, with no R010. Its final nine-gate
+check has passed and native jobs are reaped; finish preservation/handoff only.
+L3 stays paused after five rounds. L1 continues the SAME Claude session with
+compiler-first constructive review AND repair; main handles supervision and
+shared source adoption/integration, without a new independent proof stream.
+Do not set the global compiler/Claude pause: the supervised workflow continues.
+No independent lane restart, automatic publication or CI change is authorized.
+
+**Current allocation — L3 PAUSED; one independent lane remains.**
+The latest user requested L3 stop after its current round even below five.
+It had already completed all five resumed rounds and stopped, with no live
+compiler/author or successor. Keep L3 paused. L2 continues independently;
+L1 continues the same Claude review/repair loop. Main integration continues.
+This is not a global pause and does not authorize publication.
+
+**Latest allocation adjustment — five rounds, then one independent lane.**
+L3 completes five coherent resumed rounds (starting SnyatkovInverse), then
+pauses with repairs/checks/handoff and no sixth round. L2 remains the sole
+continuing independent lane; the existing Claude+L1 review/repair loop and
+main integration continue. Compiler retries are not separate rounds.
+
+**Current user release — local formalization resumed, 3 November 2026.**
+GitHub was fetched and the cumulative checkout fast-forwarded to merged main
+`98f5f56`. Resume L1's same-session Claude/compiler-first constructive repair loop,
+L2's paper06 effectivity/source-translation work, and L3's unpaid paper08/09
+source dependencies. Main owns shared integration and register changes.
+Read [the current allocation](RESUME-2026-11-03-LOCAL.md) and the latest external
+status first: it has 111 supporting components/374 fixed targets, while the
+whole-source register remains154checked+2inherited+33pending/189.
+Historical pauses below are superseded only for this programme. All source,
+comparator, standard-axiom and bounded serialized compiler safeguards remain.
+No unrelated research, new Claude session/model, CI change or automatic push.
+
 **Current local state — PAUSED after completed rounds, 3 November 2026 UTC.**
 Claude R014, both independent lanes and main proof work are stopped; all owned
 author/compiler processes are reaped and successor launches are disabled.

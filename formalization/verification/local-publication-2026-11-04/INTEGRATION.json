@@ -1,0 +1,547 @@
+{
+  "checked_at_utc": "2026-11-04T03:19:52.326358+00:00",
+  "status": "PASS",
+  "scope": "Publication integration of this local restart only; existing locally checked dependencies reused. Not a fresh full-root build or GitHub CI run.",
+  "baseline_commit": "98f5f567d4c68ee7f327ab3d2aafb252975c615d",
+  "components": 20,
+  "fixed_declarations": 106,
+  "original_source_counts": {
+    "checked": 154,
+    "pending": 33,
+    "existing-calculator-package": 2
+  },
+  "source_statement_status_changes": 0,
+  "module": "LogicLineages.LocalCheckpoint20261104",
+  "aggregate_source_sha256": "e41b6d334f7dd81213a73bec092ca6bb525c233dbe4e7bf55f132451767606d1",
+  "receipt": {
+    "file": "verification/local-publication-2026-11-04/1793762305166928507-10.json",
+    "sha256": "7186777c42f00f139e0dd6f474b2b23ce1cad7f98b9fb74e34e0d356298b31bf"
+  },
+  "stdout": {
+    "file": "verification/local-publication-2026-11-04/1793762305166928507-10-LogicLineages-LocalCheckpoint20261104.log",
+    "sha256": "b1bf2b0bbf4abd30b5a06f2184c204aadc862084c1ef7c91ab477c48b84c59f7"
+  },
+  "observed_seconds": 2.442,
+  "peak_process_tree_rss_kib": 1359104,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "actual_axioms_by_declaration": {
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedBooleanTruth.StatementChecks.fullBooleanTruth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedBooleanTruth.StatementChecks.groundGuard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedBooleanTruth.StatementChecks.booleanFunctions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedBooleanTruth.StatementChecks.positiveBooleanAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedQuantifierTruth.StatementChecks.fullQuantifierTruth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedQuantifierTruth.StatementChecks.namedFunctions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedQuantifierTruth.StatementChecks.namedRelations": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedQuantifierTruth.StatementChecks.sourceDispatch": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedQuantifierTruth.StatementChecks.positiveQuantifierAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedAtomicTruth.StatementChecks.fullAtomicTruth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedAtomicTruth.StatementChecks.headerCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedAtomicTruth.StatementChecks.codeCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedAtomicTruth.StatementChecks.positiveAtomicSchemas": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.fullActualKT": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.axiomSoundness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.uniformProofSoundness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.eventualTheorems": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.consistency": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowPublishedKT.StatementChecks.concretePair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFixedGroundPrograms.StatementChecks.fullFixedGround": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFixedGroundPrograms.StatementChecks.singleProgram": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFixedGroundPrograms.StatementChecks.fixedRegistry": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFixedGroundPrograms.StatementChecks.definingDispatcher": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFixedGroundPrograms.StatementChecks.namedOverlay": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowFixedGroundPrograms.StatementChecks.actualPrograms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowParameterSelfApplication.StatementChecks.fullParameterSelf": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowParameterSelfApplication.StatementChecks.literalCommutation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowParameterSelfApplication.StatementChecks.numericCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowParameterSelfApplication.StatementChecks.numericExact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowParameterSelfApplication.StatementChecks.uniformPrograms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.GorbowParameterSelfApplication.StatementChecks.programWitness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionRoundTrip": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionSound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualArgumentProjectionRoundTrip": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionImage": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualNumericRoundTrip": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualNumericSound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualTermShape": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualArgumentsShape": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceShapeStatementChecks.fixedActualCodeShapePrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedRoundTrip": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedSound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedValidity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedValidity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedValidityPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedValidityPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedPresentation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedPresentation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualTypeSubexpressionsPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualLiteralWindowCalibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualAllRequestsPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualFixedSourceWindowPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceWindowStatementChecks.fixedActualPackedSourceWindowPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualOriginalTranslationPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualWindowTranslationPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualSharedWindowPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualNumericTranslationPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualNumericCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualComputedConfinedSimulation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualGenuineComputedSimulation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualCodeShiftPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualTypedShiftCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualArgumentShiftCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualPackedWeakeningPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualCodeSubstitutionPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualTypedSubstitutionCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualArgumentSubstitutionCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualSingleEnvironmentCalibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualAllBetaCodePrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualBetaCodeCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliarySubstitutionStatementChecks.fixedActualPackedBetaPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualArgumentAppendPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualTypedArgumentAppend": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualRawOpeningPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualTypedOpeningCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualAllAbstractionCodePrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualAbstractionCodeCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedPutPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedAbstractionPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedDirectOperationsStatementChecks.fixedActualPackedBottomPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualArrowsPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelfEntriesPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelfCodePrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualTypedSelfArgumentsCalibration": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualApplicationPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualAllSelectCodePrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualSelectCodeCalibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualPackedSelectPrimitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks.exact_finite_tail_elimination": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks.literal_base_truth_and_support": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks.exact_code_calibration": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks.actual_primitive_recursion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollision.StatementChecks.actual_coefficient_elimination": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollision.StatementChecks.finite_window_and_domains": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovHyperCollision.StatementChecks.actual_primitive_recursion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks.exact_original_graphs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks.original_order_and_roundtrips": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks.effective_coefficient_compression": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks.actual_primitive_recursion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks.original_domain_and_matrix_tail": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks.actual_existential_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks.actual_universal_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks.actual_primitive_recursion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySign.StatementChecks.original_domain_and_tail_sign": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnarySign.StatementChecks.actual_primitive_recursion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedSelfApplicationStatementChecks.fixedActualTypedApplicationCalibration": []
+  },
+  "all_20_gate_modules_selected_by_root": true,
+  "all_workers_remain_paused": true,
+  "local_paused_policy_restored": true,
+  "root_import_inventory_only": true,
+  "ci_configuration_changed": false
+}

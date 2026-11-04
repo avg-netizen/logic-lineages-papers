@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks
+open NumberedAuxiliaryShiftTargets
+
+theorem fixedActualCodeShiftPrimitive : ActualCodeShiftPrimitive := NumberedAuxiliaryShiftPrimrecProof.codeShiftPrimitive
+theorem fixedActualTypedShiftCalibration : ActualTypedShiftCalibration := NumberedAuxiliaryShiftSupportProof.typedShiftCalibration
+theorem fixedActualArgumentShiftCalibration : ActualArgumentShiftCalibration := NumberedAuxiliaryShiftSupportProof.argumentShiftCalibration
+theorem fixedActualPackedWeakeningPrimitive : ActualPackedWeakeningPrimitive := NumberedAuxiliaryShiftProof.packedWeakeningPrimitive
+
+#print axioms fixedActualCodeShiftPrimitive
+#print axioms fixedActualTypedShiftCalibration
+#print axioms fixedActualArgumentShiftCalibration
+#print axioms fixedActualPackedWeakeningPrimitive
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecisionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks
+theorem original_domain_and_matrix_tail : Targets.OriginalDomainAndMatrixTail := Proof.originalDomainAndMatrixTail
+theorem actual_existential_decision : Targets.ActualExistentialDecision := Proof.actualExistentialDecision
+theorem actual_universal_decision : Targets.ActualUniversalDecision := Proof.actualUniversalDecision
+theorem actual_primitive_recursion : Targets.ActualPrimitiveRecursion := Proof.actualPrimitiveRecursion
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovUnaryDecision.StatementChecks

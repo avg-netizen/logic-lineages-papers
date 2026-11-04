@@ -1,0 +1,102 @@
+{
+  "accepted": {
+    "round": "R003-original-source-presentation",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedSound",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedValidity",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedValidity",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedValidityPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedValidityPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualFixedPresentation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks.fixedActualPackedPresentation"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualPackedRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualPackedSound",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualFixedValidity",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualPackedValidity",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualFixedValidityPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualPackedValidityPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualFixedPresentation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets.ActualPackedPresentation"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourcePresentation-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "All8 fixed aliases standard3 or subsets; complete namespace closure audit passed for8theorems. Packed sound propext+Quot.sound.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourcePresentationDefinitions.lean",
+        "sha256": "c8d717f97ff1284fcd90950d09758939849b4e20e4c49dbb1190c94d1e7e1c5c"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourcePresentationTargets.lean",
+        "sha256": "38dc471406a045b843cfe147a43b68f5d5a5a4122a47b2e34c628184d34dd93d"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourcePresentationSupportProof.lean",
+        "sha256": "31e7fb1175cb76c9f61a1b251546b709fe4ad3137959b22dbea698021d5855c0"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceValidityPrimrecProof.lean",
+        "sha256": "e3d11f48421c4fc2126bca5c208d6f07ebad21b86431560f0aaeedcb23b36053"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourcePresentationProof.lean",
+        "sha256": "c0e923eaa9a95d78b1c48f57ea86ca3184573341af53e16605bc6ebaaacbe385"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourcePresentationStatementChecks.lean",
+        "sha256": "511f867124e4c1cf4ceec4e8e3509908ad7b89252a458909ec72b65a959a12e8"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752112834196573-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752112834196573-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752112834196573-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752112834196573-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752363510322058-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752363510322058-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceValidityPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752415432122237-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752415432122237-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceValidityPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourcePresentationStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752461785090844-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourcePresentationStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual original Source.Term and packed original syntax: exact raw validity including typed context/index/arity/type checks, genuine uniform primitive validity and exact numeric primitive presentations. No original primitive instance is presumed. Uses unchanged sourceNumber, and no window/effectivity oracle. Component only. COMPLETE8gate. Actual Source.Term and Sigma original terms primitive presentations use EXACT prior numeric encoders/partial decoders; real uniform context/result-type/value validity proved, no source instance assumed. Exact literalTypes computation and same-source-window structural translation remain pending.",
+    "numbered_statements_completed": []
+  }
+}

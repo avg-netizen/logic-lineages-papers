@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibilityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks
+theorem exact_finite_tail_elimination : Targets.ExactFiniteTailElimination := Proof.exactFiniteTailElimination
+theorem literal_base_truth_and_support : Targets.LiteralBaseTruthAndSupport := Proof.literalBaseTruthAndSupport
+theorem exact_code_calibration : Targets.ExactCodeCalibration := Proof.exactCodeCalibration
+theorem actual_primitive_recursion : Targets.ActualPrimitiveRecursion := Proof.actualPrimitiveRecursion
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovDivisibility.StatementChecks

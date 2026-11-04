@@ -1,0 +1,88 @@
+{
+  "accepted": {
+    "round": "R001-original-source-codec",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionSound",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualArgumentProjectionRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualProjectionImage",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualNumericRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks.fixedActualNumericSound"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets.ActualProjectionRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets.ActualProjectionSound",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets.ActualArgumentProjectionRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets.ActualProjectionImage",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets.ActualNumericRoundTrip",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets.ActualNumericSound"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalSourceCodec-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "All6fixed aliases standard3or subsets. Numeric roundtrip standard3, allother aliases propext+Quot.sound.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceCodecDefinitions.lean",
+        "sha256": "d7cd4d426732785e681ea462efe94b74004d8360d2f885b2af2ebe4540cca3a4"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceCodecTargets.lean",
+        "sha256": "3ccf7098689ca4c42660a6171a49014d518a192f90931cce975961ae113723da"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceCodecSupportProof.lean",
+        "sha256": "561b570a277ef25ecbcdd01cff460813ff7d7f41418243634bbb01d7252fa509"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceCodecProof.lean",
+        "sha256": "cff81a368179dbc229e133d28de56e4be84f800d152c4d6f19c2192b3eccec2a"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalSourceCodecStatementChecks.lean",
+        "sha256": "09cc7164b53af2877fcbed834f33c6fc73cc03449addaf1947e0c5495f6b7c29"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793749872823761289-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793749872823761289-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793749872823761289-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793749872823761289-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793750915935782306-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793750915935782306-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalSourceCodecStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793751070356922999-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalSourceCodecStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual original Source.Term constructive projection/numeric codec. Literal application/binders/native heads/ranked Fin-vectors; Aux app/bottom/numbered rejected. sourceNumber EXACT existing packedNumber of translateOriginal. Exact projection retraction/reflection/image, ordered original vector retraction and numeric roundtrip/sound normalization. A genuine source presentation component, NOT yet Primcodable/sourceWindow effectivity/sharedS translation or a whole source theorem. COMPLETE6gate. Full source validity/primitive presentation and exact literalTypes/sharedS translation remain pending.",
+    "numbered_statements_completed": []
+  }
+}

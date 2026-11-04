@@ -1,0 +1,94 @@
+{
+  "accepted": {
+    "round": "R006-auxiliary-code-weakening",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualCodeShiftPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualTypedShiftCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualArgumentShiftCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks.fixedActualPackedWeakeningPrimitive"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftTargets.ActualCodeShiftPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftTargets.ActualTypedShiftCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftTargets.ActualArgumentShiftCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftTargets.ActualPackedWeakeningPrimitive"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/AuxiliaryShift-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "All4 fixed aliases standard3; full namespace transitive axiom closure audit passes.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryShiftDefinitions.lean",
+        "sha256": "725c6b081731feece9ea7972d466267f8788ddf177a6556f33e5992d7e1ed0e5"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryShiftTargets.lean",
+        "sha256": "9344884569212a790632835779867244c7f5012743f2443dc883e3aa8a7ce571"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryShiftSupportProof.lean",
+        "sha256": "0e73e38013f16fd7344bbb5ff7d350d20dfc4b46665a8f712a2b7ab140cde8a9"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryShiftPrimrecProof.lean",
+        "sha256": "e2fe461d9b936a34a4ecee920e5f96297a36a55e061946361e3188e056e9e264"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryShiftProof.lean",
+        "sha256": "47be7d9bc320e1bf82dd1ab22bb5cb028ba20774df587f97853e257efa45fb30"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedAuxiliaryShiftStatementChecks.lean",
+        "sha256": "d3ecbbea61bc83256b992b422d96b1500a22c29680177a7d59cb9af4f2c2fd4f"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753679721287225-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753679721287225-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753679721287225-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753679721287225-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftSupportProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753772431767882-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753772431767882-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryShiftStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753871027947695-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedAuxiliaryShiftStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual protected-binder auxiliary weakening: joint ALL-Code/cutoff primitive shift, unconditional exact actual typed term/argument prefixWeakening calibration, and actual packed typed weakening primitive program. Every constructor/head/label/type/base/extras order retained. A real numeric certificate-effectivity dependency, not a new rewrite or transitivity repair; no conditional index-equation premise in frozen final targets. COMPLETE4gate. Full actual typed prefix-weakening calibrated by genuine mutual syntax induction; finite-child numeric program changes cutoff only at lambdas, reconstructs all exact constructor fields, and uses actual typed packed decoder. No assumed index equation in accepted frozen type. This pays weakening, not yet beta/substitution/openNumbered or whole root/step/quotient/path checking.",
+    "numbered_statements_completed": []
+  }
+}

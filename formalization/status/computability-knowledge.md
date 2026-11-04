@@ -1,5 +1,19 @@
 ## 31 October–1 November 2026: paused after checked R005
 
+## PAUSED after complete R021 — 4 November 2026
+
+All owned Claude/native processes are reaped and admission/author/shared-local
+compiler guards are paused. No R022, automatic quota-reset resume, Git push or
+CI/dependency change. Explicit user resumption is required. Six accepted local
+components/31fixed aliases, all source hashes current and standard-three-axiom
+audits; no whole-source promotions (154checked+2inherited+33pending unchanged).
+R021 passed unchanged FIRST1793759813187352881-2. R020's paid overlap addsZERO
+progress and its duplicate drafts are privately archived. See
+`LogicLineages/ComputabilityKnowledge/PAUSED-HANDOFF-2026-11-04.md` and
+`verification/local-resume-2026-11-03/computability/FINAL-CHECKPOINT-AFTER-R021.json`.
+The historical next-target/pause notes below are not current authorization.
+
+
 Authoritative source state is EXTERNAL-CONTINUATION-2026-10-31.md and TARGETS.json at base5cff59d. Paper14 is fully checked; all six paper12 statements and three paper02 statements remain pending. Older next-target notes below are historical.
 
 The actual internal arithmetic certificate interface is now checked in full at its separately frozen supplier type. Claude returned its complete proof, which compiled unchanged on the first attempt. All five exact obligations and six statement aliases passed the frozen gate; only propext, Classical.choice and Quot.sound occur. Receipts1793480944835417324-2 (pre-author target),1793481891438233790-2 (raw proof),1793482322315259455-2 (exact gate). See ComputabilityKnowledge/ACCEPTED-RESUMED-2026-10-31.json.

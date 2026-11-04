@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks
+theorem exact_original_graphs : Targets.ExactOriginalGraphs := Proof.exactOriginalGraphs
+theorem original_order_and_roundtrips : Targets.OriginalOrderAndRoundTrips := Proof.originalOrderAndRoundTrips
+theorem effective_coefficient_compression : Targets.EffectiveCoefficientCompression := Proof.effectiveCoefficientCompression
+theorem actual_primitive_recursion : Targets.ActualPrimitiveRecursion := Proof.actualPrimitiveRecursion
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovInverse.StatementChecks

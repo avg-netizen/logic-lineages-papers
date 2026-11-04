@@ -1,0 +1,63 @@
+{
+  "actor": "codex-L2-formalization",
+  "paused": true,
+  "paused_at_utc": "2026-11-04T01:41:56.874823+00:00",
+  "user_instruction": "Pause the independent lane after its current round; only the supervised Claude lane continues.",
+  "pause_after_current_round": true,
+  "successor_disabled": true,
+  "current_round_ceiling": 9,
+  "completed_restart_relative_rounds": 9,
+  "last_round": "R009-self-application-select",
+  "last_gate_receipt": "1793756434325704032-2",
+  "last_native_handle": 38667,
+  "last_native_reaped": true,
+  "live_compiler": false,
+  "live_author": false,
+  "live_test": false,
+  "successor_comparator_or_proof_authored": false,
+  "r009_portable_acceptance": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/SelfApplication-ACCEPTED.json",
+    "sha256": "3d65adef5a2b00614dc0e597215cf00675ca7f63be187b4f94d92cb47e8cd75a"
+  },
+  "other_lanes": "L1 plus the same supervised Claude continues. L3 remains paused. Do not change global compiler policy.",
+  "stopped_utc": "2026-11-04T01:46:34.350465+00:00",
+  "accepted_ledger": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/ACCEPTED.json",
+    "sha256": "ca4b58c6686ad63dc8e55d279ab25161de6a494eb9bcc188efa92b80cb09734f",
+    "bundles": 9,
+    "fixed_aliases": 58
+  },
+  "handoff": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/PAUSED-HANDOFF.md",
+    "sha256": "2a65e07007c703f19880cd16583db4116a9e5ed3a6dabe63945116b741404f8b"
+  },
+  "promotion_report": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/FINAL-PROMOTIONS.json",
+    "sha256": "49bbaaf5f1cf846d7ec5e13586a2c0ad3306a4eb25f927ae8586845f065a2f81"
+  },
+  "validation": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/FINAL-ACCEPTANCE-VALIDATION.json",
+    "sha256": "6f76e2f52c18f6464809b28218725a255310a0fc57285189b3eb63d0c0aa05a6",
+    "result": "PASS"
+  },
+  "unaccepted_inventory": {
+    "file": "verification/local-resume-2026-11-03/termination-ordering/FINAL-UNACCEPTED-INVENTORY.json",
+    "sha256": "e216357138e35f8177916382e99144003c38e790330b7fa04f277eac23596c0b",
+    "new_unaccepted_lean_files": 0,
+    "historical_archives": 1
+  },
+  "source_pins": [
+    {
+      "file": "../06-godel-t-termination-ordering/paper.tex",
+      "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "label": "lem:simulation",
+      "scope": "Original-source numeric coding supplier for the published computable translation clause; whole lemma requires full numeric effectivity and same source-only window at both endpoints."
+    }
+  ],
+  "workspace_record": {
+    "id": "2cad96acbe764e3abd7e75947960d236",
+    "status": "open (paused-equivalent)",
+    "expected_final_revision": 115
+  },
+  "mathematical_source_pins_exclude_mutable_administrative_request": true
+}

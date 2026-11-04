@@ -1,0 +1,80 @@
+{
+  "accepted": {
+    "round": "R005-original-structural-translation",
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualOriginalTranslationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualWindowTranslationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualSharedWindowPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualNumericTranslationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualNumericCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualComputedConfinedSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks.fixedActualGenuineComputedSimulation"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualOriginalTranslationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualWindowTranslationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualSharedWindowPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualNumericTranslationPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualNumericCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualComputedConfinedSimulation",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets.ActualGenuineComputedSimulation"
+    ],
+    "freeze": "verification/local-resume-2026-11-03/termination-ordering/OriginalStructuralTranslation-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2.json",
+    "gate_log": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalStructuralTranslationStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "axiom_detail": "All7 fixed aliases actual transitive closure standard3; namespace axiom audit passes.",
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalStructuralTranslationDefinitions.lean",
+        "sha256": "6fe73c2a00a90de4e5739ddfaa4b83f4569428467481d6dcbb851cb9bdd03b3a"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalStructuralTranslationTargets.lean",
+        "sha256": "12fe5f5767ede6840c8f4d857eeb32bc22b55c11dc8f829fb6ecbeabf9970ca6"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalStructuralTranslationProof.lean",
+        "sha256": "5e590ce1625fd3effd4c45f348f3be3ae9ac3ac1d17a987d3fc8d836590c774f"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedOriginalStructuralTranslationStatementChecks.lean",
+        "sha256": "fcb7614daf74916b634eb9ab4970b72cb040ef0dfefc1672600c53ea6a65da72"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationDefinitions",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793752987776328560-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793752987776328560-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalStructuralTranslationDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationTargets",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753104648393886-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753104648393886-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalStructuralTranslationTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationProof",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalStructuralTranslationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedOriginalStructuralTranslationStatementChecks",
+        "receipt": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-03/termination-ordering/1793753379536411960-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedOriginalStructuralTranslationStatementChecks.log"
+      }
+    ],
+    "source_scope": "Actual fixed finite signature/arity/binder-context original-source primitive translation; exact type-varying packed original inputs, ONE sourceWindow(s)=literalTypes(s) for BOTH actual least-code outputs, total ALL-numeric source/target decoder implementation with exact calibration, actual ConfinedStrict positive quotient-path preservation and genuine computable realization. No semantic/effectivity oracle or changed comparison. Joint n/arity/context uniformity and numeric quotient certificate effectivity/arithmetic representation remain separate. Component only until full-source assembly. COMPLETE7gate. Actual numeric decoder/presentation, exact literalTypes program, unchanged representativeCode and existing full confined-source path theorem are constructively composed. Staging/local opacity of certified representativeCode avoids unfolding its algorithm; no limit/type/source change. No whole numbered promotion: numeric root/step/positive-path certificate effectivity and exact arithmetic quotient presentation remain pending.",
+    "numbered_statements_completed": []
+  }
+}
