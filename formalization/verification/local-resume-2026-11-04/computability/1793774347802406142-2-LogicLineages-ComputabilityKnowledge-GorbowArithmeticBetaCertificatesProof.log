@@ -1,0 +1,179 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:84:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fin.lastCases ?m.57 ?m.58 (Fin.castSucc ?i)
+in the target expression
+  (fun i => Fin.lastCases 0 (fun j => ((fun i => Fin.lastCases 0 (fun k => k.elim0.succ) i) j).succ) i)
+      (Fin.castSucc 0) =
+    1
+
+h : 0 = Fin.castSucc 0
+⊢ (fun i => Fin.lastCases 0 (fun j => ((fun i => Fin.lastCases 0 (fun k => k.elim0.succ) i) j).succ) i)
+      (Fin.castSucc 0) =
+    1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:91:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Fin.lastCases ?m.54 ?m.55 (Fin.last ?m.52)
+in the target expression
+  (fun i => Fin.lastCases 0 (fun j => ((fun i => Fin.lastCases 0 (fun k => k.elim0.succ) i) j).succ) i) (Fin.last 1) = 0
+
+h : 1 = Fin.last 1
+⊢ (fun i => Fin.lastCases 0 (fun j => ((fun i => Fin.lastCases 0 (fun k => k.elim0.succ) i) j).succ) i) (Fin.last 1) = 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:4: error: don't know how to synthesize implicit argument `α`
+  @Eq (Formula (?m.12 a b i r q d))
+    (GorbowStandardInstances.instantiate (matrix a b i r (Term.numeral q) (Term.var 0)) (Term.numeral d))
+    (matrix a b i r (Term.numeral q) (Term.numeral d))
+context:
+a b i r q d : ℕ
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:172:6: error: don't know how to synthesize implicit argument `n`
+  @matrix (?m.12 a b i r q d) a b i r (Term.numeral q) (Term.numeral d)
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:172:39: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral (?m.12 a b i r q d) d
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:172:22: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral (?m.12 a b i r q d) q
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:4: error: don't know how to synthesize implicit argument `n`
+  @GorbowStandardInstances.instantiate (?m.12 a b i r q d) (matrix a b i r (Term.numeral q) (Term.var 0))
+    (Term.numeral d)
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:84: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral (?m.12 a b i r q d) d
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:41: error: don't know how to synthesize implicit argument `n`
+  @matrix (?m.12 a b i r q d + 1) a b i r (Term.numeral q) (Term.var 0)
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:74: error: don't know how to synthesize implicit argument `n`
+  @Term.var (?m.12 a b i r q d + 1) 0
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:79: error: don't know how to synthesize implicit argument
+  @OfNat.ofNat (Fin (?m.12 a b i r q d + 1)) 0 Fin.instOfNat
+context:
+a b i r q d : ℕ
+⊢ OfNat (Fin (?m.12 a b i r q d + 1)) 0
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:171:57: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral (?m.12 a b i r q d + 1) q
+context:
+a b i r q d : ℕ
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:175:2: error: Type mismatch
+  congrArg (fun Q => matrix a b i r Q (Term.numeral d)) (GorbowHeaderSubstitutionProof.numerals ?m.34 ?m.35 ?m.36 q)
+has type
+  matrix a b i r (GorbowSubstitution.substitute ?m.36 (Term.numeral q)) (Term.numeral d) =
+    matrix a b i r (Term.numeral q) (Term.numeral d)
+but is expected to have type
+  matrix a b i r (GorbowSubstitution.substitute (fun i_1 => Fin.cases (Term.numeral d) Term.var i_1) (Term.numeral q))
+      (GorbowSubstitution.substitute (fun i_1 => Fin.cases (Term.numeral d) Term.var i_1) (Term.var 0)) =
+    matrix a b i r (Term.numeral q) (Term.numeral d)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:196:22: error: don't know how to synthesize implicit argument `n`
+  @Derivation T ?m.82
+    (GorbowStandardInstances.instantiate (matrix a b i r (Term.numeral q) (Term.var 0)) (Term.numeral d))
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:196:36: error: don't know how to synthesize implicit argument `n`
+  @GorbowStandardInstances.instantiate ?m.82 (matrix a b i r (Term.numeral q) (Term.var 0)) (Term.numeral d)
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:197:50: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.82 d
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:197:7: error: don't know how to synthesize implicit argument `n`
+  @matrix (?m.82 + 1) a b i r (Term.numeral q) (Term.var 0)
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:197:40: error: don't know how to synthesize implicit argument `n`
+  @Term.var (?m.82 + 1) 0
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:197:45: error: don't know how to synthesize implicit argument
+  @OfNat.ofNat (Fin (?m.82 + 1)) 0 Fin.instOfNat
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ OfNat (Fin (?m.82 + 1)) 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:197:23: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral (?m.82 + 1) q
+context:
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean:193:86: error: unsolved goals
+T : Sentence → Prop
+a b i r q d : ℕ
+hq : a = q * ((i + 1) * b + 1) + r
+hd : r + (d + 1) = (i + 1) * b + 1
+p1 : Derivation T (Formula.equal (Term.numeral a) (((Term.numeral q).mul (modulus b i)).add (Term.numeral r)))
+p2 : Derivation T (Formula.equal ((Term.numeral r).add (Term.numeral d).succ) (modulus b i))
+⊢ Nonempty (Derivation T (GorbowArithmeticBetaCertificates.literalBeta a b i r))

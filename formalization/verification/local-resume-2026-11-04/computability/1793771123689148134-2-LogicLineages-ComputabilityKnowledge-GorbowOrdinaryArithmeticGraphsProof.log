@@ -1,0 +1,10 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsProof.lean:118:4: error: Type mismatch: After simplification, term
+  OrdinaryArithmeticProgramProof.programGraphTruth p v
+ has type
+  FirstOrder.Language.BoundedFormula.Realize (OrdinaryArithmetic.graphFormula p) v
+      (@default (Fin 0 → ℕ) Unique.instInhabited) ↔
+    evaluate p (List.Vector.ofFn fun i => v i.succ) = v 0
+but is expected to have type
+  FirstOrder.Language.BoundedFormula.Realize (OrdinaryArithmetic.graphFormula p) v
+      (@default (Fin 0 → ℕ) Pi.instInhabited) ↔
+    evaluate p (List.Vector.ofFn fun i => v i.succ) = v 0

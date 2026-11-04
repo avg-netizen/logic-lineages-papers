@@ -1,0 +1,103 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:18:2: error: Type mismatch: After simplification, term
+  Formula.boundedFormula_realize_eq_realize p (Sum.elim v xs) (xs ∘ Fin.natAdd k)
+ has type
+  Iff (BoundedFormula.Realize p (Sum.elim v xs) fun x => xs (Fin.natAdd k x)) (Formula.Realize p (Sum.elim v xs))
+but is expected to have type
+  Iff (BoundedFormula.Realize p (fun x => Sum.elim v (fun x => xs (Fin.cast ⋯ x)) (id x)) fun x => xs (Fin.natAdd k x))
+    (Formula.Realize p (Sum.elim v xs))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:33:2: error: 'change' tactic failed, pattern
+  (BoundedFormula.subst p fun i => Fin.cases out inputs i).Realize v default ↔ ?m.29
+is not definitionally equal to target
+  Formula.Realize (applyGraph p out inputs) v ↔
+    Formula.Realize p (Fin.cons (Term.realize v out) fun i => Term.realize v (inputs i))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:44:2: error: 'change' tactic failed, pattern
+  (List.foldr (fun x1 x2 => x1 ⊓ x2) ⊤ (List.ofFn p)).Realize v default ↔ ?m.27
+is not definitionally equal to target
+  Formula.Realize (andFin p) v ↔ ∀ (i : Fin n), Formula.Realize (p i) v
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:57:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≤ -1
+where
+ a := ↑(xs 0)
+ b := ↑(Term.realize (Sum.elim v xs ∘ Sum.inl) t)
+ c := ↑(Term.realize v s)
+ d := ↑(Term.realize v t)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:60:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - d - e ≥ 2
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑(Term.realize v t)
+ b := ↑(Term.realize v s)
+ c := ↑(Term.realize ((Sum.elim v fun x => Term.realize v t - (Term.realize v s + 1)) ∘ Sum.inl) t)
+ d := ↑(Term.realize ((Sum.elim v fun x => Term.realize v t - (Term.realize v s + 1)) ∘ Sum.inl) s)
+ e := ↑((fun x => Term.realize v t - (Term.realize v s + 1)) 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:54:4: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_equal, OrdinaryArithmeticBetaProof.realize_add,
+      OrdinaryArithmeticBetaProof.realize_succ, Term.realize_relabel, Term.realize_var,
+  ̵  ̵ ̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵ ̵Sum.elim_inl,
+  ̲  ̲ ̲ ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:54:25: warning: This simp argument is unused:
+  Sum.elim_inl
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_equal, OrdinaryArithmeticBetaProof.realize_add,
+      OrdinaryArithmeticBetaProof.realize_succ, Term.realize_relabel, Term.realize_var,
+      Function.comp_apply, Sum.elim_inl̵,̵ ̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:67:2: error: `simp` made no progress
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:65:34: warning: This simp argument is unused:
+  applyGraphTruth
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_inf, a̵p̵p̵l̵y̵G̵r̵a̵p̵h̵T̵r̵u̵t̵h̵,̵ ̵finiteConjunctionTruth, Term.realize_var, Sum.elim_inl,
+  ̲  ̲ ̲ ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:65:51: warning: This simp argument is unused:
+  finiteConjunctionTruth
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_inf, applyGraphTruth, f̵i̵n̵i̵t̵e̵C̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵T̵r̵u̵t̵h̵,̵Term.realize_var, Sum.elim_inl, Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:66:4: warning: This simp argument is unused:
+  Term.realize_var
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_inf, applyGraphTruth, finiteConjunctionTruth, T̵e̵r̵m̵.̵r̵e̵a̵l̵i̵z̵e̵_̵v̵a̵r̵,̵ ̵Sum.elim_inl,
+  ̲  ̲ ̲ ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:66:22: warning: This simp argument is unused:
+  Sum.elim_inl
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_inf, applyGraphTruth, finiteConjunctionTruth, Term.realize_var,
+  ̲  ̲ ̲ ̲S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵l̵,̵ ̵Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:66:36: warning: This simp argument is unused:
+  Sum.elim_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [Formula.realize_inf, applyGraphTruth, finiteConjunctionTruth, Term.realize_var,
+  ̲  ̲ ̲ ̲S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵l̵,̵ ̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

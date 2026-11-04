@@ -1,4 +1,15 @@
-Latest cumulative checkpoint: **the complete original contextual numeric step
+Current local state: **PAUSED after completed R026 and all independent work**,
+4 November 2026. This restart accepted **10 supporting components / 52 exact
+declarations in 42 Lean files**. The focused integration and actual axiom checks
+passed; the numbered source register remains **154 checked, 2 inherited,
+33 pending/189**. Read [the current handoff](HANDOFF-2026-11-04-SECOND.md) and
+[verification](verification/local-publication-2026-11-04-second/INTEGRATION.json).
+All author/compiler jobs are reaped and successor/pause guards are sealed.
+The user authorized publication only after this pause. No new research, quota
+reset restart, independent lane, main-branch merge or CI change is authorized.
+Older active allocations below are historical and do not resume any worker.
+
+Earlier cumulative checkpoint: **the complete original contextual numeric step
 checker is primitive recursive jointly in its binder context**. The original
 quotient-edge and positive-path certificate tests are primitive recursive at
 each fixed ambient context, retaining the actual representative computation.

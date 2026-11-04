@@ -1,3 +1,26 @@
+Current local state: **PAUSED after completed R026 and all independent work**,
+4 November 2026. This restart accepted **10 supporting components / 52 exact
+declarations in 42 Lean files**. The focused integration and actual axiom checks
+passed; the numbered source register remains **154 checked, 2 inherited,
+33 pending/189**. Read [the current handoff](HANDOFF-2026-11-04-SECOND.md) and
+[verification](verification/local-publication-2026-11-04-second/INTEGRATION.json).
+All author/compiler jobs are reaped and successor/pause guards are sealed.
+The user authorized publication only after this pause. No new research, quota
+reset restart, independent lane, main-branch merge or CI change is authorized.
+Older active allocations below are historical and do not resume any worker.
+
+**Current user release — 4 November 2026: supervised Claude plus ONE independent Codex lane.**
+The public papers repo was fetched and fast-forwarded to merged main `c6ab991`.
+Resume L1's existing same-session Claude/compiler-first review AND repair loop,
+and L2 alone on the actual ordinary arithmetic graph bridge after the newly
+accepted numeric/contextual/quotient checker results. L3 stays paused. Read
+[the current allocation](RESUME-2026-11-04-LOCAL.md) before selecting work.
+This explicitly supersedes completed R021/R009 pause ceilings for L1/L2 only.
+Main coordinates shared adoption/register/Git; no third proof stream, automatic
+publication, CI changes or unrelated research. Existing bounded serialized
+compiler and Claude repair-then-wait quota rules remain active. Older controls
+below are historical where they disagree with this explicit release.
+
 Current local state: **PAUSED after completed R021 and both independent lanes**,
 4 November 2026. The final author/review/check cycle passed. This restart adds
 20 supporting components/106 checked declarations; the whole-source register

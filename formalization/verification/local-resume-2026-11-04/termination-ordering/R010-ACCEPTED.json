@@ -1,0 +1,78 @@
+{
+  "accepted": {
+    "round": "R010-ordinary-arithmetic-beta",
+    "restart_round": 1,
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks.exactBetaTermTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks.exactActualBetaTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks.exactFiniteSequenceWitness"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaTargets.BetaTermTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaTargets.ActualBetaTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaTargets.FiniteSequenceWitness"
+    ],
+    "freeze": "verification/local-resume-2026-11-04/termination-ordering/R010-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768901300794686-2.json",
+    "gate_log": "verification/local-resume-2026-11-04/termination-ordering/1793768901300794686-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticBetaStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticBetaDefinitions.lean",
+        "sha256": "ceb5a591d9deae3bbb0671ca97efafacdb9ad0d41385068c133bb263ab59d4eb"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticBetaProof.lean",
+        "sha256": "44b394fd35645b249f71510cedd2fabc177c337d7dc76d1251614334684c51cf"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticBetaStatementChecks.lean",
+        "sha256": "58068d1a7c7bb33fa0060ba706e7cb9a0f908fcd70b30eeef95b6c72bb736e37"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticBetaTargets.lean",
+        "sha256": "6f13f782d274e26b273d65975fe8eff04fce2940e1e43e3419624684bec36cc7"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768685430547497-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793768685430547497-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticBetaDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768685430547497-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793768685430547497-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticBetaTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768901300794686-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793768901300794686-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticBetaProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793768901300794686-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793768901300794686-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticBetaStatementChecks.log"
+      }
+    ],
+    "source_pins": [
+      {
+        "file": "../04-pure-r1-calculator/lean/.lake/packages/mathlib/Mathlib/Logic/Godel/GodelBetaFunction.lean",
+        "sha256": "da1f22be161c5bc7cbd676252bea6b38bb4aa0497872bcdf52a178b9d4951829"
+      }
+    ],
+    "source_scope": "Ordinary Mathlib first-order arithmetic with exactly0, successor, addition, multiplication and built-in equality; empty relation alphabet. Literal existential quotient/remainder beta formula, generic term standard-N semantics, actualNat.beta calibration, witnesses for every finite list. No program graph compiler, arithmetic H/R application, internalID1, norm supplier or numbered source promotion. Full original relation/transitivity diagnostic unchanged.",
+    "numbered_statements_completed": []
+  }
+}

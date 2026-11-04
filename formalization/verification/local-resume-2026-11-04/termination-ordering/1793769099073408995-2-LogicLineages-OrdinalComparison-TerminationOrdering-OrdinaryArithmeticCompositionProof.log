@@ -1,0 +1,13 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:40:22: error: failed to elaborate eliminator, expected type is not available
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:53:2: error: No goals to be solved
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCompositionProof.lean:66:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+  a - b - c ≥ 2
+where
+ a := ↑(Term.realize v t)
+ b := ↑(Term.realize v s)
+ c := ↑((fun x => Term.realize v t - (Term.realize v s + 1)) 0)

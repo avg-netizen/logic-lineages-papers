@@ -1,0 +1,36 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:22:2: warning: Left-hand side of simp theorem is headed by a `.other` key in the discrimination tree (e.g. because it is a lambda expression). This theorem will be tried against all expressions that also have a `.other` key as head, which can cause slowdowns. This may be acceptable for `local` or `scoped` simp lemmas.
+Use `set_option warning.simp.otherHead false` to disable this warning.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:117:39: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:117:37: error: failed to prove index is valid, possible solutions:
+  - Use `have`-expressions to prove the index is valid
+  - Use `a[i]!` notation instead, runtime check is performed, and 'Panic' error message is produced if index is not valid
+  - Use `a[i]?` notation instead, result is an `Option` type
+  - Use `a[i]'h` notation instead, where `h` is a proof that index is valid
+n : ℕ
+f : Program n
+g : Program (n + 2)
+F : OrdinaryArithmetic.Formula (Fin (n + 1))
+G : OrdinaryArithmetic.Formula (Fin (n + 3))
+hf : ∀ (v : Fin (n + 1) → ℕ), Formula.Realize F v ↔ evaluate f (List.Vector.ofFn fun i => v i.succ) = v 0
+hg : ∀ (v : Fin (n + 3) → ℕ), Formula.Realize G v ↔ evaluate g (List.Vector.ofFn fun i => v i.succ) = v 0
+v : Fin (n + 2) → ℕ
+params : List.Vector ℕ n := List.Vector.ofFn fun i => v i.succ.succ
+run : ℕ → ℕ := fun j => Nat.rec (evaluate f params) (fun k previous => evaluate g (k ::ᵥ previous ::ᵥ params)) j
+run_zero : run 0 = evaluate f params
+run_succ : ∀ (j : ℕ), run (j + 1) = evaluate g (j ::ᵥ run j ::ᵥ params)
+veq : (List.Vector.ofFn fun i => v i.succ) = v 1 ::ᵥ params
+evaleq : evaluate (f.recursion g) (List.Vector.ofFn fun i => v i.succ) = run (v 1)
+h : run (v 1) = v 0
+l : List ℕ := List.ofFn fun i => run ↑i
+a b : ℕ
+hab : ∀ (i : Fin l.length), Formula.Realize betaGraph ![a, b, ↑i, l[i] ]
+j : ℕ
+hj : j ≤ v 1
+hjl : j < l.length
+hcode :
+  Term.realize ![a, b, ↑⟨j, hjl⟩, l[⟨j, hjl⟩] ] (var 0) %
+      ((Term.realize ![a, b, ↑⟨j, hjl⟩, l[⟨j, hjl⟩] ] (var 2) + 1) *
+          Term.realize ![a, b, ↑⟨j, hjl⟩, l[⟨j, hjl⟩] ] (var 1) +
+        1) =
+    Term.realize ![a, b, ↑⟨j, hjl⟩, l[⟨j, hjl⟩] ] (var 3)
+⊢ ?m.379 l sorry

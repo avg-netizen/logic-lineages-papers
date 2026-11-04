@@ -1,0 +1,25 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientProof.lean:21:2: error: `simp` made no progress
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientProof.lean:40:4: error: Type mismatch: After simplification, term
+  NumberedNumericQuotientEdgeProof.numericQuotientEdge n arity ctx.1.1 ctx.1.2 Gamma ctx.2 x y
+ has type
+  (∃ certificate,
+      NumberedNumericQuotientEdge.numericEdgeTest n arity ctx.1.1 ctx.1.2 Gamma ctx.2 x y certificate = true) ↔
+    QuotientEdge n arity ctx.1.1 ctx.1.2 (tableAbove ctx.2) Gamma x y
+but is expected to have type
+  (∃ c,
+      NumberedNumericQuotientEdge.numericEdgeTest n arity ctx.1.1 ctx.1.2 Gamma ctx.2 (![ctxCode, x, y, c] 1)
+          (![ctxCode, x, y, c] 2) (![ctxCode, x, y, c] 3) =
+        true) ↔
+    ∃ ctx_1, ctx = ctx_1 ∧ QuotientEdge n arity ctx_1.1.1 ctx_1.1.2 (tableAbove ctx_1.2) Gamma x y
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientProof.lean:53:4: error: Type mismatch: After simplification, term
+  NumberedQuotientPathCertificatesProof.numericPositivePathCertificates n arity ctx.1.1 ctx.1.2 Gamma ctx.2 x y
+ has type
+  (∃ certificate,
+      NumberedQuotientPathCertificates.positivePathTest n arity ctx.1.1 ctx.1.2 Gamma ctx.2 x y certificate = true) ↔
+    PositivePath (QuotientEdge n arity ctx.1.1 ctx.1.2 (tableAbove ctx.2) Gamma) x y
+but is expected to have type
+  (∃ c,
+      NumberedQuotientPathCertificates.positivePathTest n arity ctx.1.1 ctx.1.2 Gamma ctx.2 (![ctxCode, x, y, c] 1)
+          (![ctxCode, x, y, c] 2) (![ctxCode, x, y, c] 3) =
+        true) ↔
+    ∃ ctx_1, ctx = ctx_1 ∧ PositivePath (QuotientEdge n arity ctx_1.1.1 ctx_1.1.2 (tableAbove ctx_1.2) Gamma) x y

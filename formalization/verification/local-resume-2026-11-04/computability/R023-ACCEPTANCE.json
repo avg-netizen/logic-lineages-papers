@@ -1,0 +1,75 @@
+{
+  "checkpoint": "FORMALIZATION-2026-10-31-R023",
+  "accepted_utc": "2026-11-04T05:47:57.883266+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphsStatementChecks",
+  "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.fullArithmeticGraphs",
+  "accepted_declarations": [
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.fullArithmeticGraphs",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.termImage",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.formulaImage",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.termTruth",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.boundedTruth",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.programTruth",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.allPrimitiveGraphs",
+    "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.StatementChecks.initialCertificates"
+  ],
+  "frozen_comparator": {
+    "file": "LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsTargets.lean",
+    "sha256": "33279ee3b0053fdf05e76766bfaeaad312c2f62dd42a5a71d8bb583edfc9c734",
+    "type": "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphs.Targets.Target"
+  },
+  "verification_receipts": [
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793770711249262078-2.json",
+      "role": "Separate Codex target-only pre-author PASS"
+    },
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793771094050829185-2.json",
+      "role": "FIRST unchanged raw candidate compile; actual Formula-vs-BoundedFormula empty-environment mismatch"
+    },
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793771123689148134-2.json",
+      "role": "First repair reveals distinct Unique/Pi default instances on empty environments"
+    },
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793771156526268190-2.json",
+      "role": "Constructive explicit empty-environment equality; proof and exact8aliases/axiom audit PASS",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphsStatementChecks"
+    }
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "proof_changed_after_author": true,
+  "repair_scope": "Only programTruth interface explicitly unfolds Formula.Realize and equates the actual Unique default on Fin0 environments; all substantial translation/binding/initial Hilbert proofs unchanged. Frozen definitions/types/limits unchanged.",
+  "compiler_profile": {
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1
+  },
+  "gate_peak_rss_kib": 882764,
+  "scope": "Literal binder-correct embedding of the PAID ordinary arithmetic Program graph compiler into ACTUAL Gorbow PA(L) syntax, explicit new-last to new-first bound-variable conversion, pure 0/S/+/*/equality image, all-environment term/bounded-formula truth, genuine program graph semantics and standard arithmetic graphs for every PR function; UNCONDITIONAL actual Hilbert numeral derivations for zero/successor/projection. No opaque checker/program predicate, no assumed internal graph axiom. General internal recursion totality/uniqueness, source-Base correspondence, internal HB/CBE and whole source12 remain pending.",
+  "whole_statement_promotions": [],
+  "source_files": [
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsDefinitions.lean",
+      "sha256": "cfb757d33c28e8d3cfd14137ddf4125fbba2a73e186c8fefbae9f3563f6019f8"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsTargets.lean",
+      "sha256": "33279ee3b0053fdf05e76766bfaeaad312c2f62dd42a5a71d8bb583edfc9c734"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsProof.lean",
+      "sha256": "39f4a385f402c769ea55046763987ebe11a7e1e1ddea0efaf4425073268bebbb"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsStatementChecks.lean",
+      "sha256": "33a75eaa226741c70e20bf0e245fb1588d7f28746340143adf670bced8b19c1c"
+    }
+  ],
+  "author_provenance": "Immutable same-session ac0922e0/claude-opus-5-5/high/ReadGlobGrep candidate; Codex compile-first local empty-environment interface repair; exact frozen source/type/axiom gate."
+}

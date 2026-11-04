@@ -1,0 +1,17 @@
+@Encodable.finPi (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+  (fun a => Fin (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) → Bool) fun i =>
+  @Encodable.finPi (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) (fun a => Bool) fun i => Bool.encodable
+@Primcodable.finArrow (Fin (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) → Bool)
+  (@Primcodable.finArrow Bool Primcodable.bool (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientPrimitiveProof.lean:31:33: error: Tactic `rfl` failed: The left-hand side
+  @Encodable.decode (Context n) Primcodable.prod.toEncodable k
+is not definitionally equal to the right-hand side
+  @Encodable.decode (Context n) Encodable.Prod.encodable k
+
+n : ℕ
+f : Context n → ℕ → ℕ → ℕ → Bool
+hf : Primrec fun p => f p.1 p.2.1 p.2.2.1 p.2.2.2
+getP : ∀ (i : Fin 4), Primrec fun v => v.get i
+k : ℕ
+⊢ Encodable.decode k = Encodable.decode k

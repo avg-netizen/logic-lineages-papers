@@ -1,0 +1,594 @@
+{
+  "accepted": {
+    "round": "R014-actual-encoded-H-positiveR-arithmetic",
+    "restart_round": 5,
+    "gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks",
+    "declarations": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks.exactEncodedCheckersPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks.exactActualCheckerCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks.exactCertificateGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks.exactEncodedHAndPositiveR",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks.exactUniformSharedWindowFormulas"
+    ],
+    "target_types": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientTargets.EncodedCheckersPrimitive",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientTargets.ActualCheckerCalibration",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientTargets.CertificateGraphTruth",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientTargets.EncodedHAndPositiveR",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientTargets.UniformSharedWindowFormulas"
+    ],
+    "freeze": "verification/local-resume-2026-11-04/termination-ordering/R014-FREEZE.json",
+    "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2.json",
+    "gate_log": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientStatementChecks.log",
+    "gate_returncode": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "files": [
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDecoderProof.lean",
+        "sha256": "af00bdf6fec15779672233a0c61109012dacff447276cf256b593c8b17b66b63"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientDefinitions.lean",
+        "sha256": "ecc89e1372874af8557d7dacd608b478ae687cb34b85b35e9d877de674adb22c"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientPrimitiveProof.lean",
+        "sha256": "c8e2236595b85905a1b0615e13a6785b0b183579a513ebebaae70866d35b1b72"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientProof.lean",
+        "sha256": "757bc713c445759b410ddac16c2481ec8b37de83f536d45781da3cff868d7bf2"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientStatementChecks.lean",
+        "sha256": "228a577c5603b34c594ff1146a02504b54c9a8e1d971aeded516306e6bff1599"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticQuotientTargets.lean",
+        "sha256": "1fa1e3012531610936849ab6ca9771ebcf251f5c9c1aca0b65ab5ab5dd9c3dfd"
+      }
+    ],
+    "dependency_receipts": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepContextsDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepContextsTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepContextsProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepContextsProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRootDecompositionDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRootDecompositionDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRootDecompositionTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRootDecompositionTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRootDecompositionProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedRootDecompositionProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedFocusDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedTypedFocusDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedFocusTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedTypedFocusTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedFocusSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedTypedFocusSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedFocusProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedTypedFocusProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCertificateDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCertificateDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCertificateTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCertificateTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCertificateProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCertificateProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericQuotientEdgeDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericQuotientEdgeDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericQuotientEdgeTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericQuotientEdgeTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericQuotientEdgeProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericQuotientEdgeProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathCertificatesDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientPathCertificatesDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCodecPrimrecDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCodecPrimrecDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCodecPrimrecTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCodecPrimrecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCodecPrimrecSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCodecPrimrecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedStepCodecPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedStepCodecPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769674833954593-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientCertificatesPrimrecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769729063622796-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769729063622796-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769763526374247-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769763526374247-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathPrimrecSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientPathPrimrecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformPackedDecodingDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteMarkPrimrecDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMultisetDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMulDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedCopyOperationDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedCopyOperationTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedCopyOperationSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedCopyOperationProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedCopyOperationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformSelectorDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepPrimrecDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepPrimrecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeCalibrationProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeCalibrationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodePrimrecSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodePrimrecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodePrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodePrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFocusCodeProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFocusCodeProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformSelectorTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootPrimrecDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootPrimrecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootPrimrecSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootPrimrecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericRootLeavesPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericRootLeavesPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformSelectorSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMulTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMultisetTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformPackedDecodingTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformPackedDecodingProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformPackedDecodingProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteMarkPrimrecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedFiniteMarkPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedFiniteMarkPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMultisetSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMulPrimrecDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationDefinitions",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetPresentationDefinitions.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMulPrimrecTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetPresentationTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetPresentationProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMultisetPresentationProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMulPrimrecSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedMulPrimrecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMultisetProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMultisetProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformMulProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformMulProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedUniformSelectorProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedUniformSelectorProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecSupportProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepPrimrecSupportProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepCodePrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepCodePrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericStepPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedNumericStepPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientCertificatesPrimrecProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793769859423657855-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientCertificatesPrimrecProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientDecoderProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientDecoderProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientPrimitiveProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientPrimitiveProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathCertificatesTargets",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientPathCertificatesTargets.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathCertificatesProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770488562794473-2-LogicLineages-OrdinalComparison-TerminationOrdering-NumberedQuotientPathCertificatesProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientDecoderProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientDecoderProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientPrimitiveProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientPrimitiveProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientProof",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientProof.log"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks",
+        "receipt": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2.json",
+        "returncode": 0,
+        "log": "verification/local-resume-2026-11-04/termination-ordering/1793770525077304025-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticQuotientStatementChecks.log"
+      }
+    ],
+    "source_pins": [
+      {
+        "file": "../06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathsDefinitions.lean",
+        "sha256": "d11cd40fd30005d3ab7878880bb4c5aa5b39a84d50604c1567e8da3fe0131f38"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericQuotientEdgeProof.lean",
+        "sha256": "4395ca5ee5592b6805a5bc5466c192fecc9882516a4507cf18e819c38af11fcf"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathCertificatesProof.lean",
+        "sha256": "9f08f198303ef2dd2df6f0b9a35ce9c4b5ec489710ac43eb4127e64ec55b7fdf"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientCertificatesPrimrecTargets.lean",
+        "sha256": "c204b85125536509d6df58463610542cdea693e4007b70f3ed28edb6ac9cc50e"
+      },
+      {
+        "file": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientCertificatesPrimrecProof.lean",
+        "sha256": "d0c4729390c56abbb7e7d37d252116f3fc44c09371e532fde35ed067e8a756c7"
+      },
+      {
+        "file": "LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean",
+        "sha256": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b"
+      }
+    ],
+    "source_scope": "FULL standard-N ordinary-arithmetic representation of ORIGINAL actual QuotientEdge H and PositivePath R. One actual Program4 pair and Formula(Fin3) pair handles ALL encoded symbol windows, SAME type window S and finite Bool tables and endpoints, with n/arity/Gamma fixed. Actual checker calibration, malformed context rejection, existential certificates; R positive not reflexive. Frozen standard Encodable.finPi context codec preserved: separate canonical-decoder finite-support lookup proof establishes its primitive recursion despite different Primcodable.finArrow encoding. Original source relation/diagnostic unchanged. No uniformGamma/n/arity coding inference, no internalID1/norm/accessibility/ordinal conclusion or numbered source promotion. User pause after THIS fifth round; no successor exists.",
+    "numbered_statements_completed": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "checkpoint": "FORMALIZATION-2026-10-31-R026",
+  "accepted_utc": "2026-11-04T07:00:57.279608+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructureStatementChecks",
+  "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.StatementChecks.fullAdditiveStructure",
+  "accepted_declarations": [
+    "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.StatementChecks.fullAdditiveStructure",
+    "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.StatementChecks.predecessor",
+    "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.StatementChecks.leftZero",
+    "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.StatementChecks.leftSuccessor",
+    "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.StatementChecks.rightCancellation"
+  ],
+  "frozen_comparator": {
+    "file": "LogicLineages/ComputabilityKnowledge/GorbowPAAdditiveStructureTargets.lean",
+    "sha256": "8e74ac3137a42edb189eb7ce8e26736dff9d67384dbb451bcef871546932ccab",
+    "type": "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructure.Targets.Target"
+  },
+  "verification_receipts": [
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793774620235111065-2.json",
+      "role": "Separate Codex target-only pre-author PASS"
+    },
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793775454942005499-2.json",
+      "role": "UNCHANGED FIRST proof plus exact5aliases/namespace axiom audit PASS",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowPAAdditiveStructureStatementChecks"
+    }
+  ],
+  "axioms": [
+    "propext"
+  ],
+  "proof_changed_after_author": false,
+  "compiler_profile": {
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1
+  },
+  "gate_peak_rss_kib": 398696,
+  "scope": "Genuine actual universally quantified PA(L) Hilbert proofs of predecessor existence, addition left zero/left successor and right cancellation over ANY additional closed theory, using actual induction/equality/logic without extra arithmetic axioms or a standard-validity-to-proof inference. Internal finite-range/guarded universal beta trace, general recursive graph totality/uniqueness, source-Base correspondence/internal HB/CBE and whole source12 remain pending.",
+  "whole_statement_promotions": [],
+  "source_files": [
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPAAdditiveStructureDefinitions.lean",
+      "sha256": "e0050525c46757b2be1e8d9dbb03ab93ade860074562c6be3d1c20c78deb471e"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPAAdditiveStructureTargets.lean",
+      "sha256": "8e74ac3137a42edb189eb7ce8e26736dff9d67384dbb451bcef871546932ccab"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPAAdditiveStructureProof.lean",
+      "sha256": "7902dae012dd5ee86ecae374e673eefe4046397860d7c6ff31f4ff1bc41dada6"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowPAAdditiveStructureStatementChecks.lean",
+      "sha256": "cf2e571132f12c3016a51050c1cb5032632eb5d265d7b8d74e67ccfdf4f308f7"
+    }
+  ],
+  "author_provenance": "Immutable same-session ac0922e0/claude-opus-5-5/high/ReadGlobGrep 190line whole candidate; unchanged FIRST compile/exact source/type/axiom gate. User stop ceiling R026; author51702/native72751 reaped0."
+}

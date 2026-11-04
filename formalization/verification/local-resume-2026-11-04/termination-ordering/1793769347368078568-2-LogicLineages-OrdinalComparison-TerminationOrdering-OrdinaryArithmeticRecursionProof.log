@@ -1,0 +1,63 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:24:28: error: Type mismatch
+  Fin.cons ?m.9 ?m.11 i
+has type
+  ?m.8 i
+but is expected to have type
+  OrdinaryArithmetic.Term α
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:61:60: error(lean.unknownIdentifier): Unknown identifier `realize_cons`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:65:4: error: Type mismatch
+  h ![j, Term.realize v a % ((j + 1) * Term.realize v b + 1), Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1)]
+    ⟨⟨hj, rfl⟩, rfl⟩
+has type
+  Formula.Realize g
+    (Fin.cons
+      (![j, Term.realize v a % ((j + 1) * Term.realize v b + 1),
+          Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1)]
+        2)
+      fun i =>
+      Term.realize
+        (Sum.elim v
+          ![j, Term.realize v a % ((j + 1) * Term.realize v b + 1),
+            Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1)])
+        (Fin.cons (var (Sum.inr 0)) (Fin.cons (var (Sum.inr 1)) fun i => Term.relabel Sum.inl (params i)) i))
+but is expected to have type
+  Formula.Realize g
+    (Fin.cons (Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1))
+      (Fin.cons j (Fin.cons (Term.realize v a % ((j + 1) * Term.realize v b + 1)) fun i => Term.realize v (params i))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:69:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  xs 1
+in the target expression
+  Formula.Realize g
+    (Fin.cons (xs 2) fun i =>
+      Term.realize (Sum.elim v xs)
+        (Fin.cons (var (Sum.inr 0)) (Fin.cons (var (Sum.inr 1)) fun i => Term.relabel Sum.inl (params i)) i))
+
+case mpr
+n : ℕ
+α : Type
+g : OrdinaryArithmetic.Formula (Fin (n + 3))
+a b t : OrdinaryArithmetic.Term α
+params : Fin n → OrdinaryArithmetic.Term α
+v : α → ℕ
+h :
+  ∀ j < Term.realize v t,
+    Formula.Realize g
+      (Fin.cons (Term.realize v a % ((j + 1 + 1) * Term.realize v b + 1))
+        (Fin.cons j
+          (Fin.cons (Term.realize v a % ((j + 1) * Term.realize v b + 1)) fun i => Term.realize v (params i))))
+xs : Fin 3 → ℕ
+hn : Term.realize v a % ((xs 0 + 1 + 1) * Term.realize v b + 1) = xs 2
+hj : xs 0 < Term.realize v t
+hp : Term.realize v a % ((xs 0 + 1) * Term.realize v b + 1) = xs 1
+⊢ Formula.Realize g
+    (Fin.cons (xs 2) fun i =>
+      Term.realize (Sum.elim v xs)
+        (Fin.cons (var (Sum.inr 0)) (Fin.cons (var (Sum.inr 1)) fun i => Term.relabel Sum.inl (params i)) i))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:117:6: error: Type mismatch: After simplification, term
+  hcode
+ has type
+  a % ((Matrix.vecHead (Matrix.vecTail ![b, j, (List.ofFn fun i => run ↑i)[⟨j, hjl⟩] ]) + 1) * b + 1) =
+    Matrix.vecHead (Matrix.vecTail (Matrix.vecTail ![b, j, (List.ofFn fun i => run ↑i)[⟨j, hjl⟩] ]))
+but is expected to have type
+  a % ((j + 1) * b + 1) = run j
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticRecursionProof.lean:130:6: error: No goals to be solved

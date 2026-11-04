@@ -1,0 +1,52 @@
+{
+  "requested": [
+    "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaStatementChecks"
+  ],
+  "heap_cap_mib": 2048,
+  "rss_cap_mib": 1536,
+  "wall_seconds": 180,
+  "cpu_seconds": 90,
+  "minimum_free_mib": 2048,
+  "core_only_profile": false,
+  "single_thread": true,
+  "threads": 1,
+  "upstream_cache_only": true,
+  "calculator_objects_borrowed": true,
+  "modules": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaProof",
+      "returncode": 77,
+      "seconds": 59.147,
+      "observed_cpu_seconds": 3.54,
+      "last_wait_channel": "futex_do_wait",
+      "stopped_threads": [
+        {
+          "tid": 9,
+          "state": "S",
+          "cpu_seconds": 0.06,
+          "wait_channel": "futex_do_wait"
+        },
+        {
+          "tid": 10,
+          "state": "S",
+          "cpu_seconds": 0.0,
+          "wait_channel": "do_epoll_wait"
+        },
+        {
+          "tid": 11,
+          "state": "D",
+          "cpu_seconds": 3.48,
+          "wait_channel": "folio_wait_bit_common"
+        }
+      ],
+      "peak_process_tree_rss_kib": 1575824,
+      "memory_observation_failure": {
+        "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t9\nNgid:\t0\nPid:\t9\nPPid:\t2\nTracerPid:\t0\nUid:\t1002\t1002\t1002\t1002\nGid:\t1003\t1003\t1003\t1003\nFDSize:\t64\nGroups:\t1003 65534 \nNStgid:\t9\nNSpid:\t9\nNSpgid:\t9\nNSsid:\t9\nKthread:\t0\nVmPeak:\t 6831904 kB\nVmSize:\t 6807320 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1575824 kB\nVmRSS:\t 1575824 kB\nRssAnon:\t  133416 kB\nRssFile:\t 1442408 kB\nRssShmem:\t       0 kB\nVmData:\t 6516524 kB\nVmStk:\t     136 kB\nVmExe:\t       4 kB\nVmLib:\t  102176 kB\nVmPTE:\t   61428 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/55410\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tf\nCpus_allowed_list:\t0-3\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n",
+        "statm": "1701830 393956 360602 1 0 1629165 0\n"
+      },
+      "discarded_failed_outputs": [],
+      "source_sha256": "42533a6c0e71de0e623eaf7f3113d54fd4d688b7cfa0c4c508b3857753857a24",
+      "log": "build-reports/1793768750497551145-2-LogicLineages-OrdinalComparison-TerminationOrdering-OrdinaryArithmeticBetaProof.log"
+    }
+  ]
+}

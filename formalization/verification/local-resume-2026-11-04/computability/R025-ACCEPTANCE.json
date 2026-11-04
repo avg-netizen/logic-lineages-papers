@@ -1,0 +1,68 @@
+{
+  "checkpoint": "FORMALIZATION-2026-10-31-R025",
+  "accepted_utc": "2026-11-04T06:42:37.589780+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificatesStatementChecks",
+  "accepted_declaration": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.StatementChecks.fullBetaCertificates",
+  "accepted_declarations": [
+    "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.StatementChecks.fullBetaCertificates",
+    "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.StatementChecks.literalBeta",
+    "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.StatementChecks.positiveBetaCertificates",
+    "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.StatementChecks.pointwiseValueTotality",
+    "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.StatementChecks.finiteSequenceCertificates"
+  ],
+  "frozen_comparator": {
+    "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesTargets.lean",
+    "sha256": "07763748898e13c93de27ad8120667ae2fda2b0e45f3c377954abeff8812d742",
+    "type": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificates.Targets.Target"
+  },
+  "verification_receipts": [
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793773411438799496-2.json",
+      "role": "Separate Codex target-only pre-author PASS"
+    },
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793774347802406142-2.json",
+      "role": "FIRST immutable raw candidate compile; actual binder-map beta reduction and ambiguous witness contexts"
+    },
+    {
+      "file": "verification/local-resume-2026-11-04/computability/1793774400994774819-2.json",
+      "role": "Constructive finite-index/explicit Formula1-Sentence context repair; exact5aliases+namespace audit7including2generatedequations PASS",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.GorbowArithmeticBetaCertificatesStatementChecks"
+    }
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "proof_changed_after_author": true,
+  "repair_scope": "Replaced two closed Fin2-to-Fin6 binder-index rewrite proofs by tiny kernel-checked decide proofs; explicitly annotated Formula1/Sentence witness contexts at matrixInstance/entryProof. Frozen types and all limits unchanged; arithmetic and finite sequence arguments unchanged.",
+  "compiler_profile": {
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1
+  },
+  "gate_peak_rss_kib": 912312,
+  "scope": "Actual internal PA Hilbert proofs of EVERY correct concrete entry of the SAME pure ordinary arithmetic beta formula, exact quotient/strict-bound existential matrix, concrete-code pointwise value existence and actual entry certificates for EVERY supplied finite sequence. The two arithmetic code components remain separate; no beta/program/pairing object-language symbol or graph-correctness axiom. Internally guarded universal trace, general recursive graph totality/uniqueness, Base/HB/CBE and whole source12 remain pending.",
+  "whole_statement_promotions": [],
+  "source_files": [
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesDefinitions.lean",
+      "sha256": "9639e4d26fc044120dbbc7dc6bc4d462615b5512bb5ae0a72af1fd31c594d62c"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesTargets.lean",
+      "sha256": "07763748898e13c93de27ad8120667ae2fda2b0e45f3c377954abeff8812d742"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesProof.lean",
+      "sha256": "e28c52230dc8c36f65e9112eeab484048049bc0810de93066b725e21316e1734"
+    },
+    {
+      "file": "LogicLineages/ComputabilityKnowledge/GorbowArithmeticBetaCertificatesStatementChecks.lean",
+      "sha256": "7ce26198b101159c6e959fdd9aa0e05979e0085c838d757183555f72f600fc5e"
+    }
+  ],
+  "author_provenance": "Immutable same-session ac0922e0/claude-opus-5-5/high/ReadGlobGrep candidate; Codex compile-first constructive binder/context elaboration repair and exact source/type/axiom gate."
+}

@@ -1,0 +1,25 @@
+module
+
+public import LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks
+
+open OrdinaryArithmeticQuotientTargets
+
+theorem exactEncodedCheckersPrimitive : EncodedCheckersPrimitive := OrdinaryArithmeticQuotientPrimitiveProof.encodedCheckersPrimitive
+theorem exactActualCheckerCalibration : ActualCheckerCalibration := OrdinaryArithmeticQuotientPrimitiveProof.actualCheckerCalibration
+theorem exactCertificateGraphTruth : CertificateGraphTruth := OrdinaryArithmeticQuotientProof.certificateGraphTruth
+theorem exactEncodedHAndPositiveR : EncodedHAndPositiveR := OrdinaryArithmeticQuotientProof.encodedHAndPositiveR
+theorem exactUniformSharedWindowFormulas : UniformSharedWindowFormulas := OrdinaryArithmeticQuotientProof.uniformSharedWindowFormulas
+
+#print axioms exactEncodedCheckersPrimitive
+#print axioms exactActualCheckerCalibration
+#print axioms exactCertificateGraphTruth
+#print axioms exactEncodedHAndPositiveR
+#print axioms exactUniformSharedWindowFormulas
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticQuotientStatementChecks

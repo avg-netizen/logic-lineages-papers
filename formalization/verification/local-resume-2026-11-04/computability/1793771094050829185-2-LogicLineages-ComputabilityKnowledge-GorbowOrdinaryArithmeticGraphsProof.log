@@ -1,0 +1,13 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowOrdinaryArithmeticGraphsProof.lean:117:4: error: Application type mismatch: The argument
+  OrdinaryArithmeticProgramProof.programGraphTruth p v
+has type
+  FirstOrder.Language.Formula.Realize (OrdinaryArithmetic.graphFormula p) v ↔
+    evaluate p (List.Vector.ofFn fun i => v i.succ) = v 0
+but is expected to have type
+  FirstOrder.Language.BoundedFormula.Realize (OrdinaryArithmetic.graphFormula p) v default ↔
+    evaluate p (List.Vector.ofFn fun i => v i.succ) = v 0
+in the application
+  Iff.trans
+    (Iff.of_eq
+      (congrArg (fun xs => FirstOrder.Language.BoundedFormula.Realize (OrdinaryArithmetic.graphFormula p) v xs) he))
+    (OrdinaryArithmeticProgramProof.programGraphTruth p v)
