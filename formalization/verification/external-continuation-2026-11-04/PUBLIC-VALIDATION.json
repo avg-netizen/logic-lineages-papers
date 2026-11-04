@@ -3,13 +3,13 @@
   "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
   "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
   "today_totals": {
-    "fixed_aliases": 65,
-    "components": 21
+    "fixed_aliases": 67,
+    "components": 22
   },
   "aggregate": {
-    "module": "LogicLineages.ExternalCheckpoint20261104U",
-    "source_sha256": "830642b3aac7da61869e279f432434f3984ef7ef43600f694fe4945dd662e0b9",
-    "closure_sha256": "b12e10f5811192b8076934ed5dd5e79582aa81476bedbb8c4453b1f1b5e61f0e",
+    "module": "LogicLineages.ExternalCheckpoint20261104V",
+    "source_sha256": "0c2aa4cf5c5d85329969407e77cbffa9fdb987fee46d36f7db850549d9c1724d",
+    "closure_sha256": "92b784e60acafea5dd20a0fb626c62ebaa4afe1f7d75c76986b076d9c74704f6",
     "exact_aliases": [
       {
         "name": "fixed_001_fixedPermutationInvariance",
@@ -335,6 +335,16 @@
         "name": "fixed_065_fixedActualCanonicalApplicationCalibration",
         "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationTargets.ActualCanonicalApplicationCalibration",
         "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationStatementChecks.fixedActualCanonicalApplicationCalibration"
+      },
+      {
+        "name": "fixed_066_fixedActualApplicationProgramCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecTargets.ActualApplicationProgramCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecStatementChecks.fixedActualApplicationProgramCalibration"
+      },
+      {
+        "name": "fixed_067_fixedActualCanonicalApplicationPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecTargets.ActualCanonicalApplicationPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecStatementChecks.fixedActualCanonicalApplicationPrimitive"
       }
     ],
     "allowed_axioms": [
@@ -995,6 +1005,38 @@
           "sha256": "2d3b128b5455031714f6cddbc25a0004ee0f1e7bb939ebcad79e4acd728590e3"
         }
       ]
+    },
+    {
+      "name": "NumberedNumericApplicationPrimrec",
+      "scope": "All-input calibration of first-order application companion and actual canonicalApplication primitive recursion.",
+      "freeze_sha256": "38dd1f29d43dd509c93ef68085a39d708cf666f39d5f34e17c41b6ded70be379",
+      "closure_sha256": "c29f57eac9a654be2414615a7a815e43ce83bb869aecbac25fafcf34151ab493",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecDefinitions.lean",
+          "sha256": "6d5894594d46dc6f1a2ce3f757dd4da294f1d1c526e639d1cbc80a1d14008dac"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecTargets.lean",
+          "sha256": "1c237505bbab75262648cdf58e0f9d4105f306e887f4cf92abdcd3c2544f6d0c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecStatementChecks.lean",
+          "sha256": "5856400db14da339f3e586d272f7ef1bc433d269c2cd82fcde90a31d716ef049"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-NUMERIC-APPLICATION-PRIMREC-SOURCE.md",
+          "sha256": "0af00e090ca9e9bc7a42a905e965a31cd02605d17b513f3f642b8df397f81450"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecSupportProof.lean",
+          "sha256": "ad3f92e1187249eef0fc7a6f51ee588cfcd12abe1d1d0a3b0421ca953d8e9593"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecProof.lean",
+          "sha256": "584c1599f176b37fe39d3c15342f96fae33738b12334a8547d9a45e3c0c9013d"
+        }
+      ]
     }
   ],
   "limitations": [
@@ -1021,6 +1063,7 @@
     "Literal atomic eraser and addition only; no constant-one, nested gadget or complexity inference.",
     "Literal typed application confinement and representative-code congruence only; actual primary appArgument does not add a positive reduction step. No numeric, primitive-recursive or ID1 claim.",
     "Exact I0 and constant-one gadget only; no binary or nested gadget transfer claim.",
-    "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim."
+    "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim.",
+    "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim."
   ]
 }

@@ -127,3 +127,9 @@ Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104T`, 63 ex
 Two exact suppliers establish typed soundness and output-carrier membership for the partial canonical numeric application, plus calibration on arbitrary confined typed inputs. Actual decode, type and canonicality guards and explicit subtype closure are preserved. No primitive-recursive, arithmetic or ID1 claim. See [source correspondence](termination-ordering/NUMBERED-NUMERIC-APPLICATION-SOURCE.md).
 
 Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104U`, 65 exact aliases.
+
+## NumberedNumericApplicationPrimrec
+
+Two exact suppliers establish all-input first-order companion calibration and primitive recursiveness of the actual canonicalApplication for fixed n, arity and Gamma, jointly in windows, types and codes. All failure cases are retained; calibration requires no subtype-closure premise. No arithmetic or ID1 claim. See [source correspondence](termination-ordering/NUMBERED-NUMERIC-APPLICATION-PRIMREC-SOURCE.md).
+
+Current today-only aggregate: `LogicLineages.ExternalCheckpoint20261104V`, 67 exact aliases.
