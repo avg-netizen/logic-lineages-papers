@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceMachineHaltingConjunctionTargets
+public import LogicLineages.OrdinalComparison.SourceMachineHaltingConjunctionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks
+theorem effective_arguments : Targets.EffectiveArguments := Proof.effectiveArguments
+theorem exact_fixed_witness : Targets.ExactFixedWitness := Proof.exactFixedWitness
+theorem exact_halting_reduction : Targets.ExactHaltingReduction := Proof.exactHaltingReduction
+end LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction

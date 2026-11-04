@@ -1,0 +1,1585 @@
+{
+  "schema": "public-focused-validation-20261104-v1",
+  "baseline_commit": "eafe7270ae40b8a2cbb992914d63f16e4ff96380",
+  "scope": "Nov4 external continuation only; inherited validation is historical, not freshly rerun.",
+  "today_totals": {
+    "fixed_aliases": 101,
+    "components": 32
+  },
+  "aggregate": {
+    "module": "LogicLineages.ExternalCheckpoint20261104AF",
+    "source_sha256": "8b28b372d76bf6a8050b737981d43e559513d34f912bd7829a6b9e15ba725e42",
+    "closure_sha256": "6222cb6ea5bf48d31957d66f1f39e654afaa58cac6d9d06989a7c708561e2b73",
+    "exact_aliases": [
+      {
+        "name": "fixed_001_fixedPermutationInvariance",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.PermutationInvariance",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedPermutationInvariance"
+      },
+      {
+        "name": "fixed_002_fixedOccurrenceWitnesses",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.OccurrenceWitnesses",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedOccurrenceWitnesses"
+      },
+      {
+        "name": "fixed_003_fixedMultisetCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.MultisetCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedMultisetCalibration"
+      },
+      {
+        "name": "fixed_004_fixedOrderedLibraryCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationTargets.OrderedLibraryCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.DirectMultisetPresentationStatementChecks.fixedOrderedLibraryCalibration"
+      },
+      {
+        "name": "fixed_005_effective_bounded_simulation",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.EffectiveBoundedSimulation",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.effective_bounded_simulation"
+      },
+      {
+        "name": "fixed_006_exact_control_parity",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.ExactControlParity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.exact_control_parity"
+      },
+      {
+        "name": "fixed_007_exact_valuation_fibers",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.ExactValuationFibers",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.exact_valuation_fibers"
+      },
+      {
+        "name": "fixed_008_non_eventual_periodicity",
+        "target": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.Targets.NonEventualPeriodicity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks.non_eventual_periodicity"
+      },
+      {
+        "name": "fixed_009_fixedActualOccurrenceSoundness",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualOccurrenceSoundness",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualOccurrenceSoundness"
+      },
+      {
+        "name": "fixed_010_fixedActualWitnessCompletion",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualWitnessCompletion",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualWitnessCompletion"
+      },
+      {
+        "name": "fixed_011_fixedActualDominationCertificates",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesTargets.ActualDominationCertificates",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDominationCertificatesStatementChecks.fixedActualDominationCertificates"
+      },
+      {
+        "name": "fixed_012_effective_enumeration",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.EffectiveEnumeration",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.effective_enumeration"
+      },
+      {
+        "name": "fixed_013_exact_transition_clock",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.ExactTransitionClock",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.exact_transition_clock"
+      },
+      {
+        "name": "fixed_014_monotone_halting",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.Targets.MonotoneHalting",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks.monotone_halting"
+      },
+      {
+        "name": "fixed_015_fixedActualDirectCertificateSoundness",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesTargets.ActualDirectCertificateSoundness",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesStatementChecks.fixedActualDirectCertificateSoundness"
+      },
+      {
+        "name": "fixed_016_fixedActualDirectCertificates",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesTargets.ActualDirectCertificates",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesStatementChecks.fixedActualDirectCertificates"
+      },
+      {
+        "name": "fixed_017_fixedActualNumericDirectCertificates",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesTargets.ActualNumericDirectCertificates",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCertificatesStatementChecks.fixedActualNumericDirectCertificates"
+      },
+      {
+        "name": "fixed_018_exact_normalization",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Targets.ExactNormalization",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks.exact_normalization"
+      },
+      {
+        "name": "fixed_019_validated_terminal_bridge",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Targets.ValidatedTerminalBridge",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks.validated_terminal_bridge"
+      },
+      {
+        "name": "fixed_020_effective_blank_reduction",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Targets.EffectiveBlankReduction",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks.effective_blank_reduction"
+      },
+      {
+        "name": "fixed_021_blank_halting_undecidable",
+        "target": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Targets.BlankHaltingUndecidable",
+        "supplier": "LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks.blank_halting_undecidable"
+      },
+      {
+        "name": "fixed_022_fixedActualDominationPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualDominationPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualDominationPrimitive"
+      },
+      {
+        "name": "fixed_023_fixedActualDirectPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualDirectPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualDirectPrimitive"
+      },
+      {
+        "name": "fixed_024_fixedActualNumericDirectPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecTargets.ActualNumericDirectPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks.fixedActualNumericDirectPrimitive"
+      },
+      {
+        "name": "fixed_025_exact_control_parity",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.Targets.ExactControlParity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks.exact_control_parity"
+      },
+      {
+        "name": "fixed_026_non_eventual_periodicity",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.Targets.NonEventualPeriodicity",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicity.StatementChecks.non_eventual_periodicity"
+      },
+      {
+        "name": "fixed_027_fixedEncodedCheckerPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.EncodedCheckerPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedEncodedCheckerPrimitive"
+      },
+      {
+        "name": "fixed_028_fixedActualCheckerCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.ActualCheckerCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedActualCheckerCalibration"
+      },
+      {
+        "name": "fixed_029_fixedEncodedDirectFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.EncodedDirectFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedEncodedDirectFormula"
+      },
+      {
+        "name": "fixed_030_fixedUniformDirectFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectTargets.UniformDirectFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticDirectStatementChecks.fixedUniformDirectFormula"
+      },
+      {
+        "name": "fixed_031_effective_arguments",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.EffectiveArguments",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.effective_arguments"
+      },
+      {
+        "name": "fixed_032_exact_fixed_witness",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.ExactFixedWitness",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.exact_fixed_witness"
+      },
+      {
+        "name": "fixed_033_exact_halting_reduction",
+        "target": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.Targets.ExactHaltingReduction",
+        "supplier": "LogicLineages.OrdinalComparison.SourceMachineHaltingConjunction.StatementChecks.exact_halting_reduction"
+      },
+      {
+        "name": "fixed_034_fixedActualListCarrier",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualListCarrier",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualListCarrier"
+      },
+      {
+        "name": "fixed_035_fixedActualPositivePathCarrier",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualPositivePathCarrier",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualPositivePathCarrier"
+      },
+      {
+        "name": "fixed_036_fixedActualDirectCarrierPreservation",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierTargets.ActualDirectCarrierPreservation",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectCarrierStatementChecks.fixedActualDirectCarrierPreservation"
+      },
+      {
+        "name": "fixed_037_exact_recursion",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.ExactRecursion",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.exact_recursion"
+      },
+      {
+        "name": "fixed_038_unique_below_epsilon_zero",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.UniqueBelowEpsilonZero",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.unique_below_epsilon_zero"
+      },
+      {
+        "name": "fixed_039_exact_phi_specialization",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.ExactPhiSpecialization",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.exact_phi_specialization"
+      },
+      {
+        "name": "fixed_040_finite_values",
+        "target": "LogicLineages.OrdinalComparison.ParametricActualCollapse.Targets.FiniteValues",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricActualCollapse.StatementChecks.finite_values"
+      },
+      {
+        "name": "fixed_041_generic_coefficient_one",
+        "target": "LogicLineages.OrdinalComparison.ParametricCoefficientOne.Targets.GenericCoefficientOne",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricCoefficientOne.StatementChecks.generic_coefficient_one"
+      },
+      {
+        "name": "fixed_042_actual_gamma_coefficient_one",
+        "target": "LogicLineages.OrdinalComparison.ParametricCoefficientOne.Targets.ActualGammaCoefficientOne",
+        "supplier": "LogicLineages.OrdinalComparison.ParametricCoefficientOne.StatementChecks.actual_gamma_coefficient_one"
+      },
+      {
+        "name": "fixed_043_fixedActualCarrierCheckersPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierTargets.ActualCarrierCheckersPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierStatementChecks.fixedActualCarrierCheckersPrimitive"
+      },
+      {
+        "name": "fixed_044_fixedEncodedCarrierFormulas",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierTargets.EncodedCarrierFormulas",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierStatementChecks.fixedEncodedCarrierFormulas"
+      },
+      {
+        "name": "fixed_045_fixedActualTypedCarrierFormulas",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierTargets.ActualTypedCarrierFormulas",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCarrierStatementChecks.fixedActualTypedCarrierFormulas"
+      },
+      {
+        "name": "fixed_046_fixedActualTypedRepresentativeAttained",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedCarrierTargets.ActualTypedRepresentativeAttained",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedCarrierStatementChecks.fixedActualTypedRepresentativeAttained"
+      },
+      {
+        "name": "fixed_047_fixedActualTypedCanonicalCarrier",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedCarrierTargets.ActualTypedCanonicalCarrier",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedTypedCarrierStatementChecks.fixedActualTypedCanonicalCarrier"
+      },
+      {
+        "name": "fixed_048_phi_calibration",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.PhiCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.phi_calibration"
+      },
+      {
+        "name": "fixed_049_exact_substitution",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.ExactSubstitution",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.exact_substitution"
+      },
+      {
+        "name": "fixed_050_generic_source_graph",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.GenericSourceGraph",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.generic_source_graph"
+      },
+      {
+        "name": "fixed_051_actual_gamma_graph",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.Targets.ActualGammaGraph",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceSuccessor.StatementChecks.actual_gamma_graph"
+      },
+      {
+        "name": "fixed_052_fixedActualTypedCheckerPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualTypedCheckerPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualTypedCheckerPrimitive"
+      },
+      {
+        "name": "fixed_053_fixedActualEncodedTypedPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualEncodedTypedPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualEncodedTypedPrimitive"
+      },
+      {
+        "name": "fixed_054_fixedActualTypedArithmeticFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierTargets.ActualTypedArithmeticFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticTypedCarrierStatementChecks.fixedActualTypedArithmeticFormula"
+      },
+      {
+        "name": "fixed_055_atomic_assignment_value",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.AtomicAssignmentValue",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.atomic_assignment_value"
+      },
+      {
+        "name": "fixed_056_weighted_equality",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.WeightedEquality",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.weighted_equality"
+      },
+      {
+        "name": "fixed_057_exact_addition",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.ExactAddition",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.exact_addition"
+      },
+      {
+        "name": "fixed_058_actual_gamma_addition",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Targets.ActualGammaAddition",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.StatementChecks.actual_gamma_addition"
+      },
+      {
+        "name": "fixed_059_fixedActualApplicationConfinement",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationTargets.ActualApplicationConfinement",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationStatementChecks.fixedActualApplicationConfinement"
+      },
+      {
+        "name": "fixed_060_fixedActualRepresentativeApplicationCongruence",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationTargets.ActualRepresentativeApplicationCongruence",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientApplicationStatementChecks.fixedActualRepresentativeApplicationCongruence"
+      },
+      {
+        "name": "fixed_061_identity_source_equation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.Targets.IdentitySourceEquation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.StatementChecks.identity_source_equation"
+      },
+      {
+        "name": "fixed_062_exact_one",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.Targets.ExactOne",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.StatementChecks.exact_one"
+      },
+      {
+        "name": "fixed_063_actual_gamma_one",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.Targets.ActualGammaOne",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricSourceOne.StatementChecks.actual_gamma_one"
+      },
+      {
+        "name": "fixed_064_fixedActualCanonicalApplicationSound",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationTargets.ActualCanonicalApplicationSound",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationStatementChecks.fixedActualCanonicalApplicationSound"
+      },
+      {
+        "name": "fixed_065_fixedActualCanonicalApplicationCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationTargets.ActualCanonicalApplicationCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationStatementChecks.fixedActualCanonicalApplicationCalibration"
+      },
+      {
+        "name": "fixed_066_fixedActualApplicationProgramCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecTargets.ActualApplicationProgramCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecStatementChecks.fixedActualApplicationProgramCalibration"
+      },
+      {
+        "name": "fixed_067_fixedActualCanonicalApplicationPrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecTargets.ActualCanonicalApplicationPrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNumericApplicationPrimrecStatementChecks.fixedActualCanonicalApplicationPrimitive"
+      },
+      {
+        "name": "fixed_068_shared_inputs_and_syntax",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.SharedInputsAndSyntax",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.shared_inputs_and_syntax"
+      },
+      {
+        "name": "fixed_069_exact_supported_lowering",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ExactSupportedLowering",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.exact_supported_lowering"
+      },
+      {
+        "name": "fixed_070_actual_gamma_lowering",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ActualGammaLowering",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.actual_gamma_lowering"
+      },
+      {
+        "name": "fixed_071_exact_size",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.Targets.ExactSize",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricPrimitiveLowering.StatementChecks.exact_size"
+      },
+      {
+        "name": "fixed_072_fixedActualApplicationValuePrimitive",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualApplicationValuePrimitive",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualApplicationValuePrimitive"
+      },
+      {
+        "name": "fixed_073_fixedActualPartialApplicationFormula",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualPartialApplicationFormula",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualPartialApplicationFormula"
+      },
+      {
+        "name": "fixed_074_fixedActualApplicationFormulaCalibration",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationTargets.ActualApplicationFormulaCalibration",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticApplicationStatementChecks.fixedActualApplicationFormulaCalibration"
+      },
+      {
+        "name": "fixed_075_exact_equation_renaming",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ExactEquationRenaming",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.exact_equation_renaming"
+      },
+      {
+        "name": "fixed_076_exact_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ExactCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.exact_compilation"
+      },
+      {
+        "name": "fixed_077_actual_gamma_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.Targets.ActualGammaCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks.actual_gamma_compilation"
+      },
+      {
+        "name": "fixed_078_fixedActualArithmeticEmbeddingTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualArithmeticEmbeddingTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualArithmeticEmbeddingTruth"
+      },
+      {
+        "name": "fixed_079_fixedActualPositiveMonotonicity",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualPositiveMonotonicity",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualPositiveMonotonicity"
+      },
+      {
+        "name": "fixed_080_fixedActualAccessibilityOperatorTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualAccessibilityOperatorTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualAccessibilityOperatorTruth"
+      },
+      {
+        "name": "fixed_081_fixedActualSourcePositiveOperators",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsTargets.ActualSourcePositiveOperators",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsStatementChecks.fixedActualSourcePositiveOperators"
+      },
+      {
+        "name": "fixed_082_exact_renaming",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactRenaming",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_renaming"
+      },
+      {
+        "name": "fixed_083_exact_binary_plan",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactBinaryPlan",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_binary_plan"
+      },
+      {
+        "name": "fixed_084_actual_gamma_literal_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ActualGammaLiteralCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.actual_gamma_literal_compilation"
+      },
+      {
+        "name": "fixed_085_exact_compiled_bounds",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.Targets.ExactCompiledBounds",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricBinaryPlan.StatementChecks.exact_compiled_bounds"
+      },
+      {
+        "name": "fixed_086_fixedActualPositiveRelabelTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsTargets.ActualPositiveRelabelTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsStatementChecks.fixedActualPositiveRelabelTruth"
+      },
+      {
+        "name": "fixed_087_fixedActualPositiveTagTruth",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsTargets.ActualPositiveTagTruth",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticTransformsStatementChecks.fixedActualPositiveTagTruth"
+      },
+      {
+        "name": "fixed_088_exact_scaling_plan",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ExactScalingPlan",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.exact_scaling_plan"
+      },
+      {
+        "name": "fixed_089_actual_gamma_scaling_compilation",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ActualGammaScalingCompilation",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.actual_gamma_scaling_compilation"
+      },
+      {
+        "name": "fixed_090_exact_overhead",
+        "target": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.Targets.ExactOverhead",
+        "supplier": "LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks.exact_overhead"
+      },
+      {
+        "name": "fixed_091_fixedActualTagPartition",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTagPartition",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTagPartition"
+      },
+      {
+        "name": "fixed_092_fixedActualTaggedBranchIsolation",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTaggedBranchIsolation",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTaggedBranchIsolation"
+      },
+      {
+        "name": "fixed_093_fixedActualCombinedMonotonicity",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualCombinedMonotonicity",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualCombinedMonotonicity"
+      },
+      {
+        "name": "fixed_094_fixedActualTaggedSourceOperators",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsTargets.ActualTaggedSourceOperators",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.TaggedArithmeticOperatorsStatementChecks.fixedActualTaggedSourceOperators"
+      },
+      {
+        "name": "fixed_095_fixedActualSemanticLeastUnfolding",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualSemanticLeastUnfolding",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualSemanticLeastUnfolding"
+      },
+      {
+        "name": "fixed_096_fixedActualSemanticLeastness",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualSemanticLeastness",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualSemanticLeastness"
+      },
+      {
+        "name": "fixed_097_fixedActualTaggedLeastSlices",
+        "target": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetTargets.ActualTaggedLeastSlices",
+        "supplier": "LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticLeastSetStatementChecks.fixedActualTaggedLeastSlices"
+      },
+      {
+        "name": "fixed_098_supported_syntax",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.SupportedSyntax",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.supported_syntax"
+      },
+      {
+        "name": "fixed_099_exact_conjunction",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.ExactConjunction",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.exact_conjunction"
+      },
+      {
+        "name": "fixed_100_exact_compiled_halting",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.ExactCompiledHalting",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.exact_compiled_halting"
+      },
+      {
+        "name": "fixed_101_exact_compiled_bounds",
+        "target": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.Targets.ExactCompiledBounds",
+        "supplier": "LogicLineages.OrdinalComparison.Source.SourceMachineConjunctionPlan.StatementChecks.exact_compiled_bounds"
+      }
+    ],
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "components": [
+    {
+      "name": "DirectMultisetPresentation",
+      "scope": "Generic direct multiset replacement with exact occurrence/permutation witnesses, multiset quotient calibration, and conditional matching-Preorder library correspondence only.",
+      "freeze_sha256": "8427be8ca7c1db50b7f9b444b7de334c93e370b432d17e376302031c25dc06cf",
+      "closure_sha256": "b3204c7919a80561509ebcd054bf307a2965214bc9ef6f3e99e6e3474cbf926a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationDefinitions.lean",
+          "sha256": "12ea758119914b478e8b542395673e7460cff8973a4a4acc4dd1c464a787c1b1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationTargets.lean",
+          "sha256": "bf7f7491bd19565d40e70aa84bbc34fb3d779b02f688114a56934b1146f5e3e7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationStatementChecks.lean",
+          "sha256": "137afd7d67978cb71219117f9d37699711ecbe2960d89186e898c7a8ab54e85f"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/DIRECT-MULTISET-PRESENTATION-SOURCE.md",
+          "sha256": "5192b801f929c023b52597f91b4961839e23a9718784693e858384a7e6b93ee6"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/DirectMultisetPresentationProof.lean",
+          "sha256": "cc5c894d18c6018e38de328e9b017dc250f493885b4d8fa7a0eabaa5913514a2"
+        }
+      ]
+    },
+    {
+      "name": "SourceControlNonperiodicity",
+      "scope": "Fixed explicit Code/evaln-stage Gamma parity nonperiodicity; no tape-step identification, whole source hardness or reduction claim.",
+      "freeze_sha256": "2d4729214b5297447585676d85bc3243f7f46e6e443f4053c4a0f59adc9470a8",
+      "closure_sha256": "fce24734dbbda7f63f147b291de876a46e064c80a149816d0cef0ab11c63a5b3",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityDefinitions.lean",
+          "sha256": "05cd52f005c560a0fffbc68dc5136eba541eece6daf089e7be3e0ad1ed662141"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityTargets.lean",
+          "sha256": "f97d146323cc961fe4e699b1ea2d01d2a676b8bff7d63c5f1e86547fa088e609"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityStatementChecks.lean",
+          "sha256": "3010af26e6ad7690f283db904195fc11fee36173635e9dc0b828be65846ff6a5"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceControlNonperiodicity-SOURCE-CORRESPONDENCE.md",
+          "sha256": "56994e799c726d8c86c15b752ed7afe99badaae5d9f019bb111fac0f66e44839"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicitySimulationProof.lean",
+          "sha256": "ef5f80cf3d67baf73412d7d50b6e0fda523622de60db44753af51301376931d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityFibersProof.lean",
+          "sha256": "4d6f054c21d7a8beff26c1db854c47bf43897c1770eb02c1b3e18a0f796291eb"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityParityProof.lean",
+          "sha256": "bf039e7cc54ecb28ce0c9cd48abb99d33b677aea847bcab97a4f539011f56e7c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceControlNonperiodicityProof.lean",
+          "sha256": "dfbab99ed58973ff6d48ef23d758691bef48fc791fe02d0d5ab1b5eeb6a4dbb6"
+        }
+      ]
+    },
+    {
+      "name": "QuotientDominationCertificates",
+      "scope": "Actual positive quotient-path certificate checking per inserted occurrence, exact index witnesses/count, completion and domination equivalence only.",
+      "freeze_sha256": "d260ef056245c731b76c0feeced4b3d87f8d7fea447ae871723425cc5fa65b34",
+      "closure_sha256": "eaba8ae71a1e9682dff3dc8dc760697b1bdf6e3e0a847f8120af3fa188a6d29d",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesDefinitions.lean",
+          "sha256": "c984443dbb43d31b96cf61d93d45b565f7a4cc194d3c576480eeb914d3a09a8f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesTargets.lean",
+          "sha256": "de97fcd0d577fb44145f142e37b1fc6eb9cf87c244f50d32de8a938035457f88"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesStatementChecks.lean",
+          "sha256": "ce2184f9af9791135c5b8805eaa303bf0a54434a591773333e55b3cdb9989ccc"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DOMINATION-CERTIFICATES-SOURCE.md",
+          "sha256": "20c10a05571d58e15abf13875a43fa57a5478169eca84208ccbcda0b1761a58f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDominationCertificatesProof.lean",
+          "sha256": "36a0cbd8af25606a0ec183f52d0184a759a91fe12f907b306668ae7c1b9f01ef"
+        }
+      ]
+    },
+    {
+      "name": "SourceBlankMachineSimulation",
+      "scope": "Actual finite-table blank TM0 bounded halting: PR enumeration/test, exact transition clock, monotonicity and actual termination equivalence only.",
+      "freeze_sha256": "66b420bc87e08e2f4dda0d9805eac3fa8e157310b106ad0daba1efa43154ca77",
+      "closure_sha256": "d31972449f3fa5b6d3f848045e4c918c3c2260f40abbe5d90b90f7bf1f88512b",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationDefinitions.lean",
+          "sha256": "09f14e257004ef297d5720f944b52bae42494ca6ecf3d2750118c90c2bec4cab"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationTargets.lean",
+          "sha256": "a192997f457397944db0f267e64033620893aa470f9b65f98358f5cc7502cd15"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationStatementChecks.lean",
+          "sha256": "8adce74dd1a1a5a9818916b776e26ae4667c88d1bfa755a54eb8a811ee068d1a"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceBlankMachineSimulation-SOURCE-CORRESPONDENCE.md",
+          "sha256": "61bb41611c72dca129ef93a7b5d1399443f15c1d87bd98cc0db297892567d9f8"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankMachineSimulationProof.lean",
+          "sha256": "6749587e04b79c698c631eaed9daf7115d29f4606b1e248163058dcfd706a403"
+        }
+      ]
+    },
+    {
+      "name": "QuotientDirectCertificates",
+      "scope": "Whole direct multiset replacement certificates over actual positive quotient paths, exact permutations/nonempty removal/occurrences and numeric decode wrapper equivalence only.",
+      "freeze_sha256": "41f5bbef1c2e7e81651f006c905aeed6e9a2a3b2d6db9ce8661dc124022b935f",
+      "closure_sha256": "bfe66294ff03e3fce00160ad3a8ef6dd06be5573df83a08ed49a19cc37ec0a29",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesDefinitions.lean",
+          "sha256": "991bc17dff1aa05ab5dd9d9d8b3be850f74ef3df8d7dfcc35d637de87de29cb9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesTargets.lean",
+          "sha256": "811e780a1e3ba82e3dd30aa93cc000a43cf89144629601269f985ac5f7404a75"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesStatementChecks.lean",
+          "sha256": "6687145c845022a3ecb91dcbca5f575ef526ca67aeb090438b7b834f8d1b8815"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DIRECT-CERTIFICATES-SOURCE.md",
+          "sha256": "162b072bf3b3f6dfdc2e7736f5e422d99b969e8da198a6c7a972d2cb3839d3ef"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCertificatesProof.lean",
+          "sha256": "655ae0a8d0d39b51b4eb891decc4c797308ab6052a6db95d8ca3cb0f7f534403"
+        }
+      ]
+    },
+    {
+      "name": "SourceBlankHaltingReduction",
+      "scope": "Actual blank-table halting undecidability via literal Code normalization and validated compiler, no runtime equality/parity/hardness claim.",
+      "freeze_sha256": "a6bc4d2b04ef68e087b641e37ef6555389b8f2cc1dc90ed186f0cdd43c0afdfb",
+      "closure_sha256": "dac2e87714d3c603ed1d35f5a9ac63c0262b5c023e5a4366a9eb67639373f80a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionDefinitions.lean",
+          "sha256": "c08cf05a7351bfb36e5b956b4d2384098e04567b440f51399d6ed65a22783337"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionTargets.lean",
+          "sha256": "067d7fbd40aca06a2627884fd5a105992de930f61b5747b83bacb4951d292b88"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionStatementChecks.lean",
+          "sha256": "461f94d237c24a21c9c6b456b5a0a7eed14e61921810c4bbf4c670b6a72cac5c"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceBlankHaltingReduction-SOURCE-CORRESPONDENCE.md",
+          "sha256": "ce4bf7e3babfa95c882b8f53fd5ce1c30b0ccd7b8a216ee8d7e6ae7ed98b450e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionNormalizationProof.lean",
+          "sha256": "cc5a544c79a2f719e2ce4a012491fcfde36146f3589d45518748e229973eaf70"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionTerminalProof.lean",
+          "sha256": "93684f3df15f4f8048296bcb1b8d61f7a68d803f601c663d49f1ce8da036be04"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionTransportProof.lean",
+          "sha256": "de0a17bc60a9670c38be9589318b14eff114d6efd9fbd53c4a1ba83d89ca38b7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceBlankHaltingReductionProof.lean",
+          "sha256": "cca0034a01055ba112100f2740fd2ccaaff4cdbebfc15d951a8e8486e2072b84"
+        }
+      ]
+    },
+    {
+      "name": "QuotientDirectPrimrec",
+      "scope": "Formal Primrec for three actual domination/direct/numeric direct certificate checkers with shared varying windows/table and fixed n/arity/Gamma.",
+      "freeze_sha256": "9b51fa9ce09747b00dfd94e91a4fba253731d0748f99d0d9d7059f0fa9815ebc",
+      "closure_sha256": "752bfa2ac43df620990c2a33c76a802bab1db8a94d473eaf11c16f24281c95a5",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecDefinitions.lean",
+          "sha256": "d09e3af3abbf261b2bfeebc54a8287f27b365648e36b55e3f281543a3d2a88fc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecTargets.lean",
+          "sha256": "74240a64bef5104ebae62ca760aef98e76df57bd0aedb183f36cb4721ef55fa1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecStatementChecks.lean",
+          "sha256": "878eb0c06089b023bd9722a66db6b1cdc40d29d72ce348e33b0418e6aa1ef67d"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DIRECT-PRIMREC-SOURCE.md",
+          "sha256": "883778432dbfd9c7a43fcb62f27e25f52e4e575abf4022b36b22d67232d194f7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecSupportProof.lean",
+          "sha256": "03d6511639f3d650ca1612f127aadd52b9e11ca2038e2ca5ced2065e11bf5d1a"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectPrimrecProof.lean",
+          "sha256": "c5dab5afba1d08f45af99027aa883a5677a616400a4a0b0e5b6ae8aba314a8cd"
+        }
+      ]
+    },
+    {
+      "name": "SourceMachineControlNonperiodicity",
+      "scope": "Actual transition-clock Gamma primitive recursion, exact parity and non-eventual-periodicity; explicit enumeration choice, no full hardness.",
+      "freeze_sha256": "bf06d288c578fb7c1d8cdcb617bf556c5a129d4ac5066eba8cab18b080f15a2f",
+      "closure_sha256": "cffa7e76b8fdd655dcced3aa323e2432e81a527473bf14441b84855e6d2d2ea5",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityDefinitions.lean",
+          "sha256": "6b7b6129961d33d6d5df2a055635444bce1de436e7907db4074812ac50d4954a"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityTargets.lean",
+          "sha256": "6eb44de8c709675028a83669502e8e947303945976781f150f66ec9cdc1334f0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityStatementChecks.lean",
+          "sha256": "5632c947e6f42cad768baaab6ee310aef2dafcb25f2d90955b1b084500fc2ec1"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceMachineControlNonperiodicity-SOURCE-CORRESPONDENCE.md",
+          "sha256": "0920508f12c1709d5db842f300976108a8cac4e4db9cd3f4c2c1fd592aefa5c5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityParityProof.lean",
+          "sha256": "4827c07aaa3d2e61ed7af56bf6c9483ec99db5ac55e51da3d5239f19360fb015"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineControlNonperiodicityProof.lean",
+          "sha256": "a24b31ba7de4078751a060fbfc057b43787496eda2a047c3d59c7d236f3ef553"
+        }
+      ]
+    },
+    {
+      "name": "OrdinaryArithmeticDirect",
+      "scope": "Exact ordinary arithmetic graph/formula for direct multiset replacement over actual R, with literal context/list decoder semantics and fixed n/arity/Gamma.",
+      "freeze_sha256": "40a5403dab73bffbfec70ec89f31e71d98a76cedbb2f6841197f286a5ad87bab",
+      "closure_sha256": "37fa6616ec1e49d3ec57d9b4df7c8f92cd2754a7c97c57ee99c6cf3d42ea49ee",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectDefinitions.lean",
+          "sha256": "ccb480ba8df6ebf6473f6b1bb09d44afc7561b0e897fbd51e0ffdd0167429b9f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectTargets.lean",
+          "sha256": "4c713414f04fc8aadb88642ac73fe2788ccbeffcf120bcf756e833a4fdd37ed0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectStatementChecks.lean",
+          "sha256": "1cf0c926e45ccc4b869fcf7f6523c87978b9f27ae34e419b27bafb92ec6bcb09"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-DIRECT-SOURCE.md",
+          "sha256": "4e8a9f36562f10e4cef8002b9d8b0a95190f97a6bb546cfa9811777aa27cc70d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticDirectProof.lean",
+          "sha256": "5aaa94bde29f287fba640f2d6090ed5ee1c1769d49a5d4c0b5b8202f828c3a8d"
+        }
+      ]
+    },
+    {
+      "name": "SourceMachineHaltingConjunction",
+      "scope": "Literal natural arithmetic conjunction iff actual blank halting, exact witnesses and PR coefficients; no source gadgets/complexity/whole hardness.",
+      "freeze_sha256": "353e4a5b7832308d585d538777b930e860be3598c954b55d586fadf3c701cc35",
+      "closure_sha256": "7fbd1966639dac416947fc1a899e40aba4186fae35304850b5fb0e6b5e6d3b6a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionDefinitions.lean",
+          "sha256": "2d414d047f218078ae32474a996c586bc12893ffa16d61253b69e86c533469e3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionTargets.lean",
+          "sha256": "ca38615b94996e8c8d548855e9d9c70fd88963506c10645155d6ae3b4a53b3c7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionStatementChecks.lean",
+          "sha256": "fc0214d5e2ee9ef4d8f5baea6cf80dbe39f98820ad5f308ce18ae730f065fcd6"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceMachineHaltingConjunction-SOURCE-CORRESPONDENCE.md",
+          "sha256": "842c3ecf4b6167d621c69914eac60e30ef5dfd2d2e9c99797d900b13cfb4bb0e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionArgumentsProof.lean",
+          "sha256": "1576506ebfdc8951b2c6ba7db2e95f879a65354951d784a2ddd2c175a4281a01"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineHaltingConjunctionProof.lean",
+          "sha256": "d87cda13cc06abfae686a96198896bc344a26b83a0ef44a8224ee85ff5b54b18"
+        }
+      ]
+    },
+    {
+      "name": "QuotientDirectCarrier",
+      "scope": "Actual canonical carrier list calibration, positive R endpoint carrier and direct replacement carrier preservation under explicit subtype closure.",
+      "freeze_sha256": "e5c98bd6824961c1df8463efb5926250284cc93e36a4c2960a250bcc3c289dd5",
+      "closure_sha256": "504aef0b3e6cbe678a794141785912ced927c77d619ac7dee6a6b230d45e3274",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierDefinitions.lean",
+          "sha256": "fa24265549de001641c9f74c5ba0e0a9ddc3a91968233082f51aaf2a4a31ca16"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierTargets.lean",
+          "sha256": "20b42320d24f55c955e73d28a4ce65b6503062e0d0be935960ad8d41eb51cb05"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierStatementChecks.lean",
+          "sha256": "856278e9155500f2bff35b5745c6d63c5537aac14a77958536bc0087eb7d6cc0"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/QUOTIENT-DIRECT-CARRIER-SOURCE.md",
+          "sha256": "8f2c198b1979ef34bb6339a5658c901480c15854363fcdee2bb422a1e1ea5285"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/QuotientDirectCarrierProof.lean",
+          "sha256": "ad80a38d7ab373048f7416fd90a5eac4487704eb5b752550e75e9858477f5ca0"
+        }
+      ]
+    },
+    {
+      "name": "ParametricActualCollapse",
+      "scope": "Separate generic-control actual ordinal maximum recursion, uniqueness, Phi calibration and majorized finite values; no source gadget or coefficient-one claim.",
+      "freeze_sha256": "13032852e1b1fb30db163bfbe92c418acdef9a42fd047484757aedaad24ac0b5",
+      "closure_sha256": "7a09bfe393417db92fb266fce81b60cd3079d68366a57613dbec19d5b31c5cc8",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseDefinitions.lean",
+          "sha256": "c2b45e48861d4ed1a33fc8959ee4a430a900b90be92fad4e37b37a81871d3556"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseTargets.lean",
+          "sha256": "8d82e1ef26638dd68811ad7e678c235a5bad94f78990a6bf868738e2a13410c5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseStatementChecks.lean",
+          "sha256": "ed7237fdff687a1fd4d96aa4b9dc9f3d1d4ad81271de51f6709fc1815162c518"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricActualCollapse-SOURCE-CORRESPONDENCE.md",
+          "sha256": "8584749a207e391e42ebb61546ecff7bcc7e8105395ce4cdbc2276e893c0b207"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseRecursionProof.lean",
+          "sha256": "0b0ebe957e9d8e45b4aef9301b52241e839b434b777a6db6da21577059dc2f33"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricActualCollapseProof.lean",
+          "sha256": "3435d6dd421b0163631ec28e6731ed7101f1edb1d2c406aefead33fea991f3a3"
+        }
+      ]
+    },
+    {
+      "name": "ParametricCoefficientOne",
+      "scope": "Actual generic-control coefficient-one formula under strict monotonicity and identity majorization, discharged for actual Gamma; no source gadgets.",
+      "freeze_sha256": "7c67a3b4513c25887e4dc9b2cab675a43b93181da85ea9e3f313767bfaf5ae23",
+      "closure_sha256": "d91b07d1fb3cf72db8f62466a97bebe97236dbfa8d52bed78781e504972f0cc4",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricCoefficientOneDefinitions.lean",
+          "sha256": "cab302e571c8ee0d62ca6fdfb8f41d34efa0693fbc3b6da02b8a06b6eaa55d5d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricCoefficientOneTargets.lean",
+          "sha256": "9cc356f747dc2707105dc5bd4c9bf263662dfa794c8ecf3ecf15b849b18ab0cf"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricCoefficientOneStatementChecks.lean",
+          "sha256": "a436709a5d88ee96654b4828172f7669ce9f8152d64cbc5d45b52b299a7babda"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricCoefficientOne-SOURCE-CORRESPONDENCE.md",
+          "sha256": "fe70017208b469567950c3271b500b3ce73c863ff0b8ffb632317521429978b9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricCoefficientOneOrdinalProof.lean",
+          "sha256": "c2c3dbcc745284bb8f3d20afa018705f004649a8131b1045cf7b68d525489273"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricCoefficientOneProof.lean",
+          "sha256": "918c2f23f09f0e8dc73c57dfd22548560921446e0c61fdc12739d573bfa3283d"
+        }
+      ]
+    },
+    {
+      "name": "OrdinaryArithmeticCarrier",
+      "scope": "Actual scalar/list canonical carrier PR and ordinary arithmetic guards with exact Context/list decoding and explicit subtype-closed semantic calibration.",
+      "freeze_sha256": "59208f5656760ea62b270b60f1c629a1cf14aa4b7bd695eb39da4bffa06bd6a8",
+      "closure_sha256": "0ce8ff50f168ba2dd9baed59955d318f9f4eb76c1101dc142d66be7c6cee6189",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierDefinitions.lean",
+          "sha256": "4c361e09cad2c674522c7958e5c65960e9bae2ca57b53e625ddc852bb81d130e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierTargets.lean",
+          "sha256": "3ade6239f45b4dd1096b66fb738cbaa8aaae99773bc0dfd1f3abf040ad5d79a9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierStatementChecks.lean",
+          "sha256": "89d31a036b5ccc0f296109f014c62271d984f0cebfdaf57906e478892fe18361"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-CARRIER-SOURCE.md",
+          "sha256": "61715359c591872cc591947858239b97c8d38f762177dad395ac4e491b063de3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierSupportProof.lean",
+          "sha256": "357633c0cdb3dbe75489c233152b4ab13eb380d9ce00fbf93bc9b5a46d4bfd62"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticCarrierProof.lean",
+          "sha256": "27a55b7efd5e07b2afe22e2b0cbdb562613fafe07f1c4ba90299feef69cf3b26"
+        }
+      ]
+    },
+    {
+      "name": "NumberedTypedCarrier",
+      "scope": "Actual attained representative type preservation and type-indexed canonical syntax carrier calibration; typedness only, not C_tau.",
+      "freeze_sha256": "c0627442fadd9aaf4185065437d77f26bdf4def1a23f24f712ec7507773f1013",
+      "closure_sha256": "cd990773a093a01a206984bbd7d74ac731c33d60877d4523f337cb9649c123fe",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedCarrierDefinitions.lean",
+          "sha256": "574143f0cce5ee1b9593f2b39c2a9fa11751a262d9fc3b0a83fb1f2265dc196e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedCarrierTargets.lean",
+          "sha256": "31923db61d70d48907587ad1684c89d185617252e27ce5620129857382e51919"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedCarrierStatementChecks.lean",
+          "sha256": "6707b33aeca36ee4f2339689289212169d3adeb4c8cca0f79e869540f2916488"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-TYPED-CARRIER-SOURCE.md",
+          "sha256": "b77b56d8789d4640464cd61dcc55a1c58121446659ac1a6848e4dcb64520dd8b"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypedCarrierProof.lean",
+          "sha256": "7b851f86f76ad9cd78e22078ac09e4ac1c53149f2d9fcaedc9c032fb137e682e"
+        }
+      ]
+    },
+    {
+      "name": "ParametricSourceSuccessor",
+      "scope": "Separate existing-term denotation with Phi/substitution calibration and actual full-assignment S graph at generic/actual Gamma control; no other gadget transfer.",
+      "freeze_sha256": "a3f4cc4ad815268582d783d4207b19971fce45c414969e24a6ca14510ac8fa53",
+      "closure_sha256": "c56c6b73050a0df48ea4463decf072b0d358b80e1214020287eb6bf98f081958",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorDefinitions.lean",
+          "sha256": "190acec250ba2ce533175922ad777b2d491c96c40d485040402dd1538b68c288"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorTargets.lean",
+          "sha256": "012525c868db63c220b1fc2cd9f7f6ddcd4a25fac13d1b6c61868e2ae292a65e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorStatementChecks.lean",
+          "sha256": "4e4863e998eea4e330470e631f61f93d6f8444715a12b4db3122484632c1a57f"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricSourceSuccessor-SOURCE-CORRESPONDENCE.md",
+          "sha256": "a299e7deef7631a671acf3f304e26de7673dfed92a4a2ea21aa76de2d3ef0c18"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorDenotationProof.lean",
+          "sha256": "2b0bb95eabfd53d2f04d574846665056c20e9fa6dedb4bcbae9bb1af8cc248f9"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceSuccessorProof.lean",
+          "sha256": "06da797efa4029769d9c4bae95b6b0a2fb0e3c24dfdae4614d3947a38ce9c92d"
+        }
+      ]
+    },
+    {
+      "name": "OrdinaryArithmeticTypedCarrier",
+      "scope": "Actual type-indexed syntax carrier PR, exact numeric wrapper PR, and ordinary arithmetic formula with decoded and concrete semantics.",
+      "freeze_sha256": "135b8364fccd2872fc2aedae1a9f5eec78355e070225290485ea9f8f54edb050",
+      "closure_sha256": "ebfb441797a6e7d015003cb1bd62cdadd143396b768a1eeb6f1accd323c2c415",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierDefinitions.lean",
+          "sha256": "b996f001d370932a3c9d5b6a2ca0aca7c4e42fbd34028444140a70f89516c4a6"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierTargets.lean",
+          "sha256": "7a9df12db76394f6a0db43668e97369e46d5f77cd120f6c76b0303227640d7fc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierStatementChecks.lean",
+          "sha256": "7b8e487e80bab6b2d6f6b560f3f541515c0cfa9fd56dc8fa291cd39aa9664a93"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-TYPED-CARRIER-SOURCE.md",
+          "sha256": "1985b65eb56e6b22f9b46035eb6f07bdafad6b2f6709ca1cb66b34988857410d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierSupportProof.lean",
+          "sha256": "9f7f4f1827c517e5a735ee64ec5f5e8ad7b35b3a0fe0372a78badd4fe102a17c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticTypedCarrierProof.lean",
+          "sha256": "1bd5eb5b6f5164f924140c9d15537f6f78cbbe5ffa2a94a7864bf72d67a556a8"
+        }
+      ]
+    },
+    {
+      "name": "ParametricSourceAddition",
+      "scope": "Actual atomic unused-binder assignment/value and exact two-equation addition at generic/Gamma control; no one/nested collision claim.",
+      "freeze_sha256": "a6d4fd84872040279dcb7e0cb35aac55daa1922cf8ee75c7c63cd5d3811c237b",
+      "closure_sha256": "590a81ca289c6b16f50f72a725602618897ee5338dea23c9c44ad5642d632231",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionDefinitions.lean",
+          "sha256": "6ff3766356d92ab04e8f102dbb4a670c4a48922a8f86f46ee49adf12bcb40810"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionTargets.lean",
+          "sha256": "e09a88efc77cb737d9c60037c9a3cc91a08aa0b668269070d99df3d14e6aec5a"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionStatementChecks.lean",
+          "sha256": "cf3cb8b0347e8411831160658201c8999a07bba79a1131cfe93bbcc8355d93b8"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricSourceAddition-SOURCE-CORRESPONDENCE.md",
+          "sha256": "cde4c0718fa4b8eaefc0810ee734179caaa9671bff6b039374f530b1f0de09be"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionAtomicProof.lean",
+          "sha256": "87e707f8b53389de92f84eb93c5cae2128cea1759f25152f46d777568735e10f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceAdditionProof.lean",
+          "sha256": "e691c9e84c1ec1307a89e8553bcf8daac458d39c3d3f6417f9a2ba4908f64f77"
+        }
+      ]
+    },
+    {
+      "name": "NumberedQuotientApplication",
+      "scope": "Literal auxiliary application confinement and well-defined representative application on typed guarded primary classes.",
+      "freeze_sha256": "a0dce50c06569b8a3d406bb863aa7e3e6d7f18c0bbb38862fe3c12eb0105d189",
+      "closure_sha256": "1645be4c1f5853cbbefbbe05a3d5570555d946d83173aa60f825847a1c613dc3",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationDefinitions.lean",
+          "sha256": "5b22057ad8270bd039eb7e532eaad38cd998a18e90c473b3b6e5bb691950339c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationTargets.lean",
+          "sha256": "d16193c3fb6cca9c3831ea7d62c9805af5ad6274b7c133f20253a58a501359d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationStatementChecks.lean",
+          "sha256": "d20954ffe53c7cbe6e75752d0ddb6d92ba50aaa526afd8911fd86457552f178a"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-QUOTIENT-APPLICATION-SOURCE.md",
+          "sha256": "bc584c7d2dda2165d1b459c35f19e544440a0172e8ec4b7a51ac307eae23e3d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientApplicationProof.lean",
+          "sha256": "fe6dc59a7b6fcc853f1768d456ab13b614173c888499e01f6c5b1ebc408870fd"
+        }
+      ]
+    },
+    {
+      "name": "ParametricSourceOne",
+      "scope": "Exact literal I0/S/addition constant-one source gadget with explicit positive witnesses, generic/actual Gamma; no binary DAG/nested transfer.",
+      "freeze_sha256": "c8f134bca4e8e4f5b73f82dd283e53bfae72d66492c4f39cea1d5c3c841276f7",
+      "closure_sha256": "0485243d962207e674d105c785a8eb0fe6567d0986ca1390c39cca1f6c65e5ee",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceOneDefinitions.lean",
+          "sha256": "06dc5b798cfd55271e561753752df905654e8c0eb6efcebb87e75c4e9956ec62"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceOneTargets.lean",
+          "sha256": "15b33b994180a036a95191922d7ffc59536c615a90a5482cb891f9f854bc6ea1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceOneStatementChecks.lean",
+          "sha256": "7dab8b1ab83043d413f90e4932fc59ce3a35afdcad568a8567c428926775771f"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricSourceOne-SOURCE-CORRESPONDENCE.md",
+          "sha256": "2c35b2923d179de9bd83e8406c300944c253955ff12845aac49ec4772ad09f83"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricSourceOneProof.lean",
+          "sha256": "0d466ffcc9af1dc547567f30b36e2fec5eb728e88373fb37c219f38917b14f37"
+        }
+      ]
+    },
+    {
+      "name": "NumberedNumericApplication",
+      "scope": "Actual numeric canonical application with decode/type/canonicality checks, typed soundness and calibration on arbitrary confined typed syntax.",
+      "freeze_sha256": "da3d2bb2f7b3d831e5d89ae77e8f7a0f3bcbafb17cf0732349886020b7191331",
+      "closure_sha256": "e6bb63fdcda41b8dba590441b21151f54f4581e5adaa1432e1e877c08b787063",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationDefinitions.lean",
+          "sha256": "c5478de1ae1d3d55c9a24cc6a7d2d3ea580c1fc62f08a32d917197545e1a0364"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationTargets.lean",
+          "sha256": "516f64e0a5df5dff24e57e49d834485a141a36d9f513f47507ecdd6e94aeeb97"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationStatementChecks.lean",
+          "sha256": "7d224d6fde37cfbdc4f3bb6db44d55de2ec32a83f8a57c4dbe555700d9e7025c"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-NUMERIC-APPLICATION-SOURCE.md",
+          "sha256": "c5e00994afa15c398b436420bf8622063e5976810da7da3550a22c97b60b5009"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationSupportProof.lean",
+          "sha256": "6f5bd6e94f03ca7d8e812b197f16f233c76d1ded6234ed86af19d4e93362a6d7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationProof.lean",
+          "sha256": "2d3b128b5455031714f6cddbc25a0004ee0f1e7bb939ebcad79e4acd728590e3"
+        }
+      ]
+    },
+    {
+      "name": "NumberedNumericApplicationPrimrec",
+      "scope": "All-input calibration of first-order application companion and actual canonicalApplication primitive recursion.",
+      "freeze_sha256": "38dd1f29d43dd509c93ef68085a39d708cf666f39d5f34e17c41b6ded70be379",
+      "closure_sha256": "c29f57eac9a654be2414615a7a815e43ce83bb869aecbac25fafcf34151ab493",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecDefinitions.lean",
+          "sha256": "6d5894594d46dc6f1a2ce3f757dd4da294f1d1c526e639d1cbc80a1d14008dac"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecTargets.lean",
+          "sha256": "1c237505bbab75262648cdf58e0f9d4105f306e887f4cf92abdcd3c2544f6d0c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecStatementChecks.lean",
+          "sha256": "5856400db14da339f3e586d272f7ef1bc433d269c2cd82fcde90a31d716ef049"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/NUMBERED-NUMERIC-APPLICATION-PRIMREC-SOURCE.md",
+          "sha256": "0af00e090ca9e9bc7a42a905e965a31cd02605d17b513f3f642b8df397f81450"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecSupportProof.lean",
+          "sha256": "ad3f92e1187249eef0fc7a6f51ee588cfcd12abe1d1d0a3b0421ca953d8e9593"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericApplicationPrimrecProof.lean",
+          "sha256": "584c1599f176b37fe39d3c15342f96fae33738b12334a8547d9a45e3c0c9013d"
+        }
+      ]
+    },
+    {
+      "name": "ParametricPrimitiveLowering",
+      "scope": "Existing literal eq/add/one lowering under generic actual-ordinal control and actual Gamma, exact shared prefix and size; no sort/global binary/aggregation.",
+      "freeze_sha256": "c22065f87b3bfe19f85c2dcc1ca88b780e4e1b7163d00041091afb831a285c53",
+      "closure_sha256": "d1eb5bcb0899813454be7fd7d477cfea2a9f4e8954594226fcf01f008fb563a9",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringDefinitions.lean",
+          "sha256": "c81ee6e2dc76ec1bd105ea31d37c89db8f2bd37f500e90807ce71f5a9060842e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringTargets.lean",
+          "sha256": "1bf37ae75d88a2bb6d206504b4c7279423b796e5f40b62a1dd9f956aca0c38ea"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringStatementChecks.lean",
+          "sha256": "727e128d9d933d62a66bfbed2cf3f1a65607f332b8d4ad89c7e3eda1d74ea10e"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricPrimitiveLowering-SOURCE-CORRESPONDENCE.md",
+          "sha256": "ef6b0d6d41e2bd219ff21abe67f27833ebef4e2dc12abdc3995c5242969e634b"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringSemanticProof.lean",
+          "sha256": "7cf6c2d8a75083853c398cd66d77bbcca58f66ef169d5a5c8e895bc557a21741"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricPrimitiveLoweringProof.lean",
+          "sha256": "04d8aab7471177dab137331fff426b0a51171ab7f21f042368e756e22453f7f9"
+        }
+      ]
+    },
+    {
+      "name": "OrdinaryArithmeticApplication",
+      "scope": "PR success graph checker and actual ordinary arithmetic graph of partial canonical application, with explicit code and typed-syntax calibration.",
+      "freeze_sha256": "13cb645f1b855ccee6377ecb8fc4edda22ab953ca21069b48539a982121bfdb6",
+      "closure_sha256": "4614fa4e67c26e86843a9538c319bfb0f052fc873d4b0114e30017a1b122d215",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationDefinitions.lean",
+          "sha256": "70c57dc9d3522b44ee8b6eacebf79b33b100c28658dc48fbc7b42afbce463317"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationTargets.lean",
+          "sha256": "453dc9e0624f341d12a50438ffca731ee836e945a181837d8f9c1fcc5fcee9be"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationStatementChecks.lean",
+          "sha256": "108bcd8737df22aaf2fa90477c97108220c5795780df1b40b63cc1a289253558"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/ORDINARY-ARITHMETIC-APPLICATION-SOURCE.md",
+          "sha256": "1c35d91fc1fae4096f94f75f51ec66f3c6912c928c1fa7eff390a50f09fa79ce"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationSupportProof.lean",
+          "sha256": "3fbe1e429fb6c84dd71141a47250ae12b1fdf2c08c1dd389cb365c912be4b4f7"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticApplicationProof.lean",
+          "sha256": "b46f3818d8cebb964569a86c6f2d1b6d955305261ff2aaf109e2f4bbc2c61725"
+        }
+      ]
+    },
+    {
+      "name": "ParametricExistentialPlan",
+      "scope": "Unchanged Plan.compile generic/Gamma semantics for eq/add/one and arbitrary source equation leaves under original input convention, no comparison/complexity.",
+      "freeze_sha256": "45f5298ab2f157b418f16b6330a4771a7081b2fef4b8888a5aca8b500b296bec",
+      "closure_sha256": "f887139ede4aa08c62895050864936eb5b3868721648741ea4c7abb8c41960cc",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanDefinitions.lean",
+          "sha256": "4f5fcb48fc0a980fb0b51c9d8ce02b40219a57dd4749b0f60585227615a60047"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanTargets.lean",
+          "sha256": "e99189556d4e223ab4d5f858f6ceeb45f65859e2c43a12fd0d357a69d15d2c24"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanStatementChecks.lean",
+          "sha256": "aa7ac73247bbfb15626a5e602e9461ce58fc9104641a4f5c4f14eb23cd748177"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricExistentialPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "b543b094df3969b239bade20c82d7fbaabf5acbad164023e198dda2019d8c590"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanRenamingProof.lean",
+          "sha256": "a0f02812fd2a3a8a189a4eca5090ba49050d725a5b890b4ebc232473a889fac6"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanCompilationProof.lean",
+          "sha256": "856e010d07d14f2c91ca1cf10d2b03a978b5442c04cb02297243b3bbe1fd1d8b"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricExistentialPlanProof.lean",
+          "sha256": "94312dcc18a975fd742cf776089eb109e51718d527ee3e634e68775022b9a0c9"
+        }
+      ]
+    },
+    {
+      "name": "PositiveArithmeticOperators",
+      "scope": "Actual unary-predicate arithmetic extension, syntactic positive operator bodies, standard-N calibration and monotonicity for actual R/direct-DM carrier operators.",
+      "freeze_sha256": "73103e37c91081dc0c5818de70ed8c2c8fb8146b42ff3b7dae714d82ef147397",
+      "closure_sha256": "6a80f912b3c5e4f8eaf7aab5e63b273a99e6da79ab3d774a035d808bf93cc37a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsDefinitions.lean",
+          "sha256": "b60f62cc768be1558ebfdd732b8350736bfab6b9e9f89abd07fe96d6fb7840a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsTargets.lean",
+          "sha256": "66971ca720fb81bc7510f4d97c6d18f8b46c0892edeb647b1697619fc80fa8dc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsStatementChecks.lean",
+          "sha256": "d2fc0361fb27fdfd01ce5747df25bb33c8e97f95219f4914dc593b53cc529eec"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/POSITIVE-ARITHMETIC-OPERATORS-SOURCE.md",
+          "sha256": "fdedbd105230d1959ec76d21616d56cd9316a6a149d95dc31c9c4451be13b0d5"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsSupportProof.lean",
+          "sha256": "088f3ca3cd0045e9b9427d43a39a02ec5659f2ea2a2771a427c614c3bdf1eaf0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticOperatorsProof.lean",
+          "sha256": "96755c36626df3c42451e7e0d2264f2541c1acf02219e8a87ca0a79ef2af9d2d"
+        }
+      ]
+    },
+    {
+      "name": "ParametricBinaryPlan",
+      "scope": "Existing CPS binaryPlan/constantPlan actual Gamma semantic transport with exact shared source-forest/context bounds; no raw code/runtime/scaling/comparison.",
+      "freeze_sha256": "7a6a550a119c0a4e9cd10a84cf116b052032ab7fc5580b840780c9f586675bc8",
+      "closure_sha256": "de12cf6b2f4a3b7f67585a0247fee5fbd1aa5c371f5219e3e2c054c86f1880b8",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanDefinitions.lean",
+          "sha256": "b041d7c8d865f7462fc8c8c3919066513eb3cfb947ad28397ddac2a7b2f9a1a3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanTargets.lean",
+          "sha256": "3cec87675de1d1662f0017626839e919b43ad61df34333956a13e9325c6641dd"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanStatementChecks.lean",
+          "sha256": "74b97c344a4d63a344288845b2d74d1ee78b9e06300c79886704e68ec11bf6d9"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricBinaryPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "3b104905955a763aa50b7b8cf8766a8ac949da6902816f5c04a2724410f349f3"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanRenamingProof.lean",
+          "sha256": "9279dcbf8a571b567f8a0f61b5bb779929537e3068744c9ee649acf030b9a1e4"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanSemanticProof.lean",
+          "sha256": "95b349708b97cd1b75141cbff20c41849e48bfeefdac80cfeca36302eb08aa1d"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricBinaryPlanProof.lean",
+          "sha256": "8aed695bd9202dc1debc1177207ec00373916752c52ccb2fb551ba1434b9ab4b"
+        }
+      ]
+    },
+    {
+      "name": "PositiveArithmeticTransforms",
+      "scope": "Actual binder-aware positive-syntax relabeling and even/odd predicate argument tagging with exact standard-N semantic calibration.",
+      "freeze_sha256": "ad95aaafbcf0820df55c761fa33b205c222b40457525b64e50c4f677c507bda4",
+      "closure_sha256": "16dfe274dfa3e39cd5972bf801fc90fd8c31fa374b2704d3fe27ba97854eba59",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsDefinitions.lean",
+          "sha256": "281333e733ec5722d22ecf208c2c0bf7e41a461258b7dde73f2449c6de4f82fc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsTargets.lean",
+          "sha256": "9b630b20d097e0bddb7d7289103cef07324239a6ded2c3434548e4cf1b7e9b95"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsStatementChecks.lean",
+          "sha256": "4c58b81fd74cf3b0a4ba03c8fe013271a5d3fec2124d521c8ec7572486642a38"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/POSITIVE-ARITHMETIC-TRANSFORMS-SOURCE.md",
+          "sha256": "a2b0a3907a8992f357874cfb46ea2053a81675d189f7b2d46f684515967f335e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticTransformsProof.lean",
+          "sha256": "b36de64f4053935d24dd2b70dcbfd12cfa11ce2382c9cb103b06349563f016d5"
+        }
+      ]
+    },
+    {
+      "name": "ParametricScalingPlan",
+      "scope": "CPS e-fold shared variable doubling Plan, exact Gamma compiled semantics and all-coordinate overhead; no full conjunction/raw encoding/runtime.",
+      "freeze_sha256": "bc8c415347cd8fc007f69c2bfe8b9c709888da0f2ca7e1540c2c6870b50f66d3",
+      "closure_sha256": "cb7482cae5ce5d43c36946a4e1dc9b28af4ebf818595f00a689fcbc3304bb258",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanDefinitions.lean",
+          "sha256": "c021ee47a3c43605d5959c58c936a3d1e01d08fef7ac7d307915982e73f6a5a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanTargets.lean",
+          "sha256": "933756e809ef60384cef76094a8880c27291db89c933defa769bf99cdb3b79a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanStatementChecks.lean",
+          "sha256": "f6a5a9c30f64537a03e76c4f21a0f0ee937b6213f9775dc01e68df799ea49a67"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/ParametricScalingPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "4d1da9d7d2ca3320c620cee4df6e6c5b0ec406eb00822eab18586cad15c5834e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanSemanticProof.lean",
+          "sha256": "e8082b499869c4c595418b54360088ee0b664ef37b6362be1dadc94cbe7eea61"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanSizeProof.lean",
+          "sha256": "8a46d8624f516d2dd3ef085216b2683f8a8e51e5076e5791bd643b03236b0a01"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/ParametricScalingPlanProof.lean",
+          "sha256": "7aebdfa88dbcebcfbfb726a486a4c237ad779005c47661412173d8690af767bd"
+        }
+      ]
+    },
+    {
+      "name": "TaggedArithmeticOperators",
+      "scope": "Literal positive even/odd combination, unique tag partition, branch isolation, monotonicity and exact actual source operator semantics.",
+      "freeze_sha256": "2a83169d4d0c811eeda1e9ccfc5d6c405a9e33a70b4016cbb904433e2baad58d",
+      "closure_sha256": "69f6b4ad59ad91f20eb4da9621f7b13394983cee52b7c0b7e7d922eafe31936a",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsDefinitions.lean",
+          "sha256": "25ae36a9ac0b02fb41fed631d037df73f99bc34623d17ef5a5c545dcc67de8a0"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsTargets.lean",
+          "sha256": "442d21c42a9af1efe0fd694649a4b596c0243da46c04a19cebb1b6c42991dd98"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsStatementChecks.lean",
+          "sha256": "f184caa7cb21c08ce2ba76b9fdc0d3e5a2a6bf636a0ff9f2232f933f833fed53"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/TAGGED-ARITHMETIC-OPERATORS-SOURCE.md",
+          "sha256": "893e21d7957de70ec5981fe991826d8884a4596b301716ea57921bcb8da7f852"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsSupportProof.lean",
+          "sha256": "3f60907360773a90a613b9b7c40efce4116473a541242309c7a3d196929eb17c"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/TaggedArithmeticOperatorsProof.lean",
+          "sha256": "f76724ea239f3e42c8addcb79f3da470d0aa5716b388d45fbc80fd6bc3af0dcd"
+        }
+      ]
+    },
+    {
+      "name": "PositiveArithmeticLeastSet",
+      "scope": "Metatheoretic standard-N powerset least fixed sets for actual positive syntax, unfolding/leastness and exact disjoint-tag slice equality.",
+      "freeze_sha256": "56ea1bf998b3173f2adbcc915ae674f28e374070914941f14f692dfd59885282",
+      "closure_sha256": "5efb729e527dc7e84f172a33a61cb59beda1271375a2810cf12cfd036adb7f85",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetDefinitions.lean",
+          "sha256": "2dff545f24da93a06ae5a1689f69232c4328628c48e494086f216485788bc622"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetTargets.lean",
+          "sha256": "86c648592b6180828d35feef16bcf9e4a6883ae4f2bc9be7abe9cd0c7780e8a1"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetStatementChecks.lean",
+          "sha256": "1d937a000e587187fee3d62c5724e3eb239d52a787f07a276dc1dceba0ce61a8"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/termination-ordering/POSITIVE-ARITHMETIC-LEAST-SET-SOURCE.md",
+          "sha256": "a6621534f87d3ce80c05a12f11d64b9df7f018ddc6a4be5b08ab7b0221407d2f"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetSupportProof.lean",
+          "sha256": "4db11ca5151bc2f80bb311b5e999d89c8d011b42ad318f7897b54661c7f7e1c2"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetProof.lean",
+          "sha256": "19f615588286609bd50ab521edf6ccf50cb5a8c10df9ff70417e5f6c911d3e77"
+        }
+      ]
+    },
+    {
+      "name": "SourceMachineConjunctionPlan",
+      "scope": "Literal original three-equation shared Gamma Plan and compiled forest/actual blank Halts with exact DAG metrics; no numeric encoding/universal comparison.",
+      "freeze_sha256": "56a282b62a40d388b348beea07e50bb3b525baaf7479903e45d726df376f79a3",
+      "closure_sha256": "47050948e1f7902393c59f8c6c61caf3f256acd699df74cc07a86fccb11310bc",
+      "sources": [
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanDefinitions.lean",
+          "sha256": "eb9fcb5f3b0e0379c8781c00fa4197ae17aa1441fb4cee2000397162e7a4e58e"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanTargets.lean",
+          "sha256": "372981dc5d72bcca033c9c0d9d651b7f7588520ae87682a04fcf90c700e4d332"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanStatementChecks.lean",
+          "sha256": "a14f39d516f7b1180f4e1b97f8c17c3d5313b43c7276a9fcda1ed2ba5b046103"
+        },
+        {
+          "path": "formalization/verification/external-continuation-2026-11-04/layered-comparison/SourceMachineConjunctionPlan-SOURCE-CORRESPONDENCE.md",
+          "sha256": "9a5bc78e89810b2c1a5f171f0bd915a8151eaf1c1c5d4fd7f0f244ea6f8f7e76"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanLeafProof.lean",
+          "sha256": "9977f9aa30457a40e4136ce8d59e0db5d0b09382d8a6327ad8558f3cde66cacf"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanSemanticProof.lean",
+          "sha256": "3026641a496da07d5548f83f795499d9ea693280617c8feececaf540c79f86dc"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanSizeProof.lean",
+          "sha256": "f52d5afd14de315279bec7aa2d4359d8ba5d699e2f78ff10c5b3e7996dac2409"
+        },
+        {
+          "path": "formalization/LogicLineages/OrdinalComparison/SourceMachineConjunctionPlanProof.lean",
+          "sha256": "287e3578f342db094edb3489c7fa09ceccf0edf031efe9624a6ba960d63178d5"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Pinned warm-cache focused checks, not a full-root or CI build.",
+    "Generic direct replacement; library calibration requires the explicit matching Preorder.",
+    "No well-foundedness, ID1 accessibility, arithmetic or whole-source promotion.",
+    "TARGETS registry and source manuscripts unchanged.",
+    "SourceControlNonperiodicity uses explicit Code/evaln stages, not identified tape steps or a whole source hardness theorem.",
+    "Quotient domination uses existential checked positive-path certificates, not an unbounded relation decision or full direct multiset/well-foundedness result.",
+    "Blank-machine simulation establishes the actual transition clock, primitive recursion and termination calibration only; no undecidability or parity claim.",
+    "Direct quotient certificates are existential witnesses with explicit decoded endpoints, not a primitive-recursive checker, arithmetic representation or well-foundedness result.",
+    "Blank-halting reduction preserves the fixed actual table encoding and terminal bridge; no timing equality, parity or full source hardness claim.",
+    "Direct quotient checker primitive recursion retains actual encoding instances and fixed signature/arity/context parameters; no arithmetic or well-foundedness claim.",
+    "Machine-clock control uses the explicit actual table enumeration and transition semantics; no identification with a different clock or full source hardness claim.",
+    "Ordinary-arithmetic direct replacement is standard-natural-number representation with explicit context/list decoding and fixed signature/arity/context, not a carrier, ID1 or well-foundedness theorem.",
+    "The machine-halting conjunction concerns the original arithmetic equations only, not source-language gadgets, complexity bounds or the whole hardness theorem.",
+    "Canonical carrier calibration and preservation keep explicit subtype closure; no accessibility, ID1 or well-foundedness claim.",
+    "Parametric collapse retains arbitrary G and the explicit identity-majorization hypothesis for finite values; no G computability or source-gadget claim.",
+    "Coefficient-one collapse retains strict monotonicity and identity-majorization hypotheses for generic G; no higher-head or source-gadget identification.",
+    "Represented carrier formulas preserve failed-context/list rejection, empty-list vacuity and explicit subtype closure; no type-specific C_tau, ID1 or well-foundedness claim.",
+    "Typed canonical carrier calibration is syntactic typedness under subtype closure, not C_tau, accessibility, ID1, primitive recursion or arithmetic representation.",
+    "Parametric source successor retains the literal source S and actual full assignment with shared positive-raw valuations; no other gadget transfer or full theorem claim.",
+    "Typed-carrier formulas express syntax typedness under actual type and Context decoding; concrete calibration retains subtype closure. No C_tau, I, ID1 or well-foundedness claim.",
+    "Literal atomic eraser and addition only; no constant-one, nested gadget or complexity inference.",
+    "Literal typed application confinement and representative-code congruence only; actual primary appArgument does not add a positive reduction step. No numeric, primitive-recursive or ID1 claim.",
+    "Exact I0 and constant-one gadget only; no binary or nested gadget transfer claim.",
+    "Partial canonical numeric application retains actual decode, type and canonicality guards and explicit subtype closure; no primitive-recursive, arithmetic or ID1 claim.",
+    "Actual canonical application primitive recursiveness and all-input companion calibration only; no arithmetic or ID1 claim.",
+    "Exact equality, addition and one shared local lowering only; no global compiler, encoding or aggregation claim.",
+    "Partial arithmetic application graph has no sentinel output; typed-source calibration retains explicit subtype closure. No C_tau, ID1 or well-foundedness claim.",
+    "Existential plan restricted to equality, addition and one with the original ground-input and functional-unit convention; no binary encoding, complexity or aggregation claim.",
+    "Positive syntax and standard-natural semantics only; no fixed-point, ID1 or well-foundedness claim.",
+    "Literal DAG and local-one allocation with exact metrics only; no raw encoding, encoded-runtime or variable-scaling claim.",
+    "Literal positive-syntax relabeling and predicate tagging only; no combined operator, fixed-point or ID1 claim.",
+    "Scaling-plan CPS semantics and exact fresh-coordinate size only; no conjunction or raw encoding claim.",
+    "Tagged positive-operator branch isolation only; no cross-sort edge, fixed-point, ID1 or well-foundedness claim.",
+    "Standard-natural powerset least-fixed-point metatheory only; no all-typed membership, internal ID1, R-well-foundedness or transfinite bound claim.",
+    "Literal source-equation conjunction under actual Gamma and DAG metrics only; no raw encoding or full hardness claim."
+  ]
+}

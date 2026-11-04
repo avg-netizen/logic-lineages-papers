@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricExistentialPlanTargets
+public import LogicLineages.OrdinalComparison.ParametricExistentialPlanProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks
+theorem exact_equation_renaming : Targets.ExactEquationRenaming := Proof.exactEquationRenaming
+theorem exact_compilation : Targets.ExactCompilation := Proof.exactCompilation
+theorem actual_gamma_compilation : Targets.ActualGammaCompilation := Proof.actualGammaCompilation
+end LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricExistentialPlan

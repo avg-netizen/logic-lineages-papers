@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.SourceControlNonperiodicityTargets
+public import LogicLineages.OrdinalComparison.SourceControlNonperiodicityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks
+theorem effective_bounded_simulation : Targets.EffectiveBoundedSimulation := Proof.effectiveBoundedSimulation
+theorem exact_control_parity : Targets.ExactControlParity := Proof.exactControlParity
+theorem exact_valuation_fibers : Targets.ExactValuationFibers := Proof.exactValuationFibers
+theorem non_eventual_periodicity : Targets.NonEventualPeriodicity := Proof.nonEventualPeriodicity
+end LogicLineages.OrdinalComparison.SourceControlNonperiodicity.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.SourceControlNonperiodicity

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBlankHaltingReductionTargets
+public import LogicLineages.OrdinalComparison.SourceBlankHaltingReductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks
+theorem exact_normalization : Targets.ExactNormalization := Proof.exactNormalization
+theorem validated_terminal_bridge : Targets.ValidatedTerminalBridge := Proof.validatedTerminalBridge
+theorem effective_blank_reduction : Targets.EffectiveBlankReduction := Proof.effectiveBlankReduction
+theorem blank_halting_undecidable : Targets.BlankHaltingUndecidable := Proof.blankHaltingUndecidable
+end LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.SourceBlankHaltingReduction

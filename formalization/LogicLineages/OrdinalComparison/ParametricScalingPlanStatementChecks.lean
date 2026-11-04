@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.ParametricScalingPlanTargets
+public import LogicLineages.OrdinalComparison.ParametricScalingPlanProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks
+theorem exact_scaling_plan : Targets.ExactScalingPlan := Proof.exactScalingPlan
+theorem actual_gamma_scaling_compilation : Targets.ActualGammaScalingCompilation := Proof.actualGammaScalingCompilation
+theorem exact_overhead : Targets.ExactOverhead := Proof.exactOverhead
+end LogicLineages.OrdinalComparison.Source.ParametricScalingPlan.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.ParametricScalingPlan

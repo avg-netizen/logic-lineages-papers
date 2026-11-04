@@ -1,0 +1,7 @@
+# Formal primitive recursion of actual direct-replacement checkers
+
+The three targets concern exactly the accepted QuotientDominationCertificates.test, QuotientDirectCertificates.directTest and numericTest. Signature size n, ranked arity and ambient Gamma are fixed parameters, while both windows, the finite Boolean precedence table and all endpoint/witness inputs vary jointly. No positive-path relation decision is assumed: the leaf computes the accepted finite positivePathTest on its supplied certificate.
+
+The Parameters type uses the actual standard Primcodable nested product/list/finite-function instances inherited from accepted NumberedQuotientCertificatesPrimrec. The source/target List Nat and Certificate decoders inside numericTest remain their frozen standard Encodable implementations, including failure behavior. This component does not identify the Primcodable finite-function presentation with the separately frozen OrdinaryArithmeticQuotient.Context encoder; any later graph bridge must calibrate that explicitly using the accepted context supplier.
+
+Proof obligations are exact finite-state fold calibration, formal PR of every transition/finish test, exact permutation primitive use, and composition with literal option decoders. A final theorem cannot rest on a decidability or arbitrary finite-output oracle. Arithmetic formula representation, encoded-context bridge, typed carrier restrictions, internal ID1, accessibility and well-foundedness remain separate.

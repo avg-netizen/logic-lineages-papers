@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks
+theorem fixedActualDominationPrimitive : QuotientDirectPrimrecTargets.ActualDominationPrimitive := QuotientDirectPrimrecProof.dominationPrimitive
+#print axioms fixedActualDominationPrimitive
+theorem fixedActualDirectPrimitive : QuotientDirectPrimrecTargets.ActualDirectPrimitive := QuotientDirectPrimrecProof.directPrimitive
+#print axioms fixedActualDirectPrimitive
+theorem fixedActualNumericDirectPrimitive : QuotientDirectPrimrecTargets.ActualNumericDirectPrimitive := QuotientDirectPrimrecProof.numericDirectPrimitive
+#print axioms fixedActualNumericDirectPrimitive
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering
+end LogicLineages.OrdinalComparison.TerminationOrdering.QuotientDirectPrimrecStatementChecks

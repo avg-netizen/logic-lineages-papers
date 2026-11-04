@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.SourceBlankMachineSimulationTargets
+public import LogicLineages.OrdinalComparison.SourceBlankMachineSimulationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks
+theorem effective_enumeration : Targets.EffectiveEnumeration := Proof.effectiveEnumeration
+theorem exact_transition_clock : Targets.ExactTransitionClock := Proof.exactTransitionClock
+theorem monotone_halting : Targets.MonotoneHalting := Proof.monotoneHalting
+end LogicLineages.OrdinalComparison.SourceBlankMachineSimulation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.SourceBlankMachineSimulation

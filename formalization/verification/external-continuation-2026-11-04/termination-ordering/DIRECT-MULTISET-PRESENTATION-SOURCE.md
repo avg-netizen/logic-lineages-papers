@@ -1,0 +1,9 @@
+# Direct multiset replacement: occurrence-sensitive presentation
+
+Paper06 paper.tex:564–567 invokes direct multiset replacement DM(R). Lines598–603 describe removed occurrences assigned to origins and each replacement assigned a removed dominator; singleton replacements may produce finite collections. The paper does not give a separate formal defining equation for DM. This component makes the direct simultaneous-replacement convention explicit: retain a literal common submultiset, remove a nonempty submultiset, insert finitely many occurrences, each related by R from a removed occurrence. Empty insertion/deletion and reuse of a removed dominator are allowed. Source and target lists are related to these parts by literal permutations, preserving multiplicity.
+
+This is not the ordinary weak/strict generalized multiset relation at paper.tex:141–144: kept occurrences here are unchanged, not merely weakly matched. It is not a transitive closure of direct replacement. When R is later instantiated by the accepted positive quotient path relation, that relation already includes positive H paths, but this component itself places no assumptions on R.
+
+Pinned Mathlib 360da6fa Data/Multiset/DershowitzManna.lean:46 defines IsDershowitzMannaLT target source with retained X, inserted Y and nonempty removed Z, requiring y<z. The library comparison is therefore explicitly conditional on a supplied Preorder and R z y iff y<z. No such order instance is constructed for the actual quotient relation, and no library well-foundedness theorem is invoked.
+
+Four exact targets establish permutation invariance, one explicit index per inserted occurrence with equal witness-list length, passage to the actual Multiset quotient, and the conditional library correspondence. No numeric certificate decision, arithmetic representation, internal ID1 derivation, accessibility, transitivity of raw R or well-foundedness is claimed.
