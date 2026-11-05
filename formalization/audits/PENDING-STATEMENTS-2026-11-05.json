@@ -1,0 +1,819 @@
+{
+  "schema": "pending-source-register-reconciliation-v1",
+  "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
+  "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
+  "scope": "All 26 currently pending numbered statements reconciled against the pinned register and archived acceptance evidence. Existing mathematical conclusions are retained unless explicitly refreshed. No new proof acceptance, source correction, independent full proof audit, native compilation, root build or remote CI is claimed.",
+  "prior_audit": "audits/PENDING-STATEMENTS-2026-11-04.json",
+  "counts": {
+    "checked": 161,
+    "pending": 26,
+    "existing-calculator-package": 2
+  },
+  "numbered_statement_count": 189,
+  "numbered_source_promotions": 0,
+  "newly_registered_prior_components": [
+    {
+      "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
+      "adoption_sha256": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks",
+      "matching_source_pin_count": 24,
+      "all_source_pins_match": true,
+      "allowed_axiom_reports": 2,
+      "imported_by_public_root": true,
+      "registered_source_statements": [
+        "02-exponential-comparison:thm:finite-bare-hardness",
+        "09-canonical-source-expressivity:thm:functional-hardness"
+      ],
+      "native_receipts": [
+        {
+          "file": "verification/local-resume-2026-11-04-six-lanes/publication-receipts/1793833506617686069-2.json",
+          "sha256": "fa07f1bbfd4a27da4d8b9ab094d36ba757384482251230c3720e21d1929562a4",
+          "gate": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks",
+          "gate_returncode": 0,
+          "other_failed_modules": [],
+          "whole_receipt_passed": true
+        }
+      ]
+    },
+    {
+      "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
+      "adoption_sha256": "d3aa6de3e13be8d12ae811d0ca592009a7713dc6ba6a7072deebdc587f9894b9",
+      "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedStatementChecks",
+      "matching_source_pin_count": 412,
+      "all_source_pins_match": true,
+      "allowed_axiom_reports": 3,
+      "imported_by_public_root": true,
+      "registered_source_statements": [
+        "09-canonical-source-expressivity:thm:functional-hardness"
+      ],
+      "native_receipts": [
+        {
+          "file": "verification/local-resume-2026-11-04-six-lanes/publication-receipts/1793833243956850733-2.json",
+          "sha256": "2ae4e5f8a6420bb31724d8da3d484d3ba8dc3fa93e6ab403a2c10d6fd2008bbd",
+          "gate": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedStatementChecks",
+          "gate_returncode": 0,
+          "other_failed_modules": [
+            "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededCompilerProof"
+          ],
+          "whole_receipt_passed": false
+        }
+      ]
+    }
+  ],
+  "checked_prerequisites_removed_from_pending_blockers": [
+    {
+      "statement": "06-godel-t-termination-ordering:thm:upper",
+      "prerequisite": "06:lem:simulation"
+    },
+    {
+      "statement": "08-multivariate-collapse-comparison:lem:uniform",
+      "prerequisite": "08:lem:kernel-recursion"
+    },
+    {
+      "statement": "08-multivariate-collapse-comparison:lem:guards",
+      "prerequisite": "08:lem:counter"
+    },
+    {
+      "statement": "08-multivariate-collapse-comparison:lem:row",
+      "prerequisite": "08:lem:counter"
+    },
+    {
+      "statement": "08-multivariate-collapse-comparison:thm:existential",
+      "prerequisite": "08:lem:kernel-residues"
+    },
+    {
+      "statement": "08-multivariate-collapse-comparison:thm:graphs",
+      "prerequisite": "08:lem:kernel-recursion"
+    },
+    {
+      "statement": "12-common-knowledge-necessitation:thm:collapse",
+      "prerequisite": "12:lem:three"
+    }
+  ],
+  "statements": [
+    {
+      "id": "02-exponential-comparison:thm:finite-bare-hardness",
+      "short_id": "02:thm:finite-bare-hardness",
+      "status": "pending",
+      "source_file": "02-exponential-comparison/paper.tex",
+      "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Literal depth-two polynomial-to-comparison reductions, positive-variable framing, WW ground-domain/norm transport and co-c.e. counterexample enumeration are checked. Accepted Diophantine suppliers include pair/composition and recursion-free graph closure, binomial and bit-mask graphs, and variable-length cipher arithmetic, validity and product/multiplication. None supplies full MRDP or H10 undecidability.",
+      "remaining_obligation": "The full RE-to-Diophantine/MRDP hardness supplier is absent. The Diophantine power-graph bridge does not supply it. Depth/domain/norm conclusions must be assembled with that supplier.",
+      "next_completion_step": "Freeze the exact encoded MRDP-to-comparison completeness endpoint; its missing mathematical input is full MRDP, rather than another reduction gadget.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 6,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/DiophantinePolynomialBridge.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteComparisonEnumerationEffectivity.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/WWGroundAdmissibility.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/DiophantinePolynomialBridge.lean": "37080ed35077adea455a43657dd50b4745d3a51970a1ed8ebaf8ebcc043a644b",
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteComparisonEnumerationEffectivity.lean": "c4aa2ca9285e76d798827af5b260fbf6a04840afb5bbd87d76a5b3a23aa5d1d0",
+        "formalization/LogicLineages/ComputabilityKnowledge/WWGroundAdmissibility.lean": "cb90832c558b4bd232204f12639e76b194f3e06cb69fba0b24a6568f06f4961f",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "02-exponential-comparison:thm:bounded-bare-vectors",
+      "short_id": "02:thm:bounded-bare-vectors",
+      "status": "pending",
+      "source_file": "02-exponential-comparison/paper.tex",
+      "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Actual two-component C-vector padding, bounded norm, exact strict/weak reduction, and executable vector codes are checked.",
+      "remaining_obligation": "Undecidability still depends on finite-bare-hardness/MRDP; the padding theorem itself is not the remaining foundational gap.",
+      "next_completion_step": "Reuse the complete padding/code gates when the preceding hardness endpoint is available.",
+      "upstream_blockers": [
+        "02:thm:finite-bare-hardness"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWBoundedVectorPadding.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWBoundedVectorCode.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWBoundedVectorPadding.lean": "1094168867758fcf6a7a468195398c9d91e736c7d506920388062a93f1df822b",
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWBoundedVectorCode.lean": "b3cc2c31e2a9b358e81e25212ad8839af1d107c7279fdcf4dff6a920b3c6a068"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "02-exponential-comparison:cor:consumers",
+      "short_id": "02:cor:consumers",
+      "status": "pending",
+      "source_file": "02-exponential-comparison/paper.tex",
+      "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+      "classification": "assembly_or_source_contract",
+      "existing_coverage": "Scalar identity and unary comparison, plus the entire affine one-parameter clause with actual decision programs and least positive counterexamples, are checked.",
+      "remaining_obligation": "The printed finite-valued ordinal/O-vector domain includes collapse terms. Finite-valuedness does not imply membership in the pure exponential-polynomial fragment covered by the scalar procedures. No accepted reduction/decision theorem covers that broader domain. This is an unresolved source/proof scope gap, not a proved counterexample and not merely componentwise vector bookkeeping.",
+      "next_completion_step": "Resolve the exact intended domain first. Keeping the printed broad scope requires a genuine collapse-language decision bridge; narrowing it to the proved exponential fragment would be an explicit manuscript correction. Reuse the already complete affine clause.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/AffineParameterComparison.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialIdentity.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/WWGroundAdmissibility.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/WWGroundClasses.lean",
+        "formalization/EXTERNAL-CONTINUATION-2026-10-30.md"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/AffineParameterComparison.lean": "445610ab923f5802a32b85b245c722f50e8ecb9dc33fa5374d09741fe78fdc4d",
+        "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialIdentity.lean": "d1f83148e8ac4a6569141f2608ac7cd5435033ecfd1f3800ff42c89b4324ed76",
+        "formalization/LogicLineages/ComputabilityKnowledge/WWGroundAdmissibility.lean": "cb90832c558b4bd232204f12639e76b194f3e06cb69fba0b24a6568f06f4961f",
+        "formalization/LogicLineages/ComputabilityKnowledge/WWGroundClasses.lean": "02b9dac06f8e372a762d47b739574d9aadd235380a41c435603baec94763f441",
+        "formalization/EXTERNAL-CONTINUATION-2026-10-30.md": "3c817f55d34705761a8ebea7504b1ff431a9028df84ae026e5b02c6b7433acf2"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:structural",
+      "short_id": "06:lem:structural",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "assembly_or_source_contract",
+      "existing_coverage": "Actual confined evaluator/scanner monotonicity and weakening, actual-limit application and substitution laws, and syntactic confinement are checked.",
+      "remaining_obligation": "The printed lemma quantifies over a natural coherent constructor family. The same-family cross-type full-tuple law needed for source application is proved at the actual fixed point, not for an arbitrary such family. No concrete counterexample has been established.",
+      "next_completion_step": "Resolve the generic-family contract explicitly, then assemble substitution and literal special-application correspondence at that same scope.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ConfinedStructuralInterpretationTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ActualLimitApplicationTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ActualLimitSubstitutionTargets.lean",
+        "formalization/verification/external-continuation-2026-11-02/termination-ordering/STRUCTURAL-SEMANTICS-LIMITATION-20261102T1112Z.md"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ConfinedStructuralInterpretationTargets.lean": "d39795d77d9a68ab0fe6c3565cd122a10506f8dba9510a9b7ab33943e37d3252",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ActualLimitApplicationTargets.lean": "3242493a1d936cd67f8e70eaa0c3f403c8b5c41f12a639bf45eedd7213f61ed0",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ActualLimitSubstitutionTargets.lean": "54c010e486821b076c7b83521913de0707da331458d69251fa2331d451eadead",
+        "formalization/verification/external-continuation-2026-11-02/termination-ordering/STRUCTURAL-SEMANTICS-LIMITATION-20261102T1112Z.md": "8c681ba7542266da403b01c5ce9fa6e38739e18319e2cda8ce18aca2ddc883cf"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:thm:stable",
+      "short_id": "06:thm:stable",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "source_repair_or_convention",
+      "existing_coverage": "Decidability, substitution/context suppliers and exact local relational diagnostics exist.",
+      "remaining_obligation": "A checked source-confined finite-signature counterexample refutes transitivity/compatibility of the immutable local relation. Its disagreement with Kop's published theorem must be resolved; the published theorem is not thereby refuted.",
+      "next_completion_step": "Identify the precise source rule/correspondence repair before attempting the unchanged stable-pair conclusion. Preserve existing relation pins and negative evidence.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/verification/local-resume-2026-11-02/termination-ordering/ORDINARY-TRANSITIVITY-DIAGNOSTIC.md",
+        "formalization/verification/local-resume-2026-11-02/termination-ordering/SOURCE-CORRESPONDENCE-STATUS.md"
+      ],
+      "evidence_sha256": {
+        "formalization/verification/local-resume-2026-11-02/termination-ordering/ORDINARY-TRANSITIVITY-DIAGNOSTIC.md": "3c8e9d07e382d6613aecdeb2b39b027f9895ea1fb70cd51baaf076b49bb38823",
+        "formalization/verification/local-resume-2026-11-02/termination-ordering/SOURCE-CORRESPONDENCE-STATUS.md": "433193ba697f3a64cb2fef0802d8c37e5455d2b586bf777010fe4e325786044d"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:id1",
+      "short_id": "06:lem:id1",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The actual finitary single-positive-operator ID1 calculus, full expanded-language PA induction, exact invariant/natural/instance rules, soundness and standard least model are checked. A concrete fixed-Gamma source presentation and conditional proof-tree-to-original-R soundness are checked. Joint-Gamma primary tests, representatives and canonical carrier are checked; these do not construct the all-term proof tree.",
+      "remaining_obligation": "The whole endpoint is ContextUniformTargets.ActualContextUniformInternalAccessibility: one fixed-S operator and closed internal derivation must cover all ambient contexts, including binder extensions. Joint-context quotient/path/direct-multiset/object-Program suppliers and the actual internal arithmetic, constructor, lambda/fundamental and all-term accessibility derivations remain pending. Fixed-Gamma presentation and conditional soundness do not supply proof-tree existence.",
+      "next_completion_step": "Reuse the accepted internal calculus and context-uniform primary interface. Complete the remaining context-uniform source presentation, then construct the internal all-term derivation at ActualContextUniformInternalAccessibility; do not redefine the judgment or weaken it to fixed Gamma.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 91,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSchemasTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceApplicativeSubstitutionTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol2-id1/ROOT-R001-COMPONENT-ADOPTION.json",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol2-id1/ROOT-R002V2-COMPONENT-ADOPTION.json",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol2-id1/ROOT-R004-COMPONENT-ADOPTION.json",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/ContextUniformTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSetTargets.lean": "86c648592b6180828d35feef16bcf9e4a6883ae4f2bc9be7abe9cd0c7780e8a1",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/PositiveArithmeticLeastSchemasTargets.lean": "711f3302f5d53054b70789776d59de87741026e1a712661200801ba70be6bb3c",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceApplicativeSubstitutionTargets.lean": "0f6075c7c48b43094259d6b2fd22762c99ad1cef2f0265fe5f8e111984f30b5d",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceGroundLambdaTowerTargets.lean": "075ee38fc1d2daadabf63cb6591948ccd0b1ea3f1f077a4bdaa0e1c7624e0e84",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol2-id1/ROOT-R001-COMPONENT-ADOPTION.json": "c37f2226a2084064c3dde8c6b8f83a8a7380fd1283340a8aedc341f1524c2e8f",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol2-id1/ROOT-R002V2-COMPONENT-ADOPTION.json": "34d4c25f1af7f362369171a1797075421108f46f33b905d6e8287652327ae4e1",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol2-id1/ROOT-R004-COMPONENT-ADOPTION.json": "0126568a6d4be8f3083d20f4bd8ddd2300734f5febaa2184d6a9026acdaccf62",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/ContextUniformTargets.lean": "8e23bdbe1365035c1c3e7399ad60065f91457b5e7aa7c2c5ce0ea2b59d418eab"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:thm:upper",
+      "short_id": "06:thm:upper",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The whole fixed-family source simulation lemma is adopted: one source-shaped translation family has primitive-recursive numeric calibration and positive original-source paths at the same source-anchored type universe. The simulation theorem adds no ID1 or ordinal-analysis premise.",
+      "remaining_obligation": "The genuine ID1 accessibility proof and Pohlers-style inductive-norm/ordinal stage-bound extraction below Bachmann-Howard are not supplied.",
+      "next_completion_step": "Reuse the checked source simulation. Prove the pending context-uniform internal ID1 accessibility endpoint and exact cited inductive-norm/ordinal stage-bound extraction below Bachmann-Howard, then assemble the upper bound.",
+      "upstream_blockers": [
+        "06:lem:id1"
+      ],
+      "checked_prerequisites": [
+        "06:lem:simulation"
+      ],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedConfinedSourceSimulationTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceArithmeticAccessibilityTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-simulation/ROOT-SOURCE-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedConfinedSourceSimulationTargets.lean": "de322baa42d329add07ba15f47c8b8e83d125c7bd368e43ed3c1aab5f0d7d2c7",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SourceArithmeticAccessibilityTargets.lean": "ae52adb16cdd749fae2b03bc9205808ad94e2b044df9a44aedb07178a3472f0e",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-simulation/ROOT-SOURCE-ADOPTION.json": "36d6da92d4ed7bf8a1d57be24eaab65deb81065afc593b782f21b6ee4eb6c5be"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:realclosure",
+      "short_id": "06:lem:realclosure",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Literal native beta/context/reduction and iteration-edge suppliers exist.",
+      "remaining_obligation": "A typed ordinal realization relation with backward/order/countable-supremum closure and the lambda fundamental lemma is not proved. Full ranks also depend on well-foundedness of the intended source relation.",
+      "next_completion_step": "Establish the exact relation and well-foundedness scope before the ordinal realization fundamental theorem.",
+      "upstream_blockers": [
+        "06:thm:stable"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeBetaCasesTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeBetaCasesTargets.lean": "73f5c0f908e635bb9d18a259c20e76824b5ce14823c16b1b4d8f151836a69c4e",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean": "8579022af080ef60828e6602805e228a30326d0e718ff4793dc4bcd722b6cd3f"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:thm:iteration",
+      "short_id": "06:thm:iteration",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The actual native carrier and all three iteration edges are checked.",
+      "remaining_obligation": "The full-prefix transfinite orbit realization proof, including limits for nonmonotone functions, is absent; reduction edges alone do not prove it.",
+      "next_completion_step": "Use the existing edges in one realization theorem once realclosure is available; preserve the entire-prefix limit clause.",
+      "upstream_blockers": [
+        "06:lem:realclosure"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeCarrierTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeCarrierTargets.lean": "81c4d2169a588bf3fff0204b58fbab3faa4523a94f3825102370eae7cbf0bac0",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean": "8579022af080ef60828e6602805e228a30326d0e718ff4793dc4bcd722b6cd3f"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:lem:primitives",
+      "short_id": "06:lem:primitives",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Native carrier strictness and application closure already support the finite cap's reduction inequalities.",
+      "remaining_obligation": "Zero/successor/omega ordinal realization and the all-iterate cap conclusion have not been assembled at the manuscript's realization contract.",
+      "next_completion_step": "Assemble the native primitive realizers with the rank/realization infrastructure; avoid reproving carrier edges.",
+      "upstream_blockers": [
+        "06:lem:realclosure"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeCarrierTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeCarrierTargets.lean": "81c4d2169a588bf3fff0204b58fbab3faa4523a94f3825102370eae7cbf0bac0",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean": "8579022af080ef60828e6602805e228a30326d0e718ff4793dc4bcd722b6cd3f"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "06-godel-t-termination-ordering:thm:height",
+      "short_id": "06:thm:height",
+      "status": "pending",
+      "source_file": "06-godel-t-termination-ordering/paper.tex",
+      "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Native carrier/iterator syntactic ingredients exist.",
+      "remaining_obligation": "Both the individual upper bound and full lower realization/calibration are incomplete. The Simmons/helpfulness/cofinal-collapse calibration to BH is an additional mathematical supplier, not supplied by finite kernel or arithmetic checker proofs.",
+      "next_completion_step": "Finish the shared realization and ID1/ordinal suppliers, then compile the exact finite extractor family and cofinality argument.",
+      "upstream_blockers": [
+        "06:thm:upper",
+        "06:thm:iteration",
+        "06:lem:primitives"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeCarrierTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeIterationEdgesTargets.lean": "8579022af080ef60828e6602805e228a30326d0e718ff4793dc4bcd722b6cd3f",
+        "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NativeCarrierTargets.lean": "81c4d2169a588bf3fff0204b58fbab3faa4523a94f3825102370eae7cbf0bac0"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:snyatkov",
+      "short_id": "08:thm:snyatkov",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The accepted source-row packages provide original term graphs and Boolean/binder-position-preserving row introduction; bounded substitution and finite branches; total signed unit-slope translation and restricted hyper-collision; nested translation and both plain-Phi windows; and effective elimination of a name occurring only linearly in the restricted row grammar. The linear step preserves arbitrary signed coefficients, original domains, correlated nonlinear terms at other names and exact eliminated-name support, with primitive-recursive numeric code.",
+      "remaining_obligation": "The complete arbitrary quantified BASE decision theorem remains unproved. General nonlinear anchors, active-hyper source-case assembly, general affine substitution inside nonlinear arguments, dominant boundaries, exhaustive branch selection and global decreasing quantified-block induction remain pending. Restricted row introduction and linear elimination do not establish the full source existential normal form or expanded elimination closure.",
+      "next_completion_step": "Reuse the accepted row syntax, finite-window and linear-elimination compilers. Close the remaining nonlinear source cases and exhaustive decreasing elimination induction, then prove EffectiveSourceExistentialNormalForm, EffectiveExpandedElimination and FullSourceDecision.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 39,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilityTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovHyperCollisionTargets.lean",
+        "formalization/verification/local-resume-2026-11-03/layered-comparison/PAUSED-AFTER-FIVE-ROUNDS-2026-11-04.md",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/ACCEPTANCE.json",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/FROZEN-TARGETS.json",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CLOSURE.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionTargets.lean": "aede248214993e3df895c0f812d7433122c98490f2e55973e4ef52b33a4b6bfc",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilityTargets.lean": "285484ff92acb072184f9e59b59d8d00bc1338df12d7e09c2d1e5f4123f87119",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovHyperCollisionTargets.lean": "1ac26abdbb234fe14f956096721b61152c5d16f124b17ca94ee7ee2929e09738",
+        "formalization/verification/local-resume-2026-11-03/layered-comparison/PAUSED-AFTER-FIVE-ROUNDS-2026-11-04.md": "5b2e000eee33e08d91fb46264b2e2f1921b68d75317b9e676e7e525f569201bf",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/ACCEPTANCE.json": "e2ab1a4869b10f6f726163a121470468b6156d13c30593f616ebaf1392e80258",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md": "b4af622eb0c866edd0f879e7de6c874359c47a4675a5fe5357d9de4d2c4044f9",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/FROZEN-TARGETS.json": "3ee01dfa963c1310e166af2cc7c1086670e7a765d86e9a74dbaff768ba9e3c1a",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CLOSURE.json": "f074bc6598a921fcd18d70ef2c9efda4558e3c83e9e5c3f6692b2c724f5cb22f"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:finite-source",
+      "short_id": "08:thm:finite-source",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Literal source assignment, generated positive-coordinate finiteness for recursor-free terms, and finite-head collapse identities exist.",
+      "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
+      "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
+      "upstream_blockers": [
+        "08:thm:snyatkov"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean": "b4d2aa0c15401b2997d7cec5c1ef853abecd4e0b6cce89f34479ac48f3e9f429",
+        "formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean": "0d9a05bb411f91574f61a058d64b304ce550e2fbd885040a0998a5c20746b1e6"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:uniform",
+      "short_id": "08:lem:uniform",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The degree-two separation base and higher counter leader/recognition suppliers are checked. The explicitly corrected paper08 limit-part process, genuine signed-domain recursion, full counter theorem and effective residues are now adopted; the original incompatible wording remains historical negative evidence.",
+      "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
+      "next_completion_step": "Freeze and prove the entire rank-at-least-three statement under the now explicit corrected source convention, retaining the printed C_d/T_d, growing retained masses and every regional hypothesis. Reuse the accepted kernel/counter package.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [
+        "08:lem:kernel-recursion"
+      ],
+      "supporting_component_count": 4,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/QuadraticSeparationTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/CounterLeaderComparisonTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/QuadraticSeparationTargets.lean": "f062458a63f50442198b5eef13c66068b77cbc56c0c97fccf75cc499e1000349",
+        "formalization/LogicLineages/OrdinalComparison/CounterLeaderComparisonTargets.lean": "37d457a5e62c23d3ee76f32f6e3d886232e32727e24f24522c7801d92287b813",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json": "55644baf3f1c0946b9526606cbcd25aee6d5a95bb7e742c71b9b5c77a076b972"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:guards",
+      "short_id": "08:lem:guards",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Corrected-source kernel recursion, the whole counter expansion/collision/order theorem and effective residue suppliers are adopted. They cover numerical comparison dependencies, not the complete arbitrary-word compiler.",
+      "remaining_obligation": "No complete effectual comparison compiler for arbitrary composed words with ordered raw-variable guards, all signed domains and a verified decreasing recursion measure is present.",
+      "next_completion_step": "Prove the whole ordered-word guard compiler, using the source's two-part termination measure and exact shared-variable semantics.",
+      "upstream_blockers": [
+        "08:lem:uniform"
+      ],
+      "checked_prerequisites": [
+        "08:lem:counter"
+      ],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/CounterLeaderComparisonTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/CounterLeaderComparisonTargets.lean": "37d457a5e62c23d3ee76f32f6e3d886232e32727e24f24522c7801d92287b813",
+        "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean": "07c39062c995e09b3e80da30dc2eec18c252ec593195c22ab0436a1a6597e456",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json": "55644baf3f1c0946b9526606cbcd25aee6d5a95bb7e742c71b9b5c77a076b972"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:lem:row",
+      "short_id": "08:lem:row",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The whole counter expansion/collision/order theorem is adopted under the explicit corrected source process. Common-head/balanced compilers and the later Snyatkov linear-row compiler solve distinct restricted grammars, not arbitrary finite-degree word rows.",
+      "remaining_obligation": "Arbitrary word-linear ranked cancellation, all generated guards and the well-founded top-level rank measure remain unproved. The common-head/balanced compilers do not establish this word-language lemma.",
+      "next_completion_step": "Build the exact ranked row transformation after the word-guard compiler, preserving current-occurrence growth provenance.",
+      "upstream_blockers": [
+        "08:lem:guards"
+      ],
+      "checked_prerequisites": [
+        "08:lem:counter"
+      ],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerCompilerTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedTypedCompilerTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean": "07c39062c995e09b3e80da30dc2eec18c252ec593195c22ab0436a1a6597e456",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerCompilerTargets.lean": "1696bb420fd04da010659eb1d28c53c97e9c51720dcb288c43cb90a77a3cd10a",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedTypedCompilerTargets.lean": "d75dfb2d40f9ff777cfb1b2480dc0ad9b570ef959cbe7dc1a0de134b19c9bb22",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json": "55644baf3f1c0946b9526606cbcd25aee6d5a95bb7e742c71b9b5c77a076b972",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md": "b4af622eb0c866edd0f879e7de6c874359c47a4675a5fe5357d9de4d2c4044f9"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:existential",
+      "short_id": "08:thm:existential",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Corrected-source kernel/counter evaluation and effective residue theorems are adopted. Restricted Snyatkov source rows now have correlated linear-name elimination with exact support and primitive-recursive code. That grammar is narrower than this theorem's finite-degree composed-word language.",
+      "remaining_obligation": "The complete closed existential procedure on the printed finite-degree word language is still absent. Word guards and ranked cancellation remain pending, as does their end-to-end assembly with the checked residue suppliers, finite exceptions and correlated Presburger elimination. The restricted source-row linear eliminator is not a whole-word elimination theorem.",
+      "next_completion_step": "Build the complete word-language procedure with decreasing raw-variable count, reusing the checked corrected residues and arithmetic components only where their exact grammars match. Free-parameter or arbitrary alternating-quantifier elimination for the word language is not required by this closed-sentence theorem.",
+      "upstream_blockers": [
+        "08:lem:guards",
+        "08:lem:row"
+      ],
+      "checked_prerequisites": [
+        "08:lem:kernel-residues"
+      ],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/FiniteKernelRecursionTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/KernelCounterResidueTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/FiniteKernelRecursionTargets.lean": "aeb0575c40c6ee8e440d33f206088292cba4745e038924fadff89363abc5f83d",
+        "formalization/LogicLineages/OrdinalComparison/KernelCounterResidueTargets.lean": "fddaf38ecd5edce61850d609c6a4683641e3e6588517c9aaab942b22012191d2",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json": "55644baf3f1c0946b9526606cbcd25aee6d5a95bb7e742c71b9b5c77a076b972",
+        "formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md": "b4af622eb0c866edd0f879e7de6c874359c47a4675a5fe5357d9de4d2c4044f9"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:graphs",
+      "short_id": "08:thm:graphs",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Exact prefix/kernel identities, evaluators and the original-process-to-companion bridge are adopted for the explicitly corrected limit-part convention and genuine signed domains.",
+      "remaining_obligation": "The total polynomial-head graph compiler, finite exceptions, nesting/addition flattening and full functional graph correctness have not been assembled at this word-language contract.",
+      "next_completion_step": "Reuse the accepted corrected kernel/process bridge and construct the full polynomial-head graph translation, with finite exceptions, nesting/addition flattening and quantified equations over the same original shared variables. No new source-convention decision is needed for the already adopted kernel statements.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [
+        "08:lem:kernel-recursion"
+      ],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/FiniteKernelRecursionTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/FiniteKernelRecursionTargets.lean": "aeb0575c40c6ee8e440d33f206088292cba4745e038924fadff89363abc5f83d",
+        "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean": "07c39062c995e09b3e80da30dc2eec18c252ec593195c22ab0436a1a6597e456",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol4-kernels/ROOT-SOURCE-ADOPTION.json": "55644baf3f1c0946b9526606cbcd25aee6d5a95bb7e742c71b9b5c77a076b972"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:leveltwo",
+      "short_id": "08:thm:leveltwo",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Actual source assignment and generated-coordinate invariants are established in the source foundations.",
+      "remaining_obligation": "The internal-level-two polynomial-head classification/consumer and complete counterexample-to-word-graph decision chain remain unassembled; the word decision and graph suppliers are also incomplete.",
+      "next_completion_step": "Complete the source polynomial-head classifier and compose graph translation with the closed existential solver.",
+      "upstream_blockers": [
+        "08:thm:graphs",
+        "08:thm:existential"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean",
+        "08-multivariate-collapse-comparison/paper.tex"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean": "b4d2aa0c15401b2997d7cec5c1ef853abecd4e0b6cce89f34479ac48f3e9f429",
+        "08-multivariate-collapse-comparison/paper.tex": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:common",
+      "short_id": "08:thm:common",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The entire actual common-head grammar-to-literal-BASE compiler is checked: semantic truth, shared original valuation, no new raw variables and unconditional code computability.",
+      "remaining_obligation": "The theorem ALSO asserts decision of arbitrary Boolean/quantified combinations, which still needs full Snyatkov. The literal same-free-variable clause should get an exact support-equality wrapper; current common-head gate guarantees containment and shared identities.",
+      "next_completion_step": "Reuse the complete compiler, add an exact-variable padding wrapper if needed, and compose with the single shared BASE decision supplier.",
+      "upstream_blockers": [
+        "08:thm:snyatkov"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerCompilerTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerComparisonTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerCompilerTargets.lean": "1696bb420fd04da010659eb1d28c53c97e9c51720dcb288c43cb90a77a3cd10a",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerComparisonTargets.lean": "8184f98ef41cbcf648d5dd7ee30d750b682eea1284323fbb65c3595ab26e4b8e"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "08-multivariate-collapse-comparison:thm:balanced",
+      "short_id": "08:thm:balanced",
+      "status": "pending",
+      "source_file": "08-multivariate-collapse-comparison/paper.tex",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The later external work supplies the entire raw/typed balanced compiler, actual shared-certificate semantics, unconditional output computability and exact syntactic free-variable equality. Older local notes listing collection/box/compiler gaps are superseded.",
+      "remaining_obligation": "Only the theorem's Boolean/quantified decision conclusion still requires the full Snyatkov supplier, plus an end-to-end source gate joining that solver to the compiler. Do not rebuild balanced collection, guards or finite boxes.",
+      "next_completion_step": "Adopt the whole theorem after the BASE solver, using BalancedExactVariables as the completed translation endpoint.",
+      "upstream_blockers": [
+        "08:thm:snyatkov"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 14,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedRawCompilerTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedTypedCompilerTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedExactVariablesTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedRawCompilerTargets.lean": "2899a7f36363ed090e0b593d1fa9e608ac91558868b4eddd6225b9e95bb5872e",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedTypedCompilerTargets.lean": "d75dfb2d40f9ff777cfb1b2480dc0ad9b570ef959cbe7dc1a0de134b19c9bb22",
+        "formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedExactVariablesTargets.lean": "c021ce1254092e499aae3d3c286584d30442e274bb5bc629ce44b8a8ab8bd93e"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    },
+    {
+      "id": "09-canonical-source-expressivity:thm:functional-hardness",
+      "short_id": "09:thm:functional-hardness",
+      "status": "pending",
+      "source_file": "09-canonical-source-expressivity/hardness.tex",
+      "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked.",
+      "remaining_obligation": "Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.",
+      "next_completion_step": "Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [],
+      "supporting_component_count": 11,
+      "evidence": [
+        "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean",
+        "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean",
+        "09-canonical-source-expressivity/hardness.tex",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean": "a40a71497cb540846da3b84330447765e8ce85bd80c5e8858f92555d96ac1121",
+        "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean": "14d816a838dc8fa56072a88a3b4e63b006695524ca9106fdb65ca96acd41f6b6",
+        "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean": "e49a7b931cee846e4ea49a864f6f71ecadf70c7dbe7f58e4982f55b80717d849",
+        "09-canonical-source-expressivity/hardness.tex": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json": "1a4f797e20ac1ff2bd532469f0dfb544b9bbb61b58f285d16354d55cc195e02c",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json": "00695c7cd3736eb7cd7f991f165e72eb92a378be163a6c6f196c8f4597355af9",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json": "4f20ac0e0a4b0458d278b2565c774834fed6d2e0add551f43139f7f6c43edf45",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json": "d3aa6de3e13be8d12ae811d0ca592009a7713dc6ba6a7072deebdc587f9894b9",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "12-common-knowledge-necessitation:thm:collapse",
+      "short_id": "12:thm:collapse",
+      "status": "pending",
+      "source_file": "12-common-knowledge-necessitation/paper.tex",
+      "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The exact source Base/syntax apparatus, self-indexed proof calibration and same-parameter selected-agent/KT consistency pair are adopted as lem:three and thm:consistency. Actual diagonal and conditional Lob suppliers, retained-parameter closed-instance CK equations, bounded-range and PA addition laws are supporting components.",
+      "remaining_obligation": "Actual internal HB2/HB3 for the chosen source provability predicate, identification of the chosen source CK within that same construction, and the full selected collapse derivation remain pending. Source Base availability and self-indexed calibration are already adopted; they do not discharge internal HB or the chosen-CK identification. The conditional Lob theorem still assumes its HB instances.",
+      "next_completion_step": "Reuse the adopted source Base and self-indexed calibration. Establish actual internal HB2/HB3 and the chosen CK correspondence, then assemble the source collapse without proof-oracle premises.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [
+        "12:lem:three"
+      ],
+      "supporting_component_count": 1,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionTargets.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowUniformCommonKnowledgeTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/claude/ROOT-SOURCE-ADOPTION.json",
+        "formalization/LogicLineages/ComputabilityKnowledge/SourceBaseCompletion/BaseTargets.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedLobReductionTargets.lean": "3af1bdebab2880151a8b66b0bebb83fd21ad648dc783f73aed03d770c8542c06",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowUniformCommonKnowledgeTargets.lean": "27cd707654c41fc672b938247d1ec73ec0385b72ecb728a4a87422f0ca96f22c",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/claude/ROOT-SOURCE-ADOPTION.json": "aafb30b280d2c6da52151ed6fcc56f4c13716269500662bbc1a129b129602e8f",
+        "formalization/LogicLineages/ComputabilityKnowledge/SourceBaseCompletion/BaseTargets.lean": "00a155c948f0b78d847eb90e8058aa142c1490ff3877892231d9078483771e0a"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "12-common-knowledge-necessitation:corollary-3",
+      "short_id": "12:corollary-3",
+      "status": "pending",
+      "source_file": "12-common-knowledge-necessitation/paper.tex",
+      "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Uniform retained-parameter common-knowledge fixed-point equations exist. The same actual source Base/syntax and selected-agent/consistency package has now been adopted; the fixed-point supplier is not the original D-equivalence.",
+      "remaining_obligation": "The original D-equivalence to CK_A(b) still requires identification of the chosen CK within the adopted source Base construction and the pending source collapse theorem. A fixed-point supplier alone is not this equivalence.",
+      "next_completion_step": "Assemble this short logical consumer once the actual collapse/source CK contract is available.",
+      "upstream_blockers": [
+        "12:thm:collapse"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 2,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowUniformCommonKnowledgeTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/claude/ROOT-SOURCE-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowUniformCommonKnowledgeTargets.lean": "27cd707654c41fc672b938247d1ec73ec0385b72ecb728a4a87422f0ca96f22c",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/claude/ROOT-SOURCE-ADOPTION.json": "aafb30b280d2c6da52151ed6fcc56f4c13716269500662bbc1a129b129602e8f"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "12-common-knowledge-necessitation:thm:selector",
+      "short_id": "12:thm:selector",
+      "status": "pending",
+      "source_file": "12-common-knowledge-necessitation/paper.tex",
+      "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "Actual published KT/FS/veracity syntax is available, and whole-source lem:three/thm:consistency are adopted in one source Base construction.",
+      "remaining_obligation": "The full-language source-KT selector classification still depends on the source collapse theorem and chosen-CK identification within the already adopted Base. The completed consistency pair is not the selector classification.",
+      "next_completion_step": "Compose actual veracity/atomic contradiction truth with the source collapse and prove both selector equivalences.",
+      "upstream_blockers": [
+        "12:thm:collapse"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedAtomicTruthTargets.lean",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/claude/ROOT-SOURCE-ADOPTION.json"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean": "8ebade5659a1a0bf4aee12b0994602bf68e2d893c45d1952dff1a8558f852729",
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedAtomicTruthTargets.lean": "be8e792a4df7296e9f88e9beeb47740936e5b3e34f6dafdb3a8dbefba6a5baa2",
+        "formalization/verification/local-resume-2026-11-04-six-lanes/claude/ROOT-SOURCE-ADOPTION.json": "aafb30b280d2c6da52151ed6fcc56f4c13716269500662bbc1a129b129602e8f"
+      },
+      "review": "refreshed against newer accepted evidence"
+    },
+    {
+      "id": "12-common-knowledge-necessitation:cor:finite",
+      "short_id": "12:cor:finite",
+      "status": "pending",
+      "source_file": "12-common-knowledge-necessitation/paper.tex",
+      "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
+      "classification": "missing_foundation_or_downstream",
+      "existing_coverage": "The actual KT proof system already has the CLOSED theorem-only knowledge-necessitation constructor.",
+      "remaining_obligation": "The source counterexample theta theorem is not yet established through the collapse/selector chain. No new internally quantified iteration theorem is needed: r is an external fixed natural number.",
+      "next_completion_step": "After the source theta theorem, induct externally using the existing closed rule; avoid general recursive-graph or internally quantified iteration work for this corollary.",
+      "upstream_blockers": [
+        "12:thm:selector"
+      ],
+      "checked_prerequisites": [],
+      "supporting_component_count": 0,
+      "evidence": [
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean"
+      ],
+      "evidence_sha256": {
+        "formalization/LogicLineages/ComputabilityKnowledge/GorbowPublishedKTDefinitions.lean": "8ebade5659a1a0bf4aee12b0994602bf68e2d893c45d1952dff1a8558f852729"
+      },
+      "review": "prior assessment retained; status and source pin reconciled"
+    }
+  ]
+}

@@ -1056,13 +1056,15 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
             "remaining_obligation": "The full RE-to-Diophantine/MRDP hardness supplier is absent. The Diophantine power-graph bridge does not supply it. Depth/domain/norm conclusions must be assembled with that supplier.",
             "next_completion_step": "Freeze the exact encoded MRDP-to-comparison completeness endpoint; its missing mathematical input is full MRDP, rather than another reduction gadget.",
-            "upstream_blockers": []
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
           "checked_components": [
             {
@@ -1083,14 +1085,21 @@
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticStatementChecks",
               "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-ARITHMETIC-ADOPTION.json",
-              "scope": "Actual variable-length sparse number bound/all-digits/source-digits/injectivity/exact parallel addition Full all-ones uniqueness/Dioph, product masking and variable bounded-universal closure/MRDP remain pending."
+              "scope": "Actual variable-length sparse-number bounds, all-digits/source-digits, injectivity and exact parallel addition. This component does not establish ones-Diophantineness or variable bounded-universal closure/MRDP. Cipher product and multiplication are covered by the separately adopted CipherProductStatementChecks."
             },
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityStatementChecks",
               "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-VALIDITY-ADOPTION.json",
-              "scope": "Full literal actual bounded n-vector cipher iff actual Nat mask, all n/q/a incl empty, original n+1<q and digits<2^q; no ones-Dioph premise Full product/ones-Dioph/bounded-universal closure/MRDP remain pending."
+              "scope": "Full literal actual bounded n-vector cipher iff actual Nat mask, all n/q/a including empty vectors, original n+1<q and digit bounds, with no ones-Diophantineness premise. Ones-Diophantineness, variable bounded-universal closure and MRDP remain pending. Cipher product and multiplication are covered by the separately adopted CipherProductStatementChecks."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
+              "scope": "Actual variable-length cipher product mask and multiplication, retaining n+1<q and digit bounds, including empty vectors. Full MRDP/H10 and bounded-universal closure remain unproved. Supporting component only; no numbered source promotion.",
+              "register_reconciliation": "audits/REGISTER-RECONCILIATION-2026-11-05.json"
             }
-          ]
+          ],
+          "latest_coverage_note": "Literal depth-two polynomial-to-comparison reductions, positive-variable framing, WW ground-domain/norm transport and co-c.e. counterexample enumeration are checked. Accepted Diophantine suppliers include pair/composition and recursion-free graph closure, binomial and bit-mask graphs, and variable-length cipher arithmetic, validity and product/multiplication. None supplies full MRDP or H10 undecidability. Full source hardness remains pending."
         },
         {
           "id": "02-exponential-comparison:lem:restricted-product",
@@ -1145,15 +1154,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
             "remaining_obligation": "Undecidability still depends on finite-bare-hardness/MRDP; the padding theorem itself is not the remaining foundational gap.",
             "next_completion_step": "Reuse the complete padding/code gates when the preceding hardness endpoint is available.",
             "upstream_blockers": [
               "02:thm:finite-bare-hardness"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -1271,13 +1282,15 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "assembly_or_source_contract",
             "source_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
             "remaining_obligation": "The printed finite-valued ordinal/O-vector domain includes collapse terms. Finite-valuedness does not imply membership in the pure exponential-polynomial fragment covered by the scalar procedures. No accepted reduction/decision theorem covers that broader domain. This is an unresolved source/proof scope gap, not a proved counterexample and not merely componentwise vector bookkeeping.",
             "next_completion_step": "Resolve the exact intended domain first. Keeping the printed broad scope requires a genuine collapse-language decision bridge; narrowing it to the proved exponential fragment would be an explicit manuscript correction. Reuse the already complete affine clause.",
-            "upstream_blockers": []
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
           "source_issue": {
             "state": "Unresolved printed-domain/proof-scope gap; no counterexample claimed",
@@ -3639,13 +3652,15 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "assembly_or_source_contract",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "The printed lemma quantifies over a natural coherent constructor family. The same-family cross-type full-tuple law needed for source application is proved at the actual fixed point, not for an arbitrary such family. No concrete counterexample has been established.",
             "next_completion_step": "Resolve the generic-family contract explicitly, then assemble substitution and literal special-application correspondence at that same scope.",
-            "upstream_blockers": []
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
           "source_issue": {
             "state": "Generic coherent-family correspondence unproved; no concrete counterexample claimed",
@@ -3909,13 +3924,15 @@
             "preserved_theorems": "Earlier exact local adequacy, decision and ranked-RPO targets retain their established frozen meanings; no theorem is retargeted to a changed relation."
           },
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "source_repair_or_convention",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "A checked source-confined finite-signature counterexample refutes transitivity/compatibility of the immutable local relation. Its disagreement with Kop's published theorem must be resolved; the published theorem is not thereby refuted.",
             "next_completion_step": "Identify the precise source rule/correspondence repair before attempting the unchanged stable-pair conclusion. Preserve existing relation pins and negative evidence.",
-            "upstream_blockers": []
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -4674,29 +4691,31 @@
               "scope": "Actual joint-Gamma primitive raw primary/test/representative/canonical carrier, exactly calibrated to all unchanged original computations; context encoding fibers exact and no cross-context edges. Joint quotient/path/DM/object-Program supplier and internal arithmetic/constructor/fundamental derivations remain pending. Supporting component; no whole-source promotion."
             }
           ],
-          "coverage_note": "Checked supporting components provide the actual auxiliary codecs, finite primary classes, least-code representatives, original root/contextual/quotient certificate algorithms, original-source codec and shared-window structural translation. The complete numeric step checker is primitive recursive jointly in Gamma; quotient certificate computations retain their stated fixed signature/arity/ambient-context family. The local continuation proves a full structural primitive-recursive Program compiler into ordinary first-order arithmetic and exact standard-natural-number arithmetic formulas for the unchanged quotient H and positive closure R. Encoded symbol/type windows and Boolean tables vary jointly, with the SAME S at both endpoints and fixed n, arity and Gamma. Malformed encoded contexts are rejected and empty paths do not witness R. Internal ID1 interpretation/accessibility, other source-required arithmetic interfaces, exact whole-source simulation assembly and ordinal/norm extraction remain separate. No source definition, guard, source status or local transitivity diagnostic is changed.",
+          "coverage_note": "The actual finitary single-positive-operator ID1 calculus, full expanded-language PA induction, exact invariant/natural/instance rules, soundness and standard least model are checked. A concrete fixed-Gamma source presentation and conditional proof-tree-to-original-R soundness are checked. Joint-Gamma primary tests, representatives and canonical carrier are checked; these do not construct the all-term proof tree. The whole endpoint is ContextUniformTargets.ActualContextUniformInternalAccessibility: one fixed-S operator and closed internal derivation must cover all ambient contexts, including binder extensions. Joint-context quotient/path/direct-multiset/object-Program suppliers and the actual internal arithmetic, constructor, lambda/fundamental and all-term accessibility derivations remain pending. Fixed-Gamma presentation and conditional soundness do not supply proof-tree existence.",
           "remaining_dependencies": [
             {
-              "description": "Complete the source-required arithmetic interfaces for actual typedness and direct multiset replacement, and connect the ordinary arithmetic definitions to the actual internal ID1 language with precisely the source-required parameters. Ordinary standard-natural-number H/R formulas are now checked for fixed n/arity/Gamma and jointly encoded symbol/type windows and Boolean tables. Their external semantic correctness does not itself supply internal ID1 derivations or any stronger varying-parameter compiler.",
+              "description": "Finish the actual jointly context-encoded quotient/path/direct-multiset/object-Program suppliers and their exact ordinary arithmetic calibration. Joint-Gamma primary tests and canonical representatives are already checked.",
               "status": "pending"
             },
             {
-              "description": "The specified positive arithmetic accessibility and multiset operators, combined by disjoint numerical tags into an actual allowed ID1 inductive definition; finite type-recursive computability clauses must be actual first-order formulas.",
+              "description": "Complete one fixed-S source operator and all-term formula covering every encoded ambient context and binder extension. The fixed-Gamma presentation and actual internal calculus are already checked.",
               "status": "pending"
             },
             {
-              "description": "An internal ID1 derivation of the non-lambda/inverse-application/lambda clauses, multiset accessibility closure, numbered-constructor lexicographic induction, and structural computable-substitution conclusion for every original well-typed auxiliary term, under the actual source assumptions.",
+              "description": "Construct the internal arithmetic, constructor, lambda/fundamental and structural computable-substitution derivations for every original well-typed term at ContextUniformTargets.ActualContextUniformInternalAccessibility. Conditional soundness is not proof-tree existence.",
               "status": "pending"
             }
           ],
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
-            "remaining_obligation": "These are not an internal ID1 derivation. General computable substitution/constructor computability and the actual induction derivations remain missing; restricted ground-lambda drafts do not cover all typed terms.",
-            "next_completion_step": "Specify the actual ID1 proof judgment and prove the full all-term accessibility endpoint, with internal invariants and induction rules explicit.",
-            "upstream_blockers": []
+            "remaining_obligation": "The whole endpoint is ContextUniformTargets.ActualContextUniformInternalAccessibility: one fixed-S operator and closed internal derivation must cover all ambient contexts, including binder extensions. Joint-context quotient/path/direct-multiset/object-Program suppliers and the actual internal arithmetic, constructor, lambda/fundamental and all-term accessibility derivations remain pending. Fixed-Gamma presentation and conditional soundness do not supply proof-tree existence.",
+            "next_completion_step": "Reuse the accepted internal calculus and context-uniform primary interface. Complete the remaining context-uniform source presentation, then construct the internal all-term derivation at ActualContextUniformInternalAccessibility; do not redefine the judgment or weaken it to fixed Gamma.",
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -5032,16 +5051,20 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "The genuine ID1 accessibility proof and Pohlers-style inductive-norm/ordinal stage-bound extraction below Bachmann-Howard are not supplied.",
-            "next_completion_step": "After the ID1 endpoint, formalize the exact cited norm-extraction theorem and apply it to the source-anchored simulation.",
+            "next_completion_step": "Reuse the checked source simulation. Prove the pending context-uniform internal ID1 accessibility endpoint and exact cited inductive-norm/ordinal stage-bound extraction below Bachmann-Howard, then assemble the upper bound.",
             "upstream_blockers": [
-              "06:lem:id1",
+              "06:lem:id1"
+            ],
+            "checked_prerequisites": [
               "06:lem:simulation"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -5090,15 +5113,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "A typed ordinal realization relation with backward/order/countable-supremum closure and the lambda fundamental lemma is not proved. Full ranks also depend on well-foundedness of the intended source relation.",
             "next_completion_step": "Establish the exact relation and well-foundedness scope before the ordinal realization fundamental theorem.",
             "upstream_blockers": [
               "06:thm:stable"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -5153,15 +5178,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "The full-prefix transfinite orbit realization proof, including limits for nonmonotone functions, is absent; reduction edges alone do not prove it.",
             "next_completion_step": "Use the existing edges in one realization theorem once realclosure is available; preserve the entire-prefix limit clause.",
             "upstream_blockers": [
               "06:lem:realclosure"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -5175,15 +5202,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "Zero/successor/omega ordinal realization and the all-iterate cap conclusion have not been assembled at the manuscript's realization contract.",
             "next_completion_step": "Assemble the native primitive realizers with the rank/realization infrastructure; avoid reproving carrier edges.",
             "upstream_blockers": [
               "06:lem:realclosure"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -5197,8 +5226,8 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
             "remaining_obligation": "Both the individual upper bound and full lower realization/calibration are incomplete. The Simmons/helpfulness/cofinal-collapse calibration to BH is an additional mathematical supplier, not supplied by finite kernel or arithmetic checker proofs.",
@@ -5207,7 +5236,9 @@
               "06:thm:upper",
               "06:thm:iteration",
               "06:lem:primitives"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         }
       ]
@@ -6101,13 +6132,15 @@
             }
           ],
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
-            "remaining_obligation": "Full multivariable quantifier elimination/normal forms and arbitrary quantified BASE decision remain unproved. Unary DNF does not cover multiple variables or alternating quantifiers.",
-            "next_completion_step": "Formalize the published multi-variable elimination endpoint; reuse the paid control hypotheses and unary subcase.",
-            "upstream_blockers": []
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+            "remaining_obligation": "The complete arbitrary quantified BASE decision theorem remains unproved. General nonlinear anchors, active-hyper source-case assembly, general affine substitution inside nonlinear arguments, dominant boundaries, exhaustive branch selection and global decreasing quantified-block induction remain pending. Restricted row introduction and linear elimination do not establish the full source existential normal form or expanded elimination closure.",
+            "next_completion_step": "Reuse the accepted row syntax, finite-window and linear-elimination compilers. Close the remaining nonlinear source cases and exhaustive decreasing elimination induction, then prove EffectiveSourceExistentialNormalForm, EffectiveExpandedElimination and FullSourceDecision.",
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
           "latest_coverage_note": "Effective elimination of a selected name occurring only linearly in the restricted source-row grammar now has twelve exact checked targets. The actual finite row compiler preserves arbitrary signed coefficients, every original Boolean/domain position, correlated nonlinear terms at other names and exact eliminated-name support. A fixed-original-valuation Affine0/Affine1 interpretation reuses the accepted Forests Presburger solver without independent derived witnesses. Literal code calibration and primitive recursiveness cover the concrete whole algorithm. General nonlinear anchors, active-hyper case assembly, general affine substitution inside nonlinear arguments, dominant boundaries, exhaustive branch selection, decreasing global induction, full existential normal form and first-order BASE decision remain pending. See verification/cumulative-continuation-2026-11-04-second/linear-rows/ACCEPTANCE.json and SOURCE-CORRESPONDENCE.md."
         },
@@ -6122,15 +6155,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
             "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
             "upstream_blockers": [
               "08:thm:snyatkov"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6275,10 +6310,10 @@
               "scope": "Original full region derives c+d and e+d <=Phi(t). Under first-budget c+d<=Phi(t), exact scheduled parent trace keeps one theta block through inner first-finite cut; child input K satisfies BOTH numerical/actual norm domains. Cut is strict; exact source counts add and values compose. No original-t padded companion equality. Full quantitative separation and exact equality criterion; generic scheduled comparison and whole child-word calibration are the next proof obligations."
             }
           ],
-          "coverage_note": "QuadraticSeparation proves the displayed degree-two V-iteration separation paragraph and exact equal-input signed-index order on its genuine positive-depth domain, using the actual control function and original numerical bound. It is a base supplier for the uniform argument, not the full rank-at-least-three theorem. The higher-rank induction and the source kernel/signed-recurrence correspondence remain pending; no source bound or domain is silently strengthened.",
+          "coverage_note": "The degree-two separation base and higher counter leader/recognition suppliers are checked. The explicitly corrected paper08 limit-part process, genuine signed-domain recursion, full counter theorem and effective residues are now adopted; the original incompatible wording remains historical negative evidence. The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
           "remaining_dependencies": [
             {
-              "description": "Resolve the relevant source kernel-convention and signed-child-domain correspondence before using recursive block formulas as full-source suppliers.",
+              "description": "Connect the full uniform separation induction to the already accepted corrected limit-part source process and genuine signed domains. The kernel convention and three corrected kernel/counter/residue source statements are no longer unresolved; the growing-mass uniform theorem is still pending.",
               "status": "pending"
             },
             {
@@ -6287,15 +6322,18 @@
             }
           ],
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
-            "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's uniform region/constants is not proved. It must use a resolved kernel convention and valid signed domains.",
-            "next_completion_step": "Freeze the entire rank>=3 separation statement under the resolved convention and discharge the growing-mass induction.",
-            "upstream_blockers": [
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+            "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
+            "next_completion_step": "Freeze and prove the entire rank-at-least-three statement under the now explicit corrected source convention, retaining the printed C_d/T_d, growing retained masses and every regional hypothesis. Reuse the accepted kernel/counter package.",
+            "upstream_blockers": [],
+            "checked_prerequisites": [
               "08:lem:kernel-recursion"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6510,16 +6548,20 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "No complete effectual comparison compiler for arbitrary composed words with ordered raw-variable guards, all signed domains and a verified decreasing recursion measure is present.",
             "next_completion_step": "Prove the whole ordered-word guard compiler, using the source's two-part termination measure and exact shared-variable semantics.",
             "upstream_blockers": [
-              "08:lem:uniform",
+              "08:lem:uniform"
+            ],
+            "checked_prerequisites": [
               "08:lem:counter"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6533,16 +6575,20 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "Arbitrary word-linear ranked cancellation, all generated guards and the well-founded top-level rank measure remain unproved. The common-head/balanced compilers do not establish this word-language lemma.",
             "next_completion_step": "Build the exact ranked row transformation after the word-guard compiler, preserving current-occurrence growth provenance.",
             "upstream_blockers": [
-              "08:lem:guards",
+              "08:lem:guards"
+            ],
+            "checked_prerequisites": [
               "08:lem:counter"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6556,17 +6602,21 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
-            "remaining_obligation": "The complete closed existential decision on the printed finite-degree word language has no accepted end-to-end algorithm. It needs word guards, ranked cancellation, residue transport, finite exceptions and Presburger elimination with derived values retained as correlated terms.",
-            "next_completion_step": "Prove the closed-sentence procedure with decreasing raw-variable count; this does not require free-parameter or arbitrary alternating-quantifier elimination for the word language.",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+            "remaining_obligation": "The complete closed existential procedure on the printed finite-degree word language is still absent. Word guards and ranked cancellation remain pending, as does their end-to-end assembly with the checked residue suppliers, finite exceptions and correlated Presburger elimination. The restricted source-row linear eliminator is not a whole-word elimination theorem.",
+            "next_completion_step": "Build the complete word-language procedure with decreasing raw-variable count, reusing the checked corrected residues and arithmetic components only where their exact grammars match. Free-parameter or arbitrary alternating-quantifier elimination for the word language is not required by this closed-sentence theorem.",
             "upstream_blockers": [
               "08:lem:guards",
-              "08:lem:row",
+              "08:lem:row"
+            ],
+            "checked_prerequisites": [
               "08:lem:kernel-residues"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6580,15 +6630,18 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "The total polynomial-head graph compiler, finite exceptions, nesting/addition flattening and full functional graph correctness have not been assembled at this word-language contract.",
-            "next_completion_step": "Construct the graph translation after the convention/domain repair; keep original shared variables and quantified node equations.",
-            "upstream_blockers": [
+            "next_completion_step": "Reuse the accepted corrected kernel/process bridge and construct the full polynomial-head graph translation, with finite exceptions, nesting/addition flattening and quantified equations over the same original shared variables. No new source-convention decision is needed for the already adopted kernel statements.",
+            "upstream_blockers": [],
+            "checked_prerequisites": [
               "08:lem:kernel-recursion"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6602,16 +6655,18 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "The internal-level-two polynomial-head classification/consumer and complete counterexample-to-word-graph decision chain remain unassembled; the word decision and graph suppliers are also incomplete.",
             "next_completion_step": "Complete the source polynomial-head classifier and compose graph translation with the closed existential solver.",
             "upstream_blockers": [
               "08:thm:graphs",
               "08:thm:existential"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6663,15 +6718,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "The theorem ALSO asserts decision of arbitrary Boolean/quantified combinations, which still needs full Snyatkov. The literal same-free-variable clause should get an exact support-equality wrapper; current common-head gate guarantees containment and shared identities.",
             "next_completion_step": "Reuse the complete compiler, add an exact-variable padding wrapper if needed, and compose with the single shared BASE decision supplier.",
             "upstream_blockers": [
               "08:thm:snyatkov"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -6806,15 +6863,17 @@
             }
           ],
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
-            "source_sha256": "3c2bf4cb4d8b6145acf67ce14c3d818bd20c572b6547b07d57d8598b45940b25",
+            "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
             "remaining_obligation": "Only the theorem's Boolean/quantified decision conclusion still requires the full Snyatkov supplier, plus an end-to-end source gate joining that solver to the compiler. Do not rebuild balanced collection, guards or finite boxes.",
             "next_completion_step": "Adopt the whole theorem after the BASE solver, using BalancedExactVariables as the completed translation endpoint.",
             "upstream_blockers": [
               "08:thm:snyatkov"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -7890,13 +7949,15 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
-            "remaining_obligation": "The exact Narendran/Dong linear-system-over-N[X] undecidability supplier, effective system/zero-pattern reductions, and level-three single-query Omega-seed branch are not completed. A positive lift of nonzero polynomials does not handle all zero patterns or prove undecidability.",
-            "next_completion_step": "Freeze the polynomial-system problem and its undecidability endpoint; independently review zero-pattern substitution, then close system-level and level-three reductions.",
-            "upstream_blockers": []
+            "remaining_obligation": "Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.",
+            "next_completion_step": "Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.",
+            "upstream_blockers": [],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
           "checked_components": [
             {
@@ -7932,7 +7993,7 @@
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticStatementChecks",
               "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-ARITHMETIC-ADOPTION.json",
-              "scope": "Actual variable-length sparse number bound/all-digits/source-digits/injectivity/exact parallel addition Full all-ones uniqueness/Dioph, product masking and variable bounded-universal closure/MRDP remain pending."
+              "scope": "Actual variable-length sparse-number bounds, all-digits/source-digits, injectivity and exact parallel addition. This component does not establish ones-Diophantineness or variable bounded-universal closure/MRDP. Cipher product and multiplication are covered by the separately adopted CipherProductStatementChecks."
             },
             {
               "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.NarendranStatementChecks",
@@ -7942,10 +8003,22 @@
             {
               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityStatementChecks",
               "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-VALIDITY-ADOPTION.json",
-              "scope": "Full literal actual bounded n-vector cipher iff actual Nat mask, all n/q/a incl empty, original n+1<q and digits<2^q; no ones-Dioph premise Full product/ones-Dioph/bounded-universal closure/MRDP remain pending."
+              "scope": "Full literal actual bounded n-vector cipher iff actual Nat mask, all n/q/a including empty vectors, original n+1<q and digit bounds, with no ones-Diophantineness premise. Ones-Diophantineness, variable bounded-universal closure and MRDP remain pending. Cipher product and multiplication are covered by the separately adopted CipherProductStatementChecks."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
+              "scope": "Actual variable-length cipher product mask and multiplication, retaining n+1<q and digit bounds, including empty vectors. Full MRDP/H10 and bounded-universal closure remain unproved. Supporting component only; no numbered source promotion.",
+              "register_reconciliation": "audits/REGISTER-RECONCILIATION-2026-11-05.json"
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedStatementChecks",
+              "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
+              "scope": "Literal closed higher-recursion source, actual positive closed Omega with finite projection zero, and actual scaled signed pair with internal level<=3. No assumed seed supplier. Full seeded-system compiler and functional hardness remain unproved. Supporting component only; no numbered source promotion.",
+              "register_reconciliation": "audits/REGISTER-RECONCILIATION-2026-11-05.json"
             }
           ],
-          "latest_coverage_note": "Actual simultaneous original source system equality/shared-valuation preservation, strict/weak query complements and free1/internal2 bounds are checked. All four genuine Narendran polynomial gadgets are checked. Full coded H10-to-linear adapter, numerical source reductions, true H10/MRDP supplier and complete actual level3 single-query reduction remain unpaid. No assumed undecidability or surrogate source domain."
+          "latest_coverage_note": "Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked. Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure."
         },
         {
           "id": "09-canonical-source-expressivity:lem:perturbed-control",
@@ -8972,15 +9045,18 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
-            "remaining_obligation": "Actual internal HB2/HB3 for the chosen source provability predicate, source Base/coding and chosen-CK identification, and the full selected collapse derivation remain missing. The conditional Lob theorem explicitly assumes HB instances.",
-            "next_completion_step": "Discharge internal HB for the actual predicate and identify the chosen CK, then assemble the collapse without imported proof-oracle premises.",
-            "upstream_blockers": [
+            "remaining_obligation": "Actual internal HB2/HB3 for the chosen source provability predicate, identification of the chosen source CK within that same construction, and the full selected collapse derivation remain pending. Source Base availability and self-indexed calibration are already adopted; they do not discharge internal HB or the chosen-CK identification. The conditional Lob theorem still assumes its HB instances.",
+            "next_completion_step": "Reuse the adopted source Base and self-indexed calibration. Establish actual internal HB2/HB3 and the chosen CK correspondence, then assemble the source collapse without proof-oracle premises.",
+            "upstream_blockers": [],
+            "checked_prerequisites": [
               "12:lem:three"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
           "checked_components": [
             {
@@ -9014,15 +9090,17 @@
             }
           ],
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
-            "remaining_obligation": "The original D-equivalence to CK_A(b) requires source-chosen CK/Base correspondence and thm:collapse. A fixed-point supplier alone is not this equivalence.",
+            "remaining_obligation": "The original D-equivalence to CK_A(b) still requires identification of the chosen CK within the adopted source Base construction and the pending source collapse theorem. A fixed-point supplier alone is not this equivalence.",
             "next_completion_step": "Assemble this short logical consumer once the actual collapse/source CK contract is available.",
             "upstream_blockers": [
               "12:thm:collapse"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -9036,15 +9114,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
-            "remaining_obligation": "The source-KT selector classification still depends on the source collapse theorem and Base/CK correspondence, with full-language selectors retained.",
+            "remaining_obligation": "The full-language source-KT selector classification still depends on the source collapse theorem and chosen-CK identification within the already adopted Base. The completed consistency pair is not the selector classification.",
             "next_completion_step": "Compose actual veracity/atomic contradiction truth with the source collapse and prove both selector equivalences.",
             "upstream_blockers": [
               "12:thm:collapse"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -9058,15 +9138,17 @@
           "accepted_declaration": null,
           "frozen_comparator": null,
           "completion_audit": {
-            "date": "2026-11-04",
-            "report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "date": "2026-11-05",
+            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
             "classification": "missing_foundation_or_downstream",
             "source_sha256": "7837a0498407b5f9b2a892d6478f02f250943ae62ff69649474700cef89bb4bc",
             "remaining_obligation": "The source counterexample theta theorem is not yet established through the collapse/selector chain. No new internally quantified iteration theorem is needed: r is an external fixed natural number.",
             "next_completion_step": "After the source theta theorem, induct externally using the existing closed rule; avoid general recursive-graph or internally quantified iteration work for this corollary.",
             "upstream_blockers": [
               "12:thm:selector"
-            ]
+            ],
+            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           }
         },
         {
@@ -10453,5 +10535,12 @@
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
   "source_completion_updated_at_utc": "2026-11-04T21:07:50.599180+00:00",
-  "supporting_components_updated_at_utc": "2026-11-05T04:50:33.027462+00:00"
+  "supporting_components_updated_at_utc": "2026-11-05T05:59:10.247771+00:00",
+  "register_reconciliation": {
+    "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
+    "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
+    "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+    "verification": "audits/REGISTER-RECONCILIATION-2026-11-05.json",
+    "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
+  }
 }

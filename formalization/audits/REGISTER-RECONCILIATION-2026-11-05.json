@@ -1,0 +1,98 @@
+{
+  "schema": "statement-register-static-verification-v1",
+  "verified_at_utc": "2026-11-05T05:59:10.247771+00:00",
+  "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
+  "baseline_targets_sha256": "f68a9d9ea16d046790d1dee298304741723efa32e0aebb4ab4391569d331ce2f",
+  "updated_targets_sha256": "5dd603abcd72d1a66d20f90194acc3e9f67b0c5c77f25e86d122c5d8f0d2a71e",
+  "pending_report_sha256": "07586af78ccb945cba6d9a3858caa176b1e1e27826f09b94476c4abbc8caab15",
+  "checks": {
+    "paper_count": 15,
+    "numbered_statement_count": 189,
+    "status_counts": {
+      "checked": 161,
+      "pending": 26,
+      "existing-calculator-package": 2
+    },
+    "all_statement_statuses_and_contracts_preserved": true,
+    "all_accepted_declarations_and_comparators_preserved": true,
+    "newly_registered_previously_adopted_gates": 2,
+    "new_component_to_statement_edges": 3,
+    "all_new_component_source_pins_match": true,
+    "new_component_source_pin_checks": 436,
+    "all_new_component_exact_gate_receipts_successful": true,
+    "all_new_component_axiom_reports_allowed": true,
+    "pending_statement_report_count": 26,
+    "all_current_source_and_evidence_files_exist_and_are_hashed": true,
+    "checked_prerequisite_edges_separated_from_pending_blockers": 7,
+    "all_remaining_statement_blockers_are_pending": true,
+    "historical_audit_unchanged": true,
+    "lean_or_lake_invocations": 0,
+    "whole_root_build": false,
+    "remote_ci": false
+  },
+  "scope_limit": "Historical exact-gate evidence is inspected, not rerun. In particular, the Omega seed gate passed but the same receipt contains a later SeededCompilerProof failure. No seeded-system acceptance is inferred.",
+  "component_verification": [
+    {
+      "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
+      "adoption_sha256": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks",
+      "matching_source_pin_count": 24,
+      "all_source_pins_match": true,
+      "allowed_axiom_reports": 2,
+      "imported_by_public_root": true,
+      "registered_source_statements": [
+        "02-exponential-comparison:thm:finite-bare-hardness",
+        "09-canonical-source-expressivity:thm:functional-hardness"
+      ],
+      "native_receipts": [
+        {
+          "file": "verification/local-resume-2026-11-04-six-lanes/publication-receipts/1793833506617686069-2.json",
+          "sha256": "fa07f1bbfd4a27da4d8b9ab094d36ba757384482251230c3720e21d1929562a4",
+          "gate": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductStatementChecks",
+          "gate_returncode": 0,
+          "other_failed_modules": [],
+          "whole_receipt_passed": true
+        }
+      ]
+    },
+    {
+      "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
+      "adoption_sha256": "d3aa6de3e13be8d12ae811d0ca592009a7713dc6ba6a7072deebdc587f9894b9",
+      "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedStatementChecks",
+      "matching_source_pin_count": 412,
+      "all_source_pins_match": true,
+      "allowed_axiom_reports": 3,
+      "imported_by_public_root": true,
+      "registered_source_statements": [
+        "09-canonical-source-expressivity:thm:functional-hardness"
+      ],
+      "native_receipts": [
+        {
+          "file": "verification/local-resume-2026-11-04-six-lanes/publication-receipts/1793833243956850733-2.json",
+          "sha256": "2ae4e5f8a6420bb31724d8da3d484d3ba8dc3fa93e6ab403a2c10d6fd2008bbd",
+          "gate": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.OmegaSeedStatementChecks",
+          "gate_returncode": 0,
+          "other_failed_modules": [
+            "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededCompilerProof"
+          ],
+          "whole_receipt_passed": false
+        }
+      ]
+    }
+  ],
+  "independent_static_crosscheck": {
+    "passed": true,
+    "statement_contracts_preserved": 189,
+    "pending_statements_reconciled": 26,
+    "source_and_evidence_hash_references_checked": 116,
+    "local_markdown_links_resolve": 92,
+    "cited_adoption_records": 11,
+    "cited_adoption_source_pin_checks": 483,
+    "current_linear_row_source_closure_matches_successful_historical_receipts": 226,
+    "linear_row_frozen_files_unchanged": 3,
+    "historical_audit_files_unchanged": 2,
+    "tracked_non_register_changes": 0,
+    "git_diff_check_passed": true,
+    "new_native_compilations": 0
+  }
+}
