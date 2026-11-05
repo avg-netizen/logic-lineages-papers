@@ -1,0 +1,7 @@
+# Accepted total coded finite-query checkpoint
+
+The exact finite-query gate and focused 728-module cumulative aggregate passed under the unchanged serialized caps. Six independently accepted source files contribute six exact aliases, all using only propext, Classical.choice and Quot.sound. 2 local modules were freshly compiled; the remainder used source-matched accepted cache and prior component evidence. Full source pins and successful receipt/log hashes are recorded alongside this status.
+
+The total coded finite lists discharge unchanged FiniteQueryReduction true and false: encoded polynomial-system unsatisfiability is equivalent to conjunction of universal strict or weak comparisons of genuine ground queries with original level-two bounds. Every natural input, including malformed and out-of-range data, is covered. The previously accepted level-three single-query reductions remain intact. Genuine encoded-polynomial-system undecidability, its required coded adapter and whole functional hardness remain pending. General nonlinear BASE remains pending.
+
+The published base is ec039bdf93553e47d46c08406c28328405fd37cd, tree 87fc070898f2133f5c06aec5f251231ad6b88d9c. This preparation has not attempted publication. Raw compiler receipts/logs remain locally retained, not included in the source-only delta. No numbered statement is promoted: 161 checked, 2 inherited, 26 pending / 189. No full-root or remote-CI claim is made.

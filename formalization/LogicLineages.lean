@@ -2163,3 +2163,6 @@ public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskR
 
 -- Literal plain-Phi dominant boundary, a restricted specialization of paper 08 lem:row.
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks
+
+-- Total coded strict/weak level-two finite source-query lists, including malformed inputs.
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.FiniteQueryCodeStatementChecks

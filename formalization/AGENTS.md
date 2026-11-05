@@ -1,3 +1,12 @@
+Current prepared checkpoint: **total coded level-two finite queries.**
+Six independently accepted source files add six exact aliases, including both
+unchanged FiniteQueryReduction obligations. The 728-module aggregate is
+checked together with the exact finite-query gate. Read
+`verification/cumulative-continuation-2026-11-05/combined-finite-query/STATUS.md`.
+Genuine encoded-polynomial-system undecidability, the required coded adapter,
+whole functional hardness and general nonlinear BASE remain pending.
+Register: 161/2/26 of 189. No publication attempted.
+
 Current prepared checkpoint: **mask restriction and plain-Phi dominance.**
 Twelve independently accepted files add ten exact aliases. The 716-module
 focused cumulative aggregate and both exact component gates passed.

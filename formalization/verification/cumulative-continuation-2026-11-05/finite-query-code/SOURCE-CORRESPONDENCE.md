@@ -1,0 +1,11 @@
+# Total coded level-two finite queries: source correspondence
+
+This component supports the finite-query clause of paper 09, hardness.tex, thm:functional-hardness. It uses the existing polynomial-system codes, actual plain source system, masks, restriction and GroundQuery packing. It discharges the unchanged FiniteQueryReduction true and FiniteQueryReduction false propositions without an undecidability premise.
+
+Six exact targets establish actual original source-query and finite-list code calibration, primitive-recursive numeric programs and total strict/weak level-two finite-query reductions on every natural input code. Every original zero mask is retained, using one shared indexed restriction across repeated occurrences and equations. Undecodable data and out-of-range references use the literal unsatisfiable one-equation fallback. The unchanged FiniteQueryReduction true and FiniteQueryReduction false obligations are discharged: encoded polynomial-system unsatisfiability is equivalent to the conjunction of universal comparisons of the computed genuine ground queries with the original level-two bounds. Genuine encoded-polynomial-system undecidability and whole functional hardness remain pending.
+
+The strict pair order retains the original complement convention. Each typed query is built from one restricted system; every equation keeps its original shared variable space. The exact existing complete mask enumeration retains zero polynomial possibilities rather than assuming all unknowns nonzero. Literal list calibration connects the actual typed list with the computed output.
+
+The result applies to every natural input code. The existing validity test rejects malformed and out-of-range data into System 0 = [.unit], whose one-mask finite query list is genuine and universally true under either comparison convention. Empty systems and zero variables remain covered. The query list satisfies original ground/free-level-one/internal-level-two bounds.
+
+This is a reduction theorem, not undecidability by itself. A genuine encoded-polynomial-system undecidability supplier, its required coded adapter, and the full source hardness assembly remain pending. No numbered source statement is promoted.
