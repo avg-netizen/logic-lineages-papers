@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks
+
+theorem exact_ground_valuations : GroundAdmissibleComparisonTargets.ExactGroundValuations :=
+  GroundAdmissibleComparisonProof.exactGroundValuations
+theorem vector_relation_at : GroundAdmissibleComparisonTargets.VectorRelationAt :=
+  GroundAdmissibleComparisonProof.vectorRelationAt
+theorem universal_comparison : GroundAdmissibleComparisonTargets.UniversalComparison :=
+  GroundAdmissibleComparisonProof.universalComparison
+theorem actual_canonical_comparison : GroundAdmissibleComparisonTargets.ActualCanonicalComparison :=
+  GroundAdmissibleComparisonProof.actualCanonicalComparison
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks

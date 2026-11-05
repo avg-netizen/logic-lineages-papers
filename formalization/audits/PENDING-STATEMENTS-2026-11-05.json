@@ -2,15 +2,15 @@
   "schema": "pending-source-register-reconciliation-v1",
   "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
   "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
-  "scope": "Targeted successor to the 5 November reconciliation: only thm:functional-hardness is promoted after its recorded integration prerequisite. The other 25 pending entries retain their prior assessments verbatim; this is not a fresh audit of them. No new native compilation, full-root build or remote CI is claimed by this metadata update.",
+  "scope": "Targeted finite-source successor after passed focused native verification. Only 08:thm:finite-source is newly promoted; the prior functional-hardness promotion is retained. The other 24 pending entries are unchanged verbatim and have not been re-audited. No full-root build or remote CI is claimed.",
   "prior_audit": "audits/PENDING-STATEMENTS-2026-11-04.json",
   "counts": {
-    "checked": 162,
-    "pending": 25,
+    "checked": 163,
+    "pending": 24,
     "existing-calculator-package": 2
   },
   "numbered_statement_count": 189,
-  "numbered_source_promotions": 1,
+  "numbered_source_promotions": 2,
   "newly_registered_prior_components": [
     {
       "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
@@ -424,31 +424,6 @@
       "review": "refreshed against newer accepted evidence"
     },
     {
-      "id": "08-multivariate-collapse-comparison:thm:finite-source",
-      "short_id": "08:thm:finite-source",
-      "status": "pending",
-      "source_file": "08-multivariate-collapse-comparison/paper.tex",
-      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
-      "classification": "missing_foundation_or_downstream",
-      "existing_coverage": "Literal source assignment, generated positive-coordinate finiteness for recursor-free terms, and finite-head collapse identities exist.",
-      "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
-      "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
-      "upstream_blockers": [
-        "08:thm:snyatkov"
-      ],
-      "checked_prerequisites": [],
-      "supporting_component_count": 0,
-      "evidence": [
-        "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean",
-        "formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean"
-      ],
-      "evidence_sha256": {
-        "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean": "b4d2aa0c15401b2997d7cec5c1ef853abecd4e0b6cce89f34479ac48f3e9f429",
-        "formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean": "0d9a05bb411f91574f61a058d64b304ce550e2fbd885040a0998a5c20746b1e6"
-      },
-      "review": "prior assessment retained; status and source pin reconciled"
-    },
-    {
       "id": "08-multivariate-collapse-comparison:lem:uniform",
       "short_id": "08:lem:uniform",
       "status": "pending",
@@ -780,10 +755,38 @@
     }
   ],
   "completion_update": {
-    "prepared_at_utc": "2026-11-05T13:40:22.346832+00:00",
-    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
-    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
-    "promoted_statement": "09-canonical-source-expressivity:thm:functional-hardness",
-    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
-  }
+    "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
+    "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
+    "report": "audits/FINITE-SOURCE-COMPLETION-2026-11-05.json",
+    "statement": "08-multivariate-collapse-comparison:thm:finite-source",
+    "native_verification": {
+      "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+      "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+    },
+    "counts_before": {
+      "checked": 162,
+      "pending": 25,
+      "existing-calculator-package": 2
+    },
+    "counts_after": {
+      "checked": 163,
+      "pending": 24,
+      "existing-calculator-package": 2
+    },
+    "numbered_source_promotions_in_this_update": 1,
+    "numbered_source_promotions_cumulative": 2,
+    "full_root_build": false,
+    "remote_ci_claim": false,
+    "promoted_statement": "08-multivariate-collapse-comparison:thm:finite-source"
+  },
+  "source_completion_updated_at_utc": "2026-11-05T20:15:59.083452+00:00",
+  "completion_update_history": [
+    {
+      "prepared_at_utc": "2026-11-05T13:40:22.346832+00:00",
+      "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
+      "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+      "promoted_statement": "09-canonical-source-expressivity:thm:functional-hardness",
+      "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+    }
+  ]
 }

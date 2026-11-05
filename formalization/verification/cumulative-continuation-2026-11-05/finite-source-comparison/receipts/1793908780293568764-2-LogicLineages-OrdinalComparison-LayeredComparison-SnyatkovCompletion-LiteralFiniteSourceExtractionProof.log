@@ -1,0 +1,11 @@
+/workspace/scratch/2d139a56f90a/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/LiteralFiniteSourceExtractionProof.lean:48:69: error: unsolved goals
+Γ : List Ty
+a b : OrdinalExpression Γ
+⊢ (((∀ x ∈ collapseHeads a, ordinalExpressionVariables x = []) ∧
+        ∀ x ∈ collapseHeads b, ordinalExpressionVariables x = []) ∧
+      (∀ x ∈ collapseHeads a, ∀ (ρ : OrdinalComponent Γ → Ordinal.{0}), denote ρ x < Ordinal.omega0) ∧
+        ∀ x ∈ collapseHeads b, ∀ (ρ : OrdinalComponent Γ → Ordinal.{0}), denote ρ x < Ordinal.omega0) ↔
+    ((∀ x ∈ collapseHeads a, ordinalExpressionVariables x = []) ∧
+        ∀ x ∈ collapseHeads a, ∀ (ρ : OrdinalComponent Γ → Ordinal.{0}), denote ρ x < Ordinal.omega0) ∧
+      (∀ x ∈ collapseHeads b, ordinalExpressionVariables x = []) ∧
+        ∀ x ∈ collapseHeads b, ∀ (ρ : OrdinalComponent Γ → Ordinal.{0}), denote ρ x < Ordinal.omega0

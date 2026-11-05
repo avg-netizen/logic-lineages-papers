@@ -1,0 +1,332 @@
+{
+  "schema": "finite-source-completion-v1",
+  "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
+  "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
+  "report": "audits/FINITE-SOURCE-COMPLETION-2026-11-05.json",
+  "statement": "08-multivariate-collapse-comparison:thm:finite-source",
+  "native_verification": {
+    "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+    "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+  },
+  "counts_before": {
+    "checked": 162,
+    "pending": 25,
+    "existing-calculator-package": 2
+  },
+  "counts_after": {
+    "checked": 163,
+    "pending": 24,
+    "existing-calculator-package": 2
+  },
+  "numbered_source_promotions_in_this_update": 1,
+  "numbered_source_promotions_cumulative": 2,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "outcome": "accepted",
+  "source_file": "08-multivariate-collapse-comparison/paper.tex",
+  "source_lines": "202-234",
+  "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+  "statement_latex": "[Finite-coefficient source comparison]\\label{thm:finite-source}\nTake two original well-typed $T$ terms of the same type with ground free\nvariables. Compute their canonical assignments. Suppose that at every\nzeroth-coordinate collapse $\\psi(\\omega\\otimes c+g)$ its closed coefficient\n$c$ has finite ordinal value. Their universal weak, WW-strict, and equality\ncomparisons are decidable. Every recursor-free such term passes this test,\nwith no bound on its internal types.",
+  "accepted_declaration": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison",
+  "frozen_comparator": {
+    "file": "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteSourceComparisonTargets.lean",
+    "sha256": "704ecf18ab91f603981b909cb8418979c97bed44530385d63b90906892958cbe",
+    "type": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonTargets.FullFiniteSourceComparison"
+  },
+  "source_correspondence_reviews": {
+    "LiteralFiniteSource": {
+      "file": "verification/cumulative-continuation-2026-11-05/literal-finite-source/SOURCE-CORRESPONDENCE.md",
+      "pre_native_review_sha256": "06154f371606a3806831b7b3cf5dea535fb19659615195778ec25e945986173d",
+      "accepted_document_sha256": "f14597c5bb78891c7e0bdd05e3991607b9babb4111def346ae851e2ca6e72ef6",
+      "source_match_review_completed_before_native_verification": true
+    },
+    "GroundAdmissibleComparison": {
+      "file": "verification/cumulative-continuation-2026-11-05/ground-admissible-comparison/SOURCE-CORRESPONDENCE.md",
+      "pre_native_review_sha256": "ad73c7c0bd8ab3e9f38d20746f51246ef3596e8462cfa3bee1c19b6e4e96b0ba",
+      "accepted_document_sha256": "50e4f59fa3a7e22dac53a48625dbf7588c3f214efaed42b60e2c8e78176cb269",
+      "source_match_review_completed_before_native_verification": true
+    },
+    "FiniteSourceComparison": {
+      "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/SOURCE-CORRESPONDENCE.md",
+      "pre_native_review_sha256": "d75a920036724a6cf624d82cb62f90ba5c942696aaaee119c288d20969c9df57",
+      "accepted_document_sha256": "f38f4ff2baaf3ecb473a29e064a01ac95b1ce6b87fd87bae0509aafbbf55faff",
+      "source_match_review_completed_before_native_verification": true
+    }
+  },
+  "exact_gates": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks": {
+      "alias_count": 7,
+      "exact_aliases": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.actual_numeric_programs",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.actual_source_decision",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.canonical_source_correspondence",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.closed_coefficient_extraction",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.exact_source_test",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.literal_scalar_correspondence",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.recursor_free_passes"
+      ],
+      "source_path": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/LiteralFiniteSourceStatementChecks.lean",
+      "source_sha256": "cb7b1c62d35ab04b4f3215a9551b5e621329270099b5753ab06398927f625e11",
+      "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+      "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+      "whole_receipt_passed": true,
+      "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-LiteralFiniteSourceStatementChecks.log",
+      "native_log_sha256": "51d0a9ff9a36ff9c33f8d9e3de9e7a0d8910f9b94904c5421c8b0ae5232539e1",
+      "resource_profile": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "wall_seconds": 180,
+        "cpu_seconds": 90,
+        "minimum_free_mib": 2048,
+        "threads": 1,
+        "single_thread": true,
+        "core_only_profile": false,
+        "upstream_cache_only": true,
+        "calculator_objects_borrowed": true
+      },
+      "returncode": 0
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks": {
+      "alias_count": 4,
+      "exact_aliases": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.actual_canonical_comparison",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.exact_ground_valuations",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.universal_comparison",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.vector_relation_at"
+      ],
+      "source_path": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/GroundAdmissibleComparisonStatementChecks.lean",
+      "source_sha256": "c37d69f20abb559cc8a805d9388379a87af9cc876766b910bbc93b546226472a",
+      "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+      "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+      "whole_receipt_passed": true,
+      "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-GroundAdmissibleComparisonStatementChecks.log",
+      "native_log_sha256": "9a03408cd98b1f19e4015e0ff8d28be70265f3a79b31f3038b91c3af6d95bd26",
+      "resource_profile": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "wall_seconds": 180,
+        "cpu_seconds": 90,
+        "minimum_free_mib": 2048,
+        "threads": 1,
+        "single_thread": true,
+        "core_only_profile": false,
+        "upstream_cache_only": true,
+        "calculator_objects_borrowed": true
+      },
+      "returncode": 0
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks": {
+      "alias_count": 3,
+      "exact_aliases": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.original_comparison_decision",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.total_numeric_decision"
+      ],
+      "source_path": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteSourceComparisonStatementChecks.lean",
+      "source_sha256": "93cd919b57217e586b791810e9014413587242c0f138701b7004e4c0ed124512",
+      "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+      "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+      "whole_receipt_passed": true,
+      "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-FiniteSourceComparisonStatementChecks.log",
+      "native_log_sha256": "7c7e579d174123740bc1ca76dae9690ac795bdc658f2f045d637a16c4b84a0d1",
+      "resource_profile": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "wall_seconds": 180,
+        "cpu_seconds": 90,
+        "minimum_free_mib": 2048,
+        "threads": 1,
+        "single_thread": true,
+        "core_only_profile": false,
+        "upstream_cache_only": true,
+        "calculator_objects_borrowed": true
+      },
+      "returncode": 0
+    },
+    "LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison": {
+      "alias_count": 1,
+      "exact_aliases": [
+        "LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison.full_finite_source_comparison"
+      ],
+      "source_path": "formalization/LogicLineages/ExternalCheckpoint20261105FiniteSourceComparison.lean",
+      "source_sha256": "e7674a95af1cdded4ed5553cf2588015bded406747eaef067b6e14addeb575a3",
+      "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+      "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+      "whole_receipt_passed": true,
+      "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-ExternalCheckpoint20261105FiniteSourceComparison.log",
+      "native_log_sha256": "67b4a96744e4d11eb7d51d1f2000973b40ae43a1d4a709b5a6bb50d27607bfb6",
+      "resource_profile": {
+        "heap_cap_mib": 2048,
+        "rss_cap_mib": 1536,
+        "wall_seconds": 180,
+        "cpu_seconds": 90,
+        "minimum_free_mib": 2048,
+        "threads": 1,
+        "single_thread": true,
+        "core_only_profile": false,
+        "upstream_cache_only": true,
+        "calculator_objects_borrowed": true
+      },
+      "returncode": 0
+    }
+  },
+  "actual_exact_alias_axioms": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.actual_numeric_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.actual_source_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.canonical_source_correspondence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.closed_coefficient_extraction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.exact_source_test": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.literal_scalar_correspondence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks.recursor_free_passes": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.actual_canonical_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.exact_ground_valuations": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.universal_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.vector_relation_at": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.original_comparison_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.total_numeric_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison.full_finite_source_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "local_source_module_count": 803,
+  "source_matched_successful_native_rows": 803,
+  "exact_new_alias_count": 15,
+  "source_closure": {
+    "path": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/SOURCE-CLOSURE.json",
+    "sha256": "47fa07bfaaf59aa9fa6265af1c89669be0738116ff32c8d4511b6e2fcfe354da"
+  },
+  "source_pins": {
+    "path": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/SOURCE-PINS.json",
+    "sha256": "1353787fd2ce15ea8fad5b1a1a09c8e8afe42784c3bfd4576143ca8c2ca73de4"
+  },
+  "observed_native_resources": {
+    "sum_wall_seconds": 1203.41,
+    "sum_observed_cpu_seconds": 1153.06,
+    "maximum_observed_process_tree_rss_kib": 1346880,
+    "single_thread": true,
+    "upstream_cache_only": true
+  },
+  "previous_register_completion_audit": {
+    "date": "2026-11-05",
+    "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+    "classification": "missing_foundation_or_downstream",
+    "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+    "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
+    "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
+    "upstream_blockers": [
+      "08:thm:snyatkov"
+    ],
+    "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+    "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+  },
+  "previous_pending_audit_entry": {
+    "id": "08-multivariate-collapse-comparison:thm:finite-source",
+    "short_id": "08:thm:finite-source",
+    "status": "pending",
+    "source_file": "08-multivariate-collapse-comparison/paper.tex",
+    "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+    "classification": "missing_foundation_or_downstream",
+    "existing_coverage": "Literal source assignment, generated positive-coordinate finiteness for recursor-free terms, and finite-head collapse identities exist.",
+    "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
+    "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
+    "upstream_blockers": [
+      "08:thm:snyatkov"
+    ],
+    "checked_prerequisites": [],
+    "supporting_component_count": 0,
+    "evidence": [
+      "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean",
+      "formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean"
+    ],
+    "evidence_sha256": {
+      "formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean": "b4d2aa0c15401b2997d7cec5c1ef853abecd4e0b6cce89f34479ac48f3e9f429",
+      "formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean": "0d9a05bb411f91574f61a058d64b304ce550e2fbd885040a0998a5c20746b1e6"
+    },
+    "review": "prior assessment retained; status and source pin reconciled"
+  },
+  "previous_pending_markdown_entry": "### 08:thm:finite-source\n\nExisting coverage: Literal source assignment, generated positive-coordinate finiteness for recursor-free terms, and finite-head collapse identities exist.\n\nRemaining: The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.\n\nNext: Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.\n\nPending statement dependencies: `08:thm:snyatkov`.\n\nEvidence: [WWSourceFinitePositiveTargets.lean](../../formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean), [ParametricFiniteCoefficientTargets.lean](../../formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean).\n\n",
+  "previous_pending_markdown_introduction": "# Pending-statement register reconciliation: 5 November 2026\n\nCheckpoint: `5c98e63793b3fc821965def2292e909d4436f049`.\n\n**162 checked, 2 inherited, 25 pending out of 189 after the conditional one-label promotion below.**\n\nOnly `09:thm:functional-hardness` is promoted by this successor. See the [exact completion audit](FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.md). Apply this update only with the unchanged supplier integration and coordinator acceptance described there. All other entries retain their prior assessments; their historical supplier-gap language is not a new audit conclusion.\n\nThis reconciles the current register and archived acceptance evidence. It does not report a new Lean run, fresh whole-proof audit, full-root build or remote CI. The [4 November audit](PENDING-STATEMENTS-2026-11-04.md) remains unchanged as historical evidence. Current source and evidence SHA-256 pins are in the [machine-readable report](PENDING-STATEMENTS-2026-11-05.json).\n\n## Historical reconciliation corrections (before the targeted promotion)\n\n- Add the already adopted cipher product/multiplication gate to paper02 finite hardness and paper09 functional hardness. Full MRDP/H10 remains pending.\n- Add the already adopted actual Omega-seed/level-at-most-three scaled-pair gate to paper09. Its exact gate passed, but a later seeded compiler in the same archived invocation failed. The full seeded-system and level-three single-query reduction remain pending.\n- Replace stale claims that source simulation, the ID1 calculus, zero-pattern treatment, corrected kernel/counter/residue source correspondence or the source Base package still need to be created. Their unproved consumers remain pending.\n- Move seven already checked prerequisite references out of pending-blocker lists. The new reports retain them explicitly as checked prerequisites.\n- Record the latest Snyatkov row/linear-elimination work without confusing its restricted grammar with arbitrary finite-degree composed words or full quantified BASE decision.\n\n",
+  "previous_register_promotion": {
+    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+    "statement": "09-canonical-source-expressivity:thm:functional-hardness",
+    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
+    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+  },
+  "previous_pending_completion_update": {
+    "prepared_at_utc": "2026-11-05T13:40:22.346832+00:00",
+    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
+    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+    "promoted_statement": "09-canonical-source-expressivity:thm:functional-hardness",
+    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+  },
+  "previous_coverage_note": " FiniteCoefficientBase independently supplies the literal finite-coefficient scalar BASE expansion, exact support and existing-code calibration, including the actual canonical default-policy scalar coordinate of recursor-free source terms with ground free context. Structural recognition is not completeness for all semantically finite coefficient presentations; final vector weak, WW-strict and equality consumers remain pending. This cumulative candidate has not been compiled. RecursorFreeVector independently supplies actual total universal weak, WW-strict and equality consumers for the original recursor-free, same-type source subcase in a ground free context, with no internal-type bound. Earlier pending vector-consumer notes are superseded only for that subcase. Literal original assignment/compiler semantics, guarded context positivity and actual positive-coordinate zero padding are preserved. The larger semantic finite-coefficient source class and full numbered theorem remain pending; no unrestricted first-order BASE decision is asserted. This cumulative candidate has not been compiled. SemanticCoefficient independently proves exact primitive-recursive recognition of semantic finiteness for original closed positive coefficients, rejecting exactly values at least omega and preserving successful structural outputs. This supersedes coefficient-interface incompleteness only; the existing scalar and recursor-free vector compilers are unchanged. Their extension through this complete recognizer and the full numbered finite-source theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteScalar independently completes the original scalar compiler for exactly the class where every fixed closed coefficient is semantically finite. Actual values, exact original variable list, literal existing-code calibration and total computation are retained, and successful structural outputs remain identical. The original-source vector consumer still uses its unchanged structural compiler, so extending that consumer to the complete finite class and the full numbered theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteVector independently extends the actual original-term-code weak, WW-strict and equality consumers to the exact finiteSource condition on every fixed coefficient of the actual canonical extracted Scalars. Assignment/extraction and inclusion of all recursor-free ground-context terms are proved; no compiler-success premise is supplied. Earlier vector-extension gaps are superseded only for this extracted-scalar condition. Identifying it with the printed literal zeroth-coordinate collapse condition and the full numbered theorem promotion remain pending. This cumulative candidate has not been compiled.",
+  "prior_component_entries_preserved": 5,
+  "only_changed_statement": "08-multivariate-collapse-comparison:thm:finite-source",
+  "statement_contracts_preserved": 189,
+  "all_unrelated_statement_and_paper_metadata_preserved": true,
+  "remaining_pending_entries_preserved": 24,
+  "prior_register_sha256": "ad13d0524bafc5f9654101a8f0907ef6c6c03438d66ae2be5173773f81425773",
+  "adopted_register_sha256": "c74e07a4e5b7a6ff0b173f271a1b1ec2d7b76df65e8b5864e1d557489aafb7c7",
+  "prior_pending_report_sha256": "b8ed02a4ed9cc9b021ef86a07682b49761610843e58ee0a1f2c9a1eb13974424",
+  "adopted_pending_report_sha256": "33c0a6baefa99269891fc9e5611e86fb852307e31c5d9ac397f890674f271a13",
+  "scope": "Only the unchanged finite-source theorem is completed; genuine admissible substitutions, literal finite collapse coefficients, all three vector relations, computable source test and total decision, and recursor-free inclusion are retained. Universal quantifier-free BASE suffices. No full first-order BASE, whole-paper completion, full-root build, remote CI or publication is claimed."
+}

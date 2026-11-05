@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks
+public meta import LogicLineages.Audit
+
+@[expose] public section
+
+/-! Focused coordinator interface for paper08's complete finite-coefficient
+source comparison theorem. This imports the exact literal-source and genuine
+admissible-substitution gates without importing unrelated checkpoint unions. -/
+namespace LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison
+
+theorem full_finite_source_comparison :
+    LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonTargets.FullFiniteSourceComparison :=
+  LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison
+
+end LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison
+
+#audit_namespace LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison

@@ -2240,3 +2240,9 @@ public import LogicLineages.ExternalCheckpoint20261105SemanticFiniteScalar
 
 -- Exact supporting-component gates; cumulative aggregate check pending.
 public import LogicLineages.ExternalCheckpoint20261105SemanticFiniteVector
+
+-- Exact paper08 finite-source comparison and genuine WW domain gates.
+public import LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks

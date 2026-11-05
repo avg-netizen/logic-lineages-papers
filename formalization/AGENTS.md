@@ -1,3 +1,13 @@
+# CURRENT checkpoint — finite-coefficient source comparison, 5 November 2026
+
+Paper08 `thm:finite-source` is checked for original same-type terms with ground free variables and finite literal collapse coefficients. The actual source-code procedure decides universal weak, WW-strict and equality comparison over genuine WW admissible substitutions. Every recursor-free term passes without internal-type bounds.
+
+The focused coordinator passed with **803 source-matched local modules** and **15 exact new alias audits**. Register: **163 checked, 2 inherited, 24 pending / 189**. Paper08 and full first-order BASE remain in progress. No full-root, prior cumulative-union or remote-CI build is claimed. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-05/finite-source-comparison/STATUS.md).
+
+Earlier checkpoint summaries below are historical. Exact-source preservation, standard-axiom acceptance and the unchanged serialized compiler limits remain active.
+
+---
+
 Current static candidate: 15 independently accepted supporting components,
 95 exact source files and 89 audited aliases. Latest addition: SemanticFiniteVector.
 Read `verification/cumulative-continuation-2026-11-05/combined-semantic-finite-vector/STATUS.md`.

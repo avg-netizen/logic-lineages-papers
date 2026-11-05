@@ -1,10 +1,10 @@
 # Pending-statement register reconciliation: 5 November 2026
 
-Checkpoint: `5c98e63793b3fc821965def2292e909d4436f049`.
+Historical reconciliation checkpoint: `5c98e63793b3fc821965def2292e909d4436f049`.
 
-**162 checked, 2 inherited, 25 pending out of 189 after the conditional one-label promotion below.**
+**163 checked, 2 inherited, 24 pending out of 189 after two targeted promotions.**
 
-Only `09:thm:functional-hardness` is promoted by this successor. See the [exact completion audit](FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.md). Apply this update only with the unchanged supplier integration and coordinator acceptance described there. All other entries retain their prior assessments; their historical supplier-gap language is not a new audit conclusion.
+Only `08:thm:finite-source` is newly promoted by this successor after passed focused native verification. See the [exact finite-source completion audit](FINITE-SOURCE-COMPLETION-2026-11-05.md). The earlier [functional-hardness promotion](FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.md) remains historical evidence. All other 24 entries retain their prior assessments verbatim; they have not been re-audited.
 
 This reconciles the current register and archived acceptance evidence. It does not report a new Lean run, fresh whole-proof audit, full-root build or remote CI. The [4 November audit](PENDING-STATEMENTS-2026-11-04.md) remains unchanged as historical evidence. Current source and evidence SHA-256 pins are in the [machine-readable report](PENDING-STATEMENTS-2026-11-05.json).
 
@@ -151,18 +151,6 @@ Remaining: The complete arbitrary quantified BASE decision theorem remains unpro
 Next: Reuse the accepted row syntax, finite-window and linear-elimination compilers. Close the remaining nonlinear source cases and exhaustive decreasing elimination induction, then prove EffectiveSourceExistentialNormalForm, EffectiveExpandedElimination and FullSourceDecision.
 
 Evidence: [SnyatkovUnaryDecisionTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovUnaryDecisionTargets.lean), [SnyatkovDivisibilityTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovDivisibilityTargets.lean), [SnyatkovHyperCollisionTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovHyperCollisionTargets.lean), [PAUSED-AFTER-FIVE-ROUNDS-2026-11-04.md](../../formalization/verification/local-resume-2026-11-03/layered-comparison/PAUSED-AFTER-FIVE-ROUNDS-2026-11-04.md), [ACCEPTANCE.json](../../formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/ACCEPTANCE.json), [SOURCE-CORRESPONDENCE.md](../../formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md), [FROZEN-TARGETS.json](../../formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/FROZEN-TARGETS.json), [SOURCE-CLOSURE.json](../../formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CLOSURE.json).
-
-### 08:thm:finite-source
-
-Existing coverage: Literal source assignment, generated positive-coordinate finiteness for recursor-free terms, and finite-head collapse identities exist.
-
-Remaining: The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.
-
-Next: Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.
-
-Pending statement dependencies: `08:thm:snyatkov`.
-
-Evidence: [WWSourceFinitePositiveTargets.lean](../../formalization/LogicLineages/OrdinalComparison/WWSourceFinitePositiveTargets.lean), [ParametricFiniteCoefficientTargets.lean](../../formalization/LogicLineages/OrdinalComparison/ParametricFiniteCoefficientTargets.lean).
 
 ### 08:lem:uniform
 

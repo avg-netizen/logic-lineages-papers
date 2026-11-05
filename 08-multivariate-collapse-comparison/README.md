@@ -16,3 +16,7 @@ stated comparison certificates are required.
 Run `python3 build_pdf.py` to build with cached Tectonic resources. The local
 TeX inputs use Computer Modern explicitly. Named mathematical dependencies
 are ordinary published sources and included companion manuscripts.
+
+## Formalization
+
+The finite-coefficient source comparison theorem (`thm:finite-source`) is checked in Lean, including genuine WW admissible substitutions, weak/WW-strict/equality decisions, exact computable source admission and recursor-free inclusion without internal-type bounds. The paper remains in progress; full first-order BASE and unrestricted canonical comparison are separate. See the [accepted checkpoint](../formalization/verification/cumulative-continuation-2026-11-05/finite-source-comparison/STATUS.md) and [source completion audit](../formalization/audits/FINITE-SOURCE-COMPLETION-2026-11-05.md).

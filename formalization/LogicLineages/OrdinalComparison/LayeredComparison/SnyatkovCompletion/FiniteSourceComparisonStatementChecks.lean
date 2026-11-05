@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks
+
+theorem original_comparison_decision : FiniteSourceComparisonTargets.OriginalComparisonDecision :=
+  FiniteSourceComparisonProof.originalComparisonDecision
+theorem total_numeric_decision : FiniteSourceComparisonTargets.TotalNumericDecision :=
+  FiniteSourceComparisonProof.totalNumericDecision
+theorem full_finite_source_comparison : FiniteSourceComparisonTargets.FullFiniteSourceComparison :=
+  FiniteSourceComparisonProof.fullFiniteSourceComparison
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks

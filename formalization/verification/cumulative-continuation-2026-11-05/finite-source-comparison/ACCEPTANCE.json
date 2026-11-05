@@ -1,0 +1,111 @@
+{
+  "schema": "finite-source-component-acceptance-v1",
+  "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
+  "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
+  "component": "FiniteSourceComparison",
+  "outcome": "passed",
+  "scope": "Complete original finite-source theorem: same-type original terms, literal closed finite coefficients, computable admission and total Boolean comparison under genuine WW admissible substitutions.",
+  "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks",
+  "exact_alias_count": 3,
+  "native_gate": {
+    "alias_count": 3,
+    "exact_aliases": [
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison",
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.original_comparison_decision",
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.total_numeric_decision"
+    ],
+    "source_path": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteSourceComparisonStatementChecks.lean",
+    "source_sha256": "93cd919b57217e586b791810e9014413587242c0f138701b7004e4c0ed124512",
+    "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+    "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+    "whole_receipt_passed": true,
+    "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-FiniteSourceComparisonStatementChecks.log",
+    "native_log_sha256": "7c7e579d174123740bc1ca76dae9690ac795bdc658f2f045d637a16c4b84a0d1",
+    "resource_profile": {
+      "heap_cap_mib": 2048,
+      "rss_cap_mib": 1536,
+      "wall_seconds": 180,
+      "cpu_seconds": 90,
+      "minimum_free_mib": 2048,
+      "threads": 1,
+      "single_thread": true,
+      "core_only_profile": false,
+      "upstream_cache_only": true,
+      "calculator_objects_borrowed": true
+    },
+    "returncode": 0
+  },
+  "actual_exact_alias_axioms": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.original_comparison_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.total_numeric_decision": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "observed_gate_resources": {
+    "seconds": 1.845,
+    "observed_cpu_seconds": 1.78,
+    "peak_process_tree_rss_kib": 1346880
+  },
+  "frozen_sources": {
+    "component": "FiniteSourceComparison",
+    "freeze_path": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/FROZEN-TARGETS.json",
+    "freeze_sha256": "aa80459acf380cb38e4b8b7f242f47c02e9ee28856e1ebc871d94e29aeba78a5",
+    "files": {
+      "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteSourceComparisonDefinitions.lean": "bc3d3c470ceb3550a962cfef6070614c45a8c52340e1789c855637ba47e7b9ab",
+      "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteSourceComparisonTargets.lean": "704ecf18ab91f603981b909cb8418979c97bed44530385d63b90906892958cbe"
+    },
+    "all_current_files_match": true
+  },
+  "native_verification": {
+    "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+    "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+  },
+  "source_correspondence": {
+    "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/SOURCE-CORRESPONDENCE.md",
+    "pre_native_review_sha256": "d75a920036724a6cf624d82cb62f90ba5c942696aaaee119c288d20969c9df57",
+    "accepted_document_sha256": "f38f4ff2baaf3ecb473a29e064a01ac95b1ce6b87fd87bae0509aafbbf55faff",
+    "source_match_review_completed_before_native_verification": true
+  },
+  "focused_coordinator": {
+    "alias_count": 1,
+    "exact_aliases": [
+      "LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison.full_finite_source_comparison"
+    ],
+    "source_path": "formalization/LogicLineages/ExternalCheckpoint20261105FiniteSourceComparison.lean",
+    "source_sha256": "e7674a95af1cdded4ed5553cf2588015bded406747eaef067b6e14addeb575a3",
+    "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+    "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+    "whole_receipt_passed": true,
+    "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-ExternalCheckpoint20261105FiniteSourceComparison.log",
+    "native_log_sha256": "67b4a96744e4d11eb7d51d1f2000973b40ae43a1d4a709b5a6bb50d27607bfb6",
+    "resource_profile": {
+      "heap_cap_mib": 2048,
+      "rss_cap_mib": 1536,
+      "wall_seconds": 180,
+      "cpu_seconds": 90,
+      "minimum_free_mib": 2048,
+      "threads": 1,
+      "single_thread": true,
+      "core_only_profile": false,
+      "upstream_cache_only": true,
+      "calculator_objects_borrowed": true
+    },
+    "returncode": 0
+  },
+  "focused_local_source_module_count": 803,
+  "all_focused_sources_match_successful_native_rows": true,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "publication_claim": false
+}

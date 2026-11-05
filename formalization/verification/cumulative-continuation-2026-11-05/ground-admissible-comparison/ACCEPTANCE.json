@@ -1,0 +1,117 @@
+{
+  "schema": "finite-source-component-acceptance-v1",
+  "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
+  "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
+  "component": "GroundAdmissibleComparison",
+  "outcome": "passed",
+  "scope": "Genuine original WW admissible ground substitutions are exactly positive-natural valuations; complete zero-padded vector weak, WW-strict and equality relations are preserved.",
+  "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks",
+  "exact_alias_count": 4,
+  "native_gate": {
+    "alias_count": 4,
+    "exact_aliases": [
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.actual_canonical_comparison",
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.exact_ground_valuations",
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.universal_comparison",
+      "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.vector_relation_at"
+    ],
+    "source_path": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/GroundAdmissibleComparisonStatementChecks.lean",
+    "source_sha256": "c37d69f20abb559cc8a805d9388379a87af9cc876766b910bbc93b546226472a",
+    "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+    "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+    "whole_receipt_passed": true,
+    "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-GroundAdmissibleComparisonStatementChecks.log",
+    "native_log_sha256": "9a03408cd98b1f19e4015e0ff8d28be70265f3a79b31f3038b91c3af6d95bd26",
+    "resource_profile": {
+      "heap_cap_mib": 2048,
+      "rss_cap_mib": 1536,
+      "wall_seconds": 180,
+      "cpu_seconds": 90,
+      "minimum_free_mib": 2048,
+      "threads": 1,
+      "single_thread": true,
+      "core_only_profile": false,
+      "upstream_cache_only": true,
+      "calculator_objects_borrowed": true
+    },
+    "returncode": 0
+  },
+  "actual_exact_alias_axioms": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.actual_canonical_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.exact_ground_valuations": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.universal_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks.vector_relation_at": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "observed_gate_resources": {
+    "seconds": 1.782,
+    "observed_cpu_seconds": 1.72,
+    "peak_process_tree_rss_kib": 1178276
+  },
+  "frozen_sources": {
+    "component": "GroundAdmissibleComparison",
+    "freeze_path": "verification/cumulative-continuation-2026-11-05/ground-admissible-comparison/FROZEN-TARGETS.json",
+    "freeze_sha256": "d3989dc97b1b5b3920bf14f6e3692d42d6dd99f7b0381405251401e537699c62",
+    "files": {
+      "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/GroundAdmissibleComparisonDefinitions.lean": "3b8bd684e4ce84c1bf67135a46357e83ab106417f9db2d87021636f10a38aa47",
+      "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/GroundAdmissibleComparisonTargets.lean": "15786a796a22b59870fc1f2cd95a7fe9e1a918a9ec60c8b5b49f4675df02a0cd"
+    },
+    "all_current_files_match": true
+  },
+  "native_verification": {
+    "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+    "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+  },
+  "source_correspondence": {
+    "file": "verification/cumulative-continuation-2026-11-05/ground-admissible-comparison/SOURCE-CORRESPONDENCE.md",
+    "pre_native_review_sha256": "ad73c7c0bd8ab3e9f38d20746f51246ef3596e8462cfa3bee1c19b6e4e96b0ba",
+    "accepted_document_sha256": "50e4f59fa3a7e22dac53a48625dbf7588c3f214efaed42b60e2c8e78176cb269",
+    "source_match_review_completed_before_native_verification": true
+  },
+  "focused_coordinator": {
+    "alias_count": 1,
+    "exact_aliases": [
+      "LogicLineages.ExternalCheckpoint20261105FiniteSourceComparison.full_finite_source_comparison"
+    ],
+    "source_path": "formalization/LogicLineages/ExternalCheckpoint20261105FiniteSourceComparison.lean",
+    "source_sha256": "e7674a95af1cdded4ed5553cf2588015bded406747eaef067b6e14addeb575a3",
+    "native_receipt": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2.json",
+    "native_receipt_sha256": "bdab711306c2a8ab61b7a4aa2da9c54e04c9cb2d7c58aae5bb6b42f693b4507a",
+    "whole_receipt_passed": true,
+    "native_log": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/receipts/1793908829634123711-2-LogicLineages-ExternalCheckpoint20261105FiniteSourceComparison.log",
+    "native_log_sha256": "67b4a96744e4d11eb7d51d1f2000973b40ae43a1d4a709b5a6bb50d27607bfb6",
+    "resource_profile": {
+      "heap_cap_mib": 2048,
+      "rss_cap_mib": 1536,
+      "wall_seconds": 180,
+      "cpu_seconds": 90,
+      "minimum_free_mib": 2048,
+      "threads": 1,
+      "single_thread": true,
+      "core_only_profile": false,
+      "upstream_cache_only": true,
+      "calculator_objects_borrowed": true
+    },
+    "returncode": 0
+  },
+  "focused_local_source_module_count": 803,
+  "all_focused_sources_match_successful_native_rows": true,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "publication_claim": false
+}

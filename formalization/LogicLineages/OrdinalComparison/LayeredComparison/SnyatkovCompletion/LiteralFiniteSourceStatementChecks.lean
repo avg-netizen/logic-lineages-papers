@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceSourceProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks
+
+theorem closed_coefficient_extraction : LiteralFiniteSourceTargets.ClosedCoefficientExtraction :=
+  LiteralFiniteSourceProof.closedCoefficientExtraction
+theorem literal_scalar_correspondence : LiteralFiniteSourceTargets.LiteralScalarCorrespondence :=
+  LiteralFiniteSourceProof.literalScalarCorrespondence
+theorem canonical_source_correspondence : LiteralFiniteSourceTargets.CanonicalSourceCorrespondence :=
+  LiteralFiniteSourceProof.canonicalSourceCorrespondence
+theorem exact_source_test : LiteralFiniteSourceTargets.ExactSourceTest :=
+  LiteralFiniteSourceProof.exactSourceTest
+theorem actual_source_decision : LiteralFiniteSourceTargets.ActualSourceDecision :=
+  LiteralFiniteSourceProof.actualSourceDecision
+theorem recursor_free_passes : LiteralFiniteSourceTargets.RecursorFreePasses :=
+  LiteralFiniteSourceProof.recursorFreePasses
+theorem actual_numeric_programs : LiteralFiniteSourceTargets.ActualNumericPrograms :=
+  LiteralFiniteSourceProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks

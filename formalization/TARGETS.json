@@ -6414,21 +6414,25 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 202,
           "statement_latex": "[Finite-coefficient source comparison]\\label{thm:finite-source}\nTake two original well-typed $T$ terms of the same type with ground free\nvariables. Compute their canonical assignments. Suppose that at every\nzeroth-coordinate collapse $\\psi(\\omega\\otimes c+g)$ its closed coefficient\n$c$ has finite ordinal value. Their universal weak, WW-strict, and equality\ncomparisons are decidable. Every recursor-free such term passes this test,\nwith no bound on its internal types.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks.full_finite_source_comparison",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteSourceComparisonTargets.lean",
+            "sha256": "704ecf18ab91f603981b909cb8418979c97bed44530385d63b90906892958cbe",
+            "type": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonTargets.FullFiniteSourceComparison"
+          },
           "completion_audit": {
             "date": "2026-11-05",
-            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
-            "classification": "missing_foundation_or_downstream",
+            "report": "audits/FINITE-SOURCE-COMPLETION-2026-11-05.json",
+            "classification": "exact_whole_source_checked",
             "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
-            "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
-            "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
-            "upstream_blockers": [
-              "08:thm:snyatkov"
-            ],
-            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
-            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+            "remaining_obligation": "None for the unchanged finite-source theorem. Full first-order BASE and unrelated source statements remain pending.",
+            "upstream_blockers": [],
+            "native_verification": {
+              "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+              "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+            },
+            "review_scope": "Exact literal source domain, genuine WW substitutions, all three comparison modes, computable admission/decision and recursor-free inclusion; focused native closure and standard-only audits passed."
           },
           "checked_components": [
             {
@@ -6455,9 +6459,39 @@
               "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticFiniteVectorStatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-05/semantic-finite-vector/INTEGRATION-EVIDENCE.json",
               "scope": "Actual original-term-code universal weak, WW-strict and equality vector consumers extended through the complete semantic finite-coefficient scalar compiler. The independent finiteSource condition requires every fixed closed coefficient in each actual canonical extracted Scalar to have finite ordinal value; canonical assignment and extraction success are proved, not assumed. Original same-type terms, ground positive context, shared variable indices and actual zero-padded positive coordinates are retained. WW-strict is strict only at coordinate zero. Every original recursor-free ground-context term satisfies finiteSource, without internal-type bounds. The solver is universal closure of quantifier-free Boolean BASE, not unrestricted first-order BASE. Formal correspondence between canonical extracted-scalar finiteness and the printed literal zeroth-coordinate collapse condition is not proved here; the full numbered finite-source theorem remains pending. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LiteralFiniteSourceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/literal-finite-source/ACCEPTANCE.json",
+              "scope": "Exact original zeroth-coordinate collapse condition, canonical extraction correspondence, computable admission, and all recursor-free source inclusion without internal-type bounds."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.GroundAdmissibleComparisonStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/ground-admissible-comparison/ACCEPTANCE.json",
+              "scope": "Genuine original WW admissible ground substitutions are exactly positive-natural valuations; complete zero-padded vector weak, WW-strict and equality relations are preserved."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSourceComparisonStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/ACCEPTANCE.json",
+              "scope": "Complete original finite-source theorem: same-type original terms, literal closed finite coefficients, computable admission and total Boolean comparison under genuine WW admissible substitutions."
             }
           ],
-          "latest_coverage_note": " FiniteCoefficientBase independently supplies the literal finite-coefficient scalar BASE expansion, exact support and existing-code calibration, including the actual canonical default-policy scalar coordinate of recursor-free source terms with ground free context. Structural recognition is not completeness for all semantically finite coefficient presentations; final vector weak, WW-strict and equality consumers remain pending. This cumulative candidate has not been compiled. RecursorFreeVector independently supplies actual total universal weak, WW-strict and equality consumers for the original recursor-free, same-type source subcase in a ground free context, with no internal-type bound. Earlier pending vector-consumer notes are superseded only for that subcase. Literal original assignment/compiler semantics, guarded context positivity and actual positive-coordinate zero padding are preserved. The larger semantic finite-coefficient source class and full numbered theorem remain pending; no unrestricted first-order BASE decision is asserted. This cumulative candidate has not been compiled. SemanticCoefficient independently proves exact primitive-recursive recognition of semantic finiteness for original closed positive coefficients, rejecting exactly values at least omega and preserving successful structural outputs. This supersedes coefficient-interface incompleteness only; the existing scalar and recursor-free vector compilers are unchanged. Their extension through this complete recognizer and the full numbered finite-source theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteScalar independently completes the original scalar compiler for exactly the class where every fixed closed coefficient is semantically finite. Actual values, exact original variable list, literal existing-code calibration and total computation are retained, and successful structural outputs remain identical. The original-source vector consumer still uses its unchanged structural compiler, so extending that consumer to the complete finite class and the full numbered theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteVector independently extends the actual original-term-code weak, WW-strict and equality consumers to the exact finiteSource condition on every fixed coefficient of the actual canonical extracted Scalars. Assignment/extraction and inclusion of all recursor-free ground-context terms are proved; no compiler-success premise is supplied. Earlier vector-extension gaps are superseded only for this extracted-scalar condition. Identifying it with the printed literal zeroth-coordinate collapse condition and the full numbered theorem promotion remain pending. This cumulative candidate has not been compiled."
+          "latest_coverage_note": " FiniteCoefficientBase independently supplies the literal finite-coefficient scalar BASE expansion, exact support and existing-code calibration, including the actual canonical default-policy scalar coordinate of recursor-free source terms with ground free context. Structural recognition is not completeness for all semantically finite coefficient presentations; final vector weak, WW-strict and equality consumers remain pending. This cumulative candidate has not been compiled. RecursorFreeVector independently supplies actual total universal weak, WW-strict and equality consumers for the original recursor-free, same-type source subcase in a ground free context, with no internal-type bound. Earlier pending vector-consumer notes are superseded only for that subcase. Literal original assignment/compiler semantics, guarded context positivity and actual positive-coordinate zero padding are preserved. The larger semantic finite-coefficient source class and full numbered theorem remain pending; no unrestricted first-order BASE decision is asserted. This cumulative candidate has not been compiled. SemanticCoefficient independently proves exact primitive-recursive recognition of semantic finiteness for original closed positive coefficients, rejecting exactly values at least omega and preserving successful structural outputs. This supersedes coefficient-interface incompleteness only; the existing scalar and recursor-free vector compilers are unchanged. Their extension through this complete recognizer and the full numbered finite-source theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteScalar independently completes the original scalar compiler for exactly the class where every fixed closed coefficient is semantically finite. Actual values, exact original variable list, literal existing-code calibration and total computation are retained, and successful structural outputs remain identical. The original-source vector consumer still uses its unchanged structural compiler, so extending that consumer to the complete finite class and the full numbered theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteVector independently extends the actual original-term-code weak, WW-strict and equality consumers to the exact finiteSource condition on every fixed coefficient of the actual canonical extracted Scalars. Assignment/extraction and inclusion of all recursor-free ground-context terms are proved; no compiler-success premise is supplied. Earlier vector-extension gaps are superseded only for this extracted-scalar condition. Identifying it with the printed literal zeroth-coordinate collapse condition and the full numbered theorem promotion remain pending. This cumulative candidate has not been compiled. Current accepted endpoint: the literal original zeroth-coordinate condition is exactly recognized, the genuine WW ground-substitution domain is identified, and uniform total Boolean weak, WW-strict and equality comparison is proved for the full printed finite-source class. All recursor-free source terms pass without internal-type bounds. The universal quantifier-free Boolean BASE supplier suffices; unrestricted first-order BASE remains separate. This supersedes earlier finite-source-specific pending notes only. See audits/FINITE-SOURCE-COMPLETION-2026-11-05.json.",
+          "completion_audit_history": [
+            {
+              "date": "2026-11-05",
+              "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+              "classification": "missing_foundation_or_downstream",
+              "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+              "remaining_obligation": "The full source-to-BASE comparison consumer is not assembled, and its arbitrary quantified decision claim depends on the missing Snyatkov endpoint.",
+              "next_completion_step": "Assemble the finite-head scalar/vector translation and use the shared arithmetic solver when established.",
+              "upstream_blockers": [
+                "08:thm:snyatkov"
+              ],
+              "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+              "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+            }
+          ]
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
@@ -11039,8 +11073,8 @@
   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
-  "source_completion_updated_at_utc": "2026-11-05T13:40:22.346832+00:00",
-  "supporting_components_updated_at_utc": "2026-11-05T17:41:15.902690+00:00",
+  "source_completion_updated_at_utc": "2026-11-05T20:15:59.083452+00:00",
+  "supporting_components_updated_at_utc": "2026-11-05T20:15:59.083452+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
     "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
@@ -11049,9 +11083,35 @@
     "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
   },
   "source_completion_promotion": {
-    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
-    "statement": "09-canonical-source-expressivity:thm:functional-hardness",
-    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
-    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
-  }
+    "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
+    "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
+    "report": "audits/FINITE-SOURCE-COMPLETION-2026-11-05.json",
+    "statement": "08-multivariate-collapse-comparison:thm:finite-source",
+    "native_verification": {
+      "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+      "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+    },
+    "counts_before": {
+      "checked": 162,
+      "pending": 25,
+      "existing-calculator-package": 2
+    },
+    "counts_after": {
+      "checked": 163,
+      "pending": 24,
+      "existing-calculator-package": 2
+    },
+    "numbered_source_promotions_in_this_update": 1,
+    "numbered_source_promotions_cumulative": 2,
+    "full_root_build": false,
+    "remote_ci_claim": false
+  },
+  "source_completion_promotion_history": [
+    {
+      "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+      "statement": "09-canonical-source-expressivity:thm:functional-hardness",
+      "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
+      "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+    }
+  ]
 }
