@@ -1,3 +1,20 @@
+Current external user release: **continue formalization from the newer merged work on a new cumulative branch.**
+The current base is main `1794804`, including the preceding source-row package
+and the accepted PA addition-law component. The new branch is
+`formalization/cumulative-continuation-2026-11-04-second`. This release supersedes
+the historical local R030 pause for this external continuation; its records and
+unaccepted R029 scope remain intact. No private author/session is resumed.
+
+The current package is restricted-row constant substitution, exact original
+domain retention, bounded-block elimination, and the actual linear/active-hyper
+finite branches. All seventeen exact targets and the focused 161-module cumulative gate passed;
+see `verification/cumulative-continuation-2026-11-04-second/bounded-rows/STATUS.md`.
+The source register remains 161 checked, 2 inherited and 26 pending/189.
+The coordinator owns all native checks, adoption, shared metadata and publication.
+Existing exact-comparator, standard-axiom and bounded serialized compiler rules
+remain active. Historical pause and lane allocations below do not redefine this
+new user request. Dependency/CI configuration and accepted source bytes stay fixed.
+
 Current state: **ALL local formalization PAUSED after accepted R030.**
 The sole Sol supervisor and same-session Claude have stopped; all owned author
 and native transports are reaped, all three locks are free, successor admission

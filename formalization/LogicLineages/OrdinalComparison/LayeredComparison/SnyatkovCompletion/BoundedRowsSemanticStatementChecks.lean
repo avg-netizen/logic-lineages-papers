@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsPrefixProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsSemanticStatementChecks
+
+theorem actual_row_substitution : BoundedRowsTargets.ActualRowSubstitution :=
+  BoundedRowsSemanticProof.actualRowSubstitution
+theorem exact_residual_occurrences : BoundedRowsTargets.ExactResidualOccurrences :=
+  BoundedRowsSemanticProof.exactResidualOccurrences
+theorem exact_original_domains : BoundedRowsTargets.ExactOriginalDomains :=
+  BoundedRowsSemanticProof.exactOriginalDomains
+theorem actual_formula_substitution : BoundedRowsTargets.ActualFormulaSubstitution :=
+  BoundedRowsSemanticProof.actualFormulaSubstitution
+theorem exact_substitution_support : BoundedRowsTargets.ExactSubstitutionSupport :=
+  BoundedRowsSemanticProof.exactSubstitutionSupport
+theorem actual_bounded_elimination : BoundedRowsTargets.ActualBoundedElimination :=
+  BoundedRowsSemanticProof.actualBoundedElimination
+theorem exact_bounded_support : BoundedRowsTargets.ExactBoundedSupport :=
+  BoundedRowsSemanticProof.exactBoundedSupport
+theorem actual_block_elimination : BoundedRowsTargets.ActualBlockElimination :=
+  BoundedRowsSemanticProof.actualBlockElimination
+theorem exact_block_support : BoundedRowsTargets.ExactBlockSupport :=
+  BoundedRowsSemanticProof.exactBlockSupport
+theorem exact_existing_prefix : BoundedRowsTargets.ExactExistingPrefix :=
+  BoundedRowsPrefixProof.exactExistingPrefix
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsSemanticStatementChecks

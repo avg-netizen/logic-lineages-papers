@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsSemanticStatementChecks
+
+theorem actual_linear_branch_elimination : FiniteBranchRowsTargets.ActualLinearBranchElimination :=
+  FiniteBranchRowsSemanticProof.actualLinearBranchElimination
+theorem actual_active_hyper_branch_elimination : FiniteBranchRowsTargets.ActualActiveHyperBranchElimination :=
+  FiniteBranchRowsSemanticProof.actualActiveHyperBranchElimination
+theorem exact_branch_support : FiniteBranchRowsTargets.ExactBranchSupport :=
+  FiniteBranchRowsSemanticProof.exactBranchSupport
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsSemanticStatementChecks

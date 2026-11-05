@@ -2115,3 +2115,9 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 
 -- Quantified PA addition laws, accepted supervised R030 before the local pause.
 public import LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.AdditionLawsStatementChecks
+
+-- Restricted-row bounded elimination, second cumulative 4 November checkpoint.
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsCodeStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsCodeStatementChecks

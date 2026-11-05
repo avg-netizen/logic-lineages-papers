@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ExternalCheckpoint20261105SourceIntroduction
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsCodeStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsCodeStatementChecks
+
+/-! Focused integration of seventeen exact restricted-row substitution and
+bounded-elimination targets. The previous source-introduction checkpoint is
+retained. The two actual guarded finite branches have literal row outputs;
+unbounded elimination, nonconstant substitution and full BASE decision remain
+separate pending obligations. -/

@@ -1,3 +1,36 @@
+## Current checkpoint — second cumulative continuation, 4 November 2026
+
+The new branch `formalization/cumulative-continuation-2026-11-04-second`
+continues merged main `1794804` and preserves the newer PA addition-law work.
+It adds **seventeen exact targets in four gates**: twelve for restricted-row
+constant substitution and bounded-block elimination, and five for the actual
+linear and active-hyper finite branches.
+
+The branch outputs stay inside the existing occurrence-row grammar. Every
+removed original domain cutoff is retained, including zero/cancelled
+coefficients; guards keep their original Boolean positions. Both actual source
+branches allow coincident names, preserve exact support, and have literal
+primitive-recursive numeric compilers. The bounded-block package covers zero
+bounds, named shadowing and the original existential-prefix bridge.
+
+The focused aggregate `LogicLineages.ExternalCheckpoint20261104BoundedRows`
+passed with **161 local source modules** matched to successful native receipts.
+All seventeen exact aliases passed standard-axiom audits. Definitions and target
+types remain at their successful pre-authoring preflight hashes; compiler limits
+are unchanged.
+
+The source register remains **161 checked, 2 inherited, 26 pending / 189**.
+Nonconstant substitution, unbounded elimination, branch exhaustiveness and the
+global quantified-block induction remain pending. No full public-root rebuild
+or remote-CI success is claimed. Read the
+[checkpoint](verification/cumulative-continuation-2026-11-04-second/bounded-rows/STATUS.md),
+[source correspondence](verification/cumulative-continuation-2026-11-04-second/bounded-rows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](verification/cumulative-continuation-2026-11-04-second/bounded-rows/ACCEPTANCE.json).
+
+The earlier local pauses and releases below retain their historical scope.
+
+---
+
 ## Local checkpoint — paused after R030, 5 November 2026 UTC
 
 The single Sol 6.1 supervisor subagent and same-session Claude have finished

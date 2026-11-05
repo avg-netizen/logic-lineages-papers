@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsCodeStatementChecks
+
+theorem literal_branch_code_calibration : FiniteBranchRowsTargets.LiteralBranchCodeCalibration :=
+  FiniteBranchRowsCodeProof.literalBranchCodeCalibration
+theorem actual_branch_numeric_programs : FiniteBranchRowsTargets.ActualBranchNumericPrograms :=
+  FiniteBranchRowsCodeProof.actualBranchNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsCodeStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteBranchRowsCodeStatementChecks

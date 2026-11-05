@@ -1,4 +1,31 @@
-# Formalization checkpoint
+# Formalization checkpoint — second cumulative continuation
+
+The new branch `formalization/cumulative-continuation-2026-11-04-second`
+continues merged main `1794804`, preserving both the prior source-introduction
+package and the newer PA addition laws. It adds **seventeen exact supporting
+targets in four gates** for restricted-row constant substitution, bounded-block
+elimination, and the actual linear/active-hyper finite branches.
+
+The two source branches now return formulas in the restricted occurrence-row
+grammar, with exact eliminated-name removal and all original signed domains.
+Their original source guards supply the finite bounds, and coincident source
+names are allowed. The complete literal numeric programs are primitive
+recursive. Full unbounded elimination and first-order BASE decision remain
+pending.
+
+The focused aggregate `LogicLineages.ExternalCheckpoint20261104BoundedRows`
+passed. All **161 local modules** in its closure have successful native receipts
+matching their current source hashes, and all seventeen new target aliases
+passed standard-axiom audits. The frozen definitions and target types are
+unchanged. No full public-root rebuild or remote-CI pass is claimed.
+
+The numbered source register remains **161 checked, 2 inherited and 26 pending
+out of 189**. Read the
+[current checkpoint](formalization/verification/cumulative-continuation-2026-11-04-second/bounded-rows/STATUS.md),
+[source correspondence](formalization/verification/cumulative-continuation-2026-11-04-second/bounded-rows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](formalization/verification/cumulative-continuation-2026-11-04-second/bounded-rows/ACCEPTANCE.json).
+
+## Preserved earlier checkpoints
 
 The local supervised lane has finished **R030 and paused**. One new supporting
 component proves three universally quantified PA addition laws in the existing
