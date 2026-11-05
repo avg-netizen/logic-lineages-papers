@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearCodeProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearStatementChecks
+
+theorem exact_constant_matrix_test : ClosedLinearTargets.ExactConstantMatrixTest :=
+  ClosedLinearProof.exactConstantMatrixTest
+theorem actual_constant_evaluator : ClosedLinearTargets.ActualConstantEvaluator :=
+  ClosedLinearProof.actualConstantEvaluator
+theorem exact_decision_domain : ClosedLinearTargets.ExactDecisionDomain :=
+  ClosedLinearProof.exactDecisionDomain
+theorem actual_closed_decision : ClosedLinearTargets.ActualClosedDecision :=
+  ClosedLinearProof.actualClosedDecision
+theorem literal_code_calibration : ClosedLinearTargets.LiteralCodeCalibration :=
+  ClosedLinearProof.literalCodeCalibration
+theorem actual_numeric_programs : ClosedLinearTargets.ActualNumericPrograms :=
+  ClosedLinearProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearStatementChecks

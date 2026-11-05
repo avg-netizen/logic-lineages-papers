@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ExternalCheckpoint20261105SeededLinear
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSourceCodeStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededInputCodeStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemCodeStatementChecks
+
+/-! Cumulative integration of six independently accepted components (36 exact targets in 34 source files). This closes the additive source fragment and typed seeded numeric compilers, not general BASE or whole functional hardness. -/

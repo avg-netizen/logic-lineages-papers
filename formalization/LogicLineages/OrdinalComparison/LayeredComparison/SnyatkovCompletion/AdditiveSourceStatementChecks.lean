@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceCodeProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceStatementChecks
+
+theorem purely_linear_generated_rows : AdditiveSourceTargets.PurelyLinearGeneratedRows :=
+  AdditiveSourceProof.purelyLinearGeneratedRows
+theorem actual_admissibility : AdditiveSourceTargets.ActualAdmissibility :=
+  AdditiveSourceProof.actualAdmissibility
+theorem actual_quantifier_elimination : AdditiveSourceTargets.ActualQuantifierElimination :=
+  AdditiveSourceProof.actualQuantifierElimination
+theorem exact_output_support : AdditiveSourceTargets.ExactOutputSupport :=
+  AdditiveSourceProof.exactOutputSupport
+theorem exact_decision_domain : AdditiveSourceTargets.ExactDecisionDomain :=
+  AdditiveSourceProof.exactDecisionDomain
+theorem actual_closed_decision : AdditiveSourceTargets.ActualClosedDecision :=
+  AdditiveSourceProof.actualClosedDecision
+theorem literal_code_calibration : AdditiveSourceTargets.LiteralCodeCalibration :=
+  AdditiveSourceProof.literalCodeCalibration
+theorem actual_numeric_programs : AdditiveSourceTargets.ActualNumericPrograms :=
+  AdditiveSourceProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceStatementChecks

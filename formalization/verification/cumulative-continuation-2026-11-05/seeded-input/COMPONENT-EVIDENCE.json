@@ -1,0 +1,61 @@
+{
+  "component": "SeededInputCode",
+  "directory": "seeded-input",
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededInputCodeStatementChecks",
+  "source_files": {
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededInputCodeCalibrationProof.lean": "09b67b2c05f0e4fc739a98d730afd03837d3c41d5be64498137ef64b72182913",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededInputCodeDefinitions.lean": "b42428d104e097508ec39429fec57dcffe0e93015fc6470cf2e647973e05326d",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededInputCodeProgramsProof.lean": "dcd1a4f9df2afb96ae216ee4c6967e44052f00067d2e2d3fde7320be54c96aeb",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededInputCodeStatementChecks.lean": "94dceae6509d65134f2a7d3edd97abe7c62af13337c667a685c944a28f622edd",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededInputCodeTargets.lean": "b1d97d92c0483eb786701d0530f76c62e27c59adbc1867f19c286a777ea5a246",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/UndecidabilityDefinitions.lean": "c35a864ce48ce2d1f0dddfda664be64a3ac6d495b03fc00e5268ddafd38ea7b6"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededInputCode.StatementChecks.exact_monomial_code": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededInputCode.StatementChecks.exact_system_inputs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededInputCode.StatementChecks.exact_rows": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededInputCode.StatementChecks.exact_subtract_seed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededInputCode.StatementChecks.numerical_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "evidence_acceptance_file": "INPUT-ACCEPTANCE.json",
+  "evidence_acceptance_sha256": "4ed2b0de382524c4fce356a1c7aa5e652620389dfac59f5cad851a875b483fb0",
+  "source_closure_modules": 414,
+  "successful_gate_receipt_sha256": "f16e5d4b670beb44cd10354d7731458e5a248a70a9d1763bbfda4a8ce4cab366",
+  "actual_axiom_log_sha256": "9021869c3ebe4ff45825f52ff06c47edc3e4fb6e4971645aa89bd650f595142e",
+  "frozen_targets_unchanged": true,
+  "exclusions": [
+    "No whole-system numerical query reduction yet.",
+    "No undecidability theorem is asserted; UndecidabilityDefinitions contains the fixed input language only.",
+    "No target weakening or raised heartbeat/resource limits."
+  ],
+  "status": "independently accepted component; focused cumulative aggregate passed",
+  "prepared_at_utc": "2026-11-05T09:33:15.797160+00:00",
+  "scope": "Five exact targets establish literal polynomial-input monomial expansion, rows, simultaneous system inputs, shared closed-seed substitution and total primitive-recursive programs. The recovered UndecidabilityDefinitions file fixes the input language only; it asserts no undecidability supplier. No whole all-Nat query reduction is claimed.",
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-effective-fragments/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt": "build-reports/1793871308939027853-2.json",
+    "receipt_sha256": "c3b4d40fe32f37e55e72fedb3d3ffa620e008b1d9017aa123290ccbb1e6a748d",
+    "gate_log_sha256": "9021869c3ebe4ff45825f52ff06c47edc3e4fb6e4971645aa89bd650f595142e"
+  }
+}

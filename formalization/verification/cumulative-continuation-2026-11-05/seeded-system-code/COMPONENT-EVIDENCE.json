@@ -1,0 +1,61 @@
+{
+  "component": "SeededSystemCode",
+  "directory": "seeded-system-code",
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemCodeStatementChecks",
+  "source_files": {
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSystemCodeCalibrationProof.lean": "b035e6d4e18143aa5a2a80342684e90e57663ed434dc483623923e6dc3f6af2e",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSystemCodeDefinitions.lean": "47aa64d419b73ab0366b911acfdb6a45d8a3d8d8382e7b5f5ed8dc31c29e811c",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSystemCodeProgramsProof.lean": "72ca4e155610077eb665e8826114f1c9691ffe02c663703f5c94019bf1f5242d",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSystemCodeStatementChecks.lean": "dde4f0684184ce1f1d312d2a4ce894aa7346cc9ae31631d485c4b3f8491bf041",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSystemCodeTargets.lean": "4e5552fd6878eb80213ccc06ec2dd6e12999d2e7b44af1a5482c8d7bbe110345"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks.exact_context_embedding": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks.exact_system_code": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks.exact_detector_code": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks.exact_query_pairs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks.numerical_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "evidence_acceptance_file": "SYSTEM-CODE-ACCEPTANCE.json",
+  "evidence_acceptance_sha256": "32abc1ad3673346ac5b14d66a441ff9286b5a7e8efe28b079ba6e273542cb2c3",
+  "source_closure_modules": 447,
+  "successful_gate_receipt_sha256": "6e7760a72da5bcf922a3435348c2725472cb60048bfe9365b33c3dd427da70f6",
+  "actual_axiom_log_sha256": "e0175a243a0fb5b7b503ea714919520eaddf5499c66689a93bb2868c01be4a32",
+  "frozen_targets_unchanged": true,
+  "exclusions": [
+    "No whole all-Nat query reduction yet: packaging, validity and malformed fallback remain.",
+    "No undecidability or complete functional-hardness claim.",
+    "No target weakening or raised heartbeat/resource limits."
+  ],
+  "status": "independently accepted component; focused cumulative aggregate passed",
+  "prepared_at_utc": "2026-11-05T09:33:15.797160+00:00",
+  "scope": "Five exact targets establish typed context embedding, actual seeded-system and detector source-code calibration, strict/weak query-pair calibration and total primitive-recursive programs. Packaging, validity and malformed-input fallback for a whole all-Nat query reduction remain pending, along with genuine MRDP/H10/Narendran undecidability and whole functional hardness.",
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-effective-fragments/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt": "build-reports/1793871308939027853-2.json",
+    "receipt_sha256": "c3b4d40fe32f37e55e72fedb3d3ffa620e008b1d9017aa123290ccbb1e6a748d",
+    "gate_log_sha256": "e0175a243a0fb5b7b503ea714919520eaddf5499c66689a93bb2868c01be4a32"
+  }
+}

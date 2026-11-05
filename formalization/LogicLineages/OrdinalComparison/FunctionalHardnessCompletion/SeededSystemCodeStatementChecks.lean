@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemCodeProgramsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks
+
+theorem exact_detector_code : Targets.ExactDetectorCode := Proof.exactDetectorCode
+theorem exact_context_embedding : Targets.ExactContextAndEmbedding := Proof.exactContextAndEmbedding
+theorem exact_system_code : Targets.ExactSystemCode := Proof.exactSystemCode
+theorem exact_query_pairs : Targets.ExactQueryPairs := Proof.exactQueryPairs
+theorem numerical_programs : Targets.NumericalPrograms := Proof.numericalPrograms
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSystemCode

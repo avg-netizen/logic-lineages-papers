@@ -1,0 +1,57 @@
+{
+  "component": "SeededSourceCode",
+  "directory": "seeded-numeric",
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSourceCodeStatementChecks",
+  "source_files": {
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSourceCodeCalibrationProof.lean": "17fd50906a660def146e3812b5994fc914ff6228aee25af76da6b83451534a6d",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSourceCodeDefinitions.lean": "809a9da2f147ac94497abbbb126fb3f5350f404e593839013dbfd4d93a86f1db",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSourceCodeProgramsProof.lean": "12a446dacc114edbac2fadacd2f48c0ffb89615ed6e8cfed12e5e05f7edef261",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSourceCodeStatementChecks.lean": "9690a7add922e433a97e9da414cb7e8c186b41378a9cab4535f518e23c8bcb4c",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededSourceCodeTargets.lean": "0daf11449f7f3d7a3c8d5fe98304c4ee81cbb1e1b5590e09257eaeea05fdd7b9"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode.StatementChecks.exact_combinators": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode.StatementChecks.exact_leaves": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode.StatementChecks.numerical_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode.StatementChecks.exact_compiler_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "evidence_acceptance_file": "NUMERIC-ACCEPTANCE.json",
+  "evidence_acceptance_sha256": "de55a280679113d918942da9015b0631d26264d19831eb646e7a047f9f174928",
+  "source_closure_modules": 416,
+  "successful_gate_receipt_sha256": "3492ced56e707aa3a32a8fc0c69e21210a07efda18f73c9fed51ba0626b69ae0",
+  "actual_axiom_log_sha256": "2036605b0a949219ca5deb7db2ee9d21766c7dcb60f4ffbac86cb086552e07b0",
+  "frozen_targets_unchanged": true,
+  "exclusions": [
+    "No whole-system numerical reduction is asserted.",
+    "No undecidability or completed source-paper hardness claim.",
+    "No source or target relaxation, raised heartbeat or resource cap."
+  ],
+  "status": "independently accepted component; focused cumulative aggregate passed",
+  "prepared_at_utc": "2026-11-05T09:33:15.797160+00:00",
+  "scope": "Four exact targets establish literal seeded-expression code leaves/combinators, calibration with the actual typed source compiler, and total primitive-recursive numeric programs. This supplies expression-level effectivity, not a whole all-Nat query reduction or undecidability.",
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-effective-fragments/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt": "build-reports/1793871308939027853-2.json",
+    "receipt_sha256": "c3b4d40fe32f37e55e72fedb3d3ffa620e008b1d9017aa123290ccbb1e6a748d",
+    "gate_log_sha256": "2036605b0a949219ca5deb7db2ee9d21766c7dcb60f4ffbac86cb086552e07b0"
+  }
+}

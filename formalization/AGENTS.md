@@ -1,3 +1,11 @@
+Current prepared checkpoint: **effective additive/linear fragments and typed seeded numeric compilers.**
+Six independently accepted components add 36 exact aliases in 34 Lean files.
+All six exact gates and the focused 685-module cumulative aggregate passed.
+Read `verification/cumulative-continuation-2026-11-05/combined-effective-fragments/STATUS.md`.
+General nonlinear BASE, whole all-Nat query reduction and full hardness remain
+pending. Register unchanged: 161 checked, 2 inherited, 26 pending / 189.
+No publication yet. The bounded checker slot has been released.
+
 Current external checkpoint: **restricted linear blocks and actual seeded semantic source systems.**
 The focused 613-module cumulative aggregate passed with fifteen new exact targets
 in seventeen Lean files. Read `verification/cumulative-continuation-2026-11-05/combined-seeded-linear/STATUS.md`.

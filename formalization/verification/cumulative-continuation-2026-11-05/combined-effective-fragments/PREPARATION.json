@@ -1,0 +1,60 @@
+{
+  "status": "historical pre-check preparation; superseded by ACCEPTANCE.json",
+  "prepared_at_utc": "2026-11-05T09:33:15.797160+00:00",
+  "first_checkpoint_base_commit": "c7b319fe32975552bacdbed6bd965740f98b0d43",
+  "first_checkpoint_prepared_tree": "db63a112f20c57644f57fdcac72d7b015aabb50b",
+  "first_checkpoint_patch_sha256": "eb7ba93cb44aabbbfc03c0b45227248e926c3e12cb4f04412acc32c6da8cd584",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261105EffectiveFragments",
+  "new_source_files": 34,
+  "new_exact_targets": 36,
+  "components": [
+    {
+      "component": "QuantifiedLinear",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearStatementChecks",
+      "evidence": "verification/cumulative-continuation-2026-11-05/quantified-linear/COMPONENT-EVIDENCE.json"
+    },
+    {
+      "component": "ClosedLinear",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ClosedLinearStatementChecks",
+      "evidence": "verification/cumulative-continuation-2026-11-05/closed-linear/COMPONENT-EVIDENCE.json"
+    },
+    {
+      "component": "AdditiveSource",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveSourceStatementChecks",
+      "evidence": "verification/cumulative-continuation-2026-11-05/additive-source/COMPONENT-EVIDENCE.json"
+    },
+    {
+      "component": "SeededSourceCode",
+      "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSourceCodeStatementChecks",
+      "evidence": "verification/cumulative-continuation-2026-11-05/seeded-numeric/COMPONENT-EVIDENCE.json"
+    },
+    {
+      "component": "SeededInputCode",
+      "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededInputCodeStatementChecks",
+      "evidence": "verification/cumulative-continuation-2026-11-05/seeded-input/COMPONENT-EVIDENCE.json"
+    },
+    {
+      "component": "SeededSystemCode",
+      "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemCodeStatementChecks",
+      "evidence": "verification/cumulative-continuation-2026-11-05/seeded-system-code/COMPONENT-EVIDENCE.json"
+    }
+  ],
+  "local_closure_modules": 685,
+  "independently_verified_dependency_sources": 546,
+  "source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "full_root_build": false,
+  "native_aggregate_run": false,
+  "remote_ci_claim": false,
+  "publication_performed": false,
+  "remaining_obligations": [
+    "General nonlinear BASE decision and its source induction.",
+    "Whole all-Nat query packaging, validity and malformed-input fallback.",
+    "Genuine MRDP/H10/Narendran undecidability suppliers and whole functional hardness."
+  ],
+  "prepared_aggregate_source_sha256": "975e29c4f54e8570c92ed87fac82b06c49abedd1583cf50328b9c1657098c745"
+}

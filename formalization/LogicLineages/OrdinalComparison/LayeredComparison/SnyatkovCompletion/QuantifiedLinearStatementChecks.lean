@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearCodeProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearStatementChecks
+
+theorem exact_free_linearity_test : QuantifiedLinearTargets.ExactFreeLinearityTest :=
+  QuantifiedLinearProof.exactFreeLinearityTest
+theorem exact_output_occurrences : QuantifiedLinearTargets.ExactOutputOccurrences :=
+  QuantifiedLinearProof.exactOutputOccurrences
+theorem exact_output_linearity : QuantifiedLinearTargets.ExactOutputLinearity :=
+  QuantifiedLinearProof.exactOutputLinearity
+theorem actual_quantifier_elimination : QuantifiedLinearTargets.ActualQuantifierElimination :=
+  QuantifiedLinearProof.actualQuantifierElimination
+theorem exact_free_variable_support : QuantifiedLinearTargets.ExactFreeVariableSupport :=
+  QuantifiedLinearProof.exactFreeVariableSupport
+theorem existing_block_compatibility : QuantifiedLinearTargets.ExistingBlockCompatibility :=
+  QuantifiedLinearProof.existingBlockCompatibility
+theorem literal_code_calibration : QuantifiedLinearTargets.LiteralCodeCalibration :=
+  QuantifiedLinearProof.literalCodeCalibration
+theorem actual_numeric_programs : QuantifiedLinearTargets.ActualNumericPrograms :=
+  QuantifiedLinearProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.QuantifiedLinearStatementChecks

@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSourceCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSourceCodeProgramsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode.StatementChecks
+
+theorem exact_combinators : Targets.ExactCombinators := Proof.exactCombinators
+theorem exact_leaves : Targets.ExactLeaves := Proof.exactLeaves
+theorem exact_compiler_calibration : Targets.ExactCompilerCalibration := Proof.exactCompilerCalibration
+theorem numerical_programs : Targets.NumericalPrograms := Proof.numericalPrograms
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededSourceCode
