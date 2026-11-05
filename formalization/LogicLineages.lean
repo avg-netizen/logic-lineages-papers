@@ -2169,3 +2169,6 @@ public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.Finit
 
 -- Semantic guards on original signed-shifted inputs and the active maximal-name branch.
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks
+
+-- Conditional inactive plain-Phi atomic reduction, against the corrected frozen target.
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks

@@ -1,3 +1,11 @@
+Current prepared checkpoint: **conditional inactive plain-Phi atoms.**
+Six accepted files add six exact aliases under the corrected comparator. The
+744-module aggregate and corrected exact gate passed. Read
+`verification/cumulative-continuation-2026-11-05/combined-inactive-phi-rows/STATUS.md`.
+The malformed earlier freeze is abandoned and preserved, not imported.
+Conditional atom equivalence does not establish domain-context replacement,
+numeric effectivity, HyperPhi or global elimination. Register unchanged.
+
 Current prepared checkpoint: **semantic shifted-input guards.**
 Six independently accepted files add seven exact aliases. The 737-module
 aggregate and exact gate passed. Read

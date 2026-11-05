@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks
+
+theorem exact_occurrence_partition : InactivePhiRowsTargets.ExactOccurrencePartition :=
+  InactivePhiRowsProof.exactOccurrencePartition
+theorem guarded_value_preservation : InactivePhiRowsTargets.GuardedValuePreservation :=
+  InactivePhiRowsProof.guardedValuePreservation
+theorem finite_inactive_coverage : InactivePhiRowsTargets.FiniteInactiveCoverage :=
+  InactivePhiRowsProof.finiteInactiveCoverage
+theorem literal_linear_output : InactivePhiRowsTargets.LiteralLinearOutput :=
+  InactivePhiRowsProof.literalLinearOutput
+theorem actual_inactive_atom : InactivePhiRowsTargets.ActualInactiveAtom :=
+  InactivePhiRowsProof.actualInactiveAtom
+theorem literal_retained_occurrences : InactivePhiRowsTargets.LiteralRetainedOccurrences :=
+  InactivePhiRowsProof.literalRetainedOccurrences
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks
