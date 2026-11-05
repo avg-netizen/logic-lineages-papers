@@ -1,4 +1,31 @@
-# Formalization checkpoint — signed translation and hyper-collision
+# Formalization checkpoint — both plain-Phi finite windows
+
+The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
+continues `b2a2458` with **twelve further exact targets in four gates**. Five
+establish total nested translation; seven close both forward and reverse
+plain-Phi windows in the unchanged restricted occurrence-row grammar.
+
+Both literal truncations are retained, including the reverse window's default
+below its displacement bound. Every candidate and complete finite output is
+calibrated to the accepted source window with the original anchor domain
+explicitly retained. Both orientations eliminate the selected original name,
+preserve exact support, and have literal primitive-recursive numeric compilers.
+
+The focused aggregate `LogicLineages.ExternalCheckpoint20261104PlainWindows`
+passed. All **200 local source modules** match successful native receipts, and
+all twelve frozen aliases passed standard-axiom audits. The preceding
+180-module closure, newer PA addition laws and all prior accepted source bytes
+are preserved. Compiler limits and the source register are unchanged:
+**161 checked, 2 inherited, 26 pending / 189**.
+
+General nonlinear anchors, active-hyper case assembly, purely linear
+elimination, dominant boundaries, exhaustive branch selection and the global
+induction remain pending. Read the
+[current checkpoint](formalization/verification/cumulative-continuation-2026-11-04-second/plain-windows/STATUS.md),
+[source correspondence](formalization/verification/cumulative-continuation-2026-11-04-second/plain-windows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](formalization/verification/cumulative-continuation-2026-11-04-second/plain-windows/ACCEPTANCE.json).
+
+## Previous signed-translation checkpoint
 
 The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
 now continues `21972d8` with **sixteen further exact targets in four gates**.

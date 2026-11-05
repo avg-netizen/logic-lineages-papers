@@ -1,4 +1,33 @@
-## Current checkpoint — signed translation and hyper-collision, 4 November 2026
+## Current checkpoint — both plain-Phi windows, 4 November 2026
+
+The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
+continues `b2a2458` with **twelve further exact supporting targets**: five for
+total nested translation and seven for both orientations of the plain-Phi
+finite window in the existing restricted occurrence-row grammar.
+
+The new candidates retain both layers of natural truncation. Both complete
+finite outputs agree pointwise with the accepted source windows, including the
+original anchor-domain formula. Their elimination theorems preserve arbitrary
+correlated Boolean bodies and the original distinct-name premise; exact support
+removes the selected name. Both literal numeric compilers are primitive recursive.
+
+The focused aggregate `LogicLineages.ExternalCheckpoint20261104PlainWindows`
+passed with **200 local source modules** matched to successful native receipts.
+All twelve exact aliases passed standard-axiom audits. Frozen definitions and
+targets, compiler limits, all 180 modules of the previous closure and the newer
+PA addition-law source files remain unchanged.
+
+The numbered source register stays **161 checked, 2 inherited, 26 pending / 189**.
+General nonlinear anchors, active-hyper case assembly, purely linear elimination,
+dominant boundaries, exhaustive selection and the global induction remain open.
+No full public-root rebuild or remote-CI pass is claimed. Read the
+[current checkpoint](verification/cumulative-continuation-2026-11-04-second/plain-windows/STATUS.md),
+[source correspondence](verification/cumulative-continuation-2026-11-04-second/plain-windows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](verification/cumulative-continuation-2026-11-04-second/plain-windows/ACCEPTANCE.json).
+
+---
+
+## Previous checkpoint — signed translation and hyper-collision, 4 November 2026
 
 The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
 continues `21972d8` with **sixteen further exact supporting targets**. Ten cover

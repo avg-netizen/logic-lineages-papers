@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NestedRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NestedRowsSemanticStatementChecks
+
+theorem actual_nested_substitution : NestedRowsTargets.ActualNestedSubstitution :=
+  NestedRowsSemanticProof.actualNestedSubstitution
+theorem exact_nested_support : NestedRowsTargets.ExactNestedSupport :=
+  NestedRowsSemanticProof.exactNestedSupport
+theorem actual_guarded_atom_substitution : NestedRowsTargets.ActualGuardedAtomSubstitution :=
+  NestedRowsSemanticProof.actualGuardedAtomSubstitution
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NestedRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NestedRowsSemanticStatementChecks

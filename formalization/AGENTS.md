@@ -1,4 +1,18 @@
-Current external checkpoint: **total signed translation and complete restricted-row HyperWindow case II6.**
+Current external checkpoint: **nested translation and both restricted-row plain-Phi windows.**
+The latest continuation extends `b2a2458` on
+`formalization/cumulative-continuation-2026-11-04-second`. Twelve further exact
+targets in four gates and the focused 200-module aggregate passed. The preceding
+180-module closure and all earlier accepted sources are preserved. Read
+`verification/cumulative-continuation-2026-11-04-second/plain-windows/STATUS.md`.
+
+The source register remains 161 checked, 2 inherited and 26 pending/189.
+General nonlinear anchors, active-hyper source-case assembly, the correlated
+Presburger bridge and its numeric effectivity, dominant boundaries, exhaustive
+branch selection and global induction remain pending. Existing exact-target,
+standard-axiom and bounded serialized compiler rules remain active. The
+coordinator owns native checks, shared metadata and publication.
+
+Previous external checkpoint: **total signed translation and complete restricted-row HyperWindow case II6.**
 The latest user continuation extends `21972d8` on the same cumulative branch
 `formalization/cumulative-continuation-2026-11-04-second`. Sixteen further exact
 targets in four gates and the focused 180-module aggregate passed. The preceding

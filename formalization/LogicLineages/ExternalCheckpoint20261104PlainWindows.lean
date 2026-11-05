@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ExternalCheckpoint20261104SignedRows
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NestedRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NestedRowsCodeStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainWindowRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainWindowRowsCodeStatementChecks
+
+/-! Focused integration of twelve exact nested-translation and plain-Phi
+forward/reverse window targets. General nonlinear anchors, purely linear
+elimination, exhaustive branch assembly and the global induction remain
+separate obligations. -/

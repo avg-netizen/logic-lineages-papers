@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainWindowRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainWindowRowsSemanticStatementChecks
+
+theorem actual_guard_calibration : PlainWindowRowsTargets.ActualGuardCalibration :=
+  PlainWindowRowsSemanticProof.actualGuardCalibration
+theorem actual_candidate_substitution : PlainWindowRowsTargets.ActualCandidateSubstitution :=
+  PlainWindowRowsSemanticProof.actualCandidateSubstitution
+theorem actual_branch_calibration : PlainWindowRowsTargets.ActualBranchCalibration :=
+  PlainWindowRowsSemanticProof.actualBranchCalibration
+theorem actual_finite_elimination : PlainWindowRowsTargets.ActualFiniteElimination :=
+  PlainWindowRowsSemanticProof.actualFiniteElimination
+theorem exact_branch_support : PlainWindowRowsTargets.ExactBranchSupport :=
+  PlainWindowRowsSemanticProof.exactBranchSupport
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainWindowRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainWindowRowsSemanticStatementChecks
