@@ -1097,9 +1097,14 @@
               "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
               "scope": "Actual variable-length cipher product mask and multiplication, retaining n+1<q and digit bounds, including empty vectors. Full MRDP/H10 and bounded-universal closure remain unproved. Supporting component only; no numbered source promotion.",
               "register_reconciliation": "audits/REGISTER-RECONCILIATION-2026-11-05.json"
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-uniqueness/COMPONENT-EVIDENCE.json",
+              "scope": "Two exact targets prove unconditional uniqueness of an even natural masked-square fixed point and at most one pair of natural solutions to the unchanged cipher all-ones equations. The fixed-point theorem uses the actual Nat bitwise AND with no finiteness bound or assumed digit representation. The arithmetic equation uniqueness is conditional on two solutions existing; no solution or equality to the sparse all-ones sums is established by this component. Independently accepted; exact uniqueness gate and focused cumulative aggregate passed."
             }
           ],
-          "latest_coverage_note": "Literal depth-two polynomial-to-comparison reductions, positive-variable framing, WW ground-domain/norm transport and co-c.e. counterexample enumeration are checked. Accepted Diophantine suppliers include pair/composition and recursion-free graph closure, binomial and bit-mask graphs, and variable-length cipher arithmetic, validity and product/multiplication. None supplies full MRDP or H10 undecidability. Full source hardness remains pending."
+          "latest_coverage_note": "Literal depth-two polynomial-to-comparison reductions, positive-variable framing, WW ground-domain/norm transport and co-c.e. counterexample enumeration are checked. Accepted Diophantine suppliers include pair/composition and recursion-free graph closure, binomial and bit-mask graphs, and variable-length cipher arithmetic, validity and product/multiplication. None supplies full MRDP or H10 undecidability. Full source hardness remains pending. The cipher all-ones equations now have a checked at-most-one-solution theorem, based on actual even masked-square uniqueness. Existence, sparse-sum characterization, ones-Diophantineness, MRDP and genuine undecidability are not established by this component."
         },
         {
           "id": "02-exponential-comparison:lem:restricted-product",
@@ -8136,9 +8141,14 @@
               "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.FiniteQueryCodeStatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-05/finite-query-code/COMPONENT-EVIDENCE.json",
               "scope": "Six exact targets establish actual original source-query and finite-list code calibration, primitive-recursive numeric programs and total strict/weak level-two finite-query reductions on every natural input code. Every original zero mask is retained, using one shared indexed restriction across repeated occurrences and equations. Undecodable data and out-of-range references use the literal unsatisfiable one-equation fallback. The unchanged FiniteQueryReduction true and FiniteQueryReduction false obligations are discharged: encoded polynomial-system unsatisfiability is equivalent to the conjunction of universal comparisons of the computed genuine ground queries with the original level-two bounds. Genuine encoded-polynomial-system undecidability and whole functional hardness remain pending. Independently accepted; exact gate and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-uniqueness/COMPONENT-EVIDENCE.json",
+              "scope": "Two exact targets prove unconditional uniqueness of an even natural masked-square fixed point and at most one pair of natural solutions to the unchanged cipher all-ones equations. The fixed-point theorem uses the actual Nat bitwise AND with no finiteness bound or assumed digit representation. The arithmetic equation uniqueness is conditional on two solutions existing; no solution or equality to the sparse all-ones sums is established by this component. Independently accepted; exact uniqueness gate and focused cumulative aggregate passed."
             }
           ],
-          "latest_coverage_note": "The actual closed Omega semantic/numeric construction supplies total coded level-three strict and weak single-query reductions. The plain system compiler and exact shared-index mask restriction now also supply total coded level-two strict and weak finite-query reductions. Both maps cover every natural input, with genuine ground source queries, original type-level bounds and literal malformed-input fallbacks. The unchanged SingleQueryReduction and FiniteQueryReduction obligations are discharged for both strictness conventions. Genuine encoded-polynomial-system undecidability, its required coded adapter and whole functional hardness remain pending."
+          "latest_coverage_note": "The actual closed Omega semantic/numeric construction supplies total coded level-three strict and weak single-query reductions. The plain system compiler and exact shared-index mask restriction now also supply total coded level-two strict and weak finite-query reductions. Both maps cover every natural input, with genuine ground source queries, original type-level bounds and literal malformed-input fallbacks. The unchanged SingleQueryReduction and FiniteQueryReduction obligations are discharged for both strictness conventions. Genuine encoded-polynomial-system undecidability, its required coded adapter and whole functional hardness remain pending. The cipher all-ones equations now have a checked at-most-one-solution theorem, based on actual even masked-square uniqueness. Existence, sparse-sum characterization, ones-Diophantineness, MRDP and genuine undecidability are not established by this component."
         },
         {
           "id": "09-canonical-source-expressivity:lem:perturbed-control",
@@ -10655,7 +10665,7 @@
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
   "source_completion_updated_at_utc": "2026-11-04T21:07:50.599180+00:00",
-  "supporting_components_updated_at_utc": "2026-11-05T10:27:43.809894+00:00",
+  "supporting_components_updated_at_utc": "2026-11-05T10:32:17.216837+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
     "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",

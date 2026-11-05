@@ -2172,3 +2172,6 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 
 -- Conditional inactive plain-Phi atomic reduction, against the corrected frozen target.
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks
+
+-- Cipher all-ones equations: at-most-one solution only, not existence or full characterization.
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks

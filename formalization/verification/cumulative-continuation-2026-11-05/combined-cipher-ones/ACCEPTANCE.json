@@ -1,0 +1,71 @@
+{
+  "status": "exact uniqueness gate and focused cumulative aggregate passed; publication not attempted",
+  "accepted_at_utc": "2026-11-05T10:32:17.216837+00:00",
+  "base_commit": "643e2de1562c4c53349969b6a2ac7c21beac1fb7",
+  "base_tree": "065d6f1f3cca2aca23f0de0fff072051dcff276b",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261105CipherOnesUniqueness",
+  "aggregate_source_sha256": "52849c77f217c2870523312c174654b640177e3044a26097e573d1f1c5500ef5",
+  "components": [
+    {
+      "component": "CipherOnesUniqueness",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks",
+      "source_files": 4,
+      "exact_aliases": 2,
+      "evidence": "verification/cumulative-continuation-2026-11-05/cipher-ones-uniqueness/COMPONENT-EVIDENCE.json"
+    }
+  ],
+  "new_source_files": 4,
+  "accepted_component_source_files": 3,
+  "frozen_statement_supplier_files": 1,
+  "new_exact_targets": 2,
+  "local_closure_modules": 767,
+  "fresh_successful_compile_rows": 2,
+  "distinct_freshly_compiled_modules": 2,
+  "source_matched_cache_modules_reused": 765,
+  "receipt_sha256": "323b519a256d61a031daecf297ddd53db336f6f32d31ef09c43a332ed8446336",
+  "gate_log_sha256": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks": "5059fa9ea278d0117fa0ea697a162819da19a69643352003cad4163852efc720"
+  },
+  "standard_axiom_reports": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks.fixedEvenMaskedSquareFixedPointUnique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks.fixedOnesEquationsAtMostOne": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "caps": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "peak_process_tree_rss_kib": 1525412,
+  "source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "publication_performed": false,
+  "limits": [
+    "At-most-one solution to the original all-ones equations, not existence or full sparse-sum characterization.",
+    "CipherOnesTargets is included only as a frozen statement-definition supplier; no characterization proof or gate is accepted.",
+    "No ones-Diophantineness, general variable-bounded closure, MRDP or genuine undecidability.",
+    "Whole-source hardness and general nonlinear BASE remain pending.",
+    "No numbered source statement is promoted."
+  ]
+}

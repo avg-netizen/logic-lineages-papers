@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks
+open CipherOnesUniquenessTargets
+
+theorem fixedEvenMaskedSquareFixedPointUnique : EvenMaskedSquareFixedPointUnique :=
+  CipherOnesUniquenessProof.evenMaskedSquareFixedPointUnique
+theorem fixedOnesEquationsAtMostOne : OnesEquationsAtMostOne :=
+  CipherOnesUniquenessProof.onesEquationsAtMostOne
+
+#print axioms fixedEvenMaskedSquareFixedPointUnique
+#print axioms fixedOnesEquationsAtMostOne
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks

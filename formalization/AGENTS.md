@@ -1,3 +1,11 @@
+Current prepared checkpoint: **cipher all-ones uniqueness only.**
+Three accepted files and one frozen statement supplier add two exact aliases.
+The 767-module aggregate and exact uniqueness gate passed. Read
+`verification/cumulative-continuation-2026-11-05/combined-cipher-ones/STATUS.md`.
+This is at-most-one, not existence or full sparse-sum characterization.
+Ones-Diophantineness, bounded closure, MRDP and undecidability remain pending.
+Register unchanged: 161/2/26 of 189. No publication attempted.
+
 Current prepared checkpoint: **conditional inactive plain-Phi atoms.**
 Six accepted files add six exact aliases under the corrected comparator. The
 744-module aggregate and corrected exact gate passed. Read

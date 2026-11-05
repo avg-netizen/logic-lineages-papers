@@ -1,0 +1,51 @@
+{
+  "status": "independently accepted component; exact uniqueness gate and focused cumulative aggregate passed",
+  "component": "CipherOnesUniqueness",
+  "prepared_at_utc": "2026-11-05T10:29:59.379040+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks",
+  "source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessProof.lean": "47347bfb2ae4024d17de557c3816880dc982e09a690ea1f58dccc399471d8fc7",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessStatementChecks.lean": "78a7be1ddca0d53dd453d139745e7812fbe02a91410ae4e5560b7c49560123a1",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessTargets.lean": "8a3b228299a726a1ee98bfc1f2f022e9a1303595cb2744937b1bc30cfcfbaa86",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesTargets.lean": "0a3c5cffc7a743282b82e5eba496f8cfbc43c2659ee61905cb58bad36c26667a"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks.fixedEvenMaskedSquareFixedPointUnique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks.fixedOnesEquationsAtMostOne": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_targets_unchanged": true,
+  "independently_verified_closure_modules": 24,
+  "author_acceptance_sha256": "0c9ff40de65162037b2a8fd8e0bdcf8988bec4e7755b66fff53786f259dc2e3e",
+  "target_freeze_sha256": "91a6fd543f6e37beade27ede54aaebe852ff305df9df653f0ee51b1b9bfbcf22",
+  "successful_gate_receipt_sha256": "dc9fd11de8e7a11bca47882d3bcd0b000322848364b6b88e2cc7c6e71e0d9708",
+  "actual_axiom_log_sha256": "5059fa9ea278d0117fa0ea697a162819da19a69643352003cad4163852efc720",
+  "scope": "Two exact targets prove unconditional uniqueness of an even natural masked-square fixed point and at most one pair of natural solutions to the unchanged cipher all-ones equations. The fixed-point theorem uses the actual Nat bitwise AND with no finiteness bound or assumed digit representation. The arithmetic equation uniqueness is conditional on two solutions existing; no solution or equality to the sparse all-ones sums is established by this component.",
+  "accepted_component_source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessProof.lean": "47347bfb2ae4024d17de557c3816880dc982e09a690ea1f58dccc399471d8fc7",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessStatementChecks.lean": "78a7be1ddca0d53dd453d139745e7812fbe02a91410ae4e5560b7c49560123a1",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessTargets.lean": "8a3b228299a726a1ee98bfc1f2f022e9a1303595cb2744937b1bc30cfcfbaa86"
+  },
+  "frozen_statement_supplier_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesTargets.lean": "0a3c5cffc7a743282b82e5eba496f8cfbc43c2659ee61905cb58bad36c26667a"
+  },
+  "exclusions": [
+    "No existence of a solution or full sparse-sum characterization.",
+    "No ones-Diophantineness, general variable-bounded closure, MRDP or undecidability.",
+    "No source-register promotion."
+  ],
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-cipher-ones/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt_sha256": "323b519a256d61a031daecf297ddd53db336f6f32d31ef09c43a332ed8446336",
+    "gate_log_sha256": "5059fa9ea278d0117fa0ea697a162819da19a69643352003cad4163852efc720"
+  }
+}
