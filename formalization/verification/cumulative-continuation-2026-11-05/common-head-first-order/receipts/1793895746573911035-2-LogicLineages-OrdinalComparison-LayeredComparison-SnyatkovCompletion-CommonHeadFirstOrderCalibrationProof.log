@@ -1,0 +1,248 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadFirstOrderCalibrationProof.lean:18:4: error: Tactic `rfl` failed: The left-hand side
+  if True then
+    (BaseBooleanSource.translate
+        (CommonHeadExactVariables.formula
+          ((Encodable.decode
+                  (5 *
+                      Encodable.encode
+                        (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                          CommonLayerSyntax.encodeCommon heads.length F, d) /
+                    5)).getD
+              ([], 0, 0, 0)).1
+          ((Encodable.decode
+                    (5 *
+                        Encodable.encode
+                          (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                            CommonLayerSyntax.encodeCommon heads.length F, d) /
+                      5)).getD
+                ([], 0, 0, 0)).2.1
+          ((Encodable.decode
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).getD
+                  ([], 0, 0, 0)).2.2.1
+          ((Encodable.decode
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).getD
+                  ([], 0, 0, 0)).2.2.2)).encode
+  else
+    if 0 = 1 then
+      5 *
+          Code.translate
+            (5 *
+                Encodable.encode
+                  (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                    CommonLayerSyntax.encodeCommon heads.length F, d) /
+              5) +
+        2
+    else
+      if 0 = 2 then
+        5 *
+            Nat.pair
+              (Code.translate
+                (Nat.unpair
+                    (5 *
+                        Encodable.encode
+                          (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                            CommonLayerSyntax.encodeCommon heads.length F, d) /
+                      5)).1)
+              (Code.translate
+                (Nat.unpair
+                    (5 *
+                        Encodable.encode
+                          (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                            CommonLayerSyntax.encodeCommon heads.length F, d) /
+                      5)).2) +
+          3
+      else
+        if 0 = 3 then
+          5 *
+              Nat.pair
+                (Nat.unpair
+                    (5 *
+                        Encodable.encode
+                          (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                            CommonLayerSyntax.encodeCommon heads.length F, d) /
+                      5)).1
+                (Code.translate
+                  (Nat.unpair
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).2) +
+            4
+        else
+          5 *
+              Nat.pair
+                (Nat.unpair
+                    (5 *
+                        Encodable.encode
+                          (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                            CommonLayerSyntax.encodeCommon heads.length F, d) /
+                      5)).1
+                (5 *
+                    Nat.pair
+                      (Code.positiveGuard
+                        (Nat.unpair
+                            (5 *
+                                Encodable.encode
+                                  (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                    CommonLayerSyntax.encodeCommon heads.length F, d) /
+                              5)).1)
+                      (Code.translate
+                        (Nat.unpair
+                            (5 *
+                                Encodable.encode
+                                  (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                    CommonLayerSyntax.encodeCommon heads.length F, d) /
+                              5)).2) +
+                  3) +
+            4
+is not definitionally equal to the right-hand side
+  (translate (Formula.compare heads E F d)).encode
+
+case compare
+heads : List NONote
+E F : CommonLayerSyntax.CommonSyntax heads.length
+d : ℤ
+⊢ (if True then
+      (BaseBooleanSource.translate
+          (CommonHeadExactVariables.formula
+            ((Encodable.decode
+                    (5 *
+                        Encodable.encode
+                          (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                            CommonLayerSyntax.encodeCommon heads.length F, d) /
+                      5)).getD
+                ([], 0, 0, 0)).1
+            ((Encodable.decode
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).getD
+                  ([], 0, 0, 0)).2.1
+            ((Encodable.decode
+                        (5 *
+                            Encodable.encode
+                              (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                CommonLayerSyntax.encodeCommon heads.length F, d) /
+                          5)).getD
+                    ([], 0, 0, 0)).2.2.1
+            ((Encodable.decode
+                        (5 *
+                            Encodable.encode
+                              (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                CommonLayerSyntax.encodeCommon heads.length F, d) /
+                          5)).getD
+                    ([], 0, 0, 0)).2.2.2)).encode
+    else
+      if 0 = 1 then
+        5 *
+            Code.translate
+              (5 *
+                  Encodable.encode
+                    (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                      CommonLayerSyntax.encodeCommon heads.length F, d) /
+                5) +
+          2
+      else
+        if 0 = 2 then
+          5 *
+              Nat.pair
+                (Code.translate
+                  (Nat.unpair
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).1)
+                (Code.translate
+                  (Nat.unpair
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).2) +
+            3
+        else
+          if 0 = 3 then
+            5 *
+                Nat.pair
+                  (Nat.unpair
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).1
+                  (Code.translate
+                    (Nat.unpair
+                        (5 *
+                            Encodable.encode
+                              (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                CommonLayerSyntax.encodeCommon heads.length F, d) /
+                          5)).2) +
+              4
+          else
+            5 *
+                Nat.pair
+                  (Nat.unpair
+                      (5 *
+                          Encodable.encode
+                            (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                              CommonLayerSyntax.encodeCommon heads.length F, d) /
+                        5)).1
+                  (5 *
+                      Nat.pair
+                        (Code.positiveGuard
+                          (Nat.unpair
+                              (5 *
+                                  Encodable.encode
+                                    (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                      CommonLayerSyntax.encodeCommon heads.length F, d) /
+                                5)).1)
+                        (Code.translate
+                          (Nat.unpair
+                              (5 *
+                                  Encodable.encode
+                                    (CommonLayerSyntax.headCodes heads, CommonLayerSyntax.encodeCommon heads.length E,
+                                      CommonLayerSyntax.encodeCommon heads.length F, d) /
+                                5)).2) +
+                    3) +
+              4) =
+    (translate (Formula.compare heads E F d)).encode
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadFirstOrderCalibrationProof.lean:15:34: warning: This simp argument is unused:
+  Nat.mul_div_right
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.mul_mod_right, N̵a̵t̵.̵m̵u̵l̵_̵d̵i̵v̵_̵r̵i̵g̵h̵t̵,̵ ̵if_pos rfl, Code.atom, Encodable.encodek, Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadFirstOrderCalibrationProof.lean:15:53: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.mul_mod_right, Nat.mul_div_right, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵Code.atom,
+  ̵  ̵ ̵ ̵ ̵ ̵Encodable.encodek, Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadFirstOrderCalibrationProof.lean:16:6: warning: This simp argument is unused:
+  Encodable.encodek
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.mul_mod_right, Nat.mul_div_right, if_pos rfl, Code.atom, E̵n̵c̵o̵d̵a̵b̵l̵e̵.̵e̵n̵c̵o̵d̵e̵k̵,̵ ̵Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadFirstOrderCalibrationProof.lean:16:25: warning: This simp argument is unused:
+  Option.getD_some
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.mul_mod_right, Nat.mul_div_right, if_pos rfl, Code.atom, E̵n̵c̵o̵d̵a̵b̵l̵e̵.̵e̵n̵c̵o̵d̵e̵k̵,̵ ̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵]̵E̲n̲c̲o̲d̲a̲b̲l̲e̲.̲e̲n̲c̲o̲d̲e̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

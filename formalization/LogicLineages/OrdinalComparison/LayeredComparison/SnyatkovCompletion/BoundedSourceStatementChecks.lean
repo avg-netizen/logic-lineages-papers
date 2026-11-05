@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceStatementChecks
+
+theorem literal_guard : BoundedSourceTargets.LiteralGuard := BoundedSourceProof.literalGuard
+theorem exact_guard_invariance : BoundedSourceTargets.ExactGuardInvariance := BoundedSourceProof.exactGuardInvariance
+theorem exact_finite_search : BoundedSourceTargets.ExactFiniteSearch := BoundedSourceProof.exactFiniteSearch
+theorem actual_truth : BoundedSourceTargets.ActualTruth := BoundedSourceProof.actualTruth
+theorem actual_decision : BoundedSourceTargets.ActualDecision := BoundedSourceProof.actualDecision
+theorem actual_bounded_universal : BoundedSourceTargets.ActualBoundedUniversal := BoundedSourceProof.actualBoundedUniversal
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceStatementChecks

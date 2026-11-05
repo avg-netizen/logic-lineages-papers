@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.HardnessDecisionAssemblyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks
+
+theorem conjunction_meaning : Targets.ConjunctionMeaning := Proof.conjunctionMeaning
+theorem conjunction_computable : Targets.ConjunctionComputable := Proof.conjunctionComputable
+theorem finite_query_pullback : Targets.FiniteQueryPullback := Proof.finiteQueryPullback
+theorem level_two_undecidability : Targets.LevelTwoUndecidability := Proof.levelTwoUndecidability
+theorem full_functional_hardness : HardnessTargets.FullFunctionalHardness := Proof.fullFunctionalHardness
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks

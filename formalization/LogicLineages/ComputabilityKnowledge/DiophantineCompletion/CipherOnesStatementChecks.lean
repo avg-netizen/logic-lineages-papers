@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks
+open CipherTargets CipherOnesTargets
+
+theorem fixedOnesEquationsForward : OnesEquationsForward := CipherOnesForwardProof.onesEquationsForward
+theorem fixedOnesEquationsUnique : OnesEquationsUnique := CipherOnesProof.onesEquationsUnique
+theorem fixedOnesArithmeticCharacterization : OnesArithmeticCharacterization := CipherOnesProof.onesArithmeticCharacterization
+
+#print axioms fixedOnesEquationsForward
+#print axioms fixedOnesEquationsUnique
+#print axioms fixedOnesArithmeticCharacterization
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks

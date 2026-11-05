@@ -1,0 +1,7 @@
+module
+public import LogicLineages.ExternalCheckpoint20261105CipherOnesUniqueness
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks
+
+/-! Exact cipher all-ones suppliers and literal maximal plain-row support. MRDP, genuine undecidability and general nonlinear elimination remain pending. -/

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDiophantineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingStatementChecks
+open RowPackingTargets
+
+theorem fixedConstantSpecification : ConstantSpecification := RowPackingSemanticProof.constantSpecification
+theorem fixedPackedConstraintSpecification : PackedConstraintSpecification := RowPackingSemanticProof.packedConstraintSpecification
+theorem fixedVariableRowPacking : VariableRowPacking := RowPackingSemanticProof.variableRowPacking
+theorem fixedPointwiseElementaryDiophantine : PointwiseElementaryDiophantine := RowPackingDiophantineProof.pointwiseElementaryDiophantine
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingStatementChecks

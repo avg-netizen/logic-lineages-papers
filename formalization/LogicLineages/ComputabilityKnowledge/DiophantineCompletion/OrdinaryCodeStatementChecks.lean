@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks
+open OrdinaryCodeTargets
+
+theorem fixedFullCodeGraphDiophantine : FullCodeGraphDiophantine := OrdinaryCodeProof.fullCodeGraphDiophantine
+theorem fixedPartrecGraphDiophantine : PartrecGraphDiophantine := OrdinaryCodeProof.partrecGraphDiophantine
+theorem fixedFixedUniversalCode : FixedUniversalCode := OrdinaryCodeProof.fixedUniversalCode
+theorem fixedUniversalEvaluatorDiophantine : Targets.UniversalEvaluatorDiophantine :=
+  OrdinaryCodeProof.universalEvaluatorDiophantine
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks

@@ -1,0 +1,48 @@
+{
+  "component": "H10Adapter",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10AdapterDefinitions.lean": "d713f766a90d73897022250198ec8756816eaadf5914664ecb2e1b80777be1c0",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10AdapterProgramsProof.lean": "2f6920c52762e76420c0cb796a3e897732cfecd8e5f0eb8698ec6928634c7e6d",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10AdapterSemanticProof.lean": "e2ea46d895c5e0e7b76817a0689475bb944e6b0d34ed361063aa35178720dfa8",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10AdapterStatementChecks.lean": "508601bea04e0e1b1a9970a588090477be3d0f79d3179e4e6b48f7d691a0e902",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10AdapterTargets.lean": "c2775300be1e36de6f77ce89ed22d068367d54f1a498858d1fb59790bbb4c108",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10ReductionTargets.lean": "813a9733d1020d745e864fd326a96a37635a2675f851e3a30708410d6c8ae597"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Adapter.StatementChecks.parsed_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Adapter.StatementChecks.reduction_primitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Adapter.StatementChecks.original_safety": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Adapter.StatementChecks.polynomial_circuit_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Adapter.StatementChecks.impossible_system_correct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.H10AdapterStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 417,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/h10-adapter-source/H10-ADAPTER-ACCEPTANCE.json",
+  "original_acceptance_sha256": "67478db4ccaa1c15631dd6a79e99a7c71a1689e836d5c8a1cd68f2bd687fbbde",
+  "scope": "Concrete total primitive-recursive original-input validated polynomial shift/circuit/system adapter. Checked original malformed rejection, well-formed UNSAT fallback, arbitrary-valid-parse calibration, and exact Nat-root/positive-circuit equivalence. Restored original CodedH10ToLinearSystems is target-only.",
+  "exclusions": "Final H10-to-linear-system equivalence and downstream hardness are not proved by this supporting component.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

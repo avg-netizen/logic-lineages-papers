@@ -1,0 +1,51 @@
+{
+  "component": "CircuitNumeric",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitNumericCalibrationProof.lean": "49e209b884a26ad9011cd65950cab2229a21878d4642c9fae01d8dce25d83889",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitNumericDefinitions.lean": "07811c6901b273829e67d7a5cd7b0031082a7b1ad389cae124e0b79b32b8e1b7",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitNumericProgramsProof.lean": "66867deb75aa451ef29fc365f07efbb5434f3a0e5d101dbab2d295b33fbc148a",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitNumericStatementChecks.lean": "9c1bbb4bf5639a2ca7c7bf24baf00007daf73d80f48037dd98acc70d291cbab5",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/CircuitNumericTargets.lean": "10a754f9562ea5b8dd0108b59eeaa96fd512f515da9b080e60b1c7a2972a2531"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitNumeric.StatementChecks.numeric_circuit_encoder": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitNumeric.StatementChecks.encoder_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitNumeric.StatementChecks.system_code_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitNumeric.StatementChecks.gate_code_calibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitNumeric.StatementChecks.encoder_primitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitNumeric.StatementChecks.system_code_primitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitNumericStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 386,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/circuit-numeric-source/CIRCUIT-NUMERIC-ACCEPTANCE.json",
+  "original_acceptance_sha256": "522bc6130081185c7402810ac340a092d47129fa3a8f0e2e9eab10ed7bd9437a",
+  "scope": "Primitive-recursive actual three-cell circuit codec to exact standard Encodable SystemCode via unchanged literal row builder; exact NumericCircuitEncoder and five supporting aliases.",
+  "exclusions": "No malformed-input rejection, full circuit semantic equivalence, H10-to-linear-system reduction, or downstream hardness assertion.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

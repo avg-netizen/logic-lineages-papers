@@ -1,0 +1,65 @@
+{
+  "requested": [
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks"
+  ],
+  "heap_cap_mib": 2048,
+  "rss_cap_mib": 1536,
+  "wall_seconds": 180,
+  "cpu_seconds": 90,
+  "minimum_free_mib": 2048,
+  "core_only_profile": false,
+  "single_thread": true,
+  "threads": 1,
+  "upstream_cache_only": true,
+  "calculator_objects_borrowed": true,
+  "modules": [
+    {
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsActiveProof",
+      "returncode": 0,
+      "seconds": 2.548,
+      "observed_cpu_seconds": 2.49,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1180608,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "00831c124e115f25a4ba2b0f668ef630135549a88c3297f935e8fa2664029d7f",
+      "log": "build-reports/1793874516187585312-2-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-MaximalPlainRowsActiveProof.log"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.ControlTowerResidueProof",
+      "returncode": 77,
+      "seconds": 1.112,
+      "observed_cpu_seconds": 1.06,
+      "last_wait_channel": "__futex_wait",
+      "stopped_threads": [
+        {
+          "tid": 8,
+          "state": "S",
+          "cpu_seconds": 0.02,
+          "wait_channel": "__futex_wait"
+        },
+        {
+          "tid": 9,
+          "state": "S",
+          "cpu_seconds": 0.0,
+          "wait_channel": "do_epoll_wait"
+        },
+        {
+          "tid": 10,
+          "state": "R",
+          "cpu_seconds": 1.03,
+          "wait_channel": "0"
+        }
+      ],
+      "peak_process_tree_rss_kib": 1581440,
+      "memory_observation_failure": {
+        "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t8\nNgid:\t0\nPid:\t8\nPPid:\t2\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t \nNStgid:\t8\nNSpid:\t8\nNSpgid:\t8\nNSsid:\t8\nKthread:\t0\nVmPeak:\t 5846244 kB\nVmSize:\t 5821660 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1581440 kB\nVmRSS:\t 1581440 kB\nRssAnon:\t  162660 kB\nRssFile:\t 1418780 kB\nRssShmem:\t       0 kB\nVmData:\t 5533736 kB\nVmStk:\t     140 kB\nVmExe:\t       4 kB\nVmLib:\t  101816 kB\nVmPTE:\t   47204 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/39792\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tvulnerable\nSpeculationIndirectBranch:\talways enabled\nCpus_allowed:\t1ff\nCpus_allowed_list:\t0-8\nMems_allowed:\t00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\n",
+        "statm": "1455415 395360 354695 1 0 1383469 0\n"
+      },
+      "discarded_failed_outputs": [],
+      "source_sha256": "0fcfc651e45db5987c1a88bc9abee19ebd2aa3850ae25dccbf54c66f6ffcb251",
+      "log": "build-reports/1793874516187585312-2-LogicLineages-OrdinalComparison-ControlTowerResidueProof.log"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesSupportProof.lean:28:11: error: unsolved goals
+case succ
+code n : ℕ
+⊢ List.flatMap (fun a => commonVariables n (decodeCommon n a.2)) (payload code).2 =
+    (List.map (fun a => commonVariables n (decodeCommon n a.2)) (payload code).2).flatten
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesSupportProof.lean:51:92: error(lean.invalidField): Invalid field `to_comp`: The environment does not contain `Exists.to_comp`, so it is not possible to project the field `to_comp` from an expression
+  PrimrecRel.comp Primrec.eq (Primrec.comp Primrec.fst Primrec.fst) (Primrec.const 0)
+of type
+  ∃ x, Primrec fun a => decide ((fun a => a.1.1 = 0) a)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesSupportProof.lean:46:54: error: unsolved goals
+case pos
+hb : Computable fun p => BaseTermPrograms.variablesCode p.1.2
+hf : Computable fun p => p.2.flatten
+p : Input × List (List ℕ)
+h : p.1.1 = 0
+⊢ (bif ?m.76 p then BaseTermPrograms.variablesCode p.1.2 else p.2.flatten) = BaseTermPrograms.variablesCode p.1.2
+
+case neg
+hb : Computable fun p => BaseTermPrograms.variablesCode p.1.2
+hf : Computable fun p => p.2.flatten
+p : Input × List (List ℕ)
+h : ¬p.1.1 = 0
+⊢ (bif ?m.76 p then BaseTermPrograms.variablesCode p.1.2 else p.2.flatten) = p.2.flatten
+
+hb : Computable fun p => BaseTermPrograms.variablesCode p.1.2
+hf : Computable fun p => p.2.flatten
+⊢ Input × List (List ℕ) → Bool

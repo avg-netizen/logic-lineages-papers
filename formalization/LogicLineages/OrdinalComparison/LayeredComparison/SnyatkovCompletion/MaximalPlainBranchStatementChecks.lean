@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchEliminationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchStatementChecks
+
+theorem literal_frame : MaximalPlainBranchTargets.LiteralFrame := MaximalPlainBranchProof.literalFrame
+theorem literal_frame_linearity : MaximalPlainBranchTargets.LiteralFrameLinearity :=
+  MaximalPlainBranchProof.literalFrameLinearity
+theorem actual_contextual_compilation : MaximalPlainBranchTargets.ActualContextualCompilation :=
+  MaximalPlainBranchProof.actualContextualCompilation
+theorem literal_contextual_linearity : MaximalPlainBranchTargets.LiteralContextualLinearity :=
+  MaximalPlainBranchProof.literalContextualLinearity
+theorem actual_existential_branch : MaximalPlainBranchTargets.ActualExistentialBranch :=
+  MaximalPlainBranchProof.actualExistentialBranch
+theorem exact_removed_name : MaximalPlainBranchTargets.ExactRemovedName := MaximalPlainBranchProof.exactRemovedName
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchStatementChecks

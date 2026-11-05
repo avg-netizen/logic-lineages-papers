@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticCoefficientProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticCoefficientStatementChecks
+
+theorem exact_natural_value : SemanticCoefficientTargets.ExactNaturalValue := SemanticCoefficientProof.exactNaturalValue
+theorem exact_finite_acceptance : SemanticCoefficientTargets.ExactFiniteAcceptance := SemanticCoefficientProof.exactFiniteAcceptance
+theorem exact_nonfinite_rejection : SemanticCoefficientTargets.ExactNonfiniteRejection := SemanticCoefficientProof.exactNonfiniteRejection
+theorem positive_output : SemanticCoefficientTargets.PositiveOutput := SemanticCoefficientProof.positiveOutput
+theorem structural_extension : SemanticCoefficientTargets.StructuralExtension := SemanticCoefficientProof.structuralExtension
+theorem actual_numeric_program : SemanticCoefficientTargets.ActualNumericProgram := SemanticCoefficientProof.actualNumericProgram
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticCoefficientStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticCoefficientStatementChecks

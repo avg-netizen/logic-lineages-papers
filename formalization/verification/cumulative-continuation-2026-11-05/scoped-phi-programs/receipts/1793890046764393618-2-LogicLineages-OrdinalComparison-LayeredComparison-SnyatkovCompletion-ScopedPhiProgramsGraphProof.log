@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ScopedPhiProgramsGraphProof.lean:39:104: error: unsolved goals
+case pos
+extend : Bool
+p : Input
+hleaf : ¬(p.2 % 5 = 0 ∨ p.2 % 5 = 1)
+hp : 0 < p.2
+hd : p.2 / 5 < p.2
+hl : (Nat.unpair (p.2 / 5)).1 ≤ p.2 / 5
+hr : (Nat.unpair (p.2 / 5)).2 ≤ p.2 / 5
+h✝² : ¬p.2 % 5 = 2
+h✝¹ : ¬p.2 % 5 = 3
+h✝ : extend = true
+⊢ (Nat.unpair (p.2 / 5)).2 < p.2
+
+case neg
+extend : Bool
+p : Input
+hleaf : ¬(p.2 % 5 = 0 ∨ p.2 % 5 = 1)
+hp : 0 < p.2
+hd : p.2 / 5 < p.2
+hl : (Nat.unpair (p.2 / 5)).1 ≤ p.2 / 5
+hr : (Nat.unpair (p.2 / 5)).2 ≤ p.2 / 5
+h✝² : ¬p.2 % 5 = 2
+h✝¹ : ¬p.2 % 5 = 3
+h✝ : ¬extend = true
+⊢ (Nat.unpair (p.2 / 5)).2 < p.2

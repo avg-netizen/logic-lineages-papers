@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchSourceBoundaryProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchSourceStatementChecks
+
+theorem supplier_inclusion : FiniteSearchSourceTargets.SupplierInclusion := FiniteSearchSourceProof.supplierInclusion
+theorem actual_truth : FiniteSearchSourceTargets.ActualTruth := FiniteSearchSourceProof.actualTruth
+theorem actual_decision : FiniteSearchSourceTargets.ActualDecision := FiniteSearchSourceProof.actualDecision
+theorem active_environment_search : FiniteSearchSourceTargets.ActiveEnvironmentSearch := FiniteSearchSourceProof.activeEnvironmentSearch
+theorem mixed_bounded_unbounded : FiniteSearchSourceTargets.MixedBoundedUnbounded := FiniteSearchSourceProof.mixedBoundedUnbounded
+theorem unbounded_nonlinear_boundary : FiniteSearchSourceTargets.UnboundedNonlinearBoundary := FiniteSearchSourceProof.unboundedNonlinearBoundary
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchSourceStatementChecks

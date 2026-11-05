@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationDiophantineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks
+open MinimizationTargets
+
+theorem fixedOrdinaryRfindSpecification : OrdinaryRfindSpecification :=
+  MinimizationSemanticProof.ordinaryRfindSpecification
+theorem fixedShiftedSearchDiophantine : ShiftedSearchDiophantine :=
+  MinimizationDiophantineProof.shiftedSearchDiophantine
+theorem fixedOrdinaryRfindGraphClosure : OrdinaryRfindGraphClosure :=
+  MinimizationDiophantineProof.ordinaryRfindGraphClosure
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchSourceStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LeastSourceWitnessStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadExactVariablesStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadFirstOrderStatementChecks
+
+/-! Static integration candidate for nine independently accepted gates. This aggregate has not been checked. Exact restricted domains and typed/head certificates remain in force. Translation is not unrestricted decision; no full BASE or source-register promotion. -/

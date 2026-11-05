@@ -1,0 +1,59 @@
+{
+  "status": "independently accepted component; all nine exact gates and focused cumulative aggregate passed",
+  "component": "ZeroValuation",
+  "prepared_at_utc": "2026-11-05T11:38:00.305470+00:00",
+  "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks",
+  "source_files": {
+    "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ZeroValuationDefinitions.lean": "d7d07c8031e1847c5032354b3f5702f446b189d65469346acd42ea94faf208bd",
+    "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ZeroValuationTargets.lean": "bef1af1d4c5019b7f4bcb0f797666d00f7f0824fab9c6353b9229bc3de275611",
+    "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ZeroValuationSemanticProof.lean": "dace3dfa20df337e2b435e5afd471a58bb8f22cd9f725b2fda685ebb6a4d8404",
+    "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ZeroValuationCalibrationProof.lean": "2d6ce405c2feb1d4d74a17b8cb707e1bc3762265e76363df4c8f74611a5bdd27",
+    "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ZeroValuationProgramsProof.lean": "03aecd7fb495054d7bab742b22a00fc4531b403283a59eed8854be7ea8b3e6b9",
+    "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ZeroValuationStatementChecks.lean": "7ad6a674a73a6d8ba6b49bdd62e5d5527bc1fd7c0935d0c30467a01d070ba689"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks.actual_row_projection": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks.actual_zero_evaluator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks.actual_projection": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks.exact_constant_projection": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks.actual_numeric_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks.literal_code_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_targets_unchanged": true,
+  "independently_verified_closure_modules": 160,
+  "author_acceptance_sha256": "32802dd973a88177697bf6ec04cdf9f086a6425a3cc4848cf6e55152e392322f",
+  "target_freeze_sha256": "ec4ccc6f205665014a851738fd97e43ca89ba939614b423be8b667eaf0bd2142",
+  "successful_gate_receipt_sha256": "e7ab9aa9a818b02596a2000a7295083c711b599ae6e0e0232b8e17f624106932",
+  "actual_axiom_log_sha256": "34c27a40aee83fe58787e85b86306c17146a97c091782fffbe071b5b710901fc",
+  "scope": "Actual evaluation at the fixed all-zero valuation: every original weighted summand uses existing valueAt/itemValue programs, atom kind/modulus and Boolean position are preserved, and a literal constant matrix is evaluated by the checked constant evaluator. Exact numeric calibration and primitive recursiveness include ground hyperPhi evaluation by the existing finite iterator; this is not hyperPhi quantifier elimination.",
+  "exclusions": [
+    "Parameter-dependent/nonmaximal witness coverage, hyperPhi quantifier elimination, arbitrary nonlinear quantifier alternation and full nonlinear BASE/QE remain pending.",
+    "No numbered source-register promotion."
+  ],
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-bounded-plain/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt_sha256": "7f228c9fdd95b3c3568d21f86a03abb27a8bfbd80514c566c38da0c9311e3b76",
+    "gate_log_sha256": "34c27a40aee83fe58787e85b86306c17146a97c091782fffbe071b5b710901fc"
+  }
+}

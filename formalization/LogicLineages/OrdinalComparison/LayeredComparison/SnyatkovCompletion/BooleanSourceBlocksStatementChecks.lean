@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BooleanSourceBlocksRawProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BooleanSourceBlocksProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BooleanSourceBlocksStatementChecks
+
+theorem exact_decision_domain : BooleanSourceBlocksTargets.ExactDecisionDomain := BooleanSourceBlocksProof.exactDecisionDomain
+theorem actual_decision : BooleanSourceBlocksTargets.ActualDecision := BooleanSourceBlocksProof.actualDecision
+theorem literal_code_decision : BooleanSourceBlocksTargets.LiteralCodeDecision := BooleanSourceBlocksProof.literalCodeDecision
+theorem actual_numeric_program : BooleanSourceBlocksTargets.ActualNumericProgram := BooleanSourceBlocksProof.actualNumericProgram
+theorem actual_raw_decision : BooleanSourceBlocksTargets.ActualRawDecision := BooleanSourceBlocksProof.actualRawDecision
+theorem fragment_boundary : BooleanSourceBlocksTargets.FragmentBoundary := BooleanSourceBlocksProof.fragmentBoundary
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BooleanSourceBlocksStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BooleanSourceBlocksStatementChecks

@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitGadgetConstantProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitGadgetStatementChecks
+open CircuitGadgetTargets
+
+theorem fixedSquareRowsMeaning : SquareRowsMeaning := CircuitLinear.Proof.square_rows_equations
+theorem fixedConstantRowsMeaning : ConstantRowsMeaning := CircuitLinear.Proof.constant_rows_equations
+theorem fixedConstantRowsForceScalars : ConstantRowsForceScalars := CircuitLinear.Proof.constant_rows_force_scalars
+theorem fixedTriangularIdentity : TriangularIdentity := CircuitLinear.Proof.triangular_identity
+theorem fixedTriangularAddition : TriangularAddition := CircuitLinear.Proof.triangular_addition
+theorem fixedTriangularMultiplication : TriangularMultiplication := CircuitLinear.Proof.triangular_multiplication
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitGadgetStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.CircuitGadgetStatementChecks

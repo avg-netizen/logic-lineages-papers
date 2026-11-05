@@ -1,0 +1,21 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDiophantineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks
+open CipherRelationTargets
+
+theorem fixedConstantArithmeticCharacterization : ConstantArithmeticCharacterization :=
+  CipherRelationArithmeticProof.constantArithmeticCharacterization
+theorem fixedMultiplicationArithmeticCharacterization : MultiplicationArithmeticCharacterization :=
+  CipherRelationArithmeticProof.multiplicationArithmeticCharacterization
+theorem fixedAdditionSpecification : AdditionSpecification := CipherRelationArithmeticProof.additionSpecification
+theorem fixedMultiplicationSpecification : MultiplicationSpecification := CipherRelationArithmeticProof.multiplicationSpecification
+theorem fixedCodeDiophantine : CodeDiophantine := CipherRelationDiophantineProof.codeDiophantine
+theorem fixedConstDiophantine : ConstDiophantine := CipherRelationDiophantineProof.constDiophantine
+theorem fixedAddDiophantine : AddDiophantine := CipherRelationDiophantineProof.addDiophantine
+theorem fixedMultDiophantine : MultDiophantine := CipherRelationDiophantineProof.multDiophantine
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks

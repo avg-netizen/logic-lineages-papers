@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalStatementChecks
+open BoundedUniversalTargets
+
+theorem fixedFiniteParameterNormalization : FiniteParameterNormalization :=
+  BoundedUniversalProof.finiteParameterNormalization
+theorem fixedLengthBoundedUniversalClosure : LengthBoundedUniversalClosure :=
+  BoundedUniversalProof.lengthBoundedUniversalClosure
+theorem fixedVariableBoundedUniversalClosure : CipherTargets.VariableBoundedUniversalClosure :=
+  BoundedUniversalProof.variableBoundedUniversalClosure
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalStatementChecks

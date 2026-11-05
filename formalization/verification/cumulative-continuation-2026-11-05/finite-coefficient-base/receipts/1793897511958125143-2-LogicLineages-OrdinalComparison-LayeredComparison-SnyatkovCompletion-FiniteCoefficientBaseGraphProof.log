@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseGraphProof.lean:19:40: error: Application type mismatch: The argument
+  hm
+has type
+  Primrec₂ fun p x => Option.map (fun y => f x y) p.2
+but is expected to have type
+  Primrec₂ fun p __do_lift => do
+    let __do_lift_1 ← p.2
+    pure (f __do_lift __do_lift_1)
+in the application
+  Primrec.option_bind Primrec.fst hm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseGraphProof.lean:64:48: error: Application type mismatch: The argument
+  Nat.Primrec.pow
+has type
+  Nat.Primrec (Nat.unpaired fun x1 x2 => x1 ^ x2)
+but is expected to have type
+  Nat.Primrec
+    (Nat.unpaired fun m n =>
+      Encodable.encode ((Encodable.decode m).bind fun a => Option.map (?m.117 a) (Encodable.decode n)))
+in the application
+  Primrec₂.nat_iff.mpr Nat.Primrec.pow

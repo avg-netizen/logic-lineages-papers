@@ -1,0 +1,49 @@
+{
+  "status": "independently accepted component; all nine exact gates and focused cumulative aggregate passed",
+  "component": "Elementary",
+  "prepared_at_utc": "2026-11-05T11:38:00.305470+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks",
+  "source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryDefinitions.lean": "1d520b62342b3139da77893c70b15f8641b5c492f4279a1b556055d9d7c49d93",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryExpressionProof.lean": "fed47d6ce509c3997e58c05b92de6ee2eec0bdc7f999197adf73e87c05824a3d",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryNormalizationProof.lean": "1d8a1619cf334c90851ca5a7c35cbc524ab51540d2e851cad5f3ef91c51730f0",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryStatementChecks.lean": "72f63ada992750442f3cd10ef32f67311f1d06ace7e8d8a1853270640ea58b8b",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementarySupportProof.lean": "a634625461926064a9d9b8ccf8798df53323578aa820937a23ef9f84637f52e1",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryTargets.lean": "9bf1fb938fa732b3961e65c208dc77081403bd4d18f4f1d56287babd12a4b127"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks.fixedElementarySystemNormalization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks.fixedNaturalPairRepresentation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks.fixedExpressionSystemNormalization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_targets_unchanged": true,
+  "independently_verified_closure_modules": 20,
+  "author_acceptance_sha256": "28a8ffd1f75a5e92756e951c9fd7b195ed79bb3386a21f7e57245f6fd7ec4a8b",
+  "target_freeze_sha256": "1e8dcaed04bb29eccf925649b9899e9e2a8125aa013c9fefbadc0a0789651ef6",
+  "successful_gate_receipt_sha256": "3afbb160496fbc2b234168b3a6e8992586a39b85e22867ba4b3e26901adb498d",
+  "actual_axiom_log_sha256": "0ed91ba06b786e288aa841195374dfb857d5b3c0534ecdcd229cfe90652f8511",
+  "scope": "Exact natural-input semantic elementary normalization: Dioph S iff a finite elementary system represents S with precisely the original natural free parameters and finite natural witnesses, retaining zero. Every constraint uses a literal constant, witness, parameter, wire addition or wire multiplication. No source numerical size bound or computable extraction from an extensional Dioph proof is asserted.",
+  "exclusions": [
+    "Ordinary Code.prec graph, full code induction, universal evaluation, effective fixed-polynomial specialization, MRDP and undecidability remain pending.",
+    "No numbered source-register promotion."
+  ],
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-bounded-plain/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt_sha256": "7f228c9fdd95b3c3568d21f86a03abb27a8bfbd80514c566c38da0c9311e3b76",
+    "gate_log_sha256": "0ed91ba06b786e288aa841195374dfb857d5b3c0534ecdcd229cfe90652f8511"
+  }
+}

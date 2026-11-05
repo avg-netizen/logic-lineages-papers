@@ -1,0 +1,53 @@
+{
+  "status": "independently accepted component; all four exact gates and focused cumulative aggregate passed",
+  "component": "CipherIndex",
+  "prepared_at_utc": "2026-11-05T11:02:12.639599+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks",
+  "source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexArithmeticProof.lean": "a34a76bd3098ece3534917c465357f1b43307a27f3f05f798f9ee8b8ee26f43d",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexDefinitions.lean": "bacc420c147b8a889595e7629a77a3247e324bb4f46306bbf1f4e24a02e67448",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexDiophantineProof.lean": "58e800c92c33d4e49cf6c8fce7665d5df56764fd295b76a45b8470753034847c",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexStatementChecks.lean": "8562464111a1088585135e7d57cfc1bb6d4997289357492a7955f84d4c2a33ad",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexTargets.lean": "0e714b0dd321eb4fba27c696eb552748f32cb16975265461cc412557e1827c08"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks.fixedEvenMaskedProductFixedPointUnique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks.fixedIndexArithmeticCharacterization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks.fixedIndexCipherDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks.fixedIndexDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_targets_unchanged": true,
+  "independently_verified_closure_modules": 36,
+  "author_acceptance_sha256": "bbed5bce22b6769d1a012a0a4a00078ee7da06e459f66c74de8dc9db443dcd8a",
+  "target_freeze_sha256": "a49f629c9149b58366ffdb27e0dc3acbc128b263cce12416305a0aa6c59735d9",
+  "successful_gate_receipt_sha256": "0b5a733b981cdaa5d6c6b4bed028e6ecd23be16517810837088710e00de067ac",
+  "actual_axiom_log_sha256": "4f8a03567e6d2e356d4e4215549a7ef2fa7a51ef680a8bb5da5819b6811781cf",
+  "scope": "Four exact targets establish even masked-product fixed-point uniqueness, the actual sparse index sequence arithmetic characterization, and genuine variable-input Diophantine index/IsCipherOf id graphs. The original n+1<q domain and n=0 case are retained; arbitrary arithmetic solutions are not assumed to be valid ciphers, and no n+2<q strengthening is introduced.",
+  "exclusions": [
+    "No elementary-system normalization, general variable bounded-universal closure, recursion/minimization graph completion, universal evaluator, MRDP or undecidability.",
+    "No numbered source-register promotion."
+  ],
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-cipher-guard-programs/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt_sha256": "477b12cf9188ac36a024f7856b933cade7b7c3e54f02b0f8437210fa5f8d76b6",
+    "gate_log_sha256": "4f8a03567e6d2e356d4e4215549a7ef2fa7a51ef680a8bb5da5819b6811781cf"
+  }
+}

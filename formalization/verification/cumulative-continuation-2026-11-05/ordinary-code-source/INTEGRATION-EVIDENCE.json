@@ -1,0 +1,40 @@
+{
+  "component": "OrdinaryCode",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/OrdinaryCodeProof.lean": "30eac1e2693e0c7756c1147bf2c7e2fdbe2ab3c22b2ca165923de172bb0450d2",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/OrdinaryCodeStatementChecks.lean": "fa7f716779684948d1be61472c02b240cf3072d71342275f04fb0286ad0090fc",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/OrdinaryCodeTargets.lean": "3d4c8ddc0a2eb1c4e37d9efcfcc9122d9ba6b00e3b4130e524c0c52dee49ac47"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks.fixedFullCodeGraphDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks.fixedPartrecGraphDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks.fixedUniversalEvaluatorDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks.fixedFixedUniversalCode": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 63,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/ordinary-code-source/ORDINARY-CODE-ACCEPTANCE.json",
+  "original_acceptance_sha256": "330d75093d5c793f510e8f81fcb61260661b242809d2b36d5148bf531ed043aa",
+  "scope": "Full unchanged ordinary Mathlib Code graph induction, partial-recursive graph Diophantinity, one fixed ordinary universal evaluator code with exact Part equality, and unchanged Targets.UniversalEvaluatorDiophantine.",
+  "exclusions": "No effective algorithm extracting polynomial codes from arbitrary Dioph proofs. Original REPolynomialReduction and EncodedPolynomialUndecidable remain pending. Independent review/adoption required.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

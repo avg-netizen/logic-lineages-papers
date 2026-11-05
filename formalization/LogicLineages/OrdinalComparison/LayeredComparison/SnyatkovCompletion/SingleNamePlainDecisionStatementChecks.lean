@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainDecisionSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainDecisionCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainDecisionStatementChecks
+
+theorem valuation_independence : SingleNamePlainDecisionTargets.ValuationIndependence :=
+  SingleNamePlainDecisionProof.valuationIndependence
+theorem exact_decision_domain : SingleNamePlainDecisionTargets.ExactDecisionDomain :=
+  SingleNamePlainDecisionProof.exactDecisionDomain
+theorem actual_existential_decision : SingleNamePlainDecisionTargets.ActualExistentialDecision :=
+  SingleNamePlainDecisionProof.actualExistentialDecision
+theorem actual_universal_decision : SingleNamePlainDecisionTargets.ActualUniversalDecision :=
+  SingleNamePlainDecisionProof.actualUniversalDecision
+theorem literal_code_calibration : SingleNamePlainDecisionTargets.LiteralCodeCalibration :=
+  SingleNamePlainDecisionProof.literalCodeCalibration
+theorem actual_numeric_programs : SingleNamePlainDecisionTargets.ActualNumericPrograms :=
+  SingleNamePlainDecisionProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainDecisionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainDecisionStatementChecks

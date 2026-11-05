@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ScopedPhiProgramsTermCalibrationProof.lean:16:13: error: unsolved goals
+case phi
+names : List ℕ
+t : BaseTerm
+ih : Code.termTest names t.encode = ScopedPhiParameters.termTest names t
+⊢ ((BaseTerm.decode t.encode).variables.all fun i => !decide (i ∈ names)) = t.variables.all fun i => !decide (i ∈ names)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ScopedPhiProgramsTermCalibrationProof.lean:19:40: warning: This simp argument is unused:
+  CommonLayerSyntax.Proof.baseRoundtrip
+
+Hint: Omit it from the simp argument list.
+  simp [BaseTerm.encode, ScopedPhiParameters.termTest, Nat.add_mod, Nat.add_div,
+          BaseTermPrograms.variablesCode,̵ ̵C̵o̵m̵m̵o̵n̵L̵a̵y̵e̵r̵S̵y̵n̵t̵a̵x̵.̵P̵r̵o̵o̵f̵.̵b̵a̵s̵e̵R̵o̵u̵n̵d̵t̵r̵i̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ScopedPhiProgramsTermCalibrationProof.lean:32:6: error: Type mismatch: After simplification, term
+  congrArg (fun x => 4 * x) hv
+ has type
+  4 * Code.value values (4 * t.encode + 3) = 4 * BaseTerm.value (PlainParameterDecision.valuation values) t.phi
+but is expected to have type
+  Code.value values (4 * t.encode + 3) = BaseTerm.value (PlainParameterDecision.valuation values) t.phi

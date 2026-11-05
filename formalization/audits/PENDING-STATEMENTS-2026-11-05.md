@@ -2,11 +2,13 @@
 
 Checkpoint: `5c98e63793b3fc821965def2292e909d4436f049`.
 
-**161 checked, 2 inherited, 26 pending out of 189. No numbered statement is promoted.**
+**162 checked, 2 inherited, 25 pending out of 189 after the conditional one-label promotion below.**
+
+Only `09:thm:functional-hardness` is promoted by this successor. See the [exact completion audit](FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.md). Apply this update only with the unchanged supplier integration and coordinator acceptance described there. All other entries retain their prior assessments; their historical supplier-gap language is not a new audit conclusion.
 
 This reconciles the current register and archived acceptance evidence. It does not report a new Lean run, fresh whole-proof audit, full-root build or remote CI. The [4 November audit](PENDING-STATEMENTS-2026-11-04.md) remains unchanged as historical evidence. Current source and evidence SHA-256 pins are in the [machine-readable report](PENDING-STATEMENTS-2026-11-05.json).
 
-## Corrections that avoid duplicate work
+## Historical reconciliation corrections (before the targeted promotion)
 
 - Add the already adopted cipher product/multiplication gate to paper02 finite hardness and paper09 functional hardness. Full MRDP/H10 remains pending.
 - Add the already adopted actual Omega-seed/level-at-most-three scaled-pair gate to paper09. Its exact gate passed, but a later seeded compiler in the same archived invocation failed. The full seeded-system and level-three single-query reduction remain pending.
@@ -263,16 +265,6 @@ Next: Adopt the whole theorem after the BASE solver, using BalancedExactVariable
 Pending statement dependencies: `08:thm:snyatkov`.
 
 Evidence: [BalancedRawCompilerTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedRawCompilerTargets.lean), [BalancedTypedCompilerTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedTypedCompilerTargets.lean), [BalancedExactVariablesTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedExactVariablesTargets.lean).
-
-### 09:thm:functional-hardness
-
-Existing coverage: Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked.
-
-Remaining: Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.
-
-Next: Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.
-
-Evidence: [SourceFiniteExponentProjectionTargets.lean](../../formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean), [SourcePolynomialFamilyLiftTargets.lean](../../formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean), [SourceZeroPatternSubstitutionTargets.lean](../../formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean), [hardness.tex](../../09-canonical-source-expressivity/hardness.tex), [ROOT-R001-COMPONENT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json), [ROOT-R002-COMPONENT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json), [ROOT-R003-CONSTANT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json), [ROOT-R004-OMEGA-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json), [ROOT-CIPHER-PRODUCT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json).
 
 ### 12:thm:collapse
 

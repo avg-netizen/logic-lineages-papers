@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerComparisonTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerSyntaxTargets
+import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionCodedSemanticProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionSuppliers
+
+theorem codedComparison : CommonLayerComparison.Targets.ExactCodedComparison :=
+  CommonHeadClosureCodedSemantic.codedComparison
+
+theorem sourceCalibration : CommonLayerSyntax.Targets.ActualSourceCalibration :=
+  CommonLayerSyntax.Proof.sourceCalibration
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionSuppliers

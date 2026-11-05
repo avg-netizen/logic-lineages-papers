@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BaseBooleanSourceDecisionProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BaseBooleanSourceProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BaseBooleanSourceStatementChecks
+
+theorem exact_translation : BaseBooleanSourceTargets.ExactTranslation := BaseBooleanSourceProof.exactTranslation
+theorem exact_source_data : BaseBooleanSourceTargets.ExactSourceData := BaseBooleanSourceProof.exactSourceData
+theorem exact_prefix_translation : BaseBooleanSourceTargets.ExactPrefixTranslation := BaseBooleanSourceProof.exactPrefixTranslation
+theorem literal_stack_compiler : BaseBooleanSourceTargets.LiteralStackCompiler := BaseBooleanSourceProof.literalStackCompiler
+theorem literal_compiler : BaseBooleanSourceTargets.LiteralCompiler := BaseBooleanSourceProof.literalCompiler
+theorem actual_block_decisions : BaseBooleanSourceTargets.ActualBlockDecisions := BaseBooleanSourceProof.actualBlockDecisions
+theorem actual_closure_decisions : BaseBooleanSourceTargets.ActualClosureDecisions := BaseBooleanSourceProof.actualClosureDecisions
+theorem actual_numeric_programs : BaseBooleanSourceTargets.ActualNumericPrograms := BaseBooleanSourceProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BaseBooleanSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BaseBooleanSourceStatementChecks

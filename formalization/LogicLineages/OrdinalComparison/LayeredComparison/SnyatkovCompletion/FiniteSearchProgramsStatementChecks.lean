@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsAnswerProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsStatementChecks
+
+theorem literal_syntax_code : FiniteSearchProgramsTargets.LiteralSyntaxCode := FiniteSearchProgramsProof.literalSyntaxCode
+theorem literal_answer_code : FiniteSearchProgramsTargets.LiteralAnswerCode := FiniteSearchProgramsProof.literalAnswerCode
+theorem literal_decision_code : FiniteSearchProgramsTargets.LiteralDecisionCode := FiniteSearchProgramsProof.literalDecisionCode
+theorem actual_raw_decision : FiniteSearchProgramsTargets.ActualRawDecision := FiniteSearchProgramsProof.actualRawDecision
+theorem actual_numeric_programs : FiniteSearchProgramsTargets.ActualNumericPrograms := FiniteSearchProgramsProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsStatementChecks

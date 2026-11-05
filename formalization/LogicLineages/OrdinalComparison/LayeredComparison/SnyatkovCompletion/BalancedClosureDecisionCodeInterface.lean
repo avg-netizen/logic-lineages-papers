@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionSupplierTargets
+import LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariablesProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionSuppliers
+
+theorem rawCompiler : BalancedRawCompiler.Targets.AllCodeComputation :=
+  BalancedRawCompiler.Proof.allCodeComputation
+theorem supportProgram : BalancedClosureDecisionSupplierTargets.OriginalSupportComputation :=
+  BalancedExactVariables.Program.rawSupport_computable
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionSuppliers

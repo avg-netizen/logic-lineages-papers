@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainStatementChecks
+
+theorem exact_fragment_test : SingleNamePlainTargets.ExactFragmentTest := SingleNamePlainProof.exactFragmentTest
+theorem actual_existential_elimination : SingleNamePlainTargets.ActualExistentialElimination :=
+  SingleNamePlainProof.actualExistentialElimination
+theorem actual_universal_elimination : SingleNamePlainTargets.ActualUniversalElimination :=
+  SingleNamePlainProof.actualUniversalElimination
+theorem exact_removed_name : SingleNamePlainTargets.ExactRemovedName := SingleNamePlainProof.exactRemovedName
+theorem literal_code_calibration : SingleNamePlainTargets.LiteralCodeCalibration := SingleNamePlainProof.literalCodeCalibration
+theorem actual_numeric_programs : SingleNamePlainTargets.ActualNumericPrograms := SingleNamePlainProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainStatementChecks

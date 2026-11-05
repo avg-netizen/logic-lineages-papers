@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsCompilerProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks
+
+theorem literal_partition_data : InactivePhiProgramsTargets.LiteralPartitionData :=
+  InactivePhiProgramsProof.literalPartitionData
+theorem literal_admissible_masks : InactivePhiProgramsTargets.LiteralAdmissibleMasks :=
+  InactivePhiProgramsProof.literalAdmissibleMasks
+theorem literal_guard_and_atom_codes : InactivePhiProgramsTargets.LiteralGuardAndAtomCodes :=
+  InactivePhiProgramsProof.literalGuardAndAtomCodes
+theorem literal_compiler : InactivePhiProgramsTargets.LiteralCompiler :=
+  InactivePhiProgramsProof.literalCompiler
+theorem actual_mask_programs : InactivePhiProgramsTargets.ActualMaskPrograms :=
+  InactivePhiProgramsProof.actualMaskPrograms
+theorem actual_compiler_programs : InactivePhiProgramsTargets.ActualCompilerPrograms :=
+  InactivePhiProgramsProof.actualCompilerPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks

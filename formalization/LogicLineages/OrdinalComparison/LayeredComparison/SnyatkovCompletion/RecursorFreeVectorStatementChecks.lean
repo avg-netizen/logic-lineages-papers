@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorSourceProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorStatementChecks
+
+theorem exact_formula : RecursorFreeVectorTargets.ExactFormula := RecursorFreeVectorProof.exactFormula
+theorem actual_vector_decision : RecursorFreeVectorTargets.ActualVectorDecision := RecursorFreeVectorProof.actualVectorDecision
+theorem actual_source_relation : RecursorFreeVectorTargets.ActualSourceRelation := RecursorFreeVectorProof.actualSourceRelation
+theorem actual_recursor_free_decision : RecursorFreeVectorTargets.ActualRecursorFreeDecision := RecursorFreeVectorProof.actualRecursorFreeDecision
+theorem actual_numeric_programs : RecursorFreeVectorTargets.ActualNumericPrograms := RecursorFreeVectorProgram.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorStatementChecks

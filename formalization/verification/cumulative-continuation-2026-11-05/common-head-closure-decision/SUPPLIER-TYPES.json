@@ -1,0 +1,42 @@
+{
+  "recorded_at_utc": "2026-11-05T13:27:54.229964+00:00",
+  "reason": "Non-reexporting interfaces to exact existing accepted supplier propositions; no new proposition or premise. Public dependency closure remains complete.",
+  "suppliers": [
+    "CommonLayerComparison.Targets.ExactCodedComparison",
+    "CommonLayerSyntax.Targets.ActualSourceCalibration",
+    "CommonLayerComparison.Targets.AllCodeEffectivity"
+  ],
+  "target_files": [
+    {
+      "path": "LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerComparisonTargets.lean",
+      "sha256": "8184f98ef41cbcf648d5dd7ee30d750b682eea1284323fbb65c3595ab26e4b8e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerSyntaxTargets.lean",
+      "sha256": "464287107617223ea597e4c08fe879ee3ad475450f35fa056a9df7e2b665f563"
+    }
+  ],
+  "additional_types_recorded_utc": "2026-11-05T13:40:39.616021+00:00",
+  "narrow_supplier_targets": [
+    {
+      "path": "LogicLineages/OrdinalComparison/LayeredComparison/CommonHeadCodeTargets.lean",
+      "sha256": "ac12348f3142545006838548f1fc664dc0e2d99cd2f30239d6c1131d730bebcd",
+      "text": "module\npublic import LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCodeDefinitions\n@[expose] public section\nnamespace LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCode.Targets\nopen CommonHeadLargeGuards CommonHeadCompiler\n/-- Numerical large-branch code is literal encoding of the accepted guard AST. -/\ndef LargeCodeExact : Prop:=\u2200 K cs desired,largeCode K cs desired=encode (largeFormula K cs desired)\n/-- Numeric deletion code performs the actual original-index restoration. -/\ndef GuardCodeExact : Prop:=\u2200 i c p,guardedCode i c (encode p)=encode (CommonHeadGuardReindex.guarded i c p)\n/-- Complete finite call tree has actual lower fuel; assembling its actual\nchild results gives the exact literal compiler, with no recursive-call oracle. -/\ndef RecursiveCodeEquation : Prop:=(\u2200a:Input,\u2200b\u2208children a,b.1<a.1)\u2227\n  \u2200a:Input,recursiveCode a=assemble a ((children a).map recursiveCode)\n/-- Both numerical interfaces for the actual finite stack interpreter are\ngenuinely computable on all input codes. -/\ndef CodeInterfaces : Prop:=Computable children\u2227Computable\u2082 assemble\nend LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCode.Targets\n"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LayeredComparison/CommonHeadCompilerTargets.lean",
+      "sha256": "5ca27d978b7038506bfb1960941ca7dd6523721405e821911c19a3fd9f406495",
+      "text": "module\npublic import LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCompilerDefinitions\n@[expose] public section\nnamespace LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCompiler.Targets\nopen CommonHeadLargeRow CommonHeadLargeGuards\n/-- The literal terminating finite guard compiler has exact truth for every\ngenuine source valuation, including dependent/repeated input values, signed\ncancellation, empty rows, arbitrary desired signs and ALL finite exceptions. -/\ndef ExactFuelCompiler : Prop := \u2200 fuel (rho:NONote),Order.IsSuccLimit rho.1.repr\u2192\n  \u2200 K cs desired (\u03bd:Nat\u2192Nat),cs.length\u2264fuel\u2192\n  (\u2200 i<cs.length,actualOrdinalNorm rho.1.repr\u2264\u03bd i)\u2192\n  ((compileFuel fuel (rawNoteEncode rho.1) K cs desired).eval \u03bd \u2194\n    Int.sign (value rho.1.repr K (inputRow cs \u03bd))=desired)\n/-- No fresh index enters a recursively generated guard. This is essential\nfor later substitution of all guards into the SAME raw-variable assignment. -/\ndef ExactOriginalSupport : Prop := \u2200 fuel h K cs desired,\n  \u2200 i\u2208(compileFuel fuel h K cs desired).variables,i<cs.length\n/-- Source row instance, using exactly its actual occurrence count as fuel. -/\ndef ExactSourceRowCompiler : Prop := \u2200 (rho:NONote),Order.IsSuccLimit rho.1.repr\u2192\n  \u2200 K cs desired (\u03bd:Nat\u2192Nat),\n  (\u2200 i<cs.length,actualOrdinalNorm rho.1.repr\u2264\u03bd i)\u2192\n  ((compile (rawNoteEncode rho.1) K cs desired).eval \u03bd \u2194\n    Int.sign (value rho.1.repr K (inputRow cs \u03bd))=desired)\n/-- Genuine numeric algorithm on ALL codes, not existence of a mathematical\nformula and not a supplied closure/decision oracle. This is separately pending\nuntil actual computation is proved. -/\ndef AllCodeEffectivity : Prop := Computable (fun p:Nat\u00d7Int\u00d7List Int\u00d7Int=>compileCode p.1 p.2.1 p.2.2.1 p.2.2.2)\nend LogicLineages.OrdinalComparison.LayeredComparison.CommonHeadCompiler.Targets\n"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LayeredComparison/CommonLayerProgramTargets.lean",
+      "sha256": "67305b715a5dac40dd71e0b410702fc63757313526a0cc10544d6696cedbfc38",
+      "text": "module\npublic import LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgramDefinitions\n@[expose] public section\nnamespace LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgram.Targets\n/-- Exact all-code equation of the ACTUAL nested compiler: finite instruction\nchildren strictly reduce layer count and their assembly equals literal BASE\nformula output. No semantic-equivalence surrogate or supplied recursion law. -/\ndef ExactFiniteCallEquation:Prop:=\n  (\u2200a b,b\u2208children a\u2192measure b<measure a)\u2227\n  \u2200a,recursiveCode a=assemble a ((children a).map recursiveCode)\n/-- Actual numeric child/assembly interfaces required by the proved uniform\nfinite graph algorithm. They must be constructed, not supplied as premises. -/\ndef NumericalInterfaces:Prop:=Computable children\u2227Computable\u2082 assemble\u2227Computable measure\nend LogicLineages.OrdinalComparison.LayeredComparison.CommonLayerProgram.Targets\n"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/LayeredComparison/FiniteGraphTargets.lean",
+      "sha256": "389cd3c514f4db15bcf9165573b454bac2e20a49df806a67650b43cc5f27897d",
+      "text": "module\npublic import LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraphDefinitions\n@[expose] public section\nnamespace LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraph.Targets\n/-- The real complete finite graph, including duplicated child occurrences,\nis uniformly computable from actual computable numerical interfaces. -/\ndef UniformGraph : Prop:=\u2200 (A B:Type) [Primcodable A] [Primcodable B] [DecidableEq A]\n  (children:A\u2192List A) (assemble:A\u2192List B\u2192B) (\u03bc:A\u2192Nat),\n  Computable children\u2192Computable\u2082 assemble\u2192Computable \u03bc\u2192\n  Computable\u2082 (graph children assemble \u03bc)\n/-- The WHOLE bounded-depth graph evaluates to the true recursive value.\nThe source compiler's occurrence-count measure is explicitly computable;\nno recursive-call or termination oracle is assumed. -/\ndef ExactDecreasingGraph : Prop:=\u2200 (A B:Type) [Primcodable A] [Primcodable B] [DecidableEq A] [Inhabited B]\n  (children:A\u2192List A) (assemble:A\u2192List B\u2192B) (\u03bc:A\u2192Nat),\n  Computable children\u2192Computable\u2082 assemble\u2192Computable \u03bc\u2192\n  \u2200 f:A\u2192B,(\u2200a,\u2200b\u2208children a,\u03bc b<\u03bc a)\u2192\n  (\u2200a,f a=assemble a ((children a).map f))\u2192\n  (\u2200a,graph children assemble \u03bc a (\u03bc a+1)=[(a,f a)])\u2227Computable f\nend LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraph.Targets\n"
+    }
+  ]
+}

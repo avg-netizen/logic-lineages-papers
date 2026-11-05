@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryNormalizationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks
+open ElementaryTargets
+
+theorem fixedNaturalPairRepresentation : NaturalPairRepresentation := ElementarySupportProof.naturalPairRepresentation
+theorem fixedExpressionSystemNormalization : ExpressionSystemNormalization := ElementaryExpressionProof.expressionSystemNormalization
+theorem fixedElementarySystemNormalization : ElementarySystemNormalization := ElementaryNormalizationProof.elementarySystemNormalization
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks

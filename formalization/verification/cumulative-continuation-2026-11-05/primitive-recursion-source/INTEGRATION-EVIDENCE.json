@@ -1,0 +1,53 @@
+{
+  "component": "PrimitiveRecursion",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDefinitions.lean": "bc16284767e2fff5e3a0a12e083f8d9dd7d5ee45841dd7f28dbbca38471355db",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDigitProof.lean": "ba7c05f7364903cebfa07b3c24b96c783334c7abb14b3e918a64fa4dcfc5bdba",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDiophantineProof.lean": "8fe45ad8da88341ecc88d9a87f7f470dc47c2bcbaac3c0e6feb0155d81155137",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionSemanticProof.lean": "d0df61be9493dda41066de02b793bcf2b48c1ba8102851ca16ee3dd6818d4f65",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionStatementChecks.lean": "0b16ff5c95db5f5414388438b64740915189769caa0bad08f1fbe370d9cf9027",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionTargets.lean": "818c0e3f2a0aebf4a2e26782638d0b0c0134f7c0a853c1f46366af669d0f0957"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedOrdinaryPrecTraceSpecification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedCodedPrecTraceDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedOrdinaryPrecGraphClosure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedCodedPrecTraceSpecification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedDigitDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedFiniteTraceCipher": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 58,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/primitive-recursion-source/PRIMITIVE-RECURSION-ACCEPTANCE.json",
+  "original_acceptance_sha256": "b348e354c55c416963e01b424430822f3bb06a6383413b3392a25817b18fb8dd",
+  "scope": "Exact original ordinary Mathlib Code.prec graph closure from base/step graphs, via actual partial evaluation traces and valid sparse cipher encoding; original natural inputs/outputs, input pairing and zero steps retained.",
+  "exclusions": "No full-code structural induction, universal evaluator, MRDP, effective extraction from arbitrary Dioph proof, or undecidability assertion.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

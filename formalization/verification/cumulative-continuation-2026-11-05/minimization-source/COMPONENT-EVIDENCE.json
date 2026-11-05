@@ -1,0 +1,48 @@
+{
+  "status": "independently accepted component; all nine exact gates and focused cumulative aggregate passed",
+  "component": "Minimization",
+  "prepared_at_utc": "2026-11-05T11:38:00.305470+00:00",
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks",
+  "source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationDiophantineProof.lean": "3676fc0eee8b21878ff50c5277a1d9ae0b82eef0ff58a989e4287beda322afc1",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationSemanticProof.lean": "062ce6fe5d8de0bd796ac16cd7755db046410879cdf3bea4f623cd449e44fd16",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationStatementChecks.lean": "8bba16cec94f98954fe4a04463333627517d9165e64da778f4304b196c246a7f",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationTargets.lean": "ad193f5eb1c804b8d5d80e744917b5cff8ed667225f7f60dafaa0dc7da799374"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks.fixedShiftedSearchDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks.fixedOrdinaryRfindGraphClosure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks.fixedOrdinaryRfindSpecification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "frozen_targets_unchanged": true,
+  "independently_verified_closure_modules": 56,
+  "author_acceptance_sha256": "adc6ac0d30d8072193580f4c49fd3ab0a938a742dde846bc480628b11d5b1e60",
+  "target_freeze_sha256": "409128f801e8b12640a4bcadd1f419338b0d6e6b95dd129d413b138447c588c4",
+  "successful_gate_receipt_sha256": "cf92da8b0719c43c9e4b23ebe8fcc436cd1a165ad7736665d0bc3ce6b0a4453f",
+  "actual_axiom_log_sha256": "df40026ef7b6fe6bc1261193bb40b6b52e4e532d02bac14b1e31bcaf8e842571",
+  "scope": "Exact ordinary Mathlib Code.rfind' graph closure from the body graph, with arbitrary starting point and absolute output index. Every earlier offset has an actual defined nonzero body result; undefined earlier computations cannot be skipped. No alternate evaluator or termination hypothesis is introduced.",
+  "exclusions": [
+    "Ordinary Code.prec graph, full code induction, universal evaluation, effective fixed-polynomial specialization, MRDP and undecidability remain pending.",
+    "No numbered source-register promotion."
+  ],
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-bounded-plain/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt_sha256": "7f228c9fdd95b3c3568d21f86a03abb27a8bfbd80514c566c38da0c9311e3b76",
+    "gate_log_sha256": "df40026ef7b6fe6bc1261193bb40b6b52e4e532d02bac14b1e31bcaf8e842571"
+  }
+}

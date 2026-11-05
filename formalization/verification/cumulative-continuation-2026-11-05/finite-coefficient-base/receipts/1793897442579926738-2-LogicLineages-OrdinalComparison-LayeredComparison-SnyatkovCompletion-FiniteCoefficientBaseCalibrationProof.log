@@ -1,0 +1,30 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseCalibrationProof.lean:10:11: error: Tactic `rfl` failed: The left-hand side
+  Code.coefficient (closedPositiveCode ClosedPositive.one)
+is not definitionally equal to the right-hand side
+  coefficient ClosedPositive.one
+
+case one
+⊢ Code.coefficient (closedPositiveCode ClosedPositive.one) = coefficient ClosedPositive.one
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseCalibrationProof.lean:11:13: error: Tactic `rfl` failed: The left-hand side
+  Code.coefficient (closedPositiveCode ClosedPositive.omega)
+is not definitionally equal to the right-hand side
+  coefficient ClosedPositive.omega
+
+case omega
+⊢ Code.coefficient (closedPositiveCode ClosedPositive.omega) = coefficient ClosedPositive.omega
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseCalibrationProof.lean:33:11: error: Tactic `rfl` failed: The left-hand side
+  Code.compile (scalarSyntaxCode index Scalar.one)
+is not definitionally equal to the right-hand side
+  Option.map BaseTerm.encode (compile index Scalar.one)
+
+case one
+ι : Type
+index : ι → ℕ
+⊢ Code.compile (scalarSyntaxCode index Scalar.one) = Option.map BaseTerm.encode (compile index Scalar.one)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseCalibrationProof.lean:36:42: warning: This simp argument is unused:
+  Nat.add_div
+
+Hint: Omit it from the simp argument list.
+  simp [Nat.add_mod, Nat.mul_mod_right, N̵a̵t̵.̵a̵d̵d̵_̵d̵i̵v̵,̵ ̵compile, BaseTerm.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

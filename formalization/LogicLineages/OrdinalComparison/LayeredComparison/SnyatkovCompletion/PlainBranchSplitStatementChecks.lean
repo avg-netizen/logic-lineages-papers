@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchSplitStepProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchSplitStatementChecks
+
+theorem ground_small : PlainBranchSplitTargets.GroundSmall := PlainBranchSplitProof.groundSmall
+theorem actual_small_evaluation : PlainBranchSplitTargets.ActualSmallEvaluation := PlainBranchSplitProof.actualSmallEvaluation
+theorem small_soundness : PlainBranchSplitTargets.SmallSoundness := PlainBranchSplitProof.smallSoundness
+theorem branch_soundness : PlainBranchSplitTargets.BranchSoundness := PlainBranchSplitProof.branchSoundness
+theorem exhaustive_coverage : PlainBranchSplitTargets.ExhaustiveCoverage := PlainBranchSplitProof.exhaustiveCoverage
+theorem actual_step : PlainBranchSplitTargets.ActualStep := PlainBranchSplitProof.actualStep
+theorem strict_frontier_decrease : PlainBranchSplitTargets.StrictFrontierDecrease := PlainBranchSplitProof.strictFrontierDecrease
+theorem preserve_plain : PlainBranchSplitTargets.PreservePlain := PlainBranchSplitProof.preservePlain
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchSplitStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchSplitStatementChecks

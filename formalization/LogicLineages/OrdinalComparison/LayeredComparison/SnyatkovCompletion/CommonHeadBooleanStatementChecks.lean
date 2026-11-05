@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanDecisionProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanStatementChecks
+
+theorem exact_translation : CommonHeadBooleanTargets.ExactTranslation := CommonHeadBooleanProof.exactTranslation
+theorem exact_prefix_translation : CommonHeadBooleanTargets.ExactPrefixTranslation := CommonHeadBooleanProof.exactPrefixTranslation
+theorem literal_stack_compiler : CommonHeadBooleanTargets.LiteralStackCompiler := CommonHeadBooleanProof.literalStackCompiler
+theorem actual_block_decisions : CommonHeadBooleanTargets.ActualBlockDecisions := CommonHeadBooleanProof.actualBlockDecisions
+theorem actual_closure_decisions : CommonHeadBooleanTargets.ActualClosureDecisions := CommonHeadBooleanProof.actualClosureDecisions
+theorem actual_all_code_programs : CommonHeadBooleanTargets.ActualAllCodePrograms := CommonHeadBooleanProof.actualAllCodePrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanStatementChecks

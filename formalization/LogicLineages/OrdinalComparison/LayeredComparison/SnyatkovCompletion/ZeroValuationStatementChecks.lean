@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks
+
+theorem actual_row_projection : ZeroValuationTargets.ActualRowProjection := ZeroValuationProof.actualRowProjection
+theorem exact_constant_projection : ZeroValuationTargets.ExactConstantProjection := ZeroValuationProof.exactConstantProjection
+theorem actual_projection : ZeroValuationTargets.ActualProjection := ZeroValuationProof.actualProjection
+theorem actual_zero_evaluator : ZeroValuationTargets.ActualZeroEvaluator := ZeroValuationProof.actualZeroEvaluator
+theorem literal_code_calibration : ZeroValuationTargets.LiteralCodeCalibration := ZeroValuationProof.literalCodeCalibration
+theorem actual_numeric_programs : ZeroValuationTargets.ActualNumericPrograms := ZeroValuationProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks

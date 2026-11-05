@@ -1,0 +1,35 @@
+{
+  "component": "Reduction",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ReductionProof.lean": "24c65ac85e48dc6605f12bb32d115986afc44bfa9cf42fab8396e384e71bb818",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ReductionStatementChecks.lean": "dfff35883cb68dc946a490c9244cb5720de4e72d8c2ee278401af25dc4daeb44",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ReductionTargets.lean": "ff56fd255ce39f1e6fef65a12ebf683a68a1415918ca0d6755cf39fa25151ad1"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks.fixedREPolynomialReduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks.fixedEncodedCodeRoot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks.fixedREPredicateDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 71,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/reduction-source/REDUCTION-ACCEPTANCE.json",
+  "original_acceptance_sha256": "8d58cb5859dc139db1d7e03353b9ed8c3c1a4ed530dfff1d2158aa780e962234",
+  "scope": "Exact original Targets.REPolynomialReduction; actual RE predicates on Nat reduce computably to the unchanged integer-polynomial code solvability predicate with natural-zero witnesses.",
+  "exclusions": "No uniform algorithm extracting finite codes from arbitrary Dioph/Poly/RE proofs. Original EncodedPolynomialUndecidable and downstream undecidability endpoints remain pending. Independent review/adoption, including specialization review, required.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

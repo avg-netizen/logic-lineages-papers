@@ -1,0 +1,8 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseGraphProof.lean:67:38: error: failed to elaborate eliminator, expected type is not available
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseGraphProof.lean:68:6: error: Type mismatch
+  Primrec.nat_rec' Primrec.id (Primrec.const 1)
+    (Primrec.to₂ (Primrec₂.comp Primrec.nat_mul (Primrec.const 2) (Primrec.comp Primrec.snd Primrec.snd)))
+has type
+  Primrec fun a => Nat.rec 1 (fun n IH => 2 * (a, n, IH).2.2) (id a)
+but is expected to have type
+  Primrec fun n => ?m.105

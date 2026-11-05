@@ -1,0 +1,121 @@
+{
+  "status": "exact-native-gate-passed; parent-adoption-pending",
+  "component": "PrimitiveRecursion",
+  "source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDefinitions.lean": "bc16284767e2fff5e3a0a12e083f8d9dd7d5ee45841dd7f28dbbca38471355db",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDigitProof.lean": "ba7c05f7364903cebfa07b3c24b96c783334c7abb14b3e918a64fa4dcfc5bdba",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDiophantineProof.lean": "8fe45ad8da88341ecc88d9a87f7f470dc47c2bcbaac3c0e6feb0155d81155137",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionSemanticProof.lean": "d0df61be9493dda41066de02b793bcf2b48c1ba8102851ca16ee3dd6818d4f65",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionStatementChecks.lean": "0b16ff5c95db5f5414388438b64740915189769caa0bad08f1fbe370d9cf9027",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionTargets.lean": "818c0e3f2a0aebf4a2e26782638d0b0c0134f7c0a853c1f46366af669d0f0957"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedOrdinaryPrecTraceSpecification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedCodedPrecTraceDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedOrdinaryPrecGraphClosure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedCodedPrecTraceSpecification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedDigitDiophantine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks.fixedFiniteTraceCipher": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "target_definitions_unchanged": true,
+  "target_preflight_receipt": "primitive-recursion-preflight/RECEIPT.json",
+  "proof_receipt": "primitive-recursion-gates/RECEIPT.json",
+  "local_closure": {
+    "module_count": 58,
+    "all_sources_match_successful_native_rows": true,
+    "receipt_by_module": {
+      "LogicLineages.Audit": "../seeded-source/borrowed-cache-receipts/1793867982933947701-2.json",
+      "LogicLineages.ComputabilityKnowledge.CircuitComparison": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.DiophantinePolynomialBridge": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialCircuit": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialProof": "../cipher-ones-source/cipher-ones-diophantine-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialTargets": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalProof": "../bounded-universal-source/bounded-universal-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalTargets": "../bounded-universal-source/bounded-universal-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticProof": "../cipher-ones-source/ones-repair-01/1793874440301658183-2.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherDefinitions": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexArithmeticProof": "../cipher-index-source/cipher-index-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDefinitions": "../cipher-index-source/index-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDiophantineProof": "../cipher-index-source/cipher-index-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexTargets": "../cipher-index-source/index-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineProof": "../cipher-ones-source/cipher-ones-diophantine-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesForwardProof": "../cipher-ones-source/cipher-ones-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesProof": "../cipher-ones-source/cipher-ones-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesTargets": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessProof": "../cipher-ones-source/uniqueness-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessTargets": "../cipher-ones-source/uniqueness-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductProof": "../cipher-index-source/cipher-index-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationArithmeticProof": "../cipher-relation-source/cipher-relation-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDefinitions": "../cipher-relation-source/relation-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDiophantineProof": "../cipher-relation-source/cipher-relation-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationTargets": "../cipher-relation-source/relation-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityProof": "../cipher-ones-source/ones-repair-01/1793874440301658183-2.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryDefinitions": "../elementary-source/elementary-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryExpressionProof": "../elementary-source/elementary-repair-02/1793876799031284399-2.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryNormalizationProof": "../elementary-source/elementary-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementarySupportProof": "../elementary-source/elementary-repair-02/1793876799031284399-2.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryTargets": "../elementary-source/elementary-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingProof": "../cipher-ones-source/cipher-ones-diophantine-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingTargets": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDefinitions": "primitive-recursion-preflight-repair-01/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDigitProof": "primitive-recursion-repair-02/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDiophantineProof": "primitive-recursion-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionSemanticProof": "primitive-recursion-repair-02/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks": "primitive-recursion-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionTargets": "primitive-recursion-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Proof": "../minimization-source/minimization-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingClosureProof": "../row-packing-source/row-packing-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDefinitions": "../row-packing-source/row-packing-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDiophantineProof": "../row-packing-source/row-packing-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingSemanticProof": "../row-packing-source/row-packing-repair-01/1793877488352425038-2.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingTargets": "../row-packing-source/row-packing-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridge": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridgeProof": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuit": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitProof": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparison": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression": "../seeded-source/preflight/RECEIPT.json"
+    }
+  },
+  "checks": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "max_observed_rss_kib": 1485776
+  },
+  "excluded": "No full-code structural induction, universal evaluator, MRDP, effective extraction from arbitrary Dioph proof, or undecidability assertion.",
+  "scope": "Exact original ordinary Mathlib Code.prec graph closure from base/step graphs, via actual partial evaluation traces and valid sparse cipher encoding; original natural inputs/outputs, input pairing and zero steps retained.",
+  "source_correspondence": "Pinned Mathlib PartrecCode.eval prec and eval_prec_zero/eval_prec_succ, checked sparse cipher extraction, and proved original variable-bounded closure."
+}

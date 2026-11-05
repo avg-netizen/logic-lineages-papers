@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SystemUndecidabilityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SystemUndecidability.StatementChecks
+
+theorem polynomial_system_undecidable : UndecidabilityTargets.PolynomialSystemUndecidable :=
+  Proof.polynomialSystemUndecidable
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SystemUndecidability.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SystemUndecidability.StatementChecks

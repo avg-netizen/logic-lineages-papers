@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LeastSourceWitnessProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LeastSourceWitnessStatementChecks
+
+theorem scope_monotonicity : LeastSourceWitnessTargets.ScopeMonotonicity := LeastSourceWitnessProof.scopeMonotonicity
+theorem existential_body_admission : LeastSourceWitnessTargets.ExistentialBodyAdmission := LeastSourceWitnessProof.existentialBodyAdmission
+theorem total_numeric_search : LeastSourceWitnessTargets.TotalNumericSearch := LeastSourceWitnessProof.totalNumericSearch
+theorem exact_numeric_status : LeastSourceWitnessTargets.ExactNumericStatus := LeastSourceWitnessProof.exactNumericStatus
+theorem actual_least_witness : LeastSourceWitnessTargets.ActualLeastWitness := LeastSourceWitnessProof.actualLeastWitness
+theorem actual_no_witness : LeastSourceWitnessTargets.ActualNoWitness := LeastSourceWitnessProof.actualNoWitness
+theorem actual_raw_witness : LeastSourceWitnessTargets.ActualRawWitness := LeastSourceWitnessProof.actualRawWitness
+theorem actual_numeric_programs : LeastSourceWitnessTargets.ActualNumericPrograms := LeastSourceWitnessProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LeastSourceWitnessStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LeastSourceWitnessStatementChecks

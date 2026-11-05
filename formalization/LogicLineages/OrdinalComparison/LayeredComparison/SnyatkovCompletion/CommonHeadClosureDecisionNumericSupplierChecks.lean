@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionLayerProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionNumericSupplierChecks
+
+theorem row_interfaces : CommonHeadCode.Targets.CodeInterfaces := CommonHeadClosureRowPrograms.codeInterfaces
+theorem row_effectivity : CommonHeadCompiler.Targets.AllCodeEffectivity := CommonHeadClosureRowPrograms.allCodeEffectivity
+theorem layer_interfaces : CommonLayerProgram.Targets.NumericalInterfaces := CommonHeadClosureLayerPrograms.numericInterfaces
+theorem narrow_graph : FiniteGraph.Targets.ExactDecreasingGraph := BalancedBoxEvaluation.Graph.exactDecreasingGraph
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionNumericSupplierChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionNumericSupplierChecks

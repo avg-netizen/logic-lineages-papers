@@ -1,0 +1,116 @@
+{
+  "status": "historical preparation; superseded by ACCEPTANCE.json",
+  "base_commit": "04af8043144db13e404c374afcbb53164f8b9095",
+  "base_tree": "e58c9a5af42d408f092515ded05d884db23e8e6d",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261105OnesMaximal",
+  "new_source_files": 12,
+  "new_exact_targets": 9,
+  "components": [
+    {
+      "status": "independently accepted; cumulative check pending",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks",
+      "source_files": {
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesForwardProof.lean": "f21d8f3ef75e66d6f4f1d544a11147a617c6bddf985d516dc7091ac73daab4b1",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesProof.lean": "1e3d080f7395c54b72de8500f624518d5dd135093ff084fdd26a13d5e8086ea8",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesStatementChecks.lean": "314f3a873af03710b673f96f8d910527c44eb7b4fdf74f49997ceaabc8d32d14",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesTargets.lean": "0a3c5cffc7a743282b82e5eba496f8cfbc43c2659ee61905cb58bad36c26667a",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessProof.lean": "47347bfb2ae4024d17de557c3816880dc982e09a690ea1f58dccc399471d8fc7",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessStatementChecks.lean": "78a7be1ddca0d53dd453d139745e7812fbe02a91410ae4e5560b7c49560123a1",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessTargets.lean": "8a3b228299a726a1ee98bfc1f2f022e9a1303595cb2744937b1bc30cfcfbaa86"
+      },
+      "exact_target_aliases": {
+        "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks.fixedOnesEquationsUnique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks.fixedOnesArithmeticCharacterization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks.fixedOnesEquationsForward": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "checked_dependency_modules": 28,
+      "scope": "The exact original OnesArithmeticCharacterization iff holds, including n=0. The actual sparse sum satisfies the original equations and uniqueness supplies the reverse direction. This is not MRDP or polynomial-system undecidability.",
+      "author_acceptance_sha256": "a5d00f9a803199543080df3e588c72b7313fd867e355e291e6bbb15512fef764",
+      "frozen_targets_sha256": "c5fe7999b8775bfa0c535e3d5b47054b811d69f2fcaa967bb0ba9454ff476688",
+      "full_root_build": false,
+      "source_register_changes": [],
+      "directory": "cipher-ones-characterization"
+    },
+    {
+      "status": "independently accepted; cumulative check pending",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks",
+      "source_files": {
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsDefinitions.lean": "4283749794046392b1f022809acce6241bbacd3b555b21c5549c2c2093ff292e",
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsTargets.lean": "28ccde24eafa5b46692e300f75684b112893dd483d2ea7b03e5f7392535497f9",
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsActiveProof.lean": "00831c124e115f25a4ba2b0f668ef630135549a88c3297f935e8fa2664029d7f",
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsControlResidueProof.lean": "9fd0650ff554dfc7c1af4fc89e6879aeab6015dc925b6e18a998ffc3ab364e45",
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsResidueProof.lean": "19ae44a325d5d4aaa6ee498ad483b9b3b6f1e5a5b5457d4d6af20cb1ba225588",
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsSemanticProof.lean": "8095c12583549c2508fb38689bd396771ec4ad7ad89be598ca8b0578881af479",
+        "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/MaximalPlainRowsStatementChecks.lean": "431626678de80c4658efae2b7762d5d2c9c040ce975c11e1b824fddc1f0c662c"
+      },
+      "exact_target_aliases": {
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks.actual_maximal_tail_atom": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks.literal_tail_linearity": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks.exact_residual_occurrences": [
+          "propext",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks.exact_active_guard": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks.actual_signed_row_residue": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "checked_dependency_modules": 153,
+      "scope": "Literal plain-row atomic equivalence under cutoff and raw maximality over every original occurrence, including zero-weight occurrences. Output is syntactically linear only in the chosen name. The original meaningfulness/domain formulas remain at their Boolean positions and are retained by the caller. Active/inactive assembly uses actual signed residues; no supplied leader, residue oracle, HyperPhi, nonmaximal/global quantified elimination or full numeric effectivity is claimed. Source anchor: paper08 lem:row, paper.tex lines641\u2013704.",
+      "author_acceptance_sha256": "06580dbf53bb1944ed7dc8256032df273f9a470af7cc48c40f9076be0c411f8e",
+      "frozen_targets_sha256": "ebcaa7afa661a1d70f04fbc9d7221719fd0df739371c0435b313b66d59645f1d",
+      "full_root_build": false,
+      "source_register_changes": [],
+      "directory": "maximal-plain-rows"
+    },
+    {
+      "status": "independently accepted; cumulative check pending",
+      "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks",
+      "source_files": {
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesDiophantineProof.lean": "84c507e091a146d25971c97c9a736be7a3902a88af7679d6c06b8fb35af753f9",
+        "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesDiophantineStatementChecks.lean": "e405082544f79fbac3062fa8953f398542e8b19f7375c2ddb204cadc11e6fd2c"
+      },
+      "exact_target_aliases": {
+        "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks.fixedOnesDiophantine": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "checked_dependency_modules": 31,
+      "scope": "The unchanged original OnesDiophantine graph is Diophantine for variable natural inputs. The exact arithmetic characterization supplies both directions, with actual existential polynomial witnesses. This does not establish general bounded universal closure, MRDP or undecidability.",
+      "author_acceptance_sha256": "d521be80c6452d5f83e31561d10f48e13c4dcc3639ad18b904451453ef73577f",
+      "frozen_targets_sha256": "19b622c7a74378cd129a61b6191312ce1835da89dcf64df7d2f888cdc6b36d71",
+      "full_root_build": false,
+      "source_register_changes": [],
+      "directory": "cipher-ones-diophantine"
+    }
+  ],
+  "local_closure_modules": 784,
+  "full_root_build": false
+}

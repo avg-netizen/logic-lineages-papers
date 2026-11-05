@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ExternalCheckpoint20261105OnesMaximal
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks
+
+/-! Cumulative integration of source-faithful cipher index/relations and literal shifted-input/inactive-atom numeric compilers. MRDP, undecidability, full maximal-name numeric compilation and global nonlinear elimination remain pending. -/

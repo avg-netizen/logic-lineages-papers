@@ -1,0 +1,257 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:12:23: error: Invalid simp theorem: Expected a proposition, but found
+  ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:12:14: error: unsolved goals
+case equal
+i : ℕ
+t a b : BaseTerm
+⊢ ¬BoundedSource.guard i (SourceFormula.equal a b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:13:22: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.44 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:13:13: error: unsolved goals
+case less
+i : ℕ
+t a b : BaseTerm
+⊢ ¬BoundedSource.guard i (SourceFormula.less a b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:14:24: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.55 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:14:15: error: unsolved goals
+case negative
+i : ℕ
+t : BaseTerm
+p : SourceFormula
+⊢ ¬BoundedSource.guard i p.negative = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:15:27: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.66 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:15:18: error: unsolved goals
+case existsNat
+i : ℕ
+t : BaseTerm
+j : ℕ
+p : SourceFormula
+⊢ ¬BoundedSource.guard i (SourceFormula.existsNat j p) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:18:27: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.102 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:18:18: error: unsolved goals
+case conjunction.equal
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+c d : BaseTerm
+⊢ ¬BoundedSource.guard i ((SourceFormula.equal c d).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:19:28: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.113 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:19:19: error: unsolved goals
+case conjunction.negative
+i : ℕ
+t : BaseTerm
+b p : SourceFormula
+⊢ ¬BoundedSource.guard i (p.negative.conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:20:33: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.124 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:20:24: error: unsolved goals
+case conjunction.conjunction
+i : ℕ
+t : BaseTerm
+b c d : SourceFormula
+⊢ ¬BoundedSource.guard i ((c.conjunction d).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:21:31: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.135 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:21:22: error: unsolved goals
+case conjunction.existsNat
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+j : ℕ
+p : SourceFormula
+⊢ ¬BoundedSource.guard i ((SourceFormula.existsNat j p).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:24:31: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.169 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:24:22: error: unsolved goals
+case conjunction.less.numeral
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+d : BaseTerm
+n : ℕ
+⊢ ¬BoundedSource.guard i ((SourceFormula.less (BaseTerm.numeral n) d).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:25:29: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.180 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:25:20: error: unsolved goals
+case conjunction.less.add
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+d x y : BaseTerm
+⊢ ¬BoundedSource.guard i ((SourceFormula.less (x.add y) d).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:26:27: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.191 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:26:18: error: unsolved goals
+case conjunction.less.phi
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+d x : BaseTerm
+⊢ ¬BoundedSource.guard i ((SourceFormula.less x.phi d).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:30:60: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.230 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:30:60: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.231 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:29:14: error: unsolved goals
+case pos
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+d : BaseTerm
+hi : i ∈ d.variables
+⊢ BoundedSource.guard i ((SourceFormula.less (BaseTerm.variable i) d).conjunction b) = some t ↔ d = t ∧ i ∉ t.variables
+
+case neg
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+d : BaseTerm
+hi : i ∉ d.variables
+⊢ BoundedSource.guard i ((SourceFormula.less (BaseTerm.variable i) d).conjunction b) = some t ↔ d = t ∧ i ∉ t.variables
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:31:22: error: Ambiguous term
+  guard
+Possible interpretations:
+  _root_.guard : (p : Prop) → [Decidable p] → ?m.232 Unit
+  
+  BoundedSource.guard : ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:31:14: error: unsolved goals
+case neg
+i : ℕ
+t : BaseTerm
+b : SourceFormula
+d : BaseTerm
+j : ℕ
+h : ¬i = j
+⊢ ¬BoundedSource.guard i ((SourceFormula.less (BaseTerm.variable j) d).conjunction b) = some t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:31:29: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [guard, h̵,̵ ̵Ne.symm h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:47:50: error(lean.unknownIdentifier): Unknown identifier `Function.update_same`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:47:2: error: Type mismatch: After simplification, term
+  hb
+ has type
+  Function.update ν i n i < BaseTerm.value ν t
+but is expected to have type
+  n < BaseTerm.value ν t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:58:18: error: unsolved goals
+case negative
+p : SourceFormula
+ih : test p = true → ∀ (ν : ℕ → ℕ), answer ν p = true ↔ SourceFormula.eval ν p
+hp : test p.negative = true
+ν : ℕ → ℕ
+⊢ (!answer ν p) = true ↔ ¬SourceFormula.eval ν p
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:60:25: warning: This simp argument is unused:
+  Bool.not_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [answer, B̵o̵o̵l̵.̵n̵o̵t̵_̵e̵q̵_̵t̵r̵u̵e̵,̵ ̵Bool.eq_false_iff, ih hp ν, SourceFormula.eval]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:60:43: warning: This simp argument is unused:
+  Bool.eq_false_iff
+
+Hint: Omit it from the simp argument list.
+  simp only [answer, Bool.not_eq_true, B̵o̵o̵l̵.̵e̵q̵_̵f̵a̵l̵s̵e̵_̵i̵f̵f̵,̵ ̵ih hp ν, SourceFormula.eval]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:60:62: warning: This simp argument is unused:
+  ih hp ν
+
+Hint: Omit it from the simp argument list.
+  simp only [answer, Bool.not_eq_true, Bool.eq_false_iff, i̵h̵ ̵h̵p̵ ̵ν̵,̵ ̵SourceFormula.eval]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:83:90: error: Application type mismatch: The argument
+  hp
+has type
+  test p = true
+but is expected to have type
+  ?m.20 ≠ true
+in the application
+  Bool.eq_false_iff.mpr hp
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:93:16: error: Invalid simp theorem: Expected a proposition, but found
+  ℕ → SourceFormula → Option BaseTerm
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:92:107: error: unsolved goals
+i : ℕ
+t : BaseTerm
+p : SourceFormula
+hi : i ∉ t.variables
+hp : test p = true
+ν : ℕ → ℕ
+⊢ (BoundedSource.guard i ((SourceFormula.less (BaseTerm.variable i) t).conjunction p.negative)).isSome = true
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:99:29: error(lean.unknownIdentifier): Unknown identifier `Function.update_same`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:89:80: error: unsolved goals
+i : ℕ
+t : BaseTerm
+p : SourceFormula
+hi : i ∉ t.variables
+hp : test p = true
+ν : ℕ → ℕ
+ht :
+  test (SourceFormula.existsNat i ((SourceFormula.less (BaseTerm.variable i) t).conjunction p.negative)).negative = true
+n : ℕ
+⊢ Function.update ν i n i < BaseTerm.value ν t → SourceFormula.eval (Function.update ν i n) p ↔
+    n < BaseTerm.value ν t → SourceFormula.eval (Function.update ν i n) p
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceSemanticProof.lean:93:23: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [test, guard, hi̵,̵ ̵h̵p]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

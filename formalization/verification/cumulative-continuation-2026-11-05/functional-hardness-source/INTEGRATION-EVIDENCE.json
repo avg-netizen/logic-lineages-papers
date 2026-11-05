@@ -1,0 +1,48 @@
+{
+  "component": "FullFunctionalHardness",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionAssemblyProof.lean": "478c5f00b2fb5bbac5f1f0c9febacd3c4bacb737067f8f6fe13884d6b48a56d4",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionDefinitions.lean": "5cc2226e70a71d930c0aa9f0645b108b98dbb69872db14e0e3246225260423ca",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionFoldProof.lean": "87b498265f946b1fae18c83d2ad794944c9d47d2e5f6798271315c21bf1edd94",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionProof.lean": "615b2d86f6d51fff8e9eb9cbfb00eacb96fd4284604f0198786da810072e0cb3",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionStatementChecks.lean": "163d83b61ffcfe1bb044795837d9baa2d77659aa73192ee9b6cbed22e00a4d4e",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionTargets.lean": "1c87941beb567c2441fd0e9e75afb72c6cd8b9004cefcf4f835218dd65346f29",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.finite_query_pullback": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.conjunction_computable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.conjunction_meaning": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.level_two_undecidability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.HardnessDecisionStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 654,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-ACCEPTANCE.json",
+  "original_acceptance_sha256": "e8c93f99a32a7d8ab363ef9ecb4e9e3a4a0295817be916921aa944ffdda28d58",
+  "scope": "Unchanged exact HardnessTargets.FullFunctionalHardness: strict and weak level-two source-comparison undecidability, strict and weak level-two finite-query reductions, strict and weak level-three single-query reductions. Boolean finite conjunction recognizes system unsatisfiability; only that predicate is complemented. Every decider use consumes genuine source-query witnesses and all printed bounds.",
+  "exclusions": "No publication/adoption claim until independent bridge, system-undecidability and final hardness review. Does not settle unrelated pending ordinal-decision/II5 work.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

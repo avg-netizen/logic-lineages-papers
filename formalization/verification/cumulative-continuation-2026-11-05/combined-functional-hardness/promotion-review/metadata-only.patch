@@ -1,0 +1,408 @@
+--- a/formalization/TARGETS.json
++++ b/formalization/TARGETS.json
+@@ -8134,25 +8134,25 @@
+           "file": "09-canonical-source-expressivity/hardness.tex",
+           "line": 160,
+           "statement_latex": "[Standard-control functional-input undecidability]\n\\label{thm:functional-hardness}\nFull universal canonical weak comparison and strict comparison are\nundecidable already for ground output, free-variable levels at most one,\nand internal levels at most two.  The reduction at this level uses finitely\nmany comparison queries.  A computable single-query reduction from the\nsame polynomial-system unsatisfiability problem is available with internal\nlevel at most three.",
+-          "status": "pending",
+-          "accepted_declaration": null,
+-          "frozen_comparator": null,
++          "status": "checked",
++          "accepted_declaration": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness",
++          "frozen_comparator": {
++            "file": "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean",
++            "sha256": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615",
++            "type": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessTargets.FullFunctionalHardness"
++          },
+           "completion_audit": {
+             "date": "2026-11-05",
+-            "report": "verification/cumulative-continuation-2026-11-05/finite-query-code/COMPONENT-EVIDENCE.json",
+-            "classification": "missing_foundation_or_downstream",
++            "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
++            "classification": "whole_statement_exact_source_correspondence",
+             "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+-            "remaining_obligation": "Genuine encoded-polynomial-system undecidability, including necessary MRDP/H10/Narendran suppliers and its coded adapter, remains pending. The total coded level-three strict/weak SingleQueryReduction and level-two strict/weak FiniteQueryReduction obligations are independently accepted, including validity and malformed-input behavior. Whole functional hardness remains pending until its genuine undecidability dependency and full endpoint are proved.",
+-            "next_completion_step": "Reuse the accepted total coded level-three single-query and level-two finite-query reductions. Supply and independently verify genuine encoded-polynomial-system undecidability with its full coded dependency chain, then assemble the exact full hardness endpoint without adding oracle premises.",
++            "remaining_obligation": "None within this numbered theorem after the explicit supplier-integration prerequisite is satisfied.",
++            "next_completion_step": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred.",
+             "upstream_blockers": [],
++            "prior_report": "verification/cumulative-continuation-2026-11-05/finite-query-code/COMPONENT-EVIDENCE.json",
+             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+-            "review_scope": "Independent exact level-two coded finite-query component acceptance with literal source correspondence; exact gate and focused cumulative integration passed. No numbered source promotion.",
+-            "prior_report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+-            "prior_reports": [
+-              "verification/cumulative-continuation-2026-11-05/seeded-source/ROOT-SEMANTIC-ADOPTION.json",
+-              "audits/PENDING-STATEMENTS-2026-11-05.json",
+-              "verification/cumulative-continuation-2026-11-05/seeded-query/COMPONENT-EVIDENCE.json"
+-            ]
++            "review_scope": "Independent manuscript-to-comparator correspondence review and read-only source/receipt/hash closure checks; no new compiler run in this metadata preparation.",
++            "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+           },
+           "checked_components": [
+             {
+@@ -8301,9 +8301,32 @@
+               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks",
+               "acceptance_record": "verification/cumulative-continuation-2026-11-05/minimization-source/COMPONENT-EVIDENCE.json",
+               "scope": "Exact ordinary Mathlib Code.rfind' graph closure from the body graph, with arbitrary starting point and absolute output index. Every earlier offset has an actual defined nonzero body result; undefined earlier computations cannot be skipped. No alternate evaluator or termination hypothesis is introduced. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+-            }
+-          ],
+-          "latest_coverage_note": "The actual closed Omega semantic/numeric construction supplies total coded level-three strict and weak single-query reductions. The plain system compiler and exact shared-index mask restriction now also supply total coded level-two strict and weak finite-query reductions. Both maps cover every natural input, with genuine ground source queries, original type-level bounds and literal malformed-input fallbacks. The unchanged SingleQueryReduction and FiniteQueryReduction obligations are discharged for both strictness conventions. Genuine encoded-polynomial-system undecidability, its required coded adapter and whole functional hardness remain pending. The cipher all-ones equations now have a checked at-most-one-solution theorem, based on actual even masked-square uniqueness. Existence, sparse-sum characterization, ones-Diophantineness, MRDP and genuine undecidability are not established by this component. The exact original OnesArithmeticCharacterization iff holds, including n=0. The actual sparse sum satisfies the original equations and uniqueness supplies the reverse direction. This is not MRDP or polynomial-system undecidability. The unchanged original OnesDiophantine graph is Diophantine for variable natural inputs. The exact arithmetic characterization supplies both directions, with actual existential polynomial witnesses. This does not establish general bounded universal closure, MRDP or undecidability. The actual sparse index graph and source Code/Const/Code_plus/literal Code_mult relations now have exact arithmetic and Diophantine supporting proofs, retaining the original n+1<q domain and empty-input conventions. These do not establish elementary normalization, full variable bounded-universal closure, universal evaluation, MRDP or undecidability. Current supporting coverage supersedes earlier pending notes for elementary normalization and variable bounded-universal closure: natural-input elementary normalization, actual variable-length witness-row packing, the original unchanged variable-bounded universal target, and ordinary Mathlib Code.rfind' graph closure are proved. Original zero/empty cases and actual definedness remain. Ordinary Code.prec, full code induction, universal evaluation, effective specialization, MRDP and undecidability remain pending."
++            },
++            {
++              "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.HardnessDecisionStatementChecks",
++              "acceptance_record": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-ACCEPTANCE.json",
++              "scope": "Five exact aliases include the unchanged complete six-clause FullFunctionalHardness endpoint; all 654 local dependency sources have matching successful native receipt rows and logs. Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
++            }
++          ],
++          "latest_coverage_note": "Whole hardness.tex:160-167: strict and weak full universal canonical comparison are undecidable for actual original-T ground outputs, every free-context type of level at most one and every original admissible whole-vector substitution, with internal levels at most two. Both total computable finite-query reductions from finite shared-unknown N[X] linear-system unsatisfiability and both total computable single-query reductions at internal level at most three are proved. The fixed zero-history assignment, literal standard Phi, actual polynomial source language, malformed-source handling, genuine H10/linear-system supplier and allowed axiom closure are retained. The six-conjunct original comparator is byte-identical to its archive. Prior supporting-component limitations below are historical, not remaining obligations for this label. The decider convention is a total computable function on natural codes, correct on genuine bounded typed inputs; answers elsewhere are unrestricted. No separate named-text serialization or equivalence with partial algorithms promised to halt only on valid inputs is claimed. No all-ground free-variable conclusion, stronger many-one/co-RE completeness classification, runtime bound, arbitrary perturbed-control result or whole-paper completion is promoted. The local evidence is the exact 654-module supplier closure with successful native source rows and standard-axiom audits. It is not a full-root build or remote CI result.",
++          "accepted_declarations": [
++            "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness"
++          ],
++          "frozen_comparators": [
++            {
++              "file": "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean",
++              "sha256": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615",
++              "type": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessTargets.FullFunctionalHardness"
++            }
++          ],
++          "verification_receipt": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/functional-hardness-gates/RECEIPT.json",
++          "acceptance_record": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-ACCEPTANCE.json",
++          "axioms": [
++            "propext",
++            "Classical.choice",
++            "Quot.sound"
++          ],
++          "coverage_note": "Whole hardness.tex:160-167: strict and weak full universal canonical comparison are undecidable for actual original-T ground outputs, every free-context type of level at most one and every original admissible whole-vector substitution, with internal levels at most two. Both total computable finite-query reductions from finite shared-unknown N[X] linear-system unsatisfiability and both total computable single-query reductions at internal level at most three are proved. The fixed zero-history assignment, literal standard Phi, actual polynomial source language, malformed-source handling, genuine H10/linear-system supplier and allowed axiom closure are retained. The six-conjunct original comparator is byte-identical to its archive. Prior supporting-component limitations below are historical, not remaining obligations for this label. The decider convention is a total computable function on natural codes, correct on genuine bounded typed inputs; answers elsewhere are unrestricted. No separate named-text serialization or equivalence with partial algorithms promised to halt only on valid inputs is claimed. No all-ground free-variable conclusion, stronger many-one/co-RE completeness classification, runtime bound, arbitrary perturbed-control result or whole-paper completion is promoted. The local evidence is the exact 654-module supplier closure with successful native source rows and standard-axiom audits. It is not a full-root build or remote CI result."
+         },
+         {
+           "id": "09-canonical-source-expressivity:lem:perturbed-control",
+@@ -10819,7 +10842,7 @@
+   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
+   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
+   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
+-  "source_completion_updated_at_utc": "2026-11-04T21:07:50.599180+00:00",
++  "source_completion_updated_at_utc": "2026-11-05T13:40:22.346832+00:00",
+   "supporting_components_updated_at_utc": "2026-11-05T11:40:10.783503+00:00",
+   "register_reconciliation": {
+     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
+@@ -10827,5 +10850,11 @@
+     "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+     "verification": "audits/REGISTER-RECONCILIATION-2026-11-05.json",
+     "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
++  },
++  "source_completion_promotion": {
++    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
++    "statement": "09-canonical-source-expressivity:thm:functional-hardness",
++    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
++    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+   }
+ }
+--- a/formalization/audits/PENDING-STATEMENTS-2026-11-05.json
++++ b/formalization/audits/PENDING-STATEMENTS-2026-11-05.json
+@@ -2,15 +2,15 @@
+   "schema": "pending-source-register-reconciliation-v1",
+   "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
+   "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
+-  "scope": "All 26 currently pending numbered statements reconciled against the pinned register and archived acceptance evidence. Existing mathematical conclusions are retained unless explicitly refreshed. No new proof acceptance, source correction, independent full proof audit, native compilation, root build or remote CI is claimed.",
++  "scope": "Targeted successor to the 5 November reconciliation: only thm:functional-hardness is promoted after its recorded integration prerequisite. The other 25 pending entries retain their prior assessments verbatim; this is not a fresh audit of them. No new native compilation, full-root build or remote CI is claimed by this metadata update.",
+   "prior_audit": "audits/PENDING-STATEMENTS-2026-11-04.json",
+   "counts": {
+-    "checked": 161,
+-    "pending": 26,
++    "checked": 162,
++    "pending": 25,
+     "existing-calculator-package": 2
+   },
+   "numbered_statement_count": 189,
+-  "numbered_source_promotions": 0,
++  "numbered_source_promotions": 1,
+   "newly_registered_prior_components": [
+     {
+       "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
+@@ -675,43 +675,6 @@
+       "review": "prior assessment retained; status and source pin reconciled"
+     },
+     {
+-      "id": "09-canonical-source-expressivity:thm:functional-hardness",
+-      "short_id": "09:thm:functional-hardness",
+-      "status": "pending",
+-      "source_file": "09-canonical-source-expressivity/hardness.tex",
+-      "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+-      "classification": "missing_foundation_or_downstream",
+-      "existing_coverage": "Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked.",
+-      "remaining_obligation": "Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.",
+-      "next_completion_step": "Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.",
+-      "upstream_blockers": [],
+-      "checked_prerequisites": [],
+-      "supporting_component_count": 11,
+-      "evidence": [
+-        "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean",
+-        "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean",
+-        "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean",
+-        "09-canonical-source-expressivity/hardness.tex",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json"
+-      ],
+-      "evidence_sha256": {
+-        "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean": "a40a71497cb540846da3b84330447765e8ce85bd80c5e8858f92555d96ac1121",
+-        "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean": "14d816a838dc8fa56072a88a3b4e63b006695524ca9106fdb65ca96acd41f6b6",
+-        "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean": "e49a7b931cee846e4ea49a864f6f71ecadf70c7dbe7f58e4982f55b80717d849",
+-        "09-canonical-source-expressivity/hardness.tex": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json": "1a4f797e20ac1ff2bd532469f0dfb544b9bbb61b58f285d16354d55cc195e02c",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json": "00695c7cd3736eb7cd7f991f165e72eb92a378be163a6c6f196c8f4597355af9",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json": "4f20ac0e0a4b0458d278b2565c774834fed6d2e0add551f43139f7f6c43edf45",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json": "d3aa6de3e13be8d12ae811d0ca592009a7713dc6ba6a7072deebdc587f9894b9",
+-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70"
+-      },
+-      "review": "refreshed against newer accepted evidence"
+-    },
+-    {
+       "id": "12-common-knowledge-necessitation:thm:collapse",
+       "short_id": "12:thm:collapse",
+       "status": "pending",
+@@ -815,5 +778,12 @@
+       },
+       "review": "prior assessment retained; status and source pin reconciled"
+     }
+-  ]
++  ],
++  "completion_update": {
++    "prepared_at_utc": "2026-11-05T13:40:22.346832+00:00",
++    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
++    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
++    "promoted_statement": "09-canonical-source-expressivity:thm:functional-hardness",
++    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
++  }
+ }
+--- a/formalization/audits/PENDING-STATEMENTS-2026-11-05.md
++++ b/formalization/audits/PENDING-STATEMENTS-2026-11-05.md
+@@ -2,11 +2,13 @@
+ 
+ Checkpoint: `5c98e63793b3fc821965def2292e909d4436f049`.
+ 
+-**161 checked, 2 inherited, 26 pending out of 189. No numbered statement is promoted.**
++**162 checked, 2 inherited, 25 pending out of 189 after the conditional one-label promotion below.**
++
++Only `09:thm:functional-hardness` is promoted by this successor. See the [exact completion audit](FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.md). Apply this update only with the unchanged supplier integration and coordinator acceptance described there. All other entries retain their prior assessments; their historical supplier-gap language is not a new audit conclusion.
+ 
+ This reconciles the current register and archived acceptance evidence. It does not report a new Lean run, fresh whole-proof audit, full-root build or remote CI. The [4 November audit](PENDING-STATEMENTS-2026-11-04.md) remains unchanged as historical evidence. Current source and evidence SHA-256 pins are in the [machine-readable report](PENDING-STATEMENTS-2026-11-05.json).
+ 
+-## Corrections that avoid duplicate work
++## Historical reconciliation corrections (before the targeted promotion)
+ 
+ - Add the already adopted cipher product/multiplication gate to paper02 finite hardness and paper09 functional hardness. Full MRDP/H10 remains pending.
+ - Add the already adopted actual Omega-seed/level-at-most-three scaled-pair gate to paper09. Its exact gate passed, but a later seeded compiler in the same archived invocation failed. The full seeded-system and level-three single-query reduction remain pending.
+@@ -264,16 +266,6 @@
+ 
+ Evidence: [BalancedRawCompilerTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedRawCompilerTargets.lean), [BalancedTypedCompilerTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedTypedCompilerTargets.lean), [BalancedExactVariablesTargets.lean](../../formalization/LogicLineages/OrdinalComparison/LayeredComparison/BalancedExactVariablesTargets.lean).
+ 
+-### 09:thm:functional-hardness
+-
+-Existing coverage: Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked.
+-
+-Remaining: Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.
+-
+-Next: Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.
+-
+-Evidence: [SourceFiniteExponentProjectionTargets.lean](../../formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean), [SourcePolynomialFamilyLiftTargets.lean](../../formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean), [SourceZeroPatternSubstitutionTargets.lean](../../formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean), [hardness.tex](../../09-canonical-source-expressivity/hardness.tex), [ROOT-R001-COMPONENT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json), [ROOT-R002-COMPONENT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json), [ROOT-R003-CONSTANT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json), [ROOT-R004-OMEGA-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json), [ROOT-CIPHER-PRODUCT-ADOPTION.json](../../formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json).
+-
+ ### 12:thm:collapse
+ 
+ Existing coverage: The exact source Base/syntax apparatus, self-indexed proof calibration and same-parameter selected-agent/KT consistency pair are adopted as lem:three and thm:consistency. Actual diagonal and conditional Lob suppliers, retained-parameter closed-instance CK equations, bounded-range and PA addition laws are supporting components.
+--- /dev/null
++++ b/formalization/audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json
+@@ -0,0 +1,160 @@
++{
++  "schema": "targeted-source-completion-v1",
++  "prepared_at_utc": "2026-11-05T13:40:22.346832+00:00",
++  "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred.",
++  "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
++  "statement": "09-canonical-source-expressivity:thm:functional-hardness",
++  "source_file": "09-canonical-source-expressivity/hardness.tex",
++  "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
++  "source_lines": "160-167",
++  "accepted_declaration": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness",
++  "frozen_comparator": {
++    "file": "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean",
++    "sha256": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615",
++    "type": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessTargets.FullFunctionalHardness"
++  },
++  "clauses": [
++    {
++      "clause": "Strict universal comparison is undecidable at internal level at most two.",
++      "formal": "not HasComparisonDecider 2 true",
++      "source": "09-canonical-source-expressivity/hardness.tex:162-164"
++    },
++    {
++      "clause": "Weak universal comparison is undecidable at internal level at most two.",
++      "formal": "not HasComparisonDecider 2 false",
++      "source": "09-canonical-source-expressivity/hardness.tex:162-164"
++    },
++    {
++      "clause": "Computable finite-query reduction from polynomial-system unsatisfiability to strict comparison, internal level at most two.",
++      "formal": "FiniteQueryReduction true",
++      "source": "09-canonical-source-expressivity/hardness.tex:164-165;177-193"
++    },
++    {
++      "clause": "Computable finite-query reduction from polynomial-system unsatisfiability to weak comparison, internal level at most two.",
++      "formal": "FiniteQueryReduction false",
++      "source": "09-canonical-source-expressivity/hardness.tex:164-165;177-193"
++    },
++    {
++      "clause": "Computable single-query reduction from the same unsatisfiability problem to strict comparison, internal level at most three.",
++      "formal": "SingleQueryReduction true",
++      "source": "09-canonical-source-expressivity/hardness.tex:165-167;195-223"
++    },
++    {
++      "clause": "Computable single-query reduction from the same unsatisfiability problem to weak comparison, internal level at most three.",
++      "formal": "SingleQueryReduction false",
++      "source": "09-canonical-source-expressivity/hardness.tex:165-167;195-223"
++    }
++  ],
++  "domain": "Actual original-T ground outputs, all free-context types of level at most one, full original norm-admissible closed graded whole-vector substitutions; standard Phi and literal default zero-history assignment. Strictness is at coordinate zero; ground outputs have no positive comparison coordinates.",
++  "source_anchors": [
++    "09-canonical-source-expressivity/hardness.tex:8-18,160-167,177-223",
++    "09-canonical-source-expressivity/paper.tex:26-43",
++    "05-wilken-weiermann-foundations/foundations.tex:312-338,394-410"
++  ],
++  "caveats": [
++    "The decider convention is a total computable function on natural codes, correct on genuine bounded typed inputs; answers elsewhere are unrestricted. No separate named-text serialization or equivalence with partial algorithms promised to halt only on valid inputs is claimed.",
++    "No all-ground free-variable conclusion, stronger many-one/co-RE completeness classification, runtime bound, arbitrary perturbed-control result or whole-paper completion is promoted.",
++    "The local evidence is the exact 654-module supplier closure with successful native source rows and standard-axiom audits. It is not a full-root build or remote CI result."
++  ],
++  "verification": {
++    "gate": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.HardnessDecisionStatementChecks",
++    "original_receipt_id": "1793884901548626869-2",
++    "gate_alias_count": 5,
++    "closure_module_count": 654,
++    "closure_includes_ordinary_proof_imports": true,
++    "all_current_supplier_sources_match_successful_native_rows": true,
++    "all_referenced_native_logs_exist": true,
++    "allowed_axioms": [
++      "propext",
++      "Classical.choice",
++      "Quot.sound"
++    ],
++    "native_runs_in_this_metadata_preparation": 0,
++    "integration_or_publication_claimed": false,
++    "full_root_build_claimed": false,
++    "remote_ci_claimed": false
++  },
++  "evidence_sha256": {
++    "formalization/verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-ACCEPTANCE.json": "e8c93f99a32a7d8ab363ef9ecb4e9e3a4a0295817be916921aa944ffdda28d58",
++    "formalization/verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-TARGET-FREEZE.json": "b23b51af2df90bfb245d7abd78449151547bf87433ecaf61836c94faf4687f6a",
++    "formalization/verification/cumulative-continuation-2026-11-05/functional-hardness-source/NUMBERED-SOURCE-CORRESPONDENCE-AUDIT.md": "a9847797c27263e30a4fc38cbed228706466887dcf3bf42dc14cf2d8500d454a",
++    "formalization/verification/cumulative-continuation-2026-11-05/functional-hardness-source/functional-hardness-gates/RECEIPT.json": "61ab761e2ade4b26336455ae330fa454f1737565f79810c16d3b0048d3139bbd",
++    "formalization/verification/cumulative-continuation-2026-11-05/functional-hardness-source/preflight/RECEIPT.json": "f241ec7be52315e23a308f5525a6b625c985bca0dc664683764957bcf8177f26",
++    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615",
++    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDefinitions.lean": "f236733edfc3d66bc5489323ce4aefc9c005e1519bb3d095fc4a2010c40b737a",
++    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionAssemblyProof.lean": "478c5f00b2fb5bbac5f1f0c9febacd3c4bacb737067f8f6fe13884d6b48a56d4",
++    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDecisionStatementChecks.lean": "163d83b61ffcfe1bb044795837d9baa2d77659aa73192ee9b6cbed22e00a4d4e",
++    "09-canonical-source-expressivity/hardness.tex": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f"
++  },
++  "counts_before": {
++    "checked": 161,
++    "pending": 26,
++    "existing-calculator-package": 2
++  },
++  "counts_after": {
++    "checked": 162,
++    "pending": 25,
++    "existing-calculator-package": 2
++  },
++  "only_changed_statement": "09-canonical-source-expressivity:thm:functional-hardness",
++  "all_unrelated_statement_and_paper_metadata_preserved": true,
++  "statement_contracts_preserved": 189,
++  "prior_component_entries_preserved": 29,
++  "previous_register_completion_audit": {
++    "date": "2026-11-05",
++    "report": "verification/cumulative-continuation-2026-11-05/finite-query-code/COMPONENT-EVIDENCE.json",
++    "classification": "missing_foundation_or_downstream",
++    "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
++    "remaining_obligation": "Genuine encoded-polynomial-system undecidability, including necessary MRDP/H10/Narendran suppliers and its coded adapter, remains pending. The total coded level-three strict/weak SingleQueryReduction and level-two strict/weak FiniteQueryReduction obligations are independently accepted, including validity and malformed-input behavior. Whole functional hardness remains pending until its genuine undecidability dependency and full endpoint are proved.",
++    "next_completion_step": "Reuse the accepted total coded level-three single-query and level-two finite-query reductions. Supply and independently verify genuine encoded-polynomial-system undecidability with its full coded dependency chain, then assemble the exact full hardness endpoint without adding oracle premises.",
++    "upstream_blockers": [],
++    "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
++    "review_scope": "Independent exact level-two coded finite-query component acceptance with literal source correspondence; exact gate and focused cumulative integration passed. No numbered source promotion.",
++    "prior_report": "audits/PENDING-STATEMENTS-2026-11-05.json",
++    "prior_reports": [
++      "verification/cumulative-continuation-2026-11-05/seeded-source/ROOT-SEMANTIC-ADOPTION.json",
++      "audits/PENDING-STATEMENTS-2026-11-05.json",
++      "verification/cumulative-continuation-2026-11-05/seeded-query/COMPONENT-EVIDENCE.json"
++    ]
++  },
++  "previous_pending_audit_entry": {
++    "id": "09-canonical-source-expressivity:thm:functional-hardness",
++    "short_id": "09:thm:functional-hardness",
++    "status": "pending",
++    "source_file": "09-canonical-source-expressivity/hardness.tex",
++    "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
++    "classification": "missing_foundation_or_downstream",
++    "existing_coverage": "Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked.",
++    "remaining_obligation": "Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.",
++    "next_completion_step": "Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.",
++    "upstream_blockers": [],
++    "checked_prerequisites": [],
++    "supporting_component_count": 11,
++    "evidence": [
++      "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean",
++      "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean",
++      "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean",
++      "09-canonical-source-expressivity/hardness.tex",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json"
++    ],
++    "evidence_sha256": {
++      "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean": "a40a71497cb540846da3b84330447765e8ce85bd80c5e8858f92555d96ac1121",
++      "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean": "14d816a838dc8fa56072a88a3b4e63b006695524ca9106fdb65ca96acd41f6b6",
++      "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean": "e49a7b931cee846e4ea49a864f6f71ecadf70c7dbe7f58e4982f55b80717d849",
++      "09-canonical-source-expressivity/hardness.tex": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json": "1a4f797e20ac1ff2bd532469f0dfb544b9bbb61b58f285d16354d55cc195e02c",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json": "00695c7cd3736eb7cd7f991f165e72eb92a378be163a6c6f196c8f4597355af9",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json": "4f20ac0e0a4b0458d278b2565c774834fed6d2e0add551f43139f7f6c43edf45",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json": "d3aa6de3e13be8d12ae811d0ca592009a7713dc6ba6a7072deebdc587f9894b9",
++      "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70"
++    },
++    "review": "refreshed against newer accepted evidence"
++  },
++  "prior_register_sha256": "0b4db9445f5051803878f2c4947e87ff916919de12bb08b932ed5b47cd5cdb48",
++  "proposed_register_sha256": "045b99186a65cf3cc2c88f50bfb22d6b91bffdb8c4346877fefd24c8e6e7cd39",
++  "proposed_pending_report_sha256": "b8ed02a4ed9cc9b021ef86a07682b49761610843e58ee0a1f2c9a1eb13974424"
++}
+--- /dev/null
++++ b/formalization/audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.md
+@@ -0,0 +1,28 @@
++# Functional-hardness source completion: conditional integration patch
++
++This isolated patch changes only `09-canonical-source-expressivity:thm:functional-hardness`. It is not an adoption or publication action.
++
++Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred.
++
++Expected counts after application: **162 checked, 2 inherited, 25 pending / 189**. The paper remains in progress; unrelated dependency-obligation and statement statuses are unchanged.
++
++## Exact source coverage
++
++1. Strict universal comparison is undecidable at internal level at most two. Source: 09-canonical-source-expressivity/hardness.tex:162-164.
++2. Weak universal comparison is undecidable at internal level at most two. Source: 09-canonical-source-expressivity/hardness.tex:162-164.
++3. Computable finite-query reduction from polynomial-system unsatisfiability to strict comparison, internal level at most two. Source: 09-canonical-source-expressivity/hardness.tex:164-165;177-193.
++4. Computable finite-query reduction from polynomial-system unsatisfiability to weak comparison, internal level at most two. Source: 09-canonical-source-expressivity/hardness.tex:164-165;177-193.
++5. Computable single-query reduction from the same unsatisfiability problem to strict comparison, internal level at most three. Source: 09-canonical-source-expressivity/hardness.tex:165-167;195-223.
++6. Computable single-query reduction from the same unsatisfiability problem to weak comparison, internal level at most three. Source: 09-canonical-source-expressivity/hardness.tex:165-167;195-223.
++
++Actual original-T ground outputs, all free-context types of level at most one, full original norm-admissible closed graded whole-vector substitutions; standard Phi and literal default zero-history assignment. Strictness is at coordinate zero; ground outputs have no positive comparison coordinates.
++
++The theorem is the unchanged six-conjunct `HardnessTargets.FullFunctionalHardness`; the exact alias is `LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness`. The final gate is `1793884901548626869-2`. It audits five aliases. All 654 local supplier modules, including ordinary non-reexported H10/Root proof imports, match successful native source rows and logs. The comparator and original semantics match their archived bytes. No proof, build or manuscript was changed by this preparation.
++
++## Scope limits
++
++- The decider convention is a total computable function on natural codes, correct on genuine bounded typed inputs; answers elsewhere are unrestricted. No separate named-text serialization or equivalence with partial algorithms promised to halt only on valid inputs is claimed.
++- No all-ground free-variable conclusion, stronger many-one/co-RE completeness classification, runtime bound, arbitrary perturbed-control result or whole-paper completion is promoted.
++- The local evidence is the exact 654-module supplier closure with successful native source rows and standard-axiom audits. It is not a full-root build or remote CI result.
++
++See the [machine-readable completion record](FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json) for source/evidence checksums, the six clauses, old completion records and before/after counts. The older register-reconciliation verification remains historical and is not repurposed as evidence for this promotion. The other 25 pending entries remain unchanged and have not been re-audited here.

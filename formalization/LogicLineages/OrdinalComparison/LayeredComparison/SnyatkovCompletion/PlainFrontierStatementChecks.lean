@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainFrontierDecisionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainFrontierStatementChecks
+
+theorem actual_advance : PlainFrontierTargets.ActualAdvance := PlainFrontierProof.actualAdvance
+theorem iterated_plain : PlainFrontierTargets.IteratedPlain := PlainFrontierProof.iteratedPlain
+theorem actual_iteration : PlainFrontierTargets.ActualIteration := PlainFrontierProof.actualIteration
+theorem strict_rank_bound : PlainFrontierTargets.StrictRankBound := PlainFrontierProof.strictRankBound
+theorem literal_fuel_bound : PlainFrontierTargets.LiteralFuelBound := PlainFrontierProof.literalFuelBound
+theorem frontier_exhaustion : PlainFrontierTargets.FrontierExhaustion := PlainFrontierProof.frontierExhaustion
+theorem actual_decision : PlainFrontierTargets.ActualDecision := PlainFrontierProof.actualDecision
+theorem exact_rejecting_decision : PlainFrontierTargets.ExactRejectingDecision := PlainFrontierProof.exactRejectingDecision
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainFrontierStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainFrontierStatementChecks

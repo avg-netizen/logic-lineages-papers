@@ -1,0 +1,19 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationSemanticProof
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks
+open SpecializationTargets
+
+theorem fixedSubstitutionIdentity : SubstitutionIdentity := SpecializationSemanticProof.substitutionIdentity
+theorem fixedSubstitutionWellFormed : SubstitutionWellFormed := SpecializationSemanticProof.substitutionWellFormed
+theorem fixedSubstitutionRootCorrespondence : SubstitutionRootCorrespondence :=
+  SpecializationSemanticProof.substitutionRootCorrespondence
+theorem fixedSpecializationCodeCalibration : SpecializationCodeCalibration :=
+  SpecializationCodeProof.specializationCodeCalibration
+theorem fixedSpecializationCodePrimrec : SpecializationCodePrimrec := SpecializationCodeProof.specializationCodePrimrec
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks

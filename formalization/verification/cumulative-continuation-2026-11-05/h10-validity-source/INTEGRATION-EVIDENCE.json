@@ -1,0 +1,44 @@
+{
+  "component": "H10Validity",
+  "status": "independently accepted; exact gate and focused full-functional-hardness coordinator passed",
+  "source_files": {
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10ValidityCalibrationProof.lean": "7799fbe33de75af4f1f9a6805041de378a4c9030da7d2f18cbc33275c2f8ca99",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10ValidityDefinitions.lean": "e1290d57af720026ddee1e1243aa701be7c002583d5a345d06e4ea6d3ddc687e",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10ValidityProgramsProof.lean": "6edd8aa79d406c3094166e864b19f4c83cc769378ea245f75165df6f47c6e04f",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10ValidityStatementChecks.lean": "e56cf68d1b63a45231cfdedb25a8be6077d7094a037d61237577895c46f1fdff",
+    "formalization/LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/H10ValidityTargets.lean": "0cb1f8848a9492f82b880512642ec11e4a598eb1ffbe6b7ae147690f522cde12"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Validity.StatementChecks.validity_primitive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Validity.StatementChecks.variables_validity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Validity.StatementChecks.input_validity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Validity.StatementChecks.canonical_validity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Validity.StatementChecks.terms_validity": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.H10ValidityStatementChecks",
+  "accepted_archive_sha256": "82bab523c35e94bf2ac03979fa5f87b6d4a1637bb7f42bb7f43f98b7d86f37ed",
+  "source_closure_modules": 13,
+  "original_acceptance_record": "verification/cumulative-continuation-2026-11-05/h10-validity-source/H10-VALIDITY-ACCEPTANCE.json",
+  "original_acceptance_sha256": "41c68a0701e6fd39a088b91d0373f1fbe47078d550cbf6d041c8a126b297773b",
+  "scope": "Primitive-recursive exact original polynomial parser plus input-arity validity on arbitrary natural lists. All original occurrences checked, including zero-coefficient terms. No custom Code or Int encoding.",
+  "exclusions": "No full H10 reduction or downstream undecidability claim.",
+  "native_evidence": "Exact successful receipt/log paths retained under original evidence directories; failure rows in retained historical receipts are not accepted source claims.",
+  "integration_acceptance": "verification/cumulative-continuation-2026-11-05/combined-functional-hardness/ACCEPTANCE.json"
+}

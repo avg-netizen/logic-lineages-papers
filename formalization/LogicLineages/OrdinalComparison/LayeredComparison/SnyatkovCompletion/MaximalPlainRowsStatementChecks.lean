@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks
+
+theorem exact_active_guard : MaximalPlainRowsTargets.ExactActiveGuard :=
+  MaximalPlainRowsProof.exactActiveGuard
+theorem actual_signed_row_residue : MaximalPlainRowsTargets.ActualSignedRowResidue :=
+  MaximalPlainRowsProof.actualSignedRowResidue
+theorem exact_residual_occurrences : MaximalPlainRowsTargets.ExactResidualOccurrences :=
+  MaximalPlainRowsProof.exactResidualOccurrences
+theorem actual_maximal_tail_atom : MaximalPlainRowsTargets.ActualMaximalTailAtom :=
+  MaximalPlainRowsProof.actualMaximalTailAtom
+theorem literal_tail_linearity : MaximalPlainRowsTargets.LiteralTailLinearity :=
+  MaximalPlainRowsProof.literalTailLinearity
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks

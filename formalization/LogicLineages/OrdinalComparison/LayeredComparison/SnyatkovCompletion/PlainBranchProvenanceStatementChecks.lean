@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchProvenanceBranchProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchProvenanceStatementChecks
+
+theorem exact_linearity_detection : PlainBranchProvenanceTargets.ExactLinearityDetection :=
+  PlainBranchProvenanceProof.exactLinearityDetection
+theorem exact_plain_detection : PlainBranchProvenanceTargets.ExactPlainDetection := PlainBranchProvenanceProof.exactPlainDetection
+theorem linear_guards : PlainBranchProvenanceTargets.LinearGuards := PlainBranchProvenanceProof.linearGuards
+theorem literal_atomic_provenance : PlainBranchProvenanceTargets.LiteralAtomicProvenance :=
+  PlainBranchProvenanceProof.literalAtomicProvenance
+theorem literal_branch_provenance : PlainBranchProvenanceTargets.LiteralBranchProvenance :=
+  PlainBranchProvenanceProof.literalBranchProvenance
+theorem preserve_plain : PlainBranchProvenanceTargets.PreservePlain := PlainBranchProvenanceProof.preservePlain
+theorem strict_name_decrease : PlainBranchProvenanceTargets.StrictNameDecrease := PlainBranchProvenanceProof.strictNameDecrease
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchProvenanceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchProvenanceStatementChecks

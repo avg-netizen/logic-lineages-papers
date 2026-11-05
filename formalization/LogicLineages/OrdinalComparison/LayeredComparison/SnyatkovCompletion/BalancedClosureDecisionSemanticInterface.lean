@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionSupplierTargets
+import LogicLineages.OrdinalComparison.LayeredComparison.BalancedTypedCompilerSemanticProof
+import LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariablesCalibrationProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionSuppliers
+
+theorem typedCalibration : BalancedTypedCompiler.Targets.ExactTypedCodeCalibration :=
+  BalancedTypedCompiler.Proof.exactTypedCodeCalibration
+theorem actualSign : BalancedTypedCompiler.Targets.ActualSignSemantics :=
+  BalancedTypedCompiler.Proof.actualSignSemantics
+theorem originalSupport : BalancedClosureDecisionSupplierTargets.OriginalSupportCalibration :=
+  BalancedExactVariables.Proof.raw_support_calibration
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionSuppliers

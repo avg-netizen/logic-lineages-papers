@@ -1,0 +1,84 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:17:90: error: unsolved goals
+case neg.some
+p : Input
+h0 : ¬p.2 % 5 = 0
+h1 : ¬p.2 % 5 = 1
+h2 : ¬p.2 % 5 = 2
+h3 : ¬p.2 % 5 = 3
+val✝ : ℕ
+hg : Code.guard (Nat.unpair (p.2 / 5)).1 (Nat.unpair (p.2 / 5)).2 = some val✝
+⊢ ((List.range (ScopedPhiPrograms.Code.value p.1 val✝)).any fun n =>
+      Code.answer (Code.update p.1 (Nat.unpair (p.2 / 5)).1 n) (Nat.unpair (p.2 / 5)).2) =
+    (List.range (ScopedPhiPrograms.Code.value p.1 val✝)).any
+      ((fun q => Code.answer q.1 q.2) ∘ fun n => (Code.update p.1 (Nat.unpair (p.2 / 5)).1 n, (Nat.unpair (p.2 / 5)).2))
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:20:20: warning: This simp argument is unused:
+  children
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, c̵h̵i̵l̵d̵r̵e̵n̵,̵ ̵h0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:22:20: warning: This simp argument is unused:
+  children
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, c̵h̵i̵l̵d̵r̵e̵n̵,̵ ̵h0, h1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:22:30: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, children, h0̵,̵ ̵h̵1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:24:30: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, children, h0̵,̵ ̵h̵1, h2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:24:34: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, children, h0, h1̵,̵ ̵h̵2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:26:30: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, children, h0̵,̵ ̵h̵1, h2, h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:26:34: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, children, h0, h1̵,̵ ̵h̵2, h3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:26:38: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [assemble, children, h0, h1, h2̵,̵ ̵h̵3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:38:17: error: unsolved goals
+case cons
+hs : Primrec₂ fun x p => p.1 || p.2
+hf : Primrec fun a => List.foldr (fun b s => (b, s).1 || (b, s).2) false (id a)
+x : Bool
+xs : List Bool
+ih : List.foldr (fun b s => (b, s).1 || (b, s).2) false (id xs) = xs.any id
+⊢ (x || List.foldr (fun b s => b || s) false xs) = (x || xs.any id)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/BoundedSourceProgramsAnswerProof.lean:38:63: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.foldr_cons, List.any_cons, ih̵,̵ ̵i̵d_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

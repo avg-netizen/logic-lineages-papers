@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HomogeneousSourceRawProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HomogeneousSourceProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HomogeneousSourceStatementChecks
+
+theorem literal_reconstruction : HomogeneousSourceTargets.LiteralReconstruction := HomogeneousSourceProof.literalReconstruction
+theorem exact_decision_domain : HomogeneousSourceTargets.ExactDecisionDomain := HomogeneousSourceProof.exactDecisionDomain
+theorem actual_decision : HomogeneousSourceTargets.ActualDecision := HomogeneousSourceProof.actualDecision
+theorem literal_code_data : HomogeneousSourceTargets.LiteralCodeData := HomogeneousSourceProof.literalCodeData
+theorem actual_numeric_programs : HomogeneousSourceTargets.ActualNumericPrograms := HomogeneousSourceProof.actualNumericPrograms
+theorem actual_raw_decision : HomogeneousSourceTargets.ActualRawDecision := HomogeneousSourceProof.actualRawDecision
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HomogeneousSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HomogeneousSourceStatementChecks

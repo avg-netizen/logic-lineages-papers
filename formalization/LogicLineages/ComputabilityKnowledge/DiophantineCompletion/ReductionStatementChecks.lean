@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks
+open ReductionTargets
+
+theorem fixedREPredicateDiophantine : REPredicateDiophantine := ReductionProof.rePredicateDiophantine
+theorem fixedEncodedCodeRoot : EncodedCodeRoot := ReductionProof.encodedCodeRoot
+theorem fixedREPolynomialReduction : Targets.REPolynomialReduction := ReductionProof.rePolynomialReduction
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks

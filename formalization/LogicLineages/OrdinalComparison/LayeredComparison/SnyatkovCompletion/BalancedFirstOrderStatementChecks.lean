@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedFirstOrderCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedFirstOrderProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedFirstOrderStatementChecks
+
+theorem bound_environment : BalancedFirstOrderTargets.BoundEnvironment := BalancedFirstOrderProof.boundEnvironment
+theorem actual_source_translation : BalancedFirstOrderTargets.ActualSourceTranslation := BalancedFirstOrderProof.actualSourceTranslation
+theorem exact_free_variables : BalancedFirstOrderTargets.ExactFreeVariables := BalancedFirstOrderProof.exactFreeVariables
+theorem literal_code_calibration : BalancedFirstOrderTargets.LiteralCodeCalibration := BalancedFirstOrderProof.literalCodeCalibration
+theorem actual_source_code : BalancedFirstOrderTargets.ActualSourceCode := BalancedFirstOrderProof.actualSourceCode
+theorem actual_numeric_program : BalancedFirstOrderTargets.ActualNumericProgram := BalancedFirstOrderProgram.actualNumericProgram
+theorem exact_universal_domain : BalancedFirstOrderTargets.ExactUniversalDomain := BalancedFirstOrderProof.exactUniversalDomain
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedFirstOrderStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedFirstOrderStatementChecks

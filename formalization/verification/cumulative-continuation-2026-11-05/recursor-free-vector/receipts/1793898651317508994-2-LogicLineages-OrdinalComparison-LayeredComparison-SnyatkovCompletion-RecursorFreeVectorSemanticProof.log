@@ -1,0 +1,158 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:27:2: error: unsolved goals
+case pos
+n mode : ℕ
+a b : BaseTerm
+ν : ℕ → ℕ
+hg : BaseFormula.Formula.eval ν (BalancedClosureDecision.positiveFormula (List.range n)) ↔ ∀ i < n, 0 < ν i
+h : ∀ i < n, 0 < ν i
+⊢ (∃ x < n, ν x = 0) ∨ scalarRelation mode (BaseTerm.value ν a) (BaseTerm.value ν b) ↔
+    (∀ i < n, 0 < ν i) → scalarRelation mode (BaseTerm.value ν a) (BaseTerm.value ν b)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:52:27: error: Function expected at
+  hab
+but this term has type
+  positiveComparison (normalCodes a.positiveNotes) (normalCodes b.positiveNotes) = true
+
+Note: Expected a function because this term is being applied to the argument
+  j
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:52:35: error: Function expected at
+  hba
+but this term has type
+  positiveComparison (normalCodes b.positiveNotes) (normalCodes a.positiveNotes) = true
+
+Note: Expected a function because this term is being applied to the argument
+  j
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:54:15: error: Application type mismatch: The argument
+  fun j => Eq.le (he j)
+has type
+  ∀ (j : ℕ), positiveNoteAt a.positiveNotes j ≤ positiveNoteAt b.positiveNotes j
+but is expected to have type
+  positiveComparison (normalCodes a.positiveNotes) (normalCodes b.positiveNotes) = true
+in the application
+  And.intro fun j => Eq.le (he j)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:49:35: warning: This simp argument is unused:
+  positiveComparisonSourceCorrect
+
+Hint: Omit it from the simp argument list.
+  simp only [Bool.and_eq_true,̵ ̵p̵o̵s̵i̵t̵i̵v̵e̵C̵o̵m̵p̵a̵r̵i̵s̵o̵n̵S̵o̵u̵r̵c̵e̵C̵o̵r̵r̵e̵c̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:73:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  FiniteCoefficientBase.Code.compile (scalarSyntaxCode ?index ?s)
+in the target expression
+  (do
+      let b_1 ← FiniteCoefficientBase.Code.compile (CompiledVector.syntaxCode index b).1
+      let answer ← BaseBooleanSource.Code.decideClosureForall (Code.formula n mode ta.encode b_1)
+      pure (positiveFlag mode (CompiledVector.syntaxCode index a) (CompiledVector.syntaxCode index b) && answer)) =
+    some (flag && answer)
+
+case refine_1
+ι : Type
+index : ι → ℕ
+n mode k l : ℕ
+a : CompiledVector ι k
+b : CompiledVector ι l
+ta tb : BaseTerm
+ha : FiniteCoefficientBase.compile index a.scalar = some ta
+hb : FiniteCoefficientBase.compile index b.scalar = some tb
+answer : Bool
+hd : BaseBooleanSource.Code.decideClosureForall (formula n mode ta tb).encode = some answer
+hs : (∀ (ν : ℕ → ℕ), BaseFormula.Formula.eval ν (formula n mode ta tb)) ↔ answer = true
+flag : Bool := positiveFlag mode (CompiledVector.syntaxCode index a) (CompiledVector.syntaxCode index b)
+⊢ (do
+      let b_1 ← FiniteCoefficientBase.Code.compile (CompiledVector.syntaxCode index b).1
+      let answer ← BaseBooleanSource.Code.decideClosureForall (Code.formula n mode ta.encode b_1)
+      pure (positiveFlag mode (CompiledVector.syntaxCode index a) (CompiledVector.syntaxCode index b) && answer)) =
+    some (flag && answer)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorSemanticProof.lean:94:0: error: declaration `LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorProof.actualSourceRelation` contains universe level metavariables at the expression
+  Eq.{?u.33 + 2} (Nat.cast.{?u.33 + 1} (Scalar.value ρ ca.scalar)) (Nat.cast.{?u.33 + 1} (Scalar.value ρ cb.scalar))
+in the declaration body
+  fun Γ k l mode a b ca cb ha hb ρ =>
+    have za :=
+      Eq.mpr
+        (id
+          (congrFun'
+            (congrArg Eq
+              (congrArg (ComputabilityKnowledge.WWOrdinalTermSemantics.denote fun x => ↑(ρ x))
+                (dite_cond_eq_true
+                  (Eq.trans (lt_add_iff_pos_left._simp_1 0) (Eq.trans Order.lt_add_one_iff._simp_1 zero_le._simp_1)))))
+            ↑(Scalar.value ρ ca.scalar)))
+        (Eq.symm (compiledVectorSound Γ k a ca ha ρ 0));
+    have zb :=
+      Eq.mpr
+        (id
+          (congrFun'
+            (congrArg Eq
+              (congrArg (ComputabilityKnowledge.WWOrdinalTermSemantics.denote fun x => ↑(ρ x))
+                (dite_cond_eq_true
+                  (Eq.trans (lt_add_iff_pos_left._simp_1 0) (Eq.trans Order.lt_add_one_iff._simp_1 zero_le._simp_1)))))
+            ↑(Scalar.value ρ cb.scalar)))
+        (Eq.symm (compiledVectorSound Γ l b cb hb ρ 0));
+    have hp := fun j => GroundPositiveQuerySplit.Proof.positive_field a ca ha ρ j;
+    have hq := fun j => GroundPositiveQuerySplit.Proof.positive_field b cb hb ρ j;
+    id
+      (id
+        (id
+          (Decidable.casesOn (instDecidableEqNat mode 0)
+            (fun h =>
+              Eq.mpr (id (congr (congrArg Iff (congr (congrArg And (if_neg h)) (if_neg h))) (if_neg h)))
+                (Decidable.casesOn (instDecidableEqNat mode 1)
+                  (fun h =>
+                    Eq.mpr (id (congr (congrArg Iff (congr (congrArg And (if_neg h)) (if_neg h))) (if_neg h)))
+                      {
+                        mp := fun a_1 =>
+                          And.casesOn (motive := fun x =>
+                            ∀ (j : ℕ), sourceVectorAtValue a ρ j = sourceVectorAtValue b ρ j) a_1 fun hpos hzero j =>
+                            Nat.casesAuxOn (motive := fun a_2 =>
+                              j = a_2 → sourceVectorAtValue a ρ j = sourceVectorAtValue b ρ j) j
+                              (fun h =>
+                                Eq.symm h ▸
+                                  Eq.mpr (id (Eq.trans (congr (congrArg Eq za) zb) Nat.cast_inj._simp_1))
+                                    (Eq.mp Nat.cast_inj._simp_1.{?u.33 + 1}
+                                      (congrArg.{1, ?u.33 + 2} (fun n => Nat.cast.{?u.33 + 1} n) hzero)))
+                              (fun j_1 h =>
+                                Eq.symm h ▸
+                                  Eq.mp (congr (congrArg Eq ((fun j => hp j) j_1)) ((fun j => hq j) j_1)) (hpos j_1))
+                              (Eq.refl j),
+                        mpr := fun h =>
+                          ⟨fun j =>
+                            Eq.mpr (id (congr (congrArg Eq ((fun j => hp j) j)) ((fun j => hq j) j))) (h (j + 1)),
+                            Eq.mp (Eq.trans (congr (congrArg Eq za) zb) actualSourceRelation._simp_1_3) (h 0)⟩ })
+                  fun h =>
+                  Eq.mpr (id (congr (congrArg Iff (congr (congrArg And (if_pos h)) (if_pos h))) (if_pos h)))
+                    (of_eq_true
+                      (Eq.trans
+                        (congr
+                          (congrArg Iff
+                            (congrFun'
+                              (congrArg And
+                                (forall_congr fun j => congr (congrArg LE.le ((fun j => hp j) j)) ((fun j => hq j) j)))
+                              (Scalar.value ρ ca.scalar < Scalar.value ρ cb.scalar)))
+                          (congrArg (And (∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)))
+                            (Eq.trans
+                              (ite_congr (eq_self true)
+                                (fun a_1 => Eq.trans (congr (congrArg LT.lt za) zb) actualSourceRelation._simp_1_2)
+                                fun a_1 => congr (congrArg LE.le za) zb)
+                              (if_true (Scalar.value ρ ca.scalar < Scalar.value ρ cb.scalar)
+                                (↑(Scalar.value ρ ca.scalar) ≤ ↑(Scalar.value ρ cb.scalar))))))
+                        (iff_self
+                          ((∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)) ∧
+                            Scalar.value ρ ca.scalar < Scalar.value ρ cb.scalar))))))
+            fun h =>
+            Eq.mpr (id (congr (congrArg Iff (congr (congrArg And (if_pos h)) (if_pos h))) (if_pos h)))
+              (of_eq_true
+                (Eq.trans
+                  (congr
+                    (congrArg Iff
+                      (congrFun'
+                        (congrArg And
+                          (forall_congr fun j => congr (congrArg LE.le ((fun j => hp j) j)) ((fun j => hq j) j)))
+                        (Scalar.value ρ ca.scalar ≤ Scalar.value ρ cb.scalar)))
+                    (congrArg (And (∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)))
+                      (Eq.trans
+                        (ite_congr Bool.false_eq_true (fun a_1 => congr (congrArg LT.lt za) zb) fun a_1 =>
+                          Eq.trans (congr (congrArg LE.le za) zb) actualSourceRelation._simp_1_1)
+                        (if_false (↑(Scalar.value ρ ca.scalar) < ↑(Scalar.value ρ cb.scalar))
+                          (Scalar.value ρ ca.scalar ≤ Scalar.value ρ cb.scalar)))))
+                  (iff_self
+                    ((∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)) ∧
+                      Scalar.value ρ ca.scalar ≤ Scalar.value ρ cb.scalar)))))))

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityStatementChecks
+open UndecidabilityTargets
+
+theorem fixedNatHaltingRE : NatHaltingRE := UndecidabilityProof.natHaltingRE
+theorem fixedNatHaltingUndecidable : NatHaltingUndecidable := UndecidabilityProof.natHaltingUndecidable
+theorem fixedEncodedPolynomialUndecidable : Targets.EncodedPolynomialUndecidable :=
+  UndecidabilityProof.encodedPolynomialUndecidable
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityStatementChecks

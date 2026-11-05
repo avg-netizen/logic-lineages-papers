@@ -1,0 +1,11 @@
+# Actual program and semantic suppliers
+
+The numeric input is (ground-context length, relation mode, original term code, original term code). Modes zero, one, and all remaining natural codes select weak, WW-strict, and equality respectively. The original code pair is not replaced by a new semantic oracle.
+
+`GroundPositiveQuerySplit.vectorAt` executes the existing default assignment on the literal original term code, then `OrdinalSyntax.compileVectorCode`. Both sides use the same original context position map. `FiniteCoefficientBase.Code.compile` translates each scalar syntax code to the literal BASE term code. `positiveFlag` evaluates actual closed positive syntax through `encodedClosedPositive` and uses `positiveComparison`, including its existing maximum-length zero padding. Equality uses both directions of that positive-coordinate comparison.
+
+The scalar code is the literal Boolean BASE formula for the relation, guarded by positivity on `List.range` of the actual ground context length. `BaseBooleanSource.Code.decideClosureForall` is the already verified universal closure decision for a quantifier-free BASE formula. It is not an unrestricted first-order solver. The consumer obtains totality from the exact supplier theorem, including the empty-context and constant-formula cases, rather than accepting a new decision premise.
+
+The new numeric code adds finite composition, branching, and option propagation. Its computability uses the existing primitive-recursive assignment/vector/positive-comparison programs, the checked finite-coefficient compiler, literal formula construction, and checked universal BASE decision. No new unbounded search, termination premise, semantic choice inside the executable definition, resource-cap change, or baseline modification is introduced.
+
+For source correctness, actual canonical assignment and vector compilation are supplied by `actualSourceVectorCompilation`. The separately proved recursor-free scalar compilation supplies successful BASE translation. The ground-context indexing bound and `groundPositiveTupleComplete` prove both directions of positive valuation coverage. Their tuple values are shifted by one exactly as required by the original source semantics.

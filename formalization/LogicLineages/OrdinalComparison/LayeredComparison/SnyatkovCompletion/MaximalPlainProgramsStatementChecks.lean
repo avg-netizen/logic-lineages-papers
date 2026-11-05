@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsCompilerProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsStatementChecks
+
+theorem literal_active_guard : MaximalPlainProgramsTargets.LiteralActiveGuard :=
+  MaximalPlainProgramsProof.literalActiveGuard
+theorem literal_residue_data : MaximalPlainProgramsTargets.LiteralResidueData :=
+  MaximalPlainProgramsProof.literalResidueData
+theorem literal_cutoff_compiler : MaximalPlainProgramsTargets.LiteralCutoffCompiler :=
+  MaximalPlainProgramsProof.literalCutoffCompiler
+theorem actual_guard_programs : MaximalPlainProgramsTargets.ActualGuardPrograms :=
+  MaximalPlainProgramsProof.actualGuardPrograms
+theorem actual_residue_program : MaximalPlainProgramsTargets.ActualResidueProgram :=
+  MaximalPlainProgramsProof.residueRow_primitive
+theorem actual_compiler_programs : MaximalPlainProgramsTargets.ActualCompilerPrograms :=
+  MaximalPlainProgramsProof.actualCompilerPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsStatementChecks

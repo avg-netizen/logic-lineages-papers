@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsAnswerProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsStatementChecks
+
+theorem exact_finite_update : BoundedSourceProgramsTargets.ExactFiniteUpdate := BoundedSourceProgramsProof.exactFiniteUpdate
+theorem literal_guard_code : BoundedSourceProgramsTargets.LiteralGuardCode := BoundedSourceProgramsProof.literalGuardCode
+theorem literal_syntax_code : BoundedSourceProgramsTargets.LiteralSyntaxCode := BoundedSourceProgramsProof.literalSyntaxCode
+theorem literal_answer_code : BoundedSourceProgramsTargets.LiteralAnswerCode := BoundedSourceProgramsProof.literalAnswerCode
+theorem actual_raw_decision : BoundedSourceProgramsTargets.ActualRawDecision := BoundedSourceProgramsProof.actualRawDecision
+
+theorem actual_numeric_programs : BoundedSourceProgramsTargets.ActualNumericPrograms := BoundedSourceProgramsProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsStatementChecks

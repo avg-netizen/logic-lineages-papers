@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks
+
+theorem fixedOnesDiophantine : CipherTargets.OnesDiophantine := CipherOnesDiophantineProof.onesDiophantine
+
+#print axioms fixedOnesDiophantine
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks

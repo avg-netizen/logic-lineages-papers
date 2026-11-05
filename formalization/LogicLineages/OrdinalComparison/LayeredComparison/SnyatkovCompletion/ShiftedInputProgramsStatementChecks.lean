@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsSourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks
+
+theorem literal_atomic_codes : ShiftedInputProgramsTargets.LiteralAtomicCodes :=
+  ShiftedInputProgramsProof.literalAtomicCodes
+theorem literal_postfix_compiler : ShiftedInputProgramsTargets.LiteralPostfixCompiler :=
+  ShiftedInputProgramsProof.literalPostfixCompiler
+theorem literal_original_data : ShiftedInputProgramsTargets.LiteralOriginalData :=
+  ShiftedInputProgramsProof.literalOriginalData
+theorem literal_guard_programs : ShiftedInputProgramsTargets.LiteralGuardPrograms :=
+  ShiftedInputProgramsProof.literalGuardPrograms
+theorem actual_compiler_programs : ShiftedInputProgramsTargets.ActualCompilerPrograms :=
+  ShiftedInputProgramsProof.actualCompilerPrograms
+theorem actual_source_guard_programs : ShiftedInputProgramsTargets.ActualSourceGuardPrograms :=
+  ShiftedInputProgramsProof.actualSourceGuardPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks

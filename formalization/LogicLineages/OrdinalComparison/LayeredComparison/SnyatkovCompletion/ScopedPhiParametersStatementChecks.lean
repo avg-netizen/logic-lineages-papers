@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiParametersSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiParametersStatementChecks
+
+theorem additive_term_output : ScopedPhiParametersTargets.AdditiveTermOutput := ScopedPhiParametersProof.additiveTermOutput
+theorem additive_formula_output : ScopedPhiParametersTargets.AdditiveFormulaOutput := ScopedPhiParametersProof.additiveFormulaOutput
+theorem scoped_term_meaning : ScopedPhiParametersTargets.ScopedTermMeaning := ScopedPhiParametersProof.scopedTermMeaning
+theorem scoped_formula_meaning : ScopedPhiParametersTargets.ScopedFormulaMeaning := ScopedPhiParametersProof.scopedFormulaMeaning
+theorem exact_decision_domain : ScopedPhiParametersTargets.ExactDecisionDomain := ScopedPhiParametersProof.exactDecisionDomain
+theorem actual_decision : ScopedPhiParametersTargets.ActualDecision := ScopedPhiParametersProof.actualDecision
+theorem literal_scope_boundary : ScopedPhiParametersTargets.LiteralScopeBoundary := ScopedPhiParametersProof.literalScopeBoundary
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiParametersStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiParametersStatementChecks

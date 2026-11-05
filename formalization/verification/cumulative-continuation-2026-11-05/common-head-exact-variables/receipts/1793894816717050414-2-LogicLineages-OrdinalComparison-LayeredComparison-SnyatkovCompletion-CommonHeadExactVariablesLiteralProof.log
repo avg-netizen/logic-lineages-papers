@@ -1,0 +1,77 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesLiteralProof.lean:40:12: error(lean.invalidField): Invalid field notation: Type of
+  ?m.20
+is not known; cannot resolve field `eval`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `AddMonoidHom.eval`
+  • `Function.eval`
+  • `MonoidHom.eval`
+  • `Quotient.eval`
+  • `StateT.eval`
+  • `WCovBy.eval`
+  • `Ordinal.CNF.eval`
+  • `Lean.Data.AC.eval`
+  • `Lean.Omega.LinearCombo.eval`
+  • `Lean.Parser.Command.eval`
+  • `Mathlib.Meta.NormNum.eval`
+  • `Std.Do.WhileVariant.eval`
+  • `ComputabilityKnowledge.PositiveExpression.Expr.eval`
+  • `CommonHeadLargeGuards.Formula.eval`
+  • `Mathlib.Meta.NormNum.NormNumExt.eval`
+  • `Mathlib.Meta.Positivity.PositivityExt.eval`
+  • `Mathlib.Tactic.GCongr.ForwardExt.eval`
+  • `Mathlib.Tactic.Ring.Common.eval`
+  • `Formula.eval`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesLiteralProof.lean:40:25: error(lean.invalidField): Invalid field notation: Type of
+  ?m.22
+is not known; cannot resolve field `eval`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `AddMonoidHom.eval`
+  • `Function.eval`
+  • `MonoidHom.eval`
+  • `Quotient.eval`
+  • `StateT.eval`
+  • `WCovBy.eval`
+  • `Ordinal.CNF.eval`
+  • `Lean.Data.AC.eval`
+  • `Lean.Omega.LinearCombo.eval`
+  • `Lean.Parser.Command.eval`
+  • `Mathlib.Meta.NormNum.eval`
+  • `Std.Do.WhileVariant.eval`
+  • `ComputabilityKnowledge.PositiveExpression.Expr.eval`
+  • `CommonHeadLargeGuards.Formula.eval`
+  • `Mathlib.Meta.NormNum.NormNumExt.eval`
+  • `Mathlib.Meta.Positivity.PositivityExt.eval`
+  • `Mathlib.Tactic.GCongr.ForwardExt.eval`
+  • `Mathlib.Tactic.Ring.Common.eval`
+  • `Formula.eval`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesLiteralProof.lean:76:2: error: unsolved goals
+case right
+Γ : List NONote
+hΓ : genuineHeads Γ
+E F : CommonSyntax Γ.length
+desired : ℤ
+i : ℕ
+⊢ i ∈
+      commonVariables (List.map (fun rho => rawNoteEncode ↑rho) Γ).length
+          (decodeCommon (List.map (fun rho => rawNoteEncode ↑rho) Γ).length (encodeCommon Γ.length E)) ++
+        commonVariables (List.map (fun rho => rawNoteEncode ↑rho) Γ).length
+          (decodeCommon (List.map (fun rho => rawNoteEncode ↑rho) Γ).length (encodeCommon Γ.length F)) ↔
+    i ∈ commonVariables Γ.length E ++ commonVariables Γ.length F
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesLiteralProof.lean:79:42: warning: This simp argument is unused:
+  List.length_map
+
+Hint: Omit it from the simp argument list.
+  simp only [codedVariables, headCodes, L̵i̵s̵t̵.̵l̵e̵n̵g̵t̵h̵_̵m̵a̵p̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵CommonLayerSyntax.Proof.commonRoundtrip]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/CommonHeadExactVariablesLiteralProof.lean:80:6: warning: This simp argument is unused:
+  CommonLayerSyntax.Proof.commonRoundtrip
+
+Hint: Omit it from the simp argument list.
+  simp only [codedVariables, headCodes, List.length_map,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵C̵o̵m̵m̵o̵n̵L̵a̵y̵e̵r̵S̵y̵n̵t̵a̵x̵.̵P̵r̵o̵o̵f̵.̵c̵o̵m̵m̵o̵n̵R̵o̵u̵n̵d̵t̵r̵i̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

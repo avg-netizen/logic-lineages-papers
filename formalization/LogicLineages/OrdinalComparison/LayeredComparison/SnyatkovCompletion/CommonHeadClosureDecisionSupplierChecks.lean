@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionSemanticInterface
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionCodeInterface
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionNumericSupplierChecks
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionSupplierChecks
+
+theorem coded_comparison : CommonLayerComparison.Targets.ExactCodedComparison :=
+  CommonHeadClosureDecisionSuppliers.codedComparison
+
+theorem source_calibration : CommonLayerSyntax.Targets.ActualSourceCalibration :=
+  CommonHeadClosureDecisionSuppliers.sourceCalibration
+
+theorem all_code_effectivity : CommonLayerComparison.Targets.AllCodeEffectivity :=
+  CommonHeadClosureDecisionSuppliers.allCodeEffectivity
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionSupplierChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionSupplierChecks

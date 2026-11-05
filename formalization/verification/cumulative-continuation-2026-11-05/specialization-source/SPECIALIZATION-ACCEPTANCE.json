@@ -1,0 +1,76 @@
+{
+  "status": "exact-native-gate-passed; parent-adoption-pending",
+  "component": "Specialization",
+  "source_files": {
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationCodeProof.lean": "a53634726cb21764300fc971512b5ed62c5b4abd57d5c4cbb10a99e4aff5bbd9",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationDefinitions.lean": "a094062a06bea5dc32f8e7ee4c7f97dbdd625a73234560dde4bf69a24785a07e",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationSemanticProof.lean": "e52dfd448bef18e6d9122540f35602c3a56f0df8ee4453943df0d9177502e8ed",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationStatementChecks.lean": "82dbd094778f0f8265bbf34020d11581ce4f769e3b48fa2e28aa775472abc193",
+    "LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationTargets.lean": "7900e8956d48f3acd507775dc1a291e5e36026297bf6cedc72ed2bc2f56ed185"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks.fixedSubstitutionIdentity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks.fixedSubstitutionWellFormed": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks.fixedSubstitutionRootCorrespondence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks.fixedSpecializationCodeCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks.fixedSpecializationCodePrimrec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "target_definitions_unchanged": true,
+  "target_preflight_receipt": "specialization-preflight/RECEIPT.json",
+  "proof_receipt": "specialization-gates/RECEIPT.json",
+  "local_closure": {
+    "module_count": 20,
+    "all_sources_match_successful_native_rows": true,
+    "receipt_by_module": {
+      "LogicLineages.Audit": "../seeded-source/borrowed-cache-receipts/1793867982933947701-2.json",
+      "LogicLineages.ComputabilityKnowledge.CircuitComparison": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.DiophantinePolynomialBridge": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialCircuit": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationCodeProof": "specialization-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationDefinitions": "specialization-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationSemanticProof": "specialization-repair-03/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks": "specialization-gates/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationTargets": "specialization-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridge": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridgeProof": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuit": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitProof": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparison": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift": "../cipher-ones-source/ones-preflight/RECEIPT.json",
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression": "../seeded-source/preflight/RECEIPT.json"
+    }
+  },
+  "checks": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "max_observed_rss_kib": 1354648
+  },
+  "excluded": "No effective extraction of finite codes from Dioph or abstract polynomial proofs. Original REPolynomialReduction and EncodedPolynomialUndecidable remain pending.",
+  "scope": "Explicit first-natural-parameter substitution on actual integer monomial codes; exact interpretation/natural-root semantics, well-formedness and canonical output encoding; actual numeric specializationCode p is primitive recursive for every fixed finite p.",
+  "source_correspondence": "Original PolynomialCircuit monomial code/codec and PolynomialDomainShift natural-zero-root convention, with original joinedNat first-parameter/witness split."
+}

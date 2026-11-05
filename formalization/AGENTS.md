@@ -1,3 +1,105 @@
+Current static candidate: 15 independently accepted supporting components,
+95 exact source files and 89 audited aliases. Latest addition: SemanticFiniteVector.
+Read `verification/cumulative-continuation-2026-11-05/combined-semantic-finite-vector/STATUS.md`.
+The 894-module focused aggregate has NOT been run. No compiler without a fresh
+sole-slot grant, and no publication. Preserve exact source and coefficient
+boundaries; supporting translation is not whole theorem completion.
+Register unchanged: 162 checked, 2 inherited, 25 pending.
+Earlier summaries below are historical.
+
+Current static candidate: 14 independently accepted supporting components,
+89 exact source files and 85 audited aliases. Latest addition: SemanticFiniteScalar.
+Read `verification/cumulative-continuation-2026-11-05/combined-semantic-finite-scalar/STATUS.md`.
+The 888-module focused aggregate has NOT been run. No compiler without a fresh
+sole-slot grant, and no publication. Preserve exact source and coefficient
+boundaries; supporting translation is not whole theorem completion.
+Register unchanged: 162 checked, 2 inherited, 25 pending.
+Earlier summaries below are historical.
+
+Current static candidate: 13 independently accepted supporting components,
+83 exact source files and 80 audited aliases. Latest addition: SemanticCoefficient.
+Read `verification/cumulative-continuation-2026-11-05/combined-semantic-coefficient/STATUS.md`.
+The 882-module focused aggregate has NOT been run. No compiler without a fresh
+sole-slot grant, and no publication. Preserve exact source and coefficient
+boundaries; supporting translation is not whole theorem completion.
+Register unchanged: 162 checked, 2 inherited, 25 pending.
+Earlier summaries below are historical.
+
+Current static candidate: 12 independently accepted supporting components,
+79 exact source files and 74 audited aliases. Latest addition: RecursorFreeVector.
+Read `verification/cumulative-continuation-2026-11-05/combined-recursor-free-vector/STATUS.md`.
+The 878-module focused aggregate has NOT been run. No compiler without a fresh
+sole-slot grant, and no publication. Preserve exact source and coefficient
+boundaries; supporting translation is not whole theorem completion.
+Register unchanged: 162 checked, 2 inherited, 25 pending.
+Earlier summaries below are historical.
+
+Current static candidate: 11 independently accepted supporting components,
+73 exact source files and 69 audited aliases. Latest addition: FiniteCoefficientBase.
+Read `verification/cumulative-continuation-2026-11-05/combined-finite-coefficient/STATUS.md`.
+The 772-module focused aggregate has NOT been run. No compiler without a fresh
+sole-slot grant, and no publication. Preserve exact source and coefficient
+boundaries; supporting translation is not whole theorem completion.
+Register unchanged: 162 checked, 2 inherited, 25 pending.
+Earlier summaries below are historical.
+
+Current static candidate: ten independently accepted search/witness and
+common-head/balanced translation components, 65 exact source files, 62 aliases.
+Read `verification/cumulative-continuation-2026-11-05/combined-source-witness-balanced/STATUS.md`.
+The 669-module focused aggregate has NOT been run. No compiler without fresh
+sole-slot grant, and no publication. Positivity is on original free names and
+positive binders; no per-atom guard may change negation. Translation is not
+unrestricted decision. Register unchanged: 162 checked, 2 inherited, 25 pending.
+Earlier summaries and exclusions below are historical.
+
+Current static integration candidate: nine accepted source-search/witness and
+common-head translation components, 59 exact source files and 55 audited aliases.
+Read `verification/cumulative-continuation-2026-11-05/combined-source-witness-common/STATUS.md`.
+The 580-module focused aggregate has NOT been run. No compiler without a fresh
+sole-slot grant; no publication. Preserve genuine-head, quantifier-domain,
+admission and original-shadowing contracts. No full BASE/common-head decision.
+Register unchanged: 162 checked, 2 inherited, 25 pending / 189.
+Earlier checkpoint summaries below are historical.
+
+Current accepted focused source-fragment checkpoint: twenty accepted components,
+134 exact source files and 132 aliases. Read `verification/cumulative-continuation-2026-11-05/combined-source-fragments/STATUS.md`.
+All twenty exact gates and the focused 669-module aggregate passed. Slot released.
+ScopedPhiParameters is semantic-only. Preserve exact typed/raw/domain and
+restricted-alternation contracts; no full BASE or general Phi alternation claim.
+Register unchanged: 162 checked, 2 inherited, 25 pending / 189.
+Earlier checkpoint summaries below are historical.
+
+Current exact functional-hardness integration and one-label adoption.
+Read `verification/cumulative-continuation-2026-11-05/combined-functional-hardness/STATUS.md`.
+Fourteen exact gates and the focused 655-module coordinator passed. All 654
+supplier sources and 1393 review pins are exact. Register: 162 checked,
+2 inherited, 25 pending / 189. Only 09:thm:functional-hardness is promoted.
+The attempted 951-module union hit the RSS cap and is not a successful build.
+No full-root/project build or publication is claimed. Checker slot released.
+Earlier summaries below are historical and may list steps now proved.
+
+Current prepared checkpoint: **bounded closure and plain fragments.**
+Nine independently accepted components add 49 source files and 43 exact aliases.
+The 864-module aggregate and all nine exact gates passed. Read
+`verification/cumulative-continuation-2026-11-05/combined-bounded-plain/STATUS.md`.
+The original variable-bounded universal target is proved. Code.prec, MRDP,
+undecidability and full nonlinear BASE/QE remain pending. Raw occurrences and
+caller domains remain literal; zero-valuation hyperPhi is ground evaluation.
+Register unchanged: 161/2/26 of 189. The checker slot has been released.
+Earlier checkpoint summaries below are historical and may list steps now proved.
+
+Current prepared checkpoint: **cipher relations and guard programs.**
+Four independently accepted components add 23 source files and 24 exact aliases.
+The 813-module aggregate and all four exact gates passed. Read
+`verification/cumulative-continuation-2026-11-05/combined-cipher-guard-programs/STATUS.md`.
+Original cipher domains/empty cases and typed active/inactive hypotheses remain.
+No full variable bounded closure, MRDP, undecidability or global elimination.
+Register unchanged: 161/2/26 of 189. The checker slot has been released.
+
+Current checked cipher all-ones and maximal plain-row checkpoint.
+Read `verification/cumulative-continuation-2026-11-05/combined-ones-maximal/STATUS.md`.
+All three exact gates and focused784-module aggregate passed. No MRDP/undecidability/global elimination or source promotion.
+
 Current prepared checkpoint: **cipher all-ones uniqueness only.**
 Three accepted files and one frozen statement supplier add two exact aliases.
 The 767-module aggregate and exact uniqueness gate passed. Read

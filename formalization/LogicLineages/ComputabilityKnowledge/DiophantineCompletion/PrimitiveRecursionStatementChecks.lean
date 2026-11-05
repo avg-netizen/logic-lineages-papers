@@ -1,0 +1,21 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDiophantineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks
+open PrimitiveRecursionTargets
+
+theorem fixedFiniteTraceCipher : FiniteTraceCipher := PrimitiveRecursionSemanticProof.finiteTraceCipher
+theorem fixedDigitDiophantine : DigitDiophantine := PrimitiveRecursionDigitProof.digitDiophantine
+theorem fixedOrdinaryPrecTraceSpecification : OrdinaryPrecTraceSpecification :=
+  PrimitiveRecursionSemanticProof.ordinaryPrecTraceSpecification
+theorem fixedCodedPrecTraceSpecification : CodedPrecTraceSpecification :=
+  PrimitiveRecursionSemanticProof.codedPrecTraceSpecification
+theorem fixedCodedPrecTraceDiophantine : CodedPrecTraceDiophantine :=
+  PrimitiveRecursionDiophantineProof.codedPrecTraceDiophantine
+theorem fixedOrdinaryPrecGraphClosure : OrdinaryPrecGraphClosure :=
+  PrimitiveRecursionDiophantineProof.ordinaryPrecGraphClosure
+
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks

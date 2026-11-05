@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/FiniteCoefficientBaseSemanticProof.lean:39:53: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  2 ^ ↑x
+in the target expression
+  ordinalNaturalProduct (↑2 ^ ↑x) ↑y = ↑(2 ^ x * y)
+
+case emul
+a b : ClosedPositive
+iha : ∀ (k : ℕ), coefficient a = some k → 0 < k ∧ (↑a.evaluate).repr = ↑k
+ihb : ∀ (k : ℕ), coefficient b = some k → 0 < k ∧ (↑b.evaluate).repr = ↑k
+x : ℕ
+hx : coefficient a = some x
+y : ℕ
+hy : coefficient b = some y
+hk : coefficient (a.emul b) = some (2 ^ x * y)
+hxp : 0 < x
+hxv : (↑a.evaluate).repr = ↑x
+hyp : 0 < y
+hyv : (↑b.evaluate).repr = ↑y
+this : (↑a.evaluate).NF := a.evaluate.property
+⊢ ordinalNaturalProduct (↑2 ^ ↑x) ↑y = ↑(2 ^ x * y)

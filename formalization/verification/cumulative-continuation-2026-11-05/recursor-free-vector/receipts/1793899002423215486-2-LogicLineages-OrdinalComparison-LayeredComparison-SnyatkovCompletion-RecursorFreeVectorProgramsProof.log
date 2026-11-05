@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/repo/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/RecursorFreeVectorProgramsProof.lean:49:62: error: unsolved goals
+A : Type := Code.VectorInput
+ha : Computable fun p => FiniteCoefficientBase.Code.compile p.2.2.1.1
+hb : Computable fun p => FiniteCoefficientBase.Code.compile p.2.2.2.1
+hf : Computable fun p => positiveFlag p.2.1 p.2.2.1 p.2.2.2
+hform : Computable fun p => Code.formula p.1.1 p.1.2.1 p.2.1 p.2.2
+hd : Computable fun p => BaseBooleanSource.Code.decideClosureForall (Code.formula p.1.1 p.1.2.1 p.2.1 p.2.2)
+hm :
+  Computable fun p =>
+    Option.map (fun answer => positiveFlag p.1.2.1 p.1.2.2.1 p.1.2.2.2 && answer)
+      (BaseBooleanSource.Code.decideClosureForall (Code.formula p.1.1 p.1.2.1 p.2.1 p.2.2))
+hi :
+  Computable₂ fun p x =>
+    (FiniteCoefficientBase.Code.compile p.2.2.2.1).bind fun y =>
+      Option.map (fun answer => positiveFlag p.2.1 p.2.2.1 p.2.2.2 && answer)
+        (BaseBooleanSource.Code.decideClosureForall (Code.formula p.1 p.2.1 x y))
+p : A
+⊢ ((FiniteCoefficientBase.Code.compile p.2.2.1.1).bind fun a =>
+      (FiniteCoefficientBase.Code.compile p.2.2.2.1).bind fun a_1 =>
+        (BaseBooleanSource.Code.decideClosureForall (Code.formula p.1 p.2.1 a a_1)).bind
+          (some ∘ fun answer => positiveFlag p.2.1 p.2.2.1 p.2.2.2 && answer)) =
+    do
+    let a ← FiniteCoefficientBase.Code.compile p.2.2.1.1
+    let b ← FiniteCoefficientBase.Code.compile p.2.2.2.1
+    let answer ← BaseBooleanSource.Code.decideClosureForall (Code.formula p.1 p.2.1 a b)
+    pure (positiveFlag p.2.1 p.2.2.1 p.2.2.2 && answer)

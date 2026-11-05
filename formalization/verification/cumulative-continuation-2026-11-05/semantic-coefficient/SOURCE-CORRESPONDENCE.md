@@ -1,0 +1,5 @@
+# Semantic closed coefficient recognition
+
+Paper08 theorem thm:finite-source and its proof explicitly require evaluation of each actual closed positive coefficient and deciding whether its ordinal value is finite. This component evaluates the original ClosedPositive syntax, then invokes the existing calibrated finite-ordinal test and natural-value extractor on its normal notation. Its exact result is some k if and only if the original ordinal is k, and none if and only if that ordinal is at least omega. Closed positive coefficients never produce zero.
+
+This is complete for semantic finiteness at the coefficient interface. It also preserves every positive output of the previously accepted structural coefficient compiler. It does not silently modify that compiler, alter the recursor-free vector consumer, prove equality of the two rejection sets, or promote the full finite-source theorem. Wiring this exact evaluator through the scalar compiler and original-source vector consumer remains separate.

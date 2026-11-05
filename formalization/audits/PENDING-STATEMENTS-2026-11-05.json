@@ -2,15 +2,15 @@
   "schema": "pending-source-register-reconciliation-v1",
   "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
   "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
-  "scope": "All 26 currently pending numbered statements reconciled against the pinned register and archived acceptance evidence. Existing mathematical conclusions are retained unless explicitly refreshed. No new proof acceptance, source correction, independent full proof audit, native compilation, root build or remote CI is claimed.",
+  "scope": "Targeted successor to the 5 November reconciliation: only thm:functional-hardness is promoted after its recorded integration prerequisite. The other 25 pending entries retain their prior assessments verbatim; this is not a fresh audit of them. No new native compilation, full-root build or remote CI is claimed by this metadata update.",
   "prior_audit": "audits/PENDING-STATEMENTS-2026-11-04.json",
   "counts": {
-    "checked": 161,
-    "pending": 26,
+    "checked": 162,
+    "pending": 25,
     "existing-calculator-package": 2
   },
   "numbered_statement_count": 189,
-  "numbered_source_promotions": 0,
+  "numbered_source_promotions": 1,
   "newly_registered_prior_components": [
     {
       "adoption_record": "verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json",
@@ -675,43 +675,6 @@
       "review": "prior assessment retained; status and source pin reconciled"
     },
     {
-      "id": "09-canonical-source-expressivity:thm:functional-hardness",
-      "short_id": "09:thm:functional-hardness",
-      "status": "pending",
-      "source_file": "09-canonical-source-expressivity/hardness.tex",
-      "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
-      "classification": "missing_foundation_or_downstream",
-      "existing_coverage": "Executable zero-pattern treatment and simultaneous original source-system equivalence are adopted, including shared unknowns, zero polynomial projections, strict/weak complements and free1/internal2 bounds. The genuine N[X] constant-forcing and triangular/square gadgets are checked. The actual closed higher-recursion Omega seed and its scaled signed pair have an accepted internal-level-at-most-three gate. Diophantine cipher product/multiplication is also checked.",
-      "remaining_obligation": "Full MRDP/H10 undecidability, the complete coded H10-to-linear-system adapter, formal numeric-code effectivity of the source reductions, and the full level-three seeded-system/single-query reduction remain pending. The adopted Omega seed is a supplier, not a complete seeded compiler; the archived receipt records a later SeededCompilerProof failure.",
-      "next_completion_step": "Reuse the adopted zero-pattern/source-system gates, polynomial gadgets and actual Omega seed. Finish the coded undecidability supplier and numeric adapters, then complete the seeded-system compiler and exact single-query level-three endpoint.",
-      "upstream_blockers": [],
-      "checked_prerequisites": [],
-      "supporting_component_count": 11,
-      "evidence": [
-        "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean",
-        "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean",
-        "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean",
-        "09-canonical-source-expressivity/hardness.tex",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json"
-      ],
-      "evidence_sha256": {
-        "formalization/LogicLineages/OrdinalComparison/SourceFiniteExponentProjectionTargets.lean": "a40a71497cb540846da3b84330447765e8ce85bd80c5e8858f92555d96ac1121",
-        "formalization/LogicLineages/OrdinalComparison/SourcePolynomialFamilyLiftTargets.lean": "14d816a838dc8fa56072a88a3b4e63b006695524ca9106fdb65ca96acd41f6b6",
-        "formalization/LogicLineages/OrdinalComparison/SourceZeroPatternSubstitutionTargets.lean": "e49a7b931cee846e4ea49a864f6f71ecadf70c7dbe7f58e4982f55b80717d849",
-        "09-canonical-source-expressivity/hardness.tex": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R001-COMPONENT-ADOPTION.json": "1a4f797e20ac1ff2bd532469f0dfb544b9bbb61b58f285d16354d55cc195e02c",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R002-COMPONENT-ADOPTION.json": "00695c7cd3736eb7cd7f991f165e72eb92a378be163a6c6f196c8f4597355af9",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R003-CONSTANT-ADOPTION.json": "4f20ac0e0a4b0458d278b2565c774834fed6d2e0add551f43139f7f6c43edf45",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol5-functional/ROOT-R004-OMEGA-ADOPTION.json": "d3aa6de3e13be8d12ae811d0ca592009a7713dc6ba6a7072deebdc587f9894b9",
-        "formalization/verification/local-resume-2026-11-04-six-lanes/sol1-mrdp/ROOT-CIPHER-PRODUCT-ADOPTION.json": "2d1876715f82f2fdcedd14595186bc8d5e0814c58ebfb36e868666dbbf208a70"
-      },
-      "review": "refreshed against newer accepted evidence"
-    },
-    {
       "id": "12-common-knowledge-necessitation:thm:collapse",
       "short_id": "12:thm:collapse",
       "status": "pending",
@@ -815,5 +778,12 @@
       },
       "review": "prior assessment retained; status and source pin reconciled"
     }
-  ]
+  ],
+  "completion_update": {
+    "prepared_at_utc": "2026-11-05T13:40:22.346832+00:00",
+    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
+    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+    "promoted_statement": "09-canonical-source-expressivity:thm:functional-hardness",
+    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+  }
 }

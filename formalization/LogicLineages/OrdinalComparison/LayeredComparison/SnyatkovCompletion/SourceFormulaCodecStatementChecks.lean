@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceFormulaCodecDecisionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceFormulaCodecStatementChecks
+
+theorem source_roundtrip : SourceFormulaCodecTargets.SourceRoundtrip := SourceFormulaCodecProof.sourceRoundtrip
+theorem code_roundtrip : SourceFormulaCodecTargets.CodeRoundtrip := SourceFormulaCodecProof.codeRoundtrip
+theorem literal_raw_payload : SourceFormulaCodecTargets.LiteralRawPayload := SourceFormulaCodecProof.literalRawPayload
+theorem exact_raw_decision_domain : SourceFormulaCodecTargets.ExactRawDecisionDomain := SourceFormulaCodecProof.exactRawDecisionDomain
+theorem actual_raw_decisions : SourceFormulaCodecTargets.ActualRawDecisions := SourceFormulaCodecProof.actualRawDecisions
+theorem actual_raw_numeric_programs : SourceFormulaCodecTargets.ActualRawNumericPrograms := SourceFormulaCodecProof.actualRawNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceFormulaCodecStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceFormulaCodecStatementChecks

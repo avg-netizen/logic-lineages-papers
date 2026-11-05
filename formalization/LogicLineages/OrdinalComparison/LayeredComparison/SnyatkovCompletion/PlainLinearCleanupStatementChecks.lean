@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainLinearCleanupSupportProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainLinearCleanupCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainLinearCleanupStatementChecks
+
+theorem exact_linear_selection : PlainLinearCleanupTargets.ExactLinearSelection := PlainLinearCleanupProof.exactLinearSelection
+theorem actual_cleanup_semantics : PlainLinearCleanupTargets.ActualCleanupSemantics := PlainLinearCleanupProof.actualCleanupSemantics
+theorem actual_satisfiability_cleanup : PlainLinearCleanupTargets.ActualSatisfiabilityCleanup :=
+  PlainLinearCleanupProof.actualSatisfiabilityCleanup
+theorem exact_nonlinear_names : PlainLinearCleanupTargets.ExactNonlinearNames := PlainLinearCleanupProof.exactNonlinearNames
+theorem no_linear_names : PlainLinearCleanupTargets.NoLinearNames := PlainLinearCleanupProof.noLinearNames
+theorem preserve_plain : PlainLinearCleanupTargets.PreservePlain := PlainLinearCleanupProof.preservePlain
+theorem ground_criterion : PlainLinearCleanupTargets.GroundCriterion := PlainLinearCleanupProof.groundCriterion
+theorem literal_code_calibration : PlainLinearCleanupTargets.LiteralCodeCalibration := PlainLinearCleanupProof.literalCodeCalibration
+theorem actual_numeric_programs : PlainLinearCleanupTargets.ActualNumericPrograms := PlainLinearCleanupProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainLinearCleanupStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainLinearCleanupStatementChecks

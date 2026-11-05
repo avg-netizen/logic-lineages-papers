@@ -1,0 +1,21 @@
+module
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDiophantineProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks
+open CipherIndexTargets
+
+theorem fixedEvenMaskedProductFixedPointUnique : EvenMaskedProductFixedPointUnique :=
+  CipherIndexArithmeticProof.evenMaskedProductFixedPointUnique
+theorem fixedIndexArithmeticCharacterization : IndexArithmeticCharacterization :=
+  CipherIndexArithmeticProof.indexArithmeticCharacterization
+theorem fixedIndexDiophantine : IndexDiophantine := CipherIndexDiophantineProof.indexDiophantine
+theorem fixedIndexCipherDiophantine : IndexCipherDiophantine := CipherIndexDiophantineProof.indexCipherDiophantine
+
+#print axioms fixedEvenMaskedProductFixedPointUnique
+#print axioms fixedIndexArithmeticCharacterization
+#print axioms fixedIndexDiophantine
+#print axioms fixedIndexCipherDiophantine
+end LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks

@@ -1102,9 +1102,49 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-uniqueness/COMPONENT-EVIDENCE.json",
               "scope": "Two exact targets prove unconditional uniqueness of an even natural masked-square fixed point and at most one pair of natural solutions to the unchanged cipher all-ones equations. The fixed-point theorem uses the actual Nat bitwise AND with no finiteness bound or assumed digit representation. The arithmetic equation uniqueness is conditional on two solutions existing; no solution or equality to the sparse all-ones sums is established by this component. Independently accepted; exact uniqueness gate and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-characterization/COMPONENT-EVIDENCE.json",
+              "scope": "The exact original OnesArithmeticCharacterization iff holds, including n=0. The actual sparse sum satisfies the original equations and uniqueness supplies the reverse direction. This is not MRDP or polynomial-system undecidability. Independently accepted; focused aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-diophantine/COMPONENT-EVIDENCE.json",
+              "scope": "The unchanged original OnesDiophantine graph is Diophantine for variable natural inputs. The exact arithmetic characterization supplies both directions, with actual existential polynomial witnesses. This does not establish general bounded universal closure, MRDP or undecidability. Independently accepted; focused aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-index-source/COMPONENT-EVIDENCE.json",
+              "scope": "Four exact targets establish even masked-product fixed-point uniqueness, the actual sparse index sequence arithmetic characterization, and genuine variable-input Diophantine index/IsCipherOf id graphs. The original n+1<q domain and n=0 case are retained; arbitrary arithmetic solutions are not assumed to be valid ciphers, and no n+2<q strengthening is introduced. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-relation-source/COMPONENT-EVIDENCE.json",
+              "scope": "Eight exact targets establish the source Code, Const, Code_plus and literal Code_mult relations and their arithmetic calibrations/Diophantine graphs. Const at n=0 leaves the constant unrestricted. Literal Mult at n=0 is true for all raw q/a/b/c, including invalid codes. Independent IsCipherOf hypotheses appear only in the pointwise addition/multiplication specifications, not as added guards on the raw source relations. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/elementary-source/COMPONENT-EVIDENCE.json",
+              "scope": "Exact natural-input semantic elementary normalization: Dioph S iff a finite elementary system represents S with precisely the original natural free parameters and finite natural witnesses, retaining zero. Every constraint uses a literal constant, witness, parameter, wire addition or wire multiplication. No source numerical size bound or computable extraction from an extensional Dioph proof is asserted. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/row-packing-source/COMPONENT-EVIDENCE.json",
+              "scope": "Exact variable-length elementary witness-row packing and genuine Diophantine graph with length as a free natural input. Original parameters, length zero, empty witnesses and empty equations are retained. Actual valid cipher rows and a common q encode/decode pointwise witnesses; source Const and Mult preserve their distinct empty cases. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/bounded-universal-source/COMPONENT-EVIDENCE.json",
+              "scope": "The original unchanged CipherTargets.VariableBoundedUniversalClosure is proved, not assumed: arbitrary natural parameter arity, Diophantine input-dependent bound and Diophantine relation, including zero bound. The proof composes semantic elementary normalization, actual variable-length packing and proved Diophantine function composition, without adding a closure premise. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/minimization-source/COMPONENT-EVIDENCE.json",
+              "scope": "Exact ordinary Mathlib Code.rfind' graph closure from the body graph, with arbitrary starting point and absolute output index. Every earlier offset has an actual defined nonzero body result; undefined earlier computations cannot be skipped. No alternate evaluator or termination hypothesis is introduced. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
             }
           ],
-          "latest_coverage_note": "Literal depth-two polynomial-to-comparison reductions, positive-variable framing, WW ground-domain/norm transport and co-c.e. counterexample enumeration are checked. Accepted Diophantine suppliers include pair/composition and recursion-free graph closure, binomial and bit-mask graphs, and variable-length cipher arithmetic, validity and product/multiplication. None supplies full MRDP or H10 undecidability. Full source hardness remains pending. The cipher all-ones equations now have a checked at-most-one-solution theorem, based on actual even masked-square uniqueness. Existence, sparse-sum characterization, ones-Diophantineness, MRDP and genuine undecidability are not established by this component."
+          "latest_coverage_note": "Literal depth-two polynomial-to-comparison reductions, positive-variable framing, WW ground-domain/norm transport and co-c.e. counterexample enumeration are checked. Accepted Diophantine suppliers include pair/composition and recursion-free graph closure, binomial and bit-mask graphs, and variable-length cipher arithmetic, validity and product/multiplication. None supplies full MRDP or H10 undecidability. Full source hardness remains pending. The cipher all-ones equations now have a checked at-most-one-solution theorem, based on actual even masked-square uniqueness. Existence, sparse-sum characterization, ones-Diophantineness, MRDP and genuine undecidability are not established by this component. The exact original OnesArithmeticCharacterization iff holds, including n=0. The actual sparse sum satisfies the original equations and uniqueness supplies the reverse direction. This is not MRDP or polynomial-system undecidability. The unchanged original OnesDiophantine graph is Diophantine for variable natural inputs. The exact arithmetic characterization supplies both directions, with actual existential polynomial witnesses. This does not establish general bounded universal closure, MRDP or undecidability. The actual sparse index graph and source Code/Const/Code_plus/literal Code_mult relations now have exact arithmetic and Diophantine supporting proofs, retaining the original n+1<q domain and empty-input conventions. These do not establish elementary normalization, full variable bounded-universal closure, universal evaluation, MRDP or undecidability. Current supporting coverage supersedes earlier pending notes for elementary normalization and variable bounded-universal closure: natural-input elementary normalization, actual variable-length witness-row packing, the original unchanged variable-bounded universal target, and ordinary Mathlib Code.rfind' graph closure are proved. Original zero/empty cases and actual definedness remain. Ordinary Code.prec, full code induction, universal evaluation, effective specialization, MRDP and undecidability remain pending."
         },
         {
           "id": "02-exponential-comparison:lem:restricted-product",
@@ -6166,6 +6206,181 @@
               "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-05/shifted-input-guards/COMPONENT-EVIDENCE.json",
               "scope": "Six exact semantic targets prove the original-occurrence partition, guarded value preservation, finite inactive coverage, literal linear output, conditional inactive atom equivalence and retained-occurrence membership. Whole equal-input coefficient blocks touched by the inactive name provide a finite admissible deletion mask, including cross-name cancellation, repeated names and zero coefficients. Atomic nonnegativity or divisibility equivalence requires the literal plain-Phi and inactive hypotheses. This is not contextual replacement beneath original domain formulas or a full nonlinear eliminator. Independently accepted; exact gate and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-rows/COMPONENT-EVIDENCE.json",
+              "scope": "Literal plain-row atomic equivalence under cutoff and raw maximality over every original occurrence, including zero-weight occurrences. Output is syntactically linear only in the chosen name. The original meaningfulness/domain formulas remain at their Boolean positions and are retained by the caller. Active/inactive assembly uses actual signed residues; no supplied leader, residue oracle, HyperPhi, nonmaximal/global quantified elimination or full numeric effectivity is claimed. Source anchor: paper08 lem:row, paper.tex lines641\u2013704. Independently accepted; focused aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/shifted-input-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Six exact targets calibrate explicit total numeric signed-input comparisons, literal row-data extraction, postfix guard lowering, and cancellation/block/active-sign programs to the unchanged radix-six source syntax. The specified actual programs are primitive recursive, with fixed malformed/default behavior. Original Phi occurrences, repeated names, zero weights and their order are preserved. Numeric calibration does not remove the active-branch semantic activity premise. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/inactive-phi-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Six exact targets calibrate literal numeric occurrence partitions, admissible masks, exhaustive mask enumeration, cancellation guards and atom payloads to the unchanged typed inactive compiler, and establish primitive recursiveness of the actual finite mask/atom programs. The typed atomic semantic equivalence remains conditional on the original plain-row and inactivity premises; this does not establish contextual replacement beneath caller domain formulas. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-branch/COMPONENT-EVIDENCE.json",
+              "scope": "Literal Boolean-tree compilation and checked linear elimination establish existential equivalence for the explicit large/maximal plain-Phi frame and the original formula. Structural cutoff and raw-name dominance are explicit. Caller domain formulas retain their original Boolean positions. This is one witness branch, not exhaustive general quantifier elimination. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Explicit total numeric active guard, inactive mask, actual Phi residue fold and structural cutoff programs calibrate exactly to unchanged row/atom/radix-six encodings and are primitive recursive. Their typed semantics retain the original large/maximal plain-Phi premises. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-branch-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Explicit numeric occurrence lists, plain-syntax test, structural cutoff, materialized frame and Boolean atom-to-formula substitution calibrate to the literal quantified maximal branch. The existing actual linear elimination program consumes that compiled frame, with primitive recursiveness of the actual algorithms. No oracle or replacement evaluator is used. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/single-name-plain/COMPONENT-EVIDENCE.json",
+              "scope": "All natural witnesses are covered for the literal one-name plain-Phi fragment: every raw occurrence, including zero and cancelled weights, is the quantified name, with no hyperPhi. Exact finite substitution below the cutoff and the maximal branch at or above it combine to existential elimination; negation gives universal elimination. Actual numeric programs are calibrated and primitive recursive. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/zero-valuation/COMPONENT-EVIDENCE.json",
+              "scope": "Actual evaluation at the fixed all-zero valuation: every original weighted summand uses existing valueAt/itemValue programs, atom kind/modulus and Boolean position are preserved, and a literal constant matrix is evaluated by the checked constant evaluator. Exact numeric calibration and primitive recursiveness include ground hyperPhi evaluation by the existing finite iterator; this is not hyperPhi quantifier elimination. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchProvenanceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-branch-provenance/INTEGRATION-EVIDENCE.json",
+              "scope": "Literal nonlinear summand membership and selected-name removal, not multiplicity/order preservation or standalone exhaustive decision. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainLinearCleanupStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-linear-cleanup/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual linear cleanup and nonlinear-name set preservation; not by itself unrestricted nonlinear QE. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchSplitStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-branch-split/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual exhaustive finite splitting and strict nonlinear-count decrease for plain-Phi existential closure. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainBranchSplitProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-branch-split-programs/INTEGRATION-EVIDENCE.json",
+              "scope": "Exact literal numeric splitting programs and primitive recursiveness; no supplied semantic branch oracle. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/single-name-plain-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Closed one-name plain-Phi existential/universal decisions only; None rejects the fragment rather than representing false. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainFrontierStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-frontier/INTEGRATION-EVIDENCE.json",
+              "scope": "Bounded frontier decides existential closure of arbitrary Boolean matrices in the literal plain-Phi row grammar; hyperPhi is rejected. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainFrontierProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-frontier-programs/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual primitive-recursive finite-frontier program, with literal state/iteration calibration; no unbounded search or oracle. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceBooleanGraphStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/source-boolean-graph/INTEGRATION-EVIDENCE.json",
+              "scope": "Nested source Phi terms and Boolean polarity via a single total joined graph outside the Boolean matrix; homogeneous closures, not mixed source prefixes. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceBooleanProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/source-boolean-programs/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual source-code graph compiler and numeric programs, rejecting unsupported source quantifiers; no malformed-code claim from this component alone. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainParameterDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/plain-parameter-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Uniform existential or universal row blocks at fixed finite free parameters, preserving repeated/shadowed names and original Boolean domain positions; not parameterized QE. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceParameterDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/source-parameter-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Uniform existential or universal source blocks at fixed parameters, with nested Phi in a quantifier-free matrix; not mixed alternating prefixes. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceFormulaCodecStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/source-formula-codec/INTEGRATION-EVIDENCE.json",
+              "scope": "Original bijective radix-five SourceFormula codec and exact raw-natural-code decision/rejection contracts; no claim that unrelated row/system encodings are canonical. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HomogeneousSourceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/homogeneous-source/INTEGRATION-EVIDENCE.json",
+              "scope": "Literal homogeneous existential or universal prefix recognition and decisions on original source codes; mixed/internal quantified patterns remain outside the fragment. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BaseBooleanSourceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/base-boolean-source/INTEGRATION-EVIDENCE.json",
+              "scope": "Exact bridge from typed BaseFormula.Formula encoded postfix programs; no arbitrary malformed-postfix semantic contract. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/common-head-closure-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual common-head existential/universal comparison closures; source correctness requires genuine heads, while numeric output/computability are total. Not the full printed common-head theorem. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/balanced-closure-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual balanced typed compiler and shared certificate, with positivity only on exact original pair support: conjunction for existential closure and implication for universal closure. Outside coordinates remain unrestricted. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/common-head-boolean/INTEGRATION-EVIDENCE.json",
+              "scope": "Restricted Boolean combinations of original raw common-head equality/strict-order codes under one genuine head list and valuation; typed postfix encodings, not general word syntax or malformed-postfix semantics. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BooleanSourceBlocksStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/boolean-source-blocks/INTEGRATION-EVIDENCE.json",
+              "scope": "Boolean closure of literal homogeneous source blocks; the algorithm does not cross a rejected existential binder. Mixed quantified patterns remain explicitly rejected. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.AdditiveParameterDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/additive-parameter-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual all-code additive source decisions at finite free parameters; arbitrary Boolean/binder alternation is permitted only in the additive grammar, and every Phi node is rejected. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiParametersStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/scoped-phi-parameters/INTEGRATION-EVIDENCE.json",
+              "scope": "Semantic only. Every Phi argument must avoid the entire active binder list; nested Phi on free parameters is evaluated at the fixed ambient valuation. Additive bound occurrences permit restricted alternation with original shadowing. No numeric calibration or computability claim. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/scoped-phi-programs/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual zero-default padding through every original variable, exact scoped free-parameter Phi compiler and all-source-code domain/truth. Effectivity is Computable, not blanket Primrec. Phi arguments avoid the entire active binder list, preserving repeated names and shadowing. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/bounded-source/INTEGRATION-EVIDENCE.json",
+              "scope": "Semantic recognition of literal x < t independent finite bounds. Arbitrary genuine nested and bound-dependent Phi is permitted inside the whole original body. Original binder and Boolean positions and empty bounds remain literal. No unbounded nonlinear decision. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedSourceProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/bounded-source-programs/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual total Computable finite-search programs on the original source codec, using exact zero-default original-name updates and preserving the whole bounded body. No primitive-recursive complexity claim. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchSourceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/finite-search-source/INTEGRATION-EVIDENCE.json",
+              "scope": "Boolean and finite-bounded closure of scoped-Phi additive decision using the actual updated current environment, not a frozen outer environment. Restricted mixed bounded-nonlinear and unbounded-additive syntax only; the rejected unbounded-nonlinear family remains rejected. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteSearchProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/finite-search-programs/INTEGRATION-EVIDENCE.json",
+              "scope": "Exact finite-search domain and original source-code semantics with actual total Computable algorithms and current-environment updates. No primitive-recursive bound, full BASE or unrestricted nonlinear QE. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LeastSourceWitnessStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/least-source-witness/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual globally terminating Nat.rfind and Computable result/witness functions, not just classical Part.getOrElse totalization. None conflates unsupported input with admitted-but-false input; semantic no-witness equivalence requires admission. Original names, shadowing and current environment are retained. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/source-witness-trace/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual least witness trace through every leading existential, one value per binder position including duplicates, with sequential original-name updates. The first non-existential residual retains its full source decision and may contain binders or Booleans. None conflates unsupported and false; truth equivalences require admission. No prenex normalization, quantifier-free residual or fragment enlargement. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
             }
           ],
           "coverage_note": "FixedSeedControlResidue, SignedShiftCollection and SignedPhiSeparation establish literal effective control/residue suppliers and the exact finite shifted-sign calculation for the source f/Phi, retaining all original signed shifts, zero/cancelled occurrences, original domains and the displayed source delta. These are mathematical and effective dependencies in the source proof; no arbitrary quantified arithmetic decision theorem follows from them alone. The whole source statement remains pending.",
@@ -6190,7 +6405,7 @@
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
             "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
           },
-          "latest_coverage_note": "The accepted restricted linear-name programme now reaches arbitrary original Boolean/binder nesting under its exact admissibility test and the closed-row decision endpoint. The original phi-free additive source fragment is covered through its actual graph-row supplier, exact support and semantics, rejecting closed-sentence decision, literal numeric calibration and primitive recursiveness. This does not eliminate nonlinear bound occurrences: general nonlinear anchors, active-hyper source-case assembly, general affine substitution inside nonlinear arguments, dominant boundaries, exhaustive branch selection and the global BASE induction remain pending. The whole source theorem remains pending. The literal plain-Phi dominant-boundary specialization is now independently accepted, with exact correlated collection, survival-based maximal-name provenance and structural threshold effectivity. Inactive-Phi/HyperPhi branches, finite equality/order selection, wider ranked cancellation and global nonlinear elimination remain pending; no source statement is promoted. Semantic linear guards now compile the original signed-shifted input comparisons and coefficient-block tests under one shared valuation. The finite active sign branch is correct only with its explicit surviving maximal-name activity hypothesis; inactive rows can retain a nonzero linear part. Numeric primitive recursiveness, inactive/HyperPhi assembly and full nonlinear elimination remain pending. The inactive plain-Phi atomic component now supplies a finite guarded linear formula equivalent to the original atom under its explicit inactivity and plain-row hypotheses. It preserves whole correlated equal-input blocks, including cross-name cancellation and zero weights. The initial malformed comparator is abandoned; only the separately preflighted corrected conditional is accepted. Contextual replacement beneath source domain formulas, numeric effectivity, HyperPhi/source-case assembly and global elimination remain pending."
+          "latest_coverage_note": "The accepted restricted linear-name programme now reaches arbitrary original Boolean/binder nesting under its exact admissibility test and the closed-row decision endpoint. The original phi-free additive source fragment is covered through its actual graph-row supplier, exact support and semantics, rejecting closed-sentence decision, literal numeric calibration and primitive recursiveness. This does not eliminate nonlinear bound occurrences: general nonlinear anchors, active-hyper source-case assembly, general affine substitution inside nonlinear arguments, dominant boundaries, exhaustive branch selection and the global BASE induction remain pending. The whole source theorem remains pending. The literal plain-Phi dominant-boundary specialization is now independently accepted, with exact correlated collection, survival-based maximal-name provenance and structural threshold effectivity. Inactive-Phi/HyperPhi branches, finite equality/order selection, wider ranked cancellation and global nonlinear elimination remain pending; no source statement is promoted. Semantic linear guards now compile the original signed-shifted input comparisons and coefficient-block tests under one shared valuation. The finite active sign branch is correct only with its explicit surviving maximal-name activity hypothesis; inactive rows can retain a nonzero linear part. Numeric primitive recursiveness, inactive/HyperPhi assembly and full nonlinear elimination remain pending. The inactive plain-Phi atomic component now supplies a finite guarded linear formula equivalent to the original atom under its explicit inactivity and plain-row hypotheses. It preserves whole correlated equal-input blocks, including cross-name cancellation and zero weights. The initial malformed comparator is abandoned; only the separately preflighted corrected conditional is accepted. Contextual replacement beneath source domain formulas, numeric effectivity, HyperPhi/source-case assembly and global elimination remain pending. Literal plain-row atomic equivalence under cutoff and raw maximality over every original occurrence, including zero-weight occurrences. Output is syntactically linear only in the chosen name. The original meaningfulness/domain formulas remain at their Boolean positions and are retained by the caller. Active/inactive assembly uses actual signed residues; no supplied leader, residue oracle, HyperPhi, nonmaximal/global quantified elimination or full numeric effectivity is claimed. Source anchor: paper08 lem:row, paper.tex lines641\u2013704. Explicit numeric programs now exactly calibrate shifted-input guards and inactive deletion masks/atoms and are primitive recursive. Original occurrence order, repeated names and zero weights remain literal. These code results retain the typed active/inactive hypotheses and caller domain obligations; the full maximal-name numeric compiler, HyperPhi/nonmaximal branches and global elimination remain pending. Current supporting coverage supersedes earlier pending maximal-branch numeric notes: the framed large/maximal plain-Phi branch, its actual atomic and quantified numeric compilers, all-witness existential/universal elimination for the literal one-name plain fragment, and actual fixed-zero ground evaluation are proved. Raw zero/cancelled occurrences and caller domain syntax remain literal. No one-name closed decision gate is adopted here. Parameter-dependent/nonmaximal branches, hyperPhi quantifier elimination, arbitrary nonlinear quantifier alternation and full BASE/QE remain pending. Current supporting fragments include finite-frontier plain-Phi decisions; exact nested-term Boolean source graphs; fixed-parameter homogeneous blocks and literal raw-source codecs; typed BASE/common-head/balanced comparison consumers; Boolean combinations of recognized homogeneous blocks; and additive parameter decisions. Scoped free-parameter Phi elimination is semantic-only. Restricted additive bound-variable alternation is covered, but unrestricted bound-dependent Phi alternation, quantified hyperPhi, QE and full BASE remain pending. Later independently accepted components now supply exact scoped-Phi Computable programs, literal finite bounds with arbitrary genuine Phi in the body, their current-environment composition, least original-name witnesses and leading existential witness traces. Unsupported and false inputs both yield none, with semantic no-witness statements restricted to admission. This candidate is statically assembled only; unrestricted nonlinear BASE decision and QE remain pending."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:finite-source",
@@ -6214,7 +6429,35 @@
             ],
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
             "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.FiniteCoefficientBaseStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/finite-coefficient-base/INTEGRATION-EVIDENCE.json",
+              "scope": "Original ForwardTranslation.Scalar and ClosedPositive syntax and existing encoders are retained. The coefficient recognizer evaluates one/add/emul and rejects literal Omega; it is sound on its structural domain, not complete for all semantically finite presentations. Literal BASE expansion and scalar semantics preserve original variable indices and exact support. The original-source endpoint uses the actual canonical default-policy assignment, all-ground free context and literal recursor absence, with no internal type bound or assumed successful compiler. Total numeric coefficient/term compilation is proved. Completeness for the full semantic finite-coefficient class and final vector weak, WW-strict and equality consumers remain separate. No full finite-source theorem promotion. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.RecursorFreeVectorStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/recursor-free-vector/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual total universal weak, WW-strict and equality comparison for two original recursor-free terms sharing their actual type and ground free context, without any bound on internal types or binders. Literal original term codes use the canonical default-policy assignment, original vector compiler and finite-coefficient scalar compiler. Positive coordinates are actually evaluated with zero padding; WW-strict keeps all positive coordinates weak and only coordinate zero strict, while equality compares every coordinate. Original context positivity is explicitly guarded in the ordinary universally closed Boolean BASE query. The supplier decides universal closure of quantifier-free BASE formulas with arbitrary finite fixed Phi nesting, not unrestricted first-order BASE. The structural coefficient recognizer is not claimed complete for every semantically finite closed coefficient presentation, and the full numbered finite-source theorem remains pending. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticCoefficientStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/semantic-coefficient/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual primitive-recursive evaluation of original ClosedPositive syntax, followed by the calibrated finite-ordinal test and natural-value extractor. It returns some k exactly when the original ordinal value equals k, and none exactly when that value is at least omega; genuine closed positive coefficients never produce zero. Recognition is complete for semantic finiteness at this coefficient interface and preserves every successful old structural coefficient output. It does not modify the old structural compiler, identify their rejection sets, extend the scalar compiler or original-source vector consumer, or promote the full finite-source theorem. Wiring semantic recognition through those consumers remains separate. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticFiniteScalarStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/semantic-finite-scalar/INTEGRATION-EVIDENCE.json",
+              "scope": "Complete semantic finite-coefficient compiler for the original Scalar grammar using the exact semantic coefficient evaluator. Compilation succeeds if and only if every fixed closed coefficient in the original scalar tree has finite ordinal value. Successful output preserves actual scalar value at every natural valuation and the exact original variable list. The total raw-natural-code algorithm is calibrated to the literal existing syntax, and every successful structural translation is preserved as identical BASE syntax. No old compiler is modified. The original-source vector consumer still uses its previously accepted structural compiler; extension to this complete finite class and a direct original zeroth-coordinate condition remain separate. No full finite-source theorem promotion. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SemanticFiniteVectorStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/semantic-finite-vector/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual original-term-code universal weak, WW-strict and equality vector consumers extended through the complete semantic finite-coefficient scalar compiler. The independent finiteSource condition requires every fixed closed coefficient in each actual canonical extracted Scalar to have finite ordinal value; canonical assignment and extraction success are proved, not assumed. Original same-type terms, ground positive context, shared variable indices and actual zero-padded positive coordinates are retained. WW-strict is strict only at coordinate zero. Every original recursor-free ground-context term satisfies finiteSource, without internal-type bounds. The solver is universal closure of quantifier-free Boolean BASE, not unrestricted first-order BASE. Formal correspondence between canonical extracted-scalar finiteness and the printed literal zeroth-coordinate collapse condition is not proved here; the full numbered finite-source theorem remains pending. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
+            }
+          ],
+          "latest_coverage_note": " FiniteCoefficientBase independently supplies the literal finite-coefficient scalar BASE expansion, exact support and existing-code calibration, including the actual canonical default-policy scalar coordinate of recursor-free source terms with ground free context. Structural recognition is not completeness for all semantically finite coefficient presentations; final vector weak, WW-strict and equality consumers remain pending. This cumulative candidate has not been compiled. RecursorFreeVector independently supplies actual total universal weak, WW-strict and equality consumers for the original recursor-free, same-type source subcase in a ground free context, with no internal-type bound. Earlier pending vector-consumer notes are superseded only for that subcase. Literal original assignment/compiler semantics, guarded context positivity and actual positive-coordinate zero padding are preserved. The larger semantic finite-coefficient source class and full numbered theorem remain pending; no unrestricted first-order BASE decision is asserted. This cumulative candidate has not been compiled. SemanticCoefficient independently proves exact primitive-recursive recognition of semantic finiteness for original closed positive coefficients, rejecting exactly values at least omega and preserving successful structural outputs. This supersedes coefficient-interface incompleteness only; the existing scalar and recursor-free vector compilers are unchanged. Their extension through this complete recognizer and the full numbered finite-source theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteScalar independently completes the original scalar compiler for exactly the class where every fixed closed coefficient is semantically finite. Actual values, exact original variable list, literal existing-code calibration and total computation are retained, and successful structural outputs remain identical. The original-source vector consumer still uses its unchanged structural compiler, so extending that consumer to the complete finite class and the full numbered theorem remain pending. This cumulative candidate has not been compiled. SemanticFiniteVector independently extends the actual original-term-code weak, WW-strict and equality consumers to the exact finiteSource condition on every fixed coefficient of the actual canonical extracted Scalars. Assignment/extraction and inclusion of all recursor-free ground-context terms are proved; no compiler-success premise is supplied. Earlier vector-extension gaps are superseded only for this extracted-scalar condition. Identifying it with the printed literal zeroth-coordinate collapse condition and the full numbered theorem promotion remain pending. This cumulative candidate has not been compiled."
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:kernel-recursion",
@@ -6661,9 +6904,44 @@
               "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiRowsStatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-05/shifted-input-guards/COMPONENT-EVIDENCE.json",
               "scope": "Six exact semantic targets prove the original-occurrence partition, guarded value preservation, finite inactive coverage, literal linear output, conditional inactive atom equivalence and retained-occurrence membership. Whole equal-input coefficient blocks touched by the inactive name provide a finite admissible deletion mask, including cross-name cancellation, repeated names and zero coefficients. Atomic nonnegativity or divisibility equivalence requires the literal plain-Phi and inactive hypotheses. This is not contextual replacement beneath original domain formulas or a full nonlinear eliminator. Independently accepted; exact gate and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/shifted-input-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Six exact targets calibrate explicit total numeric signed-input comparisons, literal row-data extraction, postfix guard lowering, and cancellation/block/active-sign programs to the unchanged radix-six source syntax. The specified actual programs are primitive recursive, with fixed malformed/default behavior. Original Phi occurrences, repeated names, zero weights and their order are preserved. Numeric calibration does not remove the active-branch semantic activity premise. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/inactive-phi-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Six exact targets calibrate literal numeric occurrence partitions, admissible masks, exhaustive mask enumeration, cancellation guards and atom payloads to the unchanged typed inactive compiler, and establish primitive recursiveness of the actual finite mask/atom programs. The typed atomic semantic equivalence remains conditional on the original plain-row and inactivity premises; this does not establish contextual replacement beneath caller domain formulas. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-branch/COMPONENT-EVIDENCE.json",
+              "scope": "Literal Boolean-tree compilation and checked linear elimination establish existential equivalence for the explicit large/maximal plain-Phi frame and the original formula. Structural cutoff and raw-name dominance are explicit. Caller domain formulas retain their original Boolean positions. This is one witness branch, not exhaustive general quantifier elimination. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Explicit total numeric active guard, inactive mask, actual Phi residue fold and structural cutoff programs calibrate exactly to unchanged row/atom/radix-six encodings and are primitive recursive. Their typed semantics retain the original large/maximal plain-Phi premises. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/maximal-plain-branch-programs/COMPONENT-EVIDENCE.json",
+              "scope": "Explicit numeric occurrence lists, plain-syntax test, structural cutoff, materialized frame and Boolean atom-to-formula substitution calibrate to the literal quantified maximal branch. The existing actual linear elimination program consumes that compiled frame, with primitive recursiveness of the actual algorithms. No oracle or replacement evaluator is used. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/single-name-plain/COMPONENT-EVIDENCE.json",
+              "scope": "All natural witnesses are covered for the literal one-name plain-Phi fragment: every raw occurrence, including zero and cancelled weights, is the quantified name, with no hyperPhi. Exact finite substitution below the cutoff and the maximal branch at or above it combine to existential elimination; negation gives universal elimination. Actual numeric programs are calibrated and primitive recursive. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/zero-valuation/COMPONENT-EVIDENCE.json",
+              "scope": "Actual evaluation at the fixed all-zero valuation: every original weighted summand uses existing valueAt/itemValue programs, atom kind/modulus and Boolean position are preserved, and a literal constant matrix is evaluated by the checked constant evaluator. Exact numeric calibration and primitive recursiveness include ground hyperPhi evaluation by the existing finite iterator; this is not hyperPhi quantifier elimination. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
             }
           ],
-          "latest_coverage_note": " The literal plain-Phi dominant-boundary specialization is now independently accepted, with exact correlated collection, survival-based maximal-name provenance and structural threshold effectivity. Inactive-Phi/HyperPhi branches, finite equality/order selection, wider ranked cancellation and global nonlinear elimination remain pending; no source statement is promoted. Semantic linear guards now compile the original signed-shifted input comparisons and coefficient-block tests under one shared valuation. The finite active sign branch is correct only with its explicit surviving maximal-name activity hypothesis; inactive rows can retain a nonzero linear part. Numeric primitive recursiveness, inactive/HyperPhi assembly and full nonlinear elimination remain pending. The inactive plain-Phi atomic component now supplies a finite guarded linear formula equivalent to the original atom under its explicit inactivity and plain-row hypotheses. It preserves whole correlated equal-input blocks, including cross-name cancellation and zero weights. The initial malformed comparator is abandoned; only the separately preflighted corrected conditional is accepted. Contextual replacement beneath source domain formulas, numeric effectivity, HyperPhi/source-case assembly and global elimination remain pending."
+          "latest_coverage_note": " The literal plain-Phi dominant-boundary specialization is now independently accepted, with exact correlated collection, survival-based maximal-name provenance and structural threshold effectivity. Inactive-Phi/HyperPhi branches, finite equality/order selection, wider ranked cancellation and global nonlinear elimination remain pending; no source statement is promoted. Semantic linear guards now compile the original signed-shifted input comparisons and coefficient-block tests under one shared valuation. The finite active sign branch is correct only with its explicit surviving maximal-name activity hypothesis; inactive rows can retain a nonzero linear part. Numeric primitive recursiveness, inactive/HyperPhi assembly and full nonlinear elimination remain pending. The inactive plain-Phi atomic component now supplies a finite guarded linear formula equivalent to the original atom under its explicit inactivity and plain-row hypotheses. It preserves whole correlated equal-input blocks, including cross-name cancellation and zero weights. The initial malformed comparator is abandoned; only the separately preflighted corrected conditional is accepted. Contextual replacement beneath source domain formulas, numeric effectivity, HyperPhi/source-case assembly and global elimination remain pending. Explicit numeric programs now exactly calibrate shifted-input guards and inactive deletion masks/atoms and are primitive recursive. Original occurrence order, repeated names and zero weights remain literal. These code results retain the typed active/inactive hypotheses and caller domain obligations; the full maximal-name numeric compiler, HyperPhi/nonmaximal branches and global elimination remain pending. Current supporting coverage supersedes earlier pending maximal-branch numeric notes: the framed large/maximal plain-Phi branch, its actual atomic and quantified numeric compilers, all-witness existential/universal elimination for the literal one-name plain fragment, and actual fixed-zero ground evaluation are proved. Raw zero/cancelled occurrences and caller domain syntax remain literal. No one-name closed decision gate is adopted here. Parameter-dependent/nonmaximal branches, hyperPhi quantifier elimination, arbitrary nonlinear quantifier alternation and full BASE/QE remain pending."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:existential",
@@ -6803,7 +7081,30 @@
             ],
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
             "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadClosureDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/common-head-closure-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual common-head existential/universal comparison closures; source correctness requires genuine heads, while numeric output/computability are total. Not the full printed common-head theorem. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadBooleanStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/common-head-boolean/INTEGRATION-EVIDENCE.json",
+              "scope": "Restricted Boolean combinations of original raw common-head equality/strict-order codes under one genuine head list and valuation; typed postfix encodings, not general word syntax or malformed-postfix semantics. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadExactVariablesStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/common-head-exact-variables/INTEGRATION-EVIDENCE.json",
+              "scope": "Literal original raw comparison compiler followed by x=x padding on exact original pair support. Exact free-variable membership, not multiplicity or order, including cancellation, constants and raw malformed-code support. Typed source semantics requires genuine heads. Advances only the first paper08 thm:common clause; no unrestricted common-head decision. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.CommonHeadFirstOrderStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/common-head-first-order/INTEGRATION-EVIDENCE.json",
+              "scope": "First-order translation of certified common-head comparison atoms, each with its own genuine head list. Exact truth, free-variable membership, code calibration and total numeric computation. Positive existential quantification adds 0<x inside its binder; Nat quantification is separately available. Arbitrary Boolean structure, alternation and original-name shadowing remain literal. Malformed raw atoms use the explicit empty-head/zero default. Translation is not unrestricted BASE decision or QE, so full thm:common remains pending. Independently accepted; static integration only, focused aggregate not run. No numbered statement promotion."
+            }
+          ],
+          "latest_coverage_note": " Exact raw free-variable membership and arbitrary first-order translation of genuine common-head atoms are independently accepted. Positive and Nat quantifiers remain distinct, and each atom keeps its own genuine head certificate. The unrestricted BASE decision supplier and full registered theorem remain pending; this cumulative candidate has not been compiled."
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:head-window",
@@ -6923,6 +7224,16 @@
               "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.BalancedExactVariablesStatementChecks",
               "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
               "scope": "Partial source-clause evidence for 08-multivariate-collapse-comparison:thm:balanced: The padded compiler preserves typed formula truth and has exactly the original variable-set membership, with literal code calibration and an all-raw computable wrapper. Genuine pointwise sign equivalence needs positivity only on the original support. Quantified decision and the whole balanced theorem remain pending. Component evidence only; the whole registered source statement remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedClosureDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/balanced-closure-decision/INTEGRATION-EVIDENCE.json",
+              "scope": "Actual balanced typed compiler and shared certificate, with positivity only on exact original pair support: conjunction for existential closure and implication for universal closure. Outside coordinates remain unrestricted. Independently accepted; all twenty exact gates and focused source-fragment aggregate passed. No numbered statement promotion."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BalancedFirstOrderStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/balanced-first-order/INTEGRATION-EVIDENCE.json",
+              "scope": "Effective first-order translation of original certified balanced atoms, retaining each whole pair certificate, shared basis, dependent/repeated entries and outside remainder. Positivity is required only on original FREE names; positive binders propagate it by exact Function.update shadowing. Each positive existential translates to Nat existence with 0<x inside its binder, and universal is its literal dual. No per-atom positivity guard changes negation. Exact free-variable membership, literal output-code calibration and total numeric compilation hold; unrestricted BASE decision, QE and the full registered balanced theorem remain pending. Independently accepted; static integration only, focused aggregate not run. No numbered promotion."
             }
           ],
           "coverage_note": "The checked Balanced components establish original shared-certificate collection and affine operations, exact original-threshold large guards, finite-box exceptions on original support, the actual total computable raw compiler, actual typed sign semantics, and a literal wrapper with exactly the original free-variable membership. Repeated/dependent basis entries and one shared source valuation are preserved. This pays the source comparison-formula construction clause. Arbitrary Boolean and quantified comparison decision still requires the genuine Snyatkov arithmetic supplier and its syntactic translation/decision assembly; the whole theorem remains pending.",
@@ -6948,7 +7259,8 @@
             ],
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
             "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+          },
+          "latest_coverage_note": " BalancedFirstOrder now gives exact first-order source translation with original free-name positivity and positive binders. Whole certificates and shared bases are retained, without guards under negation. Unrestricted BASE decision and the full registered theorem remain pending; this cumulative candidate has not been compiled."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:single-core",
@@ -8019,25 +8331,25 @@
           "file": "09-canonical-source-expressivity/hardness.tex",
           "line": 160,
           "statement_latex": "[Standard-control functional-input undecidability]\n\\label{thm:functional-hardness}\nFull universal canonical weak comparison and strict comparison are\nundecidable already for ground output, free-variable levels at most one,\nand internal levels at most two.  The reduction at this level uses finitely\nmany comparison queries.  A computable single-query reduction from the\nsame polynomial-system unsatisfiability problem is available with internal\nlevel at most three.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean",
+            "sha256": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615",
+            "type": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessTargets.FullFunctionalHardness"
+          },
           "completion_audit": {
             "date": "2026-11-05",
-            "report": "verification/cumulative-continuation-2026-11-05/finite-query-code/COMPONENT-EVIDENCE.json",
-            "classification": "missing_foundation_or_downstream",
+            "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+            "classification": "whole_statement_exact_source_correspondence",
             "source_sha256": "15f9e829d872b188d108a33df3b843d30b5d2be459db87dbbcfd3a1673890b7f",
-            "remaining_obligation": "Genuine encoded-polynomial-system undecidability, including necessary MRDP/H10/Narendran suppliers and its coded adapter, remains pending. The total coded level-three strict/weak SingleQueryReduction and level-two strict/weak FiniteQueryReduction obligations are independently accepted, including validity and malformed-input behavior. Whole functional hardness remains pending until its genuine undecidability dependency and full endpoint are proved.",
-            "next_completion_step": "Reuse the accepted total coded level-three single-query and level-two finite-query reductions. Supply and independently verify genuine encoded-polynomial-system undecidability with its full coded dependency chain, then assemble the exact full hardness endpoint without adding oracle premises.",
+            "remaining_obligation": "None within this numbered theorem after the explicit supplier-integration prerequisite is satisfied.",
+            "next_completion_step": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred.",
             "upstream_blockers": [],
+            "prior_report": "verification/cumulative-continuation-2026-11-05/finite-query-code/COMPONENT-EVIDENCE.json",
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
-            "review_scope": "Independent exact level-two coded finite-query component acceptance with literal source correspondence; exact gate and focused cumulative integration passed. No numbered source promotion.",
-            "prior_report": "audits/PENDING-STATEMENTS-2026-11-05.json",
-            "prior_reports": [
-              "verification/cumulative-continuation-2026-11-05/seeded-source/ROOT-SEMANTIC-ADOPTION.json",
-              "audits/PENDING-STATEMENTS-2026-11-05.json",
-              "verification/cumulative-continuation-2026-11-05/seeded-query/COMPONENT-EVIDENCE.json"
-            ]
+            "review_scope": "Independent manuscript-to-comparator correspondence review and read-only source/receipt/hash closure checks; no new compiler run in this metadata preparation.",
+            "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
           },
           "checked_components": [
             {
@@ -8146,9 +8458,72 @@
               "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-uniqueness/COMPONENT-EVIDENCE.json",
               "scope": "Two exact targets prove unconditional uniqueness of an even natural masked-square fixed point and at most one pair of natural solutions to the unchanged cipher all-ones equations. The fixed-point theorem uses the actual Nat bitwise AND with no finiteness bound or assumed digit representation. The arithmetic equation uniqueness is conditional on two solutions existing; no solution or equality to the sparse all-ones sums is established by this component. Independently accepted; exact uniqueness gate and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-characterization/COMPONENT-EVIDENCE.json",
+              "scope": "The exact original OnesArithmeticCharacterization iff holds, including n=0. The actual sparse sum satisfies the original equations and uniqueness supplies the reverse direction. This is not MRDP or polynomial-system undecidability. Independently accepted; focused aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-ones-diophantine/COMPONENT-EVIDENCE.json",
+              "scope": "The unchanged original OnesDiophantine graph is Diophantine for variable natural inputs. The exact arithmetic characterization supplies both directions, with actual existential polynomial witnesses. This does not establish general bounded universal closure, MRDP or undecidability. Independently accepted; focused aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-index-source/COMPONENT-EVIDENCE.json",
+              "scope": "Four exact targets establish even masked-product fixed-point uniqueness, the actual sparse index sequence arithmetic characterization, and genuine variable-input Diophantine index/IsCipherOf id graphs. The original n+1<q domain and n=0 case are retained; arbitrary arithmetic solutions are not assumed to be valid ciphers, and no n+2<q strengthening is introduced. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/cipher-relation-source/COMPONENT-EVIDENCE.json",
+              "scope": "Eight exact targets establish the source Code, Const, Code_plus and literal Code_mult relations and their arithmetic calibrations/Diophantine graphs. Const at n=0 leaves the constant unrestricted. Literal Mult at n=0 is true for all raw q/a/b/c, including invalid codes. Independent IsCipherOf hypotheses appear only in the pointwise addition/multiplication specifications, not as added guards on the raw source relations. Independently accepted; all four exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/elementary-source/COMPONENT-EVIDENCE.json",
+              "scope": "Exact natural-input semantic elementary normalization: Dioph S iff a finite elementary system represents S with precisely the original natural free parameters and finite natural witnesses, retaining zero. Every constraint uses a literal constant, witness, parameter, wire addition or wire multiplication. No source numerical size bound or computable extraction from an extensional Dioph proof is asserted. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/row-packing-source/COMPONENT-EVIDENCE.json",
+              "scope": "Exact variable-length elementary witness-row packing and genuine Diophantine graph with length as a free natural input. Original parameters, length zero, empty witnesses and empty equations are retained. Actual valid cipher rows and a common q encode/decode pointwise witnesses; source Const and Mult preserve their distinct empty cases. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/bounded-universal-source/COMPONENT-EVIDENCE.json",
+              "scope": "The original unchanged CipherTargets.VariableBoundedUniversalClosure is proved, not assumed: arbitrary natural parameter arity, Diophantine input-dependent bound and Diophantine relation, including zero bound. The proof composes semantic elementary normalization, actual variable-length packing and proved Diophantine function composition, without adding a closure premise. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/minimization-source/COMPONENT-EVIDENCE.json",
+              "scope": "Exact ordinary Mathlib Code.rfind' graph closure from the body graph, with arbitrary starting point and absolute output index. Every earlier offset has an actual defined nonzero body result; undefined earlier computations cannot be skipped. No alternate evaluator or termination hypothesis is introduced. Independently accepted; all nine exact gates and focused cumulative aggregate passed."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.HardnessDecisionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-ACCEPTANCE.json",
+              "scope": "Five exact aliases include the unchanged complete six-clause FullFunctionalHardness endpoint; all 654 local dependency sources have matching successful native receipt rows and logs. Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
             }
           ],
-          "latest_coverage_note": "The actual closed Omega semantic/numeric construction supplies total coded level-three strict and weak single-query reductions. The plain system compiler and exact shared-index mask restriction now also supply total coded level-two strict and weak finite-query reductions. Both maps cover every natural input, with genuine ground source queries, original type-level bounds and literal malformed-input fallbacks. The unchanged SingleQueryReduction and FiniteQueryReduction obligations are discharged for both strictness conventions. Genuine encoded-polynomial-system undecidability, its required coded adapter and whole functional hardness remain pending. The cipher all-ones equations now have a checked at-most-one-solution theorem, based on actual even masked-square uniqueness. Existence, sparse-sum characterization, ones-Diophantineness, MRDP and genuine undecidability are not established by this component."
+          "latest_coverage_note": "Whole hardness.tex:160-167: strict and weak full universal canonical comparison are undecidable for actual original-T ground outputs, every free-context type of level at most one and every original admissible whole-vector substitution, with internal levels at most two. Both total computable finite-query reductions from finite shared-unknown N[X] linear-system unsatisfiability and both total computable single-query reductions at internal level at most three are proved. The fixed zero-history assignment, literal standard Phi, actual polynomial source language, malformed-source handling, genuine H10/linear-system supplier and allowed axiom closure are retained. The six-conjunct original comparator is byte-identical to its archive. Prior supporting-component limitations below are historical, not remaining obligations for this label. The decider convention is a total computable function on natural codes, correct on genuine bounded typed inputs; answers elsewhere are unrestricted. No separate named-text serialization or equivalence with partial algorithms promised to halt only on valid inputs is claimed. No all-ground free-variable conclusion, stronger many-one/co-RE completeness classification, runtime bound, arbitrary perturbed-control result or whole-paper completion is promoted. The local evidence is the exact 654-module supplier closure with successful native source rows and standard-axiom audits. It is not a full-root build or remote CI result.",
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessDecision.StatementChecks.full_functional_hardness"
+          ],
+          "frozen_comparators": [
+            {
+              "file": "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessTargets.lean",
+              "sha256": "50c00e8b679db674c2300bf915ef966aa3578cc4feb7ddb15963dc707e36b615",
+              "type": "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.HardnessTargets.FullFunctionalHardness"
+            }
+          ],
+          "verification_receipt": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/functional-hardness-gates/RECEIPT.json",
+          "acceptance_record": "verification/cumulative-continuation-2026-11-05/functional-hardness-source/FUNCTIONAL-HARDNESS-ACCEPTANCE.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "Whole hardness.tex:160-167: strict and weak full universal canonical comparison are undecidable for actual original-T ground outputs, every free-context type of level at most one and every original admissible whole-vector substitution, with internal levels at most two. Both total computable finite-query reductions from finite shared-unknown N[X] linear-system unsatisfiability and both total computable single-query reductions at internal level at most three are proved. The fixed zero-history assignment, literal standard Phi, actual polynomial source language, malformed-source handling, genuine H10/linear-system supplier and allowed axiom closure are retained. The six-conjunct original comparator is byte-identical to its archive. Prior supporting-component limitations below are historical, not remaining obligations for this label. The decider convention is a total computable function on natural codes, correct on genuine bounded typed inputs; answers elsewhere are unrestricted. No separate named-text serialization or equivalence with partial algorithms promised to halt only on valid inputs is claimed. No all-ground free-variable conclusion, stronger many-one/co-RE completeness classification, runtime bound, arbitrary perturbed-control result or whole-paper completion is promoted. The local evidence is the exact 654-module supplier closure with successful native source rows and standard-axiom audits. It is not a full-root build or remote CI result."
         },
         {
           "id": "09-canonical-source-expressivity:lem:perturbed-control",
@@ -10664,13 +11039,19 @@
   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
-  "source_completion_updated_at_utc": "2026-11-04T21:07:50.599180+00:00",
-  "supporting_components_updated_at_utc": "2026-11-05T10:32:17.216837+00:00",
+  "source_completion_updated_at_utc": "2026-11-05T13:40:22.346832+00:00",
+  "supporting_components_updated_at_utc": "2026-11-05T17:41:15.902690+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
     "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
     "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
     "verification": "audits/REGISTER-RECONCILIATION-2026-11-05.json",
     "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
+  },
+  "source_completion_promotion": {
+    "report": "audits/FUNCTIONAL-HARDNESS-COMPLETION-2026-11-05.json",
+    "statement": "09-canonical-source-expressivity:thm:functional-hardness",
+    "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
+    "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
   }
 }

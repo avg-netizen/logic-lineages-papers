@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceDomainProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceStatementChecks
+
+theorem original_environment : SourceWitnessTraceTargets.OriginalEnvironment := SourceWitnessTraceProof.originalEnvironment
+theorem least_realization_sound : SourceWitnessTraceTargets.LeastRealizationSound := SourceWitnessTraceProof.leastRealizationSound
+theorem actual_least_trace : SourceWitnessTraceTargets.ActualLeastTrace := SourceWitnessTraceProof.actualLeastTrace
+theorem exact_source_domain : SourceWitnessTraceTargets.ExactSourceDomain := SourceWitnessTraceProof.exactSourceDomain
+theorem exact_trace_shape : SourceWitnessTraceTargets.ExactTraceShape := SourceWitnessTraceProof.exactTraceShape
+theorem actual_raw_trace : SourceWitnessTraceTargets.ActualRawTrace := SourceWitnessTraceProof.actualRawTrace
+theorem actual_computation : SourceWitnessTraceTargets.ActualComputation := SourceWitnessTraceProof.actualComputation
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceWitnessTraceStatementChecks

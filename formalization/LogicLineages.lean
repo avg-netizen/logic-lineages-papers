@@ -2175,3 +2175,68 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 
 -- Cipher all-ones equations: at-most-one solution only, not existence or full characterization.
 public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessStatementChecks
+
+-- Independently reviewed exact cipher and maximal plain-row suppliers.
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainRowsStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineStatementChecks
+
+-- Source-faithful cipher relations and literal shifted-input/inactive compiler programs.
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.InactivePhiProgramsStatementChecks
+
+-- Exact bounded Diophantine closure and effective plain-Phi supporting fragments.
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SingleNamePlainStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationStatementChecks
+
+-- Exact reviewed Diophantine, shared-N[X] and full functional-hardness gates.
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionStatementChecks
+public import LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitBridgeStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitNumericStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitGadgetStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.H10ValidityStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.H10AdapterStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.CircuitFullStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.H10BridgeStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SystemUndecidabilityStatementChecks
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.HardnessDecisionStatementChecks
+
+-- Exact full-hardness coordinator interface, checked separately from the full root.
+public import LogicLineages.ExternalCheckpoint20261105FunctionalHardnessFocused
+
+-- Focused exact source-fragment gates, not a full BASE result.
+public import LogicLineages.ExternalCheckpoint20261105SourceFragments
+
+-- Restricted search/witness and common-head translation gates. Aggregate check pending.
+public import LogicLineages.ExternalCheckpoint20261105SourceWitnessCommon
+
+-- Ten exact restricted search/witness and common-head/balanced translation gates; check pending.
+public import LogicLineages.ExternalCheckpoint20261105SourceWitnessBalanced
+
+-- Exact supporting-component gates; cumulative aggregate check pending.
+public import LogicLineages.ExternalCheckpoint20261105FiniteCoefficient
+
+-- Exact supporting-component gates; cumulative aggregate check pending.
+public import LogicLineages.ExternalCheckpoint20261105RecursorFreeVector
+
+-- Exact supporting-component gates; cumulative aggregate check pending.
+public import LogicLineages.ExternalCheckpoint20261105SemanticCoefficient
+
+-- Exact supporting-component gates; cumulative aggregate check pending.
+public import LogicLineages.ExternalCheckpoint20261105SemanticFiniteScalar
+
+-- Exact supporting-component gates; cumulative aggregate check pending.
+public import LogicLineages.ExternalCheckpoint20261105SemanticFiniteVector

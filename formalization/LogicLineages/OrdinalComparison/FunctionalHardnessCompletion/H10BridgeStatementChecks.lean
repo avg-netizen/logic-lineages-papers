@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.H10BridgeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Bridge.StatementChecks
+
+theorem coded_h10_to_linear_systems : H10ReductionTargets.CodedH10ToLinearSystems :=
+  H10Adapter.Proof.codedH10ToLinearSystems
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Bridge.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.H10Bridge.StatementChecks

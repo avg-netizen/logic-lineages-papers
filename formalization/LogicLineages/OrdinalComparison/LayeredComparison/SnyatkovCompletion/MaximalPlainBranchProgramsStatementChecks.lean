@@ -1,0 +1,24 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsRecursionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsStatementChecks
+
+theorem literal_branch_data : MaximalPlainBranchProgramsTargets.LiteralBranchData :=
+  MaximalPlainBranchProgramsProof.literalBranchData
+theorem literal_frame : MaximalPlainBranchProgramsTargets.LiteralFrame :=
+  MaximalPlainBranchProgramsProof.literalFrame
+theorem literal_branch_compiler : MaximalPlainBranchProgramsTargets.LiteralBranchCompiler :=
+  MaximalPlainBranchProgramsProof.literalBranchCompiler
+theorem actual_data_programs : MaximalPlainBranchProgramsTargets.ActualDataPrograms :=
+  MaximalPlainBranchProgramsProof.actualDataPrograms
+theorem actual_frame_programs : MaximalPlainBranchProgramsTargets.ActualFramePrograms :=
+  MaximalPlainBranchProgramsProof.actualFramePrograms
+theorem actual_branch_programs : MaximalPlainBranchProgramsTargets.ActualBranchPrograms :=
+  MaximalPlainBranchProgramsProof.actualBranchPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsStatementChecks

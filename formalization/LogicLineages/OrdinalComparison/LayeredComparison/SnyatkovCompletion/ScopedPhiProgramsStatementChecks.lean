@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsRawProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsFormulaProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsStatementChecks
+
+theorem actual_zero_default_evaluation : ScopedPhiProgramsTargets.ActualZeroDefaultEvaluation := ScopedPhiProgramsProof.actualZeroDefaultEvaluation
+theorem literal_term_data : ScopedPhiProgramsTargets.LiteralTermData := ScopedPhiProgramsProof.literalTermData
+theorem literal_formula_data : ScopedPhiProgramsTargets.LiteralFormulaData := ScopedPhiProgramsProof.literalFormulaData
+theorem literal_decision : ScopedPhiProgramsTargets.LiteralDecision := ScopedPhiProgramsProof.literalDecision
+theorem actual_raw_decision : ScopedPhiProgramsTargets.ActualRawDecision := ScopedPhiProgramsProof.actualRawDecision
+
+theorem actual_numeric_programs : ScopedPhiProgramsTargets.ActualNumericPrograms := ScopedPhiProgramsProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ScopedPhiProgramsStatementChecks
