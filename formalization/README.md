@@ -1,4 +1,26 @@
-## Current cumulative checkpoint — 5 November 2026
+## Local checkpoint — paused after R030, 5 November 2026 UTC
+
+The single Sol 6.1 supervisor subagent and same-session Claude have finished
+R030 and paused. One new supporting component proves three universally
+quantified PA addition laws in the existing calculus over arbitrary additional
+closed theories: associativity, commutativity, and `x + y = 0 → x = 0`.
+The three individual aliases and their conjunction passed the frozen exact
+gate and actual axiom audits, using only `propext` and `Quot.sound`. The raw
+candidate passed its first compile unchanged; no repairs were needed.
+
+The full R029 primitive-recursion certificate target remains pending: its
+author returned no proof module. No whole numbered statement is promoted;
+the register stays **161 checked, 2 inherited, 26 pending/189**. All owned jobs
+are reaped, successor admission is disabled, and the compiler policy is paused.
+No full-root rebuild or remote-CI pass is claimed. Read the
+[final handoff](HANDOFF-2026-11-04-ONE-LANE-PAUSED.md) and
+[exact acceptance evidence](verification/local-resume-2026-11-04-one-lane/claude/R030-ACCEPTANCE.json).
+The user authorized pushing this paused public checkpoint on
+`formalization/reconcile-unpublished-2026-11-04`.
+
+---
+
+## Previous cumulative checkpoint — 5 November 2026
 
 Actual source-term graphs and general source-to-quantified-row introduction
 add **sixteen checked exact supporting targets in four gates**. The cumulative

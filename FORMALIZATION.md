@@ -1,5 +1,19 @@
 # Formalization checkpoint
 
+The local supervised lane has finished **R030 and paused**. One new supporting
+component proves three universally quantified PA addition laws in the existing
+calculus, with four exact aliases including their conjunction. Its unchanged
+first candidate, exact gate and actual axiom checks passed using only `propext`
+and `Quot.sound`. R029's full primitive-recursion certificate target remains
+pending, and no whole numbered statement is promoted. The register remains
+**161 checked, 2 inherited, 26 pending/189**. All owned jobs are reaped, successor
+admission is disabled and the local compiler is paused; the public checkpoint
+push is authorized. See the
+[final handoff](formalization/HANDOFF-2026-11-04-ONE-LANE-PAUSED.md) and
+[acceptance evidence](formalization/verification/local-resume-2026-11-04-one-lane/claude/R030-ACCEPTANCE.json).
+
+The preceding external checkpoint is preserved below.
+
 The current cumulative continuation, 5 November 2026, adds **sixteen exact
 supporting targets** for actual source-term graphs and general source-to-row
 introduction. Together with the preceding eight row/domain/compiler targets,
