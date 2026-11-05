@@ -1,3 +1,11 @@
+Current prepared checkpoint: **mask restriction and plain-Phi dominance.**
+Twelve independently accepted files add ten exact aliases. The 716-module
+focused cumulative aggregate and both exact component gates passed.
+Read `verification/cumulative-continuation-2026-11-05/combined-mask-dominance/STATUS.md`.
+The plain-Phi result is only the literal specialization of paper 08 lem:row.
+Inactive/HyperPhi cases, branch selection, full finite-query reduction, genuine
+undecidability and global nonlinear elimination remain pending. Register unchanged.
+
 Current prepared checkpoint: **typed plain-system numeric compilation.**
 Five independently accepted files add five exact aliases. The 699-module
 focused cumulative aggregate and exact plain-system gate passed.

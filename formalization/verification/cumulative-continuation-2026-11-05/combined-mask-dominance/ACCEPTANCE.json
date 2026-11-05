@@ -1,0 +1,116 @@
+{
+  "status": "both exact component gates and focused cumulative aggregate passed; publication not attempted",
+  "accepted_at_utc": "2026-11-05T10:01:37.828344+00:00",
+  "base_commit": "c20306f4edd9ed301a0ed7a66229dc87d5d89868",
+  "base_tree": "e7d280baad81088bdf287251241b6b9d55aa2e36",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261105MaskDominance",
+  "aggregate_source_sha256": "8c77f168c7a7a6980294b158200403912620b622339ff27f577a6d8ff786ac35",
+  "components": [
+    {
+      "component": "MaskRestrictionCode",
+      "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskRestrictionCodeStatementChecks",
+      "source_files": 5,
+      "exact_aliases": 4,
+      "evidence": "verification/cumulative-continuation-2026-11-05/mask-restriction-code/COMPONENT-EVIDENCE.json"
+    },
+    {
+      "component": "PlainPhiDominance",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks",
+      "source_files": 7,
+      "exact_aliases": 6,
+      "evidence": "verification/cumulative-continuation-2026-11-05/plain-phi-dominance/COMPONENT-EVIDENCE.json"
+    }
+  ],
+  "new_source_files": 12,
+  "new_exact_targets": 10,
+  "local_closure_modules": 716,
+  "fresh_successful_compile_rows": 3,
+  "distinct_freshly_compiled_modules": 3,
+  "source_matched_cache_modules_reused": 713,
+  "receipt_sha256": "1f4fbd9d21fdc316d586a517126d977ca44a1ccef0b0e6cb3bcbe2f08dfa59ec",
+  "gate_log_sha256": {
+    "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskRestrictionCodeStatementChecks": "4798f5cbfbc17f657521631e5bfdff97e4e49aba5c7b1d0f4f6857394a308296",
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks": "dd29af26893282c6353ee553793b25d444a6abe31772f0784d422571df9d9eff"
+  },
+  "standard_axiom_reports": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode.StatementChecks.exact_system_restriction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode.StatementChecks.exact_masks": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode.StatementChecks.numerical_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode.StatementChecks.exact_restriction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks.actual_cancelled_row": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks.actual_maximal_raw_dominance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks.actual_threshold_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks.exact_collected_evaluation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks.literal_threshold_calibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks.actual_gap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "caps": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "peak_process_tree_rss_kib": 1257768,
+  "source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "publication_performed": false,
+  "limits": [
+    "Mask component: exact enumeration, shared-index restriction and primitive recursiveness only; no full coded finite-query reduction.",
+    "Dominance component: literal plain-Phi specialization of paper 08 lem:row, paper.tex lines 641\u2013704, not the full printed ranked-cancellation statement.",
+    "Inactive-Phi/HyperPhi branch assembly, finite equality/order branch selection, arbitrary nonlinear anchors and global nonlinear elimination remain pending.",
+    "Genuine encoded-polynomial-system undecidability and whole functional hardness remain pending.",
+    "No numbered source statement is promoted."
+  ]
+}

@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks
+
+theorem actual_gap : PlainPhiDominanceTargets.ActualGap := PlainPhiDominanceProof.actualGap
+theorem exact_collected_evaluation : PlainPhiDominanceTargets.ExactCollectedEvaluation :=
+  PlainPhiDominanceProof.exactCollectedEvaluation
+theorem actual_cancelled_row : PlainPhiDominanceTargets.ActualCancelledRow :=
+  PlainPhiDominanceProof.actualCancelledRow
+theorem actual_maximal_raw_dominance : PlainPhiDominanceTargets.ActualMaximalRawDominance :=
+  PlainPhiDominanceProof.actualMaximalRawDominance
+theorem literal_threshold_calibration : PlainPhiDominanceTargets.LiteralThresholdCalibration :=
+  PlainPhiDominanceProof.literalThresholdCalibration
+theorem actual_threshold_programs : PlainPhiDominanceTargets.ActualThresholdPrograms :=
+  PlainPhiDominanceProof.actualThresholdPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks

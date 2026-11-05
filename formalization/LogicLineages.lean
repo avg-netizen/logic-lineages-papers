@@ -2157,3 +2157,9 @@ public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.Seede
 
 -- Typed plain-system numeric compiler and original level-two query-pair calibration.
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.PlainSystemCodeStatementChecks
+
+-- Exact mask enumeration and shared-index syntactic restriction.
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskRestrictionCodeStatementChecks
+
+-- Literal plain-Phi dominant boundary, a restricted specialization of paper 08 lem:row.
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks

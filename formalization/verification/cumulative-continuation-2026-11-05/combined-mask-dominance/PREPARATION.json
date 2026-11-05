@@ -1,0 +1,41 @@
+{
+  "status": "historical pre-check preparation; superseded by ACCEPTANCE.json",
+  "prepared_at_utc": "2026-11-05T09:57:43.102981+00:00",
+  "base_commit": "c20306f4edd9ed301a0ed7a66229dc87d5d89868",
+  "base_tree": "e7d280baad81088bdf287251241b6b9d55aa2e36",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261105MaskDominance",
+  "aggregate_source_sha256": "8c77f168c7a7a6980294b158200403912620b622339ff27f577a6d8ff786ac35",
+  "new_source_files": 12,
+  "new_exact_targets": 10,
+  "local_closure_modules": 716,
+  "source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "full_root_build": false,
+  "native_aggregate_run": false,
+  "remote_ci_claim": false,
+  "publication_performed": false,
+  "gate_modules": [
+    "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskRestrictionCodeStatementChecks",
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.PlainPhiDominanceStatementChecks"
+  ],
+  "components": [
+    {
+      "component": "MaskRestrictionCode",
+      "source_files": 5,
+      "exact_aliases": 4,
+      "evidence": "verification/cumulative-continuation-2026-11-05/mask-restriction-code/COMPONENT-EVIDENCE.json",
+      "independently_verified_closure_modules": 429
+    },
+    {
+      "component": "PlainPhiDominance",
+      "source_files": 7,
+      "exact_aliases": 6,
+      "evidence": "verification/cumulative-continuation-2026-11-05/plain-phi-dominance/COMPONENT-EVIDENCE.json",
+      "independently_verified_closure_modules": 134
+    }
+  ]
+}

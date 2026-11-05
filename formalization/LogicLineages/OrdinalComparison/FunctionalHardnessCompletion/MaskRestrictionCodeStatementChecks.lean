@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskRestrictionCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.MaskRestrictionCodeProgramsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode.StatementChecks
+
+theorem exact_masks : Targets.ExactMasks := Proof.exactMasks
+theorem exact_restriction : Targets.ExactRestriction := Proof.exactRestriction
+theorem exact_system_restriction : Targets.ExactSystemRestriction := Proof.exactSystemRestriction
+theorem numerical_programs : Targets.NumericalPrograms := Proof.numericalPrograms
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.MaskRestrictionCode
