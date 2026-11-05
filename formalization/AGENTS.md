@@ -1,4 +1,34 @@
-Current user release: **continue the public formalization on a cumulative branch.**
+Current state: **ALL local formalization PAUSED after accepted R030.**
+The sole Sol supervisor and same-session Claude have stopped; all owned author
+and native transports are reaped, all three locks are free, successor admission
+is disabled and the shared compiler policy is paused. No R031 or automatic
+quota restart. Read [the final handoff](HANDOFF-2026-11-04-ONE-LANE-PAUSED.md).
+R030 adds one supporting PA addition component with four exact checked aliases;
+R029 full recursion remains pending. The source register stays 161 checked,
+2 inherited, 26 pending/189. The user authorized main to commit/push the PUBLIC
+papers branch after this pause; publication does not resume proof work.
+
+Previous user instruction: **finish current R030, PAUSE, then push the public papers checkpoint.**
+R030 is the only current round. Its author has returned and been reaped; only
+the existing three-law addition candidate's bounded compiler repair, exact
+gate, feedback and handoff may finish. Successor admission is disabled: no
+R031, new target/supplier, quota retry or automatic restart. Stop after this
+finite closeout, preserving any failed candidate as unaccepted. Main owns the
+authorized public branch commit/push after all lane jobs are reaped. No private
+repo push, public-main merge, dependency/CI change or independent-lane restart.
+Earlier continuing releases below are historical where they disagree.
+
+Previous local user release: **ONE GPT-6.1 Sol supervisor SUBAGENT with the SAME Claude author.**
+Read [the one-lane release](RESUME-2026-11-04-ONE-LANE.md). Fetch/fast-forward to
+GitHub main `3457a84` is complete. Resume preserved R029 in the same Claude
+session, then continue the supervised compile/repair/exact-acceptance loop.
+The five independent lanes and unrelated research stay paused. The supervisor
+holds the sole serialized compiler slot for this lane and owns its current
+controls, acceptance and focused integration. No automatic Git publication,
+manuscript correction, dependency/CI change or additional worker is authorized.
+This release supersedes conflicting historical local allocation/pause entries.
+
+Previous external user release: **continue the public formalization on a cumulative branch.**
 Read [the current cumulative checkpoint](verification/cumulative-continuation-2026-11-04/source-rows/STATUS.md).
 The branch `formalization/cumulative-continuation-2026-11-04` starts from merged
 main `ba2dec0` and continues the accepted normal-form checkpoint `eb0dd98`.

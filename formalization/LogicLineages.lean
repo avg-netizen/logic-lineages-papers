@@ -2112,3 +2112,6 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticStatementChecks
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks
+
+-- Quantified PA addition laws, accepted supervised R030 before the local pause.
+public import LogicLineages.ComputabilityKnowledge.SourceBaseCompletion.AdditionLawsStatementChecks
