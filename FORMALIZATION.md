@@ -1,4 +1,31 @@
-# Formalization checkpoint — both plain-Phi finite windows
+# Formalization checkpoint — effective linear-name elimination
+
+The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
+continues `30af8ce` with **twelve further exact targets in three gates** for
+effective elimination of a name occurring only linearly in source rows.
+
+The concrete compiler handles arbitrary signed coefficients and Boolean
+combinations, retains original domain conditions, and preserves the common
+valuation of nonlinear terms at other names. Its output removes exactly the
+selected name. A fixed-valuation interpretation reuses the accepted Forests
+Presburger solver, and the actual numeric programs have literal calibration
+and primitive-recursion proofs.
+
+The focused aggregate `LogicLineages.ExternalCheckpoint20261104LinearRows`
+passed with **226 local source modules** matched to successful native receipts.
+All twelve frozen aliases passed standard-axiom audits. The preceding
+200-module closure, newer PA addition laws, frozen definitions/targets and
+compiler resource limits are preserved. The source register stays
+**161 checked, 2 inherited, 26 pending / 189**.
+
+General nonlinear anchors, active-hyper case assembly, dominant boundaries,
+exhaustive branch selection and the global induction remain pending.
+
+Read the [current checkpoint](formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/STATUS.md),
+[source correspondence](formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](formalization/verification/cumulative-continuation-2026-11-04-second/linear-rows/ACCEPTANCE.json).
+
+## Previous checkpoint — both plain-Phi finite windows
 
 The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
 continues `b2a2458` with **twelve further exact targets in four gates**. Five

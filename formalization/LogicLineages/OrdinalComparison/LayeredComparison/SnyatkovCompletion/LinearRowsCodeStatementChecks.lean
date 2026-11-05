@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeStatementChecks
+
+theorem literal_code_calibration : LinearRowsTargets.LiteralCodeCalibration :=
+  LinearRowsCodeProof.literalCodeCalibration
+theorem actual_numeric_programs : LinearRowsTargets.ActualNumericPrograms :=
+  LinearRowsCodeProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeStatementChecks

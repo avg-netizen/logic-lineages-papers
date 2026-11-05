@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSupportStatementChecks
+
+theorem exact_output_support : LinearRowsTargets.ExactOutputSupport :=
+  LinearRowsSupportProof.exactOutputSupport
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSupportStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSupportStatementChecks

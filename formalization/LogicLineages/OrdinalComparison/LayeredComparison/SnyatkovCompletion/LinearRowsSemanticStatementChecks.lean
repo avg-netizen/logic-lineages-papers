@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSemanticStatementChecks
+
+theorem actual_row_arithmetic : LinearRowsTargets.ActualRowArithmetic :=
+  LinearRowsSemanticProof.actualRowArithmetic
+theorem actual_linear_row_split : LinearRowsTargets.ActualLinearRowSplit :=
+  LinearRowsSemanticProof.actualLinearRowSplit
+theorem exact_linearity_test : LinearRowsTargets.ExactLinearityTest :=
+  LinearRowsSemanticProof.exactLinearityTest
+theorem positive_coefficient_modulus : LinearRowsTargets.PositiveCoefficientModulus :=
+  LinearRowsSemanticProof.positiveCoefficientModulus
+theorem positive_unit_period : LinearRowsTargets.PositiveUnitPeriod :=
+  LinearRowsSemanticProof.positiveUnitPeriod
+theorem actual_normalization : LinearRowsTargets.ActualNormalization :=
+  LinearRowsSemanticProof.actualNormalization
+theorem actual_unit_elimination : LinearRowsTargets.ActualUnitElimination :=
+  LinearRowsSemanticProof.actualUnitElimination
+theorem actual_linear_elimination : LinearRowsTargets.ActualLinearElimination :=
+  LinearRowsSemanticProof.actualLinearElimination
+theorem actual_guarded_atom_elimination : LinearRowsTargets.ActualGuardedAtomElimination :=
+  LinearRowsSemanticProof.actualGuardedAtomElimination
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSemanticStatementChecks

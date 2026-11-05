@@ -1,4 +1,21 @@
-Current external checkpoint: **nested translation and both restricted-row plain-Phi windows.**
+Current external checkpoint: **effective elimination of a linear name in source rows.**
+The latest continuation extends `30af8ce` on
+`formalization/cumulative-continuation-2026-11-04-second`. Twelve exact targets
+in three gates and the focused 226-module aggregate passed. The preceding
+200-module closure and all other accepted sources are preserved. Read
+`verification/cumulative-continuation-2026-11-04-second/linear-rows/STATUS.md`.
+
+The correlated symbolic-row Presburger bridge and its complete numeric
+effectivity are checked for the strict linear-name fragment. Arbitrary signed
+row coefficients, original domain formulas and exact support are retained.
+The source register remains 161 checked, 2 inherited and 26 pending/189.
+General nonlinear anchors, active-hyper assembly, nonlinear-argument affine
+substitution, dominant boundaries, exhaustive branch selection and global
+induction remain pending. Existing exact-target, standard-axiom and bounded
+serialized compiler rules remain active. The coordinator owns native checks,
+shared metadata and publication.
+
+Previous external checkpoint: **nested translation and both restricted-row plain-Phi windows.**
 The latest continuation extends `b2a2458` on
 `formalization/cumulative-continuation-2026-11-04-second`. Twelve further exact
 targets in four gates and the focused 200-module aggregate passed. The preceding
