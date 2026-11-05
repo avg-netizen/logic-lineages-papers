@@ -2151,3 +2151,6 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSourceCodeStatementChecks
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededInputCodeStatementChecks
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededSystemCodeStatementChecks
+
+-- Total coded strict/weak level-three source queries, including malformed inputs.
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededQueryCodeStatementChecks

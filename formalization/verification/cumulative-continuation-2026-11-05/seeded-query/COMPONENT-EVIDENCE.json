@@ -1,0 +1,71 @@
+{
+  "status": "independently accepted component; exact gate and focused cumulative aggregate passed",
+  "component": "Total coded level-three strict and weak single-query reductions",
+  "prepared_at_utc": "2026-11-05T09:45:50.527805+00:00",
+  "gate_module": "LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededQueryCodeStatementChecks",
+  "source_files": {
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/HardnessDefinitions.lean": "f236733edfc3d66bc5489323ce4aefc9c005e1519bb3d095fc4a2010c40b737a",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededQueryCodeCalibrationProof.lean": "84f515ba8608ee414f498217a244b4747344533999e0cf345eb38cde633c4118",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededQueryCodeDefinitions.lean": "35cf2d88bac9f66040545fdf146adfcd765281770f805b38232ac8faddc0660e",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededQueryCodeProgramsProof.lean": "0bf076750b606ec7f5bf37924b7543afe7344735ecde168387929704e2edfe14",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededQueryCodeReductionProof.lean": "2cefb5c150ad2363a5fa80d4e9937234d8f4ab164a393295928c95f053367d09",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededQueryCodeStatementChecks.lean": "d08b48b6e52e2a41504d10691a6e9d4369e321b539797d50a6cf1fbfaa134b7c",
+    "LogicLineages/OrdinalComparison/FunctionalHardnessCompletion/SeededQueryCodeTargets.lean": "16741f8fd38b16cf33892f675d78636f13e04e75328c42d6310bec356a698f63"
+  },
+  "exact_target_aliases": {
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededQueryCode.StatementChecks.exact_strict_reduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededQueryCode.StatementChecks.exact_total_reduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededQueryCode.StatementChecks.exact_query_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededQueryCode.StatementChecks.primitive_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededQueryCode.StatementChecks.exact_weak_reduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.SeededQueryCode.StatementChecks.exact_well_formed": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "frozen_targets_unchanged": true,
+  "independently_verified_closure_modules": 509,
+  "author_acceptance_sha256": "a3cb580945910c2dcb17d8885eab9c11c4391ba1dc0af4f9457c6af39715eb11",
+  "target_freeze_sha256": "f66515219c7e35847503445e413a56d251c1d7af90a45372efcafef8591e1e79",
+  "successful_gate_receipt_sha256": "b46d52d22d251bb09f47c149c08efaa2f35565c948b5cb207ebbf7887632f787",
+  "actual_axiom_log_sha256": "ed611f345533757ae1444c6b4e87022b65e690e2e202c09a9e98d75110b65436",
+  "existing_obligations_discharged": [
+    "SingleQueryReduction true",
+    "SingleQueryReduction false"
+  ],
+  "scope": "Six exact targets establish actual source-query code calibration, exact well-formedness, primitive-recursive numeric programs and total strict/weak level-three reductions on every natural input code, including undecodable data and out-of-range references. Valid systems preserve the original shared valuation; malformed inputs use the literal unsatisfiable one-equation fallback. The unchanged SingleQueryReduction true and SingleQueryReduction false obligations are discharged, with actual ground sources, free-variable levels at most one and internal levels at most three. No genuine polynomial-system undecidability, level-two finite-query coded reduction or whole functional-hardness theorem is claimed.",
+  "exclusions": [
+    "No genuine polynomial-system undecidability theorem.",
+    "No level-two finite-query coded reduction yet.",
+    "No complete FullFunctionalHardness or numbered-source register update.",
+    "No target weakening or raised heartbeat/resource limits."
+  ],
+  "source_register_changes": [],
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "cumulative_acceptance_record": "verification/cumulative-continuation-2026-11-05/combined-seeded-query/ACCEPTANCE.json",
+  "cumulative_gate_recheck": {
+    "receipt_sha256": "e85d392fa9e71ffe2feee01f42183fb9c741ec4802673bf973f7bf0f5466f54a",
+    "gate_log_sha256": "ed611f345533757ae1444c6b4e87022b65e690e2e202c09a9e98d75110b65436"
+  }
+}

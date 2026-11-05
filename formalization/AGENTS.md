@@ -1,3 +1,12 @@
+Current prepared checkpoint: **total coded level-three seeded queries.**
+Seven independently accepted source files add six exact aliases, including the
+unchanged strict and weak SingleQueryReduction obligations. The 693-module
+focused cumulative aggregate and exact query gate passed.
+Read `verification/cumulative-continuation-2026-11-05/combined-seeded-query/STATUS.md`.
+Genuine undecidability, level-two finite-query coded reduction, whole functional
+hardness and general nonlinear BASE remain pending. Register: 161/2/26 of 189.
+The checker slot has been released. No publication attempted.
+
 Current prepared checkpoint: **effective additive/linear fragments and typed seeded numeric compilers.**
 Six independently accepted components add 36 exact aliases in 34 Lean files.
 All six exact gates and the focused 685-module cumulative aggregate passed.
