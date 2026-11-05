@@ -2106,3 +2106,9 @@ public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.Omega
 -- Exact normal-form semantics and numeric compiler, cumulative 4 November checkpoint.
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks
+
+-- Source-term graphs and quantified-row introduction, cumulative 5 November checkpoint.
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks
