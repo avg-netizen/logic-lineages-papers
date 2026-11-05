@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks
+
+theorem literal_code_calibration : NormalFormTargets.LiteralCodeCalibration :=
+  NormalFormCodeProof.literalCodeCalibration
+theorem actual_numeric_programs : NormalFormTargets.ActualNumericPrograms :=
+  NormalFormCodeProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks

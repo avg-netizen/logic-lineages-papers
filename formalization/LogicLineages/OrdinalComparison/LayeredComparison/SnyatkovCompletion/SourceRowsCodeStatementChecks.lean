@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks
+
+theorem literal_source_compiler_calibration : SourceRowsTargets.LiteralSourceCompilerCalibration :=
+  SourceRowsCodeProof.literalSourceCompilerCalibration
+theorem actual_source_numeric_program : SourceRowsTargets.ActualSourceNumericProgram :=
+  SourceRowsCodeProof.actualSourceNumericProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks

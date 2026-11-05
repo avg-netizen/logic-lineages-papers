@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSupportProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticStatementChecks
+
+theorem exact_local_atom_introduction : SourceRowsTargets.ExactLocalAtomIntroduction :=
+  SourceRowsSemanticProof.exactLocalAtomIntroduction
+theorem exact_source_introduction : SourceRowsTargets.ExactSourceIntroduction :=
+  SourceRowsSemanticProof.exactSourceIntroduction
+theorem exact_free_variable_membership : SourceRowsTargets.ExactFreeVariableMembership :=
+  SourceRowsSupportProof.exactFreeVariableMembership
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticStatementChecks

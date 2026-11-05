@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphExistentialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks
+
+theorem exact_allocation : SourceTermGraphTargets.ExactAllocation :=
+  SourceTermGraphSupportProof.exactAllocation
+theorem exact_graph_support : SourceTermGraphTargets.ExactGraphSupport :=
+  SourceTermGraphSupportProof.exactGraphSupport
+theorem original_graph_domains : SourceTermGraphTargets.OriginalGraphDomains :=
+  SourceTermGraphSupportProof.originalGraphDomains
+theorem graph_soundness : SourceTermGraphTargets.GraphSoundness :=
+  SourceTermGraphSemanticProof.graphSoundness
+theorem total_graph_realization : SourceTermGraphTargets.TotalGraphRealization :=
+  SourceTermGraphSemanticProof.totalGraphRealization
+theorem allocated_node_uniqueness : SourceTermGraphTargets.AllocatedNodeUniqueness :=
+  SourceTermGraphSemanticProof.allocatedNodeUniqueness
+theorem exact_existential_graph : SourceTermGraphTargets.ExactExistentialGraph :=
+  SourceTermGraphExistentialProof.exactExistentialGraph
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks

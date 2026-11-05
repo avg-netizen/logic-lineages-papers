@@ -1,0 +1,166 @@
+{
+  "accepted_at_utc": "2026-11-04T23:48:50.704882+00:00",
+  "status": "accepted supporting component; eight unchanged exact targets",
+  "base_commit": "ba2dec073b4fc293adf60cfee27efe56142026ff",
+  "branch": "formalization/cumulative-continuation-2026-11-04",
+  "source_statement": "08-multivariate-collapse-comparison:thm:snyatkov",
+  "source_status": "pending",
+  "whole_source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "numbered_source_promotions": 0,
+  "exact_target_count": 8,
+  "gates": [
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks",
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks"
+  ],
+  "aggregate": "LogicLineages.ExternalCheckpoint20261104NormalForm",
+  "final_aggregate_receipt": "receipts/1793836084952889678-2.json",
+  "axiom_audits": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks.exact_variable_membership": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks.actual_atom_compilation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks.actual_boolean_compilation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks.actual_signed_row_decomposition": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks.exact_original_domain_cutoffs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks.exact_original_row_domains": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks.actual_numeric_programs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks.literal_code_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "validation_scope": {
+    "fresh_checkout": true,
+    "all_focused_local_sources_have_successful_matching_hash_receipts": true,
+    "focused_local_module_count": 110,
+    "final_aggregate_passed": true,
+    "full_public_root_built": false,
+    "remote_ci_result_claimed": false,
+    "upstream_rebuilt": false,
+    "frozen_definitions_or_targets_changed": false
+  },
+  "native_profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds_per_module": 90,
+    "wall_seconds_per_module": 180,
+    "threads": 1,
+    "runner": "scripts/check.py",
+    "shared_locks": [
+      "logic-lineages-papers-lean.lock",
+      "pure-r1-calculator-lean.lock"
+    ]
+  },
+  "maximum_observed_rss_kib": 1178404,
+  "receipts": [
+    {
+      "file": "receipts/1793835858420158332-2.json",
+      "sha256": "7ee19dc1ae32e58f937b4b67484ff55a9e9655a9c2b3617fdd3a0320f8387098",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticStatementChecks"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793835999237896359-2.json",
+      "sha256": "4a635bbed575a376f8eb6eee21ac9977cd199d7cad032ab80f1efd0eb90c29be",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeStatementChecks"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793836020974045158-2.json",
+      "sha256": "10cc23bb4d446f21b4f996e127c624d5bb9d92541b2f6b21aa9449edfb71f48d",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeProgramsProof"
+      ],
+      "passed": true
+    },
+    {
+      "file": "receipts/1793836044217870546-2.json",
+      "sha256": "498c00676ab678995c92bada9fb15370eb264e7c8a9f082fffd9d1e650aaaa04",
+      "requested": [
+        "LogicLineages.ExternalCheckpoint20261104NormalForm"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793836084952889678-2.json",
+      "sha256": "531daf0549654d9b2d19e231eb5a72249c68727e0e24c2f2d70508cec81bf450",
+      "requested": [
+        "LogicLineages.ExternalCheckpoint20261104NormalForm"
+      ],
+      "passed": true
+    }
+  ],
+  "failed_attempts_preserved": [
+    {
+      "receipt": "1793835858420158332-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormSemanticProof",
+      "returncode": 1,
+      "source_sha256": "c0bcc55419c0b0f6507319a24ee6618ca9abe75bcbe54d6915aacc9697eed137"
+    },
+    {
+      "receipt": "1793835999237896359-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeCalibrationProof",
+      "returncode": 1,
+      "source_sha256": "be644a00a4930728bdfb5920b47124631f266cb60b1c4aece6fea2af6e452f2e"
+    },
+    {
+      "receipt": "1793836044217870546-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalFormCodeCalibrationProof",
+      "returncode": 1,
+      "source_sha256": "3c9d609bc3b0b40d5465cfd05a63ec1782891a77c7a80dac8275eb7621ec8a15"
+    }
+  ],
+  "repair_scope": [
+    "Explicit Term constructors and distributivity in row helper",
+    "Explicit domain-cutoff equivalence in guard proof",
+    "Targeted encoded-atom roundtrip using Encodable.encodek"
+  ],
+  "additional_proved_helper": "NormalFormCodeProof.formula_primitive establishes primitive recursiveness of the actual Boolean compiler; the unchanged target requires computability.",
+  "remaining_targets": [
+    "EffectiveSourceExistentialNormalForm",
+    "EffectiveExpandedElimination",
+    "FullSourceDecision"
+  ],
+  "evidence_files": [
+    "FROZEN-TARGETS.json",
+    "SOURCE-CLOSURE.json",
+    "COMPILER-LOGS.json",
+    "SOURCE-CORRESPONDENCE.md",
+    "TOOLCHAIN.json"
+  ]
+}

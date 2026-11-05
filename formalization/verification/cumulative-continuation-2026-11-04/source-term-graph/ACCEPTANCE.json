@@ -1,0 +1,312 @@
+{
+  "accepted_at_utc": "2026-11-05T00:27:10.222029+00:00",
+  "status": "accepted supporting component; exact frozen targets",
+  "base_commit": "eb0dd98ee21f9f5e133fe09e6775f8fa5821f934",
+  "branch": "formalization/cumulative-continuation-2026-11-04",
+  "source_statement": "08-multivariate-collapse-comparison:thm:snyatkov",
+  "source_status": "pending",
+  "whole_source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "numbered_source_promotions": 0,
+  "exact_target_count": 11,
+  "continuation_added_exact_targets": 16,
+  "cumulative_branch_exact_targets": 24,
+  "gates": [
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks",
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks"
+  ],
+  "aggregate": "LogicLineages.ExternalCheckpoint20261105SourceIntroduction",
+  "final_aggregate_receipt": "receipts/1793838387406023253-2.json",
+  "axiom_audits": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks.instruction_code_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks.actual_numeric_program": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks.row_machine_calibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks.literal_graph_compiler": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.exact_allocation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.exact_existential_graph": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.graph_soundness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.original_graph_domains": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.total_graph_realization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.exact_graph_support": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks.allocated_node_uniqueness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "validation_scope": {
+    "all_focused_local_sources_have_successful_matching_hash_receipts": true,
+    "focused_local_module_count": 133,
+    "final_aggregate_passed": true,
+    "full_public_root_built": false,
+    "remote_ci_result_claimed": false,
+    "upstream_rebuilt": false,
+    "frozen_definitions_or_targets_changed": false
+  },
+  "native_profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds_per_module": 90,
+    "wall_seconds_per_module": 180,
+    "threads": 1,
+    "runner": "scripts/check.py",
+    "shared_locks": [
+      "logic-lineages-papers-lean.lock",
+      "pure-r1-calculator-lean.lock"
+    ]
+  },
+  "maximum_observed_rss_kib": 1167748,
+  "source_closure": "SOURCE-CLOSURE.json",
+  "compiler_logs": "COMPILER-LOGS.json",
+  "toolchain_record": "../normal-form/TOOLCHAIN.json",
+  "receipts": [
+    {
+      "file": "receipts/1793837662980370830-2.json",
+      "sha256": "5b976d39f9ad7638232743b5b5b946834416470c3710797414d18c290c338c0f",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphTargets"
+      ],
+      "passed": true
+    },
+    {
+      "file": "receipts/1793837979704115790-2.json",
+      "sha256": "d077b7d2d5f5220883b43abeed2773bfc52014be5b9b317ad6e4ba88d7234a61",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSupportProof",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793837995861323046-2.json",
+      "sha256": "eb43b1fee817d5dabdad664c0965e04e676350f7243e344e31fc24388bca0a47",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838037518718852-2.json",
+      "sha256": "9af82c354f70dcd7238f2e1509932f0a7f4e90c286c0a97e4c4a8a01969ba688",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsTargets",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphExistentialProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838050037859338-2.json",
+      "sha256": "a6c5721836dde026bef8b1387695d30f4d030777e7c4856a4bb954271bc9f3bb",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsTargets",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphExistentialProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838061301204197-2.json",
+      "sha256": "70bd2c9d0213bdef59206bf67973120cd03e9e61da4358992830fb367676a7db",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeProof"
+      ],
+      "passed": true
+    },
+    {
+      "file": "receipts/1793838113994361355-2.json",
+      "sha256": "8b0364e3a74ad4d28c50c34164251b5e82025c7d903debbbae87487d1df4df1c",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks"
+      ],
+      "passed": true
+    },
+    {
+      "file": "receipts/1793838146074598673-2.json",
+      "sha256": "e9f2b2afec1452a5c69aa79f4e0e90c01c2240d356d8c3b39af3855c5febc3c4",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838201839533271-2.json",
+      "sha256": "a3c936bf3deffe80684838920ab1616f539055644f21756899d427058af74314",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838227959896818-2.json",
+      "sha256": "93f47f245e9b3e9452817d5d0932e7da73e51b6862daa66e30f66c1b199e755d",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeCalibrationProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838260078112545-2.json",
+      "sha256": "aa908eb2ef39b636e3ae62fadaf1f5bcb4d521c6c4013f65100744bb702a831d",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticStatementChecks",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838279665603707-2.json",
+      "sha256": "9e68b06ead6619002b7d87dc8d1c4e63ce6d6a579cbf6e3eabc8efd06711aa0c",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeProgramsProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838329641163006-2.json",
+      "sha256": "7137efe777f70b090dc99a5e87b1b5032860a4889641918eeab7d9fab12f996a",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSemanticStatementChecks",
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeCalibrationProof"
+      ],
+      "passed": false
+    },
+    {
+      "file": "receipts/1793838351871869782-2.json",
+      "sha256": "d964e8c4dc2ece898607da39df0c11ad61656acd42eeaaca7482d80e323aa1a8",
+      "requested": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeStatementChecks"
+      ],
+      "passed": true
+    },
+    {
+      "file": "receipts/1793838387406023253-2.json",
+      "sha256": "87c8c82569e285218c38cfebd77d8d2c569c6bb8c3b991831bfe27c8eca83bf6",
+      "requested": [
+        "LogicLineages.ExternalCheckpoint20261105SourceIntroduction"
+      ],
+      "passed": true
+    }
+  ],
+  "failed_attempts_preserved": [
+    {
+      "receipt": "1793837979704115790-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSupportProof",
+      "returncode": 1,
+      "source_sha256": "a2d62388c149f80d955ae8dce2c42094b2f1992ebc529f835df49c3536f3b5be"
+    },
+    {
+      "receipt": "1793837995861323046-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeCalibrationProof",
+      "returncode": 1,
+      "source_sha256": "fb6f6b047bb29b838011e29c113ce4dd7f5ca9367c867cbd634c59abb4267e3f"
+    },
+    {
+      "receipt": "1793838037518718852-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsDefinitions",
+      "returncode": 1,
+      "source_sha256": "028b9721d6cbfd0519df99892eb4baf8eb6faba4a5e7a9d7e548318eeefb14bd"
+    },
+    {
+      "receipt": "1793838050037859338-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSupportProof",
+      "returncode": 1,
+      "source_sha256": "8f74e7f2ac7a8907639d473e48768724f1f1cb27f999600815ea6026053ff15b"
+    },
+    {
+      "receipt": "1793838146074598673-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphSemanticProof",
+      "returncode": 1,
+      "source_sha256": "ba871e60c361f9aaa301371090c5145c9c4117638bca0074476744d50e87a191"
+    },
+    {
+      "receipt": "1793838201839533271-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphExistentialProof",
+      "returncode": 1,
+      "source_sha256": "5548e802166970a6b95688c6957d911f53a84bd834d0494f1db6eefdfb8094a3"
+    },
+    {
+      "receipt": "1793838227959896818-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeCalibrationProof",
+      "returncode": 1,
+      "source_sha256": "9e3346a5e191369f62365066aae5e7bbc277132c099bdb21d3dc6594cf7396c6"
+    },
+    {
+      "receipt": "1793838260078112545-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeCalibrationProof",
+      "returncode": 1,
+      "source_sha256": "9e3346a5e191369f62365066aae5e7bbc277132c099bdb21d3dc6594cf7396c6"
+    },
+    {
+      "receipt": "1793838279665603707-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsCodeProgramsProof",
+      "returncode": 1,
+      "source_sha256": "ffd354cb8f607a966cc6ec724ddadbd15ee786e1becbe1dec74e0a5630b992b2"
+    },
+    {
+      "receipt": "1793838329641163006-2.json",
+      "module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceRowsSupportProof",
+      "returncode": 1,
+      "source_sha256": "d713e3b212f4b00e3f4d95a2a8134d38344aceeb7c221be5da0bdea0cefa1024"
+    }
+  ],
+  "repair_scope": [
+    "Proof-level list and conjunction associativity",
+    "Explicit specialization of wrapped target theorems",
+    "Explicit localStart unfolding for literal compiler calibration",
+    "Typed packed primitive-recursion composition avoiding unnecessary atom unfolding"
+  ],
+  "remaining_targets": [
+    "EffectiveSourceExistentialNormalForm",
+    "EffectiveExpandedElimination",
+    "FullSourceDecision"
+  ],
+  "evidence_files": [
+    "FROZEN-TARGETS.json",
+    "SOURCE-CORRESPONDENCE.md",
+    "STATUS.md"
+  ]
+}

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks
+
+theorem instruction_code_calibration : SourceTermGraphTargets.InstructionCodeCalibration :=
+  SourceTermGraphCodeProof.instructionCodeCalibration
+theorem row_machine_calibration : SourceTermGraphTargets.RowMachineCalibration :=
+  SourceTermGraphCodeProof.rowMachineCalibration
+theorem literal_graph_compiler : SourceTermGraphTargets.LiteralGraphCompiler :=
+  SourceTermGraphCodeProof.literalGraphCompiler
+theorem actual_numeric_program : SourceTermGraphTargets.ActualNumericProgram :=
+  SourceTermGraphCodeProof.actualNumericProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SourceTermGraphCodeStatementChecks

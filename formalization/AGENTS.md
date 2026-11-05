@@ -1,4 +1,20 @@
-Current user instruction: **ALL SIX LANES PAUSED; push the preserved checkpoint.**
+Current user release: **continue the public formalization on a cumulative branch.**
+Read [the current cumulative checkpoint](verification/cumulative-continuation-2026-11-04/source-rows/STATUS.md).
+The branch `formalization/cumulative-continuation-2026-11-04` starts from merged
+main `ba2dec0` and continues the accepted normal-form checkpoint `eb0dd98`.
+The following six-lane pause and allocations are historical. Preserve their
+receipts and accepted source pins.
+The exact-target, standard-axiom and bounded serialized compiler requirements
+remain active. Main owns source adoption, register changes and Git publication.
+The preceding eight row/domain/compiler targets and sixteen new term-graph
+and source-introduction targets are accepted. The focused 133-module cumulative
+closure and every exact standard-axiom gate passed. Full single-prefix
+existential normal form, elimination closure, quantified-block induction and
+first-order BASE decision remain pending. Original Boolean/binder positions
+are retained by the checked source introduction; do not equate this with QE.
+The whole source register remains 161 checked, 2 inherited and 26 pending/189.
+
+Historical user instruction: **ALL SIX LANES PAUSED; push the preserved checkpoint.**
 Read [the final handoff](HANDOFF-2026-11-04-SIX-LANES-PAUSED.md). No new proof, repair, target, compiler, quota-reset restart or successor round is authorized. Explicit user release is required. The register is 161 checked, 2 inherited, 26 pending/189. Earlier releases and retry permissions below are historical.
 
 Current user release: [Sol supervises Claude plus five independent Sol6.1/xhigh lanes](RESUME-2026-11-04-SIX-LANES.md).
