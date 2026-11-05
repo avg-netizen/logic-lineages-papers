@@ -1,0 +1,9 @@
+# Plain-system numeric compiler: source correspondence
+
+This component supports the level-two finite-query branch of paper 09, hardness.tex, thm:functional-hardness. It calibrates the existing actual plain SignedPair.compile, compileSystem, strictSystemPair and weakSystemPair, rather than substituting a new semantics.
+
+Five exact targets establish literal calibration with the actual plain SignedPair compiler, its original context embedding, simultaneous system detector codes, strict/weak original level-two source-query pairs and total primitive-recursive numeric programs. On actual n-variable typed expressions the seeded compiler helper agrees with the plain compiler without seed subtraction or an extra free seed. Calibration is for typed systems; raw malformed defaults do not establish a total coded finite-query reduction. Genuine undecidability and whole functional hardness remain pending.
+
+The original variable context is retained. Each equation introduces exactly two ground alignment witnesses; original variable indices shift by twice the system length. Every equation uses the same original variable space, including repeated occurrences, empty systems and zero original variables. The actual strict/weak pair codes and context codes match the pre-existing typed constructors whose level-two bounds were proved separately.
+
+All five numerical functions are primitive recursive on arbitrary natural inputs. Correctness here is literal calibration on encodings of typed systems, not a claim that malformed inputs denote meaningful systems. Neither zero-pattern completeness nor a finite list of queries covering all encoded polynomial instances is supplied by this component. Those obligations and the genuine undecidability supplier remain pending. No whole-source statement is promoted.

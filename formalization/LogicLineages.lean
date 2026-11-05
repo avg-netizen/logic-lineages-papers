@@ -2154,3 +2154,6 @@ public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.Seede
 
 -- Total coded strict/weak level-three source queries, including malformed inputs.
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SeededQueryCodeStatementChecks
+
+-- Typed plain-system numeric compiler and original level-two query-pair calibration.
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.PlainSystemCodeStatementChecks

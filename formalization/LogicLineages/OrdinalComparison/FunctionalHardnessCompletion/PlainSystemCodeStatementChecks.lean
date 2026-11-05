@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.PlainSystemCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.PlainSystemCodeProgramsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.PlainSystemCode.StatementChecks
+
+theorem exact_plain_compiler : Targets.ExactPlainCompiler := Proof.exactPlainCompiler
+theorem exact_context_embedding : Targets.ExactContextAndEmbedding := Proof.exactContextAndEmbedding
+theorem exact_system_code : Targets.ExactSystemCode := Proof.exactSystemCode
+theorem exact_query_pairs : Targets.ExactQueryPairs := Proof.exactQueryPairs
+theorem numerical_programs : Targets.NumericalPrograms := Proof.numericalPrograms
+
+end LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.PlainSystemCode.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.Source.FunctionalHardnessCompletion.PlainSystemCode

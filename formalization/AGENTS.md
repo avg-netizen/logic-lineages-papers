@@ -1,3 +1,11 @@
+Current prepared checkpoint: **typed plain-system numeric compilation.**
+Five independently accepted files add five exact aliases. The 699-module
+focused cumulative aggregate and exact plain-system gate passed.
+Read `verification/cumulative-continuation-2026-11-05/combined-plain-system/STATUS.md`.
+Typed calibration is not a malformed-input or full finite-query reduction.
+Genuine undecidability, whole functional hardness and general nonlinear BASE
+remain pending. Register: 161/2/26 of 189. No publication attempted.
+
 Current prepared checkpoint: **total coded level-three seeded queries.**
 Seven independently accepted source files add six exact aliases, including the
 unchanged strict and weak SingleQueryReduction obligations. The 693-module
