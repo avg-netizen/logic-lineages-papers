@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ExternalCheckpoint20261104BoundedRows
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SignedRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SignedRowsCodeStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperBranchRowsSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperBranchRowsCodeStatementChecks
+
+/-! Focused integration of sixteen exact signed-translation and full HyperWindow
+branch targets. Every branch remains in the restricted occurrence-row grammar.
+General anchors, purely linear elimination, branch exhaustiveness and the global
+quantified-block induction remain separate obligations. -/

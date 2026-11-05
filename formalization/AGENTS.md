@@ -1,4 +1,19 @@
-Current external user release: **continue formalization from the newer merged work on a new cumulative branch.**
+Current external checkpoint: **total signed translation and complete restricted-row HyperWindow case II6.**
+The latest user continuation extends `21972d8` on the same cumulative branch
+`formalization/cumulative-continuation-2026-11-04-second`. Sixteen further exact
+targets in four gates and the focused 180-module aggregate passed. The preceding
+bounded-row package, all earlier accepted sources and the newer PA addition laws
+are preserved. See
+`verification/cumulative-continuation-2026-11-04-second/signed-rows/STATUS.md`.
+
+The source register stays 161 checked, 2 inherited and 26 pending/189. Signed
+translation has unit slope; general anchors, linear elimination, dominant
+boundaries, exhaustive assembly and the global induction remain pending.
+Existing exact-target, standard-axiom and bounded serialized compiler rules
+remain active. The coordinator owns native checks, metadata and publication.
+The preceding checkpoint and historical local pauses below retain their scope.
+
+Previous external user release: **continue formalization from the newer merged work on a new cumulative branch.**
 The current base is main `1794804`, including the preceding source-row package
 and the accepted PA addition-law component. The new branch is
 `formalization/cumulative-continuation-2026-11-04-second`. This release supersedes

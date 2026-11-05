@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperBranchRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperBranchRowsSemanticStatementChecks
+
+theorem actual_guard_calibration : HyperBranchRowsTargets.ActualGuardCalibration :=
+  HyperBranchRowsSemanticProof.actualGuardCalibration
+theorem actual_branch_calibration : HyperBranchRowsTargets.ActualBranchCalibration :=
+  HyperBranchRowsSemanticProof.actualBranchCalibration
+theorem actual_two_variable_elimination : HyperBranchRowsTargets.ActualTwoVariableElimination :=
+  HyperBranchRowsSemanticProof.actualTwoVariableElimination
+theorem exact_branch_support : HyperBranchRowsTargets.ExactBranchSupport :=
+  HyperBranchRowsSemanticProof.exactBranchSupport
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperBranchRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.HyperBranchRowsSemanticStatementChecks

@@ -1,4 +1,32 @@
-# Formalization checkpoint — second cumulative continuation
+# Formalization checkpoint — signed translation and hyper-collision
+
+The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
+now continues `21972d8` with **sixteen further exact targets in four gates**.
+Ten establish total signed unit translation in the existing occurrence-row
+grammar; six close the complete three-way HyperWindow case II6 in that grammar.
+
+The actual substitution `x_i := toNat(x_j + d)` splits at its truncation
+boundary, preserving original occurrence domains and Boolean positions. The
+hyper-collision clause has bounded-left, bounded-right and equal-index outputs,
+each with exactly one of the original two quantified names. All three are
+calibrated to the accepted expanded source branches, and their literal numeric
+compilers are primitive recursive.
+
+All sixteen frozen aliases and the focused aggregate
+`LogicLineages.ExternalCheckpoint20261104SignedRows` passed. Its **180 local
+source modules** match successful native receipts. Standard-axiom audits and
+unchanged compiler limits apply throughout. Prior accepted source bytes,
+including the newer PA addition laws and all 161 modules of the preceding
+bounded-row closure, are preserved.
+
+The source register remains **161 checked, 2 inherited, 26 pending / 189**.
+General anchors, purely linear elimination, dominant boundaries, branch
+exhaustiveness and the global quantified-block induction remain pending.
+Read the [current checkpoint](formalization/verification/cumulative-continuation-2026-11-04-second/signed-rows/STATUS.md),
+[source correspondence](formalization/verification/cumulative-continuation-2026-11-04-second/signed-rows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](formalization/verification/cumulative-continuation-2026-11-04-second/signed-rows/ACCEPTANCE.json).
+
+## Previous bounded-row checkpoint
 
 The new branch `formalization/cumulative-continuation-2026-11-04-second`
 continues merged main `1794804`, preserving both the prior source-introduction

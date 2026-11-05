@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SignedRowsSemanticProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SignedRowsSemanticStatementChecks
+
+theorem actual_row_translation : SignedRowsTargets.ActualRowTranslation :=
+  SignedRowsSemanticProof.actualRowTranslation
+theorem exact_translated_occurrences : SignedRowsTargets.ExactTranslatedOccurrences :=
+  SignedRowsSemanticProof.exactTranslatedOccurrences
+theorem exact_translated_domains : SignedRowsTargets.ExactTranslatedDomains :=
+  SignedRowsSemanticProof.exactTranslatedDomains
+theorem actual_core_translation : SignedRowsTargets.ActualCoreTranslation :=
+  SignedRowsSemanticProof.actualCoreTranslation
+theorem exact_core_support : SignedRowsTargets.ExactCoreSupport :=
+  SignedRowsSemanticProof.exactCoreSupport
+theorem actual_total_substitution : SignedRowsTargets.ActualTotalSubstitution :=
+  SignedRowsSemanticProof.actualTotalSubstitution
+theorem exact_total_support : SignedRowsTargets.ExactTotalSupport :=
+  SignedRowsSemanticProof.exactTotalSupport
+theorem actual_guarded_atom_translation : SignedRowsTargets.ActualGuardedAtomTranslation :=
+  SignedRowsSemanticProof.actualGuardedAtomTranslation
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SignedRowsSemanticStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SignedRowsSemanticStatementChecks

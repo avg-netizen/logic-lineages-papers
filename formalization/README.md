@@ -1,4 +1,34 @@
-## Current checkpoint — second cumulative continuation, 4 November 2026
+## Current checkpoint — signed translation and hyper-collision, 4 November 2026
+
+The cumulative branch `formalization/cumulative-continuation-2026-11-04-second`
+continues `21972d8` with **sixteen further exact supporting targets**. Ten cover
+total signed unit translation in the unchanged occurrence-row grammar, and six
+cover the complete three-way HyperWindow II6 elimination clause.
+
+The translation splits on the actual truncation boundary of
+`x_i := toNat(x_j + d)`. It preserves occurrence order, every coefficient,
+original domains and Boolean positions. The bounded-left, bounded-right and
+equal-index branches each remove one original quantified name, with exact
+support and pointwise equivalence to the accepted expanded source branches.
+Their complete literal numeric programs are primitive recursive.
+
+The focused aggregate `LogicLineages.ExternalCheckpoint20261104SignedRows`
+passed. All **180 local source modules** in its closure match successful native
+receipts, and all sixteen exact aliases passed standard-axiom audits. Frozen
+definitions/targets and compiler limits are unchanged. The preceding 161-module
+bounded-row closure and newer PA addition-law files retain their accepted bytes.
+
+The source register remains **161 checked, 2 inherited, 26 pending / 189**.
+General affine scaling and anchors, purely linear elimination, dominant boundary
+cases, branch exhaustiveness and the global quantified-block induction remain
+separate. No full public-root rebuild or remote-CI pass is claimed. Read the
+[current checkpoint](verification/cumulative-continuation-2026-11-04-second/signed-rows/STATUS.md),
+[source correspondence](verification/cumulative-continuation-2026-11-04-second/signed-rows/SOURCE-CORRESPONDENCE.md)
+and [acceptance evidence](verification/cumulative-continuation-2026-11-04-second/signed-rows/ACCEPTANCE.json).
+
+---
+
+## Previous checkpoint — second cumulative continuation, 4 November 2026
 
 The new branch `formalization/cumulative-continuation-2026-11-04-second`
 continues merged main `1794804` and preserves the newer PA addition-law work.
