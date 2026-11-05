@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearBlockSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearBlockCodeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearBlockStatementChecks
+
+theorem exact_one_name_occurrences : LinearBlockTargets.ExactOneNameOccurrences :=
+  LinearBlockProof.exactOneNameOccurrences
+theorem exact_linearity_after_elimination : LinearBlockTargets.ExactLinearityAfterElimination :=
+  LinearBlockProof.exactLinearityAfterElimination
+theorem exact_block_test : LinearBlockTargets.ExactBlockTest := LinearBlockProof.exactBlockTest
+theorem actual_block_elimination : LinearBlockTargets.ActualBlockElimination :=
+  LinearBlockProof.actualBlockElimination
+theorem exact_block_occurrences : LinearBlockTargets.ExactBlockOccurrences :=
+  LinearBlockProof.exactBlockOccurrences
+theorem exact_block_support : LinearBlockTargets.ExactBlockSupport := LinearBlockProof.exactBlockSupport
+theorem literal_code_calibration : LinearBlockTargets.LiteralCodeCalibration :=
+  LinearBlockProof.literalCodeCalibration
+theorem actual_numeric_programs : LinearBlockTargets.ActualNumericPrograms :=
+  LinearBlockProof.actualNumericPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearBlockStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearBlockStatementChecks

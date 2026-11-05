@@ -1,3 +1,11 @@
+Current external checkpoint: **restricted linear blocks and actual seeded semantic source systems.**
+The focused 613-module cumulative aggregate passed with fifteen new exact targets
+in seventeen Lean files. Read `verification/cumulative-continuation-2026-11-05/combined-seeded-linear/STATUS.md`.
+Literal summand occurrence means membership, not multiplicity/order. Seeded numeric
+effectivity, full functional hardness and general nonlinear BASE decision remain
+pending. Register: 161 checked, 2 inherited, 26 pending / 189. Existing serialized
+compiler, exact-target and standard-axiom policies remain active.
+
 Current external checkpoint: **effective elimination of a linear name in source rows.**
 The latest continuation extends `30af8ce` on
 `formalization/cumulative-continuation-2026-11-04-second`. Twelve exact targets
