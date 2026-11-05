@@ -1,3 +1,11 @@
+Current prepared checkpoint: **semantic shifted-input guards.**
+Six independently accepted files add seven exact aliases. The 737-module
+aggregate and exact gate passed. Read
+`verification/cumulative-continuation-2026-11-05/combined-shifted-input-guards/STATUS.md`.
+The active sign theorem requires activity; inactive rows may have a nonzero
+linear remainder. No numeric PR, inactive assembly or full elimination claim.
+Register unchanged: 161/2/26 of 189. No publication attempted.
+
 Current prepared checkpoint: **total coded level-two finite queries.**
 Six independently accepted source files add six exact aliases, including both
 unchanged FiniteQueryReduction obligations. The 728-module aggregate is

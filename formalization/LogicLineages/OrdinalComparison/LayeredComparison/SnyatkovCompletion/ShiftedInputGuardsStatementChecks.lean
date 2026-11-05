@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsBranchProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks
+
+theorem actual_atomic_comparisons : ShiftedInputGuardsTargets.ActualAtomicComparisons :=
+  ShiftedInputGuardsProof.actualAtomicComparisons
+theorem actual_guard_compilation : ShiftedInputGuardsTargets.ActualGuardCompilation :=
+  ShiftedInputGuardsProof.actualGuardCompilation
+theorem literal_guard_linearity : ShiftedInputGuardsTargets.LiteralGuardLinearity :=
+  ShiftedInputGuardsProof.literalGuardLinearity
+theorem original_input_calibration : ShiftedInputGuardsTargets.OriginalInputCalibration :=
+  ShiftedInputGuardsProof.originalInputCalibration
+theorem actual_cancellation_guard : ShiftedInputGuardsTargets.ActualCancellationGuard :=
+  ShiftedInputGuardsProof.actualCancellationGuard
+theorem actual_block_guard : ShiftedInputGuardsTargets.ActualBlockGuard :=
+  ShiftedInputGuardsProof.actualBlockGuard
+theorem actual_finite_active_branch : ShiftedInputGuardsTargets.ActualFiniteActiveBranch :=
+  ShiftedInputGuardsProof.actualFiniteActiveBranch
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks

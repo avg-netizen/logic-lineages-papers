@@ -1,0 +1,92 @@
+{
+  "status": "exact shifted-input guards gate and focused cumulative aggregate passed; publication not attempted",
+  "accepted_at_utc": "2026-11-05T10:11:50.268976+00:00",
+  "base_commit": "00a9acc8466b187262b52b5514c8e432596bddff",
+  "base_tree": "bd110e65893f96e32611a183cd97be005aca9686",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261105ShiftedInputGuards",
+  "aggregate_source_sha256": "c17ed50bdb67a7d853835221437e1b5fbc7eba80e1d2c2c3ea3198468df271ba",
+  "components": [
+    {
+      "component": "ShiftedInputGuards",
+      "gate_module": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks",
+      "source_files": 6,
+      "exact_aliases": 7,
+      "evidence": "verification/cumulative-continuation-2026-11-05/shifted-input-guards/COMPONENT-EVIDENCE.json"
+    }
+  ],
+  "new_source_files": 6,
+  "new_exact_targets": 7,
+  "local_closure_modules": 737,
+  "fresh_successful_compile_rows": 2,
+  "distinct_freshly_compiled_modules": 2,
+  "source_matched_cache_modules_reused": 735,
+  "receipt_sha256": "cc2ad978522a96ff57d87ab7934682eb3cee6c8caffc6f95b82c71974b69b4df",
+  "gate_log_sha256": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks": "62b6eac7d8654fd99c9170b4b53ed133cc681482171246ca41200a6d4b14dd6c"
+  },
+  "standard_axiom_reports": {
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.actual_block_guard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.literal_guard_linearity": [
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.original_input_calibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.actual_guard_compilation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.actual_atomic_comparisons": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.actual_finite_active_branch": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks.actual_cancellation_guard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "caps": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "peak_process_tree_rss_kib": 1266800,
+  "source_register": {
+    "checked": 161,
+    "inherited": 2,
+    "pending": 26,
+    "total": 189
+  },
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "publication_performed": false,
+  "limits": [
+    "Semantic shifted-input guards and active branch only; ActualFiniteActiveBranch requires plain-row, threshold, maximal-name and surviving-block activity hypotheses.",
+    "activeSign is not a theorem for inactive rows; their residual linear part may be nonzero.",
+    "No numeric-code primitive recursiveness or inactive-Phi/HyperPhi assembly.",
+    "No full source-case assembly or global nonlinear elimination.",
+    "No numbered source statement is promoted."
+  ]
+}

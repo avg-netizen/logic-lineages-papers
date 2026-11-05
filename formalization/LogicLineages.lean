@@ -2166,3 +2166,6 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 
 -- Total coded strict/weak level-two finite source-query lists, including malformed inputs.
 public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.FiniteQueryCodeStatementChecks
+
+-- Semantic guards on original signed-shifted inputs and the active maximal-name branch.
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ShiftedInputGuardsStatementChecks
