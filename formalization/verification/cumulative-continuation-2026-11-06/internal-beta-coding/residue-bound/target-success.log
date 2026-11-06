@@ -1,0 +1,30 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundTargets
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundTargets
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:19:2: error: 'change' tactic failed, pattern
+  Formula.relabel ?m.43 R ⊓ Formula.relabel ?m.50 (ltF ?m.45 ?m.46) = ?m.52
+is not definitionally equal to target
+  Formula.relabel (Sum.map (Sum.map j id) id) (boundedRelation R K) =
+    boundedRelation (Formula.relabel (Sum.map (Sum.map j id) id) R) (Term.relabel j K)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:28:15: error(lean.unknownIdentifier): Unknown identifier `orderSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:26:90: error: unsolved goals
+α β : Type
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+K : OTerm α
+ts : α → OTerm β
+⊢ ((BoundedFormula.subst R fun x => emb (liftTerms (liftTerms ts) x)) ⊓
+      BoundedFormula.subst (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel Sum.inl K))) fun x =>
+        emb (liftTerms (liftTerms ts) x)) =
+    boundedRelation (BoundedFormula.subst R fun x => emb (liftTerms (liftTerms ts) x)) (Term.subst K ts)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:50:17: error(lean.unknownIdentifier): Unknown identifier `existsRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:49:72: error: unsolved goals
+α β : Type
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+n : OTerm α
+j : α → β
+⊢ Formula.relabel j
+      (existsOne
+        (boundBelow (Formula.relabel (Sum.map (Sum.map Sum.inl id) id) R) (var (Sum.inr 0)) (Term.relabel Sum.inl n))) =
+    collection (Formula.relabel (Sum.map (Sum.map j id) id) R) (Term.relabel j n)
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794006778922989773-5.json
