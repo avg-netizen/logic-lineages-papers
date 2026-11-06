@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionSyntaxProof.lean:85:4: error: unsolved goals
+case e_a.inl.inl
+L : Language
+α β : Type
+ts : α → L.Term β
+k : ℕ
+phi : L.BoundedFormula (α ⊕ Fin 1) k
+j : ℕ
+t : L.Term ((α ⊕ Fin 1) ⊕ Fin j)
+a : α
+⊢ Term.relabel Sum.inl (ts a) = Term.relabel ((BoundedFormula.relabelAux id j ∘ Sum.inl) ∘ Sum.inl) (ts a)

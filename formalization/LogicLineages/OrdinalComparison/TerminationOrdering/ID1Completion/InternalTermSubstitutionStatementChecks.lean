@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionStatementChecks
+
+theorem composition_exact : InternalTermSubstitutionPreflight.compositionComparator :=
+  InternalTermSubstitutionProof.actualFormulaSubstitutionComposition
+theorem universal_exact : InternalTermSubstitutionPreflight.universalComparator :=
+  InternalTermSubstitutionProof.actualUniversalSubstitution
+theorem positive_exact : InternalTermSubstitutionPreflight.positiveComparator :=
+  InternalTermSubstitutionProof.actualPositiveSubstitution
+theorem source_exact : InternalTermSubstitutionPreflight.sourceComparator :=
+  InternalTermSubstitutionProof.actualSourceBodyInstantiation
+theorem internal_exact : InternalTermSubstitutionPreflight.internalComparator :=
+  InternalTermSubstitutionProof.actualExplicitSourceUnfolding
+
+#print axioms composition_exact
+#print axioms universal_exact
+#print axioms positive_exact
+#print axioms source_exact
+#print axioms internal_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionStatementChecks

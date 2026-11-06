@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionProof.lean:50:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  arithmeticEmbedding.onBoundedFormula (BoundedFormula.subst guard ts)
+in the target expression
+  (arithmeticEmbedding.onFormula (BoundedFormula.subst guard ts)).imp
+      (BoundedFormula.subst p.formula fun a => arithmeticEmbedding.onTerm (ts a)) =
+    BoundedFormula.subst (Positive.guarded guard p).formula fun a => arithmeticEmbedding.onTerm (ts a)
+
+case guarded
+α α✝ : Type
+guard : OrdinaryArithmetic.Formula α✝
+p : Positive α✝
+ih :
+  ∀ (β : Type) (ts : α✝ → OrdinaryArithmetic.Term β),
+    (substitutePositive ts p).formula = BoundedFormula.subst p.formula fun a => arithmeticEmbedding.onTerm (ts a)
+β : Type
+ts : α✝ → OrdinaryArithmetic.Term β
+hg :
+  arithmeticEmbedding.onBoundedFormula (BoundedFormula.subst guard ts) =
+    (arithmeticEmbedding.onBoundedFormula guard).subst fun a => arithmeticEmbedding.onTerm (ts a)
+⊢ (arithmeticEmbedding.onFormula (BoundedFormula.subst guard ts)).imp
+      (BoundedFormula.subst p.formula fun a => arithmeticEmbedding.onTerm (ts a)) =
+    BoundedFormula.subst (Positive.guarded guard p).formula fun a => arithmeticEmbedding.onTerm (ts a)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionProof.lean:57:4: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (BoundedFormula.subst p.formula fun a =>
+      arithmeticEmbedding.onTerm (Sum.elim (fun a => Term.relabel Sum.inl (ts a)) (fun i => var (Sum.inr i)) a)) =
+    BoundedFormula.subst p.formula
+      (Sum.elim (fun a => Term.relabel Sum.inl (arithmeticEmbedding.onTerm (ts a))) fun i => var (Sum.inr i))
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.53} {β : α → Sort ?u.52} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case all
+α α✝ : Type
+p : Positive (α✝ ⊕ Fin 1)
+ih :
+  ∀ (β : Type) (ts : α✝ ⊕ Fin 1 → OrdinaryArithmetic.Term β),
+    (substitutePositive ts p).formula = BoundedFormula.subst p.formula fun a => arithmeticEmbedding.onTerm (ts a)
+β : Type
+ts : α✝ → OrdinaryArithmetic.Term β
+⊢ (BoundedFormula.subst p.formula fun a =>
+      arithmeticEmbedding.onTerm (Sum.elim (fun a => Term.relabel Sum.inl (ts a)) (fun i => var (Sum.inr i)) a)) =
+    BoundedFormula.subst p.formula
+      (Sum.elim (fun a => Term.relabel Sum.inl (arithmeticEmbedding.onTerm (ts a))) fun i => var (Sum.inr i))

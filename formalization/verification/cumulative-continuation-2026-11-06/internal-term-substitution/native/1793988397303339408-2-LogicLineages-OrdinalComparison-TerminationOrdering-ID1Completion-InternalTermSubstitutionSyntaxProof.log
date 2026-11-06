@@ -1,0 +1,39 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionSyntaxProof.lean:40:14: error: unsolved goals
+case equal
+L : Language
+α β γ : Type
+k : ℕ
+ts : α → L.Term β
+us : β → L.Term γ
+ht :
+  ∀ (j : ℕ) (t : L.Term (α ⊕ Fin j)),
+    (t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr))).subst
+        (Sum.elim (Term.relabel Sum.inl ∘ us) (var ∘ Sum.inr)) =
+      t.subst (Sum.elim (fun a => Term.relabel Sum.inl ((ts a).subst us)) (var ∘ Sum.inr))
+n✝ : ℕ
+t u : L.Term (α ⊕ Fin n✝)
+⊢ BoundedFormula.equal (t.subst (Sum.elim (fun a => Term.relabel Sum.inl ((ts a).subst us)) (var ∘ Sum.inr)))
+      (u.subst (Sum.elim (fun a => Term.relabel Sum.inl ((ts a).subst us)) (var ∘ Sum.inr))) =
+    BoundedFormula.equal (t.subst (Sum.elim (Term.relabel Sum.inl ∘ fun a => (ts a).subst us) (var ∘ Sum.inr)))
+      (u.subst (Sum.elim (Term.relabel Sum.inl ∘ fun a => (ts a).subst us) (var ∘ Sum.inr)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionSyntaxProof.lean:88:6: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionSyntaxProof.lean:95:102: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTermSubstitutionSyntaxProof.lean:123:14: error: unsolved goals
+case equal
+L : Language
+L' : Language
+h : L →ᴸ L'
+α β : Type
+k : ℕ
+ts : α → L.Term β
+ht :
+  ∀ (j : ℕ) (t : L.Term (α ⊕ Fin j)),
+    h.onTerm (t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr))) =
+      (h.onTerm t).subst (Sum.elim (fun a => Term.relabel Sum.inl (h.onTerm (ts a))) (var ∘ Sum.inr))
+n✝ : ℕ
+t u : L.Term (α ⊕ Fin n✝)
+⊢ BoundedFormula.equal ((h.onTerm t).subst (Sum.elim (fun a => Term.relabel Sum.inl (h.onTerm (ts a))) (var ∘ Sum.inr)))
+      ((h.onTerm u).subst (Sum.elim (fun a => Term.relabel Sum.inl (h.onTerm (ts a))) (var ∘ Sum.inr))) =
+    BoundedFormula.equal
+      ((h.onTerm t).subst (Sum.elim (Term.relabel Sum.inl ∘ fun a => h.onTerm (ts a)) (var ∘ Sum.inr)))
+      ((h.onTerm u).subst (Sum.elim (Term.relabel Sum.inl ∘ fun a => h.onTerm (ts a)) (var ∘ Sum.inr)))

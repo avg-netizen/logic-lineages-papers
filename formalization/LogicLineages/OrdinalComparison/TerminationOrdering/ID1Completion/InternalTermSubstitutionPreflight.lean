@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionPreflight
+def compositionComparator : Prop := InternalTermSubstitutionTargets.ActualFormulaSubstitutionComposition
+def universalComparator : Prop := InternalTermSubstitutionTargets.ActualUniversalSubstitution
+def positiveComparator : Prop := InternalTermSubstitutionTargets.ActualPositiveSubstitution
+def sourceComparator : Prop := InternalTermSubstitutionTargets.ActualSourceBodyInstantiation
+def internalComparator : Prop := InternalTermSubstitutionTargets.ActualExplicitSourceUnfolding
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionPreflight
