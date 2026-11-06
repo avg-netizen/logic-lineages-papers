@@ -1,0 +1,913 @@
+{
+  "schema": "focused-source-pins-v1",
+  "collected_at_utc": "2026-11-06T00:45:43.290067+00:00",
+  "baseline_commit": "e5c70ae3f0f619abe079ff7d1fca6f5259cc3d76",
+  "root_modules": [
+    "LogicLineages.ExternalCheckpoint20261105UniformSeparation"
+  ],
+  "path_base": "repository root",
+  "local_source_count": 169,
+  "source_files": {
+    "formalization/LogicLineages/Audit.lean": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d",
+    "formalization/LogicLineages/ExternalCheckpoint20261105UniformSeparation.lean": "c616c86e30192f8e1292de3351be4b25e4fe0ca6d643f0d988f68b6102805be5",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapse.lean": "a03f5b0c11b528fab40124c85770a1c402a7fcafb2290f1d00cc6c03250554b4",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseBounds.lean": "5629e690b025408116fb1e26814f914c5e2e4891d5f024b0782fb6319dff5d3f",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseBoundsTargets.lean": "9d8ed2a14aadd75244eade299d9693da2627ded07054706a012aec6e47403906",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseDefinitions.lean": "4895d15c7b5a5bbda7bd8964c48c00fe2a02e8fb7f1608b04573a44384023fe8",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseTargets.lean": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc",
+    "formalization/LogicLineages/OrdinalComparison/ActualDescent.lean": "277a39558b157a3e89327fbff810befea80c0bae4b5fa174c30d39ec07687d42",
+    "formalization/LogicLineages/OrdinalComparison/ActualDescentDefinitions.lean": "6734139c90e73901f3f785600356d505c268c67ba8b753aa548448041643cd0a",
+    "formalization/LogicLineages/OrdinalComparison/ActualDescentTargets.lean": "3392376ef56bd8150e4650f956f6ebf0223d6fe2c61d56672353164ca77deb24",
+    "formalization/LogicLineages/OrdinalComparison/ActualFiniteHead.lean": "27ba191bd79731661e65663cc5369c49fccc516dbd759b08680bc34c1e64b9b0",
+    "formalization/LogicLineages/OrdinalComparison/ActualFiniteHeadTargets.lean": "682a0532c51866e3d9b4ead5841da3f3cf243bb2e3cf1da104272db01630ee1e",
+    "formalization/LogicLineages/OrdinalComparison/ActualLimitPredecessor.lean": "b8c957fe444d9bb4c2e9f01b55bce4ddc24ed4bfc7489a3e0a45dd39f4610178",
+    "formalization/LogicLineages/OrdinalComparison/ActualLimitPredecessorTargets.lean": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8",
+    "formalization/LogicLineages/OrdinalComparison/ActualMaximumPredecessor.lean": "8c05f8b1a0517a426b4397c1a3bde34d37e32cb4781ea1d75c1119391b635f59",
+    "formalization/LogicLineages/OrdinalComparison/ActualMaximumPredecessorDefinitions.lean": "2605720b2243bb13e48f1c1602a767e9bc4122b70a730277529b1f3021db51e5",
+    "formalization/LogicLineages/OrdinalComparison/ActualMaximumPredecessorTargets.lean": "67360a5bed345309757b9609b5707d6d9d357eed55b11c501391665fff940fc6",
+    "formalization/LogicLineages/OrdinalComparison/ActualNormBallTargets.lean": "ea9bb021f2028ec50b6965e9ce32ddccf20bc9c22a05a4c85827344ca5cf5847",
+    "formalization/LogicLineages/OrdinalComparison/ActualNormBalls.lean": "6af56560536eb6868a3b2ff83ca03784689b4fd5ba2e897bfb493cfb35d85c93",
+    "formalization/LogicLineages/OrdinalComparison/ActualNormRecursionTargets.lean": "1ca68f18a7d6e37f70144865c38ed49166400b913a89091b201cf59555cdc61e",
+    "formalization/LogicLineages/OrdinalComparison/ActualOrdinalNorm.lean": "7033245fd9abd85031358801fa5b63e8865b57be2d791546c8153c46cc39a555",
+    "formalization/LogicLineages/OrdinalComparison/ActualOrdinalNormDefinitions.lean": "0503526e3c50818f22e9924cac19345912a4bdd63d130ad011f0f1225b82eb0b",
+    "formalization/LogicLineages/OrdinalComparison/ActualOrdinalNormTargets.lean": "d8684e1d8b1f343d0410a09f6a80d6ebfe7f8390ecd4fbcf99d07c37ab3a1297",
+    "formalization/LogicLineages/OrdinalComparison/ActualSinglePredecessor.lean": "7fa8f1dcbff2243a3ca847dd015bcc803e06f469b80aee03af2b55af0c504a88",
+    "formalization/LogicLineages/OrdinalComparison/ActualSinglePredecessorTargets.lean": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf",
+    "formalization/LogicLineages/OrdinalComparison/ActualTailSeparation.lean": "3c0e41666709c92dcfc37ea1fa603c64cf3e6fba569eec6c90446f6262262b88",
+    "formalization/LogicLineages/OrdinalComparison/ActualTailSeparationTargets.lean": "cb22045f61f16754ebe4b91bb03ddb491b2085dd3a478e1b084d5216a213c13e",
+    "formalization/LogicLineages/OrdinalComparison/ActualTerminal.lean": "72b3f1f1d94d83fabe7fbdbcb8f198df8af7e752a1cac5cecdc86e39ce205711",
+    "formalization/LogicLineages/OrdinalComparison/ActualTerminalDefinitions.lean": "32f49d9316fe9c6fc5d594fb031fda43dc39edafae7116a48df13750f9a1bce4",
+    "formalization/LogicLineages/OrdinalComparison/ActualTerminalTargets.lean": "97993c72496c0de4a35059978d9e6070eee81c7b6e78fb8794fed6fba7ca3aa2",
+    "formalization/LogicLineages/OrdinalComparison/CNFDescent.lean": "b8061d831972ef2b03eb4362c96db683b72fc099d98a38ec58bdd61a596ffd39",
+    "formalization/LogicLineages/OrdinalComparison/CollapseTargets.lean": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6",
+    "formalization/LogicLineages/OrdinalComparison/CompatiblePrefixDefinitions.lean": "d1db4fb05615a76db32dafce537262eecbdd6217a8eddcf393cc11cb09dad13e",
+    "formalization/LogicLineages/OrdinalComparison/CompatiblePrefixFactsProof.lean": "cf06a738c440c708b5089f35fdb9ace9b858b330e0fb26d4002739be744ab5ef",
+    "formalization/LogicLineages/OrdinalComparison/CompatiblePrefixMaximumProof.lean": "081ed73e2389d9dccaa1c381153f282008aed5bb70438ec1e9223f49ad970dce",
+    "formalization/LogicLineages/OrdinalComparison/CompatiblePrefixNormProof.lean": "a0e8e182daa6c68e6c39ea86d9fad374c46575f5e350cd97b4fc6f75553ace89",
+    "formalization/LogicLineages/OrdinalComparison/CompatiblePrefixTargets.lean": "929f7a1dec339c61be2296ee28d409aefa8200fa98190f4dac95fd1dcc79cceb",
+    "formalization/LogicLineages/OrdinalComparison/ConstantBudgetDefinitions.lean": "f50ffea9b6ff8631e54a5407a42553813a58fa1635b7bea4faa149ae2e9a0bf0",
+    "formalization/LogicLineages/OrdinalComparison/ConstantBudgetFactsProof.lean": "2bbb3faf9695091d2c0712668568820b401413ba2d697f46eab338af7bf879b7",
+    "formalization/LogicLineages/OrdinalComparison/ConstantBudgetTargets.lean": "1b8887b8adf78b6c42afae68b2c1d676a476bfeb4bd0efdd5d1a4371736f218f",
+    "formalization/LogicLineages/OrdinalComparison/ConstantCutFactsProof.lean": "80a8d3325780e61cecf46ccb65d0cbb15581338c6dba8cadf195414d9ca9213d",
+    "formalization/LogicLineages/OrdinalComparison/ConstantCutPeriodTargets.lean": "a9da4a62de80231fe06806e71bfe0fe4f1144f515d693943c793f3033ff32baa",
+    "formalization/LogicLineages/OrdinalComparison/Control.lean": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140",
+    "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4",
+    "formalization/LogicLineages/OrdinalComparison/ControlResidueDefinitions.lean": "0328353a65777d8b8c0bf7f5e787a6669b9d1610979f214edd9a661a5eb1073a",
+    "formalization/LogicLineages/OrdinalComparison/ControlScheduleDefinitions.lean": "62fa78ff1c37e5ea9549aea3ce8aa4b1e722ff862d3107d3b73bdddcab6bbb97",
+    "formalization/LogicLineages/OrdinalComparison/ControlSegmentProof.lean": "41395963add1eea9f8ef6db79d5ca813077bb3d3020fac702dbb01a90c1aa5d1",
+    "formalization/LogicLineages/OrdinalComparison/ControlSegmentTargets.lean": "ada51c97ed68f5394eb336a91ec4824dec3b6478136bc57fb80a94c818c8278c",
+    "formalization/LogicLineages/OrdinalComparison/ControlTargets.lean": "2b5c663880aec5f55fe6f526bacf19ce131d3ae77e9485332b78dc5826d693c7",
+    "formalization/LogicLineages/OrdinalComparison/ControlledCountDefinitions.lean": "1d2a098c5cf1184b0a2dec8c55e154180bf05ddb3f3f94a48fcecd639f534789",
+    "formalization/LogicLineages/OrdinalComparison/ControlledCountProof.lean": "0bbbca9526d12bce7ecb50fea90a8a4d838e0ab02ff946cef55844b99a708484",
+    "formalization/LogicLineages/OrdinalComparison/ControlledCountTargets.lean": "fae285effb9b901d3628a9af8dcdae2507edc1d12624088efd71ed61956bfb25",
+    "formalization/LogicLineages/OrdinalComparison/ControlledStepDefinitions.lean": "bcc2e310c2ef71067011ae046cff006ddbaaa649415d2bf2c1b261e05e6bffc3",
+    "formalization/LogicLineages/OrdinalComparison/ControlledStepProof.lean": "0845018d942a4d0e8d31938fcf835ffb1fed0947e0b1f5b0d072cf8f428ed967",
+    "formalization/LogicLineages/OrdinalComparison/ControlledStepTargets.lean": "9c0c81be9a84414fe790c1fa42a9ef88a0166aed04f12cbda4a4bc0de7ec9f21",
+    "formalization/LogicLineages/OrdinalComparison/CounterFixedShiftComparisonDefinitions.lean": "9f41d04cef1b142473cb60c5dd70c6bc973c27311ab10567aa4abed51d6783ce",
+    "formalization/LogicLineages/OrdinalComparison/CounterLeaderBoundsDefinitions.lean": "aa6fcbed7151160a4678c4e4196071fe957872767974bd42bfd22ed4d164e9d5",
+    "formalization/LogicLineages/OrdinalComparison/CounterLeaderCollisionDefinitions.lean": "7841ff48e8d5e36d31f77fb9758ef8127ab4aeb11e9c2732830d9caa80fee447",
+    "formalization/LogicLineages/OrdinalComparison/CounterLeaderComparisonDefinitions.lean": "aac7e824d7c8039ca897e3b9b4b94c0fbff633cd12f5df687ee2ae958804b7e7",
+    "formalization/LogicLineages/OrdinalComparison/CounterLeaderExpansionDefinitions.lean": "3a715bc3ddab7f5f0f5e7e8414de00a2acdefdf1b256a612cdb032b82f46e808",
+    "formalization/LogicLineages/OrdinalComparison/CounterResidualDivergenceDefinitions.lean": "ae36bf29733a0b8c10f45129903081b2b347157cb35d119409473191eee2d88d",
+    "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremDefinitions.lean": "e3435d139e0fb2067e2553750fbef03efb8228b3cdfb2cc6a6033901251fdf77",
+    "formalization/LogicLineages/OrdinalComparison/CounterSourceTheoremTargets.lean": "07c39062c995e09b3e80da30dc2eec18c252ec593195c22ab0436a1a6597e456",
+    "formalization/LogicLineages/OrdinalComparison/CubicLeaderRecognitionDefinitions.lean": "21ea30a88c45277a3ff1dde633be5e7161fb598ca2a96e8290a4e53d0d17aea1",
+    "formalization/LogicLineages/OrdinalComparison/Definitions.lean": "d3a62bbfa4141166fbdf5f5bcc3f3e7e8ecad7c437a15ce5df9baff851a67867",
+    "formalization/LogicLineages/OrdinalComparison/EncodedCompensatedCountDefinitions.lean": "aad6ee7e202b5a1d794f065b5447ce963c98a7693afe1fae3f400a16b08436de",
+    "formalization/LogicLineages/OrdinalComparison/EncodedCompensatedStepDefinitions.lean": "6c7ec6d1f01bb948b4114a1bc5f087defe8d8127e68efd9bedd296fa907d1a15",
+    "formalization/LogicLineages/OrdinalComparison/EncodedDescentDefinitions.lean": "e2e3e02e3bff2b31563ec8f23401be2de357d15ec4a92480596e32b82d7f2f55",
+    "formalization/LogicLineages/OrdinalComparison/EncodedMaximumDefinitions.lean": "0f6b692aef9be3fae8f6d6ed8220bf4379fd97f5c445c88c738b4fbede30b800",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalSumDefinitions.lean": "b1c4791855f7fcf12f1a39530810d5c3c0b49706128961382fefe643968f4d30",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNormBallDefinitions.lean": "a955d2fcad4e86aaec3c4849c8f687aed9a66cfe0d83747b52b282163b9f7715",
+    "formalization/LogicLineages/OrdinalComparison/EncodedSuffixKernelDefinitions.lean": "db68ff958d3d36a95cd497eb52b067d5b798152d92fa84ef555e25678c638074",
+    "formalization/LogicLineages/OrdinalComparison/EpsilonZeroCalibration.lean": "1f30ebbce76d1761faf2121f60939c71164c6ecb74829bf9d8f36a5766a1eb4f",
+    "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3",
+    "formalization/LogicLineages/OrdinalComparison/FiniteKernelRecursionDefinitions.lean": "545f9a450758c0fcf3abaf9e720d6074425e13e39d1e045fee841f019b3fb581",
+    "formalization/LogicLineages/OrdinalComparison/FiniteTail.lean": "7c596451714034c06e8ab0b64ede8c718300f3ce8820a17ab3d31da0529dc660",
+    "formalization/LogicLineages/OrdinalComparison/FiniteTailTargets.lean": "7069d9cc5055509a8d22659d7de464f5efec5ce8d79291ef037fe5b79c13a77c",
+    "formalization/LogicLineages/OrdinalComparison/KernelCounterCalibrationDefinitions.lean": "419391a4932ee5ac2b7e8e895e36c24ac86b5471af14a6b4c4493181594ea662",
+    "formalization/LogicLineages/OrdinalComparison/KernelCounterCalibrationTargets.lean": "dd315ed69726b330a08e5472f227c7c6baeb2eea2b7eb09d6e8252af6e3f4ab0",
+    "formalization/LogicLineages/OrdinalComparison/KernelCounterResidueDefinitions.lean": "f88ba1655e417ff12ef4e8fefe7bce8efaab1b138d1e96baed993e5464d0b21b",
+    "formalization/LogicLineages/OrdinalComparison/KernelInputProgramDefinitions.lean": "98b6e13a0ff4d798fb69c984cfa2e3693f646d05cb5ec25c149c3148715f2ccc",
+    "formalization/LogicLineages/OrdinalComparison/KernelMassKeyDefinitions.lean": "5e08f2335c9690ec33b66d9f3518b8ab3f90432d417d8eb73ae956532143dc8a",
+    "formalization/LogicLineages/OrdinalComparison/KernelMassProgramDefinitions.lean": "7b335cb52994758115564e4a15c39fc8e49de3624a9612ac6aec18d2c9496b25",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/Definitions.lean": "45bcd53bc84fd7793931a8b9380a6291089413a246b0ba7c49151ef892d73079",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/Targets.lean": "10e9ecbd71e269c7fe29bb38ef898c43da18cddb33e7e7720b027bd914783ef7",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/BroadBlockTargets.lean": "cb9d1b5396503025ee2726fc5af618e4fd2af55619e82a0a2af406af2403bd57",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/Definitions.lean": "c9874bd72bdfcf79593735c729ba4fc973949fd89885de72a151ce5f9c15023a",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedBlockProof.lean": "0c1d2f1471533e643e50392d17ca32264b1284492232c7229fe1e0e62f7b9cdc",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedCalibrationProof.lean": "2487dc4af90bdf3cc47fe617d1e4fb72b140b4cdb962d3c83bdf794cc0abd569",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedControlProof.lean": "98f48102ef8fa39b5bf6b607c42f927e5a8be3d5ef6587b47e6f334ea607df5a",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedDepthBoundsProof.lean": "12a6e80e824911574e4270ae3149173dcbfaff13c4a14b13f11e48745d825e04",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedElementaryProof.lean": "5a476ddcaba674b4203bb80553d71de9309e6f176d1365cde6a69bd0ed4ebf2b",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedElementaryTargets.lean": "0f05d504ac28dc29230e140b46a75d9e09a8b6e063e51aa1ab0f311738594030",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedKernelInputProof.lean": "442d4851b5d3833c0a9965def8fdb5f91732f8942b2ee48ec816036c142b69f4",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedProcessBridgeProof.lean": "f5b91716c73f4ed41dc59be217c83e425cf2dced88078eb05694eac82b21cd78",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedScheduledComparisonProof.lean": "a0e15750edcf616263694a3aa737cb5b7adb71f3652619709028c7ec78c11c79",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedSmallKernelsProof.lean": "83175135a3891d1c05e2946d6210e8ca4d9c919303739fe84b6a5dc8429e6c22",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedSupplierStatementChecks.lean": "5616c4575f94ac7f95dd83ec89942a8d3500b08278bb771bfd4346cb1cfc86b2",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedSupplierTargets.lean": "fa7b7a02dcb63338af272dc04b12b073fa32c655cad5ab4ac26d85f3552e001e",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedSuppliersProof.lean": "10d80857c30e2bd05abe928d379ac7d3c451dd521b5095c9eb4a46dacef0fb37",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeBudgetProof.lean": "73e599e0d7cbd5aa1199d56fcbe89b70790ed72e9a2fd359897ac3098fd78545",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeCubicProof.lean": "3761ec7a0f16e77a0d2f7bf2490f06f1d5ab64e69a46c27d74451935702b9379",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeEqualityProof.lean": "fd911359f26262cfda5fff1da7f3f26c07a4b6db511988d7aafbc97dde26d414",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeRegionProof.lean": "633800822fd2f4714abd7fb5be5b8719409086e4ebeefe41f59b9ce1f8c855c9",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeStatementChecks.lean": "75a068972ba4a7fb27472c30c20c9fa64ae1c3a3d3f315368f358560fd6dadda",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeTargetChecks.lean": "d08555a9d47cfbfe64967c66372b79e9c08f108c437526ef5da71545a1c90f50",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeTargets.lean": "07aee1e51e717067f1851f8e35605ef340f29310ec8295718ddfd30b079336ef",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/ScheduledWordTargets.lean": "395e3aa1a5cdab1eb646c6ecb7771eb2893844809c25e535c7fe03deeaaa8a8d",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/TargetChecks.lean": "335d1dfec8cd0aac3be88a1d9274649ebadeacb07debe777345e303c515a5460",
+    "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/Targets.lean": "37b73a5470feb2c8c2582c8c64a630671ea755f37332a705ef704a45a9953e09",
+    "formalization/LogicLineages/OrdinalComparison/LayeredComparison/IntegerAlgorithmsProof.lean": "06722f5d1d76e58dfc180fe82dc50f84fcb2711a3526b6513eb236de438901ac",
+    "formalization/LogicLineages/OrdinalComparison/LayeredComparison/IntegerAlgorithmsTargets.lean": "b01c911ffd95fcf57732fd9bbcaf33d62844cd9c381b2473c8e6f89c720e6062",
+    "formalization/LogicLineages/OrdinalComparison/LimitPredecessor.lean": "640229c932b276910eb7d9b88c6b4c39b79c6956daa2e7400ff9c9d3aee744d8",
+    "formalization/LogicLineages/OrdinalComparison/LimitPredecessorTargets.lean": "c92fe54ce714136ce7a6c68260ad299c38159fcfed44d869a745b43a1da1fe20",
+    "formalization/LogicLineages/OrdinalComparison/MaximumPredecessor.lean": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5",
+    "formalization/LogicLineages/OrdinalComparison/NormBalls.lean": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93",
+    "formalization/LogicLineages/OrdinalComparison/OptimizedMaximumBaseProof.lean": "8a0fe78f2fa73e36083806439e8768e7d9f233ffb7266de7939b96cdc2b2978d",
+    "formalization/LogicLineages/OrdinalComparison/OptimizedMaximumDefinitions.lean": "fe0178f8f4e12c8f28db3e9d9a551c903e512451b0e6a57525d78ac387513127",
+    "formalization/LogicLineages/OrdinalComparison/OptimizedMaximumGreedyProof.lean": "2ac2a9ff6685f3fcd5365ed145457d81cd6db412cd508988aa7acd9adee9aa32",
+    "formalization/LogicLineages/OrdinalComparison/OptimizedMaximumTargets.lean": "e4be46d9bc18ab08bd87f5af899bb68cd3322ec24adbbb851e51a9f9843ca286",
+    "formalization/LogicLineages/OrdinalComparison/OrdinalRepresentationComplete.lean": "4dc96c9070f35b1b28552947b379c9a07f3900529851bc7a2ec781211ed72374",
+    "formalization/LogicLineages/OrdinalComparison/OrdinalRepresentationSound.lean": "8e3ad60f345bc2b6f4630c5557b18da6f26d3c85d638ca81f5008307e8143840",
+    "formalization/LogicLineages/OrdinalComparison/OrdinalRepresentationTargets.lean": "5c68ae4e9e18881b1d5a553ac20fca35d3e23f8290a47da125c78711ebc1a647",
+    "formalization/LogicLineages/OrdinalComparison/PolynomialOrdinalDefinitions.lean": "e7410c1db2435ecea35dd3770ee9a4366ab7daee3f645a81c4455d8a821a235e",
+    "formalization/LogicLineages/OrdinalComparison/PolynomialOrdinalNormalProof.lean": "136e64a2b51e9fad9d988e163f0cb51eecbf6f23fbcbc76bb8a1154aebf186e5",
+    "formalization/LogicLineages/OrdinalComparison/PolynomialOrdinalProof.lean": "f51fb56391728f4a3cdaf4cc1faea5dc085ee8f54dc83c4d1f81a3f0fb795989",
+    "formalization/LogicLineages/OrdinalComparison/PolynomialOrdinalTargets.lean": "8a3986405a53974f918dd3499e7b91432344e63c7be6d2c89b865247ea281717",
+    "formalization/LogicLineages/OrdinalComparison/PolynomialPartitionProof.lean": "6148f54fccf763873a3192870bf9a5ec51dcd6c5c03c106e52bebb831505e9a2",
+    "formalization/LogicLineages/OrdinalComparison/PredecessorTargets.lean": "c0fc975080cd34cd6296a53fad842c237d223f35d650b1a2bce060dc19ce4733",
+    "formalization/LogicLineages/OrdinalComparison/PrefixTraceBasicProof.lean": "73abdad39995aa8f3c16347240d34d55661712a9202680a5902e067844b8bec2",
+    "formalization/LogicLineages/OrdinalComparison/PrefixTraceDefinitions.lean": "293d42e4a8dfe84f060c986d02ddd5af294301b9e9ee08bf8a85ab18f6675381",
+    "formalization/LogicLineages/OrdinalComparison/PrefixTraceGeneralProof.lean": "9753409e9560f3040fc70a090cb5dd007adedb83111002bd345e8aaaefcf3a45",
+    "formalization/LogicLineages/OrdinalComparison/PrefixTraceTargets.lean": "14efbe56b13dc9334d7a511f40721bd40711cec34ffea431f17cacec55f8bae8",
+    "formalization/LogicLineages/OrdinalComparison/PrincipalBlockDomainDefinitions.lean": "00aaa0f456f3b5eaf8202bc15e31e63a9898c65e9a34d7cb6383250e15d2e4f6",
+    "formalization/LogicLineages/OrdinalComparison/PrincipalBlocksDefinitions.lean": "0cc0c436b60b82f1f0c83803488ed5602ea0ffbca7581d64ed99d88478604c31",
+    "formalization/LogicLineages/OrdinalComparison/PrincipalKernelWordDefinitions.lean": "a7e6564313e9105cd7a809550ebb49a5a6d0bd5bef37c0ed294f382b9f3d77e3",
+    "formalization/LogicLineages/OrdinalComparison/PrincipalWordActionDefinitions.lean": "b7550821eea662154e70c89f391ceb05a644ab1ea6ecec507cdfec00fe7d5c65",
+    "formalization/LogicLineages/OrdinalComparison/QuadraticSeparationDefinitions.lean": "85bb6b422f1c756001684adc86131863c60168e5dbef5a1cb2a66619eadfc612",
+    "formalization/LogicLineages/OrdinalComparison/QuadraticSeparationIterationProof.lean": "f0a79f01b96d2faeeab2a3811a9daf093905ca65834d8dc7bb062caa9750fa8c",
+    "formalization/LogicLineages/OrdinalComparison/QuadraticSeparationTargets.lean": "f062458a63f50442198b5eef13c66068b77cbc56c0c97fccf75cc499e1000349",
+    "formalization/LogicLineages/OrdinalComparison/RawComparisonDefinitions.lean": "bf4b6af50b4a18e04d7d7a0317fa3884b058489e31040ab2ec63079528330bf3",
+    "formalization/LogicLineages/OrdinalComparison/RawNormCodeDefinitions.lean": "5a60f5862afc225fccd4057e5a6ba0a4c3ef15aaecd885ec22e631b55cd15079",
+    "formalization/LogicLineages/OrdinalComparison/RawNormalDefinitions.lean": "01f4eeb959e7843e6839ce77f810f553283b7dc7571e2db187af030751b5e48b",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCodeDefinitions.lean": "559e75d651b068e1d8dec8655282aa73c43cbf5df2e2bc0bf012f1ea834856ec",
+    "formalization/LogicLineages/OrdinalComparison/RawSplitDefinitions.lean": "7d012991cb8e3bedbfd41d12a6018596d5056fea9cf204155c16de378a51894d",
+    "formalization/LogicLineages/OrdinalComparison/RestrictedPartitionCountProof.lean": "dd14bdaa525049d77109625b59d81bab0c0941b2e2e135b6dd65d8a15a03c68f",
+    "formalization/LogicLineages/OrdinalComparison/RestrictedPartitionDefinitions.lean": "b10525c9489c03ea423a9ce18004fb96fa178e01522bd42590ae498167b39cf1",
+    "formalization/LogicLineages/OrdinalComparison/RestrictedPartitionEvaluationDefinitions.lean": "bb3942302f9f65af3e9242de84fc89d675f0cf9d97df8f2aafde36972e0da11c",
+    "formalization/LogicLineages/OrdinalComparison/RestrictedPartitionPeriodProof.lean": "333f6d799151f52cf287e94956e371eae0aa93a3fa8c8959ce6af05eb56f8c96",
+    "formalization/LogicLineages/OrdinalComparison/RestrictedPartitionTargets.lean": "4dc2ec9a7356b88fbcc3d711781629bdebb2a087e9cc245f7b24417374e32e41",
+    "formalization/LogicLineages/OrdinalComparison/ScheduledCountDefinitions.lean": "3eb22bb37a289560f4762b38d4d19fa119371eabcf9d01876ddc7a666450b6fb",
+    "formalization/LogicLineages/OrdinalComparison/ScheduledCountProof.lean": "a2d159acfafaa427b3e5f110a4debbd7e0d500e6d772481129591a7337504647",
+    "formalization/LogicLineages/OrdinalComparison/ScheduledCountTargets.lean": "2293e399645dd33aa50e1b680f8da1be01019edee8b66ae5d293bc89e0716229",
+    "formalization/LogicLineages/OrdinalComparison/SignedKernelDomainDefinitions.lean": "d741c404d8935722d17739cd6fd428d20695907f885c87ca7749a8825616d09d",
+    "formalization/LogicLineages/OrdinalComparison/SmallKernelSuppliersProof.lean": "de1effda2ae348c6fa142eadaeac33fa2e3ac15a18a5f73c0cfc2f04255b7ff3",
+    "formalization/LogicLineages/OrdinalComparison/SmallKernelSuppliersTargets.lean": "1a46b13ab25d7e16796e5163be7bb0d6ea050712b013a8fe59c2991a43d4395b",
+    "formalization/LogicLineages/OrdinalComparison/SmallKernelsTargets.lean": "47f627d27ce8a6f9fb99b546a8847567d6809bbc3411f67e1fa32ed69c300d1d",
+    "formalization/LogicLineages/OrdinalComparison/StrictMassThresholdDefinitions.lean": "8df192c9bdb2ee1dc8e299b7d67ad3e6e1ac5e1d7811090afb60e32b9be7b9e5",
+    "formalization/LogicLineages/OrdinalComparison/SuccessorKernelCutProof.lean": "454041f60a46c72fcfe489e471d229333957f05ecc1b0f95193ae781ac841b86",
+    "formalization/LogicLineages/OrdinalComparison/SuccessorKernelCutTargets.lean": "0fdb0b82c4d7d055b6af961ed4a7d7f4dfa64c6f4573c0afcfadf7b2f3a17862",
+    "formalization/LogicLineages/OrdinalComparison/SuccessorKernelMaximumProof.lean": "dd8e1f5d7a69df18be50c0fd3a47482891c73a44264980fa68567766318ee4f0",
+    "formalization/LogicLineages/OrdinalComparison/SuccessorKernelMaximumTargets.lean": "6d1b258e9a676a87d5fb072b96a0d8c46cb915c7cabf1e4cfab7cbeb52ebef4d",
+    "formalization/LogicLineages/OrdinalComparison/SuffixKernelDefinitions.lean": "9a6545dbde4806d5ccd126542de3981f8641491ae561a4abbeed40a2ae1b0789",
+    "formalization/LogicLineages/OrdinalComparison/SuffixKernelProof.lean": "0e914f4bbca096e451ee6bdf8bf28f0798be00f5fb760dd148ae550ac21636c3",
+    "formalization/LogicLineages/OrdinalComparison/SuffixKernelTargets.lean": "7b09c5f728fba45e492d6c77f8a7af78330d2ed5056adac2cadef5a4e4e000ba",
+    "formalization/LogicLineages/OrdinalComparison/Targets.lean": "e3d2625728df7aa38f54c8639d98959ee15c097a1f88d08f4b8921b58516afbe",
+    "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532",
+    "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824",
+    "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+  },
+  "local_imports": {
+    "LogicLineages.OrdinalComparison.RestrictedPartitionDefinitions": [],
+    "LogicLineages.OrdinalComparison.ControlDefinitions": [],
+    "LogicLineages.OrdinalComparison.ControlResidueDefinitions": [
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.Ordinal": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.ArithmeticBounds": [
+      "LogicLineages.OrdinalComparison.Vendor.R1.Ordinal"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.Norm": [
+      "LogicLineages.OrdinalComparison.Vendor.R1.ArithmeticBounds"
+    ],
+    "LogicLineages.OrdinalComparison.Definitions": [
+      "LogicLineages.OrdinalComparison.Vendor.R1.Norm",
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualOrdinalNormTargets": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets"
+    ],
+    "LogicLineages.OrdinalComparison.EpsilonZeroCalibration": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets"
+    ],
+    "LogicLineages.OrdinalComparison.OrdinalRepresentationSound": [
+      "LogicLineages.OrdinalComparison.EpsilonZeroCalibration"
+    ],
+    "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationSound"
+    ],
+    "LogicLineages.OrdinalComparison.CNFDescent": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormTargets",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions": [
+      "LogicLineages.OrdinalComparison.CNFDescent"
+    ],
+    "LogicLineages.OrdinalComparison.ControlTargets": [
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.Targets": [
+      "LogicLineages.OrdinalComparison.Definitions",
+      "LogicLineages.OrdinalComparison.ControlTargets"
+    ],
+    "LogicLineages.OrdinalComparison.NormBalls": [
+      "LogicLineages.OrdinalComparison.Targets"
+    ],
+    "LogicLineages.OrdinalComparison.ActualNormBallTargets": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions",
+      "LogicLineages.OrdinalComparison.NormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.ActualNormRecursionTargets": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets"
+    ],
+    "LogicLineages.OrdinalComparison.ActualOrdinalNorm": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions",
+      "LogicLineages.OrdinalComparison.ActualNormRecursionTargets",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationSound"
+    ],
+    "LogicLineages.OrdinalComparison.ActualNormBalls": [
+      "LogicLineages.OrdinalComparison.ActualNormBallTargets",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualNormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualDescentDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ControlledStepDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualDescentDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ControlledStepTargets": [
+      "LogicLineages.OrdinalComparison.ControlledStepDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualDescentTargets": [
+      "LogicLineages.OrdinalComparison.ActualDescentDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualSinglePredecessorTargets": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseTargets": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CollapseTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.Control": [
+      "LogicLineages.OrdinalComparison.ControlTargets"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteCollapse": [
+      "LogicLineages.OrdinalComparison.CollapseTargets",
+      "LogicLineages.OrdinalComparison.NormBalls",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapse": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions",
+      "LogicLineages.OrdinalComparison.ActualCollapseTargets",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete",
+      "LogicLineages.OrdinalComparison.FiniteCollapse"
+    ],
+    "LogicLineages.OrdinalComparison.ActualLimitPredecessorTargets": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PredecessorTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.MaximumPredecessor": [
+      "LogicLineages.OrdinalComparison.PredecessorTargets",
+      "LogicLineages.OrdinalComparison.FiniteCollapse"
+    ],
+    "LogicLineages.OrdinalComparison.ActualMaximumPredecessorTargets": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions",
+      "LogicLineages.OrdinalComparison.MaximumPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualMaximumPredecessor": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions",
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorTargets",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.LimitPredecessorTargets": [
+      "LogicLineages.OrdinalComparison.PredecessorTargets"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteTailTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteTail": [
+      "LogicLineages.OrdinalComparison.FiniteTailTargets"
+    ],
+    "LogicLineages.OrdinalComparison.LimitPredecessor": [
+      "LogicLineages.OrdinalComparison.LimitPredecessorTargets",
+      "LogicLineages.OrdinalComparison.MaximumPredecessor",
+      "LogicLineages.OrdinalComparison.FiniteTail"
+    ],
+    "LogicLineages.OrdinalComparison.ActualLimitPredecessor": [
+      "LogicLineages.OrdinalComparison.ActualLimitPredecessorTargets",
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessor",
+      "LogicLineages.OrdinalComparison.LimitPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualSinglePredecessor": [
+      "LogicLineages.OrdinalComparison.ActualSinglePredecessorTargets",
+      "LogicLineages.OrdinalComparison.ActualCollapse",
+      "LogicLineages.OrdinalComparison.ActualLimitPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualDescent": [
+      "LogicLineages.OrdinalComparison.ActualDescentTargets",
+      "LogicLineages.OrdinalComparison.ActualSinglePredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualTerminalDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualDescent"
+    ],
+    "LogicLineages.OrdinalComparison.ActualTailSeparationTargets": [
+      "LogicLineages.OrdinalComparison.ActualTerminalDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualTerminalTargets": [
+      "LogicLineages.OrdinalComparison.ActualTerminalDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualTerminal": [
+      "LogicLineages.OrdinalComparison.ActualTerminalTargets"
+    ],
+    "LogicLineages.OrdinalComparison.ActualTailSeparation": [
+      "LogicLineages.OrdinalComparison.ActualTailSeparationTargets",
+      "LogicLineages.OrdinalComparison.ActualTerminal"
+    ],
+    "LogicLineages.OrdinalComparison.ControlledStepProof": [
+      "LogicLineages.OrdinalComparison.ControlledStepTargets",
+      "LogicLineages.OrdinalComparison.ActualTailSeparation"
+    ],
+    "LogicLineages.OrdinalComparison.ControlledCountDefinitions": [
+      "LogicLineages.OrdinalComparison.ControlledStepProof"
+    ],
+    "LogicLineages.OrdinalComparison.ConstantBudgetDefinitions": [
+      "LogicLineages.OrdinalComparison.ControlledCountDefinitions",
+      "LogicLineages.OrdinalComparison.RestrictedPartitionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CompatiblePrefixDefinitions": [
+      "LogicLineages.OrdinalComparison.ConstantBudgetDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PrefixTraceDefinitions": [
+      "LogicLineages.OrdinalComparison.CompatiblePrefixDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.SuffixKernelDefinitions": [
+      "LogicLineages.OrdinalComparison.PrefixTraceDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ScheduledCountDefinitions": [
+      "LogicLineages.OrdinalComparison.ControlledStepProof"
+    ],
+    "LogicLineages.OrdinalComparison.ControlScheduleDefinitions": [
+      "LogicLineages.OrdinalComparison.ScheduledCountDefinitions",
+      "LogicLineages.OrdinalComparison.PrefixTraceDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelCounterCalibrationDefinitions": [
+      "LogicLineages.OrdinalComparison.RestrictedPartitionDefinitions",
+      "LogicLineages.OrdinalComparison.ControlResidueDefinitions",
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions",
+      "LogicLineages.OrdinalComparison.ControlScheduleDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationDefinitions": [
+      "LogicLineages.OrdinalComparison.RestrictedPartitionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelCounterResidueDefinitions": [
+      "LogicLineages.OrdinalComparison.KernelCounterCalibrationDefinitions",
+      "LogicLineages.OrdinalComparison.RestrictedPartitionEvaluationDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.SignedKernelDomainDefinitions": [
+      "LogicLineages.OrdinalComparison.KernelCounterResidueDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawComparisonDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormalDefinitions": [
+      "LogicLineages.OrdinalComparison.RawComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormCodeDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNormBallDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNormalDefinitions",
+      "LogicLineages.OrdinalComparison.RawNormCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedMaximumDefinitions": [
+      "LogicLineages.OrdinalComparison.EncodedNormBallDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawSplitDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedDescentDefinitions": [
+      "LogicLineages.OrdinalComparison.EncodedMaximumDefinitions",
+      "LogicLineages.OrdinalComparison.RawSplitDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedCompensatedStepDefinitions": [
+      "LogicLineages.OrdinalComparison.EncodedDescentDefinitions",
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedCompensatedCountDefinitions": [
+      "LogicLineages.OrdinalComparison.EncodedCompensatedStepDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalSumDefinitions": [
+      "LogicLineages.OrdinalComparison.RawComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedSuffixKernelDefinitions": [
+      "LogicLineages.OrdinalComparison.EncodedCompensatedCountDefinitions",
+      "LogicLineages.OrdinalComparison.EncodedNaturalSumDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteKernelRecursionDefinitions": [
+      "LogicLineages.OrdinalComparison.SignedKernelDomainDefinitions",
+      "LogicLineages.OrdinalComparison.EncodedSuffixKernelDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterLeaderExpansionDefinitions": [
+      "LogicLineages.OrdinalComparison.FiniteKernelRecursionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterLeaderBoundsDefinitions": [
+      "LogicLineages.OrdinalComparison.CounterLeaderExpansionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.StrictMassThresholdDefinitions": [
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelMassKeyDefinitions": [
+      "LogicLineages.OrdinalComparison.StrictMassThresholdDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelMassProgramDefinitions": [
+      "LogicLineages.OrdinalComparison.KernelMassKeyDefinitions",
+      "LogicLineages.OrdinalComparison.RawNormCodeDefinitions",
+      "LogicLineages.OrdinalComparison.RawComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelInputProgramDefinitions": [
+      "LogicLineages.OrdinalComparison.KernelMassProgramDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CubicLeaderRecognitionDefinitions": [
+      "LogicLineages.OrdinalComparison.CounterLeaderExpansionDefinitions",
+      "LogicLineages.OrdinalComparison.KernelInputProgramDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterLeaderComparisonDefinitions": [
+      "LogicLineages.OrdinalComparison.CounterLeaderBoundsDefinitions",
+      "LogicLineages.OrdinalComparison.CubicLeaderRecognitionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterLeaderCollisionDefinitions": [
+      "LogicLineages.OrdinalComparison.CubicLeaderRecognitionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterFixedShiftComparisonDefinitions": [
+      "LogicLineages.OrdinalComparison.CounterLeaderComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterResidualDivergenceDefinitions": [
+      "LogicLineages.OrdinalComparison.CounterLeaderCollisionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterSourceTheoremDefinitions": [
+      "LogicLineages.OrdinalComparison.CounterLeaderComparisonDefinitions",
+      "LogicLineages.OrdinalComparison.CounterLeaderCollisionDefinitions",
+      "LogicLineages.OrdinalComparison.CounterFixedShiftComparisonDefinitions",
+      "LogicLineages.OrdinalComparison.CounterResidualDivergenceDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.Definitions": [
+      "LogicLineages.OrdinalComparison.KernelCounterResidueDefinitions",
+      "LogicLineages.OrdinalComparison.FiniteKernelRecursionDefinitions",
+      "LogicLineages.OrdinalComparison.CounterSourceTheoremDefinitions",
+      "LogicLineages.OrdinalComparison.ScheduledCountDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Definitions": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Targets": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeTargets": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Targets"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.TargetChecks": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Targets"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeTargetChecks": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeTargets",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.TargetChecks"
+    ],
+    "LogicLineages.OrdinalComparison.KernelCounterCalibrationTargets": [
+      "LogicLineages.OrdinalComparison.KernelCounterCalibrationDefinitions",
+      "LogicLineages.OrdinalComparison.ControlledCountDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.CounterSourceTheoremTargets": [
+      "LogicLineages.OrdinalComparison.CounterSourceTheoremDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.SmallKernelsTargets": [
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.Targets": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockTargets": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.PrincipalBlocksDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PrincipalKernelWordDefinitions": [
+      "LogicLineages.OrdinalComparison.PrincipalBlocksDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PrincipalBlockDomainDefinitions": [
+      "LogicLineages.OrdinalComparison.PrincipalBlocksDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PrincipalWordActionDefinitions": [
+      "LogicLineages.OrdinalComparison.PrincipalKernelWordDefinitions",
+      "LogicLineages.OrdinalComparison.PrincipalBlockDomainDefinitions",
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledWordTargets": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Definitions",
+      "LogicLineages.OrdinalComparison.PrincipalWordActionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierTargets": [
+      "LogicLineages.OrdinalComparison.KernelCounterCalibrationTargets",
+      "LogicLineages.OrdinalComparison.CounterSourceTheoremTargets",
+      "LogicLineages.OrdinalComparison.SmallKernelsTargets",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.Targets",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Targets",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockTargets",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ScheduledWordTargets"
+    ],
+    "LogicLineages.OrdinalComparison.CompatiblePrefixTargets": [
+      "LogicLineages.OrdinalComparison.CompatiblePrefixDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ConstantBudgetTargets": [
+      "LogicLineages.OrdinalComparison.ConstantBudgetDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PrefixTraceTargets": [
+      "LogicLineages.OrdinalComparison.PrefixTraceDefinitions",
+      "LogicLineages.OrdinalComparison.CompatiblePrefixTargets",
+      "LogicLineages.OrdinalComparison.ConstantBudgetTargets"
+    ],
+    "LogicLineages.OrdinalComparison.ControlSegmentTargets": [
+      "LogicLineages.OrdinalComparison.PrefixTraceTargets"
+    ],
+    "LogicLineages.OrdinalComparison.RestrictedPartitionTargets": [
+      "LogicLineages.OrdinalComparison.RestrictedPartitionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PolynomialOrdinalDefinitions": [
+      "LogicLineages.OrdinalComparison.ConstantBudgetDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PolynomialOrdinalTargets": [
+      "LogicLineages.OrdinalComparison.PolynomialOrdinalDefinitions",
+      "LogicLineages.OrdinalComparison.ConstantBudgetTargets"
+    ],
+    "LogicLineages.OrdinalComparison.ConstantCutPeriodTargets": [
+      "LogicLineages.OrdinalComparison.ControlSegmentTargets",
+      "LogicLineages.OrdinalComparison.RestrictedPartitionTargets",
+      "LogicLineages.OrdinalComparison.PolynomialOrdinalTargets"
+    ],
+    "LogicLineages.OrdinalComparison.CompatiblePrefixFactsProof": [
+      "LogicLineages.OrdinalComparison.CompatiblePrefixTargets",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.OrdinalComparison.RestrictedPartitionCountProof": [
+      "LogicLineages.OrdinalComparison.RestrictedPartitionTargets"
+    ],
+    "LogicLineages.OrdinalComparison.RestrictedPartitionPeriodProof": [
+      "LogicLineages.OrdinalComparison.RestrictedPartitionCountProof"
+    ],
+    "LogicLineages.OrdinalComparison.PolynomialOrdinalNormalProof": [
+      "LogicLineages.OrdinalComparison.PolynomialOrdinalTargets",
+      "LogicLineages.OrdinalComparison.RestrictedPartitionCountProof",
+      "LogicLineages.OrdinalComparison.NormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.ConstantCutFactsProof": [
+      "LogicLineages.OrdinalComparison.ConstantCutPeriodTargets",
+      "LogicLineages.OrdinalComparison.CompatiblePrefixFactsProof",
+      "LogicLineages.OrdinalComparison.RestrictedPartitionPeriodProof",
+      "LogicLineages.OrdinalComparison.PolynomialOrdinalNormalProof"
+    ],
+    "LogicLineages.OrdinalComparison.PolynomialOrdinalProof": [
+      "LogicLineages.OrdinalComparison.PolynomialOrdinalNormalProof",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseBoundsTargets": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseBounds": [
+      "LogicLineages.OrdinalComparison.ActualCollapseBoundsTargets",
+      "LogicLineages.OrdinalComparison.ActualCollapse",
+      "LogicLineages.OrdinalComparison.FiniteTail"
+    ],
+    "LogicLineages.OrdinalComparison.ConstantBudgetFactsProof": [
+      "LogicLineages.OrdinalComparison.ConstantBudgetTargets",
+      "LogicLineages.OrdinalComparison.ActualCollapseBounds"
+    ],
+    "LogicLineages.OrdinalComparison.PolynomialPartitionProof": [
+      "LogicLineages.OrdinalComparison.PolynomialOrdinalProof",
+      "LogicLineages.OrdinalComparison.ConstantBudgetFactsProof"
+    ],
+    "LogicLineages.OrdinalComparison.SuffixKernelTargets": [
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ControlledCountTargets": [
+      "LogicLineages.OrdinalComparison.ControlledCountDefinitions",
+      "LogicLineages.OrdinalComparison.ActualTerminalDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ControlledCountProof": [
+      "LogicLineages.OrdinalComparison.ControlledCountTargets",
+      "LogicLineages.OrdinalComparison.ActualTerminal"
+    ],
+    "LogicLineages.OrdinalComparison.PrefixTraceBasicProof": [
+      "LogicLineages.OrdinalComparison.PrefixTraceTargets",
+      "LogicLineages.OrdinalComparison.ControlledCountProof"
+    ],
+    "LogicLineages.OrdinalComparison.SuffixKernelProof": [
+      "LogicLineages.OrdinalComparison.SuffixKernelTargets",
+      "LogicLineages.OrdinalComparison.PrefixTraceBasicProof",
+      "LogicLineages.OrdinalComparison.ActualCollapseBounds",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedKernelInputProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierTargets",
+      "LogicLineages.OrdinalComparison.ConstantCutFactsProof",
+      "LogicLineages.OrdinalComparison.PolynomialPartitionProof",
+      "LogicLineages.OrdinalComparison.SuffixKernelProof"
+    ],
+    "LogicLineages.OrdinalComparison.ScheduledCountTargets": [
+      "LogicLineages.OrdinalComparison.ScheduledCountDefinitions",
+      "LogicLineages.OrdinalComparison.ControlledCountDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ScheduledCountProof": [
+      "LogicLineages.OrdinalComparison.ScheduledCountTargets",
+      "LogicLineages.OrdinalComparison.ControlledCountProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedProcessBridgeProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedKernelInputProof",
+      "LogicLineages.OrdinalComparison.ScheduledCountProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedCalibrationProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedProcessBridgeProof",
+      "LogicLineages.OrdinalComparison.ActualLimitPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.SuccessorKernelCutTargets": [
+      "LogicLineages.OrdinalComparison.SuffixKernelDefinitions",
+      "LogicLineages.OrdinalComparison.PrefixTraceDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.SuccessorKernelMaximumTargets": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.OptimizedMaximumDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.OptimizedMaximumTargets": [
+      "LogicLineages.OrdinalComparison.OptimizedMaximumDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.OptimizedMaximumBaseProof": [
+      "LogicLineages.OrdinalComparison.OptimizedMaximumTargets",
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessor",
+      "LogicLineages.OrdinalComparison.NormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.OptimizedMaximumGreedyProof": [
+      "LogicLineages.OrdinalComparison.OptimizedMaximumBaseProof"
+    ],
+    "LogicLineages.OrdinalComparison.ActualFiniteHeadTargets": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualFiniteHead": [
+      "LogicLineages.OrdinalComparison.ActualFiniteHeadTargets",
+      "LogicLineages.OrdinalComparison.ActualSinglePredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.SuccessorKernelMaximumProof": [
+      "LogicLineages.OrdinalComparison.SuccessorKernelMaximumTargets",
+      "LogicLineages.OrdinalComparison.OptimizedMaximumGreedyProof",
+      "LogicLineages.OrdinalComparison.ActualFiniteHead"
+    ],
+    "LogicLineages.OrdinalComparison.CompatiblePrefixNormProof": [
+      "LogicLineages.OrdinalComparison.CompatiblePrefixFactsProof",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm"
+    ],
+    "LogicLineages.OrdinalComparison.CompatiblePrefixMaximumProof": [
+      "LogicLineages.OrdinalComparison.CompatiblePrefixNormProof",
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.PrefixTraceGeneralProof": [
+      "LogicLineages.OrdinalComparison.PrefixTraceBasicProof",
+      "LogicLineages.OrdinalComparison.CompatiblePrefixMaximumProof"
+    ],
+    "LogicLineages.OrdinalComparison.SuccessorKernelCutProof": [
+      "LogicLineages.OrdinalComparison.SuccessorKernelCutTargets",
+      "LogicLineages.OrdinalComparison.SuccessorKernelMaximumProof",
+      "LogicLineages.OrdinalComparison.SuffixKernelProof",
+      "LogicLineages.OrdinalComparison.PrefixTraceGeneralProof"
+    ],
+    "LogicLineages.OrdinalComparison.ControlSegmentProof": [
+      "LogicLineages.OrdinalComparison.ControlSegmentTargets",
+      "LogicLineages.OrdinalComparison.PrefixTraceGeneralProof",
+      "LogicLineages.OrdinalComparison.ActualCollapseBounds"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedBlockProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedCalibrationProof",
+      "LogicLineages.OrdinalComparison.SuccessorKernelCutProof",
+      "LogicLineages.OrdinalComparison.ControlSegmentProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedScheduledComparisonProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierTargets",
+      "LogicLineages.OrdinalComparison.ActualTailSeparation",
+      "LogicLineages.OrdinalComparison.ScheduledCountProof",
+      "LogicLineages.OrdinalComparison.PolynomialPartitionProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedControlProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierTargets",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.OrdinalComparison.SmallKernelSuppliersTargets": [
+      "LogicLineages.OrdinalComparison.ControlledCountDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.SmallKernelSuppliersProof": [
+      "LogicLineages.OrdinalComparison.SmallKernelSuppliersTargets",
+      "LogicLineages.OrdinalComparison.ActualLimitPredecessor",
+      "LogicLineages.OrdinalComparison.ActualFiniteHead",
+      "LogicLineages.OrdinalComparison.OptimizedMaximumGreedyProof",
+      "LogicLineages.OrdinalComparison.ControlledCountProof",
+      "LogicLineages.OrdinalComparison.ConstantCutFactsProof",
+      "LogicLineages.OrdinalComparison.PolynomialPartitionProof",
+      "LogicLineages.OrdinalComparison.ActualCollapseBounds"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSmallKernelsProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedControlProof",
+      "LogicLineages.OrdinalComparison.SmallKernelSuppliersProof",
+      "LogicLineages.OrdinalComparison.SuffixKernelProof",
+      "LogicLineages.OrdinalComparison.CompatiblePrefixMaximumProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedDepthBoundsProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedCalibrationProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSmallKernelsProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedElementaryTargets": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Targets"
+    ],
+    "LogicLineages.OrdinalComparison.QuadraticSeparationDefinitions": [
+      "LogicLineages.OrdinalComparison.FiniteKernelRecursionDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.QuadraticSeparationTargets": [
+      "LogicLineages.OrdinalComparison.QuadraticSeparationDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.QuadraticSeparationIterationProof": [
+      "LogicLineages.OrdinalComparison.QuadraticSeparationTargets",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsTargets": [],
+    "LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof": [
+      "LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsTargets"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedElementaryProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedElementaryTargets",
+      "LogicLineages.OrdinalComparison.QuadraticSeparationIterationProof",
+      "LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSuppliersProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedBlockProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedScheduledComparisonProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedDepthBoundsProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedElementaryProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeBudgetProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeTargets",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSuppliersProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeCubicProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeBudgetProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeRegionProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeBudgetProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeCubicProof"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeEqualityProof": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeRegionProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedElementaryProof"
+    ],
+    "LogicLineages.Audit": [],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierStatementChecks": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSuppliersProof",
+      "LogicLineages.Audit"
+    ],
+    "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeTargetChecks",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeEqualityProof",
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierStatementChecks",
+      "LogicLineages.Audit"
+    ],
+    "LogicLineages.ExternalCheckpoint20261105UniformSeparation": [
+      "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks",
+      "LogicLineages.Audit"
+    ]
+  },
+  "direct_upstream_imports": [
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.List.Basic",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Ring.Parity",
+    "Mathlib.Computability.Partrec",
+    "Mathlib.Computability.Primrec",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Fin.Tuple.Basic",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Int.Basic",
+    "Mathlib.Data.List.GetD",
+    "Mathlib.Data.Nat.Basic",
+    "Mathlib.Data.Nat.Factorial.Basic",
+    "Mathlib.Data.Nat.ModEq",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Subtype",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Order.Iterate",
+    "Mathlib.Order.Monotone.Basic",
+    "Mathlib.Order.Monotone.Defs",
+    "Mathlib.SetTheory.Cardinal.Finite",
+    "Mathlib.SetTheory.Cardinal.ToNat",
+    "Mathlib.SetTheory.Ordinal.CantorNormalForm",
+    "Mathlib.SetTheory.Ordinal.FixedPoint",
+    "Mathlib.SetTheory.Ordinal.Notation",
+    "Mathlib.SetTheory.Ordinal.Principal",
+    "Mathlib.Tactic.Ring"
+  ],
+  "frozen_sources": [
+    {
+      "path": "formalization/verification/cumulative-continuation-2026-11-05/uniform-separation/FROZEN-TARGETS.json",
+      "sha256": "df4b8339b4c3a6fa1b8c85448096b5b640e31a6a02bae2b5ca73ee3f97c8c166",
+      "file_count": 6,
+      "all_current_files_match": true,
+      "mismatches": [],
+      "files": {
+        "08-multivariate-collapse-comparison/paper.tex": {
+          "expected_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+          "actual_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+          "matches": true
+        },
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/Definitions.lean": {
+          "expected_sha256": "c9874bd72bdfcf79593735c729ba4fc973949fd89885de72a151ce5f9c15023a",
+          "actual_sha256": "c9874bd72bdfcf79593735c729ba4fc973949fd89885de72a151ce5f9c15023a",
+          "matches": true
+        },
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeTargetChecks.lean": {
+          "expected_sha256": "d08555a9d47cfbfe64967c66372b79e9c08f108c437526ef5da71545a1c90f50",
+          "actual_sha256": "d08555a9d47cfbfe64967c66372b79e9c08f108c437526ef5da71545a1c90f50",
+          "matches": true
+        },
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeTargets.lean": {
+          "expected_sha256": "07aee1e51e717067f1851f8e35605ef340f29310ec8295718ddfd30b079336ef",
+          "actual_sha256": "07aee1e51e717067f1851f8e35605ef340f29310ec8295718ddfd30b079336ef",
+          "matches": true
+        },
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/TargetChecks.lean": {
+          "expected_sha256": "335d1dfec8cd0aac3be88a1d9274649ebadeacb07debe777345e303c515a5460",
+          "actual_sha256": "335d1dfec8cd0aac3be88a1d9274649ebadeacb07debe777345e303c515a5460",
+          "matches": true
+        },
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/Targets.lean": {
+          "expected_sha256": "37b73a5470feb2c8c2582c8c64a630671ea755f37332a705ef704a45a9953e09",
+          "actual_sha256": "37b73a5470feb2c8c2582c8c64a630671ea755f37332a705ef704a45a9953e09",
+          "matches": true
+        }
+      }
+    },
+    {
+      "path": "formalization/verification/cumulative-continuation-2026-11-05/uniform-separation/FOCUSED-SUPPLIER-FREEZE.json",
+      "sha256": "5300b6e3a0489832cb0a369ec2b43b9a01d35495ce2627e631a11692b98e7a5d",
+      "file_count": 2,
+      "all_current_files_match": true,
+      "mismatches": [],
+      "files": {
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedElementaryTargets.lean": {
+          "expected_sha256": "0f05d504ac28dc29230e140b46a75d9e09a8b6e063e51aa1ab0f311738594030",
+          "actual_sha256": "0f05d504ac28dc29230e140b46a75d9e09a8b6e063e51aa1ab0f311738594030",
+          "matches": true
+        },
+        "formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/FocusedSupplierTargets.lean": {
+          "expected_sha256": "fa7b7a02dcb63338af272dc04b12b073fa32c655cad5ab4ac26d85f3552e001e",
+          "actual_sha256": "fa7b7a02dcb63338af272dc04b12b073fa32c655cad5ab4ac26d85f3552e001e",
+          "matches": true
+        }
+      }
+    }
+  ],
+  "verifier_source_pins": {
+    "formalization/scripts/check.py": "9eecb0236964bb6ede2ae0819a37eccfc476c0df366e267e38ba16fe4208d59d",
+    "formalization/LogicLineages/Audit.lean": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+  }
+}

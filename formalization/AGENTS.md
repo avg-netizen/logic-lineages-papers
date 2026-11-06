@@ -1,4 +1,16 @@
-# CURRENT checkpoint — finite-coefficient source comparison, 5 November 2026
+# CURRENT checkpoint — uniform kernel separation, 5 November 2026
+
+Paper08 `lem:uniform` is checked for every rank `d >= 3`, arbitrary natural retained masses and iteration allowance, and arbitrary signed offsets, with the original `C_d/T_d` region. Both separation inequalities, depth bounds, exact signed order, and the computed-tail equality criterion are proved.
+
+The focused coordinator passed with **169 source-matched local modules**, **9 main exact aliases**, and **16 focused supplier aliases**, all using only standard axioms. Peak observed process-tree RSS was **1,105,000 KiB**, below the unchanged 1,536 MiB cap. Register: **164 checked, 2 inherited, 23 pending / 189**. Only `lem:uniform` changes status. The earlier finite-source theorem and its proof/evidence files are preserved.
+
+Paper08, full first-order BASE, and the polynomial-head comparison chain remain in progress. No full-root or remote-CI build is claimed. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-05/uniform-separation/STATUS.md).
+
+Earlier checkpoint summaries below are historical. Exact-source preservation, standard-axiom acceptance, and the unchanged serialized compiler limits remain active.
+
+---
+
+# Previous checkpoint — finite-coefficient source comparison, 5 November 2026
 
 Paper08 `thm:finite-source` is checked for original same-type terms with ground free variables and finite literal collapse coefficients. The actual source-code procedure decides universal weak, WW-strict and equality comparison over genuine WW admissible substitutions. Every recursor-free term passes without internal-type bounds.
 

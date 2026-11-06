@@ -6610,9 +6610,13 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 338,
           "statement_latex": "[Uniform kernel separation]\\label{lem:uniform}\nPut $C_d=1000d^2$, $T_3=16$, and for $d\\ge4$ put\n$T_d=\\max(T_{d-1},100C_{d-1}+100d)$. For $d\\ge3$, $c,e\\ge0$, signed\n$j,k$, and $R\\ge0$, suppose\n\\begin{equation}\\label{eq:region}\n t\\ge T_d,\\qquad\n f(t)\\ge C_d(c+e+|j|+|k|+R+1).\n\\end{equation}\nThen the depths are defined and at least $f(t)$, and\n\\begin{align*}\n X^d_{c,j}(t+1)&>f^R(X^d_{e,k}(t)),\\\\\n c<e\\quad&\\Longrightarrow\\quad\n X^d_{c,j}(t)>f^R(X^d_{e,k}(t)).\n\\end{align*}\nAt equal input and equal $c$, exact order is order of $j$. On a common\ncomputed tail, equality of two rank-$d$ values occurs exactly when input,\n$c$, and $j$ are identical.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks.full_uniform_source",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/Targets.lean",
+            "sha256": "37b73a5470feb2c8c2582c8c64a630671ea755f37332a705ef704a45a9953e09",
+            "type": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Targets.FullUniformSource"
+          },
           "checked_components": [
             {
               "gate_module": "LogicLineages.OrdinalComparison.QuadraticSeparationStatementChecks",
@@ -6633,33 +6637,73 @@
               "gate_module": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockStatementChecks",
               "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/round02-uniform/ROOT-BROAD-BLOCK-ADOPTION.json",
               "scope": "Original full region derives c+d and e+d <=Phi(t). Under first-budget c+d<=Phi(t), exact scheduled parent trace keeps one theta block through inner first-finite cut; child input K satisfies BOTH numerical/actual norm domains. Cut is strict; exact source counts add and values compose. No original-t padded companion equality. Full quantitative separation and exact equality criterion; generic scheduled comparison and whole child-word calibration are the next proof obligations."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-05/uniform-separation/ACCEPTANCE.json",
+              "scope": "Complete unchanged uniform source lemma: both inequalities with arbitrary R and signed j,k; integer depths at least Phi(t); exact signed order; equality exactly on identical input/mass/offset over the existing computed tail. All nine main aliases and sixteen focused supplier aliases pass standard-only axiom audits."
             }
           ],
-          "coverage_note": "The degree-two separation base and higher counter leader/recognition suppliers are checked. The explicitly corrected paper08 limit-part process, genuine signed-domain recursion, full counter theorem and effective residues are now adopted; the original incompatible wording remains historical negative evidence. The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
+          "coverage_note": "Whole original lem:uniform checked on the already adopted independent limit-part source process, for every d>=3 and the exact printed C_d/T_d region. Both separation inequalities, arbitrary signed offsets, integer depth/output lower bounds, exact signed-index order and computed-tail equality are proved. No genuine-start bound is added at the original input. Focused 169-module closure and all 25 exact aliases passed; only this numbered statement is promoted.",
           "remaining_dependencies": [
             {
               "description": "Connect the full uniform separation induction to the already accepted corrected limit-part source process and genuine signed domains. The kernel convention and three corrected kernel/counter/residue source statements are no longer unresolved; the growing-mass uniform theorem is still pending.",
-              "status": "pending"
+              "status": "resolved",
+              "resolution": "Discharged by the unchanged FullUniformSource gate and source-matched native verification in verification/cumulative-continuation-2026-11-05/uniform-separation/ACCEPTANCE.json"
             },
             {
               "description": "The full d >= 3 induction with the printed C_d/T_d and regional hypotheses: defined depths at least f(t), both separation inequalities, exact equal-input signed-index order, and effective common-tail uniqueness.",
-              "status": "pending"
+              "status": "resolved",
+              "resolution": "Discharged by the unchanged FullUniformSource gate and source-matched native verification in verification/cumulative-continuation-2026-11-05/uniform-separation/ACCEPTANCE.json"
             }
           ],
           "completion_audit": {
             "date": "2026-11-05",
-            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
-            "classification": "missing_foundation_or_downstream",
+            "report": "audits/UNIFORM-SEPARATION-COMPLETION-2026-11-05.json",
+            "classification": "exact_whole_source_checked",
             "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
-            "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
-            "next_completion_step": "Freeze and prove the entire rank-at-least-three statement under the now explicit corrected source convention, retaining the printed C_d/T_d, growing retained masses and every regional hypothesis. Reuse the accepted kernel/counter package.",
+            "remaining_obligation": "None for lem:uniform. Full first-order BASE and polynomial-head comparison source statements remain pending.",
             "upstream_blockers": [],
-            "checked_prerequisites": [
-              "08:lem:kernel-recursion"
-            ],
-            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
-            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+            "native_verification": {
+              "file": "verification/cumulative-continuation-2026-11-05/uniform-separation/NATIVE-VERIFICATION.json",
+              "sha256": "0e2d2cfdfe70c8ed2c9458df1e2cba3a9db7e4a3934c6fb19b30d0b3c0436b40"
+            },
+            "review_scope": "All five unchanged source clauses, broad first-budget domain, exact printed constants and arbitrary signed offsets; focused native closure and standard-only audits passed."
+          },
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks.full_uniform_source",
+            "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks.quantitative_separation",
+            "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks.effective_equality_tail",
+            "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeStatementChecks.uniform_depth_and_output_bounds",
+            "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierStatementChecks.exact_signed_order",
+            "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedSupplierStatementChecks.uniform_tail_programs"
+          ],
+          "coverage_note_history": [
+            "The degree-two separation base and higher counter leader/recognition suppliers are checked. The explicitly corrected paper08 limit-part process, genuine signed-domain recursion, full counter theorem and effective residues are now adopted; the original incompatible wording remains historical negative evidence. The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction."
+          ],
+          "completion_audit_history": [
+            {
+              "date": "2026-11-05",
+              "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+              "classification": "missing_foundation_or_downstream",
+              "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+              "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
+              "next_completion_step": "Freeze and prove the entire rank-at-least-three statement under the now explicit corrected source convention, retaining the printed C_d/T_d, growing retained masses and every regional hypothesis. Reuse the accepted kernel/counter package.",
+              "upstream_blockers": [],
+              "checked_prerequisites": [
+                "08:lem:kernel-recursion"
+              ],
+              "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+              "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+            }
+          ],
+          "verification_receipt": "verification/cumulative-continuation-2026-11-05/uniform-separation/receipts/1793925849049773021-2.json",
+          "acceptance_record": "verification/cumulative-continuation-2026-11-05/uniform-separation/ACCEPTANCE.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:counter",
@@ -11073,8 +11117,8 @@
   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
-  "source_completion_updated_at_utc": "2026-11-05T20:15:59.083452+00:00",
-  "supporting_components_updated_at_utc": "2026-11-05T20:15:59.083452+00:00",
+  "source_completion_updated_at_utc": "2026-11-06T00:47:20.174518+00:00",
+  "supporting_components_updated_at_utc": "2026-11-06T00:47:20.174518+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
     "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",
@@ -11083,26 +11127,26 @@
     "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
   },
   "source_completion_promotion": {
-    "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
-    "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
-    "report": "audits/FINITE-SOURCE-COMPLETION-2026-11-05.json",
-    "statement": "08-multivariate-collapse-comparison:thm:finite-source",
+    "accepted_at_utc": "2026-11-06T00:47:20.174518+00:00",
+    "baseline_commit": "e5c70ae3f0f619abe079ff7d1fca6f5259cc3d76",
+    "report": "audits/UNIFORM-SEPARATION-COMPLETION-2026-11-05.json",
+    "statement": "08-multivariate-collapse-comparison:lem:uniform",
     "native_verification": {
-      "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
-      "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+      "file": "verification/cumulative-continuation-2026-11-05/uniform-separation/NATIVE-VERIFICATION.json",
+      "sha256": "0e2d2cfdfe70c8ed2c9458df1e2cba3a9db7e4a3934c6fb19b30d0b3c0436b40"
     },
     "counts_before": {
-      "checked": 162,
-      "pending": 25,
-      "existing-calculator-package": 2
-    },
-    "counts_after": {
       "checked": 163,
       "pending": 24,
       "existing-calculator-package": 2
     },
+    "counts_after": {
+      "checked": 164,
+      "pending": 23,
+      "existing-calculator-package": 2
+    },
     "numbered_source_promotions_in_this_update": 1,
-    "numbered_source_promotions_cumulative": 2,
+    "numbered_source_promotions_cumulative": 3,
     "full_root_build": false,
     "remote_ci_claim": false
   },
@@ -11112,6 +11156,30 @@
       "statement": "09-canonical-source-expressivity:thm:functional-hardness",
       "base_staged_tree": "b788319b33b505d71285dfe4f4b74f704baa5d9f",
       "application_prerequisite": "Apply this one-label promotion only after the coordinator has accepted and integrated the unchanged 654-module supplier closure and its portable evidence into the publication candidate, verified the intended aggregate/root inclusion and run the required integration gate. This prepared patch does not assert that integration, publication or those checks have occurred."
+    },
+    {
+      "accepted_at_utc": "2026-11-05T20:15:59.083452+00:00",
+      "baseline_commit": "4cd55d6ccb457a656d00bcc973fc93783b4e8bbc",
+      "report": "audits/FINITE-SOURCE-COMPLETION-2026-11-05.json",
+      "statement": "08-multivariate-collapse-comparison:thm:finite-source",
+      "native_verification": {
+        "file": "verification/cumulative-continuation-2026-11-05/finite-source-comparison/NATIVE-VERIFICATION.json",
+        "sha256": "2168b79235524f4fb3460311fa05e9ec67c65804b6515fa9e2963b116a53b0dc"
+      },
+      "counts_before": {
+        "checked": 162,
+        "pending": 25,
+        "existing-calculator-package": 2
+      },
+      "counts_after": {
+        "checked": 163,
+        "pending": 24,
+        "existing-calculator-package": 2
+      },
+      "numbered_source_promotions_in_this_update": 1,
+      "numbered_source_promotions_cumulative": 2,
+      "full_root_build": false,
+      "remote_ci_claim": false
     }
   ]
 }

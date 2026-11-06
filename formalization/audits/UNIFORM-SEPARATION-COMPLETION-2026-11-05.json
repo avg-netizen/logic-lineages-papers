@@ -1,0 +1,89 @@
+{
+  "schema": "uniform-source-promotion-v1",
+  "accepted_at_utc": "2026-11-06T00:47:20.174518+00:00",
+  "baseline_commit": "e5c70ae3f0f619abe079ff7d1fca6f5259cc3d76",
+  "report": "audits/UNIFORM-SEPARATION-COMPLETION-2026-11-05.json",
+  "statement": "08-multivariate-collapse-comparison:lem:uniform",
+  "native_verification": {
+    "file": "verification/cumulative-continuation-2026-11-05/uniform-separation/NATIVE-VERIFICATION.json",
+    "sha256": "0e2d2cfdfe70c8ed2c9458df1e2cba3a9db7e4a3934c6fb19b30d0b3c0436b40"
+  },
+  "counts_before": {
+    "checked": 163,
+    "pending": 24,
+    "existing-calculator-package": 2
+  },
+  "counts_after": {
+    "checked": 164,
+    "pending": 23,
+    "existing-calculator-package": 2
+  },
+  "numbered_source_promotions_in_this_update": 1,
+  "numbered_source_promotions_cumulative": 3,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "acceptance_record": "verification/cumulative-continuation-2026-11-05/uniform-separation/ACCEPTANCE.json",
+  "original_pending_statement": {
+    "id": "08-multivariate-collapse-comparison:lem:uniform",
+    "kind": "lemma",
+    "label": "lem:uniform",
+    "file": "08-multivariate-collapse-comparison/paper.tex",
+    "line": 338,
+    "statement_latex": "[Uniform kernel separation]\\label{lem:uniform}\nPut $C_d=1000d^2$, $T_3=16$, and for $d\\ge4$ put\n$T_d=\\max(T_{d-1},100C_{d-1}+100d)$. For $d\\ge3$, $c,e\\ge0$, signed\n$j,k$, and $R\\ge0$, suppose\n\\begin{equation}\\label{eq:region}\n t\\ge T_d,\\qquad\n f(t)\\ge C_d(c+e+|j|+|k|+R+1).\n\\end{equation}\nThen the depths are defined and at least $f(t)$, and\n\\begin{align*}\n X^d_{c,j}(t+1)&>f^R(X^d_{e,k}(t)),\\\\\n c<e\\quad&\\Longrightarrow\\quad\n X^d_{c,j}(t)>f^R(X^d_{e,k}(t)).\n\\end{align*}\nAt equal input and equal $c$, exact order is order of $j$. On a common\ncomputed tail, equality of two rank-$d$ values occurs exactly when input,\n$c$, and $j$ are identical.",
+    "status": "pending",
+    "accepted_declaration": null,
+    "frozen_comparator": null,
+    "checked_components": [
+      {
+        "gate_module": "LogicLineages.OrdinalComparison.QuadraticSeparationStatementChecks",
+        "acceptance_record": "verification/external-continuation-2026-11-03/PUBLIC-VALIDATION.json",
+        "scope": "Supporting dependency toward 08-multivariate-collapse-comparison:lem:uniform: The literal quadratic V construction satisfies the displayed varying-index bound and strict R-iterate separation, with the compared positive depths derived where required. Same-input signed-index order is exact under positive-depth hypotheses. This does not establish the whole uniform theorem, a broader recurrence, or a decision procedure. Component evidence only; the whole registered source statement remains pending."
+      },
+      {
+        "gate_module": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.ElementaryStatementChecks",
+        "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/round02-uniform/ROOT-DOMAIN-EXTENSION-ADOPTION.json",
+        "scope": "Numerical principal-start source process on c<=Phi(t), exact first-budget total norm/count/trace and first-finite exit; same original schedule retained. Padded companion correspondence ONLY at genuine t>=c+d+1. Exact signed order and tail programs checked. Full uniform depth/separation/equality remain pending. Prior3fixed-tail source claims and all their proof bytes/receipts preserved."
+      },
+      {
+        "gate_module": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.DepthBoundsStatementChecks",
+        "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/round02-uniform/ROOT-DEPTH-ADOPTION.json",
+        "scope": "Entire literal d>=3, t>=T_d, Phi(t)>=C_d*(c+e+|j|+|k|+R+1); NO genuine original-input premise added. Integer iteration depths AND numerical values at (c,j,t),(e,k,t),(c,j,t+1),(e,k,t+1) are all >=Phi(t). Actual first suffix dominates omega^2*2, compare its actual remaining count with valid quadratic companion at new input Phi(t). No invalid original-t companion identification. Full mass/cross-input quantitative separation for arbitrary R and the exact equality-tail criterion remain unpaid. Supporting component; no whole-source promotion."
+      },
+      {
+        "gate_module": "LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.BroadBlockStatementChecks",
+        "acceptance_record": "verification/local-resume-2026-11-04-six-lanes/sol4-kernels/round02-uniform/ROOT-BROAD-BLOCK-ADOPTION.json",
+        "scope": "Original full region derives c+d and e+d <=Phi(t). Under first-budget c+d<=Phi(t), exact scheduled parent trace keeps one theta block through inner first-finite cut; child input K satisfies BOTH numerical/actual norm domains. Cut is strict; exact source counts add and values compose. No original-t padded companion equality. Full quantitative separation and exact equality criterion; generic scheduled comparison and whole child-word calibration are the next proof obligations."
+      }
+    ],
+    "coverage_note": "The degree-two separation base and higher counter leader/recognition suppliers are checked. The explicitly corrected paper08 limit-part process, genuine signed-domain recursion, full counter theorem and effective residues are now adopted; the original incompatible wording remains historical negative evidence. The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
+    "remaining_dependencies": [
+      {
+        "description": "Connect the full uniform separation induction to the already accepted corrected limit-part source process and genuine signed domains. The kernel convention and three corrected kernel/counter/residue source statements are no longer unresolved; the growing-mass uniform theorem is still pending.",
+        "status": "pending"
+      },
+      {
+        "description": "The full d >= 3 induction with the printed C_d/T_d and regional hypotheses: defined depths at least f(t), both separation inequalities, exact equal-input signed-index order, and effective common-tail uniqueness.",
+        "status": "pending"
+      }
+    ],
+    "completion_audit": {
+      "date": "2026-11-05",
+      "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+      "classification": "missing_foundation_or_downstream",
+      "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+      "remaining_obligation": "The full arbitrary-rank quantitative separation induction with the manuscript's printed region and constants is not proved. It must be connected to the accepted corrected limit-part process and genuine signed domains; adoption of those suppliers does not itself prove this uniform induction.",
+      "next_completion_step": "Freeze and prove the entire rank-at-least-three statement under the now explicit corrected source convention, retaining the printed C_d/T_d, growing retained masses and every regional hypothesis. Reuse the accepted kernel/counter package.",
+      "upstream_blockers": [],
+      "checked_prerequisites": [
+        "08:lem:kernel-recursion"
+      ],
+      "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+      "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+    }
+  },
+  "source_text_unchanged": true,
+  "only_statement_status_change": "08-multivariate-collapse-comparison:lem:uniform",
+  "prior_finite_source_statement_unchanged": true,
+  "existing_paper_status": "in-progress",
+  "proof_sources_unchanged_before_additions": true
+}

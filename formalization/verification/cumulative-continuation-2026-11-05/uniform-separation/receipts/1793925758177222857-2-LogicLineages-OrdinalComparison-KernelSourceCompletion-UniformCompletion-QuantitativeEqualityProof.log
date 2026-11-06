@@ -1,0 +1,26 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/KernelSourceCompletion/UniformCompletion/QuantitativeEqualityProof.lean:50:32: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  n ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l - n ≥ 1
+  i ≥ 0
+  i - m ≤ 0
+  h ≥ 0
+  g ≥ 0
+  g - h ≥ 1
+  f ≥ 0
+  b ≥ 0
+  b - f ≥ 1
+  a ≥ 3
+  a - i + l ≤ 0
+where
+ a := ↑d
+ b := ↑u
+ f := ↑t
+ g := ↑(sourceSignedValue d c j (t + 1))
+ h := ↑(sourceSignedValue d e k t)
+ i := ↑(Phi t)
+ l := ↑c
+ m := ↑(Phi t.succ)
+ n := ↑(Phi (t + 1))

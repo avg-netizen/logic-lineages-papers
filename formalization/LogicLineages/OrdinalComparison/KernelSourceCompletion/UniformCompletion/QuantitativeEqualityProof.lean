@@ -1,0 +1,101 @@
+module
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.QuantitativeRegionProof
+public import LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.FocusedElementaryProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Proof
+
+/-- The printed computed tail pays the complete cross-pair region at every
+later input. Its two additional self-pair bounds remain unchanged. -/
+private theorem equality_tail_region (d c e : Nat) (j k : Int) (t : Nat)
+    (ht : equalityTail d c e j k ≤ t) : region d c e j k 0 t := by
+  simp only [equalityTail,max_le_iff] at ht
+  refine ⟨ht.1,?_⟩
+  simpa only [Nat.add_zero] using ht.2.1.trans (self_lt_Phi t).le
+
+private theorem zero_region_swap (d c e : Nat) (j k : Int) (t : Nat)
+    (hr : region d c e j k 0 t) : region d e c k j 0 t := by
+  refine ⟨hr.1,?_⟩
+  have heq : e+c+k.natAbs+j.natAbs+0+1 =
+      c+e+j.natAbs+k.natAbs+0+1 := by omega
+  change degreeConstant d * (e+c+k.natAbs+j.natAbs+0+1) ≤ Phi t
+  rw [heq]
+  exact hr.2
+
+/-- With mass and signed offset fixed, the actual scheduled count and its
+signed depth are monotone in the input. Int.toNat preserves this order even
+outside the positive-depth region, so no inverse iteration is used. -/
+private theorem source_signed_input_mono (d c : Nat) (j : Int) (t u : Nat)
+    (hd : 1 ≤ d) (htu : t ≤ u) (hc : c ≤ Phi t) :
+    sourceSignedValue d c j t ≤ sourceSignedValue d c j u := by
+  have hcount := (Focused.sourceInputMassOrder d c c t u hd le_rfl htu hc).2.1
+  have hdepth : (sourceSignedDepth d c j t).toNat ≤
+      (sourceSignedDepth d c j u).toNat := by
+    unfold sourceSignedDepth
+    omega
+  change (Phi^[(sourceSignedDepth d c j t).toNat]) t ≤
+    (Phi^[(sourceSignedDepth d c j u).toNat]) u
+  exact ((Phi_strictMono.iterate (sourceSignedDepth d c j t).toNat).monotone htu).trans
+    (iterate_index_mono (fun x => (self_lt_Phi x).le) u hdepth)
+
+/-- Adjacent uniform separation extends to every larger input through the
+actual fixed-mass source count, retaining the arbitrary signed index. -/
+private theorem quantitative_strict_inputs (d c e : Nat) (j k : Int) (t u : Nat)
+    (hd : 3 ≤ d) (hr : region d c e j k 0 t) (htu : t < u) :
+    sourceSignedValue d e k t < sourceSignedValue d c j u := by
+  have hs := (quantitativeSeparation d c e j k 0 t hd hr).1
+  change sourceSignedValue d e k t < sourceSignedValue d c j (t+1) at hs
+  have hmass := (Focused.broadUnsignedBlockCut.1 d c e j k 0 t hd hr).1
+  have hnext : Phi t ≤ Phi (t+1) := Phi_strictMono.monotone (Nat.le_succ t)
+  have hc : c ≤ Phi (t+1) := by omega
+  have hm := source_signed_input_mono d c j (t+1) u (by omega)
+    (Nat.succ_le_of_lt htu) hc
+  exact hs.trans_le hm
+
+theorem effectiveEqualityTail : Targets.EffectiveEqualityTail := by
+  intro d c e j k hd t u ht hu
+  have hrt := equality_tail_region d c e j k t ht
+  have hru := equality_tail_region d c e j k u hu
+  have hmt := Focused.broadUnsignedBlockCut.1 d c e j k 0 t hd hrt
+  have hmu := Focused.broadUnsignedBlockCut.1 d c e j k 0 u hd hru
+  have hc : c ≤ Phi t := by have hh := hmt.1; omega
+  have he : e ≤ Phi u := by have hh := hmu.2; omega
+  have hdt := Focused.uniformDepthAndOutputBounds d c e j k 0 t hd hrt
+  have hdu := Focused.uniformDepthAndOutputBounds d c e j k 0 u hd hru
+  have hpt : (0 : Int) < (Phi t : Int) := by have hh := self_lt_Phi t; omega
+  have hpu : (0 : Int) < (Phi u : Int) := by have hh := self_lt_Phi u; omega
+  have hj : 0 < sourceSignedDepth d c j t := hpt.trans_le hdt.1
+  have hk : 0 < sourceSignedDepth d e k u := hpu.trans_le hdu.2.1
+  refine ⟨hc,he,hj,hk,?_⟩
+  constructor
+  · intro heq
+    have htu : t = u := by
+      by_contra hne
+      rcases lt_or_gt_of_ne hne with hlt | hgt
+      · have hs := quantitative_strict_inputs d e c k j t u hd
+          (zero_region_swap d c e j k t hrt) hlt
+        exact (ne_of_lt hs) heq
+      · have hs := quantitative_strict_inputs d c e j k u t hd hru hgt
+        exact (ne_of_lt hs) heq.symm
+    subst u
+    have hce : c = e := by
+      by_contra hne
+      rcases lt_or_gt_of_ne hne with hlt | hgt
+      · have hs := (quantitativeSeparation d c e j k 0 t hd hrt).2 hlt
+        change sourceSignedValue d e k t < sourceSignedValue d c j t at hs
+        exact (ne_of_lt hs) heq.symm
+      · have hs := (quantitativeSeparation d e c k j 0 t hd
+          (zero_region_swap d c e j k t hrt)).2 hgt
+        change sourceSignedValue d c j t < sourceSignedValue d e k t at hs
+        exact (ne_of_lt hs) heq
+    subst e
+    refine ⟨rfl,rfl,?_⟩
+    exact (Focused.exactSignedOrder d c t hd hc j k hj hk).2.1.mp heq
+  · rintro ⟨rfl,rfl,rfl⟩
+    rfl
+
+theorem fullUniformSource : Targets.FullUniformSource :=
+  ⟨Focused.uniformDepthAndOutputBounds,quantitativeSeparation,Focused.exactSignedOrder,
+    effectiveEqualityTail,Focused.uniformTailPrograms⟩
+
+end LogicLineages.OrdinalComparison.KernelSourceCompletion.UniformCompletion.Proof

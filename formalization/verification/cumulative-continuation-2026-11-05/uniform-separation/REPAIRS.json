@@ -1,0 +1,32 @@
+{
+  "schema": "uniform-repairs-v1",
+  "attempts": [
+    {
+      "attempt": 1,
+      "receipt": "receipts/1793925663901281031-2.json",
+      "snapshot": "failed-candidates/01/FocusedScheduledComparisonProof.lean.txt",
+      "failure": "Missing direct import for finiteOmegaPowerBelowEpsilonZero after focused extraction.",
+      "repair": "Add PolynomialPartitionProof import to the new focused scheduled-comparison module.",
+      "frozen_statement_changed": false
+    },
+    {
+      "attempt": 2,
+      "receipt": "receipts/1793925758177222857-2.json",
+      "snapshot": "failed-candidates/02/QuantitativeEqualityProof.lean.txt",
+      "failure": "Omega treated Phi t.succ and Phi (t+1) as different atoms.",
+      "repair": "Give the monotonicity hypothesis the explicit Phi t <= Phi (t+1) type.",
+      "frozen_statement_changed": false
+    },
+    {
+      "attempt": 3,
+      "receipt": "receipts/1793925795835334831-2.json",
+      "snapshot": "failed-candidates/03/QuantitativeStatementChecks.lean.txt",
+      "failure": "Namespace enumeration did not enumerate imported focused theorem declarations; all eight quantitative aliases nevertheless logged standard-only audits.",
+      "repair": "Add sixteen explicit local supplier aliases in FocusedSupplierStatementChecks and audit that namespace, keeping all eight quantitative audits.",
+      "frozen_statement_changed": false
+    }
+  ],
+  "final_receipt": "receipts/1793925849049773021-2.json",
+  "final_outcome": "passed",
+  "resource_limits_changed": false
+}
