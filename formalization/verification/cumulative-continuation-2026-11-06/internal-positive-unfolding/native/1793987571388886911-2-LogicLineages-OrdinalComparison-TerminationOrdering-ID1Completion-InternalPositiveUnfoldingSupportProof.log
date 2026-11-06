@@ -1,0 +1,76 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:44:2: error: Tactic `rfl` failed: The left-hand side
+  BoundedFormula.rel (id RelationSymbol.predicate) fun i =>
+    (Term.relabel Sum.inl (![var (Sum.inr 0)] i)).subst
+      (Sum.elim (Term.relabel Sum.inl ∘ Sum.elim var fun x => arithmeticEmbedding.onTerm t) (var ∘ Sum.inr))
+is not definitionally equal to the right-hand side
+  BoundedFormula.rel RelationSymbol.predicate fun i => Term.relabel Sum.inl (![arithmeticEmbedding.onTerm t] i)
+
+α : Type
+t : OrdinaryArithmetic.Term α
+⊢ (BoundedFormula.rel (id RelationSymbol.predicate) fun i =>
+      (Term.relabel Sum.inl (![var (Sum.inr 0)] i)).subst
+        (Sum.elim (Term.relabel Sum.inl ∘ Sum.elim var fun x => arithmeticEmbedding.onTerm t) (var ∘ Sum.inr))) =
+    BoundedFormula.rel RelationSymbol.predicate fun i => Term.relabel Sum.inl (![arithmeticEmbedding.onTerm t] i)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:42:76: warning: This simp argument is unused:
+  Term.relabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵n̵s̵t̵a̵n̵t̵i̵a̵t̵e̵,̵p̵r̵e̵d̵i̵c̵a̵t̵e̵A̵t̵O̵b̵j̵e̵c̵t̵,̵P̵o̵s̵i̵t̵i̵v̵e̵.̵f̵o̵r̵m̵u̵l̵a̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵f̵o̵r̵m̵u̵l̵a̵₁̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵f̵o̵r̵m̵u̵l̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵b̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵s̵u̵b̵s̵t̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵L̵H̵o̵m̵.̵o̵n̵T̵e̵r̵m̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]̵[̲i̲n̲s̲t̲a̲n̲t̲i̲a̲t̲e̲,̲ ̲p̲r̲e̲d̲i̲c̲a̲t̲e̲A̲t̲O̲b̲j̲e̲c̲t̲,̲ ̲P̲o̲s̲i̲t̲i̲v̲e̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲f̲o̲r̲m̲u̲l̲a̲₁̲,̲
+  ̲ ̲ ̲ ̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲b̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲s̲u̲b̲s̲t̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲L̲H̲o̲m̲.̲o̲n̲T̲e̲r̲m̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:42:89: warning: This simp argument is unused:
+  Term.subst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵n̵s̵t̵a̵n̵t̵i̵a̵t̵e̵,̵p̵r̵e̵d̵i̵c̵a̵t̵e̵A̵t̵O̵b̵j̵e̵c̵t̵,̵P̵o̵s̵i̵t̵i̵v̵e̵.̵f̵o̵r̵m̵u̵l̵a̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵f̵o̵r̵m̵u̵l̵a̵₁̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵f̵o̵r̵m̵u̵l̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵b̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵s̵u̵b̵s̵t̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵L̵H̵o̵m̵.̵o̵n̵T̵e̵r̵m̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]̵[̲i̲n̲s̲t̲a̲n̲t̲i̲a̲t̲e̲,̲ ̲p̲r̲e̲d̲i̲c̲a̲t̲e̲A̲t̲O̲b̲j̲e̲c̲t̲,̲ ̲P̲o̲s̲i̲t̲i̲v̲e̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲f̲o̲r̲m̲u̲l̲a̲₁̲,̲
+  ̲ ̲ ̲ ̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲b̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲s̲u̲b̲s̲t̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲L̲H̲o̲m̲.̲o̲n̲T̲e̲r̲m̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:43:16: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵n̵s̵t̵a̵n̵t̵i̵a̵t̵e̵,̵p̵r̵e̵d̵i̵c̵a̵t̵e̵A̵t̵O̵b̵j̵e̵c̵t̵,̵P̵o̵s̵i̵t̵i̵v̵e̵.̵f̵o̵r̵m̵u̵l̵a̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵f̵o̵r̵m̵u̵l̵a̵₁̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵f̵o̵r̵m̵u̵l̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵b̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵s̵u̵b̵s̵t̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵L̵H̵o̵m̵.̵o̵n̵T̵e̵r̵m̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]̵[̲i̲n̲s̲t̲a̲n̲t̲i̲a̲t̲e̲,̲ ̲p̲r̲e̲d̲i̲c̲a̲t̲e̲A̲t̲O̲b̲j̲e̲c̲t̲,̲ ̲P̲o̲s̲i̲t̲i̲v̲e̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲f̲o̲r̲m̲u̲l̲a̲₁̲,̲
+  ̲ ̲ ̲ ̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲b̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲s̲u̲b̲s̲t̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲L̲H̲o̲m̲.̲o̲n̲T̲e̲r̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:56:70: error: unsolved goals
+body : Positive (Fin 1)
+α α✝ : Type
+phi : OrdinaryArithmetic.Formula α✝
+⊢ (Positive.arithmetic phi).formula = substitutePredicate (Positive.arithmetic phi) (bodyWithParameters body α✝).formula
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:71:88: error: unsolved goals
+body : Positive (Fin 1)
+α α✝ : Type
+p q : Positive α✝
+dp : Derivation body [] ((substitutePredicate p (bodyWithParameters body α✝).formula).imp p.formula)
+dq : Derivation body [] ((substitutePredicate q (bodyWithParameters body α✝).formula).imp q.formula)
+⊢ ?m.113 = substitutePredicate (p.conj q) (bodyWithParameters body α✝).formula
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:82:35: error: unsolved goals
+body : Positive (Fin 1)
+α α✝ : Type
+guard : OrdinaryArithmetic.Formula α✝
+p : Positive α✝
+d : Derivation body [] ((substitutePredicate p (bodyWithParameters body α✝).formula).imp p.formula)
+⊢ Formula.imp ?guarded.phi (substitutePredicate p (bodyWithParameters body α✝).formula) =
+      arithmeticEmbedding.onFormula guard ∨
+    Formula.imp ?guarded.phi (substitutePredicate p (bodyWithParameters body α✝).formula) =
+      substitutePredicate (Positive.guarded guard p) (bodyWithParameters body α✝).formula
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPositiveUnfoldingSupportProof.lean:83:35: error: unsolved goals
+body : Positive (Fin 1)
+α α✝ : Type
+guard : OrdinaryArithmetic.Formula α✝
+p : Positive α✝
+d : Derivation body [] ((substitutePredicate p (bodyWithParameters body α✝).formula).imp p.formula)
+⊢ ?m.169 = arithmeticEmbedding.onFormula guard ∨
+    ?m.169 = substitutePredicate (Positive.guarded guard p) (bodyWithParameters body α✝).formula

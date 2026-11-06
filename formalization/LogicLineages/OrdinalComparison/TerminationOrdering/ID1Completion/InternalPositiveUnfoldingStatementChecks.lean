@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingStatementChecks
+
+theorem contraction_exact : InternalPositiveUnfoldingPreflight.contractionComparator :=
+  InternalPositiveUnfoldingProof.actualPositiveContraction
+theorem step_exact : InternalPositiveUnfoldingPreflight.stepComparator :=
+  InternalPositiveUnfoldingProof.actualBodyInvariantStep
+theorem reverse_exact : InternalPositiveUnfoldingPreflight.reverseComparator :=
+  InternalPositiveUnfoldingProof.actualInternalReverseUnfolding
+theorem unfolding_exact : InternalPositiveUnfoldingPreflight.unfoldingComparator :=
+  InternalPositiveUnfoldingProof.actualInternalUnfolding
+theorem source_exact : InternalPositiveUnfoldingPreflight.sourceComparator :=
+  InternalPositiveUnfoldingProof.actualOriginalSourceUnfolding
+
+#print axioms contraction_exact
+#print axioms step_exact
+#print axioms reverse_exact
+#print axioms unfolding_exact
+#print axioms source_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingStatementChecks

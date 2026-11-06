@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingPreflight
+def contractionComparator : Prop := InternalPositiveUnfoldingTargets.ActualPositiveContraction
+def stepComparator : Prop := InternalPositiveUnfoldingTargets.ActualBodyInvariantStep
+def reverseComparator : Prop := InternalPositiveUnfoldingTargets.ActualInternalReverseUnfolding
+def unfoldingComparator : Prop := InternalPositiveUnfoldingTargets.ActualInternalUnfolding
+def sourceComparator : Prop := InternalPositiveUnfoldingTargets.ActualOriginalSourceUnfolding
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingPreflight
