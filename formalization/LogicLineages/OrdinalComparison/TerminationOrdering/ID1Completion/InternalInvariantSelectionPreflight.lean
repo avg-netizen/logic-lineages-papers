@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalInvariantSelectionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalInvariantSelectionPreflight
+def selectionComparator : Prop := InternalInvariantSelectionTargets.ActualInternalInvariantSelection
+def windowComparator : Prop := InternalInvariantSelectionTargets.ActualInternalFiniteWindowSelection
+def inductionComparator : Prop := InternalInvariantSelectionTargets.ActualSelectedInvariantInduction
+def finiteComparator : Prop := InternalInvariantSelectionTargets.ActualFiniteWindowInduction
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalInvariantSelectionPreflight

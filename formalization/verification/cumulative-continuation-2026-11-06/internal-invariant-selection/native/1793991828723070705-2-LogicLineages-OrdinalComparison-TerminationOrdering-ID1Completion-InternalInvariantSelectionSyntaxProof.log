@@ -1,0 +1,13 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalInvariantSelectionSyntaxProof.lean:29:2: error: 'change' tactic failed, pattern
+  BoundedFormula.subst
+      (allOne
+        (Formula.imp (eqn (var (Sum.inl (Sum.inr 0))) (tagTerm odd (var (Sum.inr 0)))) (liftPredicateFormula phi)))
+      ?m.50 =
+    ?m.66
+is not definitionally equal to target
+  BoundedFormula.subst
+      (allOne
+        ((arithmeticEmbedding.onFormula ((var (Sum.inl (Sum.inr 0))).equal (tagTerm odd (var (Sum.inr 0))))).imp
+          (liftPredicateFormula phi)))
+      (Sum.elim var fun x => emb t) =
+    allOne (Formula.imp (eqn (Term.relabel Sum.inl t) (tagTerm odd (var (Sum.inr 0)))) phi)
