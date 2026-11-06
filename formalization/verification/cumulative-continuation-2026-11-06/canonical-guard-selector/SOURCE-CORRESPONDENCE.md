@@ -1,0 +1,13 @@
+# Canonical outer-head extraction and certified local case selection
+
+Paper08 `08-multivariate-collapse-comparison/paper.tex`, lines 559–638. This component connects arbitrary admitted literal words to the already checked local head guards and their well-founded child relation. It does not implement the full recursive comparison compiler.
+
+The existing exact original-prefix/shift-suffix split identifies the last nonlinear head. Reversing the core and taking its head/tail extracts the original prefix and last letter without creating a new raw variable. Canonicalization removes only unused fields: Phi discards all payload fields, V retains its signed index, X retains degree/mass/index, and E retains degree/mass. The actual original scheduled evaluator and domain are unchanged at every natural input. The default Phi head is ignored for all-shift words.
+
+`preparedWord` preserves the original word value and has a proved domain whenever the entire original domain holds. The original wordTail is separately paid. No converse domain claim erases an invalid intermediate shift. Source rank/mass/depth fields remain literal; no source/companion schedule is substituted. Prepared and original pairs have equal actual count measures.
+
+The total selector returns no child exactly when at least one word is all-shift, which is a terminal case handled by existing leaf/growth suppliers. Otherwise its numbered case and orientation are certified against an explicit labeled copy of the actual checked constructors: 1 counter/counter, 2 counter/range, 3 Phi/range, 4 V/V, 5 equal-rank X/X, 6 mixed-rank X/X, 7 X/V. Opposite orientation swaps the returned child back to the original side order. A separate calibration maps every labeled case to GuardChild.
+
+Rank-gap subtraction is exact on admitted heads: every X/E degree is at least three, and the selector compares X ranks before forming the gap. Selected children preserve the original degree admission and strictly decrease the actual word-pair measure. All extraction, canonicalization and selection functions are primitive recursive, including total malformed-input behavior; certification is restricted to the original admitted domain.
+
+This is structural coverage and local case selection, not semantic comparison evaluation, a finite Boolean formula compiler, effective common-tail recursion, general same-variable decision or full lem:guards. Existing analytic thresholds remain necessary when consuming the selected case. Ranked cancellation and first-order BASE remain pending; register unchanged at 167 checked, 2 inherited, 20 pending / 189.

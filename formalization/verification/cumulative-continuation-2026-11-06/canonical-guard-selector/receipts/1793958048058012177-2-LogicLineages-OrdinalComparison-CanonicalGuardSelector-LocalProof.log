@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/LocalProof.lean:158:10: error: Type mismatch: After simplification, term
+  GuardCase.mixedKernel A B m (n - m - 1) c e i l j k hD
+ has type
+  GuardCase D 6 false (retainedWord A (m + 1) (n - m - 1) c, B)
+    (A ++ [(3, n + 3, c, i), shiftLetter j], B ++ [(3, m + 3, e, l), shiftLetter k])
+but is expected to have type
+  GuardCase D (if n = m then (5, false, A, B) else (6, false, retainedWord A (m + 1) (n - m - 1) c, B)).1
+    (if n = m then (5, false, A, B) else (6, false, retainedWord A (m + 1) (n - m - 1) c, B)).2.1
+    (if n = m then (5, false, A, B) else (6, false, retainedWord A (m + 1) (n - m - 1) c, B)).2.2
+    (A ++ [(3, n + 3, c, i), shiftLetter j], B ++ [(3, m + 3, e, l), shiftLetter k])
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/LocalProof.lean:165:10: error: Type mismatch: After simplification, term
+  GuardCase.reverse (GuardCase.mixedKernel B A n (m - n - 1) e c l i k j hD)
+ has type
+  GuardCase D 6 true (A, retainedWord B (n + 1) (m - n - 1) e)
+    (A ++ [(3, n + 3, c, i), shiftLetter j], B ++ [(3, m + 3, e, l), shiftLetter k])
+but is expected to have type
+  GuardCase D (if n = m then (5, false, A, B) else (6, true, A, retainedWord B (n + 1) (m - n - 1) e)).1
+    (if n = m then (5, false, A, B) else (6, true, A, retainedWord B (n + 1) (m - n - 1) e)).2.1
+    (if n = m then (5, false, A, B) else (6, true, A, retainedWord B (n + 1) (m - n - 1) e)).2.2
+    (A ++ [(3, n + 3, c, i), shiftLetter j], B ++ [(3, m + 3, e, l), shiftLetter k])

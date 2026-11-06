@@ -1,0 +1,103 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:19:25: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [canonicalHead, h1̵,̵ ̵h̵2, IsCanonical, LetterAllowed, rangeRank,
+  ̵  ̵ ̵ ̵ ̵ ̵letterValue, LetterDomain,
+  ̲  ̲ ̲ ̲quadraticLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:22:25: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [canonicalHead, h1̵,̵ ̵h̵2, h3, IsCanonical, LetterAllowed, rangeRank,
+  ̵  ̵ ̵ ̵ ̵ ̵letterValue, LetterDomain,
+  ̲  ̲ ̲ ̲kernelLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:22:29: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [canonicalHead, h1, h2̵,̵ ̵h̵3, IsCanonical, LetterAllowed, rangeRank,
+  ̵  ̵ ̵ ̵ ̵ ̵letterValue, LetterDomain,
+  ̲  ̲ ̲ ̲kernelLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:25:25: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [canonicalHead, h1̵,̵ ̵h̵2, h3, h4, IsCanonical, LetterAllowed, rangeRank,
+  ̵  ̵ ̵ ̵ ̵ ̵letterValue,
+  ̲  ̲ ̲ ̲LetterDomain, counterLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:25:29: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [canonicalHead, h1, h2̵,̵ ̵h̵3, h4, IsCanonical, LetterAllowed, rangeRank,
+  ̵  ̵ ̵ ̵ ̵ ̵letterValue,
+  ̲  ̲ ̲ ̲LetterDomain, counterLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:25:33: warning: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  simp [canonicalHead, h1, h2, h3̵,̵ ̵h̵4, IsCanonical, LetterAllowed, rangeRank,
+  ̵  ̵ ̵ ̵ ̵ ̵letterValue,
+  ̲  ̲ ̲ ̲LetterDomain, counterLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:91:2: error: unsolved goals
+case inr
+w : Word
+t : ℕ
+A : List Letter
+a : Letter
+ha : coreWord w = A ++ [a]
+right✝ : a.1 ≠ 0
+hc :
+  letterValue (canonicalHead a) (wordValue A t) = letterValue a (wordValue A t) ∧
+    (LetterDomain (canonicalHead a) (wordValue A t) ↔ LetterDomain a (wordValue A t))
+⊢ True ∧ True
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:122:4: error: unsolved goals
+case inr.left
+w : Word
+A : List Letter
+a : Letter
+ha : coreWord w = A ++ [a]
+right✝ : a.1 ≠ 0
+htag : (canonicalHead a).1 = a.1
+hrank : rangeRank (canonicalHead a) = rangeRank a
+⊢ (List.filter (fun a => a.1 == 4) [canonicalHead a, shiftLetter (outerShift w)]).length =
+    (List.filter (fun a => a.1 == 4) [a, shiftLetter (outerShift w)]).length
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:123:4: error: unsolved goals
+case inr.right
+w : Word
+A : List Letter
+a : Letter
+ha : coreWord w = A ++ [a]
+right✝ : a.1 ≠ 0
+htag : (canonicalHead a).1 = a.1
+hrank : rangeRank (canonicalHead a) = rangeRank a
+r : ℕ
+⊢ (List.filter (fun a => rangeRank a == r) [canonicalHead a, shiftLetter (outerShift w)]).length =
+    (List.filter (fun a => rangeRank a == r) [a, shiftLetter (outerShift w)]).length
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:122:85: warning: This simp argument is unused:
+  htag
+
+Hint: Omit it from the simp argument list.
+  simp [normalizedWord, ha, List.append_assoc, counterNodes, List.filter_append,̵ ̵h̵t̵a̵g̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CanonicalGuardSelector/ViewProof.lean:124:83: warning: This simp argument is unused:
+  hrank
+
+Hint: Omit it from the simp argument list.
+  simp [normalizedWord, ha, List.append_assoc, rangeNodes, List.filter_append,̵ ̵h̵r̵a̵n̵k̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
