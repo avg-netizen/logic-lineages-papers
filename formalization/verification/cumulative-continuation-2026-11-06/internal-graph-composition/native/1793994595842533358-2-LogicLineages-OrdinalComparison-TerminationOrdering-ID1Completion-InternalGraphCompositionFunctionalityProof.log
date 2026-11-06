@@ -1,0 +1,94 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:22:49: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:22:49: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:32:11: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:32:34: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:34:48: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm β : Type
+  
+  InternalGraphComposition.OTerm β : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:38:98: error: unsolved goals
+body : Positive (Fin 1)
+m n : ℕ
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+f : OFormula (Fin (n + 1))
+g : Fin n → OFormula (Fin (m + 1))
+out : sorry
+xs : Fin m → sorry
+psi : InternalCalculus.Formula α
+d : Nonempty (Derivation body Gamma (graph (OrdinaryArithmetic.compositionGraph f g) sorry sorry))
+h :
+  ∀ (β : Type) (j : α → β) (ys : Fin n → sorry) (Delta : List (InternalCalculus.Formula β)),
+    (∀ p ∈ Gamma, Formula.relabel j p ∈ Delta) →
+      Nonempty (Derivation body Delta (graph f sorry sorry)) →
+        (∀ (i : Fin n), Nonempty (Derivation body Delta (graph (g i) sorry fun a => sorry))) →
+          Nonempty (Derivation body Delta (Formula.relabel j psi))
+⊢ Nonempty
+    (Derivation body
+      (arithmeticEmbedding.onFormula (matrix f g sorry sorry) :: List.map (fun p => Formula.relabel Sum.inl p) Gamma)
+      (Formula.relabel Sum.inl psi))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:52:17: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:52:17: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:52:40: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:64:44: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:64:44: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:64:67: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalGraphComposition.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:89:8: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:96:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean:96:2: warning: 'exact ⟨Derivation.implicationIntroduction d⟩' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

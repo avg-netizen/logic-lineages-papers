@@ -1,0 +1,108 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:69:102: error: unsolved goals
+α β : Type
+n : ℕ
+ps : Fin n → OFormula α
+ts : α → OTerm β
+h :
+  ∀ (ls : List (OFormula α)),
+    BoundedFormula.subst (List.foldr (fun x1 x2 => x1 ⊓ x2) ⊤ ls) ts =
+      List.foldr (fun x1 x2 => x1 ⊓ x2) ⊤ (List.map (fun p => BoundedFormula.subst p ts) ls)
+⊢ List.foldr (fun x1 x2 => x1 ⊓ x2) ⊤ (List.ofFn ((fun p => BoundedFormula.subst p ts) ∘ ps)) =
+    List.foldr (fun x1 x2 => x1 ⊓ x2) ⊤ (List.ofFn fun i => BoundedFormula.subst (ps i) ts)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:83:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (LHom.onBoundedFormula ?h ?phi).subst fun a => LHom.onTerm ?h (?ts a)
+in the target expression
+  (BoundedFormula.subst (arithmeticEmbedding.onFormula (OrdinaryArithmetic.applyGraph f out xs)) fun a => emb (ts a)) =
+    arithmeticEmbedding.onFormula (OrdinaryArithmetic.applyGraph f (Term.subst out ts) fun i => Term.subst (xs i) ts)
+
+α β : Type
+n : ℕ
+f : OFormula (Fin (n + 1))
+out : OTerm α
+xs : Fin n → OTerm α
+ts : α → OTerm β
+⊢ (BoundedFormula.subst (arithmeticEmbedding.onFormula (OrdinaryArithmetic.applyGraph f out xs)) fun a => emb (ts a)) =
+    arithmeticEmbedding.onFormula (OrdinaryArithmetic.applyGraph f (Term.subst out ts) fun i => Term.subst (xs i) ts)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:89:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  LHom.onBoundedFormula ?h (BoundedFormula.subst ?phi ?ts)
+in the target expression
+  arithmeticEmbedding.onFormula (BoundedFormula.subst f fun i => Fin.cases out xs i) =
+    BoundedFormula.subst (arithmeticEmbedding.onFormula f) fun i => Fin.cases (emb out) (fun i => emb (xs i)) i
+
+α : Type
+n : ℕ
+f : OFormula (Fin (n + 1))
+out : OTerm α
+xs : Fin n → OTerm α
+⊢ arithmeticEmbedding.onFormula (BoundedFormula.subst f fun i => Fin.cases out xs i) =
+    BoundedFormula.subst (arithmeticEmbedding.onFormula f) fun i => Fin.cases (emb out) (fun i => emb (xs i)) i
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:122:50: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inl` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inl`
+  [apply] `MonoidHom.inl`
+  [apply] `Or.inl`
+  [apply] `PSum.inl`
+  [apply] `Sum.inl`
+  [apply] `Finset.Nonempty.inl`
+  [apply] `Function.Embedding.inl`
+  [apply] `Set.Nonempty.inl`
+  [apply] `Sum.Lex.inl`
+  [apply] `Sum.LiftRel.inl`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:122:75: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inr` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inr`
+  [apply] `MonoidHom.inr`
+  [apply] `Or.inr`
+  [apply] `PSum.inr`
+  [apply] `Sum.inr`
+  [apply] `Finset.Nonempty.inr`
+  [apply] `Function.Embedding.inr`
+  [apply] `Set.Nonempty.inr`
+  [apply] `Sum.Lex.inr`
+  [apply] `Sum.LiftRel.inr`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:123:84: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inr` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inr`
+  [apply] `MonoidHom.inr`
+  [apply] `Or.inr`
+  [apply] `PSum.inr`
+  [apply] `Sum.inr`
+  [apply] `Finset.Nonempty.inr`
+  [apply] `Function.Embedding.inr`
+  [apply] `Set.Nonempty.inr`
+  [apply] `Sum.Lex.inr`
+  [apply] `Sum.LiftRel.inr`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:124:22: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inl` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inl`
+  [apply] `MonoidHom.inl`
+  [apply] `Or.inl`
+  [apply] `PSum.inl`
+  [apply] `Sum.inl`
+  [apply] `Finset.Nonempty.inl`
+  [apply] `Function.Embedding.inl`
+  [apply] `Set.Nonempty.inl`
+  [apply] `Sum.Lex.inl`
+  [apply] `Sum.LiftRel.inl`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionSyntaxProof.lean:139:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (LHom.onBoundedFormula ?h ?phi).subst fun a => LHom.onTerm ?h (?ts a)
+in the target expression
+  (BoundedFormula.subst (arithmeticEmbedding.onFormula (matrix f g out xs)) fun a => emb (Sum.elim var ys a)) =
+    graph f out ys ⊓
+      arithmeticEmbedding.onFormula (OrdinaryArithmetic.andFin fun i => OrdinaryArithmetic.applyGraph (g i) (ys i) xs)
+
+m n : ℕ
+α : Type
+f : OFormula (Fin (n + 1))
+g : Fin n → OFormula (Fin (m + 1))
+out : OTerm α
+xs : Fin m → OTerm α
+ys : Fin n → OTerm α
+he : (Sum.elim var fun i => emb (ys i)) = fun a => emb (Sum.elim var ys a)
+⊢ (BoundedFormula.subst (arithmeticEmbedding.onFormula (matrix f g out xs)) fun a => emb (Sum.elim var ys a)) =
+    graph f out ys ⊓
+      arithmeticEmbedding.onFormula (OrdinaryArithmetic.andFin fun i => OrdinaryArithmetic.applyGraph (g i) (ys i) xs)

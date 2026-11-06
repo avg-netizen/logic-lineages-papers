@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionPreflight
+def comparator0 : Prop := InternalGraphCompositionTargets.ActualOriginalCompositionInstance
+def comparator1 : Prop := InternalGraphCompositionTargets.ActualOriginalCompositionIntroduction
+def comparator2 : Prop := InternalGraphCompositionTargets.ActualOriginalCompositionElimination
+def comparator3 : Prop := InternalGraphCompositionTargets.ActualOriginalCompositionTotality
+def comparator4 : Prop := InternalGraphCompositionTargets.ActualOriginalCompositionFunctionality
+def comparator5 : Prop := InternalGraphCompositionTargets.ActualOriginalProgramComposition
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionPreflight

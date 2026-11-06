@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionEqualityProof.lean:44:4: error: unsolved goals
+case pos
+body : Positive (Fin 1)
+α : Type
+k : ℕ
+Gamma : List (InternalCalculus.Formula α)
+phi : InternalCalculus.Formula (Fin k)
+ts : Fin k → InternalCalculus.Term α
+i : Fin k
+u : InternalCalculus.Term α
+deq : Derivation body Gamma (Term.equal (ts i) u)
+dphi : Derivation body Gamma (BoundedFormula.subst phi ts)
+⊢ (if True then ts i else ts i) = ts i
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionEqualityProof.lean:45:17: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionEqualityProof.lean:87:21: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵m̵i̵x̵e̵d̵,̵i̵n̵d̵e̵x̵,̵N̵a̵t̵.̵l̵t̵_̵s̵u̵c̵c̵_̵s̵e̵l̵f̵,̵i̵f̵_̵t̵r̵u̵e̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲m̲i̲x̲e̲d̲,̲ ̲i̲n̲d̲e̲x̲,̲ ̲N̲a̲t̲.̲l̲t̲_̲s̲u̲c̲c̲_̲s̲e̲l̲f̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

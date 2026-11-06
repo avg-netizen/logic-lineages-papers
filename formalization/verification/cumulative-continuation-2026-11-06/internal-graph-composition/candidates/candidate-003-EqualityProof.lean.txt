@@ -1,0 +1,132 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksProof
+@[expose] public section
+
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionEqualityProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalGraphComposition
+open InternalBinderTransportSyntaxProof InternalTermSubstitutionSyntaxProof
+open InternalSourceInversionSupportProof
+
+/-- Abstract exactly one tuple coordinate as the fresh variable of the
+original equality-elimination rule. All remaining terms are merely lifted. -/
+def coordinateBody {α : Type} {k : Nat} (phi : Formula (Fin k))
+    (ts : Fin k → Term α) (i : Fin k) : Formula (α ⊕ Fin 1) :=
+  phi.subst (fun j => if j = i then .var (.inr 0) else (ts j).relabel Sum.inl)
+
+theorem coordinateInstance {α : Type} {k : Nat} (phi : Formula (Fin k))
+    (ts : Fin k → Term α) (i : Fin k) (u : Term α) :
+    instantiate (coordinateBody phi ts i) u =
+      phi.subst (fun j => if j = i then u else ts j) := by
+  rw [instantiate,coordinateBody,formulaSubstComposition]
+  congr 1
+  funext j
+  by_cases h : j = i
+  · simp only [if_pos h,Term.subst,Sum.elim_inr]
+  · simp only [if_neg h]
+    rw [termRelabelSubst]
+    exact termSubstVar _
+
+/-- One explicit use of the original equality-elimination constructor. -/
+theorem coordinateCongruence (body : Positive (Fin 1)) (α : Type) (k : Nat)
+    (Gamma : List (Formula α)) (phi : Formula (Fin k)) (ts : Fin k → Term α)
+    (i : Fin k) (u : Term α)
+    (heq : Nonempty (Derivation body Gamma ((ts i).equal u)))
+    (hphi : Nonempty (Derivation body Gamma (phi.subst ts))) :
+    Nonempty (Derivation body Gamma (phi.subst (fun j => if j = i then u else ts j))) := by
+  obtain ⟨deq⟩ := heq
+  obtain ⟨dphi⟩ := hphi
+  have hsource : instantiate (coordinateBody phi ts i) (ts i) = phi.subst ts := by
+    rw [coordinateInstance]
+    congr 1
+    funext j
+    by_cases h : j = i
+    · subst j
+      simp only [if_pos rfl]
+    · simp only [if_neg h]
+  have dsource : Derivation body Gamma (instantiate (coordinateBody phi ts i) (ts i)) := by
+    rw [hsource]
+    exact dphi
+  have dtarget := Derivation.equalityElimination (coordinateBody phi ts i) (ts i) u deq dsource
+  rw [coordinateInstance] at dtarget
+  exact ⟨dtarget⟩
+
+/-- Finitely many coordinate replacements produce a finite proof tree for
+an arbitrary formula instance. No semantic truth premise is used. -/
+theorem tupleCongruence (body : Positive (Fin 1)) (α : Type) (k : Nat)
+    (Gamma : List (Formula α)) (phi : Formula (Fin k)) (ts us : Fin k → Term α)
+    (heq : ∀ i, Nonempty (Derivation body Gamma ((ts i).equal (us i))))
+    (hphi : Nonempty (Derivation body Gamma (phi.subst ts))) :
+    Nonempty (Derivation body Gamma (phi.subst us)) := by
+  let mixed (j : Nat) : Fin k → Term α := fun i => if i.val < j then us i else ts i
+  have stage : ∀ j, j ≤ k → Nonempty (Derivation body Gamma (phi.subst (mixed j))) := by
+    intro j
+    induction j with
+    | zero =>
+      intro _
+      have hz : mixed 0 = ts := by
+        funext i
+        simp only [mixed,Nat.not_lt_zero,if_false]
+      rw [hz]
+      exact hphi
+    | succ j ih =>
+      intro hj
+      have hjk : j < k := by omega
+      let index : Fin k := ⟨j,hjk⟩
+      have hindex : mixed j index = ts index := by
+        simp only [mixed,index,Nat.lt_irrefl,if_false]
+      have hcurrent : Nonempty (Derivation body Gamma ((mixed j index).equal (us index))) := by
+        rw [hindex]
+        exact heq index
+      have hstep := coordinateCongruence body α k Gamma phi (mixed j) index (us index)
+        hcurrent (ih (by omega))
+      have hnext : (fun i => if i = index then us index else mixed j i) = mixed (j+1) := by
+        funext i
+        by_cases hi : i = index
+        · subst i
+          simp only [if_pos rfl,mixed,index,Nat.lt_succ_self,if_true]
+        · have hne : i.val ≠ j := by
+            intro h
+            apply hi
+            apply Fin.ext
+            exact h
+          have hlt : i.val < j+1 ↔ i.val < j := by omega
+          simp only [if_neg hi,mixed,hlt]
+      rw [hnext] at hstep
+      exact hstep
+  have hk : mixed k = us := by
+    funext i
+    simp only [mixed,if_pos i.isLt]
+  have hfinal := stage k (Nat.le_refl k)
+  rw [hk] at hfinal
+  exact hfinal
+
+theorem graphAsTupleSubstitution {α : Type} {n : Nat} (f : OFormula (Fin (n+1)))
+    (out : OTerm α) (xs : Fin n → OTerm α) :
+    graph f out xs = (arithmeticEmbedding.onFormula f).subst
+      (fun i => arithmeticEmbedding.onTerm (Fin.cases out xs i)) := by
+  unfold graph OrdinaryArithmetic.applyGraph
+  exact onFormulaSubst arithmeticEmbedding f (Fin.cases out xs)
+
+/-- Input congruence for the unchanged original arithmetic graph encoding.
+The common output uses reflexivity; every input uses its supplied proof. -/
+theorem graphInputTransport (body : Positive (Fin 1)) (α : Type) (n : Nat)
+    (Gamma : List (Formula α)) (f : OFormula (Fin (n+1))) (out : OTerm α)
+    (xs ys : Fin n → OTerm α)
+    (heq : ∀ i, Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula ((xs i).equal (ys i)))))
+    (hgraph : Nonempty (Derivation body Gamma (graph f out xs))) :
+    Nonempty (Derivation body Gamma (graph f out ys)) := by
+  rw [graphAsTupleSubstitution] at hgraph ⊢
+  apply tupleCongruence body α (n+1) Gamma (arithmeticEmbedding.onFormula f)
+    (fun i => arithmeticEmbedding.onTerm (Fin.cases out xs i))
+    (fun i => arithmeticEmbedding.onTerm (Fin.cases out ys i))
+  · intro i
+    refine Fin.cases ?_ (fun j => ?_) i
+    · exact ⟨Derivation.equalityReflexivity (arithmeticEmbedding.onTerm out)⟩
+    · change Nonempty (Derivation body Gamma
+        ((arithmeticEmbedding.onTerm (xs j)).equal (arithmeticEmbedding.onTerm (ys j))))
+      rw [← onEquality]
+      exact heq j
+  · exact hgraph
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionEqualityProof
