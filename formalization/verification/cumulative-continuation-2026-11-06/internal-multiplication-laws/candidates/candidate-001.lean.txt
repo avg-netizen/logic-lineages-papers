@@ -1,0 +1,95 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationLawsTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionCancellationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationLawsProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open SourceComputabilityFormulaSupportProof InternalSourceInversionSupportProof
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalAdditionLawsProof
+
+abbrev mul {α : Type} (s t : OTerm α) : OTerm α := OrdinaryArithmetic.mulTerm s t
+@[simp] theorem mulSubst {α β : Type} (s t : OTerm α) (ts : α → OTerm β) :
+    (mul s t).subst ts = mul (s.subst ts) (t.subst ts) := applyTwoSubstitution _ _ _ _
+
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+def mulZero (s : OTerm α) : Derivation body Gamma (eqn (mul s z) z) := by
+  have h := Derivation.arithmetic (body := body) (Gamma := Gamma) (.multiplicationZero s)
+  change Derivation body Gamma (arithmeticEmbedding.onFormula ((mul s z).equal z)) at h
+  simpa only [onEquality] using h
+def mulSucc (s t : OTerm α) :
+    Derivation body Gamma (eqn (mul s (suc t)) (add (mul s t) s)) := by
+  have h := Derivation.arithmetic (body := body) (Gamma := Gamma) (.multiplicationSuccessor s t)
+  change Derivation body Gamma (arithmeticEmbedding.onFormula ((mul s (suc t)).equal (add (mul s t) s))) at h
+  simpa only [onEquality] using h
+def congMulLeft (s : OTerm α) {t u : OTerm α} (d : Derivation body Gamma (eqn t u)) :
+    Derivation body Gamma (eqn (mul s t) (mul s u)) := by
+  have h := congTerm (mul (s.relabel Sum.inl) (.var (.inr (0 : Fin 1)))) d
+  simpa only [mulSubst,liftBind,varBind] using h
+def congAddRight (u : OTerm α) {s t : OTerm α} (d : Derivation body Gamma (eqn s t)) :
+    Derivation body Gamma (eqn (add s u) (add t u)) := by
+  have h := congTerm (add (.var (.inr (0 : Fin 1))) (u.relabel Sum.inl)) d
+  simpa only [addSubst,liftBind,varBind] using h
+
+def multiplicationLeftZero (t : OTerm α) : Derivation body Gamma (eqn (mul z t) z) := by
+  let x : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let theta := eqn (mul z x) z
+  have hb : Derivation body Gamma (instantiate theta (emb z)) := by
+    simp only [theta,x,eqnInstantiate,mulSubst,zSubst,varBind]
+    exact mulZero z
+  have hs : Derivation body (theta :: Gamma.map weaken) (successorInstance theta) := by
+    simp only [theta,x,successorInstance,nextEmbedding,eqnSubst,mulSubst,zSubst,varNext]
+    exact trans (mulSucc z x) (trans (addZero (mul z x)) (Derivation.hypothesis List.mem_cons_self))
+  have h := Derivation.universalElimination (emb t) (natInduction theta hb hs)
+  simpa only [theta,x,eqnInstantiate,mulSubst,zSubst,varBind] using h
+
+def distributivity (s t u : OTerm α) :
+    Derivation body Gamma (eqn (mul s (add t u)) (add (mul s t) (mul s u))) := by
+  let a := s.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let b := t.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let x : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let theta := eqn (mul a (add b x)) (add (mul a b) (mul a x))
+  have hb : Derivation body Gamma (instantiate theta (emb z)) := by
+    simp only [theta,a,b,x,eqnInstantiate,mulSubst,addSubst,liftBind,varBind]
+    exact trans (congMulLeft s (addZero t))
+      (symm (trans (congAddLeft (mul s t) (mulZero s)) (addZero (mul s t))))
+  have hs : Derivation body (theta :: Gamma.map weaken) (successorInstance theta) := by
+    simp only [theta,a,b,x,successorInstance,nextEmbedding,eqnSubst,mulSubst,addSubst,liftNext,varNext]
+    exact trans (congMulLeft a (addSucc b x))
+      (trans (mulSucc a (add b x))
+        (trans (congAddRight a (Derivation.hypothesis List.mem_cons_self))
+          (trans (associativity (mul a b) (mul a x) a)
+            (symm (congAddLeft (mul a b) (mulSucc a x))))))
+  have h := Derivation.universalElimination (emb u) (natInduction theta hb hs)
+  simpa only [theta,a,b,x,eqnInstantiate,mulSubst,addSubst,liftBind,varBind] using h
+
+def multiplicationAssociativity (s t u : OTerm α) :
+    Derivation body Gamma (eqn (mul (mul s t) u) (mul s (mul t u))) := by
+  let a := s.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let b := t.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let x : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let theta := eqn (mul (mul a b) x) (mul a (mul b x))
+  have hb : Derivation body Gamma (instantiate theta (emb z)) := by
+    simp only [theta,a,b,x,eqnInstantiate,mulSubst,liftBind,varBind]
+    exact trans (mulZero (mul s t)) (symm (trans (congMulLeft s (mulZero t)) (mulZero s)))
+  have hs : Derivation body (theta :: Gamma.map weaken) (successorInstance theta) := by
+    simp only [theta,a,b,x,successorInstance,nextEmbedding,eqnSubst,mulSubst,liftNext,varNext]
+    exact trans (mulSucc (mul a b) x)
+      (trans (congAddRight (mul a b) (Derivation.hypothesis List.mem_cons_self))
+        (symm (trans (congMulLeft a (mulSucc b x)) (distributivity a (mul b x) b))))
+  have h := Derivation.universalElimination (emb u) (natInduction theta hb hs)
+  simpa only [theta,a,b,x,eqnInstantiate,mulSubst,liftBind,varBind] using h
+
+theorem actualMultiplicationLeftZero : InternalMultiplicationLawsTargets.ActualMultiplicationLeftZero := by
+  intro body α t
+  rw [onEquality]
+  exact ⟨multiplicationLeftZero t⟩
+theorem actualMultiplicationDistributivity : InternalMultiplicationLawsTargets.ActualMultiplicationDistributivity := by
+  intro body α s t u
+  rw [onEquality]
+  exact ⟨distributivity s t u⟩
+theorem actualMultiplicationAssociativity : InternalMultiplicationLawsTargets.ActualMultiplicationAssociativity := by
+  intro body α s t u
+  rw [onEquality]
+  exact ⟨multiplicationAssociativity s t u⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationLawsProof
