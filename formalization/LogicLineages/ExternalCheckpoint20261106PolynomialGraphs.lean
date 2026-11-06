@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullStatementChecks
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.ExternalCheckpoint20261106PolynomialGraphs
+open OrdinalComparison.PolynomialGraphCompletion
+
+theorem full_polynomial_collapse_graphs : FullPolynomialCollapseGraphs :=
+  FullStatementChecks.full_polynomial_collapse_graphs
+
+end LogicLineages.ExternalCheckpoint20261106PolynomialGraphs
+#audit_namespace LogicLineages.ExternalCheckpoint20261106PolynomialGraphs

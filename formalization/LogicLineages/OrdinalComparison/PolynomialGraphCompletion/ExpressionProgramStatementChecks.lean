@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionTargets
+import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionCodeCalibrationProof
+import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionCodeProgramsProof
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionProgramStatementChecks
+
+theorem instruction_code_calibration : ExpressionTargets.InstructionCodeCalibration :=
+  ExpressionCodeCalibrationProof.instructionCodeCalibration
+theorem row_machine_calibration : ExpressionTargets.RowMachineCalibration :=
+  ExpressionCodeCalibrationProof.rowMachineCalibration
+theorem literal_graph_compiler : ExpressionTargets.LiteralGraphCompiler :=
+  ExpressionCodeCalibrationProof.literalGraphCompiler
+theorem actual_numeric_program : ExpressionTargets.ActualNumericProgram :=
+  ExpressionCodeProgramsProof.actualNumericProgram
+
+end LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionProgramStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionProgramStatementChecks

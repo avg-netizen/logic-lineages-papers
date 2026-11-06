@@ -2250,3 +2250,6 @@ public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompleti
 -- Exact paper08 uniform kernel separation on the original numerical region.
 public import LogicLineages.ExternalCheckpoint20261105UniformSeparation
 public import LogicLineages.ExternalCheckpoint20261106BareHardness
+
+-- Exact paper08 polynomial collapse graphs and correlated existential translation.
+public import LogicLineages.ExternalCheckpoint20261106PolynomialGraphs

@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullTargets
+open LogicLineages.OrdinalComparison.PolynomialGraphCompletion.Targets
+#check CallCompilationCorrect
+#check CallCompilationDegree
+#check PolynomialCalls
+#check HeadCodeCalibration
+#check PolynomialHeadCoverage
+#check HeadGraphExact
+#check HeadGraphTotalFunctional
+#check HeadEquationExact
+#check FiniteFamilyDegree
+#check HeadPrograms
+#check FullPolynomialHeadGraphs
+open LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionTargets
+#check ExactAllocation
+#check FreshSymbolicOutput
+#check GraphSupport
+#check ExpressionDomainsAndDegree
+#check GraphSoundness
+#check TotalGraphRealization
+#check AllocatedNodeUniqueness
+#check CorrelatedExistentialGraph
+#check TotalFunctionalGraph
+#check InstructionCodeCalibration
+#check RowMachineCalibration
+#check LiteralGraphCompiler
+#check ActualNumericProgram
+#check FullExpressionGraphs
+#check LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullPolynomialCollapseGraphs

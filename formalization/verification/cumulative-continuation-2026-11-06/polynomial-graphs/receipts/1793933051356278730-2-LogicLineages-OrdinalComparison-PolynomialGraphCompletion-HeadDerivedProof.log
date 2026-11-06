@@ -1,0 +1,13 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadDerivedProof.lean:63:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b + c ≤ -1
+where
+ b := (List.map (fun a => a.1 * ↑(wordValue a.2 (ν input))) ls).sum
+ c := (List.map (fun a => -(a.1 * ↑(wordValue a.2 (ν input)))) ls).sum
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadDerivedProof.lean:62:49: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, List.sum_cons, i̵h̵,̵ ̵neg_mul, neg_add_rev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

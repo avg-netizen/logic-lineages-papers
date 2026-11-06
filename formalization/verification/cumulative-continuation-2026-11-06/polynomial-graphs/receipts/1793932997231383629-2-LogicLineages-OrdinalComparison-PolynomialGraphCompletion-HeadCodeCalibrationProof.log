@@ -1,0 +1,24 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadCodeCalibrationProof.lean:11:2: error: unsolved goals
+case left
+o : ONote
+⊢ List.map (fun x => (rawNormCode (rawNoteEncode x.1), x.2)) (principalKernelWord (principalExponentBlocks o) 0) =
+    List.map (fun p => (Vendor.R1.treeWeight p.1, p.2)) (principalKernelWord (principalExponentBlocks o) 0)
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadCodeCalibrationProof.lean:13:2: error: unsolved goals
+case right
+o : ONote
+⊢ 3 + rawNormCode (rawNoteEncode o) = 3 + Vendor.R1.treeWeight o
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadCodeCalibrationProof.lean:12:39: warning: This simp argument is unused:
+  rawNormCodeCorrect
+
+Hint: Omit it from the simp argument list.
+  simp only [headCalls, PeakWordProgram.peak.2, encodePrincipalKernelWord, List.map_map,
+  ̲  ̲ ̲ ̲F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵ ̵r̵a̵w̵N̵o̵r̵m̵C̵o̵d̵e̵C̵o̵r̵r̵e̵c̵t̵]̵F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲d̲e̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadCodeCalibrationProof.lean:13:27: warning: This simp argument is unused:
+  rawNormCodeCorrect
+
+Hint: Omit it from the simp argument list.
+  simp only [headDegree,̵ ̵r̵a̵w̵N̵o̵r̵m̵C̵o̵d̵e̵C̵o̵r̵r̵e̵c̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

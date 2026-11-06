@@ -1,0 +1,27 @@
+# Independent semantic review: polynomial collapse graphs
+
+The reviewed source is `08-multivariate-collapse-comparison/paper.tex`, theorem `thm:graphs`, together with its word-language definitions and graph construction. The endpoint `PolynomialGraphCompletion.FullPolynomialCollapseGraphs` contains both the fixed-head graph clause and the arbitrary fixed-expression clause. The six frozen Lean source/target files and the source paper still match `PRE-PROOF-FREEZE.json` at this review.
+
+## Heads, words, and exact counts
+
+`ValidHead` retains normal notation, the nonzero limit condition, and the strict bound below `omega^omega`. `HeadSourceProof.polynomialHeadCoverage`, defined in `HeadExponentProof.lean`, covers every actual ordinal satisfying those source hypotheses. Its exponent proof derives positive finite degrees from the polynomial bound; it does not assume that an arbitrary principal exponent is finite. `HeadCodeCalibrationProof` connects the literal numeric head compiler to the accepted principal-word compiler and additive source norm.
+
+`WordSemanticProof.callSymbolCorrect` uses the accepted exact degree-one count and exit, the exact degree-two count with its ceiling correction, and the source/companion bridge in higher degrees. Both the terminal norm and the complete replacement count survive compilation. The constant and linear correction for degree two is exactly twice the source counter, using the proved evenness of `Phi`. `compileCalls` prepends unary letters to existing words and adds integer rows. No letter is applied to a sum of word values.
+
+`HeadSourceProof.mapped_run` transports the entire endpoint/count pair to finite degrees. `mapped_genuine` transports the actual dynamically reached domains, using the exact norm `N(omega^d)=d+1`. `headGraphExact` obtains these domains from the previously accepted `fullActualPrincipalPeakWord` theorem for every natural input, including zero. The compiler's initial shift is exactly `n+N(lambda)`. Consequently the zero cutoff and empty exception table cover the whole original natural domain. They do not replace an unproved finite-prefix evaluator or omit small inputs.
+
+The output alphabet retains the paper's signed shifts, `Phi`, quadratic `V`, signed scheduled `X`, and scheduled `E` symbols. The stronger companion startup inequality appears inside correspondence proofs; the alphabet's original numerical domains remain unchanged. `HeadDerivedProof` obtains the literal doubled equation, total unique output, and finite common family degree from the all-input graph result. Its helper theorems have an explicit graph-result parameter; the final closed statement checks must instantiate that parameter with `HeadSourceProof.headGraphExact`.
+
+## Nested expressions and original correlations
+
+`Expr` includes natural constants, original variable names, addition, fixed natural multiples, and any fixed valid polynomial head. The source's arbitrary finite nesting is therefore represented directly. Every occurrence receives a postorder node; a repeated source variable still refers to its original name in each emitted variable equation. Collapse rows take the actual child node as input.
+
+`ExpressionSupportProof` proves the exact contiguous allocation, absence of repeated allocated names, disjointness from source and result names, and support of every emitted row. `ExpressionNodeProof` identifies every literal node equation with its natural arithmetic or head meaning and proves graph soundness. `ExpressionRealizationProof` builds witnesses by finite updates while preserving every original name; it also proves that all allocated values are uniquely determined by the original valuation. `ExpressionDomainsProof` supplies the original source domains for every natural valuation, with one computed degree bound covering all head occurrences.
+
+The graph formula itself uses the finite recursive `existsNodes` prefix, quantifying only natural node values. The function-valued framing characterization is a proof lemma, not an additional formula witness. `ExpressionExistentialProof` proves exact correlation for every symbolic result name, including reuse of an input name. Unique total output is asserted with the ordinary fresh-result condition. The stronger correlation theorem therefore preserves an equation such as `y=y+1` without asserting it is satisfiable.
+
+## Effective construction and scope
+
+`HeadProgramsProof` proves primitive recursiveness of the actual head-word, row, degree, and symbolic-equation constructors. `ExpressionCodeProgramsProof` proves primitive recursiveness of the radix-five parser, postfix row machine, and complete package constructor. Recursive calls parse only smaller expression children; head codes and coefficients are copied as fixed syntax. The numeric package contains its degree, exact natural existential prefix, and literal rows. `ExpressionCodeCalibrationProof` identifies that package with the semantic construction, including prior-stack preservation and the final symbolic result link.
+
+The source contract and reviewed proofs have no remaining semantic mismatch. This note does not establish native closure, transitive axiom admissibility, or baseline preservation; those checks belong to the final collected verification evidence. The theorem supplies graph translation and does not discharge the separate existential decision theorem, guard/row transformations, arbitrary first-order BASE arithmetic, or internal-level-two comparison.

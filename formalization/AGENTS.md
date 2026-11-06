@@ -1,4 +1,18 @@
-# CURRENT checkpoint — finite depth-two hardness and bounded vectors, 6 November 2026
+# CURRENT checkpoint — polynomial collapse graphs, 6 November 2026
+
+Paper08 `thm:graphs` is checked for every nonzero polynomial limit below `omega^omega`. The actual compiler emits an exact doubled word-linear graph equation on every natural input, with all literal signed word domains proved. Its cutoff is zero and its exact finite-exception table is empty. A computed finite degree bound covers each finite head collection.
+
+Arbitrary fixed nesting, addition, and fixed natural multiples have a total functional existential graph translation. The equations preserve every original variable name, quantify exactly the fresh natural nodes, and uniquely determine every node value. The numeric parser, row machine, and emitted graph package are primitive recursive and calibrated to that exact construction.
+
+The focused coordinator passed with **195 source-matched local modules** and **27 exact aliases**, all using only the permitted standard axioms. Peak successful observed process-tree RSS was **1,093,156 KiB**, below the unchanged **1,536 MiB** cap. Register: **167 checked, 2 inherited, 20 pending / 189**. Only `thm:graphs` changes status. Earlier finite-source comparison, uniform separation, and scalar/vector hardness results remain preserved.
+
+The general word guard/row/closed-existential decision chain, full first-order BASE, and the internal-level-two comparison consumer remain open. No full-root or remote-CI build is claimed. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-06/polynomial-graphs/STATUS.md).
+
+Earlier checkpoint summaries below are historical. Exact-source preservation, standard-axiom acceptance, and the unchanged serialized compiler limits remain active.
+
+---
+
+# Previous checkpoint — finite depth-two hardness and bounded vectors, 6 November 2026
 
 Paper02 `thm:finite-bare-hardness` and `thm:bounded-bare-vectors` are checked. Strict and weak scalar comparison, for both actual values and actual norms, is Pi01-complete on the original positive depth-two exponential fragment. Every RE complement has a total computable reduction with uniformly genuine outputs. The literal two-component bounded C-vector family is Pi01-hard, and even a total computable procedure correct only on its genuine valid domain cannot decide either original WW order.
 

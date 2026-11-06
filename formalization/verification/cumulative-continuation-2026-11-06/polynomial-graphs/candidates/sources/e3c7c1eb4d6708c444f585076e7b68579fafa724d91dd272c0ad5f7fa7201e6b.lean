@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionTargets
+import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.HeadStatementChecks
+import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionDomainsProof
+import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionExistentialProof
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionSemanticStatementChecks
+
+theorem exact_allocation : ExpressionTargets.ExactAllocation :=
+  ExpressionSupportProof.exactAllocation
+theorem fresh_symbolic_output : ExpressionTargets.FreshSymbolicOutput :=
+  ExpressionSupportProof.freshSymbolicOutput
+theorem graph_support : ExpressionTargets.GraphSupport :=
+  ExpressionSupportProof.graphSupport
+theorem expression_domains_and_degree : ExpressionTargets.ExpressionDomainsAndDegree :=
+  ExpressionDomainsProof.expressionDomainsAndDegree HeadStatementChecks.head_graph_exact
+theorem graph_soundness : ExpressionTargets.GraphSoundness :=
+  ExpressionNodeProof.graphSoundness HeadStatementChecks.head_equation_exact
+theorem total_graph_realization : ExpressionTargets.TotalGraphRealization :=
+  ExpressionRealizationProof.totalGraphRealization HeadStatementChecks.head_equation_exact
+theorem allocated_node_uniqueness : ExpressionTargets.AllocatedNodeUniqueness :=
+  ExpressionRealizationProof.allocatedNodeUniqueness HeadStatementChecks.head_equation_exact
+theorem correlated_existential_graph : ExpressionTargets.CorrelatedExistentialGraph :=
+  ExpressionExistentialProof.correlatedExistentialGraph HeadStatementChecks.head_equation_exact
+theorem total_functional_graph : ExpressionTargets.TotalFunctionalGraph :=
+  ExpressionExistentialProof.totalFunctionalGraph HeadStatementChecks.head_equation_exact
+
+end LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionSemanticStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionSemanticStatementChecks

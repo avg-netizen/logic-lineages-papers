@@ -1,0 +1,15 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadSourceProof.lean:19:4: error: Type mismatch: After simplification, term
+  actualOrdinalNorm_notationCorrespondence o
+ has type
+  actualOrdinalNorm (Ordinal.omega0 ^ ↑d * ↑↑1) = ↑1 * (1 + Vendor.R1.treeWeight ↑d)
+but is expected to have type
+  actualOrdinalNorm (Ordinal.omega0 ^ ↑d) = 1 + Vendor.R1.treeWeight ↑d
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/HeadSourceProof.lean:22:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Vendor.R1.treeWeight ↑(NONote.ofNat ?n)
+in the target expression
+  actualOrdinalNorm (Ordinal.omega0 ^ ↑d) = 1 + Vendor.R1.treeWeight ↑d
+
+d : ℕ
+o : NONote := ⟨(↑d).oadd 1 ONote.zero, ⋯⟩
+hn : actualOrdinalNorm (Ordinal.omega0 ^ ↑d) = 1 + Vendor.R1.treeWeight ↑d
+⊢ actualOrdinalNorm (Ordinal.omega0 ^ ↑d) = d + 1

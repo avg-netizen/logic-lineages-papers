@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullTargets
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.HeadStatementChecks
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionSemanticStatementChecks
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionProgramStatementChecks
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullStatementChecks
+
+theorem full_expression_graphs : ExpressionTargets.FullExpressionGraphs :=
+  ⟨ExpressionSemanticStatementChecks.exact_allocation,
+    ExpressionSemanticStatementChecks.fresh_symbolic_output,
+    ExpressionSemanticStatementChecks.graph_support,
+    ExpressionSemanticStatementChecks.expression_domains_and_degree,
+    ExpressionSemanticStatementChecks.graph_soundness,
+    ExpressionSemanticStatementChecks.total_graph_realization,
+    ExpressionSemanticStatementChecks.allocated_node_uniqueness,
+    ExpressionSemanticStatementChecks.correlated_existential_graph,
+    ExpressionSemanticStatementChecks.total_functional_graph,
+    ExpressionProgramStatementChecks.instruction_code_calibration,
+    ExpressionProgramStatementChecks.row_machine_calibration,
+    ExpressionProgramStatementChecks.literal_graph_compiler,
+    ExpressionProgramStatementChecks.actual_numeric_program⟩
+
+theorem full_polynomial_collapse_graphs : FullPolynomialCollapseGraphs :=
+  ⟨HeadStatementChecks.full_polynomial_head_graphs, full_expression_graphs⟩
+
+end LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullStatementChecks

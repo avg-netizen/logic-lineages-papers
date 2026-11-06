@@ -1,0 +1,48 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/WordSemanticProof.lean:102:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c + d - f - g ≤ -1
+  b ≥ 0
+  a ≥ 1
+where
+ a := ↑p.1
+ b := ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑p.1) p.2 t)
+ c := ↑(callRun calls z).1
+ d := ↑(callRun calls z).2
+ e := ↑(wordValue [rangeLetter p] t)
+ f := ↑(callRun calls (actualSuffixKernel (Ordinal.omega0 ^ ↑p.1) p.2 t)).1
+ g := ↑(callRun calls (actualSuffixKernel (Ordinal.omega0 ^ ↑p.1) p.2 t)).2
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/WordSemanticProof.lean:101:40: warning: This simp argument is unused:
+  Nat.cast_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [callRun, Nat.cast_add, Nat.cast_m̵u̵l̵,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/WordSemanticProof.lean:101:54: warning: This simp argument is unused:
+  Nat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  simp only [callRun, Nat.cast_add, Nat.cast_mul,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵f̵N̵a̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/WordSemanticProof.lean:113:4: error: unsolved goals
+case pos
+D c : ℕ
+hd : 1 ≤ 2
+hbound : 2 ≤ D
+h1 : ¬2 = 1
+⊢ ∀ (a a_1 a_2 : ℕ) (b : ℤ), a = 1 → a_1 = 0 → a_2 = 0 → b = 0 → 2 < a → (a = 3 ∨ a = 4) ∧ 3 ≤ a_1 ∧ a_1 ≤ D
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/PolynomialGraphCompletion/WordSemanticProof.lean:116:4: error: unsolved goals
+case neg
+D d c : ℕ
+hd : 1 ≤ d
+hbound : d ≤ D
+h1 : ¬d = 1
+h2 : ¬d = 2
+hthree : 3 ≤ d
+⊢ ∀ (a a_1 a_2 : ℕ) (b : ℤ), a = 4 → a_1 = d → a_2 = c → b = 0 → 2 < a → (a = 3 ∨ a = 4) ∧ 3 ≤ a_1 ∧ a_1 ≤ D
