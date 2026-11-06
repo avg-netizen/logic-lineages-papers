@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.AdjacentRangeWordGuardCompletion.QuadraticProof
+public import LogicLineages.OrdinalComparison.AdjacentRangeWordGuardCompletion.MeasureProof
+public import LogicLineages.OrdinalComparison.AdjacentRangeWordGuardCompletion.ProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.AdjacentRangeWordGuardCompletion.StatementChecks
+
+theorem fixed_adjacentKernelGuard : Targets.AdjacentKernelGuard := Proof.adjacentKernelGuard
+theorem fixed_cubicQuadraticGuard : Targets.CubicQuadraticGuard := Proof.cubicQuadraticGuard
+theorem fixed_adjacentHeadDecrease : Targets.AdjacentHeadDecrease := Proof.adjacentHeadDecrease
+theorem fixed_guardPrograms : Targets.GuardPrograms := Proof.guardPrograms
+
+#print axioms fixed_adjacentKernelGuard
+#print axioms fixed_cubicQuadraticGuard
+#print axioms fixed_adjacentHeadDecrease
+#print axioms fixed_guardPrograms
+
+end LogicLineages.OrdinalComparison.AdjacentRangeWordGuardCompletion.StatementChecks
