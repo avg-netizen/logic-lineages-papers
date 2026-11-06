@@ -1,4 +1,16 @@
-# CURRENT checkpoint — composed-word tails and equal-rank guards, 6 November 2026
+# CURRENT checkpoint — complete word guards, 6 November 2026
+
+Paper08 `lem:guards` is checked for every original admitted finite-degree word pair and arbitrary signed indices. A total computable compiler emits an effective common tail, finite Boolean guards with the maximum raw variable only linear, all generated-word domains, and a separately decided same-variable result. The actual selected chain terminates by the existing counter-count and reverse-rank histogram measure.
+
+The focused coordinator passed with **426 source-matched local modules** and **29 new exact standard-axiom aliases** (**106 including the 77 prior guard aliases**). Peak successful observed process-tree RSS was **1,188,808 KiB**, under the unchanged **1,536 MiB** cap. Register: **168 checked, 2 inherited, 19 pending / 189**. Only `lem:guards` changes status. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-06/full-word-guards/STATUS.md).
+
+The concurrent original-proof-tree, graph-composition and recursion-free ID1 work is preserved through `1c7c5f7b`. Earlier finite-source, uniform-separation, hardness, polynomial-graph and local-guard results remain intact. Ranked row cancellation, closed existential word decision, first-order BASE and the internal-level-two consumer remain pending. No full-root or remote-CI build is claimed. Exact-source, frozen-target, standard-axiom and serialized resource requirements remain active.
+
+Earlier checkpoint summaries below are historical.
+
+---
+
+# Previous checkpoint — composed-word tails and equal-rank guards, 6 November 2026
 
 Every allowed finite-degree word now has explicit primitive-recursive domain and reach thresholds, with exact signed domains at dynamically reached arguments. Equal-rank X heads around arbitrary interior words have exact strict, equality and weak guards, ordered by input, reverse retained mass and signed index. Original raw variables remain shared.
 

@@ -1,0 +1,99 @@
+{
+  "schema": "full-word-guards-source-acceptance-review-v1",
+  "reviewed_at_utc": "2026-11-06T20:19:20.260756+00:00",
+  "reviewer": "source_audit",
+  "scope": "Independent source-contract, frozen-statement and actual exact-alias review; no new native run and no repeated hand-proof audit.",
+  "result": "accepted",
+  "source_statement": "08-multivariate-collapse-comparison:lem:guards",
+  "source_file": "08-multivariate-collapse-comparison/paper.tex",
+  "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+  "original_baseline": "2066300c16197fc71dc30c87d61fb6bb11eadd9b",
+  "preserved_advanced_baseline": "e413aa1f8035a92b4e4b8182a1c4b9a390505b0e",
+  "frozen_target": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.Targets.FullWordGuards",
+  "accepted_declaration": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards",
+  "source_contract_checks": {
+    "source_grammar": "Every original admitted finite-degree word pair, every D >= 3, arbitrary signed shifts and kernel indices; admission has an exact checked equivalence to unchanged WordAllowed.",
+    "syntax": "The literal row uses only original names zero and one; every occurrence of zero has identity word, and nonempty words occur only at one. The three output guards are finite disjunctions of literal negative/zero/positive row atoms.",
+    "ordered_comparison": "All strict, equality and reverse-strict comparisons are equivalent under the original y <= x guard and the computed common tail.",
+    "domains": "The common cutoff proves original, all selected-child, canonical-prepared and emitted-row domains without requiring y <= x. Each WordDomain includes actual dynamically reached arguments.",
+    "same_variable": "A bounded computed three-way constant decides A(x) versus B(x) for every x on the same computed tail. Reversed terminal growth is paid, and the accumulated tie is applied to the terminal result.",
+    "computed_trace": "The actual literal finite runner trace contains initial and terminal pairs. The compiler depends on D and source syntax only, not on eventual numeric inputs or evaluated word values.",
+    "effectivity": "Bounded syntax operations and finish are primitive recursive. The all-input least-stopping search is total by the checked actual-child well-foundedness argument; Computable.find uses that proved termination. The complete compiler has a closed Computable theorem.",
+    "scope": "The seven-conjunct frozen FullWordGuards includes all printed lem:guards clauses. A deterministic selected chain is sufficient; ordered partitions belong to the separate ranked-cancellation lemma."
+  },
+  "exact_alias_review": {
+    "new_gates": [
+      {
+        "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks",
+        "alias_count": 4,
+        "path": "formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/DispatchStatementChecks.lean",
+        "sha256": "72eda372513216ef88744a272841497017488fda918eb41c1a66c8510079732b",
+        "audit_log": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/receipts/1793996097626807124-5-LogicLineages-OrdinalComparison-FullWordGuardCompletion-DispatchStatementChecks.log",
+        "audit_log_sha256": "aee446c90166f861bec414ca51680fd92ee056f7425a36c6a8756502cb48637c"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks",
+        "alias_count": 13,
+        "path": "formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/RunnerStatementChecks.lean",
+        "sha256": "df15b40e05786a677082dab01efdee4b6a0b38cf00e36c76b9f08d7df353e861",
+        "audit_log": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/receipts/1793996097626807124-5-LogicLineages-OrdinalComparison-FullWordGuardCompletion-RunnerStatementChecks.log",
+        "audit_log_sha256": "079fd213e7aedb05970df3c799cf3c04e1cf024f81c210958ee1893f35964961"
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks",
+        "alias_count": 12,
+        "path": "formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/StatementChecks.lean",
+        "sha256": "2559d7262e05b89b7b8dfa152245215a04b016cbf823aa6dfa4d4310eef7d061",
+        "audit_log": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/receipts/1793996097626807124-5-LogicLineages-OrdinalComparison-FullWordGuardCompletion-StatementChecks.log",
+        "audit_log_sha256": "2a4bcf7ecb58780439dba25ff83309fe5cf7b411de29a4129c2e44273e68ae24"
+      }
+    ],
+    "new_alias_count": 29,
+    "inherited_alias_count": 77,
+    "total_audited_alias_count": 106,
+    "all_new_aliases_directly_at_frozen_types_without_extra_parameters": true,
+    "all_actual_logged_new_alias_axioms_verified": true,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "endpoint_actual_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "no_hidden_oracle_new_premise_or_restricted_source_case": true
+  },
+  "frozen_revision_review": {
+    "current_eight_files_match_v2_freeze": true,
+    "all_v1_snapshots_match_original_freeze": true,
+    "only_revision": "Parentheses in the auxiliary BooleanGuardsCorrect place desired <= 2 outside the iff.",
+    "whole_source_target_byte_identical_v1_v2": true,
+    "all_definitions_and_dispatcher_runner_targets_unchanged": true,
+    "v1_failed_candidate_and_receipt_preserved": true,
+    "v2_preflight_precedes_resumed_auxiliary_proof": true
+  },
+  "native_evidence_review": {
+    "root_module": "LogicLineages.ExternalCheckpoint20261106FullWordGuards",
+    "complete_successful_receipt": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/receipts/1793996097626807124-5.json",
+    "receipt_sha256": "ca48dd3b26ad61aaebf34a20e09de35abe4b24aef5dd0059f05d7db146ad9ccb",
+    "source_matched_module_count": 426,
+    "all_426_current_source_hashes_success_rows_receipts_and_logs_verified": true,
+    "peak_successful_process_tree_rss_kib": 1188808,
+    "rss_cap_mib": 1536,
+    "full_root_build": false,
+    "remote_ci_claim": false
+  },
+  "reviewed_evidence": {
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/FROZEN-TARGETS-V1.json": "bca7b9cff8039d75f9a79ccf9739359fb348e506aa95fff8ff3b0958c5fe0ca4",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/FROZEN-TARGETS.json": "92d7d4a14b4781e1063914fe7678b7fa815b23aecc1986d13b069aecb4e98b62",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/PREFLIGHT-V1.json": "1a34f17d2ac250e4315b3780daf73b292970c1193c9aa4436e58699a7906075a",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/PREFLIGHT.json": "feed6a24891b4969e1a7fb93286b624f905abcf7798f3e5639358dfa85c25944",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/NATIVE-VERIFICATION.json": "cae26d64593aee853bef8792b295e2211baec0033a82fb223ce94d858a93bd32",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/SOURCE-PINS.json": "7462278ed1a67e35e5488e4c6e048a91f71e90c161a6f6dc628822ba1e8bffab",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/SOURCE-CORRESPONDENCE.md": "6acec3b113520a868fdb4fb351a59c2a07768e987fafa304b17cbd0dffdc0143"
+  },
+  "material_concerns": [],
+  "promotion_recommendation": "Promote only paper08 lem:guards at the exact checked declaration. Ranked row cancellation, closed existential word decision, first-order BASE and the internal-level-two consumer remain separate pending obligations."
+}

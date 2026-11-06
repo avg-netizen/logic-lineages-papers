@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchTargets
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchProof
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks
+
+theorem fixed_dispatchCorrect : DispatchTargets.DispatchCorrect := DispatchProof.dispatchCorrect
+theorem fixed_dispatchChild : DispatchTargets.DispatchChild := DispatchProof.dispatchChild
+theorem fixed_dispatchTieBound : DispatchTargets.DispatchTieBound := DispatchProof.dispatchTieBound
+theorem fixed_dispatchPrograms : DispatchTargets.DispatchPrograms := DispatchProgramsProof.dispatchPrograms
+
+#print axioms fixed_dispatchCorrect
+#print axioms fixed_dispatchChild
+#print axioms fixed_dispatchTieBound
+#print axioms fixed_dispatchPrograms
+
+end LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks

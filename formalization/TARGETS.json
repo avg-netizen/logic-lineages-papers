@@ -6977,24 +6977,25 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 574,
           "statement_latex": "[Ordered maximum-variable guards]\\label{lem:guards}\nFor two words $A(x),B(y)$ and the guard $x\\ge y$, an effective common\ntail permits their three-way comparison to be rewritten as a finite Boolean\ncombination in which $x$ occurs only linearly and words are applied only\nto the remaining variable $y$. For two words at the \\emph{same} raw\nvariable the corresponding tail comparison is effectively decided.\nAll thresholds and newly generated words are computed before the tail is\nused.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/Targets.lean",
+            "sha256": "8f230607d52ceac90acc3f80cc93689816948d5c3b0b05a560319ada2b7cadb6",
+            "type": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.Targets.FullWordGuards"
+          },
           "completion_audit": {
-            "date": "2026-11-05",
-            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
-            "classification": "missing_foundation_or_downstream",
+            "date": "2026-11-06",
+            "report": "audits/FULL-WORD-GUARDS-COMPLETION-2026-11-06.json",
+            "classification": "exact_whole_source_checked",
             "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
-            "remaining_obligation": "No complete effectual comparison compiler for arbitrary composed words with ordered raw-variable guards, all signed domains and a verified decreasing recursion measure is present.",
-            "next_completion_step": "Prove the whole ordered-word guard compiler, using the source's two-part termination measure and exact shared-variable semantics.",
-            "upstream_blockers": [
-              "08:lem:uniform"
-            ],
-            "checked_prerequisites": [
-              "08:lem:counter"
-            ],
-            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
-            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+            "remaining_obligation": "None for this source statement. Ranked row cancellation, closed existential word decision, first-order BASE and the internal-level-two consumer remain separate pending obligations.",
+            "upstream_blockers": [],
+            "native_verification": {
+              "file": "verification/cumulative-continuation-2026-11-06/full-word-guards/NATIVE-VERIFICATION.json",
+              "sha256": "cae26d64593aee853bef8792b295e2211baec0033a82fb223ce94d858a93bd32"
+            },
+            "review_scope": "Both printed source clauses, all original signed words and domains, actual selected-chain termination and total computability, literal finite Boolean output and same-variable decision; all 29 new exact aliases and focused 426-module closure passed."
           },
           "checked_components": [
             {
@@ -7006,9 +7007,53 @@
               "gate_module": "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks",
               "acceptance_record": "verification/cumulative-continuation-2026-11-06/word-guards/ACCEPTANCE.json",
               "scope": "Exact equal-rank composed-X strict/equality/weak guards above an actual primitive-recursive common tail, ordered by interior input, reverse retained mass and signed index, retaining raw names and complete domains. Supporting only; mixed-rank/counter recursion and final maximum-variable linearization remain pending."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-06/full-word-guards/ACCEPTANCE.json",
+              "scope": "Exact canonical dispatcher, original/prepared/child domains, actual admitted-child decrease and primitive-recursive cutoffs/ties."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-06/full-word-guards/ACCEPTANCE.json",
+              "scope": "Actual finite selected chain, all generated domains, accumulated comparison, all-input termination, least-fuel minimality and total computable search."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-06/full-word-guards/ACCEPTANCE.json",
+              "scope": "Whole source lemma checked for every original admitted finite-degree word pair, all signed indices and every D >= 3. A total computable syntax-only compiler emits a common cutoff, a word-linear row with the original maximum variable only linear, three literal finite Boolean sign guards, a fixed same-variable answer, and the complete generated-word trace. Exact strict/equality/reverse-strict semantics hold under y <= x; original, generated, prepared and row domains hold on the computed tail independently of that order guard. Termination follows the actual selected-child counter/histogram measure. Bounded syntax operations are primitive recursive; the complete least-stopping search and compiler are total computable."
             }
           ],
-          "latest_coverage_note": "Arbitrary composed-word domain/reach tails and equal-rank X-head guard lowering accepted on 6 November 2026. Full mixed-rank/counter guard recursion, shift-gap analysis and final maximum-variable linearization remain pending."
+          "latest_coverage_note": "Whole source lemma checked for every original admitted finite-degree word pair, all signed indices and every D >= 3. A total computable syntax-only compiler emits a common cutoff, a word-linear row with the original maximum variable only linear, three literal finite Boolean sign guards, a fixed same-variable answer, and the complete generated-word trace. Exact strict/equality/reverse-strict semantics hold under y <= x; original, generated, prepared and row domains hold on the computed tail independently of that order guard. Termination follows the actual selected-child counter/histogram measure. Bounded syntax operations are primitive recursive; the complete least-stopping search and compiler are total computable.",
+          "completion_audit_history": [
+            {
+              "date": "2026-11-05",
+              "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+              "classification": "missing_foundation_or_downstream",
+              "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+              "remaining_obligation": "No complete effectual comparison compiler for arbitrary composed words with ordered raw-variable guards, all signed domains and a verified decreasing recursion measure is present.",
+              "next_completion_step": "Prove the whole ordered-word guard compiler, using the source's two-part termination measure and exact shared-variable semantics.",
+              "upstream_blockers": [
+                "08:lem:uniform"
+              ],
+              "checked_prerequisites": [
+                "08:lem:counter"
+              ],
+              "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+              "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards"
+          ],
+          "coverage_note": "Whole source lemma checked for every original admitted finite-degree word pair, all signed indices and every D >= 3. A total computable syntax-only compiler emits a common cutoff, a word-linear row with the original maximum variable only linear, three literal finite Boolean sign guards, a fixed same-variable answer, and the complete generated-word trace. Exact strict/equality/reverse-strict semantics hold under y <= x; original, generated, prepared and row domains hold on the computed tail independently of that order guard. Termination follows the actual selected-child counter/histogram measure. Bounded syntax operations are primitive recursive; the complete least-stopping search and compiler are total computable.",
+          "verification_receipt": "verification/cumulative-continuation-2026-11-06/full-word-guards/receipts/1793996097626807124-5.json",
+          "acceptance_record": "verification/cumulative-continuation-2026-11-06/full-word-guards/ACCEPTANCE.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:row",
@@ -11225,7 +11270,7 @@
   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
-  "source_completion_updated_at_utc": "2026-11-06T02:58:06.020091+00:00",
+  "source_completion_updated_at_utc": "2026-11-06T20:23:49.341893+00:00",
   "supporting_components_updated_at_utc": "2026-11-06T06:18:44.610692+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
@@ -11235,28 +11280,29 @@
     "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
   },
   "source_completion_promotion": {
-    "accepted_at_utc": "2026-11-06T02:58:06.020091+00:00",
-    "baseline_commit": "5c99629bf424742efca284db043390718775364b",
-    "report": "audits/POLYNOMIAL-GRAPHS-COMPLETION-2026-11-06.json",
+    "accepted_at_utc": "2026-11-06T20:23:49.341893+00:00",
+    "baseline_commit": "1c7c5f7b0d986fefe9244e5eeacb84c53bfa6955",
+    "native_evidence_baseline": "e413aa1f8035a92b4e4b8182a1c4b9a390505b0e",
+    "report": "audits/FULL-WORD-GUARDS-COMPLETION-2026-11-06.json",
     "statements": [
-      "08-multivariate-collapse-comparison:thm:graphs"
+      "08-multivariate-collapse-comparison:lem:guards"
     ],
     "native_verification": {
-      "file": "verification/cumulative-continuation-2026-11-06/polynomial-graphs/NATIVE-VERIFICATION.json",
-      "sha256": "7d83c56b2a5e95823af78e655510c53b397de1aa1d26b6a532e863b707967284"
+      "file": "verification/cumulative-continuation-2026-11-06/full-word-guards/NATIVE-VERIFICATION.json",
+      "sha256": "cae26d64593aee853bef8792b295e2211baec0033a82fb223ce94d858a93bd32"
     },
     "counts_before": {
-      "checked": 166,
-      "pending": 21,
-      "existing-calculator-package": 2
-    },
-    "counts_after": {
       "checked": 167,
       "pending": 20,
       "existing-calculator-package": 2
     },
+    "counts_after": {
+      "checked": 168,
+      "pending": 19,
+      "existing-calculator-package": 2
+    },
     "numbered_source_promotions_in_this_update": 1,
-    "numbered_source_promotions_cumulative": 6,
+    "numbered_source_promotions_cumulative": 7,
     "full_root_build": false,
     "remote_ci_claim": false
   },
@@ -11339,6 +11385,32 @@
       },
       "numbered_source_promotions_in_this_update": 2,
       "numbered_source_promotions_cumulative": 5,
+      "full_root_build": false,
+      "remote_ci_claim": false
+    },
+    {
+      "accepted_at_utc": "2026-11-06T02:58:06.020091+00:00",
+      "baseline_commit": "5c99629bf424742efca284db043390718775364b",
+      "report": "audits/POLYNOMIAL-GRAPHS-COMPLETION-2026-11-06.json",
+      "statements": [
+        "08-multivariate-collapse-comparison:thm:graphs"
+      ],
+      "native_verification": {
+        "file": "verification/cumulative-continuation-2026-11-06/polynomial-graphs/NATIVE-VERIFICATION.json",
+        "sha256": "7d83c56b2a5e95823af78e655510c53b397de1aa1d26b6a532e863b707967284"
+      },
+      "counts_before": {
+        "checked": 166,
+        "pending": 21,
+        "existing-calculator-package": 2
+      },
+      "counts_after": {
+        "checked": 167,
+        "pending": 20,
+        "existing-calculator-package": 2
+      },
+      "numbered_source_promotions_in_this_update": 1,
+      "numbered_source_promotions_cumulative": 6,
       "full_root_build": false,
       "remote_ci_claim": false
     }

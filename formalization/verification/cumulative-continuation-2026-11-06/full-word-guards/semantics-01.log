@@ -1,0 +1,12 @@
+Compiling LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchOrderProof
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/DispatchOrderProof.lean:63:2: error: Tactic `split` failed: Could not split an `if` or `match` expression in the goal
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+a b : Letter
+j k : ℤ
+⊢ (have q := selectHeads [] a [] b;
+    if q.2.1 = true then reverseOrder (forwardTie q.1 b a k j) else forwardTie q.1 a b j k) ≤
+    2
+COMPILE_FAILED LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchOrderProof: 1
+BUILD_RECEIPT build-reports/1793995429171420677-5.json

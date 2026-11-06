@@ -1,0 +1,19 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/TerminalProof.lean:52:27: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  a = (-1, 1, p.2) ∨ a ∈ []
+
+case pos.left.inr
+D : ℕ
+p : WordPair
+hp : admitted D p = true
+hB : WordAllowed D p.2
+hc : coreWord p.1 = []
+a : ℤ × ℕ × Word
+h✝ : a = (-1, 1, p.2) ∨ a ∈ []
+⊢ WordAllowed D a.2.2
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/TerminalProof.lean:51:53: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵i̵n̵a̵l̵R̵o̵w̵,̵i̵f̵_̵p̵o̵s̵ ̵h̵c̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵]̵[̲t̲e̲r̲m̲i̲n̲a̲l̲R̲o̲w̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲h̲c̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲c̲o̲n̲s̲]̲ at ha
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

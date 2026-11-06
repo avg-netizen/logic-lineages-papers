@@ -2256,3 +2256,4 @@ public import LogicLineages.ExternalCheckpoint20261106PolynomialGraphs
 
 -- Effective arbitrary-word tails and exact equal-rank composed-kernel guards.
 public import LogicLineages.ExternalCheckpoint20261106WordGuards
+public import LogicLineages.ExternalCheckpoint20261106FullWordGuards

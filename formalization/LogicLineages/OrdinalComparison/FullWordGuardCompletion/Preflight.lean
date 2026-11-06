@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.Targets
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchTargets
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerTargets
+
+#check LogicLineages.OrdinalComparison.FullWordGuardCompletion.Targets.FullWordGuards
+#check LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchTargets.DispatchCorrect
+#check LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerTargets.RunnerTerminates
+#check LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerTargets.LeastFuelProgram
