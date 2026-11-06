@@ -1,4 +1,14 @@
-# CURRENT checkpoint — polynomial collapse graphs, 6 November 2026
+# CURRENT checkpoint — composed-word tails and equal-rank guards, 6 November 2026
+
+Every allowed finite-degree word now has explicit primitive-recursive domain and reach thresholds, with exact signed domains at dynamically reached arguments. Equal-rank X heads around arbitrary interior words have exact strict, equality and weak guards, ordered by input, reverse retained mass and signed index. Original raw variables remain shared.
+
+The focused coordinator passed with **188 source-matched local modules** and **8 exact standard-axiom aliases**. Peak successful observed process-tree RSS was **1,193,692 KiB**, under the unchanged **1,536 MiB** cap. These are two supporting components toward `lem:guards`, not the whole guard/row/existential decision chain. Register unchanged: **167 checked, 2 inherited, 20 pending / 189**. No full-root or remote-CI claim. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-06/word-guards/STATUS.md).
+
+All previous accepted sources and frozen targets are preserved. Exact-source, standard-axiom and serialized resource requirements remain active. Earlier summaries below are historical.
+
+---
+
+# Previous checkpoint — polynomial collapse graphs, 6 November 2026
 
 Paper08 `thm:graphs` is checked for every nonzero polynomial limit below `omega^omega`. The actual compiler emits an exact doubled word-linear graph equation on every natural input, with all literal signed word domains proved. Its cutoff is zero and its exact finite-exception table is empty. A computed finite degree bound covers each finite head collection.
 

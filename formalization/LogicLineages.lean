@@ -2253,3 +2253,6 @@ public import LogicLineages.ExternalCheckpoint20261106BareHardness
 
 -- Exact paper08 polynomial collapse graphs and correlated existential translation.
 public import LogicLineages.ExternalCheckpoint20261106PolynomialGraphs
+
+-- Effective arbitrary-word tails and exact equal-rank composed-kernel guards.
+public import LogicLineages.ExternalCheckpoint20261106WordGuards

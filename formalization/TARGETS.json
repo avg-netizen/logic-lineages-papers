@@ -6995,7 +6995,20 @@
             ],
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
             "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-06/word-guards/ACCEPTANCE.json",
+              "scope": "Every allowed finite-degree composed word has primitive-recursive domain, lower-offset and reach bounds; exact domains at dynamically reached interior arguments. Supporting only; whole ordered-guard compiler remains pending."
+            },
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-06/word-guards/ACCEPTANCE.json",
+              "scope": "Exact equal-rank composed-X strict/equality/weak guards above an actual primitive-recursive common tail, ordered by interior input, reverse retained mass and signed index, retaining raw names and complete domains. Supporting only; mixed-rank/counter recursion and final maximum-variable linearization remain pending."
+            }
+          ],
+          "latest_coverage_note": "Arbitrary composed-word domain/reach tails and equal-rank X-head guard lowering accepted on 6 November 2026. Full mixed-rank/counter guard recursion, shift-gap analysis and final maximum-variable linearization remain pending."
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:row",
@@ -11213,7 +11226,7 @@
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
   "source_completion_updated_at_utc": "2026-11-06T02:58:06.020091+00:00",
-  "supporting_components_updated_at_utc": "2026-11-06T00:47:20.174518+00:00",
+  "supporting_components_updated_at_utc": "2026-11-06T06:18:44.610692+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
     "base_commit": "5c98e63793b3fc821965def2292e909d4436f049",

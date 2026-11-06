@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.WordGuardProof
+public import LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.ProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks
+
+theorem fixed_kernelOrderCorrect : Targets.KernelOrderCorrect := Proof.kernelOrderCorrect
+theorem fixed_equalRankWordGuardCorrect : Targets.EqualRankWordGuardCorrect :=
+  Proof.equalRankWordGuardCorrect
+theorem fixed_equalRankWordGuardPrograms : Targets.EqualRankWordGuardPrograms :=
+  Proof.equalRankWordGuardPrograms
+
+#print axioms fixed_kernelOrderCorrect
+#print axioms fixed_equalRankWordGuardCorrect
+#print axioms fixed_equalRankWordGuardPrograms
+
+end LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks

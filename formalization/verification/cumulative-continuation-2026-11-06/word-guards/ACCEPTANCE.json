@@ -1,0 +1,65 @@
+{
+  "schema": "word-guards-supporting-acceptance-v1",
+  "accepted_at_utc": "2026-11-06T06:18:44.610692+00:00",
+  "baseline_commit": "3c3ce93f132a50d0f6a973f11ae90d631d21b6d4",
+  "outcome": "passed",
+  "components": [
+    "WordGuardCompletion",
+    "EqualRankWordGuardCompletion"
+  ],
+  "source_statement_supported": "08-multivariate-collapse-comparison:lem:guards",
+  "whole_source_statement_promoted": false,
+  "scope": "Explicit primitive-recursive domain tails and lower offsets for every allowed composed word; exact equal-rank composed-kernel strict/equality/weak guards with reverse retained-mass ordering and original shared variables. These lower both outer rank-d occurrences, but are not the complete guard recursion.",
+  "source_matched_modules": 188,
+  "exact_alias_count": 8,
+  "actual_exact_alias_axioms": {
+    "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_letterTailCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_wordTailCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_wordReachCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_composedDomainCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_tailPrograms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks.fixed_kernelOrderCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks.fixed_equalRankWordGuardCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks.fixed_equalRankWordGuardPrograms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "max_observed_successful_rss_kib": 1193692,
+  "frozen_targets_verified_unchanged": true,
+  "semantic_review": "SEMANTIC-REVIEW.md",
+  "native_verification": "NATIVE-VERIFICATION.json",
+  "candidate_repairs": "None: all new candidate modules passed on the first native attempt.",
+  "unchanged_resource_limits": true,
+  "full_root_build": false,
+  "remote_ci_claim": false
+}

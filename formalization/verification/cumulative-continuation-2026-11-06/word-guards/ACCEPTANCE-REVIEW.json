@@ -1,0 +1,89 @@
+{
+  "schema": "word-guards-independent-acceptance-review-v1",
+  "reviewed_at_utc": "2026-11-06T06:20:14.944690+00:00",
+  "baseline_commit": "3c3ce93f132a50d0f6a973f11ae90d631d21b6d4",
+  "outcome": "passed",
+  "blockers": [],
+  "compiler_run_by_reviewer": false,
+  "checks": {
+    "raw_receipts": [
+      "1793945569152287731-5.json",
+      "1793945767252167647-5.json"
+    ],
+    "receipt_rows_equal_native_summary": true,
+    "local_import_closure_exactly_matches_receipts": true,
+    "current_source_sha256_matches": true,
+    "source_matched_modules": 188,
+    "all_archived_logs_equal_originals": true,
+    "exact_alias_count": 8,
+    "actual_exact_alias_axioms": {
+      "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_letterTailCorrect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_wordTailCorrect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_wordReachCorrect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_composedDomainCorrect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.WordGuardCompletion.StatementChecks.fixed_tailPrograms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks.fixed_kernelOrderCorrect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks.fixed_equalRankWordGuardCorrect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LogicLineages.OrdinalComparison.EqualRankWordGuardCompletion.StatementChecks.fixed_equalRankWordGuardPrograms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "max_observed_successful_rss_kib": 1193692,
+    "resource_profile": {
+      "heap_mib": 2048,
+      "rss_mib": 1536,
+      "minimum_free_mib": 2048,
+      "threads": 1,
+      "cpu_seconds": 90,
+      "wall_seconds": 180
+    },
+    "frozen_file_hashes_checked": 5,
+    "paper_source_hash_checked": true,
+    "baseline_tracked_changes": [
+      "formalization/AGENTS.md",
+      "formalization/LogicLineages.lean",
+      "formalization/README.md",
+      "formalization/TARGETS.json"
+    ],
+    "numbered_statement_statuses_unchanged": true,
+    "status_counts": {
+      "checked": 167,
+      "pending": 20,
+      "existing-calculator-package": 2
+    },
+    "metadata_diff_manually_reviewed": true,
+    "prior_manuscripts_and_Lean_suppliers_unchanged": true
+  },
+  "scope": "Accepted supporting word-tail and equal-rank X-head guard components only. Full ordered guards, mixed-rank/counter recursion, shift gaps, maximum-variable linearization, row cancellation and closed existential decision remain pending. Root import addition is not a full-root build.",
+  "remaining_publication_work": "Repository SHA256SUMS and publication validation remain coordinator-owned and were not changed by this review."
+}
