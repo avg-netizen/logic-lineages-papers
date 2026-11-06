@@ -1,0 +1,20 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTSyntaxProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTSyntaxProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTSupportProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCRTSupportProof.lean:39:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCRTSupportProof.lean:33:64: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+t r : OTerm (α ⊕ Fin 1)
+n P c d : OTerm α
+hd : Nonempty (Derivation body Gamma (dividesBelow t P n))
+hc : Nonempty (Derivation body Gamma (cf d c P))
+hr : Nonempty (Derivation body Gamma (residuesBelow t r c n))
+x : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+N : OrdinaryArithmetic.arithmeticLanguage.Term (α ⊕ Fin 1) := Term.relabel Sum.inl n
+Delta : List (InternalCalculus.Formula (α ⊕ Fin 1)) := ltF x N :: List.map weaken Gamma
+hi : ∀ f ∈ Gamma, Formula.relabel Sum.inl f ∈ Delta
+⊢ Nonempty (Derivation body Gamma (residuesBelow t r d n))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTSupportProof: 1
+BUILD_RECEIPT build-reports/1794004948978907047-6.json

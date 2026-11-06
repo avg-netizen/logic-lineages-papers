@@ -1,0 +1,46 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCongruenceDivisorProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCongruenceDivisorProof.lean:26:24: error(lean.unknownIdentifier): Unknown identifier `mulRelabel`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCongruenceDivisorProof.lean:28:6: error: Ambiguous term
+  equationEmbedding
+Possible interpretations:
+  InternalModularArithmeticProof.equationEmbedding : ∀ (a b m q p : OrdinaryArithmetic.Term ?m.115),
+    arithmeticEmbedding.onFormula (InternalModularArithmetic.equation a b m q p) =
+      eqn (add a (mul q m)) (add b (mul p m))
+  
+  InternalLinearCombinationSyntaxProof.equationEmbedding : ∀ (a b d x y z w : OrdinaryArithmetic.Term ?m.115),
+    arithmeticEmbedding.onFormula (InternalLinearCombination.equation a b d x y z w) =
+      eqn (add (mul x a) (mul y b)) (add d (add (mul z a) (mul w b)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCongruenceDivisorProof.lean:15:74: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+a b d m : OrdinaryArithmetic.Term α
+hd : Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (InternalLinearCombination.divides d m)))
+hc : Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (InternalModularArithmetic.congruent a b m)))
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+r : OrdinaryArithmetic.Term β
+hi : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hr : Nonempty (Derivation body Delta (eqn (Term.relabel j m) (mul r (Term.relabel j d))))
+hc' :
+  Nonempty
+    (Derivation body Delta (InternalModularArithmeticProof.cf (Term.relabel j a) (Term.relabel j b) (Term.relabel j m)))
+γ : Type
+f : β → γ
+Theta : List (InternalCalculus.Formula γ)
+q p : OrdinaryArithmetic.Term γ
+hf : ∀ f_1 ∈ Delta, Formula.relabel f f_1 ∈ Theta
+he :
+  Nonempty
+    (Derivation body Theta
+      (arithmeticEmbedding.onFormula
+        (InternalModularArithmetic.equation (Term.relabel f (Term.relabel j a)) (Term.relabel f (Term.relabel j b))
+          (Term.relabel f (Term.relabel j m)) q p)))
+hr' : Derivation body Theta (eqn (Term.relabel f (Term.relabel j m)) (Term.relabel f (mul r (Term.relabel j d))))
+⊢ Nonempty
+    (Derivation body Theta
+      (InternalModularArithmeticProof.cf (Term.relabel f (Term.relabel j a)) (Term.relabel f (Term.relabel j b))
+        (Term.relabel f (Term.relabel j d))))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCongruenceDivisorProof: 1
+BUILD_RECEIPT build-reports/1794004796924224847-6.json

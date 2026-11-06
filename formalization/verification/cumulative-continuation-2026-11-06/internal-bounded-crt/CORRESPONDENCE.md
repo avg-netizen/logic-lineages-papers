@@ -1,0 +1,9 @@
+# Frozen internal bounded CRT supplier
+
+ActualBoundedCRT says: for any object-variable type alpha, arbitrary object bound n, arbitrary term-defined modulus predecessor t(i), and arbitrary term-defined residue r(i), actual bounded pairwise coprimality implies existence of one shared natural code c with c congruent to r(i) modulo succ(t(i)) at every i<n. Every original free parameter remains in alpha. The bound n is an object-language term, not an external finite length.
+
+The premise uses triangular pairs: for every j<n and every i<j, coprime(succ(t(j)), succ(t(i))). These are exactly the distinct unordered pairs below n, oriented by the literal original strict-order formula. No hypothesis concerns indices at or above n; reflexive pairs are excluded. Coprime is the unchanged positive-common-divisor formula from InternalBezoutExistenceTargets. Congruence is the unchanged two-natural-offset existential equation from InternalModularArithmetic. The bounded quantifier is InternalCoprimeMultiple.bounded using the original order formula. The conclusion binds c once outside that bounded universal.
+
+The intended construction uses actual PA induction on the object bound. At successor n, it obtains a positive common multiple P of old moduli that is coprime to the new modulus, then applies genuine binary CRT to the old code modulo P and the new residue. Divisibility transports the first congruence back to every old modulus. All helper witness elimination remains in the existing derivation calculus. No semantic natural-number reflection, oracle, certificate-only premise, new axiom, or strengthened antecedent is permitted.
+
+This is a bounded CRT supplier toward the internal arithmetic/coding dependencies of the public-paper formalization. It does not by itself establish a full sequence-coding or whole-paper theorem. Definitions and target hashes are frozen before proof authoring; target compilation must pass first.

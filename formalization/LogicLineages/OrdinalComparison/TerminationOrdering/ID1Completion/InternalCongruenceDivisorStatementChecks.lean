@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCongruenceDivisorProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCongruenceDivisorStatementChecks
+theorem divisor_exact : InternalCongruenceDivisorTargets.ActualDivisor :=
+  InternalCongruenceDivisorProof.actualDivisor
+#print axioms divisor_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCongruenceDivisorStatementChecks

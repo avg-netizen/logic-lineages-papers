@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTStatementChecks
+theorem actualBoundedCRTExact : InternalBoundedCRTTargets.ActualBoundedCRT :=
+  InternalBoundedCRTProof.actualBoundedCRT
+#print axioms actualBoundedCRTExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTStatementChecks
