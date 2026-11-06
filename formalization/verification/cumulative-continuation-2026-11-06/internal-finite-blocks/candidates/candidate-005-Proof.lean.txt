@@ -1,0 +1,95 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalFiniteBlocks
+open SourceComputabilityFormulaSupportProof InternalDerivationRenamingProof
+open InternalFiniteBlocksBindingProof InternalFiniteBlocksSubstitutionProof
+
+theorem introduction (body : Positive (Fin 1)) (α : Type) (k : Nat) :
+    ∀ (Gamma : List (Formula α)) (phi : Formula (α ⊕ Fin k)) (ts : Fin k → Term α),
+    Nonempty (Derivation body Gamma (phi.subst (Sum.elim Term.var ts))) →
+    Nonempty (Derivation body Gamma (block phi)) := by
+  induction k with
+  | zero =>
+    intro Gamma phi ts h
+    rw [zeroWitness] at h
+    rw [blockZero]
+    exact h
+  | succ k ih =>
+    intro Gamma phi ts ⟨d⟩
+    rw [blockLast]
+    apply ih Gamma (existsOne (phi.relabel (splitLast k))) (fun i => ts i.castSucc)
+    rw [existsSubst]
+    apply Nonempty.intro
+    apply Derivation.existentialIntroduction (ts (Fin.last k))
+    rw [witnessLast k phi ts]
+    exact d
+
+theorem actualFiniteExistentialIntroduction : InternalFiniteBlocksTargets.ActualFiniteExistentialIntroduction := by
+  intro body α k
+  exact introduction body α k
+
+theorem elimination (body : Positive (Fin 1)) (α : Type) (k : Nat) :
+    ∀ (Gamma : List (Formula α)) (phi : Formula (α ⊕ Fin k)) (psi : Formula α),
+    Nonempty (Derivation body Gamma (block phi)) →
+    Nonempty (Derivation body (phi :: Gamma.map (fun p => p.relabel Sum.inl)) (psi.relabel Sum.inl)) →
+    Nonempty (Derivation body Gamma psi) := by
+  induction k with
+  | zero =>
+    intro Gamma phi psi ⟨d⟩ ⟨e⟩
+    obtain ⟨e'⟩ := renameDerivation e α eraseZero
+    simp only [List.map_cons,contextZero,parametersZero] at e'
+    rw [blockZero] at d
+    exact ⟨Derivation.implicationElimination (Derivation.implicationIntroduction e') d⟩
+  | succ k ih =>
+    intro Gamma phi psi ⟨d⟩ ⟨e⟩
+    obtain ⟨e'⟩ := renameDerivation e ((α ⊕ Fin k) ⊕ Fin 1) (splitLast k)
+    simp only [List.map_cons,contextLast,parametersLast] at e'
+    rw [blockLast] at d
+    apply ih Gamma (existsOne (phi.relabel (splitLast k))) psi ⟨d⟩
+    apply Nonempty.intro
+    apply Derivation.existentialElimination (Derivation.hypothesis List.mem_cons_self)
+    apply Derivation.weakening ?_ e'
+    intro p hp
+    rcases List.mem_cons.mp hp with h | h
+    · exact List.mem_cons.mpr (Or.inl h)
+    · exact List.mem_cons_of_mem _ (List.mem_cons_of_mem _ h)
+
+theorem actualFiniteExistentialElimination : InternalFiniteBlocksTargets.ActualFiniteExistentialElimination := by
+  intro body α k
+  exact elimination body α k
+
+theorem listConjunction (body : Positive (Fin 1)) {α : Type} (Gamma : List (Formula α))
+    (ps : List (OrdinaryArithmetic.Formula α)) :
+    Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (ps.foldr (· ⊓ ·) ⊤))) ↔
+    ∀ p ∈ ps, Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula p)) := by
+  induction ps with
+  | nil =>
+    constructor
+    · intro _ p hp; exact False.elim (List.not_mem_nil hp)
+    · intro _
+      exact ⟨Derivation.implicationIntroduction (Derivation.hypothesis List.mem_cons_self)⟩
+  | cons p ps ih =>
+    constructor
+    · intro h q hq
+      obtain ⟨d⟩ := h
+      rcases List.mem_cons.mp hq with rfl | hq
+      · exact ⟨Derivation.conjunctionLeft d⟩
+      · exact ih.mp ⟨Derivation.conjunctionRight d⟩ q hq
+    · intro h
+      obtain ⟨d⟩ := h p List.mem_cons_self
+      obtain ⟨e⟩ := ih.mpr (fun q hq => h q (List.mem_cons_of_mem _ hq))
+      exact ⟨Derivation.conjunctionIntroduction d e⟩
+
+theorem actualOriginalFiniteConjunction : InternalFiniteBlocksTargets.ActualOriginalFiniteConjunction := by
+  intro body α k Gamma phi
+  rw [OrdinaryArithmetic.andFin,listConjunction]
+  constructor
+  · intro h i
+    exact h (phi i) (List.mem_ofFn.mpr ⟨i,rfl⟩)
+  · intro h p hp
+    obtain ⟨i,rfl⟩ := List.mem_ofFn.mp hp
+    exact h i
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksProof

@@ -1,0 +1,30 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksProof.lean:26:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  instantiate
+    (BoundedFormula.subst (Formula.relabel (splitLast ?k) ?phi)
+      (Sum.elim (fun a => Term.relabel Sum.inl (witnessesBeforeLast ?ts a)) fun i => var (Sum.inr i)))
+    (?ts (Fin.last ?k))
+in the target expression
+  Derivation body Gamma
+    (instantiate
+      (BoundedFormula.subst (Formula.relabel (splitLast k) phi)
+        (Sum.elim (fun a => Term.relabel Sum.inl (Sum.elim var (fun i => ts i.castSucc) a)) fun i => var (Sum.inr i)))
+      (ts (Fin.last k)))
+
+case succ
+body : Positive (Fin 1)
+α : Type
+k : ℕ
+ih :
+  ∀ (Gamma : List (InternalCalculus.Formula α)) (phi : InternalCalculus.Formula (α ⊕ Fin k))
+    (ts : Fin k → InternalCalculus.Term α),
+    Nonempty (Derivation body Gamma (BoundedFormula.subst phi (Sum.elim var ts))) →
+      Nonempty (Derivation body Gamma (block phi))
+Gamma : List (InternalCalculus.Formula α)
+phi : InternalCalculus.Formula (α ⊕ Fin (k + 1))
+ts : Fin (k + 1) → InternalCalculus.Term α
+d : Derivation body Gamma (BoundedFormula.subst phi (Sum.elim var ts))
+⊢ Derivation body Gamma
+    (instantiate
+      (BoundedFormula.subst (Formula.relabel (splitLast k) phi)
+        (Sum.elim (fun a => Term.relabel Sum.inl (Sum.elim var (fun i => ts i.castSucc) a)) fun i => var (Sum.inr i)))
+      (ts (Fin.last k)))

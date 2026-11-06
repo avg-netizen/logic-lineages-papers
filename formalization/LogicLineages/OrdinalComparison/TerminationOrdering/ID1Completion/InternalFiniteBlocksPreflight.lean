@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksPreflight
+def binderComparator : Prop := InternalFiniteBlocksTargets.ActualFiniteBinderEquations
+def embeddingComparator : Prop := InternalFiniteBlocksTargets.ActualOriginalBlockEmbedding
+def introductionComparator : Prop := InternalFiniteBlocksTargets.ActualFiniteExistentialIntroduction
+def eliminationComparator : Prop := InternalFiniteBlocksTargets.ActualFiniteExistentialElimination
+def conjunctionComparator : Prop := InternalFiniteBlocksTargets.ActualOriginalFiniteConjunction
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksPreflight

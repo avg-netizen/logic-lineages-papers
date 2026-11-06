@@ -1,0 +1,13 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksSubstitutionProof.lean:46:28: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  BoundedFormula.subst ?phi var
+in the target expression
+  (BoundedFormula.subst phi fun a => var (id a)) = phi
+
+α : Type
+phi : InternalCalculus.Formula α
+⊢ (BoundedFormula.subst phi fun a => var (id a)) = phi
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksSubstitutionProof.lean:62:2: error: Tactic `assumption` failed
+
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+⊢ List.map ((fun p => Formula.relabel eraseZero p) ∘ fun p => Formula.relabel Sum.inl p) Gamma = Gamma

@@ -1,0 +1,138 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksBindingProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalFiniteBlocks
+open SourceComputabilityFormulaSupportProof InternalBinderTransportSyntaxProof InternalBinderTransportProof
+open InternalPositiveUnfoldingSupportProof InternalTermSubstitutionSyntaxProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalDerivationRenamingSyntaxProof
+
+/-- Composition of the ORIGINAL bound-prefix renamings. New bound variables
+precede the previously bound prefix, and all existing bound variables follow. -/
+def combined {α β γ : Type} {m n : Nat} (f : α → β ⊕ Fin m) (g : β → γ ⊕ Fin n) : α → γ ⊕ Fin (n+m) :=
+  Sum.elim (fun b => Sum.map id (Fin.castAdd m) (g b))
+    (fun i => Sum.inr (Fin.natAdd n i)) ∘ f
+
+theorem rebind {L : Language} {α β γ : Type} {m n j : Nat}
+    (phi : L.BoundedFormula α j) (f : α → β ⊕ Fin m) (g : β → γ ⊕ Fin n) :
+    ((phi.relabel f).relabel g).castLE (by omega) = phi.relabel (combined f g) := by
+  have hv (k : Nat) :
+      Sum.map id (Fin.castLE (show n+(m+k) ≤ (n+m)+k by omega)) ∘
+        BoundedFormula.relabelAux g (m+k) ∘ BoundedFormula.relabelAux f k =
+      BoundedFormula.relabelAux (combined f g) k := by
+    funext a
+    cases a with
+    | inl a =>
+      cases hf : f a with
+      | inl b =>
+        cases hg : g b with
+        | inl c => simp [BoundedFormula.relabelAux,combined,hf,hg]
+        | inr i =>
+          simp [BoundedFormula.relabelAux,combined,hf,hg]
+      | inr i =>
+        simp [BoundedFormula.relabelAux,combined,hf]
+    | inr i =>
+      simp [BoundedFormula.relabelAux,combined,Nat.add_assoc]
+  have ht (k : Nat) (t : L.Term (α ⊕ Fin k)) :
+      ((t.relabel (BoundedFormula.relabelAux f k)).relabel (BoundedFormula.relabelAux g (m+k))).relabel
+        (Sum.map id (Fin.castLE (show n+(m+k) ≤ (n+m)+k by omega))) =
+      t.relabel (BoundedFormula.relabelAux (combined f g) k) := by
+    simp only [Term.relabel_relabel]
+    rw [hv]
+  induction phi with
+  | falsum => rfl
+  | equal s t => simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,BoundedFormula.castLE,ht]
+  | rel r ts => simp only [BoundedFormula.relabel,BoundedFormula.mapTermRel,BoundedFormula.castLE,Function.comp_apply,ht]
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih =>
+    rw [BoundedFormula.relabel_all,BoundedFormula.relabel_all,BoundedFormula.relabel_all]
+    exact congrArg BoundedFormula.all ih
+
+theorem bindRename {L : Language} {α β γ : Type} {n j : Nat}
+    (phi : L.BoundedFormula α j) (f : α → β) (g : β → γ ⊕ Fin n) :
+    (rename f phi).relabel g = phi.relabel (g ∘ f) := by
+  have ht (k : Nat) (t : L.Term (α ⊕ Fin k)) :
+      (t.relabel (Sum.map f id)).relabel (BoundedFormula.relabelAux g k) =
+      t.relabel (BoundedFormula.relabelAux (g ∘ f) k) := by
+    rw [Term.relabel_relabel]
+    congr 1
+    funext a
+    cases a <;> rfl
+  induction phi with
+  | falsum => rfl
+  | equal s t => simp only [rename,BoundedFormula.relabel,BoundedFormula.mapTermRel,ht]
+  | rel r ts => simp only [rename,BoundedFormula.relabel,BoundedFormula.mapTermRel,ht]; rfl
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih =>
+    change (rename f p).all.relabel g = p.all.relabel (g ∘ f)
+    rw [BoundedFormula.relabel_all,BoundedFormula.relabel_all,ih]
+
+theorem blockZero {α : Type} (phi : Formula (α ⊕ Fin 0)) : block phi = phi.relabel eraseZero := by
+  have hf : (id : α ⊕ Fin 0 → α ⊕ Fin 0) = Sum.inl ∘ eraseZero := by
+    funext a
+    cases a with
+    | inl a => rfl
+    | inr i => exact Fin.elim0 i
+  change BoundedFormula.relabel id phi = _
+  rw [hf,freeRelabelCast,BoundedFormula.castLE_rfl,formulaRelabel]
+
+theorem combineLast (α : Type) (k : Nat) :
+    combined (splitLast (α := α) k) (id : α ⊕ Fin k → α ⊕ Fin k) = id := by
+  funext a
+  cases a with
+  | inl a => rfl
+  | inr i =>
+    refine Fin.lastCases ?_ (fun j => ?_) i
+    · simp only [combined,splitLast,Function.comp_apply,Sum.elim_inr,Fin.lastCases_last]
+    · simp only [combined,splitLast,Function.comp_apply,Sum.elim_inr,Fin.lastCases_castSucc,
+        Sum.elim_inl,Sum.map_inr,id_eq]
+
+theorem blockLast {α : Type} (k : Nat) (phi : Formula (α ⊕ Fin (k+1))) :
+    block phi = block (existsOne (phi.relabel (splitLast k))) := by
+  have h := rebind phi (splitLast k) (id : α ⊕ Fin k → α ⊕ Fin k)
+  rw [combineLast,BoundedFormula.castLE_rfl] at h
+  change (BoundedFormula.relabel id phi).ex.exs =
+    (BoundedFormula.relabel id ((BoundedFormula.relabel id (phi.relabel (splitLast k))).ex)).exs
+  rw [BoundedFormula.relabel_ex,formulaRelabel,bindRename]
+  change (BoundedFormula.relabel id phi).ex.exs =
+    ((BoundedFormula.relabel id (BoundedFormula.relabel (splitLast k) phi)).ex).exs
+  rw [h]
+
+theorem actualFiniteBinderEquations : InternalFiniteBlocksTargets.ActualFiniteBinderEquations := by
+  exact ⟨fun _ => blockZero,fun _ => blockLast⟩
+
+theorem onBind {L L' : Language} (h : L →ᴸ L') {α β : Type} {n j : Nat}
+    (phi : L.BoundedFormula α j) (f : α → β ⊕ Fin n) :
+    h.onBoundedFormula (phi.relabel f) = (h.onBoundedFormula phi).relabel f := by
+  induction phi with
+  | falsum => rfl
+  | equal s t => simp only [LHom.onBoundedFormula,BoundedFormula.relabel,BoundedFormula.mapTermRel,Term.bdEqual,onTermRelabel]
+  | rel r ts =>
+    simp only [LHom.onBoundedFormula,BoundedFormula.relabel,BoundedFormula.mapTermRel,Relations.boundedFormula]
+    congr 1
+    funext i
+    exact onTermRelabel h _ (ts i)
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih =>
+    rw [BoundedFormula.relabel_all]
+    change (h.onBoundedFormula (p.relabel f)).all = (h.onBoundedFormula p).all.relabel f
+    rw [BoundedFormula.relabel_all,ih]
+
+theorem onExs {L L' : Language} (h : L →ᴸ L') {α : Type} {k : Nat}
+    (phi : L.BoundedFormula α k) :
+    h.onFormula phi.exs = (h.onBoundedFormula phi).exs := by
+  induction k with
+  | zero => rfl
+  | succ k ih =>
+    change h.onFormula phi.ex.exs = _
+    rw [ih]
+    rfl
+
+theorem actualOriginalBlockEmbedding : InternalFiniteBlocksTargets.ActualOriginalBlockEmbedding := by
+  intro α k phi
+  change arithmeticEmbedding.onFormula (BoundedFormula.relabel id phi).exs = _
+  rw [onExs,onBind]
+  rfl
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksBindingProof

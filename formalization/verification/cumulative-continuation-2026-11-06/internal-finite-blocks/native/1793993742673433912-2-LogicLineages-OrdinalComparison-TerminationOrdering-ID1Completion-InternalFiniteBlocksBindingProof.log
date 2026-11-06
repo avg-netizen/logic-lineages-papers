@@ -1,0 +1,192 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:35:10: error: Tactic `apply` failed: could not unify the conclusion of `@Fin.ext`
+  Eq.{1} ?a ?b
+with the goal
+  Eq.{2} (Fin (n + (m + k))) (Fin (n + m) ⊕ Fin k)
+
+Note: The full type of `@Fin.ext` is
+  ∀ {n : ℕ} {a b : Fin n}, ↑a = ↑b → a = b
+
+case inl.inl.inr.e_3
+L : Language
+α β γ : Type
+m n j : ℕ
+phi : L.BoundedFormula α j
+f : α → β ⊕ Fin m
+g : β → γ ⊕ Fin n
+k : ℕ
+a : α
+b : β
+hf : f a = Sum.inl b
+i : Fin n
+hg : g b = Sum.inr i
+⊢ Fin (n + (m + k)) = (Fin (n + m) ⊕ Fin k)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:41:8: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:58:103: error: Tactic `rfl` failed: The left-hand side
+  BoundedFormula.rel (id (id r))
+    (Term.relabel (Sum.map id (Fin.castLE ⋯)) ∘ fun i =>
+      Term.relabel (BoundedFormula.relabelAux g (m + n✝)) (Term.relabel (BoundedFormula.relabelAux f n✝) (ts i)))
+is not definitionally equal to the right-hand side
+  BoundedFormula.rel (id r) fun i => Term.relabel (BoundedFormula.relabelAux (combined f g) n✝) (ts i)
+
+case rel
+L : Language
+α β γ : Type
+m n j : ℕ
+f : α → β ⊕ Fin m
+g : β → γ ⊕ Fin n
+hv :
+  ∀ (k : ℕ),
+    Sum.map id (Fin.castLE ⋯) ∘ BoundedFormula.relabelAux g (m + k) ∘ BoundedFormula.relabelAux f k =
+      BoundedFormula.relabelAux (combined f g) k
+ht :
+  ∀ (k : ℕ) (t : L.Term (α ⊕ Fin k)),
+    Term.relabel (Sum.map id (Fin.castLE ⋯))
+        (Term.relabel (BoundedFormula.relabelAux g (m + k)) (Term.relabel (BoundedFormula.relabelAux f k) t)) =
+      Term.relabel (BoundedFormula.relabelAux (combined f g) k) t
+n✝ l✝ : ℕ
+r : L.Relations l✝
+ts : Fin l✝ → L.Term (α ⊕ Fin n✝)
+⊢ BoundedFormula.rel (id (id r))
+      (Term.relabel (Sum.map id (Fin.castLE ⋯)) ∘ fun i =>
+        Term.relabel (BoundedFormula.relabelAux g (m + n✝)) (Term.relabel (BoundedFormula.relabelAux f n✝) (ts i))) =
+    BoundedFormula.rel (id r) fun i => Term.relabel (BoundedFormula.relabelAux (combined f g) n✝) (ts i)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:32:79: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵f̵,̵h̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵l̵,̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵l̵e̵f̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲h̲f̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲l̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲,̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲l̲e̲f̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:33:24: warning: This simp argument is unused:
+  Sum.map_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵f̵,̵h̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵l̵,̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵l̵e̵f̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲h̲f̲,̲ ̲h̲g̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲l̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲l̲e̲f̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:33:65: warning: This simp argument is unused:
+  Equiv.sumAssoc_apply_inl_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵f̵,̵h̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵l̵,̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵l̵e̵f̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲h̲f̲,̲ ̲h̲g̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲l̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲l̲e̲f̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:33:94: warning: This simp argument is unused:
+  Equiv.sumAssoc_apply_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵f̵,̵h̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵l̵,̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵l̵e̵f̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲h̲f̲,̲ ̲h̲g̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲l̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲l̲e̲f̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:33:119: warning: This simp argument is unused:
+  finSumFinEquiv_apply_left
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵f̵,̵h̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵l̵,̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵l̵e̵f̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲h̲f̲,̲ ̲h̲g̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲l̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:39:34: warning: This simp argument is unused:
+  Equiv.sumAssoc_apply_inl_inl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵f̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵l̵,̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵l̵e̵f̵t̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵r̵i̵g̵h̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲h̲f̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲l̲e̲f̲t̲,̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲r̲i̲g̲h̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:45:20: warning: This simp argument is unused:
+  Equiv.sumAssoc_apply_inl_inl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵r̵i̵g̵h̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲r̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲,̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲r̲i̲g̲h̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:45:49: warning: This simp argument is unused:
+  Equiv.sumAssoc_apply_inl_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵S̵u̵m̵.̵m̵a̵p̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵l̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵l̵_̵i̵n̵r̵,̵E̵q̵u̵i̵v̵.̵s̵u̵m̵A̵s̵s̵o̵c̵_̵a̵p̵p̵l̵y̵_̵i̵n̵r̵,̵f̵i̵n̵S̵u̵m̵F̵i̵n̵E̵q̵u̵i̵v̵_̵a̵p̵p̵l̵y̵_̵r̵i̵g̵h̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲ ̲S̲u̲m̲.̲m̲a̲p̲_̲i̲n̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲l̲_̲i̲n̲l̲,̲ ̲E̲q̲u̲i̲v̲.̲s̲u̲m̲A̲s̲s̲o̲c̲_̲a̲p̲p̲l̲y̲_̲i̲n̲r̲,̲ ̲f̲i̲n̲S̲u̲m̲F̲i̲n̲E̲q̲u̲i̲v̲_̲a̲p̲p̲l̲y̲_̲r̲i̲g̲h̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:58:98: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.relabel, ̲BoundedFormula.mapTermRel, ̲BoundedFormula.castLE,̵h̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:101:6: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:106:6: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:114:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  BoundedFormula.relabel ?g (∃' ?φ)
+in the target expression
+  (BoundedFormula.relabel id phi).exs =
+    (BoundedFormula.relabel id (BoundedFormula.relabel id (Formula.relabel (splitLast k) phi)).exs).exs
+
+α : Type
+k : ℕ
+phi : InternalCalculus.Formula (α ⊕ Fin (k + 1))
+h : BoundedFormula.relabel id (BoundedFormula.relabel (splitLast k) phi) = BoundedFormula.relabel id phi
+⊢ (BoundedFormula.relabel id phi).exs =
+    (BoundedFormula.relabel id (BoundedFormula.relabel id (Formula.relabel (splitLast k) phi)).exs).exs
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:127:14: error: unsolved goals
+case equal
+L : Language
+L' : Language
+h : L →ᴸ L'
+α β : Type
+n j : ℕ
+f : α → β ⊕ Fin n
+n✝ : ℕ
+s t : L.Term (α ⊕ Fin n✝)
+⊢ Term.relabel (BoundedFormula.relabelAux f n✝) (h.onTerm s) ='
+      Term.relabel (BoundedFormula.relabelAux f n✝) (h.onTerm t) =
+    BoundedFormula.mapTermRel (fun x t => Term.relabel (BoundedFormula.relabelAux f x) t) (fun x => id)
+      (fun x => BoundedFormula.castLE ⋯) (h.onTerm s =' h.onTerm t)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:128:114: error: Tactic `rfl` failed: The left-hand side
+  (h.onRelation (id r)).boundedFormula (h.onTerm ∘ fun i => Term.relabel (BoundedFormula.relabelAux f n✝) (ts i))
+is not definitionally equal to the right-hand side
+  BoundedFormula.mapTermRel (fun x t => Term.relabel (BoundedFormula.relabelAux f x) t) (fun x => id)
+    (fun x => BoundedFormula.castLE ⋯) ((h.onRelation r).boundedFormula (h.onTerm ∘ ts))
+
+case rel
+L : Language
+L' : Language
+h : L →ᴸ L'
+α β : Type
+n j : ℕ
+f : α → β ⊕ Fin n
+n✝ l✝ : ℕ
+r : L.Relations l✝
+ts : Fin l✝ → L.Term (α ⊕ Fin n✝)
+⊢ (h.onRelation (id r)).boundedFormula (h.onTerm ∘ fun i => Term.relabel (BoundedFormula.relabelAux f n✝) (ts i)) =
+    BoundedFormula.mapTermRel (fun x t => Term.relabel (BoundedFormula.relabelAux f x) t) (fun x => id)
+      (fun x => BoundedFormula.castLE ⋯) ((h.onRelation r).boundedFormula (h.onTerm ∘ ts))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:128:98: warning: This simp argument is unused:
+  onTermRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [LHom.onBoundedFormula, ̲BoundedFormula.relabel, ̲BoundedFormula.mapTermRel,̵o̵n̵T̵e̵r̵m̵R̵e̵l̵a̵b̵e̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:138:2: error: Unnecessary `generalizing` argument: Variable `phi` is generalized automatically

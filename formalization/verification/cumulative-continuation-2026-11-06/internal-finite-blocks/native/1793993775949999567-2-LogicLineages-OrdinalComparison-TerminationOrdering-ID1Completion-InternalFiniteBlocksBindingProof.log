@@ -1,0 +1,98 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:31:16: error: unsolved goals
+case inl.inl.inr
+L : Language
+α β γ : Type
+m n j : ℕ
+phi : L.BoundedFormula α j
+f : α → β ⊕ Fin m
+g : β → γ ⊕ Fin n
+k : ℕ
+a : α
+b : β
+hf : f a = Sum.inl b
+i : Fin n
+hg : g b = Sum.inr i
+⊢ Fin.castLE ⋯ (Fin.castAdd (m + k) i) = Fin.castAdd k (Fin.castAdd m i)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:33:14: error: unsolved goals
+case inl.inr
+L : Language
+α β γ : Type
+m n j : ℕ
+phi : L.BoundedFormula α j
+f : α → β ⊕ Fin m
+g : β → γ ⊕ Fin n
+k : ℕ
+a : α
+i : Fin m
+hf : f a = Sum.inr i
+⊢ Fin.castLE ⋯ (Fin.natAdd n (Fin.castAdd k i)) = Fin.castAdd k (Fin.natAdd n i)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:35:12: error: unsolved goals
+case inr
+L : Language
+α β γ : Type
+m n j : ℕ
+phi : L.BoundedFormula α j
+f : α → β ⊕ Fin m
+g : β → γ ⊕ Fin n
+k : ℕ
+i : Fin k
+⊢ Fin.castLE ⋯ (Fin.natAdd n (Fin.natAdd m i)) = Fin.natAdd (n + m) i
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:46:13: error: unsolved goals
+case rel
+L : Language
+α β γ : Type
+m n j : ℕ
+f : α → β ⊕ Fin m
+g : β → γ ⊕ Fin n
+hv :
+  ∀ (k : ℕ),
+    Sum.map id (Fin.castLE ⋯) ∘ BoundedFormula.relabelAux g (m + k) ∘ BoundedFormula.relabelAux f k =
+      BoundedFormula.relabelAux (combined f g) k
+ht :
+  ∀ (k : ℕ) (t : L.Term (α ⊕ Fin k)),
+    Term.relabel (Sum.map id (Fin.castLE ⋯))
+        (Term.relabel (BoundedFormula.relabelAux g (m + k)) (Term.relabel (BoundedFormula.relabelAux f k) t)) =
+      Term.relabel (BoundedFormula.relabelAux (combined f g) k) t
+n✝ l✝ : ℕ
+r : L.Relations l✝
+ts : Fin l✝ → L.Term (α ⊕ Fin n✝)
+⊢ BoundedFormula.rel (id (id r))
+      (Term.relabel (Sum.map id (Fin.castLE ⋯)) ∘ fun i =>
+        Term.relabel (BoundedFormula.relabelAux g (m + n✝)) (Term.relabel (BoundedFormula.relabelAux f n✝) (ts i))) =
+    BoundedFormula.rel (id r) fun i => Term.relabel (BoundedFormula.relabelAux (combined f g) n✝) (ts i)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:36:47: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵c̵o̵m̵b̵i̵n̵e̵d̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲c̲o̲m̲b̲i̲n̲e̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:46:98: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵c̵a̵s̵t̵L̵E̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵h̵t̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲c̲a̲s̲t̲L̲E̲,̲
+  ̲ ̲ ̲ ̲ ̲h̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:46:118: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.relabel, ̲BoundedFormula.mapTermRel, ̲BoundedFormula.castLE,
+  ̲ ̲ ̲ ̲ ̲Function.comp_apply,̵h̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:87:4: error: unsolved goals
+case inr.refine_1
+α : Type
+k : ℕ
+i : Fin (k + 1)
+⊢ Sum.inr (Fin.natAdd k 0) = id (Sum.inr (Fin.last k))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFiniteBlocksBindingProof.lean:88:4: error: unsolved goals
+case inr.refine_2
+α : Type
+k : ℕ
+i : Fin (k + 1)
+j : Fin k
+⊢ Sum.inr (Fin.castAdd 1 j) = Sum.inr j.castSucc
