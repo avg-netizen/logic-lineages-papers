@@ -1,0 +1,177 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceIntroductionSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticTransforms
+open PositiveArithmeticPredicateSubstitution PositiveArithmeticSchemas InternalCalculus
+open SourceComputabilityFormulaSupportProof InternalBinderTransportSyntaxProof InternalBinderTransportProof
+open InternalPositiveUnfoldingSupportProof InternalTermSubstitutionSyntaxProof InternalTermSubstitutionProof
+open InternalTagArithmeticSyntaxProof InternalSourceIntroductionSyntaxProof
+
+theorem equalityRename {L : Language} {α β : Type} (s t : L.Term α) (f : α → β) :
+    (s.equal t).relabel f = (s.relabel f).equal (t.relabel f) := by
+  simp only [formulaRelabel,rename,Term.equal,Term.bdEqual,BoundedFormula.mapTermRel,Term.relabel_relabel]
+  rfl
+
+theorem instantiateRename {α β : Type} (phi : Formula (α ⊕ Fin 1)) (t : Term α) (f : α → β) :
+    (instantiate phi t).relabel f =
+    instantiate (phi.relabel (Sum.map f id)) (t.relabel f) := by
+  rw [instantiate,formulaSubstRelabel,instantiate,actualRelabelSubstitution]
+  congr 1
+  funext a
+  cases a <;> rfl
+
+theorem weakenRename {α β : Type} (phi : Formula α) (f : α → β) :
+    (weaken phi).relabel (Sum.map f id) = weaken (phi.relabel f) := by
+  rw [weaken,formulaRelabelComposition,weaken,formulaRelabelComposition]
+  rfl
+
+theorem existsRename {α β : Type} (phi : Formula (α ⊕ Fin 1)) (f : α → β) :
+    (existsOne phi).relabel f = existsOne (phi.relabel (Sum.map f id)) := by
+  change ((allOne phi.not).relabel f).not = _
+  rw [actualUniversalRenaming]
+  rfl
+
+theorem liftRename {α β : Type} (theta : Formula (α ⊕ Fin 1)) (f : α → β) :
+    (liftPredicateFormula theta).relabel (Sum.map (Sum.map f id) id) =
+      liftPredicateFormula (theta.relabel (Sum.map f id)) := by
+  rw [liftPredicateFormula,formulaRelabelComposition,liftPredicateFormula,formulaRelabelComposition]
+  congr 1
+  funext a
+  cases a <;> rfl
+
+theorem positiveRenameComposition {α : Type} (p : Positive α) :
+    ∀ (β γ : Type) (f : α → β) (g : β → γ),
+    PositiveArithmeticTransforms.relabel g (PositiveArithmeticTransforms.relabel f p) =
+      PositiveArithmeticTransforms.relabel (g ∘ f) p := by
+  induction p with
+  | arithmetic phi =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,formulaRelabelComposition]
+  | predicate t =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,Term.relabel_relabel]
+  | conj p q ihp ihq =>
+    intro β γ f g
+    exact congrArg₂ Positive.conj (ihp β γ f g) (ihq β γ f g)
+  | guarded guard p ih =>
+    intro β γ f g
+    simp only [PositiveArithmeticTransforms.relabel,formulaRelabelComposition]
+    exact congrArg (Positive.guarded (guard.relabel (g ∘ f))) (ih β γ f g)
+  | @all α p ih =>
+    intro β γ f g
+    change Positive.all (PositiveArithmeticTransforms.relabel (Sum.map g id)
+      (PositiveArithmeticTransforms.relabel (Sum.map f id) p)) = _
+    rw [ih]
+    congr 2
+    funext a
+    cases a <;> rfl
+
+theorem parameterBodyRename (body : Positive (Fin 1)) (α β : Type) (f : α → β) :
+    PositiveArithmeticTransforms.relabel (Sum.map f id) (bodyWithParameters body α) =
+      bodyWithParameters body β := by
+  rw [bodyWithParameters,positiveRenameComposition]
+  rfl
+
+theorem replacementRename {α : Type} (p : Positive α) :
+    ∀ (β : Type) (f : α → β) (theta : Formula (α ⊕ Fin 1)),
+    (substitutePredicate p theta).relabel f =
+      substitutePredicate (PositiveArithmeticTransforms.relabel f p) (theta.relabel (Sum.map f id)) := by
+  induction p with
+  | arithmetic phi =>
+    intro β f theta
+    exact (arithmeticRename f phi).symm
+  | predicate t =>
+    intro β f theta
+    change (instantiate theta (emb t)).relabel f = instantiate (theta.relabel (Sum.map f id)) (emb (t.relabel f))
+    rw [instantiateRename,← onTermRelabel]
+  | conj p q ihp ihq =>
+    intro β f theta
+    change ((substitutePredicate p theta).relabel f) ⊓ ((substitutePredicate q theta).relabel f) = _
+    rw [ihp,ihq]
+    rfl
+  | guarded guard p ih =>
+    intro β f theta
+    change ((arithmeticEmbedding.onFormula guard).relabel f).imp ((substitutePredicate p theta).relabel f) = _
+    rw [← arithmeticRename,ih]
+    rfl
+  | all p ih =>
+    intro β f theta
+    change (allOne (substitutePredicate p (liftPredicateFormula theta))).relabel f = _
+    rw [actualUniversalRenaming,ih,liftRename]
+    rfl
+
+theorem actualPredicateReplacementRenaming : InternalDerivationRenamingTargets.ActualPredicateReplacementRenaming := by
+  intro α β f p theta
+  exact replacementRename p β f theta
+
+theorem successorRename {α β : Type} (theta : Formula (α ⊕ Fin 1)) (f : α → β) :
+    (successorInstance theta).relabel (Sum.map f id) =
+      successorInstance (theta.relabel (Sum.map f id)) := by
+  rw [successorInstance,formulaSubstRelabel,successorInstance,actualRelabelSubstitution]
+  congr 1
+  funext a
+  cases a with
+  | inl a => rfl
+  | inr i =>
+    simp only [Sum.elim_inr,Function.comp_apply,Sum.map_inr,id_eq]
+    rw [← onTermRelabel,sucRelabel]
+    rfl
+
+theorem actualInductionSchemaRenaming : InternalDerivationRenamingTargets.ActualInductionSchemaRenaming := by
+  intro α β f theta
+  change (((instantiate theta (emb z)).relabel f) ⊓
+    ((allOne (theta.imp (successorInstance theta))).relabel f)).imp
+      ((allOne theta).relabel f) = _
+  rw [instantiateRename,← onTermRelabel,zRelabel,actualUniversalRenaming,actualUniversalRenaming]
+  change ((instantiate (theta.relabel (Sum.map f id)) (emb z)) ⊓
+    allOne ((theta.relabel (Sum.map f id)).imp ((successorInstance theta).relabel (Sum.map f id)))).imp
+      (allOne (theta.relabel (Sum.map f id))) = _
+  rw [successorRename]
+  rfl
+
+theorem parameterFormulaRename (body : Positive (Fin 1)) (α β : Type) (f : α → β) :
+    (bodyWithParameters body α).formula.relabel (Sum.map f id) =
+      (bodyWithParameters body β).formula := by
+  rw [← actualPositiveRenaming,parameterBodyRename]
+
+theorem predicateObjectRename (α β : Type) (f : α → β) :
+    (predicateAtObject (α := α)).relabel (Sum.map f id) = predicateAtObject (α := β) := by
+  rw [predicateAtObject,← predicateRename]
+  rfl
+
+theorem closureRename (body : Positive (Fin 1)) (α β : Type) (f : α → β) :
+    (closureSchema (bodyWithParameters body α)).relabel f = closureSchema (bodyWithParameters body β) := by
+  rw [closureSchema,actualUniversalRenaming]
+  change allOne (((bodyWithParameters body α).formula.relabel (Sum.map f id)).imp
+    ((predicateAtObject (α := α)).relabel (Sum.map f id))) = _
+  rw [parameterFormulaRename,predicateObjectRename]
+  rfl
+
+theorem leastnessRename (body : Positive (Fin 1)) (α β : Type) (f : α → β)
+    (theta : Formula (α ⊕ Fin 1)) :
+    (leastnessSchema (bodyWithParameters body α) theta).relabel f =
+      leastnessSchema (bodyWithParameters body β) (theta.relabel (Sum.map f id)) := by
+  change ((allOne ((substitutePredicate (bodyWithParameters body α) (liftPredicateFormula theta)).imp theta)).relabel f).imp
+    ((allOne ((predicateAtObject (α := α)).imp theta)).relabel f) = _
+  rw [actualUniversalRenaming,actualUniversalRenaming]
+  change (allOne (((substitutePredicate (bodyWithParameters body α) (liftPredicateFormula theta)).relabel (Sum.map f id)).imp
+    (theta.relabel (Sum.map f id)))).imp
+      (allOne (((predicateAtObject (α := α)).relabel (Sum.map f id)).imp (theta.relabel (Sum.map f id)))) = _
+  rw [replacementRename,parameterBodyRename,liftRename,predicateObjectRename]
+  rfl
+
+theorem actualFixedPointSchemasRenaming : InternalDerivationRenamingTargets.ActualFixedPointSchemasRenaming := by
+  intro body α β f
+  exact ⟨closureRename body α β f,leastnessRename body α β f⟩
+
+theorem contextWeakenRename {α β : Type} (Gamma : List (Formula α)) (f : α → β) :
+    (Gamma.map weaken).map (fun p => p.relabel (Sum.map f id)) =
+      (Gamma.map (fun p => p.relabel f)).map weaken := by
+  simp only [List.map_map]
+  congr 1
+  funext p
+  exact weakenRename p f
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingSyntaxProof

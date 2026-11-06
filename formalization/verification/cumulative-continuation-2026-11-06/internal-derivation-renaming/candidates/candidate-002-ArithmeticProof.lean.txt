@@ -1,0 +1,74 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingArithmeticProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open InternalBinderTransportProof InternalTagArithmeticSyntaxProof InternalDerivationRenamingSyntaxProof
+
+/-- This maps witnesses of the ORIGINAL arithmetic-instance datatype. -/
+def renameArithmetic {α β : Type} (f : α → β) : ArithmeticInstance α → ArithmeticInstance β
+  | .successorNotZero t => .successorNotZero (t.relabel f)
+  | .successorInjective t u => .successorInjective (t.relabel f) (u.relabel f)
+  | .additionZero t => .additionZero (t.relabel f)
+  | .additionSuccessor t u => .additionSuccessor (t.relabel f) (u.relabel f)
+  | .multiplicationZero t => .multiplicationZero (t.relabel f)
+  | .multiplicationSuccessor t u => .multiplicationSuccessor (t.relabel f) (u.relabel f)
+  | .induction theta => .induction (theta.relabel (Sum.map f id))
+
+theorem binaryRelabel {L : Language} {α β : Type} (g : L.Functions 2) (s t : L.Term α) (f : α → β) :
+    (g.apply₂ s t).relabel f = g.apply₂ (s.relabel f) (t.relabel f) := by
+  simp only [Functions.apply₂,Term.relabel]
+  congr 1
+  funext i
+  exact Fin.cases rfl (fun j => Fin.cases rfl (fun k => Fin.elim0 k) j) i
+
+theorem arithmeticRenameFormula {α β : Type} (w : ArithmeticInstance α) (f : α → β) :
+    (arithmeticFormula w).relabel f = arithmeticFormula (renameArithmetic f w) := by
+  cases w with
+  | successorNotZero t =>
+    change ((arithmeticEmbedding.onFormula (((suc t).equal z).not)).relabel f) = _
+    rw [← arithmeticRename]
+    congr 1
+    change (((suc t).equal z).relabel f).not = _
+    rw [equalityRename,sucRelabel,zRelabel]
+    rfl
+  | successorInjective t u =>
+    change ((arithmeticEmbedding.onFormula (((suc t).equal (suc u)).imp (t.equal u))).relabel f) = _
+    rw [← arithmeticRename]
+    congr 1
+    change (((suc t).equal (suc u)).relabel f).imp ((t.equal u).relabel f) = _
+    rw [equalityRename,equalityRename,sucRelabel,sucRelabel]
+    rfl
+  | additionZero t =>
+    change ((arithmeticEmbedding.onFormula ((OrdinaryArithmetic.addTerm t z).equal t)).relabel f) = _
+    rw [← arithmeticRename]
+    congr 1
+    rw [equalityRename]
+    simp only [OrdinaryArithmetic.addTerm,binaryRelabel,zRelabel]
+    rfl
+  | additionSuccessor t u =>
+    change ((arithmeticEmbedding.onFormula ((OrdinaryArithmetic.addTerm t (suc u)).equal
+      (suc (OrdinaryArithmetic.addTerm t u)))).relabel f) = _
+    rw [← arithmeticRename]
+    congr 1
+    rw [equalityRename,sucRelabel]
+    simp only [OrdinaryArithmetic.addTerm,binaryRelabel,sucRelabel]
+    rfl
+  | multiplicationZero t =>
+    change ((arithmeticEmbedding.onFormula ((OrdinaryArithmetic.mulTerm t z).equal z)).relabel f) = _
+    rw [← arithmeticRename]
+    congr 1
+    rw [equalityRename]
+    simp only [OrdinaryArithmetic.mulTerm,binaryRelabel,zRelabel]
+    rfl
+  | multiplicationSuccessor t u =>
+    change ((arithmeticEmbedding.onFormula ((OrdinaryArithmetic.mulTerm t (suc u)).equal
+      (OrdinaryArithmetic.addTerm (OrdinaryArithmetic.mulTerm t u) t))).relabel f) = _
+    rw [← arithmeticRename]
+    congr 1
+    rw [equalityRename]
+    simp only [OrdinaryArithmetic.addTerm,OrdinaryArithmetic.mulTerm,binaryRelabel,sucRelabel]
+    rfl
+  | induction theta => exact actualInductionSchemaRenaming α β f theta
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingArithmeticProof

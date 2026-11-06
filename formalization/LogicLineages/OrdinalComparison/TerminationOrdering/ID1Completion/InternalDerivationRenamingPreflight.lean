@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingPreflight
+def replacementComparator : Prop := InternalDerivationRenamingTargets.ActualPredicateReplacementRenaming
+def inductionComparator : Prop := InternalDerivationRenamingTargets.ActualInductionSchemaRenaming
+def fixedPointComparator : Prop := InternalDerivationRenamingTargets.ActualFixedPointSchemasRenaming
+def derivationComparator : Prop := InternalDerivationRenamingTargets.ActualDerivationRenaming
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingPreflight

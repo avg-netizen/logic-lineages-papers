@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalDerivationRenamingSyntaxProof.lean:118:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Term.relabel ?f (LHom.onTerm ?h ?t)
+in the target expression
+  Term.relabel (Sum.map f id)
+      (Sum.elim (fun a => var (Sum.inl a))
+        (fun x => arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))) (Sum.inr i)) =
+    ((Sum.elim (fun a => var (Sum.inl a)) fun x =>
+          arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))) ∘
+        Sum.map f id)
+      (Sum.inr i)
+
+case e_f.inr
+α β : Type
+theta : InternalCalculus.Formula (α ⊕ Fin 1)
+f : α → β
+i : Fin 1
+⊢ Term.relabel (Sum.map f id)
+      (Sum.elim (fun a => var (Sum.inl a))
+        (fun x => arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))) (Sum.inr i)) =
+    ((Sum.elim (fun a => var (Sum.inl a)) fun x =>
+          arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))) ∘
+        Sum.map f id)
+      (Sum.inr i)
