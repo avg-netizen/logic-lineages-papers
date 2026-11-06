@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsStatementChecks
+theorem zero_exact : InternalAdditionLawsTargets.ActualAdditionLeftZero := InternalAdditionLawsProof.actualAdditionLeftZero
+theorem successor_exact : InternalAdditionLawsTargets.ActualAdditionLeftSuccessor := InternalAdditionLawsProof.actualAdditionLeftSuccessor
+theorem associativity_exact : InternalAdditionLawsTargets.ActualAdditionAssociativity := InternalAdditionLawsProof.actualAdditionAssociativity
+theorem cancellation_exact : InternalAdditionLawsTargets.ActualAdditionRightCancellation := InternalAdditionLawsProof.actualAdditionRightCancellation
+#print axioms zero_exact
+#print axioms successor_exact
+#print axioms associativity_exact
+#print axioms cancellation_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsStatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsPreflight
+def zeroComparator : Prop := InternalAdditionLawsTargets.ActualAdditionLeftZero
+def successorComparator : Prop := InternalAdditionLawsTargets.ActualAdditionLeftSuccessor
+def associativityComparator : Prop := InternalAdditionLawsTargets.ActualAdditionAssociativity
+def cancellationComparator : Prop := InternalAdditionLawsTargets.ActualAdditionRightCancellation
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsPreflight
