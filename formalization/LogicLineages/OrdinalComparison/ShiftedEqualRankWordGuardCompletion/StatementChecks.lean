@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.ShiftedEqualRankWordGuardCompletion.WordProof
+public import LogicLineages.OrdinalComparison.ShiftedEqualRankWordGuardCompletion.ProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ShiftedEqualRankWordGuardCompletion.StatementChecks
+
+theorem fixed_shiftedKernelOrder : Targets.ShiftedKernelOrder := Proof.shiftedKernelOrder
+theorem fixed_shiftedEqualRankWordGuardCorrect : Targets.ShiftedEqualRankWordGuardCorrect := Proof.shiftedEqualRankWordGuardCorrect
+theorem fixed_headDecrease : Targets.HeadDecrease := Proof.headDecrease
+theorem fixed_guardPrograms : Targets.GuardPrograms := Proof.guardPrograms
+
+#print axioms fixed_shiftedKernelOrder
+#print axioms fixed_shiftedEqualRankWordGuardCorrect
+#print axioms fixed_headDecrease
+#print axioms fixed_guardPrograms
+
+end LogicLineages.OrdinalComparison.ShiftedEqualRankWordGuardCompletion.StatementChecks
