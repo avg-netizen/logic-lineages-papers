@@ -1,0 +1,9 @@
+# Internal modular arithmetic: checked supplier
+
+Twelve exact frozen targets passed: original existential congruence block embedding, introduction/elimination, reflexivity, explicit witness symmetry/transitivity/addition/scalar multiplication, and the four corresponding formula-level laws. Formula-level proofs eliminate witnesses and transport both derivations and contexts through arbitrary renamings. All are in the original InternalCalculus for arbitrary positive body, arbitrary terms, and (except the stronger closed reflexivity statement) arbitrary context. No external Nat interpretation supplies a derivation.
+
+The final gate passed with 755 source-matched local modules and twelve standard-axiom aliases. Peak RSS in the successful proof/gate receipt was 1,199,352 KiB, within the unchanged 1,536 MiB cap. Dependencies were matched to successful receipts, not all recompiled in this gate. Failed source snapshots and complete compiler logs are retained. Targets and source correspondence were frozen and preflighted before proof authoring. The initial witness-only freeze is retained; formula-level targets were added and re-frozen before any proof existed.
+
+This does not establish coprimality, CRT existence, arbitrary finite beta sequence coding, or the final ID1 adequacy/numbered consumer. No numbered source promotion, existing-source modification or full-root build. Compiler slot released. Publication is handled separately by the integrating agent.
+
+The integrating agent recursively recomputed the focused import closure and matched all 755 source hashes to retained successful receipts. The published manifest uses durable evidence paths, not ephemeral build-reports paths. Peak across all cited successful receipts is 1,226,832 KiB. Independent review accepted all four source files and all twelve exact aliases, and independently validated the manifest source/receipt matches; this is not a fresh full build or semantic audit of every dependency.
