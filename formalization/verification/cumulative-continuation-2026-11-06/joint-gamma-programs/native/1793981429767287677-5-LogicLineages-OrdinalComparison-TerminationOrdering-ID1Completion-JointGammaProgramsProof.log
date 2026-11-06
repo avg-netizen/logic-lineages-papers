@@ -1,0 +1,480 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:12:106: error: unsolved goals
+case none.some
+n : ℕ
+arity : Fin n → ℕ
+f : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object → Bool :=
+  fun p => ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2
+hf : Primrec f
+he : f = fun p => NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun obj =>
+              (fun p => NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2) (ctx, obj))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 2
+hc : Encodable.decode (v.get 0) = none
+val✝ : ContextUniform.Object
+ho : Encodable.decode (v.get 1) = some val✝
+⊢ 0 =
+    (Option.any (fun ctx => NumberedNumericCarrier.canonicalCarrierTest n arity ctx.1.1 ctx.1.2 val✝.1 val✝.2)
+        (((Encodable.decode (Nat.unpair (Nat.unpair v.head).1).1).bind fun a =>
+              Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair v.head).1).2)).bind
+          fun a => Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2))).toNat
+
+case some.some
+n : ℕ
+arity : Fin n → ℕ
+f : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object → Bool :=
+  fun p => ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2
+hf : Primrec f
+he : f = fun p => NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun obj =>
+              (fun p => NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1 p.2.2) (ctx, obj))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 2
+val✝¹ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝¹
+val✝ : ContextUniform.Object
+ho : Encodable.decode (v.get 1) = some val✝
+⊢ (NumberedNumericCarrier.canonicalCarrierTest n arity val✝¹.1.1 val✝¹.1.2 val✝.1 val✝.2).toNat =
+    (Option.any (fun ctx => NumberedNumericCarrier.canonicalCarrierTest n arity ctx.1.1 ctx.1.2 val✝.1 val✝.2)
+        (((Encodable.decode (Nat.unpair (Nat.unpair v.head).1).1).bind fun a =>
+              Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair v.head).1).2)).bind
+          fun a => Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2))).toNat
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:27:75: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [ContextUniform.scalarValue, ̲OrdinaryArithmeticCarrier.scalarValue, ̲hc̵,̵h̵o,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.Vector.get_ofFn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:49:81: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+f : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object → Bool :=
+  fun p =>
+    Option.any (fun values => values.all (ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1))
+      (Encodable.decode p.2.2)
+p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object
+hcanon :
+  ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1 =
+    NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1
+⊢ Option.any (fun values => values.all (NumberedNumericCarrier.canonicalCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1))
+      (Encodable.decode p.2.2) =
+    Option.any (QuotientDirectCarrier.listCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1) (Encodable.decode p.2.2)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:43:102: error: unsolved goals
+case none.some
+n : ℕ
+arity : Fin n → ℕ
+f : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object → Bool :=
+  fun p =>
+    Option.any (fun values => values.all (ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1))
+      (Encodable.decode p.2.2)
+he :
+  f = fun p => Option.any (QuotientDirectCarrier.listCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1) (Encodable.decode p.2.2)
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun obj =>
+              (fun p =>
+                  Option.any (QuotientDirectCarrier.listCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1)
+                    (Encodable.decode p.2.2))
+                (ctx, obj))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 2
+hc : Encodable.decode (v.get 0) = none
+val✝ : ContextUniform.Object
+ho : Encodable.decode (v.get 1) = some val✝
+⊢ 0 =
+    (Option.any
+        (fun ctx =>
+          QuotientDirectCarrier.listCarrierTest n arity ctx.1.1 ctx.1.2 val✝.1 (Denumerable.ofNat (List ℕ) val✝.2))
+        (((Encodable.decode (Nat.unpair (Nat.unpair v.head).1).1).bind fun a =>
+              Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair v.head).1).2)).bind
+          fun a => Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2))).toNat
+
+case some.some
+n : ℕ
+arity : Fin n → ℕ
+f : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object → Bool :=
+  fun p =>
+    Option.any (fun values => values.all (ContextUniformPrimary.canonicalCarrier n arity p.1.1.1 p.1.1.2 p.2.1))
+      (Encodable.decode p.2.2)
+he :
+  f = fun p => Option.any (QuotientDirectCarrier.listCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1) (Encodable.decode p.2.2)
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun obj =>
+              (fun p =>
+                  Option.any (QuotientDirectCarrier.listCarrierTest n arity p.1.1.1 p.1.1.2 p.2.1)
+                    (Encodable.decode p.2.2))
+                (ctx, obj))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 2
+val✝¹ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝¹
+val✝ : ContextUniform.Object
+ho : Encodable.decode (v.get 1) = some val✝
+⊢ (QuotientDirectCarrier.listCarrierTest n arity val✝¹.1.1 val✝¹.1.2 val✝.1 (Denumerable.ofNat (List ℕ) val✝.2)).toNat =
+    (Option.any
+        (fun ctx =>
+          QuotientDirectCarrier.listCarrierTest n arity ctx.1.1 ctx.1.2 val✝.1 (Denumerable.ofNat (List ℕ) val✝.2))
+        (((Encodable.decode (Nat.unpair (Nat.unpair v.head).1).1).bind fun a =>
+              Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair v.head).1).2)).bind
+          fun a => Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2))).toNat
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:56:24: warning: This simp argument is unused:
+  QuotientDirectCarrier.listCarrierTest
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵,̵h̵c̵a̵n̵o̵n̵,̵Q̵u̵o̵t̵i̵e̵n̵t̵D̵i̵r̵e̵c̵t̵C̵a̵r̵r̵i̵e̵r̵.̵l̵i̵s̵t̵C̵a̵r̵r̵i̵e̵r̵T̵e̵s̵t̵]̵[̲f̲,̲ ̲h̲c̲a̲n̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:63:71: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [ContextUniform.listValue, ̲OrdinaryArithmeticCarrier.listValue, ̲hc̵,̵h̵o, ̲List.Vector.get_ofFn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:78:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case none.none.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+hc : Encodable.decode (v.get 0) = none
+hs : Encodable.decode (v.get 1) = none
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:78:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case none.none.some
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+hc : Encodable.decode (v.get 0) = none
+hs : Encodable.decode (v.get 1) = none
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:78:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case none.some.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+hc : Encodable.decode (v.get 0) = none
+val✝ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:78:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case some.none.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝
+hs : Encodable.decode (v.get 1) = none
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:78:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case some.none.some
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝¹ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝¹
+hs : Encodable.decode (v.get 1) = none
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:78:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case some.some.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝¹ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝¹
+val✝ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:76:95: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp only [f, ̲ContextUniform.positiveValue, ̲OrdinaryArithmeticQuotient.positiveValue,h̵c̵,̵h̵s̵,̵h̵t̵,̵
+      h̲s̲,̲ ̲h̲t̲,̲ ̲Option.any_none, ̲Option.any_some, ̲List.Vector.get_ofFn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:92:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case none.none.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+hc : Encodable.decode (v.get 0) = none
+hs : Encodable.decode (v.get 1) = none
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:92:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case none.none.some
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+hc : Encodable.decode (v.get 0) = none
+hs : Encodable.decode (v.get 1) = none
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:92:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case none.some.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+hc : Encodable.decode (v.get 0) = none
+val✝ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:92:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case some.none.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝
+hs : Encodable.decode (v.get 1) = none
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:92:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case some.none.some
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝¹ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝¹
+hs : Encodable.decode (v.get 1) = none
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:92:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case some.some.none
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝¹ : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝¹
+val✝ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝
+ht : Encodable.decode (v.get 2) = none
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:90:89: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp only [f, ̲ContextUniform.directValue, ̲OrdinaryArithmeticDirect.directValue, ̲hc̵,̵h̵s, ̲ht,
+      Option.any_none, ̲Option.any_some, ̲List.Vector.get_ofFn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

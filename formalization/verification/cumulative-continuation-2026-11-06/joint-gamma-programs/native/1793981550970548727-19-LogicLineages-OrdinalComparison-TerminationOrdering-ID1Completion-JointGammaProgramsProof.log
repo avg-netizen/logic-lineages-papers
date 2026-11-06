@@ -1,0 +1,119 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:82:41: error: simp_all made no progress
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:68:110: error: unsolved goals
+case pos
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝² : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝²
+val✝¹ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝¹
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+h✝ : val✝¹.1 = val✝.1
+⊢ (NumberedQuotientPathCertificates.positivePathTest n arity val✝².1.1 val✝².1.2 val✝.1 val✝².2 val✝¹.2 val✝.2
+        (v.get 3)).toNat =
+    (NumberedQuotientPathCertificates.positivePathTest n arity val✝².1.1 val✝².1.2 val✝.1 val✝².2 val✝¹.2
+        (Matrix.vecHead (Matrix.vecTail ![val✝¹.2, val✝.2, v.get 3]))
+        (Matrix.vecHead (Matrix.vecTail (Matrix.vecTail ![val✝¹.2, val✝.2, v.get 3])))).toNat
+
+case neg
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p =>
+    NumberedQuotientPathCertificates.positivePathTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝² : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝²
+val✝¹ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝¹
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+h✝ : ¬val✝¹.1 = val✝.1
+⊢ false.toNat = 0
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:97:41: error: simp_all made no progress
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaProgramsProof.lean:84:106: error: unsolved goals
+case pos
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝² : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝²
+val✝¹ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝¹
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+h✝ : val✝¹.1 = val✝.1
+⊢ (QuotientDirectCertificates.numericTest n arity val✝².1.1 val✝².1.2 val✝.1 val✝².2 val✝¹.2 val✝.2 (v.get 3)).toNat =
+    (QuotientDirectCertificates.numericTest n arity val✝².1.1 val✝².1.2 val✝.1 val✝².2 val✝¹.2
+        (Matrix.vecHead (Matrix.vecTail ![val✝¹.2, val✝.2, v.get 3]))
+        (Matrix.vecHead (Matrix.vecTail (Matrix.vecTail ![val✝¹.2, val✝.2, v.get 3])))).toNat
+
+case neg
+n : ℕ
+arity : Fin n → ℕ
+f : Parameters n × ℕ × ℕ × ℕ → Bool :=
+  fun p => QuotientDirectCertificates.numericTest n arity p.1.1.1.1 p.1.1.1.2 p.1.1.2 p.1.2 p.2.1 p.2.2.1 p.2.2.2
+h :
+  Primrec fun v =>
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun source =>
+              Option.any
+                (fun target =>
+                  decide (source.1 = target.1) && f (((ctx.1, source.1), ctx.2), source.2, target.2, v.get 3))
+                (Encodable.decode (v.get 2)))
+            (Encodable.decode (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
+v : List.Vector ℕ 4
+val✝² : OrdinaryArithmeticQuotient.Context n
+hc : Encodable.decode (v.get 0) = some val✝²
+val✝¹ : ContextUniform.Object
+hs : Encodable.decode (v.get 1) = some val✝¹
+val✝ : ContextUniform.Object
+ht : Encodable.decode (v.get 2) = some val✝
+h✝ : ¬val✝¹.1 = val✝.1
+⊢ false.toNat = 0

@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaProgramsPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaProgramsStatementChecks
+
+theorem scalar_exact : JointGammaProgramsPreflight.scalarComparator :=
+  JointGammaProgramsProof.scalarPrimitive
+theorem list_exact : JointGammaProgramsPreflight.listComparator :=
+  JointGammaProgramsProof.listPrimitive
+theorem positive_exact : JointGammaProgramsPreflight.positiveComparator :=
+  JointGammaProgramsProof.positivePrimitive
+theorem direct_exact : JointGammaProgramsPreflight.directComparator :=
+  JointGammaProgramsProof.directPrimitive
+theorem presentation_exact : JointGammaProgramsPreflight.presentationComparator :=
+  JointGammaProgramsProof.actualContextUniformPresentationExists
+#print axioms scalar_exact
+#print axioms list_exact
+#print axioms positive_exact
+#print axioms direct_exact
+#print axioms presentation_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaProgramsStatementChecks
