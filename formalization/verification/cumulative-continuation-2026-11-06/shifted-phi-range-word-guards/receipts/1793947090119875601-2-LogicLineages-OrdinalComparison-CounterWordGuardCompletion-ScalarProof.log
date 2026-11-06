@@ -1,0 +1,122 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterWordGuardCompletion/ScalarProof.lean:36:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(count (n + 3) c t) + j < ↑(count (m + 3) e u) + k
+in the target expression
+  ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(n + 3)) c t) + j <
+      ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(m + 3)) e u) + k ↔
+    CounterLexLT n m j k (wordValue (leaderWord n c) t) (wordValue (leaderWord m e) u)
+
+case refine_1
+n m c e t u : ℕ
+j k : ℤ
+ht : scalarTail n c e j k ≤ t
+hu : scalarTail m e c k j ≤ u
+htf : CounterFixedShiftComparison.threshold n c e (j.natAbs + k.natAbs) ≤ t
+huf : CounterFixedShiftComparison.threshold m e c (k.natAbs + j.natAbs) ≤ u
+htb : c + (n + 3) + 1 ≤ t
+hub : e + (m + 3) + 1 ≤ u
+htl : leaderTail n c ≤ t
+hul : leaderTail m e ≤ u
+hb :
+  sourceCount (n + 3) c t = actualSuffixKernelCount (Ordinal.omega0 ^ ↑(n + 3)) c t ∧
+    sourceValue (n + 3) c t = actualSuffixKernel (Ordinal.omega0 ^ ↑(n + 3)) c t ∧
+      (∀ (i : ℕ),
+          1 ≤ i →
+            i ≤ sourceCount (n + 3) c t →
+              sourceState (n + 3) c t i =
+                actualControlledStateAfter (compensatedPrefixControl c)
+                  (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑(n + 3)) c t) i) ∧
+        0 < sourceCount (n + 3) c t ∧
+          sourceState (n + 3) c t (sourceCount (n + 3) c t) < Ordinal.omega0 ∧
+            (∀ i < sourceCount (n + 3) c t, Ordinal.omega0 ≤ sourceState (n + 3) c t i) ∧
+              ∀ (i : ℕ),
+                1 ≤ i → i ≤ sourceCount (n + 3) c t → c + actualOrdinalNorm (sourceState (n + 3) c t i) = Phi^[i] t
+hb' :
+  sourceCount (m + 3) e u = actualSuffixKernelCount (Ordinal.omega0 ^ ↑(m + 3)) e u ∧
+    sourceValue (m + 3) e u = actualSuffixKernel (Ordinal.omega0 ^ ↑(m + 3)) e u ∧
+      (∀ (i : ℕ),
+          1 ≤ i →
+            i ≤ sourceCount (m + 3) e u →
+              sourceState (m + 3) e u i =
+                actualControlledStateAfter (compensatedPrefixControl e)
+                  (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑(m + 3)) e u) i) ∧
+        0 < sourceCount (m + 3) e u ∧
+          sourceState (m + 3) e u (sourceCount (m + 3) e u) < Ordinal.omega0 ∧
+            (∀ i < sourceCount (m + 3) e u, Ordinal.omega0 ≤ sourceState (m + 3) e u i) ∧
+              ∀ (i : ℕ),
+                1 ≤ i → i ≤ sourceCount (m + 3) e u → e + actualOrdinalNorm (sourceState (m + 3) e u i) = Phi^[i] u
+hs :
+  0 < ↑(count (n + 3) c t) + j ∧
+    0 < ↑(count (m + 3) e u) + k ∧
+      (↑(count (n + 3) c t) + j < ↑(count (m + 3) e u) + k ↔
+          count (n + 3) c t < count (m + 3) e u ∨ count (n + 3) c t = count (m + 3) e u ∧ j < k) ∧
+        (↑(count (n + 3) c t) + j = ↑(count (m + 3) e u) + k ↔ count (n + 3) c t = count (m + 3) e u ∧ j = k)
+htc : CounterLeaderComparison.threshold n c e ≤ t
+huc : CounterLeaderComparison.threshold m e c ≤ u
+ho : count (n + 3) c t < count (m + 3) e u ↔ leader n c t < leader m e u ∨ leader n c t = leader m e u ∧ n < m
+he : count (n + 3) c t = count (m + 3) e u ↔ leader n c t = leader m e u ∧ n = m
+hlt : leader n c t < leader m e u ↔ leaderPreimage n c t < leaderPreimage m e u
+heq : leader n c t = leader m e u ↔ leaderPreimage n c t = leaderPreimage m e u
+⊢ ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(n + 3)) c t) + j <
+      ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(m + 3)) e u) + k ↔
+    CounterLexLT n m j k (wordValue (leaderWord n c) t) (wordValue (leaderWord m e) u)
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterWordGuardCompletion/ScalarProof.lean:40:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(count (n + 3) c t) + j = ↑(count (m + 3) e u) + k
+in the target expression
+  ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(n + 3)) c t) + j =
+      ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(m + 3)) e u) + k ↔
+    wordValue (leaderWord n c) t = wordValue (leaderWord m e) u ∧ n = m ∧ j = k
+
+case refine_2
+n m c e t u : ℕ
+j k : ℤ
+ht : scalarTail n c e j k ≤ t
+hu : scalarTail m e c k j ≤ u
+htf : CounterFixedShiftComparison.threshold n c e (j.natAbs + k.natAbs) ≤ t
+huf : CounterFixedShiftComparison.threshold m e c (k.natAbs + j.natAbs) ≤ u
+htb : c + (n + 3) + 1 ≤ t
+hub : e + (m + 3) + 1 ≤ u
+htl : leaderTail n c ≤ t
+hul : leaderTail m e ≤ u
+hb :
+  sourceCount (n + 3) c t = actualSuffixKernelCount (Ordinal.omega0 ^ ↑(n + 3)) c t ∧
+    sourceValue (n + 3) c t = actualSuffixKernel (Ordinal.omega0 ^ ↑(n + 3)) c t ∧
+      (∀ (i : ℕ),
+          1 ≤ i →
+            i ≤ sourceCount (n + 3) c t →
+              sourceState (n + 3) c t i =
+                actualControlledStateAfter (compensatedPrefixControl c)
+                  (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑(n + 3)) c t) i) ∧
+        0 < sourceCount (n + 3) c t ∧
+          sourceState (n + 3) c t (sourceCount (n + 3) c t) < Ordinal.omega0 ∧
+            (∀ i < sourceCount (n + 3) c t, Ordinal.omega0 ≤ sourceState (n + 3) c t i) ∧
+              ∀ (i : ℕ),
+                1 ≤ i → i ≤ sourceCount (n + 3) c t → c + actualOrdinalNorm (sourceState (n + 3) c t i) = Phi^[i] t
+hb' :
+  sourceCount (m + 3) e u = actualSuffixKernelCount (Ordinal.omega0 ^ ↑(m + 3)) e u ∧
+    sourceValue (m + 3) e u = actualSuffixKernel (Ordinal.omega0 ^ ↑(m + 3)) e u ∧
+      (∀ (i : ℕ),
+          1 ≤ i →
+            i ≤ sourceCount (m + 3) e u →
+              sourceState (m + 3) e u i =
+                actualControlledStateAfter (compensatedPrefixControl e)
+                  (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑(m + 3)) e u) i) ∧
+        0 < sourceCount (m + 3) e u ∧
+          sourceState (m + 3) e u (sourceCount (m + 3) e u) < Ordinal.omega0 ∧
+            (∀ i < sourceCount (m + 3) e u, Ordinal.omega0 ≤ sourceState (m + 3) e u i) ∧
+              ∀ (i : ℕ),
+                1 ≤ i → i ≤ sourceCount (m + 3) e u → e + actualOrdinalNorm (sourceState (m + 3) e u i) = Phi^[i] u
+hs :
+  0 < ↑(count (n + 3) c t) + j ∧
+    0 < ↑(count (m + 3) e u) + k ∧
+      (↑(count (n + 3) c t) + j < ↑(count (m + 3) e u) + k ↔
+          count (n + 3) c t < count (m + 3) e u ∨ count (n + 3) c t = count (m + 3) e u ∧ j < k) ∧
+        (↑(count (n + 3) c t) + j = ↑(count (m + 3) e u) + k ↔ count (n + 3) c t = count (m + 3) e u ∧ j = k)
+htc : CounterLeaderComparison.threshold n c e ≤ t
+huc : CounterLeaderComparison.threshold m e c ≤ u
+ho : count (n + 3) c t < count (m + 3) e u ↔ leader n c t < leader m e u ∨ leader n c t = leader m e u ∧ n < m
+he : count (n + 3) c t = count (m + 3) e u ↔ leader n c t = leader m e u ∧ n = m
+hlt : leader n c t < leader m e u ↔ leaderPreimage n c t < leaderPreimage m e u
+heq : leader n c t = leader m e u ↔ leaderPreimage n c t = leaderPreimage m e u
+⊢ ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(n + 3)) c t) + j =
+      ↑(actualSuffixKernelCount (Ordinal.omega0 ^ ↑(m + 3)) e u) + k ↔
+    wordValue (leaderWord n c) t = wordValue (leaderWord m e) u ∧ n = m ∧ j = k
