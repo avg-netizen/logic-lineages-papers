@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantStatementChecks
+
+theorem branches_exact : JointGammaInvariantPreflight.branchesComparator :=
+  JointGammaInvariantSupportProof.actualTaggedInvariantBranches
+theorem replacement_exact : JointGammaInvariantPreflight.replacementComparator :=
+  JointGammaInvariantSupportProof.actualOriginalReplacementBranches
+theorem closure_exact : JointGammaInvariantPreflight.closureComparator :=
+  JointGammaInvariantProof.actualOriginalClosurePremise
+theorem window_exact : JointGammaInvariantPreflight.windowComparator :=
+  JointGammaInvariantProof.actualFiniteSourceInvariant
+theorem internal_exact : JointGammaInvariantPreflight.internalComparator :=
+  JointGammaInvariantProof.actualInternalTaggedInduction
+
+#print axioms branches_exact
+#print axioms replacement_exact
+#print axioms closure_exact
+#print axioms window_exact
+#print axioms internal_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantStatementChecks

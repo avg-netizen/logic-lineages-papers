@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantPreflight
+def branchesComparator : Prop := JointGammaInvariantTargets.ActualTaggedInvariantBranches
+def replacementComparator : Prop := JointGammaInvariantTargets.ActualOriginalReplacementBranches
+def closureComparator : Prop := JointGammaInvariantTargets.ActualOriginalClosurePremise
+def windowComparator : Prop := JointGammaInvariantTargets.ActualFiniteSourceInvariant
+def internalComparator : Prop := JointGammaInvariantTargets.ActualInternalTaggedInduction
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaInvariantPreflight
