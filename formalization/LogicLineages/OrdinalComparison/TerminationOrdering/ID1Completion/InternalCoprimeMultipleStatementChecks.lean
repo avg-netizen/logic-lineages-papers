@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleStatementChecks
+theorem actualBoundedCoprimeMultipleExact : InternalCoprimeMultipleTargets.ActualBoundedCoprimeMultiple :=
+  InternalCoprimeMultipleProof.actualBoundedCoprimeMultiple
+#print axioms actualBoundedCoprimeMultipleExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleStatementChecks

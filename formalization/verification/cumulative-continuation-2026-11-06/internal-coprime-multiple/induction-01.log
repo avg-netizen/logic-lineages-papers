@@ -1,0 +1,27 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleStepProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleStepProof.lean:26:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+t : OTerm (α ⊕ Fin 1)
+P B n : OTerm α
+h :
+  Nonempty
+    (Derivation body Gamma
+      (bounded (arithmeticEmbedding.onFormula (InternalLinearCombination.divides (suc t) (Term.relabel Sum.inl P))) n))
+x✝ :
+  Nonempty
+    (Derivation ?m.48
+      (arithmeticEmbedding.onFormula (InternalLinearCombination.divides (suc t) (Term.relabel Sum.inl P)) :: ?m.54)
+      (arithmeticEmbedding.onFormula
+        (InternalLinearCombination.divides (suc t) (mul (Term.relabel Sum.inl P) (Term.relabel Sum.inl B)))))
+⊢ Derivation body
+    (arithmeticEmbedding.onFormula (InternalLinearCombination.divides (suc t) (Term.relabel Sum.inl P)) ::
+      List.map weaken Gamma)
+    (arithmeticEmbedding.onFormula
+      (InternalLinearCombination.divides (suc t)
+        (OrdinaryArithmetic.mulTerm (Term.relabel Sum.inl P) (Term.relabel Sum.inl B))))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleStepProof: 1
+BUILD_RECEIPT build-reports/1794004144485289212-17.json

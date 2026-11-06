@@ -1,0 +1,198 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:30:8: error(lean.unknownIdentifier): Unknown identifier `embedSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:29:101: error: unsolved goals
+α β : Type
+d a : OTerm α
+ts : α → OTerm β
+⊢ (BoundedFormula.subst (arithmeticEmbedding.onFormula (InternalLinearCombination.divides d a)) fun x => emb (ts x)) =
+    arithmeticEmbedding.onFormula (InternalLinearCombination.divides (Term.subst d ts) (Term.subst a ts))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:43:33: error(lean.unknownIdentifier): Unknown identifier `infSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:44:2: error: Tactic `rfl` failed: The left-hand side
+  allOne
+    ((BoundedFormula.subst
+        (arithmeticEmbedding.onFormula
+            (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+              (Term.relabel Sum.inl a)) ⊓
+          arithmeticEmbedding.onFormula
+            (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+              (Term.relabel Sum.inl b)))
+        fun a => emb (liftTerms ts a)) ⟹
+      BoundedFormula.subst
+        ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+          (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+        fun a => emb (liftTerms ts a))
+is not definitionally equal to the right-hand side
+  allOne
+    ((arithmeticEmbedding.onFormula
+            (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+              (Term.relabel Sum.inl (Term.subst a ts))) ⊓
+          arithmeticEmbedding.onFormula
+            (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+              (Term.relabel Sum.inl (Term.subst b ts)))).imp
+      ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+        (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm))))
+
+α β : Type
+a b : OTerm α
+ts : α → OTerm β
+⊢ allOne
+      ((BoundedFormula.subst
+          (arithmeticEmbedding.onFormula
+              (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+                (Term.relabel Sum.inl a)) ⊓
+            arithmeticEmbedding.onFormula
+              (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+                (Term.relabel Sum.inl b)))
+          fun a => emb (liftTerms ts a)) ⟹
+        BoundedFormula.subst
+          ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+            (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+          fun a => emb (liftTerms ts a)) =
+    allOne
+      ((arithmeticEmbedding.onFormula
+              (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+                (Term.relabel Sum.inl (Term.subst a ts))) ⊓
+            arithmeticEmbedding.onFormula
+              (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+                (Term.relabel Sum.inl (Term.subst b ts)))).imp
+        ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+          (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:43:42: warning: This simp argument is unused:
+  dividesSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵n̵E̵q̵u̵a̵l̵i̵t̵y̵,̵i̵m̵p̵S̵u̵b̵s̵t̵,̵i̵n̵f̵S̵u̵b̵s̵t̵,̵d̵i̵v̵i̵d̵e̵s̵S̵u̵b̵s̵t̵,̵e̵q̵n̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵z̵S̵u̵b̵s̵t̵,̵l̵i̵f̵t̵S̵u̵b̵s̵t̵]̵[̲o̲n̲E̲q̲u̲a̲l̲i̲t̲y̲,̲ ̲i̲m̲p̲S̲u̲b̲s̲t̲,̲ ̲i̲n̲f̲S̲u̲b̲s̲t̲,̲ ̲e̲q̲n̲S̲u̲b̲s̲t̲,̲ ̲s̲u̲c̲S̲u̲b̲s̲t̲,̲ ̲z̲S̲u̲b̲s̲t̲,̲ ̲l̲i̲f̲t̲S̲u̲b̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:43:55: warning: This simp argument is unused:
+  eqnSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [onEquality, ̲impSubst, ̲infSubst, ̲dividesSubst,e̵q̵n̵S̵u̵b̵ ̲st̵,̵s̵ucSubst, ̲zSubst, ̲liftSubst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:43:64: warning: This simp argument is unused:
+  sucSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [onEquality, ̲impSubst, ̲infSubst, ̲dividesSubst, ̲eqnSubst,s̵u̵c̵S̵u̵b̵s̵t̵,̵ ̲zSubst, ̲liftSubst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:43:73: warning: This simp argument is unused:
+  zSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [onEquality, ̲impSubst, ̲infSubst, ̲dividesSubst, ̲eqnSubst, ̲sucSubst,z̵S̵u̵b̵s̵t̵,̵ ̲liftSubst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:43:80: warning: This simp argument is unused:
+  liftSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [onEquality, ̲impSubst, ̲infSubst, ̲dividesSubst, ̲eqnSubst, ̲sucSubst, ̲zSubst,̵l̵i̵f̵t̵S̵u̵b̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:55:57: error(lean.unknownIdentifier): Unknown identifier `orderSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:53:72: error: unsolved goals
+α β : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+n : OTerm α
+ts : α → OTerm β
+⊢ allOne
+      ((BoundedFormula.subst (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl n)) fun a => emb (liftTerms ts a)) ⟹
+        BoundedFormula.subst p fun a => emb (liftTerms ts a)) =
+    allOne
+      (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.subst n ts)))
+        (BoundedFormula.subst p fun x => emb (liftTerms ts x)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:65:2: error: Tactic `rfl` failed: The left-hand side
+  allOne
+    (Formula.imp (ltF (Term.relabel (Sum.map j id) (var (Sum.inr 0))) (Term.relabel (Sum.map j id ∘ Sum.inl) n))
+      (Formula.relabel (Sum.map j id) p))
+is not definitionally equal to the right-hand side
+  allOne
+    (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel j n))) (Formula.relabel (Sum.map j id) p))
+
+α β : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+n : OTerm α
+j : α → β
+⊢ allOne
+      (Formula.imp (ltF (Term.relabel (Sum.map j id) (var (Sum.inr 0))) (Term.relabel (Sum.map j id ∘ Sum.inl) n))
+        (Formula.relabel (Sum.map j id) p)) =
+    allOne
+      (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel j n))) (Formula.relabel (Sum.map j id) p))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:70:21: error(lean.unknownIdentifier): Unknown identifier `orderInstantiate`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:69:47: error: unsolved goals
+α : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+s n : OTerm α
+⊢ Formula.imp (instantiate (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl n)) (emb s)) (instantiate p (emb s)) =
+    Formula.imp (ltF s n) (instantiate p (emb s))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:79:2: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:86:2: error: Tactic `rfl` failed: The left-hand side
+  bounded
+    (arithmeticEmbedding.onFormula
+      (InternalLinearCombination.divides (suc (Term.relabel (Sum.map j id) t))
+        (Term.relabel (Sum.map j id ∘ Sum.inl) P)))
+    (Term.relabel j n)
+is not definitionally equal to the right-hand side
+  bounded
+    (arithmeticEmbedding.onFormula
+      (InternalLinearCombination.divides (suc (Term.relabel (Sum.map j id) t))
+        (Term.relabel Sum.inl (Term.relabel j P))))
+    (Term.relabel j n)
+
+α β : Type
+t : OTerm (α ⊕ Fin 1)
+P n : OTerm α
+j : α → β
+⊢ bounded
+      (arithmeticEmbedding.onFormula
+        (InternalLinearCombination.divides (suc (Term.relabel (Sum.map j id) t))
+          (Term.relabel (Sum.map j id ∘ Sum.inl) P)))
+      (Term.relabel j n) =
+    bounded
+      (arithmeticEmbedding.onFormula
+        (InternalLinearCombination.divides (suc (Term.relabel (Sum.map j id) t))
+          (Term.relabel Sum.inl (Term.relabel j P))))
+      (Term.relabel j n)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:98:2: error: Tactic `rfl` failed: The left-hand side
+  existsOne
+    (coprime (Term.relabel (Sum.map j id ∘ Sum.inl) a) (suc (Term.relabel (Sum.map j id) (var (Sum.inr 0)))) ⊓
+      dividesBelow (Term.relabel (Sum.map (Sum.map j id) id ∘ Sum.map Sum.inl id) t)
+        (suc (Term.relabel (Sum.map j id) (var (Sum.inr 0)))) (Term.relabel (Sum.map j id ∘ Sum.inl) n))
+is not definitionally equal to the right-hand side
+  existsOne
+    (coprime (Term.relabel (Sum.inl ∘ j) a) (suc (var (Sum.inr 0))) ⊓
+      dividesBelow (Term.relabel (Sum.map Sum.inl id ∘ Sum.map j id) t) (suc (var (Sum.inr 0)))
+        (Term.relabel (Sum.inl ∘ j) n))
+
+α β : Type
+a : OTerm α
+t : OTerm (α ⊕ Fin 1)
+n : OTerm α
+j : α → β
+⊢ existsOne
+      (coprime (Term.relabel (Sum.map j id ∘ Sum.inl) a) (suc (Term.relabel (Sum.map j id) (var (Sum.inr 0)))) ⊓
+        dividesBelow (Term.relabel (Sum.map (Sum.map j id) id ∘ Sum.map Sum.inl id) t)
+          (suc (Term.relabel (Sum.map j id) (var (Sum.inr 0)))) (Term.relabel (Sum.map j id ∘ Sum.inl) n)) =
+    existsOne
+      (coprime (Term.relabel (Sum.inl ∘ j) a) (suc (var (Sum.inr 0))) ⊓
+        dividesBelow (Term.relabel (Sum.map Sum.inl id ∘ Sum.map j id) t) (suc (var (Sum.inr 0)))
+          (Term.relabel (Sum.inl ∘ j) n))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:124:2: error: 'change' tactic failed, pattern
+  instantiate (coprime ?m.55 ?m.56) (emb p) ⊓ instantiate (dividesBelow ?m.60 ?m.61 ?m.62) (emb p) = ?m.65
+is not definitionally equal to target
+  instantiate
+      (coprime (Term.relabel Sum.inl a) (suc (var (Sum.inr 0))) ⊓
+        dividesBelow (Term.relabel (Sum.map Sum.inl id) t) (suc (var (Sum.inr 0))) (Term.relabel Sum.inl n))
+      (emb p) =
+    coprime a (suc p) ⊓ dividesBelow t (suc p) n
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:145:13: error(lean.unknownIdentifier): Unknown identifier `infSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:145:2: error: `simp` made no progress
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCoprimeMultipleSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794003802165460969-5.json

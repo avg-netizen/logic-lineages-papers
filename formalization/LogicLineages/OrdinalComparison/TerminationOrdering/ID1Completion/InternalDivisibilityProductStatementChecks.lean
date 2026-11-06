@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProductProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProductStatementChecks
+ theorem dividesProductExact : InternalDivisibilityProductTargets.ActualDividesProduct :=
+  InternalDivisibilityProductProof.actualDividesProduct
+ theorem productPositiveExact : InternalDivisibilityProductTargets.ActualProductPositive :=
+  InternalDivisibilityProductProof.actualProductPositive
+ theorem coprimeOneExact : InternalDivisibilityProductTargets.ActualCoprimeOne :=
+  InternalDivisibilityProductProof.actualCoprimeOne
+#print axioms dividesProductExact
+#print axioms productPositiveExact
+#print axioms coprimeOneExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProductStatementChecks
