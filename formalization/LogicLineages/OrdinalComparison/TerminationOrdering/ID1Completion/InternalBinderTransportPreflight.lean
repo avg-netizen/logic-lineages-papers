@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportPreflight
+def substitutionComparator : Prop := InternalBinderTransportTargets.ActualRelabelSubstitution
+def binderComparator : Prop := InternalBinderTransportTargets.ActualUniversalRenaming
+def freshComparator : Prop := InternalBinderTransportTargets.ActualFreshInstantiation
+def positiveComparator : Prop := InternalBinderTransportTargets.ActualPositiveRenaming
+def internalComparator : Prop := InternalBinderTransportTargets.ActualInternalUniversalTransport
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportPreflight

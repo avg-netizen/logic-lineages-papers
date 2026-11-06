@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportStatementChecks
+
+theorem substitution_exact : InternalBinderTransportPreflight.substitutionComparator :=
+  InternalBinderTransportProof.actualRelabelSubstitution
+theorem binder_exact : InternalBinderTransportPreflight.binderComparator :=
+  InternalBinderTransportProof.actualUniversalRenaming
+theorem fresh_exact : InternalBinderTransportPreflight.freshComparator :=
+  InternalBinderTransportProof.actualFreshInstantiation
+theorem positive_exact : InternalBinderTransportPreflight.positiveComparator :=
+  InternalBinderTransportProof.actualPositiveRenaming
+theorem internal_exact : InternalBinderTransportPreflight.internalComparator :=
+  InternalBinderTransportProof.actualInternalUniversalTransport
+
+#print axioms substitution_exact
+#print axioms binder_exact
+#print axioms fresh_exact
+#print axioms positive_exact
+#print axioms internal_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportStatementChecks

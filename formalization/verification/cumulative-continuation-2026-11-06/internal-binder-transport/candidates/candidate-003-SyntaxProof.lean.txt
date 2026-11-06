@@ -1,0 +1,138 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportSyntaxProof
+open FirstOrder Language
+
+/-- A proof helper for free-variable renaming; no change to the original syntax. -/
+def rename {L : Language} {α β : Type} (f : α → β) {k : Nat}
+    (phi : L.BoundedFormula α k) : L.BoundedFormula β k :=
+  phi.mapTermRel (fun _ t => t.relabel (Sum.map f id)) (fun _ => id) (fun _ => id)
+
+theorem freeRelabelCast {L : Language} {α β : Type} (f : α → β) {k : Nat}
+    (phi : L.BoundedFormula α k) :
+    phi.relabel (Sum.inl ∘ f : α → β ⊕ Fin 0) =
+      (rename f phi).castLE (ge_of_eq (Nat.zero_add k)) := by
+  have hx (j : Nat) : BoundedFormula.relabelAux (Sum.inl ∘ f : α → β ⊕ Fin 0) j =
+      Sum.map f (Fin.natAdd 0) := by
+    funext i
+    cases i <;> simp [BoundedFormula.relabelAux]
+  simp only [BoundedFormula.relabel,hx]
+  induction phi with
+  | falsum => rfl
+  | equal => simp [rename,BoundedFormula.mapTermRel,BoundedFormula.castLE,Term.relabel_relabel,
+      Fin.natAdd_zero,Fin.castLE_of_eq,Function.comp_def]
+  | rel => simp [rename,BoundedFormula.mapTermRel,BoundedFormula.castLE,Term.relabel_relabel,
+      Fin.natAdd_zero,Fin.castLE_of_eq,Function.comp_def]; rfl
+  | imp p q ihp ihq => simp_all [rename,BoundedFormula.mapTermRel,BoundedFormula.castLE]
+  | all p ih => simp_all [rename,BoundedFormula.mapTermRel,BoundedFormula.castLE]
+
+theorem formulaRelabel {L : Language} {α β : Type} (f : α → β) (phi : L.Formula α) :
+    phi.relabel f = rename f phi := by
+  rw [FirstOrder.Language.Formula.relabel,freeRelabelCast,BoundedFormula.castLE_rfl]
+
+theorem termRelabelSubst {L : Language} {α β γ : Type} (t : L.Term α)
+    (f : α → β) (ts : β → L.Term γ) :
+    (t.relabel f).subst ts = t.subst (ts ∘ f) := by
+  induction t with
+  | var => rfl
+  | func g xs ih => simp only [Term.relabel,Term.subst]; congr 1; funext i; exact ih i
+
+theorem termSubstVar {L : Language} {α : Type} (t : L.Term α) : t.subst Term.var = t := by
+  induction t with
+  | var => rfl
+  | func g xs ih => simp only [Term.subst]; congr 1; funext i; exact ih i
+
+theorem renameSubst {L : Language} {α β γ : Type} {k : Nat} (phi : L.BoundedFormula α k)
+    (f : α → β) (ts : β → L.Term γ) :
+    (rename f phi).subst ts = phi.subst (ts ∘ f) := by
+  have ht (j : Nat) (t : L.Term (α ⊕ Fin j)) :
+      (t.relabel (Sum.map f id)).subst
+        (Sum.elim (Term.relabel Sum.inl ∘ ts) (Term.var ∘ Sum.inr)) =
+      t.subst (Sum.elim (Term.relabel Sum.inl ∘ (ts ∘ f)) (Term.var ∘ Sum.inr)) := by
+    rw [termRelabelSubst]
+    congr 1
+    funext i
+    cases i <;> rfl
+  induction phi with
+  | falsum => rfl
+  | equal t u => simp only [rename,BoundedFormula.subst,BoundedFormula.mapTermRel,ht]
+  | rel r ts' => simp only [rename,BoundedFormula.subst,BoundedFormula.mapTermRel,ht]; rfl
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih => exact congrArg BoundedFormula.all ih
+
+theorem formulaSubstVar {L : Language} {α : Type} {k : Nat} (phi : L.BoundedFormula α k) :
+    phi.subst Term.var = phi := by
+  have ht (j : Nat) (t : L.Term (α ⊕ Fin j)) :
+      t.subst (Sum.elim (Term.relabel Sum.inl ∘ Term.var) (Term.var ∘ Sum.inr)) = t := by
+    have hf : (Sum.elim (Term.relabel Sum.inl ∘ Term.var) (Term.var ∘ Sum.inr) :
+        α ⊕ Fin j → L.Term (α ⊕ Fin j)) = Term.var := by
+      funext i
+      cases i <;> rfl
+    rw [hf,termSubstVar]
+  induction phi with
+  | falsum => rfl
+  | equal t u => simp only [BoundedFormula.subst,BoundedFormula.mapTermRel,ht]
+  | rel r ts => simp only [BoundedFormula.subst,BoundedFormula.mapTermRel,ht]; rfl
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih => exact congrArg BoundedFormula.all ih
+
+theorem renameCast {L : Language} {α β : Type} (f : α → β) {k l : Nat}
+    (h : k ≤ l) (phi : L.BoundedFormula α k) :
+    rename f (phi.castLE h) = (rename f phi).castLE h := by
+  have ht {j m : Nat} (h : j ≤ m) (t : L.Term (α ⊕ Fin j)) :
+      (t.relabel (Sum.map id (Fin.castLE h))).relabel (Sum.map f id) =
+      (t.relabel (Sum.map f id)).relabel (Sum.map id (Fin.castLE h)) := by
+    rw [Term.relabel_relabel,Term.relabel_relabel]
+    congr 1
+    funext i
+    cases i <;> rfl
+  induction phi generalizing l with
+  | falsum => rfl
+  | equal t u => simp only [rename,BoundedFormula.castLE,BoundedFormula.mapTermRel,ht]
+  | rel r ts => simp only [rename,BoundedFormula.castLE,BoundedFormula.mapTermRel,Function.comp_apply,ht]; rfl
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp (ihp h) (ihq h)
+  | all p ih => exact congrArg BoundedFormula.all (ih _)
+
+theorem renameBind {L : Language} {α β : Type} (f : α → β) {k : Nat}
+    (phi : L.BoundedFormula (α ⊕ Fin 1) k) :
+    rename f (phi.relabel id) = (rename (Sum.map f id) phi).relabel id := by
+  have ht (j : Nat) (t : L.Term ((α ⊕ Fin 1) ⊕ Fin j)) :
+      (t.relabel (BoundedFormula.relabelAux (id : α ⊕ Fin 1 → α ⊕ Fin 1) j)).relabel (Sum.map f id) =
+      (t.relabel (Sum.map (Sum.map f id) id)).relabel
+        (BoundedFormula.relabelAux (id : β ⊕ Fin 1 → β ⊕ Fin 1) j) := by
+    rw [Term.relabel_relabel,Term.relabel_relabel]
+    congr 1
+    funext i
+    rcases i with (a | x) | y <;> simp [BoundedFormula.relabelAux]
+  induction phi with
+  | falsum => rfl
+  | equal t u => simp only [rename,BoundedFormula.relabel,BoundedFormula.mapTermRel,ht]
+  | rel r ts => simp only [rename,BoundedFormula.relabel,BoundedFormula.mapTermRel,ht]
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih =>
+    change (rename f ((p.relabel id).castLE _)).all = _
+    rw [renameCast,ih]
+    rfl
+
+theorem onTermRelabel {L L' : Language} (h : L →ᴸ L') {α β : Type} (f : α → β) (t : L.Term α) :
+    h.onTerm (t.relabel f) = (h.onTerm t).relabel f := by
+  induction t with
+  | var => rfl
+  | func g ts ih => simp only [Term.relabel,LHom.onTerm]; congr 1; funext i; exact ih i
+
+theorem onFormulaRename {L L' : Language} (h : L →ᴸ L') {α β : Type} (f : α → β)
+    {k : Nat} (phi : L.BoundedFormula α k) :
+    h.onBoundedFormula (rename f phi) = rename f (h.onBoundedFormula phi) := by
+  induction phi with
+  | falsum => rfl
+  | equal t u => simp only [rename,BoundedFormula.mapTermRel,LHom.onBoundedFormula,Term.bdEqual,onTermRelabel]
+  | rel r ts =>
+    simp only [rename,BoundedFormula.mapTermRel,LHom.onBoundedFormula,Relations.boundedFormula]
+    congr 1
+    funext i
+    exact onTermRelabel h (Sum.map f id) (ts i)
+  | imp p q ihp ihq => exact congrArg₂ BoundedFormula.imp ihp ihq
+  | all p ih => exact congrArg BoundedFormula.all ih
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportSyntaxProof

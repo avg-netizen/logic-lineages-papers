@@ -1,0 +1,16 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:24:22: error(lean.unknownIdentifier): Unknown identifier `castLE_of_eq`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:23:10: error: unsolved goals
+case equal
+L : Language
+α β : Type
+f : α → β
+k : ℕ
+hx : ∀ (j : ℕ), BoundedFormula.relabelAux (Sum.inl ∘ f) j = Sum.map f (Fin.natAdd 0)
+n✝ : ℕ
+t₁✝ t₂✝ : L.Term (α ⊕ Fin n✝)
+⊢ Term.relabel (Sum.map f (Fin.cast ⋯)) t₁✝ =
+      Term.relabel (fun x => Sum.map (fun x => f x) (fun x => Fin.castLE ⋯ x) x) t₁✝ ∧
+    Term.relabel (Sum.map f (Fin.cast ⋯)) t₂✝ =
+      Term.relabel (fun x => Sum.map (fun x => f x) (fun x => Fin.castLE ⋯ x) x) t₂✝
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:26:22: error(lean.unknownIdentifier): Unknown identifier `castLE_of_eq`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:111:88: error: No goals to be solved

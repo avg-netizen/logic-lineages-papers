@@ -1,0 +1,85 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:14:82: error: Type mismatch
+  Sum.map f id
+has type
+  α ⊕ ?m.24 → β ⊕ ?m.24
+but is expected to have type
+  α ⊕ Fin k → β ⊕ Fin (0 + k)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:43:4: error: Tactic `rfl` failed: The left-hand side
+  t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr) ∘ Sum.map f id)
+is not definitionally equal to the right-hand side
+  t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts ∘ f) (var ∘ Sum.inr))
+
+L : Language
+α β γ : Type
+k : ℕ
+phi : L.BoundedFormula α k
+f : α → β
+ts : β → L.Term γ
+j : ℕ
+t : L.Term (α ⊕ Fin j)
+⊢ t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr) ∘ Sum.map f id) =
+    t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts ∘ f) (var ∘ Sum.inr))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:47:14: error: unsolved goals
+case rel
+L : Language
+α β γ : Type
+k : ℕ
+f : α → β
+ts : β → L.Term γ
+ht :
+  ∀ (j : ℕ) (t : L.Term (α ⊕ Fin j)),
+    (Term.relabel (Sum.map f id) t).subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr)) =
+      t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts ∘ f) (var ∘ Sum.inr))
+n✝ l✝ : ℕ
+r : L.Relations l✝
+ts' : Fin l✝ → L.Term (α ⊕ Fin n✝)
+⊢ (BoundedFormula.rel (id (id r)) fun i => (ts' i).subst (Sum.elim (Term.relabel Sum.inl ∘ ts ∘ f) (var ∘ Sum.inr))) =
+    BoundedFormula.rel (id r) fun i => (ts' i).subst (Sum.elim (Term.relabel Sum.inl ∘ ts ∘ f) (var ∘ Sum.inr))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:63:13: error: unsolved goals
+case rel
+L : Language
+α : Type
+k : ℕ
+ht : ∀ (j : ℕ) (t : L.Term (α ⊕ Fin j)), t.subst (Sum.elim (Term.relabel Sum.inl ∘ var) (var ∘ Sum.inr)) = t
+n✝ l✝ : ℕ
+r : L.Relations l✝
+ts : Fin l✝ → L.Term (α ⊕ Fin n✝)
+⊢ (BoundedFormula.rel (id r) fun i => ts i) = BoundedFormula.rel r ts
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:80:13: error: unsolved goals
+case rel
+L : Language
+α β : Type
+f : α → β
+k : ℕ
+ht :
+  ∀ {j m : ℕ} (h : j ≤ m) (t : L.Term (α ⊕ Fin j)),
+    Term.relabel (Sum.map f id) (Term.relabel (Sum.map id (Fin.castLE h)) t) =
+      Term.relabel (Sum.map id (Fin.castLE h)) (Term.relabel (Sum.map f id) t)
+n✝ l✝ : ℕ
+r : L.Relations l✝
+ts : Fin l✝ → L.Term (α ⊕ Fin n✝)
+l : ℕ
+h : n✝ ≤ l
+⊢ (BoundedFormula.rel (id r) fun i => Term.relabel (Sum.map id (Fin.castLE h)) (Term.relabel (Sum.map f id) (ts i))) =
+    BoundedFormula.rel (id r) (Term.relabel (Sum.map id (Fin.castLE h)) ∘ fun i => Term.relabel (Sum.map f id) (ts i))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:117:13: error: unsolved goals
+case rel
+L : Language
+L' : Language
+h : L →ᴸ L'
+α β : Type
+f : α → β
+k n✝ l✝ : ℕ
+r : L.Relations l✝
+ts : Fin l✝ → L.Term (α ⊕ Fin n✝)
+⊢ BoundedFormula.rel (h.onRelation (id r)) (h.onTerm ∘ fun i => Term.relabel (Sum.map f id) (ts i)) =
+    BoundedFormula.rel (id (h.onRelation r)) fun i => Term.relabel (Sum.map f id) (h.onTerm (ts i))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBinderTransportSyntaxProof.lean:118:26: warning: This simp argument is unused:
+  onTermRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵L̵H̵o̵m̵.̵o̵n̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵,̵R̵e̵l̵a̵t̵i̵o̵n̵s̵.̵b̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵o̵n̵T̵e̵r̵m̵R̵e̵l̵a̵b̵e̵l̵]̵[̲r̲e̲n̲a̲m̲e̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲ ̲L̲H̲o̲m̲.̲o̲n̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲,̲
+  ̲ ̲ ̲ ̲ ̲R̲e̲l̲a̲t̲i̲o̲n̲s̲.̲b̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
