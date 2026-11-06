@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientPreflight
+def calibrationComparator : Prop := JointGammaQuotientTargets.ActualRawEdgeCalibration
+def edgeComparator : Prop := JointGammaQuotientTargets.ActualJointEdgePrimitive
+def pathComparator : Prop := JointGammaQuotientTargets.ActualJointPathPrimitive
+def positiveComparator : Prop := JointGammaQuotientTargets.ActualJointPositivePrimitive
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientPreflight

@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientPathPrimitiveProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientStatementChecks
+
+theorem calibration_exact : JointGammaQuotientPreflight.calibrationComparator :=
+  JointGammaQuotientCalibrationProof.actualRawEdgeCalibration
+theorem edge_exact : JointGammaQuotientPreflight.edgeComparator :=
+  JointGammaQuotientEdgePrimitiveProof.actualJointEdgePrimitive
+theorem path_exact : JointGammaQuotientPreflight.pathComparator :=
+  JointGammaQuotientPathPrimitiveProof.actualJointPathPrimitive
+theorem positive_exact : JointGammaQuotientPreflight.positiveComparator :=
+  JointGammaQuotientPathPrimitiveProof.actualJointPositivePrimitive
+#print axioms calibration_exact
+#print axioms edge_exact
+#print axioms path_exact
+#print axioms positive_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaQuotientStatementChecks
