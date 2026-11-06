@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.ScalarProof
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.ScalarCodeProof
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.ScalarStatementChecks
+
+theorem exact_original_names : ScalarTargets.ExactOriginalNames := ScalarProof.exactOriginalNames
+theorem exact_scalar_value : ScalarTargets.ExactScalarValue := ScalarProof.exactScalarValue
+theorem valid_polynomial_expression : ScalarTargets.ValidPolynomialExpression := ScalarProof.validPolynomialExpression
+theorem actual_level_two_scalar : ScalarTargets.ActualLevelTwoScalar := ScalarProof.actualLevelTwoScalar
+theorem literal_scalar_code : ScalarTargets.LiteralScalarCode := ScalarCodeProof.literalScalarCode
+theorem literal_graph_package : ScalarTargets.LiteralGraphPackage := ScalarCodeProof.literalGraphPackage
+theorem actual_numeric_programs : ScalarTargets.ActualNumericPrograms := ScalarCodeProof.actualNumericPrograms
+theorem source_scalar_graph : ScalarTargets.SourceScalarGraph := ScalarProof.sourceScalarGraph
+end LogicLineages.OrdinalComparison.LevelTwoCounterexample.ScalarStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.ScalarStatementChecks

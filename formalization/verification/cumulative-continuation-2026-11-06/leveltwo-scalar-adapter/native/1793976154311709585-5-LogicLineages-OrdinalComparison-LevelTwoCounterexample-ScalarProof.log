@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/ScalarProof.lean:29:17: error: unsolved goals
+case shift
+ι : Type
+index : ι → ℕ
+ν : ℕ → ℕ
+c : ClosedPositive
+a : Scalar ι
+ih : Expr.value ν (scalarExpr index a) = Scalar.value (fun i => ν (index i)) a
+⊢ actualCollapse ((rawNoteDecode (rawNoteEncode ↑(scalarHeadNote c))).repr + ↑(Scalar.value (fun i => ν (index i)) a)) =
+    actualCollapse (fixedHead c + ↑(Scalar.value (fun i => ν (index i)) a))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/ScalarProof.lean:30:50: warning: This simp argument is unused:
+  rawNoteDecodeEncode
+
+Hint: Omit it from the simp argument list.
+  simp only [scalarExpr, Expr.value, headValue, r̵a̵w̵N̵o̵t̵e̵D̵e̵c̵o̵d̵e̵E̵n̵c̵o̵d̵e̵,̵ ̵head_repr, Scalar.value, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/ScalarProof.lean:30:71: warning: This simp argument is unused:
+  head_repr
+
+Hint: Omit it from the simp argument list.
+  simp only [scalarExpr, Expr.value, headValue, rawNoteDecodeEncode, h̵e̵a̵d̵_̵r̵e̵p̵r̵,̵ ̵Scalar.value, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/ScalarProof.lean:36:9: error: Application type mismatch: The argument
+  (scalarHeadNote c).property
+has type
+  (↑(scalarHeadNote c)).NF
+but is expected to have type
+  (rawNoteDecode (rawNoteEncode ↑(scalarHeadNote c))).NF
+in the application
+  And.intro (scalarHeadNote c).property
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/ScalarProof.lean:36:34: error: Type mismatch: After simplification, term
+  h
+ has type
+  Order.IsSuccLimit (fixedHead c) ∧ fixedHead c < Ordinal.omega0 ^ Ordinal.omega0
+but is expected to have type
+  Order.IsSuccLimit (rawNoteDecode (rawNoteEncode ↑(scalarHeadNote c))).repr ∧
+    (rawNoteDecode (rawNoteEncode ↑(scalarHeadNote c))).repr < Ordinal.omega0 ^ Ordinal.omega0
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Ordinal.CNF.eval ↦ 2
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/ScalarProof.lean:35:24: warning: This simp argument is unused:
+  rawNoteDecodeEncode
+
+Hint: Omit it from the simp argument list.
+  simp only [ValidHead,̵ ̵r̵a̵w̵N̵o̵t̵e̵D̵e̵c̵o̵d̵e̵E̵n̵c̵o̵d̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
