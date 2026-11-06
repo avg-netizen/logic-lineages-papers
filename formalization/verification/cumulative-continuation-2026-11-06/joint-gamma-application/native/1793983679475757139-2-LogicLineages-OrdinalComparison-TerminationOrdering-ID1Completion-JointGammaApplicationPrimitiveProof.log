@@ -1,0 +1,140 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:16:9: error: unsolved goals
+case none
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+sigma tau : Ty
+x y : ℕ
+hf : decodeUniverse n arity symbols S Gamma x = none
+⊢ ∀ (a : Ty) (b : Code (Fin n)),
+    rawUniverseDecode n arity symbols S Gamma x = some (a, b) →
+      ∀ (a_2 : Ty) (b_1 : Code (Fin n)),
+        rawUniverseDecode n arity symbols S Gamma y = some (a_2, b_1) →
+          a = sigma.arrow tau →
+            a_2 = sigma →
+              ContextUniformPrimary.representative arity symbols S Gamma (a, b) = x →
+                ContextUniformPrimary.representative arity symbols S Gamma (a_2, b_1) = y →
+                  ∀ (a : Ty) (b_2 : Code (Fin n)),
+                    ¬rawStructuralDecode arity Gamma (tau, Code.app sigma b b_1) = some (a, b_2)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:20:11: error: unsolved goals
+case some.none
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+sigma tau : Ty
+x y : ℕ
+f : NumberedRewriteReduction.Packed (Fin n) arity Gamma
+hf : decodeUniverse n arity symbols S Gamma x = some f
+ha : decodeUniverse n arity symbols S Gamma y = none
+⊢ ∀ (a : Ty) (b : Code (Fin n)),
+    rawUniverseDecode n arity symbols S Gamma x = some (a, b) →
+      ∀ (a_2 : Ty) (b_1 : Code (Fin n)),
+        rawUniverseDecode n arity symbols S Gamma y = some (a_2, b_1) →
+          a = sigma.arrow tau →
+            a_2 = sigma →
+              ContextUniformPrimary.representative arity symbols S Gamma (a, b) = x →
+                ContextUniformPrimary.representative arity symbols S Gamma (a_2, b_1) = y →
+                  ∀ (a : Ty) (b_2 : Code (Fin n)),
+                    ¬rawStructuralDecode arity Gamma (tau, Code.app sigma b b_1) = some (a, b_2)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:25:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ContextUniformPrimary.representative arity symbols S Gamma (packedCode f)
+in the target expression
+  (do
+      let f ← rawUniverseDecode n arity symbols S Gamma x
+      let a ← rawUniverseDecode n arity symbols S Gamma y
+      if
+            f.1 = sigma.arrow tau ∧
+              a.1 = sigma ∧
+                ContextUniformPrimary.representative arity symbols S Gamma f = x ∧
+                  ContextUniformPrimary.representative arity symbols S Gamma a = y then
+          do
+          let result ← rawStructuralDecode arity Gamma (tau, Code.app sigma f.2 a.2)
+          pure (ContextUniformPrimary.representative arity symbols S Gamma result)
+        else none) =
+    do
+    let f ← some f
+    let a ← some a
+    if
+          f.fst = sigma.arrow tau ∧
+            a.fst = sigma ∧ representativeCode symbols S f = x ∧ representativeCode symbols S a = y then
+        do
+        let result ← decodePacked arity Gamma (tau, Code.app sigma (termCode f.snd) (termCode a.snd))
+        pure (representativeCode symbols S result)
+      else none
+
+case some.some
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+sigma tau : Ty
+x y : ℕ
+f : NumberedRewriteReduction.Packed (Fin n) arity Gamma
+hf : decodeUniverse n arity symbols S Gamma x = some f
+a : NumberedRewriteReduction.Packed (Fin n) arity Gamma
+ha : decodeUniverse n arity symbols S Gamma y = some a
+⊢ (do
+      let f ← rawUniverseDecode n arity symbols S Gamma x
+      let a ← rawUniverseDecode n arity symbols S Gamma y
+      if
+            f.1 = sigma.arrow tau ∧
+              a.1 = sigma ∧
+                ContextUniformPrimary.representative arity symbols S Gamma f = x ∧
+                  ContextUniformPrimary.representative arity symbols S Gamma a = y then
+          do
+          let result ← rawStructuralDecode arity Gamma (tau, Code.app sigma f.2 a.2)
+          pure (ContextUniformPrimary.representative arity symbols S Gamma result)
+        else none) =
+    do
+    let f ← some f
+    let a ← some a
+    if
+          f.fst = sigma.arrow tau ∧
+            a.fst = sigma ∧ representativeCode symbols S f = x ∧ representativeCode symbols S a = y then
+        do
+        let result ← decodePacked arity Gamma (tau, Code.app sigma (termCode f.snd) (termCode a.snd))
+        pure (representativeCode symbols S result)
+      else none
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:17:6: warning: This simp argument is unused:
+  NumberedUniformPackedDecodingProof.rawUniverseCalibration
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵,̵N̵u̵m̵b̵e̵r̵e̵d̵N̵u̵m̵e̵r̵i̵c̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵P̵r̵i̵m̵r̵e̵c̵.̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵P̵r̵o̵g̵r̵a̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵U̵n̵i̵f̵o̵r̵m̵P̵a̵c̵k̵e̵d̵D̵e̵c̵o̵d̵i̵n̵g̵P̵r̵o̵o̵f̵.̵r̵a̵w̵U̵n̵i̵v̵e̵r̵s̵e̵C̵a̵l̵i̵b̵r̵a̵t̵i̵o̵n̵,̵h̵f̵]̵[̲r̲a̲w̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲N̲u̲m̲e̲r̲i̲c̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲P̲r̲i̲m̲r̲e̲c̲.̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲h̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:21:8: warning: This simp argument is unused:
+  NumberedUniformPackedDecodingProof.rawUniverseCalibration
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵,̵N̵u̵m̵b̵e̵r̵e̵d̵N̵u̵m̵e̵r̵i̵c̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵P̵r̵i̵m̵r̵e̵c̵.̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵P̵r̵o̵g̵r̵a̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵U̵n̵i̵f̵o̵r̵m̵P̵a̵c̵k̵e̵d̵D̵e̵c̵o̵d̵i̵n̵g̵P̵r̵o̵o̵f̵.̵r̵a̵w̵U̵n̵i̵v̵e̵r̵s̵e̵C̵a̵l̵i̵b̵r̵a̵t̵i̵o̵n̵,̵h̵f̵,̵h̵a̵]̵[̲r̲a̲w̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲N̲u̲m̲e̲r̲i̲c̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲P̲r̲i̲m̲r̲e̲c̲.̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲h̲f̲,̲ ̲h̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:24:8: warning: This simp argument is unused:
+  NumberedUniformPackedDecodingProof.rawUniverseCalibration
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵,̵N̵u̵m̵b̵e̵r̵e̵d̵N̵u̵m̵e̵r̵i̵c̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵P̵r̵i̵m̵r̵e̵c̵.̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵P̵r̵o̵g̵r̵a̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵U̵n̵i̵f̵o̵r̵m̵P̵a̵c̵k̵e̵d̵D̵e̵c̵o̵d̵i̵n̵g̵P̵r̵o̵o̵f̵.̵r̵a̵w̵U̵n̵i̵v̵e̵r̵s̵e̵C̵a̵l̵i̵b̵r̵a̵t̵i̵o̵n̵,̵h̵f̵,̵h̵a̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵]̵[̲r̲a̲w̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲N̲u̲m̲e̲r̲i̲c̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲P̲r̲i̲m̲r̲e̲c̲.̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲h̲f̲,̲ ̲h̲a̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:24:72: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [rawApplication, ̲NumberedNumericApplicationPrimrec.applicationProgram,
+          NumberedUniformPackedDecodingProof.rawUniverseCalibration, ̲hf, ̲ha, ̲Option.m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵bind_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationPrimitiveProof.lean:24:88: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [rawApplication, ̲NumberedNumericApplicationPrimrec.applicationProgram,
+          NumberedUniformPackedDecodingProof.rawUniverseCalibration, ̲hf, ̲ha, ̲Option.map_some,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

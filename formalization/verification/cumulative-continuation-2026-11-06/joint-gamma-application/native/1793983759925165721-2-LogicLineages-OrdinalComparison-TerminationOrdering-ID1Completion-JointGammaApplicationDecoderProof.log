@@ -1,0 +1,126 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationDecoderProof.lean:75:4: error: Tactic `rfl` failed: The left-hand side
+  (decide (True ∧ val✝¹.1 = val✝.1) &&
+      decide
+        (OrdinaryArithmeticApplication.decodedApplication n arity val✝¹.1 (v.get 0) (v.get 1) (v.get 2) val✝².2
+            val✝¹.2 =
+          some val✝.2)).toNat
+is not definitionally equal to the right-hand side
+  (decide
+      (OrdinaryArithmeticApplication.decodedApplication n arity val✝¹.1 (v.get 0) (v.get 1)
+          (Matrix.vecHead (Matrix.vecTail ![v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2]))
+          (![v.get 0, v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2] 3)
+          (![v.get 0, v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2] 4) =
+        some (![v.get 0, v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2] 5))).toNat
+
+case pos
+n : ℕ
+arity : Fin n → ℕ
+Inner : Type := ((List.Vector ℕ 6 × ContextUniform.Object) × ContextUniform.Object) × ContextUniform.Object
+getP : ∀ (i : Fin 6), Primrec fun v => v.get i
+hv : Primrec fun p => p.1.1.1
+hf✝ : Primrec fun p => p.1.1.2
+ha✝ : Primrec fun p => p.1.2
+hz✝ : Primrec fun p => p.2
+happ :
+  Primrec fun a =>
+    OrdinaryArithmeticApplication.decodedApplication n arity
+      (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).1
+      (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.1
+      (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.1
+      (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.2.1
+      (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.2.2.1
+      (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.2.2.2
+hguard : PrimrecPred fun p => p.1.1.2.1 = p.1.2.1 ∧ p.1.1.2.1 = p.2.1
+hb :
+  Primrec fun a =>
+    decide (a.1.1.2.1 = a.1.2.1 ∧ a.1.1.2.1 = a.2.1) &&
+      decide
+        (OrdinaryArithmeticApplication.decodedApplication n arity
+            (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).1
+            (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.1
+            (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.1
+            (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.2.1
+            (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.2.2.1
+            (a.1.1.2.1, a.1.1.1.get 0, a.1.1.1.get 1, a.1.1.1.get 2, a.1.1.2.2, a.1.2.2).2.2.2.2.2 =
+          some a.2.2)
+hdResult : Primrec fun p => Encodable.decode (p.1.1.get 5)
+hi :
+  Primrec fun a =>
+    Option.any
+      (fun b =>
+        decide ((a, b).1.1.2.1 = (a, b).1.2.1 ∧ (a, b).1.1.2.1 = (a, b).2.1) &&
+          decide
+            (OrdinaryArithmeticApplication.decodedApplication n arity
+                ((a, b).1.1.2.1, (a, b).1.1.1.get 0, (a, b).1.1.1.get 1, (a, b).1.1.1.get 2, (a, b).1.1.2.2,
+                    (a, b).1.2.2).1
+                ((a, b).1.1.2.1, (a, b).1.1.1.get 0, (a, b).1.1.1.get 1, (a, b).1.1.1.get 2, (a, b).1.1.2.2,
+                      (a, b).1.2.2).2.1
+                ((a, b).1.1.2.1, (a, b).1.1.1.get 0, (a, b).1.1.1.get 1, (a, b).1.1.1.get 2, (a, b).1.1.2.2,
+                        (a, b).1.2.2).2.2.1
+                ((a, b).1.1.2.1, (a, b).1.1.1.get 0, (a, b).1.1.1.get 1, (a, b).1.1.1.get 2, (a, b).1.1.2.2,
+                          (a, b).1.2.2).2.2.2.1
+                ((a, b).1.1.2.1, (a, b).1.1.1.get 0, (a, b).1.1.1.get 1, (a, b).1.1.1.get 2, (a, b).1.1.2.2,
+                            (a, b).1.2.2).2.2.2.2.1
+                ((a, b).1.1.2.1, (a, b).1.1.1.get 0, (a, b).1.1.1.get 1, (a, b).1.1.1.get 2, (a, b).1.1.2.2,
+                            (a, b).1.2.2).2.2.2.2.2 =
+              some (a, b).2.2))
+      (Encodable.decode (a.1.1.get 5))
+hdArgument : Primrec fun p => Encodable.decode (p.1.get 4)
+hj :
+  Primrec fun a =>
+    Option.any
+      (fun b =>
+        Option.any
+          (fun b_1 =>
+            decide (((a, b), b_1).1.1.2.1 = ((a, b), b_1).1.2.1 ∧ ((a, b), b_1).1.1.2.1 = ((a, b), b_1).2.1) &&
+              decide
+                (OrdinaryArithmeticApplication.decodedApplication n arity
+                    (((a, b), b_1).1.1.2.1, ((a, b), b_1).1.1.1.get 0, ((a, b), b_1).1.1.1.get 1,
+                        ((a, b), b_1).1.1.1.get 2, ((a, b), b_1).1.1.2.2, ((a, b), b_1).1.2.2).1
+                    (((a, b), b_1).1.1.2.1, ((a, b), b_1).1.1.1.get 0, ((a, b), b_1).1.1.1.get 1,
+                          ((a, b), b_1).1.1.1.get 2, ((a, b), b_1).1.1.2.2, ((a, b), b_1).1.2.2).2.1
+                    (((a, b), b_1).1.1.2.1, ((a, b), b_1).1.1.1.get 0, ((a, b), b_1).1.1.1.get 1,
+                            ((a, b), b_1).1.1.1.get 2, ((a, b), b_1).1.1.2.2, ((a, b), b_1).1.2.2).2.2.1
+                    (((a, b), b_1).1.1.2.1, ((a, b), b_1).1.1.1.get 0, ((a, b), b_1).1.1.1.get 1,
+                              ((a, b), b_1).1.1.1.get 2, ((a, b), b_1).1.1.2.2, ((a, b), b_1).1.2.2).2.2.2.1
+                    (((a, b), b_1).1.1.2.1, ((a, b), b_1).1.1.1.get 0, ((a, b), b_1).1.1.1.get 1,
+                                ((a, b), b_1).1.1.1.get 2, ((a, b), b_1).1.1.2.2, ((a, b), b_1).1.2.2).2.2.2.2.1
+                    (((a, b), b_1).1.1.2.1, ((a, b), b_1).1.1.1.get 0, ((a, b), b_1).1.1.1.get 1,
+                                ((a, b), b_1).1.1.1.get 2, ((a, b), b_1).1.1.2.2, ((a, b), b_1).1.2.2).2.2.2.2.2 =
+                  some ((a, b), b_1).2.2))
+          (Encodable.decode ((a, b).1.1.get 5)))
+      (Encodable.decode (a.1.get 4))
+hdFunction : Primrec fun a => Encodable.decode (a.get 3)
+v : List.Vector ℕ 6
+val✝² : ContextUniform.Object
+hf : Encodable.decode (v.get 3) = some val✝²
+val✝¹ : ContextUniform.Object
+ha : Encodable.decode (v.get 4) = some val✝¹
+val✝ : ContextUniform.Object
+hz : Encodable.decode (v.get 5) = some val✝
+h : val✝².1 = val✝¹.1 ∧ val✝².1 = val✝.1
+⊢ (decide (True ∧ val✝¹.1 = val✝.1) &&
+        decide
+          (OrdinaryArithmeticApplication.decodedApplication n arity val✝¹.1 (v.get 0) (v.get 1) (v.get 2) val✝².2
+              val✝¹.2 =
+            some val✝.2)).toNat =
+    (decide
+        (OrdinaryArithmeticApplication.decodedApplication n arity val✝¹.1 (v.get 0) (v.get 1)
+            (Matrix.vecHead (Matrix.vecTail ![v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2]))
+            (![v.get 0, v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2] 3)
+            (![v.get 0, v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2] 4) =
+          some (![v.get 0, v.get 1, v.get 2, val✝².2, val✝¹.2, val✝.2] 5))).toNat
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationDecoderProof.lean:74:17: warning: This simp argument is unused:
+  decide_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵,̵d̵e̵c̵i̵d̵e̵_̵t̵r̵u̵e̵,̵B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲h̲,̲ ̲B̲o̲o̲l̲.̲t̲r̲u̲e̲_̲a̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaApplicationDecoderProof.lean:74:29: warning: This simp argument is unused:
+  Bool.true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵,̵d̵e̵c̵i̵d̵e̵_̵t̵r̵u̵e̵,̵B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲h̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

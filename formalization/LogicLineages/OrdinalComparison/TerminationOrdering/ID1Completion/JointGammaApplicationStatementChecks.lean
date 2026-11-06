@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaApplicationPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaApplicationStatementChecks
+
+theorem calibration_exact : JointGammaApplicationPreflight.calibrationComparator :=
+  JointGammaApplicationPrimitiveProof.actualRawApplicationCalibration
+theorem original_primitive_exact : JointGammaApplicationPreflight.originalPrimitiveComparator :=
+  JointGammaApplicationPrimitiveProof.actualOriginalApplicationPrimitive
+theorem object_primitive_exact : JointGammaApplicationPreflight.objectPrimitiveComparator :=
+  JointGammaApplicationDecoderProof.actualObjectApplicationPrimitive
+theorem fibers_exact : JointGammaApplicationPreflight.fibersComparator :=
+  JointGammaApplicationProof.actualOriginalContextFibers
+theorem disjoint_exact : JointGammaApplicationPreflight.disjointComparator :=
+  JointGammaApplicationProof.actualNoCrossContextApplications
+theorem formula_exact : JointGammaApplicationPreflight.formulaComparator :=
+  JointGammaApplicationProof.actualApplicationArithmeticFormula
+#print axioms calibration_exact
+#print axioms original_primitive_exact
+#print axioms object_primitive_exact
+#print axioms fibers_exact
+#print axioms disjoint_exact
+#print axioms formula_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaApplicationStatementChecks
