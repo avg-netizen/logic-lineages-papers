@@ -1,0 +1,1 @@
+The initial ExactCounterexample comparator parsed its hypothesis implications on the left of the equivalence. This does not express the intended conditional equivalence. It is rejected, not accepted or imported. Corrected comparator adds explicit parentheses, preserving the documented source contract. Native rejection receipt: build-reports/1793976857970622951-14.json.

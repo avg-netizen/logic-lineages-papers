@@ -1,0 +1,7 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/PairProof.lean:102:24: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+n mode : ℕ
+flag : Bool
+a b : Expr
+⊢ ValidExpr a → ValidExpr b → Fresh n a → Fresh n b → Pair.Closed (Pair.package n mode flag a b) ↔
+    ∃ ν, (∀ i < n, 0 < ν i) ∧ ¬(flag = true ∧ Pair.valueRelation mode (Expr.value ν a) (Expr.value ν b))

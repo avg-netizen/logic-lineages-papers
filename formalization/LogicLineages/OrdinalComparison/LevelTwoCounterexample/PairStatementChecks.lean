@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.PairProof
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.PairCodeProof
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.PairStatementChecks
+theorem exact_counterexample : PairTargets.ExactCounterexample := PairProof.exactCounterexample
+theorem exact_closed_support : PairTargets.ExactClosedSupport := PairProof.exactClosedSupport
+theorem exact_domains_and_degree : PairTargets.ExactDomainsAndDegree := PairProof.exactDomainsAndDegree
+theorem literal_numeric_package : PairTargets.LiteralNumericPackage := PairCodeProof.literalNumericPackage
+theorem actual_numeric_program : PairTargets.ActualNumericProgram := PairCodeProof.actualNumericProgram
+end LogicLineages.OrdinalComparison.LevelTwoCounterexample.PairStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.PairStatementChecks

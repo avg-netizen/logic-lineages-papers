@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/PairCodeProof.lean:51:13: error(lean.unknownIdentifier): Unknown identifier `HeadProgramsProof.familyDegree_primitive.comp`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/PairCodeProof.lean:35:67: error: unsolved goals
+A : Type := Code.Input
+hn : Primrec fun p => p.1
+hm : Primrec fun p => p.2.1
+hf : Primrec fun p => p.2.2.1
+hc : Primrec fun p => p.2.2.2
+hl : Primrec fun a => ExpressionCode.instructions a.2.2.2.1
+hr : Primrec fun a => ExpressionCode.instructions a.2.2.2.2
+ho : Primrec fun a => ExpressionCode.instructions a.2.2.2.1 ++ ExpressionCode.instructions a.2.2.2.2 ++ [(2, 0)]
+hll : Primrec fun a => (ExpressionCode.instructions a.2.2.2.1).length
+hrl : Primrec fun a => (ExpressionCode.instructions a.2.2.2.2).length
+hol :
+  Primrec fun a => (ExpressionCode.instructions a.2.2.2.1 ++ ExpressionCode.instructions a.2.2.2.2 ++ [(2, 0)]).length
+hstate :
+  Primrec fun a =>
+    ExpressionCode.run (ExpressionCode.instructions a.2.2.2.1 ++ ExpressionCode.instructions a.2.2.2.2 ++ [(2, 0)])
+      (a.1, [], [])
+hrows :
+  Primrec fun a =>
+    (ExpressionCode.run (ExpressionCode.instructions a.2.2.2.1 ++ ExpressionCode.instructions a.2.2.2.2 ++ [(2, 0)])
+          (a.1, [], [])).2.2
+hx : Primrec fun a => a.1 + (ExpressionCode.instructions a.2.2.2.1).length - 1
+hy :
+  Primrec fun a =>
+    a.1 + (ExpressionCode.instructions a.2.2.2.1).length + (ExpressionCode.instructions a.2.2.2.2).length - 1
+⊢ PairTargets.ActualNumericProgram
