@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.AdjacentRangeWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.CanonicalGuardSelector.StatementChecks
+public import LogicLineages.OrdinalComparison.CounterPhiWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.CounterRangeWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.CounterWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.FiniteRangeExposure.StatementChecks
+public import LogicLineages.OrdinalComparison.GuardChildMeasureCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.MixedRangeWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.OuterShiftNormalization.StatementChecks
+public import LogicLineages.OrdinalComparison.QuadraticWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.RangePhiFactorization.StatementChecks
+public import LogicLineages.OrdinalComparison.ShiftedEqualRankWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.ShiftedPhiRangeWordGuardCompletion.StatementChecks
+public import LogicLineages.OrdinalComparison.SourceRangeExpansion.StatementChecks
+public import LogicLineages.OrdinalComparison.TerminalWordGrowthCompletion.StatementChecks
+
+/-! Focused integration of checked local word guards, terminal normalization,
+actual child descent and canonical case selection. Not a complete semantic
+guard compiler, common-tail recursion, cancellation or existential decision. -/
