@@ -1,0 +1,82 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionFreeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionFreeInitialProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalGraphComposition
+open SourceComputabilityFormulaSupportProof InternalGraphCompositionSyntaxProof
+open InternalSourceInversionSupportProof InternalTagArithmeticSupportProof
+open InternalTagArithmeticSyntaxProof (emb eqn)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem actualInitialGraphInstances : InternalRecursionFreeTargets.ActualInitialGraphInstances := by
+  refine ⟨?_,?_,?_⟩
+  · intro α out xs
+    unfold graph OrdinaryArithmetic.graphFormula OrdinaryArithmetic.applyGraph
+    rw [equalitySubstitution]
+    rfl
+  · intro α out xs
+    unfold graph OrdinaryArithmetic.graphFormula OrdinaryArithmetic.applyGraph
+    rw [equalitySubstitution]
+    rfl
+  · intro n α i out xs
+    unfold graph OrdinaryArithmetic.graphFormula OrdinaryArithmetic.applyGraph
+    rw [equalitySubstitution]
+    rfl
+
+/-- A known literal graph equation gives a proof of output existence by
+introducing its ordinary term value, without any semantic inference. -/
+theorem totalValue (body : Positive (Fin 1)) {α : Type} {n : Nat}
+    (f : OFormula (Fin (n+1))) (xs : Fin n → OTerm α) (value : OTerm α)
+    (h : ∀ out, graph f out xs = arithmeticEmbedding.onFormula (value.equal out)) :
+    Nonempty (Derivation body [] (existsOne (graph f (.var (.inr (0 : Fin 1)))
+      (fun i => (xs i).relabel Sum.inl)))) := by
+  apply Nonempty.intro
+  apply Derivation.existentialIntroduction (emb value)
+  rw [graphOutputInstantiate,h value,onEquality]
+  exact Derivation.equalityReflexivity (emb value)
+
+/-- Uniqueness follows by original equality symmetry and transitivity. -/
+theorem functionalValue (body : Positive (Fin 1)) {α : Type} {n : Nat}
+    (f : OFormula (Fin (n+1))) (out other : OTerm α) (xs : Fin n → OTerm α) (value : OTerm α)
+    (h : ∀ y, graph f y xs = arithmeticEmbedding.onFormula (value.equal y)) :
+    Nonempty (Derivation body [] ((graph f out xs ⊓ graph f other xs).imp
+      (arithmeticEmbedding.onFormula (out.equal other)))) := by
+  let Gamma := [graph f out xs ⊓ graph f other xs]
+  have d : Derivation body Gamma (eqn value out) := by
+    rw [← onEquality,← h out]
+    exact Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)
+  have e : Derivation body Gamma (eqn value other) := by
+    rw [← onEquality,← h other]
+    exact Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)
+  apply Nonempty.intro
+  apply Derivation.implicationIntroduction
+  rw [onEquality]
+  exact trans (symm d) e
+
+theorem actualInitialGraphTotality : InternalRecursionFreeTargets.ActualInitialGraphTotality := by
+  intro body
+  refine ⟨?_,?_,?_⟩
+  · intro α xs
+    exact totalValue body _ xs OrdinaryArithmetic.zeroTerm
+      (fun out => actualInitialGraphInstances.1 α out xs)
+  · intro α xs
+    exact totalValue body _ xs (OrdinaryArithmetic.succTerm (xs 0))
+      (fun out => actualInitialGraphInstances.2.1 α out xs)
+  · intro n i α xs
+    exact totalValue body _ xs (xs i)
+      (fun out => actualInitialGraphInstances.2.2 n α i out xs)
+
+theorem actualInitialGraphFunctionality : InternalRecursionFreeTargets.ActualInitialGraphFunctionality := by
+  intro body
+  refine ⟨?_,?_,?_⟩
+  · intro α out other xs
+    exact functionalValue body _ out other xs OrdinaryArithmetic.zeroTerm
+      (fun y => actualInitialGraphInstances.1 α y xs)
+  · intro α out other xs
+    exact functionalValue body _ out other xs (OrdinaryArithmetic.succTerm (xs 0))
+      (fun y => actualInitialGraphInstances.2.1 α y xs)
+  · intro n i α out other xs
+    exact functionalValue body _ out other xs (xs i)
+      (fun y => actualInitialGraphInstances.2.2 n α i y xs)
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionFreeInitialProof

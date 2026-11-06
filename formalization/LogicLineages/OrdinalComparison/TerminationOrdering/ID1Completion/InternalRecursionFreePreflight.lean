@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionFreeTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionFreePreflight
+def instanceComparator : Prop := InternalRecursionFreeTargets.ActualInitialGraphInstances
+def totalityComparator : Prop := InternalRecursionFreeTargets.ActualInitialGraphTotality
+def functionalityComparator : Prop := InternalRecursionFreeTargets.ActualInitialGraphFunctionality
+def fragmentComparator : Prop := InternalRecursionFreeTargets.ActualOriginalRecursionFreePrograms
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionFreePreflight

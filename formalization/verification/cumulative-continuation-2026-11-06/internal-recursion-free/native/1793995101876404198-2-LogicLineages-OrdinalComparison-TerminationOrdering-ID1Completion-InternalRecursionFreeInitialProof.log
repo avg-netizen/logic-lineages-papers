@@ -1,0 +1,61 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRecursionFreeInitialProof.lean:17:4: error: Tactic `rfl` failed: The left-hand side
+  arithmeticEmbedding.onFormula
+    ((Term.subst OrdinaryArithmetic.zeroTerm fun i => Fin.cases out xs i).equal
+      ((var 0).subst fun i => Fin.cases out xs i))
+is not definitionally equal to the right-hand side
+  arithmeticEmbedding.onFormula (Term.equal OrdinaryArithmetic.zeroTerm out)
+
+case refine_1
+α : Type
+out : OTerm α
+xs : Fin 0 → OTerm α
+⊢ arithmeticEmbedding.onFormula
+      ((Term.subst OrdinaryArithmetic.zeroTerm fun i => Fin.cases out xs i).equal
+        ((var 0).subst fun i => Fin.cases out xs i)) =
+    arithmeticEmbedding.onFormula (Term.equal OrdinaryArithmetic.zeroTerm out)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRecursionFreeInitialProof.lean:21:4: error: Tactic `rfl` failed: The left-hand side
+  arithmeticEmbedding.onFormula
+    ((Term.subst (OrdinaryArithmetic.succTerm (var 1)) fun i => Fin.cases out xs i).equal
+      ((var 0).subst fun i => Fin.cases out xs i))
+is not definitionally equal to the right-hand side
+  arithmeticEmbedding.onFormula (Term.equal (OrdinaryArithmetic.succTerm (xs 0)) out)
+
+case refine_2
+α : Type
+out : OTerm α
+xs : Fin 1 → OTerm α
+⊢ arithmeticEmbedding.onFormula
+      ((Term.subst (OrdinaryArithmetic.succTerm (var 1)) fun i => Fin.cases out xs i).equal
+        ((var 0).subst fun i => Fin.cases out xs i)) =
+    arithmeticEmbedding.onFormula (Term.equal (OrdinaryArithmetic.succTerm (xs 0)) out)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRecursionFreeInitialProof.lean:47:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (LHom.onTerm ?h ?s).equal (LHom.onTerm ?h ?t)
+in the target expression
+  Derivation body Gamma (eqn value out)
+
+body : Positive (Fin 1)
+α : Type
+n : ℕ
+f : OFormula (Fin (n + 1))
+out other : OTerm α
+xs : Fin n → OTerm α
+value : OTerm α
+h : ∀ (y : OTerm α), graph f y xs = arithmeticEmbedding.onFormula (Term.equal value y)
+Gamma : List (InternalCalculus.Formula α) := [graph f out xs ⊓ graph f other xs]
+⊢ Derivation body Gamma (eqn value out)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRecursionFreeInitialProof.lean:50:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (LHom.onTerm ?h ?s).equal (LHom.onTerm ?h ?t)
+in the target expression
+  Derivation body Gamma (eqn value other)
+
+body : Positive (Fin 1)
+α : Type
+n : ℕ
+f : OFormula (Fin (n + 1))
+out other : OTerm α
+xs : Fin n → OTerm α
+value : OTerm α
+h : ∀ (y : OTerm α), graph f y xs = arithmeticEmbedding.onFormula (Term.equal value y)
+Gamma : List (InternalCalculus.Formula α) := [graph f out xs ⊓ graph f other xs]
+d : Derivation body Gamma (eqn value out)
+⊢ Derivation body Gamma (eqn value other)
