@@ -1,0 +1,7 @@
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalitySyntaxProof
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalitySyntaxProof
+#print axioms originalBetaBodySubst
+#print axioms originalBetaSubst
+#print axioms betaSubst
+#print axioms betaInstantiate
+#print axioms betaSuccessor

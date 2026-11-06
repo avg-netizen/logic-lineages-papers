@@ -1,0 +1,105 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:15:89: error: unsolved goals
+α β : Type
+a b i r : OrdinaryArithmetic.Term α
+ts : α → OrdinaryArithmetic.Term β
+ht :
+  ∀ (t : OrdinaryArithmetic.Term α),
+    (Term.relabel Sum.inl t).subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr)) =
+      Term.relabel Sum.inl (Term.subst t ts)
+⊢ BoundedFormula.mapTermRel (fun x t => t.subst (Sum.elim (Term.relabel Sum.inl ∘ ts) (var ∘ Sum.inr))) (fun x => id)
+      (fun x => id)
+      (BoundedFormula.equal (Term.relabel Sum.inl a)
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+              (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+                (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+                  (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl i))
+                  (Term.relabel Sum.inl b))))
+            (Term.relabel Sum.inl r)) ⊓
+        BoundedFormula.equal
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add (Term.relabel Sum.inl r)
+            (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (var (Sum.inr 1))))
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+              (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl i))
+              (Term.relabel Sum.inl b)))) =
+    BoundedFormula.equal (Term.relabel Sum.inl (Term.subst a ts))
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+              (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+                (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl (Term.subst i ts)))
+                (Term.relabel Sum.inl (Term.subst b ts)))))
+          (Term.relabel Sum.inl (Term.subst r ts))) ⊓
+      BoundedFormula.equal
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add (Term.relabel Sum.inl (Term.subst r ts))
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (var (Sum.inr 1))))
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+            (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl (Term.subst i ts)))
+            (Term.relabel Sum.inl (Term.subst b ts))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:23:34: warning: This simp argument is unused:
+  BoundedFormula.mapTermRel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵s̵u̵b̵s̵t̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵b̵d̵E̵q̵u̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵a̵d̵d̵T̵e̵r̵m̵,̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵m̵u̵l̵T̵e̵r̵m̵,̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵s̵u̵c̵c̵T̵e̵r̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵a̵p̵p̵l̵y̵T̵w̵o̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵,̵a̵p̵p̵l̵y̵O̵n̵e̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵,̵h̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲s̲u̲b̲s̲t̲,̲ ̲T̲e̲r̲m̲.̲b̲d̲E̲q̲u̲a̲l̲,̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲a̲d̲d̲T̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲m̲u̲l̲T̲e̲r̲m̲,̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲s̲u̲c̲c̲T̲e̲r̲m̲,̲ ̲a̲p̲p̲l̲y̲T̲w̲o̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲a̲p̲p̲l̲y̲O̲n̲e̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲,̲ ̲h̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:25:4: warning: This simp argument is unused:
+  applyTwoSubstitution
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.subst, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+      OrdinaryArithmetic.addTerm, ̲OrdinaryArithmetic.mulTerm, ̲OrdinaryArithmetic.succTerm,
+      applyT̵w̵o̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵,̵a̵p̵p̵l̵y̵OneSubstitution, ̲ht, ̲Term.subst, ̲Sum.elim_inr, ̲Function.comp_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:25:25: warning: This simp argument is unused:
+  applyOneSubstitution
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.subst, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+      OrdinaryArithmetic.addTerm, ̲OrdinaryArithmetic.mulTerm, ̲OrdinaryArithmetic.succTerm,
+      applyTwoSubstitution,a̵p̵p̵l̵y̵O̵n̵e̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵,̵ ̲ht, ̲Term.subst, ̲Sum.elim_inr, ̲Function.comp_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:25:46: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.subst, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+      OrdinaryArithmetic.addTerm, ̲OrdinaryArithmetic.mulTerm, ̲OrdinaryArithmetic.succTerm,
+      applyTwoSubstitution, ̲applyOneSubstitution,h̵t̵,̵ ̲Term.subst, ̲Sum.elim_inr, ̲Function.comp_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:25:49: warning: This simp argument is unused:
+  Term.subst
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.subst, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+      OrdinaryArithmetic.addTerm, ̲OrdinaryArithmetic.mulTerm, ̲OrdinaryArithmetic.succTerm,
+      applyTwoSubstitution, ̲applyOneSubstitution, ̲ht,T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵ ̲Sum.elim_inr, ̲Function.comp_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:25:60: warning: This simp argument is unused:
+  Sum.elim_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.subst, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+      OrdinaryArithmetic.addTerm, ̲OrdinaryArithmetic.mulTerm, ̲OrdinaryArithmetic.succTerm,
+      applyTwoSubstitution, ̲applyOneSubstitution, ̲ht, ̲Term.subst,S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵,̵ ̲Function.comp_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaTotalitySyntaxProof.lean:25:73: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.subst, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+      OrdinaryArithmetic.addTerm, ̲OrdinaryArithmetic.mulTerm, ̲OrdinaryArithmetic.succTerm,
+      applyTwoSubstitution, ̲applyOneSubstitution, ̲ht, ̲Term.subst, ̲Sum.elim_inr,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
