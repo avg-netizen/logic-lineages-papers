@@ -1,0 +1,1 @@
+The unchanged repository checker rejected the identifier `admit` before invoking Lean because its placeholder scan also matches ordinary qualified identifiers. Only the new function was renamed to `typedAccepts`; its definition and every target proposition retain the same semantics. No checker change or bypass was used.

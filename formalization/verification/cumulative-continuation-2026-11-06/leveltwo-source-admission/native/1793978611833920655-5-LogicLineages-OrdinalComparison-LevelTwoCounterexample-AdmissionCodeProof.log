@@ -1,0 +1,57 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionCodeProof.lean:43:59: error: Tactic `rfl` failed: The left-hand side
+  Option.casesOn none false fun b => decide (typeLevel (s, b).2 ≤ (s, b).1.1)
+is not definitionally equal to the right-hand side
+  current s
+
+case none
+current : Input → Bool := fun s => Option.any (fun τ => decide (typeLevel τ ≤ s.1)) (check s.2.1 s.2.2)
+children : Input → List Input :=
+  fun s =>
+    if s.2.2 % 8 = 5 then [(s.1, s.2.1, (Nat.unpair (s.2.2 / 8)).1), (s.1, s.2.1, (Nat.unpair (s.2.2 / 8)).2)]
+    else if s.2.2 % 8 = 6 then [(s.1, (Nat.unpair (s.2.2 / 8)).1 :: s.2.1, (Nat.unpair (s.2.2 / 8)).2)] else []
+assemble : Input → List Bool → Option Bool :=
+  fun s rs =>
+    some
+      (current s &&
+        if s.2.2 % 8 = 5 then rs.getD 0 false && rs.getD 1 false else if s.2.2 % 8 = 6 then rs.getD 0 false else true)
+hΓ : Primrec fun s => s.2.1
+hn : Primrec fun s => s.2.2
+htag : Primrec fun s => s.2.2 % 8
+hpay : Primrec fun s => s.2.2 / 8
+hl : Primrec fun a => (Nat.unpair (a.2.2 / 8)).1
+hr : Primrec fun a => (Nat.unpair (a.2.2 / 8)).2
+ht : ∀ (k : ℕ), PrimrecPred fun s => s.2.2 % 8 = k
+hcheck : Primrec fun s => check s.2.1 s.2.2
+hbound : Primrec fun p => decide (typeLevel p.2 ≤ p.1.1)
+h : Primrec fun a => Option.casesOn (check a.2.1 a.2.2) false fun b => decide (typeLevel (a, b).2 ≤ (a, b).1.1)
+s : Input
+⊢ (Option.casesOn none false fun b => decide (typeLevel (s, b).2 ≤ (s, b).1.1)) = current s
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionCodeProof.lean:43:59: error: Tactic `rfl` failed: The left-hand side
+  Option.casesOn (some val✝) false fun b => decide (typeLevel (s, b).2 ≤ (s, b).1.1)
+is not definitionally equal to the right-hand side
+  current s
+
+case some
+current : Input → Bool := fun s => Option.any (fun τ => decide (typeLevel τ ≤ s.1)) (check s.2.1 s.2.2)
+children : Input → List Input :=
+  fun s =>
+    if s.2.2 % 8 = 5 then [(s.1, s.2.1, (Nat.unpair (s.2.2 / 8)).1), (s.1, s.2.1, (Nat.unpair (s.2.2 / 8)).2)]
+    else if s.2.2 % 8 = 6 then [(s.1, (Nat.unpair (s.2.2 / 8)).1 :: s.2.1, (Nat.unpair (s.2.2 / 8)).2)] else []
+assemble : Input → List Bool → Option Bool :=
+  fun s rs =>
+    some
+      (current s &&
+        if s.2.2 % 8 = 5 then rs.getD 0 false && rs.getD 1 false else if s.2.2 % 8 = 6 then rs.getD 0 false else true)
+hΓ : Primrec fun s => s.2.1
+hn : Primrec fun s => s.2.2
+htag : Primrec fun s => s.2.2 % 8
+hpay : Primrec fun s => s.2.2 / 8
+hl : Primrec fun a => (Nat.unpair (a.2.2 / 8)).1
+hr : Primrec fun a => (Nat.unpair (a.2.2 / 8)).2
+ht : ∀ (k : ℕ), PrimrecPred fun s => s.2.2 % 8 = k
+hcheck : Primrec fun s => check s.2.1 s.2.2
+hbound : Primrec fun p => decide (typeLevel p.2 ≤ p.1.1)
+h : Primrec fun a => Option.casesOn (check a.2.1 a.2.2) false fun b => decide (typeLevel (a, b).2 ≤ (a, b).1.1)
+s : Input
+val✝ : ℕ
+⊢ (Option.casesOn (some val✝) false fun b => decide (typeLevel (s, b).2 ≤ (s, b).1.1)) = current s
