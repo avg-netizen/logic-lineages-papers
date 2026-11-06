@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsPreflight
+def carrierComparator : Prop := JointGammaSemanticsTargets.ActualCarrierFormulaTruth
+def graphComparator : Prop := JointGammaSemanticsTargets.ActualCertificateGraphTruth
+def operatorComparator : Prop := JointGammaSemanticsTargets.ActualClosedSourceOperator
+def allTermsComparator : Prop := JointGammaSemanticsTargets.ActualAllTermsFormulaTruth
+def existenceComparator : Prop := JointGammaSemanticsTargets.ActualUniformSourceFormulasExist
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsPreflight

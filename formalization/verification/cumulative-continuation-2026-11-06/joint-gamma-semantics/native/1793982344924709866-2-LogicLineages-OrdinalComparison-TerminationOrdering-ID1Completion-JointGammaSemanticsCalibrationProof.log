@@ -1,0 +1,40 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaSemanticsCalibrationProof.lean:41:8: error: Type mismatch: After simplification, term
+  OrdinaryArithmeticQuotientProof.encodedPositiveCertificates n arity Gamma context a b
+ has type
+  (∃ c, OrdinaryArithmeticQuotient.positiveValue n arity Gamma (List.Vector.ofFn ![context, a, b, c]) = 1) ↔
+    ∃ a_1 b_1 b_2,
+      (((Encodable.decode (Nat.unpair (Nat.unpair context).1).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair context).1).2)).bind
+            fun a => Option.map (Prod.mk a) (Encodable.decode (Nat.unpair context).2)) =
+          some ((a_1, b_1), b_2) ∧
+        NumberedQuotientPaths.PositivePath
+          (NumberedQuotientPaths.QuotientEdge n arity a_1 b_1 (NumberedCopyCertificate.tableAbove b_2) Gamma) a b
+but is expected to have type
+  (∃ c, OrdinaryArithmeticQuotient.positiveValue n arity Gamma (List.Vector.ofFn ![context, a, b, c]) = 1) ↔
+    PositiveArithmeticOperators.encodedR n arity Gamma context a b
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaSemanticsCalibrationProof.lean:43:6: error: unsolved goals
+case neg
+n : ℕ
+arity : Fin n → ℕ
+context x y : ℕ
+Gamma : List Ty
+a : ℕ
+hs : Encodable.decode x = some (Gamma, a)
+Delta : List Ty
+b : ℕ
+ht : Encodable.decode y = some (Delta, b)
+he : ¬Gamma = Delta
+⊢ Delta = Gamma → ¬PositiveArithmeticOperators.encodedR n arity Gamma context a b
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaSemanticsCalibrationProof.lean:60:6: error: unsolved goals
+case neg
+n : ℕ
+arity : Fin n → ℕ
+context x y : ℕ
+Gamma : List Ty
+a : ℕ
+hs : Encodable.decode x = some (Gamma, a)
+Delta : List Ty
+b : ℕ
+ht : Encodable.decode y = some (Delta, b)
+he : ¬Gamma = Delta
+⊢ Delta = Gamma → ¬OrdinaryArithmeticDirect.encodedDirect n arity Gamma context a b

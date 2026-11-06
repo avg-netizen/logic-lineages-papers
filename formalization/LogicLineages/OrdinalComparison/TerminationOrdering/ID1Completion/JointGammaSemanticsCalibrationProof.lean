@@ -1,0 +1,83 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourcePresentationSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsCalibrationProof
+open FirstOrder Language Source
+
+theorem scalarCalibration (n : Nat) (arity : Fin n → Nat) (context x : Nat) :
+    ContextUniform.scalarValue n arity (List.Vector.ofFn ![context,x]) = 1 ↔
+      ContextUniform.encodedScalar n arity context x := by
+  cases hd : Encodable.decode (α := ContextUniform.Object) x with
+  | none => simp [ContextUniform.scalarValue,ContextUniform.encodedScalar,hd]
+  | some obj =>
+    rcases obj with ⟨Gamma,value⟩
+    simpa [ContextUniform.scalarValue,ContextUniform.encodedScalar,hd] using
+      OrdinaryArithmeticCarrierSupportProof.scalarCalibration n arity Gamma context value
+
+theorem listCalibration (n : Nat) (arity : Fin n → Nat) (context x : Nat) :
+    ContextUniform.listValue n arity (List.Vector.ofFn ![context,x]) = 1 ↔
+      ContextUniform.encodedList n arity context x := by
+  cases hd : Encodable.decode (α := ContextUniform.Object) x with
+  | none => simp [ContextUniform.listValue,ContextUniform.encodedList,hd]
+  | some obj =>
+    rcases obj with ⟨Gamma,value⟩
+    simpa [ContextUniform.listValue,ContextUniform.encodedList,hd] using
+      OrdinaryArithmeticCarrierSupportProof.listCalibration n arity Gamma context value
+
+theorem positiveCalibration (n : Nat) (arity : Fin n → Nat) (context x y : Nat) :
+    (∃ c, ContextUniform.positiveValue n arity (List.Vector.ofFn ![context,x,y,c]) = 1) ↔
+      ContextUniform.encodedR n arity context x y := by
+  cases hs : Encodable.decode (α := ContextUniform.Object) x with
+  | none => simp [ContextUniform.positiveValue,ContextUniform.encodedR,hs]
+  | some source =>
+    rcases source with ⟨Gamma,a⟩
+    cases ht : Encodable.decode (α := ContextUniform.Object) y with
+    | none => simp [ContextUniform.positiveValue,ContextUniform.encodedR,hs,ht]
+    | some target =>
+      rcases target with ⟨Delta,b⟩
+      by_cases he : Gamma = Delta
+      · subst Delta
+        have hf : (∃ c, OrdinaryArithmeticQuotient.positiveValue n arity Gamma
+            (List.Vector.ofFn ![context,a,b,c]) = 1) ↔
+            PositiveArithmeticOperators.encodedR n arity Gamma context a b :=
+          OrdinaryArithmeticQuotientProof.encodedPositiveCertificates n arity Gamma context a b
+        simpa [ContextUniform.positiveValue,ContextUniform.encodedR,hs,ht] using hf
+      · simp [ContextUniform.positiveValue,ContextUniform.encodedR,hs,ht,he,Ne.symm he]
+
+theorem directCalibration (n : Nat) (arity : Fin n → Nat) (context x y : Nat) :
+    (∃ c, ContextUniform.directValue n arity (List.Vector.ofFn ![context,x,y,c]) = 1) ↔
+      ContextUniform.encodedDirect n arity context x y := by
+  cases hs : Encodable.decode (α := ContextUniform.Object) x with
+  | none => simp [ContextUniform.directValue,ContextUniform.encodedDirect,hs]
+  | some source =>
+    rcases source with ⟨Gamma,a⟩
+    cases ht : Encodable.decode (α := ContextUniform.Object) y with
+    | none => simp [ContextUniform.directValue,ContextUniform.encodedDirect,hs,ht]
+    | some target =>
+      rcases target with ⟨Delta,b⟩
+      by_cases he : Gamma = Delta
+      · subst Delta
+        simpa [ContextUniform.directValue,ContextUniform.encodedDirect,hs,ht] using
+          OrdinaryArithmeticDirectProof.encodedCertificates n arity Gamma context a b
+      · simp [ContextUniform.directValue,ContextUniform.encodedDirect,hs,ht,he,Ne.symm he]
+
+theorem actualCarrierFormulaTruth : JointGammaSemanticsTargets.ActualCarrierFormulaTruth := by
+  intro data n arity hcal context x
+  constructor
+  · rw [SourcePresentationSupportProof.checkerTruth,hcal.1]
+    exact scalarCalibration n arity context x
+  · rw [SourcePresentationSupportProof.checkerTruth,hcal.2.1]
+    exact listCalibration n arity context x
+
+theorem actualCertificateGraphTruth : JointGammaSemanticsTargets.ActualCertificateGraphTruth := by
+  intro data n arity hcal context x y
+  constructor
+  · rw [OrdinaryArithmeticQuotientProof.certificateGraphTruth]
+    simp only [hcal.2.2.1,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two]
+    exact positiveCalibration n arity context x y
+  · rw [OrdinaryArithmeticQuotientProof.certificateGraphTruth]
+    simp only [hcal.2.2.2,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two]
+    exact directCalibration n arity context x y
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsCalibrationProof

@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsStatementChecks
+
+theorem carrier_exact : JointGammaSemanticsPreflight.carrierComparator :=
+  JointGammaSemanticsCalibrationProof.actualCarrierFormulaTruth
+theorem graph_exact : JointGammaSemanticsPreflight.graphComparator :=
+  JointGammaSemanticsCalibrationProof.actualCertificateGraphTruth
+theorem operator_exact : JointGammaSemanticsPreflight.operatorComparator :=
+  JointGammaSemanticsProof.actualClosedSourceOperator
+theorem all_terms_exact : JointGammaSemanticsPreflight.allTermsComparator :=
+  JointGammaSemanticsProof.actualAllTermsFormulaTruth
+theorem existence_exact : JointGammaSemanticsPreflight.existenceComparator :=
+  JointGammaSemanticsProof.actualUniformSourceFormulasExist
+#print axioms carrier_exact
+#print axioms graph_exact
+#print axioms operator_exact
+#print axioms all_terms_exact
+#print axioms existence_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsStatementChecks
