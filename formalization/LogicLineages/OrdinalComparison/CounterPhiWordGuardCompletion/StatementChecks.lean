@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.CounterPhiWordGuardCompletion.WordProof
+public import LogicLineages.OrdinalComparison.CounterPhiWordGuardCompletion.ProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.CounterPhiWordGuardCompletion.StatementChecks
+
+theorem fixed_quantitativeCounterPhiGap : Targets.QuantitativeCounterPhiGap := Proof.quantitativeCounterPhiGap
+theorem fixed_sourceShiftedCounterPhiOrder : Targets.SourceShiftedCounterPhiOrder := Proof.sourceShiftedCounterPhiOrder
+theorem fixed_counterPhiWordGuardCorrect : Targets.CounterPhiWordGuardCorrect := Proof.counterPhiWordGuardCorrect
+theorem fixed_counterHeadDecrease : Targets.CounterHeadDecrease := Proof.counterHeadDecrease
+theorem fixed_guardPrograms : Targets.GuardPrograms := Proof.guardPrograms
+
+#print axioms fixed_quantitativeCounterPhiGap
+#print axioms fixed_sourceShiftedCounterPhiOrder
+#print axioms fixed_counterPhiWordGuardCorrect
+#print axioms fixed_counterHeadDecrease
+#print axioms fixed_guardPrograms
+
+end LogicLineages.OrdinalComparison.CounterPhiWordGuardCompletion.StatementChecks

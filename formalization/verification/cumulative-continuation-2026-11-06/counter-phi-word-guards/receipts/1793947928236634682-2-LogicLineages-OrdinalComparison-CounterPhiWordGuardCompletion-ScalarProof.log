@@ -1,0 +1,76 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterPhiWordGuardCompletion/ScalarProof.lean:26:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l + o ≥ 1
+  i ≥ 0
+  g ≥ 0
+  g - l - m - o ≤ 0
+  g - l + m - o ≤ -1
+  g - l + m + o ≤ -1
+  g + m ≥ 1
+  2*g - i ≥ 1
+  4*g - 3*i ≤ -1
+  f ≥ 0
+  4*f - i ≤ -1
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 0
+  d - f ≥ 0
+  d - m - o ≥ 0
+  4*d - l ≤ -1
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - f ≤ 0
+  a - m - o ≥ 0
+where
+ a := ↑t
+ b := ↑(counterTail n c (j.natAbs + k.natAbs))
+ d := ↑v
+ e := ↑(rangeTail (j.natAbs + k.natAbs))
+ f := ↑(wordValue (leaderWord n c) t)
+ g := ↑(sourceCount (n + 3) c t)
+ i := ↑(Phi (wordValue (leaderWord n c) t))
+ l := ↑(Phi v)
+ m := j
+ o := k
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterPhiWordGuardCompletion/ScalarProof.lean:28:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  o ≥ 0
+  m ≥ 0
+  l ≥ 0
+  l + o ≥ 1
+  i ≥ 0
+  g ≥ 0
+  g - l - m - o ≥ 1
+  g - l + m - o ≥ 1
+  g - l + m + o ≥ 0
+  g + m ≥ 1
+  2*g - i ≥ 1
+  4*g - 3*i ≤ -1
+  f ≥ 0
+  4*f - i ≤ -1
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 0
+  d - f ≤ -1
+  d - m - o ≥ 0
+  4*d - l ≤ -1
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - f ≤ 0
+  a - m - o ≥ 0
+where
+ a := ↑t
+ b := ↑(counterTail n c (j.natAbs + k.natAbs))
+ d := ↑v
+ e := ↑(rangeTail (j.natAbs + k.natAbs))
+ f := ↑(wordValue (leaderWord n c) t)
+ g := ↑(sourceCount (n + 3) c t)
+ i := ↑(Phi (wordValue (leaderWord n c) t))
+ l := ↑(Phi v)
+ m := j
+ o := k

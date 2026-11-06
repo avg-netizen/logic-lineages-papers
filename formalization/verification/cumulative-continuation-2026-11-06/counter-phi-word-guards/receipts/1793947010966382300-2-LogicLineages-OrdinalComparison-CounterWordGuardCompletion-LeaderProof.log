@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterWordGuardCompletion/LeaderProof.lean:81:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  d ≥ 0
+  b ≥ 0
+  b + f ≥ 1
+  a ≥ 0
+where
+ a := ↑(List.filter (fun a => a.1 == 4) A).length
+ b := ↑(List.filter (fun a => a.1 == 4) (leaderWord n c)).length
+ d := ↑(List.filter (fun a => a.1 == 4) B).length
+ f := ↑(List.filter (fun a => a.1 == 4) (leaderWord m e)).length
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterWordGuardCompletion/LeaderProof.lean:80:8: warning: This simp argument is unused:
+  counterNodes_append
+
+Hint: Omit it from the simp argument list.
+  simp [c̵o̵u̵n̵t̵e̵r̵N̵o̵d̵e̵s̵_̵a̵p̵p̵e̵n̵d̵,̵ ̵leaderWord_no_counters, counterNodes, counterLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/CounterWordGuardCompletion/LeaderProof.lean:80:29: warning: This simp argument is unused:
+  leaderWord_no_counters
+
+Hint: Omit it from the simp argument list.
+  simp [counterNodes_append, l̵e̵a̵d̵e̵r̵W̵o̵r̵d̵_̵n̵o̵_̵c̵o̵u̵n̵t̵e̵r̵s̵,̵ ̵counterNodes, counterLetter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
