@@ -1,0 +1,1523 @@
+{
+  "schema": "focused-source-pins-v1",
+  "collected_at_utc": "2026-11-06T02:02:29.798522+00:00",
+  "baseline_commit": "b09ce88d19ff57fa6a0fac921dd3513d51e1a935",
+  "root_modules": [
+    "LogicLineages.ExternalCheckpoint20261106BareHardness"
+  ],
+  "path_base": "repository root",
+  "local_source_count": 298,
+  "source_files": {
+    "formalization/LogicLineages/Audit.lean": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d",
+    "formalization/LogicLineages/ComputabilityKnowledge/AffineRayCalibration.lean": "05c77df81c21df3862674be56b05b8e04458484eae20744caec2f0b4ef71eb21",
+    "formalization/LogicLineages/ComputabilityKnowledge/AffineRayCalibrationBasics.lean": "17d491e7f0f9127d9e09c4bae9484c99cd34ec83c71988fa25f2dd9d437ce532",
+    "formalization/LogicLineages/ComputabilityKnowledge/AffineRayCalibrationEffectivity.lean": "c1eaa4bee68235887d6ea9b7d690b3c93a991bf78873d6d8b3a92895d6c02753",
+    "formalization/LogicLineages/ComputabilityKnowledge/AffineRayCalibrationProof.lean": "9097369a103e9e69c4b8ce254d43ff1692f1359a3e774dbe910d0d0bc1ac2474",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/Definitions.lean": "8246e34648bce9a17fd2e189c7c13bf5049465afda6d0c8d5b0062b11ede84ef",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/GlobalProof.lean": "969abbaa299b1e9c522ccaefb7e33c21e26a77f217d7768605e70152841b7ed7",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/MRDPFamilyProof.lean": "1ce58bb8397f0176d58b891743689e0789bcec4fc0cd72ca7fb7f2d0e94c09a2",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/MRDPFamilyStatementChecks.lean": "7b0cad0ff51504c0930764e4eb929962079a1d7ea73823a8a6db3156ccd30607",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/MRDPFamilyTargets.lean": "6f87038c34edf6afd2084956a30b4ea92b09a8ff07560bac89e7348291c1618b",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ProgramsProof.lean": "d768c016a4e18ed276bded6042166ead038c89d1c0a2b0d6153c81c38cd279c9",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ProgramsStatementChecks.lean": "b1b52f7717821d6ab6976d2cb67d90940fb542b2440f410ea9d43c8130d66383",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarSemanticProof.lean": "879b9552020c4402297502c4a0ccc059e47c93374bdfe2bc02f29a87c849d9e6",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarStatementChecks.lean": "aae008dbd868263a1b2256762a059f3e5c0e4ced5d7f11039213ad25beffdbb9",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarUpperBoundProof.lean": "db323c74ef0fd79626b58e955f47e856c2f7ff24642808bb37fb4f017537d9d0",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/Targets.lean": "7875b512121262d92326d120918705ff8ed4f747f7ba675c46a8b4719260c5ee",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/VectorProof.lean": "f62d2694b9b77892f530b93e0ede5275383cf3151be5156c48fa075785af75c8",
+    "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/VectorStatementChecks.lean": "3861264f5cd3e115b6e1957e9399f69a29c7fcd5bf2b97ec691cb526aa91d6bb",
+    "formalization/LogicLineages/ComputabilityKnowledge/CircuitComparison.lean": "9a2b6c1972bff0e17ac00baecfdd03862c03283e441a1cc4076f7263cda15856",
+    "formalization/LogicLineages/ComputabilityKnowledge/CircuitComparisonEffectivityProof.lean": "29cdef50e337c4a8ba1bdbfca34b847ff41aff6540627afa1f8a43f79c1f6c1b",
+    "formalization/LogicLineages/ComputabilityKnowledge/CircuitComparisonProof.lean": "2bd59f0a8087c78ebcbb23430a244e3c7abc2323ac2c291a9f8bfa960417d608",
+    "formalization/LogicLineages/ComputabilityKnowledge/CircuitReduction.lean": "1f3a560e0fec8fbced23130f704f2c378d623ef4d81709c1e468310656d837d6",
+    "formalization/LogicLineages/ComputabilityKnowledge/CircuitReductionEffectivityProof.lean": "426ead77bb7b92ee40fb9f0620d105157c2f80d7f7b9d93265a3577807010f54",
+    "formalization/LogicLineages/ComputabilityKnowledge/CircuitReductionProof.lean": "c85d20e5aa00c3151b5e87e811fe6694384b665ca2865d0bd8d0b27a4187b02f",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/AffineRayCalibration.lean": "8c1ac12f689175f7b842740820bce5c152e3362875a25d3b048bf6c7e7a12f24",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/CircuitComparison.lean": "e64677fc0e389565d749038cea2112bf04753d59b45829761c55e9f86db39c13",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/CircuitComparisonEffectivity.lean": "89c0d073665ef0443a6dfc6d4afaeeb1988a145b02b8a1efa8ec4f727cec311b",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/CircuitReduction.lean": "eedb3d2126cddf3f98948ac0fcf84eb5f330c0172eb5b104724fba22b9257d55",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/CircuitReductionEffectivity.lean": "3c8ef018d285460051b0e7c2e4ea03a65e2d15456e42633ebe810fc14b4e74ab",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/DiophantinePolynomialBridge.lean": "37080ed35077adea455a43657dd50b4745d3a51970a1ed8ebaf8ebcc043a644b",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialGap.lean": "f50d88fcd80d9a494e24572ea16b29f5f80d2dd01d728f23bca1b3a5b1b6179e",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialHereditaryCodec.lean": "ff4fa57a3d07881b48607629be088c500f9192d2c1e27f843c06e74fbde42da0",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialIdentity.lean": "d1f83148e8ac4a6569141f2608ac7cd5435033ecfd1f3800ff42c89b4324ed76",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalForm.lean": "b7408045d75d22f7a5bf0641fd05296c1a0e01e2934a404bb4e6ecf7607b0598",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalFormCodeOperations.lean": "abeff70cff65eed0b254bbb7bf8ebd9e9bd3be9c29b7ea6b69082b24681da66e",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalFormCodec.lean": "4a356a064208557086ee488427d9e14ef72d672f54699a7d292bb552277db7c5",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalFormProduct.lean": "f760f67cfd54070fa4cb6d556cade5ecb065a55afec80d12ec54594fd95610fa",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalFormProductCode.lean": "e417a9cfa240a5ad928431140c45e84b8c23f4f62c9c1279fe64fc7dd823ed09",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizer.lean": "f5005a927ccd87d9f0f470ee53df3f1ecf84854d006b59a373537596f08a454a",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/ExponentialNormalizerProgram.lean": "43e04bb310fcf168d8b6b7bf2bc1d6db296c8b713f5307575a1376715caca8dd",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteComparisonEnumeration.lean": "c7539ffb0d38e261e69f8672229a27b7a717f068c628d73bb18ac559d58e1fc2",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteComparisonEnumerationEffectivity.lean": "c4aa2ca9285e76d798827af5b260fbf6a04840afb5bbd87d76a5b3a23aa5d1d0",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteDepthControl.lean": "014c4487bd7d2ddbf5044173bbd5fffd32296df6fcef3663e0ef811f3b19a5b5",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteDepthEnvelope.lean": "a937763da56d59c5dc521968d66e2df787df2582fc8c8c30353f53d22f983f57",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/FiniteDepthEnvelopeEffectivity.lean": "bc43537021826e2ad1ec467667d39df5171fb2746addfd2ad03ff462412e4163",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/MultiplicationGadget.lean": "a43bd3e54d1bdb9cb421ed2acde22e3390a4955bf114d4304cdaed87d0207d5e",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/NonnegativePolynomialComparison.lean": "80e247fb8e53e01e48803070196268091a8edf9bcc2cde8da2c693934a2b3c87",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/NonnegativePolynomialComparisonEffectivity.lean": "8d8eb0c7102f7e170f9eaa5625021c93c9fc827f0a2f3d0e9ff262f9281ec2da",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/PolynomialCircuit.lean": "6a1618961c0d2a4ccc6d1a9df7d872d364e3beeb0b3e43176a6f13997199d92b",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/PolynomialCircuitEffectivity.lean": "a12cdd4d5d76b1af26d2dae5ab20d8c1049e90db2edcb83fa48443c1e33117a7",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/PolynomialComparison.lean": "7b30921f47f76262f7523e9e7cd96a7258fdbc453040962acd9b82149eb34dad",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/PolynomialComparisonEffectivity.lean": "e9fc3d606070022f028e4117d8b07d84c697cb8e72600abc72179230c831f19f",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/PolynomialDomainShift.lean": "caf140ffa16f712d41bba2d2a22cb8250bd38be4031311ec7ca52704d7035fa1",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/PolynomialDomainShiftEffectivity.lean": "806c10aba16a20a2cd5cdd8515dff83626cf1b434e9b3e8bf4b41477f7a06ce0",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayCodeEvaluation.lean": "db9dde3b91a73be4deae612ea98e7616c57dad92558b0de5a20e981aec224c52",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayCoefficientCollection.lean": "8df43683652ef12e51987e40b250f7b1107d3e42f17a6a810d3ce9bbbc60dfc8",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayDominance.lean": "77ba483a7277b77662f8887c3207e77843b2b8b1a98db609c1872e47dde91299",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayFamilyClosure.lean": "59c1fe3430d9825670a19b22f880d0a827daa13fdcc01fa7eebb971d8ba1beb7",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayFiniteSum.lean": "d17f65840f6dcf45cd9b5d3f07ae85ca5ca1beb90db82a40fff3633205db9fb7",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayHeightInduction.lean": "007993d238d06aca5aa9c05aced646b0b011a280029a0f4a00b85bfead594381",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayMapDifference.lean": "dcfab4978f232800fcb9a64dd21f2d3d04afa8dd7476b4adf590a9d20ec3520a",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RaySeparation.lean": "fd4cc78183293a36de5a1e6eed7fff46cbac1c001d9dbcdf9f8770c3b8856144",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayStableMaximum.lean": "56dfaa6ac39e0b5d3a01e6d5d8522eea4f3f1c6aa8dc56eb4e0c2fdb66b6e572",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RaySurvivingDifference.lean": "e0447348cadc4391f4a1bfc962fbd2f015397495a99db1ab7a819a1848f96856",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RayUniformBounds.lean": "211001594f66ae958a22017ef881513cbced21331c1390cfa3f869bd9e0a29a5",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/RestrictedProduct.lean": "3b6aec50b063e33c05f7d4ecddfd8af123cab045a4eb7a40ce73e129e4831214",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWBoundedVectorCode.lean": "b3cc2c31e2a9b358e81e25212ad8839af1d107c7279fdcf4dff6a920b3c6a068",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWBoundedVectorPadding.lean": "1094168867758fcf6a7a468195398c9d91e736c7d506920388062a93f1df822b",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWClosedAssignment.lean": "6a3a56c320440cc10db350bab71038f075730e3b16c2310d74c4a08abe7edd8b",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWFiniteEnvelope.lean": "ab69f1aa013167b3387c3ef2ac0c96404e6904ba76176dddfa730bd09a0a71a4",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWGroundAdmissibility.lean": "cab6745b4e2669f1a444808f3fd7a72cb1225e36bbc0336021c9c5a397bdb13f",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWGroundClasses.lean": "708ddd3cc425c3b729e7b05fb26a1e52692a339c34aa458a4b635cb30a9b33ed",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWOmegaFiniteCalibration.lean": "edf6c66ecc22c85beb1dfc876c18c0326773e858f12dd849628d738b081b042e",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWOrdinalPrefixCode.lean": "d81eb8d443ca42ba6c70551b0d69ef807ddf52892c571fa9ca7b71ef61580d22",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/WWOrdinalTermSemantics.lean": "953196a119737fa53482683aa6c6ad5dce99793be8555150851909c4b02afc23",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BinomialProof.lean": "9c26f25349016372cbe9fd0ad583795e73a0969c471be1d83d04ad14ff348852",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BinomialTargets.lean": "1bc41d09a82325fbe7067c472df2fa090f8540de8f8b0ee7f692f8abe35ebf3d",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BoundedUniversalProof.lean": "507e93d0aa0b1a71965242cf7b7dc73fb23df8e41425f7f21890f30b751c4d54",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/BoundedUniversalTargets.lean": "c4ffbdbc05c8f997440b70eabe31eaec99cab180ead053107ab5da15fa5a1b9e",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherArithmeticProof.lean": "68a0cdf4f189b7a0fd3158833488cd16ad5fe4627b68b06c88790c71530693db",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherDefinitions.lean": "5e1583c7b28f23dc1d8e73d7fc6ea24cb924ca7ed0c53a8d76fcc1ca16f82307",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexArithmeticProof.lean": "a34a76bd3098ece3534917c465357f1b43307a27f3f05f798f9ee8b8ee26f43d",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexDefinitions.lean": "bacc420c147b8a889595e7629a77a3247e324bb4f46306bbf1f4e24a02e67448",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexDiophantineProof.lean": "58e800c92c33d4e49cf6c8fce7665d5df56764fd295b76a45b8470753034847c",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherIndexTargets.lean": "0e714b0dd321eb4fba27c696eb552748f32cb16975265461cc412557e1827c08",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesDiophantineProof.lean": "84c507e091a146d25971c97c9a736be7a3902a88af7679d6c06b8fb35af753f9",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesForwardProof.lean": "f21d8f3ef75e66d6f4f1d544a11147a617c6bddf985d516dc7091ac73daab4b1",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesProof.lean": "1e3d080f7395c54b72de8500f624518d5dd135093ff084fdd26a13d5e8086ea8",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesTargets.lean": "0a3c5cffc7a743282b82e5eba496f8cfbc43c2659ee61905cb58bad36c26667a",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessProof.lean": "47347bfb2ae4024d17de557c3816880dc982e09a690ea1f58dccc399471d8fc7",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherOnesUniquenessTargets.lean": "8a3b228299a726a1ee98bfc1f2f022e9a1303595cb2744937b1bc30cfcfbaa86",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherProductProof.lean": "27b256a1c397c1c4f31f35012f82e67baa20ec2dbdf773d23dbfc12e2e2a938a",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherRelationArithmeticProof.lean": "888230bd7a77dd814e224080922f258f2c971173feba5c6bcc29fd13b217136e",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherRelationDefinitions.lean": "a6917741b20572e1130984886992ea4e85034f959c76db377faf740471159090",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherRelationDiophantineProof.lean": "adbb2862f2d6a13b2e0d0482c0d52910f1bc6a91970a7689172fa3253979bcb6",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherRelationTargets.lean": "841d812f5c2af327e6ebaae606d1573c6e083bd76df8d56d62c51777a8eb2310",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherTargets.lean": "69c9d69faceed6c63f793418f6a99df7f43c5e53ffaf40357df6fcd22e71175a",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/CipherValidityProof.lean": "caa0b4809f1b0f4974a8468100c9581d6033c3d1d711fa1273531f161ce930ee",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/Definitions.lean": "ef2ac3b9d60ed5423ff525ca78fb6c10f95fc86562e8c5dee929c45f280ad6ba",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryDefinitions.lean": "1d520b62342b3139da77893c70b15f8641b5c492f4279a1b556055d9d7c49d93",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryExpressionProof.lean": "fed47d6ce509c3997e58c05b92de6ee2eec0bdc7f999197adf73e87c05824a3d",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryNormalizationProof.lean": "1d8a1619cf334c90851ca5a7c35cbc524ab51540d2e851cad5f3ef91c51730f0",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementarySupportProof.lean": "a634625461926064a9d9b8ccf8798df53323578aa820937a23ef9f84637f52e1",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ElementaryTargets.lean": "9bf1fb938fa732b3961e65c208dc77081403bd4d18f4f1d56287babd12a4b127",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MaskingProof.lean": "bd979d1b4825626b87a55c9f7cfaf2262d08987c3545ed8f1d0a1adea851446c",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MaskingTargets.lean": "3d895bb48ddcaa6582851c534e024177429110749b6996aa5fd4cb1411a25abe",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationDiophantineProof.lean": "3676fc0eee8b21878ff50c5277a1d9ae0b82eef0ff58a989e4287beda322afc1",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationSemanticProof.lean": "062ce6fe5d8de0bd796ac16cd7755db046410879cdf3bea4f623cd449e44fd16",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/MinimizationTargets.lean": "ad193f5eb1c804b8d5d80e744917b5cff8ed667225f7f60dafaa0dc7da799374",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/OrdinaryCodeProof.lean": "30eac1e2693e0c7756c1147bf2c7e2fdbe2ab3c22b2ca165923de172bb0450d2",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/OrdinaryCodeTargets.lean": "3d4c8ddc0a2eb1c4e37d9efcfcc9122d9ba6b00e3b4130e524c0c52dee49ac47",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDefinitions.lean": "bc16284767e2fff5e3a0a12e083f8d9dd7d5ee45841dd7f28dbbca38471355db",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDigitProof.lean": "ba7c05f7364903cebfa07b3c24b96c783334c7abb14b3e918a64fa4dcfc5bdba",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionDiophantineProof.lean": "8fe45ad8da88341ecc88d9a87f7f470dc47c2bcbaac3c0e6feb0155d81155137",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionSemanticProof.lean": "d0df61be9493dda41066de02b793bcf2b48c1ba8102851ca16ee3dd6818d4f65",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/PrimitiveRecursionTargets.lean": "818c0e3f2a0aebf4a2e26782638d0b0c0134f7c0a853c1f46366af669d0f0957",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/Proof.lean": "42f41681684b97810cb4232fff58d7c37ef82840a104b67a8b3033e57f008337",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ReductionProof.lean": "24c65ac85e48dc6605f12bb32d115986afc44bfa9cf42fab8396e384e71bb818",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/ReductionTargets.lean": "ff56fd255ce39f1e6fef65a12ebf683a68a1415918ca0d6755cf39fa25151ad1",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/RowPackingClosureProof.lean": "41e62cdd0d6b5517250b6bafdedecbeea17ad957a1678c600d2a1e7f7da7f87b",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/RowPackingDefinitions.lean": "2769813f127c869d70d4146bc7fe2ecdb69af6a9f2ca150f043722f9bf16c986",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/RowPackingDiophantineProof.lean": "6df32287448e5b4022be67b33004974cf0395241da77581143e9956e6e0028af",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/RowPackingSemanticProof.lean": "265bdaacb0ecd5396463be3194ed7afd9e55755423d25bc206db17e5d35490e6",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/RowPackingTargets.lean": "4513fbf174644663233f324c2fdb8ce19758344d8979814941921b7645cec43b",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationCodeProof.lean": "a53634726cb21764300fc971512b5ed62c5b4abd57d5c4cbb10a99e4aff5bbd9",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationDefinitions.lean": "a094062a06bea5dc32f8e7ee4c7f97dbdd625a73234560dde4bf69a24785a07e",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationSemanticProof.lean": "e52dfd448bef18e6d9122540f35602c3a56f0df8ee4453943df0d9177502e8ed",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/SpecializationTargets.lean": "7900e8956d48f3acd507775dc1a291e5e36026297bf6cedc72ed2bc2f56ed185",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/Targets.lean": "aaaeb9576cdaf5844ece1f67babe898f476d68d221e00c8fecb6d714369189f8",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/UndecidabilityDefinitions.lean": "8e7b59ed72db9fd520959bc14eec87fb3ff2c7b4f5a72f3674ec19e24609913d",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/UndecidabilityProof.lean": "b4474c801e435eb874a94cfb5953995235197ded6258a6bf10946b855bff58a2",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantineCompletion/UndecidabilityTargets.lean": "ce3b7b92ea290aae6cbcf972ee444bbb6b23d67a989c88a50139eacdd9b57dd8",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantinePolynomialBridge.lean": "21226d0cb11ed3b53c9860a995c3e324a65671ea72199c85baea39e02b158834",
+    "formalization/LogicLineages/ComputabilityKnowledge/DiophantinePolynomialBridgeProof.lean": "56f2311b343d1e2f4a705698d17f26813db984790da1b523e55d0bf5f2805fe2",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialGapProof.lean": "4a14cddb5f309d90332d5db821c059fdb459600269af1fa7b70d0fc0e521d916",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialHereditaryCodec.lean": "a73f8eeb74ed5f211bc59def4c190287a1ed6e60e7237bd515afd3fd6c97bb45",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialHereditaryCodecProof.lean": "2f4779e01a2bbe6bb96d19b6afcf80d1959ed63492abec4bcab96b42eaab6cfb",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialIdentity.lean": "500b2e757fb360245ab651482f5bd5bc00c8fccb3ec3c8d9a336a797dffae44a",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialIdentityProof.lean": "49c37e8c3490039ffdc50022a38ca238fa0e2e239453ea9ae0f81423e7509287",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalForm.lean": "8bebe1a691f1d9d571d8d36a106943aee6d8b42e13e499f22b430806e35e4f0b",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormCodeOperations.lean": "fdba695c4759b03da53f04bf4e769c13704c35efcae111e9be94c295921ba6c1",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormCodeOperationsEffectivity.lean": "f24f489eea2bc8411d077e3c372cba1fbdef15540c686f5831e9d267ed6ff26c",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormCodeOperationsProof.lean": "b62caab9fbaed8a05d8d7747404121447b84577f7f4ed31771190d19945ad060",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormCodec.lean": "5e41e8e1c13146e66e97b95237dea81d37d6dccf6f6bf854ab7d9586bf255e7d",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormCodecProof.lean": "846fb796e6b11ea35a4b0ad9271aa1c84b85e1eae84756c4d6fccfa19577d480",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormProduct.lean": "a104f80fdd4caeb3ad1c20d1802f9230cbb9db7aead31e28a27e073bbaff2d2a",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormProductCode.lean": "4be064551d98d157f533319a38a0a58323a303317219e3b2233f7518d4115604",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormProductCodeProof.lean": "2ad7acb537098f2f0ad0734571d739e7f009c12cf3e8c2ba1a0703b6add62ee5",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormProductProof.lean": "43799f769545e02f418cfb0e0e59b7ad2927ca18258d79cbab878991fad1fc74",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalFormProof.lean": "66af2e0356125f99639fbf9ff6d11c0972e74c316a6dd781aa5a2086dabe2e88",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalizer.lean": "c1d1fe0fd996f56708304e160799a82dad58ab5085dfeee884b80c76f3f6ad58",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalizerProgram.lean": "74cfdb198d2befaaf03651b9fea82ca241fab863297f730bb9bb5013b4c2ae2e",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalizerProgramEffectivity.lean": "7861be60b1d597dc74110f663d8e9abc19e604f65821b7ba410d656ba7881142",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalizerProgramProof.lean": "8c884c157b4cb8f28cc6b7812b5fdf391a0b642f481d4461c07e915c56b695d8",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalizerProgramSemantics.lean": "afc64cbdf7c4186ee37b0526cffe623c7281f5d95c666ad328e665b7bc3e7588",
+    "formalization/LogicLineages/ComputabilityKnowledge/ExponentialNormalizerProof.lean": "695a8dc7314da730d3e1c19f7b89ccf7c32500b6f834c7a61c7820e271e7e367",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteComparisonEnumeration.lean": "d74c1d43aa367f09b38c1c46a91a2cbe409d3adb6b04714ca7d87d7cbbbb2748",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteComparisonEnumerationEffectivityProof.lean": "c6248285750943176ce2e782ee168ea1b12f5109c6992d5055f3ed0b6b1a5d65",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteComparisonEnumerationProof.lean": "69e898b7fdb4f34e411aa23793a84bcf51876f17eba315de8ca3314585bb7b30",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteDepthControlProof.lean": "848b4b53c39c5c548dca697af8d9c2b6b4370999672618590d3699ca2ad3c3b3",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteDepthEnvelope.lean": "5fbd6ef528fe41d579c12b617e6850e6951ce2a101102eedbc845015cad00258",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteDepthEnvelopeEffectivityProof.lean": "03704c06de3c87cb4f6455a7734a8372665efbefce2ed31cd12b6710501d963a",
+    "formalization/LogicLineages/ComputabilityKnowledge/FiniteDepthEnvelopeProof.lean": "9c892622edbfcd04f44c5cc63bd8de956a9873190983e0703ee0340b5190b6a4",
+    "formalization/LogicLineages/ComputabilityKnowledge/MultiplicationGadgetProof.lean": "79c9f0059d64dc1b4049635a708875d7fc1d019492fe56b0efd83b52a02545e9",
+    "formalization/LogicLineages/ComputabilityKnowledge/NonnegativePolynomialComparison.lean": "489b5c946e19ca1618381d8d0b8a083df445a306ef0c370a52ccf079f67dbd66",
+    "formalization/LogicLineages/ComputabilityKnowledge/NonnegativePolynomialComparisonEffectivityProof.lean": "885557b9e5d50831c4ba23b64d16756e9a910f677dd3a5fb442a4b622cc501ef",
+    "formalization/LogicLineages/ComputabilityKnowledge/NonnegativePolynomialComparisonProof.lean": "827f20410116ece8ba8881ab64760fa318ea1caab1eee1e0829b7184fb206602",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialCircuit.lean": "72e04616af8a871599fa5f604fe12a8193797aaa1bf5bef4d8fe8035dbf0beaf",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialCircuitEffectivityProof.lean": "93ad6cee06e692387593a1101575b075dd31fc53f2d15bdfa10636abd5e55abc",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialCircuitProof.lean": "ce03edf4f3c5032643202202c808440fdd093816aa835af79adc8362784d0110",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialComparison.lean": "e3c3092707b40de11aed95b66171f273163dc2398c67a2ba152390b754115967",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialComparisonEffectivityProof.lean": "e7b0daac884dfc361289e9b3e68a654aff6894bfdb78f868c7a4a97cb5382f48",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialComparisonProof.lean": "830ddcdae582730c9836c8e22fc1c59c2347f9ebf91b54e6d11fc124b0c3a483",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialDomainShift.lean": "e15883af9a71cb07b57d32641673ab735a11457868c1b4acf3ef938ea580077c",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialDomainShiftEffectivityProof.lean": "f61ab7acc3500919a6447b80d6aeda51e995615c0d902dba2dd02ca717e3355c",
+    "formalization/LogicLineages/ComputabilityKnowledge/PolynomialDomainShiftProof.lean": "d394214b28af42b4d6ade1478417feffa90ab5d1cd5864d90b8b231ee83502e5",
+    "formalization/LogicLineages/ComputabilityKnowledge/PositiveExpression.lean": "4ad6156af313275071fae9fa1d4b0a3166fccf99c2cb38a6a46921113a6fc1ed",
+    "formalization/LogicLineages/ComputabilityKnowledge/PositiveExpressionProperties.lean": "9701f4480ae2dc893dc9fd5de0c7ed2b7794426a63251b317c0c528f6f808c65",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayCodeEvaluation.lean": "4901209d4fa75a96a1200c3679e1e276a66750bb8443954633f2a4ecbd7f5dae",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayCodeEvaluationProof.lean": "3b6b3487018a8826a1cb5a56e4a52d600c0b63100b7f0160e9928812fd6716cf",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayCoefficientCollection.lean": "3fcebff8399422ea8fe84fa45aecc12411fe16c4fea30ddc84562d45277761f7",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayCoefficientCollectionProof.lean": "51cb1d4e4dc5da9a043ff3e897694125afc2bf4ebab75ceda01117cdfd972820",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayDominance.lean": "e84dc576c1c7ee64673bc0af28dd725da6416a7b0ad226116b9445a3508d44bf",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayDominanceProof.lean": "47f1c99807e5423f6451cab40742e4cefdae7daed3c18d58b0e685d12cd91b38",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayFamilyClosure.lean": "28e202f95ad743b8f5791c9b01448e3f4211e6d8f8ea8ee76162aeb22843d2b6",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayFamilyClosureProof.lean": "9149aac610fcb385e5295f54160ea2d321c166ae82cc6dea32fd366248dae555",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayFiniteSum.lean": "9b241149fbc92474ac864a76410098e85728284f55191f8689b5372fc85f79cc",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayFiniteSumProof.lean": "25e0226ff29454aae6a3a1db20a26b34efc5745de1b235c38777eabc4b291dab",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayHeightInduction.lean": "5d8ed59967eb88cea6954372c061dd95a91cc382b0f5a1594c9f5264d1327d2b",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayHeightInductionProof.lean": "6abb2bcd9e1961c64a259001674d4baec6fe7d58b3399e420b1919799b4a29a3",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayMapDifference.lean": "e3fbaf7ba630cd49ae446f5e2d08024f25edeb5c76098a89a5625945cdbb038a",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayMapDifferenceProof.lean": "bedf54a527cd5c29ddc80bc112df5f67bc0146fdd69b970045eebb78692ce54d",
+    "formalization/LogicLineages/ComputabilityKnowledge/RaySeparation.lean": "ca7622b381e22236befcd1c5368c1d20a57c2a94b5ee714ff039bf62b97654c0",
+    "formalization/LogicLineages/ComputabilityKnowledge/RaySeparationProof.lean": "4900bcb43d47b6e1d3387d372233fcf9dd413432add01a49e69f7e0c0e50855a",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayStableMaximum.lean": "e2e7c3266bc6222d8d360e78811f9405b1161296a7f220e70c1abb367809b181",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayStableMaximumProof.lean": "de8a0b1c499f1cd0eb57fd074ed700264ddb41df05ce93d78f8573b69244add5",
+    "formalization/LogicLineages/ComputabilityKnowledge/RaySurvivingDifference.lean": "d2827afc52c355c7cdba1f3a7f0e4f70b42066c6b7b6e89f04e1d774db528560",
+    "formalization/LogicLineages/ComputabilityKnowledge/RaySurvivingDifferenceProof.lean": "b609b69a05a83373ce4065185bbddc7a2d6b0f79ed3429c9bded3b0446f80b65",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayUniformBounds.lean": "b61aec79550bc67d9f36eaa442317b10789bfa38026fb2e407cdeb7676180614",
+    "formalization/LogicLineages/ComputabilityKnowledge/RayUniformBoundsProof.lean": "c53960eff6e73b031cea5cfb25ac3634d2531f097b54f7373b93a7def1727b69",
+    "formalization/LogicLineages/ComputabilityKnowledge/RestrictedProductProof.lean": "fc1638d3ba1408e74819e02e0ec0495daf88ebb153511795bc67db4df9774c80",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWBoundedVectorCode.lean": "6bc09e32b52312678b675e96df8ad171a47300fc28126609c1664747ec492a00",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWBoundedVectorCodeProof.lean": "e33f033f10a0ed81355a99f292af7ae87393edc9653ab6fd452db6afe215a7ff",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWBoundedVectorPadding.lean": "db3f38febcf66e735f9d706aa726a47d053e70c8e52934000cb5529d2951436c",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWBoundedVectorPaddingProof.lean": "9254acb6d77593e7b320554b3ebd24e1367ab5302b49464e5915636fd13075f3",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWClosedAssignment.lean": "ea1981b6f283e27f64af801ef595622aaeff60d8832a7f53af9a73d095607e6a",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWClosedAssignmentProof.lean": "8e717e26cdc1e57869048e3c72b18827c8904d73ce42486d842598f178699e4a",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWFiniteEnvelope.lean": "642e0c362567f89e3bb3d9a62f22809b0a5fca3eaa6b949d5003d5076cd485a4",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWFiniteEnvelopeProof.lean": "c72937c24e580fa6cb665cf6122df3b8a0b8cbc6673b133bb43238c1c11add9f",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWGroundAdmissibility.lean": "cb90832c558b4bd232204f12639e76b194f3e06cb69fba0b24a6568f06f4961f",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWGroundAdmissibilityProof.lean": "5ac98d8ffc6947cebd2f5d3cd010521d71672c824ec7213bbd8e160b508d6816",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWGroundClasses.lean": "02b9dac06f8e372a762d47b739574d9aadd235380a41c435603baec94763f441",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWGroundClassesProof.lean": "3614417a56be1fc21bc46b87680073037303feec2b56af6c0cc5529b24e7b8f4",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWOmegaFiniteCalibration.lean": "9fe182c523fd266a9dcb6345896049d161af53da6c8a2ad1a192a96b5575a7f0",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWOmegaFiniteCalibrationProof.lean": "784b73565c4b7fe80c193ad5a5e00bd23b84cf9c78e028ed15655b19419523e7",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWOrdinalPrefixCode.lean": "ef8d12699a6b734fd78abeb7aa2768b816d3dda8ab24e75e799f84008127bbda",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWOrdinalPrefixCodeProof.lean": "4382e19ca81f4cdfbf71f71a4f348fe3d229950e6102098d9eeeabb290007678",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWOrdinalTermSemantics.lean": "35b4e79b509377fdf51eb2032a2ce91e720bcc08855120c9da8cb3012426119e",
+    "formalization/LogicLineages/ComputabilityKnowledge/WWOrdinalTermSemanticsProof.lean": "6ed41c70936fc7585c4ba4c75fe9b010a9e0a99257856f4d773e2b1097563824",
+    "formalization/LogicLineages/ExternalCheckpoint20261106BareHardness.lean": "8f8b25ab677a9838e67a324b9698ddd482e0b8b6ddf537ae1edf8ee4e5399d2d",
+    "formalization/LogicLineages/ModelsAlgebra/Differential/KroneckerIndex.lean": "28db13920ebc1b7e23b6a7fb451628aec096d23242e05d685311a25e2b2956e2",
+    "formalization/LogicLineages/ModelsAlgebra/Differential/KroneckerIndexDefinitions.lean": "25aa2f7fa49cf33ed81ab5da0861f8a4b20d8afe2bee8fc27ab694d8b77a2426",
+    "formalization/LogicLineages/ModelsAlgebra/Differential/KroneckerIndexTargets.lean": "0acec96db59781e809876232a5f788aa4f6ee76f46a5520561a0b8d6e87e2e55",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapse.lean": "a03f5b0c11b528fab40124c85770a1c402a7fcafb2290f1d00cc6c03250554b4",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseBounds.lean": "5629e690b025408116fb1e26814f914c5e2e4891d5f024b0782fb6319dff5d3f",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseBoundsTargets.lean": "9d8ed2a14aadd75244eade299d9693da2627ded07054706a012aec6e47403906",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseDefinitions.lean": "4895d15c7b5a5bbda7bd8964c48c00fe2a02e8fb7f1608b04573a44384023fe8",
+    "formalization/LogicLineages/OrdinalComparison/ActualCollapseTargets.lean": "cf098c077d4eeea4db21708fbcf7631c84da80ec6642622659f8cbd466e5f9bc",
+    "formalization/LogicLineages/OrdinalComparison/ActualFiniteHead.lean": "27ba191bd79731661e65663cc5369c49fccc516dbd759b08680bc34c1e64b9b0",
+    "formalization/LogicLineages/OrdinalComparison/ActualFiniteHeadTargets.lean": "682a0532c51866e3d9b4ead5841da3f3cf243bb2e3cf1da104272db01630ee1e",
+    "formalization/LogicLineages/OrdinalComparison/ActualLimitPredecessor.lean": "b8c957fe444d9bb4c2e9f01b55bce4ddc24ed4bfc7489a3e0a45dd39f4610178",
+    "formalization/LogicLineages/OrdinalComparison/ActualLimitPredecessorTargets.lean": "bf7eb6aa74b920fcfc6f1629d54bd85de54bfe0907958de56c9c3c470e6093b8",
+    "formalization/LogicLineages/OrdinalComparison/ActualMaximumPredecessor.lean": "8c05f8b1a0517a426b4397c1a3bde34d37e32cb4781ea1d75c1119391b635f59",
+    "formalization/LogicLineages/OrdinalComparison/ActualMaximumPredecessorDefinitions.lean": "2605720b2243bb13e48f1c1602a767e9bc4122b70a730277529b1f3021db51e5",
+    "formalization/LogicLineages/OrdinalComparison/ActualMaximumPredecessorTargets.lean": "67360a5bed345309757b9609b5707d6d9d357eed55b11c501391665fff940fc6",
+    "formalization/LogicLineages/OrdinalComparison/ActualNormBallTargets.lean": "ea9bb021f2028ec50b6965e9ce32ddccf20bc9c22a05a4c85827344ca5cf5847",
+    "formalization/LogicLineages/OrdinalComparison/ActualNormBalls.lean": "6af56560536eb6868a3b2ff83ca03784689b4fd5ba2e897bfb493cfb35d85c93",
+    "formalization/LogicLineages/OrdinalComparison/ActualNormRecursionTargets.lean": "1ca68f18a7d6e37f70144865c38ed49166400b913a89091b201cf59555cdc61e",
+    "formalization/LogicLineages/OrdinalComparison/ActualOrdinalNorm.lean": "7033245fd9abd85031358801fa5b63e8865b57be2d791546c8153c46cc39a555",
+    "formalization/LogicLineages/OrdinalComparison/ActualOrdinalNormDefinitions.lean": "0503526e3c50818f22e9924cac19345912a4bdd63d130ad011f0f1225b82eb0b",
+    "formalization/LogicLineages/OrdinalComparison/ActualOrdinalNormTargets.lean": "d8684e1d8b1f343d0410a09f6a80d6ebfe7f8390ecd4fbcf99d07c37ab3a1297",
+    "formalization/LogicLineages/OrdinalComparison/ActualSinglePredecessor.lean": "7fa8f1dcbff2243a3ca847dd015bcc803e06f469b80aee03af2b55af0c504a88",
+    "formalization/LogicLineages/OrdinalComparison/ActualSinglePredecessorTargets.lean": "9b82c2522a5f08a770d4629e8418341d678dac31892a0e2972f35c880701bbbf",
+    "formalization/LogicLineages/OrdinalComparison/CNFDescent.lean": "b8061d831972ef2b03eb4362c96db683b72fc099d98a38ec58bdd61a596ffd39",
+    "formalization/LogicLineages/OrdinalComparison/CollapseTargets.lean": "6b9963e757519a2115f764db6cefe8527d76d1695d47fa93e165942c6f9655e6",
+    "formalization/LogicLineages/OrdinalComparison/Control.lean": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140",
+    "formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4",
+    "formalization/LogicLineages/OrdinalComparison/ControlTargets.lean": "2b5c663880aec5f55fe6f526bacf19ce131d3ae77e9485332b78dc5826d693c7",
+    "formalization/LogicLineages/OrdinalComparison/Definitions.lean": "d3a62bbfa4141166fbdf5f5bcc3f3e7e8ecad7c437a15ce5df9baff851a67867",
+    "formalization/LogicLineages/OrdinalComparison/EncodedFiniteBallsProof.lean": "86cc8bd56119c952673107bcaced847d3104cb53fe3c79b99f1e93eee3b67fd3",
+    "formalization/LogicLineages/OrdinalComparison/EncodedFiniteBallsTargets.lean": "65c82c505b0befb190d2367a590d3ee573593c15aa8df7237071bf9d939bf31c",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalProductDefinitions.lean": "055f372a297d297f7f09e60f503950033796cf616e7f3040cf08d1c593c04f57",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalProductProof.lean": "8712cd9900ade0dca22072b2e6d64f14ba3dce4c28680517e478307b50f0d745",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalProductTargets.lean": "c91331a1593e9cc8e81cc2a438bf9f276843fe40cf7cc6337a293bd95b222e0e",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalSumDefinitions.lean": "b1c4791855f7fcf12f1a39530810d5c3c0b49706128961382fefe643968f4d30",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalSumProof.lean": "0747afc55835b02261af7188f4ce9b1f0584e7693206bdcf6d765194104a896d",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNaturalSumTargets.lean": "34b6f7d826f944197b0d9c25c16a31e7d3174e7f8fada1c4e07422c28305120c",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNormBallDefinitions.lean": "a955d2fcad4e86aaec3c4849c8f687aed9a66cfe0d83747b52b282163b9f7715",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNormBallProof.lean": "347de42c2e7663792d130b906a6f9147602d8810769e6bbfb7514700a457f904",
+    "formalization/LogicLineages/OrdinalComparison/EncodedNormBallTargets.lean": "1b1277db42beec9b05d59298be34c0a29cebfa097822e6a109d956850c2a9ff8",
+    "formalization/LogicLineages/OrdinalComparison/EpsilonZeroCalibration.lean": "1f30ebbce76d1761faf2121f60939c71164c6ecb74829bf9d8f36a5766a1eb4f",
+    "formalization/LogicLineages/OrdinalComparison/FiniteCollapse.lean": "ca50a00381f94a62c4e872d16aaba5d0b91c93c7bb33e4d3502e8604d96d82e3",
+    "formalization/LogicLineages/OrdinalComparison/FiniteTail.lean": "7c596451714034c06e8ab0b64ede8c718300f3ce8820a17ab3d31da0529dc660",
+    "formalization/LogicLineages/OrdinalComparison/FiniteTailTargets.lean": "7069d9cc5055509a8d22659d7de464f5efec5ce8d79291ef037fe5b79c13a77c",
+    "formalization/LogicLineages/OrdinalComparison/LimitPredecessor.lean": "640229c932b276910eb7d9b88c6b4c39b79c6956daa2e7400ff9c9d3aee744d8",
+    "formalization/LogicLineages/OrdinalComparison/LimitPredecessorTargets.lean": "c92fe54ce714136ce7a6c68260ad299c38159fcfed44d869a745b43a1da1fe20",
+    "formalization/LogicLineages/OrdinalComparison/MaximumPredecessor.lean": "79d0ca3c3f8ac7fc1cb4c0f1a74aacfd9857eb175f2d04bfc27d1d51cf234ba5",
+    "formalization/LogicLineages/OrdinalComparison/NaturalArithmeticDefinitions.lean": "7b6f18f049b37fcf600f78f9c53f7da162ddb45c10edf19a8a6fd33d20c44d5b",
+    "formalization/LogicLineages/OrdinalComparison/NaturalArithmeticTargets.lean": "64b0f641ba48ec4479a5c847cbc9e05c057fddca83e900c39b7325ec69379f2a",
+    "formalization/LogicLineages/OrdinalComparison/NaturalProduct.lean": "328756dfb0f45f0e2a6570e59ba892d3b70ec13ce289e7d397325a1c28cb7546",
+    "formalization/LogicLineages/OrdinalComparison/NaturalProductInterpretation.lean": "730a4f7fbfb7b9aae72fe724e618ee78c03b8745fd036a8288c9512484bfe4c2",
+    "formalization/LogicLineages/OrdinalComparison/NaturalSum.lean": "6760de8f8f8859900079f7a580ddfdd04a45e882fcd32d5a0aa84268fcb4dfa5",
+    "formalization/LogicLineages/OrdinalComparison/NaturalSumDenotation.lean": "957be29db8e4a33a2c2dcc5f48e2d314c6306c14ba293adf6461fcec76f42776",
+    "formalization/LogicLineages/OrdinalComparison/NaturalSumDenotationTargets.lean": "96dbd0776ea9415cac9d954676bac1fbfc8704c7630b200b2b3d6a29f4e7cc9a",
+    "formalization/LogicLineages/OrdinalComparison/NaturalSumInterpretation.lean": "73ea7fcd850f91f945eb4cbcd15481209d70b113b57812226923cee313500f30",
+    "formalization/LogicLineages/OrdinalComparison/NaturalSumTargets.lean": "160e0e497b363878203d55a328a8c30f3afaea846f3c9de761f75dfab9030338",
+    "formalization/LogicLineages/OrdinalComparison/NormBalls.lean": "0d5ca1724ccead5b06f963acc09983c28baf3f122cc96ed339571dcd14427d93",
+    "formalization/LogicLineages/OrdinalComparison/OrdinalRepresentationComplete.lean": "4dc96c9070f35b1b28552947b379c9a07f3900529851bc7a2ec781211ed72374",
+    "formalization/LogicLineages/OrdinalComparison/OrdinalRepresentationSound.lean": "8e3ad60f345bc2b6f4630c5557b18da6f26d3c85d638ca81f5008307e8143840",
+    "formalization/LogicLineages/OrdinalComparison/OrdinalRepresentationTargets.lean": "5c68ae4e9e18881b1d5a553ac20fca35d3e23f8290a47da125c78711ebc1a647",
+    "formalization/LogicLineages/OrdinalComparison/PredecessorTargets.lean": "c0fc975080cd34cd6296a53fad842c237d223f35d650b1a2bce060dc19ce4733",
+    "formalization/LogicLineages/OrdinalComparison/RawComparisonDefinitions.lean": "bf4b6af50b4a18e04d7d7a0317fa3884b058489e31040ab2ec63079528330bf3",
+    "formalization/LogicLineages/OrdinalComparison/RawComparisonProof.lean": "ad5fd222dc0e860805c56cdefb7724fac569310816b371ffccd20f0c9406c454",
+    "formalization/LogicLineages/OrdinalComparison/RawComparisonTargets.lean": "d38bc89c227717bcf0f24de937412262b5ef8bbe35805b16e5951e24dde888fd",
+    "formalization/LogicLineages/OrdinalComparison/RawNormCode.lean": "9e6b0de72f65126061c63aadb1d24f4b73d442410c479d6f32d3d0dc708dc4e9",
+    "formalization/LogicLineages/OrdinalComparison/RawNormCodeDefinitions.lean": "5a60f5862afc225fccd4057e5a6ba0a4c3ef15aaecd885ec22e631b55cd15079",
+    "formalization/LogicLineages/OrdinalComparison/RawNormCodeTargets.lean": "17afc7a76fa60fde87e1a8075846c2abcf1eebbb36702a60e6f07857f700724d",
+    "formalization/LogicLineages/OrdinalComparison/RawNormalDefinitions.lean": "01f4eeb959e7843e6839ce77f810f553283b7dc7571e2db187af030751b5e48b",
+    "formalization/LogicLineages/OrdinalComparison/RawNormalProof.lean": "beee0a24b585d401abdc3c61e18c070df0bdb8446de2cbdeaf9d78cdb49f2ef3",
+    "formalization/LogicLineages/OrdinalComparison/RawNormalTargets.lean": "12cb8a42444e1aaa45a25afe65651dd510bf9c0f06c0153d27e0b6124bbd60f1",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCode.lean": "ff0c8b35adf7361440961258dee243352ba3ec860a0da58b1f88fdea71619877",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCodeDefinitions.lean": "559e75d651b068e1d8dec8655282aa73c43cbf5df2e2bc0bf012f1ea834856ec",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCodeTargets.lean": "d4f1a3a3507e09482a18da2bfd6474515bc8643fe090bc9770602de0ed112a16",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationComputabilityTargets.lean": "1563537e81f7c8944b9eb908961082aa0d53c996550b0b0edc34cadfb1f878e6",
+    "formalization/LogicLineages/OrdinalComparison/Targets.lean": "e3d2625728df7aa38f54c8639d98959ee15c097a1f88d08f4b8921b58516afbe",
+    "formalization/LogicLineages/OrdinalComparison/Vendor/R1/ArithmeticBounds.lean": "445ac160577ea3b08c04dbf4a738d348d672df0b43760222af0fb2b1e99a7532",
+    "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Norm.lean": "dacb8d445c31a21aa3ad26920379f2746749f8e94346fec077438b70850f2824",
+    "formalization/LogicLineages/OrdinalComparison/Vendor/R1/Ordinal.lean": "742dc32ba9ca282c8996c2e3b9bbc46f03496d406051a901424a841fb1950924"
+  },
+  "local_imports": {
+    "LogicLineages.ComputabilityKnowledge.PositiveExpression": [],
+    "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget": [
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap": [
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReduction": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget",
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialCircuit": [
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitComparison": [
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialComparison": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuit",
+      "LogicLineages.ComputabilityKnowledge.CircuitComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridge": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.DiophantinePolynomialBridge": [
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridge"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialCircuit": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuit"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialCircuitProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialCircuit"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridgeProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.DiophantinePolynomialBridge",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridgeProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityDefinitions",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationDefinitions",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationSemanticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Proof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridge"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Targets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryDefinitions",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementarySupportProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryExpressionProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementarySupportProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryNormalizationProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryExpressionProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantinePolynomialBridgeProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryDefinitions",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDefinitions",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationArithmeticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexArithmeticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherProductProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingSemanticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationArithmeticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexArithmeticProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingClosureProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesForwardProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherValidityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesForwardProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesUniquenessProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BinomialProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MaskingProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDiophantineProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationArithmeticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDiophantineProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexArithmeticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherOnesDiophantineProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDiophantineProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingClosureProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDiophantineProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherIndexDiophantineProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ElementaryNormalizationProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.RowPackingDiophantineProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationDiophantineProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Proof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDefinitions": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Definitions",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherRelationDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionSemanticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.CipherArithmeticProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDigitProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDiophantineProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDigitProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.Proof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.BoundedUniversalProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.MinimizationDiophantineProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.PrimitiveRecursionDiophantineProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationTargets": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationSemanticProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationCodeProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialCircuitEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuit"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialCircuitEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialCircuitEffectivity"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.OrdinaryCodeProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.SpecializationCodeProof",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityProof": [
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyProof": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyTargets",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.ReductionProof",
+      "LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityProof"
+    ],
+    "LogicLineages.Audit": [],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyTargets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyProof",
+      "LogicLineages.Audit"
+    ],
+    "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparison": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.Ordinal": [],
+    "LogicLineages.OrdinalComparison.Vendor.R1.ArithmeticBounds": [
+      "LogicLineages.OrdinalComparison.Vendor.R1.Ordinal"
+    ],
+    "LogicLineages.OrdinalComparison.Vendor.R1.Norm": [
+      "LogicLineages.OrdinalComparison.Vendor.R1.ArithmeticBounds"
+    ],
+    "LogicLineages.OrdinalComparison.ControlDefinitions": [],
+    "LogicLineages.OrdinalComparison.Definitions": [
+      "LogicLineages.OrdinalComparison.Vendor.R1.Norm",
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalArithmeticDefinitions": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualOrdinalNormTargets": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets"
+    ],
+    "LogicLineages.OrdinalComparison.EpsilonZeroCalibration": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets"
+    ],
+    "LogicLineages.OrdinalComparison.OrdinalRepresentationSound": [
+      "LogicLineages.OrdinalComparison.EpsilonZeroCalibration"
+    ],
+    "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationSound"
+    ],
+    "LogicLineages.OrdinalComparison.CNFDescent": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormTargets",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions": [
+      "LogicLineages.OrdinalComparison.CNFDescent"
+    ],
+    "LogicLineages.OrdinalComparison.ControlTargets": [
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.Targets": [
+      "LogicLineages.OrdinalComparison.Definitions",
+      "LogicLineages.OrdinalComparison.ControlTargets"
+    ],
+    "LogicLineages.OrdinalComparison.NormBalls": [
+      "LogicLineages.OrdinalComparison.Targets"
+    ],
+    "LogicLineages.OrdinalComparison.ActualNormBallTargets": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions",
+      "LogicLineages.OrdinalComparison.NormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.ActualNormRecursionTargets": [
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationTargets"
+    ],
+    "LogicLineages.OrdinalComparison.ActualOrdinalNorm": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions",
+      "LogicLineages.OrdinalComparison.ActualNormRecursionTargets",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationSound"
+    ],
+    "LogicLineages.OrdinalComparison.ActualNormBalls": [
+      "LogicLineages.OrdinalComparison.ActualNormBallTargets",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualNormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseDefinitions": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics": [
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression",
+      "LogicLineages.OrdinalComparison.NaturalArithmeticDefinitions",
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWOrdinalPrefixCode": [
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics",
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWClosedAssignment": [
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWGroundAdmissibility": [
+      "LogicLineages.ComputabilityKnowledge.WWClosedAssignment"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWGroundClasses": [
+      "LogicLineages.ComputabilityKnowledge.WWGroundAdmissibility"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration": [
+      "LogicLineages.ComputabilityKnowledge.CircuitComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope": [
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.FiniteDepthEnvelope": [
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PositiveExpressionProperties": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.FiniteDepthEnvelope",
+      "LogicLineages.ComputabilityKnowledge.PositiveExpressionProperties"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm": [],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductCode": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer": [
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductCode",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormProductCode": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductCode"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormCodeOperations": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialHereditaryCodec": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormCodec": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodecProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormCodec"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialHereditaryCodec",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodecProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperationsEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormCodeOperations",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodecProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperationsProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormCodeOperations",
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodecProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperationsEffectivity"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormProduct": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProduct"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalForm": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalForm"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormProduct",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductCodeProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalFormProductCode",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperationsProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizer": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizer"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizer",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.FiniteComparisonEnumeration": [
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.FiniteComparisonEnumeration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductCodeProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProof",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope": [
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWBoundedVectorPadding": [
+      "LogicLineages.ComputabilityKnowledge.WWGroundClasses",
+      "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWBoundedVectorCode": [
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalPrefixCode",
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorPadding"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Definitions": [
+      "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparison",
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorCode",
+      "LogicLineages.ComputabilityKnowledge.WWGroundClasses"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Definitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.NonnegativePolynomialComparisonEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialDomainShiftEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialDomainShiftEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialDomainShiftEffectivity",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialComparisonEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.CircuitComparisonEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.CircuitComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.CircuitReductionEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReductionEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.CircuitReductionEffectivity"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitComparisonEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.CircuitComparisonEffectivity",
+      "LogicLineages.ComputabilityKnowledge.CircuitReductionEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialComparisonEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialComparisonEffectivity",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitEffectivityProof",
+      "LogicLineages.ComputabilityKnowledge.CircuitComparisonEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparisonEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.NonnegativePolynomialComparisonEffectivity",
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShiftEffectivityProof",
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparisonEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWBoundedVectorCode": [
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorCode"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWOrdinalPrefixCode": [
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalPrefixCode"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWOrdinalPrefixCodeProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWOrdinalPrefixCode"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWBoundedVectorPadding": [
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorPadding"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWGroundClasses": [
+      "LogicLineages.ComputabilityKnowledge.WWGroundClasses"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWGroundAdmissibility": [
+      "LogicLineages.ComputabilityKnowledge.WWGroundAdmissibility"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWClosedAssignment": [
+      "LogicLineages.ComputabilityKnowledge.WWClosedAssignment"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWOrdinalTermSemantics": [
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics"
+    ],
+    "LogicLineages.OrdinalComparison.CollapseTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.Control": [
+      "LogicLineages.OrdinalComparison.ControlTargets"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteCollapse": [
+      "LogicLineages.OrdinalComparison.CollapseTargets",
+      "LogicLineages.OrdinalComparison.NormBalls",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWOrdinalTermSemantics",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.FiniteCollapse"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalArithmeticTargets": [
+      "LogicLineages.OrdinalComparison.NaturalArithmeticDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalSumTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalSum": [
+      "LogicLineages.OrdinalComparison.NaturalSumTargets"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalProduct": [
+      "LogicLineages.OrdinalComparison.NaturalArithmeticTargets",
+      "LogicLineages.OrdinalComparison.NaturalSum"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalSumDenotationTargets": [
+      "LogicLineages.OrdinalComparison.NaturalSumTargets"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalSumDenotation": [
+      "LogicLineages.OrdinalComparison.NaturalSumDenotationTargets",
+      "LogicLineages.OrdinalComparison.NaturalSum"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalSumInterpretation": [
+      "LogicLineages.OrdinalComparison.NaturalArithmeticTargets",
+      "LogicLineages.OrdinalComparison.NaturalSumDenotation"
+    ],
+    "LogicLineages.OrdinalComparison.NaturalProductInterpretation": [
+      "LogicLineages.OrdinalComparison.NaturalProduct",
+      "LogicLineages.OrdinalComparison.NaturalSumInterpretation"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseBoundsTargets": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseTargets": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapse": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions",
+      "LogicLineages.OrdinalComparison.ActualCollapseTargets",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete",
+      "LogicLineages.OrdinalComparison.FiniteCollapse"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteTailTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.FiniteTail": [
+      "LogicLineages.OrdinalComparison.FiniteTailTargets"
+    ],
+    "LogicLineages.OrdinalComparison.ActualCollapseBounds": [
+      "LogicLineages.OrdinalComparison.ActualCollapseBoundsTargets",
+      "LogicLineages.OrdinalComparison.ActualCollapse",
+      "LogicLineages.OrdinalComparison.FiniteTail"
+    ],
+    "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawComparisonDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormalDefinitions": [
+      "LogicLineages.OrdinalComparison.RawComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormCodeDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNormBallDefinitions": [
+      "LogicLineages.OrdinalComparison.RawNormalDefinitions",
+      "LogicLineages.OrdinalComparison.RawNormCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNormBallTargets": [
+      "LogicLineages.OrdinalComparison.EncodedNormBallDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalSumDefinitions": [
+      "LogicLineages.OrdinalComparison.RawComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalSumTargets": [
+      "LogicLineages.OrdinalComparison.EncodedNaturalSumDefinitions",
+      "LogicLineages.OrdinalComparison.NaturalSum",
+      "LogicLineages.OrdinalComparison.NaturalArithmeticDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalProductDefinitions": [
+      "LogicLineages.OrdinalComparison.EncodedNaturalSumDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalProductTargets": [
+      "LogicLineages.OrdinalComparison.EncodedNaturalProductDefinitions",
+      "LogicLineages.OrdinalComparison.NaturalProduct"
+    ],
+    "LogicLineages.OrdinalComparison.RawComparisonTargets": [
+      "LogicLineages.OrdinalComparison.RawComparisonDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNotationCodeTargets": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNotationComputabilityTargets": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNotationCode": [
+      "LogicLineages.OrdinalComparison.RawNotationCodeTargets",
+      "LogicLineages.OrdinalComparison.RawNotationComputabilityTargets"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedFiniteBallsTargets": [
+      "LogicLineages.OrdinalComparison.ActualNormBallTargets",
+      "LogicLineages.OrdinalComparison.EncodedNormBallTargets",
+      "LogicLineages.OrdinalComparison.EncodedNaturalSumTargets",
+      "LogicLineages.OrdinalComparison.EncodedNaturalProductTargets",
+      "LogicLineages.OrdinalComparison.RawComparisonTargets",
+      "LogicLineages.OrdinalComparison.RawNotationCode"
+    ],
+    "LogicLineages.OrdinalComparison.RawComparisonProof": [
+      "LogicLineages.OrdinalComparison.RawComparisonTargets",
+      "LogicLineages.OrdinalComparison.RawNotationCode"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalSumProof": [
+      "LogicLineages.OrdinalComparison.EncodedNaturalSumTargets",
+      "LogicLineages.OrdinalComparison.RawComparisonProof",
+      "LogicLineages.OrdinalComparison.NaturalSumInterpretation"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNaturalProductProof": [
+      "LogicLineages.OrdinalComparison.EncodedNaturalProductTargets",
+      "LogicLineages.OrdinalComparison.EncodedNaturalSumProof",
+      "LogicLineages.OrdinalComparison.NaturalProductInterpretation"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormalTargets": [
+      "LogicLineages.OrdinalComparison.RawNormalDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormalProof": [
+      "LogicLineages.OrdinalComparison.RawNormalTargets",
+      "LogicLineages.OrdinalComparison.RawComparisonProof"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormCodeTargets": [
+      "LogicLineages.OrdinalComparison.RawNormCodeDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.RawNormCode": [
+      "LogicLineages.OrdinalComparison.RawNormCodeTargets",
+      "LogicLineages.OrdinalComparison.RawNotationCode"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedNormBallProof": [
+      "LogicLineages.OrdinalComparison.EncodedNormBallTargets",
+      "LogicLineages.OrdinalComparison.RawNormalProof",
+      "LogicLineages.OrdinalComparison.RawNormCode",
+      "LogicLineages.OrdinalComparison.NormBalls"
+    ],
+    "LogicLineages.OrdinalComparison.EncodedFiniteBallsProof": [
+      "LogicLineages.OrdinalComparison.EncodedFiniteBallsTargets",
+      "LogicLineages.OrdinalComparison.EncodedNaturalProductProof",
+      "LogicLineages.OrdinalComparison.EncodedNormBallProof",
+      "LogicLineages.OrdinalComparison.ActualNormBalls"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWClosedAssignmentProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWClosedAssignment",
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof",
+      "LogicLineages.OrdinalComparison.NaturalProductInterpretation",
+      "LogicLineages.OrdinalComparison.ActualCollapseBounds",
+      "LogicLineages.OrdinalComparison.EncodedFiniteBallsProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWGroundAdmissibilityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWGroundAdmissibility",
+      "LogicLineages.ComputabilityKnowledge.WWClosedAssignmentProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWGroundClassesProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWGroundClasses",
+      "LogicLineages.ComputabilityKnowledge.WWGroundAdmissibilityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWFiniteEnvelope": [
+      "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelope",
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.FiniteDepthControl": [
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope",
+      "LogicLineages.OrdinalComparison.ControlDefinitions"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthControlProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.FiniteDepthControl",
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeProof",
+      "LogicLineages.OrdinalComparison.Control"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.FiniteDepthEnvelopeEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelope"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.FiniteComparisonEnumerationEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumeration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.FiniteComparisonEnumerationEffectivity",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeEffectivityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.FiniteDepthEnvelopeEffectivity",
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeProof",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelopeProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWFiniteEnvelope",
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthControlProof",
+      "LogicLineages.ComputabilityKnowledge.FiniteDepthEnvelopeEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWOmegaFiniteCalibration": [
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.WWOmegaFiniteCalibration": [
+      "LogicLineages.ComputabilityKnowledge.WWOmegaFiniteCalibration"
+    ],
+    "LogicLineages.OrdinalComparison.ActualFiniteHeadTargets": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualSinglePredecessorTargets": [
+      "LogicLineages.OrdinalComparison.ActualCollapseDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.ActualLimitPredecessorTargets": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions"
+    ],
+    "LogicLineages.OrdinalComparison.PredecessorTargets": [
+      "LogicLineages.OrdinalComparison.Definitions"
+    ],
+    "LogicLineages.OrdinalComparison.MaximumPredecessor": [
+      "LogicLineages.OrdinalComparison.PredecessorTargets",
+      "LogicLineages.OrdinalComparison.FiniteCollapse"
+    ],
+    "LogicLineages.OrdinalComparison.ActualMaximumPredecessorTargets": [
+      "LogicLineages.OrdinalComparison.ActualOrdinalNormDefinitions",
+      "LogicLineages.OrdinalComparison.MaximumPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualMaximumPredecessor": [
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions",
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessorTargets",
+      "LogicLineages.OrdinalComparison.ActualOrdinalNorm",
+      "LogicLineages.OrdinalComparison.OrdinalRepresentationComplete"
+    ],
+    "LogicLineages.OrdinalComparison.LimitPredecessorTargets": [
+      "LogicLineages.OrdinalComparison.PredecessorTargets"
+    ],
+    "LogicLineages.OrdinalComparison.LimitPredecessor": [
+      "LogicLineages.OrdinalComparison.LimitPredecessorTargets",
+      "LogicLineages.OrdinalComparison.MaximumPredecessor",
+      "LogicLineages.OrdinalComparison.FiniteTail"
+    ],
+    "LogicLineages.OrdinalComparison.ActualLimitPredecessor": [
+      "LogicLineages.OrdinalComparison.ActualLimitPredecessorTargets",
+      "LogicLineages.OrdinalComparison.ActualMaximumPredecessor",
+      "LogicLineages.OrdinalComparison.LimitPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualSinglePredecessor": [
+      "LogicLineages.OrdinalComparison.ActualSinglePredecessorTargets",
+      "LogicLineages.OrdinalComparison.ActualCollapse",
+      "LogicLineages.OrdinalComparison.ActualLimitPredecessor"
+    ],
+    "LogicLineages.OrdinalComparison.ActualFiniteHead": [
+      "LogicLineages.OrdinalComparison.ActualFiniteHeadTargets",
+      "LogicLineages.OrdinalComparison.ActualSinglePredecessor"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWOmegaFiniteCalibrationProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWOmegaFiniteCalibration",
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof",
+      "LogicLineages.OrdinalComparison.ActualFiniteHead",
+      "LogicLineages.OrdinalComparison.ActualCollapseBounds"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWBoundedVectorPaddingProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWBoundedVectorPadding",
+      "LogicLineages.ComputabilityKnowledge.WWGroundClassesProof",
+      "LogicLineages.ComputabilityKnowledge.WWFiniteEnvelopeProof",
+      "LogicLineages.ComputabilityKnowledge.WWOmegaFiniteCalibrationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayFamilyClosure": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperations"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibration": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodec"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec",
+      "LogicLineages.ComputabilityKnowledge.AffineRayCalibration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayDominance": [],
+    "LogicLineages.ComputabilityKnowledge.RayFiniteSum": [
+      "LogicLineages.ComputabilityKnowledge.RayDominance"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayMapDifference": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalForm",
+      "LogicLineages.ComputabilityKnowledge.RayFiniteSum"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayUniformBounds": [
+      "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection",
+      "LogicLineages.ComputabilityKnowledge.RayMapDifference"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayHeightInduction": [
+      "LogicLineages.ComputabilityKnowledge.RayUniformBounds"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodec"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RaySeparation": [
+      "LogicLineages.ComputabilityKnowledge.RayFamilyClosure",
+      "LogicLineages.ComputabilityKnowledge.RayHeightInduction",
+      "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialIdentity": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgram",
+      "LogicLineages.ComputabilityKnowledge.RaySeparation"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialIdentity": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialIdentity"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RaySeparation": [
+      "LogicLineages.ComputabilityKnowledge.RaySeparation"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayFamilyClosure": [
+      "LogicLineages.ComputabilityKnowledge.RayFamilyClosure"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayFamilyClosureProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayFamilyClosure",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperationsProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodeOperationsEffectivity"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayHeightInduction": [
+      "LogicLineages.ComputabilityKnowledge.RayHeightInduction"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayUniformBounds": [
+      "LogicLineages.ComputabilityKnowledge.RayUniformBounds"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayCoefficientCollection": [
+      "LogicLineages.ComputabilityKnowledge.RayCoefficientCollection"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.AffineRayCalibration": [
+      "LogicLineages.ComputabilityKnowledge.AffineRayCalibration"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationBasics": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.AffineRayCalibration",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodecProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.AffineRayCalibration",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormCodecProof"
+    ],
+    "LogicLineages.ModelsAlgebra.Differential.KroneckerIndexDefinitions": [],
+    "LogicLineages.ModelsAlgebra.Differential.KroneckerIndexTargets": [
+      "LogicLineages.ModelsAlgebra.Differential.KroneckerIndexDefinitions"
+    ],
+    "LogicLineages.ModelsAlgebra.Differential.KroneckerIndex": [
+      "LogicLineages.ModelsAlgebra.Differential.KroneckerIndexTargets"
+    ],
+    "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationProof": [
+      "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationBasics",
+      "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationEffectivity",
+      "LogicLineages.ModelsAlgebra.Differential.KroneckerIndex"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCoefficientCollectionProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayCoefficientCollection",
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof",
+      "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayUniformBoundsProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayUniformBounds",
+      "LogicLineages.ComputabilityKnowledge.RayCoefficientCollectionProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RaySurvivingDifference": [
+      "LogicLineages.ComputabilityKnowledge.RayMapDifference"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RaySurvivingDifference": [
+      "LogicLineages.ComputabilityKnowledge.RaySurvivingDifference"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayMapDifference": [
+      "LogicLineages.ComputabilityKnowledge.RayMapDifference"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayMapDifferenceProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayMapDifference"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RaySurvivingDifferenceProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RaySurvivingDifference",
+      "LogicLineages.ComputabilityKnowledge.RayMapDifferenceProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayStableMaximum": [],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayStableMaximum": [
+      "LogicLineages.ComputabilityKnowledge.RayStableMaximum"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayStableMaximumProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayStableMaximum"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayFiniteSum": [
+      "LogicLineages.ComputabilityKnowledge.RayFiniteSum"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayDominance": [
+      "LogicLineages.ComputabilityKnowledge.RayDominance"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayDominanceProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayDominance"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayFiniteSumProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayFiniteSum",
+      "LogicLineages.ComputabilityKnowledge.RayDominanceProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayHeightInductionProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayHeightInduction",
+      "LogicLineages.ComputabilityKnowledge.RayUniformBoundsProof",
+      "LogicLineages.ComputabilityKnowledge.RaySurvivingDifferenceProof",
+      "LogicLineages.ComputabilityKnowledge.RayStableMaximumProof",
+      "LogicLineages.ComputabilityKnowledge.RayFiniteSumProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RayCodeEvaluation": [
+      "LogicLineages.ComputabilityKnowledge.RayCodeEvaluation"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RayCodeEvaluationProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RayCodeEvaluation",
+      "LogicLineages.ComputabilityKnowledge.ExponentialHereditaryCodecProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProof",
+      "LogicLineages.ComputabilityKnowledge.AffineRayCalibrationBasics"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RaySeparationProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RaySeparation",
+      "LogicLineages.ComputabilityKnowledge.RayFamilyClosureProof",
+      "LogicLineages.ComputabilityKnowledge.RayHeightInductionProof",
+      "LogicLineages.ComputabilityKnowledge.RayCodeEvaluationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramEffectivity": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialNormalizerProgram",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalFormProductCodeProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramProof": [
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramSemantics",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramEffectivity"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialIdentityProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialIdentity",
+      "LogicLineages.ComputabilityKnowledge.RaySeparationProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProgramProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialNormalizerProof",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.WWBoundedVectorCodeProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.WWBoundedVectorCode",
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalPrefixCodeProof",
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorPaddingProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialIdentityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsProof": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparisonEffectivityProof",
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorCodeProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsStatementChecks": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsProof",
+      "LogicLineages.Audit"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.NonnegativePolynomialComparison": [
+      "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialDomainShift": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShift"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialDomainShiftProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialDomainShift"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialComparison": [
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.CircuitComparison": [
+      "LogicLineages.ComputabilityKnowledge.CircuitComparison"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.CircuitReduction": [
+      "LogicLineages.ComputabilityKnowledge.CircuitReduction"
+    ],
+    "LogicLineages.ComputabilityKnowledge.Comparators.RestrictedProduct": [
+      "LogicLineages.ComputabilityKnowledge.PositiveExpression"
+    ],
+    "LogicLineages.ComputabilityKnowledge.RestrictedProductProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.RestrictedProduct"
+    ],
+    "LogicLineages.ComputabilityKnowledge.MultiplicationGadgetProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.MultiplicationGadget",
+      "LogicLineages.ComputabilityKnowledge.RestrictedProductProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitReductionProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.CircuitReduction",
+      "LogicLineages.ComputabilityKnowledge.MultiplicationGadgetProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.ExponentialGapProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.ExponentialGap"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CircuitComparisonProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.CircuitComparison",
+      "LogicLineages.ComputabilityKnowledge.CircuitReductionProof",
+      "LogicLineages.ComputabilityKnowledge.ExponentialGapProof",
+      "LogicLineages.ComputabilityKnowledge.PositiveExpressionProperties"
+    ],
+    "LogicLineages.ComputabilityKnowledge.PolynomialComparisonProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.PolynomialComparison",
+      "LogicLineages.ComputabilityKnowledge.PolynomialCircuitProof",
+      "LogicLineages.ComputabilityKnowledge.CircuitComparisonProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparisonProof": [
+      "LogicLineages.ComputabilityKnowledge.Comparators.NonnegativePolynomialComparison",
+      "LogicLineages.ComputabilityKnowledge.PolynomialDomainShiftProof",
+      "LogicLineages.ComputabilityKnowledge.PolynomialComparisonProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparisonProof",
+      "LogicLineages.ComputabilityKnowledge.WWGroundClassesProof",
+      "LogicLineages.ComputabilityKnowledge.PositiveExpressionProperties",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsProof",
+      "LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationEffectivityProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.GlobalProof": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.GlobalProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof",
+      "LogicLineages.Audit"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorProof": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsProof",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof",
+      "LogicLineages.ComputabilityKnowledge.WWBoundedVectorPaddingProof",
+      "LogicLineages.ComputabilityKnowledge.WWOrdinalPrefixCodeProof"
+    ],
+    "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorProof",
+      "LogicLineages.Audit"
+    ],
+    "LogicLineages.ExternalCheckpoint20261106BareHardness": [
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsStatementChecks",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks",
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks",
+      "LogicLineages.Audit"
+    ]
+  },
+  "direct_upstream_imports": [
+    "Init",
+    "Lean.Elab.Command",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Finsupp.Basic",
+    "Mathlib.Algebra.BigOperators.Group.List.Basic",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.MvPolynomial.Eval",
+    "Mathlib.Algebra.MvPolynomial.Rename",
+    "Mathlib.Algebra.MvPolynomial.Variables",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Order.Ring.Abs",
+    "Mathlib.Algebra.Ring.GeomSum",
+    "Mathlib.Computability.Halting",
+    "Mathlib.Computability.Partrec",
+    "Mathlib.Computability.Primrec.Basic",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Computability.RE",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Finsupp.Basic",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Int.Basic",
+    "Mathlib.Data.Int.NatAbs",
+    "Mathlib.Data.List.GetD",
+    "Mathlib.Data.Nat.Basic",
+    "Mathlib.Data.Nat.Bitwise",
+    "Mathlib.Data.Nat.Choose.Bounds",
+    "Mathlib.Data.Nat.Choose.Lucas",
+    "Mathlib.Data.Nat.Choose.Sum",
+    "Mathlib.Data.Nat.Digits.Lemmas",
+    "Mathlib.Data.Nat.ModEq",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.NumberTheory.Dioph",
+    "Mathlib.Order.Monotone.Basic",
+    "Mathlib.Order.Monotone.Defs",
+    "Mathlib.SetTheory.Cardinal.ToNat",
+    "Mathlib.SetTheory.Ordinal.CantorNormalForm",
+    "Mathlib.SetTheory.Ordinal.FixedPoint",
+    "Mathlib.SetTheory.Ordinal.Notation",
+    "Mathlib.SetTheory.Ordinal.Principal",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.IntervalCases",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "frozen_sources": [
+    {
+      "path": "formalization/verification/cumulative-continuation-2026-11-06/bare-hardness/FROZEN-TARGETS.json",
+      "sha256": "9fba7d9df1730c8741b168b9bb03ab96bcb3a46536bcf6438b5467c9d7aece9b",
+      "file_count": 4,
+      "all_current_files_match": true,
+      "mismatches": [],
+      "files": {
+        "02-exponential-comparison/paper.tex": {
+          "expected_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+          "actual_sha256": "43f672a96e5067feb41f33ad19bfbeff078814d01717cb18ff77ba0e891d80c7",
+          "matches": true
+        },
+        "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/Definitions.lean": {
+          "expected_sha256": "8246e34648bce9a17fd2e189c7c13bf5049465afda6d0c8d5b0062b11ede84ef",
+          "actual_sha256": "8246e34648bce9a17fd2e189c7c13bf5049465afda6d0c8d5b0062b11ede84ef",
+          "matches": true
+        },
+        "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/TargetChecks.lean": {
+          "expected_sha256": "b83a2cf691e2ea5383781cc226866b3101918be8f1f3542b9379bde4156b8265",
+          "actual_sha256": "b83a2cf691e2ea5383781cc226866b3101918be8f1f3542b9379bde4156b8265",
+          "matches": true
+        },
+        "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/Targets.lean": {
+          "expected_sha256": "7875b512121262d92326d120918705ff8ed4f747f7ba675c46a8b4719260c5ee",
+          "actual_sha256": "7875b512121262d92326d120918705ff8ed4f747f7ba675c46a8b4719260c5ee",
+          "matches": true
+        }
+      }
+    },
+    {
+      "path": "formalization/verification/cumulative-continuation-2026-11-06/bare-hardness/MRDP-FROZEN-TARGETS.json",
+      "sha256": "9900307a0b8c7f86b18d49dbb2c2fd03b68d59c3c35c583bac56d8a917e38c93",
+      "file_count": 1,
+      "all_current_files_match": true,
+      "mismatches": [],
+      "files": {
+        "formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/MRDPFamilyTargets.lean": {
+          "expected_sha256": "6f87038c34edf6afd2084956a30b4ea92b09a8ff07560bac89e7348291c1618b",
+          "actual_sha256": "6f87038c34edf6afd2084956a30b4ea92b09a8ff07560bac89e7348291c1618b",
+          "matches": true
+        }
+      }
+    }
+  ],
+  "verifier_source_pins": {
+    "formalization/scripts/check.py": "9eecb0236964bb6ede2ae0819a37eccfc476c0df366e267e38ba16fe4208d59d",
+    "formalization/LogicLineages/Audit.lean": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d"
+  }
+}

@@ -1,0 +1,27 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarUpperBoundProof.lean:23:69: error: unsolved goals
+d : ℕ
+a b : Expr (Fin d)
+values : List ℕ
+⊢ (do
+      let a ← some (Expr.eval (tupleOf d values) a)
+      let b ← some (Expr.eval (tupleOf d values) b)
+      pure (a, b)) =
+    some (Expr.eval (tupleOf d values) a, Expr.eval (tupleOf d values) b)
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarUpperBoundProof.lean:30:13: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵ ̵e̵v̵a̵l̵_̵f̵i̵n̵i̵t̵e̵_̵r̵e̵n̵a̵m̵e̵]̵[̲e̲v̲a̲l̲_̲f̲i̲n̲i̲t̲e̲_̲r̲e̲n̲a̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarUpperBoundProof.lean:84:10: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarUpperBoundProof.lean:79:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarUpperBoundProof.lean:87:16: error: (kernel) unknown constant '_private.LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof.0.LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof.numericCheck_computable'

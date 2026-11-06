@@ -1,0 +1,31 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/VectorProof.lean:100:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  vectorProgram weak (specializationCode p x)
+in the target expression
+  VectorDomain ((fun x => vectorProgram weak (specializationCode p x)) x) ∧
+    (¬P x ↔ VectorComparison weak ((fun x => vectorProgram weak (specializationCode p x)) x))
+
+weak : Bool
+P : ℕ → Prop
+hP : REPred P
+m : ℕ
+p : PolynomialCircuit.Code
+left✝¹ : p.inputCount = m + 1
+left✝ : p.WellFormed
+hwell : ∀ (x : ℕ), (specialize x p).WellFormed
+hcompute : Computable (specializationCode p)
+hcode : ∀ (x : ℕ), specializationCode p x = Encodable.encode (PolynomialCircuit.encode (specialize x p))
+hroot : ∀ (x : ℕ), P x ↔ PolynomialDomainShift.HasNonnegativeRoot (specialize x p)
+x : ℕ
+q : PolynomialCircuit.Code := specialize x p
+hbridge :
+  ScalarDomain (polynomialRaw false q) ∧
+    ∀ (norm : Bool), ¬PolynomialDomainShift.HasNonnegativeRoot q ↔ ScalarComparison norm false (polynomialRaw false q)
+v u : Expr (Fin (polynomialRaw false q).1)
+hvcode : (polynomialRaw false q).2.1 = CircuitReduction.encodeExpr (Expr.rename Fin.val v)
+hucode : (polynomialRaw false q).2.2 = CircuitReduction.encodeExpr (Expr.rename Fin.val u)
+hv : v.depth ≤ 2
+hu : u.depth ≤ 2
+hraw : polynomialRaw false q = expressionCode v u
+hscalar : scalarProgram false (specializationCode p x) = expressionCode v u
+⊢ VectorDomain ((fun x => vectorProgram weak (specializationCode p x)) x) ∧
+    (¬P x ↔ VectorComparison weak ((fun x => vectorProgram weak (specializationCode p x)) x))

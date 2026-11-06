@@ -1,0 +1,97 @@
+{
+  "schema": "bare-hardness-source-acceptance-review-v1",
+  "reviewed_at_utc": "2026-11-06T02:04:46.428724+00:00",
+  "reviewer": "/root/toolchain",
+  "reviewer_scope": "Authored ProgramsProof. Independently reviewed the source statements, frozen contracts, scalar/global/vector arguments, source correspondence, and exact native evidence.",
+  "decision": "approve_whole_source_promotion",
+  "approved_source_labels": [
+    "02-exponential-comparison:thm:finite-bare-hardness",
+    "02-exponential-comparison:thm:bounded-bare-vectors"
+  ],
+  "accepted_declarations": {
+    "02-exponential-comparison:thm:finite-bare-hardness": "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks.full_finite_bare_hardness",
+    "02-exponential-comparison:thm:bounded-bare-vectors": "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks.full_bounded_bare_vectors"
+  },
+  "source_correspondence_review": [
+    "ScalarDomain is exactly two literal positive-expression codes sharing one finite ground-name arity, with exponential nesting depth at most two. Arity zero remains allowed. SourceOrder uses the original occurring-name admissible substitution semantics and actual ordinal norm.",
+    "ScalarHardness quantifies over every recursively enumerable predicate and constructs one total computable reduction of its complement. The fixed representing polynomial is chosen once for each predicate; its runtime specialization is an explicit computable function and is well formed at every input. No computable extraction from an extensional proof and no MRDP or hardness oracle is assumed.",
+    "The same uniformly valid scalar outputs establish both value and norm comparison. Both strict and weak order symbols are universally quantified. PositiveSourceFacts proves positive finite values, equality with the actual norm, and membership in every original C_i for i >= 1 on all genuine admissible substitutions.",
+    "ScalarCompleteness includes the recursively enumerable complement, with an exact computable validity test. Invalid or over-depth codes are handled explicitly; semantic failure on a valid code is witnessed by one enumerated shared positive tuple. The accepted tuple-domain theorem supplies both directions of the source-substitution equivalence.",
+    "VectorProgram uses the literal original padding construction, reversing the strict scalar output (V,U) into arguments (U,V). BoundedSourcePair requires both original CVector and VectorBoundedNorm predicates. HigherDepthTwo requires length exactly two for each vector and an embedded depth-at-most-two finite expression in component one.",
+    "The source vectors remain (H,V+1), (H,U), and (H+1,U), with the accepted unchanged affine envelope and collapse head. Original VectorLT is strict at component zero and weak at every positive component; VectorLE is weak at every component. No different vector ordering is substituted.",
+    "VectorHardness supplies uniformly genuine outputs for every input of each RE-complement reduction. VectorUndecidable pulls a putative Boolean procedure back through that certified family and invokes its correctness only at valid bounded inputs. Its behavior on malformed or invalid codes is unrestricted.",
+    "The frozen targets cover the full two printed source statements without an additional separation, domain, termination, well-formedness-of-output, or undecidability premise."
+  ],
+  "native_evidence_review": {
+    "root_module": "LogicLineages.ExternalCheckpoint20261106BareHardness",
+    "final_complete_receipt": "receipts/1793930511644755998-2.json",
+    "final_complete_receipt_sha256": "23768ca474032ceea34521ddc3f90332a281bea064b9ec18f9ba4e27bb9ccaa0",
+    "final_complete_receipt_all_module_rows_succeeded": true,
+    "local_dependency_modules": 298,
+    "independently_rehashed_current_sources": 298,
+    "successful_native_rows_matched_by_exact_source_hash": 298,
+    "receipt_and_log_hashes_independently_verified": true,
+    "actual_logged_exact_aliases_independently_verified": 19,
+    "alias_counts": {
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks": 2,
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsStatementChecks": 6,
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks": 6,
+      "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks": 3,
+      "LogicLineages.ExternalCheckpoint20261106BareHardness": 2
+    },
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "all_exact_aliases_use_only_allowed_axioms": true,
+    "peak_successful_process_tree_rss_kib": 1395248,
+    "unchanged_resource_profile": {
+      "heap_cap_mib": 2048,
+      "rss_cap_mib": 1536,
+      "minimum_free_mib": 2048,
+      "cpu_seconds": 90,
+      "wall_seconds": 180,
+      "threads": 1,
+      "upstream_cache_only": true
+    },
+    "failed_attempts_are_retained_and_not_accepted_as_success": true,
+    "native_evidence_errors": [],
+    "full_root_build": false,
+    "remote_ci_claim": false
+  },
+  "preservation_review": {
+    "baseline_commit": "b09ce88d19ff57fa6a0fac921dd3513d51e1a935",
+    "baseline_tracked_files_unchanged_at_review_before_metadata_promotion": true,
+    "frozen_source_and_target_hashes_independently_rechecked": true,
+    "earlier_accepted_source_manifests": [
+      {
+        "path": "formalization/verification/cumulative-continuation-2026-11-05/uniform-separation/SOURCE-PINS.json",
+        "file_count": 172,
+        "all_current_files_independently_rehashed": true
+      },
+      {
+        "path": "formalization/verification/cumulative-continuation-2026-11-05/finite-source-comparison/SOURCE-PINS.json",
+        "file_count": 811,
+        "all_current_files_independently_rehashed": true
+      }
+    ],
+    "source_manuscript_unchanged": true,
+    "accepted_prior_lean_sources_unchanged": true
+  },
+  "reviewed_evidence_hashes": {
+    "NATIVE-VERIFICATION.json": "9765b40b336f45bdb08089313a05ab6be85572158c2f5190046d87295697dddc",
+    "SOURCE-CORRESPONDENCE.md": "265f92acf59c044baad9547517a3741da4942851be54477251f84615673bfe66",
+    "SOURCE-PINS.json": "4d98b8eda6d1b4d8f508e13e3047756344f027b8748661386401cb8b8dc4c0cc",
+    "BASELINE-PRESERVATION.json": "3a5234a15d2843b47c35a8ce0b204d70d830ca11414960dd2de7add26c1f1057",
+    "FROZEN-TARGETS.json": "9fba7d9df1730c8741b168b9bb03ab96bcb3a46536bcf6438b5467c9d7aece9b",
+    "MRDP-FROZEN-TARGETS.json": "9900307a0b8c7f86b18d49dbb2c2fd03b68d59c3c35c583bac56d8a917e38c93"
+  },
+  "scope_exclusions": [
+    "No promotion of paper02 cor:consumers or any other source statement.",
+    "No claim of a decision procedure for arbitrary finite-valued collapse terms, paper08 first-order BASE, or polynomial-word comparisons.",
+    "No claim that the hard bounded vectors are assignments of actual T-terms.",
+    "No full-root, cumulative-union, or remote-CI build claim."
+  ],
+  "remaining_acceptance_objections": []
+}

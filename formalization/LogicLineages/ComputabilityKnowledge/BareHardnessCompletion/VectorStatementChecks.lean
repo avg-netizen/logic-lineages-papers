@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorProof
+public meta import LogicLineages.Audit
+public section
+namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks
+
+theorem vector_hardness : Targets.VectorHardness := VectorProof.vectorHardness
+theorem vector_undecidable : Targets.VectorUndecidable := VectorProof.vectorUndecidable
+theorem full_bounded_bare_vectors : Targets.FullBoundedBareVectors := VectorProof.fullBoundedBareVectors
+
+end LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks

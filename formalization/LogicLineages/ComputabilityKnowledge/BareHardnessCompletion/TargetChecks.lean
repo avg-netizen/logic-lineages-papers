@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets
+open LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets
+#check ScalarValidation
+#check ScalarCalibration
+#check VectorCalibration
+#check ScalarUpperBound
+#check PolynomialSourceBridge
+#check PositiveSourceFacts
+#check FullFiniteBareHardness
+#check FullBoundedBareVectors

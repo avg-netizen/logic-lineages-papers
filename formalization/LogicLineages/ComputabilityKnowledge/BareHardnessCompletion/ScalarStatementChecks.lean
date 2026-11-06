@@ -1,0 +1,20 @@
+module
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.GlobalProof
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof
+public meta import LogicLineages.Audit
+public section
+namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks
+
+theorem polynomial_source_bridge : Targets.PolynomialSourceBridge :=
+  ScalarSemanticProof.polynomialSourceBridge
+theorem positive_source_facts : Targets.PositiveSourceFacts :=
+  ScalarSemanticProof.positiveSourceFacts
+theorem scalar_upper_bound : Targets.ScalarUpperBound := ScalarUpperBoundProof.scalarUpperBound
+theorem scalar_hardness : Targets.ScalarHardness := GlobalProof.scalarHardness
+theorem scalar_completeness : Targets.ScalarCompleteness := GlobalProof.scalarCompleteness
+theorem full_finite_bare_hardness : Targets.FullFiniteBareHardness := GlobalProof.fullFiniteBareHardness
+
+end LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks

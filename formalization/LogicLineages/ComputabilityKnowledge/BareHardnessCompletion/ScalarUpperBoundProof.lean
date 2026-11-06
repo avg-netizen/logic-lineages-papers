@@ -1,0 +1,116 @@
+module
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.Targets
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarSemanticProof
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsProof
+import LogicLineages.ComputabilityKnowledge.FiniteComparisonEnumerationEffectivityProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof
+open PositiveExpression CircuitReduction FiniteComparisonEnumeration
+open ScalarSemanticProof
+
+private def numericCheck (weak : Bool) (raw : ScalarCode) (k : Nat) : Bool :=
+  if weak then checkWeak (framed raw) k else checkStrict (framed raw) k
+
+/-- Invalid syntax and excess depth belong to the complement of the frozen
+restricted source predicate. Valid inputs use the literal positive-tuple search. -/
+private def scalarSearch (weak : Bool) (raw : ScalarCode) (k : Nat) : Bool :=
+  !validScalar raw || numericCheck weak raw k
+
+private theorem evalPair_expressionCode {d : Nat} (a b : Expr (Fin d))
+    (values : List Nat) :
+    evalPair (framed (expressionCode a b)) values =
+      some (a.eval (tupleOf d values), b.eval (tupleOf d values)) := by
+  simp only [evalPair, framed, expressionCode, List.length_append,
+    List.take_append_length, List.drop_left, ↓reduceIte]
+  rw [FiniteComparisonEnumerationProof.finiteEvaluationCorrect d (a.rename Fin.val)
+      (finite_rename_bounded d a) values,
+    FiniteComparisonEnumerationProof.finiteEvaluationCorrect d (b.rename Fin.val)
+      (finite_rename_bounded d b) values]
+  simp only [Option.bind_some, eval_finite_rename]
+  rfl
+
+private theorem numericCheck_expressionCode {d : Nat} (weak : Bool)
+    (a b : Expr (Fin d)) (k : Nat) :
+    numericCheck weak (expressionCode a b) k = true ↔
+      ¬ (if weak then a.eval (enumTuple d k) ≤ b.eval (enumTuple d k)
+        else a.eval (enumTuple d k) < b.eval (enumTuple d k)) := by
+  cases weak <;>
+    simp only [numericCheck, Bool.false_eq_true, ↓reduceIte, checkStrict, checkWeak,
+      evalPair_expressionCode, decide_eq_true_eq, enumTuple]
+
+private theorem typed_counterexample {d : Nat} (norm weak : Bool)
+    (a b : Expr (Fin d)) (ha : a.depth ≤ 2) (hb : b.depth ≤ 2) :
+    ¬ ScalarComparison norm weak (expressionCode a b) ↔
+      ∃ k : Nat, numericCheck weak (expressionCode a b) k = true := by
+  classical
+  rw [scalarComparison_expressionCode norm weak a b ha hb, sourceOrder_iff]
+  constructor
+  · intro h
+    obtain ⟨ρ, hρ⟩ := not_forall.mp h
+    obtain ⟨k, hk⟩ := FiniteComparisonEnumerationProof.tupleEnumerationSurjective d ρ
+    refine ⟨k, (numericCheck_expressionCode weak a b k).mpr ?_⟩
+    simpa only [hk] using hρ
+  · rintro ⟨k, hk⟩ hall
+    exact ((numericCheck_expressionCode weak a b k).mp hk) (hall (enumTuple d k))
+
+private theorem scalarSearch_correct (norm weak : Bool) (raw : ScalarCode) :
+    ¬ ScalarComparison norm weak raw ↔ ∃ k : Nat, scalarSearch weak raw k = true := by
+  classical
+  by_cases hv : validScalar raw = true
+  · have hd := (ProgramsProof.scalarValidation.2 raw).mp hv
+    rcases raw with ⟨d, ca, cb⟩
+    obtain ⟨a, b, ha, hb, hda, hdb⟩ := hd
+    have hraw : (d, ca, cb) = expressionCode a b :=
+      Prod.ext rfl (Prod.ext ha hb)
+    rw [hraw] at hv ⊢
+    simpa only [scalarSearch, hv, Bool.not_true, Bool.false_or] using
+      typed_counterexample norm weak a b hda hdb
+  · have hf : validScalar raw = false := Bool.eq_false_of_not_eq_true hv
+    have hnot : ¬ ScalarComparison norm weak raw := by
+      rintro ⟨a, b, ha, hb, hda, hdb, _⟩
+      exact hv ((ProgramsProof.scalarValidation.2 raw).mpr ⟨a, b, ha, hb, hda, hdb⟩)
+    constructor
+    · intro _
+      refine ⟨0, ?_⟩
+      simp only [scalarSearch, hf, Bool.not_false, Bool.true_or]
+    · intro _
+      exact hnot
+
+private theorem numericCheck_computable (weak : Bool) :
+    Computable (fun p : ScalarCode × Nat => numericCheck weak p.1 p.2) := by
+  have hargs : Computable (fun p : ScalarCode × Nat => (framed p.1, p.2)) :=
+    (ProgramsProof.framingProgram.comp Computable.fst).pair Computable.snd
+  cases weak
+  · change Computable (fun p : ScalarCode × Nat => checkStrict (framed p.1) p.2)
+    have hs : Computable (fun p : List Nat × Nat => checkStrict p.1 p.2) :=
+      FiniteComparisonEnumerationEffectivityProof.finiteComparisonEnumerationEffectivity.2.1
+    have hc := Computable.comp
+      (f := fun p : List Nat × Nat => checkStrict p.1 p.2)
+      (g := fun p : ScalarCode × Nat => (framed p.1, p.2)) hs hargs
+    exact hc
+  · change Computable (fun p : ScalarCode × Nat => checkWeak (framed p.1) p.2)
+    have hs : Computable (fun p : List Nat × Nat => checkWeak p.1 p.2) :=
+      FiniteComparisonEnumerationEffectivityProof.finiteComparisonEnumerationEffectivity.2.2.1
+    have hc := Computable.comp
+      (f := fun p : List Nat × Nat => checkWeak p.1 p.2)
+      (g := fun p : ScalarCode × Nat => (framed p.1, p.2)) hs hargs
+    exact hc
+
+private theorem scalarSearch_computable (weak : Bool) :
+    Computable (fun p : ScalarCode × Nat => scalarSearch weak p.1 p.2) := by
+  have hinvalid : Computable (fun p : ScalarCode × Nat => !validScalar p.1) :=
+    Primrec.not.to_comp.comp (ProgramsProof.scalarValidation.1.comp Computable.fst)
+  exact Primrec.or.to_comp.comp hinvalid (numericCheck_computable weak)
+
+theorem scalarUpperBound : Targets.ScalarUpperBound := by
+  intro norm weak
+  have hc : Computable₂ (scalarSearch weak) := (scalarSearch_computable weak).to₂
+  have hsearch : Partrec (fun raw => Nat.rfind (fun k => Part.some (scalarSearch weak raw k))) :=
+    Partrec.rfind hc.partrec
+  apply hsearch.dom_re.of_eq
+  intro raw
+  simpa only [Nat.rfind_dom, Part.mem_some_iff, Part.some_dom, true_and, and_true,
+    implies_true, forall_const, eq_comm] using (scalarSearch_correct norm weak raw).symm
+
+end LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarUpperBoundProof

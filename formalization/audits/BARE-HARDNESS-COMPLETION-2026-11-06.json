@@ -1,0 +1,52 @@
+{
+  "accepted_at_utc": "2026-11-06T02:06:28.201460+00:00",
+  "baseline_commit": "b09ce88d19ff57fa6a0fac921dd3513d51e1a935",
+  "report": "audits/BARE-HARDNESS-COMPLETION-2026-11-06.json",
+  "statements": [
+    "02-exponential-comparison:thm:finite-bare-hardness",
+    "02-exponential-comparison:thm:bounded-bare-vectors"
+  ],
+  "native_verification": {
+    "file": "verification/cumulative-continuation-2026-11-06/bare-hardness/NATIVE-VERIFICATION.json",
+    "sha256": "9765b40b336f45bdb08089313a05ab6be85572158c2f5190046d87295697dddc"
+  },
+  "counts_before": {
+    "checked": 164,
+    "pending": 23,
+    "existing-calculator-package": 2
+  },
+  "counts_after": {
+    "checked": 166,
+    "pending": 21,
+    "existing-calculator-package": 2
+  },
+  "numbered_source_promotions_in_this_update": 2,
+  "numbered_source_promotions_cumulative": 5,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "schema": "bare-hardness-source-completion-audit-v1",
+  "acceptance": {
+    "file": "verification/cumulative-continuation-2026-11-06/bare-hardness/ACCEPTANCE.json",
+    "sha256": "460d91c57e7313720b4986c440fd4747b83a548cb05ae63606f682d92a79bfb5"
+  },
+  "independent_review": {
+    "file": "verification/cumulative-continuation-2026-11-06/bare-hardness/ACCEPTANCE-REVIEW.json",
+    "sha256": "8c815088adf048a9b5712a227aab71ffa3db346b8fb0ffcb8ef1098efed8bb38"
+  },
+  "accepted_declarations": {
+    "02-exponential-comparison:thm:finite-bare-hardness": "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks.full_finite_bare_hardness",
+    "02-exponential-comparison:thm:bounded-bare-vectors": "LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks.full_bounded_bare_vectors"
+  },
+  "all_numbered_source_texts_preserved": true,
+  "other_187_numbered_statement_objects_unchanged": true,
+  "prior_finite_source_and_uniform_labels_preserved": true,
+  "source_manuscripts_unchanged": true,
+  "dependencies_checker_and_ci_unchanged": true,
+  "peak_successful_rss_kib": 1395248,
+  "resource_limits_unchanged": true,
+  "scope_notes": {
+    "thm:finite-bare-hardness": "Whole source theorem checked: strict and weak comparison of actual values and actual norms are Pi01-complete on literal positive exponential expressions of depth at most two, with arbitrary finite ground-name arity and original admissible substitutions. Every RE complement has a total computable reduction whose outputs are uniformly genuine source instances. Exact invalid-code handling and positive-tuple counterexample search prove the co-RE upper bound. Positive finite values, norm equality, and membership in every C_i for i>=1 are retained.",
+    "thm:bounded-bare-vectors": "Whole source theorem checked for both original WW orders. Every RE complement has a total computable reduction to the literal (H,V+1)/(H,U)/(H+1,U) family; all outputs are genuine bounded C-vectors of exactly two components with finite depth-two higher components. Strict order remains strict at zero and weak at positive components. Undecidability excludes even total Boolean procedures required to be correct only on those certified valid inputs."
+  },
+  "source_contracts_unchanged": true
+}

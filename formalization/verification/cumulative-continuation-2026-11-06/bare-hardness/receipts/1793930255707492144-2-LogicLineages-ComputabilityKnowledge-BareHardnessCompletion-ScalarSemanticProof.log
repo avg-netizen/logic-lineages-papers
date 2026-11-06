@@ -1,0 +1,18 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarSemanticProof.lean:77:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (fun a => encodeExpr (Expr.rename Fin.val a)) a
+in the target expression
+  FiniteComparisonEnumeration.decodeExpr d (encodeExpr (Expr.rename Fin.val a)) = some (Expr.rename Fin.val a)
+
+d : ℕ
+a b : Expr (Fin d)
+h : (fun a => encodeExpr (Expr.rename Fin.val a)) a = (fun a => encodeExpr (Expr.rename Fin.val a)) b
+ha : FiniteComparisonEnumeration.decodeExpr d (encodeExpr (Expr.rename Fin.val a)) = some (Expr.rename Fin.val a)
+hb : FiniteComparisonEnumeration.decodeExpr d (encodeExpr (Expr.rename Fin.val b)) = some (Expr.rename Fin.val b)
+⊢ a = b
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/BareHardnessCompletion/ScalarSemanticProof.lean:85:37: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  simp [CircuitComparison.finiteVal, F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵ ̵i.isLt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

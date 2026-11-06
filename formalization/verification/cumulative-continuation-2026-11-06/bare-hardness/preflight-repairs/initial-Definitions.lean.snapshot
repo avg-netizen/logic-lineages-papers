@@ -1,0 +1,98 @@
+module
+public import LogicLineages.ComputabilityKnowledge.NonnegativePolynomialComparison
+public import LogicLineages.ComputabilityKnowledge.WWBoundedVectorCode
+public import LogicLineages.ComputabilityKnowledge.WWGroundClasses
+public import Mathlib.Computability.Partrec
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion
+open PositiveExpression CircuitReduction WWOrdinalTermSemantics WWGroundAdmissibility
+open WWGroundClasses WWBoundedVectorPadding
+
+/-- Standard computably encoded triples retain the original common ground-name arity. -/
+abbrev ScalarCode := Nat × List Nat × List Nat
+abbrev VectorCode := Nat × List (List Nat) × List (List Nat)
+
+def expressionCode {d : Nat} (a b : Expr (Fin d)) : ScalarCode :=
+  (d, encodeExpr (a.rename Fin.val), encodeExpr (b.rename Fin.val))
+
+def ScalarDomain (raw : ScalarCode) : Prop :=
+  ∃ a b : Expr (Fin raw.1),
+    raw.2.1 = encodeExpr (a.rename Fin.val) ∧
+    raw.2.2 = encodeExpr (b.rename Fin.val) ∧ a.depth ≤ 2 ∧ b.depth ≤ 2
+
+noncomputable def SourceOrder {d : Nat} (norm weak : Bool)
+    (a b : Expr (Fin d)) : Prop :=
+  if norm then NormComparison weak (embed a) (embed b)
+  else Comparison weak (embed a) (embed b)
+
+/-- A semantic source predicate, independent of the counterexample search.
+Malformed and over-depth inputs are outside this restricted decision problem. -/
+noncomputable def ScalarComparison (norm weak : Bool) (raw : ScalarCode) : Prop :=
+  ∃ a b : Expr (Fin raw.1),
+    raw.2.1 = encodeExpr (a.rename Fin.val) ∧
+    raw.2.2 = encodeExpr (b.rename Fin.val) ∧ a.depth ≤ 2 ∧ b.depth ≤ 2 ∧
+    SourceOrder norm weak a b
+
+def Pi01Hard {α : Type} [Primcodable α] (S : α → Prop) : Prop :=
+  ∀ P : Nat → Prop, REPred P →
+    ∃ f : Nat → α, Computable f ∧ ∀ x, ¬ P x ↔ S (f x)
+
+def Pi01Complete {α : Type} [Primcodable α] (S : α → Prop) : Prop :=
+  REPred (fun x => ¬ S x) ∧ Pi01Hard S
+
+def framed (raw : ScalarCode) : List Nat :=
+  raw.1 :: raw.2.1.length :: raw.2.2.length :: (raw.2.1 ++ raw.2.2)
+
+/-- The caller supplies the faithful existing comparison frame. This total
+projection is also defined on malformed frames; no semantic validity is presumed. -/
+def unframe (xs : List Nat) : ScalarCode :=
+  (xs.getD 0 0, (xs.drop 3).take (xs.getD 1 0), (xs.drop 3).drop (xs.getD 1 0))
+
+def validScalar (raw : ScalarCode) : Bool :=
+  (WWBoundedVectorCode.paddingCode raw.1 raw.2.1 raw.2.2).isSome
+
+def polynomialRaw (weak : Bool) (p : PolynomialCircuit.Code) : ScalarCode :=
+  (NonnegativePolynomialComparison.bound p,
+    encodeExpr (if weak then NonnegativePolynomialComparison.weakLower p
+      else NonnegativePolynomialComparison.lower p),
+    encodeExpr (NonnegativePolynomialComparison.upper p))
+
+/-- Actual total program on the standard natural code of the original
+integer polynomial. Its calibration is proved separately on canonical inputs. -/
+def scalarProgram (weak : Bool) (e : Nat) : ScalarCode :=
+  unframe (((Encodable.decode e : Option (List Nat)).bind
+    (if weak then NonnegativePolynomialComparison.weakCode
+      else NonnegativePolynomialComparison.strictCode)).getD [])
+
+def HigherDepthTwo {d : Nat} (xs : List (Term (Fin d))) : Prop :=
+  xs.length = 2 ∧ ∃ a : Expr (Fin d), a.depth ≤ 2 ∧ component xs 1 = embed a
+
+noncomputable def BoundedSourcePair {d : Nat}
+    (xs ys : List (Term (Fin d))) : Prop :=
+  CVector xs ∧ CVector ys ∧ VectorBoundedNorm xs ∧ VectorBoundedNorm ys ∧
+    HigherDepthTwo xs ∧ HigherDepthTwo ys
+
+def vectorCode {d : Nat} (xs ys : List (Term (Fin d))) : VectorCode :=
+  (d, xs.map WWOrdinalPrefixCode.encode, ys.map WWOrdinalPrefixCode.encode)
+
+noncomputable def VectorDomain (raw : VectorCode) : Prop :=
+  ∃ xs ys : List (Term (Fin raw.1)),
+    raw.2.1 = xs.map WWOrdinalPrefixCode.encode ∧
+    raw.2.2 = ys.map WWOrdinalPrefixCode.encode ∧ BoundedSourcePair xs ys
+
+noncomputable def VectorComparison (weak : Bool) (raw : VectorCode) : Prop :=
+  ∃ xs ys : List (Term (Fin raw.1)),
+    raw.2.1 = xs.map WWOrdinalPrefixCode.encode ∧
+    raw.2.2 = ys.map WWOrdinalPrefixCode.encode ∧ BoundedSourcePair xs ys ∧
+    (if weak then VectorLE xs ys else VectorLT xs ys)
+
+def paddedRaw {d : Nat} (weak : Bool) (u v : Expr (Fin d)) : VectorCode :=
+  vectorCode (left u v) (if weak then weakRight u v else strictRight u v)
+
+def vectorProgram (weak : Bool) (e : Nat) : VectorCode :=
+  let raw := scalarProgram false e
+  let out := (WWBoundedVectorCode.paddingCode raw.1 raw.2.2 raw.2.1).getD ([], [], [])
+  (raw.1, out.1, if weak then out.2.1 else out.2.2)
+
+end LogicLineages.ComputabilityKnowledge.BareHardnessCompletion

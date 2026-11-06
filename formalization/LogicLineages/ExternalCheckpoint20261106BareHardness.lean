@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ProgramsStatementChecks
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.ScalarStatementChecks
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.VectorStatementChecks
+public meta import LogicLineages.Audit
+public section
+namespace LogicLineages.ExternalCheckpoint20261106BareHardness
+open ComputabilityKnowledge.BareHardnessCompletion
+
+theorem full_finite_bare_hardness : Targets.FullFiniteBareHardness :=
+  ScalarStatementChecks.full_finite_bare_hardness
+theorem full_bounded_bare_vectors : Targets.FullBoundedBareVectors :=
+  VectorStatementChecks.full_bounded_bare_vectors
+
+end LogicLineages.ExternalCheckpoint20261106BareHardness
+#audit_namespace LogicLineages.ExternalCheckpoint20261106BareHardness

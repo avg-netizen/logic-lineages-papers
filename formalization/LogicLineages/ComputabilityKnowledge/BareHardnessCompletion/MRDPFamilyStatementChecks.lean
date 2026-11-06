@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyTargets
+import LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyProof
+public meta import LogicLineages.Audit
+public section
+namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks
+
+theorem re_polynomial_family : MRDPFamilyTargets.REPolynomialFamily :=
+  MRDPFamilyProof.rePolynomialFamily
+theorem halting_obstruction : MRDPFamilyTargets.HaltingObstruction :=
+  MRDPFamilyProof.haltingObstruction
+
+end LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.BareHardnessCompletion.MRDPFamilyStatementChecks

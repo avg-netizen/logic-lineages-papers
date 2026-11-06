@@ -1,4 +1,16 @@
-# CURRENT checkpoint — uniform kernel separation, 5 November 2026
+# CURRENT checkpoint — finite depth-two hardness and bounded vectors, 6 November 2026
+
+Paper02 `thm:finite-bare-hardness` and `thm:bounded-bare-vectors` are checked. Strict and weak scalar comparison, for both actual values and actual norms, is Pi01-complete on the original positive depth-two exponential fragment. Every RE complement has a total computable reduction with uniformly genuine outputs. The literal two-component bounded C-vector family is Pi01-hard, and even a total computable procedure correct only on its genuine valid domain cannot decide either original WW order.
+
+The focused coordinator passed with **298 source-matched local modules** and **19 exact aliases**, all using only standard axioms. Peak successful observed process-tree RSS was **1,395,248 KiB**, below the unchanged **1,536 MiB** cap. Register: **166 checked, 2 inherited, 21 pending / 189**. Only these two numbered source statements change status. Earlier finite-source comparison and uniform kernel separation remain preserved.
+
+Paper02's broader consumer corollary, paper08's full first-order BASE and polynomial-word comparison chain, and the other current pending obligations remain open. No full-root or remote-CI build is claimed. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-06/bare-hardness/STATUS.md).
+
+Earlier checkpoint summaries below are historical. Exact-source preservation, standard-axiom acceptance and the unchanged serialized compiler limits remain active.
+
+---
+
+# Previous checkpoint — uniform kernel separation, 5 November 2026
 
 Paper08 `lem:uniform` is checked for every rank `d >= 3`, arbitrary natural retained masses and iteration allowance, and arbitrary signed offsets, with the original `C_d/T_d` region. Both separation inequalities, depth bounds, exact signed order, and the computed-tail equality criterion are proved.
 
