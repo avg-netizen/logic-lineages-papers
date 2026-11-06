@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientGapProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientGapStatementChecks
+theorem leftDistributivity_exact : InternalQuotientGapTargets.ActualLeftDistributivity :=
+  InternalQuotientGapProof.actualLeftDistributivity
+theorem quotientGap_exact : InternalQuotientGapTargets.ActualQuotientGapContradiction :=
+  InternalQuotientGapProof.actualQuotientGapContradiction
+#print axioms leftDistributivity_exact
+#print axioms quotientGap_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientGapStatementChecks
