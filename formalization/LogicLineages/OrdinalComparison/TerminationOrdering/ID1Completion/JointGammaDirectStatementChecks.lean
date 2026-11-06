@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectStatementChecks
+
+theorem domination_exact : JointGammaDirectPreflight.dominationComparator :=
+  JointGammaDirectProof.dominationPrimitive
+theorem direct_exact : JointGammaDirectPreflight.directComparator :=
+  JointGammaDirectProof.directPrimitive
+theorem numeric_exact : JointGammaDirectPreflight.numericComparator :=
+  JointGammaDirectProof.actualJointNumericDirectPrimitive
+#print axioms domination_exact
+#print axioms direct_exact
+#print axioms numeric_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectStatementChecks

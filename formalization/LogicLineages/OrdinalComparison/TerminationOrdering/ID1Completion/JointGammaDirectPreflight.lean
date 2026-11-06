@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectPreflight
+def dominationComparator : Prop := JointGammaDirectTargets.ActualJointDominationPrimitive
+def directComparator : Prop := JointGammaDirectTargets.ActualJointDirectPrimitive
+def numericComparator : Prop := JointGammaDirectTargets.ActualJointNumericDirectPrimitive
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDirectPreflight
