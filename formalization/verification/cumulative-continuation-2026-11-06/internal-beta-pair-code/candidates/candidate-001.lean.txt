@@ -1,0 +1,88 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairCodeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairArithmeticProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairCodeProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalBetaPairCode
+open InternalBetaPairArithmeticProof InternalBetaWitnessProof InternalBetaTotalitySyntaxProof
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalSourceInversionSupportProof
+open InternalAdditionLawsProof InternalMultiplicationLawsProof InternalMultiplicationLeftSuccessorProof
+open InternalBetaDivisionProof InternalGraphCompositionSyntaxProof
+open InternalFiniteBlocksBindingProof InternalFiniteBlocksProof InternalTermSubstitutionSyntaxProof
+open InternalTermSubstitutionProof
+
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+def mulOneLeft (t : OrdinaryArithmetic.Term α) : Derivation body Gamma (eqn (mul (suc z) t) t) :=
+  trans (leftSuccessorMultiplication z t)
+    (trans (InternalMultiplicationLawsProof.congAddRight t (multiplicationLeftZero t)) (leftZero t))
+def mulTwoLeft (t : OrdinaryArithmetic.Term α) :
+    Derivation body Gamma (eqn (mul (suc (suc z)) t) (twice t)) :=
+  trans (leftSuccessorMultiplication (suc z) t)
+    (InternalMultiplicationLawsProof.congAddRight t (mulOneLeft t))
+def modulusZero (b : OrdinaryArithmetic.Term α) :
+    Derivation body Gamma (eqn (InternalBetaWitness.modulus b z) (suc b)) :=
+  congSuc (mulOneLeft b)
+def modulusOne (b : OrdinaryArithmetic.Term α) :
+    Derivation body Gamma (eqn (InternalBetaWitness.modulus b (suc z)) (suc (twice b))) :=
+  congSuc (mulTwoLeft b)
+
+theorem actualExplicitPairCode : InternalBetaPairCodeTargets.ActualExplicitPairCode := by
+  intro body α x y
+  have first : Nonempty (Derivation body [] (arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula (firstCode x y) (secondCode x y) z x))) := by
+    apply actualBetaIntroduction body α [] (firstCode x y) (secondCode x y) z x (firstQuotient y) y
+    rw [equationEmbedding]
+    apply Nonempty.intro
+    apply Derivation.conjunctionIntroduction
+    · exact InternalMultiplicationLawsProof.congAddRight x
+        (congMulLeft (firstQuotient y) (symm (modulusZero (secondCode x y))))
+    · exact trans (addSucc x y) (symm (modulusZero (secondCode x y)))
+  have second : Nonempty (Derivation body [] (arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula (firstCode x y) (secondCode x y) (suc z) y))) := by
+    apply actualBetaIntroduction body α [] (firstCode x y) (secondCode x y) (suc z) y
+      (secondQuotient y) (add (twice x) y)
+    rw [equationEmbedding]
+    apply Nonempty.intro
+    apply Derivation.conjunctionIntroduction
+    · exact trans (pairEquation x y)
+        (InternalMultiplicationLawsProof.congAddRight y
+          (congMulLeft (secondQuotient y) (symm (modulusOne (secondCode x y)))))
+    · exact trans (boundEquation x y) (symm (modulusOne (secondCode x y)))
+  obtain ⟨first⟩ := first
+  obtain ⟨second⟩ := second
+  exact ⟨Derivation.conjunctionIntroduction first second⟩
+
+theorem matrixSubst (x y : OrdinaryArithmetic.Term α) (ts : Fin 2 → OrdinaryArithmetic.Term α) :
+    (arithmeticEmbedding.onFormula (InternalBetaPairCode.matrix x y)).subst
+      (Sum.elim Term.var (fun j => emb (ts j))) =
+    arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula (ts 0) (ts 1) z x ⊓
+        OrdinaryArithmetic.betaFormula (ts 0) (ts 1) (suc z) y) := by
+  have he : (Sum.elim Term.var (fun j => emb (ts j))) =
+      (fun a => emb (Sum.elim Term.var ts a)) := by
+    funext a
+    cases a <;> rfl
+  rw [he,← embedSubst]
+  have ht (t : OrdinaryArithmetic.Term α) :
+      (t.relabel Sum.inl).subst (Sum.elim Term.var ts) = t := by
+    rw [termRelabelSubst]
+    exact termSubstVar t
+  unfold InternalBetaPairCode.matrix
+  congr 1
+  change (OrdinaryArithmetic.betaFormula (.var (.inr 0)) (.var (.inr 1)) z (x.relabel Sum.inl)).subst _ ⊓
+    (OrdinaryArithmetic.betaFormula (.var (.inr 0)) (.var (.inr 1)) (suc z) (y.relabel Sum.inl)).subst _ = _
+  rw [originalBetaSubst,originalBetaSubst]
+  simp only [Term.subst,Sum.elim_inr,zSubst,sucSubst,ht]
+
+theorem actualPairCodeExistence : InternalBetaPairCodeTargets.ActualPairCodeExistence := by
+  intro body α x y
+  unfold pairExists
+  rw [actualOriginalBlockEmbedding]
+  apply actualFiniteExistentialIntroduction body α 2 [] _
+    (fun j => emb (Fin.cases (firstCode x y) (fun _ => secondCode x y) j))
+  rw [matrixSubst]
+  exact actualExplicitPairCode body α x y
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairCodeProof

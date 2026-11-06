@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairCodeProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairCodeStatementChecks
+theorem explicitCode_exact : InternalBetaPairCodeTargets.ActualExplicitPairCode := InternalBetaPairCodeProof.actualExplicitPairCode
+theorem existence_exact : InternalBetaPairCodeTargets.ActualPairCodeExistence := InternalBetaPairCodeProof.actualPairCodeExistence
+#print axioms explicitCode_exact
+#print axioms existence_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairCodeStatementChecks
