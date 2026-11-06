@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.QuadraticWordGuardCompletion.WordProof
+public import LogicLineages.OrdinalComparison.QuadraticWordGuardCompletion.ProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.QuadraticWordGuardCompletion.StatementChecks
+
+theorem fixed_quantitativeQuadraticGap : Targets.QuantitativeQuadraticGap := Proof.quantitativeQuadraticGap
+theorem fixed_shiftedQuadraticOrder : Targets.ShiftedQuadraticOrder := Proof.shiftedQuadraticOrder
+theorem fixed_quadraticWordGuardCorrect : Targets.QuadraticWordGuardCorrect := Proof.quadraticWordGuardCorrect
+theorem fixed_guardPrograms : Targets.GuardPrograms := Proof.guardPrograms
+
+#print axioms fixed_quantitativeQuadraticGap
+#print axioms fixed_shiftedQuadraticOrder
+#print axioms fixed_quadraticWordGuardCorrect
+#print axioms fixed_guardPrograms
+
+end LogicLineages.OrdinalComparison.QuadraticWordGuardCompletion.StatementChecks
