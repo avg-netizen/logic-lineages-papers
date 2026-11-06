@@ -1,0 +1,38 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:41:4: error: Tactic `rfl` failed: The left-hand side
+  (Term.relabel Sum.inl t).subst (liftTerms ts)
+is not definitionally equal to the right-hand side
+  Term.relabel Sum.inl (Term.subst t ts)
+
+case e_f₁.e_t
+α β : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+t : OTerm α
+ts : α → OTerm β
+he : (Sum.elim (fun a => Term.relabel Sum.inl (emb (ts a))) fun i => var (Sum.inr i)) = fun a => emb (liftTerms ts a)
+⊢ (Term.relabel Sum.inl t).subst (liftTerms ts) = Term.relabel Sum.inl (Term.subst t ts)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:42:2: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:54:4: error: Tactic `rfl` failed: The left-hand side
+  Term.relabel (Sum.map j id) (Term.relabel Sum.inl t)
+is not definitionally equal to the right-hand side
+  Term.relabel Sum.inl (Term.relabel j t)
+
+case e_a.e_t
+α β : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+t : OTerm α
+j : α → β
+hr :
+  ∀ (q r : InternalCalculus.Formula (α ⊕ Fin 1)),
+    Formula.relabel (Sum.map j id) (Formula.imp q r) =
+      (Formula.relabel (Sum.map j id) q).imp (Formula.relabel (Sum.map j id) r)
+⊢ Term.relabel (Sum.map j id) (Term.relabel Sum.inl t) = Term.relabel Sum.inl (Term.relabel j t)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:55:2: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:74:2: error: Tactic `rfl` failed: The left-hand side
+  BoundedFormula.subst p ((fun a => emb (liftTerms nextTerm a)) ∘ Sum.map Sum.inl id)
+is not definitionally equal to the right-hand side
+  BoundedFormula.subst p fun a => var (Sum.map Sum.inl id a)
+
+α : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+⊢ BoundedFormula.subst p ((fun a => emb (liftTerms nextTerm a)) ∘ Sum.map Sum.inl id) =
+    BoundedFormula.subst p fun a => var (Sum.map Sum.inl id a)

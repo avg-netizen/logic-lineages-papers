@@ -1,0 +1,51 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLeastNumberSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:39:9: error(lean.unknownIdentifier): Unknown identifier `impSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:30:70: error: unsolved goals
+α β : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+t : OTerm α
+ts : α → OTerm β
+he : (Sum.elim (fun a => Term.relabel Sum.inl (emb (ts a))) fun i => var (Sum.inr i)) = fun a => emb (liftTerms ts a)
+⊢ allOne
+      (BoundedFormula.subst (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl t)) (Formula.not p)) fun a =>
+        emb (liftTerms ts a)) =
+    allOne
+      (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.subst t ts)))
+        (Formula.not (BoundedFormula.subst p fun a => emb (liftTerms ts a))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:49:2: error: 'change' tactic failed, pattern
+  allOne ((Formula.relabel (Sum.map j id) (ltF ?m.29 ?m.30)).imp (Formula.relabel (Sum.map j id) p).not) = ?m.52
+is not definitionally equal to target
+  allOne
+      (Formula.relabel (Sum.map j id) (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl t)) (Formula.not p))) =
+    allOne
+      (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel j t)))
+        (Formula.relabel (Sum.map j id) p).not)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:72:38: error(lean.unknownIdentifier): Unknown identifier `formulaRelabelAsSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:71:71: error: unsolved goals
+α : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+⊢ BoundedFormula.subst p ((fun a => emb (liftTerms nextTerm a)) ∘ Sum.map Sum.inl id) =
+    Formula.relabel (Sum.map Sum.inl id) p
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:84:6: error(lean.unknownIdentifier): Unknown identifier `impInstantiate`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:83:51: error: unsolved goals
+α : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+s t : OTerm α
+⊢ instantiate (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl t)) (Formula.not p)) (emb s) =
+    Formula.imp (ltF s t) (Formula.not (instantiate p (emb s)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberSyntaxProof.lean:93:2: error: Tactic `rfl` failed: The left-hand side
+  Formula.relabel (Sum.map j id) p ⊓
+    below (Formula.relabel (Sum.map (Sum.map j id) id ∘ Sum.map Sum.inl id) p)
+      (Term.relabel (Sum.map j id) (var (Sum.inr 0)))
+is not definitionally equal to the right-hand side
+  Formula.relabel (Sum.map j id) p ⊓ below (Formula.relabel (Sum.map Sum.inl id ∘ Sum.map j id) p) (var (Sum.inr 0))
+
+α β : Type
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+j : α → β
+⊢ Formula.relabel (Sum.map j id) p ⊓
+      below (Formula.relabel (Sum.map (Sum.map j id) id ∘ Sum.map Sum.inl id) p)
+        (Term.relabel (Sum.map j id) (var (Sum.inr 0))) =
+    Formula.relabel (Sum.map j id) p ⊓ below (Formula.relabel (Sum.map Sum.inl id ∘ Sum.map j id) p) (var (Sum.inr 0))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLeastNumberSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794001487112506237-8.json

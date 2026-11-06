@@ -1,0 +1,5 @@
+# Internal least-number prerequisite
+
+The full target is ordinary-arithmetic least-number existence, as needed to choose the least positive Bezout linear combination in the original PA/ID1 CRT chain. It is a supplier, not a numbered source theorem promotion. P is an arbitrary ordinary formula on α ⊕ Fin 1; α remains free, the distinguished variable is existentially bound x, and the nested universal binds y. The order atom is literally OrdinaryArithmetic.lessFormula y x, embedded into the existing language. No Nat truth or semantic reflection is involved. The arbitrary positive ID1 body is unchanged.
+
+Before proof authoring, freeze two unconditional order prerequisites: s < succ t implies s < t or s = t; and not s < 0. The full least-number target remains pending unless separately proved and checked. Source-order representation is the existing existential equation s + succ d = t. The split is obtained by original PA induction on d after cancelling successor, never by a certificate premise.

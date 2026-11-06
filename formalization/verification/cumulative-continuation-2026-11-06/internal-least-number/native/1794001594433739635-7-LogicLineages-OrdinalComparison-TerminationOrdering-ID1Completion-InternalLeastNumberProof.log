@@ -1,0 +1,36 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:73:47: error: Application type mismatch: The argument
+  List.mem_cons_self
+has type
+  ?m.58 ∈ ?m.58 :: ?m.59
+but is expected to have type
+  arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula (var (Sum.inr 0)) OrdinaryArithmetic.zeroTerm) ∈
+    ltF (var (Sum.inr 0)) (Term.relabel Sum.inl z) :: List.map weaken Gamma
+in the application
+  Derivation.hypothesis ⋯
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:80:43: error(lean.unknownIdentifier): Unknown identifier `addHyp`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:83:87: error(lean.unknownIdentifier): Unknown identifier `addHyp`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:121:45: error(lean.unknownIdentifier): Unknown identifier `addHyp`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:122:12: error(lean.unknownIdentifier): Unknown identifier `disjunctionElimination`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:88:58: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+t : OTerm α
+hb : Nonempty (Derivation body Gamma (below p t))
+hn : Nonempty (Derivation body Gamma (Formula.not (instantiate p (emb t))))
+x : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+w : OrdinaryArithmetic.arithmeticLanguage.Term (α ⊕ Fin 1) := Term.relabel Sum.inl t
+Delta : List (InternalCalculus.Formula (α ⊕ Fin 1)) := ltF x (suc w) :: List.map weaken Gamma
+hi : ∀ q ∈ Gamma, Formula.relabel Sum.inl q ∈ Delta
+hb' : Derivation body Delta (below (Formula.relabel (Sum.map Sum.inl id) p) (Term.relabel Sum.inl t))
+hn' :
+  Derivation body Delta
+    (Formula.not (instantiate (Formula.relabel (Sum.map Sum.inl id) p) (Term.relabel Sum.inl (emb t))))
+split :
+  Derivation body []
+    (Formula.imp (ltF x (suc w)) (ltF x w ⊔ (arithmeticEmbedding.onTerm x).equal (arithmeticEmbedding.onTerm w)))
+hd : Derivation body Delta (ltF x w ⊔ eqn x w)
+hl : Derivation body Delta (Formula.imp (ltF x w) (Formula.not p))
+hr : Derivation body Delta (Formula.imp (eqn x w) (Formula.not p))
+⊢ Nonempty (Derivation body Gamma (below p (suc t)))

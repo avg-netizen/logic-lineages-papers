@@ -1,0 +1,14 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:122:78: error: Application type mismatch: The argument
+  hh
+has type
+  Derivation body (p :: eqn x w :: Delta) (instantiate (liftP p) (emb w))
+but is expected to have type
+  Derivation body (p :: eqn x w :: Delta)
+    (instantiate (Formula.relabel (Sum.map Sum.inl id) p) (Term.relabel Sum.inl (emb t)))
+in the application
+  (addHyp (addHyp hn' (eqn x w)) p).implicationElimination hh
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLeastNumberProof.lean:126:2: error: 'change' tactic failed, pattern
+  Derivation body (List.map weaken Gamma) (Formula.imp (ltF x (suc w)) (Formula.not p))
+is not definitionally equal to target
+  Derivation body (List.map weaken Gamma)
+    (Formula.imp (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (suc t))) (Formula.not p))
