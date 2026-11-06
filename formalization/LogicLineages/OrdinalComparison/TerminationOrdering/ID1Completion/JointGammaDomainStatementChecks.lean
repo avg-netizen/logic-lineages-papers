@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDomainPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDomainProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDomainStatementChecks
+
+theorem codec_exact : JointGammaDomainPreflight.codecComparator := JointGammaDomainCodecProof.actualObjectCodec
+theorem primitive_exact : JointGammaDomainPreflight.primitiveComparator := JointGammaDomainProof.actualGuardPrimitive
+theorem calibration_exact : JointGammaDomainPreflight.calibrationComparator := JointGammaDomainProof.actualGuardCalibration
+theorem domain_exact : JointGammaDomainPreflight.domainComparator := JointGammaDomainProof.actualArgumentDomain
+theorem quantifier_exact : JointGammaDomainPreflight.quantifierComparator := JointGammaDomainProof.actualQuantifierFibers
+theorem typed_exact : JointGammaDomainPreflight.typedComparator := JointGammaDomainProof.actualTypedArgumentFibers
+theorem formula_exact : JointGammaDomainPreflight.formulaComparator := JointGammaDomainProof.actualGuardArithmeticFormula
+#print axioms codec_exact
+#print axioms primitive_exact
+#print axioms calibration_exact
+#print axioms domain_exact
+#print axioms quantifier_exact
+#print axioms typed_exact
+#print axioms formula_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaDomainStatementChecks
