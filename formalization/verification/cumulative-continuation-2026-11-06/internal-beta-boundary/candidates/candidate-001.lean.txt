@@ -1,0 +1,117 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaBoundaryTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationLeftSuccessorProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaBoundaryProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open SourceComputabilityFormulaSupportProof InternalBetaWitness InternalBetaWitnessProof
+open InternalBetaDivisionSyntaxProof InternalBetaDivisionProof
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalSourceInversionSupportProof
+open InternalAdditionLawsProof InternalMultiplicationLawsProof
+open InternalOriginalOrderSyntaxProof InternalOriginalOrderProof
+open InternalTermSubstitutionSyntaxProof InternalTermSubstitutionProof
+open InternalBinderTransportSyntaxProof InternalBinderTransportProof
+open InternalMultiplicationLeftSuccessorProof
+
+theorem instantiateWeaken {α : Type} (p : Formula α) (t : Term α) :
+    instantiate (weaken p) t = p := by
+  unfold instantiate weaken
+  rw [actualRelabelSubstitution]
+  exact formulaSubstVar p
+
+theorem nextWeaken {α : Type} (p : Formula α) :
+    (weaken p).subst (fun a => emb (nextTerm a)) = weaken p := by
+  unfold weaken
+  rw [actualRelabelSubstitution,formulaRelabelAsSubst]
+  rfl
+
+theorem supRename {α β : Type} (p q : Formula α) (j : α → β) :
+    (p ⊔ q).relabel j = p.relabel j ⊔ q.relabel j := rfl
+
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+/-- Induction on the original strict-bound witness. Its positive step
+produces a successor-order witness directly; no order oracle is used. -/
+def witnessBoundary (s t d : OrdinaryArithmetic.Term α) :
+    Derivation body Gamma ((eqn (add s (suc d)) t).imp (ltF (suc s) t ⊔ eqn (suc s) t)) := by
+  let a := s.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let b := t.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let x : OrdinaryArithmetic.Term (α ⊕ Fin 1) := .var (.inr 0)
+  let psi := ltF (suc s) t ⊔ eqn (suc s) t
+  let theta := (eqn (add a (suc x)) b).imp (weaken psi)
+  have hb : Derivation body Gamma (instantiate theta (emb z)) := by
+    simp only [theta,a,b,x,impInstantiate,eqnInstantiate,addSubst,sucSubst,liftBind,varBind,instantiateWeaken]
+    apply Derivation.implicationIntroduction
+    apply Derivation.implicationIntroduction
+    exact trans (symm (trans (addSucc s z) (congSuc (addZero s))))
+      (Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self))
+  have hs : Derivation body (theta :: Gamma.map weaken) (successorInstance theta) := by
+    simp only [theta,a,b,x,successorInstance,nextEmbedding,impSubst,eqnSubst,addSubst,sucSubst,liftNext,varNext,nextWeaken]
+    change Derivation body (theta :: Gamma.map weaken)
+      ((eqn (add a (suc (suc x))) b).imp ((ltF (suc s) t ⊔ eqn (suc s) t).relabel Sum.inl))
+    rw [supRename,orderRename,eqnRelabel,sucRelabel]
+    apply Derivation.implicationIntroduction
+    apply Derivation.implicationIntroduction
+    have e := Derivation.hypothesis (body := body)
+      (Gamma := [(ltF (suc a) b).not, eqn (add a (suc (suc x))) b] ++ (theta :: Gamma.map weaken))
+      (phi := eqn (add a (suc (suc x))) b) (by simp)
+    have h := actualOriginalOrderIntroduction body (α ⊕ Fin 1)
+      ([(ltF (suc a) b).not, eqn (add a (suc (suc x))) b] ++ (theta :: Gamma.map weaken))
+      (suc a) b x (by
+        rw [onEquality]
+        exact ⟨trans (leftSuccessor a (suc x)) (trans (symm (addSucc a (suc x))) e)⟩)
+    obtain ⟨h⟩ := h
+    exact Derivation.explosion (Derivation.implicationElimination
+      (Derivation.hypothesis List.mem_cons_self) h)
+  have h := Derivation.universalElimination (emb d) (natInduction theta hb hs)
+  simpa only [theta,a,b,x,impInstantiate,eqnInstantiate,addSubst,sucSubst,liftBind,varBind,instantiateWeaken] using h
+
+theorem actualDiscreteOrderBoundary : InternalBetaBoundaryTargets.ActualDiscreteOrderBoundary := by
+  intro body α s t
+  have h : Nonempty (Derivation body [ltF s t] (ltF (suc s) t ⊔ eqn (suc s) t)) := by
+    apply orderCases [ltF s t] s t _ ⟨Derivation.hypothesis List.mem_cons_self⟩
+    intro β j Delta d _ ⟨e⟩
+    rw [supRename,orderRename,eqnRelabel,sucRelabel]
+    exact ⟨Derivation.implicationElimination (witnessBoundary (s.relabel j) (t.relabel j) d) e⟩
+  obtain ⟨h⟩ := h
+  change Nonempty (Derivation body [] ((ltF s t).imp
+    (ltF (suc s) t ⊔ arithmeticEmbedding.onFormula ((suc s).equal t))))
+  rw [onEquality]
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+theorem actualBetaSuccessorAtModulus : InternalBetaBoundaryTargets.ActualBetaSuccessorAtModulus := by
+  intro body α a b i r
+  let Gamma := [betaF a b i r ⊓ eqn (suc r) (modulus b i)]
+  have hb : Nonempty (Derivation body Gamma (betaF a b i r)) :=
+    ⟨Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)⟩
+  have he : Nonempty (Derivation body Gamma (eqn (suc r) (modulus b i))) :=
+    ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+  have h : Nonempty (Derivation body Gamma (betaF (suc a) b i z)) := by
+    apply betaCases Gamma a b i r _ hb
+    intro β j Delta q d hi ⟨e⟩
+    change Nonempty (Derivation body Delta ((arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula (suc a) b i z)).relabel j))
+    rw [betaRename,sucRelabel,zRelabel]
+    rw [equationEmbedding] at e
+    have edge := renameInto he j Delta hi
+    simp only [eqnRelabel,sucRelabel,modulusRename] at edge
+    obtain ⟨edge⟩ := edge
+    apply actualBetaIntroduction body β Delta (suc (a.relabel j)) (b.relabel j) (i.relabel j) z
+      (suc q) (mul (suc (i.relabel j)) (b.relabel j))
+    rw [equationEmbedding]
+    apply Nonempty.intro
+    apply Derivation.conjunctionIntroduction
+    · exact trans (congSuc (Derivation.conjunctionLeft e))
+        (trans (symm (addSucc _ _))
+          (trans (congAddLeft _ edge)
+            (trans (symm (leftSuccessorMultiplication q (modulus (b.relabel j) (i.relabel j))))
+              (symm (addZero _)))))
+    · exact leftZero (modulus (b.relabel j) (i.relabel j))
+  obtain ⟨h⟩ := h
+  change Nonempty (Derivation body []
+    ((betaF a b i r ⊓ arithmeticEmbedding.onFormula ((suc r).equal (modulus b i))).imp
+      (betaF (suc a) b i z)))
+  rw [onEquality]
+  exact ⟨Derivation.implicationIntroduction h⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaBoundaryProof
