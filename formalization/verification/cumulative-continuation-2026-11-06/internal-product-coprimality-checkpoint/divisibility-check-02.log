@@ -1,0 +1,32 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalDivisibilityProof.lean:92:9: error: Ambiguous term
+  trans
+Possible interpretations:
+  InternalTagArithmeticSupportProof.trans
+    (congSuc
+      (InternalTagArithmeticSupportProof.trans (multiplicationAssociativity U Q (suc E))
+        (congMulLeft U (InternalTagArithmeticSupportProof.symm hq'))))
+    (Trans.trans hc'' ⋯) : Derivation body Theta (eqn (suc (mul (mul U Q) (suc E))) (mul (mul V r) (suc E)))
+  
+  Trans.trans
+    (congSuc
+      (InternalTagArithmeticSupportProof.trans (multiplicationAssociativity U Q (suc E))
+        (congMulLeft U (InternalTagArithmeticSupportProof.symm hq'))))
+    ⋯ : Derivation body Theta (eqn (suc (mul (mul U Q) (suc E))) (mul (mul V r) (suc E)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalDivisibilityProof.lean:112:78: error: Application type mismatch: The argument
+  he
+has type
+  Derivation body Delta (eqn (suc x) one)
+but is expected to have type
+  Derivation body
+    (arithmeticEmbedding.onFormula (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl m)) ⊓
+        arithmeticEmbedding.onFormula
+          (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl a)) ::
+      List.map weaken Gamma)
+    (arithmeticEmbedding.onFormula
+      (Term.equal (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+        (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+in the application
+  he.implicationIntroduction
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProof: 1
+BUILD_RECEIPT build-reports/1794003581679410230-8.json

@@ -1,0 +1,83 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalProductCoprimalityProof.lean:38:73: error: Application type mismatch: The argument
+  hu'
+has type
+  Derivation body Theta
+    (Formula.relabel k
+      ((arithmeticEmbedding.onTerm (InternalBezoutCRT.suc (InternalBezoutCRT.mul u (suc (Term.relabel j m))))).equal
+        (arithmeticEmbedding.onTerm (InternalBezoutCRT.mul v (InternalBezoutCRT.suc (Term.relabel j a))))))
+but is expected to have type
+  Derivation body Theta
+    (eqn (suc (mul ?m.184 (suc (Term.relabel k (Term.relabel j m)))))
+      (mul ?m.185 (suc (Term.relabel k (Term.relabel j a)))))
+in the application
+  certificateProduct (suc (Term.relabel k (Term.relabel j m))) (suc (Term.relabel k (Term.relabel j a)))
+    (suc (Term.relabel k (Term.relabel j b))) ?m.184 ?m.185 ?m.186 ?m.187 hu'
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalProductCoprimalityProof.lean:18:80: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+m a b : OTerm α
+ca :
+  Derivation body []
+    (Formula.imp (coprime (OrdinaryArithmetic.succTerm m) (OrdinaryArithmetic.succTerm a))
+      (arithmeticEmbedding.onFormula (InternalOrientedBezout.oriented m a)))
+cb :
+  Derivation body []
+    (Formula.imp (coprime (OrdinaryArithmetic.succTerm m) (OrdinaryArithmetic.succTerm b))
+      (arithmeticEmbedding.onFormula (InternalOrientedBezout.oriented m b)))
+ha : Derivation body Gamma (coprime (suc m) (suc a))
+hb : Derivation body Gamma (coprime (suc m) (suc b))
+hoa : Derivation body Gamma (arithmeticEmbedding.onFormula (InternalOrientedBezout.oriented m a))
+hob : Derivation body Gamma (arithmeticEmbedding.onFormula (InternalOrientedBezout.oriented m b))
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+u v : OrdinaryArithmetic.Term β
+hj : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hu :
+  Nonempty
+    (Derivation body Delta
+      (arithmeticEmbedding.onFormula (InternalBezoutCRT.certificate (suc (Term.relabel j m)) (Term.relabel j a) u v)))
+hb' : Nonempty (Derivation body Delta (of (Term.relabel j m) (Term.relabel j b)))
+γ : Type
+k : β → γ
+Theta : List (InternalCalculus.Formula γ)
+w z' : OrdinaryArithmetic.Term γ
+hk : ∀ f ∈ Delta, Formula.relabel k f ∈ Theta
+hu' :
+  Derivation body Theta
+    (Formula.relabel k
+      ((arithmeticEmbedding.onTerm (InternalBezoutCRT.suc (InternalBezoutCRT.mul u (suc (Term.relabel j m))))).equal
+        (arithmeticEmbedding.onTerm (InternalBezoutCRT.mul v (InternalBezoutCRT.suc (Term.relabel j a))))))
+hw :
+  Derivation body Theta
+    ((arithmeticEmbedding.onTerm
+          (InternalBezoutCRT.suc (InternalBezoutCRT.mul w (suc (Term.relabel k (Term.relabel j m)))))).equal
+      (arithmeticEmbedding.onTerm
+        (InternalBezoutCRT.mul z' (InternalBezoutCRT.suc (Term.relabel k (Term.relabel j b))))))
+⊢ Nonempty
+    (Derivation body Theta
+      (coprime (suc (Term.relabel k (Term.relabel j m)))
+        (OrdinaryArithmetic.mulTerm (suc (Term.relabel k (Term.relabel j a)))
+          (suc (Term.relabel k (Term.relabel j b))))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalProductCoprimalityProof.lean:35:24: warning: This simp argument is unused:
+  eqnRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵n̵E̵q̵u̵a̵l̵i̵t̵y̵,̵e̵q̵n̵R̵e̵l̵a̵b̵e̵l̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵m̵u̵l̵R̵e̵l̵a̵b̵e̵l̵]̵[̲o̲n̲E̲q̲u̲a̲l̲i̲t̲y̲,̲ ̲s̲u̲c̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲m̲u̲l̲R̲e̲l̲a̲b̲e̲l̲]̲ at hu' hw
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalProductCoprimalityProof.lean:35:35: warning: This simp argument is unused:
+  sucRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵n̵E̵q̵u̵a̵l̵i̵t̵y̵,̵e̵q̵n̵R̵e̵l̵a̵b̵e̵l̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵m̵u̵l̵R̵e̵l̵a̵b̵e̵l̵]̵[̲o̲n̲E̲q̲u̲a̲l̲i̲t̲y̲,̲ ̲e̲q̲n̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲m̲u̲l̲R̲e̲l̲a̲b̲e̲l̲]̲ at hu' hw
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalProductCoprimalityProof.lean:35:46: warning: This simp argument is unused:
+  mulRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵n̵E̵q̵u̵a̵l̵i̵t̵y̵,̵e̵q̵n̵R̵e̵l̵a̵b̵e̵l̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵m̵u̵l̵R̵e̵l̵a̵b̵e̵l̵]̵[̲o̲n̲E̲q̲u̲a̲l̲i̲t̲y̲,̲ ̲e̲q̲n̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲s̲u̲c̲R̲e̲l̲a̲b̲e̲l̲]̲ at hu' hw
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

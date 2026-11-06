@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityStatementChecks
+theorem certificateCoprimality_exact : InternalDivisibilityTargets.ActualCertificateCoprimality :=
+  InternalDivisibilityProof.actualCertificateCoprimality
+#print axioms certificateCoprimality_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityStatementChecks

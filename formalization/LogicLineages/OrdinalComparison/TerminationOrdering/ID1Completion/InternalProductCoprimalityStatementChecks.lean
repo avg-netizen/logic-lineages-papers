@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalProductCoprimalityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalProductCoprimalityStatementChecks
+ theorem certificateProductExact : InternalProductCoprimalityTargets.ActualCertificateProduct :=
+  InternalProductCoprimalityArithmeticProof.actualCertificateProduct
+ theorem actualCoprimeProductExact : InternalProductCoprimalityTargets.ActualPositiveProductCoprimality :=
+  InternalProductCoprimalityProof.actualPositiveProductCoprimality
+#print axioms certificateProductExact
+#print axioms actualCoprimeProductExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalProductCoprimalityStatementChecks
