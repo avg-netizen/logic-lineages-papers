@@ -1,0 +1,28 @@
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/TerminalWordGrowthCompletion/LetterProof.lean:22:16: error: Function expected at
+  Nat.lt_two_pow_self
+but this term has type
+  ?m.141 < 2 ^ ?m.141
+
+Note: Expected a function because this term is being applied to the argument
+  t
+/workspace/scratch/d6452c0f74c7/formalization-20261105/counter-word-guards/formalization/LogicLineages/OrdinalComparison/TerminalWordGrowthCompletion/LetterProof.lean:13:33: error: unsolved goals
+d c t : ℕ
+hd : 2 ≤ d
+ht : c + d + 1 ≤ t
+hb :
+  sourceCount d c t = actualSuffixKernelCount (Ordinal.omega0 ^ ↑d) c t ∧
+    sourceValue d c t = actualSuffixKernel (Ordinal.omega0 ^ ↑d) c t ∧
+      (∀ (i : ℕ),
+          1 ≤ i →
+            i ≤ sourceCount d c t →
+              sourceState d c t i =
+                actualControlledStateAfter (compensatedPrefixControl c)
+                  (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑d) c t) i) ∧
+        0 < sourceCount d c t ∧
+          sourceState d c t (sourceCount d c t) < Ordinal.omega0 ∧
+            (∀ i < sourceCount d c t, Ordinal.omega0 ≤ sourceState d c t i) ∧
+              ∀ (i : ℕ), 1 ≤ i → i ≤ sourceCount d c t → c + actualOrdinalNorm (sourceState d c t i) = Phi^[i] t
+hc : CounterLeaderExpansion.count 2 c t ≤ CounterLeaderExpansion.count d c t
+hq : actualSuffixKernelCount (Ordinal.omega0 ^ 2) c t = Phi t / 2 - (c + 1) / 2 + 1
+hp : 4 * 2 ^ t ≤ Phi t
+⊢ 2 ^ t ≤ sourceCount d c t
