@@ -1,0 +1,108 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open InternalBetaWitness InternalBetaWitnessProof InternalBetaDivisionSyntaxProof
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalSourceInversionSupportProof
+open InternalAdditionLawsProof InternalMultiplicationLawsProof
+open InternalOriginalOrderSyntaxProof InternalOriginalOrderProof
+
+abbrev betaF {α : Type} (a b i r : OrdinaryArithmetic.Term α) : Formula α :=
+  arithmeticEmbedding.onFormula (OrdinaryArithmetic.betaFormula a b i r)
+
+theorem equationEmbedding {α : Type} (a b i r q d : OrdinaryArithmetic.Term α) :
+    arithmeticEmbedding.onFormula (equations a b i r q d) =
+      eqn a (add (mul q (modulus b i)) r) ⊓ eqn (add r (suc d)) (modulus b i) := by
+  unfold equations
+  change arithmeticEmbedding.onFormula (a.equal (add (mul q (modulus b i)) r)) ⊓
+    arithmeticEmbedding.onFormula ((add r (suc d)).equal (modulus b i)) = _
+  rw [onEquality,onEquality]
+  rfl
+
+variable {body : Positive (Fin 1)} {α : Type}
+
+theorem betaCases (Gamma : List (Formula α)) (a b i r : OrdinaryArithmetic.Term α) (psi : Formula α)
+    (h : Nonempty (Derivation body Gamma (betaF a b i r)))
+    (k : ∀ (β : Type) (j : α → β) (Delta : List (Formula β)) (q d : OrdinaryArithmetic.Term β),
+      (∀ p ∈ Gamma, p.relabel j ∈ Delta) →
+      Nonempty (Derivation body Delta (arithmeticEmbedding.onFormula
+        (equations (a.relabel j) (b.relabel j) (i.relabel j) (r.relabel j) q d))) →
+      Nonempty (Derivation body Delta (psi.relabel j))) :
+    Nonempty (Derivation body Gamma psi) := by
+  apply actualBetaElimination body α Gamma a b i r psi h
+  apply k (α ⊕ Fin 2) Sum.inl _ (.var (.inr 0)) (.var (.inr 1))
+  · intro p hp
+    exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩)
+  · exact ⟨Derivation.hypothesis List.mem_cons_self⟩
+
+theorem actualBoundedQuotientZero : InternalBetaDivisionTargets.ActualBoundedQuotientZero := by
+  intro body α a b i
+  have h : Nonempty (Derivation body [ltF a (modulus b i)] (betaF a b i a)) := by
+    apply orderCases [ltF a (modulus b i)] a (modulus b i) _
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    intro β j Delta w _ ⟨e⟩
+    change Nonempty (Derivation body Delta ((arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula a b i a)).relabel j))
+    rw [betaRename]
+    rw [modulusRename] at e
+    apply actualBetaIntroduction body β Delta (a.relabel j) (b.relabel j) (i.relabel j) (a.relabel j) z w
+    rw [equationEmbedding]
+    exact ⟨Derivation.conjunctionIntroduction
+      (symm (trans (InternalMultiplicationLawsProof.congAddRight (a.relabel j)
+        (multiplicationLeftZero (modulus (b.relabel j) (i.relabel j)))) (leftZero (a.relabel j)))) e⟩
+  obtain ⟨h⟩ := h
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+theorem actualBetaRemainderBound : InternalBetaDivisionTargets.ActualBetaRemainderBound := by
+  intro body α a b i r
+  have h : Nonempty (Derivation body [betaF a b i r] (ltF r (modulus b i))) := by
+    apply betaCases [betaF a b i r] a b i r _ ⟨Derivation.hypothesis List.mem_cons_self⟩
+    intro β j Delta q d _ ⟨e⟩
+    rw [orderRename,modulusRename]
+    apply actualOriginalOrderIntroduction body β Delta (r.relabel j) (modulus (b.relabel j) (i.relabel j)) d
+    rw [onEquality]
+    rw [equationEmbedding] at e
+    change Derivation body Delta
+      (eqn (a.relabel j) (add (mul q (modulus (b.relabel j) (i.relabel j))) (r.relabel j)) ⊓
+        eqn (add (r.relabel j) (suc d)) (modulus (b.relabel j) (i.relabel j))) at e
+    exact ⟨Derivation.conjunctionRight e⟩
+  obtain ⟨h⟩ := h
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+theorem actualBetaSuccessorBelowModulus : InternalBetaDivisionTargets.ActualBetaSuccessorBelowModulus := by
+  intro body α a b i r
+  let Gamma := [betaF a b i r ⊓ ltF (suc r) (modulus b i)]
+  have hb : Nonempty (Derivation body Gamma (betaF a b i r)) :=
+    ⟨Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)⟩
+  have hl : Nonempty (Derivation body Gamma (ltF (suc r) (modulus b i))) :=
+    ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+  have h : Nonempty (Derivation body Gamma (betaF (suc a) b i (suc r))) := by
+    apply betaCases Gamma a b i r _ hb
+    intro β j Delta q d hi ⟨e⟩
+    change Nonempty (Derivation body Delta ((arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula (suc a) b i (suc r))).relabel j))
+    rw [betaRename,sucRelabel,sucRelabel]
+    have bound := renameInto hl j Delta hi
+    rw [orderRename,sucRelabel,modulusRename] at bound
+    rw [equationEmbedding] at e
+    change Derivation body Delta
+      (eqn (a.relabel j) (add (mul q (modulus (b.relabel j) (i.relabel j))) (r.relabel j)) ⊓
+        eqn (add (r.relabel j) (suc d)) (modulus (b.relabel j) (i.relabel j))) at e
+    have equation := Derivation.conjunctionLeft e
+    apply orderCases Delta (suc (r.relabel j)) (modulus (b.relabel j) (i.relabel j)) _ bound
+    intro γ l Theta w ht ⟨ew⟩
+    rw [betaRename,sucRelabel,sucRelabel]
+    have eq' := renameInto ⟨equation⟩ l Theta ht
+    simp only [eqnRelabel,addRelabel,mulRelabel,modulusRename] at eq'
+    rw [sucRelabel,modulusRename] at ew
+    obtain ⟨eq'⟩ := eq'
+    apply actualBetaIntroduction body γ Theta (suc ((a.relabel j).relabel l))
+      ((b.relabel j).relabel l) ((i.relabel j).relabel l) (suc ((r.relabel j).relabel l)) (q.relabel l) w
+    rw [equationEmbedding]
+    exact ⟨Derivation.conjunctionIntroduction
+      (trans (congSuc eq') (symm (addSucc _ _))) ew⟩
+  obtain ⟨h⟩ := h
+  exact ⟨Derivation.implicationIntroduction h⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionProof

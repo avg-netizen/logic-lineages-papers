@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionStatementChecks
+theorem boundedZero_exact : InternalBetaDivisionTargets.ActualBoundedQuotientZero := InternalBetaDivisionProof.actualBoundedQuotientZero
+theorem remainderBound_exact : InternalBetaDivisionTargets.ActualBetaRemainderBound := InternalBetaDivisionProof.actualBetaRemainderBound
+theorem successorBelow_exact : InternalBetaDivisionTargets.ActualBetaSuccessorBelowModulus := InternalBetaDivisionProof.actualBetaSuccessorBelowModulus
+#print axioms boundedZero_exact
+#print axioms remainderBound_exact
+#print axioms successorBelow_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaDivisionStatementChecks
