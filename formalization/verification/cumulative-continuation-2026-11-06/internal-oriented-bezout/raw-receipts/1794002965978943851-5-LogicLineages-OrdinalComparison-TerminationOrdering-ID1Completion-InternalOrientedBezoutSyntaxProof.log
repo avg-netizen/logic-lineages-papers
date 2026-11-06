@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:33:6: error(lean.unknownIdentifier): Unknown identifier `exsRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:29:59: error: unsolved goals
+α β : Type
+a b : OrdinaryArithmetic.Term α
+j : α → β
+⊢ arithmeticEmbedding.onFormula
+      (rename j
+        (BoundedFormula.relabel id
+            (Term.equal
+              (InternalBezoutCRT.suc
+                (InternalBezoutCRT.mul (var (Sum.inr 0)) (Term.relabel Sum.inl (OrdinaryArithmetic.succTerm a))))
+              (InternalBezoutCRT.mul (var (Sum.inr 1)) (InternalBezoutCRT.suc (Term.relabel Sum.inl b))))).exs) =
+    arithmeticEmbedding.onFormula
+      (BoundedFormula.relabel id
+          (Term.equal
+            (InternalBezoutCRT.suc
+              (InternalBezoutCRT.mul (var (Sum.inr 0))
+                (Term.relabel Sum.inl (OrdinaryArithmetic.succTerm (Term.relabel j a)))))
+            (InternalBezoutCRT.mul (var (Sum.inr 1))
+              (InternalBezoutCRT.suc (Term.relabel Sum.inl (Term.relabel j b)))))).exs
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:63:33: error: Application type mismatch: The argument
+  List.mem_cons_self
+has type
+  ?m.113 ∈ ?m.113 :: ?m.114
+but is expected to have type
+  arithmeticEmbedding.onFormula
+      (InternalBezoutCRT.certificate (suc (Term.relabel Sum.inl a)) (Term.relabel Sum.inl b) (var (Sum.inr 0))
+        (var (Sum.inr 1))) ∈
+    arithmeticEmbedding.onFormula (matrix a b) :: List.map (fun p => Formula.relabel Sum.inl p) Gamma
+in the application
+  Derivation.hypothesis ⋯

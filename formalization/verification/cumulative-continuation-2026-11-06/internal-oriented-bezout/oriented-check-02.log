@@ -1,0 +1,93 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:37:59: error(lean.unknownIdentifier): Unknown identifier `unaryRelabel`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:39:2: error: Tactic `rfl` failed: The left-hand side
+  (BoundedFormula.equal
+      (Term.relabel (Sum.map j id)
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ a)))))
+      (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.map j id (Sum.inr 1)))
+        (Term.relabel (Sum.map j id)
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl b))))).exs
+is not definitionally equal to the right-hand side
+  (BoundedFormula.equal
+      (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+          (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel j a)))))
+      (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 1))
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel (Sum.inl ∘ j) b)))).exs
+
+case e_a
+α β : Type
+a b : OrdinaryArithmetic.Term α
+j : α → β
+⊢ (BoundedFormula.equal
+        (Term.relabel (Sum.map j id)
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+              (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ a)))))
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.map j id (Sum.inr 1)))
+          (Term.relabel (Sum.map j id)
+            (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl b))))).exs =
+    (BoundedFormula.equal
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel j a)))))
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 1))
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel (Sum.inl ∘ j) b)))).exs
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:65:6: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.hypothesis body (α ⊕ Fin 2) (arithmeticEmbedding.onFormula (matrix a b) :: ?m.119)
+    (arithmeticEmbedding.onFormula (matrix a b)) ⋯
+context:
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+a b : OrdinaryArithmetic.Term α
+psi : InternalCalculus.Formula α
+h : Nonempty (Derivation body Gamma (InternalFiniteBlocks.block (arithmeticEmbedding.onFormula (matrix a b))))
+k :
+  ∀ (β : Type) (j : α → β) (Delta : List (InternalCalculus.Formula β)) (u v : OrdinaryArithmetic.Term β),
+    (∀ f ∈ Gamma, Formula.relabel j f ∈ Delta) →
+      Nonempty
+          (Derivation body Delta
+            (arithmeticEmbedding.onFormula
+              (InternalBezoutCRT.certificate (suc (Term.relabel j a)) (Term.relabel j b) u v))) →
+        Nonempty (Derivation body Delta (Formula.relabel j psi))
+⊢ List (InternalCalculus.Formula (α ⊕ Fin 2))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:65:28: error: don't know how to synthesize implicit argument `l`
+  @List.mem_cons_self (InternalCalculus.Formula (α ⊕ Fin 2)) (arithmeticEmbedding.onFormula (matrix a b)) ?m.119
+context:
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+a b : OrdinaryArithmetic.Term α
+psi : InternalCalculus.Formula α
+h : Nonempty (Derivation body Gamma (InternalFiniteBlocks.block (arithmeticEmbedding.onFormula (matrix a b))))
+k :
+  ∀ (β : Type) (j : α → β) (Delta : List (InternalCalculus.Formula β)) (u v : OrdinaryArithmetic.Term β),
+    (∀ f ∈ Gamma, Formula.relabel j f ∈ Delta) →
+      Nonempty
+          (Derivation body Delta
+            (arithmeticEmbedding.onFormula
+              (InternalBezoutCRT.certificate (suc (Term.relabel j a)) (Term.relabel j b) u v))) →
+        Nonempty (Derivation body Delta (Formula.relabel j psi))
+⊢ List (InternalCalculus.Formula (α ⊕ Fin 2))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:64:29: error: don't know how to synthesize placeholder
+context:
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+a b : OrdinaryArithmetic.Term α
+psi : InternalCalculus.Formula α
+h : Nonempty (Derivation body Gamma (InternalFiniteBlocks.block (arithmeticEmbedding.onFormula (matrix a b))))
+k :
+  ∀ (β : Type) (j : α → β) (Delta : List (InternalCalculus.Formula β)) (u v : OrdinaryArithmetic.Term β),
+    (∀ f ∈ Gamma, Formula.relabel j f ∈ Delta) →
+      Nonempty
+          (Derivation body Delta
+            (arithmeticEmbedding.onFormula
+              (InternalBezoutCRT.certificate (suc (Term.relabel j a)) (Term.relabel j b) u v))) →
+        Nonempty (Derivation body Delta (Formula.relabel j psi))
+⊢ List (InternalCalculus.Formula (α ⊕ Fin 2))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794003004105491192-8.json

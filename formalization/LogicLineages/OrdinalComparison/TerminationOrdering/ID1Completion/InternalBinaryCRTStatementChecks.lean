@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinaryCRTProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationCommutativityStatementChecks
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinaryCRTStatementChecks
+theorem binaryCRT_exact : InternalBinaryCRTTargets.ActualBinaryCRT :=
+  InternalBinaryCRTProof.actualBinaryCRT
+#print axioms binaryCRT_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinaryCRTStatementChecks

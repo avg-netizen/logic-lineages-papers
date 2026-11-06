@@ -1,0 +1,17 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutProof.lean:36:48: error(lean.unknownIdentifier): Unknown identifier `weakenClosed`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutProof.lean:31:73: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+a b : InternalOrientedBezout.OTerm α
+hs :
+  Derivation body []
+    (Formula.imp (coprime (OrdinaryArithmetic.succTerm a) (suc b))
+      (arithmeticEmbedding.onFormula
+        (InternalLinearCombination.combination (OrdinaryArithmetic.succTerm a) (suc b)
+          (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm))))
+p : InternalCalculus.Formula α := coprime (suc a) (suc b)
+hp : Derivation body [p] p
+⊢ Nonempty
+    (Derivation body []
+      (Formula.imp (coprime (OrdinaryArithmetic.succTerm a) (OrdinaryArithmetic.succTerm b))
+        (arithmeticEmbedding.onFormula (InternalOrientedBezout.oriented a b))))
