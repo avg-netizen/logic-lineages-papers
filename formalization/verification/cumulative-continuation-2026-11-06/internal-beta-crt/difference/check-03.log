@@ -1,0 +1,64 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalDivisibilityDifferenceProof.lean:84:9: error: overloaded, errors 
+  84:16 Ambiguous term
+    congAddRight
+  Possible interpretations:
+    ?m.150 : ?m.134 ?m.135 ?m.136
+    
+    ?m.150 : ?m.134 ?m.135 ?m.136
+  
+  84:16 Ambiguous term
+    congAddRight
+  Possible interpretations:
+    InternalOriginalOrderProof.congAddRight (Term.relabel k (Term.relabel j b))
+      (InternalTagArithmeticSupportProof.symm
+        hq') : Derivation body Theta
+      (eqn (add (mul (Term.relabel k q) (suc (Term.relabel k (Term.relabel j d)))) (Term.relabel k (Term.relabel j b)))
+        (add (Term.relabel k (Term.relabel j a)) (Term.relabel k (Term.relabel j b))))
+    
+    InternalMultiplicationLawsProof.congAddRight (Term.relabel k (Term.relabel j b))
+      (InternalTagArithmeticSupportProof.symm
+        hq') : Derivation body Theta
+      (eqn (add (mul (Term.relabel k q) (suc (Term.relabel k (Term.relabel j d)))) (Term.relabel k (Term.relabel j b)))
+        (add (Term.relabel k (Term.relabel j a)) (Term.relabel k (Term.relabel j b))))
+  
+  84:16 Ambiguous term
+    congAddRight
+  Possible interpretations:
+    InternalOriginalOrderProof.congAddRight ?m.146
+      (InternalTagArithmeticSupportProof.symm
+        hq') : Derivation body Theta
+      (eqn (add (OrdinaryArithmetic.mulTerm (Term.relabel k q) (suc (Term.relabel k (Term.relabel j d)))) ?m.146)
+        (add (Term.relabel k (Term.relabel j a)) ?m.146))
+    
+    InternalMultiplicationLawsProof.congAddRight ?m.146
+      (InternalTagArithmeticSupportProof.symm
+        hq') : Derivation body Theta
+      (eqn (add (OrdinaryArithmetic.mulTerm (Term.relabel k q) (suc (Term.relabel k (Term.relabel j d)))) ?m.146)
+        (add (Term.relabel k (Term.relabel j a)) ?m.146))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalDivisibilityDifferenceProof.lean:117:77: error: Application type mismatch: The argument
+  he
+has type
+  Derivation body Delta
+    ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+      (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+but is expected to have type
+  Derivation body
+    (arithmeticEmbedding.onFormula (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl m)) ⊓
+        arithmeticEmbedding.onFormula
+          (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+            (Term.relabel Sum.inl (InternalBezoutCRT.add m a))) ::
+      List.map weaken
+        [SourceComputabilityFormulaSupportProof.allOne
+            ((arithmeticEmbedding.onFormula
+                    (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl m)) ⊓
+                  arithmeticEmbedding.onFormula
+                    (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl a))).imp
+              ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+                (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm))))])
+    ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+      (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+in the application
+  he.implicationIntroduction
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof: 1
+BUILD_RECEIPT build-reports/1794005843788735240-6.json

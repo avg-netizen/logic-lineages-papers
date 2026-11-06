@@ -1,0 +1,28 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaModulusCoprimalityProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaModulusCoprimalityProof.lean:96:2: error: Type mismatch: After simplification, term
+  hp
+ has type
+  @Derivation body ((α ⊕ Fin 1) ⊕ Fin 1)
+    (ltF (var (Sum.inr 0)) (var (Sum.inl (Sum.inr 0))) ::
+      List.map weaken
+        (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl n) :: List.map weaken [differenceMultiples (suc b) n]))
+    (coprime
+      (OrdinaryArithmetic.succTerm
+        (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (var (Sum.inl (Sum.inr 0))))
+          (suc (Term.relabel (Sum.inl ∘ Sum.inl) b))))
+      (OrdinaryArithmetic.succTerm
+        (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+          (suc (Term.relabel (Sum.inl ∘ Sum.inl) b)))))
+but is expected to have type
+  @Derivation body ((α ⊕ Fin 1) ⊕ Fin 1)
+    (ltF (var (Sum.inr 0)) (var (Sum.inl (Sum.inr 0))) ::
+      List.map weaken
+        (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl n) ::
+          List.map weaken [differenceMultiples (OrdinaryArithmetic.succTerm b) n]))
+    (coprime
+      (suc (OrdinaryArithmetic.mulTerm (suc (var (Sum.inl (Sum.inr 0)))) (suc (Term.relabel (Sum.inl ∘ Sum.inl) b))))
+      (suc
+        (OrdinaryArithmetic.mulTerm (suc (var (Sum.map Sum.inl id (Sum.inr 0))))
+          (suc (Term.relabel (Sum.inl ∘ Sum.inl) b)))))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaModulusCoprimalityProof: 1
+BUILD_RECEIPT build-reports/1794006125080512506-7.json

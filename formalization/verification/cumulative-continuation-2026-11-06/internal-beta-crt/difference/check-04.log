@@ -1,0 +1,19 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalDivisibilityDifferenceProof.lean:118:77: error: Application type mismatch: The argument
+  he
+has type
+  Derivation body Delta
+    ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+      (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+but is expected to have type
+  Derivation body
+    (arithmeticEmbedding.onFormula (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl m)) ⊓
+        arithmeticEmbedding.onFormula
+          (divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl (add m a))) ::
+      List.map weaken Gamma)
+    ((arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))).equal
+      (arithmeticEmbedding.onTerm (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))
+in the application
+  he.implicationIntroduction
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof: 1
+BUILD_RECEIPT build-reports/1794005861623954458-6.json
