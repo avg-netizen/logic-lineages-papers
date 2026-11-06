@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsPreflight
+def binderComparator : Prop := InternalClosedProgramsTargets.ActualUniversalBinderEquations
+def embeddingComparator : Prop := InternalClosedProgramsTargets.ActualOriginalUniversalEmbedding
+def introductionComparator : Prop := InternalClosedProgramsTargets.ActualFiniteUniversalIntroduction
+def eliminationComparator : Prop := InternalClosedProgramsTargets.ActualFiniteUniversalElimination
+def sentenceComparator : Prop := InternalClosedProgramsTargets.ActualClosedOriginalProgramSentences
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsPreflight
