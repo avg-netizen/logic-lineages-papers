@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaTypedTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaTypedPreflight
+def calibrationComparator : Prop := JointGammaTypedTargets.ActualRawTypedCalibration
+def originalPrimitiveComparator : Prop := JointGammaTypedTargets.ActualOriginalTypedPrimitive
+def objectPrimitiveComparator : Prop := JointGammaTypedTargets.ActualObjectTypedPrimitive
+def fibersComparator : Prop := JointGammaTypedTargets.ActualOriginalContextFibers
+def formulaComparator : Prop := JointGammaTypedTargets.ActualTypedArithmeticFormula
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaTypedPreflight

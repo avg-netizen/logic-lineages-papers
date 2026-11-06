@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/JointGammaTypedPrimitiveProof.lean:54:90: error: unsolved goals
+case some
+n : ℕ
+arity : Fin n → ℕ
+Mid : Type := (List.Vector ℕ 3 × ContextUniform.Object) × OrdinaryArithmeticQuotient.Context n
+getP : ∀ (i : Fin 3), Primrec fun v => v.get i
+hctx : Primrec fun p => p.1.2
+hobj : Primrec fun p => p.1.1.2
+hb : Primrec fun p => NumberedTypedCarrier.typedCanonicalCarrierTest n arity p.1.2.1.1 p.1.2.1.2 p.1.1.2.1 p.2 p.1.1.2.2
+ht : Primrec fun p => NumberedNumericDecoding.decodeType (p.1.1.get 1)
+hi :
+  Primrec fun a =>
+    Option.any
+      (fun b =>
+        NumberedTypedCarrier.typedCanonicalCarrierTest n arity (a, b).1.2.1.1 (a, b).1.2.1.2 (a, b).1.1.2.1 (a, b).2
+          (a, b).1.1.2.2)
+      (NumberedNumericDecoding.decodeType (a.1.1.get 1))
+hc : Primrec fun p => Encodable.decode (p.1.get 0)
+hj :
+  Primrec fun a =>
+    Option.any
+      (fun b =>
+        Option.any
+          (fun b_1 =>
+            NumberedTypedCarrier.typedCanonicalCarrierTest n arity ((a, b), b_1).1.2.1.1 ((a, b), b_1).1.2.1.2
+              ((a, b), b_1).1.1.2.1 ((a, b), b_1).2 ((a, b), b_1).1.1.2.2)
+          (NumberedNumericDecoding.decodeType ((a, b).1.1.get 1)))
+      (Encodable.decode (a.1.get 0))
+ho : Primrec fun a => Encodable.decode (a.get 2)
+v : List.Vector ℕ 3
+val✝ : ContextUniform.Object
+hd : Encodable.decode (v.get 2) = some val✝
+⊢ (Option.any
+        (fun b =>
+          Option.any (fun b_1 => NumberedTypedCarrier.typedCanonicalCarrierTest n arity b.1.1 b.1.2 val✝.1 b_1 val✝.2)
+            (NumberedNumericDecoding.decodeType (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat =
+    (Option.any
+        (fun ctx =>
+          Option.any
+            (fun tau =>
+              NumberedTypedCarrier.typedCanonicalCarrierTest n arity ctx.1.1 ctx.1.2 val✝.1 tau
+                (Matrix.vecHead (Matrix.vecTail ![v.get 1, val✝.2])))
+            (NumberedNumericDecoding.decodeType (v.get 1)))
+        (Encodable.decode (v.get 0))).toNat
