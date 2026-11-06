@@ -1,0 +1,88 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticTransforms
+open SourceComputabilityFormulaSupportProof
+open InternalCalculus InternalSourceInversionSupportProof InternalTagArithmeticSyntaxProof
+open InternalTagArithmeticSupportProof InternalPositiveUnfoldingSupportProof
+
+/-- The first coordinate zero, by actual arithmetic induction on the second. -/
+def zeroRow (body : Positive (Fin 1)) (α : Type) : Derivation body [] (row (z : OTerm α)) := by
+  change Derivation body [] (allOne (pair (z.relabel Sum.inl) (.var (.inr 0))))
+  rw [zRelabel]
+  apply natInduction
+  · simpa only [pairInstantiate,zSubst,varBind] using pairZeroZero body α
+  · simpa only [pairSuccessor,zSubst,Term.subst,Sum.elim_inr,List.map_nil] using
+      weakenClosed (pairZeroSucc body (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1)))
+        [pair z (.var (.inr 0))]
+
+/-- Nested PA induction, retaining the outer row as an arithmetic invariant.
+The inner successor uses the outer IH at its payload; no semantic induction
+or truth-to-derivation conversion occurs. -/
+def allPairs (body : Positive (Fin 1)) (α : Type) :
+    Derivation body [] (allOne (row (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1)))) := by
+  apply natInduction
+  · simpa only [rowInstantiate,varBind] using zeroRow body α
+  · rw [rowSuccessor]
+    change Derivation body [row (.var (.inr (0 : Fin 1)))] (row (suc (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1))))
+    change Derivation body [row (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1))]
+      (allOne (pair ((suc (.var (.inr 0))).relabel Sum.inl) (.var (.inr 0))))
+    rw [sucRelabel]
+    apply natInduction
+    · simpa only [pairInstantiate,sucSubst,liftBind,varBind] using
+        weakenClosed (pairSuccZero body (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1)))
+          [row (.var (.inr 0))]
+    · let x : OTerm ((α ⊕ Fin 1) ⊕ Fin 1) := .var (.inl (.inr 0))
+      let y : OTerm ((α ⊕ Fin 1) ⊕ Fin 1) := .var (.inr 0)
+      have hr : Derivation body
+          (pair (suc x) y :: [row (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1))].map weaken)
+          (weaken (row (.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1)))) :=
+        Derivation.hypothesis (by simp)
+      rw [weaken,rowRelabel] at hr
+      change Derivation body _ (row x) at hr
+      have hi := Derivation.universalElimination (emb y) hr
+      simp only [row,pairInstantiate,liftBind,varBind] at hi
+      have h := Derivation.implicationElimination
+        (weakenClosed (pairSuccSucc body x y) _) hi
+      simpa only [pairSuccessor,sucSubst,Term.subst,Sum.elim_inl,Sum.elim_inr] using h
+
+def everyPair (body : Positive (Fin 1)) {α : Type} (s t : OTerm α) :
+    Derivation body [] (pair s t) := by
+  have h := Derivation.universalElimination (emb s) (allPairs body α)
+  rw [rowInstantiate,varBind] at h
+  have k := Derivation.universalElimination (emb t) h
+  simpa only [row,pairInstantiate,liftBind,varBind] using k
+
+theorem actualEvenTagZero : InternalTagArithmeticTargets.ActualEvenTagZero := by
+  intro body α
+  rw [onEquality]
+  exact ⟨doubleZero⟩
+
+theorem actualEvenTagSuccessor : InternalTagArithmeticTargets.ActualEvenTagSuccessor := by
+  intro body α t
+  rw [onEquality]
+  exact ⟨doubleSucc t⟩
+
+theorem actualTagInjectivity : InternalTagArithmeticTargets.ActualTagInjectivity := by
+  intro body α odd s t
+  change Nonempty (Derivation body [] ((arithmeticEmbedding.onFormula ((tagTerm odd s).equal (tagTerm odd t))).imp
+    (arithmeticEmbedding.onFormula (s.equal t))))
+  simp only [onEquality]
+  cases odd with
+  | false => exact ⟨Derivation.conjunctionLeft (everyPair body s t)⟩
+  | true =>
+    apply Nonempty.intro
+    apply Derivation.implicationIntroduction
+    have h : Derivation body [eqn (suc (dbl s)) (suc (dbl t))] (eqn (suc (dbl s)) (suc (dbl t))) :=
+      Derivation.hypothesis List.mem_cons_self
+    exact Derivation.implicationElimination
+      (weakenClosed (Derivation.conjunctionLeft (everyPair body s t)) _) (cancelSuc h)
+
+theorem actualTagsDisjoint : InternalTagArithmeticTargets.ActualTagsDisjoint := by
+  intro body α s t
+  change Nonempty (Derivation body [] (arithmeticEmbedding.onFormula ((tagTerm false s).equal (tagTerm true t))).not)
+  rw [onEquality]
+  exact ⟨Derivation.conjunctionLeft (Derivation.conjunctionRight (everyPair body s t))⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticProof

@@ -1,0 +1,8 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticProof.lean:36:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  Derivation body (pair (suc x) y :: List.map weaken [row s]) (pair (suc x) (suc y))
+but is expected to have type
+  Derivation body (pair (suc (Term.relabel Sum.inl s)) (var (Sum.inr 0)) :: List.map weaken [row s])
+    (pair (suc ((Term.relabel Sum.inl s).subst (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0)))))
+      (suc (var (Sum.inr 0))))

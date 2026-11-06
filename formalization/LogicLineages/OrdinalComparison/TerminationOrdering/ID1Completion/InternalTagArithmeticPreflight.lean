@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticPreflight
+def zeroComparator : Prop := InternalTagArithmeticTargets.ActualEvenTagZero
+def successorComparator : Prop := InternalTagArithmeticTargets.ActualEvenTagSuccessor
+def injectivityComparator : Prop := InternalTagArithmeticTargets.ActualTagInjectivity
+def disjointnessComparator : Prop := InternalTagArithmeticTargets.ActualTagsDisjoint
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticPreflight

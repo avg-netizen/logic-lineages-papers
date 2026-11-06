@@ -1,0 +1,135 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:21:2: error(lean.unknownIdentifier): Unknown identifier `allOne`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:52:2: error: 'change' tactic failed, pattern
+  (BoundedFormula.subst (eqn s t) fun a => emb (bindTerm u a)) = ?m.30
+is not definitionally equal to target
+  instantiate (eqn s t) (emb u) = eqn (Term.subst s (bindTerm u)) (Term.subst t (bindTerm u))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:56:2: error: 'change' tactic failed, pattern
+  (BoundedFormula.subst (pair s t) fun a => emb (bindTerm u a)) = ?m.30
+is not definitionally equal to target
+  instantiate (pair s t) (emb u) = pair (Term.subst s (bindTerm u)) (Term.subst t (bindTerm u))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:97:6: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:95:16: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:98:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:100:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:106:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:107:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:108:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:109:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:98:2: warning: 'let lift : α ⊕ Fin 1 → OTerm (β ⊕ Fin 1) :=
+  Sum.elim (fun a => (ts a).relabel Sum.inl) (fun i => .var (.inr i))' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:100:2: warning: 'have hf :
+  Sum.elim (fun a => (emb (ts a)).relabel Sum.inl) (fun i : Fin 1 => (.var (.inr i) : Term (β ⊕ Fin 1))) = fun a =>
+    emb (lift a) :=
+  by
+  funext a
+  cases a with
+  | inl a => exact (onTermRelabel arithmeticEmbedding Sum.inl (ts a)).symm
+  | inr i => rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:106:2: warning: 'rw [hf, pairSubst]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:107:2: warning: 'congr 2' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:108:2: warning: 'rw [termRelabelSubst, termSubstRelabel]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:109:2: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:112:2: error: 'change' tactic failed, pattern
+  (BoundedFormula.subst (row s) fun a => emb (bindTerm u a)) = ?m.24
+is not definitionally equal to target
+  instantiate (row s) (emb u) = row (Term.subst s (bindTerm u))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:116:6: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:114:16: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:117:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:118:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:117:2: warning: 'simp only [Term.relabel, Term.relabel_relabel]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:118:2: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:125:33: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inr` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inr`
+  [apply] `MonoidHom.inr`
+  [apply] `Or.inr`
+  [apply] `PSum.inr`
+  [apply] `Sum.inr`
+  [apply] `Finset.Nonempty.inr`
+  [apply] `Function.Embedding.inr`
+  [apply] `Set.Nonempty.inr`
+  [apply] `Sum.Lex.inr`
+  [apply] `Sum.LiftRel.inr`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:124:67: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inl` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inl`
+  [apply] `MonoidHom.inl`
+  [apply] `Or.inl`
+  [apply] `PSum.inl`
+  [apply] `Sum.inl`
+  [apply] `Finset.Nonempty.inl`
+  [apply] `Function.Embedding.inl`
+  [apply] `Set.Nonempty.inl`
+  [apply] `Sum.Lex.inl`
+  [apply] `Sum.LiftRel.inl`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:124:2: error: 'change' tactic failed, pattern
+  (BoundedFormula.subst (pair s t) fun a => emb (Sum.elim (fun a_1 => ?m.78) (fun x => suc (var ?m.87)) a)) = ?m.97
+is not definitionally equal to target
+  successorInstance (pair s t) =
+    pair (Term.subst s (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0))))
+      (Term.subst t (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:131:33: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inr` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inr`
+  [apply] `MonoidHom.inr`
+  [apply] `Or.inr`
+  [apply] `PSum.inr`
+  [apply] `Sum.inr`
+  [apply] `Finset.Nonempty.inr`
+  [apply] `Function.Embedding.inr`
+  [apply] `Set.Nonempty.inr`
+  [apply] `Sum.Lex.inr`
+  [apply] `Sum.LiftRel.inr`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:130:64: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inl` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inl`
+  [apply] `MonoidHom.inl`
+  [apply] `Or.inl`
+  [apply] `PSum.inl`
+  [apply] `Sum.inl`
+  [apply] `Finset.Nonempty.inl`
+  [apply] `Function.Embedding.inl`
+  [apply] `Set.Nonempty.inl`
+  [apply] `Sum.Lex.inl`
+  [apply] `Sum.LiftRel.inl`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:130:2: error: 'change' tactic failed, pattern
+  (BoundedFormula.subst (row s) fun a => emb (Sum.elim (fun a_1 => ?m.48) (fun x => suc (var ?m.57)) a)) = ?m.67
+is not definitionally equal to target
+  successorInstance (row s) = row (Term.subst s (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0))))

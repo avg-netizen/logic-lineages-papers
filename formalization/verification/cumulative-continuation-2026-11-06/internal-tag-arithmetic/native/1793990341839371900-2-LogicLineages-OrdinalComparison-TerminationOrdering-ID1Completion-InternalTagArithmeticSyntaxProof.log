@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticSyntaxProof.lean:133:2: error: Tactic `rfl` failed: The left-hand side
+  allOne (pair (Term.relabel (Sum.map f id ∘ Sum.inl) s) (var (Sum.map f id (Sum.inr 0))))
+is not definitionally equal to the right-hand side
+  row (Term.relabel f s)
+
+α β : Type
+s : OTerm α
+f : α → β
+⊢ allOne (pair (Term.relabel (Sum.map f id ∘ Sum.inl) s) (var (Sum.map f id (Sum.inr 0)))) = row (Term.relabel f s)

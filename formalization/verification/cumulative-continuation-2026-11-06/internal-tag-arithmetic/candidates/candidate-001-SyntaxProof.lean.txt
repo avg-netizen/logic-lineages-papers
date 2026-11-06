@@ -1,0 +1,134 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticTransforms
+open InternalCalculus InternalBinderTransportSyntaxProof InternalBinderTransportProof
+open InternalTermSubstitutionSyntaxProof InternalTermSubstitutionProof InternalSourceInversionSupportProof
+
+abbrev OTerm (α : Type) := OrdinaryArithmetic.Term α
+abbrev emb {α : Type} (t : OTerm α) := arithmeticEmbedding.onTerm t
+abbrev z {α : Type} : OTerm α := OrdinaryArithmetic.zeroTerm
+abbrev suc {α : Type} (t : OTerm α) := OrdinaryArithmetic.succTerm t
+abbrev dbl {α : Type} (t : OTerm α) := tagTerm false t
+
+def eqn {α : Type} (s t : OTerm α) : Formula α := (emb s).equal (emb t)
+def pair {α : Type} (s t : OTerm α) : Formula α :=
+  (eqn (dbl s) (dbl t)).imp (eqn s t) ⊓
+    ((eqn (dbl s) (suc (dbl t))).not ⊓ (eqn (suc (dbl s)) (dbl t)).not)
+def row {α : Type} (s : OTerm α) : Formula α :=
+  allOne (pair (s.relabel Sum.inl) (.var (.inr 0)))
+def bindTerm {α : Type} (t : OTerm α) : α ⊕ Fin 1 → OTerm α :=
+  Sum.elim Term.var (fun _ => t)
+
+@[simp] theorem sucSubst {α β : Type} (t : OTerm α) (ts : α → OTerm β) :
+    (suc t).subst ts = suc (t.subst ts) := applyOneSubstitution _ _ _
+@[simp] theorem zSubst {α β : Type} (ts : α → OTerm β) : (z : OTerm α).subst ts = z := zeroSubstitution ts
+@[simp] theorem dblSubst {α β : Type} (t : OTerm α) (ts : α → OTerm β) :
+    (dbl t).subst ts = dbl (t.subst ts) := tagSubstitution false t ts
+@[simp] theorem liftBind {α : Type} (s t : OTerm α) :
+    (s.relabel Sum.inl).subst (bindTerm t) = s := by
+  rw [termRelabelSubst]
+  exact termSubstVar s
+@[simp] theorem varBind {α : Type} (t : OTerm α) (i : Fin 1) :
+    (Term.var (.inr i) : OTerm (α ⊕ Fin 1)).subst (bindTerm t) = t := rfl
+
+@[simp] theorem eqnSubst {α β : Type} (s t : OTerm α) (ts : α → OTerm β) :
+    (eqn s t).subst (fun a => emb (ts a)) = eqn (s.subst ts) (t.subst ts) := by
+  rw [eqn,equalitySubstitution,← onTermSubst,← onTermSubst]
+  rfl
+@[simp] theorem pairSubst {α β : Type} (s t : OTerm α) (ts : α → OTerm β) :
+    (pair s t).subst (fun a => emb (ts a)) = pair (s.subst ts) (t.subst ts) := by
+  change ((eqn (dbl s) (dbl t)).subst (fun a => emb (ts a))).imp
+      ((eqn s t).subst (fun a => emb (ts a))) ⊓
+    (((eqn (dbl s) (suc (dbl t))).subst (fun a => emb (ts a))).not ⊓
+      ((eqn (suc (dbl s)) (dbl t)).subst (fun a => emb (ts a))).not) = _
+  simp only [eqnSubst,dblSubst,sucSubst]
+  rfl
+
+@[simp] theorem eqnInstantiate {α : Type} (s t : OTerm (α ⊕ Fin 1)) (u : OTerm α) :
+    instantiate (eqn s t) (emb u) = eqn (s.subst (bindTerm u)) (t.subst (bindTerm u)) := by
+  change (eqn s t).subst (fun a => emb (bindTerm u a)) = _
+  exact eqnSubst s t (bindTerm u)
+@[simp] theorem pairInstantiate {α : Type} (s t : OTerm (α ⊕ Fin 1)) (u : OTerm α) :
+    instantiate (pair s t) (emb u) = pair (s.subst (bindTerm u)) (t.subst (bindTerm u)) := by
+  change (pair s t).subst (fun a => emb (bindTerm u a)) = _
+  exact pairSubst s t (bindTerm u)
+
+@[simp] theorem eqnRelabel {α β : Type} (s t : OTerm α) (f : α → β) :
+    (eqn s t).relabel f = eqn (s.relabel f) (t.relabel f) := by
+  simp only [eqn,formulaRelabel,rename,Term.equal,Term.bdEqual,BoundedFormula.mapTermRel,
+    onTermRelabel,Term.relabel_relabel]
+  rfl
+@[simp] theorem sucRelabel {α β : Type} (s : OTerm α) (f : α → β) :
+    (suc s).relabel f = suc (s.relabel f) := by
+  simp only [suc,OrdinaryArithmetic.succTerm,Functions.apply₁,Term.relabel]
+  congr 1
+  funext i
+  have hi : i = 0 := Subsingleton.elim _ _
+  subst i
+  rfl
+@[simp] theorem zRelabel {α β : Type} (f : α → β) :
+    (z : OTerm α).relabel f = z := by
+  simp only [z,OrdinaryArithmetic.zeroTerm,Term.relabel]
+  congr 1
+  funext i
+  exact Fin.elim0 i
+@[simp] theorem dblRelabel {α β : Type} (s : OTerm α) (f : α → β) :
+    (dbl s).relabel f = dbl (s.relabel f) := by
+  simp only [dbl,tagTerm,Bool.false_eq_true,if_false,OrdinaryArithmetic.mulTerm,
+    Functions.apply₂,Term.relabel]
+  congr 1
+  funext i
+  refine Fin.cases ?_ (fun j => Fin.cases ?_ (fun k => Fin.elim0 k) j) i
+  · exact by simp only [Matrix.cons_val_zero,sucRelabel,zRelabel]
+  · rfl
+@[simp] theorem pairRelabel {α β : Type} (s t : OTerm α) (f : α → β) :
+    (pair s t).relabel f = pair (s.relabel f) (t.relabel f) := by
+  change ((eqn (dbl s) (dbl t)).relabel f).imp ((eqn s t).relabel f) ⊓
+    (((eqn (dbl s) (suc (dbl t))).relabel f).not ⊓
+      ((eqn (suc (dbl s)) (dbl t)).relabel f).not) = _
+  simp only [eqnRelabel,dblRelabel,sucRelabel]
+  rfl
+
+@[simp] theorem rowSubst {α β : Type} (s : OTerm α) (ts : α → OTerm β) :
+    (row s).subst (fun a => emb (ts a)) = row (s.subst ts) := by
+  rw [row,actualUniversalSubstitution]
+  let lift : α ⊕ Fin 1 → OTerm (β ⊕ Fin 1) :=
+    Sum.elim (fun a => (ts a).relabel Sum.inl) (fun i => .var (.inr i))
+  have hf : Sum.elim (fun a => (emb (ts a)).relabel Sum.inl)
+      (fun i : Fin 1 => (.var (.inr i) : Term (β ⊕ Fin 1))) = fun a => emb (lift a) := by
+    funext a
+    cases a with
+    | inl a => exact (onTermRelabel arithmeticEmbedding Sum.inl (ts a)).symm
+    | inr i => rfl
+  rw [hf,pairSubst]
+  congr 2
+  rw [termRelabelSubst,termSubstRelabel]
+  rfl
+@[simp] theorem rowInstantiate {α : Type} (s : OTerm (α ⊕ Fin 1)) (u : OTerm α) :
+    instantiate (row s) (emb u) = row (s.subst (bindTerm u)) := by
+  change (row s).subst (fun a => emb (bindTerm u a)) = _
+  exact rowSubst s (bindTerm u)
+@[simp] theorem rowRelabel {α β : Type} (s : OTerm α) (f : α → β) :
+    (row s).relabel f = row (s.relabel f) := by
+  rw [row,actualUniversalRenaming,pairRelabel]
+  simp only [Term.relabel,Term.relabel_relabel]
+  rfl
+
+@[simp] theorem pairSuccessor {α : Type} (s t : OTerm (α ⊕ Fin 1)) :
+    successorInstance (pair s t) = pair
+      (s.subst (Sum.elim (fun a => .var (.inl a)) (fun _ => suc (.var (.inr 0)))))
+      (t.subst (Sum.elim (fun a => .var (.inl a)) (fun _ => suc (.var (.inr 0))))) := by
+  change (pair s t).subst (fun a => emb ((Sum.elim (fun a => .var (.inl a))
+    (fun _ : Fin 1 => suc (.var (.inr 0)))) a)) = _
+  exact pairSubst _ _ _
+@[simp] theorem rowSuccessor {α : Type} (s : OTerm (α ⊕ Fin 1)) :
+    successorInstance (row s) = row
+      (s.subst (Sum.elim (fun a => .var (.inl a)) (fun _ => suc (.var (.inr 0))))) := by
+  change (row s).subst (fun a => emb ((Sum.elim (fun a => .var (.inl a))
+    (fun _ : Fin 1 => suc (.var (.inr 0)))) a)) = _
+  exact rowSubst _ _
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof

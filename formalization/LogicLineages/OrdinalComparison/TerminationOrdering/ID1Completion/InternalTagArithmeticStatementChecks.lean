@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticStatementChecks
+theorem zero_exact : InternalTagArithmeticTargets.ActualEvenTagZero := InternalTagArithmeticProof.actualEvenTagZero
+theorem successor_exact : InternalTagArithmeticTargets.ActualEvenTagSuccessor := InternalTagArithmeticProof.actualEvenTagSuccessor
+theorem injectivity_exact : InternalTagArithmeticTargets.ActualTagInjectivity := InternalTagArithmeticProof.actualTagInjectivity
+theorem disjointness_exact : InternalTagArithmeticTargets.ActualTagsDisjoint := InternalTagArithmeticProof.actualTagsDisjoint
+#print axioms zero_exact
+#print axioms successor_exact
+#print axioms injectivity_exact
+#print axioms disjointness_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticStatementChecks

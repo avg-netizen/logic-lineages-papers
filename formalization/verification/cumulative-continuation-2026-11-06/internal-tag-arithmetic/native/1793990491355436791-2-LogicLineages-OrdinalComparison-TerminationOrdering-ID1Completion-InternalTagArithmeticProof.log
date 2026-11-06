@@ -1,0 +1,21 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticProof.lean:36:31: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Term.relabel Sum.inl ?s).subst (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0)))
+in the target expression
+  Derivation body (pair (suc (Term.relabel Sum.inl s)) (var (Sum.inr 0)) :: List.map weaken [row s])
+    (pair (suc ((Term.relabel Sum.inl s).subst (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0)))))
+      ((var (Sum.inr 0)).subst (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0)))))
+
+case step
+body : Positive (Fin 1)
+α : Type
+s : OTerm α
+x : OTerm (α ⊕ Fin 1) := Term.relabel Sum.inl s
+y : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+hr : Derivation body (pair (suc x) y :: List.map weaken [row s]) (row (Term.relabel Sum.inl s))
+hi :
+  Derivation body (pair (suc x) y :: List.map weaken [allOne (pair (Term.relabel Sum.inl s) (var (Sum.inr 0)))])
+    (pair (Term.relabel Sum.inl s) y)
+h : Derivation body (pair (suc x) y :: List.map weaken [row s]) (pair (suc x) (suc y))
+⊢ Derivation body (pair (suc (Term.relabel Sum.inl s)) (var (Sum.inr 0)) :: List.map weaken [row s])
+    (pair (suc ((Term.relabel Sum.inl s).subst (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0)))))
+      ((var (Sum.inr 0)).subst (Sum.elim (fun a => var (Sum.inl a)) fun x => suc (var (Sum.inr 0)))))

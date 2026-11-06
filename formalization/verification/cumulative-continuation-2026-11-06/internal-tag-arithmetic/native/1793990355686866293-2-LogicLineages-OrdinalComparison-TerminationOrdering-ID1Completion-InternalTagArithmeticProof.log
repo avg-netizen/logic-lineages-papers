@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticProof.lean:16:4: error: Type mismatch: After simplification, term
+  weakenClosed (pairZeroSucc body (var (Sum.inr 0))) [pair z (var (Sum.inr 0))]
+ has type
+  @Derivation body (α ⊕ Fin 1) [pair z (var (Sum.inr 0))] (pair z (suc (var (Sum.inr 0))))
+but is expected to have type
+  @Derivation body (α ⊕ Fin 1) (pair z (var (Sum.inr 0)) :: List.map weaken [])
+    (pair z (Sum.elim (fun a => var (Sum.inl a)) (fun x => suc (var (Sum.inr 0))) (Sum.inr 0)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalTagArithmeticProof.lean:29:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Term.relabel ?f (suc ?s)
+in the target expression
+  Derivation body [allOne (pair (Term.relabel Sum.inl (var (Sum.inr 0))) (var (Sum.inr 0)))]
+    (row (suc (var (Sum.inr 0))))
+
+case step
+body : Positive (Fin 1)
+α : Type
+⊢ Derivation body [allOne (pair (Term.relabel Sum.inl (var (Sum.inr 0))) (var (Sum.inr 0)))]
+    (row (suc (var (Sum.inr 0))))
