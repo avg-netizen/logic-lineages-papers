@@ -1,0 +1,34 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationSyntaxProof.lean:35:6: error(lean.unknownIdentifier): Unknown identifier `exsRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationSyntaxProof.lean:31:75: error: unsolved goals
+α β : Type
+a b d : OrdinaryArithmetic.Term α
+j : α → β
+⊢ arithmeticEmbedding.onFormula
+      (rename j
+        (BoundedFormula.relabel id
+            (Term.equal
+              (OrdinaryArithmetic.addTerm (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) (Term.relabel Sum.inl a))
+                (OrdinaryArithmetic.mulTerm (var (Sum.inr 1)) (Term.relabel Sum.inl b)))
+              (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl d)
+                (OrdinaryArithmetic.addTerm (OrdinaryArithmetic.mulTerm (var (Sum.inr 2)) (Term.relabel Sum.inl a))
+                  (OrdinaryArithmetic.mulTerm (var (Sum.inr 3)) (Term.relabel Sum.inl b)))))).exs) =
+    arithmeticEmbedding.onFormula
+      (BoundedFormula.relabel id
+          (Term.equal
+            (OrdinaryArithmetic.addTerm
+              (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel j a)))
+              (OrdinaryArithmetic.mulTerm (var (Sum.inr 1)) (Term.relabel Sum.inl (Term.relabel j b))))
+            (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl (Term.relabel j d))
+              (OrdinaryArithmetic.addTerm
+                (OrdinaryArithmetic.mulTerm (var (Sum.inr 2)) (Term.relabel Sum.inl (Term.relabel j a)))
+                (OrdinaryArithmetic.mulTerm (var (Sum.inr 3)) (Term.relabel Sum.inl (Term.relabel j b))))))).exs
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationSyntaxProof.lean:46:42: error(lean.unknownIdentifier): Unknown identifier `addRelabel`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationSyntaxProof.lean:46:53: error(lean.unknownIdentifier): Unknown identifier `mulRelabel`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationSyntaxProof.lean:45:66: error: unsolved goals
+α β : Type
+a b d x y z w : OrdinaryArithmetic.Term α
+j : α → β
+⊢ eqn (Term.relabel j (add (mul x a) (mul y b))) (Term.relabel j (add d (add (mul z a) (mul w b)))) =
+    eqn (add (mul (Term.relabel j x) (Term.relabel j a)) (mul (Term.relabel j y) (Term.relabel j b)))
+      (add (Term.relabel j d)
+        (add (mul (Term.relabel j z) (Term.relabel j a)) (mul (Term.relabel j w) (Term.relabel j b))))

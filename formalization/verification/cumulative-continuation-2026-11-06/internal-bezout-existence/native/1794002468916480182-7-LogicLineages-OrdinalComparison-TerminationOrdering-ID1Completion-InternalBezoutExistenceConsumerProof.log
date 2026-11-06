@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBezoutExistenceConsumerProof.lean:86:37: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Term.relabel ?f z
+in the target expression
+  Derivation body Delta (cf (suc (Term.relabel Sum.inl a)) (Term.relabel Sum.inl b) (Term.relabel Sum.inl (suc z)))
+
+body : Positive (Fin 1)
+α : Type
+a b : InternalLinearCombination.OTerm α
+A : OrdinaryArithmetic.Term α := suc a
+p : InternalCalculus.Formula (α ⊕ Fin 1) := minP (pf A b)
+Gamma : List (InternalCalculus.Formula α) := [coprime A b]
+Delta : List (InternalCalculus.Formula (α ⊕ Fin 1)) := p :: List.map weaken Gamma
+hm : Derivation body [] (existsOne (InternalLeastNumber.minimal (positiveFamily (OrdinaryArithmetic.succTerm a) b)))
+hp : Derivation body Delta p
+hd :
+  Derivation body Delta
+    (arithmeticEmbedding.onFormula (divides (suc (var (Sum.inr 0))) (Term.relabel Sum.inl A)) ⊓
+      arithmeticEmbedding.onFormula (divides (suc (var (Sum.inr 0))) (Term.relabel Sum.inl b)))
+hcp : Derivation body Delta (weaken (coprime A b))
+he :
+  Derivation body Delta
+    ((arithmeticEmbedding.onTerm (suc (var (Sum.inr 0)))).equal (arithmeticEmbedding.onTerm (suc z)))
+hc : Derivation body Delta (cf (Term.relabel Sum.inl A) (Term.relabel Sum.inl b) (suc (var (Sum.inr 0))))
+hu : Derivation body Delta (cf (Term.relabel Sum.inl A) (Term.relabel Sum.inl b) (suc z))
+⊢ Derivation body Delta (cf (suc (Term.relabel Sum.inl a)) (Term.relabel Sum.inl b) (Term.relabel Sum.inl (suc z)))

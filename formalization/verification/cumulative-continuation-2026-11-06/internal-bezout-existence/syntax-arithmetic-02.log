@@ -1,0 +1,14 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationSyntaxProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationSyntaxProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationArithmeticProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationArithmeticProof.lean:81:30: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+a b d q r x y z' w : OrdinaryArithmetic.Term α
+⊢ eqn (add (mul x a) (mul y b)) (add d (add (mul z' a) (mul w b))) =
+      (arithmeticEmbedding.onTerm a).equal (arithmeticEmbedding.onTerm (add (mul q d) r)) ∨
+    eqn (add (mul x a) (mul y b)) (add d (add (mul z' a) (mul w b))) =
+      (arithmeticEmbedding.onTerm (add (mul x a) (mul y b))).equal
+        (arithmeticEmbedding.onTerm (add d (add (mul z' a) (mul w b))))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationArithmeticProof: 1
+BUILD_RECEIPT build-reports/1794002071368269335-7.json

@@ -1,0 +1,27 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationProof.lean:62:44: error: Application type mismatch: The argument
+  h
+has type
+  Derivation body [p] (cf a b r)
+but is expected to have type
+  Derivation body
+    [InternalLinearCombinationTargets.ef (combination a b d) ⊓
+        InternalLinearCombinationTargets.ef
+          (Term.equal a (OrdinaryArithmetic.addTerm (OrdinaryArithmetic.mulTerm q d) r))]
+    (InternalLinearCombinationTargets.ef (combination a b r))
+in the application
+  h.implicationIntroduction
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationProof.lean:76:11: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+a b : InternalLinearCombination.OTerm α
+hm :
+  Derivation body []
+    ((existsOne (arithmeticEmbedding.onFormula (positiveFamily (suc a) b))).imp
+      (existsOne (minP (arithmeticEmbedding.onFormula (positiveFamily (suc a) b)))))
+x✝ : Nonempty (Derivation body [] (cf (suc a) b (suc a)))
+⊢ Derivation body [] (cf (suc a) b (suc a))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationProof: 1
+BUILD_RECEIPT build-reports/1794002166639076557-6.json

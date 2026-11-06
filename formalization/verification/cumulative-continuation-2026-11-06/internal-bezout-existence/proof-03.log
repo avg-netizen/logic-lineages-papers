@@ -1,0 +1,25 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalLinearCombinationSyntaxProof.lean:134:9: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  BoundedFormula.subst (eqn ?s ?t) fun a => emb (?ts a)
+in the target expression
+  Nonempty
+    (Derivation body Gamma
+      (BoundedFormula.subst
+        ((arithmeticEmbedding.onTerm (Term.relabel Sum.inl a)).equal
+          (arithmeticEmbedding.onTerm (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) (Term.relabel Sum.inl d))))
+        fun x => emb (bindTerm q x)))
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+d a q : OrdinaryArithmetic.Term α
+h : Nonempty (Derivation body Gamma (eqn a (mul q d)))
+he : (Sum.elim var fun x => emb q) = fun x => emb (bindTerm q x)
+⊢ Nonempty
+    (Derivation body Gamma
+      (BoundedFormula.subst
+        ((arithmeticEmbedding.onTerm (Term.relabel Sum.inl a)).equal
+          (arithmeticEmbedding.onTerm (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) (Term.relabel Sum.inl d))))
+        fun x => emb (bindTerm q x)))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLinearCombinationSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794002238280351734-7.json
