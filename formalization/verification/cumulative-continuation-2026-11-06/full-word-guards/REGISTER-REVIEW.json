@@ -1,0 +1,131 @@
+{
+  "schema": "full-word-guards-register-review-v1",
+  "reviewed_at_utc": "2026-11-06T20:27:21.685507+00:00",
+  "reviewer": "cubic_proof; independent final register and documentation review, with no compiler invocation or proof edits",
+  "result": "passed",
+  "errors": [],
+  "publication_baseline": "1c7c5f7b0d986fefe9244e5eeacb84c53bfa6955",
+  "native_evidence_baseline": "e413aa1f8035a92b4e4b8182a1c4b9a390505b0e",
+  "scope": "Final metadata adoption, exact closed endpoint provenance, preservation of all other statement objects and historical documentation, and unchanged current focused source pins.",
+  "register": {
+    "file": "formalization/TARGETS.json",
+    "before_sha256": "852a45505573edac858b06ff767237c6296bc19e43c4be69a637973dce806dcd",
+    "after_sha256": "7dc8e1ab929b9ff5a9136364f6aff09dbadd669f0136a5e69710e4d7df97f014",
+    "statements_before": 189,
+    "statements_after": 189,
+    "unique_ids_before": 189,
+    "unique_ids_after": 189,
+    "counts_before": {
+      "checked": 167,
+      "pending": 20,
+      "existing-calculator-package": 2
+    },
+    "counts_after": {
+      "checked": 168,
+      "pending": 19,
+      "existing-calculator-package": 2
+    },
+    "changed_statement_ids": [
+      "08-multivariate-collapse-comparison:lem:guards"
+    ],
+    "only_status_transition": {
+      "id": "08-multivariate-collapse-comparison:lem:guards",
+      "before": "pending",
+      "after": "checked"
+    },
+    "other_188_statement_objects_identical": true,
+    "promoted_source_identity_and_statement_unchanged": true,
+    "previous_statement_audit_preserved": true,
+    "previous_promotion_and_full_promotion_history_preserved": true,
+    "changed_top_level_keys": [
+      "papers",
+      "source_completion_promotion",
+      "source_completion_promotion_history",
+      "source_completion_updated_at_utc"
+    ],
+    "all_other_register_and_paper_metadata_identical": true
+  },
+  "accepted_endpoint": {
+    "declaration": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards",
+    "type": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.Targets.FullWordGuards",
+    "comparator_file": "formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/Targets.lean",
+    "comparator_sha256": "8f230607d52ceac90acc3f80cc93689816948d5c3b0b05a560319ada2b7cadb6",
+    "direct_alias_has_no_extra_parameters": true,
+    "alias_source": "formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/StatementChecks.lean",
+    "alias_source_sha256": "2559d7262e05b89b7b8dfa152245215a04b016cbf823aa6dfa4d4310eef7d061",
+    "source_file": "08-multivariate-collapse-comparison/paper.tex",
+    "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+    "final_receipt": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/receipts/1793996097626807124-5.json",
+    "final_receipt_sha256": "ca48dd3b26ad61aaebf34a20e09de35abe4b24aef5dd0059f05d7db146ad9ccb",
+    "receipt_all_rows_successful": true,
+    "focused_coordinator": "LogicLineages.ExternalCheckpoint20261106FullWordGuards",
+    "actual_logged_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "all_adoption_records_agree": true
+  },
+  "source_preservation": {
+    "manifest": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/SOURCE-PINS.json",
+    "manifest_sha256": "7462278ed1a67e35e5488e4c6e048a91f71e90c161a6f6dc628822ba1e8bffab",
+    "manifest_unchanged_since_native_evidence_review": true,
+    "pinned_local_sources": 426,
+    "current_hash_matches": 426,
+    "mismatches": [],
+    "native_source_rows_verified": 426,
+    "native_source_row_mismatches": [],
+    "frozen_files": 8,
+    "frozen_mismatches": [],
+    "verifier_source_pin_mismatches": []
+  },
+  "baseline_preservation": {
+    "tracked_baseline_files": 38785,
+    "changed_preexisting_paths": [
+      "formalization/AGENTS.md",
+      "formalization/LogicLineages.lean",
+      "formalization/README.md",
+      "formalization/TARGETS.json"
+    ],
+    "all_preexisting_files_outside_four_metadata_paths_unchanged": true,
+    "protected_manuscript_checker_dependency_ci_paths": 56,
+    "protected_changed_paths": [],
+    "root_import_append_only": true,
+    "root_import_added": "public import LogicLineages.ExternalCheckpoint20261106FullWordGuards",
+    "root_before_sha256": "8f721f50b54cd7f81041a54e73cc998a20dd508ffd5d7b5c767403b470251fc3",
+    "root_after_sha256": "99919b26078bf2b2c35a1e057229535a940aca16c740b162e2d4bb34fa426a3f"
+  },
+  "documentation": {
+    "formalization/AGENTS.md": {
+      "history_preserved_except_current_to_previous_title": true,
+      "new_header_matches_acceptance_counts_and_limits": true,
+      "before_sha256": "bc5551c12c85c503172a5ad35550195965717206770bf267c29f58595d8c85ed",
+      "after_sha256": "0f91a8fcd15d983f8125aab5f263370da4d880581d01ee70cbe1574bdfaed77b"
+    },
+    "formalization/README.md": {
+      "history_preserved_except_current_to_previous_title": true,
+      "new_header_matches_acceptance_counts_and_limits": true,
+      "before_sha256": "c67ef5caa95a68a8da7a7a1222f6d4ad9841b9ed8f227ffef37aa8fa641cf201",
+      "after_sha256": "731e847954f89ccd6716fa55349d414a0cebc67298505bc6568367b4a03dea6a"
+    }
+  },
+  "reviewed_evidence": {
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/ACCEPTANCE.json": "92af5f9c433fe1f79707781f26adb54914b26c7f5e45c383cdb28d11c1e5b810",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/NATIVE-VERIFICATION.json": "cae26d64593aee853bef8792b295e2211baec0033a82fb223ce94d858a93bd32",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/SOURCE-PINS.json": "7462278ed1a67e35e5488e4c6e048a91f71e90c161a6f6dc628822ba1e8bffab",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/FROZEN-TARGETS.json": "92d7d4a14b4781e1063914fe7678b7fa815b23aecc1986d13b069aecb4e98b62",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/EVIDENCE-REVIEW.json": "70435fe2378dbf45043a73b8ef8dd40dc32e8644b8aa274a925374e4936fa784",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/SOURCE-ACCEPTANCE-REVIEW.json": "9ed087d44622450eb65fe27815c5fd3a8e0b94ddd1d589886ac9ce95ab6b5989",
+    "formalization/audits/FULL-WORD-GUARDS-COMPLETION-2026-11-06.json": "778523f499b250a7dd3074df5d10728384549b44e8f2a7466b4c6d5d3e2cfa6f"
+  },
+  "compiler_invocations_during_review": 0,
+  "proof_register_or_documentation_edits_during_review": false,
+  "only_file_written": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/REGISTER-REVIEW.json",
+  "findings": [
+    "Exactly paper08 lem:guards changes from pending to checked; all other 188 statement objects are identical to the publication baseline.",
+    "The accepted declaration is a closed exact alias of the frozen FullWordGuards target; its source, successful final receipt, actual standard axioms, comparator hash and source-paper hash agree across the register and acceptance evidence.",
+    "All 426 focused sources and all eight current frozen sources retain their reviewed hashes; both verifier source pins match.",
+    "Only the four authorized pre-existing metadata files change. The root import is one exact appended coordinator import; both historical documents are preserved after demoting the old current heading.",
+    "Prior statement audit and prior source-promotion history are retained exactly. No full-root build, remote-CI result, row cancellation, existential decision, BASE decision or ID1 completion is promoted."
+  ]
+}

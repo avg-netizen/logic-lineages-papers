@@ -1,0 +1,8 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/FullWordGuardCompletion/RunnerProof.lean:105:2: error: Type mismatch
+  WellFounded.induction (Proof.measureWellFounded D) p ?m.30
+has type
+  ?m.29 p
+but is expected to have type
+  WordAllowed D p.1 →
+    WordAllowed D p.2 →
+      ∀ (cutoff tie : ℕ), ∃ n, selectWords (step^[n] (p, cutoff, tie)).1.1 (step^[n] (p, cutoff, tie)).1.2 = none

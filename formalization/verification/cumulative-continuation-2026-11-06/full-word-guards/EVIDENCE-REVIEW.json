@@ -1,0 +1,392 @@
+{
+  "schema": "full-word-guards-independent-evidence-review-v1",
+  "reviewed_at_utc": "2026-11-06T20:22:47.437036+00:00",
+  "outcome": "passed",
+  "errors": [],
+  "reviewer": "toolchain agent; independent receipt, source-hash, import-closure, axiom-log, freeze and baseline verification. Authored numeric modules; no compiler invocation or proof edits during evidence review.",
+  "source_statement": "08:lem:guards",
+  "closed_endpoint": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards",
+  "closed_endpoint_type": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.Targets.FullWordGuards",
+  "baseline_commit": "e413aa1f8035a92b4e4b8182a1c4b9a390505b0e",
+  "native_evidence_baseline": "e413aa1f8035a92b4e4b8182a1c4b9a390505b0e",
+  "original_frozen_baseline": "2066300c16197fc71dc30c87d61fb6bb11eadd9b",
+  "publication_baseline_at_review": "1c7c5f7b0d986fefe9244e5eeacb84c53bfa6955",
+  "evidence_hashes": {
+    "NATIVE-VERIFICATION.json": "cae26d64593aee853bef8792b295e2211baec0033a82fb223ce94d858a93bd32",
+    "SOURCE-PINS.json": "7462278ed1a67e35e5488e4c6e048a91f71e90c161a6f6dc628822ba1e8bffab",
+    "BASELINE-PRESERVATION.json": "4e681f99c0c855e1d6e960eacba68e4b98b93dd23c92471f39c3e071c79c3b82",
+    "FROZEN-TARGETS.json": "92d7d4a14b4781e1063914fe7678b7fa815b23aecc1986d13b069aecb4e98b62",
+    "FROZEN-TARGETS-V1.json": "bca7b9cff8039d75f9a79ccf9739359fb348e506aa95fff8ff3b0958c5fe0ca4",
+    "PREFLIGHT.json": "feed6a24891b4969e1a7fb93286b624f905abcf7798f3e5639358dfa85c25944",
+    "PREFLIGHT-V1.json": "1a34f17d2ac250e4315b3780daf73b292970c1193c9aa4436e58699a7906075a",
+    "CONCURRENT-BRANCH-UPDATE.json": "23416d3ac8b7e9e1d8bbba71415e874dce99bc6ba1f9b74b2de5ea47acc82bbf",
+    "CONCURRENT-BRANCH-UPDATE-02.json": "0c4d7fa827e9f6121aa9fc4857fc61311ebb581d271ddb1e78e63d62c6c12c3b",
+    "EVIDENCE-MANIFEST.json": "0b87ba281c5446b3158a08327aec08bd78c265259a13d0144c56e63f35c9456d",
+    "SOURCE-CORRESPONDENCE.md": "6acec3b113520a868fdb4fb351a59c2a07768e987fafa304b17cbd0dffdc0143",
+    "coordinator-01.log": "2cdbcc1b4742c04f0e05bdc7d8325076002a2a9229bf9c32d9e5214f94c49c5e"
+  },
+  "native_verification_sha256": "cae26d64593aee853bef8792b295e2211baec0033a82fb223ce94d858a93bd32",
+  "frozen_targets_sha256": "92d7d4a14b4781e1063914fe7678b7fa815b23aecc1986d13b069aecb4e98b62",
+  "source_pins_sha256": "7462278ed1a67e35e5488e4c6e048a91f71e90c161a6f6dc628822ba1e8bffab",
+  "baseline_preservation_sha256": "4e681f99c0c855e1d6e960eacba68e4b98b93dd23c92471f39c3e071c79c3b82",
+  "final_native_receipt": "receipts/1793996097626807124-5.json",
+  "final_native_receipt_sha256": "ca48dd3b26ad61aaebf34a20e09de35abe4b24aef5dd0059f05d7db146ad9ccb",
+  "final_native_receipt_all_rows_passed": true,
+  "final_native_receipt_rows": 9,
+  "independently_reconstructed_local_module_count": 426,
+  "source_hashes_and_successful_native_rows_verified": 426,
+  "direct_upstream_imports_including_core": 33,
+  "raw_receipts_verified": 16,
+  "raw_module_logs_present": 438,
+  "evidence_manifest_artifacts_hash_verified": 457,
+  "exact_alias_count": 106,
+  "prior_exact_alias_count": 77,
+  "new_exact_alias_count": 29,
+  "actual_new_alias_axioms": {
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchChild": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchTieBound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchPrograms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_admissionCorrect": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runEquations": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runBounds": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_dispatchCoverage": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runAdmission": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runTieBound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_traceDomains": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_accumulatedComparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runnerTerminates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_terminalStability": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_leastFuelCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runnerPrograms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_leastFuelProgram": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_booleanGuardsCorrect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_terminalSyntax": [
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_terminalComparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_terminalSameVariable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compilerCalibration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledSyntax": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledDomains": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledThreeWay": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledSameVariable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_boundedCompilerPrograms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compilerProgram": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "new_alias_frozen_types": {
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchCorrect": "DispatchTargets.DispatchCorrect",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchChild": "DispatchTargets.DispatchChild",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchTieBound": "DispatchTargets.DispatchTieBound",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchStatementChecks.fixed_dispatchPrograms": "DispatchTargets.DispatchPrograms",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_admissionCorrect": "RunnerTargets.AdmissionCorrect",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runEquations": "RunnerTargets.RunEquations",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runBounds": "RunnerTargets.RunBounds",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_dispatchCoverage": "RunnerTargets.DispatchCoverage",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runAdmission": "RunnerTargets.RunAdmission",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runTieBound": "RunnerTargets.RunTieBound",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_traceDomains": "RunnerTargets.TraceDomains",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_accumulatedComparison": "RunnerTargets.AccumulatedComparison",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runnerTerminates": "RunnerTargets.RunnerTerminates",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_terminalStability": "RunnerTargets.TerminalStability",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_leastFuelCorrect": "RunnerTargets.LeastFuelCorrect",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_runnerPrograms": "RunnerTargets.RunnerPrograms",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerStatementChecks.fixed_leastFuelProgram": "RunnerTargets.LeastFuelProgram",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_booleanGuardsCorrect": "Targets.BooleanGuardsCorrect",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_terminalSyntax": "Targets.TerminalSyntax",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_terminalComparison": "Targets.TerminalComparison",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_terminalSameVariable": "Targets.TerminalSameVariable",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compilerCalibration": "Targets.CompilerCalibration",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledSyntax": "Targets.CompiledSyntax",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledDomains": "Targets.CompiledDomains",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledThreeWay": "Targets.CompiledThreeWay",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compiledSameVariable": "Targets.CompiledSameVariable",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_boundedCompilerPrograms": "Targets.BoundedCompilerPrograms",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_compilerProgram": "Targets.CompilerProgram",
+    "LogicLineages.OrdinalComparison.FullWordGuardCompletion.StatementChecks.fixed_fullWordGuards": "Targets.FullWordGuards"
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "native_profile_verified": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "single_thread": true,
+    "core_only_profile": false,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "peak_successful_process_tree_rss_kib": 1188808,
+  "original_limit_reference": {
+    "path": "formalization/verification/cumulative-continuation-2026-11-06/canonical-guard-selector/NATIVE-VERIFICATION.json",
+    "sha256": "980fa9ca4d150af55282a462c4e9dfc341dda7cc6bb0b7dfa9764968aa1fb07d"
+  },
+  "current_artifacts_present_and_at_least_as_new_as_direct_inputs": true,
+  "current_frozen_files_verified": [
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/ComparisonDefinitions.lean",
+      "sha256": "03dd879f634df88145d8212093a2bb246e5a90d85f92436bed98bb2d6c398e0d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/CompilerDefinitions.lean",
+      "sha256": "e1eec38758154dc86b61684cff0a785ae96fc551d25965767514afc3d1225a78"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/DispatchDefinitions.lean",
+      "sha256": "46b3ec7da7b67f21650652841a257448ff78c522dff019e586c89b75aedef043"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/DispatchTargets.lean",
+      "sha256": "f14158e87ecd3c4a49de8c5eb8cf3642cf1b2ec8787572e3d920b006076f1ccc"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/Preflight.lean",
+      "sha256": "ae8e67f26bcdc4ab05a94b60ad2723d43ffaf4b54de2cb686c03488cc938654f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/RunnerDefinitions.lean",
+      "sha256": "322fa1f4a9c7e620ec71ff2fa18b6c9c290fc4034e383108bae079f6e7720d46"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/RunnerTargets.lean",
+      "sha256": "37d6878f0b249719b3c2f230d5f13baa0022ab15020978d6632369323d2cb9bd"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/Targets.lean",
+      "sha256": "8f230607d52ceac90acc3f80cc93689816948d5c3b0b05a560319ada2b7cadb6"
+    }
+  ],
+  "printed_source": {
+    "path": "08-multivariate-collapse-comparison/paper.tex",
+    "sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d"
+  },
+  "frozen_auxiliary_revision": {
+    "version": 2,
+    "only_changed_file": "Targets.lean",
+    "change": "Only two documented parentheses move desired <= 2 outside the BooleanGuardsCorrect iff. The complete FullWordGuards definition and the other seven frozen files are byte-identical to V1.",
+    "v1_preserved": true,
+    "v2_native_preflight_passed": true,
+    "preflight_receipt": "receipts/1793995308111746316-5.json",
+    "preflight_receipt_sha256": "8de57e824ce72f6970154d88a9dd45df750fd64e3da81a02434fd64311683581"
+  },
+  "failed_rows_with_exact_preserved_snapshots": [
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.ComparisonProof",
+      "source_sha256": "da2594d2dd5318b305696bcc9f027b815a562b02ffeb07bf07ae1ae633c8d926",
+      "receipt": "receipts/1793995095623552532-5.json",
+      "snapshot_paths": [
+        "failed-candidates/comparison-01/ComparisonProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.ComparisonProof",
+      "source_sha256": "b176a28d592c952d49f0789bb90268687d3fb2e4fc80ab2821053e6322ddce10",
+      "receipt": "receipts/1793995139822259876-5.json",
+      "snapshot_paths": [
+        "failed-candidates/comparison-02/ComparisonProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.BooleanProof",
+      "source_sha256": "7eab553b29af528b8797e07fbb917c75ec87416be342abfe63e9efbcabb96372",
+      "receipt": "receipts/1793995217033888239-5.json",
+      "snapshot_paths": [
+        "failed-candidates/boolean-01/BooleanProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.ComparisonProgramsProof",
+      "source_sha256": "a743c83002aa73e4551ac220686cdbd700306c8c1425a71eb4fa775203f8f896",
+      "receipt": "receipts/1793995337569520221-5.json",
+      "snapshot_paths": [
+        "failed-candidates/program-imports-01/ComparisonProgramsProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchOrderProof",
+      "source_sha256": "2a9609358255a5e7afeff116f90ca9e4ffd45f61e9c56028d99edfec19d6d4dd",
+      "receipt": "receipts/1793995429171420677-5.json",
+      "snapshot_paths": [
+        "failed-candidates/dispatch-order-01/DispatchOrderProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.RunnerProof",
+      "source_sha256": "4d8da5652e9e464e4554b0ed642162a91571bc2025156065b1f1c6d4c861d43d",
+      "receipt": "receipts/1793995906678856420-10.json",
+      "snapshot_paths": [
+        "failed-candidates/runner-01/RunnerProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchProgramsProof",
+      "source_sha256": "728d3db671f9456d607174ee60f662f22e5a0ec40ae5e21a53a2d0667f486ce7",
+      "receipt": "receipts/1793995949636554122-6.json",
+      "snapshot_paths": [
+        "failed-candidates/dispatch-programs-01/DispatchProgramsProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.DispatchHeadProof",
+      "source_sha256": "4358e3a4f868018721ac34f3786f122701b2df84d1f6470f88bc3dd18845ebed",
+      "receipt": "receipts/1793995963639120359-10.json",
+      "snapshot_paths": [
+        "failed-candidates/dispatch-head-01/DispatchHeadProof.lean"
+      ]
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.FullWordGuardCompletion.TerminalProof",
+      "source_sha256": "0a7d9313ac5cf6a025ec2788edcd5069d9e8bdd448c013f2c18c78126556438e",
+      "receipt": "receipts/1793995989907242106-5.json",
+      "snapshot_paths": [
+        "failed-candidates/terminal-01/TerminalProof.lean"
+      ]
+    }
+  ],
+  "baseline_preservation": {
+    "historical_native_baseline_blob_count": 38760,
+    "publication_baseline_blob_count": 38785,
+    "all_historical_and_publication_baseline_blob_hashes_match": true,
+    "concurrent_commits_since_original_freeze": [
+      "52151226234282464c046500cfbfbe1f6af643c8",
+      "1de3f7a2994b46f68f71834674ff73dc03a228fd",
+      "e413aa1f8035a92b4e4b8182a1c4b9a390505b0e",
+      "1c7c5f7b0d986fefe9244e5eeacb84c53bfa6955"
+    ],
+    "additions_before_native_collection": 125,
+    "additions_during_review": 25,
+    "all_concurrent_changes_addition_only": true,
+    "guard_source_closure_unchanged": true,
+    "prior_verifier_sources_unchanged": true,
+    "native_collection_remains_anchored_to_historical_e413_baseline": true
+  },
+  "findings": [
+    "The exact closed FullWordGuards alias passed in the complete final native coordinator receipt, together with every new dispatcher, runner, least-search, bounded compiler and total compiler alias.",
+    "Independent import reconstruction produced exactly the 426 local modules in SOURCE-PINS. Every current source SHA-256 matches a successful native row, and all referenced receipt and log hashes match archived bytes.",
+    "Actual Lean output contains 29 new and 77 prior exact audits. Every axiom is propext, Classical.choice, or Quot.sound; six new aliases need only propext and Quot.sound.",
+    "All 16 raw receipts retain the original one-thread 2048 MiB heap, 1536 MiB RSS, 2048 MiB free-memory floor, 90-second CPU and 180-second wall limits. Peak successful observed RSS is 1,188,808 KiB.",
+    "Each of the nine failed native rows has an exact-hash preserved candidate and intact diagnostics. The rejected V1 auxiliary precedence defect and its narrow correction are documented, and the corrected contract passed native preflight.",
+    "All 38,760 e413 baseline blobs passed direct independent hashing. After HEAD advanced during review, all 38,785 blobs at 1c7 also passed; the intervening commit adds 25 ID1 files and changes no existing file. The native collector snapshot remains immutable at e413.",
+    "The frozen compiler consumes syntax only, retains original raw-variable names, computes the common-tail guards and generated trace before raw inputs are used, and returns a separate decided same-variable outcome."
+  ],
+  "scope": "Focused native closure, exact aliases and source correspondence; no full repository build or remote CI claim. Root owns later metadata promotion and publication preservation.",
+  "full_repository_build_claimed": false,
+  "remote_ci_claimed": false,
+  "compiler_invocations_during_review": 0,
+  "proof_or_target_files_modified_during_review": false
+}

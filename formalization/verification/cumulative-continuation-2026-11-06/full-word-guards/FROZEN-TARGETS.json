@@ -1,0 +1,53 @@
+{
+  "baseline": "2066300c16197fc71dc30c87d61fb6bb11eadd9b",
+  "frozen_at_utc": "2026-11-06T20:01:47.743390+00:00",
+  "source_statement": "08:lem:guards",
+  "source_file": "08-multivariate-collapse-comparison/paper.tex",
+  "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+  "source_contract": "Effective common-tail three-way word comparison under x >= y by finite Boolean combinations linear in x, words only at the original y; independently decided same-raw-variable comparison; computed cutoff and all generated words before tail use.",
+  "candidate_proofs_started": true,
+  "files": [
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/ComparisonDefinitions.lean",
+      "sha256": "03dd879f634df88145d8212093a2bb246e5a90d85f92436bed98bb2d6c398e0d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/CompilerDefinitions.lean",
+      "sha256": "e1eec38758154dc86b61684cff0a785ae96fc551d25965767514afc3d1225a78"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/DispatchDefinitions.lean",
+      "sha256": "46b3ec7da7b67f21650652841a257448ff78c522dff019e586c89b75aedef043"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/DispatchTargets.lean",
+      "sha256": "f14158e87ecd3c4a49de8c5eb8cf3642cf1b2ec8787572e3d920b006076f1ccc"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/Preflight.lean",
+      "sha256": "ae8e67f26bcdc4ab05a94b60ad2723d43ffaf4b54de2cb686c03488cc938654f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/RunnerDefinitions.lean",
+      "sha256": "322fa1f4a9c7e620ec71ff2fa18b6c9c290fc4034e383108bae079f6e7720d46"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/RunnerTargets.lean",
+      "sha256": "37d6878f0b249719b3c2f230d5f13baa0022ab15020978d6632369323d2cb9bd"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/FullWordGuardCompletion/Targets.lean",
+      "sha256": "8f230607d52ceac90acc3f80cc93689816948d5c3b0b05a560319ada2b7cadb6"
+    }
+  ],
+  "native_profile": {
+    "workers": 1,
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "min_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180
+  },
+  "version": 2,
+  "revision_reason": "The V1 BooleanGuardsCorrect auxiliary target parsed as (desired <= 2 -> exists sign ...) iff comparison = desired. Explicit parentheses now put the bound outside the iff. Whole FullWordGuards and all definitions, domains, constants, dispatcher and runner targets are unchanged. V1 retained as a rejected auxiliary specification; root Boolean proof had not passed."
+}
