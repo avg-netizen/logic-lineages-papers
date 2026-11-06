@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalOrderTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalOrderPreflight
+def embeddingComparator : Prop := InternalOriginalOrderTargets.ActualOriginalOrderEmbedding
+def introductionComparator : Prop := InternalOriginalOrderTargets.ActualOriginalOrderIntroduction
+def eliminationComparator : Prop := InternalOriginalOrderTargets.ActualOriginalOrderElimination
+def irreflexivityComparator : Prop := InternalOriginalOrderTargets.ActualOriginalOrderIrreflexivity
+def transitivityComparator : Prop := InternalOriginalOrderTargets.ActualOriginalOrderTransitivity
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalOrderPreflight
