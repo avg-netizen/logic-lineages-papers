@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonStatementChecks
+theorem comparison_exact : InternalQuotientComparisonTargets.ActualOriginalComparison := InternalQuotientComparisonProof.actualOriginalComparison
+theorem successorOrder_exact : InternalQuotientComparisonTargets.ActualRightSuccessorOrder := InternalQuotientComparisonProof.actualRightSuccessorOrder
+#print axioms comparison_exact
+#print axioms successorOrder_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonStatementChecks
