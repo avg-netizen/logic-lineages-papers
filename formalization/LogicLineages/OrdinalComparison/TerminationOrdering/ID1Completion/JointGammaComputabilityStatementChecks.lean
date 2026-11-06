@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaComputabilityPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaComputabilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaComputabilityStatementChecks
+
+theorem fibers_exact : JointGammaComputabilityPreflight.fibersComparator :=
+  JointGammaComputabilityFiberProof.actualOriginalComputabilityFibers
+theorem typed_exact : JointGammaComputabilityPreflight.typedComparator :=
+  JointGammaComputabilityFiberProof.actualComputabilityTypedness
+theorem formula_exact : JointGammaComputabilityPreflight.formulaComparator :=
+  JointGammaComputabilityProof.actualFormulaCalibration
+theorem window_exact : JointGammaComputabilityPreflight.windowComparator :=
+  JointGammaComputabilityProof.actualFiniteWindowCalibration
+theorem existence_exact : JointGammaComputabilityPreflight.existenceComparator :=
+  JointGammaComputabilityProof.actualUniformFormulasExist
+#print axioms fibers_exact
+#print axioms typed_exact
+#print axioms formula_exact
+#print axioms window_exact
+#print axioms existence_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaComputabilityStatementChecks
