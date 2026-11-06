@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceIntroductionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceIntroductionPreflight
+def branchComparator : Prop := InternalSourceIntroductionTargets.ActualTaggedBranchIntroduction
+def oppositeComparator : Prop := InternalSourceIntroductionTargets.ActualOppositeBranch
+def scalarComparator : Prop := InternalSourceIntroductionTargets.ActualInternalScalarEquation
+def multisetComparator : Prop := InternalSourceIntroductionTargets.ActualInternalMultisetEquation
+def existenceComparator : Prop := InternalSourceIntroductionTargets.ActualUniformEquationsExist
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceIntroductionPreflight

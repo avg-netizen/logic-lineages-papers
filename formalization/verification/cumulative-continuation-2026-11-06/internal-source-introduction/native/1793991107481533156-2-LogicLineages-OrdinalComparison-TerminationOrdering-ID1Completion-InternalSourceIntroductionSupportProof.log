@@ -1,0 +1,47 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSupportProof.lean:33:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+odd : Bool
+p : Positive (Fin 2)
+c t : OrdinaryArithmetic.Term α
+x : OTerm (α ⊕ Fin 1) := Term.relabel Sum.inl t
+y : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+Gamma : List (InternalCalculus.Formula (α ⊕ Fin 1)) :=
+  eqn (tagTerm odd x) (tagTerm odd y) :: List.map weaken [payload (tagPredicate odd p) c t]
+he : Derivation body Gamma (eqn (tagTerm odd x) (tagTerm odd y))
+x✝ :
+  Nonempty
+    (Derivation body []
+      (arithmeticEmbedding.onFormula ((Term.equal (tagTerm odd x) (tagTerm odd y)).imp (Term.equal x y))))
+⊢ Derivation body
+    (eqn (tagTerm odd (Term.relabel Sum.inl t)) (tagTerm odd (var (Sum.inr 0))) ::
+      List.map weaken [(substitutePositive ![c, t] (tagPredicate odd p)).formula])
+    (payload (tagPredicate odd p) (Term.relabel Sum.inl c) (var (Sum.inr 0)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSupportProof.lean:55:11: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+case false
+body : Positive (Fin 1)
+α : Type
+p : Positive (Fin 2)
+c t : OrdinaryArithmetic.Term α
+x : OTerm (α ⊕ Fin 1) := Term.relabel Sum.inl t
+y : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+x✝ : Nonempty (Derivation body [] (arithmeticEmbedding.onFormula (Term.equal (tagTerm false x) (tagTerm true y)).not))
+⊢ Derivation body
+    (eqn (tagTerm false (Term.relabel Sum.inl t)) (tagTerm (!false) (var (Sum.inr 0))) :: List.map weaken []) ⊥
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSupportProof.lean:61:11: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+case true
+body : Positive (Fin 1)
+α : Type
+p : Positive (Fin 2)
+c t : OrdinaryArithmetic.Term α
+x : OTerm (α ⊕ Fin 1) := Term.relabel Sum.inl t
+y : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+x✝ : Nonempty (Derivation body [] (arithmeticEmbedding.onFormula (Term.equal (tagTerm false y) (tagTerm true x)).not))
+⊢ Derivation body
+    (eqn (tagTerm true (Term.relabel Sum.inl t)) (tagTerm (!true) (var (Sum.inr 0))) :: List.map weaken []) ⊥

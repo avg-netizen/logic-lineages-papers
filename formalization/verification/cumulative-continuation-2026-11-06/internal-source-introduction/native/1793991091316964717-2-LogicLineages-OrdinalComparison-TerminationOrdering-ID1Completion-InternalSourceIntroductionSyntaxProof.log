@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSyntaxProof.lean:28:27: error: Application type mismatch: The argument
+  f
+has type
+  β → γ
+but is expected to have type
+  β → γ ⊕ Fin 0
+in the application
+  @BoundedFormula.relabel language β γ 0 f
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSyntaxProof.lean:37:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (BoundedFormula.subst ?phi ?ts).subst ?us
+in the target expression
+  (BoundedFormula.subst (substitutePositive ![c, t] p).formula fun a => emb (ts a)) =
+    (substitutePositive ![Term.subst c ts, Term.subst t ts] p).formula
+
+α β : Type
+p : Positive (Fin 2)
+c t : OTerm α
+ts : α → OTerm β
+⊢ (BoundedFormula.subst (substitutePositive ![c, t] p).formula fun a => emb (ts a)) =
+    (substitutePositive ![Term.subst c ts, Term.subst t ts] p).formula
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSyntaxProof.lean:36:21: warning: This simp argument is unused:
+  actualPositiveSubstitution
+
+Hint: Omit it from the simp argument list.
+  simp only [payload,̵a̵c̵t̵u̵a̵l̵P̵o̵s̵i̵t̵i̵v̵e̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSyntaxProof.lean:47:6: error(lean.unknownIdentifier): Unknown identifier `formulaSubstRelabel`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSyntaxProof.lean:45:73: error: unsolved goals
+α β : Type
+p : Positive (Fin 2)
+c t : OTerm α
+f : α → β
+⊢ Formula.relabel f (substitutePositive ![c, t] p).formula =
+    (substitutePositive ![Term.relabel f c, Term.relabel f t] p).formula
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceIntroductionSyntaxProof.lean:46:21: warning: This simp argument is unused:
+  actualPositiveSubstitution
+
+Hint: Omit it from the simp argument list.
+  simp only [payload,̵a̵c̵t̵u̵a̵l̵P̵o̵s̵i̵t̵i̵v̵e̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
