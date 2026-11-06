@@ -1,0 +1,73 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:44:4: error(lean.unknownIdentifier): Unknown identifier `actualSourceClasses`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:43:9: error: Tactic `rcases` failed: `x✝ : ?m.22` is not an inductive datatype
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:98:4: error: unsolved goals
+case pos
+Γ : List Ty
+k l mode : ℕ
+a : OrdinalVector Γ k
+b : OrdinalVector Γ l
+ca : CompiledVector (OrdinalComponent Γ) k
+cb : CompiledVector (OrdinalComponent Γ) l
+ha : compileVector a = some ca
+hb : compileVector b = some cb
+ρ : OrdinalComponent Γ → ℕ
+za : sourceVectorAtValue a ρ 0 = ↑(Scalar.value ρ ca.scalar)
+zb : sourceVectorAtValue b ρ 0 = ↑(Scalar.value ρ cb.scalar)
+hp : ∀ (j : ℕ), positiveNoteAt ca.positiveNotes j = sourceVectorAtValue a ρ (j + 1)
+hq : ∀ (j : ℕ), positiveNoteAt cb.positiveNotes j = sourceVectorAtValue b ρ (j + 1)
+h0 : ¬mode = 0
+h1 : mode = 1
+⊢ ((if 1 = 0 then ∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)
+      else ∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)) ∧
+      if 1 = 0 then Scalar.value ρ ca.scalar ≤ Scalar.value ρ cb.scalar
+      else Scalar.value ρ ca.scalar < Scalar.value ρ cb.scalar) ↔
+    if 1 = 0 then
+      (∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)) ∧
+        if false = true then Scalar.value ρ ca.scalar < Scalar.value ρ cb.scalar
+        else ↑(Scalar.value ρ ca.scalar) ≤ ↑(Scalar.value ρ cb.scalar)
+    else
+      (∀ (j : ℕ), sourceVectorAtValue a ρ (j + 1) ≤ sourceVectorAtValue b ρ (j + 1)) ∧
+        Scalar.value ρ ca.scalar < Scalar.value ρ cb.scalar
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:98:17: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp only [h0̵,̵ ̵h̵1, if_false, if_true, SourceComparisonAt, za, zb, Nat.cast_lt, hp, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:98:25: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [h0, h1, if_f̵a̵l̵s̵e̵,̵ ̵i̵f̵_̵true, SourceComparisonAt, za, zb, Nat.cast_lt, hp, hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:147:6: error: Type mismatch: After simplification, term
+  h
+ has type
+  SourceCode.positiveFlag mode (CompiledVector.syntaxCode SourceCode.rawIndex ac)
+        (CompiledVector.syntaxCode SourceCode.rawIndex bc) =
+      true ∧
+    Pair.valueRelation mode (Scalar.value (fun c => ν (SourceCode.rawIndex c)) ac.scalar)
+      (Scalar.value (fun c => ν (SourceCode.rawIndex c)) bc.scalar)
+but is expected to have type
+  flag = true ∧
+    Pair.valueRelation mode (Expr.value ν (scalarExpr SourceCode.rawIndex ac.scalar))
+      (Expr.value ν (scalarExpr SourceCode.rawIndex bc.scalar))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:161:8: error: Type mismatch: After simplification, term
+  h
+ has type
+  flag = true ∧
+    Pair.valueRelation mode (Expr.value ν (scalarExpr SourceCode.rawIndex ac.scalar))
+      (Expr.value ν (scalarExpr SourceCode.rawIndex bc.scalar))
+but is expected to have type
+  flag = true ∧
+    Pair.valueRelation mode (Scalar.value (fun c => ν (SourceCode.rawIndex c)) ac.scalar)
+      (Scalar.value (fun c => ν (SourceCode.rawIndex c)) bc.scalar)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/SourceProof.lean:130:15: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

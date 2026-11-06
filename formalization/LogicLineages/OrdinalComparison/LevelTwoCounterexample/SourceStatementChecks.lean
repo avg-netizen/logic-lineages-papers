@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.SourceProof
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.SourceCodeProof
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.SourceStatementChecks
+theorem actual_level_two_counterexamples : SourceTargets.ActualLevelTwoCounterexamples :=
+  SourceProof.actualLevelTwoCounterexamples
+theorem actual_numeric_program : SourceTargets.ActualNumericProgram :=
+  SourceCodeProof.actualNumericProgram
+end LogicLineages.OrdinalComparison.LevelTwoCounterexample.SourceStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.SourceStatementChecks
