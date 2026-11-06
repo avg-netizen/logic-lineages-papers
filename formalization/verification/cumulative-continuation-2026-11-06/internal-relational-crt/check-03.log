@@ -1,0 +1,116 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTStepProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTStepProof.lean:34:6: error(lean.unknownIdentifier): Unknown identifier `instantiateRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTStepProof.lean:22:63: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+t : OTerm (α ⊕ Fin 1)
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+n c p s : OTerm α
+hR : Nonempty (Derivation body Gamma (instantiate (atIndex R n) (emb s)))
+hd : Nonempty (Derivation body Gamma (dividesBelow t (suc p) n))
+hr : Nonempty (Derivation body Gamma (residuesBelow t R c n))
+hb✝ :
+  Derivation body []
+    (Formula.imp (coprime (OrdinaryArithmetic.succTerm (Term.subst t (bindTerm n))) (OrdinaryArithmetic.succTerm p))
+      (InternalBinaryCRT.solution (OrdinaryArithmetic.succTerm (Term.subst t (bindTerm n)))
+        (OrdinaryArithmetic.succTerm p) s c))
+hc : Derivation body Gamma (coprime (suc (Term.subst t (bindTerm n))) (suc p))
+hb :
+  Derivation body Gamma
+    (InternalBinaryCRT.solution (OrdinaryArithmetic.succTerm (Term.subst t (bindTerm n)))
+      (OrdinaryArithmetic.succTerm p) s c)
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+d : OTerm β
+hj : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hn :
+  Nonempty
+    (Derivation body Delta
+      (cf d (Term.relabel j s) (Term.relabel j (OrdinaryArithmetic.succTerm (Term.subst t (bindTerm n))))))
+hdc : Nonempty (Derivation body Delta (cf d (Term.relabel j c) (Term.relabel j (OrdinaryArithmetic.succTerm p))))
+hd' :
+  Nonempty
+    (Derivation body Delta (dividesBelow (Term.relabel (Sum.map j id) t) (Term.relabel j (suc p)) (Term.relabel j n)))
+hr' :
+  Nonempty
+    (Derivation body Delta
+      (residuesBelow (Term.relabel (Sum.map j id) t) (Formula.relabel (Sum.map (Sum.map j id) id) R) (Term.relabel j c)
+        (Term.relabel j n)))
+hR' : Nonempty (Derivation body Delta (Formula.relabel j (instantiate (atIndex R n) (emb s))))
+⊢ Nonempty
+    (Derivation body Delta
+      (solution (Term.relabel (Sum.map j id) t) (Formula.relabel (Sum.map (Sum.map j id) id) R)
+        (suc (Term.relabel j n))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTStepProof.lean:57:6: error(lean.unknownIdentifier): Unknown identifier `instantiateRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTStepProof.lean:47:63: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+t : OTerm (α ⊕ Fin 1)
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+n c s : OTerm α
+hR : Nonempty (Derivation body Gamma (instantiate (atIndex R n) (emb s)))
+hr : Nonempty (Derivation body Gamma (residuesBelow t R c n))
+hm✝ :
+  Derivation body []
+    (Formula.imp (coprimeBelow (suc (Term.subst t (bindTerm n))) t n)
+      (commonMultiple (suc (Term.subst t (bindTerm n))) t n))
+hn : Derivation body Gamma (coprimeBelow (suc (Term.subst t (bindTerm n))) t n)
+hm : Derivation body Gamma (commonMultiple (suc (Term.subst t (bindTerm n))) t n)
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+p : OTerm β
+hj : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hc : Nonempty (Derivation body Delta (coprime (Term.relabel j (suc (Term.subst t (bindTerm n)))) (suc p)))
+hd : Nonempty (Derivation body Delta (dividesBelow (Term.relabel (Sum.map j id) t) (suc p) (Term.relabel j n)))
+hr' :
+  Nonempty
+    (Derivation body Delta
+      (residuesBelow (Term.relabel (Sum.map j id) t) (Formula.relabel (Sum.map (Sum.map j id) id) R) (Term.relabel j c)
+        (Term.relabel j n)))
+hR' : Nonempty (Derivation body Delta (Formula.relabel j (instantiate (atIndex R n) (emb s))))
+⊢ Nonempty
+    (Derivation body Delta
+      (solution (Term.relabel (Sum.map j id) t) (Formula.relabel (Sum.map (Sum.map j id) id) R)
+        (suc (Term.relabel j n))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTStepProof.lean:95:6: error(lean.unknownIdentifier): Unknown identifier `existsRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTStepProof.lean:82:63: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+t : OTerm (α ⊕ Fin 1)
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+n : OTerm α
+ha : Nonempty (Derivation body Gamma (InternalBoundedCRT.pairwiseBelow t (suc n)))
+hav : Nonempty (Derivation body Gamma (availableBelow R (suc n)))
+ha' : Derivation body Gamma (bounded (coprimeBelow (suc t) (Term.relabel (Sum.map Sum.inl id) t) (var (Sum.inr 0))) n)
+hav' : Derivation body Gamma (bounded (existsOne R) n)
+hi : Derivation body Gamma (Formula.imp (InternalBoundedCRT.pairwiseBelow t n ⊓ availableBelow R n) (solution t R n))
+hs : Derivation body Gamma (solution t R n)
+hn : Nonempty (Derivation body Gamma (coprimeBelow (suc (Term.subst t (bindTerm n))) t n))
+hnew : Nonempty (Derivation body Gamma (existsOne (atIndex R n)))
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+c : OTerm β
+hj : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hr :
+  Nonempty
+    (Derivation body Delta
+      (residuesBelow (Term.relabel (Sum.map j id) t) (Formula.relabel (Sum.map (Sum.map j id) id) R) c
+        (Term.relabel j n)))
+hn' :
+  Nonempty
+    (Derivation body Delta
+      (coprimeBelow (suc ((Term.relabel (Sum.map j id) t).subst (bindTerm (Term.relabel j n))))
+        (Term.relabel (Sum.map j id) t) (Term.relabel j n)))
+hnew' : Nonempty (Derivation body Delta (Formula.relabel j (existsOne (atIndex R n))))
+⊢ Nonempty
+    (Derivation body Delta
+      (solution (Term.relabel (Sum.map j id) t) (Formula.relabel (Sum.map (Sum.map j id) id) R)
+        (suc (Term.relabel j n))))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTStepProof: 1
+BUILD_RECEIPT build-reports/1794005345993865858-7.json
