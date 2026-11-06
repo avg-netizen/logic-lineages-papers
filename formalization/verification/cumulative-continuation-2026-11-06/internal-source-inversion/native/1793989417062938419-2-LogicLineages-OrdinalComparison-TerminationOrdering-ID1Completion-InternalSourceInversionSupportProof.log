@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionSupportProof.lean:93:5: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.var` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `var`
+  [apply] `Int.Linear.Expr.var`
+  [apply] `Lean.IR.Arg.var`
+  [apply] `Nat.Linear.Expr.var`
+  [apply] `Nat.SOM.Expr.var`
+  [apply] `Lean.Data.AC.Context.var`
+  [apply] `Lean.Data.AC.Expr.var`
+  [apply] `Lean.Grind.AC.Expr.var`
+  [apply] `Lean.Grind.AC.Seq.var`
+  [apply] `Lean.Grind.CommRing.Expr.var`
+  [apply] `Lean.Grind.Linarith.Expr.var`
+  [apply] `Lean.Meta.Match.Example.var`
+  [apply] `Lean.Meta.Match.Pattern.var`
+  [apply] `Source.Term.var`
+  [apply] `Source.SourceMarkedSyntax.MarkedTerm.var`
+  [apply] `Source.SourceNamedSyntax.NamedTerm.var`
+  [apply] `NumberedAuxiliaryCoding.Code.var`
+  [apply] `NumberedRewriteSyntax.AuxTerm.var`
+  [apply] `NumberedRewriteSyntax.Represents.var`
+  [apply] `OriginalDerivationBudget.Weak.var`
+  [apply] `RecursiveComparison.Weak.var`
+  [apply] `SourceExtendedComparison.Weak.var`
+  [apply] `SourceObservationCoding.Code.var`
+  [apply] `SourceSharpening.Sharp.var`
+  [apply] `SourceUnmarked.Unmarked.var`
+  [apply] `NumberedRewriteSyntax.Represents.below.var`
+  [apply] `OriginalDerivationBudget.Weak.below.var`
+  [apply] `RecursiveComparison.Weak.below.var`
+  [apply] `SourceExtendedComparison.Weak.below.var`
+  [apply] `SourceSharpening.Sharp.below.var`
+  [apply] `SourceUnmarked.Unmarked.below.var`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionSupportProof.lean:94:2: error: 'change' tactic failed, pattern
+  (arithmeticEmbedding.onFormula (BoundedFormula.subst guard sigma)).imp
+      (substitutePositive sigma (relabel ![Sum.inl 0, Sum.inr 0] (tagPredicate odd p))).formula =
+    ?m.117
+is not definitionally equal to target
+  (substitutePositive (Sum.elim ![context, tagTerm odd t] fun x => t) (originalBranchBody odd p)).formula =
+    ((arithmeticEmbedding.onTerm (tagTerm odd t)).equal (arithmeticEmbedding.onTerm (tagTerm odd t))).imp
+      (substitutePositive ![context, t] (tagPredicate odd p)).formula

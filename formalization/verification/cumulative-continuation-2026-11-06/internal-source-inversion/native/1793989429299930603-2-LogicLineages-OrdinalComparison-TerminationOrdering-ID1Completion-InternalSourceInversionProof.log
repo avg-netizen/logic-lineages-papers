@@ -1,0 +1,200 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:18:12: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.implicationElimination (SourcePresentation.sourceBody data context) α
+    ((Positive.predicate (tagTerm false t)).formula :: ?m.61) (Positive.predicate (tagTerm false t)).formula
+    (substitutePositive ![numeral context, tagTerm false t]
+        (combinedOperator (SourcePresentation.scalarOperator data) (SourcePresentation.multisetOperator data))).formula
+    (weakenClosed unfolding.conjunctionLeft ((Positive.predicate (tagTerm false t)).formula :: ?m.61))
+    (Derivation.hypothesis ⋯)
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm false t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm false t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm false t]
+            (taggedBranch false (SourcePresentation.scalarOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate false (SourcePresentation.scalarOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:19:5: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.hypothesis (SourcePresentation.sourceBody data context) α
+    ((Positive.predicate (tagTerm false t)).formula :: ?m.61) (Positive.predicate (tagTerm false t)).formula ⋯
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm false t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm false t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm false t]
+            (taggedBranch false (SourcePresentation.scalarOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate false (SourcePresentation.scalarOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:19:27: error: don't know how to synthesize implicit argument `l`
+  @List.mem_cons_self (InternalCalculus.Formula α) (Positive.predicate (tagTerm false t)).formula ?m.61
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm false t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm false t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm false t]
+            (taggedBranch false (SourcePresentation.scalarOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate false (SourcePresentation.scalarOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:18:99: error: don't know how to synthesize placeholder for argument `Gamma`
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm false t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm false t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm false t]
+            (taggedBranch false (SourcePresentation.scalarOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate false (SourcePresentation.scalarOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:18:7: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:11:104: error: unsolved goals
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm false t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm false t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm false t]
+            (taggedBranch false (SourcePresentation.scalarOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate false (SourcePresentation.scalarOperator data))).formula)
+⊢ Derivation (SourcePresentation.sourceBody data context) [(Positive.predicate (tagTerm false t)).formula]
+    (substitutePositive ![numeral context, t] (tagPredicate false (SourcePresentation.scalarOperator data))).formula
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:29:12: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.implicationElimination (SourcePresentation.sourceBody data context) α
+    ((Positive.predicate (tagTerm true t)).formula :: ?m.61) (Positive.predicate (tagTerm true t)).formula
+    (substitutePositive ![numeral context, tagTerm true t]
+        (combinedOperator (SourcePresentation.scalarOperator data) (SourcePresentation.multisetOperator data))).formula
+    (weakenClosed unfolding.conjunctionLeft ((Positive.predicate (tagTerm true t)).formula :: ?m.61))
+    (Derivation.hypothesis ⋯)
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm true t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm true t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm true t]
+            (taggedBranch true (SourcePresentation.multisetOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate true (SourcePresentation.multisetOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:30:5: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.hypothesis (SourcePresentation.sourceBody data context) α
+    ((Positive.predicate (tagTerm true t)).formula :: ?m.61) (Positive.predicate (tagTerm true t)).formula ⋯
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm true t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm true t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm true t]
+            (taggedBranch true (SourcePresentation.multisetOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate true (SourcePresentation.multisetOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:30:27: error: don't know how to synthesize implicit argument `l`
+  @List.mem_cons_self (InternalCalculus.Formula α) (Positive.predicate (tagTerm true t)).formula ?m.61
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm true t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm true t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm true t]
+            (taggedBranch true (SourcePresentation.multisetOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate true (SourcePresentation.multisetOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:29:99: error: don't know how to synthesize placeholder for argument `Gamma`
+context:
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm true t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm true t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm true t]
+            (taggedBranch true (SourcePresentation.multisetOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate true (SourcePresentation.multisetOperator data))).formula)
+⊢ List (InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:29:7: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSourceInversionProof.lean:22:108: error: unsolved goals
+data : SourcePresentation.Data
+context : ℕ
+α : Type
+t : OrdinaryArithmetic.Term α
+unfolding :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((Positive.predicate (tagTerm true t)).formula.iff
+      (substitutePositive ![numeral context, tagTerm true t]
+          (combinedOperator (SourcePresentation.scalarOperator data)
+            (SourcePresentation.multisetOperator data))).formula)
+branch :
+  Derivation (SourcePresentation.sourceBody data context) []
+    ((substitutePositive ![numeral context, tagTerm true t]
+            (taggedBranch true (SourcePresentation.multisetOperator data))).formula.imp
+      (substitutePositive ![numeral context, t] (tagPredicate true (SourcePresentation.multisetOperator data))).formula)
+⊢ Derivation (SourcePresentation.sourceBody data context) [(Positive.predicate (tagTerm true t)).formula]
+    (substitutePositive ![numeral context, t] (tagPredicate true (SourcePresentation.multisetOperator data))).formula

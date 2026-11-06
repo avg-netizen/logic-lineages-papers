@@ -1,0 +1,60 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaSemanticsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticTransforms
+open SourceComputabilityFormulaSupportProof InternalCalculus SourceEndpoint TaggedArithmeticOperators
+open InternalSourceInversionSupportProof InternalPositiveUnfoldingSupportProof
+open InternalTermSubstitutionProof
+
+theorem actualInternalScalarInversion : InternalSourceInversionTargets.ActualInternalScalarInversion := by
+  intro data context α t
+  obtain ⟨unfolding⟩ := actualExplicitSourceUnfolding data context α (tagTerm false t)
+  obtain ⟨branch⟩ := actualTaggedBranchElimination (SourcePresentation.sourceBody data context) α false
+    (SourcePresentation.scalarOperator data) (numeral context) t
+  apply Nonempty.intro
+  apply Derivation.implicationIntroduction
+  have h := Derivation.implicationElimination (weakenClosed (Derivation.conjunctionLeft unfolding)
+    [(Positive.predicate (tagTerm false t)).formula])
+    (Derivation.hypothesis List.mem_cons_self)
+  exact Derivation.implicationElimination (weakenClosed branch _) (Derivation.conjunctionLeft h)
+
+theorem actualInternalMultisetInversion : InternalSourceInversionTargets.ActualInternalMultisetInversion := by
+  intro data context α t
+  obtain ⟨unfolding⟩ := actualExplicitSourceUnfolding data context α (tagTerm true t)
+  obtain ⟨branch⟩ := actualTaggedBranchElimination (SourcePresentation.sourceBody data context) α true
+    (SourcePresentation.multisetOperator data) (numeral context) t
+  apply Nonempty.intro
+  apply Derivation.implicationIntroduction
+  have h := Derivation.implicationElimination (weakenClosed (Derivation.conjunctionLeft unfolding)
+    [(Positive.predicate (tagTerm true t)).formula])
+    (Derivation.hypothesis List.mem_cons_self)
+  exact Derivation.implicationElimination (weakenClosed branch _) (Derivation.conjunctionRight h)
+
+theorem specializedTagTruth (odd : Bool) (p : Positive (Fin 2)) (context : Nat) (P : Nat → Prop) (x : Nat) :
+    realize P (substitutePositive ![numeral context, (.var 0 : OrdinaryArithmetic.Term (Fin 1))]
+      (tagPredicate odd p)).formula ![x] ↔
+      realize (fun y => P (tagNumber odd y)) p.formula ![context,x] := by
+  rw [SourcePresentationSupportProof.positiveSubstitutionTruth]
+  have hv : (fun i : Fin 2 =>
+      (![numeral context, (.var 0 : OrdinaryArithmetic.Term (Fin 1))] i).realize ![x]) = ![context,x] := by
+    funext i
+    exact Fin.cases (numeralTruth context _) (fun j => Fin.cases rfl (fun k => Fin.elim0 k) j) i
+  rw [hv,PositiveArithmeticTransformsProof.positiveTagTruth]
+
+theorem actualOriginalBranchTruth : InternalSourceInversionTargets.ActualOriginalBranchTruth := by
+  intro data n arity hcal context P x
+  constructor
+  · rw [specializedTagTruth]
+    exact JointGammaSemanticsProof.scalarOperatorTruth data n arity hcal context _ x
+  · rw [specializedTagTruth]
+    exact JointGammaSemanticsProof.multisetOperatorTruth data n arity hcal context _ x
+
+theorem actualUniformInversionExists : InternalSourceInversionTargets.ActualUniformInversionExists := by
+  intro n arity
+  obtain ⟨data,hcal⟩ := JointGammaProgramsProof.actualContextUniformPresentationExists n arity
+  exact ⟨data,hcal,fun context α t => ⟨actualInternalScalarInversion data context α t,
+    actualInternalMultisetInversion data context α t⟩⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionProof

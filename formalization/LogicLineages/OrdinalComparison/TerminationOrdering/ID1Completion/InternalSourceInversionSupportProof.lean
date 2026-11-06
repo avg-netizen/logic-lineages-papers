@@ -1,0 +1,124 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTermSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionSupportProof
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticTransforms
+open SourceComputabilityFormulaSupportProof InternalCalculus SourceEndpoint TaggedArithmeticOperators
+open InternalBinderTransportSyntaxProof InternalBinderTransportProof
+open InternalTermSubstitutionSyntaxProof InternalTermSubstitutionProof
+
+/-- The literal guarded body of the existing taggedBranch. -/
+def originalBranchBody (odd : Bool) (p : Positive (Fin 2)) : Positive (Fin 2 ⊕ Fin 1) :=
+  .guarded ((.var (.inl (1 : Fin 2)) : OrdinaryArithmetic.Term (Fin 2 ⊕ Fin 1)).equal
+    (tagTerm odd (.var (.inr 0))))
+    (PositiveArithmeticTransforms.relabel ![.inl (0 : Fin 2),.inr 0] (tagPredicate odd p))
+
+theorem positiveInstantiation {α β : Type} (p : Positive (α ⊕ Fin 1))
+    (ts : α → OrdinaryArithmetic.Term β) (t : OrdinaryArithmetic.Term β) :
+    instantiate (substitutePositive
+      (Sum.elim (fun a => (ts a).relabel Sum.inl) (fun i => .var (.inr i))) p).formula
+        (arithmeticEmbedding.onTerm t) =
+      (substitutePositive (Sum.elim ts (fun _ : Fin 1 => t)) p).formula := by
+  rw [instantiate,actualPositiveSubstitution,formulaSubstComposition,actualPositiveSubstitution]
+  congr 1
+  funext i
+  cases i with
+  | inl a =>
+    change (arithmeticEmbedding.onTerm ((ts a).relabel Sum.inl)).subst _ = arithmeticEmbedding.onTerm (ts a)
+    rw [onTermRelabel,termRelabelSubst]
+    exact termSubstVar _
+  | inr i => rfl
+
+theorem positiveRelabelSubstitution {α β γ : Type} (p : Positive α) (f : α → β)
+    (ts : β → OrdinaryArithmetic.Term γ) :
+    (substitutePositive ts (PositiveArithmeticTransforms.relabel f p)).formula =
+      (substitutePositive (ts ∘ f) p).formula := by
+  rw [actualPositiveSubstitution,actualPositiveRenaming,actualRelabelSubstitution,actualPositiveSubstitution]
+  rfl
+
+theorem equalitySubstitution {L : Language} {α β : Type} (s t : L.Term α) (ts : α → L.Term β) :
+    (s.equal t).subst ts = (s.subst ts).equal (t.subst ts) := by
+  simp only [FirstOrder.Language.Term.equal,Term.bdEqual,BoundedFormula.subst,BoundedFormula.mapTermRel]
+  rw [termRelabelSubst,termRelabelSubst,termSubstRelabel,termSubstRelabel]
+  rfl
+
+theorem onEquality {L L' : Language} (h : L →ᴸ L') {α : Type} (s t : L.Term α) :
+    h.onFormula (s.equal t) = (h.onTerm s).equal (h.onTerm t) := by
+  simp only [LHom.onFormula,FirstOrder.Language.Term.equal,Term.bdEqual,LHom.onBoundedFormula,onTermRelabel]
+
+theorem applyOneSubstitution {L : Language} {α β : Type} (f : L.Functions 1)
+    (t : L.Term α) (ts : α → L.Term β) :
+    (f.apply₁ t).subst ts = f.apply₁ (t.subst ts) := by
+  simp only [Functions.apply₁,Term.subst]
+  congr 1
+  funext i
+  have hi : i = 0 := Subsingleton.elim _ _
+  subst i
+  rfl
+
+theorem applyTwoSubstitution {L : Language} {α β : Type} (f : L.Functions 2)
+    (s t : L.Term α) (ts : α → L.Term β) :
+    (f.apply₂ s t).subst ts = f.apply₂ (s.subst ts) (t.subst ts) := by
+  simp only [Functions.apply₂,Term.subst]
+  congr 1
+  funext i
+  exact Fin.cases rfl (fun j => Fin.cases rfl (fun k => Fin.elim0 k) j) i
+
+theorem zeroSubstitution {α β : Type} (ts : α → OrdinaryArithmetic.Term β) :
+    (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term α).subst ts = OrdinaryArithmetic.zeroTerm := by
+  simp only [OrdinaryArithmetic.zeroTerm,Term.subst]
+  congr 1
+  funext i
+  exact Fin.elim0 i
+
+theorem tagSubstitution {α β : Type} (odd : Bool) (t : OrdinaryArithmetic.Term α)
+    (ts : α → OrdinaryArithmetic.Term β) :
+    (tagTerm odd t).subst ts = tagTerm odd (t.subst ts) := by
+  cases odd <;> simp only [tagTerm,Bool.false_eq_true,if_false,if_true,
+    OrdinaryArithmetic.mulTerm,OrdinaryArithmetic.succTerm,
+    applyOneSubstitution,applyTwoSubstitution,zeroSubstitution]
+
+theorem branchInstance {α : Type} (odd : Bool) (p : Positive (Fin 2))
+    (context t : OrdinaryArithmetic.Term α) :
+    instantiate (substitutePositive
+      (Sum.elim (fun a => (![context,tagTerm odd t] a).relabel Sum.inl) (fun i : Fin 1 => .var (.inr i)))
+      (originalBranchBody odd p)).formula (arithmeticEmbedding.onTerm t) =
+    ((arithmeticEmbedding.onTerm (tagTerm odd t)).equal (arithmeticEmbedding.onTerm (tagTerm odd t))).imp
+      (substitutePositive ![context,t] (tagPredicate odd p)).formula := by
+  rw [positiveInstantiation]
+  let sigma : Fin 2 ⊕ Fin 1 → OrdinaryArithmetic.Term α :=
+    Sum.elim ![context,tagTerm odd t] (fun _ => t)
+  let guard : OrdinaryArithmetic.Formula (Fin 2 ⊕ Fin 1) :=
+    (.var (.inl (1 : Fin 2)) : OrdinaryArithmetic.Term (Fin 2 ⊕ Fin 1)).equal (tagTerm odd (.var (.inr 0)))
+  change (arithmeticEmbedding.onFormula (guard.subst sigma)).imp
+    (substitutePositive sigma
+      (PositiveArithmeticTransforms.relabel ![.inl 0,.inr 0] (tagPredicate odd p))).formula = _
+  rw [positiveRelabelSubstitution]
+  have hf : sigma ∘
+      ![Sum.inl (0 : Fin 2),Sum.inr (0 : Fin 1)] = ![context,t] := by
+    funext i
+    exact Fin.cases rfl (fun j => Fin.cases rfl (fun k => Fin.elim0 k) j) i
+  rw [hf]
+  dsimp only [guard]
+  rw [equalitySubstitution,tagSubstitution]
+  change (arithmeticEmbedding.onFormula ((tagTerm odd t).equal (tagTerm odd t))).imp _ = _
+  rw [onEquality]
+
+theorem actualTaggedBranchElimination : InternalSourceInversionTargets.ActualTaggedBranchElimination := by
+  intro body α odd p context t
+  apply Nonempty.intro
+  apply Derivation.implicationIntroduction
+  have h : Derivation body
+      [(substitutePositive ![context,tagTerm odd t] (taggedBranch odd p)).formula]
+      (substitutePositive ![context,tagTerm odd t] (taggedBranch odd p)).formula :=
+    Derivation.hypothesis List.mem_cons_self
+  change Derivation body _ (allOne (substitutePositive
+    (Sum.elim (fun a => (![context,tagTerm odd t] a).relabel Sum.inl) (fun i => .var (.inr i)))
+    (originalBranchBody odd p)).formula) at h
+  have hi := Derivation.universalElimination (arithmeticEmbedding.onTerm t) h
+  rw [branchInstance] at hi
+  exact Derivation.implicationElimination hi
+    (Derivation.equalityReflexivity (arithmeticEmbedding.onTerm (tagTerm odd t)))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionSupportProof

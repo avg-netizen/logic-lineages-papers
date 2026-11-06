@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionPreflight
+def branchComparator : Prop := InternalSourceInversionTargets.ActualTaggedBranchElimination
+def scalarComparator : Prop := InternalSourceInversionTargets.ActualInternalScalarInversion
+def multisetComparator : Prop := InternalSourceInversionTargets.ActualInternalMultisetInversion
+def truthComparator : Prop := InternalSourceInversionTargets.ActualOriginalBranchTruth
+def existenceComparator : Prop := InternalSourceInversionTargets.ActualUniformInversionExists
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionPreflight

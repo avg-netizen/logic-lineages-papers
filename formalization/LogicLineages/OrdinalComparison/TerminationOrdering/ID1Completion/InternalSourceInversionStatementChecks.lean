@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionStatementChecks
+
+theorem branch_exact : InternalSourceInversionPreflight.branchComparator :=
+  InternalSourceInversionSupportProof.actualTaggedBranchElimination
+theorem scalar_exact : InternalSourceInversionPreflight.scalarComparator :=
+  InternalSourceInversionProof.actualInternalScalarInversion
+theorem multiset_exact : InternalSourceInversionPreflight.multisetComparator :=
+  InternalSourceInversionProof.actualInternalMultisetInversion
+theorem truth_exact : InternalSourceInversionPreflight.truthComparator :=
+  InternalSourceInversionProof.actualOriginalBranchTruth
+theorem existence_exact : InternalSourceInversionPreflight.existenceComparator :=
+  InternalSourceInversionProof.actualUniformInversionExists
+
+#print axioms branch_exact
+#print axioms scalar_exact
+#print axioms multiset_exact
+#print axioms truth_exact
+#print axioms existence_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionStatementChecks
