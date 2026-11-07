@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourcePreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceCalibrationStatementChecks
+
+theorem calibration_exact : GammaGuardedSourcePreflight.calibrationComparator :=
+  GammaGuardedSourceCalibrationProof.actualBaseCalibration
+#print axioms calibration_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceCalibrationStatementChecks

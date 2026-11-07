@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderPreflight
+def partialCalibrationComparator : Prop := ApplicationResultBuilderTargets.ActualPartialCalibration
+def primitiveComparator : Prop := ApplicationResultBuilderTargets.ActualPrimitive
+def totalCalibrationComparator : Prop := ApplicationResultBuilderTargets.ActualTotalCalibration
+def successAndDefaultComparator : Prop := ApplicationResultBuilderTargets.ActualSuccessAndDefault
+def originalRangeComparator : Prop := ApplicationResultBuilderTargets.ActualOriginalRange
+def originalValueComparator : Prop := ApplicationResultBuilderTargets.ActualOriginalValue
+def rawUniquenessComparator : Prop := ApplicationResultBuilderTargets.ActualRawUniqueness
+def programWitnessesComparator : Prop := ApplicationResultBuilderTargets.ActualProgramWitnesses
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderPreflight

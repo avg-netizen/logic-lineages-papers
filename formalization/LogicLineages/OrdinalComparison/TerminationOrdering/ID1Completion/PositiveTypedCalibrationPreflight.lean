@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationPreflight
+
+def positiveRangeComparator : Prop := PositiveTypedCalibrationTargets.ActualPositiveRange
+def typedSuccessorComparator : Prop := PositiveTypedCalibrationTargets.ActualTypedSuccessor
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationPreflight

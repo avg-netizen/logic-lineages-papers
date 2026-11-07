@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourcePreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceStatementChecks
+
+theorem typedSuccessor_exact : GuardedSourcePreflight.typedSuccessorComparator :=
+  GuardedSourceProof.actualUniformTypedSuccessorExists
+
+#print axioms typedSuccessor_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceStatementChecks

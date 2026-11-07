@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureStatementChecks
+theorem totality_exact : InternalRecursionClosureTargets.ActualOriginalRecursionTotality :=
+  InternalRecursionClosureTotalityProof.actualOriginalRecursionTotality
+theorem functionality_exact : InternalRecursionClosureTargets.ActualOriginalRecursionFunctionality :=
+  InternalRecursionClosureFunctionalityProof.actualOriginalRecursionFunctionality
+theorem programs_exact : InternalRecursionClosureTargets.ActualOriginalPrograms :=
+  InternalRecursionClosureProof.actualOriginalPrograms
+#print axioms totality_exact
+#print axioms functionality_exact
+#print axioms programs_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureStatementChecks

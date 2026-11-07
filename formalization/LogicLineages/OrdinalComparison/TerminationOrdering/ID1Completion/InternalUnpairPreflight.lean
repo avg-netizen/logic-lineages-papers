@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairEvaluationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairPreflight
+def comparator0 : Prop := InternalUnpairTargets.ActualOriginalGeneratedCodeInverse
+def comparator1 : Prop := InternalUnpairTargets.ActualOriginalUnpairTotalFunctional
+def comparator2 : Prop := InternalUnpairEvaluationTargets.ExactUnpairEvaluation
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairPreflight

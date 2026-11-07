@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundStatementChecks
+
+theorem scalarDownward_exact : GuardedSourceGroundPreflight.scalarDownwardComparator :=
+  GuardedSourceGroundProof.scalarDownward
+theorem groundFormula_exact : GuardedSourceGroundPreflight.groundFormulaComparator :=
+  GuardedSourceGroundProof.groundFormula
+
+#print axioms scalarDownward_exact
+#print axioms groundFormula_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundStatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecDecompositionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecDecompositionPreflight
+open InternalListCodecDecompositionTargets
+def comparator0 : Prop := ActualOriginalNonzeroListReconstruction
+def comparator1 : Prop := ActualOriginalNonzeroTailDescent
+def comparator2 : Prop := ActualOriginalConsTailDescent
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecDecompositionPreflight

@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceNormalizationStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceStatementChecks
+theorem normalization_exact : InternalAcceptanceTargets.ActualOriginalNormalizationAcceptance :=
+  InternalAcceptanceNormalizationProof.actualOriginalNormalizationAcceptance
+theorem conjunction_exact : InternalAcceptanceTargets.ActualOriginalConjunctionAcceptance :=
+  InternalAcceptanceConjunctionProof.actualOriginalConjunctionAcceptance
+theorem conjunction_evaluation_exact : InternalAcceptanceTargets.ActualConjunctionEvaluation :=
+  InternalAcceptanceCalibrationProof.actualConjunctionEvaluation
+theorem zero_branch_exact : InternalAcceptanceTargets.ActualOriginalZeroBranch :=
+  InternalAcceptanceBranchProof.actualOriginalZeroBranch
+theorem successor_branch_exact : InternalAcceptanceTargets.ActualOriginalSuccessorBranch :=
+  InternalAcceptanceBranchProof.actualOriginalSuccessorBranch
+#print axioms normalization_exact
+#print axioms conjunction_exact
+#print axioms conjunction_evaluation_exact
+#print axioms zero_branch_exact
+#print axioms successor_branch_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceStatementChecks

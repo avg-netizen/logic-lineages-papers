@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftPreflight
+
+def typedLiftComparator : Prop := ApplicationCertificateLiftTargets.ActualTypedLift
+def applicationEncodingComparator : Prop := ApplicationCertificateLiftTargets.ActualApplicationEncoding
+def stepEncodingComparator : Prop := ApplicationCertificateLiftTargets.ActualStepEncoding
+def primitiveComparator : Prop := ApplicationCertificateLiftTargets.ActualPrimitive
+def programWitnessesComparator : Prop := ApplicationCertificateLiftTargets.ActualProgramWitnesses
+def originalNumericLiftComparator : Prop := ApplicationCertificateLiftTargets.ActualOriginalNumericLift
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftPreflight

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourcePreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceRelationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceTransportStatementChecks
+
+theorem guardTransport_exact : GammaGuardedSourcePreflight.guardTransportComparator :=
+  GammaGuardedSourceRelationProof.actualOriginalGuardTransport
+#print axioms guardTransport_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceTransportStatementChecks

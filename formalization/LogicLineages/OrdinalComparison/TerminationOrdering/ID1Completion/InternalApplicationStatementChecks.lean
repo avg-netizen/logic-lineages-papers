@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStatementChecks
+
+theorem activeGraph_exact : InternalApplicationPreflight.activeGraphComparator :=
+  InternalApplicationGraphProof.actualOriginalActiveGraph
+#print axioms activeGraph_exact
+
+theorem inactiveGraph_exact : InternalApplicationPreflight.inactiveGraphComparator :=
+  InternalApplicationGraphProof.actualOriginalInactiveGraph
+#print axioms inactiveGraph_exact
+
+theorem activeTotality_exact : InternalApplicationPreflight.activeTotalityComparator :=
+  InternalApplicationProof.actualOriginalActiveTotality
+#print axioms activeTotality_exact
+
+theorem activeFunctionality_exact : InternalApplicationPreflight.activeFunctionalityComparator :=
+  InternalApplicationProof.actualOriginalActiveFunctionality
+#print axioms activeFunctionality_exact
+
+theorem calibration_exact : InternalApplicationPreflight.calibrationComparator :=
+  InternalApplicationCalibrationProof.actualCalibration
+#print axioms calibration_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStatementChecks

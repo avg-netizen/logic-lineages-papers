@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundPreflight
+
+def scalarDownwardComparator : Prop := GuardedSourceGroundTargets.ActualScalarDownward
+def groundFormulaComparator : Prop := GuardedSourceGroundTargets.ActualGroundFormula
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceGroundPreflight

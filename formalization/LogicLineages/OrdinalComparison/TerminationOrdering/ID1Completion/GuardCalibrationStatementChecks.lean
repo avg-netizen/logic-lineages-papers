@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationStatementChecks
+
+theorem typeTagPrimitive_exact : GuardCalibrationPreflight.typeTagPrimitiveComparator := GuardCalibrationProof.actualTypeTagPrimitive
+theorem typeTagProgram_exact : GuardCalibrationPreflight.typeTagProgramComparator := GuardCalibrationProof.actualTypeTagProgram
+theorem typedTypeTag_exact : GuardCalibrationPreflight.typedTypeTagComparator := GuardCalibrationProof.actualTypedTypeTag
+theorem subtypeClosed_exact : GuardCalibrationPreflight.subtypeClosedComparator := GuardCalibrationProof.actualSubtypeClosedCalibration
+theorem validWindowPrimitive_exact : GuardCalibrationPreflight.validWindowPrimitiveComparator := GuardCalibrationProof.actualValidWindowPrimitive
+theorem validWindowCalibration_exact : GuardCalibrationPreflight.validWindowCalibrationComparator := GuardCalibrationProof.actualValidWindowCalibration
+theorem originalWindow_exact : GuardCalibrationPreflight.originalWindowComparator := GuardCalibrationProof.actualOriginalWindowCalibration
+theorem validWindowProgram_exact : GuardCalibrationPreflight.validWindowProgramComparator := GuardCalibrationProof.actualValidWindowProgram
+
+#print axioms typeTagPrimitive_exact
+#print axioms typeTagProgram_exact
+#print axioms typedTypeTag_exact
+#print axioms subtypeClosed_exact
+#print axioms validWindowPrimitive_exact
+#print axioms validWindowCalibration_exact
+#print axioms originalWindow_exact
+#print axioms validWindowProgram_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationStatementChecks

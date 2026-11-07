@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairReverseTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairReversePreflight
+def comparator0 : Prop := InternalUnpairReverseTargets.ActualOriginalUnpairReverseInverse
+def comparator1 : Prop := InternalUnpairReverseTargets.ActualOriginalPairingCoordinateBounds
+def comparator2 : Prop := InternalUnpairReverseTargets.ActualOriginalUnpairCoordinateBounds
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalUnpairReversePreflight

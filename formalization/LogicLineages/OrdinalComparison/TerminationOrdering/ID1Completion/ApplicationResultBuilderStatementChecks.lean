@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderStatementChecks
+theorem partialCalibration_exact : ApplicationResultBuilderPreflight.partialCalibrationComparator :=
+  ApplicationResultBuilderProof.actualPartialCalibration
+theorem primitive_exact : ApplicationResultBuilderPreflight.primitiveComparator :=
+  ApplicationResultBuilderPrimitiveProof.actualPrimitive
+theorem totalCalibration_exact : ApplicationResultBuilderPreflight.totalCalibrationComparator :=
+  ApplicationResultBuilderProof.actualTotalCalibration
+theorem successAndDefault_exact : ApplicationResultBuilderPreflight.successAndDefaultComparator :=
+  ApplicationResultBuilderProof.actualSuccessAndDefault
+theorem originalRange_exact : ApplicationResultBuilderPreflight.originalRangeComparator :=
+  ApplicationResultBuilderProof.actualOriginalRange
+theorem originalValue_exact : ApplicationResultBuilderPreflight.originalValueComparator :=
+  ApplicationResultBuilderProof.actualOriginalValue
+theorem rawUniqueness_exact : ApplicationResultBuilderPreflight.rawUniquenessComparator :=
+  ApplicationResultBuilderProof.actualRawUniqueness
+theorem programWitnesses_exact : ApplicationResultBuilderPreflight.programWitnessesComparator :=
+  ApplicationResultBuilderProof.actualProgramWitnesses
+#print axioms partialCalibration_exact
+#print axioms primitive_exact
+#print axioms totalCalibration_exact
+#print axioms successAndDefault_exact
+#print axioms originalRange_exact
+#print axioms originalValue_exact
+#print axioms rawUniqueness_exact
+#print axioms programWitnesses_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderStatementChecks

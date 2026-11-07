@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSquareRootTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSquareRootEvaluationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSquareRootPreflight
+def comparator0 : Prop := InternalSquareRootTargets.ActualOriginalSquareRootGraph
+def comparator1 : Prop := InternalSquareRootTargets.ActualOriginalSquareRootTotalFunctional
+def comparator2 : Prop := InternalSquareRootEvaluationTargets.ExactSquareRootRecurrence
+def comparator3 : Prop := InternalSquareRootEvaluationTargets.ExactSquareRootEvaluation
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSquareRootPreflight

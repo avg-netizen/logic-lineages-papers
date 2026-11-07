@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourcePreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCertificateProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCertificateStatementChecks
+
+theorem certificatePreservation_exact : GuardedSourcePreflight.certificatePreservationComparator :=
+  GuardedSourceCertificateProof.actualOriginalGuardedCertificatePreservation
+
+#print axioms certificatePreservation_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCertificateStatementChecks

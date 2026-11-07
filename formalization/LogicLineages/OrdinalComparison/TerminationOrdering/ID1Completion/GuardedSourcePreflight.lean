@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourcePreflight
+
+def typedRangeComparator : Prop := GuardedSourceTargets.ActualTypedRange
+def calibrationComparator : Prop := GuardedSourceTargets.ActualGuardedCalibration
+def certificatePreservationComparator : Prop := GuardedSourceTargets.ActualOriginalGuardedCertificatePreservation
+def typedSuccessorComparator : Prop := GuardedSourceTargets.ActualUniformTypedSuccessorExists
+def groundClosureComparator : Prop := GuardedSourceTargets.ActualUniformGroundClosureExists
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourcePreflight

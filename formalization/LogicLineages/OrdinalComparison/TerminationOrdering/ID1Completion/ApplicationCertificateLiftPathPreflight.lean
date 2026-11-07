@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftPathTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftPathPreflight
+
+def lengthComparator : Prop := ApplicationCertificateLiftPathTargets.ActualLength
+def primitiveComparator : Prop := ApplicationCertificateLiftPathTargets.ActualPrimitive
+def programWitnessComparator : Prop := ApplicationCertificateLiftPathTargets.ActualProgramWitness
+def pathLiftComparator : Prop := ApplicationCertificateLiftPathTargets.ActualPathLift
+def positiveLiftComparator : Prop := ApplicationCertificateLiftPathTargets.ActualPositiveLift
+def originalPositiveLiftComparator : Prop := ApplicationCertificateLiftPathTargets.ActualOriginalPositiveLift
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftPathPreflight

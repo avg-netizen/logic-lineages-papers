@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecStatementChecks
+open InternalListCodecTargets InternalListCodecEvaluationTargets
+theorem actualOriginalConsIntroduction : ActualOriginalConsIntroduction :=
+  InternalListCodecProof.actualOriginalConsIntroduction
+theorem actualOriginalConsDestruction : ActualOriginalConsDestruction :=
+  InternalListCodecProof.actualOriginalConsDestruction
+theorem actualOriginalConsDestructorEquations : ActualOriginalConsDestructorEquations :=
+  InternalListCodecProof.actualOriginalConsDestructorEquations
+theorem actualOriginalConsInjectivity : ActualOriginalConsInjectivity :=
+  InternalListCodecProof.actualOriginalConsInjectivity
+theorem actualOriginalNilTestGraph : ActualOriginalNilTestGraph :=
+  InternalListCodecProof.actualOriginalNilTestGraph
+theorem actualOriginalListCodecTotalFunctional : ActualOriginalListCodecTotalFunctional :=
+  InternalListCodecProof.actualOriginalListCodecTotalFunctional
+theorem exactListCodecEvaluation : ExactListCodecEvaluation :=
+  InternalListCodecEvaluationProof.exactListCodecEvaluation
+theorem exactSourceListEncoding : ExactSourceListEncoding :=
+  InternalListCodecEvaluationProof.exactSourceListEncoding
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecStatementChecks

@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationDomainTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationDomainPreflight
+
+def arrowCalibrationComparator : Prop := ApplicationDomainTargets.ActualArrowCalibration
+def activationCalibrationComparator : Prop := ApplicationDomainTargets.ActualActivationCalibration
+def explicitActivationComparator : Prop := ApplicationDomainTargets.ActualExplicitActivation
+def activationProgramComparator : Prop := ApplicationDomainTargets.ActualActivationProgram
+def domainSuccessComparator : Prop := ApplicationDomainTargets.ActualDomainSuccess
+def domainResultCalibrationComparator : Prop := ApplicationDomainTargets.ActualDomainResultCalibration
+def domainResultTypedComparator : Prop := ApplicationDomainTargets.ActualDomainResultTyped
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationDomainPreflight

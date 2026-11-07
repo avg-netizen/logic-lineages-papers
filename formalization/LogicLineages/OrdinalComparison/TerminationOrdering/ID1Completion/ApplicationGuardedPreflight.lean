@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedPreflight
+
+def activationComparator : Prop := ApplicationGuardedTargets.ActualOriginalActivation
+def totalityComparator : Prop := ApplicationGuardedTargets.ActualOriginalTotality
+def functionalityComparator : Prop := ApplicationGuardedTargets.ActualOriginalFunctionality
+def uniformClosureComparator : Prop := ApplicationGuardedTargets.ActualUniformApplicationClosureExists
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedPreflight

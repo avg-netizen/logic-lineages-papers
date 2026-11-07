@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCalibrationStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCertificateStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCompletionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCompletionStatementChecks
+
+theorem groundClosure_exact : GuardedSourcePreflight.groundClosureComparator :=
+  GuardedSourceCompletionProof.actualUniformGroundClosureExists
+
+#print axioms groundClosure_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCompletionStatementChecks

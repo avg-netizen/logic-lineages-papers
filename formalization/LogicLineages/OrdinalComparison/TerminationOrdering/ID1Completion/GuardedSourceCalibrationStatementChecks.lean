@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourcePreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCalibrationStatementChecks
+
+theorem typedRange_exact : GuardedSourcePreflight.typedRangeComparator :=
+  GuardedSourceCalibrationProof.actualTypedRange
+
+theorem calibration_exact : GuardedSourcePreflight.calibrationComparator :=
+  GuardedSourceCalibrationProof.actualGuardedCalibration
+
+#print axioms typedRange_exact
+#print axioms calibration_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceCalibrationStatementChecks

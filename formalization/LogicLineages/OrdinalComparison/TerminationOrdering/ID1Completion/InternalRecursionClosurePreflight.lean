@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosurePreflight
+open InternalRecursionClosureTargets
+def comparator0 : Prop := ActualOriginalRecursionTotality
+def comparator1 : Prop := ActualOriginalRecursionFunctionality
+def comparator2 : Prop := ActualOriginalPrograms
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosurePreflight

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPreflight
+
+def activeGraphComparator : Prop := InternalApplicationTargets.ActualOriginalActiveGraph
+def inactiveGraphComparator : Prop := InternalApplicationTargets.ActualOriginalInactiveGraph
+def activeTotalityComparator : Prop := InternalApplicationTargets.ActualOriginalActiveTotality
+def activeFunctionalityComparator : Prop := InternalApplicationTargets.ActualOriginalActiveFunctionality
+def calibrationComparator : Prop := InternalApplicationTargets.ActualCalibration
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPreflight

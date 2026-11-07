@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationPreflight
+def typeTagPrimitiveComparator : Prop := GuardCalibrationTargets.ActualTypeTagPrimitive
+def typeTagProgramComparator : Prop := GuardCalibrationTargets.ActualTypeTagProgram
+def typedTypeTagComparator : Prop := GuardCalibrationTargets.ActualTypedTypeTag
+def subtypeClosedComparator : Prop := GuardCalibrationTargets.ActualSubtypeClosedCalibration
+def validWindowPrimitiveComparator : Prop := GuardCalibrationTargets.ActualValidWindowPrimitive
+def validWindowCalibrationComparator : Prop := GuardCalibrationTargets.ActualValidWindowCalibration
+def originalWindowComparator : Prop := GuardCalibrationTargets.ActualOriginalWindowCalibration
+def validWindowProgramComparator : Prop := GuardCalibrationTargets.ActualValidWindowProgram
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationPreflight

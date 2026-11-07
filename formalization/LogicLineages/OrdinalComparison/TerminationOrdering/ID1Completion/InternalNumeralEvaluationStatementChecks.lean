@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumeralEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumeralEvaluationStatementChecks
+theorem numeral_evaluation_exact : InternalNumeralEvaluationTargets.ActualOriginalNumeralEvaluation :=
+  InternalNumeralEvaluationProof.actualOriginalNumeralEvaluation
+#print axioms numeral_evaluation_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumeralEvaluationStatementChecks

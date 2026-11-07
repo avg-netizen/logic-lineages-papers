@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedStatementChecks
+
+theorem activation_exact : ApplicationGuardedPreflight.activationComparator :=
+  ApplicationGuardedActivationProof.actualOriginalActivation
+#print axioms activation_exact
+
+theorem totality_exact : ApplicationGuardedPreflight.totalityComparator :=
+  ApplicationGuardedApplicationProof.actualOriginalTotality
+#print axioms totality_exact
+
+theorem functionality_exact : ApplicationGuardedPreflight.functionalityComparator :=
+  ApplicationGuardedApplicationProof.actualOriginalFunctionality
+#print axioms functionality_exact
+
+theorem uniformClosure_exact : ApplicationGuardedPreflight.uniformClosureComparator :=
+  ApplicationGuardedProof.actualUniformApplicationClosureExists
+#print axioms uniformClosure_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationGuardedStatementChecks

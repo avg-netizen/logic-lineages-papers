@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaExtensionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaExtensionStatementChecks
+theorem actualBetaSequenceExtensionExact : InternalBetaExtensionTargets.ActualBetaSequenceExtension :=
+  InternalBetaExtensionProof.actualBetaSequenceExtension
+#print axioms actualBetaSequenceExtensionExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaExtensionStatementChecks

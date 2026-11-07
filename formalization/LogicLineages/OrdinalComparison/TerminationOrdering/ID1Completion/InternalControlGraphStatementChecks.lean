@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphStatementChecks
+theorem zero_test_exact : InternalControlGraphTargets.ActualOriginalZeroTestGraph :=
+  InternalControlGraphProof.actualOriginalZeroTestGraph
+theorem conditional_exact : InternalControlGraphTargets.ActualOriginalConditionalGraph :=
+  InternalControlGraphProof.actualOriginalConditionalGraph
+theorem equals_one_exact : InternalControlGraphTargets.ActualOriginalEqualsOneGraph :=
+  InternalControlGraphProof.actualOriginalEqualsOneGraph
+#print axioms zero_test_exact
+#print axioms conditional_exact
+#print axioms equals_one_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphStatementChecks

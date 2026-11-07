@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationStatementChecks
+
+theorem positiveRange_exact : PositiveTypedCalibrationPreflight.positiveRangeComparator :=
+  PositiveTypedCalibrationProof.actualPositiveRange
+
+theorem typedSuccessor_exact : PositiveTypedCalibrationPreflight.typedSuccessorComparator :=
+  PositiveTypedCalibrationProof.actualTypedSuccessor
+
+#print axioms positiveRange_exact
+#print axioms typedSuccessor_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibrationStatementChecks

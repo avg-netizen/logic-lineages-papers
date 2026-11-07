@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaTypedDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibration
+-- The original ContextUniform.positiveValue, JointGammaTyped.typedValue,
+-- and GuardCalibration.validWindow are used literally, without a wrapper.
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.PositiveTypedCalibration

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceCalibrationStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceTransportStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceStatementChecks
+
+theorem uniformClosure_exact : GammaGuardedSourcePreflight.uniformClosureComparator :=
+  GammaGuardedSourceProof.actualUniformGuardClosureExists
+#print axioms uniformClosure_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GammaGuardedSourceStatementChecks
