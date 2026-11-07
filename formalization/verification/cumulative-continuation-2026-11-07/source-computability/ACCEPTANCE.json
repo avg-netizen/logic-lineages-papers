@@ -1,0 +1,184 @@
+{
+  "base_commit": "69cc4948e7f67fcd673a9e388a86287cbc127840",
+  "branch": "formalization/recovered-sources-2026-11-07",
+  "checked_at_utc": "2026-11-07T22:47:26.235181+00:00",
+  "scope": "Five supporting components toward paper06 lem:id1; no numbered statement promotion.",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261107SourceComputability",
+  "aggregate_returncode": 0,
+  "command": "python3 scripts/check.py --memory-mib 2048 --rss-mib 1536 --min-free-mib 2048 LogicLineages.ExternalCheckpoint20261107SourceComputability",
+  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "mathlib_commit": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_matched_local_modules": 1126,
+  "peak_successful_process_tree_rss_kib": 1231828,
+  "exact_alias_count": 24,
+  "gates": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesStatementChecks",
+      "exact_targets": 5,
+      "returncode": 0,
+      "source_sha256": "71d5ff8c88a6b2d11c9a355803061a2c800e252cfe77c19a0d11d108dfc7f903",
+      "audit_log": "accessibility.log",
+      "native_seconds": 1.013,
+      "peak_process_tree_rss_kib": 1223736,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionStatementChecks",
+      "exact_targets": 2,
+      "returncode": 0,
+      "source_sha256": "16cebd97d42c5b65bcd5565b215c87fb4e12e895dffbac254cb7bf261f4250c0",
+      "audit_log": "slice-induction.log",
+      "native_seconds": 1.013,
+      "peak_process_tree_rss_kib": 1225252,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationStatementChecks",
+      "exact_targets": 7,
+      "returncode": 0,
+      "source_sha256": "ad0316cd7900eef7ee7d067fcda1db840887f1a0d69ec2bdf266f266472e2b4e",
+      "audit_log": "computability-application.log",
+      "native_seconds": 0.811,
+      "peak_process_tree_rss_kib": 1212620,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": false
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSourceStatementChecks",
+      "exact_targets": 1,
+      "returncode": 0,
+      "source_sha256": "8958ee95efb180079b4f4a61d5c6a24aac99d764aedf82eea823aa77e28a1272",
+      "audit_log": "source-application.log",
+      "native_seconds": 0.962,
+      "peak_process_tree_rss_kib": 1227864,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathNumericTotalityStatementChecks",
+      "exact_targets": 9,
+      "returncode": 0,
+      "source_sha256": "c20373ebe2b48171264bdc25d8dfc0cd5d9109cebab302e21db57e5cf6b00dcf",
+      "audit_log": "path-structure.log",
+      "native_seconds": 1.013,
+      "peak_process_tree_rss_kib": 1207760,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    }
+  ],
+  "accepted_new_lean_sources": [
+    {
+      "path": "LogicLineages/ExternalCheckpoint20261107SourceComputability.lean",
+      "sha256": "8a9801b87bafc7614e712dd7b83f310231efa34c3bc6ad83fcb2621d897f617b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAccessibilityRulesDefinitions.lean",
+      "sha256": "672d87d05e1a05bd63a7d26d640653e2e41988c78ff946f0d2b97d3fe95738e1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAccessibilityRulesProof.lean",
+      "sha256": "e3f1688373e6346e036376564238cb555bd5820d53bf971ef4d6e61ef411e011"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAccessibilityRulesStatementChecks.lean",
+      "sha256": "71d5ff8c88a6b2d11c9a355803061a2c800e252cfe77c19a0d11d108dfc7f903"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAccessibilityRulesSyntaxProof.lean",
+      "sha256": "d9ae8c7611cd17c1e9c1fa78ebaccfc4147e66b8981b309ac4e1457b059a19bb"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAccessibilityRulesTargets.lean",
+      "sha256": "d6cba7d841f4a862577b02f1eb7b273d0135a6c509fda62e2893f5c669ef2161"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationDefinitions.lean",
+      "sha256": "8638546b27570f666a6bbea2359b18f2c6765ba0b86db36c4b1bf0ea931d4b6e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationPreflight.lean",
+      "sha256": "1846b7c36f5e47b8893bb0a5a8e9975694877fc368083a05ac16a0e4cca48863"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationProof.lean",
+      "sha256": "986b2bfbfd24e0375edacd76b49f1c6eb8fee15362adafc09e2e90779f4e108f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationSourceProof.lean",
+      "sha256": "9b7bf741a615d40b2ed8a9eac325f734d38398821eb25ed471f5ce4632b6554b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationSourceStatementChecks.lean",
+      "sha256": "8958ee95efb180079b4f4a61d5c6a24aac99d764aedf82eea823aa77e28a1272"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationSourceTargets.lean",
+      "sha256": "58a0dd8feb43cdc5a0c5c01a3acb969d0ec19e8452c0b735eb219b50ab163e2e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationStatementChecks.lean",
+      "sha256": "ad0316cd7900eef7ee7d067fcda1db840887f1a0d69ec2bdf266f266472e2b4e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationSyntaxProof.lean",
+      "sha256": "e608eb0b1d035d4601d1429632902be41d550b2dc0c000f9366da3880f142de1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityApplicationTargets.lean",
+      "sha256": "5593d781f052a820e9140d3a4d615317b343f7aeef085f3e0c10672cd1137a82"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSliceInductionDefinitions.lean",
+      "sha256": "dd90a42e3fc4ddaf6c4f376b24f41ea55a99636754933a6e32f7c098dfb66bc3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSliceInductionProof.lean",
+      "sha256": "2480a5bf2755c160ebe6bf197bdda4b74c28b4122131ec2c1df667ba68690ce4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSliceInductionStatementChecks.lean",
+      "sha256": "16cebd97d42c5b65bcd5565b215c87fb4e12e895dffbac254cb7bf261f4250c0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSliceInductionSupportProof.lean",
+      "sha256": "05e28d697425a2a7e1366ec8e8fb3cab825130eded2ff70d341a834f10b81890"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSliceInductionSyntaxProof.lean",
+      "sha256": "d96be1521e34b80ca9137548b91391a7138e8d6f48e2edba3bb92a42e0c4ff74"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalSliceInductionTargets.lean",
+      "sha256": "9ccb23e97372e572ab945f9e2ac4a94ffb0de23eca3d68f90071fe71f5cd0d7c"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathNumericTotalityProof.lean",
+      "sha256": "72b52c72b7a07750289d3d15d391e1ff175683e14fa913d742783948a32c3ee4"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathNumericTotalityStatementChecks.lean",
+      "sha256": "c20373ebe2b48171264bdc25d8dfc0cd5d9109cebab302e21db57e5cf6b00dcf"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathNumericTotalityTargets.lean",
+      "sha256": "fb98fa7ab56019a26b6c7771221f0c158722d614384103a90d4e04a027ed8e32"
+    }
+  ],
+  "specification_note": "Accepted targets match their final frozen records. Slice specifications received documented namespace and parentheses corrections, with original hashes retained; no mathematical weakening.",
+  "existing_proof_and_definition_files_changed": false,
+  "full_root_build_claimed": false,
+  "remote_ci_claimed": false,
+  "evidence_note": "Compact final exact-gate logs. Source-matched successful native receipts are reused across incremental focused checks; earlier verification uploads are not reconstructed."
+}

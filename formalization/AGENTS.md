@@ -1,3 +1,18 @@
+# CURRENT checkpoint — internal source computability, 7 November 2026
+
+Twenty-four new exact supporting targets are checked: original I/J successor
+rules, separate I/J induction in the one combined calculus, full-type
+computability of application, a uniform calibrated source application package,
+and total path-certificate decoding with literal lift structure.
+The focused **1,126-module** closure and all actual axiom checks passed under
+the unchanged serialized resource profile. Register: **168 checked, 2 inherited,
+19 pending / 189**. Next: internal original positive-certificate application
+lifting, arbitrary-type downward closure, source multiset/constructor/lambda
+arguments and the closed all-term endpoint. See [the checked continuation](verification/cumulative-continuation-2026-11-07/source-computability/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # CURRENT checkpoint — internal list-code induction, 7 November 2026
 
 Full-language strong induction and original list-code induction are checked,

@@ -1,3 +1,24 @@
+# Current checkpoint — internal source computability, 7 November 2026
+
+The original combined ID1 calculus now has separate scalar/multiset induction,
+original accessibility successor rules, and computability of application
+results at arbitrary simple types. One calibrated source package discharges
+window/type-code conditions internally and retains its existing typed, ground
+and context rules. Original path certificates have total unique decoding and
+exact structural laws for the application lift.
+
+All **24 new exact supporting targets** and the focused checkpoint passed.
+Its **1,126 local source modules** match successful native receipts. Every new
+alias has a permitted standard-axiom closure under the unchanged resource
+limits. Register remains **168 checked, 2 inherited, 19 pending / 189**.
+The internal certificate lift, general reduction closure, multiset/constructor/
+lambda arguments and all-term ID1 derivation remain pending.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-07/source-computability/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # Current checkpoint — internal list-code induction, 7 November 2026
 
 The original ID1 calculus now has full-language strong induction and induction

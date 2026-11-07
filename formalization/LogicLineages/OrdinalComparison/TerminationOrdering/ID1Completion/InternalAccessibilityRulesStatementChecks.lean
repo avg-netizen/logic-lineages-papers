@@ -1,0 +1,26 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesStatementChecks
+
+theorem equation_exact : InternalAccessibilityRulesTargets.ActualOriginalMembershipEquation :=
+  InternalAccessibilityRulesProof.actualOriginalMembershipEquation
+theorem carrier_exact : InternalAccessibilityRulesTargets.ActualOriginalCarrierExtraction :=
+  InternalAccessibilityRulesProof.actualOriginalCarrierExtraction
+theorem successor_exact : InternalAccessibilityRulesTargets.ActualOriginalSuccessorClosure :=
+  InternalAccessibilityRulesProof.actualOriginalSuccessorClosure
+theorem certificate_exact : InternalAccessibilityRulesTargets.ActualOriginalCertifiedSuccessorClosure :=
+  InternalAccessibilityRulesProof.actualOriginalCertifiedSuccessorClosure
+theorem introduction_exact : InternalAccessibilityRulesTargets.ActualOriginalAccessibilityIntroduction :=
+  InternalAccessibilityRulesProof.actualOriginalAccessibilityIntroduction
+
+#print axioms equation_exact
+#print axioms carrier_exact
+#print axioms successor_exact
+#print axioms certificate_exact
+#print axioms introduction_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesStatementChecks

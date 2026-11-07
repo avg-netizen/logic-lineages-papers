@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSourceStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathNumericTotalityStatementChecks
+
+/-! Original-calculus accessibility, separate I/J induction, computable
+application, and literal path-certificate structure toward paper06 lem:id1. -/

@@ -1,0 +1,45 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathNumericTotalityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathNumericTotalityStatementChecks
+open NumberedQuotientPathNumericTotalityTargets
+
+theorem actualPathUniqueDecoding : ActualPathUniqueDecoding :=
+  NumberedQuotientPathNumericTotalityProof.actualPathUniqueDecoding
+#print axioms actualPathUniqueDecoding
+
+theorem actualPathCodingInverse : ActualPathCodingInverse :=
+  NumberedQuotientPathNumericTotalityProof.actualPathCodingInverse
+#print axioms actualPathCodingInverse
+
+theorem actualPathEncodingBijection : ActualPathEncodingBijection :=
+  NumberedQuotientPathNumericTotalityProof.actualPathEncodingBijection
+#print axioms actualPathEncodingBijection
+
+theorem actualPathDecoderEquation : ActualPathDecoderEquation :=
+  NumberedQuotientPathNumericTotalityProof.actualPathDecoderEquation
+#print axioms actualPathDecoderEquation
+
+theorem actualPathDecoderStructure : ActualPathDecoderStructure :=
+  NumberedQuotientPathNumericTotalityProof.actualPathDecoderStructure
+#print axioms actualPathDecoderStructure
+
+theorem actualLiftPathDecoder : ActualLiftPathDecoder :=
+  NumberedQuotientPathNumericTotalityProof.actualLiftPathDecoder
+#print axioms actualLiftPathDecoder
+
+theorem actualLiftPathLength : ActualLiftPathLength :=
+  NumberedQuotientPathNumericTotalityProof.actualLiftPathLength
+#print axioms actualLiftPathLength
+
+theorem actualLiftPathEmpty : ActualLiftPathEmpty :=
+  NumberedQuotientPathNumericTotalityProof.actualLiftPathEmpty
+#print axioms actualLiftPathEmpty
+
+theorem actualLiftPathStructure : ActualLiftPathStructure :=
+  NumberedQuotientPathNumericTotalityProof.actualLiftPathStructure
+#print axioms actualLiftPathStructure
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathNumericTotalityStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedQuotientPathNumericTotalityStatementChecks

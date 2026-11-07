@@ -1,0 +1,15 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSourceProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSourceStatementChecks
+
+theorem source_application_exact :
+    InternalComputabilityApplicationSourceTargets.ActualUniformSourceComputableApplication :=
+  InternalComputabilityApplicationSourceProof.actualUniformSourceComputableApplication
+
+#print axioms source_application_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSourceStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSourceStatementChecks

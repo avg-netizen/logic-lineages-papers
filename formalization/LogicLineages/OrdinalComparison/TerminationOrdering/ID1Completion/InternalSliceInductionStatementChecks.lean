@@ -1,0 +1,18 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionStatementChecks
+
+theorem paired_closure_exact : InternalSliceInductionTargets.ActualInternalPairedClosure :=
+  InternalSliceInductionProof.actualInternalPairedClosure
+
+theorem slice_induction_exact : InternalSliceInductionTargets.ActualInternalSliceInduction :=
+  InternalSliceInductionProof.actualInternalSliceInduction
+
+#print axioms paired_closure_exact
+#print axioms slice_induction_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionStatementChecks

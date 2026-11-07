@@ -1,0 +1,36 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionTargets
+open FirstOrder Language PositiveArithmeticOperators PositiveArithmeticTransforms
+open InternalCalculus JointGammaInvariant InternalSliceInduction
+
+/-- Separate closure derivations for the two original untagged operators
+produce the literal combined-body closure premise of the existing ID1 rule.
+Both invariants are arbitrary formulas in the full expanded language. -/
+def ActualInternalPairedClosure : Prop :=
+  ∀ (data : SourcePresentation.Data) (context : Nat) (α : Type)
+    (Gamma : List (Formula α)) (scalar multiset : Formula (α ⊕ Fin 1)),
+  Nonempty (Derivation (SourcePresentation.sourceBody data context)
+    (replacedBody (sliceBody data context false) scalar :: Gamma.map weaken) scalar) →
+  Nonempty (Derivation (SourcePresentation.sourceBody data context)
+    (replacedBody (sliceBody data context true) multiset :: Gamma.map weaken) multiset) →
+  Nonempty (Derivation (SourcePresentation.sourceBody data context)
+    (replacedBody (SourcePresentation.sourceBody data context) (tagged scalar multiset) ::
+      Gamma.map weaken) (tagged scalar multiset))
+
+/-- Induction in either original slice of the one combined ID1 predicate.
+The caller supplies only the selected slice's closure derivation. No closure
+premise for the other slice, positivity requirement on theta, calibration,
+semantic truth, or second inductive definition is assumed. -/
+def ActualInternalSliceInduction : Prop :=
+  ∀ (data : SourcePresentation.Data) (context : Nat) (α : Type)
+    (Gamma : List (Formula α)) (odd : Bool) (theta : Formula (α ⊕ Fin 1))
+    (t : OrdinaryArithmetic.Term α),
+  Nonempty (Derivation (SourcePresentation.sourceBody data context)
+    (replacedBody (sliceBody data context odd) theta :: Gamma.map weaken) theta) →
+  Nonempty (Derivation (SourcePresentation.sourceBody data context) Gamma
+    ((Positive.predicate (tagTerm odd t)).formula.imp
+      instantiate theta (arithmeticEmbedding.onTerm t)))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSliceInductionTargets

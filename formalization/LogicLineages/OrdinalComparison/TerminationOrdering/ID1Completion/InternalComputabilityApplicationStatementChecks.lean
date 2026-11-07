@@ -1,0 +1,35 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationStatementChecks
+
+theorem typedness_exact : InternalComputabilityApplicationPreflight.typednessComparator :=
+  InternalComputabilityApplicationProof.actualOriginalComputabilityTypedness
+#print axioms typedness_exact
+
+theorem arrowElimination_exact : InternalComputabilityApplicationPreflight.arrowEliminationComparator :=
+  InternalComputabilityApplicationProof.actualOriginalArrowElimination
+#print axioms arrowElimination_exact
+
+theorem activeApplication_exact : InternalComputabilityApplicationPreflight.activeApplicationComparator :=
+  InternalComputabilityApplicationProof.actualOriginalActiveApplicationComputability
+#print axioms activeApplication_exact
+
+theorem activeResult_exact : InternalComputabilityApplicationPreflight.activeResultComparator :=
+  InternalComputabilityApplicationProof.actualOriginalActiveResultComputability
+#print axioms activeResult_exact
+
+theorem activation_exact : InternalComputabilityApplicationPreflight.activationComparator :=
+  InternalComputabilityApplicationProof.actualOriginalActivationBridge
+#print axioms activation_exact
+
+theorem application_exact : InternalComputabilityApplicationPreflight.applicationComparator :=
+  InternalComputabilityApplicationProof.actualOriginalApplicationComputability
+#print axioms application_exact
+
+theorem result_exact : InternalComputabilityApplicationPreflight.resultComparator :=
+  InternalComputabilityApplicationProof.actualOriginalResultComputability
+#print axioms result_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationStatementChecks

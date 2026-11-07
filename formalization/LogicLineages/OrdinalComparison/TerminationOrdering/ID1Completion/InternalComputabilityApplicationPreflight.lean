@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationPreflight
+
+def typednessComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalComputabilityTypedness
+def arrowEliminationComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalArrowElimination
+def activeApplicationComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalActiveApplicationComputability
+def activeResultComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalActiveResultComputability
+def activationComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalActivationBridge
+def applicationComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalApplicationComputability
+def resultComparator : Prop := InternalComputabilityApplicationTargets.ActualOriginalResultComputability
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationPreflight

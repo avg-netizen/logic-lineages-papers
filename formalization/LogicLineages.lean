@@ -2263,3 +2263,6 @@ public import LogicLineages.ExternalCheckpoint20261106InternalBetaCoding
 
 -- Full-language internal strong/list induction and the original numeric list parser.
 public import LogicLineages.ExternalCheckpoint20261107ListInduction
+
+-- Original I/J induction, source computable application and path-certificate structure.
+public import LogicLineages.ExternalCheckpoint20261107SourceComputability
