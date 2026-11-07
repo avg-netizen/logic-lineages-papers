@@ -1,0 +1,29 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean:21:78: error(lean.unknownIdentifier): Unknown identifier `mul`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean:23:9: error: overloaded, errors 
+  23:27 Unknown identifier `mul`
+  
+  23:27 Unknown identifier `mul`
+  
+  23:27 Unknown identifier `mul`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean:27:90: error(lean.unknownIdentifier): Unknown identifier `mul`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean:29:9: error: overloaded, errors 
+  29:27 Unknown identifier `mul`
+  
+  29:27 Unknown identifier `mul`
+  
+  29:27 Unknown identifier `mul`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean:39:49: error(lean.unknownIdentifier): Unknown identifier `weakenClosed`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean:33:51: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+b k i r : OrdinaryArithmetic.Term α
+hr : Derivation body Gamma (ltF r k)
+hk : Derivation body Gamma (ltF k (suc (scalePred b k)))
+hB : Derivation body Gamma (ltF (suc (scalePred b k)) (InternalBetaWitness.modulus (suc (scalePred b k)) i))
+ht :
+  Derivation body []
+    ((arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula r k) ⊓
+          arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula k (suc (scalePred b k)))).imp
+      (arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula r (suc (scalePred b k)))))
+⊢ Nonempty (Derivation body Gamma (ltF r (InternalBetaWitness.modulus (suc (scalePred b k)) i)))

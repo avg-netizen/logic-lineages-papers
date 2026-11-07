@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks
+theorem actualBoundedCollectionExact : InternalBoundedCollectionTargets.ActualBoundedCollection :=
+  InternalBoundedCollectionProof.actualBoundedCollection
+#print axioms actualBoundedCollectionExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks

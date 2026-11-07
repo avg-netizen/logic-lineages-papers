@@ -1,0 +1,4 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks

@@ -1,0 +1,43 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:18:20: error(lean.unknownIdentifier): Unknown identifier `existsRename`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:16:51: error: unsolved goals
+α β : Type
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+a b n : OTerm α
+j : α → β
+⊢ InternalCoprimeMultiple.bounded
+      (Formula.relabel (Sum.map j id)
+        (existsOne
+          (R ⊓
+            arithmeticEmbedding.onFormula
+              (OrdinaryArithmetic.betaFormula (Term.relabel Sum.inl (Term.relabel Sum.inl a))
+                (Term.relabel Sum.inl (Term.relabel Sum.inl b)) (var (Sum.inl (Sum.inr 0))) (var (Sum.inr 0))))))
+      (Term.relabel j n) =
+    InternalCoprimeMultiple.bounded
+      (existsOne
+        (Formula.relabel (Sum.map (Sum.map j id) id) R ⊓
+          arithmeticEmbedding.onFormula
+            (OrdinaryArithmetic.betaFormula (Term.relabel Sum.inl (Term.relabel Sum.inl (Term.relabel j a)))
+              (Term.relabel Sum.inl (Term.relabel Sum.inl (Term.relabel j b))) (var (Sum.inl (Sum.inr 0)))
+              (var (Sum.inr 0)))))
+      (Term.relabel j n)
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:39:15: error(lean.unknownIdentifier): Unknown identifier `existsRename`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:38:37: error: unsolved goals
+α β : Type
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+a n : OTerm α
+j : α → β
+⊢ Formula.relabel j
+      (existsOne
+        (codedBelow (Formula.relabel (Sum.map (Sum.map Sum.inl id) id) R) (Term.relabel Sum.inl a) (var (Sum.inr 0))
+          (Term.relabel Sum.inl n))) =
+    codeWith (Formula.relabel (Sum.map (Sum.map j id) id) R) (Term.relabel j a) (Term.relabel j n)
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:53:13: error(lean.unknownIdentifier): Unknown identifier `existsRename`
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:52:93: error: unsolved goals
+α β : Type
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+n : OTerm α
+j : α → β
+⊢ Formula.relabel j
+      (existsOne
+        (codeWith (Formula.relabel (Sum.map (Sum.map Sum.inl id) id) R) (var (Sum.inr 0)) (Term.relabel Sum.inl n))) =
+    coding (Formula.relabel (Sum.map (Sum.map j id) id) R) (Term.relabel j n)

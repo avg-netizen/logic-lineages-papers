@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks
+theorem scaleMultiplesExact : InternalResidueBoundTargets.ActualScaleMultiples :=
+  InternalResidueBoundProof.actualScaleMultiples
+theorem residueBoundExact : InternalResidueBoundTargets.ActualResidueBound :=
+  InternalResidueBoundProof.actualResidueBound
+#print axioms scaleMultiplesExact
+#print axioms residueBoundExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks

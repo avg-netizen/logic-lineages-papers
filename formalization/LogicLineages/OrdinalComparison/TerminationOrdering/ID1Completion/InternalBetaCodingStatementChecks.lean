@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks
+theorem actualBoundedBetaCodingExact : InternalBetaCodingTargets.ActualBoundedBetaCoding :=
+  InternalBetaCodingProof.actualBoundedBetaCoding
+#print axioms actualBoundedBetaCodingExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks

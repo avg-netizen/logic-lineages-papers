@@ -1,0 +1,33 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingAssemblyProof.lean:97:11: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+a b K n : OrdinaryArithmetic.Term α
+h : Nonempty (Derivation body Gamma (residuesBelow (betaFamily (suc (scalePred b K))) (boundedRelation R K) a n))
+B : OrdinaryArithmetic.Term α := suc (scalePred b K)
+x : OrdinaryArithmetic.Term (α ⊕ Fin 1) := var (Sum.inr 0)
+p : InternalCalculus.Formula (α ⊕ Fin 1) := chosen (boundedRelation R K) (suc (betaFamily B)) (Term.relabel Sum.inl a)
+q : InternalCalculus.Formula (α ⊕ Fin 1) :=
+  existsOne
+    (R ⊓
+      betaF (Term.relabel Sum.inl (Term.relabel Sum.inl a)) (Term.relabel Sum.inl (Term.relabel Sum.inl B))
+        (Term.relabel Sum.inl x) (var (Sum.inr 0)))
+hp : Nonempty (Derivation body Gamma (bounded p n))
+hchosen : Nonempty (Derivation body (p :: List.map weaken Gamma) p)
+hc :
+  Nonempty
+    (Derivation body (p :: List.map weaken Gamma)
+      (chosen (R ⊓ ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel Sum.inl K)))
+        (modulus (suc (scalePred (Term.relabel Sum.inl b) (Term.relabel Sum.inl K))) x) (Term.relabel Sum.inl a)))
+x✝ :
+  Nonempty
+    (Derivation body (p :: List.map weaken Gamma)
+      (existsOne
+        (R ⊓
+          betaF (Term.relabel Sum.inl (Term.relabel Sum.inl a))
+            (Term.relabel Sum.inl (suc (scalePred (Term.relabel Sum.inl b) (Term.relabel Sum.inl K))))
+            (Term.relabel Sum.inl x) (var (Sum.inr 0)))))
+⊢ Derivation body (p :: List.map weaken Gamma) q

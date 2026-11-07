@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:21:2: error: 'change' tactic failed, pattern
+  Formula.relabel ?m.44 R ⊓ Formula.relabel ?m.51 (ltF ?m.46 ?m.47) = ?m.53
+is not definitionally equal to target
+  Formula.relabel (Sum.map (Sum.map j id) id)
+      (R ⊓
+        arithmeticEmbedding.onFormula
+          (OrdinaryArithmetic.lessFormula (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel Sum.inl K)))) =
+    Formula.relabel (Sum.map (Sum.map j id) id) R ⊓
+      arithmeticEmbedding.onFormula
+        (OrdinaryArithmetic.lessFormula (var (Sum.inr 0))
+          (Term.relabel Sum.inl (Term.relabel Sum.inl (Term.relabel j K))))

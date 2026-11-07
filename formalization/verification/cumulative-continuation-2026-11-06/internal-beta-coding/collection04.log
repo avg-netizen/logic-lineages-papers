@@ -1,0 +1,46 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSyntaxProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSyntaxProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSupportProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:22:2: error: 'change' tactic failed, pattern
+  existsOne (Formula.relabel ?m.33 Q ⊓ Formula.relabel ?m.40 (ltF ?m.35 ?m.36)) = ?m.42
+is not definitionally equal to target
+  existsOne (Formula.relabel (Sum.map j id) (Q ⊓ ltF (var (Sum.inr 0)) (Term.relabel Sum.inl K))) =
+    existsOne (Formula.relabel (Sum.map j id) Q ⊓ ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel j K)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:73:72: error: Application type mismatch: The argument
+  hr
+has type
+  Derivation body Delta
+    (instantiate (Formula.relabel (Sum.map j id) Q) (emb r) ⊓ ltF r ((Term.relabel (Sum.inl ∘ j) K).subst (bindTerm r)))
+but is expected to have type
+  Derivation body Delta (?m.164 ⊓ ltF r (Term.relabel j K))
+in the application
+  hr.conjunctionRight
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:67:56: warning: This simp argument is unused:
+  liftBind
+
+Hint: Omit it from the simp argument list.
+  simp only [Term.relabel_relabel, ̲mapInl, ̲varMap, ̲varBind,̵l̵i̵f̵t̵B̵i̵n̵d̵] at hr
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:87:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+K H n : OTerm α
+h : Nonempty (Derivation body Gamma (boundBelow R K n))
+hlt : Nonempty (Derivation body Gamma (ltF K H))
+Delta : List (InternalCalculus.Formula (α ⊕ Fin 1)) := witness R (Term.relabel Sum.inl K) :: List.map weaken Gamma
+hlt' : Nonempty (Derivation body Delta (ltF (Term.relabel Sum.inl K) (Term.relabel Sum.inl H)))
+x✝ : Nonempty (Derivation body Delta (witness R (Term.relabel Sum.inl H)))
+⊢ Derivation body (witness R (Term.relabel Sum.inl K) :: List.map weaken Gamma) (witness R (Term.relabel Sum.inl H))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:101:9: error: overloaded, errors 
+  101:39 Unknown identifier `commutativity`
+  
+  101:39 Unknown identifier `commutativity`
+  
+  101:39 Unknown identifier `commutativity`
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSupportProof: 1
+BUILD_RECEIPT build-reports/1794006934148842320-9.json

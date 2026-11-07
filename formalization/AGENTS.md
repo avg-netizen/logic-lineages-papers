@@ -1,4 +1,18 @@
-# CURRENT checkpoint — complete word guards, 6 November 2026
+# CURRENT checkpoint — internal bounded beta coding, 6 November 2026
+
+The original internal calculus now proves bounded collection and full bounded beta coding for every arbitrary relation and object-language bound. One shared code pair precedes all bounded indices and dependent relation witnesses. The original free parameters and literal `OrdinaryArithmetic.betaFormula` are preserved; witness bounds, suitable moduli, coprimality and CRT codes are obtained internally.
+
+The focused coordinator passed with **852 source-matched local modules** and **4 exact standard-axiom aliases**. Peak successful observed process-tree RSS was **1,220,048 KiB**, below the unchanged **1,536 MiB** cap. Register unchanged: **168 checked, 2 inherited, 19 pending / 189**. This is a supporting arithmetic-coding component for paper06 `lem:id1`; no numbered source statement is promoted. Read the [accepted checkpoint](verification/cumulative-continuation-2026-11-06/internal-beta-coding-resumed/STATUS.md).
+
+Accepted integration `6153603a` combines the completed word guards with all twenty subsequent internal arithmetic, Bezout/CRT and beta-modulus prerequisite commits. All accepted source bytes and the 426 word-guard dependency pins are preserved. The historical paused beta-coding snapshots and failed attempts remain retained; this explicitly resumed checkpoint supersedes their pending coding status.
+
+General internal primitive-recursion representability, the remaining constructor/lambda/fundamental derivations, and all-term ID1 accessibility remain pending. The prior word-guard completion and all earlier accepted results remain intact. This is a focused native result; no full-root or remote-CI build is claimed. Exact frozen targets, standard-axiom acceptance and serialized resource limits remain active.
+
+Earlier checkpoint summaries below are historical.
+
+---
+
+# Previous checkpoint — complete word guards, 6 November 2026
 
 Paper08 `lem:guards` is checked for every original admitted finite-degree word pair and arbitrary signed indices. A total computable compiler emits an effective common tail, finite Boolean guards with the maximum raw variable only linear, all generated-word domains, and a separately decided same-variable result. The actual selected chain terminates by the existing counter-count and reverse-rank histogram measure.
 

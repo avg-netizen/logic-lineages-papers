@@ -1,0 +1,28 @@
+{
+  "purpose": "Exact current-source receipt matching for final reused local artifacts; no compiler launch",
+  "collector_source": "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/TOOLS/collect_evidence.py",
+  "collector_sha256": "377b7f16cc03c01b42e388ceaa30541d256b2cf8631a9f8a0416515030bae85e",
+  "collector_copied_unchanged": true,
+  "required_receipt_directories": [
+    "formalization/build-reports",
+    "formalization/verification/cumulative-continuation-2026-11-06/full-word-guards/receipts"
+  ],
+  "matching_rule": "Each local dependency in the actual requested root closure must have a retained successful native row whose source_sha256 equals the current source SHA256. A timestamp-fresh olean alone is insufficient. Roots also require completed successful receipts; exact aliases require actual permitted-axiom logs. Incomplete receipts are excluded.",
+  "collector_arguments_to_set_explicitly": [
+    "--repo",
+    "--baseline",
+    "--root-module (every final root)",
+    "--gate-module (every final exact alias gate)",
+    "--freeze (current resumed freeze manifest)",
+    "--preserve-pins (prior full-word-guards SOURCE-PINS.json)",
+    "--receipt-dir (both listed directories)",
+    "--output"
+  ],
+  "setup_observation": {
+    "target_preflight_local_closure": 782,
+    "fresh_reusable_local_artifacts_before_preflight": 0,
+    "initial_local_ID1_olean_count": 0,
+    "interpretation": "Initial ID1 target closure must be built locally. Subsequent final proof checks will reuse those newly checked modules, so their source hashes must be matched to the finalized new receipts."
+  },
+  "execution_status": "Prepared only; collector has not been run for a final resumed theorem."
+}

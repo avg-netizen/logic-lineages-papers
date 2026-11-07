@@ -1,0 +1,145 @@
+[
+  {
+    "stage": "fresh frozen-target preflight",
+    "receipt": "native/1794018696567762595-2.json",
+    "result": "blocked by missing pinned upstream object before reaching target",
+    "source_files_at_run": {
+      "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionDefinitions.lean": "053cb4dc77941917e00ff3f643cf3beaab22aedbbbfaf0a9f14754c10bc26d8d",
+      "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionTargets.lean": "20d8e8b9289541d9ce8bb4b3d0ea0e3072be299ca6b41ad4af18757841a63646",
+      "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingDefinitions.lean": "19dab661f3753e0fc83b97af6e2a61bdd439b8f11b5aa4424972115d76694877",
+      "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingTargets.lean": "a7779f3ab29d271ae0889608059e6141c1e17e7d4a3fe35eb4925140e807c268",
+      "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundTargets.lean": "35f644d788a07a47069883da77491bd45a68d346e824fc53e7598234f47fc371"
+    }
+  },
+  {
+    "captured_at_utc": "2026-11-07T02:46:24.864650+00:00",
+    "stage": "fresh-frozen-target-preflight",
+    "receipt": "native/1794018857877358788-5.json",
+    "requested": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionTargets",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingTargets",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundTargets"
+    ],
+    "failed_modules": [],
+    "current_source_mismatches": [],
+    "candidate_snapshots": {
+      "attempts/1794018857877358788-5/InternalBoundedCollectionDefinitions.lean": "053cb4dc77941917e00ff3f643cf3beaab22aedbbbfaf0a9f14754c10bc26d8d",
+      "attempts/1794018857877358788-5/InternalBoundedCollectionTargets.lean": "20d8e8b9289541d9ce8bb4b3d0ea0e3072be299ca6b41ad4af18757841a63646",
+      "attempts/1794018857877358788-5/InternalBetaCodingDefinitions.lean": "19dab661f3753e0fc83b97af6e2a61bdd439b8f11b5aa4424972115d76694877",
+      "attempts/1794018857877358788-5/InternalBetaCodingTargets.lean": "a7779f3ab29d271ae0889608059e6141c1e17e7d4a3fe35eb4925140e807c268",
+      "attempts/1794018857877358788-5/InternalResidueBoundTargets.lean": "35f644d788a07a47069883da77491bd45a68d346e824fc53e7598234f47fc371"
+    },
+    "result": "passed",
+    "peak_observed_rss_kib": 1220048
+  },
+  {
+    "captured_at_utc": "2026-11-07T02:48:33.368279+00:00",
+    "stage": "collection-residue-syntax-first-check",
+    "receipt": "native/1794019625033755709-5.json",
+    "requested": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingSyntaxProof"
+    ],
+    "failed_modules": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundProof"
+    ],
+    "current_source_mismatches": [],
+    "candidate_snapshots": {
+      "attempts/1794019625033755709-5/InternalBoundedCollectionSyntaxProof.lean": "2d744a8890d88e21ea8fea67020cca6f6b4ff4c61f0aaeb4cdcd9a78153bf940",
+      "attempts/1794019625033755709-5/InternalBoundedCollectionSupportProof.lean": "4a6f985d8606d5b6d4bb1a4c6e8fb1de87d130c889d7a22b3ad230dc7c1abd1b",
+      "attempts/1794019625033755709-5/InternalBoundedCollectionProof.lean": "1b1d5827f145cb4e39f57e78b38cf5dd38645af37d44da0185c3e23456d419df",
+      "attempts/1794019625033755709-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+      "attempts/1794019625033755709-5/InternalResidueBoundProof.lean": "1347e2dad439415b1acc14b0b39208c90406ca9925d169ca768030f1e998635d"
+    },
+    "result": "failed",
+    "peak_observed_rss_kib": 1209600
+  },
+  {
+    "captured_at_utc": "2026-11-07T02:49:32.161209+00:00",
+    "stage": "residue-and-coding-syntax-second-check",
+    "receipt": "native/1794019760786855240-5.json",
+    "requested": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingSyntaxProof"
+    ],
+    "failed_modules": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingSyntaxProof"
+    ],
+    "current_source_mismatches": [],
+    "candidate_snapshots": {
+      "attempts/1794019760786855240-5/InternalResidueBoundProof.lean": "f20a089e1c681db6c131fa7459d5f61a3305686b487b59d83c13dabd2295ddc2",
+      "attempts/1794019760786855240-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+      "attempts/1794019760786855240-5/InternalBetaCodingSyntaxProof.lean": "daf450791e73eae5aa3a1145981c29b249714eaf84e119555bc7fa0713def038"
+    },
+    "result": "failed",
+    "peak_observed_rss_kib": 1197204
+  },
+  {
+    "captured_at_utc": "2026-11-07T02:50:42.527905+00:00",
+    "stage": "first-full-coordinator-check",
+    "receipt": "native/1794019820581529314-5.json",
+    "requested": [
+      "LogicLineages.ExternalCheckpoint20261106InternalBetaCoding",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks"
+    ],
+    "failed_modules": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingSyntaxProof"
+    ],
+    "current_source_mismatches": [],
+    "candidate_snapshots": {
+      "attempts/1794019820581529314-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+      "attempts/1794019820581529314-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+      "attempts/1794019820581529314-5/InternalBetaCodingSyntaxProof.lean": "960af4de8b8b68a74b58f41da001688a43b5964628479f5c54bd4acc2c8c6cd1"
+    },
+    "result": "failed",
+    "peak_observed_rss_kib": 1195660
+  },
+  {
+    "captured_at_utc": "2026-11-07T02:52:39.472785+00:00",
+    "stage": "second-full-coordinator-check",
+    "receipt": "native/1794019924590903140-5.json",
+    "requested": [
+      "LogicLineages.ExternalCheckpoint20261106InternalBetaCoding",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks"
+    ],
+    "failed_modules": [
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingAssemblyProof"
+    ],
+    "current_source_mismatches": [],
+    "candidate_snapshots": {
+      "attempts/1794019924590903140-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+      "attempts/1794019924590903140-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+      "attempts/1794019924590903140-5/InternalBetaCodingSyntaxProof.lean": "e46d085ccd8cf62aca4ed89a9801dd0c0a90cfed0a2cc82cd6fb23d9a3458c69",
+      "attempts/1794019924590903140-5/InternalBetaCodingAssemblyProof.lean": "67c5db382f198ccd8c2ed52845c76b2e7830acb9270c26efe1fa8390e50d0603"
+    },
+    "result": "failed",
+    "peak_observed_rss_kib": 1202856
+  },
+  {
+    "captured_at_utc": "2026-11-07T02:53:45.639775+00:00",
+    "stage": "successful-full-coordinator-and-exact-gates",
+    "receipt": "native/1794019992869901960-5.json",
+    "requested": [
+      "LogicLineages.ExternalCheckpoint20261106InternalBetaCoding",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks"
+    ],
+    "failed_modules": [],
+    "current_source_mismatches": [],
+    "candidate_snapshots": {
+      "attempts/1794019992869901960-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+      "attempts/1794019992869901960-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+      "attempts/1794019992869901960-5/InternalBetaCodingAssemblyProof.lean": "d11f78e717f39c87f9f61cbc8d872e7341d01c5c82f1390cc84c02da7852ad21",
+      "attempts/1794019992869901960-5/InternalBetaCodingProof.lean": "bff4e2199e36d3b1bd803b7351a1a4cadd61b56472080e718e68bec1ec5719dc",
+      "attempts/1794019992869901960-5/InternalBetaCodingStatementChecks.lean": "5a5ad0d23455a58240563986ed2bd7f70f10647e13b78374c2c488d3c68c6297"
+    },
+    "result": "passed",
+    "peak_observed_rss_kib": 1201172
+  }
+]

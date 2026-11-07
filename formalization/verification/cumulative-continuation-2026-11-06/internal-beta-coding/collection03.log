@@ -1,0 +1,27 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:19:77: error: unsolved goals
+α β : Type
+R : InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1)
+K : OTerm α
+j : α → β
+⊢ Formula.relabel (Sum.map (Sum.map j id) id) R ⊓
+      ltF (var (Sum.inr 0)) (Term.relabel (Sum.map (Sum.map j id) id ∘ Sum.inl ∘ Sum.inl) K) =
+    Formula.relabel (Sum.map (Sum.map j id) id) R ⊓
+      arithmeticEmbedding.onFormula
+        (OrdinaryArithmetic.lessFormula (var (Sum.inr 0)) (Term.relabel (Sum.inl ∘ Sum.inl ∘ j) K))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:24:13: warning: This simp argument is unused:
+  boundedRelation
+
+Hint: Omit it from the simp argument list.
+  simp only [̵b̵o̵u̵n̵d̵e̵d̵R̵e̵l̵a̵t̵i̵o̵n̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵_̵r̵e̵l̵a̵b̵e̵l̵,̵m̵a̵p̵I̵n̵l̵,̵v̵a̵r̵M̵a̵p̵]̵[̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲_̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲m̲a̲p̲I̲n̲l̲,̲ ̲v̲a̲r̲M̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean:24:50: warning: This simp argument is unused:
+  mapInl
+
+Hint: Omit it from the simp argument list.
+  simp only [boundedRelation, ̲Term.relabel_relabel,m̵a̵p̵I̵n̵l̵,̵ ̲varMap]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794006909664077413-9.json

@@ -1,0 +1,369 @@
+{
+  "reviewed_at_utc": "2026-11-07T02:57:07.598653+00:00",
+  "result": "pass",
+  "reviewer": "independent reviewer of the main beta-coding endpoint",
+  "independence_scope": "Reviewer authored the minimal bounded-collection support repair, but did not author InternalBetaCodingAssemblyProof or InternalBetaCodingProof. This is a source/statement and exact-alias acceptance review, not a repeated full hand proof audit.",
+  "accepted_as": "Supporting internal bounded beta-coding theorem for paper06 lem:id1; no numbered-source promotion.",
+  "accepted_baseline": "6153603a9e15686c7b6cbe3fc2b4e6c96ade8778",
+  "paused_baseline": "464b3e374c2f0f7c532e19cf935a412d6a112fe7",
+  "current_head_at_review": "ed9d6ec3b2ca21e56a0e981925702385319b3477",
+  "frozen_contracts": {
+    "fresh_preflight": "native/1794018857877358788-5.json",
+    "preflight_result": "passed",
+    "unchanged_file_count": 5,
+    "files": [
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionDefinitions.lean",
+        "sha256": "053cb4dc77941917e00ff3f643cf3beaab22aedbbbfaf0a9f14754c10bc26d8d",
+        "matches_frozen_hash": true,
+        "matches_preflight_hash": true,
+        "matches_frozen_copy": true,
+        "matches_paused_commit": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionTargets.lean",
+        "sha256": "20d8e8b9289541d9ce8bb4b3d0ea0e3072be299ca6b41ad4af18757841a63646",
+        "matches_frozen_hash": true,
+        "matches_preflight_hash": true,
+        "matches_frozen_copy": true,
+        "matches_paused_commit": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingDefinitions.lean",
+        "sha256": "19dab661f3753e0fc83b97af6e2a61bdd439b8f11b5aa4424972115d76694877",
+        "matches_frozen_hash": true,
+        "matches_preflight_hash": true,
+        "matches_frozen_copy": true,
+        "matches_paused_commit": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingTargets.lean",
+        "sha256": "a7779f3ab29d271ae0889608059e6141c1e17e7d4a3fe35eb4925140e807c268",
+        "matches_frozen_hash": true,
+        "matches_preflight_hash": true,
+        "matches_frozen_copy": true,
+        "matches_paused_commit": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundTargets.lean",
+        "sha256": "35f644d788a07a47069883da77491bd45a68d346e824fc53e7598234f47fc371",
+        "matches_frozen_hash": true,
+        "matches_preflight_hash": true,
+        "matches_frozen_copy": true,
+        "matches_paused_commit": true
+      }
+    ]
+  },
+  "exact_endpoint": {
+    "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks.actualBoundedBetaCodingExact",
+    "implementation": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingProof.actualBoundedBetaCoding",
+    "frozen_type": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingTargets.ActualBoundedBetaCoding",
+    "judgment": "For every Positive (Fin 1) body, free-variable type alpha, original arithmetic term n, and arbitrary expanded-language formula R over (alpha + Fin 1) + Fin 1, Nonempty (Derivation body [] (availableBelow R n -> coding R n)).",
+    "object_language_reading": "(forall i < n, exists r, R(i,r)) -> exists a, exists b, forall i < n, exists r, R(i,r) and betaFormula(a,b,i,r).",
+    "quantifier_order_verified": "exists a; exists b; forall i<n; exists r",
+    "original_beta_formula_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/OrdinaryArithmeticBetaDefinitions.lean",
+    "original_beta_reading": "With m=(i+1)*b+1, there exist quotient q and strict-bound witness d such that a=q*m+r and r+succ(d)=m. The final coding definition directly invokes this unchanged betaFormula through arithmeticEmbedding.onFormula.",
+    "correlations_verified": [
+      "One shared a,b pair precedes every bounded index and residue binder.",
+      "The original free parameters remain free under the explicit lifted renamings.",
+      "The same residue witness satisfies both R and the beta formula within one conjunction.",
+      "The index bound is the original arithmetic term n, not a meta-level finite list."
+    ],
+    "no_extra_premises": [
+      "functionality of R",
+      "external finite list",
+      "supplied witness bound",
+      "supplied modulus or coprimality",
+      "external coding oracle",
+      "semantic reflection into Derivation"
+    ],
+    "calculus_unchanged": true,
+    "assembly_scope": "Bounded collection supplies K internally; positive common-multiple existence supplies a difference multiple internally; scalePred preserves required divisors and bounds residues; original pairwise-coprime moduli and relational CRT supply one code; bounded congruence converts the retained original relation witness to the unchanged betaFormula; existential elimination removes the auxiliary witnesses."
+  },
+  "supporting_contracts": {
+    "collection": "For arbitrary original R and object n, internally derive availability below n implies existence of one strict witness bound K for all indices below n, with no functionality premise.",
+    "scale_multiples": "In an arbitrary original context Gamma, differenceMultiples(succ b,n) implies differenceMultiples(succ(scalePred b k),n); scalePred=b*(k+1)+k.",
+    "residue_bound": "In an arbitrary original context Gamma, r<k implies r<((i+1)*succ(scalePred b k)+1) for every original arithmetic term i."
+  },
+  "native_endpoint_evidence": {
+    "receipt": "native/1794019992869901960-5.json",
+    "receipt_sha256": "0dd3e1d556b7e9c4d1fd8d8afb7b503c6c72c1eabecbb19237290bffa300b6bd",
+    "requested": [
+      "LogicLineages.ExternalCheckpoint20261106InternalBetaCoding",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks"
+    ],
+    "checked_modules": [
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks",
+        "source_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionStatementChecks.lean",
+        "sha256": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+        "receipt_returncode": 0,
+        "receipt_source_hash_matches": true
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks",
+        "source_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundStatementChecks.lean",
+        "sha256": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+        "receipt_returncode": 0,
+        "receipt_source_hash_matches": true
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingAssemblyProof",
+        "source_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingAssemblyProof.lean",
+        "sha256": "d11f78e717f39c87f9f61cbc8d872e7341d01c5c82f1390cc84c02da7852ad21",
+        "receipt_returncode": 0,
+        "receipt_source_hash_matches": true
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingProof",
+        "source_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingProof.lean",
+        "sha256": "bff4e2199e36d3b1bd803b7351a1a4cadd61b56472080e718e68bec1ec5719dc",
+        "receipt_returncode": 0,
+        "receipt_source_hash_matches": true
+      },
+      {
+        "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks",
+        "source_path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingStatementChecks.lean",
+        "sha256": "5a5ad0d23455a58240563986ed2bd7f70f10647e13b78374c2c488d3c68c6297",
+        "receipt_returncode": 0,
+        "receipt_source_hash_matches": true
+      },
+      {
+        "module": "LogicLineages.ExternalCheckpoint20261106InternalBetaCoding",
+        "source_path": "formalization/LogicLineages/ExternalCheckpoint20261106InternalBetaCoding.lean",
+        "sha256": "ee293ebc07ad8f5e4c6cf7207e47252c73d897e5f5694f561d1adfa418f3412a",
+        "receipt_returncode": 0,
+        "receipt_source_hash_matches": true
+      }
+    ],
+    "four_exact_aliases": [
+      {
+        "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionStatementChecks.actualBoundedCollectionExact",
+        "frozen_type": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCollectionTargets.ActualBoundedCollection",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "only_allowed_axioms": true,
+        "log": "native/1794019992869901960-5-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-InternalBoundedCollectionStatementChecks.log",
+        "log_sha256": "8254a1d50945bb5045505371d3dcb4ed53b7553cc30f27378ec802b360f616c7"
+      },
+      {
+        "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks.scaleMultiplesExact",
+        "frozen_type": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundTargets.ActualScaleMultiples",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "only_allowed_axioms": true,
+        "log": "native/1794019992869901960-5-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-InternalResidueBoundStatementChecks.log",
+        "log_sha256": "17df08d9006defb06d82ad234cad9fcf72723cce84d0a485bf046759db73c2eb"
+      },
+      {
+        "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundStatementChecks.residueBoundExact",
+        "frozen_type": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundTargets.ActualResidueBound",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "only_allowed_axioms": true,
+        "log": "native/1794019992869901960-5-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-InternalResidueBoundStatementChecks.log",
+        "log_sha256": "17df08d9006defb06d82ad234cad9fcf72723cce84d0a485bf046759db73c2eb"
+      },
+      {
+        "declaration": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingStatementChecks.actualBoundedBetaCodingExact",
+        "frozen_type": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingTargets.ActualBoundedBetaCoding",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "only_allowed_axioms": true,
+        "log": "native/1794019992869901960-5-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-InternalBetaCodingStatementChecks.log",
+        "log_sha256": "6cc7c2ec6f17d3cf94a49cd66ac45a2355e1f421a6f255f131d41cefdcd9b084"
+      }
+    ],
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "profile": {
+      "heap_cap_mib": 2048,
+      "rss_cap_mib": 1536,
+      "minimum_free_mib": 2048,
+      "wall_seconds": 180,
+      "cpu_seconds": 90,
+      "single_thread": true,
+      "threads": 1,
+      "upstream_cache_only": true
+    },
+    "scope_note": "These current endpoint rows and exact axiom logs were inspected directly. The full dependency-closure audit is performed separately."
+  },
+  "accepted_source_preservation": {
+    "baseline_tracked_lean_source_count": 8687,
+    "scope": "Every .lean file already tracked under formalization/LogicLineages/ at the accepted baseline; this is a byte-preservation count, not a new claim that all such modules were compiled.",
+    "mismatches": [],
+    "protected_files": [
+      {
+        "path": "06-godel-t-termination-ordering/paper.tex",
+        "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+        "matches_accepted_baseline": true
+      },
+      {
+        "path": "formalization/scripts/check.py",
+        "sha256": "9eecb0236964bb6ede2ae0819a37eccfc476c0df366e267e38ba16fe4208d59d",
+        "matches_accepted_baseline": true
+      },
+      {
+        "path": "formalization/lean-toolchain",
+        "sha256": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+        "matches_accepted_baseline": true
+      },
+      {
+        "path": "formalization/lakefile.toml",
+        "sha256": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+        "matches_accepted_baseline": true
+      },
+      {
+        "path": "formalization/lake-manifest.json",
+        "sha256": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+        "matches_accepted_baseline": true
+      }
+    ]
+  },
+  "paused_draft_accounting": {
+    "draft_count": 12,
+    "unchanged_count": 9,
+    "repaired_count": 3,
+    "all_original_snapshots_preserved": true,
+    "drafts": [
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingDefinitions.lean",
+        "current_sha256": "19dab661f3753e0fc83b97af6e2a61bdd439b8f11b5aa4424972115d76694877",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBetaCodingDefinitions.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean",
+        "current_sha256": "e46d085ccd8cf62aca4ed89a9801dd0c0a90cfed0a2cc82cd6fb23d9a3458c69",
+        "changed_from_paused": true,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBetaCodingSyntaxProof.lean",
+        "snapshot_matches_paused_blob": true,
+        "repair": "Expose conjunction-renaming through infRename and use it before betaRename; removes the failed opaque change step while preserving the literal formula."
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingTargets.lean",
+        "current_sha256": "a7779f3ab29d271ae0889608059e6141c1e17e7d4a3fe35eb4925140e807c268",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBetaCodingTargets.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionDefinitions.lean",
+        "current_sha256": "053cb4dc77941917e00ff3f643cf3beaab22aedbbbfaf0a9f14754c10bc26d8d",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBoundedCollectionDefinitions.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionProof.lean",
+        "current_sha256": "1b1d5827f145cb4e39f57e78b38cf5dd38645af37d44da0185c3e23456d419df",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBoundedCollectionProof.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionStatementChecks.lean",
+        "current_sha256": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBoundedCollectionStatementChecks.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean",
+        "current_sha256": "4a6f985d8606d5b6d4bb1a4c6e8fb1de87d130c889d7a22b3ad230dc7c1abd1b",
+        "changed_from_paused": true,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBoundedCollectionSupportProof.lean",
+        "snapshot_matches_paused_blob": true,
+        "repair": "The local witnessMono equality now explicitly annotates the fresh index as Fin 1; statement and construction unchanged."
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSyntaxProof.lean",
+        "current_sha256": "2d744a8890d88e21ea8fea67020cca6f6b4ff4c61f0aaeb4cdcd9a78153bf940",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBoundedCollectionSyntaxProof.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionTargets.lean",
+        "current_sha256": "20d8e8b9289541d9ce8bb4b3d0ea0e3072be299ca6b41ad4af18757841a63646",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalBoundedCollectionTargets.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundProof.lean",
+        "current_sha256": "f20a089e1c681db6c131fa7459d5f61a3305686b487b59d83c13dabd2295ddc2",
+        "changed_from_paused": true,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalResidueBoundProof.lean",
+        "snapshot_matches_paused_blob": true,
+        "repair": "Open the three already imported namespaces supplying multiplication, addition cancellation and weakening facts; proof bodies and targets unchanged."
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundStatementChecks.lean",
+        "current_sha256": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalResidueBoundStatementChecks.lean",
+        "snapshot_matches_paused_blob": true
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalResidueBoundTargets.lean",
+        "current_sha256": "35f644d788a07a47069883da77491bd45a68d346e824fc53e7598234f47fc371",
+        "changed_from_paused": false,
+        "original_snapshot_path": "formalization/verification/cumulative-continuation-2026-11-06/internal-beta-coding/paused-snapshot/InternalResidueBoundTargets.lean",
+        "snapshot_matches_paused_blob": true
+      }
+    ],
+    "new_endpoint_and_coordinator_files": [
+      {
+        "path": "formalization/LogicLineages/ExternalCheckpoint20261106InternalBetaCoding.lean",
+        "sha256": "ee293ebc07ad8f5e4c6cf7207e47252c73d897e5f5694f561d1adfa418f3412a"
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingAssemblyProof.lean",
+        "sha256": "d11f78e717f39c87f9f61cbc8d872e7341d01c5c82f1390cc84c02da7852ad21"
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingProof.lean",
+        "sha256": "bff4e2199e36d3b1bd803b7351a1a4cadd61b56472080e718e68bec1ec5719dc"
+      },
+      {
+        "path": "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingStatementChecks.lean",
+        "sha256": "5a5ad0d23455a58240563986ed2bd7f70f10647e13b78374c2c488d3c68c6297"
+      }
+    ],
+    "forbidden_proof_markers_in_component": []
+  },
+  "numbered_source_scope": {
+    "paper_obligation": "06-godel-t-termination-ordering:lem:id1",
+    "source_statement": "For fixed subtype-closed S, ID1 proves accessibility of every well-typed auxiliary term under R.",
+    "new_component_does_not_establish": "The complete internal all-term accessibility derivation, including its finite-type, constructor and multiset-induction consumers.",
+    "original_source_endpoint": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceEndpointTargets.ActualSourceInternalAccessibility",
+    "current_registered_status": "pending",
+    "status_changes_from_accepted_baseline": [],
+    "register_counts": {
+      "checked": 168,
+      "pending": 19,
+      "existing-calculator-package": 2
+    },
+    "promotion_authorized_by_this_review": false
+  },
+  "issues": [],
+  "review_actions": "Read source, frozen snapshots, native receipts and axiom logs; compute source hashes and Git-blob preservation; write only this JSON review. No compiler, proof edit, metadata edit, commit or publication performed by this review."
+}

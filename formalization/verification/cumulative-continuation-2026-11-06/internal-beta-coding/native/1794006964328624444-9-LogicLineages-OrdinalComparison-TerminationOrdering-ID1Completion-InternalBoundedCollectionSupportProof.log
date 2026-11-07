@@ -1,0 +1,65 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:68:61: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+Q : InternalCalculus.Formula (α ⊕ Fin 1)
+K H : OTerm α
+h : Nonempty (Derivation body Gamma (witness Q K))
+hlt : Nonempty (Derivation body Gamma (ltF K H))
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+r : OTerm β
+hj : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hr :
+  Nonempty
+    (Derivation body Delta
+      (instantiate
+        (Formula.relabel (Sum.map j id) Q ⊓
+          Formula.relabel (Sum.map j id) (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl K)))
+        (emb r)))
+⊢ ltF (Term.relabel (Sum.map j id) (var (Sum.inr 0))) (Term.relabel (Sum.map j id ∘ Sum.inl) K) =
+    ltF (var (Sum.inr 0)) (Term.relabel (Sum.inl ∘ j) K)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:71:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel (Sum.map j id) (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl K))
+in the target expression
+  Nonempty
+    (Derivation body Delta
+      (instantiate (Formula.relabel (Sum.map j id) Q) (emb r) ⊓
+        instantiate (Formula.relabel (Sum.map j id) (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl K))) (emb r)))
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+Q : InternalCalculus.Formula (α ⊕ Fin 1)
+K H : OTerm α
+h : Nonempty (Derivation body Gamma (witness Q K))
+hlt : Nonempty (Derivation body Gamma (ltF K H))
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+r : OTerm β
+hj : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hr :
+  Nonempty
+    (Derivation body Delta
+      (instantiate (Formula.relabel (Sum.map j id) Q) (emb r) ⊓
+        instantiate (Formula.relabel (Sum.map j id) (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl K))) (emb r)))
+he :
+  Formula.relabel (Sum.map j id) (ltF (var (Sum.inr 0)) (Term.relabel Sum.inl K)) =
+    ltF (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.relabel j K))
+⊢ Nonempty (Derivation body Delta (Formula.relabel j (witness Q H)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:70:36: warning: This simp argument is unused:
+  mapInl
+
+Hint: Omit it from the simp argument list.
+  simp only [Term.relabel_relabel,m̵a̵p̵I̵n̵l̵,̵ ̲varMap]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCollectionSupportProof.lean:70:43: warning: This simp argument is unused:
+  varMap
+
+Hint: Omit it from the simp argument list.
+  simp only [Term.relabel_relabel, ̲mapInl,̵v̵a̵r̵M̵a̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

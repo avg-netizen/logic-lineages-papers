@@ -1,0 +1,70 @@
+{
+  "created_at_utc": "2026-11-07T02:59:25.680742+00:00",
+  "original_paused_evidence_preserved": true,
+  "frozen_contracts_unchanged": true,
+  "initial_cache_failure": "native/1794018696567762595-2.json",
+  "initial_cache_failure_resolution": "Restored exact pinned official compiled artifacts; no upstream source build or limit change.",
+  "repairs": [
+    {
+      "prior_paused_failure": "../internal-beta-coding/native/1794006964328624444-9.json",
+      "file": "InternalBoundedCollectionSupportProof.lean",
+      "repair": "Annotate the bound index numeral as Fin 1 in witnessMono.he; main object-level PA induction unchanged.",
+      "targets_unchanged": true
+    },
+    {
+      "receipt": "native/1794019625033755709-5.json",
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalResidueBoundProof",
+      "failed_source_snapshots": {
+        "attempts/1794019625033755709-5/InternalBoundedCollectionSyntaxProof.lean": "2d744a8890d88e21ea8fea67020cca6f6b4ff4c61f0aaeb4cdcd9a78153bf940",
+        "attempts/1794019625033755709-5/InternalBoundedCollectionSupportProof.lean": "4a6f985d8606d5b6d4bb1a4c6e8fb1de87d130c889d7a22b3ad230dc7c1abd1b",
+        "attempts/1794019625033755709-5/InternalBoundedCollectionProof.lean": "1b1d5827f145cb4e39f57e78b38cf5dd38645af37d44da0185c3e23456d419df",
+        "attempts/1794019625033755709-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+        "attempts/1794019625033755709-5/InternalResidueBoundProof.lean": "1347e2dad439415b1acc14b0b39208c90406ca9925d169ca768030f1e998635d"
+      },
+      "stage": "collection-residue-syntax-first-check",
+      "targets_unchanged": true
+    },
+    {
+      "receipt": "native/1794019760786855240-5.json",
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingSyntaxProof",
+      "failed_source_snapshots": {
+        "attempts/1794019760786855240-5/InternalResidueBoundProof.lean": "f20a089e1c681db6c131fa7459d5f61a3305686b487b59d83c13dabd2295ddc2",
+        "attempts/1794019760786855240-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+        "attempts/1794019760786855240-5/InternalBetaCodingSyntaxProof.lean": "daf450791e73eae5aa3a1145981c29b249714eaf84e119555bc7fa0713def038"
+      },
+      "stage": "residue-and-coding-syntax-second-check",
+      "targets_unchanged": true
+    },
+    {
+      "receipt": "native/1794019820581529314-5.json",
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingSyntaxProof",
+      "failed_source_snapshots": {
+        "attempts/1794019820581529314-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+        "attempts/1794019820581529314-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+        "attempts/1794019820581529314-5/InternalBetaCodingSyntaxProof.lean": "960af4de8b8b68a74b58f41da001688a43b5964628479f5c54bd4acc2c8c6cd1"
+      },
+      "stage": "first-full-coordinator-check",
+      "targets_unchanged": true
+    },
+    {
+      "receipt": "native/1794019924590903140-5.json",
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaCodingAssemblyProof",
+      "failed_source_snapshots": {
+        "attempts/1794019924590903140-5/InternalBoundedCollectionStatementChecks.lean": "1fccd0ba64f39beb61dc4740550826239e9ce423bbbb8dc0d1cb19c20f983ff4",
+        "attempts/1794019924590903140-5/InternalResidueBoundStatementChecks.lean": "db6e4f5b40e178f5fc8bd92276a95b4beeda6fd8d2703d27df8d0d717d564abe",
+        "attempts/1794019924590903140-5/InternalBetaCodingSyntaxProof.lean": "e46d085ccd8cf62aca4ed89a9801dd0c0a90cfed0a2cc82cd6fb23d9a3458c69",
+        "attempts/1794019924590903140-5/InternalBetaCodingAssemblyProof.lean": "67c5db382f198ccd8c2ed52845c76b2e7830acb9270c26efe1fa8390e50d0603"
+      },
+      "stage": "second-full-coordinator-check",
+      "targets_unchanged": true
+    }
+  ],
+  "repair_summary": [
+    "Fin 1 binder annotation in collection support",
+    "Missing multiplication, cancellation and weakening namespace openings in residue proof",
+    "Missing existential-renaming namespace opening in coding syntax",
+    "Explicit formula conjunction-renaming transport",
+    "Use the established nonempty derivation through .some at the local proof-object construction"
+  ],
+  "final_success_receipt": "native/1794019992869901960-5.json"
+}

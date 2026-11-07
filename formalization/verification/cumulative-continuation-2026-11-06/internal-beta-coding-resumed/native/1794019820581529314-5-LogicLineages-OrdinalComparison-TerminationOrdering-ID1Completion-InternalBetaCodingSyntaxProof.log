@@ -1,0 +1,25 @@
+/workspace/scratch/95d226e72a26/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaCodingSyntaxProof.lean:20:2: error: 'change' tactic failed, pattern
+  InternalCoprimeMultiple.bounded
+      (existsOne
+        (Formula.relabel ?m.53 R ⊓
+          Formula.relabel ?m.65
+            (arithmeticEmbedding.onFormula (OrdinaryArithmetic.betaFormula ?m.58 ?m.59 ?m.60 ?m.61))))
+      ?m.66 =
+    ?m.68
+is not definitionally equal to target
+  InternalCoprimeMultiple.bounded
+      (existsOne
+        (Formula.relabel (Sum.map (Sum.map j id) id)
+          (R ⊓
+            arithmeticEmbedding.onFormula
+              (OrdinaryArithmetic.betaFormula (Term.relabel Sum.inl (Term.relabel Sum.inl a))
+                (Term.relabel Sum.inl (Term.relabel Sum.inl b)) (var (Sum.inl (Sum.inr 0))) (var (Sum.inr 0))))))
+      (Term.relabel j n) =
+    InternalCoprimeMultiple.bounded
+      (existsOne
+        (Formula.relabel (Sum.map (Sum.map j id) id) R ⊓
+          arithmeticEmbedding.onFormula
+            (OrdinaryArithmetic.betaFormula (Term.relabel Sum.inl (Term.relabel Sum.inl (Term.relabel j a)))
+              (Term.relabel Sum.inl (Term.relabel Sum.inl (Term.relabel j b))) (var (Sum.inl (Sum.inr 0)))
+              (var (Sum.inr 0)))))
+      (Term.relabel j n)
