@@ -1,0 +1,115 @@
+{
+  "base_commit": "09248d5938cd90a8cb19a3d8a0ef5eb41ffdb9af",
+  "branch": "formalization/recovered-sources-2026-11-07",
+  "checked_at_utc": "2026-11-07T22:12:34.803671+00:00",
+  "scope": "Three supporting components toward paper06 lem:id1; no numbered statement promotion.",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261107ListInduction",
+  "aggregate_returncode": 0,
+  "command": "python3 scripts/check.py --memory-mib 2048 --rss-mib 1536 --min-free-mib 2048 LogicLineages.ExternalCheckpoint20261107ListInduction",
+  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "mathlib_commit": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_matched_local_modules": 1039,
+  "peak_successful_process_tree_rss_kib": 1232216,
+  "exact_alias_count": 11,
+  "gates": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionStatementChecks",
+      "exact_alias_count": 3,
+      "returncode": 0,
+      "source_sha256": "7e148291861801b6a5053892f2725ea37dcc40d0128ad44f60b6082f61d00c98",
+      "native_seconds": 0.965,
+      "peak_process_tree_rss_kib": 1195540,
+      "audit_log": "strong-induction.log"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionStatementChecks",
+      "exact_alias_count": 2,
+      "returncode": 0,
+      "source_sha256": "34752d70e8e5646822959f5e74dc87dfa6c5ec39f269bf47b972f4989363f8ee",
+      "native_seconds": 0.963,
+      "peak_process_tree_rss_kib": 1222924,
+      "audit_log": "list-induction.log"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericTotalityStatementChecks",
+      "exact_alias_count": 6,
+      "returncode": 0,
+      "source_sha256": "c65f2c2fc801ab177efb7b16ce73ec51dc79d0d2eaa40a5d2e2f1dec226eadce",
+      "native_seconds": 0.862,
+      "peak_process_tree_rss_kib": 1036988,
+      "audit_log": "parser-totality.log"
+    }
+  ],
+  "frozen_targets_unchanged": true,
+  "accepted_lean_sources": [
+    {
+      "path": "LogicLineages/ExternalCheckpoint20261107ListInduction.lean",
+      "sha256": "cc78cb7bee4bb3db1672c5f90dd66e594bd69da22972dc9351a62570c8e36dff"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListInductionDefinitions.lean",
+      "sha256": "efd0b52812a0db399cfa55a9ab19f2360cfa1fea010be6d017ee38021a778339"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListInductionProof.lean",
+      "sha256": "cdd39441a44eb1210f2274034333d2a66a70bb167a1eaa25b07b4c1092f092a9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListInductionStatementChecks.lean",
+      "sha256": "34752d70e8e5646822959f5e74dc87dfa6c5ec39f269bf47b972f4989363f8ee"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListInductionSyntaxProof.lean",
+      "sha256": "e8ef0f026288cde4607f1de2b616f9c16404c4ff45eb86c5d93de3ffd913537f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListInductionTargets.lean",
+      "sha256": "7d17ffa504b8a3953853a1fad928215bf4bf30da97096dd72fe5e9b34f08dda6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalStrongInductionDefinitions.lean",
+      "sha256": "23c65914f4f7e52c59cdafbeaa2273df39ad9f6ba51e0094346db78bf3171c5f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalStrongInductionProof.lean",
+      "sha256": "146ffbb5673f260d2f28f11267c58feb89e197d2482ca0fe3817c5036fab0d08"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalStrongInductionStatementChecks.lean",
+      "sha256": "7e148291861801b6a5053892f2725ea37dcc40d0128ad44f60b6082f61d00c98"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalStrongInductionSyntaxProof.lean",
+      "sha256": "14030abed8449e1bd5b56cb14bd44cf863e695dad13e10c43a11cd0a935aec4e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalStrongInductionTargets.lean",
+      "sha256": "2f49c0ab9fad9dd459c8ea7dc794af456cff786ecd530154d973bbb24e83b96b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetNumericTotalityProof.lean",
+      "sha256": "ba553a2bfbe39415be8525a6b115f9e2c116bfcd519391b72f7f76290554cfcc"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetNumericTotalityStatementChecks.lean",
+      "sha256": "c65f2c2fc801ab177efb7b16ce73ec51dc79d0d2eaa40a5d2e2f1dec226eadce"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetNumericTotalityTargets.lean",
+      "sha256": "79b8bb71bf08a2ef364609424aec591181e98885fabe6f508234606514664f9a"
+    }
+  ],
+  "full_root_build_claimed": false,
+  "remote_ci_claimed": false,
+  "evidence_note": "Compact evidence for this new focused checkpoint. Native source-matched successful receipts were used across incremental checks; archived logs here are the three accepted exact-gate axiom audits. Earlier missing verification uploads were not reconstructed."
+}

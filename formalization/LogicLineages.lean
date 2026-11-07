@@ -2260,3 +2260,6 @@ public import LogicLineages.ExternalCheckpoint20261106FullWordGuards
 
 -- Original internal bounded collection and shared beta coding for arbitrary relations.
 public import LogicLineages.ExternalCheckpoint20261106InternalBetaCoding
+
+-- Full-language internal strong/list induction and the original numeric list parser.
+public import LogicLineages.ExternalCheckpoint20261107ListInduction

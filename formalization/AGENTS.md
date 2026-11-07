@@ -1,3 +1,17 @@
+# CURRENT checkpoint — internal list-code induction, 7 November 2026
+
+Full-language strong induction and original list-code induction are checked,
+including arbitrary predicate polarity, parameters, contexts and symbolic codes.
+The unchanged natural-list parser is total with unique decoding, a bijective
+encoder and exact fuel/size bounds. Eleven new exact supporting targets and
+the focused 1,039-module closure passed under the unchanged resource limits.
+Register remains **168 checked, 2 inherited, 19 pending / 189**. The actual
+source-specific multiset/constructor/lambda and all-term accessibility proofs
+remain unfinished. See [the checked continuation](verification/cumulative-continuation-2026-11-07/list-induction/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # CURRENT checkpoint — internal bounded beta coding, 6 November 2026
 
 The original internal calculus now proves bounded collection and full bounded beta coding for every arbitrary relation and object-language bound. One shared code pair precedes all bounded indices and dependent relation witnesses. The original free parameters and literal `OrdinaryArithmetic.betaFormula` are preserved; witness bounds, suitable moduli, coprimality and CRT codes are obtained internally.

@@ -1,0 +1,18 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionStatementChecks
+
+theorem schema_exact : InternalListInductionTargets.ActualOriginalListInduction :=
+  InternalListInductionProof.actualOriginalListInduction
+
+theorem code_exact : InternalListInductionTargets.ActualOriginalListInductionAtCode :=
+  InternalListInductionProof.actualOriginalListInductionAtCode
+
+#print axioms schema_exact
+#print axioms code_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionStatementChecks

@@ -1,0 +1,20 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionStatementChecks
+
+theorem schema_exact : InternalStrongInductionTargets.ActualStrongInductionSchema :=
+  InternalStrongInductionProof.actualStrongInductionSchema
+theorem rule_exact : InternalStrongInductionTargets.ActualStrongInductionRule :=
+  InternalStrongInductionProof.actualStrongInductionRule
+theorem instance_exact : InternalStrongInductionTargets.ActualStrongInductionInstance :=
+  InternalStrongInductionProof.actualStrongInductionInstance
+
+#print axioms schema_exact
+#print axioms rule_exact
+#print axioms instance_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionStatementChecks

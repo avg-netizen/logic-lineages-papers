@@ -1,3 +1,24 @@
+# Current checkpoint — internal list-code induction, 7 November 2026
+
+The original ID1 calculus now has full-language strong induction and induction
+over every natural list code using the unchanged constructor graph. Arbitrary
+predicate polarity, free parameters and ambient hypotheses are preserved.
+The original natural-list parser now has total/unique decoding, a bijective
+encoding, exact fuel requirements, and length/entry bounds.
+
+All **11 new exact supporting targets** and the focused checkpoint passed.
+The **1,039-module local import closure** is source-matched to successful
+native receipts, and every new alias passes the standard-axiom audit under
+the unchanged serialized resource limits. Register: **168 checked, 2 inherited,
+19 pending / 189**. The source-specific multiset, constructor, lambda and
+all-term ID1 accessibility derivations remain unfinished. No full-root or
+remote-CI result is claimed.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-07/list-induction/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # CURRENT checkpoint — finite-coefficient source comparison, 5 November 2026
 
 Paper08 `thm:finite-source` is checked for original same-type terms with ground free variables and finite literal collapse coefficients. The actual source-code procedure decides universal weak, WW-strict and equality comparison over genuine WW admissible substitutions. Every recursor-free term passes without internal-type bounds.

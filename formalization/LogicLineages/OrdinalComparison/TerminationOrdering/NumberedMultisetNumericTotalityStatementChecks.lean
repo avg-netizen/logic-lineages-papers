@@ -1,0 +1,33 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericTotalityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericTotalityStatementChecks
+open NumberedMultisetNumericTotalityTargets
+
+theorem actualNaturalListParserTotality : ActualNaturalListParserTotality :=
+  NumberedMultisetNumericTotalityProof.actualNaturalListParserTotality
+#print axioms actualNaturalListParserTotality
+
+theorem actualNaturalListUniqueDecoding : ActualNaturalListUniqueDecoding :=
+  NumberedMultisetNumericTotalityProof.actualNaturalListUniqueDecoding
+#print axioms actualNaturalListUniqueDecoding
+
+theorem actualNaturalListEncodingBijection : ActualNaturalListEncodingBijection :=
+  NumberedMultisetNumericTotalityProof.actualNaturalListEncodingBijection
+#print axioms actualNaturalListEncodingBijection
+
+theorem actualNaturalListDecoderEquation : ActualNaturalListDecoderEquation :=
+  NumberedMultisetNumericTotalityProof.actualNaturalListDecoderEquation
+#print axioms actualNaturalListDecoderEquation
+
+theorem actualNaturalListCodeBounds : ActualNaturalListCodeBounds :=
+  NumberedMultisetNumericTotalityProof.actualNaturalListCodeBounds
+#print axioms actualNaturalListCodeBounds
+
+theorem actualNaturalListParserEquation : ActualNaturalListParserEquation :=
+  NumberedMultisetNumericTotalityProof.actualNaturalListParserEquation
+#print axioms actualNaturalListParserEquation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericTotalityStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericTotalityStatementChecks
