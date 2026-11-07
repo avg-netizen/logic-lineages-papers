@@ -1,0 +1,37 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCRTSyntaxProof.lean:48:105: error: unsolved goals
+α β : Type
+t r : OTerm (α ⊕ Fin 1)
+n : OTerm α
+j : α → β
+⊢ existsOne
+      (residuesBelow (Term.relabel (Sum.map (Sum.map j id) id ∘ Sum.map Sum.inl id) t)
+        (Term.relabel (Sum.map (Sum.map j id) id ∘ Sum.map Sum.inl id) r) (var (Sum.inr 0))
+        (Term.relabel (Sum.inl ∘ j) n)) =
+    existsOne
+      (residuesBelow (Term.relabel (Sum.map Sum.inl id ∘ Sum.map j id) t)
+        (Term.relabel (Sum.map Sum.inl id ∘ Sum.map j id) r) (var (Sum.inr 0)) (Term.relabel (Sum.inl ∘ j) n))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCRTSyntaxProof.lean:51:13: warning: This simp argument is unused:
+  familyLiftRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵a̵m̵i̵l̵y̵L̵i̵f̵t̵R̵e̵n̵a̵m̵e̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵_̵r̵e̵l̵a̵b̵e̵l̵,̵m̵a̵p̵I̵n̵l̵,̵v̵a̵r̵M̵a̵p̵]̵[̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲_̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲m̲a̲p̲I̲n̲l̲,̲ ̲v̲a̲r̲M̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCRTSyntaxProof.lean:57:6: error(lean.unknownIdentifier): Unknown identifier `existsSubst`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedCRTSyntaxProof.lean:55:100: error: unsolved goals
+α β : Type
+t r : OTerm (α ⊕ Fin 1)
+n : OTerm α
+ts : α → OTerm β
+⊢ (BoundedFormula.subst
+      (existsOne
+        (residuesBelow (Term.relabel (Sum.map Sum.inl id) t) (Term.relabel (Sum.map Sum.inl id) r) (var (Sum.inr 0))
+          (Term.relabel Sum.inl n)))
+      fun x => emb (ts x)) =
+    existsOne
+      (residuesBelow (Term.relabel (Sum.map Sum.inl id) (Term.subst t (liftTerms ts)))
+        (Term.relabel (Sum.map Sum.inl id) (Term.subst r (liftTerms ts))) (var (Sum.inr 0))
+        (Term.relabel Sum.inl (Term.subst n ts)))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedCRTSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794004923175850558-7.json

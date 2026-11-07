@@ -1,0 +1,90 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutExistenceProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutExistenceTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutExistenceConsumerProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalLinearCombination
+open InternalLinearCombinationSyntaxProof InternalLinearCombinationProof InternalBezoutExistenceProof
+open InternalTagArithmeticSyntaxProof InternalSourceInversionSupportProof InternalTagArithmeticSupportProof
+open InternalAdditionLawsProof InternalOriginalOrderSyntaxProof InternalOriginalOrderProof
+open InternalBetaTotalityProof InternalLeastNumberProof InternalLeastNumberSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalBinderTransportProof InternalBinderTransportSyntaxProof
+open InternalPositiveUnfoldingSupportProof InternalDerivationRenamingSyntaxProof
+open InternalBezoutExistenceTargets
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+theorem familyLift (a b : OrdinaryArithmetic.Term α) :
+    liftP (pf a b) = pf (a.relabel Sum.inl) (b.relabel Sum.inl) := by
+  rw [liftP,familyRename]
+
+theorem freshMinimumDivides (a b : OrdinaryArithmetic.Term α)
+    (hm : Nonempty (Derivation body Gamma (minP (pf a b)))) :
+    Nonempty (Derivation body Gamma
+      (arithmeticEmbedding.onFormula (divides (suc (.var (.inr 0))) (a.relabel Sum.inl)) ⊓
+       arithmeticEmbedding.onFormula (divides (suc (.var (.inr 0))) (b.relabel Sum.inl)))) := by
+  obtain ⟨hm⟩ := hm
+  have hc : Derivation body Gamma (cf (a.relabel Sum.inl) (b.relabel Sum.inl) (suc (.var (.inr 0)))) :=
+    Derivation.conjunctionLeft hm
+  have hl := Derivation.conjunctionRight hm
+  change Derivation body Gamma (below (liftP (pf a b)) (.var (.inr 0))) at hl
+  rw [familyLift] at hl
+  obtain ⟨ha⟩ := minimumDividesFirst _ _ _ ⟨hc⟩ ⟨hl⟩
+  have hc' := combinationSymmetry _ _ _ ⟨hc⟩
+  have hl' := lowerSymmetry _ _ _ ⟨hl⟩
+  obtain ⟨hb⟩ := minimumDividesFirst _ _ _ hc' hl'
+  exact ⟨Derivation.conjunctionIntroduction ha hb⟩
+
+/-- Existential mapping with the existing fresh-binder transport law. -/
+def existsMap {p q : Formula (α ⊕ Fin 1)}
+    (h : Derivation body Gamma (existsOne p))
+    (hq : Derivation body (p :: Gamma.map weaken) q) :
+    Derivation body Gamma (existsOne q) := by
+  apply Derivation.existentialElimination h
+  change Derivation body _ ((existsOne q).relabel Sum.inl)
+  rw [existsRename]
+  apply Derivation.existentialIntroduction (emb (.var (.inr (0 : Fin 1))))
+  change Derivation body _ (instantiate (liftP q) (emb (.var (.inr 0))))
+  rw [freshP]
+  exact hq
+
+theorem actualPositiveCommonDivisorCombination : ActualPositiveCommonDivisorCombination := by
+  intro body α a b
+  obtain ⟨hm⟩ := actualPositiveMinimum body α a b
+  let p := minP (pf (suc a) b)
+  have hp : Derivation body [p] p := Derivation.hypothesis List.mem_cons_self
+  obtain ⟨hd⟩ := freshMinimumDivides (suc a) b ⟨hp⟩
+  exact ⟨existsMap hm (Derivation.conjunctionIntroduction hp hd)⟩
+
+def freshUniversal {p : Formula (α ⊕ Fin 1)}
+    (h : Derivation body Gamma (weaken (allOne p))) : Derivation body Gamma p := by
+  rw [weaken,actualUniversalRenaming] at h
+  have hh := Derivation.universalElimination (emb (.var (.inr (0 : Fin 1)))) h
+  change Derivation body Gamma (instantiate (liftP p) (emb (.var (.inr 0)))) at hh
+  rw [freshP] at hh
+  exact hh
+
+theorem actualSignedBezoutFromCoprimality : ActualSignedBezoutFromCoprimality := by
+  intro body α a b
+  let A := suc a
+  let p := minP (pf A b)
+  let Gamma := [coprime A b]
+  let Delta := p :: Gamma.map weaken
+  obtain ⟨hm⟩ := actualPositiveMinimum body α a b
+  have hp : Derivation body Delta p := Derivation.hypothesis List.mem_cons_self
+  obtain ⟨hd⟩ := freshMinimumDivides A b ⟨hp⟩
+  have hcp : Derivation body Delta (weaken (coprime A b)) :=
+    Derivation.hypothesis (List.mem_cons_of_mem _ (List.mem_map.mpr ⟨coprime A b, List.mem_cons_self,rfl⟩))
+  have he := Derivation.implicationElimination (freshUniversal hcp) hd
+  change Derivation body Delta (arithmeticEmbedding.onFormula
+    ((suc (.var (.inr 0))).equal (suc z))) at he
+  rw [onEquality] at he
+  have hc : Derivation body Delta (cf (A.relabel Sum.inl) (b.relabel Sum.inl) (suc (.var (.inr 0)))) :=
+    Derivation.conjunctionLeft hp
+  have hu := combinationCongruence _ _ _ _ he hc
+  have hf : Derivation body Delta (weaken (cf A b (suc z))) := by
+    change Derivation body Delta ((cf A b (suc z)).relabel Sum.inl)
+    rw [combinationRename,sucRelabel,zRelabel]
+    exact hu
+  exact ⟨Derivation.implicationIntroduction
+    (Derivation.existentialElimination (weakenClosed hm Gamma) hf)⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutExistenceConsumerProof

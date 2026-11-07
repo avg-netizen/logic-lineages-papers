@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionCancellationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionCancellationStatementChecks
+theorem commutativity_exact : InternalAdditionCancellationTargets.ActualAdditionCommutativity :=
+  InternalAdditionCancellationProof.actualAdditionCommutativity
+theorem leftCancellation_exact : InternalAdditionCancellationTargets.ActualAdditionLeftCancellation :=
+  InternalAdditionCancellationProof.actualAdditionLeftCancellation
+#print axioms commutativity_exact
+#print axioms leftCancellation_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionCancellationStatementChecks

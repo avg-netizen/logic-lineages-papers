@@ -1,0 +1,16 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCongruenceDivisorProof.lean:19:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCongruenceDivisorProof.lean:14:74: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+a b d m : OrdinaryArithmetic.Term α
+hd : Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (InternalLinearCombination.divides d m)))
+hc : Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (InternalModularArithmetic.congruent a b m)))
+β : Type
+j : α → β
+Delta : List (InternalCalculus.Formula β)
+r : OrdinaryArithmetic.Term β
+hi : ∀ f ∈ Gamma, Formula.relabel j f ∈ Delta
+hr : Nonempty (Derivation body Delta (eqn (Term.relabel j m) (mul r (Term.relabel j d))))
+⊢ Nonempty
+    (Derivation body Delta (InternalModularArithmeticProof.cf (Term.relabel j a) (Term.relabel j b) (Term.relabel j d)))

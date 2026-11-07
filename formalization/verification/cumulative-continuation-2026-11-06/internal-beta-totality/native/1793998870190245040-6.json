@@ -1,0 +1,52 @@
+{
+  "requested": [
+    "verification.cumulative-continuation-2026-11-06.internal-beta-totality.syntax-candidates.AxiomAudit"
+  ],
+  "heap_cap_mib": 2048,
+  "rss_cap_mib": 1536,
+  "wall_seconds": 180,
+  "cpu_seconds": 90,
+  "minimum_free_mib": 2048,
+  "core_only_profile": false,
+  "single_thread": true,
+  "threads": 1,
+  "upstream_cache_only": true,
+  "calculator_objects_borrowed": true,
+  "modules": [
+    {
+      "module": "verification.cumulative-continuation-2026-11-06.internal-beta-totality.syntax-candidates.AxiomAudit",
+      "returncode": 77,
+      "seconds": 0.718,
+      "observed_cpu_seconds": 0.65,
+      "last_wait_channel": "__futex_wait",
+      "stopped_threads": [
+        {
+          "tid": 8,
+          "state": "S",
+          "cpu_seconds": 0.02,
+          "wait_channel": "__futex_wait"
+        },
+        {
+          "tid": 9,
+          "state": "S",
+          "cpu_seconds": 0.0,
+          "wait_channel": "do_epoll_wait"
+        },
+        {
+          "tid": 10,
+          "state": "R",
+          "cpu_seconds": 0.61,
+          "wait_channel": "0"
+        }
+      ],
+      "peak_process_tree_rss_kib": 1622756,
+      "memory_observation_failure": {
+        "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t8\nNgid:\t0\nPid:\t8\nPPid:\t6\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t \nNStgid:\t8\nNSpid:\t8\nNSpgid:\t8\nNSsid:\t8\nKthread:\t0\nVmPeak:\t 5500352 kB\nVmSize:\t 5500352 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1625380 kB\nVmRSS:\t 1625380 kB\nRssAnon:\t   65708 kB\nRssFile:\t 1559672 kB\nRssShmem:\t       0 kB\nVmData:\t 5211516 kB\nVmStk:\t     140 kB\nVmExe:\t       4 kB\nVmLib:\t  101816 kB\nVmPTE:\t   54616 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/39792\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tvulnerable\nSpeculationIndirectBranch:\talways enabled\nCpus_allowed:\t1ff\nCpus_allowed_list:\t0-8\nMems_allowed:\t00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t1\n",
+        "statm": "1375088 406409 389982 1 0 1302914 0\n"
+      },
+      "discarded_failed_outputs": [],
+      "source_sha256": "07e43e0ddedf42797b7b33286ebf40314310e82f73cfebd28c8a567ae02e8bab",
+      "log": "build-reports/1793998870190245040-6-verification-cumulative-continuation-2026-11-06-internal-beta-totality-syntax-candidates-AxiomAudit.log"
+    }
+  ]
+}

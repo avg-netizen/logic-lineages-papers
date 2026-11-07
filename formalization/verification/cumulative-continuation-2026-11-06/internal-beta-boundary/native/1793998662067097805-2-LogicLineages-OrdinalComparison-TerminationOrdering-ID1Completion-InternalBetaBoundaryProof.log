@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaBoundaryProof.lean:66:76: error: Application type mismatch: The argument
+  e
+has type
+  Derivation body ([Formula.not (ltF (suc a) b), eqn (add a (suc (suc x))) b] ++ theta :: List.map weaken Gamma)
+    (eqn (add a (suc (suc x))) b)
+but is expected to have type
+  Derivation body
+    ([(existsOne (witnessBody (suc a) b)).not, eqn (add a (suc (suc x))) b] ++ theta :: List.map weaken Gamma)
+    (eqn (OrdinaryArithmetic.addTerm a (suc (suc x))) b)
+in the application
+  InternalTagArithmeticSupportProof.trans (InternalTagArithmeticSupportProof.symm (addSucc a (suc x))) e

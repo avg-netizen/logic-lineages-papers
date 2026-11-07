@@ -1,0 +1,129 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:21:6: error(lean.unknownIdentifier): Unknown constant `FirstOrder.Language.BoundedFormula.inf`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:22:4: error: Tactic `rfl` failed: The left-hand side
+  BoundedFormula.equal (Term.relabel Sum.inl a)
+      (OrdinaryArithmetic.addTerm
+        (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+          (OrdinaryArithmetic.succTerm
+            (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+              (Term.relabel Sum.inl b))))
+        (Term.relabel Sum.inl r)) ⊓
+    BoundedFormula.equal
+      (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+      (OrdinaryArithmetic.succTerm
+        (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b)))
+is not definitionally equal to the right-hand side
+  BoundedFormula.mapTermRel
+    (fun x t => Term.relabel (Sum.map id ⇑finSumFinEquiv ∘ ⇑(Equiv.sumAssoc α (Fin 2) (Fin x)) ∘ Sum.map id id) t)
+    (fun x => id) (fun x => BoundedFormula.castLE ⋯)
+    (BoundedFormula.equal (Term.relabel (Sum.inl ∘ Sum.inl) a)
+        (Term.relabel Sum.inl
+          (OrdinaryArithmetic.addTerm
+            (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+              (OrdinaryArithmetic.succTerm
+                (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                  (Term.relabel Sum.inl b))))
+            (Term.relabel Sum.inl r))) ⊓
+      BoundedFormula.equal
+        (Term.relabel Sum.inl
+          (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1)))))
+        (Term.relabel Sum.inl
+          (OrdinaryArithmetic.succTerm
+            (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+              (Term.relabel Sum.inl b)))))
+
+α : Type
+a b i r : InternalBetaWitness.OTerm α
+⊢ BoundedFormula.equal (Term.relabel Sum.inl a)
+        (OrdinaryArithmetic.addTerm
+          (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+            (OrdinaryArithmetic.succTerm
+              (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                (Term.relabel Sum.inl b))))
+          (Term.relabel Sum.inl r)) ⊓
+      BoundedFormula.equal
+        (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+        (OrdinaryArithmetic.succTerm
+          (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+            (Term.relabel Sum.inl b))) =
+    BoundedFormula.mapTermRel
+      (fun x t => Term.relabel (Sum.map id ⇑finSumFinEquiv ∘ ⇑(Equiv.sumAssoc α (Fin 2) (Fin x)) ∘ Sum.map id id) t)
+      (fun x => id) (fun x => BoundedFormula.castLE ⋯)
+      (BoundedFormula.equal (Term.relabel (Sum.inl ∘ Sum.inl) a)
+          (Term.relabel Sum.inl
+            (OrdinaryArithmetic.addTerm
+              (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+                (OrdinaryArithmetic.succTerm
+                  (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                    (Term.relabel Sum.inl b))))
+              (Term.relabel Sum.inl r))) ⊓
+        BoundedFormula.equal
+          (Term.relabel Sum.inl
+            (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1)))))
+          (Term.relabel Sum.inl
+            (OrdinaryArithmetic.succTerm
+              (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                (Term.relabel Sum.inl b)))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:20:38: warning: This simp argument is unused:
+  BoundedFormula.mapTermRel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵e̵q̵u̵a̵l̵,̵T̵e̵r̵m̵.̵b̵d̵E̵q̵u̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵i̵n̵f̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵n̵o̵t̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵r̵e̵l̵a̵b̵e̵l̵A̵u̵x̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵_̵r̵e̵l̵a̵b̵e̵l̵]̵[̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲e̲q̲u̲a̲l̲,̲ ̲T̲e̲r̲m̲.̲b̲d̲E̲q̲u̲a̲l̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲i̲n̲f̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲n̲o̲t̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲r̲e̲l̲a̲b̲e̲l̲A̲u̲x̲,̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲_̲r̲e̲l̲a̲b̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:21:25: warning: This simp argument is unused:
+  BoundedFormula.not
+
+Hint: Omit it from the simp argument list.
+  simp only [BoundedFormula.relabel, ̲BoundedFormula.mapTermRel, ̲Term.equal, ̲Term.bdEqual,
+        BoundedFormula.inf, ̲BoundedFormula.n̵o̵t̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵rm̵u̵l̵a̵.̵r̵elabelAux, ̲Term.relabel_relabel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:25:42: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalBetaWitness.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:25:42: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalBetaWitness.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:25:42: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalBetaWitness.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:25:42: error: Ambiguous term
+  OTerm
+Possible interpretations:
+  InternalTagArithmeticSyntaxProof.OTerm α : Type
+  
+  InternalBetaWitness.OTerm α : Type
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:41:42: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.inr` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `AddMonoidHom.inr`
+  [apply] `MonoidHom.inr`
+  [apply] `Or.inr`
+  [apply] `PSum.inr`
+  [apply] `Sum.inr`
+  [apply] `Finset.Nonempty.inr`
+  [apply] `Function.Embedding.inr`
+  [apply] `Set.Nonempty.inr`
+  [apply] `Sum.Lex.inr`
+  [apply] `Sum.LiftRel.inr`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:45:8: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:50:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:49:2: warning: 'rw [matrixSubst]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:50:2: warning: 'exact h' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalModularArithmeticProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalModularArithmeticStatementChecks
+theorem matrix_exact : InternalModularArithmeticTargets.ActualMatrix := InternalModularArithmeticProof.actualMatrix
+theorem introduction_exact : InternalModularArithmeticTargets.ActualIntroduction := InternalModularArithmeticProof.actualIntroduction
+theorem elimination_exact : InternalModularArithmeticTargets.ActualElimination := InternalModularArithmeticProof.actualElimination
+theorem reflexivity_exact : InternalModularArithmeticTargets.ActualReflexivity := InternalModularArithmeticProof.actualReflexivity
+theorem witnessSymmetry_exact : InternalModularArithmeticTargets.ActualWitnessSymmetry := InternalModularArithmeticProof.actualWitnessSymmetry
+theorem witnessTransitivity_exact : InternalModularArithmeticTargets.ActualWitnessTransitivity := InternalModularArithmeticProof.actualWitnessTransitivity
+theorem witnessAddition_exact : InternalModularArithmeticTargets.ActualWitnessAddition := InternalModularArithmeticProof.actualWitnessAddition
+theorem witnessMultiplication_exact : InternalModularArithmeticTargets.ActualWitnessMultiplication := InternalModularArithmeticProof.actualWitnessMultiplication
+theorem symmetry_exact : InternalModularArithmeticTargets.ActualSymmetry := InternalModularArithmeticProof.actualSymmetry
+theorem transitivity_exact : InternalModularArithmeticTargets.ActualTransitivity := InternalModularArithmeticProof.actualTransitivity
+theorem addition_exact : InternalModularArithmeticTargets.ActualAddition := InternalModularArithmeticProof.actualAddition
+theorem multiplication_exact : InternalModularArithmeticTargets.ActualMultiplication := InternalModularArithmeticProof.actualMultiplication
+#print axioms matrix_exact
+#print axioms introduction_exact
+#print axioms elimination_exact
+#print axioms reflexivity_exact
+#print axioms witnessSymmetry_exact
+#print axioms witnessTransitivity_exact
+#print axioms witnessAddition_exact
+#print axioms witnessMultiplication_exact
+#print axioms symmetry_exact
+#print axioms transitivity_exact
+#print axioms addition_exact
+#print axioms multiplication_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalModularArithmeticStatementChecks

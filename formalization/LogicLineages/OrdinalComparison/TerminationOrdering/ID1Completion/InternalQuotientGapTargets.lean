@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientGapTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open OrdinaryArithmetic
+
+def ActualLeftDistributivity : Prop :=
+  ∀ (body : Positive (Fin 1)) (α : Type) (Gamma : List (InternalCalculus.Formula α)) (s t u : OrdinaryArithmetic.Term α),
+  Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula
+    ((mulTerm (addTerm s t) u).equal (addTerm (mulTerm s u) (mulTerm t u)))))
+
+/-- An arithmetic contradiction from two decompositions and positive gaps; not beta uniqueness. -/
+def ActualQuotientGapContradiction : Prop :=
+  ∀ (body : Positive (Fin 1)) (α : Type) (Gamma : List (InternalCalculus.Formula α))
+    (a M q q' r s d w : OrdinaryArithmetic.Term α),
+  Derivation body Gamma (arithmeticEmbedding.onFormula (a.equal (addTerm (mulTerm q M) r))) →
+  Derivation body Gamma (arithmeticEmbedding.onFormula (a.equal (addTerm (mulTerm q' M) s))) →
+  Derivation body Gamma (arithmeticEmbedding.onFormula ((addTerm r (succTerm d)).equal M)) →
+  Derivation body Gamma (arithmeticEmbedding.onFormula ((addTerm q (succTerm w)).equal q')) →
+  Nonempty (Derivation body Gamma ⊥)
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientGapTargets

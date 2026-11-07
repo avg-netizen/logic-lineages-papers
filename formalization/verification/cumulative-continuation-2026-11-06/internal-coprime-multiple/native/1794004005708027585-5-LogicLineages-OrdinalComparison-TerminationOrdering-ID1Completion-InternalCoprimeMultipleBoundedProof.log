@@ -1,0 +1,16 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleBoundedProof.lean:69:6: error(lean.unknownIdentifier): Unknown identifier `instantiateRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleBoundedProof.lean:59:60: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+p : InternalCalculus.Formula (α ⊕ Fin 1)
+n : OTerm α
+hb : Nonempty (Derivation body Gamma (bounded p n))
+hn : Nonempty (Derivation body Gamma (instantiate p (emb n)))
+x : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+N : OrdinaryArithmetic.arithmeticLanguage.Term (α ⊕ Fin 1) := Term.relabel Sum.inl n
+Delta : List (InternalCalculus.Formula (α ⊕ Fin 1)) := ltF x (suc N) :: List.map weaken Gamma
+hi : ∀ q ∈ Gamma, Formula.relabel Sum.inl q ∈ Delta
+hb' : Derivation body Delta (bounded (Formula.relabel (Sum.map Sum.inl id) p) (Term.relabel Sum.inl n))
+hn' : Nonempty (Derivation body Delta (Formula.relabel Sum.inl (instantiate p (emb n))))
+⊢ Nonempty (Derivation body Gamma (bounded p (suc n)))

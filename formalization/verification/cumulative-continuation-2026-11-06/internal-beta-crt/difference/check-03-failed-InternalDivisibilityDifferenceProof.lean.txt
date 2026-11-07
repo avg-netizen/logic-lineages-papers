@@ -1,0 +1,119 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityProductProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalSourceInversionSupportProof
+open InternalAdditionLawsProof InternalMultiplicationLawsProof InternalAdditionCancellationProof
+open InternalQuotientComparisonProof InternalQuotientGapProof InternalQuotientComparison
+open InternalBetaTotalityProof InternalOriginalOrderProof InternalOriginalOrderSyntaxProof
+open InternalLinearCombination InternalLinearCombinationSyntaxProof InternalDivisibilityProof
+open InternalBetaDivisionSyntaxProof InternalBezoutExistenceTargets InternalBezoutCRTProof
+open InternalPositiveUnfoldingSupportProof
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+theorem quotientDifference (d b q r : OrdinaryArithmetic.Term α)
+    (h : Nonempty (Derivation body Gamma (eqn (add (mul q (suc d)) b) (mul r (suc d))))) :
+    Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (divides (suc d) b))) := by
+  obtain ⟨h⟩ := h
+  let goal := arithmeticEmbedding.onFormula (divides (suc d) b)
+  have hl : Nonempty (Derivation body Gamma ((ltF q r).imp goal)) := by
+    have hh : Nonempty (Derivation body (ltF q r :: Gamma) goal) := by
+      apply orderCases (ltF q r :: Gamma) q r _ ⟨Derivation.hypothesis List.mem_cons_self⟩
+      intro β j Delta w hj ⟨hw⟩
+      simp only [goal,dividesRename,sucRelabel]
+      have he := renameInto ⟨addHyp h (ltF q r)⟩ j Delta hj
+      simp only [eqnRelabel,addRelabel,mulRelabel,sucRelabel] at he
+      obtain ⟨he⟩ := he
+      apply dividesIntroduction _ _ (suc w)
+      exact ⟨Derivation.implicationElimination (leftCancellation _ _ _)
+        (trans he (trans (congMulRight (suc (d.relabel j)) (symm hw))
+          (leftDistributivity (q.relabel j) (suc w) (suc (d.relabel j)))))⟩
+    obtain ⟨hh⟩ := hh
+    exact ⟨Derivation.implicationIntroduction hh⟩
+  have he : Nonempty (Derivation body Gamma ((eqn q r).imp goal)) := by
+    have hh : Nonempty (Derivation body (eqn q r :: Gamma) goal) := by
+      apply dividesIntroduction _ _ z
+      have hb : Derivation body (eqn q r :: Gamma) (eqn b z) :=
+        Derivation.implicationElimination (leftCancellation b z (mul q (suc d)))
+          (trans (addHyp h (eqn q r))
+            (trans (congMulRight (suc d) (symm (Derivation.hypothesis List.mem_cons_self)))
+              (symm (addZero _))))
+      exact ⟨trans hb (symm (multiplicationLeftZero (suc d)))⟩
+    obtain ⟨hh⟩ := hh
+    exact ⟨Derivation.implicationIntroduction hh⟩
+  have hr : Nonempty (Derivation body Gamma ((ltF r q).imp goal)) := by
+    have hh : Nonempty (Derivation body (ltF r q :: Gamma) goal) := by
+      apply orderCases (ltF r q :: Gamma) r q _ ⟨Derivation.hypothesis List.mem_cons_self⟩
+      intro β j Delta w hj ⟨hw⟩
+      have he := renameInto ⟨addHyp h (ltF r q)⟩ j Delta hj
+      simp only [eqnRelabel,addRelabel,mulRelabel,sucRelabel] at he
+      obtain ⟨he⟩ := he
+      exact ⟨Derivation.explosion (gapContradiction (mul (r.relabel j) (suc (d.relabel j)))
+        (suc (d.relabel j)) (r.relabel j) (q.relabel j) z (b.relabel j)
+        (d.relabel j) w (symm (addZero _)) (symm he) (leftZero _) hw)⟩
+    obtain ⟨hh⟩ := hh
+    exact ⟨Derivation.implicationIntroduction hh⟩
+  obtain ⟨hl⟩ := hl
+  obtain ⟨he⟩ := he
+  obtain ⟨hr⟩ := hr
+  obtain ⟨hc⟩ := actualOriginalComparison body α q r
+  exact ⟨disjunctionElimination (compareView (weakenClosed hc Gamma)) hl
+    (Derivation.implicationIntroduction (disjunctionElimination (Derivation.hypothesis List.mem_cons_self)
+      (addHyp he _) (addHyp hr _)))⟩
+
+theorem positiveDividesDifference (d a b : OrdinaryArithmetic.Term α)
+    (ha : Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (divides (suc d) a))))
+    (hab : Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (divides (suc d) (add a b))))) :
+    Nonempty (Derivation body Gamma (arithmeticEmbedding.onFormula (divides (suc d) b))) := by
+  apply dividesCases Gamma (suc d) a _ ha
+  intro β j Delta q hj hq
+  simp only [dividesRename,sucRelabel]
+  have hab' := renameInto hab j Delta hj
+  simp only [dividesRename,sucRelabel,addRelabel] at hab'
+  apply dividesCases Delta (suc (d.relabel j)) (add (a.relabel j) (b.relabel j)) _ hab'
+  intro γ k Theta r hk hr
+  simp only [dividesRename,sucRelabel]
+  have hq' := renameInto hq k Theta hk
+  simp only [eqnRelabel,mulRelabel,sucRelabel] at hq'
+  simp only [addRelabel,sucRelabel] at hr
+  obtain ⟨hq'⟩ := hq'
+  obtain ⟨hr⟩ := hr
+  apply quotientDifference ((d.relabel j).relabel k) ((b.relabel j).relabel k) (q.relabel k) r
+  exact ⟨trans (congAddRight _ (symm hq')) hr⟩
+
+theorem actualPositiveDividesDifference :
+    InternalDivisibilityDifferenceTargets.ActualPositiveDividesDifference := by
+  intro body α d a b
+  have h := Derivation.hypothesis (body := body)
+    (List.mem_cons_self (a := arithmeticEmbedding.onFormula (divides (suc d) a) ⊓
+      arithmeticEmbedding.onFormula (divides (suc d) (add a b))) (l := []))
+  obtain ⟨hh⟩ := positiveDividesDifference d a b
+    ⟨Derivation.conjunctionLeft h⟩ ⟨Derivation.conjunctionRight h⟩
+  exact ⟨Derivation.implicationIntroduction hh⟩
+theorem actualCoprimeAdd : InternalDivisibilityDifferenceTargets.ActualCoprimeAdd := by
+  intro body α m a
+  let M := m.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let A := a.relabel (Sum.inl : α → α ⊕ Fin 1)
+  let x : OrdinaryArithmetic.Term (α ⊕ Fin 1) := .var (.inr 0)
+  let p := arithmeticEmbedding.onFormula (divides (suc x) M) ⊓
+    arithmeticEmbedding.onFormula (divides (suc x) (add M A))
+  let Gamma := [coprime m a]
+  let Delta := p :: Gamma.map weaken
+  have hp : Derivation body Delta p := Derivation.hypothesis List.mem_cons_self
+  have hm := Derivation.conjunctionLeft hp
+  obtain ⟨ha⟩ := positiveDividesDifference x M A ⟨hm⟩ ⟨Derivation.conjunctionRight hp⟩
+  have hc : Derivation body Delta (weaken (coprime m a)) :=
+    Derivation.hypothesis (List.mem_cons_of_mem _ (List.mem_map.mpr ⟨coprime m a,List.mem_cons_self,rfl⟩))
+  have he := Derivation.implicationElimination
+    (InternalBezoutExistenceConsumerProof.freshUniversal hc)
+    (Derivation.conjunctionIntroduction hm ha)
+  rw [onEquality] at he
+  apply Nonempty.intro
+  apply Derivation.implicationIntroduction
+  unfold coprime
+  rw [onEquality]
+  exact Derivation.universalIntroduction (Derivation.implicationIntroduction he)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof

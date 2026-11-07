@@ -1,0 +1,79 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationLawsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalFiniteBlocks
+open InternalBetaWitness InternalFiniteBlocksBindingProof InternalFiniteBlocksProof
+open InternalGraphCompositionSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalSourceInversionSupportProof InternalTagArithmeticSupportProof InternalAdditionLawsProof
+open InternalMultiplicationLawsProof InternalTermSubstitutionSyntaxProof InternalTermSubstitutionProof
+open InternalBinderTransportSyntaxProof
+
+theorem bindEquality {L : Language} {α : Type} {k : Nat} (s t : L.Term (α ⊕ Fin k)) :
+    (s.equal t).relabel (id : α ⊕ Fin k → α ⊕ Fin k) = s.bdEqual t := by
+  have hf : BoundedFormula.relabelAux (id : α ⊕ Fin k → α ⊕ Fin k) 0 ∘ Sum.inl = id := by
+    funext x
+    cases x with
+    | inl a => rfl
+    | inr i => exact congrArg Sum.inr (Fin.ext rfl)
+  change BoundedFormula.equal ((s.relabel Sum.inl).relabel _) ((t.relabel Sum.inl).relabel _) = _
+  simp only [Term.relabel_relabel,hf,Term.relabel_id]
+  rfl
+
+theorem bindConjunction {L : Language} {α : Type} {k : Nat} (p q : L.Formula (α ⊕ Fin k)) :
+    (p ⊓ q).relabel (id : α ⊕ Fin k → α ⊕ Fin k) = p.relabel id ⊓ q.relabel id := rfl
+
+theorem actualBetaMatrix : InternalBetaWitnessTargets.ActualBetaMatrix := by
+  intro α a b i r
+  have h : OrdinaryArithmetic.betaFormula a b i r = OrdinaryArithmetic.existsFin (matrix a b i r) := by
+    unfold OrdinaryArithmetic.betaFormula OrdinaryArithmetic.betaBody OrdinaryArithmetic.existsFin
+    unfold matrix equations modulus
+    rw [bindConjunction,bindEquality,bindEquality]
+  rw [h,actualOriginalBlockEmbedding]
+
+theorem matrixSubst {α : Type} (a b i r : OrdinaryArithmetic.Term α) (ts : Fin 2 → OrdinaryArithmetic.Term α) :
+    (arithmeticEmbedding.onFormula (matrix a b i r)).subst (Sum.elim Term.var (fun j => emb (ts j))) =
+    arithmeticEmbedding.onFormula (equations a b i r (ts 0) (ts 1)) := by
+  have he : (Sum.elim Term.var (fun j => emb (ts j))) =
+      (fun x => emb (Sum.elim Term.var ts x)) := by
+    funext x
+    cases x <;> rfl
+  rw [he,← embedSubst]
+  have ht (t : OrdinaryArithmetic.Term α) : (t.relabel Sum.inl).subst (Sum.elim Term.var ts) = t := by
+    rw [termRelabelSubst]
+    exact termSubstVar t
+  unfold matrix equations modulus
+  congr 1
+  change ((a.relabel Sum.inl).subst _).equal
+      (add (mul (.var (.inr (0 : Fin 2))) (suc (mul (suc (i.relabel Sum.inl)) (b.relabel Sum.inl))))
+        (r.relabel Sum.inl)).subst _ ⊓
+    ((add (r.relabel Sum.inl) (suc (.var (.inr (1 : Fin 2))))).subst _).equal
+      ((suc (mul (suc (i.relabel Sum.inl)) (b.relabel Sum.inl))).subst _) = _
+  simp only [addSubst,mulSubst,sucSubst,ht,Term.subst,Sum.elim_inr]
+
+theorem actualBetaIntroduction : InternalBetaWitnessTargets.ActualBetaIntroduction := by
+  intro body α Gamma a b i r q d h
+  rw [actualBetaMatrix]
+  apply actualFiniteExistentialIntroduction body α 2 Gamma _ (fun j => emb (Fin.cases q (fun _ => d) j))
+  rw [matrixSubst]
+  exact h
+
+theorem actualBetaElimination : InternalBetaWitnessTargets.ActualBetaElimination := by
+  intro body α Gamma a b i r psi h e
+  rw [actualBetaMatrix] at h
+  exact actualFiniteExistentialElimination body α 2 Gamma _ psi h e
+
+theorem actualBetaZero : InternalBetaWitnessTargets.ActualBetaZero := by
+  intro body α b i
+  apply actualBetaIntroduction body α [] z b i z z (mul (suc i) b)
+  change Nonempty (Derivation body [] ((arithmeticEmbedding.onFormula
+    (z.equal (add (mul z (modulus b i)) z))) ⊓
+    arithmeticEmbedding.onFormula ((add z (suc (mul (suc i) b))).equal (modulus b i))))
+  rw [onEquality,onEquality]
+  apply Nonempty.intro
+  apply Derivation.conjunctionIntroduction
+  · exact symm (trans (addZero (mul z (modulus b i))) (multiplicationLeftZero (modulus b i)))
+  · exact leftZero (suc (mul (suc i) b))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessProof

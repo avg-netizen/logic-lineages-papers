@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaBoundaryProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaBoundaryStatementChecks
+theorem boundary_exact : InternalBetaBoundaryTargets.ActualDiscreteOrderBoundary := InternalBetaBoundaryProof.actualDiscreteOrderBoundary
+theorem wraparound_exact : InternalBetaBoundaryTargets.ActualBetaSuccessorAtModulus := InternalBetaBoundaryProof.actualBetaSuccessorAtModulus
+#print axioms boundary_exact
+#print axioms wraparound_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaBoundaryStatementChecks

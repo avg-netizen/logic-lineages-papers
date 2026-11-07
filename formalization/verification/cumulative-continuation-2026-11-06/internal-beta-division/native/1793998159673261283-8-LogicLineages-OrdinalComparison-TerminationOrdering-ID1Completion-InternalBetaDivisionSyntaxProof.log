@@ -1,0 +1,108 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:38:2: error: Tactic `rfl` failed: The left-hand side
+  BoundedFormula.mapTermRel (fun x t => Term.relabel (Sum.map j id) t) (fun x => id) (fun x => id)
+    (BoundedFormula.equal (Term.relabel Sum.inl a)
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (OrdinaryArithmetic.succTerm
+              (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+                (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b))))
+          (Term.relabel Sum.inl r)) ⊓
+      BoundedFormula.equal
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add (Term.relabel Sum.inl r)
+          (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+        (OrdinaryArithmetic.succTerm
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+            (Term.relabel Sum.inl b))))
+is not definitionally equal to the right-hand side
+  BoundedFormula.equal (Term.relabel (Sum.inl ∘ j) a)
+      (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+          (OrdinaryArithmetic.succTerm
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+              (OrdinaryArithmetic.succTerm (Term.relabel (Sum.inl ∘ j) i)) (Term.relabel (Sum.inl ∘ j) b))))
+        (Term.relabel (Sum.inl ∘ j) r)) ⊓
+    BoundedFormula.equal
+      (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add (Term.relabel (Sum.inl ∘ j) r)
+        (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+      (OrdinaryArithmetic.succTerm
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+          (OrdinaryArithmetic.succTerm (Term.relabel (Sum.inl ∘ j) i)) (Term.relabel (Sum.inl ∘ j) b)))
+
+α β : Type
+a b i r : OrdinaryArithmetic.Term α
+j : α → β
+⊢ BoundedFormula.mapTermRel (fun x t => Term.relabel (Sum.map j id) t) (fun x => id) (fun x => id)
+      (BoundedFormula.equal (Term.relabel Sum.inl a)
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+              (OrdinaryArithmetic.succTerm
+                (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+                  (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b))))
+            (Term.relabel Sum.inl r)) ⊓
+        BoundedFormula.equal
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add (Term.relabel Sum.inl r)
+            (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+          (OrdinaryArithmetic.succTerm
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+              (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b)))) =
+    BoundedFormula.equal (Term.relabel (Sum.inl ∘ j) a)
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (OrdinaryArithmetic.succTerm
+              (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+                (OrdinaryArithmetic.succTerm (Term.relabel (Sum.inl ∘ j) i)) (Term.relabel (Sum.inl ∘ j) b))))
+          (Term.relabel (Sum.inl ∘ j) r)) ⊓
+      BoundedFormula.equal
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.add (Term.relabel (Sum.inl ∘ j) r)
+          (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+        (OrdinaryArithmetic.succTerm
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul
+            (OrdinaryArithmetic.succTerm (Term.relabel (Sum.inl ∘ j) i)) (Term.relabel (Sum.inl ∘ j) b)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:35:20: warning: This simp argument is unused:
+  BoundedFormula.mapTermRel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵b̵d̵E̵q̵u̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵a̵d̵d̵T̵e̵r̵m̵,̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵m̵u̵l̵T̵e̵r̵m̵,̵b̵i̵n̵a̵r̵y̵R̵e̵l̵a̵b̵e̵l̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵_̵r̵e̵l̵a̵b̵e̵l̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵]̵[̲r̲e̲n̲a̲m̲e̲,̲ ̲T̲e̲r̲m̲.̲b̲d̲E̲q̲u̲a̲l̲,̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲a̲d̲d̲T̲e̲r̲m̲,̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲m̲u̲l̲T̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲b̲i̲n̲a̲r̲y̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲s̲u̲c̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲_̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:36:58: warning: This simp argument is unused:
+  binaryRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵b̵d̵E̵q̵u̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵a̵d̵d̵T̵e̵r̵m̵,̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵m̵u̵l̵T̵e̵r̵m̵,̵b̵i̵n̵a̵r̵y̵R̵e̵l̵a̵b̵e̵l̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵_̵r̵e̵l̵a̵b̵e̵l̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵]̵[̲r̲e̲n̲a̲m̲e̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲b̲d̲E̲q̲u̲a̲l̲,̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲a̲d̲d̲T̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲m̲u̲l̲T̲e̲r̲m̲,̲ ̲s̲u̲c̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲_̲r̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:36:72: warning: This simp argument is unused:
+  sucRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [rename, ̲BoundedFormula.mapTermRel, ̲Term.bdEqual,
+  ̵  ̵ ̵ ̵OrdinaryArithmetic.addTerm,
+  ̲ ̲ ̲ ̲ ̲OrdinaryArithmetic.mulTerm, ̲binaryRelabel,s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵
+  ̵  ̵ ̵ ̵Term.relabel_relabel, ̲Term.relabel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:37:25: warning: This simp argument is unused:
+  Term.relabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵,̵B̵o̵u̵n̵d̵e̵d̵F̵o̵r̵m̵u̵l̵a̵.̵m̵a̵p̵T̵e̵r̵m̵R̵e̵l̵,̵T̵e̵r̵m̵.̵b̵d̵E̵q̵u̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵a̵d̵d̵T̵e̵r̵m̵,̵O̵r̵d̵i̵n̵a̵r̵y̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵.̵m̵u̵l̵T̵e̵r̵m̵,̵b̵i̵n̵a̵r̵y̵R̵e̵l̵a̵b̵e̵l̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵_̵r̵e̵l̵a̵b̵e̵l̵,̵T̵e̵r̵m̵.̵r̵e̵l̵a̵b̵e̵l̵]̵[̲r̲e̲n̲a̲m̲e̲,̲ ̲B̲o̲u̲n̲d̲e̲d̲F̲o̲r̲m̲u̲l̲a̲.̲m̲a̲p̲T̲e̲r̲m̲R̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲b̲d̲E̲q̲u̲a̲l̲,̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲a̲d̲d̲T̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲O̲r̲d̲i̲n̲a̲r̲y̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲.̲m̲u̲l̲T̲e̲r̲m̲,̲ ̲b̲i̲n̲a̲r̲y̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲s̲u̲c̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲T̲e̲r̲m̲.̲r̲e̲l̲a̲b̲e̲l̲_̲r̲e̲l̲a̲b̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:45:8: error(lean.unknownIdentifier): Unknown identifier `arithmeticRename`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaDivisionSyntaxProof.lean:44:100: error: unsolved goals
+α β : Type
+a b i r : OrdinaryArithmetic.Term α
+j : α → β
+⊢ Formula.relabel j (arithmeticEmbedding.onFormula (OrdinaryArithmetic.betaFormula a b i r)) =
+    arithmeticEmbedding.onFormula
+      (OrdinaryArithmetic.betaFormula (Term.relabel j a) (Term.relabel j b) (Term.relabel j i) (Term.relabel j r))

@@ -1,0 +1,49 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTChoiceProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTChoiceProof.lean:65:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  instantiate (PositiveArithmeticPredicateSubstitution.liftPredicateFormula ?phi) (var (Sum.inr 0))
+in the target expression
+  Nonempty
+    (Derivation body (R :: List.map weaken Gamma)
+      (instantiate (Formula.relabel (Sum.map Sum.inl id) R) (emb (var (Sum.inr 0)))))
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+R : InternalCalculus.Formula (α ⊕ Fin 1)
+psi : InternalCalculus.Formula α
+k :
+  ∀ (β : Type) (j : α → β) (Delta : List (InternalCalculus.Formula β)) (s : OTerm β),
+    (∀ f ∈ Gamma, Formula.relabel j f ∈ Delta) →
+      Nonempty (Derivation body Delta (instantiate (Formula.relabel (Sum.map j id) R) (emb s))) →
+        Nonempty (Derivation body Delta (Formula.relabel j psi))
+h : Derivation body Gamma (existsOne R)
+⊢ Nonempty
+    (Derivation body (R :: List.map weaken Gamma)
+      (instantiate (Formula.relabel (Sum.map Sum.inl id) R) (emb (var (Sum.inr 0)))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRelationalCRTChoiceProof.lean:85:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  instantiate (PositiveArithmeticPredicateSubstitution.liftPredicateFormula ?phi) (var (Sum.inr 0))
+in the target expression
+  Nonempty
+    (Derivation body (mat :: List.map weaken Gamma)
+      (instantiate (Formula.relabel (Sum.map Sum.inl id) R) (emb (var (Sum.inr 0)))))
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+R : InternalCalculus.Formula (α ⊕ Fin 1)
+m c : OTerm α
+psi : InternalCalculus.Formula α
+k :
+  ∀ (β : Type) (j : α → β) (Delta : List (InternalCalculus.Formula β)) (s : OTerm β),
+    (∀ f ∈ Gamma, Formula.relabel j f ∈ Delta) →
+      Nonempty (Derivation body Delta (instantiate (Formula.relabel (Sum.map j id) R) (emb s))) →
+        Nonempty (Derivation body Delta (cf (Term.relabel j c) s (Term.relabel j m))) →
+          Nonempty (Derivation body Delta (Formula.relabel j psi))
+h : Derivation body Gamma (chosen R m c)
+mat : InternalCalculus.Formula (α ⊕ Fin 1) := R ⊓ cf (Term.relabel Sum.inl c) (var (Sum.inr 0)) (Term.relabel Sum.inl m)
+hm : Derivation body (mat :: List.map weaken Gamma) mat
+⊢ Nonempty
+    (Derivation body (mat :: List.map weaken Gamma)
+      (instantiate (Formula.relabel (Sum.map Sum.inl id) R) (emb (var (Sum.inr 0)))))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTChoiceProof: 1
+BUILD_RECEIPT build-reports/1794005183735171673-8.json

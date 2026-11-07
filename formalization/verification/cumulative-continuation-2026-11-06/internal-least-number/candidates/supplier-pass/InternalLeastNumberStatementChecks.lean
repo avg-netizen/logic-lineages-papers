@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLeastNumberProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLeastNumberStatementChecks
+theorem split_exact : InternalLeastNumberTargets.ActualRightSuccessorSplit := InternalLeastNumberProof.actualRightSuccessorSplit
+theorem zero_exact : InternalLeastNumberTargets.ActualNothingBelowZero := InternalLeastNumberProof.actualNothingBelowZero
+#print axioms split_exact
+#print axioms zero_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLeastNumberStatementChecks

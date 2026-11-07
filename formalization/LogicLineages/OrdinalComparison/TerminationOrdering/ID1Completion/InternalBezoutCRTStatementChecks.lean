@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutCRTProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutCRTStatementChecks
+theorem combination_exact : InternalBezoutCRTTargets.ActualCombination := InternalBezoutCRTProof.actualCombination
+#print axioms combination_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBezoutCRTStatementChecks

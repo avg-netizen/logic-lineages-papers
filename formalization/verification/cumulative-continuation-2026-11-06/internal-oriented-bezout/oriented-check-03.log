@@ -1,0 +1,39 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutSyntaxProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:37:59: error(lean.unknownIdentifier): Unknown identifier `unaryRelabel`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalOrientedBezoutSyntaxProof.lean:39:2: error: Tactic `rfl` failed: The left-hand side
+  (BoundedFormula.equal
+      (Term.relabel (Sum.map j id)
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ a)))))
+      (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.map j id (Sum.inr 1)))
+        (Term.relabel (Sum.map j id)
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl b))))).exs
+is not definitionally equal to the right-hand side
+  (BoundedFormula.equal
+      (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+          (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel j a)))))
+      (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 1))
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel (Sum.inl ∘ j) b)))).exs
+
+case e_a
+α β : Type
+a b : OrdinaryArithmetic.Term α
+j : α → β
+⊢ (BoundedFormula.equal
+        (Term.relabel (Sum.map j id)
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+            (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+              (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ a)))))
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.map j id (Sum.inr 1)))
+          (Term.relabel (Sum.map j id)
+            (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel Sum.inl b))))).exs =
+    (BoundedFormula.equal
+        (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ
+          (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 0))
+            (Term.relabel Sum.inl (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel j a)))))
+        (Functions.apply₂ OrdinaryArithmetic.FunctionSymbol.mul (var (Sum.inr 1))
+          (Functions.apply₁ OrdinaryArithmetic.FunctionSymbol.succ (Term.relabel (Sum.inl ∘ j) b)))).exs
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutSyntaxProof: 1
+BUILD_RECEIPT build-reports/1794003018599994669-7.json

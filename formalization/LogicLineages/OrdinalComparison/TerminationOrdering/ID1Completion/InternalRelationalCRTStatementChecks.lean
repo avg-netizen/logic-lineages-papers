@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTStatementChecks
+theorem actualRelationalCRTExact : InternalRelationalCRTTargets.ActualRelationalCRT :=
+  InternalRelationalCRTProof.actualRelationalCRT
+#print axioms actualRelationalCRTExact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRelationalCRTStatementChecks

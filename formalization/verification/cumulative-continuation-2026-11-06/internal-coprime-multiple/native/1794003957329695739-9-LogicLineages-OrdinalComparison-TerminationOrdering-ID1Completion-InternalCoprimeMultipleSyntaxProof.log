@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:48:2: error: 'change' tactic failed, pattern
+  ((Term.relabel Sum.inl a).subst (liftTerms ts)).equal
+      (mul (var (Sum.inr 0)) ((Term.relabel Sum.inl d).subst (liftTerms ts))) =
+    ?m.88
+is not definitionally equal to target
+  OrdinaryArithmetic.existsFin
+      (((Term.relabel Sum.inl a).subst (Sum.elim (fun a => Term.relabel Sum.inl (ts a)) fun i => var (Sum.inr i))).equal
+        (mul ((var (Sum.inr 0)).subst (Sum.elim (fun a => Term.relabel Sum.inl (ts a)) fun i => var (Sum.inr i)))
+          ((Term.relabel Sum.inl d).subst
+            (Sum.elim (fun a => Term.relabel Sum.inl (ts a)) fun i => var (Sum.inr i))))) =
+    OrdinaryArithmetic.existsFin
+      ((Term.relabel Sum.inl (Term.subst a ts)).equal
+        (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.subst d ts))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:59:5: error: unexpected token 'theorem'; expected ')', ',' or ':'
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCoprimeMultipleSyntaxProof.lean:57:322: error: A placeholder `_` cannot be used where a function is expected

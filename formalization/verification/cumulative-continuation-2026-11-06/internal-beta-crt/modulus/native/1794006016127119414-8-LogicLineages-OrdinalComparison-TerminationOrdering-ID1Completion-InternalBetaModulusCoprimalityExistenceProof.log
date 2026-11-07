@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaModulusCoprimalityExistenceProof.lean:23:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+a b : OTerm α
+h : Nonempty (Derivation body Gamma (coprime a b))
+p : InternalCalculus.Formula (α ⊕ Fin 1) :=
+  arithmeticEmbedding.onFormula (InternalLinearCombination.divides (suc (var (Sum.inr 0))) (Term.relabel Sum.inl b)) ⊓
+    arithmeticEmbedding.onFormula (InternalLinearCombination.divides (suc (var (Sum.inr 0))) (Term.relabel Sum.inl a))
+hi : ∀ f ∈ Gamma, Formula.relabel Sum.inl f ∈ p :: List.map weaken Gamma
+x✝ : Nonempty (Derivation body (p :: List.map weaken Gamma) (Formula.relabel Sum.inl (coprime a b)))
+⊢ Derivation body
+    (arithmeticEmbedding.onFormula
+          (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0))) (Term.relabel Sum.inl b)) ⊓
+        arithmeticEmbedding.onFormula
+          (InternalLinearCombination.divides (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+            (Term.relabel Sum.inl a)) ::
+      List.map weaken Gamma)
+    (arithmeticEmbedding.onFormula
+      (Term.equal (OrdinaryArithmetic.succTerm (var (Sum.inr 0)))
+        (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)))

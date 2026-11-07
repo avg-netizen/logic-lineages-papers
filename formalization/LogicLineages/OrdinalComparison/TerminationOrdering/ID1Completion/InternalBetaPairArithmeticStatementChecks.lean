@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairArithmeticProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairArithmeticStatementChecks
+theorem pairEquation_exact : InternalBetaPairArithmeticTargets.ActualPairEquation :=
+  InternalBetaPairArithmeticProof.actualPairEquation
+theorem oneMultiplication_exact : InternalBetaPairArithmeticTargets.ActualOneMultiplication :=
+  InternalBetaPairArithmeticProof.actualOneMultiplication
+theorem twoMultiplication_exact : InternalBetaPairArithmeticTargets.ActualTwoMultiplication :=
+  InternalBetaPairArithmeticProof.actualTwoMultiplication
+theorem boundEquation_exact : InternalBetaPairArithmeticTargets.ActualBoundEquation :=
+  InternalBetaPairArithmeticProof.actualBoundEquation
+#print axioms pairEquation_exact
+#print axioms oneMultiplication_exact
+#print axioms twoMultiplication_exact
+#print axioms boundEquation_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaPairArithmeticStatementChecks

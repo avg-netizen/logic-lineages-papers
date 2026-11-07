@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceStatementChecks
+theorem exactDifference : InternalDivisibilityDifferenceTargets.ActualPositiveDividesDifference :=
+  InternalDivisibilityDifferenceProof.actualPositiveDividesDifference
+theorem exactCoprimeAdd : InternalDivisibilityDifferenceTargets.ActualCoprimeAdd :=
+  InternalDivisibilityDifferenceProof.actualCoprimeAdd
+#print axioms exactDifference
+#print axioms exactCoprimeAdd
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDivisibilityDifferenceStatementChecks

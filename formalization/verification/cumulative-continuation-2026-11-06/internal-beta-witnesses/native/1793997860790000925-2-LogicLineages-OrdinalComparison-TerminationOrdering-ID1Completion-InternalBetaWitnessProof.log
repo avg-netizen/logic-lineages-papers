@@ -1,0 +1,69 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:15:55: error: Type mismatch
+  s =' t
+has type
+  L.BoundedFormula α k
+but is expected to have type
+  L.Formula (α ⊕ Fin k)
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:21:9: error: Type mismatch
+  BoundedFormula.equal (Term.relabel ?m.89 (Term.relabel Sum.inl s)) (Term.relabel ?m.98 (Term.relabel Sum.inl t)) =
+    ?m.100
+has type
+  Prop
+of sort `Type` but is expected to have type
+  Sort u_3
+of sort `Type u_3`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:33:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel id (?p ⊓ ?q)
+in the target expression
+  (have lift := fun t => Term.relabel Sum.inl t;
+      have modulus :=
+        OrdinaryArithmetic.succTerm (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (lift i)) (lift b));
+      lift a =' OrdinaryArithmetic.addTerm (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) modulus) (lift r) ⊓
+        OrdinaryArithmetic.addTerm (lift r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))) =' modulus).exs =
+    (BoundedFormula.relabel id
+        ((Term.relabel Sum.inl a).equal
+            (OrdinaryArithmetic.addTerm
+              (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+                (OrdinaryArithmetic.succTerm
+                  (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                    (Term.relabel Sum.inl b))))
+              (Term.relabel Sum.inl r)) ⊓
+          Term.equal
+            (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+            (OrdinaryArithmetic.succTerm
+              (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                (Term.relabel Sum.inl b))))).exs
+
+α : Type
+a b i r : InternalBetaWitness.OTerm α
+⊢ (have lift := fun t => Term.relabel Sum.inl t;
+      have modulus :=
+        OrdinaryArithmetic.succTerm (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (lift i)) (lift b));
+      lift a =' OrdinaryArithmetic.addTerm (OrdinaryArithmetic.mulTerm (var (Sum.inr 0)) modulus) (lift r) ⊓
+        OrdinaryArithmetic.addTerm (lift r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))) =' modulus).exs =
+    (BoundedFormula.relabel id
+        ((Term.relabel Sum.inl a).equal
+            (OrdinaryArithmetic.addTerm
+              (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+                (OrdinaryArithmetic.succTerm
+                  (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                    (Term.relabel Sum.inl b))))
+              (Term.relabel Sum.inl r)) ⊓
+          Term.equal
+            (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+            (OrdinaryArithmetic.succTerm
+              (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                (Term.relabel Sum.inl b))))).exs
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:50:6: error: Application type mismatch: The argument
+  Term.subst
+    (add (mul (var ?m.155) (suc (mul (suc (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b))))
+      (Term.relabel Sum.inl r))
+has type
+  (α ⊕ ?m.173 → OrdinaryArithmetic.arithmeticLanguage.Term ?m.176) → OrdinaryArithmetic.arithmeticLanguage.Term ?m.176
+but is expected to have type
+  OrdinaryArithmetic.arithmeticLanguage.Term ?m.150
+in the application
+  ((Term.relabel Sum.inl a).subst ?m.148).equal
+    (Term.subst
+      (add (mul (var ?m.155) (suc (mul (suc (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b))))
+        (Term.relabel Sum.inl r)))

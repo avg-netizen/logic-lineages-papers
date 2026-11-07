@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutStatementChecks
+theorem conversion_exact : InternalOrientedBezoutTargets.ActualSignedConversion :=
+  InternalOrientedBezoutArithmeticProof.actualSignedConversion
+theorem existence_exact : InternalOrientedBezoutTargets.ActualOrientedBezoutFromCoprimality :=
+  InternalOrientedBezoutProof.actualOrientedBezoutFromCoprimality
+#print axioms conversion_exact
+#print axioms existence_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOrientedBezoutStatementChecks

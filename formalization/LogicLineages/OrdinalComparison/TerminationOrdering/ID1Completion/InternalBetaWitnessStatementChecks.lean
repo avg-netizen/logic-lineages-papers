@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessStatementChecks
+theorem matrix_exact : InternalBetaWitnessTargets.ActualBetaMatrix := InternalBetaWitnessProof.actualBetaMatrix
+theorem introduction_exact : InternalBetaWitnessTargets.ActualBetaIntroduction := InternalBetaWitnessProof.actualBetaIntroduction
+theorem elimination_exact : InternalBetaWitnessTargets.ActualBetaElimination := InternalBetaWitnessProof.actualBetaElimination
+theorem zero_exact : InternalBetaWitnessTargets.ActualBetaZero := InternalBetaWitnessProof.actualBetaZero
+#print axioms matrix_exact
+#print axioms introduction_exact
+#print axioms elimination_exact
+#print axioms zero_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaWitnessStatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityStatementChecks
+theorem successorExists_exact : InternalBetaTotalityTargets.ActualBetaSuccessorExistence := InternalBetaTotalityProof.actualBetaSuccessorExistence
+theorem totality_exact : InternalBetaTotalityTargets.ActualBetaTotality := InternalBetaTotalityProof.actualBetaTotality
+#print axioms successorExists_exact
+#print axioms totality_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityStatementChecks

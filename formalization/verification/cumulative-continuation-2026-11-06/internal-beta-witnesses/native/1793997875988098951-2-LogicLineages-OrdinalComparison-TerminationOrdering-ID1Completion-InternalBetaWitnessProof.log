@@ -1,0 +1,30 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBetaWitnessProof.lean:49:2: error: 'change' tactic failed, pattern
+  ((Term.relabel Sum.inl a).subst ?m.148).equal
+        (Term.subst
+          (add (mul (var (Sum.inr 0)) (suc (mul (suc (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b))))
+            (Term.relabel Sum.inl r))
+          ?m.177) ⊓
+      (Term.subst (add (Term.relabel Sum.inl r) (suc (var (Sum.inr 1)))) ?m.196).equal
+        (Term.subst (suc (mul (suc (Term.relabel Sum.inl i)) (Term.relabel Sum.inl b))) ?m.215) =
+    ?m.223
+is not definitionally equal to target
+  BoundedFormula.subst
+      ((Term.relabel Sum.inl a).equal
+          (OrdinaryArithmetic.addTerm
+            (OrdinaryArithmetic.mulTerm (var (Sum.inr 0))
+              (OrdinaryArithmetic.succTerm
+                (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+                  (Term.relabel Sum.inl b))))
+            (Term.relabel Sum.inl r)) ⊓
+        Term.equal (OrdinaryArithmetic.addTerm (Term.relabel Sum.inl r) (OrdinaryArithmetic.succTerm (var (Sum.inr 1))))
+          (OrdinaryArithmetic.succTerm
+            (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm (Term.relabel Sum.inl i))
+              (Term.relabel Sum.inl b))))
+      (Sum.elim var ts) =
+    Term.equal a
+        (OrdinaryArithmetic.addTerm
+          (OrdinaryArithmetic.mulTerm (ts 0)
+            (OrdinaryArithmetic.succTerm (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm i) b)))
+          r) ⊓
+      Term.equal (OrdinaryArithmetic.addTerm r (OrdinaryArithmetic.succTerm (ts 1)))
+        (OrdinaryArithmetic.succTerm (OrdinaryArithmetic.mulTerm (OrdinaryArithmetic.succTerm i) b))

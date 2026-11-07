@@ -1,0 +1,10 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalModularArithmeticProof
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/joint-gamma-paths/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalModularArithmeticProof.lean:23:2: error: Type mismatch
+  onEquality ?m.13 ?m.15
+has type
+  ∀ (t : Language.Term ?m.11 ?m.14),
+    LHom.onFormula ?m.13 (Term.equal ?m.15 t) = (LHom.onTerm ?m.13 ?m.15).equal (LHom.onTerm ?m.13 t)
+but is expected to have type
+  arithmeticEmbedding.onFormula (equation a b m q p) = eqn (add a (mul q m)) (add b (mul p m))
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalModularArithmeticProof: 1
+BUILD_RECEIPT build-reports/1794000695206877983-6.json

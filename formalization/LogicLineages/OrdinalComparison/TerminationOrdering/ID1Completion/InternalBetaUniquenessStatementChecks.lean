@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaUniquenessProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaUniquenessStatementChecks
+theorem uniqueness_exact : InternalBetaUniquenessTargets.ActualOriginalBetaUniqueness := InternalBetaUniquenessProof.actualOriginalBetaUniqueness
+#print axioms uniqueness_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaUniquenessStatementChecks
