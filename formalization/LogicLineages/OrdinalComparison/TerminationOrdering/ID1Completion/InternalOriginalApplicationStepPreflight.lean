@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalApplicationStepTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalApplicationStepPreflight
+
+def comparator0 : Prop := InternalOriginalApplicationStepTargets.ActualOriginalGuardedApplicationStep
+def comparator1 : Prop := InternalOriginalApplicationStepTargets.ActualOriginalSelectedApplicationStep
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalApplicationStepPreflight
