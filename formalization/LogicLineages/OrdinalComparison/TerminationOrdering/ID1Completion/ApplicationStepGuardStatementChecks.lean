@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardStatementChecks
+
+theorem pathDecoderLift_exact : ApplicationStepGuardPreflight.pathDecoderLiftComparator :=
+  ApplicationStepGuardProof.actualPathDecoderLift
+theorem certificateDecoderLift_exact : ApplicationStepGuardPreflight.certificateDecoderLiftComparator :=
+  ApplicationStepGuardProof.actualCertificateDecoderLift
+theorem rawCodeIdentity_exact : ApplicationStepGuardPreflight.rawCodeIdentityComparator :=
+  ApplicationStepGuardProof.actualRawCodeIdentity
+theorem sourceUniverseDecomposition_exact : ApplicationStepGuardPreflight.sourceUniverseDecompositionComparator :=
+  ApplicationStepGuardProof.actualSourceUniverseDecomposition
+theorem typedNumericIdentity_exact : ApplicationStepGuardPreflight.typedNumericIdentityComparator :=
+  ApplicationStepGuardProof.actualTypedNumericIdentity
+theorem rawEndpointIdentity_exact : ApplicationStepGuardPreflight.rawEndpointIdentityComparator :=
+  ApplicationStepGuardProof.actualRawEndpointIdentity
+theorem subtypeClosedNumericIdentity_exact : ApplicationStepGuardPreflight.subtypeClosedNumericIdentityComparator :=
+  ApplicationStepGuardProof.actualSubtypeClosedNumericIdentity
+
+#print axioms pathDecoderLift_exact
+#print axioms certificateDecoderLift_exact
+#print axioms rawCodeIdentity_exact
+#print axioms sourceUniverseDecomposition_exact
+#print axioms typedNumericIdentity_exact
+#print axioms rawEndpointIdentity_exact
+#print axioms subtypeClosedNumericIdentity_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardStatementChecks

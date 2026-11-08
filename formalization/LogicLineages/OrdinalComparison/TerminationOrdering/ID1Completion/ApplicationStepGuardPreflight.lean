@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardPreflight
+
+def pathDecoderLiftComparator : Prop := ApplicationStepGuardTargets.ActualPathDecoderLift
+def certificateDecoderLiftComparator : Prop := ApplicationStepGuardTargets.ActualCertificateDecoderLift
+def rawCodeIdentityComparator : Prop := ApplicationStepGuardTargets.ActualRawCodeIdentity
+def sourceUniverseDecompositionComparator : Prop := ApplicationStepGuardTargets.ActualSourceUniverseDecomposition
+def typedNumericIdentityComparator : Prop := ApplicationStepGuardTargets.ActualTypedNumericIdentity
+def rawEndpointIdentityComparator : Prop := ApplicationStepGuardTargets.ActualRawEndpointIdentity
+def subtypeClosedNumericIdentityComparator : Prop := ApplicationStepGuardTargets.ActualSubtypeClosedNumericIdentity
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationStepGuardPreflight
