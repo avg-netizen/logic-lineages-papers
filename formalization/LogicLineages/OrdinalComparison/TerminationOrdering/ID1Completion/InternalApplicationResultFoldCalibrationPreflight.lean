@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultFoldCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultFoldCalibrationPreflight
+
+def comparator0 : Prop := InternalApplicationResultFoldCalibrationTargets.ActualOriginalSemanticResultFoldEquation
+def comparator1 : Prop := InternalApplicationResultFoldCalibrationTargets.ActualOriginalEncodedResultStackIteration
+def comparator2 : Prop := InternalApplicationResultFoldCalibrationTargets.ActualOriginalResultStackSufficientFuel
+def comparator3 : Prop := InternalApplicationResultFoldCalibrationTargets.ActualOriginalResultStackMeaningInvariant
+def comparator4 : Prop := InternalApplicationResultFoldCalibrationTargets.ActualOriginalCompletedResultFold
+def comparator5 : Prop := InternalApplicationResultFoldCalibrationTargets.ActualOriginalBoundedResultFoldCalibration
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultFoldCalibrationPreflight
