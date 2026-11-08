@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedSourceGuardSelectionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedSourceGuardSelectionPreflight
+
+def comparator0 : Prop := InternalCertifiedSourceGuardSelectionTargets.ActualOriginalCertifiedSourceGuardCalibration
+def comparator1 : Prop := InternalCertifiedSourceGuardSelectionTargets.ActualOriginalCertifiedStepAcceptanceFactorization
+def comparator2 : Prop := InternalCertifiedSourceGuardSelectionTargets.ActualOriginalCertifiedTypedAcceptanceFactorization
+def comparator3 : Prop := InternalCertifiedSourceGuardSelectionTargets.ActualOriginalCertifiedSourceGuardSelection
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedSourceGuardSelectionPreflight
