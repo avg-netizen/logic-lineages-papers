@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchPreflight
+
+def comparator0 : Prop := InternalFixedWindowVertexDispatchTargets.ActualOriginalFixedWindowActiveVertexEquality
+def comparator1 : Prop := InternalFixedWindowVertexDispatchTargets.ActualOriginalFixedWindowVertexCalibration
+def comparator2 : Prop := InternalFixedWindowVertexDispatchTargets.ActualInternalFixedWindowVertexActivation
+def comparator3 : Prop := InternalFixedWindowVertexDispatchTargets.ActualInternalFixedWindowActiveVertexGraph
+def comparator4 : Prop := InternalFixedWindowVertexDispatchTargets.ActualOriginalFixedWindowVertexSelection
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchPreflight

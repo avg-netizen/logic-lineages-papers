@@ -1,0 +1,40 @@
+{
+  "amended_at_utc": "2026-11-08T11:48:34.426544+00:00",
+  "stage": "Static review before preflight; no proof or compiler.",
+  "reason": "Use expanded internal-calculus equality and explicitly resolve the arrow constructor graph namespace.",
+  "original_frozen_specification": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchDefinitions.lean": "9d4ac86d4d1d5aaad1cfb85df333681e07254385719df78980a05ed1e5f0d61b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchTargets.lean": "5dd0653679fc2cbd5db9a6b0956e5ed49320e013cf104e13ca05c7ab0505afde",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchPreflight.lean": "426786dd3ac364aa24528c50133112f5396e5c502248194874ed6deaad6c7f18",
+    "verification/cumulative-continuation-2026-11-08/fixed-window-vertex-dispatch/SOURCE-CORRESPONDENCE.md": "7e7d794dff87efd5911009bf3ee4f00aac22c27d806871c0d279fa8a47826dc1"
+  },
+  "revised_frozen_specification": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchDefinitions.lean": "faaa69235a86ea8a12e498bee298ffa47dc9f08185523e1defee6508ca618c36",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchTargets.lean": "4da54dbbcc31fd71d768714e504d23294fb49902b1b9feb49f8db2a87cd11df8",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchPreflight.lean": "426786dd3ac364aa24528c50133112f5396e5c502248194874ed6deaad6c7f18",
+    "verification/cumulative-continuation-2026-11-08/fixed-window-vertex-dispatch/SOURCE-CORRESPONDENCE.md": "0d2e1a97642352d40c1d672e848a4156bc68d20581183e0d1f9dd7be527b0797"
+  },
+  "exact_edits": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchDefinitions.lean",
+      "old": "context.equal (numeral window)",
+      "new": "InternalControlGraph.equal context (numeral window)"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalFixedWindowVertexDispatchTargets.lean",
+      "old": "graph2 InternalListCodec.consCode",
+      "new": "InternalApplicationCertificateConstructors.graph2 InternalListCodec.consCode",
+      "occurrences": 2
+    },
+    {
+      "path": "verification/cumulative-continuation-2026-11-08/fixed-window-vertex-dispatch/SOURCE-CORRESPONDENCE.md",
+      "change": "Append transparent static-review amendment record."
+    }
+  ],
+  "mathematical_contracts_unchanged": true,
+  "original_freeze_byte_exact_snapshot_verified": true,
+  "independent_recheck": "pending",
+  "native_preflight": "not run",
+  "proof_authorship": "not started",
+  "git_actions": 0
+}
