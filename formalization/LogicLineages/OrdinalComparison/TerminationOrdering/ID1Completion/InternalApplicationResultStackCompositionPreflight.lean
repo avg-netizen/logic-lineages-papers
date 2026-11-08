@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultStackCompositionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultStackCompositionPreflight
+
+def comparator0 : Prop := InternalApplicationResultStackCompositionTargets.ActualOriginalResultStackTerminalIteration
+def comparator1 : Prop := InternalApplicationResultStackCompositionTargets.ActualOriginalResultStackRunZero
+def comparator2 : Prop := InternalApplicationResultStackCompositionTargets.ActualOriginalResultStackWorkAppend
+def comparator3 : Prop := InternalApplicationResultStackCompositionTargets.ActualOriginalResultStackResultSuffixFrame
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultStackCompositionPreflight
