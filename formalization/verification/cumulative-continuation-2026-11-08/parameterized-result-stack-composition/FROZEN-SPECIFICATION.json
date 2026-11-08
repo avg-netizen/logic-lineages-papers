@@ -1,0 +1,226 @@
+{
+  "created_at_utc": "2026-11-08T16:10:06Z",
+  "status": "frozen-for-independent-static-review-not-compiled-not-proved",
+  "scope": "Three output-preserving same-parameter original result-stack composition prerequisites: actual run zero, work append at first+second through the whole intermediate result stack, and result-suffix framing under actual success.",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultStackComposition",
+  "new_specification_files": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionPreflight.lean"
+  ],
+  "target_count": 3,
+  "targets": [
+    "ActualOriginalParameterizedResultStackRunZero",
+    "ActualOriginalParameterizedResultStackWorkAppend",
+    "ActualOriginalParameterizedResultStackResultSuffixFrame"
+  ],
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultStackCompositionPreflight",
+  "frozen_source_pins": "FROZEN-SOURCE-PINS.json",
+  "frozen_source_pins_sha256": "00168a4e103e3bf82c28e9e3fbc9ed9187fe5be354b5b9f41d55deec87a95fbf",
+  "source_pins": "SOURCE-PINS.json",
+  "source_pins_sha256": "963a4c03ed33e2108cb45bc10b0f343899434ddc476c5ecf1b9ef3a7f79fa63f",
+  "static_checks": "STATIC-CHECKS.json",
+  "static_checks_sha256": "18c2754d060bb9f99eaa86192da14d7a3855e424b8a674e0d3d39eb87739bc54",
+  "source_pin_scope": "Stable full local import closure of new definitions/targets/preflight, the three frozen parameterized-stack specification files only, and selected accepted original stack/composition and parameterized numeric iteration roots. No mutable parameterized-stack proof or metadata is included.",
+  "full_local_import_closure_count": 1181,
+  "existing_local_source_pin_count": 1178,
+  "non_lean_input_pin_count": 7,
+  "closure_roots": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationResultStackStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationResultStackCompositionStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationStepPeelComponentsProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationStatementChecks.lean"
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.PartrecCode",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.Fintype.Order",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.List.FinRange",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.List.Permutation",
+    "Mathlib.Data.Multiset.DershowitzManna",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Nat.Sqrt",
+    "Mathlib.Logic.Equiv.List",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Logic.Godel.GodelBetaFunction",
+    "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.FixedPoints"
+  ],
+  "callbacks": {
+    "guard": "arbitrary Program 2",
+    "leaf": "arbitrary Program 2",
+    "combine": "arbitrary Program 5",
+    "guard_leaf_order": [
+      "value",
+      "parameter"
+    ],
+    "combine_order": [
+      "domain",
+      "codomain",
+      "functionOutput",
+      "argumentOutput",
+      "parameter"
+    ],
+    "premises": [],
+    "selection_order": "Actual ASTs precede variable type, Gamma and all symbolic terms."
+  },
+  "actual_run": {
+    "name": "actualRunP",
+    "term_order": [
+      "count",
+      "work",
+      "initialResults",
+      "finalResults",
+      "parameter"
+    ],
+    "witnesses": [
+      "initial original liveState [work,initialResults]",
+      "final original emptyState [finalResults]"
+    ],
+    "iterator_graph": "graph3 (iterateP G L C) finalState count initialState parameter",
+    "existential_parameter": false,
+    "final_status": 1,
+    "final_work": 0,
+    "final_results": "entire arbitrary finalResults code",
+    "boolean_completion_replacement": false
+  },
+  "state": {
+    "original_live_constructor": "InternalApplicationResultStackComposition.liveState",
+    "original_terminal_constructor": "InternalApplicationResultStack.emptyState",
+    "encoding": "InternalApplicationResultStack.encodeState",
+    "changed": false,
+    "parameter_in_original_state_frames_results_or_fuel": false
+  },
+  "append": "InternalApplicationValidityStackAppend.append, reused literally for work and results",
+  "work_append": {
+    "premises": [
+      "actual original append graph",
+      "actualRunP first frontWork initialResults middleResults parameter",
+      "actualRunP second suffix middleResults finalResults parameter"
+    ],
+    "conclusion": "actualRunP (addTerm first second) joined initialResults finalResults parameter",
+    "early_terminal_padding_allowed": true,
+    "untouched_suffix_after_first_claim": false
+  },
+  "result_frame": {
+    "premise": "actual successful run plus two original append graphs with the same background",
+    "preserved": [
+      "work",
+      "exact count",
+      "symbolic parameter",
+      "entire appended result background"
+    ],
+    "unconditional_failed_run_framing": false,
+    "added_result_shape_premise": false
+  },
+  "internal_calculus": "Nonempty (InternalCalculus.Derivation body Gamma formula)",
+  "quantification": "Arbitrary original body, actual callbacks, variable type, context Gamma, raw symbolic counts/stacks and identical symbolic parameter.",
+  "zero_target": "iff empty original work and equality of entire final and initial results",
+  "prior_target_correspondence": {
+    "ActualOriginalParameterizedResultStackRunZero": "ActualOriginalResultStackRunZero",
+    "ActualOriginalParameterizedResultStackWorkAppend": "ActualOriginalResultStackWorkAppend",
+    "ActualOriginalParameterizedResultStackResultSuffixFrame": "ActualOriginalResultStackResultSuffixFrame"
+  },
+  "duplicate_terminal_target": {
+    "included": false,
+    "supplier": "InternalParameterizedApplicationResultStackTargets.ActualOriginalParameterizedApplicationResultStackTerminalIteration",
+    "supplier_status": "Specification frozen and preflight-passed; proof work pending, not assumed accepted."
+  },
+  "returned_relation": "Existing arity-generic InternalApplicationResultStackReturnSupportProof.returned; not redefined",
+  "evaluation_boundary": "No external evaluation theorem or evaluation-extensionality argument supplies these internal graph derivations.",
+  "active_stack_specification_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackDefinitions.lean": "d62ca20fe856b0b321ad9edb52ebea71fb9434ab605a16d7b29b3a909143d6f6",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackTargets.lean": "94f8070637023cc3d0711d801b2bff81e8f6836ad8bab7b5931ec6b3e3bf136b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackPreflight.lean": "05830b27fad1988029ab9778d2ba3f10d2ad8e49be3296c577f0694e7ff6dec5"
+  },
+  "mutable_active_stack_files_pinned": [],
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "source_reduction_lines": [
+      537,
+      549
+    ],
+    "quotient_representative_lines": [
+      551,
+      556
+    ],
+    "supporting_lemma_lines": [
+      558,
+      560
+    ],
+    "role": "Supporting prerequisite for paper06 lem:id1; no numbered promotion"
+  },
+  "compiler_status": "Not run. No compiler slot requested or held; parameterized stack worker retains exclusive native admission.",
+  "proof_authorship_status": "Not begun. No proof files created. Await independent frozen-byte review, sole-slot comparator preflight and explicit release.",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "required_entrypoint": "scripts/check.py",
+    "stop_at_utc": "2026-11-08T18:00:00Z"
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_claims": [
+    "full fold correctness",
+    "full-run success or output shape",
+    "fixed-fuel sufficiency",
+    "recursive representative fold",
+    "representative congruence or identification",
+    "uniform canonical selection",
+    "uniform path correctness",
+    "unconditional CertifiedApplicationLift",
+    "constructor/lambda/substitution closure",
+    "all-term accessibility",
+    "paper06 lem:id1 completion",
+    "parameter-specialized unary AST",
+    "new interpreter or recursion primitive",
+    "new source/state/work/result encoding",
+    "parameter or whole-pair fuel",
+    "semantic truth-to-derivability reflection",
+    "numbered source promotion",
+    "native acceptance",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ],
+  "next_gates": [
+    "independent frozen-byte specification review",
+    "coordinator-authorized sole-slot comparator-only preflight",
+    "accepted local parameterized stack graph suppliers",
+    "separately authorized proof authorship",
+    "exact frozen-type aliases and actual standard-axiom closure audits"
+  ]
+}
