@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStructuralEndpointGuardTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStructuralEndpointGuardPreflight
+
+def comparator0 : Prop := InternalStructuralEndpointGuardTargets.ActualOriginalMembershipProgramExists
+def comparator1 : Prop := InternalStructuralEndpointGuardTargets.ActualOriginalStructuralEndpointCalibration
+def comparator2 : Prop := InternalStructuralEndpointGuardTargets.ActualOriginalEndpointAcceptanceAtArrow
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStructuralEndpointGuardPreflight
