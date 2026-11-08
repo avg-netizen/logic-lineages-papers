@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeTypeGuardTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeTypeGuardPreflight
+
+def comparator0 : Prop := InternalQuotientEdgeTypeGuardTargets.ActualOriginalQuotientEdgeTypedEndpoints
+def comparator1 : Prop := InternalQuotientEdgeTypeGuardTargets.ActualOriginalQuotientEdgeTypedWrapperCalibration
+def comparator2 : Prop := InternalQuotientEdgeTypeGuardTargets.ActualOriginalQuotientEdgeTypedAcceptanceEquation
+def comparator3 : Prop := InternalQuotientEdgeTypeGuardTargets.ActualOriginalQuotientEdgeTypedTransport
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeTypeGuardPreflight
