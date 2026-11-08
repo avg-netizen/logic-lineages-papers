@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTypedEdgePresentationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTypedEdgePresentationPreflight
+
+def comparator0 : Prop := InternalTypedEdgePresentationTargets.ActualOriginalMembershipTypedCalibration
+def comparator1 : Prop := InternalTypedEdgePresentationTargets.ActualOriginalTypedEdgePresentation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTypedEdgePresentationPreflight
