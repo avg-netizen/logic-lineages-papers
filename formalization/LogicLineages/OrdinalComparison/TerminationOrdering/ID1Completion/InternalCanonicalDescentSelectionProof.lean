@@ -1,0 +1,51 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionInternalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus
+open InternalCanonicalDescentSelection InternalCanonicalDescentSelectionTargets
+
+theorem actualOriginalCanonicalTransitionIdentification : ActualOriginalCanonicalTransitionIdentification :=
+  InternalCanonicalDescentSelectionEvaluationProof.actualOriginalCanonicalTransitionIdentification
+
+theorem actualOriginalCanonicalDescentCalibration : ActualOriginalCanonicalDescentCalibration :=
+  InternalCanonicalDescentSelectionEvaluationProof.actualOriginalCanonicalDescentCalibration
+
+theorem actualOriginalCanonicalDescentTypedCalibration : ActualOriginalCanonicalDescentTypedCalibration :=
+  InternalCanonicalDescentSelectionEvaluationProof.actualOriginalCanonicalDescentTypedCalibration
+
+theorem actualOriginalCanonicalDescentDataCalibration : ActualOriginalCanonicalDescentDataCalibration :=
+  InternalCanonicalDescentSelectionEvaluationProof.actualOriginalCanonicalDescentDataCalibration
+
+theorem actualOriginalCanonicalDescentTypedFactorization : ActualOriginalCanonicalDescentTypedFactorization :=
+  InternalCanonicalDescentSelectionInternalProof.actualOriginalCanonicalDescentTypedFactorization
+
+theorem actualOriginalCanonicalDescentValidity : ActualOriginalCanonicalDescentValidity :=
+  InternalCanonicalDescentSelectionInternalProof.actualOriginalCanonicalDescentValidity
+
+theorem actualOriginalCanonicalDescentLeft : ActualOriginalCanonicalDescentLeft :=
+  InternalCanonicalDescentSelectionInternalProof.actualOriginalCanonicalDescentLeft
+
+theorem actualOriginalCanonicalDescentFixedPoint : ActualOriginalCanonicalDescentFixedPoint :=
+  InternalCanonicalDescentSelectionInternalProof.actualOriginalCanonicalDescentFixedPoint
+
+theorem actualOriginalCanonicalDescentTypedOutput : ActualOriginalCanonicalDescentTypedOutput :=
+  InternalCanonicalDescentSelectionInternalProof.actualOriginalCanonicalDescentTypedOutput
+
+/-- One calibrated finite leaf selection precedes every internal parameter. -/
+theorem actualOriginalCanonicalDescentSelection : ActualOriginalCanonicalDescentSelection := by
+  intro n arity symbols S Gamma table hs
+  obtain ⟨data,hc⟩ := InternalCanonicalDescentSelectionEvaluationProof.calibratedDataExists
+    n arity symbols S Gamma table
+  refine ⟨data,hc,actualOriginalCanonicalDescentDataCalibration
+    n arity symbols S Gamma table data hs hc,?_⟩
+  intro body α Delta
+  exact ⟨fun value typ => actualOriginalCanonicalDescentTypedFactorization
+      body data.oldEdge.targetRepresentative (validity data).sourceValid data.member α Delta value typ,
+    fun out input typ => actualOriginalCanonicalDescentTypedOutput
+      body data.oldEdge.targetRepresentative (validity data).sourceValid data.member α Delta out input typ⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionProof

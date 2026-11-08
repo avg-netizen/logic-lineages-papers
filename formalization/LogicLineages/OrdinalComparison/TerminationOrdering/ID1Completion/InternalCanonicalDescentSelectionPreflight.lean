@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionPreflight
+
+def comparator0 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalTransitionIdentification
+def comparator1 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentCalibration
+def comparator2 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentTypedCalibration
+def comparator3 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentDataCalibration
+def comparator4 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentTypedFactorization
+def comparator5 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentValidity
+def comparator6 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentLeft
+def comparator7 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentFixedPoint
+def comparator8 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentTypedOutput
+def comparator9 : Prop := InternalCanonicalDescentSelectionTargets.ActualOriginalCanonicalDescentSelection
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalDescentSelectionPreflight
