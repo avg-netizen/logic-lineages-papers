@@ -1,0 +1,99 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberSourceDispatchEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberSourceDispatchCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberSourceDispatchGraphProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeApplicationLiftProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaProgramsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.JointGammaComputabilityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationResultBuilderProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberSourceDispatchProof
+open InternalOriginalObjectFiberSourceDispatch
+
+theorem actualOriginalObjectSourceAuxiliaryCalibration :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourceAuxiliaryCalibration :=
+  InternalOriginalObjectFiberSourceDispatchEvaluationProof.actualOriginalObjectSourceAuxiliaryCalibration
+
+theorem actualOriginalObjectSourcePositiveEvaluation :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourcePositiveEvaluation :=
+  InternalOriginalObjectFiberSourceDispatchEvaluationProof.actualOriginalObjectSourcePositiveEvaluation
+
+theorem actualOriginalObjectSourceTypedEvaluation :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourceTypedEvaluation :=
+  InternalOriginalObjectFiberSourceDispatchEvaluationProof.actualOriginalObjectSourceTypedEvaluation
+
+theorem actualOriginalObjectSourceResultEvaluation :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourceResultEvaluation :=
+  InternalOriginalObjectFiberSourceDispatchEvaluationProof.actualOriginalObjectSourceResultEvaluation
+
+theorem actualOriginalObjectSourcePositiveCalibration :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourcePositiveCalibration :=
+  InternalOriginalObjectFiberSourceDispatchCalibrationProof.actualOriginalObjectSourcePositiveCalibration
+
+theorem actualOriginalObjectSourceTypedCalibration :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourceTypedCalibration :=
+  InternalOriginalObjectFiberSourceDispatchCalibrationProof.actualOriginalObjectSourceTypedCalibration
+
+theorem actualOriginalObjectSourceActiveResult :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourceActiveResult :=
+  InternalOriginalObjectFiberSourceDispatchCalibrationProof.actualOriginalObjectSourceActiveResult
+
+theorem actualOriginalObjectSourceResultCalibration :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalObjectSourceResultCalibration :=
+  InternalOriginalObjectFiberSourceDispatchCalibrationProof.actualOriginalObjectSourceResultCalibration
+
+theorem actualInternalOriginalObjectSourcePositiveGraph :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualInternalOriginalObjectSourcePositiveGraph :=
+  InternalOriginalObjectFiberSourceDispatchGraphProof.actualInternalOriginalObjectSourcePositiveGraph
+
+theorem actualInternalOriginalObjectSourceTypedGraph :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualInternalOriginalObjectSourceTypedGraph :=
+  InternalOriginalObjectFiberSourceDispatchGraphProof.actualInternalOriginalObjectSourceTypedGraph
+
+theorem actualInternalOriginalObjectSourceResultGraph :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualInternalOriginalObjectSourceResultGraph :=
+  InternalOriginalObjectFiberSourceDispatchGraphProof.actualInternalOriginalObjectSourceResultGraph
+
+theorem actualInternalOriginalObjectSourcePositiveZeroGraph :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualInternalOriginalObjectSourcePositiveZeroGraph :=
+  InternalOriginalObjectFiberSourceDispatchGraphProof.actualInternalOriginalObjectSourcePositiveZeroGraph
+
+theorem actualInternalOriginalObjectSourceTypedZeroGraph :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualInternalOriginalObjectSourceTypedZeroGraph :=
+  InternalOriginalObjectFiberSourceDispatchGraphProof.actualInternalOriginalObjectSourceTypedZeroGraph
+
+theorem actualInternalOriginalObjectSourceResultZeroGraph :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualInternalOriginalObjectSourceResultZeroGraph :=
+  InternalOriginalObjectFiberSourceDispatchGraphProof.actualInternalOriginalObjectSourceResultZeroGraph
+
+/-- One original canonical selection is reused, never combined with a
+second existential Data. All old programs are globally calibrated before
+any body, variable type, Delta or symbolic term is chosen. -/
+theorem actualOriginalSelectedObjectSourceDispatch :
+    InternalOriginalObjectFiberSourceDispatchTargets.ActualOriginalSelectedObjectSourceDispatch := by
+  intro n arity symbols S Gamma table hc
+  obtain ⟨data,hd,hs,happ,he,hal⟩ :=
+    InternalCanonicalQuotientEdgeApplicationLiftProof.actualOriginalSelectedCanonicalQuotientEdgeApplicationLift
+      n arity symbols S Gamma table hc
+  obtain ⟨oldSource,hsource⟩ := JointGammaProgramsProof.actualContextUniformPresentationExists n arity
+  obtain ⟨oldComp,hcomp,_,_⟩ := JointGammaComputabilityProof.actualUniformFormulasExist n arity
+  obtain ⟨oldResult,success,hresult,_,_⟩ := ApplicationResultBuilderProof.actualProgramWitnesses n arity
+  refine ⟨data,oldSource,oldComp,oldResult,hd,hs,happ,he,hal,hsource,hcomp,hresult,
+    actualOriginalObjectSourceAuxiliaryCalibration,
+    actualOriginalObjectSourcePositiveCalibration n arity symbols S Gamma table
+      data oldSource.positive hc hd hsource.2.2.1,
+    actualOriginalObjectSourceTypedCalibration n arity symbols S Gamma table
+      data oldComp.typed hc hd hcomp.1,
+    actualOriginalObjectSourceResultCalibration n arity symbols S Gamma table
+      data oldResult hc hd hresult,?_⟩
+  let window := OrdinaryArithmeticQuotient.contextCode symbols S table
+  exact ⟨actualInternalOriginalObjectSourcePositiveGraph window Gamma data oldSource.positive,
+    actualInternalOriginalObjectSourceTypedGraph window Gamma data oldComp.typed,
+    actualInternalOriginalObjectSourceResultGraph window Gamma data oldResult,
+    actualInternalOriginalObjectSourcePositiveZeroGraph window Gamma data oldSource.positive,
+    actualInternalOriginalObjectSourceTypedZeroGraph window Gamma data oldComp.typed,
+    actualInternalOriginalObjectSourceResultZeroGraph window Gamma data oldResult⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberSourceDispatchProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberSourceDispatchProof
