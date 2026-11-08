@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsStatementChecks
+
+theorem actualOriginalPairingSumBound : InternalPairingSumBoundsTargets.ActualOriginalPairingSumBound :=
+  InternalPairingSumBoundsProof.actualOriginalPairingSumBound
+
+theorem actualOriginalApplicationPayloadChildFuelBound :
+    InternalPairingSumBoundsTargets.ActualOriginalApplicationPayloadChildFuelBound :=
+  InternalPairingSumBoundsProof.actualOriginalApplicationPayloadChildFuelBound
+
+theorem actualOriginalApplicationParentFuelBound :
+    InternalPairingSumBoundsTargets.ActualOriginalApplicationParentFuelBound :=
+  InternalPairingSumBoundsProof.actualOriginalApplicationParentFuelBound
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsStatementChecks

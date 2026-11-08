@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsPreflight
+
+def comparator0 : Prop := InternalPairingSumBoundsTargets.ActualOriginalPairingSumBound
+def comparator1 : Prop := InternalPairingSumBoundsTargets.ActualOriginalApplicationPayloadChildFuelBound
+def comparator2 : Prop := InternalPairingSumBoundsTargets.ActualOriginalApplicationParentFuelBound
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingSumBoundsPreflight
