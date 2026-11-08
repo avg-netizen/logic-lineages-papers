@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelStatementChecks
+
+theorem calibration_exact : InternalApplicationStepPeelPreflight.comparator0 :=
+  InternalApplicationStepPeelProof.actualOriginalTransitionCalibration
+#print axioms calibration_exact
+
+theorem lifted_exact : InternalApplicationStepPeelPreflight.comparator1 :=
+  InternalApplicationStepPeelProof.actualOriginalLiftedTransition
+#print axioms lifted_exact
+
+theorem rejected_exact : InternalApplicationStepPeelPreflight.comparator2 :=
+  InternalApplicationStepPeelProof.actualOriginalRejectedTransition
+#print axioms rejected_exact
+
+#print axioms InternalApplicationStepPeelProof.actualOriginalTransitionCalibration
+#print axioms InternalApplicationStepPeelProof.actualOriginalLiftedTransition
+#print axioms InternalApplicationStepPeelProof.actualOriginalRejectedTransition
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelStatementChecks

@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelPreflight
+
+def comparator0 : Prop := InternalApplicationStepPeelTargets.ActualOriginalTransitionCalibration
+def comparator1 : Prop := InternalApplicationStepPeelTargets.ActualOriginalLiftedTransition
+def comparator2 : Prop := InternalApplicationStepPeelTargets.ActualOriginalRejectedTransition
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelPreflight
