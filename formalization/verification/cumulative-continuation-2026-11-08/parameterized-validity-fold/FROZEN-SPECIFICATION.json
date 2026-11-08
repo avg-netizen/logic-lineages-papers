@@ -1,0 +1,218 @@
+{
+  "created_at_utc": "2026-11-08T16:48:45Z",
+  "status": "frozen-for-independent-static-review-not-compiled-not-proved",
+  "scope": "Four prerequisites: external all-input recurrence and slice validity calibration; internal same-parameter application closure and concrete source-to-target.",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationValidityFold",
+  "new_specification_files": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationValidityFoldDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationValidityFoldTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationValidityFoldPreflight.lean"
+  ],
+  "target_count": 4,
+  "targets": [
+    "ActualOriginalParameterizedValidityFoldRecurrence",
+    "ActualOriginalParameterizedValidityFoldCalibration",
+    "ActualOriginalParameterizedValidityFoldApplicationClosure",
+    "ActualOriginalParameterizedValidityFoldSourceImpliesTarget"
+  ],
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationValidityFoldPreflight",
+  "frozen_source_pins": "FROZEN-SOURCE-PINS.json",
+  "frozen_source_pins_sha256": "5776b2f932cdd9d867c95146d84f8ea477e813fc6499b58c3206cd75cd45fb93",
+  "source_pins": "SOURCE-PINS.json",
+  "source_pins_sha256": "b48d80727618fd991a52028054c6562a719bd38165dc7a0d99a0800e734f3d17",
+  "static_checks": "STATIC-CHECKS.json",
+  "static_checks_sha256": "12c0e4ce9076a20ee96a9d1aabfb4475959a016b29e9b36c676ad1b259f6beff",
+  "source_pin_scope": "Full local import closure of new specifications and selected stable suppliers; separately reviewed parameterized fold packets contribute only stable definitions, targets and preflight, never mutable proofs or acceptance metadata.",
+  "closure_roots": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationValidityFoldDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationValidityFoldTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationValidityFoldPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldTotalityDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldTotalityTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldTotalityPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldCalibrationDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldCalibrationTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldCalibrationPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationCertifiedResultFoldClosureDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationCertifiedResultFoldClosureTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationCertifiedResultFoldClosurePreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationValidityCalibrationProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationValidityStackStateProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAcceptanceCalibrationProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAcceptanceConjunctionProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAcceptanceSupportProof.lean"
+  ],
+  "full_local_import_closure_count": 1051,
+  "existing_local_source_pin_count": 1048,
+  "non_lean_input_pin_count": 5,
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.PartrecCode",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.Fintype.Order",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.List.FinRange",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.List.Permutation",
+    "Mathlib.Data.Multiset.DershowitzManna",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Nat.Sqrt",
+    "Mathlib.Logic.Equiv.List",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Logic.Godel.GodelBetaFunction",
+    "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.FixedPoints"
+  ],
+  "programs": {
+    "openingGuardP": "InternalLessThan.constantOne 2 ALWAYS",
+    "leafP": "GorbowVerifierNormalization.normalize oldLeaf",
+    "nodeAtP": "composition node [projection 1,projection 4]",
+    "combineP": "conjunction nodeAtP (conjunction (projection 2) (projection 3))",
+    "validatorP": "existing foldP openingGuardP (leafP oldLeaf) (combineP node)",
+    "targetP": "validatorP (constantOne 2) oldTarget",
+    "universeP": "validatorP member oldSource",
+    "sourceP": "conjunction targetP universeP"
+  },
+  "input_coordinates": [
+    "originalPackedValue",
+    "parameter"
+  ],
+  "combine_coordinates": [
+    "domain",
+    "codomain",
+    "functionOutput",
+    "argumentOutput",
+    "parameter"
+  ],
+  "opening": "every tag-two root, even when node rejects; only non-tag-two falls back to whole leaf",
+  "fuel": "existing original result fold succ(payload+payload); unchanged",
+  "old_boolean_stack": "different AST at payload+1; semantic calibration only, no AST identity",
+  "calibration": {
+    "parameter": "arbitrary fixed p",
+    "hypotheses": "old source, old target and member agree on every numeric input at that p",
+    "conclusions": [
+      "targetP equals original targetValidityValue",
+      "universeP equals original sourceValidityValue",
+      "sourceP equals original sourceValidityValue"
+    ],
+    "global_uniform_leaf_selection_claim": false,
+    "target_universe_filter": false,
+    "malformed_inputs_included": true
+  },
+  "application_closure": {
+    "premises": [
+      "original applicationConstructors",
+      "node(e,p)=1",
+      "actual child validator(fn,p)=1",
+      "actual child validator(arg,p)=1"
+    ],
+    "conclusion": "actual parent validator(parent,p)=1",
+    "supplied_goodRunP_premise": false,
+    "semantic_calibration_premise": false,
+    "supplier": "stable ActualOriginalParameterizedResultFoldApplicationEquation; proof acceptance separately pending"
+  },
+  "source_to_target": "context-uniform internal conjunction recovery, no calibration premises",
+  "semantic_proof_route": [
+    "direct strong induction on original numeric payload",
+    "applicationPayloadBound",
+    "targetAppAcceptance including malformed applications",
+    "sourceAppAcceptance including malformed applications",
+    "boolNormalized",
+    "originalSourceImpliesTarget"
+  ],
+  "stable_specification_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldTotalityDefinitions.lean": "821046ce27e7abb63064bc635eb307248326f7878e347bd698e02e06e36165ee",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldTotalityTargets.lean": "39c98c3b604dd589ed24bc4e1d611c4bfb8b7c3ef07bd1e40b931445df0caafe",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldTotalityPreflight.lean": "ba95ab6ea620b649797ec643ca8a45bd1511b60ce29410d6a0118932c6034429",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldCalibrationDefinitions.lean": "39c3d0ae2e986f68ebf0d608507a4537a3d415a0f31a5bd10c2e07564b1601e8",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldCalibrationTargets.lean": "4ebe68f85e21926acf91ed5c50eeda6eaace15c403418aada09661a36cd8bf0e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultFoldCalibrationPreflight.lean": "63b417ec1231cc45b718e4485e1b51fe35bd8b4c4a99a551864096daf23f8f5c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationCertifiedResultFoldClosureDefinitions.lean": "5ffdcf08efee12ae5351f382c56f614191bc308a6d50b6105801eb1ae109c6a1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationCertifiedResultFoldClosureTargets.lean": "34fa0850d23104a67b618817fc70c93352ecb9b05843fbadfdeef4e7d2119b4c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationCertifiedResultFoldClosurePreflight.lean": "3025d40f1c708a6a64a2a7d4f89e90f83d4dda63ac8d48cd573ad497703ebfd0",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionDefinitions.lean": "db35864952bc65b388294bb1f550e2ae4bf9fc914509b349abad6d300b134d69",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionTargets.lean": "6cec074b2e48f89e4b934ffe755b64e3a811c0c80a84d06b9c4e6ad6ba60f62e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackCompositionPreflight.lean": "2e5bf360d70e355207079e33c5f2bb13a818cb0681d8404c7b8a2af6482929e9"
+  },
+  "pending_mutable_files_pinned": [],
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "source_reduction_lines": [
+      537,
+      549
+    ],
+    "quotient_representative_lines": [
+      551,
+      556
+    ],
+    "supporting_lemma_lines": [
+      558,
+      560
+    ],
+    "role": "Supporting prerequisite for paper06 lem:id1; no numbered promotion"
+  },
+  "compiler_status": "Not run. No compiler slot requested or held.",
+  "proof_authorship_status": "Not begun. No proof files created; await independent frozen-byte review and coordinator release.",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "required_entrypoint": "scripts/check.py",
+    "stop_at_utc": "2026-11-08T18:00:00Z"
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_claims": [
+    "proof or native acceptance",
+    "old Boolean stack AST identity",
+    "generic validatorValue comparator",
+    "globally selected uniform binary leaves",
+    "target universe filter",
+    "node-dependent opening guard",
+    "semantic truth-to-derivability reflection",
+    "canonical representative selection or congruence",
+    "uniform canonical/path correctness",
+    "unconditional CertifiedApplicationLift",
+    "source constructor/lambda/substitution closure",
+    "all-term accessibility",
+    "paper06 lem:id1 completion",
+    "enlarged or parameter-dependent fuel",
+    "numbered source promotion",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ],
+  "next_gates": [
+    "independent frozen-byte specification review",
+    "coordinator-authorized sole-slot comparator preflight",
+    "accepted parameterized fold calibration and totality suppliers",
+    "separately authorized proof authorship",
+    "exact frozen-type aliases and actual standard-axiom closure audits"
+  ]
+}
