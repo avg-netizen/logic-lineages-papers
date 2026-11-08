@@ -1,0 +1,35 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerStatementChecks
+
+theorem zero_exact : InternalBoundedDescentNormalizerPreflight.comparator0 :=
+  InternalBoundedDescentNormalizerProof.actualOriginalBoundedDescentZero
+
+theorem fuel_fixed_point_exact : InternalBoundedDescentNormalizerPreflight.comparator1 :=
+  InternalBoundedDescentNormalizerProof.actualOriginalBoundedDescentFuelFixedPoint
+
+theorem normalizer_bound_exact : InternalBoundedDescentNormalizerPreflight.comparator2 :=
+  InternalBoundedDescentNormalizerProof.actualOriginalBoundedDescentNormalizerBound
+
+theorem normalizer_fixed_point_exact : InternalBoundedDescentNormalizerPreflight.comparator3 :=
+  InternalBoundedDescentNormalizerProof.actualOriginalBoundedDescentNormalizerFixedPoint
+
+theorem normalizer_validity_exact : InternalBoundedDescentNormalizerPreflight.comparator4 :=
+  InternalBoundedDescentNormalizerProof.actualOriginalBoundedDescentNormalizerValidity
+
+theorem normalizer_left_exact : InternalBoundedDescentNormalizerPreflight.comparator5 :=
+  InternalBoundedDescentNormalizerProof.actualOriginalBoundedDescentNormalizerLeft
+
+#print axioms zero_exact
+#print axioms fuel_fixed_point_exact
+#print axioms normalizer_bound_exact
+#print axioms normalizer_fixed_point_exact
+#print axioms normalizer_validity_exact
+#print axioms normalizer_left_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerStatementChecks

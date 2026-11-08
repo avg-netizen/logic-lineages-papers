@@ -1,0 +1,132 @@
+{
+  "frozen_at_utc": "2026-11-08T11:45:44.082009+00:00",
+  "state": "frozen; independent specification review and native preflight pending; proof authorship not started",
+  "scope": "Generic original-calculus bounded descent for arbitrary unary Program leaves; six targets; no external representative identification or numbered statement promotion.",
+  "files": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedDescentNormalizerDefinitions.lean",
+      "sha256": "53590e3911ae14602e357efe1fa560227909a8774270224a4980259b246363f6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedDescentNormalizerTargets.lean",
+      "sha256": "bf32fbbfdabc06aa68f13666830fbe333ddf59fc024dc7ccd8261b3a0053f0f8"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedDescentNormalizerPreflight.lean",
+      "sha256": "d201d1f541a7582ff87244b598e1827bccbc407a204e964408318c101c4ced4e"
+    },
+    {
+      "path": "verification/cumulative-continuation-2026-11-08/bounded-descent-normalizer/SOURCE-CORRESPONDENCE.md",
+      "sha256": "f02e0798d8aab1946db461cbe64425652ebf9599b23ef480e37e7fe0ef521d48"
+    },
+    {
+      "path": "verification/cumulative-continuation-2026-11-08/bounded-descent-normalizer/SOURCE-PINS.json",
+      "sha256": "0e7fc158cc0688dbcb0006157eb84eeeeadb1b528695a5e0abce3499ac4777cd"
+    }
+  ],
+  "original_source_pin_count": 37,
+  "original_source_pins_file": "SOURCE-PINS.json",
+  "pin_scope": "Selected original syntax/calculus/internal API sources and separate external correspondence sources. Not a compiled dependency-closure receipt.",
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerPreflight",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizer",
+  "leaves": {
+    "representative": "arbitrary Program 1",
+    "valid": "arbitrary Program 1",
+    "external_premises": []
+  },
+  "transition": {
+    "name": "transition representative valid",
+    "arity": 1,
+    "outer_composition": "choose valid composed with [representative, projection 0]",
+    "continuation_inputs": [
+      "candidate",
+      "original"
+    ],
+    "guard_order": [
+      "candidate < original",
+      "valid(candidate) = 1",
+      "InternalUnpair.left(candidate) = InternalUnpair.left(original)"
+    ],
+    "conditional_order": [
+      "guard",
+      "original",
+      "candidate"
+    ],
+    "equality_and_validity_policy": "existing exact-one conjunction; not nonzero acceptance",
+    "candidate_leaf_occurrences_in_outer_arguments": 1
+  },
+  "normalizer": {
+    "name": "normalizer representative valid",
+    "arity": 1,
+    "repeat_program": "InternalNumericIteration.repeatProgram (transition representative valid)",
+    "input_order": [
+      "successor input",
+      "input"
+    ],
+    "count_offset": 1,
+    "recursor": "original numeric primitive recursion, not raw-list recursion"
+  },
+  "derivation_calculus": "InternalCalculus.Derivation body Gamma",
+  "quantification": "Every arbitrary positive body, both unary leaves, variable type, derivation context and symbolic original arithmetic term.",
+  "weak_order": "InternalLessThan.strictLess lower (OrdinaryArithmetic.succTerm upper)",
+  "graph_compiler": "InternalControlGraph.programGraph / original OrdinaryArithmetic.graphFormula",
+  "fixed_point_conclusion": "transitionGraph representative valid out out",
+  "stronger_fuel_target": "(value <= fuel AND repeatGraph T out fuel value) -> transitionGraph R V out out; includes fuel zero",
+  "zero_case": "Unconditional transitionGraph R V zero zero; no candidate can pass candidate < zero.",
+  "optional_fallback_wrapper": "Not defined or targeted. Future D(x) = if V(x)=1 then B(x) else R(x) must be externally identified separately.",
+  "targets": [
+    "ActualOriginalBoundedDescentZero",
+    "ActualOriginalBoundedDescentFuelFixedPoint",
+    "ActualOriginalBoundedDescentNormalizerBound",
+    "ActualOriginalBoundedDescentNormalizerFixedPoint",
+    "ActualOriginalBoundedDescentNormalizerValidity",
+    "ActualOriginalBoundedDescentNormalizerLeft"
+  ],
+  "compiler_status": "Not run. No compiler slot granted.",
+  "proof_authorship_status": "Not begun; no proof files created.",
+  "static_checks": {
+    "new_lean_file_count": 3,
+    "target_count": 6,
+    "delimiter_balance": "passed (non-Lean text check only)",
+    "proof_or_axiom_declarations_in_new_lean_files": "none",
+    "native_elaboration": "not run"
+  },
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "least_code_representative_lines": [
+      551,
+      556
+    ],
+    "role": "supporting original-calculus prerequisite toward lem:id1; not source-statement completion"
+  },
+  "excluded_claims": [
+    "external representative identification",
+    "external all-input calibration",
+    "B-fixed or R-fixed substituted for T-fixed",
+    "replacement of original canonical typed carrier",
+    "application representative congruence",
+    "source-specific invariant propagation",
+    "CertifiedApplicationLift",
+    "paper06 lem:id1",
+    "numbered source promotion",
+    "semantic reflection",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ]
+}

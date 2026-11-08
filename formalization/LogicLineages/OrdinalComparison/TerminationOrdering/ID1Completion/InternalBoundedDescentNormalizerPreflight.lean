@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerPreflight
+
+def comparator0 : Prop := InternalBoundedDescentNormalizerTargets.ActualOriginalBoundedDescentZero
+def comparator1 : Prop := InternalBoundedDescentNormalizerTargets.ActualOriginalBoundedDescentFuelFixedPoint
+def comparator2 : Prop := InternalBoundedDescentNormalizerTargets.ActualOriginalBoundedDescentNormalizerBound
+def comparator3 : Prop := InternalBoundedDescentNormalizerTargets.ActualOriginalBoundedDescentNormalizerFixedPoint
+def comparator4 : Prop := InternalBoundedDescentNormalizerTargets.ActualOriginalBoundedDescentNormalizerValidity
+def comparator5 : Prop := InternalBoundedDescentNormalizerTargets.ActualOriginalBoundedDescentNormalizerLeft
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerPreflight
