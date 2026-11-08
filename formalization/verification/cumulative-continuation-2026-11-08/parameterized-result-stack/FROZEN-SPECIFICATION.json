@@ -1,0 +1,207 @@
+{
+  "created_at_utc": "2026-11-08T15:56:09Z",
+  "status": "frozen-for-independent-static-review-not-compiled-not-proved",
+  "scope": "Eight original result-stack local prerequisite targets: separate all-input evaluation, unary lift, finite appended-parameter wiring, opening, leaf, finish, empty, and terminal iteration. No parameterized append/framing or full fold correctness.",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultStack",
+  "new_specification_files": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackPreflight.lean"
+  ],
+  "target_count": 8,
+  "targets": [
+    "ExactParameterizedApplicationResultStackTransitionEvaluation",
+    "ActualOriginalParameterizedApplicationResultStackLift",
+    "ActualOriginalParameterizedApplicationResultStackWiring",
+    "ActualOriginalParameterizedApplicationResultStackVisit",
+    "ActualOriginalParameterizedApplicationResultStackLeaf",
+    "ActualOriginalParameterizedApplicationResultStackFinish",
+    "ActualOriginalParameterizedApplicationResultStackEmpty",
+    "ActualOriginalParameterizedApplicationResultStackTerminalIteration"
+  ],
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultStackPreflight",
+  "frozen_source_pins": "FROZEN-SOURCE-PINS.json",
+  "frozen_source_pins_sha256": "bb1c752217846695c0caf293f712595f811e0394de332808901a74d261841bd5",
+  "source_pins": "SOURCE-PINS.json",
+  "source_pins_sha256": "6a807c8a95a2d0f9a70aa8ff0892a7afb7515d35a9e6abaab2292cddc177be98",
+  "static_checks": "STATIC-CHECKS.json",
+  "static_checks_sha256": "9c2d81188f37685e125952765b39eed7337943cdfbd2156e10da44387fdb2a03",
+  "source_pin_scope": "Stable full local import closure of the three new specification files and selected accepted original result-stack, composition, application-selector, and parameterized-iteration roots, plus paper/configuration/acceptance inputs.",
+  "full_local_import_closure_count": 1178,
+  "existing_local_source_pin_count": 1175,
+  "non_lean_input_pin_count": 7,
+  "closure_roots": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedApplicationResultStackPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationResultStackStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationResultStackCompositionStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationStepPeelComponentsProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationStatementChecks.lean"
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.PartrecCode",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.Fintype.Order",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.List.FinRange",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.List.Permutation",
+    "Mathlib.Data.Multiset.DershowitzManna",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Nat.Sqrt",
+    "Mathlib.Logic.Equiv.List",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Logic.Godel.GodelBetaFunction",
+    "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.FixedPoints"
+  ],
+  "callbacks": {
+    "guard": "arbitrary Program 2",
+    "leaf": "arbitrary Program 2",
+    "combine": "arbitrary Program 5",
+    "guard_leaf_order": [
+      "value",
+      "parameter"
+    ],
+    "combine_order": [
+      "domain",
+      "codomain",
+      "functionOutput",
+      "argumentOutput",
+      "parameter"
+    ],
+    "premises": [],
+    "selection_order": "Actual ASTs precede variable type, Gamma and all symbolic arithmetic terms."
+  },
+  "state": {
+    "structure": "InternalApplicationResultStack.State",
+    "encoding": "InternalApplicationResultStack.encodeState",
+    "frames": "Original visitValue/finishValue and corresponding original program constructors",
+    "changed": false,
+    "parameter_location": "Only the outer carryP pair of the existing parameterized iterator; never original state/work/result fields"
+  },
+  "wiring": {
+    "liftP": "composition P [projection 0]",
+    "appendParameter": "Fin.lastCases parameter originalCoordinates",
+    "wireP": "composition P [lifted original selectors, projection 1]",
+    "interpretation": "Finite actual AST composition/reindexing only, not an interpreter"
+  },
+  "open_guard": "conjunction(liftP(original tag-two test),G); exact-one, whole original packed value",
+  "leaf_return": "original returnState[L(currentValue,p),original rest,original results]",
+  "finish_return": "original returnState[C(left currentValue,right currentValue,head(tail results),head results,p),original rest,tail(tail results)]",
+  "expansion": "liftP InternalApplicationResultStack.expanded",
+  "branch_tree": "Original status/work/frame tag/results/tail-results controls, each lifted through projection 0; empty work returns projection 0; every malformed branch returns zero",
+  "iteration": {
+    "literal_program": "InternalParameterizedNumericIteration.repeatP (transitionP G L C)",
+    "input_order": [
+      "count",
+      "originalState",
+      "parameter"
+    ],
+    "run_arguments": [
+      "liftP original fuel",
+      "liftP original initial",
+      "projection 1"
+    ],
+    "fuel": "2 * original payload + 1",
+    "output": "Original unary InternalApplicationResultStack.output",
+    "parameter_in_fuel": false,
+    "full_run_shape_claim": false
+  },
+  "returned_relation": "Original arity-generic InternalApplicationResultStackReturnSupportProof.returned",
+  "graph_compiler": "InternalControlGraph.programGraph / original OrdinaryArithmetic.graphFormula",
+  "internal_calculus": "Nonempty (InternalCalculus.Derivation body Gamma formula)",
+  "quantification": "Arbitrary original body, actual callbacks, variable type, context Gamma, raw symbolic state/suffix/coordinate terms and identical parameter term.",
+  "evaluation_boundary": "Separate external calibration uses original transitionValue with exactly p-sliced callbacks; never used as a semantic-to-internal reflection premise.",
+  "optional_zero_failure_target": "Not included; no additional failure-law proof obligation added.",
+  "accepted_supplier_interfaces": [
+    "InternalApplicationResultStackReturnSupportProof.returnedIntro / returnedCases",
+    "InternalApplicationResultStackReturnRelationProof.returnedRecover",
+    "InternalApplicationResultStackCompositionStateProof.liveStateCases / liveStateFields / liveStatus / emptyAsLive / liveOfValue",
+    "InternalApplicationResultStackCompositionFrameSupportProof.currentFields",
+    "InternalApplicationStepPeelComponentsProof.fieldsAtPairs",
+    "InternalApplicationResultStackCompositionFrameConstructorsProof.visitStateAt / returnStateAt / finishStateAt / expandedStateAt",
+    "InternalParameterizedNumericIterationLawsProof.actualOriginalParameterizedNumericIterationFixedPoint"
+  ],
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "source_reduction_lines": [
+      537,
+      549
+    ],
+    "quotient_representative_lines": [
+      551,
+      556
+    ],
+    "supporting_lemma_lines": [
+      558,
+      560
+    ],
+    "role": "Supporting prerequisite for paper06 lem:id1; no source-statement completion"
+  },
+  "compiler_status": "Not run. No compiler slot requested or held; parameterized descent retains exclusive native admission.",
+  "proof_authorship_status": "Not begun. No proof files created. Await independent frozen-byte review, sole-slot comparator preflight and explicit release.",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "required_entrypoint": "scripts/check.py",
+    "stop_at_utc": "2026-11-08T18:00:00Z"
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_claims": [
+    "parameterized work append",
+    "parameterized result-suffix framing",
+    "full fold correctness",
+    "full-run terminal shape",
+    "representative identification",
+    "uniform canonical selection",
+    "uniform path correctness",
+    "unconditional CertifiedApplicationLift",
+    "constructor/lambda/substitution closure",
+    "all-term accessibility",
+    "paper06 lem:id1 completion",
+    "parameter-specialized unary AST",
+    "new interpreter or recursion primitive",
+    "new source/state/work/result encoding",
+    "parameter or whole-pair fuel",
+    "semantic truth-to-derivability reflection",
+    "numbered source promotion",
+    "native acceptance",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ],
+  "next_gates": [
+    "independent frozen-byte specification review",
+    "coordinator-authorized sole-slot comparator-only preflight",
+    "separately authorized proof authorship",
+    "exact frozen-type aliases and actual standard-axiom closure audits"
+  ]
+}
