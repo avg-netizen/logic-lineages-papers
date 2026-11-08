@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalResultFoldInvariantTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalResultFoldInvariantPreflight
+
+def comparator0 : Prop := InternalCanonicalResultFoldInvariantTargets.ActualOriginalCanonicalFoldPayloadInvariant
+def comparator1 : Prop := InternalCanonicalResultFoldInvariantTargets.ActualOriginalCanonicalFoldCertifiedOutput
+def comparator2 : Prop := InternalCanonicalResultFoldInvariantTargets.ActualOriginalCanonicalFoldOutputConsumer
+def comparator3 : Prop := InternalCanonicalResultFoldInvariantTargets.ActualOriginalCanonicalFoldTypedOutput
+def comparator4 : Prop := InternalCanonicalResultFoldInvariantTargets.ActualOriginalCanonicalFoldOutputContinuation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalResultFoldInvariantPreflight
