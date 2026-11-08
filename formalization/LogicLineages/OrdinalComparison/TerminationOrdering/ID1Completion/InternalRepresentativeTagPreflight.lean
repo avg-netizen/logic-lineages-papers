@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagPreflight
+
+def comparator0 : Prop := InternalRepresentativeTagTargets.ActualOriginalRepresentativeOuterType
+def comparator1 : Prop := InternalRepresentativeTagTargets.ActualOriginalRepresentativeWrapperCalibration
+def comparator2 : Prop := InternalRepresentativeTagTargets.ActualOriginalRepresentativeTagsEqual
+def comparator3 : Prop := InternalRepresentativeTagTargets.ActualOriginalRepresentativeTagTransport
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagPreflight

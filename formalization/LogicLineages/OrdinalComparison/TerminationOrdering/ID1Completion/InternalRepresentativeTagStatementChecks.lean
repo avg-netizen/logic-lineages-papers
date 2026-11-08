@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagStatementChecks
+
+theorem representative_outer_type_exact : InternalRepresentativeTagPreflight.comparator0 :=
+  InternalRepresentativeTagProof.actualOriginalRepresentativeOuterType
+#print axioms representative_outer_type_exact
+
+theorem wrapper_calibration_exact : InternalRepresentativeTagPreflight.comparator1 :=
+  InternalRepresentativeTagProof.actualOriginalRepresentativeWrapperCalibration
+#print axioms wrapper_calibration_exact
+
+theorem tags_equal_exact : InternalRepresentativeTagPreflight.comparator2 :=
+  InternalRepresentativeTagProof.actualOriginalRepresentativeTagsEqual
+#print axioms tags_equal_exact
+
+theorem tag_transport_exact : InternalRepresentativeTagPreflight.comparator3 :=
+  InternalRepresentativeTagProof.actualOriginalRepresentativeTagTransport
+#print axioms tag_transport_exact
+
+#print axioms InternalRepresentativeTagProof.actualOriginalRepresentativeOuterType
+#print axioms InternalRepresentativeTagProof.actualOriginalRepresentativeWrapperCalibration
+#print axioms InternalRepresentativeTagProof.actualOriginalRepresentativeTagsEqual
+#print axioms InternalRepresentativeTagProof.actualOriginalRepresentativeTagTransport
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeTagStatementChecks
