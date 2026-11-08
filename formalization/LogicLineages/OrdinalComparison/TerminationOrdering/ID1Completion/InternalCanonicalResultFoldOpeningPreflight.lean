@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalResultFoldOpeningTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalResultFoldOpeningPreflight
+
+def comparator0 : Prop := InternalCanonicalResultFoldOpeningTargets.ActualOriginalCanonicalFoldOpeningFactorization
+def comparator1 : Prop := InternalCanonicalResultFoldOpeningTargets.ActualOriginalCanonicalFoldOpeningContinuation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalResultFoldOpeningPreflight
