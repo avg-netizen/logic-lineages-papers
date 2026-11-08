@@ -1,0 +1,33 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionTypingProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionProof
+open InternalCanonicalQuotientEdgeSelectionTargets
+
+theorem actualOriginalCanonicalEdgeStepCalibration : ActualOriginalCanonicalEdgeStepCalibration :=
+  InternalCanonicalQuotientEdgeSelectionEvaluationProof.actualOriginalCanonicalEdgeStepCalibration
+
+theorem actualOriginalCanonicalEdgeDataCalibration : ActualOriginalCanonicalEdgeDataCalibration :=
+  InternalCanonicalQuotientEdgeSelectionEvaluationProof.actualOriginalCanonicalEdgeDataCalibration
+
+theorem actualOriginalCanonicalEdgeApplicationStep : ActualOriginalCanonicalEdgeApplicationStep :=
+  InternalCanonicalQuotientEdgeSelectionSupportProof.actualOriginalCanonicalEdgeApplicationStep
+
+theorem actualOriginalCanonicalEdgeTypedPropagation : ActualOriginalCanonicalEdgeTypedPropagation :=
+  InternalCanonicalQuotientEdgeSelectionTypingProof.actualOriginalCanonicalEdgeTypedPropagation
+
+theorem actualOriginalCanonicalEdgeSelection : ActualOriginalCanonicalEdgeSelection := by
+  intro n arity symbols S Gamma table hc
+  obtain ⟨data,hd⟩ := InternalCanonicalQuotientEdgeSelectionEvaluationProof.calibratedDataExists
+    n arity symbols S Gamma table
+  refine ⟨data,hd,actualOriginalCanonicalEdgeDataCalibration
+    n arity symbols S Gamma table data hc hd,?_⟩
+  intro body α Delta
+  exact ⟨actualOriginalCanonicalEdgeApplicationStep body data α Delta,
+    actualOriginalCanonicalEdgeTypedPropagation body data α Delta⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionProof

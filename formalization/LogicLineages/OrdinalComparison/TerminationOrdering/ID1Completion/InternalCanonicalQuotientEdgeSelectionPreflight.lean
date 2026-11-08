@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionPreflight
+
+def comparator0 : Prop := InternalCanonicalQuotientEdgeSelectionTargets.ActualOriginalCanonicalEdgeStepCalibration
+def comparator1 : Prop := InternalCanonicalQuotientEdgeSelectionTargets.ActualOriginalCanonicalEdgeDataCalibration
+def comparator2 : Prop := InternalCanonicalQuotientEdgeSelectionTargets.ActualOriginalCanonicalEdgeApplicationStep
+def comparator3 : Prop := InternalCanonicalQuotientEdgeSelectionTargets.ActualOriginalCanonicalEdgeTypedPropagation
+def comparator4 : Prop := InternalCanonicalQuotientEdgeSelectionTargets.ActualOriginalCanonicalEdgeSelection
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalQuotientEdgeSelectionPreflight
