@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerPreflight
+
+def comparator0 : Prop := InternalApplicationStepCheckerTargets.ActualOriginalCheckerCalibration
+def comparator1 : Prop := InternalApplicationStepCheckerTargets.ActualOriginalLiftedChecker
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerPreflight

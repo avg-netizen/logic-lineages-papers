@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerGraphProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerProof
+
+theorem actualOriginalCheckerCalibration :
+    InternalApplicationStepCheckerTargets.ActualOriginalCheckerCalibration :=
+  InternalApplicationStepCheckerEvaluationProof.actualOriginalCheckerCalibration
+
+theorem actualOriginalLiftedChecker :
+    InternalApplicationStepCheckerTargets.ActualOriginalLiftedChecker :=
+  InternalApplicationStepCheckerGraphProof.actualOriginalLiftedChecker
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerProof

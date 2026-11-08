@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-11-08T08:15:38.150709+00:00",
+  "status": "accepted-focused-internal-and-semantic-component",
+  "published_prerequisite_commit": "8286bcea838384bef4e5585f4068e76fec77e075",
+  "scope": "Two exact normalized original application-step checker targets: all-input calibration conditional on the separately calibrated endpoint and old checker, and full-output internal lifted-checker equivalence with explicit original tag, leaf and constructor graphs. No numbered source statement promotion.",
+  "exact_gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerStatementChecks",
+  "exact_alias_count": 2,
+  "namespace_theorem_audit_count": 2,
+  "actual_axiom_closures_checked": true,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "frozen_sources_unchanged": true,
+  "original_sources_unchanged": true,
+  "source_matched_local_modules": 1094,
+  "source_pins_file": "SOURCE-PINS.json",
+  "frozen_source_pins_file": "FROZEN-SOURCE-PINS.json",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "peak_successful_process_tree_rss_kib": 1176760,
+  "checkpoint_peak_successful_process_tree_rss_kib": 1029400,
+  "final_exact_gate_peak_rss_kib": 1022284,
+  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "mathlib_commit": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+  "numbered_source_register_changed": false,
+  "excluded_claims": [
+    "endpoint decoder leaf existence",
+    "internal typed guard derivation",
+    "representative congruence",
+    "invariant propagation",
+    "joint-context and outer pathValue assembly",
+    "CertifiedApplicationLift",
+    "full paper06 lem:id1",
+    "full-root build",
+    "remote CI"
+  ],
+  "source_closure_count_note": "Full source-matched local import closure includes public meta imports and transitive LogicLineages.Audit. This is not a full-root build.",
+  "peak_rss_scope_note": "The main peak is across the successful current-source native receipt closure. The packet and final exact gate peaks are recorded separately.",
+  "evidence_retention": "Native receipts, logs, all failed and accepted proof snapshots, and the current-source closure receipt mapping are retained locally. The portable packet contains the accepted Lean sources and five evidence files only.",
+  "reproduction": "Run exact_gate_module through repository scripts/check.py with the recorded resource profile. The frozen sources and full local source pins are included in the portable packet."
+}

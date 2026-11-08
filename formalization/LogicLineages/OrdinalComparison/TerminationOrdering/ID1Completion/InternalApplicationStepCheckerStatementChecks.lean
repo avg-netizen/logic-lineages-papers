@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerStatementChecks
+
+theorem calibration_exact : InternalApplicationStepCheckerPreflight.comparator0 :=
+  InternalApplicationStepCheckerProof.actualOriginalCheckerCalibration
+#print axioms calibration_exact
+
+theorem lifted_exact : InternalApplicationStepCheckerPreflight.comparator1 :=
+  InternalApplicationStepCheckerProof.actualOriginalLiftedChecker
+#print axioms lifted_exact
+
+#print axioms InternalApplicationStepCheckerProof.actualOriginalCheckerCalibration
+#print axioms InternalApplicationStepCheckerProof.actualOriginalLiftedChecker
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepCheckerStatementChecks
