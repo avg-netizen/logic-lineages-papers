@@ -1,0 +1,22 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatStatementChecks
+
+theorem zero_exact : InternalRawListRepeatTargets.ActualOriginalRawListRepeatZero :=
+  InternalRawListRepeatProof.actualOriginalRawListRepeatZero
+
+theorem cons_exact : InternalRawListRepeatTargets.ActualOriginalRawListRepeatCons :=
+  InternalRawListRepeatProof.actualOriginalRawListRepeatCons
+
+theorem front_cons_exact : InternalRawListRepeatTargets.ActualOriginalRawListRepeatFrontCons :=
+  InternalRawListRepeatProof.actualOriginalRawListRepeatFrontCons
+
+#print axioms zero_exact
+#print axioms cons_exact
+#print axioms front_cons_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatStatementChecks

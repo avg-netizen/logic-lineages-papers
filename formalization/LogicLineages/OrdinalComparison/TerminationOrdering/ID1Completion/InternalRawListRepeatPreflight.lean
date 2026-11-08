@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatPreflight
+
+def comparator0 : Prop := InternalRawListRepeatTargets.ActualOriginalRawListRepeatZero
+def comparator1 : Prop := InternalRawListRepeatTargets.ActualOriginalRawListRepeatCons
+def comparator2 : Prop := InternalRawListRepeatTargets.ActualOriginalRawListRepeatFrontCons
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatPreflight
