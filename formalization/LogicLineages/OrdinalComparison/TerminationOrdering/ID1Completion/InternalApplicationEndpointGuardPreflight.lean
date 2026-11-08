@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardPreflight
+
+def comparator0 : Prop := InternalApplicationEndpointGuardTargets.ActualOriginalEndpointPrimitive
+def comparator1 : Prop := InternalApplicationEndpointGuardTargets.ActualOriginalEndpointProgramExists
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardPreflight

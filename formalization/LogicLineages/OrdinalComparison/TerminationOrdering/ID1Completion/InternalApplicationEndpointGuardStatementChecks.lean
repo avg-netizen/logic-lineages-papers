@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardStatementChecks
+
+theorem primitive_exact : InternalApplicationEndpointGuardPreflight.comparator0 :=
+  InternalApplicationEndpointGuardProof.actualOriginalEndpointPrimitive
+#print axioms primitive_exact
+
+theorem program_exact : InternalApplicationEndpointGuardPreflight.comparator1 :=
+  InternalApplicationEndpointGuardProof.actualOriginalEndpointProgramExists
+#print axioms program_exact
+
+#print axioms InternalApplicationEndpointGuardProof.actualOriginalEndpointPrimitive
+#print axioms InternalApplicationEndpointGuardProof.actualOriginalEndpointProgramExists
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationEndpointGuardStatementChecks

@@ -1,0 +1,68 @@
+{
+  "frozen_at_utc": "2026-11-08T08:17:34.544505+00:00",
+  "scope": "Two exact original endpoint leaf representability targets. Opaque external calibration only; no internal leaf derivation or source invariant claim.",
+  "files": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationEndpointGuardDefinitions.lean",
+      "sha256": "dc8f3c53e014d2442861b81ee91c252856ffe73a43f1757110af07f3a1a25c65"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationEndpointGuardTargets.lean",
+      "sha256": "c9832221f13b5ab1d1bd6d0d06e0ec9d84221e571e8a46fb50ea2c25a2af1324"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationEndpointGuardPreflight.lean",
+      "sha256": "dc2aea27cb3e630da227a525752a859f45d5a24450d91749e0f5615280385a4c"
+    }
+  ],
+  "source_correspondence": {
+    "path": "verification/cumulative-continuation-2026-11-08/application-endpoint-guard/SOURCE-CORRESPONDENCE.md",
+    "sha256": "79357ac079375378ec6620cf659bbe4cf718f75cbbc41443a8fefe2bdd686a7b"
+  },
+  "specification_and_prerequisite_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationStepPeelDefinitions.lean": "264f7b92135c9263bd1a987512ca274dd73233e6b66f1dcef0201f1ae956fdec",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericCarrierDefinitions.lean": "ee403826c88c271dc470928ab320a0461981abd974873bf7b05cd646ad475de7",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedNumericDecodingDefinitions.lean": "cf6421d2c86971b589f6b64ecdca790d578a5e472d47bef6571bcb1892f5083f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniversePrimrecTargets.lean": "bcee3d57d4b6a9bd60f3ec400a44ebfbb7414111ac88d5a8c56b6b6a34ba1465",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedUniversePrimrecProof.lean": "40d0500739803720f81fbe025de1087e4ca431ee005189c39dabc163a9c05db0",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedCodecPrimrecTargets.lean": "337545f38a1ce7f0fc89c1257ceb6ff691e9b3e0dd702eae99af4eb8f4877c22",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedCodecPrimrecProof.lean": "be83640bbf95c9dec29002984f3e66f02f10132aeede231e84476562b13ee796",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPackedStructurePrimrecProof.lean": "3b81a7bc88af10aecf3a1064f00718b8bf421333622a84c76db15d76c27972a1",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedTypeCodecPrimrecProof.lean": "5f2838072d328fe9262d712b0f1fe793bea293cb2fb77c423c83911d4d9d5abf",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedHeadSignaturePrimrecProof.lean": "661dc656be92f44a9e244f382279ad7cc9cb5b0b6d53f2ae74948197fc716224",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientPathPrimrecSupportProof.lean": "b3c515ab3dcd931d0539bdecb3addcaafc47a400f6d23af4a3e90f11faf03150",
+    "LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.lean": "ded708ca4eac2f8e3013962327cb92cf5769a5dcb3d4d949d6c4e4da0ac9da9a",
+    "LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.lean": "15977343d18b6b20f066ea4ecee98ce62a833a7256cec638dd3aa79eeb119cfb"
+  },
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "application_rule_lines": [
+      537,
+      549
+    ],
+    "quotient_arithmetic_lines": [
+      551,
+      556
+    ]
+  },
+  "targets": [
+    "ActualOriginalEndpointPrimitive",
+    "ActualOriginalEndpointProgramExists"
+  ],
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "freeze_boundary": "Definitions, Targets, Preflight and SOURCE-CORRESPONDENCE.md were frozen before proof authorship; independent review and native preflight preceded proof authorship."
+}
