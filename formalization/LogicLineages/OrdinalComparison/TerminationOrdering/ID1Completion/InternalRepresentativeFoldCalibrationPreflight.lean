@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeFoldCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeFoldCalibrationPreflight
+
+def comparator0 : Prop := InternalRepresentativeFoldCalibrationTargets.ActualOriginalSemanticRepresentativeFoldCalibration
+def comparator1 : Prop := InternalRepresentativeFoldCalibrationTargets.ActualOriginalRepresentativeFoldProgramCalibration
+def comparator2 : Prop := InternalRepresentativeFoldCalibrationTargets.ActualOriginalFixedWindowRepresentativeSelection
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRepresentativeFoldCalibrationPreflight
