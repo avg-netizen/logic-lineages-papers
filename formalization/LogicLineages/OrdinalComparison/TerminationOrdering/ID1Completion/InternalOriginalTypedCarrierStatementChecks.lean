@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierStatementChecks
+
+ theorem typed_program_exact : InternalOriginalTypedCarrierPreflight.comparator0 :=
+  InternalOriginalTypedCarrierProof.actualOriginalTypedProgramExists
+#print axioms typed_program_exact
+
+ theorem calibration_exact : InternalOriginalTypedCarrierPreflight.comparator1 :=
+  InternalOriginalTypedCarrierProof.actualOriginalTypedWrapperCalibration
+#print axioms calibration_exact
+
+ theorem acceptance_exact : InternalOriginalTypedCarrierPreflight.comparator2 :=
+  InternalOriginalTypedCarrierProof.actualOriginalTypedAcceptanceEquation
+#print axioms acceptance_exact
+
+#print axioms InternalOriginalTypedCarrierProof.actualOriginalTypedProgramExists
+#print axioms InternalOriginalTypedCarrierProof.actualOriginalTypedWrapperCalibration
+#print axioms InternalOriginalTypedCarrierProof.actualOriginalTypedAcceptanceEquation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierStatementChecks

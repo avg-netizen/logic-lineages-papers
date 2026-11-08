@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierPreflight
+
+def comparator0 : Prop := InternalOriginalTypedCarrierTargets.ActualOriginalTypedProgramExists
+def comparator1 : Prop := InternalOriginalTypedCarrierTargets.ActualOriginalTypedWrapperCalibration
+def comparator2 : Prop := InternalOriginalTypedCarrierTargets.ActualOriginalTypedAcceptanceEquation
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalTypedCarrierPreflight
