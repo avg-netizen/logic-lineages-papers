@@ -1,0 +1,78 @@
+{
+  "checked_at_utc": "2026-11-08T09:32:51.495953+00:00",
+  "status": "accepted-focused-internal-component",
+  "scope": "Four exact original-calculus numeric iteration laws: zero, front successor, original-addTerm addition fusion, and fixed-point stability. Direct helpers for the frozen original application-validity stack; no numbered source promotion.",
+  "preflight_receipt": {
+    "local_only": true,
+    "path": "preflight-receipt.json",
+    "publication_note": "Full native receipts and candidate snapshots remain local; the portable packet contains concise acceptance and source pins."
+  },
+  "independent_specification_review": "Parent reported ACCEPT before granting preflight; no target change afterward.",
+  "accepted_candidate": "007",
+  "failed_candidates_retained": [
+    "003",
+    "004",
+    "006"
+  ],
+  "successful_incremental_candidates": [
+    "001",
+    "002",
+    "005"
+  ],
+  "exact_gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationStatementChecks",
+  "exact_alias_count": 4,
+  "namespace_theorem_audit_count": 4,
+  "actual_axiom_closures_checked": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "additional_syntactic_compatibility": {
+    "theorem": "InternalNumericIterationStackCompatibilityProof.stackIteration",
+    "method": "rfl",
+    "actual_axioms": [
+      "propext"
+    ],
+    "statement": "repeatProgram (InternalApplicationValidityStack.transition node leaf) = InternalApplicationValidityStack.iterate node leaf"
+  },
+  "frozen_sources_unchanged": true,
+  "original_sources_unchanged": true,
+  "source_matched_local_modules": 1065,
+  "source_pins_file": "SOURCE-PINS.json",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "peak_successful_process_tree_rss_kib": 1059372,
+  "final_exact_gate_peak_rss_kib": 1055928,
+  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "numbered_source_register_changed": false,
+  "excluded_claims": [
+    "semantic truth-to-derivability reflection",
+    "stack worklist append/decomposition",
+    "payload termination",
+    "sufficient fuel",
+    "recursive validator all-input calibration",
+    "internal application-validity constructor closure",
+    "CertifiedApplicationLift",
+    "paper06 lem:id1",
+    "numbered source promotion",
+    "full-root build",
+    "remote CI",
+    "Git publication"
+  ],
+  "compiler_processes_reaped": true,
+  "shared_locks_free": true,
+  "slot_released": true,
+  "local_validation_attempt_summary": {
+    "local_only": true,
+    "path": "attempt-summary.local.json"
+  },
+  "evidence_retention": "Native receipts/logs, source-to-receipt matches and all seven candidate snapshots remain local. Portable checkpoint: twelve accepted Lean sources and six concise evidence files."
+}

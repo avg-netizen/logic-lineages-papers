@@ -1,0 +1,28 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationStackCompatibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationStatementChecks
+
+theorem zero_exact : InternalNumericIterationTargets.ActualOriginalNumericIterationZero :=
+  InternalNumericIterationProof.actualOriginalNumericIterationZero
+
+theorem front_successor_exact : InternalNumericIterationTargets.ActualOriginalNumericIterationFrontSuccessor :=
+  InternalNumericIterationProof.actualOriginalNumericIterationFrontSuccessor
+
+theorem addition_fusion_exact : InternalNumericIterationTargets.ActualOriginalNumericIterationAdditionFusion :=
+  InternalNumericIterationProof.actualOriginalNumericIterationAdditionFusion
+
+theorem fixed_point_exact : InternalNumericIterationTargets.ActualOriginalNumericIterationFixedPoint :=
+  InternalNumericIterationProof.actualOriginalNumericIterationFixedPoint
+
+#print axioms zero_exact
+#print axioms front_successor_exact
+#print axioms addition_fusion_exact
+#print axioms fixed_point_exact
+#print axioms InternalNumericIterationStackCompatibilityProof.stackIteration
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationStatementChecks

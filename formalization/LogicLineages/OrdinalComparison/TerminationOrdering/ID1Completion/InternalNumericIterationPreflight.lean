@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationPreflight
+
+def comparator0 : Prop := InternalNumericIterationTargets.ActualOriginalNumericIterationZero
+def comparator1 : Prop := InternalNumericIterationTargets.ActualOriginalNumericIterationFrontSuccessor
+def comparator2 : Prop := InternalNumericIterationTargets.ActualOriginalNumericIterationAdditionFusion
+def comparator3 : Prop := InternalNumericIterationTargets.ActualOriginalNumericIterationFixedPoint
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationPreflight

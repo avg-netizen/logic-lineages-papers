@@ -1,0 +1,106 @@
+{
+  "frozen_at_utc": "2026-11-08T09:21:56.478492+00:00",
+  "state": "frozen; independent specification review and native preflight pending; proof authorship not started",
+  "scope": "Four original-calculus numeric iteration laws, as direct helpers for the frozen original application-validity stack. No numbered source promotion.",
+  "files": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalNumericIterationDefinitions.lean",
+      "sha256": "d27dadd470669828dc39a952b24670d165156755767cebaeffa6052ae4da3800"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalNumericIterationTargets.lean",
+      "sha256": "d0fbe3a2e81e3e74960e53dad9ca7b023fae56da6151a6947d5c38a22ced2f54"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalNumericIterationPreflight.lean",
+      "sha256": "79b670337dd32bea6bc8544e633f8a9fe0f6b0678f0db9840a1fcd85745a83a6"
+    },
+    {
+      "path": "verification/cumulative-continuation-2026-11-08/numeric-iteration/SOURCE-CORRESPONDENCE.md",
+      "sha256": "66e75dc9c34a0242c23940bdbd849e55729f13f75a9cbfcd70e1fd9c9baca24a"
+    }
+  ],
+  "original_source_pins": {
+    "LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b",
+    "LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.lean": "15977343d18b6b20f066ea4ecee98ce62a833a7256cec638dd3aa79eeb119cfb",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationValidityStackDefinitions.lean": "7c3cfb5b7f8e7c68747d645852b09dd6afd3dbe5bfbbe2d045a83ea0b9a6a6ae",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalControlGraphDefinitions.lean": "c974f09c192cab047f13625bb1fcc543b4490c0edb0c563e7d40d7d187c4cb11",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalControlGraphSupportProof.lean": "cec7d1bc0f009851cf3268fb8921f8a9c5dfcca56e0e97fcda1e221b64856589",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCalculusDefinitions.lean": "557cb2999f699e7959a91fd9f52b3207ebaa5ee3e2b51dd103b64013af71d85d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRecursionGraphDefinitions.lean": "2475bc6cf22e604aed6ffd28fdd5d82f45d04dba6cc504b090bdcbe2eedf60d8",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRepeatDefinitions.lean": "a9ee17fb37586aa246d98b9237f968ab3b4956fc1dfd0f8816cb627c52647771",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRepeatCommutationProof.lean": "2fe6cee55bc3ea37cef1662893232b6adcae8bee220e4ec2e70204e6657e9d4c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRepeatSyntaxProof.lean": "8cda4071901e110f38f2f5683ba510a786f524e0e3b6eee93c3dd18e76c202cf",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalAdditionLawsTargets.lean": "074da121642cc5133d359ef3fd9ec34a6cde570f7031145457340d20e35478cb"
+  },
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "supporting_application_rule_lines": [
+      537,
+      549
+    ],
+    "supporting_quotient_arithmetic_lines": [
+      551,
+      556
+    ]
+  },
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationPreflight",
+  "program": "InternalNumericIteration.repeatProgram",
+  "program_arity": 2,
+  "input_order": [
+    "count",
+    "initial"
+  ],
+  "step_arity": 3,
+  "step_input_order": [
+    "predecessor",
+    "recursive result",
+    "initial"
+  ],
+  "step_selected_projection": 1,
+  "stack_specialization": {
+    "transition": "InternalApplicationValidityStack.transition node leaf",
+    "consumer": "InternalApplicationValidityStack.iterate node leaf",
+    "relationship": "literal AST identity after expanding repeatProgram and repeatStep; native elaboration not yet run"
+  },
+  "count_addition": "OrdinaryArithmetic.addTerm first second",
+  "derivation_calculus": "InternalCalculus.Derivation body []",
+  "quantification": "arbitrary body : Positive (Fin 1), transition : Program 1, variable type, symbolic original arithmetic terms",
+  "targets": [
+    "ActualOriginalNumericIterationZero",
+    "ActualOriginalNumericIterationFrontSuccessor",
+    "ActualOriginalNumericIterationAdditionFusion",
+    "ActualOriginalNumericIterationFixedPoint"
+  ],
+  "compiler_status": "Not run. No compiler slot granted.",
+  "proof_authorship_status": "Not begun.",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_claims": [
+    "semantic truth-to-derivability reflection",
+    "stack worklist append/decomposition",
+    "payload termination",
+    "sufficient fuel",
+    "recursive validator all-input calibration",
+    "internal application-validity constructor closure",
+    "CertifiedApplicationLift",
+    "paper06 lem:id1",
+    "numbered source promotion",
+    "full-root build",
+    "remote CI",
+    "Git publication"
+  ]
+}
