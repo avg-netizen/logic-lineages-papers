@@ -1,0 +1,206 @@
+{
+  "created_at_utc": "2026-11-08T14:12:45.522460+00:00",
+  "status": "frozen-for-independent-static-review-not-compiled-not-proved",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCanonicalFixedWindowPathLift",
+  "target_count": 6,
+  "targets": [
+    "ActualInternalCanonicalFixedWindowEdgeCompatibility",
+    "ActualInternalCanonicalFixedWindowReflexivePathLift",
+    "ActualInternalCanonicalFixedWindowPositivePathLift",
+    "ActualOriginalCanonicalFixedWindowLiftPathCalibration",
+    "ActualOriginalCanonicalFixedWindowDecodedPathValue",
+    "ActualOriginalSelectedCanonicalFixedWindowPathLift"
+  ],
+  "frozen_source_pins": "FROZEN-SOURCE-PINS.json",
+  "frozen_source_pins_sha256": "3f817fb2c3a6d7d0040920f64b6af47bd809a538200b73afc639fda161f51b46",
+  "source_pins": "SOURCE-PINS.json",
+  "source_pins_sha256": "e76ad5b0f0a61f92b7fe992b3f42e7060f3c2fafa36c6ce712b2771f03c50fe3",
+  "full_local_import_closure_count": 1392,
+  "existing_local_source_pin_count": 1389,
+  "non_lean_input_pin_count": 12,
+  "closure_roots": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowPathLiftDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowPathLiftTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowPathLiftPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowVertexDispatchTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowVertexDispatchPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalQuotientEdgeApplicationLiftStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathLiftStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathMapStatementChecks.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean"
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.PartrecCode",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.Fintype.Order",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.List.FinRange",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.List.Permutation",
+    "Mathlib.Data.Multiset.DershowitzManna",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Nat.Sqrt",
+    "Mathlib.Logic.Equiv.List",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Logic.Godel.GodelBetaFunction",
+    "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.FixedPoints"
+  ],
+  "closure_scope": "Stable local import closure of the new specification and accepted prospective suppliers. Canonical vertex dependency is pinned only at Definitions/Targets/Preflight, not mutable proofs or acceptance metadata. Static pins are not native receipts.",
+  "canonical_vertex_stable_sources": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowVertexDispatchDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowVertexDispatchTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalCanonicalFixedWindowVertexDispatchPreflight.lean"
+  ],
+  "mutable_canonical_vertex_source_pins": [],
+  "data": "Exact existing InternalCanonicalDescentSelection.Data; no fields added.",
+  "new_program_asts": [],
+  "generic_edge_compatibility": "InternalApplicationPathLift.EdgeCompatibility body (InternalCanonicalQuotientEdgeSelection.edgeChecker data) (InternalCanonicalFixedWindowVertexDispatch.vertex window data oldVertex) (InternalCanonicalFixedWindowVertexDispatch.invariant window data sigma tau)",
+  "internal_external_hypotheses": [
+    "InternalStructuralEndpointGuard.MembershipCalibrated S data.member",
+    "SubtypeClosed (fun typ => typ in S)"
+  ],
+  "symbolic_parameters": [
+    "context",
+    "domain",
+    "codomain",
+    "RAW argument"
+  ],
+  "vertex_input_order": [
+    "context",
+    "domain",
+    "codomain",
+    "RAW argument",
+    "value"
+  ],
+  "map_input_order": [
+    "certificate",
+    "context",
+    "domain",
+    "codomain",
+    "RAW argument"
+  ],
+  "outer_pathValue_input_order": [
+    "context",
+    "domain",
+    "codomain",
+    "argumentObject",
+    "certificate"
+  ],
+  "same_edge": "Exact InternalCanonicalQuotientEdgeSelection.edgeChecker data throughout; no new checker or altered W/representatives.",
+  "actualJ": "C(domain,codomain,value,N(argument)); function unchanged and only argument normalized internally.",
+  "edge_transformer": "Original InternalApplicationCertificateConstructors.edgeLift on [domain,codomain,RAW argument,certificate], retaining the supplied output.",
+  "compatibility_route": [
+    "Source invariant and SAME Edge derive target invariant by existing invariant propagation.",
+    "Both invariants derive activation; each dispatched vertex graph yields the exact supplied actualJ graph.",
+    "Source invariant factors yield closed sigma/tau coordinate equalities and two canonical typed graphs.",
+    "Internal equality transport rewrites both actualJ graphs and original edgeLift graph to closed type numerals without changing endpoints, outputs, certificate or RAW argument.",
+    "Apply checked canonical witness-free SAME-Edge application lift to its exact liftPremises."
+  ],
+  "path_suppliers": [
+    "InternalApplicationPathLiftProof.actualInternalReflexivePathLift",
+    "InternalApplicationPathLiftProof.actualInternalPositivePathLift"
+  ],
+  "path_hypothesis": "Verbatim InternalApplicationPathLift.inputs at SAME Edge, dispatched vertex and concrete invariant, with arbitrary Delta/ps/endpoints/source certificate/actual vertex outputs/actual mapped output. Local invariant preservation and compatibility are discharged.",
+  "calibration_supplier": "InternalApplicationPathMapEvaluationProof.actualOriginalPathCalibration applied to original full VertexCalibrated of the dispatched vertex.",
+  "calibration_scope": "Every natural five-vector, including zero, malformed/nonuniverse values, other windows, rejected activation and all raw certificate codes.",
+  "pathValue_boundary": "External equation only when argumentObject decodes to (fixed Gamma, RAW argument). No new wrapper Program, internal object decoding, malformed-object theorem or varying-Gamma internal compiler.",
+  "shared_selection_quantifier_order": "Original signature/symbols/S/Gamma/table; subtype closure; exists ONE Data and ONE oldVertex; original and selected canonical calibration and laws, both full vertex calibrations, original path calibration and decoded pathValue equation, dispatch/invariant/path laws for all bodies/closed types/contexts/terms.",
+  "pending_dependency": "Canonical fixed-window vertex dispatch and invariant proofs are being authored separately. Only their independently reviewed frozen specification is included. Proof use requires accepted exact supplier results.",
+  "forbidden_added_premises": [
+    "Target typedness or target invariant",
+    "N(argument)=argument or N(value)=value",
+    "Old typed/H/success guard",
+    "Output canonicality",
+    "Raw endpoint/parent validity or good-run graph",
+    "Representative congruence",
+    "Semantic object/path acceptance",
+    "Invariant-preservation law",
+    "EdgeCompatibility law",
+    "Path-preservation law"
+  ],
+  "static_checks": {
+    "new_lean_file_count": 3,
+    "target_count": 6,
+    "delimiter_balance": "passed after nested comments/strings removed",
+    "prohibited_executable_proof_tokens": [],
+    "preflight_alias_coverage": "one per target, exact order",
+    "missing_local_imports": [],
+    "preceding_pin_comparisons": 2757,
+    "preceding_source_pin_mismatches": [],
+    "mutable_canonical_vertex_proof_files_included": [],
+    "native_elaboration": "not run",
+    "proof_authorship": "not begun"
+  },
+  "compiler_status": "Not run. Canonical vertex worker retains exclusive compiler slot.",
+  "proof_authorship_status": "Not begun. Definitions, targets, preflight and freeze records only.",
+  "gate_order": [
+    "independent static review",
+    "accepted canonical vertex supplier and fresh sole compiler grant",
+    "comparator-only native preflight",
+    "proof authorization/authorship",
+    "exact target aliases and actual axiom audit"
+  ],
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "upstream_cache_only": true
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "deadline_utc": "2026-11-08T18:00:00Z",
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "source_lines": [
+      537,
+      556
+    ],
+    "consumer_lines": [
+      563,
+      588
+    ],
+    "role": "Supporting fixed-window original path transport toward paper06 lem:id1; not numbered-source completion"
+  },
+  "excluded_claims": [
+    "Proof acceptance",
+    "Native preflight",
+    "New path AST",
+    "Internal semantic reflection",
+    "Internal N-fixedness",
+    "Context/object-uniform checker/compiler",
+    "Internal outer pathValue wrapper",
+    "CertifiedApplicationLift",
+    "Full computability closure",
+    "Multiset/constructor/lambda/substitution closure",
+    "All-term accessibility",
+    "Paper06 lem:id1",
+    "Numbered source promotion",
+    "Full-root build",
+    "Remote CI",
+    "Git action"
+  ]
+}
