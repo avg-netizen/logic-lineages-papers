@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendPreflight
+
+def comparator0 : Prop := InternalApplicationValidityStackAppendTargets.ActualOriginalRawListAppendZero
+def comparator1 : Prop := InternalApplicationValidityStackAppendTargets.ActualOriginalRawListAppendCons
+def comparator2 : Prop := InternalApplicationValidityStackAppendTargets.ActualOriginalSuccessfulWorkAppend
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendPreflight
