@@ -1,3 +1,28 @@
+# CURRENT checkpoint — uniform canonical assembly, 8 November 2026
+
+The newest continuation closes the uniform canonical-package gap from the
+prior 8 November handoff. Four new packets prove **19 exact supporting targets**:
+uniform descent selection, internal parameterized canonical-fold laws,
+original all-input fold/success calibration, and concrete context-only
+membership with a symbolic internal slice. One normalized Data tuple precedes
+every source window and ambient Gamma. All frozen specifications and named
+suppliers are unchanged; the focused aggregate passed with standard axioms
+under the existing serialized profile. Register: **168/2/19 of 189**.
+
+Next: lift the same normalized package through uniform typed edges, vertices
+and paths, then the original outer object/context wrappers. Bind the shared
+runtime Gamma code internally and use `pair(context,gammaCode)`; the old
+fixed-fiber premise cannot be inferred from the unqualified antecedent.
+Complete the original `CertifiedApplicationLift`, then its existing downward
+consumer. Multiset/constructor/lambda/substitution and closed all-term
+accessibility remain pending. Do not reopen completed arithmetic, fixed-window
+lifts or uniform canonical calibration. Read
+[the current checkpoint](verification/cumulative-continuation-2026-11-08/uniform-canonical-assembly/STATUS.md)
+and [next steps](verification/cumulative-continuation-2026-11-08/uniform-canonical-result-fold/NEXT-STEPS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # CURRENT checkpoint — original path checkers and internal path lifting, 7 November 2026
 
 Thirteen new exact supporting targets are checked: original quotient-edge

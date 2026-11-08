@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformDescentSelectionStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedCanonicalResultFoldStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformCanonicalResultFoldStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformContextMembershipStatementChecks
+
+/- One uniform original four-leaf selection, parameterized canonical invariants,
+original all-input result-fold calibration, and a concrete membership program
+independent of the runtime Gamma coordinate. These are supporting targets
+for paper06 lem:id1; the unqualified certified application/path lift and the
+closed all-term accessibility theorem remain separate. -/

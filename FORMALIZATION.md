@@ -1,3 +1,33 @@
+# Current checkpoint — uniform canonical assembly, 8 November 2026
+
+One original program package is selected before every source window and
+ambient Gamma. It now supplies calibrated source/target validity, original
+fallback descent, the canonical typed checker, the actual canonical result
+fold, and a concrete membership program independent of the runtime Gamma
+coordinate. Internal derivations establish certified output existence,
+validity/type/transition-fixedness, typed output and application transport at
+an arbitrary symbolic parameter. Independent all-input calibration identifies
+the fold with the original packed-target representative and proves actual
+whole-state success, including malformed inputs and zero results.
+
+All **19 new exact supporting targets** and their focused aggregate passed.
+The continuation adds **32 Lean files**, including the aggregate. The exact
+aliases and 117 additional namespace declarations use only the permitted
+standard axioms. Frozen specifications and named suppliers are unchanged;
+the original serialized resource profile remains active. Register:
+**168 checked, 2 inherited, 19 pending / 189**.
+
+The next obligation is uniform typed-edge/vertex/path transport and original
+outer-object assembly at an internally bound shared Gamma code. This must
+remove the fixed-object-fiber premise and prove the original unqualified
+`CertifiedApplicationLift`. Source multiset, constructor, lambda, substitution
+and the closed all-term accessibility endpoint remain pending.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-08/uniform-canonical-assembly/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # Current checkpoint — original path checkers and internal path lifting, 7 November 2026
 
 The original quotient-edge and reflexive/positive path checkers now have

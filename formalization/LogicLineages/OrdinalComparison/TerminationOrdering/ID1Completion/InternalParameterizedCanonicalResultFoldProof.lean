@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedCanonicalResultFoldRepresentativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedCanonicalResultFoldProof
+open InternalParameterizedCanonicalResultFold InternalParameterizedCanonicalResultFoldTargets
+
+theorem actualParameterizedCanonicalFoldOutputInvariant : ActualParameterizedCanonicalFoldOutputInvariant :=
+  InternalParameterizedCanonicalResultFoldConsumerProof.actualParameterizedCanonicalFoldOutputInvariant
+
+theorem actualParameterizedCanonicalFoldCertifiedOutput : ActualParameterizedCanonicalFoldCertifiedOutput :=
+  InternalParameterizedCanonicalResultFoldInductionProof.actualParameterizedCanonicalFoldCertifiedOutput
+
+theorem actualParameterizedCanonicalFoldTypedOutput : ActualParameterizedCanonicalFoldTypedOutput :=
+  InternalParameterizedCanonicalResultFoldConsumerProof.actualParameterizedCanonicalFoldTypedOutput
+
+theorem actualParameterizedCanonicalRepresentativeApplicationTransport :
+    ActualParameterizedCanonicalRepresentativeApplicationTransport :=
+  InternalParameterizedCanonicalResultFoldRepresentativeProof.actualParameterizedCanonicalRepresentativeApplicationTransport
+
+/-- All laws belong to this SAME data tuple and hold at every symbolic
+parameter without a semantic calibration hypothesis or stored proof field. -/
+theorem internalLaws (data : Data) : InternalLaws data := by
+  intro body α Gamma
+  exact ⟨actualParameterizedCanonicalFoldOutputInvariant body data α Gamma,
+    actualParameterizedCanonicalFoldCertifiedOutput body data α Gamma,
+    actualParameterizedCanonicalFoldTypedOutput body data α Gamma,
+    actualParameterizedCanonicalRepresentativeApplicationTransport body data α Gamma⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedCanonicalResultFoldProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedCanonicalResultFoldProof

@@ -2272,3 +2272,7 @@ public import LogicLineages.ExternalCheckpoint20261108CertificatePrograms
 
 -- Original quotient-edge/path checker equations and internal path lifting from local edge rules.
 public import LogicLineages.ExternalCheckpoint20261107PathChecker
+
+-- One original context-uniform canonical package, internal fold laws and
+-- concrete membership independent of the runtime Gamma coordinate.
+public import LogicLineages.ExternalCheckpoint20261108UniformCanonicalFold

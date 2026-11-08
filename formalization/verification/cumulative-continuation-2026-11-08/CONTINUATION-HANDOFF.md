@@ -1,3 +1,50 @@
+# Current continuation handoff — uniform canonical assembly
+
+Continuation from `acd4c2b489324f8a634fef745912ae99d5c6aac3` has completed
+**19 additional exact supporting targets in 32 new Lean files**, including the
+focused aggregate. The four accepted packets and native evidence are indexed
+in [uniform canonical assembly](uniform-canonical-assembly/STATUS.md).
+
+The prior handoff's first remaining frontier is now closed. The same original
+four-leaf selection feeds the parameterized validity/descent programs and the
+canonical result fold. Internal symbolic-parameter proofs establish actual
+success/output graphs, source validity, the original left type field,
+transition fixedness and representative application transport. Independent
+all-input calibration gives the original packed-target representative and
+whole-state success. A concrete normalization of the member field preserves
+global calibration and gives the actual graph slice at a symbolic context
+pair. One normalized Data tuple retains all of those laws before every window
+and Gamma; no correctness field or semantic reflection principle was added.
+
+All 19 exact aliases, 117 additional namespace declarations and the focused
+aggregate passed under the unchanged serialized profile. Frozen definitions,
+targets and named suppliers match their pre-proof hashes. New-source peak RSS
+was 1,262,884 KiB. The aggregate native receipt is
+`build-reports/1794172061627538747-5.json`. The numbered register remains
+**168 checked, 2 inherited, 19 pending / 189**. All compiler slots are released.
+
+## Next formalization step
+
+1. Parameterize the concrete typed-edge, vertex and path laws over the SAME
+   normalized Data and parameter. Use the new member slice to expose actual
+   codomain membership independently of the runtime Gamma coordinate.
+2. In the original object wrappers, bind the shared runtime Gamma code from
+   actual left-field graphs and construct `pair(context,gammaCode)`. Rebuild
+   the complete guarded certificate for the original unqualified
+   `CertifiedApplicationLift`; do not infer a preselected-Gamma fiber premise
+   from the original antecedent.
+3. Apply the existing full-type downward consumer and complete the source
+   multiset, constructor, lambda, substitution and closed all-term arguments.
+
+The [concrete next-step notes](uniform-canonical-result-fold/NEXT-STEPS.md)
+identify the existing wrapper suppliers and distinguish the now-completed
+membership bridge from the pending uniform lift. The full `lem:id1` remains
+pending. Earlier accepted proof/evidence packets are preserved. The previous
+handoff below records its historical checkpoint and pause, not a current
+compiler action or remaining canonical-package obligation.
+
+---
+
 # Formalization continuation handoff for 8 November 2026
 
 This records the latest completed proof state and the remaining paper06
