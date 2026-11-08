@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformParameterLeavesTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformParameterLeavesPreflight
+
+def codecComparator : Prop := InternalOriginalUniformParameterLeavesTargets.ActualOriginalUniformParameterCodec
+def calibrationComparator : Prop := InternalOriginalUniformParameterLeavesTargets.ActualOriginalUniformLeafCalibration
+def programsComparator : Prop := InternalOriginalUniformParameterLeavesTargets.ActualOriginalUniformLeafPrograms
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformParameterLeavesPreflight
