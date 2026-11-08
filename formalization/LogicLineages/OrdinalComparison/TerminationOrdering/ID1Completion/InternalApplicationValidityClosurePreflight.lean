@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityClosureTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityClosurePreflight
+
+def comparator0 : Prop := InternalApplicationValidityClosureTargets.ActualOriginalFinishedAcceptance
+def comparator1 : Prop := InternalApplicationValidityClosureTargets.ActualOriginalValidatorSingletonSuccess
+def comparator2 : Prop := InternalApplicationValidityClosureTargets.ActualOriginalValidatorApplicationClosure
+def comparator3 : Prop := InternalApplicationValidityClosureTargets.ActualOriginalRecursiveEndpointApplicationValidity
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityClosurePreflight
