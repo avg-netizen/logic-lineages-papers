@@ -1,3 +1,29 @@
+# Current checkpoint — certificate programs and downward-closure reduction, 8 November 2026
+
+The original application-certificate constructors now have explicit arithmetic
+programs and internal field/commutation equations. A concrete raw-list recursor
+and map have all-input original-code calibration and internal nil/cons laws.
+Their application-path specialization is exactly the existing liftPath for
+each ambient Gamma. Full-type computability downward closure has a complete
+type-induction consumer; its calibrated source package leaves only the
+explicit internal certified-application-lift premise unresolved.
+
+All **26 new exact supporting targets** and the focused checkpoint passed.
+Its **1,192 local source modules** match successful native receipts;
+all exact aliases use only the permitted standard axioms under the unchanged
+serialized resource limits. Register: **168 checked, 2 inherited,
+19 pending / 189**. Frozen definitions and targets remain unchanged.
+
+The remaining bridge is preservation of original step/edge/path checker
+acceptance, followed by the source multiset, constructor, lambda, fundamental
+and closed all-term arguments. The fixed-Gamma path-map calibration does not
+replace the required context-uniform source endpoint.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-08/certificate-programs/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # Current checkpoint — internal source computability, 7 November 2026
 
 The original combined ID1 calculus now has separate scalar/multiset induction,

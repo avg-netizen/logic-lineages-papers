@@ -1,3 +1,25 @@
+# CURRENT checkpoint — certificate programs and downward closure, 8 November 2026
+
+Twenty-six new exact supporting targets are checked: full-type downward
+closure reduced to an explicit certified-lift derivation; original numeric
+application/step/edge constructor graph equations; concrete raw-list recursion
+and map; and original fixed-Gamma application path-map calibration/equations.
+The focused **1,192-module** closure and all exact axiom checks passed
+under the unchanged serialized profile. All frozen targets are unchanged.
+Register: **168 checked, 2 inherited, 19 pending / 189**.
+
+Next: expose the original step/quotient-edge/positive-path checker equations
+and prove internal application-lift acceptance. The all-type downward consumer
+is complete, but its CertifiedApplicationLift premise is not proved. The
+path-map component preserves the original liftPath at fixed Gamma; the outer
+pathValue malformed-object case and context-uniform checker correctness still
+need their original treatment. Multiset/constructor/lambda/substitution and
+the closed all-term endpoint remain pending. See
+[the checked continuation](verification/cumulative-continuation-2026-11-08/certificate-programs/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # CURRENT checkpoint — internal source computability, 7 November 2026
 
 Twenty-four new exact supporting targets are checked: original I/J successor

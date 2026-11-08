@@ -1,0 +1,34 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPathMapEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPathMapProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPathMapStatementChecks
+open InternalApplicationPathMapTargets
+
+theorem actualOriginalVertexProgramExists : ActualOriginalVertexProgramExists :=
+  InternalApplicationPathMapEvaluationProof.actualOriginalVertexProgramExists
+#print axioms actualOriginalVertexProgramExists
+
+theorem actualOriginalEntryCalibration : ActualOriginalEntryCalibration :=
+  InternalApplicationPathMapEvaluationProof.actualOriginalEntryCalibration
+#print axioms actualOriginalEntryCalibration
+
+theorem actualOriginalPathCalibration : ActualOriginalPathCalibration :=
+  InternalApplicationPathMapEvaluationProof.actualOriginalPathCalibration
+#print axioms actualOriginalPathCalibration
+
+theorem actualOriginalEntryGraphEquation : ActualOriginalEntryGraphEquation :=
+  InternalApplicationPathMapProof.actualOriginalEntryGraphEquation
+#print axioms actualOriginalEntryGraphEquation
+
+theorem actualOriginalPathMapZero : ActualOriginalPathMapZero :=
+  InternalApplicationPathMapProof.actualOriginalPathMapZero
+#print axioms actualOriginalPathMapZero
+
+theorem actualOriginalPathMapCons : ActualOriginalPathMapCons :=
+  InternalApplicationPathMapProof.actualOriginalPathMapCons
+#print axioms actualOriginalPathMapCons
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPathMapStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPathMapStatementChecks

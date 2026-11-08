@@ -1,0 +1,238 @@
+{
+  "base_commit": "97dd617232e0a398fad7b24859ef1ecb9688382d",
+  "branch": "formalization/recovered-sources-2026-11-07",
+  "checked_at_utc": "2026-11-08T01:23:45.117575+00:00",
+  "scope": "Concrete original certificate constructors, list recursion/map, original path mapping and full-type downward-closure reduction toward paper06 lem:id1. The internal checker-preservation premise remains open; no numbered statement promotion.",
+  "aggregate_module": "LogicLineages.ExternalCheckpoint20261108CertificatePrograms",
+  "aggregate_returncode": 0,
+  "command": "python3 scripts/check.py --memory-mib 2048 --rss-mib 1536 --min-free-mib 2048 LogicLineages.ExternalCheckpoint20261108CertificatePrograms",
+  "lean_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "mathlib_commit": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_matched_local_modules": 1192,
+  "peak_successful_process_tree_rss_kib": 1237648,
+  "exact_alias_count": 26,
+  "gates": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityDownwardStatementChecks",
+      "exact_targets": 4,
+      "returncode": 0,
+      "source_sha256": "3167a1e1d0186364de1df1ce880d0b47e6a8d0778030eea8f05aeac7fdda72bc",
+      "audit_log": "computability-downward.log",
+      "native_seconds": 1.165,
+      "peak_process_tree_rss_kib": 1230412,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCertificateConstructorsStatementChecks",
+      "exact_targets": 10,
+      "returncode": 0,
+      "source_sha256": "a78d06abe11375978acfcfa63599bbcb09399f512214e727db2f95fc966b13ce",
+      "audit_log": "certificate-constructors.log",
+      "native_seconds": 0.812,
+      "peak_process_tree_rss_kib": 1212944,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": false
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionStatementChecks",
+      "exact_targets": 3,
+      "returncode": 0,
+      "source_sha256": "6edfb89c097ea3dfa06b88df0d67b98736537517280231d54d7703a13bd70320",
+      "audit_log": "raw-list-recursion.log",
+      "native_seconds": 1.014,
+      "peak_process_tree_rss_kib": 1224568,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapStatementChecks",
+      "exact_targets": 3,
+      "returncode": 0,
+      "source_sha256": "26d4a8b7a13eef1fd72e6e0b3b57dbd05cb819f71ed0fb431a013f370638dea2",
+      "audit_log": "list-map.log",
+      "native_seconds": 1.014,
+      "peak_process_tree_rss_kib": 1224084,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationPathMapStatementChecks",
+      "exact_targets": 6,
+      "returncode": 0,
+      "source_sha256": "7ef2f06574e9ccbf068610bf678210c5509e836bc44d80cd5c45039c116e1199",
+      "audit_log": "original-path-map.log",
+      "native_seconds": 1.014,
+      "peak_process_tree_rss_kib": 1230212,
+      "actual_axiom_closures_checked": true,
+      "additional_namespace_audit": true
+    }
+  ],
+  "accepted_new_lean_sources": [
+    {
+      "path": "LogicLineages/ExternalCheckpoint20261108CertificatePrograms.lean",
+      "sha256": "2cf537e8f8c069e2fadf9090063f553a141753274aa1b69018f1b0e87c8dc5ff"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsDefinitions.lean",
+      "sha256": "80b867bee7afd8709f0ef22199b83d644d15da9ef33935d65decda439ba5f603"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsEvaluationProof.lean",
+      "sha256": "c1ce03289b4b8a5747b141d22f3f0c1b0d384d492f2d605c1416f01712aac142"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsProof.lean",
+      "sha256": "399d606a3372d79bc7fba78b32459a95a1e2ecfeebe7af6f63a3ffae44f11398"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsStatementChecks.lean",
+      "sha256": "a78d06abe11375978acfcfa63599bbcb09399f512214e727db2f95fc966b13ce"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsSupportProof.lean",
+      "sha256": "a5a3ed45df8b5bea52145bceb3654dade671ae84058953b7130c1a5e871fb6d6"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsSyntaxProof.lean",
+      "sha256": "dae33858af75c0e5e749ed27668fa37f4f768ab4e7ad4cd640b3517307ce9230"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsTargets.lean",
+      "sha256": "ceb964b139a5080203a2a616c58904f06ad0f0fd8b85542d13a487b685daefbf"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathMapDefinitions.lean",
+      "sha256": "9900fc7dbe2d83be6150d67b724b1ac3a6d22d8bd7b031d336c26f6f3770069b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathMapEvaluationProof.lean",
+      "sha256": "eece23cf4b1033646401b1ec7f14276c554e8bedefe4ed0ef922baef58f32844"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathMapProof.lean",
+      "sha256": "d54497370bd1e39bf2c545b2ceb701907eca376e8d7193803dd44b978b4a04ba"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathMapStatementChecks.lean",
+      "sha256": "7ef2f06574e9ccbf068610bf678210c5509e836bc44d80cd5c45039c116e1199"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationPathMapTargets.lean",
+      "sha256": "d53011312bb7abd68f08a9424f0775678598609da9852fe7d51e3cb4ad5499ec"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityDownwardDefinitions.lean",
+      "sha256": "76a3e8c5b35e97142b29e1744333ba13acda7b075597f0644d20c13d6e4642dd"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityDownwardProof.lean",
+      "sha256": "b27540d291fdfe6e5d731e76dfab2b2b7a6b1c61fe4ae3ac1bdfd6fa47a01fec"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityDownwardSourceProof.lean",
+      "sha256": "919b29171c66cbf308bce8844cadbf122ac2786b75d974e66fe46818d3e95def"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityDownwardStatementChecks.lean",
+      "sha256": "3167a1e1d0186364de1df1ce880d0b47e6a8d0778030eea8f05aeac7fdda72bc"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityDownwardSyntaxProof.lean",
+      "sha256": "beac7b78d31d31ef4af2851c3f5a88f465cc6f3caaecedc86fc8a8a809916b81"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalComputabilityDownwardTargets.lean",
+      "sha256": "cd2dab3ccd3e4f9644f6058e63af5421c0a139d1dd4b60e545b3c79b2106db42"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListMapDefinitions.lean",
+      "sha256": "ef2564b06c5730b7824367e4b245a4e0b5aaa5682e8f9c2b914c5ff4f9a43aa9"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListMapEvaluationProof.lean",
+      "sha256": "0ffd4dec887c4cffa27ea5190914221d9e2e1a5022df226b2bb56a53dbd1b614"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListMapProof.lean",
+      "sha256": "6891a8bc0dbb4886205a108ebf27f94271c3ca19c6916b1365b114922c73e3ed"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListMapStatementChecks.lean",
+      "sha256": "26d4a8b7a13eef1fd72e6e0b3b57dbd05cb819f71ed0fb431a013f370638dea2"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalListMapTargets.lean",
+      "sha256": "681222a28303a27184eaf6e7b29e0775eb1bcaaa1ddfb5a59a68b636102c3454"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionDefinitions.lean",
+      "sha256": "faf9c81331ed7dcf6c71b5c93e9c48a9728abc4372f8789031f7cad590946199"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionEvaluationProof.lean",
+      "sha256": "c4d131c13cefca8d402cf4fe72caab34da2df6a4591891c82b673cc7d547916a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionNextProof.lean",
+      "sha256": "035dc352dddd65e6100904bc654a17923ba1a6261736e0b0b30368f7d744f249"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionProof.lean",
+      "sha256": "7b9e4415a53af3c1c9dc49e3e820189495a75760b77888bba9d9974a4b4818e1"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionStatementChecks.lean",
+      "sha256": "6edfb89c097ea3dfa06b88df0d67b98736537517280231d54d7703a13bd70320"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionSupportProof.lean",
+      "sha256": "b0cc4af29d72a23ee01abb412c15fece50bc80fe20c0f81268cc839f6f3ac17f"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionSyntaxProof.lean",
+      "sha256": "11f37369efb4f29a27de3d17534d8816729367da392c4a76d33dfe2f166b9f9d"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionTableProof.lean",
+      "sha256": "f9734940b9c947462331137461e2ff29718f7939ebb68dd9b3e75dd016b3d123"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalRawListRecursionTargets.lean",
+      "sha256": "ea2e3b5a6f3c8f3f7e51122d91571b4744c58d6788247cff073cf62ca3088f36"
+    }
+  ],
+  "specification_note": "All accepted definitions and targets match their frozen records; no mathematical weakening. The downward theorem explicitly retains internal certified-lift correctness as a premise.",
+  "existing_proof_and_definition_files_changed": false,
+  "frozen_records_checked": [
+    {
+      "record": "verification/cumulative-continuation-2026-11-08/computability-downward/FROZEN.json",
+      "checked_entries": 2
+    },
+    {
+      "record": "verification/cumulative-continuation-2026-11-08/internal-application-certificate-constructors/FROZEN-TARGETS.json",
+      "checked_entries": 10
+    },
+    {
+      "record": "verification/cumulative-continuation-2026-11-08/internal-application-path-map/FROZEN-TARGETS.json",
+      "checked_entries": 8
+    },
+    {
+      "record": "verification/cumulative-continuation-2026-11-08/internal-raw-list-recursion/FROZEN-TARGETS.sha256",
+      "checked_entries": 4
+    }
+  ],
+  "full_root_build_claimed": false,
+  "remote_ci_claimed": false,
+  "evidence_note": "Compact final exact-gate logs. Source-matched successful native receipts are reused across incremental focused checks; earlier verification uploads are not reconstructed."
+}

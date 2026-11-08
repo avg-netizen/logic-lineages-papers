@@ -1,0 +1,21 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionStatementChecks
+
+theorem evaluation_exact : InternalRawListRecursionTargets.ActualRawListRecursionEvaluation :=
+  InternalRawListRecursionEvaluationProof.actualRawListRecursionEvaluation
+theorem zero_exact : InternalRawListRecursionTargets.ActualOriginalListRecursionZero :=
+  InternalRawListRecursionProof.actualOriginalListRecursionZero
+theorem cons_exact : InternalRawListRecursionTargets.ActualOriginalListRecursionCons :=
+  InternalRawListRecursionProof.actualOriginalListRecursionCons
+
+#print axioms evaluation_exact
+#print axioms zero_exact
+#print axioms cons_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionStatementChecks

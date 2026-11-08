@@ -2266,3 +2266,6 @@ public import LogicLineages.ExternalCheckpoint20261107ListInduction
 
 -- Original I/J induction, source computable application and path-certificate structure.
 public import LogicLineages.ExternalCheckpoint20261107SourceComputability
+
+-- Concrete original certificate/list programs and the full-type downward-closure consumer.
+public import LogicLineages.ExternalCheckpoint20261108CertificatePrograms

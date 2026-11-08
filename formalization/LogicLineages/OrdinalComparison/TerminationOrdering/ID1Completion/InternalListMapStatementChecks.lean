@@ -1,0 +1,23 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapStatementChecks
+
+theorem evaluation_exact : InternalListMapTargets.ActualRawListMapEvaluation :=
+  InternalListMapEvaluationProof.actualRawListMapEvaluation
+
+theorem zero_exact : InternalListMapTargets.ActualOriginalListMapZero :=
+  InternalListMapProof.actualOriginalListMapZero
+
+theorem cons_exact : InternalListMapTargets.ActualOriginalListMapCons :=
+  InternalListMapProof.actualOriginalListMapCons
+
+#print axioms evaluation_exact
+#print axioms zero_exact
+#print axioms cons_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapStatementChecks
