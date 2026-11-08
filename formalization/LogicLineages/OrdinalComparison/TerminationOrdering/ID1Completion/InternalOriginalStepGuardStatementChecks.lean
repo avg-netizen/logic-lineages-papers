@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardPreflight
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardStatementChecks
+
+ theorem validity_programs_exact : InternalOriginalStepGuardPreflight.comparator0 :=
+  InternalOriginalStepGuardProof.actualOriginalValidityProgramsExist
+#print axioms validity_programs_exact
+
+ theorem calibration_exact : InternalOriginalStepGuardPreflight.comparator1 :=
+  InternalOriginalStepGuardProof.actualOriginalGuardedStepCalibration
+#print axioms calibration_exact
+
+ theorem acceptance_tags_exact : InternalOriginalStepGuardPreflight.comparator2 :=
+  InternalOriginalStepGuardProof.actualOriginalAcceptanceAtTags
+#print axioms acceptance_tags_exact
+
+ theorem tagged_acceptance_exact : InternalOriginalStepGuardPreflight.comparator3 :=
+  InternalOriginalStepGuardProof.actualOriginalTaggedAcceptance
+#print axioms tagged_acceptance_exact
+
+#print axioms InternalOriginalStepGuardProof.actualOriginalValidityProgramsExist
+#print axioms InternalOriginalStepGuardProof.actualOriginalGuardedStepCalibration
+#print axioms InternalOriginalStepGuardProof.actualOriginalAcceptanceAtTags
+#print axioms InternalOriginalStepGuardProof.actualOriginalTaggedAcceptance
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardStatementChecks

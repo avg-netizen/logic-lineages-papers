@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardPreflight
+
+def comparator0 : Prop := InternalOriginalStepGuardTargets.ActualOriginalValidityProgramsExist
+def comparator1 : Prop := InternalOriginalStepGuardTargets.ActualOriginalGuardedStepCalibration
+def comparator2 : Prop := InternalOriginalStepGuardTargets.ActualOriginalAcceptanceAtTags
+def comparator3 : Prop := InternalOriginalStepGuardTargets.ActualOriginalTaggedAcceptance
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalStepGuardPreflight
