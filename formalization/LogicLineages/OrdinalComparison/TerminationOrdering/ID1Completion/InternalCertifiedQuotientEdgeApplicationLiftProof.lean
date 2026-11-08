@@ -1,0 +1,33 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedQuotientEdgeApplicationLiftWitnessProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedSourceGuardSelectionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedQuotientEdgeApplicationLiftProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+
+theorem actualOriginalCertifiedApplicationStepClosure :
+    InternalCertifiedQuotientEdgeApplicationLiftTargets.ActualOriginalCertifiedApplicationStepClosure :=
+  InternalCertifiedQuotientEdgeApplicationLiftStepProof.actualOriginalCertifiedApplicationStepClosure
+
+theorem actualOriginalCertifiedEncodedQuotientEdgeApplicationLift :
+    InternalCertifiedQuotientEdgeApplicationLiftTargets.ActualOriginalCertifiedEncodedQuotientEdgeApplicationLift :=
+  InternalCertifiedQuotientEdgeApplicationLiftEncodedProof.actualOriginalCertifiedEncodedQuotientEdgeApplicationLift
+
+theorem actualOriginalCertifiedQuotientEdgeApplicationLift :
+    InternalCertifiedQuotientEdgeApplicationLiftTargets.ActualOriginalCertifiedQuotientEdgeApplicationLift :=
+  InternalCertifiedQuotientEdgeApplicationLiftWitnessProof.actualOriginalCertifiedQuotientEdgeApplicationLift
+
+theorem actualOriginalSelectedCertifiedQuotientEdgeApplicationLift :
+    InternalCertifiedQuotientEdgeApplicationLiftTargets.ActualOriginalSelectedCertifiedQuotientEdgeApplicationLift := by
+  intro n arity symbols S Gamma table hc
+  obtain ⟨data,hcal,hsel,_⟩ :=
+    InternalCertifiedSourceGuardSelectionProof.actualOriginalCertifiedSourceGuardSelection
+      n arity symbols S Gamma table hc
+  refine ⟨data,hcal,hsel,?_⟩
+  intro body sigma tau α x y a certificate out other lifted
+  exact actualOriginalCertifiedQuotientEdgeApplicationLift S data hcal.2.1 hc
+    body sigma tau α x y a certificate out other lifted
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedQuotientEdgeApplicationLiftProof
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCertifiedQuotientEdgeApplicationLiftProof
