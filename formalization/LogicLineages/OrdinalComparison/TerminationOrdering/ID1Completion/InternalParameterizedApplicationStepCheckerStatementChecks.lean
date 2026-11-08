@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerStatementChecks
+
+theorem front_cons_exact :
+    InternalParameterizedApplicationStepCheckerTargets.ActualParameterizedRawListRepeatFrontCons :=
+  InternalParameterizedApplicationStepCheckerProof.actualParameterizedRawListRepeatFrontCons
+#print axioms front_cons_exact
+
+theorem transition_exact :
+    InternalParameterizedApplicationStepCheckerTargets.ActualParameterizedOriginalLiftedTransition :=
+  InternalParameterizedApplicationStepCheckerProof.actualParameterizedOriginalLiftedTransition
+#print axioms transition_exact
+
+theorem checker_exact :
+    InternalParameterizedApplicationStepCheckerTargets.ActualParameterizedOriginalLiftedChecker :=
+  InternalParameterizedApplicationStepCheckerProof.actualParameterizedOriginalLiftedChecker
+#print axioms checker_exact
+
+theorem calibration_exact :
+    InternalParameterizedApplicationStepCheckerTargets.ActualParameterizedOriginalCheckerCalibration :=
+  InternalParameterizedApplicationStepCheckerProof.actualParameterizedOriginalCheckerCalibration
+#print axioms calibration_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerStatementChecks

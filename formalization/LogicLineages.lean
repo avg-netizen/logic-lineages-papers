@@ -2276,3 +2276,6 @@ public import LogicLineages.ExternalCheckpoint20261107PathChecker
 -- One original context-uniform canonical package, internal fold laws and
 -- concrete membership independent of the runtime Gamma coordinate.
 public import LogicLineages.ExternalCheckpoint20261108UniformCanonicalFold
+
+-- Original application typing and step selection with symbolic-parameter certificate transport.
+public import LogicLineages.ExternalCheckpoint20261108UniformCertificateTransport

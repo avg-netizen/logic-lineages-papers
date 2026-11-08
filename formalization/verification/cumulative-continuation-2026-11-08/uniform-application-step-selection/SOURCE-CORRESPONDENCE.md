@@ -1,0 +1,9 @@
+# Uniform original application-step selection
+
+The original application-certificate argument for paper06 `lem:id1` needs one step leaf and one concrete application-step checker before any source window or ambient Gamma is selected. This two-target component supplies that choice for the existing globally calibrated canonical Data tuple.
+
+The leaf reads `[source,target,originalStepCertificate,parameter]`. Its numeric definition uses the exact original context decoder on the parameter's left coordinate and the original Object decoder on the pair of its right coordinate with the raw source. It calls the original `numericStepTest` with the decoded source Gamma, the decoded finite context and the unchanged raw source, target and certificate. A failed context or Object decode returns zero. Existence requires primitive recursiveness on every raw input; the established original context/Object decoder and numeric-step primitive theorems provide it.
+
+The first frozen target selects one oldStep Program4 before every context/Gamma and retains both its all-input numeric definition and exact original slice calibration. The second, for every already globally calibrated canonical Data tuple, chooses one such oldStep and instantiates the actual parameterized checker with the actual selected structural endpoint. It concludes original all-input step calibration and the full-output internal application-step equation at arbitrary symbolic p. The original constructor/type/endpoint premises are preserved. No validity, subtype-closure or fixed-Gamma restriction is introduced into calibration.
+
+This is the selected step core. The outer source/target/type guard, quotient-edge representative assembly, raw application vertex, path consumer and unqualified object-context lift remain separate obligations. No numbered statement is promoted. Specifications and named source suppliers are frozen before proof authorship against `fd5936d8396b90e17767bc59c82a061178fe4378`.

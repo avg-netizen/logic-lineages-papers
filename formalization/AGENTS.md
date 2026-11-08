@@ -1,3 +1,32 @@
+# CURRENT checkpoint — uniform certificate transport, 8 November 2026
+
+The newest continuation completes **21 exact supporting targets in 51 new
+Lean files**: symbolic application typing and codomain membership; the actual
+structural endpoint and raw application validity; parameterized original step
+peeling/full-output checker equivalence; one globally selected step leaf/core;
+original parameterized path checker equations/calibration; and internal
+reflexive/positive path lifting from local arithmetic rules. The same Data,
+parameter, original mapper and certificate encodings are retained.
+
+All six exact gates and the focused aggregate passed with standard axioms
+under the unchanged serialized profile. All frozen specifications and named
+suppliers match their pins. Register: **168/2/19 of 189**. Compiler slots are
+released. Read [the current checkpoint](verification/cumulative-continuation-2026-11-08/uniform-certificate-transport/STATUS.md)
+and [concrete next steps](verification/cumulative-continuation-2026-11-08/uniform-certificate-transport/NEXT-STEPS.md).
+
+Continue with the actual uniform quotient-edge and normalized-vertex local
+rules, then specialize the checked parameterized path lift. The path result
+still has explicit local invariant/compatibility premises. Rebuild the
+original outer object/context wrappers at an internally bound shared runtime
+Gamma, using pair(context,gammaCode), to discharge unqualified
+CertifiedApplicationLift. Its antecedent does not supply the old fixed-fiber
+premise. Then use the existing downward consumer; the multiset/constructor/
+lambda/substitution/all-term obligations remain pending. Do not reopen the
+completed canonical package, application typing, step core or generic path
+induction. Earlier summaries below are historical.
+
+---
+
 # CURRENT checkpoint — uniform canonical assembly, 8 November 2026
 
 The newest continuation closes the uniform canonical-package gap from the

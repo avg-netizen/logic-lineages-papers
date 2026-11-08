@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationStepSelectionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationStepSelectionStatementChecks
+open InternalOriginalUniformApplicationStepSelectionTargets
+
+theorem leaf_exact : ActualOriginalUniformStepLeafProgram :=
+  InternalOriginalUniformApplicationStepSelectionProof.actualOriginalUniformStepLeafProgram
+
+theorem selection_exact : ActualOriginalUniformApplicationStepSelection :=
+  InternalOriginalUniformApplicationStepSelectionProof.actualOriginalUniformApplicationStepSelection
+
+#print axioms leaf_exact
+#print axioms selection_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationStepSelectionStatementChecks

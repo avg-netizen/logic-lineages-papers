@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationPathLiftProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationPathLiftStatementChecks
+
+theorem exactReflexivePathLift :
+    InternalParameterizedApplicationPathLiftTargets.ActualInternalParameterizedReflexivePathLift :=
+  InternalParameterizedApplicationPathLiftProof.actualInternalParameterizedReflexivePathLift
+
+theorem exactPositivePathLift :
+    InternalParameterizedApplicationPathLiftTargets.ActualInternalParameterizedPositivePathLift :=
+  InternalParameterizedApplicationPathLiftProof.actualInternalParameterizedPositivePathLift
+
+#print axioms exactReflexivePathLift
+#print axioms exactPositivePathLift
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationPathLiftStatementChecks

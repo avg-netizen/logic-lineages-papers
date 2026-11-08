@@ -1,3 +1,63 @@
+# Current continuation handoff — uniform certificate transport
+
+Continuation from `fd5936d8396b90e17767bc59c82a061178fe4378` has completed
+**21 additional exact supporting targets in 51 new Lean files**, including
+the focused aggregate. Six accepted packets are indexed in
+[uniform certificate transport](uniform-certificate-transport/STATUS.md).
+The numbered register remains **168 checked, 2 inherited, 19 pending / 189**.
+
+The normalized canonical Data now supplies application typing at a symbolic
+parameter. Concrete context-only membership proves the codomain-membership
+bridge from the accepted function type and subtype closure. The actualJ
+proof queries N(argument) internally and preserves the RAWargument in the
+original certificate interface; it does not assume N(function)=function or
+N(argument)=argument.
+
+The parameterized structural endpoint preserves all seven original tests,
+including packed target validity without a universe filter. Its accepted
+factors imply both raw application validity graphs and codomain tags.
+Parameterized raw-list repeat and original state peeling prove full-output
+step-checker equivalence. A new uniform selection chooses one oldStep
+Program4 before every source window/Gamma and supplies the actual selected
+endpoint/checker calibration on every raw input plus the same internal law.
+
+The original reflexive and positive path checkers carry p through each edge
+call and through the existing recursor. The generic internal path lift uses
+the original mapper with tuple [p,d,e,RAWargument], preserving both supplied
+vertex outputs and the exact mapped certificate. Its local invariant and
+single-edge compatibility hypotheses remain explicit; concrete original
+quotient-edge rules are the next obligation.
+
+All 21 exact aliases and 186 additional namespace declarations use only the
+standard axioms. Frozen specifications and named suppliers are unchanged.
+The focused aggregate passed in `build-reports/1794179983055305664-2.json`
+under the existing serialized resource profile; peak successful new-source
+RSS was 1,256,944 KiB. All compiler slots are released. No full-root or
+remote-CI acceptance is claimed. Earlier proof/evidence packets are preserved.
+
+## Next formalization step
+
+1. Parameterize the original outer step guard and quotient-edge representative
+   comparisons with the same normalized Data and newly selected step core.
+   Preserve the source-universe filter and unrestricted packed-target
+   representative. Derive the concrete normalized application-vertex
+   invariant and edge compatibility from the accepted typing, endpoint,
+   step and representative-transport laws.
+2. Specialize the checked parameterized path lift to those actual programs.
+   Rebuild the original outer object/context acceptance factors using one
+   internally bound shared runtime Gamma and pair(context,gammaCode). Prove
+   the unchanged unqualified CertifiedApplicationLift antecedent without
+   importing a fixed-object-fiber hypothesis.
+3. Apply the existing full-type downward consumer, then complete the source
+   multiset, constructor, lambda, substitution and closed all-term arguments.
+
+The [concrete program/API notes](uniform-certificate-transport/NEXT-STEPS.md)
+record input orders and source boundaries. Paper06 lem:id1 remains pending.
+The previous handoff below is historical; its uniform step/path and
+application-typing frontier is superseded by this checkpoint.
+
+---
+
 # Current continuation handoff — uniform canonical assembly
 
 Continuation from `acd4c2b489324f8a634fef745912ae99d5c6aac3` has completed

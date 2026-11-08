@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationTypingStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedStructuralEndpointGuardStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationStepSelectionStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedPathCheckerStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationPathLiftStatementChecks
+
+/- Original application typing, selected endpoint and step programs, and
+the unchanged path checker/map at one arbitrary symbolic parameter. These
+are supporting targets for paper06 lem:id1. The concrete quotient-edge and
+vertex assembly, original unqualified CertifiedApplicationLift, and closed
+all-term accessibility derivation remain separate obligations. -/

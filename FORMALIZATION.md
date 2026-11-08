@@ -1,3 +1,37 @@
+# Current checkpoint — uniform certificate transport, 8 November 2026
+
+The same globally calibrated canonical package now supports internal
+application typing and the original seven-test endpoint at an arbitrary
+symbolic context parameter. The endpoint derives both application validity
+graphs and result tags. The original lifted step state peels back to its
+original state, and the same concrete checker returns identical outputs on
+the original and lifted triples. One step program is selected before every
+source window and ambient Gamma, with original all-input calibration.
+
+The original reflexive and positive path checkers now carry that parameter
+through the unchanged list recursor. Internal list-code induction proves
+application-path transport from local invariant propagation and single-edge
+compatibility, using the original map and certificate encoding.
+
+All **21 new exact supporting targets** and their focused aggregate passed.
+The continuation adds **51 Lean files**, including the aggregate. The exact
+aliases and 186 additional namespace declarations use only standard axioms;
+frozen specifications and named suppliers are unchanged. Register:
+**168 checked, 2 inherited, 19 pending / 189**.
+
+The remaining certificate bridge is concrete uniform quotient-edge and
+normalized-vertex assembly, followed by source-specific path specialization
+and the original outer object/context wrappers. Those wrappers must bind the
+shared runtime Gamma internally and prove the original unqualified
+`CertifiedApplicationLift`. Source multiset, constructor, lambda,
+substitution and the closed all-term accessibility endpoint remain pending.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-08/uniform-certificate-transport/STATUS.md)
+and [concrete next steps](formalization/verification/cumulative-continuation-2026-11-08/uniform-certificate-transport/NEXT-STEPS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # Current checkpoint — uniform canonical assembly, 8 November 2026
 
 One original program package is selected before every source window and
