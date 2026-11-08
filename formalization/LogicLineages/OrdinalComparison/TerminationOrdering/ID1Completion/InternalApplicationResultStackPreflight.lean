@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultStackTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultStackPreflight
+
+def comparator0 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackTransitionCalibration
+def comparator1 : Prop := InternalApplicationResultStackTargets.ActualOriginalEncodedResultStackTransition
+def comparator2 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackWorkDecrease
+def comparator3 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackFuelBounds
+def comparator4 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackVisit
+def comparator5 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackLeaf
+def comparator6 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackFinish
+def comparator7 : Prop := InternalApplicationResultStackTargets.ActualOriginalResultStackEmpty
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationResultStackPreflight
