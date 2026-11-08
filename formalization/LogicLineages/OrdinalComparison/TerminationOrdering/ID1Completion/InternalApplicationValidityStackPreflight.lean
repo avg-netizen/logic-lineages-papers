@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackPreflight
+
+def comparator0 : Prop := InternalApplicationValidityStackTargets.ActualOriginalApplicationDecoderEquations
+def comparator1 : Prop := InternalApplicationValidityStackTargets.ActualOriginalStackTransitionCalibration
+def comparator2 : Prop := InternalApplicationValidityStackTargets.ActualOriginalEncodedStackTransition
+def comparator3 : Prop := InternalApplicationValidityStackTargets.ActualOriginalStackValidityInvariant
+def comparator4 : Prop := InternalApplicationValidityStackTargets.ActualOriginalStackWorkDecrease
+def comparator5 : Prop := InternalApplicationValidityStackTargets.ActualOriginalApplicationStackPush
+def comparator6 : Prop := InternalApplicationValidityStackTargets.ActualOriginalRecursiveSourceTarget
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackPreflight
