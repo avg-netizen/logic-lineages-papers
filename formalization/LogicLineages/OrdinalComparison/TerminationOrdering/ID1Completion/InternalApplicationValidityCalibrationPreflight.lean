@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityCalibrationPreflight
+
+def comparator0 : Prop := InternalApplicationValidityCalibrationTargets.ActualOriginalEncodedStackIteration
+def comparator1 : Prop := InternalApplicationValidityCalibrationTargets.ActualOriginalStackSufficientFuel
+def comparator2 : Prop := InternalApplicationValidityCalibrationTargets.ActualOriginalBoundedValidatorCalibration
+def comparator3 : Prop := InternalApplicationValidityCalibrationTargets.ActualOriginalRecursiveValidityCalibration
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityCalibrationPreflight
