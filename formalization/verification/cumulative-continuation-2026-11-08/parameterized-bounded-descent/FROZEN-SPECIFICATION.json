@@ -1,0 +1,208 @@
+{
+  "created_at_utc": "2026-11-08T15:41:24.700541+00:00",
+  "status": "frozen-for-independent-static-review-not-compiled-not-proved",
+  "scope": "Six original-calculus parameterized bounded-descent supporting targets for arbitrary binary AST leaves. No source calibration, uniform fold/path proof or numbered statement promotion.",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedBoundedDescentNormalizer",
+  "new_specification_files": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedBoundedDescentNormalizerDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedBoundedDescentNormalizerTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedBoundedDescentNormalizerPreflight.lean"
+  ],
+  "target_count": 6,
+  "targets": [
+    "ActualOriginalParameterizedBoundedDescentZero",
+    "ActualOriginalParameterizedBoundedDescentFuelFixedPoint",
+    "ActualOriginalParameterizedBoundedDescentNormalizerBound",
+    "ActualOriginalParameterizedBoundedDescentNormalizerFixedPoint",
+    "ActualOriginalParameterizedBoundedDescentNormalizerValidity",
+    "ActualOriginalParameterizedBoundedDescentNormalizerLeft"
+  ],
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedBoundedDescentNormalizerPreflight",
+  "frozen_source_pins": "FROZEN-SOURCE-PINS.json",
+  "frozen_source_pins_sha256": "ba5042761c3b9414744366e40798d1f71fee5e34d64d9d218bb34dbf48440e47",
+  "source_pins": "SOURCE-PINS.json",
+  "source_pins_sha256": "3bbcc39b92b96cb6c701dc43a7e185054cf8bd92014c80234d7dffcb01a634a0",
+  "static_checks": "STATIC-CHECKS.json",
+  "static_checks_sha256": "7efe618432e923c7e438a3473c7f87dff80df184d82218c5432b4f709acca428",
+  "source_pin_scope": "Full stable local import closure of these specification roots, the three frozen parameterized-iteration specification/preflight files, and the accepted unary descent exact gate. Additional selected paper/configuration/acceptance inputs. No mutable parameterized-iteration proof is pinned.",
+  "full_local_import_closure_count": 1072,
+  "existing_local_source_pin_count": 1069,
+  "non_lean_input_pin_count": 7,
+  "closure_roots": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedBoundedDescentNormalizerDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedBoundedDescentNormalizerTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedBoundedDescentNormalizerPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalBoundedDescentNormalizerStatementChecks.lean"
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.PartrecCode",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.Fintype.Order",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.List.FinRange",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.List.Permutation",
+    "Mathlib.Data.Multiset.DershowitzManna",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Logic.Equiv.List",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Logic.Godel.GodelBetaFunction",
+    "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.FixedPoints"
+  ],
+  "binary_leaves": {
+    "representative": "arbitrary Program 2",
+    "valid": "arbitrary Program 2",
+    "input_order": [
+      "value",
+      "parameter"
+    ],
+    "selection_order": "Actual binary ASTs precede any variable type, context or symbolic parameter term.",
+    "external_premises": []
+  },
+  "transition": {
+    "name": "transition representative valid",
+    "arity": 2,
+    "input_order": [
+      "value",
+      "parameter"
+    ],
+    "outer_arguments": [
+      "representative",
+      "projection 0",
+      "projection 1"
+    ],
+    "continuation_input_order": [
+      "candidate",
+      "original value",
+      "parameter"
+    ],
+    "guard_order": [
+      "candidate < original value",
+      "valid(candidate,parameter) = 1",
+      "original left(candidate) = original left(original value)"
+    ],
+    "conditional_order": [
+      "guard",
+      "original value",
+      "candidate"
+    ],
+    "exact_one": true,
+    "candidate_leaf_occurrences_in_outer_arguments": 1
+  },
+  "normalizer": {
+    "name": "normalizer representative valid",
+    "arity": 2,
+    "literal_repeat_program": "InternalParameterizedNumericIteration.repeatP (transition representative valid)",
+    "repeat_arguments": [
+      "successor value",
+      "value",
+      "parameter"
+    ],
+    "fuel_measure": "value, the right coordinate of the actual carried pair",
+    "state_initializer": "original pair(parameter,value)",
+    "returned_coordinate": "original right",
+    "count_offset": 1
+  },
+  "graph_compiler": "InternalControlGraph.programGraph / original OrdinaryArithmetic.graphFormula",
+  "internal_calculus": "Nonempty (InternalCalculus.Derivation body Gamma formula)",
+  "internal_quantification": "Every body, binary R/V, variable type, arbitrary Gamma, and displayed symbolic original arithmetic terms including an arbitrary parameter.",
+  "strong_fuel_contract": "(value <= fuel AND repeatGraph T out fuel value parameter) -> transitionGraph R V out out parameter",
+  "zero_contract": "transitionGraph R V zero zero parameter for every symbolic parameter, including nonzero ones",
+  "fixed_point_contract": "normalizerGraph R V out value parameter -> transitionGraph R V out out parameter",
+  "bound_contract": "normalizerGraph R V out value parameter -> out <= value",
+  "validity_contract": "normalizerGraph R V out value parameter -> (validGraph V value parameter -> validGraph V out parameter)",
+  "left_tag_contract": "normalizerGraph R V out value parameter -> (leftGraph typ value -> leftGraph typ out)",
+  "weak_order": "InternalLessThan.strictLess lower (OrdinaryArithmetic.succTerm upper)",
+  "parameterized_iteration_supplier": {
+    "pinned_files": [
+      "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationDefinitions.lean",
+      "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationTargets.lean",
+      "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationPreflight.lean"
+    ],
+    "proof_status": "Still being authored by the iteration worker; exact acceptance not assumed.",
+    "mutable_proofs_pinned": false,
+    "required_internal_targets": [
+      "ActualOriginalParameterizedNumericIterationZero",
+      "ActualOriginalParameterizedNumericIterationFrontSuccessor",
+      "ActualOriginalParameterizedNumericIterationFixedPoint"
+    ]
+  },
+  "accepted_proof_pattern": "InternalBoundedDescentNormalizerInductionProof: zeroCore, successorFixed, successorResult, allRows, repeatResult. Adapt the actual internal induction row to the same symbolic parameter; no whole-pair instantiation or symbolic unary specialization.",
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "least_code_representative_lines": [
+      551,
+      556
+    ],
+    "supporting_lemma_lines": [
+      558,
+      560
+    ],
+    "role": "Supporting prerequisite only, not source-statement completion."
+  },
+  "compiler_status": "Not run. No compiler slot requested or held; the separate parameterized-iteration worker retains the sole compiler slot.",
+  "proof_authorship_status": "Not begun. No proof files created. Wait for independent specification review, comparator-only preflight, supplier acceptance and explicit proof release.",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "required_entrypoint": "scripts/check.py",
+    "stop_at_utc": "2026-11-08T18:00:00Z"
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_claims": [
+    "external representative identification or all-input calibration",
+    "parameter-specialized unary AST chosen after a symbolic parameter",
+    "whole-pair fuel or whole-pair type-tag preservation",
+    "B-fixed or R-fixed substituted for T-fixed",
+    "new interpreter or recursion primitive",
+    "semantic reflection or quantifier swap",
+    "uniform canonical selection",
+    "uniform fold or path correctness",
+    "unconditional CertifiedApplicationLift",
+    "constructor/lambda/substitution closure",
+    "all-term accessibility",
+    "paper06 lem:id1 completion",
+    "numbered source promotion",
+    "native acceptance",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ],
+  "next_gates": [
+    "independent frozen-byte specification review",
+    "coordinator-authorized sole-slot comparator-only preflight",
+    "accepted actual internal parameterized-iteration suppliers",
+    "separately authorized proof authorship",
+    "exact frozen-type alias and standard-axiom acceptance"
+  ]
+}
