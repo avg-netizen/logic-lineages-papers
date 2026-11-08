@@ -1,0 +1,220 @@
+{
+  "created_at_utc": "2026-11-08T15:28:30.543492+00:00",
+  "status": "frozen-for-independent-static-review-not-compiled-not-proved",
+  "scope": "Uniform original binary-AST parameter-carrying numeric iteration prerequisite only; no parameterized descent or uniform fold/path completion.",
+  "namespace": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIteration",
+  "new_specification_files": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationPreflight.lean"
+  ],
+  "target_count": 7,
+  "targets": [
+    "ExactParameterizedNumericIterationEvaluation",
+    "ActualOriginalParameterizedNumericIterationCarryStep",
+    "ActualOriginalParameterizedNumericIterationParameterPreservation",
+    "ActualOriginalParameterizedNumericIterationZero",
+    "ActualOriginalParameterizedNumericIterationFrontSuccessor",
+    "ActualOriginalParameterizedNumericIterationAdditionFusion",
+    "ActualOriginalParameterizedNumericIterationFixedPoint"
+  ],
+  "preflight_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationPreflight",
+  "frozen_source_pins": "FROZEN-SOURCE-PINS.json",
+  "frozen_source_pins_sha256": "4d8659c57098d07ba3351bd45b53029e6fa478bdcb1975c5572c8d75f46245a2",
+  "source_pins": "SOURCE-PINS.json",
+  "source_pins_sha256": "1e664abdcc7522b0a47e79f6cb9b229df95143974eddf1eac11122c630d7cdcd",
+  "full_local_import_closure_count": 1071,
+  "existing_local_source_pin_count": 1068,
+  "non_lean_input_pin_count": 8,
+  "closure_roots": [
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationDefinitions.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationTargets.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalParameterizedNumericIterationPreflight.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalNumericIterationProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalNumericIterationSupportProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPairingEvaluationProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalUnpairEvaluationProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsSupportProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalControlGraphSupportProof.lean",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalGraphCompositionFunctionalityProof.lean"
+  ],
+  "external_imports": [
+    "Init",
+    "Init.Data.List.Lemmas",
+    "Init.Data.Nat.Lemmas",
+    "Lean.Elab.Command",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Computability.PartrecCode",
+    "Mathlib.Computability.Primrec.List",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Lattice.Fold",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Fin",
+    "Mathlib.Data.Fintype.Order",
+    "Mathlib.Data.Fintype.Pi",
+    "Mathlib.Data.Fintype.Powerset",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.List.FinRange",
+    "Mathlib.Data.List.Forall2",
+    "Mathlib.Data.List.Nodup",
+    "Mathlib.Data.List.Perm.Basic",
+    "Mathlib.Data.List.Permutation",
+    "Mathlib.Data.Multiset.DershowitzManna",
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Nat.Sqrt",
+    "Mathlib.Logic.Equiv.List",
+    "Mathlib.Logic.Function.Iterate",
+    "Mathlib.Logic.Godel.GodelBetaFunction",
+    "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.FixedPoints"
+  ],
+  "closure_scope": "Complete current local import closure of the three new specification files and listed existing numeric/pairing/composition proof suppliers. Static source pins only, not source-matched native receipts.",
+  "upstream_mathlib_revision": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+  "selected_upstream_source_pins": {
+    ".lake/packages/mathlib/Mathlib/Logic/Function/Iterate.lean": "bf42e948bbf3fae276cd05b8e53d1d143feec96f95d81675bee103010e210339",
+    ".lake/packages/mathlib/Mathlib/Data/Nat/Pairing.lean": "0e249b5c997eb2b9ed9be7c1a0b0ae71dbf9366c7426eaaec9a915160f3b30dd"
+  },
+  "ast_parameter": {
+    "name": "P",
+    "arity": 2,
+    "input_order": [
+      "value",
+      "parameter"
+    ],
+    "selection_order": "P is an actual AST before any symbolic parameter, variable type, context, or arithmetic term; no semantic representation witness."
+  },
+  "carried_program": {
+    "name": "carryP",
+    "arity": 1,
+    "input_order": [
+      "state"
+    ],
+    "literal_operation": "pair(left state, P[right state,left state])",
+    "pairing": "InternalPairing.pairing",
+    "left": "InternalUnpair.left",
+    "right": "InternalUnpair.right"
+  },
+  "repeat_program": {
+    "name": "repeatP",
+    "arity": 3,
+    "input_order": [
+      "count",
+      "value",
+      "parameter"
+    ],
+    "literal_operation": "right (InternalNumericIteration.repeatProgram (carryP P) [count,pair(parameter,value)])",
+    "initial_pair_projection_order": [
+      2,
+      1
+    ]
+  },
+  "existing_numeric_iterator": {
+    "name": "InternalNumericIteration.repeatProgram",
+    "input_order": [
+      "count",
+      "initial state"
+    ],
+    "step_input_order": [
+      "predecessor",
+      "recursive result",
+      "initial state"
+    ],
+    "transition_input_projection": 1
+  },
+  "all_input_evaluation": "evaluate (repeatP P) [count,value,parameter] = Nat.iterate (fun x => evaluate P [x,parameter]) count value",
+  "internal_calculus": "Nonempty (InternalCalculus.Derivation body Gamma formula)",
+  "internal_quantification": "Every body : Positive (Fin 1), P : Program 2, variable type, arbitrary combined-calculus context Gamma, and symbolic original arithmetic terms.",
+  "actual_carried_step": "(pairGraph state [parameter,value] AND pairGraph nextState [parameter,next]) -> (carryGraph P nextState state IFF programGraph P next [value,parameter])",
+  "parameter_preservation": "(programGraph left parameter [state] AND InternalNumericIteration.repeatGraph (carryP P) out count state) -> programGraph left parameter [out]",
+  "fixed_point": "programGraph P fixed [fixed,parameter] -> (repeatGraph P out count fixed parameter IFF equal out fixed)",
+  "fusion_order": "first iterations followed by second iterations; original addTerm first second; identical symbolic parameter in all three graphs",
+  "named_suppliers": [
+    "InternalNumericIterationProof.frontSuccForward",
+    "InternalNumericIterationProof.frontSuccBackward",
+    "InternalNumericIterationFusionProof.fusionValue",
+    "InternalNumericIterationFusionProof.fusionRecover",
+    "InternalNumericIterationFixedPointProof.fixedValue",
+    "InternalApplicationCertificateConstructorsSupportProof.pairLeft",
+    "InternalApplicationCertificateConstructorsSupportProof.pairRight",
+    "InternalApplicationCertificateConstructorsSupportProof.reconstructPair",
+    "InternalPairingEvaluationProof.exactPairingEvaluation",
+    "InternalUnpairEvaluationProof.exactUnpairEvaluation"
+  ],
+  "paper": {
+    "path": "../06-godel-t-termination-ordering/paper.tex",
+    "sha256": "bdafe9f113ec4e3ffc390a5a744ae6337f197ab9a69ddcecd006d5dc08c4a66e",
+    "supporting_application_rule_lines": [
+      537,
+      549
+    ],
+    "supporting_quotient_arithmetic_lines": [
+      551,
+      556
+    ],
+    "supporting_lemma_lines": [
+      558,
+      560
+    ]
+  },
+  "static_checks": {
+    "new_lean_file_count": 3,
+    "delimiter_balance": "passed after nested comments and strings removed",
+    "forbidden_executable_proof_tokens": [],
+    "proof_bodies": 0,
+    "preflight_alias_coverage": "one per target in exact order",
+    "arbitrary_context_internal_target_count": 6,
+    "missing_local_imports": [],
+    "program_definitions_precede_symbolic_graph_parameters": true,
+    "source_pin_hashes_verified_at_freeze": true,
+    "new_files_only": true,
+    "native_elaboration": "not run",
+    "proof_authorship": "not begun",
+    "git_actions": "none"
+  },
+  "compiler_status": "No compiler run and no slot requested or held; current sole compiler belongs to the original-object-fiber-certified-lift worker.",
+  "resources": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "required_entrypoint": "scripts/check.py",
+    "stop_at_utc": "2026-11-08T18:00:00Z"
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_claims": [
+    "semantic truth-to-derivability reflection",
+    "interpreter or new primitive-recursion semantics",
+    "parameter-specialized AST chosen after the runtime parameter",
+    "whole parameterized descent",
+    "uniform varying-parameter canonical selection",
+    "uniform fold correctness",
+    "uniform path correctness",
+    "automatic generalization of fixed-window proofs",
+    "unconditional CertifiedApplicationLift",
+    "constructor/lambda/substitution closure",
+    "all-term accessibility",
+    "paper06 lem:id1 completion",
+    "numbered source promotion",
+    "native acceptance",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ],
+  "next_gates": [
+    "independent static review of frozen bytes",
+    "fresh sole compiler admission",
+    "comparator-only preflight",
+    "separately authorized proof authorship",
+    "frozen-type exact alias and standard-axiom acceptance"
+  ]
+}

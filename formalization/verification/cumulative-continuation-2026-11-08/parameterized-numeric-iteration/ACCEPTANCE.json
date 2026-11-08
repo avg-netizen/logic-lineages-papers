@@ -1,0 +1,135 @@
+{
+  "checked_at_utc": "2026-11-08T15:43:19.416173+00:00",
+  "status": "checked-focused-parameter-carrying-original-numeric-iteration",
+  "scope": "Seven exact supporting targets for a uniform Program 2 to Program 1/Program 3 parameter-carrying numeric iteration construction. All-input evaluation plus actual carried-step iff, internal parameter preservation and zero/front-successor/addition/fixed-point laws in every original body/context at arbitrary symbolic terms.",
+  "independent_specification_review": "Coordinator reported static review ACCEPT for all seven unchanged targets before comparator preflight and proof authorship.",
+  "independent_postproof_review": "Pending independent review of this completed packet.",
+  "frozen_manifest_sha256": "f434ffbd70a5e83575da3622e4d2b6ab47fec351fbb1f094dc3e1f0f4d6c6e40",
+  "preflight_passed_before_proof_authorship": true,
+  "preflight_receipt": "build-reports/1794152009133778143-6.json",
+  "preflight_receipt_sha256": "754eac0fbd20bbc5acb66d8111307c764e275815eb23a7004f7b967ebc0ea5f7",
+  "exact_gate_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks",
+  "exact_gate_receipt": "build-reports/1794152490593227063-6.json",
+  "exact_receipt_sha256": "948af03356e0a4a5dbe950a804045096f19ef463ed14df2e195a664305ccf3a6",
+  "exact_alias_count": 7,
+  "targets": [
+    "ExactParameterizedNumericIterationEvaluation",
+    "ActualOriginalParameterizedNumericIterationCarryStep",
+    "ActualOriginalParameterizedNumericIterationParameterPreservation",
+    "ActualOriginalParameterizedNumericIterationZero",
+    "ActualOriginalParameterizedNumericIterationFrontSuccessor",
+    "ActualOriginalParameterizedNumericIterationAdditionFusion",
+    "ActualOriginalParameterizedNumericIterationFixedPoint"
+  ],
+  "actual_axiom_closures_checked": true,
+  "exact_alias_axioms": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedActualOriginalParameterizedNumericIterationAdditionFusion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedActualOriginalParameterizedNumericIterationCarryStep": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedActualOriginalParameterizedNumericIterationFixedPoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedActualOriginalParameterizedNumericIterationFrontSuccessor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedActualOriginalParameterizedNumericIterationParameterPreservation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedActualOriginalParameterizedNumericIterationZero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks.fixedExactParameterizedNumericIterationEvaluation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "own_module_namespace_audits": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationBridgeProof": 6,
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationCarryProof": 5,
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationEvaluationProof": 3,
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationLawsProof": 10,
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationPreservationProof": 15,
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationStatementChecks": 7,
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationSyntaxProof": 2
+  },
+  "namespace_audit_count_including_exact_aliases": 48,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "frozen_sources_unchanged": true,
+  "original_supplier_sources_unchanged": true,
+  "frozen_and_prerequisite_pins_verified": 1080,
+  "selected_upstream_source_pins_verified": 2,
+  "source_matched_local_module_count": 1078,
+  "immutable_native_receipt_count": 19,
+  "broader_frozen_lean_input_count": 1071,
+  "all_broader_frozen_lean_inputs_have_successful_native_matches": true,
+  "closure_source_pins": "CLOSURE-SOURCE-PINS.json",
+  "closure_source_pins_sha256": "0e8b16f58aa4bd1282c0b9d071e97505da80c9f283e94cb419cab99e70067b2b",
+  "current_source_compiler_warning_modules": [],
+  "existing_supplier_warning_module_count": 64,
+  "existing_supplier_warnings": "Existing noncritical supplier warnings retained unchanged; full lists and current-source-matched logs remain in local closure evidence.",
+  "program_selection_order": "P : Program 2 precedes all symbolic arithmetic parameters. The literal AST constructors depend only on P, not on the positive operator body or logical context. Internal targets quantify body before P; no specialization at a closed parameter numeral occurs.",
+  "actual_ast": "carryP P state = pair(left state,P[right state,left state]); repeatP P [count,value,parameter] = right(repeatProgram(carryP P)[count,pair(parameter,value)]).",
+  "internal_argument": "Actual pair/unpair graphs and original program composition/recovery; original PA induction proves left-coordinate preservation. That preservation reconstructs the full carried output for the reverse bridge before using unchanged unary iteration laws.",
+  "calibration_boundary": "Nat evaluation calibration is proved separately and never used as a semantic-to-internal reflection principle.",
+  "resource_profile": {
+    "cpu_seconds": 90,
+    "heap_cap_mib": 2048,
+    "minimum_free_mib": 2048,
+    "rss_cap_mib": 1536,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "wall_seconds": 180
+  },
+  "peak_closure_process_tree_rss_kib": 1176760,
+  "peak_component_process_tree_rss_kib": 1105868,
+  "compiler_released_at_utc": "2026-11-08T15:41:49.010217+00:00",
+  "all_checker_sessions_finished": true,
+  "native_checker_session_count": 10,
+  "failed_attempt_receipt_count": 4,
+  "failed_attempt_preservation": "All failed module outputs are excluded from acceptance. Failed module rows and their native receipts/logs are retained locally; successful source-matched rows from partially failing runs remain eligible. The exact-02 source snapshot is retained; final current-source hashes match successful module rows.",
+  "both_shared_checker_locks_free_at_release": true,
+  "excluded_claims": [
+    "semantic truth-to-derivability reflection",
+    "interpreter or new primitive-recursion semantics",
+    "parameter-specialized AST chosen after the runtime parameter",
+    "whole parameterized descent",
+    "uniform varying-parameter canonical selection",
+    "uniform fold correctness",
+    "uniform path correctness",
+    "automatic generalization of fixed-window proofs",
+    "unconditional CertifiedApplicationLift",
+    "constructor/lambda/substitution closure",
+    "all-term accessibility",
+    "paper06 lem:id1 completion",
+    "numbered source promotion",
+    "full-root build",
+    "remote CI",
+    "Git action"
+  ],
+  "numbered_source_register_changed": false,
+  "git_actions": "none",
+  "full_root_build": false,
+  "remote_ci": false,
+  "current_source_receipt_basis": "All 1,078 current local sources match successful module rows across 19 immutable native receipts. A successful row remains usable when a later module in that same checker run failed; accepted CarryProof is from bridge-02, and accepted PreservationProof/BridgeProof are from exact-01."
+}
