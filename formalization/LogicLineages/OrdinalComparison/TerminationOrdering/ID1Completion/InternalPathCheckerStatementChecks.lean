@@ -1,0 +1,35 @@
+module
+public import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks
+
+theorem path_evaluation_exact : InternalPathCheckerTargets.ActualOriginalPathCheckerEvaluation :=
+  InternalPathCheckerEvaluationProof.actualOriginalPathCheckerEvaluation
+
+theorem positive_evaluation_exact : InternalPathCheckerTargets.ActualOriginalPositivePathCheckerEvaluation :=
+  InternalPathCheckerEvaluationProof.actualOriginalPositivePathCheckerEvaluation
+
+theorem path_nil_exact : InternalPathCheckerTargets.ActualInternalPathNil :=
+  InternalPathCheckerProof.actualInternalPathNil
+
+theorem positive_nil_exact : InternalPathCheckerTargets.ActualInternalPositivePathNil :=
+  InternalPathCheckerProof.actualInternalPositivePathNil
+
+theorem path_cons_exact : InternalPathCheckerTargets.ActualInternalPathCons :=
+  InternalPathCheckerProof.actualInternalPathCons
+
+theorem positive_cons_exact : InternalPathCheckerTargets.ActualInternalPositivePathCons :=
+  InternalPathCheckerProof.actualInternalPositivePathCons
+
+#print axioms path_evaluation_exact
+#print axioms positive_evaluation_exact
+#print axioms path_nil_exact
+#print axioms positive_nil_exact
+#print axioms path_cons_exact
+#print axioms positive_cons_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks

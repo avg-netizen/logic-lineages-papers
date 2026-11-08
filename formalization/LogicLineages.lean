@@ -2269,3 +2269,6 @@ public import LogicLineages.ExternalCheckpoint20261107SourceComputability
 
 -- Concrete original certificate/list programs and the full-type downward-closure consumer.
 public import LogicLineages.ExternalCheckpoint20261108CertificatePrograms
+
+-- Original quotient-edge/path checker equations and internal path lifting from local edge rules.
+public import LogicLineages.ExternalCheckpoint20261107PathChecker

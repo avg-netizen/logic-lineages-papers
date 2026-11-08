@@ -1,3 +1,24 @@
+# CURRENT checkpoint — original path checkers and internal path lifting, 7 November 2026
+
+Thirteen new exact supporting targets are checked: original quotient-edge
+and reflexive/positive path checker calibration and internal acceptance
+equations, plus internal application-path preservation from local arithmetic
+invariant propagation and single-edge compatibility. The focused
+**1,225-module** closure and all exact axiom checks passed under the unchanged
+serialized profile. All frozen targets are unchanged.
+Register: **168 checked, 2 inherited, 19 pending / 189**.
+
+Next: prove the concrete original application-step rule with typed endpoint
+guards and the representative congruence rules, then assemble the original
+joint-context and outer `pathValue` wrappers. The generic path proof does not
+discharge those local source rules. The full-type downward consumer remains
+conditional on `CertifiedApplicationLift`. Multiset/constructor/lambda/
+substitution and the closed all-term endpoint remain pending. See
+[the checked continuation](verification/cumulative-continuation-2026-11-07/path-checker-lifting/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # CURRENT checkpoint — certificate programs and downward closure, 8 November 2026
 
 Twenty-six new exact supporting targets are checked: full-type downward

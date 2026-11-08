@@ -1,0 +1,56 @@
+MODULE LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerSyntaxProof
+/workspace/scratch/0c78684a93b2/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalPathCheckerSyntaxProof.lean:12:2: warning: Left-hand side of simp theorem is headed by a `.other` key in the discrimination tree (e.g. because it is a lambda expression). This theorem will be tried against all expressions that also have a `.other` key as head, which can cause slowdowns. This may be acceptable for `local` or `scoped` simp lemmas.
+Use `set_option warning.simp.otherHead false` to disable this warning.
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerSyntaxProof
+
+MODULE LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerBranchProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerBranchProof
+
+MODULE LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerFinishProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerFinishProof
+
+MODULE LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerSummaryProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerSummaryProof
+
+MODULE LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerProof
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerProof
+
+MODULE LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.path_evaluation_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.positive_evaluation_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.path_nil_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.positive_nil_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.path_cons_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.positive_cons_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.positive_evaluation_exact: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.positive_cons_exact: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.path_cons_exact: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.positive_nil_exact: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.path_nil_exact: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks.path_evaluation_exact: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks: 6 theorems
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPathCheckerStatementChecks

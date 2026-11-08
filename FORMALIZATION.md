@@ -1,3 +1,29 @@
+# Current checkpoint — original path checkers and internal path lifting, 7 November 2026
+
+The original quotient-edge and reflexive/positive path checkers now have
+concrete arithmetic programs, exact all-input calibration, and internal
+acceptance equations. The literal application path map preserves reflexive
+and positive acceptance by an internal proof from local arithmetic invariant
+propagation and single-edge compatibility.
+
+All **13 new exact supporting targets** and the focused checkpoint passed.
+Its **1,225 local source modules** match successful native receipts; all exact
+aliases use only the permitted standard axioms under the unchanged serialized
+resource limits. The checkpoint contains **25 new Lean files**, including the
+aggregate. Register: **168 checked, 2 inherited, 19 pending / 189**. Frozen
+definitions and targets remain unchanged.
+
+The concrete original step rule with typed endpoint guards, representative
+congruence, and joint-context/outer `pathValue` assembly remain pending. The
+full-type downward-closure consumer remains conditional on
+`CertifiedApplicationLift`; the source multiset, constructor, lambda,
+fundamental and closed all-term arguments still require their derivations.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-07/path-checker-lifting/STATUS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # Current checkpoint — certificate programs and downward-closure reduction, 8 November 2026
 
 The original application-certificate constructors now have explicit arithmetic

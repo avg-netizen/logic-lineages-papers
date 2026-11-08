@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeCheckerProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeCheckerEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeCheckerStatementChecks
+
+theorem programs_exact : InternalQuotientEdgeCheckerTargets.ActualOriginalProgramsExist :=
+  InternalQuotientEdgeCheckerEvaluationProof.actualOriginalProgramsExist
+#print axioms programs_exact
+
+theorem calibration_exact : InternalQuotientEdgeCheckerTargets.ActualOriginalCheckerCalibration :=
+  InternalQuotientEdgeCheckerEvaluationProof.actualOriginalCheckerCalibration
+#print axioms calibration_exact
+
+theorem acceptance_exact : InternalQuotientEdgeCheckerTargets.ActualOriginalAcceptanceEquation :=
+  InternalQuotientEdgeCheckerProof.actualOriginalAcceptanceEquation
+#print axioms acceptance_exact
+
+theorem suppliedValues_exact : InternalQuotientEdgeCheckerTargets.ActualOriginalAcceptanceAtValues :=
+  InternalQuotientEdgeCheckerProof.actualOriginalAcceptanceAtValues
+#print axioms suppliedValues_exact
+
+theorem encodedAcceptance_exact : InternalQuotientEdgeCheckerTargets.ActualOriginalEncodedAcceptanceEquation :=
+  InternalQuotientEdgeCheckerProof.actualOriginalEncodedAcceptanceEquation
+#print axioms encodedAcceptance_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientEdgeCheckerStatementChecks
