@@ -1,0 +1,55 @@
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:70:79: error: unsolved goals
+Γ : List Ty
+τ : Ty
+t : OriginalTerm Γ τ
+L : ℕ
+h5 : encodeTerm t % 8 ≠ 5
+h6 : encodeTerm t % 8 ≠ 6
+⊢ typeLevel (typeCode τ) ≤ L ↔ τ.level ≤ L
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:72:21: warning: This simp argument is unused:
+  Source.SyntaxCode.Proof.typeLevelExact
+
+Hint: Omit it from the simp argument list.
+  simp [typed_check, S̵o̵u̵r̵c̵e̵.̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵,̵ ̵h5, h6]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:79:63: error: unsolved goals
+Γ : List Ty
+σ τ : Ty
+f : OriginalTerm Γ (σ.arrow τ)
+a : OriginalTerm Γ σ
+L : ℕ
+⊢ (decide (typeLevel (typeCode τ) ≤ L) &&
+      (Admission.test L (List.map typeCode Γ) (code (erase f)) &&
+        Admission.test L (List.map typeCode Γ) (code (erase a)))) =
+    (decide (τ.level ≤ L) &&
+      (Admission.test L (List.map typeCode Γ) (code (erase f)) &&
+        Admission.test L (List.map typeCode Γ) (code (erase a))))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:81:43: warning: This simp argument is unused:
+  Source.SyntaxCode.Proof.typeLevelExact
+
+Hint: Omit it from the simp argument list.
+  simp only [typed_check, Option.any_some,̵ ̵S̵o̵u̵r̵c̵e̵.̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:89:68: error: unsolved goals
+Γ : List Ty
+σ τ : Ty
+b : OriginalTerm (σ :: Γ) τ
+L : ℕ
+⊢ (decide (typeLevel (typeCode (σ.arrow τ)) ≤ L) &&
+      Admission.test L (typeCode σ :: List.map typeCode Γ) (code (erase b))) =
+    (decide ((σ.arrow τ).level ≤ L) && Admission.test L (typeCode σ :: List.map typeCode Γ) (code (erase b)))
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:91:43: warning: This simp argument is unused:
+  Source.SyntaxCode.Proof.typeLevelExact
+
+Hint: Omit it from the simp argument list.
+  simp only [typed_check, Option.any_some,̵ ̵S̵o̵u̵r̵c̵e̵.̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/leveltwo-20261106/repo/formalization/LogicLineages/OrdinalComparison/LevelTwoCounterexample/AdmissionProof.lean:163:8: error: Type mismatch: After simplification, term
+  hc
+ has type
+  check (List.map typeCode Γ) n = some c
+but is expected to have type
+  check (List.map typeCode Γ) n = some (typeCode (decodeType c))

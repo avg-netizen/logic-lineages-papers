@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionProof
+public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionCodeProof
+public meta import LogicLineages.Audit
+
+public section
+namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionStatementChecks
+theorem actual_internal_bound : AdmissionTargets.ActualInternalBound := AdmissionProof.actualInternalBound
+theorem exact_typed_admission : AdmissionTargets.ExactTypedAdmission := AdmissionProof.exactTypedAdmission
+theorem exact_any_type_admission : AdmissionTargets.ExactAnyTypeAdmission := AdmissionProof.exactAnyTypeAdmission
+theorem malformed_rejection : AdmissionTargets.MalformedRejection := AdmissionProof.malformedRejection
+theorem exact_ground_class : AdmissionTargets.ExactGroundClass := AdmissionProof.exactGroundClass
+theorem exact_guarded_domain : AdmissionTargets.ExactGuardedDomain := AdmissionProof.exactGuardedDomain
+theorem emitted_source_counterexample : AdmissionTargets.EmittedSourceCounterexample := AdmissionProof.emittedSourceCounterexample
+theorem actual_numeric_programs : AdmissionTargets.ActualNumericPrograms := AdmissionCodeProof.actualNumericPrograms
+end LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionStatementChecks
