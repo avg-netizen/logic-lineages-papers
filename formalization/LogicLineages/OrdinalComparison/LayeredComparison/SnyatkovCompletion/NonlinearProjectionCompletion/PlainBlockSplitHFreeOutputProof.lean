@@ -32,8 +32,10 @@ theorem hfree_compile_atom (a : Atom) (ha : rowHFree a.row = true) :
   have hn := hfree_negative_term a.row ha
   cases a with
   | nonnegative r =>
+    simp only [Atom.row] at hp hn
     simp only [Atom.compile, atMost, matrixHFree, hp, hn, Bool.true_and]
   | divisible m r =>
+    simp only [Atom.row] at hp hn
     simp only [Atom.compile, absoluteTerm, matrixHFree, termHFree, hp, hn, Bool.true_and]
 
 theorem hfree_compile_formula (p : Formula) (hp : formulaHFree p = true) :
@@ -65,8 +67,9 @@ theorem advance_hfree (states : List State) (hgood : GoodFrontier states)
     ∀ s ∈ advance states, formulaHFree s.2 = true := by
   intro q hq
   obtain ⟨s, hs, hcase⟩ := (mem_advance states q).mp hq
-  rcases hcase with ⟨_, rfl⟩ | ⟨_, hbranch⟩
-  · exact hh s hs
+  rcases hcase with ⟨_, hqs⟩ | ⟨_, hbranch⟩
+  · rw [hqs]
+    exact hh s hs
   · have hg := hgood s hs
     exact hFreeBranchClosure s.1 s.2 hg.2.1 hg.2.2 (hh s hs) q hbranch
 
