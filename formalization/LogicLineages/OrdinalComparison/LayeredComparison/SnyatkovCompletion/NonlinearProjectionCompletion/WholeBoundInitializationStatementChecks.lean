@@ -1,0 +1,56 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationProjectionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationStatementChecks
+
+theorem actualOccurrencePartition : WholeBoundInitializationTargets.LiteralOccurrencePartition :=
+  WholeBoundInitializationProof.literalOccurrencePartition
+#print axioms actualOccurrencePartition
+
+theorem actualParameterSupport : WholeBoundInitializationTargets.LiteralParameterSupport :=
+  WholeBoundInitializationProof.literalParameterSupport
+#print axioms actualParameterSupport
+
+theorem actualRowSemantics : WholeBoundInitializationTargets.LiteralRowSemantics :=
+  WholeBoundInitializationProof.literalRowSemantics
+#print axioms actualRowSemantics
+
+theorem actualFormulaSemantics : WholeBoundInitializationTargets.ActualFormulaSemantics :=
+  WholeBoundInitializationProof.actualFormulaSemantics
+#print axioms actualFormulaSemantics
+
+theorem actualWholeBoundIndependence : WholeBoundInitializationTargets.WholeBoundParameterIndependence :=
+  WholeBoundInitializationProof.wholeBoundParameterIndependence
+#print axioms actualWholeBoundIndependence
+
+theorem actualOriginalNames : WholeBoundInitializationTargets.ExactOriginalNameSupport :=
+  WholeBoundInitializationProof.exactOriginalNameSupport
+#print axioms actualOriginalNames
+
+theorem actualAllowedTest : WholeBoundInitializationTargets.ActualAllowedTest :=
+  WholeBoundInitializationProof.actualAllowedTest
+#print axioms actualAllowedTest
+
+theorem actualHFreeInitialization : WholeBoundInitializationTargets.HFreeInitialization :=
+  WholeBoundInitializationProof.hFreeInitialization
+#print axioms actualHFreeInitialization
+
+theorem actualPrefixSemantics : WholeBoundInitializationTargets.ExactPrefixSemantics :=
+  WholeBoundInitializationProof.exactPrefixSemantics
+#print axioms actualPrefixSemantics
+
+theorem actualInitializedProjection : WholeBoundInitializationTargets.ActualInitializedProjection :=
+  WholeBoundInitializationProof.actualInitializedProjection
+#print axioms actualInitializedProjection
+
+theorem actualProjectedNames : WholeBoundInitializationTargets.OriginalProjectedNameSupport :=
+  WholeBoundInitializationProof.originalProjectedNameSupport
+#print axioms actualProjectedNames
+
+theorem actualHFreeOutput : WholeBoundInitializationTargets.HFreeProjectedOutput :=
+  WholeBoundInitializationProof.hFreeProjectedOutput
+#print axioms actualHFreeOutput
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationStatementChecks
