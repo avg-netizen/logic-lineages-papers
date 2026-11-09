@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.RuntimePathCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.RuntimePathCalibrationPreflight
+def calibrationComparator : Prop := RuntimePathCalibrationTargets.ActualOriginalRuntimePathCalibration
+def fallbackComparator : Prop := RuntimePathCalibrationTargets.ActualOriginalRuntimeVertexFallback
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.RuntimePathCalibrationPreflight
