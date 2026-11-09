@@ -25,4 +25,9 @@ theorem exactAllocation : ExpandedGraphTargets.ExactAllocation := by
   have hlow := hf i hsource
   omega
 
+#print axioms nodeCount_pos
+#print axioms mem_allocated
+#print axioms output_mem_allocated
+#print axioms exactAllocation
+
 end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphProof
