@@ -1,3 +1,17 @@
+# Active user release — cumulative continuation, 9 November 2026
+
+Read [the current release](RESUME-2026-11-09.md) first. The user explicitly
+resumed formalization on `formalization/cumulative-continuation-2026-11-09`
+from reconciled main `4028a9e34506f4339af2992749464cf2d4d55eb9`, through
+**9 November 2026, 21:30 UTC**. Baseline: **170 checked, 2 inherited,
+17 pending / 189**. This release supersedes the historical STOP for this
+continuation only. Exact mathematical targets, source preservation,
+standard-axiom acceptance and bounded serialized compiler controls remain
+unchanged. Publication is non-force on the cumulative branch; no main merge,
+dependency/toolchain, checker, manuscript or CI change is authorized.
+
+---
+
 # Current user instruction — reconcile branches onto main, 9 November 2026
 
 The user requested reconciliation of the external agent's work and the local
