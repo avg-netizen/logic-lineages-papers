@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableRepresentativeTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableRepresentativePreflight
+/-- Target-only aliases; no candidate proof is present in this gate. -/
+def refinementEqualityComparator : Prop :=
+  OriginalVariableRepresentativeTargets.ActualOriginalVariableRepresentativeRefinementEquality
+
+def selectedRigidityComparator : Prop :=
+  OriginalVariableRepresentativeTargets.ActualOriginalSelectedVariableRepresentativeRigidity
+
+def globalSelectionComparator : Prop :=
+  OriginalVariableRepresentativeTargets.ActualOriginalVariableRepresentativeGlobalSelection
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableRepresentativePreflight
