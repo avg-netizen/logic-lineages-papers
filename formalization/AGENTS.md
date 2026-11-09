@@ -1,3 +1,31 @@
+# Current checkpoint — original variable Objects, 9 November 2026
+
+The active continuation is `formalization/cumulative-continuation-2026-11-09`,
+from `cd648a18`. The user resumed work after the earlier cutoff. Historical
+stop times and allocations do not block this continuation; the unchanged
+exact-target, source-preservation, standard-axiom and serialized compiler
+requirements remain. Publication stays on the existing cumulative branch.
+
+Three exact supporting targets in nine new Lean modules are checked:
+original variable Object certificate inversion to literal same-type,
+same-Gamma bottom; scalar I for typed variable Objects at every finite type;
+and one global selection retaining both laws and the full original package.
+The shared Gamma is bound internally and no tau-in-window premise is added.
+The register remains **171 checked, 2 inherited, 16 pending / 189**.
+
+The newer continuation already completed the earlier Object wrappers,
+unqualified certified lift and original global source package. Next is
+genuine neutral application-spine inversion and all-type variable
+computability. Scalar I at an arrow is not arrow C. Lambda/substitution,
+multiset, constructor and closed all-term accessibility remain pending.
+
+Read the [accepted checkpoint](verification/continuation-2026-11-09/variable-object-lift/STATUS.md)
+and [concrete next steps](verification/continuation-2026-11-09/variable-object-lift/NEXT-STEPS.md).
+All new compiler jobs are finished. No full-root or remote-CI pass is claimed.
+Earlier dated checkpoints below retain their historical scope.
+
+---
+
 # Active user release — cumulative continuation, 9 November 2026
 
 Read [the current release](RESUME-2026-11-09.md) first. The user explicitly

@@ -2305,3 +2305,4 @@ public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionSt
 
 -- Entire printed closed existential word-arithmetic theorem on its original global domains.
 public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableObjectStatementChecks
