@@ -7503,7 +7503,16 @@
             ],
             "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
             "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+          },
+          "checked_components": [
+            {
+              "gate_module": "LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionStatementChecks",
+              "acceptance_record": "verification/cumulative-continuation-2026-11-06/leveltwo-source-admission/ACCEPTANCE.json",
+              "reconciliation_validation": "verification/reconciliation-2026-11-09/SOURCE-AND-EVIDENCE-VALIDATION.json",
+              "exact_target_count": 8,
+              "scope": "Literal original internal-level/type-support admission and actual guarded source-to-counterexample compiler. Original types, contexts, numeric codes and positive valuation semantics retained. All440 accepted dependency-source hashes still match at reconciliation. This does not decide the emitted existential proposition; the whole level-two decision theorem remains pending."
+            }
+          ]
         },
         {
           "id": "08-multivariate-collapse-comparison:lem:endpoints",
@@ -11724,5 +11733,20 @@
       "full_root_build": false,
       "remote_ci_claim": false
     }
-  ]
+  ],
+  "branch_reconciliation": {
+    "date": "2026-11-09",
+    "record": "RECONCILIATION-2026-11-09.md",
+    "local_checkpoint": "b9fab9ed",
+    "external_checkpoint": "cb19f838",
+    "older_supporting_checkpoint": "037066d2",
+    "numbered_promotions_during_reconciliation": 0,
+    "authoritative_counts": {
+      "checked": 170,
+      "existing-calculator-package": 2,
+      "pending": 17,
+      "total": 189
+    },
+    "older_counts_are_historical": true
+  }
 }

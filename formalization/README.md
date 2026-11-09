@@ -1,4 +1,14 @@
-# Current checkpoint — user wind-down, 9 November 2026
+# Current checkpoint — reconciled main, 9 November 2026
+
+**170 checked, 2 inherited, 17 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Both agents' checkpoints and the remaining unique
+older supporting branch are combined. The difference from 19 pending was our
+previously unpushed whole-source finite-iteration and ranked-row proofs.
+Read [the current reconciliation](RECONCILIATION-2026-11-09.md).
+All lanes and the local compiler remain stopped. Older checkpoint counts and
+allocations below are historical; no new full-root or CI pass is claimed.
+
+# Previous checkpoint — user wind-down, 9 November 2026
 
 All six lanes and compiler coordination are stopped. The local compiler
 policy is paused; [the final handoff](verification/local-six-codex-2026-11-08/ROOT-FINAL-HANDOFF.md)

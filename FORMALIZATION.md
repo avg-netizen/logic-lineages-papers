@@ -1,4 +1,16 @@
-# Current checkpoint — user wind-down, 9 November 2026
+# Current checkpoint — reconciled main, 9 November 2026
+
+**170 checked, 2 inherited, 17 pending / 189.** The local six-Codex work,
+external 34-target continuation and older eight-target source-admission
+component are combined. All previous branch heads are preserved in the
+combined history. The 19-pending external snapshot lacked the two source
+closures in our previously unpushed local commit. Read
+[the reconciliation](formalization/RECONCILIATION-2026-11-09.md).
+The numbered authority is [TARGETS.json](formalization/TARGETS.json).
+All proof lanes remain stopped; no new full-root or CI build is claimed.
+Earlier dated records below retain their historical scope and counts.
+
+# Previous checkpoint — user wind-down, 9 November 2026
 
 All six lanes and compiler coordination have stopped. The queue is empty and
 the local compiler policy is paused until explicit user resumption.

@@ -1,5 +1,12 @@
 # Logic lineages papers
 
+**Current formalization: 170 checked, 2 inherited, 17 pending out of 189.**
+The [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md) combines
+the local six-Codex checkpoint with the external continuation and remaining
+unique supporting branch. [TARGETS.json](formalization/TARGETS.json) is the
+authoritative register; older checkpoint counts describe historical trees.
+The proof lanes are stopped.
+
 **Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
 
 [![Pure R1 Lean verification](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml/badge.svg?branch=main)](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml)

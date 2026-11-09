@@ -1,4 +1,16 @@
-# Current user instruction — wind down, then commit, 9 November 2026
+# Current user instruction — reconcile branches onto main, 9 November 2026
+
+The user requested reconciliation of the external agent's work and the local
+checkpoint, with consolidation onto main. See
+[the current reconciliation](RECONCILIATION-2026-11-09.md).
+The authoritative register is TARGETS.json: 170 checked, 2 inherited, 17 pending.
+This finite Git task supersedes the earlier local-only/no-push checkpoint scope.
+All six mathematical lanes and the compiler queue remain STOPPED; the local
+compiler policy stays paused. Do not restart agents or proof rounds. Accepted
+mathematical sources and frozen targets remain immutable. Historical counts,
+standing allocations and resume instructions below are not current authority.
+
+# Previous user instruction — wind down, then commit, 9 November 2026
 
 All six lanes and compiler coordination are now STOPPED. The queue is empty,
 all jobs reaped, and the local compiler policy is paused. Resume only after
