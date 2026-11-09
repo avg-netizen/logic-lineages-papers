@@ -1,0 +1,32 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformStepGuardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformStepGuardStatementChecks
+open InternalOriginalUniformStepGuardTargets
+
+theorem guarded_acceptance_exact : ActualParameterizedGuardedStepAtSourceTag :=
+  InternalOriginalUniformStepGuardProof.actualParameterizedGuardedStepAtSourceTag
+
+theorem canonical_acceptance_exact : ActualParameterizedCanonicalStepAtSourceTag :=
+  InternalOriginalUniformStepGuardProof.actualParameterizedCanonicalStepAtSourceTag
+
+theorem guarded_calibration_exact : ActualOriginalUniformGuardedStepCalibration :=
+  InternalOriginalUniformStepGuardProof.actualOriginalUniformGuardedStepCalibration
+
+theorem canonical_calibration_exact : ActualOriginalUniformCanonicalStepCalibration :=
+  InternalOriginalUniformStepGuardProof.actualOriginalUniformCanonicalStepCalibration
+
+theorem application_exact : ActualParameterizedCanonicalStepApplication :=
+  InternalOriginalUniformStepGuardProof.actualParameterizedCanonicalStepApplication
+
+theorem selection_exact : ActualOriginalUniformCanonicalStepSelection :=
+  InternalOriginalUniformStepGuardProof.actualOriginalUniformCanonicalStepSelection
+
+#print axioms guarded_acceptance_exact
+#print axioms canonical_acceptance_exact
+#print axioms guarded_calibration_exact
+#print axioms canonical_calibration_exact
+#print axioms application_exact
+#print axioms selection_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformStepGuardStatementChecks

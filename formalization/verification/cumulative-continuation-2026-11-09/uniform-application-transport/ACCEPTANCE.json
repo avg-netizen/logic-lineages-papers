@@ -1,0 +1,77 @@
+{
+  "checked_at_utc": "2026-11-09T08:25:57.777519+00:00",
+  "status": "accepted-focused-uniform-application-transport",
+  "baseline_commit": "9cbe6c5a6b999d5c34763075034cc05a428c990c",
+  "exact_target_count": 34,
+  "new_component_source_count": 50,
+  "new_lean_file_count_including_aggregate": 51,
+  "additional_own_namespace_audit_declarations": 182,
+  "all_frozen_specifications_and_named_suppliers_unchanged": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "resource_profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "minimum_free_mib": 2048,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "peak_new_source_rss_kib": 1214960,
+  "aggregate": {
+    "module": "LogicLineages.ExternalCheckpoint20261109UniformApplicationPaths",
+    "source_sha256": "1e9c2f0b64084f896c1be3054bd030f902afdbacf7ffec0c0052f2ac306f0aad",
+    "native_receipt": "build-reports/1794212728128911452-2.json",
+    "native_receipt_sha256": "8be011c619c6617de9af18a45ca66cf3b8636654edd3539652598889ce44f63c",
+    "native_compiler_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "returncode": 0
+  },
+  "packets": [
+    {
+      "path": "uniform-step-guard/ACCEPTANCE.json",
+      "sha256": "f4084e41614a9e1dad680fd582b435c8f0eb95f54d0853f2341e11f9dd5d23f5",
+      "exact_targets": 6
+    },
+    {
+      "path": "parameterized-quotient-edge-checker/ACCEPTANCE.json",
+      "sha256": "2839e6dff18c54a8cf6ab5a07f489c646593ada5356803277d1b6f499528894f",
+      "exact_targets": 6
+    },
+    {
+      "path": "parameterized-canonical-quotient-application/ACCEPTANCE.json",
+      "sha256": "f01565cfd6ca6d3319a05a972b65cf1cca8672c184c543094bb2b43797d8c073",
+      "exact_targets": 6
+    },
+    {
+      "path": "uniform-vertex-path/ACCEPTANCE.json",
+      "sha256": "79d059ca91e8750c469396082770ff84210fcef2cb290c3c24e1243801322285",
+      "exact_targets": 10
+    },
+    {
+      "path": "uniform-application-path/ACCEPTANCE.json",
+      "sha256": "2dd5645e72336f62fd8a908d7521733024c712c89f11248b0e99fc1b0fdfef42",
+      "exact_targets": 3
+    },
+    {
+      "path": "uniform-object-path-dispatch/ACCEPTANCE.json",
+      "sha256": "74b46ec47dca4e9fa90b6a71371a60da800c5964ccd4612316dbd6b788f63653",
+      "exact_targets": 3
+    }
+  ],
+  "scope": "Original uniform W, typed quotient E, actualJ edge compatibility and output typing, complete-fallback vertex, concrete reflexive/positive path lifts, normalized runtime path laws and one global Data/step/vertex selection. Original outer pathValue dispatcher computes the runtime parameter from the argument Object and preserves all-input fallback behavior.",
+  "remaining": "Remaining original Object typed/positive/paired-result wrappers and shared-Gamma witness elimination; unqualified CertifiedApplicationLift; source multiset/constructor/lambda/substitution; closed all-term context-uniform accessibility.",
+  "numbered_register": {
+    "checked": 168,
+    "inherited": 2,
+    "pending": 19,
+    "total": 189
+  },
+  "numbered_statement_promotion": false,
+  "full_root_or_remote_ci_claimed": false,
+  "prior_evidence_policy": "Existing committed proof and verification packets are retained. Only new component source rows and exact-gate/focused-aggregate evidence are packaged."
+}

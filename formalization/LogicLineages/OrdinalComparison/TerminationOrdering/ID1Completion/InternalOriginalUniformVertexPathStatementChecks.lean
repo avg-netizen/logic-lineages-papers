@@ -1,0 +1,48 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformVertexPathProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformVertexPathStatementChecks
+open InternalOriginalUniformVertexPathTargets
+
+theorem original_vertex_exact : ActualOriginalUniformVertexProgram :=
+  InternalOriginalUniformVertexPathProof.actualOriginalUniformVertexProgram
+
+theorem calibration_exact : ActualOriginalUniformVertexPathCalibration :=
+  InternalOriginalUniformVertexPathProof.actualOriginalUniformVertexPathCalibration
+
+theorem activation_exact : ActualParameterizedVertexActivation :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedVertexActivation
+
+theorem dispatch_exact : ActualParameterizedVertexDispatch :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedVertexDispatch
+
+theorem invariant_factors_exact : ActualParameterizedVertexInvariantFactors :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedVertexInvariantFactors
+
+theorem invariant_preservation_exact : ActualParameterizedVertexInvariantPreservation :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedVertexInvariantPreservation
+
+theorem edge_compatibility_exact : ActualParameterizedVertexEdgeCompatibility :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedVertexEdgeCompatibility
+
+theorem reflexive_path_exact : ActualParameterizedConcreteReflexivePathLift :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedConcreteReflexivePathLift
+
+theorem positive_path_exact : ActualParameterizedConcretePositivePathLift :=
+  InternalOriginalUniformVertexPathProof.actualParameterizedConcretePositivePathLift
+
+theorem initial_invariant_exact : ActualOriginalUniformInitialVertexInvariant :=
+  InternalOriginalUniformVertexPathProof.actualOriginalUniformInitialVertexInvariant
+
+#print axioms original_vertex_exact
+#print axioms calibration_exact
+#print axioms activation_exact
+#print axioms dispatch_exact
+#print axioms invariant_factors_exact
+#print axioms invariant_preservation_exact
+#print axioms edge_compatibility_exact
+#print axioms reflexive_path_exact
+#print axioms positive_path_exact
+#print axioms initial_invariant_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformVertexPathStatementChecks

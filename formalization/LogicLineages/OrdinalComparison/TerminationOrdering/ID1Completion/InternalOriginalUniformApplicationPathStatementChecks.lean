@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationPathProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationPathStatementChecks
+open InternalOriginalUniformApplicationPathTargets
+
+theorem reflexive_path_exact : ActualOriginalUniformReflexiveApplicationPath :=
+  InternalOriginalUniformApplicationPathProof.actualOriginalUniformReflexiveApplicationPath
+
+theorem positive_path_exact : ActualOriginalUniformPositiveApplicationPath :=
+  InternalOriginalUniformApplicationPathProof.actualOriginalUniformPositiveApplicationPath
+
+theorem selection_exact : ActualOriginalUniformApplicationPathSelection :=
+  InternalOriginalUniformApplicationPathProof.actualOriginalUniformApplicationPathSelection
+
+#print axioms reflexive_path_exact
+#print axioms positive_path_exact
+#print axioms selection_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationPathStatementChecks
