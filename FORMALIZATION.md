@@ -1,3 +1,33 @@
+# Current checkpoint — uniform application transport, 9 November 2026
+
+The concrete uniform quotient-edge rule and both application-path lifts are
+checked at an arbitrary symbolic runtime parameter. The same canonical Data,
+original certificate encoding and raw argument are retained. Target typing,
+raw endpoint validity, representative transport, both local path rules and
+the starting invariant are derived. One Data/oldStep/oldVertex selection
+precedes every source window and ambient Gamma, retaining the original
+all-input calibrations. The original outer pathValue dispatcher now obtains
+Gamma from its actual argument Object and preserves the complete fallback.
+
+All **34 new exact supporting targets** and their focused aggregate passed,
+in **51 new formalization modules**. Exact aliases and 182 additional
+namespace declarations use only standard axioms. All frozen specifications
+and named suppliers are unchanged. Register: **168 checked, 2 inherited,
+19 pending / 189**.
+
+Next: assemble the remaining original Object typed/positive/paired-result
+wrappers at a shared symbolic Gamma code, then prove unqualified
+`CertifiedApplicationLift`. Preserve one source package before all windows;
+independent fixed-window sources do not meet the context-uniform endpoint.
+The multiset, constructor, lambda, substitution and closed all-term
+accessibility obligations remain pending.
+
+Read the [checked continuation](formalization/verification/cumulative-continuation-2026-11-09/uniform-application-transport/STATUS.md)
+and [concrete next steps](formalization/verification/cumulative-continuation-2026-11-09/uniform-application-transport/NEXT-STEPS.md).
+Earlier checkpoint summaries below are historical.
+
+---
+
 # Current checkpoint — uniform certificate transport, 8 November 2026
 
 The same globally calibrated canonical package now supports internal
