@@ -1,0 +1,37 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphRealizationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphUniquenessProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphPlainProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphStatementChecks
+
+theorem actualLiteralSubtraction : ExpandedGraphTargets.LiteralSubtraction := ExpandedGraphProof.literalSubtraction
+#print axioms actualLiteralSubtraction
+
+theorem actualLiteralDivision : ExpandedGraphTargets.LiteralDivision := ExpandedGraphProof.literalDivision
+#print axioms actualLiteralDivision
+
+theorem actualLiteralInverse : ExpandedGraphTargets.LiteralInverse := ExpandedGraphProof.literalInverse
+#print axioms actualLiteralInverse
+
+theorem actualAllocation : ExpandedGraphTargets.ExactAllocation := ExpandedGraphProof.exactAllocation
+#print axioms actualAllocation
+
+theorem actualSupport : ExpandedGraphTargets.ExactGraphSupport := ExpandedGraphProof.exactGraphSupport
+#print axioms actualSupport
+
+theorem actualPlainClass : ExpandedGraphTargets.PlainOriginalGraphClass := ExpandedGraphProof.plainOriginalGraphClass
+#print axioms actualPlainClass
+
+theorem actualSoundness : ExpandedGraphTargets.GraphSoundness := ExpandedGraphProof.graphSoundness
+#print axioms actualSoundness
+
+theorem actualRealization : ExpandedGraphTargets.TotalGraphRealization := ExpandedGraphProof.totalGraphRealization
+#print axioms actualRealization
+
+theorem actualNodeUniqueness : ExpandedGraphTargets.AllocatedNodeUniqueness := ExpandedGraphProof.allocatedNodeUniqueness
+#print axioms actualNodeUniqueness
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphStatementChecks

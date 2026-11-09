@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphSoundnessProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphSoundnessStatementChecks
+
+theorem actualGraphSoundness : ExpandedGraphTargets.GraphSoundness := ExpandedGraphProof.graphSoundness
+#print axioms actualGraphSoundness
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphSoundnessStatementChecks
