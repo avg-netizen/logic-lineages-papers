@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterSourceCalibrationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterSourceCalibrationPreflight
+def concreteShapeComparator : Prop := OuterSourceCalibrationTargets.ActualOriginalConcreteShapeCalibration
+def positiveComparator : Prop := OuterSourceCalibrationTargets.ActualOriginalOuterPositiveCalibration
+def sourceComparator : Prop := OuterSourceCalibrationTargets.ActualOriginalOuterSourceCalibration
+def objectLiftComparator : Prop := OuterSourceCalibrationTargets.ActualOriginalOuterObjectLiftCalibration
+def fallbackComparator : Prop := OuterSourceCalibrationTargets.ActualOriginalOuterPositiveSourceFallback
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterSourceCalibrationPreflight
