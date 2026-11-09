@@ -1,0 +1,33 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowSubstitutionCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowSubstitutionCodeProgramsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowSubstitutionCodeStatementChecks
+
+theorem actualEntries : BlockRowSubstitutionCodeTargets.LiteralEntryCalibration :=
+  BlockRowSubstitutionCodeProof.literalEntryCalibration
+#print axioms actualEntries
+
+theorem actualRow : BlockRowSubstitutionCodeTargets.LiteralRowCalibration :=
+  BlockRowSubstitutionCodeProof.literalRowCalibration
+#print axioms actualRow
+
+theorem actualEntryProgram : BlockRowSubstitutionCodeTargets.ActualEntryProgram :=
+  BlockRowSubstitutionCodeProof.actualEntryProgram
+#print axioms actualEntryProgram
+
+theorem actualRowProgram : BlockRowSubstitutionCodeTargets.ActualRowProgram :=
+  BlockRowSubstitutionCodeProof.actualRowProgram
+#print axioms actualRowProgram
+
+theorem actualEncoded : BlockRowSubstitutionCodeTargets.LiteralEncodedCalibration :=
+  BlockRowSubstitutionCodeProof.literalEncodedCalibration
+#print axioms actualEncoded
+
+theorem actualEncodedProgram : BlockRowSubstitutionCodeTargets.ActualEncodedProgram :=
+  BlockRowSubstitutionCodeProof.actualEncodedProgram
+#print axioms actualEncodedProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowSubstitutionCodeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowSubstitutionCodeStatementChecks

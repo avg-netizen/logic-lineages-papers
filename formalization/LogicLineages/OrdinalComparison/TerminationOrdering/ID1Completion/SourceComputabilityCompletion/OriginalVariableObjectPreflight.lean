@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableObjectTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableObjectPreflight
+/-- Target-only aliases; no candidate proof is authored or imported. -/
+def certificateBottomComparator : Prop :=
+  OriginalVariableObjectTargets.ActualOriginalVariableObjectCertificateBottom
+
+def variableLeastComparator : Prop :=
+  OriginalVariableObjectTargets.ActualOriginalVariableObjectLeast
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableObjectPreflight

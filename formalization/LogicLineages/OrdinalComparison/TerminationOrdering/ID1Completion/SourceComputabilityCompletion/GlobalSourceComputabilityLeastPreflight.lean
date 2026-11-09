@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.ComputabilityLeastTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceComputabilityLeastPreflight
+/-- The unchanged original all-finite-type C-to-I target on the same source. -/
+def computabilityLeastComparator : Prop := ComputabilityLeastTargets.ActualConcreteComputabilityLeast
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceComputabilityLeastPreflight
