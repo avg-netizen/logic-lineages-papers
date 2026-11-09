@@ -1,4 +1,18 @@
-# Current checkpoint — reconciled main, 9 November 2026
+# Current checkpoint — closed existential word arithmetic, 9 November 2026
+
+**171 checked, 2 inherited, 16 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Paper08 `thm:existential` is now checked by the
+actual jointly computable closed word solver on the original global domains.
+The exact final gate, 125 owned declaration audits and 679 current dependency
+sources have source-matched native evidence using only standard axioms.
+Read the [register adoption](audits/CLOSED-EXISTENTIAL-COMPLETION-2026-11-09.json).
+Native receipts and logs are retained locally; their portable publication is
+still held. The public root selects the accepted gate, but no full-root build
+or remote-CI pass is claimed. The separate LevelTwo consumer and full
+first-order BASE remain pending. The [current release](RESUME-2026-11-09.md)
+continues through 21:30 UTC; older stop instructions and counts are historical.
+
+# Previous checkpoint — reconciled main, 9 November 2026
 
 **170 checked, 2 inherited, 17 pending / 189**, derived from
 [TARGETS.json](TARGETS.json). Both agents' checkpoints and the remaining unique

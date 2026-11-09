@@ -7403,26 +7403,58 @@
           "file": "08-multivariate-collapse-comparison/paper.tex",
           "line": 708,
           "statement_latex": "[Closed existential word arithmetic]\\label{thm:existential}\nThe existential closure of every Boolean combination of word-linear row\ncomparisons and fixed-modulus congruences in the finite-degree language\nabove is decidable, on its explicit word domains.",
-          "status": "pending",
-          "accepted_declaration": null,
-          "frozen_comparator": null,
+          "status": "checked",
+          "accepted_declaration": "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks.full_closed_existential_word_arithmetic",
+          "frozen_comparator": {
+            "file": "LogicLineages/OrdinalComparison/ClosedWordDecisionCompletion/MachineTargets.lean",
+            "sha256": "ac325242cf3106c64c9b3eaca54d08fb8f3fc7fc148c95ba0958def4958e4827",
+            "type": "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineTargets.FullClosedExistentialWordArithmetic"
+          },
           "completion_audit": {
-            "date": "2026-11-05",
-            "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
-            "classification": "missing_foundation_or_downstream",
+            "date": "2026-11-09",
+            "report": "audits/CLOSED-EXISTENTIAL-COMPLETION-2026-11-09.json",
+            "classification": "exact_whole_source_checked",
             "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
-            "remaining_obligation": "The complete closed existential procedure on the printed finite-degree word language is still absent. Word guards and ranked cancellation remain pending, as does their end-to-end assembly with the checked residue suppliers, finite exceptions and correlated Presburger elimination. The restricted source-row linear eliminator is not a whole-word elimination theorem.",
-            "next_completion_step": "Build the complete word-language procedure with decreasing raw-variable count, reusing the checked corrected residues and arithmetic components only where their exact grammars match. Free-parameter or arbitrary alternating-quantifier elimination for the word language is not required by this closed-sentence theorem.",
-            "upstream_blockers": [
-              "08:lem:guards",
-              "08:lem:row"
-            ],
-            "checked_prerequisites": [
-              "08:lem:kernel-residues"
-            ],
-            "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
-            "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
-          }
+            "remaining_obligation": "None for printed thm:existential. Full first-order BASE and the separate LevelTwo consumer remain pending.",
+            "upstream_blockers": [],
+            "native_verification": {
+              "file": "build-reports/1794236143261243833-6.json",
+              "sha256": "7e0f98c57afa37a7418e6a789d8016e9fba9855fb86279616e2c80bd87cd24f1",
+              "availability": "Retained locally; portable native receipts and logs are held for separate publication."
+            },
+            "review_scope": "Original paper08 thm:existential, frozen exact comparator, 16 exact final aliases, 125 owned standard-axiom declaration audits and 679 current final-closure source hashes independently checked."
+          },
+          "completion_audit_history": [
+            {
+              "date": "2026-11-05",
+              "report": "audits/PENDING-STATEMENTS-2026-11-05.json",
+              "classification": "missing_foundation_or_downstream",
+              "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+              "remaining_obligation": "The complete closed existential procedure on the printed finite-degree word language is still absent. Word guards and ranked cancellation remain pending, as does their end-to-end assembly with the checked residue suppliers, finite exceptions and correlated Presburger elimination. The restricted source-row linear eliminator is not a whole-word elimination theorem.",
+              "next_completion_step": "Build the complete word-language procedure with decreasing raw-variable count, reusing the checked corrected residues and arithmetic components only where their exact grammars match. Free-parameter or arbitrary alternating-quantifier elimination for the word language is not required by this closed-sentence theorem.",
+              "upstream_blockers": [
+                "08:lem:guards",
+                "08:lem:row"
+              ],
+              "checked_prerequisites": [
+                "08:lem:kernel-residues"
+              ],
+              "historical_report": "audits/PENDING-STATEMENTS-2026-11-04.json",
+              "review_scope": "Register and archived-evidence reconciliation at the pinned checkpoint; no new native proof acceptance."
+            }
+          ],
+          "accepted_declarations": [
+            "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks.full_closed_existential_word_arithmetic"
+          ],
+          "verification_receipt": "build-reports/1794236143261243833-6.json",
+          "acceptance_record": "audits/CLOSED-EXISTENTIAL-COMPLETION-2026-11-09.json",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "coverage_note": "The original closed existential finite-degree Boolean word theorem is checked. The concrete Machine.solve is jointly computable in runtime degree and formula code and decides the literal existential valuation with every original global word domain, including occurrences under negation and unused disjuncts. Signed/composed words, repeated raw names and zero-coefficient occurrences are preserved. Finite-prefix substitution precedes tail rewriting; inherited introduction floors preserve generated-word domains, and actual distinct raw-name count strictly decreases in every branch. No free-parameter or alternating nonlinear quantifier elimination, complexity bound, separate LevelTwo consumer, full-root build or remote CI result is claimed.",
+          "latest_coverage_note": "The original closed existential finite-degree Boolean word theorem is checked. The concrete Machine.solve is jointly computable in runtime degree and formula code and decides the literal existential valuation with every original global word domain, including occurrences under negation and unused disjuncts. Signed/composed words, repeated raw names and zero-coefficient occurrences are preserved. Finite-prefix substitution precedes tail rewriting; inherited introduction floors preserve generated-word domains, and actual distinct raw-name count strictly decreases in every branch. No free-parameter or alternating nonlinear quantifier elimination, complexity bound, separate LevelTwo consumer, full-root build or remote CI result is claimed."
         },
         {
           "id": "08-multivariate-collapse-comparison:thm:graphs",
@@ -11563,7 +11595,7 @@
   "source_reconciled_at_utc": "2026-10-31T03:24:10.964506+00:00",
   "source_commit": "65d795b9c192a80c611010db63f120a9ce038388",
   "source_completion_audited_at_utc": "2026-11-04T19:34:36.401336+00:00",
-  "source_completion_updated_at_utc": "2026-11-09T06:44:36.103471+00:00",
+  "source_completion_updated_at_utc": "2026-11-09T15:13:03.237739+00:00",
   "supporting_components_updated_at_utc": "2026-11-09T01:08:20.032307+00:00",
   "register_reconciliation": {
     "reviewed_at_utc": "2026-11-05T05:59:10.247771+00:00",
@@ -11573,28 +11605,28 @@
     "scope": "Reconcile current pending obligations and two previously adopted supporting gates; no new whole-source acceptance or native compilation."
   },
   "source_completion_promotion": {
-    "accepted_at_utc": "2026-11-09T01:15:28.683365+00:00",
-    "baseline_commit": "9cbe6c5a",
-    "report": "verification/local-six-codex-2026-11-08/ROOT-LITERAL-FINITE-ADOPTION.json",
+    "accepted_at_utc": "2026-11-09T15:13:03.237739+00:00",
+    "baseline_commit": "88abe767854d6099c4eb4c4099a5377a79c52a86",
+    "report": "audits/CLOSED-EXISTENTIAL-COMPLETION-2026-11-09.json",
     "statements": [
-      "12-common-knowledge-necessitation:cor:finite"
+      "08-multivariate-collapse-comparison:thm:existential"
     ],
     "native_verification": {
-      "file": "build-reports/1794186631742212299-2.json",
-      "sha256": "30a53fe13843cea2403db117164c292062ce441197d2e648232673ffd834750a"
+      "file": "build-reports/1794236143261243833-6.json",
+      "sha256": "7e0f98c57afa37a7418e6a789d8016e9fba9855fb86279616e2c80bd87cd24f1",
+      "availability": "Retained locally; portable native receipts and logs are held for separate publication."
     },
     "counts_before": {
-      "checked": 168,
-      "pending": 19,
+      "checked": 170,
+      "pending": 17,
       "existing-calculator-package": 2
     },
     "counts_after": {
-      "checked": 169,
-      "pending": 18,
+      "checked": 171,
+      "pending": 16,
       "existing-calculator-package": 2
     },
     "numbered_source_promotions_in_this_update": 1,
-    "numbered_source_promotions_cumulative": 8,
     "full_root_build": false,
     "remote_ci_claim": false
   },
@@ -11730,6 +11762,32 @@
       },
       "numbered_source_promotions_in_this_update": 1,
       "numbered_source_promotions_cumulative": 7,
+      "full_root_build": false,
+      "remote_ci_claim": false
+    },
+    {
+      "accepted_at_utc": "2026-11-09T01:15:28.683365+00:00",
+      "baseline_commit": "9cbe6c5a",
+      "report": "verification/local-six-codex-2026-11-08/ROOT-LITERAL-FINITE-ADOPTION.json",
+      "statements": [
+        "12-common-knowledge-necessitation:cor:finite"
+      ],
+      "native_verification": {
+        "file": "build-reports/1794186631742212299-2.json",
+        "sha256": "30a53fe13843cea2403db117164c292062ce441197d2e648232673ffd834750a"
+      },
+      "counts_before": {
+        "checked": 168,
+        "pending": 19,
+        "existing-calculator-package": 2
+      },
+      "counts_after": {
+        "checked": 169,
+        "pending": 18,
+        "existing-calculator-package": 2
+      },
+      "numbered_source_promotions_in_this_update": 1,
+      "numbered_source_promotions_cumulative": 8,
       "full_root_build": false,
       "remote_ci_claim": false
     }

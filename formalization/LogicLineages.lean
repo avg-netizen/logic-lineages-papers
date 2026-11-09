@@ -2302,3 +2302,6 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- Preserved older exact source-admission and guarded counterexample compiler.
 public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionStatementChecks
+
+-- Entire printed closed existential word-arithmetic theorem on its original global domains.
+public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks
