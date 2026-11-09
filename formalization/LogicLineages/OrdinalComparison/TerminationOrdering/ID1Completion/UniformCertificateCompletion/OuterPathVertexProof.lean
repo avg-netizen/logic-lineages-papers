@@ -7,6 +7,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterPathVertexProof
 open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalGraphComposition InternalControlGraph
 open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationStepPeel (graph5)
 open InternalApplicationStepPeelSupportProof
 open SourceComputabilityFormulaSupportProof NumberedLeastCodeRepresentative
 open InternalTagArithmeticSyntaxProof (z suc)

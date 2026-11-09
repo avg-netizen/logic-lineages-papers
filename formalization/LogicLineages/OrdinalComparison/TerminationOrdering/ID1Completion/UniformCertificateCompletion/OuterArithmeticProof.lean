@@ -88,6 +88,7 @@ theorem arithmeticRules (oldSrc : SourcePresentation.Data) (oldComp : JointGamma
       (SourcePresentation.sourceBody src context) (Outer.baseComputability oldComp data window)
       window Outer.arrow (Outer.result oldComp data window oldVertex oldResult)
       context sigma tau hw (arrowEvaluation sigma tau) α f a
+    dsimp only at h
     rw [InternalComputabilityDownwardSourceProof.domainLiteral,
       InternalComputabilityDownwardSourceProof.existsLiteral,htotalComp] at h
     simpa only [src,comp] using h

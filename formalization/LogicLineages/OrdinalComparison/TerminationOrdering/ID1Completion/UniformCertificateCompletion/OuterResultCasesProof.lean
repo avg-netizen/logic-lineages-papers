@@ -5,6 +5,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterResultCasesProof
 open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalGraphComposition InternalControlGraph
 open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationStepPeel (graph5)
 open InternalComputabilityApplication InternalAccessibilityRules InternalComputabilityDownward
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
 open InternalApplicationCertificateConstructorsSyntaxProof (graph1Rename graph2Rename)
@@ -52,7 +53,7 @@ theorem resultCases (old : JointGammaComputability.Data) (data : Data) (window :
       (Fin.cons argument (Fin.cons x Fin.elim0))))
   apply programCases (Path.vertex data window oldVertex) xs psi
   intro β j Theta value hj hv
-  simp only [consTermRename,emptyRename,numeralRename] at hv
+  simp only [xs,consTermRename,emptyRename,numeralRename] at hv
   have hf' := renameInto hf j Theta hj
   have hx' := renameInto hx j Theta hj
   have ha' := renameInto ha j Theta hj

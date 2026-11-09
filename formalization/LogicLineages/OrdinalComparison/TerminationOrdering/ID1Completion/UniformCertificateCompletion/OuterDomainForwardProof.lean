@@ -24,10 +24,17 @@ theorem guardForward (oldSrc : SourcePresentation.Data) (oldComp : JointGammaCom
         (guarded comp g a))) := by
   let s0 := Outer.sourceBase oldSrc rawScalar (Outer.rawPositive data oldStep bottom measure) window
   let c0 : JointGammaComputability.Data := { oldComp with typed := Outer.typed data window oldComp.typed }
+  let src := Outer.source oldSrc oldComp data rawScalar oldStep bottom measure window
+  let comp := Outer.computability oldComp data window oldVertex oldResult
+  have hsrc : GammaGuardedSource.source s0 c0.typed Outer.valid Outer.gamma Outer.tag window = src := rfl
+  have htyped : (GammaGuardedSource.computability c0 Outer.valid Outer.gamma Outer.tag).typed = comp.typed := rfl
+  have hguard : (GammaGuardedSource.computability c0 Outer.valid Outer.gamma Outer.tag).guard = comp.guard := rfl
   have h := SourceComputabilityCompletion.ForwardGuardProof.actualOriginalForwardGuardTransport
     s0 c0 Outer.valid Outer.gamma Outer.tag window context α (numeral (typeNumber tau)) f g a
+  dsimp only at h
+  rw [hsrc] at h
   simpa only [literalTypedGraph,literalGuardGraph,GuardedSource.literalR,
-    typed,edge,edgeProgram,guarded] using h
+    htyped,hguard,typed,edge,edgeProgram,guarded,src,comp] using h
 
 theorem domainForward (oldSrc : SourcePresentation.Data) (oldComp : JointGammaComputability.Data)
     (data : Data) (rawScalar : Program 2) (oldStep : Program 4) (bottom measure window : Program 1)
