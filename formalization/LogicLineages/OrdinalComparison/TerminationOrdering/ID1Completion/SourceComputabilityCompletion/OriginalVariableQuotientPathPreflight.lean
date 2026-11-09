@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableQuotientPathTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableQuotientPathPreflight
+/-- Target-only aliases. No candidate proof is imported or present. -/
+def fullFoldBottomComparator : Prop :=
+  OriginalVariableQuotientPathTargets.ActualOriginalFullFoldBottomPreservation
+
+def quotientConstructorComparator : Prop :=
+  OriginalVariableQuotientPathTargets.ActualOriginalQuotientConstructorCases
+
+def pathConstructorComparator : Prop :=
+  OriginalVariableQuotientPathTargets.ActualOriginalPathConstructorCases
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableQuotientPathPreflight
