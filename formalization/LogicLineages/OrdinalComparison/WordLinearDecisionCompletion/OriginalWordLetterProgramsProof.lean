@@ -1,0 +1,107 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluationTargets
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduledStatementChecks
+public import LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof
+open PolynomialGraphCompletion LayeredComparison LayeredComparison.SnyatkovCompletion
+attribute [local irreducible] Nat.sqrt Nat.unpair
+
+theorem computableIf {α σ : Type*} [Primcodable α] [Primcodable σ]
+    {c : α → Prop} [DecidablePred c] {f g : α → σ}
+    (hc : Computable (fun a => decide (c a))) (hf : Computable f) (hg : Computable g) :
+    Computable (fun a => if c a then f a else g a) := by
+  apply (Computable.cond hc hf hg).of_eq
+  intro a
+  by_cases h : c a <;> simp [h]
+
+theorem computableAnd {α : Type*} [Primcodable α]
+    {p q : α → Prop} [DecidablePred p] [DecidablePred q]
+    (hp : Computable (fun a => decide (p a)))
+    (hq : Computable (fun a => decide (q a))) :
+    Computable (fun a => decide (p a ∧ q a)) := by
+  apply (Computable.cond hp hq (Computable.const false)).of_eq
+  intro a
+  by_cases h : p a <;> simp [h]
+
+theorem toNatPrimitive : Primrec Int.toNat := by
+  apply (Primrec.ite
+    (Primrec.eq.comp IntegerAlgorithms.Proof.sign_primitive (Primrec.const (-1 : Int)))
+    (Primrec.const 0) IntegerAlgorithms.Proof.abs_primitive).of_eq
+  intro z
+  cases z with
+  | ofNat n => cases n <;> rfl
+  | negSucc n => rfl
+
+theorem nonnegativePrimitive : Primrec (fun z : Int => decide (0 ≤ z)) := by
+  apply (Primrec.ite
+    (Primrec.eq.comp IntegerAlgorithms.Proof.sign_primitive (Primrec.const (-1 : Int)))
+    (Primrec.const false) (Primrec.const true)).of_eq
+  intro z
+  cases z with
+  | ofNat n => cases n <;> rfl
+  | negSucc n => rfl
+
+theorem positivePrimitive : Primrec (fun z : Int => decide (0 < z)) := by
+  apply ((Primrec.eq.comp IntegerAlgorithms.Proof.sign_primitive
+    (Primrec.const (1 : Int))).decide).of_eq
+  intro z
+  cases z with
+  | ofNat n => cases n <;> simp
+  | negSucc n => simp
+
+attribute [local irreducible] OriginalScheduled.sourceCount Phi
+
+abbrev LetterInput := Letter × Nat
+
+theorem ht : Computable (fun p : LetterInput => p.2) := Computable.snd
+theorem hd : Computable (fun p : LetterInput => p.1.2.1) :=
+  Computable.fst.comp (Computable.snd.comp Computable.fst)
+theorem hc : Computable (fun p : LetterInput => p.1.2.2.1) :=
+  Computable.fst.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))
+theorem hj : Computable (fun p : LetterInput => p.1.2.2.2) :=
+  Computable.snd.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))
+theorem htag (k : Nat) : Computable (fun p : LetterInput => decide (p.1.1 = k)) :=
+  ((Primrec.eq.comp (Primrec.fst.comp Primrec.fst) (Primrec.const k)).decide).to_comp
+theorem hphi : Computable (fun p : LetterInput => Phi p.2) := Phi_primrec.to_comp.comp ht
+theorem hcount : Computable (fun p : LetterInput =>
+    OriginalScheduled.sourceCount p.1.2.1 p.1.2.2.1 p.2) :=
+  OriginalScheduled.Proof.sourceCountComputable.comp (hd.pair (hc.pair ht))
+theorem hshift : Computable (fun p : LetterInput => (p.2 : Int) + p.1.2.2.2) :=
+  IntegerAlgorithms.Proof.add_primitive.to_comp.comp
+    (IntegerAlgorithms.Proof.ofNat_primitive.to_comp.comp ht) hj
+theorem hhalf : Computable (fun p : LetterInput =>
+    ((Phi p.2 / 2 : Nat) : Int) + p.1.2.2.2 + 1) :=
+  IntegerAlgorithms.Proof.add_primitive.to_comp.comp
+    (IntegerAlgorithms.Proof.add_primitive.to_comp.comp
+      (IntegerAlgorithms.Proof.ofNat_primitive.to_comp.comp
+        (Primrec.nat_div.to_comp.comp hphi (Computable.const 2))) hj)
+    (Computable.const (1 : Int))
+theorem hcounterShift : Computable (fun p : LetterInput =>
+    (OriginalScheduled.sourceCount p.1.2.1 p.1.2.2.1 p.2 : Int) + p.1.2.2.2) :=
+  IntegerAlgorithms.Proof.add_primitive.to_comp.comp
+    (IntegerAlgorithms.Proof.ofNat_primitive.to_comp.comp hcount) hj
+theorem hcut : Computable (fun p : LetterInput => decide (p.1.2.2.1 ≤ Phi p.2)) :=
+  Primrec.nat_le.decide.to_comp.comp hc hphi
+attribute [local irreducible] letter letterDomain
+
+theorem letterPrograms : Targets.LetterPrograms := by
+  constructor
+  · exact (computableIf (htag 0) (toNatPrimitive.to_comp.comp hshift)
+      (computableIf (htag 1) hphi
+        (computableIf (htag 2)
+          (OriginalScheduled.Proof.phiIterate_primitive.to_comp.comp
+            (toNatPrimitive.to_comp.comp hhalf) ht)
+          (computableIf (htag 3)
+            (OriginalScheduled.Proof.phiIterate_primitive.to_comp.comp
+              (toNatPrimitive.to_comp.comp hcounterShift) ht) hcount)))).of_eq
+      (fun p => by unfold letter; rfl)
+  · exact (computableIf (htag 0) (nonnegativePrimitive.to_comp.comp hshift)
+      (computableIf (htag 1) (Computable.const true)
+        (computableIf (htag 2) (positivePrimitive.to_comp.comp hhalf)
+          (computableIf (htag 3)
+            (computableAnd hcut (positivePrimitive.to_comp.comp hcounterShift))
+            (computableAnd (htag 4) hcut))))).of_eq (fun p => by unfold letterDomain; rfl)
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof

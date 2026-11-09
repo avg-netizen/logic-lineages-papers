@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitCoverageProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitCoverageStatementChecks
+theorem literalOriginalTie : PlainBlockSplitTargets.LiteralTieSemantics :=
+  PlainBlockSplitProof.literalTieSemantics
+theorem actualBoundDecrease : PlainBlockSplitTargets.StrictOriginalBoundDecrease :=
+  PlainBlockSplitProof.strictOriginalBoundDecrease
+theorem exhaustiveActualOneStep : PlainBlockSplitTargets.ActualOneStepProjection :=
+  PlainBlockSplitProof.actualOneStepProjection
+#print axioms literalOriginalTie
+#print axioms actualBoundDecrease
+#print axioms exhaustiveActualOneStep
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitCoverageStatementChecks

@@ -1,0 +1,92 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.NamedArithmeticGraphTargets
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeralNodeSupportProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LogicalSupportProof
+public import LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquationsProof
+public import LogicLineages.ComputabilityKnowledge.GorbowTheoryProofProof
+
+@[expose] public section
+/-! Independent original-Hilbert helpers for the named arithmetic graph.
+Only original node equations are used; every support axiom is finally
+included literally in the actual ambient registry. No ND-transfer result,
+graph-correctness hypothesis, truth-to-proof or new source rule is imported. -/
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.NamedArithmeticGraph.Support
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof
+open GorbowFormulaSubstitution GorbowSubstitution
+
+/-- A plain finite axiom predicate, with literal source inclusion already paid. -/
+def Theory {arity : Nat} (q : Program arity) (tag : Nat) : Sentence → Prop :=
+  fun sigma => sigma ∈ EffectiveNumeral.NodeSupport.supportAxioms q tag
+
+theorem intoRegistry {n arity ctx : Nat} (p : Program n) (q : Program arity) tag
+    (ht : (nodes p)[tag]? = some ⟨arity,q⟩) (phi : Formula ctx)
+    (h : Nonempty (Derivation (Theory q tag) phi)) :
+    Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) phi) :=
+  GorbowTheoryProofProof.monotonicity (Theory q tag) (GorbowPRNumeralCalculation.Theory p)
+    (fun sigma hs => EffectiveNumeral.NodeSupport.intoRegistry q n p tag ht sigma hs) ctx phi h
+
+theorem nodeEquationInstance {arity vars ctx : Nat} (q : Program arity) tag
+    (lhs rhs : Term vars) (hm : equation lhs rhs ∈ nodeEquations q tag)
+    (sigma : Fin vars → Term ctx) :
+    Nonempty (Derivation (Theory q tag) (.equal (substitute sigma lhs) (substitute sigma rhs))) := by
+  have h := GorbowPRSymbolicEquations.Proof.openAxiomSpecialization (Theory q tag) vars ctx
+    (.equal lhs rhs) sigma (EffectiveNumeral.NodeSupport.rootIncluded q tag _ hm)
+  exact h
+
+theorem shiftCancel {ctx : Nat} (out t : Term ctx) :
+    substitute (Fin.cases out Term.var : Fin (ctx+1) → Term ctx)
+      (renameTerm Fin.succ t) = t := by
+  unfold renameTerm
+  rw [substitute_composition]
+  exact substitute_variables t
+
+/-- Only the graph output is a new bound variable; every original input is retained. -/
+def outputTemplate {arity ctx : Nat} (q : Program arity)
+    (args : List.Vector (Term ctx) arity) : Formula (ctx+1) :=
+  substituteFormula (Fin.cases (.var 0) (fun i => renameTerm Fin.succ (args.get i)))
+    (GorbowOrdinaryArithmeticGraphs.graph q)
+
+theorem outputTemplateInstance {arity ctx : Nat} (q : Program arity)
+    (args : List.Vector (Term ctx) arity) (out : Term ctx) :
+    GorbowStandardInstances.instantiate (outputTemplate q args) out = atTerms q out args := by
+  unfold GorbowStandardInstances.instantiate outputTemplate atTerms
+  rw [GorbowFormulaCompositionProof.composition]
+  apply congrArg (fun sigma => substituteFormula sigma (GorbowOrdinaryArithmeticGraphs.graph q))
+  funext i
+  cases i using Fin.cases with
+  | zero => rfl
+  | succ i => simpa only [Fin.cases_succ] using shiftCancel out (args.get i)
+
+def outputTransport {T : Sentence → Prop} {arity ctx : Nat} (q : Program arity)
+    (args : List.Vector (Term ctx) arity) (out other : Term ctx)
+    (he : Derivation T (.equal out other)) :
+    Derivation T (.imp (atTerms q out args) (atTerms q other args)) := by
+  have h : Derivation T (.imp (.equal out other)
+      (.imp (GorbowStandardInstances.instantiate (outputTemplate q args) out)
+        (GorbowStandardInstances.instantiate (outputTemplate q args) other))) :=
+    .logical (.equalityReplace (outputTemplate q args) out other)
+  rw [outputTemplateInstance,outputTemplateInstance] at h
+  exact .mp h he
+
+def equalityRightTemplate {ctx : Nat} (t : Term ctx) : Formula (ctx+1) :=
+  .equal (.var 0) (renameTerm Fin.succ t)
+
+theorem equalityRightInstance {ctx : Nat} (t out : Term ctx) :
+    GorbowStandardInstances.instantiate (equalityRightTemplate t) out = .equal out t := by
+  change Formula.equal
+    (substitute (Fin.cases out Term.var) (.var 0))
+    (substitute (Fin.cases out Term.var) (renameTerm Fin.succ t)) = .equal out t
+  rw [shiftCancel]
+  rfl
+
+def equalitySymmetry {T : Sentence → Prop} {ctx : Nat} (s t : Term ctx)
+    (he : Derivation T (.equal s t)) : Derivation T (.equal t s) := by
+  have h : Derivation T (.imp (.equal s t)
+      (.imp (GorbowStandardInstances.instantiate (equalityRightTemplate s) s)
+        (GorbowStandardInstances.instantiate (equalityRightTemplate s) t))) :=
+    .logical (.equalityReplace (equalityRightTemplate s) s t)
+  rw [equalityRightInstance,equalityRightInstance] at h
+  exact .mp (.mp h he) (.logical (.reflexive s))
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.NamedArithmeticGraph.Support

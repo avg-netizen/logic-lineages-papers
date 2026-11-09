@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecStatementChecks
+theorem actualLiteralRoundTrip : TermCodecTargets.LiteralTermRoundTrip := TermCodecProof.literalTermRoundTrip
+theorem actualAllCodeRoundTrip : TermCodecTargets.EveryOriginalCodeRoundTrip := TermCodecProof.everyOriginalCodeRoundTrip
+theorem actualOriginalInjectivity : TermCodecTargets.OriginalEncodeInjectivity := TermCodecProof.originalEncodeInjectivity
+theorem actualPrimitiveCoding : TermCodecTargets.LiteralPrimitiveCoding := TermCodecProof.literalPrimitiveCoding
+#print axioms actualLiteralRoundTrip
+#print axioms actualAllCodeRoundTrip
+#print axioms actualOriginalInjectivity
+#print axioms actualPrimitiveCoding
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecStatementChecks

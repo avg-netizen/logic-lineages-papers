@@ -1,0 +1,148 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCertifiedResultFoldClosureBridgeBranchProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeInternalProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open SourceComputabilityCompletion.BottomRepresentative
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeelSupportProof
+open InternalControlGraphSupportProof InternalControlGraphChoiceProof
+open InternalGraphCompositionFunctionalityProof InternalAcceptanceBranchProof
+open GuardedSourceGraphSupportProof (tupleTwoRename)
+open InternalApplicationCertifiedResultFoldClosureBridgeBranchProof
+open InternalTagArithmeticSyntaxProof (z suc eqn zRelabel sucRelabel)
+open InternalTagArithmeticSupportProof (symm trans refl)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp formulaCases)
+open InternalPositiveUnfoldingSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+theorem indicatorIff (test : Program 1) (indicator x y vx vy : OTerm α)
+    (hx : Nonempty (Derivation body Gamma (graph1 test vx x)))
+    (hy : Nonempty (Derivation body Gamma (graph1 test vy y)))
+    (he : Nonempty (Derivation body Gamma (eqn vx vy))) :
+    Nonempty (Derivation body Gamma ((graph1 test indicator x).iff (graph1 test indicator y))) := by
+  have hf : Nonempty (Derivation body Gamma
+      ((graph1 test indicator x).imp (graph1 test indicator y))) := by
+    let P := graph1 test indicator x
+    obtain ⟨hix⟩ := valueUnique test indicator vx ![x]
+      (show Nonempty (Derivation body (P :: Gamma) P) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+      (withHyp hx P)
+    obtain ⟨hxy⟩ := withHyp he P
+    obtain ⟨d⟩ := outputTransport test vy indicator ![y]
+      ⟨symm (trans hix hxy)⟩ (withHyp hy P)
+    exact ⟨Derivation.implicationIntroduction d⟩
+  have hb : Nonempty (Derivation body Gamma
+      ((graph1 test indicator y).imp (graph1 test indicator x))) := by
+    let P := graph1 test indicator y
+    obtain ⟨hiy⟩ := valueUnique test indicator vy ![y]
+      (show Nonempty (Derivation body (P :: Gamma) P) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+      (withHyp hy P)
+    obtain ⟨hxy⟩ := withHyp he P
+    obtain ⟨d⟩ := outputTransport test vx indicator ![x]
+      ⟨symm (trans hiy (symm hxy))⟩ (withHyp hx P)
+    exact ⟨Derivation.implicationIntroduction d⟩
+  obtain ⟨hf⟩ := hf
+  obtain ⟨hb⟩ := hb
+  exact ⟨Derivation.conjunctionIntroduction hf hb⟩
+
+def queries (R : Program 2) : Fin 4 → Program 2 :=
+  ![R,.composition bottomTest (fun _ : Fin 1 => R),
+    .composition bottomTest (fun _ : Fin 1 => .projection 0),sameBottom R]
+
+theorem innerAtValues (R : Program 2) (out input parameter indicator candidate bx bi control : OTerm α)
+    (hr : Nonempty (Derivation body Gamma (graph2 R candidate input parameter)))
+    (hx : Nonempty (Derivation body Gamma (bottomGraph bx candidate)))
+    (hi : Nonempty (Derivation body Gamma (bottomGraph bi input)))
+    (hc : Nonempty (Derivation body Gamma (graph2 (sameBottom R) control input parameter)))
+    (hw : Nonempty (Derivation body Gamma
+      (graph2 (InternalAcceptance.branch (sameBottom R) (.projection 0) R) out input parameter))) :
+    Nonempty (Derivation body Gamma ((bottomGraph indicator out).iff (bottomGraph indicator input))) := by
+  let xs : Fin 2 → OTerm α := ![input,parameter]
+  have hleft : Nonempty (Derivation body Gamma
+      (programGraph (.composition bottomTest (fun _ : Fin 1 => R)) bx xs)) := by
+    apply compositionValue bottomTest (fun _ : Fin 1 => R) bx xs ![candidate] hx
+    intro i
+    exact Fin.cases hr (fun j => Fin.elim0 j) i
+  have hright : Nonempty (Derivation body Gamma
+      (programGraph (.composition bottomTest (fun _ : Fin 1 => .projection 0)) bi xs)) := by
+    apply compositionValue bottomTest (fun _ : Fin 1 => .projection 0) bi xs ![input] hi
+    intro i
+    exact Fin.cases (projectionValue 0 xs) (fun j => Fin.elim0 j) i
+  have hcompare : Nonempty (Derivation body Gamma
+      (InternalEqualityTestCompositionProof.equalityGraph control bx bi)) := by
+    apply compositionRecover InternalEqualityTest.equalityTest
+      ![.composition bottomTest (fun _ : Fin 1 => R),
+        .composition bottomTest (fun _ : Fin 1 => .projection 0)] control xs ![bx,bi] hc
+    intro i
+    exact Fin.cases hleft (Fin.cases hright (fun j => Fin.elim0 j)) i
+  apply formulaCases (eqn control z)
+  · let P := eqn control z
+    have hc0 := outputTransport (sameBottom R) control z xs
+      ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hc P)
+    have ho := zeroBranchElim (sameBottom R) (.projection 0) R out xs hc0 (withHyp hw P)
+    obtain ⟨he⟩ := valueUnique (.projection (0 : Fin 2)) out input xs ho (projectionValue 0 xs)
+    have hout := headTransport bottomTest bi input out Fin.elim0 ⟨symm he⟩ (withHyp hi P)
+    exact indicatorIff bottomTest indicator out input bi bi hout (withHyp hi P) ⟨refl bi⟩
+  · let P := (eqn control z).not
+    have ho := nonzeroBranchElim (sameBottom R) (.projection 0) R out control xs
+      (withHyp hc P) ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hw P)
+    obtain ⟨he⟩ := valueUnique R out candidate xs ho (withHyp hr P)
+    have hbottom := equalityOfNonzero bx bi control (withHyp hcompare P)
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have hout := headTransport bottomTest bx candidate out Fin.elim0 ⟨symm he⟩ (withHyp hx P)
+    exact indicatorIff bottomTest indicator out input bx bi hout (withHyp hi P) hbottom
+
+theorem innerPreservation (R : Program 2) (out input parameter indicator : OTerm α)
+    (hw : Nonempty (Derivation body Gamma
+      (graph2 (InternalAcceptance.branch (sameBottom R) (.projection 0) R) out input parameter))) :
+    Nonempty (Derivation body Gamma ((bottomGraph indicator out).iff (bottomGraph indicator input))) := by
+  apply queryCases (queries R) ![input,parameter] _
+  intro β j ys Delta hj hys
+  simp only [tupleTwoRename] at hys
+  simp only [bottomGraph,graph1Rename]
+  have hw' := renameInto hw j Delta hj
+  rw [graph2Rename] at hw'
+  have hr : Nonempty (Derivation body Delta (graph2 R (ys 0) (input.relabel j) (parameter.relabel j))) := by
+    simpa only [queries,Matrix.cons_val_zero] using hys 0
+  have hx : Nonempty (Derivation body Delta (bottomGraph (ys 1) (ys 0))) := by
+    apply compositionRecover bottomTest (fun _ : Fin 1 => R) (ys 1)
+      ![input.relabel j,parameter.relabel j] ![ys 0]
+      (by simpa only [queries,Matrix.cons_val_one] using hys 1)
+    intro i
+    exact Fin.cases hr (fun q => Fin.elim0 q) i
+  have hi : Nonempty (Derivation body Delta (bottomGraph (ys 2) (input.relabel j))) := by
+    apply compositionRecover bottomTest (fun _ : Fin 1 => .projection 0) (ys 2)
+      ![input.relabel j,parameter.relabel j] ![input.relabel j]
+      (by simpa only [queries,Matrix.cons_val_two] using hys 2)
+    intro i
+    exact Fin.cases (projectionValue 0 ![input.relabel j,parameter.relabel j]) (fun q => Fin.elim0 q) i
+  have hc : Nonempty (Derivation body Delta
+      (graph2 (sameBottom R) (ys 3) (input.relabel j) (parameter.relabel j))) := by
+    simpa only [queries,Matrix.cons_val_three] using hys 3
+  exact innerAtValues R (out.relabel j) (input.relabel j) (parameter.relabel j) (indicator.relabel j)
+    (ys 0) (ys 1) (ys 2) (ys 3) hr hx hi hc hw'
+
+theorem preservation (data : InternalOriginalUniformDescentSelection.Data) (window : Program 1)
+    (out value parameter indicator : OTerm α)
+    (ha : Nonempty (Derivation body Gamma (activeGraph data window value parameter)))
+    (hr : Nonempty (Derivation body Gamma (representativeGraph data window out value parameter))) :
+    Nonempty (Derivation body Gamma ((bottomGraph indicator out).iff (bottomGraph indicator value))) := by
+  have h := successorBranchElim (active data window) data.oldRepresentative
+    (InternalAcceptance.branch (sameBottom data.oldRepresentative) (.projection 0) data.oldRepresentative)
+    out z ![value,parameter] ha hr
+  exact innerPreservation data.oldRepresentative out value parameter indicator h
+
+theorem actualParameterizedRepresentativeBottomPreservation :
+    BottomRepresentativeTargets.ActualParameterizedRepresentativeBottomPreservation := by
+  intro body data window α Delta out value parameter indicator
+  let A := activeGraph data window value parameter
+  let R := representativeGraph data window out value parameter
+  obtain ⟨d⟩ := preservation (body := body) (Gamma := R :: A :: Delta) data window out value parameter indicator
+    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeInternalProof

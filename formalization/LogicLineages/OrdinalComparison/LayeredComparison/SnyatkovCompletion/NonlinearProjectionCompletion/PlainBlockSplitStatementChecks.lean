@@ -1,0 +1,32 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitHFreeOutputProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStatementChecks
+theorem literalOriginalTie : PlainBlockSplitTargets.LiteralTieSemantics :=
+  PlainBlockSplitProof.literalTieSemantics
+theorem actualBoundDecrease : PlainBlockSplitTargets.StrictOriginalBoundDecrease :=
+  PlainBlockSplitProof.strictOriginalBoundDecrease
+theorem exhaustiveActualOneStep : PlainBlockSplitTargets.ActualOneStepProjection :=
+  PlainBlockSplitProof.actualOneStepProjection
+theorem actualStateClosure : PlainBlockSplitTargets.WholeBlockStateClosure :=
+  PlainBlockSplitProof.wholeBlockStateClosure
+theorem originalBranchNames : PlainBlockSplitTargets.OriginalBranchNameSupport :=
+  PlainBlockSplitProof.originalBranchNameSupport
+theorem actualHFreeBranch : PlainBlockSplitTargets.HFreeBranchClosure :=
+  PlainBlockSplitProof.hFreeBranchClosure
+theorem actualUniformProjection : PlainBlockSplitTargets.ActualUniformBlockProjection :=
+  PlainBlockSplitProof.actualUniformBlockProjection
+theorem originalOutputNames : PlainBlockSplitTargets.OriginalOutputNameSupport :=
+  PlainBlockSplitProof.originalOutputNameSupport
+theorem actualHFreeOutput : PlainBlockSplitTargets.HFreeOutputClosure :=
+  PlainBlockSplitProof.hFreeOutputClosure
+#print axioms literalOriginalTie
+#print axioms actualBoundDecrease
+#print axioms exhaustiveActualOneStep
+#print axioms actualStateClosure
+#print axioms originalBranchNames
+#print axioms actualHFreeBranch
+#print axioms actualUniformProjection
+#print axioms originalOutputNames
+#print axioms actualHFreeOutput
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStatementChecks

@@ -1,0 +1,97 @@
+/- AUTHOR DRAFT ONLY. Outside every compiler/READY/import closure until
+the actual L1 result/typed/raw-vertex APIs PASS at source-matched pins. -/
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TypedSpineApplicationMeasureProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterPathVertexProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterGammaProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterWindowProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TypedSpineApplicationCoreProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalOriginalUniformDescentSelection (Data)
+open InternalComputabilityApplication InternalComputabilityDownward
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalTagArithmeticSyntaxProof (OTerm z suc)
+open SourceComputabilityFormulaSupportProof NumberedLeastCodeRepresentative
+open SourceComputabilityCompletion.TypedSpine
+open UniformCertificateCompletion
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- One actual supplied accepted application, at coordinates bound by the
+original query totality. The codomain IH is used only AFTER actual output
+typing and the original object-measure witness have both been derived. -/
+theorem resultAtCoordinates {body : Positive (Fin 1)}
+    (n : Nat) (arity : Fin n → Nat) (base : Data)
+    (hbase : InternalOriginalUniformDescentSelection.Calibrated n arity base)
+    (window : Program 1) (hwindow : Path.windowCalibrated n window)
+    (symbols : List (Fin n)) (S : List Ty) (table : Fin n → Fin n → Bool)
+    (hS : SubtypeClosed (fun typ => typ ∈ S))
+    (oldComp : JointGammaComputability.Data) (oldVertex oldResult : Program 5) (sigma tau : Ty) :
+    let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+    let data := OuterSelection.data base window
+    let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+    ∀ (α : Type) (Gamma : List (Formula α))
+      (f a out functionMark depth gammaCode function argument parameter rawOut resultMark : OTerm α),
+    (∀ (x mark depth : OTerm α),
+      Nonempty (Derivation body Gamma (typed comp tau (numeral context) x)) →
+      Nonempty (Derivation body Gamma (marked x mark depth)) →
+      Nonempty (Derivation body Gamma (computable comp tau (numeral context) x))) →
+    Nonempty (Derivation body Gamma (domain comp context sigma tau f a)) →
+    Nonempty (Derivation body Gamma (accepted comp sigma tau (numeral context) f a out)) →
+    Nonempty (Derivation body Gamma (marked f functionMark depth)) →
+    Nonempty (Derivation body Gamma (graph1 InternalUnpair.left gammaCode f)) →
+    Nonempty (Derivation body Gamma (graph1 InternalUnpair.right function f)) →
+    Nonempty (Derivation body Gamma (graph1 InternalUnpair.right argument a)) →
+    Nonempty (Derivation body Gamma (graph2 InternalPairing.pairing parameter (numeral context) gammaCode)) →
+    Nonempty (Derivation body Gamma
+      (graph5 (Path.vertex data window oldVertex) rawOut parameter
+        (numeral (typeNumber sigma)) (numeral (typeNumber tau)) argument function)) →
+    Nonempty (Derivation body Gamma
+      (graph2 InternalPairing.pairing resultMark InternalOriginalStepGuard.one (suc depth))) →
+    Nonempty (Derivation body Gamma (computable comp tau (numeral context) out)) := by
+  dsimp only
+  intro α Gamma f a out functionMark depth gammaCode function argument parameter rawOut resultMark
+    ih hd haccepted hm hgamma hfunction hargument hparameter hvertex hresultMark
+  let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+  let data := OuterSelection.data base window
+  let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+  have hw := OuterWindowProof.closedWindowEvaluation n window hwindow symbols S table hS
+  have hwindowGraph := GuardedSourceCertificateProof.windowNumeral
+    (body := body) (Gamma := Gamma) (α := α) window context hw
+  have hargGamma := OuterGammaProof.argumentGamma oldComp data window oldVertex oldResult
+    f a gammaCode hgamma (andRight hd)
+  have hrawFunction := OuterCarrierSupportProof.typedRecover oldComp data window oldVertex oldResult
+    context (numeral (typeNumber (.arrow sigma tau))) f gammaCode function parameter
+    hwindowGraph hgamma hfunction hparameter (andLeft (andLeft hd))
+  have hrawArgument := OuterCarrierSupportProof.typedRecover oldComp data window oldVertex oldResult
+    context (numeral (typeNumber sigma)) a gammaCode argument parameter
+    hwindowGraph hargGamma hargument hparameter (andRight (andLeft hd))
+  have hactualJ := OuterPathVertexProof.rawApplication n window hwindow symbols S table hS data
+    oldVertex sigma tau parameter gammaCode function argument rawOut
+    hparameter hrawFunction hrawArgument hvertex
+  have happ := OuterPathVertexProof.applicationPremises n arity base hbase window hwindow
+    symbols S table hS sigma tau parameter gammaCode function argument rawOut
+    hparameter hrawFunction hrawArgument hactualJ
+  have hrawTypedOut := OuterPathVertexProof.outputTyped n arity base hbase window hwindow
+    symbols S table hS sigma tau parameter gammaCode function argument rawOut
+    hparameter hrawFunction hrawArgument hactualJ
+  have hr := OuterResultSupportProof.resultBranchRecover oldComp data window oldVertex oldResult
+    context sigma tau f a out hw hd haccepted
+  have hpair := OuterResultSupportProof.resultPair (Path.vertex data window oldVertex)
+    context sigma tau f a out gammaCode function argument parameter rawOut
+    hgamma hfunction hargument hparameter hvertex hr
+  have hcoordinates := OuterResultSupportProof.outputCoordinates out gammaCode rawOut hpair
+  have houtTyped : Nonempty (Derivation body Gamma (typed comp tau (numeral context) out)) :=
+    OuterTypedProof.typedAccept oldComp data window oldVertex oldResult context
+      (numeral (typeNumber tau)) out gammaCode rawOut parameter
+      hwindowGraph (andLeft hcoordinates) (andRight hcoordinates) hparameter hrawTypedOut
+  have hrawWindow := OuterWindowProof.parameterWindow window context function parameter gammaCode
+    hwindowGraph hparameter
+  have houtMarked := TypedSpineApplicationMeasureProof.resultMarked base window
+    (numeral (typeNumber (.arrow sigma tau))) (numeral (typeNumber sigma)) (numeral (typeNumber tau))
+    function argument rawOut parameter f out functionMark depth resultMark
+    hrawWindow happ hm hfunction (andRight hcoordinates) hresultMark
+  exact ih out resultMark (suc depth) houtTyped houtMarked
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TypedSpineApplicationCoreProof

@@ -1,0 +1,9 @@
+# Signed Phi interval projection: exact first candidate passed
+
+Six unchanged frozen targets in five new Lean files passed the first exact candidate/actual-axiom gate at build-reports/1794189007100951530-2.json. All actual axiom closures are standard only; the residue representative uses propext and Quot.sound, while the other five use those plus Classical.choice. Every own current source hash matches a successful native row; frozen semantics/targets/named-source pins are unchanged. ACCEPTANCE.json is ready for main's independent source adoption.
+
+For arbitrary symbolic endpoints and a symbolic residue at one retained valuation, the component eliminates the entire original signed scaled-Phi interval and congruence predicate. The literal initial signed-domain argument is handled before the actual positive floor-inverse crossing. Exactly m candidates from the least allowed lower witness are emitted in each of two source branches; each retains the original domain, both inequalities and the residue test. No no-wide, maximal-input, independent-value or decision-supplier premise is present. The concrete numeric compiler has literal code calibration and a genuine Computable proof.
+
+This is a complete one-head clause, not arbitrary multi-row or alternating BASE. General shifted/hyper dominance, source case coverage/progress, expanded free-parameter row closure relative to the whole bound block and all first-order assembly remain pending. No numbered source theorem is promoted by this lane. The first dominant-boundary packet is separately gated and sealed.
+
+All native and transport processes are fully reaped and the slot is released. No resource/heartbeat limit or upstream dependency was changed. This is a focused exact component result, not a fresh full-root or remote-CI build.

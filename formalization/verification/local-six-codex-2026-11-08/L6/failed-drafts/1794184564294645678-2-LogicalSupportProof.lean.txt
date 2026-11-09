@@ -1,0 +1,86 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.GorbowDerivationSubstitutionProof
+public import LogicLineages.ComputabilityKnowledge.GorbowClosedDeductionProof
+
+@[expose] public section
+/-! Finite propositional bookkeeping compiled to the unchanged Hilbert
+calculus. Local assumptions never become new source axioms or theorem rules:
+`discharge` removes each assumption using K/S, and `finish` accepts only an
+empty local context. -/
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Hilbert
+open GorbowSyntax GorbowTheoryProof
+
+variable {T : Sentence → Prop} {n : Nat}
+
+def identity (a : Formula n) : Derivation T (.imp a a) :=
+  .mp (.mp (.logical (.s a (.imp a a) a)) (.logical (.k a (.imp a a))))
+    (.logical (.k a a))
+
+def lift {a : Formula n} (b : Formula n) (p : Derivation T a) :
+    Derivation T (.imp b a) := .mp (.logical (.k a b)) p
+
+def compose {a b c : Formula n} (p : Derivation T (.imp b c))
+    (q : Derivation T (.imp a b)) : Derivation T (.imp a c) :=
+  .mp (.mp (.logical (.s a b c)) (lift a p)) q
+
+def mpUnder {a b c : Formula n} (p : Derivation T (.imp a (.imp b c)))
+    (q : Derivation T (.imp a b)) : Derivation T (.imp a c) :=
+  .mp (.mp (.logical (.s a b c)) p) q
+
+inductive Local (T : Sentence → Prop) (n : Nat) : List (Formula n) → Formula n → Type
+  | base {Gamma phi} : Derivation T phi → Local T n Gamma phi
+  | hypothesis {Gamma phi} : phi ∈ Gamma → Local T n Gamma phi
+  | mp {Gamma a b} : Local T n Gamma (.imp a b) → Local T n Gamma a → Local T n Gamma b
+
+namespace Local
+
+def discharge {Gamma : List (Formula n)} {p phi : Formula n} :
+    Local T n (p :: Gamma) phi → Local T n Gamma (.imp p phi)
+  | .base d => .base (lift p d)
+  | .hypothesis h => by
+      rcases List.mem_cons.mp h with h | h
+      · subst phi
+        exact .base (identity p)
+      · exact .mp (.base (.logical (.k phi p))) (.hypothesis h)
+  | .mp a b => .mp (.mp (.base (.logical (.s p _ _))) (discharge a)) (discharge b)
+
+def finish {phi : Formula n} : Local T n [] phi → Derivation T phi
+  | .base d => d
+  | .hypothesis h => False.elim (List.not_mem_nil _ h)
+  | .mp p q => .mp (finish p) (finish q)
+
+def explosion {Gamma : List (Formula n)} {p : Formula n} (q : Formula n)
+    (hp : Local T n Gamma p) (hn : Local T n Gamma (.neg p)) : Local T n Gamma q :=
+  .mp (.mp (.base (.logical (.classicalContraposition q p)))
+    (.mp (.base (.logical (.k (.neg p) (.neg q)))) hn)) hp
+
+def classical {Gamma : List (Formula n)} (p : Formula n)
+    (h : Local T n (.neg p :: Gamma) p) : Local T n Gamma p := by
+  let r : Formula n := .equal .zero .zero
+  have hn : Local T n (.neg p :: Gamma) (.neg r) :=
+    explosion (.neg r) h (.hypothesis List.mem_cons_self)
+  exact .mp (.mp (.base (.logical (.classicalContraposition p r))) (discharge hn))
+    (.base (.logical (.reflexive .zero)))
+
+end Local
+
+def doubleNegation (p : Formula n) : Derivation T (.imp (.neg (.neg p)) p) := by
+  have h : Local T n [.neg (.neg p)] p := Local.classical p
+    (Local.explosion p (.hypothesis List.mem_cons_self)
+      (.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)))
+  exact Local.finish (Local.discharge h)
+
+def modusTollens {p q : Formula n} (hpq : Derivation T (.imp p q))
+    (hnq : Derivation T (.neg q)) : Derivation T (.neg p) := by
+  apply Local.finish
+  apply Local.classical (.neg p)
+  have hp : Local T n [.neg (.neg p)] p :=
+    .mp (.base (doubleNegation p)) (.hypothesis List.mem_cons_self)
+  exact Local.explosion (.neg p) (.mp (.base hpq) hp) (.base hnq)
+
+def explosion {p : Formula n} (q : Formula n) (hp : Derivation T p)
+    (hn : Derivation T (.neg p)) : Derivation T q :=
+  Local.finish (Local.explosion q (.base hp) (.base hn))
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Hilbert

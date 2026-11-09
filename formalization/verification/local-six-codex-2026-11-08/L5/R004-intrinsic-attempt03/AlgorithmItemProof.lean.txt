@@ -1,0 +1,162 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmHeadProof
+public import LogicLineages.OrdinalComparison.RangePhiFactorization.StatementChecks
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+open PolynomialGraphCompletion WordGuardCompletion CounterWordGuardCompletion Algorithm
+open OuterShiftNormalization KernelSourceCompletion
+
+theorem member_le_foldMax (xs : List Nat) (t : Nat) (ht : t ∈ xs) :
+    t ≤ foldMax xs := by
+  induction xs with
+  | nil => simp at ht
+  | cons a xs ih =>
+      rcases List.mem_cons.mp ht with rfl | ht
+      · exact Nat.le_max_left _ _
+      · exact (ih ht).trans (Nat.le_max_right _ _)
+
+theorem rowTail_domain (D : Nat) (r : Row) (ν : Nat → Nat)
+    (hD : RowAllowed D r)
+    (ht : ∀ i ∈ rowVariables r, rowTail r ≤ ν i) : RowDomain r ν := by
+  intro a ha
+  have hw : wordTail a.2.2 ≤ rowTail r :=
+    member_le_foldMax _ _ (List.mem_map.mpr ⟨a,ha,rfl⟩)
+  exact (WordGuardCompletion.Proof.wordTailCorrect D a.2.2 (ν a.2.1)
+    (hD a ha) (hw.trans (ht a.2.1 (List.mem_map.mpr ⟨a,ha,rfl⟩)))).1
+
+theorem allowed_word_append (D : Nat) (A B : Word)
+    (hA : WordAllowed D A) (hB : WordAllowed D B) : WordAllowed D (A++B) := by
+  intro a ha
+  rcases List.mem_append.mp ha with ha | ha
+  · exact hA a ha
+  · exact hB a ha
+
+theorem leader_allowed (D : Nat) (r : Row) (a : Item) (hD : RowAllowed D r)
+    (ha : a ∈ active (canonicalRow r)) : WordAllowed D (leader a).2 := by
+  by_cases hc : isCounter a = true
+  · have hv := active_item_view D r a hD ha
+    have hp := counter_parameters D r a hD ha hc
+    have hl := CounterWordGuardCompletion.Proof.leaderWord_allowed D
+      (counterIndex a) (mass a) (by omega)
+    simp only [leader,hc,if_true,leaderValueWord]
+    apply allowed_word_append D _ _
+      (allowed_word_append D _ _ hv.2.2.2 hl)
+    intro b hb
+    simp only [List.mem_singleton] at hb
+    subst b
+    simp [phiLetter,LetterAllowed]
+  · simpa [leader,hc] using canonical_allowed D r hD a (List.mem_filter.mp ha).1
+
+theorem sourceTail_original (D : Nat) (r : Row) (a : Item) (hD : RowAllowed D r)
+    (ha : a ∈ active (canonicalRow r)) (t : Nat) (ht : sourceTail a ≤ t) :
+    WordDomain a.2.2 t := by
+  exact (WordGuardCompletion.Proof.wordTailCorrect D a.2.2 t
+    (canonical_allowed D r hD a (List.mem_filter.mp ha).1)
+    ((Nat.le_max_left _ _).trans ht)).1
+
+theorem counter_sourceTail_expansion (a : Item) (hc : isCounter a = true) :
+    expansionTail (innerWord a) (counterIndex a) (mass a) ≤ sourceTail a := by
+  simp only [sourceTail,hc,if_true]
+  exact (Nat.le_max_left _ _).trans (Nat.le_max_right _ _)
+
+/-- Every ordinary current atom is an actual Phi value at the literal
+preimage emitted by the stage. The reached-input domain is derived here. -/
+theorem ordinary_phi_preimage (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (hc : isCounter a = false) (t : Nat) (ht : sourceTail a ≤ t) :
+    WordAllowed D (preimage a) ∧ WordDomain (preimage a) t ∧
+      wordValue a.2.2 t = Phi (wordValue (preimage a) t) := by
+  have hv := active_item_view D r a hD ha
+  have hcounter : (head a).1 ≠ 4 := by simpa [isCounter] using hc
+  have hkind : (head a).1 = 1 ∨ RangePhiFactorization.RangeHead (head a) := by
+    have hadm := hv.2.2.1
+    unfold LetterAllowed at hadm
+    unfold RangePhiFactorization.RangeHead
+    split at hadm <;> omega
+  rcases hkind with hphi | hrange
+  · have hi : wordTail (innerWord a) ≤ t := by
+      simpa [sourceTail,hc,hphi] using (Nat.le_max_right _ _).trans ht
+    have hd := (WordGuardCompletion.Proof.wordTailCorrect D (innerWord a) t hv.2.2.2 hi).1
+    refine ⟨by simpa [preimage,hc,hphi] using hv.2.2.2,
+      by simpa [preimage,hc,hphi] using hd,?_⟩
+    rw [hv.1,WordAlgebraProof.wordValue_append]
+    simp [preimage,hc,hphi,wordValue,letterValue]
+  · have hnphi : (head a).1 ≠ 1 := by
+      unfold RangePhiFactorization.RangeHead at hrange
+      omega
+    have hi : RangePhiFactorization.wordFactorTail (innerWord a) (head a) ≤ t := by
+      simpa [sourceTail,hc,hnphi] using (Nat.le_max_right _ _).trans ht
+    have hreached := WordGuardCompletion.Proof.wordReachCorrect D (innerWord a)
+      (RangePhiFactorization.factorTail (head a)) t hv.2.2.2 hi
+    have hf := RangePhiFactorization.Proof.headFactorization D (head a)
+      (wordValue (innerWord a) t) hv.2.2.1 hrange hreached.2
+    have hs := RangePhiFactorization.Proof.predecessorHeadSyntax D (head a) hv.2.2.1 hrange
+    have hpred : WordAllowed D [RangePhiFactorization.predecessorHead (head a)] := by
+      intro b hb
+      simp only [List.mem_singleton] at hb
+      subst b
+      exact hs.1
+    refine ⟨by simpa [preimage,hc,hnphi] using
+        allowed_word_append D _ _ hv.2.2.2 hpred,?_,?_⟩
+    · simp only [preimage,hc,Bool.false_eq_true,if_false,hnphi,WordAlgebraProof.wordDomain_append,
+        WordDomain]
+      exact ⟨hreached.1,hf.2.1,True.intro⟩
+    · rw [hv.1,WordAlgebraProof.wordValue_append]
+      simpa [preimage,hc,hnphi,WordAlgebraProof.wordValue_append,wordValue] using hf.2.2
+
+private theorem residual_sum_scale (a : Int) (xs : List (Nat × Word))
+    (A : Word) (t : Nat) :
+    (xs.map (fun p => (2*a)*(wordValue (A++p.2) t : Int))).sum =
+      2*(xs.map (fun p => a*(wordValue (A++p.2) t : Int))).sum := by
+  induction xs with
+  | nil => simp
+  | cons p xs ih =>
+      simp only [List.map_cons,List.sum_cons,ih]
+      ring
+
+/-- This is the exact local identity used by an ordinary-containing
+zero-leading class. Its emitted residual row has the original, undoubled
+coefficient; doubling occurs solely in the proof equation. -/
+theorem ordinaryResidual_identity (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (ν : Nat → Nat) (ht : sourceTail a ≤ ν a.2.1) :
+    RowAllowed D (ordinaryResidual a) ∧ RowDomain (ordinaryResidual a) ν ∧
+      2*a.1*(wordValue a.2.2 (ν a.2.1) : Int) =
+        a.1*(if isCounter a then 1 else 2)*
+          (wordValue (leader a).2 (ν (leader a).1) : Int) +
+          2*RowValue (ordinaryResidual a) ν := by
+  by_cases hc : isCounter a = true
+  · have hp := counter_parameters D r a hD ha hc
+    have hv := active_item_view D r a hD ha
+    have he := RankedWordDecisionCompletion.Proof.exactSourceCounterExpansion D
+      a.1 a.2.1 (innerWord a) (counterIndex a) (mass a) (by omega) hv.2.2.2 ν
+      ((counter_sourceTail_expansion a hc).trans ht)
+    have hs := residual_sum_scale a.1 (residualWords (counterIndex a) (mass a))
+      (innerWord a) (ν a.2.1)
+    have hadm : RowAllowed D (ordinaryResidual a) := by
+      intro b hb
+      obtain ⟨p,hp,rfl⟩ := List.mem_map.mp (by simpa [ordinaryResidual,hc] using hb)
+      exact he.1 (2*a.1,a.2.1,innerWord a++p.2) (List.mem_cons_of_mem _
+        (List.mem_map.mpr ⟨p,hp,rfl⟩))
+    have hdom : RowDomain (ordinaryResidual a) ν := by
+      intro b hb
+      obtain ⟨p,hp,rfl⟩ := List.mem_map.mp (by simpa [ordinaryResidual,hc] using hb)
+      exact he.2.2.1 (2*a.1,a.2.1,innerWord a++p.2) (List.mem_cons_of_mem _
+        (List.mem_map.mpr ⟨p,hp,rfl⟩))
+    refine ⟨hadm,hdom,?_⟩
+    have hid := he.2.2.2.1
+    rw [← counter_item_canonical_value D r a hD ha hc (ν a.2.1)] at hid
+    simp only [RowValue,counterExpansionRow,List.map_cons,List.map_map,
+      Function.comp_def,List.sum_cons] at hid
+    rw [hs] at hid
+    simp only [leader,ordinaryResidual,hc,if_true,RowValue,List.map_map,Function.comp_def]
+    linear_combination hid
+  · have hf : isCounter a = false := Bool.eq_false_of_not_eq_true hc
+    refine ⟨?_,?_,?_⟩
+    · simp [ordinaryResidual,hc,RowAllowed]
+    · simp [ordinaryResidual,hc,RowDomain]
+    · simp [leader,ordinaryResidual,hc,RowValue]
+      ring
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

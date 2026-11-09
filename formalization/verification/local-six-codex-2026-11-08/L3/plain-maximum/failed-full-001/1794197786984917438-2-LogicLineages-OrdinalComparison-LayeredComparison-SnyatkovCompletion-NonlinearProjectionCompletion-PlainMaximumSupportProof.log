@@ -1,0 +1,93 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:52:55: warning: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [negativeGuard, Formula.parameters, Atom.row, Row.parameters,
+  ̵  ̵ ̵ ̵Term.variables,
+  ̲  ̲ ̲ ̲List.mem_append, List.not_mem_nil, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_false,
+  ̵  ̵ ̵ ̵boundary_support]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:90:2: error: unsolved goals
+case pos
+bound : List ℕ
+r : Row
+i : ℕ
+hallowed : allowed bound r = true
+hiparams : i ∉ r.parameters
+ha : 0 < headCoefficient i r
+hp : i ∉ (positiveGuard i r).parameters
+htest : (!(positiveGuard i r).parameters.contains i) = true
+⊢ (∀ (a : ℤ) (b : NormalForm.Summand),
+      (a, b) ∈ (Atom.nonnegative (r.1, [])).row.2 →
+        (match b with
+          | NormalForm.Summand.variable i => true
+          | NormalForm.Summand.phi j shift => j != i
+          | NormalForm.Summand.hyperPhi j indexShift outerShift => j != i) =
+          true) ∧
+    ∀ (a : ℤ) (b : NormalForm.Summand),
+      (a, b) ∈
+          (Atom.nonnegative
+                ((Term.numeral 0, (boundary i r).add (Term.numeral 3)), [(1, NormalForm.Summand.variable i)])).row.2 →
+        (match b with
+          | NormalForm.Summand.variable i => true
+          | NormalForm.Summand.phi j shift => j != i
+          | NormalForm.Summand.hyperPhi j indexShift outerShift => j != i) =
+          true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:97:4: error: unsolved goals
+case pos
+bound : List ℕ
+r : Row
+i : ℕ
+hallowed : allowed bound r = true
+hiparams : i ∉ r.parameters
+ha : ¬0 < headCoefficient i r
+hb : headCoefficient i r < 0
+hp : i ∉ (negativeGuard i r).parameters
+htest : (!(negativeGuard i r).parameters.contains i) = true
+⊢ (∀ (a : ℤ) (b : NormalForm.Summand),
+      (a, b) ∈ (Atom.nonnegative ((r.1.1, r.1.2.add (Term.numeral 1)), [])).row.2 →
+        (match b with
+          | NormalForm.Summand.variable i => true
+          | NormalForm.Summand.phi j shift => j != i
+          | NormalForm.Summand.hyperPhi j indexShift outerShift => j != i) =
+          true) ∧
+    ∀ (a : ℤ) (b : NormalForm.Summand),
+      (a, b) ∈
+          (Atom.nonnegative
+                (((boundary i r).subtract (Term.numeral 2), Term.numeral 1),
+                  [(-1, NormalForm.Summand.variable i)])).row.2 →
+        (match b with
+          | NormalForm.Summand.variable i => true
+          | NormalForm.Summand.phi j shift => j != i
+          | NormalForm.Summand.hyperPhi j indexShift outerShift => j != i) =
+          true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:121:22: warning: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [negativeGuard, Formula.variables, Atom.row, Row.variables, Row.parameters,
+  ̲  ̲ ̲ ̲Term.variables, List.map_cons, List.map_nil, List.mem_append, List.mem_cons, List.not_mem_nil,
+  ̲  ̲ ̲ ̲f̵a̵l̵s̵e̵_̵o̵r̵,̵ ̵or_false, NormalForm.Summand.name, boundary_support]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:137:19: error: Application type mismatch: The argument
+  Or.inr (nonzero_head_support r i (ne_of_gt ha))
+has type
+  ?m.69 ∨ i ∈ List.map (fun a => a.2.name) r.2
+but is expected to have type
+  i ∈ List.map (fun a => a.2.name) r.2
+in the application
+  Or.inr (Or.inr (nonzero_head_support r i (ne_of_gt ha)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:144:21: error: Application type mismatch: The argument
+  Or.inr (nonzero_head_support r i (ne_of_lt hb))
+has type
+  ?m.146 ∨ i ∈ List.map (fun a => a.2.name) r.2
+but is expected to have type
+  i ∈ List.map (fun a => a.2.name) r.2
+in the application
+  Or.inr (Or.inr (nonzero_head_support r i (ne_of_lt hb)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumSupportProof.lean:149:21: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  List.map (fun a => a.2.name) (remainingOccurrences i r) = j :: hn
+at case `List.Mem.head`

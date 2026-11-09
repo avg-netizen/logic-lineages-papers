@@ -1,3 +1,42 @@
+# Current user instruction — wind down, then commit, 9 November 2026
+
+All six lanes and compiler coordination are now STOPPED. The queue is empty,
+all jobs reaped, and the local compiler policy is paused. Resume only after
+a new explicit user instruction. Read
+[the final handoff](verification/local-six-codex-2026-11-08/ROOT-FINAL-HANDOFF.md).
+
+The user has stopped continuing work. Only the explicitly bounded current-round
+closeouts in [the wind-down record](WIND-DOWN-2026-11-09.md) may finish.
+Preserve results and unfinished drafts, start no successors, then stop all six
+lanes. Main commits locally to the cumulative branch after all jobs are reaped;
+no push. The following six-lane release is historical where it conflicts.
+
+# Previous user release — six long-running CODEX-ONLY lanes, 8 November 2026
+
+Read [the current allocation](RESUME-2026-11-08-SIX-CODEX.md) before selecting
+work. The user explicitly requested a fetch of the newest unmerged branch
+and SIX continuing Codex subagents, then emphasized strategic reassignment
+based on the overall trajectory. That release supersedes historical pauses,
+sole-lane allocations and all Claude author/session/quota requirements for
+this programme. No Claude involvement is authorized. The current agents and
+exclusive new-source ownership are listed in the allocation; do not spawn
+additional workers. Main owns compiler policy, source adoption, aggregate/register
+and Git; existing L4 `/root/portfolio_frontier` executes the unchanged single
+bounded compiler queue under main's delegation. Submit EACH READY native check
+request and stable source pins to L4; after its safe central-execution START,
+L4 runs the checks on authors' behalf and authors do not launch compilers.
+Each turn retains a separate lease and is fully reaped before its successor.
+Existing exact-target, standard-axiom,
+source-preservation and resource requirements remain. No publication,
+manuscript, dependency/toolchain or CI changes are authorized.
+
+Fetched base: `9cbe6c5a` from
+`origin/formalization/cumulative-continuation-2026-11-08`. Local continuation:
+`formalization/local-six-codex-2026-11-08`. Inherited register: 168 checked,
+2 inherited, 19 pending / 189. All 59 preexisting local draft/control files
+were preserved before checkout. Earlier checkpoint mathematics below remains
+accepted; earlier allocations and pauses are historical where they conflict.
+
 # CURRENT checkpoint — uniform certificate transport, 8 November 2026
 
 The newest continuation completes **21 exact supporting targets in 51 new

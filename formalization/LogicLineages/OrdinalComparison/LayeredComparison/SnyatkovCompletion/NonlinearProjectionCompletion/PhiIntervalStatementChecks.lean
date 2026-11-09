@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PhiIntervalSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PhiIntervalProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PhiIntervalStatementChecks
+
+theorem actual_lower_boundary : PhiIntervalTargets.ActualLowerBoundary := PhiIntervalProof.actualLowerBoundary
+theorem actual_residue_representative : PhiIntervalTargets.ActualResidueRepresentative := PhiIntervalProof.actualResidueRepresentative
+theorem actual_nonlinear_projection : PhiIntervalTargets.ActualNonlinearProjection := PhiIntervalProof.actualNonlinearProjection
+theorem exact_parameter_support : PhiIntervalTargets.ExactParameterSupport := PhiIntervalProof.exactParameterSupport
+theorem literal_code_calibration : PhiIntervalTargets.LiteralCodeCalibration := PhiIntervalProof.literalCodeCalibration
+theorem actual_numeric_program : PhiIntervalTargets.ActualNumericProgram := PhiIntervalProof.actualNumericProgram
+
+#print axioms actual_lower_boundary
+#print axioms actual_residue_representative
+#print axioms actual_nonlinear_projection
+#print axioms exact_parameter_support
+#print axioms literal_code_calibration
+#print axioms actual_numeric_program
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PhiIntervalStatementChecks

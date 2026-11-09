@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarInternalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarStatementChecks
+
+theorem rawScalarCalibration_exact : RawScalarTargets.ActualOriginalRawScalarCalibration :=
+  RawScalarEvaluationProof.actualOriginalRawScalarCalibration
+
+theorem typedScalar_exact : RawScalarTargets.ActualParameterizedTypedScalar :=
+  RawScalarInternalProof.actualParameterizedTypedScalar
+
+#print axioms rawScalarCalibration_exact
+#print axioms typedScalar_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarStatementChecks

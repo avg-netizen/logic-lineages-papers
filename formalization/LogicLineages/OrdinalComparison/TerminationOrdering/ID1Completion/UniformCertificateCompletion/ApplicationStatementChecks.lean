@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationStatementChecks
+theorem applicationEdge_exact : ApplicationTargets.ActualOriginalUniformApplicationEdgeLift :=
+  ApplicationProof.actualOriginalUniformApplicationEdgeLift
+#print axioms applicationEdge_exact
+theorem typedOutputs_exact : ApplicationTargets.ActualOriginalUniformApplicationEdgeTypedOutputs :=
+  ApplicationProof.actualOriginalUniformApplicationEdgeTypedOutputs
+#print axioms typedOutputs_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationStatementChecks

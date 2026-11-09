@@ -1,0 +1,87 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluationTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeCalibrationProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof
+open PolynomialGraphCompletion LayeredComparison.SnyatkovCompletion
+
+theorem wordDecodeAtomData (a : Atom) :
+    WordLinearDecisionCompletion.Code.decodeAtom (Encodable.encode a.data) = a.data := by
+  simp only [WordLinearDecisionCompletion.Code.decodeAtom, Encodable.encodek, Option.getD_some]
+
+theorem code_specialize_atom (x n : Nat) (a : Atom) :
+    Code.specializeAtom x n a.data = (specializeAtom x n a).data := by
+  cases a <;> rfl
+
+theorem wordMapAtomsStep (op : Nat → Nat) (payload tag : Nat) (ht : tag < 6) :
+    LinearRows.Code.mapAtoms op (6 * payload + tag) =
+      if tag = 0 then 0 else if tag = 1 then 1
+      else if tag = 2 then 6 * op payload + 2
+      else if tag = 3 then 6 * LinearRows.Code.mapAtoms op payload + 3
+      else 6 * Nat.pair (LinearRows.Code.mapAtoms op payload.unpair.1)
+        (LinearRows.Code.mapAtoms op payload.unpair.2) + tag := by
+  have hm : (6 * payload + tag) % 6 = tag := by omega
+  have hd : (6 * payload + tag) / 6 = payload := by omega
+  rw [LinearRows.Code.mapAtoms, hm, hd]
+
+theorem specialize_formula_code (x n : Nat) (p : Formula) :
+    Code.specialize x n (Formula.encode p) = Formula.encode (specialize x n p) := by
+  unfold Code.specialize
+  induction p with
+  | bot =>
+      simpa [Formula.encode, specialize] using
+        wordMapAtomsStep (fun a => Encodable.encode (Code.specializeAtom x n (WordLinearDecisionCompletion.Code.decodeAtom a))) 0 1 (by decide)
+  | top =>
+      simpa [Formula.encode, specialize] using
+        wordMapAtomsStep (fun a => Encodable.encode (Code.specializeAtom x n (WordLinearDecisionCompletion.Code.decodeAtom a))) 0 0 (by decide)
+  | atom a =>
+      simpa [Formula.encode, specialize,
+        wordDecodeAtomData, code_specialize_atom] using
+        wordMapAtomsStep (fun a => Encodable.encode (Code.specializeAtom x n (WordLinearDecisionCompletion.Code.decodeAtom a)))
+          (Encodable.encode a.data) 2 (by decide)
+  | neg p ih =>
+      simpa [Formula.encode, specialize, ih] using
+        wordMapAtomsStep (fun a => Encodable.encode (Code.specializeAtom x n (WordLinearDecisionCompletion.Code.decodeAtom a))) (Formula.encode p) 3 (by decide)
+  | conj p q ihp ihq =>
+      simpa [Formula.encode, specialize, Nat.unpair_pair, ihp, ihq] using
+        wordMapAtomsStep (fun a => Encodable.encode (Code.specializeAtom x n (WordLinearDecisionCompletion.Code.decodeAtom a)))
+          (Nat.pair (Formula.encode p) (Formula.encode q)) 4 (by decide)
+  | disj p q ihp ihq =>
+      simpa [Formula.encode, specialize, Nat.unpair_pair, ihp, ihq] using
+        wordMapAtomsStep (fun a => Encodable.encode (Code.specializeAtom x n (WordLinearDecisionCompletion.Code.decodeAtom a)))
+          (Nat.pair (Formula.encode p) (Formula.encode q)) 5 (by decide)
+
+theorem wordAtomsStep (payload tag : Nat) (ht : tag < 6) :
+    LinearRows.Code.atoms (6 * payload + tag) =
+      if tag = 0 then [] else if tag = 1 then []
+      else if tag = 2 then [payload]
+      else if tag = 3 then LinearRows.Code.atoms payload
+      else LinearRows.Code.atoms payload.unpair.1 ++ LinearRows.Code.atoms payload.unpair.2 := by
+  have hm : (6 * payload + tag) % 6 = tag := by omega
+  have hd : (6 * payload + tag) / 6 = payload := by omega
+  rw [LinearRows.Code.atoms, hm, hd]
+
+theorem wordAtomsCalibration (p : Formula) :
+    LinearRows.Code.atoms (Formula.encode p) = p.atoms.map (fun a => Encodable.encode a.data) := by
+  induction p with
+  | bot => simpa [Formula.encode, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms] using wordAtomsStep 0 1 (by decide)
+  | top => simpa [Formula.encode, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms] using wordAtomsStep 0 0 (by decide)
+  | atom a => simpa [Formula.encode, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms] using wordAtomsStep (Encodable.encode a.data) 2 (by decide)
+  | neg p hp => simpa [Formula.encode, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms, hp] using wordAtomsStep (Formula.encode p) 3 (by decide)
+  | conj p q hp hq => simpa [Formula.encode, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms, Nat.unpair_pair, hp, hq, List.map_append] using wordAtomsStep (Nat.pair (Formula.encode p) (Formula.encode q)) 4 (by decide)
+  | disj p q hp hq => simpa [Formula.encode, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms, Nat.unpair_pair, hp, hq, List.map_append] using wordAtomsStep (Nat.pair (Formula.encode p) (Formula.encode q)) 5 (by decide)
+
+theorem atomDataRow (a : Atom) : a.data.2.2 = a.row := by cases a <;> rfl
+
+theorem removedDomains_code (x n : Nat) (p : Formula) :
+    Code.removedDomains x n (Formula.encode p) = removedDomains x n p := by
+  simp only [Code.removedDomains, wordAtomsCalibration, List.all_map,
+    wordDecodeAtomData, removedDomains, Formula.tokens, List.all_flatMap, List.all_map,
+    atomDataRow]
+
+theorem literalCodeCalibration : Targets.LiteralCodeCalibration := by
+  intro x n p
+  exact ⟨specialize_formula_code x n p, removedDomains_code x n p⟩
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof

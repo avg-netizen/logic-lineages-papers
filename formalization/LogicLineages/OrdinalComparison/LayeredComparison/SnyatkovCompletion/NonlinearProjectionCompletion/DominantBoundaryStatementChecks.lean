@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.DominantBoundarySemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.DominantBoundaryProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.DominantBoundaryStatementChecks
+
+theorem actual_scaled_boundary : DominantBoundaryTargets.ActualScaledBoundary :=
+  DominantBoundaryProof.actualScaledBoundary
+theorem actual_finite_band : DominantBoundaryTargets.ActualFiniteBand :=
+  DominantBoundaryProof.actualFiniteBand
+theorem actual_nonlinear_projection : DominantBoundaryTargets.ActualNonlinearProjection :=
+  DominantBoundaryProof.actualNonlinearProjection
+theorem exact_parameter_support : DominantBoundaryTargets.ExactParameterSupport :=
+  DominantBoundaryProof.exactParameterSupport
+theorem literal_code_calibration : DominantBoundaryTargets.LiteralCodeCalibration :=
+  DominantBoundaryProof.literalCodeCalibration
+theorem actual_numeric_program : DominantBoundaryTargets.ActualNumericProgram :=
+  DominantBoundaryProof.actualNumericProgram
+
+#print axioms actual_scaled_boundary
+#print axioms actual_finite_band
+#print axioms actual_nonlinear_projection
+#print axioms exact_parameter_support
+#print axioms literal_code_calibration
+#print axioms actual_numeric_program
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.DominantBoundaryStatementChecks

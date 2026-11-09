@@ -1,0 +1,114 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmCanonicalProof
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RankStatementChecks
+public import LogicLineages.OrdinalComparison.CounterLeaderCollisionDefinitions
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+open PolynomialGraphCompletion WordGuardCompletion CounterWordGuardCompletion Algorithm
+open OuterShiftNormalization KernelSourceCompletion
+
+theorem counterWord_rank (A : Word) (d c : Nat) :
+    topRank (A++[counterLetter d c]) = d ∧
+    coreWord (A++[counterLetter d c]) = A++[counterLetter d c] := by
+  constructor
+  · simp [topRank,counterLetter]
+  · exact congrArg Prod.fst
+      (splitWord_append_nonshift A (counterLetter d c) (by simp [counterLetter]))
+
+/-- Every upper collision residual has its actual final counter head; all
+interior kernels are preserved as literal prefixes and remain degree admitted. -/
+theorem upperResidual_syntax (D k m c : Nat) : m+k+3 ≤ D →
+    ∀ p ∈ upperResidualWords k m c,
+      m+3 < p.1 ∧ p.1 ≤ m+k+3 ∧ WordAllowed D p.2 ∧
+        ∃ A : Word, p.2 = A++[counterLetter p.1 (c+p.1)] := by
+  induction k with
+  | zero =>
+      intro hD p hp
+      simp [upperResidualWords] at hp
+  | succ k ih =>
+      intro hD p hp
+      simp only [upperResidualWords,List.mem_cons,List.mem_map] at hp
+      rcases hp with rfl | ⟨q,hq,rfl⟩
+      · refine ⟨by omega,by omega,?_,[],?_⟩
+        · intro a ha
+          simp only [List.mem_singleton] at ha
+          subst a
+          simp [LetterAllowed,counterLetter]
+          omega
+        · simp [Nat.add_assoc]
+      · have hs := ih (by omega) q hq
+        obtain ⟨A,hA⟩ := hs.2.2.2
+        refine ⟨hs.1,by omega,?_,kernelLetter (m+k+4) (c+m+k+4) 0 :: A,?_⟩
+        · intro a ha
+          rcases List.mem_cons.mp ha with rfl | ha
+          · simp [LetterAllowed,kernelLetter]
+            omega
+          · exact hs.2.2.1 a ha
+        · simp only [hA,List.cons_append]
+
+theorem upperResidual_rank (D k m c : Nat) (hD : m+k+3 ≤ D) (p : Nat × Word)
+    (hp : p ∈ upperResidualWords k m c) (A : Word) :
+    m+3 < topRank (coreWord (A++p.2)) ∧
+      topRank (coreWord (A++p.2)) ≤ D := by
+  have hs := upperResidual_syntax D k m c hD p hp
+  obtain ⟨B,hB⟩ := hs.2.2.2
+  have hh := counterWord_rank (A++B) p.1 (c+p.1)
+  rw [hB,← List.append_assoc,hh.2,hh.1]
+  constructor <;> omega
+
+theorem source_count_eq (d c t : Nat) (hd : 1 ≤ d) (ht : c+d+1 ≤ t) :
+    sourceCount d c t = CounterLeaderExpansion.count d c t := by
+  exact (UniformCompletion.Focused.sourceProcessBridge d c t hd ht).1
+
+/-- The emitted source words denote the actual upper-entry residual list from
+the checked collision theorem, uniformly at the original reached inputs. -/
+theorem upperResidual_values (k m c t : Nat) (ht : leaderTail (m+k) c ≤ t) :
+    ((upperResidualWords k m c).map (fun p => wordValue p.2 t)).sum =
+      (CounterLeaderCollision.upperResiduals k m c t).sum := by
+  induction k generalizing t with
+  | zero => simp [upperResidualWords,CounterLeaderCollision.upperResiduals,
+      CounterLeaderCollision.upperEntries]
+  | succ k ih =>
+      let u := CounterLeaderExpansion.kernel (m+k+4) (c+m+k+4) t
+      have hb : c+m+k+4+(m+k+4)+1 ≤ t := by
+        unfold leaderTail at ht
+        omega
+      have hk := CounterWordGuardCompletion.Proof.source_zero_kernel
+        (m+k+4) (c+m+k+4) t (by omega) hb
+      have hc := source_count_eq (m+k+4) (c+m+k+4) t (by omega) hb
+      have hu : t ≤ u := CounterLeaderExpansion.Proof.kernel_ge _ _ _
+      have ht' : leaderTail (m+k+1) c ≤ t := by
+        simpa [Nat.add_assoc] using ht
+      have hn : leaderTail (m+k) c ≤ u :=
+        (CounterWordGuardCompletion.Proof.leaderTail_step (m+k) c).trans
+          (ht'.trans hu)
+      have hi := ih u hn
+      simp only [upperResidualWords,List.map_cons,List.map_map,Function.comp_def,
+        List.sum_cons,wordValue]
+      simp only [letterValue,kernelLetter,counterLetter,if_false,
+        show ¬(3:Nat)=0 by decide,show ¬(3:Nat)=1 by decide,
+        show ¬(3:Nat)=2 by decide,show ¬(4:Nat)=0 by decide,
+        show ¬(4:Nat)=1 by decide,show ¬(4:Nat)=2 by decide,
+        show ¬(4:Nat)=3 by decide,if_true]
+      rw [hk,hc]
+      change CounterLeaderExpansion.count (m+k+4) (c+m+k+4) t +
+        ((upperResidualWords k m c).map (fun p => wordValue p.2 u)).sum = _
+      rw [hi]
+      simp [CounterLeaderCollision.upperResiduals,CounterLeaderCollision.upperEntries,
+        u,Nat.add_assoc]
+
+theorem counterResidual_rank (D reference : Nat) (a : Item)
+    (href : 3 ≤ reference) (hle : reference ≤ rank a) (hD : rank a ≤ D) :
+    ∀ r ∈ rowRankList (counterResidual reference a), reference < r ∧ r ≤ D := by
+  intro r hr
+  obtain ⟨b,hb,hr⟩ := List.mem_map.mp hr
+  have hb' := (List.mem_filter.mp hb).1
+  obtain ⟨p,hp,rfl⟩ := List.mem_map.mp hb'
+  have hbound : reference-3+(rank a-reference)+3 ≤ D := by omega
+  have hh := upperResidual_rank D (rank a-reference) (reference-3) (mass a)
+    hbound p hp (innerWord a)
+  rw [hr] at hh
+  constructor <;> omega
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

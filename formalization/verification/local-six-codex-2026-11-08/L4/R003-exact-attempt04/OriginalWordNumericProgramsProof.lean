@@ -1,0 +1,101 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordRowProgramsProof
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordCodeRecursionProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof.Numeric
+open PolynomialGraphCompletion LayeredComparison.SnyatkovCompletion
+attribute [local irreducible] Nat.sqrt Nat.unpair word wordDomain letter letterDomain OriginalScheduled.sourceCount
+attribute [local irreducible] specializeRow Code.specializeAtom Code.specialize Code.removedDomains
+attribute [local irreducible] WordLinearDecisionCompletion.Code.decodeAtom
+
+abbrev AtomInput := (Nat × Nat) × WordLinearDecisionCompletion.Code.AtomData
+abbrev DomainInput := (Nat × Nat) × Nat
+
+theorem atomRowParametersPrimitive : Primrec (fun p : AtomInput =>
+    ((p.1.1, p.1.2, p.2.2.2) : PrefixInput)) :=
+  (Primrec.fst.comp Primrec.fst).pair
+    ((Primrec.snd.comp Primrec.fst).pair
+      (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))
+
+set_option diagnostics true in
+theorem atomRowComputable : Computable (fun p : AtomInput =>
+    specializeRow p.1.1 p.1.2 p.2.2.2) :=
+  specializeRowComputable.comp atomRowParametersPrimitive.to_comp
+
+set_option diagnostics true in
+theorem specializeAtomTupleComputable : Computable (fun p : AtomInput =>
+    (p.2.1, p.2.2.1, specializeRow p.1.1 p.1.2 p.2.2.2)) := by
+  have htag : Computable (fun p : AtomInput => p.2.1) := Computable.fst.comp Computable.snd
+  have hmod : Computable (fun p : AtomInput => p.2.2.1) :=
+    Computable.fst.comp (Computable.snd.comp Computable.snd)
+  exact htag.pair (hmod.pair atomRowComputable)
+
+theorem specializeAtomEquation (x n : Nat) (a : WordLinearDecisionCompletion.Code.AtomData) :
+    Code.specializeAtom x n a = (a.1, a.2.1, specializeRow x n a.2.2) := by
+  unfold Code.specializeAtom
+  rfl
+
+theorem specializeAtomComputable : Computable (fun p : AtomInput => Code.specializeAtom p.1.1 p.1.2 p.2) := by
+  simpa only [specializeAtomEquation] using specializeAtomTupleComputable
+
+theorem specializeCodeComputable :
+    Computable (fun p : Nat × Nat × Nat => Code.specialize p.1 p.2.1 p.2.2) := by
+  have hd : Computable (fun p : (Nat × Nat) × Nat =>
+      WordLinearDecisionCompletion.Code.decodeAtom p.2) :=
+    WordLinearDecisionCompletion.Proof.decodeAtom_primitive.to_comp.comp Computable.snd
+  have hop : Computable₂ (fun p : Nat × Nat => fun a : Nat => Encodable.encode
+      (Code.specializeAtom p.1 p.2 (WordLinearDecisionCompletion.Code.decodeAtom a))) :=
+    Computable.encode.comp (specializeAtomComputable.comp (Computable.fst.pair hd))
+  have hm := mapAtomsComputable hop
+  exact (hm.comp (Computable.fst.pair (Computable.fst.comp Computable.snd))
+    (Computable.snd.comp Computable.snd)).of_eq (fun p => by unfold Code.specialize; rfl)
+
+theorem atomDomainsComputable : Computable (fun p : DomainInput =>
+    (WordLinearDecisionCompletion.Code.decodeAtom p.2).2.2.2.all
+      (fun b => if b.2.1 = p.1.1 then wordDomain b.2.2 p.1.2 else true)) := by
+  have hx : Computable (fun p : DomainInput × WordItem => p.1.1.1) :=
+    Computable.fst.comp (Computable.fst.comp Computable.fst)
+  have hn : Computable (fun p : DomainInput × WordItem => p.1.1.2) :=
+    Computable.snd.comp (Computable.fst.comp Computable.fst)
+  have hname : Computable (fun p : DomainInput × WordItem => p.2.2.1) :=
+    Computable.fst.comp (Computable.snd.comp Computable.snd)
+  have hw : Computable (fun p : DomainInput × WordItem => p.2.2.2) :=
+    Computable.snd.comp (Computable.snd.comp Computable.snd)
+  have hd : Computable (fun p : DomainInput × WordItem => wordDomain p.2.2.2 p.1.1.2) :=
+    wordPrograms.2.comp (hw.pair hn)
+  have heq : Computable (fun p : DomainInput × WordItem => decide (p.2.2.1 = p.1.1.1)) :=
+    Primrec.eq.decide.to_comp.comp hname hx
+  have hp : Computable (fun p : DomainInput × WordItem =>
+      if p.2.2.1 = p.1.1.1 then wordDomain p.2.2.2 p.1.1.2 else true) :=
+    computableIf heq hd (Computable.const true)
+  have hentries : Computable (fun p : DomainInput =>
+      (WordLinearDecisionCompletion.Code.decodeAtom p.2).2.2.2) :=
+    Computable.snd.comp (Computable.snd.comp (Computable.snd.comp
+      (WordLinearDecisionCompletion.Proof.decodeAtom_primitive.to_comp.comp Computable.snd)))
+  exact computableListAll
+    (p := fun (p : DomainInput) (b : WordItem) =>
+      if b.2.1 = p.1.1 then wordDomain b.2.2 p.1.2 else true) hentries hp.to₂
+
+theorem removedDomainsComputable :
+    Computable (fun p : Nat × Nat × Nat => Code.removedDomains p.1 p.2.1 p.2.2) := by
+  let A := Nat × Nat × Nat
+  have hx : Computable (fun p : A × Nat => p.1.1) := Computable.fst.comp Computable.fst
+  have hn : Computable (fun p : A × Nat => p.1.2.1) :=
+    Computable.fst.comp (Computable.snd.comp Computable.fst)
+  have hcheck : Computable (fun p : A × Nat =>
+      (WordLinearDecisionCompletion.Code.decodeAtom p.2).2.2.2.all
+        (fun b => if b.2.1 = p.1.1 then wordDomain b.2.2 p.1.2.1 else true)) :=
+    atomDomainsComputable.comp ((hx.pair hn).pair Computable.snd)
+  have hatoms : Computable (fun p : A => LinearRows.Code.atoms p.2.2) :=
+    LinearRowsCodeProof.atoms_primitive.to_comp.comp (Computable.snd.comp Computable.snd)
+  exact (computableListAll
+    (p := fun (p : A) (a : Nat) =>
+      (WordLinearDecisionCompletion.Code.decodeAtom a).2.2.2.all
+        (fun b => if b.2.1 = p.1 then wordDomain b.2.2 p.2.1 else true))
+    hatoms hcheck.to₂).of_eq (fun p => by unfold Code.removedDomains; rfl)
+
+theorem numericPrograms : Targets.NumericPrograms :=
+  ⟨specializeRowComputable, specializeCodeComputable, removedDomainsComputable⟩
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof.Numeric

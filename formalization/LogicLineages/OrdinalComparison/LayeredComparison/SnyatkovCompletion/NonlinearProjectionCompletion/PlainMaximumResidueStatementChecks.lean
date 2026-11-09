@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumResidueProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumResidueStatementChecks
+theorem actualOriginalTail : PlainMaximumResidueTargets.ActualOriginalTailCalibration :=
+  PlainMaximumResidueProof.actualOriginalTailCalibration
+theorem literalRemaining : PlainMaximumResidueTargets.LiteralRemainingOccurrences :=
+  PlainMaximumResidueProof.literalRemainingOccurrences
+theorem eliminandLinearity : PlainMaximumResidueTargets.ExactEliminandLinearity :=
+  PlainMaximumResidueProof.exactEliminandLinearity
+theorem blockParameters : PlainMaximumResidueTargets.WholeBlockParameterPreservation :=
+  PlainMaximumResidueProof.wholeBlockParameterPreservation
+theorem originalSupport : PlainMaximumResidueTargets.OriginalNameSupport :=
+  PlainMaximumResidueProof.originalNameSupport
+#print axioms actualOriginalTail
+#print axioms literalRemaining
+#print axioms eliminandLinearity
+#print axioms blockParameters
+#print axioms originalSupport
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumResidueStatementChecks

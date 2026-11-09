@@ -1,0 +1,51 @@
+{
+  "utc": "2026-11-09T05:15:39.914466+00:00",
+  "status": "resource safety stop fully reaped; no gate acceptance",
+  "receipt": "build-reports/1794201116567249012-2.json",
+  "receipt_sha256": "51b3ff74cd146a8c0b559bba63b24f1fc7b99efc803be3cf24daa0bffa0717f1",
+  "native_row": {
+    "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationProof",
+    "returncode": 77,
+    "seconds": 17.777,
+    "observed_cpu_seconds": 17.65,
+    "last_wait_channel": "futex_do_wait",
+    "stopped_threads": [
+      {
+        "tid": 12,
+        "state": "S",
+        "cpu_seconds": 0.06,
+        "wait_channel": "futex_do_wait"
+      },
+      {
+        "tid": 13,
+        "state": "S",
+        "cpu_seconds": 0.0,
+        "wait_channel": "do_epoll_wait"
+      },
+      {
+        "tid": 14,
+        "state": "R",
+        "cpu_seconds": 17.58,
+        "wait_channel": "0"
+      }
+    ],
+    "peak_process_tree_rss_kib": 1573056,
+    "memory_observation_failure": {
+      "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t12\nNgid:\t0\nPid:\t12\nPPid:\t2\nTracerPid:\t0\nUid:\t1002\t1002\t1002\t1002\nGid:\t1003\t1003\t1003\t1003\nFDSize:\t64\nGroups:\t1003 65534 \nNStgid:\t12\nNSpid:\t12\nNSpgid:\t12\nNSsid:\t12\nKthread:\t0\nVmPeak:\t 5380180 kB\nVmSize:\t 5355596 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1573068 kB\nVmRSS:\t 1573068 kB\nRssAnon:\t  656488 kB\nRssFile:\t  916580 kB\nRssShmem:\t       0 kB\nVmData:\t 5080184 kB\nVmStk:\t     136 kB\nVmExe:\t       4 kB\nVmLib:\t  102176 kB\nVmPTE:\t   48476 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/55410\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tf\nCpus_allowed_list:\t0-3\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t230\nnonvoluntary_ctxt_switches:\t5\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n",
+      "statm": "1338899 393267 229145 1 0 1270080 0\n"
+    },
+    "discarded_failed_outputs": [],
+    "source_sha256": "3a3fb14a2f41aa00f82e8ab8bd070d32e35f5b53c45670527033401464198452",
+    "log": "build-reports/1794201116567249012-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-SpineApplicationProof.log"
+  },
+  "preserved_failed_source": "failed-candidates/1794201116567249012-2-SpineApplicationProof.lean.txt",
+  "repair": "Partition UNACCEPTED aggregate declarations into opaque syntax,builder,argument modules. SAME namespace/theorem names, exact original proof bodies preserved byte-for-byte; final aggregate keeps actual targets.",
+  "new_modules": [
+    "SpineApplicationSyntaxProof",
+    "SpineApplicationBuilderProof",
+    "SpineApplicationArgumentProof"
+  ],
+  "source_limits_unchanged": true,
+  "frozen_endpoints_unchanged": true,
+  "passed_lower_files_untouched": true
+}

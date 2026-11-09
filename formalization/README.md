@@ -1,3 +1,38 @@
+# Current checkpoint — user wind-down, 9 November 2026
+
+All six lanes and compiler coordination are stopped. The local compiler
+policy is paused; [the final handoff](verification/local-six-codex-2026-11-08/ROOT-FINAL-HANDOFF.md)
+records results, preserved drafts and deferred requests.
+
+**170 checked / 2 inherited / 17 pending of 189.** The exact source finite
+iteration corollary and whole ranked-cancellation lemma are newly checked.
+All six lanes must finish only their bounded current rounds, preserve work and
+stop; resumption needs explicit user instruction. Main commits the stopped
+checkpoint to the cumulative branch locally, without a push.
+Read [the wind-down control](WIND-DOWN-2026-11-09.md) and
+[acceptance/handoff status](verification/local-six-codex-2026-11-08/STATUS.md).
+Unfinished sources remain outside accepted imports and explicitly pending;
+other sealed supporting packets retain their separate review status. The
+focused exact source gates passed with standard axioms. No full-root or CI
+build is claimed.
+
+# Previous continuation — six Codex lanes, 8 November 2026
+
+The user requested six long-running Codex-only subagents after fetching the
+newest unmerged work, with strategic allocation around theorem dependencies.
+Read [the current release and ownership](RESUME-2026-11-08-SIX-CODEX.md).
+Starting point: `9cbe6c5a`, 168 checked / 2 inherited / 19 pending of 189.
+Current checkpoint: **169 checked / 2 inherited / 18 pending of 189**.
+The exact displayed-source finite-iteration corollary is now checked by a
+direct original-KT proof, independently of collapse/HB/selector. Three other
+supporting components prove seven word-row/rank aliases and original forward
+SAME-Gamma transport. All exact standard-axiom gates and three focused
+aggregates passed. Read [the current acceptance status](verification/local-six-codex-2026-11-08/STATUS.md).
+All six Codex agents continue; existing L4 executes the unchanged single
+bounded compiler queue. The prior accepted mathematics includes
+[uniform certificate transport](verification/cumulative-continuation-2026-11-08/uniform-certificate-transport/STATUS.md).
+Older checkpoint descriptions below retain their historical scope.
+
 # CURRENT checkpoint — internal bounded beta coding, 6 November 2026
 
 The original internal calculus now proves bounded collection and full bounded beta coding for every arbitrary relation and object-language bound. One shared code pair precedes all bounded indices and dependent relation witnesses. The original free parameters and literal `OrdinaryArithmetic.betaFormula` are preserved; witness bounds, suitable moduli, coprimality and CRT codes are obtained internally.

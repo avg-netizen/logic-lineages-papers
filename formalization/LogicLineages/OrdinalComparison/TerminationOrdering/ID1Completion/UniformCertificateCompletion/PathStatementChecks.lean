@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.PathProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.PathStatementChecks
+theorem positiveApplicationPath_exact : PathTargets.ActualOriginalUniformPositiveApplicationPathLift :=
+  PathProof.actualOriginalUniformPositiveApplicationPathLift
+#print axioms positiveApplicationPath_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.PathStatementChecks

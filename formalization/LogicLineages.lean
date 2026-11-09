@@ -2279,3 +2279,15 @@ public import LogicLineages.ExternalCheckpoint20261108UniformCanonicalFold
 
 -- Original application typing and step selection with symbolic-parameter certificate transport.
 public import LogicLineages.ExternalCheckpoint20261108UniformCertificateTransport
+
+-- Six-Codex continuation: exact original word-row expansion and actual residual ranks.
+public import LogicLineages.LocalCheckpoint20261108SixCodex
+
+-- Original forward SAME-Gamma arithmetic transport in the six-Codex source core.
+public import LogicLineages.LocalCheckpoint20261108ForwardGuard
+
+-- Entire printed finite-iteration corollary at the exact displayed source theta.
+public import LogicLineages.LocalCheckpoint20261108LiteralFinite
+
+-- Entire printed ranked-cancellation lemma: actual total finite-family compiler.
+public import LogicLineages.LocalCheckpoint20261109RankedRow

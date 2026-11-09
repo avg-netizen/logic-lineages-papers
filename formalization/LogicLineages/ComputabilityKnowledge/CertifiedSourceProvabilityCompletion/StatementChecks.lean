@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.FiniteIterationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.StatementChecks
+
+theorem atomicContradictionTruth : Targets.AtomicContradictionTruth := Proof.atomicContradictionTruth
+theorem directTheta : Targets.DirectTheta := Proof.directTheta
+theorem finiteIteration : Targets.FiniteIteration := Proof.finiteIteration
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.StatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.StatementChecks.atomicContradictionTruth
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.StatementChecks.directTheta
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.StatementChecks.finiteIteration
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion

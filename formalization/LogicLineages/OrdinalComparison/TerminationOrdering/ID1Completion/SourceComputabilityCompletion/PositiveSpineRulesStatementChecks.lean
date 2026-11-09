@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.PositiveSpineRulesProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.PositiveSpineRulesStatementChecks
+
+theorem guardEquation_exact : PositiveSpineRulesTargets.ActualPositiveGuardEquation :=
+  PositiveSpineRulesProof.actualPositiveGuardEquation
+
+theorem nonBottom_exact : PositiveSpineRulesTargets.ActualPositiveGuardNonBottom :=
+  PositiveSpineRulesProof.actualPositiveGuardNonBottom
+
+#print axioms guardEquation_exact
+#print axioms nonBottom_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.PositiveSpineRulesStatementChecks

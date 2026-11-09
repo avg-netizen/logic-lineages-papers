@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InstalledProducerProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InstalledProducer.StatementChecks
+
+theorem sameRegistryProducer : Targets.SameRegistryProducer := Proof.sameRegistryProducer
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InstalledProducer.StatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InstalledProducer.StatementChecks.sameRegistryProducer
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InstalledProducer

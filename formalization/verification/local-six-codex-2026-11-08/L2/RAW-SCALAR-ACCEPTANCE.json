@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-11-09T01:52:15.519619+00:00",
+  "status": "two exact supporting gates passed; pending MAIN adoption",
+  "scope": "Raw scalar checker calibration for EVERY raw value at each original literal parameterCode(window,Gamma), same global Data before all windows; independently actual internal typed-to-scalar for arbitrary symbolic parameter. No symbolic calibration reflection.",
+  "frozen_specification": "RAW-SCALAR-FROZEN.json",
+  "files": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/RawScalarDefinitions.lean",
+      "sha256": "9b4d71c56e2e93e9707f30ed8eb4fca0a53c2b676b38e885ad22f9655f5fce5a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/RawScalarTargets.lean",
+      "sha256": "64c06c99c7d0af65d7c8a2ff4eb26a0ab43965aa89ab01f81c989f7d023bb443"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/RawScalarInternalProof.lean",
+      "sha256": "9e0f7a4dd63bc08aed7e74c2e32daa4d799d74ffbb9e1d09c2330e568dae6624"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/RawScalarEvaluationProof.lean",
+      "sha256": "d87cce46e71ca97739b737abbbf7887a842071c7514207bf3ef9c1782869b112"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/RawScalarStatementChecks.lean",
+      "sha256": "20832618c2c6c576c9759d0c2da29d597e8b44077343df43816d7c210f14053e"
+    }
+  ],
+  "exact_checks": [
+    {
+      "exact_alias": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarStatementChecks.rawScalarCalibration_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "exact_alias": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarStatementChecks.typedScalar_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "exact_types": {
+    "rawScalarCalibration_exact": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarTargets.ActualOriginalRawScalarCalibration",
+    "typedScalar_exact": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarTargets.ActualParameterizedTypedScalar"
+  },
+  "receipt": "build-reports/1794189078507165679-2.json",
+  "receipt_sha256": "5dd68a32b877e076e0152b4356fb4473c4e04f6049cadf46fc9389429d155502",
+  "native_rows": [
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarEvaluationProof",
+      "returncode": 0,
+      "seconds": 1.682,
+      "observed_cpu_seconds": 1.6,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1032888,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "d87cce46e71ca97739b737abbbf7887a842071c7514207bf3ef9c1782869b112",
+      "log": "build-reports/1794189078507165679-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-RawScalarEvaluationProof.log"
+    },
+    {
+      "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarStatementChecks",
+      "returncode": 0,
+      "seconds": 1.326,
+      "observed_cpu_seconds": 1.26,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1029448,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "20832618c2c6c576c9759d0c2da29d597e8b44077343df43816d7c210f14053e",
+      "log": "build-reports/1794189078507165679-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-RawScalarStatementChecks.log"
+    }
+  ],
+  "internal_proof_native_receipt": "build-reports/1794187224522209963-2.json",
+  "internal_proof_native_row": {
+    "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarInternalProof",
+    "returncode": 0,
+    "seconds": 1.581,
+    "observed_cpu_seconds": 1.45,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 1014896,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "9e0f7a4dd63bc08aed7e74c2e32daa4d799d74ffbb9e1d09c2330e568dae6624",
+    "log": "build-reports/1794187224522209963-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-RawScalarInternalProof.log"
+  },
+  "actual_axiom_log": "RAW-SCALAR-EXACT-CHECK.log",
+  "closure_pins": "RAW-SCALAR-CLOSURE-PINS.json",
+  "local_closure_modules": 1249,
+  "fully_reaped": true,
+  "frozen_target_bytes_unchanged": true,
+  "successful_native_source_hashes_match": true,
+  "source_files_now_immutable": true,
+  "remaining": "Arbitrary decoded/noncanonical raw Context parameter scalar calibration and original outer dispatch still need assembly. Chosen-source DomainCarrier/DomainForward, bottom/I/C-to-I, neutral/multiset/constructor/lambda/all-term source endpoint remain unpaid."
+}

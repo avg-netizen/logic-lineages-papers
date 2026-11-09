@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmSyntaxProof
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmSemanticsProof
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+
+theorem exactFiniteRankedStage : AlgorithmTargets.ExactFiniteRankedStage :=
+  ⟨intrinsicStageSyntaxAndDecrease,exactStageSemantics,AlgorithmPrograms.actualStageProgram⟩
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

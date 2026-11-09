@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationStatementChecks
+
+theorem guardedLift_exact : GuardedPositiveApplicationTargets.ActualGuardedPositiveApplicationLift :=
+  GuardedPositiveApplicationProof.actualGuardedPositiveApplicationLift
+
+#print axioms guardedLift_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationStatementChecks

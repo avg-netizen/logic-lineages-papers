@@ -1,0 +1,86 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.NamedGuardProof
+public import LogicLineages.OrdinalComparison.WordGuardCompletion.WordProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardProof
+open PolynomialGraphCompletion WordLinearDecisionCompletion FullWordGuardCompletion
+open LogicLineages.ModelsAlgebra.Forests
+
+theorem namedMaximumComparison : GuardTargets.NamedMaximumComparison := by
+  intro D maximum u v desired hD hu hv hdesired ν htu htv humax hvmax
+  rcases u with ⟨i,A⟩
+  rcases v with ⟨j,B⟩
+  by_cases hi : i = maximum
+  · subst i
+    by_cases hj : j = maximum
+    · subst j
+      have hx : pairCutoff D (maximum,A) (maximum,B) ≤ ν maximum := by
+        simpa [comparisonCutoff] using htu
+      have ht : packageTail (FullWordGuardCompletion.compile D (A,B)) ≤ ν maximum :=
+        (Nat.le_max_left _ _).trans hx
+      have had := (RunnerProof.admissionCorrect D (A,B)).mpr ⟨hu,hv⟩
+      have hdomains := FullWordGuardCompletion.Proof.compiledDomains D (A,B) hD had
+        (ν maximum) (ν maximum) ht ht
+      have hs : SafeFormula D maximum ν
+          (comparisonGuard D maximum (maximum,A) (maximum,B) desired) := by
+        intro t hm
+        by_cases he : packageSame (FullWordGuardCompletion.compile D (A,B)) = desired <;>
+          simp [comparisonGuard,he,Formula.tokens,CotreePresburgerUnit.Boolean.atoms] at hm
+      have hf := safeFormula_facts D maximum ν _ hs
+      refine ⟨hdomains.1,hdomains.2.1,hf.1,hf.2.1,hf.2.2,?_⟩
+      have hsame := FullWordGuardCompletion.Proof.compiledSameVariable D (A,B) hD had
+        (ν maximum) ht
+      rw [hsame]
+      by_cases he : packageSame (FullWordGuardCompletion.compile D (A,B)) = desired <;>
+        simp [comparisonGuard,he,Formula.eval]
+    · have hx : pairCutoff D (maximum,A) (j,B) ≤ ν maximum := by
+        simpa [comparisonCutoff] using htu
+      have hy : pairCutoff D (maximum,A) (j,B) ≤ ν j := by
+        simpa [comparisonCutoff] using htv
+      have hc := namedOrderedComparison D maximum j desired A B ν hD hu hv hj
+        hdesired hx hy hvmax
+      have hf := safeFormula_facts D maximum ν _ hc.2.2.1
+      simpa [comparisonGuard,hj] using
+        And.intro hc.1 (And.intro hc.2.1
+          (And.intro hf.1 (And.intro hf.2.1 (And.intro hf.2.2 hc.2.2.2))))
+  · by_cases hj : j = maximum
+    · subst j
+      have hx : pairCutoff D (maximum,B) (i,A) ≤ ν maximum := by
+        simpa [comparisonCutoff,hi] using htv
+      have hy : pairCutoff D (maximum,B) (i,A) ≤ ν i := by
+        simpa [comparisonCutoff,hi] using htu
+      have hrev : reverseOrder desired ≤ 2 := by
+        unfold reverseOrder
+        split_ifs <;> omega
+      have hc := namedOrderedComparison D maximum i (reverseOrder desired) B A ν
+        hD hv hu hi hrev hx hy humax
+      have hf := safeFormula_facts D maximum ν _ hc.2.2.1
+      have heval := hc.2.2.2.trans
+        (reverse_order (wordValue A (ν i)) (wordValue B (ν maximum)) desired hdesired)
+      simpa [comparisonGuard,hi] using
+        And.intro hc.2.1 (And.intro hc.1
+          (And.intro hf.1 (And.intro hf.2.1 (And.intro hf.2.2 heval))))
+    · have htA : WordGuardCompletion.wordTail A ≤ ν i :=
+        (Nat.le_max_left _ _).trans (by simpa [comparisonCutoff,hi,hj] using htu)
+      have htB : WordGuardCompletion.wordTail B ≤ ν j :=
+        (Nat.le_max_right _ _).trans (by simpa [comparisonCutoff,hi,hj] using htv)
+      have hdA := (WordGuardCompletion.Proof.wordTailCorrect D A (ν i) hu htA).1
+      have hdB := (WordGuardCompletion.Proof.wordTailCorrect D B (ν j) hv htB).1
+      have hr : ∀ a ∈ (literalDifference (i,A) (j,B)).2, SafeToken D maximum ν a.2 := by
+        intro a ha
+        simp only [literalDifference,List.mem_cons,List.not_mem_nil,or_false] at ha
+        rcases ha with rfl | rfl
+        · exact ⟨hu,hdA,fun h => False.elim (hi h)⟩
+        · exact ⟨hv,hdB,fun h => False.elim (hj h)⟩
+      have hs := signFormula_safe D maximum ν desired (literalDifference (i,A) (j,B)) hr
+      have hf := safeFormula_facts D maximum ν _ hs
+      refine ⟨hdA,hdB,?_,?_,?_,?_⟩
+      · simpa [comparisonGuard,hi,hj] using hf.1
+      · simpa [comparisonGuard,hi,hj] using hf.2.1
+      · simpa [comparisonGuard,hi,hj] using hf.2.2
+      · simp only [comparisonGuard,if_neg hi,if_neg hj]
+        rw [signFormula_correct,literalDifference_value]
+        exact difference_order _ _ _ hdesired
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardProof

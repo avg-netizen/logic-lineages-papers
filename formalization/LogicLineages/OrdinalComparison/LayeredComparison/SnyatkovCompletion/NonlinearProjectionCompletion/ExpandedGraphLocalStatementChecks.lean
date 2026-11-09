@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphLocalProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphLocalStatementChecks
+theorem actualLiteralSubtraction : ExpandedGraphTargets.LiteralSubtraction := ExpandedGraphProof.literalSubtraction
+theorem actualLiteralDivision : ExpandedGraphTargets.LiteralDivision := ExpandedGraphProof.literalDivision
+theorem actualLiteralInverse : ExpandedGraphTargets.LiteralInverse := ExpandedGraphProof.literalInverse
+#print axioms actualLiteralSubtraction
+#print axioms actualLiteralDivision
+#print axioms actualLiteralInverse
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphLocalStatementChecks

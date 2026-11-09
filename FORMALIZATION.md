@@ -1,3 +1,53 @@
+# Current checkpoint — user wind-down, 9 November 2026
+
+All six lanes and compiler coordination have stopped. The queue is empty and
+the local compiler policy is paused until explicit user resumption.
+
+Register: **170 checked, 2 inherited, 17 pending / 189**. This continuation
+closes paper12 `cor:finite` at the exact displayed source sentence and paper08
+`lem:row` with an actual total computable ranked-cancellation compiler for
+arbitrary finite admitted row families. Both exact source gates passed with
+standard axioms; main independently matched all 272 and 526 respective local
+source/native pins. Closed existential word decision, first-order BASE and
+remaining ID1/knowledge statements stay pending.
+
+The user requested all six lanes finish their finite current rounds and stop,
+then a local commit to `formalization/cumulative-continuation-2026-11-08`.
+No successors or automatic resume. Additional passed supporting packets and
+unfinished drafts are preserved with individual acceptance records; they are
+not blanket whole-source claims. Read the
+[wind-down instruction](formalization/WIND-DOWN-2026-11-09.md) and
+[final acceptance/handoff status](formalization/verification/local-six-codex-2026-11-08/STATUS.md).
+No full-root or remote-CI build is claimed. No push is requested.
+
+# Previous checkpoint — six Codex lanes and literal finite iteration, 8 November 2026
+
+The latest unmerged continuation was fetched at `9cbe6c5a`; all 59 prior local
+draft/control files were preserved before starting the local six-Codex branch.
+The six continuing roles were reassigned around shared theorem dependencies:
+two source-accessibility lanes, two word-decision lanes, BASE nonlinear
+projection, and actual source KT/provability.
+
+Paper12 `cor:finite` is now checked at the exact displayed source sentence.
+Its proof uses original KT veracity, atomic truth, nonempty agents and external
+finite theorem-rule iteration, independently of the unfinished collapse/HB/
+selector chain. An explicit ordinary bridge preserves the distinction between
+the top-selector sentence and the printed sentence's different code.
+
+The numbered register is **169 checked, 2 inherited, 18 pending / 189**.
+Three supporting components also add seven original word-row/residual-rank
+aliases and concrete forward SAME-Gamma transport. All exact frozen-type and
+actual standard-axiom gates passed, as did the three focused source-matched
+aggregates. No full-root/remote-CI build is claimed. Source adoption and
+integration remain with main; existing L4 handles the unchanged one-compiler
+queue while all six authors continue.
+
+Read [the allocation](formalization/RESUME-2026-11-08-SIX-CODEX.md) and
+[current acceptance evidence](formalization/verification/local-six-codex-2026-11-08/STATUS.md).
+Earlier checkpoint descriptions below retain their historical scope.
+
+---
+
 # Current checkpoint — uniform certificate transport, 8 November 2026
 
 The same globally calibrated canonical package now supports internal

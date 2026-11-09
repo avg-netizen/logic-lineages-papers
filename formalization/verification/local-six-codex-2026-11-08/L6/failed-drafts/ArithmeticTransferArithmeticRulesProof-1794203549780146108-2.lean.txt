@@ -1,0 +1,71 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransferConnectivesProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.ArithmeticRules
+open GorbowSyntax GorbowTheoryProof Hilbert
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open Syntax Connectives
+
+/-- Every arithmetic axiom, including full parameter-preserving induction,
+compiles to the ORIGINAL PA(L) Hilbert rules over arbitrary extra theory T. -/
+noncomputable def arithmetic {T : Sentence → Prop} {alpha : Type} {m : Nat}
+    (w : ID1Completion.InternalCalculus.ArithmeticInstance alpha) (rho : alpha → Term m) :
+    Derivation T (translate (ID1Completion.InternalCalculus.arithmeticFormula w) rho) := by
+  cases w with
+  | successorNotZero t =>
+      have he := translateArithmeticEquality
+        (OrdinaryArithmetic.succTerm t) OrdinaryArithmetic.zeroTerm rho
+      change Derivation T (.imp _ falsity)
+      rw [he]
+      have h := Derivation.arithmetic (A := T) (.succNotZero
+        (translateTerm rho (PositiveArithmeticOperators.arithmeticEmbedding.onTerm t)))
+      exact .mp (Logic.negToFalse _) h
+  | successorInjective t u =>
+      change Derivation T (.imp _ _)
+      rw [translateArithmeticEquality,translateArithmeticEquality]
+      exact .arithmetic (.succInjective _ _)
+  | additionZero t =>
+      rw [ID1Completion.InternalCalculus.arithmeticFormula,translateArithmeticEquality]
+      exact .arithmetic (.addZero _)
+  | additionSuccessor t u =>
+      rw [ID1Completion.InternalCalculus.arithmeticFormula,translateArithmeticEquality]
+      exact .arithmetic (.addSucc _ _)
+  | multiplicationZero t =>
+      rw [ID1Completion.InternalCalculus.arithmeticFormula,translateArithmeticEquality]
+      exact .arithmetic (.mulZero _)
+  | multiplicationSuccessor t u =>
+      rw [ID1Completion.InternalCalculus.arithmeticFormula,translateArithmeticEquality]
+      exact .arithmetic (.mulSucc _ _)
+  | induction a =>
+      let base := ID1Completion.InternalCalculus.instantiate a
+        (PositiveArithmeticOperators.arithmeticEmbedding.onTerm OrdinaryArithmetic.zeroTerm)
+      let step := SourceComputabilityFormulaSupportProof.allOne
+        (a.imp (ID1Completion.InternalCalculus.successorInstance a))
+      have hb : translate base rho =
+          GorbowStandardInstances.instantiate (translate a (liftMap rho)) .zero :=
+        translateInstantiate a
+          (PositiveArithmeticOperators.arithmeticEmbedding.onTerm OrdinaryArithmetic.zeroTerm) rho
+      have hs : translate step rho = Formula.all (.imp (translate a (liftMap rho))
+          (GorbowStandardInduction.successorInstance (translate a (liftMap rho)))) := by
+        rw [translateAllOne]
+        change Formula.all (.imp _ (translate
+          (ID1Completion.InternalCalculus.successorInstance a) (liftMap rho))) = _
+        rw [translateSuccessorInstance]
+      have hg : translate (SourceComputabilityFormulaSupportProof.allOne a) rho =
+          Formula.all (translate a (liftMap rho)) := translateAllOne a rho
+      change Derivation T (.imp (translate (base ⊓ step) rho)
+        (translate (SourceComputabilityFormulaSupportProof.allOne a) rho))
+      rw [translateConjunction,hg]
+      apply Logic.dischargeAll
+      have hpair : Local T m [Logic.pair (translate base rho) (translate step rho)]
+          (Logic.pair (translate base rho) (translate step rho)) :=
+        .hypothesis List.mem_cons_self
+      have hbase := Logic.pairLeft hpair
+      have hstep := Logic.pairRight hpair
+      rw [hb] at hbase
+      rw [hs] at hstep
+      exact .mp (.mp (.base (.arithmetic (.induction (translate a (liftMap rho))))) hbase) hstep
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.ArithmeticRules

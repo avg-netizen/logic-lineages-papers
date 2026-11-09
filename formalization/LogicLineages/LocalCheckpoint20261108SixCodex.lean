@@ -1,0 +1,4 @@
+module
+
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RowStatementChecks
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RankStatementChecks

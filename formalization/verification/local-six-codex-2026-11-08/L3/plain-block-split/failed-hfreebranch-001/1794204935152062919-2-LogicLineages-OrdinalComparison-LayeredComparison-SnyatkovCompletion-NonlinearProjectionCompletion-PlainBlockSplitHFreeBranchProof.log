@@ -1,0 +1,31 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitHFreeBranchProof.lean:68:2: error: Tactic `apply` failed: could not unify the conclusion of `hfree_row_of_parts r h.left h.right.left`
+  rowHFree r = true
+with the goal
+  rowHFree (renameRow i j r) = true
+
+Note: The full type of `hfree_row_of_parts r h.left h.right.left` is
+  (∀ a ∈ r.2, summandHFree a.2 = true) → rowHFree r = true
+
+r : Row
+i j : ℕ
+hr : rowHFree r = true
+h : termHFree r.1.1 = true ∧ termHFree r.1.2 = true ∧ ∀ a ∈ r.2, summandHFree a.2 = true
+⊢ rowHFree (renameRow i j r) = true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitHFreeBranchProof.lean:98:2: error: Tactic `apply` failed: could not unify the conclusion of `hfree_row_of_parts r h.left h.right.left`
+  rowHFree r = true
+with the goal
+  rowHFree (PlainMaximum.dropHead i r) = true
+
+Note: The full type of `hfree_row_of_parts r h.left h.right.left` is
+  (∀ a ∈ r.2, summandHFree a.2 = true) → rowHFree r = true
+
+i : ℕ
+r : Row
+hr : rowHFree r = true
+h : termHFree r.1.1 = true ∧ termHFree r.1.2 = true ∧ ∀ a ∈ r.2, summandHFree a.2 = true
+⊢ rowHFree (PlainMaximum.dropHead i r) = true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitHFreeBranchProof.lean:228:4: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

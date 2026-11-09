@@ -1,0 +1,114 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/TiedLinearSemanticProof.lean:66:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Function.update (parameterValuation table x ν) 0 n (tokenName table x (Token.occurrence a.2))
+in the target expression
+  a.1 * ↑(σ (tokenName table x (Token.occurrence a.2))) = a.1 * ↑(Term.value (Function.update ν x n) a.2.term)
+
+table : List Token
+x : ℕ
+r : Row
+ν : ℕ → ℕ
+n : ℕ
+hs :
+  ∀ t ∈ rowTokens r,
+    Function.update (parameterValuation table x ν) 0 n (tokenName table x t) = Token.value (Function.update ν x n) t
+σ : ℕ → ℕ := Function.update (parameterValuation table x ν) 0 n
+hP : σ (tokenName table x (Token.parameter r.1.1)) = Term.value (Function.update ν x n) r.1.1
+hN : σ (tokenName table x (Token.parameter r.1.2)) = Term.value (Function.update ν x n) r.1.2
+a : ℤ × NormalForm.Summand
+ha : a ∈ r.2
+ht :
+  Function.update (parameterValuation table x ν) 0 n (tokenName table x (Token.occurrence a.2)) =
+    Token.value (Function.update ν x n) (Token.occurrence a.2)
+⊢ a.1 * ↑(σ (tokenName table x (Token.occurrence a.2))) = a.1 * ↑(Term.value (Function.update ν x n) a.2.term)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/TiedLinearSemanticProof.lean:87:6: warning: This simp argument is unused:
+  List.contains_append
+
+Hint: Omit it from the simp argument list.
+  simp [PlainMaximum.linearIn, Formula.parameters, PlainMaximum.occurrences, L̵i̵s̵t̵.̵c̵o̵n̵t̵a̵i̵n̵s̵_̵a̵p̵p̵e̵n̵d̵,̵ ̵List.all_append, hP,
+  ̲  ̲ ̲ ̲ ̲ ̲hN, hA, hB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/TiedLinearSemanticProof.lean:87:45: warning: This simp argument is unused:
+  hP
+
+Hint: Omit it from the simp argument list.
+  simp [PlainMaximum.linearIn, Formula.parameters, PlainMaximum.occurrences,
+  ̵  ̵ ̵ ̵ ̵ ̵List.contains_append,
+  ̲  ̲ ̲ ̲ ̲ ̲List.all_append, hP̵,̵ ̵h̵N, hA, hB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/TiedLinearSemanticProof.lean:87:49: warning: This simp argument is unused:
+  hN
+
+Hint: Omit it from the simp argument list.
+  simp [PlainMaximum.linearIn, Formula.parameters, PlainMaximum.occurrences,
+  ̵  ̵ ̵ ̵ ̵ ̵List.contains_append,
+  ̲  ̲ ̲ ̲ ̲ ̲List.all_append, hP, hN̵,̵ ̵h̵A, hB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/TiedLinearSemanticProof.lean:146:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c - f + h - i ≥ 1
+  b ≥ 0
+  b - c + d - e + f ≥ 0
+where
+ b := ↑(Term.value ν (lowerEntries table x positive negative entries).1.2)
+ c := (List.map (fun a => a.1 * ↑(Term.value ν a.2.term)) (lowerEntries table x positive negative entries).2).sum
+ d := ↑(Term.value ν positive)
+ e := ↑(Term.value ν negative)
+ f := (List.map (fun a => a.1 * ↑(Term.value (parameterValuation table x ν) a.2.term)) entries).sum
+ g := ↑(Term.value ν t)
+ h := (List.map
+    (fun a =>
+      a.1 *
+        ↑(Term.value (parameterValuation table x ν)
+            (match a.2 with
+            | NormalForm.Summand.variable i => Term.variable i
+            | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+            | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))
+    entries).sum
+ i := (List.map
+    (fun a =>
+      a.1 *
+        ↑(Term.value ν
+            (match a.2 with
+            | NormalForm.Summand.variable i => Term.variable i
+            | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+            | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))
+    (lowerEntries table x positive negative entries).2).sum
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/TiedLinearSemanticProof.lean:153:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  e ≥ 0
+  d ≥ 0
+  c - f + h - i ≥ 1
+  b ≥ 0
+  b - c + d - e + f ≥ 0
+where
+ b := ↑(Term.value ν (lowerEntries table x positive negative entries).1.2)
+ c := (List.map (fun a => a.1 * ↑(Term.value ν a.2.term)) (lowerEntries table x positive negative entries).2).sum
+ d := ↑(Term.value ν positive)
+ e := ↑(Term.value ν negative)
+ f := (List.map (fun a => a.1 * ↑(Term.value (parameterValuation table x ν) a.2.term)) entries).sum
+ g := ↑(Term.value ν s.term)
+ h := (List.map
+    (fun a =>
+      a.1 *
+        ↑(Term.value (parameterValuation table x ν)
+            (match a.2 with
+            | NormalForm.Summand.variable i => Term.variable i
+            | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+            | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))
+    entries).sum
+ i := (List.map
+    (fun a =>
+      a.1 *
+        ↑(Term.value ν
+            (match a.2 with
+            | NormalForm.Summand.variable i => Term.variable i
+            | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+            | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))
+    (lowerEntries table x positive negative entries).2).sum

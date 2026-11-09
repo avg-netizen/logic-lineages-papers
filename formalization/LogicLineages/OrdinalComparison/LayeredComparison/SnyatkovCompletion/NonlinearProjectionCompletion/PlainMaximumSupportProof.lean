@@ -1,0 +1,155 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.WindowProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumProof
+open BlockRows PlainMaximum
+
+private theorem head_name (s : NormalForm.Summand) (i : Nat) (hs : isHead i s = true) :
+    s.name = i := by
+  cases s with
+  | «variable» j => simp [isHead] at hs
+  | phi j shift => simpa [isHead, NormalForm.Summand.name] using (Bool.and_eq_true_iff.mp hs).1
+  | hyperPhi j e h => simp [isHead] at hs
+
+private theorem no_head_sum (entries : List (Int × NormalForm.Summand)) (i : Nat)
+    (hi : i ∉ entries.map (fun a => a.2.name)) :
+    (entries.map (fun a => if isHead i a.2 then a.1 else 0)).sum = 0 := by
+  induction entries with
+  | nil => rfl
+  | cons a entries ih =>
+    have ht : i ∉ entries.map (fun a => a.2.name) := by
+      intro hm; exact hi (List.mem_cons_of_mem _ hm)
+    have hs : isHead i a.2 = false := by
+      apply Bool.eq_false_iff.mpr
+      intro hh
+      have hn := head_name a.2 i hh
+      apply hi
+      simp [hn]
+    simp [hs, ih ht]
+
+private theorem nonzero_head_support (r : Row) (i : Nat) (ha : headCoefficient i r ≠ 0) :
+    i ∈ r.2.map (fun a => a.2.name) := by
+  by_contra hi
+  exact ha (no_head_sum r.2 i hi)
+
+theorem boundary_support (r : Row) (i j : Nat) :
+    j ∈ (boundary i r).variables ↔ j ∈ r.parameters := by
+  simp only [boundary, absoluteConstant, DominantBoundary.center, Term.variables,
+    Row.parameters, List.mem_append, List.not_mem_nil, or_false]
+  tauto
+
+private theorem positive_parameter_support (r : Row) (i j : Nat) :
+    j ∈ (positiveGuard i r).parameters ↔ j ∈ r.parameters := by
+  simp only [positiveGuard, Formula.parameters, Atom.row, Row.parameters,
+    Term.variables, List.mem_append, List.not_mem_nil, false_or, or_false,
+    boundary_support]
+  tauto
+
+private theorem negative_parameter_support (r : Row) (i j : Nat) :
+    j ∈ (negativeGuard i r).parameters ↔ j ∈ r.parameters := by
+  simp only [negativeGuard, Formula.parameters, Atom.row, Row.parameters,
+    Term.variables, List.mem_append, List.not_mem_nil, false_or, or_false,
+    boundary_support]
+  tauto
+
+theorem wholeBlockParameterPreservation : PlainMaximumTargets.WholeBlockParameterPreservation := by
+  intro bound r i hparams j hj hnew
+  apply hparams j hj
+  by_cases ha : 0 < headCoefficient i r
+  · rw [linearizeNonnegative, if_pos ha] at hnew
+    exact (positive_parameter_support r i j).mp hnew
+  · by_cases hb : headCoefficient i r < 0
+    · rw [linearizeNonnegative, if_neg ha, if_pos hb] at hnew
+      exact (negative_parameter_support r i j).mp hnew
+    · rw [linearizeNonnegative, if_neg ha, if_neg hb] at hnew
+      exact hnew
+
+private theorem remaining_linear (bound : List Nat) (r : Row) (i : Nat)
+    (hallowed : allowed bound r = true) :
+    (remainingOccurrences i r).all (fun a => linearSummand i a.2) = true := by
+  apply List.all_eq_true.mpr
+  intro a ha
+  obtain ⟨ha, hh⟩ := List.mem_filter.mp ha
+  have hall := List.all_eq_true.mp hallowed a ha
+  have hn : isHead i a.2 = false := by simpa using hh
+  cases hs : a.2 with
+  | «variable» j => rfl
+  | phi j shift =>
+    have hallowedPhi : allowedSummand bound (.phi j shift) = true := by simpa only [hs] using hall
+    have hshift : shift = 0 := by
+      simpa only [allowedSummand, decide_eq_true_eq] using (Bool.and_eq_true_iff.mp hallowedPhi).2
+    subst shift
+    have hji : j ≠ i := by intro h; subst j; simp [hs, isHead] at hn
+    simpa [hs, linearSummand] using hji
+  | hyperPhi j e h => simp [hs, allowedSummand] at hall
+
+theorem exactEliminandLinearity : PlainMaximumTargets.ExactEliminandLinearity := by
+  intro bound r i hallowed hiparams
+  by_cases ha : 0 < headCoefficient i r
+  · rw [linearizeNonnegative, if_pos ha]
+    have hp : i ∉ (positiveGuard i r).parameters := by
+      simpa only [positive_parameter_support] using hiparams
+    have htest : (!(positiveGuard i r).parameters.contains i) = true := by simpa using hp
+    simp only [linearIn, htest, Bool.true_and]
+    simp [positiveGuard, occurrences, Atom.row, linearSummand]
+  · by_cases hb : headCoefficient i r < 0
+    · rw [linearizeNonnegative, if_neg ha, if_pos hb]
+      have hp : i ∉ (negativeGuard i r).parameters := by
+        simpa only [negative_parameter_support] using hiparams
+      have htest : (!(negativeGuard i r).parameters.contains i) = true := by simpa using hp
+      simp only [linearIn, htest, Bool.true_and]
+      simp [negativeGuard, occurrences, Atom.row, linearSummand]
+    · rw [linearizeNonnegative, if_neg ha, if_neg hb]
+      have hp : i ∉ (Formula.atom (.nonnegative (dropHead i r))).parameters := hiparams
+      have htest : (!(Formula.atom (.nonnegative (dropHead i r))).parameters.contains i) = true := by
+        simpa using hp
+      simp only [linearIn, htest, Bool.true_and]
+      exact remaining_linear bound r i hallowed
+
+private theorem positive_variable_support (r : Row) (i j : Nat) :
+    j ∈ (positiveGuard i r).variables → j ∈ r.parameters ∨ j = i := by
+  simp only [positiveGuard, Formula.variables, Atom.row, Row.variables,
+    Row.parameters, Term.variables, List.map_cons, List.map_nil, List.mem_append, List.mem_cons,
+    List.not_mem_nil, false_or, or_false, NormalForm.Summand.name, boundary_support]
+  tauto
+
+private theorem negative_variable_support (r : Row) (i j : Nat) :
+    j ∈ (negativeGuard i r).variables → j ∈ r.parameters ∨ j = i := by
+  simp only [negativeGuard, Formula.variables, Atom.row, Row.variables,
+    Row.parameters, Term.variables, List.map_cons, List.map_nil, List.mem_append, List.mem_cons,
+    List.not_mem_nil, false_or, or_false, NormalForm.Summand.name, boundary_support]
+  tauto
+
+private theorem parameter_in_variables (r : Row) (j : Nat) (hj : j ∈ r.parameters) :
+    j ∈ r.variables := by
+  simp only [Row.variables, Row.parameters, List.mem_append] at *
+  tauto
+
+theorem originalNameSupport : PlainMaximumTargets.OriginalNameSupport := by
+  intro r i j hj
+  by_cases ha : 0 < headCoefficient i r
+  · rw [linearizeNonnegative, if_pos ha] at hj
+    rcases positive_variable_support r i j hj with hp | hi
+    · exact parameter_in_variables r j hp
+    · subst j
+      simp only [Row.variables, List.mem_append]
+      exact Or.inr (nonzero_head_support r i (ne_of_gt ha))
+  · by_cases hb : headCoefficient i r < 0
+    · rw [linearizeNonnegative, if_neg ha, if_pos hb] at hj
+      rcases negative_variable_support r i j hj with hp | hi
+      · exact parameter_in_variables r j hp
+      · subst j
+        simp only [Row.variables, List.mem_append]
+        exact Or.inr (nonzero_head_support r i (ne_of_lt hb))
+    · rw [linearizeNonnegative, if_neg ha, if_neg hb] at hj
+      change j ∈ r.1.1.variables ++ r.1.2.variables ++
+        (remainingOccurrences i r).map (fun a => a.2.name) at hj
+      simp only [List.mem_append] at hj
+      rcases hj with hp | ho
+      · exact parameter_in_variables r j (List.mem_append.mpr hp)
+      · obtain ⟨a, ha, hname⟩ := List.mem_map.mp ho
+        simp only [Row.variables, List.mem_append]
+        exact Or.inr (List.mem_map.mpr ⟨a, (List.mem_filter.mp ha).1, hname⟩)
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumProof

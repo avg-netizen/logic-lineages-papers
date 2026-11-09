@@ -1,0 +1,49 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:12:3: error: unexpected token 'variable'; expected '_' or identifier
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:12:2: error: Missing alternative name: Expected `variable`, `phi`, or `hyperPhi`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:11:2: error: Alternative `variable` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:11:2: error: Alternative `phi` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:11:2: error: Alternative `hyperPhi` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:12:12: error: unexpected identifier; expected '(', '[', '{' or '⦃'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:30:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:32:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:55:6: error: linarith failed to find a contradiction
+case pos
+i U : ℕ
+ν : ℕ → ℕ
+a : ℤ × NormalForm.Summand
+entries : List (ℤ × NormalForm.Summand)
+ih :
+  (∀ a ∈ entries, isHead i a.2 = false → Term.value ν a.2.term ≤ U) →
+    (List.map (fun a => a.1 * ↑(Term.value ν a.2.term)) (List.filter (fun a => !isHead i a.2) entries)).sum.natAbs ≤
+      (List.map (fun a => a.1.natAbs) entries).sum * U
+hv : ∀ a_1 ∈ a :: entries, isHead i a_1.2 = false → Term.value ν a_1.2.term ≤ U
+hr :
+  (List.map (fun a => a.1 * ↑(Term.value ν a.2.term)) (List.filter (fun a => !isHead i a.2) entries)).sum.natAbs ≤
+    (List.map (fun a => a.1.natAbs) entries).sum * U
+hs : isHead i a.2 = true
+a✝ :
+  (a.1.natAbs + (List.map (fun a => a.1.natAbs) entries).sum) * U <
+    (List.map (fun a => a.1 * ↑(Term.value ν a.2.term)) (List.filter (fun a => !isHead i a.2) entries)).sum.natAbs
+⊢ False
+failed
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:76:5: error: unexpected token 'variable'; expected '_' or identifier
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:76:4: error: Missing alternative name: Expected `variable`, `phi`, or `hyperPhi`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:75:4: error: Alternative `variable` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:75:4: error: Alternative `phi` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:75:4: error: Alternative `hyperPhi` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:67:91: error: unsolved goals
+bound : List ℕ
+r : Row
+i : ℕ
+ν : ℕ → ℕ
+hallowed : allowed bound r = true
+hmax : UniqueMaximum bound i ν
+hcut : cutoff r ≤ ν i
+hall : ∀ a ∈ r.2, allowedSummand bound a.2 = true
+hv : ∀ a ∈ r.2, isHead i a.2 = false → Term.value ν a.2.term ≤ Phi (ν i - 1) + ν i
+⊢ 2 * (remainderValue i r ν).natAbs < Phi (ν i)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumArithmeticProof.lean:76:14: error: unexpected identifier; expected '(', '[', '{' or '⦃'

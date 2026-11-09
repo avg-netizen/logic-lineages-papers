@@ -1,0 +1,89 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmCanonicalProof
+public import LogicLineages.OrdinalComparison.ComparisonMeasureProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+open PolynomialGraphCompletion Algorithm
+
+theorem histogram_permutation (m : Nat) (u v : List Nat) (h : u.Perm v) :
+    comparisonKernelHistogram m u = comparisonKernelHistogram m v := by
+  induction m generalizing u v with
+  | zero => rfl
+  | succ m ih =>
+      change (u.count 0,comparisonKernelHistogram m (comparisonRankTail u)) =
+        (v.count 0,comparisonKernelHistogram m (comparisonRankTail v))
+      rw [h.count_eq]
+      have ht : (comparisonRankTail u).Perm (comparisonRankTail v) :=
+        h.filterMap _
+      rw [ih _ _ ht]
+
+theorem rankTail_member (s : Nat) (xs : List Nat) :
+    s ∈ comparisonRankTail xs ↔ s+1 ∈ xs := by
+  induction xs with
+  | nil => simp [comparisonRankTail]
+  | cons a xs ih =>
+      cases a with
+      | zero => simpa [comparisonRankTail] using ih
+      | succ a =>
+          have ht : comparisonRankTail ((a+1)::xs) = a::comparisonRankTail xs := by
+            simp [comparisonRankTail]
+          rw [ht]
+          simpa only [List.mem_cons,Nat.add_right_cancel_iff] using or_congr Iff.rfl ih
+
+theorem rankTail_append (u v : List Nat) :
+    comparisonRankTail (u++v) = comparisonRankTail u++comparisonRankTail v := by
+  simp [comparisonRankTail]
+
+private theorem count_zero_of_positive (xs : List Nat)
+    (h : ∀ r ∈ xs, 0 < r) : xs.count 0 = 0 := by
+  apply List.count_eq_zero_of_not_mem
+  intro hz
+  have := h 0 hz
+  omega
+
+/-- Remove an entire nonempty equality class at its actual least rank, and
+insert only actual ranks strictly above that rank. Other removed atoms may
+have larger ranks. This is the intrinsic histogram step of both runtime
+cancellation branches. -/
+theorem histogram_class_replacement (m r : Nat) (base removed added : List Nat)
+    (hr : r < m) (hmem : r ∈ removed)
+    (hmin : ∀ s ∈ removed, r ≤ s) (hadded : ∀ s ∈ added, r < s) :
+    ComparisonKernelHistogramLt m
+      (comparisonKernelHistogram m (base++added))
+      (comparisonKernelHistogram m (base++removed)) := by
+  induction m generalizing r base removed added with
+  | zero => omega
+  | succ m ih =>
+      cases r with
+      | zero =>
+          have hz := count_zero_of_positive added hadded
+          have hp : 0 < removed.count 0 := List.count_pos_iff.mpr hmem
+          change Prod.Lex Nat.lt (ComparisonKernelHistogramLt m) (_,_) (_,_)
+          refine Prod.Lex.left _ _ ?_
+          change (base++added).count 0 < (base++removed).count 0
+          simp only [List.count_append,hz,Nat.add_zero]
+          omega
+      | succ r =>
+          have hzr : removed.count 0 = 0 := count_zero_of_positive removed
+            (fun s hs => by have := hmin s hs; omega)
+          have hza : added.count 0 = 0 := count_zero_of_positive added
+            (fun s hs => by have := hadded s hs; omega)
+          have hm : r < m := by omega
+          have hmem' : r ∈ comparisonRankTail removed := (rankTail_member r removed).mpr hmem
+          have hmin' : ∀ s ∈ comparisonRankTail removed, r ≤ s := by
+            intro s hs
+            have := hmin (s+1) ((rankTail_member s removed).mp hs)
+            omega
+          have hadd' : ∀ s ∈ comparisonRankTail added, r < s := by
+            intro s hs
+            have := hadded (s+1) ((rankTail_member s added).mp hs)
+            omega
+          have hh := ih r (comparisonRankTail base) (comparisonRankTail removed)
+            (comparisonRankTail added) hm hmem' hmin' hadd'
+          change Prod.Lex Nat.lt (ComparisonKernelHistogramLt m) (_,_) (_,_)
+          simp only [List.count_append,hzr,hza,Nat.add_zero]
+          apply Prod.Lex.right
+          simpa only [rankTail_append] using hh
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

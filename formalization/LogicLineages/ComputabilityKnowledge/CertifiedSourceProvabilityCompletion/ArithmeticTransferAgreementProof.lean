@@ -1,0 +1,79 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransferTargets
+
+@[expose] public section
+/-! Exact agreement with the ORIGINAL existing arithmetic graph translation. -/
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.Agreement
+open GorbowSyntax
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators
+
+private theorem termAgreement {alpha : Type} {m : Nat} (free : alpha → Fin m)
+    (t : OrdinaryArithmetic.Term alpha) :
+    translateTerm (fun a => Term.var (free a)) (arithmeticEmbedding.onTerm t) =
+      GorbowOrdinaryArithmeticGraphs.translateTerm free t := by
+  induction t with
+  | var i => rfl
+  | func f ts ih =>
+    cases f with
+    | zero => rfl
+    | succ => exact congrArg Term.succ (ih 0)
+    | add => exact congrArg₂ Term.add (ih 0) (ih 1)
+    | mul => exact congrArg₂ Term.mul (ih 0) (ih 1)
+
+private theorem lastVariables {l m : Nat} (bound : Fin l → Fin m) :
+    (fun i => Term.var ((Fin.lastCases (0 : Fin (m+1)) (fun i => (bound i).succ) :
+      Fin (l+1) → Fin (m+1)) i)) =
+      (Fin.lastCases (Term.var 0) (fun i => GorbowFormulaSubstitution.renameTerm Fin.succ
+        (Term.var (bound i))) : Fin (l+1) → Term (m+1)) := by
+  funext i
+  refine Fin.lastCases ?_ (fun j => ?_) i
+  · simp only [Fin.lastCases_last]
+  · simp only [Fin.lastCases_castSucc,GorbowFormulaSubstitution.renameTerm,
+      GorbowSubstitution.substitute]
+
+private theorem boundedAgreement {alpha : Type} {l : Nat}
+    (phi : OrdinaryArithmetic.arithmeticLanguage.BoundedFormula alpha l) :
+    ∀ {m : Nat} (free : alpha → Fin m) (bound : Fin l → Fin m),
+    translateBounded (arithmeticEmbedding.onBoundedFormula phi)
+      (fun a => Term.var (free a)) (fun i => Term.var (bound i)) =
+      GorbowOrdinaryArithmeticGraphs.translateBounded phi free bound := by
+  induction phi with
+  | falsum => intro m free bound; rfl
+  | equal t u =>
+    intro m free bound
+    have he : Sum.elim (fun a => Term.var (free a)) (fun i => Term.var (bound i)) =
+        (fun x => Term.var (Sum.elim free bound x)) := by
+      funext x
+      cases x <;> rfl
+    change Formula.equal
+      (translateTerm (Sum.elim (fun a => Term.var (free a)) (fun i => Term.var (bound i)))
+        (arithmeticEmbedding.onTerm t))
+      (translateTerm (Sum.elim (fun a => Term.var (free a)) (fun i => Term.var (bound i)))
+        (arithmeticEmbedding.onTerm u)) = _
+    rw [he]
+    exact congrArg₂ Formula.equal (termAgreement (Sum.elim free bound) t)
+      (termAgreement (Sum.elim free bound) u)
+  | rel r _ => exact Empty.elim r
+  | imp a b iha ihb =>
+    intro m free bound
+    exact congrArg₂ Formula.imp (iha free bound) (ihb free bound)
+  | all a ih =>
+    intro m free bound
+    apply congrArg Formula.all
+    exact (congrArg (translateBounded (arithmeticEmbedding.onBoundedFormula a)
+      (fun x => Term.var ((free x).succ))) (lastVariables bound).symm).trans
+        (ih (fun x => (free x).succ) (Fin.lastCases 0 (fun i => (bound i).succ)))
+
+theorem ordinaryFormulaAgreement : Targets.OrdinaryFormulaAgreement := by
+  intro alpha phi m free
+  change translateBounded (arithmeticEmbedding.onBoundedFormula phi)
+    (fun i => Term.var (free i)) Fin.elim0 = _
+  have he : (fun i : Fin 0 => (Term.var (Fin.elim0 i) : Term m)) = Fin.elim0 :=
+    funext fun i => Fin.elim0 i
+  exact (congrArg (translateBounded (arithmeticEmbedding.onBoundedFormula phi)
+    (fun i => Term.var (free i))) he.symm).trans
+      (boundedAgreement phi free (Fin.elim0 : Fin 0 → Fin m))
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.Agreement

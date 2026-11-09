@@ -1,0 +1,159 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationSyntaxProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalGraphComposition
+open PositiveArithmeticPredicateSubstitution
+open SourceComputabilityFormulaSupportProof InternalComputabilityApplication InternalAccessibilityRules
+open InternalComputabilityDownward SourceComputabilityCompletion.InverseApplication
+open InternalComputabilityApplicationSyntaxProof InternalComputabilityDownwardSyntaxProof
+open InternalAccessibilityRulesSyntaxProof InternalSliceInduction InternalSliceInductionSyntaxProof
+open InternalBinderTransportSyntaxProof InternalBinderTransportProof InternalTermSubstitutionSyntaxProof
+open InternalTermSubstitutionProof InternalSourceIntroductionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (emb bindEmbedding bindTerm liftBind varBind)
+
+/-- A binder-normal form for the already frozen inverse invariant. -/
+def inverseAt {α : Type} (comp : JointGammaComputability.Data) (context : Nat)
+    (sigma tau : Ty) (a x : OTerm α) : Formula α :=
+  allOne
+    (((domain comp context sigma tau (.var (.inr (0 : Fin 1))) (a.relabel Sum.inl)) ⊓
+      accepted comp sigma tau (numeral context) (.var (.inr (0 : Fin 1)))
+        (a.relabel Sum.inl) (x.relabel Sum.inl)).imp
+      (membership false (.var (.inr (0 : Fin 1)))))
+
+theorem invariantEquation {α : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty) (a : OTerm α) :
+    inverseInvariant src comp context sigma tau a =
+      inverseAt comp context sigma tau (a.relabel Sum.inl) (.var (.inr (0 : Fin 1))) := rfl
+
+theorem membershipRename {α β : Type} (odd : Bool) (x : OTerm α) (j : α → β) :
+    (membership odd x).relabel j = membership odd (x.relabel j) := by
+  unfold membership
+  rw [← predicateRename,InternalSourceIntroductionSyntaxProof.tagRelabel]
+
+theorem typedSubst {α β : Type} (comp : JointGammaComputability.Data) (tau : Ty)
+    (context x : OTerm α) (ts : α → OTerm β) :
+    (typed comp tau context x).subst (fun a => emb (ts a)) =
+      typed comp tau (context.subst ts) (x.subst ts) := by
+  unfold typed
+  rw [programSubst,InternalTagArithmeticSyntaxProof.sucSubst,InternalTagArithmeticSyntaxProof.zSubst]
+  congr 1
+  funext i
+  exact Fin.cases rfl (Fin.cases (InternalComputabilityApplicationSyntaxProof.numeralSubst _ ts)
+    (Fin.cases rfl (fun q => Fin.elim0 q))) i
+
+theorem domainSubst {α β : Type} (comp : JointGammaComputability.Data) (context : Nat)
+    (sigma tau : Ty) (f a : OTerm α) (ts : α → OTerm β) :
+    (domain comp context sigma tau f a).subst (fun x => emb (ts x)) =
+      domain comp context sigma tau (f.subst ts) (a.subst ts) := by
+  unfold domain
+  rw [conjunctionSubst,conjunctionSubst,typedSubst,typedSubst,guardedSubst,
+    InternalComputabilityApplicationSyntaxProof.numeralSubst]
+
+theorem inverseAtSubst {α β : Type} (comp : JointGammaComputability.Data) (context : Nat)
+    (sigma tau : Ty) (a x : OTerm α) (ts : α → OTerm β) :
+    (inverseAt comp context sigma tau a x).subst (fun z => emb (ts z)) =
+      inverseAt comp context sigma tau (a.subst ts) (x.subst ts) := by
+  rw [inverseAt,allEmbeddedSubst]
+  change allOne
+    ((((domain comp context sigma tau (.var (.inr (0 : Fin 1))) (a.relabel Sum.inl)) ⊓
+        accepted comp sigma tau (numeral context) (.var (.inr (0 : Fin 1)))
+          (a.relabel Sum.inl) (x.relabel Sum.inl)).subst
+      (fun z => emb (liftTerms ts z))).imp
+      ((membership false (.var (.inr (0 : Fin 1)))).subst
+        (fun z => emb (liftTerms ts z)))) = _
+  rw [conjunctionSubst,domainSubst,acceptedSubst,membershipSubst]
+  simp only [liftTermSubst,InternalComputabilityApplicationSyntaxProof.numeralSubst]
+  rfl
+
+theorem inverseAtRename {α β : Type} (comp : JointGammaComputability.Data) (context : Nat)
+    (sigma tau : Ty) (a x : OTerm α) (j : α → β) :
+    (inverseAt comp context sigma tau a x).relabel j =
+      inverseAt comp context sigma tau (a.relabel j) (x.relabel j) := by
+  rw [inverseAt,actualUniversalRenaming]
+  change allOne
+    ((((domain comp context sigma tau (.var (.inr (0 : Fin 1))) (a.relabel Sum.inl)) ⊓
+      accepted comp sigma tau (numeral context) (.var (.inr (0 : Fin 1)))
+        (a.relabel Sum.inl) (x.relabel Sum.inl)).relabel (Sum.map j id)).imp
+      ((membership false (.var (.inr (0 : Fin 1)))).relabel (Sum.map j id))) = _
+  rw [conjunctionRename,domainRename,acceptedRename,membershipRename,GuardedSourceSyntaxProof.numeralRename]
+  simp only [inverseAt,Term.relabel_relabel,Term.relabel,Sum.map_inl,Sum.map_inr,id_eq]
+
+theorem inverseAtInstance {α : Type} (comp : JointGammaComputability.Data) (context : Nat)
+    (sigma tau : Ty) (a x f : OTerm α) :
+    instantiate
+      ((((domain comp context sigma tau (.var (.inr (0 : Fin 1))) (a.relabel Sum.inl)) ⊓
+        accepted comp sigma tau (numeral context) (.var (.inr (0 : Fin 1)))
+          (a.relabel Sum.inl) (x.relabel Sum.inl)).imp
+        (membership false (.var (.inr (0 : Fin 1)))))) (emb f) =
+      ((domain comp context sigma tau f a ⊓
+        accepted comp sigma tau (numeral context) f a x).imp (membership false f)) := by
+  rw [instantiate,bindEmbedding]
+  change
+    ((((domain comp context sigma tau (.var (.inr (0 : Fin 1))) (a.relabel Sum.inl)) ⊓
+      accepted comp sigma tau (numeral context) (.var (.inr (0 : Fin 1)))
+        (a.relabel Sum.inl) (x.relabel Sum.inl)).subst (fun z => emb (bindTerm f z))).imp
+      ((membership false (.var (.inr (0 : Fin 1)))).subst (fun z => emb (bindTerm f z)))) = _
+  rw [conjunctionSubst,domainSubst,acceptedSubst,membershipSubst]
+  simp only [liftBind,varBind,InternalComputabilityApplicationSyntaxProof.numeralSubst]
+
+theorem invariantInstance {α : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty) (a x : OTerm α) :
+    instantiate (inverseInvariant src comp context sigma tau a) (emb x) =
+      inverseAt comp context sigma tau a x := by
+  rw [invariantEquation,instantiate,bindEmbedding,inverseAtSubst,liftBind,varBind]
+
+theorem invariantLift {α : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty) (a : OTerm α) :
+    liftPredicateFormula (inverseInvariant src comp context sigma tau a) =
+      inverseInvariant src comp context sigma tau (a.relabel Sum.inl) := by
+  rw [liftPredicateFormula,invariantEquation,inverseAtRename,invariantEquation]
+  simp only [Term.relabel_relabel]
+  rfl
+
+def inverseSuccessors {α : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty)
+    (a x : OTerm α) : Formula α :=
+  allOne ((edge src false context (x.relabel Sum.inl) (.var (.inr (0 : Fin 1)))).imp
+    (inverseAt comp context sigma tau (a.relabel Sum.inl) (.var (.inr (0 : Fin 1)))))
+
+theorem sliceEquation {α : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty) (a : OTerm α) :
+    replacedBody (sliceBody src context false) (inverseInvariant src comp context sigma tau a) =
+      carrier src false context (.var (.inr (0 : Fin 1))) ⊓
+        inverseSuccessors src comp context sigma tau (a.relabel Sum.inl) (.var (.inr (0 : Fin 1))) := by
+  rw [sliceReplacement,invariantLift,invariantEquation]
+  rfl
+
+theorem inverseSuccessorsRename {α β : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty)
+    (a x : OTerm α) (j : α → β) :
+    (inverseSuccessors src comp context sigma tau a x).relabel j =
+      inverseSuccessors src comp context sigma tau (a.relabel j) (x.relabel j) := by
+  rw [inverseSuccessors,actualUniversalRenaming]
+  change allOne
+    (((edge src false context (x.relabel Sum.inl) (.var (.inr (0 : Fin 1)))).relabel
+        (Sum.map j id)).imp
+      ((inverseAt comp context sigma tau (a.relabel Sum.inl) (.var (.inr (0 : Fin 1)))).relabel
+        (Sum.map j id))) = _
+  rw [edgeRename,inverseAtRename]
+  simp only [inverseSuccessors,Term.relabel_relabel,Term.relabel,Sum.map_inl,Sum.map_inr,id_eq]
+
+theorem inverseSuccessorInstance {α : Type} (src : SourcePresentation.Data)
+    (comp : JointGammaComputability.Data) (context : Nat) (sigma tau : Ty)
+    (a x y : OTerm α) :
+    instantiate
+      ((edge src false context (x.relabel Sum.inl) (.var (.inr (0 : Fin 1)))).imp
+        (inverseAt comp context sigma tau (a.relabel Sum.inl) (.var (.inr (0 : Fin 1))))) (emb y) =
+      (edge src false context x y).imp (inverseAt comp context sigma tau a y) := by
+  rw [instantiate,bindEmbedding]
+  change
+    ((edge src false context (x.relabel Sum.inl) (.var (.inr (0 : Fin 1)))).subst
+      (fun z => emb (bindTerm y z))).imp
+      ((inverseAt comp context sigma tau (a.relabel Sum.inl) (.var (.inr (0 : Fin 1)))).subst
+        (fun z => emb (bindTerm y z))) = _
+  rw [edgeSubst,inverseAtSubst,liftBind,varBind]
+  simp only [liftBind,varBind]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationSyntaxProof

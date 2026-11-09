@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStateProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStateStatementChecks
+theorem literalOriginalTie : PlainBlockSplitTargets.LiteralTieSemantics :=
+  PlainBlockSplitProof.literalTieSemantics
+theorem actualBoundDecrease : PlainBlockSplitTargets.StrictOriginalBoundDecrease :=
+  PlainBlockSplitProof.strictOriginalBoundDecrease
+theorem exhaustiveActualOneStep : PlainBlockSplitTargets.ActualOneStepProjection :=
+  PlainBlockSplitProof.actualOneStepProjection
+theorem actualStateClosure : PlainBlockSplitTargets.WholeBlockStateClosure :=
+  PlainBlockSplitProof.wholeBlockStateClosure
+theorem originalBranchNames : PlainBlockSplitTargets.OriginalBranchNameSupport :=
+  PlainBlockSplitProof.originalBranchNameSupport
+#print axioms literalOriginalTie
+#print axioms actualBoundDecrease
+#print axioms exhaustiveActualOneStep
+#print axioms actualStateClosure
+#print axioms originalBranchNames
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStateStatementChecks

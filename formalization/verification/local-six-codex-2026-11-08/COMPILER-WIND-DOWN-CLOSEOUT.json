@@ -1,0 +1,186 @@
+{
+  "utc": "2026-11-09T06:33:34.012771+00:00",
+  "rounds": {
+    "L1": {
+      "scope": "existing supplier-stage groups A3/B4 only, <=2 invocations/group, plus one passed-only verification audit <=5total; no dependent2/fullOuter",
+      "ceiling": 5
+    },
+    "L2": {
+      "scope": "GuardedPositiveApplication exact1 only incl admission stops",
+      "ceiling": 2
+    },
+    "L3": {
+      "scope": "PlainBlockSplit frozen9 State/Frontier/Output/HFree/FULL only, current+one repair perroot",
+      "ceiling": 10
+    },
+    "L4": {
+      "scope": "OriginalWord frozen11 only",
+      "ceiling": 2,
+      "status": "PASS and proofSTOP after1",
+      "receipt": "build-reports/1794205926363043786-2.json"
+    },
+    "L5": {
+      "scope": "Runner frozen8 only incl admission stops",
+      "ceiling": 4
+    },
+    "L6": {
+      "scope": "ArithmeticTransfer9 exact3 complete, seal/handoff only",
+      "ceiling": 0,
+      "receipt": "build-reports/1794205745802224218-2.json"
+    }
+  },
+  "roots": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 1
+    },
+    "LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 1,
+      "stopped": true
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStateStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 0
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitFrontierStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 0
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitOutputStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 0
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitHFreeBranchStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 1,
+      "stopped": true
+    },
+    "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitStatementChecks": {
+      "max_invocations": 2,
+      "invocations": 0
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterCarrierProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterArithmeticProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterDomainForwardProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterPositiveProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterLiftSupportProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterInputQueriesProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterDomainCertificateProof": {
+      "max_invocations": 2,
+      "invocations": 0,
+      "main_confirmed": true
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerStatementChecks": {
+      "max_invocations": 4,
+      "invocations": 0,
+      "main_confirmed": true
+    }
+  },
+  "deferred": [
+    {
+      "lane": "L1",
+      "agent": "/root/id1_frontier",
+      "modules": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterResultCasesProof",
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterPathVertexProof"
+      ],
+      "purpose": "same actual-import source helper split namespace-only repair; independent rawPositive unlocks L2 actual typed-spine source math",
+      "ready_manifests": [
+        "verification/local-six-codex-2026-11-08/L1/R005-HELPER-REQUEST.json",
+        "verification/local-six-codex-2026-11-08/L1/R005-HELPER-CLOSURE-PINS.json"
+      ],
+      "requires_pass": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterArithmeticProof",
+      "blocked_by": "requires actual current ArithmeticProof PASS",
+      "author_ready": true,
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    },
+    {
+      "lane": "L2",
+      "agent": "/root/source_ordinal_frontier",
+      "modules": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.ComputabilityLeastTargets"
+      ],
+      "purpose": "new frozen literal bottom C and all finite type C-to-I target-only, no proof",
+      "ready_manifest": "verification/local-six-codex-2026-11-08/L2/COMPUTABILITY-LEAST-CENTRAL-TARGET-READY.json",
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    },
+    {
+      "lane": "L3",
+      "agent": "/root/base_frontier",
+      "modules": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphTargets"
+      ],
+      "purpose": "new frozen7 original shift-zero Boolean graph target-only; actual expanded graph preflight paid",
+      "ready_manifest": "verification/local-six-codex-2026-11-08/L3/expanded-boolean-graph/READY-PREFLIGHT-001.json",
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    },
+    {
+      "lane": "L5",
+      "agent": "/root/word_frontier",
+      "modules": [
+        "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportSyntaxProof"
+      ],
+      "purpose": "generic original-name/domain syntax partial; actual Body prerequisite",
+      "ready_manifest": "verification/local-six-codex-2026-11-08/L5/R006-syntax-attempt01/REQUEST.json",
+      "requires_pass": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportBodyProof",
+      "blocked_by": "requires current actual BodyProof nativePASS",
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    },
+    {
+      "lane": "L3",
+      "agent": "/root/base_frontier",
+      "modules": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecStatementChecks"
+      ],
+      "purpose": "actual original Term encode codec4exact gate, admitted frozen spec unchanged",
+      "ready_manifest": "verification/local-six-codex-2026-11-08/L3/term-codec/READY-EXACT-001.json",
+      "ready_manifest_sha256": "d76bb26a4c9e824ff13ae2a2630aeb52a91b5aa6bcb1ee6ee5ae76e07a76c8c9",
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    },
+    {
+      "lane": "L6",
+      "agent": "/root/knowledge_frontier",
+      "modules": [
+        "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.NamedArithmeticGraphSupportProof"
+      ],
+      "purpose": "independent original ordinary support/equality node graph helpers; no full transfer dependency",
+      "ready_manifest": "verification/local-six-codex-2026-11-08/L6/NAMED-ARITHMETIC-GRAPH-SUPPORT-CANDIDATE.json",
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    },
+    {
+      "lane": "L3",
+      "agent": "/root/base_frontier",
+      "modules": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphLocalStatementChecks"
+      ],
+      "purpose": "actual local source graph3exact gate, passed frozen9 preflight, no full graph claim",
+      "ready_manifest": "verification/local-six-codex-2026-11-08/L3/expanded-graph/READY-LOCAL-001.json",
+      "deferred_reason": "Explicit user wind-down: outside nominated current round"
+    }
+  ]
+}

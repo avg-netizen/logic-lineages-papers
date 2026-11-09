@@ -1,0 +1,103 @@
+{
+  "status": "STOPPED_NO_LIVE_OR_QUEUED_WORK",
+  "authority": "Explicit user wind-down relayed by main 2026-11-09; supersedes continuing rounds",
+  "current_round": "Frozen PlainBlockSplit9 typed uniform nonlinear block projector",
+  "roots": [
+    {
+      "module": "PlainBlockSplitStateStatementChecks",
+      "ready": "plain-block-split/READY-STATE-003.json",
+      "sha256": "1cf89fd035ddfc92f47d943986e1fd2e999e4c2afb425cafb33e58962506c4b1"
+    },
+    {
+      "module": "PlainBlockSplitFrontierStatementChecks",
+      "ready": "plain-block-split/READY-FRONTIER-003.json",
+      "sha256": "dec80b0475f528ec2bb16b73348ce47af5fc58e54f71993cbe17da1b4805cabf"
+    },
+    {
+      "module": "PlainBlockSplitOutputStatementChecks",
+      "ready": "plain-block-split/READY-OUTPUT-003.json",
+      "sha256": "467fa2182e0fc1f1a6dff15208fd0bd8e3cab2eb3f95fd74f54fbfce7ff39ef6"
+    },
+    {
+      "module": "PlainBlockSplitHFreeBranchStatementChecks",
+      "ready": "plain-block-split/READY-HFREEBRANCH-002.json",
+      "sha256": "d2caefcbabee9acba42c10c3c310949739c1d75be41bbf65ac24a20b702a10da"
+    },
+    {
+      "module": "PlainBlockSplitStatementChecks",
+      "ready": "plain-block-split/READY-FULL-004.json",
+      "sha256": "3d1ff0f7557c999a14ffe41d9c090514837104de51a77bc18de891d47e7b8124"
+    }
+  ],
+  "finite_cutoff": "Current listed attempt plus at most one further proof-only repair attempt per root, maximum10 root invocations. On exhausted failure preserve unresolved unaccepted and STOP. No target/scope/resource changes.",
+  "accepted_canonical_targets_before_closeout": 42,
+  "accepted_immutable_lean_files_before_closeout": 46,
+  "deferred_successor_packets": [
+    "expanded-graph target9 / Local3 and unsubmitted allocation proof",
+    "expanded-boolean-graph target7",
+    "term-codec target4 / exact4"
+  ],
+  "passed_target_only_not_theorem_acceptance": {
+    "expanded-graph": "1794204960192337722-2",
+    "term-codec": "1794204974147139333-2"
+  },
+  "actual_partial_passes_in_current_closure": {
+    "Coverage exact3": "1794202705192309399-2",
+    "Parameters002": "1794205427076783406-2",
+    "Occurrences002": "1794205492532393932-2",
+    "HFreeCore": "1794204930786893732-2",
+    "HFreeBranch exact1": "1794205920334868437-2",
+    "State exact5": "1794206014688650567-2"
+  },
+  "author_native_and_transport_live": false,
+  "author_launches_compiler": false,
+  "new_subject_or_packet_admission": false,
+  "executor": "/root/portfolio_frontier",
+  "no_git_publication_or_register_edits": true,
+  "main_confirmed": true,
+  "confirmation": "MAIN confirmed only PlainBlockSplit9 current roots and same finite max10/current+one repair cutoff; all successors deferred",
+  "closeout_roots_completed": [
+    "PlainBlockSplitHFreeBranchStatementChecks",
+    "PlainBlockSplitStateStatementChecks"
+  ],
+  "distinct_frozen_targets_currently_native_exact": 6,
+  "remaining_roots": [
+    "PlainBlockSplitFrontierStatementChecks",
+    "PlainBlockSplitOutputStatementChecks",
+    "PlainBlockSplitStatementChecks"
+  ],
+  "absolute_no_new_native_admission_after_utc": "2026-11-09T06:45:40Z",
+  "active_job_rule": "An already admitted bounded active job may finish/reap after deadline; no new invocation after deadline.",
+  "sealed_current_fallback": "plain-block-split/PARTIAL6-ACCEPTANCE.json",
+  "fallback_canonical_lane_targets": 45,
+  "fallback_immutable_lane_lean_files": 53,
+  "stopped_utc": "2026-11-09T06:45:45Z",
+  "acceptance": "plain-block-split/PARTIAL6-ACCEPTANCE.json",
+  "full9_acceptance": false,
+  "current_roots_pending_due_to_admission_floor_deadline": [
+    "PlainBlockSplitFrontierStatementChecks",
+    "PlainBlockSplitOutputStatementChecks",
+    "PlainBlockSplitStatementChecks"
+  ],
+  "no_new_compiler_admission": true,
+  "author_lease_live": false,
+  "executor_queue_withdrawal_confirmation": {
+    "from": "/root/portfolio_frontier",
+    "utc": "2026-11-09T06:46:49Z",
+    "owner": null,
+    "lease": null,
+    "waiting": [],
+    "both_compiler_locks": "FREE",
+    "all_native_and_transport": "FULLY_REAPED",
+    "runnable_L3_queue": false,
+    "automatic_resume": false,
+    "evidence": "../COMPILER-WIND-DOWN-FINAL.json"
+  },
+  "final_round_invocations": {
+    "State": 1,
+    "HFreeBranch": 1,
+    "Frontier": 0,
+    "Output": 0,
+    "FULL": 0
+  }
+}

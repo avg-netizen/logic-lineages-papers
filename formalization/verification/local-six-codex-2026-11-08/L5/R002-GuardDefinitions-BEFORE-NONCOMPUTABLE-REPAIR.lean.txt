@@ -1,0 +1,62 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RowDefinitions
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.Definitions
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.CompilerDefinitions
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion
+open PolynomialGraphCompletion WordGuardCompletion
+open WordLinearDecisionCompletion FullWordGuardCompletion
+
+def scaleRow (z : Int) (r : Row) : Row :=
+  (z*r.1,r.2.map (fun a => (z*a.1,a.2)))
+
+def shiftConstant (z : Int) (r : Row) : Row := (r.1+z,r.2)
+
+/-- The three signs are represented in the shared literal word-row Boolean
+syntax. Strictness uses the discrete integer offset, not a new relation. -/
+def signFormula (sign : Nat) (r : Row) : Formula :=
+  if sign = 0 then .atom (.nonnegative (shiftConstant (-1) (scaleRow (-1) r)))
+  else if sign = 1 then
+    .conj (.atom (.nonnegative r)) (.atom (.nonnegative (scaleRow (-1) r)))
+  else if sign = 2 then .atom (.nonnegative (shiftConstant (-1) r))
+  else .bot
+
+def disjoin (ps : List Formula) : Formula := ps.foldr .disj .bot
+
+/-- Both names are original source names. Renaming an emitted pair-row never
+introduces a fresh independently interpreted value. -/
+def renamePairRow (left right : Nat) (r : Row) : Row :=
+  (r.1,r.2.map (fun a => (a.1,if a.2.1 = 0 then left else right,a.2.2)))
+
+def orderedGuard (D : Nat) (u v : Token) (desired : Nat) : Formula :=
+  let out := FullWordGuardCompletion.compile D (u.2,v.2)
+  disjoin ((guardAt (packageGuards out) desired).map
+    (fun sign => signFormula sign (renamePairRow u.1 v.1 (packageRow out))))
+
+def literalDifference (u v : Token) : Row :=
+  (0,[(1,u),(-1,v)])
+
+/-- Only comparisons involving the selected maximum need recursive guard
+compilation. Other original variables remain tied in literal source rows.
+The same-maximum branch uses the compiler's actual fixed eventual answer. -/
+def comparisonGuard (D maximum : Nat) (u v : Token) (desired : Nat) : Formula :=
+  if u.1 = maximum then
+    if v.1 = maximum then
+      if packageSame (FullWordGuardCompletion.compile D (u.2,v.2)) = desired
+        then .top else .bot
+    else orderedGuard D u v desired
+  else if v.1 = maximum then
+    orderedGuard D v u (reverseOrder desired)
+  else signFormula desired (literalDifference u v)
+
+def pairCutoff (D : Nat) (u v : Token) : Nat :=
+  max (packageTail (FullWordGuardCompletion.compile D (u.2,v.2)))
+    (max (wordTail u.2) (wordTail v.2))
+
+def comparisonCutoff (D maximum : Nat) (u v : Token) : Nat :=
+  if u.1 = maximum then pairCutoff D u v
+  else if v.1 = maximum then pairCutoff D v u
+  else max (wordTail u.2) (wordTail v.2)
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion

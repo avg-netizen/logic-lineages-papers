@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-11-09T02:46:07.756474+00:00",
+  "observed_before_correction": {
+    "registered_agents_running": 6,
+    "ready_unblocked_requests_reported": 10,
+    "dependency_held_requests_reported": 3,
+    "completed_checks_last15min": 9,
+    "sum_native_wall_seconds_for_completed_checks": 59.3,
+    "sum_observed_cpu_seconds": 58.2,
+    "excludes_incomplete_job": true,
+    "example_result_handling_gap_seconds": 110
+  },
+  "actual_author_reports": "L1/L3/L5 writing/source-analyzing;L2 reviewing and repairing plus dependent waits;L6 generator design/support proof authoring with target-admission waits;L4 queue+proof work. No approval wait reported. Logical running does not imply continuous model sampling.",
+  "correction": "Existing L4 executes READY pinned checks centrally after safe fully-reaped transition/all5peer acknowledgments; authors never self-launch after START. One compiler/same locks/caps; no additional worker/harness.",
+  "meter_limitation": "No account-usage meter telemetry was inspected; source activity and native receipts establish liveness.",
+  "central_mode_start_confirmed": true,
+  "all_five_author_acknowledgments": true,
+  "first_two_central_completions_independently_read": [
+    {
+      "receipt": "build-reports/1794192293343769195-2.json",
+      "requested": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomParameterStatementChecks"
+      ],
+      "all_rows_passed": false,
+      "native_rows": 2
+    },
+    {
+      "receipt": "build-reports/1794192354897893947-2.json",
+      "requested": [
+        "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationPreflight"
+      ],
+      "all_rows_passed": true,
+      "native_rows": 6
+    }
+  ],
+  "resource_profile_unchanged": true,
+  "verified_at_utc": "2026-11-09T02:47:34.274835+00:00"
+}

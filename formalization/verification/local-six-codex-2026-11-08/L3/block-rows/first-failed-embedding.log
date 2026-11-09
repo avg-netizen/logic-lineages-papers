@@ -1,0 +1,32 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/BlockRowsEmbeddingProof.lean:15:45: error: unsolved goals
+case nonnegative
+ν : ℕ → ℕ
+row✝ : NormalForm.Row
+⊢ 0 ≤ rowValue (Row.ofOriginal row✝) ν ↔ 0 ≤ NormalForm.rowValue row✝ ν
+
+case divisible
+ν : ℕ → ℕ
+modulusMinusOne✝ : ℕ
+row✝ : NormalForm.Row
+⊢ ↑(modulusMinusOne✝ + 1) ∣ rowValue (Row.ofOriginal row✝) ν ↔ ↑(modulusMinusOne✝ + 1) ∣ NormalForm.rowValue row✝ ν
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/BlockRowsEmbeddingProof.lean:16:75: warning: This simp argument is unused:
+  actualOriginalRowEmbedding
+
+Hint: Omit it from the simp argument list.
+  simp only [Atom.ofOriginal, Atom.eval, NormalForm.Atom.eval,̵ ̵a̵c̵t̵u̵a̵l̵O̵r̵i̵g̵i̵n̵a̵l̵R̵o̵w̵E̵m̵b̵e̵d̵d̵i̵n̵g̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/BlockRowsEmbeddingProof.lean:31:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/BlockRowsEmbeddingProof.lean:33:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/BlockRowsEmbeddingProof.lean:38:25: error: Application type mismatch: The argument
+  i
+has type
+  ℕ
+of sort `Type` but is expected to have type
+  ?m.13 ∈ []
+of sort `Prop` in the application
+  List.not_mem_nil i

@@ -1,0 +1,69 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardDefinitions
+public import Mathlib.Computability.Partrec
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion
+open PolynomialGraphCompletion WordLinearDecisionCompletion
+
+/-- Tags zero and two mean the source row has the corresponding strict sign.
+Tag three retains a literal equal-valued row linear in the selected maximum.
+Tag one is not used to manufacture a zero test; exact zero rows are linear. -/
+structure Outcome where
+  tag : Nat
+  row : Row
+
+structure RowCase where
+  guard : Formula
+  outcomes : List Outcome
+
+structure Package where
+  tail : Nat
+  cases : List RowCase
+
+abbrev EncodedPackage := Nat × List (Nat × List (Nat × Row))
+
+/-- This is the exact finite emitted artifact used by the effectivity target.
+It contains syntax only, including every guard and literal replacement row. -/
+def encodePackage (p : Package) : EncodedPackage :=
+  (p.tail,p.cases.map (fun c =>
+    (Formula.encode c.guard,c.outcomes.map (fun o => (o.tag,o.row)))))
+
+def LinearRow (maximum : Nat) (r : Row) : Prop :=
+  ∀ a ∈ r.2, a.2.1 = maximum → a.2.2 = []
+
+def OriginalNames (rows : List Row) : List Nat := rows.flatMap rowVariables
+
+def NamesFrom (names : List Nat) (r : Row) : Prop :=
+  ∀ i ∈ rowVariables r, i ∈ names
+
+def FormulaNamesFrom (names : List Nat) (p : Formula) : Prop :=
+  ∀ i ∈ Formula.variables p, i ∈ names
+
+def Region (tail maximum : Nat) (names : List Nat) (ν : Nat → Nat) : Prop :=
+  ∀ i ∈ names, tail ≤ ν i ∧ ν i ≤ ν maximum
+
+noncomputable def OutcomeCorrect (maximum : Nat) (source : Row)
+    (o : Outcome) (ν : Nat → Nat) : Prop :=
+  (o.tag = 0 ∧ RowValue source ν < 0) ∨
+  (o.tag = 2 ∧ 0 < RowValue source ν) ∨
+  (o.tag = 3 ∧ LinearRow maximum o.row ∧ RowValue o.row ν = RowValue source ν)
+
+/-- Syntax and semantics are both checked against the original finite row
+family. Output guards retain all names, domains and correlations. -/
+noncomputable def PackageCorrect (D maximum : Nat) (rows : List Row)
+    (p : Package) : Prop :=
+  (∀ c ∈ p.cases,
+    Formula.allowed D c.guard ∧ linear maximum c.guard = true ∧
+    FormulaNamesFrom (OriginalNames rows) c.guard ∧
+    c.outcomes.length = rows.length ∧
+    ∀ o ∈ c.outcomes, RowAllowed D o.row ∧ NamesFrom (OriginalNames rows) o.row) ∧
+  ∀ ν, Region p.tail maximum (OriginalNames rows) ν →
+    (∀ r ∈ rows, RowDomain r ν) ∧
+    (∀ c ∈ p.cases, Formula.meaningful c.guard ν ∧
+      ∀ o ∈ c.outcomes, RowDomain o.row ν) ∧
+    (∃ c ∈ p.cases, Formula.eval ν c.guard) ∧
+    ∀ c ∈ p.cases, Formula.eval ν c.guard →
+      List.Forall₂ (fun r o => OutcomeCorrect maximum r o ν) rows c.outcomes
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion

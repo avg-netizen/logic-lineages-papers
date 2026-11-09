@@ -1,0 +1,62 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitBasicProof.lean:13:6: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [renameSummand, NormalForm.Summand.term, Term.value, F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitBasicProof.lean:16:18: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [renameSummand, NormalForm.Summand.term, shiftTerm, Term.value, F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitBasicProof.lean:20:18: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [renameSummand, NormalForm.Summand.term, HyperWindow.valueTerm,
+  ̲  ̲ ̲ ̲ ̲ ̲HyperWindow.innerTerm, HyperWindow.indexTerm, shiftTerm, Term.value, F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainBlockSplitBasicProof.lean:71:14: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if PlainMaximum.headCoefficient i r = 0 then ?m.312 else ?m.313
+in the target expression
+  s ∈
+    match Atom.nonnegative r with
+    | Atom.nonnegative r =>
+      if PlainMaximum.headCoefficient i r = 0 then []
+      else List.map (fun d => (bound.erase i, Formula.substitute i (bandCandidate i r d) p)) (List.range 5)
+    | Atom.divisible modulusMinusOne row => []
+
+case neg
+bound : List ℕ
+p : Formula
+s : State
+hs : s ∈ small bound p ++ ties bound p ++ bands bound p ++ far bound p
+hleft : s ∈ small bound p ++ ties bound p ++ bands bound p
+hbands : s ∈ bands bound p
+i : ℕ
+hi : i ∈ bound
+hinner :
+  s ∈
+    List.flatMap
+      (fun a =>
+        match a with
+        | Atom.nonnegative r =>
+          if PlainMaximum.headCoefficient i r = 0 then []
+          else List.map (fun d => (bound.erase i, Formula.substitute i (bandCandidate i r d) p)) (List.range 5)
+        | Atom.divisible modulusMinusOne row => [])
+      (atoms p)
+r : Row
+left✝ : Atom.nonnegative r ∈ atoms p
+ha :
+  s ∈
+    match Atom.nonnegative r with
+    | Atom.nonnegative r =>
+      if PlainMaximum.headCoefficient i r = 0 then []
+      else List.map (fun d => (bound.erase i, Formula.substitute i (bandCandidate i r d) p)) (List.range 5)
+    | Atom.divisible modulusMinusOne row => []
+hz : ¬PlainMaximum.headCoefficient i r = 0
+⊢ ∃ i ∈ bound, s.1 = bound.erase i

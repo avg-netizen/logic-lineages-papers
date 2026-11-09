@@ -1,0 +1,36 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomDescentDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomDescentTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors (graph2)
+open SourceComputabilityCompletion.BottomRepresentative SourceComputabilityCompletion.BottomDescent
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Every count is an object-language term. The original parameter-carrying
+iteration preserves the exact bottom-test answer at activated source inputs.
+No semantic calibration, shape-reflection or iteration invariant is assumed. -/
+def ActualParameterizedBottomIterationPreservation : Prop :=
+  ∀ (body : Positive (Fin 1)) (data : InternalOriginalUniformDescentSelection.Data)
+    (window : Program 1) (α : Type) (Delta : List (Formula α))
+    (out count input parameter indicator : OrdinaryArithmetic.Term α),
+  Nonempty (Derivation body Delta
+    ((activeGraph data window input parameter).imp
+      ((InternalParameterizedNumericIteration.repeatGraph (step data window)
+        out count input parameter).imp
+        ((bottomGraph indicator out).iff (bottomGraph indicator input)))))
+
+/-- This is the SAME fallbackRepresentative used by the original canonical
+fold leaf, with the once-member-normalized validator and guarded old leaf.
+The outer fallback is eliminated internally using the literal active guard. -/
+def ActualParameterizedSelectedBottomPreservation : Prop :=
+  ∀ (body : Positive (Fin 1)) (data : InternalOriginalUniformDescentSelection.Data)
+    (window : Program 1) (α : Type) (Delta : List (Formula α))
+    (out input parameter indicator : OrdinaryArithmetic.Term α),
+  Nonempty (Derivation body Delta
+    ((activeGraph data window input parameter).imp
+      ((graph2 (InternalOriginalUniformDescentSelection.representative (readyData data window))
+        out input parameter).imp
+        ((bottomGraph indicator out).iff (bottomGraph indicator input)))))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomDescentTargets

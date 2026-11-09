@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearTokenProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearTokenStatementChecks
+theorem actualTokenRoundTrip : TiedLinearTargets.LiteralTokenRoundTrip :=
+  TiedLinearProof.literalTokenRoundTrip
+#print axioms actualTokenRoundTrip
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearTokenStatementChecks

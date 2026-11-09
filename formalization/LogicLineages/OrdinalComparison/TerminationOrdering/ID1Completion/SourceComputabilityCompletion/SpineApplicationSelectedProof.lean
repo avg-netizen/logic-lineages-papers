@@ -1,0 +1,65 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationIterationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformDescentSelectionInternalProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationSelectedProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open SourceComputabilityCompletion.SpineApplicationIteration
+open SourceComputabilityCompletion.SpineApplicationIterationSyntaxProof SourceComputabilityCompletion.SpineApplicationStepProof
+open SourceComputabilityCompletion.SpineApplicationIterationProof
+open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeelSupportProof
+open InternalParameterizedNumericIteration InternalParameterizedNumericIterationSyntaxProof
+open InternalParameterizedBoundedDescentNormalizerSupportProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof
+open InternalPositiveUnfoldingSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+theorem repeatIff (data : Data) (window : Program 1) (out count input parameter indicator : OTerm α)
+    (ha : Nonempty (Derivation body Gamma (activeGraph data window input parameter)))
+    (hr : Nonempty (Derivation body Gamma (repeatGraph (step data window) out count input parameter))) :
+    Nonempty (Derivation body Gamma ((BottomSpineMeasure.graph indicator out).iff (BottomSpineMeasure.graph indicator input))) := by
+  apply programCases BottomSpineMeasure.measure (Fin.cons input Fin.elim0) _
+  intro β j Delta value hj hv
+  rw [SpineRepresentativeInternalProof.markIffRename]
+  have hv' : Nonempty (Derivation body Delta (BottomSpineMeasure.graph value (input.relabel j))) := by
+    simpa only [BottomSpineMeasure.graph,graph1,consTermRename,emptyRename] using hv
+  have ha' := renameInto ha j Delta hj
+  rw [activeRename] at ha'
+  have hr' := renameInto hr j Delta hj
+  rw [parameterRepeatRename] at hr'
+  have hout := repeatForward data window (count.relabel j) (input.relabel j) (out.relabel j)
+    (parameter.relabel j) value hr' ha' hv'
+  exact SourceComputabilityCompletion.BottomRepresentativeInternalProof.indicatorIff BottomSpineMeasure.measure
+    (indicator.relabel j) (out.relabel j) (input.relabel j) value value hout hv' ⟨refl value⟩
+
+theorem selectedIff (data : Data) (window : Program 1) (out input parameter indicator : OTerm α)
+    (ha : Nonempty (Derivation body Gamma (activeGraph data window input parameter)))
+    (hr : Nonempty (Derivation body Gamma
+      (graph2 (InternalOriginalUniformDescentSelection.representative (SpineApplicationTargets.selectedData data window)) out input parameter))) :
+    Nonempty (Derivation body Gamma ((BottomSpineMeasure.graph indicator out).iff (BottomSpineMeasure.graph indicator input))) := by
+  have hv := andRight (activeFactors data window input parameter ha)
+  have hn := InternalOriginalUniformDescentSelectionInternalProof.boundedRecover
+    (leaf data window) (selectedValidity data window) out input parameter hr hv
+  have hrepeat := normalizerRecover (leaf data window) (selectedValidity data window)
+    out input parameter hn
+  exact repeatIff data window out (suc input) input parameter indicator ha hrepeat
+
+theorem actualSelectedRepresentativeSpinePreservation :
+    SpineApplicationTargets.ActualSelectedRepresentativeSpinePreservation := by
+  intro body data window α Delta out input parameter mark
+  let A := activeGraph data window input parameter
+  let R := graph2 (InternalOriginalUniformDescentSelection.representative
+    (SpineApplicationTargets.selectedData data window)) out input parameter
+  obtain ⟨d⟩ := selectedIff (body := body) (Gamma := R :: A :: Delta)
+    data window out input parameter mark
+    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationSelectedProof

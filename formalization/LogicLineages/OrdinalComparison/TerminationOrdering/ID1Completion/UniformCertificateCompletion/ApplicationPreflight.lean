@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationPreflight
+def localEdgeLift : Prop := ApplicationTargets.ActualOriginalUniformApplicationEdgeLift
+def suppliedOutputTypes : Prop := ApplicationTargets.ActualOriginalUniformApplicationEdgeTypedOutputs
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.ApplicationPreflight

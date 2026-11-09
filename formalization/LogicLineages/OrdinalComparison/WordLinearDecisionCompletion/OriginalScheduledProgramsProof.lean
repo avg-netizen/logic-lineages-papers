@@ -1,0 +1,122 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduledSemanticProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduled.Proof
+attribute [local irreducible] Nat.sqrt Nat.unpair
+
+theorem phiIterate_primitive : Primrec₂ (fun k t : Nat => (Phi^[k]) t) := by
+  have hs : Primrec₂ (fun (_ : Nat × Nat) (x : Nat) => Phi x) :=
+    Phi_primrec.comp Primrec.snd
+  exact Primrec.nat_iterate Primrec.fst Primrec.snd hs
+
+theorem budget_primitive :
+    Primrec (fun p : Nat × Nat × Nat => KernelSourceCompletion.sourceBudget p.1 p.2.1 p.2.2) := by
+  have hi : Primrec (fun p : Nat × Nat × Nat => (Phi^[p.2.2 + 1]) p.2.1) :=
+    phiIterate_primitive.comp
+      (Primrec.succ.comp (Primrec.snd.comp Primrec.snd))
+      (Primrec.fst.comp Primrec.snd)
+  exact Primrec.nat_sub.comp hi Primrec.fst
+
+attribute [local irreducible] KernelSourceCompletion.sourceBudget
+
+theorem step_primitive :
+    Primrec (fun p : Nat × Nat × Nat × Nat => step p.1 p.2.1 p.2.2.1 p.2.2.2) := by
+  let A := Nat × Nat × Nat × Nat
+  have hc : Primrec (fun p : A => p.1) := Primrec.fst
+  have ht : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
+  have hi : Primrec (fun p : A => p.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hn : Primrec (fun p : A => p.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  have hsplit : Primrec rawSplitCode := Primrec.nat_iff.mpr rawSplitPrimitiveRecursive
+  have hl : Primrec (fun p : A => (rawSplitCode p.2.2.2).unpair.1) :=
+    Primrec.fst.comp (Primrec.unpair.comp (hsplit.comp hn))
+  have hb : Primrec (fun p : A => KernelSourceCompletion.sourceBudget p.1 p.2.1 p.2.2.1) :=
+    budget_primitive.comp (hc.pair (ht.pair hi))
+  exact encodedMaximumPredecessorPrimitiveRecursive.comp hl hb
+
+attribute [local irreducible] step
+
+theorem advance_primitive :
+    Primrec (fun p : (Nat × Nat) × (Nat × Nat) => advance p.1.1 p.1.2 p.2) := by
+  let A := (Nat × Nat) × (Nat × Nat)
+  have hc : Primrec (fun p : A => p.1.1) := Primrec.fst.comp Primrec.fst
+  have ht : Primrec (fun p : A => p.1.2) := Primrec.snd.comp Primrec.fst
+  have hi : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
+  have hn : Primrec (fun p : A => p.2.2) := Primrec.snd.comp Primrec.snd
+  exact (Primrec.succ.comp hi).pair (step_primitive.comp (hc.pair (ht.pair (hi.pair hn))))
+
+attribute [local irreducible] advance
+
+theorem run_primitive :
+    Primrec (fun p : (Nat × Nat × Nat) × Nat => run p.1.1 p.1.2.1 p.1.2.2 p.2) := by
+  let A := (Nat × Nat × Nat) × Nat
+  let S := Nat × Nat
+  have hn : Primrec (fun p : A => p.1.2.2) :=
+    Primrec.snd.comp (Primrec.snd.comp Primrec.fst)
+  have hc : Primrec (fun p : A × S => p.1.1.1) :=
+    Primrec.fst.comp (Primrec.fst.comp Primrec.fst)
+  have ht : Primrec (fun p : A × S => p.1.1.2.1) :=
+    Primrec.fst.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.fst))
+  have hs : Primrec₂ (fun (p : A) (s : S) => advance p.1.1 p.1.2.1 s) :=
+    advance_primitive.comp ((hc.pair ht).pair Primrec.snd)
+  have hr : Primrec (fun p : A => (advance p.1.1 p.1.2.1)^[p.2] (0, p.1.2.2)) :=
+    Primrec.nat_iterate Primrec.snd ((Primrec.const 0).pair hn) hs
+  exact Primrec.snd.comp hr
+
+attribute [local irreducible] run
+
+theorem statePrograms : Targets.StatePrograms := by
+  refine ⟨budget_primitive.to_comp, step_primitive.to_comp, ?_⟩
+  let A := Nat × Nat × Nat × Nat
+  have hc : Primrec (fun p : A => p.1) := Primrec.fst
+  have ht : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
+  have hn : Primrec (fun p : A => p.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hk : Primrec (fun p : A => p.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  exact (run_primitive.comp ((hc.pair (ht.pair hn)).pair hk)).to_comp
+
+theorem partialRecursive : Targets.PartialRecursive := by
+  let A := (Nat × Nat) × Nat
+  have hc : Primrec (fun p : A × Nat => p.1.1.1) :=
+    Primrec.fst.comp (Primrec.fst.comp Primrec.fst)
+  have ht : Primrec (fun p : A × Nat => p.1.1.2) :=
+    Primrec.snd.comp (Primrec.fst.comp Primrec.fst)
+  have hn : Primrec (fun p : A × Nat => p.1.2) := Primrec.snd.comp Primrec.fst
+  have hr : Primrec (fun p : A × Nat => run p.1.1.1 p.1.1.2 p.1.2 p.2) :=
+    run_primitive.comp ((hc.pair (ht.pair hn)).pair Primrec.snd)
+  have hp : Primrec (fun p : A × Nat => encodedFiniteTest (run p.1.1.1 p.1.1.2 p.1.2 p.2)) :=
+    encodedFiniteAlgorithmsPrimitiveRecursive.1.comp hr
+  have hsearch : Partrec (fun p : A => search p.1.1 p.1.2 p.2) :=
+    Partrec.rfind hp.to_comp.partrec.to₂
+  have hnormal : Primrec rawNormalCode := Primrec.nat_iff.mpr rawNormalPrimitiveRecursive
+  have hguard : PrimrecPred (fun p : A => rawNormalCode p.2 = 1) :=
+    Primrec.eq.comp (hnormal.comp Primrec.snd) (Primrec.const 1)
+  let flag : A → Nat := fun p => if rawNormalCode p.2 = 1 then 1 else 0
+  have hflag : Computable flag :=
+    (Primrec.ite hguard (Primrec.const 1) (Primrec.const 0)).to_comp
+  have hbranch : Partrec (fun p : A × Nat => search p.1.1.1 p.1.1.2 p.1.2) :=
+    hsearch.comp Computable.fst
+  exact (Partrec.nat_casesOn_right hflag (Computable.const 0) hbranch.to₂).of_eq (fun p => by
+    by_cases h : rawNormalCode p.2 = 1 <;> simp [flag, h, countPartial])
+
+theorem countComputable : Targets.CountComputable := by
+  apply partialRecursive.of_eq_tot
+  intro p
+  classical
+  unfold countValue
+  rw [Part.getOrElse_of_dom _ (partialTotal p.1.1 p.1.2 p.2) 0]
+  exact Part.get_mem (partialTotal p.1.1 p.1.2 p.2)
+
+theorem initial_primitive : Primrec initial :=
+  encodedNodeCode_primrec encodedKernelBuildersPrimitiveRecursive.1
+    (Primrec.const 0) (Primrec.const 0)
+
+attribute [local irreducible] countValue initial
+
+theorem sourceCountComputable : Targets.SourceCountComputable := by
+  have hc : Computable (fun p : Nat × Nat × Nat => p.2.1) := Computable.fst.comp Computable.snd
+  have ht : Computable (fun p : Nat × Nat × Nat => p.2.2) := Computable.snd.comp Computable.snd
+  have hi : Computable (fun p : Nat × Nat × Nat => initial p.1) :=
+    initial_primitive.to_comp.comp Computable.fst
+  exact countComputable.comp ((hc.pair ht).pair hi)
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduled.Proof

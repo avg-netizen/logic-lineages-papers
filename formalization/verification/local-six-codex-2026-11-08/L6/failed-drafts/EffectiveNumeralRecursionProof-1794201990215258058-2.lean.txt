@@ -1,0 +1,230 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeralCompositionProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeralRecursionAssemblyProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Construction
+open GorbowSyntax GorbowPRProgram GorbowPRDefiningEquations GorbowPRChildTags GorbowSubstitution
+open GorbowFormulaSubstitution GorbowClosedEquality
+open Family List.Vector
+
+private def recursionNumSub {n : Nat} (v : List.Vector Nat n) (i : Fin n) : Term 0 := Term.numeral (v.get i)
+
+private theorem recursionSubCall {ctx out arity : Nat} (tag : Nat)
+    (args : List.Vector (Term ctx) arity) (sigma : Fin ctx → Term out) :
+    substitute sigma (call tag args) = call tag (args.map (substitute sigma)) :=
+  GorbowPRCallCongruence.Proof.callSubstitution ctx out arity tag args sigma
+
+private theorem recursionSubArguments {n : Nat} (v : List.Vector Nat n) :
+    (argumentVariables n).map (substitute (recursionNumSub v)) = GorbowPRNumeralCalculation.numeralArguments v := by
+  apply List.Vector.ext
+  intro i
+  simp [argumentVariables,recursionNumSub,GorbowPRNumeralCalculation.numeralArguments,substitute]
+
+private theorem recursionSubTail {n : Nat} (y : Nat) (v : List.Vector Nat n) :
+    (tailVariables n).map (substitute (Fin.cases (Term.numeral y) (recursionNumSub v))) =
+      GorbowPRNumeralCalculation.numeralArguments v := by
+  apply List.Vector.ext
+  intro i
+  simp [tailVariables,recursionNumSub,GorbowPRNumeralCalculation.numeralArguments,substitute]
+
+private theorem recursionSubNumeral {a b : Nat} (sigma : Fin a → Term b) (k : Nat) :
+    substitute sigma (Term.numeral k) = Term.numeral k :=
+  GorbowHeaderSubstitutionProof.numerals a b sigma k
+
+private theorem instantiateStepCall {n : Nat} (tag y : Nat)
+    (xs : List.Vector (Term 0) n) (t : Term 0) :
+    instantiateTerm (call tag ((Term.numeral y : Term 1) ::ᵥ .var 0 ::ᵥ
+      xs.map (liftClosedTerm 1))) t = call tag (Term.numeral y ::ᵥ t ::ᵥ xs) := by
+  have hl : (xs.map (liftClosedTerm 1)).map (substitute (Fin.cases t Fin.elim0)) = xs := by
+    apply List.Vector.ext
+    intro i
+    simp only [List.Vector.get_map]
+    exact GorbowClosedEqualityProof.closedTransport 1 _ _
+  simp only [instantiateTerm,recursionSubCall,List.Vector.map_cons,
+    recursionSubNumeral,substitute,Fin.cases_zero,hl]
+
+theorem recursion {m : Nat} (f : Program m) (g : Program (m+2))
+    (hf : NodeCertificates f) (hg : NodeCertificates g) :
+    NodeCertificates (.recursion f g) := by
+  let q := Program.recursion f g
+  let Rb := fun p : Input m => NodeSupport.check q p.1
+  let phi := fun z : Nat × Input m => calculation z.2.1 q (z.1 ::ᵥ z.2.2)
+  have hphi : FormulaEffective phi := FormulaEffective.calculation q
+    (Primrec.fst.comp Primrec.snd)
+    (Primrec.vector_cons.comp Primrec.fst (Primrec.snd.comp Primrec.snd))
+  have hbase : HasCertificates Rb (fun p => phi (0,p)) := by
+    let numbers := fun p : Input m => GorbowPRNumeralCalculation.numeralArguments p.2
+    let lhs := fun p : Input m => call p.1 (.zero ::ᵥ argumentVariables m)
+    let rhs := fun p : Input m => call (p.1+1) (argumentVariables m)
+    have htag : Primrec (fun p : Input m => p.1+1) := Primrec.succ.comp Primrec.fst
+    have hnum : ∀ i, TermEffective (fun p : Input m => (numbers p).get i) :=
+      TermEffective.numeralArguments Primrec.snd
+    have hl : TermEffective lhs := TermEffective.call Primrec.fst
+      (fun _ => (.zero ::ᵥ argumentVariables m))
+      (fun i => TermEffective.constant ((.zero ::ᵥ argumentVariables m).get i))
+    have hr : TermEffective rhs := TermEffective.call htag (fun _ => argumentVariables m)
+      (fun i => TermEffective.constant ((argumentVariables m).get i))
+    have hroot0 := HasCertificates.nodeEquationInstance q lhs rhs hl hr
+      (by intro p; exact List.mem_cons_self)
+      (fun i => (show TermEffective (fun p : Input m => recursionNumSub p.2 i) from
+        TermEffective.numeral (Primrec.vector_get.comp Primrec.snd (Primrec.const i))))
+    have hroot : HasCertificates Rb (fun p : Input m => Formula.equal
+        (call p.1 (.zero ::ᵥ numbers p)) (call (p.1+1) (numbers p))) := by
+      simpa only [lhs,rhs,recursionSubCall,List.Vector.map_cons,substitute,
+        recursionSubArguments,numbers] using hroot0
+    have hchild : HasCertificates Rb (fun p : Input m => calculation (p.1+1) f p.2) := by
+      have hi := HasCertificates.comp (fun p : Input m => NodeSupport.check f p.1) hf
+        (htag.pair Primrec.snd)
+      apply HasCertificates.monotonic _ Rb _ hi
+      intro p raw h
+      exact HasCertificates.finiteCheckInclusion _ _
+        (fun sigma hs => NodeSupport.baseIncluded f g p.1 sigma hs) raw h
+    have hleftArgs : ∀ i, TermEffective (fun p : Input m => (.zero ::ᵥ numbers p).get i) := by
+      intro i
+      cases i using Fin.cases with
+      | zero => exact TermEffective.constant .zero
+      | succ i => simpa only [List.Vector.get_cons_succ] using hnum i
+    have hleft := TermEffective.call Primrec.fst (fun p : Input m => .zero ::ᵥ numbers p) hleftArgs
+    have hright := TermEffective.call htag numbers hnum
+    have hvalue : TermEffective (fun p : Input m => (Term.numeral (evaluate f p.2) : Term 0)) :=
+      TermEffective.numeral ((GorbowPRProgram.Proof.primitiveEvaluation m f).comp Primrec.snd)
+    have hjoined := HasCertificates.transitivity Rb hleft hright hvalue hroot hchild
+    simpa only [phi,calculation,q,numbers,GorbowPRNumeralCalculation.numeralArguments,List.Vector.map_cons,
+      evaluate,List.Vector.head_cons,List.Vector.tail_cons,Nat.rec_zero,Term.numeral] using hjoined
+  let R := fun z : Nat × Input m => Rb z.2
+  let tag := fun z : Nat × Input m => z.2.1
+  let xs := fun z : Nat × Input m => z.2.2
+  let prevV := fun z : Nat × Input m => z.1 ::ᵥ xs z
+  let nextV := fun z : Nat × Input m => (z.1+1) ::ᵥ xs z
+  let previous := fun z : Nat × Input m => evaluate q (prevV z)
+  let numbers := fun z : Nat × Input m => GorbowPRNumeralCalculation.numeralArguments (xs z)
+  let oldCall := fun z : Nat × Input m => call (tag z) (GorbowPRNumeralCalculation.numeralArguments (prevV z))
+  let oldNum := fun z : Nat × Input m => (Term.numeral (previous z) : Term 0)
+  let newCall := fun z : Nat × Input m => call (tag z) (GorbowPRNumeralCalculation.numeralArguments (nextV z))
+  let gtag := fun z : Nat × Input m => tag z+stepTag f
+  let withCall := fun z : Nat × Input m => Term.numeral z.1 ::ᵥ oldCall z ::ᵥ numbers z
+  let withNum := fun z : Nat × Input m => Term.numeral z.1 ::ᵥ oldNum z ::ᵥ numbers z
+  let values := fun z : Nat × Input m => z.1 ::ᵥ previous z ::ᵥ xs z
+  let targetValue := fun z : Nat × Input m => (Term.numeral (evaluate g (values z)) : Term 0)
+  have htag : Primrec tag := Primrec.fst.comp Primrec.snd
+  have hxs : Primrec xs := Primrec.snd.comp Primrec.snd
+  have hprevV : Primrec prevV := Primrec.vector_cons.comp Primrec.fst hxs
+  have hnextV : Primrec nextV := Primrec.vector_cons.comp (Primrec.succ.comp Primrec.fst) hxs
+  have hprevious : Primrec previous := (GorbowPRProgram.Proof.primitiveEvaluation (m+1) q).comp hprevV
+  have hgtag : Primrec gtag := Primrec.nat_add.comp htag (Primrec.const (stepTag f))
+  have hvalues : Primrec values := Primrec.vector_cons.comp Primrec.fst (Primrec.vector_cons.comp hprevious hxs)
+  have hnum : ∀ i, TermEffective (fun z : Nat × Input m => (numbers z).get i) :=
+    TermEffective.numeralArguments hxs
+  have hOldCall : TermEffective oldCall := TermEffective.call htag _ (TermEffective.numeralArguments hprevV)
+  have hOldNum : TermEffective oldNum := TermEffective.numeral hprevious
+  have hNewCall : TermEffective newCall := TermEffective.call htag _ (TermEffective.numeralArguments hnextV)
+  have hCallArgs : ∀ i, TermEffective (fun z : Nat × Input m => (withCall z).get i) := by
+    intro i
+    cases i using Fin.cases with
+    | zero => exact TermEffective.numeral Primrec.fst
+    | succ i =>
+        cases i using Fin.cases with
+        | zero => exact hOldCall
+        | succ i => simpa only [withCall,List.Vector.get_cons_succ] using hnum i
+  have hNumArgs : ∀ i, TermEffective (fun z : Nat × Input m => (withNum z).get i) := by
+    intro i
+    cases i using Fin.cases with
+    | zero => exact TermEffective.numeral Primrec.fst
+    | succ i =>
+        cases i using Fin.cases with
+        | zero => exact hOldNum
+        | succ i => simpa only [withNum,List.Vector.get_cons_succ] using hnum i
+  have hCall := TermEffective.call hgtag withCall hCallArgs
+  have hNum := TermEffective.call hgtag withNum hNumArgs
+  have hTarget : TermEffective targetValue := TermEffective.numeral
+    ((GorbowPRProgram.Proof.primitiveEvaluation (m+2) g).comp hvalues)
+  have hG : HasCertificates R (fun z : Nat × Input m =>
+      Formula.equal (call (gtag z) (withNum z)) (targetValue z)) := by
+    have hi := HasCertificates.comp (fun p : Input (m+2) => NodeSupport.check g p.1) hg
+      (hgtag.pair hvalues)
+    have ht : HasCertificates R (fun z : Nat × Input m => calculation (gtag z) g (values z)) := by
+      apply HasCertificates.monotonic _ R _ hi
+      intro z raw h
+      exact HasCertificates.finiteCheckInclusion _ _
+        (fun sigma hs => NodeSupport.stepIncluded f g (tag z) sigma hs) raw h
+    simpa only [calculation,values,withNum,oldNum,numbers,targetValue,
+      GorbowPRNumeralCalculation.numeralArguments,List.Vector.map_cons] using ht
+  let lhs := fun z : Nat × Input m => call (tag z) (.succ (.var 0) ::ᵥ tailVariables m)
+  let rhs := fun z : Nat × Input m => call (gtag z)
+    (.var 0 ::ᵥ call (tag z) (.var 0 ::ᵥ tailVariables m) ::ᵥ tailVariables m)
+  have hl : TermEffective lhs := TermEffective.call htag
+    (fun _ => (.succ (.var 0) ::ᵥ tailVariables m))
+    (fun i => TermEffective.constant ((.succ (.var 0) ::ᵥ tailVariables m).get i))
+  have hRArgs : ∀ i, TermEffective (fun z : Nat × Input m =>
+      (.var 0 ::ᵥ call (tag z) (.var 0 ::ᵥ tailVariables m) ::ᵥ tailVariables m).get i) := by
+    intro i
+    cases i using Fin.cases with
+    | zero => exact TermEffective.constant (.var 0)
+    | succ i =>
+        cases i using Fin.cases with
+        | zero =>
+            exact TermEffective.call htag (fun _ => .var 0 ::ᵥ tailVariables m)
+              (fun j => TermEffective.constant ((.var 0 ::ᵥ tailVariables m).get j))
+        | succ i => exact TermEffective.constant ((tailVariables m).get i)
+  have hr : TermEffective rhs := TermEffective.call hgtag _ hRArgs
+  have hSigma : ∀ i : Fin (m+1), TermEffective (fun z : Nat × Input m =>
+      (Fin.cases (motive := fun _ : Fin (m+1) => Term 0)
+        (Term.numeral z.1) (recursionNumSub (xs z))) i) := by
+    intro i
+    cases i using Fin.cases with
+    | zero => exact TermEffective.numeral Primrec.fst
+    | succ i => exact TermEffective.numeral (Primrec.vector_get.comp hxs (Primrec.const i))
+  have hroot0 := HasCertificates.nodeEquationInstance q lhs rhs hl hr
+    (by intro z; exact List.mem_cons_of_mem _ List.mem_cons_self) hSigma
+  have hroot : HasCertificates R (fun z : Nat × Input m => Formula.equal
+      (newCall z) (call (gtag z) (withCall z))) := by
+    simpa only [lhs,rhs,recursionSubCall,List.Vector.map_cons,substitute,Fin.cases_zero,
+      recursionSubTail,newCall,withCall,oldCall,nextV,prevV,numbers,
+      GorbowPRNumeralCalculation.numeralArguments,List.Vector.map_cons,Term.numeral] using hroot0
+  let F := fun z : Nat × Input m => call (gtag z)
+    ((Term.numeral z.1 : Term 1) ::ᵥ .var 0 ::ᵥ (numbers z).map (liftClosedTerm 1))
+  have hFArgs : ∀ i, TermEffective (fun z : Nat × Input m =>
+      ((Term.numeral z.1 : Term 1) ::ᵥ .var 0 ::ᵥ (numbers z).map (liftClosedTerm 1)).get i) := by
+    intro i
+    cases i using Fin.cases with
+    | zero => exact TermEffective.numeral Primrec.fst
+    | succ i =>
+        cases i using Fin.cases with
+        | zero => exact TermEffective.constant (.var 0)
+        | succ i => simpa only [List.Vector.get_cons_succ,List.Vector.get_map] using (hnum i).liftedClosed
+  have hF : TermEffective F := TermEffective.call hgtag _ hFArgs
+  have hCong0 := HasCertificates.unaryCongruenceRule R hF hOldCall hOldNum
+  have hCong : HasCertificates R (fun z : Nat × Input m =>
+      Formula.imp (.equal (oldCall z) (oldNum z))
+        (.equal (call (gtag z) (withCall z)) (call (gtag z) (withNum z)))) := by
+    simpa only [F,instantiateStepCall,withCall,withNum] using hCong0
+  have hp : FormulaEffective (fun z : Nat × Input m => Formula.equal (oldCall z) (oldNum z)) :=
+    FormulaEffective.equal hOldCall hOldNum
+  have hrootP := HasCertificates.lift R (FormulaEffective.equal hNewCall hCall) hp hroot
+  have hfirst := HasCertificates.transitivityUnder R hp hNewCall hCall hNum hrootP hCong
+  have hGP := HasCertificates.lift R (FormulaEffective.equal hNum hTarget) hp hG
+  have hfinal := HasCertificates.transitivityUnder R hp hNewCall hNum hTarget hfirst hGP
+  have hnextValue (z : Nat × Input m) :
+      targetValue z = (Term.numeral (evaluate q (nextV z)) : Term 0) := by
+    change Term.numeral (evaluate g (z.1 ::ᵥ evaluate (Program.recursion f g)
+      (z.1 ::ᵥ xs z) ::ᵥ xs z)) =
+      Term.numeral (evaluate (Program.recursion f g) ((z.1+1) ::ᵥ xs z))
+    exact congrArg (Term.numeral : Nat → Term 0)
+      ((show evaluate (Program.recursion f g) ((z.1+1) ::ᵥ xs z) =
+          evaluate g (z.1 ::ᵥ evaluate (Program.recursion f g)
+            (z.1 ::ᵥ xs z) ::ᵥ xs z) from
+        GorbowPRProgram.Proof.recursionSuccessor m f g (xs z) z.1).symm)
+  have hstep : HasCertificates R (fun z : Nat × Input m =>
+      Formula.imp (phi (z.1,z.2)) (phi (z.1+1,z.2))) := by
+    simpa only [hnextValue,phi,calculation,tag,xs,prevV,nextV,previous,oldCall,oldNum,newCall]
+      using hfinal
+  have hall := HasCertificates.recursionFamily Rb phi hphi hbase hstep
+  have hpInput : Primrec (fun z : Input (m+1) => (z.2.head,(z.1,z.2.tail))) :=
+    (Primrec.vector_head.comp Primrec.snd).pair
+      (Primrec.fst.pair (Primrec.vector_tail.comp Primrec.snd))
+  have h := HasCertificates.comp (fun z : Nat × Input m => Rb z.2) hall hpInput
+  simpa only [phi,List.Vector.cons_head_tail] using h
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Construction

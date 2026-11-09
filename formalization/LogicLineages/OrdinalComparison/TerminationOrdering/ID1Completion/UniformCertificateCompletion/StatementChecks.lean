@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.Proof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.StatementChecks
+theorem factorization_exact : Targets.ActualParameterizedQuotientEdgeFactorization :=
+  Proof.actualParameterizedQuotientEdgeFactorization
+#print axioms factorization_exact
+theorem typedPropagation_exact : Targets.ActualParameterizedQuotientEdgeTypedPropagation :=
+  Proof.actualParameterizedQuotientEdgeTypedPropagation
+#print axioms typedPropagation_exact
+theorem calibration_exact : Targets.ActualOriginalUniformQuotientEdgeCalibration :=
+  Proof.actualOriginalUniformQuotientEdgeCalibration
+#print axioms calibration_exact
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.StatementChecks

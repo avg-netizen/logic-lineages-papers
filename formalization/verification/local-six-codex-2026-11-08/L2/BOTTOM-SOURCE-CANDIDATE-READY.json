@@ -1,0 +1,70 @@
+{
+  "utc": "2026-11-09T02:31:14.271793+00:00",
+  "status": "READY complete exact candidate after passed own target preflight; unaccepted",
+  "target_preflight": "build-reports/1794190333701876210-2.json",
+  "frozen": "BOTTOM-SOURCE-FROZEN.json",
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceClosedProof.lean",
+      "sha256": "3aedbe0e79ad46de9ce501a10db379e2e8c19aacf9be5dadd10f153b7f651365"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceDefinitions.lean",
+      "sha256": "567973b797f5fdd85c8a0ba08f3bcc9ae2713adfb337a7902021b80d72b75b7a"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceProof.lean",
+      "sha256": "0c67a11e65e73c6e422bb7a3c0756a3a822f1cd744ccc4da86d98ffeb64ea074"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceShapeProof.lean",
+      "sha256": "b650b0324ec6544dd2202a3dbb66db01797a912a14406e84443911fd0ad7bd0b"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceStatementChecks.lean",
+      "sha256": "fb0d304b7d11e853f173a01483d0965d9b988ff41850c0773bdb380b5c661415"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceTargets.lean",
+      "sha256": "fb89dc91e8b3a073f8bced6777720830c1c61db3db8bc2722c8deb0ae582c047"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomSourceValidityProof.lean",
+      "sha256": "302badb406d5750e26954017a62981ecc26a05b20c2aee1be3d6ab872f2791a5"
+    }
+  ],
+  "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSourceStatementChecks",
+  "exact_alias": "bottomTyping_exact",
+  "scope": "Actual original raw canonical typed-bottom acceptance at arbitrary symbolic Gamma, only original pair-graph internal antecedent. Proof assembles original validator source V, member, type, fixedness and typed checker. No symbolic semantic reflection.",
+  "estimate": {
+    "stale_local_modules": 11,
+    "owned": 10,
+    "shared": 1,
+    "shared_name": "InternalOriginalUniformContextMembershipInternalProof",
+    "upstream_build": false
+  },
+  "dependency_order": "After earlier BottomParameter target-only retry and earlier BottomRepresentative/BottomDescent exact turns; no unrelated rebuild.",
+  "proof_dependency_split": "Basic graph transport moved to BottomDescentTransportProof (same existing theorem names); direct BottomSource typing imports one-step helpers only. Iteration binder/PA induction remains in the separate descent gate. Frozen definitions and target formulas unchanged.",
+  "proof_dependency_pins": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomRepresentativeInternalProof.lean",
+      "sha256": "b8cf3c6b8e9b70c1497d2836e96f03b3d310d30661008e4f6fdda2501bff50e3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentTransportProof.lean",
+      "sha256": "2829b4651ea607ea44d9906803850ad0d1587206bbd4cc5888ce39985fd686fb"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentStepProof.lean",
+      "sha256": "bd8efe4feb7610a2c87428ef8eca1904e6126b5a54f3db85717824b5aac02866"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomParameterInternalProof.lean",
+      "sha256": "e7b60fd962846139584e0b652fa5910ed9e406f3b774a572b9c35662bd794334"
+    }
+  ],
+  "ready_pin_refresh_after_central_repair": "Current Rep READY-4 and Parameter READY-2 support namespace fixes; frozen specs unchanged, still dependency-held.",
+  "proactive_namespace_repair": "BottomSourceValidityProof explicitly opens actual InternalBetaTotalityProof.addHyp supplier, learned from central Parameter diagnostic. Frozen source target unchanged; no Rep/Param held closure affected.",
+  "central_full_manifest": "verification/local-six-codex-2026-11-08/L2/BOTTOM-SOURCE-CENTRAL-READY.json",
+  "dependencies_paid": true
+}

@@ -1,0 +1,128 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardTargets
+public import LogicLineages.OrdinalComparison.FullWordGuardCompletion.ComparisonProof
+public import Mathlib.Algebra.BigOperators.Ring.List
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardProof
+open PolynomialGraphCompletion WordLinearDecisionCompletion FullWordGuardCompletion
+open LogicLineages.ModelsAlgebra.Forests
+
+theorem scaleRow_value (z : Int) (r : Row) (ν : Nat → Nat) :
+    RowValue (scaleRow z r) ν = z*RowValue r ν := by
+  simp only [RowValue,scaleRow,List.map_map,Function.comp_def,mul_assoc,
+    List.sum_map_mul_left]
+  ring
+
+theorem shiftConstant_value (z : Int) (r : Row) (ν : Nat → Nat) :
+    RowValue (shiftConstant z r) ν = RowValue r ν+z := by
+  simp only [RowValue,shiftConstant]
+  ring
+
+theorem signFormula_correct (sign : Nat) (r : Row) (ν : Nat → Nat) :
+    Formula.eval ν (RankedWordDecisionCompletion.signFormula sign r) ↔
+      SignAtom sign (RowValue r ν) := by
+  by_cases h0 : sign = 0
+  · subst sign
+    simp only [RankedWordDecisionCompletion.signFormula,if_true,Formula.eval,
+      Atom.eval,shiftConstant_value,scaleRow_value]
+    simp only [SignAtom]
+    omega
+  · by_cases h1 : sign = 1
+    · subst sign
+      simp only [RankedWordDecisionCompletion.signFormula,if_false,if_true,
+        Formula.eval,Atom.eval,scaleRow_value]
+      simp only [SignAtom]
+      omega
+    · by_cases h2 : sign = 2
+      · subst sign
+        simp only [RankedWordDecisionCompletion.signFormula,if_false,if_true,
+          Formula.eval,Atom.eval,shiftConstant_value]
+        simp only [SignAtom]
+        omega
+      · simp [RankedWordDecisionCompletion.signFormula,h0,h1,h2,Formula.eval,SignAtom]
+
+theorem disjoin_correct (ps : List Formula) (ν : Nat → Nat) :
+    Formula.eval ν (disjoin ps) ↔ ∃ p ∈ ps, Formula.eval ν p := by
+  induction ps with
+  | nil => simp [disjoin,Formula.eval]
+  | cons p ps ih =>
+      change (Formula.eval ν p ∨ Formula.eval ν (disjoin ps)) ↔ _
+      rw [ih]
+      simp
+
+def SafeToken (D maximum : Nat) (ν : Nat → Nat) (t : Token) : Prop :=
+  WordAllowed D t.2 ∧ WordDomain t.2 (ν t.1) ∧ (t.1 = maximum → t.2 = [])
+
+def SafeFormula (D maximum : Nat) (ν : Nat → Nat) (p : Formula) : Prop :=
+  ∀ t ∈ Formula.tokens p, SafeToken D maximum ν t
+
+theorem safeFormula_facts (D maximum : Nat) (ν : Nat → Nat) (p : Formula)
+    (hp : SafeFormula D maximum ν p) :
+    Formula.allowed D p ∧ Formula.meaningful p ν ∧ linear maximum p = true := by
+  refine ⟨fun t ht => (hp t ht).1,fun t ht => (hp t ht).2.1,?_⟩
+  apply List.all_eq_true.mpr
+  intro t ht
+  by_cases hx : t.1 = maximum
+  · simp [hx,(hp t ht).2.2 hx]
+  · simp [hx]
+
+theorem signFormula_tokens_subset (sign : Nat) (r : Row) :
+    ∀ t ∈ Formula.tokens (RankedWordDecisionCompletion.signFormula sign r),
+      t ∈ r.2.map Prod.snd := by
+  intro t ht
+  unfold RankedWordDecisionCompletion.signFormula at ht
+  split_ifs at ht
+  all_goals
+    try { simpa [Formula.tokens,CotreePresburgerUnit.Boolean.atoms,Atom.row,
+      shiftConstant,scaleRow,List.map_map,Function.comp_def] using ht }
+  all_goals
+    simp [Formula.tokens,CotreePresburgerUnit.Boolean.atoms] at ht
+
+theorem signFormula_safe (D maximum : Nat) (ν : Nat → Nat) (sign : Nat) (r : Row)
+    (hr : ∀ a ∈ r.2, SafeToken D maximum ν a.2) :
+    SafeFormula D maximum ν (RankedWordDecisionCompletion.signFormula sign r) := by
+  intro t ht
+  obtain ⟨a,ha,rfl⟩ := List.mem_map.mp (signFormula_tokens_subset sign r t ht)
+  exact hr a ha
+
+theorem disjoin_safe (D maximum : Nat) (ν : Nat → Nat) (ps : List Formula)
+    (hps : ∀ p ∈ ps, SafeFormula D maximum ν p) :
+    SafeFormula D maximum ν (disjoin ps) := by
+  induction ps with
+  | nil =>
+      intro t ht
+      simp [disjoin,Formula.tokens,CotreePresburgerUnit.Boolean.atoms] at ht
+  | cons p ps ih =>
+      intro t ht
+      have hmem : t ∈ Formula.tokens p ∨ t ∈ Formula.tokens (disjoin ps) := by
+        simpa [disjoin,Formula.tokens,CotreePresburgerUnit.Boolean.atoms,
+          List.flatMap_append] using ht
+      rcases hmem with ht | ht
+      · exact hps p List.mem_cons_self t ht
+      · exact ih (fun q hq => hps q (List.mem_cons_of_mem p hq)) t ht
+
+theorem constantFormula_safe (D maximum : Nat) (ν : Nat → Nat) (b : Bool) :
+    SafeFormula D maximum ν (if b then .top else .bot) := by
+  cases b <;> intro t ht <;>
+    simp [Formula.tokens,CotreePresburgerUnit.Boolean.atoms] at ht
+
+theorem literalDifference_value (u v : Token) (ν : Nat → Nat) :
+    RowValue (literalDifference u v) ν =
+      (wordValue u.2 (ν u.1) : Int)-(wordValue v.2 (ν v.1) : Int) := by
+  simp [literalDifference,RowValue] <;> ring
+
+theorem difference_order (a b desired : Nat) (hd : desired ≤ 2) :
+    SignAtom desired ((a : Int)-(b : Int)) ↔ orderNat a b = desired := by
+  have hcases : desired = 0 ∨ desired = 1 ∨ desired = 2 := by omega
+  rcases hcases with rfl | rfl | rfl <;>
+    simp [SignAtom] <;> omega
+
+theorem reverse_order (a b desired : Nat) (hd : desired ≤ 2) :
+    orderNat b a = reverseOrder desired ↔ orderNat a b = desired := by
+  have hcases : desired = 0 ∨ desired = 1 ∨ desired = 2 := by omega
+  rcases hcases with rfl | rfl | rfl <;>
+    simp [reverseOrder] <;> omega
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardProof

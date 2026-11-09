@@ -1,0 +1,27 @@
+# Final raw-positive shape/depth guards: independent source analysis
+
+This is a proof design, not an accepted theorem or a source change. R001 edge APIs and the READY R002 closure remain immutable. L1 owns the eventual new raw-positive wrapper/calibration and output-certificate reassembly; L2 owns actualJ nonbottom and internal I(bottom)/spine.
+
+## Exact placement
+
+Keep the original parameterized edge checker E and its existing reflexive/positive path programs unchanged. At inputs [canonicalSource,canonicalTarget,originalPathCode,parameter], define a new raw-positive program as the conjunction of a literal nonbottom-source guard, a conditional full bottom-spine measure guard, and the old positive checker. Preserve the original GammaGuardedSource outer wrappers. The separate parameter is never inserted into source certificate encodings.
+
+Use the existing normalization of the bottom test to select constant one on the nonbottom branch and constant zero on the bottom branch. A proved not-bottom accepting graph produces normalization output zero and then guard output one by the existing zero-branch rule. Conversely guard output one conflicts with an actual bottom output-one graph through normalization acceptance and successor-branch elimination. No assumed Boolean-range law is needed internally. The exact shared literal AST is frozen in PositiveGuardDefinitions.lean / POSITIVE-GUARD-INTERFACE.json; generic bottom/measure arguments instantiate the SAME L2 bottomTest and BottomSpineMeasure.measure. Both endpoints use that one measure. When source flag equals1, the target flag must equal1 and targetDepth<sourceDepth; the strict-less AST receives [targetDepth,sourceDepth]. Every other source flag makes this factor vacuous through exact-one normalization.
+
+## All-input native rejection
+
+For any raw supplied natural x with bottomValue(x)=1, suppose a native quotient edge from x exists. Its definition exposes a raw packed q in the original universe, a genuine raw step out of q, and representativeCode(q)=x. Under the original subtype-closure hypothesis, the existing attained representative and primary-bottom-view invariance prove bottomValue(representativeCode(q))=bottomValue(packedNumber(q)). Thus q itself has a bottom view. The unchanged raw bottom-step terminality contradicts its step. Existing noPositiveOfNoEdge then rejects every positive path from x.
+
+This argument handles every raw x, including malformed/off-universe input codes: an accepted edge itself supplies the source q and its original universe condition. It avoids adding tau-in-S or successful-decoding hypotheses to the wrapper calibration. For a bottom-rejecting input, the old numeric positive test is therefore already zero; for every other input, conjunction with guard one preserves its original zero-or-one output. Global source wrappers must retain original fallback behavior outside admitted closed windows, or use a checked arbitrary-decoded-context calibration.
+
+The extra spine factor is also natively redundant: original PrimarySpineInvariant preserves both BottomSpine and spineDepth, raw StepSpineDecrease preserves true-spine shape and strictly lowers depth, and the existing original quotient/positive-path trace facts compose these. An accepted edge itself supplies original source-universe witnesses, so calibration must cover every raw endpoint and code without an added successful-decoding or type-membership hypothesis.
+
+Named source suppliers: NumberedBottomAccessibilityProof.actualBottomStepTerminal; NumberedBottomAccessibilitySupportProof.primaryBottomView and noPositiveOfNoEdge; NumberedLeastCodeRepresentativeProof.representativeAttained. L2's BottomRepresentativeEvaluationProof.representativeBottomValue and bottomValuePacked express the exact native root-view facts above, but must have accepted source pins before reuse as an adopted dependency.
+
+## Internal certified lift
+
+From the new input positive certificate, recover the old positive certificate and run R002 concrete edge transport plus the already checked generic parameterized path induction. Retain both supplied actualJ outputs and the supplied original path-map output. L2's concrete actualJ nonbottom theorem supplies nonbottom of the first output from the original typed/valid/member premises, without an output-shape premise. Rebuild the output nonbottom guard. For the conditional spine factor, split the source function flag internally; L2 full actualJ mark transport must preserve that flag and increment function depth by one for BOTH supplied outputs. The true case preserves strict depth decrease under +1; the false case makes the output condition vacuous. Conjoin both factors with the transported original positive checker. Then assemble the literal original object/context acceptance factors and discharge the unchanged unqualified CertifiedApplicationLift.
+
+No inference foldN(s)=bottom implies raw s=bottom is needed. No new global fold induction, argument normalization fixedness, fixed-Gamma premise, semantic-to-internal reflection, or source-rule repair is proposed. Whole ID1 accessibility and the separate multiset/constructor/lambda/substitution arguments remain pending.
+
+L2 owns the exact internal guard extraction/introduction and typed fixed-type depth induction; L1 owns native all-input guard calibration and final source assembly. Full ordinary/numbered/lambda inverse source cases and transparent direct/multiset checkers remain separately unpaid; final source AST is not frozen merely by freezing this shared guard interface.

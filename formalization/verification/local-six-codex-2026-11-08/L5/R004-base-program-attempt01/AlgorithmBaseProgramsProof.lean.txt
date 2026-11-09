@@ -1,0 +1,148 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmGuardProgramsProof
+public import LogicLineages.OrdinalComparison.OuterShiftNormalization.ProgramsProof
+public import LogicLineages.OrdinalComparison.CounterWordGuardCompletion.ProgramsProof
+public import LogicLineages.OrdinalComparison.RangePhiFactorization.ProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmPrograms
+open PolynomialGraphCompletion WordGuardCompletion Algorithm
+
+theorem foldMax_primitive : Primrec foldMax :=
+  Primrec.list_foldr Primrec.id (Primrec.const 0)
+    (Primrec.nat_max.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)).to₂
+
+theorem natSum_primitive : Primrec (List.sum : List Nat → Nat) :=
+  Primrec.list_foldr Primrec.id (Primrec.const 0)
+    (Primrec.nat_add.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)).to₂
+
+theorem intSum_primitive : Primrec (List.sum : List Int → Int) :=
+  Primrec.list_foldr Primrec.id (Primrec.const 0)
+    (LayeredComparison.IntegerAlgorithms.Proof.add_primitive.comp
+      (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)).to₂
+
+theorem rowTail_primitive : Primrec rowTail :=
+  foldMax_primitive.comp (Primrec.list_map Primrec.snd
+    (WordGuardCompletion.Proof.wordTail_primitive.comp
+      (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))).to₂)
+
+theorem normalizeRow_primitive : Primrec normalizeRow := by
+  have hshift : Primrec (fun p : Row × Item => p.2.1*OuterShiftNormalization.outerShift p.2.2.2) :=
+    LayeredComparison.IntegerAlgorithms.Proof.mul_primitive.comp (Primrec.fst.comp Primrec.snd)
+      (OuterShiftNormalization.Proof.outerShift_primitive.comp
+        (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))
+  have hsum : Primrec (fun r : Row => (r.2.map
+      (fun a => a.1*OuterShiftNormalization.outerShift a.2.2)).sum) :=
+    intSum_primitive.comp (Primrec.list_map Primrec.snd hshift.to₂)
+  have hi : Primrec (fun p : Row × Item =>
+      (p.2.1,p.2.2.1,OuterShiftNormalization.coreWord p.2.2.2)) :=
+    (Primrec.fst.comp Primrec.snd).pair
+      ((Primrec.fst.comp (Primrec.snd.comp Primrec.snd)).pair
+        (OuterShiftNormalization.Proof.coreWord_primitive.comp
+          (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))))
+  exact (LayeredComparison.IntegerAlgorithms.Proof.add_primitive.comp Primrec.fst hsum).pair
+    (Primrec.list_map Primrec.snd hi.to₂)
+
+theorem nonzeroItems_primitive : Primrec (fun xs : List Item => xs.filter (fun a => a.1 != 0)) := by
+  have hp : PrimrecPred (fun a : Item => a.1 ≠ 0) :=
+    (Primrec.eq.comp Primrec.fst (Primrec.const (0 : Int))).not
+  apply (Primrec.listFilter hp).of_eq
+  intro xs
+  apply List.filter_congr
+  intro a
+  simp
+
+theorem canonicalRow_primitive : Primrec canonicalRow :=
+  (Primrec.fst.comp normalizeRow_primitive).pair
+    (nonzeroItems_primitive.comp (Primrec.snd.comp normalizeRow_primitive))
+
+theorem active_primitive : Primrec active := by
+  have hp : PrimrecPred (fun a : Item => a.2.2 ≠ []) :=
+    (Primrec.eq.comp (Primrec.snd.comp Primrec.snd) (Primrec.const ([] : Word))).not
+  apply ((Primrec.listFilter hp).comp Primrec.snd).of_eq
+  intro r
+  apply List.filter_congr
+  intro a
+  simp
+
+theorem linearPart_primitive : Primrec linearPart := by
+  have hp : PrimrecPred (fun a : Item => a.2.2 = []) :=
+    Primrec.eq.comp (Primrec.snd.comp Primrec.snd) (Primrec.const ([] : Word))
+  apply ((Primrec.listFilter hp).comp Primrec.snd).of_eq
+  intro r
+  apply List.filter_congr
+  intro a
+  simp
+
+theorem hasMaximum_primitive : Primrec₂ hasMaximum := by
+  have hf : Primrec (fun p : Nat × Row => active p.2) := active_primitive.comp Primrec.snd
+  have hs : Primrec₂ (fun p : Nat × Row => fun state : Item × Bool =>
+      (state.1.2.1 == p.1) || state.2) :=
+    Primrec.or.comp (Primrec.beq.comp
+      (Primrec.fst.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.snd)))
+      (Primrec.fst.comp Primrec.fst)) (Primrec.snd.comp Primrec.snd)
+  apply (Primrec.list_foldr hf (Primrec.const false) hs).of_eq
+  intro p
+  unfold hasMaximum
+  induction active p.2 with
+  | nil => rfl
+  | cons a xs ih => simp [ih]
+
+theorem head_primitive : Primrec head := by
+  have hh : Primrec (fun a : Item => (a.2.2.reverse.head?).getD phiLetter) :=
+    Primrec.option_getD.comp
+      (Primrec.list_head?.comp (Primrec.list_reverse.comp (Primrec.snd.comp Primrec.snd)))
+      (Primrec.const phiLetter)
+  apply hh.of_eq
+  intro a
+  simp [head]
+
+theorem innerWord_primitive : Primrec innerWord := by
+  have hw : Primrec (fun a : Item => a.2.2) := Primrec.snd.comp Primrec.snd
+  apply (Primrec.list_take.comp (Primrec.nat_sub.comp
+    (Primrec.list_length.comp hw) (Primrec.const 1)) hw).of_eq
+  intro a
+  exact List.dropLast_eq_take.symm
+
+theorem isCounter_primitive : Primrec isCounter :=
+  Primrec.beq.comp (Primrec.fst.comp head_primitive) (Primrec.const 4)
+
+theorem counterIndex_primitive : Primrec counterIndex :=
+  Primrec.nat_sub.comp (Primrec.fst.comp (Primrec.snd.comp head_primitive)) (Primrec.const 3)
+
+theorem mass_primitive : Primrec mass :=
+  Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp head_primitive))
+
+theorem rank_primitive : Primrec rank :=
+  Primrec.ite (Primrec.eq.comp (Primrec.fst.comp head_primitive) (Primrec.const 4))
+    (Primrec.fst.comp (Primrec.snd.comp head_primitive)) (Primrec.const 0)
+
+theorem leader_primitive : Primrec leader := by
+  have hl : Primrec (fun a : Item => innerWord a ++
+      CounterWordGuardCompletion.leaderWord (counterIndex a) (mass a) ++ [phiLetter]) :=
+    Primrec.list_append.comp innerWord_primitive
+      (Primrec.list_append.comp
+        (CounterWordGuardCompletion.Proof.leaderWord_primitive.comp
+          (counterIndex_primitive.pair mass_primitive)) (Primrec.const [phiLetter]))
+  have hs := Primrec.cond isCounter_primitive hl (Primrec.snd.comp Primrec.snd)
+  apply ((Primrec.fst.comp Primrec.snd).pair hs).of_eq
+  intro a
+  cases hc : isCounter a <;> simp [leader,leaderValueWord,hc]
+
+theorem preimage_primitive : Primrec preimage := by
+  have hc : Primrec (fun a : Item => innerWord a++
+      CounterWordGuardCompletion.leaderWord (counterIndex a) (mass a)) :=
+    Primrec.list_append.comp innerWord_primitive
+      (CounterWordGuardCompletion.Proof.leaderWord_primitive.comp
+        (counterIndex_primitive.pair mass_primitive))
+  have hp : Primrec (fun a : Item => innerWord a++[RangePhiFactorization.predecessorHead (head a)]) :=
+    Primrec.list_append.comp innerWord_primitive
+      (Primrec.list_cons.comp (RangePhiFactorization.Proof.predecessorHead_primitive.comp head_primitive)
+        (Primrec.const []))
+  have ho := Primrec.ite (Primrec.eq.comp (Primrec.fst.comp head_primitive) (Primrec.const 1))
+    innerWord_primitive hp
+  apply (Primrec.cond isCounter_primitive hc ho).of_eq
+  intro a
+  cases h : isCounter a <;> simp [preimage,h]
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmPrograms

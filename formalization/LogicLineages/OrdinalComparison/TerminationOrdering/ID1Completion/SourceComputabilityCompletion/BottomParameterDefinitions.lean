@@ -1,0 +1,33 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomParameter
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open InternalOriginalUniformDescentSelection (Data)
+open SourceComputabilityCompletion.BottomRepresentative (bottomTest)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Inputs [value,parameter]. Only the context selector is retained; the
+original object Gamma selector is replaced by the original zero code. -/
+def contextParameter : Program 2 :=
+  pairOf (leftOf (.projection 1)) (InternalAcceptance.constantZero 2)
+
+def exactBottom : Program 2 :=
+  .composition bottomTest (fun _ : Fin 1 => .projection 0)
+
+def atContext (old : Program 2) : Program 2 :=
+  .composition old ![.projection 0,contextParameter]
+
+/-- The literal original output is retained off EXACT bottom codes,
+including all malformed nonbottom inputs. No new source set is introduced. -/
+def normalized (old : Program 2) : Program 2 :=
+  InternalAcceptance.branch exactBottom old (atContext old)
+
+/-- Apply before the representative guard and before the single existing
+member normalization. Representative and member leaves remain literal. -/
+def baseData (data : Data) : Data :=
+  ⟨normalized data.oldSource, normalized data.oldTarget,
+    data.oldRepresentative, data.member⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomParameter

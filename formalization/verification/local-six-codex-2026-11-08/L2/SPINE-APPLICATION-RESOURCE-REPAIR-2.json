@@ -1,0 +1,50 @@
+{
+  "utc": "2026-11-09T05:29:55.175623+00:00",
+  "status": "second unchanged-RSS safety stop fully reaped; no exact gate accepted",
+  "receipt": "build-reports/1794201669846202647-2.json",
+  "receipt_sha256": "3b1ce94392302089a4fcaf820b09736f0f13f2c7d334ab2a45dba6593540389c",
+  "native_row": {
+    "module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationBuilderProof",
+    "returncode": 77,
+    "seconds": 18.436,
+    "observed_cpu_seconds": 17.89,
+    "last_wait_channel": "futex_do_wait",
+    "stopped_threads": [
+      {
+        "tid": 12,
+        "state": "S",
+        "cpu_seconds": 0.06,
+        "wait_channel": "futex_do_wait"
+      },
+      {
+        "tid": 13,
+        "state": "S",
+        "cpu_seconds": 0.0,
+        "wait_channel": "do_epoll_wait"
+      },
+      {
+        "tid": 14,
+        "state": "R",
+        "cpu_seconds": 17.83,
+        "wait_channel": "0"
+      }
+    ],
+    "peak_process_tree_rss_kib": 1574396,
+    "memory_observation_failure": {
+      "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t12\nNgid:\t0\nPid:\t12\nPPid:\t2\nTracerPid:\t0\nUid:\t1002\t1002\t1002\t1002\nGid:\t1003\t1003\t1003\t1003\nFDSize:\t64\nGroups:\t1003 65534 \nNStgid:\t12\nNSpid:\t12\nNSpgid:\t12\nNSsid:\t12\nKthread:\t0\nVmPeak:\t 5380272 kB\nVmSize:\t 5355688 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1574420 kB\nVmRSS:\t 1574420 kB\nRssAnon:\t  661708 kB\nRssFile:\t  912712 kB\nRssShmem:\t       0 kB\nVmData:\t 5080276 kB\nVmStk:\t     136 kB\nVmExe:\t       4 kB\nVmLib:\t  102176 kB\nVmPTE:\t   48492 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/55410\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tf\nCpus_allowed_list:\t0-3\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t114\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n",
+      "statm": "1338922 393605 228178 1 0 1270103 0\n"
+    },
+    "discarded_failed_outputs": [],
+    "source_sha256": "9ef8ceed00cad48e696fc24eb8e84fc7e91465542d69cb2de8a9fd604f08140b",
+    "log": "build-reports/1794201669846202647-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-SpineApplicationBuilderProof.log"
+  },
+  "preserved_failed_source": "failed-candidates/1794201669846202647-2-SpineApplicationBuilderProof.lean.txt",
+  "repair": "Isolate oldR/V/member projections in opaque rawFacts at ARBITRARY Data; add PROGRAM-level active identity. Thin concrete builder consumes facts without repeated formula normalization over selectedData. No new target premise or calibration reflection.",
+  "new_modules": [
+    "SpineApplicationRawFactsProof",
+    "SpineApplicationProgramsProof"
+  ],
+  "frozen_targets_unchanged": true,
+  "source_resource_limits_unchanged": true,
+  "passed_lower_sources_immutable": true
+}

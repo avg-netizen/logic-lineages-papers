@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LiteralProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LiteralStatementChecks
+
+theorem displayedThetaBridge : LiteralTargets.DisplayedThetaBridge := LiteralProof.displayedThetaBridge
+theorem literalDirectTheta : LiteralTargets.LiteralDirectTheta := LiteralProof.literalDirectTheta
+theorem literalFiniteIteration : LiteralTargets.LiteralFiniteIteration := LiteralProof.literalFiniteIteration
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LiteralStatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LiteralStatementChecks.displayedThetaBridge
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LiteralStatementChecks.literalDirectTheta
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LiteralStatementChecks.literalFiniteIteration
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion

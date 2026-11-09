@@ -1,0 +1,47 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalityDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomSpineDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSpineMeasure
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open NumberedRewriteSyntax NumberedRewriteReduction
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Source meaning, independent of any numeric execution or selected checker. -/
+def bottomFlag {Symbol : Type} {arity : Symbol → Nat} {Gamma : List Ty} {tau : Ty} :
+    AuxTerm Symbol arity Gamma tau → Nat
+  | .bottom _ => 1
+  | .app f _ => bottomFlag f
+  | _ => 0
+
+/-- Original constructor tags classify leaves; no ambient Gamma is inspected. -/
+def leaf : Program 2 :=
+  pairOf (InternalApplicationStepPeel.same
+    (leftOf (rightOf (.projection (0 : Fin 2))))
+    (BottomRepresentative.constant 3)) (InternalAcceptance.constantZero 2)
+
+/-- Inputs [domain,codomain,functionMark,argumentMark,parameter]. The flag
+and depth come from the original function child; its depth is incremented. -/
+def combine : Program 5 :=
+  pairOf (leftOf (.projection 2))
+    (.composition .succ (fun _ : Fin 1 => rightOf (.projection 2)))
+
+/-- Reuse the checked total original result stack and its unchanged
+2*payload+1 fuel. Every tag-two root opens. No new recursion backend. -/
+def fold : Program 2 :=
+  InternalParameterizedApplicationResultStack.foldP
+    (InternalLessThan.constantOne 2) leaf combine
+
+def measure : Program 1 :=
+  .composition fold ![.projection 0,InternalAcceptance.constantZero 1]
+
+def meaning {Symbol : Type} {arity : Symbol → Nat} {Gamma : List Ty} {tau : Ty}
+    (q : AuxTerm Symbol arity Gamma tau) : Nat :=
+  Nat.pair (bottomFlag q) (NumberedBottomSpine.spineDepth q)
+
+def graph {α : Type} (out value : OrdinaryArithmetic.Term α) : Formula α :=
+  graph1 measure out value
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSpineMeasure

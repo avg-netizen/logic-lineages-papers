@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.ForwardGuardProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.ForwardGuardStatementChecks
+
+theorem forwardGuard_exact : ForwardGuardTargets.ActualOriginalForwardGuardTransport :=
+  ForwardGuardProof.actualOriginalForwardGuardTransport
+
+#print axioms forwardGuard_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.ForwardGuardStatementChecks

@@ -1,0 +1,46 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedPathCheckerSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof (conjunctionRename)
+open InternalOriginalUniformApplicationTypingApplicationProof (applicationPremisesRename)
+open InternalTagArithmeticSyntaxProof (OTerm z suc sucRelabel zRelabel)
+open SpineApplicationTargets (selectedData)
+open UniformCertificateCompletion
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem acceptedRename {α β : Type} (bottom measure : Program 1) (edge : Program 4)
+    (x y certificate parameter : OTerm α) (j : α → β) :
+    (PositiveGuard.accepted bottom measure edge x y certificate parameter).relabel j =
+      PositiveGuard.accepted bottom measure edge (x.relabel j) (y.relabel j)
+        (certificate.relabel j) (parameter.relabel j) := by
+  simp only [PositiveGuard.accepted,graph4Rename,InternalOriginalStepGuard.one,sucRelabel,zRelabel]
+
+def hypotheses {α : Type} (data : Data) (window : Program 1) (oldStep : Program 4)
+    (arrow d e f g a out other certificate mapped parameter : OTerm α) : Formula α :=
+  graph2 (BottomRepresentative.windowAt window) (suc z) f parameter ⊓
+    (InternalOriginalUniformApplicationTyping.applicationPremises (selectedData data window)
+      arrow d e f a out parameter ⊓
+      (InternalOriginalUniformApplicationTyping.applicationPremises (selectedData data window)
+        arrow d e g a other parameter ⊓
+        (PositiveGuard.accepted BottomRepresentative.bottomTest BottomSpineMeasure.measure
+          (edgeChecker (selectedData data window) oldStep) f g certificate parameter ⊓
+          InternalParameterizedPathChecker.positiveGraph (edgeChecker (selectedData data window) oldStep)
+            out other mapped parameter)))
+
+theorem hypothesesRename {α β : Type} (data : Data) (window : Program 1) (oldStep : Program 4)
+    (arrow d e f g a out other certificate mapped parameter : OTerm α) (j : α → β) :
+    (hypotheses data window oldStep arrow d e f g a out other certificate mapped parameter).relabel j =
+      hypotheses data window oldStep (arrow.relabel j) (d.relabel j) (e.relabel j)
+        (f.relabel j) (g.relabel j) (a.relabel j) (out.relabel j) (other.relabel j)
+        (certificate.relabel j) (mapped.relabel j) (parameter.relabel j) := by
+  simp only [hypotheses,conjunctionRename,graph2Rename,sucRelabel,zRelabel,
+    applicationPremisesRename,acceptedRename,InternalParameterizedPathCheckerSyntaxProof.positiveRename]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationSyntaxProof

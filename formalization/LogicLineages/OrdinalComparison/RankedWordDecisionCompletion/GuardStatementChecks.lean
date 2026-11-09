@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks
+
+theorem named_maximum_comparison : GuardTargets.NamedMaximumComparison :=
+  GuardProof.namedMaximumComparison
+
+#print axioms named_maximum_comparison
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks

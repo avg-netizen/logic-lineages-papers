@@ -1,0 +1,119 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomParameterTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomParameterEvaluationProof
+open Source NumberedRewriteSyntax NumberedAuxiliaryCoding NumberedAuxiliaryDecoding
+open NumberedNumericDecoding NumberedNumericCarrier NumberedLeastCodeRepresentative
+open InternalOriginalUniformDescentSelection (Data Calibrated)
+open InternalOriginalUniformParameterLeaves (sourceValue targetValue decodedValue)
+open InternalOriginalStepGuard (sourceValidityValue targetValidityValue)
+open InternalApplicationCertificateConstructorsEvaluationProof InternalApplicationStepPeelEvaluationSupportProof
+open InternalAcceptanceCalibrationProof
+open SourceComputabilityCompletion.BottomRepresentative (bottomValue)
+open SourceComputabilityCompletion.BottomRepresentativeEvaluationProof
+  (bottomTestEvaluation parameterGamma decodedLeafSlice)
+open SourceComputabilityCompletion.BottomParameter
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+
+theorem typeNumberOfDecode (value : Nat) (tau : Ty) (h : decodeType value = some tau) :
+    typeNumber tau = value := by
+  have hp := (Option.filter_eq_some_iff.mp h).2
+  simpa only [decide_eq_true_eq] using hp
+
+/-- Explicitly retain both successful and failed raw type decodes. -/
+theorem bottomPackedDecode (n : Nat) (arity : Fin n → Nat) (Gamma : List Ty) (value : Nat) :
+    decodePackedNumber n arity Gamma (Nat.pair value (Nat.pair 3 value)) =
+      (decodeType value).map (fun tau => (⟨tau,AuxTerm.bottom tau⟩ : Packed (Fin n) arity Gamma)) := by
+  cases ht : decodeType value with
+  | none => simp [decodePackedNumber,packedParse,Nat.unpair_pair,ht]
+  | some tau =>
+    have hn := typeNumberOfDecode value tau ht
+    have hb : decodeCode n (Nat.pair 3 value) = some (.bottom tau) := by
+      simp [decodeCode,codeParse,Nat.unpair_pair,ht,codeNumber,hn]
+    simp [decodePackedNumber,packedParse,Nat.unpair_pair,ht,hb,decodePacked,decodeTerm,
+      packedNumber,NumberedAuxiliaryCoding.termCode,codeNumber,hn]
+
+theorem sourceBottomGamma (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n))
+    (S Gamma Delta : List Ty) (value : Nat) :
+    sourceValidityValue n arity symbols S Gamma (Nat.pair value (Nat.pair 3 value)) =
+      sourceValidityValue n arity symbols S Delta (Nat.pair value (Nat.pair 3 value)) := by
+  cases ht : decodeType value <;>
+    simp [sourceValidityValue,rawCarrierTest,decodeUniverse,bottomPackedDecode,ht,universeTest]
+
+theorem targetBottomGamma (n : Nat) (arity : Fin n → Nat) (Gamma Delta : List Ty) (value : Nat) :
+    targetValidityValue n arity Gamma (Nat.pair value (Nat.pair 3 value)) =
+      targetValidityValue n arity Delta (Nat.pair value (Nat.pair 3 value)) := by
+  cases ht : decodeType value <;>
+    simp [targetValidityValue,bottomPackedDecode,ht]
+
+theorem contextParameterEvaluation (value parameter : Nat) :
+    evaluate contextParameter (ofFn ![value,parameter]) = Nat.pair (Nat.unpair parameter).1 0 := by
+  rw [contextParameter,pairOfEvaluation,leftOfEvaluation]
+  rfl
+
+theorem normalizedEvaluation (old : Program 2) (value parameter : Nat) :
+    evaluate (normalized old) (ofFn ![value,parameter]) =
+      if bottomValue value = 0 then evaluate old (ofFn ![value,parameter])
+      else evaluate old (ofFn ![value,Nat.pair (Nat.unpair parameter).1 0]) := by
+  rw [normalized,evalBranch]
+  change (if evaluate SourceComputabilityCompletion.BottomRepresentative.bottomTest (ofFn ![value]) = 0
+    then evaluate old (ofFn ![value,parameter])
+    else evaluate old (ofFn ![value,evaluate contextParameter (ofFn ![value,parameter])])) = _
+  rw [bottomTestEvaluation,contextParameterEvaluation]
+
+/-- The same original leaves agree at the two raw parameters on exact
+bottom inputs. Malformed Contexts give zero at both; successful Contexts
+may have noncanonical encodings and need not be subtype closed. -/
+theorem leavesAtContext (n : Nat) (arity : Fin n → Nat) (data : Data)
+    (hc : Calibrated n arity data) (value parameter : Nat)
+    (hb : bottomValue value ≠ 0) :
+    evaluate data.oldSource (ofFn ![value,Nat.pair (Nat.unpair parameter).1 0]) =
+        evaluate data.oldSource (ofFn ![value,parameter]) ∧
+    evaluate data.oldTarget (ofFn ![value,Nat.pair (Nat.unpair parameter).1 0]) =
+        evaluate data.oldTarget (ofFn ![value,parameter]) := by
+  have hshape : value = Nat.pair (Nat.unpair value).1 (Nat.pair 3 (Nat.unpair value).1) := by
+    by_contra h
+    exact hb (by simp only [bottomValue,h,ite_false])
+  cases hd : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) (Nat.unpair parameter).1 with
+  | none =>
+    rw [hc.1,hc.1,hc.2.1,hc.2.1]
+    simp [sourceValue,targetValue,decodedValue,Nat.unpair_pair,hd]
+  | some ctx =>
+    obtain ⟨Gamma,ho⟩ := parameterGamma parameter
+    obtain ⟨Delta,hzero⟩ := parameterGamma (Nat.pair (Nat.unpair parameter).1 0)
+    have hd0 : Encodable.decode (Nat.unpair (Nat.pair (Nat.unpair parameter).1 0)).1 = some ctx := by
+      simpa only [Nat.unpair_pair] using hd
+    have hs := decodedLeafSlice n arity data hc parameter ctx hd Gamma ho value
+    have hz := decodedLeafSlice n arity data hc (Nat.pair (Nat.unpair parameter).1 0) ctx hd0 Delta hzero value
+    constructor
+    · rw [hz.1,hs.1]
+      conv_lhs => rw [hshape]
+      conv_rhs => rw [hshape]
+      exact sourceBottomGamma n arity ctx.1.1 ctx.1.2 Delta Gamma (Nat.unpair value).1
+    · rw [hz.2.1,hs.2.1]
+      conv_lhs => rw [hshape]
+      conv_rhs => rw [hshape]
+      exact targetBottomGamma n arity Delta Gamma (Nat.unpair value).1
+
+theorem normalizedLeavesUnchanged (n : Nat) (arity : Fin n → Nat) (data : Data)
+    (hc : Calibrated n arity data) (v : List.Vector Nat 2) :
+    evaluate (normalized data.oldSource) v = evaluate data.oldSource v ∧
+      evaluate (normalized data.oldTarget) v = evaluate data.oldTarget v := by
+  have hv : v = ofFn ![v.get 0,v.get 1] := List.Vector.ext fun i => by
+    refine Fin.cases ?_ (Fin.cases ?_ (fun k => Fin.elim0 k)) i <;> rfl
+  rw [hv,normalizedEvaluation,normalizedEvaluation]
+  by_cases hb : bottomValue (v.get 0) = 0
+  · simp only [hb,ite_true,and_self]
+  · simpa only [hb,ite_false] using leavesAtContext n arity data hc (v.get 0) (v.get 1) hb
+
+theorem actualOriginalBottomParameterCalibration :
+    BottomParameterTargets.ActualOriginalBottomParameterCalibration := by
+  intro n arity data hc
+  refine ⟨?_,?_,hc.2.2.1,hc.2.2.2⟩
+  · intro v
+    exact (normalizedLeavesUnchanged n arity data hc v).1.trans (hc.1 v)
+  · intro v
+    exact (normalizedLeavesUnchanged n arity data hc v).2.trans (hc.2.1 v)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomParameterEvaluationProof

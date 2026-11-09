@@ -1,0 +1,14 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/NonlinearProjectionCompletion/PlainMaximumResidueProof.lean:77:2: error: Type mismatch: After simplification, term
+  remaining_linear bound r i hallowed
+ has type
+  ((remainingOccurrences i r).all fun a => linearSummand i a.2) = true
+but is expected to have type
+  (!(Formula.atom
+                (Atom.divisible m
+                  ((r.1.1.add (Term.multiply (headCoefficient i r).toNat (Term.numeral (fastControlResidue (m + 1)))),
+                      r.1.2.add
+                        (Term.multiply (-headCoefficient i r).toNat (Term.numeral (fastControlResidue (m + 1))))),
+                    remainingOccurrences i r))).parameters.contains
+          i &&
+      (remainingOccurrences i r).all fun a => linearSummand i a.2) =
+    true

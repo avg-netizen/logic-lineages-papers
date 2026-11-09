@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InternalFiniteSourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InternalFiniteSource.StatementChecks
+
+theorem exactFiniteCodes : Targets.ExactFiniteCodes := Proof.exactFiniteCodes
+theorem actualInternalFiniteAxioms : Targets.ActualInternalFiniteAxioms := Proof.actualInternalFiniteAxioms
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InternalFiniteSource.StatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InternalFiniteSource.StatementChecks.exactFiniteCodes
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InternalFiniteSource.StatementChecks.actualInternalFiniteAxioms
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.InternalFiniteSource

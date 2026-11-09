@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeralProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.StatementChecks
+
+theorem exactRegistryAxioms : Targets.ExactRegistryAxioms := Proof.exactRegistryAxioms
+theorem fixedProgramCertificates : Targets.FixedProgramCertificates := Proof.fixedProgramCertificates
+theorem tagParametricCertificates : TagTargets.TagParametricCertificates := Proof.tagParametricCertificates
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.StatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.StatementChecks.exactRegistryAxioms
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.StatementChecks.fixedProgramCertificates
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.StatementChecks.tagParametricCertificates
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral

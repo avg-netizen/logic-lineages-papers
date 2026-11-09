@@ -1,0 +1,176 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformContextMembershipEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformDescentSelectionEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomAccessibilityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeEvaluationProof
+open Source NumberedRewriteSyntax NumberedRewriteReduction NumberedFiniteUniverse
+open NumberedLeastCodeRepresentative NumberedNumericCarrier NumberedNumericDecoding
+open NumberedBottomAccessibilitySupportProof
+open InternalOriginalUniformDescentSelection
+open InternalOriginalUniformParameterLeaves
+open InternalOriginalUniformParameterLeavesCalibrationProof
+open InternalOriginalUniformContextMembershipEvaluationProof
+open InternalApplicationCertificateConstructors
+open InternalQuotientEdgeChecker (targetRepresentativeValue)
+open InternalOriginalStepGuard (sourceValidityValue targetValidityValue)
+open InternalApplicationCertificateConstructorsEvaluationProof InternalApplicationStepPeelEvaluationSupportProof
+open InternalAcceptanceCalibrationProof
+open SourceComputabilityCompletion.BottomRepresentative
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+
+theorem constantEvaluation {k : Nat} (value : Nat) (xs : List.Vector Nat k) :
+    evaluate (constant value) xs = value := by
+  induction value with
+  | zero => rfl
+  | succ value ih =>
+    change Nat.succ (evaluate (constant value) xs) = Nat.succ value
+    exact congrArg Nat.succ ih
+
+theorem bottomCodeEvaluation (value : Nat) :
+    evaluate bottomCode (ofFn ![value]) = Nat.pair value (Nat.pair 3 value) := by
+  rw [bottomCode,pairOfEvaluation,pairOfEvaluation,constantEvaluation]
+  rfl
+
+theorem bottomTestEvaluation (value : Nat) :
+    evaluate bottomTest (ofFn ![value]) = bottomValue value := by
+  rw [bottomTest,sameEvaluation]
+  change (if value = evaluate bottomCode (ofFn ![evaluate (leftOf (.projection 0)) (ofFn ![value])])
+    then 1 else 0) = _
+  rw [leftOfEvaluation,bottomCodeEvaluation]
+  rfl
+
+theorem bottomValuePacked {n : Nat} {arity : Fin n → Nat} {Gamma : List Ty}
+    (q : Packed (Fin n) arity Gamma) :
+    bottomValue (packedNumber q) = if (bottomView q).isSome then 1 else 0 := by
+  obtain ⟨tau,q⟩ := q
+  cases q <;>
+    simp [bottomValue,packedNumber,NumberedAuxiliaryCoding.termCode,codeNumber,bottomView,Nat.pair_eq_pair]
+
+theorem representativeBottomValue (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n))
+    (S Gamma : List Ty) (hclosed : SubtypeClosed (fun tau => tau ∈ S))
+    (q : Packed (Fin n) arity Gamma) (hq : InUniverse symbols S q.2) :
+    bottomValue (representativeCode symbols S q) = bottomValue (packedNumber q) := by
+  obtain ⟨r,hr,he⟩ := NumberedLeastCodeRepresentativeProof.representativeAttained
+    n arity symbols S hclosed Gamma q hq
+  rw [he,bottomValuePacked,bottomValuePacked,primaryBottomView hr]
+
+theorem validRepresentativeBottomValue (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n))
+    (S Gamma : List Ty) (hclosed : SubtypeClosed (fun tau => tau ∈ S)) (value : Nat)
+    (hv : sourceValidityValue n arity symbols S Gamma value = 1) :
+    bottomValue (targetRepresentativeValue n arity symbols S Gamma value) = bottomValue value := by
+  cases hd : decodeUniverse n arity symbols S Gamma value with
+  | none => simp [sourceValidityValue,rawCarrierTest,hd] at hv
+  | some q =>
+    obtain ⟨hn,hq⟩ := (NumberedNumericCarrierProof.numericUniverseDecode n arity symbols S Gamma value q).mp hd
+    have hp := (Option.filter_eq_some_iff.mp hd).1
+    rw [targetRepresentativeValue,hp,← hn]
+    exact representativeBottomValue n arity symbols S Gamma hclosed q hq
+
+/-- One original decoded Gamma works for EVERY raw value at a parameter.
+No canonicality of the finite Context decoder is assumed. -/
+theorem parameterGamma (parameter : Nat) :
+    ∃ Gamma : List Ty, ∀ value : Nat, parameterObject value parameter = some (Gamma,value) := by
+  obtain ⟨obj,hd⟩ := JointGammaDomainCodecProof.actualObjectCodec.1
+    (Nat.pair (Nat.unpair parameter).2 0)
+  have he := (JointGammaDomainCodecProof.actualObjectCodec.2.1 _ obj).mp hd
+  have hg : Encodable.encode obj.1 = (Nat.unpair parameter).2 := by
+    have h := congrArg (fun k : Nat => (Nat.unpair k).1) he
+    simpa only [ContextUniform.objectCode,Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair] using h
+  refine ⟨obj.1,?_⟩
+  intro value
+  apply (JointGammaDomainCodecProof.actualObjectCodec.2.1 _ (obj.1,value)).mpr
+  simp only [ContextUniform.objectCode,Encodable.encode_prod_val,Encodable.encode_nat,hg]
+
+theorem decodedLeafSlice (n : Nat) (arity : Fin n → Nat) (data : Data)
+    (hc : Calibrated n arity data) (parameter : Nat) (ctx : OrdinaryArithmeticQuotient.Context n)
+    (hctx : Encodable.decode (Nat.unpair parameter).1 = some ctx) (Gamma : List Ty)
+    (ho : ∀ value : Nat, parameterObject value parameter = some (Gamma,value)) (value : Nat) :
+    evaluate data.oldSource (ofFn ![value,parameter]) =
+        sourceValidityValue n arity ctx.1.1 ctx.1.2 Gamma value ∧
+    evaluate data.oldTarget (ofFn ![value,parameter]) =
+        targetValidityValue n arity Gamma value ∧
+    evaluate data.oldRepresentative (ofFn ![value,parameter]) =
+        targetRepresentativeValue n arity ctx.1.1 ctx.1.2 Gamma value ∧
+    evaluate data.member (ofFn ![value,parameter]) =
+        InternalStructuralEndpointGuard.membershipValue ctx.1.2 value := by
+  rw [hc.1,hc.2.1,hc.2.2.1,hc.2.2.2]
+  simp only [sourceValue,targetValue,representativeValue,memberValue,decodedValue,
+    List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,hctx,ho value]
+  exact ⟨rfl,targetCalibration n arity Gamma value,
+    representativeCalibration n arity ctx.1.1 ctx.1.2 Gamma value,by trivial⟩
+
+theorem decodedValiditySlice (n : Nat) (arity : Fin n → Nat) (data : Data)
+    (hc : Calibrated n arity data) (parameter : Nat) (ctx : OrdinaryArithmeticQuotient.Context n)
+    (hctx : Encodable.decode (Nat.unpair parameter).1 = some ctx) (Gamma : List Ty)
+    (ho : ∀ value : Nat, parameterObject value parameter = some (Gamma,value)) (value : Nat) :
+    evaluate (validity data) (ofFn ![value,parameter]) =
+      sourceValidityValue n arity ctx.1.1 ctx.1.2 Gamma value := by
+  have hs := decodedLeafSlice n arity data hc parameter ctx hctx Gamma ho
+  exact (InternalParameterizedApplicationValidityFoldCalibrationProof.actualOriginalParameterizedValidityFoldCalibration
+    n arity ctx.1.1 ctx.1.2 Gamma data.oldSource data.oldTarget data.member parameter
+    (fun x => (hs x).1) (fun x => (hs x).2.1) (fun x => (hs x).2.2.2) value).2.2
+
+theorem windowAtEvaluation (window : Program 1) (value parameter : Nat) :
+    evaluate (windowAt window) (ofFn ![value,parameter]) =
+      evaluate window (ofFn ![(Nat.unpair parameter).1]) := by
+  change evaluate window (ofFn ![evaluate (leftOf (.projection 1)) (ofFn ![value,parameter])]) = _
+  rw [leftOfEvaluation]
+  rfl
+
+theorem sameBottomEvaluation (R : Program 2) (value parameter : Nat) :
+    evaluate (sameBottom R) (ofFn ![value,parameter]) =
+      if bottomValue (evaluate R (ofFn ![value,parameter])) = bottomValue value then 1 else 0 := by
+  rw [sameBottom,sameEvaluation]
+  change (if evaluate bottomTest (ofFn ![evaluate R (ofFn ![value,parameter])]) =
+    evaluate bottomTest (ofFn ![value]) then 1 else 0) = _
+  rw [bottomTestEvaluation,bottomTestEvaluation]
+
+theorem representativeUnchanged (n : Nat) (arity : Fin n → Nat) (data : Data) (window : Program 1)
+    (hc : Calibrated n arity data)
+    (hw : ∀ v, evaluate window v = GuardCalibration.validWindowValue n v) (v : List.Vector Nat 2) :
+    evaluate (representative data window) v = evaluate data.oldRepresentative v := by
+  have hv : v = ofFn ![v.get 0,v.get 1] := List.Vector.ext fun i => by
+    refine Fin.cases ?_ (Fin.cases ?_ (fun j => Fin.elim0 j)) i <;> rfl
+  rw [hv]
+  rw [BottomRepresentative.representative,evalBranch]
+  by_cases ha : evaluate (active data window) (ofFn ![v.get 0,v.get 1]) = 0
+  · simp only [ha,ite_true]
+  · simp only [ha,ite_false]
+    have hactive : evaluate (windowAt window) (ofFn ![v.get 0,v.get 1]) = 1 ∧
+        evaluate (validity (InternalOriginalUniformContextMembership.normalizeData data))
+          (ofFn ![v.get 0,v.get 1]) = 1 := by
+      by_contra h
+      apply ha
+      rw [active,conjunctionEvaluation]
+      simp only [h,ite_false]
+    have hwindow : GuardCalibration.validWindow n (Nat.unpair (v.get 1)).1 = 1 := by
+      simpa only [windowAtEvaluation,hw,GuardCalibration.validWindowValue,
+        List.Vector.get_ofFn,Matrix.cons_val_zero] using hactive.1
+    obtain ⟨ctx,hctx,hclosed⟩ :=
+      (GuardCalibrationProof.actualValidWindowCalibration n (Nat.unpair (v.get 1)).1).1.mp hwindow
+    obtain ⟨Gamma,ho⟩ := parameterGamma (v.get 1)
+    have hcN := actualOriginalUniformNormalizedMembershipCalibration n arity data hc
+    have hsource := decodedValiditySlice n arity
+      (InternalOriginalUniformContextMembership.normalizeData data) hcN (v.get 1) ctx hctx Gamma ho (v.get 0)
+    have hr := (decodedLeafSlice n arity data hc (v.get 1) ctx hctx Gamma ho (v.get 0)).2.2.1
+    have he : bottomValue (evaluate data.oldRepresentative (ofFn ![v.get 0,v.get 1])) =
+        bottomValue (v.get 0) := by
+      rw [hr]
+      exact validRepresentativeBottomValue n arity ctx.1.1 ctx.1.2 Gamma hclosed (v.get 0)
+        (hsource.symm.trans hactive.2)
+    rw [evalBranch,sameBottomEvaluation]
+    simp only [he,ite_true,Nat.one_ne_zero,ite_false]
+
+theorem actualOriginalBottomRepresentativeCalibration :
+    BottomRepresentativeTargets.ActualOriginalBottomRepresentativeCalibration := by
+  intro n arity data window hc hw
+  have hb : Calibrated n arity (baseData data window) := by
+    refine ⟨hc.1,hc.2.1,?_,hc.2.2.2⟩
+    intro v
+    exact (representativeUnchanged n arity data window hc hw v).trans (hc.2.2.1 v)
+  exact ⟨hb,actualOriginalUniformNormalizedMembershipCalibration n arity (baseData data window) hb⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomRepresentativeEvaluationProof

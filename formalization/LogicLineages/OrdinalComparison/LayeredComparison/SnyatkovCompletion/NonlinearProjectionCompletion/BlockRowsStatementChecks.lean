@@ -1,0 +1,35 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowsSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowsStatementChecks
+
+theorem actual_original_row_embedding : BlockRowsTargets.ActualOriginalRowEmbedding :=
+  BlockRowsProof.actualOriginalRowEmbedding
+theorem actual_original_formula_embedding : BlockRowsTargets.ActualOriginalFormulaEmbedding :=
+  BlockRowsProof.actualOriginalFormulaEmbedding
+theorem actual_initial_block_independence : BlockRowsTargets.ActualInitialBlockIndependence :=
+  BlockRowsProof.actualInitialBlockIndependence
+theorem actual_expanded_compilation : BlockRowsTargets.ActualExpandedCompilation :=
+  BlockRowsProof.actualExpandedCompilation
+theorem actual_source_substitution : BlockRowsTargets.ActualSourceSubstitution :=
+  BlockRowsProof.actualSourceSubstitution
+theorem exact_remaining_occurrences : BlockRowsTargets.ExactRemainingOccurrences :=
+  BlockRowsProof.exactRemainingOccurrences
+theorem exact_original_name_support : BlockRowsTargets.ExactOriginalNameSupport :=
+  BlockRowsProof.exactOriginalNameSupport
+theorem whole_block_parameter_independence : BlockRowsTargets.WholeBlockParameterIndependence :=
+  BlockRowsProof.wholeBlockParameterIndependence
+theorem exact_original_guarded_domains : BlockRowsTargets.ExactOriginalGuardedDomains :=
+  BlockRowsProof.exactOriginalGuardedDomains
+
+#print axioms actual_original_row_embedding
+#print axioms actual_original_formula_embedding
+#print axioms actual_initial_block_independence
+#print axioms actual_expanded_compilation
+#print axioms actual_source_substitution
+#print axioms exact_remaining_occurrences
+#print axioms exact_original_name_support
+#print axioms whole_block_parameter_independence
+#print axioms exact_original_guarded_domains
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowsStatementChecks

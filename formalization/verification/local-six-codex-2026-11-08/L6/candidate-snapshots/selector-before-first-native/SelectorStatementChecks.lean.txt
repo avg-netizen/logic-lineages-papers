@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SelectorProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SelectorStatementChecks
+
+theorem firstSelector : SelectorTargets.FirstSelector := Proof.firstSelector
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SelectorStatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SelectorStatementChecks.firstSelector
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion

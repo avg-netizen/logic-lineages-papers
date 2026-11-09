@@ -1,0 +1,21 @@
+{
+  "frozen_at_utc": "2026-11-09T02:42:28.489158+00:00",
+  "scope": "ordinary Hilbert quantifier helpers under already admitted source collapse/HB endpoint; no source theory extension",
+  "theorem_types": {
+    "existentialMonotonicity": "forall (T : Sentence -> Prop) {n : Nat} (a b : Formula (n+1)), Nonempty (Derivation T (.imp a b)) -> Nonempty (Derivation T (.imp (.ex a) (.ex b)))",
+    "existentialIntroduction": "forall (T : Sentence -> Prop) {n : Nat} (a : Formula (n+1)) (t : Term n), Nonempty (Derivation T (GorbowStandardInstances.instantiate a t)) -> Nonempty (Derivation T (.ex a))",
+    "existentialVacuity": "forall (T : Sentence -> Prop) {n : Nat} (b : Formula n), Nonempty (Derivation T (.imp (.ex (GorbowPACore.weaken b)) b))",
+    "existentialElimination": "forall (T : Sentence -> Prop) {n : Nat} (a : Formula (n+1)) (b : Formula n), Nonempty (Derivation T (.imp a (GorbowPACore.weaken b))) -> Nonempty (Derivation T (.imp (.ex a) b))"
+  },
+  "source_rules": [
+    "allInstantiate",
+    "allDistribute",
+    "allVacuous",
+    "existsDualForward",
+    "existsDualBackward",
+    "generalize",
+    "ordinary propositional rules"
+  ],
+  "exact_source_endpoint": "SelectedLocalHB remains unproved",
+  "elimination_frozen_at_utc": "2026-11-09T02:43:07.788969+00:00"
+}

@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ContractDefinitions
+public import Mathlib.Computability.Primrec.Basic
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.Targets
+
+/-- The ENTIRE paper08 thm:snyatkov endpoint. Arbitrary nesting, all natural
+quantifiers and every closed source sentence are included. This is an unpaid
+target, never a field or premise of a supporting proof. -/
+def FullSourceDecision : Prop :=
+  ∃ decision : Nat → Bool, Computable decision ∧
+    ∀ p : SourceFormula, p.variables = [] →
+      (decision p.encode = true ↔ p.eval (fun _ => 0))
+
+/-- Stronger source-preserving expanded-language QE contract corresponding to
+Snyatkov2008 Theorem2/Corollary2. The numerical compiler must actually be proved
+computable, on the fixed literal encodings. No QE field is postulated. -/
+def EffectiveExpandedElimination : Prop :=
+  ∃ (eliminate : SourceFormula → Matrix) (program : Nat → Nat),
+    Computable program ∧
+    (∀ p, program p.encode = (eliminate p).encode) ∧
+    (∀ p ν, (eliminate p).eval ν ↔ p.eval ν) ∧
+    (∀ p i, i ∈ (eliminate p).variables → i ∈ p.variables)
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.Targets

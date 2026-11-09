@@ -1,0 +1,212 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearProof
+open BlockRows TiedLinear
+
+theorem lift_variables (table : List Token) (x : Nat) (p : Formula) :
+    (liftFormula table x p).variables = (tokens p).map (tokenName table x) := by
+  induction p with
+  | truth => rfl
+  | falsity => rfl
+  | atom a =>
+    cases a <;> simp [liftFormula, liftAtom, liftRow, NormalForm.Formula.variables,
+      NormalForm.Atom.row, NormalForm.rowVariables, NormalForm.Summand.name,
+      tokens, rowTokens, Atom.row, List.map_map, Function.comp_def]
+  | negative p ih => exact ih
+  | conjunction p q ihp ihq =>
+    simp only [liftFormula, NormalForm.Formula.variables, ihp, ihq, tokens, List.map_append]
+  | disjunction p q ihp ihq =>
+    simp only [liftFormula, NormalForm.Formula.variables, ihp, ihq, tokens, List.map_append]
+
+theorem surviving_token (x : Nat) (p : Formula) (code : Nat)
+    (hc : code ∈ (LinearRows.eliminate 0 (liftFormula (tokens p) x p)).variables) :
+    ∃ t ∈ tokens p, tokenOfName (tokens p) x code = t ∧ t ≠ rawToken x := by
+  obtain ⟨hc0, hclift⟩ := (LinearRowsSupportProof.exactOutputSupport 0 _ code).mp hc
+  rw [lift_variables] at hclift
+  obtain ⟨t, ht, hname⟩ := List.mem_map.mp hclift
+  subst code
+  refine ⟨t, ht, literalTokenRoundTrip (tokens p) x t ht, ?_⟩
+  intro hraw
+  exact hc0 ((token_name_zero (tokens p) x t).mpr hraw)
+
+private theorem moved_variables_step (positive negative t : Term) (entries : List (Int × NormalForm.Summand))
+    (c : Int) (j : Nat) :
+    j ∈ (((.add (.multiply c.toNat t) positive,
+      .add (.multiply (-c).toNat t) negative), entries) : Row).variables ↔
+        j ∈ t.variables ∨ j ∈ ((positive, negative), entries : Row).variables := by
+  simp only [Row.variables, Term.variables, List.mem_append]
+  tauto
+
+private theorem kept_variables_step (r : Row) (c : Int) (s : NormalForm.Summand) (j : Nat) :
+    j ∈ (r.1, (c, s) :: r.2 : Row).variables ↔ j = s.name ∨ j ∈ r.variables := by
+  simp only [Row.variables, List.map_cons, List.mem_append, List.mem_cons]
+  tauto
+
+private theorem cons_variables_logic (P N T E : Prop) :
+    (T ∨ P ∨ N ∨ E) ↔ P ∨ N ∨ (T ∨ E) := by tauto
+
+private theorem lower_entries_variables (table : List Token) (x : Nat) (positive negative : Term)
+    (entries : List (Int × NormalForm.Summand)) (j : Nat) :
+    j ∈ (lowerEntries table x positive negative entries).variables ↔
+      j ∈ positive.variables ∨ j ∈ negative.variables ∨
+        ∃ a ∈ entries, j ∈ tokenVariables (lowerSummand table x a.2) := by
+  induction entries with
+  | nil => simp [lowerEntries, Row.variables]
+  | cons a entries ih =>
+    cases ht : lowerSummand table x a.2 with
+    | parameter t =>
+      have he : j ∈ (lowerEntries table x positive negative (a :: entries)).variables ↔
+          j ∈ t.variables ∨ j ∈ (lowerEntries table x positive negative entries).variables := by
+        simp only [lowerEntries, ht]
+        exact moved_variables_step _ _ t _ a.1 j
+      rw [he, ih]
+      simp only [List.exists_mem_cons_iff, ht, tokenVariables]
+      exact cons_variables_logic _ _ _ _
+    | occurrence s =>
+      have he : j ∈ (lowerEntries table x positive negative (a :: entries)).variables ↔
+          j = s.name ∨ j ∈ (lowerEntries table x positive negative entries).variables := by
+        simp only [lowerEntries, ht]
+        exact kept_variables_step _ a.1 s j
+      rw [he, ih]
+      simp only [List.exists_mem_cons_iff, ht, tokenVariables, List.mem_singleton]
+      exact cons_variables_logic _ _ _ _
+
+theorem lower_row_variables (table : List Token) (x : Nat) (r : NormalForm.Row)
+    (hp : PureRow r) (j : Nat) :
+    j ∈ (lowerRow table x r).variables ↔
+      ∃ code ∈ NormalForm.rowVariables r, j ∈ tokenVariables (tokenOfName table x code) := by
+  rw [lowerRow, lower_entries_variables]
+  simp only [Term.variables, List.not_mem_nil, false_or]
+  constructor
+  · rintro ⟨a, ha, hj⟩
+    obtain ⟨code, he⟩ := hp a ha
+    refine ⟨code, List.mem_map.mpr ⟨a, ha, ?_⟩, ?_⟩
+    · rw [he]; rfl
+    · simpa only [he, lowerSummand] using hj
+  · rintro ⟨code, hc, hj⟩
+    obtain ⟨a, ha, hname⟩ := List.mem_map.mp hc
+    obtain ⟨k, he⟩ := hp a ha
+    rw [he] at hname
+    change k = code at hname
+    subst code
+    exact ⟨a, ha, by simpa only [he, lowerSummand] using hj⟩
+
+theorem lower_formula_variables (table : List Token) (x : Nat) (p : NormalForm.Formula)
+    (hp : PureFormula p) (j : Nat) :
+    j ∈ (lowerFormula table x p).variables ↔
+      ∃ code ∈ p.variables, j ∈ tokenVariables (tokenOfName table x code) := by
+  induction p with
+  | truth => simp [lowerFormula, Formula.variables, NormalForm.Formula.variables]
+  | falsity => simp [lowerFormula, Formula.variables, NormalForm.Formula.variables]
+  | atom a =>
+    cases a <;> exact lower_row_variables table x _ hp j
+  | negative p ih => exact ih hp
+  | conjunction p q ihp ihq =>
+    change j ∈ (lowerFormula table x p).variables ++ (lowerFormula table x q).variables ↔ _
+    rw [List.mem_append, ihp hp.1, ihq hp.2]
+    constructor
+    · rintro (⟨code, hc, hj⟩ | ⟨code, hc, hj⟩)
+      · exact ⟨code, List.mem_append_left _ hc, hj⟩
+      · exact ⟨code, List.mem_append_right _ hc, hj⟩
+    · rintro ⟨code, hc, hj⟩
+      rcases List.mem_append.mp hc with h | h
+      · exact Or.inl ⟨code, h, hj⟩
+      · exact Or.inr ⟨code, h, hj⟩
+  | disjunction p q ihp ihq =>
+    change j ∈ (lowerFormula table x p).variables ++ (lowerFormula table x q).variables ↔ _
+    rw [List.mem_append, ihp hp.1, ihq hp.2]
+    constructor
+    · rintro (⟨code, hc, hj⟩ | ⟨code, hc, hj⟩)
+      · exact ⟨code, List.mem_append_left _ hc, hj⟩
+      · exact ⟨code, List.mem_append_right _ hc, hj⟩
+    · rintro ⟨code, hc, hj⟩
+      rcases List.mem_append.mp hc with h | h
+      · exact Or.inl ⟨code, h, hj⟩
+      · exact Or.inr ⟨code, h, hj⟩
+
+private theorem row_variables_tokens (r : Row) (j : Nat) :
+    j ∈ r.variables ↔ ∃ t ∈ rowTokens r, j ∈ tokenVariables t := by
+  constructor
+  · intro hj
+    simp only [Row.variables, List.mem_append] at hj
+    rcases hj with hparams | ho
+    · rcases hparams with hP | hN
+      · exact ⟨.parameter r.1.1, by simp [rowTokens], hP⟩
+      · exact ⟨.parameter r.1.2, by simp [rowTokens], hN⟩
+    · obtain ⟨a, ha, hname⟩ := List.mem_map.mp ho
+      exact ⟨.occurrence a.2, List.mem_append_right _ (List.mem_map.mpr ⟨a, ha, rfl⟩),
+        List.mem_singleton.mpr hname.symm⟩
+  · rintro ⟨t, ht, hj⟩
+    rcases List.mem_append.mp ht with hc | ho
+    · rcases List.mem_cons.mp hc with h | hc
+      · subst t
+        simp only [Row.variables, List.mem_append]
+        exact Or.inl (Or.inl hj)
+      · rcases List.mem_cons.mp hc with h | hc
+        · subst t
+          simp only [Row.variables, List.mem_append]
+          exact Or.inl (Or.inr hj)
+        · exact False.elim (List.not_mem_nil hc)
+    · obtain ⟨a, ha, rfl⟩ := List.mem_map.mp ho
+      simp only [Row.variables, List.mem_append]
+      exact Or.inr (List.mem_map.mpr ⟨a, ha, (List.mem_singleton.mp hj).symm⟩)
+
+theorem source_variables_tokens (p : Formula) (j : Nat) :
+    j ∈ p.variables ↔ ∃ t ∈ tokens p, j ∈ tokenVariables t := by
+  induction p with
+  | truth => simp [Formula.variables, tokens]
+  | falsity => simp [Formula.variables, tokens]
+  | atom a => exact row_variables_tokens a.row j
+  | negative p ih => exact ih
+  | conjunction p q ihp ihq =>
+    change j ∈ p.variables ++ q.variables ↔ _
+    rw [List.mem_append, ihp, ihq]
+    constructor
+    · rintro (⟨t, ht, hj⟩ | ⟨t, ht, hj⟩)
+      · exact ⟨t, List.mem_append_left _ ht, hj⟩
+      · exact ⟨t, List.mem_append_right _ ht, hj⟩
+    · rintro ⟨t, ht, hj⟩
+      rcases List.mem_append.mp ht with h | h
+      · exact Or.inl ⟨t, h, hj⟩
+      · exact Or.inr ⟨t, h, hj⟩
+  | disjunction p q ihp ihq =>
+    change j ∈ p.variables ++ q.variables ↔ _
+    rw [List.mem_append, ihp, ihq]
+    constructor
+    · rintro (⟨t, ht, hj⟩ | ⟨t, ht, hj⟩)
+      · exact ⟨t, List.mem_append_left _ ht, hj⟩
+      · exact ⟨t, List.mem_append_right _ ht, hj⟩
+    · rintro ⟨t, ht, hj⟩
+      rcases List.mem_append.mp ht with h | h
+      · exact Or.inl ⟨t, h, hj⟩
+      · exact Or.inr ⟨t, h, hj⟩
+
+theorem exactOriginalNameSupport : TiedLinearTargets.ExactOriginalNameSupport := by
+  intro x p hp j
+  change j ∈ (lowerFormula (tokens p) x (LinearRows.eliminate 0 (liftFormula (tokens p) x p))).variables ↔ _
+  rw [lower_formula_variables (tokens p) x _ (pure_eliminated (tokens p) x p) j]
+  constructor
+  · rintro ⟨code, hc, hj⟩
+    obtain ⟨t, ht, hdecode, hraw⟩ := surviving_token x p code hc
+    rw [hdecode] at hj
+    refine ⟨?_, (source_variables_tokens p j).mpr ⟨t, ht, hj⟩⟩
+    intro he
+    subst j
+    exact linear_token_safe x p hp t ht hraw hj
+  · rintro ⟨hjx, hj⟩
+    obtain ⟨t, ht, hj⟩ := (source_variables_tokens p j).mp hj
+    have hn : tokenName (tokens p) x t ≠ 0 := by
+      intro hz
+      have he := (token_name_zero (tokens p) x t).mp hz
+      rw [he] at hj
+      exact hjx (by simpa [tokenVariables, rawToken, NormalForm.Summand.name] using hj)
+    refine ⟨tokenName (tokens p) x t, ?_, ?_⟩
+    · apply (LinearRowsSupportProof.exactOutputSupport 0 _ _).mpr
+      refine ⟨hn, ?_⟩
+      rw [lift_variables]
+      exact List.mem_map.mpr ⟨t, ht, rfl⟩
+    · simpa only [literalTokenRoundTrip (tokens p) x t ht] using hj
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearProof

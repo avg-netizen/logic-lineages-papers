@@ -1,0 +1,161 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.PurityProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSupportProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.Proof
+open PolynomialGraphCompletion LayeredComparison.SnyatkovCompletion
+
+theorem token_roundtrip (x : Nat) (t : Token) : tokenOfName x (tokenName x t) = t := by
+  by_cases h : t = (x, [])
+  · subst t; simp [tokenName, tokenOfName]
+  · simp [tokenName, h, tokenOfName, Encodable.encodek]
+
+theorem token_name_zero (x : Nat) (t : Token) : tokenName x t = 0 ↔ t = (x, []) := by
+  by_cases h : t = (x, []) <;> simp [tokenName, h]
+
+theorem token_name_injective (x : Nat) : Function.Injective (tokenName x) := by
+  intro a b hab
+  have h := congrArg (tokenOfName x) hab
+  simpa only [token_roundtrip] using h
+
+theorem linear_token (x : Nat) (p : Formula) (hp : linear x p = true) :
+    ∀ t ∈ p.tokens, t.1 = x → t.2 = [] := by
+  simpa only [linear, List.all_eq_true, Bool.or_eq_true, bne_iff_ne,
+    List.isEmpty_iff, or_iff_not_imp_left, ne_eq, not_not] using hp
+
+theorem parameter_token (x : Nat) (ν : Nat → Nat) (t : Token) :
+    parameterValuation x ν (tokenName x t) = wordValue t.2 (ν t.1) := by
+  simp only [parameterValuation, token_roundtrip]
+
+theorem parameter_token_updated (x : Nat) (ν : Nat → Nat) (n : Nat) (t : Token)
+    (ht : t.1 = x → t.2 = []) :
+    Function.update (parameterValuation x ν) 0 n (tokenName x t) =
+      wordValue t.2 (Function.update ν x n t.1) := by
+  by_cases hx : t.1 = x
+  · have hw := ht hx
+    have heq : t = (x, []) := Prod.ext hx hw
+    subst t
+    simp [tokenName, wordValue]
+  · have hn : tokenName x t ≠ 0 := by
+      intro h
+      have h := (token_name_zero x t).mp h
+      exact hx (congrArg Prod.fst h)
+    rw [Function.update_of_ne hn, Function.update_of_ne hx, parameter_token]
+
+theorem lift_row_value (x : Nat) (r : Row) (ν : Nat → Nat) :
+    NormalForm.rowValue (liftRow x r) (parameterValuation x ν) = RowValue r ν := by
+  unfold NormalForm.rowValue RowValue liftRow
+  simp only [List.map_map, Function.comp_def]
+  congr 1
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro a ha
+  simp only [NormalForm.Summand.term, Term.value, parameter_token]
+
+theorem lift_row_updated (x : Nat) (r : Row) (ν : Nat → Nat) (n : Nat)
+    (hr : ∀ a ∈ r.2, a.2.1 = x → a.2.2 = []) :
+    NormalForm.rowValue (liftRow x r) (Function.update (parameterValuation x ν) 0 n) =
+      RowValue r (Function.update ν x n) := by
+  unfold NormalForm.rowValue RowValue liftRow
+  simp only [List.map_map, Function.comp_def]
+  congr 1
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro a ha
+  simp only [NormalForm.Summand.term, Term.value, parameter_token_updated x ν n a.2 (hr a ha)]
+
+theorem lift_atom_eval (x : Nat) (a : Atom) (ν : Nat → Nat) :
+    (liftAtom x a).eval (parameterValuation x ν) ↔ a.eval ν := by
+  cases a <;> simp only [liftAtom, NormalForm.Atom.eval, Atom.eval, lift_row_value]
+
+theorem lift_formula_eval (x : Nat) (p : Formula) (ν : Nat → Nat) :
+    (liftFormula x p).eval (parameterValuation x ν) ↔ Formula.eval ν p := by
+  induction p with
+  | bot => rfl
+  | top => rfl
+  | atom a => exact lift_atom_eval x a ν
+  | neg p ih => exact not_congr ih
+  | conj p q ihp ihq => exact and_congr ihp ihq
+  | disj p q ihp ihq => exact or_congr ihp ihq
+
+theorem formula_linear_children (x : Nat) (p q : Formula) :
+    linear x (.conj p q) = (linear x p && linear x q) ∧
+      linear x (.disj p q) = (linear x p && linear x q) := by
+  simp [linear, Formula.tokens, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms, List.flatMap_append, List.all_append]
+
+theorem lift_formula_updated (x : Nat) (p : Formula) (hp : linear x p = true)
+    (ν : Nat → Nat) (n : Nat) :
+    (liftFormula x p).eval (Function.update (parameterValuation x ν) 0 n) ↔
+      Formula.eval (Function.update ν x n) p := by
+  induction p with
+  | bot => rfl
+  | top => rfl
+  | atom a =>
+      have hr : ∀ b ∈ a.row.2, b.2.1 = x → b.2.2 = [] := by
+        intro b hb
+        apply linear_token x (.atom a) hp b.2
+        simp only [Formula.tokens, LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms, List.flatMap_cons, List.flatMap_nil,
+          List.append_nil]
+        exact List.mem_map.mpr ⟨b, hb, rfl⟩
+      have hv := lift_row_updated x a.row ν n hr
+      cases a with
+      | nonnegative r =>
+          simp only [liftFormula, liftAtom, NormalForm.Atom.eval, Atom.eval]
+          rw [hv]
+      | divisible m r =>
+          simp only [liftFormula, liftAtom, NormalForm.Atom.eval, Atom.eval]
+          rw [hv]
+  | neg p ih => exact not_congr (ih hp)
+  | conj p q ihp ihq =>
+      rw [(formula_linear_children x p q).1, Bool.and_eq_true] at hp
+      exact and_congr (ihp hp.1) (ihq hp.2)
+  | disj p q ihp ihq =>
+      rw [(formula_linear_children x p q).2, Bool.and_eq_true] at hp
+      exact or_congr (ihp hp.1) (ihq hp.2)
+
+theorem lower_row_value (x : Nat) (r : NormalForm.Row) (hr : PureRow r) (ν : Nat → Nat) :
+    RowValue (lowerRow x r) ν = NormalForm.rowValue r (parameterValuation x ν) := by
+  unfold RowValue NormalForm.rowValue lowerRow
+  simp only [List.map_map, Function.comp_def]
+  congr 1
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro a ha
+  obtain ⟨j, hj⟩ := hr a ha
+  simp only [hj, lowerSummand, NormalForm.Summand.term, Term.value, parameterValuation]
+
+theorem lower_formula_eval (x : Nat) (p : NormalForm.Formula) (hp : PureFormula p)
+    (ν : Nat → Nat) : Formula.eval ν (lowerFormula x p) ↔ p.eval (parameterValuation x ν) := by
+  induction p with
+  | truth => rfl
+  | falsity => rfl
+  | atom a =>
+      have hv := lower_row_value x a.row hp ν
+      cases a <;> simp only [lowerFormula, lowerAtom, Atom.eval, NormalForm.Atom.eval] <;> rw [hv]
+  | negative p ih => exact not_congr (ih hp)
+  | conjunction p q ihp ihq => exact and_congr (ihp hp.1) (ihq hp.2)
+  | disjunction p q ihp ihq => exact or_congr (ihp hp.1) (ihq hp.2)
+
+theorem lifted_linearity (x : Nat) (p : Formula) : LinearRows.isLinear 0 (liftFormula x p) = true := by
+  apply (LinearRowsSemanticProof.exactLinearityTest 0 (liftFormula x p)).mpr
+  intro a ha w hw hname
+  obtain ⟨j, hj⟩ := pure_formula_atoms _ (pure_lift x p) a ha w hw
+  rw [hj] at hname
+  have hj0 : j = 0 := hname
+  exact hj.trans (congrArg NormalForm.Summand.variable hj0)
+
+theorem actualWordLinearElimination : Targets.ActualWordLinearElimination := by
+  intro x p hp ν
+  calc
+    Formula.eval ν (eliminate x p) ↔
+      (LinearRows.eliminate 0 (liftFormula x p)).eval (parameterValuation x ν) :=
+        lower_formula_eval x _ (pure_word_eliminator x p) ν
+    _ ↔ ∃ n : Nat, (liftFormula x p).eval
+        (Function.update (parameterValuation x ν) 0 n) :=
+      LinearRowsSemanticProof.actualLinearElimination 0 _ (lifted_linearity x p) _
+    _ ↔ ∃ n : Nat, Formula.eval (Function.update ν x n) p :=
+      exists_congr (lift_formula_updated x p hp ν)
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.Proof

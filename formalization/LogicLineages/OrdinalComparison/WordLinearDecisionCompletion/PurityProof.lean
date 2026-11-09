@@ -1,0 +1,174 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.Targets
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.Proof
+open LayeredComparison.SnyatkovCompletion
+
+theorem pure_const (z : Int) : PureRow (LinearRows.rowConst z) := by
+  simp [PureRow, LinearRows.rowConst]
+
+theorem pure_add {r s : NormalForm.Row} (hr : PureRow r) (hs : PureRow s) :
+    PureRow (LinearRows.rowAdd r s) := by
+  intro a ha
+  rcases List.mem_append.mp ha with ha | ha
+  · exact hr a ha
+  · exact hs a ha
+
+theorem pure_scale (z : Int) {r : NormalForm.Row} (hr : PureRow r) :
+    PureRow (LinearRows.rowScale z r) := by
+  intro a ha
+  obtain ⟨b, hb, rfl⟩ := List.mem_map.mp ha
+  exact hr b hb
+
+theorem pure_remainder (i : Nat) {r : NormalForm.Row} (hr : PureRow r) :
+    PureRow (LinearRows.remainder i r) := by
+  intro a ha
+  exact hr a (List.mem_filter.mp ha).1
+
+theorem pure_lift_row (x : Nat) (r : PolynomialGraphCompletion.Row) : PureRow (liftRow x r) := by
+  intro a ha
+  obtain ⟨b, hb, rfl⟩ := List.mem_map.mp ha
+  exact ⟨_, rfl⟩
+
+theorem pure_lift (x : Nat) (p : Formula) : PureFormula (liftFormula x p) := by
+  induction p with
+  | bot => trivial
+  | top => trivial
+  | atom a => cases a <;> exact pure_lift_row x _
+  | neg p ih => exact ih
+  | conj p q ihp ihq => exact ⟨ihp, ihq⟩
+  | disj p q ihp ihq => exact ⟨ihp, ihq⟩
+
+theorem pure_formula_atoms : ∀ p : NormalForm.Formula, PureFormula p →
+    ∀ a ∈ LinearRows.atoms p, PureRow a.row := by
+  intro p
+  induction p with
+  | truth => simp [LinearRows.atoms]
+  | falsity => simp [LinearRows.atoms]
+  | atom a => intro hp; simpa [LinearRows.atoms, PureFormula] using hp
+  | negative p ih => exact ih
+  | conjunction p q ihp ihq =>
+      intro hp a ha
+      rcases List.mem_append.mp ha with ha | ha
+      · exact ihp hp.1 a ha
+      · exact ihq hp.2 a ha
+  | disjunction p q ihp ihq =>
+      intro hp a ha
+      rcases List.mem_append.mp ha with ha | ha
+      · exact ihp hp.1 a ha
+      · exact ihq hp.2 a ha
+
+def PureUnit : LinearRows.UnitFormula → Prop
+  | .bot | .top => True
+  | .atom a => PureRow a.row
+  | .neg p => PureUnit p
+  | .conj p q | .disj p q => PureUnit p ∧ PureUnit q
+
+theorem pure_adjust_atom (i M : Nat) (a : NormalForm.Atom) (ha : PureRow a.row) :
+    PureRow (LinearRows.adjustAtom i M a).row := by
+  cases a with
+  | nonnegative r =>
+      simp only [NormalForm.Atom.row] at ha
+      by_cases hz : LinearRows.leading i r = 0
+      · simpa [LinearRows.adjustAtom, hz, LinearRows.UnitAtom.row] using pure_remainder i ha
+      · simpa [LinearRows.adjustAtom, hz, LinearRows.UnitAtom.row] using
+          pure_scale ((M / (LinearRows.leading i r).natAbs : Nat) : Int) (pure_remainder i ha)
+  | divisible m r =>
+      simp only [NormalForm.Atom.row] at ha
+      by_cases hz : LinearRows.leading i r = 0
+      · simpa [LinearRows.adjustAtom, hz, LinearRows.UnitAtom.row] using pure_remainder i ha
+      · simpa [LinearRows.adjustAtom, hz, LinearRows.UnitAtom.row] using
+          pure_scale ((M / (LinearRows.leading i r).natAbs : Nat) : Int) (pure_remainder i ha)
+
+theorem pure_adjust (i M : Nat) (p : NormalForm.Formula) (hp : PureFormula p) :
+    PureUnit (LinearRows.adjust i M p) := by
+  induction p with
+  | truth => trivial
+  | falsity => trivial
+  | atom a => exact pure_adjust_atom i M a hp
+  | negative p ih => exact ih hp
+  | conjunction p q ihp ihq => exact ⟨ihp hp.1, ihq hp.2⟩
+  | disjunction p q ihp ihq => exact ⟨ihp hp.1, ihq hp.2⟩
+
+theorem pure_normalize (i : Nat) (p : NormalForm.Formula) (hp : PureFormula p) :
+    PureUnit (LinearRows.normalize i p) :=
+  ⟨pure_const 0, pure_adjust i _ p hp⟩
+
+theorem pure_unit_atoms (u : LinearRows.UnitFormula) (hu : PureUnit u) :
+    ∀ a ∈ u.atoms, PureRow a.row := by
+  induction u with
+  | bot => simp [LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms]
+  | top => simp [LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms]
+  | atom a => simpa [LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean.atoms, PureUnit] using hu
+  | neg p ih => exact ih hu
+  | conj p q ihp ihq =>
+      intro a ha
+      rcases List.mem_append.mp ha with ha | ha
+      · exact ihp hu.1 a ha
+      · exact ihq hu.2 a ha
+  | disj p q ihp ihq =>
+      intro a ha
+      rcases List.mem_append.mp ha with ha | ha
+      · exact ihp hu.1 a ha
+      · exact ihq hu.2 a ha
+
+theorem pure_cutoff_atom (a : LinearRows.UnitAtom) (ha : PureRow a.row) :
+    ∀ b ∈ a.cutoffs, PureRow b := by
+  cases a with
+  | nonnegative s r =>
+      cases s <;>
+        simp only [LinearRows.UnitAtom.cutoffs, List.mem_singleton, List.not_mem_nil,
+          forall_eq, false_implies, forall_const]
+      · exact pure_add ha (pure_const 1)
+      · exact pure_scale (-1) ha
+  | divisible m s r => simp [LinearRows.UnitAtom.cutoffs]
+
+theorem pure_cutoffs (u : LinearRows.UnitFormula) (hu : PureUnit u) :
+    ∀ b ∈ LinearRows.cutoffs u, PureRow b := by
+  intro b hb
+  rcases List.mem_cons.mp hb with hb | hb
+  · subst b; exact pure_const 0
+  · obtain ⟨a, ha, hb⟩ := List.mem_flatMap.mp hb
+    exact pure_cutoff_atom a (pure_unit_atoms u hu a ha) b hb
+
+theorem pure_instantiate_atom (a : LinearRows.UnitAtom) (ha : PureRow a.row)
+    (b : NormalForm.Row) (hb : PureRow b) : PureRow (a.instantiate b).row := by
+  cases a <;> exact pure_add (pure_scale _ hb) ha
+
+theorem pure_instantiate (u : LinearRows.UnitFormula) (hu : PureUnit u)
+    (b : NormalForm.Row) (hb : PureRow b) : PureFormula (LinearRows.instantiate u b) := by
+  induction u with
+  | bot => trivial
+  | top => trivial
+  | atom a => exact pure_instantiate_atom a hu b hb
+  | neg p ih => exact ih hu
+  | conj p q ihp ihq => exact ⟨ihp hu.1, ihq hu.2⟩
+  | disj p q ihp ihq => exact ⟨ihp hu.1, ihq hu.2⟩
+
+theorem pure_any (ps : List NormalForm.Formula) (h : ∀ p ∈ ps, PureFormula p) :
+    PureFormula (BoundedRows.any ps) := by
+  induction ps with
+  | nil => trivial
+  | cons p ps ih =>
+      exact ⟨h p List.mem_cons_self, ih (fun q hq => h q (List.mem_cons_of_mem p hq))⟩
+
+theorem pure_unit_eliminate (u : LinearRows.UnitFormula) (hu : PureUnit u) :
+    PureFormula (LinearRows.unitEliminate u) := by
+  apply pure_any
+  intro p hp
+  obtain ⟨b, hb, hp⟩ := List.mem_flatMap.mp hp
+  obtain ⟨j, hj, rfl⟩ := List.mem_map.mp hp
+  apply pure_instantiate
+  · exact ⟨pure_const 0, hu⟩
+  · exact pure_add (pure_cutoffs u hu b hb) (pure_const _)
+
+theorem pure_eliminate (i : Nat) (p : NormalForm.Formula) (hp : PureFormula p) :
+    PureFormula (LinearRows.eliminate i p) :=
+  pure_unit_eliminate _ (pure_normalize i p hp)
+
+theorem pure_word_eliminator (x : Nat) (p : Formula) :
+    PureFormula (LinearRows.eliminate 0 (liftFormula x p)) :=
+  pure_eliminate 0 _ (pure_lift x p)
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.Proof

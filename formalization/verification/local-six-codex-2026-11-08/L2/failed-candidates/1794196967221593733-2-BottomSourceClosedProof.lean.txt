@@ -1,0 +1,134 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSourceTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumeralEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformParameterLeavesCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformContextMembershipEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPairingEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSourceClosedProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalGraphComposition InternalControlGraph
+open SourceComputabilityFormulaSupportProof
+open InternalApplicationCertificateConstructors
+open NumberedRewriteSyntax NumberedRewriteReduction NumberedAuxiliaryCoding NumberedLeastCodeRepresentative
+open NumberedNumericDecoding NumberedNumericCarrier
+open InternalOriginalUniformDescentSelection (Data Calibrated)
+open InternalOriginalUniformParameterLeaves InternalOriginalUniformParameterLeavesCodecProof
+open InternalOriginalUniformParameterLeavesCalibrationProof
+open InternalOriginalUniformContextMembership InternalOriginalUniformContextMembershipEvaluationProof
+open InternalOriginalStepGuard (sourceValidityValue targetValidityValue)
+open InternalPositiveUnfoldingSupportProof
+open SourceComputabilityCompletion.BottomSource
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+
+/-- Only NUMERAL instances are used. The existing supplier constructs
+original proof trees by structural Program/concrete recursion induction. -/
+theorem numeralGraph {body : Positive (Fin 1)} {α : Type} {Delta : List (Formula α)}
+    {n : Nat} (p : Program n) (v : List.Vector Nat n) (out : Nat)
+    (he : evaluate p v = out) :
+    Nonempty (Derivation body Delta
+      (graph (OrdinaryArithmetic.graphFormula p) (numeral out)
+        (fun i => (numeral (v.get i) : OTerm α)))) := by
+  obtain ⟨d⟩ := InternalNumeralEvaluationProof.actualOriginalNumeralEvaluation body n p v α
+  rw [he] at d
+  exact ⟨weakenClosed d Delta⟩
+
+theorem numeralGraph1 {body : Positive (Fin 1)} {α : Type} {Delta : List (Formula α)}
+    (p : Program 1) (x out : Nat) (he : evaluate p (ofFn ![x]) = out) :
+    Nonempty (Derivation body Delta (graph1 p (numeral out) (numeral x))) := by
+  have h := numeralGraph (body := body) (α := α) (Delta := Delta) p (ofFn ![x]) out he
+  have hs : (fun i : Fin 1 => (numeral ((ofFn ![x]).get i) : OTerm α)) =
+      Fin.cons (numeral x) Fin.elim0 := by
+    funext i
+    obtain rfl := Fin.eq_zero i
+    rfl
+  rw [hs] at h
+  exact h
+
+theorem numeralGraph2 {body : Positive (Fin 1)} {α : Type} {Delta : List (Formula α)}
+    (p : Program 2) (x y out : Nat) (he : evaluate p (ofFn ![x,y]) = out) :
+    Nonempty (Derivation body Delta (graph2 p (numeral out) (numeral x) (numeral y))) := by
+  have h := numeralGraph (body := body) (α := α) (Delta := Delta) p (ofFn ![x,y]) out he
+  have hs : (fun i : Fin 2 => (numeral ((ofFn ![x,y]).get i) : OTerm α)) =
+      Fin.cons (numeral x) (Fin.cons (numeral y) Fin.elim0) := by
+    funext i
+    refine Fin.cases ?_ (Fin.cases ?_ (fun k => Fin.elim0 k)) i <;> rfl
+  rw [hs] at h
+  exact h
+
+theorem numeralPair {body : Positive (Fin 1)} {α : Type} {Delta : List (Formula α)} (x y : Nat) :
+    Nonempty (Derivation body Delta
+      (graph2 InternalPairing.pairing (numeral (Nat.pair x y)) (numeral x) (numeral y))) := by
+  have he : evaluate InternalPairing.pairing (ofFn ![x,y]) = Nat.pair x y := by
+    simpa only [InternalEqualityTestEvaluationProof.vectorTwo,
+      Matrix.cons_val_zero,Matrix.cons_val_one] using
+      InternalPairingEvaluationProof.exactPairingEvaluation x y
+  exact numeralGraph2 InternalPairing.pairing x y (Nat.pair x y) he
+
+theorem bottomDecode (n : Nat) (arity : Fin n → Nat) (Gamma : List Ty) (tau : Ty) :
+    decodePackedNumber n arity Gamma (bottomNumber tau) =
+      some (⟨tau,AuxTerm.bottom tau⟩ : Packed (Fin n) arity Gamma) := by
+  simpa only [bottomNumber,packedNumber,NumberedAuxiliaryCoding.termCode,codeNumber] using
+    NumberedNumericDecodingProof.packedNumericRoundTrip n arity Gamma ⟨tau,AuxTerm.bottom tau⟩
+
+theorem bottomSourceValue (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n))
+    (S Gamma : List Ty) (tau : Ty) (ht : tau ∈ S) :
+    sourceValidityValue n arity symbols S Gamma (bottomNumber tau) = 1 := by
+  simp only [sourceValidityValue,rawCarrierTest,decodeUniverse,bottomDecode,
+    universeTest,ht,decide_true,Option.filter_some,Bool.toNat_true,Option.isSome_some,ite_true]
+
+theorem bottomTargetValue (n : Nat) (arity : Fin n → Nat) (Gamma : List Ty) (tau : Ty) :
+    targetValidityValue n arity Gamma (bottomNumber tau) = 1 := by
+  simp only [targetValidityValue,bottomDecode,Option.isSome_some,Bool.toNat_true]
+
+/-- All evaluations below have literal numeric arguments. The raw Gamma
+code zero is decoded through the ORIGINAL total codec; no special decoder
+convention or successful-Context canonicality assertion is introduced. -/
+theorem closedLeafValues (n : Nat) (arity : Fin n → Nat) (data : Data)
+    (hc : Calibrated n arity data) (symbols : List (Fin n)) (S : List Ty)
+    (table : Fin n → Fin n → Bool) (tau : Ty) (ht : tau ∈ S) :
+    let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+    let parameter := Nat.pair context 0
+    evaluate data.oldSource (ofFn ![bottomNumber tau,parameter]) = 1 ∧
+      evaluate data.oldTarget (ofFn ![bottomNumber tau,parameter]) = 1 ∧
+      evaluate (contextMember data.member) (ofFn ![typeNumber tau,context]) = 1 := by
+  dsimp only
+  let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+  let parameter := Nat.pair context 0
+  have hd : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) context =
+      some ((symbols,S),table) := by
+    exact Encodable.encodek ((symbols,S),table)
+  obtain ⟨Gamma,ho⟩ := actualOriginalUniformParameterCodec.2 (bottomNumber tau) parameter
+  obtain ⟨Delta,htype⟩ := actualOriginalUniformParameterCodec.2 (typeNumber tau) parameter
+  have hs : evaluate data.oldSource (ofFn ![bottomNumber tau,parameter]) =
+      sourceValidityValue n arity symbols S Gamma (bottomNumber tau) := by
+    rw [hc.1]
+    simp only [sourceValue,sourceValidityValue,decodedValue,List.Vector.get_ofFn,Matrix.cons_val_zero,
+      Matrix.cons_val_one,parameter,Nat.unpair_pair,hd,ho]
+  have hg : evaluate data.oldTarget (ofFn ![bottomNumber tau,parameter]) =
+      targetValidityValue n arity Gamma (bottomNumber tau) := by
+    rw [hc.2.1]
+    simp only [targetValue,decodedValue,List.Vector.get_ofFn,Matrix.cons_val_zero,
+      Matrix.cons_val_one,parameter,Nat.unpair_pair,hd,ho]
+    exact targetCalibration n arity Gamma (bottomNumber tau)
+  have hm : evaluate (contextMember data.member) (ofFn ![typeNumber tau,context]) = 1 := by
+    rw [contextMemberEvaluation,hc.2.2.2]
+    change decodedValue n (fun ctx obj =>
+      InternalStructuralEndpointGuard.membershipValue ctx.1.2 obj.2)
+        (typeNumber tau) parameter = 1
+    have hp : (Nat.unpair parameter).1 = context := by simp only [parameter,Nat.unpair_pair]
+    simp only [decodedValue,hp,hd,htype,
+      InternalStructuralEndpointGuard.membershipValue,
+      NumberedNumericDecodingProof.typeNumericRoundTrip,ht,decide_true,Bool.toNat_true]
+  exact ⟨hs.trans (bottomSourceValue n arity symbols S Gamma tau ht),
+    hg.trans (bottomTargetValue n arity Gamma tau),hm⟩
+
+theorem closedWindowValue (n : Nat) (window : Program 1)
+    (hw : ∀ v, evaluate window v = GuardCalibration.validWindowValue n v)
+    (symbols : List (Fin n)) (S : List Ty) (table : Fin n → Fin n → Bool)
+    (hS : SubtypeClosed (fun tau => tau ∈ S)) :
+    evaluate window (ofFn ![OrdinaryArithmeticQuotient.contextCode symbols S table]) = 1 := by
+  rw [hw]
+  exact (GuardCalibrationProof.actualOriginalWindowCalibration n symbols S table).mpr hS
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSourceClosedProof

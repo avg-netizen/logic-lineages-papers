@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-11-09T05:21:16.605753+00:00",
+  "status": "helper signatures frozen BEFORE adapter proof authorship; main exact3 targets unchanged",
+  "scope": "syntax commutations and actual ordinary local quantifier bookkeeping, then all18 original ND constructors; no truth-to-proof and no ID1 source extension",
+  "syntax": [
+    "translateGorbowSubstitution: substituteFormula tau (translate phi rho) = translate phi (fun a => substitute tau (rho a))",
+    "translateSourceSubstitution: translate (phi.subst tf) rho = translate phi (fun a => translateTerm rho (tf a))",
+    "translateRelabel: translate (phi.relabel g) rho = translate phi (fun a => rho(g a))",
+    "translateAllOne: translate (allOne phi) rho = all (translate phi (Sum.elim (renameTerm Fin.succ o rho) (fun _=>var0)))",
+    "translateEquality: translate (t.equal u) rho = equal (translateTerm rho t) (translateTerm rho u)",
+    "translateWeaken and translateInstantiate preserve source binder lift/instantiation literally"
+  ],
+  "calculus": [
+    "Local.allIntroduction: Local T (n+1) (Gamma.map GorbowPACore.weaken) a -> Local T n Gamma (all a)",
+    "Local existential/encoded-conjunction/classical rules use original Hilbert K/S/classical/quantifier rules",
+    "contextual transfer interprets falseBody, predicate false, arbitrary free term maps and finite hypotheses",
+    "closeAssumptions compiler discharges original finite hypothesis list in order"
+  ]
+}

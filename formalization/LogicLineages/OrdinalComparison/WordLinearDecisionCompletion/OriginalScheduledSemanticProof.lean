@@ -1,0 +1,143 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduledTargets
+public import LogicLineages.OrdinalComparison.EncodedCompensatedStepProof
+public import LogicLineages.OrdinalComparison.EncodedSuffixKernelProof
+public import LogicLineages.OrdinalComparison.ScheduledCountProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduled.Proof
+
+theorem stepCorrect : Targets.StepCorrect := by
+  intro c t index a hnon
+  let l : NONote := ⟨rawNoteDecode (rawSplitCode (rawNoteEncode a.1)).unpair.1, rawSplitNormal a⟩
+  have hlrepr : l.1.repr = actualLimitPart a.1.repr := (rawSplitActualCorrect a).1
+  have hlpos : 0 < l := by
+    change 0 < l.1.repr
+    rw [hlrepr]
+    exact (actualNonfiniteDecomposition a.1.repr hnon (normalRepresentationSound a)).2.1.bot_lt
+  have hlcode : rawNoteEncode l.1 = (rawSplitCode (rawNoteEncode a.1)).unpair.1 :=
+    rawNoteEncodeDecode _
+  have hmax := encodedMaximumPredecessorCorrect l hlpos
+    (KernelSourceCompletion.sourceBudget c t index)
+  rw [hlcode] at hmax
+  simp only [step, hmax]
+  rw [rawNoteDecodeEncode (maximumPredecessor l (KernelSourceCompletion.sourceBudget c t index)).1]
+  refine ⟨(maximumPredecessor l (KernelSourceCompletion.sourceBudget c t index)).2, ?_⟩
+  rw [actualMaximumPredecessor_notationCorrespondence l hlpos _, hlrepr, actualControlledStep]
+
+theorem initialCorrect : Targets.InitialCorrect := by
+  intro d
+  let o := ONote.oadd (ONote.ofNat d) 1 0
+  have hcode : initial d = rawNoteEncode o := by
+    unfold initial
+    rw [encodedNatNoteCorrect d]
+    rfl
+  rw [hcode, rawNoteDecodeEncode o]
+  have htail : (0 : ONote).repr < Ordinal.omega0 ^ (ONote.ofNat d).repr := by
+    simpa only [ONote.repr] using Ordinal.opow_pos (ONote.ofNat d).repr Ordinal.omega0_pos
+  have hz : ONote.NF (0 : ONote) := ONote.nf_ofNat 0
+  have hnf : ONote.NF o :=
+    ONote.NF.oadd (ONote.nf_ofNat d) 1 (ONote.NF.below_of_lt' htail hz)
+  refine ⟨hnf, ?_⟩
+  simp only [o, ONote.repr, PNat.one_coe, Nat.cast_one, mul_one, add_zero, ONote.repr_ofNat]
+
+theorem run_index (c t initial k : Nat) :
+    ((advance c t)^[k] (0, initial)).1 = k := by
+  induction k with
+  | zero => rfl
+  | succ k ih =>
+      rw [Function.iterate_succ_apply']
+      simp only [advance, ih]
+
+theorem run_succ (c t initial k : Nat) :
+    run c t initial (k + 1) = step c t k (run c t initial k) := by
+  simp only [run, Function.iterate_succ_apply', advance, run_index]
+
+theorem trajectoryCorrect : Targets.TrajectoryCorrect := by
+  intro c t a k
+  induction k with
+  | zero =>
+      intro _
+      change ONote.NF (rawNoteDecode (rawNoteEncode a.1)) ∧
+        (rawNoteDecode (rawNoteEncode a.1)).repr = a.1.repr
+      rw [rawNoteDecodeEncode a.1]
+      exact ⟨a.2, rfl⟩
+  | succ k ih =>
+      intro hk
+      have hlt : k < actualScheduledCount (KernelSourceCompletion.sourceBudget c t) a.1.repr := by omega
+      have hp := ih hlt.le
+      let r : NONote := ⟨rawNoteDecode (run c t (rawNoteEncode a.1) k), hp.1⟩
+      have hr : Ordinal.omega0 ≤ r.1.repr := by
+        rw [hp.2]
+        exact ((actualScheduledFirstFinite (KernelSourceCompletion.sourceBudget c t) a.1.repr
+          (normalRepresentationSound a)).2 k hlt.le).2.2 hlt
+      have hs := stepCorrect c t k r hr
+      rw [rawNoteEncodeDecode (run c t (rawNoteEncode a.1) k)] at hs
+      rw [run_succ]
+      refine ⟨hs.1, ?_⟩
+      rw [hs.2, hp.2, actualScheduledStateLastStep]
+
+theorem firstFiniteExact : Targets.FirstFiniteExact := by
+  intro c t a
+  let n := rawNoteEncode a.1
+  let C := actualScheduledCount (KernelSourceCompletion.sourceBudget c t) a.1.repr
+  have hs := actualScheduledFirstFinite (KernelSourceCompletion.sourceBudget c t)
+    a.1.repr (normalRepresentationSound a)
+  have ht := trajectoryCorrect c t a C le_rfl
+  let z : NONote := ⟨rawNoteDecode (run c t n C), ht.1⟩
+  have hzcode : rawNoteEncode z.1 = run c t n C := rawNoteEncodeDecode _
+  have hf := (encodedFiniteCorrect z).1.mpr (by rw [ht.2]; exact hs.1)
+  rw [hzcode] at hf
+  apply Nat.mem_rfind.mpr
+  constructor
+  · exact Part.mem_some_iff.mpr hf.symm
+  · intro k hk
+    have htraj := trajectoryCorrect c t a k hk.le
+    let r : NONote := ⟨rawNoteDecode (run c t n k), htraj.1⟩
+    have hrcode : rawNoteEncode r.1 = run c t n k := rawNoteEncodeDecode _
+    have hnon := (hs.2 k hk.le).2.2 hk
+    have hfalse : encodedFiniteTest (run c t n k) = false := by
+      cases h : encodedFiniteTest (run c t n k) with
+      | false => rfl
+      | true =>
+          have hh := (encodedFiniteCorrect r).1.mp (by rw [hrcode]; exact h)
+          rw [htraj.2] at hh
+          exact ((not_lt_of_ge hnon) hh).elim
+    exact Part.mem_some_iff.mpr hfalse.symm
+
+theorem count_mem_program (c t : Nat) (a : NONote) :
+    actualScheduledCount (KernelSourceCompletion.sourceBudget c t) a.1.repr ∈
+      countPartial c t (rawNoteEncode a.1) := by
+  have hn : rawNormalCode (rawNoteEncode a.1) = 1 := (rawNormalCorrect a.1).mpr a.2
+  rw [countPartial, if_pos hn]
+  exact firstFiniteExact c t a
+
+theorem partialTotal : Targets.PartialTotal := by
+  intro c t n
+  by_cases hn : rawNormalCode n = 1
+  · let a : NONote := ⟨rawNoteDecode n, (rawNormalDecodeCorrect n).mp hn⟩
+    have hm := count_mem_program c t a
+    rw [rawNoteEncodeDecode n] at hm
+    exact hm.1
+  · simp [countPartial, hn]
+
+theorem genericCountCorrect : Targets.GenericCountCorrect := by
+  intro c t a
+  classical
+  have hm := count_mem_program c t a
+  unfold countValue
+  exact (Part.getOrElse_of_dom _ hm.1 0).trans (Part.get_eq_of_mem hm hm.1)
+
+theorem sourceCountCorrect : Targets.SourceCountCorrect := by
+  intro d c t
+  let a : NONote := ⟨rawNoteDecode (initial d), (initialCorrect d).1⟩
+  have hc := genericCountCorrect c t a
+  rw [rawNoteEncodeDecode (initial d), (initialCorrect d).2] at hc
+  exact hc
+
+theorem malformedBehavior : Targets.MalformedBehavior := by
+  intro c t n hn
+  classical
+  simp [countPartial, countValue, hn]
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalScheduled.Proof

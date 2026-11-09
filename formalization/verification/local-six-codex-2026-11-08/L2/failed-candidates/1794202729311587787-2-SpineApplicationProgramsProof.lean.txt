@@ -1,0 +1,35 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationSelectedProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationCertificateConstructors
+open InternalAcceptanceConjunctionProof
+open InternalTagArithmeticSyntaxProof (OTerm)
+open SpineApplicationTargets (selectedData parameters)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Only PROGRAM identities are unfolded here. The actual validator ignores
+the oldR field altered by the wrapper; no graph Formula is normalized. -/
+theorem activeProgram (data : Data) (window : Program 1) :
+    BottomRepresentative.active (parameters data window) window =
+      InternalAcceptance.conjunction (BottomRepresentative.windowAt window)
+        (InternalOriginalUniformDescentSelection.validity (selectedData data window)) := rfl
+
+theorem activeValue {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+    (data : Data) (window : Program 1) (input parameter : OTerm α)
+    (hw : Nonempty (Derivation body Gamma
+      (graph2 (BottomRepresentative.windowAt window) InternalOriginalStepGuard.one input parameter)))
+    (hv : Nonempty (Derivation body Gamma
+      (graph2 (InternalOriginalUniformDescentSelection.validity (selectedData data window))
+        InternalOriginalStepGuard.one input parameter))) :
+    Nonempty (Derivation body Gamma (SpineApplicationIteration.activeGraph data window input parameter)) := by
+  unfold SpineApplicationIteration.activeGraph BottomRepresentative.activeGraph
+  rw [activeProgram]
+  exact conjunctionAccept (BottomRepresentative.windowAt window)
+    (InternalOriginalUniformDescentSelection.validity (selectedData data window))
+    (Fin.cons input (Fin.cons parameter Fin.elim0)) hw hv
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationProof

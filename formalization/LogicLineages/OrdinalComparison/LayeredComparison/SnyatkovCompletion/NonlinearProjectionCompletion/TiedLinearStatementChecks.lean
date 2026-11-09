@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearRoleProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearStatementChecks
+theorem actualTokenRoundTrip : TiedLinearTargets.LiteralTokenRoundTrip :=
+  TiedLinearProof.literalTokenRoundTrip
+theorem actualNaturalElimination : TiedLinearTargets.ActualTiedLinearElimination :=
+  TiedLinearProof.actualTiedLinearElimination
+theorem exactOriginalNames : TiedLinearTargets.ExactOriginalNameSupport :=
+  TiedLinearProof.exactOriginalNameSupport
+theorem wholeBlockParameters : TiedLinearTargets.WholeBlockParameterIndependence :=
+  TiedLinearProof.wholeBlockParameterIndependence
+theorem remainingPlainClass : TiedLinearTargets.RemainingPlainClass :=
+  TiedLinearProof.remainingPlainClass
+#print axioms actualTokenRoundTrip
+#print axioms actualNaturalElimination
+#print axioms exactOriginalNames
+#print axioms wholeBlockParameters
+#print axioms remainingPlainClass
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearStatementChecks

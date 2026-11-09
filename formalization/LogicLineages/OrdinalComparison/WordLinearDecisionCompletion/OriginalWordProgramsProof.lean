@@ -1,0 +1,77 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordLetterProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof
+open PolynomialGraphCompletion
+attribute [local irreducible] Nat.sqrt Nat.unpair letter letterDomain
+
+abbrev WordState := Word × Nat × Bool
+
+/-- A literal finite execution of the original word, carrying its entire domain test. -/
+noncomputable def wordStep : WordState → WordState
+  | ([], t, ok) => ([], t, ok)
+  | (a :: w, t, ok) => (w, letter a t, ok && letterDomain a t)
+
+theorem wordStepComputable : Computable wordStep := by
+  have hhead : Computable (fun s : WordState => s.1.head?) :=
+    Primrec.list_head?.to_comp.comp Computable.fst
+  have ht : Computable (fun p : WordState × Letter => p.1.2.1) :=
+    Computable.fst.comp (Computable.snd.comp Computable.fst)
+  have hok : Computable (fun p : WordState × Letter => p.1.2.2) :=
+    Computable.snd.comp (Computable.snd.comp Computable.fst)
+  have hv : Computable (fun p : WordState × Letter => letter p.2 p.1.2.1) :=
+    letterPrograms.1.comp (Computable.snd.pair ht)
+  have hd : Computable (fun p : WordState × Letter => letterDomain p.2 p.1.2.1) :=
+    letterPrograms.2.comp (Computable.snd.pair ht)
+  have hb : Computable (fun p : WordState × Letter => p.1.2.2 && letterDomain p.2 p.1.2.1) := by
+    apply (Computable.cond hok hd (Computable.const false)).of_eq
+    intro p
+    cases p.1.2.2 <;> rfl
+  have hbranch : Computable₂ (fun s : WordState => fun a : Letter =>
+      (s.1.tail, letter a s.2.1, s.2.2 && letterDomain a s.2.1)) :=
+    (Primrec.list_tail.to_comp.comp (Computable.fst.comp Computable.fst)).pair (hv.pair hb)
+  apply (Computable.option_casesOn hhead Computable.id hbranch).of_eq
+  intro s
+  rcases s with ⟨w, t, ok⟩
+  cases w <;> rfl
+
+attribute [local irreducible] wordStep
+
+theorem wordRunComputable :
+    Computable (fun p : WordState × Nat => (wordStep^[p.2]) p.1) := by
+  have hs : Computable₂ (fun (_ : WordState × Nat) (s : Nat × WordState) => wordStep s.2) :=
+    wordStepComputable.comp (Computable.snd.comp Computable.snd)
+  apply (Computable.nat_rec Computable.snd Computable.fst hs).of_eq
+  intro p
+  induction p.2 with
+  | zero => rfl
+  | succ n ih => simpa only [Function.iterate_succ_apply'] using congrArg wordStep ih
+
+theorem wordRunFinish (w : Word) (t : Nat) (ok : Bool) :
+    (wordStep^[w.length]) (w, t, ok) = ([], word w t, ok && wordDomain w t) := by
+  induction w generalizing t ok with
+  | nil => simp [word, wordDomain]
+  | cons a w ih =>
+    rw [List.length_cons, Function.iterate_succ_apply]
+    rw [show wordStep (a :: w, t, ok) = (w, letter a t, ok && letterDomain a t) by unfold wordStep; rfl]
+    rw [ih]
+    simp only [word, wordDomain, Bool.and_assoc]
+
+theorem wordPrograms : Targets.WordPrograms := by
+  have hi : Computable (fun p : Word × Nat => (p.1, p.2, true) : (Word × Nat) → WordState) :=
+    Computable.fst.pair (Computable.snd.pair (Computable.const true))
+  have hn : Computable (fun p : Word × Nat => p.1.length) :=
+    Primrec.list_length.to_comp.comp Computable.fst
+  have hr : Computable (fun p : Word × Nat => (wordStep^[p.1.length]) (p.1, p.2, true)) :=
+    wordRunComputable.comp (hi.pair hn)
+  constructor
+  · apply (Computable.fst.comp (Computable.snd.comp hr)).of_eq
+    intro p
+    rw [wordRunFinish]
+  · apply (Computable.snd.comp (Computable.snd.comp hr)).of_eq
+    intro p
+    rw [wordRunFinish]
+    simp
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof

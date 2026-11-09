@@ -1,0 +1,102 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterArithmeticProof.lean:54:6: error: Type mismatch: After simplification, term
+  andLeft hp
+ has type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) [P]
+      (programGraph comp.typed (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+        ![numeral context, numeral (typeNumber tau), f]))
+but is expected to have type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) [P]
+      (programGraph (GuardedSource.computability middle Outer.tag).typed
+        (InternalTagArithmeticSyntaxProof.suc InternalTagArithmeticSyntaxProof.z)
+        ![numeral context, numeral (typeNumber tau), f]))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterArithmeticProof.lean:59:6: error: Type mismatch: After simplification, term
+  andRight hp
+ has type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) [P]
+      (arithmeticEmbedding.onFormula
+        (BoundedFormula.subst (OrdinaryArithmeticQuotient.certificateGraph src.positive) ![numeral context, f, g])))
+but is expected to have type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) [P]
+      (arithmeticEmbedding.onFormula
+        (BoundedFormula.subst
+          (OrdinaryArithmeticQuotient.certificateGraph
+            (GuardedSource.source (GammaGuardedSource.baseSource s0 Outer.gamma) middle.typed Outer.tag
+                window).positive)
+          ![numeral context, f, g])))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterArithmeticProof.lean:66:6: error: Type mismatch: After simplification, term
+  hg
+ has type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) [P]
+      (programGraph (GuardedSource.computability middle Outer.tag).typed
+        (InternalTagArithmeticSyntaxProof.suc InternalTagArithmeticSyntaxProof.z)
+        ![numeral context, numeral (typeNumber tau), g]))
+but is expected to have type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) [P]
+      (programGraph comp.typed (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+        ![numeral context, numeral (typeNumber tau), g]))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterArithmeticProof.lean:72:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  Nonempty
+    (Derivation
+      (SourcePresentation.sourceBody (GammaGuardedSource.source s0 c0.typed Outer.valid Outer.gamma Outer.tag window)
+        context)
+      []
+      (Formula.imp
+        (programGraph (GammaGuardedSource.computability c0 Outer.valid Outer.gamma Outer.tag).typed
+              (InternalTagArithmeticSyntaxProof.suc InternalTagArithmeticSyntaxProof.z)
+              ![numeral context, numeral (typeNumber tau), f] ⊓
+            arithmeticEmbedding.onFormula
+              (BoundedFormula.subst
+                (OrdinaryArithmeticQuotient.certificateGraph
+                  (GammaGuardedSource.source s0 c0.typed Outer.valid Outer.gamma Outer.tag window).positive)
+                ![numeral context, f, g]) ⊓
+          programGraph (GammaGuardedSource.computability c0 Outer.valid Outer.gamma Outer.tag).guard
+            (InternalTagArithmeticSyntaxProof.suc InternalTagArithmeticSyntaxProof.z) ![g, a])
+        (programGraph (GammaGuardedSource.computability c0 Outer.valid Outer.gamma Outer.tag).guard
+          (InternalTagArithmeticSyntaxProof.suc InternalTagArithmeticSyntaxProof.z) ![f, a])))
+but is expected to have type
+  Nonempty
+    (Derivation
+      (SourcePresentation.sourceBody (Outer.source oldSrc oldComp data rawScalar oldStep bottom measure window) context)
+      []
+      (Formula.imp
+        (programGraph (Outer.computability oldComp data window oldVertex oldResult).typed
+              (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+              ![numeral context, numeral (typeNumber tau), f] ⊓
+            arithmeticEmbedding.onFormula
+              (BoundedFormula.subst
+                (OrdinaryArithmeticQuotient.certificateGraph
+                  (Outer.source oldSrc oldComp data rawScalar oldStep bottom measure window).positive)
+                ![numeral context, f, g]) ⊓
+          programGraph (Outer.computability oldComp data window oldVertex oldResult).guard
+            (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm) ![g, a])
+        (programGraph (Outer.computability oldComp data window oldVertex oldResult).guard
+          (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm) ![f, a])))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterArithmeticProof.lean:79:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  Nonempty
+    (Derivation (SourcePresentation.sourceBody src context) []
+      (Formula.imp
+        (domain
+          (InternalApplication.computability (Outer.baseComputability oldComp data window) window Outer.arrow
+            (Outer.result oldComp data window oldVertex oldResult))
+          context sigma tau f a)
+        (applicationExists
+          (InternalApplication.computability (Outer.baseComputability oldComp data window) window Outer.arrow
+            (Outer.result oldComp data window oldVertex oldResult))
+          context sigma tau f a)))
+but is expected to have type
+  Nonempty
+    (Derivation
+      (SourcePresentation.sourceBody (Outer.source oldSrc oldComp data rawScalar oldStep bottom measure window) context)
+      []
+      (Formula.imp (domain (Outer.computability oldComp data window oldVertex oldResult) context sigma tau f a)
+        (applicationExists (Outer.computability oldComp data window oldVertex oldResult) context sigma tau f a)))

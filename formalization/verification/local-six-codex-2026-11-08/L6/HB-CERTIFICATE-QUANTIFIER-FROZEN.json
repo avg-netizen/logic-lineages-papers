@@ -1,0 +1,18 @@
+{
+  "at_utc": "2026-11-09T03:44:56.532995+00:00",
+  "scope": "effective original numeric logical certificates under already frozen actual source HB endpoint; outside submitted17file external-generator closure",
+  "theorem_types": {
+    "doubleNegation": "FormulaEffective p -> HasCertificates ax (fun x => imp (neg (neg (p x))) (p x))",
+    "existentialIntroductionRule": "FormulaEffective a -> TermEffective t -> HasCertificates ax (fun x => imp (instantiate (a x) (t x)) (ex (a x)))",
+    "existentialIntroduction": "FormulaEffective a -> TermEffective t -> HasCertificates ax (fun x => instantiate (a x) (t x)) -> HasCertificates ax (fun x => ex (a x))"
+  },
+  "source_rules": [
+    "original K/S",
+    "original classicalContraposition",
+    "reflexive zero",
+    "allInstantiate",
+    "existsDualBackward",
+    "original numeric MP"
+  ],
+  "no_internal_HB_or_source_promotion": true
+}

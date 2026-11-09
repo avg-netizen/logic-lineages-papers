@@ -1,0 +1,156 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmItemProof
+public import LogicLineages.OrdinalComparison.CounterLeaderCollisionStatementChecks
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+open PolynomialGraphCompletion WordGuardCompletion CounterWordGuardCompletion Algorithm
+open KernelSourceCompletion
+
+theorem upperResidual_subset (k m c : Nat) :
+    ∀ p ∈ upperResidualWords k m c, p ∈ residualWords (m+k) c := by
+  induction k with
+  | zero => simp [upperResidualWords]
+  | succ k ih =>
+      intro p hp
+      simp only [upperResidualWords,List.mem_cons,List.mem_map] at hp
+      rcases hp with rfl | ⟨q,hq,rfl⟩
+      · simp [residualWords,Nat.add_assoc]
+      · have hq' := ih q hq
+        change (_,_) ∈ residualWords ((m+k)+1) c
+        exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq',by simp only [Nat.add_assoc]⟩)
+
+theorem counterResidual_allowed_domain (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (hc : isCounter a = true) (reference : Nat) (href : 3 ≤ reference)
+    (hle : reference ≤ rank a) (ν : Nat → Nat) (ht : sourceTail a ≤ ν a.2.1) :
+    RowAllowed D (counterResidual reference a) ∧ RowDomain (counterResidual reference a) ν := by
+  have hp := counter_parameters D r a hD ha hc
+  have hv := active_item_view D r a hD ha
+  have he := RankedWordDecisionCompletion.Proof.exactSourceCounterExpansion D a.1 a.2.1
+    (innerWord a) (counterIndex a) (mass a) (by omega) hv.2.2.2 ν
+    ((counter_sourceTail_expansion a hc).trans ht)
+  have hn : reference-3+(rank a-reference) = counterIndex a := by omega
+  have hsub : ∀ p ∈ upperResidualWords (rank a-reference) (reference-3) (mass a),
+      p ∈ residualWords (counterIndex a) (mass a) := by
+    intro p hmem
+    simpa only [hn] using upperResidual_subset _ _ _ p hmem
+  constructor
+  · intro b hb
+    obtain ⟨p,hp',rfl⟩ := List.mem_map.mp hb
+    exact he.1 (2*a.1,a.2.1,innerWord a++p.2)
+      (List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hsub p hp',rfl⟩))
+  · intro b hb
+    obtain ⟨p,hp',rfl⟩ := List.mem_map.mp hb
+    exact he.2.2.1 (2*a.1,a.2.1,innerWord a++p.2)
+      (List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hsub p hp',rfl⟩))
+
+theorem counter_reached_leaderTail (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (hc : isCounter a = true) (t : Nat) (ht : sourceTail a ≤ t) :
+    leaderTail (counterIndex a) (mass a) ≤ wordValue (innerWord a) t := by
+  have hv := active_item_view D r a hD ha
+  have htail := (counter_sourceTail_expansion a hc).trans ht
+  exact (WordGuardCompletion.Proof.wordReachCorrect D (innerWord a)
+    (leaderTail (counterIndex a) (mass a)) t hv.2.2.2
+    ((Nat.le_max_left _ _).trans htail)).2
+
+theorem counter_leader_value (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (hc : isCounter a = true) (t : Nat) (ht : sourceTail a ≤ t) :
+    wordValue (leader a).2 t = CounterLeaderExpansion.leader (counterIndex a) (mass a)
+      (wordValue (innerWord a) t) := by
+  have hl := counter_reached_leaderTail D r a hD ha hc t ht
+  simp only [leader,hc,if_true,leaderValueWord,WordAlgebraProof.wordValue_append,
+    wordValue,letterValue,phiLetter,if_true]
+  rw [CounterWordGuardCompletion.Proof.leaderWord_value (counterIndex a) (mass a)
+    (wordValue (innerWord a) t) hl]
+  rfl
+
+theorem counter_count_value (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (hc : isCounter a = true) (t : Nat) (ht : sourceTail a ≤ t) :
+    wordValue a.2.2 t = CounterLeaderExpansion.count (counterIndex a+3) (mass a)
+      (wordValue (innerWord a) t) := by
+  have hl := counter_reached_leaderTail D r a hD ha hc t ht
+  rw [counter_item_value D r a hD ha hc t]
+  exact source_count_eq _ _ _ (by omega) (by unfold leaderTail at hl; omega)
+
+theorem scalarTail_recognition (n c e : Nat) :
+    CubicLeaderRecognition.leaderTail n c e ≤ scalarTail n c e 0 0 := by
+  unfold scalarTail CounterFixedShiftComparison.threshold CounterLeaderComparison.threshold
+  omega
+
+private theorem sum_scaled_values (b : Int) (xs : List (Nat × Word)) (t : Nat) :
+    (xs.map (fun p => b*(wordValue p.2 t : Int))).sum =
+      b*(((xs.map (fun p => wordValue p.2 t)).sum : Nat) : Int) := by
+  induction xs with
+  | nil => simp
+  | cons p xs ih =>
+      simp only [List.map_cons,List.sum_cons,Nat.cast_add,ih]
+      ring
+
+/-- Two actual current counters with the same actual leader cancel against
+the lower-rank counter at the original reached inputs. The remaining row is
+exactly the literal upper-chain row emitted by the runtime stage. -/
+theorem counterResidual_identity (D : Nat) (r : Row) (a b : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r))
+    (hb : b ∈ active (canonicalRow r)) (hca : isCounter a = true)
+    (hcb : isCounter b = true) (hle : rank b ≤ rank a) (ν : Nat → Nat)
+    (hta : sourceTail a ≤ ν a.2.1) (htb : sourceTail b ≤ ν b.2.1)
+    (hpa : collisionTail a b ≤ ν a.2.1) (hpb : collisionTail a b ≤ ν b.2.1)
+    (hleader : wordValue (leader a).2 (ν a.2.1) =
+      wordValue (leader b).2 (ν b.2.1)) :
+    a.1*(wordValue a.2.2 (ν a.2.1) : Int) =
+      a.1*(wordValue b.2.2 (ν b.2.1) : Int) +
+        RowValue (counterResidual (rank b) a) ν := by
+  have hparA := counter_parameters D r a hD ha hca
+  have hparB := counter_parameters D r b hD hb hcb
+  have hvA := active_item_view D r a hD ha
+  have hvB := active_item_view D r b hD hb
+  have hreachA := WordGuardCompletion.Proof.wordReachCorrect D (innerWord a)
+    (scalarTail (counterIndex a) (mass a) (mass b) 0 0) (ν a.2.1) hvA.2.2.2 (by
+      simp [collisionTail,hca,hcb] at hpa
+      exact hpa.1)
+  have hreachB := WordGuardCompletion.Proof.wordReachCorrect D (innerWord b)
+    (scalarTail (counterIndex b) (mass b) (mass a) 0 0) (ν b.2.1) hvB.2.2.2 (by
+      simp [collisionTail,hca,hcb] at hpb
+      exact hpb.2)
+  let k := rank a-rank b
+  let m := rank b-3
+  have hnA : m+k = counterIndex a := by dsimp [m,k]; omega
+  have hnB : m = counterIndex b := by dsimp [m]; omega
+  have heq : CounterLeaderExpansion.leader (m+k) (mass a)
+        (wordValue (innerWord a) (ν a.2.1)) =
+      CounterLeaderExpansion.leader m (mass b)
+        (wordValue (innerWord b) (ν b.2.1)) := by
+    rw [hnA,hnB]
+    rw [← counter_leader_value D r a hD ha hca _ hta,
+      ← counter_leader_value D r b hD hb hcb _ htb]
+    exact hleader
+  have hc := CounterLeaderCollision.Proof.actualCrossRankCollision k m (mass a) (mass b)
+    (wordValue (innerWord a) (ν a.2.1)) (wordValue (innerWord b) (ν b.2.1))
+    (by simpa [hnA] using (scalarTail_recognition _ _ _).trans hreachA.2)
+    (by simpa [hnB] using (scalarTail_recognition _ _ _).trans hreachB.2) heq
+  have hl := counter_reached_leaderTail D r a hD ha hca _ hta
+  have hu := upperResidual_values k m (mass a) (wordValue (innerWord a) (ν a.2.1))
+    (by simpa [hnA] using hl)
+  have hs := sum_scaled_values a.1 (upperResidualWords k m (mass a))
+    (wordValue (innerWord a) (ν a.2.1))
+  have hrow : RowValue (counterResidual (rank b) a) ν =
+      a.1*((CounterLeaderCollision.upperResiduals k m (mass a)
+        (wordValue (innerWord a) (ν a.2.1))).sum : Int) := by
+    simp only [RowValue,counterResidual,List.map_map,Function.comp_def,
+      WordAlgebraProof.wordValue_append,zero_add]
+    change ((upperResidualWords k m (mass a)).map (fun p =>
+      a.1*(wordValue p.2 (wordValue (innerWord a) (ν a.2.1)) : Int))).sum = _
+    rw [hs,hu]
+  rw [counter_count_value D r a hD ha hca _ hta,
+    counter_count_value D r b hD hb hcb _ htb,hrow]
+  have hdiff := hc.2.2.1
+  have hdA : m+k+3 = counterIndex a+3 := by omega
+  have hdB : m+3 = counterIndex b+3 := by omega
+  rw [hdA,hdB] at hdiff
+  linear_combination a.1*hdiff
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

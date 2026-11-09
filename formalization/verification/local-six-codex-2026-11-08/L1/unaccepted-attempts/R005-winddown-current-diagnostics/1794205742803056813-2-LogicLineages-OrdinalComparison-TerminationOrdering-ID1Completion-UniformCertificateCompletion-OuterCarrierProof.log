@@ -1,0 +1,40 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterCarrierProof.lean:46:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/OuterCarrierProof.lean:34:34: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Delta : List (InternalCalculus.Formula α)
+oldSrc : SourcePresentation.Data
+oldComp : JointGammaComputability.Data
+data : Data
+oldStep : Program 4
+bottom measure window : Program 1
+oldVertex oldResult : Program 5
+context : ℕ
+hw : evaluate window (List.Vector.ofFn ![context]) = 1
+tau : Ty
+object : OTerm α
+ht :
+  Nonempty
+    (Derivation body Delta
+      (typed (Outer.computability oldComp data window oldVertex oldResult) tau (numeral context) object))
+src : SourcePresentation.Data :=
+  Outer.source oldSrc oldComp data (SourceComputabilityCompletion.RawScalar.checker data) oldStep bottom measure window
+comp : JointGammaComputability.Data := Outer.computability oldComp data window oldVertex oldResult
+β : Type
+j : α → β
+gammaCode payload parameter : OTerm β
+Theta : List (InternalCalculus.Formula β)
+hj : ∀ r ∈ Delta, Formula.relabel j r ∈ Theta
+hg :
+  Nonempty
+    (Derivation body Theta
+      (InternalApplicationCertificateConstructors.graph1 InternalUnpair.left gammaCode (Term.relabel j object)))
+hr :
+  Nonempty
+    (Derivation body Theta
+      (InternalApplicationCertificateConstructors.graph1 InternalUnpair.right payload (Term.relabel j object)))
+hp : Nonempty (Derivation body Theta (graph2 InternalPairing.pairing parameter (numeral context) gammaCode))
+⊢ Nonempty
+    (Derivation body Theta
+      (graph2 (Outer.scalar (SourceComputabilityCompletion.RawScalar.checker data) window oldSrc.scalar) (suc z)
+        (numeral context) (Term.relabel j object)))

@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.FiniteSourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.FiniteSource.StatementChecks
+
+theorem actualFixedFuelPackage : Targets.ActualFixedFuelPackage := Proof.actualFixedFuelPackage
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.FiniteSource.StatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.FiniteSource.StatementChecks.actualFixedFuelPackage
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.FiniteSource

@@ -1,0 +1,51 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformDescentSelectionEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarEvaluationProof
+open Source NumberedNumericCarrier NumberedNumericDecoding NumberedLeastCodeRepresentative
+open InternalOriginalUniformDescentSelection
+open InternalOriginalUniformDescentSelectionEvaluationProof
+open InternalOriginalUniformParameterLeaves (parameterCode)
+open InternalQuotientEdgeChecker InternalOriginalStepGuard
+open InternalAcceptanceCalibrationProof InternalApplicationStepPeelEvaluationSupportProof
+open SourceComputabilityCompletion.RawScalar
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+
+theorem scalarCharacterization (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n))
+    (S Gamma : List Ty) (value : Nat) :
+    (canonicalCarrierTest n arity symbols S Gamma value).toNat =
+      if sourceValidityValue n arity symbols S Gamma value = 1 ∧
+        targetRepresentativeValue n arity symbols S Gamma value = value then 1 else 0 := by
+  cases hd : decodeUniverse n arity symbols S Gamma value with
+  | none => simp [canonicalCarrierTest,sourceValidityValue,rawCarrierTest,hd]
+  | some q =>
+    have hp := (Option.filter_eq_some_iff.mp hd).1
+    simp only [canonicalCarrierTest,hd,sourceValidityValue,rawCarrierTest,
+      Option.isSome_some,Bool.toNat_true,targetRepresentativeValue,hp,true_and]
+    split_ifs with h <;> simp [h]
+
+theorem checkerEvaluation (data : Data) (value parameter : Nat) :
+    evaluate (checker data) (ofFn ![value,parameter]) =
+      if evaluate (validity data) (ofFn ![value,parameter]) = 1 ∧
+        evaluate (InternalParameterizedBoundedDescentNormalizer.transition
+          data.oldRepresentative (validity data)) (ofFn ![value,parameter]) = value
+      then 1 else 0 := by
+  rw [checker,conjunctionEvaluation,fixed,sameEvaluation]
+  change (if evaluate (validity data) (ofFn ![value,parameter]) = 1 ∧
+    (if evaluate (InternalParameterizedBoundedDescentNormalizer.transition
+      data.oldRepresentative (validity data)) (ofFn ![value,parameter]) = value
+    then 1 else 0) = 1 then 1 else 0) = _
+  split_ifs <;> simp_all
+
+theorem actualOriginalRawScalarCalibration : RawScalarTargets.ActualOriginalRawScalarCalibration := by
+  intro n arity data hc symbols S Gamma table hclosed value
+  rw [checkerEvaluation,
+    (actualOriginalUniformValidityCalibration n arity data hc symbols S Gamma table value).2]
+  by_cases hv : sourceValidityValue n arity symbols S Gamma value = 1
+  · rw [actualOriginalUniformTransitionIdentification n arity data hc symbols S Gamma table hclosed value hv]
+    exact (scalarCharacterization n arity symbols S Gamma value).symm
+  · rw [scalarCharacterization]
+    simp only [hv,false_and,ite_false]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.RawScalarEvaluationProof

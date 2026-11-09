@@ -1,0 +1,148 @@
+{
+  "state": "PASSED COMPLETE SOURCE08 RANKED CANCELLATION; current round COMPLETE and STOPPED",
+  "created_utc": "2026-11-09T06:50:32.082423+00:00",
+  "source_statement": "08:lem:row",
+  "source_paper": "08-multivariate-collapse-comparison/paper.tex",
+  "source_language_lines": [
+    551,
+    562
+  ],
+  "source_statement_lines": [
+    641,
+    646
+  ],
+  "source_proof_lines": [
+    648,
+    705
+  ],
+  "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+  "frozen_specs": [
+    "WHOLE-ROW-FROZEN-TARGET.json",
+    "R005-FROZEN-TARGETS.json",
+    "R004-FROZEN-TARGETS.json"
+  ],
+  "exact_frozen_type_bindings": {
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.all_input_termination": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.AllInputTermination",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.exact_least_stopping": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.ExactLeastStopping",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.finite_runner_program": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.FiniteRunnerProgram",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.least_fuel_program": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.LeastFuelProgram",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.exact_single_row_package": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.ExactSingleRowPackage",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.exact_family_package": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.ExactFamilyPackage",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.actual_family_program": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RunnerTargets.ActualFamilyProgram",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    },
+    "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.StatementChecks.full_ranked_cancellation": {
+      "frozen_target": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.ContractTargets.FullRankedCancellation",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checked_by": "build-reports/1794206152584472099-2.json"
+    }
+  },
+  "concrete_compiler": "LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.Runner.compile",
+  "construction": "RunnerProof.lean11-12: actual compiler, actualFamilyProgram, exactFamilyPackage; no supplied solver/cancellation/termination fields",
+  "source_pins": "R005-SOURCE-PINS.json",
+  "actual_axioms": "R005-AXIOMS.json",
+  "native_closure": "R005-NATIVE-CLOSURE.json",
+  "matched_current_and_successful_native_closure": 526,
+  "main_independent_current_pin_review": "MAIN explicitly confirmed526/526 current pins, exact8/std3 and source-equivalence review",
+  "own_immutable_source_pins": {
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerStatementChecks.lean": "02938b0f518a8ea07a10f94e0fb6364a5fef180f061d70c552cd77233b6ccab1",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerProof.lean": "51415009cbfa130311e3c1cfb088a694ec942314ee4cb0eaf91bb8b188b79a23",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerSingleProof.lean": "d98e4ae909413a9747decd7d18f268907ff3fc2db3a5698d4a9f30fa4ec20222",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerStepProof.lean": "516b97b1fad1e1c45aa3c8a458018a205ad3e55199546c70dcf6f3bc629b922f",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerInvariantProof.lean": "87f2cf6a79b98633a9322cb95304a82263ab0b91d1bcb137656581d274c1cfae",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerTerminationProof.lean": "82f5ece488f333d8e6c07785d0b0d9aa2708657ed3cbf1bd96003b2b4fa3f496",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerFamilyProof.lean": "6a6bcc45aceecd84096a7527241c25ae2d5b6cc75ebf88d4a1566139b31d98e2",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerCompilerProgramsProof.lean": "2962a007e57b2a66f4e44cd6d547eb11b40210e6dd16e8097f4514239c8bb5f9",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerLeastProgramsProof.lean": "6321d96f362c9bb8e1718403b2ccda9394dcb7660ae5563c3018d1b9964ea7eb",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerProgramsProof.lean": "2cb4007191592e819853cc913c21f50dbced09cce1279ccbb7cac1ff805c72c2",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerDataProgramsProof.lean": "26e05d5d94c64d17f23486562e2715a2b4c669295162ee2846287daceb389c52",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerCodeProof.lean": "f0537570bbb39bac1dc240562251c7da41dae37b5fd639e2cf15e55e1b9ad258",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerDefinitions.lean": "ab85145ceb624c19b2743c891012542f41bf7085f76cadaa88710789f184b7d5",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/RunnerTargets.lean": "12b4bb7699f96f333a903d6adf22a14dd3bdba991b1d0c04132d141a50d8e127",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/ContractDefinitions.lean": "81573164eaa3c63e6dcc05562c123a119630ca3e55dab209423e95a3da47290e",
+    "LogicLineages/OrdinalComparison/RankedWordDecisionCompletion/ContractTargets.lean": "89c5c6deaef071ff244cecdbc6ad6fb9319b3ab03d929313b6d7e6f106ec2088"
+  },
+  "own_counts": {
+    "proof_gate": 12,
+    "Runner_specifications": 2,
+    "whole_Contract_specifications": 2
+  },
+  "gate_receipt": "build-reports/1794206152584472099-2.json",
+  "explicit_conditions": [
+    "D>=3 and literal finite-degree admitted input rows",
+    "Chosen maximal RAW name; one common valuation \u03bd with all original raw inputs above computed tail and <=\u03bd(maximum)"
+  ],
+  "remaining_assumptions_for_row": "NONE beyond printed finite-language/tail/maximality conditions and standard foundations. All old/generated domains are derived, including zero coefficients and false guards.",
+  "outside_scope_pending": [
+    "08:thm:existential",
+    "08:thm:leveltwo",
+    "R006 deferred Boolean adapter"
+  ],
+  "source_correspondence": "R005-SOURCE-CORRESPONDENCE.md",
+  "main_authority": "Main owns adoption/register/root integration and authorized final commit; no lane Git or push",
+  "wind_down": {
+    "further_invocations_ceiling": 4,
+    "used": 1,
+    "round_done": true,
+    "successors": "NONE; R006 preserved/deferred",
+    "native_transport_lease": "NONE; all central native/transport fully reaped, both locks FREE per coordinator FINAL STOP06:46:49UTC"
+  }
+}

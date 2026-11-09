@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.Targets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.Preflight
+def factorization : Prop := Targets.ActualParameterizedQuotientEdgeFactorization
+def typedPropagation : Prop := Targets.ActualParameterizedQuotientEdgeTypedPropagation
+def calibration : Prop := Targets.ActualOriginalUniformQuotientEdgeCalibration
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.Preflight

@@ -1,0 +1,86 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmResidualProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmPrograms
+open PolynomialGraphCompletion Algorithm
+
+theorem residualItems_primitive : Primrec (fun p : Item × List (Nat × Word) =>
+    p.2.map (fun q => (p.1.1,p.1.2.1,innerWord p.1++q.2))) := by
+  let A := Item × List (Nat × Word)
+  have ha : Primrec (fun p : A × (Nat × Word) => p.1.1) := Primrec.fst.comp Primrec.fst
+  have hi : Primrec (fun p : A × (Nat × Word) =>
+      (p.1.1.1,p.1.1.2.1,innerWord p.1.1++p.2.2)) :=
+    (Primrec.fst.comp ha).pair ((Primrec.fst.comp (Primrec.snd.comp ha)).pair
+      (Primrec.list_append.comp (innerWord_primitive.comp ha) (Primrec.snd.comp Primrec.snd)))
+  exact Primrec.list_map Primrec.snd hi.to₂
+
+theorem ordinaryResidual_primitive : Primrec ordinaryResidual := by
+  have hhalf : Primrec (fun a : Item => (mass a+1)/2) := Primrec.nat_div.comp
+    (Primrec.nat_add.comp mass_primitive (Primrec.const 1)) (Primrec.const 2)
+  have hcorrection : Primrec (fun a : Item => (1 : Int)-(((mass a+1)/2 : Nat) : Int)) := by
+    apply (LayeredComparison.IntegerAlgorithms.Proof.add_primitive.comp (Primrec.const 1)
+      (LayeredComparison.IntegerAlgorithms.Proof.negate_primitive.comp
+        (LayeredComparison.IntegerAlgorithms.Proof.ofNat_primitive.comp hhalf))).of_eq
+    intro a
+    simp only [sub_eq_add_neg]
+  have hconst := LayeredComparison.IntegerAlgorithms.Proof.mul_primitive.comp Primrec.fst hcorrection
+  have hterms := residualItems_primitive.comp
+    (Primrec.id.pair (residualWords_primitive.comp (counterIndex_primitive.pair mass_primitive)))
+  apply (Primrec.cond isCounter_primitive (hconst.pair hterms) (Primrec.const ((0,[]) : Row))).of_eq
+  intro a
+  cases hc : isCounter a <;> simp [ordinaryResidual,hc]
+
+theorem counterResidual_primitive : Primrec (fun p : Nat × Item => counterResidual p.1 p.2) := by
+  have hk := Primrec.nat_sub.comp (rank_primitive.comp Primrec.snd) Primrec.fst
+  have hm := Primrec.nat_sub.comp Primrec.fst (Primrec.const 3)
+  have hw := upperResidualWords_primitive.comp (hk.pair (hm.pair (mass_primitive.comp Primrec.snd)))
+  exact (Primrec.const (0 : Int)).pair
+    (residualItems_primitive.comp (Primrec.snd.pair hw))
+
+theorem rowAdd_primitive : Primrec₂ rowAdd :=
+  (LayeredComparison.IntegerAlgorithms.Proof.add_primitive.comp (Primrec.fst.comp Primrec.fst)
+    (Primrec.fst.comp Primrec.snd)).pair
+    (Primrec.list_append.comp (Primrec.snd.comp Primrec.fst) (Primrec.snd.comp Primrec.snd))
+
+theorem foldRows_primitive : Primrec (fun rows : List Row => rows.foldr rowAdd (0,[])) :=
+  Primrec.list_foldr Primrec.id (Primrec.const ((0,[]) : Row))
+    (rowAdd_primitive.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)).to₂
+
+theorem leastRank_primitive : Primrec₂ leastRank :=
+  Primrec.list_foldr (Primrec.list_map Primrec.snd (rank_primitive.comp Primrec.snd).to₂)
+    (Primrec.succ.comp Primrec.fst)
+    (Primrec.nat_min.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)).to₂
+
+theorem hasOrdinary_primitive : Primrec hasOrdinary := by
+  have hs : Primrec₂ (fun _ : List Item => fun state : Item × Bool => !isCounter state.1 || state.2) :=
+    Primrec.or.comp (Primrec.not.comp (isCounter_primitive.comp (Primrec.fst.comp Primrec.snd)))
+      (Primrec.snd.comp Primrec.snd)
+  apply (Primrec.list_foldr Primrec.id (Primrec.const false) hs).of_eq
+  intro xs
+  induction xs with
+  | nil => rfl
+  | cons a xs ih => simpa [hasOrdinary] using congrArg (fun b => !isCounter a || b) ih
+
+theorem leading_primitive : Primrec leading := by
+  have hw : Primrec (fun a : Item => if isCounter a then (1 : Int) else 2) := by
+    apply (Primrec.cond isCounter_primitive (Primrec.const (1 : Int)) (Primrec.const (2 : Int))).of_eq
+    intro a
+    cases hc : isCounter a <;> simp [hc]
+  have ht := LayeredComparison.IntegerAlgorithms.Proof.mul_primitive.comp Primrec.fst hw
+  exact intSum_primitive.comp (Primrec.list_map Primrec.id (ht.comp Primrec.snd).to₂)
+
+theorem classReplacement_primitive : Primrec₂ classReplacement := by
+  have ho := Primrec.list_map (Primrec.snd : Primrec (fun p : Nat × List Item => p.2))
+    (ordinaryResidual_primitive.comp Primrec.snd).to₂
+  have hleast : Primrec (fun p : (Nat × List Item) × Item => leastRank p.1.1 p.1.2) :=
+    leastRank_primitive.comp (Primrec.fst.comp Primrec.fst) (Primrec.snd.comp Primrec.fst)
+  have hi : Primrec (fun p : (Nat × List Item) × Item => counterResidual (leastRank p.1.1 p.1.2) p.2) :=
+    counterResidual_primitive.comp (hleast.pair Primrec.snd)
+  have hc := Primrec.list_map (Primrec.snd : Primrec (fun p : Nat × List Item => p.2)) hi.to₂
+  apply (Primrec.cond (hasOrdinary_primitive.comp Primrec.snd)
+    (foldRows_primitive.comp ho) (foldRows_primitive.comp hc)).of_eq
+  intro p
+  cases h : hasOrdinary p.2 <;> simp [classReplacement,h]
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmPrograms

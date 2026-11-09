@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumArithmeticProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumArithmeticStatementChecks
+theorem originalHead : PlainMaximumTargets.ExactOriginalHeadDecomposition :=
+  PlainMaximumProof.exactOriginalHeadDecomposition
+theorem originalRemainder : PlainMaximumTargets.ActualOriginalRemainderBound :=
+  PlainMaximumProof.actualOriginalRemainderBound
+theorem lowBoundary : PlainMaximumTargets.ActualLowBoundaryGap :=
+  PlainMaximumProof.actualLowBoundaryGap
+theorem highBoundary : PlainMaximumTargets.ActualHighBoundaryGap :=
+  PlainMaximumProof.actualHighBoundaryGap
+#print axioms originalHead
+#print axioms originalRemainder
+#print axioms lowBoundary
+#print axioms highBoundary
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumArithmeticStatementChecks

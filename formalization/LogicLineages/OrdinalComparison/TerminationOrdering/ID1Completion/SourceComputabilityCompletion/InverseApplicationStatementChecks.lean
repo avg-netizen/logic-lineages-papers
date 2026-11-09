@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationStatementChecks
+
+theorem inverseApplication_exact : InverseApplicationTargets.ActualOriginalInverseApplication :=
+  InverseApplicationProof.actualOriginalInverseApplication
+
+#print axioms inverseApplication_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationStatementChecks

@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.CollapseReductionProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.CollapseStatementChecks
+
+theorem localReduction : CollapseTargets.LocalCollapseReduction := CollapseProof.localCollapseReduction
+
+/-- Conditional assembly only; its antecedent is an unpaid source supplier. -/
+theorem fromSelectedLocalHB : CollapseTargets.SelectedLocalHB → CollapseTargets.SourceCollapse :=
+  CollapseProof.sourceCollapseFromSelectedLocalHB
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.CollapseStatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.CollapseStatementChecks.localReduction
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.CollapseStatementChecks.fromSelectedLocalHB
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion

@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumClassificationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumStatementChecks
+theorem originalHead : PlainMaximumTargets.ExactOriginalHeadDecomposition :=
+  PlainMaximumProof.exactOriginalHeadDecomposition
+theorem originalRemainder : PlainMaximumTargets.ActualOriginalRemainderBound :=
+  PlainMaximumProof.actualOriginalRemainderBound
+theorem lowBoundary : PlainMaximumTargets.ActualLowBoundaryGap :=
+  PlainMaximumProof.actualLowBoundaryGap
+theorem highBoundary : PlainMaximumTargets.ActualHighBoundaryGap :=
+  PlainMaximumProof.actualHighBoundaryGap
+theorem actualRowLinearization : PlainMaximumTargets.ActualNonnegativeLinearization :=
+  PlainMaximumProof.actualNonnegativeLinearization
+theorem eliminandLinearity : PlainMaximumTargets.ExactEliminandLinearity :=
+  PlainMaximumProof.exactEliminandLinearity
+theorem blockParameters : PlainMaximumTargets.WholeBlockParameterPreservation :=
+  PlainMaximumProof.wholeBlockParameterPreservation
+theorem originalSupport : PlainMaximumTargets.OriginalNameSupport :=
+  PlainMaximumProof.originalNameSupport
+#print axioms originalHead
+#print axioms originalRemainder
+#print axioms lowBoundary
+#print axioms highBoundary
+#print axioms actualRowLinearization
+#print axioms eliminandLinearity
+#print axioms blockParameters
+#print axioms originalSupport
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainMaximumStatementChecks

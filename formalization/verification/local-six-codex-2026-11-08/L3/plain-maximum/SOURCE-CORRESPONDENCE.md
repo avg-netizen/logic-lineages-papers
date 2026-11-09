@@ -1,0 +1,11 @@
+# Actual plain-Phi maximum row linearization
+
+This packet tests the shorter route to the PRINTED Phi-only BASE target. SourceTermGraph.rows emits phiRow=z-Phi(x) with shift zero on allocated input names, including fresh variable leaves. The stronger published Phi/H normal-form supplier is not assumed or claimed.
+
+The concrete row classifier selects the NET integer coefficient of the chosen Phi(x), not an assumed head shared by all rows. A coefficient-zero row retains its own exact remainder. Non-bound occurrences must first be folded into the existing tied parameter constants, so the row occurrence list contains only bound variables and shift-zero Phi at bound variables. The actual current literal coefficient mass controls a fixed cutoff. At a unique maximum bound value, every remaining Phi argument is at most x-1 and every linear bound input is at most x. Existing actualGap with S=A=2*mass and B=0 then proves 2*abs(remainder)<Phi(x), without restricting free parameter values.
+
+The parameter constant may be arbitrarily large and of either sign. Its actual absolute value determines the old floor-inverse crossing. Away from the literal finite crossing band, each row's nonnegative test is equivalent to a concrete Boolean formula linear in x, with expanded free-parameter boundaries. No fictitious copy of another row's dominant term is inserted into missing-head rows. Exact head decomposition, actual original-data remainder bound, low/high gaps, source row equivalence, eliminand linearity, parameter invariant and original-name support are the eight frozen targets.
+
+This is the nonnegative-atom clause only. Divisibility residue rewriting, finite small/tie/boundary coverage, the concrete tied-term Cooper adapter, full source case induction, numeric codec/effectivity and inverse-graph closure through quantifier alternation remain unpaid. The uniform projector and full BASE theorem are not assumed as fields, asserted by these definitions or promoted by a target preflight.
+
+The existing BlockRows exact repair closure is independent and stays stable: these are NEW files and do not enter that submitted import closure. No proof has been authored before the target freeze/preflight.

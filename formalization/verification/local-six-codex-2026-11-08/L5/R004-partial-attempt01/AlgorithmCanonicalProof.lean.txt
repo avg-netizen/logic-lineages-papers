@@ -1,0 +1,107 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmTargets
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.RowStatementChecks
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+open PolynomialGraphCompletion WordLinearDecisionCompletion Algorithm
+open OuterShiftNormalization
+
+theorem splitWord_append_nonshift (A : Word) (a : Letter) (ha : a.1 ≠ 0) :
+    splitWord (A++[a]) = (A++[a],[]) := by
+  induction A with
+  | nil => simp [splitWord,splitStep,ha]
+  | cons b A ih =>
+      change splitStep b (splitWord (A++[a])) = (b::(A++[a]),[])
+      rw [ih]
+      simp [splitStep]
+
+theorem core_idempotent (w : Word) : coreWord (coreWord w) = coreWord w := by
+  rcases (OuterShiftNormalization.Proof.splitSyntax w).2.2.1 with hw | ⟨A,a,hw,ha⟩
+  · rw [hw]
+    rfl
+  · rw [hw]
+    exact congrArg Prod.fst (splitWord_append_nonshift A a ha)
+
+theorem canonical_item (r : Row) (a : Item) (ha : a ∈ (canonicalRow r).2) :
+    a.1 ≠ 0 ∧ coreWord a.2.2 = a.2.2 := by
+  have hs := List.mem_filter.mp ha
+  obtain ⟨b,hb,rfl⟩ := List.mem_map.mp hs.1
+  exact ⟨by simpa using hs.2,core_idempotent b.2.2⟩
+
+theorem canonical_names (r : Row) : NamesFrom (rowVariables r) (canonicalRow r) := by
+  intro i hi
+  obtain ⟨a,ha,rfl⟩ := List.mem_map.mp hi
+  obtain ⟨b,hb,rfl⟩ := List.mem_map.mp (List.mem_filter.mp ha).1
+  exact List.mem_map.mpr ⟨b,hb,rfl⟩
+
+theorem canonical_allowed (D : Nat) (r : Row) (hr : RowAllowed D r) :
+    RowAllowed D (canonicalRow r) := by
+  intro a ha
+  obtain ⟨b,hb,rfl⟩ := List.mem_map.mp (List.mem_filter.mp ha).1
+  exact (OuterShiftNormalization.Proof.normalizationSyntax D b.2.2 (hr b hb)).1
+
+theorem canonical_domain (r : Row) (ν : Nat → Nat) (hr : RowDomain r ν) :
+    RowDomain (canonicalRow r) ν := by
+  intro a ha
+  obtain ⟨b,hb,rfl⟩ := List.mem_map.mp (List.mem_filter.mp ha).1
+  exact (OuterShiftNormalization.Proof.normalizationCorrect b.2.2 (ν b.2.1) (hr b hb)).1
+
+private theorem sum_without_zero (xs : List Item) (ν : Nat → Nat) :
+    ((xs.filter (fun a => a.1 != 0)).map
+      (fun a => a.1*(wordValue a.2.2 (ν a.2.1) : Int))).sum =
+    (xs.map (fun a => a.1*(wordValue a.2.2 (ν a.2.1) : Int))).sum := by
+  induction xs with
+  | nil => simp
+  | cons a xs ih =>
+      by_cases ha : a.1 = 0
+      · simp [ha,ih]
+      · simp [ha,ih]
+
+theorem canonical_value (D : Nat) (r : Row) (ν : Nat → Nat)
+    (ha : RowAllowed D r) (hd : RowDomain r ν) :
+    RowValue (canonicalRow r) ν = RowValue r ν := by
+  have hn := RankedWordDecisionCompletion.Proof.exactRowNormalization D r ν ha hd
+  calc
+    RowValue (canonicalRow r) ν = RowValue (normalizeRow r) ν := by
+      change (normalizeRow r).1 +
+        ((((normalizeRow r).2).filter (fun a => a.1 != 0)).map
+          (fun a => a.1*(wordValue a.2.2 (ν a.2.1) : Int))).sum = _
+      rw [sum_without_zero]
+      rfl
+    _ = RowValue r ν := hn.2.2.1
+
+private def itemRanks (xs : List Item) : List Nat :=
+  (xs.filter (fun a => a.1 != 0 && coreWord a.2.2 != [])).map
+    (fun a => topRank (coreWord a.2.2))
+
+private def nonzeroCore (xs : List Item) : List Item :=
+  (xs.map (fun a => (a.1,a.2.1,coreWord a.2.2))).filter (fun a => a.1 != 0)
+
+private theorem itemRanks_nonzeroCore (xs : List Item) :
+    itemRanks (nonzeroCore xs) = itemRanks xs := by
+  induction xs with
+  | nil => rfl
+  | cons a xs ih =>
+      by_cases hz : a.1 = 0
+      · simpa [itemRanks,nonzeroCore,hz] using ih
+      · by_cases hw : coreWord a.2.2 = []
+        · simpa [itemRanks,nonzeroCore,hz,hw,core_idempotent] using ih
+        · simpa [itemRanks,nonzeroCore,hz,hw,core_idempotent] using
+            congrArg (List.cons (topRank (coreWord a.2.2))) ih
+
+theorem canonical_rankList (r : Row) : rowRankList (canonicalRow r) = rowRankList r := by
+  exact itemRanks_nonzeroCore r.2
+
+theorem canonical_maximum_absent (maximum : Nat) (r : Row)
+    (h : hasMaximum maximum (canonicalRow r) = false) :
+    LinearRow maximum (canonicalRow r) := by
+  intro a ha hx
+  by_contra hn
+  have hm : a ∈ active (canonicalRow r) :=
+    List.mem_filter.mpr ⟨ha,by simpa using hn⟩
+  have ht : hasMaximum maximum (canonicalRow r) = true :=
+    List.any_eq_true.mpr ⟨a,hm,by simpa using hx⟩
+  simp [h] at ht
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

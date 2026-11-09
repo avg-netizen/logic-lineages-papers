@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationStatementChecks
+
+theorem selectedRepresentative_exact : SpineApplicationTargets.ActualSelectedRepresentativeSpinePreservation :=
+  SpineApplicationSelectedProof.actualSelectedRepresentativeSpinePreservation
+
+theorem application_exact : SpineApplicationTargets.ActualParameterizedApplicationSpineEquation :=
+  SpineApplicationProof.actualParameterizedApplicationSpineEquation
+
+#print axioms selectedRepresentative_exact
+#print axioms application_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationStatementChecks

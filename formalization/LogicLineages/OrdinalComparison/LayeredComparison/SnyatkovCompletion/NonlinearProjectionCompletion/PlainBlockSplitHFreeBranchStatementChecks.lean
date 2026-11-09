@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitHFreeBranchProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitHFreeBranchStatementChecks
+theorem actualHFreeBranch : PlainBlockSplitTargets.HFreeBranchClosure :=
+  PlainBlockSplitProof.hFreeBranchClosure
+#print axioms actualHFreeBranch
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitHFreeBranchStatementChecks

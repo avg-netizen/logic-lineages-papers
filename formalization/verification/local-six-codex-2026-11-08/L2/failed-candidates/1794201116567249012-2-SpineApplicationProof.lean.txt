@@ -1,0 +1,144 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationSelectedProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationRawProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationTypingApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalAcceptanceConjunctionProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalParameterizedCanonicalResultFoldConsumerProof InternalParameterizedCanonicalResultFoldOpeningProof
+open InternalOriginalUniformApplicationTypingApplicationProof
+open InternalTagArithmeticSyntaxProof (OTerm z suc sucRelabel zRelabel)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open SpineApplicationTargets (selectedData)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {α : Type} {Gamma : List (Formula α)}
+
+def premises (data : Data) (window : Program 1)
+    (arrow d e f a out parameter fm flag depth next : OTerm α) : Formula α :=
+  graph2 (BottomRepresentative.windowAt window) (suc z) f parameter ⊓
+    (InternalOriginalUniformApplicationTyping.applicationPremises (selectedData data window)
+        arrow d e f a out parameter ⊓
+      (BottomSpineMeasure.graph fm f ⊓
+        (graph1 InternalUnpair.left flag fm ⊓
+          (graph1 InternalUnpair.right depth fm ⊓ graph1 Program.succ next depth))))
+
+theorem premisesRename {β : Type} (data : Data) (window : Program 1)
+    (arrow d e f a out parameter fm flag depth next : OTerm α) (j : α → β) :
+    (premises data window arrow d e f a out parameter fm flag depth next).relabel j =
+      premises data window (arrow.relabel j) (d.relabel j) (e.relabel j) (f.relabel j)
+        (a.relabel j) (out.relabel j) (parameter.relabel j) (fm.relabel j)
+        (flag.relabel j) (depth.relabel j) (next.relabel j) := by
+  simp only [premises,conjunctionRename,graph2Rename,sucRelabel,zRelabel,
+    applicationPremisesRename,BottomSpineMeasure.graph,graph1Rename]
+
+theorem chainIff (P Q R : Formula α)
+    (hpq : Nonempty (Derivation body Gamma (P.iff Q)))
+    (hqr : Nonempty (Derivation body Gamma (Q.iff R))) :
+    Nonempty (Derivation body Gamma (P.iff R)) := by
+  obtain ⟨hpq'⟩ := withHyp hpq P
+  obtain ⟨hqr'⟩ := withHyp hqr P
+  have hf := Derivation.implicationIntroduction
+    (Derivation.implicationElimination (Derivation.conjunctionLeft hqr')
+      (Derivation.implicationElimination (Derivation.conjunctionLeft hpq')
+        (Derivation.hypothesis List.mem_cons_self)))
+  obtain ⟨hpq''⟩ := withHyp hpq R
+  obtain ⟨hqr''⟩ := withHyp hqr R
+  have hb := Derivation.implicationIntroduction
+    (Derivation.implicationElimination (Derivation.conjunctionRight hpq'')
+      (Derivation.implicationElimination (Derivation.conjunctionRight hqr'')
+        (Derivation.hypothesis List.mem_cons_self)))
+  exact ⟨Derivation.conjunctionIntroduction hf hb⟩
+
+theorem atRaw (data : Data) (window : Program 1)
+    (arrow d e f a out parameter fm flag depth next mark b raw : OTerm α)
+    (h : Nonempty (Derivation body Gamma (premises data window arrow d e f a out parameter fm flag depth next)))
+    (hn : Nonempty (Derivation body Gamma
+      (InternalParameterizedCanonicalResultFold.foldGraph (selectedData data window) b a parameter)))
+    (hr : Nonempty (Derivation body Gamma (graph4 application raw d e f b))) :
+    Nonempty (Derivation body Gamma
+      ((BottomSpineMeasure.graph mark out).iff (graph2 InternalPairing.pairing mark flag next))) := by
+  let selected := selectedData data window
+  have hw := andLeft h
+  have happ := andLeft (andRight h)
+  have hfm := andLeft (andRight (andRight h))
+  have hl := andLeft (andRight (andRight (andRight h)))
+  have hdepth := andLeft (andRight (andRight (andRight (andRight h))))
+  have hnext := andRight (andRight (andRight (andRight (andRight h))))
+  have har := andLeft happ
+  have hm := andLeft (andRight happ)
+  have hf := andLeft (andRight (andRight happ))
+  have ha := andLeft (andRight (andRight (andRight happ)))
+  have hj := andRight (andRight (andRight (andRight happ)))
+  have hff := InternalOriginalUniformDescentSelectionInternalProof.typedRecover
+    selected.oldRepresentative (InternalOriginalUniformDescentSelection.validity selected) selected.member
+    f arrow parameter hf
+  have haf := InternalOriginalUniformDescentSelectionInternalProof.typedRecover
+    selected.oldRepresentative (InternalOriginalUniformDescentSelection.validity selected) selected.member
+    a d parameter ha
+  have hb := andRight (certifiedAt selected b a d parameter
+    (andLeft (andRight haf)) (andLeft (andRight (andRight haf))) hn)
+  have hv := rawValidity selected arrow d e f b raw parameter har
+    (andLeft (andRight (andRight hff))) (andLeft (andRight hb)) hm
+    (andLeft (andRight hff)) (andLeft hb) hr
+  have hout := combineRecover selected d e f b raw out parameter hr
+    (applicationCombine selected d e f a out parameter b hn hj)
+  have hwraw := BottomDescentStepProof.windowChange window (suc z) f raw parameter hw
+  have hactive := conjunctionAccept (BottomRepresentative.windowAt window)
+    (SpineApplicationIteration.selectedValidity data window)
+    (Fin.cons raw (Fin.cons parameter Fin.elim0)) hwraw hv
+  have hi := SpineApplicationSelectedProof.selectedIff data window out raw parameter mark hactive hout
+  have hraw := SpineApplicationRawProof.rawEquation arrow d e f b raw fm flag depth next mark
+    har (andLeft (andRight (andRight hff))) (andLeft (andRight hb)) hr hfm hl hdepth hnext
+  exact chainIff _ _ _ hi hraw
+
+theorem atArgument (data : Data) (window : Program 1)
+    (arrow d e f a out parameter fm flag depth next mark b : OTerm α)
+    (h : Nonempty (Derivation body Gamma (premises data window arrow d e f a out parameter fm flag depth next)))
+    (hn : Nonempty (Derivation body Gamma
+      (InternalParameterizedCanonicalResultFold.foldGraph (selectedData data window) b a parameter))) :
+    Nonempty (Derivation body Gamma
+      ((BottomSpineMeasure.graph mark out).iff (graph2 InternalPairing.pairing mark flag next))) := by
+  apply programCases application (Fin.cons d (Fin.cons e (Fin.cons f (Fin.cons b Fin.elim0)))) _
+  intro β j Delta raw hj hr
+  rw [SpineApplicationRawProof.equationRename]
+  have h' := renameInto h j Delta hj
+  rw [premisesRename] at h'
+  have hn' := renameInto hn j Delta hj
+  rw [InternalParameterizedCanonicalResultFoldSyntaxProof.foldGraphRename] at hn'
+  simp only [consTermRename,emptyRename] at hr
+  exact atRaw data window (arrow.relabel j) (d.relabel j) (e.relabel j) (f.relabel j)
+    (a.relabel j) (out.relabel j) (parameter.relabel j) (fm.relabel j)
+    (flag.relabel j) (depth.relabel j) (next.relabel j) (mark.relabel j) (b.relabel j) raw h' hn' hr
+
+theorem applicationEquation (data : Data) (window : Program 1)
+    (arrow d e f a out parameter fm flag depth next mark : OTerm α)
+    (h : Nonempty (Derivation body Gamma (premises data window arrow d e f a out parameter fm flag depth next))) :
+    Nonempty (Derivation body Gamma
+      ((BottomSpineMeasure.graph mark out).iff (graph2 InternalPairing.pairing mark flag next))) := by
+  apply programCases (InternalParameterizedCanonicalResultFold.foldN (selectedData data window))
+    (Fin.cons a (Fin.cons parameter Fin.elim0)) _
+  intro β j Delta b hj hn
+  rw [SpineApplicationRawProof.equationRename]
+  have h' := renameInto h j Delta hj
+  rw [premisesRename] at h'
+  simp only [consTermRename,emptyRename] at hn
+  exact atArgument data window (arrow.relabel j) (d.relabel j) (e.relabel j) (f.relabel j)
+    (a.relabel j) (out.relabel j) (parameter.relabel j) (fm.relabel j)
+    (flag.relabel j) (depth.relabel j) (next.relabel j) (mark.relabel j) b h' hn
+
+theorem actualParameterizedApplicationSpineEquation : SpineApplicationTargets.ActualParameterizedApplicationSpineEquation := by
+  intro body data window α Delta arrow d e f a out parameter fm flag depth next mark
+  let H := premises data window arrow d e f a out parameter fm flag depth next
+  obtain ⟨d⟩ := applicationEquation (body := body) (Gamma := H :: Delta)
+    data window arrow d e f a out parameter fm flag depth next mark
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.implicationIntroduction d⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationProof

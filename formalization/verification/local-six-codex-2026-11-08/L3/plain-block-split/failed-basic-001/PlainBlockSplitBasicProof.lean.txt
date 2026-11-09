@@ -1,0 +1,120 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockRowsSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitProof
+open BlockRows PlainBlockSplit
+
+private theorem renamed_summand_value (s : NormalForm.Summand) (i j : Nat) (ν : Nat → Nat) :
+    (renameSummand i j s).term.value ν = s.term.value (Function.update ν i (ν j)) := by
+  cases s with
+  | «variable» k =>
+    by_cases hk : k = i <;> simp [renameSummand, NormalForm.Summand.term, Term.value,
+      Function.update_apply, hk]
+  | phi k shift =>
+    by_cases hk : k = i <;> simp [renameSummand, NormalForm.Summand.term, shiftTerm,
+      Term.value, Function.update_apply, hk]
+  | hyperPhi k e h =>
+    by_cases hk : k = i <;> simp [renameSummand, NormalForm.Summand.term,
+      HyperWindow.valueTerm, HyperWindow.innerTerm, HyperWindow.indexTerm, shiftTerm,
+      Term.value, Function.update_apply, hk]
+
+private theorem renamed_row_value (r : Row) (i j : Nat) (ν : Nat → Nat)
+    (hi : i ∉ r.parameters) :
+    rowValue (renameRow i j r) ν = rowValue r (Function.update ν i (ν j)) := by
+  have hP := WindowProof.term_update r.1.1 i (ν j) ν
+    (fun h => hi (List.mem_append_left _ h))
+  have hN := WindowProof.term_update r.1.2 i (ν j) ν
+    (fun h => hi (List.mem_append_right _ h))
+  simp only [renameRow, rowValue, List.map_map, Function.comp_def,
+    renamed_summand_value, hP, hN]
+
+theorem literalTieSemantics : PlainBlockSplitTargets.LiteralTieSemantics := by
+  intro p i j hp ν
+  induction p with
+  | truth => rfl
+  | falsity => rfl
+  | atom a =>
+    have hv := renamed_row_value a.row i j ν hp
+    cases a <;> simp only [Atom.row] at hv <;>
+      simp only [rename, Formula.eval, Atom.eval] <;> rw [hv]
+  | negative p ih => exact not_congr (ih hp)
+  | conjunction p q ihp ihq =>
+    exact and_congr
+      (ihp (fun h => hp (List.mem_append_left _ h)))
+      (ihq (fun h => hp (List.mem_append_right _ h)))
+  | disjunction p q ihp ihq =>
+    exact or_congr
+      (ihp (fun h => hp (List.mem_append_left _ h)))
+      (ihq (fun h => hp (List.mem_append_right _ h)))
+
+theorem branches_erase_bound (bound : List Nat) (p : Formula) (s : State)
+    (hs : s ∈ branches bound p) : ∃ i ∈ bound, s.1 = bound.erase i := by
+  change s ∈ ((small bound p ++ ties bound p) ++ bands bound p) ++ far bound p at hs
+  rcases List.mem_append.mp hs with hleft | hfar
+  · rcases List.mem_append.mp hleft with hleft | hbands
+    · rcases List.mem_append.mp hleft with hsmall | hties
+      · cases bound with
+        | nil => simp [small] at hsmall
+        | cons i rest =>
+          obtain ⟨n, _, he⟩ := List.mem_map.mp hsmall
+          exact ⟨i, List.mem_cons_self, (congrArg Prod.fst he).symm⟩
+      · obtain ⟨i, hi, hinner⟩ := List.mem_flatMap.mp hties
+        obtain ⟨j, _, he⟩ := List.mem_map.mp hinner
+        exact ⟨i, hi, (congrArg Prod.fst he).symm⟩
+    · obtain ⟨i, hi, hinner⟩ := List.mem_flatMap.mp hbands
+      obtain ⟨a, _, ha⟩ := List.mem_flatMap.mp hinner
+      cases a with
+      | nonnegative r =>
+        by_cases hz : PlainMaximum.headCoefficient i r = 0
+        · simp only [if_pos hz, List.not_mem_nil] at ha
+        · rw [if_neg hz] at ha
+          obtain ⟨d, _, he⟩ := List.mem_map.mp ha
+          exact ⟨i, hi, (congrArg Prod.fst he).symm⟩
+      | divisible m r => exact False.elim (List.not_mem_nil ha)
+  · obtain ⟨i, hi, he⟩ := List.mem_map.mp hfar
+    exact ⟨i, hi, (congrArg Prod.fst he).symm⟩
+
+theorem strictOriginalBoundDecrease : PlainBlockSplitTargets.StrictOriginalBoundDecrease := by
+  intro bound p s hs
+  obtain ⟨i, hi, he⟩ := branches_erase_bound bound p s hs
+  rw [he]
+  have hlen := List.length_erase_add_one hi
+  omega
+
+/-- Exact original named-prefix semantics, with no change outside its bound
+names. This uses final valuations only as a proof relation, not as an oracle
+or an independently quantified program parameter. -/
+theorem existsPrefix_iff_frame (ν : Nat → Nat) (bound : List Nat) (p : Formula) :
+    existsPrefix ν bound p ↔ ∃ σ : Nat → Nat,
+      (∀ i, i ∉ bound → σ i = ν i) ∧ p.eval σ := by
+  induction bound generalizing ν with
+  | nil =>
+    constructor
+    · intro hp
+      exact ⟨ν, fun _ _ => rfl, hp⟩
+    · rintro ⟨σ, hframe, hp⟩
+      have he : σ = ν := funext (fun i => hframe i (by simp))
+      subst σ
+      exact hp
+  | cons j bound ih =>
+    constructor
+    · rintro ⟨n, hn⟩
+      obtain ⟨σ, hframe, hp⟩ := (ih (Function.update ν j n)).mp hn
+      refine ⟨σ, ?_, hp⟩
+      intro i hi
+      have hib : i ∉ bound := fun h => hi (List.mem_cons_of_mem j h)
+      have hij : i ≠ j := by intro he; subst i; exact hi List.mem_cons_self
+      rw [hframe i hib, Function.update_of_ne hij]
+    · rintro ⟨σ, hframe, hp⟩
+      refine ⟨σ j, (ih (Function.update ν j (σ j))).mpr ⟨σ, ?_, hp⟩⟩
+      intro i hi
+      by_cases hij : i = j
+      · subst i
+        simp only [Function.update_self]
+      · rw [Function.update_of_ne hij]
+        apply hframe i
+        simp only [List.mem_cons, not_or]
+        exact ⟨hij, hi⟩
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockSplitProof

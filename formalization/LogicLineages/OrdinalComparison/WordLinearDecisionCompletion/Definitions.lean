@@ -1,0 +1,158 @@
+module
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.Definitions
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeDefinitions
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion
+open PolynomialGraphCompletion
+open LayeredComparison.SnyatkovCompletion
+abbrev Boolean := LogicLineages.ModelsAlgebra.Forests.CotreePresburgerUnit.Boolean
+
+/-- The original named word, with no new numerical witness for its value. -/
+abbrev Token := Nat × Word
+
+inductive Atom where
+  | nonnegative (row : Row)
+  | divisible (modulusMinusOne : Nat) (row : Row)
+
+def Atom.row : Atom → Row
+  | .nonnegative r | .divisible _ r => r
+
+abbrev Formula := Boolean Atom
+
+noncomputable def Atom.eval (ν : Nat → Nat) : Atom → Prop
+  | .nonnegative r => 0 ≤ RowValue r ν
+  | .divisible m r => ((m + 1 : Nat) : Int) ∣ RowValue r ν
+
+noncomputable def Formula.eval (ν : Nat → Nat) : Formula → Prop
+  | .bot => False
+  | .top => True
+  | .atom a => a.eval ν
+  | .neg p => ¬Formula.eval ν p
+  | .conj p q => Formula.eval ν p ∧ Formula.eval ν q
+  | .disj p q => Formula.eval ν p ∨ Formula.eval ν q
+
+/-- Occurrences, including coefficient zero, survive in this list. -/
+def Formula.tokens (p : Formula) : List Token :=
+  p.atoms.flatMap (fun a => a.row.2.map Prod.snd)
+
+def Formula.variables (p : Formula) : List Nat := p.tokens.map Prod.fst
+
+/-- Domains concern every literal original occurrence, including occurrences
+under negation and in an unselected disjunct. They are not inferred from the
+truth value of an atom. -/
+noncomputable def Formula.meaningful (p : Formula) (ν : Nat → Nat) : Prop :=
+  ∀ t ∈ p.tokens, WordDomain t.2 (ν t.1)
+
+def Formula.allowed (D : Nat) (p : Formula) : Prop :=
+  ∀ t ∈ p.tokens, WordAllowed D t.2
+
+/-- No nonlinear x occurrence is ignored, even if its coefficient is zero. -/
+def linear (x : Nat) (p : Formula) : Bool :=
+  p.tokens.all (fun t => t.1 != x || t.2.isEmpty)
+
+/-- Zero denotes the eliminated RAW name. Every other code denotes one
+literal (name,word) pair; repeated occurrences share the same code. These
+codes name fixed semantic parameters, not existentially independent values. -/
+def tokenName (x : Nat) (t : Token) : Nat :=
+  if t = (x, []) then 0 else Encodable.encode t + 1
+
+def tokenOfName (x j : Nat) : Token :=
+  if j = 0 then (x, []) else (Encodable.decode (j - 1)).getD (0, [])
+
+noncomputable def parameterValuation (x : Nat) (ν : Nat → Nat) (j : Nat) : Nat :=
+  let t := tokenOfName x j
+  wordValue t.2 (ν t.1)
+
+def liftRow (x : Nat) (r : Row) : NormalForm.Row :=
+  (r.1, r.2.map (fun a => (a.1, NormalForm.Summand.variable (tokenName x a.2))))
+
+def liftAtom (x : Nat) : Atom → NormalForm.Atom
+  | .nonnegative r => .nonnegative (liftRow x r)
+  | .divisible m r => .divisible m (liftRow x r)
+
+def liftFormula (x : Nat) : Formula → NormalForm.Formula
+  | .bot => .falsity
+  | .top => .truth
+  | .atom a => .atom (liftAtom x a)
+  | .neg p => .negative (liftFormula x p)
+  | .conj p q => .conjunction (liftFormula x p) (liftFormula x q)
+  | .disj p q => .disjunction (liftFormula x p) (liftFormula x q)
+
+/-- The actual eliminator never introduces a nonlinear NF summand. Total
+default behavior is specified here for other syntax; it is not used by the
+source-correctness theorem. -/
+def lowerSummand (x : Nat) : NormalForm.Summand → Token
+  | .variable j => tokenOfName x j
+  | .phi _ _ | .hyperPhi _ _ _ => (0, [])
+
+def lowerRow (x : Nat) (r : NormalForm.Row) : Row :=
+  (r.1, r.2.map (fun a => (a.1, lowerSummand x a.2)))
+
+def lowerAtom (x : Nat) : NormalForm.Atom → Atom
+  | .nonnegative r => .nonnegative (lowerRow x r)
+  | .divisible m r => .divisible m (lowerRow x r)
+
+def lowerFormula (x : Nat) : NormalForm.Formula → Formula
+  | .truth => .top
+  | .falsity => .bot
+  | .atom a => .atom (lowerAtom x a)
+  | .negative p => .neg (lowerFormula x p)
+  | .conjunction p q => .conj (lowerFormula x p) (lowerFormula x q)
+  | .disjunction p q => .disj (lowerFormula x p) (lowerFormula x q)
+
+/-- Concrete reuse of the already proved natural-witness Cooper eliminator.
+The symbolic word parameters are never quantified in this construction. -/
+def eliminate (x : Nat) (p : Formula) : Formula :=
+  lowerFormula x (LinearRows.eliminate 0 (liftFormula x p))
+
+def PureRow (r : NormalForm.Row) : Prop := ∀ a ∈ r.2, ∃ j, a.2 = NormalForm.Summand.variable j
+def PureFormula : NormalForm.Formula → Prop
+  | .truth | .falsity => True
+  | .atom a => PureRow a.row
+  | .negative p => PureFormula p
+  | .conjunction p q | .disjunction p q => PureFormula p ∧ PureFormula q
+
+namespace Code
+abbrev AtomData := Nat × (Nat × Row)
+
+def decodeAtom (payload : Nat) : AtomData :=
+  (Encodable.decode payload).getD (0, 0, (0 : Int), [])
+
+def liftRow (x : Nat) (r : Row) : NormalForm.Code.RowData :=
+  (r.1, r.2.map (fun a => (a.1, (0, tokenName x a.2, 0, 0))))
+
+def liftAtom (x : Nat) (a : AtomData) : NormalForm.Code.AtomData :=
+  (a.1, a.2.1, liftRow x a.2.2)
+
+def lowerItem (x : Nat) (s : NormalForm.Code.ItemData) : Token :=
+  if s.1 = 0 then tokenOfName x s.2.1 else (0, [])
+
+def lowerRow (x : Nat) (r : NormalForm.Code.RowData) : Row :=
+  (r.1, r.2.map (fun a => (a.1, lowerItem x a.2)))
+
+def lowerAtom (x : Nat) (a : NormalForm.Code.AtomData) : AtomData :=
+  (a.1, a.2.1, lowerRow x a.2.2)
+
+def liftFormula (x code : Nat) : Nat :=
+  LinearRows.Code.mapAtoms (fun a => Encodable.encode (liftAtom x (decodeAtom a))) code
+
+def lowerFormula (x code : Nat) : Nat :=
+  LinearRows.Code.mapAtoms (fun a => Encodable.encode (lowerAtom x (LinearRows.Code.decodeAtom a))) code
+
+def eliminate (x code : Nat) : Nat := lowerFormula x (LinearRows.Code.eliminate 0 (liftFormula x code))
+end Code
+
+def Atom.data : Atom → Code.AtomData
+  | .nonnegative r => (0, 0, r)
+  | .divisible m r => (1, m, r)
+
+def Formula.encode : Formula → Nat
+  | .top => 0
+  | .bot => 1
+  | .atom a => 6 * Encodable.encode a.data + 2
+  | .neg p => 6 * Formula.encode p + 3
+  | .conj p q => 6 * Nat.pair (Formula.encode p) (Formula.encode q) + 4
+  | .disj p q => 6 * Nat.pair (Formula.encode p) (Formula.encode q) + 5
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion

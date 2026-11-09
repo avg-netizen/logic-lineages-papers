@@ -1,0 +1,9 @@
+# Computed dominant-boundary projection: exact gate passed
+
+Six unchanged frozen targets in five new Lean files passed the exact statement/actual-axiom gate at build-reports/1794188774258052472-2.json. Every alias depends only on propext, Classical.choice and Quot.sound. Each of the five current source hashes matches a successful native row; all frozen semantics, target and named-source pins are unchanged. ACCEPTANCE.json is ready for main's independent source adoption. No numbered source promotion is claimed by this lane.
+
+The component supplies the original scaled-Phi positive floor-inverse crossing, actual five-candidate band, arbitrary-Boolean-matrix nonlinear projection at one retained parameter valuation, eliminated-name removal/support, literal numeric syntax output and a genuine Computable compiler. The exact body retains the signed source argument domain and every original input constraint in every substituted branch. No maximum condition is imposed on retained parameters.
+
+The literal computed noWide/endpoint region remains an explicit source case. This is not the whole source no-wide dispatcher: positive shifts still require the initial-argument alternative, and a row lacking the chosen surviving summand cannot inherit its half/three-halves bound. The wide case, hyper-Phi, source case coverage/progress and alternating BASE remain pending. The separate PhiInterval package targets a full one-head interval/congruence clause; its candidate gate has not run yet.
+
+The first three failed candidates/receipts/logs are retained with exact source hashes. Repairs normalized opaque products/arguments, split numeric proof builders and removed one redundant reducibility annotation. No target, source semantics, heartbeat/resource cap or dependency was changed. All native/transport jobs are fully reaped; the compiler slot is released. This is a focused exact component result, not a fresh full-root or remote-CI build.

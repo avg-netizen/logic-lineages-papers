@@ -1,0 +1,109 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeralBasicNodesProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Construction
+open GorbowSyntax GorbowPRProgram GorbowPRDefiningEquations GorbowPRChildTags GorbowSubstitution
+open Family
+
+abbrev Input (n : Nat) := Nat × List.Vector Nat n
+
+/-- One effective producer for all runtime root tags and numeral inputs. -/
+def NodeCertificates {n : Nat} (q : Program n) : Prop :=
+  HasCertificates (fun z : Input n => NodeSupport.check q z.1)
+    (fun z => calculation z.1 q z.2)
+
+private def numSub {n : Nat} (v : List.Vector Nat n) (i : Fin n) : Term 0 := Term.numeral (v.get i)
+
+private theorem subCall {ctx out arity : Nat} (tag : Nat)
+    (args : List.Vector (Term ctx) arity) (sigma : Fin ctx → Term out) :
+    substitute sigma (call tag args) = call tag (args.map (substitute sigma)) :=
+  GorbowPRCallCongruence.Proof.callSubstitution ctx out arity tag args sigma
+
+private theorem subArguments {n : Nat} (v : List.Vector Nat n) :
+    (argumentVariables n).map (substitute (numSub v)) = GorbowPRNumeralCalculation.numeralArguments v := by
+  apply List.Vector.ext
+  intro i
+  simp [argumentVariables, numSub, GorbowPRNumeralCalculation.numeralArguments, substitute]
+
+private theorem mapOfFn {a b : Type} {n : Nat} (f : a → b) (g : Fin n → a) :
+    (List.Vector.ofFn g).map f = List.Vector.ofFn (fun i => f (g i)) := by
+  apply List.Vector.ext
+  intro i
+  simp
+
+theorem composition {m k : Nat} (f : Program k) (g : Fin k → Program m)
+    (hf : NodeCertificates f) (hg : ∀ i, NodeCertificates (g i)) :
+    NodeCertificates (.composition f g) := by
+  let R := fun z : Input m => NodeSupport.check (.composition f g) z.1
+  let ftag := fun z : Input m => z.1+1
+  let gtag := fun i (z : Input m) => z.1+argumentTag f g i
+  let values := fun z : Input m => List.Vector.ofFn (fun i => evaluate (g i) z.2)
+  let numbers := fun z : Input m => GorbowPRNumeralCalculation.numeralArguments z.2
+  let leftArgs := fun z : Input m => List.Vector.ofFn (fun i => call (gtag i z) (numbers z))
+  let rightArgs := fun z : Input m => GorbowPRNumeralCalculation.numeralArguments (values z)
+  have hfTag : Primrec ftag := Primrec.succ.comp Primrec.fst
+  have hgTag : ∀ i, Primrec (gtag i) := fun i =>
+    Primrec.nat_add.comp Primrec.fst (Primrec.const (argumentTag f g i))
+  have hvalues : Primrec values := Primrec.vector_ofFn (fun i =>
+    (GorbowPRProgram.Proof.primitiveEvaluation m (g i)).comp Primrec.snd)
+  have hnum : ∀ i, TermEffective (fun z : Input m => (numbers z).get i) :=
+    TermEffective.numeralArguments Primrec.snd
+  have hleft : ∀ i, TermEffective (fun z : Input m => (leftArgs z).get i) := by
+    intro i
+    simpa only [leftArgs, List.Vector.get_ofFn] using
+      TermEffective.call (hgTag i) numbers hnum
+  have hright : ∀ i, TermEffective (fun z : Input m => (rightArgs z).get i) :=
+    TermEffective.numeralArguments hvalues
+  have hgCert : ∀ i, HasCertificates R (fun z : Input m => calculation (gtag i z) (g i) z.2) := by
+    intro i
+    have hi := HasCertificates.comp (fun z : Input m => NodeSupport.check (g i) z.1)
+      (hg i) ((hgTag i).pair Primrec.snd)
+    apply HasCertificates.monotonic _ R _ hi
+    intro z raw h
+    exact HasCertificates.finiteCheckInclusion _ _
+      (fun sigma hs => NodeSupport.argumentIncluded f g z.1 i sigma hs) raw h
+  have hfCert : HasCertificates R (fun z : Input m => calculation (ftag z) f (values z)) := by
+    have hi := HasCertificates.comp (fun z : Input k => NodeSupport.check f z.1)
+      hf (hfTag.pair hvalues)
+    apply HasCertificates.monotonic _ R _ hi
+    intro z raw h
+    exact HasCertificates.finiteCheckInclusion _ _
+      (fun sigma hs => NodeSupport.functionIncluded f g z.1 sigma hs) raw h
+  let lhs := fun z : Input m => call z.1 (argumentVariables m)
+  let rhs := fun z : Input m => call (ftag z)
+    (List.Vector.ofFn fun i => call (gtag i z) (argumentVariables m))
+  have hl : TermEffective lhs := TermEffective.call Primrec.fst
+    (fun _ => argumentVariables m) (fun i => TermEffective.constant ((argumentVariables m).get i))
+  have hrArgs : ∀ i, TermEffective (fun z : Input m =>
+      (List.Vector.ofFn fun j => call (gtag j z) (argumentVariables m)).get i) := by
+    intro i
+    simpa only [List.Vector.get_ofFn] using TermEffective.call (hgTag i)
+      (fun _ => argumentVariables m) (fun j => TermEffective.constant ((argumentVariables m).get j))
+  have hr : TermEffective rhs := TermEffective.call hfTag _ hrArgs
+  have hroot0 := HasCertificates.nodeEquationInstance (.composition f g) lhs rhs hl hr
+    (by intro z; exact List.mem_singleton.mpr rfl)
+    (fun i => (show TermEffective (fun z : Input m => numSub z.2 i) from
+      TermEffective.numeral (Primrec.vector_get.comp Primrec.snd (Primrec.const i))))
+  have hroot : HasCertificates R (fun z : Input m => Formula.equal (call z.1 (numbers z))
+      (call (ftag z) (leftArgs z))) := by
+    simpa only [lhs, rhs, subCall, subArguments, mapOfFn, numbers, leftArgs] using hroot0
+  have hparts : ∀ i, HasCertificates R (fun z : Input m =>
+      Formula.equal ((leftArgs z).get i) ((rightArgs z).get i)) := by
+    intro i
+    simpa only [leftArgs,rightArgs,values,calculation,GorbowPRNumeralCalculation.numeralArguments,
+      List.Vector.get_ofFn,List.Vector.get_map] using hgCert i
+  have hcalls := HasCertificates.callCongruence R hfTag leftArgs rightArgs hleft hright hparts
+  have hparent : TermEffective (fun z : Input m => call z.1 (numbers z)) :=
+    TermEffective.call Primrec.fst numbers hnum
+  have hcallL : TermEffective (fun z : Input m => call (ftag z) (leftArgs z)) :=
+    TermEffective.call hfTag leftArgs hleft
+  have hcallR : TermEffective (fun z : Input m => call (ftag z) (rightArgs z)) :=
+    TermEffective.call hfTag rightArgs hright
+  have heval : TermEffective (fun z : Input m => (Term.numeral (evaluate f (values z)) : Term 0)) :=
+    TermEffective.numeral ((GorbowPRProgram.Proof.primitiveEvaluation k f).comp hvalues)
+  have hfirst := HasCertificates.transitivity R hparent hcallL hcallR hroot hcalls
+  exact HasCertificates.transitivity R hparent hcallR heval hfirst hfCert
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Construction

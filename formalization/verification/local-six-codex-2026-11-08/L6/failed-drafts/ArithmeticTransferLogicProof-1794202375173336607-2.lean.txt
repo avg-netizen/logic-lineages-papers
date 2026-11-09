@@ -1,0 +1,158 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransferDefinitions
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.LogicalSupportProof
+
+@[expose] public section
+/-! Ordinary Hilbert compilation of finite-context first-order deduction.
+Only an ordinary BASE derivation is generalized; hypotheses are lifted by
+allVacuous and modus ponens by allDistribute. The source rules stay unchanged. -/
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.Logic
+open GorbowSyntax GorbowTheoryProof Hilbert
+
+variable {T : Sentence → Prop} {n : Nat}
+
+def bind {Gamma Delta : List (Formula n)} {phi : Formula n}
+    (h : Local T n Gamma phi) (hs : ∀ a, a ∈ Gamma → Local T n Delta a) :
+    Local T n Delta phi :=
+  match h with
+  | .base d => .base d
+  | .hypothesis ha => hs _ ha
+  | .mp p q => .mp (bind p hs) (bind q hs)
+
+def monotone {Gamma Delta : List (Formula n)} {phi : Formula n}
+    (hmem : ∀ a, a ∈ Gamma → a ∈ Delta) (h : Local T n Gamma phi) : Local T n Delta phi :=
+  bind h (fun a ha => .hypothesis (hmem a ha))
+
+def fromFalse {Gamma : List (Formula n)} (phi : Formula n)
+    (h : Local T n Gamma falsity) : Local T n Gamma phi :=
+  Local.explosion phi (.base (.logical (.reflexive .zero))) h
+
+noncomputable def byContradiction {Gamma : List (Formula n)} (phi : Formula n)
+    (h : Local T n (.neg phi :: Gamma) falsity) : Local T n Gamma phi :=
+  Local.classical phi (fromFalse phi h)
+
+noncomputable def negToFalse (phi : Formula n) :
+    Derivation T (.imp (.neg phi) (.imp phi falsity)) :=
+  Local.finish (Local.discharge (Local.discharge
+    (Local.explosion falsity (.hypothesis List.mem_cons_self)
+      (.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)))))
+
+noncomputable def classical {Gamma : List (Formula n)} (phi : Formula n)
+    (h : Local T n (.imp phi falsity :: Gamma) falsity) : Local T n Gamma phi := by
+  apply byContradiction phi
+  apply bind h
+  intro a ha
+  rcases List.mem_cons.mp ha with he | hm
+  · subst a
+    exact .mp (.base (negToFalse phi)) (.hypothesis List.mem_cons_self)
+  · exact .hypothesis (List.mem_cons_of_mem _ hm)
+
+/-- This encoded conjunction is the LITERAL image of Mathlib first-order inf. -/
+def pair (a b : Formula n) : Formula n := .imp (.imp a (.imp b falsity)) falsity
+
+noncomputable def pairIntroduction {Gamma : List (Formula n)} {a b : Formula n}
+    (ha : Local T n Gamma a) (hb : Local T n Gamma b) : Local T n Gamma (pair a b) := by
+  apply Local.discharge
+  have ha' := monotone (fun _ h => List.mem_cons_of_mem _ h) ha
+  have hb' := monotone (fun _ h => List.mem_cons_of_mem _ h) hb
+  exact .mp (.mp (.hypothesis List.mem_cons_self) ha') hb'
+
+noncomputable def pairLeft {Gamma : List (Formula n)} {a b : Formula n}
+    (h : Local T n Gamma (pair a b)) : Local T n Gamma a := by
+  apply byContradiction a
+  have h' := monotone (fun _ hm => List.mem_cons_of_mem _ hm) h
+  have harg : Local T n (.neg a :: Gamma) (.imp a (.imp b falsity)) := by
+    apply Local.discharge
+    have hf : Local T n (a :: .neg a :: Gamma) falsity :=
+      Local.explosion falsity (.hypothesis List.mem_cons_self)
+        (.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self))
+    exact .mp (.base (.logical (.k falsity b))) hf
+  exact .mp h' harg
+
+noncomputable def pairRight {Gamma : List (Formula n)} {a b : Formula n}
+    (h : Local T n Gamma (pair a b)) : Local T n Gamma b := by
+  apply byContradiction b
+  have h' := monotone (fun _ hm => List.mem_cons_of_mem _ hm) h
+  have hb : Local T n (.neg b :: Gamma) (.imp b falsity) :=
+    .mp (.base (negToFalse b)) (.hypothesis List.mem_cons_self)
+  have harg : Local T n (.neg b :: Gamma) (.imp a (.imp b falsity)) :=
+    .mp (.base (.logical (.k (.imp b falsity) a))) hb
+  exact .mp h' harg
+
+private def universalLift {Gamma : List (Formula n)} {Delta : List (Formula (n+1))}
+    {phi : Formula (n+1)} (h : Local T (n+1) Delta phi)
+    (hs : ∀ a, a ∈ Delta → Local T n Gamma (.all a)) : Local T n Gamma (.all phi) :=
+  match h with
+  | .base d => .base (.generalize d)
+  | .hypothesis ha => hs _ ha
+  | .mp p q => .mp (.mp (.base (.logical (.allDistribute _ _)))
+      (universalLift p hs)) (universalLift q hs)
+
+def allIntroduction {Gamma : List (Formula n)} {a : Formula (n+1)}
+    (h : Local T (n+1) (Gamma.map GorbowPACore.weaken) a) : Local T n Gamma (.all a) := by
+  apply universalLift h
+  intro phi hp
+  obtain ⟨b,hb,he⟩ := List.mem_map.mp hp
+  subst phi
+  exact .mp (.base (.logical (.allVacuous b))) (.hypothesis hb)
+
+/-- Literal image of source first-order existential: (forall(a->false))->false. -/
+def encodedExists (a : Formula (n+1)) : Formula n :=
+  .imp (.all (.imp a falsity)) falsity
+
+noncomputable def existentialIntroduction {Gamma : List (Formula n)}
+    (a : Formula (n+1)) (t : Term n)
+    (h : Local T n Gamma (GorbowStandardInstances.instantiate a t)) :
+    Local T n Gamma (encodedExists a) := by
+  apply Local.discharge
+  have h' := monotone (fun _ hm => List.mem_cons_of_mem _ hm) h
+  have hi : Local T n (.all (.imp a falsity) :: Gamma)
+      (.imp (GorbowStandardInstances.instantiate a t) falsity) :=
+    .mp (.base (.logical (.allInstantiate (.imp a falsity) t)))
+      (.hypothesis List.mem_cons_self)
+  exact .mp hi h'
+
+noncomputable def existentialElimination {Gamma : List (Formula n)}
+    (a : Formula (n+1)) (b : Formula n)
+    (hex : Local T n Gamma (encodedExists a))
+    (hbody : Local T (n+1) (a :: Gamma.map GorbowPACore.weaken) (GorbowPACore.weaken b)) :
+    Local T n Gamma b := by
+  apply byContradiction b
+  have hbody' : Local T (n+1)
+      (a :: (.neg b :: Gamma).map GorbowPACore.weaken) (GorbowPACore.weaken b) :=
+    monotone (fun phi hp => by
+      rcases List.mem_cons.mp hp with he | hm
+      · exact List.mem_cons.mpr (Or.inl he)
+      · exact List.mem_cons_of_mem _ (List.mem_cons_of_mem _ hm)) hbody
+  have hn : Local T (n+1) (a :: (.neg b :: Gamma).map GorbowPACore.weaken)
+      (.neg (GorbowPACore.weaken b)) :=
+    .hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)
+  have hf : Local T (n+1) (a :: (.neg b :: Gamma).map GorbowPACore.weaken) falsity :=
+    Local.explosion falsity hbody' hn
+  have hall : Local T n (.neg b :: Gamma) (.all (.imp a falsity)) :=
+    allIntroduction (Local.discharge hf)
+  exact .mp (monotone (fun _ hm => List.mem_cons_of_mem _ hm) hex) hall
+
+private noncomputable def closeLocal (Gamma : List (Formula n))
+    {Delta : List (Formula n)} {phi : Formula n}
+    (h : Local T n (Gamma ++ Delta) phi) : Local T n Delta (closeAssumptions Gamma phi) :=
+  match Gamma with
+  | [] => h
+  | a :: rest => by
+      apply Local.discharge
+      apply closeLocal rest
+      apply monotone _ h
+      intro p hp
+      rcases List.mem_cons.mp hp with he | hm
+      · exact List.mem_append.mpr (Or.inr (List.mem_cons.mpr (Or.inl he)))
+      · rcases List.mem_append.mp hm with hr | hd
+        · exact List.mem_append.mpr (Or.inl hr)
+        · exact List.mem_append.mpr (Or.inr (List.mem_cons_of_mem _ hd))
+
+noncomputable def dischargeAll {Gamma : List (Formula n)} {phi : Formula n}
+    (h : Local T n Gamma phi) : Derivation T (closeAssumptions Gamma phi) :=
+  Local.finish (closeLocal Gamma (Delta := [])
+    (cast (congrArg (fun G => Local T n G phi) (List.append_nil Gamma).symm) h))
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.Logic

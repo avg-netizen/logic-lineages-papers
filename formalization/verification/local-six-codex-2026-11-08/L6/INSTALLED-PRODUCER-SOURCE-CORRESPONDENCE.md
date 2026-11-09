@@ -1,0 +1,9 @@
+# One actual source registry with CK and computation proof producer
+
+The exact endpoint is InstalledProducer.Targets.SameRegistryProducer. It unconditionally selects ONE tuple pF,pR,q,c,tagCK,pCK,tagG,pG. Actual, original SyntaxAdequate, the retained-parameter CK CodeProgram and its actual RegistryInstall/FixedPointFor, the Program6 ProducerFor property and its actual RegistryInstall all refer to this SAME tuple and registry. The installer selects a NEW original finite-source index c AFTER inserting CK and the producer; it does not reuse the index of an earlier source theory.
+
+The Program6 takes the eventual q occurrence tag as RUNTIME input followed by the original five q inputs. This prevents the producer/tag installation cycle while keeping the original sorted calculation formula code and original List Line proof certificate. The registry installer itself accepts explicitly supplied q/CK/producer ASTs, so a future internally verified chosen construction may reuse it.
+
+ONE fuel is chosen before ALL input vectors. Every actual finite EXTRA S axiom is accepted at this stage, and S agrees with that bounded extra-axiom theory. For every external numeric input vector, the generated original calculation certificate is accepted at this SAME stage and there is a real ordinary CLOSED S derivation of the actual q=1 checker numeral equation. The formula includes no internally universally quantified input acceptance conclusion. PA/logical axioms remain intrinsic original Derivation rules, not extra finite S axioms.
+
+The final exact alias and actual transitive axiom audit pass with propext, Classical.choice and Quot.sound only. This is a supporting source-construction theorem, not a proof of internal variable-input producer correctness, the three local HB derivations, chosen CK collapse, or a remaining numbered source endpoint. Actual/ProducerFor extensional calibration alone must not be used to infer those later internal laws.

@@ -1,0 +1,224 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmHeadProof
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmHistogramProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof
+open PolynomialGraphCompletion Algorithm OuterShiftNormalization
+
+theorem rowRanks_add (r s : Row) :
+    rowRankList (rowAdd r s) = rowRankList r++rowRankList s := by
+  simp [rowRankList,rowAdd,List.filter_append,List.map_append]
+
+theorem rowRanks_fold (rows : List Row) :
+    rowRankList (rows.foldr rowAdd (0,[])) = rows.flatMap rowRankList := by
+  induction rows with
+  | nil => rfl
+  | cons r rows ih => simp [rowRanks_add,ih]
+
+theorem ordinary_rank (a : Item) (hc : isCounter a = false) : rank a = 0 := by
+  have hn : (head a).1 ≠ 4 := by simpa [isCounter] using hc
+  unfold rank topRank
+  change (if (head a).1 = 4 then (head a).2.1 else 0) = 0
+  simp [hn]
+
+theorem current_rank_bound (D : Nat) (r : Row) (hD : RowAllowed D r)
+    (a : Item) (ha : a ∈ active (canonicalRow r)) : rank a ≤ D := by
+  by_cases hc : isCounter a = true
+  · have hp := counter_parameters D r a hD ha hc
+    omega
+  · have hf : isCounter a = false := Bool.eq_false_of_not_eq_true hc
+    rw [ordinary_rank a hf]
+    exact Nat.zero_le _
+
+theorem hasOrdinary_witness (xs : List Item) (h : hasOrdinary xs = true) :
+    ∃ a ∈ xs, isCounter a = false := by
+  obtain ⟨a,ha,hc⟩ := List.any_eq_true.mp h
+  exact ⟨a,ha,by simpa using hc⟩
+
+theorem hasOrdinary_false (xs : List Item) (h : hasOrdinary xs = false) :
+    ∀ a ∈ xs, isCounter a = true := by
+  intro a ha
+  by_contra hn
+  have hc : isCounter a = false := Bool.eq_false_of_not_eq_true hn
+  have ht : hasOrdinary xs = true := List.any_eq_true.mpr ⟨a,ha,by simp [hc]⟩
+  simp [h] at ht
+
+theorem leastRank_le_member (D : Nat) (xs : List Item) (a : Item) (ha : a ∈ xs) :
+    leastRank D xs ≤ rank a := by
+  induction xs with
+  | nil => simp at ha
+  | cons b xs ih =>
+      rcases List.mem_cons.mp ha with rfl | ha
+      · exact Nat.min_le_left _ _
+      · exact (Nat.min_le_right _ _).trans (ih ha)
+
+theorem leastRank_lower (D lower : Nat) (xs : List Item) (hD : lower ≤ D+1)
+    (h : ∀ a ∈ xs, lower ≤ rank a) : lower ≤ leastRank D xs := by
+  induction xs with
+  | nil => exact hD
+  | cons a xs ih =>
+      exact Nat.le_min (h a (by simp)) (ih (fun b hb => h b (by simp [hb])))
+
+theorem leastRank_attained (D : Nat) (xs : List Item) (hne : xs ≠ [])
+    (hD : ∀ a ∈ xs, rank a ≤ D) : ∃ a ∈ xs, rank a = leastRank D xs := by
+  induction xs with
+  | nil => contradiction
+  | cons a xs ih =>
+      by_cases hnil : xs = []
+      · subst xs
+        refine ⟨a,by simp,?_⟩
+        have hb : rank a ≤ D+1 := by have := hD a (by simp); omega
+        simp [leastRank,Nat.min_eq_left hb]
+      · obtain ⟨b,hb,hbmin⟩ := ih hnil (fun b hb => hD b (by simp [hb]))
+        by_cases hle : rank a ≤ leastRank D xs
+        · exact ⟨a,by simp,by simp [leastRank] at hle ⊢; omega⟩
+        · refine ⟨b,by simp [hb],?_⟩
+          change rank b = min (rank a) (leastRank D xs)
+          rw [Nat.min_eq_right (by omega)]
+          exact hbmin
+
+theorem current_ranks (r : Row) (xs : List Item)
+    (hxs : ∀ a ∈ xs, a ∈ active (canonicalRow r)) :
+    rowRankList (0,xs) = xs.map rank := by
+  induction xs with
+  | nil => rfl
+  | cons a xs ih =>
+      have ha := hxs a (by simp)
+      have hc := canonical_item r a (List.mem_filter.mp ha).1
+      have hn : a.2.2 ≠ [] := by simpa using (List.mem_filter.mp ha).2
+      have hi := ih (fun b hb => hxs b (by simp [hb]))
+      simpa [rowRankList,hc.1,hc.2,hn,rank] using
+        congrArg (List.cons (rank a)) hi
+
+theorem ordinaryResidual_ranks (D : Nat) (r : Row) (a : Item)
+    (hD : RowAllowed D r) (ha : a ∈ active (canonicalRow r)) :
+    ∀ s ∈ rowRankList (ordinaryResidual a), 0 < s ∧ s ≤ D := by
+  by_cases hc : isCounter a = true
+  · have hp := counter_parameters D r a hD ha hc
+    intro s hs
+    obtain ⟨b,hb,hbs⟩ := List.mem_map.mp hs
+    have hb' := (List.mem_filter.mp hb).1
+    simp only [ordinaryResidual,hc,if_true] at hb'
+    change b ∈ (residualWords (counterIndex a) (mass a)).map
+      (fun p => (a.1,a.2.1,innerWord a++p.2)) at hb'
+    obtain ⟨p,hp',rfl⟩ := List.mem_map.mp hb'
+    have hsyn := (RankedWordDecisionCompletion.Proof.residualWordSyntax D
+      (counterIndex a) (mass a) (by omega)).2 p hp'
+    have hhead := RankedWordDecisionCompletion.Proof.actualResidualTopRanks
+      (counterIndex a) (mass a) p hp' (innerWord a)
+    rw [hhead.2,hhead.1] at hbs
+    constructor <;> omega
+  · simp [ordinaryResidual,hc,rowRankList]
+
+theorem ordinaryReplacement_ranks (D : Nat) (r : Row) (xs : List Item)
+    (hD : RowAllowed D r) (hxs : ∀ a ∈ xs, a ∈ active (canonicalRow r))
+    (ho : hasOrdinary xs = true) :
+    ∀ s ∈ rowRankList (classReplacement D xs), 0 < s ∧ s ≤ D := by
+  simp only [classReplacement,ho,if_true,rowRanks_fold,List.flatMap_map]
+  intro s hs
+  obtain ⟨a,ha,hs⟩ := List.mem_flatMap.mp hs
+  exact ordinaryResidual_ranks D r a hD (hxs a ha) s hs
+
+theorem counterReplacement_ranks (D : Nat) (r : Row) (xs : List Item)
+    (hD : RowAllowed D r) (hDegree : 3 ≤ D)
+    (hxs : ∀ a ∈ xs, a ∈ active (canonicalRow r))
+    (ho : hasOrdinary xs = false) :
+    ∀ s ∈ rowRankList (classReplacement D xs), leastRank D xs < s ∧ s ≤ D := by
+  have hcounter := hasOrdinary_false xs ho
+  have hleast : 3 ≤ leastRank D xs := leastRank_lower D 3 xs (by omega) (by
+    intro a ha
+    have hp := counter_parameters D r a hD (hxs a ha) (hcounter a ha)
+    omega)
+  simp only [classReplacement,ho,if_false,rowRanks_fold,List.flatMap_map]
+  intro s hs
+  obtain ⟨a,ha,hs⟩ := List.mem_flatMap.mp hs
+  exact counterResidual_rank D (leastRank D xs) a hleast (leastRank_le_member D xs a ha)
+    (current_rank_bound D r hD a (hxs a ha)) s hs
+
+theorem rowRanks_items_permutation (u v : List Item) (h : u.Perm v) :
+    (rowRankList (0,u)).Perm (rowRankList (0,v)) :=
+  (h.filter _).map _
+
+theorem class_item_current (r : Row) (labels : List Nat) (removed : Nat)
+    (a : Item) (ha : a ∈ leaderClass (labelled (canonicalRow r) labels) removed) :
+    a ∈ active (canonicalRow r) := by
+  obtain ⟨b,hb,rfl⟩ := List.mem_map.mp ha
+  exact (List.of_mem_zip (List.mem_filter.mp hb).1).1
+
+/-- The literal retained items and the literal removed class partition the
+whole current row. Repeated identical occurrences are retained with their
+original multiplicities. -/
+theorem partition_items_permutation (r : Row) (labels : List Nat) (removed : Nat)
+    (hlen : labels.length = (active r).length) :
+    (outside r labels removed ++ leaderClass (labelled r labels) removed).Perm r.2 := by
+  let zs := labelled r labels
+  have hz : zs.map Prod.fst = active r := List.map_fst_zip (by omega)
+  have hp : ((zs.filter (fun a => a.2 != removed)) ++
+      (zs.filter (fun a => a.2 == removed))).Perm zs := by
+    simpa using List.filter_append_perm (fun a : Labelled => a.2 != removed) zs
+  have hm := hp.map Prod.fst
+  simp only [List.map_append,hz] at hm
+  calc
+    (outside r labels removed ++ leaderClass (labelled r labels) removed).Perm
+        (linearPart r ++ active r) := by
+      simpa [outside,leaderClass,zs,List.append_assoc] using
+        (List.Perm.refl (linearPart r)).append hm
+    _ := by
+      simpa [linearPart,active] using
+        List.filter_append_perm (fun a : Item => a.2.2.isEmpty) r.2
+
+/-- Every actual class rewrite decreases the source histogram, even if its
+guard is inconsistent. No truth test or semantic rank field is assumed. -/
+theorem rewrite_decrease (D : Nat) (r : Row) (labels : List Nat) (removed : Nat)
+    (hDegree : 3 ≤ D) (hD : RowAllowed D r)
+    (hlen : labels.length = (active (canonicalRow r)).length)
+    (hne : leaderClass (labelled (canonicalRow r) labels) removed ≠ []) :
+    RowLess D (rewrite D (canonicalRow r) labels removed) r := by
+  let xs := leaderClass (labelled (canonicalRow r) labels) removed
+  let kept := outside (canonicalRow r) labels removed
+  let added := classReplacement D xs
+  have hxs : ∀ a ∈ xs, a ∈ active (canonicalRow r) :=
+    class_item_current r labels removed
+  have hranks := current_ranks r xs hxs
+  have hbound : ∀ a ∈ xs, rank a ≤ D :=
+    fun a ha => current_rank_bound D r hD a (hxs a ha)
+  have hp := rowRanks_items_permutation _ _
+    (partition_items_permutation (canonicalRow r) labels removed hlen)
+  have hp' : (rowRankList (0,kept) ++ rowRankList (0,xs)).Perm
+      (rowRankList (canonicalRow r)) := by
+    simpa [kept,xs,rowRankList,List.filter_append,List.map_append] using hp
+  have hhist : comparisonKernelHistogram (D+1) (rowRankList r) =
+      comparisonKernelHistogram (D+1) (rowRankList (0,kept) ++ rowRankList (0,xs)) := by
+    rw [← canonical_rankList r]
+    exact (histogram_permutation (D+1) _ _ hp').symm
+  have hnext : rowRankList (rewrite D (canonicalRow r) labels removed) =
+      rowRankList (0,kept) ++ rowRankList added := by
+    simp [rewrite,kept,added,xs,rowRankList,List.filter_append,List.map_append]
+  change ComparisonKernelHistogramLt (D+1)
+    (comparisonKernelHistogram (D+1) (rowRankList (rewrite D (canonicalRow r) labels removed)))
+    (comparisonKernelHistogram (D+1) (rowRankList r))
+  rw [hnext,hhist]
+  by_cases ho : hasOrdinary xs = true
+  · obtain ⟨a,ha,hc⟩ := hasOrdinary_witness xs ho
+    have hzero : 0 ∈ rowRankList (0,xs) := by
+      rw [hranks]
+      exact List.mem_map.mpr ⟨a,ha,ordinary_rank a hc⟩
+    exact histogram_class_replacement (D+1) 0 _ _ _ (by omega) hzero
+      (fun _ _ => Nat.zero_le _) (fun s hs =>
+        (ordinaryReplacement_ranks D r xs hD hxs ho s hs).1)
+  · have hf : hasOrdinary xs = false := Bool.eq_false_of_not_eq_true ho
+    obtain ⟨a,ha,harank⟩ := leastRank_attained D xs hne hbound
+    have hmem : leastRank D xs ∈ rowRankList (0,xs) := by
+      rw [hranks]
+      exact List.mem_map.mpr ⟨a,ha,harank⟩
+    have hless : leastRank D xs < D+1 := by have := hbound a ha; omega
+    apply histogram_class_replacement (D+1) (leastRank D xs) _ _ _ hless hmem
+    · intro s hs
+      rw [hranks] at hs
+      obtain ⟨b,hb,rfl⟩ := List.mem_map.mp hs
+      exact leastRank_le_member D xs b hb
+    · intro s hs
+      exact (counterReplacement_ranks D r xs hD hDegree hxs hf s hs).1
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.AlgorithmProof

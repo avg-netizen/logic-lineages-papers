@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardDefinitions
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardTargets
+open PolynomialGraphCompletion WordLinearDecisionCompletion FullWordGuardCompletion
+
+/-- The actual pair compiler is transported to arbitrary ORIGINAL raw names.
+All generated domains and maximum-variable linearity are conclusions. -/
+def NamedMaximumComparison : Prop :=
+  ∀ (D maximum : Nat) (u v : Token) (desired : Nat),
+  3 ≤ D → WordAllowed D u.2 → WordAllowed D v.2 → desired ≤ 2 →
+  ∀ ν, comparisonCutoff D maximum u v ≤ ν u.1 →
+    comparisonCutoff D maximum u v ≤ ν v.1 →
+    ν u.1 ≤ ν maximum → ν v.1 ≤ ν maximum →
+    WordDomain u.2 (ν u.1) ∧ WordDomain v.2 (ν v.1) ∧
+    Formula.allowed D (comparisonGuard D maximum u v desired) ∧
+    Formula.meaningful (comparisonGuard D maximum u v desired) ν ∧
+    linear maximum (comparisonGuard D maximum u v desired) = true ∧
+    (Formula.eval ν (comparisonGuard D maximum u v desired) ↔
+      orderNat (wordValue u.2 (ν u.1)) (wordValue v.2 (ν v.1)) = desired)
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.GuardTargets

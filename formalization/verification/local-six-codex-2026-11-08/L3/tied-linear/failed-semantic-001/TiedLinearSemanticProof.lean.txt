@@ -1,0 +1,190 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearTokenProof
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.PurityProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsSemanticProof
+public import Mathlib.Tactic.Ring
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearProof
+open BlockRows TiedLinear
+
+abbrev PureRow := WordLinearDecisionCompletion.PureRow
+abbrev PureFormula := WordLinearDecisionCompletion.PureFormula
+
+theorem pure_lift_row (table : List Token) (x : Nat) (r : Row) : PureRow (liftRow table x r) := by
+  intro a ha
+  rcases List.mem_cons.mp ha with h | ha
+  · subst a; exact ⟨_, rfl⟩
+  rcases List.mem_cons.mp ha with h | ha
+  · subst a; exact ⟨_, rfl⟩
+  obtain ⟨b, _, rfl⟩ := List.mem_map.mp ha
+  exact ⟨_, rfl⟩
+
+theorem pure_lift (table : List Token) (x : Nat) (p : Formula) :
+    PureFormula (liftFormula table x p) := by
+  induction p with
+  | truth => trivial
+  | falsity => trivial
+  | atom a => cases a <;> exact pure_lift_row table x _
+  | negative p ih => exact ih
+  | conjunction p q ihp ihq => exact ⟨ihp, ihq⟩
+  | disjunction p q ihp ihq => exact ⟨ihp, ihq⟩
+
+theorem lifted_linearity (table : List Token) (x : Nat) (p : Formula) :
+    LinearRows.isLinear 0 (liftFormula table x p) = true := by
+  apply (LinearRowsSemanticProof.exactLinearityTest 0 (liftFormula table x p)).mpr
+  intro a ha w hw hname
+  obtain ⟨j, hj⟩ := WordLinearDecisionCompletion.Proof.pure_formula_atoms _
+    (pure_lift table x p) a ha w hw
+  rw [hj] at hname
+  have hj0 : j = 0 := hname
+  exact hj.trans (congrArg NormalForm.Summand.variable hj0)
+
+theorem pure_eliminated (table : List Token) (x : Nat) (p : Formula) :
+    PureFormula (LinearRows.eliminate 0 (liftFormula table x p)) :=
+  WordLinearDecisionCompletion.Proof.pure_eliminate 0 _ (pure_lift table x p)
+
+private theorem lift_row_updated (table : List Token) (x : Nat) (r : Row)
+    (ν : Nat → Nat) (n : Nat)
+    (hs : ∀ t ∈ rowTokens r,
+      Function.update (parameterValuation table x ν) 0 n (tokenName table x t) =
+        t.value (Function.update ν x n)) :
+    NormalForm.rowValue (liftRow table x r)
+      (Function.update (parameterValuation table x ν) 0 n) =
+        rowValue r (Function.update ν x n) := by
+  let σ := Function.update (parameterValuation table x ν) 0 n
+  have hP : σ (tokenName table x (.parameter r.1.1)) = r.1.1.value (Function.update ν x n) :=
+    hs _ (by simp [rowTokens])
+  have hN : σ (tokenName table x (.parameter r.1.2)) = r.1.2.value (Function.update ν x n) :=
+    hs _ (by simp [rowTokens])
+  have he : (r.2.map (fun a => a.1 * (σ (tokenName table x (.occurrence a.2)) : Int))).sum =
+      (r.2.map (fun a => a.1 * (a.2.term.value (Function.update ν x n) : Int))).sum := by
+    apply congrArg List.sum
+    apply List.map_congr_left
+    intro a ha
+    have ht := hs (.occurrence a.2)
+      (List.mem_append_right _ (List.mem_map.mpr ⟨a, ha, rfl⟩))
+    rw [ht]
+  calc
+    NormalForm.rowValue (liftRow table x r) σ =
+        (σ (tokenName table x (.parameter r.1.1)) : Int) -
+        (σ (tokenName table x (.parameter r.1.2)) : Int) +
+        (r.2.map (fun a => a.1 * (σ (tokenName table x (.occurrence a.2)) : Int))).sum := by
+      simp only [NormalForm.rowValue, liftRow, List.map_cons, List.sum_cons,
+        List.map_map, Function.comp_def, NormalForm.Summand.term, Term.value,
+        one_mul, neg_one_mul, zero_add]
+      ring
+    _ = _ := by rw [hP, hN, he]; rfl
+
+private theorem linear_children (x : Nat) (p q : Formula) :
+    (PlainMaximum.linearIn x (.conjunction p q) = true ↔
+      PlainMaximum.linearIn x p = true ∧ PlainMaximum.linearIn x q = true) ∧
+    (PlainMaximum.linearIn x (.disjunction p q) = true ↔
+      PlainMaximum.linearIn x p = true ∧ PlainMaximum.linearIn x q = true) := by
+  cases hP : p.parameters.contains x <;> cases hN : q.parameters.contains x <;>
+    cases hA : (PlainMaximum.occurrences p).all (fun a => PlainMaximum.linearSummand x a.2) <;>
+    cases hB : (PlainMaximum.occurrences q).all (fun a => PlainMaximum.linearSummand x a.2) <;>
+    simp [PlainMaximum.linearIn, Formula.parameters, PlainMaximum.occurrences,
+      List.contains_append, List.all_append, hP, hN, hA, hB]
+
+theorem lift_formula_updated (table : List Token) (x : Nat) (p : Formula)
+    (hp : PlainMaximum.linearIn x p = true) (hinc : ∀ t ∈ tokens p, t ∈ table)
+    (ν : Nat → Nat) (n : Nat) :
+    (liftFormula table x p).eval (Function.update (parameterValuation table x ν) 0 n) ↔
+      p.eval (Function.update ν x n) := by
+  induction p with
+  | truth => rfl
+  | falsity => rfl
+  | atom a =>
+    have hs : ∀ t ∈ rowTokens a.row,
+        Function.update (parameterValuation table x ν) 0 n (tokenName table x t) =
+          t.value (Function.update ν x n) := by
+      intro t ht
+      exact parameter_token_updated table x ν n t (hinc t ht)
+        (linear_token_safe x (.atom a) hp t ht)
+    have hv := lift_row_updated table x a.row ν n hs
+    cases a <;> simp only [Atom.row] at hv <;>
+      simp only [liftFormula, liftAtom, Formula.eval, NormalForm.Formula.eval,
+        Atom.eval, NormalForm.Atom.eval] <;> rw [hv]
+  | negative p ih => exact not_congr (ih hp hinc)
+  | conjunction p q ihp ihq =>
+    obtain ⟨hpp, hpq⟩ := (linear_children x p q).1.mp hp
+    exact and_congr
+      (ihp hpp (fun t ht => hinc t (List.mem_append_left _ ht)))
+      (ihq hpq (fun t ht => hinc t (List.mem_append_right _ ht)))
+  | disjunction p q ihp ihq =>
+    obtain ⟨hpp, hpq⟩ := (linear_children x p q).2.mp hp
+    exact or_congr
+      (ihp hpp (fun t ht => hinc t (List.mem_append_left _ ht)))
+      (ihq hpq (fun t ht => hinc t (List.mem_append_right _ ht)))
+
+private theorem lower_entries_value (table : List Token) (x : Nat) (positive negative : Term)
+    (entries : List (Int × NormalForm.Summand)) (ν : Nat → Nat)
+    (hp : ∀ a ∈ entries, ∃ j, a.2 = NormalForm.Summand.variable j) :
+    rowValue (lowerEntries table x positive negative entries) ν =
+      (positive.value ν : Int) - (negative.value ν : Int) +
+        (entries.map (fun a => a.1 * (a.2.term.value (parameterValuation table x ν) : Int))).sum := by
+  induction entries with
+  | nil => rfl
+  | cons a entries ih =>
+    obtain ⟨j, hj⟩ := hp a List.mem_cons_self
+    have htail : ∀ a ∈ entries, ∃ j, a.2 = NormalForm.Summand.variable j :=
+      fun b hb => hp b (List.mem_cons_of_mem _ hb)
+    have hi := ih htail
+    cases ht : tokenOfName table x j with
+    | parameter t =>
+      have hv : parameterValuation table x ν j = t.value ν := by
+        simp only [parameterValuation, ht, Token.value]
+      have hc : (a.1.toNat : Int) * (t.value ν : Int) -
+          ((-a.1).toNat : Int) * (t.value ν : Int) = a.1 * (t.value ν : Int) := by
+        rw [← sub_mul]
+        have he : (a.1.toNat : Int) - ((-a.1).toNat : Int) = a.1 := by omega
+        rw [he]
+      simp only [lowerEntries, hj, lowerSummand, ht, rowValue, Term.value,
+        Int.natCast_add, Int.natCast_mul, List.map_cons, List.sum_cons,
+        NormalForm.Summand.term, hv]
+      simp only [rowValue] at hi
+      omega
+    | occurrence s =>
+      have hv : parameterValuation table x ν j = s.term.value ν := by
+        simp only [parameterValuation, ht, Token.value]
+      simp only [lowerEntries, hj, lowerSummand, ht, rowValue,
+        List.map_cons, List.sum_cons, NormalForm.Summand.term, Term.value, hv]
+      simp only [rowValue] at hi
+      omega
+
+theorem lower_row_value (table : List Token) (x : Nat) (r : NormalForm.Row)
+    (hp : PureRow r) (ν : Nat → Nat) :
+    rowValue (lowerRow table x r) ν = NormalForm.rowValue r (parameterValuation table x ν) := by
+  rw [lowerRow, lower_entries_value table x _ _ r.2 ν hp]
+  simp only [Term.value, NormalForm.rowValue]
+  omega
+
+theorem lower_formula_eval (table : List Token) (x : Nat) (p : NormalForm.Formula)
+    (hp : PureFormula p) (ν : Nat → Nat) :
+    (lowerFormula table x p).eval ν ↔ p.eval (parameterValuation table x ν) := by
+  induction p with
+  | truth => rfl
+  | falsity => rfl
+  | atom a =>
+    have hv := lower_row_value table x a.row hp ν
+    cases a <;> simp only [NormalForm.Atom.row] at hv <;>
+      simp only [lowerFormula, lowerAtom, Formula.eval, NormalForm.Formula.eval,
+        Atom.eval, NormalForm.Atom.eval] <;> rw [hv]
+  | negative p ih => exact not_congr (ih hp)
+  | conjunction p q ihp ihq => exact and_congr (ihp hp.1) (ihq hp.2)
+  | disjunction p q ihp ihq => exact or_congr (ihp hp.1) (ihq hp.2)
+
+theorem actualTiedLinearElimination : TiedLinearTargets.ActualTiedLinearElimination := by
+  intro x p hp ν
+  calc
+    (eliminate x p).eval ν ↔
+        (LinearRows.eliminate 0 (liftFormula (tokens p) x p)).eval
+          (parameterValuation (tokens p) x ν) :=
+      lower_formula_eval (tokens p) x _ (pure_eliminated (tokens p) x p) ν
+    _ ↔ ∃ n : Nat, (liftFormula (tokens p) x p).eval
+        (Function.update (parameterValuation (tokens p) x ν) 0 n) :=
+      LinearRowsSemanticProof.actualLinearElimination 0 _ (lifted_linearity (tokens p) x p) _
+    _ ↔ ∃ n : Nat, p.eval (Function.update ν x n) :=
+      exists_congr (fun n => lift_formula_updated (tokens p) x p hp (fun _ h => h) ν n)
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearProof

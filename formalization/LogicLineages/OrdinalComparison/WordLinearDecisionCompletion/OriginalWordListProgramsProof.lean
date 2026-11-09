@@ -1,0 +1,108 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof
+attribute [local irreducible] Nat.sqrt Nat.unpair
+
+theorem computableIteration {σ : Type*} [Primcodable σ] {f : σ → σ}
+    (hf : Computable f) : Computable₂ (fun n s => (f^[n]) s) := by
+  have hs : Computable₂ (fun (_ : Nat × σ) (s : Nat × σ) => f s.2) :=
+    hf.comp (Computable.snd.comp Computable.snd)
+  apply (Computable.nat_rec Computable.fst Computable.snd hs).of_eq
+  intro p
+  induction p.1 with
+  | zero => rfl
+  | succ n ih => simpa only [Function.iterate_succ_apply'] using congrArg f ih
+
+abbrev FoldState (α σ β : Type*) := α × σ × List β
+
+def foldStep {α σ β : Type*} (h : α → σ → β → σ) : FoldState α σ β → FoldState α σ β
+  | (a, s, []) => (a, s, [])
+  | (a, s, b :: bs) => (a, h a s b, bs)
+
+theorem foldStepComputable {α σ β : Type*} [Primcodable α] [Primcodable σ] [Primcodable β]
+    {h : α → σ → β → σ} (hh : Computable (fun p : α × σ × β => h p.1 p.2.1 p.2.2)) :
+    Computable (foldStep h) := by
+  let S := FoldState α σ β
+  have ha : Computable (fun p : S × β => p.1.1) :=
+    Computable.fst.comp Computable.fst
+  have hv : Computable (fun p : S × β => p.1.2.1) :=
+    Computable.fst.comp (Computable.snd.comp Computable.fst)
+  have ht : Computable (fun p : S × β => p.1.2.2.tail) :=
+    Primrec.list_tail.to_comp.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))
+  have hs : Computable (fun p : S × β => h p.1.1 p.1.2.1 p.2) :=
+    hh.comp (ha.pair (hv.pair Computable.snd))
+  have hb : Computable₂ (fun s : S => fun b : β => (s.1, h s.1 s.2.1 b, s.2.2.tail)) :=
+    ha.pair (hs.pair ht)
+  have hd : Computable (fun s : S => s.2.2.head?) :=
+    Primrec.list_head?.to_comp.comp (Computable.snd.comp Computable.snd)
+  apply (Computable.option_casesOn hd Computable.id hb).of_eq
+  intro s
+  rcases s with ⟨a, state, bs⟩
+  cases bs <;> rfl
+
+theorem foldFinish {α σ β : Type*} (h : α → σ → β → σ)
+    (a : α) (state : σ) (bs : List β) :
+    ((foldStep h)^[bs.length]) (a, state, bs) = (a, bs.foldl (h a) state, []) := by
+  induction bs generalizing state with
+  | nil => rfl
+  | cons b bs ih =>
+    rw [List.length_cons, Function.iterate_succ_apply]
+    change ((foldStep h)^[bs.length]) (a, h a state b, bs) = _
+    rw [ih]
+    rfl
+
+theorem computableListFoldl {α σ β : Type*} [Primcodable α] [Primcodable σ] [Primcodable β]
+    {f : α → List β} {g : α → σ} {h : α → σ → β → σ}
+    (hf : Computable f) (hg : Computable g)
+    (hh : Computable (fun p : α × σ × β => h p.1 p.2.1 p.2.2)) :
+    Computable (fun a => (f a).foldl (h a) (g a)) := by
+  have hi : Computable (fun a => (a, g a, f a)) := Computable.id.pair (hg.pair hf)
+  have hn : Computable (fun a => (f a).length) := Primrec.list_length.to_comp.comp hf
+  have hr : Computable (fun a => ((foldStep h)^[(f a).length]) (a, g a, f a)) :=
+    (computableIteration (foldStepComputable hh)).comp hn hi
+  apply (Computable.fst.comp (Computable.snd.comp hr)).of_eq
+  intro a
+  rw [foldFinish]
+
+theorem foldMapReverse {α β : Type*} (g : α → β) (xs : List α) (acc : List β) :
+    xs.foldl (fun s b => g b :: s) acc = (xs.map g).reverse ++ acc := by
+  induction xs generalizing acc with
+  | nil => rfl
+  | cons a xs ih =>
+    simpa only [List.foldl_cons, ih, List.map_cons, List.reverse_cons,
+      List.append_assoc, List.singleton_append]
+
+theorem computableListMap {α β σ : Type*} [Primcodable α] [Primcodable β] [Primcodable σ]
+    {f : α → List β} {g : α → β → σ} (hf : Computable f) (hg : Computable₂ g) :
+    Computable (fun a => (f a).map (g a)) := by
+  have hs : Computable (fun p : α × List σ × β => g p.1 p.2.2 :: p.2.1) :=
+    Computable.list_cons.comp
+      (hg.comp Computable.fst (Computable.snd.comp Computable.snd))
+      (Computable.fst.comp Computable.snd)
+  have hr := computableListFoldl (h := fun a (acc : List σ) b => g a b :: acc) hf (Computable.const []) hs
+  apply (Computable.list_reverse.comp hr).of_eq
+  intro a
+  simp only [foldMapReverse, List.append_nil, List.reverse_reverse]
+
+theorem foldAll {β : Type*} (p : β → Bool) (xs : List β) (ok : Bool) :
+    xs.foldl (fun s b => s && p b) ok = (ok && xs.all p) := by
+  induction xs generalizing ok with
+  | nil => simp
+  | cons b bs ih => simp only [List.foldl_cons, ih, List.all_cons, Bool.and_assoc]
+
+theorem computableListAll {α β : Type*} [Primcodable α] [Primcodable β]
+    {f : α → List β} {p : α → β → Bool} (hf : Computable f) (hp : Computable₂ p) :
+    Computable (fun a => (f a).all (p a)) := by
+  have hb : Computable (fun x : α × Bool × β => p x.1 x.2.2) :=
+    hp.comp Computable.fst (Computable.snd.comp Computable.snd)
+  have hs : Computable (fun x : α × Bool × β => x.2.1 && p x.1 x.2.2) := by
+    apply (Computable.cond (Computable.fst.comp Computable.snd) hb (Computable.const false)).of_eq
+    intro x
+    cases x.2.1 <;> rfl
+  apply (computableListFoldl (h := fun a (ok : Bool) b => ok && p a b) hf (Computable.const true) hs).of_eq
+  intro a
+  simp only [foldAll, Bool.true_and]
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.OriginalWordEvaluation.Proof

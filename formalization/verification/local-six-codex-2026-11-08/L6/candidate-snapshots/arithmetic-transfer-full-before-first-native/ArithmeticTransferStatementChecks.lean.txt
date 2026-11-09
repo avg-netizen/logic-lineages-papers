@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransferProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.StatementChecks
+
+theorem contextTransport : Targets.ContextTransport := Proof.contextTransport
+theorem ordinaryFormulaAgreement : Targets.OrdinaryFormulaAgreement := Agreement.ordinaryFormulaAgreement
+theorem closedArithmeticTransport : Targets.ClosedArithmeticTransport := Proof.closedArithmeticTransport
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.StatementChecks
+
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.StatementChecks.contextTransport
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.StatementChecks.ordinaryFormulaAgreement
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer.StatementChecks.closedArithmeticTransport
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.ArithmeticTransfer

@@ -1,0 +1,69 @@
+{
+  "utc": "2026-11-09T02:31:14.272913+00:00",
+  "status": "READY exact candidate; no proof acceptance yet",
+  "target_preflight": "build-reports/1794189751313646659-2.json",
+  "frozen": "BOTTOM-DESCENT-FROZEN.json",
+  "sources": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentDefinitions.lean",
+      "sha256": "b03635f926fa551e778f4fd87e30b7f5b840fe7f7e1e54dbbdc8d5990b74e203"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentInductionProof.lean",
+      "sha256": "55ac2e0741c1af4baa80804c9209f02d2b33d2b5e8ca3a6dc6cd1c6fb2906afc"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentProof.lean",
+      "sha256": "ea5e87e9423ecc8e8080a06ef81c73bb749db55f29c7846ca7ea17afc89e18d0"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentStatementChecks.lean",
+      "sha256": "daea239902d0145307f01fb915acf583f99aed4584a27308bf150445156230ad"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentStepProof.lean",
+      "sha256": "bd8efe4feb7610a2c87428ef8eca1904e6126b5a54f3db85717824b5aac02866"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentSyntaxProof.lean",
+      "sha256": "43c5a54c6afff8063fb7f96e5c1e534c56cf3dffaae831ebdf3cd90937b35923"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentTargets.lean",
+      "sha256": "1effa6e6a993ac19934dcab0c36ca729bf32e4878365b2125485a03f12349a1e"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentTransportProof.lean",
+      "sha256": "2829b4651ea607ea44d9906803850ad0d1587206bbd4cc5888ce39985fd686fb"
+    }
+  ],
+  "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomDescentStatementChecks",
+  "exact_aliases": [
+    "iteration_exact",
+    "selected_exact"
+  ],
+  "scope": "Concrete internal shape preservation through same transition/iteration/selected fallbackRepresentative; full-language PA induction, no native reflection/invariant supplier assumption. Quotient fold reflection, bottom typing/I/C-to-I remain unpaid.",
+  "dependency_order": "After earlier BottomRepresentativeStatementChecks exact retry.",
+  "proof_dependency_split": "Basic graph transport moved to BottomDescentTransportProof (same existing theorem names); direct BottomSource typing imports one-step helpers only. Iteration binder/PA induction remains in the separate descent gate. Frozen definitions and target formulas unchanged.",
+  "proof_dependency_pins": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomRepresentativeInternalProof.lean",
+      "sha256": "b8cf3c6b8e9b70c1497d2836e96f03b3d310d30661008e4f6fdda2501bff50e3"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentTransportProof.lean",
+      "sha256": "2829b4651ea607ea44d9906803850ad0d1587206bbd4cc5888ce39985fd686fb"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomDescentStepProof.lean",
+      "sha256": "bd8efe4feb7610a2c87428ef8eca1904e6126b5a54f3db85717824b5aac02866"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/BottomParameterInternalProof.lean",
+      "sha256": "e7b60fd962846139584e0b652fa5910ed9e406f3b774a572b9c35662bd794334"
+    }
+  ],
+  "ready_pin_refresh_after_central_repair": "Current Rep READY-4 and Parameter READY-2 support namespace fixes; frozen specs unchanged, still dependency-held.",
+  "central_full_manifest": "verification/local-six-codex-2026-11-08/L2/BOTTOM-DESCENT-CENTRAL-READY.json",
+  "dependencies_paid": true
+}

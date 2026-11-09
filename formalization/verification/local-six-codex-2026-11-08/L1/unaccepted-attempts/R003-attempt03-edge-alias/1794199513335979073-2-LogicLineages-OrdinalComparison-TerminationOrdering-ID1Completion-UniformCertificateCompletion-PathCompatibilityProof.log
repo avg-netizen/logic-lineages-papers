@@ -1,0 +1,56 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/UniformCertificateCompletion/PathCompatibilityProof.lean:132:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel ?j (edgeAccepted ?data ?oldStep ?x ?y ?certificate ?parameter)
+in the target expression
+  Nonempty
+    (Derivation body Theta
+      (Formula.relabel j
+        (InternalParameterizedPathChecker.edgeGraph (edgeChecker data oldStep) x y certificate (ps 0))))
+
+body : Positive (Fin 1)
+n : ℕ
+arity : Fin n → ℕ
+base : Data
+hc : InternalOriginalUniformDescentSelection.Calibrated n arity base
+window : Program 1
+hw : windowCalibrated n window
+symbols : List (Fin n)
+S : List Ty
+table : Fin n → Fin n → Bool
+hS : SubtypeClosed fun typ => typ ∈ S
+oldStep : Program 4
+oldVertex : Program 5
+sigma tau : Ty
+α : Type
+ps : InternalParameterizedApplicationPathLift.Parameters α
+x y certificate out other lifted : OTerm α
+context : ℕ := OrdinaryArithmeticQuotient.contextCode symbols S table
+data : Data := normalizeData base
+premise : InternalCalculus.Formula α :=
+  InternalParameterizedApplicationPathLift.invariantAt (invariant context data sigma tau) ps x ⊓
+    (InternalParameterizedPathChecker.edgeGraph (edgeChecker data oldStep) x y certificate (ps 0) ⊓
+      (InternalParameterizedApplicationPathLift.vertexAt (vertex data window oldVertex) ps out x ⊓
+        (InternalParameterizedApplicationPathLift.vertexAt (vertex data window oldVertex) ps other y ⊓
+          InternalParameterizedApplicationPathLift.liftedEdgeAt ps lifted certificate)))
+hp : Nonempty (Derivation body [premise] premise)
+β : Type
+j : α → β
+Theta : List (InternalCalculus.Formula β)
+gammaCode : OTerm β
+hj : ∀ r ∈ [premise], Formula.relabel j r ∈ Theta
+hright :
+  Nonempty
+    (Derivation body Theta (programGraph InternalUnpair.right gammaCode (Fin.cons (Term.relabel j (ps 0)) Fin.elim0)))
+hix :
+  Nonempty
+    (Derivation body Theta
+      (InternalApplicationPathLift.invariantAt (invariant context data sigma tau) (fun i => Term.relabel j (ps i))
+        (Term.relabel j x)))
+he :
+  Nonempty
+    (Derivation body Theta
+      (Formula.relabel j
+        (InternalParameterizedPathChecker.edgeGraph (edgeChecker data oldStep) x y certificate (ps 0))))
+⊢ Nonempty
+    (Derivation body Theta
+      (edgeAccepted data oldStep (Term.relabel j out) (Term.relabel j other) (Term.relabel j lifted)
+        (Term.relabel j (ps 0))))
