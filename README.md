@@ -1,13 +1,14 @@
 # Logic lineages papers
 
 **Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [canonical constructor reflection checkpoint](formalization/verification/continuation-2026-11-09/canonical-constructor-shape/STATUS.md)
-adds seven checked supporting contracts for the arithmetic accessibility
-proof on `formalization/cumulative-continuation-2026-11-09`. Root constructor
-tags and application domains now reflect through the same canonical fold;
-canonical application-component coherence remains pending.
+The latest [canonical function neutrality checkpoint](formalization/verification/continuation-2026-11-09/function-neutrality/STATUS.md)
+adds six checked supporting contracts for the arithmetic accessibility proof
+on `formalization/cumulative-continuation-2026-11-09`. Function neutrality now
+reflects through the same canonical fold and supplies the original raw-step
+checker's neutral-source premise. Canonical application-component coherence
+remains pending.
 [TARGETS.json](formalization/TARGETS.json) is the authoritative register.
-The [next proof obligations](formalization/verification/continuation-2026-11-09/canonical-constructor-shape/NEXT-STEPS.md)
+The [next proof obligations](formalization/verification/continuation-2026-11-09/function-neutrality/NEXT-STEPS.md)
 and older [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md)
 record the current boundary and inherited work. Earlier counts are historical.
 

@@ -1,0 +1,84 @@
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:28:2: error: unsolved goals
+case pos
+n : ℕ
+arity : Fin n → ℕ
+Gamma : List Ty
+sigma tau : Ty
+f : AuxTerm (Fin n) arity Gamma (sigma.arrow tau)
+a : AuxTerm (Fin n) arity Gamma sigma
+h : NumberedPrimaryShapes.isLambda f = true
+ht : (Nat.unpair (codeNumber (termCode f))).1 = 1
+⊢ (if True ∧ 1 ≠ 1 then 1 else 0) = 0
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:30:2: error: unsolved goals
+case neg
+n : ℕ
+arity : Fin n → ℕ
+Gamma : List Ty
+sigma tau : Ty
+f : AuxTerm (Fin n) arity Gamma (sigma.arrow tau)
+a : AuxTerm (Fin n) arity Gamma sigma
+h : ¬NumberedPrimaryShapes.isLambda f = true
+ht : (Nat.unpair (codeNumber (termCode f))).1 ≠ 1
+⊢ (if True ∧ (Nat.unpair (codeNumber (termCode f))).1 ≠ 1 then 1 else 0) = if false = true then 0 else 1
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:29:20: warning: This simp argument is unused:
+  not_true_eq_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵t̵r̵u̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵,̵a̵n̵d̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲a̲n̲d̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:29:38: warning: This simp argument is unused:
+  and_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵t̵r̵u̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵,̵a̵n̵d̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲n̲o̲t̲_̲t̲r̲u̲e̲_̲e̲q̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:29:48: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵t̵r̵u̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵,̵a̵n̵d̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲n̲o̲t̲_̲t̲r̲u̲e̲_̲e̲q̲_̲f̲a̲l̲s̲e̲,̲ ̲a̲n̲d̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:32:15: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp only [ht̵,h̵,̵ ̲not_false_eq_true, ̲and_true, ̲ite_true, ̲ite_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:32:20: warning: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:32:38: warning: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲n̲o̲t̲_̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:32:47: warning: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲n̲o̲t̲_̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:32:56: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵t̵,̵h̵,̵n̵o̵t̵_̵f̵a̵l̵s̵e̵_̵e̵q̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵]̵[̲h̲t̲,̲ ̲h̲,̲ ̲n̲o̲t̲_̲f̲a̲l̲s̲e̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:46:2: error: Alternative `var` has not been provided
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:46:2: error: Alternative `lam` has not been provided
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:46:2: error: Alternative `bottom` has not been provided
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:46:2: error: Alternative `ordinary` has not been provided
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:46:2: error: Alternative `numbered` has not been provided
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityEvaluationProof.lean:157:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityEvaluationProof.actualOriginalFunctionNeutralityRefinementEquality: forbidden axiom dependency sorryAx

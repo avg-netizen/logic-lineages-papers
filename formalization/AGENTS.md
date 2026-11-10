@@ -1,4 +1,38 @@
-# Current checkpoint — canonical constructor reflection, 10 November 2026
+# Current checkpoint — canonical function neutrality
+
+Six exact supporting contracts in 24 new Lean modules extend `d5803735`
+on `formalization/cumulative-continuation-2026-11-09`. The SAME full canonical
+fold now preserves and reflects the original application's function-neutrality
+test. A common actual canonical output transfers that test between raw sources.
+The original raw-step consumer obtains its neutrality premise from the actual
+canonical output and retains literal same-type bottom or a full accepted
+function-child step, with the original certificate, raw argument and parameter.
+
+One globally calibrated final tuple retains the complete Package, prior root
+fields, the new neutrality law, the original neutral-bottom law and both
+variable Object laws. The six aliases and 86 additional declarations use
+only standard axioms. All 1,871 gate dependencies have source-matched native
+rows; the separate preflight passed. All inherited mathematical sources and
+frozen specifications are unchanged. Register: **171 checked, 2 inherited,
+16 pending / 189**. Paper06 `lem:id1` remains pending.
+
+Next: canonical application-component coherence through the SAME final leaf,
+then quotient neutral inversion and arrow computability. Function neutrality
+and its raw-step consumer are paid. The final leaf graph still does not say
+`out = rebuilt`; transition fixedness does not establish full-fold or child
+fixedness. The handoff proposes a bounded native least-code application
+factorization supplier and identifies the still-unpaid internal connection.
+Lambda/substitution, multiset, constructor and all-term accessibility remain
+pending. Read the [accepted checkpoint](verification/continuation-2026-11-09/function-neutrality/STATUS.md)
+and [next steps](verification/continuation-2026-11-09/function-neutrality/NEXT-STEPS.md).
+All owned compiler jobs are complete. The unchanged serialized limits were
+retained, including the global-proof split after its RSS stop. No full-root
+or remote-CI pass is claimed. Publication stays on the existing cumulative
+branch with no force update.
+
+---
+
+# Previous checkpoint — canonical constructor reflection, 10 November 2026
 
 The user continued the public formalization from
 `531a50683ed1ffb672d74159f776be6bfb3c4ae2` on the existing

@@ -1,4 +1,23 @@
-# Current checkpoint — canonical constructor reflection, 10 November 2026
+# Current checkpoint — canonical function neutrality
+
+**171 checked, 2 inherited, 16 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Six new exact contracts prove function-neutrality
+reflection through the SAME selected descent and full canonical fold, common
+canonical-output comparison, and its original raw-step consumer. One global
+final tuple retains the complete calibrated Package and all prior root,
+neutral-bottom and variable Object laws.
+
+The packet has 24 new modules, six exact aliases and 86 additional
+standard-axiom declaration audits. All 1,871 local gate dependencies have
+source-matched native evidence; the separate preflight also passed. Accepted
+mathematical sources, frozen targets and resource limits are unchanged.
+Read the [accepted checkpoint](verification/continuation-2026-11-09/function-neutrality/STATUS.md)
+and [next proof obligations](verification/continuation-2026-11-09/function-neutrality/NEXT-STEPS.md).
+Canonical application-component coherence, quotient neutral inversion and
+arrow computability remain pending, as does paper06 `lem:id1`. No full-root
+or remote-CI pass is claimed.
+
+# Previous checkpoint — canonical constructor reflection, 10 November 2026
 
 **171 checked, 2 inherited, 16 pending / 189**, derived from
 [TARGETS.json](TARGETS.json). Seven new exact supporting contracts preserve
