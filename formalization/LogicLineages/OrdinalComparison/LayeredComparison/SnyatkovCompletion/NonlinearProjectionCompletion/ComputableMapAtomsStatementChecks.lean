@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ComputableMapAtomsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ComputableMapAtomsStatementChecks
+
+theorem actualJointMapProgram : ComputableMapAtomsTargets.ActualJointMapProgram :=
+  ComputableMapAtomsProof.actualJointMapProgram
+#print axioms actualJointMapProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ComputableMapAtomsStatementChecks
