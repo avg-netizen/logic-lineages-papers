@@ -1,3 +1,17 @@
+# PAUSED — user cutoff reached, 10 November 2026, 21:00 UTC
+
+This public continuation is stopped. All owned proof authors and native
+compiler jobs have finished, both compiler locks are free, and the local
+run policy is paused. No automatic resume or new proof/compiler round.
+Only final checkpoint publication/preservation remains authorized by this
+closeout. Read [the final handoff](HANDOFF-2026-11-10-21UTC.md).
+
+Three exact supporting contracts are checked; register remains
+**171 checked, 2 inherited, 16 pending / 189**. Paper06 `lem:id1` remains
+pending. Historical releases below do not authorize a new round.
+
+---
+
 # Current checkpoint — paired canonical application components, 10 November 2026
 
 Three exact supporting contracts in sixteen new Lean modules are checked:

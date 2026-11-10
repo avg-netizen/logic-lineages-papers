@@ -52,3 +52,10 @@ No numbered statement is promoted: register remains **171 checked, 2 inherited,
 16 pending / 189**. Root imports, inherited mathematical sources, manuscript,
 pins, checker and CI are unchanged. No full-root or remote-CI pass is claimed.
 The user-authorized cutoff remains 10 November 2026, 21:00 UTC.
+
+## Final pause
+
+The 21:00 UTC user cutoff has been reached. All owned proof and compiler
+jobs have finished, shared locks are free, and the local run policy is paused.
+No new proof round or automatic resume is authorized. The final handoff is
+`formalization/HANDOFF-2026-11-10-21UTC.md`.
