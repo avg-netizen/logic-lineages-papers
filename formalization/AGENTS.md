@@ -1,3 +1,22 @@
+# Current checkpoint — paired canonical application components, 10 November 2026
+
+Three exact supporting contracts in sixteen new Lean modules are checked:
+paired whole-child component coherence for original applications sharing the
+SAME canonical output; one final globally calibrated tuple retaining full
+Package and prior root/neutral/variable laws; and paired internal elimination
+without externally supplied constructor or child witnesses. The source-matched
+proof/preflight union has 1,950 modules, fifteen standard-only theorem audits
+and six explicit prints. All three frozen targets are unchanged.
+
+The register remains **171 checked, 2 inherited, 16 pending / 189**. Original
+quotient-neutral edge inversion, arrow computability and paper06 `lem:id1`
+remain pending. Read the [checked recovery checkpoint](verification/continuation-2026-11-10/application-component-coherence-checkpoint/STATUS.md)
+and [concrete next consumer](verification/continuation-2026-11-10/application-component-coherence-checkpoint/NEXT-STEPS.md).
+The user cutoff remains **10 November 2026, 21:00 UTC**. No private or
+separately paused lane is resumed. Earlier checkpoint summaries follow.
+
+---
+
 # Current public continuation release — 10 November 2026
 
 Read [the current release](RESUME-2026-11-10-CUMULATIVE.md). Continue the existing
