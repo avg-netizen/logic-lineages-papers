@@ -1,6 +1,6 @@
 # Original application component coherence: pending verification
 
-Five new Lean source files are preserved as an explicitly **unchecked**
+Eleven new Lean source files are preserved as an explicitly **unchecked**
 candidate. The target and separate preflight were frozen before proof authoring.
 No new mathematical acceptance is claimed.
 
@@ -28,3 +28,10 @@ mathematical upstream compilation. The user cutoff remains 21:00 UTC on
 The numbered register, root imports, inherited sources, pins and CI are
 unchanged. There is no full-root or remote-CI claim. This checkpoint will be
 updated with the actual verification outcome; otherwise it remains pending.
+
+A separate frozen global wrapper candidate selects one original tuple and
+places paired coherence at its exact sidecar-refined final Data/window. It
+retains full calibration, the complete Package, previous root fields,
+full-fold function neutrality, original neutral-bottom law and both variable
+Object laws. Its six files are also unchecked. No quotient-neutral inversion
+or whole-paper acceptance follows merely from this candidate.
