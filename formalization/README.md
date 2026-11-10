@@ -1,4 +1,32 @@
-# Current checkpoint — canonical function neutrality
+# Current checkpoint — original quotient-neutral application inversion
+
+Seven exact supporting contracts in 35 new Lean modules extend `f898851d`
+on the existing cumulative branch. Original accepted raw steps reconstruct the
+SAME uniform quotient checker; neutral quotient edges have literal same-type
+bottom or an accepted function-child quotient edge. The typed actualJ equation
+retains the requested function and internally folds the raw argument. The
+aligned edge consumer retains that requested RAW argument in its target actualJ
+graph and derives the target function's typing. One globally calibrated final
+tuple retains the complete Package and all prior laws with both inversion rules.
+
+All seven exact aliases and 43 additional declarations use standard axioms.
+The gate/preflight union has 1983 source-matched successful native modules;
+all eleven frozen files and all inherited mathematical sources are unchanged.
+Fixed serialized resource limits, checker, pins, manuscripts and CI are retained.
+Register: **171 checked, 2 inherited, 16 pending / 189**. Paper06 `lem:id1`
+remains pending. No full-root or remote-CI pass is claimed.
+
+Next: source/Object application wrappers and the original non-lambda-premise
+neutrality bridge, then path wrappers and finite-type neutral/arrow computability.
+Do not assume that later function reducts remain non-lambdas. Lambda/substitution,
+multiset, constructors and all-term accessibility remain pending. Read the
+[accepted checkpoint](verification/continuation-2026-11-10/quotient-neutral-inversion/STATUS.md) and [next steps](verification/continuation-2026-11-10/quotient-neutral-inversion/NEXT-STEPS.md).
+All owned author/compiler jobs are complete. Publish on the existing cumulative
+branch using a non-force update; preserve any intervening work.
+
+---
+
+# Previous checkpoint — canonical function neutrality
 
 **171 checked, 2 inherited, 16 pending / 189**, derived from
 [TARGETS.json](TARGETS.json). Six new exact contracts prove function-neutrality

@@ -1,0 +1,52 @@
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalUniformStepQuotientProof.lean:66:102: error: unexpected token ']]'; expected ']'
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalUniformStepQuotientProof.lean:63:44: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Gamma : List (InternalCalculus.Formula alpha)
+data : Data
+oldStep : Program 4
+source target step certificate parameter : OTerm alpha
+psi : InternalCalculus.Formula alpha
+hstep : Nonempty (Derivation body Gamma (stepAccepted data oldStep source target step parameter))
+hc : Nonempty (Derivation body Gamma (graph3 edgeCode certificate source target step))
+next :
+  ∀ (beta : Type) (j : alpha → beta) (Delta : List (InternalCalculus.Formula beta)),
+    (∀ h ∈ Gamma, Formula.relabel j h ∈ Delta) →
+      ∀ (sourceOut targetOut : OTerm beta),
+        Nonempty
+            (Derivation body Delta
+              (Recovered data oldStep (Term.relabel j source) (Term.relabel j target) (Term.relabel j step) sourceOut
+                targetOut (Term.relabel j certificate) (Term.relabel j parameter))) →
+          Nonempty (Derivation body Delta (Formula.relabel j psi))
+qs : Fin 2 → Program 4 :=
+  ![(InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 0, Program.projection 3],
+    (InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 1, Program.projection 3] ]
+⊢ Nonempty (Derivation body Gamma psi)
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalUniformStepQuotientProof.lean:95:71: error: unexpected token ']]'; expected ']'
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalUniformStepQuotientProof.lean:90:52: error: unsolved goals
+body : Positive (Fin 1)
+data : Data
+oldStep : Program 4
+alpha : Type
+Gamma : List (InternalCalculus.Formula alpha)
+source target step parameter : OTerm alpha
+psi : InternalCalculus.Formula alpha
+hstep : Nonempty (Derivation body Gamma (stepAccepted data oldStep source target step parameter))
+next :
+  ∀ (beta : Type) (j : alpha → beta) (Delta : List (InternalCalculus.Formula beta)),
+    (∀ h ∈ Gamma, Formula.relabel j h ∈ Delta) →
+      ∀ (sourceOut targetOut certificate : OTerm beta),
+        Nonempty
+            (Derivation body Delta
+              (Recovered data oldStep (Term.relabel j source) (Term.relabel j target) (Term.relabel j step) sourceOut
+                targetOut certificate (Term.relabel j parameter))) →
+          Nonempty (Derivation body Delta (Formula.relabel j psi))
+qs : Fin 3 → Program 4 :=
+  ![(InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 0, Program.projection 3],
+    (InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 1, Program.projection 3],
+    edgeCode.composition ![Program.projection 0, Program.projection 1, Program.projection 2] ]
+⊢ Nonempty (Derivation body Gamma psi)
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalUniformStepQuotientProof.lean:120:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalUniformStepQuotientProof.actualOriginalUniformStepQuotientElimination: forbidden axiom dependency sorryAx
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalUniformStepQuotientProof.actualOriginalUniformStepQuotientElimination' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

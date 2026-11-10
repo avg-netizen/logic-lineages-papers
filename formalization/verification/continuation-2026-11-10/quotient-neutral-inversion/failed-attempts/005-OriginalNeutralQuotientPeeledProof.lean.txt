@@ -1,0 +1,92 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientRecoveredProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientPeeledProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeelSupportProof InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (suc z sucRelabel zRelabel)
+open UniformCertificateCompletion UniformCertificateCompletion.SupportProof
+open ClaudeSupervisedCompletion OriginalNeutralQuotient OriginalNeutralQuotientSyntaxProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Gamma : List (Formula alpha)}
+
+/-- Bind all three actual canonical children in one internal Program-totality
+scope. The child quotient checker is reconstructed at the original peeled
+edgeCode, and both endpoint application equations share this argument fold. -/
+theorem atPeeled (p : GlobalSourcePackage.Inputs) :
+    let r := OriginalApplicationSidecar.finalInputs p
+    let data := OuterSelection.data r.base r.window
+    ∀ (x y certificate parameter S T K state d e arrow f g a k child : OTerm alpha)
+      (psi : Formula alpha),
+    Nonempty (Derivation body Gamma (selectors certificate S T K)) →
+    Nonempty (Derivation body Gamma (requirements data r.oldStep x y S T K parameter)) →
+    Nonempty (Derivation body Gamma (OriginalFunctionNeutrality.windowGraph r.window x parameter)) →
+    Nonempty (Derivation body Gamma (graph3 edgeCode state S T K)) →
+    Nonempty (Derivation body Gamma
+      (InverseGuardTargets.Peeled (InternalParameterizedStructuralEndpointGuard.selectedEndpoint data)
+        r.oldStep d e arrow f g a k child InternalOriginalStepGuard.one state S T K parameter)) →
+    Nonempty (Derivation body Gamma (stepAccepted data r.oldStep f g k parameter)) →
+    (∀ (beta : Type) (j : alpha → beta) (Delta : List (Formula beta)),
+      (∀ h ∈ Gamma, h.relabel j ∈ Delta) →
+      ∀ F G A : OTerm beta,
+      Nonempty (Derivation body Delta
+        (Recovered data r.oldStep (x.relabel j) (y.relabel j) (certificate.relabel j)
+          (parameter.relabel j) (S.relabel j) (T.relabel j) (K.relabel j)
+          (state.relabel j) (d.relabel j) (e.relabel j) (arrow.relabel j)
+          (f.relabel j) (g.relabel j) (a.relabel j) (k.relabel j) (child.relabel j) F G A)) →
+      Nonempty (Derivation body Delta (psi.relabel j))) →
+    Nonempty (Derivation body Gamma psi) := by
+  dsimp only
+  intro x y certificate parameter S T K state d e arrow f g a k child psi
+    hselectors hrequirements hw hstate hpeeled hstep next
+  let r := OriginalApplicationSidecar.finalInputs p
+  let data := OuterSelection.data r.base r.window
+  let qs : Fin 3 → Program 4 :=
+    ![.composition (InternalParameterizedCanonicalResultFold.foldN data) ![.projection 0,.projection 3],
+      .composition (InternalParameterizedCanonicalResultFold.foldN data) ![.projection 1,.projection 3],
+      .composition (InternalParameterizedCanonicalResultFold.foldN data) ![.projection 2,.projection 3]]
+  let xs : Fin 4 → OTerm alpha := Fin.cons f (Fin.cons g (Fin.cons a (Fin.cons parameter Fin.elim0)))
+  apply queryCases qs xs psi
+  intro beta j ys Delta hj hq
+  have hselectors' := renameInto hselectors j Delta hj
+  rw [selectorsRename] at hselectors'
+  have hrequirements' := renameInto hrequirements j Delta hj
+  rw [requirementsRename] at hrequirements'
+  have hw' := renameInto hw j Delta hj
+  rw [windowRename] at hw'
+  have hstate' := renameInto hstate j Delta hj
+  rw [graph3Rename] at hstate'
+  have hpeeled' := renameInto hpeeled j Delta hj
+  rw [peeledRename] at hpeeled'
+  have hstep' := renameInto hstep j Delta hj
+  rw [stepRename] at hstep'
+  simp only [xs,consTermRename,emptyRename] at hq
+  let xx : Fin 4 → OTerm beta := Fin.cons (f.relabel j)
+    (Fin.cons (g.relabel j) (Fin.cons (a.relabel j) (Fin.cons (parameter.relabel j) Fin.elim0)))
+  have hf := binaryRecover (InternalParameterizedCanonicalResultFold.foldN data)
+    (.projection 0) (.projection 3) (ys 0) (f.relabel j) (parameter.relabel j) xx
+    (hq 0) (projectionValue 0 xx) (projectionValue 3 xx)
+  have hg := binaryRecover (InternalParameterizedCanonicalResultFold.foldN data)
+    (.projection 1) (.projection 3) (ys 1) (g.relabel j) (parameter.relabel j) xx
+    (hq 1) (projectionValue 1 xx) (projectionValue 3 xx)
+  have ha := binaryRecover (InternalParameterizedCanonicalResultFold.foldN data)
+    (.projection 2) (.projection 3) (ys 2) (a.relabel j) (parameter.relabel j) xx
+    (hq 2) (projectionValue 2 xx) (projectionValue 3 xx)
+  have hc := andLeft (andRight (andLeft (andRight hpeeled')))
+  have hchild := OriginalUniformStepQuotientProof.recoveredAt data r.oldStep
+    (f.relabel j) (g.relabel j) (k.relabel j) (ys 0) (ys 1) (child.relabel j)
+    (parameter.relabel j) hstep' hf hg hc
+  exact next beta j Delta hj (ys 0) (ys 1) (ys 2)
+    (OriginalNeutralQuotientRecoveredProof.atChildren p
+      (x.relabel j) (y.relabel j) (certificate.relabel j) (parameter.relabel j)
+      (S.relabel j) (T.relabel j) (K.relabel j) (state.relabel j)
+      (d.relabel j) (e.relabel j) (arrow.relabel j) (f.relabel j) (g.relabel j)
+      (a.relabel j) (k.relabel j) (child.relabel j) (ys 0) (ys 1) (ys 2)
+      hselectors' hrequirements' hw' hstate' hpeeled' hchild ha)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientPeeledProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientPeeledProof

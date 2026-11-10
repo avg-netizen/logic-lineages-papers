@@ -1,0 +1,120 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientPeeledProof
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralQuotientPeeledProof.lean:70:13: error(lean.unknownIdentifier): Unknown identifier `binaryRecover`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralQuotientPeeledProof.lean:42:44: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Gamma : List (InternalCalculus.Formula alpha)
+p : GlobalSourcePackage.Inputs
+x y certificate parameter S T K state d e arrow f g a k child : OTerm alpha
+psi : InternalCalculus.Formula alpha
+hselectors : Nonempty (Derivation body Gamma (selectors certificate S T K))
+hrequirements :
+  Nonempty
+    (Derivation body Gamma
+      (requirements
+        (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+          (OriginalApplicationSidecar.finalInputs p).window)
+        (OriginalApplicationSidecar.finalInputs p).oldStep x y S T K parameter))
+hw :
+  Nonempty
+    (Derivation body Gamma
+      (OriginalFunctionNeutrality.windowGraph (OriginalApplicationSidecar.finalInputs p).window x parameter))
+hstate : Nonempty (Derivation body Gamma (graph3 edgeCode state S T K))
+hpeeled :
+  Nonempty
+    (Derivation body Gamma
+      (InverseGuardTargets.Peeled
+        (InternalParameterizedStructuralEndpointGuard.selectedEndpoint
+          (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+            (OriginalApplicationSidecar.finalInputs p).window))
+        (OriginalApplicationSidecar.finalInputs p).oldStep d e arrow f g a k child InternalOriginalStepGuard.one state S
+        T K parameter))
+hstep :
+  Nonempty
+    (Derivation body Gamma
+      (stepAccepted
+        (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+          (OriginalApplicationSidecar.finalInputs p).window)
+        (OriginalApplicationSidecar.finalInputs p).oldStep f g k parameter))
+next :
+  ∀ (beta : Type) (j : alpha → beta) (Delta : List (InternalCalculus.Formula beta)),
+    (∀ h ∈ Gamma, Formula.relabel j h ∈ Delta) →
+      ∀ (F G A : OTerm beta),
+        Nonempty
+            (Derivation body Delta
+              (Recovered
+                (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+                  (OriginalApplicationSidecar.finalInputs p).window)
+                (OriginalApplicationSidecar.finalInputs p).oldStep (Term.relabel j x) (Term.relabel j y)
+                (Term.relabel j certificate) (Term.relabel j parameter) (Term.relabel j S) (Term.relabel j T)
+                (Term.relabel j K) (Term.relabel j state) (Term.relabel j d) (Term.relabel j e) (Term.relabel j arrow)
+                (Term.relabel j f) (Term.relabel j g) (Term.relabel j a) (Term.relabel j k) (Term.relabel j child) F G
+                A)) →
+          Nonempty (Derivation body Delta (Formula.relabel j psi))
+r : GlobalSourcePackage.Inputs := OriginalApplicationSidecar.finalInputs p
+data : InternalOriginalUniformDescentSelection.Data := OuterSelection.data r.base r.window
+qs : Fin 3 → Program 4 :=
+  ![(InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 0, Program.projection 3],
+    (InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 1, Program.projection 3],
+    (InternalParameterizedCanonicalResultFold.foldN data).composition ![Program.projection 2, Program.projection 3] ]
+xs : Fin 4 → OTerm alpha := Fin.cons f (Fin.cons g (Fin.cons a (Fin.cons parameter Fin.elim0)))
+beta : Type
+j : alpha → beta
+ys : Fin 3 → InternalTagArithmeticSyntaxProof.OTerm beta
+Delta : List (InternalCalculus.Formula beta)
+hj : ∀ r ∈ Gamma, Formula.relabel j r ∈ Delta
+hselectors' :
+  Nonempty
+    (Derivation body Delta
+      (selectors (Term.relabel j certificate) (Term.relabel j S) (Term.relabel j T) (Term.relabel j K)))
+hrequirements' :
+  Nonempty
+    (Derivation body Delta
+      (requirements
+        (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+          (OriginalApplicationSidecar.finalInputs p).window)
+        (OriginalApplicationSidecar.finalInputs p).oldStep (Term.relabel j x) (Term.relabel j y) (Term.relabel j S)
+        (Term.relabel j T) (Term.relabel j K) (Term.relabel j parameter)))
+hw' :
+  Nonempty
+    (Derivation body Delta
+      (OriginalFunctionNeutrality.windowGraph (OriginalApplicationSidecar.finalInputs p).window (Term.relabel j x)
+        (Term.relabel j parameter)))
+hstate' :
+  Nonempty
+    (Derivation body Delta
+      (graph3 edgeCode (Term.relabel j state) (Term.relabel j S) (Term.relabel j T) (Term.relabel j K)))
+hpeeled' :
+  Nonempty
+    (Derivation body Delta
+      (InverseGuardTargets.Peeled
+        (InternalParameterizedStructuralEndpointGuard.selectedEndpoint
+          (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+            (OriginalApplicationSidecar.finalInputs p).window))
+        (OriginalApplicationSidecar.finalInputs p).oldStep (Term.relabel j d) (Term.relabel j e) (Term.relabel j arrow)
+        (Term.relabel j f) (Term.relabel j g) (Term.relabel j a) (Term.relabel j k) (Term.relabel j child)
+        InternalOriginalStepGuard.one (Term.relabel j state) (Term.relabel j S) (Term.relabel j T) (Term.relabel j K)
+        (Term.relabel j parameter)))
+hstep' :
+  Nonempty
+    (Derivation body Delta
+      (stepAccepted
+        (OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+          (OriginalApplicationSidecar.finalInputs p).window)
+        (OriginalApplicationSidecar.finalInputs p).oldStep (Term.relabel j f) (Term.relabel j g) (Term.relabel j k)
+        (Term.relabel j parameter)))
+hq :
+  ∀ (i : Fin 3),
+    Nonempty
+      (Derivation body Delta
+        (programGraph (qs i) (ys i)
+          (Fin.cons (Term.relabel j f)
+            (Fin.cons (Term.relabel j g)
+              (Fin.cons (Term.relabel j a) (Fin.cons (Term.relabel j parameter) Fin.elim0))))))
+xx : Fin 4 → OTerm beta :=
+  Fin.cons (Term.relabel j f)
+    (Fin.cons (Term.relabel j g) (Fin.cons (Term.relabel j a) (Fin.cons (Term.relabel j parameter) Fin.elim0)))
+⊢ Nonempty (Derivation body Delta (Formula.relabel j psi))
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralQuotientPeeledProof.lean:92:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientPeeledProof.atPeeled: forbidden axiom dependency sorryAx
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientPeeledProof: 1
+BUILD_RECEIPT build-reports/1794352022914843345-3.json

@@ -1,0 +1,91 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeRecoveredProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeelSupportProof InternalControlGraphSupportProof
+open InternalAcceptanceSupportProof (programCases)
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalParameterizedCanonicalResultFoldSyntaxProof
+open InternalTagArithmeticSyntaxProof (suc z sucRelabel zRelabel)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open UniformCertificateCompletion UniformCertificateCompletion.SupportProof
+open OriginalNeutralApplicationEdgeTargets
+
+/-- The requested argument's actual fold is bound internally. Original
+typed application, generic neutral quotient inversion and whole-child
+functionality identify the function edge and restore the target actualJ
+with that SAME requested raw argument and original child certificate. -/
+theorem actualOriginalNeutralApplicationEdgeElimination :
+    ActualOriginalNeutralApplicationEdgeElimination := by
+  intro p
+  dsimp only
+  intro body alpha Gamma arrow d e function argument x y certificate parameter psi
+    hi hj hn he hbottom next
+  let r := OriginalApplicationSidecar.finalInputs p
+  let data := OuterSelection.data r.base r.window
+  have hbottomImp : Nonempty (Derivation body Gamma
+      ((graph1 BottomRepresentative.bottomCode y e).imp psi)) := by
+    obtain ⟨hbottom⟩ := hbottom
+    exact ⟨Derivation.implicationIntroduction hbottom⟩
+  apply programCases (InternalParameterizedCanonicalResultFold.foldN data)
+    (Fin.cons argument (Fin.cons parameter Fin.elim0)) psi
+  intro beta j Delta argumentOut hinc hfold
+  simp only [consTermRename,emptyRename] at hfold
+  have hi' := renameInto hi j Delta hinc
+  rw [OriginalNeutralApplicationSyntaxProof.inputPremisesRename] at hi'
+  have hj' := renameInto hj j Delta hinc
+  rw [applicationGraphRename] at hj'
+  have hn' := renameInto hn j Delta hinc
+  simp only [graph1Rename,InternalOriginalStepGuard.one,sucRelabel,zRelabel] at hn'
+  have he' := renameInto he j Delta hinc
+  rw [edgeRename] at he'
+  have happlication := OriginalNeutralApplicationEdgeBridgeProof.finalForward p
+    (arrow.relabel j) (d.relabel j) (e.relabel j) (function.relabel j)
+    (argument.relabel j) (x.relabel j) argumentOut (parameter.relabel j) hi' hfold hj'
+  have hrequested : Nonempty (Derivation body Delta
+      (OriginalNeutralApplication.Recovered data (d.relabel j) (e.relabel j)
+        (function.relabel j) (argument.relabel j) (x.relabel j) argumentOut (parameter.relabel j))) :=
+    andIntro hfold happlication
+  have ht := OriginalNeutralApplicationEdgeFieldsProof.outputType data r.window
+    (arrow.relabel j) (d.relabel j) (e.relabel j) (function.relabel j)
+    (argument.relabel j) (x.relabel j) argumentOut (parameter.relabel j) hi' hrequested
+  have hw := BottomDescentStepProof.windowChange r.window (suc z)
+    (function.relabel j) (x.relabel j) (parameter.relabel j) (andLeft hi')
+  apply OriginalNeutralQuotientProof.actualOriginalNeutralQuotientEdgeElimination p
+    body beta Delta (x.relabel j) (y.relabel j) (certificate.relabel j)
+    (parameter.relabel j) (e.relabel j) (psi.relabel j) hw he' hn' ht
+  · have hc := renameInto hbottomImp j Delta hinc
+    change Nonempty (Derivation body Delta
+      (((graph1 BottomRepresentative.bottomCode y e).relabel j).imp (psi.relabel j))) at hc
+    rw [graph1Rename] at hc
+    obtain ⟨hc⟩ := withHyp hc (graph1 BottomRepresentative.bottomCode (y.relabel j) (e.relabel j))
+    exact ⟨Derivation.implicationElimination hc (Derivation.hypothesis List.mem_cons_self)⟩
+  · intro gamma q Theta hq S T K state rawD rawE rawArrow rawFunction rawTarget rawArgument rawStep child F G A hquotient
+    have hcomp : ∀ h ∈ Gamma, h.relabel (q ∘ j) ∈ Theta := by
+      intro h hh
+      simpa only [InternalPositiveUnfoldingSupportProof.formulaRelabelComposition] using
+        hq (h.relabel j) (hinc h hh)
+    have hi'' := renameInto hi' q Theta hq
+    rw [OriginalNeutralApplicationSyntaxProof.inputPremisesRename] at hi''
+    have hrequested' := renameInto hrequested q Theta hq
+    rw [OriginalNeutralApplicationSyntaxProof.recoveredRename] at hrequested'
+    simp only [Term.relabel_relabel] at hi'' hrequested' hquotient
+    have hr := OriginalNeutralApplicationEdgeRecoveredProof.recoveredAt p
+      (arrow.relabel (q ∘ j)) (d.relabel (q ∘ j)) (e.relabel (q ∘ j))
+      (function.relabel (q ∘ j)) (argument.relabel (q ∘ j))
+      (x.relabel (q ∘ j)) (y.relabel (q ∘ j)) (certificate.relabel (q ∘ j)) (parameter.relabel (q ∘ j))
+      S T K state rawD rawE rawArrow rawFunction rawTarget rawArgument rawStep child F G A (argumentOut.relabel q)
+      hi'' hrequested' hquotient
+    simpa only [InternalPositiveUnfoldingSupportProof.formulaRelabelComposition] using
+      next gamma (q ∘ j) Theta hcomp S T K state rawD rawE rawArrow
+        rawFunction rawTarget rawArgument rawStep child F G A (argumentOut.relabel q) hr
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeProof.actualOriginalNeutralApplicationEdgeElimination

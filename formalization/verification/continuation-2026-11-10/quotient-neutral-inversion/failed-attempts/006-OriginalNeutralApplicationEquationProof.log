@@ -1,0 +1,39 @@
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralApplicationEquationProof.lean:37:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralApplicationEquationProof.lean:32:90: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Gamma : List (InternalCalculus.Formula alpha)
+data : Data
+window : Program 1
+arrow d e function argument out argumentOut parameter : OTerm alpha
+hp :
+  Nonempty
+    (Derivation body Gamma (InputPremises (selectedData data window) window arrow d e function argument parameter))
+hn :
+  Nonempty
+    (Derivation body Gamma
+      (InternalParameterizedCanonicalResultFold.foldGraph (selectedData data window) argumentOut argument parameter))
+hj :
+  Nonempty
+    (Derivation body Gamma
+      (InternalParameterizedCanonicalResultFold.applicationGraph (selectedData data window) out d e function argument
+        parameter))
+beta : Type
+j : alpha → beta
+Delta : List (InternalCalculus.Formula beta)
+rebuilt : OTerm beta
+hin : ∀ r ∈ Gamma, Formula.relabel j r ∈ Delta
+hr :
+  Nonempty
+    (Derivation body Delta
+      (programGraph application rebuilt fun i =>
+        Term.relabel j (Fin.cons d (Fin.cons e (Fin.cons function (Fin.cons argumentOut Fin.elim0))) i)))
+⊢ Nonempty
+    (Derivation body Delta
+      (graph4 application (Term.relabel j out) (Term.relabel j d) (Term.relabel j e) (Term.relabel j function)
+        (Term.relabel j argumentOut)))
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralApplicationEquationProof.lean:97:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEquationProof.equation: forbidden axiom dependency sorryAx
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEquationProof.actualOriginalTypedApplicationEquation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

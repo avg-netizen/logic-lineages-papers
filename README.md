@@ -1,14 +1,13 @@
 # Logic lineages papers
 
 **Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [canonical function neutrality checkpoint](formalization/verification/continuation-2026-11-09/function-neutrality/STATUS.md)
-adds six checked supporting contracts for the arithmetic accessibility proof
-on `formalization/cumulative-continuation-2026-11-09`. Function neutrality now
-reflects through the same canonical fold and supplies the original raw-step
-checker's neutral-source premise. Canonical application-component coherence
-remains pending.
-[TARGETS.json](formalization/TARGETS.json) is the authoritative register.
-The [next proof obligations](formalization/verification/continuation-2026-11-09/function-neutrality/NEXT-STEPS.md)
+The latest [original quotient-neutral application checkpoint](formalization/verification/continuation-2026-11-10/quotient-neutral-inversion/STATUS.md)
+adds seven checked supporting contracts on `formalization/cumulative-continuation-2026-11-09`.
+Neutral application edges now reduce to same-type bottom or an original
+function-child quotient edge, retaining the requested raw argument in the
+target application. Source/Object wrappers and finite-type arrow computability
+remain pending. [TARGETS.json](formalization/TARGETS.json) is the authoritative register.
+The [next proof obligations](formalization/verification/continuation-2026-11-10/quotient-neutral-inversion/NEXT-STEPS.md)
 and older [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md)
 record the current boundary and inherited work. Earlier counts are historical.
 
