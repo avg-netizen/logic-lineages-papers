@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundProjectionCodeProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundProjectionCodeProof
+
+theorem checkedLiteralInitializedProjection : WholeBoundProjectionCodeTargets.LiteralInitializedProjection :=
+  literalInitializedProjection
+#print axioms checkedLiteralInitializedProjection
+
+theorem checkedActualJointProgram : WholeBoundProjectionCodeTargets.ActualJointProgram := actualJointProgram
+#print axioms checkedActualJointProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundProjectionCodeProof
