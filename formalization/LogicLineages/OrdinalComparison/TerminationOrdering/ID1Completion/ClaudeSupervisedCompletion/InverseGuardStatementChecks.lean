@@ -1,0 +1,35 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ClaudeSupervisedCompletion.InverseGuardTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ClaudeSupervisedCompletion.InverseGuardCandidate
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ClaudeSupervisedCompletion.InverseGuardStatementChecks
+open InverseGuardTargets
+open SourceComputabilityCompletion
+
+theorem accepted_guard_elimination : ActualAcceptedGuardElimination := by
+  intro body endpoint alpha Gamma state S T K parameter psi he hg h
+  exact OriginalSelectedCheckerInverseGuardProof.acceptedGuardCases endpoint state S T K
+    parameter psi he hg h
+
+theorem selected_checker_elimination : ActualSelectedCheckerElimination := by
+  intro body endpoint oldChecker alpha Gamma out state S T K parameter psi he hc hz hp
+  exact OriginalSelectedCheckerInverseGuardProof.selectedCheckerCases endpoint oldChecker
+    out state S T K parameter psi he hc hz hp
+
+#print axioms accepted_guard_elimination
+#print axioms selected_checker_elimination
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ClaudeSupervisedCompletion.InverseGuardStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ClaudeSupervisedCompletion.InverseGuardStatementChecks
+
+-- The candidate performs its namespace-wide audit in its defining module.
+-- Enumerating an imported module's namespace does not load its declarations;
+-- inspect these actual imported theorem dependencies explicitly as well.
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.inverseAtValues
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.acceptedGuardCases
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.acceptedGuardChecker
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.rejectedTransition
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.rejectedNormalizer
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.rejectedLeafForward
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.rejectedLeafBackward
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedCheckerInverseGuardProof.selectedCheckerCases

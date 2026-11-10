@@ -1,4 +1,45 @@
-# Current checkpoint — original variable Objects, 9 November 2026
+# Current publication — checked Claude R001; formalization remains paused
+
+The user explicitly requested committing and pushing the checked Claude
+checkpoint. Publish it on the existing cumulative continuation branch.
+Read [the checked component](verification/claude-supervised-2026-11-09/STATUS.md).
+Two exact raw guard/checker inversion contracts and eight supporting proof
+theorems passed native/standard-axiom checks. The full context-uniform
+accessibility target remains pending; register171checked/2inherited/16pending.
+Publication does not resume authors, compilers or proof rounds. No R002.
+
+# Completed user instruction — finish ONLY current R001, then pause
+
+Read [the corrected stop](PAUSE-AFTER-CURRENT-ROUND-2026-11-10.md). The user
+clarified "sorry, I meant this round". Finish only current R001 verification,
+native repairs/type/axiom/feedback/handoff and PAUSE. NO R002, another author,
+successor target/comparator or automatic restart. Author admission is disabled
+now; current native closeout remains authorized and undisturbed. All existing
+scope/source/resource/publication bounds persist.
+
+# Previous user release — continue the supervised lane, 10 November 2026 UTC
+
+Read [the latest release](RESUME-2026-11-10-SUPERVISED.md). The user explicitly
+resumes only `/root/private_epistemic` and its SAME Claude Opus5.5 session.
+The old 00:24:36 UTC cutoff is superseded for this subject; no new deadline
+was supplied. First complete the preserved R001 compile/repair/exact-type/axiom
+checkpoint before any successor author. The other five private lanes remain
+stopped. All source, model, resource and Git bounds persist.
+
+# Previous user release — one supervised Claude Opus5.5 lane, 9 November 2026
+
+Read [the new release](RESUME-2026-11-09-CLAUDE-SUPERVISED.md). Latest accepted
+tip7574ecd5 is fetched, register171/2/16. Sole supervisor is
+`/root/private_epistemic`, diverted after its completed private Round030;
+the other five uniquely inherit all private originals. Exactly one fresh
+Claude Opus5.5 read-only author is explicitly authorized in the new guarded
+subject. This supersedes older no-Claude/expired-cutoff allocations only for
+that subject. Current00:24:36UTC10November cutoff and all unchanged exact-source,
+axiom, preservation and serialized resource requirements apply. Root owns
+register/Git/policy; no automatic publication. Earlier checkpoints below keep
+their mathematical scope and historical allocation.
+
+# Previous accepted checkpoint — original variable Objects, 9 November 2026
 
 The active continuation is `formalization/cumulative-continuation-2026-11-09`,
 from `cd648a18`. The user resumed work after the earlier cutoff. Historical
