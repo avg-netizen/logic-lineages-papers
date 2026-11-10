@@ -1,11 +1,15 @@
 # Logic lineages papers
 
-**Current formalization: 170 checked, 2 inherited, 17 pending out of 189.**
-The [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md) combines
-the local six-Codex checkpoint with the external continuation and remaining
-unique supporting branch. [TARGETS.json](formalization/TARGETS.json) is the
-authoritative register; older checkpoint counts describe historical trees.
-The proof lanes are stopped.
+**Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
+The latest [canonical constructor reflection checkpoint](formalization/verification/continuation-2026-11-09/canonical-constructor-shape/STATUS.md)
+adds seven checked supporting contracts for the arithmetic accessibility
+proof on `formalization/cumulative-continuation-2026-11-09`. Root constructor
+tags and application domains now reflect through the same canonical fold;
+canonical application-component coherence remains pending.
+[TARGETS.json](formalization/TARGETS.json) is the authoritative register.
+The [next proof obligations](formalization/verification/continuation-2026-11-09/canonical-constructor-shape/NEXT-STEPS.md)
+and older [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md)
+record the current boundary and inherited work. Earlier counts are historical.
 
 **Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
 

@@ -1,4 +1,23 @@
-# Current checkpoint — closed existential word arithmetic, 9 November 2026
+# Current checkpoint — canonical constructor reflection, 10 November 2026
+
+**171 checked, 2 inherited, 16 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Seven new exact supporting contracts preserve
+and reflect root constructor tags and application domains through the SAME
+selected bounded descent and full canonical fold. The original application
+eliminator recovers both certified child outputs and the final selected-leaf
+graph. One globally calibrated shape/neutral/variable tuple retains the full
+source Package and prior neutral and variable Object laws.
+
+The packet has 22 new modules, seven exact aliases and 92 additional
+standard-axiom declaration audits. All 1,842 local gate dependencies have
+source-matched native evidence; the separate preflight also passed. Accepted
+mathematical sources, frozen targets and resource limits are unchanged.
+Read the [accepted checkpoint](verification/continuation-2026-11-09/canonical-constructor-shape/STATUS.md)
+and [next proof obligations](verification/continuation-2026-11-09/canonical-constructor-shape/NEXT-STEPS.md).
+Function-child neutrality and canonical component coherence remain pending,
+as does the full paper06 `lem:id1`. No full-root or remote-CI pass is claimed.
+
+# Previous checkpoint — closed existential word arithmetic, 9 November 2026
 
 **171 checked, 2 inherited, 16 pending / 189**, derived from
 [TARGETS.json](TARGETS.json). Paper08 `thm:existential` is now checked by the

@@ -1,4 +1,40 @@
-# Current checkpoint — original raw neutral inversion, 10 November 2026
+# Current checkpoint — canonical constructor reflection, 10 November 2026
+
+The user continued the public formalization from
+`531a50683ed1ffb672d74159f776be6bfb3c4ae2` on the existing
+`formalization/cumulative-continuation-2026-11-09` branch. Historical private
+lane pauses and completed Claude R001 records remain preserved; that private
+session was not restarted. Exact targets, source preservation, standard
+axioms and unchanged serialized native resource limits remain active.
+
+Seven exact supporting contracts in 22 new Lean modules are checked. They
+prove an all-input-equal original shape refinement, internal mark preservation
+through the SAME selected bounded descent and full canonical fold, root-tag
+and application-domain reflection, common-canonical-output root comparison,
+generic original application elimination with both certified child outputs
+and the SAME final leaf graph, and one globally calibrated tuple retaining
+the complete Package and prior neutral and variable Object laws.
+
+The gate has 1,842 source-matched native dependencies; its seven aliases and
+92 additional proof declarations use only standard axioms. The separate
+preflight passed. All 10,255 inherited mathematical Lean sources and all
+three frozen specifications are unchanged. Register: **171 checked,
+2 inherited, 16 pending / 189**. Paper06 `lem:id1` remains pending.
+
+Next: function-child lambda-flag reflection and canonical application-component
+coherence through the SAME full canonical fold, then original quotient neutral
+inversion and arrow computability. Root lambda shape is paid. Do not repeat
+the raw neutral leaf/checker or root-shape arguments. The final selected-leaf
+graph does not identify its output with the rebuilt application. Lambda/
+substitution, multiset, constructor and all-term accessibility remain pending.
+Read the [checked checkpoint](verification/continuation-2026-11-09/canonical-constructor-shape/STATUS.md)
+and [concrete next steps](verification/continuation-2026-11-09/canonical-constructor-shape/NEXT-STEPS.md).
+All owned compiler jobs have completed; no full-root or remote-CI pass is claimed.
+Publication stays on the existing cumulative branch with no force update.
+
+---
+
+# Previous checkpoint — original raw neutral inversion, 10 November 2026
 
 The user resumed the public formalization after additional work. This
 continuation extends `2f690cdf8ffc2788b3711e3a788a412df3761cfb` on the existing
