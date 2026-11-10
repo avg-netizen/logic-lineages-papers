@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearCodeProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearCodeStatementChecks
+
+theorem literalTokenCalibration : TiedLinearCodeTargets.LiteralTokenCalibration :=
+  TiedLinearCodeProof.literalTokenCalibration
+#print axioms literalTokenCalibration
+
+theorem literalLiftCalibration : TiedLinearCodeTargets.LiteralLiftCalibration :=
+  TiedLinearCodeProof.literalLiftCalibration
+#print axioms literalLiftCalibration
+
+theorem literalLowerCalibration : TiedLinearCodeTargets.LiteralLowerCalibration :=
+  TiedLinearCodeProof.literalLowerCalibration
+#print axioms literalLowerCalibration
+
+theorem literalEliminationCalibration : TiedLinearCodeTargets.LiteralEliminationCalibration :=
+  TiedLinearCodeProof.literalEliminationCalibration
+#print axioms literalEliminationCalibration
+
+theorem actualAdapterPrograms : TiedLinearCodeTargets.ActualAdapterPrograms :=
+  TiedLinearCodeProof.actualAdapterPrograms
+#print axioms actualAdapterPrograms
+
+theorem actualEliminationProgram : TiedLinearCodeTargets.ActualEliminationProgram :=
+  TiedLinearCodeProof.actualEliminationProgram
+#print axioms actualEliminationProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TiedLinearCodeStatementChecks
