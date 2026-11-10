@@ -1,3 +1,15 @@
+# Current public continuation release — 10 November 2026
+
+Read [the current release](RESUME-2026-11-10-CUMULATIVE.md). Continue the existing
+Nov9 cumulative branch from `a89b703ffafd70b015aaed43daa3475c7d94b9b2`
+through **10 November 2026, 21:00 UTC**. Historical pauses are superseded only
+for this public continuation; private and separately paused supervised work
+remain stopped. Preserve all source, exact-target, axiom and serialized
+resource safeguards. Install the local cutoff policy before native checks.
+The latest accepted mathematical checkpoint follows unchanged.
+
+---
+
 # Current checkpoint — canonical function neutrality
 
 Six exact supporting contracts in 24 new Lean modules extend `d5803735`
