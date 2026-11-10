@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphCodeProgramsProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphCodeCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphCodeProof
+open ExpandedGraphCode
+theorem checkedLiteralNodeCount : ExpandedGraphCodeTargets.LiteralNodeCount := literalNodeCount
+#print axioms checkedLiteralNodeCount
+
+theorem checkedLiteralAllocation : ExpandedGraphCodeTargets.LiteralAllocation := literalAllocation
+#print axioms checkedLiteralAllocation
+
+theorem checkedLiteralLocalClauses : ExpandedGraphCodeTargets.LiteralLocalClauses := literalLocalClauses
+#print axioms checkedLiteralLocalClauses
+
+theorem checkedLiteralGraphCalibration : ExpandedGraphCodeTargets.LiteralGraphCalibration := literalGraphCalibration
+#print axioms checkedLiteralGraphCalibration
+
+theorem checkedActualAllocationPrograms : ExpandedGraphCodeTargets.ActualAllocationPrograms := actualAllocationPrograms
+#print axioms checkedActualAllocationPrograms
+
+theorem checkedActualGraphPrograms : ExpandedGraphCodeTargets.ActualGraphPrograms := actualGraphPrograms
+#print axioms checkedActualGraphPrograms
+
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphCodeProof
