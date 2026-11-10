@@ -1,4 +1,39 @@
-# Current publication — checked Claude R001; formalization remains paused
+# Current checkpoint — original raw neutral inversion, 10 November 2026
+
+The user resumed the public formalization after additional work. This
+continuation extends `2f690cdf8ffc2788b3711e3a788a412df3761cfb` on the existing
+`formalization/cumulative-continuation-2026-11-09` branch. Historical private
+lane pauses and completed Claude R001 records remain preserved; that private
+session was not restarted. Exact targets, source preservation, standard
+axioms and the unchanged serialized native resource limits remain active.
+
+Ten exact supporting contracts in 22 new Lean modules are checked. They
+prove supplied typed/numeric neutral certificate inversion, internal
+application-child validity, full selected-child step acceptance, an
+all-input-equal neutral old-leaf refinement with an internal zero-guard
+bottom law, and one final globally calibrated tuple retaining the full
+Package and existing variable Object laws. The final raw neutral-step rule
+has literal same-type bottom or an accepted original function-child step.
+The original certificate, raw argument, endpoint and parameter remain.
+
+The gate has 1,827 source-matched native dependencies; its ten aliases and
+41 additional proof declarations use only standard axioms. The two preflight
+modules also passed. All inherited mathematical Lean sources and frozen
+specifications are unchanged. Register: **171 checked, 2 inherited,
+16 pending / 189**. Paper06 `lem:id1` is still pending.
+
+Next: internal application-component and lambda-shape reflection through
+the SAME full canonical fold, then original quotient neutral inversion and
+arrow computability. Do not repeat the now-paid raw neutral leaf/checker
+arguments. Lambda/substitution, multiset, constructor and all-term
+accessibility remain pending. Read the [checked checkpoint](verification/continuation-2026-11-10/original-neutral-inversion/STATUS.md)
+and [concrete next steps](verification/continuation-2026-11-10/original-neutral-inversion/NEXT-STEPS.md).
+All owned compiler jobs are complete; no full-root or remote-CI pass is claimed.
+Publication stays on the existing cumulative branch with no force update.
+
+---
+
+# Previous publication — checked Claude R001; its supervised lane remains paused
 
 The user explicitly requested committing and pushing the checked Claude
 checkpoint. Publish it on the existing cumulative continuation branch.

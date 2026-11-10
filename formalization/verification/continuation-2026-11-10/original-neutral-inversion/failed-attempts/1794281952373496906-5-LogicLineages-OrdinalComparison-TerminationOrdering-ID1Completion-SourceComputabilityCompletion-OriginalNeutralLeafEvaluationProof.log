@@ -1,0 +1,236 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:45:69: error: unsolved goals
+v : List.Vector ℕ 4
+⊢ evaluate neutralTest (v.get 0 ::ᵥ nil) = evaluate neutralTest (ofFn ![v.get 0])
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:87:2: error: Dependent elimination failed: Failed to solve equation
+  sigma.arrow tau =
+    match f✝ with
+    | SourceMarkedSyntax.Head.zero => Ty.ground
+    | SourceMarkedSyntax.Head.succ => Ty.ground.arrow Ty.ground
+    | SourceMarkedSyntax.Head.cases τ => τ.caseType
+    | SourceMarkedSyntax.Head.recursor τ => τ.recType
+    | SourceMarkedSyntax.Head.application σ τ => τ
+    | SourceMarkedSyntax.Head.ranked s => Ty.ground
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:116:8: error: unsolved goals
+case var
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+table : Fin n → Fin n → Bool
+endpoint : Program 6
+parameter source target certificate : ℕ
+he : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+tau : Ty
+r : AuxTerm (Fin n) arity Gamma tau
+right✝ : packedNumber ⟨tau, r⟩ = target
+a✝ : Variable Gamma tau
+hg :
+  evaluate (guardP endpoint)
+      (ofFn ![Nat.pair (packedNumber ⟨tau, AuxTerm.var a✝⟩) (Nat.pair target certificate), parameter]) =
+    0
+hs : numericStepTest n arity symbols S Gamma table (packedNumber ⟨tau, AuxTerm.var a✝⟩) target certificate = true
+hq : InUniverse symbols S (AuxTerm.var a✝)
+left✝ :
+  NumberedWindowReduction.WindowStep (Fin n) arity symbols S (NumberedCopyCertificate.tableAbove table) Gamma tau
+    (AuxTerm.var a✝) r
+hsource : packedNumber ⟨tau, AuxTerm.var a✝⟩ = source
+hn : evaluate neutralTest (Nat.pair (typeNumber tau) (Nat.pair 0 (SourceTypedPorts.variableIndex a✝)) ::ᵥ nil) = 1
+⊢ target =
+    Nat.pair (Nat.unpair (packedNumber ⟨tau, AuxTerm.var a✝⟩)).1
+      (Nat.pair 3 (Nat.unpair (packedNumber ⟨tau, AuxTerm.var a✝⟩)).1)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:117:8: error: unsolved goals
+case lam
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+table : Fin n → Fin n → Bool
+endpoint : Program 6
+parameter source target certificate : ℕ
+he : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+sigma✝ tau✝ : Ty
+a✝ : AuxTerm (Fin n) arity (sigma✝ :: Gamma) tau✝
+r : AuxTerm (Fin n) arity Gamma (sigma✝.arrow tau✝)
+right✝ : packedNumber ⟨sigma✝.arrow tau✝, r⟩ = target
+hg :
+  evaluate (guardP endpoint)
+      (ofFn ![Nat.pair (packedNumber ⟨sigma✝.arrow tau✝, a✝.lam⟩) (Nat.pair target certificate), parameter]) =
+    0
+hs : numericStepTest n arity symbols S Gamma table (packedNumber ⟨sigma✝.arrow tau✝, a✝.lam⟩) target certificate = true
+hq : InUniverse symbols S a✝.lam
+left✝ :
+  NumberedWindowReduction.WindowStep (Fin n) arity symbols S (NumberedCopyCertificate.tableAbove table) Gamma
+    (sigma✝.arrow tau✝) a✝.lam r
+hsource : packedNumber ⟨sigma✝.arrow tau✝, a✝.lam⟩ = source
+hn :
+  evaluate neutralTest
+      (Nat.pair (typeNumber (sigma✝.arrow tau✝))
+          (Nat.pair 1 (Nat.pair (typeNumber sigma✝) (codeNumber (termCode a✝)))) ::ᵥ
+        nil) =
+    1
+⊢ target =
+    Nat.pair (Nat.unpair (packedNumber ⟨sigma✝.arrow tau✝, a✝.lam⟩)).1
+      (Nat.pair 3 (Nat.unpair (packedNumber ⟨sigma✝.arrow tau✝, a✝.lam⟩)).1)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:118:11: error: unsolved goals
+case bottom
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+table : Fin n → Fin n → Bool
+endpoint : Program 6
+parameter source target certificate : ℕ
+he : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+tau : Ty
+r : AuxTerm (Fin n) arity Gamma tau
+right✝ : packedNumber ⟨tau, r⟩ = target
+hg :
+  evaluate (guardP endpoint)
+      (ofFn ![Nat.pair (packedNumber ⟨tau, AuxTerm.bottom tau⟩) (Nat.pair target certificate), parameter]) =
+    0
+hs : numericStepTest n arity symbols S Gamma table (packedNumber ⟨tau, AuxTerm.bottom tau⟩) target certificate = true
+hq : InUniverse symbols S (AuxTerm.bottom tau)
+left✝ :
+  NumberedWindowReduction.WindowStep (Fin n) arity symbols S (NumberedCopyCertificate.tableAbove table) Gamma tau
+    (AuxTerm.bottom tau) r
+hsource : packedNumber ⟨tau, AuxTerm.bottom tau⟩ = source
+hn : evaluate neutralTest (Nat.pair (typeNumber tau) (Nat.pair 3 (typeNumber tau)) ::ᵥ nil) = 1
+⊢ target =
+    Nat.pair (Nat.unpair (packedNumber ⟨tau, AuxTerm.bottom tau⟩)).1
+      (Nat.pair 3 (Nat.unpair (packedNumber ⟨tau, AuxTerm.bottom tau⟩)).1)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:119:13: error: unsolved goals
+case ordinary
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+table : Fin n → Fin n → Bool
+endpoint : Program 6
+parameter source target certificate : ℕ
+he : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+f✝ : SourceMarkedSyntax.Head (Fin n)
+a✝ : AuxArguments (Fin n) arity Gamma (SourceMarkedSyntax.headArguments arity f✝)
+r : AuxTerm (Fin n) arity Gamma (SourceMarkedSyntax.headResult f✝)
+right✝ : packedNumber ⟨SourceMarkedSyntax.headResult f✝, r⟩ = target
+hg :
+  evaluate (guardP endpoint)
+      (ofFn
+        ![Nat.pair (packedNumber ⟨SourceMarkedSyntax.headResult f✝, AuxTerm.ordinary f✝ a✝⟩)
+            (Nat.pair target certificate),
+          parameter]) =
+    0
+hs :
+  numericStepTest n arity symbols S Gamma table
+      (packedNumber ⟨SourceMarkedSyntax.headResult f✝, AuxTerm.ordinary f✝ a✝⟩) target certificate =
+    true
+hq : InUniverse symbols S (AuxTerm.ordinary f✝ a✝)
+left✝ :
+  NumberedWindowReduction.WindowStep (Fin n) arity symbols S (NumberedCopyCertificate.tableAbove table) Gamma
+    (SourceMarkedSyntax.headResult f✝) (AuxTerm.ordinary f✝ a✝) r
+hsource : packedNumber ⟨SourceMarkedSyntax.headResult f✝, AuxTerm.ordinary f✝ a✝⟩ = source
+hn :
+  evaluate neutralTest
+      (Nat.pair (typeNumber (SourceMarkedSyntax.headResult f✝))
+          (Nat.pair 4 (Nat.pair (headNumber (headCode f✝)) (codeNumber (argumentsCode a✝)))) ::ᵥ
+        nil) =
+    1
+⊢ target =
+    Nat.pair (Nat.unpair (packedNumber ⟨SourceMarkedSyntax.headResult f✝, AuxTerm.ordinary f✝ a✝⟩)).1
+      (Nat.pair 3 (Nat.unpair (packedNumber ⟨SourceMarkedSyntax.headResult f✝, AuxTerm.ordinary f✝ a✝⟩)).1)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:120:13: error: unsolved goals
+case numbered
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+table : Fin n → Fin n → Bool
+endpoint : Program 6
+parameter source target certificate : ℕ
+he : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+tau : Ty
+r : AuxTerm (Fin n) arity Gamma tau
+right✝ : packedNumber ⟨tau, r⟩ = target
+k✝ : ℕ
+f✝ : SourceMarkedSyntax.Head (Fin n)
+extraTypes✝ : List Ty
+a✝¹ : AuxArguments (Fin n) arity Gamma (SourceMarkedSyntax.headArguments arity f✝)
+a✝ : AuxArguments (Fin n) arity Gamma extraTypes✝
+hg :
+  evaluate (guardP endpoint)
+      (ofFn
+        ![Nat.pair (packedNumber ⟨tau, AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝⟩) (Nat.pair target certificate),
+          parameter]) =
+    0
+hs :
+  numericStepTest n arity symbols S Gamma table (packedNumber ⟨tau, AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝⟩)
+      target certificate =
+    true
+hq : InUniverse symbols S (AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝)
+left✝ :
+  NumberedWindowReduction.WindowStep (Fin n) arity symbols S (NumberedCopyCertificate.tableAbove table) Gamma tau
+    (AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝) r
+hsource : packedNumber ⟨tau, AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝⟩ = source
+hn :
+  evaluate neutralTest
+      (Nat.pair (typeNumber tau)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode f✝))
+                (Nat.pair (typeNumber tau)
+                  (Nat.pair (codeNumber (argumentsCode a✝¹))
+                    (Nat.pair (typesNumber extraTypes✝) (codeNumber (argumentsCode a✝)))))))) ::ᵥ
+        nil) =
+    1
+⊢ target =
+    Nat.pair (Nat.unpair (packedNumber ⟨tau, AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝⟩)).1
+      (Nat.pair 3 (Nat.unpair (packedNumber ⟨tau, AuxTerm.numbered k✝ f✝ tau a✝¹ extraTypes✝ a✝⟩)).1)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:116:17: warning: This simp argument is unused:
+  neutralTestEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵u̵t̵r̵a̵l̵T̵e̵s̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵c̵k̵e̵d̵N̵u̵m̵b̵e̵r̵,̵t̵e̵r̵m̵C̵o̵d̵e̵,̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵]̵[̲p̲a̲c̲k̲e̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲e̲r̲m̲C̲o̲d̲e̲,̲ ̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲]̲ at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:117:17: warning: This simp argument is unused:
+  neutralTestEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵u̵t̵r̵a̵l̵T̵e̵s̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵c̵k̵e̵d̵N̵u̵m̵b̵e̵r̵,̵t̵e̵r̵m̵C̵o̵d̵e̵,̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵]̵[̲p̲a̲c̲k̲e̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲e̲r̲m̲C̲o̲d̲e̲,̲ ̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲]̲ at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:118:20: warning: This simp argument is unused:
+  neutralTestEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵u̵t̵r̵a̵l̵T̵e̵s̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵c̵k̵e̵d̵N̵u̵m̵b̵e̵r̵,̵t̵e̵r̵m̵C̵o̵d̵e̵,̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵]̵[̲p̲a̲c̲k̲e̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲e̲r̲m̲C̲o̲d̲e̲,̲ ̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲]̲ at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:119:22: warning: This simp argument is unused:
+  neutralTestEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵u̵t̵r̵a̵l̵T̵e̵s̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵c̵k̵e̵d̵N̵u̵m̵b̵e̵r̵,̵t̵e̵r̵m̵C̵o̵d̵e̵,̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵]̵[̲p̲a̲c̲k̲e̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲e̲r̲m̲C̲o̲d̲e̲,̲ ̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲]̲ at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:120:22: warning: This simp argument is unused:
+  neutralTestEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵u̵t̵r̵a̵l̵T̵e̵s̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵c̵k̵e̵d̵N̵u̵m̵b̵e̵r̵,̵t̵e̵r̵m̵C̵o̵d̵e̵,̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵]̵[̲p̲a̲c̲k̲e̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲e̲r̲m̲C̲o̲d̲e̲,̲ ̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲]̲ at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:146:4: error: Type mismatch: After simplification, term
+  hactive.left
+ has type
+  evaluate p.window (ofFn ![(Nat.unpair (v.get 3)).1]) = 1
+but is expected to have type
+  GuardCalibration.validWindow n (Nat.unpair (v.get 3)).1 = 1
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafEvaluationProof.neutralTestEvaluation: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafEvaluationProof.leafGuardAccept: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafEvaluationProof.guardAtEvaluation: [propext,
+ Quot.sound]
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafEvaluationProof.lean:197:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafEvaluationProof.actualOriginalNeutralLeafRefinementEquality: forbidden axiom dependency sorryAx

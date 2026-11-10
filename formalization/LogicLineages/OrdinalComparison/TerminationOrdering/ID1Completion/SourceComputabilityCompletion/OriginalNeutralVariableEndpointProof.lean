@@ -1,0 +1,53 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafInternalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralVariableEndpointIdentityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralVariableProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalApplicationStepPeelSupportProof
+open InternalTagArithmeticSyntaxProof (suc z)
+open UniformCertificateCompletion
+
+/-- The once-refined constructor leaf retains the neutral leaf as an actual
+acceptance factor. Its neutral law therefore holds at the final tuple's own
+endpoint, original edge code, parameter and same-type bottom constructor. -/
+theorem finalNeutralLaw (p : GlobalSourcePackage.Inputs) :
+    OriginalNeutralLeaf.NeutralBottom
+      (OriginalNeutralLeaf.endpoint
+        (OriginalVariableRepresentative.refineInputs (OriginalNeutralLeaf.refineInputs p)))
+      p.window
+      (OriginalVariableRepresentative.refineInputs (OriginalNeutralLeaf.refineInputs p)).oldStep := by
+  rw [finalEndpoint]
+  intro body alpha Delta source target certificate parameter state typeCode
+  let q := OriginalNeutralLeaf.refineInputs p
+  let P := OriginalConstructorLeaf.accepted (OriginalConstructorLeaf.refined q.oldStep)
+    source target certificate parameter ⊓
+    (graph3 edgeCode state source target certificate ⊓
+      (graph2 (BottomRepresentative.windowAt p.window) (suc z) source parameter ⊓
+        (graph1 OriginalNeutralLeaf.neutralTest (suc z) source ⊓
+          (graph2 (InternalParameterizedApplicationStepChecker.guardP (OriginalNeutralLeaf.endpoint p))
+              z state parameter ⊓ graph1 InternalUnpair.left typeCode source))))
+  have hp : Nonempty (Derivation body (P :: Delta) P) :=
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨hfactor⟩ := OriginalConstructorLeafInternalProof.originalFactor q.oldStep
+    body alpha (P :: Delta) source target certificate parameter
+  obtain ⟨haccepted⟩ := andLeft hp
+  have hleaf : Nonempty (Derivation body (P :: Delta)
+      (OriginalConstructorLeaf.accepted q.oldStep source target certificate parameter)) :=
+    ⟨Derivation.implicationElimination hfactor haccepted⟩
+  have h1 := andRight hp
+  have h2 := andRight h1
+  have h3 := andRight h2
+  have h4 := andRight h3
+  obtain ⟨h⟩ := OriginalNeutralLeafInternalProof.neutralBottom
+    (OriginalNeutralLeaf.endpoint p) p.window p.oldStep
+    source target certificate parameter state typeCode hleaf
+    (andLeft h1) (andLeft h2) (andLeft h3) (andLeft h4) (andRight h4)
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralVariableProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralVariableProof

@@ -1,0 +1,63 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafGuardEvaluationProof.lean:33:45: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+endpoint : Program 6
+parameter : ℕ
+calibrated : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+sigma tau : Ty
+f g : AuxTerm (Fin n) arity Gamma (sigma.arrow tau)
+a : AuxTerm (Fin n) arity Gamma sigma
+child : ℕ
+hsource : InUniverse symbols S (f.app a)
+state : ℕ := Nat.pair (packedNumber ⟨tau, f.app a⟩) (Nat.pair (packedNumber ⟨tau, g.app a⟩) (liftStep child))
+⊢ Nat.pair 1 0 = 2
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafGuardEvaluationProof.lean:52:87: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+endpoint : Program 6
+parameter : ℕ
+calibrated : EndpointCalibratedAt n arity symbols S Gamma endpoint parameter
+sigma tau : Ty
+f g : AuxTerm (Fin n) arity Gamma (sigma.arrow tau)
+a : AuxTerm (Fin n) arity Gamma sigma
+child : ℕ
+hsource : InUniverse symbols S (f.app a)
+state : ℕ := Nat.pair (packedNumber ⟨tau, f.app a⟩) (Nat.pair (packedNumber ⟨tau, g.app a⟩) (liftStep child))
+hshape : shape (view state) = true
+hinputs :
+  endpointInputs (view state) =
+    List.Vector.ofFn
+      ![typeNumber sigma, typeNumber tau, packedNumber ⟨sigma.arrow tau, f⟩, packedNumber ⟨sigma.arrow tau, g⟩,
+        packedNumber ⟨sigma, a⟩]
+hf : InUniverse symbols S f
+ha : InUniverse symbols S a
+hdf : decodeUniverse n arity symbols S Gamma (packedNumber ⟨sigma.arrow tau, f⟩) = some ⟨sigma.arrow tau, f⟩
+hdg : decodePackedNumber n arity Gamma (packedNumber ⟨sigma.arrow tau, g⟩) = some ⟨sigma.arrow tau, g⟩
+hda : decodeUniverse n arity symbols S Gamma (packedNumber ⟨sigma, a⟩) = some ⟨sigma, a⟩
+hm : tau ∈ S
+⊢ (match decodeType (typeNumber sigma), decodeType (typeNumber tau), some ⟨sigma.arrow tau, f⟩,
+      some ⟨sigma.arrow tau, g⟩, some ⟨sigma, a⟩ with
+    | some sigma, some tau, some q, some r, some a =>
+      (decide (q.fst = sigma.arrow tau) &&
+          (decide (r.fst = sigma.arrow tau) && (decide (a.fst = sigma) && decide (tau ∈ S)))).toNat
+    | x, x_1, x_2, x_3, x_4 => 0) =
+    1
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafGuardEvaluationProof.lean:54:24: warning: This simp argument is unused:
+  NumberedNumericDecodingProof.typeNumericRoundTrip
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵n̵d̵p̵o̵i̵n̵t̵V̵a̵l̵u̵e̵,̵N̵u̵m̵b̵e̵r̵e̵d̵N̵u̵m̵e̵r̵i̵c̵D̵e̵c̵o̵d̵i̵n̵g̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵N̵u̵m̵e̵r̵i̵c̵R̵o̵u̵n̵d̵T̵r̵i̵p̵,̵h̵d̵f̵,̵h̵d̵g̵,̵h̵d̵a̵,̵h̵m̵]̵[̲e̲n̲d̲p̲o̲i̲n̲t̲V̲a̲l̲u̲e̲,̲ ̲h̲d̲f̲,̲ ̲h̲d̲g̲,̲ ̲h̲d̲a̲,̲ ̲h̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafGuardEvaluationProof.lean:54:86: warning: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  simp [endpointValue, ̲NumberedNumericDecodingProof.typeNumericRoundTrip, ̲hdf, ̲hdg, ̲hda,̵h̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafGuardEvaluationProof.lean:58:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafGuardEvaluationProof.liftedGuardAccept: forbidden axiom dependency sorryAx
