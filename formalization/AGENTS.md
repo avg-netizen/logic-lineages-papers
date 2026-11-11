@@ -28,8 +28,9 @@ computability are now checked. All ten native original raw shift/erasure/rank
 contracts and all fourteen independent internal contracts are checked,
 including recursive constructors, all-raw cancellation and parameter laws.
 All four original raw Object wrapper contracts are checked, including
-independent internal all-raw cancellation. SAME-final canonical Object
-coherence and original internal I/C remain active.
+independent internal all-raw cancellation. SAME-final native canonical Object
+cancellation, rank invariance and complete global retention are checked.
+Independent internal canonical compatibility and original I/C remain active.
 Actual native ordinary and arbitrary finite-label numbered constructor
 computability are now checked by the joint head/base/label/extra induction.
 Full native substitution, genuine all-term C, least-set membership and
