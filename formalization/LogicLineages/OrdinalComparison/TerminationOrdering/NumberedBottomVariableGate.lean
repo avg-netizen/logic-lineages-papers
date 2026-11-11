@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableBasicGate
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableMultisetProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableGate
+
+theorem multiset : NumberedBottomVariableTargets.ActualPrimitiveMultisetInverse :=
+  NumberedBottomVariableMultisetProof.actualPrimitiveMultisetInverse
+
+#print axioms multiset
+#print axioms NumberedBottomVariableListProof.mapPermutationInverse
+#print axioms NumberedBottomVariableListProof.mapAppendSplit
+#print axioms NumberedBottomVariableListProof.argumentListInverse
+#print axioms NumberedBottomVariableMultisetProof.insertedListInverse
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableGate
