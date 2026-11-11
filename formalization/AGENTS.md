@@ -1,3 +1,22 @@
+# Current checkpoint — original neutral and all-type variable computability
+
+Seven exact supporting contracts in 35 new Lean modules are checked. Original
+finite-type neutral expansion and genuine variable C (including arrow types)
+now hold at the SAME final calibrated tuple, with the entire previous Package
+and child/suffix consumers retained. No tau-in-window premise or substituted
+source relation is added. The gate/preflight union has 2,106 source-matched
+native modules; exact/helper axioms are standard only. All inherited sources
+and fixed resource limits are preserved. Register remains **171 checked,
+2 inherited, 16 pending / 189**; paper06 `lem:id1` remains pending. Read
+[accepted status](verification/continuation-2026-11-11/neutral-computability/STATUS.md).
+
+Next: original lambda/substitution, constructors/multiset and closed all-term
+accessibility. Keep raw packed numbering distinct from Encodable Gamma codes.
+Continue until **11 November 2026, 17:30 UTC**; no private/supervised resumption.
+No full-root or remote-CI pass is claimed.
+
+---
+
 # Current continuation — application bridges checked; neutral induction active
 
 Two additional exact application bridges at the SAME final tuple are checked:
