@@ -1,3 +1,16 @@
+# Current continuation — application bridges checked; neutral induction active
+
+Two additional exact application bridges at the SAME final tuple are checked:
+accepted output non-lambda and computability of the exact accepted output.
+The focused gate has 1,936 source-matched native modules and standard-only
+axioms. Five new neutral/variable/global contracts are frozen and preflighted;
+their proofs remain pending. Read
+[status](verification/continuation-2026-11-11/neutral-computability/STATUS.md).
+Continue until **11 November 2026, 17:30 UTC** under all inherited safeguards.
+No numbered-register, full-root, or remote-CI completion claim is added.
+
+---
+
 # Current checkpoint — original child certificate and same-code suffix
 
 Eight exact supporting contracts in 37 new Lean modules are checked, with
