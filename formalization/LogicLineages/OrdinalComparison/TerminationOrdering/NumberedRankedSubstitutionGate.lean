@@ -1,0 +1,39 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRankedSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRankedSubstitutionGate
+
+theorem primary : NumberedVariableCountTargets.ActualPrimaryVariableCount :=
+  NumberedVariableCountProof.actualPrimaryVariableCount
+
+theorem argumentPrimary : NumberedVariableCountTargets.ActualArgumentPrimaryVariableCount :=
+  NumberedVariableCountProof.actualArgumentPrimaryVariableCount
+
+theorem representative : NumberedVariableCountTargets.ActualRepresentativeVariableCount :=
+  NumberedVariableCountProof.actualRepresentativeVariableCount
+
+theorem step : NumberedRankedSubstitutionTargets.ActualRankedStepSubstitution :=
+  NumberedRankedStepSubstitutionProof.actualRankedStepSubstitution
+
+theorem argumentStep : NumberedRankedSubstitutionTargets.ActualRankedArgumentStepSubstitution :=
+  NumberedRankedStepSubstitutionProof.actualRankedArgumentStepSubstitution
+
+theorem trace : NumberedRankedSubstitutionTargets.ActualRankedPackedTraceSubstitution :=
+  NumberedRankedSubstitutionProof.actualRankedPackedTraceSubstitution
+
+theorem positiveQuotient : NumberedRankedSubstitutionTargets.ActualRankedPositiveQuotientSubstitution :=
+  NumberedRankedSubstitutionProof.actualRankedPositiveQuotientSubstitution
+
+#print axioms primary
+#print axioms argumentPrimary
+#print axioms representative
+#print axioms step
+#print axioms argumentStep
+#print axioms trace
+#print axioms positiveQuotient
+#print axioms NumberedVariableCountProof.argumentListCount
+#print axioms NumberedVariableCountProof.permutationCount
+#print axioms NumberedRankedStepSubstitutionProof.countPositiveOfSubstituteBottom
+#print axioms NumberedRankedStepSubstitutionProof.substituteStep
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRankedSubstitutionGate
