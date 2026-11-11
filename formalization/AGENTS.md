@@ -1,4 +1,4 @@
-# Current checkpoint — SAME-final validity transport complete
+# Current checkpoint — canonicalized typed transport complete
 
 Both original typed/source decoder families have checked independent internal
 fuel, paid work/constructor acceptance, and arbitrary-cutoff weakening/erasure.
@@ -15,13 +15,21 @@ See the transparent-decoder-validator-complete and final-transport-complete pack
 under verification/continuation-2026-11-11. Validator collapse is remotely verified
 at cf4cf2da1b2a5d9dcbdbee2560dcd1fdb7c243d3; transport checkpoint follows.
 
-Next: typedness after the ACTUAL final fold of the shifted/erased input. Recover
-membership and source validity, retain the outer type, then use the existing fold
-typed-output consumer to conclude transition fixedness. Packed selectedTyped needs
-no outer window premise; actual Outer.typed on its active branch does. General
-OTHER-tag representative rank/cancellation needs its own independently proved
-leaf law or a calibrated stronger initial representative selection. Do not infer
-these from native representative calibration or validity transport.
+Typedness after the ACTUAL final fold of a shifted/erased input is now checked:
+two packed selectedTyped contracts and two actual Outer Object typed contracts.
+Membership, source validity and outer type are recovered; transition fixedness is
+concluded from the unchanged fold. Object weakening recovers coordinates internally;
+Object erasure retains a genuine cons witness. The Outer contracts retain the original
+active-window premise. No raw shifted fixedness is assumed.
+
+Next: calibrated initial same-rank representative guard, active only when BOTH the
+original window and transparent source accept. Outside that condition it must keep
+the whole old representative. Native all-vector redundancy, independent internal rank,
+and complete prior Package retention at one unchanged final pipeline are separate
+frozen obligations. Raw rank constructor/shift/erasure arithmetic is also pending.
+General OTHER-tag cancellation still needs independent representative coherence;
+rank guarding alone does not establish it. Do not reflect native calibration into
+internal canonical rank or cancellation claims.
 
 Internal I/C and paper06 lem:id1 remain pending. Register unchanged: **171 checked,
 2 inherited, 16 pending /189**. No full-root or remote-CI claim. All accepted and
