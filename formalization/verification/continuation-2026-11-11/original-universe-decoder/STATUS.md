@@ -1,0 +1,3 @@
+# Original guarded source decoder specifications
+
+Seven contracts frozen after preflight1794403528116100832-5: local original head-window selection, guard calibration, arbitrary-metadata machine/fuel, original universe traversal and same-fuel typed inclusion, ALL-vector original source equality with reconstruction, independent guard/full step, and internal Gamma locality. Proofs pending. Reuses literal typed worklist with unchanged raw+1 fuel and exact root guards; original Context/table and Gamma codecs retained. No Gamma-in-window or erased-type-in-window premise. Original namespace/import-only attempts preserved.
