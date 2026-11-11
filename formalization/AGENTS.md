@@ -1,3 +1,15 @@
+# Current public release — original child certificate and same-code suffix
+
+The user requested continuation after the latest additional work until
+**11 November 2026, 17:30 UTC (11:30 a.m. UTC-06)**. Read
+[the active release](RESUME-2026-11-11-CHILD-CERTIFICATE.md).
+Start at cumulative head `6ff98ec9` on the existing Nov9 branch. Preserve
+all inherited mathematical/frozen sources and bounded serialized native rules.
+Private and separately paused supervised lanes remain stopped. New contracts
+and candidates are pending until their exact native/axiom gates pass.
+
+---
+
 # Current checkpoint — original Object applications and spine guards
 
 11 exact supporting contracts in 58 new Lean modules extend `594d0a1a`
