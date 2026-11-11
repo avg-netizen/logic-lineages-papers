@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceAllTypeFreshEnvironmentProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceAllTypeFreshEnvironmentGate
+
+theorem freshEnvironment : SourceAllTypeFreshEnvironmentTargets.ActualFreshEnvironmentFromComputable :=
+  SourceAllTypeFreshEnvironmentProof.actualFreshEnvironmentFromComputable
+
+#print axioms freshEnvironment
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceAllTypeFreshEnvironmentGate

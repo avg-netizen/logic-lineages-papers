@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSingleBottomLeastProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceSingleBottomLeastGate
+
+theorem singleBottom : SourceSingleBottomLeastTargets.ActualScalarLeastSingleBottom :=
+  SourceSingleBottomLeastProof.actualScalarLeastSingleBottom
+
+#print axioms singleBottom
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceSingleBottomLeastGate

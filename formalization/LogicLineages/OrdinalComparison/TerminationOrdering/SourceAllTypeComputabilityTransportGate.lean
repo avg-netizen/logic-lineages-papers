@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceAllTypeComputabilityTransportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceAllTypeComputabilityTransportGate
+
+theorem singleBottom : SourceAllTypeComputabilityTransportTargets.ActualComputabilitySingleBottom :=
+  SourceAllTypeComputabilityTransportProof.actualComputabilitySingleBottom
+
+theorem weakening : SourceAllTypeComputabilityTransportTargets.ActualComputabilityWeakening :=
+  SourceAllTypeComputabilityTransportProof.actualComputabilityWeakening
+
+#print axioms singleBottom
+#print axioms weakening
+#print axioms SourceAllTypeComputabilityTransportSupportProof.singleBottomConfinement
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceAllTypeComputabilityTransportGate
