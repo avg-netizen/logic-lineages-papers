@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoder
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderTargets
+#check headSignatureValue
+#check encodeRequest
+#check expandValue
+#check transition
+#check termCheck
+#check argumentsCheck
+#check packedCheck
+#check target
+#check ActualOriginalTypedHeadSelection
+#check ActualOriginalTypedRequestCodec
+#check ActualOriginalTypedExpansion
+#check ActualOriginalTypedMachineCalibration
+#check ActualOriginalTypedFuel
+#check ActualOriginalTypedDecoderCalibration
+#check ActualOriginalTypedInternalStep
+#check ActualOriginalTypedTargetLeafCalibration

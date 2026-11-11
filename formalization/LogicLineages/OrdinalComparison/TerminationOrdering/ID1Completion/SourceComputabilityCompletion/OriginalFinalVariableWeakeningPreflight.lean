@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableWeakeningTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalFinalVariableWeakening OriginalFinalVariableWeakeningTargets
+#check OriginalRawSyntaxTransport.variableConstructor
+#check LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodec.consCode
+#check OriginalVariableLeaves.refineInputs
+#check OriginalLambdaTraversalSelection.finalData
+#check Shape
+#check SourceLaw
+#check TargetLaw
+#check Properties
+#check (ActualOriginalFinalVariableSourceWeakening : Prop)
+#check (ActualOriginalFinalVariableTargetWeakening : Prop)
+#check (ActualOriginalFinalVariableWeakeningSelection : Prop)
