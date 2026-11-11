@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportBranchEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportTransitionProof
+open OriginalRawSyntaxTransport OriginalRawSyntaxTransportEvaluationSupportProof
+open OriginalRawSyntaxTransportStateEvaluationProof OriginalRawSyntaxTransportBranchEvaluationProof
+open InternalApplicationCertificateConstructorsEvaluationProof
+open InternalApplicationResultStackEvaluationProof
+  (statusEvaluation workEvaluation resultsEvaluation currentFrameEvaluation restEvaluation)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+attribute [local irreducible] transition currentRaw framePayload currentType currentCutoff
+  frameTag expandedOne expandedTwo leafReturned returnedOne returnedTwo
+  visitBranch returnBranch frameBranch
+
+ theorem actualRawSyntaxTransitionCalibration :
+    OriginalRawSyntaxTransportTargets.ActualRawSyntaxTransitionCalibration := by
+  intro mode state
+  simp only [transitionEvaluation, frameBranchEvaluation, returnBranchEvaluation, visitBranchEvaluation,
+    statusEvaluation, expandedOneEvaluation, expandedTwoEvaluation, leafReturnedEvaluation,
+    returnedOneEvaluation, returnedTwoEvaluation, childCutoffEvaluation, currentTypeEvaluation,
+    currentCutoffEvaluation, currentRawEvaluation, frameTagEvaluation, framePayloadEvaluation,
+    currentFrameEvaluation, restEvaluation, workEvaluation, resultsEvaluation,
+    List.Vector.get_ofFn, Matrix.cons_val_zero]
+  rfl
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportTransitionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportTransitionProof
