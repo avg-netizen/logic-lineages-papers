@@ -17,7 +17,8 @@ General acceptance/output recurrence has a 1,219-module verified closure.
 Independent internal transparent lambda selector/shape/root callbacks are checked
 with a 1,124-module closure. Local lambda laws and bottom normalization are also
 checked, completing all nine local transparent-validator contracts. Final-fold
-absorption and lambda-aware canonical traversal remain active supporting tasks.
+absorption and SAME-final lambda validity now complete all eight final contracts
+with a 2,300-module closure. Lambda-aware canonical traversal remains active.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
