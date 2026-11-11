@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankTransportProof
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankTransportProof
+example : ActualRawVariableRankShift := actualRawVariableRankShift
+example : ActualRawVariableRankErase := actualRawVariableRankErase
+#print axioms actualRawVariableRankShift
+#print axioms actualRawVariableRankErase
