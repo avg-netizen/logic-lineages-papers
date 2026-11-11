@@ -5,7 +5,7 @@ laws, beta-result and hereditary SAME-step guards, global final-tuple selection,
 and original all-input-equal transparent lambda source/target calibration.
 The internal hereditary machine has exact transitions, work decrease,
 sufficient-fuel terminality, two-way saturation and SAME-validator lambda-child
-closure. Ten of twelve frozen internal recurrence contracts are checked.
+closure. All twelve frozen internal recurrence contracts are checked.
 The latest lambda-child closure has 1,187 source-matched native modules and
 standard-only axioms; this is not a full-root or remote-CI pass.
 
@@ -13,8 +13,9 @@ Read [lambda-child status](verification/continuation-2026-11-11/hereditary-valid
 [termination status](verification/continuation-2026-11-11/hereditary-validity-termination/STATUS.md),
 and [transparent native calibration](verification/continuation-2026-11-11/transparent-lambda-validity/STATUS.md).
 Internal work-append acceptance is now checked with a 1,199-module closure.
-Current work: general validator acceptance/output
-recurrence, and independent internal transparent lambda callback/shape laws.
+General acceptance/output recurrence has a 1,219-module verified closure.
+Independent internal transparent lambda selector/shape/root callbacks are checked
+with a 1,124-module closure; local lambda and bottom-parameter laws are next.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
