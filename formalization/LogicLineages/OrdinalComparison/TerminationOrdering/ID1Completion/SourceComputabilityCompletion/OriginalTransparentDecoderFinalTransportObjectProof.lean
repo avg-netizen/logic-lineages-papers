@@ -1,0 +1,37 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportObjectTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportObjectTransferProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportObjectProof
+open OriginalTransparentDecoderFinalTransportObjectTargets
+open OriginalTransparentDecoderFinalTransportObjectTransferProof
+open OriginalTransparentDecoderFinalTransportProof
+
+theorem actualOriginalTransparentDecoderFinalTargetObjectWeakening :
+    ActualOriginalTransparentDecoderFinalTargetObjectWeakening := by
+  intro p H G W
+  exact objectWeakeningOfPacked _
+    (actualOriginalTransparentDecoderFinalTargetWeakening p H G W)
+
+theorem actualOriginalTransparentDecoderFinalTargetObjectErasure :
+    ActualOriginalTransparentDecoderFinalTargetObjectErasure := by
+  intro p H G W
+  exact objectErasureOfPacked _
+    (actualOriginalTransparentDecoderFinalTargetErasure p H G W)
+
+theorem actualOriginalTransparentDecoderFinalSourceObjectWeakening :
+    ActualOriginalTransparentDecoderFinalSourceObjectWeakening := by
+  intro p H G W
+  exact objectWeakeningOfPacked _
+    (actualOriginalTransparentDecoderFinalSourceWeakening p H G W)
+
+theorem actualOriginalTransparentDecoderFinalSourceObjectErasure :
+    ActualOriginalTransparentDecoderFinalSourceObjectErasure := by
+  intro p H G W
+  exact objectErasureOfPacked _
+    (actualOriginalTransparentDecoderFinalSourceErasure p H G W)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportObjectProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportObjectProof

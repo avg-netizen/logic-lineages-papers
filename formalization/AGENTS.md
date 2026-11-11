@@ -1,36 +1,35 @@
-# Current checkpoint — both original checker transports complete
+# Current checkpoint — SAME-final validity transport complete
 
-The original typed and guarded-source decoder families are now checked independently
-inside the original arithmetic calculus: full step specifications, fuel/weight
-saturation, work append/cons factorization, paid step acceptance, all eight
-constructor recurrences, rejected modes/tags, and term/arguments weakening and
-erasure at arbitrary valid context-insertion cutoffs. Both public checkers retain
-their own original raw+1 budgets. Source keeps the same arbitrary outer context c,
-all M/W guards and original Encodable Gamma/Context/table codecs. Erasure uses
-lookup to pay the selected variable's type; no erased-type window or transformed
-code bound is assumed. All exact gates have standard-only axioms and fixed limits.
+Both original typed/source decoder families have checked independent internal
+fuel, paid work/constructor acceptance, and arbitrary-cutoff weakening/erasure.
+Four exact all-output bridges now identify actual hereditary HT/HS and SAME-final
+target/source validity with the transparent original leaves at one initial q,
+one variable refinement r and unchanged final D. The coupled target/source guard
+is retained; no native calibration is used as an internal derivation.
 
-Verified checkpoints: typed acceptance/transport efd801846fd8a29a1f82bab873686e72b6495fe9;
-guarded source acceptance/transport 17235a30696e045be0dca556cd8e94eb9343f14d.
-Read verification/continuation-2026-11-11/{typed,universe}-decoder-transport-complete
-and corresponding internal-acceptance-complete status/evidence packets.
+Four SAME-final packed validity shift/erase contracts and four actual rawObject
+corollaries now pass fixed-limit exact and standard-axiom gates. Erasure retains
+its genuine context-cons premise. These statements do not assert rejection
+equivalence, raw selectedTyped transport, canonical fixedness, rank or cancellation.
+See the transparent-decoder-validator-complete and final-transport-complete packets
+under verification/continuation-2026-11-11. Validator collapse is remotely verified
+at cf4cf2da1b2a5d9dcbdbee2560dcd1fdb7c243d3; transport checkpoint follows.
 
-Next: independent internal equivalence of the actual hereditary HT/HS validators
-with the transparent original leaves, then SAME-final validator transport. Use one
-q=transparentInputs H G W p, r=refineInputs G q and unchanged finalData r. Do not
-claim that checker transport already proves selected typedness or Object transport:
-selected typedness additionally needs original membership and transition fixedness.
-Standalone refined-source erasure is too strong for arbitrary G; the variable source
-leaf omits G while bottom source needs it. Preserve the coupled target/source invariant.
-General internal canonical coherence, rank-aware positive-certificate transport,
-I/C and paper06 lem:id1 remain pending. Register unchanged: **171 checked,
-2 inherited, 16 pending /189**. No full-root or remote-CI claim.
+Next: typedness after the ACTUAL final fold of the shifted/erased input. Recover
+membership and source validity, retain the outer type, then use the existing fold
+typed-output consumer to conclude transition fixedness. Packed selectedTyped needs
+no outer window premise; actual Outer.typed on its active branch does. General
+OTHER-tag representative rank/cancellation needs its own independently proved
+leaf law or a calibrated stronger initial representative selection. Do not infer
+these from native representative calibration or validity transport.
 
-All accepted and frozen mathematical sources are immutable. New candidates remain
-pending until native receipts and source-matched evidence verify them. Continue only
-until **11 November 2026, 17:30 UTC**, then stop research, preserve drafts truthfully,
-verify the remote checkpoint and do not auto-resume. Keep pinned toolchain and
-serialized fixed resource limits. Private/supervised lanes remain stopped.
+Internal I/C and paper06 lem:id1 remain pending. Register unchanged: **171 checked,
+2 inherited, 16 pending /189**. No full-root or remote-CI claim. All accepted and
+frozen mathematical sources are immutable; candidates remain pending until native
+receipts and source-matched evidence verify them. Continue only until **11 November
+2026, 17:30 UTC**, then stop research, save all drafts truthfully, verify the remote
+checkpoint and do not auto-resume. Keep pinned toolchain and serialized fixed limits.
+Private/supervised lanes remain stopped.
 
 ---
 

@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportStatementChecks
+open OriginalTransparentDecoderFinalTransportTargets OriginalTransparentDecoderFinalTransportProof
+
+theorem target_weakening_exact :
+    ActualOriginalTransparentDecoderFinalTargetWeakening :=
+  actualOriginalTransparentDecoderFinalTargetWeakening
+
+theorem target_erasure_exact :
+    ActualOriginalTransparentDecoderFinalTargetErasure :=
+  actualOriginalTransparentDecoderFinalTargetErasure
+
+theorem source_weakening_exact :
+    ActualOriginalTransparentDecoderFinalSourceWeakening :=
+  actualOriginalTransparentDecoderFinalSourceWeakening
+
+theorem source_erasure_exact :
+    ActualOriginalTransparentDecoderFinalSourceErasure :=
+  actualOriginalTransparentDecoderFinalSourceErasure
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderFinalTransportStatementChecks
