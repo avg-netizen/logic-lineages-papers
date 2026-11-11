@@ -1,0 +1,39 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRankedAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRankedAccessibilityGate
+
+theorem successorLift : NumberedRankedAccessibilityTargets.ActualPositiveSuccessorLift :=
+  NumberedRankedAccessibilityProof.actualPositiveSuccessorLift
+
+theorem positiveTransGen : NumberedRankedAccessibilityTargets.ActualPositivePathTransGen :=
+  NumberedRankedAccessibilityProof.actualPositivePathTransGen
+
+theorem accessibilityEquivalence : NumberedRankedAccessibilityTargets.ActualPositivePathAccessibilityEquivalence :=
+  NumberedRankedAccessibilityProof.actualPositivePathAccessibilityEquivalence
+
+theorem substitution : NumberedRankedAccessibilityTargets.ActualSubstitutionAccessibilityReflection :=
+  NumberedRankedAccessibilityProof.actualSubstitutionAccessibilityReflection
+
+theorem substitutionEdge : NumberedRankedAccessibilityTargets.ActualSubstitutionEdgeAccessibilityReflection :=
+  NumberedRankedAccessibilityProof.actualSubstitutionEdgeAccessibilityReflection
+
+theorem bottomGood : NumberedRankedAccessibilityTargets.ActualSingleBottomGoodSubstitution :=
+  NumberedRankedAccessibilityProof.actualSingleBottomGoodSubstitution
+
+theorem bottom : NumberedRankedAccessibilityTargets.ActualSingleBottomAccessibilityReflection :=
+  NumberedRankedAccessibilityProof.actualSingleBottomAccessibilityReflection
+
+theorem bottomEdge : NumberedRankedAccessibilityTargets.ActualSingleBottomEdgeAccessibilityReflection :=
+  NumberedRankedAccessibilityProof.actualSingleBottomEdgeAccessibilityReflection
+
+#print axioms successorLift
+#print axioms positiveTransGen
+#print axioms accessibilityEquivalence
+#print axioms substitution
+#print axioms substitutionEdge
+#print axioms bottomGood
+#print axioms bottom
+#print axioms bottomEdge
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedRankedAccessibilityGate
