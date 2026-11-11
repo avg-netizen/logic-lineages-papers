@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawObjectTransportTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawObjectTransport
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawObjectTransportTargets
+#check shiftObjectRaw
+#check eraseObjectRaw
+#check variableRankObjectRaw
+#check (ActualRawObjectTypedCalibration : Prop)
+#check (ActualRawObjectInternalShiftExposure : Prop)
+#check (ActualRawObjectInternalEraseExposure : Prop)
+#check (ActualRawObjectCancellation : Prop)

@@ -25,8 +25,9 @@ canonicality and full global retention. Original internal syntax/I transport
 and subsequent computability integration remain active.
 Native lambda-inclusive applicative substitution and actual label-zero numbered
 computability are now checked. All ten native original raw shift/erasure/rank
-contracts are checked; seven of fourteen independent internal contracts are
-checked, with recursive constructor and cancellation/parameter laws active.
+contracts and all fourteen independent internal contracts are checked,
+including recursive constructors, all-raw cancellation and parameter laws.
+Original raw Object wrappers are frozen/preflighted; canonical I/C remains active.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
