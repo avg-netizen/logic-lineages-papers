@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableExchangeProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableExchangeGate
+
+theorem exchange : NumberedBottomVariableLiftingTargets.ActualExchangeInverse :=
+  NumberedBottomVariableExchangeProof.actualExchangeInverse
+
+theorem arguments : NumberedBottomVariableLiftingTargets.ActualArgumentExchangeInverse :=
+  NumberedBottomVariableExchangeProof.actualArgumentExchangeInverse
+
+#print axioms exchange
+#print axioms arguments
+#print axioms NumberedBottomVariableExchangeSupportProof.typedWitness
+#print axioms NumberedBottomVariableExchangeSupportProof.argumentPermutationInverse
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableExchangeGate
