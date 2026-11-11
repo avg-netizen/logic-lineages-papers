@@ -48,9 +48,9 @@ were restored and hash-matched; no upstream compilation occurred. The unchanged
 inherited full Object/global gate was also rebuilt successfully in this workspace.
 
 `REPORT.json`, the frozen/source hashes and exact alias list summarize the
-accepted native verification. Full reconstructible source/object inventories,
-receipts and logs (including failed attempts) are preserved locally; bulk
-evidence upload was not completed and is not claimed here. The preliminary verifier
+accepted native verification. The source/object inventory, native receipts,
+failed attempts and logs are now preserved alongside the sources in the gzip
+evidence files after the separately approved upload completed. The preliminary verifier
 call using an unqualified nonbottom alias was corrected to its full name;
 the final evidence report has zero errors. No full-root or remote-CI pass is claimed.
 
