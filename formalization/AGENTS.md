@@ -1,34 +1,36 @@
-# Current checkpoint — transparent decoders and internal typed fuel
+# Current checkpoint — both original checker transports complete
 
-All eight original transparent typed-decoder contracts are checked, including
-ALL-vector original target calibration and independent full one-step arithmetic
-for arbitrary metadata. All seven original guarded-source decoder contracts
-are checked, including ALL-vector original source calibration, independent
-full guarded steps, and symbolic Gamma locality. Original Context/table and
-Encodable Gamma codecs are retained without substitutes.
-All eight internal typed work-fuel contracts are checked: literal raw+1 weight,
-child bounds, actual work decrease, sufficient terminal witnesses, two-way
-saturation and unchanged singleton checker equivalence. No native evaluation
-is used as an internal Derivation.
-Original variable weakening, canonical payload cancellation/rank and actual
-Object-wrapper cancellation/rank are checked at the SAME tuple. One transparent
-initial source/target refinement retains the complete preceding Object/native
-Package through the unchanged final pipeline (2,877-module matched closure).
-All seven arbitrary-cutoff original context-insertion/variable-lookup contracts
-are now checked. These do not themselves prove full term transport.
+The original typed and guarded-source decoder families are now checked independently
+inside the original arithmetic calculus: full step specifications, fuel/weight
+saturation, work append/cons factorization, paid step acceptance, all eight
+constructor recurrences, rejected modes/tags, and term/arguments weakening and
+erasure at arbitrary valid context-insertion cutoffs. Both public checkers retain
+their own original raw+1 budgets. Source keeps the same arbitrary outer context c,
+all M/W guards and original Encodable Gamma/Context/table codecs. Erasure uses
+lookup to pay the selected variable's type; no erased-type window or transformed
+code bound is assumed. All exact gates have standard-only axioms and fixed limits.
 
-Active: typed work-append and paid constructor acceptance recurrences; full
-forward typed checker weakening/erasure; independent guarded-source fuel and
-run transport. General internal canonical coherence, I/C and paper06 lem:id1
-remain pending. Register unchanged: **171 checked, 2 inherited, 16 pending /189**.
-No full-root or remote-CI pass is claimed. All accepted and frozen mathematical
-sources are immutable. New candidate files are pending until native receipts
-and source-matched evidence verify them.
+Verified checkpoints: typed acceptance/transport efd801846fd8a29a1f82bab873686e72b6495fe9;
+guarded source acceptance/transport 17235a30696e045be0dca556cd8e94eb9343f14d.
+Read verification/continuation-2026-11-11/{typed,universe}-decoder-transport-complete
+and corresponding internal-acceptance-complete status/evidence packets.
 
-Continue only until **11 November 2026, 17:30 UTC**, then stop research, preserve
-all drafts with truthful status, verify the remote checkpoint, and do not
-resume automatically. Keep the pinned toolchain and serialized fixed limits.
-Private/supervised lanes remain stopped.
+Next: independent internal equivalence of the actual hereditary HT/HS validators
+with the transparent original leaves, then SAME-final validator transport. Use one
+q=transparentInputs H G W p, r=refineInputs G q and unchanged finalData r. Do not
+claim that checker transport already proves selected typedness or Object transport:
+selected typedness additionally needs original membership and transition fixedness.
+Standalone refined-source erasure is too strong for arbitrary G; the variable source
+leaf omits G while bottom source needs it. Preserve the coupled target/source invariant.
+General internal canonical coherence, rank-aware positive-certificate transport,
+I/C and paper06 lem:id1 remain pending. Register unchanged: **171 checked,
+2 inherited, 16 pending /189**. No full-root or remote-CI claim.
+
+All accepted and frozen mathematical sources are immutable. New candidates remain
+pending until native receipts and source-matched evidence verify them. Continue only
+until **11 November 2026, 17:30 UTC**, then stop research, preserve drafts truthfully,
+verify the remote checkpoint and do not auto-resume. Keep pinned toolchain and
+serialized fixed resource limits. Private/supervised lanes remain stopped.
 
 ---
 
