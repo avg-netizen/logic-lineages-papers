@@ -32,7 +32,9 @@ independent internal all-raw cancellation. SAME-final canonical Object
 coherence and original internal I/C remain active.
 Actual native ordinary and arbitrary finite-label numbered constructor
 computability are now checked by the joint head/base/label/extra induction.
-Full native substitution and all-term accessibility remain pending.
+Full native substitution, genuine all-term C, least-set membership and
+encodedR accessibility are now checked under the original rank certificate.
+These native results do not discharge the independent internal I/C obligations.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 

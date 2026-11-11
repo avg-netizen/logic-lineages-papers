@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalOtherValidityTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalFinalOtherValidity OriginalFinalOtherValidityTargets
+#check OriginalLambdaTraversalSelection.finalInputs
+#check OriginalLambdaTraversalSelection.finalData
+#check OriginalHereditaryValidity.normalizedData
+#check OriginalLambdaTraversalInternal.otherTag
+#check SourceOtherLaw
+#check TargetOtherLaw
+#check (ActualOriginalFinalOtherSourceValidity : Prop)
+#check (ActualOriginalFinalOtherTargetValidity : Prop)
