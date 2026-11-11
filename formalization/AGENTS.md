@@ -1,3 +1,37 @@
+# Current checkpoint — transparent decoders and internal typed fuel
+
+All eight original transparent typed-decoder contracts are checked, including
+ALL-vector original target calibration and independent full one-step arithmetic
+for arbitrary metadata. All seven original guarded-source decoder contracts
+are checked, including ALL-vector original source calibration, independent
+full guarded steps, and symbolic Gamma locality. Original Context/table and
+Encodable Gamma codecs are retained without substitutes.
+All eight internal typed work-fuel contracts are checked: literal raw+1 weight,
+child bounds, actual work decrease, sufficient terminal witnesses, two-way
+saturation and unchanged singleton checker equivalence. No native evaluation
+is used as an internal Derivation.
+Original variable weakening, canonical payload cancellation/rank and actual
+Object-wrapper cancellation/rank are checked at the SAME tuple. One transparent
+initial source/target refinement retains the complete preceding Object/native
+Package through the unchanged final pipeline (2,877-module matched closure).
+All seven arbitrary-cutoff original context-insertion/variable-lookup contracts
+are now checked. These do not themselves prove full term transport.
+
+Active: typed work-append and paid constructor acceptance recurrences; full
+forward typed checker weakening/erasure; independent guarded-source fuel and
+run transport. General internal canonical coherence, I/C and paper06 lem:id1
+remain pending. Register unchanged: **171 checked, 2 inherited, 16 pending /189**.
+No full-root or remote-CI pass is claimed. All accepted and frozen mathematical
+sources are immutable. New candidate files are pending until native receipts
+and source-matched evidence verify them.
+
+Continue only until **11 November 2026, 17:30 UTC**, then stop research, preserve
+all drafts with truthful status, verify the remote checkpoint, and do not
+resume automatically. Keep the pinned toolchain and serialized fixed limits.
+Private/supervised lanes remain stopped.
+
+---
+
 # Current checkpoint — internal hereditary validator and lambda closure
 
 The cumulative branch now includes original lambda constructor/context/certificate
