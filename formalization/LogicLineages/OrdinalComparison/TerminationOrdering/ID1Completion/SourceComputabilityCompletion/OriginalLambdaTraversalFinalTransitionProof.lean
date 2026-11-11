@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalSelectedTransitionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalObserverProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalTransitionProof
+
+/-- The exact frozen final transition law, with the actual proved observer
+packet instantiated. No output or observer supplier remains a premise. -/
+theorem actualOriginalLambdaTraversalFinalTransition :
+    OriginalLambdaTraversalSelectionTargets.ActualOriginalLambdaTraversalFinalTransition := by
+  intro p
+  exact OriginalLambdaTraversalFinalSelectedTransitionProof.finalTransition p
+    (OriginalLambdaTraversalObserverProof.actualOriginalLambdaTraversalObserverLaws p.base p.window)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalTransitionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalTransitionProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalTransitionProof.actualOriginalLambdaTraversalFinalTransition

@@ -20,12 +20,14 @@ checked, completing all nine local transparent-validator contracts. Final-fold
 absorption and SAME-final lambda validity now complete all eight final contracts
 with a 2,300-module closure. All eight native and eight internal lambda-aware
 traversal runtime contracts are checked; internal closure has 1,266 modules.
-Final canonical-body integration remains active.
+All ten final selection contracts are now checked, including SAME-final body
+canonicality and full global retention. Original internal syntax/I transport
+and subsequent computability integration remain active.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
-Register remains **171 checked, 2 inherited, 16 pending / 189**. Final-source
-transport, canonical-body coherence, genuine weakening/substitution, constructor
+Register remains **171 checked, 2 inherited, 16 pending / 189**. Original internal
+substitution/I transport, constructor
 and multiset cases and closed all-term accessibility remain incomplete.
 Continue only until **11 November 2026, 17:30 UTC**, then stop and save drafts
 with truthful status without automatic resumption. Private/supervised lanes

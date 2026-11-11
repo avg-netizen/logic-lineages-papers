@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalTransitionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCanonicalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalBodyProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalLambdaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCoherenceProof
+
+/-- Exact SAME-final body source/type/T-fixedness from actual parent T
+fixedness. No body C, body accessibility, earlier Data, or extra supplier. -/
+theorem actualOriginalLambdaTraversalFinalBodyFixed :
+    OriginalLambdaTraversalSelectionTargets.ActualOriginalLambdaTraversalFinalBodyFixed := by
+  intro p
+  exact OriginalLambdaTraversalFinalBodyProof.finalBodyFixed p
+    (OriginalLambdaTraversalFinalTransitionProof.actualOriginalLambdaTraversalFinalTransition p)
+
+/-- Exact lambda constructor equation for the actual final full canonical
+fold and its actual child fold at the actual single extended-Gamma parameter. -/
+theorem actualOriginalLambdaTraversalFinalLambdaEquation :
+    OriginalLambdaTraversalSelectionTargets.ActualOriginalLambdaTraversalFinalLambdaEquation := by
+  intro p
+  exact OriginalLambdaTraversalFinalLambdaProof.finalLambdaEquation p
+    (OriginalLambdaTraversalFinalCanonicalProof.actualOriginalLambdaTraversalFinalCanonical p)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCoherenceProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCoherenceProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCoherenceProof.actualOriginalLambdaTraversalFinalBodyFixed
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCoherenceProof.actualOriginalLambdaTraversalFinalLambdaEquation
