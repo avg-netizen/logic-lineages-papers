@@ -28,6 +28,9 @@ computability are now checked. All ten native original raw shift/erasure/rank
 contracts and all fourteen independent internal contracts are checked,
 including recursive constructors, all-raw cancellation and parameter laws.
 Original raw Object wrappers are frozen/preflighted; canonical I/C remains active.
+Actual native ordinary and arbitrary finite-label numbered constructor
+computability are now checked by the joint head/base/label/extra induction.
+Full native substitution and all-term accessibility remain pending.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
