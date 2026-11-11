@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalDispatchProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalSourceOutputProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalShapeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalRootProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors OriginalTransparentLambdaValidity OriginalTransparentLambdaValidityInternal
+open OriginalTransparentLambdaValidityInternalDispatchProof OriginalTransparentLambdaValidityInternalSourceCheckProof
+open OriginalTransparentLambdaValidityInternalSourceOutputProof OriginalTransparentLambdaValidityInternalShapeProof
+
+theorem actualOriginalTransparentInternalSourceRoot :
+    OriginalTransparentLambdaValidityInternalTargets.ActualOriginalTransparentInternalSourceRoot := by
+  intro body data alpha out raw parameter
+  exact dispatchEquation data.oldSource (sourceCheck data) out raw parameter
+    (BooleanOutput out (SourceLambdaRootFactors data raw parameter))
+    (sourceCheckEquation data out raw parameter)
+
+theorem actualOriginalTransparentInternalTargetRoot :
+    OriginalTransparentLambdaValidityInternalTargets.ActualOriginalTransparentInternalTargetRoot := by
+  intro body data alpha out raw parameter
+  exact dispatchEquation data.oldTarget lambdaShape out raw parameter
+    (BooleanOutput out (LambdaShape raw))
+    (actualOriginalTransparentInternalShape body alpha out raw parameter)
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalRootProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalRootProof

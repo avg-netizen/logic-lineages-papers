@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternal
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityInternalTargets
+#check BooleanOutput
+#check CodomainGraph
+#check LambdaShape
+#check SourceLambdaRootFactors
+#check SourceRootOutput
+#check TargetRootOutput
+#check LiteralLambda
+#check SourceLambdaFactors
+#check TargetLambdaFactors
+#check (ActualOriginalTransparentInternalSelectors : Prop)
+#check (ActualOriginalTransparentInternalShape : Prop)
+#check (ActualOriginalTransparentInternalSourceRoot : Prop)
+#check (ActualOriginalTransparentInternalTargetRoot : Prop)
+#check (ActualOriginalTransparentInternalLiteralLambda : Prop)
+#check (ActualOriginalTransparentInternalBottomParameter : Prop)
+#check (ActualOriginalTransparentInternalBottomNormalization : Prop)
+#check (ActualOriginalTransparentInternalSourceLambda : Prop)
+#check (ActualOriginalTransparentInternalTargetLambda : Prop)
