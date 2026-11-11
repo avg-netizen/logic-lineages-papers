@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidity
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentLambdaValidityTargets
+#check sourceRoot
+#check targetRoot
+#check sourceValidator
+#check targetValidator
+#check refineData
+#check (ActualOriginalTransparentApplicationEquations : Prop)
+#check (ActualOriginalTransparentLambdaEquations : Prop)
+#check (ActualOriginalTransparentRootCalibration : Prop)
+#check (ActualOriginalTransparentValidatorCalibration : Prop)
+#check (ActualOriginalTransparentSourceEquality : Prop)
+#check (ActualOriginalTransparentTargetEquality : Prop)
+#check (ActualOriginalTransparentRefinementCalibration : Prop)
