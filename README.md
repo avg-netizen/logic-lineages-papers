@@ -1,13 +1,14 @@
 # Logic lineages papers
 
 **Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [original quotient-neutral application checkpoint](formalization/verification/continuation-2026-11-10/quotient-neutral-inversion/STATUS.md)
+The latest [original source neutral-application checkpoint](formalization/verification/continuation-2026-11-10/source-neutral-application/STATUS.md)
 adds seven checked supporting contracts on `formalization/cumulative-continuation-2026-11-09`.
-Neutral application edges now reduce to same-type bottom or an original
-function-child quotient edge, retaining the requested raw argument in the
-target application. Source/Object wrappers and finite-type arrow computability
-remain pending. [TARGETS.json](formalization/TARGETS.json) is the authoritative register.
-The [next proof obligations](formalization/verification/continuation-2026-11-10/quotient-neutral-inversion/NEXT-STEPS.md)
+The original non-lambda premise now supplies application neutrality, and Object
+application inputs expose their runtime coordinates internally. The original
+source H+ consumer classifies its first edge while retaining the exact suffix
+to the requested endpoint. The finite-type neutral/arrow computability argument
+remains pending. [TARGETS.json](formalization/TARGETS.json) is authoritative.
+The [next proof obligations](formalization/verification/continuation-2026-11-10/source-neutral-application/NEXT-STEPS.md)
 and older [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md)
 record the current boundary and inherited work. Earlier counts are historical.
 

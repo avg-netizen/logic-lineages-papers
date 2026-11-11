@@ -1,4 +1,34 @@
-# Current checkpoint — original quotient-neutral application inversion
+# Current checkpoint — original source neutral applications
+
+Seven exact supporting contracts in 34 new Lean modules extend `cbda2bacd`
+on the existing cumulative branch. The original requested-function non-lambda
+premise now supplies actualJ neutrality. Original Object domain/accepted
+application inputs internally expose one common Gamma, raw inputs/output,
+parameter and all window/member facts. The original source H+ certificate
+consumer classifies only its FIRST quotient-edge vertex and retains its exact
+ordinary suffix to the requested endpoint. One globally calibrated final tuple
+retains the complete Package and every predecessor law with these new rules.
+
+All seven exact aliases and 36 further audited declarations use only standard
+axioms. The gate/preflight union has 2008 successful source-matched native
+modules. All fourteen frozen files, inherited mathematical sources and prior
+verification evidence are unchanged. Checker, pins, manuscripts, CI and fixed
+serialized limits remain unchanged. No full-root or remote-CI pass is claimed.
+
+Next: reconstruct the original function-child Object certificate and accepted
+Object application at the first vertex for the finite-type consumer, then pay
+neutral/arrow computability and suffix closure. Raw child edge, target typing
+and actualJ alignment are already checked. Later function reducts may be lambdas;
+do not impose application shape on the final H+ endpoint. Lambda/substitution,
+multiset, constructors and all-term accessibility remain pending. Paper06
+`lem:id1` is pending; register **171 checked, 2 inherited, 16 pending / 189**.
+Read [the accepted checkpoint](verification/continuation-2026-11-10/source-neutral-application/STATUS.md) and [next steps](verification/continuation-2026-11-10/source-neutral-application/NEXT-STEPS.md).
+All owned proof-author/compiler jobs have completed. Publish to the existing
+cumulative branch with a non-force update preserving intervening work.
+
+---
+
+# Previous checkpoint — original quotient-neutral application inversion
 
 Seven exact supporting contracts in 35 new Lean modules extend `f898851d`
 on the existing cumulative branch. Original accepted raw steps reconstruct the

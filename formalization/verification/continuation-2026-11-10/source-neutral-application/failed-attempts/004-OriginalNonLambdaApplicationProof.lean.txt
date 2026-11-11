@@ -1,0 +1,87 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityApplicationValuesProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeBridgeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalAcceptanceSupportProof (programCases)
+open InternalControlGraphSupportProof (outputTransport)
+open InternalGraphCompositionFunctionalityProof (renameInto)
+open InternalRecursionGraphStepSyntaxProof
+open InternalParameterizedCanonicalResultFoldSyntaxProof (applicationGraphRename)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalTagArithmeticSyntaxProof (eqn suc z sucRelabel zRelabel)
+open OriginalNonLambdaApplication OriginalNonLambdaApplicationSyntaxProof
+open OriginalNonLambdaApplicationTargets
+
+variable {body : Positive (Fin 1)} {alpha : Type} {Gamma : List (Formula alpha)}
+
+/-- The negated ORIGINAL lambda-tag graph excludes one at every actual
+tag output. The contradiction is an internal equality transport. -/
+theorem tagNeOne (function tag : OTerm alpha)
+    (ht : Nonempty (Derivation body Gamma (OriginalConstructorShape.tagGraph tag function)))
+    (hn : Nonempty (Derivation body Gamma (nonLambda function))) :
+    Nonempty (Derivation body Gamma (eqn tag (suc z)).not) := by
+  let P := eqn tag (suc z)
+  have he : Nonempty (Derivation body (P :: Gamma) P) :=
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨hl⟩ := outputTransport OriginalConstructorShape.tag tag (suc z)
+    (Fin.cons function Fin.elim0) he (withHyp ht P)
+  obtain ⟨hn'⟩ := withHyp hn P
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationElimination hn' hl)⟩
+
+/-- The actual original constructor tag is bound internally. A raw
+application of the requested non-lambda function has neutrality flag one. -/
+theorem rawNeutral (d e function argument out : OTerm alpha)
+    (hp : Nonempty (Derivation body Gamma (graph4 application out d e function argument)))
+    (hn : Nonempty (Derivation body Gamma (nonLambda function))) :
+    Nonempty (Derivation body Gamma
+      (graph1 OriginalNeutralLeaf.neutralTest InternalOriginalStepGuard.one out)) := by
+  apply programCases OriginalConstructorShape.tag (Fin.cons function Fin.elim0) _
+  intro beta j Delta tag hinc ht
+  simp only [consTermRename,emptyRename] at ht
+  have hp' := renameInto hp j Delta hinc
+  rw [graph4Rename] at hp'
+  have hn' := renameInto hn j Delta hinc
+  rw [nonLambdaRename] at hn'
+  have he := tagNeOne (function.relabel j) tag ht hn'
+  simpa only [graph1Rename,InternalOriginalStepGuard.one,sucRelabel,zRelabel] using
+    OriginalFunctionNeutralityApplicationValuesProof.neutralAtNonlambda
+      (d.relabel j) (e.relabel j) (function.relabel j) (argument.relabel j)
+      (out.relabel j) tag hp' ht he
+
+/-- The SAME final actualJ equation retains the requested function and
+internally folds only its original raw argument. Its original non-lambda
+premise therefore supplies the canonical output's neutrality graph. -/
+theorem actualOriginalNonLambdaApplicationNeutrality :
+    ActualOriginalNonLambdaApplicationNeutrality := by
+  intro p
+  dsimp only
+  intro body alpha Gamma arrow d e function argument out parameter hi hj hn
+  let r := OriginalApplicationSidecar.finalInputs p
+  let data := OuterSelection.data r.base r.window
+  apply programCases (InternalParameterizedCanonicalResultFold.foldN data)
+    (Fin.cons argument (Fin.cons parameter Fin.elim0)) _
+  intro beta j Delta argumentOut hinc hfold
+  simp only [consTermRename,emptyRename] at hfold
+  have hi' := renameInto hi j Delta hinc
+  rw [OriginalNeutralApplicationSyntaxProof.inputPremisesRename] at hi'
+  have hj' := renameInto hj j Delta hinc
+  rw [applicationGraphRename] at hj'
+  have hn' := renameInto hn j Delta hinc
+  rw [nonLambdaRename] at hn'
+  have happlication := OriginalNeutralApplicationEdgeBridgeProof.finalForward p
+    (arrow.relabel j) (d.relabel j) (e.relabel j) (function.relabel j)
+    (argument.relabel j) (out.relabel j) argumentOut (parameter.relabel j) hi' hfold hj'
+  simpa only [graph1Rename,InternalOriginalStepGuard.one,sucRelabel,zRelabel] using
+    rawNeutral (d.relabel j) (e.relabel j) (function.relabel j) argumentOut
+      (out.relabel j) happlication hn'
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof.actualOriginalNonLambdaApplicationNeutrality

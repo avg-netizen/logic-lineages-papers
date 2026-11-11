@@ -1,0 +1,42 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationSyntaxProof
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationSyntaxProof.nonLambdaRename: [propext,
+ Quot.sound]
+AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationSyntaxProof: 1 theorems
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationSyntaxProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNonLambdaApplicationProof.lean:47:28: error(lean.unknownIdentifier): Unknown identifier `emptyRename`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNonLambdaApplicationProof.lean:38:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNonLambdaApplicationProof.lean:67:14: error(lean.unknownIdentifier): Unknown identifier `OuterSelection.data`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNonLambdaApplicationProof.lean:62:52: error: unsolved goals
+p : UniformCertificateCompletion.GlobalSourcePackage.Inputs
+body : Positive (Fin 1)
+alpha : Type
+Gamma : List (InternalCalculus.Formula alpha)
+arrow d e function argument out parameter : OTerm alpha
+hi :
+  Nonempty
+    (Derivation body Gamma
+      (OriginalNeutralApplication.InputPremises
+        (UniformCertificateCompletion.OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+          (OriginalApplicationSidecar.finalInputs p).window)
+        (OriginalApplicationSidecar.finalInputs p).window arrow d e function argument parameter))
+hj :
+  Nonempty
+    (Derivation body Gamma
+      (InternalParameterizedCanonicalResultFold.applicationGraph
+        (UniformCertificateCompletion.OuterSelection.data (OriginalApplicationSidecar.finalInputs p).base
+          (OriginalApplicationSidecar.finalInputs p).window)
+        out d e function argument parameter))
+hn : Nonempty (Derivation body Gamma (nonLambda function))
+r : UniformCertificateCompletion.GlobalSourcePackage.Inputs := OriginalApplicationSidecar.finalInputs p
+⊢ Nonempty (Derivation body Gamma (graph1 OriginalNeutralLeaf.neutralTest InternalOriginalStepGuard.one out))
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNonLambdaApplicationProof.lean:86:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof.actualOriginalNonLambdaApplicationNeutrality: forbidden axiom dependency sorryAx
+'LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof.actualOriginalNonLambdaApplicationNeutrality' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonLambdaApplicationProof: 1
+BUILD_RECEIPT build-reports/1794354796059863737-3.json
