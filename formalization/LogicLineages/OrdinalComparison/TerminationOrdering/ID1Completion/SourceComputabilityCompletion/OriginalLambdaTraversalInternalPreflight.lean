@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternalTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternal
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternalTargets
+#check ApplicationFields
+#check LambdaFields
+#check FinishedRun
+#check (ActualOriginalLambdaTraversalInternalVisits : Prop)
+#check (ActualOriginalLambdaTraversalInternalLeafStep : Prop)
+#check (ActualOriginalLambdaTraversalInternalReturns : Prop)
+#check (ActualOriginalLambdaTraversalInternalEmpty : Prop)
+#check (ActualOriginalLambdaTraversalInternalRunShape : Prop)
+#check (ActualOriginalLambdaTraversalInternalApplication : Prop)
+#check (ActualOriginalLambdaTraversalInternalLambda : Prop)
+#check (ActualOriginalLambdaTraversalInternalLeaf : Prop)

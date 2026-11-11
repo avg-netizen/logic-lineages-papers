@@ -15,7 +15,9 @@ and [transparent native calibration](verification/continuation-2026-11-11/transp
 Internal work-append acceptance is now checked with a 1,199-module closure.
 General acceptance/output recurrence has a 1,219-module verified closure.
 Independent internal transparent lambda selector/shape/root callbacks are checked
-with a 1,124-module closure; local lambda and bottom-parameter laws are next.
+with a 1,124-module closure. Local lambda laws and bottom normalization are also
+checked, completing all nine local transparent-validator contracts. Final-fold
+absorption and lambda-aware canonical traversal remain active supporting tasks.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
