@@ -1,0 +1,3 @@
+# Original typed decoder first contracts
+
+Three of eight exact frozen contracts are checked: original local-head metadata selection, two-way original Request codec, and all-raw fuel termination for arbitrary metadata. Native branch evaluation and independent internal arithmetic branch helpers also pass. The 1171-module source-matched closure has standard-only axioms. Expansion, full machine/decoder calibration, internal one-step dispatch and original target leaf calibration remain pending. This is not a completed typed decoder or internal I/C proof. Register unchanged: 171 checked, 2 inherited, 16 pending / 189. No full-root or remote-CI pass.
