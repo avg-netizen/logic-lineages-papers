@@ -35,7 +35,10 @@ Actual native ordinary and arbitrary finite-label numbered constructor
 computability are now checked by the joint head/base/label/extra induction.
 Full native substitution, genuine all-term C, least-set membership and
 encodedR accessibility are now checked under the original rank certificate.
-These native results do not discharge the independent internal I/C obligations.
+Native context-uniform carrier/Object accessibility and standard-least-model
+truth of the original closed allTermsFormula are now checked at the SAME
+final tuple, retaining the entire previous Package. These native results
+do not discharge the independent internal I/C or Derivation obligations.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
