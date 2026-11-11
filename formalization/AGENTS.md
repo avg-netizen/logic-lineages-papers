@@ -18,7 +18,9 @@ Independent internal transparent lambda selector/shape/root callbacks are checke
 with a 1,124-module closure. Local lambda laws and bottom normalization are also
 checked, completing all nine local transparent-validator contracts. Final-fold
 absorption and SAME-final lambda validity now complete all eight final contracts
-with a 2,300-module closure. Lambda-aware canonical traversal remains active.
+with a 2,300-module closure. All eight native and eight internal lambda-aware
+traversal runtime contracts are checked; internal closure has 1,266 modules.
+Final canonical-body integration remains active.
 Accepted and frozen mathematical sources stay immutable; pending candidates are
 not accepted merely because they exist locally.
 
