@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableAccessibilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableAccessibilityGate
+
+theorem successorInverse : NumberedBottomVariableAccessibilityTargets.ActualPositiveSuccessorInverse :=
+  NumberedBottomVariableAccessibilityProof.actualPositiveSuccessorInverse
+
+theorem accessibility : NumberedBottomVariableAccessibilityTargets.ActualAccessibilityPreservation :=
+  NumberedBottomVariableAccessibilityProof.actualAccessibilityPreservation
+
+theorem edgeAccessibility : NumberedBottomVariableAccessibilityTargets.ActualEdgeAccessibilityPreservation :=
+  NumberedBottomVariableAccessibilityProof.actualEdgeAccessibilityPreservation
+
+theorem singleBottom : NumberedBottomVariableAccessibilityTargets.ActualSingleBottomAccessibilityEquivalence :=
+  NumberedBottomVariableAccessibilityProof.actualSingleBottomAccessibilityEquivalence
+
+theorem singleBottomEdge : NumberedBottomVariableAccessibilityTargets.ActualSingleBottomEdgeAccessibilityEquivalence :=
+  NumberedBottomVariableAccessibilityProof.actualSingleBottomEdgeAccessibilityEquivalence
+
+#print axioms successorInverse
+#print axioms accessibility
+#print axioms edgeAccessibility
+#print axioms singleBottom
+#print axioms singleBottomEdge
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableAccessibilityGate
