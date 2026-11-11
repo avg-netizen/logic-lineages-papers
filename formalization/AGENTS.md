@@ -1,3 +1,26 @@
+# Current checkpoint — original lambda constructors and certificates
+
+Thirteen exact supporting contracts in 26 new Lean modules are checked:
+original lambda constructor graph laws and raw/typed calibration, actual
+encoded context extension with an independent internal runtime construction,
+and SAME-certificate lambda body inversion retaining replacement/root.
+Focused closures have 1,049 / 1,045 / 712 source-matched native modules;
+standard axioms only. These are not a full-root build or remote-CI pass.
+All previous sources, fixed toolchain and bounded resource limits are retained.
+
+Register remains **171 checked, 2 inherited, 16 pending / 189**. Original
+lambda/substitution computability, canonical-body coherence, constructor and
+multiset cases and closed all-term accessibility are still pending. Next:
+original beta-result supplier and all-input-equal lambda leaf guard, with
+internal graph consequences proved independently of native calibration.
+Continue until **11 November 2026, 17:30 UTC**, then stop without automatic
+resumption. Private/supervised lanes remain stopped. Read
+[lambda constructors](verification/continuation-2026-11-11/lambda-constructors/STATUS.md),
+[context extension](verification/continuation-2026-11-11/context-extension/STATUS.md),
+[lambda certificates](verification/continuation-2026-11-11/lambda-certificates/STATUS.md).
+
+---
+
 # Current checkpoint — original neutral and all-type variable computability
 
 Seven exact supporting contracts in 35 new Lean modules are checked. Original
