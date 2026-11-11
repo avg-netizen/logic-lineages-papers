@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineNonBottomProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineNonBottomStatementChecks
+
+theorem fixedActualOriginalSpineGuardRejectsBottom :
+    OriginalSpineNonBottomTargets.ActualOriginalSpineGuardRejectsBottom :=
+  OriginalSpineNonBottomProof.actualOriginalSpineGuardRejectsBottom
+#print axioms fixedActualOriginalSpineGuardRejectsBottom
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineNonBottomStatementChecks

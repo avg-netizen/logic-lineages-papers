@@ -1,3 +1,21 @@
+# Current checkpoint — original child certificate and same-code suffix
+
+Eight exact supporting contracts in 37 new Lean modules are checked, with
+2,077 source-matched native modules and standard-only exact/namespace axioms.
+The original function-child Object certificate and unchanged-code suffix
+source certificate are now internally constructed. One calibrated final tuple
+retains the complete previous Package and all new consumers. No final-endpoint
+application shape is assumed. All inherited mathematical/frozen sources and
+fixed native limits remain unchanged. Register: **171 checked, 2 inherited,
+16 pending / 189**; paper06 `lem:id1` remains pending. Read
+[accepted status](verification/continuation-2026-11-11/child-certificate/STATUS.md).
+
+Continue the public task until **11 November 2026, 17:30 UTC**. Next is actual
+application computability and finite-type neutral/arrow induction. Private and
+separately paused supervised lanes remain stopped. No full-root/remote-CI claim.
+
+---
+
 # Current public release — original child certificate and same-code suffix
 
 The user requested continuation after the latest additional work until
