@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityEvaluationSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityEvaluationTransitionProof
+open OriginalHereditaryValidity OriginalHereditaryValidityEvaluationSupportProof
+open InternalApplicationCertificateConstructorsEvaluationProof
+open InternalApplicationStepPeelEvaluationSupportProof InternalAcceptanceCalibrationProof
+open InternalApplicationValidityStackEvaluationProof (oneEvaluation zeroEvaluation)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem actualOriginalHereditaryTransitionCalibration :
+    OriginalHereditaryValidityTargets.ActualOriginalHereditaryTransitionCalibration := by
+  intro oldSource oldTarget member state
+  simp only [transition, evalBranch, exactOneEvaluation, statusEvaluation, workEvaluation,
+    nodeCheckEvaluation, sameEvaluation, currentTagEvaluation, twoEvaluation, oneEvaluation,
+    poppedEvaluation, applicationExpandedEvaluation, lambdaExpandedEvaluation,
+    currentRawEvaluation, currentParameterEvaluation, currentFrameEvaluation,
+    restEvaluation, zeroEvaluation, projectionEvaluation, List.Vector.get_ofFn,
+    Matrix.cons_val_zero]
+  unfold transitionValue
+  split_ifs <;> simp_all
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityEvaluationTransitionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityEvaluationTransitionProof
