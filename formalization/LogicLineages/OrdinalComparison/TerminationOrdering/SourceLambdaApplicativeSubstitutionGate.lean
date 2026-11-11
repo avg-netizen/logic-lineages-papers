@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaApplicativeSubstitutionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaApplicativeSubstitutionGate
+
+theorem substitution : SourceLambdaApplicativeSubstitutionTargets.ActualLambdaApplicativeComputableSubstitution :=
+  SourceLambdaApplicativeSubstitutionProof.actualLambdaApplicativeComputableSubstitution
+
+#print axioms substitution
+#print axioms SourceLambdaApplicativeSubstitutionProof.actualLambdaApplicativeComputableSubstitution
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaApplicativeSubstitutionGate
