@@ -25,8 +25,8 @@ theorem scanOfMinimum (T : Program 2) (P : Program 3) (out seed parameter : OTer
     Nonempty (Derivation body Delta
       (graph3 (scan (reflexiveClassTest T P)) out (suc seed) seed parameter)) := by
   let xs : Fin 2 → OTerm α := Fin.cons seed (Fin.cons parameter Fin.elim0)
-  let control := Program.composition InternalEqualityTest.equalityTest ![T,InternalLessThan.constantOne 2]
-  let branch := Program.composition (scan (reflexiveClassTest T P))
+  let control : Program 2 := Program.composition InternalEqualityTest.equalityTest ![T,InternalLessThan.constantOne 2]
+  let branch : Program 2 := Program.composition (scan (reflexiveClassTest T P))
     ![.composition .succ (fun _ : Fin 1 => .projection 0),.projection 0,.projection 1]
   have hc : Nonempty (Derivation body Delta (programGraph control (suc z) xs)) := by
     apply compositionValue InternalEqualityTest.equalityTest ![T,InternalLessThan.constantOne 2]

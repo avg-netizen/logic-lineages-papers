@@ -1,4 +1,23 @@
-# Current checkpoint — original Object applications and spine guards
+# Current checkpoint — repaired rank, minimum search and observer guards
+
+33 exact supporting contracts now pass six focused native gates with standard
+axioms. These cover the inherited raw/final rank and transparent least-hit drafts,
+the observer class Hit law, its active guard collapse and native all-input rank
+calibration. The class predicate retains the entire old predicate when inactive;
+activation uses the original window and transparent source before minimization.
+The final guarded-rank completion also discharges its original unconditional
+contracts. See [the checkpoint status](verification/fable-collaboration-2026-11-11/STATUS.md)
+for exact gates, provenance, resource limits and the remaining source boundary.
+
+Fable and local proof work are paused. The register remains **171 checked,
+2 inherited, 16 pending / 189**. Original internal representative coherence,
+I/C and full paper06 accessibility remain pending. No full-root or remote-CI
+pass is claimed. The checker now reuses content-verified `.olean` modules;
+44 helper/regression tests pass and the fixed native resource limits remain.
+
+---
+
+# Previous checkpoint — original Object applications and spine guards
 
 11 exact supporting contracts in 58 new Lean modules extend `594d0a1a`
 on the existing cumulative branch. The first quotient-edge function case now

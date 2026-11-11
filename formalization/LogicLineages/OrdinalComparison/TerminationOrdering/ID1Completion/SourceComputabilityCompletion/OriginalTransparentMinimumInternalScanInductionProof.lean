@@ -10,7 +10,8 @@ open OriginalTransparentMinimum OriginalTransparentMinimumInternalScanSyntaxProo
 open OriginalTransparentMinimumInternalScanSupportProof OriginalTransparentMinimumStepGraphsProof
 open InternalGraphComposition InternalAcceptanceSupportProof InternalControlGraphSupportProof
 open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
-open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalBetaTotalityProof
+open InternalTagArithmeticSyntaxProof hiding OTerm
+open InternalTagArithmeticSupportProof InternalBetaTotalityProof
 open InternalOriginalOrderSyntaxProof InternalQuotientComparisonProof InternalPositiveUnfoldingSupportProof
 open InternalSourceInversionSupportProof InternalLeastNumberProof InternalControlGraphChoiceProof
 open InternalClosedPrograms InternalClosedProgramsBindingProof SourceComputabilityFormulaSupportProof
@@ -152,15 +153,18 @@ or external induction over standard natural numbers supplies this derivation. -/
 theorem allRows (Q : Program 3) (bound : OTerm α) : Nonempty (Derivation body Gamma (scanRow Q bound)) := by
   let theta : Formula (α ⊕ Fin 1) := scanRow Q (.var (.inr 0))
   have hz : Nonempty (Derivation body Gamma (instantiate theta (emb z))) := by
-    simpa only [theta,rowInstantiate,varBind] using (zeroRow (body := body) (Gamma := Gamma) Q)
+    simpa only [theta,OriginalTransparentMinimumInternalScanSyntaxProof.rowInstantiate,varBind]
+      using (zeroRow (body := body) (Gamma := Gamma) Q)
   have hs : Nonempty (Derivation body (theta :: Gamma.map weaken) (successorInstance theta)) := by
     have h := succRow (body := body) (Gamma := theta :: Gamma.map weaken)
       Q (.var (.inr (0 : Fin 1))) ⟨Derivation.hypothesis List.mem_cons_self⟩
-    simpa only [theta,rowSuccessor,nextTerm,Term.subst,Sum.elim_inr] using h
+    simpa only [theta,OriginalTransparentMinimumInternalScanSyntaxProof.rowSuccessor,
+      nextTerm,Term.subst,Sum.elim_inr] using h
   obtain ⟨hz⟩ := hz
   obtain ⟨hs⟩ := hs
   have h := Derivation.universalElimination (emb bound) (natInduction theta hz hs)
-  simpa only [theta,rowInstantiate,varBind] using (Nonempty.intro h)
+  simpa only [theta,OriginalTransparentMinimumInternalScanSyntaxProof.rowInstantiate,varBind]
+    using (Nonempty.intro h)
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalScanInductionProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalScanInductionProof

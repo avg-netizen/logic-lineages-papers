@@ -7,7 +7,8 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open OriginalTransparentMinimum OriginalTransparentMinimumInternalScanSyntaxProof
 open OriginalTransparentMinimumInternalScanInductionProof
 open InternalGraphComposition InternalControlGraphSupportProof
-open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof InternalBetaTotalityProof
+open InternalTagArithmeticSyntaxProof hiding OTerm
+open InternalTagArithmeticSupportProof InternalBetaTotalityProof
 open InternalOriginalOrderSyntaxProof InternalSquareRootArithmeticSupportProof
 open InternalQuotientComparisonProof InternalPositiveUnfoldingSupportProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
@@ -33,7 +34,10 @@ theorem actualOriginalTransparentMinimumInternalScan :
       (Derivation.conjunctionLeft (Derivation.conjunctionRight h))
       (Derivation.conjunctionIntroduction
         (Derivation.conjunctionRight (Derivation.conjunctionRight h))
-        (Derivation.implicationIntroduction hm))))⟩
+        (Derivation.implicationIntroduction (by
+          simpa only [E,A,InternalControlGraphSupportProof.equalEqn,
+            InternalLessThan.strictLess,InternalOriginalOrderSyntaxProof.ltF,
+            InternalOriginalStepGuard.one] using hm)))))⟩
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalScanProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalScanProof

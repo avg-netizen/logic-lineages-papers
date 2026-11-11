@@ -1,18 +1,18 @@
 # Logic lineages papers
 
 **Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [original Object-application and spine-guard checkpoint](formalization/verification/continuation-2026-11-11/object-application/STATUS.md)
-adds 11 checked supporting contracts on `formalization/cumulative-continuation-2026-11-09`.
-The first-edge source consumer reconstructs the original accepted Object
-application with the same argument and context. The full canonical fold
-preserves bottom-spine marks, and an all-input-equal leaf refinement supports
-internal spine-guard transport through the original selected checker. One
-calibrated final tuple retains these laws and the complete prior package.
-Function-child Object source certificates, suffix closure and finite-type
-neutral/arrow computability remain pending. [TARGETS.json](formalization/TARGETS.json)
-is authoritative. The [next proof obligations](formalization/verification/continuation-2026-11-11/object-application/NEXT-STEPS.md)
-and older [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md)
-record the current boundary and inherited work. Earlier counts are historical.
+The latest [Fable collaboration checkpoint](formalization/verification/fable-collaboration-2026-11-11/STATUS.md)
+checks 33 supporting contracts for raw/final rank, transparent minimum search,
+and an observer guard activated inside the original class test. The native
+calibration retains the old class predicate on every input, including inactive
+and malformed inputs. Earlier child-certificate, suffix and finite-type neutral
+components are recorded in the inherited continuation packets.
+
+Original internal representative coherence, the remaining I/C argument and full
+paper06 accessibility remain pending. [TARGETS.json](formalization/TARGETS.json)
+is authoritative; no numbered statement is promoted by this checkpoint. Fable
+and local proof work are paused after the current repairs. Earlier counts and
+continuation instructions are historical.
 
 **Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
 

@@ -1,3 +1,48 @@
+# Current state — checkpoint repaired; author and proof work paused
+
+The current Fable003 checkpoint has completed its bounded constructive repairs
+and all six exact/standard-axiom gates (33 supporting contracts). The user asked
+to pause Fable and commit/push, then explicitly permitted finishing these repairs.
+Fable has stopped, and the native compiler policy is paused. No author successor,
+new target, compiler run, quota-reset restart or automatic research resumption
+without a new explicit user release. Publication/evidence closeout is authorized
+on `formalization/cumulative-continuation-2026-11-09`; no main merge.
+
+Read [the current checkpoint](verification/fable-collaboration-2026-11-11/STATUS.md).
+Paper06 original internal I/C/accessibility remain pending; register 171 checked,
+2 inherited, 16 pending /189. All earlier active/cutoff instructions below are
+historical where they conflict with this completed pause. Other lanes stay stopped.
+
+---
+
+# Current user instruction — finish checkpoint, pause Fable, commit and push
+
+The user requests: "after the current work finishes, pause fable and commit/push".
+Only the existing round003/current checkpoint may finish native verification,
+constructive repairs, exact-type/axiom checks and handoff. No round004 or new
+proof target. Fable has returned and is stopped; the existing compiler closeout
+remains authorized. Read
+[the bounded closeout](verification/fable-collaboration-2026-11-11/STOP-AFTER-CHECKPOINT.json).
+After all owned jobs finish, pause the compiler policy and publish this checked
+checkpoint on the existing cumulative Nov9 continuation branch. No main merge.
+Paper06 internal I/C and original full accessibility remain pending.
+
+---
+
+# Current user release — Fable 5.2 high collaboration, 11 November 2026
+
+The user requests fetching the papers repository and collaboration with Fable
+5.2 high to finish the current target. Read
+[the current brief](verification/fable-collaboration-2026-11-11/BRIEF.md).
+Continue paper06 original context-uniform internal accessibility from fetched
+13fa60d8, preserving accepted/frozen statements and the original semantics.
+Earlier local pauses and the external 17:30 UTC cutoff are superseded only
+for this work. Root and one Fable author collaborate; other lanes stay stopped.
+Keep exact-type/standard-axiom gates and bounded serialized native checks.
+No automatic Git publication, dependency/toolchain, manuscript or CI changes.
+
+---
+
 # Current checkpoint — canonicalized typed transport complete
 
 Both original typed/source decoder families have checked independent internal

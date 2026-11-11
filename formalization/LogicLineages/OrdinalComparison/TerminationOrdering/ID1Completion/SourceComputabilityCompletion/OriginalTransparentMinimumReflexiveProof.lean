@@ -36,8 +36,14 @@ theorem classReflexive (n : Nat) (arity : Fin n → Nat) (seed parameter : Nat) 
     classValue n arity (ofFn ![seed,seed,parameter]) =
       targetValue n arity (ofFn ![seed,parameter]) := by
   obtain ⟨Gamma,ho⟩ := BottomRepresentativeEvaluationProof.parameterGamma parameter
-  simp only [classValue,targetValue,List.Vector.get_ofFn,Matrix.cons_val_zero,
-    Matrix.cons_val_one,Matrix.cons_val_two,decodedValue,ho]
+  change decodedValue n (fun ctx obj =>
+      ((NumberedUniformPackedDecoding.rawPackedDecode n arity obj.1 obj.2).any
+        (fun q => ContextUniformPrimary.classNumberTest arity ctx.1.1 ctx.1.2 obj.1 q seed)).toNat)
+      seed parameter =
+    decodedValue n (fun _ obj =>
+      (NumberedUniformPackedDecoding.rawPackedDecode n arity obj.1 obj.2).isSome.toNat)
+      seed parameter
+  simp only [decodedValue,ho seed]
   cases hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n)
       (Nat.unpair parameter).1 with
   | none => rfl

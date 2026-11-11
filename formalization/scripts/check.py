@@ -4,6 +4,8 @@
 This helper never invokes Lake dependency updates or an upstream build. It
 uses this package's dependencies when populated, or the included calculator's
 same-pinned development cache. That cache path is not a source dependency.
+Successful native modules retain checked artifacts keyed by source, imported
+artifact bytes and the pinned compiler. --fresh bypasses this reuse.
 """
 from __future__ import annotations
 import argparse
@@ -183,7 +185,7 @@ def discard_failed_outputs(target: Path) -> list[Path]:
     removed = []
     artifacts = [target, Path(str(target) + ".private"),
                  Path(str(target) + ".server"), target.with_suffix(".ir"),
-                 target.with_suffix(".ilean")]
+                 target.with_suffix(".ilean"), target.with_suffix(".checked.json")]
     for artifact in artifacts:
         try:
             artifact.unlink()
@@ -191,6 +193,119 @@ def discard_failed_outputs(target: Path) -> list[Path]:
         except FileNotFoundError:
             pass
     return removed
+
+
+_FILE_DIGESTS: dict[tuple, str] = {}
+_RECEIPT_VALUES: dict[tuple, dict] = {}
+
+
+def file_signature(path: Path) -> tuple:
+    stat = path.stat()
+    return (str(path), stat.st_dev, stat.st_ino, stat.st_size,
+            stat.st_mtime_ns, stat.st_ctime_ns)
+
+
+def file_digest(path: Path) -> str | None:
+    try:
+        signature = file_signature(path)
+        if signature not in _FILE_DIGESTS:
+            digest = hashlib.sha256()
+            with path.open('rb') as stream:
+                for block in iter(lambda: stream.read(1024 * 1024), b''):
+                    digest.update(block)
+            if signature != file_signature(path):
+                raise RuntimeError('File changed while hashing: ' + str(path))
+            _FILE_DIGESTS[signature] = digest.hexdigest()
+        return _FILE_DIGESTS[signature]
+    except FileNotFoundError:
+        return None
+
+
+def object_bundle(target: Path) -> dict[str, str | None]:
+    """Include every loadable companion, so a partial/replaced bundle misses."""
+    return {str(p): file_digest(p) for p in
+            [target, Path(str(target) + '.private'), Path(str(target) + '.server'),
+             target.with_suffix('.ir')]}
+
+
+def checked_input_key(source: Path, dependencies: list[Path], context: dict) -> str:
+    value = {'source_sha256': file_digest(source), 'context': context,
+             'dependencies': {str(p): object_bundle(p) for p in dependencies}}
+    return hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
+
+
+def save_checked_cache(target: Path, key: str, row: dict, receipt: Path,
+                       profile: dict) -> None:
+    """Record a successful native row, never just the presence of an object."""
+    if row.get('returncode') != 0 or not target.is_file():
+        return
+    log = ROOT / row['log']
+    entry = {'schema': 1, 'input_key': key, 'outputs': object_bundle(target),
+             'native_row': row, 'native_receipt': str(receipt),
+             'native_profile': profile, 'log_sha256': file_digest(log)}
+    path = target.with_suffix('.checked.json')
+    temporary = path.with_name(path.name + f'.{os.getpid()}.tmp')
+    temporary.write_text(json.dumps(entry, sort_keys=True) + '\n')
+    temporary.replace(path)
+
+
+def checked_cache_hit(target: Path, key: str, profile: dict) -> dict | None:
+    """Reuse only the same inputs, exact native outputs and original proof log."""
+    try:
+        entry = json.loads(target.with_suffix('.checked.json').read_text())
+        row = entry['native_row']
+        if (entry['schema'] != 1 or entry['input_key'] != key or
+                entry['native_profile'] != profile or row.get('returncode') != 0 or
+                not target.is_file() or entry['outputs'] != object_bundle(target) or
+                entry['log_sha256'] is None or
+                entry['log_sha256'] != file_digest(ROOT / row['log'])):
+            return None
+        receipt_path = Path(entry['native_receipt'])
+        signature = file_signature(receipt_path)
+        if signature not in _RECEIPT_VALUES:
+            _RECEIPT_VALUES[signature] = json.loads(receipt_path.read_text())
+        receipt = _RECEIPT_VALUES[signature]
+        if any(receipt.get(k) != v for k, v in profile.items()):
+            return None
+        if row not in receipt.get('modules', []):
+            return None
+        return {**row, 'status': 'verified-cache-hit',
+                'verified_from': entry['native_receipt']}
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def checked_compiler_context(compiler: str, env: dict, external: set[str]) -> dict:
+    """Bind cache entries to the compiler, pinned packages and imported objects."""
+    executable = Path(compiler).resolve()
+    context = {'compiler': str(executable), 'compiler_sha256': file_digest(executable),
+               'lean_path': env['LEAN_PATH'], 'pins': {}, 'external_objects': {}}
+    search = [Path(p) for p in env['LEAN_PATH'].split(os.pathsep)]
+    # Elan is a selector: fingerprint the selected compiler as well as its shim.
+    # Script-based test compilers need no probe and are never run unbounded here.
+    with executable.open('rb') as binary:
+        is_elf = binary.read(4) == b'\x7fELF'
+    if is_elf:
+        probe = subprocess.run([compiler, '--print-prefix'], cwd=ROOT, env=env,
+                               capture_output=True, text=True, timeout=5)
+        if probe.returncode:
+            raise RuntimeError('Cannot identify selected Lean compiler for cache')
+        prefix = Path(probe.stdout.strip())
+        if not prefix.is_absolute():
+            raise RuntimeError('Selected Lean compiler prefix is not absolute')
+        context['selected_compiler'] = file_digest(prefix / 'bin/lean')
+        search.append(prefix / 'lib/lean')
+    for root in (ROOT, CALCULATOR):
+        for name in ('lean-toolchain', 'lake-manifest.json', 'lakefile.toml', 'lakefile.lean'):
+            path = root / name
+            context['pins'][str(path)] = file_digest(path)
+    for module in sorted(external):
+        relative = Path(module.replace('.', '/') + '.olean')
+        path = next((p / relative for p in search if (p / relative).is_file()), None)
+        if path is None:
+            raise RuntimeError('Cannot identify external cached import: ' + module)
+        context['external_objects'][module] = object_bundle(path)
+    return context
 
 
 def main() -> int:
@@ -244,6 +359,7 @@ def main() -> int:
             parser.error("Source not found: " + module)
         requested.append(module)
     order, visiting, visited, dependencies = [], set(), set(), {}
+    external_dependencies = {}
     external_imports = set()
     def visit(module):
         if module in visited:
@@ -272,6 +388,7 @@ def main() -> int:
         if re.search(r"\b(?:sorry|admit|native_decide)\b|^\s*(?:private\s+|public\s+)?axiom\b", clean, re.M):
             raise RuntimeError("Forbidden proof placeholder or axiom in " + module)
         dependencies[module] = []
+        external_dependencies[module] = []
         for line in IMPORT.findall(clean):
             for dependency in line.split():
                 if source_for(dependency) is not None:
@@ -279,6 +396,7 @@ def main() -> int:
                     visit(dependency)
                 else:
                     external_imports.add(dependency)
+                    external_dependencies[module].append(dependency)
         visiting.remove(module); visited.add(module); order.append(module)
     for module in requested:
         visit(module)
@@ -309,6 +427,12 @@ def main() -> int:
         reports.mkdir(exist_ok=True)
         receipt_path=reports/(str(time.time_ns())+'-'+str(os.getpid())+'.json')
         rows=[]
+        profile = {'heap_cap_mib':args.memory_mib, 'rss_cap_mib':args.rss_mib,
+                   'wall_seconds':args.timeout, 'cpu_seconds':args.cpu_seconds,
+                   'minimum_free_mib':args.min_free_mib, 'core_only_profile':args.core_profile,
+                   'single_thread':args.threads==1, 'threads':args.threads,
+                   'upstream_cache_only':True}
+        cache_context = checked_compiler_context(compiler, env, external_imports)
         def limits():
             resource.setrlimit(resource.RLIMIT_AS,(16*1024**3,16*1024**3))
             resource.setrlimit(resource.RLIMIT_CPU,(args.cpu_seconds,args.cpu_seconds+2))
@@ -321,13 +445,30 @@ def main() -> int:
             if not args.fresh and module.startswith('R1Calculator') and borrowed.is_file():
                 rows.append({'module':module,'status':'existing-calculator-object','source_sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
                 continue
-            if not args.fresh and module not in requested and target.is_file():
-                local_inputs = [path]
-                for dependency in dependencies[module]:
-                    dep_object = BUILD/(dependency.replace('.', '/')+'.olean')
-                    if not dep_object.is_file() and dependency.startswith('R1Calculator'):
-                        dep_object = CALCULATOR/'.lake/build/lib/lean'/(dependency.replace('.', '/')+'.olean')
-                    local_inputs.append(dep_object)
+            dep_objects = []
+            for dependency in dependencies[module]:
+                dep_object = BUILD/(dependency.replace('.', '/')+'.olean')
+                if not dep_object.is_file() and dependency.startswith('R1Calculator'):
+                    dep_object = CALCULATOR/'.lake/build/lib/lean'/(dependency.replace('.', '/')+'.olean')
+                dep_objects.append(dep_object)
+            module_context = {**cache_context, 'external_objects':
+                              {d: cache_context['external_objects'][d]
+                               for d in external_dependencies[module]}}
+            key = checked_input_key(path, dep_objects, module_context)
+            cached = None if args.fresh else checked_cache_hit(target, key, profile)
+            if cached is not None:
+                rows.append(cached)
+                # Keep legacy timestamp-based consumers compatible after a
+                # source-only touch; hashes above established the exact bytes.
+                newest_input = max(p.stat().st_mtime_ns for p in [path, *dep_objects])
+                if newest_input > target.stat().st_mtime_ns:
+                    os.utime(target, ns=(target.stat().st_atime_ns,
+                                        max(time.time_ns(), newest_input)))
+                print('CACHE_HIT '+module, flush=True)
+                continue
+            if (not args.fresh and module not in requested and target.is_file()
+                    and not target.with_suffix('.checked.json').exists()):
+                local_inputs = [path, *dep_objects]
                 if all(p.is_file() and target.stat().st_mtime_ns >= p.stat().st_mtime_ns
                        for p in local_inputs):
                     continue
@@ -387,6 +528,10 @@ def main() -> int:
                 else:
                     status=p.returncode
             output=log.read_text(errors='replace')
+            if not status and checked_input_key(path, dep_objects, module_context) != key:
+                status = 79
+                output += '\nINPUT_CHANGED: source or imported objects changed during compilation.\n'
+                log.write_text(output)
             discarded = discard_failed_outputs(target) if status else []
             row={'module':module,'returncode':status,'seconds':round(time.monotonic()-started,3),'observed_cpu_seconds':cpu_seconds,'last_wait_channel':wait_channel,'stopped_threads':stopped_threads,'peak_process_tree_rss_kib':peak_rss,'memory_observation_failure':memory_observation_failure,'discarded_failed_outputs':[str(p.relative_to(ROOT)) for p in discarded],'source_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'log':str(log.relative_to(ROOT))}
             rows.append(row)
@@ -401,7 +546,12 @@ def main() -> int:
                 print(f'COMPILE_FAILED {module}: {status}',flush=True)
                 print('BUILD_RECEIPT '+str(receipt_path.relative_to(ROOT)),flush=True)
                 return status if status>0 else 1
+            save_checked_cache(target, key, row, receipt_path, profile)
             print('COMPILE_PASS '+module,flush=True)
+        receipt = {'requested':requested, **profile,
+                   'calculator_objects_borrowed':not args.fresh, 'modules':rows}
+        (reports/'latest.json').write_text(json.dumps(receipt,indent=2)+'\n')
+        receipt_path.write_text(json.dumps(receipt,indent=2)+'\n')
         print('BUILD_RECEIPT '+str(receipt_path.relative_to(ROOT)),flush=True)
         return 0
     finally:

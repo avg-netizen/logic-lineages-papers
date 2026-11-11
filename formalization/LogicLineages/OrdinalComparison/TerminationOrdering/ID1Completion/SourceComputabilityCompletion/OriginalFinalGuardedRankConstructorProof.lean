@@ -45,9 +45,13 @@ theorem applicationValue (out d e fn arg firstRank secondRank rank : OTerm alpha
   rw [graph1Rename] at hf' ha'
   rw [graph2Rename] at hs'
   let xx : Fin 4 → OTerm beta := ![d.relabel j,e.relabel j,fn.relabel j,arg.relabel j]
+  have hxs : (fun i => (xs i).relabel j) = xx := by
+    funext i
+    exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl
+      (Fin.cases rfl (fun k => Fin.elim0 k)))) i
   have hq' : ∀ i, Nonempty (Derivation body Theta (programGraph (qs i) (ys i) xx)) := by
     intro i
-    simpa only [xs,xx,consTermRename,emptyRename] using hq i
+    simpa only [hxs] using hq i
   have hfr := unaryRecover InternalUnpair.right (.projection 2) (ys 0) (fn.relabel j) xx
     (hq' 0) (projectionValue 2 xx)
   have har := unaryRecover InternalUnpair.right (.projection 3) (ys 1) (arg.relabel j) xx
@@ -107,9 +111,13 @@ theorem lambdaValue (out d e child rank : OTerm alpha)
   rw [graph3Rename] at hc'
   rw [graph1Rename] at hr'
   let xx : Fin 3 → OTerm beta := ![d.relabel j,e.relabel j,child.relabel j]
+  have hxs : (fun i => (xs i).relabel j) = xx := by
+    funext i
+    exact Fin.cases rfl (Fin.cases rfl
+      (Fin.cases rfl (fun k => Fin.elim0 k))) i
   have hq' : ∀ i, Nonempty (Derivation body Theta (programGraph (qs i) (ys i) xx)) := by
     intro i
-    simpa only [xs,xx,consTermRename,emptyRename] using hq i
+    simpa only [hxs] using hq i
   have hp := unaryRecover InternalUnpair.right (.projection 2) (ys 0) (child.relabel j) xx
     (hq' 0) (projectionValue 2 xx)
   have hi := binaryRecover InternalPairing.pairing (.projection 0) payload

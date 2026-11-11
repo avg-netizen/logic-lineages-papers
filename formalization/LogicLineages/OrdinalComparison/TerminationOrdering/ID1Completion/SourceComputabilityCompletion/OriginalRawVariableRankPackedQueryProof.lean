@@ -30,7 +30,7 @@ theorem packedTransformCases (p : Program 3) (d k packed : OTerm alpha) (psi : F
       Nonempty (Derivation body Theta (psi.relabel j))) :
     Nonempty (Derivation body Delta psi) := by
   let qs : Fin 3 → Program 3 := ![leftOf (.projection 2),rightOf (.projection 2),
-    .composition p ![.projection 0,.projection 1,rightOf (.projection 2)]]
+    .composition p ![.projection 0,.projection 1,rightOf (.projection 2)] ]
   let xs : Fin 3 → OTerm alpha := Fin.cons d (Fin.cons k (Fin.cons packed Fin.elim0))
   apply queryCases qs xs _
   intro beta j ys Theta hj hq

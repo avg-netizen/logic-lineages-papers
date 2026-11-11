@@ -55,9 +55,12 @@ theorem atChildren (data : Data) (window : Program 1)
   have ho' := renameInto ho j Theta hj
   rw [graph4Rename] at hi' ho'
   let xx : Fin 2 → OTerm beta := ![fn.relabel j,arg.relabel j]
+  have hxs : (fun i => (xs i).relabel j) = xx := by
+    funext i
+    exact Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)) i
   have hq' : ∀ i, Nonempty (Derivation body Theta (programGraph (qs i) (ys i) xx)) := by
     intro i
-    simpa only [xs,xx,consTermRename,emptyRename] using hq i
+    simpa only [hxs] using hq i
   have hfn := unaryRecover variableRankPackedRaw (.projection 0) (ys 0) (fn.relabel j) xx
     (hq' 0) (projectionValue 0 xx)
   have harg := unaryRecover variableRankPackedRaw (.projection 1) (ys 1) (arg.relabel j) xx

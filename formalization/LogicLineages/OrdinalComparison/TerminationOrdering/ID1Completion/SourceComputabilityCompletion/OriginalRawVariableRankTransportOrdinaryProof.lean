@@ -66,7 +66,6 @@ theorem ordinaryTransport (erasing : Bool) (raw transformed before after d k hea
   rw [graph2Rename] at hc'
   rw [graph3Rename] at ht'
   rw [graph1Rename] at hb' ha'
-  simp only [sucRelabel] at hchild
   exact ordinaryTransportAt erasing (raw.relabel j) (transformed.relabel j) (before.relabel j) (after.relabel j)
     (d.relabel j) (k.relabel j) (head.relabel j) (child.relabel j) childOut hi' hc' hchild ht' hb' ha'
 

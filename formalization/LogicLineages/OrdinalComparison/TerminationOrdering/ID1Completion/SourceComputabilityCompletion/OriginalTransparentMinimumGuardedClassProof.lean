@@ -6,6 +6,7 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumGuardedClassProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open OriginalTransparentMinimum
+open UniformCertificateCompletion
 open InternalApplicationCertificateConstructors (graph2)
 open InternalGraphComposition (OTerm)
 open InternalControlGraphSupportProof InternalAcceptanceBranchProof InternalAcceptanceSupportProof
@@ -15,6 +16,9 @@ open InternalApplicationValidityStackAppendInductionCoreProof (withHyp formulaCa
 open InternalTagArithmeticSyntaxProof (z suc eqn)
 open InternalTagArithmeticSupportProof (refl symm)
 open InternalPositiveUnfoldingSupportProof
+open InternalBetaTotalityProof (disjunctionElimination)
+open InternalQuotientComparisonProof (orLeft orRight)
+open InternalSourceInversionSupportProof (onEquality)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 
 variable {body : Positive (Fin 1)} {α : Type} {Delta : List (Formula α)}
@@ -27,6 +31,8 @@ theorem branchAlternative {k : Nat} (control a b : Program k) (out : OTerm α)
     Nonempty (Derivation body Delta (programGraph a out xs ⊔ programGraph b out xs)) := by
   apply programCases control xs _
   intro β j Gamma c hj hc
+  change Nonempty (Derivation body Gamma
+    ((programGraph a out xs).relabel j ⊔ (programGraph b out xs).relabel j))
   simp only [programRename]
   have hw' := renameInto hw j Gamma hj
   simp only [programRename] at hw'

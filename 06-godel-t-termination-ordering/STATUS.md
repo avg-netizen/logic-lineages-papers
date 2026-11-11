@@ -37,3 +37,10 @@ than refuted by this counterexample.
 The manuscript source and PDF have not been silently rewritten. Read them
 with this status qualification; the full stable ordering and height package
 is not currently established.
+
+The [11 November repaired proof checkpoint](../formalization/verification/fable-collaboration-2026-11-11/STATUS.md)
+checks 33 supporting rank, transparent-minimum and activated-observer contracts
+under the original specifications. It also checks native all-input calibration
+of the activated rank guard. These results do not establish the original
+context-uniform internal accessibility derivation or resolve the transitivity
+obstruction above. The numbered register is unchanged and proof work is paused.
