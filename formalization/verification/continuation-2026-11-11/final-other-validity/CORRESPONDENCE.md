@@ -64,3 +64,14 @@ actual `ContextUniformPrimary.step`, `reachable`, `primaryList`,
 Frozen before proof authoring. Coordinator preflight is pending. No compiler
 or Git process has been launched by this author. Accepted and other frozen
 sources remain untouched. Exact-target and axiom gates are still required.
+
+## Subsequent exact proof result
+
+Coordinator receipt `1794400129262512995-5` passed both exact aliases and the
+remaining proof modules. Namespace audits and explicit exact-alias prints
+use only standard foundations. TagProof passed separately in receipt
+`1794399930323830200-5`. Callback exposure uses the accepted
+`dispatchOpaque` / `dispatchOpaqueValue` laws underlying the frozen root
+output theorems; validator output directly consumes the accepted full-output
+hereditary recurrence. Full closure reconciliation/adoption remains with the
+coordinator.
