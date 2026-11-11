@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationObjectGlobalTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalObjectApplicationSpineGlobalPropertiesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationObjectGlobalProof
+open UniformCertificateCompletion
+
+/-- Select the original tuple before all source contexts, then use its
+literal final inputs for the entire strengthened Object/global conjunction. -/
+theorem actualOriginalSourceNeutralApplicationObjectGlobalSelection :
+    OriginalSourceNeutralApplicationObjectGlobalTargets.ActualOriginalSourceNeutralApplicationObjectGlobalSelection := by
+  intro n arity
+  obtain ⟨p,hp⟩ := GlobalSourcePackageProof.actualOriginalGlobalInputSelection n arity
+  exact ⟨p,hp,OriginalObjectApplicationSpineGlobalPropertiesProof.properties n arity p hp⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationObjectGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationObjectGlobalProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationObjectGlobalProof.actualOriginalSourceNeutralApplicationObjectGlobalSelection

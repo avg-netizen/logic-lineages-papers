@@ -1,0 +1,93 @@
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof.rawLift: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof.atValues: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof: 2 theorems
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.selectedValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.stateGuardRename: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.stateRecover: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.stateValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.spineAcceptedRename: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.leafStateValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof.selectedRecover: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof: 7 theorems
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineStateProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof.acceptedAtEdge: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof.atEdge: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof.transitionBackward: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof.atState: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof: 4 theorems
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineTransitionProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineNormalizerProof
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineNormalizerProof.normalizerBackward: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOM_AUDIT_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineNormalizerProof: 1 theorems
+COMPILE_PASS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineNormalizerProof
+Compiling LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineCheckerProof
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSelectedStepSpineCheckerProof.lean:36:13: error(lean.unknownIdentifier): Unknown identifier `binaryRecover`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSelectedStepSpineCheckerProof.lean:23:72: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Gamma : List (InternalCalculus.Formula alpha)
+endpoint : Program 6
+leaf : Program 4
+hLeaf : LeafHasSpineGuard leaf
+state s t k parameter : OTerm alpha
+he : Nonempty (Derivation body Gamma (graph3 edgeCode state s t k))
+hc : Nonempty (Derivation body Gamma (checkerGraph endpoint leaf (suc z) s t k parameter))
+beta : Type
+j : alpha → beta
+Delta : List (InternalCalculus.Formula beta)
+normalized : InternalGraphComposition.OTerm beta
+hj : ∀ r ∈ Gamma, Formula.relabel j r ∈ Delta
+hn :
+  Nonempty
+    (Derivation body Delta
+      (programGraph (normalizerP endpoint) normalized
+        (Fin.cons (Term.relabel j state) (Fin.cons (Term.relabel j parameter) Fin.elim0))))
+he' :
+  Nonempty
+    (Derivation body Delta
+      (graph3 edgeCode (Term.relabel j state) (Term.relabel j s) (Term.relabel j t) (Term.relabel j k)))
+hc' :
+  Nonempty
+    (Derivation body Delta
+      (checkerGraph endpoint leaf (suc z) (Term.relabel j s) (Term.relabel j t) (Term.relabel j k)
+        (Term.relabel j parameter)))
+xs : Fin 4 → OTerm beta :=
+  Fin.cons (Term.relabel j s)
+    (Fin.cons (Term.relabel j t) (Fin.cons (Term.relabel j k) (Fin.cons (Term.relabel j parameter) Fin.elim0)))
+ps : Fin 2 → OTerm beta := Fin.cons (Term.relabel j state) (Fin.cons (Term.relabel j parameter) Fin.elim0)
+⊢ Nonempty
+    (Derivation body Delta
+      (spineAccepted (Term.relabel j s) (Term.relabel j t) (Term.relabel j k) (Term.relabel j parameter)))
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSelectedStepSpineCheckerProof.lean:72:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineCheckerProof.checkerValue: forbidden axiom dependency sorryAx
+COMPILE_FAILED LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineCheckerProof: 1
+BUILD_RECEIPT build-reports/1794371536320909930-5.json

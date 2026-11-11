@@ -1,0 +1,85 @@
+module
+public meta import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorLeafEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.BottomSpineMeasureEvaluationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof
+open Source NumberedRewriteSyntax NumberedRewriteReduction NumberedWindowReduction
+open NumberedLeastCodeRepresentative
+open InternalOriginalUniformApplicationStepSelection
+open OriginalSpineGuardLeaf
+open UniformCertificateCompletion UniformCertificateCompletion.PositiveGuardNativeSupportProof
+open InternalAcceptanceCalibrationProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Raw typed steps decrease the original bottom-spine depth when flagged.
+No subtype-closed window or quotient representative is used. -/
+theorem stepSpine (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n))
+    (S Gamma : List Ty) (above : Fin n → Fin n → Prop) (tau : Ty)
+    (q r : AuxTerm (Fin n) arity Gamma tau)
+    (hs : WindowStep (Fin n) arity symbols S above Gamma tau q r)
+    (hx : flagValue BottomSpineMeasure.measure
+      (packedNumber (⟨tau,q⟩ : Packed (Fin n) arity Gamma)) = 1) :
+    flagValue BottomSpineMeasure.measure
+        (packedNumber (⟨tau,r⟩ : Packed (Fin n) arity Gamma)) = 1 ∧
+      depthValue BottomSpineMeasure.measure
+        (packedNumber (⟨tau,r⟩ : Packed (Fin n) arity Gamma)) <
+      depthValue BottomSpineMeasure.measure
+        (packedNumber (⟨tau,q⟩ : Packed (Fin n) arity Gamma)) := by
+  have hq := BottomSpineMeasureEvaluationProof.actualOriginalBottomSpineMeasureCalibration
+    n arity Gamma tau q
+  have hr := BottomSpineMeasureEvaluationProof.actualOriginalBottomSpineMeasureCalibration
+    n arity Gamma tau r
+  have hflag : BottomSpineMeasure.bottomFlag q = 1 := by
+    simpa only [flagValue,hq.1,BottomSpineMeasure.meaning,Nat.unpair_pair] using hx
+  obtain ⟨hnext,hlt⟩ := NumberedBottomSpineProof.actualStepSpineDecrease
+    (Fin n) arity symbols S above Gamma tau q r hs (hq.2.mp hflag)
+  constructor
+  · simpa only [flagValue,hr.1,BottomSpineMeasure.meaning,Nat.unpair_pair] using hr.2.mpr hnext
+  · simpa only [depthValue,hq.1,hr.1,BottomSpineMeasure.meaning,Nat.unpair_pair] using hlt
+
+/-- Accepted original leaf certificates supply their typed raw endpoints.
+Malformed inputs remain covered by the original leaf's rejection branches. -/
+theorem leafSpine (n : Nat) (arity : Fin n → Nat) (v : List.Vector Nat 4)
+    (ha : leafValue n arity v = 1) :
+    flagValue BottomSpineMeasure.measure (v.get 0) = 1 →
+      flagValue BottomSpineMeasure.measure (v.get 1) = 1 ∧
+        depthValue BottomSpineMeasure.measure (v.get 1) <
+          depthValue BottomSpineMeasure.measure (v.get 0) := by
+  obtain ⟨Gamma,hGamma⟩ :=
+    InternalOriginalUniformParameterLeavesCodecProof.actualOriginalUniformParameterCodec.2
+      (v.get 0) (v.get 3)
+  cases hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n)
+      (Nat.unpair (v.get 3)).1 with
+  | none => simp [leafValue,hc] at ha
+  | some ctx =>
+    have ht : NumberedNumericStep.numericStepTest n arity ctx.1.1 ctx.1.2 Gamma ctx.2
+        (v.get 0) (v.get 1) (v.get 2) = true := by
+      cases ht : NumberedNumericStep.numericStepTest n arity ctx.1.1 ctx.1.2 Gamma ctx.2
+        (v.get 0) (v.get 1) (v.get 2) <;> simp_all [leafValue]
+    obtain ⟨tau,q,r,_,hstep,hs,htarget⟩ :=
+      (NumberedNumericStepProof.numericStepCertificates n arity ctx.1.1 ctx.1.2 Gamma ctx.2
+        (v.get 0) (v.get 1)).mp ⟨v.get 2,ht⟩
+    simpa only [hs,htarget] using stepSpine n arity ctx.1.1 ctx.1.2 Gamma
+      (NumberedCopyCertificate.tableAbove ctx.2) tau q r hstep
+
+theorem leafGuardAccept (n : Nat) (arity : Fin n → Nat) (v : List.Vector Nat 4)
+    (ha : leafValue n arity v = 1) :
+    evaluate (PositiveGuard.spineGuard BottomSpineMeasure.measure) v = 1 := by
+  rw [PositiveGuardEvaluationProof.spineGuardEvaluation]
+  by_cases hx : flagValue BottomSpineMeasure.measure (v.get 0) = 1
+  · have h := leafSpine n arity v ha hx
+    simp only [hx,h.1,h.2,ite_true,and_self]
+  · simp only [hx,ite_false]
+
+theorem actualOriginalSpineGuardLeafRefinementEquality :
+    OriginalSpineGuardLeafTargets.ActualOriginalSpineGuardLeafRefinementEquality := by
+  intro n arity oldStep hc v
+  rcases OriginalConstructorLeafEvaluationProof.leafBoolean n arity v with hz | ho
+  · simp [refined,conjunctionEvaluation,hc v,hz]
+  · have hg := leafGuardAccept n arity v ho
+    simp [refined,conjunctionEvaluation,hc v,ho,hg]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof

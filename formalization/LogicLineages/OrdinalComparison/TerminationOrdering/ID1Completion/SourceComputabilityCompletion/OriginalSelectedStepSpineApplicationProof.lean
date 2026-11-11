@@ -1,0 +1,99 @@
+module
+public meta import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SpineApplicationRawProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GuardedPositiveApplicationQueriesProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof InternalApplicationStepPeelSupportProof
+open InternalParameterizedApplicationStepChecker InternalParameterizedApplicationStepCheckerSyntaxProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (OTerm suc z sucRelabel zRelabel)
+open UniformCertificateCompletion OriginalSpineGuardLeaf
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {alpha : Type} {Gamma : List (Formula alpha)}
+
+/-- One common raw application layer preserves the exact conditional guard.
+All marks are actual Program outputs; neither flag is assumed Boolean. -/
+theorem atValues (endpoint : Program 6)
+    (d e arrow f g a k S T K parameter : OTerm alpha) (ys : Fin 8 → OTerm alpha)
+    (hp : Nonempty (Derivation body Gamma
+      (liftedCheckerPremises endpoint d e arrow f g a k S T K parameter)))
+    (hg : Nonempty (Derivation body Gamma (spineAccepted f g k parameter)))
+    (hq : Nonempty (Derivation body Gamma
+      (GuardedPositiveApplicationQueriesProof.facts BottomSpineMeasure.measure f g ys))) :
+    Nonempty (Derivation body Gamma (spineAccepted S T K parameter)) := by
+  have hm0 := andLeft hq
+  have q1 := andRight hq
+  have hm1 := andLeft q1
+  have q2 := andRight q1
+  have hfl0 := andLeft q2
+  have q3 := andRight q2
+  have hdp0 := andLeft q3
+  have q4 := andRight q3
+  have hfl1 := andLeft q4
+  have q5 := andRight q4
+  have hdp1 := andLeft q5
+  have q6 := andRight q5
+  have hp0 := andLeft q6
+  have hp1 := andRight q6
+  have har := andLeft hp
+  have hfl := andLeft (andRight hp)
+  have hgl := andLeft (andRight (andRight hp))
+  have hal := andLeft (andRight (andRight (andRight hp)))
+  have happS := andLeft (andRight (andRight (andRight (andRight (andRight hp)))))
+  have happT := andLeft (andRight (andRight (andRight (andRight (andRight (andRight hp))))))
+  obtain ⟨hes⟩ := SpineApplicationRawProof.rawEquation arrow d e f a S
+    (ys 0) (ys 2) (ys 3) (suc (ys 3)) (ys 6) har hfl hal happS hm0 hfl0 hdp0
+    (successorValue (Fin.cons (ys 3) Fin.elim0))
+  obtain ⟨het⟩ := SpineApplicationRawProof.rawEquation arrow d e g a T
+    (ys 1) (ys 4) (ys 5) (suc (ys 5)) (ys 7) har hgl hal happT hm1 hfl1 hdp1
+    (successorValue (Fin.cons (ys 5) Fin.elim0))
+  have hsm : Nonempty (Derivation body Gamma (BottomSpineMeasure.graph (ys 6) S)) := by
+    obtain ⟨hp0'⟩ := hp0
+    exact ⟨Derivation.implicationElimination (Derivation.conjunctionRight hes) hp0'⟩
+  have htm : Nonempty (Derivation body Gamma (BottomSpineMeasure.graph (ys 7) T)) := by
+    obtain ⟨hp1'⟩ := hp1
+    exact ⟨Derivation.implicationElimination (Derivation.conjunctionRight het) hp1'⟩
+  let xs : Fin 4 → OTerm alpha :=
+    Fin.cons f (Fin.cons g (Fin.cons k (Fin.cons parameter Fin.elim0)))
+  have hc := PositiveSpineRulesProof.spineRecover BottomSpineMeasure.measure
+    (ys 0) (ys 1) (ys 3) (ys 5) xs hm0 hm1 hdp0 hdp1 hg
+  have hnext := GuardedPositiveApplicationArithmeticProof.conditionalSucc
+    (ys 0) (ys 1) (ys 6) (ys 7) (ys 2) (ys 4) (ys 3) (ys 5)
+    hfl0 hfl1 hp0 hp1 hc
+  exact PositiveSpineRulesProof.spineValue BottomSpineMeasure.measure
+    (ys 6) (ys 7) (suc (ys 3)) (suc (ys 5))
+    (Fin.cons S (Fin.cons T (Fin.cons K (Fin.cons parameter Fin.elim0)))) hsm htm
+    (pairRight (ys 6) (ys 2) (suc (ys 3)) hp0)
+    (pairRight (ys 7) (ys 4) (suc (ys 5)) hp1) hnext
+
+/-- Bind every mark and successor pair by original internal totality. -/
+theorem rawLift (endpoint : Program 6)
+    (d e arrow f g a k S T K parameter : OTerm alpha)
+    (hp : Nonempty (Derivation body Gamma
+      (liftedCheckerPremises endpoint d e arrow f g a k S T K parameter)))
+    (hg : Nonempty (Derivation body Gamma (spineAccepted f g k parameter))) :
+    Nonempty (Derivation body Gamma (spineAccepted S T K parameter)) := by
+  apply queryCases (GuardedPositiveApplicationQueriesProof.queries BottomSpineMeasure.measure)
+    (Fin.cons f (Fin.cons g Fin.elim0)) _
+  intro beta j ys Delta hj hq
+  simp only [spineAccepted,graph4Rename,InternalOriginalStepGuard.one,sucRelabel,zRelabel]
+  have hp' := renameInto hp j Delta hj
+  rw [liftedCheckerPremisesRename] at hp'
+  have hg' := renameInto hg j Delta hj
+  simp only [spineAccepted,graph4Rename,InternalOriginalStepGuard.one,sucRelabel,zRelabel] at hg'
+  simp only [consTermRename,emptyRename] at hq
+  exact atValues endpoint (d.relabel j) (e.relabel j) (arrow.relabel j)
+    (f.relabel j) (g.relabel j) (a.relabel j) (k.relabel j) (S.relabel j) (T.relabel j)
+    (K.relabel j) (parameter.relabel j) ys hp' hg'
+    (GuardedPositiveApplicationQueriesProof.queryFacts BottomSpineMeasure.measure
+      (f.relabel j) (g.relabel j) ys hq)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineApplicationProof

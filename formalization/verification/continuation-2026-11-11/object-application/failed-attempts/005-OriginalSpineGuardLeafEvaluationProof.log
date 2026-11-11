@@ -1,0 +1,38 @@
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSpineGuardLeafEvaluationProof.lean:80:18: error(lean.unknownIdentifier): Unknown identifier `conjunctionEvaluation`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSpineGuardLeafEvaluationProof.lean:80:2: error: unsolved goals
+case inl
+n : ℕ
+arity : Fin n → ℕ
+oldStep : Program 4
+hc : LeafCalibrated n arity oldStep
+v : List.Vector ℕ 4
+hz : leafValue n arity v = 0
+⊢ evaluate (InternalAcceptance.conjunction oldStep (PositiveGuard.spineGuard BottomSpineMeasure.measure)) v = 0
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSpineGuardLeafEvaluationProof.lean:82:18: error(lean.unknownIdentifier): Unknown identifier `conjunctionEvaluation`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSpineGuardLeafEvaluationProof.lean:81:2: error: unsolved goals
+case inr
+n : ℕ
+arity : Fin n → ℕ
+oldStep : Program 4
+hc : LeafCalibrated n arity oldStep
+v : List.Vector ℕ 4
+ho : leafValue n arity v = 1
+hg : evaluate (PositiveGuard.spineGuard BottomSpineMeasure.measure) v = 1
+⊢ evaluate (InternalAcceptance.conjunction oldStep (PositiveGuard.spineGuard BottomSpineMeasure.measure)) v = 1
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSpineGuardLeafEvaluationProof.lean:82:48: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵e̵f̵i̵n̵e̵d̵,̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵h̵c̵ ̵v̵,̵h̵o̵,̵h̵g̵]̵[̲r̲e̲f̲i̲n̲e̲d̲,̲ ̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲h̲c̲ ̲v̲,̲ ̲h̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof.stepSpine: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof.leafGuardAccept: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof.leafSpine: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSpineGuardLeafEvaluationProof.lean:85:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineGuardLeafEvaluationProof.actualOriginalSpineGuardLeafRefinementEquality: forbidden axiom dependency sorryAx

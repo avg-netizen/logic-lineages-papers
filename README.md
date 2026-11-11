@@ -1,14 +1,16 @@
 # Logic lineages papers
 
 **Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [original source neutral-application checkpoint](formalization/verification/continuation-2026-11-10/source-neutral-application/STATUS.md)
-adds seven checked supporting contracts on `formalization/cumulative-continuation-2026-11-09`.
-The original non-lambda premise now supplies application neutrality, and Object
-application inputs expose their runtime coordinates internally. The original
-source H+ consumer classifies its first edge while retaining the exact suffix
-to the requested endpoint. The finite-type neutral/arrow computability argument
-remains pending. [TARGETS.json](formalization/TARGETS.json) is authoritative.
-The [next proof obligations](formalization/verification/continuation-2026-11-10/source-neutral-application/NEXT-STEPS.md)
+The latest [original Object-application and spine-guard checkpoint](formalization/verification/continuation-2026-11-11/object-application/STATUS.md)
+adds 11 checked supporting contracts on `formalization/cumulative-continuation-2026-11-09`.
+The first-edge source consumer reconstructs the original accepted Object
+application with the same argument and context. The full canonical fold
+preserves bottom-spine marks, and an all-input-equal leaf refinement supports
+internal spine-guard transport through the original selected checker. One
+calibrated final tuple retains these laws and the complete prior package.
+Function-child Object source certificates, suffix closure and finite-type
+neutral/arrow computability remain pending. [TARGETS.json](formalization/TARGETS.json)
+is authoritative. The [next proof obligations](formalization/verification/continuation-2026-11-11/object-application/NEXT-STEPS.md)
 and older [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md)
 record the current boundary and inherited work. Earlier counts are historical.
 

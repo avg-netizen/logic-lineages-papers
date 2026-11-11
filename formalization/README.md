@@ -1,3 +1,36 @@
+# Current checkpoint — original Object applications and spine guards
+
+11 exact supporting contracts in 58 new Lean modules extend `594d0a1a`
+on the existing cumulative branch. The first quotient-edge function case now
+reconstructs the original accepted Object application, binding its target
+function and vertex Objects internally at the SAME Gamma and retaining the
+SAME argument Object. The exact original ordinary suffix remains unchanged.
+
+The SAME full canonical fold preserves the entire bottom-spine flag/depth mark.
+A new all-input-equal old-leaf refinement exposes the original spine guard;
+internal backward transport through the original peel/repeat checker pays it
+at unchanged raw endpoints, certificate and parameter. One calibrated global
+selection retains the complete previous Object/global Package and the raw-step
+guard at that SAME final tuple. No source Program is replaced by a new relation.
+
+All 11 exact aliases and 83 additional audited declarations use only
+standard axioms. The gate/preflight union has 2066 successful source-matched
+native modules. All 20 active frozen files, inherited mathematical sources,
+manuscripts and prior evidence remain unchanged. Checker, toolchain/dependency
+pins, CI and fixed serialized limits are preserved. No full-root or remote-CI
+pass is claimed.
+
+Next: combine raw-step guard progress with full-fold mark preservation to
+construct the original function-child Object source certificate; then prove
+the same-code suffix rule and finite-type neutral/arrow computability. Later
+function reducts may be lambdas, so final H+ endpoint shape is not restricted.
+Lambda/substitution, multiset, constructors and all-term accessibility remain
+pending. Paper06 `lem:id1` is pending; register **171 checked, 2 inherited,
+16 pending / 189**. Read [the accepted checkpoint](verification/continuation-2026-11-11/object-application/STATUS.md) and
+[next steps](verification/continuation-2026-11-11/object-application/NEXT-STEPS.md).
+
+---
+
 # Current checkpoint — original source neutral applications
 
 Seven exact supporting contracts in 34 new Lean modules extend `cbda2bacd`
