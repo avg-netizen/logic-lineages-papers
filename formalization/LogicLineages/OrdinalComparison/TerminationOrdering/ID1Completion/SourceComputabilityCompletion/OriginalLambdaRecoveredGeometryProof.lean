@@ -106,7 +106,8 @@ theorem actualOriginalLambdaRecoveredGeometry :
  have hc' := renameInto hparameter j Theta hj
  rw [graph4Rename] at hc'
  have he : Nonempty (Derivation body Theta
-   (graph2 InternalListCodec.consCode (ys 0) (d.relabel j) (gamma.relabel j))) := hq 0
+   (graph2 InternalListCodec.consCode (ys 0) (d.relabel j) (gamma.relabel j))) := by
+   simpa only [qs, xs, InternalRecursionGraphStepSyntaxProof.consTermRename, emptyRename] using hq 0
  have hcp := parameterAtExtension (s.relabel j) (t.relabel j) (cert.relabel j)
    (parameter.relabel j) (oldChild.relabel j) (childParam.relabel j)
    (d.relabel j) (e.relabel j) (arrow.relabel j) (context.relabel j) (gamma.relabel j) (ys 0)
@@ -117,7 +118,7 @@ theorem actualOriginalLambdaRecoveredGeometry :
  have hctor' := renameInto hctor j Theta hj
  rw [graph3Rename] at hctor'
  have hleaf' := renameInto hleaf j Theta hj
- simp only [OriginalConstructorLeaf.accepted, graph4Rename] at hleaf'
+ simp only [graph4Rename, InternalOriginalStepGuard.one, InternalTagArithmeticSyntaxProof.sucRelabel, InternalTagArithmeticSyntaxProof.zRelabel] at hleaf'
  exact andIntro (by simpa only [OriginalTypedDecoderInternalLogicSyntaxProof.equalRename] using heq')
    (andIntro ht' (andIntro hctor' (andIntro he (andIntro hcp hleaf'))))
 
