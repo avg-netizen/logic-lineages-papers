@@ -33,16 +33,17 @@ theorem childEvaluation (R : Program 2) (raw acc parameter : Nat) :
  change evaluate R (ofFn fun i : Fin 2 => evaluate
    ((![childPacked,.projection 1] : Fin 2 → Program 2) i) _) = _
  rw [vectorTwo]
+ simp only [Matrix.cons_val_zero,Matrix.cons_val_one]
  simp only [childPacked,childType,childRaw,payload,remaining,pairOfEvaluation,
-   leftOfEvaluation,rightOfEvaluation,evaluate,Nat.unpair_pair]
+   leftOfEvaluation,rightOfEvaluation,evaluate,List.Vector.get_cons_zero,List.Vector.get_cons_succ,Nat.unpair_pair]
  all_goals rfl
 
 theorem stepNil (R : Program 2) (acc parameter : Nat) :
  evaluate (walkStep R) (Nat.pair (Nat.pair 6 0) acc ::ᵥ parameter ::ᵥ nil) =
  Nat.pair (Nat.pair 6 0) acc := by
  rw [walkStep,ifSameEvaluation]
- simp only [remaining,leftOfEvaluation,constantEvaluation,evaluate,Nat.unpair_pair]
- simp
+ simp only [remaining,leftOfEvaluation,constantEvaluation,evaluate,List.Vector.get_cons_zero,List.Vector.get_cons_succ,Nat.unpair_pair]
+ all_goals simp
 
 theorem stepCons (R : Program 2) (typ child tail acc parameter : Nat) :
  evaluate (walkStep R)
@@ -50,9 +51,9 @@ theorem stepCons (R : Program 2) (typ child tail acc parameter : Nat) :
  Nat.pair tail (1 + Nat.pair (Nat.pair typ
    (evaluate R (Nat.pair typ child ::ᵥ parameter ::ᵥ nil))) acc) := by
  rw [walkStep,ifSameEvaluation]
- simp only [remaining,leftOfEvaluation,constantEvaluation,evaluate,Nat.unpair_pair,ite_true]
+ simp only [remaining,leftOfEvaluation,constantEvaluation,evaluate,List.Vector.get_cons_zero,List.Vector.get_cons_succ,Nat.unpair_pair,ite_true]
  simp only [advance,pairOfEvaluation,tailRaw,typedObservation,consOfEvaluation,
-   accumulated,payload,rightOfEvaluation,leftOfEvaluation,remaining,childType,childEvaluation,evaluate,Nat.unpair_pair]
+   accumulated,payload,rightOfEvaluation,leftOfEvaluation,remaining,childType,childEvaluation,evaluate,List.Vector.get_cons_zero,List.Vector.get_cons_succ,Nat.unpair_pair]
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsEvaluationProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsEvaluationProof

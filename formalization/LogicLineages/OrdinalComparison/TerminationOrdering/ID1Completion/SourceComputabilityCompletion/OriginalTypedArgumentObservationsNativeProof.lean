@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsWalkProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsNativeProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open OriginalTypedArgumentObservations OriginalTypedArgumentObservationsWalkProof
+open OriginalTypedArgumentObservationsReverseProof
+open NumberedLeastCodeRepresentative NumberedAuxiliaryCoding NumberedMultisetNumeric
+open OriginalRawSyntaxTransportEvaluationSupportProof
+
+theorem nativeCalibration : OriginalTypedArgumentObservationsTargets.NativeCalibration := by
+ intro R n arity Gamma types args parameter
+ rw [argumentObservations,unaryCompositionEvaluation]
+ rw [reversedEvaluation]
+ change evaluate reverse (numbersNumber (observations R args parameter).reverse ::ᵥ nil) = _
+ rw [nativeReverse,List.reverse_reverse]
+ all_goals rfl
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsNativeProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsNativeProof

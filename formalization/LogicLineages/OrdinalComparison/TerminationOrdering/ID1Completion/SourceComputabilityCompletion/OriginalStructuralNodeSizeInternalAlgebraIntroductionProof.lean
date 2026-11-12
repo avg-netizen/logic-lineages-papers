@@ -8,6 +8,7 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors OriginalRawSyntaxTransport
 open InternalControlGraphSupportProof InternalAcceptanceBranchProof
+open InternalApplicationCertificateConstructorsSupportProof
 open InternalTagArithmeticSyntaxProof (z suc)
 open InternalAdditionLawsProof (add)
 open OriginalRawSyntaxTransportInternalConstructorSubstitutionProof (arityValueAt)
