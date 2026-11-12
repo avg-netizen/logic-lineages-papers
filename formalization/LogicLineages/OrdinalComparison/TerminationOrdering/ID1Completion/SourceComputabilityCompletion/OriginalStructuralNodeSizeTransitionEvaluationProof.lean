@@ -1,0 +1,30 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralNodeSizeReturnEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralNodeSizeTransitionEvaluationProof
+open OriginalRawSyntaxTransport OriginalRawSyntaxTransportEvaluationSupportProof
+open OriginalRawSyntaxTransportStateEvaluationProof
+open OriginalStructuralNodeSizeBranchEvaluationProof OriginalStructuralNodeSizeReturnEvaluationProof
+open InternalApplicationCertificateConstructorsEvaluationProof
+open InternalApplicationResultStackEvaluationProof
+  (statusEvaluation workEvaluation resultsEvaluation currentFrameEvaluation restEvaluation)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+attribute [local irreducible] OriginalStructuralNodeSize.transition currentRaw framePayload currentType currentCutoff
+  frameTag expandedOne expandedTwo OriginalStructuralNodeSize.leafReturned
+  OriginalStructuralNodeSize.returnedOne OriginalStructuralNodeSize.returnedTwo
+  visitBranch returnBranch frameBranch
+
+theorem transitionCalibration (state : Nat) :
+    evaluate OriginalStructuralNodeSize.transition (List.Vector.ofFn ![state]) =
+      OriginalStructuralNodeSize.transitionValue state := by
+  simp only [transitionEvaluation,frameBranchEvaluation,returnBranchEvaluation,visitBranchEvaluation,
+    statusEvaluation,expandedOneEvaluation,expandedTwoEvaluation,leafEvaluation,
+    oneEvaluation,OriginalStructuralNodeSizeReturnEvaluationProof.twoEvaluation,childCutoffEvaluation,currentTypeEvaluation,
+    currentCutoffEvaluation,currentRawEvaluation,frameTagEvaluation,framePayloadEvaluation,
+    currentFrameEvaluation,restEvaluation,workEvaluation,resultsEvaluation,
+    List.Vector.get_ofFn,Matrix.cons_val_zero]
+  unfold OriginalStructuralNodeSize.transitionValue OriginalStructuralNodeSize.rebuildValue
+  split_ifs <;> simp_all
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralNodeSizeTransitionEvaluationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralNodeSizeTransitionEvaluationProof

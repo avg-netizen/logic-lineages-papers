@@ -2,13 +2,15 @@ module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralNodeSizeDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalTargets
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsProof
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralNodeSizeTargets
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalApplicationCertificateConstructors
-open InternalTagArithmeticSyntaxProof (z suc add)
+open InternalTagArithmeticSyntaxProof (z suc)
 open OriginalRawSyntaxTransport OriginalStructuralNodeSize
-open NumberedAuxiliaryCoding
+open InternalAdditionLawsProof (add)
+open NumberedAuxiliaryCoding NumberedLeastCodeRepresentative
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 
 /-- No native value is used as an internal graph premise. -/
