@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryConstructorSignaturesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryConstructorSignaturesStatementChecks
+theorem ordinaryIff : NumberedPrimaryConstructorSignaturesTargets.OrdinaryIff :=
+ NumberedPrimaryConstructorSignaturesProof.ordinaryIff
+theorem numberedIff : NumberedPrimaryConstructorSignaturesTargets.NumberedIff :=
+ NumberedPrimaryConstructorSignaturesProof.numberedIff
+#print axioms ordinaryIff
+#print axioms numberedIff
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryConstructorSignaturesStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedPrimaryConstructorSignaturesStatementChecks
