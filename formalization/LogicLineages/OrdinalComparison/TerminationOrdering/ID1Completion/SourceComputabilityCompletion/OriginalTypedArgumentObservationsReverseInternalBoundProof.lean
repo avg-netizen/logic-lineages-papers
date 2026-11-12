@@ -11,7 +11,8 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
 open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel)
 open InternalTagArithmeticSupportProof InternalAdditionLawsProof
-open InternalOriginalOrderSyntaxProof InternalOriginalOrderProof
+open InternalOriginalOrderSyntaxProof
+open InternalOriginalOrderProof (orderCases)
 open OriginalTypedArgumentObservations OriginalTypedArgumentObservationsReverseInternalStepProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 

@@ -47,7 +47,7 @@ theorem zeroRow (R : Program 2) : Nonempty (Derivation body Delta (terminalRow R
  let G := graph3 (walk R) out z initial parameter
  let Theta := G :: P :: B :: Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 5))
  obtain ⟨hn⟩ := OriginalHereditaryValidityInternalAbsorbProof.notLessZero (body := body) (Gamma := Theta) raw
- have hb : Derivation body Theta B := Derivation.hypothesis (by simp only [Theta,List.mem_cons]; exact Or.inr (Or.inr (Or.inl rfl)))
+ have hb : Derivation body Theta B := Derivation.hypothesis (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ List.mem_cons_self))
  have h : Derivation body Theta (graph2 (walkStep R) out out parameter) :=
    Derivation.explosion (Derivation.implicationElimination hn hb)
  simpa only [terminalBody,zRelabel] using (Nonempty.intro

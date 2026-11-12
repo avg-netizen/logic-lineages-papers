@@ -31,11 +31,14 @@ theorem nativeScan : OriginalHereditaryDeletionRowsTargets.NativeScan := by
     rw [scanSuccessor,ih]
     have hc : evaluate InternalListCodec.consCode
         (ofFn ![evaluate (observation Q) (ofFn ![k,input,parameter]),0]) =
-        numbersNumber [evaluate (observation Q) (ofFn ![k,input,parameter])] := rfl
+        numbersNumber [evaluate (observation Q) (ofFn ![k,input,parameter])] := by
+      simp only [numbersNumber,InternalEqualityTestEvaluationProof.vectorTwo,
+        Matrix.cons_val_zero,Matrix.cons_val_one,InternalListCodecEvaluationProof.consEvaluation]
     rw [hc]
     have ha := OriginalContextInsertionCalibrationProof.appendNumbers
       (values Q k input parameter) [evaluate (observation Q) (ofFn ![k,input,parameter])]
-    simpa only [values,List.range_succ,List.map_append,List.map_singleton] using ha
+    simpa only [values,List.range_succ,List.map_append,List.map_singleton,
+      InternalEqualityTestEvaluationProof.vectorTwo,Matrix.cons_val_zero,Matrix.cons_val_one] using ha
 
 /-- The primitive row cell uses exactly the existing original all-position selectors. -/
 theorem observationEvaluation (Q : Program 2) (k input parameter : Nat) :
@@ -43,5 +46,16 @@ theorem observationEvaluation (Q : Program 2) (k input parameter : Nat) :
       evaluate Q (ofFn ![
         evaluate OriginalClassContextAllPositionObserver.erasedPacked (ofFn ![k,input,parameter]),
         evaluate OriginalClassContextAllPositionObserver.erasedParameter (ofFn ![k,input,parameter])]) := rfl
+/-- All cutoffs, represented by their original typed prefix; the window code is unchanged. -/
+theorem observationPrefix (Q : Program 2) (c input : Nat)
+    (binders tail : List Source.Ty) (sigma : Source.Ty) :
+    evaluate (observation Q) (ofFn ![binders.length,input,
+      Nat.pair c (Encodable.encode (binders ++ sigma :: tail))]) =
+    evaluate Q (ofFn ![OriginalClassContextPrefixNative.erasedPacked binders sigma input,
+      Nat.pair c (Encodable.encode (binders ++ tail))]) := by
+  rw [observationEvaluation,
+    OriginalClassContextAllPositionNativeSelectorsProof.erasedPackedSlice,
+    OriginalClassContextAllPositionNativeSelectorsProof.erasedParameterSlice]
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsNativeProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsNativeProof

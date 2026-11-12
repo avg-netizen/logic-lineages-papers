@@ -4,7 +4,8 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalTerminationTargets
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
-open InternalApplicationCertificateConstructors InternalTagArithmeticSyntaxProof
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (z suc)
 open OriginalTypedArgumentObservationsReverseInternalTerminationDefinitions
 def ActualTermination : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type)
  (raw state acc out : OTerm alpha),

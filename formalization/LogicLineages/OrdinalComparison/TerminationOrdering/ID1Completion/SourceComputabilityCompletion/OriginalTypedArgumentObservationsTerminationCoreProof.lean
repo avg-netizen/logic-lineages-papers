@@ -14,7 +14,7 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof InternalAcceptanceSupportProof
 open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
 open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel)
-open InternalTagArithmeticSupportProof InternalQuotientComparisonSyntaxProof
+open InternalTagArithmeticSupportProof InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
 open OriginalTypedArgumentObservations OriginalTypedArgumentObservationsTerminationSyntaxProof
 open OriginalTypedArgumentObservationsInternalStepProof OriginalTypedArgumentObservationsInternalIterationProof
 open OriginalRawSyntaxTransportInternalConstructorFieldsProof
@@ -26,12 +26,18 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] walk walkStep advance
 
+theorem twoRename {beta : Type} (a b : OTerm alpha) (j : alpha → beta) :
+ (fun i : Fin 2 => ((![a,b] : Fin 2 → OTerm alpha) i).relabel j) = ![a.relabel j,b.relabel j] := by
+ funext i
+ exact Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)) i
+
 theorem fixedFromRun (R : Program 2) (count initial parameter out : OTerm alpha)
  (hf : Nonempty (Derivation body Delta (graph2 (walkStep R) initial initial parameter)))
  (hr : Nonempty (Derivation body Delta (graph3 (walk R) out count initial parameter))) :
  Nonempty (Derivation body Delta (graph2 (walkStep R) out out parameter)) := by
  have hz : Nonempty (Derivation body Delta (graph3 (walk R) initial count initial parameter)) := by
-   simpa only [walk] using fixedValue (walkStep R) count initial parameter hf
+   simpa only [walk,OriginalUniverseDecoderInternalFuelNumericSyntaxProof.repeatGraph,
+     OriginalUniverseDecoderInternalFuelNumericSyntaxProof.repeatProgram,OriginalUniverseDecoderInternalFuelNumericSyntaxProof.repeatStep] using fixedValue (walkStep R) count initial parameter hf
  obtain ⟨he⟩ := valueUnique (walk R) initial out ![count,initial,parameter] hz hr
  have ho := outputTransport (walkStep R) initial out ![initial,parameter] ⟨he⟩ hf
  exact headTransport (walkStep R) out initial out ![parameter] ⟨he⟩ ho
@@ -47,6 +53,7 @@ theorem consTerminal (R : Program 2) (count raw acc initial parameter out typ ch
  let listP := consOf (typedObservation R) accumulated
  apply programCases listP xs _
  intro beta j Theta nextAcc hj ha
+ simp only [xs,twoRename] at ha
  rw [graph2Rename]
  have hp' := renameInto hp j Theta hj
  have hc' := renameInto hc j Theta hj
@@ -63,6 +70,7 @@ theorem consTerminal (R : Program 2) (count raw acc initial parameter out typ ch
  have htail := consTail remaining (raw.relabel j) (typ.relabel j) (child.relabel j) (tail.relabel j) ys hrem hc'
  apply programCases (advance R) ys _
  intro gamma k Xi next hk hn
+ simp only [ys,twoRename] at hn
  rw [graph2Rename]
  have hp'' := renameInto hp' k Xi hk
  have hc'' := renameInto hc' k Xi hk
@@ -75,11 +83,11 @@ theorem consTerminal (R : Program 2) (count raw acc initial parameter out typ ch
  simp only [graph3Rename,sucRelabel] at hc'' hr''
  simp only [InternalLessThan.strictLess,orderRename,sucRelabel] at hb''
  rw [terminalRename] at hrow''
- simp only [programRename,consTermRename,emptyRename] at htail' ha'
+ simp only [programRename,ys,twoRename] at htail' ha'
  let zs : Fin 2 → OTerm gamma := ![(initial.relabel j).relabel k,(parameter.relabel j).relabel k]
  have hpair : Nonempty (Derivation body Xi (graph2 InternalPairing.pairing next ((tail.relabel j).relabel k) (nextAcc.relabel k))) := by
    apply binaryRecover InternalPairing.pairing tailRaw listP next ((tail.relabel j).relabel k) (nextAcc.relabel k) zs
-   · simpa only [advance] using hn
+   · simpa only [advance,pairOf,listP,zs] using hn
    · exact htail'
    · exact ha'
  have hrem' := stateRemaining ((initial.relabel j).relabel k) ((raw.relabel j).relabel k)

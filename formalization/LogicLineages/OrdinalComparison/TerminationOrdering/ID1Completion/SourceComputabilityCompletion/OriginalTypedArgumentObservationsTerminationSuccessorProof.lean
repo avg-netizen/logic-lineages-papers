@@ -10,7 +10,7 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof InternalAcceptanceSupportProof
 open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
 open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel)
-open InternalTagArithmeticSupportProof InternalQuotientComparisonSyntaxProof
+open InternalTagArithmeticSupportProof InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
 open OriginalTypedArgumentObservations OriginalTypedArgumentObservationsTerminationSyntaxProof
 open OriginalTypedArgumentObservationsInternalIterationProof OriginalTypedArgumentObservationsTerminationCoreProof
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp formulaCases)
@@ -26,6 +26,11 @@ theorem successorCore (R : Program 2) (count raw acc initial parameter out : OTe
  Nonempty (Derivation body Delta (graph2 (walkStep R) out out parameter)) := by
  apply programCases InternalUnpair.left ![raw] _
  intro beta j Theta tag hj ht
+ have hv : (fun i : Fin 1 => ((![raw] : Fin 1 → OTerm alpha) i).relabel j) =
+     Fin.cons (raw.relabel j) Fin.elim0 := by
+   funext i
+   exact Fin.cases rfl (fun k => Fin.elim0 k) i
+ rw [hv] at ht
  rw [graph2Rename]
  have hrow' := renameInto hrow j Theta hj
  have hb' := renameInto hb j Theta hj
@@ -40,7 +45,7 @@ theorem successorCore (R : Program 2) (count raw acc initial parameter out : OTe
  · have he : Nonempty (Derivation body (E :: Theta) (eqn tag (numeral 7))) := by
      simpa only [E,equalEqn] using
        (show Nonempty (Derivation body (E :: Theta) E) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
-   have htag := outputTransport InternalUnpair.left tag (numeral 7) ![raw.relabel j] he (withHyp ht E)
+   have htag := outputTransport InternalUnpair.left tag (numeral 7) (Fin.cons (raw.relabel j) Fin.elim0) he (withHyp ht E)
    apply OriginalRawSyntaxTransportInternalParserBinaryProof.consCases (raw.relabel j) _ htag
    intro gamma k Xi typ child tail hk hc
    rw [graph2Rename]
