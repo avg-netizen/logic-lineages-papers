@@ -30,9 +30,9 @@ theorem rangeSubst {beta : Type} (cutoff parameter : OTerm alpha) (ts : alpha â†
       ActualRange (cutoff.subst ts) (parameter.subst ts) := by
   unfold ActualRange
   rw [existsSubst,liftedEmbedding]
-  change (rangeFields (cutoff.relabel Sum.inl) (parameter.relabel Sum.inl) (.var (.inr 0))).subst _ = _
-  rw [rangeFieldsSubst]
-  simp only [liftSubst,Term.subst,Sum.elim_inr] <;> rfl
+  unfold rangeMatrix
+  simp only [conjunctionSubst,graph1,programSubst,consTermSubst,emptySubst,OriginalContextInsertion.Below,orderSubst,
+    liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem rangeRename {beta : Type} (cutoff parameter : OTerm alpha) (j : alpha â†’ beta) :
     (ActualRange cutoff parameter).relabel j = ActualRange (cutoff.relabel j) (parameter.relabel j) := by
