@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalWeightChildProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalWeightDeletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalWeightStatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (z suc eqn)
+open OriginalHereditaryInternalWeightDefinitions
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+theorem actualUnarySame : OriginalHereditaryInternalWeightTargets.UnarySame := OriginalHereditaryInternalWeightChildProof.unarySame
+#print axioms actualUnarySame
+theorem actualUnaryExtended : OriginalHereditaryInternalWeightTargets.UnaryExtended := OriginalHereditaryInternalWeightChildProof.unaryExtended
+#print axioms actualUnaryExtended
+theorem actualBinaryFirst : OriginalHereditaryInternalWeightTargets.BinaryFirst := OriginalHereditaryInternalWeightChildProof.binaryFirst
+#print axioms actualBinaryFirst
+theorem actualBinarySecond : OriginalHereditaryInternalWeightTargets.BinarySecond := OriginalHereditaryInternalWeightChildProof.binarySecond
+#print axioms actualBinarySecond
+theorem actualDeletion : OriginalHereditaryInternalWeightTargets.Deletion := OriginalHereditaryInternalWeightDeletionProof.deletion
+#print axioms actualDeletion
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalWeightStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalWeightStatementChecks
