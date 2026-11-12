@@ -43,6 +43,25 @@ theorem fieldsSubst {alpha beta : Type} (source : Program 2) (leaf : Program 4)
  simp only [fields,conjunctionSubst,insertSubst,graph1,graph2,graph3,graph4,programSubst,
   consTermSubst,emptySubst,numeral,zSubst,sucSubst]
 
+theorem resultRename {alpha beta : Type} (source : Program 2) (leaf : Program 4)
+ (s t newParam erasedS erasedT : OTerm alpha) (j : alpha → beta) :
+ (result source leaf s t newParam erasedS erasedT).relabel j =
+ result source leaf (s.relabel j) (t.relabel j) (newParam.relabel j) (erasedS.relabel j) (erasedT.relabel j) := by
+ rw [formulaRelabelAsSubst]
+ change (result source leaf s t newParam erasedS erasedT).subst (fun a => emb (.var (j a))) = _
+ rw [resultSubst]
+ simp only [← termRelabelAsSubst]
+
+theorem fieldsRename {alpha beta : Type} (source : Program 2) (leaf : Program 4)
+ (path s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT : OTerm alpha) (j : alpha → beta) :
+ (fields source leaf path s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT).relabel j =
+ fields source leaf (path.relabel j) (s.relabel j) (t.relabel j) (cert.relabel j) (oldParam.relabel j) (newParam.relabel j)
+  (gamma.relabel j) (extended.relabel j) (d.relabel j) (cutoff.relabel j) (c.relabel j) (erasedS.relabel j) (erasedT.relabel j) := by
+ rw [formulaRelabelAsSubst]
+ change (fields source leaf path s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT).subst (fun a => emb (.var (j a))) = _
+ rw [fieldsSubst]
+ simp only [← termRelabelAsSubst]
+
 theorem atPathSubst {alpha beta : Type} (source : Program 2) (leaf : Program 4)
  (path : OTerm alpha) (ts : alpha → OTerm beta) :
  (AtPath source leaf path).subst (fun a => emb (ts a)) = AtPath source leaf (path.subst ts) := by

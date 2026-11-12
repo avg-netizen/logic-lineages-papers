@@ -24,7 +24,9 @@ theorem decorateAppend {n c : Nat} (a : Job n) (index : Nat) (xs ys : List (Stat
  decorate c a index (xs ++ ys) = decorate c a index xs ++ decorate c a (index + xs.length) ys := by
  induction xs generalizing index with
  | nil => simp [decorate]
- | cons x xs ih => simp only [List.cons_append,decorate,ih,List.length_cons]; congr 2 <;> omega
+ | cons x xs ih =>
+   simp only [List.cons_append,decorate,ih,List.length_cons,
+     Nat.add_assoc,Nat.add_comm,Nat.add_left_comm]
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryTypedJobDecorationProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryTypedJobDecorationProof

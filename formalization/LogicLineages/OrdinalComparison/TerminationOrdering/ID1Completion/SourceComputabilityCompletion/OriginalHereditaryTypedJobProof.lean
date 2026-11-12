@@ -20,6 +20,7 @@ theorem expansionClosure : ExpansionClosure := by
 theorem returnShape : ReturnShape := by
  intro n arity a ha
  rcases a with ⟨role,typ,Gamma,code⟩
+ change CoreTyped arity role typ Gamma code at ha
  cases ha with
  | term q => exact Or.inl rfl
  | arguments args =>

@@ -9,15 +9,14 @@ open OriginalHereditaryAgendaDefinitions OriginalHereditaryWorkBound OriginalHer
 open OriginalRawSyntaxTransport
 
 theorem argumentsErasure {n : Nat} {arity : Fin n → Nat} (binders Gamma : List Ty)
- (sigma : Ty) {types : List Ty} (args : AuxArguments (Fin n) arity (binders ++ sigma::Gamma) types) :
+ (sigma : Ty) : ∀ {types : List Ty} (args : AuxArguments (Fin n) arity (binders ++ sigma::Gamma) types),
  argumentsCode (substituteArguments args (prefixErasure binders Gamma sigma)) =
- eraseCode sigma binders.length (argumentsCode args) := by
- cases args with
- | nil => rfl
- | cons q rest =>
+ eraseCode sigma binders.length (argumentsCode args)
+ | _, .nil => rfl
+ | _, .cons q rest => by
    simp only [substituteArguments,argumentsCode,eraseCode,
      OriginalRawSyntaxTransportTypedSupportProof.typedErasure,argumentsErasure binders Gamma sigma rest]
-termination_by sizeOf args
+termination_by types args => sizeOf args
 
 theorem erasedCore {n : Nat} {arity : Fin n → Nat} (role typ : Nat)
  (binders Gamma : List Ty) (sigma : Ty) (code : Code (Fin n))

@@ -14,14 +14,29 @@ theorem termChildrenClosure {n c : Nat} {arity : Fin n → Nat} {Gamma : List Ty
  ∀ b ∈ decorate c (⟨0,typeNumber q.1,⟨Gamma,termCode q.2⟩⟩ : Job n) 0
    (children Gamma (termCode q.2)), Typed arity b := by
  obtain ⟨tau,q⟩ := q
- cases q <;>
+ cases q with
+ | var v =>
    simp [children,decorate,childAnnotation,annotationValue,arityValue,tagValue,
      termCode,codeNumber,typeNumber,Nat.unpair_pair,Nat.add_sub_cancel_left,Typed]
- all_goals first
-   | exact CoreTyped.term _
-   | exact CoreTyped.arguments _
-   | exact ⟨CoreTyped.term _,CoreTyped.term _⟩
-   | exact ⟨CoreTyped.arguments _,CoreTyped.arguments _⟩
+ | bottom t =>
+   simp [children,decorate,childAnnotation,annotationValue,arityValue,tagValue,
+     termCode,codeNumber,typeNumber,Nat.unpair_pair,Nat.add_sub_cancel_left,Typed]
+ | @lam Gamma d t body =>
+   simp [children,decorate,childAnnotation,annotationValue,arityValue,tagValue,
+     termCode,codeNumber,typeNumber,Nat.unpair_pair,Nat.add_sub_cancel_left,Typed]
+   exact CoreTyped.term body
+ | @app Gamma d t fn arg =>
+   simp [children,decorate,childAnnotation,annotationValue,arityValue,tagValue,
+     termCode,codeNumber,typeNumber,Nat.unpair_pair,Nat.add_sub_cancel_left,Typed]
+   exact ⟨by simpa only [typeNumber] using (CoreTyped.term fn),CoreTyped.term arg⟩
+ | ordinary head args =>
+   simp [children,decorate,childAnnotation,annotationValue,arityValue,tagValue,
+     termCode,codeNumber,typeNumber,Nat.unpair_pair,Nat.add_sub_cancel_left,Typed]
+   exact CoreTyped.arguments args
+ | numbered k head tau args extraTypes extras =>
+   simp [children,decorate,childAnnotation,annotationValue,arityValue,tagValue,
+     termCode,codeNumber,typeNumber,Nat.unpair_pair,Nat.add_sub_cancel_left,Typed]
+   exact ⟨CoreTyped.arguments args,CoreTyped.arguments extras⟩
 
 theorem argumentsChildrenClosure {n c : Nat} {arity : Fin n → Nat} {Gamma types : List Ty}
  (args : AuxArguments (Fin n) arity Gamma types) :
@@ -35,6 +50,7 @@ theorem argumentsChildrenClosure {n c : Nat} {arity : Fin n → Nat} {Gamma type
 theorem childrenClosure {n c : Nat} {arity : Fin n → Nat} (a : Job n)
  (h : Typed arity a) : ∀ b ∈ decorate c a 0 (children a.core.context a.core.code), Typed arity b := by
  rcases a with ⟨role,typ,Gamma,code⟩
+ change CoreTyped arity role typ Gamma code at h
  cases h with
  | term q => exact termChildrenClosure ⟨_,q⟩
  | arguments args => exact argumentsChildrenClosure args
