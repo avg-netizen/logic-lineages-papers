@@ -54,7 +54,7 @@ def PackedFields (p : Program 1) (state d e fp ap : OTerm alpha) : Formula alpha
  graph1 (InternalApplicationStepPeel.argumentPayload p) ap state)))
 @[simp] theorem packedFieldsRename {beta : Type} (p : Program 1) (state d e fp ap : OTerm alpha) (j : alpha → beta) :
  (PackedFields p state d e fp ap).relabel j = PackedFields p (state.relabel j) (d.relabel j) (e.relabel j) (fp.relabel j) (ap.relabel j) := by
- simp only [PackedFields,conjunctionRename,graph1Rename,positionTerm,sucRelabel,zRelabel]
+ simp only [PackedFields,conjunctionRename,graph1Rename,positionTerm,GuardedSourceSyntaxProof.numeralRename,sucRelabel,zRelabel]
 
 theorem packedFieldsAt (p : Program 1) (state input d e fp ap : OTerm alpha)
  (hp : Nonempty (Derivation body Delta (graph1 p input state)))

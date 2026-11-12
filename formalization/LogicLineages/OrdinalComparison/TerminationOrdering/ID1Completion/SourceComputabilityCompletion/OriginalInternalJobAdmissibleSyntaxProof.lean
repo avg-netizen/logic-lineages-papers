@@ -21,9 +21,9 @@ theorem argumentsWitnessSubst {beta : Type} (H : Program 1) (M W : Program 2)
  (ArgumentsWitness H M W raw gamma c).subst (fun a => emb (ts a)) =
  ArgumentsWitness H M W (raw.subst ts) (gamma.subst ts) (c.subst ts) := by
  unfold ArgumentsWitness
- rw [existsSubst,liftedEmbedding]
+ rw [existsSubst,InternalRecursionClosureSyntaxProof.liftedEmbedding]
  unfold ArgumentsMatrix
- simp only [argumentsAcceptedSubst,liftSubst,Term.subst,Sum.elim_inr] <;> rfl
+ simp only [argumentsAcceptedSubst,InternalRecursionGraphSyntaxProof.liftSubst,Term.subst,Sum.elim_inr] <;> rfl
 theorem argumentsWitnessRename {beta : Type} (H : Program 1) (M W : Program 2)
  (raw gamma c : OTerm alpha) (j : alpha → beta) :
  (ArgumentsWitness H M W raw gamma c).relabel j =
