@@ -1,0 +1,147 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomSourceProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepWrapperTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepGuardProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSpineNonBottomMeasureProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.PositiveSpineRulesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomNonApplicationSpineProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalGraphComposition InternalControlGraph
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof InternalApplicationStepPeelSupportProof
+open InternalStructuralEndpointGuardSupportProof (sameRightRecover)
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalAcceptanceConjunctionProof InternalAcceptanceNormalizationProof InternalAcceptanceBranchProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc eqn zRelabel sucRelabel)
+open SourceComputabilityFormulaSupportProof (numeral)
+open GuardedSourceSyntaxProof (numeralRename)
+open OriginalRawSyntaxTransportInternalConstructorSupportProof (numeralNe)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalParameterizedApplicationResultStack (liftP)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+/-- Any original tag distinct from TWO cannot open the original tag-two stack. -/
+theorem tagOpening (guard : Program 2) (s parameter k : OTerm alpha)
+    (ht : Nonempty (Derivation body Delta (graph1 OriginalLambdaConstructor.tag k s)))
+    (hn2 : Nonempty (Derivation body Delta (equal (numeral 2) k).not))
+    (hn3 : Nonempty (Derivation body Delta (equal k (numeral 3)).not)) :
+    Nonempty (Derivation body Delta
+      (graph2 (InternalParameterizedApplicationResultStack.openGuardP guard) z s parameter)) := by
+  let tag : Program 1 := InternalApplicationStepPeel.constructorTag (.projection 0)
+  let test : Program 1 := InternalApplicationStepPeel.same tag (two 1)
+  let xs : Fin 2 → OTerm alpha := Fin.cons s (Fin.cons parameter Fin.elim0)
+  let P := graph2 (InternalParameterizedApplicationResultStack.openGuardP guard) (suc z) s parameter
+  have hn : Nonempty (Derivation body Delta P.not) := by
+    have hp : Nonempty (Derivation body (P :: Delta) P) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have hf := conjunctionRecover (liftP test) guard xs hp
+    have htest := InternalParameterizedApplicationResultStackWiringProof.liftRecover test
+      (suc z) s parameter (andLeft hf)
+    have htwo := sameRightRecover tag (two 1) (numeral 2) (Fin.cons s Fin.elim0)
+      htest (twoValue (Fin.cons s Fin.elim0))
+    obtain ⟨he⟩ := valueUnique tag (numeral 2) k (Fin.cons s Fin.elim0) htwo (withHyp ht P)
+    obtain ⟨hn⟩ := withHyp hn2 P
+    exact ⟨Derivation.implicationIntroduction (Derivation.implicationElimination hn (by simpa only [equalEqn] using he))⟩
+  exact InternalBoundedDescentNormalizerStepSupportProof.conjunctionReject (liftP test) guard xs hn
+
+/-- Nonapplication, nonbottom-tag leaves have original bottom-spine mark (0,0), independently
+of their type, index, validity, or any native interpretation. -/
+theorem tagLeaf (s parameter k : OTerm alpha)
+    (ht : Nonempty (Derivation body Delta (graph1 OriginalLambdaConstructor.tag k s)))
+    (hn2 : Nonempty (Derivation body Delta (equal (numeral 2) k).not))
+    (hn3 : Nonempty (Derivation body Delta (equal k (numeral 3)).not)) :
+    Nonempty (Derivation body Delta (graph2 BottomSpineMeasure.leaf z s parameter)) := by
+  apply programCases InternalUnpair.right (Fin.cons s Fin.elim0) _
+  intro beta j Gamma payload hj hr
+  simp only [graph2Rename,zRelabel]
+  have ht' := renameInto ht j Gamma hj
+  have hn3' := renameInto hn3 j Gamma hj
+  simp only [OriginalTypedDecoderInternalAcceptanceUnaryProof.notRename,equalRename,numeralRename] at hn3'
+  simp only [graph1Rename,zRelabel] at ht'
+  have hr' : Nonempty (Derivation body Gamma
+      (graph1 InternalUnpair.right payload (s.relabel j))) := by
+    simpa only [graph1,consTermRename,emptyRename] using hr
+  let us : Fin 1 → OTerm beta := Fin.cons (s.relabel j) Fin.elim0
+  let xs : Fin 2 → OTerm beta := Fin.cons (s.relabel j) (Fin.cons (parameter.relabel j) Fin.elim0)
+  have hright1 := unaryValue InternalUnpair.right (.projection (0 : Fin 1)) payload
+    (s.relabel j) us hr' (projectionValue 0 us)
+  have hleft := unaryRecover InternalUnpair.left (rightOf (.projection (0 : Fin 1)))
+    (k.relabel j) payload us ht' hright1
+  have hright2 := unaryValue InternalUnpair.right (.projection (0 : Fin 2)) payload
+    (s.relabel j) xs hr' (projectionValue 0 xs)
+  have htag2 := unaryValue InternalUnpair.left (rightOf (.projection (0 : Fin 2)))
+    (k.relabel j) payload xs hleft hright2
+  have hf := OriginalRawSyntaxTransportInternalConstructorSupportProof.sameReject
+    (leftOf (rightOf (.projection (0 : Fin 2)))) (BottomRepresentative.constant 3)
+    (k.relabel j) (numeral 3) xs htag2 (BottomSourceValidityProof.constantValue 3 xs) hn3'
+  exact binaryValue InternalPairing.pairing
+    (InternalApplicationStepPeel.same (leftOf (rightOf (.projection (0 : Fin 2))))
+      (BottomRepresentative.constant 3)) (InternalAcceptance.constantZero 2)
+    z z z xs (BottomSourceClosedProof.numeralPair 0 0) hf (constantZeroValue xs)
+
+theorem tagMeasure (s k : OTerm alpha)
+    (ht : Nonempty (Derivation body Delta (graph1 OriginalLambdaConstructor.tag k s)))
+    (hn2 : Nonempty (Derivation body Delta (equal (numeral 2) k).not))
+    (hn3 : Nonempty (Derivation body Delta (equal k (numeral 3)).not)) :
+    Nonempty (Derivation body Delta (BottomSpineMeasure.graph z s)) := by
+  have hf := InternalParameterizedApplicationCertifiedResultFoldClosureLeafProof.leafClosure
+    (InternalLessThan.constantOne 2) BottomSpineMeasure.leaf BottomSpineMeasure.combine
+    s z z (tagOpening (InternalLessThan.constantOne 2) s z k ht hn2 hn3) (tagLeaf s z k ht hn2 hn3)
+  exact BottomSpineMeasureInternalProof.measureValue z s (andRight hf)
+
+theorem tagSpine (s t cert parameter k : OTerm alpha)
+    (ht : Nonempty (Derivation body Delta (graph1 OriginalLambdaConstructor.tag k s)))
+    (hn2 : Nonempty (Derivation body Delta (equal (numeral 2) k).not))
+    (hn3 : Nonempty (Derivation body Delta (equal k (numeral 3)).not)) :
+    Nonempty (Derivation body Delta
+      (graph4 (UniformCertificateCompletion.PositiveGuard.spineGuard BottomSpineMeasure.measure)
+        (suc z) s t cert parameter)) := by
+  let xs : Fin 4 → OTerm alpha := Fin.cons s (Fin.cons t (Fin.cons cert (Fin.cons parameter Fin.elim0)))
+  let P : Formula alpha := graph1 InternalUnpair.left (suc z) z
+  have hn : Nonempty (Derivation body Delta P.not) := by
+    have hp : Nonempty (Derivation body (P :: Delta) P) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have hz := pairLeft z z z (BottomSourceClosedProof.numeralPair (body := body) (Delta := P :: Delta) 0 0)
+    obtain ⟨he⟩ := valueUnique InternalUnpair.left (suc z) z (Fin.cons z Fin.elim0) hp hz
+    exact ⟨Derivation.implicationIntroduction (InternalTagArithmeticSupportProof.sucNeZeroApply he)⟩
+  have hreject := PositiveSpineRulesProof.testReject BottomSpineMeasure.measure 0 z xs
+    (tagMeasure s k ht hn2 hn3) hn
+  exact zeroBranchIntro _ _ _ (suc z) xs
+    (normalizeReject _ xs hreject) (InternalLessThanSupportProof.oneConstantValue xs)
+/-- Both excluded tags are actual graph negations; their numeric values are queried internally. -/
+theorem nonApplicationSpine (s t cert parameter : OTerm alpha)
+    (hn2 : Nonempty (Derivation body Delta
+      (graph1 OriginalLambdaConstructor.tag (numeral 2) s).not))
+    (hn3 : Nonempty (Derivation body Delta
+      (graph1 OriginalLambdaConstructor.tag (numeral 3) s).not)) :
+    Nonempty (Derivation body Delta
+      (graph4 (UniformCertificateCompletion.PositiveGuard.spineGuard BottomSpineMeasure.measure)
+        (suc z) s t cert parameter)) := by
+  apply programCases OriginalLambdaConstructor.tag (Fin.cons s Fin.elim0) _
+  intro beta j Gamma k hj hk
+  simp only [consTermRename,emptyRename] at hk
+  simp only [graph4Rename,sucRelabel,zRelabel]
+  have hn2' := renameInto hn2 j Gamma hj
+  have hn3' := renameInto hn3 j Gamma hj
+  simp only [OriginalTypedDecoderInternalAcceptanceUnaryProof.notRename,graph1Rename,numeralRename] at hn2' hn3'
+  have he2 : Nonempty (Derivation body Gamma (equal (numeral 2) k).not) := by
+    let E := equal (numeral 2 : OTerm beta) k
+    have he : Derivation body (E :: Gamma) (eqn (numeral 2) k) := by
+      simpa only [equalEqn] using (Derivation.hypothesis List.mem_cons_self : Derivation body (E :: Gamma) E)
+    obtain ⟨h2⟩ := outputTransport OriginalLambdaConstructor.tag k (numeral 2)
+      (Fin.cons (s.relabel j) Fin.elim0) ⟨InternalTagArithmeticSupportProof.symm he⟩ (withHyp hk E)
+    obtain ⟨hn⟩ := withHyp hn2' E
+    exact ⟨Derivation.implicationIntroduction (Derivation.implicationElimination hn h2)⟩
+  have he3 : Nonempty (Derivation body Gamma (equal k (numeral 3)).not) := by
+    let E := equal k (numeral 3 : OTerm beta)
+    have he : Derivation body (E :: Gamma) (eqn k (numeral 3)) := by
+      simpa only [equalEqn] using (Derivation.hypothesis List.mem_cons_self : Derivation body (E :: Gamma) E)
+    obtain ⟨h3⟩ := outputTransport OriginalLambdaConstructor.tag k (numeral 3)
+      (Fin.cons (s.relabel j) Fin.elim0) ⟨he⟩ (withHyp hk E)
+    obtain ⟨hn⟩ := withHyp hn3' E
+    exact ⟨Derivation.implicationIntroduction (Derivation.implicationElimination hn h3)⟩
+  exact tagSpine (s.relabel j) (t.relabel j) (cert.relabel j) (parameter.relabel j) k hk he2 he3
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomNonApplicationSpineProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomNonApplicationSpineProof
