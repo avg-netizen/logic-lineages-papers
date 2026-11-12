@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionStructuralObservationNativeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalClassContextAllPositionNativeEvaluationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralClassKeyCalibrationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionStructuralObservationNativeProof
+open UniformCertificateCompletion
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Pure native evaluation congruence, never used as internal reflection. -/
+theorem actualEquality : OriginalAllPositionStructuralObservationNativeTargets.ActualEquality := by
+  intro n arity p H G W hp hH hG hW v
+  have he := (OriginalStructuralClassKeyCalibrationProof.actualOriginalStructuralClassKeyCalibration
+    n arity p H G W hp hH hG hW).1
+  change evaluate (OriginalClassContextAllPositionObserver.positionObservation
+      (OriginalStructuralClassKeyDefinitions.key p H G W)) v = _
+  rw [OriginalClassContextAllPositionNativeEvaluationProof.observationEvaluation,
+    OriginalClassContextAllPositionNativeEvaluationProof.observationEvaluation, he]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionStructuralObservationNativeProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionStructuralObservationNativeProof
