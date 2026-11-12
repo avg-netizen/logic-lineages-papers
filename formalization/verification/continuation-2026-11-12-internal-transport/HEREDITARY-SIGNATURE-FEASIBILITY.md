@@ -1,6 +1,6 @@
 # Read-only feasibility analysis: hereditary class observations
 
-Status: proposal and obstructions only. No Program, tuple, target, or accepted proof is changed. Current paired-observation/full-fold laws do not prove the claims below.
+Status: proposal and obstructions only. Native prerequisites now checked include exact structural-size/child/trace bounds, original two-deletion commutation, and ordinary/numbered full native constructor equivalences. Their internal graph analogues and a new runtime signature remain separate obligations. No Program, tuple, target, or accepted proof is changed. Current paired-observation/full-fold laws do not prove the claims below.
 
 ## Why the old key alone is not an established route
 
@@ -38,7 +38,7 @@ All-vector class-test calibration additionally needs the original inactive/malfo
 
 ## Finiteness and primitive-recursive implementation
 
-Use structural size as defined in `NumberedPrimaryEquivalenceDefinitions`: variables/bottom have size one, lambda adds one, application adds one plus both children, and ordinary/numbered add one plus argument sizes. A child step strictly decreases this size. A lambda child increases context length by one; other children do not. A deletion decreases context length by one and must be proved not to increase structural size.
+Use structural size as defined in `NumberedPrimaryEquivalenceDefinitions`: variables/bottom have size one, lambda adds one, application adds one plus both children, and ordinary/numbered add one plus argument sizes. A child step strictly decreases this size. A lambda child increases context length by one; other children do not. A deletion decreases context length by one. The now-checked OriginalHereditaryNativeBoundStatementChecks.actualSubstitutionSize proves more: original typed bottom/variable substitution preserves structural size exactly; actualChildSize and actualTraceBound are also checked. OriginalHereditaryNativeBoundSliceProof links literal prefix deletion to this measure.
 
 Thus lexicographic `(size, context length)` decreases. More concretely along a branch, at most `initialSize-1` child steps occur; at most that many lambda extensions occur; at most `initialContextLength+initialSize-1` deletions occur. Hence `initialContextLength+2*initialSize` is a conservative depth bound. The branch degree is bounded by current context length plus child count, each bounded using initial context length/size. Bounded recursion can therefore implement a finite observation tree without a general well-founded runtime operator. Numeric encoding bounds, sorting, source decoding, and total malformed-state handling still need construction and proofs; lexicographic termination alone is not a finished primitive-recursive implementation.
 
