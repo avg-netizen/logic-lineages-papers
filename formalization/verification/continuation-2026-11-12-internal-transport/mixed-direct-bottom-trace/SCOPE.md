@@ -1,0 +1,1 @@
+Full ActualRestrictedTransport remains an unproved target. The recognizer checks only old-edge source, leaf and exact prefix/direct-bottom provenance. Failure is absorbing zero. Same H/G/M/W and outer context are mandatory. No previous selected tuple is changed.
