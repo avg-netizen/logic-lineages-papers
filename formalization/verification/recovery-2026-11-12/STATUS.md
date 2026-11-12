@@ -1,9 +1,7 @@
 # Recovery drafts and checked work
 
-The checked cumulative branch now includes checkpoint04 `819126764a0faa77a2600ba93fceddaffc94bd0b`: fresh source-matched checks prove lambda whole-wrapper introduction and generic direct-bottom raw introduction. Its recorded scope is two exact aliases across 1,665 local modules; no full-root or remote-CI pass is claimed.
+Checked cumulative work now reaches checkpoint11 `9280014bb4715aa33f23b461abd45a36e4ea46e4`. Checkpoints04-11 record fresh checked lambda wrapper/native/global selection; direct-bottom native/source/wrapper/global and same-final bottom dichotomy; reconstructed structural key/class; local lambda-erasure square/conditional congruence; original rank and coordinate-query support. Each checkpoint documents its exact aliases, source hashes and limits.
 
-This isolated recovery branch preserves evolving reconstructed and new drafts. Structural traversal/key/absorption, lambda native calibration/global selection, concrete direct-bottom whole-wrapper/global/dichotomy, nil normalization and lambda-erasure square work remain pending fresh gates unless separately promoted in a later checked checkpoint. A source snapshot is not proof acceptance; former lost build results are not inherited.
+This isolated branch preserves source drafts, not automatic proof acceptance. Follow the cumulative checkpoint records for accepted work; any additional draft, including recovered geometry while pending its gate, remains unverified. The complete same-final certificate erasure transformer, internal I/C and paper06 accessibility are not claimed.
 
-Historical limitations remain explicit: two preflight files are unavailable and a reconstructed structural Targets wrapper differs byte-for-byte, while its complete original Definitions laws survive exactly. Original aggregate preservation and recovery comparator review are retained separately. No claim that all original files were restored is made.
-
-Compiler/dependency pins, accepted mathematical sources and register remain unchanged:171checked,2inherited,16pending/189.
+Two historical preflights remain unavailable and reconstructed structural Targets differ byte-for-byte although complete Definitions survived exactly. Their fresh structural gates now pass; this does not retroactively establish byte-identical recovery. Original aggregate remains unchanged. No full-root or remote-CI pass; register171checked,2inherited,16pending/189.
