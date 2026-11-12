@@ -1,6 +1,7 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalClassContextAllPositionScanSupportProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedNumericIterationPreservationProof
+public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalClassContextAllPositionScanSyntaxProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
@@ -76,3 +77,5 @@ theorem rowApply (R : Program 2) (count cutoff seed candidate parameter : OTerm 
   exact ⟨Derivation.implicationElimination h (Derivation.conjunctionIntroduction hs hl)⟩
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalClassContextAllPositionScanSyntaxProof
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalClassContextAllPositionScanSyntaxProof
