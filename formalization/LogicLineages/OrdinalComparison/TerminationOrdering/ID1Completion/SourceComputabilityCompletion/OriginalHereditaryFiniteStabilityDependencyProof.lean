@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityRootProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityRowsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryObservationLayerNativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityDependencyProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalHereditaryFiniteStability OriginalHereditaryFiniteStabilityTargets
+
+theorem localDependency : LocalDependency := by
+ intro R Q T n arity c s h
+ have hr := OriginalHereditaryFiniteStabilityRootProof.rootDependency Q T n arity c s h
+ have hd := OriginalHereditaryFiniteStabilityRowsProof.rowsDependency Q T n arity c s h
+ simp only [value] at hr hd ⊢
+ rw [OriginalHereditaryObservationLayerNativeProof.native,
+   OriginalHereditaryObservationLayerNativeProof.native,hr,hd]
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityDependencyProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityDependencyProof
