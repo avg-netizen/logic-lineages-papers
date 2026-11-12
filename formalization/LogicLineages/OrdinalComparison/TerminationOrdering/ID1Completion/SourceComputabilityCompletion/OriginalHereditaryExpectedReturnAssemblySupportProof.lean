@@ -17,8 +17,16 @@ theorem valuesUnique {n : Nat} (arity : Fin n → Nat) (R : Program 2) (c : Nat)
  | nil => cases hw; rfl
  | cons h ht ih =>
    cases hw with
-   | cons g gt => exact congrArg₂ List.cons
+   | cons g gt =>
+     exact congrArg₂ List.cons
        (OriginalHereditaryExpectedUniquenessProof.deterministic n arity R c _ _ _ h g) (ih _ gt)
+
+theorem appendRelation {A B : Type} {rel : A → B → Prop} {xs zs : List A} {ys ws : List B}
+ (h : List.Forall₂ rel xs ys) (g : List.Forall₂ rel zs ws) :
+ List.Forall₂ rel (xs ++ zs) (ys ++ ws) := by
+ induction h with
+ | nil => exact g
+ | cons h ht ih => exact .cons h ih
 
 theorem decorateLength {n c : Nat} (a : Job n) (index : Nat) (ss : List (State (Fin n))) :
  (decorate c a index ss).length = ss.length := by

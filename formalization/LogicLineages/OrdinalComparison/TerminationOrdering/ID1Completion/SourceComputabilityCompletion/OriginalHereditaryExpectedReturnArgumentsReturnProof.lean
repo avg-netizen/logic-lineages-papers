@@ -33,6 +33,7 @@ theorem argumentsReturnExpected (R : Program 2) {n : Nat} {arity : Fin n → Nat
  have hr := OriginalHereditaryReturnStepArgumentsProof.argumentsReturn R Q n arity Gamma types c args dv agenda old hlen
  rw [OriginalHereditaryExpectedJointDepthProof.argumentsJointDepth R n arity Gamma types c args
    (argumentDepth args) (Nat.le_refl _)] at hr
+ simp only [OriginalHereditaryResultStack.stack,List.append_assoc] at hr
  exact hr
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpectedReturnArgumentsReturnProof

@@ -27,7 +27,7 @@ theorem termReturnExpected (R : Program 2) {n : Nat} {arity : Fin n → Nat} {Ga
    (children Gamma (termCode q.2)).length (by rw [OriginalHereditaryTypedJobChildrenProof.childrenLength])
  have hall : List.Forall₂ (Expected arity R c) (jobs c (termJob q)) (childValues ++ deletionValues) := by
    rw [jobs,successors,decorateAppend]
-   simpa only [Nat.zero_add] using hc.append hd
+   simpa only [Nat.zero_add] using appendRelation hc hd
  have he := valuesUnique arity R c _ values _ hv hall
  rw [he,List.reverse_append,List.append_assoc,termFrame Q c q]
  have hlen : deletionValues.length = Gamma.length := by
@@ -36,7 +36,9 @@ theorem termReturnExpected (R : Program 2) {n : Nat} {arity : Fin n → Nat} {Ga
  have hu := OriginalHereditarySettledObserverProof.unfolding R n arity c ⟨Gamma,q⟩
  rw [rowsAt Q c q] at hu
  simp only [OriginalHereditaryFiniteStability.value] at hu
- simpa only [OriginalHereditaryResultStack.stack,← hu] using hr
+ simp only [OriginalHereditaryResultStack.stack,List.append_assoc] at hr
+ rw [← hu] at hr
+ exact hr
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpectedReturnTermProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpectedReturnTermProof

@@ -44,6 +44,7 @@ theorem deletionMember (R : Program 2) {n : Nat} {arity : Fin n → Nat} (c : Na
      rw [hs]
      exact OriginalHereditaryNativeBoundSliceProof.prefixDeletionStep n arity binders tail sigma tau q
    · have hh := ih (binders ++ [sigma])
+     rw [List.append_assoc,List.singleton_append] at hh
      exact hh tau q hs t ht
 
 theorem decoratedInherited {n c : Nat} (arity : Fin n → Nat) (R : Program 2) (a : Job n)
