@@ -1,0 +1,20 @@
+{
+  "reviewed_at_utc": "2026-11-12T10:08:54.216401+00:00",
+  "kind": "independent-recovered-lambda-geometry-target-scope-review",
+  "files": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalLambdaRecoveredGeometryTargets.lean": "f0606d3f74c80a314f24c62abca13e756a8cb72ed52234e0c8d8e8577393f5db",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalLambdaRecoveredGeometryProof.lean": "a4e243e9f064641c45e5775cb49a991defcd8ccfd1be60dde0ed4087f3d8bae0",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalHereditaryLambdaDefinitions.lean": "2d0ddef4355bfee3f93653595eafb327cab3ed588f1e361d61944572b5ae4ec7",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomGlobalDichotomyTargets.lean": "ced09d419d5f23b512ebab7d19572b9d54b0222b6a7c2655fe799c06035c3d72"
+  },
+  "findings": [
+    "RecoveredGeometry consumes actual source Fields (including real bodyCode and arrow graph), original parameter pairing and existing ChildRecovered. It does not assume target Fields, target constructor or target child type. Its source Fields must not be weakened to constructor alone, which discards supplied body outer type.",
+    "ChildRecovered explicitly contains accepted matchingTarget and actual sourceBody/targetBody/childParameter selectors plus same-leaf child acceptance. Recovering target matching geometry from those facts is genuine elimination, not a supplied target-geometry oracle.",
+    "Actual source body selector is compared with Fields.bodyCode at the same source codomain; resulting equality is childS=oldChild. Target body is repacked with that same recovered codomain, giving target Fields and constructor internally.",
+    "Queried extended context is cons d gamma, where d is actual source domain and gamma is the original parameter right component. childParam is the SAME recovered parameter, paired with unchanged original context left component and this extended gamma. There is no reversed insertion, cutoff shift or context replacement assertion.",
+    "The conclusion preserves graph4 leaf1 childS childT childCert childParam exactly. It does not replace recovered certificate/children with independently accepted witnesses or establish acceptance of a new parent.",
+    "No source validity, type-window coherence, canonicality, rank, erasure or closed accessibility follows from this raw geometry target.",
+    "Also reviewed GlobalDirectBottomDichotomy target: same actual Global.finalInputs.oldStep and explicit original Global.source. Target is literal same-type bottom. Result raw equality or exact original certificate accepted by that same final checker. No application-to-bottom, ancestor collapse, erasure transport or rank claim."
+  ],
+  "verdict": "Clean limited scope; no added geometry/coherence oracle. Compilation remains parent-owned and is not certified by this review."
+}
