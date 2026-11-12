@@ -1,0 +1,1 @@
+Checked exact internal RootExtensionality: receipt 1794488035099308154-5. GlobalAgreement quantifies every packed input and every arithmetic parameter, including lambda child parameters. Entire actual AST, including malformed/fallback branches. No native reflection, source covariance, or runtime tuple replacement.
