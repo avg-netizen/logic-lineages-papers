@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaDirectBottomTraceDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRepeatTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaDirectBottomTraceTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (z)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalLambdaDirectBottomTrace
+/-- Basic actual arithmetic laws only, not the pending trace transport induction. -/
+def RejectZero : Prop := ∀ (source : Program 2) (leaf : Program 4)
+ (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha)),
+ Nonempty (Derivation body Delta (graph1 (transition source leaf) z z)) ∧
+ Nonempty (Derivation body Delta (graph1 (finish source leaf) z z))
+def RepeatNil : Prop := ∀ (source : Program 2) (leaf : Program 4)
+ (body : Positive (Fin 1)) (alpha : Type) (out initial : OTerm alpha),
+ Nonempty (Derivation body []
+  ((InternalRawListRepeat.repeatGraph (transition source leaf) out z initial).iff (equal out initial)))
+def RepeatFront : Prop := ∀ (source : Program 2) (leaf : Program 4)
+ (body : Positive (Fin 1)) (alpha : Type) (code head tail out initial next : OTerm alpha),
+ Nonempty (Derivation body []
+  ((graph2 InternalListCodec.consCode code head tail ⊓ graph1 (transition source leaf) next initial).imp
+   ((InternalRawListRepeat.repeatGraph (transition source leaf) out code initial).iff
+    InternalRawListRepeat.repeatGraph (transition source leaf) out tail next)))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaDirectBottomTraceTargets

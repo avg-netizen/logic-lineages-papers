@@ -30,5 +30,6 @@ theorem settled : Settled := by
  | zero => simp
  | succ extra ih =>
    rw [Nat.add_succ,stable R n arity c s (weight s + extra) (Nat.le_add_right _ _),ih]
+   omega
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityProof

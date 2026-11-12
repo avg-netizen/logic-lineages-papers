@@ -18,7 +18,6 @@ theorem prefixDependency (Q T : Program 2) (n : Nat) (arity : Fin n → Nat) (c 
    OriginalHereditaryDeletionRowsNativeProof.observationPrefix,
    OriginalHereditaryDeletionRowsNativeProof.observationPrefix,
    OriginalClassContextPrefixNativeProof.erasedPackedOnTyped,
-   OriginalClassContextPrefixNativeProof.erasedPackedOnTyped,
    OriginalTypedDecoderReconstructionLocalProof.contextNumber]
  exact h _ (OriginalHereditaryNativeBoundSliceProof.prefixDeletionStep n arity binders tail sigma q.1 q.2)
 
@@ -26,8 +25,10 @@ theorem rowsDependency (Q T : Program 2) (n : Nat) (arity : Fin n → Nat) (c : 
  (s : State (Fin n) arity) (h : StepAgreement Q T c s) :
  value (rows Q) c s = value (rows T) c s := by
  rcases s with ⟨Gamma,q⟩
- simp only [value,OriginalHereditaryDeletionRowsBoundProof.nativeRows,Nat.unpair_pair,
-   OriginalHereditaryObservationSourceRowsProof.lengthAtContext]
+ simp only [value]
+ rw [OriginalHereditaryDeletionRowsBoundProof.nativeRows,
+   OriginalHereditaryDeletionRowsBoundProof.nativeRows]
+ simp only [Nat.unpair_pair,OriginalHereditaryObservationSourceRowsProof.lengthAtContext]
  apply congrArg numbersNumber
  unfold values
  apply List.map_congr_left

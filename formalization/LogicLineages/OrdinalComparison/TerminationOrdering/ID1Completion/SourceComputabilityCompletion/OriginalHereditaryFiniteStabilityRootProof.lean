@@ -22,20 +22,19 @@ theorem argumentsValue (Q T : Program 2) {n : Nat} {arity : Fin n → Nat} (c : 
  intro q hq
  exact childValue Q T c s ⟨Gamma,q⟩ h (hc q hq)
 
-theorem rootDependency (Q T : Program 2) (n : Nat) (arity : Fin n → Nat) (c : Nat)
+theorem nativeDependency (Q T : Program 2) (n : Nat) (arity : Fin n → Nat) (c : Nat)
  (s : State (Fin n) arity) (h : StepAgreement Q T c s) :
- value (rootObservation Q) c s = value (rootObservation T) c s := by
+ nativeValue Q c s.term = nativeValue T c s.term := by
  rcases s with ⟨Gamma,tau,q⟩
- simp only [value,OriginalRootObservationNativeProof.nativeCalibration]
  cases q with
  | var v => rfl
  | bottom t => rfl
- | @lam d t q =>
+ | @lam Gamma d t q =>
    have he := childValue Q T c ⟨Gamma,⟨.arrow d t,.lam q⟩⟩ ⟨d::Gamma,⟨t,q⟩⟩ h (Child.lam q)
    simp only [nativeValue,he]
- | @app d t q a =>
-   have hf := childValue Q T c ⟨Gamma,⟨t,.app q a⟩⟩ ⟨Gamma,⟨.arrow d t,q⟩⟩ h (Child.appFunction q a)
-   have ha := childValue Q T c ⟨Gamma,⟨t,.app q a⟩⟩ ⟨Gamma,⟨d,a⟩⟩ h (Child.appArgument q a)
+ | @app Gamma d t q a =>
+   have hf := childValue Q T c ⟨Gamma,⟨_,.app q a⟩⟩ ⟨Gamma,⟨_,q⟩⟩ h (Child.appFunction q a)
+   have ha := childValue Q T c ⟨Gamma,⟨_,.app q a⟩⟩ ⟨Gamma,⟨_,a⟩⟩ h (Child.appArgument q a)
    simp only [nativeValue,hf,ha]
  | ordinary f args =>
    have he := argumentsValue Q T c ⟨Gamma,⟨_,.ordinary f args⟩⟩ args h (fun q hq => Child.ordinary f args q hq)
@@ -46,5 +45,13 @@ theorem rootDependency (Q T : Program 2) (n : Nat) (arity : Fin n → Nat) (c : 
    have he := argumentsValue Q T c ⟨Gamma,⟨tau,.numbered k f tau args types extras⟩⟩ extras h
      (fun q hq => Child.numberedExtra k f tau args types extras q hq)
    simp only [nativeValue,hb,he]
+
+theorem rootDependency (Q T : Program 2) (n : Nat) (arity : Fin n → Nat) (c : Nat)
+ (s : State (Fin n) arity) (h : StepAgreement Q T c s) :
+ value (rootObservation Q) c s = value (rootObservation T) c s := by
+ exact (OriginalRootObservationNativeProof.nativeCalibration Q n arity s.context c s.term).trans
+   ((nativeDependency Q T n arity c s h).trans
+     (OriginalRootObservationNativeProof.nativeCalibration T n arity s.context c s.term).symm)
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityRootProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFiniteStabilityRootProof
