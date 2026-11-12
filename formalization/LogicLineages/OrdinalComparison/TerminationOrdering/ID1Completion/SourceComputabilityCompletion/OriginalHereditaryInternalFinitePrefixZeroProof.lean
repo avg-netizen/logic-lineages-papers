@@ -22,6 +22,7 @@ theorem zeroSuffix (suffix joined count index value : OTerm alpha)
  have he := appendZeroRecover joined suffix ha
  exact ⟨headTransport length count joined suffix Fin.elim0 he hl,
    InternalCanonicalFixedWindowVertexDispatchInvariantProof.binaryInputsTransport
-    InternalRawListRecursion.lookup value index joined index suffix ⟨refl index⟩ he hv⟩
+    InternalRawListRecursion.lookup value index joined index suffix (by simpa only [InternalControlGraphSupportProof.equalEqn] using (show Nonempty (Derivation body Delta (InternalTagArithmeticSyntaxProof.eqn index index)) from ⟨InternalTagArithmeticSupportProof.refl index⟩))
+    (by simpa only [InternalControlGraphSupportProof.equalEqn] using he) hv⟩
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalFinitePrefixZeroProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalFinitePrefixZeroProof

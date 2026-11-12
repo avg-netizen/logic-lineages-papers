@@ -16,6 +16,7 @@ open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
 open InternalTagArithmeticSyntaxProof (z suc eqn zRelabel sucRelabel)
 open InternalTagArithmeticSupportProof InternalRecursionGraphStepSyntaxProof
 open InternalOriginalOrderSyntaxProof
+open InternalPositiveUnfoldingSupportProof (weakenClosed)
 open InternalSliceInductionSyntaxProof (eqnRename)
 open InternalSquareRootArithmeticSupportProof (orderRight)
 open OriginalContextInsertion OriginalContextInsertionSyntaxProof

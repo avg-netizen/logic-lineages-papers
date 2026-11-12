@@ -42,6 +42,7 @@ theorem boundedCons : OriginalHereditaryInternalFinitePrefixTargets.BoundedCons 
    apply programCases length (Fin.cons (tail.relabel j) Fin.elim0) _
    intro gamma k Xi tailCount hk htail
    simp only [consTermRename,emptyRename] at htail
+   change Nonempty (Derivation body Xi (lengthGraph tailCount ((tail.relabel j).relabel k))) at htail
    have hc'' := renameInto hc' k Xi hk
    rw [consGraphRename] at hc''
    have hl'' := renameInto hl' k Xi hk
@@ -59,7 +60,7 @@ theorem boundedCons : OriginalHereditaryInternalFinitePrefixTargets.BoundedCons 
    have hbound := OriginalContextInsertionBelowCoreProof.successorStrict (pred.relabel k) tailCount
      ⟨orderRight (suc (pred.relabel k)) hlen (orderLeft ((count.relabel j).relabel k) heq hbv)⟩
    have hlookup := headTransport InternalRawListRecursion.lookup ((value.relabel j).relabel k)
-     ((index.relabel j).relabel k) (suc (pred.relabel k)) (Fin.cons ((row.relabel j).relabel k) Fin.elim0) he' hv''
+     ((index.relabel j).relabel k) (suc (pred.relabel k)) (Fin.cons ((row.relabel j).relabel k) Fin.elim0) ⟨heq⟩ hv''
    obtain ⟨hiff⟩ := OriginalAllPositionContextDeleteDropProof.lookupConsIff
      ((row.relabel j).relabel k) ((head.relabel j).relabel k) ((tail.relabel j).relabel k)
      (pred.relabel k) ((value.relabel j).relabel k) hc''

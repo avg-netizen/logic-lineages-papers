@@ -57,7 +57,7 @@ theorem rawLookupDecrease (parent child parentRaw rawChild input parameter windo
  have hl' := renameInto hl rho Theta hrho
  have hb' := renameInto hb rho Theta hrho
  have hlookup' := renameInto hlookup rho Theta hrho
- simp only [graph1Rename,graph2Rename,lengthRename,belowRename] at hp' hc' hr' hparam' hw' hv' hl' hb' hlookup'
+ simp only [graph1Rename,graph2Rename,lengthRename,OriginalContextInsertion.Below,orderRename] at hp' hc' hr' hparam' hw' hv' hl' hb' hlookup'
  exact OriginalHereditaryInternalExpansionRowsProof.atRows
    (parent.relabel rho) (child.relabel rho) (parentRaw.relabel rho) (rawChild.relabel rho)
    (input.relabel rho) (parameter.relabel rho) (window.relabel rho) (gamma.relabel rho)

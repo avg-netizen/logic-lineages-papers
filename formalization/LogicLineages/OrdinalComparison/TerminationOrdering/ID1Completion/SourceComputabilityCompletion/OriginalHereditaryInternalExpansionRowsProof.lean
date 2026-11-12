@@ -52,7 +52,7 @@ theorem queryUnary (parent child parentRaw rawChild input parameter window gamma
  have hlookup' := renameInto hlookup rho Theta hrho
  have ha2' := renameInto ha2 rho Theta hrho
  have ha1' := renameInto ha1 rho Theta hrho
- simp only [graph1Rename,graph2Rename,lengthRename,belowRename,numeral,sucRelabel,zRelabel] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup' ha2' ha1'
+ simp only [graph1Rename,graph2Rename,lengthRename,OriginalContextInsertion.Below,orderRename,numeral,sucRelabel,zRelabel] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup' ha2' ha1'
  have hfront := OriginalHereditaryInternalExpansionChildrenProof.unaryCons
    (Fin.cons (input.relabel rho) (Fin.cons (parameter.relabel rho) Fin.elim0)) (front.relabel rho)
    first ha2' hchildren' hfirst 
@@ -95,7 +95,7 @@ theorem queryBinary (parent child parentRaw rawChild input parameter window gamm
  have hlookup' := renameInto hlookup rho Theta hrho
  have ha2' := renameInto ha2 rho Theta hrho
  have ha1' := renameInto ha1 rho Theta hrho
- simp only [graph1Rename,graph2Rename,lengthRename,belowRename,numeral,sucRelabel,zRelabel] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup' ha2' ha1'
+ simp only [graph1Rename,graph2Rename,lengthRename,OriginalContextInsertion.Below,orderRename,numeral,sucRelabel,zRelabel] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup' ha2' ha1'
  have hfront := OriginalHereditaryInternalExpansionChildrenProof.binaryCons
    (Fin.cons (input.relabel rho) (Fin.cons (parameter.relabel rho) Fin.elim0)) (front.relabel rho)
    first second singleton ha2' hchildren' hfirst hsecond hsingleton
@@ -129,7 +129,7 @@ theorem atZero (parent child parentRaw rawChild input parameter window gamma W V
  have hfields := OriginalHereditaryInternalFinitePrefixZeroProof.zeroSuffix suffix joined count index rawChild happ hl hlookup
  exact OriginalHereditaryInternalDeletionWeightProof.actualDecrease body alpha Delta
    parent child parentRaw rawChild input parameter suffix count index W V
-   hp hr hc hdel (andLeft hfields) hb (andRight hfields) hw hv
+   hp hr hc hdel hfields.1 hb hfields.2 hw hv
 
 theorem atRows (parent child parentRaw rawChild input parameter window gamma W V front suffix joined count index : OTerm alpha)
  (hp : Nonempty (Derivation body Delta (graph1 OriginalHereditaryAnnotatedExpansion.forget parentRaw parent)))
@@ -159,7 +159,7 @@ theorem atRows (parent child parentRaw rawChild input parameter window gamma W V
    have hl' := renameInto hl rho Theta hrho
    have hb' := renameInto hb rho Theta hrho
    have hlookup' := renameInto hlookup rho Theta hrho
-   simp only [graph1Rename,graph2Rename,lengthRename,belowRename] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
+   simp only [graph1Rename,graph2Rename,lengthRename,OriginalContextInsertion.Below,orderRename] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
    exact atZero (parent.relabel rho) (child.relabel rho) (parentRaw.relabel rho) (rawChild.relabel rho) (input.relabel rho) (parameter.relabel rho) (window.relabel rho) (gamma.relabel rho) (W.relabel rho) (V.relabel rho) (front.relabel rho) (suffix.relabel rho) (joined.relabel rho) (count.relabel rho) (index.relabel rho) ha2
      hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
  · intro beta rho Theta hrho ha2 ha1
@@ -176,7 +176,7 @@ theorem atRows (parent child parentRaw rawChild input parameter window gamma W V
    have hl' := renameInto hl rho Theta hrho
    have hb' := renameInto hb rho Theta hrho
    have hlookup' := renameInto hlookup rho Theta hrho
-   simp only [graph1Rename,graph2Rename,lengthRename,belowRename] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
+   simp only [graph1Rename,graph2Rename,lengthRename,OriginalContextInsertion.Below,orderRename] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
    exact queryUnary (parent.relabel rho) (child.relabel rho) (parentRaw.relabel rho) (rawChild.relabel rho) (input.relabel rho) (parameter.relabel rho) (window.relabel rho) (gamma.relabel rho) (W.relabel rho) (V.relabel rho) (front.relabel rho) (suffix.relabel rho) (joined.relabel rho) (count.relabel rho) (index.relabel rho) ha2 ha1
      hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
  · intro beta rho Theta hrho ha2 ha1
@@ -193,7 +193,7 @@ theorem atRows (parent child parentRaw rawChild input parameter window gamma W V
    have hl' := renameInto hl rho Theta hrho
    have hb' := renameInto hb rho Theta hrho
    have hlookup' := renameInto hlookup rho Theta hrho
-   simp only [graph1Rename,graph2Rename,lengthRename,belowRename] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
+   simp only [graph1Rename,graph2Rename,lengthRename,OriginalContextInsertion.Below,orderRename] at hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
    exact queryBinary (parent.relabel rho) (child.relabel rho) (parentRaw.relabel rho) (rawChild.relabel rho) (input.relabel rho) (parameter.relabel rho) (window.relabel rho) (gamma.relabel rho) (W.relabel rho) (V.relabel rho) (front.relabel rho) (suffix.relabel rho) (joined.relabel rho) (count.relabel rho) (index.relabel rho) ha2 ha1
      hp' hc' hr' hparam' hw' hv' hchildren' hdel' happend' hl' hb' hlookup'
 
