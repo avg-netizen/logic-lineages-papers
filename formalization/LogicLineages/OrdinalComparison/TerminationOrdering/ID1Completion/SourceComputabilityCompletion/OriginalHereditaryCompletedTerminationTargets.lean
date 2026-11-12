@@ -5,6 +5,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryCompletedTerminationTargets
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
 open SourceComputabilityFormulaSupportProof (numeral)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 /-- Source-valid inputs have empty completed work at the literal computed fuel.
