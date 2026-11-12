@@ -63,8 +63,8 @@ theorem atOutput (recurrence : ActualOriginalLambdaTraversalInternalLambda)
   have hrankOut : Nonempty (Derivation body Theta (graph2 K rank (childOut.relabel j) (bodyParameter.relabel j))) :=
     ⟨Derivation.implicationElimination (Derivation.conjunctionRight hi) hrank⟩
   exact lamLaw body beta Theta (input.relabel j) (out.relabel j) (typ.relabel j)
-    (parameter.relabel j) (d.relabel j) (e.relabel j) (child.relabel j)
-    (bodyParameter.relabel j) (childOut.relabel j) rank (mark.relabel j)
+    (parameter.relabel j) (mark.relabel j) (d.relabel j) (e.relabel j) (child.relabel j)
+    (bodyParameter.relabel j) (childOut.relabel j) rank
     hp' hf' hchild' ⟨hrank⟩ hrankOut
 
 
