@@ -1,6 +1,15 @@
 # Internal numeric sort: proposed next contracts
 
-This is a proposal, not a checked theorem or a runtime change.
+The original plan below is now partly implemented. The runtime sort/insert AST remains unchanged.
+
+## Verified progress
+
+- Original insertion-state coordinate: exact gate `1794487752651663252-17`.
+- All-raw insertion commutation: exact gate `1794488100206908806-5`.
+- All-raw sort-insertion absorption: exact gate `1794488494638256706-5`.
+- Idempotence is authored against a separately frozen target and awaits its gate.
+
+The adjacent-swap consumer is maintained separately. These results do not yet supply the arbitrary coded BASE-permutation bridge described below.
 
 ## Existing reusable source
 
@@ -21,3 +30,5 @@ No internal coded permutation/count/histogram contract was found in the current 
 These contracts preserve the multiset of numeric typed-observation entries locally. Lifting them to arbitrary original BASE exchanges still requires an internal witness/derivation connecting the actual source permutation condition to a finite sequence of these generators, or a separately proved internal multiplicity characterization. It is not justified by the native List.Perm theorem alone. They do not establish final canonical equality or class completeness.
 
 Same-raw observation congruence for two child observer Programs is independent: it preserves the existing ordered argument spine and does not itself reorder BASE entries.
+
+Update: all-raw idempotence exact alias passed, receipt `1794488585929683848-5`. Arbitrary coded permutation completeness and the original BASE exchange bridge remain separate obligations.
