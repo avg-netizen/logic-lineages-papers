@@ -32,7 +32,11 @@ theorem successorAt0 (gamma count head tail i j a b upper lower left right : OTe
     (hc : Nonempty (Derivation body Delta (consGraph gamma head tail)))
     (hf : Nonempty (Derivation body Delta (fields gamma count (suc i) (suc j) a b upper lower left right)))
     : Nonempty (Derivation body Delta (result (suc i) (suc j) a b upper lower left right)) := by
-  apply consDeletionCases gamma head tail upper (suc j) _ hc (andLeft (andRight (andRight (andRight (andRight (andRight hf))))))
+  have hu : Nonempty (Derivation body Delta
+      (graph2 deleteAt upper (suc (suc j)) gamma)) :=
+    andLeft (andRight (andRight (andRight (andRight (andRight hf)))))
+  apply consDeletionCases gamma head tail upper (suc j)
+    (result (suc i) (suc j) a b upper lower left right) hc hu
   intro beta rho Theta ut hrho hc0 hd0
   simp only [resultRename,sucRelabel]
   have hrow' := renameInto hrow rho Theta hrho
@@ -41,6 +45,7 @@ theorem successorAt0 (gamma count head tail i j a b upper lower left right : OTe
   rw [rowRename] at hrow'
   rw [consGraphRename] at hc'
   simp only [fieldsRename,sucRelabel] at hf'
+  simp only [sucRelabel] at hd0
   exact successorAt1 (gamma.relabel rho) (count.relabel rho) (head.relabel rho) (tail.relabel rho) (i.relabel rho) (j.relabel rho) (a.relabel rho) (b.relabel rho) (upper.relabel rho) (lower.relabel rho) (left.relabel rho) (right.relabel rho) ut hrow' hc' hf' hc0 hd0
 
 

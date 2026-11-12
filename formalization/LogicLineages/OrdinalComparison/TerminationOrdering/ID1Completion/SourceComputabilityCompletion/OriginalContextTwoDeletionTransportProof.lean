@@ -5,7 +5,7 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextTwoDeletionTransportProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
-open InternalTagArithmeticSyntaxProof (eqn emb)
+open InternalTagArithmeticSyntaxProof (eqn emb bindEmbedding)
 open InternalTagArithmeticSupportProof
 open InternalBinderTransportProof InternalTermSubstitutionProof
 open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
