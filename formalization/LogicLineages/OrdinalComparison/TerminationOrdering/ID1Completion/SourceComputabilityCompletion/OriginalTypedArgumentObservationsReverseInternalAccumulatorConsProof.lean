@@ -1,11 +1,14 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalAccumulatorGraphProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalQuerySyntaxProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalAccumulatorConsProof
+open OriginalTypedArgumentObservationsReverseInternalQuerySyntaxProof (unaryVectorRename binaryVectorRename)
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof (pairRight)
 open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalRecursionGraphStepSyntaxProof
 open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
@@ -19,6 +22,7 @@ theorem zero (acc : OTerm alpha) :
  Nonempty (Derivation body Delta (graph2 accumulated acc z acc)) := by
  apply programCases InternalPairing.pairing ![z,acc] _
  intro beta rho Theta state hrho hp
+ rw [binaryVectorRename] at hp
  simp only [graph2Rename,zRelabel]
  simp only [zRelabel] at hp
  exact value z (acc.relabel rho) state state (acc.relabel rho) hp
@@ -46,6 +50,7 @@ theorem consAt2 (raw head tail acc nextAcc result state next : OTerm alpha)
  : Nonempty (Derivation body Delta (graph2 accumulated result raw acc)) := by
   apply programCases reverseRun ![suc tail,next] _
   intro beta rho Theta terminal hrho hr
+  rw [binaryVectorRename] at hr
   simp only [graph2Rename]
   have hc' := renameInto hc rho Theta hrho
   simp only [graph2Rename] at hc'
@@ -68,6 +73,7 @@ theorem consAt1 (raw head tail acc nextAcc result state : OTerm alpha)
  : Nonempty (Derivation body Delta (graph2 accumulated result raw acc)) := by
   apply programCases InternalPairing.pairing ![tail,nextAcc] _
   intro beta rho Theta next hrho hn
+  rw [binaryVectorRename] at hn
   simp only [graph2Rename]
   have hc' := renameInto hc rho Theta hrho
   simp only [graph2Rename] at hc'
@@ -86,6 +92,7 @@ theorem consValue (raw head tail acc nextAcc result : OTerm alpha)
  : Nonempty (Derivation body Delta (graph2 accumulated result raw acc)) := by
   apply programCases InternalPairing.pairing ![raw,acc] _
   intro beta rho Theta state hrho hp
+  rw [binaryVectorRename] at hp
   simp only [graph2Rename]
   have hc' := renameInto hc rho Theta hrho
   simp only [graph2Rename] at hc'

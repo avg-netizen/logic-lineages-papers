@@ -3,9 +3,11 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalAccumulatorConsProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextTwoDeletionCoreProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendListProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalQuerySyntaxProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalAccumulatorCoreProof
+open OriginalTypedArgumentObservationsReverseInternalQuerySyntaxProof (unaryVectorRename binaryVectorRename)
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
@@ -37,6 +39,7 @@ theorem zeroCore (value singleton combined acc left right : OTerm alpha)
  Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode right value left)) := by
  apply programCases InternalListCodec.consCode ![value,acc] _
  intro beta rho Theta nextAcc hrho ha
+ rw [binaryVectorRename] at ha
  simp only [graph2Rename]
  have hf' := renameInto hf rho Theta hrho
  simp only [fields,conjunctionRename,graph2Rename,zRelabel] at hf'

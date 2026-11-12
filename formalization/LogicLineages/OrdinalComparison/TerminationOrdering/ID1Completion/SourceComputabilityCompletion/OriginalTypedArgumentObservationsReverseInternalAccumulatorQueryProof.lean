@@ -1,12 +1,14 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalAccumulatorCoreProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalQuerySyntaxProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalAccumulatorQueryProof
+open OriginalTypedArgumentObservationsReverseInternalQuerySyntaxProof (unaryVectorRename binaryVectorRename)
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
-open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalRecursionGraphStepSyntaxProof
 open InternalTagArithmeticSyntaxProof (z zRelabel)
 open OriginalTypedArgumentObservationsReverseInternalAccumulatorDefinitions OriginalTypedArgumentObservationsReverseInternalAccumulatorSyntaxProof OriginalTypedArgumentObservationsReverseInternalAccumulatorCoreProof
@@ -22,6 +24,7 @@ theorem consAt3 (front value singleton combined acc left right head tail joined 
  : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode right value left)) := by
   apply programCases accumulated ![joined,nextAcc] _
   intro beta rho Theta tailRight hrho hr
+  rw [binaryVectorRename] at hr
   simp only [graph2Rename]
   have hi' := renameInto hi rho Theta hrho
   simp only [belowRawRename] at hi'
@@ -46,6 +49,7 @@ theorem consAt2 (front value singleton combined acc left right head tail joined 
  : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode right value left)) := by
   apply programCases accumulated ![tail,nextAcc] _
   intro beta rho Theta tailLeft hrho hl
+  rw [binaryVectorRename] at hl
   simp only [graph2Rename]
   have hi' := renameInto hi rho Theta hrho
   simp only [belowRawRename] at hi'
@@ -67,6 +71,7 @@ theorem consAt1 (front value singleton combined acc left right head tail joined 
  : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode right value left)) := by
   apply programCases InternalListCodec.consCode ![head,acc] _
   intro beta rho Theta nextAcc hrho ha
+  rw [binaryVectorRename] at ha
   simp only [graph2Rename]
   have hi' := renameInto hi rho Theta hrho
   simp only [belowRawRename] at hi'
@@ -85,6 +90,7 @@ theorem consAt0 (front value singleton combined acc left right head tail : OTerm
  : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode right value left)) := by
   apply programCases InternalApplicationValidityStackAppend.append ![tail,singleton] _
   intro beta rho Theta joined hrho hj
+  rw [binaryVectorRename] at hj
   simp only [graph2Rename]
   have hi' := renameInto hi rho Theta hrho
   simp only [belowRawRename] at hi'
