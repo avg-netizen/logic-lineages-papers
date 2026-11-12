@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHereditaryViewProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHereditaryViewStatementChecks
+theorem exactRootSignature : NumberedHereditaryViewTargets.ExactRootSignature :=
+ NumberedHereditaryRootSignatureProof.exactRootSignature
+theorem exactFiniteDepth : NumberedHereditaryViewTargets.ExactFiniteDepth :=
+ NumberedHereditaryViewProof.exactFiniteDepth
+#print axioms exactRootSignature
+#print axioms exactFiniteDepth
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHereditaryViewStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedHereditaryViewStatementChecks
