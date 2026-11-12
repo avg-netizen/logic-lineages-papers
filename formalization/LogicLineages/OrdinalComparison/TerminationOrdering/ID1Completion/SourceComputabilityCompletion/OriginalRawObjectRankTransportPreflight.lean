@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawObjectRankTransportTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawObjectRankTransport
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawObjectRankTransportTargets
+
+#check (ShiftRankLaw : Prop)
+#check (EraseRankLaw : Prop)
+#check (ActualOriginalRawObjectShiftRank : Prop)
+#check (ActualOriginalRawObjectEraseRank : Prop)

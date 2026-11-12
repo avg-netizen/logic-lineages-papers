@@ -1,4 +1,34 @@
-# Current state — checkpoint repaired; author and proof work paused
+# Current checkpoint — active minimum and Object rank transport checked
+
+The user explicitly requested continuing the formalization and committing to
+the recent work branch. Resume from `af61da124919d10934aa8e56a49da7ac848e770f` on
+`formalization/cumulative-continuation-2026-11-09`; read
+[this release](RESUME-2026-11-11-MINIMUM-RANK-TRANSPORT.md).
+
+Seven exact supporting contracts in nineteen new Lean modules are checked.
+The actual active representative now has an internal least-hit law; the full
+previous Package and final rank laws coexist at the same minimum-input tuple.
+Raw Object shift preserves all-variable-occurrence rank, and total raw Object
+erasure cannot increase it. The same rank conclusions now pass through the
+actual unchanged final canonical Object program, retaining the genuine cons
+witness for contextual erasure and assuming no raw transformed fixedness.
+
+The focused native closure has 3,230 source-matched modules, seven exact aliases
+and standard-only axioms. All 247 frozen source hashes are preserved. Read
+[the accepted checkpoint](verification/continuation-2026-11-11-minimum-rank-transport/STATUS.md).
+No accepted mathematical source, register, manuscript, compiler/dependency pin,
+CI or shared checker changed. No full-root or remote-CI result is claimed.
+
+Original class coherence, canonical cancellation, the erasure certificate
+transformer, internal substitution/I/C and paper06 accessibility remain pending.
+The register remains **171 checked, 2 inherited, 16 pending /189**. All owned
+compiler work has finished. Preserve the checked sources and fixed serialized
+native profile in subsequent continuations. Private research and historical
+external author sessions remain stopped.
+
+---
+
+# Previous state — checkpoint repaired; author and proof work paused
 
 The current Fable003 checkpoint has completed its bounded constructive repairs
 and all six exact/standard-axiom gates (33 supporting contracts). The user asked
