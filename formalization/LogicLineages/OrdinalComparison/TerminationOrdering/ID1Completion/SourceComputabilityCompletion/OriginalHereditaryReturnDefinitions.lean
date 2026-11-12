@@ -5,7 +5,7 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open InternalApplicationCertificateConstructors
 open OriginalRawSyntaxTransport (constant)
-open Source NumberedRewriteSyntax NumberedLeastCodeRepresentative NumberedMultisetNumeric
+open Source NumberedRewriteSyntax NumberedRewriteReduction NumberedLeastCodeRepresentative NumberedMultisetNumeric
 /-- Standalone return slots, NOT current scheduler jobs. Those jobs omit the
 outer type and term/list role; no integration is asserted here. -/
 def typ : Program 3 := leftOf (.projection 0)

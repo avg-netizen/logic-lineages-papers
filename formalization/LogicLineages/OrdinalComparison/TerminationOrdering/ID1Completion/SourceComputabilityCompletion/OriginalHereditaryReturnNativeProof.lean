@@ -41,14 +41,17 @@ theorem rootSubstitution : OriginalHereditaryReturnTargets.RootSubstitution := b
     OriginalRootObservationNativeProof.headEvaluation,
     OriginalNumericListSortNativeProof.nativeCalibration,
     OriginalRootObservation.argumentValues]
+  all_goals exact OriginalNumericListSortNativeProof.nativeCalibration _
 
 /-- List assembly preserves order. BASE sorting happens in returnRoot only. -/
 theorem argumentsConsSubstitution : OriginalHereditaryReturnTargets.ArgumentsConsSubstitution := by
   intro Q n arity Gamma c tau types q args
   simp only [returnArgumentsCons,consOfEvaluation,pairOfEvaluation,leftOfEvaluation,
-    rightOfEvaluation,vectorThree,firstProjection,secondProjection,thirdProjection,
+    rightOfEvaluation,vectorThree,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.vecHead,Matrix.vecTail,Function.comp_apply,Fin.cons_zero,Fin.cons_succ,
+    firstProjection,secondProjection,thirdProjection,
     argumentsCode,codeNumber,Nat.unpair_pair,OriginalRootObservation.argumentValues,
     argumentList,List.map_cons,numbersNumber,OriginalRootObservation.typedValue,scalar]
+  rfl
 
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryReturnNativeProof

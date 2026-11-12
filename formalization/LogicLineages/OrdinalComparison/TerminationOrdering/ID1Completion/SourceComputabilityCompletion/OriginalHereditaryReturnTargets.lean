@@ -3,7 +3,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryReturnTargets
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
-open Source NumberedRewriteSyntax NumberedLeastCodeRepresentative NumberedMultisetNumeric
+open Source NumberedRewriteSyntax NumberedRewriteReduction NumberedLeastCodeRepresentative NumberedMultisetNumeric
 open OriginalHereditaryReturn
 /-- Actual child evaluations are substituted, not assumed parent results. -/
 def RootSubstitution : Prop := ∀ (Q : Program 2) (n : Nat) (arity : Fin n → Nat)
