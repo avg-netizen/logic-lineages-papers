@@ -39,7 +39,7 @@ theorem jobsCost {n c depth : Nat} (a : Job n) :
  rw [← jobsCore (c:=c) a,List.map_map]
  induction jobs c a with
  | nil => rfl
- | cons b bs ih => simp only [List.map_cons,List.sum_cons,Nat.mul_add,ih]
+ | cons b bs ih => simp only [List.map_cons,List.sum_cons,Nat.mul_add,ih,Function.comp_apply]
 
 theorem depthTrace : OriginalHereditaryAgendaTargets.DepthTrace := by
  intro n c depth
@@ -63,7 +63,10 @@ theorem depthTrace : OriginalHereditaryAgendaTargets.DepthTrace := by
    have hr := Trace.step (Step.returning (c:=c) a suffix) (Trace.refl suffix)
    have hs := Trace.step (Step.visit (c:=c) a suffix) (trans ht hr)
    rw [jobsCost] at hs
-   simpa only [visits,Nat.mul_add,Nat.mul_one,Nat.add_assoc,Nat.add_comm,Nat.add_left_comm] using hs
+   have hc : (2 * ((successors a.core).map (visits depth)).sum + (0+1)) + 1 = 2 * visits (depth+1) a.core := by
+     simp only [visits]
+     omega
+   exact hc ▸ hs
 
 theorem boundedTrace : OriginalHereditaryAgendaTargets.BoundedTrace := by
  intro n c a suffix
