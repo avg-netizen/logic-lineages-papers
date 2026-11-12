@@ -1,7 +1,9 @@
-# Recovery draft: fresh verification required
+# Recovery drafts and checked work
 
-A cloud workspace reset removed unpublished sources and native build artifacts after checkpoint `9e732bf4`. This isolated recovery branch preserves reconstructed source drafts before further verification. The checked cumulative branch is unchanged.
+The checked cumulative branch now includes checkpoint04 `819126764a0faa77a2600ba93fceddaffc94bd0b`: fresh source-matched checks prove lambda whole-wrapper introduction and generic direct-bottom raw introduction. Its recorded scope is two exact aliases across 1,665 local modules; no full-root or remote-CI pass is claimed.
 
-The previous workspace had passed structural traversal key preservation and initial-minimum absorption gates, but not every file was recoverable byte-for-byte. Those reconstructed files must be checked again; this snapshot does not inherit their lost build results. Lambda native calibration and whole-wrapper lambda introduction remain unverified candidates. No numbered statement is promoted and no full-root or CI pass is claimed.
+This isolated recovery branch preserves evolving reconstructed and new drafts. Structural traversal/key/absorption, lambda native calibration/global selection, concrete direct-bottom whole-wrapper/global/dichotomy, nil normalization and lambda-erasure square work remain pending fresh gates unless separately promoted in a later checked checkpoint. A source snapshot is not proof acceptance; former lost build results are not inherited.
 
-The original published checkpoints remain preserved. Compiler and dependency pins, accepted mathematical sources and register are unchanged.
+Historical limitations remain explicit: two preflight files are unavailable and a reconstructed structural Targets wrapper differs byte-for-byte, while its complete original Definitions laws survive exactly. Original aggregate preservation and recovery comparator review are retained separately. No claim that all original files were restored is made.
+
+Compiler/dependency pins, accepted mathematical sources and register remain unchanged:171checked,2inherited,16pending/189.

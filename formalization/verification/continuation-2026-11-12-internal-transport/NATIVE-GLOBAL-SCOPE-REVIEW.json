@@ -1,0 +1,23 @@
+{
+  "reviewed_at_utc": "2026-11-12T09:11:28.967834+00:00",
+  "kind": "independent-target-scope-and-tuple-review-not-compiler-proof-audit",
+  "files": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomDefinitions.lean": "e9f60a7a0b908a82ffe69d619af71070f3deab53d491421bef87e31952d4192d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomTargets.lean": "df198150bdc5ab5783f5f2f9ab9a25962fce4e886870e52f130e857675e26b19",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomNativeProof.lean": "eda05034d4bc8eaef457e907e34fa57a939cf974f4356ff29abf4b099492db1d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomCalibrationProof.lean": "62042cde0e5afd8d81c14cc857a450ebf6e3039791c3242bb2bec40c3c48f635",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentLambdaStepGlobalDefinitions.lean": "e554bec2824b7950f9d74fc31e386d8a032810491240ba21c8248384f933cd7c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentLambdaStepGlobalTargets.lean": "5df04b0021b960fd28dc7bcadbe55820507fb9e1573dce590cbd4fe4674b13c6",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomDichotomyDefinitions.lean": "ad1f1265cdb1ea423b0249e7247ed1832f774e517f4ac72536986f7ee1271560",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomDichotomyTargets.lean": "f1ad8fe86bdbcbeab74ba8b018a2d95db30e4bcdb2fd266a6f1a079d40fa17a9"
+  },
+  "findings": [
+    "DirectBottomEquality covers every four-input vector under InputsCalibrated, including exact-certificate rejected/malformed cases and whole-output unchanged fallback. chosenCertificateTarget requires equality to the exact existing certificateValue; it does not infer bottom targets for arbitrary certificates.",
+    "DirectBottomCalibration replaces oldStep only. Retention re-applies ActiveKernelMinimum at refineInputs p using native calibration. This proves retained package, not a conversion of native equality into an internal derivation.",
+    "DirectBottom raw introduction accepts arbitrary source Program explicitly. Its whole closed-leaf target is separately restricted to concrete OriginalUniverseDecoder.source H G M W, which justifies tag-three consistency internally. This distinction is necessary and preserved.",
+    "LambdaGlobal prepared replaces oldStep by normalization of the entire original priorFinal p.oldStep, using original p.base.oldSource. selected is ActiveKernelMinimum prepared, refined has exactly one VariableLeaves G refinement, and final is Traversal.finalInputs refined, matching retained rank package tuple.",
+    "LambdaGlobal LiteralLeaf names the actual Traversal.prepareInputs refined endpoint and refined.window. NativePreparation is inside Properties. FinalIntroduction explicitly requires LambdaHop original p.base.oldSource and uses the same final checker at child and parent. It does not infer original parent source from final source/child acceptance, or claim canonical quotient lifting.",
+    "DirectBottomDichotomy preserves concrete decoder scope and same-type target. Equality is raw s=t; alternative existential binds the exact original certificate code and acceptance in the SAME closed leaf. No strict-rank/canonical equality/general erasure assertion is present. No nonbottom/certificate/guard premise leaks into antecedent."
+  ],
+  "verdict": "No target weakening or native-as-internal shortcut found at reviewed interfaces. Compilation and axiom checks are separate parent-owned verification; this record does not claim those gates passed."
+}

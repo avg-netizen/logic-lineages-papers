@@ -31,7 +31,10 @@ theorem leafParentAccept (n : Nat) (arity : Fin n → Nat) (v : List.Vector Nat 
     simp only [sourceValue,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.head_cons,Matrix.tail_cons,
       decodedValue,hcontext,hGamma] at hs
     cases hq : decodeUniverse n arity ctx.1.1 ctx.1.2 Gamma (v.get 0) with
-    | none => simp [rawCarrierTest,hq] at hs
+    | none =>
+      change (decodeUniverse n arity ctx.1.1 ctx.1.2 Gamma (v.get 0)).isSome = true at hs
+      rw [hq] at hs
+      contradiction
     | some q =>
       have hraw := (NumberedNumericCarrierProof.numericUniverseDecode n arity
         ctx.1.1 ctx.1.2 Gamma (v.get 0) q).mp hq
