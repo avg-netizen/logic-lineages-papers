@@ -1,6 +1,6 @@
 # Mixed restricted trace target-source validity
 
-Status: complete candidate assembled; full exact endpoint gate pending. The frozen target is unchanged.
+Status: full exact endpoint verified in retry 358 (exact alias 1; receipt to be recorded by coordinator). The frozen target is unchanged.
 
 The source is the literal original UniverseDecoder.source H G M W, with fixed arbitrary Programs H/G/M/W and unchanged runtime parameter. The leaf is the NEW mixed normalizer over the direct-bottom-refined oldStep, not the old global final checker.
 

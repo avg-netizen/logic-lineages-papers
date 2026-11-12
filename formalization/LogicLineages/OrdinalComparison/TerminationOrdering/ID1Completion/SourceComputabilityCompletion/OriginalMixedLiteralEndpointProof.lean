@@ -5,6 +5,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderValidatorCollapsePackedImplicationProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedStructuralEndpointGuardSupportProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalSupportProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedLiteralEndpointProof
@@ -34,7 +35,7 @@ theorem atParameter (H G : Program 1) (M W : Program 2) (oldStep : Program 4)
   (endpoint H G M W) (numeral 1) d e fn targetFn arg parameter)) := by
  have hfields := OriginalMixedTraceValidityApplicationSourceProof.fieldsIff H G M W
   arrow d e fp ap fn arg s parameter c gamma hcs hp
- have hv := iffForward hfields (andLeft hh)
+ have hv := OriginalFinalVariableCanonicalSupportProof.iffForward hfields (andLeft hh)
  have hfn := andLeft (andRight hv)
  have harg := andRight (andRight hv)
  obtain ⟨law⟩ := OriginalMixedTraceValidityProof.actualTargetSourceValidity H G M W oldStep body alpha Delta

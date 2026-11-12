@@ -4,6 +4,7 @@ public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialCompletionInductionProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalTagArithmeticSupportProof (natInduction)
 open InternalTagArithmeticSyntaxProof
 open InternalGraphCompositionFunctionalityProof (renameInto)
 open InternalClosedPrograms InternalClosedProgramsBindingProof
@@ -48,13 +49,13 @@ theorem allRows (R : Program 2) (H : Program 1) (M W : Program 2) (supply : Step
  (c B fuel : OTerm alpha) : Nonempty (Derivation body Delta (Row R H M W c B fuel)) := by
  let theta : Formula (alpha ⊕ Fin 1) := Row R H M W (c.relabel Sum.inl) (B.relabel Sum.inl) (.var (.inr 0))
  have hz : Nonempty (Derivation body Delta (instantiate theta (emb z))) := by
-  simpa only [theta,rowInstantiate,liftBind,varBind] using (zeroRow (body:=body) (Delta:=Delta) R H M W supply c B)
+  simpa only [theta,OriginalHereditaryPotentialCompletionSyntaxProof.rowInstantiate,liftBind,varBind] using (zeroRow (body:=body) (Delta:=Delta) R H M W supply c B)
  have hs : Nonempty (Derivation body (theta :: Delta.map weaken) (successorInstance theta)) := by
   have h := succRow (body:=body) (Delta:=theta :: Delta.map weaken) R H M W supply
     (c.relabel Sum.inl) (B.relabel Sum.inl) (.var (.inr (0 : Fin 1))) ⟨Derivation.hypothesis List.mem_cons_self⟩
-  simpa only [theta,rowSuccessor,nextLift,nextTerm,Term.subst,Sum.elim_inr] using h
+  simpa only [theta,OriginalHereditaryPotentialCompletionSyntaxProof.rowSuccessor,nextLift,nextTerm,Term.subst,Sum.elim_inr] using h
  have h := Derivation.universalElimination (emb fuel) (natInduction theta (Classical.choice hz) (Classical.choice hs))
- simpa only [theta,rowInstantiate,liftBind,varBind] using (Nonempty.intro h)
+ simpa only [theta,OriginalHereditaryPotentialCompletionSyntaxProof.rowInstantiate,liftBind,varBind] using (Nonempty.intro h)
 theorem conditionalCompletion : OriginalHereditaryPotentialCompletionTargets.ConditionalCompletion := by
  intro R H M W supply body alpha Delta c B fuel input work results before output he
  exact rowApply R H M W c B fuel input work results before output (allRows R H M W supply c B fuel) he

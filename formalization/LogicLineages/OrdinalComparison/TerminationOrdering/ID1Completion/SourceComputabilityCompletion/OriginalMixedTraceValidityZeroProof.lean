@@ -45,7 +45,7 @@ theorem typeCases (s : OTerm alpha) (psi : Formula alpha)
  intro beta j Theta typ incl ht
  have ht' : Nonempty (Derivation body Theta (graph1 InternalUnpair.left typ (s.relabel j))) := by
   simpa only [InternalRecursionGraphStepSyntaxProof.consTermRename,
-   InternalRecursionGraphStepSyntaxProof.emptyRename] using ht
+   InternalControlGraphSupportProof.emptyRename] using ht
  exact next beta j Theta typ incl ht'
 
 theorem zeroAt (H G : Program 1) (M W : Program 2) (oldStep : Program 4)

@@ -41,26 +41,33 @@ open InternalApplicationCertificateConstructorsSyntaxProof
 open OriginalMixedTraceValidityBindingProof
 open SourceComputabilityFormulaSupportProof (numeral)
 
+theorem sourceFromRows (source : Program 2) (leaf : Program 4)
+ (hrows : ∀ (beta : Type) (Theta : List (Formula beta)) (path : OTerm beta),
+  Nonempty (Derivation body Theta (AtPath source leaf path)))
+ (s t cert parameter : OTerm alpha)
+ (h : Nonempty (Derivation body Delta
+  (graph2 source (numeral 1) s parameter ⊓
+   graph4 (OriginalMixedDirectBottomTrace.recognizes source leaf) (numeral 1) s t cert parameter))) :
+ Nonempty (Derivation body Delta (result source leaf t parameter)) := by
+ apply OriginalMixedTraceValidityZeroProof.typeCases cert (result source leaf t parameter)
+ intro beta j Theta path incl hp
+ rw [OriginalMixedTraceValiditySyntaxProof.resultRename]
+ have h' := renameInto h j Theta incl
+ simp only [OriginalUniverseDecoderInternalBooleanProof.andRename,graph2Rename,graph4Rename,
+  OriginalRawSyntaxTransportInternalParserSyntaxProof.numeralRename] at h'
+ exact atPathApply source leaf path (s.relabel j) (t.relabel j) (cert.relabel j) (parameter.relabel j)
+  (hrows beta Theta path) (andIntro hp h')
+
 theorem actualTargetSourceValidity : OriginalMixedTraceValidityTargets.ActualTargetSourceValidity := by
  intro H G M W oldStep body alpha Delta s t cert parameter
  let A : Formula alpha := graph2 (OriginalTransparentMixedDirectBottom.source H G M W) (numeral 1) s parameter ⊓
   graph4 (OriginalMixedDirectBottomTrace.recognizes (OriginalTransparentMixedDirectBottom.source H G M W)
    (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep)) (numeral 1) s t cert parameter
  have h : Nonempty (Derivation body (A :: Delta) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
- have hr : Nonempty (Derivation body (A :: Delta)
-  (result (OriginalTransparentMixedDirectBottom.source H G M W)
-   (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) t parameter)) := by
-  apply InternalAcceptanceSupportProof.programCases InternalUnpair.left ![cert] _
-  intro beta j Theta path incl hp
-  rw [OriginalMixedTraceValiditySyntaxProof.resultRename]
-  have h' := renameInto h j Theta incl
-  simp only [A,OriginalUniverseDecoderInternalBooleanProof.andRename,graph2Rename,graph4Rename,
-   OriginalRawSyntaxTransportInternalParserSyntaxProof.numeralRename] at h'
-  exact atPathApply (OriginalTransparentMixedDirectBottom.source H G M W)
-   (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) path
-   (s.relabel j) (t.relabel j) (cert.relabel j) (parameter.relabel j)
-   (rows H G M W oldStep path) (andIntro hp h')
- obtain ⟨hr⟩ := hr
+ obtain ⟨hr⟩ := sourceFromRows (OriginalTransparentMixedDirectBottom.source H G M W)
+  (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep)
+  (fun beta Theta path => rows (body := body) (Delta := Theta) H G M W oldStep path) s t cert parameter h
  exact ⟨Derivation.implicationIntroduction hr⟩
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedTraceValidityProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedTraceValidityProof

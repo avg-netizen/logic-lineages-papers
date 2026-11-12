@@ -14,7 +14,7 @@ def ActualCases : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type) (Delta : 
  Nonempty (Derivation body Delta (graph2 OriginalHereditaryExpansion.expansion jobs raw parameter)) →
  Nonempty (Derivation body Delta (lengthGraph count jobs)) →
  Nonempty (Derivation body Delta (Below index count)) →
- Nonempty (Derivation body Delta (graph2 InternalListLookup.lookup child index jobs)) →
+ Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup child index jobs)) →
  (∀ (beta : Type) (rho : alpha → beta) (Theta : List (Formula beta))
    (childRaw childParameter childGamma : OTerm beta),
    (∀ f ∈ Delta, f.relabel rho ∈ Theta) →
