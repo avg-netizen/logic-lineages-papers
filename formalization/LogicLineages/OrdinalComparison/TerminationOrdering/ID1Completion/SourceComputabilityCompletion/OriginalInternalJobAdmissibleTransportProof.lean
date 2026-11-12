@@ -8,6 +8,7 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalControlGraphSupportProof
 open InternalTagArithmeticSyntaxProof (emb)
+open InternalSourceInversionSupportProof (onEquality)
 open OriginalInternalJobAdmissible OriginalInternalJobAdmissibleTransportSyntaxProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
@@ -22,7 +23,9 @@ theorem tupleTransport (H : Program 1) (M W : Program 2)
  have hy : phi.subst (fun i => emb (ys i)) = Admissible H M W (ys 0) (ys 1) (ys 2) (ys 3) (ys 4) := by
   simp only [phi,admissibleSubst,Term.subst]
  have h := InternalGraphCompositionEqualityProof.tupleCongruence body alpha 5 Delta phi
-  (fun i => emb (xs i)) (fun i => emb (ys i)) he (by rw [hx]; exact ha)
+  (fun i => emb (xs i)) (fun i => emb (ys i))
+  (fun i => by simpa only [InternalControlGraph.equal,onEquality,emb] using he i)
+  (by rw [hx]; exact ha)
  rwa [hy] at h
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalInternalJobAdmissibleTransportProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalInternalJobAdmissibleTransportProof

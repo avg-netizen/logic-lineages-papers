@@ -44,7 +44,8 @@ theorem annotationRecover {n : Nat} (a : Program n) (annotation childRole childT
  have hl := renameInto hl0 rho Theta hrho
  have hr := renameInto hr0 rho Theta hrho
  have ha' := renameInto ha rho Theta hrho
- simp only [programRename,graph2Rename] at hl hr ha'
+ simp only [programRename] at hl hr
+ simp only [graph2Rename] at ha'
  have hleft := unaryRecover InternalUnpair.left a (childRole.relabel rho) value (fun i => (xs i).relabel rho) hl hv
  have hright := unaryRecover InternalUnpair.right a (childType.relabel rho) value (fun i => (xs i).relabel rho) hr hv
  have he := valueUnique InternalPairing.pairing value (annotation.relabel rho)
