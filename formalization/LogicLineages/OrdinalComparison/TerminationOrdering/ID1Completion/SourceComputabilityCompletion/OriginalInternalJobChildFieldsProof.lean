@@ -34,7 +34,8 @@ theorem ordinaryFirst (H : Program 1) (M W : Program 2)
  let xs : Fin 1 → OTerm alpha := ![raw]
  let ys : Fin 2 → OTerm alpha := ![raw,parameter]
  have htag := OriginalRawSyntaxTransportInternalConstructorFieldsProof.ordinaryTag (.projection 0) raw head base xs (projectionValue 0 xs) hc
- have hterm := termAtTag H M W 4 (by decide) (by decide) role typ raw gamma c ha htag
+ have htagRaw := unaryRecover InternalUnpair.left (.projection 0) (numeral 4) raw xs htag (projectionValue 0 xs)
+ have hterm := termAtTag H M W 4 (by decide) (by decide) role typ raw gamma c ha htagRaw
  have facts := iffForward (OriginalUniverseDecoderTransportUnaryAcceptanceProof.ordinaryIff H M W raw head base headData result types typ gamma c hc hh ht) hterm
  have haccept := listAdmissible H M W types base gamma c (andRight (andRight (andRight (andRight facts))))
  have hcell := firstCell raw cell parameter base parameter hj
@@ -62,7 +63,8 @@ theorem numberedFirst (H : Program 1) (M W : Program 2)
  let xs : Fin 1 → OTerm alpha := ![raw]
  let ys : Fin 2 → OTerm alpha := ![raw,parameter]
  have htag := OriginalRawSyntaxTransportInternalConstructorFieldsProof.numberedTag (.projection 0) raw label head recorded base extraTypes extras xs (projectionValue 0 xs) hc
- have hterm := termAtTag H M W 5 (by decide) (by decide) role typ raw gamma c ha htag
+ have htagRaw := unaryRecover InternalUnpair.left (.projection 0) (numeral 5) raw xs htag (projectionValue 0 xs)
+ have hterm := termAtTag H M W 5 (by decide) (by decide) role typ raw gamma c ha htagRaw
  have facts := iffForward (OriginalUniverseDecoderTransportBinaryAcceptanceProof.numberedIff H M W raw label head recorded base extraTypes extras headData result types typ gamma c hc hh ht) hterm
  have children := andRight (andRight (andRight (andRight facts)))
  have haccept := listAdmissible H M W types base gamma c (andLeft children)
@@ -91,7 +93,8 @@ theorem numberedSecond (H : Program 1) (M W : Program 2)
  let xs : Fin 1 → OTerm alpha := ![raw]
  let ys : Fin 2 → OTerm alpha := ![raw,parameter]
  have htag := OriginalRawSyntaxTransportInternalConstructorFieldsProof.numberedTag (.projection 0) raw label head recorded base extraTypes extras xs (projectionValue 0 xs) hc
- have hterm := termAtTag H M W 5 (by decide) (by decide) role typ raw gamma c ha htag
+ have htagRaw := unaryRecover InternalUnpair.left (.projection 0) (numeral 5) raw xs htag (projectionValue 0 xs)
+ have hterm := termAtTag H M W 5 (by decide) (by decide) role typ raw gamma c ha htagRaw
  have facts := iffForward (OriginalUniverseDecoderTransportBinaryAcceptanceProof.numberedIff H M W raw label head recorded base extraTypes extras headData result types typ gamma c hc hh ht) hterm
  have children := andRight (andRight (andRight (andRight facts)))
  have haccept := listAdmissible H M W extraTypes extras gamma c (andRight children)

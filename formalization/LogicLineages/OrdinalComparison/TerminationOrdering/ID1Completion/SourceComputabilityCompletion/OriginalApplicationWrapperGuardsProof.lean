@@ -75,7 +75,7 @@ theorem stopAtApplication (s t cert parameter : OTerm alpha)
  let xs : Fin 4 → OTerm alpha := ![s,t,cert,parameter]
  have ht := sameReject OriginalLambdaConstructor.tag (InternalLessThan.constantOne 1)
   (suc (suc z)) (suc z) ![s] htag (InternalLessThanSupportProof.oneConstantValue _) (numeralNe 2 1 (by decide))
- have hs := unaryValue OriginalLambdaConstructor.lambdaTest (.projection 0) z s xs ht (projectionValue 0 xs)
+ have hs := unaryValue OriginalLambdaGuardLeaf.lambdaTest (.projection 0) z s xs ht (projectionValue 0 xs)
  exact zeroBranchIntro (LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.normalize OriginalLambdaGuardLeaf.sourceLambda)
   (InternalLessThan.constantOne 4)
   (LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.normalize OriginalLambdaGuardLeaf.sameBottom)

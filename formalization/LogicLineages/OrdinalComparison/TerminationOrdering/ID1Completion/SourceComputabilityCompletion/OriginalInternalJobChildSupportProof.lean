@@ -12,6 +12,7 @@ open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
 open InternalApplicationCertificateConstructorsSyntaxProof
+open InternalRecursionGraphStepSyntaxProof (conjunctionRename consTermRename)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open SourceComputabilityFormulaSupportProof (numeral)
 open OriginalRawSyntaxTransport OriginalRawSyntaxTransportInternalConstructorSupportProof
@@ -35,6 +36,8 @@ theorem termAtTag (H : Program 1) (M W : Program 2) (tag : Nat) (h6 : tag ≠ 6)
  Nonempty (Derivation body Delta (OriginalUniverseDecoderInternalAcceptance.TermAccepted H M W typ raw gamma c)) := by
  apply programCases InternalUnpair.right (Fin.cons raw Fin.elim0) _
  intro beta j Theta payload hj hp
+ rw [OriginalUniverseDecoderInternalAcceptanceSyntaxProof.termAcceptedRename]
+ simp only [consTermRename,emptyRename] at hp
  have ht' := renameInto ht j Theta hj
  have ha' := renameInto ha j Theta hj
  simp only [graph1Rename,GuardedSourceSyntaxProof.numeralRename] at ht'
@@ -43,7 +46,7 @@ theorem termAtTag (H : Program 1) (M W : Program 2) (tag : Nat) (h6 : tag ≠ 6)
  have pair := reconstructPair (raw.relabel j) (numeral tag) payload ht' hp'
  have hm := OriginalInternalJobAdmissibleModeProof.termMode H M W (role.relabel j) (typ.relabel j) (raw.relabel j)
   (gamma.relabel j) (c.relabel j) (numeral tag) payload ha' pair (numeralNe tag 6 h6) (numeralNe tag 7 h7)
- simpa only [OriginalUniverseDecoderInternalAcceptanceSyntaxProof.termAcceptedRename] using andRight hm
+ exact andRight hm
 
 theorem firstCell (raw cell parameter child childParameter : OTerm alpha)
  (hj : Nonempty (Derivation body Delta (graph2 OriginalHereditaryExpansion.firstJob cell raw parameter)))
@@ -58,7 +61,7 @@ theorem secondCell (raw cell parameter child : OTerm alpha)
  (hf : Nonempty (Derivation body Delta (graph2 (secondOf (.projection 0)) child raw parameter))) :
  Nonempty (Derivation body Delta (graph2 InternalPairing.pairing cell child parameter)) :=
  binaryRecover InternalPairing.pairing (secondOf (.projection 0)) (.projection 1)
- cell child parameter (Fin.cons raw (Fin.cons parameter Fin.elim0)) hj hf (projectionValue 1 _)
+ cell child parameter (Fin.cons raw (Fin.cons parameter Fin.elim0)) hj hf (projectionValue 1 (Fin.cons raw (Fin.cons parameter Fin.elim0)))
 
 /-- Only the annotation pair is queried; the callback never assumes its desired Program output. -/
 theorem annotationCases (outRole outType : OTerm alpha) (psi : Formula alpha)
@@ -68,6 +71,7 @@ theorem annotationCases (outRole outType : OTerm alpha) (psi : Formula alpha)
  Nonempty (Derivation body Theta (psi.relabel j))) : Nonempty (Derivation body Delta psi) := by
  apply programCases InternalPairing.pairing (Fin.cons outRole (Fin.cons outType Fin.elim0)) psi
  intro beta j Theta annotation hj hp
+ simp only [consTermRename,emptyRename] at hp
  exact next beta j Theta annotation hj hp
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalInternalJobChildSupportProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalInternalJobChildSupportProof

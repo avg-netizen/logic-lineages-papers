@@ -46,7 +46,7 @@ theorem consCore (count jobs branching cap total head tail headValue tailValue :
    hc hh ht (InternalApplicationStepPeelSupportProof.andRight (InternalApplicationStepPeelSupportProof.andRight hf))
  have hm : Nonempty (Derivation body Delta (eqn (mul (suc count) cap) (add cap (mul count cap)))) :=
    ⟨trans (InternalMultiplicationLeftSuccessorProof.leftSuccessorMultiplication count cap)
-     (InternalAdditionLawsProof.commutativity (mul count cap) cap)⟩
+     (InternalAdditionCancellationProof.commutativity (mul count cap) cap)⟩
  exact weakTransport total (mul (suc count) cap) (add headValue tailValue) (add cap (mul count cap))
    he hm (addWeakBoth headValue cap tailValue (mul count cap) hhead htail)
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryBudgetSumBoundCoreProof
