@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-11-12T08:00:30.056954+00:00",
+  "kind": "independent-recovery-comparator-review",
+  "historical_manifest_unchanged": true,
+  "entries": [
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalStructuralClassKeyPreflight.lean",
+      "historical_sha256": "7a36428cb2bb40098cb4ddba934de73c14524dd1889b035ec80bf1f424afe062",
+      "recovered_sha256": null,
+      "status": "unavailable"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalStructuralTraversalKeyDefinitions.lean",
+      "historical_sha256": "c66a225549b1c3163e9ad0f6247b10206b9f114fee9239b83db360d99c449828",
+      "recovered_sha256": "c66a225549b1c3163e9ad0f6247b10206b9f114fee9239b83db360d99c449828",
+      "status": "exact"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalStructuralTraversalKeyPreflight.lean",
+      "historical_sha256": "7bd8e6336a987670e891cba23c5c92b40c9eb0fc0c51607c8b2b7db5527b6642",
+      "recovered_sha256": null,
+      "status": "unavailable"
+    },
+    {
+      "path": "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalStructuralTraversalKeyTargets.lean",
+      "historical_sha256": "311304d5bd533fe5adbd3154c3459ad1c2aef47459ff305d989b847ef7fa026f",
+      "recovered_sha256": "cb5f7a6e1809342ad37ca7682acae96bd4a5ddf46433451f67ea2d0e25d7c882",
+      "status": "reconstructed-different-bytes"
+    }
+  ],
+  "conclusion": "The exact historically frozen Definitions file retains complete OtherLeafLaw, TraversalLaw and FinalLaw. Reconstructed Targets universally quantify the original p,H,G,W,P over those laws without extra premises. This is a semantic review, not a claim of byte-identical Targets recovery or successful fresh compilation.",
+  "recommendation": "Preserve original aggregate. Record unavailable preflights separately, excluding them from recovered-file verification while retaining their historical hashes. Record reconstructed Targets with both hashes and fresh gate outcomes."
+}
