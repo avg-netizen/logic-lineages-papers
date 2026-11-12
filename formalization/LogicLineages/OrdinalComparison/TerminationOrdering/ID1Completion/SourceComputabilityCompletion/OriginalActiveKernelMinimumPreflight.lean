@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveKernelMinimumTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalActiveKernelMinimum OriginalActiveKernelMinimumTargets
+#check inputs
+#check CoherenceLaw
+#check IdempotenceLaw
+#check Properties
+#check (ActualOriginalActiveKernelMinimumCoherence : Prop)
+#check (ActualOriginalActiveKernelMinimumIdempotence : Prop)
+#check (ActualOriginalActiveKernelMinimumRetention : Prop)
+#check (ActualOriginalActiveKernelMinimumSelection : Prop)

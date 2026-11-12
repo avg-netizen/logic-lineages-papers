@@ -1,4 +1,34 @@
-# Current checkpoint — active minimum and Object rank transport checked
+# Current checkpoint — class coherence and concrete transport checked
+
+The user's continuation after `6efe1499` produced twelve checked exact
+supporting contracts in 33 new Lean modules on the same Nov9 branch. Read
+[the release](RESUME-2026-11-12-CLASS-KERNEL.md) and
+[the accepted checkpoint](verification/continuation-2026-11-12-class-kernel/STATUS.md).
+
+An explicit active class kernel is calibrated to the original predicate on
+every vector and has independent internal domain/row-coherence laws. Its
+actual guarded least representative is coherent and idempotent at one runtime
+parameter, retaining the complete prior package and final rank laws at one
+tuple. Original lambda-body Object typing is derived at the SAME final Data.
+The genuine top-variable positive-certificate branch collapses under erasure,
+including through the SAME canonical Object Program, with strict ORIGINAL
+endpoint rank decrease from one to zero.
+
+The focused evidence verifies 3,251 source-matched native modules, all twelve
+exact aliases and standard-only axioms. All 259 frozen hashes are preserved.
+Accepted mathematical sources, register, manuscripts, pins, CI and the shared
+checker are unchanged. All owned compiler/evidence jobs are complete.
+
+Internal transport of the original class key across contexts, general canonical
+cancellation, the full erasure certificate transformer, internal substitution/
+I/C and paper06 closed accessibility remain pending. The register stays
+171 checked, 2 inherited, 16 pending /189. Preserve checked sources and the
+fixed serialized native profile. Historical external-author and private
+research sessions remain stopped. No full-root or remote-CI result is claimed.
+
+---
+
+# Previous checkpoint — active minimum and Object rank transport checked
 
 The user explicitly requested continuing the formalization and committing to
 the recent work branch. Resume from `af61da124919d10934aa8e56a49da7ac848e770f` on

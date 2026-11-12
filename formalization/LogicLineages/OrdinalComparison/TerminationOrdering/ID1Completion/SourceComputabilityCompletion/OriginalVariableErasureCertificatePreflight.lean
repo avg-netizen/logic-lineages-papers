@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableErasureCertificateTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalVariableErasureCertificate OriginalVariableErasureCertificateTargets
+#check TopVariableShape
+#check Premise
+#check OriginalRankDrop
+#check RawResult
+#check RawCollapseLaw
+#check CanonicalCollapseLaw
+#check ActualOriginalVariableErasureCertificateCollapse
+#check ActualOriginalVariableErasureCertificateCanonicalCollapse
