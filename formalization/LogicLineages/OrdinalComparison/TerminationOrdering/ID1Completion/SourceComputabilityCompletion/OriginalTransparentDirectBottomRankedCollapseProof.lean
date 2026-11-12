@@ -25,7 +25,7 @@ open OriginalRawSyntaxTransport OriginalRawSyntaxTransportInternalPackedProof
 theorem rankRename {beta : Type} (s t : OTerm alpha) (rho : alpha → beta) :
  (OriginalLambdaOriginalRankDefinitions.PackedRankDrop s t (numeral 1) (numeral 0)).relabel rho =
  OriginalLambdaOriginalRankDefinitions.PackedRankDrop (s.relabel rho) (t.relabel rho) (numeral 1) (numeral 0) := by
- simp only [OriginalLambdaOriginalRankDefinitions.PackedRankDrop,conjunctionRename,graph1Rename,InternalOriginalOrderSyntaxProof.orderRename,GuardedSourceSyntaxProof.numeralRename]
+ simp only [OriginalLambdaOriginalRankDefinitions.PackedRankDrop,conjunctionRename,graph1Rename,InternalLessThan.strictLess,InternalOriginalOrderSyntaxProof.orderRename,GuardedSourceSyntaxProof.numeralRename]
 
 
 theorem exactRankedCollapse : OriginalTransparentDirectBottomRankedCollapseTargets.ActualRankedCollapse := by

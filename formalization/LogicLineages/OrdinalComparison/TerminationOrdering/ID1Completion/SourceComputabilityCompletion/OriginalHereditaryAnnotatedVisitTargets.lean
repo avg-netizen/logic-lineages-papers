@@ -3,7 +3,8 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryAnnotatedVisitTargets
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
-open OriginalHereditaryAnnotatedVisit OriginalHereditaryVisitScheduler (stateNumber visitNumber returnNumber)
+open OriginalHereditaryAnnotatedVisit
+open OriginalHereditaryVisitScheduler (stateNumber visitNumber returnNumber)
 open NumberedMultisetNumeric NumberedLeastCodeRepresentative
 def FrameCalibration : Prop := ∀ f : Nat,
   evaluate forgetFrame (List.Vector.ofFn ![f]) = forgetFrameNumber f
