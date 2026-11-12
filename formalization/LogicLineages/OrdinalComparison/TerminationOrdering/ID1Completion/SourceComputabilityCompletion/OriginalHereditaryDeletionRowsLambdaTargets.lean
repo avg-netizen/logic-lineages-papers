@@ -32,6 +32,6 @@ def ShiftedLambdaRows : Prop := ∀ (Q : Program 2)
               (graph2 InternalRawListRecursion.drop otherTail (numeral 1) otherChildRow ⊓
                (equal tail otherTail ⊓
                 (graph2 (OriginalHereditaryDeletionRows.rows (OriginalRootObservation.rootObservation Q)) row input parameter ⊓
-                 graph2 (OriginalHereditaryDeletionRows.rows (OriginalRootObservation.rootObservation Q)) otherRow other parameter))))))))))))))).imp
+                 graph2 (OriginalHereditaryDeletionRows.rows (OriginalRootObservation.rootObservation Q)) otherRow other parameter)))))))))))))).imp
     (equal row otherRow)))
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsLambdaTargets

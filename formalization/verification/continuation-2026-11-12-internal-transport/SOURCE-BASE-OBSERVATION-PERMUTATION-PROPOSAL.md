@@ -23,3 +23,11 @@ Intermediate adjacent-swapped raw argument spines need not fit one fixed head's 
 ## Scope and ownership
 
 Mapper owns numeric prefix/adjacent edge/path contracts. No runtime or frozen target was changed by this note. The proposed raw observation bridge is independent follow-on work; no theorem here asserts it checked. Ordinary/numbered source completeness and hereditary canonical cancellation remain pending even after numeric sort idempotence and adjacent-path soundness.
+
+## Verified local bridge update
+
+Literal tag7 adjacent swap passed exact alias `1794489447296281718-5`. Numeric certificate prepend and same-child raw-cons prefix lifting passed exact aliases `1794489934059582580-5`. The latter extends a certificate's literal numeric front and keeps its payload; it does not itself define a converter for a whole raw prefix or source path.
+
+The next narrowly useful supplier is an auxiliary raw-prefix constructor, iterating a numeric list of packed `(type,rawChild)` cells onto an original raw argument suffix, plus the internal observation-append law. That law would connect actual prefix reconstruction with numeric prefix observations without imposing intermediate head/source validity. An actual raw certificate/path translator still needs to be defined and checked; the existing numeric mapPath is a different, already-numeric layer.
+
+Search boundary: `NumberedExchangeGuardsPrimrecProof.permutationPrimitive` establishes native primitive recursiveness using equal occurrence counts over both lists, with `.of_eq` conversion to `List.Perm`. It is not an internal graph exposure theorem for an arbitrary calibrated source-checking Program. A source-checker-to-path proof therefore cannot silently reuse it as if it supplied internal count or witness extraction laws.
