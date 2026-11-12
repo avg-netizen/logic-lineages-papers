@@ -1,0 +1,22 @@
+{
+  "reviewed_at_utc": "2026-11-12T09:18:10.191412+00:00",
+  "kind": "independent-direct-bottom-global-tuple-scope-review",
+  "files": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomGlobalDefinitions.lean": "bd2c42bd87bb3f98473f1675f5edfb834de5fd822780915dd655fbad4b20b922",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomGlobalTargets.lean": "3780c7ca1dfe36b2d038be59941c2d93f9345d8521d986597c46ebf718ac3b7e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomGlobalInternalProof.lean": "de6599f37ca90b00cdb5b2d5d6b43db093706768ac528473d2f350787a5400c8",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDirectBottomGlobalProof.lean": "eaa46876324e6c5eb2c902a29e1ec7de7f63e701ac1aaf4bfffcd8815d9c4f17",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentLambdaStepNilNormalizationTargets.lean": "904fdbc63f9f02f44ff8ebdfdf1f1b403d0c116ed28ed8e5a76df48810f1211c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentLambdaStepNilNormalizationProof.lean": "c2d0be24ec1bff81b095a61f65a1d32514f7fbeaf10bb774a70532201d20ebdf",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalTransparentDecoderSelectionDefinitions.lean": "ee249c5e5feec21c0bd17853e2bd89ca2ff3dda37298b9dee6df606d59be55cf"
+  },
+  "verdict": "Clean limited scope; compilation remains separate.",
+  "findings": [
+    "concreteInputs changes base only, preserving oldStep and member. Its actual source is UniverseDecoder.source H G (contextMember p.base.member) W. initial applies DirectBottom to this concrete tuple, and LambdaStepGlobal later captures exactly the same initial.base.oldSource. No use of opaque p.oldSource to prove internal tag consistency.",
+    "finalInputs is literally LambdaStepGlobal.finalInputs(initial p H G W). Properties explicitly retains the complete LambdaStepGlobal.Properties at that same initial tuple, in addition to calibration/native preparation and the new direct-bottom FinalIntroduction.",
+    "FinalIntroduction keeps Premises on the explicitly named concrete original source; it does not replace it with the later selected/final validator or infer original source from final acceptance. All old/new final leaf references are to the same tuple.",
+    "NilNormalization target covers arbitrary source/checker/output under actual certificate-path-left=0. Proof uses internal repeatZeroValue, actual live-state totality, atLiveValue/Recover and Program graph composition, not native evaluation or source validity reflection.",
+    "Global internal construction uses exact certificatePath, internally introduces original priorFinal wrapper acceptance, applies nil normalization, rebuilds both actual final wrapper layers and nil hereditary guard, and links by literal finalLeaf identity.",
+    "No full erasure, canonical cancellation, source extraction, rank dichotomy or I/C completion is asserted by this packet. Retained properties are exactly the named prior lambda package; unrelated structural-key augmentations are not implicitly claimed."
+  ]
+}
