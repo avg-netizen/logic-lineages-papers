@@ -22,13 +22,13 @@ theorem stateRemaining (state raw acc parameter : OTerm alpha)
  (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing state raw acc))) :
  Nonempty (Derivation body Delta (graph2 remaining raw state parameter)) :=
  unaryValue InternalUnpair.left (.projection 0) raw state ![state,parameter]
-   (pairLeft state raw acc hp) (projectionValue 0 _)
+   (pairLeft state raw acc hp) (projectionValue 0 ![state,parameter])
 
 theorem stateAccumulated (state raw acc parameter : OTerm alpha)
  (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing state raw acc))) :
  Nonempty (Derivation body Delta (graph2 accumulated acc state parameter)) :=
  unaryValue InternalUnpair.right (.projection 0) acc state ![state,parameter]
-   (pairRight state raw acc hp) (projectionValue 0 _)
+   (pairRight state raw acc hp) (projectionValue 0 ![state,parameter])
 
 theorem stepNil (R : Program 2) (state raw acc parameter : OTerm alpha)
  (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing state raw acc)))
@@ -66,7 +66,8 @@ theorem stepCons (R : Program 2)
    nextState tail nextAcc xs hnext htail hlist
  exact sameYesIntro (leftOf remaining) (OriginalRawSyntaxTransport.constant 2 7)
    (advance R) (.projection 0) nextState (numeral 7) (numeral 7) xs
-   (consTag remaining raw typ child tail xs hr hc) (constantValue 7 xs) ⟨refl _⟩ hv
+   (consTag remaining raw typ child tail xs hr hc) (constantValue 7 xs) (by simpa only [InternalControlGraphSupportProof.equalEqn] using
+     (Nonempty.intro (InternalTagArithmeticSupportProof.refl (body := body) (Gamma := Delta) (numeral 7)))) hv
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsInternalStepProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsInternalStepProof
