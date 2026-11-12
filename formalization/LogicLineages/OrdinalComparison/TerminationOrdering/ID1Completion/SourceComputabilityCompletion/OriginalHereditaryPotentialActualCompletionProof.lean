@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualStepProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialCompletionInductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualCompletionProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+theorem actualCompletion (R : Program 2) (H : Program 1) (M W : Program 2) : OriginalHereditaryPotentialCompletionTargets.ActualCompletion R H M W :=
+ OriginalHereditaryPotentialCompletionInductionProof.conditionalCompletion R H M W
+  (OriginalHereditaryPotentialActualStepProof.actualStep R H M W)
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualCompletionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualCompletionProof
