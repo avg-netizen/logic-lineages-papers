@@ -56,10 +56,12 @@ theorem annotationEvaluation (k role typ raw : Nat) :
   simp only [annotation,evalBranch,lessCompositionEvaluation,arityOfEvaluation,
     childEvaluation,inherited,pairOfEvaluation,projectionEvaluation,List.Vector.get_ofFn,
     Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.cons_val_three]
+  change (if (if k < OriginalRawSyntaxTransport.arityValue raw then 1 else 0) = 0
+    then Nat.pair role typ else childNumber k role typ raw) = _
   by_cases h : k < OriginalRawSyntaxTransport.arityValue raw
   · simp only [h,ite_true,one_ne_zero,ite_false,annotationValue]
     unfold childNumber
-    split_ifs <;> rfl
+    split_ifs <;> simp_all
   · simp [h,annotationValue]
 
 theorem fourInputs (P : Program 4) (k role typ raw job : Nat) :

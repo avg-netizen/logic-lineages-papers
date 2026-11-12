@@ -36,7 +36,7 @@ theorem packedRanks (s t typ raw bottomRaw : OTerm alpha)
  have sr := rankPackedBackward s (numeral 1) typ raw hs (variableRank raw ht)
  have tr := rankPackedBackward t (numeral 0) typ bottomRaw (bottomCodePair t bottomRaw typ hr hb)
   (rankBottomBackward bottomRaw (numeral 0) typ hr (equalRefl (numeral 0)))
- exact andIntro sr (andIntro tr ⟨InternalQuotientComparisonProof.zeroLessSuccessor InternalTagArithmeticSyntaxProof.z⟩)
+ exact InternalApplicationStepPeelSupportProof.andIntro sr (InternalApplicationStepPeelSupportProof.andIntro tr ⟨InternalQuotientComparisonProof.zeroLessSuccessor InternalTagArithmeticSyntaxProof.z⟩)
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomRankValuesProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomRankValuesProof

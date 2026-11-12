@@ -25,6 +25,7 @@ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
 
 open InternalAcceptanceSupportProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open InternalRecursionGraphStepSyntaxProof
 open OriginalRawSyntaxTransportInternalConstructorFieldsProof
 
@@ -47,8 +48,10 @@ theorem tagAtBottom (erased typ rawE bottomRaw : OTerm alpha)
  have eq := valueUnique InternalUnpair.right bottomRaw rawE (Fin.cons erased Fin.elim0)
   (pairRight erased typ bottomRaw hp) (pairRight erased typ rawE he)
  have ht : Nonempty (Derivation body Delta (graph1 rawTag (numeral 3) bottomRaw)) :=
-  bottomTag (.projection 0) bottomRaw typ ![bottomRaw] (projectionValue 0 ![bottomRaw]) hr
- exact unaryInput rawTag (numeral 3) bottomRaw rawE eq ht
+  unaryRecover InternalUnpair.left (.projection 0) (numeral 3) bottomRaw ![bottomRaw]
+   (bottomTag (.projection 0) bottomRaw typ ![bottomRaw] (projectionValue 0 ![bottomRaw]) hr)
+   (projectionValue 0 ![bottomRaw])
+ exact unaryInput rawTag (numeral 3) bottomRaw rawE (by simpa only [equalEqn] using eq) ht
 
 theorem originalTagZero (s erased typ raw rawE bottomRaw d cutoff tag : OTerm alpha)
  (hs : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing s typ raw)))
@@ -62,7 +65,7 @@ theorem originalTagZero (s erased typ raw rawE bottomRaw d cutoff tag : OTerm al
  let E : Formula alpha := equal tag (numeral 0)
  apply InternalOriginalPairingOrderArithmeticProof.formulaCases E _
  · exact outputTransport rawTag tag (numeral 0) (Fin.cons raw Fin.elim0)
-    ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp ht E)
+    (by simpa only [E,equalEqn] using (show Nonempty (Derivation body (E :: Delta) E) from ⟨Derivation.hypothesis List.mem_cons_self⟩)) (withHyp ht E)
  · have htag := tagAtBottom erased typ rawE bottomRaw
     (withHyp he E.not) (withHyp hb E.not) (withHyp hr E.not)
    have eq := OriginalRawErasureBottomInversionProof.bottomInversion raw rawE d cutoff tag

@@ -25,8 +25,15 @@ theorem stepEvaluation (k old role typ raw jobs : Nat) :
       (k ::ᵥ old ::ᵥ role ::ᵥ typ ::ᵥ raw ::ᵥ jobs ::ᵥ nil) =
       decoratedValue k role typ raw
         (evaluate InternalRawListRecursion.lookup (k ::ᵥ jobs ::ᵥ nil)) := by
-    convert decorateEvaluation k role typ raw
-      (evaluate InternalRawListRecursion.lookup (k ::ᵥ jobs ::ᵥ nil)) using 1
+    trans evaluate decorate (ofFn ![k,role,typ,raw,
+      evaluate InternalRawListRecursion.lookup (k ::ᵥ jobs ::ᵥ nil)])
+    · change evaluate decorate (ofFn fun i : Fin 5 => evaluate
+        ((![.projection 0,.projection 2,.projection 3,.projection 4,
+          .composition InternalRawListRecursion.lookup ![.projection 0,.projection 5]] :
+            Fin 5 → Program 6) i)
+          (k ::ᵥ old ::ᵥ role ::ᵥ typ ::ᵥ raw ::ᵥ jobs ::ᵥ nil)) = _
+      congr 1
+    · exact decorateEvaluation k role typ raw _
   rw [hd,InternalEqualityTestEvaluationProof.vectorTwo]
   rfl
 
@@ -49,14 +56,22 @@ theorem decorateAllEvaluation (role typ raw : Nat) (jobs : List Nat) :
       numbersNumber (values role typ raw jobs) := by
   have hc : evaluate decorateAll (ofFn ![role,typ,raw,numbersNumber jobs]) =
       evaluate scan (jobs.length ::ᵥ role ::ᵥ typ ::ᵥ raw ::ᵥ numbersNumber jobs ::ᵥ nil) := by
-    unfold decorateAll
-    simp only [projectionEvaluation,List.Vector.get_ofFn]
-    rw [show evaluate (.composition OriginalContextInsertion.length
-      (fun _ : Fin 1 => .projection (3 : Fin 4))) (ofFn ![role,typ,raw,numbersNumber jobs]) =
-      jobs.length by
-        rw [unaryCompositionEvaluation]
-        exact OriginalContextInsertionCalibrationProof.lengthNumbers jobs]
-    rfl
+    change evaluate scan (ofFn fun i : Fin 5 => evaluate
+      ((![.composition OriginalContextInsertion.length (fun _ : Fin 1 => .projection 3),
+        .projection 0,.projection 1,.projection 2,.projection 3] : Fin 5 → Program 4) i)
+      (ofFn ![role,typ,raw,numbersNumber jobs])) = _
+    congr 1
+    apply List.Vector.ext
+    intro i
+    refine Fin.cases ?_ (Fin.cases ?_ (Fin.cases ?_ (Fin.cases ?_ (Fin.cases ?_ (fun j => Fin.elim0 j))))) i
+    · change evaluate (.composition OriginalContextInsertion.length
+        (fun _ : Fin 1 => .projection (3 : Fin 4))) (ofFn ![role,typ,raw,numbersNumber jobs]) = jobs.length
+      rw [unaryCompositionEvaluation]
+      exact OriginalContextInsertionCalibrationProof.lengthNumbers jobs
+    · rfl
+    · rfl
+    · rfl
+    · rfl
   rw [hc,nativeScan]
   unfold scanValues values
   congr 1
