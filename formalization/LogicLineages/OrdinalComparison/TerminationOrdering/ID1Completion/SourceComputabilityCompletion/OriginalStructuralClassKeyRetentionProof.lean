@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralClassKeyCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveKernelMinimumGlobalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralClassKeyRetentionProof
+open UniformCertificateCompletion OriginalStructuralClassKeyDefinitions
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem actualOriginalStructuralClassKeyRetention :
+    OriginalStructuralClassKeyTargets.ActualOriginalStructuralClassKeyRetention := by
+  intro n arity p H G W P hp hH hG hW hP
+  exact OriginalActiveKernelMinimumGlobalProof.actualOriginalActiveKernelMinimumRetention
+    n arity (inputs p H G W) H G W P
+    (OriginalStructuralClassKeyCalibrationProof.actualOriginalStructuralClassKeyCalibration
+      n arity p H G W hp hH hG hW).2 hH hG hW hP
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralClassKeyRetentionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalStructuralClassKeyRetentionProof
