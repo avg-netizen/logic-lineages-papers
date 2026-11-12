@@ -15,7 +15,7 @@ open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntax
 open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
 open InternalAdditionLawsProof (add)
 open OriginalLambdaConstructorGraphSyntaxProof
-open OriginalRawSyntaxTransportInternalMachineCompletion OriginalStructuralNodeSizeInternalMachineCompletionBindingProof
+open OriginalStructuralNodeSizeInternalMachineCompletion OriginalStructuralNodeSizeInternalMachineCompletionBindingProof
 open OriginalStructuralNodeSizeInternalMachineIterationProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {positive : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
