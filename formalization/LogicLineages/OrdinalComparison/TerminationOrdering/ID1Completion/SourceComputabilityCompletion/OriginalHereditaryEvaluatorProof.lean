@@ -5,6 +5,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpectedReturnSupportProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryFuelProgramProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditarySettledObserverProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderReconstructionLocalProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryEvaluatorProof
@@ -23,7 +24,7 @@ theorem nativeCalibration : OriginalHereditaryEvaluatorTargets.NativeCalibration
    OriginalHereditaryRuntimeWork.jobNumber c (termJob q) := by
    rw [OriginalHereditaryEvaluatorEvaluationProof.jobEvaluation]
    simp only [packedNumber,Nat.unpair_pair,OriginalHereditaryRuntimeWork.jobNumber,
-     OriginalHereditaryAnnotatedExpansion.jobNumber,OriginalHereditaryExpansion.jobNumber,termJob]
+     OriginalHereditaryAnnotatedExpansion.jobNumber,OriginalHereditaryExpansion.jobNumber,termJob,OriginalTypedDecoderReconstructionLocalProof.contextNumber]
  have hi : evaluate initial (ofFn ![packedNumber q,Nat.pair c (typesNumber Gamma)]) =
    state c [.visit (termJob q)] [] := by
    rw [OriginalHereditaryEvaluatorEvaluationProof.initialEvaluation,hj]

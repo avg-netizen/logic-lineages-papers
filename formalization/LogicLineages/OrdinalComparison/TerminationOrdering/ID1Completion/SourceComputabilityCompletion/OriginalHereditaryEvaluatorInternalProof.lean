@@ -32,7 +32,8 @@ theorem emptyWorkStep (R : Program 2) (state results : OTerm alpha)
  Nonempty (Derivation body Delta (graph1 (OriginalHereditaryCombinedStep.step R) state state)) := by
  unfold OriginalHereditaryCombinedStep.step
  apply InternalAcceptanceBranchProof.zeroBranchIntro
- exact pairLeft state z results hp
+ exact unaryValue InternalUnpair.left (.projection (0 : Fin 1)) z state (Fin.cons state Fin.elim0)
+   (pairLeft state z results hp) (projectionValue 0 (Fin.cons state Fin.elim0))
  exact projectionValue 0 (Fin.cons state Fin.elim0)
 
 theorem emptyWorkIteration : OriginalHereditaryEvaluatorInternalTargets.EmptyWorkIteration := by
