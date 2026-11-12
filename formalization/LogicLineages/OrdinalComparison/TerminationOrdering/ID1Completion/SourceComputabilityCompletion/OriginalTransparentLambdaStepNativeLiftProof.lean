@@ -32,7 +32,7 @@ theorem leafParentAccept (n : Nat) (arity : Fin n → Nat) (v : List.Vector Nat 
       decodedValue,hcontext,hGamma] at hs
     cases hq : decodeUniverse n arity ctx.1.1 ctx.1.2 Gamma (v.get 0) with
     | none =>
-      change (decodeUniverse n arity ctx.1.1 ctx.1.2 Gamma (v.get 0)).isSome = true at hs
+      change (decodeUniverse n arity ctx.1.1 ctx.1.2 Gamma (v.get 0)).isSome.toNat = 1 at hs
       rw [hq] at hs
       contradiction
     | some q =>

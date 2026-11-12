@@ -131,7 +131,7 @@ theorem nonApplicationSpine (s t cert parameter : OTerm alpha)
   have he2 : Nonempty (Derivation body Gamma (equal (numeral 2) k).not) := by
     let E := equal (numeral 2 : OTerm beta) k
     have he : Derivation body (E :: Gamma) (eqn (numeral 2) k) := by
-      simpa only [equalEqn] using (Derivation.hypothesis List.mem_cons_self : Derivation body (E :: Gamma) E)
+      simpa only [E,equalEqn] using (Derivation.hypothesis List.mem_cons_self : Derivation body (E :: Gamma) E)
     obtain ⟨h2⟩ := outputTransport OriginalLambdaConstructor.tag k (numeral 2)
       (Fin.cons (s.relabel j) Fin.elim0) ⟨InternalTagArithmeticSupportProof.symm he⟩ (withHyp hk E)
     obtain ⟨hn⟩ := withHyp hn2' E
@@ -139,7 +139,7 @@ theorem nonApplicationSpine (s t cert parameter : OTerm alpha)
   have he3 : Nonempty (Derivation body Gamma (equal k (numeral 3)).not) := by
     let E := equal k (numeral 3 : OTerm beta)
     have he : Derivation body (E :: Gamma) (eqn k (numeral 3)) := by
-      simpa only [equalEqn] using (Derivation.hypothesis List.mem_cons_self : Derivation body (E :: Gamma) E)
+      simpa only [E,equalEqn] using (Derivation.hypothesis List.mem_cons_self : Derivation body (E :: Gamma) E)
     obtain ⟨h3⟩ := outputTransport OriginalLambdaConstructor.tag k (numeral 3)
       (Fin.cons (s.relabel j) Fin.elim0) ⟨he⟩ (withHyp hk E)
     obtain ⟨hn⟩ := withHyp hn3' E

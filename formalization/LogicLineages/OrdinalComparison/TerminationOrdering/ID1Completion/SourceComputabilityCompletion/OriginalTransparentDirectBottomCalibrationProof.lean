@@ -46,9 +46,9 @@ theorem actualOriginalDirectBottomEquality : ActualOriginalDirectBottomEquality 
     rw [acceptedValueEvaluation,hp.1.1 _,hp.2.2.2.2.1 v]
     by_cases h : sourceValue n arity (List.Vector.ofFn ![v.get 0,v.get 3]) = 1 ∧
         BottomRepresentative.bottomValue (v.get 0) ≠ 1 ∧ v.get 1 = bottomValue (v.get 0)
-    · simp only [h,ite_true]
+    · rw [if_pos h]
       exact (chosenCertificateAccept n arity v h.1 h.2.1 h.2.2 hk).symm
-    · simp only [h,ite_false]
+    · rw [if_neg h]
       rcases OriginalConstructorLeafEvaluationProof.leafBoolean n arity v with hz | ho
       · exact hz.symm
       · have hs := OriginalTransparentVariableStepNativeCertificateProof.acceptedSource n arity v ho
