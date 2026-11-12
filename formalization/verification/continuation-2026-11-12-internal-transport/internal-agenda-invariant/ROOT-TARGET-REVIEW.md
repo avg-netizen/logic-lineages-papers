@@ -23,3 +23,11 @@ computability/representative coherence. Those remain separate obligations.
 
 This note is a target/premise review, not a replacement for bounded compilation
 or the repository's exact-target verification receipts.
+
+A further deliberate loss of information is that the operational `Frame`
+predicate retains literal return counts but not their calibration against the
+parent's expansion, nor the completed result-segment partition. The actual
+visit constructor computes the right counts, but this invariant need not retain
+that fact to prove work exhaustion. A later semantic frame invariant must retain
+or recover those relationships in addition to child/deletion contents and root
+return provenance.
