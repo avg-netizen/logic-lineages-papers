@@ -1,4 +1,5 @@
 module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalConstructorArityProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionSmallIndexProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionContextDeleteBaseProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionLengthProof
@@ -56,10 +57,11 @@ theorem binaryLookup (row first tail second index count value : OTerm alpha)
  · intro Theta inc he
    have hv0 := headTransport InternalRawListRecursion.lookup value index z (Fin.cons row Fin.elim0)
      he (weakenProof hv inc)
-   exact orLeft (valueUnique InternalRawListRecursion.lookup value first (Fin.cons z (Fin.cons row Fin.elim0))
-     hv0 (OriginalAllPositionContextDeleteBaseProof.lookupZero row first tail (weakenProof hc inc)))
+   obtain ⟨heq⟩ := valueUnique InternalRawListRecursion.lookup value first (Fin.cons z (Fin.cons row Fin.elim0))
+     hv0 (OriginalAllPositionContextDeleteBaseProof.lookupZero row first tail (weakenProof hc inc))
+   exact ⟨orLeft heq⟩
  · intro beta rho Theta hrho he
-   simp only [disjunctionRename,eqnRename]
+   simp only [OriginalRawSyntaxTransportInternalConstructorArityProof.orRename,eqnRename]
    have hv' := renameInto hv rho Theta hrho
    have hc' := renameInto hc rho Theta hrho
    have ht' := renameInto ht rho Theta hrho
@@ -70,7 +72,8 @@ theorem binaryLookup (row first tail second index count value : OTerm alpha)
    have hvalue := lookupValue (second.relabel rho) (suc z) (row.relabel rho) (tail.relabel rho)
      (OriginalAllPositionContextDeleteBaseProof.dropOne (row.relabel rho) (first.relabel rho) (tail.relabel rho) hc')
      (consHead (tail.relabel rho) (second.relabel rho) z ht')
-   exact orRight (valueUnique InternalRawListRecursion.lookup (value.relabel rho) (second.relabel rho)
-     (Fin.cons (suc z) (Fin.cons (row.relabel rho) Fin.elim0)) hv1 hvalue)
+   obtain ⟨heq⟩ := valueUnique InternalRawListRecursion.lookup (value.relabel rho) (second.relabel rho)
+     (Fin.cons (suc z) (Fin.cons (row.relabel rho) Fin.elim0)) hv1 hvalue
+   exact ⟨orRight heq⟩
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionSmallRowProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionSmallRowProof

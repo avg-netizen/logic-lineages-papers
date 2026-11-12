@@ -22,7 +22,7 @@ def ActualRestrictedTransport : Prop := ∀ (H G : Program 1) (M W : Program 2) 
    (graph2 InternalPairing.pairing oldParam c extended ⊓
    (graph2 InternalPairing.pairing newParam c gamma ⊓
    (graph3 OriginalRawSyntaxTransport.erasePackedRaw erasedS d cutoff s ⊓
-    graph3 OriginalRawSyntaxTransport.erasePackedRaw erasedT d cutoff t)))))))).imp
+    graph3 OriginalRawSyntaxTransport.erasePackedRaw erasedT d cutoff t))))))).imp
    (graph2 (source H G M W) (numeral 1) erasedS newParam ⊓
     OriginalExistentialRankResultDefinitions.Result (leaf H G M W oldStep) erasedS erasedT newParam s t)))
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedDirectBottomTraceTransportTargets
