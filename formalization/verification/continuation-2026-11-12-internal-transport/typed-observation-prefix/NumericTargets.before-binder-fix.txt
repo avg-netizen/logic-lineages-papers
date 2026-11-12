@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangeIntroductionTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePrependTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (z suc)
+open OriginalNumericListSortExchange
+
+/-- One literal numeric prefix-cell extension of an accepted certificate. -/
+def ActualPrepend : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
+ (source target certificate frontCode payloadCode value newFront newCertificate newSource newTarget : OTerm alpha),
+ (he : Nonempty (Derivation body Delta (graph3 edge (suc z) source target certificate)))
+ (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing certificate frontCode payloadCode)))
+ (hf : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode newFront value frontCode)))
+ (hn : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing newCertificate newFront payloadCode)))
+ (hs : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode newSource value source)))
+ (ht : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode newTarget value target))),
+ Nonempty (Derivation body Delta (graph3 edge (suc z) newSource newTarget newCertificate))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePrependTargets
