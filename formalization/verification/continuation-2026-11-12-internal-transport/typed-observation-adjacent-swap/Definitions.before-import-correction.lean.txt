@@ -1,0 +1,34 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangeDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationSwapDefinitions
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (z)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalTypedArgumentObservations
+/-- Literal original typed argument-spine adjacent swap; no source permutation oracle. -/
+def Geometry {alpha : Type} (sigma tau q r rawTail rawY rawX sourceRaw targetRaw : OTerm alpha) : Formula alpha :=
+ graph3 OriginalRawSyntaxTransport.consConstructor rawY tau r rawTail ⊓
+ (graph3 OriginalRawSyntaxTransport.consConstructor sourceRaw sigma q rawY ⊓
+ (graph3 OriginalRawSyntaxTransport.consConstructor rawX sigma q rawTail ⊓
+  graph3 OriginalRawSyntaxTransport.consConstructor targetRaw tau r rawX))
+def Children {alpha : Type} (R : Program 2) (sigma tau q r packedQ packedR valueQ valueR typedQ typedR parameter : OTerm alpha) : Formula alpha :=
+ graph2 InternalPairing.pairing packedQ sigma q ⊓
+ (graph2 InternalPairing.pairing packedR tau r ⊓
+ (graph2 R valueQ packedQ parameter ⊓
+ (graph2 R valueR packedR parameter ⊓
+ (graph2 InternalPairing.pairing typedQ sigma valueQ ⊓
+  graph2 InternalPairing.pairing typedR tau valueR))))
+def Outputs {alpha : Type} (R : Program 2) (rawTail sourceRaw targetRaw observedTail source target parameter : OTerm alpha) : Formula alpha :=
+ graph2 (argumentObservations R) observedTail rawTail parameter ⊓
+ (graph2 (argumentObservations R) source sourceRaw parameter ⊓
+  graph2 (argumentObservations R) target targetRaw parameter)
+/-- Exact zero-prefix certificate for the already-existing numeric edge checker. -/
+def Certificate {alpha : Type} (typedQ typedR observedTail rest payload certificate : OTerm alpha) : Formula alpha :=
+ graph2 InternalPairing.pairing rest typedR observedTail ⊓
+ (graph2 InternalPairing.pairing payload typedQ rest ⊓
+  graph2 InternalPairing.pairing certificate z payload)
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationSwapDefinitions
