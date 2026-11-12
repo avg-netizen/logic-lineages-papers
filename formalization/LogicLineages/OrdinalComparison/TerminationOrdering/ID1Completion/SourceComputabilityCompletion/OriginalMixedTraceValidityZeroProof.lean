@@ -18,8 +18,9 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open OriginalMixedTraceValidityDefinitions OriginalMixedTraceValidityBindingProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
-theorem zeroAt (H G : Program 1) (M W : Program 2) (oldStep : Program 4)
- (s t cert oldParam : OTerm alpha)
+theorem zeroAtType (H G : Program 1) (M W : Program 2) (oldStep : Program 4)
+ (s t cert oldParam typ : OTerm alpha)
+ (ht : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ s)))
  (hf : Nonempty (Derivation body Delta
   (fields (OriginalTransparentMixedDirectBottom.source H G M W)
    (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) z s t cert oldParam))) :
@@ -30,21 +31,39 @@ theorem zeroAt (H G : Program 1) (M W : Program 2) (oldStep : Program 4)
   (OriginalTransparentMixedDirectBottom.source H G M W)
   (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) body alpha Delta s t cert oldParam
   (andLeft hf) (andRight (andRight hf))
- apply InternalAcceptanceSupportProof.programCases InternalUnpair.left ![s] _
+ have hbottom := OriginalMixedDirectBottomEndpointProof.endpoint H G M W oldStep
+  s t cert oldParam typ (andRight (andRight hb)) ht (andLeft (andRight hb))
+ exact OriginalInternalBottomSourceProof.bottomSource H G M W body alpha Delta
+  s t oldParam typ (andLeft (andRight hf)) ht hbottom
+
+theorem typeCases (s : OTerm alpha) (psi : Formula alpha)
+ (next : ∀ (beta : Type) (j : alpha → beta) (Theta : List (Formula beta)) (typ : OTerm beta),
+  (∀ f ∈ Delta, f.relabel j ∈ Theta) →
+  Nonempty (Derivation body Theta (graph1 InternalUnpair.left typ (s.relabel j))) →
+  Nonempty (Derivation body Theta (psi.relabel j))) : Nonempty (Derivation body Delta psi) := by
+ apply InternalAcceptanceSupportProof.programCases InternalUnpair.left (Fin.cons s Fin.elim0) psi
+ intro beta j Theta typ incl ht
+ have ht' : Nonempty (Derivation body Theta (graph1 InternalUnpair.left typ (s.relabel j))) := by
+  simpa only [InternalRecursionGraphStepSyntaxProof.consTermRename,
+   InternalRecursionGraphStepSyntaxProof.emptyRename] using ht
+ exact next beta j Theta typ incl ht'
+
+theorem zeroAt (H G : Program 1) (M W : Program 2) (oldStep : Program 4)
+ (s t cert oldParam : OTerm alpha)
+ (hf : Nonempty (Derivation body Delta
+  (fields (OriginalTransparentMixedDirectBottom.source H G M W)
+   (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) z s t cert oldParam))) :
+ Nonempty (Derivation body Delta
+  (result (OriginalTransparentMixedDirectBottom.source H G M W)
+   (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) t oldParam)) := by
+ apply typeCases s (result (OriginalTransparentMixedDirectBottom.source H G M W)
+  (OriginalTransparentMixedDirectBottom.leaf H G M W oldStep) t oldParam)
  intro beta j Theta typ incl ht
  rw [OriginalMixedTraceValiditySyntaxProof.resultRename]
- have hb' := InternalGraphCompositionFunctionalityProof.renameInto hb j Theta incl
- have hs' := InternalGraphCompositionFunctionalityProof.renameInto (andLeft (andRight hf)) j Theta incl
- simp only [InternalApplicationCertificateConstructorsSyntaxProof.graph2Rename,
-  InternalApplicationCertificateConstructorsSyntaxProof.graph4Rename,
-  InternalApplicationCertificateConstructorsSyntaxProof.graph1Rename,
-  OriginalUniverseDecoderInternalBooleanProof.andRename,
-  OriginalRawSyntaxTransportInternalParserSyntaxProof.numeralRename] at hb' hs'
- have hbottom := OriginalMixedDirectBottomEndpointProof.endpoint H G M W oldStep
-  (s.relabel j) (t.relabel j) (cert.relabel j) (oldParam.relabel j) typ
-  (andRight (andRight hb')) ht (andLeft (andRight hb'))
- exact OriginalInternalBottomSourceProof.bottomSource H G M W body beta Theta
-  (s.relabel j) (t.relabel j) (oldParam.relabel j) typ hs' ht hbottom
+ have hf' := InternalGraphCompositionFunctionalityProof.renameInto hf j Theta incl
+ simp only [OriginalMixedTraceValiditySyntaxProof.fieldsRename,InternalTagArithmeticSyntaxProof.zRelabel] at hf'
+ exact zeroAtType H G M W oldStep (s.relabel j) (t.relabel j) (cert.relabel j) (oldParam.relabel j)
+  typ ht hf'
 
 theorem zeroRowGeneric (source : Program 2) (leaf : Program 4)
  (hzero : ∀ (beta : Type) (Theta : List (Formula beta))

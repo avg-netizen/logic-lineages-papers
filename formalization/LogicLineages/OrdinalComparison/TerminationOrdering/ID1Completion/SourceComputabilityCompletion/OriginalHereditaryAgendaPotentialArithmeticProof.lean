@@ -8,7 +8,7 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalTagArithmeticSyntaxProof (z suc eqn)
 open InternalTagArithmeticSupportProof
-open InternalAdditionLawsProof (add addSucc addZero leftSuccessor associativity)
+open InternalAdditionLawsProof (add leftSuccessor associativity)
 open InternalOriginalOrderSyntaxProof (ltF)
 open InternalSquareRootArithmeticSupportProof (orderLeft orderRight strictWeakTrans)
 open InternalOriginalPairingOrderArithmeticProof (addWeakBoth addStrictRight)

@@ -35,9 +35,12 @@ open OriginalHereditaryInternalAgendaSyntaxProof
 theorem jobIntro (H : Program 1) (M W : Program 2) (c B job role typ typed rawJob raw parameter gamma weight : OTerm alpha)
  (h : Nonempty (Derivation body Delta (jobFields H M W c B job role typ typed rawJob raw parameter gamma weight))) :
  Nonempty (Derivation body Delta (Job H M W c B job)) := by
- apply InternalFiniteBlocksProof.actualFiniteExistentialIntroduction body alpha 8 Delta _ (fun i => emb (![role,typ,typed,rawJob,raw,parameter,gamma,weight] i))
- rw [jobWitness]
- exact h
+ have hi : Nonempty (Derivation body Delta ((jobMatrix H M W c B job).subst
+   (Sum.elim Term.var (fun i => emb (![role,typ,typed,rawJob,raw,parameter,gamma,weight] i))))) := by
+  rw [jobWitness]
+  exact h
+ exact InternalFiniteBlocksProof.actualFiniteExistentialIntroduction body alpha 8 Delta (jobMatrix H M W c B job)
+  (fun i => emb (![role,typ,typed,rawJob,raw,parameter,gamma,weight] i)) hi
 
 theorem jobCases (H : Program 1) (M W : Program 2) (c B job : OTerm alpha) (psi : Formula alpha)
  (h : Nonempty (Derivation body Delta (Job H M W c B job)))

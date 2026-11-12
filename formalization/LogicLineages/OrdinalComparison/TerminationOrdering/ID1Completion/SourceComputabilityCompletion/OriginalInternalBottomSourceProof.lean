@@ -50,13 +50,25 @@ theorem atPayload (H G : Program 1) (M W : Program 2) (s t parameter typ raw c g
  exact sourceFieldsIntro H G M W (t) (parameter) (typ) payload
   (c) (gamma) hpacked hparam hg ⟨Derivation.implicationElimination hib prem⟩
 
+theorem payloadCases (typ : OTerm alpha) (psi : Formula alpha)
+ (next : ∀ (beta : Type) (j : alpha → beta) (Theta : List (Formula beta)) (payload : OTerm beta),
+  (∀ f ∈ Delta, f.relabel j ∈ Theta) →
+  Nonempty (Derivation body Theta (graph1 BottomSourceShapeProof.bottomPayload payload (typ.relabel j))) →
+  Nonempty (Derivation body Theta (psi.relabel j))) : Nonempty (Derivation body Delta psi) := by
+ apply programCases BottomSourceShapeProof.bottomPayload (Fin.cons typ Fin.elim0) psi
+ intro beta j Theta payload incl hv
+ have hv' : Nonempty (Derivation body Theta
+  (graph1 BottomSourceShapeProof.bottomPayload payload (typ.relabel j))) := by
+  simpa only [consTermRename,emptyRename] using hv
+ exact next beta j Theta payload incl hv'
+
 theorem atPairs (H G : Program 1) (M W : Program 2) (s t parameter typ raw c gamma : OTerm alpha)
  (hs : Nonempty (Derivation body Delta (graph2 (OriginalUniverseDecoder.source H G M W) (numeral 1) s parameter)))
  (hp : Nonempty (Derivation body Delta (StepPair s typ raw)))
  (hparam : Nonempty (Derivation body Delta (StepPair parameter c gamma)))
  (hb : Nonempty (Derivation body Delta (graph1 BottomRepresentative.bottomCode t typ))) :
  Nonempty (Derivation body Delta (graph2 (OriginalUniverseDecoder.source H G M W) (numeral 1) t parameter)) := by
- apply programCases BottomSourceShapeProof.bottomPayload ![typ]
+ apply payloadCases typ
   (graph2 (OriginalUniverseDecoder.source H G M W) (numeral 1) t parameter)
  intro beta j Theta payload hj hv
  simp only [graph2Rename,numeralRename]
