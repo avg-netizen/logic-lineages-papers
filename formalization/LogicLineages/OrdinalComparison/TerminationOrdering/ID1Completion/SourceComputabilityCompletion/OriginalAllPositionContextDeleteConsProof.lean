@@ -14,7 +14,8 @@ open InternalListCodecSupportProof InternalRecursionClosureLogicProof
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open OriginalClassContextAllPositionObserver
 open OriginalAllPositionContextDeleteBaseProof OriginalAllPositionContextDeleteFrontProof
-open OriginalAllPositionContextDeleteDropProof OriginalTypedDecoderTransportLogicalProof (iffRename)
+open OriginalAllPositionContextDeleteDropProof
+open OriginalTypedDecoderTransportLogicalProof (iffRename)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 

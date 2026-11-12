@@ -61,7 +61,7 @@ theorem successorWithSingleton (count gamma head tail result out previous d sing
   have hl' := renameInto hl j Theta hj
   simp only [consGraphRename,graph2Rename,sucRelabel] at hl'
   have hs' := renameInto hs j Theta hj
-  simp only [consGraphRename,graph2Rename,sucRelabel] at hs'
+  simp only [consGraphRename,graph2Rename,sucRelabel,zRelabel] at hs'
   simp only [consTermRename,emptyRename,zRelabel] at hnew
   exact successorReady (count.relabel j) (gamma.relabel j) (head.relabel j) (tail.relabel j) (result.relabel j) (out.relabel j) (previous.relabel j) (d.relabel j) (singleton.relabel j) oldFull hrow' hc' hp' ho' hv' hl' hs' hnew
 
