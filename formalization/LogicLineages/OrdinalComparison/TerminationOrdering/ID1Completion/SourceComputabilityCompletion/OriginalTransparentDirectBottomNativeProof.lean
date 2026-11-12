@@ -111,8 +111,9 @@ theorem chosenCertificateTarget (n : Nat) (arity : Fin n → Nat) (v : List.Vect
         simp [bottomValue,bottom,packedNumber,termCode,codeNumber]
       have hcert : v.get 2 = stepCertificateNumber cert := by
         rw [hk]
-        simp [certificateValue,hb,stepCertificateNumber,cert,pathNumber,
-          NumberedMultisetNumeric.numbersNumber,selector,selectorNumber]
+        change Nat.pair 0 (Nat.pair (bottomValue (v.get 0)) (Nat.pair 3 0)) = _
+        rw [hb]
+        rfl
       have hcdecode := NumberedNumericStepProof.stepCertificateNumericRoundTrip cert
       have hbdecode := NumberedNumericDecodingProof.packedNumericRoundTrip n arity Gamma bottom
       have hsdecode := NumberedNumericRootProof.rootSelectorRoundTrip n arity Gamma selector
@@ -129,7 +130,7 @@ theorem chosenCertificateTarget (n : Nat) (arity : Fin n → Nat) (v : List.Vect
           have heq : packedNumber bottom = packedNumber (⟨tau,r⟩ : Packed (Fin n) arity Gamma) := by
             have htest := hstep
             simp only [stepTest,cert,focus,hbdecode,hsdecode,bottom,↓reduceDIte,plug] at htest
-            exact of_decide_eq_true (Bool.and_eq_true.mp htest).2
+            exact of_decide_eq_true (Bool.and_eq_true_iff.mp htest).2
           exact htarget.symm.trans (heq.symm.trans hb.symm)
         next => contradiction
 

@@ -11,8 +11,7 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 /-- Normalize the WHOLE already calibrated original inner effective leaf.
 The original source is retained literally, independently of later validators. -/
 def prepared (p : GlobalSourcePackage.Inputs) : GlobalSourcePackage.Inputs :=
-  { p with oldStep := OriginalTransparentLambdaStep.refined p.base.oldSource
-    (OriginalHereditaryLambdaGlobal.priorFinal p).oldStep }
+  { p with oldStep := OriginalTransparentLambdaStep.refined p.base.oldSource (OriginalHereditaryLambdaGlobal.priorFinal p).oldStep }
 
 def selected (p : GlobalSourcePackage.Inputs) (H G : Program 1)
     (W : Program 2) (P : Program 3) : GlobalSourcePackage.Inputs :=
