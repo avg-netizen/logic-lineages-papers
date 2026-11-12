@@ -40,5 +40,25 @@ theorem fieldsOfPairs (job role tagged typ rawJob raw parameter window gamma : O
      (pairRight parameter window gamma hparam) hparameter
  exact andIntro hfirst hcontext
 
+/-- Once the copied raw job is exposed by annotated-scan inversion, its pair
+fields determine exactly the two weight inputs, independent of annotations. -/
+theorem fieldsOfForget (job rawJob raw parameter window gamma : OTerm alpha)
+ (hforget : Nonempty (Derivation body Delta (graph1 OriginalHereditaryAnnotatedExpansion.forget rawJob job)))
+ (hraw : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing rawJob raw parameter)))
+ (hparam : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing parameter window gamma))) :
+ Nonempty (Derivation body Delta (fields job raw gamma)) := by
+ let xs : Fin 1 → OTerm alpha := Fin.cons job Fin.elim0
+ have hfirst : Nonempty (Derivation body Delta (graph1 rawSelector raw job)) :=
+   unaryValue InternalUnpair.left OriginalHereditaryFuelProgram.rawJob raw rawJob xs
+     (pairLeft rawJob raw parameter hraw) hforget
+ have hparameter : Nonempty (Derivation body Delta
+   (programGraph (rightOf OriginalHereditaryFuelProgram.rawJob) parameter xs)) :=
+   unaryValue InternalUnpair.right OriginalHereditaryFuelProgram.rawJob parameter rawJob xs
+     (pairRight rawJob raw parameter hraw) hforget
+ have hcontext : Nonempty (Derivation body Delta (graph1 contextSelector gamma job)) :=
+   unaryValue InternalUnpair.right (rightOf OriginalHereditaryFuelProgram.rawJob) gamma parameter xs
+     (pairRight parameter window gamma hparam) hparameter
+ exact andIntro hfirst hcontext
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionFieldsProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionFieldsProof

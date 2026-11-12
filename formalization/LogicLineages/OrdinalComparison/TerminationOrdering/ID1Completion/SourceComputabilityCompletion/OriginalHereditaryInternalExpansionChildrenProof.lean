@@ -79,5 +79,12 @@ theorem firstParameterAtTag (k : Nat) (xs : Fin 2 → OTerm alpha) (out : OTerm 
     else .projection 1) out xs)) :=
  branchNumeralElim k 1 (leftOf (.projection 0)) _ _ out xs ht hp
 
+theorem firstParameterSameValue (k : Nat) (hk : k ≠ 1) (xs : Fin 2 → OTerm alpha) (out : OTerm alpha)
+ (ht : Nonempty (Derivation body Delta (programGraph (leftOf (.projection 0)) (numeral k) xs)))
+ (hp : Nonempty (Derivation body Delta (programGraph (.projection 1) out xs))) :
+ Nonempty (Derivation body Delta (programGraph firstParameter out xs)) := by
+ apply branchNumeralIntro k 1 (leftOf (.projection 0)) _ _ out xs ht
+ simpa only [if_neg hk] using hp
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionChildrenProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionChildrenProof
