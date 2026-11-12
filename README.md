@@ -1,18 +1,18 @@
 # Logic lineages papers
 
 **Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [Fable collaboration checkpoint](formalization/verification/fable-collaboration-2026-11-11/STATUS.md)
-checks 33 supporting contracts for raw/final rank, transparent minimum search,
-and an observer guard activated inside the original class test. The native
-calibration retains the old class predicate on every input, including inactive
-and malformed inputs. Earlier child-certificate, suffix and finite-type neutral
-components are recorded in the inherited continuation packets.
+The latest [closed-recognizer checkpoint](formalization/verification/continuation-2026-11-12-recognizer-factor/STATUS.md)
+checks four supporting contracts: finish acceptance, successful-step simulation,
+accepting-run simulation, and recognition transfer from the explicit closed
+checker to its underlying leaf. The proofs preserve the exact path and states,
+retain lambda-first branch priority, and use the original internal arithmetic
+calculus. The focused native closure contains 1,439 source-matched modules.
 
-Original internal representative coherence, the remaining I/C argument and full
-paper06 accessibility remain pending. [TARGETS.json](formalization/TARGETS.json)
-is authoritative; no numbered statement is promoted by this checkpoint. Fable
-and local proof work are paused after the current repairs. Earlier counts and
-continuation instructions are historical.
+General result-stack/root-return semantics, final-tuple integration, unrestricted
+source-edge closure, the remaining internal I/C argument and full paper06
+accessibility remain pending. [TARGETS.json](formalization/TARGETS.json) is
+authoritative; no numbered statement is promoted by this supporting checkpoint.
+Earlier counts and continuation instructions describe historical checkpoints.
 
 **Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
 

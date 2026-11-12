@@ -1,4 +1,33 @@
-# Current checkpoint — class coherence and concrete transport checked
+# Current checkpoint — closed recognizer factor checked
+
+The continuation from `4fea270b5f820b4a2b4bb02add9ccb8200bf8e56` adds four
+checked exact contracts in eleven new Lean modules on the same Nov9 cumulative
+branch. Read [the checkpoint](verification/continuation-2026-11-12-recognizer-factor/STATUS.md).
+
+Acceptance of the explicit closed checker now transfers to its underlying
+leaf through the actual recognizer. Finish acceptance, nonrejecting selected
+steps, accepting original-path runs and final recognition preserve the same
+states, path and four runtime inputs. The application case retains the failed
+earlier lambda test; both actual states are quantified inside the original
+arithmetic path induction. Generic helper suppliers are fully discharged at
+the four public exact endpoints. No native calibration is reflected internally.
+
+The focused native closure contains 1,439 source-matched modules. All four exact
+aliases and new helper audits use only the standard permitted axioms. All 631
+frozen hashes match; inherited mathematical sources, register, manuscripts,
+compiler/dependency pins, CI and the shared checker are unchanged. Compiler and
+evidence jobs for this checkpoint are complete. No full-root or remote-CI
+result is claimed.
+
+General result-stack/root-return semantics, selected-endpoint/final-tuple
+integration, unrestricted original source-edge closure, internal I/C and full
+paper06 accessibility remain pending. Register: 171 checked, 2 inherited,
+16 pending /189. Preserve the fixed serialized native profile and checked
+sources. Historical external-author and private-research sessions remain stopped.
+
+---
+
+# Previous checkpoint — class coherence and concrete transport checked
 
 The user's continuation after `6efe1499` produced twelve checked exact
 supporting contracts in 33 new Lean modules on the same Nov9 branch. Read
