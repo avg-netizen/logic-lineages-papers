@@ -1,0 +1,42 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalFinitePrefixTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalFinitePrefixCasesTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (eqn z)
+open InternalListCodecSupportProof (consGraph)
+open OriginalContextInsertion
+
+def Head (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (psi : Formula alpha) (value head : OTerm alpha) : Prop :=
+ ∀ (beta : Type) (j : alpha → beta) (Theta : List (Formula beta)),
+ (∀ f ∈ Delta, f.relabel j ∈ Theta) →
+ Nonempty (Derivation body Theta (eqn (value.relabel j) (head.relabel j))) →
+ Nonempty (Derivation body Theta (psi.relabel j))
+def Tail (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (psi : Formula alpha) (value suffix : OTerm alpha) : Prop :=
+ ∀ (beta : Type) (j : alpha → beta) (Theta : List (Formula beta)) (index count : OTerm beta),
+ (∀ f ∈ Delta, f.relabel j ∈ Theta) →
+ Nonempty (Derivation body Theta (lengthGraph count (suffix.relabel j))) →
+ Nonempty (Derivation body Theta (Below index count)) →
+ Nonempty (Derivation body Theta (graph2 InternalRawListRecursion.lookup (value.relabel j) index (suffix.relabel j))) →
+ Nonempty (Derivation body Theta (psi.relabel j))
+def Unary : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
+ (front first suffix joined count index value : OTerm alpha) (psi : Formula alpha),
+ Nonempty (Derivation body Delta (consGraph front first z)) →
+ Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append joined front suffix)) →
+ Nonempty (Derivation body Delta (lengthGraph count joined)) →
+ Nonempty (Derivation body Delta (Below index count)) →
+ Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup value index joined)) →
+ Head body Delta psi value first → Tail body Delta psi value suffix → Nonempty (Derivation body Delta psi)
+def Binary : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
+ (front first middle second suffix joined count index value : OTerm alpha) (psi : Formula alpha),
+ Nonempty (Derivation body Delta (consGraph front first middle)) →
+ Nonempty (Derivation body Delta (consGraph middle second z)) →
+ Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append joined front suffix)) →
+ Nonempty (Derivation body Delta (lengthGraph count joined)) →
+ Nonempty (Derivation body Delta (Below index count)) →
+ Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup value index joined)) →
+ Head body Delta psi value first → Head body Delta psi value second → Tail body Delta psi value suffix →
+ Nonempty (Derivation body Delta psi)
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalFinitePrefixCasesTargets
