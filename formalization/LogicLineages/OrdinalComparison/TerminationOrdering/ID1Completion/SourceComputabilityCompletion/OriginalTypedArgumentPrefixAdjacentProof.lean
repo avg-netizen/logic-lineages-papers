@@ -36,9 +36,9 @@ theorem observedAppend (R : Program 2) (front rawTail built parameter mappedFron
  have h := OriginalTypedArgumentPrefixBuilderProof.actualAppend R body beta Theta
    (front.relabel rho) (rawTail.relabel rho) (built.relabel rho) (parameter.relabel rho)
    (mappedFront.relabel rho) (tailValue.relabel rho) total hb' hm' ht' ha
- have he := valueUnique (argumentObservations R) total (out.relabel rho)
+ have he := InternalControlGraphSupportProof.valueUnique (argumentObservations R) total (out.relabel rho)
    (Fin.cons (built.relabel rho) (Fin.cons (parameter.relabel rho) Fin.elim0)) h ho'
- exact outputTransport InternalApplicationValidityStackAppend.append total (out.relabel rho)
+ exact InternalControlGraphSupportProof.outputTransport InternalApplicationValidityStackAppend.append total (out.relabel rho)
    (Fin.cons (mappedFront.relabel rho) (Fin.cons (tailValue.relabel rho) Fin.elim0)) he ha
 
 theorem actualAdjacent : OriginalTypedArgumentPrefixAdjacentTargets.ActualAdjacent := by
