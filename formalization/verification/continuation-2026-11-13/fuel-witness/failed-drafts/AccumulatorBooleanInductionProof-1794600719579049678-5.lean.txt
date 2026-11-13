@@ -1,0 +1,59 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.FuelWitness.Targets
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryOrder.SupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.FuelWitness.AccumulatorBooleanInductionProof
+open GorbowSyntax GorbowTheoryProof GorbowPRDefiningEquations GorbowSubstitution GorbowFormulaSubstitution List.Vector
+open SixSol20261112.Fuel NamedArithmeticGraph
+
+def accCall {ctx : Nat} (tag : Nat) (fuel index context formula cert : Term ctx) : Term ctx :=
+ call tag (fuel ::ᵥ index ::ᵥ context ::ᵥ formula ::ᵥ cert ::ᵥ nil)
+def boolean {ctx : Nat} (t : Term ctx) : Formula ctx :=
+ .disj (.equal t .zero) (.equal t (.succ .zero))
+
+theorem substAcc {m n : Nat} (sub : Fin m → Term n) tag (fuel index context formula cert : Term m) :
+ substitute sub (accCall tag fuel index context formula cert) =
+ accCall tag (substitute sub fuel) (substitute sub index) (substitute sub context) (substitute sub formula) (substitute sub cert) := by
+ simp only [accCall,Logic.substCall,List.Vector.map_cons,List.Vector.map_nil]
+theorem substBoolean {m n : Nat} (sub : Fin m → Term n) (t : Term m) :
+ substituteFormula sub (boolean t) = boolean (substitute sub t) := by
+ simp only [boolean,substituteFormula,substitute]
+
+def template {ctx : Nat} tag (index context formula cert : Term ctx) : Formula (ctx+1) :=
+ boolean (accCall tag (.var 0) (liftTerm index) (liftTerm context) (liftTerm formula) (liftTerm cert))
+theorem templateAt {ctx : Nat} tag (index context formula cert fuel : Term ctx) :
+ GorbowStandardInstances.instantiate (template tag index context formula cert) fuel =
+ boolean (accCall tag fuel index context formula cert) := by
+ simp only [GorbowStandardInstances.instantiate,template,substBoolean,substAcc,liftTerm,
+  Support.shiftCancel,substitute,Fin.cases_zero]
+
+theorem successorLift {ctx : Nat} (t : Term ctx) :
+ substitute (Fin.cases (.succ (.var 0)) (fun i : Fin ctx => Term.var i.succ)) (liftTerm t) = liftTerm t := by
+ unfold liftTerm renameTerm
+ rw [substitute_composition]
+ rfl
+
+theorem templateNext {ctx : Nat} tag (index context formula cert : Term ctx) :
+ GorbowStandardInduction.successorInstance (template tag index context formula cert) =
+ boolean (accCall tag (.succ (.var 0)) (liftTerm index) (liftTerm context) (liftTerm formula) (liftTerm cert)) := by
+ simp only [GorbowStandardInduction.successorInstance,template,substBoolean,substAcc,successorLift,substitute,Fin.cases_zero]
+
+/-- Pure full-language induction assembly. Both inputs are actual internal
+proofs; the concrete accumulator theorem discharges them using its literal AST. -/
+theorem inductionFromBaseStep (T : Sentence → Prop) {ctx : Nat} tag
+ (index context formula cert fuel : Term ctx)
+ (hb : Derivation T (boolean (accCall tag .zero index context formula cert)))
+ (hs : Derivation T (.imp (template tag index context formula cert)
+  (boolean (accCall tag (.succ (.var 0)) (liftTerm index) (liftTerm context) (liftTerm formula) (liftTerm cert))))) :
+ Nonempty (Derivation T (boolean (accCall tag fuel index context formula cert))) := by
+ let phi := template tag index context formula cert
+ have hz : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
+  simpa only [phi,templateAt] using hb
+ have hn : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) := by
+  simpa only [phi,templateNext] using hs
+ have hall : Derivation T (.all phi) := .mp (.mp (.arithmetic (.induction phi)) hz) (.generalize hn)
+ have h := Derivation.mp (.logical (.allInstantiate phi fuel)) hall
+ simpa only [phi,templateAt] using (show Nonempty (Derivation T _) from ⟨h⟩)
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.FuelWitness.AccumulatorBooleanInductionProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.FuelWitness.AccumulatorBooleanInductionProof
