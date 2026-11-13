@@ -64,3 +64,48 @@ Next review the retained-R child compatibility and an actual erasure/fold square
 before freezing any global C preservation endpoint. Context currently owns
 application source-domain closure, not these semantic suppliers. No successor
 specification or proof was authored from this audit; no tuple was modified.
+
+## Retained-R audit after forward OTHER acceptance
+
+The local leaf forward endpoint is now paid separately by
+EvaluatorOtherPreservationStatementChecks.exactOtherPreservation,
+receipt1794583857918794458-5. It does not pay the parent rebuild's R calls.
+
+Read-only definition trace: EvaluatorKeyPut.baseRepresentative is
+ObservedPut.prepared.base.oldRepresentative. PutIntegration.seed changes only
+transparent source/target leaves and the PUT step; MixedPrepared repeats those
+transparent leaves and changes direct-bottom/mixed steps. Each of these record
+updates retains oldRepresentative. Thus the relevant R remains the original
+p.base.oldRepresentative, not a new structurally constrained evaluator Program.
+GlobalSourcePackage.Inputs stores no internal correctness field. Its
+InputsCalibrated condition is external native calibration; in particular
+InternalOriginalUniformParameterLeaves.Calibrated specifies all standard-vector
+evaluations of the representative, not an arithmetic derivation of congruence.
+
+There IS a precise native proof route, so no impossibility is claimed:
+OriginalHereditaryEvaluatorExactProof.exactPrimary gives equality of E outputs
+iff original WindowPrimary on the admitted decoded source universe for an
+actually calibrated base. Then
+OriginalHereditaryObservationSourceUniformityTargets.CalibratedRepresentative
+(and its accepted proof) gives equality of R outputs from that WindowPrimary.
+This route retains actual Gamma and decoded outer context, but produces native
+evaluation equalities. It does not reflect them into arbitrary Derivation body
+Delta or cover arbitrary uncalibrated p.
+
+The smallest outstanding internal compatibility required at a constructor
+step is therefore:
+  original admitted child pair for the retained R at the same actual child
+  parameter, plus graph2 R value child childParameter
+  ==> graph2 R value otherChild childParameter.
+For lambda, childParameter is the literal paired c/cons(domain,Gamma), not the
+parent parameter. For application it is the parent parameter. This statement
+is an identified unsupported bridge, NOT a frozen proposed theorem. A source
+restriction alone does not constrain an arbitrary retained R's graph sufficiently
+by definition. Before proof work, either locate/prove a genuine internal
+primary-equivalence/representative congruence for the concrete selected R,
+or explicitly review a different construction. Do not silently specialize the
+existing universally quantified tuple or add this bridge as a final assumption.
+
+Even if that bridge is paid, the separate all-position deletion cell law and
+zero-cell lambda geometry described above remain; C-fibre extensionality alone
+is not forward preservation. Runtime owns that extensionality lane separately.
