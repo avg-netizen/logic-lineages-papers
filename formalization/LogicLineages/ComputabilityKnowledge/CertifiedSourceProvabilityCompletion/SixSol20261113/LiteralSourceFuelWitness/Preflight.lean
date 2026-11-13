@@ -1,0 +1,3 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSourceFuelWitness.Targets
+#check LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSourceFuelWitness.Targets.SameSourceFuelWitness
