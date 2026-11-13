@@ -2,6 +2,7 @@ module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherMinimumProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRankGuardedLeafOtherStepProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionMinimumStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherSelectedGenericProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherSelectedProof
@@ -40,24 +41,8 @@ theorem selectedStep (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Pro
  have hleaf := ObservedOtherMinimumProof.priorLeafAtType p H G W P input minimum typ parameter hd hm ht
  have hf := OriginalRankGuardedLeafTupleProof.conditionFactors m H G W input parameter
    (ObservedOtherPipelineProof.conditionFromDomain q H G W P input parameter hd)
- apply programCases T (Fin.cons input (Fin.cons parameter Fin.elim0)) _
- intro beta j Theta output hj hg
- have hl' := renameInto hleaf j Theta hj
- have hw' := renameInto (andLeft hf) j Theta hj
- have hv' := renameInto (andRight hf) j Theta hj
- have ho' := renameInto hother j Theta hj
- rw [graph2Rename] at hl'
- simp only [OriginalFunctionNeutrality.windowGraph,OriginalVariableRepresentative.windowGraph,graph2Rename] at hw'
- simp only [graph2Rename,sucRelabel,zRelabel] at hv'
- simp only [graph1Rename,sucRelabel,zRelabel] at ho'
- simp only [consTermRename,emptyRename] at hg
- change Nonempty (Derivation body Theta (graph2 T (minimum.relabel j) (input.relabel j) (parameter.relabel j)))
- have hout := OriginalRankGuardedLeafOtherStepProof.transitionPriorLeaf raw window
-   output (input.relabel j) (parameter.relabel j) hw' hv' ho' hg
- have he := valueUnique (InternalParameterizedCanonicalResultFold.leaf (OriginalRankGuardedLeaf.priorData m H G W))
-   output (minimum.relabel j) (Fin.cons (input.relabel j) (Fin.cons (parameter.relabel j) Fin.elim0)) hout hl'
- exact outputTransport T output (minimum.relabel j)
-   (Fin.cons (input.relabel j) (Fin.cons (parameter.relabel j) Fin.elim0)) he hg
+ exact ObservedOtherSelectedGenericProof.selectedStep raw window input minimum parameter
+   (andLeft hf) (andRight hf) hleaf hother
 
 theorem selectedLeafAtType (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program 2) (P : Program 3)
  (input minimum typ parameter : OTerm alpha)
@@ -96,7 +81,7 @@ theorem selectedLeafAtType (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W
      (OriginalRankGuardedLeafProof.selectedData m H G W)) (suc z) input parameter))
    rw [OriginalRankGuardedLeafProof.selectedValidity]
    exact andRight hc
- let xs := Fin.cons input (Fin.cons parameter Fin.elim0)
+ let xs : Fin 2 → OTerm alpha := Fin.cons input (Fin.cons parameter Fin.elim0)
  exact successorBranchIntro (InternalApplicationValidityStack.exactOne V) D.oldRepresentative
    (normalizer D.oldRepresentative V) minimum z xs
    (sameAccept V (InternalLessThan.constantOne 2) (suc z) xs hv (InternalLessThanSupportProof.oneConstantValue xs)) hn

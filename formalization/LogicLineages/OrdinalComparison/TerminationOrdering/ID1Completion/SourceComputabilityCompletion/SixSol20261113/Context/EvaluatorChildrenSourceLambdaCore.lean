@@ -17,6 +17,8 @@ open OriginalLambdaTraversalInternal
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open InternalTagArithmeticSyntaxProof (suc z sucRelabel zRelabel)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
 theorem childAtFields (H G : Program 1) (M W : Program 2)
  (parent parameter d e child arrow bodyParameter : OTerm alpha)
  (hf : Nonempty (Derivation body Delta (OriginalLambdaConstructor.Fields parent d e child arrow)))
@@ -29,15 +31,21 @@ theorem childAtFields (H G : Program 1) (M W : Program 2)
  let ep : Program 2 := consOf dp gp
  let qs : Fin 3 → Program 2 := ![cp,gp,ep]
  let xs : Fin 2 → OTerm alpha := ![parent,parameter]
- apply queryCases qs xs _
+ apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs xs _
  intro beta j ys Theta hj hq
  simp only [graph2Rename,SourceComputabilityFormulaSupportProof.numeral,sucRelabel,zRelabel]
  have hf' := renameInto hf j Theta hj
  rw [OriginalLambdaConstructorGraphSyntaxProof.fieldsRename] at hf'
- have hs' := renameInto hs j Theta hj
+ have hs' : Nonempty (Derivation body Theta
+   (graph2 (OriginalUniverseDecoder.source H G M W) (numeral 1) (parent.relabel j) (parameter.relabel j))) := by
+   simpa only [graph2Rename,SourceComputabilityFormulaSupportProof.numeral,sucRelabel,zRelabel] using renameInto hs j Theta hj
  have hb' := renameInto hb j Theta hj
  simp only [graph2Rename,SourceComputabilityFormulaSupportProof.numeral,sucRelabel,zRelabel] at hs' hb'
- simp only [xs,consTermRename,emptyRename] at hq
+ have hvec : (fun a : Fin 2 => (xs a).relabel j) =
+     (![parent.relabel j,parameter.relabel j] : Fin 2 → OTerm beta) := by
+   funext a
+   exact Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)) a
+ rw [hvec] at hq
  let xx : Fin 2 → OTerm beta := ![parent.relabel j,parameter.relabel j]
  have hc := unaryRecover InternalUnpair.left (.projection 1) (ys 0) (parameter.relabel j) xx
    (hq 0) (projectionValue 1 xx)

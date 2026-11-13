@@ -112,3 +112,7 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 
 - [Whole-Line dispatcher](history-dispatcher/STATUS.md): three exact targets and463 source-matched modules verified.
 - [Actual observation child-code descent](observation-descent/STATUS.md): four exact internal targets verified. See the explicit [code-zero prose correction](observation-descent/ERRATUM-CODE-ZERO.md); no rank calibration is yet claimed.
+
+## Literal kernel step closure
+
+[Actual literal history kernel](history-kernel/STATUS.md) now has all-vector native calibration and an internal successful-step suffix law. The upcoming new SAME-source tuple installation is a separate construction, not an identity with the former opaque witness or full HB completion.

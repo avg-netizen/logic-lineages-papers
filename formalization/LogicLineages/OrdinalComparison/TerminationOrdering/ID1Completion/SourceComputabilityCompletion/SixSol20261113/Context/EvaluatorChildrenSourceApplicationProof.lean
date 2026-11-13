@@ -24,7 +24,7 @@ theorem sourceApplication : EvaluatorChildrenSourceTargets.ActualApplication := 
  have hf' := renameInto hf j Theta hj
  rw [OriginalLambdaTraversalApplicationFieldsProof.fieldsRename] at hf'
  have fields := OriginalLambdaTraversalApplicationFieldsProof.fromConstructors arrow d e fp ap f a (parent.relabel j) hc
- let xs := Fin.cons (parent.relabel j) Fin.elim0
+ let xs : Fin 1 → OTerm beta := Fin.cons (parent.relabel j) Fin.elim0
  have ef := valueUnique OriginalLambdaTraversal.rawFunction f (fn.relabel j) xs
    (andLeft (andRight (andRight (andRight fields))))
    (andLeft (andRight (andRight (andRight hf'))))

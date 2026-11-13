@@ -65,7 +65,7 @@ theorem priorLeafAtType (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : 
  have hn := ObservedOtherRepeatProof.normalizerValue D.oldRepresentative V input minimum parameter hs hf
  have hv := andRight (OriginalRankGuardedLeafTupleProof.conditionFactors m H G W input parameter
    (ObservedOtherPipelineProof.conditionFromDomain q H G W P input parameter hd))
- let xs := Fin.cons input (Fin.cons parameter Fin.elim0)
+ let xs : Fin 2 → OTerm alpha := Fin.cons input (Fin.cons parameter Fin.elim0)
  exact successorBranchIntro (InternalApplicationValidityStack.exactOne V) D.oldRepresentative
    (normalizer D.oldRepresentative V) minimum z xs
    (sameAccept V (InternalLessThan.constantOne 2) (suc z) xs hv (InternalLessThanSupportProof.oneConstantValue xs)) hn
