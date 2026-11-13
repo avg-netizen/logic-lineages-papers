@@ -11,7 +11,7 @@ theorem certificateCodecTotal : Targets.CertificateCodecTotal := by
   obtain ⟨lines,he⟩ := HistoryKernel.CodecTotalProof.listTotal HistoryKernel.CodecTotalProof.lineTotal code
   refine ⟨lines,he,?_⟩
   rw [← he]
-  simp only [GorbowNumericCertificate.decodeCertificate,Encodable.encodek,Option.bind_some,ite_true]
+  simp [GorbowNumericCertificate.decodeCertificate]
 
 theorem decodedLinesEncode (code : Nat) :
     Encodable.encode (SixSol20261112.HistoryMachine.decodedLines code)=code := by
@@ -29,12 +29,12 @@ theorem nativeBound : SixSol20261112.HistoryMachine.BoundProgram bound := by
   intro v
   change v.get 0 = Encodable.encode (SixSol20261112.HistoryMachine.decodedLines v.head)
   rw [decodedLinesEncode]
-  rfl
+  rw [List.Vector.get_zero]
 
 theorem nativeInitial : SixSol20261112.HistoryMachine.InitialProgram initial := by
   intro v
   rw [initial,twoEval,constantEval,projectionEval,HistoryCodec.NativeProof.nativePair]
   change Nat.pair 1 (v.get 0) = Nat.pair 1 (Encodable.encode (SixSol20261112.HistoryMachine.decodedLines v.head))
   rw [decodedLinesEncode]
-  rfl
+  rw [List.Vector.get_zero]
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.CodecProof
