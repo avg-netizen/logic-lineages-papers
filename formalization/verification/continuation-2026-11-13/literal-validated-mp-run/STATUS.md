@@ -1,5 +1,7 @@
-# Fresh literal-validated MP run proposal
+# Literal-validated MP run exact4 accepted
 
-Four proposed contracts: derive actual new MP line validity; execute trailing singleton from joined histories; execute constructed encoded-bound certificate; accept the actual literal core. The validity AST is specifically the fresh lineValidator. Both actual successful input runs remain premises, but the previous new-line validity premise is removed. The original MP registry install premises are unchanged except fixed validity AST. The left decoder needed by provenance is obtained structurally from lineValidator’s actual lineContext child, not imposed on the caller. No source-tuple substitution, SAME published root, HB/collapse or numbered-register promotion is claimed.
+Focused StatementChecks exact4 PASS `1794597752559724231-5`, standard permitted axioms only, coordinator verified. Frozen Definitions/Targets/Preflight unchanged.
 
-Definitions/Targets/Preflight independently reviewed and frozen after preflight1794597604055434927-6. Exact4 proofs pending.
+Actual successful input-run provenance yields validity of antecedent and implication. Literal implication-conclusion closure yields conclusion validity; the canonical new MP line is validated by the ACTUAL dispatcher leaf. The extra left decoder is obtained structurally from the installed lineValidator, not supplied by the caller. Thus the old separate new-line-validity premise is removed from trailing execution, constructed encoded-bound run and actual literal-core acceptance.
+
+Input premises are still two explicit successful runs with specified top entries. Actual literal AST installs, common index/fuel, original payload/order and encoded iteration bound remain unchanged. This does not yet convert two core-acceptance premises to run witnesses, identify a SAME published source/root, or claim HB/collapse/numbered completion. Coordinator owns aggregate evidence/publication.
