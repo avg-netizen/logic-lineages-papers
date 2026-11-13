@@ -20,3 +20,16 @@ portion passed but its initial line proof hit fixed heartbeats and is undergoing
 small-lemma repair; it is not yet accepted as a whole. Implication and quantifier
 proofs remain under construction by a separate author. No fresh checker/source
 assembly or numbered promotion is claimed.
+
+## All six exact contracts accepted
+
+`1794594953453775332-5` passes the aggregate six exact aliases with standard
+axioms only. Native formula and line functions match their original all-vector
+semantics, including original decoder/default behavior. Internal Boolean range,
+arbitrary paired line binding, implication-conclusion validity (retaining the
+necessary valid-antecedent premise), and both quantifier token next-context
+identities are proved constructively from the literal scanner. Accepted source
+hashes match receipt rows in ACCEPTED-HASHES.json. Full scanner frame also passed
+separately. The prior existential checker/source tuple is not identified with
+this new validity leaf. Fresh assembly is a separate reviewed obligation; no
+numbered-register promotion is claimed.
