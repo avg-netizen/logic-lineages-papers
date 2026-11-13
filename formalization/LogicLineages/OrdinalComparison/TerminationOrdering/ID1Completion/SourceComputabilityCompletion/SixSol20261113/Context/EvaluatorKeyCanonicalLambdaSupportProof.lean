@@ -40,7 +40,9 @@ theorem rebuilt (domain codomain child otherChild out otherOut : OTerm alpha)
  (hr : Nonempty (Derivation body Delta (graph3 OriginalLambdaConstructor.constructor otherOut domain codomain otherChild))) :
  Nonempty (Derivation body Delta (equal out otherOut)) := by
  have hh : Nonempty (Derivation body Delta (graph3 OriginalLambdaConstructor.constructor out domain codomain otherChild)) := by
-   apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 3 Delta _ out
+   simp only [graph3,programGraph] at hl ⊢
+   apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 3 Delta
+     (OrdinaryArithmetic.graphFormula OriginalLambdaConstructor.constructor) out
      (![domain,codomain,child]) (![domain,codomain,otherChild]) _ hl
    intro i
    have hd : Nonempty (Derivation body Delta (equal domain domain)) := by
