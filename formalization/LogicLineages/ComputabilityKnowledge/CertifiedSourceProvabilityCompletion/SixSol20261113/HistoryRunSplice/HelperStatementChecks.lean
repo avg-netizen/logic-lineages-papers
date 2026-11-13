@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.ConversionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.HelperStatementChecks
+theorem exactIdle : Targets.InternalIdle := IdleProof.internalIdle
+theorem exactLengthDrain : Targets.InternalLengthDrain := DrainProof.internalLengthDrain
+theorem exactBoundConversion : Targets.InternalBoundConversion := ConversionProof.internalBoundConversion
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.HelperStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.HelperStatementChecks

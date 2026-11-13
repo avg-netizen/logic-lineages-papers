@@ -54,9 +54,11 @@ theorem internalBoundConversion : Targets.InternalBoundConversion := by
   have hh : Hilbert.Local T (ctx+1) [H] H := .hypothesis List.mem_cons_self
   obtain ⟨he⟩ := beyondLength p itag ltag atag ptag ctag dtag droptag v l a x hi hl ha hp hc hd hdrop C O I F (.var 0)
   have hcong := StationaryProof.iterationCount itag C (.add (lengthCall ltag C) (.var 0)) (state ptag O C) I F hh
+  have hb0 : Derivation T (.imp H (.equal (run itag ptag C O C I F)
+      (run itag ptag (lengthCall ltag C) O C I F))) :=
+    Hilbert.Local.finish (Hilbert.Local.discharge (localTrans _ _ _ hcong (.base he)))
   have hb : Derivation T (.imp H (GorbowPACore.weaken Q)) := by
-    simpa only [Q,C,O,I,F,GorbowPACore.weaken,substituteFormula,substRun,substLength,liftTerm,renameTerm,run] using
-      Hilbert.Local.finish (Hilbert.Local.discharge (localTrans _ _ _ hcong (.base he)))
+    simpa only [Q,C,O,I,F,GorbowPACore.weaken,substituteFormula,substRun,substLength,liftTerm,renameTerm] using hb0
   obtain ⟨helim⟩ := HBQuantifier.existentialElimination T H Q ⟨hb⟩
   obtain ⟨hdata⟩ := LengthDataProof.lengthData n p ltag atag droptag ctag hl ha hdrop hc ctx code (.zero : Term ctx) .zero
   have hweak := Derivation.mp (.logical (.andLeft _ _)) (.mp (.logical (.andRight _ _)) hdata)
