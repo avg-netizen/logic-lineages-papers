@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.NativeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.NativeStatementChecks
+
+theorem nativePair : Targets.NativePair := NativeProof.nativePair
+theorem nativeCons : Targets.NativeCons := NativeProof.nativeCons
+theorem nativeConsAllVectors : Targets.NativeConsAllVectors := NativeProof.nativeConsAllVectors
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.NativeStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec
