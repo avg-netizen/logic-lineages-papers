@@ -1,0 +1,19 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.SourceProof
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.StatementChecks
+theorem certificateCodecTotal : Targets.CertificateCodecTotal := CodecProof.certificateCodecTotal
+theorem nativeAuxiliaries : Targets.NativeAuxiliaries := NativeProof.nativeAuxiliaries
+theorem internalBound : Targets.InternalBound := InitialProof.internalBound
+theorem internalInitial : Targets.InternalInitial := InitialProof.internalInitial
+theorem internalFinishCharacterization : Targets.InternalFinishCharacterization := ComparisonProof.internalFinishCharacterization
+theorem internalFinishFailure : Targets.InternalFinishFailure := FailureProof.internalFinishFailure
+theorem sameSourceLiteralAuxiliaries : Targets.SameSourceLiteralAuxiliaries := SourceProof.sameSourceLiteralAuxiliaries
+#print axioms certificateCodecTotal
+#print axioms nativeAuxiliaries
+#print axioms internalBound
+#print axioms internalInitial
+#print axioms internalFinishCharacterization
+#print axioms internalFinishFailure
+#print axioms sameSourceLiteralAuxiliaries
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.StatementChecks
