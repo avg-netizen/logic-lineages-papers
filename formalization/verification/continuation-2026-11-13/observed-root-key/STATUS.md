@@ -1,0 +1,5 @@
+# Checked SAME all-position final-fold root-key preservation
+
+For the already-defined ObservedPut.finalData/finalInputs, actual final source premises, window and fold graph imply iff of the actual structural-key graph on output and input at the SAME parameter. Root key preservation is derived from actual all-position minimum acceptance and the additional genuine guard wrapper, then internal traversal/fold induction. The older active-kernel refined tuple is not identified with this one. No root-key, Accepted, fixedness or canonical-output hypothesis is supplied. No equality of folded endpoints or once-minimum outputs is yet claimed. Independent audit was corrected to account explicitly for the added guard; final bytes pass.
+
+Exact native evidence verifies 3,239 source-matched modules, standard axioms and zero errors. Register unchanged:175 checked,2 inherited,12 pending. No full-root or remote CI claim. Sources and compact evidence are published; reconstructible native snapshots remain local.

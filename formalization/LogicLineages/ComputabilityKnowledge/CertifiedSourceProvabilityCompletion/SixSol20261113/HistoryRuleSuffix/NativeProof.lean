@@ -20,8 +20,21 @@ theorem chooseEval {n : Nat} (t a b : Program n) (v : List.Vector Nat n) :
   change evaluate HistoryCodec.select (evaluate t v ::ᵥ evaluate a v ::ᵥ evaluate b v ::ᵥ nil) = _
   exact HistoryCodec.NativeProof.evaluateSelect _ _ _
 
+theorem projectionEval {n : Nat} (i : Fin n) (v : List.Vector Nat n) : evaluate (.projection i) v = v.get i := rfl
+theorem get2_0 (a b : Nat) : (a ::ᵥ b ::ᵥ nil).get (0 : Fin 2) = a := rfl
+theorem get2_1 (a b : Nat) : (a ::ᵥ b ::ᵥ nil).get (1 : Fin 2) = b := rfl
+theorem get3_0 (a b c : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ nil).get (0 : Fin 3) = a := rfl
+theorem get3_1 (a b c : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ nil).get (1 : Fin 3) = b := rfl
+theorem get3_2 (a b c : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ nil).get (2 : Fin 3) = c := rfl
+theorem get4_0 (a b c d : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ d ::ᵥ nil).get (0 : Fin 4) = a := rfl
+theorem get4_1 (a b c d : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ d ::ᵥ nil).get (1 : Fin 4) = b := rfl
+theorem get4_2 (a b c d : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ d ::ᵥ nil).get (2 : Fin 4) = c := rfl
+theorem get4_3 (a b c d : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ d ::ᵥ nil).get (3 : Fin 4) = d := rfl
+theorem encodeSome (a : GorbowProofChecker.Entry) : Encodable.encode (some a) = (Encodable.encode a).succ := rfl
+theorem encodeEntry (n : Nat) (raw : List Nat) : Encodable.encode ((n,raw) : GorbowProofChecker.Entry) = Nat.pair n (Encodable.encode raw) := rfl
+
 theorem equalEval (a b : Nat) : evaluate equalCode (a ::ᵥ b ::ᵥ nil) = if a=b then 1 else 0 := by
-  simp only [equalCode,chooseEval,twoEval,constantEval]
+  simp only [equalCode,chooseEval,twoEval,constantEval,projectionEval,get2_0,get2_1,get3_0,get3_1,get3_2,get4_0,get4_1,get4_2,get4_3,HistoryCodec.NativeProof.evaluateDifference]
   change (if b-a=0 then (if a-b=0 then 1 else 0) else 0) = _
   by_cases h : a=b
   · subst b; simp
@@ -61,7 +74,7 @@ theorem mpBodyEval (n : Nat) (raw : List Nat) (a b : Option GorbowProofChecker.E
     | some b =>
       rcases a with ⟨an,ar⟩
       rcases b with ⟨bn,br⟩
-      simp only [mpBody,chooseEval,conjunctionEval,twoEval,partEval,constantEval]
+      simp only [mpBody,chooseEval,conjunctionEval,twoEval,partEval,constantEval,projectionEval,get2_0,get2_1,get3_0,get3_1,get3_2,get4_0,get4_1,get4_2,get4_3,encodeSome,encodeEntry,Nat.pred_succ,Nat.unpair_pair,Bool.false_eq_true,if_false,if_true]
       change (if (Nat.pair an (Encodable.encode ar)).succ=0 then 0 else
         if (Nat.pair bn (Encodable.encode br)).succ=0 then 0 else
         if evaluate equalCode (an ::ᵥ n ::ᵥ nil)=0 then 0 else
@@ -73,6 +86,7 @@ theorem mpBodyEval (n : Nat) (raw : List Nat) (a b : Option GorbowProofChecker.E
       simp only [Nat.succ_ne_zero,if_false,equalEval]
       have hc : (Nat.pair 7 (Encodable.encode (br++raw))).succ =
           Encodable.encode (GorbowCodeConstructors.binary 7 br raw) := rfl
+      simp only [List.Vector.head_cons,List.Vector.tail_cons]
       rw [hc]
       simp only [Encodable.encode_inj]
       by_cases h1 : an=n <;> by_cases h2 : bn=n <;>
@@ -87,7 +101,7 @@ theorem generalizeBodyEval (n : Nat) (raw : List Nat) (a : Option GorbowProofChe
   | none => simp only [generalizeBody,chooseEval]; rfl
   | some a =>
       rcases a with ⟨an,ar⟩
-      simp only [generalizeBody,chooseEval,conjunctionEval,twoEval,oneEval,partEval,constantEval]
+      simp only [generalizeBody,chooseEval,conjunctionEval,twoEval,oneEval,partEval,constantEval,projectionEval,get2_0,get2_1,get3_0,get3_1,get3_2,get4_0,get4_1,get4_2,get4_3,encodeSome,encodeEntry,Nat.pred_succ,Nat.unpair_pair,Bool.false_eq_true,if_false,if_true]
       change (if (Nat.pair an (Encodable.encode ar)).succ=0 then 0 else
         if evaluate equalCode (an ::ᵥ n.succ ::ᵥ nil)=0 then 0 else
         evaluate equalCode (Encodable.encode raw ::ᵥ
@@ -95,6 +109,7 @@ theorem generalizeBodyEval (n : Nat) (raw : List Nat) (a : Option GorbowProofChe
       rw [HistoryCodec.NativeProof.nativeConsAllVectors]
       have hc : (Nat.pair 10 (Encodable.encode ar)).succ =
           Encodable.encode (GorbowCodeConstructors.unary 10 ar) := rfl
+      simp only [List.Vector.head_cons,List.Vector.tail_cons]
       rw [hc]
       simp only [Nat.succ_ne_zero,if_false,equalEval,Encodable.encode_inj]
       by_cases h1 : an=n+1 <;> by_cases h2 : raw=GorbowCodeConstructors.unary 10 ar <;> simp [h1,h2]

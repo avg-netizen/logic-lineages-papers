@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.SuffixProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.NativeStatementChecks
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.StatementChecks
+theorem nativeMP : Targets.NativeMP := NativeProof.nativeMP
+theorem nativeGeneralize : Targets.NativeGeneralize := NativeProof.nativeGeneralize
+theorem internalMPSuffix : Targets.InternalMPSuffix := SuffixProof.internalMPSuffix
+theorem internalGeneralizeSuffix : Targets.InternalGeneralizeSuffix := SuffixProof.internalGeneralizeSuffix
+#print axioms nativeMP
+#print axioms nativeGeneralize
+#print axioms internalMPSuffix
+#print axioms internalGeneralizeSuffix
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.StatementChecks

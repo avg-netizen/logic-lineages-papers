@@ -30,7 +30,7 @@ theorem lookupCases {n ctx : Nat} (p : Program n) atag ltag
   obtain ⟨hp⟩ := HistoryAppend.PreserveProof.internalPreserveSome n p atag ltag ha hl (ctx+1)
     (liftTerm index) (liftTerm h) (liftTerm tail) (.var 0)
   have hs : Hilbert.Local T (ctx+1) [H] (.equal (HistoryLookup.lookupCall ltag (liftTerm index) (liftTerm h)) (.succ (.var 0))) := by
-    simpa only [H,old,HistoryOrder.SupportProof.predBody,liftTerm,HistoryAppend.TableLookupProof.substLookup] using
+    simpa only [H,old,HistoryOrder.SupportProof.predBody,liftTerm,renameTerm,HistoryAppend.TableLookupProof.substLookup] using
       (Hilbert.Local.hypothesis (T := T) (List.mem_cons_self : H ∈ [H]))
   have hn := Hilbert.Local.mp (.base hp) hs
   have he := localTrans _ _ _ hn (HistoryOrder.StepProof.localSym _ _ hs)

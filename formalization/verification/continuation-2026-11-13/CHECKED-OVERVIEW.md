@@ -92,3 +92,7 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 ## Actual erasure closure
 
 [One-step evaluator erasure congruence](evaluator-erasure/STATUS.md) and [external finite-chain preservation](deletion-chain/STATUS.md) now pass exact gates. Both preserve original source admission and derive a new shared output of the unchanged evaluator. No structural-key substitution, arbitrary-family depth-zero bridge or canonical Object fixedness is claimed.
+
+## Same all-position root key
+
+[Actual final-fold root-key preservation](observed-root-key/STATUS.md) is now checked for the unchanged ObservedPut tuple. This does not identify folded endpoints. The next separate bridge is actual all-position acceptance and once-minimum agreement.
