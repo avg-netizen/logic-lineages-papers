@@ -36,7 +36,7 @@ theorem internalIdle : Targets.InternalIdle := by
   have hk := kernelInstalled p itag v l a x hi
   obtain ⟨hz⟩ := SixSol20261113.HistoryMachine.Equations.zero p itag k hi (state ptag option .zero) index fuel
   have hb : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
-    simpa only [phi,templateAt] using hz
+    simpa only [phi,templateAt,T,run] using hz
   let O := liftTerm option
   let I := liftTerm index
   let F := liftTerm fuel
