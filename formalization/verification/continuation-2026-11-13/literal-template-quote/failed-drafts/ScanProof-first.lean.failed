@@ -1,0 +1,132 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralTemplateQuote.Targets
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralTemplateQuote.TermScanProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.ConstructorSupportProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxScan.FusionStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralTemplateQuote.ScanProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowPRDefiningEquations GorbowTheoryProof List.Vector
+open SixSol20261112.Fuel NamedArithmeticGraph HistoryRuleSuffix LiteralRawMP.ConstructorSupportProof
+
+private theorem selfComputes {n k ctx : Nat} (p : Program n) (q : Program k)
+ (tag : Nat) (ht : (nodes p)[tag]? = some ⟨k,q⟩) (args : List.Vector (Term ctx) k) :
+ Computes p q args (call tag args) := by
+ intro other ho
+ exact GorbowPRInternalCoherence.Proof.registryCoherence n p other tag k q ho ht ctx args
+
+private theorem unaryCase {n k ctx : Nat} (p : Program n) (stag ptag ctag : Nat)
+ (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxScan.scanCode⟩)
+ (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+ (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩)
+ (token : Nat) (q : Program k) (args : List.Vector (Term ctx) k)
+ (hchild : ∀ tag, (nodes p)[tag]? = some ⟨k,q⟩ → ∀ binder rest : Term ctx,
+  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+   (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+    (LiteralNumeralPrefix.termTask ptag binder) rest) (call tag args)) (.succ rest))))
+ (hstep : ∀ binder rest raw : Term ctx, Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+  (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+   (LiteralNumeralPrefix.termTask ptag binder) rest) (HistoryLookup.consCall ctag (Term.numeral token) raw))
+   (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+    (LiteralNumeralPrefix.termTask ptag binder) rest) raw))))
+ (tag : Nat) (ht : (nodes p)[tag]? = some ⟨k,prependToken token q⟩)
+ (binder rest : Term ctx) :
+ Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+  (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+   (LiteralNumeralPrefix.termTask ptag binder) rest) (call tag args)) (.succ rest))) := by
+ let g : Fin 2 → Program k := Fin.cases (constant k token) (Fin.cases q Fin.elim0)
+ let child := tag + argumentTag HistoryCodec.cons g 1
+ have hq : (nodes p)[child]? = some ⟨k,q⟩ := Equations.argumentChild p tag HistoryCodec.cons g ht 1
+ obtain ⟨he⟩ := binary p args HistoryCodec.cons ctag hc (constant k token) q
+  (Term.numeral token) (call child args) (constantValue p args token)
+  (selfComputes p q child hq args) tag ht
+ have heq := HistoryAppend.PositiveProof.binaryCongruence (T := GorbowPRNumeralCalculation.Theory p)
+  stag _ _ _ _ (.logical (.reflexive _)) he
+ obtain ⟨h1⟩ := hstep binder rest (call child args)
+ obtain ⟨h2⟩ := hchild child hq binder rest
+ exact ⟨Logic.trans _ _ _ heq (Logic.trans _ _ _ h1 h2)⟩
+
+private theorem binaryCase {n k ctx : Nat} (p : Program n) (stag ptag ctag atag : Nat)
+ (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxScan.scanCode⟩)
+ (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+ (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩)
+ (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
+ (token : Nat) (q r : Program k) (args : List.Vector (Term ctx) k)
+ (hqscan : ∀ tag, (nodes p)[tag]? = some ⟨k,q⟩ → ∀ binder rest : Term ctx,
+  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+   (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+    (LiteralNumeralPrefix.termTask ptag binder) rest) (call tag args)) (.succ rest))))
+ (hrscan : ∀ tag, (nodes p)[tag]? = some ⟨k,r⟩ → ∀ binder rest : Term ctx,
+  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+   (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+    (LiteralNumeralPrefix.termTask ptag binder) rest) (call tag args)) (.succ rest))))
+ (hstep : ∀ binder rest raw : Term ctx, Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+  (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+   (LiteralNumeralPrefix.termTask ptag binder) rest) (HistoryLookup.consCall ctag (Term.numeral token) raw))
+   (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+    (LiteralNumeralPrefix.termTask ptag binder) (HistoryLookup.consCall ctag
+     (LiteralNumeralPrefix.termTask ptag binder) rest)) raw))))
+ (tag : Nat) (ht : (nodes p)[tag]? = some ⟨k,prependToken token (applyTwo HistoryAppend.append q r)⟩)
+ (binder rest : Term ctx) :
+ Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+  (.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag
+   (LiteralNumeralPrefix.termTask ptag binder) rest) (call tag args)) (.succ rest))) := by
+ let g : Fin 2 → Program k := Fin.cases (constant k token) (Fin.cases (applyTwo HistoryAppend.append q r) Fin.elim0)
+ let inner := tag + argumentTag HistoryCodec.cons g 1
+ have hi : (nodes p)[inner]? = some ⟨k,applyTwo HistoryAppend.append q r⟩ :=
+  Equations.argumentChild p tag HistoryCodec.cons g ht 1
+ let gi : Fin 2 → Program k := Fin.cases q (Fin.cases r Fin.elim0)
+ let qt := inner + argumentTag HistoryAppend.append gi 0
+ let rt := inner + argumentTag HistoryAppend.append gi 1
+ have hq : (nodes p)[qt]? = some ⟨k,q⟩ := Equations.argumentChild p inner HistoryAppend.append gi hi 0
+ have hr : (nodes p)[rt]? = some ⟨k,r⟩ := Equations.argumentChild p inner HistoryAppend.append gi hi 1
+ have happ := binary p args HistoryAppend.append atag ha q r (call qt args) (call rt args)
+  (selfComputes p q qt hq args) (selfComputes p r rt hr args)
+ obtain ⟨he⟩ := binary p args HistoryCodec.cons ctag hc (constant k token)
+  (applyTwo HistoryAppend.append q r) (Term.numeral token)
+  (HistoryAppend.appendCall atag (call qt args) (call rt args)) (constantValue p args token) happ tag ht
+ let one := HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag binder) rest
+ let two := HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag binder) one
+ have heq := HistoryAppend.PositiveProof.binaryCongruence (T := GorbowPRNumeralCalculation.Theory p)
+  stag one one _ _ (.logical (.reflexive _)) he
+ obtain ⟨h1⟩ := hstep binder rest (HistoryAppend.appendCall atag (call qt args) (call rt args))
+ obtain ⟨hleft⟩ := hqscan qt hq binder one
+ obtain ⟨hf⟩ := LiteralSyntaxScan.FusionStatementChecks.exactFusion n p stag atag hs ha ctx
+  two (call qt args) (call rt args) one
+ obtain ⟨hright⟩ := hrscan rt hr binder rest
+ exact ⟨Logic.trans _ _ _ heq (Logic.trans _ _ _ h1 (Logic.trans _ _ _ (.mp hf hleft) hright))⟩
+
+theorem internalScan : Targets.InternalScan := by
+ intro k t n p qtag stag ptag ctag atag hq hs hp hc ha ctx values binder rest
+ induction t generalizing qtag binder rest with
+ | var i =>
+   have hn := Equations.functionChild p qtag LiteralNumeralPrefix.numeralCode
+    (fun _ : Fin 1 => (.projection i : Program k)) hq
+   obtain ⟨he⟩ := unary p values LiteralNumeralPrefix.numeralCode (qtag+1) hn
+    (.projection i) (values.get i) (projection p values i) qtag hq
+   have heq := HistoryAppend.PositiveProof.binaryCongruence (T := GorbowPRNumeralCalculation.Theory p)
+    stag _ _ _ _ (.logical (.reflexive _)) he
+   obtain ⟨hscan⟩ := LiteralNumeralPrefix.ScanProof.internalScan n p (qtag+1) stag ptag ctag hn hs hp hc ctx
+    (values.get i) binder rest
+   exact ⟨Logic.trans _ _ _ heq hscan⟩
+ | zero =>
+   obtain ⟨he⟩ := binary p values HistoryCodec.cons ctag hc (constant k 1) (constant k 0)
+    (Term.numeral 1) .zero (constantValue p values 1) (constantValue p values 0) qtag hq
+   have heq := HistoryAppend.PositiveProof.binaryCongruence (T := GorbowPRNumeralCalculation.Theory p)
+    stag _ _ _ _ (.logical (.reflexive _)) he
+   obtain ⟨hscan⟩ := LiteralNumeralPrefix.TermScanProof.scanZero p stag ptag ctag hs hp hc binder rest
+   exact ⟨Logic.trans _ _ _ heq hscan⟩
+ | succ t ih =>
+   exact unaryCase p stag ptag ctag hs hp hc 2 (templateQuote t) values ih
+    (LiteralNumeralPrefix.TermScanProof.scanSucc p stag ptag ctag hs hp hc) qtag hq binder rest
+ | add t u ht hu =>
+   exact binaryCase p stag ptag ctag atag hs hp hc ha 3 (templateQuote t) (templateQuote u) values ht hu
+    (TermScanProof.scanAdd p stag ptag ctag hs hp hc) qtag hq binder rest
+ | mul t u ht hu =>
+   exact binaryCase p stag ptag ctag atag hs hp hc ha 4 (templateQuote t) (templateQuote u) values ht hu
+    (TermScanProof.scanMul p stag ptag ctag hs hp hc) qtag hq binder rest
+ | universalFunction t ih =>
+   exact unaryCase p stag ptag ctag hs hp hc 5 (templateQuote t) values ih
+    (TermScanProof.scanUniversal p stag ptag ctag hs hp hc) qtag hq binder rest
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralTemplateQuote.ScanProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralTemplateQuote.ScanProof
