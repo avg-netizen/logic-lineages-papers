@@ -2,6 +2,8 @@ module
 
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataCasesProof
 
+public meta import LogicLineages.Audit
+
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
@@ -60,3 +62,5 @@ theorem lengthData : ∀ n (p : Program n) (ltag atag rtag ctag : Nat),
   rw [show phi=template ltag atag rtag right index from rfl,templateAt] at hall
   exact ⟨.mp (.mp (allElim ltag atag rtag (lengthCall ltag left) left right index) hall) (.logical (.reflexive _))⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataProof

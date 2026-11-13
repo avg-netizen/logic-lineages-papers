@@ -2,6 +2,8 @@ module
 
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.IdleProof
 
+public meta import LogicLineages.Audit
+
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataSupportProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution List.Vector
@@ -41,7 +43,7 @@ theorem nilOffset {n ctx : Nat} (p : Program n) (ltag atag rtag : Nat)
   obtain ⟨happ⟩ := HistoryAppend.AppendEquationsProof.internalAppendNil n p atag ha ctx right
   obtain ⟨hdr⟩ := HistoryLookup.DropEquationsProof.dropZero p rtag hr (.zero : Term ctx)
   have hd := localTrans _ _ _ (countCongruence (T := T) (G := []) rtag _ .zero .zero .zero (.base hlen) (.base (.logical (.reflexive _)))) (.base hdr)
-  obtain ⟨href⟩ := HistoryCancellation.OrderSupportProof.weakReflexive T (.zero : Term ctx)
+  have href := HistoryCancellation.OrderSupportProof.weakReflexive (T := T) (.zero : Term ctx)
   have hb : Hilbert.Local T ctx [] (HistoryBounds.weakBound (lengthCall ltag .zero) .zero) := Hilbert.Local.mp (.mp (.base (weakTransport .zero (lengthCall ltag .zero) (.zero : Term ctx)))
     (.base (Support.equalitySymmetry _ _ hlen))) (.base href)
   have hsum := localUnary (.add (.var 0) (liftTerm (lengthCall ltag right))) _ _ (Hilbert.Local.base (Gamma := []) hlen)
@@ -114,3 +116,5 @@ noncomputable def allElim {T : Sentence → Prop} {ctx : Nat} ltag atag rtag (co
     (bounded ltag atag rtag (liftTerm count) (.var 0) (liftTerm right) (liftTerm index)) left)
   rwa [GorbowPACore.logicalFormula,allAt] at h
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataSupportProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataSupportProof

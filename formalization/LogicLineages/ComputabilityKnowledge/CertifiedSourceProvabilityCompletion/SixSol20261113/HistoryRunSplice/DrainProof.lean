@@ -2,6 +2,8 @@ module
 
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataProof
 
+public meta import LogicLineages.Audit
+
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.DrainProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof
@@ -15,3 +17,5 @@ theorem internalLengthDrain : Targets.InternalLengthDrain := by
     hi hd hdrop hp hc ctx (HistoryLengthOffset.lengthCall ltag code) option code index fuel
   exact ⟨Logic.trans _ _ _ hremain hexhaust⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.DrainProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.DrainProof

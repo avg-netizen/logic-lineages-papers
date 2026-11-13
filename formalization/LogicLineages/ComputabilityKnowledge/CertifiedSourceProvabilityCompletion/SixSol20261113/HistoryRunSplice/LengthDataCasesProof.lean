@@ -2,6 +2,8 @@ module
 
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataSupportProof
 
+public meta import LogicLineages.Audit
+
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataCasesProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
@@ -127,3 +129,5 @@ theorem allCodes {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
   obtain ⟨hs⟩ := HistoryOrder.SupportProof.zeroOrSuccessor T left
   exact ⟨.mp (.mp (.mp (.logical (.orElim _ _ _)) hzero) hp) hs⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataCasesProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.LengthDataCasesProof

@@ -3,6 +3,8 @@ module
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.DrainProof
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.StationaryProof
 
+public meta import LogicLineages.Audit
+
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.ConversionProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
@@ -53,7 +55,7 @@ theorem internalBoundConversion : Targets.InternalBoundConversion := by
   obtain ⟨he⟩ := beyondLength p itag ltag atag ptag ctag dtag droptag v l a x hi hl ha hp hc hd hdrop C O I F (.var 0)
   have hcong := StationaryProof.iterationCount itag C (.add (lengthCall ltag C) (.var 0)) (state ptag O C) I F hh
   have hb : Derivation T (.imp H (GorbowPACore.weaken Q)) := by
-    simpa only [Q,C,O,I,F,GorbowPACore.weaken,substituteFormula,substRun,substLength,liftTerm,renameTerm] using
+    simpa only [Q,C,O,I,F,GorbowPACore.weaken,substituteFormula,substRun,substLength,liftTerm,renameTerm,run] using
       Hilbert.Local.finish (Hilbert.Local.discharge (localTrans _ _ _ hcong (.base he)))
   obtain ⟨helim⟩ := HBQuantifier.existentialElimination T H Q ⟨hb⟩
   obtain ⟨hdata⟩ := LengthDataProof.lengthData n p ltag atag droptag ctag hl ha hdrop hc ctx code (.zero : Term ctx) .zero
@@ -62,3 +64,5 @@ theorem internalBoundConversion : Targets.InternalBoundConversion := by
     simpa only [HistoryBounds.weakBound,H,C,liftTerm,renameTerm,substLength] using hweak
   exact ⟨.mp helim hweak'⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.ConversionProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.ConversionProof
