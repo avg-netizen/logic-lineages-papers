@@ -40,8 +40,10 @@ theorem evaluateStep (right : Bool) (b previous a code seed : Nat) :
     rw [evaluateDifference,nativePair]
     rfl
   rw [hf,hb]
+  have hget1 : (b ::ᵥ previous ::ᵥ a ::ᵥ code ::ᵥ seed ::ᵥ nil).get 1 = previous := rfl
+  have hget2 : (b ::ᵥ previous ::ᵥ a ::ᵥ code ::ᵥ seed ::ᵥ nil).get 2 = a := rfl
   cases right <;> simp only [coordinate,Bool.false_eq_true,↓reduceIte,evaluate,
-    List.Vector.get_cons_zero,List.Vector.get_cons_succ] <;> split_ifs <;> omega
+    List.Vector.get_cons_zero,hget1,hget2] <;> split_ifs <;> omega
 
 theorem evaluateInner (right : Bool) (count a code seed : Nat) :
     evaluate (inner right) (count ::ᵥ a ::ᵥ code ::ᵥ seed ::ᵥ nil) = scanInner right a code seed count := by
