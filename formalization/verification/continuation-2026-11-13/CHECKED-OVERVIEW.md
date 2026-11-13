@@ -72,7 +72,7 @@ required uniform comparison/termination theorem.
 - [Actual deletion selector semantics](context-deletion-return/STATUS.md), deriving scalar observation agreement.
 - [Internal literal decoder inverses](history-decoder/STATUS.md), proved independently of native calibration.
 
-Both-role framed content and source-restricted evaluator/layer unfolding are now checked below. Runtime append/reference preservation, canonical Object identity, full I/C and HB remain unpaid.
+Both-role framed content and source-restricted evaluator/layer unfolding are now checked below. Runtime append/reference preservation is now checked. Canonical Object identity, full I/C and HB remain unpaid.
 
 [Option-aware encoded history lookup](history-lookup/STATUS.md) is now checked, including cross-tag internal destructors and true missing-reference failure. [Map length](map-length/STATUS.md), [whole prefix row uniqueness](prefix-value/STATUS.md), and [generic map/reversal append geometry](list-geometry/STATUS.md) are checked operational suppliers.
 
@@ -84,3 +84,7 @@ Both-role framed content and source-restricted evaluator/layer unfolding are now
 - [Arbitrary-input decoder bounds](history-decoder-bounds/STATUS.md), independent of pair-image/reconstruction assumptions.
 
 The next content task is actual one-step and finite-chain erasure congruence of the admitted evaluator relation. This is NOT automatically equality of every family R depth: family R at depth zero is R, which is a distinct base obligation. No new tuple installation or canonical Object equality is claimed.
+
+## Actual history append
+
+[Internal append and successful-reference preservation](history-append/STATUS.md) now pass all four exact targets, with no coded-list or reconstruction assumptions. Original rule2/rule3 suffix acceptance remains the next separate target.

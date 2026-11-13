@@ -1,5 +1,5 @@
-# Checked native history-append calibration only
+# Checked actual history append and reference preservation
 
-The literal course-of-values table AST evaluates to the original History append on every native pair of histories. This is all-input native calibration, not an internal source arithmetic proof. Internal append nil/cons and successful-reference preservation remain separate pending targets. Table access uses Option lookup; native coverage is proved, not assumed.
+Four exact targets pass: native calibration to original History append, internal nil and cons equations, and internal preservation of successful Option lookup. The preservation theorem applies to arbitrary symbolic codes with only lookup(index,left)=some(entry) as its premise. It does not assume coded-list validity, pair-image reconstruction, reference bounds, or the desired append result. Internal course-of-values coverage uses actual arbitrary-input tail bounds and actual table lookups; internal arithmetic induction supplies preservation.
 
-Native exact1 evidence verifies420 source-matched modules, standard axioms, zero errors. Register unchanged175/2/12; full checker/HB remain unpaid. No full-root/remote CI claim.
+Exact native evidence verifies442 source-matched modules, standard axioms, zero errors. Independent source-scope audit found no mismatch. This is a real supplier for suffix stability, not full line-checker validity or HB. Register unchanged175/2/12. No full-root or remote CI claim.

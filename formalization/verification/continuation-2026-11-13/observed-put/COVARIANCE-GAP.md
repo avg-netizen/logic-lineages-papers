@@ -108,3 +108,25 @@ native OriginalHereditaryEvaluatorFixedPointTargets.FixedPoint. It supports all
 further deletion observations recursively without a new fixed-depth observer
 layer. Installing it in selected data, retention, and normalized-erasure agreement
 remain later obligations; no equality to either existing PUT tuple is asserted.
+
+## Subsequent checked progress and new one-step target
+
+The original both-role framed content target passed1794567482415803412-16,
+and Context's source-only internal evaluator/layer iff passed1794567579558238596-5.
+Thus the missing internal FAMILY content is no longer merely a proposed supplier.
+
+The next proposed (not yet accepted here) endpoint is
+`EvaluatorErasureTargets.ActualErasureCongruence`. Its `AdmittedPair` relation
+contains BOTH original source admissions and one internally bound common output
+of the unchanged original evaluator. Literal old/new parameter pairs, actual
+context length/range/lookup/deleteAt and both erasePackedRaw computations must
+produce the SAME relation at the erased endpoints. Neither erased admission nor
+a common erased evaluator output is a premise. Actual insertion geometry is
+derived from the original selectors. Context will iterate this exact relation
+through finite chains, not assume intermediate admission or equality.
+
+This does not upgrade ObservedPut. Its structural pre-minimum key is not the
+hereditary evaluator code. Installing evaluator-aware tests would require an
+explicitly named tuple, calibration and retention proofs; neither numeric
+calibration nor equality to the accepted ObservedPut Data follows from this work.
+Actual canonical Object erasure remains separate.
