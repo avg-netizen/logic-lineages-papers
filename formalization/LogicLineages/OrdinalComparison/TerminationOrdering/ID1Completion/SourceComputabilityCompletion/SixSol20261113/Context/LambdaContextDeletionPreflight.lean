@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.LambdaContextDeletionTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.LambdaContextDeletionPreflight
+#check LambdaContextDeletionTargets.ActualMetadata
+example : LambdaContextDeletionTargets.ActualMetadata = LambdaContextDeletionTargets.ActualMetadata := rfl
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.LambdaContextDeletionPreflight

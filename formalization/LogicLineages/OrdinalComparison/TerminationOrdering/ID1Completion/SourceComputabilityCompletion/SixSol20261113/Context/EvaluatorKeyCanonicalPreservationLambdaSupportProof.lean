@@ -13,7 +13,8 @@ open InternalApplicationCertificateConstructorsSupportProof InternalControlGraph
 open InternalApplicationStepPeelSupportProof (andLeft andRight andIntro)
 open InternalGraphCompositionFunctionalityProof (renameInto)
 open OriginalLambdaTraversalInternal
-open UniformCertificateCompletion EvaluatorKeyPut EvaluatorKeyCanonicalInductionDefinitions (C)
+open UniformCertificateCompletion EvaluatorKeyPut
+open EvaluatorKeyCanonicalInductionDefinitions (C)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
