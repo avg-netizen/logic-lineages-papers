@@ -1,0 +1,73 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.QuotedVerifierMP.StatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.SaturatedSourceMP.StatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.QuotedVerifierMP.SourceProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowTheoryProof GorbowPublishedDCB List.Vector
+open SixSol20261112 LiteralCheckerAuxiliaries
+open LiteralSourceCoreMP (valid lengthTag dropTag lookupTag dispatcherTag coreTag)
+private theorem inSource (pF pR : Program 1) (q : Program 5) {ctx : Nat} (phi : Formula ctx)
+ (h : Nonempty (Derivation (GorbowPRNumeralCalculation.Theory
+   (GorbowSourceRegistryPadding.root (augmented pF q) pR)) phi)) :
+ Nonempty (Derivation (S pF pR q) phi) :=
+ GorbowTheoryProofProof.monotonicity _ _
+   (fun _ hs => List.mem_append_left _ (List.mem_append_left _ hs)) ctx phi h
+
+/-- Audited bridge for fixed external quotations at the actual selected source
+index. Full source premises are discharged by the cumulative source theorem;
+this helper does not assert HB2 or identify Pr_D with ordinary provability. -/
+theorem sourceMP (l a : Program 1) (baseX : Program 3) (offset : Nat)
+ (pF pR : Program 1) (c : GorbowEnumeratedProvability.Code) (tagCK : Nat) (pCK : Program 2)
+ (tagG : Nat) (pG : Program 6) (mtag : Nat)
+ (hret : LiteralValidatedSource.Retained l a (SaturatedAxiomLeaf.saturated baseX) offset pF pR c tagCK pCK tagG pG)
+ (hmp : LiteralSourceCoreMP.Targets.MPPackage l a (SaturatedAxiomLeaf.saturated baseX) offset pF pR mtag)
+ (sigma tau : Sentence) :
+ let q := LiteralKernelSource.verifier valid l a (SaturatedAxiomLeaf.saturated baseX) bound initial finalizer
+ Nonempty (Derivation (n := 0) (S pF pR q)
+  (.imp (applyProv pF c (Term.numeral (GorbowSortedSyntaxCode.formulaCode (.imp sigma tau))))
+   (.imp (applyProv pF c (Term.numeral (GorbowSortedSyntaxCode.formulaCode sigma)))
+    (applyProv pF c (Term.numeral (GorbowSortedSyntaxCode.formulaCode tau)))))) := by
+ have hoff : (nodes (HistoryKernel.kernel valid l a (SaturatedAxiomLeaf.saturated baseX)))[offset]? = some ⟨2,HistoryAppend.append⟩ :=
+  hret.2.2.2.2.2.2.1
+ have hm := hmp.1
+ let x := SaturatedAxiomLeaf.saturated baseX
+ let k := HistoryKernel.kernel valid l a x
+ let q0 := LiteralKernelSource.coreChecker valid l a x bound initial finalizer
+ let q := LiteralKernelSource.verifier valid l a x bound initial finalizer
+ let root := GorbowSourceRegistryPadding.root (augmented pF q) pR
+ let fuelTag := GorbowNamedInternalProvability.checkerTag pF
+ let ktag := LiteralKernelSource.kernelTag pF valid l a x bound initial finalizer
+ let atag := LiteralKernelSource.appendTag pF valid l a x bound initial finalizer offset
+ let ptag := LiteralKernelSource.pairTag pF valid l a x bound initial finalizer
+ let ctag := LiteralKernelSource.consTag pF valid l a x bound initial finalizer
+ let itag := LiteralValidatedSource.iteratorTag pF l a x
+ let vtag := LiteralValidatedSource.validityTag pF l a x
+ let stag := LiteralValidatedSource.scanTag vtag
+ let dtag := HistoryIteratorDrain.rightTag pF valid l a x bound initial finalizer
+ have ht : (nodes root)[fuelTag]? = some ⟨5,Fuel.verifier q0⟩ :=
+   GorbowNamedInternalProvability.Proof.exactCheckerTag 5 pF pR q
+ have hk : (nodes root)[ktag]? = some ⟨3,k⟩ :=
+   LiteralKernelSource.InstallationProof.kernelInstalled root fuelTag valid l a x bound initial finalizer ht
+ have ha : (nodes root)[atag]? = some ⟨2,HistoryAppend.append⟩ :=
+   GorbowPRSubtree.Proof.lookupTransport 4 root ktag ⟨3,k⟩ offset ⟨2,HistoryAppend.append⟩ hk hoff
+ obtain ⟨hp,_,_,_,hc⟩ := HistoryKernel.OptionProof.kernelNodes root ktag valid l a x hk
+ have hi : (nodes root)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator k⟩ :=
+   LiteralValidatedSource.NodeProof.iteratorNode pF pR l a x
+ have hv : (nodes root)[vtag]? = some ⟨1,LiteralSyntaxValidator.lineValidator⟩ :=
+   HistoryTopProvenance.OccurrenceProof.actualValidityOccurrence valid l a x 4 root itag hi
+ obtain ⟨_,_,_,hs,_,_,_⟩ := LiteralValidatedSource.NodeProof.lineNodes root vtag hv
+ have hl := LiteralSourceCoreMP.NodeProof.lengthInstalled root stag hs
+ obtain ⟨hr,hd⟩ := LiteralSourceCoreMP.NodeProof.appendLookupDrop root atag ha
+ have hdright : (nodes root)[dtag]? = some ⟨1,HistoryDecoder.decoder true⟩ :=
+   HistoryIteratorDrain.InstallationProof.rightInstalled root ktag valid l a x hk
+ have hdispatch := LiteralSourceCoreMP.NodeProof.dispatcherInstalled root ktag l a x hk
+ have hcore := LiteralSourceCoreMP.NodeProof.coreInstalled pF pR l a x
+ obtain ⟨h⟩ := StatementChecks.internalQuotedMP l a baseX 4 root
+  itag (lengthTag stag) atag ptag ctag dtag (dropTag atag) (lookupTag atag)
+  (dispatcherTag pF l a x) hi hl ha hp hc hdright hd hr hdispatch
+  mtag (coreTag pF l a x) fuelTag hm hcore ht 0 (Term.numeral (Encodable.encode c)) sigma tau
+ have hs := inSource pF pR q (distribution fuelTag (Term.numeral (Encodable.encode c)) sigma tau) ⟨h⟩
+ simpa only [CodeTransportProof.applyProvEq,distribution] using hs
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.QuotedVerifierMP.SourceProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.QuotedVerifierMP.SourceProof
