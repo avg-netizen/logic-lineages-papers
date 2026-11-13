@@ -52,7 +52,7 @@ theorem choosePreserves {t a b : Program 4} (ht : Independent t) (ha : Preserves
   have he : Hilbert.Local T ctx [E] E := .hypothesis List.mem_cons_self
   have oldAccept := localTrans _ _ _ (.base (Support.equalitySymmetry _ _ oldEq')) he
   have selected := Hilbert.Local.mp (.base step) oldAccept
-  have changed := HistoryDecoder.SelectGraphProof.testCongruence (tag+1)
+  have changed := HistoryDecoder.SelectGraphProof.testCongruence (G := [E]) (tag+1)
     (call tt nt) (call tt ot) (call ta nt) (call tb nt) (.base testeq)
   have out := localTrans _ _ _ (.base newEq') (localTrans _ _ _ changed selected)
   exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge out)⟩
