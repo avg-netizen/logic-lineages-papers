@@ -1,6 +1,6 @@
 # Checked continuation overview
 
-Status at 09:20 UTC, 13 November 2026. The original numbered register remains
+Status at 10:00 UTC, 13 November 2026. The original numbered register remains
 **175 checked, 2 inherited, 12 pending / 189**. The packets below add supporting
 results and one exact counterexample; their theorem counts are not promotions
 of additional numbered manuscript statements.
@@ -38,13 +38,28 @@ failed proof-source archives are published source-first.
 - [Unary content](context-unary-content/STATUS.md): actual lambda/ordinary child provenance, still proof-side.
 - [Complete internal pair graph](history-order/STATUS.md): exhaustive internal sectors for arbitrary terms, not inversion.
 
+## Further verified milestones
+
+- [Original full framed completion](source-framed/STATUS.md): unchanged original Job-to-Completion contract, no descendant-completion premise. This is uniform execution/stack framing, not returned-value semantics.
+- [Observer-aware PUT](observed-put/STATUS.md): explicit new retained tuple with actual guarded PUT and full-fold erased key/rank observations, not canonical Object identity.
+- [Uniform admitted-term content](context-admitted-term/STATUS.md) and [numbered-symbol content](context-numbered-content/STATUS.md): actual forward mapped-child provenance, not runtime-stack equality.
+- [Actual history descent bounds](history-bounds/STATUS.md): internal pair/cons component bounds, not decoding.
+- [Original erasure order reversal](erasure-order-obstruction/STATUS.md): genuine typed exchange candidates reverse packed code order under erasure; not a full-fold noncommutation theorem.
+- [Narrow child-admission factoring](source-framed-child/STATUS.md): revalidates unchanged original endpoints without the resource-heavy scan-length closure.
+
 ## Next work, not yet accepted
 
-- Full recursive source-admitted job completion using the now checked uniform return.
-- Numbered-symbol child-content provenance and remaining runtime-content linkage.
-- Erased canonical endpoint admission and the still unpaid canonical-erasure commutation.
-- Actual internal pairing/cons bounds preceding inverse/lookup obligations.
+- Source-restricted recursive content and evaluator/layer unfolding; computed-fuel singleton stack is now checked.
+- Recursive evaluator-content linkage; actual reverse-stack child slot correspondence is now checked.
+- Hereditary-family observations under all successive deletions, beyond the one-level observer law.
+- Actual registered inverse/decoder and encoded-history lookup obligations; unrestricted internal pairing injectivity is now checked.
 
 The paper02 arbitrary finite-valued collapse-language decision claim remains
 pending. Omega-free evaluation and finite-pair formulas do not establish the
 required uniform comparison/termination theorem.
+
+## Latest verified source checkpoint
+
+[98bd7aaf](https://github.com/avg-netizen/logic-lineages-papers/commit/98bd7aaf3fd1156c875199cae6043a07f207bdb7) publishes [unrestricted internal pair injectivity](history-cancellation/STATUS.md) and [actual reverse-stack child slots](context-reverse-slots/STATUS.md). Decoder inverses, recursive evaluator content, and full I/C/HB remain separate obligations.
+
+[Computed-fuel singleton](computed-stack/STATUS.md) is checked at the unchanged original completed/evaluator programs, with no supplied geometry or fuel comparison. Recursive value semantics remain unpaid.
