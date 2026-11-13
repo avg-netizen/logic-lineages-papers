@@ -1,6 +1,7 @@
 module
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepProof
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.BaseProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepApplication
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.CountStepProof
@@ -34,7 +35,8 @@ theorem successor {n ctx : Nat} (p : Program n) (itag ptag ctag leftTag rightTag
  have ih : Hilbert.Local T ctx [E,P] P := .hypothesis (by simp)
  have e : Hilbert.Local T ctx [E,P] E := .hypothesis List.mem_cons_self
  have he := localTrans _ _ _ (HistoryOrder.StepProof.localSym _ _ (.base hs)) e
- exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge (.mp (.mp (.base hk) ih) he)))⟩
+ exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge (KeepApplication.apply itag ptag ctag (validityTag itag v l a x) leftTag rightTag
+   R context raw tail remaining index fuel hk ih he)))⟩
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.CountStepProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.CountStepProof

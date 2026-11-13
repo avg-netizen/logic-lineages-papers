@@ -27,3 +27,7 @@ The full internal task-frame endpoint remains under integration by the Frame
 author. No old validity leaf, selected checker tuple, or numbered statement is
 identified or promoted. `FusionStatementChecks` is a new compact exact4 alias
 pending its own gate; it does not add mathematical assumptions.
+
+`FusionStatementChecks` exact4 subsequently passed standard-axiom gate
+`1794594519740666338-5`. Native/empty/fusion/addition aliases are accepted;
+internal frame remains separate pending integration.

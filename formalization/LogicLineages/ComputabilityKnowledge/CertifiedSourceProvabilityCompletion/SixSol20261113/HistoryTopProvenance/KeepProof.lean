@@ -1,5 +1,6 @@
 module
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepLinesProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepStateCode
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepProof
@@ -24,7 +25,9 @@ theorem everyState {n ctx : Nat} (p : Program n) (itag ptag ctag leftTag rightTa
    n p ptag leftTag rightTag hp hl hr ctx code
  obtain ⟨h⟩ := KeepLinesProof.allLines p itag ptag ctag leftTag rightTag v l a x hi hp hc hl hr
    (call leftTag (code ::ᵥ nil)) (call rightTag (code ::ᵥ nil)) context raw tail remaining index fuel
- exact ⟨.mp (.mp (transport itag ptag ctag (validityTag itag v l a x) leftTag rightTag
-   _ code context raw tail remaining index fuel) hrec) h⟩
+ exact ⟨KeepStateCode.transport itag ptag ctag (validityTag itag v l a x) leftTag rightTag
+   (call leftTag (code ::ᵥ nil)) (call rightTag (code ::ᵥ nil)) code
+   context raw tail remaining index fuel hrec h⟩
+
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepProof
