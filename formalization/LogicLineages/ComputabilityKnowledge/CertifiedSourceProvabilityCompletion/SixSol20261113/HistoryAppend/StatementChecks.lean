@@ -1,0 +1,17 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryAppend.PreserveProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryAppend.NativeStatementChecks
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryAppend.StatementChecks
+
+theorem nativeHistoryAppend : Targets.NativeHistoryAppend := NativeProof.nativeHistoryAppend
+theorem internalAppendNil : Targets.InternalAppendNil := AppendEquationsProof.internalAppendNil
+theorem internalAppendCons : Targets.InternalAppendCons := ConsProof.internalAppendCons
+theorem internalPreserveSome : Targets.InternalPreserveSome := PreserveProof.internalPreserveSome
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryAppend.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryAppend

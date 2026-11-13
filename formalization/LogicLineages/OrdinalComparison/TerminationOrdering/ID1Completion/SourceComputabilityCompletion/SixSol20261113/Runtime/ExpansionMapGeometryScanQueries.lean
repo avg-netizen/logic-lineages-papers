@@ -8,7 +8,8 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
-open InternalGraphCompositionFunctionalityProof (renameInto)
+open InternalGraphCompositionFunctionalityProof
+open InternalAcceptanceSupportProof (compositionRecover)
 open InternalApplicationStepPeel (graph5)
 open InternalApplicationStepPeelSupportProof (graph5Rename andIntro andLeft andRight)
 open InternalTagArithmeticSyntaxProof (z suc)
@@ -38,8 +39,8 @@ theorem withSuffix (count start role typ raw jobs prefixRow full previous suffix
  let xx : Fin 6 → OTerm beta := ![add (start.relabel j) (count.relabel j),role.relabel j,typ.relabel j,raw.relabel j,jobs.relabel j,suffix.relabel j]
  have hx : (fun i => (xs i).relabel j) = xx := by
    funext i
-   simp only [xs,xx,InternalOriginalOrderSyntaxProof.addRelabel]
-   exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)))))) i
+   change (xs i).relabel j = xx i
+   exact Fin.cases (InternalOriginalOrderSyntaxProof.addRelabel start count j) (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)))))) i
  rw [hx] at hq
  have hp' := renameInto hp j Theta hinc
  have hf' := renameInto hf j Theta hinc
@@ -91,7 +92,11 @@ theorem successorCore (count start role typ raw jobs prefixRow full : OTerm alph
  have hi' := renameInto hi j Theta hinc
  have hf' := renameInto hf j Theta hinc
  simp only [rowRename,graph5Rename,InternalOriginalOrderSyntaxProof.addRelabel,sucRelabel] at hi' hf'
- simp only [consTermRename,InternalRecursionGraphStepSyntaxProof.emptyRename,InternalOriginalOrderSyntaxProof.addRelabel] at hp
+ have hx : (fun i => (![add start count,role,typ,raw,jobs] i).relabel j) =
+     ![add (start.relabel j) (count.relabel j),role.relabel j,typ.relabel j,raw.relabel j,jobs.relabel j] := by
+   funext i
+   exact Fin.cases (InternalOriginalOrderSyntaxProof.addRelabel start count j) (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k))))) i
+ rw [hx] at hp
  rw [extensionRename,sucRelabel]
  exact withPrevious (count.relabel j) (start.relabel j) (role.relabel j) (typ.relabel j)
    (raw.relabel j) (jobs.relabel j) (prefixRow.relabel j) (full.relabel j) previous hi' hp hf'

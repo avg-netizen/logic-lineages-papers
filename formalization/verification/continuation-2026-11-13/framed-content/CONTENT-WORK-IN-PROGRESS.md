@@ -63,3 +63,18 @@ candidate before repairs, as elsewhere.
 New independent checked/queued glue is tracked by coordinator receipts:
 DependencyProof, BindingProof, InductionInstances/Base, RoleCases, produced-length
 transfer, and ArgumentNormalization. Presence here alone is not a pass claim.
+
+## Full target accepted
+
+Coordinator reports FULL `FramedContentStatementChecks.exactFramedContent`
+PASS1794567482415803412-16. The complete proof closure is now immutable.
+The original BOTH-role Job + arbitrary-count Framed content obligation is PAID:
+term and argument jobs return the unchanged evaluator-role observer at the actual
+supplied result value. No semantic content hypothesis, native reflection, G test,
+or replacement evaluator was added. Earlier pending/dependency paragraphs above
+are historical progress records, not current blockers.
+
+Context is actively assembling the separate source-only internal evaluator/layer
+graph equivalence using this result. That equivalence is not claimed complete by
+this note. Hereditary deletion covariance and actual canonical Object erasure
+transport remain downstream obligations requiring their own exact proofs.
