@@ -27,10 +27,10 @@ theorem targetType (s t label typ raw : OTerm alpha)
   let xs : Fin 2 → OTerm alpha := ![s,label]
   have ht := unaryValue InternalUnpair.left (.projection 0) typ s xs
     (pairLeft s typ raw hp) (projectionValue 0 xs)
-  have h := pathValue (PairPath.left (PairPath.here (leftOf (.projection 0 : Program 2))))
-    (.projection 0) t typ xs (Fin.cons t Fin.elim0) hr (projectionValue 0 _) ht
+  have h := OriginalRawSyntaxTransportInternalConstructorSupportProof.pathValue (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.left (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.here (leftOf (.projection 0 : Program 2))))
+    (.projection 0) t typ xs (Fin.cons t Fin.elim0) hr (projectionValue 0 (Fin.cons t (Fin.elim0 : Fin 0 → OTerm alpha))) ht
   exact unaryRecover InternalUnpair.left (.projection 0) typ t (Fin.cons t Fin.elim0) h
-    (projectionValue 0 _)
+    (projectionValue 0 (Fin.cons t (Fin.elim0 : Fin 0 → OTerm alpha)))
 
 theorem step (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program 2) (P : Program 3)
     (s t cert parameter typ raw head base label : OTerm alpha)

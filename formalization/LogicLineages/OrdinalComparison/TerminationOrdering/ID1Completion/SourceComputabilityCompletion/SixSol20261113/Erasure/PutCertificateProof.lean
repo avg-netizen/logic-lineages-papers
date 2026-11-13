@@ -25,29 +25,29 @@ theorem pathNil (s label cert : OTerm alpha)
     (hc : Nonempty (Derivation body Delta
       (graph2 SixSol20261112.Erasure.PutRoot.certificateCode cert s label))) :
     Nonempty (Derivation body Delta (graph1 InternalUnpair.left z cert)) := by
-  have h := pathValue (PairPath.left (PairPath.here (OriginalRawSyntaxTransport.constant 2 0)))
+  have h := OriginalRawSyntaxTransportInternalConstructorSupportProof.pathValue (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.left (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.here (OriginalRawSyntaxTransport.constant 2 0)))
     (.projection 0) cert z ![s,label] (Fin.cons cert Fin.elim0) hc
-    (projectionValue 0 _) (constantValue 0 _)
+    (projectionValue 0 (Fin.cons cert (Fin.elim0 : Fin 0 → OTerm alpha))) (constantValue 0 (![s,label] : Fin 2 → OTerm alpha))
   exact unaryRecover InternalUnpair.left (.projection 0) z cert (Fin.cons cert Fin.elim0) h
-    (projectionValue 0 _)
+    (projectionValue 0 (Fin.cons cert (Fin.elim0 : Fin 0 → OTerm alpha)))
 
 theorem putRootTag (s label cert : OTerm alpha)
     (hc : Nonempty (Derivation body Delta
       (graph2 SixSol20261112.Erasure.PutRoot.certificateCode cert s label))) :
     Nonempty (Derivation body Delta (graph1 rootTag z cert)) := by
-  exact pathValue (PairPath.right (PairPath.right
-      (PairPath.left (PairPath.here (OriginalRawSyntaxTransport.constant 2 0)))))
+  exact OriginalRawSyntaxTransportInternalConstructorSupportProof.pathValue (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.right (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.right
+      (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.left (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.here (OriginalRawSyntaxTransport.constant 2 0)))))
     (.projection 0) cert z ![s,label] (Fin.cons cert Fin.elim0) hc
-    (projectionValue 0 _) (constantValue 0 _)
+    (projectionValue 0 (Fin.cons cert (Fin.elim0 : Fin 0 → OTerm alpha))) (constantValue 0 (![s,label] : Fin 2 → OTerm alpha))
 
 theorem bottomRootTag (s cert : OTerm alpha)
     (hc : Nonempty (Derivation body Delta
       (graph1 OriginalTransparentDirectBottom.certificateCode cert s))) :
     Nonempty (Derivation body Delta (graph1 rootTag (numeral 3) cert)) := by
-  exact pathValue (PairPath.right (PairPath.right
-      (PairPath.left (PairPath.here (InternalFixedWindowVertexDispatch.constant 1 3)))))
+  exact OriginalRawSyntaxTransportInternalConstructorSupportProof.pathValue (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.right (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.right
+      (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.left (OriginalRawSyntaxTransportInternalConstructorSupportProof.PairPath.here (InternalFixedWindowVertexDispatch.constant 1 3)))))
     (.projection 0) cert (numeral 3) (Fin.cons s Fin.elim0) (Fin.cons cert Fin.elim0) hc
-    (projectionValue 0 _) (InternalFixedWindowVertexDispatchSupportProof.constantValue 1 3 _)
+    (projectionValue 0 (Fin.cons cert (Fin.elim0 : Fin 0 → OTerm alpha))) (InternalFixedWindowVertexDispatchSupportProof.constantValue 1 3 (Fin.cons s (Fin.elim0 : Fin 0 → OTerm alpha)))
 
 theorem bottomInactive (s t cert parameter label : OTerm alpha)
     (hc : Nonempty (Derivation body Delta
