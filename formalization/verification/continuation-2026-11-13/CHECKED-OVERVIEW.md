@@ -88,3 +88,7 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 ## Actual history append
 
 [Internal append and successful-reference preservation](history-append/STATUS.md) now pass all four exact targets, with no coded-list or reconstruction assumptions. Original rule2/rule3 suffix acceptance remains the next separate target.
+
+## Actual erasure closure
+
+[One-step evaluator erasure congruence](evaluator-erasure/STATUS.md) and [external finite-chain preservation](deletion-chain/STATUS.md) now pass exact gates. Both preserve original source admission and derive a new shared output of the unchanged evaluator. No structural-key substitution, arbitrary-family depth-zero bridge or canonical Object fixedness is claimed.

@@ -24,7 +24,7 @@ def InternalMPSuffix : Prop := ∀ arity (p : Program arity) tag appendTag,
     (.imp (.equal (mpCall tag h n raw r1 r2) (.succ .zero))
       (.equal (mpCall tag (HistoryAppend.appendCall appendTag h tail) n raw r1 r2) (.succ .zero))))
 
-/-- Genuine internal rule3 suffix acceptance, preserving missing-reference failure.
+/-- Genuine internal rule3 suffix acceptance, with actual missing-reference guards.
 Native calibration is not an internal premise. -/
 def InternalGeneralizeSuffix : Prop := ∀ arity (p : Program arity) tag appendTag,
   (nodes p)[tag]? = some ⟨4,generalizeCheck⟩ → (nodes p)[appendTag]? = some ⟨2,HistoryAppend.append⟩ →
