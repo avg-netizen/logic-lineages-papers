@@ -1,1 +1,36 @@
-{"status":"active","owner":"continuation coordinator","fixed_profile":{"memory_mib":2048,"rss_mib":1536,"minimum_free_mib":2048,"cpu_seconds":90,"wall_seconds":180,"threads":1},"stop_at_utc":"2026-11-13T21:40:00Z","new_gate_cutoff_utc":"2026-11-13T21:37:00Z","queue":["SixSol20261113.HistoryMachine.StatementChecks","SixSol20261113.Runtime.FramedReturnPreflight","SixSol20261113.Context.ExpansionPreflight","SixSol20261113.Erasure.PutValidityPreflight"],"claims":"No new accepted proofs yet; cold local import artifacts are being rebuilt through the official fixed checker."}
+{
+  "updated_utc": "2026-11-13T09:48:33.880759+00:00",
+  "status": "active public continuation",
+  "remote_checkpoint": "f0b3aae18afd5ceda394cc8e7ffad2d1a6149629",
+  "checkpoint_cadence": "At least every 30 minutes, sooner for substantial checked results",
+  "checkpoint_deadline_utc": "2026-11-13T17:40:00Z",
+  "proof_stop_utc": "2026-11-13T21:40:00Z",
+  "compiler": "Serialized by coordinator; unchanged check.py limits; new gate cutoff 21:37 UTC",
+  "register": {
+    "checked": 175,
+    "inherited": 2,
+    "pending": 12,
+    "total": 189
+  },
+  "accepted_overview": "CHECKED-OVERVIEW.md",
+  "active": [
+    {
+      "packet": "source-framed",
+      "status": "Narrow child dependency exact4 passed; original full completion endpoint retry after explicit fixed-limit unification refactor, no final acceptance yet"
+    },
+    {
+      "packet": "context-admitted-term",
+      "status": "Exact1 native gate passed; complete evidence verification pending"
+    },
+    {
+      "packet": "history-cancellation",
+      "status": "Frozen full pairing injectivity plus four helpers; helper candidates ready, full injectivity pending"
+    },
+    {
+      "packet": "observed-put",
+      "status": "Explicit distinct observer-aware tuple; retention and graph helpers passed, full exact3 pending"
+    }
+  ],
+  "publication": "No pending approval or uncertain Git action; non-force expected-head publication only, no merge",
+  "scope": "No full-root/remote CI pass, numbered promotion, full I/C/accessibility or internal HB/CK completion claimed"
+}

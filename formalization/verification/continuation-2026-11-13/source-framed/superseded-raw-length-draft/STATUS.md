@@ -1,0 +1,1 @@
+Uncompiled draft, superseded before any compiler invocation. Duplicates the accepted Context.NarrowCountRowsProof.rowsExact and uses a broad inherited length closure known to exceed the unchanged RSS limit. Do not compile or adopt this draft. Active source-framing work reuses the accepted narrow supplier.

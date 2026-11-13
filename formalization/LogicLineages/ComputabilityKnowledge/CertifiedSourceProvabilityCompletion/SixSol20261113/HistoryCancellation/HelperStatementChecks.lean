@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation.FixedShellProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation.HelperStatementChecks
+theorem addCancelRight : Targets.AddCancelRight := ArithmeticProof.addCancelRight
+theorem addCancelLeft : Targets.AddCancelLeft := ArithmeticProof.addCancelLeft
+theorem pairLowerFixedSecond : Targets.PairLowerFixedSecond := FixedShellProof.pairLowerFixedSecond
+theorem pairUpperFixedFirst : Targets.PairUpperFixedFirst := FixedShellProof.pairUpperFixedFirst
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation.HelperStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation
