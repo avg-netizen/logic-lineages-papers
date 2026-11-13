@@ -15,6 +15,7 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof
 open InternalControlGraphSupportProof
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open InternalApplicationValidityClosure (applicationConstructors)
@@ -25,7 +26,9 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 open OriginalRawSyntaxTransportInternalParserSupportProof (programsCases)
+open InternalRecursionGraphStepSyntaxProof
 open EvaluatorKeyCanonicalPreservationSyntaxProof
+open InternalGraphCompositionFunctionalityProof (renameInto)
 theorem withOutputs (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program 2) (P : Program 3)
  (compat : EvaluatorKeyCanonicalPreservationDefinitions.Compatible p H G W)
  (q input out parameter arrow d e fp ap fn arg : OTerm alpha)
