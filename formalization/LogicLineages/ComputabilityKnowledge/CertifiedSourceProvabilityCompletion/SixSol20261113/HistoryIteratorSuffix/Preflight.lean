@@ -1,0 +1,12 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.Preflight
+#check Targets.InternalPairSurjective
+#check Targets.InternalDecoderReconstruction
+#check Targets.InternalListReconstruction
+#check Targets.InternalIteratorSuffix
+#check Targets.SameSourceIteratorSuffix
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.Preflight

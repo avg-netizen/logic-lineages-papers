@@ -1,6 +1,7 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoOpeningProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoWeightProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalArithmeticProgramsSupportProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoBranchValueProof
@@ -43,9 +44,9 @@ theorem rowValue (slot : ListSlot) (stage tab data row rank : OTerm alpha)
 theorem sumValue (a b : Program 2) (stage tab x y : OTerm alpha)
  (ha : Nonempty (Derivation body Delta (graph2 a x stage tab)))
  (hb : Nonempty (Derivation body Delta (graph2 b y stage tab))) :
- Nonempty (Derivation body Delta (graph2 (sum a b) (InternalTagArithmeticSyntaxProof.add x y) stage tab)) :=
- binaryValue InternalArithmeticPrograms.addition a b (InternalTagArithmeticSyntaxProof.add x y) x y
+ Nonempty (Derivation body Delta (graph2 (sum a b) (InternalAdditionLawsProof.add x y) stage tab)) :=
+ binaryValue InternalArithmeticPrograms.addition a b (InternalAdditionLawsProof.add x y) x y
    (![stage,tab] : Fin 2 → OTerm alpha)
-   (additionValue (Fin.cons x (Fin.cons y Fin.elim0))) ha hb
+   (InternalArithmeticProgramsSupportProof.additionValue x y) ha hb
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoBranchValueProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoBranchValueProof
