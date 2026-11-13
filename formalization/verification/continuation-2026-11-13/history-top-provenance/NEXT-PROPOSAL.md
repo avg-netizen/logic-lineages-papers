@@ -1,6 +1,8 @@
 # Proposed next packet: actual literal-validator top validity
 
-PROPOSAL ONLY. Not frozen, preflighted, or proved.
+Source reviewed and preflight passed `1794597409004906342-5`.
+Definitions/Targets/Preflight frozen in SPECIALIZATION-FROZEN-SHA256SUMS.
+The full exact3 candidate is authored and awaiting its focused gate.
 
 Definitions/Targets are in the owned LiteralValidatorSpecialization subdirectory.
 Three proposed exact contracts: actual formula-validator occurrence under the
@@ -17,4 +19,4 @@ no native reflection, no postulated line-field invariance, no source tuple
 identity, and no successful parser premise is added. Full original published
 SAME checker/root installation and HB/collapse remain separate.
 
-Await coordinator review, preflight, and frozen hashes before authoring proofs.
+Do not treat candidate proofs as checked until the coordinator records the final exact3 receipt.

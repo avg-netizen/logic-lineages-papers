@@ -8,13 +8,12 @@ open LiteralRawMP HistoryRunSplice LiteralMPRun
 /-- New MP line validity is a conclusion from actual successful-run provenance,
 formula-boundary validity and literal implication-conclusion closure. -/
 def InternalNewLineValidity : Prop := ∀ (l a : Program 1) (x : Program 3), ∀ n (p : Program n)
-  (itag ltag atag ptag ctag leftTag dtag droptag rtag dispatcherTag : Nat),
+  (itag ltag atag ptag ctag dtag droptag rtag dispatcherTag : Nat),
   (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel validity l a x)⟩ →
   (nodes p)[ltag]? = some ⟨1,HistoryLengthOffset.lengthProgram⟩ →
   (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
   (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
   (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
-  (nodes p)[leftTag]? = some ⟨1,HistoryDecoder.decoder false⟩ →
   (nodes p)[dtag]? = some ⟨1,HistoryDecoder.decoder true⟩ →
   (nodes p)[droptag]? = some ⟨2,HistoryLookup.drop⟩ →
   (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩ →
@@ -28,13 +27,12 @@ def InternalNewLineValidity : Prop := ∀ (l a : Program 1) (x : Program 3), ∀
 two actual input runs. Trailing singleton executes from JOINED successful history.
 No native calibration, validity assumption, or semantic formula-image premise. -/
 def InternalTrailingStep : Prop := ∀ (l a : Program 1) (x : Program 3), ∀ n (p : Program n)
-  (itag ltag atag ptag ctag leftTag dtag droptag rtag dispatcherTag : Nat),
+  (itag ltag atag ptag ctag dtag droptag rtag dispatcherTag : Nat),
   (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel validity l a x)⟩ →
   (nodes p)[ltag]? = some ⟨1,HistoryLengthOffset.lengthProgram⟩ →
   (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
   (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
   (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
-  (nodes p)[leftTag]? = some ⟨1,HistoryDecoder.decoder false⟩ →
   (nodes p)[dtag]? = some ⟨1,HistoryDecoder.decoder true⟩ →
   (nodes p)[droptag]? = some ⟨2,HistoryLookup.drop⟩ →
   (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩ →
@@ -50,13 +48,12 @@ def InternalTrailingStep : Prop := ∀ (l a : Program 1) (x : Program 3), ∀ n 
 /-- Actual constructor code is both certificate and encoded iteration bound.
 No equality between encoded bound and true list length is assumed. -/
 def InternalConstructedRun : Prop := ∀ (l a : Program 1) (x : Program 3), ∀ n (p : Program n)
-  (itag ltag atag ptag ctag leftTag dtag droptag rtag dispatcherTag : Nat),
+  (itag ltag atag ptag ctag dtag droptag rtag dispatcherTag : Nat),
   (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel validity l a x)⟩ →
   (nodes p)[ltag]? = some ⟨1,HistoryLengthOffset.lengthProgram⟩ →
   (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
   (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
   (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
-  (nodes p)[leftTag]? = some ⟨1,HistoryDecoder.decoder false⟩ →
   (nodes p)[dtag]? = some ⟨1,HistoryDecoder.decoder true⟩ →
   (nodes p)[droptag]? = some ⟨2,HistoryLookup.drop⟩ →
   (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩ →
@@ -73,13 +70,12 @@ def InternalConstructedRun : Prop := ∀ (l a : Program 1) (x : Program 3), ∀ 
 explicitly includes its real bound/initializer/finalizer AST, but makes no SAME
 source/root installation, unconditional validity, or HB completion claim. -/
 def InternalCoreAcceptance : Prop := ∀ (l a : Program 1) (x : Program 3), ∀ n (p : Program n)
-  (itag ltag atag ptag ctag leftTag dtag droptag rtag dispatcherTag : Nat),
+  (itag ltag atag ptag ctag dtag droptag rtag dispatcherTag : Nat),
   (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel validity l a x)⟩ →
   (nodes p)[ltag]? = some ⟨1,HistoryLengthOffset.lengthProgram⟩ →
   (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
   (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
   (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
-  (nodes p)[leftTag]? = some ⟨1,HistoryDecoder.decoder false⟩ →
   (nodes p)[dtag]? = some ⟨1,HistoryDecoder.decoder true⟩ →
   (nodes p)[droptag]? = some ⟨2,HistoryLookup.drop⟩ →
   (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩ →
