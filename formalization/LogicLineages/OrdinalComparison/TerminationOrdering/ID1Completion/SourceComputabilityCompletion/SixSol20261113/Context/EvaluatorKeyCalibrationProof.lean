@@ -43,10 +43,16 @@ theorem calibrated (n : Nat) (arity : Fin n → Nat) (p : GlobalSourcePackage.In
    n arity q H G W P hq hH hG hW hP v
  rw [OriginalActiveClassKernelEvaluationProof.classEvaluation] at hold
  rw [classEvaluation]
+ change (if evaluate (OriginalActiveObservedClass.activation q H G W)
+   (ofFn ![v.get 0,v.get 2]) = 0 then evaluate P v else evaluate (kernel p H G W) v) = _
  by_cases hz : evaluate (OriginalActiveObservedClass.activation q H G W) (ofFn ![v.get 0,v.get 2]) = 0
  · simpa only [hz,ite_true] using hold
  · simp only [hz,ite_false] at hold ⊢
    rw [← hold, kernelEvaluation,OriginalActiveClassKernelEvaluationProof.kernelEvaluation]
+   change (if evaluate (OriginalTypedDecoder.target H G) (ofFn ![v.get 1,v.get 2]) = 1 ∧
+       evaluate (OriginalActiveObservedClass.activation q H G W) (ofFn ![v.get 1,v.get 2]) = 1 ∧
+       evaluate (evaluatorKey p H G W) (ofFn ![v.get 0,v.get 2]) =
+         evaluate (evaluatorKey p H G W) (ofFn ![v.get 1,v.get 2]) then 1 else 0) = _
    have ha := (activationAcceptance q H G W (v.get 0) (v.get 2)).mp
      (activationNonzero q H G W (v.get 0) (v.get 2) hz)
    by_cases hc : evaluate (OriginalTypedDecoder.target H G) (ofFn ![v.get 1,v.get 2]) = 1 ∧

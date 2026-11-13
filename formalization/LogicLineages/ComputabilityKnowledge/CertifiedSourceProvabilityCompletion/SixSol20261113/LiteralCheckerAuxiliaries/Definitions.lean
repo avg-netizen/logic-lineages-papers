@@ -34,8 +34,8 @@ def finishCharacterization {ctx : Nat} (ftag ptag ctag : Nat)
     (context raw tail lines requested formula certificate : Term ctx) : Formula ctx :=
   let accepted := Formula.equal
     (finalCall ftag (successfulState ptag ctag context raw tail lines) requested formula certificate) (.succ .zero)
-  let matches := Formula.conj (.equal requested context) (.equal formula (.add raw raw))
-  .conj (.imp accepted matches) (.imp matches accepted)
+  let matchedFields : Formula ctx := Formula.conj (.equal requested context) (.equal formula (.add raw raw))
+  .conj (.imp accepted matchedFields) (.imp matchedFields accepted)
 def finishFailure {ctx : Nat} (ftag ptag : Nat) (lines requested formula certificate : Term ctx) : Formula ctx :=
   .conj (.equal (finalCall ftag (HistoryKernel.pairCall ptag .zero lines) requested formula certificate) .zero)
     (.equal (finalCall ftag (HistoryKernel.pairCall ptag (.succ .zero) lines) requested formula certificate) .zero)

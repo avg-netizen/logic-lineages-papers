@@ -13,6 +13,7 @@ open OriginalActiveClassKernelEqualityProof
 open SixSol20261113.Erasure.EvaluatorErasureSyntax
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open EvaluatorKeyPut
+open UniformCertificateCompletion InternalRecursionGraphStepSyntaxProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 theorem toKey (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program 2)

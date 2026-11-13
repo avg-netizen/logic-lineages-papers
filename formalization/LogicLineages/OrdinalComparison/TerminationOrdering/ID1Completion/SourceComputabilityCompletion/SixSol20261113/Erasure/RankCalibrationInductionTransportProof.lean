@@ -18,9 +18,9 @@ theorem belowTransport (R : Program 2) (H G : Program 1) (M W : Program 2) (old 
  obtain ⟨he⟩ := he
  obtain ⟨h⟩ := h
  have hi : Derivation body Delta (instantiate theta (emb old)) := by
-   simpa only [theta,InternalStrongInductionSyntaxProof.belowInstantiate] using h
+   simpa only [theta,InternalStrongInductionSyntaxProof.belowInstantiate, BelowRaw] using h
  have out := Derivation.equalityElimination theta (emb old) (emb new) he hi
- simpa only [theta,InternalStrongInductionSyntaxProof.belowInstantiate] using Nonempty.intro out
+ simpa only [theta,InternalStrongInductionSyntaxProof.belowInstantiate, BelowRaw] using Nonempty.intro out
 
 theorem atTransport (R : Program 2) (H G : Program 1) (M W : Program 2) (old new : OTerm alpha)
  (he : Nonempty (Derivation body Delta (eqn old new)))
