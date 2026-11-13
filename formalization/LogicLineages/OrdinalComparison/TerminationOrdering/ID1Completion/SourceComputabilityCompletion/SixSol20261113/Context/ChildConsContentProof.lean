@@ -45,7 +45,7 @@ theorem atCoordinates (Q : Program 2) (raw domain child0 child1 parameter jobs a
     : Nonempty (Derivation body Delta (graph2 (OriginalTypedArgumentObservations.argumentObservations Q) returned raw parameter)) := by
   have hlookup := ChildConstructorLookupProof.consLookup raw domain child0 child1 parameter jobs raw0 raw1 hcon hraw0 hraw1 he
   have harity := OriginalRawSyntaxTransportInternalConstructorSelectorsProof.consArity (.projection 0)
-    raw domain child0 child1 (Fin.cons raw Fin.elim0) (projectionValue 0 _) hcon
+    raw domain child0 child1 (Fin.cons raw Fin.elim0) (projectionValue 0 (Fin.cons raw Fin.elim0)) hcon
   have ha0child := OriginalInternalAnnotationChildBinaryProof.cons0 (numeral 1) z raw payload domain children ann0 hraw hpayload ha0
   have ha1child := OriginalInternalAnnotationChildBinaryProof.cons1 z (numeral 1) z raw payload domain children ann1 hraw hpayload ha1
   have ha0active := OriginalInternalAnnotationChildValueProof.active z (numeral 1) z raw (numeral 2) ann0 harity ChildDecorationProof.zeroBelowTwo ha0child

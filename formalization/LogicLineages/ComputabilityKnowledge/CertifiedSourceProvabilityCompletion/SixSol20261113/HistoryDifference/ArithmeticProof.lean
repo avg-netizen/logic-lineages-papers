@@ -26,7 +26,7 @@ theorem differenceCancel : Targets.DifferenceCancel := by
     rw [show phi = cancelTemplate tag k from rfl,cancelAt]
     exact Logic.trans _ _ _ hz (zeroLeft k)
   obtain ⟨hshift⟩ := differenceShift n p tag ht (ctx+1) (.var 0) (.add (.var 0) (liftTerm k))
-  have harg := congruentSecond tag (.add (.succ (.var 0)) (liftTerm k))
+  have harg := congruentSecond (T := T) tag (.add (.succ (.var 0)) (liftTerm k))
     (.succ (.add (.var 0) (liftTerm k))) (.succ (.var 0)) (successorLeft (.var 0) (liftTerm k))
   have ih : Hilbert.Local T (ctx+1) [phi]
       (.equal (differenceCall tag (.var 0) (.add (.var 0) (liftTerm k))) (liftTerm k)) :=
@@ -51,17 +51,24 @@ theorem differenceAbsorb {n ctx : Nat} (p : Program n) tag
   let T := GorbowPRNumeralCalculation.Theory p
   let phi := absorbTemplate ctx tag
   obtain ⟨hz⟩ := differenceZero p tag ht (.zero : Term ctx)
-  have hb : Derivation T (GorbowStandardInstances.instantiate phi .zero) := hz
+  have hb : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
+    simpa only [phi,absorbTemplate,GorbowStandardInstances.instantiate,substituteFormula,
+      substituteDifference,substitute,Fin.cases_zero] using hz
   obtain ⟨hnext⟩ := differenceSuccessor p tag ht (.var 0 : Term (ctx+1)) .zero
   have hp := predecessorInstalled p tag ht
   obtain ⟨hpz⟩ := predecessorZero n p (predecessorTag tag) hp (ctx+1)
   have ih : Hilbert.Local T (ctx+1) [phi] (.equal (differenceCall tag (.var 0) .zero) .zero) :=
     .hypothesis List.mem_cons_self
   have hc := localPredecessor (predecessorTag tag) _ _ ih
-  have hs : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) :=
-    Hilbert.Local.finish (Hilbert.Local.discharge
+  have hs : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) := by
+    change Derivation T (.imp phi (GorbowStandardInduction.successorInstance (absorbTemplate ctx tag)))
+    simp only [GorbowStandardInduction.successorInstance,absorbTemplate,substituteFormula,
+      substituteDifference,substitute,Fin.cases_zero]
+    exact Hilbert.Local.finish (Hilbert.Local.discharge
       (localTrans _ _ _ (.base hnext) (localTrans _ _ _ hc (.base hpz))))
-  exact ⟨atTerm phi a (HistoryCodec.ArithmeticSupport.induction phi hb hs)⟩
+  have h := atTerm phi a (HistoryCodec.ArithmeticSupport.induction phi hb hs)
+  simpa only [phi,absorbTemplate,GorbowStandardInstances.instantiate,substituteFormula,
+    substituteDifference,substitute,Fin.cases_zero] using (show Nonempty _ from ⟨h⟩)
 
 private def saturateTemplate {ctx : Nat} (tag : Nat) (k : Term ctx) : Formula (ctx+1) :=
   .equal (differenceCall tag (.add (.var 0) (liftTerm k)) (.var 0)) .zero
@@ -80,7 +87,7 @@ theorem differenceSaturate : Targets.DifferenceSaturate := by
     rw [show phi = saturateTemplate tag k from rfl,saturateAt]
     exact Logic.trans _ _ _ (congruentFirst tag (.add .zero k) k .zero (zeroLeft k)) hz
   obtain ⟨hshift⟩ := differenceShift n p tag ht (ctx+1) (.add (.var 0) (liftTerm k)) (.var 0)
-  have harg := congruentFirst tag (.add (.succ (.var 0)) (liftTerm k))
+  have harg := congruentFirst (T := T) tag (.add (.succ (.var 0)) (liftTerm k))
     (.succ (.add (.var 0) (liftTerm k))) (.succ (.var 0)) (successorLeft (.var 0) (liftTerm k))
   have ih : Hilbert.Local T (ctx+1) [phi]
       (.equal (differenceCall tag (.add (.var 0) (liftTerm k)) (.var 0)) .zero) :=

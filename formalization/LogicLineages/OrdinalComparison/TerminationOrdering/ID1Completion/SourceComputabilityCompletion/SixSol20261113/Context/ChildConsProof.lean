@@ -38,7 +38,19 @@ theorem actual : ChildContentTargets.ArgumentsConsReturn := by
   let xx : Fin 4 → OTerm beta := ![domain.relabel j,child0.relabel j,child1.relabel j,parameter.relabel j]
   have hx : (fun i => (xs i).relabel j) = xx := by
     funext i
-    exact (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k))))) i
+    refine Fin.cases ?_ ?_ i
+    · rfl
+    · intro i
+      refine Fin.cases ?_ ?_ i
+      · rfl
+      · intro i
+        refine Fin.cases ?_ ?_ i
+        · rfl
+        · intro i
+          refine Fin.cases ?_ ?_ i
+          · rfl
+          · intro i
+            exact Fin.elim0 i
   rw [hx] at hq
   have hc' := renameInto hc j Theta hj
   have he' := renameInto he j Theta hj
