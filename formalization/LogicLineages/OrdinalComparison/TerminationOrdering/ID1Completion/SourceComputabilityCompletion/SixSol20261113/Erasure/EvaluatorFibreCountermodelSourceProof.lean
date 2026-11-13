@@ -27,7 +27,7 @@ theorem sourceAt (H G : Program 1) (M W : Program 2)
    Matrix.cons_val_zero,Matrix.cons_val_one,InternalOriginalUniformParameterLeaves.decodedValue,hp]
  simp only [parameter,contextCode,Nat.unpair_pair,Encodable.encodek]
  simp [NumberedNumericCarrier.rawCarrierTest,NumberedNumericCarrier.decodeUniverse,
-   NumberedNumericDecodingProof.packedNumericRoundTrip,hut]
+   NumberedNumericDecodingProof.packedNumericRoundTrip 1 arity [] q,hut]
 theorem actualSource : EvaluatorFibreCountermodelTargets.ActualSource := by
  obtain ⟨H,hH⟩ := OriginalTypedDecoderHeadSelectionProof.actualOriginalTypedHeadSelection 1 arity
  obtain ⟨G,hG⟩ := OriginalVariableLeavesContextGuardProof.actualOriginalVariableContextGuardSelection 1
@@ -41,7 +41,9 @@ theorem actualSource : EvaluatorFibreCountermodelTargets.ActualSource := by
  · rw [hG]
    simp [contextCode]
  · rw [hM]
-   simpa [contextCode,context] using OriginalUniverseDecoderGuardCalibrationProof.memberEncoded 1 context Ty.ground
+   change contextMemberValue 1 (typeNumber Ty.ground) contextCode = 1
+   simpa [contextCode,EvaluatorFibreCountermodel.context,List.Vector.get_ofFn,
+     Matrix.cons_val_zero,Matrix.cons_val_one] using OriginalUniverseDecoderGuardCalibrationProof.memberEncoded 1 context Ty.ground
  · rw [hW]
    have he := OriginalUniverseDecoderGuardCalibrationProof.windowEncoded 1 arity context (.ranked (0 : Fin 1))
    simpa only [contextCode,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,

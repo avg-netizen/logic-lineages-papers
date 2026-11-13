@@ -18,7 +18,12 @@ theorem evaluatorEqual :
      OriginalHereditaryEvaluatorFixedPointProof.fixedPoint representative 1 arity contextCode [] rightTerm]
  simp only [OriginalHereditaryFiniteStability.value]
  rw [OriginalHereditaryObservationLayerNativeProof.native,OriginalHereditaryObservationLayerNativeProof.native]
- rw [rootEqual representative,rootEqual evaluator,emptyRows evaluator leftCode,emptyRows evaluator rightCode]
+ have hr := rootEqual representative
+ have he := rootEqual evaluator
+ have hl := emptyRows evaluator leftCode
+ have hh := emptyRows evaluator rightCode
+ dsimp only [leftCode,rightCode,parameter,evaluator] at hr he hl hh
+ rw [hr,he,hl,hh]
 theorem representativeDifferent :
  evaluate representative (List.Vector.ofFn ![leftCode,parameter]) ≠
  evaluate representative (List.Vector.ofFn ![rightCode,parameter]) := by
