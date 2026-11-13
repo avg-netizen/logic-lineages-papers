@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.Preflight
+#check Targets.NativeRaw
+#check Targets.NativeEven
+#check Targets.ActualChildren
+#check Targets.InternalConstructor
+#check Targets.InternalReferences
+#check Targets.InternalDispatcher
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.Preflight
