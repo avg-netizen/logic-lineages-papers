@@ -14,6 +14,7 @@ open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
 open InternalApplicationStepPeelSupportProof (andLeft andRight)
+open OriginalRawSyntaxTransport (constant)
 open SourceComputabilityFormulaSupportProof (numeral)
 open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
 open UniformCertificateCompletion EvaluatorKeyPut
@@ -56,13 +57,13 @@ theorem atCoordinates (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Pr
    raw shiftedRaw d (numeral 0) gamma extended context parameter extendedParameter hd hi hpp hep ht
  have hcd := EvaluatorKeyFinalOutputDomainProof.actualObjectDomain p H G W P body alpha Delta
    context shifted canonicalShift extended shiftedRaw canonicalRaw extendedParameter hsp hep hsd hk hcr
- have rec := OriginalRawObjectTransportInternalSupportProof.eraseRecoveredAt
+ have hrec := OriginalRawObjectTransportInternalSupportProof.eraseRecoveredAt
    d canonicalShift erased gamma canonicalRaw extended erasedQuery (andRight hcd) hc he heq
- have hpair := andRight (andRight (andRight rec))
+ have hpair := andRight (andRight (andRight hrec))
  have hval := valueUnique InternalUnpair.right erasedQuery erasedRaw (![erased])
    (pairRight erased gamma erasedQuery hpair) hr
  have herase := outputTransport OriginalRawSyntaxTransport.erasePackedRaw erasedQuery erasedRaw
-   (![d,numeral 0,canonicalRaw]) hval (andLeft (andRight (andRight rec)))
+   (![d,numeral 0,canonicalRaw]) hval (andLeft (andRight (andRight hrec)))
  have hed := EvaluatorKeyDomainClosureProof.actualErasureDomain p H G W body alpha Delta
    canonicalRaw erasedRaw d (numeral 0) gamma extended context extendedParameter parameter
    (andLeft hcd) hi hep hpp herase
