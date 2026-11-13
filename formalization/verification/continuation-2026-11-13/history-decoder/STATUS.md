@@ -1,5 +1,5 @@
-# Checked native calibration and installed children only
+# Checked literal decoder and internal inverses
 
-Four checked contracts establish all-vector native Nat.unpair calibration for the literal bounded exhaustive search AST and exact actual pair-child installation. Native calibration is not reflected into internal arithmetic. The separately frozen internal left/right inverse targets remain unpaid; pair-copy congruence has a separate focused receipt, not inferred from this gate.
+Full exact6 now proves INTERNAL left/right inverses at each installed decoder's actual pair child, in addition to native calibration and child installation. Actual nested-loop arithmetic inductions use internal pair injectivity, coordinate bounds, hit and preservation invariants, with no native reflection or assumed loop/decoder oracle. This is not yet cross-tag cons/history lookup or HB correctness.
 
-Exact gate evidence verifies 390 source-matched modules, standard axioms, zero errors. Register unchanged 175 checked, 2 inherited, 12 pending. No full-root or remote CI claim.
+Exact evidence verifies 405 source-matched modules, standard axioms, zero errors. Register unchanged 175 checked, 2 inherited, 12 pending. No full-root or remote CI claim.

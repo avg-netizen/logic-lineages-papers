@@ -63,3 +63,13 @@ required uniform comparison/termination theorem.
 [98bd7aaf](https://github.com/avg-netizen/logic-lineages-papers/commit/98bd7aaf3fd1156c875199cae6043a07f207bdb7) publishes [unrestricted internal pair injectivity](history-cancellation/STATUS.md) and [actual reverse-stack child slots](context-reverse-slots/STATUS.md). Decoder inverses, recursive evaluator content, and full I/C/HB remain separate obligations.
 
 [Computed-fuel singleton](computed-stack/STATUS.md) is checked at the unchanged original completed/evaluator programs, with no supplied geometry or fuel comparison. Recursive value semantics remain unpaid.
+
+## Subsequent exact content and codec milestones
+
+- [Framed role-zero content](framed-value/STATUS.md), including arbitrary-count value uniqueness.
+- [Conditional term tick](context-term-tick/STATUS.md), with explicit mapped child/reverse-stack geometry.
+- [Exact finite visit content](content-visits/STATUS.md), conditional on child completion/content.
+- [Actual deletion selector semantics](context-deletion-return/STATUS.md), deriving scalar observation agreement.
+- [Internal literal decoder inverses](history-decoder/STATUS.md), proved independently of native calibration.
+
+Both-role recursive framed content, source evaluator/layer unfolding, option-aware encoded history lookup, full I/C and HB remain unpaid.
