@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxValidator.Targets
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxValidator
+#check formulaValidator
+#check lineValidator
+#check Targets.NativeFormula
+#check Targets.NativeLine
+#check Targets.InternalBoolean
+#check Targets.InternalLineBinding
+#check Targets.InternalImplicationConclusion
+#check Targets.InternalQuantifier
