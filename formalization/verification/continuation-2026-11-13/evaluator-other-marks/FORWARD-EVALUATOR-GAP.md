@@ -109,3 +109,30 @@ existing universally quantified tuple or add this bridge as a final assumption.
 Even if that bridge is paid, the separate all-position deletion cell law and
 zero-cell lambda geometry described above remain; C-fibre extensionality alone
 is not forward preservation. Runtime owns that extensionality lane separately.
+
+## Candidate countermodel under review (not yet proved)
+
+An initial suggestion involving two native symbol IDs was rejected after reading
+the actual HeadCode constructors. There are no such freely varying native IDs;
+ranked IDs change classNumber. No target/proof was made from that suggestion.
+
+The viable candidate uses one ranked symbol of arity2, actual empty Gamma,
+ground result and BASE [bottom ground, ordinary zero []] versus its swap, under
+the SAME ranked head. Both packed terms are genuinely typed. Choose the actual
+outer context with symbols=[0], S=[ground] and a fixed Boolean relation table.
+All original used heads/types lie in that window. R=projection0 preserves the
+ordered packed code and therefore distinguishes the two inputs; it is deliberately
+not claimed calibrated as a primary representative.
+
+For arbitrary observer Q, the actual native root observations are equal by the
+accepted root calibration and permutation invariance of sorted typed BASE
+observations. The actual full evaluator equality can then be obtained from its
+typed fixed-point theorem, both root observations (Q=R and Q=E), and actual empty
+deletion rows at Gamma=[] via NativeRows. Genuine source acceptance can be paid
+using selected calibrated H/G/M/W, sourceCalibration and typed source-window
+membership. This avoids evaluating the enormous raw+1/runtime fuel loops by
+kernel reduction. Only small concrete codec inequalities need kernel arithmetic.
+
+The candidate concerns the arbitrary-retained-R overgeneralization only. It is
+not a counterexample to the paper or to calibrated-R native exactness. It is
+still a proposed proof route awaiting review/freeze and native verification.
