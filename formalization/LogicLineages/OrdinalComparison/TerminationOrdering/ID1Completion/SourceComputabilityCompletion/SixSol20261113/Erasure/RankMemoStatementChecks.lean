@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoCoverageProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoStatementChecks
+theorem exactZero : RankMemoTargets.ActualZero := RankMemoRecurrenceProof.actualZero
+theorem exactNext : RankMemoTargets.ActualNext := RankMemoRecurrenceProof.actualNext
+theorem exactCoverage : RankMemoTargets.ActualLookupCoverage := RankMemoCoverageProof.actualLookupCoverage
+theorem exactSource : RankMemoTargets.ActualSourceRankCalibration := RankMemoCalibrationProof.actualSourceRankCalibration
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.RankMemoStatementChecks
