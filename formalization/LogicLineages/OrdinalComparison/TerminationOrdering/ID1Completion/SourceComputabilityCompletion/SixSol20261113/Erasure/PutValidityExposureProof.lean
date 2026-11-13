@@ -71,6 +71,7 @@ theorem exposure (s t typ raw head base label : OTerm alpha) (psi : Formula alph
     Nonempty (Derivation body Delta psi) := by
   apply programsCases (![rawResult,nilAt] : Fin 2 → Program 2) ![s,label] psi
   intro beta j Theta ys hj hs
+  simp only [InternalRecursionGraphStepSyntaxProof.consTermRename,emptyRename] at hs
   let xs : Fin 2 → OTerm beta := ![s.relabel j,label.relabel j]
   have hp' := renameInto hp j Theta hj
   have ho' := renameInto ho j Theta hj

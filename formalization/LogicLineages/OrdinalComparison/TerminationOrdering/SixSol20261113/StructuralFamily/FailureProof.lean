@@ -17,7 +17,10 @@ def replacement : MarkedSubstitution Unit (fun _ => 0) [arrow] []
   | _, .here => marked
   | _, .there v => nomatch v
 
-theorem markedConfined : Confined input marked := by decide
+theorem markedConfined : Confined input marked := by
+  change (arrow ∈ TypedExtraDownsets.types input ∧ True ∧ True) ∧
+    ((Head.zero : Head Unit) ∈ headList input ∧ True ∧ True)
+  decide
 
 theorem replacementConfined : RangeConfined input replacement := by
   intro tau v ht
@@ -25,7 +28,9 @@ theorem replacementConfined : RangeConfined input replacement := by
   | here => exact markedConfined
   | there v => cases v
 
-def variable : ConfinedTerm input [arrow] arrow := ⟨.var .here, by decide⟩
+def sourceVariable : ConfinedTerm input [arrow] arrow := ⟨.var .here, by
+  change (arrow ∈ TypedExtraDownsets.types input) ∧ True
+  decide⟩
 
 def world : World input := ⟨[], by decide⟩
 
@@ -51,15 +56,15 @@ theorem compatibility : ProtectedCompatible input replacement (fun {_} _ => fals
   | there v => cases v
 
 noncomputable def arguments : Values input [.ground] world :=
-  fun _ => ExecutableDomainBottom.bottomValue input .ground world
+  fun i => ExecutableDomainBottom.bottomValue input ([Ty.ground].get i) world
 
 theorem markedScanValue :
-    scan (substituteSource replacement replacementConfined variable) constructor world emptyEnvironment
+    scan (substituteSource replacement replacementConfined sourceVariable) constructor world emptyEnvironment
       (fun {_} _ => false) [.ground] .ground arguments rfl = familyValue .ground world := by
   rfl
 
 theorem variableScanValue :
-    scan variable constructor world sourceEnvironment (fun {_} _ => false)
+    scan sourceVariable constructor world sourceEnvironment (fun {_} _ => false)
       [.ground] .ground arguments rfl = ExecutableDomainBottom.bottomValue input .ground world := by
   change applyValue (ExecutableDomainBottom.bottomValue input arrow world)
     (fullSuffix [.ground] .ground (by simp)) arguments = _
@@ -68,7 +73,7 @@ theorem variableScanValue :
 
 theorem scannerFails : ¬ ScannerSubstitutionAt constructor := by
   intro h
-  have he := h [arrow] [] arrow variable replacement replacementConfined world sourceEnvironment
+  have he := h [arrow] [] arrow sourceVariable replacement replacementConfined world sourceEnvironment
     emptyEnvironment (fun {_} _ => false) (fun {_} _ => false) agreement compatibility
     [.ground] .ground arguments rfl
   rw [markedScanValue,variableScanValue] at he

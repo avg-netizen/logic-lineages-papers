@@ -1,0 +1,83 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowSuffixCoreProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsLengthProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowSuffixStepProof
+open SixSol20261112.Context
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeel (graph5)
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc)
+open InternalAdditionLawsProof (add)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalListCodecSupportProof (consGraph)
+open OriginalContextInsertion (lengthGraph)
+open OriginalContextInsertionLengthProof (lengthConsRecover)
+open OriginalInternalIndexedPrefixCasesTargets (bump)
+open AnnotationSuffixSyntaxProof NarrowSuffixCoreProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph InternalListMap.map OriginalHereditaryAnnotatedExpansion.scan
+  InternalApplicationValidityStackAppend.append OriginalContextInsertion.length
+
+theorem atValues (arity : Nat)
+    (suffix offset typ raw front jobs annotatedFront count full mapped head tail tailCount annotatedHead mappedTail
+      singletonRaw singletonAnnotated grown nextPrefix rawActual : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (consGraph suffix head tail)))
+    (hi : Nonempty (Derivation body Delta (row arity tail)))
+    (hf : Nonempty (Derivation body Delta (fields arity suffix offset typ raw front jobs annotatedFront count full mapped)))
+    (ht : Nonempty (Derivation body Delta (lengthGraph tailCount tail)))
+    (hh : Nonempty (Derivation body Delta (graph2 InheritedMapDefinitions.inheritedJob annotatedHead head typ)))
+    (hm : Nonempty (Derivation body Delta
+      (graph2 (InternalListMap.map (k := 1) InheritedMapDefinitions.inheritedJob) mappedTail tail typ)))
+    (hsr : Nonempty (Derivation body Delta (consGraph singletonRaw head z)))
+    (hsa : Nonempty (Derivation body Delta (consGraph singletonAnnotated annotatedHead z)))
+    (hg : Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append grown front singletonRaw)))
+    (hn : Nonempty (Derivation body Delta
+      (graph5 OriginalHereditaryAnnotatedExpansion.scan nextPrefix (suc (bump arity offset)) z typ raw jobs)))
+    (hra : Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append rawActual grown tail))) :
+    Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append full annotatedFront mapped)) := by
+  let start := bump arity offset
+  have harity := andLeft hf
+  have hfront := andLeft (andRight hf)
+  have happend := andLeft (andRight (andRight hf))
+  have hprefix := andLeft (andRight (andRight (andRight hf)))
+  have hcount := andLeft (andRight (andRight (andRight (andRight hf))))
+  have hfull := andLeft (andRight (andRight (andRight (andRight (andRight hf)))))
+  have hmapped := andRight (andRight (andRight (andRight (andRight (andRight hf)))))
+  have hecount := lengthConsRecover suffix head tail count tailCount hc hcount ht
+  have he := countShift start count tailCount hecount
+  have hfull' : Nonempty (Derivation body Delta
+      (graph5 OriginalHereditaryAnnotatedExpansion.scan full (add (suc start) tailCount) z typ raw jobs)) :=
+    headTransport OriginalHereditaryAnnotatedExpansion.scan full (add start count) (add (suc start) tailCount)
+      (Fin.cons z (Fin.cons typ (Fin.cons raw (Fin.cons jobs Fin.elim0)))) he hfull
+  have hgrown := OriginalHereditaryDeletionRowsLengthProof.appendSingletonLength
+    start front head singletonRaw grown hfront hsr hg
+  have hraw := grownRawAppend front suffix jobs head tail singletonRaw grown rawActual hc hsr happend hg hra
+  have hcons := InternalListMapProof.consForward InheritedMapDefinitions.inheritedJob
+    suffix head tail annotatedHead mappedTail mapped (Fin.cons typ Fin.elim0) hc hh hm hmapped
+  have hlookup := headAtOffset start front suffix jobs head tail hfront happend hc
+  have hdecorate := AnnotationSuffixDecorationProof.actualDecoration arity offset typ raw head annotatedHead harity hh
+  have hcell := NarrowScanCellProof.cellValue
+    start z typ raw jobs annotatedHead head hdecorate hlookup
+  have hprefixAppend := NarrowScanAppendProof.scanAppendAtLookup
+    start annotatedFront z typ raw jobs annotatedHead singletonAnnotated nextPrefix head
+    hprefix hn hcell hsa hlookup
+  have hfields : Nonempty (Derivation body Delta
+      (fields arity tail (suc offset) typ raw grown jobs nextPrefix tailCount full mappedTail)) := by
+    have h := andIntro harity (andIntro hgrown (andIntro hraw
+      (andIntro hn (andIntro ht (andIntro hfull' hm)))))
+    simpa only [fields,bumpSuccessor,start] using h
+  have htail := rowApply arity tail (suc offset) typ raw grown jobs nextPrefix tailCount full mappedTail hi hfields
+  have hsingleTail := InternalApplicationValidityStackAppendListProof.consBackward
+    singletonAnnotated annotatedHead z mappedTail mappedTail mapped hsa
+    (InternalApplicationValidityStackAppendListProof.appendZeroValue mappedTail) hcons
+  exact SixSol20261112.Runtime.AppendReassociationProof.appendReassociation body alpha Delta
+    annotatedFront singletonAnnotated mappedTail nextPrefix mapped full hprefixAppend hsingleTail htail
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowSuffixStepProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowSuffixStepProof

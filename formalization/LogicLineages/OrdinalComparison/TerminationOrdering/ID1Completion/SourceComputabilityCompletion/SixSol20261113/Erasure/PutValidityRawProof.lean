@@ -58,6 +58,7 @@ theorem raw (H : Program 1) (M W : Program 2)
   let qs : Fin 3 → Program 1 := ![H,OriginalTypedDecoder.headOf H,OriginalTypedDecoder.tailOf H]
   apply programsCases qs (Fin.cons head Fin.elim0)
   intro beta j Theta ys hj hs
+  simp only [InternalRecursionGraphStepSyntaxProof.consTermRename,emptyRename] at hs
   simp only [acceptedRename]
   have ho' := renameInto ho j Theta hj
   have hn' := renameInto hn j Theta hj
@@ -69,7 +70,7 @@ theorem raw (H : Program 1) (M W : Program 2)
   rw [acceptedRename] at ha'
   have hh : Nonempty (Derivation body Theta (graph1 H (ys 0) (head.relabel j))) := hs 0
   have hf := arrowFields H (ys 0) (ys 1) (ys 2)
-    (fun i => ((Fin.cons head Fin.elim0) i).relabel j) (hs 0) (hs 1) (hs 2)
+    (Fin.cons (head.relabel j) Fin.elim0 : Fin 1 → OTerm beta) (hs 0) (hs 1) (hs 2)
   exact rawAt H M W (raw.relabel j) (target.relabel j) (typ.relabel j)
     (head.relabel j) (base.relabel j) (label.relabel j) (nil.relabel j)
     (gamma.relabel j) (c.relabel j) (ys 0) (ys 1) (ys 2) ho' hn' hp' hh hf ha'

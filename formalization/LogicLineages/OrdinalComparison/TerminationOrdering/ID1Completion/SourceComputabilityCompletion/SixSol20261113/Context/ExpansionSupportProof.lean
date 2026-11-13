@@ -1,9 +1,9 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ExpansionTargets
-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowSuffixProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.InheritedMapProof
-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Runtime.ScheduleCountRowsProof
-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalExpansionLengthSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowCountRowsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowScanRecoverProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ExpansionSupportProof
@@ -36,7 +36,7 @@ theorem childLength (arity : Nat) (raw parameter front : OTerm alpha)
     (ha : Nonempty (Derivation body Delta (graph1 (OriginalRawSyntaxTransport.arityOf (.projection 0)) (numeral arity) raw)))
     (hc : Nonempty (Derivation body Delta (graph2 OriginalHereditaryExpansion.childJobs front raw parameter))) :
     Nonempty (Derivation body Delta (lengthGraph (numeral arity) front)) := by
-  have h := SixSol20261112.Runtime.ScheduleCountRowsProof.rowsExact raw parameter front z front
+  have h := NarrowCountRowsProof.rowsExact raw parameter front z front
     (numeral arity) z hc (AppendIdentityProof.actualRightZero body alpha Delta front) ha
     OriginalContextInsertionLengthProof.lengthZero
   exact outputTransport OriginalContextInsertion.length (add (numeral arity) z) (numeral arity)
@@ -89,11 +89,11 @@ theorem splitAtLength (arity : Nat) (typ raw parameter front suffix jobs annotat
     (hf : Nonempty (Derivation body Delta (graph4 OriginalHereditaryAnnotatedExpansion.decorateAll full z typ raw jobs))) :
     Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append full annotatedFront mapped)) := by
   have hfront := childLength arity raw parameter front ha hc
-  have hlength := SixSol20261112.Runtime.ScheduleCountRowsProof.rowsExact raw parameter front suffix jobs
+  have hlength := NarrowCountRowsProof.rowsExact raw parameter front suffix jobs
     (numeral arity) count hc hj ha hl
-  have hscan := OriginalHereditaryInternalAnnotatedScanProof.scanFromAll z typ raw jobs full
+  have hscan := NarrowScanRecoverProof.scanFromAll z typ raw jobs full
     (add (numeral arity) count) hf hlength
-  apply AnnotationSuffixProof.actualInheritedScanSplit arity body alpha Delta z typ raw front suffix jobs
+  apply NarrowSuffixProof.actualInheritedScanSplit arity body alpha Delta z typ raw front suffix jobs
     annotatedFront count full mapped ha
   · simpa only [bumpZero] using hfront
   · exact hj

@@ -59,6 +59,7 @@ theorem packed (H G : Program 1) (M W : Program 2)
   let qs : Fin 2 → Program 1 := ![leftOf (.projection 0),rightOf (.projection 0)]
   apply programsCases qs (Fin.cons parameter Fin.elim0)
   intro beta j Theta ys hj hs
+  simp only [InternalRecursionGraphStepSyntaxProof.consTermRename,emptyRename] at hs
   simp only [graph2Rename,numeralRename]
   let xs : Fin 1 → OTerm beta := ![parameter.relabel j]
   have hc := selectorPair (.projection 0) (parameter.relabel j) (ys 0) (ys 1) xs
