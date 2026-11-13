@@ -7,7 +7,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowPRProgram List.Vector HistoryRuleSuffix.NativeProof
 
 theorem dropZeroIff {α : Type} [Encodable α] (xs : List α) (i : Nat) :
-    Encodable.encode (xs.drop i)=0 ↔ xs.length≤i := by
+    Encodable.encode (xs.drop i)=0 ↔ xs.length ≤ i := by
   induction i generalizing xs with
   | zero => cases xs with
     | nil => simp
@@ -30,7 +30,8 @@ theorem countEval {α : Type} [Encodable α] (bound : Nat) (xs : List α) :
   | zero => rfl
   | succ b ih =>
       change evaluate countStep (b ::ᵥ evaluate count (b ::ᵥ Encodable.encode xs ::ᵥ nil) ::ᵥ Encodable.encode xs ::ᵥ nil) = _
-      rw [stepEval,ih,HistoryLookup.NativeProof.evaluateDrop,dropZeroIff]
+      rw [stepEval,ih,HistoryLookup.NativeProof.evaluateDrop]
+      simp only [dropZeroIff]
       split <;> omega
 
 theorem lengthBound {α : Type} [Encodable α] (xs : List α) : xs.length≤Encodable.encode xs := by

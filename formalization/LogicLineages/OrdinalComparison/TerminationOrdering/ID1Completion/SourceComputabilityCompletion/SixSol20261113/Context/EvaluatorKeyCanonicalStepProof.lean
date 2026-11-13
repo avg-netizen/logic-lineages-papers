@@ -39,7 +39,7 @@ theorem atOther (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program 
    ⟨Derivation.implicationElimination (Derivation.conjunctionLeft (Derivation.implicationElimination lawl htl)) cl⟩
  have lr : Nonempty (Derivation body Delta (graph2 leaf rightOut right parameter)) :=
    ⟨Derivation.implicationElimination (Derivation.conjunctionLeft (Derivation.implicationElimination lawr htr')) cr⟩
- exact EvaluatorKeyOtherLeafProof.actualOtherLeafEquality p H G W P body alpha Delta left right leftOut rightOut parameter dl dr he ht htr ll lr
+ exact EvaluatorKeyOtherLeafProof.actualOtherLeafEquality p H G W P body alpha Delta left right leftOut rightOut parameter dl dr he ⟨htl⟩ ⟨htr'⟩ ll lr
 
 theorem actualStep : EvaluatorKeyCanonicalInductionTargets.ActualStep := by
  intro p H G W P body alpha Delta q left right leftOut rightOut parameter hb hraw hp
