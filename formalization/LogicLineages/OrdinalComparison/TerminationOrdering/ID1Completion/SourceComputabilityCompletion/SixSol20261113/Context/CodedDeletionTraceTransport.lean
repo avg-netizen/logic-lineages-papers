@@ -30,7 +30,7 @@ theorem admittedTransfer (R : Program 2) (H G : Program 1) (M W : Program 2)
  let ts : Fin 3 → OTerm alpha := ![left,right,parameter]
  let us : Fin 3 → OTerm alpha := ![otherLeft,otherRight,otherParameter]
  have hstart : Nonempty (Derivation body Delta (phi.subst (fun i => emb (ts i)))) := by
-   simpa only [phi,admittedSubst,Term.subst,ts,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two] using ha
+   simpa only [phi,admittedSubst,Term.subst,ts,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.head_cons,Matrix.tail_cons] using ha
  have heq : ∀ i, Nonempty (Derivation body Delta ((emb (ts i)).equal (emb (us i)))) := by
    intro i
    refine Fin.cases ?_ (Fin.cases ?_ (Fin.cases ?_ (fun k => Fin.elim0 k))) i
@@ -39,7 +39,7 @@ theorem admittedTransfer (R : Program 2) (H G : Program 1) (M W : Program 2)
    · exact hp
  have h := InternalGraphCompositionEqualityProof.tupleCongruence body alpha 3 Delta phi
    (fun i => emb (ts i)) (fun i => emb (us i)) heq hstart
- simpa only [phi,admittedSubst,Term.subst,us,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two] using h
+ simpa only [phi,admittedSubst,Term.subst,us,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.head_cons,Matrix.tail_cons] using h
 
 theorem fieldsTransfer (R : Program 2) (H G : Program 1) (M W : Program 2)
  (entry left right parameter gamma otherLeft otherRight otherParameter otherGamma : OTerm alpha)

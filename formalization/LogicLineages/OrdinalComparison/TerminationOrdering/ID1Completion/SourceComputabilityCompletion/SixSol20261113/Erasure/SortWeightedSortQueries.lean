@@ -6,7 +6,7 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
-open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalRecursionGraphStepSyntaxProof InternalRawListRecursionSyntaxProof
 open InternalTagArithmeticSyntaxProof (z eqn)
 open InternalAdditionLawsProof (add)
@@ -23,7 +23,7 @@ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
  (params : Fin k → OTerm alpha) (j : alpha → beta) :
  (fields F raw sorted sum params).relabel j =
  fields F (raw.relabel j) (sorted.relabel j) (sum.relabel j) (fun i => (params i).relabel j) := by
- simp only [fields,conjunctionRename,graph1Rename,programRename,consTermRename]
+ simp only [fields,conjunctionRename,graph1,programRename,consTermRename,emptyRename]
 @[simp] theorem resultRename {beta : Type} (sorted sum : OTerm alpha)
  (params : Fin k → OTerm alpha) (j : alpha → beta) :
  (result F sorted sum params).relabel j =
@@ -81,7 +81,11 @@ theorem consAt0 (raw head tail sorted sum : OTerm alpha) (params : Fin k → OTe
  apply programCases sort ![tail] _
  intro beta j Theta st hj hst
  rw [resultRename]
- simp only [consTermRename,emptyRename] at hst
+ have hv : (fun i : Fin 1 => ((![tail] : Fin 1 → OTerm alpha) i).relabel j) =
+     ![tail.relabel j] := by
+   funext i
+   exact Fin.cases rfl (fun q => Fin.elim0 q) i
+ rw [hv] at hst
  have hi' := renameInto hi j Theta hj
  simp only [belowRawRename] at hi'
  have hc' := renameInto hc j Theta hj

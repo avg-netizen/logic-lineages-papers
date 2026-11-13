@@ -9,6 +9,7 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalApplicationStepPeelSupportProof (andIntro)
+open InternalControlGraphSupportProof
 open InternalAcceptanceSupportProof
 open InternalGraphCompositionFunctionalityProof (renameInto)
 open InternalTagArithmeticSyntaxProof (suc z sucRelabel zRelabel)
@@ -17,6 +18,8 @@ open InternalParameterizedCanonicalResultFoldSyntaxProof
 open UniformCertificateCompletion ObservedClassDefinitions
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+attribute [local irreducible] programGraph
 
 theorem position (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program 2)
     (P : Program 3) (out input typ parameter cutoff : OTerm alpha)

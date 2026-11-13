@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.SuffixProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.NativeStatementChecks
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.StatementChecks
+theorem constructLeaves : Targets.ConstructLeaves := LeavesProof.constructLeaves
+#print axioms constructLeaves
+theorem nativeLineDispatcher : Targets.NativeLineDispatcher := NativeProof.nativeLineDispatcher
+#print axioms nativeLineDispatcher
+theorem internalLineSuffix : Targets.InternalLineSuffix := SuffixProof.internalLineSuffix
+#print axioms internalLineSuffix
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.StatementChecks

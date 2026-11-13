@@ -100,3 +100,10 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 ## Original rule suffix stability
 
 [Actual canonical rule2/rule3 suffix acceptance](history-rule-suffix/STATUS.md) now passes four exact targets. This is not internal correctness of the prior opaque selected kernel; whole-Line/kernel integration remains separate.
+
+## Genuine closure and same-tuple normalization
+
+- [Internally counted coded deletion traces](coded-deletion-trace/STATUS.md), distinct from the earlier external Nat schema.
+- [Arbitrary parameterized weighted-sort conservation](sort-weighted/STATUS.md), not yet rank determinacy.
+- [Bounded all-position scan introduction](observed-all-tests/STATUS.md).
+- [SAME all-position acceptance and once-minimum agreement](observed-normalization/STATUS.md), not full-fold cross-input coherence.

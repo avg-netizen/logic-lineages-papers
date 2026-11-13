@@ -1,0 +1,9 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.LeavesProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.LeavesStatementChecks
+theorem constructLeaves : Targets.ConstructLeaves := LeavesProof.constructLeaves
+#print axioms constructLeaves
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.LeavesStatementChecks

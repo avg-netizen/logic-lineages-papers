@@ -50,7 +50,7 @@ theorem rowWitness (R : Program 2) (H G : Program 1) (M W : Program 2)
  unfold rowBody
  rw [he,impSubst]
  simp only [conjunctionSubst,allSubst,stateSubst,admittedSubst,witnessLift,Term.subst,Sum.elim_inr,
-   Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.cons_val_three]
+   Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.cons_val_three,Matrix.head_cons,Matrix.tail_cons]
 theorem rowApply (R : Program 2) (H G : Program 1) (M W : Program 2)
  (trace steps c left right parameter gamma : OTerm alpha)
  (hr : Nonempty (Derivation body Delta (row R H G M W trace steps c)))
