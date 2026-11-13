@@ -7,7 +7,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution List.Vector
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport EquationsProof SelectProof
 open HistoryAppend.PreserveSupportProof (substAppend)
-open HistoryAppend.PositiveProof (substLookup)
+open HistoryAppend.TableLookupProof (substLookup)
 
 theorem substLength {m n : Nat} (sub : Fin m → Term n) tag (code : Term m) :
     substitute sub (lengthCall tag code)=lengthCall tag (substitute sub code) := by

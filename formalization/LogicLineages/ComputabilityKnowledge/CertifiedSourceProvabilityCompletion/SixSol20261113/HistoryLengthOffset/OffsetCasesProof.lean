@@ -31,7 +31,7 @@ noncomputable def transport {T : Sentence → Prop} {ctx : Nat} step ltag atag r
     (phase step ltag atag rtag (liftTerm count) (.var 0) (liftTerm right) (liftTerm index)) a b)
   rwa [GorbowPACore.logicalFormula,phaseAt,phaseAt] at h
 
-theorem consPhase {n ctx : Nat} (p : Program n) ltag atag rtag ctag
+theorem consPhase {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
     (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
     (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
     (hr : (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩)
@@ -62,7 +62,7 @@ theorem consPhase {n ctx : Nat} (p : Program n) ltag atag rtag ctag
       have hout := Hilbert.Local.mp (.base hs) (.mp hi ht)
       exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge hout))⟩
 
-theorem nilPhase {n ctx : Nat} (p : Program n) ltag atag rtag ctag
+theorem nilPhase {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
     (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
     (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
     (hr : (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩)
@@ -73,7 +73,7 @@ theorem nilPhase {n ctx : Nat} (p : Program n) ltag atag rtag ctag
   | false => exact ⟨Hilbert.lift _ hz⟩
   | true => exact ⟨Hilbert.lift _ (Hilbert.lift _ hz)⟩
 
-theorem positivePhase {n ctx : Nat} (p : Program n) ltag atag rtag ctag
+theorem positivePhase {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
     (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
     (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
     (hr : (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩)
@@ -102,7 +102,7 @@ theorem positivePhase {n ctx : Nat} (p : Program n) ltag atag rtag ctag
   obtain ⟨hs⟩ := HistoryIteratorSuffix.SurjectivityProof.internalPairSurjective n p cp hcp ctx code
   exact ⟨.mp helim hs⟩
 
-theorem allCodes {n ctx : Nat} (p : Program n) ltag atag rtag ctag
+theorem allCodes {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
     (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
     (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
     (hr : (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩)

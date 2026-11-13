@@ -37,7 +37,7 @@ theorem atCodePlus {n ctx : Nat} (p : Program n) tag (ht : (nodes p)[tag]? = som
   have hz : Derivation T (.equal (HistoryLookup.DropEquationsProof.dropCall (dtag tag) B C) .zero) := .mp hdr hbound
   have hsel := testCongruence (G := [phi]) (stag tag) _ .zero (countCall tag B C) (.succ (countCall tag B C)) (.base hz)
   obtain ⟨hselect⟩ := HistoryCodec.PairProof.selectZero p (stag tag) hs (countCall tag B C) (.succ (countCall tag B C))
-  have hadd := countCongruence (G := [phi]) tag (.add C (.succ i)) (.succ B) C C
+  have hadd := countCongruence (T := T) (G := [phi]) tag (.add C (.succ i)) (.succ B) C C
     (.base (.arithmetic (.addSucc C i))) (.base (.logical (.reflexive C)))
   have hout := localTrans _ _ _ hadd (localTrans _ _ _ (.base he)
     (localTrans _ _ _ hsel (localTrans _ _ _ (.base hselect) ih)))

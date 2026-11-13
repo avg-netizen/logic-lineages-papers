@@ -7,7 +7,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport OffsetSupportProof OffsetCasesProof
 
-theorem zeroAll {n ctx : Nat} (p : Program n) ltag atag rtag ctag
+theorem zeroAll {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
     (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
     (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
     (hr : (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩)
@@ -16,7 +16,7 @@ theorem zeroAll {n ctx : Nat} (p : Program n) ltag atag rtag ctag
   obtain ⟨hz⟩ := allCodes p ltag atag rtag ctag hl ha hr hc false (.zero : Term (ctx+1)) (.var 0) (liftTerm right) (liftTerm index)
   exact ⟨.generalize hz⟩
 
-theorem successorAll {n ctx : Nat} (p : Program n) ltag atag rtag ctag
+theorem successorAll {n ctx : Nat} (p : Program n) (ltag atag rtag ctag : Nat)
     (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
     (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
     (hr : (nodes p)[rtag]? = some ⟨2,HistoryLookup.lookup⟩)
@@ -32,9 +32,9 @@ theorem successorAll {n ctx : Nat} (p : Program n) ltag atag rtag ctag
   have hd := Derivation.mp (.logical (.allDistribute (GorbowPACore.weaken P) Q)) (.generalize hs')
   exact ⟨Hilbert.compose hd (.logical (.allVacuous P))⟩
 
-def template {ctx : Nat} ltag atag rtag (right index : Term ctx) : Formula (ctx+1) :=
+def template {ctx : Nat} (ltag atag rtag : Nat) (right index : Term ctx) : Formula (ctx+1) :=
   allBounded ltag atag rtag (.var 0) (liftTerm right) (liftTerm index)
-theorem templateAt {ctx : Nat} ltag atag rtag (right index count : Term ctx) :
+theorem templateAt {ctx : Nat} (ltag atag rtag : Nat) (right index count : Term ctx) :
     GorbowStandardInstances.instantiate (template ltag atag rtag right index) count=
       allBounded ltag atag rtag count right index := by
   simp only [GorbowStandardInstances.instantiate,template,substAll,substitute,liftTerm,Support.shiftCancel,Fin.cases_zero]
