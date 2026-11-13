@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAcceptance.SourceProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAcceptance.StatementChecks
+theorem exactNormalization : Targets.InternalCoreNormalization := NormalizationProof.internalCoreNormalization
+theorem exactAcceptance : Targets.InternalCoreAcceptance := CoreProof.internalCoreAcceptance
+theorem exactSameSource : Targets.SameSourceCoreAcceptance := SourceProof.sameSourceCoreAcceptance
+#print axioms exactNormalization
+#print axioms exactAcceptance
+#print axioms exactSameSource
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAcceptance.StatementChecks
