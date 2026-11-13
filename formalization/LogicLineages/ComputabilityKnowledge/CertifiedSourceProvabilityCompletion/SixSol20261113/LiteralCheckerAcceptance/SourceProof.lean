@@ -25,11 +25,12 @@ theorem sameSourceCoreAcceptance : Targets.SameSourceCoreAcceptance := by
   have hcore := LiteralCheckerAuxiliaries.InstallationProof.coreInstalled root fuelTag q0 ht
   obtain ⟨hopen⟩ := CoreProof.internalCoreAcceptance 4 root (coreTag pF v l a x) ptag ctag dtag (atag+dropOffset)
     v l a x hcore hpin hcin hright hdropRoot 5 (.var 0) (.var 1) (.var 2) (.var 3) (.var 4)
-  have hclosed : Nonempty (Derivation (S pF pR q) (acceptanceClause pF v l a x)) := by
-    apply GorbowTheoryProofProof.monotonicity _ _
-      (fun _ hs => List.mem_append_left _ (List.mem_append_left _ hs)) 0 _
-    simpa only [acceptanceClause,loopTag,iteratorOffset,Nat.add_assoc] using
+  have hclosedBase : Nonempty (Derivation (GorbowPRNumeralCalculation.Theory root) (acceptanceClause pF v l a x)) := by
+    simpa only [acceptanceClause,loopTag,iteratorOffset,Nat.add_assoc,ptag,ctag] using
       (show Nonempty (Derivation (GorbowPRNumeralCalculation.Theory root) _) from ⟨Fuel.Logic.closeAll hopen⟩)
+  have hclosed : Nonempty (Derivation (S pF pR q) (acceptanceClause pF v l a x)) :=
+    GorbowTheoryProofProof.monotonicity (GorbowPRNumeralCalculation.Theory root) (S pF pR q)
+      (fun _ hs => List.mem_append_left _ (List.mem_append_left _ hs)) 0 _ hclosedBase
   exact ⟨v,l,a,x,offset,pF,pR,c,tagCK,pCK,tagG,pG,
     hleaves,hk,hcal,hbound,hinitial,hfinal,hoff,hq0,hA,hSyntax,hCK,hInstall,hFixed,
     hG,hGInstall,hkin,hain,hpin,hcin,hstep,hinc,hmono,hfusion,hsuffix,hiterator,
