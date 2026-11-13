@@ -10,9 +10,10 @@ open Source Source.SourceMarkedSyntax NumberedRewriteSyntax NumberedRewriteReduc
 open NumberedLeastCodeRepresentative NumberedFiniteUniverse
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open EvaluatorFibreCountermodel
- theorem rootEqual (Q : Program 2) :
+theorem rootEqual (Q : Program 2) :
  evaluate (OriginalRootObservation.rootObservation Q) (List.Vector.ofFn ![leftCode,parameter]) =
  evaluate (OriginalRootObservation.rootObservation Q) (List.Vector.ofFn ![rightCode,parameter]) := by
+ unfold leftCode rightCode parameter
  rw [OriginalRootObservationNativeProof.nativeCalibration Q 1 arity [] contextCode leftTerm,
      OriginalRootObservationNativeProof.nativeCalibration Q 1 arity [] contextCode rightTerm]
  let a := OriginalRootObservation.typedValue Q contextCode (⟨.ground,bottom⟩ : Packed (Fin 1) arity [])
@@ -24,7 +25,7 @@ open EvaluatorFibreCountermodel
    Nat.pair 4 (Nat.pair 0 (Nat.pair 2
    (NumberedMultisetNumeric.numbersNumber ([b,a].insertionSort (· ≤ ·)))))
  rw [hs]
- theorem emptyRows (Q : Program 2) (input : Nat) :
+theorem emptyRows (Q : Program 2) (input : Nat) :
  evaluate (OriginalHereditaryDeletionRows.rows Q) (List.Vector.ofFn ![input,parameter]) = 0 := by
  rw [OriginalHereditaryDeletionRowsBoundProof.nativeRows]
  have hl := OriginalContextInsertionCalibrationProof.lengthContext ([] : List Ty)
