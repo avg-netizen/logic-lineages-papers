@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleSpecialProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleSpecialStatementChecks
+
+
+theorem successInterpretation : CompatibleSpecialTargets.SuccessInterpretation := CompatibleSpecialProof.successInterpretation
+theorem failureBottom : CompatibleSpecialTargets.FailureBottom := CompatibleSpecialProof.failureBottom
+theorem specialSuccess : CompatibleSpecialTargets.SpecialSuccess := CompatibleSpecialProof.specialSuccess
+theorem specialFailure : CompatibleSpecialTargets.SpecialFailure := CompatibleSpecialProof.specialFailure
+end LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleSpecialStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleSpecialStatementChecks

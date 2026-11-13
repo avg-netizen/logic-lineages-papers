@@ -48,12 +48,12 @@ theorem circuitEquation {arity : Nat} (c : Circuit arity) :
     Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
       (.equal (call tag v) (term v c))) := by
   induction c with
-  | variable i =>
+  | «variable» i =>
       intro n p tag ht ctx v
       exact SixSol20261112.Fuel.Equations.projection p tag i ht v
   | plus a b ha hb =>
       intro n p tag ht ctx v
-      let args := Fin.cases (compile b) (Fin.cases (compile a) Fin.elim0)
+      let args : Fin 2 → Program arity := Fin.cases (compile b) (Fin.cases (compile a) Fin.elim0)
       have hf := SixSol20261112.Fuel.Equations.functionChild p tag add args ht
       have hleft := SixSol20261112.Fuel.Equations.argumentChild p tag add args ht 1
       have hright := SixSol20261112.Fuel.Equations.argumentChild p tag add args ht 0
@@ -63,7 +63,7 @@ theorem circuitEquation {arity : Nat} (c : Circuit arity) :
       exact ⟨Logic.trans _ _ _ hc ho⟩
   | times a b ha hb =>
       intro n p tag ht ctx v
-      let args := Fin.cases (compile b) (Fin.cases (compile a) Fin.elim0)
+      let args : Fin 2 → Program arity := Fin.cases (compile b) (Fin.cases (compile a) Fin.elim0)
       have hf := SixSol20261112.Fuel.Equations.functionChild p tag multiply args ht
       have hleft := SixSol20261112.Fuel.Equations.argumentChild p tag multiply args ht 1
       have hright := SixSol20261112.Fuel.Equations.argumentChild p tag multiply args ht 0
