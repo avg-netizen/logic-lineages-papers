@@ -65,7 +65,9 @@ theorem rebuilt (ld lc lf la rd rc rf ra out otherOut : OTerm alpha)
     (hr : Nonempty (Derivation body Delta (graph4 application otherOut rd rc rf ra))) :
     Nonempty (Derivation body Delta (equal out otherOut)) := by
   have hh : Nonempty (Derivation body Delta (graph4 application out rd rc rf ra)) := by
-    apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 4 Delta _ out
+    simp only [graph4,programGraph] at hl ⊢
+    apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 4 Delta
+      (OrdinaryArithmetic.graphFormula application) out
       (Fin.cons ld (Fin.cons lc (Fin.cons lf (Fin.cons la Fin.elim0))))
       (Fin.cons rd (Fin.cons rc (Fin.cons rf (Fin.cons ra Fin.elim0)))) _ hl
     intro i
