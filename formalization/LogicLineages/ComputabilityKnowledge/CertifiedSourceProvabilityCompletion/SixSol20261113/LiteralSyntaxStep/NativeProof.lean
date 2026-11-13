@@ -1,58 +1,36 @@
 module
-public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.Targets
-public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.NativeProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.NativeTermProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.NativeFormulaProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.NativeProof
-open GorbowPRProgram List.Vector HistoryRuleSuffix.NativeProof
-open HistoryDispatcher.NativeProof (encodeProd encodeNat)
-open LiteralRawMP.NativeProof (pairEval appendLists)
-
-theorem whenEqualEval (x yes no : Program 2) (k : Nat) (v : List.Vector Nat 2) :
- evaluate (whenEqual x k yes no) v = if evaluate x v = k then evaluate yes v else evaluate no v := by
- simp only [whenEqual,chooseEval,twoEval,equalEval,constantEval]
- split <;> simp_all
-
-theorem consEval (a b : Nat) : evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ :=
- HistoryCodec.NativeProof.nativeConsAllVectors _
-theorem successEval (a : Program 2) (v : List.Vector Nat 2) : evaluate (success a) v = (evaluate a v).succ := rfl
+open GorbowPRProgram List.Vector HistoryRuleSuffix.NativeProof HistoryLengthOffset
+open LiteralRawMP.NativeProof (appendLists)
+open NativeAtomsProof
 
 theorem expandAt (k n token : Nat) :
  evaluate expandCode (Nat.pair k n ::ᵥ token ::ᵥ nil) = Encodable.encode (GorbowSyntaxValidation.expand (k,n) token) := by
- simp only [expandCode,whenEqualEval,kind,oneEval,projectionEval,get2_0,
-   HistoryDecoder.NativeProof.evaluateDecoder,Nat.unpair_pair,HistoryDecoder.NativeProof.coordinate]
- by_cases hk0 : k=0
+ rw [expandCode,whenEqualEval,kindAt]
+ by_cases h0 : k=0
  · subst k
-   simp only [if_pos rfl]
-   simp only [termBranch,formulaBranch,indexBranch,whenEqualEval,context,task,singleton,double,
-     successEval,oneEval,twoEval,chooseEval,projectionEval,constantEval,get2_0,get2_1,
-     HistoryDecoder.NativeProof.evaluateDecoder,Nat.unpair_pair,HistoryDecoder.NativeProof.coordinate,
-     pairEval,consEval,HistoryCodec.NativeProof.evaluateDifference]
-   simp only [GorbowSyntaxValidation.expand,if_pos rfl]
-   split_ifs <;> simp_all [encodeProd,encodeNat,HistoryLookup.NativeProof.encodeCons]
- · by_cases hk1 : k=1
+   simpa only [if_pos rfl,if_true] using NativeTermProof.branchAt n token
+ · rw [if_neg h0,whenEqualEval,kindAt]
+   by_cases h1 : k=1
    · subst k
-     simp only [hk0,if_false,if_pos rfl]
-     simp only [termBranch,formulaBranch,indexBranch,whenEqualEval,context,task,singleton,double,
-       successEval,oneEval,twoEval,chooseEval,projectionEval,constantEval,get2_0,get2_1,
-       HistoryDecoder.NativeProof.evaluateDecoder,Nat.unpair_pair,HistoryDecoder.NativeProof.coordinate,
-       pairEval,consEval,HistoryCodec.NativeProof.evaluateDifference]
-     simp only [GorbowSyntaxValidation.expand,hk0,if_false,if_pos rfl]
-     split_ifs <;> simp_all [encodeProd,encodeNat,HistoryLookup.NativeProof.encodeCons]
-   · by_cases hk2 : k=2
+     simpa only [if_pos rfl,if_true] using NativeFormulaProof.branchAt n token
+   · rw [if_neg h1,whenEqualEval,kindAt]
+     by_cases h2 : k=2
      · subst k
-       simp only [hk0,hk1,if_false,if_pos rfl]
-       simp only [termBranch,formulaBranch,indexBranch,whenEqualEval,context,task,singleton,double,
-         successEval,oneEval,twoEval,chooseEval,projectionEval,constantEval,get2_0,get2_1,
-         HistoryDecoder.NativeProof.evaluateDecoder,Nat.unpair_pair,HistoryDecoder.NativeProof.coordinate,
-         pairEval,consEval,HistoryCodec.NativeProof.evaluateDifference]
-       simp only [GorbowSyntaxValidation.expand,hk0,hk1,if_false,if_pos rfl]
-       by_cases ht : token < n
+       rw [if_pos rfl]
+       simp only [indexBranch,chooseEval,twoEval,projectionEval,get2_1,contextAt,HistoryCodec.NativeProof.evaluateDifference,constantEval]
+       simp only [GorbowSyntaxValidation.expand]
+       by_cases ht : token<n
        · have hn : n-token ≠ 0 := by omega
          simp [ht,hn]
        · have hn : n-token = 0 := by omega
          simp [ht,hn]
-     · simp [hk0,hk1,hk2,GorbowSyntaxValidation.expand]
+     · rw [if_neg h2,constantEval]
+       simp [GorbowSyntaxValidation.expand,h0,h1,h2]
 
 theorem nativeExpand : Targets.NativeExpand := by
  intro v
