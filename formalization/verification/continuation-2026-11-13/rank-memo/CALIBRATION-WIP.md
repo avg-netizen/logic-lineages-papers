@@ -79,3 +79,29 @@ Read-only static check after complete candidate assembly: 65 RankCalibration /
 RankMemo modules had an acyclic internal import graph; token scan found no
 `sorry`, `axiom`, `admit`, `unsafe`, or `native_decide`. This is not a Lean
 verification result and does not replace the pending exact-type/axiom gates.
+
+## Verified calibration milestone
+
+Coordinator reports full `RankMemoStatementChecks` exact4 PASS, receipt
+`1794581691835879876-5`. The entire accepted proof dependency closure is now
+immutable. This supersedes the earlier pending calibration status above.
+
+The four checked endpoints are actual decoder zero fallback, actual memo-table
+successor recurrence, actual earlier-cell lookup coverage, and original
+source-restricted rank calibration. The last endpoint uses only original source
+admission, the unchanged hereditary evaluator's actual output and the actual
+packed raw-rank graph. Internal strong induction on full evaluator code discharges
+all local child-rank, table, strict-bound and aggregation obligations. No native
+semantic reflection, child correctness premise or assumed memo correctness is
+present at that endpoint.
+
+The zero fallback is a total decoder definition, not a claimed admitted example
+with full evaluator output zero. Source-only variable and bottom branches and
+nonvariable zero exclusion are checked in the accepted closure.
+
+This is supporting mathematics only: no numbered register promotion, structural
+class-key equality, canonical Object cancellation, fold extensionality, full
+paper06 I/C or accessibility result is claimed. Source-restricted same-parameter
+E-fibre rank determinacy is specified separately in EvaluatorRank and still
+awaits its own preflight freeze and proof. Coordinator owns evidence verification
+and remote publication; this note does not assert either is complete.
