@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds.ConsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds.StatementChecks
+
+theorem pairFirstBound : Targets.PairFirstBound := PairProof.pairFirstBound
+theorem pairSecondBound : Targets.PairSecondBound := PairProof.pairSecondBound
+theorem consFirstStrictBound : Targets.ConsFirstStrictBound := ConsProof.consFirstStrictBound
+theorem consSecondStrictBound : Targets.ConsSecondStrictBound := ConsProof.consSecondStrictBound
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds
