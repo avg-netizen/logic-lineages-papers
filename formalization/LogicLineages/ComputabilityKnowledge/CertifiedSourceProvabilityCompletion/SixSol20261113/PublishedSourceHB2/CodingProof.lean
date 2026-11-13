@@ -20,7 +20,7 @@ theorem instantiateProv (pF : Program 1) (c : Code) (t : Term 0) :
 literal coding derivation in the SAME S, not a universal syntax oracle. -/
 theorem literalPrD (pF pR : Program 1) (q : Program 5) (c : Code)
  (hA : Actual pF pR q c) (sigma : Sentence) :
- Nonempty (Derivation (S pF pR q)
+ Nonempty (Derivation (n := 0) (S pF pR q)
   (.conj
    (.imp (prD pF c sigma) (applyProv pF c (Term.numeral (formulaCode (.imp (rho pF c) sigma)))))
    (.imp (applyProv pF c (Term.numeral (formulaCode (.imp (rho pF c) sigma)))) (prD pF c sigma)))) := by
@@ -35,7 +35,7 @@ theorem literalPrD (pF pR : Program 1) (q : Program 5) (c : Code)
     exact List.mem_append_right _ (by simp)
  obtain ⟨hcodingS⟩ := GorbowTheoryProofProof.monotonicity _ _ inclusion 0 _ ⟨hcoding⟩
  obtain ⟨heq⟩ := GorbowTheoryEqualityProof.formulaEquivalence (S pF pR q) (provability pF c) _ _ hcodingS
- simpa only [instantiateProv,prD] using (show Nonempty (Derivation (S pF pR q) _) from ⟨heq⟩)
+ simpa only [instantiateProv,prD,GorbowBooleanTruth.biconditional] using (show Nonempty (Derivation (n := 0) (S pF pR q) _) from ⟨heq⟩)
 
 def distribution (rho sigma tau : Sentence) : Sentence :=
  .imp (.imp rho (.imp sigma tau)) (.imp (.imp rho sigma) (.imp rho tau))
@@ -45,7 +45,7 @@ each external triple. Runtime witness parameters are not reflected from native
 semantics into an internal universal theorem. -/
 theorem certifiedDistribution (pF pR : Program 1) (q : Program 5) (c : Code)
  (hA : Actual pF pR q c) (sigma tau : Sentence) :
- Nonempty (Derivation (S pF pR q)
+ Nonempty (Derivation (n := 0) (S pF pR q)
   (applyProv pF c (Term.numeral (formulaCode (distribution (rho pF c) sigma tau))))) :=
  GorbowPublishedDCB.Proof.sProofCertification pF pR q c hA _
   ⟨.logical (.s (rho pF c) sigma tau)⟩
