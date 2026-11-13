@@ -50,7 +50,7 @@ theorem internalConstructedRun : Targets.InternalConstructedRun := by
   obtain ⟨hconstructor⟩ := ConstructorProof.internalConstructor n p mtag ltag atag ptag ctag hm hl ha hp hc ctx context psi imp ant
   have hcount' := StationaryProof.iterationCount (T := T) (G := G) itag _ code
     (state ptag (.succ .zero) (certificate mtag context psi imp ant)) index fuel (.base hconstructor)
-  have hs := HistoryIteratorSuffix.StepSuffixProof.pairCongruence ptag (.succ (.zero : Term ctx)) _ (.succ .zero) code
+  have hs := HistoryIteratorSuffix.StepSuffixProof.pairCongruence (T := T) (G := G) ptag (.succ (.zero : Term ctx)) _ (.succ .zero) code
     (.base (.logical (.reflexive (.succ .zero)))) (.base hconstructor)
   have hstate := StationaryProof.iterationState itag code _ _ index fuel hs
   exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge

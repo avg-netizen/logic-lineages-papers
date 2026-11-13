@@ -5,7 +5,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof List.Vector
 /-- Internal associativity of the actual literal append on arbitrary codes.
 No native list image, associativity, or tail-decrease premise is supplied. -/
-def InternalAppendAssociativity : Prop := ∀ n (p : Program n) atag ctag ltag rtag,
+def InternalAppendAssociativity : Prop := ∀ n (p : Program n) (atag ctag ltag rtag : Nat),
  (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
  (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
  (nodes p)[ltag]? = some ⟨1,HistoryDecoder.decoder false⟩ →
@@ -21,7 +21,7 @@ nonempty task row, expansion-success, Boolean, or native semantic premise is
 supplied. The only operational premise is the actual successful step equality.
 Nonemptiness and expansion success must be recovered internally. This is not
 the full scan frame law and does not identify any earlier selected validity leaf. -/
-def InternalStepFrame : Prop := ∀ n (p : Program n) stag atag ctag ltag rtag,
+def InternalStepFrame : Prop := ∀ n (p : Program n) (stag atag ctag ltag rtag : Nat),
  (nodes p)[stag]? = some ⟨2,LiteralSyntaxStep.stepCode⟩ →
  (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
  (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →

@@ -6,7 +6,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof List.Vector
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport
 
-theorem decodeAtReconstruction {n ctx : Nat} (p : Program n) ptag leftTag rightTag dtag (right : Bool)
+theorem decodeAtReconstruction {n ctx : Nat} (p : Program n) (ptag leftTag rightTag dtag : Nat) (right : Bool)
  (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
  (hl : (nodes p)[leftTag]? = some ⟨1,HistoryDecoder.decoder false⟩)
  (hr : (nodes p)[rightTag]? = some ⟨1,HistoryDecoder.decoder true⟩)

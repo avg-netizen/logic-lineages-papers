@@ -28,6 +28,7 @@ theorem tickCons (token : Nat) (raw : List Nat) (s : GorbowSyntaxValidation.Stat
  have hn : Encodable.encode (token::raw) ≠ 0 := by
    rw [HistoryLookup.NativeProof.encodeCons]; exact Nat.succ_ne_zero _
  rw [if_neg hn,LiteralSyntaxStep.NativeProof.stepAt,pairEval]
+ rfl
 
 theorem iteratorZero (s : Nat) : evaluate iterator (0 ::ᵥ s ::ᵥ nil) = s := rfl
 
