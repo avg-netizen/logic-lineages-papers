@@ -31,6 +31,11 @@ theorem partitionCases (children deletions produced : OTerm alpha) (psi : Formul
  let xs : Fin 2 → OTerm alpha := ![deletions,produced]
  apply OriginalRawSyntaxTransportInternalParserSupportProof.programsCases qs xs psi
  intro beta j Theta ys hinc hq
+ have hx : (fun a => (xs a).relabel j) =
+   Fin.cons (deletions.relabel j) (Fin.cons (produced.relabel j) Fin.elim0) := by
+   funext a
+   exact Fin.cases rfl (fun k => Fin.cases rfl (fun l => Fin.elim0 l) k) a
+ rw [hx] at hq
  have hfront : Nonempty (Derivation body Theta (graph2 OriginalClassContextAllPositionObserver.front (ys 0) (deletions.relabel j) (produced.relabel j))) := by
    simpa only [qs,xs,Matrix.cons_val_zero,Matrix.cons_val_one,graph2,
      OriginalRawSyntaxTransportInternalConstructorSupportProof.twoTuple] using hq (0 : Fin 2)

@@ -12,7 +12,7 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalControlGraphSupportProof (projectionValue)
 open InternalTagArithmeticSyntaxProof (z suc)
 open InternalTagArithmeticSupportProof
-open InternalAdditionLawsProof (add addSucc addZero)
+open InternalAdditionLawsProof (add)
 open InternalApplicationStepPeelSupportProof (andIntro)
 open OriginalResultStackSlotsSupportProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
