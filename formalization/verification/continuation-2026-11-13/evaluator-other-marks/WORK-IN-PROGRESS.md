@@ -38,3 +38,22 @@ and tags3/4/5 use common actual values. Right OTHER remains in the frozen target
 though admitted E/tag transfer makes it redundant. No assumptions were added.
 All new final/helper sources are pending their exact native gates. Context
 observer and runtime minimum dependencies remain separately owned.
+
+## Exact acceptance
+
+Full OtherMarks exact2 PASSED1794583242330100974-27: original source-only
+same-E variable rigidity and all five actual observer equivalences are now
+accepted. The entire checked proof closure is immutable. Earlier pending
+statements above are chronological and superseded by this receipt.
+
+Additional checked supports: Logical3 1794583044997337899-66;
+TagTransfer1 1794583057310503815-73; Rejected2 1794583076228636601-80;
+TypeTransfer1 1794583111613273777-87; exact variable rigidity
+1794583142136384763-5. Context's original observer exact5 passed
+1794583213216989064-5, including source-derived exact bottom shape.
+
+The final statements retain original AdmittedPair, unchanged evaluator, actual
+OTHER tests and all five original mark Programs. No structural class-key equality,
+canonical Object cancellation, evaluator preservation by a full canonical fold,
+numbered promotion or full I/C/accessibility result follows merely from this
+packet. The coordinator separately owns evidence extraction and publication.
