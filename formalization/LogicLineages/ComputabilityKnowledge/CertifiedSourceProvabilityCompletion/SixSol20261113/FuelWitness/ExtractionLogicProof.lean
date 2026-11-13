@@ -60,7 +60,7 @@ theorem orderNext (T : Sentence → Prop) {ctx : Nat} (a b : Term ctx) :
  have hout : Hilbert.Local T (ctx+1) [H] (orderGuard (liftTerm a) (.succ (liftTerm b))) :=
   .mp (.base (orderIntro (liftTerm a) (.succ (liftTerm b)) (.succ (.var 0)))) he
  have hbody : Derivation T (.imp H (GorbowPACore.weaken (orderGuard a (.succ b)))) := by
-  simpa only [GorbowPACore.weaken,substOrder,substitute,liftTerm] using Hilbert.Local.finish (Hilbert.Local.discharge hout)
+  simpa only [GorbowPACore.weaken,substOrder,substitute,liftTerm,renameTerm] using Hilbert.Local.finish (Hilbert.Local.discharge hout)
  exact HBQuantifier.existentialElimination T H (orderGuard a (.succ b)) ⟨hbody⟩
 
 theorem boundedNext (T : Sentence → Prop) {ctx : Nat} tag

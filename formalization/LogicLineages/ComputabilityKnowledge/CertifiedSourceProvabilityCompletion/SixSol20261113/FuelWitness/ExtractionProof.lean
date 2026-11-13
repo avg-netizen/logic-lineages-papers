@@ -88,7 +88,10 @@ theorem accumulatorExtraction {n ctx : Nat} (p : Program n) atag qtag (q0 : Prog
  have hz : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
   simpa only [phi,templateAt] using hb
  have hn : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) := by
-  simpa only [phi,template,templateNext] using hs
+  change Derivation T (.imp (template atag qtag index context formula cert)
+    (GorbowStandardInduction.successorInstance (template atag qtag index context formula cert)))
+  rw [templateNext]
+  exact hs
  have hall : Derivation T (.all phi) := .mp (.mp (.arithmetic (.induction phi)) hz) (.generalize hn)
  have h := Derivation.mp (.logical (.allInstantiate phi fuel)) hall
  simpa only [phi,templateAt] using (show Nonempty (Derivation T _) from ⟨h⟩)

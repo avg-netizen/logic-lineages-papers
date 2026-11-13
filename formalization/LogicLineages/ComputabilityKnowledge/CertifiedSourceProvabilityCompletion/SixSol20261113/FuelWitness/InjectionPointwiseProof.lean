@@ -28,7 +28,7 @@ theorem pointNext {ctx : Nat} atag qtag (index context formula cert : Term ctx) 
  simp only [GorbowStandardInduction.successorInstance,pointTemplate,pointwise,substituteFormula,
   substSuccess,substAcc,successorLift,substitute,Fin.cases_zero]
 
-theorem coreIntoAccumulator {n ctx : Nat} (p : Program n) atag qtag (q0 : Program 5)
+theorem coreIntoAccumulator {n ctx : Nat} (p : Program n) (atag qtag : Nat) (q0 : Program 5)
  (ha : (nodes p)[atag]? = some ⟨5,accumulator q0⟩)
  (hq : (nodes p)[qtag]? = some ⟨5,q0⟩)
  (index fuel context formula cert : Term ctx) :
@@ -66,7 +66,7 @@ theorem coreIntoAccumulator {n ctx : Nat} (p : Program n) atag qtag (q0 : Progra
  have h := Derivation.mp (.logical (.allInstantiate phi fuel)) hall
  simpa only [phi,pointAt] using (show Nonempty (Derivation T _) from ⟨h⟩)
 
-theorem coreIntoVerifier {n ctx : Nat} (p : Program n) vtag qtag (q0 : Program 5)
+theorem coreIntoVerifier {n ctx : Nat} (p : Program n) (vtag qtag : Nat) (q0 : Program 5)
  (hv : (nodes p)[vtag]? = some ⟨5,verifier q0⟩)
  (hq : (nodes p)[qtag]? = some ⟨5,q0⟩)
  (index fuel context formula cert : Term ctx) :

@@ -28,7 +28,7 @@ noncomputable def booleanTransport {T : Sentence → Prop} {ctx : Nat} (a b : Te
  have hr := Derivation.mp (.logical (.equalityReplace (boolean (.var 0)) a b)) he
  simpa only [GorbowStandardInstances.instantiate,substBoolean,GorbowSubstitution.substitute,Fin.cases_zero] using hr
 
-theorem accumulatorBoolean {n ctx : Nat} (p : Program n) atag qtag (q0 : Program 5)
+theorem accumulatorBoolean {n ctx : Nat} (p : Program n) (atag qtag : Nat) (q0 : Program 5)
  (ha : (nodes p)[atag]? = some ⟨5,accumulator q0⟩)
  (hq : (nodes p)[qtag]? = some ⟨5,q0⟩)
  (fuel index context formula cert : Term ctx) :

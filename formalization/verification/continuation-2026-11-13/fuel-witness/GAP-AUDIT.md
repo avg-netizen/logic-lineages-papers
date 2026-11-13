@@ -28,3 +28,18 @@ still needs a genuinely monotone literal axiom/core supplier or a heterogeneous-
 fuel certificate construction, plus rho transport and the separate HB3 route.
 
 Definitions/Targets/Preflight only have been proposed; no proofs yet.
+
+## Constructive next route reviewed at20:17 UTC
+
+Do not infer internal monotonicity for the old existential axiom leaf from its
+native calibration. Instead, the separately frozen SaturatedAxiomLeaf packet
+wraps the old three-input axiom program in the already explicit bounded-search
+Fuel.verifier. The lifted core ignores context/formula and takes index,fuel,line;
+the wrapper supplies literal zeros for unused fields. Its native all-vector
+calibration must be proved from actual external axiom-evaluator monotonicity,
+while its internal monotonicity is proved independently from the literal
+saturated AST for arbitrary input programs. A future rebuilt source tuple must
+use that actual wrapper. Dispatcher acceptance transport, successful iterator
+and core fuel transport, common-bound combination, and source implication
+construction remain additional obligations. No old tuple identification is
+licensed by this route.
