@@ -8,6 +8,7 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalRawListRecursion
 open InternalRawListRecursionSyntaxProof InternalRawListRecursionProof
 open InternalTagArithmeticSyntaxProof (emb z eqn)
 open InternalAdditionLawsProof (add)

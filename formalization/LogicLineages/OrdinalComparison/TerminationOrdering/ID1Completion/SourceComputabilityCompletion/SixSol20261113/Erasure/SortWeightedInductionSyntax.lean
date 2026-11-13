@@ -67,13 +67,13 @@ theorem rawPredicateInstantiate {alpha : Type} (raw : OTerm alpha)
  rw [InternalStrongInductionSyntaxProof.belowRename]
  unfold rawPredicate
  rw [atRawRename]
- rfl
+ simp only [Term.relabel_relabel] <;> rfl
 
 theorem rawPredicateLift {alpha : Type} (params : Fin k → OTerm alpha) :
  lift (rawPredicate F params) = rawPredicate F (fun i => (params i).relabel (Sum.inl : alpha → alpha ⊕ Fin 1)) := by
  unfold lift rawPredicate
  rw [atRawRename]
- rfl
+ simp only [Term.relabel_relabel] <;> rfl
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.SortWeightedInductionSyntax
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.SortWeightedInductionSyntax

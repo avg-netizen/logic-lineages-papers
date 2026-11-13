@@ -96,3 +96,7 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 ## Same all-position root key
 
 [Actual final-fold root-key preservation](observed-root-key/STATUS.md) is now checked for the unchanged ObservedPut tuple. This does not identify folded endpoints. The next separate bridge is actual all-position acceptance and once-minimum agreement.
+
+## Original rule suffix stability
+
+[Actual canonical rule2/rule3 suffix acceptance](history-rule-suffix/STATUS.md) now passes four exact targets. This is not internal correctness of the prior opaque selected kernel; whole-Line/kernel integration remains separate.

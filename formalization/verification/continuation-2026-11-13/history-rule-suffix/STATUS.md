@@ -1,0 +1,5 @@
+# Checked original rule2/rule3 suffix acceptance
+
+Four exact targets pass: native calibration of literal MP/generalize checker programs to original canonical Line ruleCheck, and internal suffix acceptance for both at arbitrary runtime terms. No successful-reference, entry-reconstruction, validity or native-calibration premise is assumed internally. Actual guard failure rejects missing references, so accepted cases derive successful lookup and use actual append preservation. Rejection itself is NOT stable under append. This does not connect the previously selected opaque kernel AST to these literal branches, prove whole-checker suffix stability, or close HB. A subsequent explicit whole-Line/kernel construction must preserve its own selected tuple and all-code calibration.
+
+Exact native evidence verifies 451 source-matched modules, standard axioms and zero errors. Register unchanged:175 checked,2 inherited,12 pending. No full-root or remote CI claim. Sources and compact evidence are published; reconstructible native snapshots remain local.

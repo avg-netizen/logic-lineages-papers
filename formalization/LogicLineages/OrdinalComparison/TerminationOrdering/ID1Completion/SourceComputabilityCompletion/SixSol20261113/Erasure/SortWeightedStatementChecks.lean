@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.SortWeightedSortProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.SortWeightedStatementChecks
+theorem exactInsertion : SortWeightedTargets.ActualInsertion := SortWeightedInsertionProof.actualInsertion
+theorem exactSort : SortWeightedTargets.ActualSort := SortWeightedSortProof.actualSort
+#print axioms exactInsertion
+#print axioms exactSort
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.SortWeightedStatementChecks
