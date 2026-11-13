@@ -37,7 +37,8 @@ theorem newLineComputes {n ctx : Nat} (p : Program n) (ltag ptag : Nat)
     | succ i => cases i using Fin.cases with
       | zero => exact projection p args 1 _ (SixSol20261112.Fuel.Equations.argumentChild p tag lineProgram lineArguments ht 1)
       | succ i => cases i using Fin.cases with
-        | zero => exact unary p args lengthProgram ltag hl (.projection 3) (args.get 3) (projection p args 3) _
+        | zero =>
+          exact unary p args lengthProgram ltag hl (.projection 3) (args.get 3) (projection p args 3) _
             (SixSol20261112.Fuel.Equations.argumentChild p tag lineProgram lineArguments ht 2)
         | succ i => exact Fin.elim0 i
   obtain ⟨he⟩ := SixSol20261112.Fuel.Equations.compositionValues p tag lineProgram lineArguments ht args values hv

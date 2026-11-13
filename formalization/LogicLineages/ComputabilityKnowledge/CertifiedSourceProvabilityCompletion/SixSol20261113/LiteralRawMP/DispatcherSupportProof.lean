@@ -4,7 +4,7 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.DispatcherSupportProof
-open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowPRDefiningEquations GorbowTheoryProof GorbowSubstitution List.Vector
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowPRDefiningEquations GorbowTheoryProof GorbowFormulaSubstitution GorbowSubstitution List.Vector
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryRuleSuffix HistoryCodec.ArithmeticSupport
 
 def Computes {n arity ctx : Nat} (p : Program n) (G : List (Formula ctx)) (q : Program arity)
