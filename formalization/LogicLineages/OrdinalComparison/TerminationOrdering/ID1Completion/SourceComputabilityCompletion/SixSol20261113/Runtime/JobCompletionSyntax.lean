@@ -19,6 +19,7 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open SixSol20261112.Runtime.FramedCompletionDefinitions
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 open JobFrameSyntax (frameSubst frameRename)
+open OriginalContextInsertionSyntaxProof (blockSubst)
 theorem completionSubst {beta : Type} (R : Program 2) (job : OTerm alpha) (ts : alpha → OTerm beta) :
  (Completion R job).subst (fun a => emb (ts a)) = Completion R (job.subst ts) := by
  unfold Completion completionMatrix

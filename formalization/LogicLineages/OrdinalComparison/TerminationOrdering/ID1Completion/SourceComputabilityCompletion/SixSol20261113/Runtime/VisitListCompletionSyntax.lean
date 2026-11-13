@@ -22,7 +22,7 @@ open VisitListCompletionDefinitions
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 open PrefixFrameSyntax (frameSubst frameRename)
 open OriginalContextInsertion OriginalContextInsertionSyntaxProof
-open InternalOriginalOrderSyntaxProof (orderSubst)
+open InternalQuotientComparisonSyntaxProof (orderSubst)
 theorem completionSubst {beta : Type} (R : Program 2) (size tagged : OTerm alpha) (ts : alpha → OTerm beta) :
  (Completion R size tagged).subst (fun a => emb (ts a)) = Completion R (size.subst ts) (tagged.subst ts) := by
  unfold Completion completionMatrix

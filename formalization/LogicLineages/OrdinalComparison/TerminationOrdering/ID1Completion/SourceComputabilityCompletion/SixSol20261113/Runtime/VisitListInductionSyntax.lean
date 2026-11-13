@@ -22,7 +22,7 @@ open VisitListCompletionDefinitions
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 open PrefixFrameSyntax (frameSubst frameRename)
 open OriginalContextInsertion OriginalContextInsertionSyntaxProof
-open InternalOriginalOrderSyntaxProof (orderSubst)
+open InternalQuotientComparisonSyntaxProof (orderSubst)
 open VisitListCompletionSyntax
 open InternalTagArithmeticSyntaxProof (bindTerm bindEmbedding nextTerm nextEmbedding)
 def fields (R : Program 2) (size jobs tagged : OTerm alpha) : Formula alpha :=
