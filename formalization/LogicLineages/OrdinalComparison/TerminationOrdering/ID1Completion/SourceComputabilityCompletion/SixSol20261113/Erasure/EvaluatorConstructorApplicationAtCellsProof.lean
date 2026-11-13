@@ -35,8 +35,8 @@ theorem actual (R : Program 2) (H G : Program 1) (M W : Program 2)
  rw [cellRename] at hc'
  have h0 := andLeft hf'
  have h1 := andLeft (andRight hf')
- have hp := andLeft (andRight (andRight (andRight (andRight (andRight (andRight hf')))))))
- have hlen := andRight (andRight (andRight (andRight (andRight (andRight (andRight hf')))))))
+ have hp := andLeft (andRight (andRight (andRight (andRight (andRight (andRight hf'))))))
+ have hlen := (andRight (andRight (andRight (andRight (andRight (andRight (andRight hf')))))))
  have ea := EvaluatorConstructorApplicationRootTransferProof.retainedRoot R H G M W compat
    (count.relabel j) (fun i => (xs i).relabel j) a ar hf' ha har
  have eb := EvaluatorConstructorApplicationRootTransferProof.evaluatorRoot R H G M W
