@@ -45,17 +45,22 @@ theorem sourceBottomCode (H G : Program 1) (M W : Program 2)
   simp only [graph2Rename,numeralRename] at hs'
   let qs : Fin 2 → Program 1 := ![InternalUnpair.left,InternalUnpair.right]
   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs (![parameter.relabel j]) _
-  intro eta k Xi ys hk hq
+  intro eta k ys Xi hk hq
   have hp' := renameInto hp k Xi hk
   have hc' := renameInto hc k Xi hk
   have hs'' := renameInto hs' k Xi hk
   simp only [graph1Rename,graph2Rename,numeralRename] at hp' hc' hs''
+  have hx : (fun a : Fin 1 => ((![parameter.relabel j]) a).relabel k) =
+      Fin.cons ((parameter.relabel j).relabel k) Fin.elim0 := by
+    funext a
+    exact Fin.cases rfl (fun t => Fin.elim0 t) a
+  rw [hx] at hq
   have hq0 : Nonempty (Derivation body Xi
       (graph1 InternalUnpair.left (ys 0) ((parameter.relabel j).relabel k))) := by
-    simpa only [qs,consTermRename,emptyRename] using hq 0
+    exact hq 0
   have hq1 : Nonempty (Derivation body Xi
       (graph1 InternalUnpair.right (ys 1) ((parameter.relabel j).relabel k))) := by
-    simpa only [qs,consTermRename,emptyRename] using hq 1
+    exact hq 1
   have hparam := reconstructPair ((parameter.relabel j).relabel k) (ys 0) (ys 1) hq0 hq1
   have ha := OriginalTransparentDecoderValidatorCollapsePackedProof.sourceFieldsElim H G M W
     ((input.relabel j).relabel k) ((parameter.relabel j).relabel k) (typ.relabel k) (raw.relabel k)
