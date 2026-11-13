@@ -1,0 +1,106 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentityTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.MapAppendSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentitySyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationValidityStackAppendSyntaxProof (graph2Subst)
+open SourceComputabilityFormulaSupportProof InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalControlGraphSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z eqn emb zSubst eqnSubst varBind bindEmbedding)
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalAdditionLawsProof (impSubst)
+open InternalListInduction InternalListInductionSyntaxProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph InternalApplicationValidityStackAppend.append
+
+def fields (front left right joined : OTerm alpha) : Formula alpha :=
+  graph2 InternalApplicationValidityStackAppend.append joined front left ⊓
+    graph2 InternalApplicationValidityStackAppend.append joined front right
+
+def cancelBody (front : OTerm alpha) : Formula (alpha ⊕ Fin 3) :=
+  (fields (front.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2))).imp
+    (eqn (.var (.inr 0)) (.var (.inr 1)))
+
+def cancels (front : OTerm alpha) : Formula alpha := allBlock (cancelBody front)
+
+def row (front : OTerm alpha) : Formula alpha :=
+  graph2 InternalApplicationValidityStackAppend.append front front z ⊓ cancels front
+
+theorem fieldsSubst {beta : Type} (front left right joined : OTerm alpha)
+    (ts : alpha → OTerm beta) :
+    (fields front left right joined).subst (fun a => emb (ts a)) =
+      fields (front.subst ts) (left.subst ts) (right.subst ts) (joined.subst ts) := by
+  simp only [fields,conjunctionSubst,graph2Subst]
+
+theorem fieldsRename {beta : Type} (front left right joined : OTerm alpha)
+    (j : alpha → beta) :
+    (fields front left right joined).relabel j =
+      fields (front.relabel j) (left.relabel j) (right.relabel j) (joined.relabel j) := by
+  simp only [fields,conjunctionRename,graph2Rename]
+
+theorem cancelsSubst {beta : Type} (front : OTerm alpha) (ts : alpha → OTerm beta) :
+    (cancels front).subst (fun a => emb (ts a)) = cancels (front.subst ts) := by
+  unfold cancels cancelBody
+  rw [allBlockSubst,liftedEmbedding,impSubst]
+  simp only [fieldsSubst,eqnSubst,liftSubst,Term.subst,Sum.elim_inr]
+
+theorem cancelsRename {beta : Type} (front : OTerm alpha) (j : alpha → beta) :
+    (cancels front).relabel j = cancels (front.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (cancels front).subst (fun a => emb (.var (j a))) = _
+  rw [cancelsSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem rowSubst {beta : Type} (front : OTerm alpha) (ts : alpha → OTerm beta) :
+    (row front).subst (fun a => emb (ts a)) = row (front.subst ts) := by
+  simp only [row,conjunctionSubst,graph2Subst,zSubst,cancelsSubst]
+
+theorem rowRename {beta : Type} (front : OTerm alpha) (j : alpha → beta) :
+    (row front).relabel j = row (front.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (row front).subst (fun a => emb (.var (j a))) = _
+  rw [rowSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem cancelWitness (front left right joined : OTerm alpha) :
+    (cancelBody front).subst
+      (Sum.elim Term.var (fun i => emb (![left,right,joined] i))) =
+      (fields front left right joined).imp (eqn left right) := by
+  have he : (Sum.elim Term.var (fun i => emb (![left,right,joined] i))) =
+      (fun x => emb (Sum.elim Term.var ![left,right,joined] x)) := by
+    funext x
+    cases x <;> rfl
+  unfold cancelBody
+  rw [he,impSubst]
+  simp only [fieldsSubst,eqnSubst,witnessLift,Term.subst,Sum.elim_inr]
+  rfl
+
+theorem rowAtCode (front : OTerm alpha) :
+    atCode (row (.var (.inr (0 : Fin 1)))) front = row front := by
+  simp only [atCode,instantiate,bindEmbedding,rowSubst,varBind]
+
+theorem rowAtIndex (i : Fin 3) :
+    atIndex (row (.var (.inr (0 : Fin 1)) : OTerm (alpha ⊕ Fin 1))) i =
+      row (.var (.inr i) : OTerm (alpha ⊕ Fin 3)) := by
+  rw [atIndex,rowRename]
+  rfl
+
+theorem cancelApply (front left right joined : OTerm alpha)
+    (hi : Nonempty (Derivation body Delta (cancels front)))
+    (hf : Nonempty (Derivation body Delta (fields front left right joined))) :
+    Nonempty (Derivation body Delta (eqn left right)) := by
+  have h := actualFiniteUniversalElimination body alpha 3 Delta (cancelBody front)
+    (fun i => emb (![left,right,joined] i)) hi
+  rw [cancelWitness] at h
+  obtain ⟨h⟩ := h
+  obtain ⟨hf⟩ := hf
+  exact ⟨Derivation.implicationElimination h hf⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentitySyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentitySyntaxProof

@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.BooleanGraphCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.BooleanGraphCodePredicateProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.BooleanGraphCodeStatementChecks
+
+theorem literalTermVariables : BooleanGraphCodeTargets.LiteralTermVariables := BooleanGraphCodeProof.literalTermVariables
+theorem literalForest : BooleanGraphCodeTargets.LiteralForest := BooleanGraphCodeProof.literalForest
+theorem literalPredicate : BooleanGraphCodeTargets.LiteralPredicate := BooleanGraphCodeProof.literalPredicate
+theorem literalFreshAllocation : BooleanGraphCodeTargets.LiteralFreshAllocation := BooleanGraphCodeProof.literalFreshAllocation
+theorem literalCompiler : BooleanGraphCodeTargets.LiteralCompiler := BooleanGraphCodeProof.literalCompiler
+theorem actualPrograms : BooleanGraphCodeTargets.ActualPrograms := BooleanGraphCodeProof.actualPrograms
+
+#print axioms literalTermVariables
+#print axioms literalForest
+#print axioms literalPredicate
+#print axioms literalFreshAllocation
+#print axioms literalCompiler
+#print axioms actualPrograms
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.BooleanGraphCodeStatementChecks

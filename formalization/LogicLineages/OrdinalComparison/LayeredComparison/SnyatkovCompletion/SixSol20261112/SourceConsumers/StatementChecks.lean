@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceConsumers.Proof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceConsumersStatementChecks
+
+theorem actualCommonDecision : SourceConsumersTargets.ActualCommonDecision :=
+  SourceConsumersProof.actualCommonDecision
+
+theorem actualBalancedDecision : SourceConsumersTargets.ActualBalancedDecision :=
+  SourceConsumersProof.actualBalancedDecision
+
+theorem fullCommonHeadLayers : SourceConsumersTargets.FullCommonHeadLayers :=
+  SourceConsumersProof.fullCommonHeadLayers
+
+theorem fullBalancedComparison : SourceConsumersTargets.FullBalancedComparison :=
+  SourceConsumersProof.fullBalancedComparison
+
+#print axioms actualCommonDecision
+#print axioms actualBalancedDecision
+#print axioms fullCommonHeadLayers
+#print axioms fullBalancedComparison
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceConsumersStatementChecks

@@ -1,18 +1,17 @@
 # Logic lineages papers
 
-**Current formalization: 171 checked, 2 inherited, 16 pending out of 189.**
-The latest [closed-recognizer checkpoint](formalization/verification/continuation-2026-11-12-recognizer-factor/STATUS.md)
-checks four supporting contracts: finish acceptance, successful-step simulation,
-accepting-run simulation, and recognition transfer from the explicit closed
-checker to its underlying leaf. The proofs preserve the exact path and states,
-retain lambda-first branch priority, and use the original internal arithmetic
-calculus. The focused native closure contains 1,439 source-matched modules.
-
-General result-stack/root-return semantics, final-tuple integration, unrestricted
-source-edge closure, the remaining internal I/C argument and full paper06
-accessibility remain pending. [TARGETS.json](formalization/TARGETS.json) is
-authoritative; no numbered statement is promoted by this supporting checkpoint.
-Earlier counts and continuation instructions describe historical checkpoints.
+**Current formalization: 175 checked, 2 inherited, 12 pending out of 189.**
+Four paper08 source statements are now accounted for in this continuation:
+the [Snyatkov arithmetic decision theorem](formalization/verification/local-six-sol-2026-11-12/ROOT-SNYATKOV-ADOPTION.json),
+[common-head and balanced comparison](formalization/verification/local-six-sol-2026-11-12/ROOT-COMMON-BALANCED-ADOPTION.json),
+and the existing [internal-level-two source comparison theorem](formalization/verification/local-six-sol-2026-11-12/ROOT-LEVELTWO-ADOPTION.json),
+whose unchanged complete proof was revalidated and reconciled with the register.
+All numbered paper08 statements are checked. The remaining twelve entries are
+paper02:1, paper06:8 and paper12:3. [TARGETS.json](formalization/TARGETS.json)
+is authoritative. All six lanes and the compiler are paused after completing
+their current rounds and required Lean repairs; see the
+[final handoff](formalization/verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md).
+Full paper06 internal accessibility remains pending.
 
 **Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
 

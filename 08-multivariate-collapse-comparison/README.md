@@ -19,4 +19,16 @@ are ordinary published sources and included companion manuscripts.
 
 ## Formalization
 
-The finite-coefficient source comparison theorem (`thm:finite-source`) is checked in Lean, including genuine WW admissible substitutions, weak/WW-strict/equality decisions, exact computable source admission and recursor-free inclusion without internal-type bounds. The paper remains in progress; full first-order BASE and unrestricted canonical comparison are separate. See the [accepted checkpoint](../formalization/verification/cumulative-continuation-2026-11-05/finite-source-comparison/STATUS.md) and [source completion audit](../formalization/audits/FINITE-SOURCE-COMPLETION-2026-11-05.md).
+The finite-coefficient source comparison theorem (`thm:finite-source`) is checked in Lean, including genuine WW admissible substitutions, weak/WW-strict/equality decisions, exact computable source admission and recursor-free inclusion without internal-type bounds. The paper remains in progress; unrestricted canonical comparison remains separate. See the [accepted checkpoint](../formalization/verification/cumulative-continuation-2026-11-05/finite-source-comparison/STATUS.md) and [source completion audit](../formalization/audits/FINITE-SOURCE-COMPLETION-2026-11-05.md).
+
+The complete first-order arithmetic supplier (`thm:snyatkov`) is now checked for
+the exact source f(n)=F5(n+100), including arbitrary quantified original sentences
+and an explicit total computable decision procedure. See the
+[root adoption](../formalization/verification/local-six-sol-2026-11-12/ROOT-SNYATKOV-ADOPTION.json).
+The full common-head (`thm:common`) and balanced (`thm:balanced`) comparison theorems are also checked, including exact free variables, effective pointwise compilers and arbitrary certified first-order decisions. See the [consumer adoption](../formalization/verification/local-six-sol-2026-11-12/ROOT-COMMON-BALANCED-ADOPTION.json).
+
+The existing full original internal-level-two source comparison theorem
+(`thm:leveltwo`) has also been revalidated and adopted at its unchanged complete
+scope; see [the source review](../formalization/verification/local-six-sol-2026-11-12/ROOT-LEVELTWO-ADOPTION.json).
+All numbered statements of this paper are now registered as checked. This does
+not assert unrestricted canonical comparison beyond the stated source classes.

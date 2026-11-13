@@ -1,0 +1,50 @@
+{
+  "status": "checked-standard-only",
+  "build": "BUILD-086",
+  "receipt": "build-reports/1794543340615030528-9.json",
+  "evidence": "../BUILD-086-SUFFIX-APPEND-CHECKED.json",
+  "contracts": [
+    "SuffixLookupTargets.ActualUnboundedSuffixLookup",
+    "AppendIdentityTargets.ActualRightZero",
+    "AppendIdentityTargets.ActualLeftCancellation"
+  ],
+  "source_sha256": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/SuffixLookupTargets.lean": "b4fb2662c9021ffad84b9f336cf4cf28d701f6ee145aa61f26394a4afcf5669d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/SuffixLookupSyntaxProof.lean": "f4b8fab1e4a8011b9d512e617b3d5a4e859f4bc726d346d8c389924a1a8812b9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/SuffixLookupCoreProof.lean": "23eff25ec68885b2e18eea2906868435ff0233e648efaac5889a9e414d89e92e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/SuffixLookupProof.lean": "6d28036efd4be60ff7ef215325b4873e23aa5bb0a63bbcc92a677b509e53bb05",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/SuffixLookupStatementChecks.lean": "9d06ec425a22f8f7544932a732119c6eae5f29db1fc1bd37aab001d414d7c2d6",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/AppendIdentityTargets.lean": "190e1fcbc31df6371388953307e86d14efd0444fcbd4c3b66380fca31fd51627",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/AppendIdentitySyntaxProof.lean": "f81b9baf661ce3123be083a0bdffbd4a742910bd2874f1e834683e7d36ec074d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/AppendIdentityCoreProof.lean": "11181d439469da6c49eae41264b4b84b7b5de0e213d587ba13051c93362895f5",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/AppendIdentityProof.lean": "73c28034c92cf9eac90e5bbeca859d9aeed3d57eeaf4f76fc869e1ab29068a99",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261112/Context/AppendIdentityStatementChecks.lean": "b462c6f9bbfc7c786ef111329f001bebf8ce9a8806cacf756cffc5e662daab17"
+  },
+  "source_matched_receipt_entries": 2284,
+  "exact_alias_axioms": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.SuffixLookupStatementChecks.exactUnboundedSuffixLookup": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentityStatementChecks.exactLeftCancellation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentityStatementChecks.exactRightZero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "agent_compiler_runs": 0,
+  "scope": "unbounded actual append-offset suffix lookup plus actual append right-zero/common-prefix cancellation; actual arithmetic/list-code inductions, no external bound or law premise",
+  "pending": [
+    "whole actual annotated deletion-suffix scan split",
+    "scalarFromJob/inherited-shell actual map fusion",
+    "global recursive execution content and evaluator/layer fixedpoint",
+    "full paper06 internal I/C/accessibility"
+  ],
+  "analysis": "ANNOTATED-SUFFIX-ROUTE.md"
+}

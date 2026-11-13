@@ -1,0 +1,93 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.VariableSourceErasureTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityDownwardSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalErasureCertificateContinuationSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCertificateConstructorsSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.VariableSourceErasureSyntaxProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalApplicationCertificateConstructorsSyntaxProof (graph1Rename)
+open InternalControlGraphSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalRawListRecursionSyntaxProof (programSubst)
+open InternalGraphCompositionSyntaxProof InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof InternalSourceIntroductionSyntaxProof
+open InternalFiniteBlocksSubstitutionProof
+open InternalTagArithmeticSyntaxProof (emb bindEmbedding varBind liftBind suc sucSubst zSubst sucRelabel)
+open SourceComputabilityFormulaSupportProof (numeral)
+open InternalComputabilityDownwardSyntaxProof (typedRename certificateRename)
+open GuardedSourceSyntaxProof (numeralRename)
+open OriginalErasureCertificateContinuationSyntaxProof (shapeRename)
+open UniformCertificateCompletion VariableSourceErasureTargets
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+theorem certificateSubst {beta : Type} (src : SourcePresentation.Data) (context : Nat)
+    (s t cert : OTerm alpha) (ts : alpha → OTerm beta) :
+    (InternalAccessibilityRules.certificate src false context s t cert).subst (fun a => emb (ts a)) =
+      InternalAccessibilityRules.certificate src false context (s.subst ts) (t.subst ts) (cert.subst ts) := by
+  unfold InternalAccessibilityRules.certificate
+  rw [programSubst]
+  have hvec : (fun i : Fin 4 => ((![numeral context,s,t,cert] : Fin 4 → OTerm alpha) i).subst ts) =
+      ![numeral context,s.subst ts,t.subst ts,cert.subst ts] := by
+    funext i
+    exact Fin.cases (InternalAccessibilityRulesSyntaxProof.numeralSubst context ts)
+      (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)))) i
+  rw [hvec]
+  simp only [sucSubst,zSubst]
+
+theorem witnessSubst {beta : Type} (p : GlobalSourcePackage.Inputs) (H G : Program 1)
+    (W : Program 2) (P : Program 3) (context : Nat) (s t : OTerm alpha) (ts : alpha → OTerm beta) :
+    (CertificateWitness p H G W P context s t).subst (fun a => emb (ts a)) =
+      CertificateWitness p H G W P context (s.subst ts) (t.subst ts) := by
+  unfold CertificateWitness
+  rw [existsSubst,liftedEmbedding]
+  unfold CertificateMatrix
+  simp only [certificateSubst,liftSubst,Term.subst,Sum.elim_inr] <;> rfl
+
+theorem witnessRename {beta : Type} (p : GlobalSourcePackage.Inputs) (H G : Program 1)
+    (W : Program 2) (P : Program 3) (context : Nat) (s t : OTerm alpha) (j : alpha → beta) :
+    (CertificateWitness p H G W P context s t).relabel j =
+      CertificateWitness p H G W P context (s.relabel j) (t.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (CertificateWitness p H G W P context s t).subst (fun a => emb (.var (j a))) = _
+  rw [witnessSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem witnessInstantiate (p : GlobalSourcePackage.Inputs) (H G : Program 1)
+    (W : Program 2) (P : Program 3) (context : Nat) (s t cert : OTerm alpha) :
+    instantiate (CertificateMatrix p H G W P context s t) (emb cert) =
+      InternalAccessibilityRules.certificate
+        (GlobalSourcePackage.source (Integration.preparedKernelFinalInputs p H G W P)) false context s t cert := by
+  rw [instantiate,bindEmbedding]
+  unfold CertificateMatrix
+  rw [certificateSubst]
+  simp only [varBind,liftBind]
+
+theorem witnessIntro (p : GlobalSourcePackage.Inputs) (H G : Program 1)
+    (W : Program 2) (P : Program 3) (context : Nat) (s t cert : OTerm alpha)
+    (h : Nonempty (Derivation body Delta
+      (InternalAccessibilityRules.certificate
+        (GlobalSourcePackage.source (Integration.preparedKernelFinalInputs p H G W P)) false context s t cert))) :
+    Nonempty (Derivation body Delta (CertificateWitness p H G W P context s t)) := by
+  obtain ⟨h⟩ := h
+  apply Nonempty.intro
+  apply Derivation.existentialIntroduction (emb cert)
+  rw [witnessInstantiate]
+  exact h
+
+theorem premiseRename {beta : Type} (p : GlobalSourcePackage.Inputs) (H G : Program 1)
+    (W : Program 2) (P : Program 3) (context : Nat) (tau : Ty)
+    (source target witness gamma extended packed raw domain index : OTerm alpha) (j : alpha → beta) :
+    (OriginalErasureCertificateContinuation.Premise (preparedSeed p H G W P) H G W context tau
+      source target witness gamma extended packed raw domain (suc index)).relabel j =
+    OriginalErasureCertificateContinuation.Premise (preparedSeed p H G W P) H G W context tau
+      (source.relabel j) (target.relabel j) (witness.relabel j) (gamma.relabel j) (extended.relabel j)
+      (packed.relabel j) (raw.relabel j) (domain.relabel j) (suc (index.relabel j)) := by
+  simp only [OriginalErasureCertificateContinuation.Premise,conjunctionRename,graph1Rename,
+    typedRename,certificateRename,shapeRename,numeralRename,sucRelabel]
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.VariableSourceErasureSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.VariableSourceErasureSyntaxProof

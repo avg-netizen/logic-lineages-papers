@@ -1,0 +1,99 @@
+{
+  "status": "paused-all-current-rounds-and-necessary-native-repairs-complete",
+  "completed_utc": "2026-11-13T05:24:50.351670+00:00",
+  "user_instruction": "please pause after the current rounds and any subsequent lean runs/repairs finish",
+  "head": "570d4cbb17fd6b0ff8fb1c73032f877e168b4a34",
+  "branch": "formalization/claude-supervised-2026-11-09",
+  "all_six_lanes_quiescent": true,
+  "active_author_jobs": 0,
+  "active_native_jobs": 0,
+  "pending_native_requests": [],
+  "last_build": "BUILD-124",
+  "last_receipt": "build-reports/1794547286350816445-9.json",
+  "last_owned_session_reaped": 35246,
+  "lanes": {
+    "L1": {
+      "handoff": "L1/FINAL-WIND-DOWN-HANDOFF.json",
+      "current_packet": "CountedPrefix6",
+      "build": "BUILD-120",
+      "exact_aliases": 1,
+      "status": "paused",
+      "handoff_sha256": "1f4c06295739b354d1ca8ed7646fc28a731b6de1b437b24ddbb40500038ddcb9"
+    },
+    "L2": {
+      "handoff": "L2/FINAL-WIND-DOWN-HANDOFF.json",
+      "current_packet": "AnnotationSuffix8",
+      "build": "BUILD-113",
+      "exact_aliases": 1,
+      "status": "paused",
+      "handoff_sha256": "62d95bc3e199c52b4340b0d268a3d9bdad29744201c3ae6d97dcd46d965234bf"
+    },
+    "L3": {
+      "handoff": "L3/FINAL-STOP.json",
+      "current_packet": "PUT-ROOT9",
+      "build": "BUILD-124",
+      "exact_aliases": 4,
+      "status": "paused",
+      "handoff_sha256": "82ab97014c7e795817624fd170f1260a00ec321622b57eead68ddd57fb1c8280"
+    },
+    "L4": {
+      "handoff": "L4/AUTHOR-STOPPED.json",
+      "compiler_audit": "L4/FINAL-COMPILER-QUIESCENCE.json",
+      "current_packet": "OriginalEdgeExposure3",
+      "build": "BUILD-110",
+      "exact_aliases": 1,
+      "status": "paused",
+      "handoff_sha256": "e77b0f6480ae10da9c24f879d0b7d6597a00eecd880c12d88305951c45222b9c"
+    },
+    "L5": {
+      "handoff": "L5/STOPPED.json",
+      "current_packet": "none unfinished; source decisions and review already complete",
+      "status": "paused",
+      "handoff_sha256": "2383c7cd979a3f36706f0245eeda7e8b180cfb417dbdd9b67ec67d90473379c4"
+    },
+    "L6": {
+      "handoff": "L6/history-machine/STOPPED.json",
+      "current_packet": "HistoryMachine native5",
+      "build": "BUILD-117",
+      "exact_aliases": 4,
+      "status": "paused",
+      "handoff_sha256": "3d4b34f84cf8a12a76ab1f6d109932df864cd80c9b5a6f08b7489a7353102ee2"
+    }
+  },
+  "register": {
+    "checked": 175,
+    "inherited": 2,
+    "pending": 12,
+    "total": 189
+  },
+  "pending_by_paper": {
+    "02": 1,
+    "06": 8,
+    "12": 3
+  },
+  "numbered_source_adoptions": [
+    "ROOT-SNYATKOV-ADOPTION.json",
+    "ROOT-COMMON-BALANCED-ADOPTION.json",
+    "ROOT-LEVELTWO-ADOPTION.json"
+  ],
+  "root_integrity": [
+    "ROOT-COMPLETED-PACKET-INTEGRITY.json",
+    "ROOT-FINAL-PUT-PACKET-INTEGRITY.json",
+    "ROOT-FINAL-LOCK-CHECK.json"
+  ],
+  "compiler_audit": "L4/FINAL-COMPILER-QUIESCENCE.json",
+  "policy": ".local-run-policy.json",
+  "requires_explicit_resume": true,
+  "new_rounds_enabled": false,
+  "new_targets_enabled": false,
+  "author_admission_enabled": false,
+  "compiler_admission_enabled": false,
+  "fable_enabled": false,
+  "private_research_enabled": false,
+  "git_publication_authorized": false,
+  "new_commits_or_pushes": false,
+  "full_root_build_claim": false,
+  "remote_ci_claim": false,
+  "remaining_math": "paper06 original internal I/C/accessibility and other seven numbered statements; paper12 full HB/collapse/corollary/selector; paper02 consumers. Frozen specifications or analyses are context only, never restart instructions.",
+  "workspace_task_revision": 5
+}

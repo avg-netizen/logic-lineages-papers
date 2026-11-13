@@ -1,3 +1,41 @@
+# Current source reconciliation — internal level two
+
+**175 checked, 2 inherited, 12 pending /189.** The existing complete source08
+internal-level-two comparison proof has been natively revalidated and adopted
+at its unchanged original source scope. See
+[the adoption record](verification/local-six-sol-2026-11-12/ROOT-LEVELTWO-ADOPTION.json).
+All numbered paper08 statements are checked. Remaining: paper02=1, paper06=8,
+paper12=3. All six lanes and the compiler are paused after their current rounds
+and required Lean repairs completed; see the
+[final handoff](verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md).
+Earlier counts below are historical; no full-root or CI claim.
+
+---
+
+# Previous source completions — common-head and balanced comparison
+
+**174 checked, 2 inherited, 13 pending /189 at this checkpoint.** The original paper08
+`thm:common` and `thm:balanced` are now checked at both their complete pointwise
+compiler/exact-variable/effectivity and arbitrary quantified-decision clauses,
+using the previously completed Snyatkov arithmetic supplier. Read
+[the adoption record](verification/local-six-sol-2026-11-12/ROOT-COMMON-BALANCED-ADOPTION.json).
+Pending counts: paper02=1, paper06=8, paper08=1, paper12=3. Earlier counts below
+are historical. No full-root or remote-CI result is claimed.
+
+---
+
+# Previous source completion — full Snyatkov arithmetic decision
+
+**172 checked, 2 inherited, 15 pending /189 at this checkpoint.** The original paper08
+`thm:snyatkov` is checked at its complete first-order scope, with the exact
+f(n)=F5(n+100), an explicit computable decision procedure and standard axioms.
+Read [the root adoption record](verification/local-six-sol-2026-11-12/ROOT-SNYATKOV-ADOPTION.json).
+Six Sol lanes continue. Paper06 full internal accessibility, source12 HB/collapse
+and the other pending numbered statements remain separate. No full-root or
+remote-CI result is claimed. Earlier checkpoint counts below are historical.
+
+---
+
 # Current checkpoint — repaired rank, minimum search and observer guards
 
 33 exact supporting contracts now pass six focused native gates with standard

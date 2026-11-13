@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.SymbolicVerifierProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.SymbolicVerifierStatementChecks
+
+theorem sameNumericChecker : SymbolicVerifierTargets.SameNumericChecker :=
+  SymbolicVerifierProof.sameNumericChecker
+
+theorem openEmptyCertificate : SymbolicVerifierTargets.OpenEmptyCertificate :=
+  SymbolicVerifierProof.openEmptyCertificate
+
+theorem sameSourceSymbolicNonempty : SymbolicVerifierTargets.SameSourceSymbolicNonempty :=
+  SymbolicVerifierProof.sameSourceSymbolicNonempty
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.SymbolicVerifierStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112

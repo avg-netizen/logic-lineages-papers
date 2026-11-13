@@ -1,0 +1,55 @@
+{
+  "status": "checked-same-numeric-checker-actual-source-unbounded-fuel-invariant",
+  "verified_utc": "2026-11-13T04:10:22.869070+00:00",
+  "build": "BUILD-081",
+  "receipt": "build-reports/1794542974385272450-9.json",
+  "gate": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks",
+  "source_matched_receipt_entries": 325,
+  "source_count_scope": "current-source-matched receipt rows only; omitted legacy imports excluded",
+  "source_sha256": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/Definitions.lean": "1377b72c447b9aa49354efe8892b77bff9282eba26342010fd489327bcb622fd",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/EquationsProof.lean": "5cfd6b7848c9502fad1e064c526427b283fc4b11855f8b4136f3eabc66f6006a",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/InductionProof.lean": "1937f03a1f3a65e32ef7d5939aa3c65e50dcefa7eab23c6f27ecac53f86410a5",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/LogicProof.lean": "e511c6a5d72e3da46e81df70e65aa70eebdb72d9e9f4fe5dd6e77654c7c2bd56",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/NativeProof.lean": "30ee70571000e41953e5dc25dadd17569af1924daf2e89ef8433e238c0dea2e3",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/NativeStatementChecks.lean": "819a23fd8e599da3827ce8a610bb73c9ed6ded919aa005bd5b1ad7ec48f09ce4",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/Proof.lean": "2e709c88d671428b7bcc32f0d053141c92ccaf3cf51f2e639a4ed6cac5b5d5f3",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/StatementChecks.lean": "6b1fff00733557893b3009fdbbcd146a6b76ca6a7eff8488442b8b08643bd028",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/StepProof.lean": "e2cff76b162a537d7f4cbb4589b1249816d66f994d7bb4856bbbb755c91a9930",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/StepStatementChecks.lean": "b810934a1ac4bb2403594ed58e51ba6b60f72d9a4782dc0f4d62dcf455e58433",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261112/Fuel/Targets.lean": "54e319dca29ae737c787fdf19f21f2d78c855fe8cdbfdabf15b5ca18882e1d1f"
+  },
+  "exact_alias_axioms": {
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks.sameSourceFuelInvariant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks.sameNumericChecker": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks.openMonotonicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks.openIncrement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks.nativeSaturation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.Fuel.StatementChecks.openStep": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "exact original checker relation at every fuel; actual source successor persistence, genuine PA induction for arbitrary increment, full internally quantified existential-addition order monotonicity, same actual CK/producer tuple chosen before c/rho",
+  "not_claimed": "full unbounded HB2/HB3 or original collapse theorem"
+}

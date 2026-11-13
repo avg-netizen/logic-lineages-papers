@@ -1,0 +1,174 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureConstructorsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedBottomErasureCoreProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedDirectBottomRankedCollapseProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedTraceInductionZeroProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedTraceErasedValidityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDirectBottomDichotomySyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureBaseProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof InternalRecursionGraphStepSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalQuotientComparisonProof (orLeft orRight)
+open InternalBetaTotalityProof (disjunctionElimination)
+open InternalTagArithmeticSyntaxProof (z suc zRelabel)
+open SourceComputabilityFormulaSupportProof (numeral)
+open GuardedErasureFinalGraphsProof GuardedErasurePackingProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem bottomType (out typ : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (graph1 BottomRepresentative.bottomCode out typ))) :
+    Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ out)) := by
+  let inner : Program 1 := pairOf (BottomRepresentative.constant 3) (.projection 0)
+  apply programCases inner (Fin.cons typ Fin.elim0) _
+  intro beta j Theta payload hj hp
+  simp only [graph1Rename]
+  simp only [consTermRename,emptyRename] at hp
+  have h' := renameInto h j Theta hj
+  simp only [graph1Rename] at h'
+  let xs : Fin 1 → OTerm beta := Fin.cons (typ.relabel j) Fin.elim0
+  exact pairLeft (out.relabel j) (typ.relabel j) payload
+    (binaryRecover InternalPairing.pairing (.projection 0) inner
+      (out.relabel j) (typ.relabel j) payload xs h' (projectionValue 0 xs) hp)
+
+/-- Keep the direct-bottom witness's original nil code until its SAME
+certificate has been introduced into both actual final acceptance factors. -/
+theorem exactWitness (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3) (s t parameter typ : OTerm alpha)
+    (hs : Nonempty (Derivation body Delta (graph2 (literalSource p H G W) (numeral 1) s parameter)))
+    (ht : Nonempty (Derivation body Delta (graph2 (literalSource p H G W) (numeral 1) t parameter)))
+    (hss : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ s)))
+    (htt : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ t)))
+    (hw : Nonempty (Derivation body Delta
+      (OriginalTransparentDirectBottomDichotomy.Witness (closedChecker p H G W) s t parameter))) :
+    Nonempty (Derivation body Delta
+      (OriginalLambdaErasureSquareDichotomyDefinitions.Witness
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter)) := by
+  obtain ⟨hw⟩ := hw
+  apply Nonempty.intro
+  apply Derivation.existentialElimination hw
+  change Derivation body
+    (OriginalTransparentDirectBottomDichotomy.WitnessMatrix (closedChecker p H G W) s t parameter :: Delta.map weaken)
+    ((OriginalLambdaErasureSquareDichotomyDefinitions.Witness
+      (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter).relabel
+        (Sum.inl : alpha → alpha ⊕ Fin 1))
+  rw [OriginalLambdaErasureSquareDichotomySyntaxProof.witnessRename]
+  let Theta := OriginalTransparentDirectBottomDichotomy.WitnessMatrix (closedChecker p H G W) s t parameter :: Delta.map weaken
+  have incl : ∀ q ∈ Delta, q.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ Theta :=
+    fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩)
+  have hs' := renameInto hs Sum.inl Theta incl
+  have ht' := renameInto ht Sum.inl Theta incl
+  have hss' := renameInto hss Sum.inl Theta incl
+  have htt' := renameInto htt Sum.inl Theta incl
+  simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at hs' ht'
+  simp only [graph1Rename] at hss' htt'
+  have hc : Nonempty (Derivation body Theta
+      (OriginalTransparentDirectBottomDichotomy.WitnessFields (closedChecker p H G W)
+        (s.relabel Sum.inl) (t.relabel Sum.inl) (parameter.relabel Sum.inl) (.var (.inr 0)))) :=
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  have hp := OriginalTransparentVariableStepHereditaryProof.certificatePath
+    (s.relabel Sum.inl) (.var (.inr 0)) (andLeft hc)
+  have hpair := GuardedErasureConstructorsProof.atNil p H G W P (typ.relabel Sum.inl)
+    (s.relabel Sum.inl) (t.relabel Sum.inl) (.var (.inr 0)) (parameter.relabel Sum.inl)
+    hs' ht' hss' htt' hp (andRight hc)
+  exact Classical.choice (OriginalLambdaErasureSquareDichotomySyntaxProof.witnessIntro
+    (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+    (s.relabel Sum.inl) (t.relabel Sum.inl) (parameter.relabel Sum.inl) (.var (.inr 0))
+    (certificateAccept _ _ _ _ _ _ _ hpair))
+
+open OriginalMixedClosedTraceInductionDefinitions
+theorem atType (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3)
+    (s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT typ : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta
+      (fields (literalSource p H G W) (OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep)
+        z s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT)))
+    (ht : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ s))) :
+    Nonempty (Derivation body Delta
+      (result (literalSource p H G W)
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+        s t newParam erasedS erasedT)) := by
+  let rawLeaf := OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep
+  let B := pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)
+  have h1 := andRight hf
+  have hs := andLeft h1
+  have hold := andLeft (andRight h1)
+  have hrec := andLeft (andRight (andRight h1))
+  have geom := andRight (andRight (andRight h1))
+  have hin := andLeft geom
+  have hop := andLeft (andRight geom)
+  have hnp := andLeft (andRight (andRight geom))
+  have hes := andLeft (andRight (andRight (andRight geom)))
+  have het := andRight (andRight (andRight (andRight geom)))
+  have hb := OriginalMixedDirectBottomTraceBaseProof.actualNilBase (literalSource p H G W) rawLeaf
+    body alpha Delta s t cert oldParam (andLeft hf) hrec
+  have hcode := andRight (andRight hb)
+  have er := OriginalMixedClosedBottomErasureCoreProof.atType H G (member p) W p.oldStep p.window
+    s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT typ
+    hs hold hcode hin hop hnp hes het ht
+  have both := OriginalMixedTraceErasedValidityProof.actualBothErasedSource H G (member p) W p.oldStep
+    body alpha Delta s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+    hs hrec hin hop hnp hes het
+  have bottom := OriginalMixedDirectBottomEndpointProof.endpoint H G (member p) W p.oldStep
+    s t cert oldParam typ hcode ht hold
+  have bottomE := OriginalTransparentDirectBottomFreshZeroBottomProof.eraseBottom
+    t erasedT typ d cutoff bottom het
+  have tagS := OriginalPackedApplicationErasureProof.eraseTypeCopy s erasedS typ d cutoff ht hes
+  have tagT := bottomType erasedT typ bottomE
+  have args := andIntro hs (andIntro hold (andIntro hcode geom))
+  obtain ⟨rankLaw⟩ := OriginalMixedDirectBottomRankedCollapseProof.exactRankedCollapse
+    H G (member p) W p.oldStep body alpha Delta s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+  obtain ⟨args⟩ := args
+  have rankLaw := Derivation.implicationElimination rankLaw args
+  let E := equal erasedS erasedT
+  let Cw := OriginalTransparentDirectBottomDichotomy.Witness (closedChecker p H G W) erasedS erasedT newParam
+  let R := OriginalExistentialRankResultDefinitions.Result B erasedS erasedT newParam s t
+  have left : Nonempty (Derivation body (E :: Delta) R) := by
+    have he : Derivation body (E :: Delta) E := Derivation.hypothesis List.mem_cons_self
+    obtain ⟨law⟩ := withHyp ⟨rankLaw⟩ E
+    have hr := OriginalExistentialRankResultSyntaxProof.rankIntro s t (numeral 1) (numeral 0)
+      ⟨Derivation.implicationElimination law he⟩
+    obtain ⟨pair⟩ := andIntro ⟨he⟩ hr
+    exact ⟨orLeft pair⟩
+  have right : Nonempty (Derivation body (Cw :: Delta) R) := by
+    have hw := exactWitness p H G W P erasedS erasedT newParam typ
+      (withHyp (andLeft both) Cw) (withHyp (andRight both) Cw)
+      (withHyp tagS Cw) (withHyp tagT Cw)
+      (show Nonempty (Derivation body (Cw :: Delta) Cw) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+    obtain ⟨hw⟩ := hw
+    exact ⟨orRight hw⟩
+  obtain ⟨dichotomy⟩ := andRight er
+  obtain ⟨left⟩ := left
+  obtain ⟨right⟩ := right
+  exact andIntro (andLeft both)
+    ⟨disjunctionElimination dichotomy (Derivation.implicationIntroduction left) (Derivation.implicationIntroduction right)⟩
+
+theorem zeroAt (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3)
+    (s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta
+      (fields (literalSource p H G W) (OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep)
+        z s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT))) :
+    Nonempty (Derivation body Delta
+      (result (literalSource p H G W)
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+        s t newParam erasedS erasedT)) := by
+  apply programCases InternalUnpair.left (Fin.cons s Fin.elim0) _
+  intro beta j Theta typ hj ht
+  rw [OriginalMixedClosedTraceInductionSyntaxProof.resultRename]
+  simp only [consTermRename,emptyRename] at ht
+  have hf' := renameInto hf j Theta hj
+  simp only [OriginalMixedClosedTraceInductionSyntaxProof.fieldsRename,zRelabel] at hf'
+  exact atType p H G W P (s.relabel j) (t.relabel j) (cert.relabel j)
+    (oldParam.relabel j) (newParam.relabel j) (gamma.relabel j) (extended.relabel j)
+    (d.relabel j) (cutoff.relabel j) (c.relabel j) (erasedS.relabel j) (erasedT.relabel j) typ hf' ht
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureBaseProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureBaseProof

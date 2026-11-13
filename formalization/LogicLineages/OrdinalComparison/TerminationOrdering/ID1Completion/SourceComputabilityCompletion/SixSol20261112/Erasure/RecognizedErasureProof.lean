@@ -1,0 +1,45 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.RootSoundnessProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedRecognitionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedTraceTransportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.RecognizedErasureProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Recognition itself supplies the SAME original source and underlying
+leaf. Both checked transfer laws are used at the identical runtime tuple;
+no independent source-edge or certificate-transformer premise remains. -/
+theorem closedRecognizedErasure : CorrectedTargets.ClosedRecognizedErasure := by
+ intro H G M W oldStep window body alpha Delta
+  s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+ let source := OriginalTransparentMixedDirectBottom.source H G M W
+ let leaf := OriginalTransparentMixedDirectBottom.leaf H G M W oldStep
+ let checker := OriginalMixedClosedTraceDefinitions.checker H G M W oldStep window
+ let A : Formula alpha := graph4 (OriginalMixedDirectBottomTrace.recognizes source checker)
+  (numeral 1) s t cert oldParam ⊓
+  (OriginalContextInsertion.Insert d cutoff gamma extended ⊓
+  (graph2 InternalPairing.pairing oldParam c extended ⊓
+  (graph2 InternalPairing.pairing newParam c gamma ⊓
+  (graph3 OriginalRawSyntaxTransport.erasePackedRaw erasedS d cutoff s ⊓
+   graph3 OriginalRawSyntaxTransport.erasePackedRaw erasedT d cutoff t))))
+ have h : Nonempty (Derivation body (A :: Delta) A) :=
+  ⟨Derivation.hypothesis List.mem_cons_self⟩
+ have hrec := OriginalMixedClosedRecognitionProof.recognizesFactor source H G M W oldStep window
+  body alpha (A :: Delta) s t cert oldParam (andLeft h)
+ have hroot := RootSoundnessProof.recognizerRootSoundness source leaf
+  body alpha (A :: Delta) s t cert oldParam hrec
+ have hin := andIntro (andLeft hroot)
+  (andIntro (andRight hroot) (andIntro hrec (andRight h)))
+ obtain ⟨ht⟩ := OriginalMixedClosedTraceTransportProof.actualRestrictedTransport
+  H G M W oldStep window body alpha (A :: Delta)
+  s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+ obtain ⟨hin⟩ := hin
+ exact ⟨Derivation.implicationIntroduction (Derivation.implicationElimination ht hin)⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.RecognizedErasureProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.RecognizedErasureProof

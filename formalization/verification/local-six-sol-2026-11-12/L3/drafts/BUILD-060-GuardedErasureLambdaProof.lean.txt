@@ -1,0 +1,235 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureConstructorsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedTraceTransportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedTraceErasedValidityProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalPackedSourceLambdaFieldsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaErasureCasePayloadProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaErasureCaseSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaDirectBottomTraceHopProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureLambdaProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof InternalRecursionGraphStepSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalAcceptanceConjunctionProof (conjunctionAccept conjunctionRecover)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalQuotientComparisonProof (orLeft orRight)
+open InternalBetaTotalityProof (disjunctionElimination)
+open InternalTagArithmeticSyntaxProof (z suc)
+open SourceComputabilityFormulaSupportProof (numeral)
+open GuardedErasureFinalGraphsProof GuardedErasurePackingProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem strengthenWitness (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3) (s t parameter typ : OTerm alpha)
+    (hs : Nonempty (Derivation body Delta (graph2 (literalSource p H G W) (numeral 1) s parameter)))
+    (ht : Nonempty (Derivation body Delta (graph2 (literalSource p H G W) (numeral 1) t parameter)))
+    (hss : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ s)))
+    (htt : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ t)))
+    (hn : Nonempty (Derivation body Delta (OriginalNonapplicationChecker.nonapplicationRoot s)))
+    (hw : Nonempty (Derivation body Delta
+      (OriginalLambdaErasureSquareDichotomyDefinitions.Witness (closedChecker p H G W) s t parameter))) :
+    Nonempty (Derivation body Delta
+      (OriginalLambdaErasureSquareDichotomyDefinitions.Witness
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter)) := by
+  obtain ⟨hw⟩ := hw
+  apply Nonempty.intro
+  apply Derivation.existentialElimination hw
+  change Derivation body
+    (OriginalLambdaErasureSquareDichotomyDefinitions.WitnessMatrix (closedChecker p H G W) s t parameter :: Delta.map weaken)
+    ((OriginalLambdaErasureSquareDichotomyDefinitions.Witness
+      (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter).relabel
+        (Sum.inl : alpha → alpha ⊕ Fin 1))
+  rw [OriginalLambdaErasureSquareDichotomySyntaxProof.witnessRename]
+  let Theta := OriginalLambdaErasureSquareDichotomyDefinitions.WitnessMatrix (closedChecker p H G W) s t parameter :: Delta.map weaken
+  have incl : ∀ q ∈ Delta, q.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ Theta :=
+    fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩)
+  have hs' := renameInto hs Sum.inl Theta incl
+  have ht' := renameInto ht Sum.inl Theta incl
+  have hss' := renameInto hss Sum.inl Theta incl
+  have htt' := renameInto htt Sum.inl Theta incl
+  have hn' := renameInto hn Sum.inl Theta incl
+  simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at hs' ht'
+  simp only [graph1Rename] at hss' htt'
+  rw [OriginalNonapplicationCheckerGuardProof.nonapplicationRename] at hn'
+  have hpair := GuardedErasureConstructorsProof.atNonapplication p H G W P (typ.relabel Sum.inl)
+    (s.relabel Sum.inl) (t.relabel Sum.inl) (.var (.inr 0)) (parameter.relabel Sum.inl)
+    hs' ht' hss' htt' hn' ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact Classical.choice (OriginalLambdaErasureSquareDichotomySyntaxProof.witnessIntro
+    (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+    (s.relabel Sum.inl) (t.relabel Sum.inl) (parameter.relabel Sum.inl) (.var (.inr 0))
+    (certificateAccept _ _ _ _ _ _ _ hpair))
+
+theorem strengthenResult (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3) (s t parameter oldS oldT typ : OTerm alpha)
+    (hs : Nonempty (Derivation body Delta (graph2 (literalSource p H G W) (numeral 1) s parameter)))
+    (ht : Nonempty (Derivation body Delta (graph2 (literalSource p H G W) (numeral 1) t parameter)))
+    (hss : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ s)))
+    (htt : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ t)))
+    (hn : Nonempty (Derivation body Delta (OriginalNonapplicationChecker.nonapplicationRoot s)))
+    (hr : Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result (closedChecker p H G W) s t parameter oldS oldT))) :
+    Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter oldS oldT)) := by
+  let A := equal s t ⊓ OriginalExistentialRankResultDefinitions.RankWitness oldS oldT
+  let B := OriginalLambdaErasureSquareDichotomyDefinitions.Witness (closedChecker p H G W) s t parameter
+  let R := OriginalExistentialRankResultDefinitions.Result
+    (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter oldS oldT
+  have left : Nonempty (Derivation body (A :: Delta) R) := ⟨orLeft (Derivation.hypothesis List.mem_cons_self)⟩
+  have right : Nonempty (Derivation body (B :: Delta) R) := by
+    obtain ⟨hw⟩ := strengthenWitness p H G W P s t parameter typ
+      (withHyp hs B) (withHyp ht B) (withHyp hss B) (withHyp htt B) (withHyp hn B)
+      (show Nonempty (Derivation body (B :: Delta) B) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+    exact ⟨orRight hw⟩
+  obtain ⟨hr⟩ := hr
+  obtain ⟨left⟩ := left
+  obtain ⟨right⟩ := right
+  exact ⟨disjunctionElimination hr (Derivation.implicationIntroduction left) (Derivation.implicationIntroduction right)⟩
+
+/-- Actual lambda matching pays the target's original outer type without a
+target-field or source-validity oracle. -/
+theorem matchingTargetType (source : Program 2) (s t cert parameter typ : OTerm alpha)
+    (hg : Nonempty (Derivation body Delta
+      (graph4 (OriginalTransparentLambdaStep.hopGuard source) (numeral 1) s t cert parameter)))
+    (ht : Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ s))) :
+    Nonempty (Derivation body Delta (graph1 InternalUnpair.left typ t)) := by
+  let xs : Fin 4 → OTerm alpha := Fin.cons s (Fin.cons t (Fin.cons cert (Fin.cons parameter Fin.elim0)))
+  have hg1 := conjunctionRecover (OriginalTransparentVariableStep.sourceAt source) _ xs hg
+  have hg2 := conjunctionRecover OriginalLambdaGuardLeaf.sourceLambda _ xs (andRight hg1)
+  have hg3 := conjunctionRecover OriginalLambdaGuardLeaf.matchingTarget OriginalHereditaryLambda.lamPath xs (andRight hg2)
+  have hm0 := conjunctionRecover OriginalLambdaGuardLeaf.targetLambda _ xs (andLeft hg3)
+  have hm1 := conjunctionRecover _ _ xs (andRight hm0)
+  have htype := unaryValue InternalUnpair.left (.projection 0) typ s xs ht (projectionValue 0 xs)
+  have htarget := sameRightRecover (leftOf (.projection 1)) (leftOf (.projection 0)) typ xs (andLeft hm1) htype
+  exact unaryRecover InternalUnpair.left (.projection 1) typ t xs htarget (projectionValue 1 xs)
+
+/-- Reuse the completed lambda deletion theorem. Its raw witness becomes W
+at a lambda root after the actual square supplies the preserved constructor.
+No stronger recursive hypothesis is assumed in this branch. -/
+theorem atFields (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3)
+    (path s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+      domain codomain oldBody arrow : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta
+      (OriginalMixedClosedTraceInductionDefinitions.fields (literalSource p H G W)
+        (OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep) path
+        s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT)))
+    (hsf : Nonempty (Derivation body Delta (OriginalLambdaConstructor.Fields s domain codomain oldBody arrow)))
+    (hg : Nonempty (Derivation body Delta
+      (graph4 (OriginalTransparentLambdaStep.hopGuard (literalSource p H G W)) (numeral 1) s t cert oldParam)))
+    (both : Nonempty (Derivation body Delta
+      (graph2 (literalSource p H G W) (numeral 1) erasedS newParam ⊓
+        graph2 (literalSource p H G W) (numeral 1) erasedT newParam)))
+    (weak : Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result (closedChecker p H G W) erasedS erasedT newParam s t))) :
+    Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+        erasedS erasedT newParam s t)) := by
+  have geom := andRight (andRight (andRight (andRight hf)))
+  have hes := andLeft (andRight (andRight (andRight geom)))
+  have het := andRight (andRight (andRight (andRight geom)))
+  have typeS := andLeft (andRight hsf)
+  have typeT := matchingTargetType (literalSource p H G W) s t cert oldParam arrow hg typeS
+  have tagS := OriginalPackedApplicationErasureProof.eraseTypeCopy s erasedS arrow d cutoff typeS hes
+  have tagT := OriginalPackedApplicationErasureProof.eraseTypeCopy t erasedT arrow d cutoff typeT het
+  apply OriginalLambdaErasureCasePayloadProof.packedFromFields s domain codomain oldBody arrow _ hsf
+  intro beta j Theta raw hj hp
+  rw [OriginalMixedExistentialCongruenceSupportProof.resultRename]
+  have hf' := renameInto hf j Theta hj
+  have hsf' := renameInto hsf j Theta hj
+  have both' := renameInto both j Theta hj
+  have weak' := renameInto weak j Theta hj
+  have tagS' := renameInto tagS j Theta hj
+  have tagT' := renameInto tagT j Theta hj
+  simp only [OriginalMixedClosedTraceInductionSyntaxProof.fieldsRename] at hf'
+  rw [OriginalLambdaConstructorGraphSyntaxProof.fieldsRename] at hsf'
+  simp only [conjunctionRename,graph2Rename,GuardedSourceSyntaxProof.numeralRename] at both'
+  rw [OriginalMixedExistentialCongruenceSupportProof.resultRename] at weak'
+  simp only [graph1Rename] at tagS' tagT'
+  have geom' := andRight (andRight (andRight (andRight hf')))
+  apply OriginalLambdaErasureCaseSupportProof.namedSquare (s.relabel j) (erasedS.relabel j)
+    (domain.relabel j) (codomain.relabel j) raw (oldBody.relabel j) (d.relabel j) (cutoff.relabel j)
+    (gamma.relabel j) (extended.relabel j) _ hp (andRight (andRight (andRight (andRight hsf'))))
+    (andLeft (andRight (andRight (andRight geom')))) (andLeft geom')
+  intro xi k Xi child childGamma childExtended hk hsq
+  rw [OriginalMixedExistentialCongruenceSupportProof.resultRename]
+  have both'' := renameInto both' k Xi hk
+  have weak'' := renameInto weak' k Xi hk
+  have tagS'' := renameInto tagS' k Xi hk
+  have tagT'' := renameInto tagT' k Xi hk
+  have ha := renameInto (andLeft (andRight (andRight hsf'))) k Xi hk
+  simp only [conjunctionRename,graph2Rename,GuardedSourceSyntaxProof.numeralRename] at both''
+  rw [OriginalMixedExistentialCongruenceSupportProof.resultRename] at weak''
+  simp only [graph1Rename] at tagS'' tagT''
+  rw [graph2Rename] at ha
+  have square := andLeft hsq
+  have fields := OriginalLambdaConstructorGraphFieldsProof.constructorFields
+    ((erasedS.relabel j).relabel k) ((domain.relabel j).relabel k) ((codomain.relabel j).relabel k)
+    child ((arrow.relabel j).relabel k) (andLeft square) (andLeft (andRight (andRight square))) ha
+  exact strengthenResult p H G W P ((erasedS.relabel j).relabel k) ((erasedT.relabel j).relabel k)
+    ((newParam.relabel j).relabel k) ((s.relabel j).relabel k) ((t.relabel j).relabel k)
+    ((arrow.relabel j).relabel k) (andLeft both'') (andRight both'') tagS'' tagT''
+    (GuardedErasureConstructorsProof.lambdaNonapplication _ (andLeft fields)) weak''
+
+theorem lambdaBranch (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3)
+    (path s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta
+      (OriginalMixedClosedTraceInductionDefinitions.fields (literalSource p H G W)
+        (OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep) path
+        s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT)))
+    (hg : Nonempty (Derivation body Delta
+      (graph4 (OriginalTransparentLambdaStep.hopGuard (literalSource p H G W)) (numeral 1) s t cert oldParam))) :
+    Nonempty (Derivation body Delta
+      (OriginalMixedClosedTraceInductionDefinitions.result (literalSource p H G W)
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+        s t newParam erasedS erasedT)) := by
+  let rawLeaf := OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep
+  let B := pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)
+  have h1 := andRight hf
+  have hs := andLeft h1
+  have hold := andLeft (andRight h1)
+  have hrec := andLeft (andRight (andRight h1))
+  have geom := andRight (andRight (andRight h1))
+  have both := OriginalMixedTraceErasedValidityProof.actualBothErasedSource H G (member p) W p.oldStep
+    body alpha Delta s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+    hs hrec (andLeft geom) (andLeft (andRight geom)) (andLeft (andRight (andRight geom)))
+    (andLeft (andRight (andRight (andRight geom)))) (andRight (andRight (andRight (andRight geom))))
+  obtain ⟨law⟩ := OriginalMixedClosedTraceTransportProof.actualRestrictedTransport
+    H G (member p) W p.oldStep p.window body alpha Delta
+    s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+  obtain ⟨hinput⟩ := h1
+  have weak := andRight (show Nonempty (Derivation body Delta _) from
+    ⟨Derivation.implicationElimination law hinput⟩)
+  have hcond := OriginalLambdaDirectBottomTraceHopProof.hopConditions
+    (literalSource p H G W) rawLeaf s t cert oldParam
+    (conjunctionAccept (OriginalTransparentLambdaStep.hopGuard (literalSource p H G W)) rawLeaf
+      (Fin.cons s (Fin.cons t (Fin.cons cert (Fin.cons oldParam Fin.elim0)))) hg hold)
+  have strong : Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result B erasedS erasedT newParam s t)) := by
+    apply OriginalPackedSourceLambdaFieldsProof.sourceFieldsCases H G (member p) W s oldParam _ hs (andLeft hcond)
+    intro beta j Theta domain codomain oldBody arrow hj hsf
+    rw [OriginalMixedExistentialCongruenceSupportProof.resultRename]
+    have hf' := renameInto hf j Theta hj
+    have hg' := renameInto hg j Theta hj
+    have both' := renameInto both j Theta hj
+    have weak' := renameInto weak j Theta hj
+    rw [OriginalMixedClosedTraceInductionSyntaxProof.fieldsRename] at hf'
+    simp only [graph4Rename,GuardedSourceSyntaxProof.numeralRename] at hg'
+    simp only [conjunctionRename,graph2Rename,GuardedSourceSyntaxProof.numeralRename] at both'
+    rw [OriginalMixedExistentialCongruenceSupportProof.resultRename] at weak'
+    exact atFields p H G W P (path.relabel j) (s.relabel j) (t.relabel j) (cert.relabel j)
+      (oldParam.relabel j) (newParam.relabel j) (gamma.relabel j) (extended.relabel j)
+      (d.relabel j) (cutoff.relabel j) (c.relabel j) (erasedS.relabel j) (erasedT.relabel j)
+      domain codomain oldBody arrow hf' hsf hg' both' weak'
+  exact andIntro (andLeft both) strong
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureLambdaProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureLambdaProof

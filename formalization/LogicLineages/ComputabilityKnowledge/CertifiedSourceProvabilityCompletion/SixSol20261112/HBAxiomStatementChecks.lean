@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HBAxiomProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HBAxiomStatementChecks
+
+theorem certificationInS : HBAxiomTargets.CertificationInS :=
+  HBAxiomProof.certificationInS
+
+theorem internalAdditionalDAxioms : HBAxiomTargets.InternalAdditionalDAxioms :=
+  HBAxiomProof.internalAdditionalDAxioms
+
+theorem sameSourceAdditionalDAxioms : HBAxiomTargets.SameSourceAdditionalDAxioms :=
+  HBAxiomProof.sameSourceAdditionalDAxioms
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HBAxiomStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112

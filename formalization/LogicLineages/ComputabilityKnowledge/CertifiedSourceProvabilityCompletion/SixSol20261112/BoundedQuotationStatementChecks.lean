@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.BoundedQuotationProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.BoundedQuotationStatementChecks
+
+theorem boundedSourceQuotation : BoundedQuotationTargets.BoundedSourceQuotation :=
+  BoundedQuotationProof.boundedSourceQuotation
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.BoundedQuotationStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112

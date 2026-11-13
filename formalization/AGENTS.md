@@ -1,3 +1,64 @@
+# Current instruction — publish the paused six-lane checkpoint
+
+The user explicitly requests "please commit/push" after the completed pause.
+Commit this checkpoint and push it to the existing
+`formalization/cumulative-continuation-2026-11-09` remote branch. This releases
+only Git publication; all six lanes, Fable, private research and the native
+compiler remain paused. No new proof round or main-branch merge is authorized.
+Earlier no-publication instructions are historical for this finite action.
+Read [the publication record](verification/local-six-sol-2026-11-12/PUBLICATION.md).
+
+---
+
+# Current proof state — paused after all six rounds and Lean repairs
+
+The user-requested closeout is complete. All six lanes have stopped, all current
+packets passed their focused exact/standard-axiom gates, and all owned native
+sessions were reaped. The shared compiler queue is empty and its policy is
+paused. Read [the final handoff](verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md)
+and [terminal control](verification/local-six-sol-2026-11-12/FINAL-STOPPED.json).
+No new proof/compiler/research round or automatic restart without a new explicit
+user release. Git publication is covered by the instruction above. The local register is
+175 checked, 2 inherited, 12 pending /189. Full paper06 I/C/accessibility and
+paper12 HB/collapse remain pending. Earlier active instructions below are
+historical wherever they conflict with this pause.
+
+---
+
+# Previous user instruction — finish current rounds and Lean repairs, then pause
+
+The user requests: "please pause after the current rounds and any subsequent
+lean runs/repairs finish". New rounds, successor targets and author admission
+are disabled now. Only proof packets already in progress may finish their
+focused native checks, constructive repairs, exact-type/standard-axiom audits
+and handoff. Preserve accepted/frozen mathematics and all failed drafts.
+Read [the stop control](verification/local-six-sol-2026-11-12/STOP-AFTER-CURRENT-ROUNDS.json).
+Keep the serialized compiler available for this bounded closeout; pause its
+policy only after all owned native/author jobs are reaped. Then no automatic
+restart without explicit user release. No Git publication is authorized.
+
+---
+
+# Previous user release — six Sol 6.1 xhigh formalization agents
+
+The user on 12 November 2026 requests fetching the latest work and six Sol 6.1
+xhigh subagents continuing formalization. The checkout fast-forwarded to 570d4cbb.
+Read [the six-lane brief](verification/local-six-sol-2026-11-12/BRIEF.md) and
+[ownership/control](verification/local-six-sol-2026-11-12/CONTROL.json).
+This explicitly releases public formalization beyond the earlier local pauses
+and cutoffs. Four agents own disjoint paper06 suppliers, one paper08 Snyatkov,
+and one paper12 actual HB/CK. Private research and Fable remain stopped.
+
+Root delegates the single native compiler queue to `sol_integration` (L4);
+other agents send that coordinator focused exact-gate requests. Root retains
+shared adoption/register/Git authority. Only the compiler coordinator launches
+native checks; no other independent compiler launch or nested agents. Existing fixed resource limits, artifact validation, immutable
+accepted/frozen math, exact-type and standard-axiom safeguards remain unchanged.
+No automatic Git publication, manuscript, CI, dependency or toolchain changes.
+The numbered register starts at 171 checked, 2 inherited, 16 pending /189.
+
+---
+
 # Current checkpoint — closed recognizer factor checked
 
 The continuation from `4fea270b5f820b4a2b4bb02add9ccb8200bf8e56` adds four

@@ -1,0 +1,29 @@
+# Checked source-root runtime checkpoint
+
+All eight exact Runtime contracts are checked with only propext, Classical.choice and Quot.sound. BUILD-027 checked ReturnContent, both RootReturn contracts, AppendReassociation, ProtectedVisitCases and ActualStepCases. BUILD-049 checked ActualExit and ActualSourceRootProjection, with 3,192 current-source-matched receipt rows. All29 submitted source hashes match; accepted sources, including preserved malformed originals and separately validated working scaffolds, are now immutable.
+
+Authoritative shared evidence:
+- BUILD-027-RUNTIME-SIX-ALIASES-CHECKED.json
+- BUILD-045-SUFFIX-CORE-CHECKED.json
+- BUILD-049-SOURCE-ROOT-PROJECTION-CHECKED.json
+BUILD-049 receipt: build-reports/1794536833510628145-9.json. L4 sol_integration owns the only compiler. L1 launched no native compiler.
+
+The actual original source-root run at its unchanged computed fuel now forces execution of the actual root return. Its result first coordinate is the graph of original rootObservation R at the same packed source and parameter. Original source admission, role/type/raw/context/job geometry, R, branching, fuel, initial state and final output coordinates are retained. No global result correctness invariant, root-return supplier, native correctness or simulation premise is added. Every protected-prefix/suffix staging supplier is discharged at the source-root endpoint.
+
+The proof constructs the actual first visit and retained root return marker, preserves its agenda suffix through all supported actual visits/returns, and performs PA induction on symbolic run count with all current state/prefix coordinates universally quantified inside each row. Checked original computed-fuel completion supplies empty final work; the concrete suffix consumer proves literal singleton-return content at all counts.
+
+The frozen source-root endpoint still takes actual final pair/cons/value-pair graph witnesses as inputs. It does not yet prove their existence, geometry-free evaluator readback, recursive scalar/list/deletion-row provenance, evaluator/layer fixed point, class congruence, internal I/C or whole paper06 lem:id1. No numbered promotion, full-root build or remote-CI result is claimed.
+
+All failed drafts and constructive repairs are preserved under BUILD-009-failed, BUILD-011-failed, BUILD-013-failed, BUILD-017-failed, BUILD-022-failed, BUILD-027-failed, BUILD-033-failed, BUILD-039-failed, BUILD-039-zero-boundaries and BUILD-045-failed. Original malformed frozen targets were preserved and separately frozen alpha-renamed WorkingTargets before downstream repair. Formula domains/quantifiers and original Program ASTs were not weakened or changed.
+
+Next authorized target: expose actual protected-root final return provenance and construct final shape/readback witnesses internally in new files, leaving every accepted source and original exact target unchanged. L2 owns local term/list return reconstruction and genuine deletion-job scalar-to-row fusion. L1 retains scalar/list recursive execution and protected old-result-suffix provenance after shape/readback.
+
+A separate next RootResult packet is now authored and PENDING native proof verification: internally generated final Shape; no-geometry source-root readback; genuine final-return CPS exposure; actual unchanged evaluator first-coordinate readback from source acceptance, evaluator graph and ordinary left projection only. The two frozen scaffolds passed BUILD-054 preflight. New9 proof/scaffold sources are held at ROOT-RESULT-REQUEST.json hashes; the entire accepted29 base is unchanged. No next-packet mathematical endpoint is claimed checked yet.
+
+BUILD-062 accepted RootResultInitialProof (three standard-only intermediate theorems, source hash 0d14dfee5490b0d687b919464d0495e8965b3818a555458e2a37530d91012f76), now immutable. The exact four-alias Shape/readback gate was not reached. The only released source RootResultShapeSyntax was repaired by explicitly qualifying the existing finite-block substitution theorem OriginalContextInsertionSyntaxProof.blockSubst; failed bytes and repair correspondence are preserved under BUILD-062-failed. RootResultShapeSyntax now hashes 62721d945e65840c054d233a79f5ba5d3a8fe35e8dc8fa47c4c569843a6590fe; full9 manifest verified and held stable for the compiler coordinator.
+
+Separate next scheduling-count supplier: five new ScheduleCount sources are frozen/submitted in SCHEDULE-COUNT-REQUEST.json. Exact targets were frozen first in FROZEN-SCHEDULE-COUNT.json: actual raw/annotated expansion length equals the sum of actual child arity and original context length. Proof follows the original zero/one/two-child branches, existing exact deletionJobs length, and unchanged annotation length. This is pending native proof verification and does not assume a scheduler/result-stack invariant. L2 confirmed this supplier is outside its ordered deletion map/annotation work. All9 RootResult request hashes and accepted29 base hashes were reverified unchanged.
+
+BUILD-072 CHECKED all4 RootResult exact aliases with standard-only axioms. Receipt build-reports/1794541490765990003-9.json; ROOT-RESULT-CHECKED.json independently matches all3197 current-source receipt rows (zero omissions), all9 request sources, and exact4 gate audit/compile log. All9 RootResult sources are immutable. Actual source-root shape witnesses are now internally generated, and unchanged evaluator first-coordinate readback uses only source acceptance/evaluator graph/ordinary left graph. Full recursive second-coordinate content remains pending. ROOT-RESULT-HANDOFF.md records the exact scope; Count5 is still pending native checks.
+
+Compiler coordinator finalized shared BUILD-072-ROOT-RESULT-READBACK-CHECKED.json with all3197 source-matched rows and exact4 standard-only aliases. The prior29 is a byte-immutable manifest including preserved malformed original targets, separate from the actual checked import closure.

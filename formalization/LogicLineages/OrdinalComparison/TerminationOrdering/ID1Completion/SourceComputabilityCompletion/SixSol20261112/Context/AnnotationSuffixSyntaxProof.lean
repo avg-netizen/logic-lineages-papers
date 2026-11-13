@@ -1,0 +1,124 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixWorkingTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalInternalJobDeletionLookupProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeel (graph5)
+open SourceComputabilityFormulaSupportProof InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalControlGraphSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc emb varBind bindEmbedding zSubst sucSubst)
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalComputabilityApplicationSyntaxProof (programSubst numeralSubst)
+open InternalRawListRecursionSyntaxProof (consTermSubst emptySubst)
+open InternalAdditionLawsProof (add addSubst impSubst)
+open InternalListInduction InternalListInductionSyntaxProof
+open OriginalContextInsertion (lengthGraph)
+open OriginalContextInsertionSyntaxProof (lengthSubst)
+open OriginalInternalIndexedPrefixCasesTargets (bump)
+open SourceComputabilityFormulaSupportProof (numeral)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph InternalListMap.map OriginalHereditaryAnnotatedExpansion.scan
+
+theorem bumpSubst {beta : Type} (arity : Nat) (offset : OTerm alpha) (ts : alpha → OTerm beta) :
+    (bump arity offset).subst ts = bump arity (offset.subst ts) := by
+  induction arity with
+  | zero => rfl
+  | succ arity ih => simp only [bump,sucSubst,ih]
+
+theorem bumpSuccessor (arity : Nat) (offset : OTerm alpha) :
+    bump arity (suc offset) = suc (bump arity offset) := by
+  induction arity with
+  | zero => rfl
+  | succ arity ih => simp only [bump,ih]
+
+def fields (arity : Nat) (suffix offset typ raw front jobs annotatedFront count full mapped : OTerm alpha) : Formula alpha :=
+  graph1 (OriginalRawSyntaxTransport.arityOf (.projection 0)) (numeral arity) raw ⊓
+    (lengthGraph (bump arity offset) front ⊓
+      (graph2 InternalApplicationValidityStackAppend.append jobs front suffix ⊓
+        (graph5 OriginalHereditaryAnnotatedExpansion.scan annotatedFront (bump arity offset) z typ raw jobs ⊓
+          (lengthGraph count suffix ⊓
+            (graph5 OriginalHereditaryAnnotatedExpansion.scan full (add (bump arity offset) count) z typ raw jobs ⊓
+              graph2 (InternalListMap.map (k := 1) InheritedMapDefinitions.inheritedJob) mapped suffix typ)))))
+
+def rowBody (arity : Nat) (suffix : OTerm alpha) : Formula (alpha ⊕ Fin 9) :=
+  (fields arity (suffix.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2))
+    (.var (.inr 3)) (.var (.inr 4)) (.var (.inr 5)) (.var (.inr 6)) (.var (.inr 7)) (.var (.inr 8))).imp
+      (graph2 InternalApplicationValidityStackAppend.append (.var (.inr 7)) (.var (.inr 5)) (.var (.inr 8)))
+
+def row (arity : Nat) (suffix : OTerm alpha) : Formula alpha := allBlock (rowBody arity suffix)
+
+theorem fieldsSubst {beta : Type} (arity : Nat)
+    (suffix offset typ raw front jobs annotatedFront count full mapped : OTerm alpha) (ts : alpha → OTerm beta) :
+    (fields arity suffix offset typ raw front jobs annotatedFront count full mapped).subst (fun a => emb (ts a)) =
+      fields arity (suffix.subst ts) (offset.subst ts) (typ.subst ts) (raw.subst ts)
+        (front.subst ts) (jobs.subst ts) (annotatedFront.subst ts) (count.subst ts) (full.subst ts) (mapped.subst ts) := by
+  simp only [fields,conjunctionSubst,graph1,graph2,graph5,programSubst,consTermSubst,emptySubst,
+    lengthSubst,bumpSubst,addSubst,numeralSubst,zSubst]
+
+theorem fieldsRename {beta : Type} (arity : Nat)
+    (suffix offset typ raw front jobs annotatedFront count full mapped : OTerm alpha) (j : alpha → beta) :
+    (fields arity suffix offset typ raw front jobs annotatedFront count full mapped).relabel j =
+      fields arity (suffix.relabel j) (offset.relabel j) (typ.relabel j) (raw.relabel j)
+        (front.relabel j) (jobs.relabel j) (annotatedFront.relabel j) (count.relabel j) (full.relabel j) (mapped.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (fields arity suffix offset typ raw front jobs annotatedFront count full mapped).subst (fun a => emb (.var (j a))) = _
+  rw [fieldsSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem rowSubst {beta : Type} (arity : Nat) (suffix : OTerm alpha) (ts : alpha → OTerm beta) :
+    (row arity suffix).subst (fun a => emb (ts a)) = row arity (suffix.subst ts) := by
+  unfold row rowBody
+  rw [allBlockSubst,liftedEmbedding,impSubst]
+  simp only [fieldsSubst,graph2,programSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+
+theorem rowRename {beta : Type} (arity : Nat) (suffix : OTerm alpha) (j : alpha → beta) :
+    (row arity suffix).relabel j = row arity (suffix.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (row arity suffix).subst (fun a => emb (.var (j a))) = _
+  rw [rowSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem rowWitness (arity : Nat) (suffix offset typ raw front jobs annotatedFront count full mapped : OTerm alpha) :
+    (rowBody arity suffix).subst
+      (Sum.elim Term.var (fun i => emb (![offset,typ,raw,front,jobs,annotatedFront,count,full,mapped] i))) =
+      (fields arity suffix offset typ raw front jobs annotatedFront count full mapped).imp
+        (graph2 InternalApplicationValidityStackAppend.append full annotatedFront mapped) := by
+  have he : (Sum.elim Term.var (fun i => emb (![offset,typ,raw,front,jobs,annotatedFront,count,full,mapped] i))) =
+      (fun x => emb (Sum.elim Term.var ![offset,typ,raw,front,jobs,annotatedFront,count,full,mapped] x)) := by
+    funext x
+    cases x <;> rfl
+  unfold rowBody
+  rw [he,impSubst]
+  simp only [fieldsSubst,graph2,programSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+  rfl
+
+theorem rowAtCode (arity : Nat) (suffix : OTerm alpha) :
+    atCode (row arity (.var (.inr (0 : Fin 1)))) suffix = row arity suffix := by
+  simp only [atCode,instantiate,bindEmbedding,rowSubst,varBind]
+
+theorem rowAtIndex (arity : Nat) (i : Fin 3) :
+    atIndex (row arity (.var (.inr (0 : Fin 1)) : OTerm (alpha ⊕ Fin 1))) i =
+      row arity (.var (.inr i) : OTerm (alpha ⊕ Fin 3)) := by
+  rw [atIndex,rowRename]
+  rfl
+
+theorem rowApply (arity : Nat) (suffix offset typ raw front jobs annotatedFront count full mapped : OTerm alpha)
+    (hi : Nonempty (Derivation body Delta (row arity suffix)))
+    (hf : Nonempty (Derivation body Delta (fields arity suffix offset typ raw front jobs annotatedFront count full mapped))) :
+    Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append full annotatedFront mapped)) := by
+  have h := actualFiniteUniversalElimination body alpha 9 Delta (rowBody arity suffix)
+    (fun i => emb (![offset,typ,raw,front,jobs,annotatedFront,count,full,mapped] i)) hi
+  rw [rowWitness] at h
+  obtain ⟨h⟩ := h
+  obtain ⟨hf⟩ := hf
+  exact ⟨Derivation.implicationElimination h hf⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixSyntaxProof
