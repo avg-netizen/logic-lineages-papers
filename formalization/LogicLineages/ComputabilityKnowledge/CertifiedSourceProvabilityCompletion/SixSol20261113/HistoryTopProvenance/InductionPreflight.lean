@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.InductionTargets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.InductionPreflight
+#check Induction.allFuel
+#check Induction.allIndex
+#check Induction.allRemaining
+#check Induction.allTail
+#check Induction.allRaw
+#check Induction.allContext
+#check Induction.allLines
+#check InductionTargets.InternalAllAtCount
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.InductionPreflight
