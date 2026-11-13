@@ -8,10 +8,12 @@ open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
 open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalTagArithmeticSyntaxProof (suc z eqn)
-open InternalOriginalOrderSyntaxProof (ltF orderRename sucRelabel)
+open InternalOriginalOrderSyntaxProof (ltF orderRename)
+open InternalTagArithmeticSyntaxProof (sucRelabel)
 open InternalUnpairReverseBoundsArithmeticProof (weakTrans)
 open InternalRecursionGraphStepSyntaxProof
-open InternalRawListRecursionSyntaxProof (consTermRename emptyRename)
+open InternalControlGraphSupportProof (emptyRename)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
 open InternalPairingSumBounds (weakBound)
 open ObservationDescentDefinitions ObservationDescentPairProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
@@ -29,7 +31,7 @@ theorem actualSelectorBound : ObservationDescentTargets.ActualSelectorBound := b
    let P : Program 1 := if b then InternalUnpair.right else InternalUnpair.left
    apply programCases P (Fin.cons input Fin.elim0) _
    intro beta j Theta mid hj hm
-   simp only [weakBound,orderRename,sucRelabel]
+   simp only [weakBound,InternalLessThan.strictLess,orderRename,sucRelabel]
    simp only [consTermRename,emptyRename] at hm
    have h' := renameInto h j Theta hj
    simp only [graph1,programRename,consTermRename,emptyRename] at h'

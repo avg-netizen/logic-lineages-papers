@@ -47,8 +47,9 @@ theorem chooseCandidate (V : Program 2) (candidate input typ parameter : OTerm a
  apply InternalOriginalPairingOrderArithmeticProof.weakCases candidate input _ hbound
  · let A := InternalOriginalOrderSyntaxProof.ltF candidate input
    let xs : Fin 3 → OTerm alpha := ![candidate,input,parameter]
+   have hlt : Nonempty (Derivation body (A :: Delta) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
    have hl := binaryValue InternalLessThan.ltTest (.projection 0) (.projection 1) (suc z) candidate input xs
-     (InternalLessThanSupportProof.acceptOfLess candidate input ⟨Derivation.hypothesis List.mem_cons_self⟩)
+     (InternalLessThanSupportProof.acceptOfLess candidate input hlt)
      (projectionValue 0 xs) (projectionValue 1 xs)
    have hvalid := binaryValue V (.projection 0) (.projection 2) (suc z) candidate parameter xs
      (withHyp hv A) (projectionValue 0 xs) (projectionValue 2 xs)
@@ -78,6 +79,11 @@ theorem transitionCandidate (R V : Program 2) (candidate input typ parameter : O
    candidate (Fin.cons input (Fin.cons parameter Fin.elim0))
    (Fin.cons candidate (Fin.cons input (Fin.cons parameter Fin.elim0))) hc
  intro i
- exact Fin.cases hr (Fin.cases (projectionValue 0 _) (Fin.cases (projectionValue 1 _) (fun k => Fin.elim0 k))) i
+ refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun l => Fin.cases ?_ (fun x => Fin.elim0 x) l) k) i
+ · exact hr
+ · exact projectionValue 0 (Fin.cons input (Fin.cons parameter Fin.elim0))
+ · change Nonempty (Derivation body Delta (programGraph (.projection (1 : Fin 2)) parameter
+     (Fin.cons input (Fin.cons parameter Fin.elim0))))
+   exact projectionValue 1 (Fin.cons input (Fin.cons parameter Fin.elim0))
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherTransitionProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherTransitionProof

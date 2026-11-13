@@ -26,7 +26,7 @@ theorem atRawSubst {alpha beta : Type}
     (AtRaw raw).subst (fun a => emb (ts a)) = AtRaw (raw.subst ts) := by
   unfold AtRaw matrix
   rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,fields,OriginalContextInsertion.lengthGraph,OriginalContextInsertion.Below,InternalOriginalOrderSyntaxProof.orderSubst,graph1,graph2,programSubst,numeral,zSubst,
+  simp only [impSubst,conjunctionSubst,fields,OriginalContextInsertion.lengthGraph,OriginalContextInsertion.Below,InternalLessThan.strictLess,InternalQuotientComparisonSyntaxProof.orderSubst,graph1,graph2,programSubst,numeral,zSubst,
     consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem atRawRename {alpha beta : Type} 
@@ -46,7 +46,7 @@ theorem matrixWitness {alpha : Type} (input count index value : OTerm alpha) :
     cases a <;> rfl
   unfold matrix fields OriginalContextInsertion.lengthGraph OriginalContextInsertion.Below
   rw [he]
-  simp only [impSubst,conjunctionSubst,InternalOriginalOrderSyntaxProof.orderSubst,graph1,graph2,programSubst,
+  simp only [impSubst,conjunctionSubst,InternalLessThan.strictLess,InternalQuotientComparisonSyntaxProof.orderSubst,graph1,graph2,programSubst,
     consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
   rfl
 

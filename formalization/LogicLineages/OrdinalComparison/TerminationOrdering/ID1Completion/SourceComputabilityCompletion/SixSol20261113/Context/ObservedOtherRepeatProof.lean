@@ -25,12 +25,17 @@ theorem normalizerValue (R V : Program 2) (input fixed parameter : OTerm alpha)
    fixed (Fin.cons input (Fin.cons parameter Fin.elim0))
    (Fin.cons (suc input) (Fin.cons input (Fin.cons parameter Fin.elim0))) hrepeat
  intro i
- refine Fin.cases ?_ (Fin.cases (projectionValue 0 _) (Fin.cases (projectionValue 1 _) (fun k => Fin.elim0 k))) i
- apply compositionValue .succ (fun _ : Fin 1 => .projection (0 : Fin 2))
-   (suc input) (Fin.cons input (Fin.cons parameter Fin.elim0)) (Fin.cons input Fin.elim0)
-   (successorValue (Fin.cons input Fin.elim0))
- intro j
- obtain rfl := Fin.eq_zero j
- exact projectionValue 0 _
+ refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun l => Fin.cases ?_ (fun x => Fin.elim0 x) l) k) i
+ · apply compositionValue .succ (fun _ : Fin 1 => .projection (0 : Fin 2))
+     (suc input) (Fin.cons input (Fin.cons parameter Fin.elim0)) (Fin.cons input Fin.elim0)
+     (successorValue (Fin.cons input Fin.elim0))
+   intro j
+   obtain rfl := Fin.eq_zero j
+   exact projectionValue 0 (Fin.cons input (Fin.cons parameter Fin.elim0))
+ · exact projectionValue 0 (Fin.cons input (Fin.cons parameter Fin.elim0))
+ · change Nonempty (Derivation body Delta (programGraph (.projection (1 : Fin 2)) parameter
+     (Fin.cons input (Fin.cons parameter Fin.elim0))))
+   exact projectionValue 1 (Fin.cons input (Fin.cons parameter Fin.elim0))
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherRepeatProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherRepeatProof

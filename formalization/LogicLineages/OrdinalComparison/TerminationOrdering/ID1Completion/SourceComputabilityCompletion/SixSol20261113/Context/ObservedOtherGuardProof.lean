@@ -1,6 +1,7 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherMarksProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionGuardedIndexedProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionMinimumSupportProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherGuardProof
@@ -25,7 +26,7 @@ theorem observedValue (active previous : Program 2) (observer : Program 1)
  (ho : Nonempty (Derivation body Delta (graph1 observer mark output))) :
  Nonempty (Derivation body Delta (graph2
    (OriginalApplicationSidecarTransitionPipelineDefinitions.observed active observer previous) output input parameter)) := by
- let xs := Fin.cons input (Fin.cons parameter Fin.elim0)
+ let xs : Fin 2 → OTerm alpha := Fin.cons input (Fin.cons parameter Fin.elim0)
  have hc := sameAccept (.composition observer (fun _ : Fin 1 => previous))
    (.composition observer (fun _ : Fin 1 => .projection 0)) mark xs
    (unaryValue observer previous mark output xs ho hp)

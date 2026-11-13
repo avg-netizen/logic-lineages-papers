@@ -8,9 +8,11 @@ open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalTagArithmeticSyntaxProof (suc z eqn)
-open InternalOriginalOrderSyntaxProof (ltF orderRename sucRelabel)
+open InternalOriginalOrderSyntaxProof (ltF orderRename)
+open InternalTagArithmeticSyntaxProof (sucRelabel)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
-open InternalRawListRecursionSyntaxProof (consTermRename emptyRename)
+open InternalControlGraphSupportProof (emptyRename)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
 open InternalRecursionGraphStepSyntaxProof
 open InternalOriginalPairingOrderArithmeticProof (withHyp)
 open OriginalContextInsertionSyntaxProof (lengthRename)

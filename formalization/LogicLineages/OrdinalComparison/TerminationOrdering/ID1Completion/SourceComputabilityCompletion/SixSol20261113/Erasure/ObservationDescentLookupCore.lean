@@ -14,7 +14,8 @@ open InternalTagArithmeticSupportProof (symm)
 open InternalOriginalOrderSyntaxProof (ltF orderRename)
 open InternalSquareRootArithmeticSupportProof (orderRight orderLeft strictTrans)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
-open InternalRawListRecursionSyntaxProof (consTermRename emptyRename)
+open InternalControlGraphSupportProof (emptyRename)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
 open InternalRecursionGraphStepSyntaxProof
 open InternalListCodecSupportProof (consValue)
 open ObservationDescentLookupDefinitions ObservationDescentLookupSyntaxProof ObservationDescentLookupBindingProof

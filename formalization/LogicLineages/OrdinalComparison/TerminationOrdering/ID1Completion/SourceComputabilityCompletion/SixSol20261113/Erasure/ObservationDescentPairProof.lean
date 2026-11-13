@@ -9,14 +9,16 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
-open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalRecursionClosureLogicProof (closedApply)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open InternalTagArithmeticSyntaxProof (suc z eqn)
-open InternalOriginalOrderSyntaxProof (ltF orderRename sucRelabel)
+open InternalOriginalOrderSyntaxProof (ltF orderRename)
+open InternalTagArithmeticSyntaxProof (sucRelabel)
 open InternalUnpairReverseBoundsArithmeticProof (weakTrans)
 open InternalRecursionGraphStepSyntaxProof
-open InternalRawListRecursionSyntaxProof (consTermRename emptyRename)
+open InternalControlGraphSupportProof (emptyRename)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
 open InternalPairingSumBounds (weakBound)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
@@ -35,7 +37,7 @@ theorem leftBound (input selected : OTerm alpha)
  Nonempty (Derivation body Delta (weakBound selected input)) := by
  apply programCases InternalUnpair.right (Fin.cons input Fin.elim0) _
  intro beta j Theta other hj ho
- simp only [weakBound,orderRename,sucRelabel]
+ simp only [weakBound,InternalLessThan.strictLess,orderRename,sucRelabel]
  simp only [consTermRename,emptyRename] at ho
  have h' := renameInto h j Theta hj
  simp only [graph1,programRename,consTermRename,emptyRename] at h'
@@ -48,7 +50,7 @@ theorem rightBound (input selected : OTerm alpha)
  Nonempty (Derivation body Delta (weakBound selected input)) := by
  apply programCases InternalUnpair.left (Fin.cons input Fin.elim0) _
  intro beta j Theta other hj ho
- simp only [weakBound,orderRename,sucRelabel]
+ simp only [weakBound,InternalLessThan.strictLess,orderRename,sucRelabel]
  simp only [consTermRename,emptyRename] at ho
  have h' := renameInto h j Theta hj
  simp only [graph1,programRename,consTermRename,emptyRename] at h'

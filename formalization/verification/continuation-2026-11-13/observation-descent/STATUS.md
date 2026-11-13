@@ -1,0 +1,5 @@
+# Checked actual observation child-code descent
+
+Four exact internal bounds hold: original finite unpair selectors are weakly bounded; actual in-range typed-list entries have strictly smaller child codes; literal lambda/application child selectors under the actual evaluator envelope descend strictly; actual stored ordinary/numbered list entries also descend. Original codecs/paths/lookup are retained, with no native membership oracle or desired rank equation. Independent audit found no mathematical scope defect. IMPORTANT: the frozen comment conflating zero root observation with admitted full evaluator output is corrected in ERRATUM-CODE-ZERO.md. No admitted full-E-zero example or evaluator-rank calibration is claimed.
+
+Exact native evidence verifies 2,234 source-matched modules, standard axioms and zero errors. Register unchanged:175 checked,2 inherited,12 pending. No full-root or remote CI claim. Sources and compact evidence are published; reconstructible native snapshots remain local.

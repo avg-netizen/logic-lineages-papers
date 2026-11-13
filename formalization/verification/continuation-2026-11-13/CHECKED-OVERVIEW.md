@@ -107,3 +107,8 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 - [Arbitrary parameterized weighted-sort conservation](sort-weighted/STATUS.md), not yet rank determinacy.
 - [Bounded all-position scan introduction](observed-all-tests/STATUS.md).
 - [SAME all-position acceptance and once-minimum agreement](observed-normalization/STATUS.md), not full-fold cross-input coherence.
+
+## Literal dispatcher and child-code descent
+
+- [Whole-Line dispatcher](history-dispatcher/STATUS.md): three exact targets and463 source-matched modules verified.
+- [Actual observation child-code descent](observation-descent/STATUS.md): four exact internal targets verified. See the explicit [code-zero prose correction](observation-descent/ERRATUM-CODE-ZERO.md); no rank calibration is yet claimed.

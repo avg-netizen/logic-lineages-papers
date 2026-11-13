@@ -1,5 +1,6 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherGuardProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherPipelineGenericProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherPipelineProof
@@ -53,23 +54,8 @@ theorem priorValueAtMarks (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W 
    conditionFromDomain q H G W P input parameter hd
  have hh := OriginalAllPositionMinimumSupportProof.minimumHit q H G W P input output parameter hd hm
  have hraw := ObservedOtherGuardProof.initialValue q H G W P input output parameter (marks 0) hd hm (hmarks 0)
- have ho := ObservedOtherMarksProof.acceptedMarks p H G W P input output parameter (marks 1) hd hh
- have hn := ObservedOtherGuardProof.observedValue active raw.oldRepresentative OriginalFunctionNeutrality.mark
-   input output parameter (marks 1) hactive hraw (hmarks 1)
-   (iffForward (andLeft (andRight (andRight ho))) (hmarks 1))
- have ho := ObservedOtherMarksProof.acceptedMarks p H G W P input output parameter (marks 2) hd hh
- have hs := ObservedOtherGuardProof.observedValue active _ OriginalConstructorShape.mark
-   input output parameter (marks 2) hactive hn (hmarks 2) (iffForward (andLeft ho) (hmarks 2))
- have ho := ObservedOtherMarksProof.acceptedMarks p H G W P input output parameter (marks 3) hd hh
- have hv := ObservedOtherGuardProof.observedValue active _ OriginalVariableRepresentative.variableMark
-   input output parameter (marks 3) hactive hs (hmarks 3) (iffForward (andLeft (andRight ho)) (hmarks 3))
- have ho := ObservedOtherMarksProof.acceptedMarks p H G W P input output parameter (marks 4) hd hh
- have hp := ObservedOtherGuardProof.observedValue active _ BottomSpineMeasure.measure
-   input output parameter (marks 4) hactive hv (hmarks 4)
-   (iffForward (andLeft (andRight (andRight (andRight ho)))) (hmarks 4))
- have ho := ObservedOtherMarksProof.acceptedMarks p H G W P input output parameter (marks 5) hd hh
- exact ObservedOtherGuardProof.observedValue active _ BottomRepresentative.bottomTest
-   input output parameter (marks 5) hactive hp (hmarks 5)
-   (iffForward (andRight (andRight (andRight (andRight ho)))) (hmarks 5))
+ exact ObservedOtherPipelineGenericProof.pipeline raw window input output parameter marks hactive hraw
+   hmarks (fun i => ObservedOtherMarksProof.acceptedMarks p H G W P input output parameter (marks i) hd hh)
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherPipelineProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherPipelineProof

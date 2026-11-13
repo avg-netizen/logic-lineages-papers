@@ -33,7 +33,7 @@ theorem priorValue (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Progr
  have hv : ∀ i, Nonempty (Derivation body Theta
      (graph1 (ObservedOtherPipelineProof.observers i) (values i) (input.relabel j))) := by
    intro i
-   simpa only [consTermRename,emptyRename] using hg i
+   simpa only [consTermRename,InternalControlGraphSupportProof.emptyRename] using hg i
  exact ObservedOtherPipelineProof.priorValueAtMarks p H G W P
    (input.relabel j) (output.relabel j) (parameter.relabel j) values hd' hm' hv
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.ObservedOtherPriorProof

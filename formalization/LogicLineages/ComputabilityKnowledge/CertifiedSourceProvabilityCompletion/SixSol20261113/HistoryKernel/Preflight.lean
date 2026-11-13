@@ -1,0 +1,12 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.Preflight
+#check Targets.StateCodecTotal
+#check Targets.NativeKernel
+#check Targets.InternalEqualSound
+#check Targets.InternalEqualComplete
+#check Targets.InternalStepSuffix
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.Preflight
