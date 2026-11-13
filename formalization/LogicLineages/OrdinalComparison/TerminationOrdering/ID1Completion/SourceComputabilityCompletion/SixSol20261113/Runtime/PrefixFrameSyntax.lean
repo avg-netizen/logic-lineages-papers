@@ -61,6 +61,7 @@ theorem bodyWitness (R : Program 2) (agendaPrefix count produced suffix old work
  simp only [geometrySubst,graph2,programSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr,
    Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,Matrix.cons_val_three,
    Matrix.head_cons,Matrix.tail_cons]
+ rfl
 theorem frameApply (R : Program 2) (agendaPrefix count produced suffix old work input joined output : OTerm alpha)
  (hf : Nonempty (Derivation body Delta (PrefixFrame R agendaPrefix count produced)))
  (hg : Nonempty (Derivation body Delta (geometry agendaPrefix produced suffix old work input joined output))) :

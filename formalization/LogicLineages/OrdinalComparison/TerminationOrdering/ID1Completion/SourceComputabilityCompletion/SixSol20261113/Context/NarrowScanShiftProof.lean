@@ -21,8 +21,10 @@ open InternalListCodecSupportProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open OriginalHereditaryAnnotatedExpansion OriginalHereditaryInternalAnnotatedScanDefinitions
 open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
-open NarrowScanCellProof
+open NarrowScanCellProof NarrowScanCellRecoverProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+attribute [local irreducible] programGraph OriginalHereditaryAnnotatedExpansion.decorate
 
 def shiftedCell : Program 6 := .composition decorate
  ![.projection 0,.projection 2,.projection 3,.projection 4,

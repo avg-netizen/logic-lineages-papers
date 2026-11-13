@@ -23,6 +23,8 @@ open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
 open OriginalContextInsertion (lengthGraph length)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
+attribute [local irreducible] programGraph OriginalHereditaryAnnotatedExpansion.decorate OriginalHereditaryAnnotatedExpansion.scan
+
 theorem scanFromAll (role typ raw jobs output count : OTerm alpha)
  (ha : Nonempty (Derivation body Delta (graph4 decorateAll output role typ raw jobs)))
  (hl : Nonempty (Derivation body Delta (lengthGraph count jobs))) :

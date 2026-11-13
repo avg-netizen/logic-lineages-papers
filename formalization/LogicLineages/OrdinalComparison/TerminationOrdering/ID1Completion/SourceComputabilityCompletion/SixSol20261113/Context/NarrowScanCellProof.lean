@@ -1,4 +1,6 @@
 module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.GenericCellCompositionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowScanCellRecoverProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelSupportProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalAnnotatedScanLengthTargets
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSupportProof
@@ -22,38 +24,13 @@ open OriginalHereditaryAnnotatedExpansion OriginalHereditaryInternalAnnotatedSca
 open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
-theorem cellRecover (count role typ raw jobs mark rawChild : OTerm alpha)
- (hm : Nonempty (Derivation body Delta (graph5 cell mark count role typ raw jobs)))
- (hl : Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup rawChild count jobs))) :
- Nonempty (Derivation body Delta (graph5 decorate mark count role typ raw rawChild)) := by
- let xs : Fin 5 → OTerm alpha := Fin.cons count (Fin.cons role (Fin.cons typ (Fin.cons raw (Fin.cons jobs Fin.elim0))))
- have hlook : Nonempty (Derivation body Delta
-   (programGraph (.composition InternalRawListRecursion.lookup ![.projection 0,.projection 4]) rawChild xs)) :=
-   binaryValue InternalRawListRecursion.lookup (.projection 0) (.projection 4) rawChild count jobs xs
-     hl (projectionValue 0 xs) (projectionValue 4 xs)
- apply compositionRecover decorate ![.projection 0,.projection 1,.projection 2,.projection 3,.composition InternalRawListRecursion.lookup ![.projection 0,.projection 4] ] mark xs
-   (Fin.cons count (Fin.cons role (Fin.cons typ (Fin.cons raw (Fin.cons rawChild Fin.elim0))))) hm
- intro i
- exact Fin.cases (projectionValue 0 xs) (Fin.cases (projectionValue 1 xs)
-   (Fin.cases (projectionValue 2 xs) (Fin.cases (projectionValue 3 xs)
-     (Fin.cases hlook (fun k => Fin.elim0 k))))) i
+attribute [local irreducible] programGraph OriginalHereditaryAnnotatedExpansion.decorate
 
 theorem cellValue (count role typ raw jobs mark rawChild : OTerm alpha)
  (hm : Nonempty (Derivation body Delta (graph5 decorate mark count role typ raw rawChild)))
  (hl : Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup rawChild count jobs))) :
- Nonempty (Derivation body Delta (graph5 cell mark count role typ raw jobs)) := by
- let xs : Fin 5 → OTerm alpha := Fin.cons count (Fin.cons role (Fin.cons typ (Fin.cons raw (Fin.cons jobs Fin.elim0))))
- have hlook : Nonempty (Derivation body Delta
-   (programGraph (.composition InternalRawListRecursion.lookup ![.projection 0,.projection 4]) rawChild xs)) :=
-   binaryValue InternalRawListRecursion.lookup (.projection 0) (.projection 4) rawChild count jobs xs
-     hl (projectionValue 0 xs) (projectionValue 4 xs)
- apply compositionValue decorate ![.projection 0,.projection 1,.projection 2,.projection 3,.composition InternalRawListRecursion.lookup ![.projection 0,.projection 4] ] mark xs
-   (Fin.cons count (Fin.cons role (Fin.cons typ (Fin.cons raw (Fin.cons rawChild Fin.elim0))))) hm
- intro i
- exact Fin.cases (projectionValue 0 xs) (Fin.cases (projectionValue 1 xs)
-   (Fin.cases (projectionValue 2 xs) (Fin.cases (projectionValue 3 xs)
-     (Fin.cases hlook (fun k => Fin.elim0 k))))) i
-
+ Nonempty (Derivation body Delta (graph5 cell mark count role typ raw jobs)) :=
+  GenericCellCompositionProof.value decorate count role typ raw jobs mark rawChild hm hl
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowScanCellProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.NarrowScanCellProof

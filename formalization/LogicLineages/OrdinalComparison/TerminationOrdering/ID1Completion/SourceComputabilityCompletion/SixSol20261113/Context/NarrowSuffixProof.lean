@@ -14,7 +14,7 @@ open InternalTagArithmeticSyntaxProof (z zRelabel)
 open InternalApplicationStepPeelSupportProof (andIntro)
 open InternalListCodecSupportProof (consGraph consGraphRename)
 open InternalListInduction InternalListInductionSyntaxProof InternalListInductionProof
-open AnnotationSuffixSyntaxProof AnnotationSuffixCoreProof NarrowSuffixQueryProof
+open AnnotationSuffixSyntaxProof NarrowSuffixCoreProof NarrowSuffixQueryProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph InternalListMap.map OriginalHereditaryAnnotatedExpansion.scan
   InternalApplicationValidityStackAppend.append OriginalContextInsertion.length InternalListCodec.consCode

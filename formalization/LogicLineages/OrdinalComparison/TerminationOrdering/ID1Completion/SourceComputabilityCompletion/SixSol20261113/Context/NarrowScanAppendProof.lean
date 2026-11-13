@@ -24,6 +24,8 @@ open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
 open NarrowScanShiftProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
+attribute [local irreducible] programGraph OriginalHereditaryAnnotatedExpansion.decorate OriginalHereditaryAnnotatedExpansion.scan
+
 theorem scanAppendAtLookup (count previous role typ raw jobs mark singleton output rawChild : OTerm alpha)
  (hp : Nonempty (Derivation body Delta (graph5 scan previous count role typ raw jobs)))
  (hs : Nonempty (Derivation body Delta (graph5 scan output (suc count) role typ raw jobs)))
@@ -31,6 +33,7 @@ theorem scanAppendAtLookup (count previous role typ raw jobs mark singleton outp
  (hc : Nonempty (Derivation body Delta (consGraph singleton mark z)))
  (hl : Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup rawChild count jobs))) :
  Nonempty (Derivation body Delta (graph2 InternalApplicationValidityStackAppend.append output previous singleton)) := by
+ rw [graph5, OriginalHereditaryAnnotatedExpansion.scan] at hp hs
  have ht := recursionRecover (OriginalRawSyntaxTransport.constant 4 0) scanStep output previous count
    (Fin.cons role (Fin.cons typ (Fin.cons raw (Fin.cons jobs Fin.elim0)))) hp hs
  let xs : Fin 6 → OTerm alpha := Fin.cons count (Fin.cons previous (Fin.cons role (Fin.cons typ (Fin.cons raw (Fin.cons jobs Fin.elim0)))))

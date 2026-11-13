@@ -4,7 +4,8 @@ The user explicitly resumes public Lean formalization after additional work.
 Start from verified remote checkpoint `0dca825a0540a7608a276e377de7fef66c08bead`.
 Preserve accepted/frozen mathematics and all prior drafts. Publish source-first
 non-force checkpoints frequently, with all current work saved by 17:40 UTC on
-13 November 2026 and at least hourly thereafter. Stop proof work at 21:40 UTC;
+13 November 2026. Save checkpoints at least every 30 minutes throughout the
+continuation, and sooner after substantial checked results. Stop proof work at 21:40 UTC;
 preserve and label unfinished drafts, verify remote publication, and do not
 resume automatically. No main merge, Fable, or private research is authorized.
 

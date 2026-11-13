@@ -103,7 +103,7 @@ theorem consCore (arity : Nat)
   rw [AnnotationSuffixSyntaxProof.rowRename] at hi'
   have hf' := renameInto hf j Theta hj
   rw [fieldsRename] at hf'
-  exact AnnotationSuffixStepProof.atValues arity (suffix.relabel j) (offset.relabel j) (typ.relabel j)
+  exact NarrowSuffixStepProof.atValues arity (suffix.relabel j) (offset.relabel j) (typ.relabel j)
     (raw.relabel j) (front.relabel j) (jobs.relabel j) (annotatedFront.relabel j) (count.relabel j)
     (full.relabel j) (mapped.relabel j) (head.relabel j) (tail.relabel j) (ys 0) (ys 1) (ys 2)
     (ys 3) (ys 4) (ys 5) (ys 6) (ys 7) hc' hi' hf' ht hh hm hsr hsa hg hn hra
