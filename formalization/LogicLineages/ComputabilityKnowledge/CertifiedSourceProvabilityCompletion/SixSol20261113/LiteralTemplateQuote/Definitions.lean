@@ -18,6 +18,6 @@ def templateQuote {k : Nat} : Term k → Program k
  | .add t u => prependToken 3 (applyTwo HistoryAppend.append (templateQuote t) (templateQuote u))
  | .mul t u => prependToken 4 (applyTwo HistoryAppend.append (templateQuote t) (templateQuote u))
  | .universalFunction t => prependToken 5 (templateQuote t)
-def quoteCall {k ctx : Nat} (tag : Nat) (values : Vector (Term ctx) k) : Term ctx :=
+def quoteCall {k ctx : Nat} (tag : Nat) (values : List.Vector (Term ctx) k) : Term ctx :=
  call tag values
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralTemplateQuote

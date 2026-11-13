@@ -5,7 +5,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof List.Vector
 /-- All runtime vectors; exact ORIGINAL syntax after numeral substitution,
 not a numeral for the semantic value of the template. -/
-def NativeCalibration : Prop := ∀ k (t : Term k) (values : Vector Nat k),
+def NativeCalibration : Prop := ∀ k (t : Term k) (values : List.Vector Nat k),
  evaluate (templateQuote t) values = Encodable.encode
   (GorbowTermPrefixCode.encode (GorbowSubstitution.substitute
    (fun i => (Term.numeral (values.get i) : Term 0)) t))
@@ -18,7 +18,7 @@ def InternalScan : Prop := ∀ k (t : Term k) n (p : Program n)
  (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
  (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
  (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
- ∀ ctx (values : Vector (Term ctx) k) (binder rest : Term ctx),
+ ∀ ctx (values : List.Vector (Term ctx) k) (binder rest : Term ctx),
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (LiteralSyntaxScan.scanCall stag
    (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag binder) rest)
@@ -32,7 +32,7 @@ def InternalContinuation : Prop := ∀ k (t : Term k) n (p : Program n)
  (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
  (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩ →
  (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
- ∀ ctx (values : Vector (Term ctx) k) (binder rest suffix : Term ctx),
+ ∀ ctx (values : List.Vector (Term ctx) k) (binder rest suffix : Term ctx),
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (LiteralSyntaxScan.scanCall stag
    (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag binder) rest)
