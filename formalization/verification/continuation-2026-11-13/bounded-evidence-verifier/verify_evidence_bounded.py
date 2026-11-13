@@ -181,15 +181,22 @@ def main():
                 if log and (ROOT/log).is_file(): log_paths.add(log)
         # Never retain all receipts, failed receipts, or their redundant module history.
     log_count = 0
+    selected_logs = {row.get('log') for _, row, _ in selected.values()}
+    archived_log_digests = {}
     with gzip_text(out/'NATIVE-LOGS.jsonl.gz') as archive:
         for log in sorted(log_paths):
             # Full normalized text, one readable JSONL record per log. Same read_text
             # semantics as legacy; peak memory is one log, not the whole history.
-            jsonline(archive, {'path':log, 'text':(ROOT/log).read_text()}); log_count += 1
+            text = (ROOT/log).read_text()
+            jsonline(archive, {'path':log, 'text':text}); log_count += 1
+            if log in selected_logs:
+                archived_log_digests[log] = hashlib.sha256(text.encode()).hexdigest()
     rows, axioms, audits = [], {}, []
     for module in order:
         source = checker.source_for(module)
         digest = sha(source)
+        if digest != digests[module]:
+            errors.append('Source changed since receipt selection: '+module)
         if module not in selected:
             errors.append('No source-matched successful native row: '+module)
             rows.append({'module':module,'source_sha256':digest,'status':'pending'}); continue
@@ -209,6 +216,8 @@ def main():
         log = row.get('log')
         if log not in log_paths: errors.append('Missing native log: '+module)
         text = (ROOT/log).read_text() if log in log_paths else ''
+        if log in archived_log_digests and hashlib.sha256(text.encode()).hexdigest() != archived_log_digests[log]:
+            errors.append('Selected native log changed since archival: '+module)
         parsed = parse_axioms(text); axioms.update(parsed)
         for name, ax in parsed.items():
             if set(ax)-ALLOWED: errors.append('Forbidden axioms: '+name+': '+str(ax))
@@ -250,7 +259,7 @@ def main():
               'direct_external_imports':external,'external_cache_claim':'not reverified by this script; use separate pinned restoration evidence',
               'checker_sha256':sha(ROOT/'scripts/check.py'),'verifier_sha256':sha(Path(__file__)),'errors':errors,'unreadable_receipts':unreadable,
               'full_root_build_claimed':False,'remote_ci_pass_claimed':False,
-              'all_readable_failed_receipts_preserved':True,'all_receipts_readable':not unreadable,'snapshot_warning':'Concurrent sources/artifacts/receipts may change; source hashes rechecked. Unlike legacy receipt-loop rereads, logs are captured once in sorted path order after receipts, and selected logs reread during checks. Run quiescent for exact capture equivalence.'}
+              'all_readable_failed_receipts_preserved':True,'all_receipts_readable':not unreadable,'snapshot_warning':'Concurrent sources/artifacts/receipts may change; source hashes rechecked. Unlike legacy receipt-loop rereads, logs are captured once in sorted path order after receipts, and selected logs reread during checks. Initial/current sources and selected archived/checked logs are compared; changes fail closed. Run quiescent for exact capture equivalence.'}
     write_json(out/'REPORT.json',report)
     print(json.dumps({'report':str((out/'REPORT.json').relative_to(ROOT)),'status':report['status'],
                       'modules':len(order),'errors':len(errors)},indent=2))
