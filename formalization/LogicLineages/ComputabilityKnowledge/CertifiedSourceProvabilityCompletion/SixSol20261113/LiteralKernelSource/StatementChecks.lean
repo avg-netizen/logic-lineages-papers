@@ -1,0 +1,9 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralKernelSource.SourceProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralKernelSource.StatementChecks
+theorem sameSourceLiteralKernel : Targets.SameSourceLiteralKernel := SourceProof.sameSourceLiteralKernel
+#print axioms sameSourceLiteralKernel
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralKernelSource.StatementChecks

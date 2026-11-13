@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.UnsortedChildProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.UnsortedChildStatementChecks
+theorem exactEntry : UnsortedChildTargets.ActualSortedEntryBound := UnsortedChildProof.actualSortedEntryBound
+theorem exactChild : UnsortedChildTargets.ActualUnsortedChildDescent := UnsortedChildProof.actualUnsortedChildDescent
+#print axioms exactEntry
+#print axioms exactChild
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.UnsortedChildStatementChecks

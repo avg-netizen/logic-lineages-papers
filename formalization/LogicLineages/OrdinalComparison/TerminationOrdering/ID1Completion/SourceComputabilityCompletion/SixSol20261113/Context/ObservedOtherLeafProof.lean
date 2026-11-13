@@ -74,15 +74,18 @@ theorem atMinima (p : GlobalSourcePackage.Inputs) (H G : Program 1) (W : Program
    body alpha Delta left right leftMinimum rightMinimum parameter
  obtain ⟨hargs⟩ := andIntro hd (andIntro ha (andIntro hml hmr))
  have he := Derivation.implicationElimination hcoh hargs
+ rw [equalEqn] at he ⊢
  exact ⟨InternalTagArithmeticSupportProof.trans hel
    (InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm her))⟩
 
 theorem actualOtherLeafEquality : ObservedOtherLeafTargets.ActualOtherLeafEquality := by
- intro p H G W P body alpha Delta left right leftOut rightOut parameter hd ha hotL hotR hl hr
+ intro p H G W P body alpha Delta left right leftOut rightOut parameter
+ dsimp only
+ intro hd ha hotL hotR hl hr
  let prepared := Erasure.ObservedPut.prepared p H G W
  let q := ObservedNormalizationTargets.preminimum p H G W
  let Min := (OriginalClassContextAllPositionSelection.inputs q H G W P).base.oldRepresentative
- let qs : Fin 2 → Program 3 := ![.composition Min ![.projection 0,.projection 2],.composition Min ![.projection 1,.projection 2]]
+ let qs : Fin 2 → Program 3 := ![.composition Min ![.projection 0,.projection 2],.composition Min ![.projection 1,.projection 2] ]
  let xs : Fin 3 → OTerm alpha := ![left,right,parameter]
  apply OriginalRawSyntaxTransportInternalParserSupportProof.programsCases qs xs _
  intro beta j Theta values hj hg
@@ -102,7 +105,8 @@ theorem actualOtherLeafEquality : ObservedOtherLeafTargets.ActualOtherLeafEquali
    InternalOriginalStepGuardSupportProof.oneRename] at ha'
  simp only [graph1Rename,InternalOriginalStepGuardSupportProof.oneRename] at hotL' hotR'
  rw [graph2Rename] at hl' hr'
- change Nonempty (Derivation body Theta (equal (leftOut.relabel j) (rightOut.relabel j)))
+ rw [equalEqn,eqnRelabel]
+ rw [← equalEqn]
  have hml := binaryRecover Min (.projection 0) (.projection 2) (values 0) (left.relabel j) (parameter.relabel j)
    xx (hg 0) (projectionValue 0 xx) (projectionValue 2 xx)
  have hmr := binaryRecover Min (.projection 1) (.projection 2) (values 1) (right.relabel j) (parameter.relabel j)

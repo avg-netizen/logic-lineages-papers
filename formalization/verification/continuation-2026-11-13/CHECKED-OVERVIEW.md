@@ -116,3 +116,7 @@ The next content task is actual one-step and finite-chain erasure congruence of 
 ## Literal kernel step closure
 
 [Actual literal history kernel](history-kernel/STATUS.md) now has all-vector native calibration and an internal successful-step suffix law. The upcoming new SAME-source tuple installation is a separate construction, not an identity with the former opaque witness or full HB completion.
+
+## Inverse children, leaf coherence, and literal SAME installation
+
+New exact focused gates pass for [inverse children](evaluator-children/STATUS.md), [OTHER leaf coherence](observed-other-leaf/STATUS.md), [identity sum bounds](list-sum-bound/STATUS.md), [unsorted child descent](unsorted-child/STATUS.md), and [explicit literal SAME source](literal-kernel-source/STATUS.md). Each status distinguishes completed evidence packaging from pending packaging and retains the full canonical Object/rank/HB gaps.
