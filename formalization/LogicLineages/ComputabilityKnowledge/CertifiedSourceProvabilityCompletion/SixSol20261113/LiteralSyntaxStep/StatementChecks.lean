@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.NativeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.ExpansionStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.StepStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.StatementChecks
+theorem exactNativeExpand : Targets.NativeExpand := NativeProof.nativeExpand
+theorem exactNativeStep : Targets.NativeStep := NativeProof.nativeStep
+theorem exactBinary : Targets.InternalFormulaBinary := ExpansionProof.internalFormulaBinary
+theorem exactQuantifier : Targets.InternalQuantifier := ExpansionProof.internalQuantifier
+theorem exactNone : Targets.InternalNone := StepProof.internalNone
+theorem exactEmpty : Targets.InternalEmpty := StepProof.internalEmpty
+theorem exactPrepend : Targets.InternalPrepend := StepProof.internalPrepend
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.StatementChecks
