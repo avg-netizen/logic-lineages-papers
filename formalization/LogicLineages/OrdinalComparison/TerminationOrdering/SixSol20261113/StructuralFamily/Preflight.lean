@@ -1,0 +1,5 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.Targets
+#check LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.Targets.ConcreteFamilyCoherent
+#check LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.Targets.ConcreteScannerFailure
+#check LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.Targets.GenericScannerFailure

@@ -93,9 +93,9 @@ theorem openFusion : SixSol20261112.HistoryMachine.Targets.OpenFusion := by
   intro n p tag kernel ht ctx s state index fuel
   let T := GorbowPRNumeralCalculation.Theory p
   let phi := fusionTemplate tag s state index fuel
+  obtain ⟨hz⟩ := Equations.zero p tag kernel ht (iterationCall tag s state index fuel) index fuel
   have hb : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
     rw [show phi = fusionTemplate tag s state index fuel from rfl,baseInstance]
-    obtain ⟨hz⟩ := Equations.zero p tag kernel ht (iterationCall tag s state index fuel) index fuel
     have hleft := countCongruence tag (.add s .zero) s state index fuel
       (Derivation.arithmetic (A := T) (.addZero s))
     exact Logic.trans _ _ _ hleft (Support.equalitySymmetry _ _ hz)
