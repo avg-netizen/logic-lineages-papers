@@ -46,7 +46,7 @@ theorem selectSuccessor {n ctx : Nat} (p : Program n) tag
   have hleftp := localTrans _ _ _ (testCongruence tag (liftTerm test) (.succ (.var 0)) (.succ (liftTerm a)) (.succ (liftTerm b)) hh) (.base hlp)
   have hrightp := localTrans _ _ _ (testCongruence tag (liftTerm test) (.succ (.var 0)) (liftTerm a) (liftTerm b) hh) (.base hrp)
   have hp : Derivation T (.imp H (GorbowPACore.weaken (commutes tag test a b))) := by
-    simpa only [GorbowPACore.weaken,substCommutes,commutes,liftTerm,renameTerm,substitute,Fin.cases_zero] using
+    simpa only [GorbowPACore.weaken,substCommutes,commutes,substituteFormula,substSelect,selectCall,Logic.substCall,List.Vector.map_cons,List.Vector.map_nil,liftTerm,renameTerm,substitute,Fin.cases_zero] using
       Hilbert.Local.finish (Hilbert.Local.discharge
         (localTrans _ _ _ hleftp (HistoryOrder.StepProof.localSym _ _ (localUnary (.succ (.var 0)) _ _ hrightp))))
   obtain ⟨hp⟩ := HBQuantifier.existentialElimination T H (commutes tag test a b) ⟨hp⟩

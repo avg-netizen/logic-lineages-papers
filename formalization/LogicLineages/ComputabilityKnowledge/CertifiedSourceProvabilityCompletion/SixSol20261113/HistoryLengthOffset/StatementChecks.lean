@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthOffset.NativeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthOffset.OffsetProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthOffset.StatementChecks
+theorem exactNative : Targets.NativeLength := NativeProof.nativeLength
+theorem exactNil : Targets.InternalLengthNil := EquationsProof.internalLengthNil
+theorem exactCons : Targets.InternalLengthCons := ConsProof.internalLengthCons
+theorem exactOffset : Targets.InternalRightLookupOffset := OffsetProof.internalRightLookupOffset
+#print axioms exactNative
+#print axioms exactNil
+#print axioms exactCons
+#print axioms exactOffset
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthOffset.StatementChecks

@@ -35,7 +35,7 @@ theorem countOne {n ctx : Nat} (p : Program n) tag ctag
   have he0 := testCongruence (G := []) (stag tag) _ (.succ pv) (countCall tag .zero code) (.succ (countCall tag .zero code)) (.base hdpos)
   obtain ⟨hcZ⟩ := countZero p tag ht code
   obtain ⟨htZ⟩ := countZero p tag ht tail
-  have hzeros := localTrans _ _ _ (.base hcZ) (.base (Support.equalitySymmetry _ _ htZ))
+  have hzeros := localTrans (gamma := []) _ _ _ (.base hcZ) (.base (Support.equalitySymmetry _ _ htZ))
   exact ⟨Hilbert.Local.finish (localTrans _ _ _ (.base he)
     (localTrans _ _ _ he0 (localTrans _ _ _ (.base hsel) (localUnary (.succ (.var 0)) _ _ hzeros))))⟩
 
@@ -59,7 +59,7 @@ theorem countCons {n ctx : Nat} (p : Program n) tag ctag
   obtain ⟨hl⟩ := countSuccessor p tag ht (.succ i) code
   obtain ⟨hr⟩ := countSuccessor p tag ht i b
   obtain ⟨hdrop⟩ := HistoryLookup.DropProof.dropCons p (dtag tag) ctag hd hc i a b
-  have htest := testCongruence (stag tag) _ _ (countCall tag (.succ i) code) (.succ (countCall tag (.succ i) code)) (.base hdrop)
+  have htest := testCongruence (G := [phi]) (stag tag) _ _ (countCall tag (.succ i) code) (.succ (countCall tag (.succ i) code)) (.base hdrop)
   have hvalues := selectValues (stag tag) (HistoryLookup.DropEquationsProof.dropCall (dtag tag) i b)
     _ (.succ old) _ (.succ (.succ old)) ih (localUnary (.succ (.var 0)) _ _ ih)
   obtain ⟨hcomm⟩ := selectSuccessor p (stag tag) hs (HistoryLookup.DropEquationsProof.dropCall (dtag tag) i b) old (.succ old)
