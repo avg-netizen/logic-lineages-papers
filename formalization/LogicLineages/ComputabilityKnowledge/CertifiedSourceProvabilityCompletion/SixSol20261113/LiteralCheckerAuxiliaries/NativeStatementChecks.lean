@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.NativeProof
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.NativeStatementChecks
+theorem certificateCodecTotal : Targets.CertificateCodecTotal := CodecProof.certificateCodecTotal
+theorem nativeAuxiliaries : Targets.NativeAuxiliaries := NativeProof.nativeAuxiliaries
+#print axioms certificateCodecTotal
+#print axioms nativeAuxiliaries
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralCheckerAuxiliaries.NativeStatementChecks
