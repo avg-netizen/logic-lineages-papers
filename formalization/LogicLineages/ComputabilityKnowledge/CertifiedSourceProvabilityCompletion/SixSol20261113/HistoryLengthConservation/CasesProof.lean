@@ -1,0 +1,133 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthConservation.BoundedProof
+
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthConservation.CasesProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
+open HistoryLengthOffset SupportProof NilProof
+open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport EquationsProof BoundedProof
+open HistoryIteratorSuffix.WitnessProof
+
+def phase {ctx : Nat} (step : Bool) (itag ltag  ptag : Nat) (count left  index fuel : Term ctx) : Formula ctx :=
+  if step then .imp (allBounded itag ltag  ptag count  index fuel) (bounded itag ltag  ptag (.succ count) left  index fuel)
+  else bounded itag ltag  ptag .zero left  index fuel
+
+theorem substPhase {m n : Nat} (sub : Fin m → Term n) step itag ltag  ptag (count left  index fuel : Term m) :
+    substituteFormula sub (phase step itag ltag  ptag count left  index fuel)=
+      phase step itag ltag  ptag (substitute sub count) (substitute sub left)  (substitute sub index) (substitute sub fuel) := by
+  cases step <;> simp only [phase,Bool.false_eq_true,if_false,if_true,substituteFormula,substAll,substBounded,substitute]
+theorem weakenPhase {ctx : Nat} step itag ltag  ptag (count left  index fuel : Term ctx) :
+    GorbowPACore.weaken (phase step itag ltag  ptag count left  index fuel)=
+      phase step itag ltag  ptag (liftTerm count) (liftTerm left)  (liftTerm index) (liftTerm fuel) := by
+  rw [GorbowPACore.weaken,substPhase]
+  rfl
+theorem phaseAt {ctx : Nat} step itag ltag  ptag (count left  index fuel : Term ctx) :
+    GorbowStandardInstances.instantiate (phase step itag ltag  ptag (liftTerm count) (.var 0)  (liftTerm index) (liftTerm fuel)) left =
+      phase step itag ltag  ptag count left  index fuel := by
+  simp only [GorbowStandardInstances.instantiate,substPhase,substitute,liftTerm,Support.shiftCancel,Fin.cases_zero]
+noncomputable def transport {T : Sentence → Prop} {ctx : Nat} step itag ltag  ptag (count a b  index fuel : Term ctx) :
+    Derivation T (.imp (.equal a b) (.imp (phase step itag ltag  ptag count a  index fuel) (phase step itag ltag  ptag count b  index fuel))) := by
+  have h := Derivation.logical (A := T) (.equalityReplace
+    (phase step itag ltag  ptag (liftTerm count) (.var 0)  (liftTerm index) (liftTerm fuel)) a b)
+  rwa [GorbowPACore.logicalFormula,phaseAt,phaseAt] at h
+
+theorem consPhase {n ctx : Nat} (p : Program n) (itag ltag  ptag ctag : Nat) (v l a : Program 1) (x : Program 3)
+    (hi : (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel v l a x)⟩)
+    (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
+    (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+    (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (step : Bool) (count head tail  index fuel : Term ctx) :
+    Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (phase step itag ltag  ptag count (HistoryLookup.consCall ctag head tail)  index fuel)) := by
+  let T := GorbowPRNumeralCalculation.Theory p
+  let code := HistoryLookup.consCall ctag head tail
+  obtain ⟨hlen⟩ := HistoryLengthOffset.ConsProof.internalLengthCons n p ltag ctag hl hc ctx head tail
+  cases step with
+  | false =>
+      let E := Formula.equal (lengthCall ltag code) .zero
+      have he : Hilbert.Local T ctx [E] E := .hypothesis List.mem_cons_self
+      have hbad := localTrans _ _ _ (HistoryOrder.StepProof.localSym _ _ (.base hlen)) he
+      exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge
+        (Hilbert.Local.explosion (property itag ltag  ptag code  index fuel) hbad
+          (.base (.arithmetic (.succNotZero (lengthCall ltag tail))))))⟩
+  | true =>
+      let P := allBounded itag ltag  ptag count  index fuel
+      let E := Formula.equal (lengthCall ltag code) (.succ count)
+      have he : Hilbert.Local T ctx [E,P] E := .hypothesis List.mem_cons_self
+      have ih : Hilbert.Local T ctx [E,P] P := .hypothesis (by simp)
+      have hsucc := localTrans _ _ _ (HistoryOrder.StepProof.localSym _ _ (.base hlen)) he
+      have ht : Hilbert.Local T ctx [E,P] (.equal (lengthCall ltag tail) count) :=
+        .mp (.base (.arithmetic (.succInjective _ _))) hsucc
+      have hih := Hilbert.Local.mp (.base (allElim itag ltag  ptag count tail  index fuel)) ih
+      obtain ⟨hs⟩ := ConsProof.consProperty p itag ltag  ptag ctag v l a x hi hl  hp hc head tail  index fuel
+      have hout := Hilbert.Local.mp (.base hs) (.mp hih ht)
+      exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge hout))⟩
+
+theorem nilPhase {n ctx : Nat} (p : Program n) (itag ltag  ptag ctag : Nat) (v l a : Program 1) (x : Program 3)
+    (hi : (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel v l a x)⟩)
+    (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
+    (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+    (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (step : Bool) (count  index fuel : Term ctx) :
+    Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) (phase step itag ltag  ptag count .zero  index fuel)) := by
+  obtain ⟨hz⟩ := NilProof.nilProperty p itag ltag ptag v l a x hi hl hp  index fuel
+  cases step with
+  | false => exact ⟨Hilbert.lift _ hz⟩
+  | true => exact ⟨Hilbert.lift _ (Hilbert.lift _ hz)⟩
+
+theorem positivePhase {n ctx : Nat} (p : Program n) (itag ltag  ptag ctag : Nat) (v l a : Program 1) (x : Program 3)
+    (hi : (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel v l a x)⟩)
+    (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
+    (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+    (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (step : Bool) (count code  index fuel : Term ctx) :
+    Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) (phase step itag ltag  ptag count (.succ code)  index fuel)) := by
+  let T := GorbowPRNumeralCalculation.Theory p
+  let cp := ctag+GorbowPRChildTags.argumentTag .succ (fun _ : Fin 1 => HistoryCodec.pair) 0
+  have hcp := Equations.argumentChild p ctag .succ (fun _ : Fin 1 => HistoryCodec.pair) hc 0
+  let Q := phase step itag ltag  ptag count (.succ code)  index fuel
+  let H := secondBody cp (.var (0 : Fin (ctx+1))) (liftTerm code)
+  let C := liftTerm (liftTerm code)
+  let A : Term (ctx+2) := .var 1
+  let B : Term (ctx+2) := .var 0
+  have hh : Hilbert.Local T (ctx+2) [H] (.equal (HistoryKernel.pairCall cp A B) C) := .hypothesis List.mem_cons_self
+  obtain ⟨he⟩ := HistoryCodec.PairProof.internalCons n p ctag hc (ctx+2) A B
+  have hcons := localTrans _ _ _ (.base he) (localUnary (.succ (.var 0)) _ _ hh)
+  obtain ⟨hi⟩ := consPhase p itag ltag  ptag ctag v l a x hi hl  hp hc step (liftTerm (liftTerm count)) A B
+     (liftTerm (liftTerm index)) (liftTerm (liftTerm fuel))
+  have hout := Hilbert.Local.mp (.mp (.base (transport step itag ltag  ptag (liftTerm (liftTerm count)) _ _
+     (liftTerm (liftTerm index)) (liftTerm (liftTerm fuel)))) hcons) (.base hi)
+  have hb : Derivation T (.imp H (GorbowPACore.weaken (GorbowPACore.weaken Q))) := by
+    simpa only [Q,C,weakenPhase,liftTerm,renameTerm,substitute,Fin.cases_zero] using
+      Hilbert.Local.finish (Hilbert.Local.discharge hout)
+  obtain ⟨hinner⟩ := HBQuantifier.existentialElimination T H (GorbowPACore.weaken Q) ⟨hb⟩
+  obtain ⟨helim⟩ := HBQuantifier.existentialElimination T (firstBody cp code) Q ⟨hinner⟩
+  obtain ⟨hs⟩ := HistoryIteratorSuffix.SurjectivityProof.internalPairSurjective n p cp hcp ctx code
+  exact ⟨.mp helim hs⟩
+
+theorem allCodes {n ctx : Nat} (p : Program n) (itag ltag  ptag ctag : Nat) (v l a : Program 1) (x : Program 3)
+    (hi : (nodes p)[itag]? = some ⟨4,SixSol20261112.HistoryMachine.iterator (HistoryKernel.kernel v l a x)⟩)
+    (hl : (nodes p)[ltag]? = some ⟨1,lengthProgram⟩)
+    (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+    (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (step : Bool) (count left  index fuel : Term ctx) :
+    Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) (phase step itag ltag  ptag count left  index fuel)) := by
+  let T := GorbowPRNumeralCalculation.Theory p
+  let Q := phase step itag ltag  ptag count left  index fuel
+  let E := Formula.equal left .zero
+  obtain ⟨hz⟩ := nilPhase p itag ltag  ptag ctag v l a x hi hl  hp hc step count  index fuel
+  have he : Hilbert.Local T ctx [E] E := .hypothesis List.mem_cons_self
+  have hzero : Derivation T (.imp E Q) := Hilbert.Local.finish (Hilbert.Local.discharge
+    (.mp (.mp (.base (transport step itag ltag  ptag count .zero left  index fuel)) (HistoryOrder.StepProof.localSym _ _ he)) (.base hz)))
+  let H := HistoryOrder.SupportProof.predBody left
+  have hh : Hilbert.Local T (ctx+1) [H] (.equal (liftTerm left) (.succ (.var 0))) := .hypothesis List.mem_cons_self
+  obtain ⟨hn⟩ := positivePhase p itag ltag  ptag ctag v l a x hi hl  hp hc step (liftTerm count) (.var (0 : Fin (ctx+1)))  (liftTerm index) (liftTerm fuel)
+  have hout := Hilbert.Local.mp (.mp (.base (transport step itag ltag  ptag (liftTerm count) _ _  (liftTerm index) (liftTerm fuel)))
+    (HistoryOrder.StepProof.localSym _ _ hh)) (.base hn)
+  have hb : Derivation T (.imp H (GorbowPACore.weaken Q)) := by
+    simpa only [Q,weakenPhase] using Hilbert.Local.finish (Hilbert.Local.discharge hout)
+  obtain ⟨hp⟩ := HBQuantifier.existentialElimination T H Q ⟨hb⟩
+  obtain ⟨hs⟩ := HistoryOrder.SupportProof.zeroOrSuccessor T left
+  exact ⟨.mp (.mp (.mp (.logical (.orElim _ _ _)) hzero) hp) hs⟩
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthConservation.CasesProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLengthConservation.CasesProof
