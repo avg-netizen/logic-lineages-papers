@@ -1,0 +1,28 @@
+# Independent source-scope audit: new evaluator-key tuple
+
+Native exact5 PASS 1794582106503892155-5; combined rank/put/minimum/domain evidence 4784 modules verified, as reported by coordinator. This is a source review, not an independent compiler run or register promotion.
+
+No concrete contract mismatch found. Definitions fix prepared := ObservedPut.prepared, E(prepared.base.oldRepresentative) only as class-test key, candidate original target/source/window domain, and original P on inactive seeds. The calibrated least packed representative is NOT replaced by E. CalibrationProof reconstructs the same decoded outer context, subtype-closed window and Gamma for both active inputs; RawProof supplies the native key equivalence. It compares native evaluations, not AST identity with the old active kernel.
+
+RetentionProof retains MixedPrepared, the new all-vector class-test calibration, all three prepared/minimum/refined InputsCalibrated contracts, transparent-minimum Properties and final guarded-rank Properties. Internal Hit/Rows have no native calibration premise: successful literal relation on an admitted seed yields candidate Domain and Same E; admitted Same-E inputs give equal candidate hit rows. Minimum/refined/finalInputs/finalData consistently belong to this NEW construction, not ObservedPut.refined.
+
+The final PUT theorem still requires literal Fields, including actual final validity and ordinary constructor/result/certificate graphs. ObjectCertificate additionally retains actual window, paired parameter, both final fold outputs and exact path/object packing. It is a certificate implication, not unconditional PUT validity, full fold extensionality, or canonical Object cancellation. No retained premise was silently dropped or added in the exact wrappers.
+
+## Reviewed source snapshot (SHA-256)
+
+```text
+b6fbab1cdca0ee2dbf6161d67463642db873b262a4fecde9d97982bde283697b  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyCalibrationProof.lean
+9fb36e2cd07dabf72f3919b52b14b6120f22dddc265a5a9e02ade5f9414a86e7  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutDefinitions.lean
+111aece23d1cee8e3a113ce1ee86581ef812ed937728695e41480a49d42484aa  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutFinalCertificateProof.lean
+fded9e6f08c1d44e9b5b69b8797c608d7903b29cac2c70d35ae10ee99fb83ba1  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutFinalFieldsProof.lean
+778f778f5a0d27d8401bd52ea4f7b9ee4303ea52b0e9fd12dbf3cdf77c5a4e17  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutFinalGraphsProof.lean
+b6ce1abb001d7c35c5d35ce591af279124e86bc1bbd75c90fee68978817f8971  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutFinalSpineProof.lean
+7ee1e86938576a614f95ffc1bb66d1802fb2235a7100d9b3ca0a9cef1345b44e  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutFinalStatementChecks.lean
+fa435951b4cb397fb5b1c35f38abc9a26575952a52e722a7610a3a1b569612e4  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutFinalStepProof.lean
+0aba37daa5e0d2bdb27dbba2467e55f343800dc0385bc6bf7b69c7ef8a3ac9d8  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutInternalProof.lean
+ed6569be946ee3ef1dd384823cf4760cfe5ddbb6ff1c32233c53086dd77f1536  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutPreflight.lean
+6e3aa537ccb1c8cb47a663853bc2ed15c677474b6cb538f81086294c8bd77598  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutStatementChecks.lean
+38ba2784c205cc1221980758806d4f68a196ce151c9044513c388223f67dd8f2  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyPutTargets.lean
+428f6bd0863094396ebd0f805dfca9ef44d684e103e75051212040968db935ef  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyRawProof.lean
+45505d4a1574d3459b3d738ad87f14f8e4ef44dccf522f49a8337fa302010ce2  LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/SixSol20261113/Context/EvaluatorKeyRetentionProof.lean
+```
