@@ -14,7 +14,7 @@ theorem belowTransport (R : Program 2) (H G : Program 1) (M W : Program 2) (old 
  (h : Nonempty (Derivation body Delta (BelowRaw R H G M W old))) :
  Nonempty (Derivation body Delta (BelowRaw R H G M W new)) := by
  let theta : Formula (alpha ⊕ Fin 1) := InternalStrongInduction.below
-   (lift (rawPredicate R H G M W (alpha := alpha))) (.var (.inr 0))
+   (InternalStrongInduction.lift (rawPredicate R H G M W (alpha := alpha))) (.var (.inr 0))
  obtain ⟨he⟩ := he
  obtain ⟨h⟩ := h
  have hi : Derivation body Delta (instantiate theta (emb old)) := by
