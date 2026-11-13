@@ -44,6 +44,6 @@ logical/arithmetic leaves do not gain internal correctness from native
 calibration. A well-formed equality need not be true or have an accepted proof
 certificate. The new validator result is not that missing certificate bridge.
 
-No new proof for this proposed packet was authored in closeout. Original source
+The bounded annotation and full context0 line constructors were subsequently proved in LiteralReflexivityQuote: native original encoding/compilation, external logicalFunction acceptance, and internal constructor identities. The proposed literal recognizer/refined logical leaf and internal certificate acceptance were NOT proved. Original source
 files and all unsuccessful candidate sources are preserved; do not rename this
 remaining obligation as a helper premise and then claim HB3.
