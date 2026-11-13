@@ -31,7 +31,7 @@ theorem actualRepack (R : Program 2) (input parameter root raw data typ index : 
  have htyp := leftComponent _ _ input parameter data typ hy hdata
  have hindex := rightComponent _ _ input parameter data index hi hdata
  let xs : Fin 2 → OTerm alpha := ![input,parameter]
- have hp := projectionValue (0 : Fin 2) xs
+ have hp := projectionValue (body := body) (Gamma := Delta) (0 : Fin 2) xs
  have hraw := unaryValue InternalUnpair.right (.projection 0) raw input xs hr hp
  have htag := unaryRecover InternalUnpair.left OriginalRootObservation.raw (numeral 0) raw xs ht hraw
  have hidx := unaryRecover InternalUnpair.right OriginalRootObservation.raw index raw xs hindex hraw
@@ -42,7 +42,7 @@ theorem actualRepack (R : Program 2) (input parameter root raw data typ index : 
  have pd := unaryValue InternalUnpair.right (.projection 0) data root ys hd (projectionValue 0 ys)
  have pt := unaryValue InternalUnpair.left (rightOf (.projection 0)) typ data ys hy pd
  have pn := unaryValue InternalUnpair.right (rightOf (.projection 0)) index data ys hi pd
- have pc := OriginalRawSyntaxTransportInternalVariableSupportProof.constantValue 0 ys
+ have pc := OriginalRawSyntaxTransportInternalVariableSupportProof.constantValue (body := body) (Delta := Delta) 0 ys
  have pv := binaryValue InternalPairing.pairing (OriginalRawSyntaxTransport.constant 1 0)
    (rightOf (rightOf (.projection 0))) raw (numeral 0) index ys pr pc pn
  exact binaryValue InternalPairing.pairing (leftOf (rightOf (.projection 0)))
