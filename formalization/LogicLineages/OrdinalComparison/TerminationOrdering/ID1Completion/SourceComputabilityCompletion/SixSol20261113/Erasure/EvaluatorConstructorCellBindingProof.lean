@@ -25,9 +25,9 @@ theorem introduction (Q : Program 2) (count left right parameter : OTerm alpha)
    Nonempty (Derivation body Theta (equal a b))) :
  Nonempty (Derivation body Delta (CellAgreement Q count left parameter right parameter)) := by
  apply InternalClosedProgramsBindingProof.introduction body alpha 3 Delta
- let phi := cellFields Q (count.relabel Sum.inl) (left.relabel Sum.inl) (parameter.relabel Sum.inl)
+ let phi : Formula (alpha ⊕ Fin 3) := cellFields Q (count.relabel Sum.inl) (left.relabel Sum.inl) (parameter.relabel Sum.inl)
    (right.relabel Sum.inl) (parameter.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2))
- let Theta := phi :: Delta.map (fun q => q.relabel Sum.inl)
+ let Theta : List (Formula (alpha ⊕ Fin 3)) := phi :: Delta.map (fun q => q.relabel Sum.inl)
  have hh : Nonempty (Derivation body Theta phi) := ⟨Derivation.hypothesis List.mem_cons_self⟩
  have he := cell (alpha ⊕ Fin 3) Sum.inl Theta (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2))
    (fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
