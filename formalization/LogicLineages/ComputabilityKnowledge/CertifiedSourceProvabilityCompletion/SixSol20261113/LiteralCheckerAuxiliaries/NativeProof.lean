@@ -38,7 +38,7 @@ theorem originalFinish (state : State) (n formula certificate : Nat) :
             rw [hf] at he
             simp only [Option.some.injEq] at he
             simp only [finish,hf,hc]
-            rw [← he]
+            simp only [he]
 
 theorem optionEval (s : Option History) (lines : List Line) (n formula certificate : Nat) :
     evaluate optionField (inputs (s,lines) n formula certificate)=Encodable.encode s := by
@@ -74,14 +74,14 @@ theorem nativeState (state : State) (n formula certificate : Nat) :
   cases s with
   | none =>
       rw [finalizer,chooseEval,optionEval]
-      simp only [show Encodable.encode (none : Option History)=0 from rfl,if_pos rfl,constantEval,Bool.false_eq_true,if_false]
+      simp only [show Encodable.encode (none : Option History)=0 from rfl,if_true,constantEval,Bool.false_eq_true,if_false]
   | some history =>
       rw [finalizer,chooseEval,optionEval]
       simp only [show Encodable.encode (some history)=(Encodable.encode history).succ from rfl,Nat.succ_ne_zero,if_false]
       rw [chooseEval,historyEval]
       cases history with
       | nil =>
-          simp only [show Encodable.encode ([] : History)=0 from rfl,if_pos rfl,constantEval,Bool.false_eq_true,if_false]
+          simp only [show Encodable.encode ([] : History)=0 from rfl,if_true,constantEval,Bool.false_eq_true,if_false]
       | cons entry tail =>
           rcases entry with ⟨context,raw⟩
           rw [HistoryLookup.NativeProof.encodeCons]
