@@ -5,7 +5,7 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Runtime.SourceFramedInductionSyntax
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
-open InternalTagArithmeticSyntaxProof (emb)
+open InternalTagArithmeticSyntaxProof (emb bindTerm bindEmbedding nextTerm nextEmbedding)
 open InternalTermSubstitutionProof InternalSourceIntroductionSyntaxProof
 open InternalBinderTransportProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram

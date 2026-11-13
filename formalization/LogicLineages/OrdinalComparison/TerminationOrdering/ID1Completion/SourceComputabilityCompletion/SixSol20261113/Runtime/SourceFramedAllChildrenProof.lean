@@ -16,7 +16,7 @@ open InternalApplicationStepPeelSupportProof (andLeft andRight)
 open InternalClosedPrograms InternalClosedProgramsBindingProof
 open OriginalHereditaryInternalAgendaSyntaxProof (jobRename)
 open OriginalContextInsertionSyntaxProof (lengthRename)
-open InternalOriginalOrderSyntaxProof (orderRename)
+open InternalOriginalOrderSyntaxProof (ltF orderRename)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open SourceFramedDefinitions SourceFramedSyntax
 attribute [local irreducible] programGraph OriginalHereditaryFuelProgram.weight OriginalHereditaryAnnotatedExpansion.expansion
