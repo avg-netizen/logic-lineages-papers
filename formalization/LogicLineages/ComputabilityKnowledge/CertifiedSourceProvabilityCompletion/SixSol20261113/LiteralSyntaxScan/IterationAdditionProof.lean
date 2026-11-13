@@ -17,7 +17,7 @@ theorem base {n ctx : Nat} (p : Program n) tag
  (ht : (nodes p)[tag]? = some ⟨2,iterator⟩) (a state : Term ctx) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) (addition tag a .zero state)) := by
  obtain ⟨hz⟩ := IterationEquationsProof.zero p tag ht (runCall tag a state)
- have hleft := HistoryAppend.PositiveProof.binaryCongruence tag (.add a .zero) a state state
+ have hleft := HistoryAppend.PositiveProof.binaryCongruence (T := GorbowPRNumeralCalculation.Theory p) tag (.add a .zero) a state state
   (.arithmetic (.addZero a)) (.logical (.reflexive state))
  exact ⟨Logic.trans _ _ _ hleft (Support.equalitySymmetry _ _ hz)⟩
 
@@ -28,7 +28,7 @@ theorem step {n ctx : Nat} (p : Program n) tag
  let T := GorbowPRNumeralCalculation.Theory p
  let H := addition tag a b state
  have hh : Hilbert.Local T ctx [H] H := .hypothesis List.mem_cons_self
- have hleft := HistoryAppend.PositiveProof.binaryCongruence tag (.add a (.succ b))
+ have hleft := HistoryAppend.PositiveProof.binaryCongruence (T := GorbowPRNumeralCalculation.Theory p) tag (.add a (.succ b))
   (.succ (.add a b)) state state (.arithmetic (.addSucc a b)) (.logical (.reflexive state))
  obtain ⟨hl⟩ := IterationEquationsProof.successor p tag ht (.add a b) state
  obtain ⟨hr⟩ := IterationEquationsProof.successor p tag ht b (runCall tag a state)
@@ -41,6 +41,7 @@ theorem step {n ctx : Nat} (p : Program n) tag
 
 theorem internalAddition : IterationTargets.InternalAddition := by
  intro n p tag ht ctx a b state
+ change Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) (addition tag a b state))
  let phi : Formula (ctx+1) := addition tag (liftTerm a) (.var 0) (liftTerm state)
  obtain ⟨hz⟩ := base p tag ht a state
  have hb : Derivation (GorbowPRNumeralCalculation.Theory p)
