@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.NativeProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.ContinuationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.StatementChecks
+theorem exactNative : Targets.NativeCalibration := NativeProof.nativeCalibration
+theorem exactScan : Targets.InternalScan := ScanProof.internalScan
+theorem exactContinuation : Targets.InternalContinuation := ContinuationProof.internalContinuation
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.StatementChecks
