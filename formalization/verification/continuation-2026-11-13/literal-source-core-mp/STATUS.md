@@ -1,11 +1,9 @@
-# Fresh source core-MP, aggregate still pending
+# Fresh source core-MP accepted
 
-Definitions/Targets/Preflight reviewed, preflight passed receipt
-1794599946722920866-5; exact target bytes frozen in FROZEN-SHA256SUMS.
-RetainedExtraProof passed receipt 1794600083809331472-5 (standard axioms).
-NodeProof passed receipt 1794600059122582031-7. Preserve accepted bytes.
-MPPackageProof, final Proof and StatementChecks are drafted, awaiting generic
-LiteralCoreMP exact2 and the aggregate native gate. They are not yet accepted.
+Exact aggregate StatementChecks.exactSourceCoreMP passed receipt
+1794600314258719466-5 with standard axiom audit. ACCEPTED.json records
+source hashes matched to every successful native module row. Preserve accepted bytes.
+Definitions/Targets/Preflight remain frozen in FROZEN-SHA256SUMS.
 
 The exact target retains LiteralValidatedSource.Retained and ValidatorPackage
 literally at identical fresh tuple witnesses. Adds actual canonical constructor,
