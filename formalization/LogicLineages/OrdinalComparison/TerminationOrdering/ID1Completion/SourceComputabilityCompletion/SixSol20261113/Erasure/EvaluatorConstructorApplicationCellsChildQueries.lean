@@ -40,7 +40,8 @@ theorem actualCases (d cutoff : OTerm alpha) (children : Fin 4 → OTerm alpha) 
   apply Fin.ext
   rfl
  rw [index] at he
- simpa only [xs,args,Fin.cons_zero,Fin.cons_succ] using he
+ have hone : (1 : Fin 6) = (0 : Fin 5).succ := rfl
+ simpa only [xs,args,hone,Fin.cons_zero,Fin.cons_succ] using he
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.EvaluatorConstructorApplicationCellsChildQueries
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.EvaluatorConstructorApplicationCellsChildQueries

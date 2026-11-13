@@ -5,7 +5,8 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.PrefixBoundedProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport HistoryLengthOffset
-open PrefixSupportProof HistoryLengthOffset.OffsetSupportProof (substLength)
+open PrefixSupportProof
+open HistoryLengthOffset.OffsetSupportProof (substLength)
 def bounded {ctx : Nat} (itag ltag atag ptag : Nat) (count left right index fuel : Term ctx) : Formula ctx :=
   .imp (.equal (lengthCall ltag left) count) (property itag ltag atag ptag left right index fuel)
 def allBounded {ctx : Nat} (itag ltag atag ptag : Nat) (count right index fuel : Term ctx) : Formula ctx :=
