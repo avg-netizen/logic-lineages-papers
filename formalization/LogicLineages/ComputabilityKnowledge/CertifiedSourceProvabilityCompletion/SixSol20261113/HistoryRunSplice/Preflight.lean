@@ -1,0 +1,12 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.Preflight
+#check Targets.InternalIdle
+#check Targets.InternalLengthDrain
+#check Targets.InternalBoundConversion
+#check Targets.InternalPrefixSplice
+#check Targets.InternalAppendRuns
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.Preflight
