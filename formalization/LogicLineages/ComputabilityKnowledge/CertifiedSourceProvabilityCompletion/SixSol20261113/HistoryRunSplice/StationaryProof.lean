@@ -2,6 +2,8 @@ module
 
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.IdleProof
 
+public meta import LogicLineages.Audit
+
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.StationaryProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution List.Vector
@@ -80,3 +82,5 @@ theorem allStationary {n ctx : Nat} (p : Program n) (itag dtag ptag : Nat) (v l 
   obtain ⟨hsurj⟩ := HistoryIteratorSuffix.SurjectivityProof.internalPairSurjective n p ptag hp ctx code
   exact ⟨.mp helim hsurj⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.StationaryProof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRunSplice.StationaryProof
