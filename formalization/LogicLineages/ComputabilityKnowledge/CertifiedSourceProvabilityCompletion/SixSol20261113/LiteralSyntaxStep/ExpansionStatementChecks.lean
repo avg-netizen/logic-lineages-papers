@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.ExpansionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.ExpansionStatementChecks
+theorem exactBinary : Targets.InternalFormulaBinary := ExpansionProof.internalFormulaBinary
+theorem exactQuantifier : Targets.InternalQuantifier := ExpansionProof.internalQuantifier
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.ExpansionStatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.ExpansionStatementChecks

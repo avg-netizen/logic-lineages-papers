@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.Preflight
+#check Targets.NativeExpand
+#check Targets.NativeStep
+#check Targets.InternalFormulaBinary
+#check Targets.InternalQuantifier
+#check Targets.InternalNone
+#check Targets.InternalEmpty
+#check Targets.InternalPrepend
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxStep.Preflight

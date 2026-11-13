@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.NativeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.OccurrenceStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.ConstructorProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.DispatcherProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.StatementChecks
+theorem exactNativeRaw : Targets.NativeRaw := NativeProof.nativeRaw
+theorem exactNativeEven : Targets.NativeEven := NativeProof.nativeEven
+theorem exactChildren : Targets.ActualChildren := OccurrenceProof.actualChildren
+theorem exactConstructor : Targets.InternalConstructor := ConstructorProof.internalConstructor
+theorem exactReferences : Targets.InternalReferences := ReferenceProof.internalReferences
+theorem exactDispatcher : Targets.InternalDispatcher := DispatcherProof.internalDispatcher
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralRawMP.StatementChecks
