@@ -58,7 +58,7 @@ theorem rawInduction (parameter gamma c bound raw : OTerm alpha) (params : Fin k
        (c.relabel Sum.inl) (bound.relabel Sum.inl) (.var (.inr 0)) (fun i => (params i).relabel Sum.inl)))
    apply step (alpha ⊕ Fin 1) Xi _ _ _ _ _ _ hw'
    have hi : Nonempty (Derivation body Xi A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-   simpa only [A,theta,rawPredicateLift] using hi
+   simpa only [A,theta,rawPredicateLift,BelowRaw] using hi
  obtain ⟨d⟩ := strongInduction theta hs
  have e := Derivation.universalElimination (emb raw) d
  change Derivation body Delta (instantiate (rawPredicate Q F H M W parameter gamma c bound params) (emb raw)) at e
