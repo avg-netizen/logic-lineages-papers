@@ -25,17 +25,22 @@ declaration printed an axiom audit.
 
 ## Authored, verification pending
 
-BranchValue and Leaf repairs are pending after preserved failed runs. Selector,
-RootEncoding, LambdaStep, ApplicationStep, and the source-lambda coordinate and
-query chain are also pending. The top source-lambda candidate is
-`RankCalibrationLambdaProof.actualLambda`: original source + actual successor
-E-code + actual raw rank + literal lambda tag + BelowRaw induction hypothesis
-imply the decoder gives that same rank. It contains no child-source, child-rank,
-child-decoder, table-correctness, or desired envelope premise.
+The source-only successor lambda branch is now verified:
+`RankCalibrationLambdaProof.actualLambda`, receipt 1794577032049502682-76.
+It retains only original source, actual E successor output, actual raw rank,
+literal lambda tag and genuine smaller-code IH. All its helper closure is
+immutable. Original child source, rank, observations, table and envelope facts
+are internally obtained.
+
+ApplicationCoordinates, ApplicationRawQueries, ApplicationObservationQueries,
+and LocalWeights are now verified, ending 1794577238236712963-60. The complete
+source-only application query/final wrappers remain queued. Small and
+ArgumentWeight close aggregation's local premises; OrdinaryCoordinates is
+newly authored and remains unverified. Base branch work is independently owned.
 
 ## Remaining proof work
 
-- Check and repair the authored source-only successor lambda branch.
+- Preserve the accepted source-only successor lambda branch.
 - Assemble corresponding original application and leaf/zero branches.
 - Integrate the independently owned argument-rank aggregation with actual BASE
   and extras admission, discharging AllSmall using the accepted unsorted/stored
@@ -50,3 +55,27 @@ a zero full evaluator envelope. The variable zero branch is conditional only.
 Full paper06 I/C and canonical Object covariance remain pending. Numeric rank
 calibration, even if completed later, does not by itself identify the evaluator
 with the retained structural key or establish raw canonical erasure fixedness.
+
+## Complete candidate authored, not yet verified
+
+`RankMemoStatementChecks` now contains all four exact frozen checks, including
+`exactSource`. The candidate chain discharges the strong induction through
+`RankCalibrationInductionProof`, using source-only constructor branches and the
+original source's six-tag cover. It introduces no placeholder or added axiom.
+This is a source-ready candidate only: ordinary/numbered/base and global glue
+still require native gates and any necessary repairs. Do not count final source
+rank calibration as proved until the complete exact gate succeeds.
+
+The source-only application branch was also accepted, receipt
+1794577366009878134-74. AllSmall, argument weighting, and ordinary coordinate
+integration were accepted through 1794578054194671514-19. Ordinary and numbered
+observation-query failures were namespace-only headOf/tailOf failures, preserved
+in drafts and repaired with the exact OriginalTypedDecoder qualification.
+A NumberedObservation edit overlapped its old-byte failing gate; its failure
+receipt1794578157409094519-40 is explicitly not acceptance. Current corrected
+bytes require a new gate.
+
+Read-only static check after complete candidate assembly: 65 RankCalibration /
+RankMemo modules had an acyclic internal import graph; token scan found no
+`sorry`, `axiom`, `admit`, `unsafe`, or `native_decide`. This is not a Lean
+verification result and does not replace the pending exact-type/axiom gates.
