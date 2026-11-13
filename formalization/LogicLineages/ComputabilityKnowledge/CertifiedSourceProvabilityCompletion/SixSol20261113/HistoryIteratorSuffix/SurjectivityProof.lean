@@ -24,7 +24,7 @@ theorem successorWitness {n ctx : Nat} (p : Program n) tag
   have hout : Hilbert.Local T (ctx+2) [H] (pairSurjective tag (.succ C)) :=
     .mp (.mp (.base (transport tag _ _)) he) (.base hi)
   have hb : Derivation T (.imp H (GorbowPACore.weaken (GorbowPACore.weaken Q))) := by
-    simpa only [Q,weakenSurjective,liftTerm,renameTerm,substitute] using
+    simpa only [Q,C,weakenSurjective,liftTerm,renameTerm,substitute] using
       Hilbert.Local.finish (Hilbert.Local.discharge hout)
   obtain ⟨hinner⟩ := HBQuantifier.existentialElimination T H (GorbowPACore.weaken Q) ⟨hb⟩
   exact HBQuantifier.existentialElimination T (firstBody tag code) Q ⟨hinner⟩

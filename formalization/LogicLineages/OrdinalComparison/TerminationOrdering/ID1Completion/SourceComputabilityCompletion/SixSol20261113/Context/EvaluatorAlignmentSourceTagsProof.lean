@@ -34,7 +34,7 @@ theorem sourceTags (H G : Program 1) (M W : Program 2)
  simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at hs' ht'
  have ha := andRight (sourceFieldsElim H G M W (input.relabel j) (parameter.relabel j) typ raw c gamma hp hparam hs')
  let xs : Fin 2 → OTerm beta := ![input.relabel j,parameter.relabel j]
- have hraw := pairRightValue (.projection 0) (input.relabel j) typ raw xs (projectionValue 0 xs) hp
+ have hraw := OriginalTypedDecoderInternalScalarProof.pairRightValue (.projection 0) (input.relabel j) typ raw xs (projectionValue 0 xs) hp
  have htag := unaryRecover InternalUnpair.left OriginalRootObservation.raw (tag.relabel j) raw xs ht' hraw
  apply programCases InternalUnpair.right (Fin.cons raw Fin.elim0) _
  intro beta' k Xi payload hk hpay

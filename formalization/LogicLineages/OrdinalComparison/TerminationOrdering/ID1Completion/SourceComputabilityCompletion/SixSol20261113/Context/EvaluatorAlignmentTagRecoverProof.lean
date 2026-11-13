@@ -47,65 +47,71 @@ theorem sourceTag (R : Program 2) (H G : Program 1) (M W : Program 2)
  apply orCases htags
  ·
    have he : Nonempty (Derivation body (A0 :: Delta) A0) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-   rw [equalEqn] at he
-   have htag := outputTransport OriginalRootObservation.tag tag (numeral 0) (![input,parameter]) he (withHyp ht A0)
+   have heq := (congrArg (fun f => Nonempty (Derivation body (A0 :: Delta) f)) (equalEqn tag (numeral 0))).mp he
+   have htag := outputTransport OriginalRootObservation.tag tag (numeral 0) (![input,parameter]) heq (withHyp ht A0)
    have heo := EvaluatorAlignmentBranchesProof.tag0 R input parameter out observedTag htag (withHyp hv A0) (withHyp ho A0)
-   rw [equalEqn] at heo ⊢
-   obtain ⟨he⟩ := he
-   obtain ⟨heo⟩ := heo
-   exact ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
+   have heoq := (congrArg (fun f => Nonempty (Derivation body (A0 :: Delta) f)) (equalEqn observedTag (numeral 0))).mp heo
+   obtain ⟨he⟩ := heq
+   obtain ⟨heo⟩ := heoq
+   exact (congrArg (fun f => Nonempty (Derivation body (A0 :: Delta) f)) (equalEqn tag observedTag)).mpr
+     ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
  ·
    apply orCases (show Nonempty (Derivation body (B1 :: Delta) B1) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
    ·
      have he : Nonempty (Derivation body (A1 :: B1 :: Delta) A1) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-     rw [equalEqn] at he
-     have htag := outputTransport OriginalRootObservation.tag tag (numeral 1) (![input,parameter]) he (withHyp (withHyp ht B1) A1)
+     have heq := (congrArg (fun f => Nonempty (Derivation body (A1 :: B1 :: Delta) f)) (equalEqn tag (numeral 1))).mp he
+     have htag := outputTransport OriginalRootObservation.tag tag (numeral 1) (![input,parameter]) heq (withHyp (withHyp ht B1) A1)
      have heo := EvaluatorAlignmentBranchesProof.tag1 R input parameter out observedTag htag (withHyp (withHyp hv B1) A1) (withHyp (withHyp ho B1) A1)
-     rw [equalEqn] at heo ⊢
-     obtain ⟨he⟩ := he
-     obtain ⟨heo⟩ := heo
-     exact ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
+     have heoq := (congrArg (fun f => Nonempty (Derivation body (A1 :: B1 :: Delta) f)) (equalEqn observedTag (numeral 1))).mp heo
+     obtain ⟨he⟩ := heq
+     obtain ⟨heo⟩ := heoq
+     exact (congrArg (fun f => Nonempty (Derivation body (A1 :: B1 :: Delta) f)) (equalEqn tag observedTag)).mpr
+       ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
    ·
      apply orCases (show Nonempty (Derivation body (B2 :: B1 :: Delta) B2) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
      ·
        have he : Nonempty (Derivation body (A2 :: B2 :: B1 :: Delta) A2) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-       rw [equalEqn] at he
-       have htag := outputTransport OriginalRootObservation.tag tag (numeral 2) (![input,parameter]) he (withHyp (withHyp (withHyp ht B1) B2) A2)
+       have heq := (congrArg (fun f => Nonempty (Derivation body (A2 :: B2 :: B1 :: Delta) f)) (equalEqn tag (numeral 2))).mp he
+       have htag := outputTransport OriginalRootObservation.tag tag (numeral 2) (![input,parameter]) heq (withHyp (withHyp (withHyp ht B1) B2) A2)
        have heo := EvaluatorAlignmentBranchesProof.tag2 R input parameter out observedTag htag (withHyp (withHyp (withHyp hv B1) B2) A2) (withHyp (withHyp (withHyp ho B1) B2) A2)
-       rw [equalEqn] at heo ⊢
-       obtain ⟨he⟩ := he
-       obtain ⟨heo⟩ := heo
-       exact ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
+       have heoq := (congrArg (fun f => Nonempty (Derivation body (A2 :: B2 :: B1 :: Delta) f)) (equalEqn observedTag (numeral 2))).mp heo
+       obtain ⟨he⟩ := heq
+       obtain ⟨heo⟩ := heoq
+       exact (congrArg (fun f => Nonempty (Derivation body (A2 :: B2 :: B1 :: Delta) f)) (equalEqn tag observedTag)).mpr
+         ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
      ·
        apply orCases (show Nonempty (Derivation body (B3 :: B2 :: B1 :: Delta) B3) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
        ·
          have he : Nonempty (Derivation body (A3 :: B3 :: B2 :: B1 :: Delta) A3) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-         rw [equalEqn] at he
-         have htag := outputTransport OriginalRootObservation.tag tag (numeral 3) (![input,parameter]) he (withHyp (withHyp (withHyp (withHyp ht B1) B2) B3) A3)
+         have heq := (congrArg (fun f => Nonempty (Derivation body (A3 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn tag (numeral 3))).mp he
+         have htag := outputTransport OriginalRootObservation.tag tag (numeral 3) (![input,parameter]) heq (withHyp (withHyp (withHyp (withHyp ht B1) B2) B3) A3)
          have heo := EvaluatorAlignmentBranchesProof.tag3 R input parameter out observedTag htag (withHyp (withHyp (withHyp (withHyp hv B1) B2) B3) A3) (withHyp (withHyp (withHyp (withHyp ho B1) B2) B3) A3)
-         rw [equalEqn] at heo ⊢
-         obtain ⟨he⟩ := he
-         obtain ⟨heo⟩ := heo
-         exact ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
+         have heoq := (congrArg (fun f => Nonempty (Derivation body (A3 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn observedTag (numeral 3))).mp heo
+         obtain ⟨he⟩ := heq
+         obtain ⟨heo⟩ := heoq
+         exact (congrArg (fun f => Nonempty (Derivation body (A3 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn tag observedTag)).mpr
+           ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
        ·
          apply orCases (show Nonempty (Derivation body (B4 :: B3 :: B2 :: B1 :: Delta) B4) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
          ·
            have he : Nonempty (Derivation body (A4 :: B4 :: B3 :: B2 :: B1 :: Delta) A4) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-           rw [equalEqn] at he
-           have htag := outputTransport OriginalRootObservation.tag tag (numeral 4) (![input,parameter]) he (withHyp (withHyp (withHyp (withHyp (withHyp ht B1) B2) B3) B4) A4)
+           have heq := (congrArg (fun f => Nonempty (Derivation body (A4 :: B4 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn tag (numeral 4))).mp he
+           have htag := outputTransport OriginalRootObservation.tag tag (numeral 4) (![input,parameter]) heq (withHyp (withHyp (withHyp (withHyp (withHyp ht B1) B2) B3) B4) A4)
            have heo := EvaluatorAlignmentBranchesProof.tag4 R input parameter out observedTag htag (withHyp (withHyp (withHyp (withHyp (withHyp hv B1) B2) B3) B4) A4) (withHyp (withHyp (withHyp (withHyp (withHyp ho B1) B2) B3) B4) A4)
-           rw [equalEqn] at heo ⊢
-           obtain ⟨he⟩ := he
-           obtain ⟨heo⟩ := heo
-           exact ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
+           have heoq := (congrArg (fun f => Nonempty (Derivation body (A4 :: B4 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn observedTag (numeral 4))).mp heo
+           obtain ⟨he⟩ := heq
+           obtain ⟨heo⟩ := heoq
+           exact (congrArg (fun f => Nonempty (Derivation body (A4 :: B4 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn tag observedTag)).mpr
+             ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
          ·
            have he : Nonempty (Derivation body (B5 :: B4 :: B3 :: B2 :: B1 :: Delta) A5) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-           rw [equalEqn] at he
-           have htag := outputTransport OriginalRootObservation.tag tag (numeral 5) (![input,parameter]) he (withHyp (withHyp (withHyp (withHyp (withHyp ht B1) B2) B3) B4) B5)
+           have heq := (congrArg (fun f => Nonempty (Derivation body (B5 :: B4 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn tag (numeral 5))).mp he
+           have htag := outputTransport OriginalRootObservation.tag tag (numeral 5) (![input,parameter]) heq (withHyp (withHyp (withHyp (withHyp (withHyp ht B1) B2) B3) B4) B5)
            have heo := EvaluatorAlignmentBranchesProof.tag5 R input parameter out observedTag htag (withHyp (withHyp (withHyp (withHyp (withHyp hv B1) B2) B3) B4) B5) (withHyp (withHyp (withHyp (withHyp (withHyp ho B1) B2) B3) B4) B5)
-           rw [equalEqn] at heo ⊢
-           obtain ⟨he⟩ := he
-           obtain ⟨heo⟩ := heo
-           exact ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
+           have heoq := (congrArg (fun f => Nonempty (Derivation body (B5 :: B4 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn observedTag (numeral 5))).mp heo
+           obtain ⟨he⟩ := heq
+           obtain ⟨heo⟩ := heoq
+           exact (congrArg (fun f => Nonempty (Derivation body (B5 :: B4 :: B3 :: B2 :: B1 :: Delta) f)) (equalEqn tag observedTag)).mpr
+             ⟨InternalTagArithmeticSupportProof.trans he (InternalTagArithmeticSupportProof.symm heo)⟩
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.EvaluatorAlignmentTagRecoverProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.EvaluatorAlignmentTagRecoverProof

@@ -47,6 +47,7 @@ theorem substSurjective {m n : Nat} (sub : Fin m → Term n) tag (code : Term m)
     substituteFormula sub (pairSurjective tag code) = pairSurjective tag (substitute sub code) := by
   simp only [pairSurjective,substituteFormula,substPair,substituteLift,substitute,
     liftSubstitute,Fin.cases_zero,Fin.cases_succ]
+  rfl
 
 theorem surjectiveAt {ctx : Nat} tag (code : Term ctx) :
     GorbowStandardInstances.instantiate (pairSurjective tag (.var 0)) code = pairSurjective tag code := by
