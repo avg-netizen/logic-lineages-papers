@@ -66,7 +66,10 @@ theorem sameSourceHistoryFusion : SixSol20261112.HistoryMachine.Targets.SameSour
     exact inSource pF pR q _ ⟨Fuel.Logic.closeAll hd⟩
   · obtain ⟨hd⟩ := Fuel.InductionProof.openIncrement 4 root tag q0 ht 5
       (.var 4) (.var 0) (.var 3) (.var 2) (.var 1)
-    exact inSource pF pR q (Fuel.incrementClause pF) ⟨Fuel.Logic.closeAll hd⟩
+    have hclosed := Fuel.Logic.closeAll (n := 5)
+      (phi := .all (Fuel.incrementTemplate tag (.var 4 : Term 5) (.var 0)
+        (.var 3) (.var 2) (.var 1))) hd
+    exact inSource pF pR q (Fuel.incrementClause pF) ⟨hclosed⟩
   · obtain ⟨hd⟩ := Fuel.InductionProof.openMonotonicity 4 root tag q0 ht 6
       (.var 5) (.var 1) (.var 0) (.var 4) (.var 3) (.var 2)
     exact inSource pF pR q _ ⟨Fuel.Logic.closeAll hd⟩
@@ -74,7 +77,9 @@ theorem sameSourceHistoryFusion : SixSol20261112.HistoryMachine.Targets.SameSour
     obtain ⟨hd⟩ := FusionProof.openFusion 4 root
       (iteratorTag tag kernel bound initial finalizer) kernel hi 4
       (.var 0) (.var 1) (.var 2) (.var 3)
-    exact inSource pF pR q (fusionClause pF kernel bound initial finalizer)
-      ⟨Fuel.Logic.closeAll hd⟩
+    have hclosed := Fuel.Logic.closeAll (n := 4)
+      (phi := .all (fusionTemplate (iteratorTag tag kernel bound initial finalizer)
+        (.var 0 : Term 4) (.var 1) (.var 2) (.var 3))) hd
+    exact inSource pF pR q (fusionClause pF kernel bound initial finalizer) ⟨hclosed⟩
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryMachine.SourceProof
