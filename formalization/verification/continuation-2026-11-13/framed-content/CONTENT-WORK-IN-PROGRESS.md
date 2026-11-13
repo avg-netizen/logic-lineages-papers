@@ -49,3 +49,17 @@ For remaining produced length, prefer runtime PrefixFrame produced-row uniquenes
 plus existing length-correct VisitListCompletion over altering accepted ContentVisits
 or repeating generic map-length induction. This helper has been requested from
 Runtime. FramedContent itself remains unfinished.
+
+Update: full FramedContent source candidate now exists through
+`Erasure.FramedContentStatementChecks.exactFramedContent`. It is NOT compiled or
+accepted yet. Its only currently absent imported source is Runtime's genuine
+`ArgumentReturnContentProof`; there are no placeholder declarations for it.
+The candidate contains actual metadata/map query wrappers, source-derived role
+dispatch, canonical argument-run assembly, transfer to arbitrary returned value,
+and internal lower-weight induction. Run the exact root only after Runtime's
+whole-row argument-return helper is available and accepted. Preserve any failed
+candidate before repairs, as elsewhere.
+
+New independent checked/queued glue is tracked by coordinator receipts:
+DependencyProof, BindingProof, InductionInstances/Base, RoleCases, produced-length
+transfer, and ArgumentNormalization. Presence here alone is not a pass claim.

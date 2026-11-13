@@ -20,7 +20,7 @@ of additional numbered manuscript statements.
 | [Compatible special application](compatible-special/STATUS.md) | 4 | Literal original-spine and simultaneous success/failure under the same explicit compatibility condition. |
 | [Finite visit completion](visit-list/STATUS.md) | 3 | Internal symbolic-length induction gives uniform execution witnesses; actual per-job Completion remains explicit. |
 | [Final PUT integration](put-integration/STATUS.md) | 3 | Entire preparation retained; actual final guarded step and original positive Object certificate at one selected tuple. |
-| [Difference and pair sectors](history-difference/STATUS.md) | 7 | Actual difference tests discharged for arbitrary additive gaps; arbitrary-input order splitting and inversion remain pending. |
+| [Difference and pair sectors](history-difference/STATUS.md) | 7 | Actual difference tests discharged for arbitrary additive gaps; arbitrary-input splitting and inversion are paid by later packets below. |
 | [Two-child content](context-child-content/STATUS.md) | 2 | Actual ordered application/argument-cons expansion and observation map pay child semantics; the map is still proof-side, not identified with runtime output. |
 
 Every linked accepted packet has an exact statement gate, standard-axiom audit,
@@ -52,7 +52,7 @@ failed proof-source archives are published source-first.
 - Source-restricted recursive content and evaluator/layer unfolding; computed-fuel singleton stack is now checked.
 - Recursive evaluator-content linkage; actual reverse-stack child slot correspondence is now checked.
 - Hereditary-family observations under all successive deletions, beyond the one-level observer law.
-- Actual registered inverse/decoder and encoded-history lookup obligations; unrestricted internal pairing injectivity is now checked.
+- Actual runtime history append and successful-reference preservation; unrestricted pair injectivity, literal decoder inverses and option-aware lookup are checked.
 
 The paper02 arbitrary finite-valued collapse-language decision claim remains
 pending. Omega-free evaluation and finite-pair formulas do not establish the
@@ -60,7 +60,7 @@ required uniform comparison/termination theorem.
 
 ## Latest verified source checkpoint
 
-[98bd7aaf](https://github.com/avg-netizen/logic-lineages-papers/commit/98bd7aaf3fd1156c875199cae6043a07f207bdb7) publishes [unrestricted internal pair injectivity](history-cancellation/STATUS.md) and [actual reverse-stack child slots](context-reverse-slots/STATUS.md). Decoder inverses, recursive evaluator content, and full I/C/HB remain separate obligations.
+[98bd7aaf](https://github.com/avg-netizen/logic-lineages-papers/commit/98bd7aaf3fd1156c875199cae6043a07f207bdb7) publishes [unrestricted internal pair injectivity](history-cancellation/STATUS.md) and [actual reverse-stack child slots](context-reverse-slots/STATUS.md). Decoder inverses were separate obligations at that checkpoint and are checked below; recursive evaluator content and full I/C/HB remain open.
 
 [Computed-fuel singleton](computed-stack/STATUS.md) is checked at the unchanged original completed/evaluator programs, with no supplied geometry or fuel comparison. Recursive value semantics remain unpaid.
 
@@ -72,4 +72,6 @@ required uniform comparison/termination theorem.
 - [Actual deletion selector semantics](context-deletion-return/STATUS.md), deriving scalar observation agreement.
 - [Internal literal decoder inverses](history-decoder/STATUS.md), proved independently of native calibration.
 
-Both-role recursive framed content, source evaluator/layer unfolding, option-aware encoded history lookup, full I/C and HB remain unpaid.
+Both-role recursive framed content, source evaluator/layer unfolding, runtime append/reference preservation, full I/C and HB remain unpaid.
+
+[Option-aware encoded history lookup](history-lookup/STATUS.md) is now checked, including cross-tag internal destructors and true missing-reference failure. [Map length](map-length/STATUS.md), [whole prefix row uniqueness](prefix-value/STATUS.md), and [generic map/reversal append geometry](list-geometry/STATUS.md) are checked operational suppliers.
