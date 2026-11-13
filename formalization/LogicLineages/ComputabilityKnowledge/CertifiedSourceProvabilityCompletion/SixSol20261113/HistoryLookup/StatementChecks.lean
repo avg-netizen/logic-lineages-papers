@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.LookupProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.NativeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.DestructorStatementChecks
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.StatementChecks
+
+theorem nativeHistoryLookup : Targets.NativeHistoryLookup := NativeProof.nativeHistoryLookup
+theorem internalHeadCons : Targets.InternalHeadCons := DestructorProof.internalHeadCons
+theorem internalTailCons : Targets.InternalTailCons := DestructorProof.internalTailCons
+theorem internalLookupZeroCons : Targets.InternalLookupZeroCons := LookupProof.internalLookupZeroCons
+theorem internalLookupSuccessorCons : Targets.InternalLookupSuccessorCons := LookupProof.internalLookupSuccessorCons
+theorem internalLookupNil : Targets.InternalLookupNil := LookupProof.internalLookupNil
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup
