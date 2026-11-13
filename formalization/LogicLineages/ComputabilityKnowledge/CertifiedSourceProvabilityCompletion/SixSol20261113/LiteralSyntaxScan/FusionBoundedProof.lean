@@ -49,6 +49,7 @@ variable (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
 variable (hr : (nodes p)[rtag]? = some ⟨1,HistoryDecoder.decoder true⟩)
 variable (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
 
+include hi hl hp hr ha
 theorem nilAll (right : Term ctx) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (allFusion itag ltag ptag rtag atag .zero right)) := by
@@ -70,6 +71,7 @@ theorem base (right : Term ctx) :
   (.base (transportAll itag ltag ptag rtag atag .zero code (liftTerm right))) hcode) (.base hz)
  exact ⟨.generalize (Hilbert.Local.finish (Hilbert.Local.discharge hout))⟩
 
+omit hr in
 theorem positiveAt (ctag stag : Nat)
  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩)
  (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxStep.stepCode⟩)

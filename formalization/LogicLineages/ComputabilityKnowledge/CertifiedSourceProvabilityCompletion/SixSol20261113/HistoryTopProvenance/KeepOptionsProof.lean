@@ -1,17 +1,17 @@
 module
-public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepCasesProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepSuccessorSyntax
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.KeepOptionsProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport KeepSyntax
 
-def optionTemplate {ctx : Nat} itag ptag ctag vtag leftTag rightTag
+def optionTemplate {ctx : Nat} (itag ptag ctag vtag leftTag rightTag : Nat)
  (lines context raw tail remaining index fuel : Term ctx) : Formula (ctx+1) :=
  stateKeep itag ptag ctag vtag leftTag rightTag (.var 0) (liftTerm lines)
    (liftTerm context) (liftTerm raw) (liftTerm tail) (liftTerm remaining) (liftTerm index) (liftTerm fuel)
 
-theorem optionAt {ctx : Nat} itag ptag ctag vtag leftTag rightTag
+theorem optionAt {ctx : Nat} (itag ptag ctag vtag leftTag rightTag : Nat)
  (lines context raw tail remaining index fuel option : Term ctx) :
  GorbowStandardInstances.instantiate (optionTemplate itag ptag ctag vtag leftTag rightTag
    lines context raw tail remaining index fuel) option =
@@ -42,8 +42,7 @@ theorem allOptions {n ctx : Nat} (p : Program n) (itag ptag ctag leftTag rightTa
    (liftTerm tail) (liftTerm remaining) (liftTerm index) (liftTerm fuel)
  have hs' : Derivation T (GorbowStandardInduction.successorInstance phi) := by
    simpa only [phi,optionTemplate,GorbowStandardInduction.successorInstance,substStateKeep,
-     HistoryLookup.DropEquationsProof.substCons,substitute,successorLift,
-     HistoryOrder.SupportProof.substituteLift,liftTerm,Fin.cases_zero] using hs
+     KeepSuccessorSyntax.liftAtSuccessor,KeepSuccessorSyntax.liftCons,HistoryLookup.DropEquationsProof.substCons,substitute,Fin.cases_zero] using hs
  have h := atTerm phi option (induction phi hb (Hilbert.lift phi hs'))
  simpa only [phi,optionAt] using (show Nonempty (Derivation T
    (GorbowStandardInstances.instantiate phi option)) from ⟨h⟩)

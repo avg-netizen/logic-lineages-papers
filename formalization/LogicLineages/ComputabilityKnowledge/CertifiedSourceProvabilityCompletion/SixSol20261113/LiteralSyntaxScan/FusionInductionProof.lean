@@ -15,6 +15,7 @@ variable (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
 variable (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩)
 variable (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxStep.stepCode⟩)
 
+include hi hl hp ha hc hs
 theorem positiveAll (bound right : Term ctx) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.imp (boundedFusion itag ltag ptag rtag atag bound right)
@@ -24,7 +25,7 @@ theorem positiveAll (bound right : Term ctx) :
  have h' : Derivation (GorbowPRNumeralCalculation.Theory p)
   (.imp (GorbowPACore.weaken (boundedFusion itag ltag ptag rtag atag bound right))
    (fusion itag ltag ptag rtag atag (liftTerm (.succ bound)) (liftTerm right) (.var 0))) := by
-  simpa only [GorbowPACore.weaken,substBounded,liftTerm,renameTerm] using h
+  simpa only [GorbowPACore.weaken,substBounded,liftTerm,renameTerm,substitute] using h
  exact ⟨HistoryIteratorSuffix.RelationProof.universalUnder _ _ h'⟩
 
 theorem nextAt (bound code right : Term ctx) :
@@ -64,9 +65,10 @@ theorem next (bound right : Term ctx) :
   (.imp (GorbowPACore.weaken (boundedFusion itag ltag ptag rtag atag bound right))
    (.imp (weakBound (.var 0) (liftTerm (.succ bound)))
     (allFusion itag ltag ptag rtag atag (.var 0) (liftTerm right)))) := by
-  simpa only [GorbowPACore.weaken,substBounded,liftTerm,renameTerm] using h
+  simpa only [GorbowPACore.weaken,substBounded,liftTerm,renameTerm,substitute] using h
  exact ⟨HistoryIteratorSuffix.RelationProof.universalUnder _ _ h'⟩
 
+include hr
 theorem fusionAll (left right state : Term ctx) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (fusion itag ltag ptag rtag atag left right state)) := by

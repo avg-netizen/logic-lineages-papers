@@ -10,7 +10,7 @@ open LiteralRawMP.DispatcherSupportProof LiteralRawMP.DispatcherCombinatorsProof
 
 theorem expandInstalled {n : Nat} (p : Program n) (stag : Nat)
  (hs : (nodes p)[stag]? = some ⟨2,stepCode⟩) :
- ∃ etag, (nodes p)[etag]? = some ⟨2,expandCode⟩ := by
+ ∃ etag : Nat, (nodes p)[etag]? = some ⟨2,expandCode⟩ := by
  let inner := choose expanded (constant 2 0) (success appended)
  let middle := choose stack (constant 2 0) inner
  let g1 : Fin 3 → Program 2 := Fin.cases (.projection 0) (Fin.cases (constant 2 0) (Fin.cases middle Fin.elim0))

@@ -34,6 +34,7 @@ variable (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
 variable (hr : (nodes p)[rtag]? = some ⟨1,HistoryDecoder.decoder true⟩)
 variable (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)
 
+include hi hl hp hr ha
 theorem nilFusion (right state : Term ctx) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (fusion itag ltag ptag rtag atag .zero right state)) := by
@@ -46,6 +47,7 @@ theorem nilFusion (right state : Term ctx) :
   (.base (.logical (.reflexive right))) (.base hz)
  exact ⟨Hilbert.Local.finish (localTrans _ _ _ hleft (HistoryOrder.StepProof.localSym _ _ hright))⟩
 
+omit hr in
 theorem consFusion (ctag stag : Nat)
  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩)
  (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxStep.stepCode⟩)
