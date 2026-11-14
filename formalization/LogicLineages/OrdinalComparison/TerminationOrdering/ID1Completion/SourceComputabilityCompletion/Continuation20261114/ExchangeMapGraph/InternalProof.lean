@@ -2,6 +2,7 @@ module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.Targets
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryMembership.Proof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalConstructorSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureLogicProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.InternalProof
@@ -21,7 +22,7 @@ theorem entryFields (entry k value rest key : OTerm alpha)
     (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing entry k value))) :
     Nonempty (Derivation body Delta
       (programGraph entryKey k ![entry,rest,key] ⊓ programGraph entryValue value ![entry,rest,key])) := by
-  obtain ⟨hi⟩ := InternalPositiveUnfoldingSupportProof.closedApply
+  obtain ⟨hi⟩ := InternalRecursionClosureLogicProof.closedApply
     (InternalUnpairProof.actualOriginalGeneratedCodeInverse body alpha entry k value) hp
   obtain ⟨hl⟩ := unaryValue InternalUnpair.left (.projection 0) k entry ![entry,rest,key]
     ⟨Derivation.conjunctionLeft hi⟩ (projectionValue 0 ![entry,rest,key])
