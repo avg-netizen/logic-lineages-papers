@@ -1,0 +1,292 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:24:2: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:29:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate (arityAt ?n ?arity) (?payload ::ᵥ ?symbols ::ᵥ ?types ::ᵥ nil)
+in the target expression
+  evaluate (arityAt n arity) (ofFn ![↑s, symbols, types]) = arity s
+
+n : ℕ
+arity : Fin n → ℕ
+s : Fin n
+symbols types : ℕ
+⊢ evaluate (arityAt n arity) (ofFn ![↑s, symbols, types]) = arity s
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:71:47: error: unsolved goals
+case zero
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+⊢ (decide (∃ a ∈ types, typeNumber a = 0)).toNat = (decide (Ty.ground ∈ types)).toNat
+
+case succ
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+⊢ (decide (∃ a ∈ types, typeNumber a = Nat.pair 0 0 + 1)).toNat = (decide (Ty.ground.arrow Ty.ground ∈ types)).toNat
+
+case cases
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+result✝ : Ty
+⊢ (decide
+        (∃ a ∈ types,
+          typeNumber a =
+            1 +
+              Nat.pair 0
+                (1 + Nat.pair (typeNumber result✝) (1 + Nat.pair (typeNumber result✝) (typeNumber result✝))))).toNat =
+    (decide (Ty.ground.arrow (result✝.arrow (result✝.arrow result✝)) ∈ types)).toNat
+
+case recursor
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+result✝ : Ty
+⊢ (decide
+        (∃ a ∈ types,
+          typeNumber a =
+            1 +
+              Nat.pair 0
+                (1 +
+                  Nat.pair (1 + Nat.pair 0 (1 + Nat.pair (typeNumber result✝) (typeNumber result✝)))
+                    (1 + Nat.pair (typeNumber result✝) (typeNumber result✝))))).toNat =
+    (decide (Ty.ground.arrow ((Ty.ground.arrow (result✝.arrow result✝)).arrow (result✝.arrow result✝)) ∈ types)).toNat
+
+case application
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+domain✝ result✝ : Ty
+⊢ evaluate
+      (InternalAcceptance.conjunction (typeMember (InternalUnpair.right.composition fun x => Program.projection 0))
+        (InternalAcceptance.conjunction (typeMember (succOf (Program.projection 0)))
+          (typeMember (leftOf (Program.projection 0)))))
+      (Nat.pair (typeNumber domain✝) (typeNumber result✝) ::ᵥ
+        numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil) =
+    (decide (result✝ ∈ types) && (decide (domain✝.arrow result✝ ∈ types) && decide (domain✝ ∈ types))).toNat
+
+case ranked
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+symbol✝ : Fin n
+⊢ evaluate
+      (InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+        (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+          (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0)))))
+      (↑symbol✝ ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil) =
+    (decide (symbol✝ ∈ symbols) &&
+        (decide (Ty.ground ∈ types) && (decide (arity symbol✝ = 0) || decide (Ty.ground ∈ types)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:75:43: warning: This simp argument is unused:
+  actualConjunctionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵r̵a̵n̵k̵e̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵a̵c̵t̵u̵a̵l̵C̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵e̵v̵a̵l̵B̵r̵a̵n̵c̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵c̵c̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵l̵e̵f̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵i̵g̵h̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵b̵i̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵t̵a̵i̵n̵s̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵a̵r̵i̵t̵y̵V̵a̵l̵u̵e̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵,̵d̵e̵c̵o̵d̵e̵H̵e̵a̵d̵,̵H̵e̵a̵d̵I̵n̵W̵i̵n̵d̵o̵w̵,̵R̵a̵n̵k̵e̵d̵C̵o̵v̵e̵r̵e̵d̵,̵h̵e̵a̵d̵R̵e̵s̵u̵l̵t̵,̵h̵e̵a̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵T̵y̵.̵c̵a̵s̵e̵T̵y̵p̵e̵,̵T̵y̵.̵r̵e̵c̵T̵y̵p̵e̵,̵t̵y̵p̵e̵N̵u̵m̵b̵e̵r̵,̵t̵y̵p̵e̵M̵e̵m̵,̵s̵y̵m̵b̵o̵l̵M̵e̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲r̲a̲n̲k̲e̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲e̲v̲a̲l̲B̲r̲a̲n̲c̲h̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲u̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲O̲n̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲V̲a̲l̲u̲e̲,̲ ̲s̲u̲c̲c̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲l̲e̲f̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲i̲g̲h̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲b̲i̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲c̲o̲n̲t̲a̲i̲n̲s̲V̲a̲l̲u̲e̲,̲ ̲a̲r̲i̲t̲y̲V̲a̲l̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲,̲ ̲d̲e̲c̲o̲d̲e̲H̲e̲a̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲H̲e̲a̲d̲I̲n̲W̲i̲n̲d̲o̲w̲,̲ ̲R̲a̲n̲k̲e̲d̲C̲o̲v̲e̲r̲e̲d̲,̲ ̲h̲e̲a̲d̲R̲e̲s̲u̲l̲t̲,̲ ̲h̲e̲a̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲T̲y̲.̲c̲a̲s̲e̲T̲y̲p̲e̲,̲ ̲T̲y̲.̲r̲e̲c̲T̲y̲p̲e̲,̲ ̲t̲y̲p̲e̲N̲u̲m̲b̲e̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲M̲e̲m̲,̲ ̲s̲y̲m̲b̲o̲l̲M̲e̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:75:71: warning: This simp argument is unused:
+  evalBranch
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵r̵a̵n̵k̵e̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵a̵c̵t̵u̵a̵l̵C̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵e̵v̵a̵l̵B̵r̵a̵n̵c̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵c̵c̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵l̵e̵f̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵i̵g̵h̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵b̵i̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵t̵a̵i̵n̵s̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵a̵r̵i̵t̵y̵V̵a̵l̵u̵e̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵,̵d̵e̵c̵o̵d̵e̵H̵e̵a̵d̵,̵H̵e̵a̵d̵I̵n̵W̵i̵n̵d̵o̵w̵,̵R̵a̵n̵k̵e̵d̵C̵o̵v̵e̵r̵e̵d̵,̵h̵e̵a̵d̵R̵e̵s̵u̵l̵t̵,̵h̵e̵a̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵T̵y̵.̵c̵a̵s̵e̵T̵y̵p̵e̵,̵T̵y̵.̵r̵e̵c̵T̵y̵p̵e̵,̵t̵y̵p̵e̵N̵u̵m̵b̵e̵r̵,̵t̵y̵p̵e̵M̵e̵m̵,̵s̵y̵m̵b̵o̵l̵M̵e̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲r̲a̲n̲k̲e̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲a̲c̲t̲u̲a̲l̲C̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲u̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲O̲n̲e̲,̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲V̲a̲l̲u̲e̲,̲ ̲s̲u̲c̲c̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲l̲e̲f̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲r̲i̲g̲h̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲b̲i̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲c̲o̲n̲t̲a̲i̲n̲s̲V̲a̲l̲u̲e̲,̲ ̲a̲r̲i̲t̲y̲V̲a̲l̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲d̲e̲c̲o̲d̲e̲H̲e̲a̲d̲,̲ ̲H̲e̲a̲d̲I̲n̲W̲i̲n̲d̲o̲w̲,̲ ̲R̲a̲n̲k̲e̲d̲C̲o̲v̲e̲r̲e̲d̲,̲ ̲h̲e̲a̲d̲R̲e̲s̲u̲l̲t̲,̲ ̲h̲e̲a̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲T̲y̲.̲c̲a̲s̲e̲T̲y̲p̲e̲,̲ ̲T̲y̲.̲r̲e̲c̲T̲y̲p̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲,̲ ̲s̲y̲m̲b̲o̲l̲M̲e̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:77:54: warning: This simp argument is unused:
+  projectionOne
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵r̵a̵n̵k̵e̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵a̵c̵t̵u̵a̵l̵C̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵e̵v̵a̵l̵B̵r̵a̵n̵c̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵c̵c̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵l̵e̵f̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵i̵g̵h̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵b̵i̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵t̵a̵i̵n̵s̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵a̵r̵i̵t̵y̵V̵a̵l̵u̵e̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵,̵d̵e̵c̵o̵d̵e̵H̵e̵a̵d̵,̵H̵e̵a̵d̵I̵n̵W̵i̵n̵d̵o̵w̵,̵R̵a̵n̵k̵e̵d̵C̵o̵v̵e̵r̵e̵d̵,̵h̵e̵a̵d̵R̵e̵s̵u̵l̵t̵,̵h̵e̵a̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵T̵y̵.̵c̵a̵s̵e̵T̵y̵p̵e̵,̵T̵y̵.̵r̵e̵c̵T̵y̵p̵e̵,̵t̵y̵p̵e̵N̵u̵m̵b̵e̵r̵,̵t̵y̵p̵e̵M̵e̵m̵,̵s̵y̵m̵b̵o̵l̵M̵e̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲r̲a̲n̲k̲e̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲a̲c̲t̲u̲a̲l̲C̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲e̲v̲a̲l̲B̲r̲a̲n̲c̲h̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲u̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲V̲a̲l̲u̲e̲,̲ ̲s̲u̲c̲c̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲l̲e̲f̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲i̲g̲h̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲b̲i̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲c̲o̲n̲t̲a̲i̲n̲s̲V̲a̲l̲u̲e̲,̲ ̲a̲r̲i̲t̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲,̲ ̲d̲e̲c̲o̲d̲e̲H̲e̲a̲d̲,̲ ̲H̲e̲a̲d̲I̲n̲W̲i̲n̲d̲o̲w̲,̲ ̲R̲a̲n̲k̲e̲d̲C̲o̲v̲e̲r̲e̲d̲,̲ ̲h̲e̲a̲d̲R̲e̲s̲u̲l̲t̲,̲ ̲h̲e̲a̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲T̲y̲.̲c̲a̲s̲e̲T̲y̲p̲e̲,̲ ̲T̲y̲.̲r̲e̲c̲T̲y̲p̲e̲,̲ ̲t̲y̲p̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲,̲ ̲s̲y̲m̲b̲o̲l̲M̲e̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:78:6: warning: This simp argument is unused:
+  succOfEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        s̵u̵c̵c̵O̵f̵E̵v̵a̵lu̵a̵t̵i̵o̵n̵,̵l̵eftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation, ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult, ̲headArguments,
+        Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:78:23: warning: This simp argument is unused:
+  leftOfEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation,l̵e̵f̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲rightEvaluation, ̲binaryCompositionEvaluation, ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult, ̲headArguments,
+        Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:78:40: warning: This simp argument is unused:
+  rightEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation,r̵i̵g̵h̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲binaryCompositionEvaluation, ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult, ̲headArguments,
+        Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:78:56: warning: This simp argument is unused:
+  binaryCompositionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation,b̵i̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult, ̲headArguments,
+        Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:78:84: warning: This simp argument is unused:
+  containsValue
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation,c̵o̵n̵t̵ ̲ar̲in̵s̵t̲y̲Value,
+        a̵r̵i̵t̵y̵V̵a̵l̵u̵e̵,̵List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult, ̲headArguments,
+        Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:79:6: warning: This simp argument is unused:
+  arityValue
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵a̵r̵i̵t̵y̵V̵a̵l̵u̵e̵,̵List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲headArguments,
+  ̵  ̵ ̵ ̵ ̵ ̵Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:79:17: warning: This simp argument is unused:
+  List.getD_eq_getElem
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue,L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵,̵ ̲decodeHead, ̲HeadInWindow, ̲RankedCovered, ̲headResult, ̲headArguments,
+        Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:80:29: warning: This simp argument is unused:
+  typeNumber
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue, ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲headResult, ̲headArguments,
+  ̵  ̵ ̵ ̵ ̵ ̵Ty.caseType, ̲Ty.recType, ̲typeN̵u̵m̵b̵e̵r̵,̵t̵y̵p̵e̵Mem, ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:80:40: warning: This simp argument is unused:
+  typeMem
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue, ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲headResult, ̲headArguments,
+  ̵  ̵ ̵ ̵ ̵ ̵Ty.caseType, ̲Ty.recType, ̲typeNumber,t̵y̵p̵e̵M̵e̵m̵,̵ ̲symbolMem, ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:80:48: warning: This simp argument is unused:
+  symbolMem
+
+Hint: Omit it from the simp argument list.
+  simp [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        applicationArguments, ̲rankedArguments, ̲actualConjunctionEvaluation, ̲evalBranch,
+        typeMemberValue, ̲constantEvaluation, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲projectionOne, ̲projectionValue,
+        succOfEvaluation, ̲leftOfEvaluation, ̲rightEvaluation, ̲binaryCompositionEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲containsValue,
+  ̵  ̵ ̵ ̵ ̵ ̵arityValue, ̲List.getD_eq_getElem, ̲decodeHead, ̲HeadInWindow, ̲RankedCovered,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲headResult, ̲headArguments,
+  ̵  ̵ ̵ ̵ ̵ ̵Ty.caseType, ̲Ty.recType, ̲typeNumber, ̲typeMem,s̵y̵m̵b̵o̵l̵M̵e̵m̵,̵ ̲Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.projectionValue: [propext]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.containsValue: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:83:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.nativeArity: forbidden axiom dependency sorryAx
