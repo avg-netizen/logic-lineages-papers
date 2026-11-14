@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.LeafStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.SuppliersStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.StatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalAcceptanceSupportProof
+open InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc eqn emb)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open SourceComputabilityFormulaSupportProof (numeral)
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+theorem exactLeaf : Targets.InternalLeaf := LeafProof.leaf
+theorem exactSuppliers : Targets.InternalNilSuppliers := NilSuppliersProof.nilSuppliers
+theorem exactExtraction : Targets.InternalNilExtraction := Proof.nilExtraction
+#print axioms exactLeaf
+#print axioms exactSuppliers
+#print axioms exactExtraction
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.StatementChecks

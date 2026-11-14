@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.NilSuppliersProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.SuppliersStatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalAcceptanceSupportProof
+open InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc eqn emb)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open SourceComputabilityFormulaSupportProof (numeral)
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+theorem exactSuppliers : Targets.InternalNilSuppliers := NilSuppliersProof.nilSuppliers
+#print axioms exactSuppliers
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.SuppliersStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesNilExtraction.SuppliersStatementChecks
