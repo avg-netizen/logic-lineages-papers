@@ -1,4 +1,5 @@
 module
+public import Mathlib.Tactic.FinCases
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.TransparentLayerInstallation.Targets
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.NativeProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.PrimitiveProof
@@ -54,25 +55,25 @@ theorem inputCoordinatePrimitive (n : Nat) (arity : Fin n → Nat) (i : Fin 19) 
     (NumberedExchangeRootPrimrecProof.headMovePrimitive n arity).comp
       (hwindow.pair ((hxhead.pair hxfirst).pair (hyhead.pair hyfirst)))
   fin_cases i
-  · simpa only [ExchangeLayer.NativeProof.input0] using (hxtag)
-  · simpa only [ExchangeLayer.NativeProof.input1] using (Primrec.encode.comp hxann)
-  · simpa only [ExchangeLayer.NativeProof.input2] using (Primrec.encode.comp hxhead)
-  · simpa only [ExchangeLayer.NativeProof.input3] using (hxlabel)
-  · simpa only [ExchangeLayer.NativeProof.input4] using (Primrec.encode.comp hxtypes)
-  · simpa only [ExchangeLayer.NativeProof.input5] using (Primrec.encode.comp hxfirst)
-  · simpa only [ExchangeLayer.NativeProof.input6] using (Primrec.encode.comp hxsecond)
-  · simpa only [ExchangeLayer.NativeProof.input7] using (hytag)
-  · simpa only [ExchangeLayer.NativeProof.input8] using (Primrec.encode.comp hyann)
-  · simpa only [ExchangeLayer.NativeProof.input9] using (Primrec.encode.comp hyhead)
-  · simpa only [ExchangeLayer.NativeProof.input10] using (hylabel)
-  · simpa only [ExchangeLayer.NativeProof.input11] using (Primrec.encode.comp hytypes)
-  · simpa only [ExchangeLayer.NativeProof.input12] using (Primrec.encode.comp hyfirst)
-  · simpa only [ExchangeLayer.NativeProof.input13] using (Primrec.encode.comp hysecond)
-  · simpa only [ExchangeLayer.NativeProof.input14] using ((Primrec.dom_bool Bool.toNat).comp hleft)
-  · simpa only [ExchangeLayer.NativeProof.input15] using ((Primrec.dom_bool Bool.toNat).comp hright)
-  · simpa only [ExchangeLayer.NativeProof.input16] using ((Primrec.dom_bool Bool.toNat).comp hroot)
-  · simpa only [ExchangeLayer.NativeProof.input17] using (Primrec.encode.comp ((headResultPrimitive n).comp hxhead))
-  · simpa only [ExchangeLayer.NativeProof.input18] using (Primrec.encode.comp ((headResultPrimitive n).comp hyhead))
+  · exact ((hxtag)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hxann)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hxhead)).of_eq (by intro p; rfl)
+  · exact ((hxlabel)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hxtypes)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hxfirst)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hxsecond)).of_eq (by intro p; rfl)
+  · exact ((hytag)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hyann)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hyhead)).of_eq (by intro p; rfl)
+  · exact ((hylabel)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hytypes)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hyfirst)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp hysecond)).of_eq (by intro p; rfl)
+  · exact (((Primrec.dom_bool Bool.toNat).comp hleft)).of_eq (by intro p; rfl)
+  · exact (((Primrec.dom_bool Bool.toNat).comp hright)).of_eq (by intro p; rfl)
+  · exact (((Primrec.dom_bool Bool.toNat).comp hroot)).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp ((headResultPrimitive n).comp hxhead))).of_eq (by intro p; rfl)
+  · exact ((Primrec.encode.comp ((headResultPrimitive n).comp hyhead))).of_eq (by intro p; rfl)
 
 theorem validPrimitive (n : Nat) : Primrec (TransparentExchangeLayer.validValue n) := by
   let V := List.Vector Nat 3
