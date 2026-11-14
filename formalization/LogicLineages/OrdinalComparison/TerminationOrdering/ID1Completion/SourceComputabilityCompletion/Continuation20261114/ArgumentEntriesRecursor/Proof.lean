@@ -16,7 +16,7 @@ theorem originalGraph : Targets.OriginalGraph := by
     (fun raw _ child hc => ArgumentEntriesFrontier.Proof.rawDecrease raw child hc)
     layerCoherence i (codeNumber seed) param hi
   change evaluate graph (List.Vector.ofFn ![i,codeNumber seed,param]) =
-    numbersNumber ((Nat.rec [codeNumber seed]
+    numbersNumber ((Nat.rec (motive := fun _ => List Nat) [codeNumber seed]
       (fun _ nodes => nodes.flatMap ArgumentEntriesFrontier.rawChildren) (codeNumber seed+1-i)).map
       (fun node => Nat.pair node (rawValue node))) at hg
   rw [ArgumentEntriesFrontier.Proof.frontierImage] at hg
