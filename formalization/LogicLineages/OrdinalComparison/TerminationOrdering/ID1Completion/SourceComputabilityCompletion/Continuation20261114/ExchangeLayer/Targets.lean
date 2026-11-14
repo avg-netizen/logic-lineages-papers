@@ -4,7 +4,6 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.Targets
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
-open InternalControlGraphSupportProof (programGraph)
 open InternalTagArithmeticSyntaxProof (eqn)
 open SourceComputabilityFormulaSupportProof (numeral)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
