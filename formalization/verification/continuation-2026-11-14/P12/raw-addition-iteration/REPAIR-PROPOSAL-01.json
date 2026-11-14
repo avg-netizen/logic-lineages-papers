@@ -1,0 +1,17 @@
+{
+  "failure": "reflexiveLine is unary-only but generic combinators have arity n; two occurrences fail",
+  "proposed_changes": [
+    {
+      "old": "TwoSol20261113.ReflexivityRecognizer.reflexiveLine t",
+      "new": "applyOne RawReflexivity.lineConstructor t"
+    },
+    {
+      "old": "TwoSol20261113.ReflexivityRecognizer.reflexiveLine (RawAddSucc.successorRaw t)",
+      "new": "applyOne RawReflexivity.lineConstructor (RawAddSucc.successorRaw t)"
+    }
+  ],
+  "effect": "Explicit composition of checked unary original reflexivity constructor with arbitrary-arity t. New well-typed compositional AST; original canonical certificate value and all frozen targets unchanged. Constructor proof must pay composition and actual constructor equation.",
+  "status": "proposal only; frozen sources unchanged; awaiting independent review/permission to repin",
+  "receipt": "1794672276623805304-6",
+  "compiler": "not run"
+}
