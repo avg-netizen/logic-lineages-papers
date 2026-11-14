@@ -63,7 +63,7 @@ theorem matrixWitness (raw needle out : OTerm alpha) :
 
 theorem predicateInstantiate (raw : OTerm alpha) : instantiate (predicate : Formula (alpha ⊕ Fin 1)) (emb raw) = AtRaw raw := by
   rw [predicate,instantiate,InternalTagArithmeticSyntaxProof.bindEmbedding,atRawSubst]
-  simp only [varBind]
+  simp only [InternalTagArithmeticSyntaxProof.varBind]
 
 theorem predicateLift : lift (predicate : Formula (alpha ⊕ Fin 1)) = predicate := by
   unfold predicate lift
