@@ -16,7 +16,8 @@ open HeadWindowBranchAdequacy (member)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 
-open InternalTagArithmeticSyntaxProof InternalControlGraphSupportProof
+open InternalTagArithmeticSyntaxProof (emb zSubst sucSubst)
+open InternalControlGraphSupportProof
 open InternalTermSubstitutionProof InternalFiniteBlocksSubstitutionProof InternalBinderTransportProof
 open InternalGraphCompositionSyntaxProof InternalRecursionClosureSyntaxProof
 open InternalRecursionGraphSyntaxProof InternalRawListRecursionSyntaxProof
