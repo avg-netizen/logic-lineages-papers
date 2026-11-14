@@ -1,3 +1,3 @@
-# Append soundness partial1/4 accepted
+# Accepted focused packet
 
-Actual append output membership implies internal disjunction of input memberships. Gate1794663672346855835-5 passed;2202 recursive rows independently rehashed,23 packet declarations standard-only. Adds1 supporting contract,total57; numbered register unchanged. Other three expansion-soundness contracts remain pending.
+Gate1794664173300133397-5 passed; 2238 recursive evidence rows independently rehashed, 75 packet declarations standard-only. Adds 3 distinct contracts (prior append not recounted); combined continuation total66. Numbered register unchanged. No original E correctness, finite-cutoff completeness or coherence claim. Full-root/remote CI unclaimed.
