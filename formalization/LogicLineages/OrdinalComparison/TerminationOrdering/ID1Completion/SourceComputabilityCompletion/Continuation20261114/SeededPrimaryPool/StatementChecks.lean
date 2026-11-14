@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.SeededPrimaryPool.NativeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.SeededPrimaryPool.InternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.SeededPrimaryPool.StatementChecks
+theorem exactSelection : Targets.SelectedTuple := NativeProof.selectedTuple
+#print axioms exactSelection
+theorem exactSeed : Targets.InternalSeedInPool := InternalProof.internalSeedInPool
+#print axioms exactSeed
+theorem exactCharacterization : Targets.InternalPoolCharacterization := InternalProof.internalPoolCharacterization
+#print axioms exactCharacterization
+theorem exactCarrier : Targets.InternalPrimaryCarrier := InternalProof.internalPrimaryCarrier
+#print axioms exactCarrier
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.SeededPrimaryPool.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.SeededPrimaryPool.StatementChecks
