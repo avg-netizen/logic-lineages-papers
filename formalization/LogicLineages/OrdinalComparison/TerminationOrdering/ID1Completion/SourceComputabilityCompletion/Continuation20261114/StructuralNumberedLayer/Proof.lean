@@ -25,6 +25,13 @@ theorem resultRename {alpha beta : Type} (k l tau upsilon ts us extras otherExtr
   simp only [result,StructuralExchangeFields.InternalProof.andRename,
     StructuralExchangeFields.InternalProof.orRename,eqnRelabel,GuardedSourceSyntaxProof.numeralRename]
 
+theorem sixRename {alpha beta : Type} (a b c d e f : OTerm alpha) (j : alpha → beta) :
+    (fun i : Fin 6 => (![a,b,c,d,e,f] i).relabel j) =
+      ![a.relabel j,b.relabel j,c.relabel j,d.relabel j,e.relabel j,f.relabel j] := by
+  funext i
+  exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl
+    (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)))))) i
+
 theorem internalNumbered : Targets.InternalNumbered := by
   intro body alpha Delta U V node code param source target k l f g tau upsilon base dest ts us extras otherExtras ef eg move h0 t0 h1 t1 h2 t2 h3 t3
     hV hn hsource htarget hef heg hm hc0 hc1 hc2 hc3
@@ -44,27 +51,27 @@ theorem internalNumbered : Targets.InternalNumbered := by
     change ∀ i, Nonempty (Derivation body Theta
       (graph3 (active U V i) (ys i) (node.relabel j) (code.relabel j) (param.relabel j))) at hys
     have hVj := renameInto hV j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hVj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hVj
     have hnj := renameInto hn j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hnj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hnj
     have hsourcej := renameInto hsource j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hsourcej
+    simp only [programRename,sixRename] at hsourcej
     have htargetj := renameInto htarget j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at htargetj
+    simp only [programRename,sixRename] at htargetj
     have hefj := renameInto hef j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hefj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hefj
     have hegj := renameInto heg j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hegj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hegj
     have hmj := renameInto hm j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hmj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hmj
     have hc0j := renameInto hc0 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc0j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc0j
     have hc1j := renameInto hc1 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc1j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc1j
     have hc2j := renameInto hc2 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc2j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc2j
     have hc3j := renameInto hc3 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc3j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc3j
     have hj := renameInto h j Theta hj
     simp only [graph3Rename,GuardedSourceSyntaxProof.numeralRename] at hj
     have hf := SupportProof.atFields body beta Theta U V
@@ -87,27 +94,27 @@ theorem internalNumbered : Targets.InternalNumbered := by
     change ∀ i, Nonempty (Derivation body Theta
       (graph3 (active U V i) (ys i) (node.relabel j) (code.relabel j) (param.relabel j))) at hys
     have hVj := renameInto hV j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hVj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hVj
     have hnj := renameInto hn j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hnj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hnj
     have hsourcej := renameInto hsource j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hsourcej
+    simp only [programRename,sixRename] at hsourcej
     have htargetj := renameInto htarget j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at htargetj
+    simp only [programRename,sixRename] at htargetj
     have hefj := renameInto hef j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hefj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hefj
     have hegj := renameInto heg j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hegj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hegj
     have hmj := renameInto hm j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hmj
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hmj
     have hc0j := renameInto hc0 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc0j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc0j
     have hc1j := renameInto hc1 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc1j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc1j
     have hc2j := renameInto hc2 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc2j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc2j
     have hc3j := renameInto hc3 j Theta hj
-    simp only [graph3Rename,graph2Rename,graph1Rename,programRename,GuardedSourceSyntaxProof.numeralRename] at hc3j
+    simp only [graph3Rename,graph2Rename,graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hc3j
     have hj := renameInto h j Theta hj
     simp only [resultRename] at hj
     have hf := SupportProof.atFields body beta Theta U V
