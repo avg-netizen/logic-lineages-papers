@@ -42,10 +42,10 @@ theorem atRawSubst {alpha beta : Type} (raw : OTerm alpha) (ts : alpha → OTerm
 
 theorem matrixWitness {alpha : Type} (raw needle image out : OTerm alpha) (params : Fin k → OTerm alpha) :
     (matrix base step transform raw).subst
-      (Sum.elim Term.var (fun i => emb (Fin.cons needle (Fin.cons image (Fin.cons out params)) i))) =
+      (Sum.elim Term.var (fun i => emb ((Fin.cons needle (Fin.cons image (Fin.cons out params)) : Fin (k+3) → OTerm alpha) i))) =
       (fields base step transform raw needle image out params).imp (result out image) := by
-  have he : (Sum.elim Term.var (fun i => emb (Fin.cons needle (Fin.cons image (Fin.cons out params)) i))) =
-      (fun a => emb (Sum.elim Term.var (Fin.cons needle (Fin.cons image (Fin.cons out params))) a)) := by
+  have he : (Sum.elim Term.var (fun i => emb ((Fin.cons needle (Fin.cons image (Fin.cons out params)) : Fin (k+3) → OTerm alpha) i))) =
+      (fun a => emb (Sum.elim Term.var (Fin.cons needle (Fin.cons image (Fin.cons out params)) : Fin (k+3) → OTerm alpha) a)) := by
     funext a
     cases a <;> rfl
   unfold matrix fields

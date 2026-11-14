@@ -32,7 +32,8 @@ theorem consHead {m : Nat} (p q : Program m) (out needle : OTerm alpha) (xs : Fi
   simp only [programRename] at hpj hoj
   have hc := binaryRecover InternalListCodec.consCode p q (out.relabel j) (needle.relabel j) tail
     (fun i => (xs i).relabel j) hoj hpj hq
-  exact containsHit (out.relabel j) (needle.relabel j) tail (needle.relabel j) hc ⟨refl _⟩
+  exact containsHit (out.relabel j) (needle.relabel j) tail (needle.relabel j) hc
+    (by rw [equalEqn]; exact ⟨InternalTagArithmeticSupportProof.refl _⟩)
 
 theorem consTail {m : Nat} (p q : Program m) (out tail needle : OTerm alpha) (xs : Fin m → OTerm alpha)
     (hq : Nonempty (Derivation body Delta (programGraph q tail xs)))
