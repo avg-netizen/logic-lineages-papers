@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.InternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.InternalStatementChecks
+theorem exactHit : Targets.InternalFirstHit := InternalProof.internalFirstHit
+#print axioms exactHit
+theorem exactMiss : Targets.InternalMissTail := InternalProof.internalMissTail
+#print axioms exactMiss
+theorem exactMissing : Targets.InternalMapMissing := InternalProof.internalMapMissing
+#print axioms exactMissing
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.InternalStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.InternalStatementChecks
