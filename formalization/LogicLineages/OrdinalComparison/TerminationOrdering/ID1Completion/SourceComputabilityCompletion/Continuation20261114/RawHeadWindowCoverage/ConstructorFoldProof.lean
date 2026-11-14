@@ -59,7 +59,7 @@ theorem rankedHit : Hit body OriginalSourceHeads.rankedStep (tagTransform 5) := 
   have hparams : params = (Fin.elim0 : Fin 0 → OTerm alpha) := by
     funext i
     exact Fin.elim0 i
-  subst params
+  rw [hparams] at ht
   have hp := tagRecover 5 image head ht
   exact consHead _ (.projection 1) out image (Fin.cons head (Fin.cons rest params))
     (tagValue 5 0 image head _ rfl hp) hs
@@ -82,7 +82,7 @@ theorem unaryHit (which : Fin 2) : Hit body OriginalSourceHeads.caseStep (tagTra
   have hparams : params = (Fin.elim0 : Fin 0 → OTerm alpha) := by
     funext i
     exact Fin.elim0 i
-  subst params
+  rw [hparams] at ht
   have hp := tagRecover (unaryTag which) image head ht
   revert hp
   refine Fin.cases ?_ (fun i => ?_) which

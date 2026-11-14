@@ -1,3 +1,5 @@
-# Partial focused acceptance
+# Focused accepted checkpoint
 
-Only Basic1 accepted after independent2307-row rehash. Generic fold and unary/ranked/application endpoints remain unaccepted; failed Fold03 and unrun dependencies preserved. Combined total400 with newest multiplication iteration3.
+Remaining unary, ranked and application positive rawWindow coverage accepted. Actual constructor folds and relational sigma-major application fold with internal strict-tail induction and literal append assembly. Basic1 already accepted and not recounted. Converse, validity and typed source-window adequacy remain open.
+
+Combined supporting total 404; numbered register unchanged.
