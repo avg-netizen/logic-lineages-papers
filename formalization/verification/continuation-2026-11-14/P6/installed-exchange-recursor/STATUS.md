@@ -1,3 +1,3 @@
 # Focused accepted checkpoint
 
-1 exact contracts accepted; 2226 recursive evidence rows independently rehashed and 4 packet audits standard-only. Combined total190, numbered register unchanged. InstalledExchange supplier1 accepted; other three packet endpoints pending. Multiplication original tag4/tag5 constructors, native combined refinement and internal combined acceptance7 accepted. No multiplication grammar/dispatcher/CORE/iteration or general HB3 completion. No full-root or remote CI claim.
+All four exact contracts accepted: supplier selection, direct product-decoder native calibration, internal structural factor, and the same new full retained tuple. This checkpoint adds three beyond the accepted supplier. Total193 supporting contracts; numbered register unchanged. Native01 failed and tuple01 unrun snapshots retained. No internal full exchange semantics, class coherence, general HB3, full-root or remote CI claim.
