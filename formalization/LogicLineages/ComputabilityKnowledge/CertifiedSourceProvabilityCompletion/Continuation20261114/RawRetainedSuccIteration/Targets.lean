@@ -28,5 +28,5 @@ def InternalIteration : Prop := ∀ n (p : Program n) (old a : Program 1) (x : P
          (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
           (RawAdditionIteration.binaryCall I.prefixTag count t)
           (RawAdditionIteration.binaryCall I.prefixTag count u)
-          (third I.rightTag (iteratorCall I.iteratorTag count (state I.ptag t u cert)))))))))))
+          (third I.rightTag (iteratorCall I.iteratorTag count (state I.ptag t u cert))))))))))))
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.Targets
