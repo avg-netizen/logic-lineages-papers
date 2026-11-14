@@ -1,5 +1,5 @@
 # Focused accepted checkpoint
 
-Original arithmetic-template symbolic value compiler correctness accepted by structural induction; actual value call for all runtime vectors, universalFunction excluded. CORE certificate endpoint remains unaccepted; no full fixed-PR quotation/HB3 claim.
+Remaining arithmetic-template quote validity and actual compiled certificate-call CORE accepted by genuine structural induction and graph equality transport. Value1 already accepted, not recounted. Fixed checker before runtime; universalFunction excluded, no full fixed-PR quotation/HB3 claim.
 
-Combined supporting total 429; numbered register unchanged.
+Combined supporting total 430; numbered register unchanged.

@@ -36,9 +36,11 @@ theorem quoteComputes {k : Nat} (t : Term k) (ha : Arithmetic t) {n ctx : Nat}
  Computes p [] (LiteralTemplateQuote.templateQuote t) values (raw I.numeralTag I.consTag I.appendTag values t) := by
  let J := I.toProducers.toAdditionProducer.toEvaluation.toCurrent.toComputation.toEvaluator
  induction t with
- | var i => exact unary p [] values LiteralNumeralPrefix.numeralCode (.projection i) _ _
+ | var i =>
+  exact unary p [] values LiteralNumeralPrefix.numeralCode (.projection i) _ _
     (projection p [] values i) (copies p [] LiteralNumeralPrefix.numeralCode I.numeralTag I.hnumeral _)
- | zero => exact binary p [] values HistoryCodec.cons _ _ _ _ _
+ | zero =>
+  exact binary p [] values HistoryCodec.cons _ _ _ _ _
     (constantValue p [] values 1) (constantValue p [] values 0) (copies p [] HistoryCodec.cons I.consTag I.hc _)
  | succ t ih => exact RawMulNewestAdditionIteration.CombinatorProof.succ p old a x J values _ _ (ih ha)
  | add t u iht ihu => exact RawMulNewestAdditionIteration.CombinatorProof.bin p old a x J values 3 _ _ _ _ (iht ha.1) (ihu ha.2)
