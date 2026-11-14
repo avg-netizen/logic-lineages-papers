@@ -24,7 +24,7 @@ theorem atRawApply (raw needle image out : OTerm alpha) (params : Fin k → OTer
     (hf : Nonempty (Derivation body Delta (fields base step transform raw needle image out params))) :
     Nonempty (Derivation body Delta (result out image)) := by
   obtain ⟨h⟩ := InternalClosedProgramsBindingProof.elimination body alpha (k+3) Delta
-    (matrix base step transform raw) (fun i => emb (Fin.cons needle (Fin.cons image (Fin.cons out params)) i)) h
+    (matrix base step transform raw) (fun i => emb ((Fin.cons needle (Fin.cons image (Fin.cons out params)) : Fin (k+3) → OTerm alpha) i)) h
   rw [matrixWitness] at h
   obtain ⟨hf⟩ := hf
   exact ⟨Derivation.implicationElimination h hf⟩
