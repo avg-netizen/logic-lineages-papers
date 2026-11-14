@@ -66,7 +66,7 @@ theorem sourceValue (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (
       numbersNumber (types.map typeNumber) := rfl
   rw [h0,h1,hf]
   congr 1
-  simp [NumberedAuxiliaryEnumeration.sourceHeads,headWindow,List.filter_map,
+  simp [NumberedAuxiliaryEnumeration.sourceHeads,headWindow,List.filter_map,Function.comp_def,
     NumberedAuxiliaryDecodingProof.headRoundTrip]
 
 theorem nativeSourceHeads : Targets.NativeSourceHeads := by
