@@ -55,7 +55,7 @@ theorem rawInduction (n : Nat) (arity : Fin n → Nat)  (raw : OTerm alpha)
       Nonempty (Derivation body Theta (BelowRaw n arity r)) →
       Nonempty (Derivation body Theta (AtRaw n arity r))) :
     Nonempty (Derivation body Delta (AtRaw n arity raw)) := by
-  let theta : Formula (alpha ⊕ Fin 1) := rawPredicate E
+  let theta : Formula (alpha ⊕ Fin 1) := rawPredicate n arity
   have hs : Nonempty (Derivation body
       (InternalStrongInduction.below (lift theta) (.var (.inr 0)) :: Delta.map weaken) theta) := by
     change Nonempty (Derivation body
