@@ -1,0 +1,95 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:28:17: error: unsolved goals
+case cons
+a : ℕ
+xs : List ℕ
+ih :
+  evaluate casesRecursors (ofFn ![numbersNumber xs]) =
+      List.foldr (fun head result => evaluate caseStep (head ::ᵥ result ::ᵥ nil)) (evaluate (constant 0 0) nil)
+        ((decodeNumbers (numbersNumber xs)).getD []) →
+    List.foldr (fun head rest => evaluate caseStep (head ::ᵥ rest ::ᵥ nil)) 0 xs =
+      numbersNumber (List.flatMap (fun x => [Nat.pair 2 x, Nat.pair 3 x]) xs)
+h :
+  evaluate casesRecursors (ofFn ![numbersNumber (a :: xs)]) =
+    List.foldr (fun head result => evaluate caseStep (head ::ᵥ result ::ᵥ nil)) (evaluate (constant 0 0) nil)
+      ((decodeNumbers (numbersNumber (a :: xs))).getD [])
+⊢ 1 +
+      Nat.pair (Nat.pair 2 a)
+        (1 +
+          Nat.pair (Nat.pair 3 a)
+            (List.foldr (fun head rest => 1 + Nat.pair (Nat.pair 2 head) (1 + Nat.pair (Nat.pair 3 head) rest)) 0 xs)) =
+    1 +
+      Nat.pair (Nat.pair 2 a)
+        (1 + Nat.pair (Nat.pair 3 a) (numbersNumber (List.flatMap (fun x => [Nat.pair 2 x, Nat.pair 3 x]) xs)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:28:61: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.foldr_cons, ̲caseStepValue,i̵h̵,̵ ̲List.flatMap_cons, ̲List.cons_append,
+  ̲ ̲ ̲ ̲ ̲List.nil_append, ̲numbersNumber]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:43:17: error: unsolved goals
+case cons
+sigma a : ℕ
+xs : List ℕ
+ih :
+  evaluate appRow (ofFn ![numbersNumber xs, sigma]) =
+      List.foldr (fun head result => evaluate appStep (head ::ᵥ result ::ᵥ sigma ::ᵥ nil))
+        (evaluate (constant 1 0) (sigma ::ᵥ nil)) ((decodeNumbers (numbersNumber xs)).getD []) →
+    List.foldr (fun head rest => evaluate appStep (head ::ᵥ rest ::ᵥ sigma ::ᵥ nil)) 0 xs =
+      numbersNumber (List.map (fun tau => Nat.pair 4 (Nat.pair sigma tau)) xs)
+h :
+  evaluate appRow (ofFn ![numbersNumber (a :: xs), sigma]) =
+    List.foldr (fun head result => evaluate appStep (head ::ᵥ result ::ᵥ sigma ::ᵥ nil))
+      (evaluate (constant 1 0) (sigma ::ᵥ nil)) ((decodeNumbers (numbersNumber (a :: xs))).getD [])
+⊢ 1 +
+      Nat.pair (Nat.pair 4 (Nat.pair sigma a))
+        (List.foldr (fun head rest => 1 + Nat.pair (Nat.pair 4 (Nat.pair sigma head)) rest) 0 xs) =
+    1 +
+      Nat.pair (Nat.pair 4 (Nat.pair sigma a))
+        (numbersNumber (List.map (fun tau => Nat.pair 4 (Nat.pair sigma tau)) xs))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:43:60: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.foldr_cons, ̲appStepValue,i̵h̵,̵ ̲List.map_cons, ̲numbersNumber]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:55:2: error: Type mismatch: After simplification, term
+  ha
+ has type
+  @Eq ℕ
+    (evaluate InternalApplicationValidityStackAppend.append
+      (ofFn ![numbersNumber (List.map (fun tau => Nat.pair 4 (Nat.pair sigma tau)) types), numbersNumber rest]))
+    (numbersNumber (List.map (fun tau => Nat.pair 4 (Nat.pair sigma tau)) types ++ rest))
+but is expected to have type
+  @Eq ℕ
+    (evaluate InternalApplicationValidityStackAppend.append
+      (ofFn
+        ![numbersNumber (List.map (fun tau => Nat.pair 4 (Nat.pair sigma tau)) types),
+          evaluate (Program.projection 1) (sigma ::ᵥ numbersNumber rest ::ᵥ numbersNumber types ::ᵥ nil)]))
+    (numbersNumber (List.map (fun tau => Nat.pair 4 (Nat.pair sigma tau)) types ++ rest))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:84:17: error: unsolved goals
+case cons
+a : ℕ
+xs : List ℕ
+ih :
+  evaluate rankedHeads (ofFn ![numbersNumber xs]) =
+      List.foldr (fun head result => evaluate rankedStep (head ::ᵥ result ::ᵥ nil)) (evaluate (constant 0 0) nil)
+        ((decodeNumbers (numbersNumber xs)).getD []) →
+    List.foldr (fun head rest => evaluate rankedStep (head ::ᵥ rest ::ᵥ nil)) 0 xs =
+      numbersNumber (List.map (fun x => Nat.pair 5 x) xs)
+h :
+  evaluate rankedHeads (ofFn ![numbersNumber (a :: xs)]) =
+    List.foldr (fun head result => evaluate rankedStep (head ::ᵥ result ::ᵥ nil)) (evaluate (constant 0 0) nil)
+      ((decodeNumbers (numbersNumber (a :: xs))).getD [])
+⊢ 1 + Nat.pair (Nat.pair 5 a) (List.foldr (fun head rest => 1 + Nat.pair (Nat.pair 5 head) rest) 0 xs) =
+    1 + Nat.pair (Nat.pair 5 a) (numbersNumber (List.map (fun x => Nat.pair 5 x) xs))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:84:63: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.foldr_cons, ̲rankedStepValue,i̵h̵,̵ ̲List.map_cons, ̲numbersNumber]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/RawProof.lean:113:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalSourceHeads.RawProof.nativeRawWindow: forbidden axiom dependency sorryAx
