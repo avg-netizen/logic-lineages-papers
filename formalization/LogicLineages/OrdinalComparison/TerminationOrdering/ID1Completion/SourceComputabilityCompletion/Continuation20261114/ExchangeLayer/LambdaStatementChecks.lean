@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.LambdaProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.LambdaStatementChecks
+theorem exactLambda : Targets.InternalLambda := LambdaProof.internalLambda
+theorem exactMismatch : Targets.InternalTagMismatch := LambdaProof.internalTagMismatch
+#print axioms exactLambda
+#print axioms exactMismatch
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.LambdaStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.LambdaStatementChecks
