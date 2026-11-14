@@ -12,12 +12,12 @@ theorem nativeRankDecrease : Targets.NativeRankDecrease := by
   | some p =>
     simp only [depsAt,hn,Option.map_some,Option.getD_some] at h
     obtain ⟨q,hq,rfl⟩ := List.mem_map.mp h
-    simp only [rankAt,Encodable.decode_encode,hn,Option.map_some,Option.getD_some]
+    simp only [rankAt,Encodable.encodek,hn,Option.map_some,Option.getD_some]
     exact dependenciesDecrease n p q hq
 
 theorem nativeOriginalValue : Targets.NativeOriginalValue := by
   intro n arity window source target
-  simp only [valueAt,Encodable.decode_encode]
+  simp only [valueAt,Encodable.encodek]
 
 theorem nativeLayerLaw : Targets.NativeLayerLaw := by
   intro n arity node param
@@ -33,13 +33,11 @@ theorem nativeLayerLaw : Targets.NativeLayerLaw := by
         simp only [depsAt,hn,Option.map_some,Option.getD_some,List.map_map]
         apply List.map_congr_left
         intro q hq
-        simp only [Function.comp_apply,valueAt,Encodable.decode_encode,hw]
+        simp only [Function.comp_apply,valueAt,Encodable.encodek,hw]
         cases codeExchange arity window.1 window.2 q.1 q.2 <;> rfl
-      simp only [layerAt,valueAt,hn,hw]
-      change some (layer n arity (window,fields p.1,fields p.2,
-        ((depsAt n node param).map (fun child => valueAt n arity child param)).map
-          (fun value => value == 1))).toNat =
-        some (codeExchange arity window.1 window.2 p.1 p.2).toNat
+      simp only [layerAt,hn,hw]
       rw [hvals,layerCalibration]
+      simp only [valueAt,hn,hw]
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeProof
