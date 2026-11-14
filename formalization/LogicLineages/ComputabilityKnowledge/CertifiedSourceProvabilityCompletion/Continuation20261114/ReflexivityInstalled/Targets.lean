@@ -5,9 +5,9 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowPublishedDCB SixSol20261113
 /-- Every member of the structural carrier has an actual registry lookup,
 not merely an extensionally equal evaluator. -/
-def BundleInstallation : Prop := ∀ (xs : List Packed) n (p : Program n) tag,
- (nodes p)[tag]? = some ⟨6,bundle xs⟩ →
- ∀ a ∈ xs, ∃ atag, (nodes p)[atag]? = some a
+def BundleInstallation : Prop := ∀ (xs : List Packed) (n : Nat) (p : Program n) (tag : Nat),
+ (nodes p)[tag]? = some (⟨6,bundle xs⟩ : Packed) →
+ ∀ (a : Packed), a ∈ xs → ∃ (atag : Nat), (nodes p)[atag]? = some a
 /-- Fix the term template BEFORE selecting the source. Retain the ENTIRE CK,
 producer, validator, MP, fuel, saturated-axiom, closure and HB2 packages at
 identical witnesses, and derive saturated reflexivity acceptance in that SAME

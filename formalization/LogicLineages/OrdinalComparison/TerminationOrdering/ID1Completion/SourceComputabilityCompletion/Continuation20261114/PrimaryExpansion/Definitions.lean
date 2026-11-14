@@ -8,7 +8,7 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 selects one; otherwise retain the actual tail result. -/
 def anyStep (E : Program 3) : Program 4 :=
   InternalAcceptance.branch
-    (InternalAcceptance.normalize (.composition E ![.projection 0,.projection 2,.projection 3]))
+    (LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.normalize (.composition E ![.projection 0,.projection 2,.projection 3]))
     (.projection 1) (InternalLessThan.constantOne 4)
 /-- Inputs [reached,candidate,parameter], right fold over original reached. -/
 def anyEdge (E : Program 3) : Program 3 :=
@@ -17,7 +17,7 @@ def anyEdge (E : Program 3) : Program 3 :=
 used at every pool entry, never the newly growing output. -/
 def filterStep (E : Program 3) : Program 4 :=
   InternalAcceptance.branch
-    (InternalAcceptance.normalize (.composition (anyEdge E)
+    (LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization.normalize (.composition (anyEdge E)
       ![.projection 2,.projection 0,.projection 3]))
     (.projection 1)
     (.composition InternalListCodec.consCode ![.projection 0,.projection 1])
