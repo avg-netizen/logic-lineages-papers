@@ -52,7 +52,6 @@ theorem matrixWitness (raw list : OTerm alpha) :
   rw [he]
   simp only [graph3,programSubst,numeral,zSubst,sucSubst,
     consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
 
 theorem predicateInstantiate (raw : OTerm alpha) : instantiate (predicate : Formula (alpha ⊕ Fin 1)) (emb raw) = AtRaw raw := by
   rw [predicate,instantiate,InternalTagArithmeticSyntaxProof.bindEmbedding,atRawSubst]
