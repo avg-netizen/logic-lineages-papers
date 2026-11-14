@@ -1,3 +1,20 @@
+# Current release — 14 November public continuation
+
+The user explicitly resumes public formalization until 2026-11-15 02:00 UTC
+(8pm UTC-06), with source-first commits and non-force remote checkpoints at
+least every 30 minutes and sooner at meaningful verified milestones.
+Start from 573ddf98b53875d2e22e699553399dd06e8dc4fb on a new cumulative branch.
+All previous pauses are historical only for this released public continuation.
+Preserve accepted/frozen mathematics, failed drafts, source correspondence,
+exact comparator-first checks, standard-only axioms and fixed serialized native
+limits. The continuation coordinator owns the sole compiler queue and Git.
+Two proof lanes may continue paper06 and paper12; independent review precedes
+acceptance. No main merge, force push, private research, Fable, CI or pin changes.
+Stop new proof work at the deadline, save and distinguish unfinished drafts,
+verify remote publication, and do not automatically resume.
+
+---
+
 # Current state — two-agent rounds checked and paused; publication authorized
 
 Both agents stopped after completed round02, including all necessary Lean
