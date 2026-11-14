@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.NativeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.LambdaProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.ApplicationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.StatementChecks
+theorem exactNative : Targets.NativeCalibration := NativeProof.nativeCalibration
+#print axioms exactNative
+theorem exactRecursive : Targets.NativeRecursiveLayer := NativeProof.nativeRecursiveLayer
+#print axioms exactRecursive
+theorem exactLambda : Targets.InternalLambda := LambdaProof.internalLambda
+#print axioms exactLambda
+theorem exactApplication : Targets.InternalApplication := ApplicationProof.internalApplication
+#print axioms exactApplication
+theorem exactMismatch : Targets.InternalTagMismatch := LambdaProof.internalTagMismatch
+#print axioms exactMismatch
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeLayer.StatementChecks
