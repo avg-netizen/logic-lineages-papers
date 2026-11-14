@@ -24,7 +24,12 @@ theorem step (raw : OTerm alpha)
     Nonempty (Derivation body Delta (AtRaw raw)) := by
   apply atRawIntro raw
   let A : Formula (alpha ⊕ Fin 2) := graph2 contains (.var (.inr 1)) (raw.relabel Sum.inl) (.var (.inr 0))
-  have hbj := renameInto hb Sum.inl (Delta.map (fun q => q.relabel Sum.inl)) (fun q hq => List.mem_map.mpr ⟨q,hq,rfl⟩)
+  let j : alpha → alpha ⊕ Fin 2 := Sum.inl
+  let Theta : List (Formula (alpha ⊕ Fin 2)) := Delta.map (fun q => q.relabel j)
+  have hi : ∀ q ∈ Delta, q.relabel j ∈ Theta := by
+    intro q hq
+    exact List.mem_map.mpr ⟨q,hq,rfl⟩
+  have hbj := renameInto hb j Theta hi
   rw [belowRawRename] at hbj
   obtain ⟨h⟩ := ContainsCoreProof.core (raw.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1))
     (withHyp hbj A) (show Nonempty (Derivation body (A :: Delta.map (fun q => q.relabel Sum.inl)) A) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
