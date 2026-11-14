@@ -11,8 +11,10 @@ open TwoSol20261113.ReflexivityRecognizer.NativeProof
 theorem binaryEval {n : Nat} (token : Nat) (left right : Program n) (v : List.Vector Nat n) (a b : List Nat)
  (ha : evaluate left v = Encodable.encode a) (hb : evaluate right v = Encodable.encode b) :
  evaluate (binaryRaw token left right) v = Encodable.encode (GorbowCodeConstructors.binary token a b) := by
- simp only [binaryRaw,twoEval,constantEval,ha,hb,appendList,HistoryCodec.NativeProof.nativeConsAllVectors]
- rfl
+ have hc (a b : Nat) : evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ :=
+  HistoryCodec.NativeProof.nativeConsAllVectors _
+ simp only [binaryRaw,twoEval,constantEval,ha,hb,appendList,hc,GorbowCodeConstructors.binary,
+  HistoryLookup.NativeProof.encodeCons,encodeNat]
 
 theorem lineEval {n : Nat} (left right : Program n) (v : List.Vector Nat n) (a b : List Nat)
  (ha : evaluate left v = Encodable.encode a) (hb : evaluate right v = Encodable.encode b) :
@@ -26,16 +28,17 @@ theorem lineEval {n : Nat} (left right : Program n) (v : List.Vector Nat n) (a b
  have hvar : evaluate (RawAddSucc.successorRaw (applyTwo HistoryCodec.cons (constant n 0)
   (applyTwo HistoryCodec.cons (constant n 0) (constant n 0)))) v = Encodable.encode ([2,0,0] : List Nat) := by
   simp only [RawAddSucc.successorRaw,twoEval,constantEval,hc]; rfl
- have ht := binaryEval 0 _ _ v _ _ hsa hvar
+ have ht : evaluate (templateRaw left) v = Encodable.encode (nativeTemplate a) :=
+  binaryEval 0 _ _ v _ _ hsa hvar
  have he := binaryEval 0 _ _ v _ _ ha hb
  have hself := binaryEval 0 _ _ v _ _ hsa hsa
  have hcong := binaryEval 0 _ _ v _ _ hsa hsb
  have himp := binaryEval 7 _ _ v _ _ hself hcong
- have hformula := binaryEval 7 _ _ v _ _ he himp
- change evaluate (line left right) v = _
- simp only [line,twoEval,constantEval,ha,hb,show evaluate (templateRaw left) v = _ from ht,
-  show evaluate (formulaRaw left right) v = _ from hformula,hp,hc]
- rfl
+ have hformula : evaluate (formulaRaw left right) v = Encodable.encode (nativeFormula a b) :=
+  binaryEval 7 _ _ v _ _ he himp
+ have hnil : Encodable.encode ([] : List (List Nat)) = 0 := rfl
+ simp only [line,twoEval,constantEval,ha,hb,ht,hformula,hp,hc,nativeLine,encodeProd,
+  encodeNat,HistoryLookup.NativeProof.encodeCons,hnil]
 
 theorem nativeLine : Targets.NativeLine := by
  intro a b

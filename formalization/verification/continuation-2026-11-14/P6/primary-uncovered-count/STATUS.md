@@ -1,3 +1,3 @@
-# Uncovered count native1/4 accepted
+# Focused acceptance
 
-All-code literal duplicate-occurrence count calibrated to original decoder/filter length. Gate1794665488810293490-5;2200 rows independently rehashed,4 standard-only declarations. Adds1,total82; internal bound/antitone/strict decrease pending. No replacement cutoff or stabilization claim; numbered register unchanged.
+Gate1794666051115229450-5 passed; 2220 recursive rows independently rehashed, 37 standard-only packet declarations. Adds 1 contracts; combined total87, register unchanged. Only native count and internal original length bound accepted; antitone/strict decrease pending.

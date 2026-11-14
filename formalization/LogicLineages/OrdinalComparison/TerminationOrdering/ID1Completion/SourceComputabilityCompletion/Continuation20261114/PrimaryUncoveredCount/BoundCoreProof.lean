@@ -33,7 +33,7 @@ theorem consKnown (raw head tail reached remaining size tailCount tailSize : OTe
     (hs : Nonempty (Derivation body Delta (lengthGraph tailSize tail))) :
     Nonempty (Derivation body Delta (result raw reached remaining size)) := by
   have hi := belowRawApply raw tail reached tailCount tailSize hb
-    (consTailDescent raw head tail hc) (andIntro ht hs)
+    (consTailDescent raw head tail hc) (InternalApplicationStepPeelSupportProof.andIntro ht hs)
   have heSize := lengthConsRecover raw head tail size tailSize hc hl hs
   obtain ⟨heSize⟩ := heSize
   let A := graph2 contains (suc z) reached head
