@@ -1,3 +1,3 @@
-# Partial accepted packet
+# Accepted focused packet
 
-RawWindow1 and internal filter2 accepted. Remaining NativeSourceHeads list/membership unaccepted. Raw evidence2256 rows independently rehashed. Total353; numbered register unchanged.
+All frozen4 complete: rawWindow1, filtered sourceHeads list/membership1, internal filter nil/cons2. Final native evidence2257 rows/18 audits independently rehashed. Total356; no duplicated helper/aggregate count or semantic reflection. Numbered register unchanged.
