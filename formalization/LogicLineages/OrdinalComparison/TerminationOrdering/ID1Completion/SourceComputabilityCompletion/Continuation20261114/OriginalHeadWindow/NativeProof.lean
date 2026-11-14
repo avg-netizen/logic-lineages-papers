@@ -21,12 +21,14 @@ theorem projectionValue {n : Nat} (i : Fin n) (v : List.Vector Nat n) : evaluate
 
 theorem arityValue (n : Nat) (arity : Fin n → Nat) (payload symbols types : Nat) :
     evaluate (arityAt n arity) (payload ::ᵥ symbols ::ᵥ types ::ᵥ nil) = (List.ofFn arity).getD payload 0 := by
+  rw [arityAt,binaryCompositionEvaluation,constantEvaluation]
   change evaluate InternalRawListRecursion.lookup (ofFn ![payload,NumberedMultisetNumeric.numbersNumber (List.ofFn arity)]) = _
   exact ExchangeAnswerSlots.NativeProof.lookupEncoded payload (List.ofFn arity)
 
 theorem nativeArity : Targets.NativeArity := by
   intro n arity s symbols types
-  rw [arityValue,List.getD_eq_getElem (by simpa using s.isLt)]
+  change evaluate (arityAt n arity) (s.val ::ᵥ symbols ::ᵥ types ::ᵥ nil) = _
+  rw [arityValue,List.getD_eq_getElem (List.ofFn arity) 0 (by simpa using s.isLt)]
   simp
 
 theorem containsValue (xs : List Nat) (needle : Nat) :
@@ -68,16 +70,74 @@ theorem payloadValue (n : Nat) (arity : Fin n → Nat) (tag raw symbols types : 
   rw [atPayload,ternaryCompositionEvaluation,rightOfEvaluation]
   rfl
 
+theorem conjunctionValue {k : Nat} (p q : Program k) (v : List.Vector Nat k) :
+    evaluate (InternalAcceptance.conjunction p q) v =
+      if evaluate p v = 1 ∧ evaluate q v = 1 then 1 else 0 :=
+  actualConjunctionEvaluation k p q v
+
+theorem getZero3 (a b c : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ nil).get (0 : Fin 3) = a := rfl
+theorem getOne3 (a b c : Nat) : (a ::ᵥ b ::ᵥ c ::ᵥ nil).get (1 : Fin 3) = b := rfl
+theorem getZero1 (a : Nat) : (ofFn ![a]).get (0 : Fin 1) = a := rfl
+
 theorem nativeWindow : Targets.NativeWindow := by
   intro n arity symbols types head
-  cases head <;>
-    simp [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
-      applicationArguments,rankedArguments,actualConjunctionEvaluation,evalBranch,
-      typeMemberValue,constantEvaluation,unaryCompositionEvaluation,
-      OriginalHeadResult.branchResult,arrowEvaluation,projectionOne,projectionValue,
-      succOfEvaluation,leftOfEvaluation,rightEvaluation,binaryCompositionEvaluation,containsValue,
-      arityValue,List.getD_eq_getElem,decodeHead,HeadInWindow,RankedCovered,headResult,headArguments,
-      Ty.caseType,Ty.recType,typeNumber,typeMem,symbolMem,Nat.add_comm]
-
+  change evaluate (window n arity)
+    (headNumber head ::ᵥ numbersNumber (symbols.map Fin.val) ::ᵥ numbersNumber (types.map typeNumber) ::ᵥ nil) = _
+  cases head with
+  | zero =>
+    simp only [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
+      (show (0 : Nat) ≠ 1 from by decide), (show (0 : Nat) ≠ 2 from by decide), (show (0 : Nat) ≠ 3 from by decide), (show (0 : Nat) ≠ 4 from by decide), (show (0 : Nat) ≠ 5 from by decide),ite_false,ite_true,typeMemberValue,unaryCompositionEvaluation,
+      OriginalHeadResult.branchResult,constantEvaluation]
+    change (decide (typeNumber Ty.ground ∈ types.map typeNumber)).toNat = _
+    simp only [typeMem]
+    simp [HeadInWindow,RankedCovered,decodeHead,headResult,headArguments]
+  | succ =>
+    simp only [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
+      (show (1 : Nat) ≠ 0 from by decide), (show (1 : Nat) ≠ 2 from by decide), (show (1 : Nat) ≠ 3 from by decide), (show (1 : Nat) ≠ 4 from by decide), (show (1 : Nat) ≠ 5 from by decide),ite_false,ite_true,typeMemberValue,unaryCompositionEvaluation,
+      OriginalHeadResult.branchResult,arrowEvaluation,constantEvaluation]
+    change (decide (typeNumber (Ty.arrow .ground .ground) ∈ types.map typeNumber)).toNat = _
+    simp only [typeMem]
+    simp [HeadInWindow,RankedCovered,decodeHead,headResult,headArguments]
+  | cases tau =>
+    simp only [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
+      (show (2 : Nat) ≠ 0 from by decide), (show (2 : Nat) ≠ 1 from by decide), (show (2 : Nat) ≠ 3 from by decide), (show (2 : Nat) ≠ 4 from by decide), (show (2 : Nat) ≠ 5 from by decide),ite_false,ite_true,typeMemberValue,unaryCompositionEvaluation,
+      OriginalHeadResult.branchResult,arrowEvaluation,constantEvaluation,projectionOne]
+    change (decide (typeNumber tau.caseType ∈ types.map typeNumber)).toNat = _
+    simp only [typeMem]
+    simp [HeadInWindow,RankedCovered,decodeHead,headResult,headArguments]
+  | recursor tau =>
+    simp only [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
+      (show (3 : Nat) ≠ 0 from by decide), (show (3 : Nat) ≠ 1 from by decide), (show (3 : Nat) ≠ 2 from by decide), (show (3 : Nat) ≠ 4 from by decide), (show (3 : Nat) ≠ 5 from by decide),ite_false,ite_true,typeMemberValue,unaryCompositionEvaluation,
+      OriginalHeadResult.branchResult,arrowEvaluation,constantEvaluation,projectionOne]
+    change (decide (typeNumber tau.recType ∈ types.map typeNumber)).toNat = _
+    simp only [typeMem]
+    simp [HeadInWindow,RankedCovered,decodeHead,headResult,headArguments]
+  | application sigma tau =>
+    simp only [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
+      (show (4 : Nat) ≠ 0 from by decide), (show (4 : Nat) ≠ 1 from by decide), (show (4 : Nat) ≠ 2 from by decide), (show (4 : Nat) ≠ 3 from by decide), (show (4 : Nat) ≠ 5 from by decide),ite_false,ite_true,applicationArguments,conjunctionValue,
+      typeMemberValue,unaryCompositionEvaluation,OriginalHeadResult.branchResult,
+      rightEvaluation,succOfEvaluation,leftOfEvaluation,projectionValue]
+    simp only [getZero3,getZero1,Nat.unpair_pair,Nat.add_comm]
+    change (if (decide (typeNumber tau ∈ types.map typeNumber)).toNat = 1 ∧
+      (if (decide (typeNumber (Ty.arrow sigma tau) ∈ types.map typeNumber)).toNat = 1 ∧
+        (decide (typeNumber sigma ∈ types.map typeNumber)).toNat = 1 then 1 else 0) = 1 then 1 else 0) = _
+    simp only [typeMem]
+    by_cases ht : tau ∈ types <;> by_cases ha : Ty.arrow sigma tau ∈ types <;> by_cases hs : sigma ∈ types <;>
+      simp [HeadInWindow,RankedCovered,decodeHead,headResult,headArguments,ht,ha,hs]
+  | ranked symbol =>
+    simp only [window,chooseValue,headNumber,Nat.unpair_pair,payloadValue,branchWindow,
+      (show (5 : Nat) ≠ 0 from by decide), (show (5 : Nat) ≠ 1 from by decide), (show (5 : Nat) ≠ 2 from by decide), (show (5 : Nat) ≠ 3 from by decide), (show (5 : Nat) ≠ 4 from by decide),ite_false,ite_true,conjunctionValue,rankedArguments,evalBranch,
+      typeMemberValue,unaryCompositionEvaluation,OriginalHeadResult.branchResult,
+      constantEvaluation,binaryCompositionEvaluation,containsValue]
+    have har := nativeArity n arity symbol (numbersNumber (symbols.map Fin.val)) (numbersNumber (types.map typeNumber))
+    change evaluate (arityAt n arity) (symbol.val ::ᵥ numbersNumber (symbols.map Fin.val) ::ᵥ numbersNumber (types.map typeNumber) ::ᵥ nil) = _ at har
+    rw [har]
+    simp only [projectionValue,getZero3,getOne3,containsValue]
+    change (if (decide (symbol.val ∈ symbols.map Fin.val)).toNat = 1 ∧
+      (if (decide (typeNumber Ty.ground ∈ types.map typeNumber)).toNat = 1 ∧
+        (if arity symbol = 0 then 1 else (decide (typeNumber Ty.ground ∈ types.map typeNumber)).toNat) = 1 then 1 else 0) = 1 then 1 else 0) = _
+    simp only [symbolMem,typeMem]
+    by_cases hs : symbol ∈ symbols <;> by_cases hg : Ty.ground ∈ types <;> by_cases hz : arity symbol = 0 <;>
+      simp [HeadInWindow,RankedCovered,decodeHead,headResult,headArguments,hs,hg,hz]
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof

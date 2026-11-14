@@ -1,0 +1,234 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:31:62: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:88:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (decide _a).toNat = (decide (HeadInWindow arity symbols types (decodeHead HeadCode.zero))).toNat
+Error: Application type mismatch: The argument
+  List.instDecidableMemOfLawfulBEq (typeNumber Ty.ground) (List.map typeNumber types)
+has type
+  Decidable (typeNumber Ty.ground ∈ List.map typeNumber types)
+but is expected to have type
+  Decidable _a
+in the application
+  @decide _a (List.instDecidableMemOfLawfulBEq (typeNumber Ty.ground) (List.map typeNumber types))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case zero
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+⊢ (decide (typeNumber Ty.ground ∈ List.map typeNumber types)).toNat =
+    (decide (HeadInWindow arity symbols types (decodeHead HeadCode.zero))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:95:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (decide _a).toNat = (decide (HeadInWindow arity symbols types (decodeHead HeadCode.succ))).toNat
+Error: Application type mismatch: The argument
+  List.instDecidableMemOfLawfulBEq (typeNumber (Ty.ground.arrow Ty.ground)) (List.map typeNumber types)
+has type
+  Decidable (typeNumber (Ty.ground.arrow Ty.ground) ∈ List.map typeNumber types)
+but is expected to have type
+  Decidable _a
+in the application
+  @decide _a (List.instDecidableMemOfLawfulBEq (typeNumber (Ty.ground.arrow Ty.ground)) (List.map typeNumber types))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case succ
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+⊢ (decide (typeNumber (Ty.ground.arrow Ty.ground) ∈ List.map typeNumber types)).toNat =
+    (decide (HeadInWindow arity symbols types (decodeHead HeadCode.succ))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:102:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (decide _a).toNat = (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.cases tau)))).toNat
+Error: Application type mismatch: The argument
+  List.instDecidableMemOfLawfulBEq (typeNumber tau.caseType) (List.map typeNumber types)
+has type
+  Decidable (typeNumber tau.caseType ∈ List.map typeNumber types)
+but is expected to have type
+  Decidable _a
+in the application
+  @decide _a (List.instDecidableMemOfLawfulBEq (typeNumber tau.caseType) (List.map typeNumber types))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case cases
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+tau : Ty
+⊢ (decide (typeNumber tau.caseType ∈ List.map typeNumber types)).toNat =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.cases tau)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:109:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (decide _a).toNat = (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.recursor tau)))).toNat
+Error: Application type mismatch: The argument
+  List.instDecidableMemOfLawfulBEq (typeNumber tau.recType) (List.map typeNumber types)
+has type
+  Decidable (typeNumber tau.recType ∈ List.map typeNumber types)
+but is expected to have type
+  Decidable _a
+in the application
+  @decide _a (List.instDecidableMemOfLawfulBEq (typeNumber tau.recType) (List.map typeNumber types))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case recursor
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+tau : Ty
+⊢ (decide (typeNumber tau.recType ∈ List.map typeNumber types)).toNat =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.recursor tau)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:116:4: error: 'change' tactic failed, pattern
+  (if
+        (decide (typeNumber tau ∈ List.map typeNumber types)).toNat = 1 ∧
+          (if
+                (decide (typeNumber (sigma.arrow tau) ∈ List.map typeNumber types)).toNat = 1 ∧
+                  (decide (typeNumber sigma ∈ List.map typeNumber types)).toNat = 1 then
+              1
+            else 0) =
+            1 then
+      1
+    else 0) =
+    ?m.193
+is not definitionally equal to target
+  (if
+        (decide
+                ((Nat.unpair
+                      ((ofFn
+                            ![(Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                                    numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                      numbersNumber (List.map typeNumber types) ::ᵥ nil).get
+                                0]).get
+                        0)).2 ∈
+                  List.map typeNumber types)).toNat =
+            1 ∧
+          (if
+                (decide
+                        ((Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                                  numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                    numbersNumber (List.map typeNumber types) ::ᵥ nil).get
+                              0 +
+                            1 ∈
+                          List.map typeNumber types)).toNat =
+                    1 ∧
+                  (decide
+                        ((Nat.unpair
+                              ((Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                                    numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                      numbersNumber (List.map typeNumber types) ::ᵥ nil).get
+                                0)).1 ∈
+                          List.map typeNumber types)).toNat =
+                    1 then
+              1
+            else 0) =
+            1 then
+      1
+    else 0) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.application sigma tau)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:130:4: error: 'change' tactic failed, pattern
+  (if
+        (decide (↑symbol ∈ List.map Fin.val symbols)).toNat = 1 ∧
+          (if
+                (decide (typeNumber Ty.ground ∈ List.map typeNumber types)).toNat = 1 ∧
+                  (if arity symbol = 0 then 1 else (decide (typeNumber Ty.ground ∈ List.map typeNumber types)).toNat) =
+                    1 then
+              1
+            else 0) =
+            1 then
+      1
+    else 0) =
+    ?m.293
+is not definitionally equal to target
+  (if
+        evaluate contains
+              (ofFn
+                ![evaluate (Program.projection 1)
+                    (↑symbol ::ᵥ
+                      numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil),
+                  evaluate (Program.projection 0)
+                    (↑symbol ::ᵥ
+                      numbersNumber (List.map Fin.val symbols) ::ᵥ
+                        numbersNumber (List.map typeNumber types) ::ᵥ nil)]) =
+            1 ∧
+          (if
+                (decide (0 ∈ List.map typeNumber types)).toNat = 1 ∧
+                  (if arity symbol = 0 then 1 else (decide (0 ∈ List.map typeNumber types)).toNat) = 1 then
+              1
+            else 0) =
+            1 then
+      1
+    else 0) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.ranked symbol)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:100:73: warning: This simp argument is unused:
+  projectionOne
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵(̵s̵h̵o̵w̵ ̵(̵2̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵0̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵2̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵1̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵2̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵3̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵2̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵4̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵2̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵5̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲(̲s̲h̲o̲w̲ ̲(̲2̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲0̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲ ̲(̲s̲h̲o̲w̲ ̲(̲2̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲1̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲(̲s̲h̲o̲w̲ ̲(̲2̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲3̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲ ̲(̲s̲h̲o̲w̲ ̲(̲2̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲4̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲(̲s̲h̲o̲w̲ ̲(̲2̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲5̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲u̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:107:73: warning: This simp argument is unused:
+  projectionOne
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵(̵s̵h̵o̵w̵ ̵(̵3̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵0̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵3̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵1̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵3̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵2̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵3̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵4̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵ ̵(̵s̵h̵o̵w̵ ̵(̵3̵ ̵:̵ ̵N̵a̵t̵)̵ ̵≠̵ ̵5̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵d̵e̵c̵i̵d̵e̵)̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲(̲s̲h̲o̲w̲ ̲(̲3̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲0̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲ ̲(̲s̲h̲o̲w̲ ̲(̲3̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲1̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲(̲s̲h̲o̲w̲ ̲(̲3̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲2̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲ ̲(̲s̲h̲o̲w̲ ̲(̲3̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲4̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲(̲s̲h̲o̲w̲ ̲(̲3̲ ̲:̲ ̲N̲a̲t̲)̲ ̲≠̲ ̲5̲ ̲f̲r̲o̲m̲ ̲b̲y̲ ̲d̲e̲c̲i̲d̲e̲)̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲u̲n̲a̲r̲y̲C̲o̲m̲p̲o̲s̲i̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:126:53: warning: This simp argument is unused:
+  containsValue
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        (show (5 : Nat) ≠ 0 from by decide), (show (5 : Nat) ≠ 1 from by decide),
+  ̲  ̲ ̲ ̲ ̲ ̲(show (5 : Nat) ≠ 2 from by decide), (show (5 : Nat) ≠ 3 from by decide),
+  ̲  ̲ ̲ ̲ ̲ ̲(show (5 : Nat) ≠ 4 from by decide), ̲ite_false, ̲ite_true, ̲conjunctionValue, ̲rankedArguments,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲evalBranch,
+  ̵  ̵ ̵ ̵ ̵ ̵typeMemberValue, ̲unaryCompositionEvaluation, ̲OriginalHeadResult.branchResult,
+        constantEvaluation, ̲binaryCompositionEvaluation,̵c̵o̵n̵t̵a̵i̵n̵s̵V̵a̵l̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.projectionValue: [propext]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.containsValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.nativeArity: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.arityValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.typeMemberValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.symbolMem: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.chooseValue: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:137:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.nativeWindow: forbidden axiom dependency sorryAx
