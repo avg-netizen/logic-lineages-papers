@@ -61,7 +61,7 @@ theorem numericPermutation (left right : List Nat) :
   rw [ha,nativeBounded]
   by_cases hp : left.Perm right
   · have hb := (boundedIff left right).mpr hp
-    simp only [hp,hb,decide_true]
+    rw [decide_eq_true hb,decide_eq_true hp]
   · have hb : ¬ (∀ a ∈ left ++ right, left.count a = right.count a) := fun h => hp ((boundedIff left right).mp h)
     simp only [hp,hb,decide_false]
 

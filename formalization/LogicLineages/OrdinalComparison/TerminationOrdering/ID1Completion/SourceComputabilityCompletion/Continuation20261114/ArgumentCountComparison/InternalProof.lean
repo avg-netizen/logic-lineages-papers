@@ -34,7 +34,7 @@ theorem internalCons : Targets.InternalCons := by
     have hl' := renameInto hl j Theta hj
     have hr' := renameInto hr j Theta hj
     rw [graph2Rename] at hl' hr'
-    have hparams : (fun i : Fin 2 => (Fin.cons left (Fin.cons right Fin.elim0) i).relabel j) =
+    have hparams : (fun i : Fin 2 => Term.relabel j ((Fin.cons left (Fin.cons right Fin.elim0) : Fin 2 → OTerm alpha) i)) =
         Fin.cons (left.relabel j) (Fin.cons (right.relabel j) Fin.elim0) := by
       funext i
       exact Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k)) i
