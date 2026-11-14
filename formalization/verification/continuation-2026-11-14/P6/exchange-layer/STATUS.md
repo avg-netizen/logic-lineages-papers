@@ -1,3 +1,3 @@
 # Focused acceptance
 
-Gate1794669948411747435-6 passed; 3126 recursive rows independently rehashed, 18 standard-only packet declarations. Adds 1 contracts; combined total128, register unchanged. Application newly accepted, joining lambda and tag mismatch. Native calibration failed; no recursive edge semantics claim.
+Gate1794670366280633412-6 passed; 3047 recursive rows independently rehashed, 42 standard-only packet declarations. Adds 2 contracts; combined total135, register unchanged. Native calibration and original dependency-layer corollary newly accepted, joining internal lambda/application/mismatch. No internal recursive edge semantics claim.
