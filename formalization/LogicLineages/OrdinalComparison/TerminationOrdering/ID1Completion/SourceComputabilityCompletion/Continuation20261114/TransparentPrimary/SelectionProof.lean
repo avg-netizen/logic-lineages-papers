@@ -20,7 +20,9 @@ theorem countPrimitive (n : Nat) (arity : Fin n → Nat) : Primrec (countValue n
   apply InternalOriginalUniformParameterLeavesPrimitiveProof.decodedValuePrimitive n
     (fun p => ((rawPackedDecode n arity p.2.1 p.2.2).map
       (fun q => (ContextUniformPrimary.vertices arity p.1.1.1 p.1.1.2 p.2.1 q).length)).getD 0)
-  have hd := (NumberedUniformPackedDecodingProof.rawPackedDecoderPrimitive n arity).comp Primrec.snd
+  have hd : Primrec (fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+      rawPackedDecode n arity p.2.1 p.2.2) :=
+    (NumberedUniformPackedDecodingProof.rawPackedDecoderPrimitive n arity).comp Primrec.snd
   have hv := Primrec.list_length.comp (verticesPrimitive n arity)
   exact Primrec.option_getD.comp (Primrec.option_map hd hv.to₂) (Primrec.const 0)
 
@@ -28,7 +30,9 @@ theorem poolPrimitive (n : Nat) (arity : Fin n → Nat) : Primrec (poolValue n a
   apply InternalOriginalUniformParameterLeavesPrimitiveProof.decodedValuePrimitive n
     (fun p => ((rawPackedDecode n arity p.2.1 p.2.2).map
       (fun q => Membership.entriesCode (ContextUniformPrimary.vertices arity p.1.1.1 p.1.1.2 p.2.1 q))).getD 0)
-  have hd := (NumberedUniformPackedDecodingProof.rawPackedDecoderPrimitive n arity).comp Primrec.snd
+  have hd : Primrec (fun p : OrdinaryArithmeticQuotient.Context n × ContextUniform.Object =>
+      rawPackedDecode n arity p.2.1 p.2.2) :=
+    (NumberedUniformPackedDecodingProof.rawPackedDecoderPrimitive n arity).comp Primrec.snd
   have hv := MembershipLeafSelectionProof.entriesPrimitive _ (verticesPrimitive n arity)
   exact Primrec.option_getD.comp (Primrec.option_map hd hv.to₂) (Primrec.const 0)
 
