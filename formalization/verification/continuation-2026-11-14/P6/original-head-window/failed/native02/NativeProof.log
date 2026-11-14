@@ -1,0 +1,873 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:31:17: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.getD ?m.32 ?n ?d
+in the target expression
+  (List.ofFn arity).getD (↑s) 0 = arity s
+
+n : ℕ
+arity : Fin n → ℕ
+s : Fin n
+symbols types : ℕ
+⊢ (List.ofFn arity).getD (↑s) 0 = arity s
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:85:6: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:87:4: error: 'change' tactic failed, pattern
+  (decide (typeNumber Ty.ground ∈ List.map typeNumber types)).toNat = ?m.65
+is not definitionally equal to target
+  evaluate
+      (if 0 = 4 then
+        InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+          applicationArguments
+      else
+        if 0 = 5 then
+          InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+            (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+              (rankedArguments n arity))
+        else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+      (0 ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil) =
+    (decide (HeadInWindow arity symbols types (decodeHead HeadCode.zero))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:92:6: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:94:4: error: 'change' tactic failed, pattern
+  (decide (typeNumber (Ty.ground.arrow Ty.ground) ∈ List.map typeNumber types)).toNat = ?m.83
+is not definitionally equal to target
+  (if 1 = 0 then
+      evaluate
+        (if 0 = 4 then
+          InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+            applicationArguments
+        else
+          if 0 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                (rankedArguments n arity))
+          else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+        (0 ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+    else
+      evaluate
+        (if 1 = 4 then
+          InternalAcceptance.conjunction
+            (typeMember
+              ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+            applicationArguments
+        else
+          if 1 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction
+                (typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+                (rankedArguments n arity))
+          else
+            typeMember
+              ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+        (0 ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)) =
+    (decide (HeadInWindow arity symbols types (decodeHead HeadCode.succ))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:99:6: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:101:4: error: 'change' tactic failed, pattern
+  (decide (typeNumber tau.caseType ∈ List.map typeNumber types)).toNat = ?m.103
+is not definitionally equal to target
+  (if 2 = 0 then
+      evaluate
+        (if 0 = 4 then
+          InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+            applicationArguments
+        else
+          if 0 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                (rankedArguments n arity))
+          else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+        (typeNumber tau ::ᵥ
+          numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+    else
+      if 2 = 1 then
+        evaluate
+          (if 1 = 4 then
+            InternalAcceptance.conjunction
+              (typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+              applicationArguments
+          else
+            if 1 = 5 then
+              InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                (InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x =>
+                      Program.projection 0))
+                  (rankedArguments n arity))
+            else
+              typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+          (typeNumber tau ::ᵥ
+            numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+      else
+        evaluate
+          (if 2 = 4 then
+            InternalAcceptance.conjunction
+              (typeMember
+                ((OriginalHeadResult.arrow (constant 1 0)
+                      (OriginalHeadResult.arrow (Program.projection 0)
+                        (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                  fun x => Program.projection 0))
+              applicationArguments
+          else
+            if 2 = 5 then
+              InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                (InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow (Program.projection 0)
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+                  (rankedArguments n arity))
+            else
+              typeMember
+                ((OriginalHeadResult.arrow (constant 1 0)
+                      (OriginalHeadResult.arrow (Program.projection 0)
+                        (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                  fun x => Program.projection 0))
+          (typeNumber tau ::ᵥ
+            numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.cases tau)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:106:6: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:108:4: error: 'change' tactic failed, pattern
+  (decide (typeNumber tau.recType ∈ List.map typeNumber types)).toNat = ?m.123
+is not definitionally equal to target
+  (if 3 = 0 then
+      evaluate
+        (if 0 = 4 then
+          InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+            applicationArguments
+        else
+          if 0 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                (rankedArguments n arity))
+          else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+        (typeNumber tau ::ᵥ
+          numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+    else
+      if 3 = 1 then
+        evaluate
+          (if 1 = 4 then
+            InternalAcceptance.conjunction
+              (typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+              applicationArguments
+          else
+            if 1 = 5 then
+              InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                (InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x =>
+                      Program.projection 0))
+                  (rankedArguments n arity))
+            else
+              typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+          (typeNumber tau ::ᵥ
+            numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+      else
+        if 3 = 2 then
+          evaluate
+            (if 2 = 4 then
+              InternalAcceptance.conjunction
+                (typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+                applicationArguments
+            else
+              if 2 = 5 then
+                InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                  (InternalAcceptance.conjunction
+                    (typeMember
+                      ((OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow (Program.projection 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                        fun x => Program.projection 0))
+                    (rankedArguments n arity))
+              else
+                typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+            (typeNumber tau ::ᵥ
+              numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+        else
+          evaluate
+            (if 3 = 4 then
+              InternalAcceptance.conjunction
+                (typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow
+                          (OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+                applicationArguments
+            else
+              if 3 = 5 then
+                InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                  (InternalAcceptance.conjunction
+                    (typeMember
+                      ((OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow
+                              (OriginalHeadResult.arrow (constant 1 0)
+                                (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                        fun x => Program.projection 0))
+                    (rankedArguments n arity))
+              else
+                typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow
+                          (OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+            (typeNumber tau ::ᵥ
+              numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.recursor tau)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:113:6: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:116:4: error: 'change' tactic failed, pattern
+  (if
+        (decide (typeNumber tau ∈ List.map typeNumber types)).toNat = 1 ∧
+          (if
+                (decide (typeNumber (sigma.arrow tau) ∈ List.map typeNumber types)).toNat = 1 ∧
+                  (decide (typeNumber sigma ∈ List.map typeNumber types)).toNat = 1 then
+              1
+            else 0) =
+            1 then
+      1
+    else 0) =
+    ?m.181
+is not definitionally equal to target
+  (if 4 = 0 then
+      evaluate
+        (if 0 = 4 then
+          InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+            (InternalAcceptance.conjunction (typeMember (succOf (Program.projection 0)))
+              (typeMember (leftOf (Program.projection 0))))
+        else
+          if 0 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                (rankedArguments n arity))
+          else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+        (Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+          numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+    else
+      if 4 = 1 then
+        evaluate
+          (if 1 = 4 then
+            InternalAcceptance.conjunction
+              (typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+              (InternalAcceptance.conjunction (typeMember (succOf (Program.projection 0)))
+                (typeMember (leftOf (Program.projection 0))))
+          else
+            if 1 = 5 then
+              InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                (InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x =>
+                      Program.projection 0))
+                  (rankedArguments n arity))
+            else
+              typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+          (Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+            numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+      else
+        if 4 = 2 then
+          evaluate
+            (if 2 = 4 then
+              InternalAcceptance.conjunction
+                (typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+                (InternalAcceptance.conjunction (typeMember (succOf (Program.projection 0)))
+                  (typeMember (leftOf (Program.projection 0))))
+            else
+              if 2 = 5 then
+                InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                  (InternalAcceptance.conjunction
+                    (typeMember
+                      ((OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow (Program.projection 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                        fun x => Program.projection 0))
+                    (rankedArguments n arity))
+              else
+                typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+            (Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+              numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+        else
+          if 4 = 3 then
+            evaluate
+              (if 3 = 4 then
+                InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow
+                            (OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+                  (InternalAcceptance.conjunction (typeMember (succOf (Program.projection 0)))
+                    (typeMember (leftOf (Program.projection 0))))
+              else
+                if 3 = 5 then
+                  InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                    (InternalAcceptance.conjunction
+                      (typeMember
+                        ((OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow
+                                (OriginalHeadResult.arrow (constant 1 0)
+                                  (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                                (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                          fun x => Program.projection 0))
+                      (rankedArguments n arity))
+                else
+                  typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow
+                            (OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+              (Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+          else
+            if
+                (decide
+                        ((Nat.unpair
+                              ((ofFn
+                                    ![(Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                                            numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                              numbersNumber (List.map typeNumber types) ::ᵥ nil).get
+                                        0]).get
+                                0)).2 ∈
+                          List.map typeNumber types)).toNat =
+                    1 ∧
+                  (if
+                        (decide
+                                ((Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                                          numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                            numbersNumber (List.map typeNumber types) ::ᵥ nil).get
+                                      0 +
+                                    1 ∈
+                                  List.map typeNumber types)).toNat =
+                            1 ∧
+                          (decide
+                                ((Nat.unpair
+                                      ((Nat.pair (typeNumber sigma) (typeNumber tau) ::ᵥ
+                                            numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                              numbersNumber (List.map typeNumber types) ::ᵥ nil).get
+                                        0)).1 ∈
+                                  List.map typeNumber types)).toNat =
+                            1 then
+                      1
+                    else 0) =
+                    1 then
+              1
+            else 0) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.application sigma tau)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:124:6: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:129:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate (arityAt n arity)
+    (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+in the target expression
+  (if 5 = 0 then
+      evaluate
+        (if 0 = 4 then
+          InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+            applicationArguments
+        else
+          if 0 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+          else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+        (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+    else
+      if 5 = 1 then
+        evaluate
+          (if 1 = 4 then
+            InternalAcceptance.conjunction
+              (typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+              applicationArguments
+          else
+            if 1 = 5 then
+              InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                (InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x =>
+                      Program.projection 0))
+                  (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+            else
+              typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+          (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+      else
+        if 5 = 2 then
+          evaluate
+            (if 2 = 4 then
+              InternalAcceptance.conjunction
+                (typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+                applicationArguments
+            else
+              if 2 = 5 then
+                InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                  (InternalAcceptance.conjunction
+                    (typeMember
+                      ((OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow (Program.projection 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                        fun x => Program.projection 0))
+                    (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+              else
+                typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+            (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+        else
+          if 5 = 3 then
+            evaluate
+              (if 3 = 4 then
+                InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow
+                            (OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+                  applicationArguments
+              else
+                if 3 = 5 then
+                  InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                    (InternalAcceptance.conjunction
+                      (typeMember
+                        ((OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow
+                                (OriginalHeadResult.arrow (constant 1 0)
+                                  (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                                (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                          fun x => Program.projection 0))
+                      (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+                else
+                  typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow
+                            (OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+              (↑symbol ::ᵥ
+                numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+          else
+            if 5 = 4 then
+              if
+                  (decide
+                          (evaluate InternalUnpair.right
+                              (ofFn
+                                ![evaluate (Program.projection 0)
+                                    (↑symbol ::ᵥ
+                                      numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                        numbersNumber (List.map typeNumber types) ::ᵥ nil)]) ∈
+                            List.map typeNumber types)).toNat =
+                      1 ∧
+                    evaluate applicationArguments
+                        (↑symbol ::ᵥ
+                          numbersNumber (List.map Fin.val symbols) ::ᵥ
+                            numbersNumber (List.map typeNumber types) ::ᵥ nil) =
+                      1 then
+                1
+              else 0
+            else
+              evaluate
+                (if 5 = 4 then
+                  InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                    applicationArguments
+                else
+                  InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                    (InternalAcceptance.conjunction
+                      (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                      (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0)))))
+                (↑symbol ::ᵥ
+                  numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.ranked symbol)))).toNat
+
+case ranked
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+symbol : Fin n
+har :
+  evaluate (arityAt n arity)
+      (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil) =
+    arity symbol
+⊢ (if 5 = 0 then
+      evaluate
+        (if 0 = 4 then
+          InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+            applicationArguments
+        else
+          if 0 = 5 then
+            InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+              (InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+          else typeMember ((constant 1 0).composition fun x => Program.projection 0))
+        (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+    else
+      if 5 = 1 then
+        evaluate
+          (if 1 = 4 then
+            InternalAcceptance.conjunction
+              (typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+              applicationArguments
+          else
+            if 1 = 5 then
+              InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                (InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x =>
+                      Program.projection 0))
+                  (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+            else
+              typeMember
+                ((OriginalHeadResult.arrow (constant 1 0) (constant 1 0)).composition fun x => Program.projection 0))
+          (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+      else
+        if 5 = 2 then
+          evaluate
+            (if 2 = 4 then
+              InternalAcceptance.conjunction
+                (typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+                applicationArguments
+            else
+              if 2 = 5 then
+                InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                  (InternalAcceptance.conjunction
+                    (typeMember
+                      ((OriginalHeadResult.arrow (constant 1 0)
+                            (OriginalHeadResult.arrow (Program.projection 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                        fun x => Program.projection 0))
+                    (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+              else
+                typeMember
+                  ((OriginalHeadResult.arrow (constant 1 0)
+                        (OriginalHeadResult.arrow (Program.projection 0)
+                          (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                    fun x => Program.projection 0))
+            (↑symbol ::ᵥ numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+        else
+          if 5 = 3 then
+            evaluate
+              (if 3 = 4 then
+                InternalAcceptance.conjunction
+                  (typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow
+                            (OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+                  applicationArguments
+              else
+                if 3 = 5 then
+                  InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                    (InternalAcceptance.conjunction
+                      (typeMember
+                        ((OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow
+                                (OriginalHeadResult.arrow (constant 1 0)
+                                  (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                                (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                          fun x => Program.projection 0))
+                      (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0))))
+                else
+                  typeMember
+                    ((OriginalHeadResult.arrow (constant 1 0)
+                          (OriginalHeadResult.arrow
+                            (OriginalHeadResult.arrow (constant 1 0)
+                              (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))
+                            (OriginalHeadResult.arrow (Program.projection 0) (Program.projection 0)))).composition
+                      fun x => Program.projection 0))
+              (↑symbol ::ᵥ
+                numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)
+          else
+            if 5 = 4 then
+              if
+                  (decide
+                          (evaluate InternalUnpair.right
+                              (ofFn
+                                ![evaluate (Program.projection 0)
+                                    (↑symbol ::ᵥ
+                                      numbersNumber (List.map Fin.val symbols) ::ᵥ
+                                        numbersNumber (List.map typeNumber types) ::ᵥ nil)]) ∈
+                            List.map typeNumber types)).toNat =
+                      1 ∧
+                    evaluate applicationArguments
+                        (↑symbol ::ᵥ
+                          numbersNumber (List.map Fin.val symbols) ::ᵥ
+                            numbersNumber (List.map typeNumber types) ::ᵥ nil) =
+                      1 then
+                1
+              else 0
+            else
+              evaluate
+                (if 5 = 4 then
+                  InternalAcceptance.conjunction (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                    applicationArguments
+                else
+                  InternalAcceptance.conjunction (contains.composition ![Program.projection 1, Program.projection 0])
+                    (InternalAcceptance.conjunction
+                      (typeMember ((constant 1 0).composition fun x => Program.projection 0))
+                      (InternalAcceptance.branch (arityAt n arity) (constant 3 1) (typeMember (constant 3 0)))))
+                (↑symbol ::ᵥ
+                  numbersNumber (List.map Fin.val symbols) ::ᵥ numbersNumber (List.map typeNumber types) ::ᵥ nil)) =
+    (decide (HeadInWindow arity symbols types (decodeHead (HeadCode.ranked symbol)))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:85:19: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_f̵a̵l̵s̵e̵,̵i̵te̵_̵t̵rue, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲constantEvaluation]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:85:38: warning: This simp argument is unused:
+  typeMemberValue
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true,t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵ ̲ue̵,̵u̵naryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲constantEvaluation]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:85:54: warning: This simp argument is unused:
+  unaryCompositionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲r̲e̲d̲u̲c̲e̲E̲q̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:92:19: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_f̵a̵l̵s̵e̵,̵i̵te̵_̵t̵rue, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:92:38: warning: This simp argument is unused:
+  typeMemberValue
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true,t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵ ̲ue̵,̵u̵naryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:92:54: warning: This simp argument is unused:
+  unaryCompositionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲r̲e̲d̲u̲c̲e̲E̲q̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:93:38: warning: This simp argument is unused:
+  arrowEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult,a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲constantEvaluation]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:99:19: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_f̵a̵l̵s̵e̵,̵i̵te̵_̵t̵rue, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation, ̲projectionOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:99:38: warning: This simp argument is unused:
+  typeMemberValue
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true,t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵ ̲ue̵,̵u̵naryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation, ̲projectionOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:99:54: warning: This simp argument is unused:
+  unaryCompositionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲r̲e̲d̲u̲c̲e̲E̲q̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲O̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:100:38: warning: This simp argument is unused:
+  arrowEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult,a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲constantEvaluation, ̲projectionOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:100:73: warning: This simp argument is unused:
+  projectionOne
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:106:19: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_f̵a̵l̵s̵e̵,̵i̵te̵_̵t̵rue, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation, ̲projectionOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:106:38: warning: This simp argument is unused:
+  typeMemberValue
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true,t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵ ̲ue̵,̵u̵naryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation, ̲projectionOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:106:54: warning: This simp argument is unused:
+  unaryCompositionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [̵w̵i̵n̵d̵o̵w̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵h̵e̵a̵d̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵b̵r̵a̵n̵c̵h̵W̵i̵n̵d̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵r̵e̵d̵u̵c̵e̵E̵q̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵i̵t̵e̵_̵t̵r̵u̵e̵,̵t̵y̵p̵e̵M̵e̵m̵b̵e̵r̵V̵a̵l̵u̵e̵,̵u̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵H̵e̵a̵d̵R̵e̵s̵u̵l̵t̵.̵b̵r̵a̵n̵c̵h̵R̵e̵s̵u̵l̵t̵,̵a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵]̵[̲w̲i̲n̲d̲o̲w̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲r̲a̲n̲c̲h̲W̲i̲n̲d̲o̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲r̲e̲d̲u̲c̲e̲E̲q̲,̲ ̲i̲t̲e̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲t̲e̲_̲t̲r̲u̲e̲,̲ ̲t̲y̲p̲e̲M̲e̲m̲b̲e̲r̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲H̲e̲a̲d̲R̲e̲s̲u̲l̲t̲.̲b̲r̲a̲n̲c̲h̲R̲e̲s̲u̲l̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲r̲o̲w̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲O̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:107:38: warning: This simp argument is unused:
+  arrowEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult,a̵r̵r̵o̵w̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲constantEvaluation, ̲projectionOne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:107:73: warning: This simp argument is unused:
+  projectionOne
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲typeMemberValue, ̲unaryCompositionEvaluation,
+        OriginalHeadResult.branchResult, ̲arrowEvaluation, ̲constantEvaluation,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵O̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:113:19: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_f̵a̵l̵s̵e̵,̵i̵te̵_̵t̵rue, ̲applicationArguments, ̲conjunctionValue,
+  ̵  ̵ ̵ ̵ ̵ ̵typeMemberValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲unaryCompositionEvaluation, ̲OriginalHeadResult.branchResult,
+  ̵  ̵ ̵ ̵ ̵ ̵rightEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲succOfEvaluation, ̲leftOfEvaluation, ̲projectionValue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:124:19: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_f̵a̵l̵s̵e̵,̵i̵te̵_̵t̵rue, ̲conjunctionValue, ̲rankedArguments, ̲evalBranch,
+  ̵  ̵ ̵ ̵ ̵ ̵typeMemberValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲unaryCompositionEvaluation, ̲OriginalHeadResult.branchResult,
+  ̵  ̵ ̵ ̵ ̵ ̵constantEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲binaryCompositionEvaluation, ̲containsValue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:124:71: warning: This simp argument is unused:
+  evalBranch
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲conjunctionValue, ̲rankedArguments,e̵v̵a̵l̵B̵r̵a̵n̵c̵h̵,̵
+  ̵  ̵ ̵ ̵ ̵ ̵typeMemberValue,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲unaryCompositionEvaluation, ̲OriginalHeadResult.branchResult,
+  ̵  ̵ ̵ ̵ ̵ ̵constantEvaluation,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲binaryCompositionEvaluation, ̲containsValue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:126:25: warning: This simp argument is unused:
+  binaryCompositionEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲conjunctionValue, ̲rankedArguments, ̲evalBranch,
+        typeMemberValue, ̲unaryCompositionEvaluation, ̲OriginalHeadResult.branchResult,
+        constantEvaluation,b̵i̵n̵a̵r̵y̵C̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵ ̲containsValue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:126:53: warning: This simp argument is unused:
+  containsValue
+
+Hint: Omit it from the simp argument list.
+  simp only [window, ̲chooseValue, ̲headNumber, ̲Nat.unpair_pair, ̲payloadValue, ̲branchWindow,
+        Nat.reduceEq, ̲ite_false, ̲ite_true, ̲conjunctionValue, ̲rankedArguments, ̲evalBranch,
+        typeMemberValue, ̲unaryCompositionEvaluation, ̲OriginalHeadResult.branchResult,
+        constantEvaluation, ̲binaryCompositionEvaluation,̵c̵o̵n̵t̵a̵i̵n̵s̵V̵a̵l̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.projectionValue: [propext]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.containsValue: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadWindow/NativeProof.lean:137:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadWindow.NativeProof.nativeArity: forbidden axiom dependency sorryAx
