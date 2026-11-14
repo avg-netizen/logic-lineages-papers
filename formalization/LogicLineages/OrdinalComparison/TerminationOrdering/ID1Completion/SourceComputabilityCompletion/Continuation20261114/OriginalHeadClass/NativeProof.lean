@@ -22,7 +22,7 @@ theorem nativeClass (n : Nat) (h : HeadCode (Fin n)) :
   change evaluate headClass (headNumber h ::ᵥ List.Vector.nil) = _
   cases h <;> simp [headClass,chooseEvaluation,headNumber,Nat.unpair_pair,payloadEvaluation,
     branchClass,constantEvaluation,succOfEvaluation,projectionOne,
-    NumberedExchangeGuardsPrimrecProof.headClassNumber,Nat.add_comm]
+    NumberedExchangeGuardsPrimrecProof.headClassNumber,Nat.add_comm] <;> omega
 
 theorem equivalentValue (x y : Nat) :
     evaluate equivalent (List.Vector.ofFn ![x,y]) =
@@ -41,8 +41,10 @@ theorem nativeEquivalence (n : Nat) (f g : HeadCode (Fin n)) :
   by_cases hc : NumberedExchangeGuardsPrimrecProof.headClassNumber f =
       NumberedExchangeGuardsPrimrecProof.headClassNumber g
   · simp [hc,h.mp hc]
-  · have hn := fun he => hc (h.mpr he)
-    simp [hc,hn]
+  · have hn : ¬ RecursiveComparison.headEquivalent (NumberedAuxiliaryDecoding.decodeHead f)
+        (NumberedAuxiliaryDecoding.decodeHead g) := fun he => hc (h.mpr he)
+    rw [if_neg hc,decide_eq_false hn]
+    rfl
 
 theorem nativeClassAndEquivalence : Targets.NativeClassAndEquivalence :=
   ⟨nativeClass,nativeEquivalence⟩
