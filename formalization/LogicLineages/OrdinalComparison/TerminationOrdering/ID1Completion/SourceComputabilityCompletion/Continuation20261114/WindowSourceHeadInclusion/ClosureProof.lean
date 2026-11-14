@@ -29,7 +29,7 @@ theorem closedApply (types pair left right : OTerm alpha)
     (hm : Nonempty (Derivation body Delta (member types (suc pair)))) :
     Nonempty (Derivation body Delta (member types left ⊓ member types right)) := by
   obtain ⟨h⟩ := InternalClosedProgramsBindingProof.elimination body alpha 3 Delta
-    (closureMatrix types) (fun i => emb ((![pair,left,right] : Fin 3 → OTerm alpha) i)) hc
+    (closureMatrix types) (fun i => InternalTagArithmeticSyntaxProof.emb ((![pair,left,right] : Fin 3 → OTerm alpha) i)) hc
   rw [matrixWitness] at h
   obtain ⟨hh⟩ := andIntro hp hm
   exact ⟨Derivation.implicationElimination h hh⟩
