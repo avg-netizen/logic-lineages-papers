@@ -28,7 +28,7 @@ theorem ranked : Targets.InternalRanked := by
   have hd := OriginalHeadWindow.InternalProof.internalBranch n arity body alpha Delta (5 : Fin 6) raw symbol symbols types (numeral 1) hp
   let xs : Fin 3 → OTerm alpha := Fin.cons symbol (Fin.cons symbols (Fin.cons types Fin.elim0))
   have hr := resultValue 5 symbol symbols types (numeral 0)
-    (constantValue (body := body) (Gamma := Delta) 0 (Fin.cons symbol Fin.elim0))
+    (constantValue (body := body) (Delta := Delta) 0 (Fin.cons symbol Fin.elim0))
   have fr := typeFactor _ symbol symbols types (numeral 0) hr
   have hz : Nonempty (Derivation body Delta (graph3 (constant 3 0) (numeral 0) symbol symbols types)) := constantValue 0 xs
   have fg := typeFactor _ symbol symbols types (numeral 0) hz
