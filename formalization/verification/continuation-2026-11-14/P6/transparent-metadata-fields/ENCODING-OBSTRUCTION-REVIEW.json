@@ -1,0 +1,14 @@
+{
+  "status": "independently confirmed source-level obstruction; native target unaccepted, no retry",
+  "finding": "Raw headNumber(.cases .ground)=Nat.pair2 0=6, whereas actual headPrimcodable via headEquiv gives Sum.inr(Sum.inl ground), generic Encodable encoding1. Original fieldValue uses generic head encoding, so frozen raw head selector cannot satisfy NativeMetadata on this constructor.",
+  "inspected_sources": [
+    "NumberedLeastCodeRepresentativeDefinitions.headNumber/codeNumber",
+    "NumberedHeadCodecPrimrecDefinitions.headEquiv/headPrimcodable",
+    "NumberedTypeCodecPrimrecDefinitions.typeEquiv",
+    "Mathlib.Logic.Encodable.Basic.encode_inl/encode_inr",
+    "ExchangeLayer.input",
+    "TransparentMetadataFields.Definitions/Targets"
+  ],
+  "internal_scope": "Passed exact3 are raw numeric constructor graph laws only. They do not calibrate original semantic fields; no new tuple installation claimed.",
+  "next_requirement": "Separate reviewed raw-to-generic head and type-list encoding conversion specification, preserving original failed frozen target and evidence rather than silently weakening it. Type-list issue remains a separate bridge obligation."
+}
