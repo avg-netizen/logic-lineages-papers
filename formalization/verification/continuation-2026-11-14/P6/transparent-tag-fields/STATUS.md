@@ -1,3 +1,3 @@
 # Focused accepted checkpoint
 
-2 exact contracts accepted; 3074 recursive evidence rows independently rehashed and 8 packet audits standard-only. Combined total228, numbered register unchanged. Tag field native/internal exact2 accepted; original malformed defaults and pair graph premises preserved. New tuple integration remains open. No multiplication iteration/source/general HB3 completion. No full-root or remote CI claim.
+0 exact contracts accepted; 3075 recursive evidence rows independently rehashed and 10 packet audits standard-only. Combined total231, numbered register unchanged. Multiplication arbitrary-count endpoint accepted, adds1 beyond prior constructors2. Tag aggregate adds0. No same-source package assembly/general HB3 completion. No full-root or remote CI claim.
