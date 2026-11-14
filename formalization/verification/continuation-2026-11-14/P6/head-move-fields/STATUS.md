@@ -1,5 +1,5 @@
 # Focused accepted checkpoint
 
-Actual ordinary/numbered constructor graph factors for concrete six-input headMove. Native encoding calibration remains failed/unaccepted; no internal semantic reflection.
+Concrete slot16 all-vector calibration with proved Window encoding bridge, all19/optional layer preservation. Internal2 already accepted; native2 completes frozen4 without aggregate count. No internal semantic adequacy/global E claim.
 
-Exact2 accepted; recursive evidence independently rehashed. Combined total369; numbered register unchanged.
+Focused frozen contracts accepted; recursive evidence independently rehashed. Combined total374; numbered register unchanged.
