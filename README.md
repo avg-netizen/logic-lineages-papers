@@ -8,9 +8,9 @@ and the existing [internal-level-two source comparison theorem](formalization/ve
 whose unchanged complete proof was revalidated and reconciled with the register.
 All numbered paper08 statements are checked. The remaining twelve entries are
 paper02:1, paper06:8 and paper12:3. [TARGETS.json](formalization/TARGETS.json)
-is authoritative. All six lanes and the compiler are paused after completing
-their current rounds and required Lean repairs; see the
-[final handoff](formalization/verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md).
+is authoritative. The latest two-agent continuation added 15 checked supporting
+contracts and is paused after its required Lean repairs; see the
+[final handoff](formalization/verification/local-two-sol-2026-11-13/FINAL-HANDOFF.md).
 Full paper06 internal accessibility remains pending.
 
 **Known source issue:** the termination-ordering manuscript has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.

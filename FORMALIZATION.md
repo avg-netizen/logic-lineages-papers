@@ -1,4 +1,19 @@
-# Current source reconciliation — internal level two
+# Current checkpoint — two-agent continuation paused
+
+Fifteen exact supporting contracts in 29 new source files are checked across
+the two-agent continuation. These cover retained compatibility diagnostics,
+explicit primary membership, reflexivity recognition and actual singleton
+CORE proof certificates. Root verified 4,173 distinct local native modules;
+all exact audits use standard axioms only. See
+[the final handoff](formalization/verification/local-two-sol-2026-11-13/FINAL-HANDOFF.md)
+for precise scope and remaining integration gaps. Both workers and the compiler
+are paused; only the user-requested commit/push is authorized. The numbered
+register remains **175 checked, 2 inherited, 12 pending /189**. Full paper06
+I/C/accessibility and paper12 HB3 remain open; no full-root or CI claim.
+
+---
+
+# Previous source reconciliation — internal level two
 
 **175 checked, 2 inherited, 12 pending /189.** The existing complete source08
 internal-level-two comparison proof has been natively revalidated and adopted

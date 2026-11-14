@@ -1,0 +1,383 @@
+{
+  "owner": "/root/sol_hb3",
+  "state": "stopped-user-pause-after-round02",
+  "profile": {
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "min_free_mib": 2048,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "threads": 1
+  },
+  "cache_policy": "unchanged checker verifies source/dependency/compiler/output/log/receipt hashes; object presence is insufficient",
+  "completed": [
+    {
+      "request": "P12-01-preflight",
+      "session_id": 35664,
+      "exit_code": 76,
+      "receipt": "build-reports/1794607325373273127-2.json",
+      "native_launched": false,
+      "verified_cache_hits": 196
+    },
+    {
+      "request": "P12-01-preflight",
+      "session_id": 89584,
+      "exit_code": 1,
+      "receipt": "build-reports/1794614549189634914-2.json",
+      "failure": "Definitions.lean:35 unknown identifier call"
+    },
+    {
+      "request": "P12-01-preflight-repair1",
+      "session_id": 84216,
+      "exit_code": 1,
+      "receipt": "build-reports/1794615398069365464-2.json",
+      "failure": "Preflight.lean attempted axiom theorem audit on definition-only namespace; all four frozen targets elaborated"
+    },
+    {
+      "request": "P12-01-preflight-repair2",
+      "session_id": 88058,
+      "exit_code": 0,
+      "receipt": "build-reports/1794615431854992645-2.json"
+    },
+    {
+      "request": "P6-01-preflight",
+      "session_id": 18787,
+      "exit_code": 0,
+      "receipt": "build-reports/1794615467081772945-2.json"
+    },
+    {
+      "request": "P6-02-statements",
+      "session_id": 81194,
+      "exit_code": 1,
+      "receipt": "build-reports/1794615572185883617-2.json",
+      "failing_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.RetainedCompatibilitySoundnessProof",
+      "log": "build-reports/1794615572185883617-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-RetainedCompatibilitySoundnessProof.log"
+    },
+    {
+      "request": "COMMON-01-legacy-local-source-receipts",
+      "session_id": 58512,
+      "exit_code": 0,
+      "receipt": "build-reports/1794615627684615354-2.json"
+    },
+    {
+      "request": "P6-02-statements-repair1",
+      "session_id": 58511,
+      "exit_code": 1,
+      "receipt": "build-reports/1794615680185550781-2.json",
+      "failing_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.RetainedCompatibilityObstructionProof",
+      "log": "build-reports/1794615680185550781-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-RetainedCompatibilityObstructionProof.log"
+    },
+    {
+      "request": "P12-02-statements",
+      "session_id": 91242,
+      "exit_code": 1,
+      "receipt": "build-reports/1794616126524525346-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.NativeProof",
+      "log": "build-reports/1794616126524525346-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityRecognizer-NativeProof.log"
+    },
+    {
+      "request": "P12-02-statements-repair1",
+      "session_id": 80895,
+      "exit_code": 1,
+      "receipt": "build-reports/1794616173707151815-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.TermInternalProof",
+      "log": "build-reports/1794616173707151815-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityRecognizer-TermInternalProof.log"
+    },
+    {
+      "request": "P6-02-statements-repair2",
+      "session_id": 67350,
+      "exit_code": 0,
+      "receipt": "build-reports/1794616216713141678-2.json"
+    },
+    {
+      "request": "P12-02-statements-repair2",
+      "session_id": 86335,
+      "exit_code": 0,
+      "receipt": "build-reports/1794616267999070356-2.json"
+    },
+    {
+      "request": "P12-R02-preflight",
+      "session_id": 61583,
+      "exit_code": 1,
+      "receipt": "build-reports/1794632700572632009-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.Definitions",
+      "log": "build-reports/1794632700572632009-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityCertificate-Definitions.log"
+    },
+    {
+      "request": "P12-R02-preflight-repair1",
+      "session_id": 38327,
+      "exit_code": 0,
+      "receipt": "build-reports/1794632897758517289-2.json"
+    },
+    {
+      "request": "P12-R02-exact",
+      "session_id": 59354,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633034886778125-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.DispatcherProof",
+      "log": "build-reports/1794633034886778125-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityCertificate-DispatcherProof.log"
+    },
+    {
+      "request": "P6-R02-preflight",
+      "session_id": 60955,
+      "exit_code": 0,
+      "receipt": "build-reports/1794633098868416839-2.json"
+    },
+    {
+      "request": "P12-R02-exact-repair1",
+      "session_id": 41033,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633151696776776-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.EntryProof",
+      "log": "build-reports/1794633151696776776-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityCertificate-EntryProof.log"
+    },
+    {
+      "request": "P12-R02-exact-repair2",
+      "session_id": 96091,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633205866362706-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.RunProof",
+      "log": "build-reports/1794633205866362706-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityCertificate-RunProof.log"
+    },
+    {
+      "request": "P12-R02-exact-repair3",
+      "session_id": 56494,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633245706116127-2.json",
+      "failing_module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.RunProof",
+      "log": "build-reports/1794633245706116127-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityCertificate-RunProof.log"
+    },
+    {
+      "request": "P6-R02-exact",
+      "session_id": 91153,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633310034485912-2.json",
+      "failing_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.CalibratedPrimary.MembershipLeafSelectionProof",
+      "log": "build-reports/1794633310034485912-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-CalibratedPrimary-MembershipLeafSelectionProof.log"
+    },
+    {
+      "request": "P12-R02-exact-repair4",
+      "session_id": 63299,
+      "exit_code": 0,
+      "receipt": "build-reports/1794633366399862441-2.json"
+    },
+    {
+      "request": "P6-R02-exact-repair1",
+      "session_id": 63035,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633451439858399-2.json",
+      "failing_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.CalibratedPrimary.MembershipNativeProof",
+      "log": "build-reports/1794633451439858399-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-CalibratedPrimary-MembershipNativeProof.log"
+    },
+    {
+      "request": "P6-R02-exact-repair2",
+      "session_id": 51471,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633624009843472-2.json",
+      "failing_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.CalibratedPrimary.MembershipNativeProof",
+      "log": "build-reports/1794633624009843472-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-CalibratedPrimary-MembershipNativeProof.log"
+    },
+    {
+      "request": "P6-R02-exact-repair3",
+      "session_id": 39089,
+      "exit_code": 1,
+      "receipt": "build-reports/1794633774061376235-2.json",
+      "failing_module": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.CalibratedPrimary.MembershipNativeProof",
+      "log": "build-reports/1794633774061376235-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-CalibratedPrimary-MembershipNativeProof.log"
+    },
+    {
+      "request": "P6-R02-exact-repair4",
+      "session_id": 57326,
+      "exit_code": 0,
+      "receipt": "build-reports/1794633898619119628-2.json"
+    }
+  ],
+  "updated_utc": "2026-11-14T10:22:59.616435+00:00",
+  "last_memory_observation": {
+    "available_mib": 4901,
+    "observed_utc": "2026-11-14T00:02:34.653059+00:00"
+  },
+  "active_progress": null,
+  "evidence_sessions": [
+    {
+      "session_id": 89644,
+      "exit_code": 1,
+      "reaped": true,
+      "report": "P12/PREFLIGHT-EVIDENCE.json",
+      "finding": "7 missing legacy local source-bound receipts; subsequently checked explicitly"
+    },
+    {
+      "session_id": 2784,
+      "exit_code": 0,
+      "reaped": true,
+      "report": "P12/NATIVE-EVIDENCE.json",
+      "source_matched_modules": 697
+    },
+    {
+      "session_id": 75841,
+      "exit_code": 0,
+      "reaped": true,
+      "report": "P12/EXACT-EVIDENCE.json",
+      "source_matched_modules": 700
+    },
+    {
+      "owner": "/root/sol_canonical",
+      "state": "completed-and-reaped-confirmed-by-peer",
+      "report": "P6/NATIVE-EVIDENCE.json",
+      "source_matched_modules": 3523
+    },
+    {
+      "session_id": 24605,
+      "exit_code": 0,
+      "reaped": true,
+      "report": "P12/round02/NATIVE-EVIDENCE.json",
+      "source_matched_modules": 726
+    },
+    {
+      "owner": "/root/sol_canonical",
+      "session_id": 25823,
+      "exit_code": 0,
+      "reaped": true,
+      "report": "P6/round02/NATIVE-EVIDENCE.json",
+      "source_matched_modules": 3006
+    }
+  ],
+  "queue_empty": true,
+  "all_owned_native_and_evidence_sessions_reaped": true,
+  "final_evidence": {
+    "P6": {
+      "report": "P6/NATIVE-EVIDENCE.json",
+      "source_bound_modules": 3523,
+      "exact_aliases": 2,
+      "standard_only_audited_declarations": 7,
+      "exact_receipt": "build-reports/1794616216713141678-2.json"
+    },
+    "P12": {
+      "report": "P12/EXACT-EVIDENCE.json",
+      "source_bound_modules": 700,
+      "exact_aliases": 4,
+      "standard_only_audited_declarations": 18,
+      "exact_receipt": "build-reports/1794616267999070356-2.json"
+    },
+    "union_source_bound_modules": 4138,
+    "shared_modules": [
+      "LogicLineages.Audit",
+      "LogicLineages.ComputabilityKnowledge.GorbowArithmeticAxiomCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowArithmeticEvaluation",
+      "LogicLineages.ComputabilityKnowledge.GorbowAtomicRegistry",
+      "LogicLineages.ComputabilityKnowledge.GorbowBooleanRegistry",
+      "LogicLineages.ComputabilityKnowledge.GorbowBooleanTruth",
+      "LogicLineages.ComputabilityKnowledge.GorbowClosedDeduction",
+      "LogicLineages.ComputabilityKnowledge.GorbowClosedEquality",
+      "LogicLineages.ComputabilityKnowledge.GorbowClosedTermCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowCodeConstructors",
+      "LogicLineages.ComputabilityKnowledge.GorbowContextTransport",
+      "LogicLineages.ComputabilityKnowledge.GorbowDiagonalRegistry",
+      "LogicLineages.ComputabilityKnowledge.GorbowDiagonalSentence",
+      "LogicLineages.ComputabilityKnowledge.GorbowEnumeratedProvabilityDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowFormulaComposition",
+      "LogicLineages.ComputabilityKnowledge.GorbowFormulaPrefixCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution",
+      "LogicLineages.ComputabilityKnowledge.GorbowFreeSupport",
+      "LogicLineages.ComputabilityKnowledge.GorbowHeaderSubstitution",
+      "LogicLineages.ComputabilityKnowledge.GorbowInstanceCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowInternalProvabilityDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowLiftedDictionary",
+      "LogicLineages.ComputabilityKnowledge.GorbowLogicalAxiomCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedBinding",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedBindingCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedDefiningTheoryDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedDiagonalDerivationDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedInstanceCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedInternalProvabilityDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedNumeralCertificatesDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedNumericCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowNamedRegistryInterpretationDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowNumeralPrefixCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowNumericCertificate",
+      "LogicLineages.ComputabilityKnowledge.GorbowOrdinaryArithmeticGraphsDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPACore",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRChildTagsDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRDefiningEquationsDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRInternalCoherenceDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRNumeralCalculationDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRProgramDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRProgramProof",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRProgramTargets",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRRegistryDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowPRSymbolicEquationsDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowProgramDiagram",
+      "LogicLineages.ComputabilityKnowledge.GorbowProofChecker",
+      "LogicLineages.ComputabilityKnowledge.GorbowPublishedDCBDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowRawContextBound",
+      "LogicLineages.ComputabilityKnowledge.GorbowRegistryDecoder",
+      "LogicLineages.ComputabilityKnowledge.GorbowRegistryDiagram",
+      "LogicLineages.ComputabilityKnowledge.GorbowRegistryDispatch",
+      "LogicLineages.ComputabilityKnowledge.GorbowRegistryTuple",
+      "LogicLineages.ComputabilityKnowledge.GorbowRevisionSemantics",
+      "LogicLineages.ComputabilityKnowledge.GorbowSelectedDistributionDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedBooleanCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedBooleanTruth",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedKnowledgeAxioms",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedNamedCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedQuantifierTruth",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedRegistry",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedRevision",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedSelfApplication",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedSimultaneousCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowSortedSyntaxCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowSourceRegistryPaddingDefinitions",
+      "LogicLineages.ComputabilityKnowledge.GorbowStandardInduction",
+      "LogicLineages.ComputabilityKnowledge.GorbowStandardInstances",
+      "LogicLineages.ComputabilityKnowledge.GorbowSubstitution",
+      "LogicLineages.ComputabilityKnowledge.GorbowSubstitutionCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowSubstitutionSupport",
+      "LogicLineages.ComputabilityKnowledge.GorbowSupportCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowSyntax",
+      "LogicLineages.ComputabilityKnowledge.GorbowSyntaxValidation",
+      "LogicLineages.ComputabilityKnowledge.GorbowTermPrefixCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowTermShiftCode",
+      "LogicLineages.ComputabilityKnowledge.GorbowTheoryChecker",
+      "LogicLineages.ComputabilityKnowledge.GorbowTheoryEquality",
+      "LogicLineages.ComputabilityKnowledge.GorbowTheoryNumericCertificate",
+      "LogicLineages.ComputabilityKnowledge.GorbowTheoryProof",
+      "LogicLineages.ComputabilityKnowledge.GorbowVariableCode",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticBetaDefinitions",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticCompositionDefinitions",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticProgramDefinitions",
+      "LogicLineages.OrdinalComparison.TerminationOrdering.OrdinaryArithmeticRecursionDefinitions"
+    ],
+    "errors": []
+  },
+  "final_lock_observation": {
+    "observed_utc": "2026-11-14T05:28:18.886483+00:00",
+    "locks": {
+      "logic-lineages-papers-lean.lock": "observed free; acquired then released",
+      "pure-r1-calculator-lean.lock": "observed free; acquired then released"
+    }
+  },
+  "round02_evidence": {
+    "P6": {
+      "report": "P6/round02/NATIVE-EVIDENCE.json",
+      "source_bound_modules": 3006,
+      "exact_aliases": 6,
+      "new_standard_only_audited_declarations": 25,
+      "exact_receipt": "build-reports/1794633898619119628-2.json"
+    },
+    "P12": {
+      "report": "P12/round02/NATIVE-EVIDENCE.json",
+      "source_bound_modules": 726,
+      "exact_aliases": 3,
+      "new_standard_only_audited_declarations": 12,
+      "exact_receipt": "build-reports/1794633366399862441-2.json"
+    },
+    "distinct_round02_source_bound_modules": 3647,
+    "cumulative_distinct_source_bound_modules": 4173,
+    "errors": [],
+    "source_hash_mismatches": []
+  },
+  "successor_admission_enabled": false,
+  "new_target_admission_enabled": false,
+  "native_launch_admission_enabled": false,
+  "final_stop_record": "COMPILER-STOP.json"
+}

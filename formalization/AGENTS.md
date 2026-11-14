@@ -1,4 +1,63 @@
-# Current release — 13 November continuation
+# Current state — two-agent rounds checked and paused; publication authorized
+
+Both agents stopped after completed round02, including all necessary Lean
+repairs and exact/source/axiom checks. The queue is empty, all owned native and
+evidence sessions reaped, shared locks free, and the local compiler policy
+paused. Read [the final checkpoint](verification/local-two-sol-2026-11-13/FINAL-HANDOFF.md)
+and [terminal control](verification/local-two-sol-2026-11-13/FINAL-STOPPED.json).
+The checkpoint adds 15 supporting contracts across both rounds; the original
+register remains 175 checked, 2 inherited, 12 pending /189.
+
+Only the user's requested commit/push on the existing
+`formalization/continuation-2026-11-13` branch is authorized. No main merge,
+force push, new proof/compiler round, nested worker or automatic restart.
+Any future proof work requires a new explicit user release. Fable/private
+research remain stopped. Earlier active instructions below are historical
+where they conflict with this pause.
+
+---
+
+# Latest stop instruction — finish current round, pause, commit and push
+
+The user requests "please pause after the current round and commit/push".
+New rounds, targets and successor authoring are disabled now. Only the existing
+round02 packets, necessary Lean repairs, exact checks and evidence/handoff may
+finish: P6 CalibratedPrimary exact6 and P12 ReflexivityCertificate exact3.
+Both gates have passed; no additional proof subject is authorized. Read
+[the stop scope](verification/local-two-sol-2026-11-13/STOP-AFTER-CURRENT-ROUND.json).
+
+After all owned author/native/evidence jobs are reaped, root pauses the shared
+compiler policy and commits/pushes the saved checkpoint to the existing
+`formalization/continuation-2026-11-13` branch. No main merge or force push.
+No Fuel-wrapper/source-installation/HB3, internal decoding/reachability or
+calibrated compatibility successor. Preserve checked/frozen mathematics and
+all failed drafts. No automatic restart without new explicit user release.
+Fable and private research remain stopped. Root alone owns Git publication.
+
+---
+
+# Previous release — two-agent continuation after latest fetch
+
+The user now requests fetching the repo and two subagents continuing work.
+The clean checkout switched to `formalization/continuation-2026-11-13` at
+`2aaae2862e0fecc7dc09a1c48035859ea25e3188`, 289 commits after the last local
+publication. This new explicit release supersedes the earlier pauses and
+13 November 21:40 UTC cutoff for public formalization. Read
+[the two-worker brief](verification/local-two-sol-2026-11-13/BRIEF.md) and
+[current control](verification/local-two-sol-2026-11-13/CONTROL.json).
+
+Only two workers are released: P6 canonical/Object cancellation and P12 genuine
+internal proof-certificate/HB3 infrastructure. P12 owns the sole serialized
+fixed-limit native queue; P6 submits exact-gate requests there. Root retains
+source adoption/register/Git authority. Preserve accepted/frozen mathematics,
+all failed drafts, exact standard-axiom checks, pins and resource limits.
+Fable and private research remain stopped. No nested agents or automatic Git
+publication. Historical pending summaries must be checked against current
+sources/evidence. Register starts at 175 checked, 2 inherited, 12 pending /189.
+
+---
+
+# Previous release — 13 November continuation
 
 The user explicitly resumes public Lean formalization after additional work.
 Start from verified remote checkpoint `0dca825a0540a7608a276e377de7fef66c08bead`.
