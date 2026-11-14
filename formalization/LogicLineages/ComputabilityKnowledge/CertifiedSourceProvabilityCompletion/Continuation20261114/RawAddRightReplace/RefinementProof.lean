@@ -31,6 +31,8 @@ theorem candidateSound (candidate original : Nat)
   (conjunction (applyOne termValidator aP) (conjunction (applyOne termValidator bP)
    (applyOne termValidator (.projection 0))))) args ≠ 0 at h
  simp only [conjunctionEval,twoEval,projectionEval,get2_1,hl,equalEval,hta,htb,htc] at h
+ have hget : args.get (1 : Fin 2) = original := rfl
+ rw [hget] at h
  by_cases he : original = Encodable.encode (nativeLine a b c)
  · by_cases hva : GorbowSyntaxValidation.validTerm 0 a = true
    · by_cases hvb : GorbowSyntaxValidation.validTerm 0 b = true
@@ -41,13 +43,32 @@ theorem candidateSound (candidate original : Nat)
    · simp [he,hva,HistoryDispatcher.truth] at h
  · simp [he] at h
 
+theorem compositionEval {n k : Nat} (f : Program k) (g : Fin k → Program n) (v : List.Vector Nat n) :
+ evaluate (.composition f g) v = evaluate f (List.Vector.ofFn fun i => evaluate (g i) v) := rfl
+theorem successorEval {n : Nat} (a : Program n) (v : List.Vector Nat n) :
+ evaluate (.composition .succ (fun _ => a)) v = (evaluate a v).succ := rfl
+theorem recognizerEval (v : List.Vector Nat 1) :
+ evaluate recognizer v = evaluate (RawSuffixSearch.search candidateTest)
+  ((evaluate HistoryLengthOffset.lengthProgram (evaluate templateCode v ::ᵥ nil)).succ ::ᵥ evaluate templateCode v ::ᵥ v.head ::ᵥ nil) := by
+ rw [recognizer,compositionEval]
+ apply congrArg (evaluate (RawSuffixSearch.search candidateTest))
+ apply List.Vector.ext
+ intro i
+ cases i using Fin.cases with
+ | zero => simp only [List.Vector.get_ofFn,searchArguments,Fin.cases_zero,successorEval,oneEval,List.Vector.get_cons_zero]
+ | succ i => cases i using Fin.cases with
+   | zero => simp only [List.Vector.get_ofFn,searchArguments,Fin.cases_succ,Fin.cases_zero,List.Vector.get_cons_succ,List.Vector.get_cons_zero]
+   | succ i => cases i using Fin.cases with
+     | zero => simp only [List.Vector.get_ofFn,searchArguments,Fin.cases_succ,Fin.cases_zero,projectionEval,List.Vector.get_cons_succ,List.Vector.get_cons_zero,List.Vector.get_zero]
+     | succ i => exact Fin.elim0 i
+
 theorem nativeRefinement : Targets.NativeRefinement := by
  intro old hold v
  have hv : v = v.head ::ᵥ nil := by
   simpa only [List.Vector.singleton_tail] using (List.Vector.cons_head_tail v).symm
  let raw := evaluate templateCode v
  let count := (evaluate HistoryLengthOffset.lengthProgram (raw ::ᵥ nil)).succ
- have hr : evaluate recognizer v = evaluate (RawSuffixSearch.search candidateTest) (count ::ᵥ raw ::ᵥ v.head ::ᵥ nil) := rfl
+ have hr : evaluate recognizer v = evaluate (RawSuffixSearch.search candidateTest) (count ::ᵥ raw ::ᵥ v.head ::ᵥ nil) := recognizerEval v
  rw [logicalLeaf,chooseEval]
  by_cases hz : evaluate recognizer v = 0
  · simp only [hz,if_true]; exact hold v
