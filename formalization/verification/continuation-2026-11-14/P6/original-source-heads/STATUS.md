@@ -1,5 +1,3 @@
-# Focused accepted checkpoint
+# Partial accepted packet
 
-Actual internal filter nil and cons hit/miss graph laws only; native enumeration/filter remains unaccepted.
-
-Exact2 accepted; recursive evidence independently rehashed. Combined total352; numbered register unchanged.
+RawWindow1 and internal filter2 accepted. Remaining NativeSourceHeads list/membership unaccepted. Raw evidence2256 rows independently rehashed. Total353; numbered register unchanged.
