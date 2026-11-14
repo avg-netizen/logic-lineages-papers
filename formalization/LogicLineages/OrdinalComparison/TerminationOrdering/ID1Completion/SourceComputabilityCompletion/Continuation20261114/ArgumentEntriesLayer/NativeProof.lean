@@ -27,6 +27,8 @@ theorem codeEncoding (n : Nat) (c : Code (Fin n)) : Encodable.encode c = codeNum
 theorem projectionEvaluation {n : Nat} (i : Fin n) (v : List.Vector Nat n) :
     evaluate (.projection i) v = v.get i := rfl
 
+theorem getOne (x t : Nat) : (x ::ᵥ t ::ᵥ List.Vector.nil).get (1 : Fin 2) = t := rfl
+
 theorem prependValue (x t : Nat) :
     evaluate prepend (List.Vector.ofFn ![x,t]) =
       1 + Nat.pair (Nat.pair (Nat.unpair (Nat.unpair x).2).1
@@ -48,7 +50,7 @@ theorem stepValue (x t : Nat) : evaluate step (List.Vector.ofFn ![x,t]) =
     constantEvaluation,succOfEvaluation,prependValue]
   change (if (if (Nat.unpair x).1 = 6 then 1 else 0) = 0 then _ else _) = _
   by_cases h6 : (Nat.unpair x).1 = 6 <;> by_cases h7 : (Nat.unpair x).1 = 7 <;>
-    by_cases ht : t = 0 <;> simp [h6,h7,ht,raw,tailOption,projectionEvaluation]
+    by_cases ht : t = 0 <;> simp [h6,h7,ht,raw,tailOption,projectionEvaluation,getOne]
 
 theorem nativeStep (n : Nat) (c : Code (Fin n))
     (tail : Option (List (Ty × Code (Fin n)))) :
