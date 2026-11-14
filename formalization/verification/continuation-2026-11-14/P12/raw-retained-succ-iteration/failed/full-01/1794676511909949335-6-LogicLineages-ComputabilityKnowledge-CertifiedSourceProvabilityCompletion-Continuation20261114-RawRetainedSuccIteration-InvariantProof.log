@@ -1,0 +1,41 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/InvariantProof.lean:27:1: error: Tactic `rfl` failed: The left-hand side
+  contents v q c a (substitute sub index) (substitute sub fuel) (substitute sub (RawIteratedSucc.first l s))
+    (substitute sub (RawIteratedSucc.second l r s)) (substitute sub (RawIteratedSucc.third r s))
+is not definitionally equal to the right-hand side
+  invariant v q c a l r (substitute sub index) (substitute sub fuel) (substitute sub s)
+
+m n : ℕ
+sub : Fin m → Term n
+v q c a l r : ℕ
+index fuel s : Term m
+⊢ contents v q c a (substitute sub index) (substitute sub fuel) (substitute sub (RawIteratedSucc.first l s))
+      (substitute sub (RawIteratedSucc.second l r s)) (substitute sub (RawIteratedSucc.third r s)) =
+    invariant v q c a l r (substitute sub index) (substitute sub fuel) (substitute sub s)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/InvariantProof.lean:26:45: warning: This simp argument is unused:
+  Logic.substCall
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵u̵b̵s̵t̵C̵o̵n̵t̵e̵n̵t̵s̵,̵f̵i̵r̵s̵t̵,̵s̵e̵c̵o̵n̵d̵,̵t̵h̵i̵r̵d̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵]̵[̲s̲u̲b̲s̲t̲C̲o̲n̲t̲e̲n̲t̲s̲,̲ ̲f̲i̲r̲s̲t̲,̲ ̲s̲e̲c̲o̲n̲d̲,̲ ̲t̲h̲i̲r̲d̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲n̲i̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/InvariantProof.lean:26:61: warning: This simp argument is unused:
+  List.Vector.map_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵u̵b̵s̵t̵C̵o̵n̵t̵e̵n̵t̵s̵,̵f̵i̵r̵s̵t̵,̵s̵e̵c̵o̵n̵d̵,̵t̵h̵i̵r̵d̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵]̵[̲s̲u̲b̲s̲t̲C̲o̲n̲t̲e̲n̲t̲s̲,̲ ̲f̲i̲r̲s̲t̲,̲ ̲s̲e̲c̲o̲n̲d̲,̲ ̲t̲h̲i̲r̲d̲,̲ ̲L̲o̲g̲i̲c̲.̲s̲u̲b̲s̲t̲C̲a̲l̲l̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲n̲i̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/InvariantProof.lean:26:82: warning: This simp argument is unused:
+  List.Vector.map_nil
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵u̵b̵s̵t̵C̵o̵n̵t̵e̵n̵t̵s̵,̵f̵i̵r̵s̵t̵,̵s̵e̵c̵o̵n̵d̵,̵t̵h̵i̵r̵d̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵]̵[̲s̲u̲b̲s̲t̲C̲o̲n̲t̲e̲n̲t̲s̲,̲ ̲f̲i̲r̲s̲t̲,̲ ̲s̲e̲c̲o̲n̲d̲,̲ ̲t̲h̲i̲r̲d̲,̲ ̲L̲o̲g̲i̲c̲.̲s̲u̲b̲s̲t̲C̲a̲l̲l̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲c̲o̲n̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.InvariantProof.substContents: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.InvariantProof.moveFirst._proof_1: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/InvariantProof.lean:120:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.InvariantProof.transport._proof_2: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.InvariantProof.internalPreservation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

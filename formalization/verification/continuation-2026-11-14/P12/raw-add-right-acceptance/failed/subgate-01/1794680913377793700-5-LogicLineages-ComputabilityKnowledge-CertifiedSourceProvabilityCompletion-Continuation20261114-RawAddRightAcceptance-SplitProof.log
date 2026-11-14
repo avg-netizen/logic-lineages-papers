@@ -1,0 +1,28 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:11:3: error: unexpected token 'prefix'; expected identifier
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:13:58: error: unexpected token 'prefix'; expected ')', '↑', '↥', '⇑' or term
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:13:64: error: unexpected identifier; expected ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:16:48: error: unexpected token 'prefix'; expected ')', '↑', '↥', '⇑' or term
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:16:54: error: unexpected identifier; expected ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:16:85: error: unexpected identifier; expected ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:20:123: error: unexpected identifier; expected ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:30:21: error: unexpected token 'prefix'; expected term
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:26:49: error: unsolved goals
+n : ℕ
+p : Program n
+old : Program 1
+I : Installation p old
+ctx : ℕ
+t v : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+A : Term ctx := RawAddRightReplace.binaryValue I.consTag I.appendTag 3 t v
+z2 : Term ctx := sorry
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal (RawAddRightReplace.templateValue I.consTag I.appendTag t v)
+        (HistoryAppend.appendCall I.appendTag (prefixValue I.consTag I.appendTag t v) v)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:30:28: error: unexpected identifier; expected ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:31:28: error: unexpected identifier; expected ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:47:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAddRightAcceptance.SplitProof.internalSplit: forbidden axiom dependency sorryAx
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightAcceptance/SplitProof.lean:48:14: error(lean.unknownIdentifier): Unknown constant `LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAddRightAcceptance.SplitProof.appendPrefix`
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAddRightAcceptance.SplitProof.internalSplit' depends on axioms: [propext,
+ sorryAx]

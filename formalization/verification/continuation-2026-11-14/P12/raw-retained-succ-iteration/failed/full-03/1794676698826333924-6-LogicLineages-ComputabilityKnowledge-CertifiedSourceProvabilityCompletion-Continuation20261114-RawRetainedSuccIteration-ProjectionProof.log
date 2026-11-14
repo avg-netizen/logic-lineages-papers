@@ -1,0 +1,43 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/ProjectionProof.lean:60:88: warning: This simp argument is unused:
+  substitute
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵p̵r̵o̵p̵e̵r̵t̵y̵,̵f̵i̵r̵s̵t̵,̵s̵e̵c̵o̵n̵d̵,̵i̵t̵e̵r̵a̵t̵o̵r̵C̵a̵l̵l̵,̵R̵a̵w̵I̵t̵e̵r̵a̵t̵e̵d̵S̵u̵c̵c̵.̵f̵i̵r̵s̵t̵,̵R̵a̵w̵I̵t̵e̵r̵a̵t̵e̵d̵S̵u̵c̵c̵.̵s̵e̵c̵o̵n̵d̵,̵R̵a̵w̵I̵t̵e̵r̵a̵t̵e̵d̵S̵u̵c̵c̵.̵i̵t̵e̵r̵a̵t̵o̵r̵C̵a̵l̵l̵,̵
+  ̵ ̵ ̵b̵i̵n̵a̵r̵y̵C̵a̵l̵l̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲p̲r̲o̲p̲e̲r̲t̲y̲,̲ ̲f̲i̲r̲s̲t̲,̲ ̲s̲e̲c̲o̲n̲d̲,̲ ̲i̲t̲e̲r̲a̲t̲o̲r̲C̲a̲l̲l̲,̲ ̲R̲a̲w̲I̲t̲e̲r̲a̲t̲e̲d̲S̲u̲c̲c̲.̲f̲i̲r̲s̲t̲,̲ ̲R̲a̲w̲I̲t̲e̲r̲a̲t̲e̲d̲S̲u̲c̲c̲.̲s̲e̲c̲o̲n̲d̲,̲
+  ̲ ̲ ̲ ̲R̲a̲w̲I̲t̲e̲r̲a̲t̲e̲d̲S̲u̲c̲c̲.̲i̲t̲e̲r̲a̲t̲o̲r̲C̲a̲l̲l̲,̲ ̲b̲i̲n̲a̲r̲y̲C̲a̲l̲l̲,̲ ̲L̲o̲g̲i̲c̲.̲s̲u̲b̲s̲t̲C̲a̲l̲l̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲
+  ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲n̲i̲l̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/ProjectionProof.lean:103:2: error: Type mismatch: After simplification, term
+  hout.discharge.finish
+ has type
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (((Formula.equal (first I.leftTag (iteratorCall I.iteratorTag (Term.var 0) (liftTerm s)))
+              (binaryCall I.prefixTag (Term.var 0) (first I.leftTag (liftTerm s)))).conj
+          (Formula.equal (second I.leftTag I.rightTag (iteratorCall I.iteratorTag (Term.var 0) (liftTerm s)))
+            (binaryCall I.prefixTag (Term.var 0) (second I.leftTag I.rightTag (liftTerm s))))).imp
+      ((Formula.equal (call I.leftTag (iteratorCall I.iteratorTag (Term.var 0).succ (liftTerm s) ::ᵥ nil))
+            (binaryCall I.prefixTag (Term.var 0).succ (first I.leftTag (liftTerm s)))).conj
+        (Formula.equal
+          (call I.leftTag (call I.rightTag (iteratorCall I.iteratorTag (Term.var 0).succ (liftTerm s) ::ᵥ nil) ::ᵥ nil))
+          (binaryCall I.prefixTag (Term.var 0).succ (second I.leftTag I.rightTag (liftTerm s))))))
+but is expected to have type
+  Derivation T
+    (((Formula.equal (first I.leftTag (iteratorCall I.iteratorTag (Term.var 0) (liftTerm s)))
+              (binaryCall I.prefixTag (Term.var 0) (first I.leftTag (liftTerm s)))).conj
+          (Formula.equal (second I.leftTag I.rightTag (iteratorCall I.iteratorTag (Term.var 0) (liftTerm s)))
+            (binaryCall I.prefixTag (Term.var 0) (second I.leftTag I.rightTag (liftTerm s))))).imp
+      (substituteFormula (fun i => Fin.cases (Term.var 0).succ (fun i => Term.var i.succ) i)
+        ((Formula.equal (first I.leftTag (iteratorCall I.iteratorTag (Term.var 0) (liftTerm s)))
+              (binaryCall I.prefixTag (Term.var 0) (first I.leftTag (liftTerm s)))).conj
+          (Formula.equal (second I.leftTag I.rightTag (iteratorCall I.iteratorTag (Term.var 0) (liftTerm s)))
+            (binaryCall I.prefixTag (Term.var 0) (second I.leftTag I.rightTag (liftTerm s)))))))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.ProjectionProof.substProperty: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/ProjectionProof.lean:108:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.ProjectionProof.projections: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.ProjectionProof.stepProjections' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.ProjectionProof.projections' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

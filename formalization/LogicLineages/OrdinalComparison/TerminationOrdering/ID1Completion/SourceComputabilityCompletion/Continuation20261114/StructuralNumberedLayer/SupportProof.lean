@@ -23,7 +23,8 @@ open TransparentHeadBranches.Proof (andImp orImp identityImp applyImp)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 
-open ResultStructuralFields ResultStructuralFields.SupportProof (active)
+open ResultStructuralFields
+open ResultStructuralFields.SupportProof (active)
 open OriginalRawSyntaxTransportInternalConstructorSelectorsProof
 theorem sideGraphs (U : Fin 19 → Program 3) (V : Program 3) (side : Bool)
     (node code param raw rank hd tau base ts extras enc : OTerm alpha)

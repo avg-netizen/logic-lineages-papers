@@ -1,0 +1,173 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNumeralAddition/AdditionProof.lean:18:12: error: don't know how to synthesize implicit argument `T`
+  @RawAdditionIteration.InvariantSupport.moveSecond ?m.94 ctx I.vtag I.qctag I.ctag I.atag index fuel
+    (LiteralNumeralPrefix.numeralCall I.numeralTag m) (LiteralNumeralPrefix.numeralCall I.numeralTag k)
+    (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+    (certificate I.iteratorTag I.numeralTag I.rightTag m k) (LiteralNumeralPrefix.numeralCall I.numeralTag (m.add k))
+context:
+n : ℕ
+p : Program n
+old a : Program 1
+x : Program 3
+I : RawAdditionIteration.Installation p old a x
+ctx : ℕ
+m k index fuel : Term ctx
+hv :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (RawReflexivityDispatcher.valid I.vtag (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+hit :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid I.vtag (LiteralNumeralPrefix.numeralCall I.numeralTag m)).imp
+      ((Formula.equal
+            (RawIteratedSucc.first I.leftTag
+              (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+            (LiteralNumeralPrefix.numeralCall I.numeralTag k)).conj
+        ((Formula.equal
+              (RawIteratedSucc.second I.leftTag I.rightTag
+                (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+              (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+          ((RawReflexivityDispatcher.valid I.vtag
+                (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+            (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+              (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+                (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+              (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+              (RawIteratedSucc.third I.rightTag
+                (RawAdditionIteration.binaryCall I.iteratorTag k
+                  (LiteralNumeralPrefix.numeralCall I.numeralTag m))))))))
+hstate :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal
+          (RawIteratedSucc.first I.leftTag
+            (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+          (LiteralNumeralPrefix.numeralCall I.numeralTag k)).conj
+      ((Formula.equal
+            (RawIteratedSucc.second I.leftTag I.rightTag
+              (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+            (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+        ((RawReflexivityDispatcher.valid I.vtag
+              (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+          (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+            (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+              (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+            (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+            (RawIteratedSucc.third I.rightTag
+              (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))))))
+htail :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal
+          (RawIteratedSucc.second I.leftTag I.rightTag
+            (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+          (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+      ((RawReflexivityDispatcher.valid I.vtag
+            (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+        (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+          (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+            (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+          (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+          (RawIteratedSucc.third I.rightTag
+            (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))))))
+hc :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid I.vtag
+          (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+      (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+        (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+          (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+        (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+        (RawIteratedSucc.third I.rightTag
+          (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))))
+he :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+      (LiteralNumeralPrefix.numeralCall I.numeralTag (m.add k)))
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNumeralAddition/AdditionProof.lean:18:6: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNumeralAddition/AdditionProof.lean:9:55: error: unsolved goals
+n : ℕ
+p : Program n
+old a : Program 1
+x : Program 3
+I : RawAdditionIteration.Installation p old a x
+ctx : ℕ
+m k index fuel : Term ctx
+hv :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (RawReflexivityDispatcher.valid I.vtag (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+hit :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid I.vtag (LiteralNumeralPrefix.numeralCall I.numeralTag m)).imp
+      ((Formula.equal
+            (RawIteratedSucc.first I.leftTag
+              (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+            (LiteralNumeralPrefix.numeralCall I.numeralTag k)).conj
+        ((Formula.equal
+              (RawIteratedSucc.second I.leftTag I.rightTag
+                (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+              (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+          ((RawReflexivityDispatcher.valid I.vtag
+                (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+            (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+              (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+                (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+              (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+              (RawIteratedSucc.third I.rightTag
+                (RawAdditionIteration.binaryCall I.iteratorTag k
+                  (LiteralNumeralPrefix.numeralCall I.numeralTag m))))))))
+hstate :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal
+          (RawIteratedSucc.first I.leftTag
+            (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+          (LiteralNumeralPrefix.numeralCall I.numeralTag k)).conj
+      ((Formula.equal
+            (RawIteratedSucc.second I.leftTag I.rightTag
+              (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+            (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+        ((RawReflexivityDispatcher.valid I.vtag
+              (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+          (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+            (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+              (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+            (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+            (RawIteratedSucc.third I.rightTag
+              (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))))))
+htail :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal
+          (RawIteratedSucc.second I.leftTag I.rightTag
+            (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))
+          (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+      ((RawReflexivityDispatcher.valid I.vtag
+            (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+        (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+          (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+            (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+          (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+          (RawIteratedSucc.third I.rightTag
+            (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))))))
+hc :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid I.vtag
+          (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))).conj
+      (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+        (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+          (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+        (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+        (RawIteratedSucc.third I.rightTag
+          (RawAdditionIteration.binaryCall I.iteratorTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m)))))
+he :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (RawAdditionIteration.binaryCall I.prefixTag k (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+      (LiteralNumeralPrefix.numeralCall I.numeralTag (m.add k)))
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+        (RawAdditionComputation.addRaw I.ctag I.atag (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+          (LiteralNumeralPrefix.numeralCall I.numeralTag k))
+        (LiteralNumeralPrefix.numeralCall I.numeralTag (m.add k))
+        (certificate I.iteratorTag I.numeralTag I.rightTag m k)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNumeralAddition/AdditionProof.lean:28:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNumeralAddition.AdditionProof.internalAddition: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNumeralAddition.AdditionProof.internalAddition' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

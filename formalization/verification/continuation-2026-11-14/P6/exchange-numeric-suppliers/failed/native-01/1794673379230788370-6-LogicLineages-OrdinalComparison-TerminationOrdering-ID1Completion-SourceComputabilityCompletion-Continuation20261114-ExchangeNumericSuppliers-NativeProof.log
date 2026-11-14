@@ -1,0 +1,86 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:15:22: error(lean.unknownIdentifier): Unknown constant `Encodable.decode_encode`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:16:4: error: Type mismatch
+  dependenciesDecrease n p q hq
+has type
+  NumberedLeastCodeRepresentative.codeNumber q.1 < NumberedLeastCodeRepresentative.codeNumber p.1
+but is expected to have type
+  (Option.map (fun p => NumberedLeastCodeRepresentative.codeNumber p.1) (Encodable.decode (Encodable.encode q))).getD
+      0 <
+    NumberedLeastCodeRepresentative.codeNumber p.1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:20:21: error(lean.unknownIdentifier): Unknown constant `Encodable.decode_encode`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:18:61: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+window : Window n
+source target : NumberedAuxiliaryCoding.Code (Fin n)
+⊢ (match Encodable.decode (Encodable.encode (source, target)), Encodable.decode (Encodable.encode window) with
+    | some p, some window => (codeExchange arity window.1 window.2 p.1 p.2).toNat
+    | x, x_1 => 0) =
+    (codeExchange arity window.1 window.2 source target).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:36:47: error(lean.unknownIdentifier): Unknown constant `Encodable.decode_encode`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:37:63: error: Tactic `rfl` failed: The left-hand side
+  (match Encodable.decode (Encodable.encode q), some window with
+    | some p, some window => (codeExchange arity window.1 window.2 p.1 p.2).toNat
+    | x, x_1 => 0) ==
+    1
+is not definitionally equal to the right-hand side
+  false
+
+case false
+n : ℕ
+arity : Fin n → ℕ
+node param : ℕ
+p : Node n
+hn : Encodable.decode node = some p
+window : Window n
+hw : Encodable.decode param = some window
+q : NumberedAuxiliaryCoding.Code (Fin n) × NumberedAuxiliaryCoding.Code (Fin n)
+hq : q ∈ dependencies p
+⊢ ((match Encodable.decode (Encodable.encode q), some window with
+      | some p, some window => (codeExchange arity window.1 window.2 p.1 p.2).toNat
+      | x, x_1 => 0) ==
+      1) =
+    false
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:37:63: error: Tactic `rfl` failed: The left-hand side
+  (match Encodable.decode (Encodable.encode q), some window with
+    | some p, some window => (codeExchange arity window.1 window.2 p.1 p.2).toNat
+    | x, x_1 => 0) ==
+    1
+is not definitionally equal to the right-hand side
+  true
+
+case true
+n : ℕ
+arity : Fin n → ℕ
+node param : ℕ
+p : Node n
+hn : Encodable.decode node = some p
+window : Window n
+hw : Encodable.decode param = some window
+q : NumberedAuxiliaryCoding.Code (Fin n) × NumberedAuxiliaryCoding.Code (Fin n)
+hq : q ∈ dependencies p
+⊢ ((match Encodable.decode (Encodable.encode q), some window with
+      | some p, some window => (codeExchange arity window.1 window.2 p.1 p.2).toNat
+      | x, x_1 => 0) ==
+      1) =
+    true
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:39:6: error: 'change' tactic failed, pattern
+  some
+      (layer n arity
+          (window, fields p.1, fields p.2,
+            List.map (fun value => value == 1)
+              (List.map (fun child => valueAt n arity child param) (depsAt n node param)))).toNat =
+    some (codeExchange arity window.1 window.2 p.1 p.2).toNat
+is not definitionally equal to target
+  some
+      (layer n arity
+          (window, fields p.1, fields p.2,
+            List.map (fun value => value == 1)
+              (List.map
+                (fun child =>
+                  match Encodable.decode child, some window with
+                  | some p, some window => (codeExchange arity window.1 window.2 p.1 p.2).toNat
+                  | x, x_1 => 0)
+                (depsAt n node param)))).toNat =
+    some (codeExchange arity window.1 window.2 p.1 p.2).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeNumericSuppliers/NativeProof.lean:45:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeProof.nativeOriginalValue: forbidden axiom dependency sorryAx

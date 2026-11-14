@@ -1,0 +1,56 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:17:4: error: Type mismatch: After simplification, term
+  (InternalUnpairEvaluationProof.exactUnpairEvaluation (Nat.pair k v)).left
+ has type
+  @Eq ℕ (evaluate InternalUnpair.left (Nat.pair k v ::ᵥ nil)) k
+but is expected to have type
+  @Eq ℕ (evaluate InternalUnpair.left (![Nat.pair k v] 0 ::ᵥ nil)) k
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:21:4: error: Type mismatch: After simplification, term
+  (InternalUnpairEvaluationProof.exactUnpairEvaluation (Nat.pair k v)).right
+ has type
+  @Eq ℕ (evaluate InternalUnpair.right (Nat.pair k v ::ᵥ nil)) v
+but is expected to have type
+  @Eq ℕ (evaluate InternalUnpair.right (![Nat.pair k v] 0 ::ᵥ nil)) v
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:38:22: error: unsolved goals
+case neg
+key : ℕ
+entries : List (ℕ × ℕ)
+ih :
+  List.foldr (fun a rest => evaluate lookupStep (a ::ᵥ rest ::ᵥ key ::ᵥ nil)) 0
+      (List.map (fun p => Nat.pair p.1 p.2) entries) =
+    Encodable.encode (List.lookup key entries)
+k v : ℕ
+h : ¬k = key
+⊢ List.lookup key entries =
+    match key == k with
+    | true => some v
+    | false => List.lookup key entries
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:41:54: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵_̵c̵o̵n̵s̵,̵h̵,̵e̵q̵_̵c̵o̵m̵m̵]̵[̲L̲i̲s̲t̲.̲l̲o̲o̲k̲u̲p̲_̲c̲o̲n̲s̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:61:23: warning: This simp argument is unused:
+  ho
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵o̵,̵Encodable.encode_none, ̲ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:70:15: warning: This simp argument is unused:
+  ho
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵o̵,̵Encodable.encode_some, ̲Encodable.encode_nat, ̲Nat.succ_ne_zero, ̲ite_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:84:49: warning: This simp argument is unused:
+  ho
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵o̵,̵Option.toList_none, ̲Option.toList_some,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.nil_append, ̲List.cons_append, ̲numbersNumber]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:95:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.NativeProof.nativeMapGraph: forbidden axiom dependency sorryAx

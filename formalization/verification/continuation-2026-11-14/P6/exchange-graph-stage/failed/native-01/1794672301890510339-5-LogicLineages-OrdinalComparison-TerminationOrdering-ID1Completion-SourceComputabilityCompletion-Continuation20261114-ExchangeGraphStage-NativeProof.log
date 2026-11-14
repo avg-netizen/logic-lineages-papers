@@ -1,0 +1,94 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeGraphStage/NativeProof.lean:86:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option ℕ),
+    (match x, ⋯ with
+      | none, hv =>
+        numbersNumber
+          (List.filterMap
+            (fun node =>
+              Option.map (fun value => Nat.pair node value)
+                (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+            frontier)
+      | some value, hv =>
+        1 +
+          Nat.pair (Nat.pair node value)
+            (numbersNumber
+              (List.filterMap
+                (fun node =>
+                  Option.map (fun value => Nat.pair node value)
+                    (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+                frontier))) =
+      numbersNumber
+        (match Option.map (fun value => Nat.pair node value) x with
+        | none =>
+          List.filterMap
+            (fun node =>
+              Option.map (fun value => Nat.pair node value)
+                (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+            frontier
+        | some b =>
+          b ::
+            List.filterMap
+              (fun node =>
+                Option.map (fun value => Nat.pair node value)
+                  (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+              frontier)
+
+case cons
+D : Program 2
+G : Program 3
+d : ℕ → ℕ → List ℕ
+g : ℕ → List ℕ → ℕ → Option ℕ
+hd : ∀ (node param : ℕ), evaluate D (ofFn ![node, param]) = numbersNumber (d node param)
+hg :
+  ∀ (node : ℕ) (vals : List ℕ) (param : ℕ),
+    evaluate G (ofFn ![node, numbersNumber vals, param]) = Encodable.encode (g node vals param)
+old : List (ℕ × ℕ)
+param node : ℕ
+frontier : List ℕ
+ih :
+  List.foldr
+      (fun node rest =>
+        evaluate (step D G)
+          (node ::ᵥ rest ::ᵥ numbersNumber (List.map (fun kv => Nat.pair kv.1 kv.2) old) ::ᵥ param ::ᵥ nil))
+      0 frontier =
+    numbersNumber
+      (List.filterMap
+        (fun node =>
+          Option.map (fun value => Nat.pair node value)
+            (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+        frontier)
+⊢ (match g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param, ⋯ with
+    | none, hv =>
+      numbersNumber
+        (List.filterMap
+          (fun node =>
+            Option.map (fun value => Nat.pair node value)
+              (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+          frontier)
+    | some value, hv =>
+      1 +
+        Nat.pair (Nat.pair node value)
+          (numbersNumber
+            (List.filterMap
+              (fun node =>
+                Option.map (fun value => Nat.pair node value)
+                  (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+              frontier))) =
+    numbersNumber
+      (match
+        Option.map (fun value => Nat.pair node value)
+          (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param) with
+      | none =>
+        List.filterMap
+          (fun node =>
+            Option.map (fun value => Nat.pair node value)
+              (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+          frontier
+      | some b =>
+        b ::
+          List.filterMap
+            (fun node =>
+              Option.map (fun value => Nat.pair node value)
+                (g node (List.flatMap (fun k => (List.lookup k old).toList) (d node param)) param))
+            frontier)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeGraphStage/NativeProof.lean:98:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphStage.NativeProof.stageFold: forbidden axiom dependency sorryAx

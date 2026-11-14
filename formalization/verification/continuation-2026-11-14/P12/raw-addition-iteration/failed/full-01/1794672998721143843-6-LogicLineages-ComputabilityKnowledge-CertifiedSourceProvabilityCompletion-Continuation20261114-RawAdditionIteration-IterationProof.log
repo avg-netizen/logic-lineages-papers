@@ -1,0 +1,69 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionIteration/IterationProof.lean:46:54: error: Application type mismatch: The argument
+  I.vtag
+has type
+  ℕ
+but is expected to have type
+  Program ?m.246
+in the application
+  transport I.vtag
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionIteration/IterationProof.lean:27:57: error: unsolved goals
+n : ℕ
+p : Program n
+old a : Program 1
+x : Program 3
+I : Installation p old a x
+ctx : ℕ
+count t index fuel : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+phi : Formula (ctx + 1) :=
+  template I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag I.iteratorTag t index fuel
+hb0 :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid I.vtag t).imp
+      (property I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag Term.zero t index fuel
+        (binaryCall I.iteratorTag Term.zero t)))
+hb : Derivation T (GorbowStandardInstances.instantiate phi Term.zero)
+t' : Term (ctx + 1) := liftTerm t
+index' : Term (ctx + 1) := liftTerm index
+fuel' : Term (ctx + 1) := liftTerm fuel
+j : Term (ctx + 1) := Term.var 0
+H : Formula (ctx + 1) := RawReflexivityDispatcher.valid I.vtag t'
+previous : Term (ctx + 1) := binaryCall I.iteratorTag j t'
+ht : Hilbert.Local T (ctx + 1) [H, phi] H
+hih : Hilbert.Local T (ctx + 1) [H, phi] phi
+hprev :
+  Hilbert.Local T (ctx + 1) [H, phi]
+    (property I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag (Term.var 0) (liftTerm t)
+      (liftTerm index) (liftTerm fuel) (binaryCall I.iteratorTag (Term.var 0) (liftTerm t)))
+hstep :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid I.vtag t').imp
+      ((property I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag j t' index' fuel'
+            previous).imp
+        (property I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag j.succ t' index' fuel'
+          (binaryCall I.stepTag t' previous))))
+hnext :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) (ctx + 1) [H, phi]
+    (property I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag j.succ t' index' fuel'
+      (binaryCall I.stepTag t' previous))
+hs :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (binaryCall I.iteratorTag j.succ t') (binaryCall I.stepTag t' (binaryCall I.iteratorTag j t')))
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      ((RawReflexivityDispatcher.valid I.vtag t).imp
+        ((Formula.equal (RawIteratedSucc.first I.leftTag (binaryCall I.iteratorTag count t))
+              (LiteralNumeralPrefix.numeralCall I.numeralTag count)).conj
+          ((Formula.equal (RawIteratedSucc.second I.leftTag I.rightTag (binaryCall I.iteratorTag count t))
+                (binaryCall I.prefixTag count t)).conj
+            ((RawReflexivityDispatcher.valid I.vtag (binaryCall I.prefixTag count t)).conj
+              (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+                (RawAdditionComputation.addRaw I.ctag I.atag t (LiteralNumeralPrefix.numeralCall I.numeralTag count))
+                (binaryCall I.prefixTag count t)
+                (RawIteratedSucc.third I.rightTag (binaryCall I.iteratorTag count t))))))))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionIteration.IterationProof.substBinary: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionIteration/IterationProof.lean:58:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionIteration.IterationProof.internalIteration: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionIteration.IterationProof.internalIteration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

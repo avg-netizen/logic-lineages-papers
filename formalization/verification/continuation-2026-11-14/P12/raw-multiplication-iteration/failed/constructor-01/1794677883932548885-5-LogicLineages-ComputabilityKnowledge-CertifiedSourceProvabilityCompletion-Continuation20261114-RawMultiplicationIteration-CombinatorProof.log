@@ -1,0 +1,38 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawMultiplicationIteration/CombinatorProof.lean:77:19: error: Application type mismatch: The argument
+  old
+has type
+  Program 1
+but is expected to have type
+  List.Vector (Term ?m.119) ?m.118
+in the application
+  next p old
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawMultiplicationIteration/CombinatorProof.lean:73:100: error: unsolved goals
+n arity ctx : ℕ
+p : Program n
+old a : Program 1
+x : Program 3
+I : Installation p old a x
+args : List.Vector (Term ctx) arity
+m u z cert : Program arity
+mv uv zv cv : Term ctx
+hm : Computes p [] m args mv
+hu : Computes p [] u args uv
+hz : Computes p [] z args zv
+hc : Computes p [] cert args cv
+J : RawRetainedAdditionIteration.Installation p old a x := I.toEvaluator
+ht : Computes p [] (applyOne LiteralNumeralPrefix.numeralCode m) args (LiteralNumeralPrefix.numeralCall I.numeralTag mv)
+hv : Computes p [] (applyOne LiteralNumeralPrefix.numeralCode z) args (LiteralNumeralPrefix.numeralCall I.numeralTag zv)
+⊢ Computes p [] (computation m u z cert) args
+    (RawMultiplicationComputation.stepCertificate I.mpTag I.qtag I.reflexivityTag I.mulSuccTag I.iteratorTag
+      I.congruenceIteratorTag I.numeralTag I.prefixTag I.ptag I.ctag I.atag I.rightTag mv uv zv cv)
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.CombinatorProof.mulLine: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.CombinatorProof.numeral: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawMultiplicationIteration/CombinatorProof.lean:97:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.CombinatorProof.computationCompute: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.CombinatorProof.computationCompute' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

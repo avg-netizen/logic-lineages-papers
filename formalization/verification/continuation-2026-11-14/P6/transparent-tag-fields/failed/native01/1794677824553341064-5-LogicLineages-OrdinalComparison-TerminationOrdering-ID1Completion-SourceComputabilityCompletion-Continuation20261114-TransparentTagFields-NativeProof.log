@@ -1,0 +1,82 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/TransparentTagFields/NativeProof.lean:59:9: error: unsolved goals
+case none
+n : ℕ
+arity : Fin n → ℕ
+V : Program 3
+hV : ∀ (v : List.Vector ℕ 3), evaluate V v = TransparentExchangeLayer.validValue n v
+v : List.Vector ℕ 3
+hn : Encodable.decode (v.get 0) = none
+⊢ ((if
+          (match
+              (Encodable.decode (Nat.unpair v.head).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2),
+              (Encodable.decode (Nat.unpair (v.get 2)).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (v.get 2)).2) with
+            | some val, some val_1 => 1
+            | x, x_1 => 0) =
+            0 then
+        evaluate (Program.zero.composition Fin.elim0) v
+      else evaluate sourceRawTag v) =
+      match
+        (Encodable.decode (Nat.unpair v.head).1).bind fun a =>
+          Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2),
+        (Encodable.decode (Nat.unpair (v.get 2)).1).bind fun a =>
+          Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (v.get 2)).2) with
+      | some p, some window =>
+        (ExchangeLayer.input n arity
+            (window, NumberedExchangeCodeFieldsProof.fields p.1, NumberedExchangeCodeFieldsProof.fields p.2,
+              List.map (fun value => value == 1) ((NumberedMultisetNumeric.decodeNumbers (v.get 1)).getD []))).head
+      | x, x_1 => 0) ∧
+    (if
+          (match
+              (Encodable.decode (Nat.unpair v.head).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2),
+              (Encodable.decode (Nat.unpair (v.get 2)).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (v.get 2)).2) with
+            | some val, some val_1 => 1
+            | x, x_1 => 0) =
+            0 then
+        evaluate (Program.zero.composition Fin.elim0) v
+      else evaluate targetRawTag v) =
+      match
+        (Encodable.decode (Nat.unpair v.head).1).bind fun a =>
+          Option.map (Prod.mk a) (Encodable.decode (Nat.unpair v.head).2),
+        (Encodable.decode (Nat.unpair (v.get 2)).1).bind fun a =>
+          Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (v.get 2)).2) with
+      | some p, some window =>
+        (ExchangeLayer.input n arity
+              (window, NumberedExchangeCodeFieldsProof.fields p.1, NumberedExchangeCodeFieldsProof.fields p.2,
+                List.map (fun value => value == 1) ((NumberedMultisetNumeric.decodeNumbers (v.get 1)).getD []))).get
+          7
+      | x, x_1 => 0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/TransparentTagFields/NativeProof.lean:62:11: error: unsolved goals
+case some.none
+n : ℕ
+arity : Fin n → ℕ
+V : Program 3
+hV : ∀ (v : List.Vector ℕ 3), evaluate V v = TransparentExchangeLayer.validValue n v
+v : List.Vector ℕ 3
+p : ExchangeNumericSuppliers.Node n
+hn : Encodable.decode (v.get 0) = some p
+hw : Encodable.decode (v.get 2) = none
+⊢ evaluate (Program.zero.composition Fin.elim0) v = 0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/TransparentTagFields/NativeProof.lean:59:90: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [TransparentExchangeLayer.validValue, ̲TransparentExchangeLayer.fieldValue,h̵n̵,̵
+  ̲ ̲ ̲ ̲ ̲InternalAcceptance.constantZero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/TransparentTagFields/NativeProof.lean:62:92: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [TransparentExchangeLayer.validValue, ̲TransparentExchangeLayer.fieldValue, ̲hn̵,̵h̵w,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲InternalAcceptance.constantZero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.TransparentTagFields.NativeProof.rawTagValues: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/TransparentTagFields/NativeProof.lean:69:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.TransparentTagFields.NativeProof.nativeTags: forbidden axiom dependency sorryAx

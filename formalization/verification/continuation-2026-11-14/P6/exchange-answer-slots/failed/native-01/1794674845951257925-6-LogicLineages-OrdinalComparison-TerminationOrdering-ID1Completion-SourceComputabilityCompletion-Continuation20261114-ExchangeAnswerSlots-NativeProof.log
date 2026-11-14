@@ -1,0 +1,44 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeAnswerSlots/NativeProof.lean:27:32: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate InternalRawListRecursion.drop (?k ::ᵥ 0 ::ᵥ nil)
+in the target expression
+  (Nat.unpair (evaluate InternalRawListRecursion.drop (k ::ᵥ numbersNumber [] ::ᵥ nil) - 1)).1 = [].getD k 0
+
+case nil
+k : ℕ
+⊢ (Nat.unpair (evaluate InternalRawListRecursion.drop (k ::ᵥ numbersNumber [] ::ᵥ nil) - 1)).1 = [].getD k 0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeAnswerSlots/NativeProof.lean:43:45: error: unsolved goals
+case pos
+k : ℕ
+v : List.Vector ℕ 3
+xs : List ℕ
+hxs : decodeNumbers (v.get 1) = some xs
+hs : numbersNumber xs = v.get 1
+hraw : evaluate (rawSlot k) v = xs.getD k 0
+h : xs.getD k 0 = 1
+⊢ (if xs[k]?.getD 0 = 1 then 1 else 0) = ((Option.map (fun value => decide (value = 1)) xs[k]?).getD false).toNat
+
+case neg
+k : ℕ
+v : List.Vector ℕ 3
+xs : List ℕ
+hxs : decodeNumbers (v.get 1) = some xs
+hs : numbersNumber xs = v.get 1
+hraw : evaluate (rawSlot k) v = xs.getD k 0
+h : ¬xs.getD k 0 = 1
+⊢ (if xs[k]?.getD 0 = 1 then 1 else 0) = ((Option.map (fun value => decide (value = 1)) xs[k]?).getD false).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeAnswerSlots/NativeProof.lean:52:34: warning: This simp argument is unused:
+  boolGet
+
+Hint: Omit it from the simp argument list.
+  simp only [hxs, ̲Option.getD_some,b̵o̵o̵l̵G̵e̵t̵,̵ ̲Bool.beq_eq_decide_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeAnswerSlots/NativeProof.lean:53:41: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeAnswerSlots.NativeProof.boolGet: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeAnswerSlots/NativeProof.lean:55:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeAnswerSlots.NativeProof.lookupEncoded: forbidden axiom dependency sorryAx

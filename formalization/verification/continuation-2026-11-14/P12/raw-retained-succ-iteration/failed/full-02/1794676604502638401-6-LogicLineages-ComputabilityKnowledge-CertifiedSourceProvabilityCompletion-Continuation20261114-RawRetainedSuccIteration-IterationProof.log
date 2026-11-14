@@ -1,0 +1,36 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/IterationProof.lean:43:107: error: unsolved goals
+m n : ℕ
+sub : Fin m → Term n
+tag : ℕ
+count s : Term m
+⊢ substitute sub (RawIteratedSucc.iteratorCall tag count s) =
+    RawIteratedSucc.iteratorCall tag (substitute sub count) (substitute sub s)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/IterationProof.lean:44:25: warning: This simp argument is unused:
+  Logic.substCall
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵t̵e̵r̵a̵t̵o̵r̵C̵a̵l̵l̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵]̵[̲i̲t̲e̲r̲a̲t̲o̲r̲C̲a̲l̲l̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲n̲i̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/IterationProof.lean:44:41: warning: This simp argument is unused:
+  List.Vector.map_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵t̵e̵r̵a̵t̵o̵r̵C̵a̵l̵l̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵]̵[̲i̲t̲e̲r̲a̲t̲o̲r̲C̲a̲l̲l̲,̲ ̲L̲o̲g̲i̲c̲.̲s̲u̲b̲s̲t̲C̲a̲l̲l̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲n̲i̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/IterationProof.lean:44:62: warning: This simp argument is unused:
+  List.Vector.map_nil
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵t̵e̵r̵a̵t̵o̵r̵C̵a̵l̵l̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵]̵[̲i̲t̲e̲r̲a̲t̲o̲r̲C̲a̲l̲l̲,̲ ̲L̲o̲g̲i̲c̲.̲s̲u̲b̲s̲t̲C̲a̲l̲l̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲c̲o̲n̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.IterationProof.successor: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawRetainedSuccIteration/IterationProof.lean:91:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.IterationProof.templateAt: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedSuccIteration.IterationProof.invariantIteration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

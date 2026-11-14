@@ -1,0 +1,54 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:15:119: error: unsolved goals
+seed value : ℕ
+⊢ (Nat.unpair (![Nat.pair (Nat.pair seed value) 0 + 1] 0 - 1)).1 = Nat.pair seed value
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:20:2: error: Type mismatch
+  (InternalUnpairEvaluationProof.exactUnpairEvaluation (Nat.pair seed value)).right
+has type
+  evaluate InternalUnpair.right (Nat.pair seed value ::ᵥ nil) = (Nat.unpair (Nat.pair seed value)).2
+but is expected to have type
+  evaluate InternalUnpair.right (![Nat.pair seed value] 0 ::ᵥ nil) = value
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:17:44: warning: This simp argument is unused:
+  Nat.add_sub_cancel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵n̵u̵m̵b̵e̵r̵s̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵ ̵1̵,̵N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵]̵[̲n̲u̲m̲b̲e̲r̲s̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲ ̲1̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:17:63: warning: This simp argument is unused:
+  Nat.unpair_pair
+
+Hint: Omit it from the simp argument list.
+  simp only [̵n̵u̵m̵b̵e̵r̵s̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵ ̵1̵,̵N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵c̵a̵n̵c̵e̵l̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵]̵[̲n̲u̲m̲b̲e̲r̲s̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲ ̲1̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲s̲u̲b̲_̲c̲a̲n̲c̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:34:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq ℕ (evaluate (ExchangeGraphRecursion.graph R D G) (ofFn ![m seed param + 1, seed, param]))
+    (numbersNumber
+      (List.map (fun node => Nat.pair node (f node param)) (ExchangeGraphRecursion.frontierList d seed param 0)))
+but is expected to have type
+  @Eq ℕ (evaluate (ExchangeGraphRecursion.graph R D G) (ofFn ![m seed param + 1, seed, param]))
+    (numbersNumber [Nat.pair seed (f seed param)])
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:50:85: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+hpR : Primrec (ExchangeNumericSuppliers.rankValue n)
+hpD : Primrec (ExchangeNumericSuppliers.depsValue n)
+hpG : Primrec (ExchangeNumericSuppliers.layerValue n arity)
+R : Program 2
+hR : ∀ (v : List.Vector ℕ 2), evaluate R v = ExchangeNumericSuppliers.rankValue n v
+D : Program 2
+hD : ∀ (v : List.Vector ℕ 2), evaluate D v = ExchangeNumericSuppliers.depsValue n v
+G : Program 3
+hG : ∀ (v : List.Vector ℕ 3), evaluate G v = ExchangeNumericSuppliers.layerValue n arity v
+hr : ∀ (seed param : ℕ), evaluate R (ofFn ![seed, param]) = ExchangeNumericSuppliers.rankAt n seed param
+hd : ∀ (node param : ℕ), evaluate D (ofFn ![node, param]) = numbersNumber (ExchangeNumericSuppliers.depsAt n node param)
+node : ℕ
+vals : List ℕ
+param : ℕ
+⊢ Encodable.encode
+      (ExchangeNumericSuppliers.layerAt n arity node vals
+        (Matrix.vecHead (Matrix.vecTail ![numbersNumber vals, param]))) =
+    Encodable.encode (ExchangeNumericSuppliers.layerAt n arity node vals param)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeSelectedRecursor/NativeProof.lean:72:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeSelectedRecursor.NativeProof.nativeFinalValue: forbidden axiom dependency sorryAx

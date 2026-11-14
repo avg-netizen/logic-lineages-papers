@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityComposition/CompositionProof.lean:9:0: error: type of theorem `LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.localTransport` is not a proposition
+  {n ctx : ℕ} →
+    (p : Program n) →
+      (old a : Program 1) →
+        (x : Program 3) →
+          (I : Installation p old a x) →
+            (G : List (Formula ctx)) →
+              (t u v first second index fuel : Term ctx) →
+                Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G (RawReflexivityDispatcher.valid I.vtag t) →
+                  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G (RawReflexivityDispatcher.valid I.vtag u) →
+                    Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+                        (RawReflexivityDispatcher.valid I.vtag v) →
+                      Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+                          (accepted I.qctag I.ctag I.atag index fuel t u first) →
+                        Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+                            (accepted I.qctag I.ctag I.atag index fuel t v second) →
+                          Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+                            (accepted I.qctag I.ctag I.atag index fuel u v
+                              (transportCertificate I.mpTag I.qtag I.ctag I.atag t u v first second))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityComposition/CompositionProof.lean:35:8: error: (kernel) unknown constant 'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.localTransport'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityComposition/CompositionProof.lean:50:8: error: (kernel) unknown constant 'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.localTransport'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityComposition/CompositionProof.lean:72:0: error: No theorem declarations found in namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.localTransport' does not depend on any axioms
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.internalSymmetry' depends on axioms: [propext,
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.internalSymmetry]
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.internalTransitivity' depends on axioms: [propext,
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityComposition.CompositionProof.internalTransitivity]
