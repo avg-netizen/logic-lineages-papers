@@ -1,0 +1,7 @@
+{
+  "status": "approve proposed name-only frozen repair before edit",
+  "old": "NumberedMultisetNumeric.encodeNumbers",
+  "new": "NumberedMultisetNumeric.numbersNumber",
+  "source": "NumberedMultisetNumericDefinitions.lean7-9 defines nil0 and cons1+Nat.pair; ExchangeAnswerSlots.NativeProof.lookupEncoded24-32 proves actual lookup(k,numbersNumber xs)=xs.getD k0.",
+  "review": "This is the intended numeric answer-list codec, mapping each nested option entry through Encodable.encode first. Default0 matches None, not Some empty. Only the nonexistent name is replaced; original failed freeze remains preserved. Native typed-entry/list alignment obligation and all internal targets remain unchanged."
+}
