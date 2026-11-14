@@ -51,13 +51,18 @@ theorem internalPreservation : Targets.InternalPreservation := by
   let xs : Fin 3 → OTerm alpha := ![pool,reached,parameter]
   apply programCases (filterReached E) xs _
   intro beta j Theta filtered hj hf
-  simp only [graph2Rename,sucRelabel,zRelabel]
+  simp only [graph2Rename,SourceComputabilityFormulaSupportProof.numeral,sucRelabel,zRelabel]
   have he' := renameInto he j Theta hj
   rw [graph3Rename] at he'
   have hm' := renameInto hm j Theta hj
-  simp only [graph2Rename,sucRelabel,zRelabel] at hm'
+  simp only [graph2Rename,SourceComputabilityFormulaSupportProof.numeral,sucRelabel,zRelabel] at hm'
   let ys : Fin 3 → OTerm beta := ![pool.relabel j,reached.relabel j,parameter.relabel j]
-  have hf' : Nonempty (Derivation body Theta (programGraph (filterReached E) filtered ys)) := hf
+  have hxs : (fun i => (xs i).relabel j) = ys := by
+    funext i
+    exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k))) i
+  have hf' : Nonempty (Derivation body Theta (programGraph (filterReached E) filtered ys)) := by
+    rw [hxs] at hf
+    exact hf
   have ha := binaryRecover append (.projection 1) (filterReached E) (out.relabel j)
     (reached.relabel j) filtered ys he' (projectionValue 1 ys) hf'
   exact appendPreservation (reached.relabel j) filtered (out.relabel j) (needle.relabel j) ha hm'
