@@ -28,19 +28,23 @@ theorem nativeSearch : Targets.NativeSearch := by
   · by_cases ht : evaluate test (evaluate HistoryLookup.drop (count ::ᵥ raw ::ᵥ nil) ::ᵥ line ::ᵥ nil)=0
     · simp only [hz,ht,if_true]
       constructor
-      · exact Or.inl rfl
+      · exact Or.inl True.intro
       · constructor
         · intro h; omega
         · rintro ⟨i,hi,hit⟩
-          have hil : i < count := by by_contra h; have : i=count := by omega; subst i; exact hit ht
+          have hil : i < count := by
+           by_contra h
+           have heq : i=count := by omega
+           subst i
+           exact hit ht
           have hh := ih.2.mpr ⟨i,hil,hit⟩
           omega
     · simp only [hz,ht,if_true,if_false]
-      exact ⟨Or.inr rfl,⟨fun _ => ⟨count,Nat.lt_succ_self _,ht⟩,fun _ => rfl⟩⟩
+      exact ⟨Or.inr True.intro,⟨fun _ => ⟨count,Nat.lt_succ_self _,ht⟩,fun _ => True.intro⟩⟩
   · simp only [hz,if_false]
     have ho : evaluate (search test) (count ::ᵥ raw ::ᵥ line ::ᵥ nil)=1 := ih.1.resolve_left hz
     obtain ⟨i,hi,hit⟩ := ih.2.mp ho
-    exact ⟨Or.inr rfl,⟨fun _ => ⟨i,Nat.lt_trans hi (Nat.lt_succ_self _),hit⟩,fun _ => rfl⟩⟩
+    exact ⟨Or.inr True.intro,⟨fun _ => ⟨i,Nat.lt_trans hi (Nat.lt_succ_self _),hit⟩,fun _ => True.intro⟩⟩
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuffixSearch.NativeProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuffixSearch.NativeProof
