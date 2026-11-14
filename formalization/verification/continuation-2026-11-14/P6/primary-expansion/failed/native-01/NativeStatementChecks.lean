@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansion.NativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansion.NativeStatementChecks
+theorem exactAnyNative : Targets.AnyNative := NativeProof.anyNative
+theorem exactFilterNative : Targets.FilterNative := NativeProof.filterNative
+theorem exactExpansionNative : Targets.ExpansionNative := NativeProof.expansionNative
+theorem exactOriginalStepCalibration : Targets.OriginalStepCalibration := NativeProof.originalStepCalibration
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansion.NativeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansion.NativeStatementChecks
