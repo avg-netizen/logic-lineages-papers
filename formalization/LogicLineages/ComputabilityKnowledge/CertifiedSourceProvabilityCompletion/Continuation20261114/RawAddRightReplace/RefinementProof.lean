@@ -59,7 +59,7 @@ theorem recognizerEval (v : List.Vector Nat 1) :
  | succ i => cases i using Fin.cases with
    | zero => simp only [List.Vector.get_ofFn,searchArguments,Fin.cases_succ,Fin.cases_zero,List.Vector.get_cons_succ,List.Vector.get_cons_zero]
    | succ i => cases i using Fin.cases with
-     | zero => simp only [List.Vector.get_ofFn,searchArguments,Fin.cases_succ,Fin.cases_zero,projectionEval,List.Vector.get_cons_succ,List.Vector.get_cons_zero,List.Vector.get_zero]
+     | zero => simp only [List.Vector.get_ofFn,searchArguments,Fin.cases_succ,Fin.cases_zero,projectionEval,List.Vector.get_cons_succ,List.Vector.get_cons_zero,List.Vector.get_zero,List.Vector.head_cons]
      | succ i => exact Fin.elim0 i
 
 theorem nativeRefinement : Targets.NativeRefinement := by
