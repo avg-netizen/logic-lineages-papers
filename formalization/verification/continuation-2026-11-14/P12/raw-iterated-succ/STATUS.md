@@ -1,3 +1,3 @@
 # Focused acceptance
 
-Gate1794668864944808040-6 passed; 1015 recursive rows independently rehashed, 2 standard-only packet declarations. Adds 1 contracts; combined total117, register unchanged. Actual PR state constructor equation accepted only; arbitrary-count iteration proof still in progress and unaccepted.
+Gate1794669309747844349-6 passed; 1018 recursive rows independently rehashed, 22 standard-only packet declarations. Adds 1 contracts; combined total121, register unchanged. Both exact contracts accepted; only arbitrary-count iteration newly added beyond accepted Step. Same checker/runtime and original certificate cutoff; no general computation/HB3 claim.
