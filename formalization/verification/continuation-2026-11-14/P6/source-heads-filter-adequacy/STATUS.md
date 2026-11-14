@@ -1,5 +1,5 @@
 # Focused accepted checkpoint
 
-Actual internal filter membership iff raw membership and queried window nonzero, genuine arbitrary-code induction. SourceMember composition still failed/unaccepted; no typed enumeration/native reflection.
+Remaining actual SourceMember composition endpoint accepted; Filter1 already accepted and not recounted. Explicit rawWindow and queried-window graphs, internal witness elimination; no typed enumeration/native reflection.
 
-Focused frozen contracts accepted; recursive evidence independently rehashed. Combined total389; numbered register unchanged.
+Focused frozen contracts accepted; recursive evidence independently rehashed. Combined total392; numbered register unchanged.
