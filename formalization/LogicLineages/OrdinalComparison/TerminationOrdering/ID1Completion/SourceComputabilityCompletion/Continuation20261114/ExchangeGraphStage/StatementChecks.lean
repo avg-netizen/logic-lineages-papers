@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphStage.NativeStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphStage.InternalStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphStage.StatementChecks
+theorem exactCoveredMap : Targets.NativeCoveredMap := NativeStatementChecks.exactCoveredMap
+#print axioms exactCoveredMap
+theorem exactStage : Targets.NativeStage := NativeStatementChecks.exactStage
+#print axioms exactStage
+theorem exactSkip : Targets.InternalSkip := InternalStatementChecks.exactSkip
+#print axioms exactSkip
+theorem exactKeep : Targets.InternalKeep := InternalStatementChecks.exactKeep
+#print axioms exactKeep
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphStage.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphStage.StatementChecks

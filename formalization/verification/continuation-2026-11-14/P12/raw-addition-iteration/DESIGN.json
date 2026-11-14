@@ -1,0 +1,8 @@
+{
+  "actual_program": "PR iterator [count,t]; base constructs zeroRaw,t,original addZero certificate. Each step actually composes AddSucc, successor congruence and transitivity certificates and updates numeral/result syntax.",
+  "existing_helpers": "Reuse existing LiteralNumeralPrefix.numeralCode and its internal scanner correctness, existing pair reconstruction/decoder equations and object induction infrastructure; no duplicate numeral definition.",
+  "endpoint": "Identify first state field with original numeralCode(count), second with explicitly defined successorPrefix(count,t); third is actual certificate accepted for t+numeral(count)=successorPrefix(count,t).",
+  "proof": "First pay all exact PR constructor equations. Then actual base and step computation suppliers under internal induction, including arbitrary-state reconstruction, closed term validity and definitional recursion equations. No externally assumed success per step.",
+  "limits": "Fixed newest actual checker/source witnesses and runtime index/fuel throughout. Source existence/full package assembly still separate; no general quotation/HB3 claim.",
+  "compiler": "not run"
+}
