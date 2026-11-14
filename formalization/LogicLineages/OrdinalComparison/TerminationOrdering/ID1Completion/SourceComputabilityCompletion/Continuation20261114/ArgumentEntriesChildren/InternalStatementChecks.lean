@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalStatementChecks
+theorem exactUnary : Targets.InternalUnary := InternalProof.internalUnary
+#print axioms exactUnary
+theorem exactBinary : Targets.InternalBinary := InternalProof.internalBinary
+#print axioms exactBinary
+theorem exactNumbered : Targets.InternalNumbered := InternalProof.internalNumbered
+#print axioms exactNumbered
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalStatementChecks
