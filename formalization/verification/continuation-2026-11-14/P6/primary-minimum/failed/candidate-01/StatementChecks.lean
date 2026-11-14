@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryMinimum.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryMinimum.StatementChecks
+theorem selectedExact : Targets.SelectedTuple := Proof.selectedTuple
+theorem wrapperExact : Targets.WrapperAcceptance := WrapperProof.wrapperAcceptance
+theorem minimumExact : Targets.ActualMinimum := Proof.actualMinimum
+theorem guardedExact : Targets.GuardedActualClass := Proof.guardedActualClass
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryMinimum.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryMinimum.StatementChecks
