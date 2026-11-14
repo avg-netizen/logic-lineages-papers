@@ -59,7 +59,7 @@ theorem budgetZero (size remaining : OTerm alpha)
   · exact ⟨Derivation.hypothesis List.mem_cons_self⟩
   · intro beta j Theta predecessor hj he
     simp only [eqnRelabel,zRelabel]
-    have hb' := renameInto hb j Theta hj
+    have hb' := InternalGraphCompositionFunctionalityProof.renameInto hb j Theta hj
     simp only [OrderProof.boundedRename,InternalOriginalOrderSyntaxProof.addRelabel] at hb'
     obtain ⟨he⟩ := he
     have hp : Nonempty (Derivation body Theta
