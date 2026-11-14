@@ -1,3 +1,3 @@
 # Focused accepted checkpoint
 
-2 exact contracts accepted; 2249 recursive evidence rows independently rehashed and 4 packet audits standard-only. Combined total249, numbered register unchanged. Explicit conversion graph factor and numbered metadata accepted; native all-vector calibration remains pending. Old false raw-metadata target unchanged. No same-source package assembly/general HB3 completion. No full-root or remote CI claim.
+1 exact contracts accepted; 3082 recursive evidence rows independently rehashed and 9 packet audits standard-only. Combined total250, numbered register unchanged. Corrected encoded metadata native all-vector calibration accepted, completing three contracts. Old false raw-metadata target unchanged and unaccepted; tuple installation separate. No same-source package assembly/general HB3 completion. No full-root or remote CI claim.
