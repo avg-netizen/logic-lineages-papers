@@ -1,2 +1,2 @@
-Basic, application and ranked source-head inclusion accepted: internal raw-window witness elimination, actual branch adequacy and positive coverage. Unary closure-dependent inclusion remains unaccepted; no closure discharge, native reflection or full exchange completion.
-Combined supporting total 418; numbered register unchanged.
+Remaining unary source-head inclusion accepted with explicit internal ArrowClosed premise: actual arrow-right extraction three times, internal raw-window witness elimination, branch adequacy and positive coverage. Basic/application/ranked three already accepted, not recounted. No closure discharge, native reflection or full exchange completion.
+Combined supporting total 421; numbered register unchanged.
