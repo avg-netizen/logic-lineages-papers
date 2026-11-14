@@ -12,6 +12,7 @@ open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGra
 open InternalRawListRecursionSupportProof InternalRecursionGraphStepSyntaxProof
 open InternalTagArithmeticSyntaxProof (z suc)
 open InternalApplicationStepPeelSupportProof (andLeft andRight)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open SyntaxProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
@@ -27,7 +28,7 @@ theorem tableTail (B : Program 2) (R : Program 4)
   simp only [consTermRename] at hv
   have ht' := renameInto ht j Theta hj
   simp only [programRename,consTermRename] at ht'
-  let xs := Fin.cons (index.relabel j) (Fin.cons (old.relabel j) (fun i => (params i).relabel j))
+  let xs : Fin 4 → OTerm beta := Fin.cons (index.relabel j) (Fin.cons (old.relabel j) (fun i => (params i).relabel j))
   have hc := binaryRecover InternalListCodec.consCode R (.projection 1)
     (out.relabel j) value (old.relabel j) xs ht' hv (projectionValue 1 xs)
   exact andLeft (andRight (InternalListCodecSupportProof.consDestruction (out.relabel j) value (old.relabel j) hc))
