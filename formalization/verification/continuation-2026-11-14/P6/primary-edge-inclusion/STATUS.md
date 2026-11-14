@@ -1,3 +1,3 @@
-# Primary edge inclusion: append partial1of4 accepted
+# Primary edge inclusion:2of4 accepted
 
-Gate1794662628226299493-5 passed;2,201 recursive evidence rows independently rehashed and22 packet declarations standard-only. Actual internal append-right membership at arbitrary runtime list codes proved by internal strong induction. Other3 contracts pending. Adds1 contract, continuation total49; numbered register unchanged. No E correctness/cutoff closure/coherence/full-root or remote-CI claim.
+AnyIntroduction gate1794662857144656592-5 passed after local equality elaboration repair;2,206 recursive evidence rows independently rehashed,23 new Any declarations standard-only. Together with earlier append-right membership,2of4 contracts accepted. Filter/expansion remain pending. Adds only1 contract, continuation total50; numbered register unchanged. Actual E=1 remains internal premise; no native E reflection/cutoff closure/coherence claim.
