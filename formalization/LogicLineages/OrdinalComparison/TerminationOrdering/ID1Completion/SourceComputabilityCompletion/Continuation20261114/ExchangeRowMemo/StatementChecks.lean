@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.NativeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.TableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.StatementChecks
+theorem exactOrder : Targets.OriginalBinaryDependencies := NativeProof.originalBinaryDependencies
+#print axioms exactOrder
+theorem exactBounds : Targets.OriginalDependencyBounds := NativeProof.originalDependencyBounds
+#print axioms exactBounds
+theorem exactTail : Targets.InternalTableTail := TailProof.internalTableTail
+#print axioms exactTail
+theorem exactDrop : Targets.InternalTableDrop := TableProof.internalTableDrop
+#print axioms exactDrop
+theorem exactLookup : Targets.InternalRowLookup := TableProof.internalRowLookup
+#print axioms exactLookup
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.StatementChecks
