@@ -57,9 +57,6 @@ theorem outputMaps {Gamma : List (Formula alpha)} {m : Nat} (p : Program m)
   · intro Theta hi he
     exact outputTransport p out (numeral 1) xs he (weaken Theta hi)
   · intro Theta hi hq
-    have he := functionalApply (OrdinaryArithmetic.graphFormula p)
-      (InternalRecursionClosureProof.actualOriginalPrograms body m p).2 Theta out (numeral 1) xs
-      (weaken Theta hi) hq
-    simpa only [InternalSourceInversionSupportProof.onEquality] using he
+    exact valueUnique p out (numeral 1) xs (weaken Theta hi) hq
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ConcreteHeadMoveLayer.SupportProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ConcreteHeadMoveLayer.SupportProof
