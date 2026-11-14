@@ -1,3 +1,3 @@
 # Focused acceptance
 
-Gate1794666051115229450-5 passed; 2220 recursive rows independently rehashed, 37 standard-only packet declarations. Adds 1 contracts; combined total87, register unchanged. Only native count and internal original length bound accepted; antitone/strict decrease pending.
+Gate1794666114457680827-5 passed; 2276 recursive rows independently rehashed, 79 standard-only packet declarations. Adds 2 contracts; combined total89, register unchanged. All four uncovered-count targets accepted; only antitone and strict newly added, no cutoff closure/stabilization.
