@@ -14,6 +14,7 @@ open RelationFold RelationFoldSyntaxProof RelationFoldBindingProof RelationFoldC
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)} {k : Nat}
 variable (base : Program k) (step : Program (k+2)) (transform : Program (k+2))
 variable (hit : Hit body step transform) (keep : Tail body step)
+include hit keep
 
 theorem inductionStep (raw : OTerm alpha)
     (hb : Nonempty (Derivation body Delta (BelowRaw base step transform raw))) :

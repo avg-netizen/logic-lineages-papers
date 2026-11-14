@@ -56,6 +56,10 @@ theorem doubleTail {m : Nat} (p q r : Program m) (out tail needle : OTerm alpha)
 
 theorem rankedHit : Hit body OriginalSourceHeads.rankedStep (tagTransform 5) := by
   intro alpha Delta head rest out image params ht hs
+  have hparams : params = (Fin.elim0 : Fin 0 → OTerm alpha) := by
+    funext i
+    exact Fin.elim0 i
+  subst params
   have hp := tagRecover 5 image head ht
   exact consHead _ (.projection 1) out image (Fin.cons head (Fin.cons rest params))
     (tagValue 5 0 image head _ rfl hp) hs
@@ -75,6 +79,10 @@ theorem rankedCoverage (symbols out image symbol : OTerm alpha)
 
 theorem unaryHit (which : Fin 2) : Hit body OriginalSourceHeads.caseStep (tagTransform (unaryTag which)) := by
   intro alpha Delta head rest out image params ht hs
+  have hparams : params = (Fin.elim0 : Fin 0 → OTerm alpha) := by
+    funext i
+    exact Fin.elim0 i
+  subst params
   have hp := tagRecover (unaryTag which) image head ht
   revert hp
   refine Fin.cases ?_ (fun i => ?_) which

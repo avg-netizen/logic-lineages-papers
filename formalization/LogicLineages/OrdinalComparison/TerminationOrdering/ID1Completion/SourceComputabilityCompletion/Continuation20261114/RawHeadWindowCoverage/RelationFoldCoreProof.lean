@@ -39,6 +39,7 @@ def Tail (body : Positive (Fin 1)) (step : Program (k+2)) : Prop :=
     Nonempty (Derivation body Delta (graph2 contains (numeral 1) out image))
 variable (base : Program k) (step : Program (k+2)) (transform : Program (k+2))
 variable (hit : Hit body step transform) (keep : Tail body step)
+include hit keep
 
 theorem consAt (raw head tail needle image out rest : OTerm alpha) (params : Fin k → OTerm alpha)
     (hb : Nonempty (Derivation body Delta (BelowRaw base step transform raw)))
