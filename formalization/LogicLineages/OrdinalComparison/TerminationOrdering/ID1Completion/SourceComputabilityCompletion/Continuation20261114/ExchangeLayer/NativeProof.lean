@@ -168,6 +168,10 @@ theorem nativeOrdinary (n : Nat) (arity : Fin n → Nat)
   simp only [ordinaryCase,bothValue,anyValue,eqFieldBool,projectionEval,input0,input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14,input15,input16,input17,input18]
   simp only [boolAnd,boolOr,Encodable.encode_injective.eq_iff]
 
+theorem decideAnd (P Q : Prop) [Decidable P] [Decidable Q] :
+    decide (P ∧ Q) = (decide P && decide Q) := by
+  by_cases hp : P <;> by_cases hq : Q <;> simp [hp,hq]
+
 theorem nativeNumbered (n : Nat) (arity : Fin n → Nat)
     (p : NumberedExchangeCodePrimrecProof.LayerInput n) :
     evaluate numberedCase (input n arity p) =
@@ -179,15 +183,32 @@ theorem nativeNumbered (n : Nat) (arity : Fin n → Nat)
         (decide (p.2.1.2.2.1 = p.2.2.1.2.2.1 ∧ p.2.1.2.2.2.2.2.2 = p.2.2.1.2.2.2.2.2.2) && p.2.2.2.getD 0 false) ||
         (decide (p.2.1.2.2.1 = p.2.2.1.2.2.1 ∧ p.2.1.2.2.2.2.2.1 = p.2.2.1.2.2.2.2.2.1) && p.2.2.2.getD 3 false))).toNat := by
   simp only [numberedCase,bothValue,anyValue,eqFieldBool,projectionEval,input0,input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14,input15,input16,input17,input18]
-  simp only [boolAnd,boolOr,Encodable.encode_injective.eq_iff,decide_and]
+  simp only [boolAnd,boolOr,Encodable.encode_injective.eq_iff,decideAnd,Bool.and_assoc,Bool.or_assoc]
+  rfl
+
+theorem boolIf (P : Prop) [Decidable P] (a b : Bool) :
+    (if P then a else b).toNat = if P then a.toNat else b.toNat := by
+  by_cases h : P <;> simp only [h,ite_true,ite_false]
+
+theorem dispatchEval (a b c d e : Program 19) (v : List.Vector Nat 19) :
+    evaluate (choose (eqField 0 7)
+      (choose (tagIs 1) a (choose (tagIs 2) b (choose (tagIs 4) c
+        (choose (tagIs 5) d (choose (tagIs 7) e (InternalAcceptance.constantZero 19))))))
+      (InternalAcceptance.constantZero 19)) v =
+    if v.get 0 = v.get 7 then
+      if v.get 0 = 1 then evaluate a v else
+      if v.get 0 = 2 then evaluate b v else
+      if v.get 0 = 4 then evaluate c v else
+      if v.get 0 = 5 then evaluate d v else
+      if v.get 0 = 7 then evaluate e v else 0
+    else 0 := by
+  simp only [chooseValue,eqFieldValue,tagValue,zeroEval]
+  split_ifs <;> simp_all
 
 theorem nativeCalibration : Targets.NativeCalibration := by
   intro n arity p
-  simp only [layer,chooseValue,eqFieldValue,tagValue,nativeLambda,nativeApplication,nativeOrdinary,nativeNumbered,
-    NumberedExchangeCodePrimrecProof.layer,zeroEval]
-  simp only [input0,input1,input2,input3,input4,input5,input6,input7,input8,input9,input10,input11,input12,input13,input14,input15,input16,input17,input18]
-  change (if (if p.2.1.1 = p.2.2.1.1 then 1 else 0) = 0 then 0 else _) = _
-  split_ifs <;> simp_all
+  simp only [layer,dispatchEval,nativeLambda,nativeApplication,nativeOrdinary,nativeNumbered,
+    input0,input7,NumberedExchangeCodePrimrecProof.layer,boolIf,Bool.toNat_false]
 
 theorem nativeRecursiveLayer : Targets.NativeRecursiveLayer := by
   intro n arity window source target
