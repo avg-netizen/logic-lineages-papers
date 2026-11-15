@@ -1,0 +1,24 @@
+--- LayerProof.lean
++++ LayerProof.lean
+@@ -23,11 +23,18 @@
+   if i = 18 then HeadResultFields.result V true else
+     HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun j => Fin.elim0 j)) V i
+ 
++theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
++    ResultStructuralFields.fields
++      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun j => Fin.elim0 j)) V) V =
++    StructuralExchangeFields.fields (filled n arity V) V := by
++  funext i
++  fin_cases i <;> simp [ResultStructuralFields.fields, StructuralExchangeFields.fields,
++    filled]
++
+ theorem layerIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
+     ConcreteHeadMoveLayer.layer n arity V = StructuralExchangeFields.layer (filled n arity V) V := by
+-  apply congrArg (fun U => TransparentExchangeLayer.optional U V)
+-  funext i
+-  fin_cases i <;> rfl
++  unfold ConcreteHeadMoveLayer.layer HeadMoveFields.layer ResultStructuralFields.layer StructuralExchangeFields.layer
++  exact congrArg (fun U => TransparentExchangeLayer.optional U V) (fieldsIdentity n arity V)
+ 
+ theorem lambda (n : Nat) (arity : Fin n → Nat) (node code param source target sigma tau q r head tail : OTerm alpha)
+     (hg : Nonempty (Derivation body Delta (graph3 (OriginalDecodedLayerCalibration.guard n) (numeral 1) node code param)))
