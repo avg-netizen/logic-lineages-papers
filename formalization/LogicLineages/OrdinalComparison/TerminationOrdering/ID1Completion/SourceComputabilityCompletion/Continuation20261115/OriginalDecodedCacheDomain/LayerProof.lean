@@ -45,7 +45,6 @@ theorem positive (U : Fin 19 → Program 3) (V : Program 3)
   apply programCases (TransparentExchangeLayer.body U) (Fin.cons node (Fin.cons answers (Fin.cons param Fin.elim0))) _
   intro beta j Theta inner hj hi
   simp only [consTermRename,emptyRename] at hi
-  simp only [eqnRelabel,zRelabel]
   have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
   simp only [graph3Rename,sucRelabel] at hvj
   have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
@@ -60,12 +59,11 @@ theorem atControl (U : Fin 19 → Program 3) (V : Program 3)
   apply zeroSuccessorCases Delta control _
   · have hv0 := outputTransport V control z ![node,answers,param]
       ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hv (eqn control z))
-    have hn := zeroBranchIntro V (InternalLessThan.constantOne 3) _ (suc z) ![node,answers,param] hv0
+    have hn := zeroBranchIntro V (InternalLessThan.constantOne 3) (.composition .succ (fun _ : Fin 1 => TransparentExchangeLayer.body U)) (suc z) ![node,answers,param] hv0
       (InternalLessThanSupportProof.oneConstantValue ![node,answers,param])
     exact unequalZero out z (valueUnique (TransparentExchangeLayer.optional U V) out (suc z) ![node,answers,param]
       (withHyp ho (eqn control z)) hn)
   · intro beta j Theta k hj he
-    simp only [eqnRelabel,zRelabel]
     have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
     rw [graph3Rename] at hvj
     have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
@@ -80,7 +78,6 @@ theorem optionalNonzero (U : Fin 19 → Program 3) (V : Program 3)
   apply programCases V (Fin.cons node (Fin.cons answers (Fin.cons param Fin.elim0))) _
   intro beta j Theta control hj hv
   simp only [consTermRename,emptyRename] at hv
-  simp only [eqnRelabel,zRelabel]
   have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
   rw [graph3Rename] at hoj
   exact atControl U V (node.relabel j) (answers.relabel j) (param.relabel j) (out.relabel j) control hv hoj

@@ -26,15 +26,15 @@ theorem successorDomain : Targets.InternalSuccessorDomain := by
   change Nonempty (Derivation body Theta ((eqn found z).relabel j).not)
   rw [eqnRelabel,zRelabel]
   simp only [consTermRename,emptyRename] at ho
-  have hdj := renameInto hd j Theta hj
+  have hdj := InternalGraphCompositionFunctionalityProof.renameInto hd j Theta hj
   rw [graph2Rename] at hdj
-  have hfj := renameInto hf j Theta hj
+  have hfj := InternalGraphCompositionFunctionalityProof.renameInto hf j Theta hj
   rw [graph3Rename] at hfj
-  have htj := renameInto ht j Theta hj
+  have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
   simp only [graph3Rename,sucRelabel] at htj
-  have hmj := renameInto hm j Theta hj
+  have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj
   simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at hmj
-  have hlj := renameInto hl j Theta hj
+  have hlj := InternalGraphCompositionFunctionalityProof.renameInto hl j Theta hj
   rw [graph2Rename] at hlj
   have hrj := InternalGraphCompositionFunctionalityProof.renameInto hr j Theta hj
   rw [graph2Rename] at hrj

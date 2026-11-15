@@ -118,7 +118,9 @@ theorem stageAt (n : Nat) (arity : Fin n → Nat) (V : Program 3)
   simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename] at hlj
   exact atDeps n arity V (frontier.relabel j) (old.relabel j) (param.relabel j) (table.relabel j) (node.relabel j) (found.relabel j) deps htj hmj hlj hx
 
-theorem stageDomain : Targets.InternalStageDomain := stageAt
+theorem stageDomain : Targets.InternalStageDomain := by
+  intro n arity V body alpha Delta frontier old param table node found ht hm hl
+  exact stageAt n arity V frontier old param table node found ht hm hl
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedCacheDomain.StageProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedCacheDomain.StageProof
