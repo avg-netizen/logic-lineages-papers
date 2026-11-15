@@ -53,7 +53,7 @@ theorem nonMarker {n ctx : Nat} (p : Program n) (G : List (Formula ctx))
  have hout := localTrans _ _ _ heq hscan
  have hrows := RowProof.rows p G ptag l r hp hl hr ctor depth
  rw [rowsUnchanged ptag depth ctor hmarker] at hrows
- obtain ⟨hrel⟩ := FinitePrefixProof.finitePrefix n p len q l r ctag atag hlen hq hc ha
+ obtain ⟨hrel⟩ := FinitePrefixProof.finitePrefixAppend n p len q l r ctag atag hlen hq hc ha
   ctx G (tasks ptag (.succ depth) ctor) (tasks ptag depth ctor) oldTail newTail hrows ⟨hrest⟩
  exact ⟨.mp (.mp (.base (.logical (.andIntro _ _))) hout) hrel⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.ConstructorProof
