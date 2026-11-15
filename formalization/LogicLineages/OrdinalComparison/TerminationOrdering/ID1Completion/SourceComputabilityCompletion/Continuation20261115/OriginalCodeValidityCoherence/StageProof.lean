@@ -65,7 +65,7 @@ theorem stageCases (n : Nat) (raw fuel bound table : OTerm alpha) (psi : Formula
   have ho := binaryRecover (OriginalCodeDecoderTable.tableProgram n) pred (.projection 1)
     (ys 1) (ys 0) (bound.relabel j) xx (hq 1) (hq 0) (projectionValue 1 xx)
   have hf' := InternalGraphCompositionFunctionalityProof.renameInto hf j Theta hj
-  rw [InternalOriginalOrderSyntaxProof.orderRename] at hf'
+  simp only [InternalLessThan.strictLess, InternalOriginalOrderSyntaxProof.orderRename] at hf'
   have he := InternalListCodecDecompositionSupportProof.predecessorAtNonzero (fuel.relabel j) (ys 0)
     (fuelNonzero (raw.relabel j) (fuel.relabel j) hf') hp
   have ht' := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
