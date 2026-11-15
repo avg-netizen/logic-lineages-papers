@@ -1,0 +1,11 @@
+--- Proof04
++++ Proof05
+@@ -50,7 +50,7 @@
+     simpa only [theta,rowSuccessor,nextTerm,Term.subst,Sum.elim_inr] using h
+   obtain ⟨hz⟩ := hz
+   obtain ⟨hs⟩ := hs
+-  have h := Derivation.universalElimination (emb bound) (natInduction theta hz hs)
++  have h := Derivation.universalElimination (emb bound) (InternalTagArithmeticSupportProof.natInduction theta hz hs)
+   simpa only [theta,rowInstantiate,varBind] using (Nonempty.intro h)
+ 
+ theorem internalMembership : Targets.InternalMembership := by

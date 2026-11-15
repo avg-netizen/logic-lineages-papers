@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Proof.lean:53:57: error(lean.unknownIdentifier): Unknown identifier `natInduction`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Proof.lean:43:88: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+bound : OTerm alpha
+theta : InternalCalculus.Formula (alpha ⊕ Fin 1) := row (var (Sum.inr 0))
+hz : Derivation body Delta (instantiate theta (emb z))
+hs : Derivation body (theta :: List.map weaken Delta) (successorInstance theta)
+⊢ Nonempty (Derivation body Delta (row bound))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Proof.lean:65:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.Proof.allRows: forbidden axiom dependency sorryAx

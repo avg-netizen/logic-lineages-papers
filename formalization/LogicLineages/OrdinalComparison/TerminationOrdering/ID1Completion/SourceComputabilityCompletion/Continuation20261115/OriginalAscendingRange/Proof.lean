@@ -50,7 +50,7 @@ theorem allRows (bound : OTerm alpha) : Nonempty (Derivation body Delta (row bou
     simpa only [theta,rowSuccessor,nextTerm,Term.subst,Sum.elim_inr] using h
   obtain ⟨hz⟩ := hz
   obtain ⟨hs⟩ := hs
-  have h := Derivation.universalElimination (emb bound) (natInduction theta hz hs)
+  have h := Derivation.universalElimination (emb bound) (InternalTagArithmeticSupportProof.natInduction theta hz hs)
   simpa only [theta,rowInstantiate,varBind] using (Nonempty.intro h)
 
 theorem internalMembership : Targets.InternalMembership := by
