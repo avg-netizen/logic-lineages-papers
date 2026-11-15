@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedTermFrame.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedTermFrame.Preflight
+#check Targets.InternalFramedClosedIdentity
+#check UniformClosedSubstitutionRawFold.foldCode
+#check UniformClosedSubstitutionRawFold.Proof.nilFold
+#check UniformClosedSubstitutionRawFold.Proof.consFold
+#check UniformSubstitutionFoldTransport.ScanProof.cons
+#check Continuation20261114.RawReflexivityDispatcher.TermSoundProof.sound
+#check SixSol20261113.LiteralSyntaxStep.stepCode
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedTermFrame.Preflight

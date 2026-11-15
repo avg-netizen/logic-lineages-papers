@@ -1,0 +1,11 @@
+--- VariableEmit prior
++++ VariableEmit R2
+@@ -22,7 +22,7 @@
+     depth ⟨index.val,h⟩ rest raw
+    obtain ⟨hc⟩ := PrefixCodeProof.encoded p I.ctag I.hc [0,index.val] (ctx := ctx)
+    have hc' : Derivation (GorbowPRNumeralCalculation.Theory p)
+-    (.equal (UniformClosedSubstitutionEmit.variableValue I.ctag (Term.numeral index.val))
++    (.equal (UniformClosedSubstitutionEmit.variableValue (ctx := ctx) I.ctag (Term.numeral index.val))
+      (Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (.var (⟨index.val,h⟩ : Fin depth)))))) := by
+     simpa only [UniformClosedSubstitutionEmit.variableValue,UniformClosedSubstitutionEmit.singletonValue,
+      SegmentProof.tokenPrefix,GorbowTermPrefixCode.encode,Term.numeral] using hc
