@@ -19,7 +19,7 @@ theorem fixedTermValidity : FixedTermValidityTargets.InternalFixedTermValidity :
   | inr j =>
    obtain ⟨hj⟩ := hraw j
    obtain ⟨hd⟩ := ClosedTermDepthProof.closedTermAtAnyDepth arity p vtag stag ptag ctag atag hv hs hp hc ha ctx (Term.numeral depth) (raw.get j)
-   simpa only [termValue, he] using (show Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G _) from ⟨(.base hd).mp hj⟩)
+   simpa only [termValue, he] using (show Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G _) from ⟨Hilbert.Local.mp (Hilbert.Local.base hd) hj⟩)
  | zero =>
   obtain ⟨hz⟩ := ConstructorValidityProof.constructorValidity arity p stag ptag ctag atag hs hp hc ha ctx G (.term 1) (Term.numeral depth) [] .nil
   obtain ⟨hcode⟩ := BoundVariableArithmeticProof.numeralCons (ctx := ctx) p ctag hc 1 []
