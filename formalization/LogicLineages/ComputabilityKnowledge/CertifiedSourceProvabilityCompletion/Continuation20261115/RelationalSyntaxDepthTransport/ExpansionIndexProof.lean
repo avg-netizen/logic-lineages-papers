@@ -43,7 +43,7 @@ theorem positiveOutput {n ctx : Nat} (p : Program n) (etag l r dtag : Nat)
  have hout := Hilbert.Local.mp (.base (.arithmetic (.succInjective _ _))) hsucc
  have hb : Derivation T (.imp H (GorbowPACore.weaken (positiveClaim etag l task tok added))) := by
   rw [GorbowPACore.weaken, substClaim]
-  simpa only [G,K,E,GorbowPACore.weaken,substClaim,positiveClaim,liftTerm] using
+  simpa only [G,K,E,GorbowPACore.weaken,substClaim,positiveClaim,liftTerm,renameTerm] using
    Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge (Hilbert.Local.discharge hout)))
  exact HBQuantifier.existentialElimination T H (positiveClaim etag l task tok added) ⟨hb⟩
 
