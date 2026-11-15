@@ -1,0 +1,18 @@
+--- FULL01/Proof.lean
++++ FULL02/Proof.lean
+@@ -31,12 +31,12 @@
+       graph1 (OriginalCodeValidityGuard.check n) (numeral 1) b)) := by
+   let xs : Fin 2 → OTerm alpha := Fin.cons node (Fin.cons param Fin.elim0)
+   have hc := conjunctionRecover (sourceAccepted n) (targetAccepted n) xs ha
+-  have hl := unaryRecover (OriginalCodeValidityGuard.check n) source (numeral 1) left xs
++  have hl := unaryRecover (OriginalCodeValidityGuard.check n) OriginalDecodedDependencies.source (numeral 1) left xs
+     (andLeft hc) (OriginalDecodedDependencies.SupportProof.sourceAt node param left right hp)
+-  have hr := unaryRecover (OriginalCodeValidityGuard.check n) target (numeral 1) right xs
++  have hr := unaryRecover (OriginalCodeValidityGuard.check n) OriginalDecodedDependencies.target (numeral 1) right xs
+     (andRight hc) (OriginalDecodedDependencies.SupportProof.targetAt node param left right hp)
+   have hx := successorBranchElim (accepted n) (constant 2 0) decodedCross out z xs ha hv
+-  have hd := binaryRecover NumericDependencyCross.rawDependencies source target out left right xs hx
++  have hd := binaryRecover NumericDependencyCross.rawDependencies OriginalDecodedDependencies.source OriginalDecodedDependencies.target out left right xs hx
+     (OriginalDecodedDependencies.SupportProof.sourceAt node param left right hp)
+     (OriginalDecodedDependencies.SupportProof.targetAt node param left right hp)
+   exact RawProof.rawClosed left right out child a b hl hr hd hm hq
