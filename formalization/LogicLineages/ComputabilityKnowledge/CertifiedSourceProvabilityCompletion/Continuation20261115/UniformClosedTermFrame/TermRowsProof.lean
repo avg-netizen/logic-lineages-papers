@@ -12,10 +12,7 @@ open UniformFixedFormulaAgreement.StackProof
 bound. This finite statement is not arbitrary runtime-token classification. -/
 theorem rowEntries {ctx : Nat} (ptag : Nat) (i : Fin 6) (hi : i ≠ 0) :
  ∀ x ∈ tasks ptag (.zero : Term ctx) (.term i), x = LiteralSyntaxStep.taskCall ptag 0 .zero := by
- fin_cases i
- · exact (hi rfl).elim
- all_goals simp only [tasks, List.mem_cons, List.not_mem_nil, or_false]
- all_goals intro x hx; rcases hx with rfl | rfl <;> rfl
+ fin_cases i <;> simp_all [tasks]
 
 theorem prependEntries {n ctx : Nat} (p : Program n) (q ctag : Nat)
  (hq : (nodes p)[q]? = some ⟨2,HistoryLookup.lookup⟩)
