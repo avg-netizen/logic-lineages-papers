@@ -26,7 +26,9 @@ theorem originalTypeListImage (raw : Nat) : ∃ xs : List Source.Ty, Encodable.e
   have hf : (Encodable.encode ∘ NumberedTypeCodecPrimrec.typeEquiv.symm) = (fun x : Nat => x) := by
     funext x
     exact typeInverseEncoding x
-  rw [hf,List.map_id]
+  rw [hf]
+  change numbersNumber (nums.map id) = raw
+  rw [List.map_id]
   exact he
 
 theorem tuplesEncoding (types : List Source.Ty) (count : Nat) :
