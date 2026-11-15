@@ -1,0 +1,32 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionRecognitionProof.lean:59:34: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Or.casesOn` can only eliminate into `Prop`
+
+case cons
+T : Sentence → Prop
+ctx : ℕ
+G : List (Formula ctx)
+ptag ctag dtag l r : ℕ
+task tok added : Term ctx
+ctor : Constructor
+h : Hilbert.Local T ctx G (constructorCase ptag ctag l r task tok added ctor)
+c : Constructor
+xs : List Constructor
+ih :
+  ctor ∈ xs →
+    Hilbert.Local T ctx G
+      (List.foldr (fun c rest => (constructorCase ptag ctag l r task tok added c).disj rest)
+        (indexCase dtag l r task tok added) xs)
+hm : ctor ∈ c :: xs
+x✝ : ctor = c ∨ ctor ∈ xs
+⊢ Hilbert.Local T ctx G
+    (List.foldr (fun c rest => (constructorCase ptag ctag l r task tok added c).disj rest)
+      (indexCase dtag l r task tok added) (c :: xs))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionRecognitionProof.lean:70:47: error(lean.unknownIdentifier): Unknown constant `LogicLineages.ComputabilityKnowledge.GorbowPACore.LogicalInstance.orIntroRight`
+
+Note: Inferred this name from the expected resulting type of `.orIntroRight`:
+  GorbowPACore.LogicalInstance ?m.32
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ExpansionRecognitionProof.constructorCaseAt: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ExpansionRecognitionProof.injectConstructor._proof_1: [propext]
+AXIOM_AUDIT_PASS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ExpansionRecognitionProof: 2 theorems
