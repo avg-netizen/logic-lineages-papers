@@ -1,0 +1,78 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:19:35: error: unsolved goals
+n head acc : ℕ
+⊢ (if ![head, n] 0 < ![head, n] 1 then 1 else 0) = if head < n then 1 else 0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:31:22: error: unsolved goals
+case pos
+n head : ℕ
+tail : List ℕ
+ih :
+  List.foldr (fun head acc => evaluate (symbolStep n) (head ::ᵥ acc ::ᵥ nil)) 1 tail =
+    (decide (∀ x ∈ tail, x < n)).toNat
+h : head < n
+ht : ∀ x ∈ tail, x < n
+⊢ (if ∀ x ∈ tail, x < n then 1 else 0) = (decide (∀ x ∈ tail, x < n)).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:44:11: error: Tactic `rfl` failed: The left-hand side
+  (Encodable.decode (numbersNumber [])).isSome
+is not definitionally equal to the right-hand side
+  decide (∀ x ∈ [], x < n)
+
+case nil
+n : ℕ
+⊢ (Encodable.decode (numbersNumber [])).isSome = decide (∀ x ∈ [], x < n)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:49:11: error: unsolved goals
+case pos
+n head : ℕ
+tail : List ℕ
+he : numbersNumber (head :: tail) = (Nat.pair head (numbersNumber tail)).succ
+hd : Encodable.decode (numbersNumber tail) = none
+ih : false = decide (∀ x ∈ tail, x < n)
+h : head < n
+⊢ (some fun x2 => ⟨head, ⋯⟩ :: x2) <*> none = none
+
+case neg
+n head : ℕ
+tail : List ℕ
+he : numbersNumber (head :: tail) = (Nat.pair head (numbersNumber tail)).succ
+hd : Encodable.decode (numbersNumber tail) = none
+ih : false = decide (∀ x ∈ tail, x < n)
+h : ¬head < n
+⊢ none <*> none = none
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:52:14: error: unsolved goals
+case neg
+n head : ℕ
+tail : List ℕ
+he : numbersNumber (head :: tail) = (Nat.pair head (numbersNumber tail)).succ
+ys : List (Fin n)
+hd : Encodable.decode (numbersNumber tail) = some ys
+ih : true = decide (∀ x ∈ tail, x < n)
+h : ¬head < n
+⊢ none <*> some ys = none
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:84:10: error(lean.unknownIdentifier): Unknown identifier `InternalUnpairEvaluationProof.leftEvaluation`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:88:74: error: Tactic `rfl` failed: The left-hand side
+  (Encodable.decode (((Nat.unpair (v.get 0)).1 ::ᵥ nil).get 0)).isSome.toNat
+is not definitionally equal to the right-hand side
+  (none.bind fun a => Option.map (Prod.mk a) (some xs)).isSome.toNat
+
+case none
+n : ℕ
+v : List.Vector ℕ 1
+he : evaluate (window n) v = evaluate (symbols n) ((Nat.unpair (v.get 0)).1 ::ᵥ nil)
+xs : List Source.Ty
+hxs : Encodable.decode (Nat.unpair (v.get 0)).2 = some xs
+⊢ (Encodable.decode (((Nat.unpair (v.get 0)).1 ::ᵥ nil).get 0)).isSome.toNat =
+    (none.bind fun a => Option.map (Prod.mk a) (some xs)).isSome.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:88:74: error: Tactic `rfl` failed: The left-hand side
+  (Encodable.decode (((Nat.unpair (v.get 0)).1 ::ᵥ nil).get 0)).isSome.toNat
+is not definitionally equal to the right-hand side
+  ((some val✝).bind fun a => Option.map (Prod.mk a) (some xs)).isSome.toNat
+
+case some
+n : ℕ
+v : List.Vector ℕ 1
+he : evaluate (window n) v = evaluate (symbols n) ((Nat.unpair (v.get 0)).1 ::ᵥ nil)
+xs : List Source.Ty
+hxs : Encodable.decode (Nat.unpair (v.get 0)).2 = some xs
+val✝ : List (Fin n)
+⊢ (Encodable.decode (((Nat.unpair (v.get 0)).1 ::ᵥ nil).get 0)).isSome.toNat =
+    ((some val✝).bind fun a => Option.map (Prod.mk a) (some xs)).isSome.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/NativeProof.lean:90:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedWindowValidity.NativeProof.finListDecode: forbidden axiom dependency sorryAx

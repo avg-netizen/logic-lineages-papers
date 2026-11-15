@@ -1,0 +1,23 @@
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.Targets.InternalTickFrame :
+  Prop
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.Targets.InternalIteratorFrame :
+  Prop
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.Targets.InternalRawFoldFrame :
+  Prop
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxFrame.AppendProof.internalAppendAssociativity :
+  SixSol20261113.LiteralSyntaxFrame.Targets.InternalAppendAssociativity
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionRawFold.BindingProof.binding
+  {n ctx : ℕ} (p : GorbowPRProgram.Program n) (ftag ptag itag ltag rtag : ℕ)
+  (hf : (GorbowPRRegistry.nodes p)[ftag]? = some ⟨3, UniformClosedSubstitutionRawFold.foldCode⟩)
+  (hp : (GorbowPRRegistry.nodes p)[ptag]? = some ⟨2, SixSol20261113.HistoryCodec.pair⟩)
+  (hi : (GorbowPRRegistry.nodes p)[itag]? = some ⟨3, UniformClosedSubstitutionFold.iterator⟩)
+  (hl : (GorbowPRRegistry.nodes p)[ltag]? = some ⟨1, SixSol20261113.HistoryLengthOffset.lengthProgram⟩)
+  (hr : (GorbowPRRegistry.nodes p)[rtag]? = some ⟨1, SixSol20261113.HistoryDecoder.decoder true⟩)
+  (tokens state raw : GorbowSyntax.Term ctx) :
+  Nonempty
+    (GorbowTheoryProof.Derivation (GorbowPRNumeralCalculation.Theory p)
+      (GorbowSyntax.Formula.equal (UniformClosedSubstitutionRawFold.foldCall ftag tokens state raw)
+        (GorbowPRDefiningEquations.call rtag
+          (UniformClosedSubstitutionFold.iterateCall itag (SixSol20261113.HistoryLengthOffset.lengthCall ltag tokens)
+              (SixSol20261113.HistoryKernel.pairCall ptag tokens state) raw ::ᵥ
+            List.Vector.nil))))

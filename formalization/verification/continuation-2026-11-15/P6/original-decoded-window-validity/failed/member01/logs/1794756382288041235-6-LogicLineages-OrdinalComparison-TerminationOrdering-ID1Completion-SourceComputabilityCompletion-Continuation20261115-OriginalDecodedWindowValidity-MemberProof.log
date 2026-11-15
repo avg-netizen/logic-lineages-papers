@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:28:31: error: don't know how to synthesize implicit argument `β`
+  @Formula.relabel language alpha (alpha ⊕ ?m.39) Sum.inl q
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+key : OTerm (alpha ⊕ Fin 1) := ⋯
+q : InternalCalculus.Formula alpha
+⊢ Type ?u.30
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:28:41: error: don't know how to synthesize implicit argument `β`
+  @Sum.inl alpha ?m.39
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+key : OTerm (alpha ⊕ Fin 1) := ⋯
+q : InternalCalculus.Formula alpha
+⊢ Type ?u.30
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:28:11: error: don't know how to synthesize implicit argument `β`
+  @List.map (InternalCalculus.Formula alpha) (language.Formula (alpha ⊕ ?m.39)) (fun q => ?m.27) Delta
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+key : OTerm (alpha ⊕ Fin 1) := ⋯
+⊢ Type ?u.30
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:28:6: error: failed to infer `let` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:25:88: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+key : OTerm (alpha ⊕ Fin 1) := var (Sum.inr 0)
+⊢ Nonempty (Derivation body (List.map (fun q => Formula.relabel Sum.inl q) Delta) (memberMatrix n z))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:70:97: error: Application type mismatch: The argument
+  hn
+has type
+  Nonempty (Derivation body (A :: Delta) A)
+but is expected to have type
+  Nonempty (Derivation body (A :: Delta) (Formula.not (equal head key)))
+in the application
+  PrimaryMembership.Proof.missRecover raw head tail key (numeral 1) (withHyp hc A) hn
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedWindowValidity.MemberProof.tailMembers: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/MemberProof.lean:98:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedWindowValidity.MemberProof.nilMembers: forbidden axiom dependency sorryAx

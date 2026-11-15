@@ -25,7 +25,7 @@ open InternalApplicationValidityStackAppendInductionCoreProof (formulaCases)
 theorem nilMembers (n : Nat) : Nonempty (Derivation body Delta (boundedMembers n z)) := by
   apply membersIntro
   let key : OTerm (alpha ⊕ Fin 1) := .var (.inr 0)
-  let C := Delta.map (fun q => q.relabel Sum.inl)
+  let C : List (Formula (alpha ⊕ Fin 1)) := Delta.map (fun q => q.relabel Sum.inl)
   let M := graph2 contains (numeral 1) z key
   have hm : Nonempty (Derivation body (M :: C) M) := ⟨Derivation.hypothesis List.mem_cons_self⟩
   have hz := containsNil (body := body) (Delta := M :: C) key
@@ -67,7 +67,7 @@ theorem consMemberBound (n : Nat) (raw head tail key : OTerm alpha)
     exact InternalLessThanProof.lessOfAcceptance key (numeral n) hv
   · let A := (eqn head key).not
     have hn : Nonempty (Derivation body (A :: Delta) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-    have hm' := PrimaryMembership.Proof.missRecover raw head tail key (numeral 1) (withHyp hc A) hn (withHyp hm A)
+    have hm' := PrimaryMembership.Proof.missRecover raw head tail key (numeral 1) (withHyp hc A) (by simpa only [equalEqn] using hn) (withHyp hm A)
     exact membersApply n tail key (withHyp ht A) hm'
 
 theorem consMembers (n : Nat) (raw head tail : OTerm alpha)
