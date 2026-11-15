@@ -31,7 +31,7 @@ def relation (raw param table value : OTerm alpha) : Formula alpha :=
 theorem relationRename {beta : Type} (raw param table value : OTerm alpha) (j : alpha → beta) :
     (relation raw param table value).relabel j =
       relation (raw.relabel j) (param.relabel j) (table.relabel j) (value.relabel j) := by
-  simp only [relation,Formula.relabel,graph2Rename,sucRelabel]
+  simp only [relation,conjunctionRename,InternalBetaExtensionSyntaxProof.impRename,graph2Rename,sucRelabel]
 
 theorem tableTransport (old table raw value : OTerm alpha)
     (he : Nonempty (Derivation body Delta (eqn old table)))

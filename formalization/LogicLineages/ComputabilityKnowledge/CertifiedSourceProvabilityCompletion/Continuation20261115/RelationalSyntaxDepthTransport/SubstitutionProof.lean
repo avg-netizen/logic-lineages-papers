@@ -16,6 +16,7 @@ theorem substEntry {m n : Nat} (s : Fin m → Term n) lookupTag leftTag rightTag
  entryRelation lookupTag leftTag rightTag (substitute s a) (substitute s b) (substitute s i) := by
  simp only [entryRelation,substituteFormula,HistoryLookup.lookupCall,Logic.substCall,List.Vector.map_cons,List.Vector.map_nil,
   HistoryOrder.SupportProof.substituteLift,substTask,substitute,liftSubstitute,Fin.cases_zero,Fin.cases_succ]
+ rfl
 
 theorem substStack {m n : Nat} (s : Fin m → Term n) lengthTag lookupTag leftTag rightTag (a b : Term m) :
  substituteFormula s (stackRelation lengthTag lookupTag leftTag rightTag a b) =

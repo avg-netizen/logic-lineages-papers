@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/SubstitutionProof.lean:16:96: error: unsolved goals
+m n : ℕ
+s : Fin m → Term n
+lookupTag leftTag rightTag : ℕ
+a b i : Term m
+⊢ ((Formula.equal (call lookupTag (liftTerm (substitute s i) ::ᵥ liftTerm (substitute s a) ::ᵥ nil))
+            (Term.var 0).succ).imp
+        ((Formula.equal
+                (call lookupTag (liftTerm (liftTerm (substitute s i)) ::ᵥ liftTerm (liftTerm (substitute s b)) ::ᵥ nil))
+                (Term.var 0).succ).conj
+            (taskRelation leftTag rightTag
+              (Fin.cases (Term.var 0)
+                (fun i => renameTerm Fin.succ (Fin.cases (Term.var 0) (fun i => renameTerm Fin.succ (s i)) i)) 1)
+              (Term.var 0))).ex).all =
+    ((Formula.equal (call lookupTag (liftTerm (substitute s i) ::ᵥ liftTerm (substitute s a) ::ᵥ nil))
+            (Term.var 0).succ).imp
+        ((Formula.equal
+                (call lookupTag (liftTerm (liftTerm (substitute s i)) ::ᵥ liftTerm (liftTerm (substitute s b)) ::ᵥ nil))
+                (Term.var 0).succ).conj
+            (taskRelation leftTag rightTag (Term.var 1) (Term.var 0))).ex).all
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/SubstitutionProof.lean:18:94: warning: This simp argument is unused:
+  Fin.cases_succ
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵e̵n̵t̵r̵y̵R̵e̵l̵a̵t̵i̵o̵n̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵H̵i̵s̵t̵o̵r̵y̵L̵o̵o̵k̵u̵p̵.̵l̵o̵o̵k̵u̵p̵C̵a̵l̵l̵,̵L̵o̵g̵i̵c̵.̵s̵u̵b̵s̵t̵C̵a̵l̵l̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵m̵a̵p̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵H̵i̵s̵t̵o̵r̵y̵O̵r̵d̵e̵r̵.̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵L̵i̵f̵t̵,̵s̵u̵b̵s̵t̵T̵a̵s̵k̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵,̵l̵i̵f̵t̵S̵u̵b̵s̵t̵i̵t̵u̵t̵e̵,̵F̵i̵n̵.̵c̵a̵s̵e̵s̵_̵z̵e̵r̵o̵,̵F̵i̵n̵.̵c̵a̵s̵e̵s̵_̵s̵u̵c̵c̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲e̲n̲t̲r̲y̲R̲e̲l̲a̲t̲i̲o̲n̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲H̲i̲s̲t̲o̲r̲y̲L̲o̲o̲k̲u̲p̲.̲l̲o̲o̲k̲u̲p̲C̲a̲l̲l̲,̲ ̲L̲o̲g̲i̲c̲.̲s̲u̲b̲s̲t̲C̲a̲l̲l̲,̲
+  ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲m̲a̲p̲_̲n̲i̲l̲,̲ ̲H̲i̲s̲t̲o̲r̲y̲O̲r̲d̲e̲r̲.̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲L̲i̲f̲t̲,̲ ̲s̲u̲b̲s̲t̲T̲a̲s̲k̲,̲
+  ̲ ̲ ̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲,̲ ̲l̲i̲f̲t̲S̲u̲b̲s̲t̲i̲t̲u̲t̲e̲,̲ ̲F̲i̲n̲.̲c̲a̲s̲e̲s̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/SubstitutionProof.lean:27:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.SubstitutionProof.substEntry: forbidden axiom dependency sorryAx
