@@ -17,7 +17,6 @@ theorem splitStepValue (index q r : Nat) :
   simp only [splitStep,evalBranch,rightOfEvaluation,leftOfEvaluation,pairOfEvaluation,
     succOfEvaluation,constantEvaluation,projectionEvaluation,get_ofFn,
     Matrix.cons_val_zero,Matrix.cons_val_one,Nat.unpair_pair]
-  rfl
 
 theorem splitValue (raw : Nat) :
     evaluate split (ofFn ![raw]) = Nat.pair (raw/2) (raw%2) := by
