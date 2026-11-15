@@ -24,6 +24,5 @@ theorem nativeRecombine : Targets.NativeRecombine := by
       InternalEqualityTestEvaluationProof.vectorTwo,ArithmeticProof.mergeValue]
     simp only [NumberedSyntaxBoundsPrimrecSupportProof.recombine,mergeBounds,
       Encodable.encode_some,ArithmeticProof.pairEncoding,Matrix.cons_val_zero,Matrix.cons_val_one,Nat.unpair_pair]
-    rfl
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalBoundsRecombination.NativeProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalBoundsRecombination.NativeProof
