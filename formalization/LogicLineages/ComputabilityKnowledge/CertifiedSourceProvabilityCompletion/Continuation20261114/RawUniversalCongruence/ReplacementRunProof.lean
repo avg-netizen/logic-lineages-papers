@@ -48,4 +48,4 @@ theorem internalSingletonRun : ReplacementSupport.InternalSingletonRun := by
   (localTrans _ _ _ (.base hstep) (localTrans _ _ _ (.base hidle) hpair)))))⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCongruence.ReplacementRunProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCongruence.ReplacementRunProof
-#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCongruence.ReplacementReplacementRunProof.internalSingletonRun
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCongruence.ReplacementRunProof.internalSingletonRun
