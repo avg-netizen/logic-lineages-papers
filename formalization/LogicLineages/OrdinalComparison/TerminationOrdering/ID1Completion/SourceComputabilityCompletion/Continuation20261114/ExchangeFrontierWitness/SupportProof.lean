@@ -58,8 +58,11 @@ theorem atDeps (D : Program 2) (raw head tail param out child rest deps : OTerm 
   have hsplit := PrimaryExpansionSoundness.AppendProof.appendPreservation deps rest out child ha hm
   apply orCases hsplit
   · intro Theta inc hleft
+    have he : Nonempty (Derivation body Theta (equal head head)) := by
+      rw [equalEqn]
+      exact ⟨InternalTagArithmeticSupportProof.refl head⟩
     exact PrimaryExpansionSoundness.WitnessProof.introduction (dependencyEdge D) raw child param head
-      (containsHit raw head tail head (weakenProof hc inc) ⟨refl head⟩)
+      (containsHit raw head tail head (weakenProof hc inc) he)
       (observe D head param deps child (weakenProof hd inc) hleft)
   · intro Theta inc hright
     have hw := belowRawApply D raw tail param rest child (weakenProof hb inc)
