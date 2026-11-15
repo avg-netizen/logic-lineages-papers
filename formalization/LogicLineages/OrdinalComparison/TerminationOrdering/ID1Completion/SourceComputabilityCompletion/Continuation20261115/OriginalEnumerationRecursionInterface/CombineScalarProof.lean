@@ -63,7 +63,7 @@ theorem layerRecover (n : Nat) (node answers param vb f ts hs ls tb p2 p3 prior 
     (hv : Nonempty (Derivation body Delta (graph3 (positiveLayer n) value node answers param))) :
     Nonempty (Derivation body Delta (programGraph (OriginalEnumerationConstructorLayer.layer n)
       value ![ts,hs,ls,tb,vb,prior,opened])) := by
-  apply compositionRecover (OriginalEnumerationConstructorLayer.layer n)
+  apply InternalAcceptanceSupportProof.compositionRecover (OriginalEnumerationConstructorLayer.layer n)
     ![types,heads,labels,tupleBound,variableBound,answer 0,answer 1]
     value ![node,answers,param] ![ts,hs,ls,tb,vb,prior,opened] hv
   intro i

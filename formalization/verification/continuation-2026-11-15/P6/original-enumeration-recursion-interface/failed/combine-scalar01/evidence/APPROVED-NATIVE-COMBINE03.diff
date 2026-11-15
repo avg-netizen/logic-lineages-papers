@@ -1,0 +1,35 @@
+--- NativeCombineProof02
++++ NativeCombineProof03
+@@ -21,7 +21,7 @@
+   simp only [Matrix.cons_val_zero,Matrix.cons_val_one]
+   rw [Continuation20261114.ExchangeAnswerSlots.NativeProof.lookupEncoded]
+   change (answers.map Encodable.encode).getD i (Encodable.encode ([] : List (Code (Fin n)))) = _
+-  exact List.getD_map Encodable.encode
++  exact List.getD_map answers [] Encodable.encode
+ 
+ def inputs {n : Nat} (ts : List Source.Ty) (hs : List (HeadCode (Fin n)))
+     (ls tb vb f : Nat) (answers : List (List (Code (Fin n)))) : List.Vector Nat 3 :=
+@@ -50,19 +50,19 @@
+     · change evaluate types (inputs ts hs ls tb vb f answers) = Encodable.encode ts
+       simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
+         inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
+-        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++        Matrix.head_cons,Matrix.tail_cons,Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
+     · change evaluate heads (inputs ts hs ls tb vb f answers) = Encodable.encode hs
+       simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
+         inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
+-        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++        Matrix.head_cons,Matrix.tail_cons,Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
+     · change evaluate labels (inputs ts hs ls tb vb f answers) = ls
+       simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
+         inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
+-        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++        Matrix.head_cons,Matrix.tail_cons,Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
+     · change evaluate tupleBound (inputs ts hs ls tb vb f answers) = tb
+       simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
+         inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
+-        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++        Matrix.head_cons,Matrix.tail_cons,Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
+     · change evaluate variableBound (inputs ts hs ls tb vb f answers) = vb
+       simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
+         inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
