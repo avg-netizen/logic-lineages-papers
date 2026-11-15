@@ -23,7 +23,9 @@ theorem agreement : Targets.InternalAgreement := by
   (.equal (UniformClosedSubstitutionRawFold.foldCall ftag
    (SegmentProof.tokenPrefix ctag (GorbowFormulaPrefixCode.encode f) .zero) packed raw)
    (HistoryKernel.pairCall ptag (.succ .zero) (HistoryAppend.appendCall atag .zero value))) := by
-  simpa only [EnvironmentProof.atZero] using htraverse
+  simpa only [EnvironmentProof.atZero,I,Traversal.run,packed,state,value,
+   FullFormulaInstantiation.instanceValue,LiteralSyntaxValidator.FormulaBindingProof.taskList,
+   LiteralSyntaxStep.taskCall,Nat.zero_add,Term.numeral] using htraverse
  obtain ⟨hcode⟩ := PrefixCodeProof.encoded p ctag hc (GorbowFormulaPrefixCode.encode f) (ctx := ctx)
  have hcng := Logic.callCongruence (GorbowPRNumeralCalculation.Theory p) ftag
   (SegmentProof.tokenPrefix ctag (GorbowFormulaPrefixCode.encode f) .zero ::ᵥ packed ::ᵥ raw ::ᵥ nil)
