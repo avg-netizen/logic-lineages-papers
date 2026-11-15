@@ -84,11 +84,11 @@ theorem nilCore (raw left right out : OTerm alpha)
     (hv : Nonempty (Derivation body Delta (graph2 mapGraph out raw left))) :
     Nonempty (Derivation body Delta (graph2 mapGraph out raw right)) := by
   have hl0 : Nonempty (Derivation body Delta (graph2 mapGraph z z left)) :=
-    recursionZeroValue (InternalAcceptance.constantZero 1) mapStep z (Fin.cons left Fin.elim0)
-      (constantZeroValue (Fin.cons left Fin.elim0))
+    InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1) mapStep z (Fin.cons left Fin.elim0)
+      (InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons left Fin.elim0))
   have hr0 : Nonempty (Derivation body Delta (graph2 mapGraph z z right)) :=
-    recursionZeroValue (InternalAcceptance.constantZero 1) mapStep z (Fin.cons right Fin.elim0)
-      (constantZeroValue (Fin.cons right Fin.elim0))
+    InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1) mapStep z (Fin.cons right Fin.elim0)
+      (InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons right Fin.elim0))
   have hv0 := headTransport mapGraph out raw z (Fin.cons left Fin.elim0) hz hv
   obtain ⟨he⟩ := valueUnique mapGraph out z ![z,left] hv0 hl0
   obtain ⟨hz⟩ := hz
