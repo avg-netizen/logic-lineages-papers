@@ -46,7 +46,7 @@ def input {ctx : Nat} (ptag ctag : Nat) (ctor : Constructor) (binder rest : Term
 /-- Every valid finite constructor branch of the actual original step AST,
 with both step equations and related output stacks derived internally.
 No expansion equation, dispatcher calibration or step simulation is a premise. -/
-def InternalConstructorStepPair : Prop := ∀ n (p : Program n) stag etag ptag ctag atag len q l r,
+def InternalConstructorStepPair : Prop := ∀ n (p : Program n) stag (etag : Nat) ptag ctag atag len q l r,
  (nodes p)[stag]? = some ⟨2,LiteralSyntaxStep.stepCode⟩ →
  (nodes p)[etag]? = some ⟨2,LiteralSyntaxStep.expandCode⟩ →
  (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩ →
