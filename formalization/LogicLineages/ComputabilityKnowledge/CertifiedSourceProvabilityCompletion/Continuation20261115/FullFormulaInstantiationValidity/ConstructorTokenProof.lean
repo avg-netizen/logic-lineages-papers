@@ -20,7 +20,7 @@ theorem prefixNil {n ctx : Nat} (p : Program n) (ctag atag : Nat)
  | cons x xs ih =>
   obtain ⟨hih⟩ := ih
   obtain ⟨hcons⟩ := HistoryAppend.ConsProof.internalAppendCons n p atag ctag ha hc ctx x (FinitePrefixTargets.prefixTerm ctag xs) .zero
-  have htail := callCongruence (G := []) ctag
+  have htail := callCongruence (T := GorbowPRNumeralCalculation.Theory p) (G := []) ctag
    (x ::ᵥ HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) .zero ::ᵥ nil)
    (x ::ᵥ FinitePrefixTargets.prefixTerm ctag xs ::ᵥ nil) (fun i => by
     cases i using Fin.cases with
