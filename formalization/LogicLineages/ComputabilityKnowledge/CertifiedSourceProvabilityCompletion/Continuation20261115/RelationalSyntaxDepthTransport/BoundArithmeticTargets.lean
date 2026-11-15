@@ -14,7 +14,7 @@ def DifferencePositiveTransport : Prop := ∀ n (p : Program n) dtag,
   (.imp (HistoryBounds.weakBound oldBound newBound)
    (.imp (.equal (HistoryDifference.differenceCall dtag token oldBound) (.succ positive))
     (.ex (HistoryOrder.SupportProof.predBody
-     (HistoryDifference.differenceCall dtag token newBound)))))))
+     (HistoryDifference.differenceCall dtag token newBound))))))
 /-- Binder expansion increments both task bounds. This is a PA derivation
 with the same existential nonnegative-gap relation, not a native inequality. -/
 def SuccessorBounds : Prop := ∀ (T : Sentence → Prop) ctx (oldBound newBound : Term ctx),
