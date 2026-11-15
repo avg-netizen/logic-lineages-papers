@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule13.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule13.Preflight
+#check Targets.NativeLine
+#check Targets.NativeRefinement
+#check Targets.InternalLine
+#check Targets.InternalLogical
+#check UniformClosedCase13.StatementChecks.exactOriginalCase13
+#check SixSol20261113.HistoryDispatcher.logicalFunction
+#check Continuation20261114.RawAddSucc.secondTermCode
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule13.Preflight

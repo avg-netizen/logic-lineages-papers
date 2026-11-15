@@ -21,7 +21,7 @@ theorem conclusionAt {n : Nat} (f t : Program n) (v : List.Vector Nat n) (a b : 
  cases h : GorbowLogicalAxiomCode.case13 0 [a,b] with
  | none =>
   change evaluate HistoryCodec.predecessor (0 ::ᵥ nil) = 0
-  rw [HistoryCodec.NativeProof.evaluatePredecessor]
+  rw [HistoryCodec.NativeProof.evaluatePredecessor,Nat.pred_zero]
  | some result =>
   change evaluate HistoryCodec.predecessor ((Encodable.encode result).succ ::ᵥ nil) = Encodable.encode result
   rw [HistoryCodec.NativeProof.evaluatePredecessor,Nat.pred_succ]

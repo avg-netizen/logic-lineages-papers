@@ -1,0 +1,68 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedSuccessShape/LayerProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedSuccessShape/LayerProof.lean
+@@ -23,7 +23,7 @@
+   have hz := OriginalRawSyntaxTransportInternalConstructorSupportProof.sameReject
+     (.projection 0) (OriginalRawSyntaxTransport.constant 19 k) (xs 0) (numeral k) xs
+     (projectionValue 0 xs) (OriginalRawSyntaxTransportInternalVariableSupportProof.constantValue k xs)
+-    (by simpa only [InternalApplicationValidityStackAppendInductionCoreProof.equalEqn] using h)
++    (by simpa only [InternalControlGraphSupportProof.equalEqn] using h)
+   simpa only [tagIs,constantEq,OriginalRawSyntaxTransport.sameOf] using hz
+ 
+ theorem equalTags (xs : Fin 19 → OTerm alpha)
+@@ -55,44 +55,48 @@
+     Nonempty (Derivation body Delta ((eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7)))) := by
+   let A := eqn (xs 0) (numeral 5)
+   apply formulaCases A ((eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7)))
+-  · exact InternalQuotientComparisonProof.orLeft ⟨Derivation.hypothesis List.mem_cons_self⟩
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Derivation.hypothesis List.mem_cons_self)⟩
+   · have hn : Nonempty (Derivation body (A.not :: Delta) A.not) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+     have hz := tagReject 5 xs hn
+     have ht := zeroBranchElim (tagIs 5) (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19)) numberedCase (numeral 1) xs hz (withHyp h A.not)
+-    exact InternalQuotientComparisonProof.orRight (at7 xs ht)
++    obtain ⟨hout⟩ := at7 xs ht
++    exact ⟨InternalQuotientComparisonProof.orRight hout⟩
+ 
+ theorem at4 (xs : Fin 19 → OTerm alpha)
+     (h : Nonempty (Derivation body Delta (programGraph (choose (tagIs 4) ordinaryCase (choose (tagIs 5) numberedCase (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19)))) (numeral 1) xs))) :
+     Nonempty (Derivation body Delta ((eqn (xs 0) (numeral 4) ⊔ (eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7))))) := by
+   let A := eqn (xs 0) (numeral 4)
+   apply formulaCases A ((eqn (xs 0) (numeral 4) ⊔ (eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7))))
+-  · exact InternalQuotientComparisonProof.orLeft ⟨Derivation.hypothesis List.mem_cons_self⟩
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Derivation.hypothesis List.mem_cons_self)⟩
+   · have hn : Nonempty (Derivation body (A.not :: Delta) A.not) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+     have hz := tagReject 4 xs hn
+     have ht := zeroBranchElim (tagIs 4) (choose (tagIs 5) numberedCase (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19))) ordinaryCase (numeral 1) xs hz (withHyp h A.not)
+-    exact InternalQuotientComparisonProof.orRight (at5 xs ht)
++    obtain ⟨hout⟩ := at5 xs ht
++    exact ⟨InternalQuotientComparisonProof.orRight hout⟩
+ 
+ theorem at2 (xs : Fin 19 → OTerm alpha)
+     (h : Nonempty (Derivation body Delta (programGraph (choose (tagIs 2) applicationCase (choose (tagIs 4) ordinaryCase (choose (tagIs 5) numberedCase (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19))))) (numeral 1) xs))) :
+     Nonempty (Derivation body Delta ((eqn (xs 0) (numeral 2) ⊔ (eqn (xs 0) (numeral 4) ⊔ (eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7)))))) := by
+   let A := eqn (xs 0) (numeral 2)
+   apply formulaCases A ((eqn (xs 0) (numeral 2) ⊔ (eqn (xs 0) (numeral 4) ⊔ (eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7)))))
+-  · exact InternalQuotientComparisonProof.orLeft ⟨Derivation.hypothesis List.mem_cons_self⟩
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Derivation.hypothesis List.mem_cons_self)⟩
+   · have hn : Nonempty (Derivation body (A.not :: Delta) A.not) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+     have hz := tagReject 2 xs hn
+     have ht := zeroBranchElim (tagIs 2) (choose (tagIs 4) ordinaryCase (choose (tagIs 5) numberedCase (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19)))) applicationCase (numeral 1) xs hz (withHyp h A.not)
+-    exact InternalQuotientComparisonProof.orRight (at4 xs ht)
++    obtain ⟨hout⟩ := at4 xs ht
++    exact ⟨InternalQuotientComparisonProof.orRight hout⟩
+ 
+ theorem at1 (xs : Fin 19 → OTerm alpha)
+     (h : Nonempty (Derivation body Delta (programGraph (choose (tagIs 1) lambdaCase (choose (tagIs 2) applicationCase (choose (tagIs 4) ordinaryCase (choose (tagIs 5) numberedCase (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19)))))) (numeral 1) xs))) :
+     Nonempty (Derivation body Delta ((eqn (xs 0) (numeral 1) ⊔ (eqn (xs 0) (numeral 2) ⊔ (eqn (xs 0) (numeral 4) ⊔ (eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7))))))) := by
+   let A := eqn (xs 0) (numeral 1)
+   apply formulaCases A ((eqn (xs 0) (numeral 1) ⊔ (eqn (xs 0) (numeral 2) ⊔ (eqn (xs 0) (numeral 4) ⊔ (eqn (xs 0) (numeral 5) ⊔ eqn (xs 0) (numeral 7))))))
+-  · exact InternalQuotientComparisonProof.orLeft ⟨Derivation.hypothesis List.mem_cons_self⟩
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Derivation.hypothesis List.mem_cons_self)⟩
+   · have hn : Nonempty (Derivation body (A.not :: Delta) A.not) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+     have hz := tagReject 1 xs hn
+     have ht := zeroBranchElim (tagIs 1) (choose (tagIs 2) applicationCase (choose (tagIs 4) ordinaryCase (choose (tagIs 5) numberedCase (choose (tagIs 7) applicationCase (InternalAcceptance.constantZero 19))))) lambdaCase (numeral 1) xs hz (withHyp h A.not)
+-    exact InternalQuotientComparisonProof.orRight (at2 xs ht)
++    obtain ⟨hout⟩ := at2 xs ht
++    exact ⟨InternalQuotientComparisonProof.orRight hout⟩
+ 
+ theorem successShape (xs : Fin 19 → OTerm alpha)
+     (h : Nonempty (Derivation body Delta (programGraph layer (numeral 1) xs))) :
