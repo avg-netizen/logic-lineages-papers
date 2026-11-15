@@ -1,0 +1,11 @@
+--- ZeroProof.before
++++ ZeroProof.after
+@@ -19,7 +19,7 @@
+ open TwoSol20261113.CalibratedPrimary.Membership (contains)
+ open Continuation20261114
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+ theorem noMemberAt {raw param : OTerm alpha}
+     (rank deps child childRank : OTerm alpha)
