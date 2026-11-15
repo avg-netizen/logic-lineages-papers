@@ -6,7 +6,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowSubstitution GorbowFormulaSubstitution SixSol20261113
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport EntriesLogic
 
-def claim {ctx : Nat} q ctag (value rest index : Term ctx) : Formula ctx :=
+def claim {ctx : Nat} (q ctag : Nat) (value rest index : Term ctx) : Formula ctx :=
  .imp (entries q value rest) (entry q value (HistoryLookup.consCall ctag value rest) index)
 theorem substClaim {m n : Nat} (s : Fin m → Term n) q ctag (value rest index : Term m) :
  substituteFormula s (claim q ctag value rest index) =
