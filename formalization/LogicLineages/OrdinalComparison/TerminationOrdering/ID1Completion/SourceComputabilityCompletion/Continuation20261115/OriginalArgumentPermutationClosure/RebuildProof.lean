@@ -42,9 +42,9 @@ theorem rawStep (raw : OTerm alpha)
   let r : OTerm (alpha ⊕ Fin 2) := raw.relabel Sum.inl
   let left : OTerm (alpha ⊕ Fin 2) := .var (.inr 0)
   let right : OTerm (alpha ⊕ Fin 2) := .var (.inr 1)
-  let Theta := fields r left right :: Delta.map (fun q => q.relabel Sum.inl)
+  let Theta := RebuildInductionDefinitions.fields r left right :: Delta.map (fun q => q.relabel Sum.inl)
   change Derivation body Theta (result r left right)
-  have hf : Nonempty (Derivation body Theta (fields r left right)) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+  have hf : Nonempty (Derivation body Theta (RebuildInductionDefinitions.fields r left right)) := ⟨Derivation.hypothesis List.mem_cons_self⟩
   have ihj := renameInto ih (Sum.inl : alpha → alpha ⊕ Fin 2) Theta (by
     intro q hq
     exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))

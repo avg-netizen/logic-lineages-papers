@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalArgumentPermutationClosure/RebuildProof.lean:45:15: error: Ambiguous term
+  fields
+Possible interpretations:
+  CountAgreement.fields r left
+    right : OTerm (alpha ⊕ Fin 2) → OTerm (alpha ⊕ Fin 2) → InternalCalculus.Formula (alpha ⊕ Fin 2)
+  
+  RebuildInductionDefinitions.fields r left right : InternalCalculus.Formula (alpha ⊕ Fin 2)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalArgumentPermutationClosure/RebuildProof.lean:46:2: error: 'change' tactic failed, pattern
+  Derivation body Theta (result r left right)
+is not definitionally equal to target
+  Derivation body
+    (RebuildInductionDefinitions.fields (Term.relabel Sum.inl raw) (var (Sum.inr 0)) (var (Sum.inr 1)) ::
+      List.map (fun q => Formula.relabel Sum.inl q) Delta)
+    (result (Term.relabel Sum.inl raw) (var (Sum.inr 0)) (var (Sum.inr 1)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalArgumentPermutationClosure/RebuildProof.lean:74:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalArgumentPermutationClosure.RebuildProof.rawStep: forbidden axiom dependency sorryAx
