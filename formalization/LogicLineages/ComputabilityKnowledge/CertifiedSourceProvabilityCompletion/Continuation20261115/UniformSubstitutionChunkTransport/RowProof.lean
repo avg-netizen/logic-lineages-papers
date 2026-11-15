@@ -1,4 +1,5 @@
 module
+public import Mathlib.Tactic.FinCases
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.TaskProof
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.FinitePrefixProof
 public meta import LogicLineages.Audit
@@ -44,19 +45,17 @@ theorem rows {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) (ptag l r : 
  obtain ⟨hs⟩ := TaskProof.formula p G ptag l r hp hl hr (.succ depth)
  cases ctor with
  | term i =>
-  simp only [tasks,newRows]
-  split <;> first
-   | exact .nil
-   | exact .cons ⟨h0⟩ .nil
-   | exact .cons ⟨h2⟩ .nil
-   | exact .cons ⟨h0⟩ (.cons ⟨h0⟩ .nil)
+  fin_cases i <;> simp only [tasks,newRows] <;> first
+   | exact List.Forall₂.nil
+   | exact List.Forall₂.cons (Nonempty.intro h0) List.Forall₂.nil
+   | exact List.Forall₂.cons (Nonempty.intro h2) List.Forall₂.nil
+   | exact List.Forall₂.cons (Nonempty.intro h0) (List.Forall₂.cons (Nonempty.intro h0) List.Forall₂.nil)
  | formula i =>
-  simp only [tasks,newRows]
-  split <;> first
-   | exact .cons ⟨h0⟩ .nil
-   | exact .cons ⟨h1⟩ .nil
-   | exact .cons ⟨hs⟩ .nil
-   | exact .cons ⟨h0⟩ (.cons ⟨h0⟩ .nil)
-   | exact .cons ⟨h1⟩ (.cons ⟨h1⟩ .nil)
+  fin_cases i <;> simp only [tasks,newRows] <;> first
+   | exact List.Forall₂.cons (Nonempty.intro h0) List.Forall₂.nil
+   | exact List.Forall₂.cons (Nonempty.intro h1) List.Forall₂.nil
+   | exact List.Forall₂.cons (Nonempty.intro hs) List.Forall₂.nil
+   | exact List.Forall₂.cons (Nonempty.intro h0) (List.Forall₂.cons (Nonempty.intro h0) List.Forall₂.nil)
+   | exact List.Forall₂.cons (Nonempty.intro h1) (List.Forall₂.cons (Nonempty.intro h1) List.Forall₂.nil)
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.RowProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.RowProof
