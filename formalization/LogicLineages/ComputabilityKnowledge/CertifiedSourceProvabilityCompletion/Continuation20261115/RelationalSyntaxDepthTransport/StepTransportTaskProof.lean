@@ -5,7 +5,7 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepTransportTaskProof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof List.Vector
 open SixSol20261113 SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport
-open ConstructorStepTargets
+open ConstructorStepTargets LiteralRawMP.DispatcherSupportProof
 /-- Internal decoder reconstruction at an arbitrary literal kind, including index
 kind2. There is no native canonical-task/image assumption. -/
 theorem canonical {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) (ptag l r k : Nat)
@@ -58,7 +58,7 @@ theorem constructorInput {n ctx : Nat} (p : Program n) (G : List (Formula ctx))
   (input ptag ctag ctor (call r (head ::ᵥ nil)) tail ::ᵥ Term.numeral (token ctor) ::ᵥ nil) (fun i => by
    cases i using Fin.cases with
    | zero => simpa only [input,HistoryLookup.consCall,GorbowStandardInstances.instantiate,
-       GorbowSubstitution.substitute,Fin.cases_zero] using hs
+       GorbowSubstitution.substitute,Fin.cases_zero,List.Vector.get_cons_zero] using hs
    | succ i => cases i using Fin.cases with
      | zero => exact ht
      | succ i => exact Fin.elim0 i)⟩

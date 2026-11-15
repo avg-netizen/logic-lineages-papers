@@ -52,7 +52,7 @@ theorem atRow (raw head tail param out rest node a b rowValue : OTerm alpha)
     (consTailDescent raw head tail (withHyp hc R))
     (andIntro (andIntro (withHyp hr R) ⟨Derivation.hypothesis List.mem_cons_self⟩) (withHyp hq R))
   obtain ⟨hright⟩ := andIntro (SupportProof.memberTail raw head tail a (withHyp hc R) (andLeft ht)) (andRight ht)
-  exact ⟨disjunctionElimination hd (Derivation.implicationIntroduction hleft) (Derivation.implicationIntroduction hright)⟩
+  exact ⟨InternalBetaTotalityProof.disjunctionElimination hd (Derivation.implicationIntroduction hleft) (Derivation.implicationIntroduction hright)⟩
 
 theorem atStep (raw head tail param out rest node a b : OTerm alpha)
     (ih : Nonempty (Derivation body Delta (BelowRaw raw)))
