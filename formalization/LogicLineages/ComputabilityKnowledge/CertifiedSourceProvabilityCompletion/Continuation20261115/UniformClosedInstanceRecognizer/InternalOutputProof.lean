@@ -19,7 +19,7 @@ theorem output {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) (ftag ptag
  (hr : (nodes p)[rtag]? = some ⟨1,HistoryDecoder.decoder true⟩) (formula replacement : Term ctx) :
  Computes p G outputCode (formula ::ᵥ replacement ::ᵥ nil) (outputValue ftag ptag ctag rtag formula replacement) := by
  let args := formula ::ᵥ replacement ::ᵥ nil
- let task := HistoryKernel.pairCall ptag (.succ .zero) (.succ .zero)
+ let task : Term ctx := HistoryKernel.pairCall ptag (.succ .zero) (.succ .zero)
  let tasks := HistoryLookup.consCall ctag task .zero
  let state := HistoryKernel.pairCall ptag (.succ tasks) .zero
  have ht : Computes p G initialTask args task :=

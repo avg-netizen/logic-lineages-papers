@@ -22,9 +22,17 @@ theorem foldAt (s : GorbowSubstitutionCode.OutputState) (tokens raw : List Nat)
   have hargs : List.Vector.ofFn (fun i => evaluate (g i) v) =
    (tokens.length ::ᵥ Nat.pair (Encodable.encode tokens) (Encodable.encode s) ::ᵥ Encodable.encode raw ::ᵥ nil) := by
    ext i
-   fin_cases i <;> simp only [g,v,List.Vector.get_ofFn,List.Vector.get_cons_zero,List.Vector.get_cons_succ,
-    get3_0,get3_1,get3_2,oneEval,projectionEval,UniformClosedSubstitutionRawFold.initial,
-    twoEval,HistoryLengthOffset.NativeProof.lengthList,pairEval]
+   cases i using Fin.cases with
+   | zero =>
+    change evaluate (HistoryRuleSuffix.applyOne HistoryLengthOffset.lengthProgram (.projection 0)) v = tokens.length
+    simp only [v,oneEval,projectionEval,get3_0,HistoryLengthOffset.NativeProof.lengthList]
+   | succ i => cases i using Fin.cases with
+     | zero =>
+      change evaluate UniformClosedSubstitutionRawFold.initial v = Nat.pair (Encodable.encode tokens) (Encodable.encode s)
+      simp only [v,UniformClosedSubstitutionRawFold.initial,twoEval,projectionEval,get3_0,get3_1,pairEval]
+     | succ i => cases i using Fin.cases with
+       | zero => rfl
+       | succ i => exact Fin.elim0 i
   change evaluate UniformClosedSubstitutionFold.iterator (List.Vector.ofFn (fun i => evaluate (g i) v)) = _
   rw [hargs]
   exact UniformClosedSubstitutionFold.NativeProof.exactOriginalFold s tokens raw hr
