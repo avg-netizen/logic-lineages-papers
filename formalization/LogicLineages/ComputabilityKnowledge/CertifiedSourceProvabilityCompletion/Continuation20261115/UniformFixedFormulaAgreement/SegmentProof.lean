@@ -6,9 +6,9 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof SixSol20261113 List.Vector
 open SixSol20261112.Fuel NamedArithmeticGraph UniformClosedSubstitutionRawFold
 /-- Finite literal input prefix with arbitrary symbolic tail, not arbitrary-list exhaustion. -/
-def prefix {ctx : Nat} (ctag : Nat) : List Nat → Term ctx → Term ctx
+def tokenPrefix {ctx : Nat} (ctag : Nat) : List Nat → Term ctx → Term ctx
  | [], tail => tail
- | a::xs, tail => HistoryLookup.consCall ctag (Term.numeral a) (prefix ctag xs tail)
+ | a::xs, tail => HistoryLookup.consCall ctag (Term.numeral a) (tokenPrefix ctag xs tail)
 theorem segment {n ctx : Nat} (p : Program n) (ftag ptag ctag stag etag atag ltag rtag : Nat)
  (hf : (nodes p)[ftag]? = some ⟨3,foldCode⟩)
  (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
@@ -21,8 +21,8 @@ theorem segment {n ctx : Nat} (p : Program n) (ftag ptag ctag stag etag atag lta
 
  (xs : List Nat) (tokens state raw : Term ctx) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
-  (.equal (foldCall ftag (prefix ctag xs tokens) state raw)
-   (foldCall ftag tokens (foldCall ftag (prefix ctag xs .zero) state raw) raw))) := by
+  (.equal (foldCall ftag (tokenPrefix ctag xs tokens) state raw)
+   (foldCall ftag tokens (foldCall ftag (tokenPrefix ctag xs .zero) state raw) raw))) := by
  induction xs generalizing state with
  | nil =>
   obtain ⟨hr0,hi,hllen⟩ := InstallationProof.installed p ftag hf
@@ -31,10 +31,10 @@ theorem segment {n ctx : Nat} (p : Program n) (ftag ptag ctag stag etag atag lta
  | cons a xs ih =>
   let newState := FoldProof.next ptag stag etag atag ltag rtag (Term.numeral a) state raw
   obtain ⟨hleft⟩ := FoldProof.consAny p ftag ptag ctag stag etag atag ltag rtag
-   hf hp hc hs he ha hl hr (Term.numeral a) (prefix ctag xs tokens) state raw
+   hf hp hc hs he ha hl hr (Term.numeral a) (tokenPrefix ctag xs tokens) state raw
   obtain ⟨hind⟩ := ih newState
   obtain ⟨hright⟩ := FoldProof.consAny p ftag ptag ctag stag etag atag ltag rtag
-   hf hp hc hs he ha hl hr (Term.numeral a) (prefix ctag xs .zero) state raw
+   hf hp hc hs he ha hl hr (Term.numeral a) (tokenPrefix ctag xs .zero) state raw
   have houter := FoldProof.stateCongruence ftag tokens _ _ raw hright
   exact ⟨Logic.trans _ _ _ hleft (Logic.trans _ _ _ hind (Support.equalitySymmetry _ _ houter))⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformFixedFormulaAgreement.SegmentProof

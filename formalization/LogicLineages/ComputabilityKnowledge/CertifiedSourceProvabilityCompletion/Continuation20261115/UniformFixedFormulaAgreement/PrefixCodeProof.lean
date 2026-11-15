@@ -11,14 +11,14 @@ by installed cons equations rather than any syntax-validity reflection. -/
 theorem encoded {n ctx : Nat} (p : Program n) (ctag : Nat)
  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (xs : List Nat) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
-  (.equal (SegmentProof.prefix ctag xs (.zero : Term ctx))
+  (.equal (SegmentProof.tokenPrefix ctag xs (.zero : Term ctx))
    (Term.numeral (Encodable.encode xs)))) := by
  induction xs with
  | nil => exact ⟨.logical (.reflexive .zero)⟩
  | cons a xs ih =>
   obtain ⟨hi⟩ := ih
   have hcong := Logic.callCongruence (GorbowPRNumeralCalculation.Theory p) ctag
-   (Term.numeral a ::ᵥ SegmentProof.prefix ctag xs (.zero : Term ctx) ::ᵥ nil)
+   (Term.numeral a ::ᵥ SegmentProof.tokenPrefix ctag xs (.zero : Term ctx) ::ᵥ nil)
    (Term.numeral a ::ᵥ Term.numeral (Encodable.encode xs) ::ᵥ nil) (fun i => by
     cases i using Fin.cases with
     | zero => exact .logical (.reflexive _)
