@@ -33,7 +33,8 @@ theorem relationRename {beta : Type} (node f g base dest child param symbols typ
     funext i
     fin_cases i <;> rfl
   simp only [relation,rhs,conjunctionRename,InternalBetaExtensionSyntaxProof.impRename,StructuralExchangeFields.InternalProof.orRename,
-    graph2Rename,InternalControlGraphSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename,hv]
+    graph2Rename,InternalControlGraphSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename,hv,
+    graph2,InternalRecursionGraphStepSyntaxProof.consTermRename,InternalControlGraphSupportProof.emptyRename]
 
 theorem atWitnesses (source target f g base dest node child param symbols types ef eg rf rg value deps vals : OTerm alpha)
     (hs : Nonempty (Derivation body Delta (graph2 OriginalRawSyntaxTransport.ordinaryConstructor source f base)))

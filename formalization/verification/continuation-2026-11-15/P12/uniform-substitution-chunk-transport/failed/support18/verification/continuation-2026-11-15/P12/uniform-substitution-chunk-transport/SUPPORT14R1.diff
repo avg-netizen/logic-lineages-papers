@@ -1,0 +1,26 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionChunkTransport/KindProof.lean original
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionChunkTransport/KindProof.lean R1
+@@ -29,7 +29,7 @@
+  have qb : Hilbert.Local T ctx [K,H] (.imp B Q) := (Hilbert.Local.explosion Q hbad (.base hne)).discharge
+  have hh : Hilbert.Local T ctx [K,H] H := .hypothesis (by simp)
+  have hor : Hilbert.Local T ctx [K,H] (.disj A B) := .mp (.base (.logical (.andRight _ _))) hh
+- exact ⟨(.mp (.mp (.mp (.base (.logical (.orElim A B Q))) qa) qb) hor).discharge.discharge.finish⟩
++ exact ⟨(Hilbert.Local.mp (.mp (.mp (.base (.logical (.orElim A B Q))) qa) qb) hor).discharge.discharge.finish⟩
+ /-- A pending old index can only use the index/term alternative. Ordinary
+ term/formula alternatives contradict its actual decoded kind2 internally. -/
+ theorem index (T : Sentence → Prop) {ctx : Nat} (l r : Nat) (a b : Term ctx) :
+@@ -55,12 +55,12 @@
+  have ha : Hilbert.Local T ctx [A,K,H] A := .hypothesis (by simp)
+  have hor : Hilbert.Local T ctx [A,K,H] (.disj Z O) := .mp (.base (.logical (.andRight _ _))) ha
+  have qa : Hilbert.Local T ctx [K,H] (.imp A Q) :=
+-  (.mp (.mp (.mp (.base (.logical (.orElim Z O Q))) qz) qo) hor).discharge
++  (Hilbert.Local.mp (.mp (.mp (.base (.logical (.orElim Z O Q))) qz) qo) hor).discharge
+  have hb : Hilbert.Local T ctx [B,K,H] B := .hypothesis (by simp)
+  have qb : Hilbert.Local T ctx [K,H] (.imp B Q) :=
+   (Hilbert.Local.mp (.base (.logical (.andRight _ _))) hb).discharge
+  have hh : Hilbert.Local T ctx [K,H] H := .hypothesis (by simp)
+  have hor' : Hilbert.Local T ctx [K,H] (.disj A B) := .mp (.base (.logical (.andRight _ _))) hh
+- exact ⟨(.mp (.mp (.mp (.base (.logical (.orElim A B Q))) qa) qb) hor').discharge.discharge.finish⟩
++ exact ⟨(Hilbert.Local.mp (.mp (.mp (.base (.logical (.orElim A B Q))) qa) qb) hor').discharge.discharge.finish⟩
+ end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.KindProof
+ #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.KindProof
