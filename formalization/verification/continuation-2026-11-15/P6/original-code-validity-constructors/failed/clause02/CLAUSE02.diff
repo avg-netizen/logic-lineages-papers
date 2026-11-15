@@ -1,0 +1,58 @@
+--- CLAUSE01
++++ CLAUSE02
+@@ -109,45 +109,45 @@
+     (ha : Nonempty (Derivation body Delta (R4 o f))) :
+     Nonempty (Derivation body Delta (R4 (!o) f)) := by
+   apply orCases ha
+-  · exact ⟨Derivation.disjunctionLeft (Classical.choice (at5 o (f.withHyp (C5 o f))
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Classical.choice (at5 o (f.withHyp (C5 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+-  · exact ⟨Derivation.disjunctionRight (Classical.choice (at6 o (f.withHyp (C6 o f))
++  · exact ⟨InternalQuotientComparisonProof.orRight (Classical.choice (at6 o (f.withHyp (C6 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+ 
+ theorem tail3 (o : Bool) (f : Frame n body Delta raw)
+     (ha : Nonempty (Derivation body Delta (R3 o f))) :
+     Nonempty (Derivation body Delta (R3 (!o) f)) := by
+   apply orCases ha
+-  · exact ⟨Derivation.disjunctionLeft (Classical.choice (at4 o (f.withHyp (C4 o f))
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Classical.choice (at4 o (f.withHyp (C4 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+-  · exact ⟨Derivation.disjunctionRight (Classical.choice (tail4 o (f.withHyp (R4 o f))
++  · exact ⟨InternalQuotientComparisonProof.orRight (Classical.choice (tail4 o (f.withHyp (R4 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+ 
+ theorem tail2 (o : Bool) (f : Frame n body Delta raw)
+     (ha : Nonempty (Derivation body Delta (R2 o f))) :
+     Nonempty (Derivation body Delta (R2 (!o) f)) := by
+   apply orCases ha
+-  · exact ⟨Derivation.disjunctionLeft (Classical.choice (at2 o (f.withHyp (C2 o f))
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Classical.choice (at2 o (f.withHyp (C2 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+-  · exact ⟨Derivation.disjunctionRight (Classical.choice (tail3 o (f.withHyp (R3 o f))
++  · exact ⟨InternalQuotientComparisonProof.orRight (Classical.choice (tail3 o (f.withHyp (R3 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+ 
+ theorem tail1 (o : Bool) (f : Frame n body Delta raw)
+     (ha : Nonempty (Derivation body Delta (R1 o f))) :
+     Nonempty (Derivation body Delta (R1 (!o) f)) := by
+   apply orCases ha
+-  · exact ⟨Derivation.disjunctionLeft (Classical.choice (at1 o (f.withHyp (C1 o f))
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Classical.choice (at1 o (f.withHyp (C1 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+-  · exact ⟨Derivation.disjunctionRight (Classical.choice (tail2 o (f.withHyp (R2 o f))
++  · exact ⟨InternalQuotientComparisonProof.orRight (Classical.choice (tail2 o (f.withHyp (R2 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+ 
+ theorem tail0 (o : Bool) (f : Frame n body Delta raw)
+     (ha : Nonempty (Derivation body Delta (all o f))) :
+     Nonempty (Derivation body Delta (all (!o) f)) := by
+   apply orCases ha
+-  · exact ⟨Derivation.disjunctionLeft (Classical.choice (at0 o (f.withHyp (C0 o f))
++  · exact ⟨InternalQuotientComparisonProof.orLeft (Classical.choice (at0 o (f.withHyp (C0 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+-  · exact ⟨Derivation.disjunctionRight (Classical.choice (tail1 o (f.withHyp (R1 o f))
++  · exact ⟨InternalQuotientComparisonProof.orRight (Classical.choice (tail1 o (f.withHyp (R1 o f))
+       ⟨Derivation.hypothesis List.mem_cons_self⟩))⟩
+ 
+ theorem toOwn (f : Frame n body Delta raw)

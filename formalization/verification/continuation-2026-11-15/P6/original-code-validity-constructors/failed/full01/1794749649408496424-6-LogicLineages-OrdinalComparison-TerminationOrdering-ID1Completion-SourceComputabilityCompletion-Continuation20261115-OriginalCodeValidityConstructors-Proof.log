@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityConstructors/Proof.lean:38:13: error(lean.unknownIdentifier): Unknown identifier `binaryRecover`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityConstructors/Proof.lean:31:98: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+raw : OTerm alpha
+psi : InternalCalculus.Formula alpha
+next :
+  ∀ (beta : Type) (j : alpha → beta) (Theta : List (InternalCalculus.Formula beta)) (previous table : OTerm beta),
+    (∀ p ∈ Delta, Formula.relabel j p ∈ Theta) →
+      Nonempty
+          (Derivation body Theta
+            (graph2 (OriginalCodeDecoderTable.tableProgram n) previous (Term.relabel j raw) (Term.relabel j raw))) →
+        Nonempty
+            (Derivation body Theta
+              (graph2 (OriginalCodeDecoderTable.tableProgram n) table (suc (Term.relabel j raw))
+                (Term.relabel j raw))) →
+          Nonempty (Derivation body Theta (Formula.relabel j psi))
+prior : Program 1 := (OriginalCodeDecoderTable.tableProgram n).composition ![Program.projection 0, Program.projection 0]
+qs : Fin 2 → Program 1 := ![prior, OriginalCodeValidityGuard.table n]
+beta : Type
+j : alpha → beta
+ys : Fin 2 → OTerm beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ r ∈ Delta, Formula.relabel j r ∈ Theta
+hq :
+  ∀ (i : Fin 2), Nonempty (Derivation body Theta (programGraph (qs i) (ys i) (Fin.cons (Term.relabel j raw) Fin.elim0)))
+xs : Fin 1 → OTerm beta := Fin.cons (Term.relabel j raw) Fin.elim0
+⊢ Nonempty (Derivation body Theta (Formula.relabel j psi))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityConstructors/Proof.lean:60:28: warning: This simp argument is unused:
+  sucRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename,s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵ ̲zRelabel, ̲GuardedSourceSyntaxProof.numeralRename] at ha'
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityConstructors/Proof.lean:60:39: warning: This simp argument is unused:
+  zRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename, ̲sucRelabel,z̵R̵e̵l̵a̵b̵e̵l̵,̵ ̲GuardedSourceSyntaxProof.numeralRename] at ha'
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityConstructors/Proof.lean:87:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityConstructors.Proof.tableCases: forbidden axiom dependency sorryAx
