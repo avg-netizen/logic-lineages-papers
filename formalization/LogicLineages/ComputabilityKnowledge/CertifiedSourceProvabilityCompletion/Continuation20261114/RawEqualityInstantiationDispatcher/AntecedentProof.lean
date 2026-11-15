@@ -24,15 +24,15 @@ theorem antecedent (a b : Term 1) {n ctx : Nat} (p : Program n) (ftag ctag : Nat
  obtain ⟨hval⟩ := QuotedVerifierMP.QuotationProof.numeralCalculation p ftag LiteralSyntaxValidator.formulaValidator hf (0 ::ᵥ code ::ᵥ nil) ctx
  have hvalue : Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (LiteralSyntaxValidator.formulaCall ftag (.zero : Term ctx) (Term.numeral code)) (.succ .zero)) := by
-  simpa only [List.Vector.map_cons,List.Vector.map_nil,heval,Term.numeral] using hval
+  simpa only [List.Vector.map_cons,List.Vector.map_nil,heval,Term.numeral,LiteralSyntaxValidator.formulaCall] using hval
  obtain ⟨hcons⟩ := QuotedVerifierMP.QuotationProof.numeralCalculation p ctag HistoryCodec.cons hc
   (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil) ctx
  have hcode : Derivation (GorbowPRNumeralCalculation.Theory p)
-  (.equal (HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))) (Term.numeral code)) := by
+  (.equal (HistoryLookup.consCall ctag (Term.numeral 10 : Term ctx) (Term.numeral (RawEqualityInstantiation.templateCode a b))) (Term.numeral code)) := by
   have he : evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil) = code := by
    rw [HistoryCodec.NativeProof.nativeConsAllVectors]
    rfl
-  simpa only [List.Vector.map_cons,List.Vector.map_nil,he] using hcons
+  simpa only [List.Vector.map_cons,List.Vector.map_nil,he,HistoryLookup.consCall] using hcons
  have hcall := HistoryAppend.PositiveProof.binaryCongruence ftag (.zero : Term ctx) .zero _ _
   (.logical (.reflexive .zero)) hcode
  exact ⟨Logic.trans _ _ _ hcall hvalue⟩

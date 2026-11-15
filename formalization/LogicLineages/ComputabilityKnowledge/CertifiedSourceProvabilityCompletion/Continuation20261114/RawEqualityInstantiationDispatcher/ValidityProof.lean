@@ -29,7 +29,7 @@ theorem internalFormulaValidity : Targets.InternalFormulaValidity := by
  have hinstance : Hilbert.Local T ctx G
   (.equal (LiteralSyntaxScan.scanCall stag fs (RawEqualityInstantiation.instanceValue ctag atag a b raw)) (.succ .zero)) :=
   localTrans _ _ _ (.base heq) hab
- let antecedent := HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))
+ let antecedent : Term ctx := HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))
  obtain ⟨hant⟩ := AntecedentProof.antecedent (ctx := ctx) a b p ftag ctag hf hc
  obtain ⟨hsound⟩ := LiteralSyntaxValidator.FormulaBindingProof.sound p ftag stag ptag ctag etag hf hs hp hc he .zero antecedent
  have hantecedent : Hilbert.Local T ctx G (.equal (LiteralSyntaxScan.scanCall stag fs antecedent) (.succ .zero)) :=
