@@ -22,7 +22,7 @@ def relation (n : Nat) (raw answers out : OTerm alpha) : Formula alpha :=
 
 theorem relationRename {beta : Type} (n : Nat) (raw answers out : OTerm alpha) (j : alpha → beta) :
     (relation n raw answers out).relabel j = relation n (raw.relabel j) (answers.relabel j) (out.relabel j) := by
-  simp only [relation,OriginalCodeValidityConstructors.Proof.disjRename,conjunctionRename,
+  simp only [relation,OriginalCodeValidityConstructors.Proof.disjRename,InternalRecursionGraphStepSyntaxProof.conjunctionRename,
     graph1Rename,graph2Rename,sucRelabel,zRelabel,eqnRelabel]
 
 theorem forward (n : Nat) (raw answers param out : OTerm alpha)

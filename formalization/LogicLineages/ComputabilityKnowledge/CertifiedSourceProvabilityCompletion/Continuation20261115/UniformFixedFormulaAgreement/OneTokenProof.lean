@@ -30,7 +30,7 @@ theorem constructor {n ctx : Nat} (p : Program n) (I : Installation p)
    (.succ (StackProof.prepend I.ctag (tasks I.ptag bound ctor) rest))) := by
   simpa only [RelationalSyntaxDepthTransport.ConstructorStepTargets.output,GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
  have hp := HistoryIteratorSuffix.ReconstructionProof.pairCongruence
-  (T := GorbowPRNumeralCalculation.Theory p) (G := []) I.ptag _ _ _ _ hsucc'
+  (T := GorbowPRNumeralCalculation.Theory p) (G := []) I.ptag _ (HistoryAppend.appendCall I.atag out (UniformClosedSubstitutionEmit.singletonValue I.ctag (Term.numeral (token ctor)))) _ (HistoryAppend.appendCall I.atag out (UniformClosedSubstitutionEmit.singletonValue I.ctag (Term.numeral (token ctor)))) hsucc'
   (.base (.logical (.reflexive _)))
  exact ⟨Logic.trans _ _ _ hhead (Logic.trans _ _ _ hnil hp.finish)⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformFixedFormulaAgreement.OneTokenProof
