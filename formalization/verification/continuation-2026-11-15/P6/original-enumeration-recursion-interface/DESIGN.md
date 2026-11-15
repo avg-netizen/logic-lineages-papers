@@ -8,10 +8,12 @@ NativeRank and NativeDependencies cover every numeric input vector; Nat pair dec
 
 InternalDecrease has only actual D membership and actual R graph observations. Fuel-zero emptiness, positive predecessor witness, two-child list membership inversion, child pair projections and strict successor inequality must be paid internally. No known node shape, positive fuel, valid image or rank decrease hypothesis is added.
 
-InternalCombine quantifies every output, exposing only six actual original pair/lookup observations: node; three parameter product levels; prior/opened lookup slots. It proves full graph iff zero-fuel output1 or nonzero-fuel existential actual layer value with output successor. Positive layer output, branch witnesses, Some-vs-zero distinction and graph functionality are internal duties. This is not a recursor equation assumption.
+InternalCombine quantifies every output, exposing only four actual original pair observations: node and three parameter product levels. It proves full graph iff zero-fuel output1 or nonzero-fuel three existential witnesses for actual lookup0/1 outputs and actual layer value with output successor. Positive layer output, branch witnesses, Some-vs-zero distinction and graph functionality are internal duties. This is not a recursor equation assumption.
 
 Duplicate check: existing original source has Primrec existence and these native dependency/combine functions, while prior decoded recursion interfaces have different nodes/ranks/dependencies/layers. No reuse of their cache values or code-rank descent is valid here. Existing generic list, pairing, branch and calibrated constructor-layer helpers are legitimate proof dependencies.
 
 Still unpaid: installing this exact tuple into the concrete finite dependency recursor, native enumeration evaluation, internal cache presence/coherence/standalone recurrence for this new rank/D/layer, original enumerate completeness and Q. The accepted layer prior/opened independence remains explicit until that recurrence is proved. Frozen packet is a prerequisite, not whole source-computability completion.
 
 Freeze only; no proofs, compiler or Git. Preserve source before all repairs. Native codec and internal decreasing-child/conditional witnesses must be constructive and audited standard-only.
+
+Approved pre-proof strengthening R1: prior/opened public output terms and lookup premises removed. Their genuine lookup graphs now live inside a three-binder positiveOutput block with the layer output. Initial unrun freeze is byte-preserved under unrun/freeze01; native targets and Definitions AST are unchanged.
