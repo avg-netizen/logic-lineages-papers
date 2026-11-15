@@ -26,7 +26,7 @@ theorem valueImage (n : Nat) (code : Code (Fin n)) :
   simp only [value,NumberedNumericDecodingProof.codeRoundTrip,Option.map_some,Option.getD_some]
 
 theorem recursiveLaw (n raw param : Nat) :
-    recombination n raw ((OriginalRawSyntaxTransport.rawChildren raw).map (fun child => value n child)) =
+    recombination n raw ((ArgumentEntriesFrontier.rawChildren raw).map (fun child => value n child)) =
       some (value n raw) := by
   cases hc : decodeCode n raw with
   | none => simp only [recombination,value,hc]
