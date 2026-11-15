@@ -14,14 +14,14 @@ theorem doubleCode {ctx : Nat} (T : Sentence → Prop) (G : List (Formula ctx))
  Nonempty (Hilbert.Local T ctx G
   (.equal (LiteralCheckerAcceptance.coreCall tag index fuel .zero
    (.add (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode sigma)))
-    (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode sigma))))) code) (.succ .zero))) := by
+    (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode sigma)))) code) (.succ .zero))) := by
  obtain ⟨hq⟩ := FiniteRuleFourCertificate.EncodingProof.formula (ctx := ctx) T sigma
  have he : Hilbert.Local T ctx G
   (.equal (LiteralCheckerAcceptance.coreCall tag index fuel .zero
    (Term.numeral (GorbowSortedSyntaxCode.formulaCode sigma)) code)
    (LiteralCheckerAcceptance.coreCall tag index fuel .zero
     (.add (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode sigma)))
-     (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode sigma))))) code)) := by
+     (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode sigma)))) code)) := by
   apply callCongruence (T := T) (G := G) tag
   intro i
   cases i using Fin.cases with
