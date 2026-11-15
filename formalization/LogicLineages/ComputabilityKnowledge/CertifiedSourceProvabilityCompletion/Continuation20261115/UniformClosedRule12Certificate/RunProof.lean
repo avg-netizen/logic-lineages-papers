@@ -27,7 +27,7 @@ theorem internalSingletonRun {n ctx : Nat} (p : Program n) (old arithmetic : Pro
   (qline ::ᵥ .zero ::ᵥ nil)
  have hk := IdleProof.kernelInstalled p I.iteratorTag LiteralSyntaxValidator.lineValidator (UniformClosedRule12.logicalLeaf old) arithmetic x I.h_iterator
  obtain ⟨_,_,_,hdisp,_⟩ := HistoryKernel.OptionProof.kernelNodes p kt LiteralSyntaxValidator.lineValidator (UniformClosedRule12.logicalLeaf old) arithmetic x hk
- obtain ⟨haccept⟩ := UniformClosedRule12Dispatcher.StatementChecks.exactDispatcher n p old arithmetic x
+ obtain ⟨haccept⟩ := UniformClosedRule12Dispatcher.StatementChecks.exactInternalDispatcher n p old arithmetic x
   I.toDispatcherInstallation ctx formula leftTerm rightTerm index fuel .zero
  obtain ⟨hcopy⟩ := GorbowPRInternalCoherence.Proof.registryCoherence n p
   (dispatcherTag kt LiteralSyntaxValidator.lineValidator (UniformClosedRule12.logicalLeaf old) arithmetic x) I.dispatcherTag 4
