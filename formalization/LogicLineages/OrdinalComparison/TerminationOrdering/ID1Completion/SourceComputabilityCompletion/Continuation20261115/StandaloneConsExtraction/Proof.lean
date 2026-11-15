@@ -27,7 +27,7 @@ theorem consEquation : Targets.InternalConsEquation := by
     apply programCases ArgumentEntriesLayer.step ![raw,tailValue] _
     intro beta j Theta inner hj hi
     rw [graph2Rename]
-    simp only [consTermRename,emptyRename] at hi
+    change Nonempty (Derivation body Theta (graph2 ArgumentEntriesLayer.step inner (raw.relabel j) (tailValue.relabel j))) at hi
     have hcj := renameInto hc j Theta hj
     rw [graph3Rename] at hcj
     have htj := renameInto ht j Theta hj
