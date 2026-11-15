@@ -1,0 +1,20 @@
+--- unrunR1/NativeProof.lean
++++ R2/NativeProof.lean
+@@ -17,8 +17,15 @@
+   (Encodable.encode formula ::ᵥ Encodable.encode ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState) ::ᵥ
+    Encodable.encode replacement ::ᵥ nil) := by
+   ext i
+-  fin_cases i <;> simp only [g,v,List.Vector.get_ofFn,List.Vector.get_cons_zero,List.Vector.get_cons_succ,
+-   get3_0,get3_1,get3_2,projectionEval,get2_0,get2_1,initialAt]
++  cases i using Fin.cases with
++  | zero => rfl
++  | succ i => cases i using Fin.cases with
++    | zero =>
++     change evaluate initialState v = Encodable.encode ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState)
++     exact initialAt (Encodable.encode formula) (Encodable.encode replacement)
++    | succ i => cases i using Fin.cases with
++      | zero => rfl
++      | succ i => exact Fin.elim0 i
+  change evaluate UniformClosedSubstitutionRawFold.foldCode (List.Vector.ofFn (fun i => evaluate (g i) v)) = _
+  rw [hargs]
+  exact foldAt ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState) formula replacement hr
