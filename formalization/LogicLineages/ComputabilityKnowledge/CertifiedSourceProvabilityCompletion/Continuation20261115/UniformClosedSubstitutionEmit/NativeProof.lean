@@ -11,7 +11,7 @@ theorem indexAt (k bound : Nat) (rest : List Task) (token raw : Nat) :
  evaluate indexCode (inputs (Encodable.encode (some ((k,bound)::rest) : State)) token raw) =
  if token < bound-1 then Encodable.encode [0,token] else if token = bound-1 then raw else 0 := by
  simp only [indexCode,chooseEval,twoEval,projectionEval,depthAt,HistoryCodec.NativeProof.evaluateDifference,
-  HistoryRuleSuffix.NativeProof.equalEval,constantEval,variableAt,inputs]
+  HistoryRuleSuffix.NativeProof.equalEval,constantEval,variableAt,inputs,get3_1,get3_2]
  by_cases hl : token < bound-1
  · have hd : bound-1-token ≠ 0 := by omega
    simp [hl,hd]
@@ -21,7 +21,7 @@ theorem nonIndexAt (k bound : Nat) (rest : List Task) (token raw : Nat) :
  evaluate nonIndexCode (inputs (Encodable.encode (some ((k,bound)::rest) : State)) token raw) =
  if k=0 ∧ token=0 then 0 else Encodable.encode [token] := by
  simp only [nonIndexCode,chooseEval,twoEval,projectionEval,kindAt,constantEval,
-  HistoryRuleSuffix.NativeProof.equalEval,singletonAt,inputs]
+  HistoryRuleSuffix.NativeProof.equalEval,singletonAt,inputs,get3_1]
  by_cases hk : k=0 <;> by_cases ht : token=0 <;> simp [hk,ht]
 theorem activeAt (k bound : Nat) (rest : List Task) (token : Nat) (raw : List Nat)
  (hv : GorbowSyntaxValidation.validTerm 0 raw = true) :

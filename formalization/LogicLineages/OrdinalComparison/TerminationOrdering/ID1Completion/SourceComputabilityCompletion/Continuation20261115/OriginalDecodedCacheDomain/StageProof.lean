@@ -34,7 +34,8 @@ theorem atValue (n : Nat) (arity : Fin n → Nat) (V : Program 3)
   · obtain ⟨hn⟩ := hn
     exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _) (Derivation.hypothesis List.mem_cons_self))⟩
   · intro beta j Theta inner hj he
-    simp only [eqnRelabel,zRelabel]
+    change Nonempty (Derivation body Theta ((eqn found z).relabel j).not)
+    rw [eqnRelabel,zRelabel]
     have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
     simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename] at htj
     have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj
@@ -66,7 +67,8 @@ theorem atAnswers (n : Nat) (arity : Fin n → Nat) (V : Program 3)
   apply programCases (ConcreteHeadMoveLayer.layer n arity V) (Fin.cons node (Fin.cons answers (Fin.cons param (Fin.elim0)))) _
   intro beta j Theta value hj hx
   simp only [consTermRename,emptyRename] at hx
-  simp only [eqnRelabel,zRelabel]
+  change Nonempty (Derivation body Theta ((eqn found z).relabel j).not)
+  rw [eqnRelabel,zRelabel]
   have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
   simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename] at htj
   have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj
@@ -89,7 +91,8 @@ theorem atDeps (n : Nat) (arity : Fin n → Nat) (V : Program 3)
   apply programCases ExchangeMapGraph.mapGraph (Fin.cons deps (Fin.cons old (Fin.elim0))) _
   intro beta j Theta answers hj hx
   simp only [consTermRename,emptyRename] at hx
-  simp only [eqnRelabel,zRelabel]
+  change Nonempty (Derivation body Theta ((eqn found z).relabel j).not)
+  rw [eqnRelabel,zRelabel]
   have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
   simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename] at htj
   have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj
@@ -109,7 +112,8 @@ theorem stageAt (n : Nat) (arity : Fin n → Nat) (V : Program 3)
   apply programCases (OriginalDecodedDependencies.dependencies n) (Fin.cons node (Fin.cons param (Fin.elim0))) _
   intro beta j Theta deps hj hx
   simp only [consTermRename,emptyRename] at hx
-  simp only [eqnRelabel,zRelabel]
+  change Nonempty (Derivation body Theta ((eqn found z).relabel j).not)
+  rw [eqnRelabel,zRelabel]
   have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
   simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename] at htj
   have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj

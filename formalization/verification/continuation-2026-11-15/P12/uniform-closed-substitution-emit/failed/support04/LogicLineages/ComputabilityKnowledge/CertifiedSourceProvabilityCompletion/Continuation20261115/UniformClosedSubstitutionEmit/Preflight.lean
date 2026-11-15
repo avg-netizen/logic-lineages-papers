@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionEmit.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionEmit.Preflight
+#check Targets.ClosedShiftIdentity
+#check Targets.ExactOriginalEmit
+#check Targets.InternalBranches
+#check GorbowTermShiftCodeProof.exactOutput
+#check GorbowSubstitutionCode.emit
+#check SixSol20261113.HistoryLookup.DestructorProof.decoderCrossPair
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionEmit.Preflight

@@ -44,6 +44,8 @@ theorem positive (U : Fin 19 → Program 3) (V : Program 3)
     Nonempty (Derivation body Delta (eqn out z).not) := by
   apply programCases (TransparentExchangeLayer.body U) (Fin.cons node (Fin.cons answers (Fin.cons param Fin.elim0))) _
   intro beta j Theta inner hj hi
+  change Nonempty (Derivation body Theta ((eqn out z).relabel j).not)
+  rw [eqnRelabel,zRelabel]
   simp only [consTermRename,emptyRename] at hi
   have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
   simp only [graph3Rename,sucRelabel] at hvj
@@ -64,6 +66,8 @@ theorem atControl (U : Fin 19 → Program 3) (V : Program 3)
     exact unequalZero out z (valueUnique (TransparentExchangeLayer.optional U V) out (suc z) ![node,answers,param]
       (withHyp ho (eqn control z)) hn)
   · intro beta j Theta k hj he
+    change Nonempty (Derivation body Theta ((eqn out z).relabel j).not)
+    rw [eqnRelabel,zRelabel]
     have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
     rw [graph3Rename] at hvj
     have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
@@ -77,6 +81,8 @@ theorem optionalNonzero (U : Fin 19 → Program 3) (V : Program 3)
     Nonempty (Derivation body Delta (eqn out z).not) := by
   apply programCases V (Fin.cons node (Fin.cons answers (Fin.cons param Fin.elim0))) _
   intro beta j Theta control hj hv
+  change Nonempty (Derivation body Theta ((eqn out z).relabel j).not)
+  rw [eqnRelabel,zRelabel]
   simp only [consTermRename,emptyRename] at hv
   have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
   rw [graph3Rename] at hoj
