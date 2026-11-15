@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:62:13: error: Type mismatch
+  unaryList value child listCode
+has type
+  Nonempty (Derivation ?m.61 ?m.63 (graph1 (OriginalRawSyntaxTransport.arityOf raw) (numeral 1) value)) →
+    Nonempty (Derivation ?m.61 ?m.63 (graph1 (OriginalRawSyntaxTransport.firstOf raw) child value)) →
+      Nonempty (Derivation ?m.61 ?m.63 (graph2 InternalListCodec.consCode listCode child (numeral 0))) →
+        Nonempty (Derivation ?m.61 ?m.63 (graph1 children listCode value))
+but is expected to have type
+  Nonempty (Derivation body Delta (graph1 children listCode value))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:61:2: error: Alternative `true` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:63:6: error: unexpected token '('; expected command
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:72:13: error: Type mismatch
+  binaryList value left right rest listCode
+has type
+  Nonempty (Derivation ?m.67 ?m.69 (graph1 (OriginalRawSyntaxTransport.arityOf raw) (numeral 2) value)) →
+    Nonempty (Derivation ?m.67 ?m.69 (graph1 (OriginalRawSyntaxTransport.firstOf raw) left value)) →
+      Nonempty (Derivation ?m.67 ?m.69 (graph1 (OriginalRawSyntaxTransport.secondOf raw) right value)) →
+        Nonempty (Derivation ?m.67 ?m.69 (graph2 InternalListCodec.consCode rest right (numeral 0))) →
+          Nonempty (Derivation ?m.67 ?m.69 (graph2 InternalListCodec.consCode listCode left rest)) →
+            Nonempty (Derivation ?m.67 ?m.69 (graph1 children listCode value))
+but is expected to have type
+  Nonempty (Derivation body Delta (graph1 children listCode value))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:71:2: error: Alternative `true` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:73:6: error: unexpected token '('; expected command
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalProof.internalNumbered: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalProof.binaryList: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesChildren/InternalProof.lean:90:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesChildren.InternalProof.internalBinary: forbidden axiom dependency sorryAx

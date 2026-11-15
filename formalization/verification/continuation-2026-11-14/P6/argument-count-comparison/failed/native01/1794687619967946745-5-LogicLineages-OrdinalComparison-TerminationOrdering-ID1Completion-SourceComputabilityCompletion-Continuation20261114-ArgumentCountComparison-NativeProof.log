@@ -1,0 +1,34 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/NativeProof.lean:60:23: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∀ a ∈ ?left ++ ?right, List.count a ?left = List.count a ?right
+in the target expression
+  (decide (∀ a ∈ (some left).getD [] ++ right, List.count a left = List.count a right)).toNat =
+    (decide (left.Perm right)).toNat
+
+left right : List ℕ
+ha :
+  evaluate InternalApplicationValidityStackAppend.append (ofFn ![numbersNumber left, numbersNumber right]) =
+    numbersNumber ((some left).getD [] ++ right)
+⊢ (decide (∀ a ∈ (some left).getD [] ++ right, List.count a left = List.count a right)).toNat =
+    (decide (left.Perm right)).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/NativeProof.lean:76:8: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (decide _a).toNat = (decide (left.Perm right)).toNat
+Error: Application type mismatch: The argument
+  (List.map Encodable.encode left).decidablePerm (List.map Encodable.encode right)
+has type
+  Decidable ((List.map Encodable.encode left).Perm (List.map Encodable.encode right))
+but is expected to have type
+  Decidable _a
+in the application
+  @decide _a ((List.map Encodable.encode left).decidablePerm (List.map Encodable.encode right))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case right
+n : ℕ
+left right : List (Source.Ty × NumberedAuxiliaryCoding.Code (Fin n))
+h : (List.map Encodable.encode left).Perm (List.map Encodable.encode right) ↔ left.Perm right
+⊢ (decide ((List.map Encodable.encode left).Perm (List.map Encodable.encode right))).toNat =
+    (decide (left.Perm right)).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/NativeProof.lean:79:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentCountComparison.NativeProof.numericPermutation: forbidden axiom dependency sorryAx

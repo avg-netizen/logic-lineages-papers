@@ -1,0 +1,28 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadClass/NativeProof.lean:21:62: error: unsolved goals
+case ranked
+n : ℕ
+symbol✝ : Fin n
+⊢ 1 + (↑symbol✝ + 1) = ↑symbol✝ + 2
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadClass/NativeProof.lean:44:2: error: unsolved goals
+case neg
+n : ℕ
+f g : HeadCode (Fin n)
+h :
+  NumberedExchangeGuardsPrimrecProof.headClassNumber f = NumberedExchangeGuardsPrimrecProof.headClassNumber g ↔
+    RecursiveComparison.headEquivalent (NumberedAuxiliaryDecoding.decodeHead f) (NumberedAuxiliaryDecoding.decodeHead g)
+hc : ¬NumberedExchangeGuardsPrimrecProof.headClassNumber f = NumberedExchangeGuardsPrimrecProof.headClassNumber g
+hn :
+  RecursiveComparison.headEquivalent (NumberedAuxiliaryDecoding.decodeHead f) (NumberedAuxiliaryDecoding.decodeHead g) →
+    False
+⊢ 0 =
+    (decide
+        (RecursiveComparison.headEquivalent (NumberedAuxiliaryDecoding.decodeHead f)
+          (NumberedAuxiliaryDecoding.decodeHead g))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadClass/NativeProof.lean:45:13: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [hc,̵h̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalHeadClass/NativeProof.lean:50:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalHeadClass.NativeProof.nativeClassAndEquivalence: forbidden axiom dependency sorryAx

@@ -1,0 +1,24 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/InternalProof.lean:39:6: error: Type mismatch: After simplification, term
+  hs
+ has type
+  Nonempty
+    (Derivation body Theta
+      (programGraph step (suc InternalTagArithmeticSyntaxProof.z)
+        (Fin.cons (Term.relabel j head)
+          (Fin.cons acc fun i => Term.relabel j (Fin.cons left (Fin.cons right Fin.elim0) i)))))
+but is expected to have type
+  Nonempty
+    (Derivation body Theta
+      (programGraph step (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+        ![Term.relabel j head, acc, Term.relabel j left, Term.relabel j right]))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/InternalProof.lean:43:46: error: Type mismatch
+  ht
+has type
+  Nonempty
+    (Derivation body Theta
+      (InternalRawListRecursion.recGraph (constant 2 1) step acc (Term.relabel j tail) fun i =>
+        Term.relabel j (Fin.cons left (Fin.cons right Fin.elim0) i)))
+but is expected to have type
+  Nonempty
+    (Derivation body Theta (graph3 allCounts acc (Term.relabel j tail) (Term.relabel j left) (Term.relabel j right)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/InternalProof.lean:54:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentCountComparison.InternalProof.internalCons: forbidden axiom dependency sorryAx
