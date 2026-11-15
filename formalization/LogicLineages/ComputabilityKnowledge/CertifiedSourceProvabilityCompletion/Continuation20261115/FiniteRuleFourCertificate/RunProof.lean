@@ -75,7 +75,7 @@ theorem fromDispatcher {n ctx : Nat} (p : Program n) (logical arithmetic : Progr
   hout (.base (.logical (.reflexive .zero)))
  have hrun := localTrans _ _ _ hcount (localTrans _ _ _ (.base hstep) (localTrans _ _ _ (.base hidle) hpair))
  obtain ⟨hcoded⟩ := EncodingProof.certificate (ctx := ctx) p I.ctag I.hc sigma
- have hchange := runCongruence I.itag I.ptag index fuel (Term.numeral (certificateCode sigma)) cert
+ have hchange := runCongruence (G := G) I.itag I.ptag index fuel (Term.numeral (certificateCode sigma)) cert
   (.base (Support.equalitySymmetry _ _ hcoded))
  exact ⟨(localTrans _ _ _ hchange hrun).discharge.finish⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FiniteRuleFourCertificate.RunProof
