@@ -52,10 +52,10 @@ def Side.withHyp (s : Side n body Delta raw) (A : Formula alpha) : Side n body (
   predecessor := s.predecessor
   previous := s.previous
   table := s.table
-  bounded := withHyp s.bounded A
-  enough := withHyp s.enough A
-  prior := withHyp s.prior A
-  row := withHyp s.row A
+  bounded := InternalApplicationValidityStackAppendInductionCoreProof.withHyp s.bounded A
+  enough := InternalApplicationValidityStackAppendInductionCoreProof.withHyp s.enough A
+  prior := InternalApplicationValidityStackAppendInductionCoreProof.withHyp s.prior A
+  row := InternalApplicationValidityStackAppendInductionCoreProof.withHyp s.row A
 
 theorem transferChild (s1 s2 : Side n body Delta raw) (child : OTerm alpha)
     (hi : Nonempty (Derivation body Delta (BelowRaw n raw)))
