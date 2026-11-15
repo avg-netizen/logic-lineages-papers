@@ -30,7 +30,7 @@ theorem presentCases {raw param : OTerm alpha} (s : Side body Delta raw param) (
   apply InternalAcceptanceSupportProof.programCases ExchangeMapGraph.lookup (Fin.cons s.table (Fin.cons raw Fin.elim0)) _
   intro beta j Theta found hj hf
   simp only [consTermRename,emptyRename] at hf
-  have sn := s.rename j Theta hj
+  let sn := s.rename j Theta hj
   have hn := lookupNonzero sn found (by simpa only [sn, Side.rename, graph2] using hf)
   apply zeroSuccessorCases Theta found _
   · obtain ⟨hn⟩ := hn
