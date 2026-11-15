@@ -34,7 +34,7 @@ theorem traverses {arity ctx n depth inputs : Nat} (p : Program arity) (I : Inst
   have hout := Hilbert.Local.mp (Hilbert.Local.base hclosed) hvj
   have hvalue := EnvironmentProof.runtimeValue I.ctag I.atag e raw replacement i j he
   rw [hvalue]
-  simpa only [run,termValue,he,UniformClosedTermFrame.initial,UniformClosedTermFrame.final] using (show Nonempty _ from ⟨hout⟩)
+  simpa only [MachineProof.run,termValue,he,UniformClosedTermFrame.initial,UniformClosedTermFrame.final] using (show Nonempty _ from ⟨hout⟩)
  | inl j =>
   obtain ⟨hvar⟩ := UniformFixedFormulaAgreement.VariableProof.traverses p I depth j rest out replacement
   obtain ⟨hcode⟩ := UniformFixedFormulaAgreement.PrefixCodeProof.encoded p I.ctag I.hc
@@ -46,7 +46,7 @@ theorem traverses {arity ctx n depth inputs : Nat} (p : Program arity) (I : Inst
   have hresult := Logic.trans _ _ _ (Support.equalitySymmetry _ _ hchange) hvar
   have hvalue := EnvironmentProof.boundValue I.ctag I.atag e raw replacement i j he
   rw [hvalue]
-  simpa only [run,termValue,he] using
+  simpa only [MachineProof.run,termValue,he] using
    (show Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G _) from ⟨.base hresult⟩)
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformRuntimeEnvironmentAgreement.VariableProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformRuntimeEnvironmentAgreement.VariableProof
