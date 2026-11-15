@@ -49,7 +49,7 @@ theorem nilPosition (H : Program 1) (types raw gamma param entries count index e
   obtain ⟨hb⟩ := hb
   obtain ⟨hn⟩ := InternalLeastNumberProof.actualNothingBelowZero body alpha index
   exact ⟨Derivation.explosion (Derivation.implicationElimination
-    (InternalRecursionClosureLogicProof.weakenClosed hn Delta) (orderRight index hz hb))⟩
+    (InternalPositiveUnfoldingSupportProof.weakenClosed hn Delta) (orderRight index hz hb))⟩
 
 theorem headPosition (H : Program 1) (gamma entry annotation child expected headEntry headAnnotation head requested : OTerm alpha)
     (he : Nonempty (Derivation body Delta (eqn entry headEntry)))
