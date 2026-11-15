@@ -1,0 +1,71 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorTokenProof.lean:27:20: error: don't know how to synthesize implicit argument `T`
+  @Hilbert.Local.base ?m.115 ctx []
+    (Formula.equal
+      ((x ::ᵥ HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero ::ᵥ nil).get 0)
+      ((x ::ᵥ FinitePrefixTargets.prefixTerm ctag xs ::ᵥ nil).get 0))
+    (Derivation.logical (GorbowPACore.LogicalInstance.reflexive x))
+context:
+n ctx : ℕ
+p : Program n
+ctag atag : ℕ
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+x : Term ctx
+xs : List (Term ctx)
+hih :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero)
+      (FinitePrefixTargets.prefixTerm ctag xs))
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag x (FinitePrefixTargets.prefixTerm ctag xs)) Term.zero)
+      (HistoryLookup.consCall ctag x
+        (HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero)))
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorTokenProof.lean:27:27: error: don't know how to synthesize implicit argument `A`
+  @Derivation.logical ?m.115 ctx (GorbowPACore.LogicalInstance.reflexive x)
+context:
+n ctx : ℕ
+p : Program n
+ctag atag : ℕ
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+x : Term ctx
+xs : List (Term ctx)
+hih :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero)
+      (FinitePrefixTargets.prefixTerm ctag xs))
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag x (FinitePrefixTargets.prefixTerm ctag xs)) Term.zero)
+      (HistoryLookup.consCall ctag x
+        (HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero)))
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorTokenProof.lean:23:16: error: don't know how to synthesize implicit argument `T`
+  @callCongruence ?m.115 (Nat.succ 0).succ ctx [] ctag
+    (x ::ᵥ HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero ::ᵥ nil)
+    (x ::ᵥ FinitePrefixTargets.prefixTerm ctag xs ::ᵥ nil) fun i => ?m.88
+context:
+n ctx : ℕ
+p : Program n
+ctag atag : ℕ
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+x : Term ctx
+xs : List (Term ctx)
+hih :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero)
+      (FinitePrefixTargets.prefixTerm ctag xs))
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag x (FinitePrefixTargets.prefixTerm ctag xs)) Term.zero)
+      (HistoryLookup.consCall ctag x
+        (HistoryAppend.appendCall atag (FinitePrefixTargets.prefixTerm ctag xs) Term.zero)))
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorTokenProof.lean:23:7: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorTokenProof.lean:63:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.ConstructorTokenProof.prefixNil: forbidden axiom dependency sorryAx
