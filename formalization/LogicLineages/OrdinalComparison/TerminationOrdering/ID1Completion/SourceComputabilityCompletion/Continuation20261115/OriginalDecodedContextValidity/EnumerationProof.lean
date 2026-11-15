@@ -33,7 +33,7 @@ theorem tableDecode (n raw : Nat) :
   by_cases hm : raw ∈ tableCodes n
   · obtain ⟨f,hf,he⟩ := List.mem_map.mp hm
     rw [← he,Encodable.encodek]
-    simp only [Option.isSome_some,hm,decide_true]
+    simp only [Option.isSome_some,encodedMember n f,decide_true]
   · cases hd : Encodable.decode (α := Fin n → Fin n → Bool) raw with
     | none => simp only [Option.isSome_none,hm,decide_false]
     | some f =>
