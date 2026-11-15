@@ -1,0 +1,17 @@
+--- SupportProof-LENGTH01
++++ SupportProof-LENGTH02
+@@ -35,11 +35,11 @@
+   intro beta j Theta base hj hb
+   simp only [consGraphRename,zRelabel]
+   have hv' := InternalGraphCompositionFunctionalityProof.renameInto hc j Theta hj
+-  simp only [InternalControlGraphSupportProof.programRename,InternalRawListRecursionSyntaxProof.consTermRename,
+-    InternalRawListRecursionSyntaxProof.emptyRename] at hv'
++  simp only [InternalControlGraphSupportProof.programRename,InternalRecursionGraphStepSyntaxProof.consTermRename,
++    InternalControlGraphSupportProof.emptyRename] at hv'
+   have ho' := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
+   simp only [graph2Rename,zRelabel] at ho'
+-  simp only [xs,InternalRawListRecursionSyntaxProof.consTermRename,InternalRawListRecursionSyntaxProof.emptyRename] at hb
++  simp only [xs,InternalRecursionGraphStepSyntaxProof.consTermRename,InternalControlGraphSupportProof.emptyRename] at hb
+   let xx : Fin 1 → OTerm beta := Fin.cons (previous.relabel j) Fin.elim0
+   have hz := recursionZeroValue (rowBase n) (rowStep n) base xx hb
+   have he := valueUnique (nextRow n) base (output.relabel j)

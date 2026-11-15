@@ -1,0 +1,27 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean
+@@ -31,7 +31,9 @@
+   rw [childAt,sameOfEvaluation,constantEvaluation]
+   change (if evaluate InternalRawListRecursion.lookup (ofFn ![
+     evaluate child (ofFn ![numbersNumber xs,code]),numbersNumber xs]) = 1 then 1 else 0) = _
+-  rw [InternalEqualityTestEvaluationProof.vectorTwo,ExchangeAnswerSlots.NativeProof.lookupEncoded]
++  rw [InternalEqualityTestEvaluationProof.vectorTwo]
++  simp only [Matrix.cons_val_zero,Matrix.cons_val_one]
++  rw [ExchangeAnswerSlots.NativeProof.lookupEncoded]
+   change (if xs.getD (evaluate child (ofFn ![numbersNumber xs,code])) 0 = 1 then 1 else 0) =
+     ((xs.map (fun v => v == 1)).getD (evaluate child (ofFn ![numbersNumber xs,code])) false).toNat
+   rw [ExchangeAnswerSlots.NativeProof.boolGet,Bool.beq_eq_decide_eq]
+@@ -83,11 +85,12 @@
+       (NumberedCodeParserTable.codeNext n (xs.map (fun v => v == 1)) code).toNat := by
+   rcases hp : Nat.unpair code with ⟨t,v⟩
+   rcases t with _ | _ | _ | _ | _ | _ | _ | _ | t
+-  all_goals simp [step,chooseValue,firstValue,secondValue,bothValue,ordinaryValue,numberedValue,
++  all_goals simp only [step,chooseValue,firstValue,secondValue,bothValue,ordinaryValue,numberedValue,
+     constantEvaluation,sameOfEvaluation,payload,rightOfEvaluation,rawValue,
+     NumberedCodeParserTable.codeNext,NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,typesSome,
+     OriginalRawSyntaxTransport.firstValue,OriginalRawSyntaxTransport.secondValue,tagValue,payloadValue,
+     headValue,hp]
++  all_goals simp_all
+   all_goals split_ifs <;> simp_all
+ 
+ theorem nativeCodeNext : Targets.NativeCodeNext := by
