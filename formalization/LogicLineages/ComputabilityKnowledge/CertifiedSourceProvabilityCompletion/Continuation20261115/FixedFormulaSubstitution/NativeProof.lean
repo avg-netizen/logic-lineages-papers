@@ -67,22 +67,22 @@ theorem nativeFormula : Targets.NativeFormula := by
   HistoryCodec.NativeProof.nativeConsAllVectors _
  induction f generalizing depth with
  | equal t v =>
-  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
+  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm _ _ _ e t u,nativeTerm _ _ _ e v u,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
   rfl
  | universalRelation t =>
-  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
+  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm _ _ _ e t u,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
   rfl
  | agent t =>
-  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
+  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm _ _ _ e t u,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
   rfl
  | knowledgeAll t =>
-  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
+  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm _ _ _ e t u,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
   rfl
  | knowledge t v =>
-  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
+  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm _ _ _ e t u,nativeTerm _ _ _ e v u,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
   rfl
  | truth t =>
-  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
+  simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm _ _ _ e t u,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode]
   rfl
  | neg f ih =>
   simp only [formulaProgram,binary,unary,twoEval,constantEval,nativeTerm,appendList,hc,GorbowFormulaSubstitution.substituteFormula,GorbowFormulaPrefixCode.encode,ih]
