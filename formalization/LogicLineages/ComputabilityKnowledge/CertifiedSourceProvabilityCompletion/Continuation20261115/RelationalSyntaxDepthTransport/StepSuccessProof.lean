@@ -33,7 +33,7 @@ theorem positive {n ctx : Nat} (p : Program n) (s e c a : Nat)
  have hout := Hilbert.Local.mp (.mp (.base (transport s e c a _ _
   (liftTerm (liftTerm tok)) (liftTerm (liftTerm result)))) hrow) (.base hi)
  have hb : Derivation T (.imp H (GorbowPACore.weaken (GorbowPACore.weaken Q))) := by
-  simpa only [Q,C,weakenProperty,liftTerm,renameTerm,substitute] using
+  simpa only [Q,C,weakenProperty,liftTerm,renameTerm,substitute,Fin.cases_zero] using
    Hilbert.Local.finish (Hilbert.Local.discharge hout)
  obtain ⟨hinner⟩ := HBQuantifier.existentialElimination T H (GorbowPACore.weaken Q) ⟨hb⟩
  obtain ⟨helim⟩ := HBQuantifier.existentialElimination T (firstBody cp code) Q ⟨hinner⟩
