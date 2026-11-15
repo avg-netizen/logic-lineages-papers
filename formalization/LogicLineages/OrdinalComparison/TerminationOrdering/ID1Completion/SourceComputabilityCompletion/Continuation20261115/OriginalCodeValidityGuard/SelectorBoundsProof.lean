@@ -32,7 +32,7 @@ theorem boundedBranch {k : Nat} (raw control left right : Program k)
     (hl : Bounded raw left) (hr : Bounded raw right) :
     Bounded raw (InternalAcceptance.branch control left right) := by
   intro body alpha Delta xs input output hraw hsel
-  apply programCompositionCases GorbowPRInternalControl.conditional
+  apply programCompositionCases LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.conditional
     (Fin.cons control (Fin.cons left (Fin.cons right Fin.elim0))) output xs _ hsel
   intro beta j ys Theta hj ht hg
   rw [weakRename]
@@ -45,14 +45,14 @@ theorem boundedBranch {k : Nat} (raw control left right : Program k)
     have hv := conditionalAtZero (body := body) (Gamma := A :: Theta) (ys 0) (ys 1) (ys 2)
       ⟨Derivation.hypothesis List.mem_cons_self⟩
     rw [threeTuple] at hv
-    obtain ⟨he⟩ := valueUnique GorbowPRInternalControl.conditional (output.relabel j) (ys 1) ys (withHyp ht A) hv
+    obtain ⟨he⟩ := valueUnique LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.conditional (output.relabel j) (ys 1) ys (withHyp ht A) hv
     obtain ⟨ha⟩ := withHyp ha A
     exact ⟨orderLeft (suc (input.relabel j)) (symm he) ha⟩
   · let A := (eqn (ys 0) z).not
     have hv := conditionalAtNonzero (body := body) (Gamma := A :: Theta) (ys 0) (ys 1) (ys 2)
       ⟨Derivation.hypothesis List.mem_cons_self⟩
     rw [threeTuple] at hv
-    obtain ⟨he⟩ := valueUnique GorbowPRInternalControl.conditional (output.relabel j) (ys 2) ys (withHyp ht A) hv
+    obtain ⟨he⟩ := valueUnique LogicLineages.ComputabilityKnowledge.GorbowPRInternalControl.conditional (output.relabel j) (ys 2) ys (withHyp ht A) hv
     obtain ⟨hb⟩ := withHyp hb A
     exact ⟨orderLeft (suc (input.relabel j)) (symm he) hb⟩
 
