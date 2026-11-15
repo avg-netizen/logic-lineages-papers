@@ -22,7 +22,7 @@ theorem internalActiveStep : Targets.InternalActiveStep test := by
  obtain ⟨_,_,_,hod,_⟩ := kernelNodes p ot valid old arithmetic x ho
  obtain ⟨hpair,_,_,hnd,_⟩ := kernelNodes p nt valid refined arithmetic x hn
  obtain ⟨hparts⟩ := HistoryKernel.SuccessProof.successfulParts p ot ptag ctag valid old arithmetic x ho hp hc index fuel h line rest out
- obtain ⟨hd⟩ := UniformClosedRule13CoreRetention.LeafDispatcher.DispatcherProof.internalDispatcherRetention test n p valid old arithmetic x
+ obtain ⟨hd⟩ := UniformClosedRule12CoreRetention.Generic.LeafDispatcher.DispatcherProof.internalDispatcherRetention test n p valid old arithmetic x
   (dispatcherTag ot valid old arithmetic x) (dispatcherTag nt valid refined arithmetic x) hod hnd ctx index fuel h line
  obtain ⟨hopt⟩ := optionAccepted p nt valid refined arithmetic x hn index fuel h line
  obtain ⟨hnew⟩ := HistoryKernel.NormalProof.kernelEquation p nt ptag ctag valid refined arithmetic x hn hp hc index fuel h line rest

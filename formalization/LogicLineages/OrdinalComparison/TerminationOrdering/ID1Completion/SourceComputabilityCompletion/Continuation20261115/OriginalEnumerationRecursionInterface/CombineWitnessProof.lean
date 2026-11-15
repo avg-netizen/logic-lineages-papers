@@ -39,7 +39,6 @@ theorem fieldsSubst {beta : Type} (n : Nat)
     funext i
     fin_cases i <;> rfl
   rw [hxs]
-  rfl
 
 theorem matrixWitness (n : Nat) (out answers ts hs ls tb vb : OTerm alpha) (ys : Fin 3 → OTerm alpha) :
     (matrix n out answers ts hs ls tb vb).subst (Sum.elim Term.var (fun i => emb (ys i))) =
