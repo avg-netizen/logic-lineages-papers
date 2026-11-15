@@ -53,13 +53,14 @@ noncomputable def injectConstructor {T : Sentence → Prop} {ctx : Nat} {G : Lis
  (h : Hilbert.Local T ctx G (constructorCase ptag ctag l r task tok added ctor)) :
  Hilbert.Local T ctx G (xs.foldr (fun c rest => .disj (constructorCase ptag ctag l r task tok added c) rest)
   (indexCase dtag l r task tok added)) := by
+ classical
  induction xs with
  | nil => simp at hm
  | cons c xs ih =>
-  rcases List.mem_cons.mp hm with he | ht
+  by_cases he : ctor = c
   · subst c
-    exact .mp (.base (.logical (.orIntroLeft _ _))) h
-  · exact .mp (.base (.logical (.orIntroRight _ _))) (ih ht)
+    exact .mp (.base (.logical (.orLeft _ _))) h
+  · exact .mp (.base (.logical (.orRight _ _))) (ih ((List.mem_cons.mp hm).resolve_left he))
 noncomputable def injectIndex {T : Sentence → Prop} {ctx : Nat} {G : List (Formula ctx)}
  (ptag ctag dtag l r : Nat) (task tok added : Term ctx) (xs : List Constructor)
  (h : Hilbert.Local T ctx G (indexCase dtag l r task tok added)) :
@@ -67,6 +68,6 @@ noncomputable def injectIndex {T : Sentence → Prop} {ctx : Nat} {G : List (For
   (indexCase dtag l r task tok added)) := by
  induction xs with
  | nil => exact h
- | cons c xs ih => exact .mp (.base (.logical (.orIntroRight _ _))) ih
+ | cons c xs ih => exact .mp (.base (.logical (.orRight _ _))) ih
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ExpansionRecognitionProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ExpansionRecognitionProof
