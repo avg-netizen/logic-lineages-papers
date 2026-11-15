@@ -61,7 +61,7 @@ theorem atControl (U : Fin 19 → Program 3) (V : Program 3)
   · have hv0 := outputTransport V control z ![node,answers,param]
       ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hv (eqn control z))
     have hn := zeroBranchIntro V (InternalLessThan.constantOne 3) _ (suc z) ![node,answers,param] hv0
-      (constantOneValue ![node,answers,param])
+      (InternalLessThanSupportProof.oneConstantValue ![node,answers,param])
     exact unequalZero out z (valueUnique (TransparentExchangeLayer.optional U V) out (suc z) ![node,answers,param]
       (withHyp ho (eqn control z)) hn)
   · intro beta j Theta k hj he
