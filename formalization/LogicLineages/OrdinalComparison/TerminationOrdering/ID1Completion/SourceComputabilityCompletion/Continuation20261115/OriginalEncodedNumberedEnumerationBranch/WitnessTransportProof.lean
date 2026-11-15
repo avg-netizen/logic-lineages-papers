@@ -25,7 +25,7 @@ theorem witnessSubst {alpha beta : Type} (n : Nat)
     (InternalFiniteBlocks.block (witnessMatrix n labels heads types bases tuples extras code)).relabel j =
     InternalFiniteBlocks.block (witnessMatrix n (labels.relabel j) (heads.relabel j) (types.relabel j)
       (bases.relabel j) (tuples.relabel j) (extras.relabel j) (code.relabel j)) := by
-  rw [formulaRelabelAsSubst]
+  rw [InternalSourceIntroductionSyntaxProof.formulaRelabelAsSubst]
   change (InternalFiniteBlocks.block (witnessMatrix n labels heads types bases tuples extras code)).subst (fun a => emb (.var (j a))) = _
   rw [witnessSubst]
   simp only [← termRelabelAsSubst]
