@@ -65,7 +65,7 @@ theorem positive (node param deps child childRank f : OTerm alpha)
   have hdj := InternalGraphCompositionFunctionalityProof.renameInto hd j Theta hj
   have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj
   have hcrj := InternalGraphCompositionFunctionalityProof.renameInto hcr j Theta hj
-  simp only [graph2Rename,sucRelabel,InternalTagArithmeticSyntaxProof.numeralRelabel] at hrj hdj hmj hcrj
+  simp only [graph2Rename,sucRelabel,OriginalRawSyntaxTransportInternalConstructorSelectorBoundsProof.numeralRelabel] at hrj hdj hmj hcrj
   exact observed (node.relabel j) (param.relabel j) (deps.relabel j) (child.relabel j)
     (childRank.relabel j) (f.relabel j) (ys 0) (ys 1) (ys 2) (ys 3)
     hrj hdj hmj hcrj (hq 0) (hq 1) (hq 2) (hq 3)
