@@ -1,0 +1,13 @@
+# Genuine decoded cross-root cache value transport
+
+Exact1 freeze only. Uses literal existing ExchangeGraphRecursion.graph with decoded original R/D, ConcreteHeadMoveLayer.layer n arity V and first-match Option lookup. Same n, arity, V, node and parameter on both roots; no guard calibration is assumed. Source rank differs by root and is obtained from actual graph observations, never substituted raw node/seed. Each index is bounded by that actual root rank, subtraction depth is actual, membership is actual, and table is actual successor graph.
+
+## Internal proof duties
+Use original internal strong induction on an internally queried actual R(node,param) value. The private invariant universally quantifies node, parameter, both complete root/stage tuples and lookup result, with actual node-rank graph as an internal premise. It is closed by strong induction and node-rank totality at the public endpoint. No IH or agreement formula appears in the public target.
+
+Recover actual previous graphs and current stage graph on both sides. Actual frontier rank/capacity establishes R(node)≤each current index. For every actual D(node,param) member, introduce actual child rank and use paid actual R decrease. If an index is zero, capacity plus strict decrease excludes every dependency member; derive actual dependency code zero via nonzero-list head membership. Both full answer lists then equal empty, including empty prior stage. If indices are successors, internally introduce predecessors and subtraction alignment; successor frontier coverage gives child membership in actual previous frontiers and index bounds. Apply smaller-rank IH to every actual child Option lookup to construct the allBlock lookupAgreement formula on the actual dependency list. No pointwise agreement is assumed externally.
+
+Use OriginalMapGraphTransport to equate full ordered mapGraph outputs, preserving duplicates and omission. Only AFTER these complete input lists agree does ordinary program functionality identify same layer outputs for common node/param/V. Literal optional nonfailure and ExchangeStageCoverage identify each current first-match Option lookup with the same successor payload. CacheDomain supplies presence when needed; Some0=1 remains distinct from absent0.
+
+## Scope and limitations
+No argument-entry surrogate, typed-code assumptions, native list images, rank reflection, arbitrary guard equality, different parameters/V or externally supplied dependency agreement. Program ASTs remain unchanged. This proves cache-value coherence for the fixed existing layer AST family; it does not calibrate V against original decoded window, calibrate the layer to original source semantics, install a complete supplier tuple, or prove E/I/C/accessibility.

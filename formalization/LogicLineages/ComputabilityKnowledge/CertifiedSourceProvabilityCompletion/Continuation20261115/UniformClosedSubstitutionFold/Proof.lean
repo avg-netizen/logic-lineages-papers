@@ -5,7 +5,7 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionFold.Proof
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof SixSol20261113 List.Vector
 open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.DispatcherSupportProof
-theorem runCongruence {ctx : Nat} {T : Theory} tag (count a b raw : Term ctx)
+theorem runCongruence {ctx : Nat} {T : Sentence → Prop} tag (count a b raw : Term ctx)
  (h : Derivation T (.equal a b)) :
  Derivation T (.equal (iterateCall tag count a raw) (iterateCall tag count b raw)) := by
  apply Hilbert.Local.finish
