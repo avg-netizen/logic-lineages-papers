@@ -1,0 +1,137 @@
+--- FULL06/ConsProof.lean
++++ FULL07/ConsProof.lean
+@@ -49,7 +49,7 @@
+     (hn2 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next2 (suc c.s2.depth) c.s2.seed param)))
+     (hr : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode rest c.tail z)))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases InternalListCodec.consCode (Fin.cons c.head (Fin.cons rest Fin.elim0)) _
++  apply InternalAcceptanceSupportProof.programCases InternalListCodec.consCode (Fin.cons c.head (Fin.cons rest Fin.elim0)) _
+   intro beta j Theta deps hj hx
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
+@@ -77,7 +77,7 @@
+     (hn1 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next1 (suc c.s1.depth) c.s1.seed param)))
+     (hn2 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next2 (suc c.s2.depth) c.s2.seed param)))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases InternalListCodec.consCode (Fin.cons c.tail (Fin.cons z Fin.elim0)) _
++  apply InternalAcceptanceSupportProof.programCases InternalListCodec.consCode (Fin.cons c.tail (Fin.cons z Fin.elim0)) _
+   intro beta j Theta rest hj hx
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
+@@ -102,7 +102,7 @@
+     (ho2 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old2 c.s2.index c.s2.seed param)))
+     (hn1 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next1 (suc c.s1.depth) c.s1.seed param)))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s2.depth) (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
++  apply InternalAcceptanceSupportProof.programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s2.depth) (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
+   intro beta j Theta next2 hj hx
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
+@@ -124,7 +124,7 @@
+     (ho1 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old1 c.s1.index c.s1.seed param)))
+     (ho2 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old2 c.s2.index c.s2.seed param)))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s1.depth) (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
++  apply InternalAcceptanceSupportProof.programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s1.depth) (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
+   intro beta j Theta next1 hj hx
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
+@@ -143,7 +143,7 @@
+     (hi2 : Nonempty (Derivation body Delta (eqn c.s2.index (suc pred2))))
+     (ho1 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old1 c.s1.index c.s1.seed param)))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
++  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
+   intro beta j Theta old2 hj hx
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
+@@ -159,7 +159,7 @@
+     (hi1 : Nonempty (Derivation body Delta (eqn c.s1.index (suc pred1))))
+     (hi2 : Nonempty (Derivation body Delta (eqn c.s2.index (suc pred2))))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
++  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
+   intro beta j Theta old1 hj hx
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
+--- FULL06/CoreProof.lean
++++ FULL07/CoreProof.lean
+@@ -56,7 +56,7 @@
+     (hn : Nonempty (Derivation body Delta (eqn tag (numeral 7)).not))
+     (ho1 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old1 c.s1.index c.s1.seed param))) :
+     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
++  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
+   intro beta j Theta old2 hj ho2
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename] at ho2
+@@ -73,7 +73,7 @@
+     (ht : Nonempty (Derivation body Delta (graph1 InternalUnpair.left tag raw)))
+     (hn : Nonempty (Derivation body Delta (eqn tag (numeral 7)).not)) :
+     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
++  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
+   intro beta j Theta old1 hj ho1
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename] at ho1
+@@ -100,7 +100,7 @@
+ 
+ theorem close {raw param : OTerm alpha} (c : Input body Delta raw param) :
+     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+-  apply programCases InternalUnpair.left (Fin.cons raw Fin.elim0) _
++  apply InternalAcceptanceSupportProof.programCases InternalUnpair.left (Fin.cons raw Fin.elim0) _
+   intro beta j Theta tag hj ht
+   rw [graph2Rename]
+   simp only [consTermRename,emptyRename] at ht
+--- FULL06/PresenceProof.lean
++++ FULL07/PresenceProof.lean
+@@ -27,7 +27,7 @@
+       (∀ p ∈ Delta, p.relabel j ∈ Theta) →
+       Nonempty (Derivation body Theta (graph2 ExchangeMapGraph.lookup (suc value) (s.table.relabel j) (raw.relabel j))) →
+       Nonempty (Derivation body Theta (psi.relabel j))) : Nonempty (Derivation body Delta psi) := by
+-  apply programCases ExchangeMapGraph.lookup (Fin.cons s.table (Fin.cons raw Fin.elim0)) _
++  apply InternalAcceptanceSupportProof.programCases ExchangeMapGraph.lookup (Fin.cons s.table (Fin.cons raw Fin.elim0)) _
+   intro beta j Theta found hj hf
+   simp only [consTermRename,emptyRename] at hf
+   have sn := s.rename j Theta hj
+@@ -52,8 +52,7 @@
+     (hl : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found s1.table raw))) :
+     Nonempty (Derivation body Delta (InductionDefinitions.fields raw param s1.index s1.seed s1.depth s1.frontier s1.table
+       s2.index s2.seed s2.depth s2.frontier s2.table found)) :=
+-  andIntro s1.bounded (andIntro s1.subtraction (andIntro s1.front (andIntro s1.member (andIntro s1.tableGraph
+-    (andIntro s2.bounded (andIntro s2.subtraction (andIntro s2.front (andIntro s2.member (andIntro s2.tableGraph hl)))))))))
++  andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (s1.bounded) s1.subtraction) s1.front) s1.member) s1.tableGraph) s2.bounded) s2.subtraction) s2.front) s2.member) s2.tableGraph) hl
+ 
+ theorem smallerApply {raw child param : OTerm alpha} (s1 s2 : Side body Delta child param) (found : OTerm alpha)
+     (hi : Nonempty (Derivation body Delta (InductionDefinitions.BelowRaw raw)))
+--- FULL06/Proof.lean
++++ FULL07/Proof.lean
+@@ -44,17 +44,17 @@
+   let Theta := fields r param index1 seed1 depth1 frontier1 table1 index2 seed2 depth2 frontier2 table2 found :: Delta.map (fun q => q.relabel Sum.inl)
+   change Derivation body Theta (result r param index1 seed1 depth1 frontier1 table1 index2 seed2 depth2 frontier2 table2 found)
+   have hf : Nonempty (Derivation body Theta (fields r param index1 seed1 depth1 frontier1 table1 index2 seed2 depth2 frontier2 table2 found)) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+-  have h0 := andLeft (hf)
+-  have h1 := andLeft (andRight (hf))
+-  have h2 := andLeft (andRight (andRight (hf)))
+-  have h3 := andLeft (andRight (andRight (andRight (hf))))
+-  have h4 := andLeft (andRight (andRight (andRight (andRight (hf)))))
+-  have h5 := andLeft (andRight (andRight (andRight (andRight (andRight (hf))))))
+-  have h6 := andLeft (andRight (andRight (andRight (andRight (andRight (andRight (hf)))))))
+-  have h7 := andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf))))))))
+-  have h8 := andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf)))))))))
+-  have h9 := andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf))))))))))
+-  have h10 := andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf))))))))))
++  have h0 := andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (hf))))))))))
++  have h1 := andRight (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (hf))))))))))
++  have h2 := andRight (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (hf)))))))))
++  have h3 := andRight (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (hf))))))))
++  have h4 := andRight (andLeft (andLeft (andLeft (andLeft (andLeft (andLeft (hf)))))))
++  have h5 := andRight (andLeft (andLeft (andLeft (andLeft (andLeft (hf))))))
++  have h6 := andRight (andLeft (andLeft (andLeft (andLeft (hf)))))
++  have h7 := andRight (andLeft (andLeft (andLeft (hf))))
++  have h8 := andRight (andLeft (andLeft (hf)))
++  have h9 := andRight (andLeft (hf))
++  have h10 := andRight (hf)
+   have hij := InternalGraphCompositionFunctionalityProof.renameInto hi (Sum.inl : alpha → alpha ⊕ Fin 12) Theta (by
+     intro q hq
+     exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))

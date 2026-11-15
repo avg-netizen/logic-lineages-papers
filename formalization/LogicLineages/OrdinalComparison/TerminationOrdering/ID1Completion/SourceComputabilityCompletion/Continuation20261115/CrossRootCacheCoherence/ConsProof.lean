@@ -49,7 +49,7 @@ theorem atDepsInput {raw param : OTerm alpha} (c : ConsInput body Delta raw para
     (hn2 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next2 (suc c.s2.depth) c.s2.seed param)))
     (hr : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode rest c.tail z)))
     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases InternalListCodec.consCode (Fin.cons c.head (Fin.cons rest Fin.elim0)) _
+  apply InternalAcceptanceSupportProof.programCases InternalListCodec.consCode (Fin.cons c.head (Fin.cons rest Fin.elim0)) _
   intro beta j Theta deps hj hx
   rw [graph2Rename]
   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
@@ -77,7 +77,7 @@ theorem atRestInput {raw param : OTerm alpha} (c : ConsInput body Delta raw para
     (hn1 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next1 (suc c.s1.depth) c.s1.seed param)))
     (hn2 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next2 (suc c.s2.depth) c.s2.seed param)))
     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases InternalListCodec.consCode (Fin.cons c.tail (Fin.cons z Fin.elim0)) _
+  apply InternalAcceptanceSupportProof.programCases InternalListCodec.consCode (Fin.cons c.tail (Fin.cons z Fin.elim0)) _
   intro beta j Theta rest hj hx
   rw [graph2Rename]
   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
@@ -102,7 +102,7 @@ theorem atNext2Input {raw param : OTerm alpha} (c : ConsInput body Delta raw par
     (ho2 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old2 c.s2.index c.s2.seed param)))
     (hn1 : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) next1 (suc c.s1.depth) c.s1.seed param)))
     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s2.depth) (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
+  apply InternalAcceptanceSupportProof.programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s2.depth) (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
   intro beta j Theta next2 hj hx
   rw [graph2Rename]
   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
@@ -124,7 +124,7 @@ theorem atNext1Input {raw param : OTerm alpha} (c : ConsInput body Delta raw par
     (ho1 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old1 c.s1.index c.s1.seed param)))
     (ho2 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old2 c.s2.index c.s2.seed param)))
     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s1.depth) (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
+  apply InternalAcceptanceSupportProof.programCases (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Fin.cons (suc c.s1.depth) (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
   intro beta j Theta next1 hj hx
   rw [graph2Rename]
   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
@@ -143,7 +143,7 @@ theorem atOld2Input {raw param : OTerm alpha} (c : ConsInput body Delta raw para
     (hi2 : Nonempty (Derivation body Delta (eqn c.s2.index (suc pred2))))
     (ho1 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old1 c.s1.index c.s1.seed param)))
     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
+  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
   intro beta j Theta old2 hj hx
   rw [graph2Rename]
   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx
@@ -159,7 +159,7 @@ theorem atOld1Input {raw param : OTerm alpha} (c : ConsInput body Delta raw para
     (hi1 : Nonempty (Derivation body Delta (eqn c.s1.index (suc pred1))))
     (hi2 : Nonempty (Derivation body Delta (eqn c.s2.index (suc pred2))))
     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
+  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
   intro beta j Theta old1 hj hx
   rw [graph2Rename]
   simp only [consTermRename,emptyRename,sucRelabel,zRelabel] at hx

@@ -56,7 +56,7 @@ theorem nonConsAtOld1 {raw param : OTerm alpha} (c : Input body Delta raw param)
     (hn : Nonempty (Derivation body Delta (eqn tag (numeral 7)).not))
     (ho1 : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph old1 c.s1.index c.s1.seed param))) :
     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
+  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s2.index (Fin.cons c.s2.seed (Fin.cons param Fin.elim0))) _
   intro beta j Theta old2 hj ho2
   rw [graph2Rename]
   simp only [consTermRename,emptyRename] at ho2
@@ -73,7 +73,7 @@ theorem nonCons {raw param : OTerm alpha} (c : Input body Delta raw param) (tag 
     (ht : Nonempty (Derivation body Delta (graph1 InternalUnpair.left tag raw)))
     (hn : Nonempty (Derivation body Delta (eqn tag (numeral 7)).not)) :
     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
+  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.graph (Fin.cons c.s1.index (Fin.cons c.s1.seed (Fin.cons param Fin.elim0))) _
   intro beta j Theta old1 hj ho1
   rw [graph2Rename]
   simp only [consTermRename,emptyRename] at ho1
@@ -100,7 +100,7 @@ theorem atTag {raw param : OTerm alpha} (c : Input body Delta raw param) (tag : 
 
 theorem close {raw param : OTerm alpha} (c : Input body Delta raw param) :
     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
-  apply programCases InternalUnpair.left (Fin.cons raw Fin.elim0) _
+  apply InternalAcceptanceSupportProof.programCases InternalUnpair.left (Fin.cons raw Fin.elim0) _
   intro beta j Theta tag hj ht
   rw [graph2Rename]
   simp only [consTermRename,emptyRename] at ht

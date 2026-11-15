@@ -27,7 +27,7 @@ theorem presentCases {raw param : OTerm alpha} (s : Side body Delta raw param) (
       (∀ p ∈ Delta, p.relabel j ∈ Theta) →
       Nonempty (Derivation body Theta (graph2 ExchangeMapGraph.lookup (suc value) (s.table.relabel j) (raw.relabel j))) →
       Nonempty (Derivation body Theta (psi.relabel j))) : Nonempty (Derivation body Delta psi) := by
-  apply programCases ExchangeMapGraph.lookup (Fin.cons s.table (Fin.cons raw Fin.elim0)) _
+  apply InternalAcceptanceSupportProof.programCases ExchangeMapGraph.lookup (Fin.cons s.table (Fin.cons raw Fin.elim0)) _
   intro beta j Theta found hj hf
   simp only [consTermRename,emptyRename] at hf
   have sn := s.rename j Theta hj
@@ -52,8 +52,7 @@ theorem packFields {raw param : OTerm alpha} (s1 s2 : Side body Delta raw param)
     (hl : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found s1.table raw))) :
     Nonempty (Derivation body Delta (InductionDefinitions.fields raw param s1.index s1.seed s1.depth s1.frontier s1.table
       s2.index s2.seed s2.depth s2.frontier s2.table found)) :=
-  andIntro s1.bounded (andIntro s1.subtraction (andIntro s1.front (andIntro s1.member (andIntro s1.tableGraph
-    (andIntro s2.bounded (andIntro s2.subtraction (andIntro s2.front (andIntro s2.member (andIntro s2.tableGraph hl)))))))))
+  andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (andIntro (s1.bounded) s1.subtraction) s1.front) s1.member) s1.tableGraph) s2.bounded) s2.subtraction) s2.front) s2.member) s2.tableGraph) hl
 
 theorem smallerApply {raw child param : OTerm alpha} (s1 s2 : Side body Delta child param) (found : OTerm alpha)
     (hi : Nonempty (Derivation body Delta (InductionDefinitions.BelowRaw raw)))
