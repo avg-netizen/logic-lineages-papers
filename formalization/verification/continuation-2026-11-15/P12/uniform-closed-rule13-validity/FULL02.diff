@@ -1,0 +1,11 @@
+--- ValidityProof.before
++++ ValidityProof.after
+@@ -50,7 +50,7 @@
+  obtain ⟨hgraph⟩ := GraphProof.exactConclusionGraph n p I.toGraphInstallation ctx f t
+  have hA : Hilbert.Local T ctx G A := .hypothesis List.mem_cons_self
+  have heqConclusion := Hilbert.Local.mp (.base hgraph) hA
+- have hcall := LiteralRawMP.DispatcherSupportProof.callCongruence I.fval
++ have hcall := LiteralRawMP.DispatcherSupportProof.callCongruence (T := T) (G := G) I.fval
+   ((.zero : Term ctx) ::ᵥ compiledConclusion I.toGraphInstallation f t ::ᵥ nil)
+   ((.zero : Term ctx) ::ᵥ expandedConclusion I.toGraphInstallation f t ::ᵥ nil) (fun i => by
+    cases i using Fin.cases with
