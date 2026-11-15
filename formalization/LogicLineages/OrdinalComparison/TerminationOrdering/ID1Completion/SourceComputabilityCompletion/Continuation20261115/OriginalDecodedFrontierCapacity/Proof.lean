@@ -57,7 +57,7 @@ theorem previousFrontier : Targets.InternalPreviousFrontier := by
   rw [InternalControlGraphSupportProof.programRename] at hfj
   have hfxs : (fun i => (![suc index,previous,seed,param] i).relabel j) = ![suc (index.relabel j),previous.relabel j,seed.relabel j,param.relabel j] := by
     funext i
-    fin_cases i <;> rfl
+    fin_cases i <;> simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, sucRelabel]
   rw [hfxs] at hfj
   have hpj := InternalGraphCompositionFunctionalityProof.renameInto hp j Theta hj
   rw [InternalControlGraphSupportProof.programRename] at hpj

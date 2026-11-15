@@ -68,7 +68,7 @@ theorem capacityAt (n : Nat) (index seed param depth frontier node seedRank node
   have ht := PrimaryUncoveredCount.OrderProof.transport (OrdinaryArithmetic.addTerm depth nodeRank) seedRank
     (OrdinaryArithmetic.addTerm depth nodeRank) (OrdinaryArithmetic.addTerm depth index)
     ⟨InternalTagArithmeticSupportProof.refl _⟩
-    ⟨InternalTagArithmeticSupportProof.trans (InternalTagArithmeticSupportProof.symm he) (InternalAdditionLawsProof.commutativity index depth)⟩ hbound
+    ⟨InternalTagArithmeticSupportProof.trans (InternalTagArithmeticSupportProof.symm he) (InternalAdditionCancellationProof.commutativity index depth)⟩ hbound
   exact FrontierCapacity.Proof.boundedCancel depth nodeRank index ht
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedFrontierCapacity.SupportProof
