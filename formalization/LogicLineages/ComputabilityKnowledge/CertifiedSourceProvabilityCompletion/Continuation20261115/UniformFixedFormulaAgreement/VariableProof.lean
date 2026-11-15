@@ -30,7 +30,7 @@ theorem traverses {n ctx : Nat} (p : Program n) (I : Installation p)
  have hsucc := localUnary (.succ (.var 0)) _ _ (Hilbert.Local.base (Gamma := []) hrows)
  have hsucc' : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx []
   (.equal (.succ (output I.ptag I.ctag I.atag (.term 0) bound rest)) state) := by
-  simpa only [GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
+  simpa only [RelationalSyntaxDepthTransport.ConstructorStepTargets.output,RelationalSyntaxDepthTransport.ConstructorStepTargets.tasks,StackProof.prepend,GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
  have hpacked := HistoryIteratorSuffix.ReconstructionProof.pairCongruence
   (T := GorbowPRNumeralCalculation.Theory p) (G := []) I.ptag _ out0 state out0 hsucc'
   (.base (.logical (.reflexive _)))

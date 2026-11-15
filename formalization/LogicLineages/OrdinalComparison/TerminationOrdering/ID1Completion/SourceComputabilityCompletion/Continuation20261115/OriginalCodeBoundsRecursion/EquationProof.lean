@@ -7,7 +7,8 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
-open InternalTagArithmeticSupportProof InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel eqnRelabel)
+open InternalTagArithmeticSupportProof
+open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel eqnRelabel)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open SourceComputabilityFormulaSupportProof (numeral)

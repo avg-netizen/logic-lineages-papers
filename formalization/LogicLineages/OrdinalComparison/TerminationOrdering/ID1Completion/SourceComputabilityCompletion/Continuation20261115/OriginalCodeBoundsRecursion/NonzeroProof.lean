@@ -8,7 +8,8 @@ open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
 open InternalRecursionGraphStepSyntaxProof
-open InternalTagArithmeticSupportProof InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel eqnRelabel)
+open InternalTagArithmeticSupportProof
+open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel eqnRelabel)
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}

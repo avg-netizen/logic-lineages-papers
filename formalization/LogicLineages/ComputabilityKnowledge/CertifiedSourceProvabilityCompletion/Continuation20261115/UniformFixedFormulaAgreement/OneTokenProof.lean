@@ -28,7 +28,7 @@ theorem constructor {n ctx : Nat} (p : Program n) (I : Installation p)
  have hsucc' : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx []
   (.equal (.succ (output I.ptag I.ctag I.atag ctor bound rest))
    (.succ (StackProof.prepend I.ctag (tasks I.ptag bound ctor) rest))) := by
-  simpa only [GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
+  simpa only [RelationalSyntaxDepthTransport.ConstructorStepTargets.output,GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
  have hp := HistoryIteratorSuffix.ReconstructionProof.pairCongruence
   (T := GorbowPRNumeralCalculation.Theory p) (G := []) I.ptag _ _ _ _ hsucc'
   (.base (.logical (.reflexive _)))
