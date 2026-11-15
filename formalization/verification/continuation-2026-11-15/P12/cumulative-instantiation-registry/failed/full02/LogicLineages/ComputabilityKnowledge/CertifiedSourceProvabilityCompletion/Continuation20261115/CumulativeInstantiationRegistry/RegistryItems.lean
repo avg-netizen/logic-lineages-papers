@@ -1,0 +1,220 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.EqualityInstantiationCoreRetention.StatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.UniversalArgumentEvaluation.StatementChecks
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNumericSearch
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNumericSearch
+def items (test : Program 2) : List Packed :=
+ [⟨2,test⟩,
+  ⟨2,search test⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNumericSearch
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftAcceptance
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulLeftAcceptance
+def items (old : Program 1) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNumericSearch.items RawMulLeftReplace.candidateTest ++ [⟨3,RawMulLeftReplace.lineConstructor⟩,
+  ⟨1,RawMulLeftReplace.logicalLeaf old⟩,
+  ⟨2,HistoryCodec.pair⟩,
+  ⟨2,HistoryCodec.cons⟩,
+  ⟨2,HistoryAppend.append⟩,
+  ⟨1,HistoryLengthOffset.lengthProgram⟩,
+  ⟨2,HistoryLookup.drop⟩,
+  ⟨1,TwoSol20261113.ReflexivityRecognizer.termValidator⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftAcceptance
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftDispatcher
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulLeftDispatcher
+def items (old arithmetic : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftAcceptance.items old ++ [⟨2,LiteralSyntaxValidator.formulaValidator⟩,
+  ⟨1,LiteralSyntaxValidator.lineValidator⟩,
+  ⟨4,dispatcher old arithmetic x⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftDispatcher
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCertificate
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulLeftCertificate
+def items (old arithmetic : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftDispatcher.items old arithmetic x ++ [⟨4,SixSol20261112.HistoryMachine.iterator (kernel old arithmetic x)⟩,
+  ⟨5,checker old arithmetic x⟩,
+  ⟨5,verifier old arithmetic x⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCertificate
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCongruence
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulLeftCongruence
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCertificate.items (previousLogical old) a x ++ [⟨1,RawMulRightCongruence.previousLogical old⟩,
+  ⟨1,RawRightReplace.logicalLeaf (RawCumulativeLogical.logical old)⟩,
+  ⟨1,RawAddLeftCongruence.previousLogical old⟩,
+  ⟨1,RawCumulativeLogical.logical old⟩,
+  ⟨1,previousLogical old⟩,
+  ⟨1,RawReflexivity.lineConstructor⟩,
+  ⟨2,HistoryLookup.lookup⟩,
+  ⟨4,LiteralRawMP.constructor⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCongruence
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawRetainedMulRightCongruence
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawRetainedMulRightCongruence
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCongruence.items old a x ++ [⟨3,RawMulRightReplace.lineConstructor⟩,
+  ⟨2,RawMulRightReplace.candidateTest⟩,
+  ⟨3,RawSuffixSearch.search RawMulRightReplace.candidateTest⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawRetainedMulRightCongruence
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestTransitivity
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestTransitivity
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawRetainedMulRightCongruence.items old a x ++ [⟨3,RawRightReplace.lineConstructor⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestTransitivity
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestSuccCongruence
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestSuccCongruence
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestTransitivity.items old a x ++ [⟨2,RawSuccReplace.lineConstructor⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestSuccCongruence
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddition
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestAddition
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestSuccCongruence.items old (arithmetic a) x ++ [⟨1,RawAddZero.lineConstructor⟩,
+  ⟨2,RawAddSucc.lineConstructor⟩,
+  ⟨1,RawCumulativeArithmetic.arithmetic a⟩,
+  ⟨1,arithmetic a⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddition
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAdditionIteration
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestAdditionIteration
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddition.items old a x ++ [⟨1,HistoryDecoder.decoder true⟩,
+  ⟨1,HistoryDecoder.decoder false⟩,
+  ⟨1,base⟩,
+  ⟨2,step⟩,
+  ⟨2,iterator⟩,
+  ⟨1,LiteralNumeralPrefix.numeralCode⟩,
+  ⟨2,successorPrefix⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAdditionIteration
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNewestMultiplicationComputation
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNewestMultiplicationComputation
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAdditionIteration.items old a x ++ [⟨1,RawMultiplication.Zero.lineConstructor⟩,
+  ⟨2,RawMultiplication.Succ.lineConstructor⟩,
+  ⟨1,RawMulNewestSuccIteration.step⟩,
+  ⟨2,RawMulNewestSuccIteration.iterator⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNewestMultiplicationComputation
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNewestMultiplicationIteration
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNewestMultiplicationIteration
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNewestMultiplicationComputation.items old a x ++ [⟨2,HistoryCodec.add⟩,
+  ⟨1,base⟩,
+  ⟨2,step⟩,
+  ⟨2,iterator⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNewestMultiplicationIteration
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMultiplicationEvaluation
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationEvaluation
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNewestMultiplicationIteration.items old a x ++ []
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMultiplicationEvaluation
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddReplacements
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestAddReplacements
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMultiplicationEvaluation.items old a x ++ [⟨3,RawAddRightReplace.lineConstructor⟩,
+  ⟨2,RawAddRightReplace.candidateTest⟩,
+  ⟨3,RawSuffixSearch.search RawAddRightReplace.candidateTest⟩,
+  ⟨3,RawAddLeftReplace.lineConstructor⟩,
+  ⟨2,RawAddLeftReplace.candidateTest⟩,
+  ⟨2,RawNumericSearch.search RawAddLeftReplace.candidateTest⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddReplacements
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddCongruences
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestAddCongruences
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddReplacements.items old a x ++ []
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddCongruences
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAdditionEvaluation
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestAdditionEvaluation
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAddCongruences.items old a x ++ []
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAdditionEvaluation
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawUnaryEvaluation
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUnaryEvaluation
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulNewestAdditionEvaluation.items old a x ++ []
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawUnaryEvaluation
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawAdditionProducer
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionProducer
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawUnaryEvaluation.items old a x ++ [⟨6,producer⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawAdditionProducer
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMultiplicationProducer
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationProducer
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawAdditionProducer.items old a x ++ [⟨6,producer⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMultiplicationProducer
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_ArithmeticTemplateEvaluation
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.ArithmeticTemplateEvaluation
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMultiplicationProducer.items old a x ++ [⟨3,RawSuccessorProducer.producer⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_ArithmeticTemplateEvaluation
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawUniversalCongruence
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCongruence
+def items (old a : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_ArithmeticTemplateEvaluation.items old a x ++ [⟨2,RawUniversalReplace.lineConstructor⟩,
+  ⟨1,RawUniversalReplace.logicalLeaf (previousLogical old)⟩,
+  ⟨4,RawUniversalReplaceDispatcher.dispatcher (previousLogical old) (RawMulNewestAddition.arithmetic a) x⟩,
+  ⟨4,SixSol20261112.HistoryMachine.iterator (RawUniversalReplaceCertificate.kernel (previousLogical old) (RawMulNewestAddition.arithmetic a) x)⟩,
+  ⟨5,RawUniversalReplaceCertificate.checker (previousLogical old) (RawMulNewestAddition.arithmetic a) x⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawUniversalCongruence
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawEqualityInstantiationDispatcher
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher
+def items (a b : Term 1) (old arithmetic : Program 1) (x : Program 3) : List Packed :=
+ [⟨1,RawEqualityInstantiation.line a b⟩,
+  ⟨2,HistoryCodec.pair⟩,
+  ⟨2,HistoryCodec.cons⟩,
+  ⟨2,HistoryAppend.append⟩,
+  ⟨1,TwoSol20261113.ReflexivityRecognizer.termValidator⟩,
+  ⟨2,LiteralSyntaxValidator.formulaValidator⟩,
+  ⟨1,LiteralSyntaxValidator.lineValidator⟩,
+  ⟨1,RawEqualityInstantiationAcceptance.logicalLeaf a b old⟩,
+  ⟨4,dispatcher a b old arithmetic x⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawEqualityInstantiationDispatcher
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawEqualityInstantiationCertificate
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationCertificate
+def items (a b : Term 1) (old arithmetic : Program 1) (x : Program 3) : List Packed :=
+ LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawEqualityInstantiationDispatcher.items a b old arithmetic x ++ [⟨4,SixSol20261112.HistoryMachine.iterator (kernel a b old arithmetic x)⟩,
+  ⟨5,checker a b old arithmetic x⟩,
+  ⟨5,verifier a b old arithmetic x⟩]
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawEqualityInstantiationCertificate

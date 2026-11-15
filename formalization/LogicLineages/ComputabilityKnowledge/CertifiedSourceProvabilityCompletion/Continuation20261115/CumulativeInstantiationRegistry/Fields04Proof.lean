@@ -80,7 +80,7 @@ theorem installed (a b : Term 1) (old arithmetic : Program 1) (x : Program 3) {n
  obtain ⟨qctag,hqc⟩ := h (⟨5,checker a b old arithmetic x⟩ : Packed) (by simp [items])
  obtain ⟨utag,hu⟩ := h (⟨5,verifier a b old arithmetic x⟩ : Packed) (by simp [items])
  exact ⟨{
-  toRawEqualityInstantiationDispatcher := parent
+  toInstallation := parent
   itag := itag
   hi := hi
   qctag := qctag
