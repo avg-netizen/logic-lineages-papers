@@ -33,7 +33,7 @@ def row (bound : OTerm alpha) : Formula alpha := allBlock (rowBody bound)
 theorem resultSubst {beta : Type} (bound out index : OTerm alpha) (ts : alpha → OTerm beta) :
     (result bound out index).subst (fun a => emb (ts a)) =
       result (bound.subst ts) (out.subst ts) (index.subst ts) := by
-  simp only [result,InternalRecursionGraphStepSyntaxProof.conjunctionSubst,impSubst,
+  simp only [result,InternalRecursionClosureSyntaxProof.conjunctionSubst,impSubst,
     graph2,programSubst,consTermSubst,emptySubst,InternalLessThan.strictLess,
     InternalQuotientComparisonSyntaxProof.orderSubst,numeral,zSubst,sucSubst]
 

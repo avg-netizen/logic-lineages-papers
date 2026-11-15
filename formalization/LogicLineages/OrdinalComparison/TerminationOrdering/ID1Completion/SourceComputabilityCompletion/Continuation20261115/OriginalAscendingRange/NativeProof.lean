@@ -12,7 +12,7 @@ open InternalPairingEvaluationProof InternalListCodecEvaluationProof
 theorem singletonValue (index previous : Nat) :
     evaluate singleton (index ::ᵥ previous ::ᵥ nil) = numbersNumber [index] := by
   change evaluate InternalListCodec.consCode (ofFn ![index,0]) = _
-  rw [vectorTwo,consEvaluation]
+  rw [InternalEqualityTestEvaluationProof.vectorTwo,consEvaluation]
   rfl
 
 theorem stepValue (index : Nat) (previous : List Nat) :
@@ -38,6 +38,7 @@ theorem natListEncoding (xs : List Nat) : Encodable.encode xs = numbersNumber xs
   | nil => rfl
   | cons head tail ih =>
     rw [Encodable.encode_list_cons,ih]
+    simp only [Encodable.encode_nat]
     rfl
 
 theorem nativeRange : Targets.NativeRange := by
