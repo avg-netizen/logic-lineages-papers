@@ -12,7 +12,7 @@ open InternalTagArithmeticSupportProof (symm trans)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open SourceComputabilityFormulaSupportProof (numeral)
-open TransparentHeadBranches.Proof (andImp orImp applyImp)
+open Continuation20261114.TransparentHeadBranches.Proof (andImp orImp applyImp)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open Continuation20261114
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
@@ -25,7 +25,7 @@ def actualFields (n : Nat) (arity : Fin n → Nat) : Fin 19 → Program 3 :=
 theorem sourceField (n : Nat) (arity : Fin n → Nat) :
     actualFields n arity 0 = TransparentTagFields.sourceTag (OriginalDecodedLayerCalibration.guard n) := by
   simp only [actualFields,TransparentExchangeLayer.fields,StructuralExchangeFields.fields,
-    if_neg (by decide : (0 : Fin 19) ≠ 14),if_neg (by decide : (0 : Fin 19) ≠ 15),if_pos rfl]
+    if_neg (by decide : (0 : Fin 19) ≠ 14),if_neg (by decide : (0 : Fin 19) ≠ 15),if_pos rfl,if_true]
 theorem targetField (n : Nat) (arity : Fin n → Nat) :
     actualFields n arity 7 = TransparentTagFields.targetTag (OriginalDecodedLayerCalibration.guard n) := by
   simp only [actualFields,TransparentExchangeLayer.fields,StructuralExchangeFields.fields,
@@ -37,7 +37,7 @@ theorem targetField (n : Nat) (arity : Fin n → Nat) :
     if_neg (by decide : (7 : Fin 19) ≠ 4),
     if_neg (by decide : (7 : Fin 19) ≠ 5),
     if_neg (by decide : (7 : Fin 19) ≠ 6),
-    if_pos rfl]
+    if_pos rfl,if_true]
 
 theorem atomTransport (s t : OTerm alpha) (k : Nat)
     (he : Nonempty (Derivation body Delta (eqn s t))) :
