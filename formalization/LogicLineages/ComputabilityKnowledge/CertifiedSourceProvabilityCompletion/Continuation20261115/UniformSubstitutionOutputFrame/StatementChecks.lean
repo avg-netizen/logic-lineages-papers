@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.StatementChecks
+theorem exactTick : Targets.InternalTickFrame := Proof.exactTick
+theorem exactIterator : Targets.InternalIteratorFrame := Proof.exactIterator
+theorem exactRawFold : Targets.InternalRawFoldFrame := Proof.exactRawFold
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionOutputFrame.StatementChecks
