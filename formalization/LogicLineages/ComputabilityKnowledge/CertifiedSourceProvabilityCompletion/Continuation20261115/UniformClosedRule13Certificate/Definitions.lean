@@ -15,7 +15,7 @@ abbrev verifier (old arithmetic : Program 1) (x : Program 3) : Program 5 :=
 /-- Actual same-root memberships only. iteratorTag differs from inherited itag,
 which denotes the instance recognizer, and from the substitution fold ftag. -/
 structure Installation {n : Nat} (p : Program n) (old arithmetic : Program 1) (x : Program 3)
- extends UniformClosedRule13Dispatcher.Installation p old arithmetic x where
+ extends toDispatcherInstallation : UniformClosedRule13Dispatcher.Installation p old arithmetic x where
  iteratorTag : Nat
  coreTag : Nat
  verifierTag : Nat
