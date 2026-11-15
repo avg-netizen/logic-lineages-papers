@@ -11,11 +11,17 @@ theorem rawFoldAt (formula replacement : List Nat)
  evaluate rawFold (Encodable.encode formula ::ᵥ Encodable.encode replacement ::ᵥ nil) =
  Encodable.encode (formula.foldl (GorbowSubstitutionCode.subStep 1 0 [replacement])
   ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState)) := by
- unfold rawFold
- change evaluate UniformClosedSubstitutionRawFold.foldCode _ = _
- convert foldAt ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState) formula replacement hr using 1
- ext i
- fin_cases i <;> simp only [List.Vector.get_ofFn,get3_0,get3_1,get3_2,projectionEval,get2_0,get2_1,initialAt]
+ let v := Encodable.encode formula ::ᵥ Encodable.encode replacement ::ᵥ nil
+ let g : Fin 3 → Program 2 := fun i => ((.projection 0) ::ᵥ initialState ::ᵥ (.projection 1) ::ᵥ nil).get i
+ have hargs : List.Vector.ofFn (fun i => evaluate (g i) v) =
+  (Encodable.encode formula ::ᵥ Encodable.encode ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState) ::ᵥ
+   Encodable.encode replacement ::ᵥ nil) := by
+  ext i
+  fin_cases i <;> simp only [g,v,List.Vector.get_ofFn,List.Vector.get_cons_zero,List.Vector.get_cons_succ,
+   get3_0,get3_1,get3_2,projectionEval,get2_0,get2_1,initialAt]
+ change evaluate UniformClosedSubstitutionRawFold.foldCode (List.Vector.ofFn (fun i => evaluate (g i) v)) = _
+ rw [hargs]
+ exact foldAt ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState) formula replacement hr
 theorem outputAt (formula replacement : List Nat)
  (hr : GorbowSyntaxValidation.validTerm 0 replacement = true) :
  evaluate outputCode (Encodable.encode formula ::ᵥ Encodable.encode replacement ::ᵥ nil) =
