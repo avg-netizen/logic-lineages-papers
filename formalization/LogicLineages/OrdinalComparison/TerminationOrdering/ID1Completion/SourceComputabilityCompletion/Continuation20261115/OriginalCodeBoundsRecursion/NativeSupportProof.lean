@@ -34,12 +34,23 @@ theorem recursiveLaw (n raw param : Nat) :
     have he := NumberedNumericDecodingProof.codeNumericSound n raw code hc
     subst raw
     rw [ArgumentEntriesFrontier.Proof.childrenImage]
-    simp only [List.map_map,Function.comp_apply,valueImage]
+    have hm : ((NumberedSyntaxBoundsPrimrecSupportProof.children code).map codeNumber).map
+        (fun child => value n child) =
+        (NumberedSyntaxBoundsPrimrecSupportProof.children code).map
+          (fun child => Encodable.encode (codeBounds child)) := by
+      rw [List.map_map]
+      apply congrArg (fun f => (NumberedSyntaxBoundsPrimrecSupportProof.children code).map f)
+      funext child
+      exact valueImage n child
+    rw [hm]
     have hv : ((NumberedSyntaxBoundsPrimrecSupportProof.children code).map
         (fun child => Encodable.encode (codeBounds child))).map Nat.unpair =
         (NumberedSyntaxBoundsPrimrecSupportProof.children code).map codeBounds := by
-      simp only [List.map_map,Function.comp_apply,OriginalBoundsRecombination.ArithmeticProof.pairEncoding,
-        Nat.unpair_pair,Prod.mk.eta]
+      rw [List.map_map]
+      apply congrArg (fun f => (NumberedSyntaxBoundsPrimrecSupportProof.children code).map f)
+      funext child
+      change Nat.unpair (Encodable.encode (codeBounds child)) = codeBounds child
+      rw [OriginalBoundsRecombination.ArithmeticProof.pairEncoding,Nat.unpair_pair]
     simp only [recombination,NumberedNumericDecodingProof.codeRoundTrip,hv,valueImage]
     have h := NumberedSyntaxBoundsPrimrecSupportProof.recombineCalibration code
     have h' := Option.some.inj h
