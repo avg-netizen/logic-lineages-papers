@@ -21,7 +21,7 @@ theorem one {arity ctx : Nat} (p : Program arity) (old arithmetic : Program 1) (
  have hinput : Hilbert.Local T ctx G
   (LiteralCoreMP.inputAcceptance I.coreTag I.atag I.ctag .zero A B seed ant index fuel) :=
   .mp (.mp (.base (.logical (.andIntro _ _))) hs) ha
- have hd := Fuel.Equations.argumentChild p I.qtag HistoryLookup.reference
+ have hd := SixSol20261112.Fuel.Equations.argumentChild p I.qtag HistoryLookup.reference
   (fun _ : Fin 1 => HistoryLookup.drop) I.h_qtag 0
  obtain ⟨hmp⟩ := LiteralCoreMP.StatementChecks.coreMP
   (UniformClosedRule12.logicalLeaf old) arithmetic x arity p
