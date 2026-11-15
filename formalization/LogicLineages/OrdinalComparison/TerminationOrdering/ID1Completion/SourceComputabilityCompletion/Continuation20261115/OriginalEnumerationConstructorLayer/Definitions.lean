@@ -8,7 +8,7 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 bound,prior,opened]. The original head codec is NOT the raw head-number codec. -/
 def tagPayload (tag : Nat) : Program 1 := InternalApplicationCertificateConstructors.pairOf
   (OriginalRawSyntaxTransport.constant 1 tag) (.projection 0)
-def variables : Program 7 := .composition (InternalListMap.map OriginalRawSyntaxTransport.variableConstructor)
+def variableBranch : Program 7 := .composition (InternalListMap.map OriginalRawSyntaxTransport.variableConstructor)
   (fun _ : Fin 1 => .composition OriginalAscendingRange.range ![.projection 4])
 def lambdaPairs : Program 7 := .composition NumericDependencyCross.cross ![.projection 0,.projection 6]
 def lambdas : Program 7 := .composition (InternalListMap.map (tagPayload 1)) (fun _ : Fin 1 => lambdaPairs)
@@ -31,10 +31,10 @@ def argumentCons : Program 7 := .composition (InternalListMap.map (tagPayload 7)
 /-- The original eight blocks, with every repeated occurrence and row-major
 product order retained. Each numeric slot is the corresponding original block. -/
 def components (n : Nat) : Fin 8 → Program 7 :=
-  ![variables,lambdas,applications,bottoms,ordinary n,numbered n,nils,argumentCons]
+  ![variableBranch,lambdas,applications,bottoms,ordinary n,numbered n,nils,argumentCons]
 def join (a b : Program 7) : Program 7 := .composition InternalApplicationValidityStackAppend.append ![a,b]
 /-- Literal left-associated source append order, not sorting or deduplication. -/
 def layer (n : Nat) : Program 7 :=
-  join (join (join (join (join (join (join variables lambdas) applications) bottoms)
+  join (join (join (join (join (join (join variableBranch lambdas) applications) bottoms)
     (ordinary n)) (numbered n)) nils) argumentCons
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer
