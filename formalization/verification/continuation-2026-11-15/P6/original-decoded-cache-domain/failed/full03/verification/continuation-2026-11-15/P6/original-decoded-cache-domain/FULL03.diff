@@ -1,0 +1,68 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedCacheDomain/LayerProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedCacheDomain/LayerProof.lean
+@@ -45,7 +45,6 @@
+   apply programCases (TransparentExchangeLayer.body U) (Fin.cons node (Fin.cons answers (Fin.cons param Fin.elim0))) _
+   intro beta j Theta inner hj hi
+   simp only [consTermRename,emptyRename] at hi
+-  simp only [eqnRelabel,zRelabel]
+   have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
+   simp only [graph3Rename,sucRelabel] at hvj
+   have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
+@@ -60,12 +59,11 @@
+   apply zeroSuccessorCases Delta control _
+   · have hv0 := outputTransport V control z ![node,answers,param]
+       ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hv (eqn control z))
+-    have hn := zeroBranchIntro V (InternalLessThan.constantOne 3) _ (suc z) ![node,answers,param] hv0
++    have hn := zeroBranchIntro V (InternalLessThan.constantOne 3) (.composition .succ (fun _ : Fin 1 => TransparentExchangeLayer.body U)) (suc z) ![node,answers,param] hv0
+       (InternalLessThanSupportProof.oneConstantValue ![node,answers,param])
+     exact unequalZero out z (valueUnique (TransparentExchangeLayer.optional U V) out (suc z) ![node,answers,param]
+       (withHyp ho (eqn control z)) hn)
+   · intro beta j Theta k hj he
+-    simp only [eqnRelabel,zRelabel]
+     have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
+     rw [graph3Rename] at hvj
+     have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
+@@ -80,7 +78,6 @@
+   apply programCases V (Fin.cons node (Fin.cons answers (Fin.cons param Fin.elim0))) _
+   intro beta j Theta control hj hv
+   simp only [consTermRename,emptyRename] at hv
+-  simp only [eqnRelabel,zRelabel]
+   have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
+   rw [graph3Rename] at hoj
+   exact atControl U V (node.relabel j) (answers.relabel j) (param.relabel j) (out.relabel j) control hv hoj
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedCacheDomain/Proof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedCacheDomain/Proof.lean
+@@ -26,15 +26,15 @@
+   change Nonempty (Derivation body Theta ((eqn found z).relabel j).not)
+   rw [eqnRelabel,zRelabel]
+   simp only [consTermRename,emptyRename] at ho
+-  have hdj := renameInto hd j Theta hj
++  have hdj := InternalGraphCompositionFunctionalityProof.renameInto hd j Theta hj
+   rw [graph2Rename] at hdj
+-  have hfj := renameInto hf j Theta hj
++  have hfj := InternalGraphCompositionFunctionalityProof.renameInto hf j Theta hj
+   rw [graph3Rename] at hfj
+-  have htj := renameInto ht j Theta hj
++  have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
+   simp only [graph3Rename,sucRelabel] at htj
+-  have hmj := renameInto hm j Theta hj
++  have hmj := InternalGraphCompositionFunctionalityProof.renameInto hm j Theta hj
+   simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at hmj
+-  have hlj := renameInto hl j Theta hj
++  have hlj := InternalGraphCompositionFunctionalityProof.renameInto hl j Theta hj
+   rw [graph2Rename] at hlj
+   have hrj := InternalGraphCompositionFunctionalityProof.renameInto hr j Theta hj
+   rw [graph2Rename] at hrj
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedCacheDomain/StageProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedCacheDomain/StageProof.lean
+@@ -118,7 +118,9 @@
+   simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename] at hlj
+   exact atDeps n arity V (frontier.relabel j) (old.relabel j) (param.relabel j) (table.relabel j) (node.relabel j) (found.relabel j) deps htj hmj hlj hx
+ 
+-theorem stageDomain : Targets.InternalStageDomain := stageAt
++theorem stageDomain : Targets.InternalStageDomain := by
++  intro n arity V body alpha Delta frontier old param table node found ht hm hl
++  exact stageAt n arity V frontier old param table node found ht hm hl
+ 
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedCacheDomain.StageProof
+ #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedCacheDomain.StageProof

@@ -13,7 +13,7 @@ theorem singleton {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) ctag
  Computes p G singletonCode (state ::ᵥ token ::ᵥ raw ::ᵥ nil) (singletonValue ctag token) :=
  binary p G _ HistoryCodec.cons (.projection 1) (constant 3 0) token .zero _
   (projection p G _ 1) (constantValue p G _ 0) (copies p G HistoryCodec.cons ctag hc _)
-theorem variable {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) ctag
+theorem variableCodeValue {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) ctag
  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (state token raw : Term ctx) :
  Computes p G variableCode (state ::ᵥ token ::ᵥ raw ::ᵥ nil) (variableValue ctag token) :=
  binary p G _ HistoryCodec.cons (constant 3 0) singletonCode .zero (singletonValue ctag token) _

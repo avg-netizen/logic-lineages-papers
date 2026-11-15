@@ -1,0 +1,9 @@
+# Actual decoded cache domain, not cached-value correctness
+
+Freeze only. No proof authored. Existing original ExchangeNumericSuppliers.layerAt always returns some, including malformed node/window -> Some0. Existing ConcreteHeadMoveLayer.layer unfolds through HeadMoveFields/ResultStructuralFields to TransparentExchangeLayer.optional: branch V constantOne (successor body). Both branches are nonzero regardless of V. Hence we can quantify all guard programs V without assuming their calibration or layer success. This is not a proposed replacement guard or opaque Some supplier.
+
+Duplicate inspection: ArgumentEntriesTableDomain specializes an unrelated argument-entry layer; TransparentExchangeLayer existing theorems characterize accepted branches but do not state unconditional decoded graph table coverage. We use literal decoded R/D and existing layer AST unchanged.
+
+Plan: internally split actual V result and construct nonzero optional layer output, with actual body witnesses and predecessor witness for a nonzero output as needed. Query actual dependencies and mapGraph answers; apply ExchangeStageCoverage plus lookup functionality to show every actual frontier member has a nonzero first-match lookup. For successor domain query actual previous graph, apply original ExchangeGraphRecursion.internalSuccessor using supplied actual R/subtraction/frontier observations, then stage-domain theorem. No rank bound is needed for domain itself, as the layer always returns Some. Capacity/predecessor frontier results remain necessary for later cross-root cache value induction, not artificially added here.
+
+Actual Some0 (encoded1) is present; missing None=0 remains distinct. No lookup payload equality or recursive semantic correctness claimed. Guard V calibration, original window/list codecs, exact source layer calibration, cross-root cache values, full supplier installation/E remain unpaid.
