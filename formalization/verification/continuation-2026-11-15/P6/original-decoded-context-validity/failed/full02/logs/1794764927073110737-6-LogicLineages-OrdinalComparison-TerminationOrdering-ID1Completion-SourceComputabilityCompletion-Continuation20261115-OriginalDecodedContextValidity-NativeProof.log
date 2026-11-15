@@ -1,0 +1,96 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedContextValidity/NativeProof.lean:39:84: error: Tactic `rfl` failed: The left-hand side
+  if
+      ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+          1 ∧
+        none.isSome.toNat = 1 then
+    1
+  else 0
+is not definitionally equal to the right-hand side
+  (Encodable.decode (v.get 0)).isSome.toNat
+
+case none.none
+n : ℕ
+v : List.Vector ℕ 1
+⊢ (if
+        ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                  Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+            1 ∧
+          none.isSome.toNat = 1 then
+      1
+    else 0) =
+    (Encodable.decode (v.get 0)).isSome.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedContextValidity/NativeProof.lean:39:84: error: Tactic `rfl` failed: The left-hand side
+  if
+      ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+          1 ∧
+        (some val✝).isSome.toNat = 1 then
+    1
+  else 0
+is not definitionally equal to the right-hand side
+  (Encodable.decode (v.get 0)).isSome.toNat
+
+case none.some
+n : ℕ
+v : List.Vector ℕ 1
+val✝ : Fin n → Fin n → Bool
+⊢ (if
+        ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                  Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+            1 ∧
+          (some val✝).isSome.toNat = 1 then
+      1
+    else 0) =
+    (Encodable.decode (v.get 0)).isSome.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedContextValidity/NativeProof.lean:39:84: error: Tactic `rfl` failed: The left-hand side
+  if
+      ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+          1 ∧
+        none.isSome.toNat = 1 then
+    1
+  else 0
+is not definitionally equal to the right-hand side
+  (Encodable.decode (v.get 0)).isSome.toNat
+
+case some.none
+n : ℕ
+v : List.Vector ℕ 1
+val✝ : Continuation20261114.ExchangeNumericSuppliers.Window n
+⊢ (if
+        ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                  Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+            1 ∧
+          none.isSome.toNat = 1 then
+      1
+    else 0) =
+    (Encodable.decode (v.get 0)).isSome.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedContextValidity/NativeProof.lean:39:84: error: Tactic `rfl` failed: The left-hand side
+  if
+      ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+          1 ∧
+        (some val✝).isSome.toNat = 1 then
+    1
+  else 0
+is not definitionally equal to the right-hand side
+  (Encodable.decode (v.get 0)).isSome.toNat
+
+case some.some
+n : ℕ
+v : List.Vector ℕ 1
+val✝¹ : Continuation20261114.ExchangeNumericSuppliers.Window n
+val✝ : Fin n → Fin n → Bool
+⊢ (if
+        ((Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).1).bind fun a =>
+                  Option.map (Prod.mk a) (Encodable.decode (Nat.unpair (Nat.unpair (v.get 0)).1).2)).isSome.toNat =
+            1 ∧
+          (some val✝).isSome.toNat = 1 then
+      1
+    else 0) =
+    (Encodable.decode (v.get 0)).isSome.toNat
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedContextValidity.NativeProof.nativeTable: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedContextValidity/NativeProof.lean:41:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedContextValidity.NativeProof.nativeContext: forbidden axiom dependency sorryAx

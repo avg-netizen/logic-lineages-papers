@@ -1,0 +1,15 @@
+--- Native02
++++ Native03
+@@ -34,7 +34,11 @@
+ 
+ theorem nativeContext : Targets.NativeContext := by
+   intro n v
+-  rw [contextGuard,InternalApplicationStepPeelEvaluationSupportProof.conjunctionEvaluation,windowLeft,tableRight,Encodable.decode_prod_val]
++  have hc : Encodable.decode (α := OrdinaryArithmeticQuotient.Context n) (v.get 0) =
++      (Encodable.decode (α := Continuation20261114.ExchangeNumericSuppliers.Window n) (Nat.unpair (v.get 0)).1).bind
++        (fun w => (Encodable.decode (α := Fin n → Fin n → Bool) (Nat.unpair (v.get 0)).2).map (Prod.mk w)) :=
++    Encodable.decode_prod_val (v.get 0)
++  rw [contextGuard,InternalApplicationStepPeelEvaluationSupportProof.conjunctionEvaluation,windowLeft,tableRight,hc]
+   cases Encodable.decode (α := Continuation20261114.ExchangeNumericSuppliers.Window n) (Nat.unpair (v.get 0)).1 <;>
+     cases Encodable.decode (α := Fin n → Fin n → Bool) (Nat.unpair (v.get 0)).2 <;> rfl
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedContextValidity.NativeProof
