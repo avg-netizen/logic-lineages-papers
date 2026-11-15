@@ -1,5 +1,5 @@
 # Focused accepted checkpoint
 
-Only MapPresent and FinalAnswers accepted: actual positive lookup including zero and original final stage from explicit prior graph/mapped answers. Concrete cons endpoint not yet accepted; no child/table coherence discharge.
+Remaining concrete cons extraction accepted from actual old-table lookups and ordered dependencies. Map and final-stage two previously accepted, not recounted. Full packet three; standalone child/table coherence remains unpaid.
 
-Combined supporting total 458; numbered register unchanged.
+Combined supporting total 459; numbered register unchanged.
