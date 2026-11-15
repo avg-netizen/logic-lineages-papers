@@ -7,7 +7,8 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalApplicationCertificateConstructors
 open InternalGraphComposition (OTerm)
-open SourceComputabilityFormulaSupportProof InternalTagArithmeticSyntaxProof
+open SourceComputabilityFormulaSupportProof
+open InternalTagArithmeticSyntaxProof hiding OTerm
 open InternalTagArithmeticSupportProof InternalBinderTransportProof
 open SplitInductionDefinitions SplitInductionSyntaxProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
