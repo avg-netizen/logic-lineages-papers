@@ -32,7 +32,12 @@ theorem witnessTail {n ctx : Nat} (p : Program n) (q l r ctag : Nat)
  have hrel := Hilbert.Local.mp (.base (.logical (.andRight _ _))) hh
  obtain ⟨hs⟩ := HistoryLookup.LookupProof.internalLookupSuccessorCons n p q ctag hq hc (ctx+1)
   (liftTerm index) (liftTerm head) (liftTerm tail)
- have htail := localTrans _ _ _ (.base (Support.equalitySymmetry _ _ hs)) he
+ have hs' : Derivation T
+  (.equal (HistoryLookup.lookupCall q (liftTerm (.succ index))
+   (liftTerm (HistoryLookup.consCall ctag head tail)))
+   (HistoryLookup.lookupCall q (liftTerm index) (liftTerm tail))) := by
+  simpa only [liftTerm,renameTerm,HistoryLookup.DropEquationsProof.substCons,substitute] using hs
+ have htail := localTrans _ _ _ (.base (Support.equalitySymmetry _ _ hs')) he
  have hboth := Hilbert.Local.mp (.mp (.base (.logical (.andIntro _ _))) htail) hrel
  have hout := Hilbert.Local.mp (.base (witnessIntro q l r (liftTerm tail) (liftTerm index) (liftTerm task) (.var 0))) hboth
  have hb : Derivation T (.imp P (GorbowPACore.weaken Q)) := by

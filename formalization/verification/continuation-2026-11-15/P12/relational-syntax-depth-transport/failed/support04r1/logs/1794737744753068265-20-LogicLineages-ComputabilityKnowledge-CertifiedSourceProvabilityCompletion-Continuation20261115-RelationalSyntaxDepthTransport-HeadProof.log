@@ -1,0 +1,43 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/HeadProof.lean:24:80: error: Application type mismatch: The argument
+  hz
+has type
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryLookup.lookupCall q Term.zero (HistoryLookup.consCall ctag (liftTerm newHead) (liftTerm newTail)))
+      (liftTerm newHead).succ)
+but is expected to have type
+  Derivation T
+    (Formula.equal
+      (HistoryLookup.lookupCall q (liftTerm Term.zero) (liftTerm (HistoryLookup.consCall ctag newHead newTail))) ?m.124)
+in the application
+  Hilbert.Local.base hz
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/HeadProof.lean:15:42: error: unsolved goals
+n ctx : ℕ
+p : Program n
+q l r ctag : ℕ
+hq : (nodes p)[q]? = some ⟨2, HistoryLookup.lookup⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+oldHead newHead newTail : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+P : Formula (ctx + 1) := witnessBody q l r (HistoryLookup.consCall ctag newHead newTail) Term.zero oldHead
+Q : Formula ctx := taskRelation l r oldHead newHead
+hh : Hilbert.Local T (ctx + 1) [P] P
+he :
+  Hilbert.Local T (ctx + 1) [P]
+    (Formula.equal
+      (HistoryLookup.lookupCall q (liftTerm Term.zero) (liftTerm (HistoryLookup.consCall ctag newHead newTail)))
+      (Term.var 0).succ)
+hrel : Hilbert.Local T (ctx + 1) [P] (taskRelation l r (liftTerm oldHead) (Term.var 0))
+hz :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryLookup.lookupCall q Term.zero (HistoryLookup.consCall ctag (liftTerm newHead) (liftTerm newTail)))
+      (liftTerm newHead).succ)
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      ((witness q l r (HistoryLookup.consCall ctag newHead newTail) Term.zero oldHead).imp
+        (taskRelation l r oldHead newHead)))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.HeadProof.consTailLengths: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/HeadProof.lean:62:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.HeadProof.witnessHead: forbidden axiom dependency sorryAx

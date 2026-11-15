@@ -21,7 +21,11 @@ theorem witnessHead {n ctx : Nat} (p : Program n) (q l r ctag : Nat)
  have hrel := Hilbert.Local.mp (.base (.logical (.andRight _ _))) hh
  obtain ⟨hz⟩ := HistoryLookup.LookupProof.internalLookupZeroCons n p q ctag hq hc (ctx+1)
   (liftTerm newHead) (liftTerm newTail)
- have hsucc := localTrans _ _ _ (HistoryOrder.StepProof.localSym _ _ he) (.base hz)
+ have hz' : Derivation T
+  (.equal (HistoryLookup.lookupCall q (liftTerm .zero)
+   (liftTerm (HistoryLookup.consCall ctag newHead newTail))) (.succ (liftTerm newHead))) := by
+  simpa only [liftTerm,renameTerm,HistoryLookup.DropEquationsProof.substCons,substitute] using hz
+ have hsucc := localTrans _ _ _ (HistoryOrder.StepProof.localSym _ _ he) (.base hz')
  have hv : Hilbert.Local T (ctx+1) [P] (.equal (.var 0) (liftTerm newHead)) :=
   .mp (.base (.arithmetic (.succInjective _ _))) hsucc
  have hout := Hilbert.Local.mp (.mp (.base (taskRight l r (liftTerm oldHead) (.var 0) (liftTerm newHead))) hv) hrel
