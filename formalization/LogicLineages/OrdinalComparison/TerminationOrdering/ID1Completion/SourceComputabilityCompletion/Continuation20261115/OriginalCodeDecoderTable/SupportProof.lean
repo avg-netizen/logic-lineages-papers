@@ -12,7 +12,7 @@ open InternalApplicationCertificateConstructorsSupportProof
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
 open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
 open InternalListCodecSupportProof OriginalLambdaConstructorGraphSyntaxProof
-open InternalRecursionGraphStepSyntaxProof
+open InternalRecursionGraphStepSyntaxProof InternalRawListRecursionSupportProof
 open OriginalRawSyntaxTransport OriginalRawSyntaxTransportInternalVariableSupportProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
@@ -31,8 +31,22 @@ theorem baseRecover (n : Nat) (previous value output : OTerm alpha)
   have hc : Nonempty (Derivation body Delta (programGraph cell value xs)) :=
     binaryValue (OriginalCodeDecoderStep.step n) (.projection 0) (constant 1 0) value previous z xs hv
       (projectionValue 0 xs) (constantValue 0 xs)
-  have hb := recursionZeroRecover (rowBase n) (rowStep n) output xs ho
-  exact binaryRecover InternalListCodec.consCode cell (constant 1 0) output value z xs hb hc (constantValue 0 xs)
+  apply InternalAcceptanceSupportProof.programCases (rowBase n) xs _
+  intro beta j Theta base hj hb
+  simp only [consGraphRename,zRelabel]
+  have hv' := InternalGraphCompositionFunctionalityProof.renameInto hc j Theta hj
+  simp only [InternalControlGraphSupportProof.programRename,InternalRawListRecursionSyntaxProof.consTermRename,
+    InternalRawListRecursionSyntaxProof.emptyRename] at hv'
+  have ho' := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
+  simp only [graph2Rename,zRelabel] at ho'
+  simp only [xs,InternalRawListRecursionSyntaxProof.consTermRename,InternalRawListRecursionSyntaxProof.emptyRename] at hb
+  let xx : Fin 1 → OTerm beta := Fin.cons (previous.relabel j) Fin.elim0
+  have hz := recursionZeroValue (rowBase n) (rowStep n) base xx hb
+  have he := valueUnique (nextRow n) base (output.relabel j)
+    (Fin.cons z xx) hz ho'
+  have hb' := outputTransport (rowBase n) base (output.relabel j) xx he hb
+  exact binaryRecover InternalListCodec.consCode cell (constant 1 0) (output.relabel j) (value.relabel j) z xx
+    hb' hv' (constantValue 0 xx)
 
 theorem singletonValue (n : Nat) (count front previous value singleton : OTerm alpha)
     (hv : Nonempty (Derivation body Delta (graph2 (OriginalCodeDecoderStep.step n) value previous (suc count))))
