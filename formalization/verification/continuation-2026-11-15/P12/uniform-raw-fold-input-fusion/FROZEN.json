@@ -1,0 +1,38 @@
+{
+  "status": "Frozen exact1 only, proof held for review and preflight; ClosedTermFrame independently accepted684",
+  "modules": [
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformRawFoldInputFusion.Preflight"
+  ],
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Definitions.lean": "283108bac12b5fb8f827c48915300034de64449ff96dc001600fb5a698f61507",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Preflight.lean": "e80645535f8bc8ed92f1824abd285e068bb4968bed348ef6cbe082f2af85df9e",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Targets.lean": "c2c3a77979e89871a96b67033b978c947204c5ab36750135774a4f0da543fd61"
+  },
+  "provenance": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionRawFold/Definitions.lean": "b74634dbbd4aac10cce5c0cbe61cb8a5e267c182ec7526c2b680f167b466aca0",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionRawFold/Proof.lean": "fc1a19b6f4e4943b6a5b33fb0483b3d39e68e9851f901606dcd811d488be7423",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionEmit/Definitions.lean": "a88e45f475db0177d8ed21f9d30dcbb87ea099323c9d18efa3abeb0eda55cd2c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformFixedFormulaAgreement/FoldProof.lean": "c08b1cb5b80812bd2d97a27ca772f5b72e6a3c5fcfaf3eccdb5945e80d9162b0",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformFixedFormulaAgreement/SegmentProof.lean": "3a7130425d0c8f5adac7e9f8baa0a01821fe1c2c8012c50461404319197cbbb5",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/HistoryAppend/ConsProof.lean": "382be5f40af06e8eaedf032ac6f2825c27504ef5ff5a3c7621762d744dd6cc9a",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/HistoryIteratorSuffix/ReconstructionProof.lean": "3aa4cf107ee076911438fe8e02b4c4d73faa37dd1fd34879721786b52a268fa7",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/HistoryDecoderBounds/OuterRangeProof.lean": "55f1af9145e95898a2288c438e9194b99db328019725c7b309783179fef13f1b"
+  },
+  "correspondence": [
+    "Original raw fold counts lengthProgram(tokens), not numeric token code. Original iterator, tick, syntax step, old-state emitter, append, pair and Option encodings unchanged.",
+    "Both input segments and the entire initial packed state are arbitrary internal Nat terms, not native lists or assumed pair images. Original decoder reconstruction handles all packed codes.",
+    "Original malformed/default scanner and emitter branches remain included, including NONE states, empty tokens and arbitrary replacement. There is no successful-run or closed-term guard.",
+    "Distinct from output-prefix frame: input append composition exposes a changing packed state after the left segment. Distinct from SegmentProof: left input is arbitrary encoded runtime data, not a finite literal token prefix."
+  ],
+  "plan": [
+    "Recover existing iterator/length/right-decoder memberships structurally from installed raw fold, at the same registry; do not add final membership hypotheses.",
+    "Use original nil identity and original FoldProof.consAny (itself paid via decoder reconstruction) for arbitrary packed state. Derive fusion cons case by actual appendCons, both original fold-cons equations, and IH at the actual next state.",
+    "Internally quantify changing packed state before bounded PA induction over arbitrary numeric left code. Reconstruct positive codes through original head/tail decoder equations and obtain actual decoded-tail bound, not native-list exhaustion.",
+    "Discharge PA bounded induction and specialize state, preserving rightTokens/replacement throughout. Do not assume associativity of fold or native evaluation equality."
+  ],
+  "unpaid": [
+    "Capture-correct runtime-environment agreement for dynamic formulaValue inputs",
+    "Repeated specialization and actual MP/generated certificate composition",
+    "HB3 and source collapse"
+  ]
+}
