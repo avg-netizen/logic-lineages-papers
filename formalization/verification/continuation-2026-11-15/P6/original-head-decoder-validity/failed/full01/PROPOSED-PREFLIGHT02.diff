@@ -1,0 +1,11 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/Targets.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/Targets.lean
+@@ -16,7 +16,7 @@
+ def allowed {alpha : Type} (n : Nat) (tag payload : OTerm alpha) : Formula alpha :=
+   (((eqn tag (numeral 0) ⊔ eqn tag (numeral 1)) ⊓ eqn payload (numeral 0)) ⊔
+     (eqn tag (numeral 2) ⊔ (eqn tag (numeral 3) ⊔
+-      (eqn tag (numeral 4) ⊔ (eqn tag (numeral 5) ⊓ InternalLessThan.strictLess payload (numeral n)))))
++      (eqn tag (numeral 4) ⊔ (eqn tag (numeral 5) ⊓ InternalLessThan.strictLess payload (numeral n))))))
+ /-- An actual pair observation is the sole constructor evidence. No native decoding,
+ validity, type/window membership or hidden head witness is assumed. -/
+ def InternalAcceptedBranches : Prop := ∀ (n : Nat) (body : Positive (Fin 1))

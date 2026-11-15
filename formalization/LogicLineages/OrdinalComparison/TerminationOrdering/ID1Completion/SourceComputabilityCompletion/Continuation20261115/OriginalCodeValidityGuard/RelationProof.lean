@@ -15,7 +15,6 @@ open InternalComputabilityApplicationSyntaxProof (programSubst)
 open InternalRawListRecursionSyntaxProof (consTermSubst emptySubst)
 open InternalAdditionLawsProof (impSubst)
 open OriginalContextInsertion OriginalContextInsertionSyntaxProof
-open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
 def matrix (bound old next : OTerm alpha) : Formula (alpha ⊕ Fin 1) :=
@@ -49,7 +48,6 @@ theorem matrixWitness (bound old next index : OTerm alpha) :
   rw [he,impSubst]
   simp only [conjunctionSubst,Below,orderSubst,graph2,programSubst,consTermSubst,emptySubst,
     sucSubst,zSubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
 
 theorem relationApply (bound old next index : OTerm alpha)
     (hr : Nonempty (Derivation body Delta (relation bound old next)))

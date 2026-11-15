@@ -1,0 +1,17 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/NativeProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/NativeProof.lean
+@@ -22,6 +22,7 @@
+ theorem basicValue (raw : Nat) : evaluate basicPayload (raw ::ᵥ nil) =
+     if (Nat.unpair raw).2 = 0 then 1 else 0 := by
+   simp only [basicPayload,sameOfEvaluation,rightEvaluation,constantEvaluation]
++  rfl
+ 
+ theorem rankedValue (n raw : Nat) : evaluate (rankedPayload n) (raw ::ᵥ nil) =
+     if (Nat.unpair raw).2 < n then 1 else 0 := by
+@@ -39,5 +40,6 @@
+   rcases tag with _ | _ | _ | _ | _ | _ | tag
+   all_goals simp [check,chooseEvaluation,basicValue,rankedValue,constantEvaluation,
+     headParse,hp,NumberedTypeCodecPrimrecSupportProof.decodeTypeExact]
++  all_goals split_ifs <;> rfl
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.NativeProof
+ #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.NativeProof

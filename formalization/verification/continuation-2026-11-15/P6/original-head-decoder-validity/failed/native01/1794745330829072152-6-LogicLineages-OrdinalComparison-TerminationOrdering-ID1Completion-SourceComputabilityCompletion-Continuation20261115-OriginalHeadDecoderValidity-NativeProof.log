@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/NativeProof.lean:23:47: error: unsolved goals
+raw : ℕ
+⊢ (if (Nat.unpair ((raw ::ᵥ nil).get 0)).2 = 0 then 1 else 0) = if (Nat.unpair raw).2 = 0 then 1 else 0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/NativeProof.lean:34:65: error: unsolved goals
+case zero
+n raw payload : ℕ
+hp : Nat.unpair raw = (0, payload)
+⊢ (if payload = 0 then 1 else 0) =
+    (if payload = 0 then some NumberedAuxiliaryCoding.HeadCode.zero else none).isSome.toNat
+
+case succ.zero
+n raw payload : ℕ
+hp : Nat.unpair raw = (0 + 1, payload)
+⊢ (if payload = 0 then 1 else 0) =
+    (if payload = 0 then some NumberedAuxiliaryCoding.HeadCode.succ else none).isSome.toNat
+
+case succ.succ.succ.succ.succ.zero
+n raw payload : ℕ
+hp : Nat.unpair raw = (0 + 1 + 1 + 1 + 1 + 1, payload)
+⊢ (if payload < n then 1 else 0) =
+    (if h : payload < n then some (NumberedAuxiliaryCoding.HeadCode.ranked ⟨payload, ⋯⟩) else none).isSome.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/NativeProof.lean:43:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.NativeProof.nativeDecoderValidity: forbidden axiom dependency sorryAx
