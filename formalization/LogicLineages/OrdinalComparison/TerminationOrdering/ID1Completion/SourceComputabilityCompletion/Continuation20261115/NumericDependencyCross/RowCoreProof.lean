@@ -95,6 +95,7 @@ theorem consCore (raw head tail param out node a b : OTerm alpha)
   apply InternalRawListRecursionProof.stepCases (InternalAcceptance.constantZero 1) rowStep
     out head tail (Fin.cons param Fin.elim0) _ hs
   intro beta j Theta rest hj hr hstep
+  simp only [consTermRename, emptyRename] at hr hstep
   simp only [result,conjunctionRename,eqnRelabel,graph2Rename,GuardedSourceSyntaxProof.numeralRename]
   have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,eqnRelabel,conjunctionRename,GuardedSourceSyntaxProof.numeralRename,belowRawRename] at ihj

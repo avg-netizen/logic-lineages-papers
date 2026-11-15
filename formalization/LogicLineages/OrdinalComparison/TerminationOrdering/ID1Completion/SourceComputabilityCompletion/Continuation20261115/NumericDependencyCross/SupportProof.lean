@@ -55,7 +55,7 @@ theorem nilImpossible (step : Program 3) (raw param out node : OTerm alpha) (psi
     Nonempty (Derivation body Delta psi) := by
   have hv0 := headTransport (InternalRawListRecursion.listRec (InternalAcceptance.constantZero 1) step)
     out raw z (Fin.cons param Fin.elim0) hz hv
-  have h0 := InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1) step z
+  have h0 := InternalRawListRecursionProof.nilValue (body := body) (Gamma := Delta) (InternalAcceptance.constantZero 1) step z
     (Fin.cons param Fin.elim0) (InternalRawListRecursionSupportProof.constantZero (Fin.cons param Fin.elim0))
   have he := valueUnique (InternalRawListRecursion.listRec (InternalAcceptance.constantZero 1) step)
     out z ![z,param] hv0 h0

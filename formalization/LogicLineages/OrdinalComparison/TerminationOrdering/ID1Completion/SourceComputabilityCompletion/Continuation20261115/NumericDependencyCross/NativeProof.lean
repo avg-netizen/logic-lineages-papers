@@ -19,6 +19,7 @@ theorem rowStepValue (head tail left : Nat) :
   congr 1
   congr 1
   rw [vectorTwo,exactPairingEvaluation]
+  rfl
 
 theorem rowValue (right : List Nat) (left : Nat) :
     evaluate row (ofFn ![numbersNumber right,left]) =
@@ -65,6 +66,7 @@ theorem dependencyValue (n : Nat) (source target : NumberedAuxiliaryCoding.Code 
   rw [ArgumentEntriesChildren.NativeProof.nativeChildren,ArgumentEntriesChildren.NativeProof.nativeChildren,crossValue]
   simp only [NumberedExchangeCodeFieldsProof.dependencies,NumberedCodeEnumerationPrimrecSupportProof.cross,
     List.map_flatMap,List.flatMap_map,List.map_map]
+  rfl
 
 theorem nativeCorrespondence : Targets.NativeCorrespondence := ⟨crossValue,dependencyValue⟩
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.NumericDependencyCross.NativeProof

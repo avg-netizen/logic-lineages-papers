@@ -1,0 +1,20 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/RowCoreProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/RowCoreProof.lean
+@@ -95,6 +95,7 @@
+   apply InternalRawListRecursionProof.stepCases (InternalAcceptance.constantZero 1) rowStep
+     out head tail (Fin.cons param Fin.elim0) _ hs
+   intro beta j Theta rest hj hr hstep
++  simp only [consTermRename, emptyRename] at hr hstep
+   simp only [result,conjunctionRename,eqnRelabel,graph2Rename,GuardedSourceSyntaxProof.numeralRename]
+   have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
+   simp only [graph1Rename,graph2Rename,graph3Rename,eqnRelabel,conjunctionRename,GuardedSourceSyntaxProof.numeralRename,belowRawRename] at ihj
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/CrossCoreProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/CrossCoreProof.lean
+@@ -94,6 +94,7 @@
+   apply InternalRawListRecursionProof.stepCases (InternalAcceptance.constantZero 1) crossStep
+     out head tail (Fin.cons param Fin.elim0) _ hs
+   intro beta j Theta rest hj hr hstep
++  simp only [consTermRename, emptyRename] at hr hstep
+   simp only [result,conjunctionRename,eqnRelabel,graph2Rename,GuardedSourceSyntaxProof.numeralRename]
+   have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
+   simp only [graph1Rename,graph2Rename,graph3Rename,eqnRelabel,conjunctionRename,GuardedSourceSyntaxProof.numeralRename,belowRawRename] at ihj
