@@ -80,8 +80,10 @@ theorem different (i j : Fin 6) (s t : OTerm alpha) (hne : i ≠ j)
 theorem payloadCancel (i : Fin 6) (s t : OTerm alpha) (hi : 2 ≤ i.val)
     (h : Derivation body Delta (eqn (code i s) (code i t))) : Nonempty (Derivation body Delta (eqn s t)) := by
   fin_cases i
-  · exact False.elim (by omega)
-  · exact False.elim (by omega)
+  · change 2 ≤ 0 at hi
+    exact False.elim (by omega)
+  · change 2 ≤ 1 at hi
+    exact False.elim (by omega)
   · exact ⟨(evenCancel (oddCancel h))⟩
   · exact ⟨(evenCancel (oddCancel (oddCancel h)))⟩
   · exact ⟨(evenCancel (oddCancel (oddCancel (oddCancel h))))⟩
