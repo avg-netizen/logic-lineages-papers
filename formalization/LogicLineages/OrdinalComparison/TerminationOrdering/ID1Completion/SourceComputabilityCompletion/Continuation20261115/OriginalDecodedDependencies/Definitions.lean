@@ -7,8 +7,8 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open OriginalRawSyntaxTransport
 /-- Original supplier inputs [encoded node, parameter]; parameter is unused. -/
-def source : Program 2 := leftOf (.projection 0)
-def target : Program 2 := rightOf (.projection 0)
+def source : Program 2 := InternalApplicationCertificateConstructors.leftOf (.projection 0)
+def target : Program 2 := InternalApplicationCertificateConstructors.rightOf (.projection 0)
 def sourceAccepted (n : Nat) : Program 2 := .composition (OriginalCodeValidityGuard.check n) (fun _ : Fin 1 => source)
 def targetAccepted (n : Nat) : Program 2 := .composition (OriginalCodeValidityGuard.check n) (fun _ : Fin 1 => target)
 def accepted (n : Nat) : Program 2 := InternalAcceptance.conjunction (sourceAccepted n) (targetAccepted n)

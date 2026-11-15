@@ -18,12 +18,12 @@ theorem iterateRelation {n ctx : Nat} (template : Formula 1) (p : Program n) (ot
     Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
       (relation ptag (iterationCall ot count old index fuel) (iterationCall nt count new index fuel) )) := by
   let T := GorbowPRNumeralCalculation.Theory p
-  let phi := template ot nt ptag old new  index fuel
+  let phi := RawUniversalIteratorRetention.Proof.template ot nt ptag old new  index fuel
   obtain ⟨hr⟩ := hrel
   obtain ⟨hoz⟩ := HistoryMachine.Equations.zero p ot (kernel v l a x) ho old index fuel
   obtain ⟨hnz⟩ := HistoryMachine.Equations.zero p nt (kernel v (FullFormulaInstantiation.logicalLeaf template l) a x) hn new index fuel
   have hb : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
-    rw [show phi = template ot nt ptag old new  index fuel from rfl,templateAt]
+    rw [show phi = RawUniversalIteratorRetention.Proof.template ot nt ptag old new  index fuel from rfl,templateAt]
     exact Hilbert.Local.finish (relationReverse ptag _ _ _ _  hoz hnz (.base hr))
   let O := iterationCall ot (.var (0 : Fin (ctx+1))) (liftTerm old) (liftTerm index) (liftTerm fuel)
   let N := iterationCall nt (.var (0 : Fin (ctx+1))) (liftTerm new) (liftTerm index) (liftTerm fuel)
@@ -42,7 +42,7 @@ theorem iterateRelation {n ctx : Nat} (template : Formula 1) (p : Program n) (ot
     (liftTerm new) (liftTerm index) (liftTerm fuel)
   have hout := relationReverse ptag _ _ _ _  hos hns next
   have hs : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) := by
-    simpa only [phi,template,O,N,GorbowStandardInduction.successorInstance,substRelation,substIteration,
+    simpa only [phi,RawUniversalIteratorRetention.Proof.template,O,N,GorbowStandardInduction.successorInstance,substRelation,substIteration,
       substitute,successorLift,Fin.cases_zero] using Hilbert.Local.finish (Hilbert.Local.discharge hout)
   have h := atTerm phi count (HistoryCodec.ArithmeticSupport.induction phi hb hs)
   exact ⟨by simpa only [phi,templateAt] using h⟩
