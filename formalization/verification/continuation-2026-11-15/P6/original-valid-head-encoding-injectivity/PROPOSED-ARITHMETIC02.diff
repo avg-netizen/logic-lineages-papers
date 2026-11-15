@@ -1,0 +1,91 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean
+@@ -39,52 +39,52 @@
+ def oddEvenFalse {s t : OTerm alpha} (h : Derivation body Delta (eqn (odd s) (even t))) :
+     Derivation body Delta ⊥ := evenOddFalse (symm h)
+ theorem different (i j : Fin 6) (s t : OTerm alpha) (hne : i ≠ j)
+-    (h : Derivation body Delta (eqn (code i s) (code j t))) : Derivation body Delta ⊥ := by
++    (h : Derivation body Delta (eqn (code i s) (code j t))) : Nonempty (Derivation body Delta ⊥) := by
+   fin_cases i <;> fin_cases j
+   · exact False.elim (hne rfl)
+-  · exact zeroNeSuc (evenCancel h)
+-  · exact evenOddFalse h
+-  · exact evenOddFalse h
+-  · exact evenOddFalse h
+-  · exact evenOddFalse h
+-  · exact sucNeZeroApply (evenCancel h)
++  · exact ⟨zeroNeSuc (evenCancel h)⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨sucNeZeroApply (evenCancel h)⟩
+   · exact False.elim (hne rfl)
+-  · exact evenOddFalse h
+-  · exact evenOddFalse h
+-  · exact evenOddFalse h
+-  · exact evenOddFalse h
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse h
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨evenOddFalse h⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse h⟩
+   · exact False.elim (hne rfl)
+-  · exact evenOddFalse (oddCancel h)
+-  · exact evenOddFalse (oddCancel h)
+-  · exact evenOddFalse (oddCancel h)
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse (oddCancel h)
++  · exact ⟨evenOddFalse (oddCancel h)⟩
++  · exact ⟨evenOddFalse (oddCancel h)⟩
++  · exact ⟨evenOddFalse (oddCancel h)⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse (oddCancel h)⟩
+   · exact False.elim (hne rfl)
+-  · exact evenOddFalse (oddCancel (oddCancel h))
+-  · exact evenOddFalse (oddCancel (oddCancel h))
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse (oddCancel h)
+-  · exact oddEvenFalse (oddCancel (oddCancel h))
++  · exact ⟨evenOddFalse (oddCancel (oddCancel h))⟩
++  · exact ⟨evenOddFalse (oddCancel (oddCancel h))⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse (oddCancel h)⟩
++  · exact ⟨oddEvenFalse (oddCancel (oddCancel h))⟩
+   · exact False.elim (hne rfl)
+-  · exact evenOddFalse (oddCancel (oddCancel (oddCancel h)))
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse h
+-  · exact oddEvenFalse (oddCancel h)
+-  · exact oddEvenFalse (oddCancel (oddCancel h))
+-  · exact oddEvenFalse (oddCancel (oddCancel (oddCancel h)))
++  · exact ⟨evenOddFalse (oddCancel (oddCancel (oddCancel h)))⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse h⟩
++  · exact ⟨oddEvenFalse (oddCancel h)⟩
++  · exact ⟨oddEvenFalse (oddCancel (oddCancel h))⟩
++  · exact ⟨oddEvenFalse (oddCancel (oddCancel (oddCancel h)))⟩
+   · exact False.elim (hne rfl)
+ theorem payloadCancel (i : Fin 6) (s t : OTerm alpha) (hi : 2 ≤ i.val)
+-    (h : Derivation body Delta (eqn (code i s) (code i t))) : Derivation body Delta (eqn s t) := by
++    (h : Derivation body Delta (eqn (code i s) (code i t))) : Nonempty (Derivation body Delta (eqn s t)) := by
+   fin_cases i
+   · exact False.elim (by omega)
+   · exact False.elim (by omega)
+-  · exact (evenCancel (oddCancel h))
+-  · exact (evenCancel (oddCancel (oddCancel h)))
+-  · exact (evenCancel (oddCancel (oddCancel (oddCancel h))))
+-  · exact (oddCancel (oddCancel (oddCancel (oddCancel h))))
++  · exact ⟨(evenCancel (oddCancel h))⟩
++  · exact ⟨(evenCancel (oddCancel (oddCancel h)))⟩
++  · exact ⟨(evenCancel (oddCancel (oddCancel (oddCancel h))))⟩
++  · exact ⟨(oddCancel (oddCancel (oddCancel (oddCancel h))))⟩
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalValidHeadEncodingInjectivity.ArithmeticProof
+ #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalValidHeadEncodingInjectivity.ArithmeticProof

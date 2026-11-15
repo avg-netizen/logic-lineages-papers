@@ -1,0 +1,71 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:43:2: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+i j : Fin 6
+s t : OTerm alpha
+hne : i ≠ j
+h : Derivation body Delta (eqn (code i s) (code j t))
+this✝ : i ∈ Fintype.elems
+a✝ : List (Fin 6)
+this : List.Mem i a✝
+⊢ List.finRange 6 = a✝ → this✝ ≍ this → Derivation body Delta ⊥
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:43:18: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+i j : Fin 6
+s t : OTerm alpha
+hne : i ≠ j
+h : Derivation body Delta (eqn (code i s) (code j t))
+this✝ : j ∈ Fintype.elems
+a✝ : List (Fin 6)
+this : List.Mem j a✝
+⊢ List.finRange 6 = a✝ → this✝ ≍ this → Derivation body Delta ⊥
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:44:26: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.18 = ?m.18
+but is expected to have type
+  i = j
+in the application
+  hne rfl
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:45:2: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:41:0: error: type of theorem `LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalValidHeadEncodingInjectivity.ArithmeticProof.different` is not a proposition
+  {body : Positive (Fin 1)} →
+    {alpha : Type} →
+      {Delta : List (InternalCalculus.Formula alpha)} →
+        (i j : Fin 6) →
+          (s t : OTerm alpha) → i ≠ j → Derivation body Delta (eqn (code i s) (code j t)) → Derivation body Delta ⊥
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:82:2: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `List.Mem.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+i : Fin 6
+s t : OTerm alpha
+hi : 2 ≤ ↑i
+h : Derivation body Delta (eqn (code i s) (code i t))
+this✝ : i ∈ Fintype.elems
+a✝ : List (Fin 6)
+this : List.Mem i a✝
+⊢ List.finRange 6 = a✝ → this✝ ≍ this → Derivation body Delta (eqn s t)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:83:25: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  2 ≤ a ≤ 5
+where
+ a := ↑↑i
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:84:2: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:80:0: error: type of theorem `LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalValidHeadEncodingInjectivity.ArithmeticProof.payloadCancel` is not a proposition
+  {body : Positive (Fin 1)} →
+    {alpha : Type} →
+      {Delta : List (InternalCalculus.Formula alpha)} →
+        (i : Fin 6) →
+          (s t : OTerm alpha) →
+            2 ≤ ↑i → Derivation body Delta (eqn (code i s) (code i t)) → Derivation body Delta (eqn s t)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean:90:0: error: No theorem declarations found in namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalValidHeadEncodingInjectivity.ArithmeticProof

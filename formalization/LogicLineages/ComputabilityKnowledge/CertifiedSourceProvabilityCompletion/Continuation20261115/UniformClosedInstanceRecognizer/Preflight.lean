@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedInstanceRecognizer.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedInstanceRecognizer.Preflight
+#check Targets.ExactOriginalInstance
+#check Targets.InternalGuardedGraph
+#check GorbowInstanceCode.instanceCode
+#check UniformClosedSubstitutionFold.NativeProof.exactOriginalFold
+#check SixSol20261113.LiteralSyntaxValidator.FormulaBindingProof.binding
+#check SixSol20261113.HistoryKernel.RangeProof.equalRange
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedInstanceRecognizer.Preflight
