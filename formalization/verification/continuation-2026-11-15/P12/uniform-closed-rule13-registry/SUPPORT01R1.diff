@@ -1,0 +1,17 @@
+--- InstallationProof.before
++++ InstallationProof.after
+@@ -32,10 +32,10 @@
+  obtain ⟨constructorTag,h_constructor⟩ := hall (⟨2,UniformClosedRule13.lineConstructor⟩ : Packed) (by simp [items])
+  obtain ⟨lineTag,h_line⟩ := hall (⟨1,LiteralSyntaxValidator.lineValidator⟩ : Packed) (by simp [items])
+  obtain ⟨logicalTag,h_logical⟩ := hall (⟨1,UniformClosedRule13.logicalLeaf old⟩ : Packed) (by simp [items])
+- obtain ⟨dispatcherTag,h_dispatcher⟩ := hall (⟨4,dispatcher old arithmetic x⟩ : Packed) (by simp [items])
+- obtain ⟨iteratorTag,h_iterator⟩ := hall (⟨4,SixSol20261112.HistoryMachine.iterator (kernel old arithmetic x)⟩ : Packed) (by simp [items])
+- obtain ⟨coreTag,h_core⟩ := hall (⟨5,checker old arithmetic x⟩ : Packed) (by simp [items])
+- obtain ⟨verifierTag,h_verifier⟩ := hall (⟨5,verifier old arithmetic x⟩ : Packed) (by simp [items])
++ obtain ⟨dispatcherTag,h_dispatcher⟩ := hall (⟨4,UniformClosedRule13Dispatcher.dispatcher old arithmetic x⟩ : Packed) (by simp [items])
++ obtain ⟨iteratorTag,h_iterator⟩ := hall (⟨4,SixSol20261112.HistoryMachine.iterator (UniformClosedRule13Certificate.kernel old arithmetic x)⟩ : Packed) (by simp [items])
++ obtain ⟨coreTag,h_core⟩ := hall (⟨5,UniformClosedRule13Certificate.checker old arithmetic x⟩ : Packed) (by simp [items])
++ obtain ⟨verifierTag,h_verifier⟩ := hall (⟨5,UniformClosedRule13Certificate.verifier old arithmetic x⟩ : Packed) (by simp [items])
+  let graph : UniformClosedRule13Validity.GraphInstallation p :=
+   { caseTag,predTag,itag,ftag,fval,vtag,ptag,ctag,rtag,len,htag,ttag,atag,h_caseTag,h_predTag,h_itag,h_ftag,h_fval,h_vtag,h_ptag,h_ctag,h_rtag,h_len,h_htag,h_ttag,h_atag }
+  let validity : UniformClosedRule13Validity.Installation p :=
