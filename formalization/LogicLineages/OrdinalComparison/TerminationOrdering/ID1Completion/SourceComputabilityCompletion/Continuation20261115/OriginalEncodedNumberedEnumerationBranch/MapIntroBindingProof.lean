@@ -47,7 +47,7 @@ theorem belowRawApply (input smallerRaw param out node sourceChild targetChild :
     (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess smallerRaw input)))
     (hf : Nonempty (Derivation body Delta (fields F smallerRaw param out node sourceChild targetChild))) :
     Nonempty (Derivation body Delta (result F smallerRaw param out node sourceChild targetChild)) :=
-  atRawApply smallerRaw param out node sourceChild targetChild (belowRawAt input smallerRaw h hl) hf
+  atRawApply F smallerRaw param out node sourceChild targetChild (belowRawAt F input smallerRaw h hl) hf
 
 /-- The smaller-input hypothesis and its universal parameters are discharged
 inside the original strong-induction derivation. -/
