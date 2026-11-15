@@ -68,8 +68,8 @@ theorem typesEncoding (ts : List Source.Ty) : Encodable.encode ts = typesNumber 
   | nil => rfl
   | cons t ts ih =>
     rw [Encodable.encode_list_cons,ih]
-    change 1 + Nat.pair (typeNumber t) (typesNumber ts) = typesNumber (t :: ts)
-    rfl
+    simp only [typesNumber,OriginalContextExtensionCalibrationProof.typeEncoding,
+      Nat.succ_eq_add_one,Nat.add_comm]
 
 theorem numberedEncoding (n : Nat) (k : Nat) (h : HeadCode (Fin n)) (t : Source.Ty)
     (b : Code (Fin n)) (ts : List Source.Ty) (e : Code (Fin n)) :
@@ -78,6 +78,7 @@ theorem numberedEncoding (n : Nat) (k : Nat) (h : HeadCode (Fin n)) (t : Source.
         (Nat.pair (Encodable.encode t) (Nat.pair (Encodable.encode b)
           (Nat.pair (Encodable.encode ts) (Encodable.encode e)))))) := by
   rw [typesEncoding]
+  simp only [Encodable.encode_nat]
   rfl
 
 theorem nativeBranch : Targets.NativeBranch := by
