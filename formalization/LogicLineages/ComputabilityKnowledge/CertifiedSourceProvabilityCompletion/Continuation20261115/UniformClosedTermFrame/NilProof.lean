@@ -46,7 +46,7 @@ theorem nil {n ctx : Nat} (p : Program n) (ftag stag ptag ctag atag len q l r : 
  have hsucc := localUnary (.succ (.var 0)) _ _ hrest
  have hsucc' : Hilbert.Local T ctx G
   (.equal (.succ (HistoryAppend.appendCall atag newTasks rest)) (.succ rest)) := by
-  simpa only [GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
+  simpa only [HistoryAppend.appendCall,GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc
  obtain ⟨hright⟩ := AppendRightProof.rightNil p atag ha out
  have hpairs := HistoryIteratorSuffix.ReconstructionProof.pairCongruence (T := T) (G := G) ptag
   (.succ (HistoryAppend.appendCall atag newTasks rest)) out (.succ rest) (HistoryAppend.appendCall atag out .zero)

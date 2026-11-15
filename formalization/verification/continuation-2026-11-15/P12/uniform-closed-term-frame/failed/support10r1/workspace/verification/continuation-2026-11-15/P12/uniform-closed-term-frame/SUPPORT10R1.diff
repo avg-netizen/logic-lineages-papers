@@ -1,0 +1,11 @@
+--- before
++++ after
+@@ -35,7 +35,7 @@
+  obtain ⟨hz⟩ := RelationalSyntaxDepthTransport.LengthZeroProof.relatedEmpty p len q l r ctag hlen hc newTasks
+  have hnew := Hilbert.Local.mp (.base hz) hrel0
+  have happ := callCongruence (T := T) (G := G) atag
+-  (newTasks ::ᵥ rest ::ᵥ nil) ((.zero : Term ctx) ::ᵥ rest ::ᵥ nil) (fun i => by
++  (newTasks ::ᵥ rest ::ᵥ List.Vector.nil) ((.zero : Term ctx) ::ᵥ rest ::ᵥ List.Vector.nil) (fun i => by
+    cases i using Fin.cases with
+    | zero => exact hnew
+    | succ i => cases i using Fin.cases with

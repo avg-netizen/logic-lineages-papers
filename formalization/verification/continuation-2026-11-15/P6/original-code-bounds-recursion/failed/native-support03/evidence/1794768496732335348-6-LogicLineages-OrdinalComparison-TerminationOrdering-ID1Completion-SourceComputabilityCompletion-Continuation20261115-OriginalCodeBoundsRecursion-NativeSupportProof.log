@@ -1,0 +1,79 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:40:82: error: unsolved goals
+n param : ℕ
+code : Code (Fin n)
+hc : decodeCode n (codeNumber code) = some code
+⊢ List.map (Nat.unpair ∘ fun child => Nat.pair (codeBounds child).1 (codeBounds child).2)
+      (NumberedSyntaxBoundsPrimrecSupportProof.children code) =
+    List.map codeBounds (NumberedSyntaxBoundsPrimrecSupportProof.children code)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:46:68: error: Application type mismatch: The argument
+  h'
+has type
+  NumberedSyntaxBoundsPrimrecSupportProof.mergeBounds
+      (NumberedSyntaxBoundsPrimrecSupportProof.rootBounds code,
+        NumberedSyntaxBoundsPrimrecSupportProof.collectBounds
+          (List.map codeBounds (NumberedSyntaxBoundsPrimrecSupportProof.children code))) =
+    codeBounds code
+but is expected to have type
+  NumberedSyntaxBoundsPrimrecSupportProof.mergeBounds
+      (NumberedSyntaxBoundsPrimrecSupportProof.rootBounds code,
+        NumberedSyntaxBoundsPrimrecSupportProof.collectBounds
+          (List.map Nat.unpair
+            (List.map ((fun child => value n child) ∘ codeNumber)
+              (NumberedSyntaxBoundsPrimrecSupportProof.children code)))) =
+    codeBounds code
+in the application
+  congrArg (fun x => some (Encodable.encode x)) h'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:37:28: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵v̵a̵l̵u̵e̵I̵m̵a̵g̵e̵]̵[̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲v̲a̲l̲u̲e̲I̲m̲a̲g̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:41:30: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_map,F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵ ̲OriginalBoundsRecombination.ArithmeticProof.pairEncoding,
+          Nat.unpair_pair, ̲Prod.mk.eta]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:42:8: warning: This simp argument is unused:
+  Nat.unpair_pair
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵O̵r̵i̵g̵i̵n̵a̵l̵B̵o̵u̵n̵d̵s̵R̵e̵c̵o̵m̵b̵i̵n̵a̵t̵i̵o̵n̵.̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵P̵r̵o̵o̵f̵.̵p̵a̵i̵r̵E̵n̵c̵o̵d̵i̵n̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵P̵r̵o̵d̵.̵m̵k̵.̵e̵t̵a̵]̵[̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲B̲o̲u̲n̲d̲s̲R̲e̲c̲o̲m̲b̲i̲n̲a̲t̲i̲o̲n̲.̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲P̲r̲o̲o̲f̲.̲p̲a̲i̲r̲E̲n̲c̲o̲d̲i̲n̲g̲,̲ ̲P̲r̲o̲d̲.̲m̲k̲.̲e̲t̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:42:24: warning: This simp argument is unused:
+  Prod.mk.eta
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵O̵r̵i̵g̵i̵n̵a̵l̵B̵o̵u̵n̵d̵s̵R̵e̵c̵o̵m̵b̵i̵n̵a̵t̵i̵o̵n̵.̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵P̵r̵o̵o̵f̵.̵p̵a̵i̵r̵E̵n̵c̵o̵d̵i̵n̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵P̵r̵o̵d̵.̵m̵k̵.̵e̵t̵a̵]̵[̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲a̲p̲p̲l̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲B̲o̲u̲n̲d̲s̲R̲e̲c̲o̲m̲b̲i̲n̲a̲t̲i̲o̲n̲.̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲P̲r̲o̲o̲f̲.̲p̲a̲i̲r̲E̲n̲c̲o̲d̲i̲n̲g̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:43:72: warning: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp only [recombination, ̲NumberedNumericDecodingProof.codeRoundTrip,h̵ ̲v,̵v̵alueImage]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:43:75: warning: This simp argument is unused:
+  valueImage
+
+Hint: Omit it from the simp argument list.
+  simp only [recombination, ̲NumberedNumericDecodingProof.codeRoundTrip, ̲hv,̵v̵a̵l̵u̵e̵I̵m̵a̵g̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.NativeSupportProof.valueImage: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.NativeSupportProof.layerValue: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:62:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.NativeSupportProof.recursiveLaw: forbidden axiom dependency sorryAx

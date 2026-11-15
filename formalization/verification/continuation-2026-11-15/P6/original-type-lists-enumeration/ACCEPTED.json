@@ -1,0 +1,61 @@
+{
+  "status": "Accepted original-type-lists-enumeration exact3",
+  "accepted_at_utc": "2026-11-15T19:37:04.324719+00:00",
+  "new_exact_contracts": 3,
+  "supporting_contracts_total": 683,
+  "cumulative_new_contracts_20261115": 179,
+  "numbered_register": "175 checked,2 inherited,12 pending /189 unchanged",
+  "native_receipt": "1794771255511734218-8",
+  "native_source_matched_modules": 3741,
+  "named_standard_axiom_audits": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsEnumeration.StatementChecks.exactSuccessor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsEnumeration.StatementChecks.exactZero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsEnumeration.StatementChecks.exactEnumeration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/CodecProof.lean": "f420e3a470ff2bcfaa82bfa2e4972118e5ef506acf0ab24743d254369c686960",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/Definitions.lean": "82dd0caf0e3220e04e68ed506195799a0452483f7d87259c429de997fb272faf",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/InternalProof.lean": "31e0ee14452c841473c3e4534dc164a13f57e6249898379dfafad04cb57c5e76",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/NativeProof.lean": "259340b7085a8008d63c68fe4c594fd367483915f319a4534d7be5148fb6bf04",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/NumericProof.lean": "4eeffeb7bff0a02d729600e16df0319d0bff10163257b2705f0fb3c80487fc11",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/Preflight.lean": "bb16887b243d80af191fc0121e929edce3f0bb0702dfbaff801436a2b643e42c",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/StatementChecks.lean": "38a5d9bb42a379f13a4570daf3ef215504ddacd1c4215c6d7c706e910f7d8b5a",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalTypeListsEnumeration/Targets.lean": "b8e00db9afc34551fabc8b3342823ba7a7dbfe2539b8bed6c166a18a61f6c2f0"
+  },
+  "verifier_sha256": "4b0bcf64f83e0912e19dbedba53ed7f9507b73fa5b25f51e81bc3a1652362903",
+  "evidence": [
+    {
+      "path": "verification/continuation-2026-11-15/P6/EVIDENCE-47.json",
+      "sha256": "975a32cc2077f1a10e678525370105663ee71699d689aff2ec1f0ef5c32bad23",
+      "bytes": 9527981,
+      "remote_bytes_omitted": true
+    },
+    {
+      "path": "verification/continuation-2026-11-15/P6/REVIEW-EVIDENCE-47.json",
+      "sha256": "975a32cc2077f1a10e678525370105663ee71699d689aff2ec1f0ef5c32bad23",
+      "bytes": 9527981,
+      "remote_bytes_omitted": true
+    }
+  ],
+  "scope": [
+    "Literal numeric row/cross/Nat recursion calibrates original typeLists for all raw inputs; row-major order and duplicates, leading empty list and base outer singleton empty are preserved.",
+    "Actual typeEquiv inverse and numeric-list surjectivity construct an original List Source.Ty encoding for every raw input. Encodable.encodek pays original decoder conversion; generic listEncoding and tuplesEncoding pay both nested codecs, with no assumed representation equality or fallback validity.",
+    "Internal base graph is 1 and successor is actual leading-empty cons of observed cross output. Reverse direction constructs actual cons witness by program totality, recursion successor and functionality; no image or witness premise added.",
+    "No enumeration membership/completeness, classCodes/Q installation, global source completion or numbered-paper completion."
+  ],
+  "repairs": [
+    "Verified preserved numeric01/numeric02/full02/full03 snapshots: 14/17/26/29 hashes, plus unrun internal01 11 hashes. Repairs only explicit Nat.rec motive/successor view, existing import path, definitional lambda/id bridge, and graph wrappers unfolding before exact recursion introduction. Frozen target/program AST/checker limits unchanged."
+  ]
+}
