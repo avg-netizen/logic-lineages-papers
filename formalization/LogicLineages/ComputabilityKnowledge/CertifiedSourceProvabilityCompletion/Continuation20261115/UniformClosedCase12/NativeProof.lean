@@ -24,7 +24,6 @@ theorem originalLists (args : List (List Nat)) :
     | some right =>
      simp only [someCode,Nat.succ_ne_zero,ite_false,Option.bind_some]
      rw [oneEval,implicationAt f t u left right hi hj,successorEval]
-     exact (someCode _).symm
  · rw [originalWrongLength args hl]
    simp only [hl,ite_false,ite_true,constantEval,noneCode]
 theorem exactOriginalCase12 : Targets.ExactOriginalCase12 := by
