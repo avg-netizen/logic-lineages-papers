@@ -5,6 +5,6 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 #check Targets.InternalChunkTransport
 #check UniformSubstitutionIndexValidity.StatementChecks.exactEmission
 #check RelationalSyntaxDepthTransport.StepSuccessTargets.InternalStepSuccessDecomposition
-#check LiteralSyntaxScan.scanCode
-#check LiteralSyntaxStep.stepCode
+#check SixSol20261113.LiteralSyntaxScan.scanCode
+#check SixSol20261113.LiteralSyntaxStep.stepCode
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.Preflight

@@ -50,7 +50,7 @@ theorem atWitnesses (node param rank old deps final nodes next : OTerm alpha)
     rw [graph2Rename] at hdj
     have hfj := InternalGraphCompositionFunctionalityProof.renameInto hf j Theta hj
     simp only [graph3Rename,sucRelabel,zRelabel] at hfj
-    exact CoverageProof.positive n arity rn pred (old.relabel j) (next.relabel j) (deps.relabel j) hp hoj hfj hdj
+    exact CoverageProof.positive n arity rn pred (old.relabel j) (next.relabel j) (deps.relabel j) hp hoj (by simpa only [rn, Side.rename, root, zRelabel] using hfj) hdj
 
 theorem atNodes (node param rank old deps final nodes : OTerm alpha)
     (hr : Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) rank node param)))

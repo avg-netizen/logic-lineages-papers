@@ -23,7 +23,7 @@ def InternalChunkTransport : Prop := ∀ n (p : Program n)
  (nodes p)[r]? = some ⟨1,HistoryDecoder.decoder true⟩ →
  ∀ ctx (oldTasks newTasks token oldResult raw : Term ctx),
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
-  (.imp (RawReflexivityDispatcher.valid vtag raw)
+  (.imp (Continuation20261114.RawReflexivityDispatcher.valid vtag raw)
    (.imp (stackRelation len q l r oldTasks newTasks)
     (.imp (.equal (LiteralSyntaxStep.stepCall stepTag (.succ oldTasks) token) (.succ oldResult))
      (results stag len q l r newTasks
