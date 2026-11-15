@@ -1,0 +1,11 @@
+--- SUPPORT01/StepProof.lean
++++ SUPPORT01R1/StepProof.lean
+@@ -6,7 +6,7 @@
+ open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof SixSol20261113 List.Vector
+ open LiteralRawMP.DispatcherSupportProof LiteralRawMP.DispatcherCombinatorsProof LiteralRawMP.DispatcherPrimitivesProof
+ open SixSol20261112.Fuel NamedArithmeticGraph
+- theorem computes {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) ptag stag etag atag
++theorem computes {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) ptag stag etag atag
+  (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+  (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxStep.stepCode⟩)
+  (he : (nodes p)[etag]? = some ⟨3,UniformClosedSubstitutionEmit.emitCode⟩)
