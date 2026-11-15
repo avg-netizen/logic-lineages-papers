@@ -1,6 +1,7 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.CombineScalarProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.CombineWitnessProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderTransportLogicalProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.CombineFrameProof
@@ -85,7 +86,7 @@ theorem relationRename {beta : Type} (n : Nat) (x : Frame body Delta) (out : OTe
   simp only [relation,OriginalCodeValidityConstructors.Proof.disjRename,
     InternalRecursionGraphStepSyntaxProof.conjunctionRename,CombineWitnessProof.positiveRename,
     eqnRelabel,zRelabel,OriginalRawSyntaxTransportInternalConstructorSelectorBoundsProof.numeralRelabel,
-    Formula.relabel,Frame.rename]
+    OriginalTypedDecoderTransportLogicalProof.notRename,Frame.rename]
 
 theorem fuelGraph (x : Frame body Delta) :
     Nonempty (Derivation body Delta (graph3 fuel x.f x.node x.answers x.param)) :=

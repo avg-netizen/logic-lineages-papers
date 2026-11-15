@@ -34,6 +34,12 @@ theorem fieldsSubst {beta : Type} (n : Nat)
         (tb.subst sub) (vb.subst sub) (prior.subst sub) (opened.subst sub) (value.subst sub) := by
   simp only [fields,conjunctionSubst,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,
     consTermSubst,emptySubst,eqnSubst,sucSubst,numeral,zSubst]
+  have hxs : (fun i : Fin 7 => (![ts,hs,ls,tb,vb,prior,opened] i).subst sub) =
+      ![ts.subst sub,hs.subst sub,ls.subst sub,tb.subst sub,vb.subst sub,prior.subst sub,opened.subst sub] := by
+    funext i
+    fin_cases i <;> rfl
+  rw [hxs]
+  rfl
 
 theorem matrixWitness (n : Nat) (out answers ts hs ls tb vb : OTerm alpha) (ys : Fin 3 → OTerm alpha) :
     (matrix n out answers ts hs ls tb vb).subst (Sum.elim Term.var (fun i => emb (ys i))) =
