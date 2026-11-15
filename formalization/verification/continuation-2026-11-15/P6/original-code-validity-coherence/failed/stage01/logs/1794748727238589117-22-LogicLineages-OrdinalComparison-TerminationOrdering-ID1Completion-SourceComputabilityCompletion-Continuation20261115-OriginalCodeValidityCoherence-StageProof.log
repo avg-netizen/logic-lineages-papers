@@ -1,0 +1,52 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityCoherence/StageProof.lean:68:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel ?h (ltF ?s ?t)
+in the target expression
+  Nonempty (Derivation body Theta (Formula.relabel j (InternalLessThan.strictLess raw fuel)))
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+raw fuel bound table : OTerm alpha
+psi : InternalCalculus.Formula alpha
+hf : Nonempty (Derivation body Delta (InternalLessThan.strictLess raw fuel))
+ht : Nonempty (Derivation body Delta (graph2 (OriginalCodeDecoderTable.tableProgram n) table fuel bound))
+next :
+  ∀ (beta : Type) (j : alpha → beta) (Theta : List (InternalCalculus.Formula beta)) (predecessor previous : OTerm beta),
+    (∀ p ∈ Delta, Formula.relabel j p ∈ Theta) →
+      Nonempty (Derivation body Theta (InternalLessThan.strictLess (Term.relabel j raw) (suc predecessor))) →
+        Nonempty
+            (Derivation body Theta
+              (graph2 (OriginalCodeDecoderTable.tableProgram n) previous predecessor (Term.relabel j bound))) →
+          Nonempty
+              (Derivation body Theta
+                (graph2 (OriginalCodeDecoderTable.nextRow n) (Term.relabel j table) (Term.relabel j bound) previous)) →
+            Nonempty (Derivation body Theta (Formula.relabel j psi))
+pred : Program 2 := InternalEqualityTest.predecessor.composition fun x => Program.projection 0
+old : Program 2 := (OriginalCodeDecoderTable.tableProgram n).composition ![pred, Program.projection 1]
+qs : Fin 2 → Program 2 := ![pred, old]
+xs : Fin 2 → OTerm alpha := Fin.cons fuel (Fin.cons bound Fin.elim0)
+beta : Type
+j : alpha → beta
+ys : Fin 2 → OTerm beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ r ∈ Delta, Formula.relabel j r ∈ Theta
+hq :
+  ∀ (i : Fin 2),
+    Nonempty
+      (Derivation body Theta
+        (programGraph (qs i) (ys i) (Fin.cons (Term.relabel j fuel) (Fin.cons (Term.relabel j bound) Fin.elim0))))
+xx : Fin 2 → OTerm beta := Fin.cons (Term.relabel j fuel) (Fin.cons (Term.relabel j bound) Fin.elim0)
+hp : Nonempty (Derivation body Theta (graph1 InternalEqualityTest.predecessor (ys 0) (Term.relabel j fuel)))
+ho :
+  Nonempty
+    (Derivation body Theta (graph2 (OriginalCodeDecoderTable.tableProgram n) (ys 1) (ys 0) (Term.relabel j bound)))
+hf' : Nonempty (Derivation body Theta (Formula.relabel j (InternalLessThan.strictLess raw fuel)))
+⊢ Nonempty (Derivation body Theta (Formula.relabel j psi))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityCoherence.StageProof.childFuel: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityCoherence.StageProof.childBound: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityCoherence.StageProof.fuelNonzero: [propext,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityCoherence/StageProof.lean:81:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityCoherence.StageProof.stageCases: forbidden axiom dependency sorryAx
