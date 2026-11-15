@@ -1,0 +1,134 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeralFamilyProof
+public import LogicLineages.ComputabilityKnowledge.GorbowClosedEqualityProof
+public import LogicLineages.ComputabilityKnowledge.GorbowClosedDeductionProof
+public import LogicLineages.ComputabilityKnowledge.GorbowFormulaCompositionProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Family
+open GorbowSyntax GorbowTheoryProof GorbowPACore GorbowFormulaSubstitution
+
+variable {alpha : Type} [Primcodable alpha]
+
+namespace TermEffective
+
+theorem liftedClosed {n : Nat} {t : alpha → Term 0} (ht : TermEffective t) :
+    TermEffective (fun x => GorbowClosedEquality.liftClosedTerm n (t x)) := by
+  exact ht.substitution (fun i => Fin.elim0 i)
+
+theorem instantiated {f : alpha → Term 1} {t : alpha → Term 0}
+    (hf : TermEffective f) (ht : TermEffective t) :
+    TermEffective (fun x => GorbowClosedEquality.instantiateTerm (f x) (t x)) := by
+  apply hf.substitution
+  intro i
+  cases i using Fin.cases with
+  | zero => exact ht
+  | succ j => exact Fin.elim0 j
+
+end TermEffective
+
+namespace FormulaEffective
+
+theorem instantiated {n : Nat} {a : alpha → Formula (n+1)} {t : alpha → Term n}
+    (ha : FormulaEffective a) (ht : TermEffective t) :
+    FormulaEffective (fun x => GorbowStandardInstances.instantiate (a x) (t x)) := by
+  apply ha.substitution
+  intro i
+  cases i using Fin.cases with
+  | zero => exact ht
+  | succ j => exact TermEffective.constant (.var j)
+
+end FormulaEffective
+
+namespace HasCertificates
+
+theorem reflexive (axCheck : alpha → List Nat → Bool) {n : Nat} {t : alpha → Term n}
+    (ht : TermEffective t) : HasCertificates axCheck (fun x => Formula.equal (t x) (t x)) :=
+  logical axCheck (fun x => .reflexive (t x))
+    ((Primrec.const 11).pair (Primrec.list_cons.comp ht (Primrec.const [])))
+
+theorem allInstantiation (axCheck : alpha → List Nat → Bool) {n : Nat}
+    {a : alpha → Formula (n+1)} {t : alpha → Term n}
+    (ha : FormulaEffective a) (ht : TermEffective t) :
+    HasCertificates axCheck (fun x => Formula.imp (.all (a x))
+      (GorbowStandardInstances.instantiate (a x) (t x))) :=
+  logical axCheck (fun x => .allInstantiate (a x) (t x))
+    ((Primrec.const 13).pair (Primrec.list_cons.comp ha
+      (Primrec.list_cons.comp ht (Primrec.const []))))
+
+theorem equalityReplacement (axCheck : alpha → List Nat → Bool) {n : Nat}
+    {a : alpha → Formula (n+1)} {t u : alpha → Term n}
+    (ha : FormulaEffective a) (ht : TermEffective t) (hu : TermEffective u) :
+    HasCertificates axCheck (fun x => Formula.imp (.equal (t x) (u x))
+      (.imp (GorbowStandardInstances.instantiate (a x) (t x))
+        (GorbowStandardInstances.instantiate (a x) (u x)))) :=
+  logical axCheck (fun x => .equalityReplace (a x) (t x) (u x))
+    ((Primrec.const 12).pair (Primrec.list_cons.comp ha
+      (Primrec.list_cons.comp ht (Primrec.list_cons.comp hu (Primrec.const [])))))
+
+private theorem instantiateLift {n : Nat} (phi : Formula (n+1))
+    (sigma : Fin (n+1) → Term 0) :
+    GorbowStandardInstances.instantiate
+      (substituteFormula (liftSubstitute fun i => sigma i.succ) phi) (sigma 0) =
+      substituteFormula sigma phi := by
+  unfold GorbowStandardInstances.instantiate
+  rw [GorbowFormulaCompositionProof.composition]
+  congr 1
+  funext i
+  cases i using Fin.cases with
+  | zero => rfl
+  | succ i =>
+      simp only [liftSubstitute, Fin.cases_succ, renameTerm]
+      rw [GorbowSubstitution.substitute_composition]
+      have he : (fun j : Fin 0 => GorbowSubstitution.substitute
+          (Fin.cases (sigma 0) Term.var) (Term.var j.succ)) = Term.var := by
+        funext j
+        exact Fin.elim0 j
+      rw [he]
+      exact GorbowSubstitution.substitute_variables (sigma i.succ)
+
+/-- The arity is fixed at each use. The numeric producer repeatedly uses the
+original allInstantiate annotation and original numeric MP. -/
+theorem universalSpecialization (axCheck : alpha → List Nat → Bool) :
+    ∀ n {phi : alpha → Formula n} {sigma : alpha → Fin n → Term 0},
+    FormulaEffective phi → (∀ i, TermEffective (fun x => sigma x i)) →
+    HasCertificates axCheck (fun x => GorbowStandardInduction.universalClosure (phi x)) →
+    HasCertificates axCheck (fun x => substituteFormula (sigma x) (phi x)) := by
+  intro n
+  induction n with
+  | zero =>
+      intro phi sigma _ _ hc
+      have he : (fun x => substituteFormula (sigma x) (phi x)) = phi := by
+        funext x
+        have hs : sigma x = Fin.elim0 := by funext i; exact Fin.elim0 i
+        rw [hs]
+        exact GorbowClosedDeductionProof.closedSyntax.1 (phi x)
+      rw [he]
+      exact hc
+  | succ n ih =>
+      intro phi sigma hp hs hc
+      have htail : HasCertificates axCheck
+          (fun x => substituteFormula (fun i => sigma x i.succ) (.all (phi x))) :=
+        ih hp.all (fun i => hs i.succ) hc
+      let B := fun x => substituteFormula (liftSubstitute (fun i => sigma x i.succ)) (phi x)
+      have hB : FormulaEffective B := by
+        apply hp.substitution
+        intro i
+        cases i using Fin.cases with
+        | zero => exact TermEffective.constant (.var 0)
+        | succ j =>
+            change TermEffective (fun x => renameTerm Fin.succ (sigma x j.succ))
+            exact (hs j.succ).substitution (fun i => Fin.elim0 i)
+      have he : HasCertificates axCheck (fun x =>
+          GorbowStandardInstances.instantiate (B x) (sigma x 0)) :=
+        mp axCheck (hB.instantiated (hs 0)) (allInstantiation axCheck hB (hs 0)) htail
+      have hfinal : (fun x => GorbowStandardInstances.instantiate (B x) (sigma x 0)) =
+          (fun x => substituteFormula (sigma x) (phi x)) := by
+        funext x
+        exact instantiateLift (phi x) (sigma x)
+      rw [hfinal] at he
+      exact he
+
+end HasCertificates
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Family
