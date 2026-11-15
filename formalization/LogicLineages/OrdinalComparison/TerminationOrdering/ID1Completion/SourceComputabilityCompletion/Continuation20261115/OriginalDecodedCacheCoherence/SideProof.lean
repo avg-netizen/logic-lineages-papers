@@ -51,7 +51,6 @@ def Side.rename {raw param : OTerm alpha} (s : Side n arity V body Delta raw par
   depth := s.depth.relabel j
   frontier := s.frontier.relabel j
   table := s.table.relabel j
-  rankGraph : Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) seedRank seed param))
   rankGraph := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto s.rankGraph j Theta hj
     simpa only [graph2Rename] using h
@@ -98,7 +97,6 @@ def previousSide {raw param : OTerm alpha} (s : Side n arity V body Delta raw pa
   depth := suc s.depth
   frontier := next
   table := old
-  rankGraph : Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) seedRank seed param))
   bounded := by
     have hb := PrimaryUncoveredCount.OrderProof.transport s.index s.seedRank (suc pred) s.seedRank hi ⟨refl s.seedRank⟩ s.bounded
     exact CrossRootCacheCoherence.SupportProof.predecessorBound pred s.seedRank hb

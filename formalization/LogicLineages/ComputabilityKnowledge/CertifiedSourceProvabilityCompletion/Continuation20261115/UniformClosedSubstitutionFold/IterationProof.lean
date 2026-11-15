@@ -57,7 +57,7 @@ theorem successor {n ctx : Nat} (p : Program n) tag
     | succ i => exact Fin.elim0 i
  rw [hv] at hc
  exact ⟨Logic.trans _ _ _ hr hc⟩
-def tickCongruence {ctx : Nat} {T : Sentence → Prop} tag (a b raw : Term ctx)
+noncomputable def tickCongruence {ctx : Nat} {T : Sentence → Prop} tag (a b raw : Term ctx)
  (h : Derivation T (.equal a b)) :
  Derivation T (.equal (call tag (a ::ᵥ raw ::ᵥ nil)) (call tag (b ::ᵥ raw ::ᵥ nil))) := by
  apply Hilbert.Local.finish
