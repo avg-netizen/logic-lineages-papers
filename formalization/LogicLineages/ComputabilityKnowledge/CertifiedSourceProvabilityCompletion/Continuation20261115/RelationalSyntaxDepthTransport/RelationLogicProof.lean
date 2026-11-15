@@ -40,6 +40,9 @@ noncomputable def instanceRule {T : Sentence → Prop} {ctx : Nat} len q l r (a 
  have h2 := Derivation.logical (A := T) (.allInstantiate
   (entryBody q l r (liftTerm a) (liftTerm b) (liftTerm i) (.var 0)) t)
  have h2' : Derivation T (.imp (entryRelation q l r a b i) (entryBody q l r a b i t)) := by
+  have he : entryRelation q l r a b i =
+   .all (entryBody q l r (liftTerm a) (liftTerm b) (liftTerm i) (.var 0)) := by rfl
+  rw [he]
   simpa only [GorbowPACore.logicalFormula,GorbowStandardInstances.instantiate,substBody,
    substitute,liftTerm,Support.shiftCancel,Fin.cases_zero] using h2
  exact Hilbert.compose h2' (Hilbert.compose h1' (.logical (.andRight _ _)))
