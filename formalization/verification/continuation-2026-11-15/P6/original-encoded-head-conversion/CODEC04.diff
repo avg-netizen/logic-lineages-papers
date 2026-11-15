@@ -1,0 +1,11 @@
+--- before
++++ after
+@@ -88,7 +88,7 @@
+   rw [he,constantEvaluation]
+   change (if evaluate InternalLessThan.ltTest (ofFn ![raw,n]) = 0 then 0
+     else evaluate (payloadHead 5) (ofFn ![raw])) = _
+-  rw [InternalLessThanEvaluationProof.exactLessThanEvaluation,payloadValue]
++  rw [InternalEqualityTestEvaluationProof.vectorTwo,InternalLessThanEvaluationProof.exactLessThanEvaluation,payloadValue]
+   rw [decoded,NumberedHeadCodecPrimrecSupportProof.finDecode]
+   split_ifs <;> simp_all
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof

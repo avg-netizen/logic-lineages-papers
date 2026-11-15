@@ -78,10 +78,17 @@ theorem productCalibration (raw : Nat) :
 
 theorem rankedCalibration (n raw : Nat) :
     evaluate (rankedHead n) (ofFn ![raw]) = decoded (fun i : Fin n => Nat.pair 5 i.val) raw := by
+  have he : evaluate (.composition InternalLessThan.ltTest
+      ![.projection 0,OriginalRawSyntaxTransport.constant 1 n]) (ofFn ![raw]) =
+      evaluate InternalLessThan.ltTest (ofFn ![raw,n]) := by
+    change evaluate InternalLessThan.ltTest
+      (ofFn ![raw,evaluate (OriginalRawSyntaxTransport.constant 1 n) (ofFn ![raw])]) = _
+    rw [constantEvaluation]
   simp only [rankedHead,evalBranch]
+  rw [he,constantEvaluation]
   change (if evaluate InternalLessThan.ltTest (ofFn ![raw,n]) = 0 then 0
     else evaluate (payloadHead 5) (ofFn ![raw])) = _
-  rw [InternalLessThanEvaluationProof.exactLessThanEvaluation,payloadValue]
+  rw [InternalEqualityTestEvaluationProof.vectorTwo,InternalLessThanEvaluationProof.exactLessThanEvaluation,payloadValue]
   rw [decoded,NumberedHeadCodecPrimrecSupportProof.finDecode]
   split_ifs <;> simp_all
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof
