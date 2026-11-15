@@ -23,7 +23,7 @@ theorem fixedTermValidity : FixedTermValidityTargets.InternalFixedTermValidity :
  | zero =>
   obtain ⟨hz⟩ := ConstructorValidityProof.constructorValidity arity p stag ptag ctag atag hs hp hc ha ctx G (.term 1) (Term.numeral depth) [] .nil
   obtain ⟨hcode⟩ := BoundVariableArithmeticProof.numeralCons (ctx := ctx) p ctag hc 1 []
-  have hscan := Logic.callCongruence (GorbowPRNumeralCalculation.Theory p) stag
+  have hscan := Logic.callCongruence (ctx := ctx) (GorbowPRNumeralCalculation.Theory p) stag
    (ClosedTermDepthTargets.tasks ptag ctag (Term.numeral depth) ::ᵥ HistoryLookup.consCall ctag (Term.numeral 1) .zero ::ᵥ nil)
    (ClosedTermDepthTargets.tasks ptag ctag (Term.numeral depth) ::ᵥ Term.numeral (Encodable.encode ([1] : List Nat)) ::ᵥ nil) (fun i => by
     cases i using Fin.cases with
