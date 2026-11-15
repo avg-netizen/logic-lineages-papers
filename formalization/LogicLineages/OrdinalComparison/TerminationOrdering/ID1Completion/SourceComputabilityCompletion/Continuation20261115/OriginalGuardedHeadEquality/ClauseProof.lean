@@ -21,7 +21,7 @@ theorem headFromAllowed (n : Nat) (numbered : Bool) (payload first second head :
     (ha : Nonempty (Derivation body Delta (OriginalCodeValidityConstructors.Targets.allowed n
       (numeral (if numbered then 5 else 4)) payload first second head))) :
     Nonempty (Derivation body Delta (graph1 (OriginalHeadDecoderValidity.check n) (numeral 1) head)) := by
-  let tag := numeral (if numbered then 5 else 4) (alpha := alpha)
+  let tag : OTerm alpha := numeral (if numbered then 5 else 4)
   let H := graph1 (OriginalHeadDecoderValidity.check n) (numeral 1) head
   let F := graph1 (OriginalCodeValidityGuard.check n) (numeral 1) first
   let S := graph1 (OriginalCodeValidityGuard.check n) (numeral 1) second
