@@ -39,7 +39,10 @@ theorem dataNumberOriginal (n : Nat) :
 theorem nativeConversion : Targets.NativeConversion := by
   intro n raw
   have hd : (Encodable.decode raw : Option (HeadCode (Fin n))) =
-      (Encodable.decode raw : Option (HeadData n)).map (headEquiv n).symm := rfl
+      (Encodable.decode raw : Option (HeadData n)).map (headEquiv n).symm := by
+    with_reducible_and_instances change @Encodable.decode _
+      (Encodable.ofEquiv (HeadData n) (headEquiv n)) raw = _
+    exact Encodable.decode_ofEquiv (headEquiv n) raw
   rw [hd,Option.map_map]
   change evaluate (convert n) (ofFn ![raw]) = decoded
     (fun d : HeadData n => headNumber ((headEquiv n).symm d)) raw

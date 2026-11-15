@@ -1,0 +1,36 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedHeadConversion/CodecSupportProof.lean:26:18: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [hm,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedHeadConversion/CodecSupportProof.lean:91:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate InternalLessThan.ltTest (?x ::ᵥ ?y ::ᵥ nil)
+in the target expression
+  (if evaluate InternalLessThan.ltTest (ofFn ![raw, n]) = 0 then 0 else evaluate (payloadHead 5) (ofFn ![raw])) =
+    decoded (fun i => Nat.pair 5 ↑i) raw
+
+n raw : ℕ
+he :
+  evaluate (InternalLessThan.ltTest.composition ![Program.projection 0, OriginalRawSyntaxTransport.constant 1 n])
+      (ofFn ![raw]) =
+    evaluate InternalLessThan.ltTest (ofFn ![raw, n])
+⊢ (if evaluate InternalLessThan.ltTest (ofFn ![raw, n]) = 0 then 0 else evaluate (payloadHead 5) (ofFn ![raw])) =
+    decoded (fun i => Nat.pair 5 ↑i) raw
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.sumCalibration: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.decoded.eq_1: []
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.decodedSum: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.booleanCalibration: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.payloadValue: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.typeDecode: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedHeadConversion/CodecSupportProof.lean:95:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedHeadConversion.CodecSupportProof.rankedCalibration: forbidden axiom dependency sorryAx
