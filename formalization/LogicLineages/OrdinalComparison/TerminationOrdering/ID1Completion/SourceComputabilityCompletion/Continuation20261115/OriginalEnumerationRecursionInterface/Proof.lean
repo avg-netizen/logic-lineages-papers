@@ -38,9 +38,24 @@ theorem backward (n : Nat) (x : Frame body Delta) (out : OTerm alpha)
 
 theorem internalCombine : Targets.InternalCombine := by
   intro body alpha Delta n node answers param vb f ts hs ls tb p2 p3 out hn hp h2 h3
-  let x : Frame body Delta := {node := node, answers := answers, param := param, vb := vb, f := f,
-    ts := ts, hs := hs, ls := ls, tb := tb, p2 := p2, p3 := p3,
-    nodePair := hn, parameterPair := hp, secondPair := h2, thirdPair := h3}
+  let x : Frame body Delta :=
+    {
+      node := node
+      answers := answers
+      param := param
+      vb := vb
+      f := f
+      ts := ts
+      hs := hs
+      ls := ls
+      tb := tb
+      p2 := p2
+      p3 := p3
+      nodePair := hn
+      parameterPair := hp
+      secondPair := h2
+      thirdPair := h3
+    }
   exact ⟨CombineBranchesProof.forward n x out,backward n x out⟩
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.Proof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.Proof
