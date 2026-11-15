@@ -16,7 +16,7 @@ open Continuation20261114 SideProof FrameProof
 open OriginalMapGraphTransport.Targets OriginalMapGraphTransport.AgreementSyntaxProof
 open OriginalMapGraphTransport.AgreementBindingProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
+variable {n : Nat}
 attribute [local irreducible] programGraph
 theorem childTransport {raw param : OTerm alpha} (f : Frame n body Delta raw param)
     (budget deps child found : OTerm alpha)

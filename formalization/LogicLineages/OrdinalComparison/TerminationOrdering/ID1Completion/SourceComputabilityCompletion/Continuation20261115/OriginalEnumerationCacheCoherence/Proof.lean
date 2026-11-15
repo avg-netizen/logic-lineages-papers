@@ -14,9 +14,9 @@ open SourceComputabilityFormulaSupportProof (numeral)
 open Continuation20261114 SideProof
 open InductionDefinitions InductionSyntaxProof BindingProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
+variable {n : Nat}
 attribute [local irreducible] programGraph
-theorem rankStep (n : Nat) (arity : Fin n → Nat) (V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3)
+theorem rankStep (n : Nat)
     (budget : OTerm alpha) (ih : Nonempty (Derivation body Delta (BelowRaw n budget))) :
     Nonempty (Derivation body Delta (AtRaw n budget)) := by
   apply atRawIntro n budget

@@ -18,7 +18,7 @@ open SourceComputabilityFormulaSupportProof (numeral)
 open TwoSol20261113.CalibratedPrimary.Membership (contains)
 open Continuation20261114 SideProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
+variable {n : Nat}
 attribute [local irreducible] programGraph
 theorem noMemberAt {raw param : OTerm alpha} (s : Side n body Delta raw param)
     (rank deps child childRank : OTerm alpha)

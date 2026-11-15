@@ -16,7 +16,7 @@ open SourceComputabilityFormulaSupportProof (numeral)
 open Continuation20261114 SideProof FrameProof
 open OriginalMapGraphTransport.Targets OriginalMapGraphTransport.AgreementSyntaxProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
+variable {n : Nat}
 attribute [local irreducible] programGraph
 theorem fromAgreement {raw param : OTerm alpha} (s1 s2 : Side n body Delta raw param)
     (old1 old2 deps found : OTerm alpha)
