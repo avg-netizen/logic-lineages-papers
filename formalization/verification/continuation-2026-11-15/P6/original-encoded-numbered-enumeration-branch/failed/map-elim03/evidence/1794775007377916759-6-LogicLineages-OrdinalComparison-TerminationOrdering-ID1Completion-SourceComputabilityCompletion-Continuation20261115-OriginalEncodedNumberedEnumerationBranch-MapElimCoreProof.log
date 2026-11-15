@@ -1,0 +1,214 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:44:88: error: don't know how to synthesize implicit argument `α`
+  @Nonempty.intro (Derivation body (?m.62 :: Delta) (eqn head head)) (InternalTagArithmeticSupportProof.refl head)
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+F : Program 1
+raw head tail param out rest node a b mappedHead : OTerm alpha
+ih : Nonempty (Derivation body Delta (BelowRaw F raw))
+hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail))
+hr : Nonempty (Derivation body Delta (graph1 (InternalListMap.map F) rest tail))
+ho : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out mappedHead rest))
+hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) out node))
+hh : Nonempty (Derivation body Delta (graph1 F mappedHead head))
+hh' : Nonempty (Derivation body (eqn mappedHead node :: Delta) (programGraph F node ![head]))
+⊢ Type 1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:44:89: error: don't know how to synthesize implicit argument `Gamma`
+  @InternalTagArithmeticSupportProof.refl body alpha (?m.62 :: Delta) head
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+F : Program 1
+raw head tail param out rest node a b mappedHead : OTerm alpha
+ih : Nonempty (Derivation body Delta (BelowRaw F raw))
+hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail))
+hr : Nonempty (Derivation body Delta (graph1 (InternalListMap.map F) rest tail))
+ho : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out mappedHead rest))
+hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) out node))
+hh : Nonempty (Derivation body Delta (graph1 F mappedHead head))
+hh' : Nonempty (Derivation body (eqn mappedHead node :: Delta) (programGraph F node ![head]))
+⊢ List (InternalCalculus.Formula alpha)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:44:17: error: don't know how to synthesize implicit argument `Delta`
+  @containsHit body alpha (?m.62 :: Delta) raw head tail head (withHyp hc ?m.62)
+    (Eq.mpr (id (congrArg (fun _a => Nonempty (Derivation body (?m.62 :: Delta) _a)) (equalEqn head head)))
+      (Nonempty.intro (InternalTagArithmeticSupportProof.refl head)))
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+F : Program 1
+raw head tail param out rest node a b mappedHead : OTerm alpha
+ih : Nonempty (Derivation body Delta (BelowRaw F raw))
+hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail))
+hr : Nonempty (Derivation body Delta (graph1 (InternalListMap.map F) rest tail))
+ho : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out mappedHead rest))
+hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) out node))
+hh : Nonempty (Derivation body Delta (graph1 F mappedHead head))
+hh' : Nonempty (Derivation body (eqn mappedHead node :: Delta) (programGraph F node ![head]))
+⊢ List (InternalCalculus.Formula alpha)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:44:60: error: don't know how to synthesize placeholder for argument `p`
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+F : Program 1
+raw head tail param out rest node a b mappedHead : OTerm alpha
+ih : Nonempty (Derivation body Delta (BelowRaw F raw))
+hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail))
+hr : Nonempty (Derivation body Delta (graph1 (InternalListMap.map F) rest tail))
+ho : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out mappedHead rest))
+hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) out node))
+hh : Nonempty (Derivation body Delta (graph1 F mappedHead head))
+hh' : Nonempty (Derivation body (eqn mappedHead node :: Delta) (programGraph F node ![head]))
+⊢ InternalCalculus.Formula alpha
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:44:9: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:66:46: warning: This simp argument is unused:
+  graph2Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [result, ̲MapImageProof.imageRename,g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵ ̲GuardedSourceSyntaxProof.numeralRename]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:66:59: warning: This simp argument is unused:
+  GuardedSourceSyntaxProof.numeralRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵s̵u̵l̵t̵,̵M̵a̵p̵I̵m̵a̵g̵e̵P̵r̵o̵o̵f̵.̵i̵m̵a̵g̵e̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵G̵u̵a̵r̵d̵e̵d̵S̵o̵u̵r̵c̵e̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵n̵u̵m̵e̵r̵a̵l̵R̵e̵n̵a̵m̵e̵]̵[̲r̲e̲s̲u̲l̲t̲,̲ ̲M̲a̲p̲I̲m̲a̲g̲e̲P̲r̲o̲o̲f̲.̲i̲m̲a̲g̲e̲R̲e̲n̲a̲m̲e̲,̲ ̲g̲r̲a̲p̲h̲2̲R̲e̲n̲a̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:72:13: warning: This simp argument is unused:
+  graph1Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2Rename, ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at ihj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:72:26: warning: This simp argument is unused:
+  graph2Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename,g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵ ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at ihj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:72:54: warning: This simp argument is unused:
+  GuardedSourceSyntaxProof.numeralRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵g̵r̵a̵p̵h̵1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵G̵u̵a̵r̵d̵e̵d̵S̵o̵u̵r̵c̵e̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵n̵u̵m̵e̵r̵a̵l̵R̵e̵n̵a̵m̵e̵]̵[̲g̲r̲a̲p̲h̲1̲R̲e̲n̲a̲m̲e̲,̲ ̲g̲r̲a̲p̲h̲2̲R̲e̲n̲a̲m̲e̲,̲ ̲b̲e̲l̲o̲w̲R̲a̲w̲R̲e̲n̲a̲m̲e̲]̲ at ihj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:74:13: warning: This simp argument is unused:
+  graph1Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2Rename, ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at hcj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:74:39: warning: This simp argument is unused:
+  belowRawRename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename, ̲graph2Rename,b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵ ̲GuardedSourceSyntaxProof.numeralRename] at hcj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:74:54: warning: This simp argument is unused:
+  GuardedSourceSyntaxProof.numeralRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵g̵r̵a̵p̵h̵1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵G̵u̵a̵r̵d̵e̵d̵S̵o̵u̵r̵c̵e̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵n̵u̵m̵e̵r̵a̵l̵R̵e̵n̵a̵m̵e̵]̵[̲g̲r̲a̲p̲h̲1̲R̲e̲n̲a̲m̲e̲,̲ ̲g̲r̲a̲p̲h̲2̲R̲e̲n̲a̲m̲e̲,̲ ̲b̲e̲l̲o̲w̲R̲a̲w̲R̲e̲n̲a̲m̲e̲]̲ at hcj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:76:26: warning: This simp argument is unused:
+  graph2Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename,g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵ ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at hvj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:76:39: warning: This simp argument is unused:
+  belowRawRename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename, ̲graph2Rename,b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵ ̲GuardedSourceSyntaxProof.numeralRename] at hvj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:76:54: warning: This simp argument is unused:
+  GuardedSourceSyntaxProof.numeralRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵g̵r̵a̵p̵h̵1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵G̵u̵a̵r̵d̵e̵d̵S̵o̵u̵r̵c̵e̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵n̵u̵m̵e̵r̵a̵l̵R̵e̵n̵a̵m̵e̵]̵[̲g̲r̲a̲p̲h̲1̲R̲e̲n̲a̲m̲e̲,̲ ̲g̲r̲a̲p̲h̲2̲R̲e̲n̲a̲m̲e̲,̲ ̲b̲e̲l̲o̲w̲R̲a̲w̲R̲e̲n̲a̲m̲e̲]̲ at hvj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:78:13: warning: This simp argument is unused:
+  graph1Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2Rename, ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at hmj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:78:39: warning: This simp argument is unused:
+  belowRawRename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename, ̲graph2Rename,b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵ ̲GuardedSourceSyntaxProof.numeralRename] at hmj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:97:15: warning: This simp argument is unused:
+  graph1Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2Rename, ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at ihj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:97:28: warning: This simp argument is unused:
+  graph2Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename,g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵ ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at ihj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:97:56: warning: This simp argument is unused:
+  GuardedSourceSyntaxProof.numeralRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵g̵r̵a̵p̵h̵1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵G̵u̵a̵r̵d̵e̵d̵S̵o̵u̵r̵c̵e̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵n̵u̵m̵e̵r̵a̵l̵R̵e̵n̵a̵m̵e̵]̵[̲g̲r̲a̲p̲h̲1̲R̲e̲n̲a̲m̲e̲,̲ ̲g̲r̲a̲p̲h̲2̲R̲e̲n̲a̲m̲e̲,̲ ̲b̲e̲l̲o̲w̲R̲a̲w̲R̲e̲n̲a̲m̲e̲]̲ at ihj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:99:28: warning: This simp argument is unused:
+  graph2Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename,g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵ ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at hvj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:99:41: warning: This simp argument is unused:
+  belowRawRename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename, ̲graph2Rename,b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵ ̲GuardedSourceSyntaxProof.numeralRename] at hvj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:99:56: warning: This simp argument is unused:
+  GuardedSourceSyntaxProof.numeralRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵g̵r̵a̵p̵h̵1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵G̵u̵a̵r̵d̵e̵d̵S̵o̵u̵r̵c̵e̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵n̵u̵m̵e̵r̵a̵l̵R̵e̵n̵a̵m̵e̵]̵[̲g̲r̲a̲p̲h̲1̲R̲e̲n̲a̲m̲e̲,̲ ̲g̲r̲a̲p̲h̲2̲R̲e̲n̲a̲m̲e̲,̲ ̲b̲e̲l̲o̲w̲R̲a̲w̲R̲e̲n̲a̲m̲e̲]̲ at hvj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:101:15: warning: This simp argument is unused:
+  graph1Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1̵R̵e̵n̵a̵m̵e̵,̵g̵r̵a̵p̵h̵2Rename, ̲belowRawRename, ̲GuardedSourceSyntaxProof.numeralRename] at hmj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:101:41: warning: This simp argument is unused:
+  belowRawRename
+
+Hint: Omit it from the simp argument list.
+  simp only [graph1Rename, ̲graph2Rename,b̵e̵l̵o̵w̵R̵a̵w̵R̵e̵n̵a̵m̵e̵,̵ ̲GuardedSourceSyntaxProof.numeralRename] at hmj
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapElimCoreProof.lean:105:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.MapElimCoreProof.core: forbidden axiom dependency sorryAx

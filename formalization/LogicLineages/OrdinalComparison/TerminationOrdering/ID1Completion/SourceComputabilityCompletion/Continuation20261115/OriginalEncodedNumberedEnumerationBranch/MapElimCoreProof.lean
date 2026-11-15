@@ -41,7 +41,7 @@ theorem atValues (raw head tail param out rest node a b mappedHead : OTerm alpha
   apply formulaCases (eqn mappedHead node)
   · have hh' := outputTransport F mappedHead node ![head]
       ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hh _)
-    have hmem := containsHit raw head tail head (withHyp hc _) (by rw [equalEqn]; exact ⟨refl head⟩)
+    have hmem := containsHit raw head tail head (withHyp hc (eqn mappedHead node)) (by rw [equalEqn]; exact ⟨refl head⟩)
     exact MapImageProof.introduce F raw node head hmem hh'
   · have hn : Nonempty (Derivation body ((eqn mappedHead node).not :: Delta) (equal mappedHead node).not) := by
       rw [equalEqn]; exact ⟨Derivation.hypothesis List.mem_cons_self⟩
