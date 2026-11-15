@@ -41,8 +41,7 @@ theorem arguments {n ctx : Nat} (p : Program n) (G : List (Formula ctx)) (caseTa
   intro tag ht
   obtain ⟨h⟩ := HistoryLookup.DestructorProof.internalTailCons n p tag ctag ht hc ctx formula lastArg
   exact ⟨.base h⟩
- have hsecond : Computes p G HistoryLookup.head (lastArg ::ᵥ nil) leftTerm ∧
- Computes p G thirdTermCode (lineValue caseTag predTag ptag ctag formula leftTerm rightTerm ::ᵥ nil) rightTerm := by
+ have hsecond : Computes p G HistoryLookup.head (lastArg ::ᵥ nil) leftTerm := by
   intro tag ht
   obtain ⟨h⟩ := HistoryLookup.DestructorProof.internalHeadCons n p tag ctag ht hc ctx leftTerm thirdArg
   exact ⟨.base h⟩
