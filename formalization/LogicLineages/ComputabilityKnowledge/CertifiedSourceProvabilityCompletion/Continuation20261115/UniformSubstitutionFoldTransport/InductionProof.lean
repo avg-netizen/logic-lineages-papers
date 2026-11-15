@@ -116,7 +116,9 @@ theorem internalAll {n ctx : Nat} (p : Program n)
  obtain ⟨hn⟩ := next p ftag etag vtag stepTag stag ptag ctag atag dtag len q l r hf he hv hstep hs hp hc ha hd hlen hq hl hr
   (.var (0 : Fin (ctx+1))) (liftTerm start) (liftTerm raw)
  have hstep' : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) := by
-  simpa only [phi,GorbowStandardInduction.successorInstance,substBounded,substitute,successorLift,liftTerm,Support.shiftCancel,Fin.cases_zero] using hn
+  simp only [phi,GorbowStandardInduction.successorInstance,substBounded,substitute,Fin.cases_zero]
+  simp only [HistoryCodec.ArithmeticSupport.successorLift]
+  exact hn
  have hall := atTerm phi tokens (induction phi hb hstep')
  have hbound : Derivation T (bounded ftag vtag stag ptag len q l r tokens start raw) := by
   simpa only [phi,GorbowStandardInstances.instantiate,substBounded,substitute,liftTerm,Support.shiftCancel,Fin.cases_zero] using hall
