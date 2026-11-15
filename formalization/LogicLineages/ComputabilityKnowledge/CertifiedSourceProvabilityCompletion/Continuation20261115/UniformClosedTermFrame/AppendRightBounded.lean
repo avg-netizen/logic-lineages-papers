@@ -73,7 +73,7 @@ theorem nextAt {n ctx : Nat} (p : Program n) (tag : Nat)
  let W := weakBound code (.succ bound)
  have hp0 : Hilbert.Local T ctx [W,P] P := .hypothesis (by simp)
  have hw : Hilbert.Local T ctx [W,P] W := .hypothesis List.mem_cons_self
- obtain ⟨hs⟩ := BoundedSupport.weakNext T code bound
+ obtain ⟨hs⟩ := LiteralSyntaxFrame.BoundedSupport.weakNext T code bound
  have out := Hilbert.Local.mp (.mp (.mp (.base (.logical (.orElim E B Q))) (.mp (.base hl) hp0)) (.mp (.base hr) hp0)) (.mp (.base hs) hw)
  exact ⟨Hilbert.Local.finish (Hilbert.Local.discharge (Hilbert.Local.discharge out))⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedTermFrame.AppendRightBounded
