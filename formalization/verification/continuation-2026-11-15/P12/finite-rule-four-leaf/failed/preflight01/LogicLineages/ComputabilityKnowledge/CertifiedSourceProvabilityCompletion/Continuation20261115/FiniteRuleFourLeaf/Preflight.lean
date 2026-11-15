@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FiniteRuleFourLeaf.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FiniteRuleFourLeaf.Preflight
+#check Targets.FiniteLiteralLeaf
+#check GorbowTheoryChecker.axiomLine
+#check SixSol20261113.QuotedVerifierMP.QuotationProof.numeralCalculation
+#check SixSol20261113.SaturatedAxiomLeaf.StatementChecks.nativeCalibration
+#check SixSol20261113.SaturatedAxiomLeaf.StatementChecks.internalMonotonicity
+#check FiniteSource.Proof.actualFixedFuelPackage
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FiniteRuleFourLeaf.Preflight

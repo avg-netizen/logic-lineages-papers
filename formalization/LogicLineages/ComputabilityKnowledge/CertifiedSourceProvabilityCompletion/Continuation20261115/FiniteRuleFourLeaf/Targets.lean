@@ -11,7 +11,7 @@ def FiniteLiteralLeaf : Prop :=
  ∀ (x : Program 3) (tag : Nat),
  (∀ v, evaluate x v = HistoryDispatcher.axiomFunction v) →
  (nodes (sourceRoot pF pR q))[tag]? = some ⟨3,SaturatedAxiomLeaf.saturated x⟩ →
- ∃ fuel : Nat, ∀ sigma : Sentence, sigma ∈ axioms (sourceRoot pF pR q) →
+ ∃ fuel : Nat, ∀ sigma : Sentence, sigma ∈ GorbowPRDefiningEquations.axioms (sourceRoot pF pR q) →
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory (sourceRoot pF pR q))
   (graphEquation tag x c fuel sigma)) ∧
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory (sourceRoot pF pR q))

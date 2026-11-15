@@ -28,11 +28,11 @@ theorem atPairs (n : Nat) (node param left right out child a b parentRank childR
         (graph2 (OriginalDecodedDependencies.accepted n) (suc z) node param)) :=
       ⟨Derivation.hypothesis List.mem_cons_self⟩
     have he := SupportProof.rankEquality n node param left right parentRank (withHyp hp _) ha (withHyp hr _)
-    have hs := OriginalDecodedDependencyClosure.Proof.dependenciesClosed n body _ _ node param out child a b
+    have hs := OriginalDecodedDependencyClosure.Proof.dependenciesClosed n body alpha (graph2 (OriginalDecodedDependencies.accepted n) (suc z) node param :: Delta) node param out child a b
       (withHyp hv _) (withHyp hm _) (withHyp hq _)
     have hca := SupportProof.childAccepted n child param a b (withHyp hq _) (andLeft hs) (andRight hs)
     have hce := SupportProof.rankEquality n child param a b childRank (withHyp hq _) hca (withHyp hc _)
-    have hd := OriginalDecodedDependencies.Proof.dependencyDescent n body _ _ node param left right out child a b
+    have hd := OriginalDecodedDependencies.Proof.dependencyDescent n body alpha (graph2 (OriginalDecodedDependencies.accepted n) (suc z) node param :: Delta) node param left right out child a b
       (withHyp hp _) (withHyp hv _) (withHyp hm _) (withHyp hq _)
     exact InternalOriginalPairingOrderArithmeticProof.strictTransport childRank parentRank a left hce he (andLeft hd)
   · exact OriginalDecodedDependencies.Proof.rejectedImpossible n node param out child _
