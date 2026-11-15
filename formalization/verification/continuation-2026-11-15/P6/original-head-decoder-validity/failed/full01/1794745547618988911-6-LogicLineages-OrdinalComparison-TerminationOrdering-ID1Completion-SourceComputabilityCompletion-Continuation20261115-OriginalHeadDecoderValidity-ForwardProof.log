@@ -1,0 +1,67 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/ForwardProof.lean:80:73: error: don't know how to synthesize implicit argument `α`
+  @Nonempty.intro (Derivation body (Formula.not (eqn tag (numeral 0)) :: ?m.87) (Formula.not (eqn tag (numeral 0))))
+    (Derivation.hypothesis List.mem_cons_self)
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+raw tag payload : OTerm alpha
+hp✝ : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing raw tag payload))
+hv✝ : Nonempty (Derivation body Delta (graph1 (check n) (numeral 1) raw))
+hp :
+  Nonempty
+    (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph2 InternalPairing.pairing raw tag payload))
+hv : Nonempty (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph1 (check n) (numeral 1) raw))
+⊢ Type 1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/ForwardProof.lean:80:74: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.hypothesis body alpha (Formula.not (eqn tag (numeral 0)) :: ?m.87) (Formula.not (eqn tag (numeral 0))) ⋯
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+raw tag payload : OTerm alpha
+hp✝ : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing raw tag payload))
+hv✝ : Nonempty (Derivation body Delta (graph1 (check n) (numeral 1) raw))
+hp :
+  Nonempty
+    (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph2 InternalPairing.pairing raw tag payload))
+hv : Nonempty (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph1 (check n) (numeral 1) raw))
+⊢ List (InternalCalculus.Formula alpha)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/ForwardProof.lean:80:96: error: don't know how to synthesize implicit argument `l`
+  @List.mem_cons_self (InternalCalculus.Formula alpha) (Formula.not (eqn tag (numeral 0))) ?m.87
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+raw tag payload : OTerm alpha
+hp✝ : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing raw tag payload))
+hv✝ : Nonempty (Derivation body Delta (graph1 (check n) (numeral 1) raw))
+hp :
+  Nonempty
+    (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph2 InternalPairing.pairing raw tag payload))
+hv : Nonempty (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph1 (check n) (numeral 1) raw))
+⊢ List (InternalCalculus.Formula alpha)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/ForwardProof.lean:80:41: error: don't know how to synthesize placeholder
+context:
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+raw tag payload : OTerm alpha
+hp✝ : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing raw tag payload))
+hv✝ : Nonempty (Derivation body Delta (graph1 (check n) (numeral 1) raw))
+hp :
+  Nonempty
+    (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph2 InternalPairing.pairing raw tag payload))
+hv : Nonempty (Derivation body (Formula.not (eqn tag (numeral 0)) :: Delta) (graph1 (check n) (numeral 1) raw))
+⊢ List (InternalCalculus.Formula alpha)
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.ForwardProof.forwardAtTag: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.ForwardProof.unknownReject: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalHeadDecoderValidity/ForwardProof.lean:124:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.ForwardProof.forward: forbidden axiom dependency sorryAx
