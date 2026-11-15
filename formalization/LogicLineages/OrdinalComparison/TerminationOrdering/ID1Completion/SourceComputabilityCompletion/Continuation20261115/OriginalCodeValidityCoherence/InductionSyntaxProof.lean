@@ -68,7 +68,7 @@ theorem rawPredicateInstantiate (n : Nat) {alpha : Type}  (raw : OTerm alpha) :
 
 theorem rawPredicateLift (n : Nat) {alpha : Type}  :
     lift (rawPredicate (alpha := alpha) n) = rawPredicate (alpha := alpha ⊕ Fin 1) n := by
-  unfold lift rawPredicate n
+  unfold lift rawPredicate
   rw [atRawRename]
   rfl
 
