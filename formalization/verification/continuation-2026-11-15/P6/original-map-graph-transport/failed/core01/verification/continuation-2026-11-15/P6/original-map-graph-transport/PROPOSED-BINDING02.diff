@@ -1,0 +1,20 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalMapGraphTransport/AgreementSyntaxProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalMapGraphTransport/AgreementSyntaxProof.lean
+@@ -31,7 +31,7 @@
+     (lookupAgreement keys left right).subst (fun a => emb (ts a)) = lookupAgreement (keys.subst ts) (left.subst ts) (right.subst ts) := by
+   unfold lookupAgreement agreementMatrix
+   rw [allBlockSubst,liftedEmbedding]
+-  simp only [impSubst,graph2,programSubst,GuardedSourceSyntaxProof.numeralSubst,
++  simp only [impSubst,graph2,programSubst,numeral,zSubst,sucSubst,
+     consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+ 
+ @[simp] theorem agreementRename {alpha beta : Type} (keys left right : OTerm alpha) (j : alpha → beta) :
+@@ -51,7 +51,7 @@
+     cases a <;> rfl
+   unfold agreementMatrix
+   rw [he]
+-  simp only [impSubst,graph2,programSubst,GuardedSourceSyntaxProof.numeralSubst,
++  simp only [impSubst,graph2,programSubst,numeral,zSubst,sucSubst,
+     consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+   rfl
+ 
