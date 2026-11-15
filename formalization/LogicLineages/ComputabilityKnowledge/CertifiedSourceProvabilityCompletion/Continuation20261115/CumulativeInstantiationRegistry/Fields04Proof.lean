@@ -11,10 +11,10 @@ theorem installed (old a : Program 1) (x : Program 3) {n : Nat} (p : Program n)
  Nonempty (LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCongruence.Installation p old a x) := by
  obtain ⟨parent⟩ := LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_ArithmeticTemplateEvaluation.installed old a x p (fun q hq => h q (by simp only [items,List.mem_append]; exact Or.inl hq))
  obtain ⟨universalLineTag,huniversalLine⟩ := h (⟨2,RawUniversalReplace.lineConstructor⟩ : Packed) (by simp [items])
- obtain ⟨universalLogicalTag,huniversalLogical⟩ := h (⟨1,RawUniversalReplace.logicalLeaf (previousLogical old)⟩ : Packed) (by simp [items])
- obtain ⟨universalDispatcherTag,huniversalDispatcher⟩ := h (⟨4,RawUniversalReplaceDispatcher.dispatcher (previousLogical old) (RawMulNewestAddition.arithmetic a) x⟩ : Packed) (by simp [items])
- obtain ⟨universalIteratorTag,huniversalIterator⟩ := h (⟨4,SixSol20261112.HistoryMachine.iterator (RawUniversalReplaceCertificate.kernel (previousLogical old) (RawMulNewestAddition.arithmetic a) x)⟩ : Packed) (by simp [items])
- obtain ⟨universalCoreTag,huniversalCore⟩ := h (⟨5,RawUniversalReplaceCertificate.checker (previousLogical old) (RawMulNewestAddition.arithmetic a) x⟩ : Packed) (by simp [items])
+ obtain ⟨universalLogicalTag,huniversalLogical⟩ := h (⟨1,RawUniversalReplace.logicalLeaf (RawUniversalCongruence.previousLogical old)⟩ : Packed) (by simp [items])
+ obtain ⟨universalDispatcherTag,huniversalDispatcher⟩ := h (⟨4,RawUniversalReplaceDispatcher.dispatcher (RawUniversalCongruence.previousLogical old) (RawMulNewestAddition.arithmetic a) x⟩ : Packed) (by simp [items])
+ obtain ⟨universalIteratorTag,huniversalIterator⟩ := h (⟨4,SixSol20261112.HistoryMachine.iterator (RawUniversalReplaceCertificate.kernel (RawUniversalCongruence.previousLogical old) (RawMulNewestAddition.arithmetic a) x)⟩ : Packed) (by simp [items])
+ obtain ⟨universalCoreTag,huniversalCore⟩ := h (⟨5,RawUniversalReplaceCertificate.checker (RawUniversalCongruence.previousLogical old) (RawMulNewestAddition.arithmetic a) x⟩ : Packed) (by simp [items])
  exact ⟨{
   toArithmetic := parent
   universalLineTag := universalLineTag
