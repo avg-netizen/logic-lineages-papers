@@ -17,12 +17,12 @@ open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceCom
 open AgreementDefinitions MapDefinitions
 def fields {alpha : Type} (raw left right out : OTerm alpha) : Formula alpha :=
   lookupAgreement E raw left right ⊓ graph2 (MapDefinitions.orderedMap E) out raw left
-def result {alpha : Type} (raw left right out : OTerm alpha) : Formula alpha :=
+def result (_E : Program 2) {alpha : Type} (raw left right out : OTerm alpha) : Formula alpha :=
   graph2 ExchangeMapGraph.mapGraph out raw right
 def matrix {alpha : Type} (raw : OTerm alpha) : Formula (alpha ⊕ Fin 3) :=
   (fields E (raw.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2))).imp
     (result E (raw.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2)))
 def AtRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := InternalClosedPrograms.allBlock (matrix E raw)
 def rawPredicate {alpha : Type} : Formula (alpha ⊕ Fin 1) := AtRaw E (.var (.inr 0))
-def BelowRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := InternalStrongInduction.below rawPredicate E raw
+def BelowRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := InternalStrongInduction.below (rawPredicate E) raw
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.InductionDefinitions

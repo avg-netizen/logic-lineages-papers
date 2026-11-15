@@ -1,0 +1,118 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.BindingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.MapStepProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionLengthProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.RestrictionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.CoreProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalAcceptanceSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc eqn)
+open InternalTagArithmeticSupportProof InternalPositiveUnfoldingSupportProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalListCodecDecompositionSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 ExchangeMapGraph
+open AgreementDefinitions AgreementSyntaxProof AgreementBindingProof
+open InductionDefinitions InductionSyntaxProof BindingProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+variable (E : Program 2)
+attribute [local irreducible] programGraph
+theorem atLookup (raw head tail left right out rest value : OTerm alpha)
+    (ih : Nonempty (Derivation body Delta (BelowRaw E raw)))
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail)))
+    (ha : Nonempty (Derivation body Delta (lookupAgreement E raw left right)))
+    (hr : Nonempty (Derivation body Delta (graph2 (MapDefinitions.orderedMap E) rest tail left)))
+    (hs : Nonempty (Derivation body Delta (graph3 (MapDefinitions.step E) out head rest left)))
+    (hl : Nonempty (Derivation body Delta (graph2 E value head left)))
+    : Nonempty (Derivation body Delta (graph2 mapGraph out raw right)) := by
+  have hright := agreementApply E raw left right head value ha (RestrictionProof.headMember raw head tail hc) hl
+  have hstep := MapStepProof.present E head rest left right value out hl hright hs
+  have htail := belowRawApply E raw tail left right rest ih (consTailDescent raw head tail hc)
+    (andIntro (RestrictionProof.tailAgreement E raw head tail left right hc ha) hr)
+  exact InternalRawListRecursionProof.consValue (InternalAcceptance.constantZero 1) mapStep
+    raw head tail rest out (Fin.cons right Fin.elim0) hc htail hstep
+
+theorem atStep (raw head tail left right out rest : OTerm alpha)
+    (ih : Nonempty (Derivation body Delta (BelowRaw E raw)))
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail)))
+    (ha : Nonempty (Derivation body Delta (lookupAgreement E raw left right)))
+    (hr : Nonempty (Derivation body Delta (graph2 (MapDefinitions.orderedMap E) rest tail left)))
+    (hs : Nonempty (Derivation body Delta (graph3 (MapDefinitions.step E) out head rest left)))
+    : Nonempty (Derivation body Delta (graph2 mapGraph out raw right)) := by
+  apply programCases E (Fin.cons head (Fin.cons left Fin.elim0)) _
+  intro beta j Theta value hj hl
+  simp only [consTermRename,emptyRename] at hl
+  rw [graph2Rename]
+  have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
+  rw [belowRawRename E] at ihj
+  have hcj := InternalGraphCompositionFunctionalityProof.renameInto hc j Theta hj
+  rw [graph2Rename] at hcj
+  have haj := InternalGraphCompositionFunctionalityProof.renameInto ha j Theta hj
+  rw [agreementRename E] at haj
+  have hrj := InternalGraphCompositionFunctionalityProof.renameInto hr j Theta hj
+  rw [graph2Rename] at hrj
+  have hsj := InternalGraphCompositionFunctionalityProof.renameInto hs j Theta hj
+  rw [graph3Rename] at hsj
+  exact atLookup E (raw.relabel j) (head.relabel j) (tail.relabel j) (left.relabel j) (right.relabel j) (out.relabel j) (rest.relabel j) value ihj hcj haj hrj hsj hl
+
+theorem consCore (raw head tail left right out : OTerm alpha)
+    (ih : Nonempty (Derivation body Delta (BelowRaw E raw)))
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail)))
+    (ha : Nonempty (Derivation body Delta (lookupAgreement E raw left right)))
+    (hv : Nonempty (Derivation body Delta (graph2 (MapDefinitions.orderedMap E) out raw left)))
+    : Nonempty (Derivation body Delta (graph2 mapGraph out raw right)) := by
+  have hx := InternalRawListRecursionProof.consForward (InternalAcceptance.constantZero 1) (MapDefinitions.step E) raw head tail out (Fin.cons left Fin.elim0) hc hv
+  apply InternalRawListRecursionProof.stepCases (InternalAcceptance.constantZero 1) (MapDefinitions.step E) out head tail (Fin.cons left Fin.elim0) _ hx
+  intro beta j Theta rest hj hr hs
+  simp only [consTermRename,emptyRename] at hr hs
+  rw [graph2Rename]
+  have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
+  rw [belowRawRename E] at ihj
+  have hcj := InternalGraphCompositionFunctionalityProof.renameInto hc j Theta hj
+  rw [graph2Rename] at hcj
+  have haj := InternalGraphCompositionFunctionalityProof.renameInto ha j Theta hj
+  rw [agreementRename E] at haj
+  exact atStep E (raw.relabel j) (head.relabel j) (tail.relabel j) (left.relabel j) (right.relabel j) (out.relabel j) rest ihj hcj haj hr hs
+
+theorem nilCore (raw left right out : OTerm alpha)
+    (hz : Nonempty (Derivation body Delta (eqn raw z)))
+    (hv : Nonempty (Derivation body Delta (graph2 (MapDefinitions.orderedMap E) out raw left))) :
+    Nonempty (Derivation body Delta (graph2 mapGraph out raw right)) := by
+  have hl0 : Nonempty (Derivation body Delta (graph2 (MapDefinitions.orderedMap E) z z left)) :=
+    InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1) (MapDefinitions.step E) z (Fin.cons left Fin.elim0)
+      (InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons left Fin.elim0))
+  have hr0 : Nonempty (Derivation body Delta (graph2 mapGraph z z right)) :=
+    InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1) mapStep z (Fin.cons right Fin.elim0)
+      (InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons right Fin.elim0))
+  have hv0 := headTransport (MapDefinitions.orderedMap E) out raw z (Fin.cons left Fin.elim0) hz hv
+  obtain ⟨he⟩ := valueUnique (MapDefinitions.orderedMap E) out z ![z,left] hv0 hl0
+  obtain ⟨hz⟩ := hz
+  exact headTransport mapGraph out z raw (Fin.cons right Fin.elim0) ⟨symm hz⟩
+    (outputTransport mapGraph z out ![z,right] ⟨symm he⟩ hr0)
+
+theorem core (raw left right out : OTerm alpha)
+    (ih : Nonempty (Derivation body Delta (BelowRaw E raw)))
+    (ha : Nonempty (Derivation body Delta (lookupAgreement E raw left right)))
+    (hv : Nonempty (Derivation body Delta (graph2 (MapDefinitions.orderedMap E) out raw left)))
+    : Nonempty (Derivation body Delta (graph2 mapGraph out raw right)) := by
+  apply OriginalContextInsertionLengthProof.listCases raw _
+  · exact nilCore E raw left right out ⟨Derivation.hypothesis List.mem_cons_self⟩ (withHyp hv (eqn raw z))
+  · intro beta j Theta head tail hj hc
+    rw [graph2Rename]
+    have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
+    rw [belowRawRename E] at ihj
+    have haj := InternalGraphCompositionFunctionalityProof.renameInto ha j Theta hj
+    rw [agreementRename E] at haj
+    have hvj := InternalGraphCompositionFunctionalityProof.renameInto hv j Theta hj
+    rw [graph2Rename] at hvj
+    exact consCore E (raw.relabel j) head tail (left.relabel j) (right.relabel j) (out.relabel j) ihj hc haj hvj
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.CoreProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.CoreProof
