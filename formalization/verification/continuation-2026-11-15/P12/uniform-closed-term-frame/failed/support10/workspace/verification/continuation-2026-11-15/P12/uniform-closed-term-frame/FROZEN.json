@@ -1,0 +1,36 @@
+{
+  "status": "Frozen exact1; no proof authored; canonical certificate independently accepted678",
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedTermFrame/Definitions.lean": "3f5eabf1b1b08e7134e86d129a03bfe716e3a365e6d9b2eb62f3c9c786a87b4a",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedTermFrame/Preflight.lean": "0c5724f7793a35a7f2ccccd1a0479e8a7c677005e4fb2efc4410796f7200f8bf",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedTermFrame/Targets.lean": "a59132916889a2a80f30eda0d847a8f56f56032fabb8ef6be4e9fede478fd820"
+  },
+  "provenance": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionRawFold/Definitions.lean": "b74634dbbd4aac10cce5c0cbe61cb8a5e267c182ec7526c2b680f167b466aca0",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionRawFold/Proof.lean": "fc1a19b6f4e4943b6a5b33fb0483b3d39e68e9851f901606dcd811d488be7423",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionEmit/Definitions.lean": "a88e45f475db0177d8ed21f9d30dcbb87ea099323c9d18efa3abeb0eda55cd2c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionFoldTransport/ScanProof.lean": "7f9cfc53419a66134bf9d4669bc8b0f0780605358a80942db2c945130c339e51",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionFoldTransport/RawProof.lean": "25b0f4fc5a3fc2f87d195ad01669424266939697380be45b1bae2ad135eefdb3",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawReflexivityDispatcher/TermSoundProof.lean": "7747b285c7c5e1dd2cd19ace6a5fc05e1de5648d02ac193be025e99df8635180",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxStep/Definitions.lean": "355bcc42bb8b6c6ec2af19523ce2afa38b55db7a68db556312cb199e2f1f810b",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxScan/Definitions.lean": "eee07340552ee74eb12fd4ec41d11a4c9bc845c9cf73e6e34b9bf4f4fa00236c"
+  },
+  "correspondence": [
+    "Same fixed original raw fold with lengthProgram token count, actual old-state emitter, append and pair encodings. No new Program AST.",
+    "Initial scanner state is successor(cons(original term task kind0 symbolic bound, arbitrary rest)); output accumulator arbitrary. Final packed state is pair(successor rest,append(out,tokens)).",
+    "Only original termValidator0(tokens)=1 is a premise. Replacement need not be valid or nonzero; malformed rest/out are not inspected or excluded.",
+    "Term syntax has no binders. Marker0/index branches are excluded by a separate successful depth-zero scan, not by native exactTypedDomain or closedShiftIdentity."
+  ],
+  "plan": [
+    "Extract exact original depth-zero scanner success internally from installed term validator; recover auxiliary tags from existing original ASTs.",
+    "Generalize to arbitrary internally represented pending term-task prefixes: original zero-bound successful scanner versus symbolic-bound target tasks above unchanged rest, arbitrary output accumulator. No semantic stack/image premise may escape endpoint.",
+    "Prove bound-zero index-head scanner cannot succeed: nil leaves nonempty pending stack; cons rejects through literal difference zero and NONE propagation. Thus variable marker cannot lie on a complete successful closed-term trace.",
+    "Use exact successful-step inversion and constructor exhaustiveness; all remaining original term constructors emit their literal token and preserve symbolic bound/order. Reconstruct arbitrary encoded raw cons through original append laws.",
+    "Perform internal raw-code bounded induction, deriving intermediate success and strict tail descent. Eliminate prefix/witness assumptions internally, specialize singleton input; retain joint actual packed result."
+  ],
+  "unpaid": [
+    "Runtime-environment substitution composition through arbitrary closed chunks",
+    "Repeated universal specialization and original numeric MP trace composition",
+    "Uniform generated-certificate preservation, HB3 and source collapse"
+  ]
+}
