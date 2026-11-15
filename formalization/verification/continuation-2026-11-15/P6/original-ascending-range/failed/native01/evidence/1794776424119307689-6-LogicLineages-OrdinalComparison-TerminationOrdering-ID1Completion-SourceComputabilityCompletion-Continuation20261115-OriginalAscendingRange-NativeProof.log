@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/NativeProof.lean:15:6: error(lean.unknownIdentifier): Unknown identifier `vectorTwo`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/NativeProof.lean:13:79: error: unsolved goals
+index previous : ℕ
+⊢ evaluate InternalListCodec.consCode (ofFn ![index, 0]) = numbersNumber [index]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/NativeProof.lean:41:4: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair (Encodable.encode head) (numbersNumber tail)).succ
+is not definitionally equal to the right-hand side
+  numbersNumber (head :: tail)
+
+case cons
+head : ℕ
+tail : List ℕ
+ih : Encodable.encode tail = numbersNumber tail
+⊢ (Nat.pair (Encodable.encode head) (numbersNumber tail)).succ = numbersNumber (head :: tail)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/NativeProof.lean:55:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.NativeProof.rangeValue: forbidden axiom dependency sorryAx
