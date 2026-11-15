@@ -53,7 +53,7 @@ theorem rawAcceptanceImp {n ctx : Nat} (p : Program n) (old : Program 1)
   (.succ .zero) formula (.succ .zero) (constantValue p G av 1) hformula hvalidFormula
  have htermGuard := unary p G av termValidator RawAddSucc.secondTermCode replacement (.succ .zero)
   hreplacement hvalidTerm
- have hguards := choosePositive p G av _ _ _ .zero (.succ .zero) hformulaGuard htermGuard
+ have hguards := choosePositive p G av _ (constant 1 0) _ .zero (.succ .zero) hformulaGuard htermGuard
  have hrecognizer : Computes p G recognizer av (.succ .zero) :=
   choosePositive p G av _ _ _ .zero (.succ .zero) hmatch hguards
  obtain ⟨hout⟩ := choosePositive p G av recognizer old (constant 1 1) .zero (.succ .zero)
