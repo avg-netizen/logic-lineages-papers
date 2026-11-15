@@ -19,7 +19,7 @@ theorem internalGuardedGraph : Targets.InternalGuardedGraph := by
   have hh : Hilbert.Local T ctx [A] A := .hypothesis List.mem_cons_self
   have hF := Hilbert.Local.mp (.base (.logical (.andLeft F V))) hh
   have hV := Hilbert.Local.mp (.base (.logical (.andRight F V))) hh
-  obtain ⟨hout⟩ := BranchProof.accepted p [A] ftag fval vtag ptag ctag rtag hf hfv hv hp hc hr formula replacement hF hV itag hi
+  let hout := Classical.choice (BranchProof.accepted p [A] ftag fval vtag ptag ctag rtag hf hfv hv hp hc hr formula replacement hF hV itag hi)
   exact hout.discharge.finish
  have hn : Derivation T (.imp (.neg A) Q) := by
   let G := [Formula.neg A]
@@ -33,12 +33,12 @@ theorem internalGuardedGraph : Targets.InternalGuardedGraph := by
    have hvno : Hilbert.Local T ctx (.neg V :: F :: G) Q := by
     have hF : Hilbert.Local T ctx (.neg V :: F :: G) F := .hypothesis (by simp [G])
     have hV : Hilbert.Local T ctx (.neg V :: F :: G) (.neg V) := .hypothesis List.mem_cons_self
-    obtain ⟨hout⟩ := BranchProof.rejectTerm p (.neg V :: F :: G) fval vtag hfv hv formula replacement hF hV itag hi
+    let hout := Classical.choice (BranchProof.rejectTerm p (.neg V :: F :: G) fval vtag hfv hv formula replacement hF hV itag hi)
     exact hout
    exact cases V Q hvyes hvno
   have hno : Hilbert.Local T ctx (.neg F :: G) Q := by
    have hF : Hilbert.Local T ctx (.neg F :: G) (.neg F) := .hypothesis List.mem_cons_self
-   obtain ⟨hout⟩ := BranchProof.rejectFormula p (.neg F :: G) fval hfv formula replacement hF itag hi
+   let hout := Classical.choice (BranchProof.rejectFormula p (.neg F :: G) fval hfv formula replacement hF itag hi)
    exact hout
   exact (cases F Q hyes hno).discharge.finish
  exact ⟨.mp (.mp (.logical (.andIntro _ _)) hy) hn⟩
