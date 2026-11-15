@@ -63,11 +63,11 @@ theorem indexNonzero (raw tail index : OTerm alpha)
     Nonempty (Derivation body Delta (eqn index z).not) := by
   have hw := PrimaryUncoveredCount.OrderProof.strictNext raw index hb
   obtain ⟨h⟩ := strictWeakTrans tail raw index hl hw
+  obtain ⟨hn⟩ := InternalLeastNumberProof.actualNothingBelowZero body alpha tail
   apply Nonempty.intro
   apply Derivation.implicationIntroduction
   have h0 := orderRight tail (Derivation.hypothesis (body := body) (Gamma := eqn index z :: Delta) List.mem_cons_self)
-    (InternalSourceInversionSupportProof.addHyp h _)
-  obtain ⟨hn⟩ := InternalLeastNumberProof.actualNothingBelowZero body alpha tail
+    (InternalBetaTotalityProof.addHyp h _)
   exact Derivation.implicationElimination (weakenClosed hn _) h0
 
 theorem memberTail (code head tail needle : OTerm alpha)
