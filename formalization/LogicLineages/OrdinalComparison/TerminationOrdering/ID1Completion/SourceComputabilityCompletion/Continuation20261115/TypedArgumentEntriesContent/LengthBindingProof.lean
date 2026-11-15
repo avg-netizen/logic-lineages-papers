@@ -1,6 +1,6 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.TypedArgumentEntriesContent.LengthInductionSyntaxProof
-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsLengthBindingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionProof
 public meta import LogicLineages.Audit
 @[expose] public section
@@ -8,7 +8,7 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalApplicationCertificateConstructors
 open SourceComputabilityFormulaSupportProof InternalTagArithmeticSyntaxProof
-open InternalStrongInduction InternalStrongInductionProof InternalStrongLengthInductionSyntaxProof
+open InternalStrongInduction InternalStrongInductionProof InternalStrongInductionSyntaxProof
 open LengthInductionDefinitions LengthInductionSyntaxProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable (H : Program 1)
@@ -17,13 +17,13 @@ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 theorem atRawIntro  (raw : OTerm alpha)
     (h : Nonempty (Derivation body (Delta.map (fun q => q.relabel Sum.inl)) (matrix H raw))) :
     Nonempty (Derivation body Delta (AtRaw H raw)) :=
-  InternalClosedProgramsLengthBindingProof.introduction body alpha 6 Delta _ h
+  InternalClosedProgramsBindingProof.introduction body alpha 6 Delta _ h
 
 theorem atRawApply (input types gamma param entries entryLength typeLength : OTerm alpha)
     (h : Nonempty (Derivation body Delta (AtRaw H input)))
     (hf : Nonempty (Derivation body Delta (fields H input types gamma param entries entryLength typeLength))) :
     Nonempty (Derivation body Delta (result H input types gamma param entries entryLength typeLength)) := by
-  obtain ⟨h⟩ := InternalClosedProgramsLengthBindingProof.elimination body alpha 6 Delta
+  obtain ⟨h⟩ := InternalClosedProgramsBindingProof.elimination body alpha 6 Delta
     (matrix H input) (fun i => emb (![types,gamma,param,entries,entryLength,typeLength] i)) h
   rw [matrixWitness H] at h
   obtain ⟨hf⟩ := hf

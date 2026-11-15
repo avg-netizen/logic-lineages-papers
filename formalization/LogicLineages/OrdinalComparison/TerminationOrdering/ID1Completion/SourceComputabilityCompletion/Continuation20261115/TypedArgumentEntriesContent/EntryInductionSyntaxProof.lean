@@ -66,7 +66,7 @@ theorem rawPredicateInstantiate {alpha : Type}  (raw : OTerm alpha) :
     (raw : OTerm alpha) (j : alpha → beta) :
     (BelowRaw H raw).relabel j = BelowRaw H (raw.relabel j) := by
   unfold BelowRaw
-  rw [InternalStrongEntryInductionSyntaxProof.belowRename]
+  rw [InternalStrongInductionSyntaxProof.belowRename]
   unfold rawPredicate
   rw [atRawRename H]
   rfl

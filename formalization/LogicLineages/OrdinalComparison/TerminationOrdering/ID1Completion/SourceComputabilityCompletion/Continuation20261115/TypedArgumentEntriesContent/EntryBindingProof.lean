@@ -1,6 +1,6 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.TypedArgumentEntriesContent.EntryInductionSyntaxProof
-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsEntryBindingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionProof
 public meta import LogicLineages.Audit
 @[expose] public section
@@ -8,7 +8,7 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalApplicationCertificateConstructors
 open SourceComputabilityFormulaSupportProof InternalTagArithmeticSyntaxProof
-open InternalStrongInduction InternalStrongInductionProof InternalStrongEntryInductionSyntaxProof
+open InternalStrongInduction InternalStrongInductionProof InternalStrongInductionSyntaxProof
 open EntryInductionDefinitions EntryInductionSyntaxProof
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 variable (H : Program 1)
@@ -17,13 +17,13 @@ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 theorem atRawIntro  (raw : OTerm alpha)
     (h : Nonempty (Derivation body (Delta.map (fun q => q.relabel Sum.inl)) (matrix H raw))) :
     Nonempty (Derivation body Delta (AtRaw H raw)) :=
-  InternalClosedProgramsEntryBindingProof.introduction body alpha 7 Delta _ h
+  InternalClosedProgramsBindingProof.introduction body alpha 7 Delta _ h
 
 theorem atRawApply (input types gamma param entries entry tau child : OTerm alpha)
     (h : Nonempty (Derivation body Delta (AtRaw H input)))
     (hf : Nonempty (Derivation body Delta (fields H input types gamma param entries entry tau child))) :
     Nonempty (Derivation body Delta (result H input types gamma param entries entry tau child)) := by
-  obtain ⟨h⟩ := InternalClosedProgramsEntryBindingProof.elimination body alpha 7 Delta
+  obtain ⟨h⟩ := InternalClosedProgramsBindingProof.elimination body alpha 7 Delta
     (matrix H input) (fun i => emb (![types,gamma,param,entries,entry,tau,child] i)) h
   rw [matrixWitness H] at h
   obtain ⟨hf⟩ := hf
@@ -42,12 +42,12 @@ theorem belowRawAt  (raw child : OTerm alpha)
   rw [belowElimSyntax,rawPredicateInstantiate H] at d
   exact ⟨Derivation.implicationElimination d hl⟩
 
-theorem belowRawApply (input child types gamma param entries entry tau child : OTerm alpha)
+theorem belowRawApply (input smallerRaw types gamma param entries entry tau child : OTerm alpha)
     (h : Nonempty (Derivation body Delta (BelowRaw H input)))
-    (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess child input)))
-    (hf : Nonempty (Derivation body Delta (fields H child types gamma param entries entry tau child))) :
-    Nonempty (Derivation body Delta (result H child types gamma param entries entry tau child)) :=
-  atRawApply H child types gamma param entries entry tau child (belowRawAt H input child h hl) hf
+    (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess smallerRaw input)))
+    (hf : Nonempty (Derivation body Delta (fields H smallerRaw types gamma param entries entry tau child))) :
+    Nonempty (Derivation body Delta (result H smallerRaw types gamma param entries entry tau child)) :=
+  atRawApply H smallerRaw types gamma param entries entry tau child (belowRawAt H input smallerRaw h hl) hf
 
 /-- The smaller-input hypothesis and its universal parameters are discharged
 inside the original strong-induction derivation. -/
