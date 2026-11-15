@@ -24,7 +24,6 @@ open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst)
 open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
 open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
 open InternalStrongInduction
-open OriginalTypedDecoderInternalAcceptanceSyntaxProof
 open OriginalContextInsertionSyntaxProof (lengthSubst)
 
 theorem atRawSubst {alpha beta : Type} 
@@ -32,7 +31,7 @@ theorem atRawSubst {alpha beta : Type}
     (AtRaw raw).subst (fun a => emb (ts a)) = AtRaw (raw.subst ts) := by
   unfold AtRaw matrix
   rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,equalSubst,fields,result,argumentsAcceptedSubst,termAcceptedSubst,lengthSubst,notSubst,eqnSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
+  simp only [impSubst,conjunctionSubst,equalSubst,fields,result,lengthSubst,notSubst,eqnSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
     consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem atRawRename {alpha beta : Type} 
@@ -52,7 +51,7 @@ theorem matrixWitness {alpha : Type} (raw needle count : OTerm alpha) :
     cases a <;> rfl
   unfold matrix fields result
   rw [he]
-  simp only [impSubst,conjunctionSubst,argumentsAcceptedSubst,termAcceptedSubst,lengthSubst,notSubst,eqnSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
+  simp only [impSubst,conjunctionSubst,lengthSubst,notSubst,eqnSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
     consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
   rfl
 
