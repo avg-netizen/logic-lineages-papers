@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionFold.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionFold.Preflight
+#check Targets.ExactOriginalFold
+#check Targets.InternalSubStep
+#check Targets.InternalFiniteFold
+#check GorbowSubstitutionCode.subStep
+#check GorbowSubstitutionCode.subRaw
+#check UniformClosedSubstitutionEmit.StatementChecks.exactOriginalEmit
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionFold.Preflight
