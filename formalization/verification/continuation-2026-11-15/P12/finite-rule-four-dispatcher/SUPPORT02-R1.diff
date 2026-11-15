@@ -1,0 +1,29 @@
+--- NumericProof SUPPORT02
++++ NumericProof SUPPORT02R1
+@@ -20,7 +20,7 @@
+  apply unary p G args (HistoryDecoder.decoder true) q (Term.numeral v) _ h
+  have hn := numerals p G (HistoryDecoder.decoder true) (v ::ᵥ nil)
+  simpa only [HistoryDecoder.NativeProof.evaluateDecoder,HistoryDecoder.NativeProof.coordinate,
+-  List.Vector.map_cons,List.Vector.map_nil] using hn
++  List.Vector.map_cons,List.Vector.map_nil,ite_true] using hn
+ theorem leftNumeral {n ctx : Nat} (p : Program n) (G : List (Formula ctx))
+  (args : List.Vector (Term ctx) 4) (q : Program 4) (v : Nat)
+  (h : Computes p G q args (Term.numeral v)) :
+@@ -28,7 +28,7 @@
+  apply unary p G args (HistoryDecoder.decoder false) q (Term.numeral v) _ h
+  have hn := numerals p G (HistoryDecoder.decoder false) (v ::ᵥ nil)
+  simpa only [HistoryDecoder.NativeProof.evaluateDecoder,HistoryDecoder.NativeProof.coordinate,
+-  List.Vector.map_cons,List.Vector.map_nil] using hn
++  List.Vector.map_cons,List.Vector.map_nil,Bool.false_eq_true,ite_false] using hn
+ /-- Original three decoder applications; index/fuel/history remain arbitrary. -/
+ theorem ruleFour {n ctx : Nat} (p : Program n) (G : List (Formula ctx))
+  (sigma : Sentence) (index fuel history : Term ctx) :
+@@ -41,7 +41,7 @@
+  have hr := rightNumeral p G args _ _ hl
+  have hrr := rightNumeral p G args _ _ hr
+  have hv := leftNumeral p G args _ _ hrr
+- simpa only [HistoryDispatcher.ruleCode,FiniteRuleFourLeaf.lineCode,GorbowTheoryChecker.axiomLine,
++ simpa only [args,HistoryDispatcher.ruleCode,FiniteRuleFourLeaf.lineCode,GorbowTheoryChecker.axiomLine,
+   HistoryDispatcher.NativeProof.encodeProd,HistoryDispatcher.NativeProof.encodeNat,Nat.unpair_pair] using hv
+ /-- Fixed typed formula validity rewrites one installed concrete validator graph. -/
+ theorem validCanonical (sigma : Sentence) :
