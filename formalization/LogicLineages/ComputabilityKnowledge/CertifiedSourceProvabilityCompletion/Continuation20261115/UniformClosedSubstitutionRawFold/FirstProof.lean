@@ -52,7 +52,8 @@ theorem internalFirst : Targets.InternalFirstTick := by
   simpa only [phi,GorbowStandardInduction.successorInstance,substFirst,substitute,
    successorLift,Fin.cases_zero,Support.shiftCancel] using hs0
  have h := atTerm phi count (induction phi hb hs)
+ change Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p) (first tag count state raw))
  exact ⟨by simpa only [phi,GorbowStandardInstances.instantiate,substFirst,substitute,
-  liftTerm,Support.shiftCancel,Fin.cases_zero,first] using h⟩
+  liftTerm,Support.shiftCancel,Fin.cases_zero] using h⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionRawFold.FirstProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedSubstitutionRawFold.FirstProof
