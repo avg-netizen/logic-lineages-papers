@@ -39,7 +39,7 @@ theorem natListEncoding (xs : List Nat) : Encodable.encode xs = numbersNumber xs
   | cons head tail ih =>
     rw [Encodable.encode_list_cons,ih]
     simp only [Encodable.encode_nat]
-    rfl
+    simp only [numbersNumber,Nat.succ_eq_add_one,Nat.add_comm]
 
 theorem nativeRange : Targets.NativeRange := by
   intro v
