@@ -26,7 +26,7 @@ theorem traverses {n ctx : Nat} (p : Program n) (I : Installation p)
     (HistoryAppend.appendCall I.atag out (FixedFormulaSubstitution.binaryValue I.ctag I.atag (token ctor) a b))))) := by
  let task := LiteralSyntaxStep.taskCall I.ptag childKind bound
  let tail := HistoryLookup.consCall I.ctag task rest
- let firstState := .succ (HistoryLookup.consCall I.ctag task tail)
+ let firstState : Term ctx := .succ (HistoryLookup.consCall I.ctag task tail)
  let afterOut := HistoryAppend.appendCall I.atag out (UniformClosedSubstitutionEmit.singletonValue I.ctag (Term.numeral (token ctor)))
  let afterLeft := HistoryAppend.appendCall I.atag afterOut a
  obtain ⟨hfirst⟩ := OneTokenProof.constructor p I ctor hmarker bound rest out raw

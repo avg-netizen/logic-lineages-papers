@@ -20,7 +20,7 @@ theorem traverses {n ctx : Nat} (p : Program n) (I : Installation p)
  let bound : Term ctx := Term.numeral (depth+1)
  let idx : Term ctx := Term.numeral index.val
  let task := LiteralSyntaxStep.taskCall I.ptag 2 bound
- let state := .succ (HistoryLookup.consCall I.ctag task rest)
+ let state : Term ctx := .succ (HistoryLookup.consCall I.ctag task rest)
  let pending := HistoryLookup.consCall I.ctag idx .zero
  let out0 := HistoryAppend.appendCall I.atag out .zero
  let value := FixedFormulaSubstitution.termValue I.ctag I.atag (EnvironmentProof.environment depth) (raw ::ᵥ nil) (.var index)

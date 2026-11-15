@@ -24,7 +24,7 @@ theorem traverses {n ctx : Nat} (p : Program n) (I : Installation p)
      (FixedFormulaSubstitution.unaryValue I.ctag (token ctor) value))))) := by
  let single := UniformClosedSubstitutionEmit.singletonValue I.ctag (Term.numeral (token ctor))
  let afterOut := HistoryAppend.appendCall I.atag out single
- let childState := .succ (HistoryLookup.consCall I.ctag
+ let childState : Term ctx := .succ (HistoryLookup.consCall I.ctag
   (LiteralSyntaxStep.taskCall I.ptag childKind childBound) rest)
  obtain ⟨hfirst⟩ := OneTokenProof.constructor p I ctor hmarker bound rest out raw
  have hfirst' : Derivation (GorbowPRNumeralCalculation.Theory p)
