@@ -16,8 +16,8 @@ def InternalCapacity : Prop := ∀ (n : Nat) (body : Positive (Fin 1)) (alpha : 
     (Delta : List (Formula alpha)) (index previous seed param frontier node seedRank nodeRank : OTerm alpha),
   Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) seedRank seed param)) →
   Nonempty (Derivation body Delta (PrimaryUncoveredCount.bounded index seedRank)) →
-  Nonempty (Derivation body Delta (programGraph (ExchangeGraphRecursion.frontier (OriginalDecodedRank.rank n) (OriginalDecodedDependencies.dependencies n))
-    ![index, previous, seed, param] frontier)) →
+  Nonempty (Derivation body Delta (programGraph (ExchangeGraphRecursion.frontier (OriginalDecodedRank.rank n) (OriginalDecodedDependencies.dependencies n)) frontier
+    ![index, previous, seed, param])) →
   Nonempty (Derivation body Delta (graph2 contains (numeral 1) frontier node)) →
   Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) nodeRank node param)) →
   Nonempty (Derivation body Delta (PrimaryUncoveredCount.bounded nodeRank index))
@@ -29,10 +29,10 @@ def InternalPreviousFrontier : Prop := ∀ (n : Nat) (body : Positive (Fin 1)) (
     (index previous older seed param current prior node deps child seedRank : OTerm alpha),
   Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) seedRank seed param)) →
   Nonempty (Derivation body Delta (PrimaryUncoveredCount.bounded (suc index) seedRank)) →
-  Nonempty (Derivation body Delta (programGraph (ExchangeGraphRecursion.frontier (OriginalDecodedRank.rank n) (OriginalDecodedDependencies.dependencies n))
-    ![suc index, previous, seed, param] current)) →
-  Nonempty (Derivation body Delta (programGraph (ExchangeGraphRecursion.frontier (OriginalDecodedRank.rank n) (OriginalDecodedDependencies.dependencies n))
-    ![index, older, seed, param] prior)) →
+  Nonempty (Derivation body Delta (programGraph (ExchangeGraphRecursion.frontier (OriginalDecodedRank.rank n) (OriginalDecodedDependencies.dependencies n)) current
+    ![suc index, previous, seed, param])) →
+  Nonempty (Derivation body Delta (programGraph (ExchangeGraphRecursion.frontier (OriginalDecodedRank.rank n) (OriginalDecodedDependencies.dependencies n)) prior
+    ![index, older, seed, param])) →
   Nonempty (Derivation body Delta (graph2 contains (numeral 1) current node)) →
   Nonempty (Derivation body Delta (graph2 (OriginalDecodedDependencies.dependencies n) deps node param)) →
   Nonempty (Derivation body Delta (graph2 contains (numeral 1) deps child)) →
