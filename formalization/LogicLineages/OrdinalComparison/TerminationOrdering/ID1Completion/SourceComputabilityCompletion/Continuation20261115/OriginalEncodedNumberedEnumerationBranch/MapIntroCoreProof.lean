@@ -60,7 +60,7 @@ theorem consCore (raw head tail param out node a b : OTerm alpha)
     (hq : Nonempty (Derivation body Delta (graph1 F node b))) :
     Nonempty (Derivation body Delta (result F raw param out node a b)) := by
   let qs : Fin 2 → Program 2 := ![.composition F ![.projection 0],
-    .composition (InternalListMap.map F) ![.projection 1]]
+    .composition (InternalListMap.map F) ![.projection 1] ]
   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs (Fin.cons head (Fin.cons tail Fin.elim0)) _
   intro beta j ys Theta hj hvals
   simp only [result,graph2Rename,GuardedSourceSyntaxProof.numeralRename]
