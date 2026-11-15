@@ -7,6 +7,14 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof SixSol20261113
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport
 open RelationalSyntaxDepthTransport.ConstructorStepTargets
+theorem prefixSame {ctx : Nat} (ctag : Nat) (xs : List (Term ctx)) :
+ FinitePrefixTargets.prefixTerm ctag xs =
+ RelationalSyntaxDepthTransport.FinitePrefixTargets.prefixTerm ctag xs := by
+ induction xs with
+ | nil => rfl
+ | cons x xs ih =>
+  simp only [FinitePrefixTargets.prefixTerm,
+   RelationalSyntaxDepthTransport.FinitePrefixTargets.prefixTerm,ih]
 theorem rowsUnchanged {ctx : Nat} (ptag : Nat) (depth : Term ctx)
  (ctor : Constructor) (hmarker : ctor ≠ .term 0) :
  RowProof.newRows ptag depth ctor = tasks ptag depth ctor := by
@@ -55,6 +63,10 @@ theorem nonMarker {n ctx : Nat} (p : Program n) (G : List (Formula ctx))
  rw [rowsUnchanged ptag depth ctor hmarker] at hrows
  obtain ⟨hrel⟩ := FinitePrefixProof.finitePrefixAppend n p len q l r ctag atag hlen hq hc ha
   ctx G (tasks ptag (.succ depth) ctor) (tasks ptag depth ctor) oldTail newTail hrows ⟨hrest⟩
- exact ⟨.mp (.mp (.base (.logical (.andIntro _ _))) hout) hrel⟩
+ have hrel' : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+  (stackRelation len q l r (output ptag ctag atag ctor (.succ depth) oldTail)
+   (output ptag ctag atag ctor depth newTail)) := by
+  simpa only [output,prefixSame] using hrel
+ exact ⟨.mp (.mp (.base (.logical (.andIntro _ _))) hout) hrel'⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.ConstructorProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.ConstructorProof
