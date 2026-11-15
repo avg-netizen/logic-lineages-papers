@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean R1
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean R2
+@@ -58,7 +58,7 @@
+   (input ptag ctag ctor (call r (head ::ᵥ nil)) tail ::ᵥ Term.numeral (token ctor) ::ᵥ nil) (fun i => by
+    cases i using Fin.cases with
+    | zero => simpa only [input,HistoryLookup.consCall,GorbowStandardInstances.instantiate,
+-       GorbowSubstitution.substitute,Fin.cases_zero] using hs
++       GorbowSubstitution.substitute,Fin.cases_zero,List.Vector.get_cons_zero] using hs
+    | succ i => cases i using Fin.cases with
+      | zero => exact ht
+      | succ i => exact Fin.elim0 i)⟩

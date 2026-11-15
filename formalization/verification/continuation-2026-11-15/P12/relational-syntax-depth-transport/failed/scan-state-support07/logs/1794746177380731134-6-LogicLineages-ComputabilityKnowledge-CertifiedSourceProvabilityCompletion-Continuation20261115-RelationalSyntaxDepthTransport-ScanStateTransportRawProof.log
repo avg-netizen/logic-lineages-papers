@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ScanStateTransportRawProof.lean:20:2: error: Type mismatch: After simplification, term
+  h1
+ has type
+  @Derivation T (ctx + 1 + 1)
+    ((GorbowPACore.weaken (GorbowPACore.weaken H)).imp
+      (property itag len ptag q l r
+          (substitute (fun i => Term.var i.succ)
+            (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) raw)))
+          (Term.var 2) (Term.var 1) (Term.var 0)).all)
+but is expected to have type
+  @Derivation T (ctx + 1 + 1)
+    ((GorbowPACore.weaken (GorbowPACore.weaken H)).imp
+      (property itag len ptag q l r
+          (substitute (fun i => Term.var i.succ)
+            (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) raw)))
+          (Term.var (Fin.succ 1)) (Term.var (Fin.succ 0)) (Term.var 0)).all)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ScanStateTransportRawProof.lean:24:2: error: Type mismatch: After simplification, term
+  h2
+ has type
+  @Derivation T (ctx + 1)
+    ((GorbowPACore.weaken H).imp
+      (allResults itag len ptag q l r
+          (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) raw)) (Term.var 1)
+          (Term.var 0)).all)
+but is expected to have type
+  @Derivation T (ctx + 1)
+    ((GorbowPACore.weaken H).imp
+      (allResults itag len ptag q l r
+          (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) raw)) (Term.var (Fin.succ 0))
+          (Term.var 0)).all)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ScanStateTransportRawProof.lean:99:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ScanStateTransportRawProof.positive: forbidden axiom dependency sorryAx
