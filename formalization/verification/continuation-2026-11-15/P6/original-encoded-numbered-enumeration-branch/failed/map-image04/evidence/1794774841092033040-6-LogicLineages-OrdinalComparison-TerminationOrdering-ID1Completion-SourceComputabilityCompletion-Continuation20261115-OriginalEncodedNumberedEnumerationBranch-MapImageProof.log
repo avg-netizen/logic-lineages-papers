@@ -1,0 +1,37 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:45:73: error: unsolved goals
+F : Program 1
+alpha : Type
+raw node source : OTerm alpha
+⊢ programGraph contains (suc z)
+        (Fin.cons ((Term.relabel Sum.inl raw).subst (bindTerm source))
+          (Fin.cons (bindTerm source (Sum.inr 0)) Fin.elim0)) ⊓
+      programGraph F ((Term.relabel Sum.inl node).subst (bindTerm source))
+        (Fin.cons (bindTerm source (Sum.inr 0)) Fin.elim0) =
+    programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+        (Fin.cons raw (Fin.cons source Fin.elim0)) ⊓
+      programGraph F node (Fin.cons source Fin.elim0)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:101: warning: This simp argument is unused:
+  witnessLift
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵g̵r̵a̵p̵h̵1̵,̵g̵r̵a̵p̵h̵2̵,̵I̵n̵t̵e̵r̵n̵a̵l̵C̵o̵m̵p̵u̵t̵a̵b̵i̵l̵i̵t̵y̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵p̵r̵o̵g̵r̵a̵m̵S̵u̵b̵s̵t̵,̵n̵u̵m̵e̵r̵a̵l̵,̵z̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵I̵n̵t̵e̵r̵n̵a̵l̵R̵a̵w̵L̵i̵s̵t̵R̵e̵c̵u̵r̵s̵i̵o̵n̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵c̵o̵n̵s̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵I̵n̵t̵e̵r̵n̵a̵l̵R̵a̵w̵L̵i̵s̵t̵R̵e̵c̵u̵r̵s̵i̵o̵n̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵e̵m̵p̵t̵y̵S̵u̵b̵s̵t̵,̵w̵i̵t̵n̵e̵s̵s̵L̵i̵f̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲g̲r̲a̲p̲h̲1̲,̲ ̲g̲r̲a̲p̲h̲2̲,̲
+  ̲ ̲ ̲ ̲ ̲I̲n̲t̲e̲r̲n̲a̲l̲C̲o̲m̲p̲u̲t̲a̲b̲i̲l̲i̲t̲y̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲S̲y̲n̲t̲a̲x̲P̲r̲o̲o̲f̲.̲p̲r̲o̲g̲r̲a̲m̲S̲u̲b̲s̲t̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲,̲ ̲z̲S̲u̲b̲s̲t̲,̲ ̲s̲u̲c̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲I̲n̲t̲e̲r̲n̲a̲l̲R̲a̲w̲L̲i̲s̲t̲R̲e̲c̲u̲r̲s̲i̲o̲n̲S̲y̲n̲t̲a̲x̲P̲r̲o̲o̲f̲.̲c̲o̲n̲s̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲I̲n̲t̲e̲r̲n̲a̲l̲R̲a̲w̲L̲i̲s̲t̲R̲e̲c̲u̲r̲s̲i̲o̲n̲S̲y̲n̲t̲a̲x̲P̲r̲o̲o̲f̲.̲e̲m̲p̲t̲y̲S̲u̲b̲s̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:124: warning: This simp argument is unused:
+  Sum.elim_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵g̵r̵a̵p̵h̵1̵,̵g̵r̵a̵p̵h̵2̵,̵I̵n̵t̵e̵r̵n̵a̵l̵C̵o̵m̵p̵u̵t̵a̵b̵i̵l̵i̵t̵y̵A̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵p̵r̵o̵g̵r̵a̵m̵S̵u̵b̵s̵t̵,̵n̵u̵m̵e̵r̵a̵l̵,̵z̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵I̵n̵t̵e̵r̵n̵a̵l̵R̵a̵w̵L̵i̵s̵t̵R̵e̵c̵u̵r̵s̵i̵o̵n̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵c̵o̵n̵s̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵I̵n̵t̵e̵r̵n̵a̵l̵R̵a̵w̵L̵i̵s̵t̵R̵e̵c̵u̵r̵s̵i̵o̵n̵S̵y̵n̵t̵a̵x̵P̵r̵o̵o̵f̵.̵e̵m̵p̵t̵y̵S̵u̵b̵s̵t̵,̵w̵i̵t̵n̵e̵s̵s̵L̵i̵f̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲g̲r̲a̲p̲h̲1̲,̲ ̲g̲r̲a̲p̲h̲2̲,̲
+  ̲ ̲ ̲ ̲ ̲I̲n̲t̲e̲r̲n̲a̲l̲C̲o̲m̲p̲u̲t̲a̲b̲i̲l̲i̲t̲y̲A̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲S̲y̲n̲t̲a̲x̲P̲r̲o̲o̲f̲.̲p̲r̲o̲g̲r̲a̲m̲S̲u̲b̲s̲t̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲,̲ ̲z̲S̲u̲b̲s̲t̲,̲ ̲s̲u̲c̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲I̲n̲t̲e̲r̲n̲a̲l̲R̲a̲w̲L̲i̲s̲t̲R̲e̲c̲u̲r̲s̲i̲o̲n̲S̲y̲n̲t̲a̲x̲P̲r̲o̲o̲f̲.̲c̲o̲n̲s̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲I̲n̲t̲e̲r̲n̲a̲l̲R̲a̲w̲L̲i̲s̲t̲R̲e̲c̲u̲r̲s̲i̲o̲n̲S̲y̲n̲t̲a̲x̲P̲r̲o̲o̲f̲.̲e̲m̲p̲t̲y̲S̲u̲b̲s̲t̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲L̲i̲f̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.MapImageProof.imageSubst: [propext,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:62:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.MapImageProof.introduce: forbidden axiom dependency sorryAx
