@@ -72,7 +72,10 @@ theorem enumerationValue (types : List Nat) (count : Nat) :
   induction count with
   | zero => rfl
   | succ count ih =>
-    rw [Nat.rec_succ,ih,stepValue]
+    change evaluate step (count ::ᵥ Nat.rec (motive := fun _ => Nat) 1
+      (fun k previous => evaluate step (k ::ᵥ previous ::ᵥ numbersNumber types ::ᵥ nil)) count
+      ::ᵥ numbersNumber types ::ᵥ nil) = _
+    rw [ih,stepValue]
     rfl
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsEnumeration.NumericProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsEnumeration.NumericProof
