@@ -11,7 +11,7 @@ def InternalFirstTick : Prop := ∀ n (p : Program n) (itag : Nat),
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (UniformClosedSubstitutionFold.iterateCall itag (.succ count) state raw)
    (UniformClosedSubstitutionFold.iterateCall itag count
-    (call (UniformClosedSubstitutionFold.IterationProof.tickTag itag) (state ::ᵥ raw ::ᵥ nil)) raw)))
+    (GorbowPRDefiningEquations.call (UniformClosedSubstitutionFold.IterationProof.tickTag itag) (state ::ᵥ raw ::ᵥ nil)) raw)))
 /-- Literal raw-list recursion equations, valid for arbitrary encoded tail terms,
 with no native-list image, successful scan, or assumed exhaustion premise. -/
 def InternalRawRecursion : Prop := ∀ n (p : Program n) (ftag ptag ctag stag etag atag : Nat),
