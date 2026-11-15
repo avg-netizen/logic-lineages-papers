@@ -35,9 +35,9 @@ theorem tableCases (n : Nat) (raw : OTerm alpha) (psi : Formula alpha)
   intro beta j ys Theta hj hq
   simp only [consTermRename,emptyRename] at hq
   let xs : Fin 1 → OTerm beta := Fin.cons (raw.relabel j) Fin.elim0
-  have hp := binaryRecover (OriginalCodeDecoderTable.tableProgram n) (.projection 0) (.projection 0)
+  have hp := InternalApplicationCertificateConstructorsSupportProof.binaryRecover (OriginalCodeDecoderTable.tableProgram n) (.projection 0) (.projection 0)
     (ys 0) (raw.relabel j) (raw.relabel j) xs (hq 0) (projectionValue 0 xs) (projectionValue 0 xs)
-  have ht := binaryRecover (OriginalCodeDecoderTable.tableProgram n) (succOf (.projection 0)) (.projection 0)
+  have ht := InternalApplicationCertificateConstructorsSupportProof.binaryRecover (OriginalCodeDecoderTable.tableProgram n) (succOf (.projection 0)) (.projection 0)
     (ys 1) (suc (raw.relabel j)) (raw.relabel j) xs (hq 1)
     (OriginalCodeDecoderTable.SupportProof.succProjection 0 xs) (projectionValue 0 xs)
   exact next beta j Theta (ys 0) (ys 1) hj hp ht
