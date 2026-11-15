@@ -15,6 +15,6 @@ def InternalBoundVariableValidity : Prop := ∀ (depth : Nat) (index : Fin depth
  (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩ →
  ∀ ctx, Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (LiteralSyntaxScan.scanCall stag
-   (ClosedTermDepthTargets.tasks ptag ctag (Term.numeral (ctx := ctx) depth))
+   (ClosedTermDepthTargets.tasks ptag ctag (Term.numeral (n := ctx) depth))
    (Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (Term.var index))))) (.succ .zero)))
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.BoundVariableValidityTargets
