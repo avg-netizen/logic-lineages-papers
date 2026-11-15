@@ -1,0 +1,27 @@
+--- Formula R3
++++ Formula R4
+@@ -78,14 +78,21 @@
+   have h := UnaryProof.traverses p I (.formula 10) (by intro h; cases h)
+    (Term.numeral (depth+1)) (Term.numeral ((depth+1)+1)) 1 (GorbowFormulaPrefixCode.encode a)
+    (FixedFormulaSubstitution.formulaValue I.ctag I.atag (raw ::ᵥ nil) a (EnvironmentProof.environment (depth+1))) raw rfl (traverses p I (depth+1) a raw) rest out
+-  simpa only [FixedFormulaSubstitution.formulaValue,EnvironmentProof.lifted] using h
++  simpa only [FixedFormulaSubstitution.formulaValue,EnvironmentProof.lifted,
++   GorbowFormulaPrefixCode.encode,token,input,kind,show (10 : Fin 12).val = 10 from rfl] using h
+  | ex a =>
+   intro rest out
+   have h := UnaryProof.traverses p I (.formula 11) (by intro h; cases h)
+    (Term.numeral (depth+1)) (Term.numeral ((depth+1)+1)) 1 (GorbowFormulaPrefixCode.encode a)
+    (FixedFormulaSubstitution.formulaValue I.ctag I.atag (raw ::ᵥ nil) a (EnvironmentProof.environment (depth+1))) raw rfl (traverses p I (depth+1) a raw) rest out
+-  simpa only [FixedFormulaSubstitution.formulaValue,EnvironmentProof.lifted] using h
++  simpa only [FixedFormulaSubstitution.formulaValue,EnvironmentProof.lifted,
++   GorbowFormulaPrefixCode.encode,token,input,kind,show (11 : Fin 12).val = 11 from rfl] using h
+ termination_by sizeOf f
+-decreasing_by all_goals simp_wf
++decreasing_by
++ all_goals
++  simp_wf
++  have hf := eq_of_heq ‹HEq f _›
++  rw [hf]
++  simp <;> omega
+ end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformFixedFormulaAgreement.FormulaProof
+ #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformFixedFormulaAgreement.FormulaProof
