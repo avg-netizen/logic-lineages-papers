@@ -57,7 +57,7 @@ theorem matrixWitness {alpha : Type} (raw types gamma param value : OTerm alpha)
 
 theorem rawPredicateInstantiate {alpha : Type}  (raw : OTerm alpha) :
     instantiate (rawPredicate H) (emb raw) = AtRaw H raw := by
-  rw [rawPredicate H,instantiate,bindEmbedding,atRawSubst H]
+  rw [rawPredicate,instantiate,bindEmbedding,atRawSubst H]
   simp only [varBind]
 
 @[simp] theorem belowRawRename {alpha beta : Type} 
