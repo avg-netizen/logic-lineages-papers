@@ -1,0 +1,12 @@
+--- support03/EnvironmentProof.lean
++++ support03r1/EnvironmentProof.lean
+@@ -27,7 +27,7 @@
+  value ctag atag f raw := by
+  rw [UniformRuntimeSpecializationStep.body,specializeHead]
+  have hraw : raw.head ::ᵥ raw.tail = raw := List.Vector.cons_head_tail raw
+- rw [hraw]
+- rfl
++ exact congrArg (fun v : List.Vector (Term ctx) (n+1) =>
++  formulaValue ctag atag v f (runtimeEnvironment (n+1))) hraw
+ end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.EnvironmentProof
+ #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.EnvironmentProof
