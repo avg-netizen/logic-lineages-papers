@@ -68,7 +68,7 @@ theorem stepValue (count : Nat) (previous types : List Nat) :
 
 theorem enumerationValue (types : List Nat) (count : Nat) :
     evaluate enumeration (ofFn ![count,numbersNumber types]) = numbersNumber (tuples types count) := by
-  change Nat.rec 1 (fun k previous => evaluate step (k ::ᵥ previous ::ᵥ numbersNumber types ::ᵥ nil)) count = _
+  change Nat.rec (motive := fun _ => Nat) 1 (fun k previous => evaluate step (k ::ᵥ previous ::ᵥ numbersNumber types ::ᵥ nil)) count = _
   induction count with
   | zero => rfl
   | succ count ih =>
