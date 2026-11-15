@@ -29,9 +29,9 @@ theorem sameOneRecover {k : Nat} (q : Program k) (xs : Fin k → OTerm alpha)
     Nonempty (Derivation body Delta (programGraph q (numeral 1) xs)) := by
   apply InternalAcceptanceSupportProof.programCases q xs _
   intro beta j Theta value hj hv
-  simp only [InternalAcceptanceSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename]
+  simp only [InternalControlGraphSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename]
   have hh := InternalGraphCompositionFunctionalityProof.renameInto h j Theta hj
-  simp only [InternalAcceptanceSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename] at hh
+  simp only [InternalControlGraphSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename] at hh
   have he := InternalEqualityTestProof.equalityOfAcceptance value (numeral 1)
     (binaryRecover InternalEqualityTest.equalityTest q (constant k 1) (numeral 1) value (numeral 1)
       (fun i => (xs i).relabel j) hh hv (constantValue 1 (fun i => (xs i).relabel j)))

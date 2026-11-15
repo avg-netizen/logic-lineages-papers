@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.ForwardProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.BackwardProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.NativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.Proof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalTagArithmeticSyntaxProof (z suc eqn)
+open InternalTagArithmeticSupportProof InternalPositiveUnfoldingSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp formulaCases)
+open InternalAcceptanceBranchProof
+open SourceComputabilityFormulaSupportProof (numeral)
+open OriginalRawSyntaxTransport (constant sameOf)
+open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
+open OriginalRawSyntaxTransportInternalConstructorSupportProof (sameReject)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem internalAcceptedBranches : Targets.InternalAcceptedBranches := by
+  intro n body alpha Delta raw tag payload hp
+  exact ⟨ForwardProof.forward n raw tag payload hp,BackwardProof.backward n raw tag payload hp⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.Proof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalHeadDecoderValidity.Proof

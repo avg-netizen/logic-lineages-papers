@@ -1,0 +1,33 @@
+{
+  "status": "Coordinator independent stage reviews; final acceptance delegated",
+  "p12_step_transport": {
+    "native_exact_pass": "1794745501963243572-6",
+    "candidate": "FULL02",
+    "source_pins": 11,
+    "evidence": "P12/EVIDENCE-13.json",
+    "matched_modules": 1692,
+    "repair_review": "150 snapshot hashes verified, approved explicit double weakenClaim and triple weakenProperty before existing simp; original frozen target unchanged"
+  },
+  "p6_head_decoder": {
+    "native_exact_pass": "1794745658538719998-6",
+    "candidate": "FULL02",
+    "source_pins": 9,
+    "evidence": "P6/EVIDENCE-13.json",
+    "matched_modules": 3169,
+    "repair_review": "14 native-failure snapshot hashes and21 full-failure hashes verified; native only definitional rfl/if branches, final only ten explicit context annotations. Original literal decoder filter proved via parser soundness."
+  },
+  "p12_scan_state": {
+    "frozen_target": "27a30f9c30c21354ef07ba52f071a123045a4b82153755e36b925bb0cad7fb07",
+    "review": "Read actual StateRecursion scanState/nil/cons and original iterator/scanCode; five frozen+provenance hashes match. Original AST, all raw inputs, internally quantified both changing stacks and result. No scanner-binding claim.",
+    "preflight": "1794745638609735490-5",
+    "support_passes": [
+      "1794745722313423045-5",
+      "1794745799871606262-5",
+      "1794745870119419747-6"
+    ],
+    "status": "General induction remains open"
+  },
+  "remote_source_checkpoint": "5e414e41a3eb0b1df1dc070302bec93c278cf9f6",
+  "remote_time_utc": "2026-11-15T12:31:21Z",
+  "publication_limits": "Current source snapshot remotely verified; larger local failure/provenance records pending smaller batches."
+}

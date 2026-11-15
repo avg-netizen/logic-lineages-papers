@@ -21,7 +21,7 @@ def childAt (child : Program 2) : Program 2 := sameOf
 def firstAccepted : Program 2 := childAt firstField
 def secondAccepted : Program 2 := childAt secondField
 def headAccepted (n : Nat) : Program 2 :=
-  .composition OriginalHeadDecoderValidity.check (fun _ : Fin 1 => headField)
+  .composition (OriginalHeadDecoderValidity.check n) (fun _ : Fin 1 => headField)
 def bothChildren : Program 2 := InternalAcceptance.conjunction firstAccepted secondAccepted
 def ordinary (n : Nat) : Program 2 := InternalAcceptance.conjunction (headAccepted n) firstAccepted
 def numbered (n : Nat) : Program 2 := InternalAcceptance.conjunction
@@ -34,5 +34,5 @@ def step (n : Nat) : Program 2 :=
   choose 0 (constant 2 1) (choose 1 firstAccepted
     (choose 2 bothChildren (choose 3 (constant 2 1)
       (choose 4 (ordinary n) (choose 5 (numbered n)
-        (choose 6 (sameOf payload (constant 2 0)) (choose 7 bothChildren (constant 2 0)))))))
+        (choose 6 (sameOf payload (constant 2 0)) (choose 7 bothChildren (constant 2 0))))))))
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep
