@@ -32,8 +32,9 @@ theorem traverses {arity ctx n depth inputs : Nat} (p : Program arity) (I : Inst
    I.hf I.he hv I.hs hscan I.hp I.hc I.ha I.hd hlen hq I.hl I.hr ctx
    (raw.get j) (Term.numeral (depth+1)) rest out replacement
   have hout := Hilbert.Local.mp (Hilbert.Local.base hclosed) hvj
-  simpa only [run,termValue,he,EnvironmentProof.runtimeValue I.ctag I.atag e raw replacement i j he,
-   UniformClosedTermFrame.initial,UniformClosedTermFrame.final] using (show Nonempty _ from ⟨hout⟩)
+  have hvalue := EnvironmentProof.runtimeValue I.ctag I.atag e raw replacement i j he
+  rw [hvalue]
+  simpa only [run,termValue,he,UniformClosedTermFrame.initial,UniformClosedTermFrame.final] using (show Nonempty _ from ⟨hout⟩)
  | inl j =>
   obtain ⟨hvar⟩ := UniformFixedFormulaAgreement.VariableProof.traverses p I depth j rest out replacement
   obtain ⟨hcode⟩ := UniformFixedFormulaAgreement.PrefixCodeProof.encoded p I.ctag I.hc

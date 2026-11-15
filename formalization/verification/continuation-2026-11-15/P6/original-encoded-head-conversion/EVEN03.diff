@@ -1,0 +1,25 @@
+--- EvenProof.before
++++ EvenProof.after
+@@ -51,11 +51,11 @@
+     pairOf (.projection 0) (OriginalRawSyntaxTransport.constant 1 1)]
+   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs (Fin.cons raw Fin.elim0) _
+   intro beta j ys Theta hj hq
+-  simp only [graph1Rename,double,InternalOriginalOrderSyntaxProof.addRelabel,sucRelabel]
++  simp only [InternalApplicationCertificateConstructorsSyntaxProof.graph1Rename,double,InternalOriginalOrderSyntaxProof.addRelabel,sucRelabel]
+   have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
+   rw [atRawRename] at ihj
+   have hpj := InternalGraphCompositionFunctionalityProof.renameInto hp j Theta hj
+-  simp only [graph2Rename,sucRelabel,zRelabel] at hpj
++  simp only [InternalApplicationCertificateConstructorsSyntaxProof.graph2Rename,sucRelabel,zRelabel] at hpj
+   have hq0 := hq 0
+   have hq1 := hq 1
+   simp only [consTermRename,InternalControlGraphSupportProof.emptyRename] at hq0 hq1
+@@ -71,7 +71,7 @@
+   simp only [matrix,fields,result,zRelabel]
+   apply Nonempty.intro
+   apply Derivation.implicationIntroduction
+-  exact Classical.choice (baseValue (.var (.inr 0)) ⟨Derivation.hypothesis List.mem_cons_self⟩)
++  exact Classical.choice (baseValue (.var (.inr 0) : OTerm (alpha ⊕ Fin 1)) ⟨Derivation.hypothesis List.mem_cons_self⟩)
+ 
+ theorem stepPredicate (raw : OTerm alpha)
+     (ih : Nonempty (Derivation body Delta (AtRaw raw))) :
