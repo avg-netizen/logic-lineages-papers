@@ -3,7 +3,7 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalDispatcherRetention.TransportProof
-open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowTheoryProof List.Vector SixSol20261113
+open GorbowPRDefiningEquations GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowTheoryProof List.Vector SixSol20261113
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport HistoryRuleSuffix
 open HistoryDispatcher.SelectProof
 

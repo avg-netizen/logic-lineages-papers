@@ -3,9 +3,9 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalDispatcherRetention.Proof
-open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowTheoryProof List.Vector SixSol20261113
+open GorbowPRDefiningEquations GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowTheoryProof List.Vector SixSol20261113
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport HistoryRuleSuffix
-open HistoryDispatcher.SelectProof TransportProof
+open HistoryDispatcher HistoryDispatcher.SelectProof TransportProof
 
 theorem logical (old : Program 1) : Preserves (applyOne old lineCode)
  (applyOne (RawUniversalReplace.logicalLeaf old) lineCode) := by
@@ -20,11 +20,11 @@ theorem logical (old : Program 1) : Preserves (applyOne old lineCode)
  obtain ⟨oe⟩ := Equations.compositionValues p tag old g ht args (args.get 3 ::ᵥ nil) (fun i => by
   have hi : i = 0 := Fin.eq_zero i
   subst i
-  exact ha)
+  exact ⟨ha⟩)
  obtain ⟨ne⟩ := Equations.compositionValues p tag' (RawUniversalReplace.logicalLeaf old) g ht' args (args.get 3 ::ᵥ nil) (fun i => by
   have hi : i = 0 := Fin.eq_zero i
   subst i
-  exact ha')
+  exact ⟨ha'⟩)
  obtain ⟨hl⟩ := RawUniversalRetention.StatementChecks.exactRetention n p old (tag+1) (tag'+1) ho hn ctx (args.get 3)
  let H := accepts (call tag args)
  have hh : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx [H] H := .hypothesis List.mem_cons_self
