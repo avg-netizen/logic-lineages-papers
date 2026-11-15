@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportNewStackProof.lean:75:2: error: Type mismatch: After simplification, term
+  hfinal.discharge.discharge.discharge.finish
+ has type
+  Derivation T
+    (H.imp
+      ((Formula.equal (LiteralSyntaxStep.expandCall etag (liftTerm (liftTerm oh)) (liftTerm (liftTerm tok)))
+            (liftTerm (liftTerm added)).succ).imp
+        ((Formula.equal
+              (LiteralSyntaxStep.stepCall stag
+                (HistoryLookup.consCall ctag (liftTerm (liftTerm oh)) (liftTerm (liftTerm ot))).succ
+                (liftTerm (liftTerm tok)))
+              (liftTerm (liftTerm result)).succ).imp
+          (StepTransportTargets.witnesses stag len q l r (liftTerm (liftTerm nt)) (liftTerm (liftTerm tok))
+            (liftTerm (liftTerm result))))))
+but is expected to have type
+  Derivation T
+    (H.imp
+      (GorbowPACore.weaken
+        (GorbowPACore.weaken
+          ((Formula.equal (LiteralSyntaxStep.expandCall etag oh tok) added.succ).imp
+            ((Formula.equal (LiteralSyntaxStep.stepCall stag (HistoryLookup.consCall ctag oh ot).succ tok)
+                  result.succ).imp
+              (StepTransportTargets.witnesses stag len q l r nt tok result))))))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepTransportNewStackProof.weakenClaim: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportNewStackProof.lean:82:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepTransportNewStackProof.eliminateNewStack: forbidden axiom dependency sorryAx
