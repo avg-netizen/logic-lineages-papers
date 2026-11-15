@@ -1,0 +1,120 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:33:44: error(lean.unknownIdentifier): Unknown identifier `programSubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:34:4: error(lean.unknownIdentifier): Unknown identifier `consTermSubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:34:18: error(lean.unknownIdentifier): Unknown identifier `emptySubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:30:95: error: unsolved goals
+F : Program 1
+alpha beta : Type
+raw node : OTerm alpha
+ts : alpha → OTerm beta
+⊢ existsOne
+      ((BoundedFormula.subst
+          (programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+            (Fin.cons (Term.relabel Sum.inl raw) (Fin.cons (var (Sum.inr 0)) Fin.elim0)))
+          fun a => emb (Sum.elim (fun x => Term.relabel Sum.inl (ts x)) (fun i => var (Sum.inr i)) a)) ⊓
+        BoundedFormula.subst (programGraph F (Term.relabel Sum.inl node) (Fin.cons (var (Sum.inr 0)) Fin.elim0))
+          fun a => emb (Sum.elim (fun x => Term.relabel Sum.inl (ts x)) (fun i => var (Sum.inr i)) a)) =
+    existsOne
+      (programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+          (Fin.cons (Term.relabel Sum.inl (Term.subst raw ts)) (Fin.cons (var (Sum.inr 0)) Fin.elim0)) ⊓
+        programGraph F (Term.relabel Sum.inl (Term.subst node ts)) (Fin.cons (var (Sum.inr 0)) Fin.elim0))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:33:65: warning: This simp argument is unused:
+  zSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵g̵r̵a̵p̵h̵1̵,̵g̵r̵a̵p̵h̵2̵,̵p̵r̵o̵g̵r̵a̵m̵S̵u̵b̵s̵t̵,̵n̵u̵m̵e̵r̵a̵l̵,̵z̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵e̵m̵p̵t̵y̵S̵u̵b̵s̵t̵,̵l̵i̵f̵t̵S̵u̵b̵s̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲g̲r̲a̲p̲h̲1̲,̲ ̲g̲r̲a̲p̲h̲2̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲S̲u̲b̲s̲t̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲,̲ ̲s̲u̲c̲S̲u̲b̲s̲t̲,̲ ̲c̲o̲n̲s̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲e̲m̲p̲t̲y̲S̲u̲b̲s̲t̲,̲ ̲l̲i̲f̲t̲S̲u̲b̲s̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:33:72: warning: This simp argument is unused:
+  sucSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵g̵r̵a̵p̵h̵1̵,̵g̵r̵a̵p̵h̵2̵,̵p̵r̵o̵g̵r̵a̵m̵S̵u̵b̵s̵t̵,̵n̵u̵m̵e̵r̵a̵l̵,̵z̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵e̵m̵p̵t̵y̵S̵u̵b̵s̵t̵,̵l̵i̵f̵t̵S̵u̵b̵s̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲g̲r̲a̲p̲h̲1̲,̲ ̲g̲r̲a̲p̲h̲2̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲S̲u̲b̲s̲t̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲,̲ ̲z̲S̲u̲b̲s̲t̲,̲ ̲c̲o̲n̲s̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲e̲m̲p̲t̲y̲S̲u̲b̲s̲t̲,̲ ̲l̲i̲f̲t̲S̲u̲b̲s̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:34:29: warning: This simp argument is unused:
+  liftSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲graph1, ̲graph2, ̲programSubst, ̲numeral, ̲zSubst, ̲sucSubst,
+      consTermSubst, ̲emptySubst,l̵i̵f̵t̵S̵u̵b̵s̵t̵,̵ ̲Term.subst, ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:34:39: warning: This simp argument is unused:
+  Term.subst
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲graph1, ̲graph2, ̲programSubst, ̲numeral, ̲zSubst, ̲sucSubst,
+      consTermSubst, ̲emptySubst, ̲liftSubst,T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵ ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:34:50: warning: This simp argument is unused:
+  Sum.elim_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲graph1, ̲graph2, ̲programSubst, ̲numeral, ̲zSubst, ̲sucSubst,
+      consTermSubst, ̲emptySubst, ̲liftSubst, ̲Term.subst,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:48:44: error(lean.unknownIdentifier): Unknown identifier `programSubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:4: error(lean.unknownIdentifier): Unknown identifier `consTermSubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:18: error(lean.unknownIdentifier): Unknown identifier `emptySubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:45:73: error: unsolved goals
+F : Program 1
+alpha : Type
+raw node source : OTerm alpha
+⊢ ((BoundedFormula.subst
+        (programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+          (Fin.cons (Term.relabel Sum.inl raw) (Fin.cons (var (Sum.inr 0)) Fin.elim0)))
+        fun a => emb (bindTerm source a)) ⊓
+      BoundedFormula.subst (programGraph F (Term.relabel Sum.inl node) (Fin.cons (var (Sum.inr 0)) Fin.elim0)) fun a =>
+        emb (bindTerm source a)) =
+    programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+        (Fin.cons raw (Fin.cons source Fin.elim0)) ⊓
+      programGraph F node (Fin.cons source Fin.elim0)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:48:65: warning: This simp argument is unused:
+  zSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵g̵r̵a̵p̵h̵1̵,̵g̵r̵a̵p̵h̵2̵,̵p̵r̵o̵g̵r̵a̵m̵S̵u̵b̵s̵t̵,̵n̵u̵m̵e̵r̵a̵l̵,̵z̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵e̵m̵p̵t̵y̵S̵u̵b̵s̵t̵,̵w̵i̵t̵n̵e̵s̵s̵L̵i̵f̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲g̲r̲a̲p̲h̲1̲,̲ ̲g̲r̲a̲p̲h̲2̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲S̲u̲b̲s̲t̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲,̲ ̲s̲u̲c̲S̲u̲b̲s̲t̲,̲ ̲c̲o̲n̲s̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲e̲m̲p̲t̲y̲S̲u̲b̲s̲t̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲L̲i̲f̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:48:72: warning: This simp argument is unused:
+  sucSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵g̵r̵a̵p̵h̵1̵,̵g̵r̵a̵p̵h̵2̵,̵p̵r̵o̵g̵r̵a̵m̵S̵u̵b̵s̵t̵,̵n̵u̵m̵e̵r̵a̵l̵,̵z̵S̵u̵b̵s̵t̵,̵s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵e̵m̵p̵t̵y̵S̵u̵b̵s̵t̵,̵w̵i̵t̵n̵e̵s̵s̵L̵i̵f̵t̵,̵T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲g̲r̲a̲p̲h̲1̲,̲ ̲g̲r̲a̲p̲h̲2̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲S̲u̲b̲s̲t̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲,̲ ̲z̲S̲u̲b̲s̲t̲,̲ ̲c̲o̲n̲s̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲e̲m̲p̲t̲y̲S̲u̲b̲s̲t̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲L̲i̲f̲t̲,̲ ̲T̲e̲r̲m̲.̲s̲u̲b̲s̲t̲,̲ ̲S̲u̲m̲.̲e̲l̲i̲m̲_̲i̲n̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:29: warning: This simp argument is unused:
+  witnessLift
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲graph1, ̲graph2, ̲programSubst, ̲numeral, ̲zSubst, ̲sucSubst,
+      consTermSubst, ̲emptySubst,w̵i̵t̵n̵e̵s̵s̵L̵i̵f̵t̵,̵ ̲Term.subst, ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:41: warning: This simp argument is unused:
+  Term.subst
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲graph1, ̲graph2, ̲programSubst, ̲numeral, ̲zSubst, ̲sucSubst,
+      consTermSubst, ̲emptySubst, ̲witnessLift,T̵e̵r̵m̵.̵s̵u̵b̵s̵t̵,̵ ̲Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:49:52: warning: This simp argument is unused:
+  Sum.elim_inr
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲graph1, ̲graph2, ̲programSubst, ̲numeral, ̲zSubst, ̲sucSubst,
+      consTermSubst, ̲emptySubst, ̲witnessLift, ̲Term.subst,̵S̵u̵m̵.̵e̵l̵i̵m̵_̵i̵n̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/MapImageProof.lean:62:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.MapImageProof.imageSubst: forbidden axiom dependency sorryAx

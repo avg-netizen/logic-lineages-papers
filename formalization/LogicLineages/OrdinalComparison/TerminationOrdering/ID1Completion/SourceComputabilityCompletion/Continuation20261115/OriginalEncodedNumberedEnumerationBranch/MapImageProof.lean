@@ -30,8 +30,8 @@ theorem imageSubst {beta : Type} (raw node : OTerm alpha) (ts : alpha → OTerm 
     (image F raw node).subst (fun a => emb (ts a)) = image F (raw.subst ts) (node.subst ts) := by
   unfold image imageMatrix
   rw [existsSubst,liftedEmbedding]
-  simp only [conjunctionSubst,graph1,graph2,programSubst,numeral,zSubst,sucSubst,
-    consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+  simp only [conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,numeral,zSubst,sucSubst,
+    InternalRawListRecursionSyntaxProof.consTermSubst,InternalRawListRecursionSyntaxProof.emptySubst,liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem imageRename {beta : Type} (raw node : OTerm alpha) (j : alpha → beta) :
     (image F raw node).relabel j = image F (raw.relabel j) (node.relabel j) := by
@@ -45,8 +45,8 @@ theorem imageWitness (raw node source : OTerm alpha) :
       (graph2 contains (numeral 1) raw source ⊓ graph1 F node source) := by
   unfold imageMatrix InternalCalculus.instantiate
   rw [bindEmbedding]
-  simp only [conjunctionSubst,graph1,graph2,programSubst,numeral,zSubst,sucSubst,
-    consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+  simp only [conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,numeral,zSubst,sucSubst,
+    InternalRawListRecursionSyntaxProof.consTermSubst,InternalRawListRecursionSyntaxProof.emptySubst,witnessLift,Term.subst,Sum.elim_inr]
 
 theorem introduce (raw node source : OTerm alpha)
     (hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) raw source)))

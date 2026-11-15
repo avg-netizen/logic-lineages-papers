@@ -1,0 +1,12 @@
+--- MapImageProof.before
++++ MapImageProof.after
+@@ -10,7 +10,8 @@
+ open InternalGraphComposition (OTerm)
+ open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+ open SourceComputabilityFormulaSupportProof
+-open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
++open InternalRecursionGraphStepSyntaxProof
++open InternalTagArithmeticSyntaxProof hiding OTerm
+ open InternalControlGraphSupportProof InternalGraphCompositionSyntaxProof
+ open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+ open InternalBinderTransportProof InternalTermSubstitutionProof InternalSourceIntroductionSyntaxProof
