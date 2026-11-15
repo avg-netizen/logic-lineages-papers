@@ -1,0 +1,103 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:32:9: error: unsolved goals
+case none
+n raw param : ℕ
+hc : decodeCode n raw = none
+⊢ some 0 = some ((Option.map (fun code => Encodable.encode (codeBounds code)) none).getD 0)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:40:82: error: unsolved goals
+n param : ℕ
+code : Code (Fin n)
+hc : decodeCode n (codeNumber code) = some code
+⊢ List.map (Nat.unpair ∘ fun child => Nat.pair (codeBounds child).1 (codeBounds child).2)
+      (NumberedSyntaxBoundsPrimrecSupportProof.children code) =
+    List.map codeBounds (NumberedSyntaxBoundsPrimrecSupportProof.children code)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:46:68: error: Application type mismatch: The argument
+  h'
+has type
+  NumberedSyntaxBoundsPrimrecSupportProof.mergeBounds
+      (NumberedSyntaxBoundsPrimrecSupportProof.rootBounds code,
+        NumberedSyntaxBoundsPrimrecSupportProof.collectBounds
+          (List.map codeBounds (NumberedSyntaxBoundsPrimrecSupportProof.children code))) =
+    codeBounds code
+but is expected to have type
+  NumberedSyntaxBoundsPrimrecSupportProof.mergeBounds
+      (NumberedSyntaxBoundsPrimrecSupportProof.rootBounds code,
+        NumberedSyntaxBoundsPrimrecSupportProof.collectBounds
+          (List.map Nat.unpair
+            (List.map ((fun child => value n child) ∘ codeNumber)
+              (NumberedSyntaxBoundsPrimrecSupportProof.children code)))) =
+    codeBounds code
+in the application
+  congrArg (fun x => some (Encodable.encode x)) h'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:42:8: warning: This simp argument is unused:
+  Nat.unpair_pair
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵O̵r̵i̵g̵i̵n̵a̵l̵B̵o̵u̵n̵d̵s̵R̵e̵c̵o̵m̵b̵i̵n̵a̵t̵i̵o̵n̵.̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵P̵r̵o̵o̵f̵.̵p̵a̵i̵r̵E̵n̵c̵o̵d̵i̵n̵g̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵]̵[̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲B̲o̲u̲n̲d̲s̲R̲e̲c̲o̲m̲b̲i̲n̲a̲t̲i̲o̲n̲.̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲P̲r̲o̲o̲f̲.̲p̲a̲i̲r̲E̲n̲c̲o̲d̲i̲n̲g̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:43:72: warning: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  simp only [recombination, ̲NumberedNumericDecodingProof.codeRoundTrip,h̵ ̲v,̵v̵alueImage]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:43:75: warning: This simp argument is unused:
+  valueImage
+
+Hint: Omit it from the simp argument list.
+  simp only [recombination, ̲NumberedNumericDecodingProof.codeRoundTrip, ̲hv,̵v̵a̵l̵u̵e̵I̵m̵a̵g̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:59:12: error: Tactic `rfl` failed: The left-hand side
+  if none.isSome.toNat = 0 then 1
+  else
+    (Option.map
+          (fun code =>
+            Encodable.encode (NumberedSyntaxBoundsPrimrecSupportProof.recombine code (List.map Nat.unpair values)))
+          none).getD
+      0
+is not definitionally equal to the right-hand side
+  Encodable.encode (recombination n raw values)
+
+case none
+n raw param : ℕ
+values : List ℕ
+hc : decodeCode n raw = none
+⊢ (if none.isSome.toNat = 0 then 1
+    else
+      (Option.map
+            (fun code =>
+              Encodable.encode (NumberedSyntaxBoundsPrimrecSupportProof.recombine code (List.map Nat.unpair values)))
+            none).getD
+        0) =
+    Encodable.encode (recombination n raw values)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:60:17: error: Tactic `rfl` failed: The left-hand side
+  if (some code).isSome.toNat = 0 then 1
+  else
+    (Option.map
+          (fun code =>
+            Encodable.encode (NumberedSyntaxBoundsPrimrecSupportProof.recombine code (List.map Nat.unpair values)))
+          (some code)).getD
+      0
+is not definitionally equal to the right-hand side
+  Encodable.encode (recombination n raw values)
+
+case some
+n raw param : ℕ
+values : List ℕ
+code : Code (Fin n)
+hc : decodeCode n raw = some code
+⊢ (if (some code).isSome.toNat = 0 then 1
+    else
+      (Option.map
+            (fun code =>
+              Encodable.encode (NumberedSyntaxBoundsPrimrecSupportProof.recombine code (List.map Nat.unpair values)))
+            (some code)).getD
+        0) =
+    Encodable.encode (recombination n raw values)
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.NativeSupportProof.valueImage: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean:62:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.NativeSupportProof.layerValue: forbidden axiom dependency sorryAx
