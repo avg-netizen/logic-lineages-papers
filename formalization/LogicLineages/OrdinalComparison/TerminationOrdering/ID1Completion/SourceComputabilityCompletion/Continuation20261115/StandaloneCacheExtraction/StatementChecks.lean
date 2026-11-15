@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.StandaloneCacheExtraction.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.StandaloneCacheExtraction.StatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
+open InternalTagArithmeticSyntaxProof (z suc eqn emb sucRelabel zRelabel eqnRelabel)
+open InternalTagArithmeticSupportProof InternalPositiveUnfoldingSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open SourceComputabilityFormulaSupportProof (numeral)
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+open TwoSol20261113.CalibratedPrimary.MembershipInternalProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+theorem exactRoot : Targets.InternalRootExtraction := RootProof.rootExtraction
+theorem exactAligned : Targets.InternalAlignedExtraction := Proof.alignedExtraction
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.StandaloneCacheExtraction.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.StandaloneCacheExtraction.StatementChecks
