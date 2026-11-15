@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationAcceptance/LogicalProof.lean:26:14: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.100 (RawEqualityInstantiation.templateCode a b)
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+old : Program 1
+ltag ptag ctag atag vtag : ℕ
+hl : (nodes p)[ltag]? = some ⟨1, logicalLeaf a b old⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+hv : (nodes p)[vtag]? = some ⟨1, termValidator⟩
+raw : Term ctx
+T : Sentence → Prop := ⋯
+V : Formula ctx := ⋯
+G : List (Formula ctx) := ⋯
+eq : Term ctx := ⋯
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationAcceptance/LogicalProof.lean:26:5: error: failed to infer `let` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationAcceptance/LogicalProof.lean:21:106: error: unsolved goals
+a b : Term 1
+n ctx : ℕ
+p : Program n
+old : Program 1
+ltag ptag ctag atag vtag : ℕ
+hl : (nodes p)[ltag]? = some ⟨1, logicalLeaf a b old⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+hv : (nodes p)[vtag]? = some ⟨1, termValidator⟩
+raw : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+V : Formula ctx := RawReflexivityDispatcher.valid vtag raw
+G : List (Formula ctx) := [V]
+eq : Term ctx := RawEqualityInstantiation.formulaValue ctag atag a b raw
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      ((RawReflexivityDispatcher.valid vtag raw).imp
+        (Formula.equal (leafCall ltag (RawEqualityInstantiation.lineValue ptag ctag atag a b raw)) Term.zero.succ)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationAcceptance/LogicalProof.lean:85:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationAcceptance.LogicalProof.rawAcceptanceImp: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationAcceptance.LogicalProof.rawAcceptanceImp' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationAcceptance.LogicalProof.internalLogical' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
