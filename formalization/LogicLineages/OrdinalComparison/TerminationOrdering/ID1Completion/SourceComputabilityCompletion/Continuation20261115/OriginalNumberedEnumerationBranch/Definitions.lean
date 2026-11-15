@@ -13,7 +13,7 @@ def product23456 : Program 6 := .composition NumericDependencyCross.cross ![.pro
 def product123456 : Program 6 := .composition NumericDependencyCross.cross ![.projection 0,product23456]
 /-- Factor only the outer tag of the literal original numberedConstructor.
 Its payload is already the unchanged right-nested six-field product. -/
-def tagPayload : Program 1 := OriginalRawSyntaxTransport.pairOf
+def tagPayload : Program 1 := InternalApplicationCertificateConstructors.pairOf
   (OriginalRawSyntaxTransport.constant 1 5) (.projection 0)
 def branch : Program 6 := .composition (InternalListMap.map tagPayload)
   (fun _ : Fin 1 => product123456)
