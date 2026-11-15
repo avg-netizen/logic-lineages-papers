@@ -34,7 +34,7 @@ theorem presentCases {raw param : OTerm alpha} (s : Side body Delta raw param) (
   have hn := lookupNonzero sn found hf
   apply zeroSuccessorCases Theta found _
   · obtain ⟨hn⟩ := hn
-    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
+    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
       (Derivation.hypothesis List.mem_cons_self))⟩
   · intro gamma k Xi value hk he
     have hfr := InternalGraphCompositionFunctionalityProof.renameInto hf k Xi hk

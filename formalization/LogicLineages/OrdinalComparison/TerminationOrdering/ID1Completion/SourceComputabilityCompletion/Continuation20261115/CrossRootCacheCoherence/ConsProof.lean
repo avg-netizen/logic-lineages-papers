@@ -174,7 +174,7 @@ theorem atFirstIndex {raw param : OTerm alpha} (c : ConsInput body Delta raw par
     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
   apply zeroSuccessorCases Delta c.s2.index _
   · obtain ⟨hn⟩ := index2Nonzero c
-    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
+    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
       (Derivation.hypothesis List.mem_cons_self))⟩
   · intro beta j Theta pred2 hj hi2
     rw [graph2Rename]
@@ -186,7 +186,7 @@ theorem close {raw param : OTerm alpha} (c : ConsInput body Delta raw param) :
     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
   apply zeroSuccessorCases Delta c.s1.index _
   · obtain ⟨hn⟩ := index1Nonzero c
-    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
+    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
       (Derivation.hypothesis List.mem_cons_self))⟩
   · intro beta j Theta pred1 hj hi1
     rw [graph2Rename]

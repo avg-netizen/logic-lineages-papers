@@ -1,0 +1,15 @@
+--- FULL04/SideProof.lean
++++ FULL05/SideProof.lean
+@@ -69,9 +69,9 @@
+     (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0))) _ hg
+   intro i
+   refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun l => Fin.cases ?_ (fun q => Fin.elim0 q) l) k) i
+-  · rw [onEquality]; exact he
+-  · rw [onEquality]; exact ⟨refl seed⟩
+-  · rw [onEquality]; exact ⟨refl param⟩
++  · rw [InternalSourceInversionSupportProof.onEquality]; exact he
++  · rw [InternalSourceInversionSupportProof.onEquality]; exact ⟨refl seed⟩
++  · rw [InternalSourceInversionSupportProof.onEquality]; exact ⟨refl param⟩
+ 
+ def previousSide {raw param : OTerm alpha} (s : Side body Delta raw param)
+     (pred old next child : OTerm alpha)
