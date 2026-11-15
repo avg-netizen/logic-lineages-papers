@@ -1,0 +1,55 @@
+{
+  "status": "Accepted prescribed-runtime-specialization exact3",
+  "accepted_at_utc": "2026-11-15T20:54:48.624190+00:00",
+  "new_exact_contracts": 3,
+  "supporting_contracts_total": 696,
+  "cumulative_new_contracts_20261115": 192,
+  "numbered_register": "175 checked,2 inherited,12 pending /189 unchanged",
+  "native_receipt": "1794775918795781331-6",
+  "native_source_matched_modules": 2063,
+  "named_standard_axiom_audits": {
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.StatementChecks.exactRepeatedSpecialization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.StatementChecks.exactPrescribedWitness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.StatementChecks.exactPrescribedTrace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_pins": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/BaseProof.lean": "e60f9c8a4ede7e0152f9c06fce79d08564810096c114c06c26f05bdb0e453ec0",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/CertificateGraphProof.lean": "1969762b61ae7f38913377f00bf42afd2cda2fc17ae913156635beee2abe9941",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/Definitions.lean": "7efedca97f05f34f8530591f0ec2392d4a35ab47d1a495e94e3c02b5ad5d6df4",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/EncodingProof.lean": "d542af58c96191090c045541c0118b73f2445fede1dc48a2fb27296657bac366",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/EnvironmentProof.lean": "120a2d797ac2b71663859b66b8d0d5a902b0f4438a28bc9ddba0353193e151e3",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/NativeProof.lean": "934b7bb4b26f43ae0da7e9c8ed5fcf004bbd9f620496d133b158b2b5dd864301",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/NativeSupportProof.lean": "cf1fd184c9a3f0b1f562ee32344ce3d799f83254236004c166a73a72a825b74d",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/Preflight.lean": "b1ac8951acca9ff5575631ce9fb85ba88f5696c074fd85eb9d3bea69d2b22ac4",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/PrimitiveProof.lean": "04f18a501dc5a699906e452e20d6a19c4e58a7321d7885e788d2045117bd2754",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/RepeatedProof.lean": "7f7555504ecb3df632f162a3e8cef773497cddd32b1da197a270e427df47830c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/StatementChecks.lean": "c36ef2849565710852fe8c8e97989a88b41eb523420f8cb77128e1e1d3fe534e",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/Targets.lean": "b4920cde8d17818d4370ca0f4148c33c42488cc178a995a36b8aaa4b1358fe2e",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/TraceProof.lean": "bb591f1dafb7232020822cedc5e175a141ee8f5a4baef8bfab7888c331d49c3c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeSpecialization/TraceSupportProof.lean": "e99b247aa1ef1cbac570cb609d43cd5b4deff9a3de99d7ad67a1f68d7a47a20f"
+  },
+  "independent_evidence": {
+    "path": "formalization/verification/continuation-2026-11-15/P12/REVIEW-EVIDENCE-60.json",
+    "sha256": "bd58e7865afac9ab0856fed760736f39d9375d14457c72b36fdd16187ff74c02",
+    "bytes": 5528337
+  },
+  "semantic_review": [
+    "Prescribed producer follows original universal-specialization proof body: tail recursion on all f, original logical singleton, then original mpCertificate. No identification of an arbitrary opaque existential choice.",
+    "Effective witness proves Primrec and original numeric checking for that same producer.",
+    "Internal numeral trace uses structural prefix encoding with capture-correct assignmentLift, actual logical singleton and MP numeral calculations, and recursive antecedent equality, including arbitrary malformed antecedent numerals.",
+    "Repeated runtime specialization pays base closed-formula encoding, then tail closed guards and prior CORE through actual same-I/index/fuel MP; no intermediate success premise exposed.",
+    "Three failed snapshots independently verified (11,20,31 hashes); exact repairs preserve terms and targets. General generated-certificate preservation and HB3 remain open."
+  ]
+}

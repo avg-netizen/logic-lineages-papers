@@ -1,0 +1,14 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/WitnessTransportProof.lean:28:6: error(lean.unknownIdentifier): Unknown identifier `formulaRelabelAsSubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/WitnessTransportProof.lean:27:83: error: unsolved goals
+alpha beta : Type
+n : ℕ
+labels heads types bases tuples extras code : OTerm alpha
+j : alpha → beta
+⊢ Formula.relabel j (InternalFiniteBlocks.block (witnessMatrix n labels heads types bases tuples extras code)) =
+    InternalFiniteBlocks.block
+      (witnessMatrix n (Term.relabel j labels) (Term.relabel j heads) (Term.relabel j types) (Term.relabel j bases)
+        (Term.relabel j tuples) (Term.relabel j extras) (Term.relabel j code))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.WitnessTransportProof.witnessSubst: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/WitnessTransportProof.lean:33:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.WitnessTransportProof.witnessRename: forbidden axiom dependency sorryAx
