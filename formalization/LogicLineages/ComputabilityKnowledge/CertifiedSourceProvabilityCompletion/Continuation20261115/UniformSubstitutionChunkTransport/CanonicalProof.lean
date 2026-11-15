@@ -71,6 +71,6 @@ theorem allConstructors {n ctx : Nat} (p : Program n) (G : List (Formula ctx))
    exact ⟨.mp (.mp (.base (.logical (.andIntro _ _))) hs') hrel'⟩
  · obtain ⟨h⟩ := ConstructorProof.nonMarker p G etag stepTag stag ptag ctag atag len q l r
     he hstep hs hp hc ha hlen hq hl hr ctor hm depth oldTail newTail raw hrest
-   simpa only [newOutput,ConstructorProof.rowsUnchanged ptag depth ctor hm,ConstructorProof.prefixSame,output] using h
+   simpa only [newOutput,ConstructorProof.rowsUnchanged ptag depth ctor hm,ConstructorProof.prefixSame,output] using (Nonempty.intro h)
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.CanonicalProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformSubstitutionChunkTransport.CanonicalProof
