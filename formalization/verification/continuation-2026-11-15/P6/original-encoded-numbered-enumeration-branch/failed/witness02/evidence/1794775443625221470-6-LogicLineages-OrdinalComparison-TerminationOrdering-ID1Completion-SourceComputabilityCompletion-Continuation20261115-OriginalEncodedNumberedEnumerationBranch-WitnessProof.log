@@ -1,0 +1,86 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/WitnessProof.lean:30:2: error: Tactic `rfl` failed: The left-hand side
+  programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                  (Fin.cons (Term.subst labels sub) (Fin.cons (Term.subst k sub) Fin.elim0)) ⊓
+                programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                  (Fin.cons (Term.subst heads sub) (Fin.cons (Term.subst encodedHead sub) Fin.elim0)) ⊓
+              programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                (Fin.cons (Term.subst types sub) (Fin.cons (Term.subst t sub) Fin.elim0)) ⊓
+            programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+              (Fin.cons (Term.subst bases sub) (Fin.cons (Term.subst b sub) Fin.elim0)) ⊓
+          programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+            (Fin.cons (Term.subst tuples sub) (Fin.cons (Term.subst ts sub) Fin.elim0)) ⊓
+        programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+          (Fin.cons (Term.subst extras sub) (Fin.cons (Term.subst e sub) Fin.elim0)) ⊓
+      programGraph (OriginalEncodedHeadConversion.convert n) (Term.subst rawHead sub)
+        (Fin.cons (Term.subst encodedHead sub) Fin.elim0) ⊓
+    programGraph OriginalRawSyntaxTransport.numberedConstructor (Term.subst code sub) fun i =>
+      Term.subst (![k, rawHead, t, b, ts, e] i) sub
+is not definitionally equal to the right-hand side
+  programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                  (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                  (Fin.cons (Term.subst labels sub) (Fin.cons (Term.subst k sub) Fin.elim0)) ⊓
+                programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                  (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                  (Fin.cons (Term.subst heads sub) (Fin.cons (Term.subst encodedHead sub) Fin.elim0)) ⊓
+              programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                (Fin.cons (Term.subst types sub) (Fin.cons (Term.subst t sub) Fin.elim0)) ⊓
+            programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+              (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+              (Fin.cons (Term.subst bases sub) (Fin.cons (Term.subst b sub) Fin.elim0)) ⊓
+          programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+            (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+            (Fin.cons (Term.subst tuples sub) (Fin.cons (Term.subst ts sub) Fin.elim0)) ⊓
+        programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+          (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+          (Fin.cons (Term.subst extras sub) (Fin.cons (Term.subst e sub) Fin.elim0)) ⊓
+      programGraph (OriginalEncodedHeadConversion.convert n) (Term.subst rawHead sub)
+        (Fin.cons (Term.subst encodedHead sub) Fin.elim0) ⊓
+    programGraph OriginalRawSyntaxTransport.numberedConstructor (Term.subst code sub)
+      ![Term.subst k sub, Term.subst rawHead sub, Term.subst t sub, Term.subst b sub, Term.subst ts sub,
+        Term.subst e sub]
+
+alpha beta : Type
+n : ℕ
+labels heads types bases tuples extras code k encodedHead rawHead t b ts e : OTerm alpha
+sub : alpha → OTerm beta
+⊢ (programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                    (Fin.cons (Term.subst labels sub) (Fin.cons (Term.subst k sub) Fin.elim0)) ⊓
+                  programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                    (Fin.cons (Term.subst heads sub) (Fin.cons (Term.subst encodedHead sub) Fin.elim0)) ⊓
+                programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                  (Fin.cons (Term.subst types sub) (Fin.cons (Term.subst t sub) Fin.elim0)) ⊓
+              programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+                (Fin.cons (Term.subst bases sub) (Fin.cons (Term.subst b sub) Fin.elim0)) ⊓
+            programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+              (Fin.cons (Term.subst tuples sub) (Fin.cons (Term.subst ts sub) Fin.elim0)) ⊓
+          programGraph TwoSol20261113.CalibratedPrimary.Membership.contains (suc z)
+            (Fin.cons (Term.subst extras sub) (Fin.cons (Term.subst e sub) Fin.elim0)) ⊓
+        programGraph (OriginalEncodedHeadConversion.convert n) (Term.subst rawHead sub)
+          (Fin.cons (Term.subst encodedHead sub) Fin.elim0) ⊓
+      programGraph OriginalRawSyntaxTransport.numberedConstructor (Term.subst code sub) fun i =>
+        Term.subst (![k, rawHead, t, b, ts, e] i) sub) =
+    programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                    (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                    (Fin.cons (Term.subst labels sub) (Fin.cons (Term.subst k sub) Fin.elim0)) ⊓
+                  programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                    (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                    (Fin.cons (Term.subst heads sub) (Fin.cons (Term.subst encodedHead sub) Fin.elim0)) ⊓
+                programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                  (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                  (Fin.cons (Term.subst types sub) (Fin.cons (Term.subst t sub) Fin.elim0)) ⊓
+              programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+                (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+                (Fin.cons (Term.subst bases sub) (Fin.cons (Term.subst b sub) Fin.elim0)) ⊓
+            programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+              (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+              (Fin.cons (Term.subst tuples sub) (Fin.cons (Term.subst ts sub) Fin.elim0)) ⊓
+          programGraph TwoSol20261113.CalibratedPrimary.Membership.contains
+            (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+            (Fin.cons (Term.subst extras sub) (Fin.cons (Term.subst e sub) Fin.elim0)) ⊓
+        programGraph (OriginalEncodedHeadConversion.convert n) (Term.subst rawHead sub)
+          (Fin.cons (Term.subst encodedHead sub) Fin.elim0) ⊓
+      programGraph OriginalRawSyntaxTransport.numberedConstructor (Term.subst code sub)
+        ![Term.subst k sub, Term.subst rawHead sub, Term.subst t sub, Term.subst b sub, Term.subst ts sub,
+          Term.subst e sub]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEncodedNumberedEnumerationBranch/WitnessProof.lean:67:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.WitnessProof.fieldsSubst: forbidden axiom dependency sorryAx
