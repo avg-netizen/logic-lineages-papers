@@ -24,7 +24,7 @@ theorem tagReject (k : Nat) (xs : Fin 19 → OTerm alpha)
     (.projection 0) (OriginalRawSyntaxTransport.constant 19 k) (xs 0) (numeral k) xs
     (projectionValue 0 xs) (OriginalRawSyntaxTransportInternalVariableSupportProof.constantValue k xs)
     (by simpa only [InternalControlGraphSupportProof.equalEqn] using h)
-  simpa only [tagIs,constantEq,OriginalRawSyntaxTransport.sameOf] using hz
+  simpa only [tagIs,constantEq,OriginalRawSyntaxTransport.sameOf,InternalApplicationStepPeel.same] using hz
 
 theorem equalTags (xs : Fin 19 → OTerm alpha)
     (h : Nonempty (Derivation body Delta (programGraph layer (numeral 1) xs))) :
