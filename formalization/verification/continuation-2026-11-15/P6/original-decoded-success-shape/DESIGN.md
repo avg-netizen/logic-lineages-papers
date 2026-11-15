@@ -1,0 +1,11 @@
+# Standalone original exchange: necessary success shape
+
+Original source: NumberedExchangeCodeDefinitions.codeExchange matches exactly lam/app/ordinary/numbered/argumentsCons pairs and defaults false otherwise. Literal computational dispatch: Continuation20261114/ExchangeLayer/Definitions.lean `layer` first tests fields0=7, then source tags1/2/4/5/7, else constantZero. OriginalDecodedExchangeEquation.exchange and OriginalDecodedLayerCalibration.layer are unchanged.
+
+One exact all-raw target: three actual parent/source/target pairing observations and standalone exchange1 entail tag equality AND active-tag disjunction1 OR(2 OR(4 OR(5 OR7))). No valid/raw-syntax image, known-constructor, guard, field-output, answer-list or dispatch premises. Malformed codes and arbitrary parameters remain quantified.
+
+Duplicate check: ExchangeLayer.LambdaProof.internalTagMismatch only rejects a supplied19-field input; the existing positive constructor recurrences do not pay the standalone fallback. No current standalone necessary-tag endpoint was found. This common success condition supplies both unmatched-constructor and inactive/base/unknown-tag non-success without counting trivial rejection wrappers separately.
+
+Constructive plan: derive actual guard acceptance from standalone success, query actual ordered answers, use exact recursive equation to obtain layer Some1=2. Query all19 literal field outputs internally and use TransparentExchangeLayer.internalBodyFactor. Identify fields0/7 from the original actual guarded tag programs and three pairing observations (TransparentTagFields.InternalTags), not from a native image. For original layer success, show outer equality test accepts and finite source dispatch selects one active branch: negative equality/negative all active tests contradict literal constantZero success. Pay equality-test normalization and all finite branch cases inside the original calculus. Transport equality/active formula back to observed raw tags using actual field functionality.
+
+Some1=2 versus standalone1 is retained. This gives non-success for mismatched or inactive tags; it does NOT claim actual exchange0 or general Boolean-output completeness. Complete raw semantic correspondence, packed/context interpretation and installed E remain open. No proof before independent freeze review/preflight.
