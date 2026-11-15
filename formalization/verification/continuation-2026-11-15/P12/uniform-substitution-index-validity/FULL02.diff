@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionIndexValidity/LogicProof.lean FULL01
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionIndexValidity/LogicProof.lean FULL02
+@@ -28,7 +28,7 @@
+  substituteFormula s (claim etag vtag stag ptag ctag dtag index depth positive rest raw) =
+  claim etag vtag stag ptag ctag dtag (substitute s index) (substitute s depth)
+   (substitute s positive) (substitute s rest) (substitute s raw) := by
+- simp only [claim,substituteFormula,substOutput,RawReflexivityDispatcher.valid,
++ simp only [claim,substituteFormula,substOutput,RawReflexivityDispatcher.valid,TwoSol20261113.ReflexivityRecognizer.leafCall,
+   HistoryDifference.differenceCall,Logic.substCall,List.Vector.map_cons,List.Vector.map_nil,substitute]
+ noncomputable def transportIndex {T : Sentence → Prop} {ctx : Nat} etag stag ptag ctag (a b depth rest raw : Term ctx) :
+  Derivation T (.imp (.equal a b)

@@ -1,0 +1,74 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.InductionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.BindingProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalTagArithmeticSyntaxProof
+open InternalStrongInduction InternalStrongInductionProof InternalStrongInductionSyntaxProof
+open InductionDefinitions InductionSyntaxProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable (E : Program 2)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+theorem atRawIntro  (raw : OTerm alpha)
+    (h : Nonempty (Derivation body (Delta.map (fun q => q.relabel Sum.inl)) (matrix E raw))) :
+    Nonempty (Derivation body Delta (AtRaw E raw)) :=
+  InternalClosedProgramsBindingProof.introduction body alpha 3 Delta _ h
+
+theorem atRawApply (input left right out : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (AtRaw E input)))
+    (hf : Nonempty (Derivation body Delta (fields E input left right out))) :
+    Nonempty (Derivation body Delta (result E input left right out)) := by
+  obtain ⟨h⟩ := InternalClosedProgramsBindingProof.elimination body alpha 3 Delta
+    (matrix E input) (fun i => emb (![left,right,out] i)) h
+  rw [matrixWitness E] at h
+  obtain ⟨hf⟩ := hf
+  exact ⟨Derivation.implicationElimination h hf⟩
+
+theorem belowRawAt  (raw child : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (BelowRaw E raw)))
+    (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess child raw))) :
+    Nonempty (Derivation body Delta (AtRaw E child)) := by
+  obtain ⟨h⟩ := h
+  obtain ⟨hl⟩ := hl
+  have d := Derivation.universalElimination (emb child) h
+  change Derivation body Delta (instantiate
+    ((InternalOriginalOrderSyntaxProof.ltF (.var (.inr 0)) (raw.relabel Sum.inl)).imp
+      (rawPredicate E)) (emb child)) at d
+  rw [belowElimSyntax,rawPredicateInstantiate E] at d
+  exact ⟨Derivation.implicationElimination d hl⟩
+
+theorem belowRawApply (input smallerRaw left right out : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (BelowRaw E input)))
+    (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess smallerRaw input)))
+    (hf : Nonempty (Derivation body Delta (fields E smallerRaw left right out))) :
+    Nonempty (Derivation body Delta (result E smallerRaw left right out)) :=
+  atRawApply E smallerRaw left right out (belowRawAt E input smallerRaw h hl) hf
+
+/-- The smaller-input hypothesis and its universal parameters are discharged
+inside the original strong-induction derivation. -/
+theorem rawInduction  (raw : OTerm alpha)
+    (step : ∀ (beta : Type) (Theta : List (Formula beta)) (r : OTerm beta),
+      Nonempty (Derivation body Theta (BelowRaw E r)) →
+      Nonempty (Derivation body Theta (AtRaw E r))) :
+    Nonempty (Derivation body Delta (AtRaw E raw)) := by
+  let theta : Formula (alpha ⊕ Fin 1) := rawPredicate E
+  have hs : Nonempty (Derivation body
+      (InternalStrongInduction.below (lift theta) (.var (.inr 0)) :: Delta.map weaken) theta) := by
+    change Nonempty (Derivation body
+      (InternalStrongInduction.below (lift (rawPredicate E)) (.var (.inr 0)) :: Delta.map weaken)
+      (AtRaw E (.var (.inr 0))))
+    rw [rawPredicateLift E]
+    exact step (alpha ⊕ Fin 1) _ (.var (.inr 0)) ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨d⟩ := strongInduction theta hs
+  have e := Derivation.universalElimination (emb raw) d
+  change Derivation body Delta (instantiate (rawPredicate E) (emb raw)) at e
+  rw [rawPredicateInstantiate E] at e
+  exact ⟨e⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.BindingProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedExchangeEquation.BindingProof
