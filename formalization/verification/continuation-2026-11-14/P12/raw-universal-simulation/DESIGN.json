@@ -1,0 +1,6 @@
+{
+  "invariant": "Internally forall h,lines: oldState=pair(SOME h,lines) -> newState=identical pair. NONE case deliberately unconstrained; not arbitrary CORE transport.",
+  "proof": "For old SOME, specialize relation at that exact history/lines to obtain input equality, use checked actual same-state kernel preservation and equality transport. For old NONE, paid noneReject contradicts successful old output. Internally decompose arbitrary option/state using zeroOrSuccessor and pair surjectivity, then generalize output h/lines under antecedent. Actual runtime and both kernels preserved.",
+  "next": "Original PR iterator internal induction, reflexive initial relation, then successful output instantiation. Arbitrary numeric count retained, later specialize original certificate CODE. Finalizer/CORE and source assembly still unpaid.",
+  "scope": "Direct prerequisite to retain fixed arithmetic-template computation proofs across original token5 checker refinement; no universalFunction evaluation/general PR/HB3 conclusion."
+}
