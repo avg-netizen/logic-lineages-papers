@@ -1,0 +1,65 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.CoreProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.Proof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalTagArithmeticSyntaxProof hiding OTerm row rowInstantiate rowSuccessor
+open InternalBinderTransportProof InternalTermSubstitutionProof InternalPositiveUnfoldingSupportProof
+open InternalSourceIntroductionSyntaxProof
+open SyntaxProof CoreProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem zeroRow : Nonempty (Derivation body Delta (row z)) := by
+  unfold row
+  apply actualFiniteUniversalIntroduction body alpha 2 Delta
+  let out : OTerm (alpha ⊕ Fin 2) := .var (.inr 0)
+  let index : OTerm (alpha ⊕ Fin 2) := .var (.inr 1)
+  let A := graph1 range out z
+  obtain ⟨h⟩ := zeroCore (body := body) (Delta := A :: Delta.map (fun p => p.relabel Sum.inl))
+    out index ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [rowBody,zRelabel] using (Nonempty.intro (Derivation.implicationIntroduction h))
+
+theorem succRow (bound : OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (row bound))) :
+    Nonempty (Derivation body Delta (row (suc bound))) := by
+  unfold row
+  apply actualFiniteUniversalIntroduction body alpha 2 Delta
+  let out : OTerm (alpha ⊕ Fin 2) := .var (.inr 0)
+  let index : OTerm (alpha ⊕ Fin 2) := .var (.inr 1)
+  let c := bound.relabel (Sum.inl : alpha → alpha ⊕ Fin 2)
+  let A := graph1 range out (suc c)
+  let Theta := A :: Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 2))
+  have hr' := InternalGraphCompositionFunctionalityProof.renameInto hr Sum.inl Theta
+    (fun p hp => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩))
+  rw [rowRename] at hr'
+  obtain ⟨h⟩ := succCore c out index hr' ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [rowBody,sucRelabel] using (Nonempty.intro (Derivation.implicationIntroduction h))
+
+theorem allRows (bound : OTerm alpha) : Nonempty (Derivation body Delta (row bound)) := by
+  let theta : Formula (alpha ⊕ Fin 1) := row (.var (.inr 0))
+  have hz : Nonempty (Derivation body Delta (instantiate theta (emb z))) := by
+    simpa only [theta,rowInstantiate,varBind] using (zeroRow (body := body) (Delta := Delta))
+  have hs : Nonempty (Derivation body (theta :: Delta.map weaken) (successorInstance theta)) := by
+    have h := succRow (body := body) (Delta := theta :: Delta.map weaken)
+      (.var (.inr (0 : Fin 1))) ⟨Derivation.hypothesis List.mem_cons_self⟩
+    simpa only [theta,rowSuccessor,nextTerm,Term.subst,Sum.elim_inr] using h
+  obtain ⟨hz⟩ := hz
+  obtain ⟨hs⟩ := hs
+  have h := Derivation.universalElimination (emb bound) (natInduction theta hz hs)
+  simpa only [theta,rowInstantiate,varBind] using (Nonempty.intro h)
+
+theorem internalMembership : Targets.InternalMembership := by
+  intro body alpha Delta bound out index hg
+  obtain ⟨h⟩ := rowApply bound out index (allRows bound) hg
+  constructor
+  · rintro ⟨hm⟩
+    exact ⟨Derivation.implicationElimination (Derivation.conjunctionLeft h) hm⟩
+  · rintro ⟨hl⟩
+    exact ⟨Derivation.implicationElimination (Derivation.conjunctionRight h) hl⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.Proof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.Proof
