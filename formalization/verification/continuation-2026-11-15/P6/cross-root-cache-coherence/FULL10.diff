@@ -1,0 +1,51 @@
+--- FULL09/ConsFrameProof.lean
++++ FULL10/ConsFrameProof.lean
+@@ -70,22 +70,22 @@
+     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   index1 := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.index1 j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   index2 := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.index2 j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   oldGraph1 := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.oldGraph1 j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   oldGraph2 := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.oldGraph2 j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   nextGraph1 := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.nextGraph1 j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   nextGraph2 := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.nextGraph2 j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   dependency := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.dependency j Theta hj
+     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+@@ -100,7 +100,7 @@
+     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+   lookup := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto f.lookup j Theta hj
+-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
++    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+ 
+ def Frame.head1 {raw param : OTerm alpha} (f : Frame body Delta raw param) : Side body Delta f.head param :=
+   previousSide f.s1 f.pred1 f.old1 f.next1 f.head f.index1 f.oldGraph1 f.nextGraph1
+--- FULL09/InputProof.lean
++++ FULL10/InputProof.lean
+@@ -40,7 +40,7 @@
+     simpa only [InductionSyntaxProof.belowRawRename] using h
+   lookup := by
+     have h := InternalGraphCompositionFunctionalityProof.renameInto c.lookup j Theta hj
+-    simpa only [graph2Rename] using h
++    simpa only [Side.rename,graph2Rename] using h
+ 
+ structure ConsInput (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha)
+     extends Input body Delta raw param where

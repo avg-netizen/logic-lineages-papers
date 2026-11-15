@@ -40,7 +40,7 @@ def Input.rename {raw param : OTerm alpha} (c : Input body Delta raw param)
     simpa only [InductionSyntaxProof.belowRawRename] using h
   lookup := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto c.lookup j Theta hj
-    simpa only [graph2Rename] using h
+    simpa only [Side.rename,graph2Rename] using h
 
 structure ConsInput (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha)
     extends Input body Delta raw param where

@@ -70,22 +70,22 @@ def Frame.rename {raw param : OTerm alpha} (f : Frame body Delta raw param)
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   index1 := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.index1 j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   index2 := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.index2 j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   oldGraph1 := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.oldGraph1 j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   oldGraph2 := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.oldGraph2 j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   nextGraph1 := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.nextGraph1 j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   nextGraph2 := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.nextGraph2 j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   dependency := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.dependency j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
@@ -100,7 +100,7 @@ def Frame.rename {raw param : OTerm alpha} (f : Frame body Delta raw param)
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   lookup := by
     have h := InternalGraphCompositionFunctionalityProof.renameInto f.lookup j Theta hj
-    simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
+    simpa only [Side.rename,graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
 
 def Frame.head1 {raw param : OTerm alpha} (f : Frame body Delta raw param) : Side body Delta f.head param :=
   previousSide f.s1 f.pred1 f.old1 f.next1 f.head f.index1 f.oldGraph1 f.nextGraph1
