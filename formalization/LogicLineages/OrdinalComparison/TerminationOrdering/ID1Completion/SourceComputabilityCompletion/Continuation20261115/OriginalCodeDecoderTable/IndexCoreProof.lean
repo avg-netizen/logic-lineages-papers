@@ -124,7 +124,7 @@ theorem zeroCore (n : Nat) (oldTable output cutoff value : OTerm alpha)
     have hf' := InternalGraphCompositionFunctionalityProof.renameInto (withHyp hf A) j Theta hj
     simp only [fieldsRename,zRelabel] at hf'
     have heq : Nonempty (Derivation body Theta (eqn (cutoff.relabel j) z)) := by
-      simpa only [A,InternalTagArithmeticSyntaxProof.eqnRename,zRelabel] using
+      simpa only [A,InternalSliceInductionSyntaxProof.eqnRename,zRelabel] using
         (Nonempty.intro (Derivation.hypothesis (hj A List.mem_cons_self)))
     have hc := SupportProof.baseRecover n (oldTable.relabel j) mark (output.relabel j)
       hm (andLeft (andRight hf'))

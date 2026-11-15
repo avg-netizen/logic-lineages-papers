@@ -35,7 +35,7 @@ theorem baseRecover (n : Nat) (previous value output : OTerm alpha)
   intro beta j Theta base hj hb
   simp only [consGraphRename,zRelabel]
   have hv' := InternalGraphCompositionFunctionalityProof.renameInto hc j Theta hj
-  simp only [InternalControlGraphSupportProof.programRename,InternalRecursionGraphStepSyntaxProof.consTermRename,
+  simp only [xs,InternalControlGraphSupportProof.programRename,InternalRecursionGraphStepSyntaxProof.consTermRename,
     InternalControlGraphSupportProof.emptyRename] at hv'
   have ho' := InternalGraphCompositionFunctionalityProof.renameInto ho j Theta hj
   simp only [graph2Rename,zRelabel] at ho'

@@ -1,0 +1,232 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:26:19: error: don't know how to synthesize implicit argument `Gamma`
+  @Hilbert.Local.base ?m.142 ctx ?m.140
+    (Formula.equal ((task ::ᵥ HistoryAppend.appendCall atag Term.zero suffix ::ᵥ nil).get 0)
+      ((task ::ᵥ suffix ::ᵥ nil).get 0))
+    (Derivation.logical (GorbowPACore.LogicalInstance.reflexive task))
+context:
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ctag atag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+task raw suffix : Term ctx
+hvalid :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+      Term.zero.succ)
+hframe :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+          Term.zero.succ).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+        (HistoryAppend.appendCall atag Term.zero suffix).succ))
+hframed :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+      (HistoryAppend.appendCall atag Term.zero suffix).succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag task Term.zero) suffix)
+      (HistoryLookup.consCall ctag task (HistoryAppend.appendCall atag Term.zero suffix)))
+hnil :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag Term.zero suffix) suffix)
+⊢ List (Formula ctx)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:26:19: error: don't know how to synthesize implicit argument `T`
+  @Hilbert.Local.base ?m.142 ctx ?m.140
+    (Formula.equal ((task ::ᵥ HistoryAppend.appendCall atag Term.zero suffix ::ᵥ nil).get 0)
+      ((task ::ᵥ suffix ::ᵥ nil).get 0))
+    (Derivation.logical (GorbowPACore.LogicalInstance.reflexive task))
+context:
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ctag atag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+task raw suffix : Term ctx
+hvalid :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+      Term.zero.succ)
+hframe :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+          Term.zero.succ).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+        (HistoryAppend.appendCall atag Term.zero suffix).succ))
+hframed :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+      (HistoryAppend.appendCall atag Term.zero suffix).succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag task Term.zero) suffix)
+      (HistoryLookup.consCall ctag task (HistoryAppend.appendCall atag Term.zero suffix)))
+hnil :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag Term.zero suffix) suffix)
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:26:39: error: don't know how to synthesize implicit argument `A`
+  @Derivation.logical ?m.142 ctx (GorbowPACore.LogicalInstance.reflexive task)
+context:
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ctag atag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+task raw suffix : Term ctx
+hvalid :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+      Term.zero.succ)
+hframe :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+          Term.zero.succ).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+        (HistoryAppend.appendCall atag Term.zero suffix).succ))
+hframed :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+      (HistoryAppend.appendCall atag Term.zero suffix).succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag task Term.zero) suffix)
+      (HistoryLookup.consCall ctag task (HistoryAppend.appendCall atag Term.zero suffix)))
+hnil :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag Term.zero suffix) suffix)
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:23:15: error: don't know how to synthesize implicit argument `G`
+  @callCongruence ?m.142 (Nat.succ 0).succ ctx ?m.140 ctag
+    (task ::ᵥ HistoryAppend.appendCall atag Term.zero suffix ::ᵥ nil) (task ::ᵥ suffix ::ᵥ nil) fun i => ?m.115
+context:
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ctag atag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+task raw suffix : Term ctx
+hvalid :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+      Term.zero.succ)
+hframe :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+          Term.zero.succ).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+        (HistoryAppend.appendCall atag Term.zero suffix).succ))
+hframed :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+      (HistoryAppend.appendCall atag Term.zero suffix).succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag task Term.zero) suffix)
+      (HistoryLookup.consCall ctag task (HistoryAppend.appendCall atag Term.zero suffix)))
+hnil :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag Term.zero suffix) suffix)
+⊢ List (Formula ctx)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:23:15: error: don't know how to synthesize implicit argument `T`
+  @callCongruence ?m.142 (Nat.succ 0).succ ctx ?m.140 ctag
+    (task ::ᵥ HistoryAppend.appendCall atag Term.zero suffix ::ᵥ nil) (task ::ᵥ suffix ::ᵥ nil) fun i => ?m.115
+context:
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ctag atag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+task raw suffix : Term ctx
+hvalid :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+      Term.zero.succ)
+hframe :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+          Term.zero.succ).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+        (HistoryAppend.appendCall atag Term.zero suffix).succ))
+hframed :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+      (HistoryAppend.appendCall atag Term.zero suffix).succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag task Term.zero) suffix)
+      (HistoryLookup.consCall ctag task (HistoryAppend.appendCall atag Term.zero suffix)))
+hnil :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag Term.zero suffix) suffix)
+⊢ Sentence → Prop
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:23:6: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:18:110: error: unsolved goals
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ctag atag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+task raw suffix : Term ctx
+hvalid :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+      Term.zero.succ)
+hframe :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag (ConstructorValidityTargets.singleton ctag task) raw)
+          Term.zero.succ).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+        (HistoryAppend.appendCall atag Term.zero suffix).succ))
+hframed :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryAppend.appendCall atag (ConstructorValidityTargets.singleton ctag task) suffix) raw)
+      (HistoryAppend.appendCall atag Term.zero suffix).succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag (HistoryLookup.consCall ctag task Term.zero) suffix)
+      (HistoryLookup.consCall ctag task (HistoryAppend.appendCall atag Term.zero suffix)))
+hnil :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (HistoryAppend.appendCall atag Term.zero suffix) suffix)
+⊢ Nonempty
+    (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+      (Formula.equal (LiteralSyntaxScan.scanCall stag (HistoryLookup.consCall ctag task suffix) raw) suffix.succ))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean:44:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.ConstructorFrameProof.frameOne: forbidden axiom dependency sorryAx
