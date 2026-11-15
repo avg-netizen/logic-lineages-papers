@@ -69,7 +69,8 @@ theorem layerValue (n node param : Nat) (values : List Nat) :
     evaluate (G n) (ofFn ![node,numbersNumber values,param]) = Encodable.encode (rawCombine n node values param) := by
   change (evaluate (InternalAcceptance.branch fuel (InternalAcceptance.constantZero 3) (positiveLayer n))
     (ofFn ![node,numbersNumber values,param]) + 1) = _
-  rw [evalBranch,fuelValue,positiveValue]
+  have hz : evaluate (InternalAcceptance.constantZero 3) (ofFn ![node,numbersNumber values,param]) = 0 := rfl
+  rw [evalBranch,fuelValue,positiveValue,hz]
   simp only [rawCombine,Encodable.encode_some,Encodable.encode_nat,Nat.succ_eq_add_one]
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursion.NativeInputsProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursion.NativeInputsProof

@@ -21,7 +21,6 @@ theorem dependenciesValue (node param : Nat) :
     evaluate OriginalEnumerationRecursionInterface.D (ofFn ![node,param]) = numbersNumber (children node param) := by
   rw [OriginalEnumerationRecursionInterface.NativeNodesProof.nativeDependencies,
     OriginalTypeListsEnumeration.CodecProof.listEncoding]
-  rfl
 
 theorem childDecrease (node param child : Nat) (hc : child ∈ children node param) :
     measure child param < measure node param := by
